@@ -1,4 +1,4 @@
-r.d(t, { A: () => f });
+r.d(t, { A: () => I });
 var n = r(477900),
     l = r(582128),
     s = r(449543),
@@ -32,7 +32,7 @@ function L(e) {
               className: h.hm,
               children: (0, n.jsx)(m.v3.Provider, {
                   value: { flattenProductVariants: !1 },
-                  children: r.map((e, t) => (0, n.jsx)(I, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: r.map((e, t) => (0, n.jsx)(f, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
@@ -60,7 +60,7 @@ function S(e) {
                 getItemKey: v,
                 maintainFocusOnReorder: !0,
                 renderItem: (e, t, r) =>
-                    (0, n.jsx)(I, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
+                    (0, n.jsx)(f, { item: e, index: r, prioritizedCurrency: i, listItemProps: t }, e.skuId),
             }),
         });
     }
@@ -73,18 +73,18 @@ function S(e) {
         children: (0, n.jsx)(s.A, {
             gap: "xl",
             "aria-label": o,
-            children: r.map((e, t) => (0, n.jsx)(I, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
+            children: r.map((e, t) => (0, n.jsx)(f, { item: e, index: t, prioritizedCurrency: i }, e.skuId)),
         }),
     });
 }
-function I(e) {
+function f(e) {
     let { item: t, index: r, prioritizedCurrency: l, listItemProps: s } = e;
     return (0, n.jsx)(i.R9, {
         newValue: { tilePosition: r, pageSection: "top 4", categoryPosition: 0 },
         children: (0, n.jsx)(E.A, { skuId: t.skuId, prioritizedCurrency: l, listItemProps: s }),
     });
 }
-let f = function (e) {
+let I = function (e) {
     let t,
         r,
         s,

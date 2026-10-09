@@ -18,9 +18,9 @@ var h = n(633075),
     I = n(17928),
     j = n(939249),
     E = n(772838),
-    A = n(140735),
-    C = n(834730),
-    v = n(866665),
+    v = n(140735),
+    A = n(834730),
+    C = n(866665),
     b = n(192308),
     N = n(922016),
     y = n(980707),
@@ -31,8 +31,8 @@ var h = n(633075),
     R = n(280450),
     w = n(384377),
     k = n(518477),
-    S = n(660183),
-    W = n(347727);
+    W = n(660183),
+    S = n(347727);
 function G(e) {
     let { widget: t, className: n, buttonRef: r, additionalMenuItems: l } = e,
         s = (0, d.L)(t),
@@ -45,15 +45,15 @@ function G(e) {
             (0, i.jsx)(M, {
                 children: (0, i.jsxs)(j.D, {
                     innerRef: r,
-                    className: a()(W.x6, n),
+                    className: a()(S.x6, n),
                     "data-dnd-name": s,
-                    "aria-label": S.intl.formatToPlainString(S.t.HWNJJN, { widgetTitle: s }),
+                    "aria-label": W.intl.formatToPlainString(W.t.HWNJJN, { widgetTitle: s }),
                     "aria-describedby": c,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
                         (0, i.jsx)(E.W, { size: "sm" }),
-                        (0, i.jsx)(A.A, { id: c, children: S.intl.string(S.t.bsuqFn) }),
+                        (0, i.jsx)(v.A, { id: c, children: W.intl.string(W.t.bsuqFn) }),
                     ],
                 }),
             }),
@@ -63,21 +63,21 @@ function M(e) {
     let { children: t } = e,
         n = (0, I.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
         { isDragging: r } = (0, p.V)((e) => ({ isDragging: e.isDragging() }));
-    return (0, i.jsx)(v.m, {
+    return (0, i.jsx)(C.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-            className: W.HE,
+            className: S.HE,
             children: [
-                (0, i.jsx)(C.E, {
+                (0, i.jsx)(A.E, {
                     variant: "text-sm/normal",
                     color: "none",
-                    children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
+                    children: W.intl.format(n ? W.t["zvln/l"] : W.t["7cdwhg"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
-                (0, i.jsx)(C.E, {
+                (0, i.jsx)(A.E, {
                     variant: "text-sm/normal",
                     color: "none",
-                    children: S.intl.format(S.t["4e0rM4"], {
+                    children: W.intl.format(W.t["4e0rM4"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
@@ -272,14 +272,14 @@ function O(e) {
                     ((0, _.Z_)(), t());
                 },
                 onSelect: () => {},
-                "aria-label": S.intl.string(S.t.xpSHSk),
-                className: W.MK,
+                "aria-label": W.intl.string(W.t.xpSHSk),
+                className: S.MK,
                 children: (0, i.jsxs)(D.rX, {
                     children: [
                         a,
                         (0, i.jsx)(D.Dr, {
                             id: "remove-widget",
-                            label: S.intl.string(S.t.Mm07Yc),
+                            label: W.intl.string(W.t.Mm07Yc),
                             action: o,
                             color: "danger",
                             icon: T.TrashIcon,
@@ -294,8 +294,8 @@ function O(e) {
 }
 var L = n(297264),
     U = n(138134),
-    F = n(365199),
-    z = n(627363),
+    z = n(365199),
+    F = n(627363),
     H = n(587895),
     B = n(928658);
 function K(e, t, n) {
@@ -313,7 +313,7 @@ function q(e) {
             let { applicationId: n } = t;
             H.A.isHydrated(n)
                 ? K(e, t, H.A.getApplication(n))
-                : z.Ay.fetchApplication(n)
+                : F.Ay.fetchApplication(n)
                       .then(() => K(e, t, H.A.getApplication(n)))
                       .catch(() => (0, B.GJ)(e, t));
         })(n, t);
@@ -332,7 +332,7 @@ function q(e) {
                     ((0, _.Z_)(), t());
                 },
                 onSelect: () => {},
-                "aria-label": S.intl.string(S.t.xpSHSk),
+                "aria-label": W.intl.string(W.t.xpSHSk),
                 children: (0, i.jsxs)(D.rX, {
                     children: [
                         s,
@@ -340,7 +340,7 @@ function q(e) {
                             D.Dr,
                             {
                                 id: "flag-widget",
-                                label: S.intl.string(S.t.D4GvHE),
+                                label: W.intl.string(W.t.D4GvHE),
                                 action: c,
                                 color: "danger",
                                 icon: U.FlagIcon,
@@ -356,9 +356,9 @@ function q(e) {
             (0, i.jsx)(j.D, {
                 ...e,
                 innerRef: o,
-                "aria-label": S.intl.string(S.t.xpSHSk),
+                "aria-label": W.intl.string(W.t.xpSHSk),
                 className: a()(Y.x, l),
-                children: (0, i.jsx)(F.MoreHorizontalIcon, { size: "sm", color: "currentColor" }),
+                children: (0, i.jsx)(z.MoreHorizontalIcon, { size: "sm", color: "currentColor" }),
             }),
     });
 }
@@ -382,7 +382,7 @@ function Z(e) {
                 className: J.DD,
                 children: [
                     (0, i.jsx)(L.D, { variant: "heading-sm/medium", color: "text-default", id: n, children: s }),
-                    null != o && (0, i.jsx)(C.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
+                    null != o && (0, i.jsx)(A.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
             (0, i.jsx)(V, { widget: r, actionButtons: c, disabledInteraction: l, userId: t, additionalMenuItems: u }),
@@ -433,11 +433,11 @@ function $(e) {
         }),
         j = null != I,
         E = j && t < I,
-        A = j && t > I;
+        v = j && t > I;
     return (0, i.jsxs)("div", {
         ref: g,
-        className: a()(Q.wX, { [Q.A]: E, [Q.Ze]: A, [Q.Id]: p }),
-        "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: t + 1 }),
+        className: a()(Q.wX, { [Q.A]: E, [Q.Ze]: v, [Q.Id]: p }),
+        "aria-label": W.intl.formatToPlainString(W.t.YLczh4, { positionNumber: t + 1 }),
         children: [(0, i.jsx)(G, { buttonRef: u, widget: n, className: Q.vn, additionalMenuItems: l }), s],
     });
 }
@@ -452,9 +452,9 @@ function ee(e) {
             index: I,
             trailingContent: j,
             headerTitle: E,
-            headerSubtitle: A,
-            headerActionButtons: C,
-            headerClassName: v,
+            headerSubtitle: v,
+            headerActionButtons: A,
+            headerClassName: C,
             additionalManageWidgetMenuItems: b,
         } = e,
         N = (0, o.GV)(),
@@ -486,11 +486,11 @@ function ee(e) {
                     userId: t,
                     headingId: N,
                     title: E,
-                    subtitle: A,
-                    actionButtons: C,
+                    subtitle: v,
+                    actionButtons: A,
                     widget: n,
                     disableInteraction: x,
-                    className: v,
+                    className: C,
                     additionalMenuItems: b,
                 }),
                 (0, i.jsxs)(s.F, { children: [l, j] }),

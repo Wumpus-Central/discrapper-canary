@@ -1,4 +1,4 @@
-n.d(t, { Qf: () => E, Vm: () => p });
+n.d(t, { Qf: () => E, Vm: () => h });
 var l = n(477900),
     a = n(582128),
     r = n(503698),
@@ -12,8 +12,8 @@ var u = n(725836),
     m = n(777485),
     x = n(583741),
     f = n(660183),
-    h = n(801067);
-function p(e) {
+    p = n(801067);
+function h(e) {
     let t = (0, u.I6)(),
         { lineItems: n } = e,
         a = (function (e) {
@@ -28,17 +28,17 @@ function p(e) {
     return 1 === a.length && null != t
         ? (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)("div", { className: h.yF }),
+                  (0, l.jsx)("div", { className: p.yF }),
                   (0, l.jsx)(u.gw, {
                       children: (0, l.jsx)("div", {
-                          className: h.sR,
+                          className: p.sR,
                           children: (0, l.jsx)(v, { ...e, displayItems: a }),
                       }),
                   }),
               ],
           })
         : (0, l.jsxs)(l.Fragment, {
-              children: [(0, l.jsx)("div", { className: s()(h.yF, h.s3) }), (0, l.jsx)(v, { ...e, displayItems: a })],
+              children: [(0, l.jsx)("div", { className: s()(p.yF, p.s3) }), (0, l.jsx)(v, { ...e, displayItems: a })],
           });
 }
 function j(e) {
@@ -115,7 +115,7 @@ function E(e) {
     return (0, l.jsxs)(c.E, {
         variant: "text-lg/semibold",
         color: "text-strong",
-        className: s()(h.p8, a),
+        className: s()(p.p8, a),
         children: [
             (0, l.jsx)("span", { children: t ?? f.intl.string(x.default.Zxav97) }),
             (0, l.jsx)("span", { children: n }),

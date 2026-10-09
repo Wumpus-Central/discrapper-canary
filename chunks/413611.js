@@ -2,8 +2,8 @@ n.d(t, { m: () => C, A: () => b });
 var i = n(477900),
     l = n(582128),
     s = n(192308),
-    r = n(821609),
-    a = n(695366),
+    a = n(821609),
+    r = n(695366),
     o = n(150934),
     d = n(696986),
     c = n(683071),
@@ -24,7 +24,7 @@ function I(e) {
             resubmittingEnableRequest: n,
             resubmissionError: l,
             createEnableRequest: s,
-            requestRejectedNoticeText: a,
+            requestRejectedNoticeText: r,
             reapplyNoticeText: o,
             isApplicationPending: d,
         } = e;
@@ -33,13 +33,13 @@ function I(e) {
     return (
         d
             ? (u = A.intl.string(A.t.OrkTBn))
-            : null != a
-              ? (u = a)
+            : null != r
+              ? (u = r)
               : null != o && ((u = o), (t = A.intl.string(A.t["YKw/NQ"]))),
         null != u
             ? (0, i.jsx)(p.p, {
                   messageType: p.Y.WARNING,
-                  action: (0, i.jsx)(r.$, { variant: "overlay-secondary", text: t, onClick: s, loading: n }),
+                  action: (0, i.jsx)(a.$, { variant: "overlay-secondary", text: t, onClick: s, loading: n }),
                   children: u,
               })
             : null
@@ -49,7 +49,7 @@ var S = n(98332);
 let C = "role_subscriptions_eligibility_modal";
 function _(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
-    return (0, i.jsx)(r.$, {
+    return (0, i.jsx)(a.$, {
         variant: "expressive",
         onClick: function () {
             (0, s.openModalLazy)(
@@ -72,21 +72,21 @@ function _(e) {
         },
         size: "md",
         text: A.intl.string(A.t.NL5ZNS),
-        icon: a.E,
+        icon: r.E,
     });
 }
 function v(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
-            error: a,
+            error: r,
             loading: u,
             submitAcceptTermsRequest: m,
         } = (function (e) {
             let t = (0, g.bG)([E.A], () => E.A.getGuild(e)),
                 [n, i] = l.useState(),
-                [s, r] = l.useState(!1),
-                a = (0, N.ME)(t);
+                [s, a] = l.useState(!1),
+                r = (0, N.ME)(t);
             return {
                 canSubmitAcceptance: (0, g.bG)(
                     [j.default],
@@ -99,17 +99,17 @@ function v(e) {
                 error: n,
                 loading: s,
                 submitAcceptTermsRequest: l.useCallback(async () => {
-                    if (null != e && a) {
-                        (r(!0), i(void 0));
+                    if (null != e && r) {
+                        (a(!0), i(void 0));
                         try {
                             await f.Bo(e);
                         } catch (e) {
                             i(new x.A(e));
                         } finally {
-                            r(!1);
+                            a(!1);
                         }
                     }
-                }, [e, void 0, a]),
+                }, [e, void 0, r]),
             };
         })(t.id),
         [p, I] = l.useState(!1);
@@ -123,18 +123,18 @@ function v(e) {
                 label: n,
             }),
             (0, i.jsx)(d.h, { size: 24 }),
-            (0, i.jsx)(r.$, {
+            (0, i.jsx)(a.$, {
                 disabled: !p || !s,
                 onClick: m,
                 loading: u,
                 variant: "expressive",
                 text: A.intl.string(A.t.NL5ZNS),
             }),
-            null != a &&
+            null != r &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(d.h, { size: 24 }),
-                        (0, i.jsx)(c.w, { type: "critical", message: a.getAnyErrorMessage(), role: "alert" }),
+                        (0, i.jsx)(c.w, { type: "critical", message: r.getAnyErrorMessage(), role: "alert" }),
                     ],
                 }),
         ],
@@ -145,8 +145,8 @@ function T(e) {
         {
             eligibilityLoading: l,
             eligibilityError: s,
-            refreshEligibility: r,
-            eligibility: a,
+            refreshEligibility: a,
+            eligibility: r,
             eligibleForMonetization: o,
             acceptTermsCheckboxText: d,
             wasRejectedInV1: c,
@@ -157,10 +157,10 @@ function T(e) {
             : (0, i.jsx)(v, { guild: t, checkboxText: d })
         : (0, i.jsx)(_, {
               guild: t,
-              eligibility: a,
+              eligibility: r,
               eligibilityLoading: l,
               eligibilityError: s,
-              refreshEligibility: r,
+              refreshEligibility: a,
           });
 }
 function b(e) {

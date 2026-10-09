@@ -1,67 +1,67 @@
-(t.d(r, { Ay: () => a, GT: () => f, Mz: () => u, XG: () => s, fB: () => p, qH: () => i, rs: () => c }),
-    t(323874),
-    t(14289),
-    t(35956),
-    t(508300),
-    t(393431),
-    t(532706),
-    t(42231),
-    t(232424),
-    t(949626),
-    t(767709),
-    t(65162));
+(r.d(t, { Ay: () => a, GT: () => f, Mz: () => u, XG: () => s, fB: () => p, qH: () => i, rs: () => c }),
+    r(323874),
+    r(14289),
+    r(35956),
+    r(508300),
+    r(393431),
+    r(532706),
+    r(42231),
+    r(232424),
+    r(949626),
+    r(767709),
+    r(65162));
 var n,
-    o = t(115943),
-    l = t.n(o);
-async function a(e, r, t) {
+    o = r(115943),
+    l = r.n(o);
+async function a(e, t, r) {
     var n;
     return {
         src: e,
         base64: e,
         loop: !1,
         loopDelay: 0,
-        duration: Math.round(((n = await r.arrayBuffer()), l().decode(n)).frames.reduce((e, r) => e + r.delay, 0)),
+        duration: Math.round(((n = await t.arrayBuffer()), l().decode(n)).frames.reduce((e, t) => e + t.delay, 0)),
         start: 0,
         position: { x: 0, y: 0 },
-        zIndex: 100 + t,
+        zIndex: 100 + r,
         height: 880,
         width: 450,
-        name: r.name,
+        name: t.name,
     };
 }
 var i = (((n = {}).THUMBNAIL = "Thumbnail"), (n.STATIC = "Static"), (n.REDUCED_MOTION = "Reduced Motion"), n);
-function f(e, r) {
-    return { name: r.name, src: URL.createObjectURL(r), base64: e };
+function f(e, t) {
+    return { name: t.name, src: URL.createObjectURL(t), base64: e };
 }
-function u(e, r) {
+function u(e, t) {
     if (null == e) return;
-    let t = new FileReader();
-    ((t.onload = (e) => {
-        null == e.target || ("string" == typeof e.target.result && r?.(e.target.result));
+    let r = new FileReader();
+    ((r.onload = (e) => {
+        null == e.target || ("string" == typeof e.target.result && t?.(e.target.result));
     }),
-        t.readAsDataURL(e));
+        r.readAsDataURL(e));
 }
 function s(e) {
     if (null == e) return "";
-    let r = e.split("/").pop() ?? e;
-    return r.endsWith(".png.png") ? r.replace(/\.png\.png$/, ".png") : r;
+    let t = e.split("/").pop() ?? e;
+    return t.endsWith(".png.png") ? t.replace(/\.png\.png$/, ".png") : t;
 }
 function c(e) {
     return (
         "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
         e
             .map((e) => {
-                let r = s(e.name),
-                    t = e.randomizedSources?.map((e) => s(e.filename ?? e.src));
+                let t = s(e.name),
+                    r = e.randomizedSources?.map((e) => s(e.filename ?? e.src));
                 return JSON.stringify(
                     {
-                        path: r,
+                        path: t,
                         loop: e.loop,
                         start: e.start,
                         duration: e.duration,
                         loop_delay: e.loopDelay,
                         z_index: e.zIndex,
-                        ...(null != t && t.length > 0 ? { randomized_paths: t.includes(r) ? t : [r, ...t] } : {}),
+                        ...(null != r && r.length > 0 ? { randomized_paths: r.includes(t) ? r : [t, ...r] } : {}),
                     },
                     null,
                     4,
@@ -75,13 +75,13 @@ function c(e) {
     );
 }
 function p(e) {
-    let r = (function (e) {
-        let [r, t] = e.split(","),
-            n = atob(t),
-            o = r.split(";")[0],
+    let t = (function (e) {
+        let [t, r] = e.split(","),
+            n = atob(r),
+            o = t.split(";")[0],
             l = new Uint8Array(n.length);
         for (let e = 0; e < n.length; e++) l[e] = n.charCodeAt(e);
         return new Blob([l], { type: o });
     })(e);
-    return URL.createObjectURL(r);
+    return URL.createObjectURL(t);
 }

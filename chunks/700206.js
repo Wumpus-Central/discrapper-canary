@@ -2,13 +2,13 @@ i.d(e, { A: () => d });
 var l = i(582128),
     n = i(17928),
     s = i(73825),
-    a = i(97352),
-    r = i(166403),
+    r = i(97352),
+    a = i(166403),
     c = i(636194),
     o = i(624456),
     u = i(652215);
 function d(t) {
-    let e = (0, n.bG)([r.A], () => r.A.getSubscriptions()),
+    let e = (0, n.bG)([a.A], () => a.A.getSubscriptions()),
         i = l.useMemo(() => {
             if (null == e) return {};
             let t = {};
@@ -23,9 +23,9 @@ function d(t) {
                 let n = c.A.getSubscriptionListing(t),
                     s = n?.subscription_plans[0].id;
                 if (null == s) continue;
-                let a = i[s];
-                if (null != a) {
-                    ((l = a), (e = n));
+                let r = i[s];
+                if (null != r) {
+                    ((l = r), (e = n));
                     break;
                 }
             }
@@ -34,11 +34,11 @@ function d(t) {
         x = m?.subscription_plans[0],
         h = x?.id,
         g = x?.sku_id,
-        f = (0, n.bG)([a.A], () => (null != h ? a.A.get(h) : null)),
+        f = (0, n.bG)([r.A], () => (null != h ? r.A.get(h) : null)),
         j = m?.soft_deleted;
     return (
         l.useEffect(() => {
-            null != f || null == g || a.A.isFetchingForSKU(g) || (0, s.ur)(g, void 0, void 0, j);
+            null != f || null == g || r.A.isFetchingForSKU(g) || (0, s.ur)(g, void 0, void 0, j);
         }, [f, g, j]),
         { activeSubscription: d, activeSubscriptionListing: m, activeSubscriptionPlanFromStore: f }
     );

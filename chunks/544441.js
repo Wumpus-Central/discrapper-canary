@@ -1,4 +1,4 @@
-n.d(e, { A: () => p });
+n.d(e, { A: () => g });
 var l = n(582128),
     i = n(202163),
     a = n(989441),
@@ -27,7 +27,7 @@ let d = {
     },
     A = [a.D.XBOX_GAME_PASS, a.D.STEAM],
     f = [];
-function p(t) {
+function g(t) {
     let { gameRecord: e } = (0, i.A)(t);
     return (0, l.useMemo)(() => {
         if (null == e) return f;

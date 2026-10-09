@@ -1,4 +1,4 @@
-i.d(e, { sI: () => p });
+i.d(e, { sI: () => y });
 var n = i(477900);
 i(582128);
 var l = i(17928),
@@ -11,13 +11,13 @@ var l = i(17928),
     d = i(22802),
     A = i(660183),
     f = i(414981);
-function p(t, e) {
+function y(t, e) {
     let {
         highlightAdminWarningIfElevated: i,
         useFlexboxLayout: l,
         keybindClassName: a,
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return (0, n.jsx)(y, {
+    return (0, n.jsx)(p, {
         keybind: t,
         message: e,
         highlightAdminWarningIfElevated: i,
@@ -25,12 +25,12 @@ function p(t, e) {
         keybindClassName: a,
     });
 }
-function y(t) {
+function p(t) {
     let {
             keybind: e,
             message: i,
-            highlightAdminWarningIfElevated: p = !1,
-            useFlexboxLayout: y = !1,
+            highlightAdminWarningIfElevated: y = !1,
+            useFlexboxLayout: p = !1,
             keybindClassName: m,
         } = t,
         g = (0, l.bG)([r.Ay], () => {
@@ -41,7 +41,7 @@ function y(t) {
     return g
         ? (0, n.jsx)(a.E, {
               variant: "text-xxs/semibold",
-              color: p ? "text-feedback-warning" : "text-muted",
+              color: y ? "text-feedback-warning" : "text-muted",
               children: I
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
@@ -50,7 +50,7 @@ function y(t) {
                     })
                   : A.intl.string(A.t.PIeSHF),
           })
-        : y
+        : p
           ? (0, n.jsx)("div", {
                 className: f.FH,
                 children: A.intl.format(i, {

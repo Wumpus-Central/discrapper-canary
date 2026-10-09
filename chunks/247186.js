@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(140735),
     m = t(9578),
     h = t(268218),
-    p = t(236285),
-    g = t(232042),
+    g = t(236285),
+    p = t(232042),
     f = t(906754),
     A = t(332173),
     y = t(37632),
@@ -30,8 +30,8 @@ var C = t(112107),
     k = t(930101),
     v = t(302031),
     N = t(586172),
-    S = t(71393),
-    b = t(957565),
+    b = t(71393),
+    S = t(957565),
     T = t(143145),
     L = t(392605),
     M = t(785562),
@@ -93,7 +93,7 @@ function eu(e) {
         [t, a] = r.useState(!1);
     return (0, l.jsx)(s.D, {
         onClick: function () {
-            (0, b.C)(
+            (0, S.C)(
                 n,
                 () => a(!0),
                 () => a(!1),
@@ -134,7 +134,7 @@ let ed = {
                     children: (0, l.jsxs)("div", {
                         className: ea.Hy,
                         children: [
-                            b.p5
+                            S.p5
                                 ? (0, l.jsx)("div", { className: ea.lB, children: (0, l.jsx)(eu, { text: e.content }) })
                                 : null,
                             (0, l.jsx)(N.l, {
@@ -250,11 +250,11 @@ let ed = {
     },
     guild: {
         react: (e, n, t) => {
-            let r = S.A.getGuild(e.guildId);
+            let r = b.A.getGuild(e.guildId);
             return (0, l.jsx)(f.A, { guild: r, children: (0, T.t)(e, n, t) }, t.key);
         },
     },
-    channel: { react: (e, n, t) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, T.t)(e, n, t) }, t.key) },
+    channel: { react: (e, n, t) => (0, l.jsx)(p.A, { iconType: e.iconType, children: (0, T.t)(e, n, t) }, t.key) },
     message: { react: (e, n, t) => (0, l.jsx)(I, {}, t.key) },
     subtext: {
         react: (e, n, t) => {
@@ -358,7 +358,7 @@ function em(e) {
                 return {
                     react(e, a, i) {
                         let { key: o, guildId: s, channelId: c, messageId: u } = i,
-                            d = p.Ay.getDisambiguatedEmojiContext(s).getById(e.emojiId);
+                            d = g.Ay.getDisambiguatedEmojiContext(s).getById(e.emojiId);
                         if (null != d) {
                             let n = d.require_colons;
                             e = { ...e, name: n ? `:${d.name}:` : d.name };

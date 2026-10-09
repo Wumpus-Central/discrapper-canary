@@ -17,12 +17,12 @@ function c(e) {
         contentClassName: u,
         iconClassName: m,
         iconContainerClassName: x,
-        timestampClassName: h,
-        compact: g = !1,
+        timestampClassName: g,
+        compact: h = !1,
         additionalContent: f,
     } = e;
     return (0, i.jsxs)("div", {
-        className: l()(c, { [o.kL]: !0, [o.oE]: g, [o.E]: !g }),
+        className: l()(c, { [o.kL]: !0, [o.oE]: h, [o.E]: !h }),
         children: [
             null != n && (0, i.jsx)("div", { className: l()(o.zc, x), children: n }),
             null != t &&
@@ -38,7 +38,7 @@ function c(e) {
                 className: l()(u, o.Qs),
                 children: [
                     (0, i.jsxs)("div", {
-                        children: [d, null != s && (0, i.jsx)(r.A, { timestamp: s, timestampFormat: a, className: h })],
+                        children: [d, null != s && (0, i.jsx)(r.A, { timestamp: s, timestampFormat: a, className: g })],
                     }),
                     f,
                 ],

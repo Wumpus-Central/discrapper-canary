@@ -14,31 +14,31 @@ let h = {
     src: "https://cdn.discordapp.com/assets/content/e6a95b370154817e3cec977345baf14c7643d3dacb99c3034005b10be99a36c7.svg",
 };
 function p(t) {
-    let { className: e, disabled: n, size: p, variant: A, location: f, forceDarkTheme: g, ref: R } = t,
-        m = d.pe.TIER_2,
-        y = o.intl.string(o.t.lG6a5x),
+    let { className: e, disabled: n, size: p, variant: A, location: f, forceDarkTheme: g, ref: m } = t,
+        y = d.pe.TIER_2,
+        R = o.intl.string(o.t.lG6a5x),
         I = (0, i.bG)([u.default], () => u.default.getId());
     (0, c.pE)();
     let {
-        isWishlisted: E,
-        isBusy: P,
-        isFirstTimeWishlister: T,
-        handleToggle: v,
-    } = (0, s.c)({ userId: I, location: f, skuId: m, nuxGraphic: h, onNuxShow: l.D });
+        isWishlisted: P,
+        isBusy: T,
+        isFirstTimeWishlister: v,
+        handleToggle: E,
+    } = (0, s.c)({ userId: I, location: f, skuId: y, nuxGraphic: h, onNuxShow: l.D });
     return (0, a.jsx)("div", {
-        ref: R,
+        ref: m,
         className: g ? "theme-dark" : void 0,
         children: (0, a.jsx)(r._, {
-            skuId: m,
-            productName: y,
+            skuId: y,
+            productName: R,
             className: e,
             disabled: n,
             size: p,
             variant: A,
-            isWishlisted: E,
-            isBusy: P,
-            isFirstTimeWishlister: T,
-            onClick: v,
+            isWishlisted: P,
+            isBusy: T,
+            isFirstTimeWishlister: v,
+            onClick: E,
             tooltipConfig: { add: o.intl.string(o.t.cjmnm6) },
         }),
     });

@@ -31,9 +31,9 @@ function C(e) {
         w,
         E,
         { children: N, clip: k, modalContainerRef: A, editOnly: I = !1 } = e,
-        L = k.type === f.nQ.SCREENSHOT,
+        T = k.type === f.nQ.SCREENSHOT,
         {
-            initialDuration: T,
+            initialDuration: L,
             initialCropStart: M,
             initialCropEnd: R,
             initialCurrentTime: D,
@@ -56,7 +56,7 @@ function C(e) {
         [_, O] = n.useState({
             clipName: k.name,
             cropStart: M,
-            cropEnd: 0 === R ? T : R,
+            cropEnd: 0 === R ? L : R,
             voiceAudioEnabled: k.editMetadata?.voiceAudio ?? !0,
             applicationAudioEnabled: k.editMetadata?.applicationAudio ?? !0,
             soundboardAudioEnabled: k.editMetadata?.soundboardAudio ?? !0,
@@ -74,7 +74,7 @@ function C(e) {
         } = _,
         V = n.useRef(null),
         X = n.useRef(D),
-        [Z, W] = n.useState(T),
+        [Z, W] = n.useState(L),
         [q, Y] = n.useState(!1),
         [J, Q] = n.useState(!1),
         ee = n.useRef(new Set()),
@@ -161,10 +161,10 @@ function C(e) {
         eI = n.useCallback((e) => {
             ((V.current = e), ea(e.videoElement));
         }, []),
-        eL = n.useCallback((e, t, l, a) => {
+        eT = n.useCallback((e, t, l, a) => {
             (ei(e), ec(t), er(l), eh(() => a));
         }, []),
-        eT = n.useCallback(() => {
+        eL = n.useCallback(() => {
             ed(!0);
         }, []);
     ((t = k.filepath),
@@ -195,7 +195,7 @@ function C(e) {
                     try {
                         l = await r.A.clips.loadClip(t);
                     } catch {
-                        eT();
+                        eL();
                         return;
                     }
                     ((e.onmessage = (e) => {
@@ -207,7 +207,7 @@ function C(e) {
                             r.push({ arrayBuffer: e.buffer, url: t, trackName: e.trackName });
                         }
                         (a.postMessage({ type: "init", videoBuffer: t }, [t]),
-                            eL(i, r, URL.createObjectURL(new Blob([n], { type: "audio/mp4" })), s));
+                            eT(i, r, URL.createObjectURL(new Blob([n], { type: "audio/mp4" })), s));
                     }),
                         (a.onmessage = (e) => {
                             let t = e.data;
@@ -240,7 +240,7 @@ function C(e) {
                     (e.terminate(), a.terminate(), n.clear());
                 }
             );
-        }, [t, eL, ep, eT]),
+        }, [t, eT, ep, eL]),
         n.useEffect(
             () => () => {
                 null != en && URL.revokeObjectURL(en);
@@ -283,7 +283,7 @@ function C(e) {
             {
                 clipId: k.id,
                 clipProtocolVideoURL: S,
-                isScreenshot: L,
+                isScreenshot: T,
                 editOnly: I,
                 pendingEdits: {
                     name: U,
@@ -300,8 +300,8 @@ function C(e) {
             eg,
         ),
         n.useEffect(() => {
-            Z > 0 && K <= 0 && T <= 0 && O((e) => ({ ...e, cropEnd: Z }));
-        }, [Z, K, T]));
+            Z > 0 && K <= 0 && L <= 0 && O((e) => ({ ...e, cropEnd: Z }));
+        }, [Z, K, L]));
     let eM = n.useMemo(() => K - B, [B, K]),
         eR = n.useCallback(
             (e) => (

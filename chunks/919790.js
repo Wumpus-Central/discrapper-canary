@@ -1,8 +1,8 @@
 n.d(t, { A: () => m });
 var l = n(477900),
     a = n(582128),
-    i = n(256905),
-    r = n(164892),
+    r = n(256905),
+    i = n(164892),
     s = n(712808),
     u = n(922329),
     o = n(248675),
@@ -10,8 +10,8 @@ var l = n(477900),
     c = n(986109);
 function m(e) {
     let { projectId: t, attachments: n } = e,
-        i = n.filter(f),
-        [r, s] = a.useState(() => new Set()),
+        r = n.filter(f),
+        [i, s] = a.useState(() => new Set()),
         u = a.useCallback((e) => {
             s((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
@@ -25,9 +25,9 @@ function m(e) {
                         p,
                         {
                             projectId: t,
-                            viewableImages: i,
-                            viewerIndex: i.indexOf(e),
-                            unavailableIds: r,
+                            viewableImages: r,
+                            viewerIndex: r.indexOf(e),
+                            unavailableIds: i,
                             markUnavailable: u,
                         },
                         n,
@@ -37,7 +37,7 @@ function m(e) {
     });
 }
 function f(e) {
-    return null != e.id && r.XB.has(e.content_type);
+    return null != e.id && i.XB.has(e.content_type);
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
@@ -45,8 +45,8 @@ function h(e) {
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
 function g(e) {
-    let { projectId: t, id: n, name: i } = e,
-        [r, c] = a.useState(!1),
+    let { projectId: t, id: n, name: r } = e,
+        [i, c] = a.useState(!1),
         m = a.useCallback(() => {
             (0, s.n6)(t, n)
                 .then(async (e) => {
@@ -59,21 +59,21 @@ function g(e) {
                 })
                 .catch(() => {});
         }, [t, n]);
-    return r
-        ? (0, l.jsx)(h, { name: i, unavailable: !0 })
+    return i
+        ? (0, l.jsx)(h, { name: r, unavailable: !0 })
         : (0, l.jsx)(u.n, {
-              name: i,
+              name: r,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: i }),
+              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
               onClick: m,
           });
 }
 function p(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: m } = e,
-        { id: f, name: g } = n[r],
+    let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: m } = e,
+        { id: f, name: g } = n[i],
         [p, x] = a.useState(null),
         k = c.has(f),
-        [v, j] = a.useState(0);
+        [j, v] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
@@ -87,23 +87,23 @@ function p(e) {
                 e = !0;
             }
         );
-    }, [t, f, v]);
+    }, [t, f, j]);
     let b = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
         ).then(
             (e) => {
-                null != e[r] &&
-                    (0, i.R)({
+                null != e[i] &&
+                    (0, r.R)({
                         items: e.filter((e) => null != e),
-                        startingIndex: e.slice(0, r).filter((e) => null != e).length,
+                        startingIndex: e.slice(0, i).filter((e) => null != e).length,
                         shouldHideMediaOptions: !0,
                         location: "VibegrationsChat",
                     });
             },
             () => {},
         );
-    }, [t, n, r, c]);
+    }, [t, n, i, c]);
     return k
         ? (0, l.jsx)(h, { name: g, unavailable: !0 })
         : (0, l.jsx)(u.n, {
@@ -115,7 +115,7 @@ function p(e) {
                   (x(null),
                       (0, s.n6)(t, f).then(
                           (e) => {
-                              e ? 0 === v && j(1) : m(f);
+                              e ? 0 === j && v(1) : m(f);
                           },
                           () => {},
                       ));

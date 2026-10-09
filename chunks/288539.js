@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(332173),
     m = t(342296),
     h = t(734057),
-    p = t(696451),
-    g = t(994500),
+    g = t(696451),
+    p = t(994500),
     f = t(287809),
     A = t(562153),
     y = t(427262);
@@ -50,11 +50,11 @@ function E(e) {
         } = e,
         v = r.useRef(null),
         { analyticsLocations: N } = (0, c.Ay)(s.A.USER_MENTION),
-        S = (0, i.bG)([f.default], () => f.default.getUser(u)),
-        b = (0, i.bG)([h.A], () => h.A.getChannel(E)),
-        T = null != b ? b.getGuildId() : null,
+        b = (0, i.bG)([f.default], () => f.default.getUser(u)),
+        S = (0, i.bG)([h.A], () => h.A.getChannel(E)),
+        T = null != S ? S.getGuildId() : null,
         L =
-            C || null == S || null == E || null == b
+            C || null == b || null == E || null == S
                 ? void 0
                 : (e) => {
                       null != T
@@ -152,9 +152,9 @@ function E(e) {
                                     t.e("184841"),
                                 ]).then(t.bind(t, 107632));
                                 return (n) =>
-                                    (0, l.jsx)(e, { ...n, viewingChannelId: k, user: S, channel: b, guildId: T });
+                                    (0, l.jsx)(e, { ...n, viewingChannelId: k, user: b, channel: S, guildId: T });
                             })
-                          : b.isDM() &&
+                          : S.isDM() &&
                             (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     t.e("339715"),
@@ -260,12 +260,12 @@ function E(e) {
                                     t.e("960816"),
                                     t.e("363071"),
                                 ]).then(t.bind(t, 385913));
-                                return (n) => (0, l.jsx)(e, { ...n, user: S, channel: b, targetIsUser: !0 });
+                                return (n) => (0, l.jsx)(e, { ...n, user: b, channel: S, targetIsUser: !0 });
                             });
                   },
-        M = y.Ay.useName(S),
-        _ = (0, i.bG)([h.A, p.Ay, g.A], () => A.Ay.getNickname(T, E, S));
-    if (null == S) return (0, l.jsx)(x, { userId: j, className: n, children: I });
+        M = y.Ay.useName(b),
+        _ = (0, i.bG)([h.A, g.Ay, p.A], () => A.Ay.getNickname(T, E, b));
+    if (null == b) return (0, l.jsx)(x, { userId: j, className: n, children: I });
     function P(e) {
         return (0, l.jsx)(d.A, { ref: v, className: n, onContextMenu: L, ...e, children: `@${_ ?? M}` });
     }
@@ -275,7 +275,7 @@ function E(e) {
               value: N,
               children: (0, l.jsx)(m.A, {
                   targetElementRef: v,
-                  user: S,
+                  user: b,
                   guildId: T ?? void 0,
                   channelId: E,
                   position: a.Fr ? "top" : "right",

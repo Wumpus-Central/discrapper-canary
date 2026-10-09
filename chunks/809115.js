@@ -1,4 +1,4 @@
-n.d(t, { a: () => h, l: () => g });
+n.d(t, { a: () => g, l: () => h });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(660183),
     m = n(6829);
 let x = d.Ay.getEnableHardwareAcceleration() ? a.Js : a.eu;
-function h() {
+function g() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = s.useState(!1),
         i = (0, l.bG)([o.Ay], () => o.Ay.useReducedMotion),
@@ -23,7 +23,7 @@ function h() {
         eventHandlers: { onMouseEnter: s.useCallback(() => n(!0), []), onMouseLeave: s.useCallback(() => n(!1), []) },
     };
 }
-function g(e) {
+function h(e) {
     let { src: t } = e;
     return (0, i.jsx)("div", {
         className: m.H,

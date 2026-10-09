@@ -1,9 +1,9 @@
 n.d(t, {
-    Ai: () => A,
+    Ai: () => T,
     ET: () => g,
     Jh: () => h,
     SX: () => E,
-    ed: () => T,
+    ed: () => A,
     f7: () => p,
     ft: () => d,
     gU: () => f,
@@ -14,8 +14,8 @@ n.d(t, {
 });
 var s = n(582128),
     i = n(390544),
-    l = n(17928),
-    a = n(363487),
+    a = n(17928),
+    l = n(363487),
     o = n(174459),
     u = n(475669),
     r = n(652215);
@@ -40,21 +40,21 @@ function E(e, t, n) {
     }, [e, t, n]);
 }
 function _(e) {
-    let t = (0, a.A)(e),
-        n = (0, l.bG)([u.A], () => u.A.getStateForGuild(e)),
+    let t = (0, l.A)(e),
+        n = (0, a.bG)([u.A], () => u.A.getStateForGuild(e)),
         c = s.useRef(!1);
     s.useEffect(() => {
         if (n?.instances == null) return;
         let s = Object.values(n.instances).length,
-            l = Object.values(n.instances).filter((e) => e.status === i.M.ONLINE).length;
+            a = Object.values(n.instances).filter((e) => e.status === i.M.ONLINE).length;
         c.current ||
             ((c.current = !0),
             o.default.track(r.HAw.IMPRESSION_GAME_SERVERS_TAB_VIEWED, {
                 guild_id: e,
                 is_admin: t,
                 num_game_servers: s,
-                num_game_servers_online: l,
-                num_game_servers_offline: s - l,
+                num_game_servers_online: a,
+                num_game_servers_offline: s - a,
             }));
     }, [e, t, n?.instances]);
 }
@@ -67,8 +67,8 @@ function h(e) {
         productId: n,
         productName: s,
         skuId: i,
-        planName: l,
-        planCost: a,
+        planName: a,
+        planCost: l,
         previousPlanCost: u,
         region: c,
         type: d,
@@ -78,17 +78,17 @@ function h(e) {
         product_id: n,
         product_name: s,
         sku_id: i,
-        plan_name: l,
-        plan_cost: a,
+        plan_name: a,
+        plan_cost: l,
         previous_plan_cost: u,
         region: c,
         type: d,
     });
 }
-function A(e, t, n, s) {
+function T(e, t, n, s) {
     o.default.track(r.HAw.GAME_SERVER_JOIN_CLICKED, { guild_id: e, game_id: t, game_name: n, game_server_id: s });
 }
-function T(e, t, n) {
+function A(e, t, n) {
     o.default.track(r.HAw.GAME_SERVER_COPY_IP_CLICKED, { guild_id: e, game_server_id: t, location: n });
 }
 function p(e, t) {

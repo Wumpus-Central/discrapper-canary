@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(392054),
     m = t(332173),
     h = t(406704),
-    p = t(885386),
-    g = t(734057),
+    g = t(885386),
+    p = t(734057),
     f = t(31717),
     A = t(576705),
     y = t(309010),
@@ -35,7 +35,7 @@ function C(e, n, t, l, r) {
             : a());
     function a() {
         if (null == e) return;
-        let a = g.A.getChannel(e);
+        let a = p.A.getChannel(e);
         if (null == a) return;
         let { command: i, application: o } = u.EW({ channel: a, type: "channel" }, t, r);
         if (null != i && i.untranslatedName === n) {
@@ -57,14 +57,14 @@ function C(e, n, t, l, r) {
 }
 function k(e) {
     let { node: n, stateKey: t, children: i } = e,
-        o = (0, a.bG)([g.A, y.Ay], () => g.A.getChannel(n.channelId ?? y.Ay.getChannelId()), [n.channelId]),
+        o = (0, a.bG)([p.A, y.Ay], () => p.A.getChannel(n.channelId ?? y.Ay.getChannelId()), [n.channelId]),
         { hasSendMessagePerm: s, hasUseAppCommandsPerm: c } = (0, a.cf)([A.A], () => ({
             hasSendMessagePerm: A.A.can(E.xBc.SEND_MESSAGES, o),
             hasUseAppCommandsPerm: A.A.can(E.xBc.USE_APPLICATION_COMMANDS, o),
         })),
         f = void 0 !== o ? { type: "channel", channel: o } : { type: "contextless" },
         { command: x } = u.D3(f, n.commandKey ?? ""),
-        I = p.D_.useSetting(),
+        I = g.D_.useSetting(),
         k = r.useMemo(() => {
             if (null == x || null == o || x.untranslatedName !== n.commandName || I) return !1;
             let e = o.isPrivate();

@@ -21,8 +21,8 @@ var i = t(477900),
     v = t(730134),
     I = t(964486),
     N = t(80682),
-    T = t(58736),
-    _ = t(967144),
+    _ = t(58736),
+    T = t(967144),
     b = t(342296),
     S = t(696451),
     y = t(576705),
@@ -38,13 +38,13 @@ var i = t(477900),
     V = t(888299);
 let B = l.memo(function (e) {
     let { toggleRequestToSpeakSidebar: n, chatOpen: t } = e,
-        l = (0, i.jsx)(T.Ay.Icon, { icon: u.P, tooltip: U.intl.string(U.t.cpT0Cq), onClick: n });
-    return (0, i.jsxs)(T.Ay, {
+        l = (0, i.jsx)(_.Ay.Icon, { icon: u.P, tooltip: U.intl.string(U.t.cpT0Cq), onClick: n });
+    return (0, i.jsxs)(_.Ay, {
         toolbar: l,
         className: a()(V.N1, { [V.X_]: t }),
         children: [
-            (0, i.jsx)(T.Ay.Icon, { icon: d.E, disabled: !0, "aria-label": U.intl.string(U.t.TYZgzW) }),
-            (0, i.jsx)(T.Ay.Title, { children: U.intl.string(U.t.TYZgzW) }),
+            (0, i.jsx)(_.Ay.Icon, { icon: d.E, disabled: !0, "aria-label": U.intl.string(U.t.TYZgzW) }),
+            (0, i.jsx)(_.Ay.Title, { children: U.intl.string(U.t.TYZgzW) }),
         ],
     });
 });
@@ -93,7 +93,7 @@ let H = l.memo(function (e) {
                 status: O.A.getStatus(s.user.id, r),
             })),
             A = (0, c.bG)([S.Ay], () => S.Ay.getMember(r, s.user.id)),
-            h = (0, _.gn)(n.guild_id, A?.userId, A?.colorStrings ?? null),
+            h = (0, T.gn)(n.guild_id, A?.userId, A?.colorStrings ?? null),
             m = l.useMemo(() => ({ [r]: [s.user.id] }), [r, s.user.id]);
         (0, N.Eq)(m, "RequestToSpeakSidebar");
         let p = s.rtsState === D.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;

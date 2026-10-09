@@ -1,20 +1,20 @@
-t.d(l, { w: () => r });
-var n = t(477900);
-t(582128);
-var a = t(661531),
-    i = t(996682),
-    s = t(27989);
+l.d(t, { w: () => r });
+var n = l(477900);
+l(582128);
+var a = l(661531),
+    i = l(996682),
+    s = l(27989);
 function r(e) {
     let {
-            size: l = "md",
-            width: t,
+            size: t = "md",
+            width: l,
             height: r,
             color: u = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: o = "",
             ...c
         } = e,
-        d = (0, s.J)(l),
-        f = d?.width ?? t,
+        d = (0, s.J)(t),
+        f = d?.width ?? l,
         m = d?.height ?? r;
     return (0, n.jsx)("svg", {
         ...(0, i.A)(c),

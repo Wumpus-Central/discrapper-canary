@@ -21,8 +21,8 @@ var i = t(477900),
     v = t(793574),
     I = t(688810),
     N = t(198052),
-    T = t(385318),
-    _ = t(329072),
+    _ = t(385318),
+    T = t(329072),
     b = t(183184),
     S = t(384059),
     y = t(480890),
@@ -45,8 +45,8 @@ var i = t(477900),
     F = t(204651),
     X = t(404355),
     q = t(577062),
-    W = t(970636),
-    Q = t(280450),
+    Q = t(970636),
+    W = t(280450),
     J = t(192820),
     $ = t(576705),
     Z = t(309010),
@@ -146,7 +146,7 @@ let ev = l.memo(function (e) {
             (0, i.jsxs)("div", {
                 className: ep.qi,
                 children: [
-                    (0, i.jsx)(e_, { channelId: n.id }),
+                    (0, i.jsx)(eT, { channelId: n.id }),
                     t ? (0, i.jsx)(ej, { channel: n }) : null,
                     (0, i.jsx)(H.A, { channel: n }),
                 ],
@@ -177,14 +177,14 @@ function eN(e) {
         o = (0, s.bG)([ea.A], () => ea.A.getStageInstanceByChannel(n.id), [n.id]),
         c = (0, s.bG)([L.Ay], () => L.Ay.getGuildScheduledEvent(o?.guild_scheduled_event_id)),
         { suppress: u } = (0, B.A)(n),
-        g = Q.default.getId(),
+        g = W.default.getId(),
         [x] = (0, ex.A)(n),
         C = es.Ay.isModerator(g, n.id),
         p = (0, ei.Ni)(n.id),
         E = r(c),
         { parentAnalyticsLocation: j } = (0, I.Ay)(),
         N = l.useRef(null);
-    function T() {
+    function _() {
         return (function (e) {
             let { channel: n, appContext: t } = e;
             ((0, S.X)(v.A.VOICE_CONTROL_TRAY, S.O.DISCONNECT), (0, ed.A)(n))
@@ -226,17 +226,17 @@ function eN(e) {
                   return (0, i.jsx)(X.A, {
                       ref: N,
                       label: ef.intl.string(ef.t.c6qKwr),
-                      onClick: T,
+                      onClick: _,
                       onPopoutClick: t,
                       popoutOpen: l,
                   });
               },
           })
         : (u && !p) || x
-          ? (0, i.jsx)(X.A, { label: ef.intl.string(ef.t.SMKyih), onClick: T })
-          : (0, i.jsx)(X.A, { label: ef.intl.string(ef.t.c6qKwr), onClick: T });
+          ? (0, i.jsx)(X.A, { label: ef.intl.string(ef.t.SMKyih), onClick: _ })
+          : (0, i.jsx)(X.A, { label: ef.intl.string(ef.t.c6qKwr), onClick: _ });
 }
-function eT(e) {
+function e_(e) {
     let { channel: n } = e,
         { parentAnalyticsLocation: t } = (0, I.Ay)();
     return (0, i.jsx)(F.l, {
@@ -248,7 +248,7 @@ function eT(e) {
         },
     });
 }
-function e_(e) {
+function eT(e) {
     let { channelId: n } = e,
         { parentAnalyticsLocation: t } = (0, I.Ay)(),
         l = (0, s.bG)([eu.A], () => eu.A.isMuted()),
@@ -301,7 +301,7 @@ let eb = l.memo(function (e) {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(K.A, {
-                children: (0, i.jsx)(_.A, {
+                children: (0, i.jsx)(T.A, {
                     onClose: n,
                     minimal: !0,
                     onInteraction: (0, y.s)("VideoDeviceMenu", t, { entrypoint: eC.GK.CARET }),
@@ -315,7 +315,7 @@ let eb = l.memo(function (e) {
         children: (e, n) => {
             let { onClick: t } = e,
                 { isShown: l } = n;
-            return (0, i.jsx)(W.A, {
+            return (0, i.jsx)(Q.A, {
                 ref: M,
                 centerButton: !0,
                 hasPermission: m,
@@ -342,7 +342,7 @@ let eb = l.memo(function (e) {
                               renderPopout: (e) => {
                                   let { closePopout: n } = e;
                                   return (0, i.jsx)(K.A, {
-                                      children: (0, i.jsx)(T.default, {
+                                      children: (0, i.jsx)(_.default, {
                                           onClose: n,
                                           renderInputDevices: !0,
                                           renderInputModes: !0,
@@ -392,10 +392,10 @@ let eb = l.memo(function (e) {
                               disabled: S,
                           })
                         : null,
-                    (0, i.jsx)(e_, { channelId: n.id }),
+                    (0, i.jsx)(eT, { channelId: n.id }),
                     p && (0, i.jsx)(ej, { channel: n }),
                     p && c && a && (0, i.jsx)(eI, { channel: n }),
-                    p && !a && (0, i.jsx)(eT, { channel: n }),
+                    p && !a && (0, i.jsx)(e_, { channel: n }),
                     (0, i.jsx)(H.A, { channel: n }),
                 ],
             }),
@@ -408,7 +408,7 @@ function eS(e) {
     return (0, i.jsxs)("div", {
         className: ep.iE,
         children: [
-            (0, i.jsx)("div", { className: ep.qi, children: (0, i.jsx)(e_, { channelId: n.id }) }),
+            (0, i.jsx)("div", { className: ep.qi, children: (0, i.jsx)(eT, { channelId: n.id }) }),
             (0, i.jsx)(eN, { channel: n }),
         ],
     });

@@ -12,8 +12,8 @@ var n = l(582128),
     d = l(473145),
     G = l(868652),
     P = l(17928),
-    R = l(73153),
-    S = l(645619),
+    S = l(73153),
+    R = l(645619),
     I = l(904629);
 let f = {};
 class O extends P.Ay.PersistedStore {
@@ -32,17 +32,17 @@ class O extends P.Ay.PersistedStore {
         return f;
     }
     initialize(e) {
-        (this.waitFor(A.A, S.A, E.A), null != e && (f = e));
+        (this.waitFor(A.A, R.A, E.A), null != e && (f = e));
     }
     getNotificationStateForGuild(e) {
         return f[e];
     }
 }
-let c = new O(R.h, {
+let c = new O(S.h, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
         let { guildId: t } = e,
             l = E.A.getGuild(t)?.premiumSubscriberCount ?? 0,
-            n = S.A.getStateForGuild(t),
+            n = R.A.getStateForGuild(t),
             u = A.A.getStateForGuild(t),
             r = (0, I.k)([...Object.values(n?.unlockedPowerups ?? {}), ...Object.values(u?.entitlements ?? {})]);
         f = {
@@ -78,17 +78,17 @@ function W(e) {
     var t;
     let l,
         G,
-        R,
+        S,
         f,
         O,
         K = (0, r.bG)([c], () => c.getNotificationStateForGuild(e), [e]),
-        H = (0, r.bG)([S.A], () => S.A.getStateForGuild(e)),
+        H = (0, r.bG)([R.A], () => R.A.getStateForGuild(e)),
         { indicator: W, showUnread: B } =
             ((t = H ?? void 0),
             (l = (0, h.A)(e).available),
             (G = (0, k.A)(e, "useGuildPowerupsNotificationIndicator")),
-            (R = (0, o.cN)(null != G ? G.dismissibleContent : null, e)),
-            (f = null != G && !R),
+            (S = (0, o.cN)(null != G ? G.dismissibleContent : null, e)),
+            (f = null != G && !S),
             (O = (0, r.bG)([A.A], () => A.A.getStateForGuild(e))),
             n.useMemo(() => {
                 if (null == t) return { indicator: void 0, showUnread: !1 };
@@ -108,8 +108,8 @@ function W(e) {
         v = (function (e, t) {
             let [l, o] = (0, m.ty)(null != t),
                 G = l === i.M.GUILD_POWERUP_PERKS_COACHMARK,
-                { available: R } = (0, h.A)(e),
-                S = (0, r.bG)([E.A], () => E.A.getGuild(e)?.features.has(b.GuildFeatures.GAME_SERVERS) ?? !1),
+                { available: S } = (0, h.A)(e),
+                R = (0, r.bG)([E.A], () => E.A.getGuild(e)?.features.has(b.GuildFeatures.GAME_SERVERS) ?? !1),
                 I = (0, r.bG)([A.A], () => A.A.getLowestGameCostForGuild(e)),
                 f = (0, L.DD)(e, "useGuildPowerupsChannelListPopout"),
                 O = (0, C.OS)("useGuildPowerupsChannelListPopout"),
@@ -119,13 +119,13 @@ function W(e) {
                 [H, W] = (0, m.FC)(null != t && !G, K),
                 B = H === i.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
                 v = (0, D.A)(e),
-                F = (function () {
+                y = (function () {
                     let { fractionalState: e } = (0, M.A)(),
                         t = (0, P.bG)([N.default], () => N.default.getCurrentUser()?.isPremiumGroupMember() === !0);
                     return e === U.xc.NONE && !t;
                 })(),
-                [y, x] = (0, m.ww)(null != t && !G && !B && null != v && F, e),
-                Q = y === i.M.BOOST_TO_UNLOCK_COACHMARK,
+                [F, x] = (0, m.ww)(null != t && !G && !B && null != v && y, e),
+                Q = F === i.M.BOOST_TO_UNLOCK_COACHMARK,
                 j = (0, w.A)(e),
                 [z, Y] = (0, m.W2)(null != t && !G && !B && !Q && null != j, e),
                 $ = z === i.M.EXPIRING_POWERUP_COACHMARK,
@@ -196,7 +196,7 @@ function W(e) {
                                     },
                                 };
                         }
-                    })(e, t, R, k);
+                    })(e, t, S, k);
                     if (null != n) return n;
                     let r = (function (e, t, l, n) {
                         if (
@@ -212,9 +212,9 @@ function W(e) {
                                     (0, _._$)(i.V.GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, e, !0, t);
                                 },
                             };
-                    })(e, S, R, I);
+                    })(e, R, S, I);
                     if (null != r) return r;
-                }, [e, t, G, B, Z, Q, $, R, S, I, k]),
+                }, [e, t, G, B, Z, Q, $, S, R, I, k]),
                 [et, el] = (0, m.ru)(null != ee);
             return n.useMemo(() => {
                 if (null != t) {
@@ -244,7 +244,7 @@ function W(e) {
     if (null !== H && (null != W || B || null != v)) return { indicator: W, showUnread: B, popout: v };
 }
 function B(e) {
-    let t = (0, r.bG)([S.A], () => S.A.getStateForGuild(e)),
+    let t = (0, r.bG)([R.A], () => R.A.getStateForGuild(e)),
         l = W(e);
     ((0, K.m)(e),
         n.useEffect(() => {

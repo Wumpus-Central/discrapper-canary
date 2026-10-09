@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(106191),
     m = t(332173),
     h = t(936755),
-    p = t(827669);
-let g = 0,
+    g = t(827669);
+let p = 0,
     f = "data-mention-game-id",
     A = new Set([
         "DIV",
@@ -61,7 +61,7 @@ function E(e) {
         if (o) {
             let n = a.getAttribute(f);
             if (null == n || "" === n) return;
-            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, p.KW)(n)));
+            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, g.KW)(n)));
             return;
         }
         (e.preventDefault(),
@@ -76,7 +76,7 @@ function E(e) {
                             if (n.nodeType === Node.TEXT_NODE) return n.textContent ?? "";
                             if (n.nodeType !== Node.ELEMENT_NODE) return "";
                             let l = n.getAttribute(f);
-                            if (null != l) return (0, p.KW)(l);
+                            if (null != l) return (0, g.KW)(l);
                             let r = n.tagName.toUpperCase();
                             if ("IMG" === r) {
                                 let e = n.getAttribute("alt");
@@ -98,7 +98,7 @@ function E(e) {
                     let n = e.getAttribute(f);
                     if (null == n || "" === n) return;
                     let t = e.ownerDocument ?? document;
-                    e.parentNode?.replaceChild(t.createTextNode((0, p.KW)(n)), e);
+                    e.parentNode?.replaceChild(t.createTextNode((0, g.KW)(n)), e);
                 }),
                 (t = document.createElement("div")).appendChild(n),
                 t.innerHTML),
@@ -108,16 +108,16 @@ function E(e) {
 var j = t(660183),
     I = t(379961);
 let C = function (e) {
-    let { gameId: n, authorId: p } = e,
+    let { gameId: n, authorId: g } = e,
         f = (0, s.K)(n),
         A = null != f,
         y = f?.gameName ?? j.intl.string(j.t["11pdXZ"]),
         x = f?.gameIcon;
     r.useEffect(
         () => (
-            1 === (g += 1) && document.addEventListener("copy", E),
+            1 === (p += 1) && document.addEventListener("copy", E),
             () => {
-                0 == (g -= 1) && document.removeEventListener("copy", E);
+                0 == (p -= 1) && document.removeEventListener("copy", E);
             }
         ),
         [],
@@ -135,10 +135,10 @@ let C = function (e) {
                             t.e("951811"),
                             t.e("738392"),
                         ]).then(t.bind(t, 55947));
-                        return (t) => (0, l.jsx)(e, { ...t, gameId: n, gameName: y, authorId: p });
+                        return (t) => (0, l.jsx)(e, { ...t, gameId: n, gameName: y, authorId: g });
                     });
             },
-            [A, n, y, p],
+            [A, n, y, g],
         ),
         k = r.useCallback(() => {
             (0, a.openModalLazy)(async () => {
@@ -153,11 +153,11 @@ let C = function (e) {
                           gameId: n,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: n },
                           source: u.GameProfileSources.GameMention,
-                          sourceUserId: p,
+                          sourceUserId: g,
                       })
                     : k();
             },
-            [n, A, k, p],
+            [n, A, k, g],
         ),
         N = A ? `@game ${y}` : void 0;
     return (0, l.jsx)(i.m, {

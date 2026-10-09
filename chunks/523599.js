@@ -43,8 +43,8 @@ let g = a.kg(
     x = null,
     f = A.F_X.ALL,
     p = null,
-    P = {},
-    F = 0;
+    F = {},
+    P = 0;
 function k(e) {
     let t = [],
         n = 0;
@@ -123,9 +123,9 @@ function k(e) {
                     null !== s &&
                     (0, u.tr)(s.oldValue) &&
                     (e = `#${e}`),
-                    null == P[o.targetType]
-                        ? (P[o.targetType] = { [o.targetId]: e })
-                        : (P[o.targetType][o.targetId] = e));
+                    null == F[o.targetType]
+                        ? (F[o.targetType] = { [o.targetId]: e })
+                        : (F[o.targetType][o.targetId] = e));
             }
             ((n = 0), t.unshift(o));
         }),
@@ -205,10 +205,10 @@ class v extends i.Ay.Store {
         return f;
     }
     get deletedTargets() {
-        return P;
+        return F;
     }
     get groupedFetchCount() {
-        return F;
+        return P;
     }
 }
 let X = new v(s.h, {
@@ -216,7 +216,7 @@ let X = new v(s.h, {
         h = !0;
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
-        ((F = 0),
+        ((P = 0),
             (L = !1),
             (h = !1),
             (M = !0),
@@ -235,7 +235,7 @@ let X = new v(s.h, {
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
-        ((C = !0), t && F++);
+        ((C = !0), t && P++);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let {
@@ -288,8 +288,8 @@ let X = new v(s.h, {
             (f = A.F_X.ALL),
             (x = null),
             (p = null),
-            (P = {}),
-            (F = 0),
+            (F = {}),
+            (P = 0),
             (L = !0),
             (N = []),
             (O = []),

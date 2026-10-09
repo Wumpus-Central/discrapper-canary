@@ -18,8 +18,8 @@ function d(e, n) {
 }
 let m = { enableBuildOverrides: !1, enableEmojiClick: !0 },
     h = r().once(() => d(o.Ay.RULES, [(0, i.Ay)({ enableBuildOverrides: !0 })])),
-    p = r().once(() => r().omit(d(o.Ay.RULES, [(0, i.Ay)(m)]), "paragraph", "newline"));
-function g() {
+    g = r().once(() => r().omit(d(o.Ay.RULES, [(0, i.Ay)(m)]), "paragraph", "newline"));
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, i.Ay)({
         ...m,
@@ -30,14 +30,14 @@ function g() {
     });
 }
 let f = r().once(() =>
-        d(o.Ay.CHANNEL_TOPIC_RULES, [g(), (0, i.r3)(), { codeBlock: { react: o.Ay.RULES.text.react } }], {
+        d(o.Ay.CHANNEL_TOPIC_RULES, [p(), (0, i.r3)(), { codeBlock: { react: o.Ay.RULES.text.react } }], {
             shouldStopPropagation: !0,
         }),
     ),
     A = r().once(() =>
         d(
             o.Ay.CHANNEL_TOPIC_RULES,
-            [g({ emojiFocusable: !1 }), (0, i.r3)(), { codeBlock: { react: o.Ay.RULES.text.react } }],
+            [p({ emojiFocusable: !1 }), (0, i.r3)(), { codeBlock: { react: o.Ay.RULES.text.react } }],
             { shouldStopPropagation: !0 },
         ),
     ),
@@ -67,8 +67,8 @@ let f = r().once(() =>
             ...u,
         ),
     ),
-    S = { text: o.Ay.RULES.text },
-    b = r().once(() => a.aV(h())),
+    b = { text: o.Ay.RULES.text },
+    S = r().once(() => a.aV(h())),
     T = r().once(() => a.aV(f())),
     L = r().once(() => a.aV(A())),
     M = r().once(() => a.aV(y())),
@@ -78,7 +78,7 @@ let f = r().once(() =>
     O = r().once(() => a.aV(I())),
     w = r().once(() => a.aV(C())),
     U = r().once(() => a.aV(v())),
-    D = r().once(() => a.aV(p())),
+    D = r().once(() => a.aV(g())),
     G = r().once(() => a.X(h())),
     V = r().once(() => a.X(f())),
     H = r().once(() => a.X(x())),
@@ -101,12 +101,12 @@ let f = r().once(() =>
         get notifCenterV2MessagePreviewRules() {
             return N();
         },
-        lockscreenWidgetMessageRules: S,
+        lockscreenWidgetMessageRules: b,
         astParserFor: a.X,
         reactParserFor: a.aV,
         parse: function () {
             for (var e = arguments.length, n = Array(e), t = 0; t < e; t++) n[t] = arguments[t];
-            return b()(...n);
+            return S()(...n);
         },
         parseTopic: (e, n, t, l) => T()(e, n, { allowLinks: !0, allowGameMentions: !0, ...t }, l),
         parseTruncatedTopic: (e, n, t, l) => L()(e, n, { allowLinks: !0, allowGameMentions: !0, ...t }, l),

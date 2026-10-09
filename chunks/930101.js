@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(565645),
     m = t(666860),
     h = t(189551),
-    p = t(174459),
-    g = t(639245),
+    g = t(174459),
+    p = t(639245),
     f = t(188645),
     A = t(516287),
     y = t(652215),
@@ -28,7 +28,7 @@ function C(e) {
             channelId: m,
             messageId: h,
         } = e,
-        p = r.useRef(null),
+        g = r.useRef(null),
         A = n.originalMatch?.[0],
         [y, x] = r.useState(!1);
     function E(e) {
@@ -56,7 +56,7 @@ function C(e) {
             },
             children: (0, l.jsx)(c.D, {
                 ...e,
-                innerRef: p,
+                innerRef: g,
                 tag: "span",
                 tabIndex: o ? 0 : -1,
                 onClick: (n) => {
@@ -78,8 +78,8 @@ function C(e) {
               onRequestClose: () => {
                   x(!1);
               },
-              renderPopout: (e) => (0, l.jsx)(g.MV, { ...e, node: n }),
-              targetElementRef: p,
+              renderPopout: (e) => (0, l.jsx)(p.MV, { ...e, node: n }),
+              targetElementRef: g,
               children: C,
           })
         : C();
@@ -94,8 +94,8 @@ let k = (e) => {
             messageId: C,
         } = e,
         k = (0, A.n)(),
-        [N, S] = r.useState(String(Date.now())),
-        [b, T] = r.useState(!1),
+        [N, b] = r.useState(String(Date.now())),
+        [S, T] = r.useState(!1),
         [L, M] = r.useState(!1),
         _ = r.useRef(null);
     function P(e) {
@@ -137,7 +137,7 @@ let k = (e) => {
                       }
                     : void 0,
                 onMouseLeave: () => {
-                    b && (p.default.track(y.HAw.CLOSE_POPOUT, { nonce: R }), T(!1));
+                    S && (g.default.track(y.HAw.CLOSE_POPOUT, { nonce: R }), T(!1));
                 },
                 tag: "span",
                 tabIndex: m ? 0 : -1,
@@ -152,13 +152,13 @@ let k = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  (p.default.track(y.HAw.CLOSE_POPOUT, { nonce: R }), T(!1), M(!1));
+                  (g.default.track(y.HAw.CLOSE_POPOUT, { nonce: R }), T(!1), M(!1));
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: "right",
               renderPopout: function (e) {
-                  return (0, l.jsx)(g.iP, { ...e, node: n, refreshPositionKey: () => S(String(Date.now())), nonce: R });
+                  return (0, l.jsx)(p.iP, { ...e, node: n, refreshPositionKey: () => b(String(Date.now())), nonce: R });
               },
               positionKey: N,
               targetElementRef: _,

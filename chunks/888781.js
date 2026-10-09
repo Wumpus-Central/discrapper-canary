@@ -4,19 +4,19 @@ var e = l(477900),
     n = l(855522),
     r = l(297264),
     a = l(834730),
-    o = l(837091);
-function c(s) {
-    let { benefits: t, description: l, imgSrc: i, title: c, tag: d, FallbackIcon: x } = s,
+    c = l(837091);
+function o(s) {
+    let { benefits: t, description: l, imgSrc: i, title: o, tag: d, FallbackIcon: x } = s,
         u = null != i ? { "--custom-background-url": `url(${i.toString()})` } : void 0;
     return (0, e.jsxs)("div", {
-        className: o.kL,
+        className: c.kL,
         children: [
             (0, e.jsxs)("div", {
-                className: o.wx,
+                className: c.wx,
                 children: [
-                    (0, e.jsx)("div", { className: o.y2, style: u }),
+                    (0, e.jsx)("div", { className: c.y2, style: u }),
                     (0, e.jsx)("div", {
-                        className: o.F0,
+                        className: c.F0,
                         children:
                             null != i
                                 ? (0, e.jsx)("img", { src: i.toString(), alt: "" })
@@ -25,26 +25,26 @@ function c(s) {
                 ],
             }),
             (0, e.jsxs)("div", {
-                className: o.Qs,
+                className: c.Qs,
                 children: [
                     (0, e.jsxs)("div", {
-                        className: o.zH,
+                        className: c.zH,
                         children: [
                             null != d && (0, e.jsx)("div", { children: d }),
-                            (0, e.jsx)(r.D, { color: "text-strong", variant: "heading-xl/semibold", children: c }),
+                            (0, e.jsx)(r.D, { color: "text-strong", variant: "heading-xl/semibold", children: o }),
                             null != l &&
                                 "" !== l &&
                                 (0, e.jsx)(a.E, {
                                     color: "text-default",
                                     variant: "text-md/normal",
-                                    className: o.h_,
+                                    className: c.h_,
                                     children: l,
                                 }),
                         ],
                     }),
                     null != t &&
                         (0, e.jsxs)("div", {
-                            className: o.PX,
+                            className: c.PX,
                             children: [
                                 (0, e.jsx)(a.E, {
                                     color: "text-default",
@@ -73,6 +73,6 @@ function m(s) {
                 location_stack: r,
             });
         }, [r, t, l]),
-        (0, e.jsx)(c, { ...n })
+        (0, e.jsx)(o, { ...n })
     );
 }

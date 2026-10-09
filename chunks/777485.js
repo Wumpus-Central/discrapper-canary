@@ -14,7 +14,7 @@ function f(e) {
     let { children: t } = e;
     return (0, l.jsx)(o.kS, { className: x.nd, children: t });
 }
-function h(e) {
+function p(e) {
     let { children: t, ...n } = e,
         { isDisabled: a } = (0, c.CC)(d.k, "trigger");
     return (0, l.jsx)(u.vN, {
@@ -29,7 +29,7 @@ function h(e) {
         }),
     });
 }
-var p = n(423389);
+var h = n(423389);
 function j(e) {
     let {
             label: t,
@@ -52,13 +52,13 @@ function j(e) {
         onExpandedChange: m,
         children: [
             (0, l.jsxs)("div", {
-                className: p.wx,
+                className: h.wx,
                 children: [
-                    (0, l.jsx)(h, { variant: "text-md/medium", color: d ? "text-strong" : "text-muted", children: t }),
+                    (0, l.jsx)(p, { variant: "text-md/medium", color: d ? "text-strong" : "text-muted", children: t }),
                     (!d || s) && i,
                 ],
             }),
-            (0, l.jsx)(f, { children: (0, l.jsx)("div", { className: p.CS, children: c }) }),
+            (0, l.jsx)(f, { children: (0, l.jsx)("div", { className: h.CS, children: c }) }),
         ],
     });
 }
@@ -73,7 +73,7 @@ function v(e) {
             icon: m,
             tooltip: x,
             tooltipAriaLabel: f,
-            subText: h,
+            subText: p,
             subTextColor: j = "text-muted",
             subTextHasStrikethrough: v,
         } = e,
@@ -81,24 +81,24 @@ function v(e) {
             let e = (0, l.jsxs)(r.E, {
                 variant: "text-md/normal",
                 color: d,
-                className: p.U4,
+                className: h.U4,
                 children: [null != u && (0, l.jsx)(u, { size: "xs" }), o],
             });
-            return null == h
+            return null == p
                 ? e
                 : (0, l.jsxs)("div", {
-                      className: p.Lm,
+                      className: h.Lm,
                       children: [
                           e,
                           (0, l.jsx)(r.E, {
                               variant: "text-xs/medium",
                               color: j,
-                              className: v ? p.tP : void 0,
-                              children: h,
+                              className: v ? h.tP : void 0,
+                              children: p,
                           }),
                       ],
                   });
-        }, [o, u, h, v, d, j]),
+        }, [o, u, p, v, d, j]),
         E = a.useMemo(
             () =>
                 null == n
@@ -112,12 +112,12 @@ function v(e) {
             [t, n],
         );
     return (0, l.jsxs)("div", {
-        className: p.Yn,
+        className: h.Yn,
         children: [
             (0, l.jsxs)(r.E, {
                 variant: "text-md/normal",
                 color: c,
-                className: p.yB,
+                className: h.yB,
                 children: [
                     m,
                     E,

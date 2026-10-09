@@ -1,18 +1,18 @@
 a.d(l, { A: () => i });
-var n = a(477900);
+var t = a(477900);
 a(582128);
-var t = a(953727);
+var n = a(953727);
 function i(e) {
     let { width: l = 32, height: a = 32, color: i = "currentColor", ...s } = e;
-    return (0, n.jsxs)("svg", {
-        ...(0, t.A)(s),
+    return (0, t.jsxs)("svg", {
+        ...(0, n.A)(s),
         width: l,
         height: a,
         viewBox: "0 0 12 12",
         fill: "none",
         children: [
-            (0, n.jsx)("path", { d: "M7.25 1H4.75V7.25H7.25V1Z", fill: i }),
-            (0, n.jsx)("path", {
+            (0, t.jsx)("path", { d: "M7.25 1H4.75V7.25H7.25V1Z", fill: i }),
+            (0, t.jsx)("path", {
                 d: "M4.75 9.75C4.75 10.4167 5.33333 11 6 11C6.66667 11 7.25 10.4167 7.25 9.75C7.25 9.08333 6.66667 8.5 6 8.5C5.33333 8.5 4.75 9.08333 4.75 9.75Z",
                 fill: i,
             }),

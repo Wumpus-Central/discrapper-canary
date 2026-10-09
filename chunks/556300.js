@@ -12,8 +12,8 @@ var r = t(192308),
 function m(e) {
     return {
         react(n, m, h) {
-            let p = s.A.getChannel(n.channelId),
-                g = h.noStyleAndInteraction
+            let g = s.A.getChannel(n.channelId),
+                p = h.noStyleAndInteraction
                     ? void 0
                     : (t) => {
                           (e.shouldStopPropagation && t?.stopPropagation(),
@@ -21,7 +21,7 @@ function m(e) {
                               e.shouldCloseDefaultModals && (0, r.closeAllModals)());
                       },
                 f =
-                    h.noStyleAndInteraction || null == n.channelId || (null == p && null == n.originalLink)
+                    h.noStyleAndInteraction || null == n.channelId || (null == g && null == n.originalLink)
                         ? d.tEg
                         : (e) => {
                               (0, a.L3)(e, async () => {
@@ -33,8 +33,8 @@ function m(e) {
                                   return (t) =>
                                       (0, l.jsx)(e, {
                                           ...t,
-                                          channel: p,
-                                          channelId: p?.id ?? n.channelId,
+                                          channel: g,
+                                          channelId: g?.id ?? n.channelId,
                                           originalLink: n.originalLink,
                                           messageId: n.messageId,
                                       });
@@ -44,7 +44,7 @@ function m(e) {
                 i.A,
                 {
                     role: "link",
-                    onClick: g,
+                    onClick: p,
                     onContextMenu: f,
                     className: "channelMention",
                     children: [

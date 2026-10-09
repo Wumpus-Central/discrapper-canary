@@ -10,7 +10,7 @@ var i = n(503698),
     u = n(260155);
 function d(t) {
     let { text: e, textId: n, tags: i, platformIcon: d, platformLabel: A, contextMenu: f } = t,
-        { themeType: p } = (0, o.E)();
+        { themeType: g } = (0, o.E)();
     return (null == e || "" === e) && null == f
         ? null
         : null == e || "" === e
@@ -20,7 +20,7 @@ function d(t) {
                 children: [
                     (0, l.jsxs)(s.E, {
                         className: u.TK,
-                        variant: p === c.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
+                        variant: g === c.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
                         color: "text-strong",
                         id: n,
                         children: [

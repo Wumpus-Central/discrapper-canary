@@ -23,15 +23,15 @@ function S(e) {
             subblock: r,
             badgeText: s,
             enablePreview: S,
-            pageType: I = h.G2.HOME,
-            className: f,
+            pageType: f = h.G2.HOME,
+            className: I,
             handleTransition: A,
             listItemProps: x,
         } = e,
         O = r?.categorySkuId;
     null == O && null != r && (O = m.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
     let y = O ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: k } = (0, p.Z)(y, I, "marketing featured block"),
+        { handleCardVisibilityChange: k } = (0, p.Z)(y, f, "marketing featured block"),
         N = (0, _.s4)(t, r, S),
         T = l.useRef(null),
         b = r?.bodyText,
@@ -43,7 +43,7 @@ function S(e) {
         onChange: k,
         threshold: 0,
         children: (0, n.jsxs)(o.D, {
-            className: a()(L.oT, f),
+            className: a()(L.oT, I),
             innerRef: T,
             style: { ...(null != N && { backgroundImage: `url(${N})` }) },
             ...x,
@@ -57,7 +57,7 @@ function S(e) {
                     g.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: w?.sessionId,
                         sku_id: y,
-                        page_type: I,
+                        page_type: f,
                         page_section: w?.pageSection,
                         page_category: w?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
@@ -97,7 +97,7 @@ function S(e) {
                                 g.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                     collectibles_shop_session_id: w?.sessionId,
                                     sku_id: y,
-                                    page_type: I,
+                                    page_type: f,
                                     page_section: w?.pageSection,
                                     page_category: w?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",

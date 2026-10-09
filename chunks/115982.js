@@ -4,10 +4,10 @@
     n(947204));
 var l = n(248675),
     a = n(660183);
-function i(e) {
+function r(e) {
     return e?.label_key === "testing_app";
 }
-let r = {
+let i = {
     healthcheck_failed: l.default.iwOTgo,
     preview_ready: l.default.okkgSB,
     working: l.default.t8skVB,
@@ -15,7 +15,7 @@ let r = {
 };
 function s(e) {
     if (null != e.labelText && "" !== e.labelText) return e.labelText;
-    let t = null != e.labelKey ? r[e.labelKey] : void 0;
+    let t = null != e.labelKey ? i[e.labelKey] : void 0;
     return a.intl.string(t ?? l.default.t8skVB);
 }
 function u(e) {
@@ -39,17 +39,17 @@ function c(e) {
         n = [],
         l = null,
         a = null,
-        r = 0;
+        i = 0;
     for (let [u, d] of e.entries()) {
         var s;
         let e = d.segment;
         if (
-            (n.push(e ?? r),
+            (n.push(e ?? i),
             "thinking" === d.kind ||
                 ((null == (s = d).task_id || "" === s.task_id) &&
                     ("error" === s.kind ||
                         "terminal_error" === s.kind ||
-                        (!("node" !== s.kind || null == s.node || o(s)) && !i(s.node)))))
+                        (!("node" !== s.kind || null == s.node || o(s)) && !r(s.node)))))
         ) {
             l = null;
             continue;
@@ -60,15 +60,15 @@ function c(e) {
             if (0 === n.length) continue;
             null != a
                 ? (a.todos = n)
-                : ((a = { type: "todos", key: `todos-${u}`, segment: e ?? r, todos: n }), t.push(a));
+                : ((a = { type: "todos", key: `todos-${u}`, segment: e ?? i, todos: n }), t.push(a));
             continue;
         }
         if ("assistant_delta" !== d.kind || (null != d.task_id && "" !== d.task_id)) continue;
         let c = d.message ?? "";
         if ("" !== c)
             if (null == l) {
-                r++;
-                let a = e ?? r;
+                i++;
+                let a = e ?? i;
                 ((n[u] = a), (l = { type: "message", key: `message-${u}`, segment: a, content: c }), t.push(l));
             } else l.content = c;
         !0 === d.message_finished && (l = null);
@@ -86,7 +86,7 @@ function h(e, t) {
             { turnActive: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             l = [],
             a = new Map(),
-            r = new Map(),
+            i = new Map(),
             s = 0,
             { segmentOf: u } = c(e);
         function o(e, t, n) {
@@ -109,13 +109,13 @@ function h(e, t) {
             let l = { taskId: e, task: o("task", "task", t), steps: [] };
             return (a.set(e, l), l);
         }
-        function m(e, n, a, i) {
-            if ("task" === a || "task" === n) return null != e ? d(e, i).task : (t = t ?? o("task", "task", i));
+        function m(e, n, a, r) {
+            if ("task" === a || "task" === n) return null != e ? d(e, r).task : (t = t ?? o("task", "task", r));
             let s = `${e ?? ""} ${n}`,
-                u = r.get(s);
+                u = i.get(s);
             if (null != u) return u;
-            let c = o(n, "step", i);
-            return (r.set(s, c), null != e ? d(e, i).steps.push(c) : l.push(c), c);
+            let c = o(n, "step", r);
+            return (i.set(s, c), null != e ? d(e, r).steps.push(c) : l.push(c), c);
         }
         let f = (function (e) {
                 let t = new Set();
@@ -136,7 +136,7 @@ function h(e, t) {
                     "node" === n.kind &&
                         null != n.node &&
                         (null == n.task_id || "" === n.task_id) &&
-                        i(n.node) &&
+                        r(n.node) &&
                         t.add(n.node.id);
                 return t;
             })(e);
@@ -200,7 +200,7 @@ function g(e) {
         { turnActive: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { items: l } = (null == (t = m.get(e)) && ((t = c(e)), m.set(e, t)), t),
         a = h(e, n),
-        i = (function (e) {
+        r = (function (e) {
             let t = new Map();
             for (let n of e)
                 "segment_settled" === n.kind &&
@@ -210,16 +210,16 @@ function g(e) {
                     t.set(n.segment, n.duration);
             return t;
         })(e),
-        r = new Map();
-    for (let e of l) "message" === e.type && r.set(e.segment, e);
+        i = new Map();
+    for (let e of l) "message" === e.type && i.set(e.segment, e);
     let s = new Set();
     for (let e of a.steps) s.add(e.segment);
     for (let e of a.tasks) s.add(e.task.segment);
     let u = l.find((e) => "todos" === e.type)?.segment,
-        o = Math.max(0, ...r.keys(), ...s, ...(null != u ? [u] : [])),
+        o = Math.max(0, ...i.keys(), ...s, ...(null != u ? [u] : [])),
         d = [];
     for (let e = 0; e <= o; e++) {
-        let t = r.get(e),
+        let t = i.get(e),
             n = s.has(e),
             l = u === e;
         (null != t || n || l) &&
@@ -229,7 +229,7 @@ function g(e) {
                 ...(null != t ? { prose: t } : {}),
                 hasWork: n,
                 hasTodos: l,
-                ...(i.has(e) ? { durationMs: i.get(e) } : {}),
+                ...(r.has(e) ? { durationMs: r.get(e) } : {}),
             });
     }
     return d;
@@ -238,8 +238,8 @@ function p(e, t) {
     let { turnActive: n } = t,
         l = e.filter((e) => e.hasWork || e.hasTodos).at(-1)?.index,
         a = e.at(-1)?.index,
-        i = n && null != l && l === a ? l : void 0;
-    return { ...(null != l ? { lastWork: l } : {}), ...(null != i ? { open: i } : {}) };
+        r = n && null != l && l === a ? l : void 0;
+    return { ...(null != l ? { lastWork: l } : {}), ...(null != r ? { open: r } : {}) };
 }
 function x(e) {
     for (let t = e.length - 1; t >= 0; t--) {
@@ -247,7 +247,7 @@ function x(e) {
         if (null != n) {
             if ("assistant_delta" === n.kind && null != n.message && "" !== n.message) return !0;
             if (
-                !(o(n) || ("node" === n.kind && i(n.node))) &&
+                !(o(n) || ("node" === n.kind && r(n.node))) &&
                 ("node" === n.kind || "error" === n.kind || "terminal_error" === n.kind)
             )
                 break;

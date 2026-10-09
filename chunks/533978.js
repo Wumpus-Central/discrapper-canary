@@ -21,8 +21,8 @@ var i = t(477900),
     v = t(173660),
     I = t(665252),
     N = t(192820),
-    T = t(607567),
-    _ = t(246356),
+    _ = t(607567),
+    T = t(246356),
     b = t(204651);
 t(980504);
 var S = t(376086),
@@ -43,10 +43,10 @@ function O(e) {
         [K, F] = (0, h.DP)(z),
         { analyticsLocations: X } = (0, u.Ay)(),
         { showQuickAccess: q } = (0, g.j)("ActionBarSoundboardButton"),
-        [W, Q] = l.useState(q),
+        [Q, W] = l.useState(q),
         J = l.useCallback(
             (e) => {
-                q && Q(e);
+                q && W(e);
             },
             [q],
         ),
@@ -68,19 +68,19 @@ function O(e) {
             });
     }
     function ea() {
-        (P(), null != R && et(), W && $(), L?.(S.P.SOUNDBOARD));
+        (P(), null != R && et(), Q && $(), L?.(S.P.SOUNDBOARD));
     }
     function er() {
         ((0, d.X)(D, d.O.SOUNDBOARD), R === S.P.SOUNDBOARD ? (L?.(void 0), ei()) : ea());
     }
     l.useEffect(() => {
-        el || W || J(!0);
-    }, [el, W, J]);
+        el || Q || J(!0);
+    }, [el, Q, J]);
     let eo = l.useCallback(() => {
             null == R && L?.(S.P.SOUNDBOARD);
         }, [R, L]),
         ec = l.useRef(null),
-        { usersInChannel: eu } = (0, s.cf)([T.Ay], () => ({ usersInChannel: T.Ay.countVoiceStatesForChannel(n.id) }), [
+        { usersInChannel: eu } = (0, s.cf)([_.Ay], () => ({ usersInChannel: _.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
         ]),
         [ed, eA] = l.useState(!1);
@@ -108,12 +108,12 @@ function O(e) {
                         let { closePopout: t } = e;
                         return Y
                             ? null
-                            : (0, i.jsx)(_.A, {
+                            : (0, i.jsx)(T.A, {
                                   children: (0, i.jsx)("div", {
                                       onMouseEnter: et,
                                       onMouseLeave: ei,
                                       onMouseDown: eo,
-                                      children: W
+                                      children: Q
                                           ? (0, i.jsx)(E.A, {
                                                 channel: n,
                                                 guildId: V,

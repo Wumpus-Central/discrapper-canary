@@ -10,8 +10,8 @@ var i = n(477900),
     u = n(127258),
     m = n(17928),
     x = n(922016),
-    h = n(939249),
-    g = n(323384),
+    g = n(939249),
+    h = n(323384),
     f = n(320448),
     A = n(811024),
     _ = n(795816),
@@ -66,7 +66,7 @@ let Y = s.memo(function (e) {
             }, [])),
             P.D3({ channel: r, type: "channel" }, t),
             { onCopy: l, copyRef: n }),
-        h = (0, m.bG)([B.A], () => B.A.getGuild(r.guild_id), [r.guild_id]);
+        g = (0, m.bG)([B.A], () => B.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (s.useEffect(() => {
             (null == c || (c.type === D.kc.CHAT && void 0 === c.application_command)) && G.S7(r.id, o);
@@ -203,7 +203,7 @@ let Y = s.memo(function (e) {
                 })({
                     option: n,
                     channel: r,
-                    guild: h,
+                    guild: g,
                     messageId: o,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
@@ -249,8 +249,8 @@ function et(e, t, n, s, l, r) {
         channel: d,
         isInteractionUserBlocked: u,
         isInteractionUserIgnored: m,
-        showAvatarPopout: h,
-        showTargetAvatarPopout: g,
+        showAvatarPopout: g,
+        showTargetAvatarPopout: h,
         onClickAvatar: f,
         onUserContextMenu: A,
         onClickTargetAvatar: _,
@@ -287,7 +287,7 @@ function et(e, t, n, s, l, r) {
             ref: r,
         });
     }
-    let N = 1 === n ? g : h;
+    let N = 1 === n ? h : g;
     return null != l && null != N && null != r
         ? (0, i.jsx)(x.Y, {
               targetElementRef: r,
@@ -309,7 +309,7 @@ function en(e, t, n, s, l) {
         onUserContextMenu: u,
         onClickTargetUsername: m,
         onTargetUserContextMenu: x,
-        onPopoutRequestClose: h,
+        onPopoutRequestClose: g,
     } = e;
     return (0, i.jsx)(y.A, {
         className: 1 === n ? $.iu : "",
@@ -322,7 +322,7 @@ function en(e, t, n, s, l) {
         renderPopout: l,
         onClick: 1 === n ? m : d,
         onContextMenu: 1 === n ? x : u,
-        onPopoutRequestClose: h,
+        onPopoutRequestClose: g,
     });
 }
 function ei() {
@@ -393,7 +393,7 @@ function es(e) {
                         children: (e) => {
                             let { onClick: t, ...s } = e;
                             if (l.type === q.lAJ.CHAT_INPUT_COMMAND || l.type === q.lAJ.INTERACTION_PREMIUM_UPSELL)
-                                return (0, i.jsx)(h.D, {
+                                return (0, i.jsx)(g.D, {
                                     ...s,
                                     tag: "span",
                                     onClick: r,
@@ -401,7 +401,7 @@ function es(e) {
                                     children: (0, i.jsxs)("div", {
                                         className: a()($.lm, $.vk),
                                         children: [
-                                            (0, i.jsx)(g.k, {
+                                            (0, i.jsx)(h.k, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 height: 10,
@@ -415,7 +415,7 @@ function es(e) {
                             if (!(0, j.V)(l)) return (0, i.jsx)("div", { className: $.p6, ref: n, children: c });
                             {
                                 let e = (0, C.kF)(c);
-                                return (0, i.jsx)(h.D, {
+                                return (0, i.jsx)(g.D, {
                                     ...s,
                                     tag: "span",
                                     onClick: function () {
@@ -427,7 +427,7 @@ function es(e) {
                                     children: (0, i.jsxs)("div", {
                                         className: a()($.lm, $.vk),
                                         children: [
-                                            (0, i.jsx)(g.k, {
+                                            (0, i.jsx)(h.k, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 height: 10,
@@ -473,7 +473,7 @@ function es(e) {
             ? z.intl.format(z.t.kfV8WM, {
                   userHook: B,
                   activityHook: function () {
-                      return (0, i.jsx)(h.D, {
+                      return (0, i.jsx)(g.D, {
                           tag: "span",
                           onClick: J,
                           children: (0, i.jsx)("div", {

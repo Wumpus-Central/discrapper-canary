@@ -15,14 +15,14 @@ function d(e, t) {
         d = (0, r.bG)([o.A], () => o.A.getGuild(e)?.features.has(a.GuildFeatures.GAME_SERVERS)),
         G = (0, A.DD)(e, "useGuildPowerupNewPerkMarketingVersion"),
         P = (0, _.OS)("useGuildPowerupNewPerkMarketingVersion"),
-        R = (0, A.lY)(e, "useGuildPowerupNewPerkMarketingVersion"),
-        S = G && P && !R,
+        S = (0, A.lY)(e, "useGuildPowerupNewPerkMarketingVersion"),
+        R = G && P && !S,
         I = (0, r.bG)([s.A, o.A], () => s.A.can(a.xBc.MANAGE_GUILD, o.A.getGuild(e)));
     return n.useMemo(() => {
         (t?.allPowerups?.[u.SL], t?.unlockedPowerups?.[u.SL]);
         let e = t?.allPowerups?.[u.d0] != null,
             n = t?.unlockedPowerups?.[u.d0] != null;
-        if (S && e && !n) return E.QS.GUILD_THEME;
+        if (R && e && !n) return E.QS.GUILD_THEME;
         let r = t?.allPowerups?.[u.zY] != null,
             i = t?.unlockedPowerups?.[u.zY] != null;
         return r && !i
@@ -34,5 +34,5 @@ function d(e, t) {
                     ? 0
                     : E.QS.GUILD_TAG_BADGE_PACKS_WAVE_ONE
               : E.QS.GUILD_TAG_BADGE_PACKS_WAVE_TWO;
-    }, [t, l, d, S, e, I]);
+    }, [t, l, d, R, e, I]);
 }

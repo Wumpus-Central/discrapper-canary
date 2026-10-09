@@ -14,8 +14,8 @@ function o(t) {
         })(o),
         A = c > 0 ? Math.round((d / c) * 100) : 0,
         f = (0, a.Ar)(d),
-        p = (0, a.Ar)(c),
-        g = r.intl.formatToPlainString(r.t.bnnNER, { elapsed: f, duration: p });
+        g = (0, a.Ar)(c),
+        p = r.intl.formatToPlainString(r.t.bnnNER, { elapsed: f, duration: g });
     return (0, l.jsxs)("div", {
         className: s.kL,
         children: [
@@ -33,7 +33,7 @@ function o(t) {
                 "aria-valuenow": A,
                 "aria-valuemin": 0,
                 "aria-valuemax": 100,
-                "aria-valuetext": g,
+                "aria-valuetext": p,
                 children: (0, l.jsx)("div", { className: s.qB, style: { width: `${100 * u}%` } }),
             }),
             (0, l.jsx)(i.E, {

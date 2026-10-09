@@ -1,4 +1,4 @@
-n.d(e, { A: () => p });
+n.d(e, { A: () => g });
 var l = n(477900);
 n(582128);
 var i = n(889137),
@@ -22,9 +22,9 @@ function f(t) {
     let { entry: e } = t;
     return (0, l.jsx)(l.Fragment, { children: [r.Y8].map((t, n) => (0, l.jsx)(t, { entry: e }, `entry-${n}`)) });
 }
-function p(t) {
-    let { user: e, activity: n, className: p } = t,
-        g = (0, s.A)({ activity: n, user: e }),
+function g(t) {
+    let { user: e, activity: n, className: g } = t,
+        p = (0, s.A)({ activity: n, user: e }),
         m = (0, o.Cy)(n)
             ? []
             : n.type === u.$pd.PLAYING
@@ -40,10 +40,10 @@ function p(t) {
         ? null
         : (0, l.jsxs)(r.mG, {
               location: r.N5.USER_PROFILE,
-              className: p,
+              className: g,
               children: [
                   m.map((t, e) => (0, l.jsx)(t, { activity: n }, `activity-${e}`)),
-                  (0, i.YW)(g)
+                  (0, i.YW)(p)
                       .when(a.qQ, (t) => (0, l.jsx)(d, { entry: t }))
                       .when(a.UQ, (t) => (0, l.jsx)(A, { entry: t }))
                       .when(a.p6, (t) => (0, l.jsx)(f, { entry: t }))

@@ -11,8 +11,8 @@ var l = n(477900),
     m = n(939249),
     x = n(778712),
     f = n(315629),
-    h = n(403581),
-    p = n(104510),
+    p = n(403581),
+    h = n(104510),
     j = n(323384),
     v = n(966327),
     g = n(14702),
@@ -39,8 +39,8 @@ function O(e) {
             description: c,
             graphic: x,
             price: f,
-            priceStrikethroughText: h,
-            PriceIcon: p,
+            priceStrikethroughText: p,
+            PriceIcon: h,
             priceTooltip: j,
             priceSubText: v,
             priceSubTextHasStrikethrough: g = !0,
@@ -56,14 +56,14 @@ function O(e) {
                 color: "text-default",
                 className: R.nw,
                 children: [
-                    null != p && (0, l.jsx)(p, { size: "xs" }),
-                    null != h &&
+                    null != h && (0, l.jsx)(h, { size: "xs" }),
+                    null != p &&
                         (0, l.jsx)(d.E, {
                             tag: "span",
                             variant: "text-md/medium",
                             color: "text-subtle",
                             className: R.EF,
-                            children: h,
+                            children: p,
                         }),
                     f,
                 ],
@@ -71,7 +71,7 @@ function O(e) {
             return null != j
                 ? (0, l.jsx)(u.m, { text: j, asContainer: !0, position: "top", align: "center", children: e })
                 : e;
-        }, [p, f, h, j]),
+        }, [h, f, p, j]),
         C = a.useMemo(
             () =>
                 null != r
@@ -192,17 +192,17 @@ function G() {
 function w() {
     return (0, l.jsx)("div", {
         className: R.Ty,
-        children: (0, l.jsx)(h.t, { size: "lg", color: c.A.colors.ICON_DEFAULT }),
+        children: (0, l.jsx)(p.t, { size: "lg", color: c.A.colors.ICON_DEFAULT }),
     });
 }
 function M() {
-    return (0, l.jsx)(k, { color: "pink", Icon: p._ });
+    return (0, l.jsx)(k, { color: "pink", Icon: h._ });
 }
 function F() {
     return (0, l.jsx)(j.k, { size: "lg", color: "var(--icon-muted)" });
 }
 function U() {
-    return (0, l.jsx)("div", { className: R.CX, children: (0, l.jsx)(h.t, { size: "lg", color: "var(--neutral-1)" }) });
+    return (0, l.jsx)("div", { className: R.CX, children: (0, l.jsx)(p.t, { size: "lg", color: "var(--neutral-1)" }) });
 }
 let B = {
     [y.EZt.APPLICATION]: { preferredAssetType: "headerBackground" },

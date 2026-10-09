@@ -17,9 +17,9 @@ var i = n(477900),
     I = n(687966),
     j = n(404778),
     E = n(793574),
-    A = n(688810),
-    C = n(206828),
-    v = n(11099),
+    v = n(688810),
+    A = n(206828),
+    C = n(11099),
     b = n(531913),
     N = n(417270),
     y = n(7437),
@@ -30,8 +30,8 @@ var i = n(477900),
     R = n(692969),
     w = n(569926),
     k = n(280450),
-    S = n(183555),
-    W = n(644346),
+    W = n(183555),
+    S = n(644346),
     G = n(58266);
 function M(e) {
     let {
@@ -125,11 +125,11 @@ let L = Object.assign(
                 allowEditing: O,
                 disableInteraction: L,
                 index: U,
-                trailingContent: F,
-                interactiveLinks: z = !1,
+                trailingContent: z,
+                interactiveLinks: F = !1,
             } = e,
             H = (function (e) {
-                let { trackUserProfileAction: t } = (0, S.NJ)(),
+                let { trackUserProfileAction: t } = (0, W.NJ)(),
                     { user: n, widget: l, cta: s } = e,
                     o = (0, d.bG)([k.default], () => k.default.getId()) === n.id,
                     f = (0, T.h)(l.applicationId),
@@ -150,10 +150,10 @@ let L = Object.assign(
                         fetched: p,
                         hasAlreadyLinked: I,
                         canStartAuthorization: j,
-                        startAuthorization: v,
+                        startAuthorization: C,
                         token: b,
-                    } = (0, C.RD)(f),
-                    { analyticsLocations: N } = (0, A.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
+                    } = (0, A.RD)(f),
+                    { analyticsLocations: N } = (0, v.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
                     y = r.useCallback(() => {
                         j &&
                             (t({
@@ -162,8 +162,8 @@ let L = Object.assign(
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            v({ analyticsLocations: N }));
-                    }, [j, I, v, t, l.applicationId, N]),
+                            C({ analyticsLocations: N }));
+                    }, [j, I, C, t, l.applicationId, N]),
                     D = null == s && p && !I && j,
                     _ =
                         null == s &&
@@ -174,7 +174,7 @@ let L = Object.assign(
                         !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => b.scopes.includes(e)) &&
                         !b.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
                         !b.scopes.includes(c.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    W = (0, i.jsxs)(i.Fragment, {
+                    S = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
                                 ? (0, i.jsx)("img", { className: G.Z2, src: h, width: 16, height: 16, alt: "" })
@@ -187,8 +187,8 @@ let L = Object.assign(
                     }),
                     M =
                         null == x
-                            ? (0, i.jsx)("div", { className: G.qd, children: W })
-                            : (0, i.jsx)(g.D, { className: a()(G.qd, G.vk), onClick: m, children: W });
+                            ? (0, i.jsx)("div", { className: G.qd, children: S })
+                            : (0, i.jsx)(g.D, { className: a()(G.qd, G.vk), onClick: m, children: S });
                 return {
                     isCurrentUser: o,
                     game: x,
@@ -215,24 +215,24 @@ let L = Object.assign(
                     : null;
             })(n.applicationId, !0 === Y && !0 !== L),
             J =
-                z ||
+                F ||
                 (function (e) {
                     let { disableInteraction: t } = e;
                     return !0 !== t;
                 })(e)
-                    ? v.hO
+                    ? C.hO
                     : void 0,
             Z = K.surfaceConfigs[o.m.WIDGET_TOP],
             V = K.surfaceConfigs[o.m.WIDGET_BOTTOM];
         return null == Z || null == V
             ? null
-            : (0, i.jsxs)(W.A, {
+            : (0, i.jsxs)(S.A, {
                   userId: t.id,
                   widget: n,
                   allowEditing: O,
                   disableInteraction: L,
                   index: U,
-                  trailingContent: F,
+                  trailingContent: z,
                   className: a()(G.Y5, { [G.aK]: x, [G.F9]: m }),
                   headerClassName: G.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {

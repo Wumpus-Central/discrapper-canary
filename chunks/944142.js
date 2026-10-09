@@ -1,15 +1,15 @@
 n.d(t, { A: () => a });
 var r = n(17928),
     s = n(73153);
-let i = new Map();
-class o extends r.Ay.Store {
+let o = new Map();
+class i extends r.Ay.Store {
     getLiveReload(e) {
-        return i.get(e) ?? null;
+        return o.get(e) ?? null;
     }
 }
-let a = new o(s.h, {
+let a = new i(s.h, {
     CONJURE_LIVE_RELOAD_SET: function (e) {
-        let { projectId: t, enabled: n, error: r, phase: s, step: o } = e;
-        i.set(t, { enabled: n, error: r, phase: s, step: o });
+        let { projectId: t, enabled: n, error: r, phase: s, step: i } = e;
+        o.set(t, { enabled: n, error: r, phase: s, step: i });
     },
 });

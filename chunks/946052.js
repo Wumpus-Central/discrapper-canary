@@ -18,8 +18,8 @@ var n = r(477900),
     v = r(773669),
     L = r(318346),
     S = r(287809),
-    I = r(174459),
-    f = r(440938),
+    f = r(174459),
+    I = r(440938),
     A = r(993408);
 let x = (0, r(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
@@ -79,7 +79,7 @@ let K = (e) => {
         Z = (0, B.yB)("HeroBlock"),
         q = (0, c.bG)([S.default], () => S.default.getCurrentUser()),
         J = (0, c.bG)([v.default], () => v.default.locale),
-        Q = (0, f.uM)(),
+        Q = (0, I.uM)(),
         { analyticsLocations: ee } = (0, h.Ay)(_.A.COLLECTIBLES_SHOP_HERO),
         et = (0, O.S)(),
         er = l.useMemo(
@@ -137,7 +137,7 @@ let K = (e) => {
                   isInternalShopDeeplink: !0,
                   isOrbsExclusive: eh,
               }),
-              I.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+              f.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                   collectibles_shop_session_id: Q?.sessionId,
                   sku_id: ea.categorySkuId,
                   page_type: K,

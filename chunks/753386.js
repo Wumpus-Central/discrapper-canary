@@ -1,4 +1,4 @@
-n.d(t, { J$: () => I, WM: () => s.WM, cZ: () => p, eG: () => A, vd: () => _, vm: () => C, zh: () => E, zv: () => f });
+n.d(t, { J$: () => p, WM: () => s.WM, cZ: () => C, eG: () => A, vd: () => I, vm: () => _, zh: () => E, zv: () => f });
 var r = n(544180),
     u = n(396813),
     i = n(859703),
@@ -19,7 +19,7 @@ function A(e) {
 function E(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function C(e) {
+function _(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
     o.Ay.getState().setTranscriptEnabled(!1);
     let s = o.Ay.getState().getVideoProgress(t);
@@ -44,12 +44,12 @@ function C(e) {
             sourceQuestContent: n,
         }));
 }
-function p(e) {
+function C(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function _(e, t) {
+function I(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
-function I(e) {
-    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(p(e.id));
+function p(e) {
+    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(C(e.id));
 }

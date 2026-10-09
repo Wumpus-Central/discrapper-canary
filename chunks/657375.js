@@ -1,4 +1,4 @@
-(n.d(t, { FW: () => S, bg: () => O, RH: () => I }), n(134528), n(947204));
+(n.d(t, { FW: () => S, bg: () => O, RH: () => p }), n(134528), n(947204));
 var r,
     u = (((r = {}).AD_ATTRIBUTION_KIT = "aak"), r),
     i = n(626584),
@@ -29,39 +29,39 @@ async function c(e) {
 let f = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
     A = new i.A("IosAttribution"),
     E = new Map();
-function C(e, t) {
+function _(e, t) {
     return E.get(e) === t;
 }
-function p(e, t) {
-    C(e, t) && E.delete(e);
-}
-function _(e) {
-    null != e && (0, l.bg)(e).catch(() => {});
+function C(e, t) {
+    _(e, t) && E.delete(e);
 }
 function I(e) {
+    null != e && (0, l.bg)(e).catch(() => {});
+}
+function p(e) {
     let { impressionId: t, metadataSealed: n, framework: r } = e,
         u = { framework: r, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
     (E.set(t, u),
         (u.registration = T({ impressionId: t, metadataSealed: n, framework: r, impression: u }).catch(() => {
-            p(t, u);
+            C(t, u);
         })));
 }
 async function T(e) {
     let { impressionId: t, metadataSealed: n, framework: r, impression: u } = e,
         i = f[r]?.viewThroughSpec;
     if (null == i) {
-        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, o.$8)(o.vI.NO_FRAMEWORK, r), p(t, u));
+        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, o.$8)(o.vI.NO_FRAMEWORK, r), C(t, u));
         return;
     }
     let s = await c({ metadataSealed: n, impressionId: t, specs: [i], signal: u.signAbort.signal });
-    if (!C(t, u)) return;
+    if (!_(t, u)) return;
     let a = null != s ? (s.at(0)?.payload ?? null) : null;
     if (null == a) {
         ((0, o.$8)(o.vI.SIGN_FAILED, r, t), E.delete(t));
         return;
     }
     let d = await (0, l.EO)(t, r, JSON.stringify(a));
-    if (!C(t, u)) return void _(d);
+    if (!_(t, u)) return void I(d);
     if (null == d) {
         ((0, o.$8)(o.vI.NO_TOKEN, r, t), E.delete(t));
         return;
@@ -74,7 +74,7 @@ async function m(e) {
         ? (A.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
           (0, o.y9)(o.s5.NO_IMPRESSION, (0, l.BU)(), e),
           null)
-        : (null == t.token && (await t.registration), C(e, t) && null != t.token)
+        : (null == t.token && (await t.registration), _(e, t) && null != t.token)
           ? ((0, o.y9)(o.s5.ATTRIBUTED, t.framework, e), t.token)
           : (A.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
             (0, o.y9)(o.s5.NOT_READY, t.framework, e),
@@ -89,5 +89,5 @@ async function S(e) {
 }
 function O(e) {
     let t = E.get(e);
-    null != t && (E.delete(e), t.signAbort.abort(), _(t.token));
+    null != t && (E.delete(e), t.signAbort.abort(), I(t.token));
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => B });
+n.d(t, { A: () => k });
 var i = n(435558),
     l = n.n(i),
     r = n(17928),
@@ -90,7 +90,7 @@ function H(e) {
     let { guildScheduledEvent: t } = e;
     return R.updateSubtitles(t.guild_id);
 }
-class k extends r.Ay.Store {
+class B extends r.Ay.Store {
     static displayName = "ChannelListStore";
     initialize() {
         this.waitFor(u.A, h.default, _.A, C.A, g.A, a.Ay, d.A, c.Ay, A.A, I.A, T.Ay, p.Ay, N.Ay, E.A);
@@ -109,7 +109,7 @@ class k extends r.Ay.Store {
         return t.getCategoryFromSection(t.recentsSectionNumber).getShownChannelIds().length;
     }
 }
-let B = new k(s.h, {
+let k = new B(s.h, {
     APPLICATION_FETCH_FAIL: j,
     APPLICATION_FETCH_SUCCESS: j,
     APPLICATION_FETCH: j,

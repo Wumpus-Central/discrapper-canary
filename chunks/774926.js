@@ -10,22 +10,22 @@ var l = n(582128),
     d = n(189117),
     A = n(462887),
     f = n(736653),
-    p = n(661531),
-    g = n(308665);
+    g = n(661531),
+    p = n(308665);
 function m(t) {
-    let e = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><mask id="wand"><rect x="2" y="2" width="20" height="20" rx="3" fill="#fff"/><g transform="translate(6 6) scale(0.5)" fill="#000"><path d="${g.fy}"/><path d="${g.tW}"/><path d="${g.tE}"/></g></mask><rect x="2" y="2" width="20" height="20" rx="3" fill="${t}" mask="url(#wand)"/></svg>`;
+    let e = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><mask id="wand"><rect x="2" y="2" width="20" height="20" rx="3" fill="#fff"/><g transform="translate(6 6) scale(0.5)" fill="#000"><path d="${p.fy}"/><path d="${p.tW}"/><path d="${p.tE}"/></g></mask><rect x="2" y="2" width="20" height="20" rx="3" fill="${t}" mask="url(#wand)"/></svg>`;
     return `data:image/svg+xml,${encodeURIComponent(e)}`;
 }
 let x = {
-    light: m(p.A.unsafe_rawColors.BLACK.resolve({ saturation: 1 }).hex()),
-    dark: m(p.A.unsafe_rawColors.WHITE.resolve({ saturation: 1 }).hex()),
+    light: m(g.A.unsafe_rawColors.BLACK.resolve({ saturation: 1 }).hex()),
+    dark: m(g.A.unsafe_rawColors.WHITE.resolve({ saturation: 1 }).hex()),
 };
 var _ = n(569926),
     I = n(82149),
     N = n(174459),
     E = n(970928),
-    T = n(486020),
-    h = n(20805),
+    h = n(486020),
+    T = n(20805),
     C = n(327098),
     S = n(652215),
     v = n(818023),
@@ -51,26 +51,26 @@ function j(t) {
         { largeImage: d } = P(a, o),
         A = o?.getCanonicalGameId(),
         { data: f } = (0, _.I)(A),
-        p = f?.getCoverURL(),
-        g =
-            (0, h.Tq)(n) && n.extra.entries.length > 0
+        g = f?.getCoverURL(),
+        p =
+            (0, T.Tq)(n) && n.extra.entries.length > 0
                 ? { src: n.extra.entries[0].media.image_url }
-                : (0, h.Lf)(n)
+                : (0, T.Lf)(n)
                   ? {
                         src: (0, E.uD)(n.extra.application_id, n.extra.media_assets_large_image, v.iu.LARGE),
                         alt: n.extra.media_title,
                     }
-                  : (0, h.p6)(n)
+                  : (0, T.p6)(n)
                     ? { src: n.extra.media.image_url }
                     : void 0;
     return (
         (e =
             null != c
                 ? { largeImage: c, smallImage: u }
-                : null != g
-                  ? { largeImage: g, smallImage: void 0 }
-                  : null != p && l
-                    ? { largeImage: { src: p }, smallImage: void 0 }
+                : null != p
+                  ? { largeImage: p, smallImage: void 0 }
+                  : null != g && l
+                    ? { largeImage: { src: g }, smallImage: void 0 }
                     : { largeImage: d, smallImage: void 0 }),
         L({ activity: a, application: s ?? r, largeImageSrc: e.largeImage?.src, trackingSource: i }),
         e
@@ -85,7 +85,7 @@ function P(t, e) {
             let t = (0, I.UW)(e),
                 n =
                     null != t
-                        ? T.Ay.getGuildIconURL({ id: t.guildId, icon: e?.assets?.small_image, size: v.iu.SMALL })
+                        ? h.Ay.getGuildIconURL({ id: t.guildId, icon: e?.assets?.small_image, size: v.iu.SMALL })
                         : void 0;
             return { largeImage: null != n ? { src: n } : void 0, smallImage: void 0 };
         }
@@ -121,8 +121,8 @@ function L(t) {
         d = (0, i.bG)([c.A], () => null != s && c.A.didFetchingApplicationFail(s)),
         A = null == s || null != o || d,
         f = null != o || null != n,
-        p = null == a,
-        g = e?.name,
+        g = null == a,
+        p = e?.name,
         m = e?.type,
         x = e?.session_id,
         _ = e?.assets?.large_image != null || e?.assets?.small_image != null,
@@ -130,17 +130,17 @@ function L(t) {
     (0, l.useEffect)(() => {
         I &&
             A &&
-            p &&
+            g &&
             N.default.track(S.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
                 source: r,
                 application_id: s,
-                activity_name: g,
+                activity_name: p,
                 activity_type: m,
                 activity_session_id: x,
                 application_found: f,
                 has_rich_assets: _,
             });
-    }, [r, I, A, p, s, g, m, x, f, _]);
+    }, [r, I, A, g, s, p, m, x, f, _]);
 }
 function b(t, e) {
     let n = (0, u.h)(t?.application_id),

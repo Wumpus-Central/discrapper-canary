@@ -1,12 +1,12 @@
-l.d(t, { CB: () => y, S6: () => k, SJ: () => N, iD: () => w });
+l.d(t, { CB: () => k, S6: () => y, SJ: () => N, iD: () => w });
 var n = l(582128),
     i = l(435558),
     a = l(17928),
     r = l(66834),
     u = l(627363),
     p = l(587895),
-    o = l(47167),
-    s = l(808728),
+    s = l(47167),
+    o = l(808728),
     d = l(696451),
     c = l(71393),
     g = l(576705),
@@ -23,14 +23,14 @@ function w(e, t) {
     var l, u;
     let m,
         w,
-        k = (0, a.bG)([p.A], () => null != t && p.A.getApplication(t)?.vibegrationsProjectId != null, [t]);
+        y = (0, a.bG)([p.A], () => null != t && p.A.getApplication(t)?.vibegrationsProjectId != null, [t]);
     return (
         n.useEffect(() => {
             null != t && P(t);
         }, [t]),
         n.useEffect(() => {
-            if (null != e && k) for (let t of I(e)) P(t);
-        }, [e, k]),
+            if (null != e && y) for (let t of C(e)) P(t);
+        }, [e, y]),
         (l = e),
         (u = t),
         (m = (0, a.bG)(
@@ -65,7 +65,7 @@ function w(e, t) {
             for (let e of w) P(e);
         }, [w]),
         (0, a.bG)(
-            [p.A, c.A, s.Ay, d.Ay, g.A, A.default, f.A],
+            [p.A, c.A, o.Ay, d.Ay, g.A, A.default, f.A],
             () =>
                 (function (e, t) {
                     var l, n;
@@ -73,10 +73,10 @@ function w(e, t) {
                         a = null == t ? null : p.A.getApplication(t),
                         r = a?.vibegrationsProjectId;
                     if (null == i || null == a || null == r) return null;
-                    let u = I(i.id)
+                    let u = C(i.id)
                             .map((e) => p.A.getApplication(e))
                             .find((e) => e?.vibegrationsProjectId === r),
-                        s = null == u ? [] : (0, b.xI)(i.id, u.id),
+                        o = null == u ? [] : (0, b.xI)(i.id, u.id),
                         m =
                             null != u &&
                             (0, b.wv)(i, a.bot?.id) &&
@@ -88,18 +88,18 @@ function w(e, t) {
                                     A.default.getUser(e)?.bot === !0 &&
                                     p.A.getApplication(N(e))?.vibegrationsProjectId === n,
                             )).every((e) => (0, b.wv)(i, e)) &&
-                            s.every((e) => g.A.can(v.xBc.MANAGE_CHANNELS, e));
+                            o.every((e) => g.A.can(v.xBc.MANAGE_CHANNELS, e));
                     return {
                         projectId: r,
                         guildId: i.id,
                         guildName: i.name,
                         targetAppName: a.name,
                         rest:
-                            null != u && 0 !== s.length && m
+                            null != u && 0 !== o.length && m
                                 ? {
                                       appName: u.name,
                                       previewAppName: u.id === a.id ? `${u.name}${h}` : a.name,
-                                      channels: s.map((e) => ({ id: e.id, name: (0, o.m1)(e, A.default, f.A) })),
+                                      channels: o.map((e) => ({ id: e.id, name: (0, s.m1)(e, A.default, f.A) })),
                                       targetIsPreview: u.id !== a.id,
                                   }
                                 : null,
@@ -110,30 +110,30 @@ function w(e, t) {
         )
     );
 }
-function k(e) {
+function y(e) {
     return [
-        ...C(e.channels),
+        ...I(e.channels),
         e.targetIsPreview
             ? { key: "main-app", kind: "app", label: e.appName }
             : { key: "preview-app", kind: "app", label: e.previewAppName },
     ];
 }
-function y(e, t) {
+function k(e, t) {
     return [
-        ...C(e.channels.filter((e) => e.id !== t)),
+        ...I(e.channels.filter((e) => e.id !== t)),
         { key: "main-app", kind: "app", label: e.appName },
         { key: "preview-app", kind: "app", label: e.previewAppName },
     ];
 }
-function C(e) {
+function I(e) {
     return e.map((e) => {
         let { id: t, name: l } = e;
         return { key: `channel:${t}`, kind: "channel", label: `#${l}` };
     });
 }
-function I(e) {
+function C(e) {
     let t = new Set();
-    for (let { channel: l } of s.Ay.getChannels(e)[s.I6]) {
+    for (let { channel: l } of o.Ay.getChannels(e)[o.I6]) {
         let e = (0, m.us)(l);
         null != e && t.add(e);
     }

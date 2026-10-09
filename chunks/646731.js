@@ -1,4 +1,4 @@
-l.d(t, { Yc: () => eG, vG: () => eK, FT: () => ew, EA: () => eX });
+l.d(t, { Yc: () => ew, vG: () => eK, FT: () => eG, EA: () => eX });
 var a = l(477900),
     n = l(582128),
     s = l(503698),
@@ -6,8 +6,8 @@ var a = l(477900),
     r = l(892227),
     c = l(806163),
     o = l(17928),
-    h = l(939249),
-    u = l(192308),
+    u = l(939249),
+    h = l(192308),
     d = l(922016),
     m = l(793574),
     C = l(688810),
@@ -38,8 +38,8 @@ var a = l(477900),
     W = l(475743),
     H = l(303136),
     k = l(975571),
-    w = l(626031),
-    G = l(320448),
+    G = l(626031),
+    w = l(320448),
     z = l(404778),
     V = l(318254),
     Y = l(742967),
@@ -73,7 +73,7 @@ function $(e) {
             achievementStatus: r,
             onClaim: c,
             onDiscoveryClick: o,
-            isLastItem: u,
+            isLastItem: h,
             isFirstItem: d,
         } = e,
         [m, C] = n.useState(!1),
@@ -119,17 +119,17 @@ function $(e) {
                             loading: l,
                             onClick: n,
                         });
-                    return e === p.x.COMPLETED || l ? i : s ? (0, a.jsx)(G._, { size: "sm", "aria-hidden": !0 }) : null;
+                    return e === p.x.COMPLETED || l ? i : s ? (0, a.jsx)(w._, { size: "sm", "aria-hidden": !0 }) : null;
                 })(r, { isHovered: m, isClaiming: E, handleClaim: g, hasDiscoveryClick: A }),
             ],
         }),
         L = n.useMemo(() => ({ onMouseEnter: () => C(!0), onMouseLeave: () => C(!1) }), []);
     return A
         ? (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)(h.D, { className: f, ...L, onClick: o, children: x }), !u && (0, a.jsx)(Z, {})],
+              children: [(0, a.jsx)(u.D, { className: f, ...L, onClick: o, children: x }), !h && (0, a.jsx)(Z, {})],
           })
         : (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)("div", { className: f, ...L, children: x }), !u && (0, a.jsx)(Z, {})],
+              children: [(0, a.jsx)("div", { className: f, ...L, children: x }), !h && (0, a.jsx)(Z, {})],
           });
 }
 var ee = l(652215),
@@ -172,7 +172,7 @@ function ei(e) {
                                 ? X.intl.string(X.t.cKwv4k)
                                 : X.intl.formatToPlainString(X.t.zPaLL9, { balance: t }),
                     }),
-                    (0, a.jsx)(w.t, {
+                    (0, a.jsx)(G.t, {
                         ariaHidden: !0,
                         counterInnerClassName: i ? et.F4 : void 0,
                         value: t,
@@ -207,7 +207,7 @@ function er(e) {
         });
     return null == n
         ? (0, a.jsx)("div", { className: et.lh, children: r })
-        : (0, a.jsx)(h.D, { className: i()(et.lh, et.w9), onClick: n, children: r });
+        : (0, a.jsx)(u.D, { className: i()(et.lh, et.w9), onClick: n, children: r });
 }
 function ec(e) {
     let { numRows: t = 3 } = e,
@@ -245,14 +245,14 @@ function eo(e) {
             badgeText: r,
             badgeAccessibilityLabel: c,
             onClickBadge: o,
-            inlineNoticeProps: h,
+            inlineNoticeProps: u,
         } = e,
-        u = l.length > 0,
+        h = l.length > 0,
         d = n.useMemo(
             () =>
-                s && null == h
+                s && null == u
                     ? (0, a.jsx)(ec, { numRows: 3 })
-                    : u
+                    : h
                       ? (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsxs)("div", {
@@ -285,7 +285,7 @@ function eo(e) {
                                 }),
                             ],
                         })
-                      : null != h
+                      : null != u
                         ? null
                         : (0, a.jsxs)("div", {
                               className: et.GN,
@@ -302,15 +302,15 @@ function eo(e) {
                                   }),
                               ],
                           }),
-            [s, u, t, r, c, o, l, h, i],
+            [s, h, t, r, c, o, l, u, i],
         ),
         m = n.useMemo(
-            () => (null == h ? null : (0, a.jsx)("div", { className: et.re, children: (0, a.jsx)(I.w, { ...h }) })),
-            [h],
+            () => (null == u ? null : (0, a.jsx)("div", { className: et.re, children: (0, a.jsx)(I.w, { ...u }) })),
+            [u],
         );
     return (0, a.jsxs)("div", { className: et.E6, "aria-busy": s, children: [m, d] });
 }
-function eh(e) {
+function eu(e) {
     let { onQuestsClick: t, onShopClick: l, totalOrbsRedeemed: n } = e;
     return (0, a.jsxs)("div", {
         className: et.VX,
@@ -376,7 +376,7 @@ function eh(e) {
         ],
     });
 }
-function eu(e) {
+function eh(e) {
     let {
             orbBalance: t,
             headerTagsContent: l,
@@ -384,20 +384,20 @@ function eu(e) {
             orbChallengesCard: r,
             orbWalletFooter: c,
             cardRef: o,
-            returnRef: h,
+            returnRef: u,
         } = e,
-        [u, d] = n.useState(!1);
+        [h, d] = n.useState(!1);
     return (0, a.jsxs)(D.l, {
         className: i()(et.ql, et.Ut),
         ref: o,
-        returnRef: h,
+        returnRef: u,
         "aria-label": X.intl.string(K.default.XKj5L9),
         children: [
             (0, a.jsxs)("div", {
                 className: et.hG,
                 children: [
                     (0, a.jsx)(ei, { orbBalance: t, headerTagsContent: l }),
-                    u ? null : s({ onClose: () => d(!0) }),
+                    h ? null : s({ onClose: () => d(!0) }),
                 ],
             }),
             (0, a.jsx)("div", { className: et.BA, children: r }),
@@ -453,14 +453,14 @@ function ey(e) {
         buttonText: r,
         buttonIcon: c,
         buttonVariant: o,
-        onCtaClick: h,
-        onClose: u,
+        onCtaClick: u,
+        onClose: h,
         className: d,
     } = e;
     return (0, a.jsxs)("div", {
         className: i()(eS.Vm, d),
         children: [
-            null != u
+            null != h
                 ? (0, a.jsx)("div", {
                       className: eS.Fx,
                       children: (0, a.jsx)(em.K, {
@@ -468,7 +468,7 @@ function ey(e) {
                           "aria-label": X.intl.string(X.t.cpT0Cq),
                           variant: "icon-only",
                           size: "sm",
-                          onClick: u,
+                          onClick: h,
                       }),
                   })
                 : null,
@@ -490,32 +490,32 @@ function ey(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(N.$, { text: r, size: "sm", icon: c, onClick: h, variant: o, fullWidth: !0 }),
+            (0, a.jsx)(N.$, { text: r, size: "sm", icon: c, onClick: u, variant: o, fullWidth: !0 }),
         ],
     });
 }
 function ej(e, t) {
     let { ctaClickHandler: l, dismissibleContent: a, ctaObject: s } = t,
         { analyticsPage: i = m.A.ORB_WALLET, forceVisible: r, onClose: c, onCloseWallet: o } = e,
-        [h, u] = (0, eE.kn)([a], { groupName: eN.m.ORB_WALLET, bypassAutoDismiss: !0 }),
+        [u, h] = (0, eE.kn)([a], { groupName: eN.m.ORB_WALLET, bypassAutoDismiss: !0 }),
         d = n.useCallback(() => {
             ((0, L.Y)({ pageType: i, sectionType: m.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
                 l(),
-                r || u(eN.i.TAKE_ACTION),
+                r || h(eN.i.TAKE_ACTION),
                 o("navigation"));
-        }, [i, u, r, o, l, s]),
+        }, [i, h, r, o, l, s]),
         C = n.useCallback(() => {
-            (r || u(eN.i.DISMISS), c());
-        }, [r, u, c]);
-    return { onCtaClick: d, shouldHideCard: null == h && !r, onClose: C };
+            (r || h(eN.i.DISMISS), c());
+        }, [r, h, c]);
+    return { onCtaClick: d, shouldHideCard: null == u && !r, onClose: C };
 }
 function eU(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = m.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, C.Ay)(m.A.ORB_WALLET_PRIMARY_CARD),
         {
             shouldHideCard: o,
-            onCtaClick: h,
-            onClose: u,
+            onCtaClick: u,
+            onClose: h,
         } = ej(
             { analyticsPage: i, forceVisible: r, onClose: t, onCloseWallet: s },
             {
@@ -535,8 +535,8 @@ function eU(e) {
               subTextDescription: X.intl.string(K.default.HACucK),
               buttonText: X.intl.string(K.default["7raRgL"]),
               buttonIcon: { asset: F.U, type: "icon" },
-              onCtaClick: h,
-              onClose: u,
+              onCtaClick: u,
+              onClose: h,
           });
 }
 let eI = { asset: y.t, type: "icon" };
@@ -544,8 +544,8 @@ function eM(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = m.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, C.Ay)(m.A.ORB_WALLET_PRIMARY_CARD),
         {
-            shouldHideCard: h,
-            onCtaClick: u,
+            shouldHideCard: u,
+            onCtaClick: h,
             onClose: d,
         } = ej(
             { analyticsPage: i, forceVisible: r, onClose: t, onCloseWallet: s },
@@ -561,7 +561,7 @@ function eM(e) {
             nitroGatedOrbMultiplier: T.Ay.nitroGatedOrbMultiplier,
         })),
         _ = n.useMemo(() => X.intl.format(K.default["Ba/7wO"], { multiplier: E }), [E]);
-    return null == E || h
+    return null == E || u
         ? null
         : (0, a.jsx)(ey, {
               title: X.intl.string(K.default.ZqCAos),
@@ -571,7 +571,7 @@ function eM(e) {
               buttonText: X.intl.string(K.default.U9UQJE),
               buttonIcon: eI,
               buttonVariant: "expressive",
-              onCtaClick: u,
+              onCtaClick: h,
               onClose: d,
               className: eS.ml,
           });
@@ -632,12 +632,12 @@ function eH(e) {
     let { text: t, onClick: l } = e;
     return null == l
         ? (0, a.jsx)("span", { className: eF.dW, children: t })
-        : (0, a.jsx)(h.D, { className: i()(eF.dW, eF.or), onClick: l, children: t });
+        : (0, a.jsx)(u.D, { className: i()(eF.dW, eF.or), onClick: l, children: t });
 }
 function ek(e, t) {
     return X.intl.formatToPlainString(e ? K.default.p9PPYD : K.default["1JZfaU"], { multiplier: t });
 }
-function ew(e) {
+function eG(e) {
     let {
         userHasPremium: t,
         orbBalance: l,
@@ -646,7 +646,7 @@ function ew(e) {
         hasNoChallenges: i,
         totalOrbsRedeemed: r = 15600,
     } = e;
-    return (0, a.jsx)(eu, {
+    return (0, a.jsx)(eh, {
         orbBalance: l,
         headerTagsContent: t
             ? (0, a.jsx)(es, { text: X.intl.format(K.default["04j3XV"], { orbAmount: 250, days: 16 }) })
@@ -670,15 +670,15 @@ function ew(e) {
             challenges: i ? [] : eB,
             onClaim: eP,
         }),
-        orbWalletFooter: (0, a.jsx)(eh, {
+        orbWalletFooter: (0, a.jsx)(eu, {
             onQuestsClick: () => eO(),
             onShopClick: () => eb({ analyticsLocations: [] }),
             totalOrbsRedeemed: r,
         }),
     });
 }
-function eG(e) {
-    return (0, a.jsx)(ew, { ...e, hasNoChallenges: !0 });
+function ew(e) {
+    return (0, a.jsx)(eG, { ...e, hasNoChallenges: !0 });
 }
 function ez() {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, g.F)();
@@ -691,7 +691,7 @@ function eV() {
 }
 function eY(e) {
     let { analyticsPage: t = m.A.ORB_WALLET, analyticsLocations: s = [], onCloseWallet: i = ee.tEg } = e,
-        { challengesForOrbWallet: r, hasFetchedChallenges: c, refetch: h } = (0, O.z)({ shouldFetch: !0 }),
+        { challengesForOrbWallet: r, hasFetchedChallenges: c, refetch: u } = (0, O.z)({ shouldFetch: !0 }),
         d = (0, E.L)(ev.PremiumTypes.TIER_2),
         C = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
         { nitroGatedOrbMultiplier: _, orbChallengesDisplayError: g } = (0, o.cf)([T.Ay], () => ({
@@ -708,14 +708,14 @@ function eY(e) {
                               g.errorType === T.EB.CLAIM_CHALLENGE
                                   ? X.intl.string(K.default.FYb5rH)
                                   : X.intl.format(K.default.ggLzeg, {
-                                        underlineHook: (e) => (0, a.jsx)(eH, { text: e, onClick: h }),
+                                        underlineHook: (e) => (0, a.jsx)(eH, { text: e, onClick: u }),
                                     }),
                           role: "status",
                       }
                     : f
                       ? { type: "info", message: X.intl.string(X.t.qxk9zo), role: "status" }
                       : null,
-            [g, h, f],
+            [g, u, f],
         ),
         p = n.useCallback(
             () => (
@@ -755,7 +755,7 @@ function eY(e) {
             [r, s, t, i],
         ),
         b = n.useCallback(() => {
-            (0, u.openModalLazy)(async () => {
+            (0, h.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     l.e("671464"),
                     l.e("112206"),
@@ -788,14 +788,14 @@ function eK(e) {
             onCloseWallet: i = ee.tEg,
             isProfilePopout: r,
         } = e,
-        { balance: h } = (0, b.W0)(),
-        u = (0, v.H)({ location: "StatefulOrbWallet" }),
-        { totalRedeemed: d } = (0, b.rQ)({ disableFetch: !u }),
+        { balance: u } = (0, b.W0)(),
+        h = (0, v.H)({ location: "StatefulOrbWallet" }),
+        { totalRedeemed: d } = (0, b.rQ)({ disableFetch: !h }),
         g = (0, E.L)(ev.PremiumTypes.TIER_2),
         { analyticsLocations: A } = (0, C.Ay)(m.A.ORB_WALLET);
     n.useEffect(() => {
-        u && (0, R.eX)();
-    }, [u]);
+        h && (0, R.eX)();
+    }, [h]);
     let f = n.useCallback(() => {
             ((0, L.Y)({ pageType: s, sectionType: m.A.ORB_WALLET_FOOTER, ctaObject: m.A.ORB_WALLET_SHOP_CTA }),
                 eb({ analyticsLocations: A }),
@@ -806,7 +806,7 @@ function eK(e) {
                 eO(),
                 i("navigation"));
         }, [s, i]),
-        N = n.useMemo(() => eD(g, h), [g, h]),
+        N = n.useMemo(() => eD(g, u), [g, u]),
         { challengesForOrbWallet: S, hasFetchedChallenges: y } = (0, o.cf)([T.Ay], () => ({
             challengesForOrbWallet: T.Ay.challengesForOrbWallet,
             hasFetchedChallenges: T.Ay.hasFetchedChallenges,
@@ -835,18 +835,18 @@ function eK(e) {
                 r ? { onQuestsClick: O, onShopClick: f } : { onQuestsClick: M ? null : O, onShopClick: I ? null : f },
             [M, I, O, f, r],
         );
-    return u
-        ? (0, a.jsx)(eu, {
+    return h
+        ? (0, a.jsx)(eh, {
               cardRef: t,
               returnRef: l,
-              orbBalance: h,
+              orbBalance: u,
               headerTagsContent: (0, a.jsx)(eV, {}),
               renderPrimaryCard: (e) => {
                   let { onClose: t } = e;
-                  return eW({ userHasPremium: g, onClose: t, orbBalance: h, analyticsPage: s, onCloseWallet: i });
+                  return eW({ userHasPremium: g, onClose: t, orbBalance: u, analyticsPage: s, onCloseWallet: i });
               },
               orbChallengesCard: (0, a.jsx)(eY, { analyticsPage: s, analyticsLocations: A, onCloseWallet: i }),
-              orbWalletFooter: (0, a.jsx)(eh, { ...F, totalOrbsRedeemed: d }),
+              orbWalletFooter: (0, a.jsx)(eu, { ...F, totalOrbsRedeemed: d }),
           })
         : null;
 }
@@ -856,7 +856,7 @@ function eX(e) {
             () => (0, a.jsx)(eK, { cardRef: t, returnRef: l, analyticsPage: r, onCloseWallet: c }),
             [t, l, r, c],
         ),
-        h = n.useCallback(
+        u = n.useCallback(
             (e, t) => {
                 "user:escape" === t && null != c && c("direct_close");
             },
@@ -869,7 +869,7 @@ function eX(e) {
         position: "bottom",
         align: "right",
         shouldShow: i,
-        onRequestClose: h,
+        onRequestClose: u,
         animation: d.Y.Animation.NONE,
         targetElementRef: s,
         children: () => null,

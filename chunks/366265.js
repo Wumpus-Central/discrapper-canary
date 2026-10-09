@@ -23,11 +23,11 @@ function j(e) {
         j = (0, h.zy)(n.id, m.ip.AUDIENCE),
         I = (0, s.bG)([u.A], () => u.A.getGuild(n.guild_id), [n.guild_id]),
         N = I?.maxStageVideoChannelUsers ?? 0,
-        T =
+        _ =
             null != I && I.features.has(C.GuildFeatures.COMMUNITY)
                 ? N < C.p2C
                 : I?.premiumTier !== C.TVA.TIER_3 && N <= C.nyz,
-        _ = (0, x.A)(n),
+        T = (0, x.A)(n),
         b = (0, s.bG)([d.A], () => d.A.can(g.QY, n));
     function S() {
         (o.A.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
@@ -45,15 +45,15 @@ function j(e) {
     }),
     l.useEffect(() => {
         let { canModerate: e, audienceCount: n, channel: t, speakerCount: i } = O.current;
-        _ &&
+        T &&
             A.default.track(C.HAw.BOOSTING_UPSELL_VIEWED, {
                 guild_id: t.guild_id,
                 type: f.e.VIDEO_STAGE_LIMIT,
                 is_moderator: e,
                 listener_count: i + n,
             });
-    }, [_]),
-    _)
+    }, [T]),
+    T)
         ? (0, i.jsxs)("div", {
               className: E.bp,
               children: [
@@ -64,18 +64,18 @@ function j(e) {
                           (0, i.jsx)(a.E, {
                               variant: "text-md/medium",
                               color: "text-strong",
-                              children: T ? p.intl.string(p.t["T+zF9M"]) : p.intl.string(p.t["IZ+SVv"]),
+                              children: _ ? p.intl.string(p.t["T+zF9M"]) : p.intl.string(p.t["IZ+SVv"]),
                           }),
                           (0, i.jsx)(a.E, {
                               variant: "text-xs/medium",
                               color: "text-default",
-                              children: T ? p.intl.string(p.t.Izgpmv) : p.intl.string(p.t["7FHbPG"]),
+                              children: _ ? p.intl.string(p.t.Izgpmv) : p.intl.string(p.t["7FHbPG"]),
                           }),
                       ],
                   }),
                   (0, i.jsx)("div", {
                       className: E.Uo,
-                      children: T
+                      children: _
                           ? (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(r.$, {

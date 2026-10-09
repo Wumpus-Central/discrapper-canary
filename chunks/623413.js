@@ -22,13 +22,13 @@ var i = t(477900),
 let I = function (e) {
     let { participants: n, channel: t, hasConnectPermission: I } = e,
         N = (0, m.H)(t.guild_id),
-        T = l.useCallback(() => {
+        _ = l.useCallback(() => {
             N ? (0, h.Ze)(t.guild_id, () => c.default.selectVoiceChannel(t.id)) : c.default.selectVoiceChannel(t.id);
         }, [t.id, t.guild_id, N]),
-        _ = n.filter((e) => e.type === f.wY.VOICE),
+        T = n.filter((e) => e.type === f.wY.VOICE),
         b = (0, A.Ay)(t),
-        S = 4 === _.length ? 2 : 3,
-        y = (0, s.yK)([u.A], () => _.map((e) => u.A.getParticipant(t.id, e.id)).filter(C.Vq), [t.id, _]);
+        S = 4 === T.length ? 2 : 3,
+        y = (0, s.yK)([u.A], () => T.map((e) => u.A.getParticipant(t.id, e.id)).filter(C.Vq), [t.id, T]);
     return (0, i.jsxs)("div", {
         className: v.kL,
         children: [
@@ -61,7 +61,7 @@ let I = function (e) {
                     tag: "div",
                     color: "text-default",
                     variant: "heading-lg/normal",
-                    children: (0, p.DO)(t, _),
+                    children: (0, p.DO)(t, T),
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -72,7 +72,7 @@ let I = function (e) {
                         children: (0, i.jsx)(o.$, {
                             variant: "overlay-primary",
                             text: I ? j.intl.string(j.t["7vb2cc"]) : j.intl.string(j.t.TVBCKZ),
-                            onClick: T,
+                            onClick: _,
                             disabled: !I,
                         }),
                     }),

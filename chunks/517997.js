@@ -1,34 +1,34 @@
-t.d(n, { r: () => m, u: () => A });
-var i = t(448761),
-    l = t(17928),
-    a = t(870136),
-    r = t(406704),
-    s = t(576705),
-    o = t(287809),
-    c = t(652215),
-    d = t(818348);
-function u(e, n, t) {
+n.d(t, { r: () => m, u: () => A });
+var i = n(448761),
+    l = n(17928),
+    a = n(870136),
+    s = n(406704),
+    r = n(576705),
+    o = n(287809),
+    c = n(652215),
+    d = n(818348);
+function u(e, t, n) {
     return (
-        (e.isPrivate() ? !e.isSystemDM() : t.can(d.xB.SEND_MESSAGES, e) && t.can(d.xB.READ_MESSAGE_HISTORY, e)) &&
-        i.M.REPLYABLE.has(n.type)
+        (e.isPrivate() ? !e.isSystemDM() : n.can(d.xB.SEND_MESSAGES, e) && n.can(d.xB.READ_MESSAGE_HISTORY, e)) &&
+        i.M.REPLYABLE.has(t.type)
     );
 }
-function g(e, n, t, i, l) {
-    let a = n.hasFlag(c.pr7.EPHEMERAL),
-        r = n.state === c.cmJ.SENT,
-        s = !e.isArchivedThread() || l;
-    return t && r && !a && !i && s;
+function g(e, t, n, i, l) {
+    let a = t.hasFlag(c.pr7.EPHEMERAL),
+        s = t.state === c.cmJ.SENT,
+        r = !e.isArchivedThread() || l;
+    return n && s && !a && !i && r;
 }
-function A(e, n) {
-    let t = (0, r.lK)(e),
+function A(e, t) {
+    let n = (0, s.lK)(e),
         [, i] = (0, a.c)(e?.getGuildId() ?? void 0),
-        o = (0, l.bG)([s.A], () => null != e && null != n && u(e, n, s.A));
-    return null != e && null != n && g(e, n, o, i, t);
+        o = (0, l.bG)([r.A], () => null != e && null != t && u(e, t, r.A));
+    return null != e && null != t && g(e, t, o, i, n);
 }
-function m(e, n) {
-    let t = (0, r.Et)(e),
-        i = u(e, n, s.A),
+function m(e, t) {
+    let n = (0, s.Et)(e),
+        i = u(e, t, r.A),
         l = o.default.getCurrentUser(),
         [, c] = (0, a.U0)(l?.id, e.getGuildId() ?? void 0);
-    return g(e, n, i, c, t);
+    return g(e, t, i, c, n);
 }

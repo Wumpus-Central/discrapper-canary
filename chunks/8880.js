@@ -1,6 +1,6 @@
-t.d(a, { A: () => c });
-var s = t(17928),
-    l = t(73153);
+a.d(t, { A: () => c });
+var s = a(17928),
+    l = a(73153);
 let i = { speechRate: 1, currentMessage: null },
     h = i;
 class n extends s.Ay.DeviceSettingsStore {
@@ -10,9 +10,9 @@ class n extends s.Ay.DeviceSettingsStore {
     initialize(e) {
         h = { ...i, ...(e ?? null) };
     }
-    isSpeakingMessage(e, a) {
-        let { currentMessage: t } = h;
-        return null !== t && t.channelId === e && t.messageId === a;
+    isSpeakingMessage(e, t) {
+        let { currentMessage: a } = h;
+        return null !== a && a.channelId === e && a.messageId === t;
     }
     get currentMessage() {
         return h.currentMessage;
@@ -30,8 +30,8 @@ let c = new n(
         ? {}
         : {
               SPEAKING_MESSAGE: function (e) {
-                  let { messageId: a, channelId: t } = e;
-                  h = { ...h, currentMessage: { messageId: a, channelId: t } };
+                  let { messageId: t, channelId: a } = e;
+                  h = { ...h, currentMessage: { messageId: t, channelId: a } };
               },
               STOP_SPEAKING: function () {
                   h = { ...h, currentMessage: null };

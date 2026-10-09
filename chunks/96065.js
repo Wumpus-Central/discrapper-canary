@@ -49,7 +49,7 @@ var w = l(367974),
     k = l(362081);
 let A = [],
     I = [];
-function L() {
+function T() {
     let { subscribe: e, soundboardAudioEnabled: t, voiceAudioEnabled: l, clip: i } = (0, k.T)(),
         s = i.decision?.timestamp ?? 0,
         r = n.useMemo(() => new E.H(i.timeline ?? []), [i.timeline]),
@@ -81,15 +81,15 @@ function L() {
         })
     );
 }
-var T = l(696016),
+var L = l(696016),
     M = l(933092),
     R = l(24468);
 function D(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: a, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && l && a && n)
-        if (e.includes(T.gC.ALL)) return !1;
+        if (e.includes(L.gC.ALL)) return !1;
         else return !0;
-    return e.includes(T.gC.APPLICATION) ? !l : e.includes(T.gC.VOICE) ? !a : !e.includes(T.gC.SOUNDBOARD) || !n;
+    return e.includes(L.gC.APPLICATION) ? !l : e.includes(L.gC.VOICE) ? !a : !e.includes(L.gC.SOUNDBOARD) || !n;
 }
 function S(e) {
     let { setRef: t, audioTrackLabel: l, src: i, muted: s } = e,
@@ -147,9 +147,9 @@ function _(e) {
         O = n.useCallback((e) => {
             let t = [];
             for (let l of Object.values(e.currentTarget.audioTracks))
-                l.label.includes(T.gC.APPLICATION)
+                l.label.includes(L.gC.APPLICATION)
                     ? (l.enabled = !0)
-                    : l.label.includes(T.gC.VOICE) || l.label.includes(T.gC.SOUNDBOARD)
+                    : l.label.includes(L.gC.VOICE) || l.label.includes(L.gC.SOUNDBOARD)
                       ? ((l.enabled = !1), t.includes(l.label) || t.push(l.label))
                       : (l.enabled = !1);
             I(t);
@@ -201,7 +201,7 @@ function _(e) {
             for (let t of Object.values(e)) (0, w.A)(t);
         };
     }, []);
-    let F = y.type === T.nQ.VOICE_CLIP,
+    let F = y.type === L.nQ.VOICE_CLIP,
         H = !0 === l && !F && null != i;
     return (n.useLayoutEffect(() => {
         let e = E.current;
@@ -254,7 +254,7 @@ function _(e) {
                             preload: "auto",
                             onLoadedData: $,
                         }),
-                  (0, a.jsx)(L, {}),
+                  (0, a.jsx)(T, {}),
                   t,
                   (0, a.jsx)("audio", {
                       id: "ClipsPlayerAudioTrack:application",
@@ -291,8 +291,8 @@ function _(e) {
           });
 }
 function O(e, t) {
-    let l = e / T.YM;
-    return (t && (l /= T.iJ), l);
+    let l = e / L.YM;
+    return (t && (l /= L.iJ), l);
 }
 var P = l(22745);
 function G() {
@@ -367,7 +367,7 @@ function el() {
     });
 }
 var ea = l(973177);
-let en = { [T.yz.ORIGINAL]: null, [T.yz.PORTRAIT_9_16]: 9 / 16, [T.yz.LANDSCAPE_16_9]: 16 / 9 };
+let en = { [L.yz.ORIGINAL]: null, [L.yz.PORTRAIT_9_16]: 9 / 16, [L.yz.LANDSCAPE_16_9]: 16 / 9 };
 function ei() {
     let { cropPreset: e, videoPlayerRef: t } = (0, k.T)(),
         l = n.useRef(null),
@@ -466,7 +466,7 @@ function ec(e) {
             },
             [u],
         ),
-        L = (function (e, t) {
+        T = (function (e, t) {
             let { videoPlayerRef: l } = (0, k.T)(),
                 a = n.useRef(null);
             return (
@@ -497,13 +497,13 @@ function ec(e) {
         })(y, I);
     n.useEffect(() => {
         ((w.current = l), (E.current = i), (N.current = s), (A.current = d));
-        let e = L.current;
+        let e = T.current;
         null != e && I(e);
-    }, [l, i, s, d, I, L]);
+    }, [l, i, s, d, I, T]);
     let M = n.useCallback(
             (e) => {
                 let t = b.current,
-                    l = L.current,
+                    l = T.current,
                     a = y.current?.getBoundingClientRect();
                 if (null != t && null != l && null != a)
                     switch (t.mode) {
@@ -523,11 +523,11 @@ function ec(e) {
                         }
                         case "rotate": {
                             let l = eu(t.centerX, t.centerY, e.clientX, e.clientY);
-                            g({ rotationDeg: (0, T.Ew)(t.baseRotationDeg + l - t.startAngleDeg) });
+                            g({ rotationDeg: (0, L.Ew)(t.baseRotationDeg + l - t.startAngleDeg) });
                         }
                     }
             },
-            [g, o, c, L],
+            [g, o, c, T],
         ),
         R = n.useCallback(() => {
             b.current = null;
@@ -545,7 +545,7 @@ function ec(e) {
     let D = n.useCallback(
             (e) => (t) => {
                 (t.stopPropagation(), t.preventDefault(), v(), j.current?.focus({ preventScroll: !0 }));
-                let a = L.current,
+                let a = T.current,
                     n = y.current?.getBoundingClientRect();
                 if (null == a || null == n || 0 === a.width || 0 === a.height) return;
                 let r = n.left + a.left + l.x * a.width,
@@ -564,7 +564,7 @@ function ec(e) {
                     startAngleDeg: eu(r, o, t.clientX, t.clientY),
                 };
             },
-            [v, l, i, s, L],
+            [v, l, i, s, T],
         ),
         S = n.useCallback(
             (e) => {
@@ -575,7 +575,7 @@ function ec(e) {
                         if ("ArrowRight" !== e.key) return;
                         t = 1;
                     }
-                    (e.preventDefault(), e.stopPropagation(), g({ rotationDeg: (0, T.Ew)(i + t * T.p4) }));
+                    (e.preventDefault(), e.stopPropagation(), g({ rotationDeg: (0, L.Ew)(i + t * L.p4) }));
                     return;
                 }
                 let t = e.shiftKey ? 0.05 : 0.01,
@@ -655,8 +655,8 @@ function ep(e) {
         { updateImageTrackData: r } = (0, ed.fn)(),
         o = s(),
         { src: c, position: u, rotationDeg: d, widthFraction: m, naturalWidth: h, naturalHeight: f } = t.data,
-        p = t.data.shadow ?? T.xy,
-        x = t.data.shadowColor ?? T.pk,
+        p = t.data.shadow ?? L.xy,
+        x = t.data.shadowColor ?? L.pk,
         v = n.useCallback(
             (e) => {
                 let { position: l, rotationDeg: a, scale: n } = e;
@@ -670,18 +670,18 @@ function ep(e) {
             [r, t.id],
         ),
         g = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
-        C = T.EC[p],
+        C = L.EC[p],
         y =
             C > 0
-                ? `drop-shadow(0 calc(${C * T.HA} * var(--clip-track-scale)) calc(${C} * var(--clip-track-scale)) ${x})`
+                ? `drop-shadow(0 calc(${C * L.HA} * var(--clip-track-scale)) calc(${C} * var(--clip-track-scale)) ${x})`
                 : void 0;
     return (0, a.jsx)(ec, {
         label: eh.intl.formatToPlainString(em.default.lZuIri, { fileName: t.data.fileName }),
         position: u,
         rotationDeg: d,
         scale: m,
-        minScale: T.DX,
-        maxScale: T.nS,
+        minScale: L.DX,
+        maxScale: L.nS,
         sizing: "fixed",
         aspectRatio: h / f,
         selected: l,
@@ -705,7 +705,7 @@ function ev(e) {
         { updateTextTrackData: r } = (0, ed.fn)(),
         o = s(),
         { text: c, position: u, style: d } = t.data,
-        m = t.data.rotationDeg ?? T.ad,
+        m = t.data.rotationDeg ?? L.ad,
         h = n.useCallback(
             (e) => {
                 let { position: l, rotationDeg: a, scale: n } = e;
@@ -719,14 +719,14 @@ function ev(e) {
             [r, t.id],
         ),
         f = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
-        p = T.mO[d.strokeWidth];
+        p = L.mO[d.strokeWidth];
     return (0, a.jsxs)(ec, {
         label: eh.intl.formatToPlainString(em.default.EDmwVf, { text: c }),
         position: u,
         rotationDeg: m,
         scale: d.fontSize,
-        minScale: T.z2,
-        maxScale: T.T7,
+        minScale: L.z2,
+        maxScale: L.T7,
         sizing: "content",
         resizable: !1,
         selected: l,
@@ -761,8 +761,8 @@ var eg = l(702841),
 (l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162));
 var eA = l(661531),
     eI = l(602853),
-    eL = l(602674),
-    eT = l(335416),
+    eT = l(602674),
+    eL = l(335416),
     eM = l(556250);
 let eR = new Map(),
     eD = n.memo(function (e) {
@@ -790,13 +790,13 @@ let eR = new Map(),
             function s(t) {
                 if (n) return;
                 let { waveform: l, error: a } = t.data;
-                null != a ? T.nx.error("Failed to load waveform:", a) : (eR.set(e, { waveform: l }), f(l));
+                null != a ? L.nx.error("Failed to load waveform:", a) : (eR.set(e, { waveform: l }), f(l));
             }
             return (
                 a.addEventListener("message", s),
                 (async function () {
                     try {
-                        let e = (0, eL.v)();
+                        let e = (0, eT.v)();
                         if (null == e) throw Error("Failed to create audio context");
                         let t = await Promise.all(i.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
                         if (n) return;
@@ -812,7 +812,7 @@ let eR = new Map(),
                         }
                         a.postMessage({ trackChannels: l, width: d }, s);
                     } catch (e) {
-                        n || T.nx.error("Failed to decode audio:", e);
+                        n || L.nx.error("Failed to decode audio:", e);
                     }
                 })(),
                 () => {
@@ -827,7 +827,7 @@ let eR = new Map(),
             if (null == t) return;
             let { width: l, height: a } = e,
                 n = l / h.length,
-                i = -(n * (eT.Jh.waveformBarWidth - 1));
+                i = -(n * (eL.Jh.waveformBarWidth - 1));
             (t.clearRect(0, 0, l, a), (t.fillStyle = x));
             for (let e = 0; e < h.length; e++) {
                 let l = h[e] * a,
@@ -856,7 +856,7 @@ var eS = l(683063),
     eP = l(869036),
     eG = l(931540);
 function eU(e, t) {
-    return (0, eP.$)(e, t.type, t.type === T.Gy.GAME_EVENT ? t.eventName : void 0);
+    return (0, eP.$)(e, t.type, t.type === L.Gy.GAME_EVENT ? t.eventName : void 0);
 }
 function eB(e) {
     return { timestamp: e.peakMs, signal: { type: e.type, userId: e.userId, confidence: e.peakConfidence } };
@@ -874,7 +874,7 @@ function eK(e) {
         }),
     });
 }
-let ez = { [T.Gy.LAUGHTER]: em.default.bTC23D, [T.Gy.SHOUTING]: em.default["3gqpuo"] };
+let ez = { [L.Gy.LAUGHTER]: em.default.bTC23D, [L.Gy.SHOUTING]: em.default["3gqpuo"] };
 function e$(e) {
     let { icon: t, signal: l, guildId: n, position: i, compact: s } = e,
         r = (0, U.bG)([q.default], () => q.default.getUser(l.userId)),
@@ -903,24 +903,24 @@ let eF = n.memo(function (e) {
         r = t.applicationId,
         o = n.useMemo(() => {
             let e = t.timeline.filter(
-                (e) => !e.signal.hiddenFromTimeline && !(e.signal.type === T.Gy.SOUNDBOARD && !e.signal.playing),
+                (e) => !e.signal.hiddenFromTimeline && !(e.signal.type === L.Gy.SOUNDBOARD && !e.signal.playing),
             );
             return (
                 null != s
                     ? (e = e.filter((e) => {
                           var t;
-                          return (t = e.signal.type) !== T.Gy.LAUGHTER && t !== T.Gy.SHOUTING;
+                          return (t = e.signal.type) !== L.Gy.LAUGHTER && t !== L.Gy.SHOUTING;
                       })).push(...s.map(eB))
                     : (e = (function (e) {
                           let t = e
-                                  .filter((e) => e.signal.type === T.Gy.LAUGHTER && e.signal.confidence > 0.8)
+                                  .filter((e) => e.signal.type === L.Gy.LAUGHTER && e.signal.confidence > 0.8)
                                   .sort((e, t) => e.timestamp - t.timestamp),
                               l = new Set(),
                               a = 0;
                           for (let e = 1; e <= t.length; e++)
                               (e < t.length && t[e].timestamp - t[e - 1].timestamp < 2500) ||
                                   (e - a >= 2 && l.add(t[e - 1]), (a = e));
-                          return e.filter((e) => e.signal.type !== T.Gy.LAUGHTER || l.has(e));
+                          return e.filter((e) => e.signal.type !== L.Gy.LAUGHTER || l.has(e));
                       })(e)),
                 (e = e.filter((e) => eU(r, e.signal) > 0)).sort((e, t) => e.timestamp - t.timestamp),
                 e.sort((e, t) => eU(r, t.signal) - eU(r, e.signal)),
@@ -943,12 +943,12 @@ let eF = n.memo(function (e) {
         if (e.signal.hiddenFromTimeline) return null;
         let n = c(e.timestamp);
         if (null == n) return null;
-        let s = ((l = e.signal), (0, eP.u)(r, l.type, l.type === T.Gy.GAME_EVENT ? l.eventName : void 0));
+        let s = ((l = e.signal), (0, eP.u)(r, l.type, l.type === L.Gy.GAME_EVENT ? l.eventName : void 0));
         if (null == s) return null;
         let o = `${e.timestamp}-${e.signal.type}`;
         switch (e.signal.type) {
-            case T.Gy.LAUGHTER:
-            case T.Gy.SHOUTING:
+            case L.Gy.LAUGHTER:
+            case L.Gy.SHOUTING:
                 return (0, a.jsx)(
                     eK,
                     {
@@ -960,7 +960,7 @@ let eF = n.memo(function (e) {
                     },
                     o,
                 );
-            case T.Gy.GAME_EVENT:
+            case L.Gy.GAME_EVENT:
                 return (0, a.jsx)(
                     eK,
                     {
@@ -972,7 +972,7 @@ let eF = n.memo(function (e) {
                     },
                     `${o}-${e.signal.eventName ?? ""}`,
                 );
-            case T.Gy.SOUNDBOARD:
+            case L.Gy.SOUNDBOARD:
                 if (!e.signal.playing) return null;
                 return (0, a.jsx)(e$, { icon: s, signal: e.signal, guildId: t.guildId, position: n, compact: i }, o);
             default:
@@ -1086,9 +1086,9 @@ function eZ(e) {
                 let t = f.current;
                 if (null == t) return;
                 let l = (e.clientX - t.clientX) * C();
-                if ("start" === t.mode) m((0, x.clamp)(t.initialStart + l, 0, t.initialEnd - T.Cx), t.initialEnd);
+                if ("start" === t.mode) m((0, x.clamp)(t.initialStart + l, 0, t.initialEnd - L.Cx), t.initialEnd);
                 else if ("end" === t.mode) {
-                    let e = (0, x.clamp)(t.initialEnd + l, t.initialStart + T.Cx, c);
+                    let e = (0, x.clamp)(t.initialEnd + l, t.initialStart + L.Cx, c);
                     m(t.initialStart, e);
                 } else {
                     let e = t.initialEnd - t.initialStart,
@@ -1139,8 +1139,8 @@ function eZ(e) {
                     l = !1,
                     a = s;
                 ("ArrowLeft" === e.key
-                    ? ((l = !0), (a = (0, x.clamp)(s - t, 0, o - T.Cx)))
-                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(s + t, 0, o - T.Cx))),
+                    ? ((l = !0), (a = (0, x.clamp)(s - t, 0, o - L.Cx)))
+                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(s + t, 0, o - L.Cx))),
                     l && (e.preventDefault(), e.stopPropagation(), m(a, o)));
             },
             [s, o, m],
@@ -1151,8 +1151,8 @@ function eZ(e) {
                     l = !1,
                     a = o;
                 ("ArrowLeft" === e.key
-                    ? ((l = !0), (a = (0, x.clamp)(o - t, s + T.Cx, c)))
-                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(o + t, s + T.Cx, c))),
+                    ? ((l = !0), (a = (0, x.clamp)(o - t, s + L.Cx, c)))
+                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(o + t, s + L.Cx, c))),
                     l && (e.preventDefault(), e.stopPropagation(), m(s, a)));
             },
             [s, o, c, m],
@@ -1193,7 +1193,7 @@ function eZ(e) {
                         tabIndex: 0,
                         "aria-valuemin": 0,
                         "aria-valuenow": s,
-                        "aria-valuemax": o - T.Cx,
+                        "aria-valuemax": o - L.Cx,
                         "aria-label": t,
                         children: (0, a.jsx)("div", { className: eX.gt }),
                     }),
@@ -1206,7 +1206,7 @@ function eZ(e) {
                         onKeyDown: N,
                         role: "slider",
                         tabIndex: 0,
-                        "aria-valuemin": s + T.Cx,
+                        "aria-valuemin": s + L.Cx,
                         "aria-valuenow": o,
                         "aria-valuemax": c,
                         "aria-label": t,
@@ -1253,7 +1253,7 @@ function eQ(e) {
         } = (0, k.T)(),
         { tracks: b, selectedTrackId: w, setSelectedTrackId: E, updateTrackRange: N } = (0, ed.fn)(),
         A = i(),
-        [I, L] = n.useState(null),
+        [I, T] = n.useState(null),
         M = n.useRef(null),
         R = n.useRef(null),
         [D, S] = n.useState(!1),
@@ -1262,7 +1262,7 @@ function eQ(e) {
         () =>
             v({
                 onPlay: () => {
-                    (L(null), S(!1));
+                    (T(null), S(!1));
                 },
             }),
         [v],
@@ -1287,7 +1287,7 @@ function eQ(e) {
                 let l = (((0, x.clamp)(e, _.left, _.right) - _.left) / _.width) * s,
                     a = (0, x.clamp)(l, 0, s),
                     n = I;
-                (null == n && t && ((n = "playhead"), r && (f(), S(!0)), L(n)),
+                (null == n && t && ((n = "playhead"), r && (f(), S(!0)), T(n)),
                     "start" === n ? d(a) : "end" === n ? m(a) : "playhead" === n && g((0, x.clamp)(a, o, c)));
             },
             [s, _, I, o, c, r, f, d, m, g],
@@ -1332,7 +1332,7 @@ function eQ(e) {
         ),
         W = n.useCallback(
             (e) => (t) => {
-                (t.stopPropagation(), r && (f(), S(!0)), L(e));
+                (t.stopPropagation(), r && (f(), S(!0)), T(e));
             },
             [r, f],
         ),
@@ -1343,7 +1343,7 @@ function eQ(e) {
             [H],
         ),
         Y = n.useCallback(() => {
-            (D && h(), S(!1), L(null));
+            (D && h(), S(!1), T(null));
         }, [D, h]);
     n.useEffect(
         () => (
@@ -1503,7 +1503,7 @@ function eQ(e) {
                                                             "aria-valuemin": 0,
                                                             "aria-valuenow": o,
                                                             "aria-valuetext": eJ(o),
-                                                            "aria-valuemax": c - T.zj,
+                                                            "aria-valuemax": c - L.zj,
                                                             "aria-label": eh.intl.string(eh.t["+BTvw8"]),
                                                             children: [
                                                                 (0, a.jsx)("div", { className: eq.FV }),
@@ -1533,7 +1533,7 @@ function eQ(e) {
                                                             onKeyDown: X,
                                                             role: "slider",
                                                             tabIndex: 0,
-                                                            "aria-valuemin": o + T.zj,
+                                                            "aria-valuemin": o + L.zj,
                                                             "aria-valuenow": c,
                                                             "aria-valuetext": eJ(c),
                                                             "aria-valuemax": s,
@@ -1570,9 +1570,9 @@ function eQ(e) {
                                         {
                                             label: (function (e) {
                                                 switch (e) {
-                                                    case T.Me.TEXT:
+                                                    case L.Me.TEXT:
                                                         return eh.intl.string(em.default.WvkbtB);
-                                                    case T.Me.IMAGE:
+                                                    case L.Me.IMAGE:
                                                         return eh.intl.string(em.default.heHHUW);
                                                     default:
                                                         return "";
@@ -1580,15 +1580,15 @@ function eQ(e) {
                                             })(e.type),
                                             text: (function (e) {
                                                 switch (e.type) {
-                                                    case T.Me.TEXT:
+                                                    case L.Me.TEXT:
                                                         return e.data.text;
-                                                    case T.Me.IMAGE:
+                                                    case L.Me.IMAGE:
                                                         return e.data.fileName;
                                                     default:
                                                         return "";
                                                 }
                                             })(e),
-                                            color: T.mY[e.type],
+                                            color: L.mY[e.type],
                                             startSec: e.startSec,
                                             endSec: e.endSec,
                                             totalDurationSec: s,
@@ -1622,7 +1622,7 @@ function e0(e) {
         } = (0, k.T)(),
         { analyticsLocations: j } = (0, c.Ay)(o.A.CLIPS_EDITOR),
         { tracks: b, selectedTrackId: w, setSelectedTrackId: E, removeTrack: N } = (0, ed.fn)(),
-        A = v.type === T.nQ.SCREENSHOT;
+        A = v.type === L.nQ.SCREENSHOT;
     n.useEffect(() => {
         if (!A) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         function e(e) {
@@ -1651,7 +1651,7 @@ function e0(e) {
         }
     }, [f, A, v.type, l, m, w, N]);
     let I = n.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
-        L = n.useCallback(() => {
+        T = n.useCallback(() => {
             (0, u.R)(
                 {
                     items: [{ type: "IMAGE", url: v.thumbnail, proxyUrl: v.thumbnail, alt: v.name ?? "" }],
@@ -1675,7 +1675,7 @@ function e0(e) {
                                   className: M.zT,
                                   children: (0, a.jsx)(r.D, {
                                       className: M.xS,
-                                      onClick: L,
+                                      onClick: T,
                                       children: (0, a.jsx)("img", {
                                           className: M.V_,
                                           src: v.thumbnail,
@@ -1688,18 +1688,18 @@ function e0(e) {
             ],
         });
     let R = null == p || t !== s.ip.ENTERED,
-        D = v.type === T.nQ.VOICE_CLIP,
+        D = v.type === L.nQ.VOICE_CLIP,
         S = g === d.Y.CROP,
         P = null != y ? y.width / y.height : null,
         U = S
             ? P
             : (function (e, t) {
                   switch (e) {
-                      case T.yz.PORTRAIT_9_16:
+                      case L.yz.PORTRAIT_9_16:
                           return 9 / 16;
-                      case T.yz.LANDSCAPE_16_9:
+                      case L.yz.LANDSCAPE_16_9:
                           return 16 / 9;
-                      case T.yz.ORIGINAL:
+                      case L.yz.ORIGINAL:
                       default:
                           return t;
                   }
@@ -1711,9 +1711,9 @@ function e0(e) {
                 ? (0, a.jsx)(ei, {})
                 : b.map((e) => {
                       switch (e.type) {
-                          case T.Me.TEXT:
+                          case L.Me.TEXT:
                               return (0, a.jsx)(ev, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
-                          case T.Me.IMAGE:
+                          case L.Me.IMAGE:
                               return (0, a.jsx)(ep, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
                           default:
                               return null;

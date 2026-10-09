@@ -1,4 +1,4 @@
-e.d(n, { k: () => v, o: () => f });
+e.d(n, { k: () => f, o: () => A });
 var i = e(477900),
     a = e(582128),
     l = e(503698),
@@ -16,15 +16,15 @@ var i = e(477900),
 function h(t) {
     let { attachment: n } = t,
         { url: e, description: a } = n;
-    return null == e ? null : (0, i.jsx)(S, { url: e, description: a });
+    return null == e ? null : (0, i.jsx)(v, { url: e, description: a });
 }
-function A(t) {
+function S(t) {
     let { embed: n } = t;
     if (!_.Tj.has(n.type)) return null;
     let e = void 0 !== n.video && n.type !== r.A.GIFV ? n.video.url : (n.thumbnail?.url ?? n.image?.url);
-    return null == e ? null : (0, i.jsx)(S, { url: e });
+    return null == e ? null : (0, i.jsx)(v, { url: e });
 }
-function S(t) {
+function v(t) {
     let { url: n, description: e } = t,
         a = (0, d.r1)(n);
     return (0, i.jsx)("div", {
@@ -34,10 +34,10 @@ function S(t) {
             : (0, i.jsx)("img", { className: s()(p.Sl, p.$_), src: n, alt: e }),
     });
 }
-function f(t) {
+function A(t) {
     (c.A.pop(), (0, I.r)({ id: "explicit-media-false-positive-modal", text: C.intl.string(C.t.gFsTKu) }), t());
 }
-function v(t) {
+function f(t) {
     let {
             channelId: n,
             messageId: e,
@@ -80,7 +80,7 @@ function v(t) {
                 { text: C.intl.string(C.t["ETE/oC"]), onClick: _, variant: "secondary", disabled: l },
                 { text: C.intl.string(C.t["cY+Oob"]), onClick: p, loading: l, disabled: l },
             ],
-            children: [null != r && (0, i.jsx)(h, { attachment: r }), null != c && (0, i.jsx)(A, { embed: c })],
+            children: [null != r && (0, i.jsx)(h, { attachment: r }), null != c && (0, i.jsx)(S, { embed: c })],
         })
     );
 }

@@ -1,9 +1,9 @@
 n.d(t, {
-    KJ: () => B,
+    KJ: () => k,
     N_: () => Y,
     vw: () => Z,
     lg: () => F,
-    nG: () => k,
+    nG: () => B,
     c3: () => H,
     OS: () => j,
     Y9: () => K,
@@ -215,7 +215,7 @@ class H extends l.Component {
         });
     }
 }
-class k extends l.Component {
+class B extends l.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
@@ -263,7 +263,7 @@ class k extends l.Component {
         });
     }
 }
-class B extends l.Component {
+class k extends l.Component {
     renderIcon() {
         let { user: e, status: t, isMobile: n } = this.props;
         return (0, i.jsx)("div", {

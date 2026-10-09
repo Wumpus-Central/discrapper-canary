@@ -1,16 +1,16 @@
 n.d(t, { A: () => d });
 var r = n(17928),
     s = n(73153);
-let i = [],
-    o = [],
+let o = [],
+    i = [],
     a = new Map(),
     l = new Map();
 class c extends r.Ay.Store {
     getSessions(e) {
-        return a.get(e) ?? i;
+        return a.get(e) ?? o;
     }
     getTabs(e) {
-        return l.get(e) ?? o;
+        return l.get(e) ?? i;
     }
     getTab(e, t) {
         return this.getTabs(e).find((e) => e.session.id === t) ?? null;
@@ -21,13 +21,13 @@ let d = new c(s.h, {
         var t;
         let { projectId: n, sessions: r } = e;
         if (
-            ((t = a.get(n) ?? i),
+            ((t = a.get(n) ?? o),
             t.length === r.length && t.every((e, t) => e.id === r[t].id && e.started_at === r[t].started_at))
         )
             return !1;
         let s = [...r].sort((e, t) => e.started_at - t.started_at),
             c = new Set(s.map((e) => e.id)),
-            d = (l.get(n) ?? o).filter((e) => !c.has(e.session.id)),
+            d = (l.get(n) ?? i).filter((e) => !c.has(e.session.id)),
             u = [
                 ...d
                     .filter((e) => !e.ended)

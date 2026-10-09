@@ -16,17 +16,17 @@ function r(e) {
             isFetchingChallenges: i.Ay.isFetchingChallenges,
             fetchChallengesError: i.Ay.fetchChallengesError,
         })),
-        h = null != e && e.shouldFetch;
+        u = null != e && e.shouldFetch;
     return (
         (0, a.useEffect)(() => {
-            !(h && !t.current) ||
+            !(u && !t.current) ||
                 r ||
                 c ||
                 null != o ||
                 (0, s.Od)(function () {
                     t.current = !0;
                 });
-        }, [r, c, h, o]),
+        }, [r, c, u, o]),
         { challengesForOrbWallet: l, hasFetchedChallenges: r, isFetchingChallenges: c, refetch: s.Od }
     );
 }

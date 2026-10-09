@@ -11,9 +11,9 @@ var i = n(582128),
 function m(e) {
     let [t, n] = i.useState(!1),
         [m, x] = i.useState(!1),
-        h = r.default.cast(e),
-        { joinRequest: g, guild: f } = (0, s.cf)([c.A, d.A, l.A, a.A], () => {
-            let e = c.A.getRequest(h);
+        g = r.default.cast(e),
+        { joinRequest: h, guild: f } = (0, s.cf)([c.A, d.A, l.A, a.A], () => {
+            let e = c.A.getRequest(g);
             if (null == e) return { joinRequest: null, isModmin: !1, guild: null };
             let t = l.A.getGuild(e.guildId) ?? d.A.getJoinRequestGuild(e.guildId);
             return { joinRequest: e, isModmin: null != t && a.A.can(u.xBc.KICK_MEMBERS, t), guild: t };
@@ -23,12 +23,12 @@ function m(e) {
             null != f || m || (x(!0), o.A.fetchRequestToJoinGuilds());
         }, [f, m]),
         i.useEffect(() => {
-            null == g &&
+            null == h &&
                 (n(!0),
-                o.A.fetchJoinRequestForInterview(h).finally(() => {
+                o.A.fetchJoinRequestForInterview(g).finally(() => {
                     n(!1);
                 }));
-        }, [g, h]),
-        { loading: t, joinRequest: g, joinRequestGuild: f }
+        }, [h, g]),
+        { loading: t, joinRequest: h, joinRequestGuild: f }
     );
 }

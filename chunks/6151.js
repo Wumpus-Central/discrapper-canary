@@ -11,8 +11,8 @@ var l = n(477900),
     m = n(691885),
     x = n(834730),
     f = n(939249),
-    h = n(46054),
-    p = n(812745),
+    p = n(46054),
+    h = n(812745),
     j = n(583741),
     v = n(660183),
     g = n(381909);
@@ -32,15 +32,15 @@ function N(e) {
             let e = n.map((e) => {
                 let t =
                         null != e.icon
-                            ? e.icon === p.Be.BANK
+                            ? e.icon === h.Be.BANK
                                 ? (0, l.jsx)(s.M, { className: g.s7 })
-                                : e.icon === p.Be.GIFT_CARD
+                                : e.icon === h.Be.GIFT_CARD
                                   ? (0, l.jsx)(i._, { className: g.s7 })
-                                  : e.icon === p.Be.PIX
+                                  : e.icon === h.Be.PIX
                                     ? (0, l.jsx)(o.W, { className: g.s7 })
-                                    : e.icon === p.Be.IDEAL
+                                    : e.icon === h.Be.IDEAL
                                       ? (0, l.jsx)(c.E, { className: g.s7 })
-                                      : (0, l.jsx)("img", { src: (0, p.Nj)(e.icon), alt: "", className: g.s7 })
+                                      : (0, l.jsx)("img", { src: (0, h.Nj)(e.icon), alt: "", className: g.s7 })
                             : void 0,
                     n =
                         null != e.tooltipText
@@ -103,7 +103,7 @@ function N(e) {
                               (0, l.jsx)(x.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-info",
-                                  children: "string" == typeof b ? h.A.parse(b, !1, { allowLinks: !0 }) : b,
+                                  children: "string" == typeof b ? p.A.parse(b, !1, { allowLinks: !0 }) : b,
                               }),
                           ],
                       })

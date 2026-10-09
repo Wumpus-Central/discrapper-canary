@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(996988),
     A = n(660183);
 function f(t) {
-    let { application: e, analyticsLocations: n, onAction: f, onClose: p } = t,
-        { themeType: g } = (0, c.E)(),
+    let { application: e, analyticsLocations: n, onAction: f, onClose: g } = t,
+        { themeType: p } = (0, c.E)(),
         m = (0, s.Ay)({ application: e, analyticsLocations: n });
     return ((0, o.A)(
         { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: n } },
@@ -28,9 +28,9 @@ function f(t) {
                   text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
                   onClick: (t) => {
-                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.());
+                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), g?.());
                   },
-                  fullWidth: g !== d.d.MODAL_V2,
+                  fullWidth: p !== d.d.MODAL_V2,
               }),
           });
 }

@@ -2,8 +2,8 @@ n.d(t, { A: () => m });
 var l = n(477900);
 n(582128);
 var a = n(503698),
-    i = n.n(a),
-    r = n(323384),
+    r = n.n(a),
+    i = n(323384),
     s = n(661531),
     u = n(627363),
     o = n(486020),
@@ -27,14 +27,14 @@ function m(e) {
         })(t, m);
     return null == h
         ? (0, l.jsx)("div", {
-              className: i()(d.Gt, d.qf, f, a),
+              className: r()(d.Gt, d.qf, f, a),
               "aria-hidden": !0,
-              children: (0, l.jsx)(r.k, {
+              children: (0, l.jsx)(i.k, {
                   size: "custom",
                   width: g,
                   height: g,
                   color: s.A.colors.INTERACTIVE_ICON_DEFAULT,
               }),
           })
-        : (0, l.jsx)("img", { alt: "", src: h, className: i()(d.Gt, d.Sl, f, a) });
+        : (0, l.jsx)("img", { alt: "", src: h, className: r()(d.Gt, d.Sl, f, a) });
 }

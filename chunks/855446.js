@@ -26,8 +26,8 @@ var I =
 function N(e) {
     let { context: n, activityItem: t, onClick: i, aspectRatio: a = 0, animatedDivClass: I, commandOrigin: N } = e,
         {
-            onActivityItemSelected: T,
-            imageBackground: _,
+            onActivityItemSelected: _,
+            imageBackground: T,
             activityAction: b,
             labelType: S,
         } = (0, g.Ay)({
@@ -86,7 +86,7 @@ function N(e) {
             }
         }, [b]);
     return (0, l.jsx)(d.D, {
-        onClick: T,
+        onClick: _,
         onFocus: R,
         onBlur: L,
         onMouseEnter: R,
@@ -111,7 +111,7 @@ function N(e) {
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, l.jsx)(x.A, {
-                                            imageBackground: _,
+                                            imageBackground: T,
                                             applicationName: t.application.name,
                                             imageClassName: E.jj,
                                             imageNotFoundClassName: E.v_,

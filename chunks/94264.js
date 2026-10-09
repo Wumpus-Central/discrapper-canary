@@ -7,8 +7,8 @@ var n = l(503698),
     r = l(661531),
     c = l(403581),
     o = l(318254),
-    h = l(914410),
-    u = l(636592),
+    u = l(914410),
+    h = l(636592),
     d = l(366505),
     m = l(903080);
 let C = {
@@ -20,14 +20,14 @@ let C = {
             { passesProgressBarInvariant: l, programReward: n, totalDays: r } = (0, d.F)();
         if (!l || null == n || null == r) return null;
         let E = (0, i.default)(new Date(n.next_reward_date), new Date()),
-            _ = n.program_current_state === u.L.PREMIUM_CHURNING,
+            _ = n.program_current_state === h.L.PREMIUM_CHURNING,
             g = _ ? C.churning.start : C.active.start,
             A = _ ? C.churning.end : C.active.end;
         return (0, a.jsxs)("div", {
             className: s()(m.k, t),
             children: [
-                (0, a.jsx)(h.Ay, {
-                    variant: h.qP.UNSET,
+                (0, a.jsx)(u.Ay, {
+                    variant: u.qP.UNSET,
                     progress: r - E,
                     maximum: r,
                     override: { default: { gradientStart: g, gradientEnd: A } },
