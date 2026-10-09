@@ -114,6 +114,7 @@ function S(e) {
             isUpdate: !1,
             disabledReason: null,
             confirmReason: null,
+            missingSurface: null,
         };
     let o = (function (e) {
             let { installScope: t, guildName: n, canManageGuild: l } = e;
@@ -141,6 +142,7 @@ function S(e) {
                               : null;
                       })(e)
                     : null,
+            missingSurface: s ? ("activity" === r ? "channel" : "bot") : null,
         },
         p = null != u && (c ? u.navigatesOnUpdate : u.navigatesOnFirstPublish);
     if (d && n?.bot_permissions_changed === !0)
@@ -148,8 +150,8 @@ function S(e) {
     let h = u?.update ?? w.intl.string(M.default.QesMDC);
     return { ...f, label: c ? h : w.intl.string(M.default["120EFN"]), action: "publish", navigatesOnPublish: p };
 }
-var P = n(516288),
-    k = n(308528),
+var k = n(516288),
+    P = n(308528),
     N = n(625180),
     E = n(25451),
     I = n(976860),
@@ -216,7 +218,7 @@ function W(e, t, n) {
                 Promise.resolve()
             );
         }
-        return ((l = s.A.getApplication(i)?.bot?.id ?? i), k.A.openPrivateChannel({ recipientIds: l }));
+        return ((l = s.A.getApplication(i)?.bot?.id ?? i), P.A.openPrivateChannel({ recipientIds: l }));
     })(t, {
         applicationId: e.project.application_id,
         guildId: e.guildId,
@@ -270,9 +272,11 @@ function q(e, t, n) {
         );
     if (
         (o.then(
-            () => {
+            (t) => {
                 (null != e.guildId && $(l),
+                    !0 === t.channel_skipped && U(r, !1),
                     null != u &&
+                        !0 !== t.channel_skipped &&
                         d
                             .then(() => ("channel" === u ? D(r, a) : void 0))
                             .finally(() => U(r, !1))
@@ -337,10 +341,10 @@ async function Z(e, t, n) {
             null != r.destination && W(a, r.destination, i).catch(() => {});
             return;
         }
-        if (null != r.disabledReason) return void i.showPublishBlocked(P.k.MISSING_MANAGE_SERVER, r.disabledReason);
-        if (a.input.integrationStatus?.preview_ready !== !0) return void i.showPublishBlocked(P.k.NO_PREVIEW);
+        if (null != r.disabledReason) return void i.showPublishBlocked(k.k.MISSING_MANAGE_SERVER, r.disabledReason);
+        if (a.input.integrationStatus?.preview_ready !== !0) return void i.showPublishBlocked(k.k.NO_PREVIEW);
         if (null != r.confirmReason)
-            return void i.showPublishBlocked(P.k.MISSING_MANAGE_CHANNELS, r.confirmReason, () => {
+            return void i.showPublishBlocked(k.k.MISSING_MANAGE_CHANNELS, r.confirmReason, () => {
                 z(e, r, n).catch(() => {});
             });
         await z(e, r, n);
@@ -392,8 +396,8 @@ function X(e, t) {
             guildName: j,
             appChannelName: M,
             appChannelPending: w,
-            canManageGuild: P,
-            canManageChannels: k,
+            canManageGuild: k,
+            canManageChannels: P,
             usesAppChannels: N,
             botInGuild: E,
             liveNameOutdated: I,
@@ -433,13 +437,13 @@ function X(e, t) {
                           guildName: j,
                           appChannelName: M,
                           appChannelPending: w,
-                          canManageGuild: P,
-                          canManageChannels: k,
+                          canManageGuild: k,
+                          canManageChannels: P,
                           usesAppChannels: N,
                           botInGuild: E,
                           liveNameOutdated: I,
                       },
-            [g, y, A, C, j, M, w, P, k, N, E, I],
+            [g, y, A, C, j, M, w, k, P, N, E, I],
         ),
         R = _?.status?.state ?? null,
         L = _?.installScope === "guild" && _.status?.surface === "bot";

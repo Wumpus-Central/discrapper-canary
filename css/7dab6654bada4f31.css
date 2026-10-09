@@ -446,6 +446,23 @@
     pointer-events: auto
 }
 
+.incompleteNotice__10897 {
+    flex: 0 0 auto;
+    margin-block-end: var(--space-8);
+    position: relative
+}
+
+.incompleteNotice__10897>:first-child {
+    padding-inline-end: var(--space-48)
+}
+
+.incompleteNoticeClose__10897 {
+    inset-block-start: 50%;
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    transform: translateY(-50%)
+}
+
 .designFeedbackBanner__10897 {
     align-items: center;
     background: var(--background-brand-subtle);
@@ -972,4 +989,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=4a0f1f9ee499ace1.css.map*/
+/*# sourceMappingURL=7dab6654bada4f31.css.map*/

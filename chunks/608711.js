@@ -6,6 +6,8 @@ e.exports = {
     N$: "chatLog__10897",
     B5: "clarificationSlot__10897",
     Jx: "composerSlot__10897",
+    Db: "incompleteNotice__10897",
+    jU: "incompleteNoticeClose__10897",
     g0: "designFeedbackBanner__10897",
     J9: "chatLogDimmed__10897",
 };
