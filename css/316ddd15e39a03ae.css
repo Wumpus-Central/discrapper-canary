@@ -168,8 +168,8 @@
     background: var(--background-surface-highest);
     border: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-high);
-    margin-block-end: -8px;
-    margin-inline-start: 12px;
+    margin-block-end: calc(var(--space-8) - var(--space-12) - 1px);
+    margin-inline-start: var(--space-12);
     padding: var(--space-4);
     position: relative;
     z-index: 1
@@ -190,4 +190,4 @@
     color: var(--interactive-text-hover)
 }
 
-/*# sourceMappingURL=66f87b4e1abb1904.css.map*/
+/*# sourceMappingURL=316ddd15e39a03ae.css.map*/
