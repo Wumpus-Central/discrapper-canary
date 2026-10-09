@@ -20,16 +20,16 @@ var j = n(605117),
     I = n(331322),
     v = n(866665),
     b = n(939249),
-    A = n(862328),
-    N = n(812993),
+    N = n(862328),
+    A = n(812993),
     R = n(834730),
     E = n(881636),
     S = n(661531),
     k = n(778712),
     y = n(97808),
     w = n(954376),
-    D = n(454932),
-    P = n(287809),
+    P = n(454932),
+    D = n(287809),
     G = n(902902);
 function M() {
     return (0, C.cf)([G.A], () => ({ incoming: G.A.getIncomingRequests(), outgoing: G.A.getOutgoingRequests() }));
@@ -99,7 +99,7 @@ function ej() {
                                       color: "text-muted",
                                       children: em.intl.string(em.t.fyA115),
                                   }),
-                                  e.length > 0 && (0, l.jsx)(N.hV, { count: e.length }),
+                                  e.length > 0 && (0, l.jsx)(A.hV, { count: e.length }),
                               ],
                           }),
                           (0, l.jsx)(v.m, {
@@ -120,7 +120,7 @@ function ej() {
                       disableFocusRingScope: !0,
                       children: [
                           t.length > 0 && (0, l.jsx)(eC, { outgoing: t }),
-                          e.map((e) => (0, l.jsx)(eA, { request: e }, e.key)),
+                          e.map((e) => (0, l.jsx)(eN, { request: e }, e.key)),
                       ],
                   }),
               ],
@@ -197,14 +197,14 @@ function eI(e) {
 }
 function ev(e) {
     let { request: t } = e,
-        n = (0, C.bG)([P.default], () => P.default.getUser(t.userId));
+        n = (0, C.bG)([D.default], () => D.default.getUser(t.userId));
     return null == n ? null : (0, l.jsx)(eb, { request: t, user: n });
 }
 function eb(e) {
     let { request: t, user: n } = e,
         s = i.useRef(null),
         { isHoveringOrFocusing: r } = (0, x.A)(s),
-        a = (0, D.o)({ user: n, applicationId: t.applicationId, isGameRelationship: t.isGameRelationship }),
+        a = (0, P.o)({ user: n, applicationId: t.applicationId, isGameRelationship: t.isGameRelationship }),
         { cancelFriendRequest: o } = (0, ec.I)({
             userId: t.userId,
             applicationId: t.applicationId,
@@ -233,17 +233,17 @@ function eb(e) {
         ],
     });
 }
-function eA(e) {
-    let { request: t } = e,
-        n = (0, C.bG)([P.default], () => P.default.getUser(t.userId));
-    return null == n ? null : (0, l.jsx)(eN, { request: t, user: n });
-}
 function eN(e) {
+    let { request: t } = e,
+        n = (0, C.bG)([D.default], () => D.default.getUser(t.userId));
+    return null == n ? null : (0, l.jsx)(eA, { request: t, user: n });
+}
+function eA(e) {
     let { request: t, user: n } = e,
         s = i.useRef(null),
         { isHoveringOrFocusing: a } = (0, x.A)(s),
         [o, c] = i.useState(!1),
-        u = (0, D.o)({ user: n, applicationId: t.applicationId, isGameRelationship: t.isGameRelationship }),
+        u = (0, P.o)({ user: n, applicationId: t.applicationId, isGameRelationship: t.isGameRelationship }),
         { acceptFriendRequest: d, cancelFriendRequest: h } = (0, ec.I)({
             userId: t.userId,
             applicationId: t.applicationId,
@@ -407,7 +407,7 @@ function ek(e) {
 }
 var ey = n(499516);
 let ew = { sending: !1, success: null, error: null };
-function eD(e, t) {
+function eP(e, t) {
     switch (t.type) {
         case "RESET":
             return ew;
@@ -419,8 +419,8 @@ function eD(e, t) {
             return { ...ew, sending: !1, error: t.text };
     }
 }
-function eP() {
-    let [e, t] = i.useReducer(eD, ew),
+function eD() {
+    let [e, t] = i.useReducer(eP, ew),
         { sending: n, success: s, error: r } = e,
         [a, o] = i.useState(""),
         [c, u] = i.useState(""),
@@ -564,7 +564,7 @@ function eG(e) {
             position: t,
             spacing: s,
             ignoreModalClicks: !0,
-            renderPopout: () => (0, l.jsx)(eP, {}),
+            renderPopout: () => (0, l.jsx)(eD, {}),
             children: () => r({ buttonRef: a, onClick: () => c(!o) }),
         })
     );
@@ -589,7 +589,7 @@ function eL() {
         ),
         s = e[0],
         r = s?.userId,
-        a = (0, C.bG)([P.default], () => P.default.getUser(r), [r]);
+        a = (0, C.bG)([D.default], () => D.default.getUser(r), [r]);
     return null == s || null == a
         ? null
         : (0, l.jsx)(I.B, {
@@ -636,10 +636,10 @@ function e_(e) {
             className: eM.Wj,
             "aria-label": em.intl.formatToPlainString(em.t.xxFCW8, { count: i.length }),
             onClick: n,
-            children: (0, l.jsx)(A.Q, {
+            children: (0, l.jsx)(N.Q, {
                 rounded: 1 === s.length,
-                lowerBadge: (0, l.jsx)(N.hV, { count: i.length, "aria-hidden": !0 }),
-                lowerBadgeSize: { width: (0, N.o6)(i.length) },
+                lowerBadge: (0, l.jsx)(A.hV, { count: i.length, "aria-hidden": !0 }),
+                lowerBadgeSize: { width: (0, A.o6)(i.length) },
                 children: (0, l.jsx)("div", {
                     className: eM.UI,
                     children: (0, l.jsx)(eF, { facepileUserIds: s, latestUser: r, animate: a }),
@@ -651,7 +651,7 @@ function e_(e) {
 function eT(e) {
     let { buttonRef: t, onClick: n, incoming: i, facepileUserIds: s, latestRequest: r, latestUser: a } = e,
         { isHoveringOrFocusing: o } = (0, x.A)(t),
-        { displayName: c } = (0, D.o)({
+        { displayName: c } = (0, P.o)({
             user: a,
             applicationId: r.applicationId,
             isGameRelationship: r.isGameRelationship,
@@ -680,7 +680,7 @@ function eT(e) {
                 gap: 4,
                 fullWidth: !1,
                 children: [
-                    (0, l.jsx)(N.hV, { count: i.length }),
+                    (0, l.jsx)(A.hV, { count: i.length }),
                     (0, l.jsx)("div", {
                         className: eM.ai,
                         children: (0, l.jsx)(E.u, { size: "sm", color: S.A.colors.ICON_MUTED }),
@@ -734,7 +734,7 @@ var ez = n(837381),
     tr = n(604506);
 function ta(e) {
     let { row: t, sectionType: s, inVoiceSubgroup: r = !1 } = e,
-        a = (0, C.bG)([P.default], () => P.default.getUser(t.userId), [t.userId]),
+        a = (0, C.bG)([D.default], () => D.default.getUser(t.userId), [t.userId]),
         { collapsed: o } = i.useContext(p),
         u = (function (e, t, n) {
             let i = (0, C.bG)(
@@ -843,14 +843,14 @@ function ta(e) {
             avatarDecorationSrc: f,
             eventHandlers: { onMouseEnter: m, onMouseLeave: g },
         } = (0, tt.A)({ userId: t.userId, size: k._3.SIZE_32, animateOnHover: !0 }),
-        [j, A] = i.useState(!1),
-        [N, E] = i.useState(!1),
+        [j, N] = i.useState(!1),
+        [A, E] = i.useState(!1),
         S = (0, e6.r)({ user: a }),
         w = (0, e2.A)({ userId: t.userId }),
-        D = (0, ez.rm)(t.userId),
+        P = (0, ez.rm)(t.userId),
         G = i.useCallback(
             (e) => {
-                let i = P.default.getUser(t.userId);
+                let i = D.default.getUser(t.userId);
                 null != i &&
                     (0, eX.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -885,22 +885,22 @@ function ta(e) {
                           tag: "div",
                           innerRef: d,
                           ...e,
-                          ...D,
+                          ...P,
                           onContextMenu: G,
                           onMouseEnter: () => {
-                              (A(!0), m());
+                              (N(!0), m());
                           },
                           onMouseLeave: () => {
-                              (A(!1), g());
+                              (N(!1), g());
                           },
                           onFocus: () => {
-                              (D.onFocus(), E(!0));
+                              (P.onFocus(), E(!0));
                           },
                           onBlur: () => E(!1),
                           className: tr.nM,
                           children: [
                               (0, l.jsx)(e3.A, {
-                                  nameplate: j || N ? S : null,
+                                  nameplate: j || A ? S : null,
                                   hovered: j,
                                   content: x,
                                   placement: e1.u.FRIENDS_LIST,
@@ -930,7 +930,7 @@ function ta(e) {
                                                       children: (0, l.jsx)(e5.A, {
                                                           userName: t.name,
                                                           displayNameStyles: w,
-                                                          effectDisplayType: j || N ? e9.G.ANIMATED : e9.G.PLAIN,
+                                                          effectDisplayType: j || A ? e9.G.ANIMATED : e9.G.PLAIN,
                                                           loop: !0,
                                                       }),
                                                   }),
@@ -1069,7 +1069,7 @@ function tI() {
 }
 var tv = n(416852);
 let tb = { left: 8, right: 8 };
-function tA(e) {
+function tN(e) {
     let { leading: t, trailing: n, label: s, color: r } = e,
         { collapsed: a } = i.useContext(p),
         o = a ? eU.A : i.Fragment;
@@ -1094,7 +1094,7 @@ function tA(e) {
         ],
     });
 }
-var tN = n(845311);
+var tA = n(845311);
 let tR = { top: 12, bottom: 4 },
     tE = 24 + tR.top + tR.bottom;
 var tS = n(945584);
@@ -1129,7 +1129,7 @@ function ty(e) {
                 padding: tR,
                 gap: 0,
                 className: u,
-                children: (0, l.jsx)(tA, { leading: (0, l.jsx)(tD, { section: r }), label: tk(r) }),
+                children: (0, l.jsx)(tN, { leading: (0, l.jsx)(tP, { section: r }), label: tk(r) }),
             }),
         });
     let x = em.intl.formatToPlainString(n ? ef.default.QcKHvf : ef.default.jsV9yS, { sectionName: d });
@@ -1142,9 +1142,9 @@ function ty(e) {
             padding: tR,
             gap: 0,
             className: u,
-            children: (0, l.jsx)(tA, {
-                leading: (0, l.jsx)(tD, { section: r }),
-                label: (0, l.jsx)(tP, { section: r }),
+            children: (0, l.jsx)(tN, {
+                leading: (0, l.jsx)(tP, { section: r }),
+                label: (0, l.jsx)(tD, { section: r }),
                 trailing: (0, l.jsx)(tw, { isCollapsed: n }),
             }),
         }),
@@ -1155,13 +1155,13 @@ function tw(e) {
         n = t ? tx._ : th.a;
     return (0, l.jsx)(n, { size: "xs", color: "var(--icon-muted)", "aria-hidden": !0 });
 }
-function tD(e) {
+function tP(e) {
     let { section: t } = e;
     switch (t.type) {
         case eV.ik.ACTIVE_NOW:
             return (0, l.jsx)(tI, {});
         case eV.ik.ONLINE:
-            return (0, l.jsx)(tN.A, { hasOnlineFriends: !0, color: "var(--icon-muted)" });
+            return (0, l.jsx)(tA.A, { hasOnlineFriends: !0, color: "var(--icon-muted)" });
         case eV.ik.OFFLINE:
             return (0, l.jsx)(tf.nW, { status: eh.clD.OFFLINE, size: 12 });
         case eV.ik.GAME:
@@ -1170,7 +1170,7 @@ function tD(e) {
             return (0, l.jsx)(t_, { letter: t.label ?? "#" });
     }
 }
-function tP(e) {
+function tD(e) {
     let { section: t } = e;
     return t.type === eV.ik.GAME ? (0, l.jsx)(tM, { appId: t.gameAppId, label: t.label }) : tk(t);
 }
@@ -1317,7 +1317,7 @@ function t$(e) {
         "aria-label": s,
         children: [
             (0, l.jsx)("b", { className: tq.h_ }),
-            (0, l.jsx)(tA, {
+            (0, l.jsx)(tN, {
                 leading: (0, l.jsx)(a, { size: "xs", color: "var(--icon-voice-connected)", "aria-hidden": !0 }),
                 trailing: (0, l.jsx)(tY, { channelId: t.channelId, channelName: s, isInChannel: o }),
                 label: s,
@@ -1615,14 +1615,14 @@ function nf(e) {
     let { rawQuery: t, closePopout: n } = e,
         i = (0, ns.HI)(t),
         s = (0, C.bG)(
-            [no.A, P.default],
+            [no.A, D.default],
             () => {
                 if ("" === i) return [];
                 let e = no.A.getFriendIDs(),
                     t = [];
                 return (
                     e.forEach((e) => {
-                        let n = P.default.getUser(e);
+                        let n = D.default.getUser(e);
                         if (void 0 === n) return;
                         let l = no.A.getNickname(e),
                             s = [(0, ns.HI)(n.username)];
@@ -1704,7 +1704,7 @@ function nj() {
     let f = n
         ? (0, l.jsx)(nI, {})
         : "search" === e
-          ? (0, l.jsx)(nN, { isSearching: !0, setActivePopout: t, contentWidthRef: o })
+          ? (0, l.jsx)(nA, { isSearching: !0, setActivePopout: t, contentWidthRef: o })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(nC, {
@@ -1719,7 +1719,7 @@ function nj() {
                         fullWidth: !1,
                         ref: x,
                         children: [
-                            (0, l.jsx)(nN, { isSearching: !1, setActivePopout: t, contentWidthRef: o }),
+                            (0, l.jsx)(nA, { isSearching: !1, setActivePopout: t, contentWidthRef: o }),
                             (0, l.jsx)(nR, { popoutPosition: "bottom" }),
                             s
                                 ? null
@@ -1823,7 +1823,7 @@ function nv(e) {
         className: np.QG,
         children: [
             (0, l.jsx)(nb, {}),
-            (0, l.jsx)(nA, { onClose: t }),
+            (0, l.jsx)(nN, { onClose: t }),
             (0, l.jsx)(nR, { popoutPosition: "left", tooltipPosition: "left" }),
         ],
     });
@@ -1850,7 +1850,7 @@ function nb() {
             }),
     });
 }
-function nA(e) {
+function nN(e) {
     let { onClose: t } = e,
         n = i.useRef(null),
         [s, r] = i.useState(!1);
@@ -1873,7 +1873,7 @@ function nA(e) {
             }),
     });
 }
-function nN(e) {
+function nA(e) {
     let { isSearching: t, setActivePopout: n, contentWidthRef: s } = e,
         r = i.useRef(null),
         [a, o] = i.useState("");
@@ -1957,13 +1957,15 @@ function nk() {
         { appBarToggleEnabled: v } = g.A.useConfig({ location: "FriendsSidebar" }),
         b = i.useCallback((n) => {
             ((s.current = n),
-                null != e.current && (e.current.style.width = `${n}px`),
+                null != e.current &&
+                    ((e.current.style.width = `${n}px`),
+                    e.current.style.setProperty("--custom-friends-sidebar-width", `${n}px`)),
                 t.current?.setAttribute("aria-valuenow", `${n}`));
         }, []);
     i.useLayoutEffect(() => {
         n.current || b(C ? 64 : 280);
     }, [C, b]);
-    let A = i.useCallback(
+    let N = i.useCallback(
             (e) => {
                 b(e);
                 let t = e < 200;
@@ -1971,7 +1973,7 @@ function nk() {
             },
             [b, C],
         ),
-        N = i.useCallback(() => {
+        A = i.useCallback(() => {
             ((n.current = !0), t.current?.classList?.add(nS.cB), m._.dispatch(eh.jej.FRIENDS_SIDEBAR_RESIZED));
         }, []),
         R = i.useCallback((e) => {
@@ -1983,8 +1985,8 @@ function nk() {
             minDimension: v ? 200 : 64,
             maxDimension: 320,
             orientation: d.R.HORIZONTAL_LEFT,
-            onElementResizeStart: N,
-            onApplyDimension: A,
+            onElementResizeStart: A,
+            onApplyDimension: N,
             onElementResizeEnd: R,
             getClampedValue: E,
         }),
@@ -2010,9 +2012,9 @@ function nk() {
                 }
                 t.preventDefault();
                 let i = E(l);
-                ((n.current = !0), A(i), (n.current = !1));
+                ((n.current = !0), N(i), (n.current = !1));
             },
-            [v, E, A],
+            [v, E, N],
         ),
         y = (0, f.NC)(),
         w = i.useMemo(() => ({ collapsed: C, hovered: I }), [C, I]);
@@ -2042,8 +2044,13 @@ function nk() {
                                 }),
                             }),
                             (0, l.jsx)(nj, {}),
-                            (0, l.jsx)(eL, {}),
-                            (0, l.jsx)(c.xp, { containerRef: e, children: (0, l.jsx)(tK, {}) }),
+                            (0, l.jsxs)("div", {
+                                className: nS.rf,
+                                children: [
+                                    (0, l.jsx)(eL, {}),
+                                    (0, l.jsx)(c.xp, { containerRef: e, children: (0, l.jsx)(tK, {}) }),
+                                ],
+                            }),
                         ],
                     }),
                 }),

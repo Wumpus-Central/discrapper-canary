@@ -2544,13 +2544,24 @@
     border-start-start-radius: var(--radius-md);
     border-top: 1px solid var(--border-subtle);
     box-sizing: border-box;
-    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     margin-inline-start: var(--space-8);
-    min-height: 0;
+    max-width: calc(100% - var(--space-8));
     overflow: hidden;
     position: relative
+}
+
+.body_b17982,
+.container_b17982 {
+    display: flex;
+    min-height: 0
+}
+
+.body_b17982 {
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: calc(var(--custom-friends-sidebar-width) - 1px)
 }
 
 .resizeHandle_b17982 {
@@ -2570,4 +2581,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=c7f0b033ef05bb84.css.map*/
+/*# sourceMappingURL=61bc704c9d878d17.css.map*/
