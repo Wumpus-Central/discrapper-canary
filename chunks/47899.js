@@ -19,7 +19,7 @@ var i = n(882035),
     d = n(73153),
     c = n(715314),
     u = n(870570),
-    _ = n(223449),
+    _ = n(655227),
     E = n(652215);
 let A = new r.A(1e3, 6e4),
     h = {},
@@ -65,7 +65,7 @@ function S(e, t) {
         i.splice(5),
         (e.recentlyShown = i),
         null != t.groupName && e.currentlyShownGroup.add(t.groupName),
-        _.C.has(t.content) ||
+        (0, _.a9)(t.content) ||
             ((e.shownFatigableCandidate = t),
             e.prevFatigableCandidate?.content !== t.content &&
                 ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))),
@@ -81,8 +81,8 @@ function C(e, t) {
     return S(g(e, e.shownFatigableCandidate), t, n);
 }
 async function O(e, t) {
-    let n = e.filter(_.K),
-        i = e.filter((e) => !(0, _.K)(e)).map((e) => ({ content: e, weight: 1 }));
+    let n = e.filter(_.K5),
+        i = e.filter((e) => !(0, _.K5)(e)).map((e) => ({ content: e, weight: 1 }));
     if (0 === n.length) return { context: t, candidates: i, outcome: "client-only" };
     if (A.pending) return { context: t, candidates: i, outcome: "server-backoff" };
     try {
@@ -204,7 +204,7 @@ function M(e) {
     return null == e.shownFatigableCandidate && t - e.lastWinnerTime < 36e5;
 }
 function P(e) {
-    let t = _.C.has(e.content),
+    let t = (0, _.a9)(e.content),
         n = null;
     ((0, a.r)(() => {
         p.setState((i) => {
@@ -240,7 +240,7 @@ function x(e) {
     return p((t) => e.some((e) => t.currentlyShown.has(e)));
 }
 function k() {
-    let e = [...p.getState().currentlyShown].filter((e) => !_.C.has(e)).length;
+    let e = [...p.getState().currentlyShown].filter((e) => !(0, _.a9)(e)).length;
     return [p.getState().currentlyShown.size, e];
 }
 function F() {

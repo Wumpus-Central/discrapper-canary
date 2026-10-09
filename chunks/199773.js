@@ -3,7 +3,7 @@ var i = n(17928),
     r = n(73153),
     a = n(626584),
     s = n(174459),
-    l = n(223449),
+    l = n(655227),
     o = n(256787),
     d = n(652215);
 let c = new a.A("DCF"),
@@ -52,7 +52,7 @@ class A extends i.Ay.PersistedStore {
         return _.renderedAtTimestamps.get(e);
     }
     hasUserHitDCCap(e, t) {
-        if (null != e && (l.C.has(e) || _.dailyCapOverridden)) return !1;
+        if (null != e && ((0, l.a9)(e) || _.dailyCapOverridden)) return !1;
         if (null != e) {
             let n = null != t && (0, o.vf)(e);
             if ((n && null != t && E(e, t)) || (!n && _.dismissibleContentSeenDuringSession.has(e))) return !1;
@@ -95,7 +95,7 @@ let h = new A(r.h, {
     DCF_HANDLE_DC_SHOWN: function (e) {
         let { dismissibleContent: t, guildId: n } = e,
             i = new Date();
-        if ((_.renderedAtTimestamps.set(t, i.getTime()), l.C.has(t) || _.dailyCapOverridden)) return;
+        if ((_.renderedAtTimestamps.set(t, i.getTime()), (0, l.a9)(t) || _.dailyCapOverridden)) return;
         let r = (0, o.vf)(t) && null != n;
         if (!(!r && _.dismissibleContentSeenDuringSession.has(t))) {
             if (!(r && E(t, n))) {
