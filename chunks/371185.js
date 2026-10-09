@@ -5,7 +5,7 @@ var e = s(477900),
     l = s(189213),
     o = s(49229),
     r = s(928658),
-    c = s(381689),
+    c = s(662502),
     u = s(287809),
     k = s(427262),
     p = s(192311),
@@ -15,7 +15,7 @@ function C(t) {
     let { userId: a, channelId: s, transitionState: C, onBlock: h, onBlockAndReport: f, onClose: g, onCancel: m } = t,
         x = (0, p.W)(s),
         v = i.useCallback(() => {
-            o.A.blockUser(a, { location: d.Rx }).then(() => {
+            o.A.blockUser(a, { location: d.Rx }, s).then(() => {
                 c.A.showBlockSuccessToast(a, s);
             });
         }, [a, s]),

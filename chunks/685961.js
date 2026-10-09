@@ -242,7 +242,7 @@ let Y = (e) => {
     });
 };
 var q = l(49229),
-    J = l(381689),
+    J = l(662502),
     Z = l(632738),
     X = l(734057),
     ee = l(994500),
@@ -255,7 +255,7 @@ let en = (e) => {
         o = i.useMemo(() => et.Ay.getName(d?.guild_id, d?.id, t), [d, t]),
         c = i.useCallback(() => {
             (u.Ay.trackWithMetadata(el.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: a }),
-                q.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
+                q.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }, l).then(() => {
                     J.A.showBlockSuccessToast(t.id, l);
                 }));
         }, [t, a, l]);
@@ -854,31 +854,31 @@ let e3 = (e) => {
           });
 };
 var e4 = l(486020),
-    e8 = l(695451);
-let e2 = (e) => {
+    e2 = l(695451);
+let e8 = (e) => {
     let { entry: t } = e,
         l = (0, V.c)("GuildDiscoveryPreviewElement"),
         { id: i, icon: a, name: s } = t,
         r = e4.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
     return (0, n.jsxs)("div", {
-        className: e8.kL,
+        className: e2.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e8.wx,
+                className: e2.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.nTe4HC),
             }),
             (0, n.jsx)("div", {
-                className: e8.bo,
+                className: e2.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e8.OA,
+                    className: e2.OA,
                     children: [
                         (0, n.jsx)(B.Ay, {
                             mask: B.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: e8.$d,
-                            children: (0, n.jsx)("img", { src: r, alt: "", className: e8.$f }),
+                            className: e2.$d,
+                            children: (0, n.jsx)("img", { src: r, alt: "", className: e2.$f }),
                         }),
                         (0, n.jsx)(P.E, { color: "text-default", variant: "text-sm/normal", children: s }),
                     ],
@@ -1537,8 +1537,8 @@ function t4(e) {
           })
         : null;
 }
-var t8 = l(778712),
-    t2 = l(730134),
+var t2 = l(778712),
+    t8 = l(730134),
     t6 = l(243899);
 let t5 = (e) => {
     let { user: t } = e,
@@ -1556,7 +1556,7 @@ let t5 = (e) => {
                 children: (0, n.jsxs)("div", {
                     className: t6.eF,
                     children: [
-                        (0, n.jsx)(t2.A, { className: t6.Hk, user: t, size: t8._3.SIZE_40 }),
+                        (0, n.jsx)(t8.A, { className: t6.Hk, user: t, size: t2._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1919,7 +1919,7 @@ let ls = (e) => {
                         (0, n.jsx)(e3, { entry: l.record }),
                     null != li(t, "guild_discovery_preview") &&
                         "guild_discovery" === l.name &&
-                        (0, n.jsx)(e2, { entry: l.record }),
+                        (0, n.jsx)(e8, { entry: l.record }),
                     null != li(t, "app_preview") && "application" === l.name && (0, n.jsx)(Y, { entry: l.record }),
                     null != E && (0, n.jsx)(tE, { element: E, onChange: ei, state: K }),
                     ln.includes(l.name) && null != P && (0, n.jsx)(eM, { element: P, onChange: ea, state: q }),

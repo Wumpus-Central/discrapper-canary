@@ -79,7 +79,7 @@ var k = n(17928),
     v = n(975807),
     P = n(928658),
     M = n(426190),
-    B = n(381689),
+    B = n(662502),
     W = n(994500),
     D = n(192311),
     w = n(674272),
@@ -148,8 +148,8 @@ let H = function (t) {
             ((0, Y.closeModal)(z.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM));
         }, [x]),
         m = l.useCallback(() => {
-            (f.A.unblockUser(e, { location: z.Ht }), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK));
-        }, [e, x]),
+            (f.A.unblockUser(e, { location: z.Ht }, s), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK));
+        }, [e, s, x]),
         O = l.useCallback(() => {
             ((0, Y.closeModal)(z.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM));
         }, [x]),

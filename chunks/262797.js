@@ -28,7 +28,7 @@ function A() {
         ],
     });
 }
-var N = n(381689),
+var N = n(662502),
     C = n(632738),
     _ = n(994500),
     f = n(174459),
@@ -37,25 +37,25 @@ var N = n(381689),
     O = n(143547),
     R = n(235627),
     k = n(652215),
-    S = n(490930);
-function v(t) {
+    v = n(490930);
+function S(t) {
     let { user: i, onBlock: n, onIgnore: s, location: l, disallowIgnore: m, guildId: I, channelId: E } = t,
         g = (0, r.bG)([_.A], () => _.A.isIgnored(i.id));
     return (0, e.jsxs)("div", {
-        className: S.kL,
+        className: v.kL,
         children: [
             (0, e.jsxs)("div", {
-                className: S.RS,
+                className: v.RS,
                 children: [
                     (0, e.jsxs)("div", {
-                        className: S.zc,
+                        className: v.zc,
                         children: [
                             (0, e.jsx)(a.eu, {
                                 size: c._3.SIZE_56,
                                 src: i.getAvatarURL(void 0, 64),
                                 "aria-hidden": !0,
                             }),
-                            (0, e.jsx)("div", { className: S.Kk, children: (0, e.jsx)(o.K, {}) }),
+                            (0, e.jsx)("div", { className: v.Kk, children: (0, e.jsx)(o.K, {}) }),
                         ],
                     }),
                     (0, e.jsxs)("div", {
@@ -78,7 +78,7 @@ function v(t) {
             m || g
                 ? null
                 : (0, e.jsxs)("div", {
-                      className: S.l_,
+                      className: v.l_,
                       children: [
                           (0, e.jsx)(C.Y0, {
                               title: j.intl.string(j.t["+BJTcB"]),
@@ -110,7 +110,7 @@ function v(t) {
                           }),
                           (0, e.jsx)(u.E, {
                               variant: "text-sm/medium",
-                              className: S.FV,
+                              className: v.FV,
                               children: j.intl.format(j.t.DJN6eZ, {
                                   articleLink: p.A.getArticleURL(k.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
                               }),
@@ -147,13 +147,13 @@ function B(t) {
             },
             onConfirm: () => {
                 (n?.(),
-                    I.A.blockUser(i.id, { location: c }).then(() => {
+                    I.A.blockUser(i.id, { location: c }, u ?? void 0).then(() => {
                         (f.default.track(k.HAw.BLOCK_USER_CONFIRMED), N.A.showBlockSuccessToast(i.id, u ?? void 0));
                     }));
             },
             impression: { impressionName: l.ImpressionNames.BLOCK_USER_CONFIRMATION },
             ...x,
-            children: (0, e.jsx)(v, { user: i, guildId: d, channelId: u, onBlock: n, onIgnore: a, disallowIgnore: o }),
+            children: (0, e.jsx)(S, { user: i, guildId: d, channelId: u, onBlock: n, onIgnore: a, disallowIgnore: o }),
         })
     );
 }

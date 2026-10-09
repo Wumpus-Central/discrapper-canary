@@ -137,7 +137,7 @@ var k = n(285796),
     W = n(975807),
     M = n(928658),
     U = n(426190),
-    w = n(381689),
+    w = n(662502),
     D = n(994500),
     b = n(192311);
 function F(t) {
@@ -188,12 +188,12 @@ function F(t) {
                     onClick: () => {
                         d
                             ? (m(!1),
-                              L.A.unblockUser(e, { location: p.Ht }),
+                              L.A.unblockUser(e, { location: p.Ht }, n),
                               l(o.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
                               w.A.showUnblockSuccessToast(e, n))
                             : (m(!0),
                               l(o.Wm.USER_TAKEOVER_MODAL_BLOCK),
-                              L.A.blockUser(e, { location: p.Ht }).then(() => {
+                              L.A.blockUser(e, { location: p.Ht }, n).then(() => {
                                   w.A.showBlockSuccessToast(e, n);
                               }));
                     },

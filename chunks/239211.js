@@ -4,8 +4,8 @@ n(582128);
 var l = n(17928),
     a = n(477782),
     d = n(192308),
-    r = n(49229),
-    i = n(381689),
+    i = n(49229),
+    r = n(662502),
     s = n(994500),
     c = n(287809),
     u = n(652215),
@@ -23,16 +23,18 @@ function b(e) {
         } = e,
         { id: C } = t,
         m = (0, l.bG)([c.default], () => c.default.getCurrentUser()?.id === C, [C]),
-        w = (0, l.bG)([s.A], () => s.A.isBlocked(C), [C]);
+        v = (0, l.bG)([s.A], () => s.A.isBlocked(C), [C]);
     return m
         ? null
         : (0, o.jsx)(a.Dr, {
               id: "block",
-              color: (w ? "default" : "danger") ?? "default",
-              label: w ? p.intl.string(p.t.XyHpKH) : p.intl.string(p.t.l4Emac),
-              action: w
+              color: (v ? "default" : "danger") ?? "default",
+              label: v ? p.intl.string(p.t.XyHpKH) : p.intl.string(p.t.l4Emac),
+              action: v
                   ? () => {
-                        (f?.(), r.A.unblockUser(C, { location: g }), i.A.showUnblockSuccessToast(C, k ?? void 0));
+                        (f?.(),
+                            i.A.unblockUser(C, { location: g }, k ?? void 0),
+                            r.A.showUnblockSuccessToast(C, k ?? void 0));
                     }
                   : () => {
                         (0, d.openModalLazy)(
