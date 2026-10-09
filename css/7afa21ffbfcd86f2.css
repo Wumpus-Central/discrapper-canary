@@ -1,0 +1,77 @@
+.container__722ff {
+    background-color: var(--background-base-lowest);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    height: 100%;
+    width: 100%
+}
+
+.callContainer__722ff {
+    background-color: var(--black);
+    flex: 1 1 auto;
+    overflow: hidden
+}
+
+.sidebarVisible__722ff {
+    margin-inline-end: 8px;
+    overflow: hidden
+}
+
+.sidebarOrChatVisible__722ff {
+    border-end-end-radius: 8px;
+    border-start-end-radius: 8px
+}
+
+.volumeSlider__722ff {
+    margin-top: -16px
+}
+
+.chatToasts__722ff {
+    height: 50%;
+    inset-inline-end: 16px;
+    overflow: hidden;
+    position: absolute;
+    top: 48px;
+    width: 304px
+}
+
+.chatToasts__722ff.rtsSidebarOpen__722ff {
+    inset-inline-end: 336px
+}
+
+.channelChatWrapper__722ff {
+    display: flex
+}
+
+.notConnectedView__722ff {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.notConnectedChannelName__722ff {
+    font-weight: var(--font-weight-bold);
+    margin: 8px 0;
+    max-width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.notConnectedJoinButton__722ff {
+    border-radius: 999px;
+    margin-top: 24px
+}
+
+.customInviteButtonColors__722ff {
+    background-color: var(--primary-630);
+    color: #fff
+}
+
+.customInviteButtonColors__722ff:hover {
+    background-color: var(--primary-700)
+}
+
+/*# sourceMappingURL=7afa21ffbfcd86f2.css.map*/

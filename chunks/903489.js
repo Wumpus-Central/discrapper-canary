@@ -8,7 +8,4 @@ _.exports = {
     N_: "speakerCount__4783a",
     x6: "button__4783a",
     vc: "sidebarOpen__4783a",
-    bp: "boostUpsell__4783a",
-    Qq: "text__4783a",
-    Uo: "buttons__4783a",
 };

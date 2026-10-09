@@ -16,62 +16,62 @@ var i = n(477900),
     x = n(511205),
     g = n(530804),
     C = n(71393),
-    y = n(576705),
-    j = n(686502),
+    j = n(576705),
+    y = n(686502),
     I = n(175203),
     N = n(263854),
-    v = n(652215),
-    E = n(886179);
+    E = n(652215),
+    v = n(886179);
 function b(e) {
     let {
             participants: t,
             onClick: n,
             onDoubleClick: b,
             onContextMenu: _,
-            channel: T,
-            className: S,
+            channel: S,
+            className: T,
             inCall: R,
-            totalNumberOfParticipants: L,
-            popoutType: O,
+            totalNumberOfParticipants: O,
+            popoutType: L,
         } = e,
-        P = (0, f.Us)() === v.BRT.POPOUT,
-        M = (0, r.bG)([C.A], () => C.A.getGuild(T.guild_id), [T.guild_id]),
+        P = (0, f.Us)() === E.BRT.POPOUT,
+        M = (0, r.bG)([C.A], () => C.A.getGuild(S.guild_id), [S.guild_id]),
         { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
-        U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(T.id), [T]),
-        D = (0, g.vp)(T.id, t),
+        U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
+        D = (0, g.vp)(S.id, t),
         V = l.useCallback(() => {
             (0, s.r)(() => {
-                N.P.setState({ dismissedActivityEntryPointTileChannel: T.id });
+                N.P.setState({ dismissedActivityEntryPointTileChannel: S.id });
             });
-        }, [T.id]);
+        }, [S.id]);
     l.useEffect(() => {
         null != w &&
-            T.id !== w &&
+            S.id !== w &&
             (0, s.r)(() => {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [T.id, w]);
-    let k = (0, r.bG)([y.A], () => T.isPrivate() || (0, A.K)(y.A, M, T), [M, T]),
-        G = M?.afkChannelId === T.id,
-        B = T.userLimit <= 0 || T.userLimit > 1,
-        F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(T.id).length <= 0),
+    }, [S.id, w]);
+    let G = (0, r.bG)([j.A], () => S.isPrivate() || (0, A.K)(j.A, M, S), [M, S]),
+        k = M?.afkChannelId === S.id,
+        B = S.userLimit <= 0 || S.userLimit > 1,
+        F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(S.id).length <= 0),
         z = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        H = (0, d.et)(T.id) !== d.xy.CAN_LAUNCH,
-        W = null != w && w === T.id,
+        H = (0, d.et)(S.id) !== d.xy.CAN_LAUNCH,
+        W = null != w && w === S.id,
         Y = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     I.Ay,
                     {
                         participant: e,
-                        channel: T,
-                        className: E.V,
+                        channel: S,
+                        className: v.V,
                         onClick: n,
                         onDoubleClick: b,
                         onContextMenu: _,
                         inCall: R,
                         width: t,
-                        popoutType: O,
+                        popoutType: L,
                     },
                     e.id,
                 ),
@@ -80,7 +80,7 @@ function b(e) {
         {
             type: a.ImpressionTypes.VIEW,
             name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
-            properties: { total_participants: L, can_invite: k, is_afk_channel: G, channel_user_limit: T.userLimit },
+            properties: { total_participants: O, can_invite: G, is_afk_channel: k, channel_user_limit: S.userLimit },
         },
         { trackOnInitialLoad: !0 },
         [],
@@ -88,13 +88,14 @@ function b(e) {
     let $ = F && !H,
         [K, X] = (0, p._)();
     null != M &&
-        !G &&
+        !k &&
+        !S.isGuildStageVoice() &&
         (K
             ? Y.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: X }, "clips-video-call-tile"))
             : U >= 2 && $ && !z && !W
               ? Y.push((e) =>
-                    (0, i.jsx)(j.y, {
-                        channel: T,
+                    (0, i.jsx)(y.y, {
+                        channel: S,
                         guild: M,
                         width: e,
                         inPopout: P,
@@ -104,10 +105,10 @@ function b(e) {
                 )
               : B &&
                 1 === U &&
-                k &&
+                G &&
                 Y.push((e) =>
-                    (0, i.jsx)(j.y, {
-                        channel: T,
+                    (0, i.jsx)(y.y, {
+                        channel: S,
                         guild: M,
                         width: e,
                         inPopout: P,
@@ -117,5 +118,5 @@ function b(e) {
                     }),
                 ));
     let q = l.useCallback((e) => D[e]?.id ?? "empty-tile", [D]);
-    return (0, i.jsx)(x.A, { className: S, keyExtractor: q, paddingTop: 64, paddingBottom: 64, children: Y });
+    return (0, i.jsx)(x.A, { className: T, keyExtractor: q, paddingTop: 64, paddingBottom: 64, children: Y });
 }

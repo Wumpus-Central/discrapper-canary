@@ -9,6 +9,7 @@ var o = n(185928),
     d = n(355097),
     c = n(652215),
     u = n(698279);
+n(276831);
 let _ = (window.innerWidth - c.MdR) / 2,
     E = null,
     A = {};
@@ -73,6 +74,9 @@ class h extends a.Ay.DeviceSettingsStore {
     }
     get callChatSidebarWidth() {
         return A.callChatSidebarWidth ?? c.da6;
+    }
+    get stageAudienceSidebarWidth() {
+        return A.stageAudienceSidebarWidth ?? 320;
     }
     get homeSidebarWidth() {
         return A.homeSidebarWidth ?? (null == E && (E = Math.max((window.innerWidth - c.MdR) * 0.4, c.da6)), E);

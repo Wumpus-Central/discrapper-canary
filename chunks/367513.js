@@ -50,6 +50,9 @@ let o = {
                   }, 0)
                 : s._.dispatch(l.jej.FOCUS_CHAT_BUTTON));
     },
+    updateStageAudienceSidebarOpen(e, t) {
+        i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_AUDIENCE_SIDEBAR_OPEN", channelId: e, open: t });
+    },
     jumpToVoiceChannelMessage(e, t, n, r) {
         i.h.dispatch({
             type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE",

@@ -110,7 +110,7 @@ class y {
         return i;
     }
     updateParticipant(e) {
-        let t = this.participants[e],
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.participants[e],
             n = this._getParticipantsForUser(e, t);
         return (
             (null != t || 0 !== n.length) &&
@@ -130,12 +130,13 @@ class y {
     rebuild() {
         let e = d.A.getChannel(this.channelId);
         if (null == e || !e.isGuildStageVoice()) return !1;
-        let t = new Set(Object.keys(A.A.getVoiceStatesForChannel(e.id)));
+        let t = new Set(Object.keys(A.A.getVoiceStatesForChannel(e.id))),
+            n = this.participants;
         return (
             this._participantsIndex.clear(),
             this._requestToSpeakIndex.clear(),
             (this.participants = {}),
-            t.forEach((e) => this.updateParticipant(e)),
+            t.forEach((e) => this.updateParticipant(e, n[e])),
             !0
         );
     }

@@ -5831,5 +5831,21 @@
         "enabled": true
       }
     }
+  },
+  {
+    "kind": "guild",
+    "name": "2026-10-stage-unified-call",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
   }
 ]

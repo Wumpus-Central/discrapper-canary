@@ -1,3 +1,11 @@
+.resizeHandle__4b144 {
+    bottom: -2px;
+    cursor: ns-resize;
+    height: 4px;
+    position: absolute;
+    width: 100%
+}
+
 .wrapper_cb9592 {
     background-color: var(--background-base-lowest);
     display: flex;
@@ -150,4 +158,4 @@
     background: var(--background-gradient-app-frame, var(--background-base-lowest))
 }
 
-/*# sourceMappingURL=686047.d32c39691770c552.css.map*/
+/*# sourceMappingURL=784573.b0fc4ed7dc6beb94.css.map*/
