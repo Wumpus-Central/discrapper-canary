@@ -10,8 +10,8 @@ var d = n(17928),
     c = n(115718),
     u = n(280157),
     h = n(513520),
-    g = n(130100),
-    m = n(151054),
+    m = n(130100),
+    g = n(151054),
     A = n(219271),
     f = n(427358),
     p = n(734057),
@@ -28,12 +28,12 @@ function _() {
         let e,
             t,
             n = (0, C.A)(),
-            { results: i } = (0, m.R)({ channelFilter: n, includeFrecency: !1 }),
+            { results: i } = (0, g.R)({ channelFilter: n, includeFrecency: !1 }),
             s =
                 (l.useEffect(() => {
                     (0, h.I)();
                 }, []),
-                (e = (0, d.bG)([g.A], () => g.A.getChannelAffinities())),
+                (e = (0, d.bG)([m.A], () => m.A.getChannelAffinities())),
                 l.useMemo(() => e.slice().sort((e, t) => t.score - e.score), [e])),
             r =
                 (l.useEffect(() => {
@@ -116,15 +116,15 @@ var I = n(192308),
     v = n(983851),
     R = n(534890),
     y = n(331322),
-    T = n(297264),
-    M = n(93055),
+    M = n(297264),
+    T = n(93055),
     L = n(17839),
     U = n(22277),
     D = n(660183),
     O = n(27948);
 function P() {
     let e = l.useCallback(() => {
-        let { hasAccess: e } = (0, M.ad)();
+        let { hasAccess: e } = (0, T.ad)();
         e
             ? (0, L.A)({ source: "favorites_empty_sidebar" })
             : (0, I.openModalLazy)(async () => {
@@ -178,7 +178,7 @@ function w() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(T.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
+                    (0, i.jsx)(M.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
                     (0, i.jsx)(P, {}),
                 ],
             }),

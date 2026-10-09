@@ -1,10 +1,10 @@
-n.d(t, { Uk: () => i });
+n.d(t, { Uk: () => s });
 let l = (0, n(945810).mj)({
     name: "2026-01-voice-dares-v0",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function i(e) {
+function s(e) {
     return l.useConfig({ location: e }).enabled;
 }

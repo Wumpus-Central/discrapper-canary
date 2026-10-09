@@ -1,24 +1,24 @@
-c.d(u, { A: () => s });
-var a = c(582128),
-    n = c(451988);
-function s(e, u) {
-    let [c, s] = a.useState(!1),
-        t = a.useRef(new n.J_(u, () => s(!1))),
-        r = a.useRef(new n.J_(e, () => s(!0))),
-        l = a.useCallback(() => {
-            (t.current.cancel(), r.current.cancel());
+l.d(n, { A: () => r });
+var t = l(582128),
+    a = l(451988);
+function r(e, n) {
+    let [l, r] = t.useState(!1),
+        i = t.useRef(new a.J_(n, () => r(!1))),
+        o = t.useRef(new a.J_(e, () => r(!0))),
+        s = t.useCallback(() => {
+            (i.current.cancel(), o.current.cancel());
         }, []);
-    a.useEffect(() => l, [l]);
-    let d = a.useCallback(() => {
-        (l(), t.current.delay());
-    }, [l]);
+    t.useEffect(() => s, [s]);
+    let u = t.useCallback(() => {
+        (s(), i.current.delay());
+    }, [s]);
     return {
-        isHovered: c,
-        setIsHovered: s,
-        onMouseEnter: a.useCallback(() => {
-            (l(), r.current.delay());
-        }, [l]),
-        onMouseLeave: d,
-        cancelTimers: l,
+        isHovered: l,
+        setIsHovered: r,
+        onMouseEnter: t.useCallback(() => {
+            (s(), o.current.delay());
+        }, [s]),
+        onMouseLeave: u,
+        cancelTimers: s,
     };
 }

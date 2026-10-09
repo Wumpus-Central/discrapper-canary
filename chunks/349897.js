@@ -1,4 +1,4 @@
-n.d(t, { T: () => E });
+n.d(t, { T: () => y });
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(43990),
     m = n(717421),
     f = n(713608),
-    g = n(918715),
-    h = n(271520),
+    h = n(918715),
+    g = n(271520),
     p = n(762555),
     v = n(268378),
     x = n(660183),
@@ -24,8 +24,8 @@ function C(e) {
         isAnimated: a,
         index: m,
         activated: f,
-        expansionSpring: g,
-        icon: h,
+        expansionSpring: h,
+        icon: g,
         tooltip: p,
     } = e;
     return (0, r.jsx)(o.m, {
@@ -39,12 +39,12 @@ function C(e) {
                     onMouseEnter: () => l(m),
                     onMouseLeave: () => l(null),
                     style: {
-                        left: a ? g.to((e) => t - e) : t,
+                        left: a ? h.to((e) => t - e) : t,
                         right: n,
-                        width: a ? g.to((e) => `${b + 2 * e}px`) : b,
-                        height: a ? g.to((e) => `${b + 2 * e}px`) : b,
+                        width: a ? h.to((e) => `${E + 2 * e}px`) : E,
+                        height: a ? h.to((e) => `${E + 2 * e}px`) : E,
                     },
-                    children: (0, r.jsx)(h, {
+                    children: (0, r.jsx)(g, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
@@ -54,14 +54,14 @@ function C(e) {
         }),
     });
 }
-let b = 12,
-    y = { tension: 500, friction: 30, clamp: !0 };
-function E(e) {
+let E = 12,
+    b = { tension: 500, friction: 30, clamp: !0 };
+function y(e) {
     let [t, n] = l.useState(null),
         a = l.useRef(null),
         [{ expansion: i }, u] = (0, m.z)(() => ({
             expansion: 0,
-            config: y,
+            config: b,
             onRest: () => {
                 null == a.current && n(null);
             },
@@ -72,9 +72,9 @@ function E(e) {
             },
             [u],
         ),
-        c = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+        c = g.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
         o = l.useMemo(() => (c ? e.filter((e) => null != e.game) : []), [e, c]),
-        d = l.useMemo(() => o.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: b, gapPx: 4 })), [o]),
+        d = l.useMemo(() => o.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: E, gapPx: 4 })), [o]),
         S = l.useCallback(
             (e, n) => {
                 let l,
@@ -91,7 +91,7 @@ function E(e) {
                         ((l = f.q), (a = x.intl.string(v.default.fYdqnM)));
                         break;
                     case p.Q_.DEATH:
-                        ((l = g.V), (a = x.intl.string(v.default.MhIx41)));
+                        ((l = h.V), (a = x.intl.string(v.default.MhIx41)));
                 }
                 return null == l || null == a
                     ? null

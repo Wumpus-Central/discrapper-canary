@@ -1,4 +1,4 @@
-(i.d(t, { Ln: () => f, Z0: () => p, kt: () => h }), i(321073));
+(i.d(t, { Ln: () => p, Z0: () => f, kt: () => g }), i(321073));
 var n = i(582128),
     l = i(17928),
     s = i(427358),
@@ -10,8 +10,8 @@ var n = i(582128),
     c = i(488926),
     A = i(605431),
     m = i(366251),
-    g = i(652215);
-function h(e) {
+    h = i(652215);
+function g(e) {
     let { channel: t } = e,
         i = t?.guild_id;
     return (0, l.yK)(
@@ -38,7 +38,7 @@ function h(e) {
         [t, i],
     );
 }
-function p(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { collapsed: i = !1 } = t,
         s = (0, l.bG)([m.A], () => m.A.getShouldShowPopover(e.id), [e.id]);
@@ -49,10 +49,10 @@ function p(e) {
         }, [e]),
     };
 }
-function f(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { collapsed: i = !1 } = t,
         n = m.A.getShouldShowPopover(e.id),
-        l = d.A.can(g.xBc.CREATE_INSTANT_INVITE, e);
+        l = d.A.can(h.xBc.CREATE_INSTANT_INVITE, e);
     return n && l && !i;
 }

@@ -3,24 +3,24 @@ var A = n(582128),
     l = n(17928),
     _ = n(354670),
     r = n(962644),
-    N = n(412260),
-    T = n(852218);
+    T = n(412260),
+    N = n(852218);
 function i(e) {
     A.useEffect(() => {
         (0, r.BE)();
     }, []);
-    let t = (0, l.bG)([N.A, _.A], () => {
-            let t = N.A.getMarketingComponentByType(e);
+    let t = (0, l.bG)([T.A, _.A], () => {
+            let t = T.A.getMarketingComponentByType(e);
             if (null == t) return null;
             let n = t.promotionId,
-                A = N.A.getPromotionByTypeAndId(T.pt.MARKETING_MOMENT, n);
+                A = T.A.getPromotionByTypeAndId(N.pt.MARKETING_MOMENT, n);
             if (A?.trialId != null) {
                 let e = _.A.getUserTrialOffer(A.trialId);
                 if (null == e || e.hasExpired) return null;
             }
             return t;
         }),
-        n = (0, l.bG)([N.A], () => N.A.getPromotionByTypeAndId(T.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
+        n = (0, l.bG)([T.A], () => T.A.getPromotionByTypeAndId(N.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
         i = n?.endDate,
         [E, I] = A.useState(!1),
         u = A.useRef(null);

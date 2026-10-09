@@ -1,60 +1,60 @@
 n.d(t, { A: () => m });
 var l = n(477900),
-    i = n(582128),
-    s = n(503698),
-    a = n.n(s),
+    s = n(582128),
+    i = n(503698),
+    a = n.n(i),
     r = n(317097),
     o = n(36075),
     u = n(939249),
-    d = n(232042),
-    c = n(209599);
+    c = n(232042),
+    d = n(209599);
 let m = function (e) {
     let {
             ref: t,
             children: n,
-            className: s,
+            className: i,
             color: m,
             roleColors: x,
             iconType: h,
             onMouseEnter: j,
-            onMouseLeave: g,
-            ...p
+            onMouseLeave: p,
+            ...g
         } = e,
-        [f, A] = i.useState(!1),
-        { gradientStyle: N, gradientClassname: I } = (0, o.v5)({
+        [f, N] = s.useState(!1),
+        { gradientStyle: I, gradientClassname: A } = (0, o.v5)({
             colorStrings: x ?? null,
             roleStyle: "username",
             animateGradient: f,
         }),
-        v = i.useCallback(
+        v = s.useCallback(
             (e) => {
-                (A(!0), j?.(e));
+                (N(!0), j?.(e));
             },
-            [A, j],
+            [N, j],
         ),
-        b = i.useCallback(
+        b = s.useCallback(
             (e) => {
-                (A(!1), g?.(e));
+                (N(!1), p?.(e));
             },
-            [A, g],
+            [N, p],
         ),
-        E = {};
+        S = {};
     return (
-        null != m && (E = { color: (0, r.Hl)(m), backgroundColor: f ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
+        null != m && (S = { color: (0, r.Hl)(m), backgroundColor: f ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
         (0, l.jsx)(u.D, {
-            ...p,
+            ...g,
             innerRef: t,
             tag: "span",
-            className: a()(s, { [c.i]: !0, interactive: p.onClick }),
+            className: a()(i, { [d.i]: !0, interactive: g.onClick }),
             onMouseEnter: v,
             onMouseLeave: b,
-            style: E,
-            tabIndex: null != p.onClick ? 0 : -1,
+            style: S,
+            tabIndex: null != g.onClick ? 0 : -1,
             children:
                 null != h
-                    ? (0, l.jsx)(d.A, { iconType: h, children: n })
+                    ? (0, l.jsx)(c.A, { iconType: h, children: n })
                     : null != x
-                      ? (0, l.jsx)("span", { style: { ...N }, className: I, children: n })
+                      ? (0, l.jsx)("span", { style: { ...I }, className: A, children: n })
                       : n,
         })
     );

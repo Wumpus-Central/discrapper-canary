@@ -1,4 +1,5 @@
 !(function (e) {
+    "use strict";
     function a(e, a, s) {
         var n = e + " ";
         switch (s) {

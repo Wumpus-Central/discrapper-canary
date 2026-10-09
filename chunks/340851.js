@@ -10,10 +10,10 @@ var n = i(477900),
     c = i(367513),
     A = i(442433),
     m = i(730852),
-    g = i(401843),
-    h = i(296216),
-    p = i(793574),
-    f = i(480890),
+    h = i(401843),
+    g = i(296216),
+    f = i(793574),
+    p = i(480890),
     I = i(47167),
     v = i(643501),
     S = i(916641),
@@ -23,8 +23,8 @@ var n = i(477900),
     N = i(342296),
     y = i(936520),
     C = i(280450),
-    b = i(71393),
-    j = i(576705),
+    j = i(71393),
+    b = i(576705),
     T = i(287809),
     O = i(977997),
     G = i(772800);
@@ -54,13 +54,13 @@ function D(e) {
         ],
     });
 }
-let M = (0, h.J)(function (e) {
+let M = (0, g.J)(function (e) {
     let {
             collapsed: t,
             user: s,
             channel: r,
             mute: d,
-            localMute: h,
+            localMute: g,
             localVideoDisabled: R,
             deaf: D,
             video: M,
@@ -73,8 +73,8 @@ let M = (0, h.J)(function (e) {
             disconnected: Y,
             connecting: q,
             connectUserDragSource: $,
-            canDrag: W,
-            isStreaming: H,
+            canDrag: H,
+            isStreaming: W,
             isWatching: Z,
             isGuest: J,
             priority: X,
@@ -93,16 +93,16 @@ let M = (0, h.J)(function (e) {
         eo = l.useRef(null),
         [ec, eA] = l.useState(!1),
         em = l.useRef(null);
-    function eg() {
+    function eh() {
         eA(!ec);
     }
-    function eh(e) {
-        ep();
+    function eg(e) {
+        ef();
     }
-    function ep() {
+    function ef() {
         (clearTimeout(em.current), ee?.(s.id));
     }
-    let ef = W
+    let ep = H
         ? null
         : {
               draggable: !0,
@@ -111,10 +111,10 @@ let M = (0, h.J)(function (e) {
               },
           };
     function eI() {
-        if (!H || !(0, _.eo)(r, O.A, b.A, j.A, v.default)[0]) return;
+        if (!W || !(0, _.eo)(r, O.A, j.A, b.A, v.default)[0]) return;
         let e = { streamType: P.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
         (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
-            Z ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, g.Nl)(e),
+            Z ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, h.Nl)(e),
             ee?.(s.id));
     }
     function ev(e) {
@@ -177,7 +177,7 @@ let M = (0, h.J)(function (e) {
                     channel: r,
                     showMediaItems: !0,
                     showStageChannelItems: r.isGuildStageVoice(),
-                    onInteraction: (0, f.s)("GuildChannelUserContextMenu", p.A.VOICE_USER, { targetUserId: s.id }),
+                    onInteraction: (0, p.s)("GuildChannelUserContextMenu", f.A.VOICE_USER, { targetUserId: s.id }),
                 });
         });
     }
@@ -190,20 +190,20 @@ let M = (0, h.J)(function (e) {
     let eS = (0, n.jsx)("div", {
         className: k.kZ,
         "data-dnd-name": eu,
-        ...ef,
+        ...ep,
         onMouseEnter: el
             ? void 0
             : function () {
                   ec || (em.current = setTimeout(() => Q?.(s.id), 100));
               },
-        onMouseLeave: el ? void 0 : ep,
+        onMouseLeave: el ? void 0 : ef,
         children: (0, n.jsx)(N.A, {
             clickTrap: s?.id === T.default.getCurrentUser()?.id && ec,
             targetElementRef: eo,
             user: s,
             guildId: r.guild_id,
             channelId: r.id,
-            newAnalyticsLocations: [p.A.VOICE_USER],
+            newAnalyticsLocations: [f.A.VOICE_USER],
             shouldShow: ec,
             onRequestClose: () => eA(!1),
             children: (e) => {
@@ -216,9 +216,9 @@ let M = (0, h.J)(function (e) {
                         disconnected: Y,
                         connecting: q,
                         mute: d,
-                        localMute: h,
+                        localMute: g,
                         localVideoDisabled: R,
-                        isStreaming: H,
+                        isStreaming: W,
                         isGuest: J,
                         video: M,
                         priority: X,
@@ -236,7 +236,7 @@ let M = (0, h.J)(function (e) {
                         avatarContainerClass: a()({ [k.dj]: !0 }),
                         disabled: el && !i,
                         selected: ec,
-                        onClick: i ? void 0 : eg,
+                        onClick: i ? void 0 : eh,
                         onDoubleClick: eI,
                         onContextMenu: ev,
                         guildId: r.guild_id,
@@ -258,13 +258,13 @@ let M = (0, h.J)(function (e) {
                                   return (0, n.jsx)(G.A, {
                                       channel: r,
                                       user: s,
-                                      onAction: ep,
-                                      onWatchStream: H ? eI : void 0,
+                                      onAction: ef,
+                                      onWatchStream: W ? eI : void 0,
                                       setPopoutRef: t,
                                   });
                               },
                               shouldShow: et && !ec,
-                              onRequestClose: eh,
+                              onRequestClose: eg,
                               spacing: 17,
                               children: () =>
                                   (0, n.jsx)(y.Ay, {
@@ -278,5 +278,5 @@ let M = (0, h.J)(function (e) {
             },
         }),
     });
-    return W ? $(eS) : eS;
+    return H ? $(eS) : eS;
 });

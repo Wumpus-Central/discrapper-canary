@@ -77,7 +77,7 @@ function c(e) {
     return !e.live && !l(e);
 }
 function d(e) {
-    let t = R(e);
+    let t = N(e);
     function n(e) {
         return !t.has(e.id) && null != e.end && null == e.error;
     }
@@ -98,7 +98,7 @@ function d(e) {
                     end: d,
                     totalMs: u.reduce((e, t) => e + t, 0),
                     maxMs: Math.max(...u),
-                    selfMs: d - c - A(e, p, c, d),
+                    selfMs: d - c - v(e, p, c, d),
                     running: null == l.end,
                     failed: null != l.error,
                     parallel: s.some((t) =>
@@ -116,14 +116,14 @@ function d(e) {
                     descendants: 0,
                 },
                 f = new Map();
-            for (let e of p) n(e) && f.set(N(e), (f.get(N(e)) ?? 0) + 1);
+            for (let e of p) n(e) && f.set(R(e), (f.get(R(e)) ?? 0) + 1);
             let _ = new Set();
             for (let e of p) {
-                let t = N(e);
+                let t = R(e);
                 if (n(e) && (f.get(t) ?? 0) >= 4) {
                     if (_.has(t)) continue;
                     _.add(t);
-                    let e = p.filter((e) => n(e) && N(e) === t);
+                    let e = p.filter((e) => n(e) && R(e) === t);
                     h.children.push(r(e, o + 1, p, d));
                 } else h.children.push(r([e], o + 1, p, d));
             }
@@ -131,8 +131,8 @@ function d(e) {
         })([r], 0, [], 1 / 0),
         i = 0.1 * (s.end - s.start);
     return (
-        k(s, (e) => {
-            e.significant = T(e) >= i;
+        T(s, (e) => {
+            e.significant = k(e) >= i;
         }),
         s
     );
@@ -156,7 +156,7 @@ function u(e, t) {
                           count: o.reduce((e, t) => e + t.count, 0),
                           start: Math.min(...o.map((e) => e.start)),
                           end: Math.max(...o.map((e) => e.end)),
-                          totalMs: o.reduce((e, t) => e + T(t), 0),
+                          totalMs: o.reduce((e, t) => e + k(t), 0),
                       }),
                     (o = []));
             }
@@ -175,7 +175,7 @@ function h(e, t, n) {
 }
 function f(e) {
     let t = new Set();
-    return (k(e, (e) => t.add(e.key)), t);
+    return (T(e, (e) => t.add(e.key)), t);
 }
 function _(e) {
     return { collapsed: new Set(), revealed: O(e, () => !0) };
@@ -195,7 +195,7 @@ function E(e, t) {
     let n = new Set(e.collapsed),
         r = new Set(e.revealed);
     return (
-        k(t, (e) => {
+        T(t, (e) => {
             (n.delete(e.key), r.add(e.key));
         }),
         { collapsed: n, revealed: r }
@@ -204,18 +204,18 @@ function E(e, t) {
 function m(e, t) {
     let n = null;
     return (
-        k(e, (e) => {
+        T(e, (e) => {
             e.key === t && (n = e);
         }),
         n
     );
 }
 function S(e) {
-    let t = R(e);
+    let t = N(e);
     return new Map(
         e.spans.map((n) => {
             let r = U(e, n);
-            return [n.id, r - n.start - A(e, t.get(n.id) ?? [], n.start, r)];
+            return [n.id, r - n.start - v(e, t.get(n.id) ?? [], n.start, r)];
         }),
     );
 }
@@ -237,11 +237,11 @@ function b(e) {
               })
               .join(" ");
 }
-function T(e) {
+function k(e) {
     return e.count > 1 ? e.totalMs : e.end - e.start;
 }
-function k(e, t) {
-    for (let n of (t(e), e.children)) k(n, t);
+function T(e, t) {
+    for (let n of (t(e), e.children)) T(n, t);
 }
 function C(e) {
     let t = e.name.search(/[.:]/),
@@ -266,10 +266,10 @@ function O(e, t) {
         n
     );
 }
-function N(e) {
+function R(e) {
     return `${e.name} ${b(e.attrs)}`;
 }
-function R(e) {
+function N(e) {
     let t = new Map();
     for (let n of e.spans) {
         let e = t.get(n.parent) ?? [];
@@ -281,7 +281,7 @@ function R(e) {
 function U(e, t) {
     return t.end ?? e.as_of;
 }
-function A(e, t, n, r) {
+function v(e, t, n, r) {
     let s = t
             .map((t) => [Math.max(t.start, n), Math.min(U(e, t), r)])
             .filter((e) => {

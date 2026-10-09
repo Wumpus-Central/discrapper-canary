@@ -10,10 +10,10 @@ var n = i(477900),
     c = i(192308),
     A = i(315710),
     m = i(939249),
-    g = i(177953),
-    h = i(834730),
-    p = i(935154),
-    f = i(652215),
+    h = i(177953),
+    g = i(834730),
+    f = i(935154),
+    p = i(652215),
     I = i(778712),
     v = i(97808),
     S = i(863610),
@@ -23,8 +23,8 @@ var n = i(477900),
     N = i(566903),
     y = i(714114),
     C = i(864436),
-    b = i(835072),
-    j = i(793574),
+    j = i(835072),
+    b = i(793574),
     T = i(688810),
     O = i(139286),
     G = i(47167),
@@ -42,11 +42,11 @@ var n = i(477900),
     B = i(469640);
 let K = "VoiceInviteSuggestionsPopover";
 function Y(e) {
-    let { channel: t, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: p } = e,
+    let { channel: t, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: f } = e,
         I = l.useRef(null),
         v = (0, V.M)(I),
         S = (0, F.kt)({ channel: t }),
-        { analyticsLocations: x } = (0, T.Ay)(j.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+        { analyticsLocations: x } = (0, T.Ay)(b.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (l.useEffect(() => {
         s && I.current?.focus();
     }, [s]),
@@ -74,10 +74,10 @@ function Y(e) {
                     i.e("216084"),
                     i.e("284819"),
                 ]).then(i.bind(i, 405342));
-                return (i) => (0, n.jsx)(l, { ...i, guild: e, channel: t, source: f.PE1.VOICE_INVITE_SUGGESTIONS });
+                return (i) => (0, n.jsx)(l, { ...i, guild: e, channel: t, source: p.PE1.VOICE_INVITE_SUGGESTIONS });
             }),
-            p());
-    }, [t, p]);
+            f());
+    }, [t, f]);
     return (
         (0, A.tj)(I, { disable: !s }),
         (0, n.jsx)("div", {
@@ -99,9 +99,9 @@ function Y(e) {
                             children: [
                                 (0, n.jsx)("div", {
                                     className: B.R4,
-                                    children: (0, n.jsx)(g.n, { size: "custom", className: B.Kk }),
+                                    children: (0, n.jsx)(h.n, { size: "custom", className: B.Kk }),
                                 }),
-                                (0, n.jsx)(h.E, {
+                                (0, n.jsx)(g.E, {
                                     variant: "text-sm/medium",
                                     className: B.UU,
                                     lineClamp: 1,
@@ -123,8 +123,8 @@ function q(e) {
         { isHoveringOrFocusing: u } = (0, V.A)(r),
         [c, A] = l.useState(null),
         {
-            status: g,
-            isMobileOnline: j,
+            status: h,
+            isMobileOnline: b,
             activities: T,
         } = (0, o.cf)(
             [U.A],
@@ -136,19 +136,19 @@ function q(e) {
             [i.id, s],
         ),
         { activityStatusText: O, activityStatusIcon: R } = l.useMemo(() => {
-            let e = T.find((e) => e.type !== f.$pd.CUSTOM_STATUS && e.type !== f.$pd.HANG_STATUS);
-            return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, b.f)(e) };
+            let e = T.find((e) => e.type !== p.$pd.CUSTOM_STATUS && e.type !== p.$pd.HANG_STATUS);
+            return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
         }, [T]),
         { voiceChannel: F } = (0, y.Ay)({ userId: i.id }),
         Y = (0, G.Ay)(F),
-        q = (0, p.S3)(f.clD.ONLINE),
+        q = (0, f.S3)(p.clD.ONLINE),
         $ = "success" === c || "sending" === c,
-        W = l.useCallback(async () => {
+        H = l.useCallback(async () => {
             if ($) return;
             async function e() {
                 let e = D.A.getInvite(t.id, {}) ?? null;
                 if (null == e) {
-                    if (!M.A.can(f.xBc.CREATE_INSTANT_INVITE, t)) return null;
+                    if (!M.A.can(p.xBc.CREATE_INSTANT_INVITE, t)) return null;
                     try {
                         await _.Ay.createInvite(t.id, {}, K);
                     } catch (e) {
@@ -168,7 +168,7 @@ function q(e) {
                           user: i,
                           inviteKey: n,
                           location: K,
-                          inviteAnalyticsMetadata: { source: f.PE1.VOICE_INVITE_SUGGESTIONS },
+                          inviteAnalyticsMetadata: { source: p.PE1.VOICE_INVITE_SUGGESTIONS },
                       },
                       (e) => {
                           A(e ? "success" : null);
@@ -176,14 +176,14 @@ function q(e) {
                   );
         }, [$, i, t]),
         {
-            avatarDecorationSrc: H,
+            avatarDecorationSrc: W,
             avatarSrc: Z,
             eventHandlers: J,
         } = (0, P.A)({ userId: i.id, size: I._3.SIZE_24, animateOnHover: !u, guildId: s });
     if (null == d) return null;
     let X = L.Ay.getName(i),
         Q = z.intl.string(z.t.jYnGPG),
-        ee = g !== f.clD.OFFLINE ? g : void 0,
+        ee = h !== p.clD.OFFLINE ? h : void 0,
         et = null != O.text,
         ei = null != F && null != Y;
     return (0, n.jsxs)(m.D, {
@@ -191,7 +191,7 @@ function q(e) {
         tag: "li",
         className: a()(B.nM, { [B.vk]: !$ }),
         "aria-disabled": $,
-        onClick: W,
+        onClick: H,
         "aria-label": Q,
         children: [
             (0, n.jsx)(v.eu, {
@@ -199,15 +199,15 @@ function q(e) {
                 "aria-label": X,
                 size: I._3.SIZE_24,
                 src: Z,
-                avatarDecoration: H,
+                avatarDecoration: W,
                 status: ee,
-                isMobile: j,
+                isMobile: b,
                 ...J,
             }),
             (0, n.jsxs)("div", {
                 className: B.VW,
                 children: [
-                    (0, n.jsx)(h.E, { variant: "text-sm/medium", className: B.UU, lineClamp: 1, children: X }),
+                    (0, n.jsx)(g.E, { variant: "text-sm/medium", className: B.UU, lineClamp: 1, children: X }),
                     (ei || et) &&
                         (0, n.jsxs)("div", {
                             className: B.J2,
@@ -217,7 +217,7 @@ function q(e) {
                                     : null != R
                                       ? (0, n.jsx)(C.A, { icon: R, className: B.RI })
                                       : null,
-                                (0, n.jsx)(h.E, {
+                                (0, n.jsx)(g.E, {
                                     variant: "text-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
@@ -230,7 +230,7 @@ function q(e) {
             "sending" === c &&
                 (0, n.jsx)("div", { className: B.r$, children: (0, n.jsx)(S.n, { dotRadius: 2, themed: !0 }) }),
             "success" === c &&
-                (0, n.jsx)(h.E, {
+                (0, n.jsx)(g.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     className: B.h5,

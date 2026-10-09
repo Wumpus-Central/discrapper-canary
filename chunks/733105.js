@@ -1006,8 +1006,8 @@ function e8(e) {
 var e6 = n(573648);
 (n(323874), n(14289), n(35956));
 var e7 = n(536637),
-    e5 = n.n(e7),
-    e4 = n(788373),
+    e4 = n.n(e7),
+    e5 = n(788373),
     e9 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1044,9 +1044,9 @@ function td(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e4.F.KICK) {
+                if (b || i.expire_behavior !== e5.F.KICK) {
                     let e =
-                        i.expire_behavior === e4.F.REMOVE_ROLE
+                        i.expire_behavior === e5.F.REMOVE_ROLE
                             ? $.intl.string($.t["6kpw4i"])
                             : $.intl.string($.t.fQUQIJ);
                     (0, eR.A)({
@@ -1110,7 +1110,7 @@ function td(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e5()(i.synced_at).calendar() }),
+                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e4()(i.synced_at).calendar() }),
             };
         }, [_, v, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eS.A], () => eS.A.getSortedRoles(n.id)),
@@ -1290,12 +1290,12 @@ function td(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e4.F.REMOVE_ROLE.toString(),
+                                                value: e5.F.REMOVE_ROLE.toString(),
                                                 label: $.intl.string($.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e4.F.KICK.toString(),
+                                                value: e5.F.KICK.toString(),
                                                 label: $.intl.string($.t.fQUQIJ),
                                             },
                                         ],
@@ -1335,7 +1335,7 @@ function td(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e4.F.KICK &&
+                        a.expire_behavior === e5.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: to.Ce,
                             color: "text-feedback-critical",

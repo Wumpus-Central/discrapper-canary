@@ -7,14 +7,14 @@ n(321073);
 var o = n(148087),
     u = n(725927);
 let s = [6, 8, 10, 12],
-    h = 0,
-    c = -1 / 0,
-    f = {
+    c = 0,
+    h = -1 / 0,
+    d = {
         home: { blob: 1, twink: 1, alpha: 0.7 },
         conversation: { blob: 1, twink: 1, alpha: 0.7 },
         thinking: { blob: 3, twink: 2.4, alpha: 0.7 },
     };
-function d(e, t, n) {
+function f(e, t, n) {
     let r = (0x165667b1 * e) ^ (0x27d4eb2f * t) ^ (0x7fffffff * n);
     return ((r = Math.imul(r ^ (r >>> 13), 0x4bf19f61)), (((r ^= r >>> 16) >>> 0) % 1e6) / 1e6);
 }
@@ -32,9 +32,9 @@ let m = i.memo(function (e) {
     }, [n]);
     let p = (0, o.A)(),
         v = i.useRef(p),
-        b = i.useRef(null);
+        N = i.useRef(null);
     (i.useEffect(() => {
-        ((v.current = p), p && b.current?.());
+        ((v.current = p), p && N.current?.());
     }, [p]),
         i.useEffect(() => {
             let e = a.current,
@@ -50,7 +50,7 @@ let m = i.memo(function (e) {
                 o = 0,
                 u = [],
                 p = 0,
-                x = 0,
+                b = 0,
                 y = (function () {
                     let e = [];
                     for (let t = 0; t < 3; t++)
@@ -64,15 +64,15 @@ let m = i.memo(function (e) {
                         });
                     return e;
                 })(),
-                M = f.home.blob,
-                w = f.home.twink,
-                j = f.home.alpha,
-                A = s[h],
-                $ = [],
-                k = 0,
-                R = Array(8).fill(""),
-                F = !1;
-            function N() {
+                A = d.home.blob,
+                x = d.home.twink,
+                M = d.home.alpha,
+                R = s[c],
+                E = [],
+                I = 0,
+                w = Array(8).fill(""),
+                C = !1;
+            function P() {
                 (!(function () {
                     let {
                             r: e,
@@ -94,24 +94,24 @@ let m = i.memo(function (e) {
                         })();
                     for (let t = 0; t < 8; t++) {
                         let l = ((t + 0.5) / 8) * i;
-                        R[t] = `rgba(${e}, ${n}, ${r}, ${l})`;
+                        w[t] = `rgba(${e}, ${n}, ${r}, ${l})`;
                     }
                 })(),
-                    (F = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
+                    (C = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
             }
-            N();
-            let P = [];
-            for (let e = 0; e < 8; e++) P.push([]);
-            let T = new MutationObserver(N);
-            T.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
-            let E = -1;
-            function C() {
+            P();
+            let T = [];
+            for (let e = 0; e < 8; e++) T.push([]);
+            let j = new MutationObserver(P);
+            j.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
+            let O = -1;
+            function _() {
                 let e = Math.max(i, p),
-                    t = Math.max(o, x);
-                (e === p && t === x && E === A && u.length > 0) ||
+                    t = Math.max(o, b);
+                (e === p && t === b && O === R && u.length > 0) ||
                     ((p = e),
-                    (x = t),
-                    (E = A),
+                    (b = t),
+                    (O = R),
                     (u = (function (e, t, n) {
                         let r = [],
                             { cols: i, rows: l } = {
@@ -123,14 +123,14 @@ let m = i.memo(function (e) {
                                 r.push({
                                     i: t,
                                     j: e,
-                                    threshold: 0.05 + 0.95 * d(t, e, 1),
-                                    phase: d(t, e, 2) * Math.PI * 2,
-                                    freq: 0.25 + 1.5 * d(t, e, 3),
+                                    threshold: 0.05 + 0.95 * f(t, e, 1),
+                                    phase: f(t, e, 2) * Math.PI * 2,
+                                    freq: 0.25 + 1.5 * f(t, e, 3),
                                 });
                         return r;
-                    })(e, t, A)));
+                    })(e, t, R)));
             }
-            function S() {
+            function k() {
                 let t = e.getBoundingClientRect(),
                     l = t.width,
                     a = t.height;
@@ -140,29 +140,29 @@ let m = i.memo(function (e) {
                     (e.width = Math.max(1, Math.floor(i * r))),
                     (e.height = Math.max(1, Math.floor(o * r))),
                     null != n && (n.setTransform(r, 0, 0, r, 0, 0), (n.imageSmoothingEnabled = !1)),
-                    C(),
-                    V(0.001 * performance.now()));
+                    _(),
+                    D(0.001 * performance.now()));
             }
-            S();
-            let q = new ResizeObserver(S);
-            (q.observe(t), window.addEventListener("resize", S));
-            let I = performance.now(),
-                O = 0;
-            function V(e) {
+            k();
+            let F = new ResizeObserver(k);
+            (F.observe(t), window.addEventListener("resize", k));
+            let $ = performance.now(),
+                S = 0;
+            function D(e) {
                 var t, r, l;
                 if (i <= 0 || o <= 0) return;
-                (n.clearRect(0, 0, i, o), (n.globalAlpha = j));
-                let a = A,
+                (n.clearRect(0, 0, i, o), (n.globalAlpha = M));
+                let a = R,
                     s = "right" === g.current,
-                    h = s ? o : i,
-                    c = h <= 1e3 ? 1.2 : (1e3 / h) * 1.2;
-                for (let e = 0; e < 8; e++) P[e].length = 0;
+                    c = s ? o : i,
+                    h = c <= 1e3 ? 1.2 : (1e3 / c) * 1.2;
+                for (let e = 0; e < 8; e++) T[e].length = 0;
                 for (let n = 0; n < u.length; n++) {
                     let r,
                         l = u[n],
-                        h = (l.i * a) / i,
-                        f = (l.j * a) / o,
-                        { u: d, v: m } = ((t = F), s ? { u: f, v: t ? 1 - h : h } : { u: h, v: f }),
+                        c = (l.i * a) / i,
+                        d = (l.j * a) / o,
+                        { u: f, v: m } = ((t = C), s ? { u: d, v: t ? 1 - c : c } : { u: c, v: d }),
                         g =
                             0.55 *
                             (function (e, t, n) {
@@ -170,15 +170,15 @@ let m = i.memo(function (e) {
                                     i = 1 - t,
                                     l = 1 - Math.sqrt(r * r + i * i * 1.8);
                                 return l < 0 ? 0 : l * l;
-                            })(d, m, c);
+                            })(f, m, h);
                     for (let e = 0; e < y.length; e++) {
                         let t = y[e],
-                            n = d - t.x,
+                            n = f - t.x,
                             r = m - t.y,
                             i = (n * n + r * r) / (t.radius * t.radius);
                         g += t.strength * Math.exp(-i) * 0.7;
                     }
-                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * w + l.phase),
+                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * x + l.phase),
                         v = g - (l.threshold + p);
                     1;
                     if (!(v <= -0.1)) {
@@ -187,13 +187,13 @@ let m = i.memo(function (e) {
                             let e = (v + 0.1) / 0.2;
                             r = Math.min(7, Math.floor(e * e * (3 - 2 * e) * 8));
                         }
-                        Number.isFinite(r) && P[r].push(l);
+                        Number.isFinite(r) && T[r].push(l);
                     }
                 }
                 for (let e = 0; e < 8; e++) {
-                    let t = P[e];
+                    let t = T[e];
                     if (0 !== t.length) {
-                        ((n.fillStyle = R[e]), n.beginPath());
+                        ((n.fillStyle = w[e]), n.beginPath());
                         for (let e = 0; e < t.length; e++) {
                             let i = t[e];
                             ((r = i.i * a),
@@ -210,42 +210,42 @@ let m = i.memo(function (e) {
                     }
                 }
             }
-            function z(e) {
+            function U(e) {
                 if (!v.current) {
-                    O = 0;
+                    S = 0;
                     return;
                 }
-                A = s[h];
-                let t = e - I,
+                R = s[c];
+                let t = e - $,
                     n = Math.min(64, t);
-                ((I = e),
+                (($ = e),
                     !(function (e, t) {
                         if (
-                            ++k < 30 ||
+                            ++I < 30 ||
                             e > 100 ||
-                            ($.push(e), $.length > 60 && $.shift(), $.length < 60 || t - c < 3e3 || h >= s.length - 1)
+                            (E.push(e), E.length > 60 && E.shift(), E.length < 60 || t - h < 3e3 || c >= s.length - 1)
                         )
                             return;
                         let n = 0;
-                        for (let e = 0; e < $.length; e++) n += $[e];
-                        let r = n / $.length;
+                        for (let e = 0; e < E.length; e++) n += E[e];
+                        let r = n / E.length;
                         r <= 22 ||
-                            ((A = s[++h]),
-                            (c = t),
-                            (E = -1),
-                            C(),
+                            ((R = s[++c]),
+                            (h = t),
+                            (O = -1),
+                            _(),
                             console.log(
                                 "[Vibegrations/glow-dither] perf degrade \u2192 spacing",
-                                A,
+                                R,
                                 "avg",
                                 r.toFixed(2),
                                 "ms",
                             ));
                     })(t, e));
-                let r = f[m.current] ?? f.home,
+                let r = d[m.current] ?? d.home,
                     i = 1 - Math.exp(-n / 80);
-                ((M += (r.blob - M) * i), (w += (r.twink - w) * i), (j += (r.alpha - j) * i));
-                let l = 1.5 * M;
+                ((A += (r.blob - A) * i), (x += (r.twink - x) * i), (M += (r.alpha - M) * i));
+                let l = 1.5 * A;
                 for (let e = 0; e < y.length; e++) {
                     let t = y[e];
                     ((t.x += t.vx * n * l),
@@ -255,29 +255,29 @@ let m = i.memo(function (e) {
                         (t.vx += (Math.random() - 0.5) * 2e-7 * n),
                         (t.vy += (Math.random() - 0.5) * 2e-7 * n));
                 }
-                (V(0.001 * e), (O = requestAnimationFrame(z)));
+                (D(0.001 * e), (S = requestAnimationFrame(U)));
             }
             return (
-                (b.current = () => {
-                    0 === O && ((I = performance.now()), (O = requestAnimationFrame(z)));
+                (N.current = () => {
+                    0 === S && (($ = performance.now()), (S = requestAnimationFrame(U)));
                 }),
-                (O = requestAnimationFrame(z)),
+                (S = requestAnimationFrame(U)),
                 () => {
-                    ((b.current = null),
-                        cancelAnimationFrame(O),
-                        q.disconnect(),
-                        T.disconnect(),
-                        window.removeEventListener("resize", S));
+                    ((N.current = null),
+                        cancelAnimationFrame(S),
+                        F.disconnect(),
+                        j.disconnect(),
+                        window.removeEventListener("resize", k));
                 }
             );
         }, []));
-    let x = u.P5;
+    let b = u.P5;
     return (
-        (x = "conversation" === t ? `${x} ${u.wY}` : "home" === t ? `${x} ${u.Qy}` : `${x} ${u.fR}`),
-        "right" === n && (x = `${x} ${u.L$}`),
+        (b = "conversation" === t ? `${b} ${u.wY}` : "home" === t ? `${b} ${u.Qy}` : `${b} ${u.fR}`),
+        "right" === n && (b = `${b} ${u.L$}`),
         (0, r.jsx)("div", {
             ref: l,
-            className: x,
+            className: b,
             "aria-hidden": "true",
             children: (0, r.jsx)("canvas", { ref: a, className: "right" === n ? `${u.DX} ${u.l4}` : u.DX }),
         })

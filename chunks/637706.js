@@ -3,16 +3,16 @@ var A = n(17928),
     l = n(97352),
     _ = n(975571),
     r = n(158045),
-    N = n(580630),
-    T = n(202541),
+    T = n(580630),
+    N = n(202541),
     i = n(660183);
 function E(e) {
     let t = "...",
-        n = (0, A.bG)([l.A], () => l.A.isLoadedForSKU(T.pe.TIER_2));
+        n = (0, A.bG)([l.A], () => l.A.isLoadedForSKU(N.pe.TIER_2));
     if (-1 !== e.indexOf("{price}") && n)
         try {
-            let e = r.Ay.getDefaultPrice(T.gD.PREMIUM_MONTH_TIER_2);
-            t = (0, N.$g)(e.amount, e.currency);
+            let e = r.Ay.getDefaultPrice(N.gD.PREMIUM_MONTH_TIER_2);
+            t = (0, T.$g)(e.amount, e.currency);
         } catch {}
     return e.replace(/\{price\}/g, t);
 }

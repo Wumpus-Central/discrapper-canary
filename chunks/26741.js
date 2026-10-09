@@ -1,4 +1,4 @@
-n.d(t, { $s: () => f, J_: () => x, P9: () => m, cM: () => p, dX: () => A, nK: () => E, pZ: () => N, z6: () => C });
+n.d(t, { $s: () => f, J_: () => x, P9: () => g, cM: () => p, dX: () => A, nK: () => E, pZ: () => N, z6: () => C });
 var i,
     l = n(582128),
     s = n(562708),
@@ -9,20 +9,20 @@ var i,
     c = n(174459),
     u = n(131955),
     h = n(652215);
-function g(e) {
+function m(e) {
     return Object.keys(d.A.getVoiceStatesForChannel(e)).length;
 }
-function m(e) {
+function g(e) {
     let { guildId: t, channelId: n, bannerHash: i } = e,
         [d, c] = l.useState(!1),
         u = l.useRef(null),
         h = (0, r.K)(c, 0.1),
-        m = `${n}:${i}`;
+        g = `${n}:${i}`;
     return (
         l.useEffect(() => {
             d &&
-                u.current !== m &&
-                ((u.current = m),
+                u.current !== g &&
+                ((u.current = g),
                 (function (e) {
                     let { guildId: t, channelId: n, bannerHash: i } = e;
                     (0, a.x)({
@@ -31,13 +31,13 @@ function m(e) {
                         properties: {
                             guild_id: t,
                             channel_id: n,
-                            num_voice_users: g(n),
+                            num_voice_users: m(n),
                             media_session_id: o.A.getMediaSessionId(),
                             banner_hash: i,
                         },
                     });
                 })({ guildId: t, channelId: n, bannerHash: i }));
-        }, [d, m, t, n, i]),
+        }, [d, g, t, n, i]),
         h
     );
 }
@@ -59,7 +59,7 @@ function A(e) {
                         properties: {
                             guild_id: t,
                             channel_id: n,
-                            num_voice_users: g(n),
+                            num_voice_users: m(n),
                             media_session_id: o.A.getMediaSessionId(),
                         },
                     });
@@ -73,7 +73,7 @@ function f(e) {
     (0, a.A)({
         name: s.ImpressionNames.GUILD_HANGOUT_WINDOW_MODAL,
         type: s.ImpressionTypes.MODAL,
-        properties: { guild_id: t, channel_id: n, num_voice_users: g(n), content_exists: i },
+        properties: { guild_id: t, channel_id: n, num_voice_users: m(n), content_exists: i },
     });
 }
 var p =
@@ -89,7 +89,7 @@ function C(e) {
         guild_id: t,
         channel_id: n,
         content_type: i,
-        num_voice_users: g(n),
+        num_voice_users: m(n),
         media_session_id: o.A.getMediaSessionId(),
         gif_category_type: s,
     });

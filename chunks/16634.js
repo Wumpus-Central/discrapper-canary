@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var l = n(477900),
     a = n(582128),
     r = n(503698),
@@ -40,7 +40,7 @@ function S(e) {
 }
 var A = n(60160),
     w = n(162052);
-function T(e) {
+function I(e) {
     let { projectId: t, node: n, presentation: r = "row", active: c = !1 } = e,
         [m, h] = a.useState(!1),
         p = a.useId(),
@@ -49,9 +49,9 @@ function T(e) {
         j = n.detail,
         v = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
         b = "text-muted" === v,
-        T = c && b ? "none" : m && b ? "currentColor" : v,
-        I = i()(N.iq, { [w.Hz]: c && b }),
-        C = "detail" === r ? "text-md/normal" : "text-sm/normal",
+        I = c && b ? "none" : m && b ? "currentColor" : v,
+        T = i()(N.iq, { [w.Hz]: c && b }),
+        M = "detail" === r ? "text-md/normal" : "text-sm/normal",
         P = "detail" === r ? "text-sm/normal" : "text-xs/normal",
         E = null != t ? n.screenshots : [],
         B = null != t ? n.attachments : [];
@@ -62,11 +62,11 @@ function T(e) {
             className: N.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
-                variant: C,
-                color: T,
+                variant: M,
+                color: I,
                 selectable: !0,
-                className: I,
-                children: (0, l.jsx)(A.A, { text: k, variant: C, prose: !0 }),
+                className: T,
+                children: (0, l.jsx)(A.A, { text: k, variant: M, prose: !0 }),
             }),
         });
     let D = m ? u.a : o._;
@@ -85,10 +85,10 @@ function T(e) {
                 children: [
                     (0, l.jsx)(s.E, {
                         tag: "span",
-                        variant: C,
-                        color: T,
-                        className: I,
-                        children: (0, l.jsx)(A.A, { text: k, variant: C, prose: !0 }),
+                        variant: M,
+                        color: I,
+                        className: T,
+                        children: (0, l.jsx)(A.A, { text: k, variant: M, prose: !0 }),
                     }),
                     (0, l.jsx)(D, { size: "xs", color: "currentColor", className: N.Ue }),
                 ],
@@ -123,7 +123,7 @@ function T(e) {
                     null != t && E.length > 0
                         ? (0, l.jsx)("div", {
                               className: N.y8,
-                              children: E.map((e) => (0, l.jsx)(M, { projectId: t, screenshotId: e }, e)),
+                              children: E.map((e) => (0, l.jsx)(C, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
                     null != t && B.length > 0 ? (0, l.jsx)(f.A, { projectId: t, attachments: B }) : null,
@@ -132,8 +132,8 @@ function T(e) {
         ],
     });
 }
-function I() {}
-function M(e) {
+function T() {}
+function C(e) {
     let { projectId: t, screenshotId: n } = e,
         [r, i] = a.useState(null),
         [s, u] = a.useState(!1);
@@ -162,7 +162,7 @@ function M(e) {
                     shouldHideMediaOptions: !0,
                     location: "VibegrationsChat",
                 });
-            }, I);
+            }, T);
         }, [t, n, o]);
     return s ? null : (0, l.jsx)(m.n, { name: o, thumbSrc: r, ariaLabel: o, onClick: d, onThumbError: () => u(!0) });
 }

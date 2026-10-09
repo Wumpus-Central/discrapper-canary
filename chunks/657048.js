@@ -1,27 +1,27 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var l = n(477900);
 n(582128);
-var i = n(503698),
-    s = n.n(i),
+var s = n(503698),
+    i = n.n(s),
     a = n(559106),
     r = n(939249),
     o = n(866665),
     u = n(660183),
-    d = n(408968);
-function c(e) {
+    c = n(408968);
+function d(e) {
     let t,
         {
             className: n,
-            src: i,
-            unicodeEmoji: c,
+            src: s,
+            unicodeEmoji: d,
             name: m,
             size: x = 20,
             enableTooltip: h = !0,
             enableHeight: j = !0,
-            onClick: g,
-            ref: p,
+            onClick: p,
+            ref: g,
         } = e;
-    return null == i && null == c
+    return null == s && null == d
         ? null
         : (0, l.jsx)(o.m, {
               asContainer: !0,
@@ -31,24 +31,24 @@ function c(e) {
               tag: "span",
               children:
                   ((t = (0, l.jsx)("img", {
-                      ref: p,
+                      ref: g,
                       alt: u.intl.formatToPlainString(u.t["9+YWrE"], { name: m }),
-                      className: s()(d.U, n, { [d.v]: null != g }),
+                      className: i()(c.U, n, { [c.v]: null != p }),
                       height: j ? x : void 0,
-                      src: i,
+                      src: s,
                       width: x,
                   })),
-                  (null != c &&
+                  (null != d &&
                       (t = (0, l.jsx)("img", {
-                          ref: p,
-                          alt: c.allNamesString,
-                          className: s()(d.U, n, { [d.v]: null != g }),
+                          ref: g,
+                          alt: d.allNamesString,
+                          className: i()(c.U, n, { [c.v]: null != p }),
                           height: j ? x : void 0,
-                          src: c.url,
+                          src: d.url,
                           width: x,
                       })),
-                  null == g)
+                  null == p)
                       ? (0, l.jsx)(a.vN, { offset: { left: 5 }, children: t })
-                      : (0, l.jsx)(r.D, { onClick: g, tag: "span", focusProps: { offset: { left: 5 } }, children: t })),
+                      : (0, l.jsx)(r.D, { onClick: p, tag: "span", focusProps: { offset: { left: 5 } }, children: t })),
           });
 }

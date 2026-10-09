@@ -7,12 +7,12 @@ function i(e) {
     let { size: t = "md", width: a, height: i, color: r = "#1ED760", colorClass: o = "", ...d } = e,
         c = (0, n.J)(t),
         u = c?.width ?? a,
-        p = c?.height ?? i;
+        h = c?.height ?? i;
     return (0, s.jsx)("svg", {
         ...(0, l.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
         width: u,
-        height: p,
+        height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, s.jsx)("path", {

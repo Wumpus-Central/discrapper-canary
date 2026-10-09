@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => d, X8: () => m });
+n.d(t, { Ay: () => f, X8: () => m });
 var r = n(477900),
     i = n(582128),
     l = n(17928),
@@ -6,10 +6,10 @@ var r = n(477900),
     o = n(42766),
     u = n(246338),
     s = n(659723),
-    h = n(248675),
-    c = n(660183),
-    f = n(831283);
-function d(e) {
+    c = n(248675),
+    h = n(660183),
+    d = n(831283);
+function f(e) {
     let { projectId: t } = e,
         n = (0, l.bG)([a.Ay], () => null != t && a.Ay.isThinking(t), [t]),
         [o, u] = i.useState(n ? t : null);
@@ -21,11 +21,11 @@ function d(e) {
             return () => clearTimeout(e);
         }, [n, o]),
         (0, r.jsx)("span", {
-            className: f.W,
+            className: d.W,
             "data-page": n ? void 0 : "chat",
             "data-thinking": n ? "" : void 0,
             role: n ? "img" : void 0,
-            "aria-label": n ? c.intl.string(h.default["Y8pS+n"]) : void 0,
+            "aria-label": n ? h.intl.string(c.default["Y8pS+n"]) : void 0,
             "aria-hidden": !n || void 0,
             children: null == o ? null : (0, r.jsx)(s.A, { projectId: o, orientation: "right", state: "thinking" }),
         })
@@ -41,5 +41,5 @@ function m(e) {
                 ) ?? null,
             [t],
         );
-    return (0, r.jsx)(d, { projectId: n });
+    return (0, r.jsx)(f, { projectId: n });
 }

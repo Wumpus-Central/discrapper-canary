@@ -1,4 +1,4 @@
-a.d(t, { A: () => h });
+a.d(t, { A: () => p });
 var s = a(256693),
     l = a(343030);
 class n {
@@ -160,7 +160,7 @@ class u extends d {
         (e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none"));
     }
 }
-class p extends n {
+class h extends n {
     strategy = "function" == typeof Element.prototype.moveBefore ? new u() : new c();
     constructor() {
         super({ maxBackgrounded: 3, timeoutMs: 3e5 });
@@ -188,4 +188,4 @@ class p extends n {
         (0, s.fS)(e) ? (0, s.aQ)(e) : (0, r.r)(e);
     }
 }
-let h = new p();
+let p = new h();
