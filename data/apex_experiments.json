@@ -5106,7 +5106,7 @@
     "name": "2026-09-new-orb-reward-visuals",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "variant": 0
     },
     "variations": {
       "0": {
@@ -5114,7 +5114,16 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "variant": 1
+      },
+      "2": {
+        "variant": 3
+      },
+      "3": {
+        "variant": 4
+      },
+      "4": {
+        "variant": 2
       }
     }
   },
