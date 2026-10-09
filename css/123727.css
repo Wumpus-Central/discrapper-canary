@@ -117,6 +117,34 @@
     width: 280px
 }
 
+.listboxWide_ac381c {
+    max-width: calc(100vw - var(--space-16)*2);
+    width: 340px
+}
+
+.listboxCompact_ac381c {
+    width: 240px
+}
+
+.header_ac381c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.header_ac381c>:first-child {
+    min-width: 0
+}
+
+.emptyState_ac381c {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding: var(--space-8);
+    text-align: center
+}
+
 .noTagOptionLabel_ac381c {
     font-style: italic
 }
@@ -972,4 +1000,4 @@
     display: none
 }
 
-/*# sourceMappingURL=123727.31eeacaf8a1f696f.css.map*/
+/*# sourceMappingURL=123727.fb321d986044e536.css.map*/

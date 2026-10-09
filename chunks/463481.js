@@ -770,9 +770,12 @@ let t6 = a.memo(function (e) {
         ee = a.useCallback(() => {
             ((0, tk.pK)({ gameApplicationId: A?.id, buttonVariant: "admin" }),
                 (0, tI.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("227100"), n.e("982730"), n.e("176716")]).then(
-                        n.bind(n, 4039),
-                    );
+                    let { default: e } = await Promise.all([
+                        n.e("227100"),
+                        n.e("982730"),
+                        n.e("650902"),
+                        n.e("965058"),
+                    ]).then(n.bind(n, 154649));
                     return (t) => (0, r.jsx)(e, { gameName: J, gameApplicationId: A?.id, ...t });
                 }));
         }, [J, A?.id]),
