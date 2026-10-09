@@ -2495,7 +2495,7 @@ function nX(e) {
 var nJ = n(626148),
     n0 = n(235939),
     n1 = n(976860),
-    n8 = n(870308),
+    n8 = n(339821),
     n4 = n(650583);
 function n5(e) {
     let { children: t, shouldAddEventListener: n, onClose: s } = e,

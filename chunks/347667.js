@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 635011, Version Hash: b01e9f02a92125d26265835bcf80698879b2c484`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 635013, Version Hash: 72c876e87a0a0e5c6c76dd9e61f45a987cf5b7a3`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -23655,7 +23655,7 @@ let OH = (e) => {
     };
 var OW = n(58703),
     OY = n(497901),
-    OK = n(870308),
+    OK = n(339821),
     O$ = n(998694),
     Oz = n(731466);
 function OX(e) {
@@ -24060,7 +24060,7 @@ function O1(e) {
     return (0, b.jsx)(OL.A, {
         title: t.title(),
         body: t.body?.() ?? "",
-        asset: (0, b.jsx)("img", { src: t.asset, alt: "", "aria-hidden": !0 }),
+        asset: "" !== t.asset ? (0, b.jsx)("img", { src: t.asset, alt: "", "aria-hidden": !0 }) : void 0,
         onTooltipShow: () => n?.(!0),
         onTooltipHide: () => n?.(!1),
         children: (0, b.jsxs)(OQ, {
@@ -24207,16 +24207,20 @@ function O4(e) {
     let { selected: t, onClick: n, locationState: i, listItemRef: r, onTabTooltipVisibilityChange: a } = e,
         { shopButtonDisplayOptions: s, dismissShopButtonDC: l } = (0, OK.A)(),
         o = !(0, tz.hasAnyModalOpen)(),
-        [d, c] = (0, rl.kn)(o ? [rw.M.WISHLIST_SHOP_BUTTON_POPOVER] : []),
-        u = {
-            selected: t,
-            locationState: i,
-            onClick: () => {
-                (l(rc.i.AUTO_DISMISS), n?.());
-            },
-            listItemRef: r,
-        };
-    if (null != s)
+        [d, c] = (0, rl.kn)(o ? [rw.M.WISHLIST_SHOP_BUTTON_POPOVER] : []);
+    ef.useEffect(() => {
+        t && l(rc.i.AUTO_DISMISS);
+    }, [t, l]);
+    let u = {
+        selected: t,
+        locationState: i,
+        onClick: () => {
+            (l(rc.i.AUTO_DISMISS), n?.());
+        },
+        listItemRef: r,
+    };
+    if (null != s) {
+        if (t) return (0, b.jsx)(OQ, { ...u });
         switch (s.type) {
             case Ok.FF.TOOLTIP:
                 return (0, b.jsx)(O3, { ...u, displayOptions: s });
@@ -24227,6 +24231,7 @@ function O4(e) {
             case Ok.FF.COACHMARK:
                 return (0, b.jsx)(O6, { dismissContent: l, ...u, displayOptions: s });
         }
+    }
     return d === rw.M.WISHLIST_SHOP_BUTTON_POPOVER
         ? (0, b.jsx)(O5, { ...u, dismissContent: c })
         : (0, b.jsx)(OQ, { ...u });
@@ -26136,7 +26141,7 @@ let yu = "isHideDevBanner",
                     className: t_()(yc.Wz, yc.mr),
                     children: [
                         (0, b.jsx)(yd, { className: yc.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "635011" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "635013" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
