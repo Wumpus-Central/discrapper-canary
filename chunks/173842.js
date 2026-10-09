@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => s7 }));
+(n.r(t), n.d(t, { default: () => s2 }));
 var s,
     l,
     a = n(477900),
@@ -624,29 +624,29 @@ var eZ = n(702841),
     e0 = n(566908),
     e1 = n(214947),
     e3 = n(711950),
-    e2 = n(322387),
-    e7 = n(912309),
+    e7 = n(322387),
+    e2 = n(912309),
     e8 = n(174459),
-    e4 = n(198476);
-function e6(e) {
+    e6 = n(198476);
+function e4(e) {
     let { closePopout: t } = e,
-        n = (0, e7.kX)();
+        n = (0, e2.kX)();
     return (0, a.jsx)(p.m, {
         asContainer: !0,
         text: er.intl.string(er.t["lMR96+"]),
         children: (0, a.jsxs)(K.D, {
             "aria-label": `${er.intl.string(er.t["lMR96+"])}, ${n}`,
-            className: e4.b,
+            className: e6.b,
             onClick: () => {
                 (e8.default.track(eO.HAw.NOTIFICATION_CENTER_ACTION, {
-                    action_type: e2.e1.FRIEND_REQUESTS_BUTTON_CLICK,
+                    action_type: e7.e1.FRIEND_REQUESTS_BUTTON_CLICK,
                 }),
                     e3.A.transitionToSection(eO.m3P.PENDING, { explicit: !0 }),
                     t());
             },
             children: [
                 (0, a.jsx)(e1.$, { size: "xs", color: "currentColor" }),
-                n > 0 && (0, a.jsx)(H.hV, { count: n, color: C.A.colors.BACKGROUND_MOD_STRONG.css, className: e4.D }),
+                n > 0 && (0, a.jsx)(H.hV, { count: n, color: C.A.colors.BACKGROUND_MOD_STRONG.css, className: e6.D }),
             ],
         }),
     });
@@ -1018,11 +1018,11 @@ var tQ = n(536637),
     t0 = n.n(tQ),
     t1 = n(123292),
     t3 = n(857069),
-    t2 = n(749314),
-    t7 = n(33358),
+    t7 = n(749314),
+    t2 = n(33358),
     t8 = n(384231),
-    t4 = n(207133),
-    t6 = n(704413),
+    t6 = n(207133),
+    t4 = n(704413),
     t5 = n(9842),
     t9 = n(994500),
     ne = n(5095),
@@ -1070,7 +1070,7 @@ let ny = i.memo(function e(t) {
         p = ej.rs.useSetting(),
         N = ej.kt.useSetting(),
         y = (0, t8.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
-        v = (0, t4.A)(s?.id),
+        v = (0, t6.A)(s?.id),
         { disableReactionCreates: I } = (0, ns.A)(s),
         { setPopout: C } = (0, nd.A)(l.id, nj.Fd),
         E = (0, nr.VL)(l, s, C, v),
@@ -1093,9 +1093,9 @@ let ny = i.memo(function e(t) {
         _ = l.type === eO.lAJ.THREAD_STARTER_MESSAGE && g.state === t5.a.LOADED && null != x,
         T = !_ && void 0 === n,
         D = (0, no.A)({ message: l, channel: s, announcementEnabled: T }),
-        k = (0, t7.P)(l),
+        k = (0, t2.P)(l),
         O = (0, ne._f)(l.id, l.channel_id),
-        G = (0, t6.A)(l),
+        G = (0, t4.A)(l),
         P = (0, na.fF)(l);
     return _
         ? (0, a.jsx)(e, { ...t, message: g.message, channel: x, hasThread: !1 })
@@ -1629,7 +1629,7 @@ function n3(e) {
         }),
     });
 }
-function n2(e) {
+function n7(e) {
     let { channel: t, channelRecord: n, gotoChannel: s } = e,
         l = ej.hH.useSetting(),
         i = 0 === t.messages.length || t0()(t.messages[0].timestamp).isSame(t0()(), "day"),
@@ -1640,7 +1640,7 @@ function n2(e) {
     o.forEach((e) => {
         if (!i && (null == d || !d.isSame(e.timestamp, "day"))) {
             let t = (0, nI.i$)(e.timestamp, "LL");
-            (r.push((0, a.jsx)(t2.A, { className: nQ.yF, children: t }, t)), (d = t0()(e.timestamp)));
+            (r.push((0, a.jsx)(t7.A, { className: nQ.yF, children: t }, t)), (d = t0()(e.timestamp)));
         }
         let t = null == c || (0, t3.A)(n, c, e);
         ((c = e),
@@ -1668,10 +1668,10 @@ function n2(e) {
         (0, a.jsx)("div", { className: nQ.DZ, children: r })
     );
 }
-var n7 = n(81466),
+var n2 = n(81466),
     n8 = n(508654),
-    n4 = n(29414);
-let n6 = { top: 8, bottom: 8, left: -4, right: -4 };
+    n6 = n(29414);
+let n4 = { top: 8, bottom: 8, left: -4, right: -4 };
 function n5(e) {
     let {
             guild: t,
@@ -1688,7 +1688,7 @@ function n5(e) {
     return (0, a.jsx)("div", {
         className: ed.N1,
         children: (0, a.jsx)(F.vN, {
-            offset: n6,
+            offset: n4,
             children: (0, a.jsxs)("div", {
                 className: d()(ed.ZO, { [ed.yZ]: r }),
                 ...h,
@@ -1798,17 +1798,14 @@ function se(e) {
             component: (0, a.jsxs)(n5, {
                 guild: o,
                 name: er.intl.string(er.t.tlopTM),
-                Icon: n7.CalendarIcon,
+                Icon: n2.CalendarIcon,
                 onClick: function (e) {
                     ((0, to.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("998392"),
                             n.e("694303"),
                             n.e("256373"),
-                            n.e("769014"),
                             n.e("752695"),
                             n.e("853934"),
-                            n.e("203845"),
                             n.e("188353"),
                         ]).then(n.bind(n, 318104));
                         return (t) => (0, a.jsx)(e, { ...t, guildId: c });
@@ -1828,7 +1825,7 @@ function se(e) {
                 collapsed: t.collapsed,
                 children: (0, a.jsx)("div", {
                     className: n9.k,
-                    children: m.map((e) => (0, a.jsx)(n4.A, { className: n9.f, guildEvent: e, truncate: !0 }, e.id)),
+                    children: m.map((e) => (0, a.jsx)(n6.A, { className: n9.f, guildEvent: e, truncate: !0 }, e.id)),
                 }),
             }),
         }),
@@ -1943,7 +1940,7 @@ let st = "Inbox",
                     collapsed: t.collapsed,
                     children:
                         "messages" === t.type
-                            ? (0, a.jsx)(n2, { channel: t, channelRecord: r, gotoChannel: d })
+                            ? (0, a.jsx)(n7, { channel: t, channelRecord: r, gotoChannel: d })
                             : "forum" === t.type
                               ? (0, a.jsx)(tq, { channel: t, channelRecord: r, deleteChannel: s })
                               : null,
@@ -2126,7 +2123,7 @@ function si(e) {
                                               (e.hasLoadedAnything && e.sortOrder === nH.ReallyOldChannel
                                                   ? o.push(
                                                         (0, a.jsx)(
-                                                            t2.A,
+                                                            t7.A,
                                                             {
                                                                 className: sl.y,
                                                                 contentClassName: sl.$,
@@ -2139,7 +2136,7 @@ function si(e) {
                                                     e.sortOrder === nH.NoNotifications &&
                                                     o.push(
                                                         (0, a.jsx)(
-                                                            t2.A,
+                                                            t7.A,
                                                             {
                                                                 className: sl.y,
                                                                 contentClassName: sl.$,
@@ -2244,7 +2241,7 @@ function su(e) {
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
                         "aria-label": er.intl.string(er.t["8k+6QY"]),
-                        children: [(0, a.jsx)(sh, { tab: t }), (0, a.jsx)(e6, { closePopout: s })],
+                        children: [(0, a.jsx)(sh, { tab: t }), (0, a.jsx)(e4, { closePopout: s })],
                     }),
                 ],
             }),
@@ -2864,8 +2861,8 @@ function s3(e) {
         ],
     });
 }
-var s2 = n(211550);
-function s7(e) {
+var s7 = n(211550);
+function s2(e) {
     let {
         dialogClassName: t,
         isScheduledMessagesEnabled: n,
@@ -2880,7 +2877,7 @@ function s7(e) {
         "aria-label": er.intl.string(er.t.GSmTKJ),
         className: t,
         children: (0, a.jsx)("div", {
-            className: d()(s2.k, { [s2.q]: n }),
+            className: d()(s7.k, { [s7.q]: n }),
             children: (0, a.jsx)(c.tH, {
                 fallback: (0, a.jsx)(sd, {}),
                 children: (0, a.jsx)(h.F, {

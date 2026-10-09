@@ -1,4 +1,4 @@
-n.d(t, { default: () => K });
+n.d(t, { default: () => z });
 var a = n(477900),
     i = n(582128),
     l = n(435558),
@@ -14,8 +14,8 @@ var a = n(477900),
     x = n(334738),
     E = n(964486),
     f = n(915089),
-    A = n(860071),
-    p = n(71393),
+    p = n(860071),
+    A = n(71393),
     j = n(573163),
     v = n(174459),
     N = n(403362);
@@ -25,120 +25,106 @@ var C = n(935208),
     k = n(770666),
     G = n(508654),
     D = n(29414),
-    I = n(834730),
-    _ = n(468689),
-    y = n(489673),
-    M = n(576705),
-    w = n(652215),
+    _ = n(834730),
+    y = n(468689),
+    I = n(576705),
+    M = n(652215),
     L = n(660183),
     P = n(426781);
-function q(e) {
+function w(e) {
     let { guildId: t, onClose: n } = e,
         i = (0, s.bG)(
-            [p.A, M.A],
+            [A.A, I.A],
             () => {
-                let e = p.A.getGuild(t);
-                return M.A.can(w.xBc.MANAGE_ROLES, e);
+                let e = A.A.getGuild(t);
+                return I.A.can(M.xBc.MANAGE_ROLES, e);
             },
             [t],
         );
     return (0, a.jsxs)("div", {
         className: P.kL,
         children: [
-            (0, a.jsx)(y.A, {
-                children: (0, a.jsx)("div", {
-                    className: P.n1,
-                    children: (0, a.jsx)(o.CalendarIcon, {
-                        size: "custom",
-                        color: "currentColor",
-                        height: 40,
-                        width: 40,
-                        className: P.Kk,
-                        "aria-label": L.intl.string(L.t.uxFcqu),
-                    }),
-                }),
-            }),
             (0, a.jsx)(u.D, {
                 color: "text-strong",
                 variant: "heading-xl/semibold",
                 className: P.DD,
                 children: L.intl.string(L.t["WgZ+3D"]),
             }),
-            (0, a.jsx)(I.E, {
+            (0, a.jsx)(_.E, {
                 color: "text-default",
                 variant: "text-sm/normal",
                 className: P.VA,
                 children: L.intl.string(L.t["v/S/PG"]),
             }),
             i &&
-                (0, a.jsx)(I.E, {
+                (0, a.jsx)(_.E, {
                     color: "text-default",
                     variant: "text-sm/normal",
                     className: P.Ec,
                     children: L.intl.format(L.t["K+DH2o"], {
                         onClick: () => {
-                            (_.default.open(t, w.BEX.ROLES), n());
+                            (y.default.open(t, M.BEX.ROLES), n());
                         },
                     }),
                 }),
         ],
     });
 }
-var z = n(823508),
-    S = n(988794),
-    T = n(790782),
-    V = n(968588);
-function K(e) {
-    let { transitionState: t, onClose: l, guildId: I } = e,
-        _ = (0, f.GV)(),
-        y = (0, s.bG)([p.A], () => p.A.getGuild(I)),
-        M = (0, k.A)(y?.id),
-        P = (0, G.Ay)(I),
-        K = i.useRef(j.Ay.ackMessageId(I, T.P.GUILD_EVENT)),
-        O = (0, z.A)();
+var S = n(823508),
+    T = n(988794),
+    V = n(790782),
+    q = n(968588);
+function z(e) {
+    let { transitionState: t, onClose: l, guildId: _ } = e,
+        y = (0, f.GV)(),
+        I = (0, s.bG)([A.A], () => A.A.getGuild(_)),
+        P = (0, k.A)(I?.id),
+        z = (0, G.Ay)(_),
+        O = i.useRef(j.Ay.ackMessageId(_, V.P.GUILD_EVENT)),
+        U = (0, S.A)();
     return (
         i.useEffect(() => {
-            (P.forEach((e) => b.A.getGuildEventUserCounts(I, e.id, [])), b.A.getGuildEventsForCurrentUser(I));
-        }, [P, I]),
+            (z.forEach((e) => b.A.getGuildEventUserCounts(_, e.id, [])), b.A.getGuildEventsForCurrentUser(_));
+        }, [z, _]),
         (0, E.Ay)(() => {
-            v.default.track(w.HAw.OPEN_MODAL, { type: S.BV, guild_id: I, guild_events_count: P.length });
+            v.default.track(M.HAw.OPEN_MODAL, { type: T.BV, guild_id: _, guild_events_count: z.length });
         }),
         i.useEffect(() => {
-            r()(P)
+            r()(z)
                 .map((e) => e.creator_id)
                 .filter(N.Vq)
                 .uniq()
                 .forEach((e) => {
-                    A.A.requestMember(I, e);
+                    p.A.requestMember(_, e);
                 });
-        }, [I, P]),
+        }, [_, z]),
         i.useEffect(() => {
-            null != I && (0, x.hK)(I, T.P.GUILD_EVENT);
-        }, [I]),
+            null != _ && (0, x.hK)(_, V.P.GUILD_EVENT);
+        }, [_]),
         (0, a.jsxs)(d.EO, {
             size: d.rI.MEDIUM,
             transitionState: t,
-            "aria-labelledby": _,
+            "aria-labelledby": y,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
                 (0, a.jsxs)(d.rQ, {
-                    className: V.wx,
+                    className: q.wx,
                     "data-migration-pending": !0,
                     children: [
-                        (0, a.jsx)(o.CalendarIcon, { size: "md", color: "currentColor", className: V.Kk }),
+                        (0, a.jsx)(o.CalendarIcon, { size: "md", color: "currentColor", className: q.Kk }),
                         (0, a.jsx)(u.D, {
-                            id: _,
+                            id: y,
                             variant: "heading-md/semibold",
                             children:
-                                P.length > 0
-                                    ? L.intl.formatToPlainString(L.t.IBdqSu, { number: P.length })
+                                z.length > 0
+                                    ? L.intl.formatToPlainString(L.t.IBdqSu, { number: z.length })
                                     : L.intl.string(L.t.tlopTM),
                         }),
-                        M &&
+                        P &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, a.jsx)("div", { className: V.yF, children: "|" }),
+                                    (0, a.jsx)("div", { className: q.yF, children: "|" }),
                                     (0, a.jsx)(m.$, {
                                         variant: "primary",
                                         size: "sm",
@@ -154,6 +140,7 @@ function K(e) {
                                                     n.e("370017"),
                                                     n.e("730931"),
                                                     n.e("711162"),
+                                                    n.e("998392"),
                                                     n.e("948054"),
                                                     n.e("897073"),
                                                     n.e("159957"),
@@ -162,13 +149,15 @@ function K(e) {
                                                     n.e("409391"),
                                                     n.e("810262"),
                                                     n.e("756684"),
+                                                    n.e("769014"),
                                                     n.e("670089"),
                                                     n.e("870160"),
                                                     n.e("454450"),
                                                     n.e("222689"),
+                                                    n.e("426226"),
                                                 ]).then(n.bind(n, 303224));
-                                                return (t) => (0, a.jsx)(e, { ...t, guildId: I });
-                                            }, O);
+                                                return (t) => (0, a.jsx)(e, { ...t, guildId: _ });
+                                            }, U);
                                         },
                                         text: L.intl.string(L.t["60lJ0C"]),
                                     }),
@@ -176,29 +165,29 @@ function K(e) {
                             }),
                         (0, a.jsx)(g.D, {
                             onClick: l,
-                            className: V.gb,
+                            className: q.gb,
                             "aria-label": L.intl.string(L.t.cpT0Cq),
-                            children: (0, a.jsx)(h.P, { size: "md", color: "currentColor", className: V.Kk }),
+                            children: (0, a.jsx)(h.P, { size: "md", color: "currentColor", className: q.Kk }),
                         }),
                     ],
                 }),
                 (0, a.jsx)(d.$m, {
-                    className: V.Qs,
+                    className: q.Qs,
                     "data-migration-pending": !0,
                     children:
-                        P.length > 0
-                            ? P.map((e) =>
+                        z.length > 0
+                            ? z.map((e) =>
                                   (0, a.jsx)(
                                       D.A,
                                       {
                                           guildEvent: e,
                                           onActionTaken: l,
-                                          isNew: null != K.current && C.default.compare(e.id, K.current) > 0,
+                                          isNew: null != O.current && C.default.compare(e.id, O.current) > 0,
                                       },
                                       e.id,
                                   ),
                               )
-                            : (0, a.jsx)(q, { guildId: I, onClose: l }),
+                            : (0, a.jsx)(w, { guildId: _, onClose: l }),
                 }),
             ],
         })

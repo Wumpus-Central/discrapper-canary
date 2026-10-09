@@ -1,32 +1,18 @@
 .container__710ee {
+    align-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 300px
 }
 
-.circle__710ee,
-.container__710ee {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.circle__710ee {
-    background-color: var(--background-base-lowest);
-    border-radius: 50%;
-    height: 64px;
-    width: 64px
-}
-
-.icon__710ee {
-    color: var(--interactive-text-active)
-}
-
 .title__710ee {
-    margin: 32px 0 8px
+    margin-bottom: var(--space-8)
 }
 
 .roleTip__710ee,
-.subtitle__710ee {
+.subtitle__710ee,
+.title__710ee {
     text-align: center
 }
 
@@ -92,4 +78,4 @@
     border-color: ButtonText
 }
 
-/*# sourceMappingURL=467b04125570be00.css.map*/
+/*# sourceMappingURL=1f0e8e32b537320d.css.map*/
