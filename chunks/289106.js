@@ -1,4 +1,4 @@
-n.d(t, { bI: () => T, Ay: () => Z, vL: () => B, ub: () => Q, qF: () => W, FZ: () => X });
+n.d(t, { bI: () => T, Ay: () => Z, vL: () => B, ub: () => Q, qF: () => F, FZ: () => X });
 var l = n(582128),
     i = n(17928),
     a = n(73153),
@@ -158,11 +158,12 @@ var k = n(516288),
     R = n(652215),
     L = n(165610);
 let T = 221552 == n.j ? l.createContext(null) : null;
-function W(e) {
+function F(e) {
+    if ((0, h.Fl)(e)) return !1;
     let t = s.A.getApplication(e.application_id)?.name;
     return null != t && t !== e.name;
 }
-function F(e, t) {
+function W(e, t) {
     let n = v.Ay.getProject(e);
     if (null == n) return null;
     let l = "user" === n.install_scope ? null : (n.guild_id ?? t),
@@ -183,7 +184,7 @@ function F(e, t) {
             canManageChannels: null == a ? null : p.A.can(R.xBc.MANAGE_CHANNELS, a),
             usesAppChannels: (0, h.Hv)(n),
             botInGuild: (0, x.AS)(n, l),
-            liveNameOutdated: W(n),
+            liveNameOutdated: F(n),
         },
     };
 }
@@ -275,7 +276,7 @@ function G(e, t, n) {
                         d
                             .then(() => ("channel" === u ? D(r, a) : void 0))
                             .finally(() => q(r, !1))
-                            .then(() => U(F(r, a) ?? e, u, i))
+                            .then(() => U(W(r, a) ?? e, u, i))
                             .catch(() => {}));
             },
             (e) => {
@@ -301,13 +302,13 @@ function q(e, t) {
 }
 async function D(e, t) {
     let n = Date.now() + 5e3;
-    for (; F(e, t)?.appChannelId == null && Date.now() < n;) await new Promise((e) => setTimeout(e, 250));
+    for (; W(e, t)?.appChannelId == null && Date.now() < n;) await new Promise((e) => setTimeout(e, 250));
 }
 function $(e) {
     (0, r.eO)((0, x.Du)(e), { withMutualGuilds: !0 }).catch(() => {});
 }
 function Q(e, t) {
-    let n = F(e, t.guildId);
+    let n = W(e, t.guildId);
     if (null == n) return;
     let l = P({
         ...n.input,
@@ -319,7 +320,7 @@ let V = new Set();
 async function X(e, t, n) {
     let { guildId: l, platform: i } = n;
     if (!0 === n.busy || V.has(e)) return;
-    let a = F(e, l);
+    let a = W(e, l);
     if (null == a || v.Ay.isProjectPublishing(e)) return;
     let r = P(a.input);
     if (null != r) {
@@ -346,7 +347,7 @@ async function X(e, t, n) {
                     V.delete(e);
                 }
                 if (v.Ay.isProjectPublishing(e)) return;
-                let t = F(e, l),
+                let t = W(e, l),
                     a = t?.input.integrationStatus ?? null;
                 if (
                     null == t ||
@@ -389,7 +390,7 @@ function Z(e, t) {
         } = (0, i.cf)(
             [v.Ay, f.A, c.Ay, d.A, p.A, o.A, s.A],
             () => {
-                let t = null == e || null == r ? null : F(e, r);
+                let t = null == e || null == r ? null : W(e, r);
                 return {
                     canPublish: null != t && (0, v.jf)(t.project),
                     project: t?.project ?? null,
@@ -436,14 +437,14 @@ function Z(e, t) {
         null != g && null != b && R && null != O && "unpublished" !== O && $(g);
     }, [g?.id, b, R, O]);
     let L = g?.application_id ?? null,
-        W = null != O && "unpublished" !== O;
+        F = null != O && "unpublished" !== O;
     l.useEffect(() => {
         null != L &&
-            W &&
+            F &&
             null == s.A.getApplication(L) &&
             !s.A.isFetchingApplication(L) &&
             (0, u.TA)(L).catch(() => {});
-    }, [L, W]);
+    }, [L, F]);
     let U = l.useMemo(() => (null == _ ? null : P(_)), [_]),
         B = l.useCallback(
             (t) => {

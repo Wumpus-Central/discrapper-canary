@@ -52,7 +52,7 @@ function f(t) {
 }
 function y(t) {
     let e = h.Ay.getProject(t);
-    null != e && (f(e.application_id), f(e.preview_application_id ?? null));
+    null != e && (f(e.application_id), (0, E.Fl)(e) || f(e.preview_application_id ?? null));
 }
 let I = null,
     U = null,
