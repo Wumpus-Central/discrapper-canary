@@ -468,8 +468,8 @@ let K = "playground-announcement-modal",
             },
         },
     };
-var Y = n(520361),
-    W = n(822571),
+var W = n(520361),
+    Y = n(822571),
     z = n(662367);
 let $ = "playground-billing-settings-banner",
     q = {
@@ -484,7 +484,7 @@ let $ = "playground-billing-settings-banner",
                 r = h.useField("selected"),
                 [d] = i.useState(() => new Date(Date.now() + 6048e5)),
                 s = r?.endDate ?? d,
-                c = W.A.createFromServer(
+                c = Y.A.createFromServer(
                     F(
                         $,
                         p.C.BILLING_SETTINGS_BANNER,
@@ -519,7 +519,7 @@ let $ = "playground-billing-settings-banner",
                                     button: t,
                                     helpArticle: n,
                                 }),
-                                null != a ? { ...a, ...o } : Y.h.create(o)),
+                                null != a ? { ...a, ...o } : W.h.create(o)),
                         }),
                     ),
                 );
@@ -605,6 +605,9 @@ var Z = n(959129),
         (r.WORLD_CUP_GIFTING_2026_AROUND_THE_WORLD_SKU_ID = "1509955522797768794"),
         (r.WORLD_CUP_GIFTING_2026_GOAL_SKU_ID = "1509962431290675280"),
         (r.SUMMER_2026_GOGO_FAKE_SKU_ID = "1533205265724211200"),
+        (r.HALLOWEEN_GIFTING_2026_UMBRA_SKU_ID = "1552382432504840293"),
+        (r.HALLOWEEN_GIFTING_2026_HEX_SKU_ID = "1552383012002332842"),
+        (r.HALLOWEEN_GIFTING_2026_CROWSEPH_SKU_ID = "1552383354190565476"),
         r),
     Q = n(67948),
     ee = n(73153),
@@ -749,13 +752,13 @@ var eD = n(964661),
     eK = n(214947),
     ew = n(34188),
     eH = n(577473),
-    eY = n(715069),
-    eW = n(765671),
+    eW = n(715069),
+    eY = n(765671),
     ez = n(573999);
 function e$() {}
 function eq(e) {
     let { icon: t, label: n, selected: o = !1, decoration: l, showHoverGradient: a = !1, ref: r } = e,
-        { width: i, ref: d } = (0, eW.Ay)(),
+        { width: i, ref: d } = (0, eY.Ay)(),
         s = (0, ej.A)(r, d);
     return (0, u.jsxs)("button", {
         ref: s,
@@ -763,7 +766,7 @@ function eq(e) {
         className: eF()(ez.pc, { [ez.EV]: o }),
         onClick: e$,
         children: [
-            a && (0, u.jsx)(eY.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
+            a && (0, u.jsx)(eW.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
             (0, u.jsxs)("span", {
                 className: ez.Hq,
                 children: [
@@ -915,15 +918,15 @@ let e1 = "playground-premium-tab-tooltip";
 n(321073);
 var e6 = n(896170),
     e7 = n(890497),
-    e8 = n(636537);
-async function e3() {
-    return (await e8.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
+    e3 = n(636537);
+async function e8() {
+    return (await e3.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: l, end_date: a } = e;
         return { id: t, name: n, type: o, source: l, endDate: null != a ? new Date(a) : void 0 };
     });
 }
-async function e9(e) {
-    let t = await e8.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
+async function e5(e) {
+    let t = await e3.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
         n = new Map();
     for (let e of t.body) {
         let t = (0, D.ii)(B.m, e.properties),
@@ -940,13 +943,13 @@ async function e9(e) {
     }
     return n;
 }
-let e5 = [
+let e9 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
 ];
 function e4(e) {
     let t = [];
-    for (let n of e5) {
+    for (let n of e9) {
         let o = e.filter((e) => e.type === n.type);
         if (0 !== o.length)
             for (let e of (t.push({ id: `header-${n.type}`, value: `header-${n.type}`, label: n.label, disabled: !0 }),
@@ -1824,7 +1827,7 @@ let ta = {
             i.useEffect(() => {
                 let e = !0;
                 return (
-                    e3()
+                    e8()
                         .then((t) => {
                             e && n(t);
                         })
@@ -1858,7 +1861,7 @@ let ta = {
                                   });
                               let n = t.find((t) => t.id === e);
                               null != n &&
-                                  e9(n.id)
+                                  e5(n.id)
                                       .then((e) => {
                                           o.current === n.id &&
                                               (function (e, t) {
