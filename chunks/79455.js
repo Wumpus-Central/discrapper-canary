@@ -106,7 +106,8 @@ let c = Array.from(s.aria.keys()),
                                     );
                                 case "number":
                                     return (
-                                        (l = y), isFinite((u = c)) ? i : `${l} requires a numeric value but got ${u}`
+                                        (l = y),
+                                        isFinite(Number((u = c))) ? i : `${l} requires a numeric value but got ${u}`
                                     );
                                 case "boolean":
                                     return (

@@ -17,22 +17,23 @@ let n = {
                 id: "ai-bloom",
                 component: function (e) {
                     let {
-                        placeholderElementArea: t,
-                        areaSize: l,
-                        top: s,
-                        right: i,
-                        bottom: d,
-                        left: c,
-                        glyphSize: u,
-                        radius: x,
-                        color: m,
-                        edgeBand: h,
-                    } = e;
+                            placeholderElementArea: t,
+                            areaSize: l,
+                            top: s,
+                            right: i,
+                            bottom: d,
+                            left: c,
+                            glyphSize: u,
+                            radius: x,
+                            color: m,
+                            edgeBand: h,
+                        } = e,
+                        p = { "--__demo-area": `${t}px` };
                     return (0, a.jsx)("div", {
                         className: r.q,
                         children: (0, a.jsx)("div", {
                             className: r.M,
-                            style: { "--__demo-area": `${t}px` },
+                            style: p,
                             children: (0, a.jsx)(o.C, {
                                 area: { top: s ? l : 0, right: i ? l : 0, bottom: d ? l : 0, left: c ? l : 0 },
                                 glyphSize: u,

@@ -18,7 +18,7 @@ let i = new Map([
     ["handelsbanken", "Handelsbanken"],
 ]);
 function r(e) {
-    return void 0 !== e && i.has(e) ? i.get(e) : l.intl.string(l.t.jdPblk);
+    return (void 0 !== e ? i.get(e) : void 0) ?? l.intl.string(l.t.jdPblk);
 }
 let a = new Map([
     ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
@@ -50,5 +50,5 @@ let a = new Map([
     ["vr_bank_braunau", "VR-Bank Braunau"],
 ]);
 function s(e) {
-    return void 0 !== e && a.has(e) ? a.get(e) : l.intl.string(l.t.jdPblk);
+    return (void 0 !== e ? a.get(e) : void 0) ?? l.intl.string(l.t.jdPblk);
 }

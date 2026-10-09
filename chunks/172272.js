@@ -18,15 +18,12 @@ let c = 64,
 function u() {
     let e = (0, r.bG)([l.default], () => l.default.layoutDebuggingEnabled),
         { horizontalSpacing: t, verticalSpacing: n } = o();
-    return e
-        ? (0, i.jsx)("div", {
-              className: a.k,
-              children: (0, i.jsx)("div", {
-                  className: a.Z,
-                  "data-horizontal": t > 0,
-                  "data-vertical": n > 0,
-                  style: { "--custom-grid-horizontal-spacing": `${t}px`, "--custom-grid-vertical-spacing": `${n}px` },
-              }),
-          })
-        : null;
+    if (e) {
+        let e = { "--custom-grid-horizontal-spacing": `${t}px`, "--custom-grid-vertical-spacing": `${n}px` };
+        return (0, i.jsx)("div", {
+            className: a.k,
+            children: (0, i.jsx)("div", { className: a.Z, "data-horizontal": t > 0, "data-vertical": n > 0, style: e }),
+        });
+    }
+    return null;
 }

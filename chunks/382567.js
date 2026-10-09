@@ -15,8 +15,8 @@ var i = n(477900),
     f = n(775602),
     p = n(531685),
     A = n(625494),
-    b = n(140735),
-    S = n(297264),
+    S = n(140735),
+    b = n(297264),
     y = n(707554),
     v = n(964486);
 (n(667532), n(134528), n(947204));
@@ -395,51 +395,50 @@ function ep(e) {
                 { thumbRef: i, trackRef: n, thumbAnchorRef: r, springs: o }
             );
         })(t);
-    return (
-        (0, eo.Ay)(c),
-        (0, i.jsxs)("div", {
-            className: eh.o8,
-            role: "list",
-            style: {
-                "--custom-nav-count": r.length,
-                "--custom-nav-index": Math.max(t, 0),
-                "--custom-nav-width": "2px",
-                "--custom-icon-size": `${eu.E[eg]}px`,
-            },
-            children: [
-                (0, i.jsx)("div", {
-                    className: eh.u4,
-                    "aria-hidden": "true",
-                    ref: u,
-                    children: (0, i.jsx)(ec.animated.div, {
-                        className: I()(eh.FF, { [eh.R]: null == n }),
-                        style: m,
-                        ref: o,
-                    }),
+    (0, eo.Ay)(c);
+    let h = {
+        "--custom-nav-count": r.length,
+        "--custom-nav-index": Math.max(t, 0),
+        "--custom-nav-width": "2px",
+        "--custom-icon-size": `${eu.E[eg]}px`,
+    };
+    return (0, i.jsxs)("div", {
+        className: eh.o8,
+        role: "list",
+        style: h,
+        children: [
+            (0, i.jsx)("div", {
+                className: eh.u4,
+                "aria-hidden": "true",
+                ref: u,
+                children: (0, i.jsx)(ec.animated.div, {
+                    className: I()(eh.FF, { [eh.R]: null == n }),
+                    style: m,
+                    ref: o,
                 }),
-                (0, i.jsx)("div", { className: eh.gu, "aria-hidden": "true", ref: d }),
-                r.map((e) => {
-                    let t = et(e.key, l, a);
-                    return (0, i.jsx)(
-                        ex,
-                        {
-                            onClick: () => {
-                                var t;
-                                return ((t = e.key), void _.A.navigate(t, { showNavigationMobile: !1 }));
-                            },
-                            active: e.key === n,
-                            category: e,
-                            dismissibleBadge: t,
+            }),
+            (0, i.jsx)("div", { className: eh.gu, "aria-hidden": "true", ref: d }),
+            r.map((e) => {
+                let t = et(e.key, l, a);
+                return (0, i.jsx)(
+                    ex,
+                    {
+                        onClick: () => {
+                            var t;
+                            return ((t = e.key), void _.A.navigate(t, { showNavigationMobile: !1 }));
                         },
-                        e.key,
-                    );
-                }),
-            ],
-        })
-    );
+                        active: e.key === n,
+                        category: e,
+                        dismissibleBadge: t,
+                    },
+                    e.key,
+                );
+            }),
+        ],
+    });
 }
 var eA = n(686380);
-function eb(e) {
+function eS(e) {
     let { onClick: t, active: n, node: r, dismissibleBadge: l, panelKey: c, listItemProps: o, children: u } = e,
         {
             icon: d,
@@ -465,17 +464,17 @@ function eb(e) {
                     return en.A.colors.ICON_FEEDBACK_CRITICAL;
             }
         })(x),
-        b = h?.(n),
-        S = s.useMemo(
+        S = h?.(n),
+        b = s.useMemo(
             () =>
                 null != l
                     ? n
                         ? null
                         : (0, i.jsx)(er, { badge: l })
-                    : null != b
-                      ? (0, i.jsx)(B.A, { badge: b })
+                    : null != S
+                      ? (0, i.jsx)(B.A, { badge: S })
                       : void 0,
-            [n, l, b],
+            [n, l, S],
         );
     return (0, i.jsxs)("li", {
         "data-settings-sidebar-item": c,
@@ -497,14 +496,14 @@ function eb(e) {
                                   (0, i.jsx)(a.E, { variant: "text-md/medium", color: p, children: f }),
                               ],
                           }),
-                    S,
+                    b,
                 ],
             }),
             u,
         ],
     });
 }
-function eS(e) {
+function eb(e) {
     let { node: t, visibleContent: n, dismissibleBadges: r, hoisted: l = !1 } = e,
         a = s.useMemo(() => t.layout[0], [t]),
         c = L.A.useField("currentPanelKey"),
@@ -543,7 +542,7 @@ function eS(e) {
         ),
         f = s.useMemo(() => et(t.key, n, r), [t.key, n, r]);
     return l
-        ? (0, i.jsx)(eb, {
+        ? (0, i.jsx)(eS, {
               panelKey: a?.key,
               onClick: h,
               active: d,
@@ -555,7 +554,7 @@ function eS(e) {
         : (0, i.jsx)(X.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
-                  (0, i.jsx)(eb, {
+                  (0, i.jsx)(eS, {
                       panelKey: a?.key,
                       onClick: h,
                       active: d,
@@ -643,8 +642,8 @@ function ev(e) {
                 "aria-labelledby": P,
                 className: I()(ey.pz, e, { [ey.Hw]: N.Fr, [ey.n7]: o }),
                 children: [
-                    (0, i.jsx)(b.A, {
-                        children: (0, i.jsx)(S.D, {
+                    (0, i.jsx)(S.A, {
+                        children: (0, i.jsx)(b.D, {
                             variant: "text-sm/bold",
                             id: P,
                             children: K.intl.string(K.t["ZU3/B4"]),
@@ -727,7 +726,7 @@ function ej(e) {
         children: (0, i.jsx)("ul", {
             className: ey.C4,
             children: t.layout.map((e) =>
-                (0, i.jsx)(eS, { node: e, visibleContent: n, dismissibleBadges: s, hoisted: !0 }, e.key),
+                (0, i.jsx)(eb, { node: e, visibleContent: n, dismissibleBadges: s, hoisted: !0 }, e.key),
             ),
         }),
     });
@@ -741,10 +740,10 @@ function eI(e) {
         "aria-labelledby": a,
         children: [
             t.hideTitle
-                ? (0, i.jsx)(b.A, { children: (0, i.jsx)(S.D, { id: a, variant: "heading-sm/medium", children: l }) })
+                ? (0, i.jsx)(S.A, { children: (0, i.jsx)(b.D, { id: a, variant: "heading-sm/medium", children: l }) })
                 : (0, i.jsx)("div", {
                       className: ey.a9,
-                      children: (0, i.jsx)(S.D, {
+                      children: (0, i.jsx)(b.D, {
                           id: a,
                           className: ey.Pf,
                           variant: "heading-sm/medium",
@@ -755,7 +754,7 @@ function eI(e) {
             (0, i.jsx)("ul", {
                 className: ey.C4,
                 children: t.layout.map((e) =>
-                    (0, i.jsx)(eS, { node: e, visibleContent: n, dismissibleBadges: r }, e.key),
+                    (0, i.jsx)(eb, { node: e, visibleContent: n, dismissibleBadges: r }, e.key),
                 ),
             }),
         ],
@@ -815,7 +814,7 @@ function eT(e) {
         children: (0, i.jsxs)("div", {
             className: eC.k,
             children: [
-                (0, i.jsx)(b.A, { children: (0, i.jsx)(S.D, { variant: "text-sm/bold", children: k }) }),
+                (0, i.jsx)(S.A, { children: (0, i.jsx)(b.D, { variant: "text-sm/bold", children: k }) }),
                 (0, i.jsxs)(y.F, {
                     children: [
                         (0, i.jsx)(ev, {
@@ -850,7 +849,7 @@ function eR(e) {
             searchBar: d,
             ...m
         } = e,
-        [b, S] = s.useState(!1),
+        [S, b] = s.useState(!1),
         [y, v] = s.useState(1.4),
         j = s.useRef(null),
         I = (0, h.bG)([f.Ay], () => f.Ay.useReducedMotion),
@@ -861,7 +860,7 @@ function eR(e) {
                 let { intensity: t, duration: n } = e;
                 !I &&
                     N &&
-                    (S(!0), v(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => S(!1), n ?? 1e3)));
+                    (b(!0), v(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => b(!1), n ?? 1e3)));
             }
             return (
                 A._.subscribe(ek.jej.SHAKE_SETTINGS_MODAL, e),
@@ -871,7 +870,7 @@ function eR(e) {
             );
         }, [I, N]),
         (0, i.jsx)(x.b, {
-            isShaking: b,
+            isShaking: S,
             intensity: y,
             children: (0, i.jsx)(g.N, {
                 ...m,
@@ -915,13 +914,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "634442",
-        s = "dbeba21e8b1b4019fcb1c1960fdc336bc59c3173".substring(0, 7),
+        n = "634450",
+        s = "d0b7b6aa4984448ea3240fce625a5539f4ae39ee".substring(0, 7),
         r = eY.A?.app.getVersion(),
         l = eY.A?.app.getBuildNumber(),
         c = eY.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1791562107655", !1) : null,
+        u = null != o ? (0, eq.A)("1791562572221", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -998,7 +997,7 @@ function eJ() {
                             ],
                         }),
                 }),
-                (0, i.jsx)(b.A, { id: e, children: K.intl.string(K.t["9Al4Qd"]) }),
+                (0, i.jsx)(S.A, { id: e, children: K.intl.string(K.t["9Al4Qd"]) }),
             ],
         })
     );
