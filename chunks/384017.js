@@ -27,4 +27,5 @@ _.exports = {
     R_: "heading_d4831f",
     TB: "headingExit_d4831f",
     JU: "headingEnter_d4831f",
+    YX: "entityPicker_d4831f",
 };

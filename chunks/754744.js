@@ -2233,9 +2233,16 @@ function nG(e) {
                     text: j.intl.string(j.t["3glT6Z"]),
                     onClick: () => {
                         (0, t9.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("253335"), n.e("691671"), n.e("140243")]).then(
-                                n.bind(n, 547166),
-                            );
+                            let { default: e } = await Promise.all([
+                                n.e("304350"),
+                                n.e("253335"),
+                                n.e("201050"),
+                                n.e("265696"),
+                                n.e("691671"),
+                                n.e("387634"),
+                                n.e("479971"),
+                                n.e("140243"),
+                            ]).then(n.bind(n, 547166));
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                         });
                     },

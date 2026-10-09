@@ -1,3 +1,8 @@
+.trigger__106b4 {
+    align-items: center;
+    display: inline-flex
+}
+
 .frame_d9c451 {
     border-radius: calc(var(--custom-conjure-project-icon-size)/4);
     box-sizing: border-box;
@@ -32,4 +37,10 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=e4fcb932bccd89e9.css.map*/
+.people__36261 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto
+}
+
+/*# sourceMappingURL=900658c10b6fef8d.css.map*/

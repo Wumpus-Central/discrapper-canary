@@ -347,36 +347,4 @@
     color: var(--control-secondary-text-active)
 }
 
-.nameWithTag__21abf {
-    white-space: nowrap
-}
-
-.tag__21abf {
-    display: inline-flex;
-    vertical-align: middle
-}
-
-.box__21abf {
-    background: var(--background-mod-subtle);
-    border-radius: var(--radius-sm);
-    flex-direction: column;
-    padding: var(--space-12)
-}
-
-.box__21abf,
-.row__21abf {
-    display: flex;
-    gap: var(--space-8)
-}
-
-.row__21abf {
-    align-items: center;
-    color: var(--text-subtle)
-}
-
-.trigger__106b4 {
-    align-items: center;
-    display: inline-flex
-}
-
-/*# sourceMappingURL=6a71b4e383b177af.css.map*/
+/*# sourceMappingURL=432b39a4f9b6675e.css.map*/

@@ -1,18 +1,18 @@
 n.d(t, {
-    Lp: () => A,
-    N: () => S,
-    Ot: () => I,
-    Q9: () => C,
-    Qv: () => m,
+    Lp: () => h,
+    N: () => N,
+    Ot: () => p,
+    Q9: () => O,
+    Qv: () => g,
     Ux: () => E,
-    Xs: () => R,
-    dd: () => T,
-    i8: () => p,
-    n5: () => h,
-    oX: () => g,
-    sM: () => N,
-    us: () => f,
-    w$: () => L,
+    Xs: () => L,
+    dd: () => m,
+    i8: () => T,
+    n5: () => f,
+    oX: () => S,
+    sM: () => C,
+    us: () => I,
+    w$: () => y,
 });
 var i = n(17928),
     r = n(615606),
@@ -27,43 +27,46 @@ var i = n(17928),
 function E(e, t) {
     return null == e || "user" === e.install_scope ? null : ((t ? e.preview_guild_id : null) ?? e.guild_id ?? null);
 }
-function A(e, t) {
-    return [...("voice" === t ? [] : e[s.I6]), ...("text" === t ? [] : e[s.vM])].map((e) => {
-        let { channel: t } = e;
-        return t;
-    });
-}
-function h(e) {
-    return { isPublic: (e & c.Zh.PUBLIC) != 0, isShared: (e & c.Zh.SHAREABLE) != 0 };
+let A = new Set([_.rbe.GUILD_DIRECTORY, _.rbe.GUILD_STORE]);
+function h(e, t) {
+    return [...("voice" === t ? [] : e[s.I6]), ...("text" === t ? [] : e[s.vM])]
+        .map((e) => {
+            let { channel: t } = e;
+            return t;
+        })
+        .filter((e) => !A.has(e.type));
 }
 function f(e) {
+    return { isPublic: (e & c.Zh.PUBLIC) != 0, isShared: (e & c.Zh.SHAREABLE) != 0 };
+}
+function I(e) {
     return e?.type === _.rbe.GUILD_APP ? (e.application_id ?? null) : null;
 }
-function I(e, t) {
+function p(e, t) {
     return (
         null != e &&
         (e.guild_id === t || e.preview_guild_id === t || (null == e.guild_id && null == e.preview_guild_id))
     );
 }
-function p(e, t) {
-    for (let { channel: n } of s.Ay.getChannels(e)[s.I6]) if (f(n) === t) return n.id;
+function T(e, t) {
+    for (let { channel: n } of s.Ay.getChannels(e)[s.I6]) if (I(n) === t) return n.id;
     return null;
 }
-function T(e, t) {
+function m(e, t) {
     return (0, u.L0)({ guildId: e.id, location: t }) && !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
 }
-function m(e, t) {
-    return e.filter((e) => T(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
+function g(e, t) {
+    return e.filter((e) => m(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
 }
-function g(e) {
+function S(e) {
     let t = d.A.getGuildId(),
         n = null == t ? null : l.A.getGuild(t);
-    return null != n && T(n, e) ? n.id : (m(l.A.getGuildsArray(), e)[0]?.id ?? null);
-}
-function S(e, t) {
-    return T(e, t);
+    return null != n && m(n, e) ? n.id : (g(l.A.getGuildsArray(), e)[0]?.id ?? null);
 }
 function N(e, t) {
+    return m(e, t);
+}
+function C(e, t) {
     return (
         !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) &&
         o.A.can(_.xBc.MANAGE_CHANNELS, e) &&
@@ -71,26 +74,26 @@ function N(e, t) {
         (0, u.L0)({ guildId: e.id, location: t })
     );
 }
-function C(e, t) {
+function O(e, t) {
     let n = (0, u.m0)({ guildId: e.id, location: t }),
         i = e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     return n && !i;
 }
-function O(e, t, n) {
+function R(e, t, n) {
     return (
         e?.type === _.rbe.GUILD_APP &&
         n?.vibegrationsProjectId != null &&
         t?.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
     );
 }
-function R(e, t) {
-    let n = f(e),
-        i = null != n && a.A.isHydrated(n) ? a.A.getApplication(n) : null;
-    return O(e, l.A.getGuild(e?.guild_id), i) && (0, u.L0)({ guildId: e?.guild_id, location: t });
-}
 function L(e, t) {
+    let n = I(e),
+        i = null != n && a.A.isHydrated(n) ? a.A.getApplication(n) : null;
+    return R(e, l.A.getGuild(e?.guild_id), i) && (0, u.L0)({ guildId: e?.guild_id, location: t });
+}
+function y(e, t) {
     let n = (0, i.bG)([l.A], () => l.A.getGuild(e?.guild_id)),
         a = (0, r.q)(e),
         s = (0, u.m0)({ guildId: e?.guild_id, location: t });
-    return O(e, n, a) && s;
+    return R(e, n, a) && s;
 }

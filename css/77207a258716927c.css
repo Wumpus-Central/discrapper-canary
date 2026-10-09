@@ -1,0 +1,31 @@
+.nameWithTag__21abf {
+    white-space: nowrap
+}
+
+.tag__21abf {
+    display: inline-flex;
+    vertical-align: middle
+}
+
+.box__21abf {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12);
+    transition: opacity .15s ease
+}
+
+.boxDimmed__21abf {
+    opacity: .5
+}
+
+.row__21abf {
+    align-items: center;
+    color: var(--text-subtle);
+    display: flex;
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=77207a258716927c.css.map*/
