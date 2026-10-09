@@ -2334,11 +2334,12 @@ let nV = (i = new nF(M.h, {
                 { sourceId: i, sound: r } = t.desktopSettings,
                 s = t.context ?? eZ.x.DEFAULT,
                 l = t.qualityOptions ?? { resolution: 720, frameRate: 30 },
-                o = eG.A.getPidFromDesktopSource(i);
-            (p.isPlatformEmbedded && ({ soundshareId: e, soundshareSession: n } = ny(o, r)),
+                o = i.startsWith(`${eZ.fS.ACTIVITY}:`),
+                d = o ? null : eG.A.getPidFromDesktopSource(i);
+            (p.isPlatformEmbedded && !o && ({ soundshareId: e, soundshareSession: n } = ny(d, r)),
                 s !== tl && (null != a && tt.setGoLiveSource(null, tl), (tl = s)),
                 nt(s === eZ.x.STREAM && tm, {
-                    desktopSource: { id: i, sourcePid: o, soundshareId: e, soundshareSession: n },
+                    desktopSource: { id: i, sourcePid: d, soundshareId: e, soundshareSession: n },
                     quality: { resolution: l.resolution, frameRate: l.frameRate },
                 }));
         } else if (t?.cameraSettings != null) {

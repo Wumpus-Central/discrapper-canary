@@ -477,6 +477,7 @@ var B =
         (r.SPATIAL_AUDIO = "spatial_audio"),
         (r.KRISP_NATIVE_ERROR = "krisp_native_error"),
         (r.UDP_ENDPOINT_UPDATE = "udp_endpoint_update"),
+        (r.ACTIVITY_CAPTURE = "activity_capture"),
         r),
     V =
         (((a = {})[(a.Started = 0)] = "Started"),
@@ -2013,6 +2014,8 @@ class ea extends d.A {
                 return (0, b.$b)(B.KRISP_NATIVE_ERROR);
             case O.O5.UDP_ENDPOINT_UPDATE:
                 return (0, b.$b)(B.UDP_ENDPOINT_UPDATE);
+            case O.O5.ACTIVITY_CAPTURE:
+                return (0, b.$b)(B.ACTIVITY_CAPTURE);
             case O.O5.DIAGNOSTICS:
             case O.O5.NATIVE_PING:
             case O.O5.AUTOMATIC_VAD:

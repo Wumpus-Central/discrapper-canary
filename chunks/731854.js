@@ -211,6 +211,7 @@ var ed =
         (c.SPATIAL_AUDIO = "SPATIAL_AUDIO"),
         (c.KRISP_NATIVE_ERROR = "KRISP_NATIVE_ERROR"),
         (c.UDP_ENDPOINT_UPDATE = "UDP_ENDPOINT_UPDATE"),
+        (c.ACTIVITY_CAPTURE = "ACTIVITY_CAPTURE"),
         c),
     ec = (((u = {}).NATIVE = "NATIVE"), (u.WEBRTC = "WEBRTC"), (u.DUMMY = "DUMMY"), u),
     eu =

@@ -25,7 +25,7 @@ var r,
         (a[(a.RendererProcess = 1)] = "RendererProcess"),
         (a[(a.MainProcess = 2)] = "MainProcess"),
         a),
-    u = (((s = {}).WINDOW = "window"), (s.SCREEN = "screen"), (s.CAMERA = "camera"), s),
+    u = (((s = {}).WINDOW = "window"), (s.SCREEN = "screen"), (s.CAMERA = "camera"), (s.ACTIVITY = "activity"), s),
     _ = (((l = {}).VIDEO = "VIDEO"), (l.MUTE = "MUTE"), (l.DEAFEN = "DEAFEN"), (l.DISCONNECT = "DISCONNECT"), l),
     E =
         (((o = {}).DEFAULT = "DEFAULT"),

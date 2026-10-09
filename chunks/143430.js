@@ -1970,18 +1970,21 @@ class tt extends m.A {
                                         null != s.hybridGdiBitBltFramesUnique ||
                                         null != s.hybridGdiPrintWindowFramesUnique ||
                                         null != s.hybridVideohookFramesUnique ||
-                                        null != s.hybridGraphicsCaptureFramesUnique
+                                        null != s.hybridGraphicsCaptureFramesUnique ||
+                                        null != s.hybridExternalFramesUnique
                                       ? (s.hybridDxgiFramesUnique ?? 0) +
                                         (s.hybridGdiBitBltFramesUnique ?? 0) +
                                         (s.hybridGdiPrintWindowFramesUnique ?? 0) +
                                         (s.hybridVideohookFramesUnique ?? 0) +
-                                        (s.hybridGraphicsCaptureFramesUnique ?? 0)
+                                        (s.hybridGraphicsCaptureFramesUnique ?? 0) +
+                                        (s.hybridExternalFramesUnique ?? 0)
                                       : (s.screenshareFrames ?? 0) +
                                         (s.videohookFrames ?? 0) +
                                         (s.quartzFrames ?? 0) +
                                         (s.screenCaptureKitFrames ?? 0) +
                                         (s.x11Frames ?? 0) +
-                                        (s.pipewireFrames ?? 0))),
+                                        (s.pipewireFrames ?? 0) +
+                                        (s.activityFrames ?? 0))),
                             E.appendAndIncrementStats(n),
                             null != r.minResolutionWidth &&
                                 r.minResolutionWidth > 0 &&

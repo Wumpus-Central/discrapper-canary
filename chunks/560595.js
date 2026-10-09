@@ -1,4 +1,4 @@
-t.d(n, { A: () => b });
+t.d(n, { A: () => D });
 var i = t(141931),
     r = t(941426),
     a = t(401843),
@@ -9,55 +9,62 @@ let s = (0, t(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var d = t(674966),
-    u = t(885386),
+var u = t(674966),
+    d = t(885386),
     l = t(929921),
     c = t(734057),
     p = t(71393),
-    g = t(192820),
-    h = t(309010),
-    m = t(287809),
-    S = t(723702),
-    f = t(258585),
+    m = t(192820),
+    f = t(309010),
+    g = t(287809),
+    h = t(723702),
+    S = t(258585),
     E = t(327649),
     A = t(476697),
     w = t(725792),
-    y = t(830012),
-    I = t(753070),
+    y = t(260643),
+    I = t(830012),
+    R = t(753070),
     C = t(765682);
 let P = new Set(["356943187589201930"]),
-    R = new Set(["1402418696126992445"]),
+    b = new Set(["1402418696126992445"]),
     v = new r.Vy("startStreamWithSource");
-async function b(e, n) {
-    let t = m.default.getCurrentUser(),
-        r = h.Ay.getVoiceChannelId(),
-        b = c.A.getChannel(r),
-        D = b?.getGuildId(),
-        O = p.A.getGuild(D)?.premiumTier;
-    if (null == t || null == b || null == r) return [!1, "no user or channel"];
-    let _ = null;
-    if (null == (_ = "number" == typeof e ? o.Ay.getGameForPID(e) : e)) return [!1, "no source"];
-    if (
-        !g.Ay.getUseSystemScreensharePicker() &&
-        !(await d.A.hasPermission(C.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }))
-    )
+async function D(e, n) {
+    let t = g.default.getCurrentUser(),
+        r = f.Ay.getVoiceChannelId(),
+        D = c.A.getChannel(r),
+        O = D?.getGuildId(),
+        _ = p.A.getGuild(O)?.premiumTier;
+    if (null == t || null == D || null == r) return [!1, "no user or channel"];
+    let k = null;
+    if (null == (k = "number" == typeof e ? o.Ay.getGameForPID(e) : e)) return [!1, "no source"];
+    let T = m.Ay.getUseSystemScreensharePicker(),
+        L = "number" != typeof e && (0, y.K4)(e);
+    if (!T && !L && !(await u.A.hasPermission(C.iL.SCREEN_RECORDING, { showAuthorizationError: !1 })))
         return [!1, "no permission"];
-    let { preset: k, resolution: T, fps: L, soundshareEnabled: W } = l.A.getState(),
-        $ = n?.preset ?? k,
-        { allowAutoQuality: j } = (0, f.eO)({ location: "startStreamWithSource" });
-    $ !== I.jQ.PRESET_AUTO || j || ($ = I.jQ.PRESET_VIDEO);
-    let G = $ === I.jQ.PRESET_AUTO ? I.jQ.PRESET_VIDEO : $,
-        [M, Q] = (0, A.Ay)(G, t, O, D) ?? [],
-        U = M ?? n?.resolution ?? T,
-        V = Q ?? n?.fps ?? L,
-        N = n?.previewDisabled ?? u.uh.getSetting(),
-        F = n?.soundshareEnabled ?? W;
+    let { preset: W, resolution: $, fps: j, soundshareEnabled: G } = l.A.getState(),
+        M = n?.preset ?? W,
+        { allowAutoQuality: Q } = (0, S.eO)({ location: "startStreamWithSource" });
+    M !== R.jQ.PRESET_AUTO || Q || (M = R.jQ.PRESET_VIDEO);
+    let U = M === R.jQ.PRESET_AUTO ? R.jQ.PRESET_VIDEO : M,
+        [V, N] = (0, A.Ay)(U, t, _, O) ?? [],
+        F = V ?? n?.resolution ?? $,
+        X = N ?? n?.fps ?? j,
+        x = n?.previewDisabled ?? d.uh.getSetting(),
+        z = n?.soundshareEnabled ?? G;
+    if (
+        (null != V ||
+            (0, E.A)(U, F, X, t, _, D) ||
+            ((M = R.jQ.PRESET_VIDEO), (F = R.on.RESOLUTION_720), (X = R.kn.FPS_30)),
+        L)
+    ) {
+        let n = await (0, y.ys)(e, { audio: z, maxFrameRate: X });
+        if (null == n) return [!1, "no source"];
+        k = n;
+    }
     return (
-        null != M ||
-            (0, E.A)(G, U, V, t, O, b) ||
-            (($ = I.jQ.PRESET_VIDEO), (U = I.on.RESOLUTION_720), (V = I.kn.FPS_30)),
-        (0, a.Xd)({ preset: $, resolution: U, frameRate: V, soundshareEnabled: F }),
-        (0, a.XI)(D, r, {
+        (0, a.Xd)({ preset: M, resolution: F, frameRate: X, soundshareEnabled: z }),
+        (0, a.XI)(O, r, {
             ...(function (e) {
                 var n, t;
                 let r;
@@ -66,28 +73,28 @@ async function b(e, n) {
                 let a =
                         ((n = void 0),
                         (t = o.Ay.getRunningGames()),
-                        null == e ? n : t.find((n) => (0, y.A)(e.id, n.windowHandle))),
-                    d =
-                        !(0, S.isWindows)() ||
+                        null == e ? n : t.find((n) => (0, I.A)(e.id, n.windowHandle))),
+                    u =
+                        !(0, h.isWindows)() ||
                         null == a ||
                         ((r = a.id),
                         s.getConfig({ location: "shouldCaptureGameByWindow" }).enabled
-                            ? null == r || !R.has(r)
+                            ? null == r || !b.has(r)
                             : null != r && P.has(r)) ||
                         e?.id.startsWith(i.fS.CAMERA),
-                    u = null != a ? a.pid : null;
-                return d || null == u
-                    ? (null == u && e.id?.startsWith("prepicked:") && (u = w.Ay.getLastPickedContentPID()),
-                      v.info(`Starting stream for source id ${e.id} and name ${e.name} and pid ${u}`),
-                      { sourceId: e.id, sourceName: e.name, sourceIcon: e.icon, sourcePid: u })
+                    d = null != a ? a.pid : null;
+                return u || null == d
+                    ? (null == d && e.id?.startsWith("prepicked:") && (d = w.Ay.getLastPickedContentPID()),
+                      v.info(`Starting stream for source id ${e.id} and name ${e.name} and pid ${d}`),
+                      { sourceId: e.id, sourceName: e.name, sourceIcon: e.icon, sourcePid: d })
                     : (v.info(
-                          `Starting stream for source id ${e.id} and name ${e.name} converted to running game pid ${u}`,
+                          `Starting stream for source id ${e.id} and name ${e.name} converted to running game pid ${d}`,
                       ),
-                      { pid: u });
-            })(_),
-            audioSourceId: _.id?.startsWith(i.fS.CAMERA) ? n?.audioSourceId : void 0,
-            sound: F,
-            previewDisabled: N,
+                      { pid: d });
+            })(k),
+            audioSourceId: k.id?.startsWith(i.fS.CAMERA) ? n?.audioSourceId : void 0,
+            sound: z,
+            previewDisabled: x,
             goLiveModalDurationMs: n?.goLiveModalDurationMs,
             analyticsLocations: n?.analyticsLocations,
         }),

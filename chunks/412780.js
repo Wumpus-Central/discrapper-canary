@@ -222,7 +222,8 @@ let D = new y(a.h, {
                                                 (a.hybridVideohookFrames ?? 0) +
                                                 (a.hybridGraphicsCaptureFrames ?? 0) +
                                                 (a.quartzFrames ?? 0) +
-                                                (a.screenCaptureKitFrames ?? 0)),
+                                                (a.screenCaptureKitFrames ?? 0) +
+                                                (a.activityFrames ?? 0)),
                                             (t =
                                                 (l.videohookFrames ?? 0) +
                                                 (l.hybridDxgiFrames ?? 0) +
@@ -230,7 +231,8 @@ let D = new y(a.h, {
                                                 (l.hybridVideohookFrames ?? 0) +
                                                 (l.hybridGraphicsCaptureFrames ?? 0) +
                                                 (l.quartzFrames ?? 0) +
-                                                (l.screenCaptureKitFrames ?? 0)),
+                                                (l.screenCaptureKitFrames ?? 0) +
+                                                (l.activityFrames ?? 0)),
                                             {
                                                 screenshareCapturedFps: Math.max(0, (e - t) / i),
                                                 screenshareCapturedFpsUnique: Math.max(
@@ -239,12 +241,14 @@ let D = new y(a.h, {
                                                         (a.hybridGdiBitBltFramesUnique ?? 0) +
                                                         (a.hybridGdiPrintWindowFramesUnique ?? 0) +
                                                         (a.hybridVideohookFramesUnique ?? 0) +
-                                                        (a.hybridGraphicsCaptureFramesUnique ?? 0) -
+                                                        (a.hybridGraphicsCaptureFramesUnique ?? 0) +
+                                                        (a.hybridExternalFramesUnique ?? 0) -
                                                         ((l.hybridDxgiFramesUnique ?? 0) +
                                                             (l.hybridGdiBitBltFramesUnique ?? 0) +
                                                             (l.hybridGdiPrintWindowFramesUnique ?? 0) +
                                                             (l.hybridVideohookFramesUnique ?? 0) +
-                                                            (l.hybridGraphicsCaptureFramesUnique ?? 0))) /
+                                                            (l.hybridGraphicsCaptureFramesUnique ?? 0) +
+                                                            (l.hybridExternalFramesUnique ?? 0))) /
                                                         i,
                                                 ),
                                             }),
