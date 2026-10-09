@@ -1260,15 +1260,27 @@ var l$ = l(803101),
     lF = l(808728),
     lz = l(516288);
 function lO(e) {
-    let { reason: t, transitionState: l, onClose: n } = e,
-        a = t === lz.k.PERMISSIONS;
+    let { reason: t, message: l, onConfirm: n, transitionState: a, onClose: i } = e,
+        s = (0, lz.t)(t, l);
     return (0, r.jsx)(ld.a, {
-        transitionState: l,
-        onClose: n,
-        title: eu.intl.string(a ? es.default.wQ4UyJ : es.default.ZNGLFE),
-        subtitle: eu.intl.string(a ? es.default.Agqmbt : es.default.ffxKGK),
+        transitionState: a,
+        onClose: i,
+        title: s.title,
+        subtitle: s.body,
         size: "sm",
-        actions: [{ text: eu.intl.string(a ? eu.t.BddRzS : es.default["/omTNx"]), variant: "primary", onClick: n }],
+        actions:
+            null == s.cancel
+                ? [{ text: s.action, variant: "primary", onClick: i }]
+                : [
+                      { text: s.cancel, variant: "secondary", onClick: i },
+                      {
+                          text: s.action,
+                          variant: "primary",
+                          onClick: () => {
+                              (i(), n?.());
+                          },
+                      },
+                  ],
     });
 }
 var lU = l(951465),
@@ -4799,17 +4811,13 @@ function r3(e) {
             gap: 8,
             align: "center",
             children: [
-                (0, r.jsx)(y.m, {
-                    text: t.disabledReason ?? t.notice,
-                    asContainer: !0,
-                    children: (0, r.jsx)(N.$, {
-                        variant: "primary",
-                        size: "sm",
-                        loading: t.publishing,
-                        disabled: t.disabled,
-                        onClick: () => t.run("card"),
-                        text: t.label,
-                    }),
+                (0, r.jsx)(N.$, {
+                    variant: "primary",
+                    size: "sm",
+                    loading: t.publishing,
+                    disabled: t.disabled,
+                    onClick: () => t.run("card"),
+                    text: t.label,
                 }),
                 null != n
                     ? (0, r.jsxs)(lm.B, {
@@ -13909,8 +13917,8 @@ function dK(e) {
     return (0, r.jsx)(p.H, { ...e, size: "custom", width: 20, height: 20 });
 }
 let dV = {
-    showPublishBlocked: function (e) {
-        (0, te.openModal)((t) => (0, r.jsx)(lO, { ...t, reason: e }));
+    showPublishBlocked: function (e, t, l) {
+        (0, te.openModal)((n) => (0, r.jsx)(lO, { ...n, reason: e, message: t, onConfirm: l }));
     },
     openPublishNotes: lU.A,
     showError: (e) => (0, v.P0)((0, v.ox)(e, v.Ck.FAILURE)),
@@ -14503,7 +14511,7 @@ function dX(e) {
                           (0, r.jsx)(ts, { size: "xs", color: "currentColor", className: dG.Y2 }, t),
                   })
                 : tt?.label,
-        to = tt?.upToDate === !0 ? eu.intl.string(es.default.X0kGp2) : (tt?.disabledReason ?? tt?.notice ?? null),
+        to = tt?.upToDate === !0 ? eu.intl.string(es.default.X0kGp2) : null,
         tc =
             null == tt
                 ? null
