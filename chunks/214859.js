@@ -1,14 +1,16 @@
-(n.d(t, { V1: () => H, HB: () => V }), n(321073));
+(n.d(t, { V1: () => Y, HB: () => W }), n(321073));
 var i = n(106983),
     r = n(144705),
     a = n(786661),
     s = n(510373),
-    l = n(666198),
-    o = n(45926),
-    d = n(557329);
-let c = ["laughter", "shouting"],
-    u = { laughter: "laughterData", shouting: "shoutingData" };
-function _(e, t, n) {
+    l = n(565120),
+    o = n(521306),
+    d = n(160850),
+    c = n(45926),
+    u = n(557329);
+let _ = ["laughter", "shouting"],
+    E = { laughter: "laughterData", shouting: "shoutingData" };
+function A(e, t, n) {
     let i = 0,
         r = e.length - 1,
         a = -1;
@@ -20,17 +22,17 @@ function _(e, t, n) {
     return a;
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-var E = n(260549),
-    A = n(696016);
-function h(e) {
-    let t = e.additionalData?.[A.A_];
+var h = n(260549),
+    f = n(696016);
+function I(e) {
+    let t = e.additionalData?.[f.A_];
     return Array.isArray(t) && 0 !== t.length && t.every((e) => "string" == typeof e) ? t : null;
 }
-function f(e) {
+function p(e) {
     let t = new Map(),
         n = [];
     for (let i of e) {
-        let e = h(i);
+        let e = I(i);
         if (null == e) {
             n.push(i);
             continue;
@@ -40,22 +42,22 @@ function f(e) {
     }
     return [...n, ...Array.from(t.values(), (e) => e.event)];
 }
-function I(e) {
+function T(e) {
     let t = new Map();
     for (let n of e) {
-        let e = n.additionalData?.[A.gy];
+        let e = n.additionalData?.[f.gy];
         "string" != typeof e || t.has(e) || t.set(e, n.timestamp_ms);
     }
     return t;
 }
-function p(e, t) {
-    let n = h(e);
+function m(e, t) {
+    let n = I(e);
     if (null == n) return null;
     let i = t.get(n[0]);
     return null == i || i > e.timestamp_ms ? null : i;
 }
-var T = n(598213);
-let m = new Map([
+var g = n(598213);
+let S = new Map([
         [i.C.Kill, { beforeMs: 3e3, afterMs: 2e3 }],
         [i.C.Death, { beforeMs: 3e3, afterMs: 2e3 }],
         [i.C.MultiKill, { beforeMs: 3e3, afterMs: 2e3 }],
@@ -63,18 +65,18 @@ let m = new Map([
         [i.C.BombDefused, { beforeMs: 3e3, afterMs: 5e3 }],
         [i.C.BombExploded, { beforeMs: 3e3, afterMs: 5e3 }],
     ]),
-    g = { beforeMs: 3e3, afterMs: 2e3 },
-    S = { beforeMs: 2e3, afterMs: 4e3 },
-    N = 2 * E.U;
-function C(e, t) {
+    N = { beforeMs: 3e3, afterMs: 2e3 },
+    C = { beforeMs: 2e3, afterMs: 4e3 },
+    O = 2 * h.U;
+function R(e, t) {
     if (e.eventName !== t) return null;
     let n = e.additionalData?.round;
     return "number" == typeof n ? n : null;
 }
-function O(e) {
+function L(e) {
     return 1e3 * Math.floor(e / 1e3);
 }
-function R(e, t, n) {
+function y(e, t, n) {
     let i = 0,
         r = e.length;
     for (; i < r;) {
@@ -84,19 +86,19 @@ function R(e, t, n) {
     }
     return i;
 }
-var L = n(435558);
-function y(e) {
+var D = n(435558);
+function v(e) {
     return 1e3 * Math.floor(e / 1e3);
 }
-function D(e) {
-    let t = (0, T.lQ)(e.clip);
+function b(e) {
+    let t = (0, g.lQ)(e.clip);
     return { startMs: t + e.videoStartMs, endMs: t + e.videoEndMs };
 }
-function v(e) {
-    let { startMs: t, endMs: n } = D(e);
+function M(e) {
+    let { startMs: t, endMs: n } = b(e);
     return { srcStartMs: t, srcEndMs: n, label: e.label };
 }
-function b(e, t) {
+function P(e, t) {
     let n = 0,
         i = !0;
     for (let r of e) {
@@ -106,49 +108,54 @@ function b(e, t) {
     }
     return n;
 }
-var M = n(876474),
-    P = n(801344);
-let U = {
+var U = n(801344),
+    w = n(979563);
+let G = {
         "audio:laughter": { beforeMs: 3e3, afterMs: 2e3 },
         "audio:shouting": { beforeMs: 3e3, afterMs: 2e3 },
         [`game:${i.C.Kill}`]: { beforeMs: 1250, afterMs: 1250 },
         [`game:${i.C.MultiKill}`]: { beforeMs: 1250, afterMs: 1250 },
         [`game:${i.C.Death}`]: { beforeMs: 1250, afterMs: 1250 },
     },
-    w = { [`game:${i.C.Kill}`]: { beforeMs: 2e3, afterMs: 1e3 } },
-    G = {
-        [`game:${P.n_.ChampionKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.DoubleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.TripleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.QuadraKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.PentaKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.TeamFightWin}`]: { beforeMs: 3e3, afterMs: 0 },
-        [`game:${P.n_.DragonSteal}`]: { beforeMs: 5e3, afterMs: 1e3 },
-        [`game:${P.n_.BaronSteal}`]: { beforeMs: 5e3, afterMs: 1e3 },
-    },
-    x = {
-        [`game:${P.n_.ChampionKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.DoubleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.TripleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.QuadraKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-        [`game:${P.n_.PentaKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
-    },
+    x = { [`game:${i.C.Kill}`]: { beforeMs: 2e3, afterMs: 1e3 } },
     k = {
+        [`game:${U.n_.ChampionKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.DoubleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.TripleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.QuadraKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.PentaKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.TeamFightWin}`]: { beforeMs: 3e3, afterMs: 0 },
+        [`game:${U.n_.DragonSteal}`]: { beforeMs: 5e3, afterMs: 1e3 },
+        [`game:${U.n_.BaronSteal}`]: { beforeMs: 5e3, afterMs: 1e3 },
+    },
+    F = {
+        [`game:${U.n_.ChampionKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.DoubleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.TripleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.QuadraKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+        [`game:${U.n_.PentaKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
+    },
+    B = {
         [`game:${r.I.Kill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${r.I.MultiKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${r.I.TeamFightWin}`]: { beforeMs: 3e3, afterMs: 0 },
     },
-    F = {
+    V = {
         [`game:${r.I.Kill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${r.I.MultiKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
     },
-    B = [
+    H = {
+        [`game:${w.d.Goal}`]: { beforeMs: 8e3, afterMs: 3e3 },
+        [`game:${w.d.Save}`]: { beforeMs: 5e3, afterMs: 3e3 },
+        [`game:${w.d.EpicSave}`]: { beforeMs: 5e3, afterMs: 3e3 },
+    },
+    j = [
         {
             type: "cs2_round_summary",
             applicationIds: a.E.applicationIds,
             kind: "custom",
             build: function (e, t, n) {
-                let r = { ...T.yC, audioTrackLabel: "0:all", blendMs: 300 },
+                let r = { ...g.yC, audioTrackLabel: "0:all", blendMs: 300 },
                     a = (function (e) {
                         let t,
                             n,
@@ -163,12 +170,12 @@ let U = {
                                         (n.clear(), (r = null));
                                         continue;
                                     }
-                                    let e = C(a, i.C.RoundStart);
+                                    let e = R(a, i.C.RoundStart);
                                     if (null != e) {
                                         (null != r && e <= r && n.clear(), n.set(e, a.timestamp_ms), (r = e));
                                         continue;
                                     }
-                                    let s = C(a, i.C.RoundEnd);
+                                    let s = R(a, i.C.RoundEnd);
                                     if (null == s) continue;
                                     let l = n.get(s);
                                     null != l &&
@@ -180,78 +187,78 @@ let U = {
                             })(a);
                         if (0 === s.length)
                             return (
-                                A.nx.info(
+                                f.nx.info(
                                     `automontage: no valid CS2 rounds reconstructed from ${a.length} game events - skipping round summary`,
                                 ),
                                 null
                             );
-                        let o = (0, l.Q4)(e.gameId, a),
-                            d =
+                        let l = (0, d.Q4)(e.gameId, a),
+                            o =
                                 ((t = (function (e, t) {
                                     if (e?.calculateModifiers == null || 0 === t.length) return () => 1;
-                                    let n = O(t[0].timestamp_ms),
-                                        i = O(t[t.length - 1].timestamp_ms),
+                                    let n = L(t[0].timestamp_ms),
+                                        i = L(t[t.length - 1].timestamp_ms),
                                         r = new Map(
                                             e.calculateModifiers(n, i).map((e) => [e.timestamp_ms, e.modifier]),
                                         );
-                                    return (e) => r.get(O(e)) ?? 1;
-                                })(o, a)),
+                                    return (e) => r.get(L(e)) ?? 1;
+                                })(l, a)),
                                 (n = new Float64Array(a.length + 1)),
                                 (r = 0),
                                 a.forEach((e, a) => {
                                     let s = e.score ?? 0;
-                                    o?.rescoreEvent != null &&
-                                        (s = e.eventName === i.C.Death ? -0.1 : (o.rescoreEvent(e) ?? s));
-                                    let l = s * t(e.timestamp_ms);
-                                    (Number.isFinite(l) || (r++, (l = 0)), (n[a + 1] = n[a] + l));
+                                    l?.rescoreEvent != null &&
+                                        (s = e.eventName === i.C.Death ? -0.1 : (l.rescoreEvent(e) ?? s));
+                                    let o = s * t(e.timestamp_ms);
+                                    (Number.isFinite(o) || (r++, (o = 0)), (n[a + 1] = n[a] + o));
                                 }),
                                 r > 0 &&
-                                    A.nx.warn(
+                                    f.nx.warn(
                                         `automontage: ignored ${r} non-finite event score(s) while ranking rounds`,
                                     ),
                                 s
                                     .map((e) => {
-                                        let t = R(a, e.startMs, !1),
-                                            i = R(a, e.endMs, !1);
+                                        let t = y(a, e.startMs, !1),
+                                            i = y(a, e.endMs, !1);
                                         return { round: e, score: n[i] - n[t] };
                                     })
                                     .sort((e, t) => t.score - e.score)),
-                            c = d[0];
-                        if (c.score <= N)
+                            c = o[0];
+                        if (c.score <= O)
                             return (
-                                A.nx.info(
-                                    `automontage: best CS2 round ${c.round.number} scored ${c.score.toFixed(3)}, not above the ${N} minimum - skipping round summary`,
+                                f.nx.info(
+                                    `automontage: best CS2 round ${c.round.number} scored ${c.score.toFixed(3)}, not above the ${O} minimum - skipping round summary`,
                                 ),
                                 null
                             );
                         let u = (function (e, t) {
                                 let n = e.startMs + 23e3,
-                                    r = [(0, T.Wp)({ startMs: n, endMs: n }, g, { label: `r${e.number} context` })],
-                                    a = R(t, n, !1),
-                                    s = R(t, e.endMs, !0),
+                                    r = [(0, g.Wp)({ startMs: n, endMs: n }, N, { label: `r${e.number} context` })],
+                                    a = y(t, n, !1),
+                                    s = y(t, e.endMs, !0),
                                     l = t.slice(a, s),
-                                    o = I(l),
-                                    d = new Set(f(l.filter((e) => e.eventName === i.C.MultiKill)));
+                                    o = T(l),
+                                    d = new Set(p(l.filter((e) => e.eventName === i.C.MultiKill)));
                                 for (let t of l) {
                                     let n = t.eventName;
                                     if (null == n) continue;
-                                    let a = m.get(n);
+                                    let a = S.get(n);
                                     if (null == a) continue;
                                     let s = `r${e.number} ${n}`;
                                     if (n === i.C.MultiKill) {
                                         if (!d.has(t)) continue;
-                                        let e = p(t, o) ?? t.timestamp_ms;
-                                        r.push((0, T.Wp)({ startMs: e, endMs: t.timestamp_ms }, a, { label: s }));
+                                        let e = m(t, o) ?? t.timestamp_ms;
+                                        r.push((0, g.Wp)({ startMs: e, endMs: t.timestamp_ms }, a, { label: s }));
                                     } else
                                         r.push(
-                                            (0, T.Wp)({ startMs: t.timestamp_ms, endMs: t.timestamp_ms }, a, {
+                                            (0, g.Wp)({ startMs: t.timestamp_ms, endMs: t.timestamp_ms }, a, {
                                                 label: s,
                                             }),
                                         );
                                 }
                                 return (
                                     r.push(
-                                        (0, T.Wp)({ startMs: e.endMs, endMs: e.endMs }, S, {
+                                        (0, g.Wp)({ startMs: e.endMs, endMs: e.endMs }, C, {
                                             label: `r${e.number} round end`,
                                         }),
                                     ),
@@ -259,19 +266,19 @@ let U = {
                                     r
                                 );
                             })(c.round, a),
-                            _ = (0, T.X0)(u),
-                            { resolved: E, skipped: h } = (0, T.z2)(_, e.clipCandidates);
+                            _ = (0, g.X0)(u),
+                            { resolved: E, skipped: A } = (0, g.z2)(_, e.clipCandidates);
                         return 0 === E.length
-                            ? (A.nx.info(
+                            ? (f.nx.info(
                                   `automontage: no candidate clip covers any of the ${_.length} sections of best round ${c.round.number} (candidates=${e.clipCandidates.length}) - skipping round summary`,
                               ),
                               null)
                             : {
-                                  durationMs: (0, T.s_)(E, e.config.blendMs),
+                                  durationMs: (0, g.s_)(E, e.config.blendMs),
                                   resolved: E,
-                                  skipped: h,
+                                  skipped: A,
                                   bestRound: c,
-                                  rankedRounds: d,
+                                  rankedRounds: o,
                               };
                     })({
                         gameEventData: t.decisionSignals.gameEventData,
@@ -286,7 +293,7 @@ let U = {
         },
         {
             type: "highlight_reels",
-            applicationIds: null,
+            applicationIds: a.E.applicationIds,
             kind: "preset",
             settings: {
                 includeOtherUsers: !0,
@@ -298,7 +305,7 @@ let U = {
                 maxDurationMs: 9e4,
                 laughterThreshold: 0.75,
                 shoutingThreshold: 0.5,
-                events: U,
+                events: G,
             },
         },
         {
@@ -313,12 +320,12 @@ let U = {
                 blendMs: 300,
                 minDurationMs: 25e3,
                 maxDurationMs: 9e4,
-                events: w,
+                events: x,
             },
         },
         {
             type: "league_of_legends_game_highlights",
-            applicationIds: [M.m],
+            applicationIds: l.S.applicationIds,
             kind: "preset",
             settings: {
                 includeOtherUsers: !1,
@@ -328,12 +335,12 @@ let U = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 9e4,
-                events: G,
+                events: k,
             },
         },
         {
             type: "league_of_legends_kill_compil",
-            applicationIds: [M.m],
+            applicationIds: l.S.applicationIds,
             kind: "preset",
             settings: {
                 includeOtherUsers: !1,
@@ -343,7 +350,7 @@ let U = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 6e4,
-                events: x,
+                events: F,
             },
         },
         {
@@ -358,7 +365,7 @@ let U = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 9e4,
-                events: k,
+                events: B,
             },
         },
         {
@@ -373,13 +380,28 @@ let U = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 6e4,
-                events: F,
+                events: V,
+            },
+        },
+        {
+            type: "rocket_league_goal_and_save_compil",
+            applicationIds: o.P.applicationIds,
+            kind: "preset",
+            settings: {
+                includeOtherUsers: !1,
+                startOnSilence: !1,
+                endOnSilence: !1,
+                requireVoiceGamePair: !1,
+                blendMs: 300,
+                minDurationMs: 3e4,
+                maxDurationMs: 6e4,
+                events: H,
             },
         },
     ];
-function V(e) {
+function W(e) {
     var t,
-        n = ((t = e.gameId), B.filter((e) => null == e.applicationIds || (null != t && e.applicationIds.includes(t)))),
+        n = ((t = e.gameId), j.filter((e) => null == e.applicationIds || (null != t && e.applicationIds.includes(t)))),
         i = e;
     let r = (function (e) {
         let t = [];
@@ -389,7 +411,7 @@ function V(e) {
     })(i.clipCandidates);
     if (0 === r.length)
         return (
-            A.nx.info(
+            f.nx.info(
                 `automontage: no usable clip candidates in this session (received ${i.clipCandidates.length}) - skipping montage`,
             ),
             null
@@ -399,49 +421,49 @@ function V(e) {
             "custom" === e.kind
                 ? e.build(e.type, i, r)
                 : (function (e, t, n, i) {
-                      var r, a, s, E;
-                      let h,
-                          m = (function (e, t, n, i) {
+                      var r, a, s, l;
+                      let o,
+                          h = (function (e, t, n, i) {
                               let { localUserId: r, gameId: a, ...s } = n,
-                                  _ = [],
-                                  E = f(e ?? []),
-                                  A = I(E),
-                                  h = (0, l.Q4)(a, E);
-                              function T(e, t) {
+                                  l = [],
+                                  o = p(e ?? []),
+                                  A = T(o),
+                                  h = (0, d.Q4)(a, o);
+                              function f(e, t) {
                                   return h?.isInGame == null || h.isInGame((e + t) / 2);
                               }
-                              for (let e of E) {
+                              for (let e of o) {
                                   let t = e.eventName;
                                   if (null == t) continue;
                                   let n = i[`game:${t}`];
                                   if (null == n) continue;
-                                  let r = p(e, A) ?? e.clipWindow?.startMs ?? e.timestamp_ms,
+                                  let r = m(e, A) ?? e.clipWindow?.startMs ?? e.timestamp_ms,
                                       a = e.clipWindow?.endMs ?? e.timestamp_ms;
-                                  T(r, a) && _.push({ startMs: r, endMs: a, kind: "game", padding: n });
+                                  f(r, a) && l.push({ startMs: r, endMs: a, kind: "game", padding: n });
                               }
-                              let m = new Map();
-                              for (let e of c) {
+                              let I = new Map();
+                              for (let e of _) {
                                   let t = i[`audio:${e}`];
-                                  null != t && m.set(e, t);
+                                  null != t && I.set(e, t);
                               }
-                              if (m.size > 0)
+                              if (I.size > 0)
                                   for (let e of (function (e, t, n, i) {
                                       let { includeOtherUsers: r, laughterThreshold: a, shoutingThreshold: s } = n;
                                       if (0 === i.length) return [];
-                                      let c = Object.keys(e).filter((e) => e === t || r),
-                                          _ = Number.MAX_VALUE,
-                                          E = -Number.MAX_VALUE;
-                                      for (let t of c) {
+                                      let l = Object.keys(e).filter((e) => e === t || r),
+                                          o = Number.MAX_VALUE,
+                                          _ = -Number.MAX_VALUE;
+                                      for (let t of l) {
                                           let n = e[t];
-                                          for (let e of [n.rmsData, ...i.map((e) => n[u[e]])])
+                                          for (let e of [n.rmsData, ...i.map((e) => n[E[e]])])
                                               for (let t of e)
-                                                  (t.timestamp_ms < _ && (_ = t.timestamp_ms),
-                                                      t.timestamp_ms > E && (E = t.timestamp_ms));
+                                                  (t.timestamp_ms < o && (o = t.timestamp_ms),
+                                                      t.timestamp_ms > _ && (_ = t.timestamp_ms));
                                       }
-                                      if (E < _) return [];
-                                      let A = (E - _) / l.pn + 1;
+                                      if (_ < o) return [];
+                                      let A = (_ - o) / d.pn + 1;
                                       function h(e) {
-                                          return (0, l.lq)(
+                                          return (0, d.lq)(
                                               [
                                                   ...(function (e) {
                                                       for (let t = 1; t < e.length; t++)
@@ -452,23 +474,23 @@ function V(e) {
                                                       return e;
                                                   })(e),
                                               ],
-                                              _,
+                                              o,
                                               A,
                                           ).map((e) => e.value);
                                       }
-                                      let f = (0, o.A)(),
+                                      let f = (0, c.A)(),
                                           I = {
                                               laughter: a ?? f.laughterEventThreshold,
                                               shouting: s ?? f.shoutingEventThreshold,
                                           },
-                                          p = c.map((t) => h(e[t].rmsData)),
-                                          T = (0, d.kV)(p, f),
+                                          p = l.map((t) => h(e[t].rmsData)),
+                                          T = (0, u.kV)(p, f),
                                           m = [];
                                       for (let t of i) {
-                                          let n = c.map((n) => h(e[n][u[t]])),
-                                              i = (0, d.br)(n, f, I[t]),
-                                              r = null != T ? (0, d.ei)(i, T) : i;
-                                          c.forEach((e, n) => {
+                                          let n = l.map((n) => h(e[n][E[t]])),
+                                              i = (0, u.br)(n, f, I[t]),
+                                              r = null != T ? (0, u.ei)(i, T) : i;
+                                          l.forEach((e, n) => {
                                               for (let i of (function (e) {
                                                   let t = [],
                                                       n = -1;
@@ -485,19 +507,19 @@ function V(e) {
                                                       m.push({
                                                           kind: t,
                                                           userId: e,
-                                                          startMs: _ + i.startChunk * l.pn,
-                                                          endMs: _ + i.endChunk * l.pn,
+                                                          startMs: o + i.startChunk * d.pn,
+                                                          endMs: o + i.endChunk * d.pn,
                                                       });
                                           });
                                       }
                                       return (m.sort((e, t) => e.startMs - t.startMs), m);
-                                  })(t, r, s, Array.from(m.keys()))) {
-                                      let t = m.get(e.kind);
+                                  })(t, r, s, Array.from(I.keys()))) {
+                                      let t = I.get(e.kind);
                                       null != t &&
-                                          T(e.startMs, e.endMs) &&
-                                          _.push({ startMs: e.startMs, endMs: e.endMs, kind: "audio", padding: t });
+                                          f(e.startMs, e.endMs) &&
+                                          l.push({ startMs: e.startMs, endMs: e.endMs, kind: "audio", padding: t });
                                   }
-                              return _;
+                              return l;
                           })(
                               n.decisionSignals.gameEventData,
                               n.decisionSignals.audioModelDataPerUser,
@@ -510,14 +532,14 @@ function V(e) {
                               },
                               t.events,
                           );
-                      if (0 === m.length)
+                      if (0 === h.length)
                           return (
-                              A.nx.info(
+                              f.nx.info(
                                   `automontage: preset ${e} matched no events in this session - skipping montage`,
                               ),
                               null
                           );
-                      let g =
+                      let I =
                               t.startOnSilence || t.endOnSilence
                                   ? ((r = (function (e) {
                                         let t = new Set(),
@@ -531,7 +553,7 @@ function V(e) {
                                                 }),
                                                 r.timeline ?? [])) {
                                                     let i = e.signal;
-                                                    if (i.type !== A.Gy.SPEAKING || null == e.timestamp) continue;
+                                                    if (i.type !== f.Gy.SPEAKING || null == e.timestamp) continue;
                                                     let r = `${i.userId}|${e.timestamp}|${i.speakingFlags}`;
                                                     t.has(r) ||
                                                         (t.add(r),
@@ -573,7 +595,7 @@ function V(e) {
                                     (a = n.localUserId),
                                     t.includeOtherUsers ? [...r] : r.filter((e) => e.userId === a))
                                   : [],
-                          S = { ...T.yC, blendMs: t.blendMs },
+                          S = { ...g.yC, blendMs: t.blendMs },
                           N = (function (e) {
                               let {
                                       selected: t,
@@ -589,20 +611,20 @@ function V(e) {
                                   c = (function (e, t, n, i) {
                                       let r = [];
                                       for (let a of e) {
-                                          let e = (0, T.Wp)(a, a.padding, {
+                                          let e = (0, g.Wp)(a, a.padding, {
                                               hasGame: "game" === a.kind,
                                               hasAudio: "audio" === a.kind,
                                           });
                                           (n &&
                                               (e.srcStartMs = (function (e, t) {
-                                                  let n = _(t, e, !1);
+                                                  let n = A(t, e, !1);
                                                   if (-1 === n) return e;
                                                   let i = t[n];
                                                   return e < i.endMs ? i.startMs : e;
                                               })(e.srcStartMs, t)),
                                               i &&
                                                   (e.srcEndMs = (function (e, t) {
-                                                      let n = _(t, e, !0);
+                                                      let n = A(t, e, !0);
                                                       if (-1 === n) return e;
                                                       let i = t[n];
                                                       return e < i.endMs ? i.endMs : e;
@@ -626,64 +648,64 @@ function V(e) {
                                       a,
                                       s,
                                   ),
-                                  u = (0, T.X0)(c),
-                                  E = l ? u.filter((e) => !0 === e.hasGame && !0 === e.hasAudio) : u,
-                                  h = [],
-                                  f = [];
-                              for (let e of E) e.srcEndMs - e.srcStartMs < T.rx ? h.push(e) : f.push(e);
-                              let { resolved: I, skipped: p } = (0, T.z2)(f, n),
-                                  { kept: m, removed: g } = (function (e, t, n, i) {
+                                  u = (0, g.X0)(c),
+                                  _ = l ? u.filter((e) => !0 === e.hasGame && !0 === e.hasAudio) : u,
+                                  E = [],
+                                  h = [];
+                              for (let e of _) e.srcEndMs - e.srcStartMs < g.rx ? E.push(e) : h.push(e);
+                              let { resolved: I, skipped: p } = (0, g.z2)(h, n),
+                                  { kept: T, removed: m } = (function (e, t, n, i) {
                                       let r = [...e],
                                           a = e
                                               .map((e, t) => {
-                                                  let { startMs: n, endMs: r } = D(e);
+                                                  let { startMs: n, endMs: r } = b(e);
                                                   return { id: t, score: i(n, r) };
                                               })
                                               .sort((e, t) => t.score - e.score),
                                           s = [],
-                                          l = b(r, t);
+                                          l = P(r, t);
                                       for (; l > n;) {
                                           let n = a.pop();
                                           if (null == n) break;
-                                          (s.push(e[n.id]), (r[n.id] = null), (l = b(r, t)));
+                                          (s.push(e[n.id]), (r[n.id] = null), (l = P(r, t)));
                                       }
                                       return (
                                           s.length > 0 &&
-                                              A.nx.info(
+                                              f.nx.info(
                                                   `automontage: removed ${s.length} lowest-scored section(s) to fit the ${n}ms maximum (durationMs=${l})`,
                                               ),
                                           { kept: r.filter((e) => null != e), removed: s, durationMs: l }
                                       );
                                   })(I, i.blendMs, o, d);
                               return {
-                                  durationMs: (0, T.s_)(m, i.blendMs),
-                                  resolved: m,
-                                  skipped: [...h, ...p, ...g.map(v)],
-                                  requestedSectionCount: E.length,
-                                  trimmedSectionCount: g.length,
+                                  durationMs: (0, g.s_)(T, i.blendMs),
+                                  resolved: T,
+                                  skipped: [...E, ...p, ...m.map(M)],
+                                  requestedSectionCount: _.length,
+                                  trimmedSectionCount: m.length,
                               };
                           })({
-                              selected: m,
+                              selected: h,
                               clipCandidates: i,
                               config: S,
-                              speakingSpans: g,
+                              speakingSpans: I,
                               startOnSilence: t.startOnSilence,
                               endOnSilence: t.endOnSilence,
                               requireVoiceGamePair: t.requireVoiceGamePair,
                               maxDurationMs: t.maxDurationMs,
                               scoreSection:
                                   ((s = n.decisionSignals.gameEventData),
-                                  (E = n.gameId),
+                                  (l = n.gameId),
                                   (function (e, t) {
                                       if (0 === e.length) return () => 0;
                                       let n = () => 1;
                                       if (t?.calculateModifiers != null) {
-                                          let i = y(e[0].timestamp_ms),
-                                              r = y(e[e.length - 1].timestamp_ms),
+                                          let i = v(e[0].timestamp_ms),
+                                              r = v(e[e.length - 1].timestamp_ms),
                                               a = new Map(
                                                   t.calculateModifiers(i, r).map((e) => [e.timestamp_ms, e.modifier]),
                                               );
-                                          n = (e) => a.get(y(e)) ?? 1;
+                                          n = (e) => a.get(v(e)) ?? 1;
                                       }
                                       let i = new Float64Array(e.length + 1),
                                           r = 0;
@@ -695,28 +717,28 @@ function V(e) {
                                               (Number.isFinite(l) || (r++, (l = 0)), (i[a + 1] = i[a] + l));
                                           }),
                                           r > 0 &&
-                                              A.nx.warn(
+                                              f.nx.warn(
                                                   `automontage: ignored ${r} non-finite event score(s) while scoring sections`,
                                               ),
                                           (t, n) => {
-                                              let r = (0, L.sortedIndexBy)(e, { timestamp_ms: t }, "timestamp_ms");
+                                              let r = (0, D.sortedIndexBy)(e, { timestamp_ms: t }, "timestamp_ms");
                                               return (
-                                                  i[(0, L.sortedLastIndexBy)(e, { timestamp_ms: n }, "timestamp_ms")] -
+                                                  i[(0, D.sortedLastIndexBy)(e, { timestamp_ms: n }, "timestamp_ms")] -
                                                   i[r]
                                               );
                                           }
                                       );
-                                  })((h = [...s].sort((e, t) => e.timestamp_ms - t.timestamp_ms)), (0, l.Q4)(E, h))),
+                                  })((o = [...s].sort((e, t) => e.timestamp_ms - t.timestamp_ms)), (0, d.Q4)(l, o))),
                           });
                       return 0 === N.resolved.length
-                          ? (A.nx.info(
+                          ? (f.nx.info(
                                 N.trimmedSectionCount > 0
                                     ? `automontage: preset ${e} - all ${N.trimmedSectionCount} resolved section(s) were removed to fit the ${t.maxDurationMs}ms maximum - skipping montage`
                                     : `automontage: preset ${e} - no candidate clip covers any of the ${N.requestedSectionCount} requested sections (candidates=${i.length}, skipped=${N.skipped.length}) - skipping montage`,
                             ),
                             null)
                           : N.durationMs < t.minDurationMs
-                            ? (A.nx.info(
+                            ? (f.nx.info(
                                   `automontage: preset ${e} duration ${N.durationMs}ms is below the ${t.minDurationMs}ms minimum - skipping montage`,
                               ),
                               null)
@@ -732,6 +754,6 @@ function V(e) {
     }
     return null;
 }
-function H(e, t, n) {
-    return (0, T.BA)(e.resolved, t, e.config, n);
+function Y(e, t, n) {
+    return (0, g.BA)(e.resolved, t, e.config, n);
 }
