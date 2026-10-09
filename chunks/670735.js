@@ -19,8 +19,8 @@ var r = n(477900),
     w = n(174459),
     x = n(38405),
     E = n(19575),
-    b = n(721668),
-    C = n(652215),
+    C = n(721668),
+    b = n(652215),
     N = n(660183),
     O = n(684637);
 function _() {
@@ -66,7 +66,7 @@ class I extends i.PureComponent {
         this.setState({ error: e, info: t });
         let r = (0, u.b)(),
             i = x.A.captureCrash(e, { extra: t });
-        (w.default.track(C.HAw.APP_CRASHED, {
+        (w.default.track(b.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -113,7 +113,7 @@ class I extends i.PureComponent {
                         (0, r.jsx)(_, {}),
                     ],
                 });
-            return (0, r.jsx)(b.A, {
+            return (0, r.jsx)(C.A, {
                 title: N.intl.string(N.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,

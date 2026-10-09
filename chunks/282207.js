@@ -26,8 +26,8 @@ var a = l(477900),
     A = l(663341),
     I = l(442433),
     L = l(793574),
-    M = l(688810),
-    T = l(429913),
+    T = l(688810),
+    M = l(429913),
     R = l(769015),
     D = l(540999),
     S = l(915725),
@@ -40,8 +40,8 @@ var a = l(477900),
     K = l(352527),
     z = l(635793),
     $ = l(362081),
-    H = l(503698),
-    F = l.n(H),
+    F = l(503698),
+    H = l.n(F),
     V = l(31300),
     X = l(646270),
     Z = l(748562),
@@ -99,7 +99,7 @@ function en() {
                                         q.D,
                                         {
                                             "aria-pressed": o,
-                                            className: F()(el.is, o && el.j5),
+                                            className: H()(el.is, o && el.j5),
                                             onClick: () => t(n),
                                             children: [
                                                 (0, a.jsx)(i, { size: "md" }),
@@ -216,7 +216,7 @@ function eh(e) {
                                         q.D,
                                         {
                                             "aria-pressed": r,
-                                            className: F()(el.is, r && el.j5),
+                                            className: H()(el.is, r && el.j5),
                                             onClick: () => l(t.id, (e) => ({ ...e, shadow: n })),
                                             children: (0, a.jsx)(s.E, {
                                                 variant: "text-sm/medium",
@@ -338,7 +338,7 @@ function eg(e) {
                                         q.D,
                                         {
                                             "aria-pressed": r,
-                                            className: F()(el.is, r && el.j5),
+                                            className: H()(el.is, r && el.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, fontSize: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -389,7 +389,7 @@ function eg(e) {
                                         q.D,
                                         {
                                             "aria-pressed": r,
-                                            className: F()(el.is, r && el.j5),
+                                            className: H()(el.is, r && el.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, strokeWidth: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -493,8 +493,8 @@ function eb(e) {
     let { channelId: t, onEdit: o, onClose: c } = e,
         {
             getEditedClip: O,
-            voiceAudioEnabled: H,
-            setVoiceAudioEnabled: F,
+            voiceAudioEnabled: F,
+            setVoiceAudioEnabled: H,
             applicationAudioEnabled: V,
             setApplicationAudioEnabled: X,
             soundboardAudioEnabled: Z,
@@ -505,12 +505,12 @@ function eb(e) {
             setActiveTool: en,
             audioTracks: es,
         } = (0, $.T)(),
-        { analyticsLocations: er } = (0, M.Ay)(L.A.CLIPS_EDITOR),
+        { analyticsLocations: er } = (0, T.Ay)(L.A.CLIPS_EDITOR),
         { addTextTrack: ec, pickAndAddImageTrack: eu, setSelectedTrackId: ed } = (0, eo.fn)(),
         { isCropEnabled: em, isTextTrackEnabled: eh, isImageTrackEnabled: ef } = (0, eo.As)(),
         ep = Y.type === J.nQ.SCREENSHOT,
         ex = Y.type === J.nQ.VOICE_CLIP,
-        ev = (0, T.h)(Y.applicationId),
+        ev = (0, M.h)(Y.applicationId),
         eg = (0, i.bG)([S.Ay], () => S.Ay.isClipExporting(Y.id)),
         { onShareClick: ej } = (0, K.A)(t),
         { picker: eb } = n.useContext(P.$),
@@ -723,9 +723,9 @@ function eb(e) {
                                             icon: (0, a.jsx)(N.MicrophoneIcon, { size: "sm", color: "currentColor" }),
                                             label: ee.intl.string(Q.default.ai9fWO),
                                             count: eN,
-                                            enabled: H,
+                                            enabled: F,
                                             disabled: 0 === eN,
-                                            onToggle: F,
+                                            onToggle: H,
                                         }),
                                         (0, a.jsx)(ey, {
                                             icon: (0, a.jsx)(k.J, { size: "sm", color: "currentColor" }),

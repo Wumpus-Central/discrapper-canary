@@ -62,7 +62,7 @@ let M = function (e, t) {
           };
 };
 var O = s(139996);
-function L(e) {
+function U(e) {
     let { className: t, premiumGroupRole: s } = e,
         n = M(s, !0);
     if (null == n) return null;
@@ -85,7 +85,7 @@ function L(e) {
         ],
     });
 }
-var U = s(194509),
+var L = s(194509),
     k = s(396375),
     G = s(511484),
     w = s(774774),
@@ -435,7 +435,7 @@ let es = function (e) {
                           : (0, i.jsx)(k.A, { className: K.x6, subscriptionTier: z.pe.TIER_0, showIcon: !1 }),
                       en === z.PremiumTypes.TIER_2 || null != ei
                           ? null
-                          : (0, i.jsx)(U.A, { className: K.x6, subscriptionTier: z.pe.TIER_0 }),
+                          : (0, i.jsx)(L.A, { className: K.x6, subscriptionTier: z.pe.TIER_0 }),
                   ],
               }),
               column2: (0, i.jsxs)(i.Fragment, {
@@ -451,7 +451,7 @@ let es = function (e) {
                           : (0, i.jsx)(k.A, { className: K.x6, subscriptionTier: z.pe.TIER_2, showIcon: !1 }),
                       en === z.PremiumTypes.TIER_0 || null != ei
                           ? null
-                          : (0, i.jsx)(U.A, { className: K.x6, subscriptionTier: z.pe.TIER_2 }),
+                          : (0, i.jsx)(L.A, { className: K.x6, subscriptionTier: z.pe.TIER_2 }),
                   ],
               }),
               withBottomBorder: !1,
@@ -488,7 +488,7 @@ let es = function (e) {
                     variant: "heading-xxl/extrabold",
                     children: R ?? D.intl.string(D.t.FIbMh9),
                 }),
-                H && (0, i.jsx)(L, { premiumGroupRole: B.premiumGroupRole, className: K.vg }),
+                H && (0, i.jsx)(U, { premiumGroupRole: B.premiumGroupRole, className: K.vg }),
                 (0, i.jsxs)("div", {
                     className: K.wY,
                     children: [

@@ -4,8 +4,8 @@ var a = n(477900),
     i = n(503698),
     r = n.n(i),
     l = n(435558),
-    c = n(269115),
-    o = n(508770),
+    o = n(269115),
+    c = n(508770),
     d = n(821609),
     u = n(745396),
     m = n(85463),
@@ -123,7 +123,7 @@ let P = (e) => {
                                 })
                               : (0, a.jsx)("div", {
                                     className: O.badgeContainer,
-                                    children: (0, a.jsx)(o.E, { type: { text: B }, variant: w }),
+                                    children: (0, a.jsx)(c.E, { type: { text: B }, variant: w }),
                                 }),
                         null != i && D === A.A0.LARGE && en,
                         (0, a.jsx)(p.D, { variant: ei, color: "text-strong", className: O.header, children: n }),
@@ -139,7 +139,7 @@ let P = (e) => {
             ],
         });
     }
-    function ec() {
+    function eo() {
         return (0, a.jsxs)("div", {
             className: r()(O.boxArtContainer, O[`${D}`], H),
             children: [
@@ -167,8 +167,8 @@ let P = (e) => {
             ],
         });
     }
-    let eo = L % 2 != 0;
-    return (0, a.jsx)(c.L, {
+    let ec = L % 2 != 0;
+    return (0, a.jsx)(o.L, {
         innerRef: q,
         onChange: J,
         threshold: 0.5,
@@ -200,9 +200,9 @@ let P = (e) => {
                         }),
                     }),
                 (0, a.jsx)(function () {
-                    return eo
-                        ? (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(el, {}), (0, a.jsx)(ec, {})] })
-                        : (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(ec, {}), (0, a.jsx)(el, {})] });
+                    return ec
+                        ? (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(el, {}), (0, a.jsx)(eo, {})] })
+                        : (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(eo, {}), (0, a.jsx)(el, {})] });
                 }, {}),
             ],
         }),

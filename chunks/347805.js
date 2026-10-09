@@ -14,10 +14,10 @@ function m(e) {
     let { autoFocus: t = !1, className: n, userId: m, onUpdate: p } = e,
         h = (0, r.bG)([u.A], () => u.A.hidePersonalInformation),
         { loading: x, note: A } = (0, o.A)(m),
-        I = l.useRef(null);
+        v = l.useRef(null);
     return (l.useEffect(() => {
         if (!t || h) return;
-        let e = I.current;
+        let e = v.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
     }, [t, h]),
     h)
@@ -25,7 +25,7 @@ function m(e) {
         : (0, i.jsx)("div", {
               className: n,
               children: (0, i.jsx)(s.y, {
-                  ref: I,
+                  ref: v,
                   className: f.P,
                   disabled: x,
                   placeholder: x ? g.intl.string(g.t["WLKx/9"]) : g.intl.string(g.t.VBhOe2),

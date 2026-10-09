@@ -5,8 +5,8 @@ var l = n(582128),
     i = n(643210);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(323874), n(14289), n(35956));
 var s = n(382541);
-let o = new Set([401, 403, 404]);
-class u {
+let u = new Set([401, 403, 404]);
+class o {
     options;
     socket = null;
     stopped = !1;
@@ -17,26 +17,26 @@ class u {
         this.connect().catch((e) => {
             if (this.stopped) return;
             let t = e?.status;
-            this.options.onClosed("number" == typeof t && o.has(t) ? 4403 : 0);
+            this.options.onClosed("number" == typeof t && u.has(t) ? 4403 : 0);
         });
     }
     async connect() {
         let { projectId: e, sessionId: t, mode: n, maxFps: l, width: r } = this.options,
             { ticket: a, baseUrl: i } = await (0, s.d)(e);
         if (this.stopped) return;
-        let o = new URL(`/agent/browser-stream/${encodeURIComponent(t)}`, i.replace(/^http/, "ws"));
-        (o.searchParams.set("ticket", a),
-            o.searchParams.set("mode", n),
-            o.searchParams.set("maxFps", String(l)),
-            r > 0 && o.searchParams.set("width", String(r)));
-        let u = new WebSocket(o.toString());
-        ((u.binaryType = "arraybuffer"),
-            (this.socket = u),
-            (u.onmessage = (e) => {
-                this.handleMessage(u, e).catch(() => u.close());
+        let u = new URL(`/agent/browser-stream/${encodeURIComponent(t)}`, i.replace(/^http/, "ws"));
+        (u.searchParams.set("ticket", a),
+            u.searchParams.set("mode", n),
+            u.searchParams.set("maxFps", String(l)),
+            r > 0 && u.searchParams.set("width", String(r)));
+        let o = new WebSocket(u.toString());
+        ((o.binaryType = "arraybuffer"),
+            (this.socket = o),
+            (o.onmessage = (e) => {
+                this.handleMessage(o, e).catch(() => o.close());
             }),
-            (u.onclose = (e) => {
-                this.socket === u && this.options.onClosed(e.code);
+            (o.onclose = (e) => {
+                this.socket === o && this.options.onClosed(e.code);
             }));
     }
     send(e) {
@@ -135,7 +135,7 @@ function x(e) {
         a = `${r}:${n}:${l}`;
     if (e.socketKey === a && (null != e.socket || e.backoff.pending)) return;
     (p(e), (e.socketKey = a));
-    let i = new u({
+    let i = new o({
         projectId: e.projectId,
         sessionId: e.sessionId,
         mode: r,
@@ -218,7 +218,7 @@ function A(e, t) {
 }
 function N(e, t, n) {
     let { fps: r, onFrame: a, enabled: i = !0, width: s = 0 } = n,
-        o = l.useCallback(
+        u = l.useCallback(
             (n) => {
                 let l = f(e, t);
                 return (
@@ -230,7 +230,7 @@ function N(e, t, n) {
             },
             [e, t],
         ),
-        u = l.useSyncExternalStore(o, () => d.get(`${e}:${t}`)?.state ?? "connecting");
+        o = l.useSyncExternalStore(u, () => d.get(`${e}:${t}`)?.state ?? "connecting");
     return (
         l.useEffect(() => {
             let n = f(e, t);
@@ -244,7 +244,7 @@ function N(e, t, n) {
                 }
             );
         }, [e, t, r, a, i, s]),
-        u
+        o
     );
 }
 (i.A.addChangeListener(function () {

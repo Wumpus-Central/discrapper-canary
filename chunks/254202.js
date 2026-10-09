@@ -4,8 +4,8 @@ var a = n(477900),
     i = n(503698),
     r = n.n(i),
     l = n(435558),
-    c = n(562708),
-    o = n(821609),
+    o = n(562708),
+    c = n(821609),
     d = n(43990),
     u = n(462887),
     m = n(602853),
@@ -123,25 +123,25 @@ function V(e) {
             tabIndex: ei = 0,
             blurTint: er,
             footerContent: el,
-            analyticsOptions: ec,
-            onFocus: eo,
+            analyticsOptions: eo,
+            onFocus: ec,
             listItemProps: ed,
         } = e,
         eu = (0, g.DP)(),
         { fractionalState: em } = (0, R.A)(),
         eb = (0, I.N)(),
         ep = { name: t };
-    (ec?.thirdPartyPartner != null && (ep.third_party_partner = ec.thirdPartyPartner),
-        (0, h.A)({ type: c.ImpressionTypes.VIEW, name: c.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: ep }));
+    (eo?.thirdPartyPartner != null && (ep.third_party_partner = eo.thirdPartyPartner),
+        (0, h.A)({ type: o.ImpressionTypes.VIEW, name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: ep }));
     let ef = s.useMemo(
             () =>
                 (0, l.debounce)(() => {
                     x.default.track(Y.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                         card_type: (0, l.snakeCase)(n),
-                        partner: ec?.thirdPartyPartner ?? null,
+                        partner: eo?.thirdPartyPartner ?? null,
                     });
                 }, 800),
-            [ec?.thirdPartyPartner, n],
+            [eo?.thirdPartyPartner, n],
         ),
         e_ = s.useCallback(() => {
             null != K &&
@@ -180,7 +180,7 @@ function V(e) {
             defaultTextOverride: U.intl.string(U.t.sEAnVH),
             tabIndex: ed?.tabIndex,
         }),
-        eP = null == eI ? null : J ? (0, a.jsx)(O.A, { ...eI }) : (0, a.jsx)(o.$, { ...eI });
+        eP = null == eI ? null : J ? (0, a.jsx)(O.A, { ...eI }) : (0, a.jsx)(c.$, { ...eI });
     return (0, a.jsx)(d.N, {
         theme: eN ? Y.NJ8.DARK : void 0,
         children: (e) =>
@@ -188,7 +188,7 @@ function V(e) {
                 id: t,
                 tabIndex: ei,
                 onMouseEnter: ef,
-                onFocus: eo,
+                onFocus: ec,
                 listItemProps: ed,
                 cardType: p.s.PRIMARY,
                 glowing: $,

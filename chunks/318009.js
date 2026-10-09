@@ -40,10 +40,10 @@ function A(e) {
         i.useEffect(() => () => x.current?.(), []),
         (0, u.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, c.aL)(),
-        b = i.useCallback(() => {
+        C = i.useCallback(() => {
             E.dispatch(m.jej.POPOUT_SHOW);
         }, [E]),
-        C = i.useCallback(() => {
+        b = i.useCallback(() => {
             E.dispatch(m.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
@@ -54,7 +54,7 @@ function A(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? b() : (C(), "outside-press" === n && setTimeout(p, 0), w.current());
+            e ? C() : (b(), "outside-press" === n && setTimeout(p, 0), w.current());
         },
         overrideTargetRect: d,
         placement: (0, s.Pv)(h ?? "right", f ?? "top"),

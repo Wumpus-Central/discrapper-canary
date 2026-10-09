@@ -4,14 +4,14 @@ var a = n(477900),
     i = n(866665),
     r = n(821609),
     l = n(721157),
-    c = n(555393),
-    o = n(660183);
+    o = n(555393),
+    c = n(660183);
 function d(e) {
-    let t = (0, c.N)(),
+    let t = (0, o.N)(),
         n =
             (t?.reason ?? null) === l.ON.TRIAL_USER_NOT_ELIGIBLE
-                ? o.intl.string(o.t["2S/5mX"])
-                : o.intl.string(o.t.GcPSts),
+                ? c.intl.string(c.t["2S/5mX"])
+                : c.intl.string(c.t.GcPSts),
         d = s.useRef(null);
     return t?.state === l.zE.BLOCK_CLAIM
         ? (0, a.jsx)(i.m, {
@@ -23,7 +23,7 @@ function d(e) {
                   fullWidth: e.fullWidth,
                   variant: "overlay-primary",
                   size: e.size,
-                  text: o.intl.string(o.t.rJbFM3),
+                  text: c.intl.string(c.t.rJbFM3),
                   disabled: !0,
               }),
           })

@@ -1,4 +1,4 @@
-n.d(t, { Ax: () => w, Lk: () => b, cu: () => x, hK: () => E });
+n.d(t, { Ax: () => w, Lk: () => C, cu: () => x, hK: () => E });
 var r = n(477900);
 n(582128);
 var i = n(73153),
@@ -66,7 +66,7 @@ function E(e, t) {
     (n || r || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
         i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e }));
 }
-function b(e) {
+function C(e) {
     i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
     let t = l.A.isOverlayV3EnabledForPID(e),
         n = u.default.disableClickableRegions;

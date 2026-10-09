@@ -25,8 +25,8 @@ function w(e) {
     let { projectId: t, scopeKeys: n, note: f, notifyAgent: p = !1, isPreview: g = !1, children: b } = e,
         v = (0, a.bG)([m.Ay], () => m.Ay.getSettings(t)),
         [y, w] = i.useState(M),
-        [S, P] = i.useState({}),
-        [k, N] = i.useState(!1),
+        [S, k] = i.useState({}),
+        [P, N] = i.useState(!1),
         [I, _] = i.useState(!1),
         R = i.useCallback((e, t) => {
             (_(!1), w((n) => ({ ...n, values: { ...n.values, [e]: t } })));
@@ -83,7 +83,7 @@ function w(e) {
         }, [y, O, G]),
         $ = null != D.values || null != D.secrets,
         V = i.useCallback(async () => {
-            if (!$ || k) return !0;
+            if (!$ || P) return !0;
             (N(!0), _(!1));
             try {
                 let { rebuildRequired: e } = await (0, m.nU)(t, D);
@@ -94,7 +94,7 @@ function w(e) {
                           ? (0, m.ss)(t)
                           : (0, x.BD)(t),
                     w(M),
-                    P({}),
+                    k({}),
                     !0
                 );
             } catch {
@@ -102,7 +102,7 @@ function w(e) {
             } finally {
                 N(!1);
             }
-        }, [$, p, t, k, D]);
+        }, [$, p, t, P, D]);
     function Q(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -127,7 +127,7 @@ function w(e) {
                                   value: Array.isArray(t) ? t : [],
                                   onSelectionChange: (t) => R(e.key, t),
                                   selectionMode: "multiple",
-                                  disabled: k,
+                                  disabled: P,
                                   fullWidth: !0,
                               })
                             : (0, l.jsx)(r.l, {
@@ -136,7 +136,7 @@ function w(e) {
                                   value: "string" == typeof t ? t : void 0,
                                   onSelectionChange: (t) => R(e.key, t),
                                   selectionMode: "single",
-                                  disabled: k,
+                                  disabled: P,
                                   fullWidth: !0,
                               }),
                         null != n
@@ -151,7 +151,7 @@ function w(e) {
             let t = y.values[e.key] ?? G[e.key];
             return (0, l.jsx)(
                 s.S,
-                { label: e.label, description: n, checked: !0 === t, onChange: (t) => R(e.key, t), disabled: k },
+                { label: e.label, description: n, checked: !0 === t, onChange: (t) => R(e.key, t), disabled: P },
                 e.key,
             );
         }
@@ -164,7 +164,7 @@ function w(e) {
                       def: e,
                       hint: n,
                       value: y.values[e.key] ?? G[e.key],
-                      disabled: k,
+                      disabled: P,
                       onChange: (t) => R(e.key, t),
                       fallback: z(e, n),
                   },
@@ -184,7 +184,7 @@ function w(e) {
                 required: !0 === e.required,
                 value: Array.isArray(n) ? n.join(", ") : null == n ? "" : String(n),
                 onChange: (t) => R(e.key, t),
-                disabled: k,
+                disabled: P,
                 fullWidth: !0,
                 ...("number" === e.type ? { type: "number", min: e.min, max: e.max, step: e.step } : {}),
             },
@@ -221,8 +221,8 @@ function w(e) {
                               size: "sm",
                               text: C.intl.string(A.default.RsvBGf),
                               "aria-label": C.intl.formatToPlainString(A.default.WjoM7z, { label: t }),
-                              disabled: k,
-                              onClick: () => P((t) => ({ ...t, [e.name]: !0 })),
+                              disabled: P,
+                              onClick: () => k((t) => ({ ...t, [e.name]: !0 })),
                           }),
                       ],
                   },
@@ -242,7 +242,7 @@ function w(e) {
                       required: e.def?.required === !0 && !e.set,
                       value: y.secrets[e.name] ?? "",
                       onChange: (t) => L(e.name, t),
-                      disabled: k,
+                      disabled: P,
                       fullWidth: !0,
                   },
                   e.name,
@@ -317,7 +317,7 @@ function w(e) {
             valueCount: F.length,
             secretCount: T.length,
             canSave: $,
-            saving: k,
+            saving: P,
             isScoped: q,
             submit: V,
         }),
@@ -356,12 +356,12 @@ function S(e) {
         ],
     });
 }
-function P(e) {
+function k(e) {
     let { guildId: t, fallback: n, ...i } = e,
         a = (0, g.A)(t, i.def.channel_filter);
     return null == a ? n : (0, l.jsx)(S, { ...i, options: a, placeholder: C.intl.string(A.default.iZIF9m) });
 }
-function k(e) {
+function P(e) {
     let { guildId: t, ...n } = e;
     return (0, l.jsx)(S, { ...n, options: (0, v.A)(t) });
 }
@@ -384,9 +384,9 @@ function E(e) {
     if (null == r) return i;
     switch (a.def.type) {
         case "channel":
-            return (0, l.jsx)(P, { ...a, guildId: r, fallback: i });
+            return (0, l.jsx)(k, { ...a, guildId: r, fallback: i });
         case "role":
-            return (0, l.jsx)(k, { ...a, guildId: r });
+            return (0, l.jsx)(P, { ...a, guildId: r });
         default:
             return (0, l.jsx)(N, { ...a, guildId: r });
     }

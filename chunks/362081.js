@@ -33,8 +33,8 @@ function C(e) {
         { children: N, clip: k, modalContainerRef: A, editOnly: I = !1 } = e,
         L = k.type === f.nQ.SCREENSHOT,
         {
-            initialDuration: M,
-            initialCropStart: T,
+            initialDuration: T,
+            initialCropStart: M,
             initialCropEnd: R,
             initialCurrentTime: D,
         } = ((C = k.length / 1e3),
@@ -55,8 +55,8 @@ function C(e) {
         ),
         [_, O] = n.useState({
             clipName: k.name,
-            cropStart: T,
-            cropEnd: 0 === R ? M : R,
+            cropStart: M,
+            cropEnd: 0 === R ? T : R,
             voiceAudioEnabled: k.editMetadata?.voiceAudio ?? !0,
             applicationAudioEnabled: k.editMetadata?.applicationAudio ?? !0,
             soundboardAudioEnabled: k.editMetadata?.soundboardAudio ?? !0,
@@ -69,12 +69,12 @@ function C(e) {
             cropEnd: K,
             voiceAudioEnabled: z,
             applicationAudioEnabled: $,
-            soundboardAudioEnabled: H,
-            cropPreset: F,
+            soundboardAudioEnabled: F,
+            cropPreset: H,
         } = _,
         V = n.useRef(null),
         X = n.useRef(D),
-        [Z, W] = n.useState(M),
+        [Z, W] = n.useState(T),
         [q, Y] = n.useState(!1),
         [J, Q] = n.useState(!1),
         ee = n.useRef(new Set()),
@@ -109,7 +109,7 @@ function C(e) {
                 };
             return (ev((e) => [...e, t]), G(h.Y.NONE), e);
         }, [eC, G]),
-        ej = (0, f.QY)(F) ?? (null != ef ? ef.width / ef.height : null),
+        ej = (0, f.QY)(H) ?? (null != ef ? ef.width / ef.height : null),
         eb = n.useCallback(
             (e) => {
                 let t = crypto.randomUUID(),
@@ -152,11 +152,11 @@ function C(e) {
                     end: K,
                     applicationAudio: $,
                     voiceAudio: z,
-                    soundboardAudio: H,
-                    crop: { preset: F },
+                    soundboardAudio: F,
+                    crop: { preset: H },
                 },
             }),
-            [k, U, B, K, $, z, H, F],
+            [k, U, B, K, $, z, F, H],
         ),
         eI = n.useCallback((e) => {
             ((V.current = e), ea(e.videoElement));
@@ -164,7 +164,7 @@ function C(e) {
         eL = n.useCallback((e, t, l, a) => {
             (ei(e), ec(t), er(l), eh(() => a));
         }, []),
-        eM = n.useCallback(() => {
+        eT = n.useCallback(() => {
             ed(!0);
         }, []);
     ((t = k.filepath),
@@ -195,7 +195,7 @@ function C(e) {
                     try {
                         l = await r.A.clips.loadClip(t);
                     } catch {
-                        eM();
+                        eT();
                         return;
                     }
                     ((e.onmessage = (e) => {
@@ -240,7 +240,7 @@ function C(e) {
                     (e.terminate(), a.terminate(), n.clear());
                 }
             );
-        }, [t, eL, ep, eM]),
+        }, [t, eL, ep, eT]),
         n.useEffect(
             () => () => {
                 null != en && URL.revokeObjectURL(en);
@@ -292,17 +292,17 @@ function C(e) {
                         end: K,
                         voiceAudio: z,
                         applicationAudio: $,
-                        soundboardAudio: H,
-                        crop: { preset: F },
+                        soundboardAudio: F,
+                        crop: { preset: H },
                     },
                 },
             },
             eg,
         ),
         n.useEffect(() => {
-            Z > 0 && K <= 0 && M <= 0 && O((e) => ({ ...e, cropEnd: Z }));
-        }, [Z, K, M]));
-    let eT = n.useMemo(() => K - B, [B, K]),
+            Z > 0 && K <= 0 && T <= 0 && O((e) => ({ ...e, cropEnd: Z }));
+        }, [Z, K, T]));
+    let eM = n.useMemo(() => K - B, [B, K]),
         eR = n.useCallback(
             (e) => (
                 ee.current.add(e),
@@ -415,7 +415,7 @@ function C(e) {
         e$ = n.useCallback((e) => {
             O((t) => ({ ...t, soundboardAudioEnabled: e }));
         }, []),
-        eH = n.useMemo(
+        eF = n.useMemo(
             () =>
                 function () {
                     let [e, t] = n.useState(X.current);
@@ -438,19 +438,19 @@ function C(e) {
                 },
             [X, ee],
         ),
-        eF = n.useMemo(
+        eH = n.useMemo(
             () => ({
-                useCurrentTime: eH,
+                useCurrentTime: eF,
                 duration: Z,
                 isPlaying: q,
                 isLoaded: J,
                 cropStart: B,
                 cropEnd: K,
-                cropDuration: eT,
+                cropDuration: eM,
                 setCropStart: eD,
                 setCropEnd: eS,
                 setCrop: e_,
-                cropPreset: F,
+                cropPreset: H,
                 setCropPreset: eB,
                 activeTool: P,
                 setActiveTool: G,
@@ -467,7 +467,7 @@ function C(e) {
                 setApplicationAudioEnabled: eK,
                 voiceAudioEnabled: z,
                 setVoiceAudioEnabled: ez,
-                soundboardAudioEnabled: H,
+                soundboardAudioEnabled: F,
                 setSoundboardAudioEnabled: e$,
                 getEditedClip: eA,
                 tracks: ex,
@@ -487,17 +487,17 @@ function C(e) {
             }),
             [
                 I,
-                eH,
+                eF,
                 Z,
                 q,
                 J,
                 B,
                 K,
-                eT,
+                eM,
                 eD,
                 eS,
                 e_,
-                F,
+                H,
                 eB,
                 P,
                 G,
@@ -514,7 +514,7 @@ function C(e) {
                 eK,
                 z,
                 ez,
-                H,
+                F,
                 e$,
                 eA,
                 ex,
@@ -531,7 +531,7 @@ function C(e) {
                 ef,
             ],
         );
-    return (0, a.jsx)(g.Provider, { value: eF, children: N });
+    return (0, a.jsx)(g.Provider, { value: eH, children: N });
 }
 function y() {
     let e = n.useContext(g);

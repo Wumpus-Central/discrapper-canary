@@ -31,7 +31,7 @@ function c(e) {
                     ((e.width = 0), (e.height = 0));
                 }, 1e4)));
         }, []),
-        b = i.useCallback((e) => {
+        C = i.useCallback((e) => {
             window.clearTimeout(g.current);
             let t = e.canvas;
             if (0 === t.width && 0 === t.height) {
@@ -39,7 +39,7 @@ function c(e) {
                 ((t.width = e * window.devicePixelRatio), (t.height = n * window.devicePixelRatio));
             }
         }, []),
-        C = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 E(e.canvas);
             },
@@ -72,8 +72,8 @@ function c(e) {
                     className: u.J,
                     environment: d.XA,
                     onClick: p ? x : void 0,
-                    onBeforeRender: b,
-                    onAfterRender: C,
+                    onBeforeRender: C,
+                    onAfterRender: b,
                 }),
                 (0, r.jsx)(l.K_, { ref: c, colors: d._t, sprites: d.uI, spriteWidth: d.wn, spriteHeight: d.wn }),
             ],

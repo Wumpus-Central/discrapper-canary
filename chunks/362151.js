@@ -20,8 +20,8 @@ var r = n(477900),
     x = n(973196),
     E = n(870373);
 n(321073);
-var b = n(503698),
-    C = n.n(b),
+var C = n(503698),
+    b = n.n(C),
     N = n(192308),
     O = n(939249),
     _ = n(138134),
@@ -38,8 +38,8 @@ var b = n(503698),
     U = n(734057),
     G = n(71393),
     K = n(192820),
-    W = n(532624),
-    F = n(532294),
+    F = n(532624),
+    W = n(532294),
     B = n(625494),
     H = n(350535),
     V = n(589051),
@@ -49,7 +49,7 @@ var b = n(503698),
 function X(e) {
     let { onClick: t, keybind: n, className: i, IconComponent: l, "data-testid": s } = e;
     return (0, r.jsxs)("div", {
-        className: C()(J.UD, i),
+        className: b()(J.UD, i),
         "data-testid": s,
         children: [
             (0, r.jsx)(O.D, {
@@ -195,7 +195,7 @@ let ev = [],
         (0, o.Ay)(() => {
             x(u?.stores ?? ev);
         });
-        let b = (0, l.bG)(v, () => u?.shouldRender({ widget: t, locked: A }) ?? !0, [u, A, t]),
+        let C = (0, l.bG)(v, () => u?.shouldRender({ widget: t, locked: A }) ?? !0, [u, A, t]),
             N = (0, ep.A)(),
             O = (0, l.bG)([g.A], () => g.A.windowSize((0, y.Q2)(N))),
             _ = i.useCallback((e, t, n, r, i) => {
@@ -224,8 +224,8 @@ let ev = [],
             L = i.useMemo(() => (0, ec.fd)(j, O), [j, O]),
             R = (0, ec.Nv)(k, O),
             { resizeX: P, resizeY: U, dragAnywhere: G, constrainAutoSizeToExplicitResizeEvents: K } = m ?? {},
-            W = !A,
-            F = S || !A,
+            F = !A,
+            W = S || !A,
             B = i.useMemo(() => ({ minX: 0, minY: 0, maxX: O.width, maxY: O.height }), [O]),
             H = i.useCallback(
                 (e) => n({ ...e, widget: t, dragging: null != e.dragOperation, className: c }),
@@ -234,7 +234,7 @@ let ev = [],
             V = i.useCallback(
                 (e) =>
                     null != s || null != a
-                        ? (0, r.jsxs)("div", { className: C()(ey.vJ, p && ey.vw), children: [s?.(t), a?.(t, e)] })
+                        ? (0, r.jsxs)("div", { className: b()(ey.vJ, p && ey.vw), children: [s?.(t), a?.(t, e)] })
                         : null,
                 [t, s, p, a],
             ),
@@ -242,22 +242,22 @@ let ev = [],
             z = i.useMemo(() => {
                 if (null != d) return (e) => d({ ...e, widget: t });
             }, [d, t]);
-        return b
+        return C
             ? (0, r.jsx)(eh.A, {
-                  className: C()({ [ey.Yz]: Y, [ey.xu]: Y && !S, [ey.E]: Y && S }, f),
+                  className: b()({ [ey.Yz]: Y, [ey.xu]: Y && !S, [ey.E]: Y && S }, f),
                   id: I,
                   size: L,
                   anchor: R,
                   container: B,
                   minSize: M ?? { width: 0, height: 0 },
-                  hidden: !F,
+                  hidden: !W,
                   locked: A,
                   resizeX: P ?? !1,
                   resizeY: U ?? !1,
                   style: { zIndex: T },
                   dragAnywhere: G ?? !1,
                   constrainAutoSizeToExplicitResizeEvents: K ?? !1,
-                  active: W,
+                  active: F,
                   onUpdate: _,
                   onClick: D,
                   targetWindow: N,
@@ -270,10 +270,10 @@ let ev = [],
     });
 var ex = n(85395),
     eE = n(644434);
-function eb(e) {
+function eC(e) {
     return e.widget.id;
 }
-function eC(e, t, n, i) {
+function eb(e, t, n, i) {
     return n === eo.wL.YEETED ? null : (0, r.jsx)(ew, { ...t, transitionState: n, cleanUp: i }, e);
 }
 let eN = [],
@@ -301,7 +301,7 @@ let eN = [],
                 ed.VC,
             ),
             a = i.useCallback((e) => (0, r.jsx)("div", { className: t, style: s, children: e }), [t, s]);
-        return (0, r.jsx)(eo.F, { items: o, renderItem: eC, getItemKey: eb, wrapChildren: a });
+        return (0, r.jsx)(eo.F, { items: o, renderItem: eb, getItemKey: eC, wrapChildren: a });
     });
 var e_ = n(233741),
     eD = n(222506);
@@ -328,8 +328,8 @@ var ej = n(302614),
     eU = n(944775),
     eG = n(317084),
     eK = n(427603),
-    eW = n(980504),
-    eF = n(355870);
+    eF = n(980504),
+    eW = n(355870);
 let eB = i.memo(function () {
     let [e, t] = (0, l.yK)([eP.A], () => [eP.A.enabled, eP.A.keepOpen]),
         n = (0, l.bG)([f.Ay], () => f.Ay.getVoiceChannelId()),
@@ -337,10 +337,10 @@ let eB = i.memo(function () {
         s = i?.getGuildId();
     return e && null != i
         ? (0, r.jsx)(ej.A, {
-              className: eF.k,
+              className: eW.k,
               children: (0, r.jsx)(eG.A, {
-                  width: eW.ed.width,
-                  height: eW.ed.height,
+                  width: eF.ed.width,
+                  height: eF.ed.height,
                   guildId: s,
                   channel: i,
                   keepOpen: t,
@@ -397,7 +397,7 @@ let e8 = i.memo(function (e) {
         return (0, r.jsx)(O.D, {
             "data-testid": "overlay-background",
             "data-locked": i,
-            className: C()(eQ.LK, { [eQ.Zo]: !i, [eQ.vZ]: i }),
+            className: b()(eQ.LK, { [eQ.Zo]: !i, [eQ.vZ]: i }),
             onMouseDown: (e) => {
                 let { currentTarget: t, target: r, button: i } = e;
                 i === eA.hE4.PRIMARY && t === r && n();
@@ -454,7 +454,7 @@ function e7(e) {
         (e0 || (0, eR.SE)()) &&
             (function (e) {
                 if ("keydown" !== e.type.toLowerCase() || e.repeat) return !1;
-                let t = W.Ay.getOverlayKeybind();
+                let t = F.Ay.getOverlayKeybind();
                 return (
                     !!t.enabled &&
                     0 !== t.shortcut.length &&
@@ -482,8 +482,8 @@ let e6 = i.memo(function () {
             n = (0, l.bG)([eD.A], () => eD.A.isInputLocked(t), [t]),
             s = (0, l.bG)([e_.A], () => e_.A.isFocused(t), [t]),
             o = (0, l.bG)(
-                [W.Ay],
-                () => (null != W.Ay.getOverlayKeybind() ? (0, H.dI)(W.Ay.getOverlayKeybind()?.shortcut, !0) : "???"),
+                [F.Ay],
+                () => (null != F.Ay.getOverlayKeybind() ? (0, H.dI)(F.Ay.getOverlayKeybind()?.shortcut, !0) : "???"),
                 [],
             );
         return (
@@ -501,7 +501,7 @@ let e6 = i.memo(function () {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(e8, { locked: n, keybind: o, onClick: e4 }),
-                    (0, r.jsx)(eO, { className: C()({ [eQ.ZK]: n, [eQ.al]: !n }) }),
+                    (0, r.jsx)(eO, { className: b()({ [eQ.ZK]: n, [eQ.al]: !n }) }),
                     (e0 || (0, eR.SE)()) && (0, r.jsx)(e5, { locked: n, focused: s }),
                     (0, r.jsx)(es, { locked: n }),
                 ],
@@ -522,14 +522,14 @@ function te() {
         w,
         x,
         E,
-        b,
         C,
+        b,
         N,
         O,
         _,
         D,
         I = (0, ep.A)(),
-        S = (0, l.bG)([F.default], () => F.default.incompatibleApp),
+        S = (0, l.bG)([W.default], () => W.default.incompatibleApp),
         j = (0, l.bG)(
             [g.A],
             () => {
@@ -544,9 +544,9 @@ function te() {
         (n = (0, ep.A)()),
         (a = (0, l.bG)([e_.A], () => e_.A.getTargetPID(), [])),
         (d = (0, l.bG)(
-            [W.Ay],
+            [F.Ay],
             () => {
-                let e = W.Ay.getOverlayKeybind();
+                let e = F.Ay.getOverlayKeybind();
                 return null != e ? e.shortcut : [];
             },
             [],
@@ -657,17 +657,17 @@ function te() {
         (0, o.l0)(() => {
             null != E.current && (clearTimeout(E.current), (E.current = null));
         }),
-        ((b = (0, eH.TW)("overlay_conjure_widgets")),
+        ((C = (0, eH.TW)("overlay_conjure_widgets")),
         i.useEffect(() => {
-            b && (0, eY.hF)();
-        }, [b]),
-        (C = (0, l.bG)([eV.A], () => eV.A.hasFetchSucceeded())),
+            C && (0, eY.hF)();
+        }, [C]),
+        (b = (0, l.bG)([eV.A], () => eV.A.hasFetchSucceeded())),
         (N = (0, l.bG)([eV.A], () => eV.A.getProjects())),
         (O = (0, l.bG)([eV.A], () => eV.A.getHiddenApplicationIds())),
         (_ = (0, l.bG)([h.A], () => null != h.A.getLayout(eE.GJ))),
         (D = (0, l.yK)([h.A], () => h.A.getWidgetsByTypeAndLayout(eA.uss.CONJURE, eE.GJ))),
         i.useEffect(() => {
-            if (!b || !C || !_) return;
+            if (!C || !b || !_) return;
             let e = h.A.getWidgetDefaultSettings(eA.uss.CONJURE);
             if (null == e) return;
             let t = (function (e) {
@@ -775,7 +775,7 @@ function te() {
                     (0, eZ.Ay)(e);
                 }
             }
-        }, [b, C, _, N, O, D]),
+        }, [C, b, _, N, O, D]),
         j || S)
             ? null
             : (0, r.jsx)(M.f5, {
@@ -893,7 +893,7 @@ let th = i.memo(function (e) {
                 p = i.useMemo(() => !!(!m.isPlatformEmbedded || (0, eR.SE)()) || (null != c && -1 !== c), [c]),
                 [A, v] = i.useState(!1),
                 x = i.useRef(!1),
-                b = i.useCallback(() => {
+                C = i.useCallback(() => {
                     let e = e_.A.getTargetPID(),
                         n = null != f.Ay.getVoiceChannelId();
                     ((0, E.g)(eA.HAw.OVERLAY_INITIALIZED, {
@@ -904,12 +904,12 @@ let th = i.memo(function (e) {
                     }),
                         (0, tn.Fd)());
                 }, [t]),
-                C = i.useRef(!1),
+                b = i.useRef(!1),
                 N = i.useRef(null),
                 O = i.useCallback(
                     async (e, t) => {
                         try {
-                            if ((await ta(e, N), C.current)) return;
+                            if ((await ta(e, N), b.current)) return;
                             ti("cssLoaded", !0);
                         } catch (e) {
                             (to.error("Timed out waiting for CSS to load", e),
@@ -918,7 +918,7 @@ let th = i.memo(function (e) {
                             return;
                         }
                         try {
-                            if ((await td(e, t), C.current)) return;
+                            if ((await td(e, t), b.current)) return;
                             (0, tn.Mq)();
                         } catch (e) {
                             (s.A.setOverlayCrashed(e_.A.getTargetPID(), e), ti("errorMessage", "showInactive failed"));
@@ -927,9 +927,9 @@ let th = i.memo(function (e) {
                         (await new Promise((t) => {
                             e.setTimeout(() => t(), 100);
                         }),
-                            C.current || (v(!0), b()));
+                            b.current || (v(!0), C()));
                     },
-                    [b],
+                    [C],
                 ),
                 _ = i.useRef(!1);
             return (
@@ -950,7 +950,7 @@ let th = i.memo(function (e) {
                     }
                 }, [O, p, e, d, a]),
                 (0, o.l0)(() => {
-                    (clearInterval(N.current), (C.current = !0));
+                    (clearInterval(N.current), (b.current = !0));
                 }),
                 (n = (0, l.bG)([g.A], () => g.A.windowSize(null != d ? (0, y.Q2)(d) : void 0))),
                 (r = (0, l.bG)([e_.A], () => e_.A.getFocusedWindowHandle())),
@@ -975,20 +975,20 @@ let th = i.memo(function (e) {
             );
         })(d, eE.GJ),
         v = (0, l.bG)([e_.A], () => e_.A.getFocusedPID()),
-        b = (0, l.bG)([eD.A], () => eD.A.isInputLocked(v), [v]),
-        C = (0, l.bG)([ek.default, e_.A], () =>
+        C = (0, l.bG)([eD.A], () => eD.A.isInputLocked(v), [v]),
+        b = (0, l.bG)([ek.default, e_.A], () =>
             (0, tl.S)(e_.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(e_.A.getTargetPID())),
         );
     return p
         ? (0, r.jsx)(x.p, {
-              disabled: C,
+              disabled: b,
               children: (0, r.jsxs)(c.A, {
                   themeOverride: eA.NJ8.ONYX,
                   appContext: eA.BRT.OVERLAY,
                   withTitleBar: n,
                   windowKey: d,
                   title: "Discord Overlay",
-                  hideModals: b,
+                  hideModals: C,
                   children: [(0, r.jsx)(te, {}), (0, r.jsx)(a.Al, {})],
               }),
           })

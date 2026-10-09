@@ -1,17 +1,17 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => o });
 var l = n(477900),
     r = n(582128),
     a = n(598047),
     i = n(546772);
 let s = ["left", "middle", "right"];
-function o(e) {
+function u(e) {
     return !!e.altKey | (2 * !!e.ctrlKey) | (4 * !!e.metaKey) | (8 * !!e.shiftKey);
 }
-function u(e) {
+function o(e) {
     let {
             projectId: t,
             sessionId: n,
-            fps: u,
+            fps: o,
             interactive: c = !1,
             paused: d = !1,
             drawWidth: f,
@@ -43,7 +43,7 @@ function u(e) {
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
         A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-        N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: A }),
+        N = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
         S = (0, i.AV)(t, n),
         C = r.useRef(S);
     (r.useEffect(() => {
@@ -83,7 +83,7 @@ function u(e) {
                         ((v.current = null),
                             null != e && (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                     }),
-                    (v.current = { ...e, modifiers: o(l) }));
+                    (v.current = { ...e, modifiers: u(l) }));
                 return;
             }
             let r = s[l.button];
@@ -97,7 +97,7 @@ function u(e) {
                     ...a,
                     button: r,
                     clickCount: l.detail > 0 ? l.detail : 1,
-                    modifiers: o(l),
+                    modifiers: u(l),
                 }));
         };
     }
@@ -105,7 +105,7 @@ function u(e) {
         return (l) => {
             if (!c || "Escape" === l.key) return;
             l.preventDefault();
-            let r = l.getModifierState("AltGraph") ? -4 & o(l) : o(l);
+            let r = l.getModifierState("AltGraph") ? -4 & u(l) : u(l);
             ((0, i.ZL)(t, n, { type: "input_keyboard", eventType: e, key: l.key, code: l.code, modifiers: r }),
                 "keyDown" === e ? E.current.set(l.code, l.key) : E.current.delete(l.code));
             let a = "Enter" === l.key ? "\r" : l.key;
@@ -138,7 +138,7 @@ function u(e) {
                     ...I(e),
                     deltaX: e.deltaX,
                     deltaY: e.deltaY,
-                    modifiers: o(e),
+                    modifiers: u(e),
                 });
         },
         onKeyDown: _("keyDown"),

@@ -6,13 +6,13 @@ var a = n(582128),
 function l(e) {
     let { boxType: t, thirdPartyPartner: n } = e,
         l = a.useRef(null),
-        c = a.useRef(!1);
+        o = a.useRef(!1);
     return {
         sectionRef: l,
         handleVisibilityChange: a.useCallback(
             (e) => {
-                if (e && !c.current) {
-                    c.current = !0;
+                if (e && !o.current) {
+                    o.current = !0;
                     let e = { box_type: (0, s.snakeCase)(t) };
                     (null != n && (e.third_party_partner = n),
                         i.default.track(r.HAw.PREMIUM_MARKETING_BENTO_BOX_IMPRESSION, e));

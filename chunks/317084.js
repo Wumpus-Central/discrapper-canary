@@ -23,8 +23,8 @@ function x(e, t, n) {
 function E(e, t, n, r) {
     return x(e, n, r) !== x(t, n, r) && x(e, t, n) !== x(e, t, r);
 }
-var b = n(660183),
-    C = n(229834);
+var C = n(660183),
+    b = n(229834);
 function N(e) {
     let { className: t } = e;
     return (0, r.jsxs)("svg", {
@@ -188,7 +188,7 @@ let I = i.memo(function (e) {
                 }, 16),
             [a, U, R, L, x, n, t],
         ),
-        W = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 if (!c) return;
                 let t = x + (e.deltaY > 0 ? 1 : -1);
@@ -198,7 +198,7 @@ let I = i.memo(function (e) {
             },
             [c, x, k, L, R],
         ),
-        F = i.useMemo(
+        W = i.useMemo(
             () =>
                 k[x].map((e, i) => {
                     let o = O[i];
@@ -209,7 +209,7 @@ let I = i.memo(function (e) {
                         "div",
                         {
                             ref: (e) => M(e, i),
-                            className: C.Tj,
+                            className: b.Tj,
                             style: { left: a, top: d, width: l, height: s },
                             children: e,
                         },
@@ -219,17 +219,17 @@ let I = i.memo(function (e) {
             [k, x, t, l, n, s, f.length, M],
         );
     return (0, r.jsx)(w.D, {
-        className: C.Pw,
+        className: b.Pw,
         onMouseMove: K,
-        onWheel: W,
+        onWheel: F,
         onClick: G,
         children: (0, r.jsxs)("div", {
             ref: g,
-            className: C._$,
+            className: b._$,
             style: { width: t, height: n },
             children: [
                 (0, r.jsxs)("svg", {
-                    className: C.cA,
+                    className: b.cA,
                     viewBox: "0 0 288 288",
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [
@@ -266,7 +266,7 @@ let I = i.memo(function (e) {
                             filter: "url(#soundboard-wheel-background-shadow)",
                             children: [
                                 (0, r.jsx)("circle", {
-                                    className: C.cA,
+                                    className: b.cA,
                                     cx: "144",
                                     cy: "144",
                                     r: "103.68",
@@ -274,19 +274,19 @@ let I = i.memo(function (e) {
                                 }),
                                 o &&
                                     (0, r.jsx)("circle", {
-                                        className: C.u1,
+                                        className: b.u1,
                                         onMouseEnter: () => P(!0),
                                         onMouseLeave: () => P(!1),
                                         cx: 144,
                                         cy: 144,
                                         r: 28.8,
                                     }),
-                                j && (0, r.jsx)("circle", { className: C.JV, cx: 144 + S.x, cy: 144 + S.y, r: 28.8 }),
+                                j && (0, r.jsx)("circle", { className: b.JV, cx: 144 + S.x, cy: 144 + S.y, r: 28.8 }),
                             ],
                         }),
                         o &&
                             (0, r.jsx)("circle", {
-                                className: C.u1,
+                                className: b.u1,
                                 onMouseEnter: () => P(!0),
                                 onMouseLeave: () => P(!1),
                                 cx: 144,
@@ -297,20 +297,20 @@ let I = i.memo(function (e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: C.gx,
+                    className: b.gx,
                     children: [
                         o &&
                             (0, r.jsx)(w.D, {
-                                className: C.$2,
+                                className: b.$2,
                                 onClick: h,
-                                children: (0, r.jsx)(N, { className: C.$2 }),
+                                children: (0, r.jsx)(N, { className: b.$2 }),
                             }),
                         c && k.length > 1
-                            ? (0, r.jsx)("div", { className: C.YB, children: b.intl.string(b.t["Xy+S02"]) })
+                            ? (0, r.jsx)("div", { className: b.YB, children: C.intl.string(C.t["Xy+S02"]) })
                             : null,
                     ],
                 }),
-                F,
+                W,
             ],
         }),
     });
@@ -327,9 +327,9 @@ function k(e) {
             keepOpen: w,
             interactive: x = !0,
             analyticsSource: E,
-            onClose: b,
+            onClose: C,
         } = e,
-        C = (function (e) {
+        b = (function (e) {
             let [t, n] = (0, s.yK)([g.A], () => [g.A.getSounds(), g.A.getFavorites()]);
             return i.useMemo(() => {
                 let r = [],
@@ -350,16 +350,16 @@ function k(e) {
         { analyticsLocations: M } = (0, a.Ay)(o.A.SOUNDBOARD_WHEEL),
         L = i.useCallback(
             (e) => {
-                ((0, m.Ak)(e, n.id, M), b());
+                ((0, m.Ak)(e, n.id, M), C());
             },
-            [M, n.id, b],
+            [M, n.id, C],
         );
     (i.useEffect(() => {
         (f.E7(), u.bW.loadIfNecessary());
     }, []),
         i.useEffect(() => {
-            0 === C.length && 0 === N.length && b();
-        }, [C.length, N, b]),
+            0 === b.length && 0 === N.length && C();
+        }, [b.length, N, C]),
         i.useEffect(
             () => () => {
                 let e = O.current;
@@ -381,31 +381,31 @@ function k(e) {
         P = i.useCallback(
             (e) => {
                 if (null == e) return void R(null);
-                let t = C[e];
+                let t = b[e];
                 null != t && R(t);
             },
-            [R, C],
+            [R, b],
         ),
         U = i.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = C[e];
+                let t = b[e];
                 null != t && L(t);
             },
-            [C, L],
+            [b, L],
         ),
         G = i.useMemo(
             () =>
-                C.map((e) =>
+                b.map((e) =>
                     (0, r.jsx)(
                         S.Ay,
                         { interactive: x, className: j.a, sound: e, focused: _ === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),
-            [_, n, x, C],
+            [_, n, x, b],
         );
-    return 0 === C.length
+    return 0 === b.length
         ? null
         : (0, r.jsx)(a.f5, {
               value: M,
@@ -418,7 +418,7 @@ function k(e) {
                   activeItem: _,
                   onItemSelect: P,
                   onItemAction: U,
-                  onClose: b,
+                  onClose: C,
                   interactive: x,
                   children: G,
               }),

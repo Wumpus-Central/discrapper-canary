@@ -76,10 +76,10 @@ function p() {
                     if (!x && (!M || w)) return;
                     y = Math.min(1, Math.max(0, y + ((M ? 1 : -1) * a) / 260));
                     let S = n.getBoundingClientRect(),
-                        P = S.width > 0 ? S.width / p : 1,
-                        k = r.getBoundingClientRect(),
-                        N = (k.left - S.left) / P,
-                        E = (1 - Math.min(1, Math.abs(N + k.width / P / 2 - u) / 16)) * y;
+                        k = S.width > 0 ? S.width / p : 1,
+                        P = r.getBoundingClientRect(),
+                        N = (P.left - S.left) / k,
+                        E = (1 - Math.min(1, Math.abs(N + P.width / k / 2 - u) / 16)) * y;
                     if (E < 0.01) {
                         (x && l.clearRect(0, 0, p, h), (x = !1));
                         return;

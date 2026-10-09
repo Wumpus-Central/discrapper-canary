@@ -1,4 +1,4 @@
-n.d(t, { W: () => b });
+n.d(t, { W: () => C });
 var r = n(477900);
 n(582128);
 var i = n(676999),
@@ -341,7 +341,7 @@ let w = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
             },
         ],
     };
-function b(e) {
+function C(e) {
     let { children: t } = e;
     return (0, r.jsx)(l.QP, { options: E, children: t });
 }

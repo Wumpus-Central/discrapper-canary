@@ -1076,7 +1076,7 @@ var eK = new P({
     },
 });
 let e5 = Math.PI / 180;
-function e2(e) {
+function e0(e) {
     e[1] < 0 && (e = eK.fromBase(eK.toBase(e)));
     let t = Math.log(Math.max(1 + 0.0228 * e[1] * eV.flRoot, 1)) / 0.0228,
         r = e[0] * e5,
@@ -1084,7 +1084,7 @@ function e2(e) {
         n = t * Math.sin(r);
     return [e[2], a, n];
 }
-var e0 = {
+var e2 = {
     deltaE76: function (e, t) {
         return el(e, t, "lab");
     },
@@ -1138,8 +1138,8 @@ var e0 = {
     deltaEOK: eo,
     deltaEHCT: function (e, t) {
         [e, t] = L([e, t]);
-        let [r, a, n] = e2(eK.from(e)),
-            [o, s, i] = e2(eK.from(t));
+        let [r, a, n] = e0(eK.from(e)),
+            [o, s, i] = e0(eK.from(t));
         return Math.sqrt((r - o) ** 2 + (a - s) ** 2 + (n - i) ** 2);
     },
 };
@@ -1213,9 +1213,9 @@ function e9(
                 ({ method: t, jnd: n, deltaEMethod: a, blackWhiteClamp: s } = e1[t]);
             let o = K;
             if ("" !== a) {
-                for (let e in e0)
+                for (let e in e2)
                     if ("deltae" + a.toLowerCase() === e.toLowerCase()) {
-                        o = e0[e];
+                        o = e2[e];
                         break;
                     }
             }
@@ -1732,7 +1732,7 @@ var tC = Object.freeze({
 function tR(e, t, r = {}) {
     o(r) && (r = { method: r });
     let { method: a = B.deltaE, ...n } = r;
-    for (let r in e0) if ("deltae" + a.toLowerCase() === r.toLowerCase()) return e0[r](e, t, n);
+    for (let r in e2) if ("deltae" + a.toLowerCase() === r.toLowerCase()) return e2[r](e, t, n);
     throw TypeError(`Unknown deltaE method: ${a}`);
 }
 var t_ = Object.freeze({
@@ -2101,8 +2101,8 @@ let tZ = 216 / 24389,
     tV = tr[1][0],
     tK = tr[1][1],
     t5 = tr[1][2],
-    t2 = tr[2][0],
-    t0 = tr[2][1],
+    t0 = tr[2][0],
+    t2 = tr[2][1],
     t1 = tr[2][2];
 function t9(e, t, r) {
     let a = t / (Math.sin(r) - e * Math.cos(r));
@@ -2117,9 +2117,9 @@ function t6(e) {
         s = r * (284517 * tV - 94839 * t5),
         i = r * (838422 * t5 + 769860 * tK + 731718 * tV),
         l = r * (632260 * t5 - 126452 * tK),
-        c = r * (284517 * t2 - 94839 * t1),
-        u = r * (838422 * t1 + 769860 * t0 + 731718 * t2),
-        h = r * (632260 * t1 - 126452 * t0);
+        c = r * (284517 * t0 - 94839 * t1),
+        u = r * (838422 * t1 + 769860 * t2 + 731718 * t0),
+        h = r * (632260 * t1 - 126452 * t2);
     return {
         r0s: a / o,
         r0i: (n * e) / o,
@@ -2574,9 +2574,9 @@ function rd(e, t) {
             rd(t, e);
         }));
 }),
-    rm.extend(e0),
+    rm.extend(e2),
     rm.extend({ deltaE: tR }),
-    Object.assign(rm, { deltaEMethods: e0 }),
+    Object.assign(rm, { deltaEMethods: e2 }),
     rm.extend(t_),
     rm.extend({
         contrast: function (e, t, r = {}) {

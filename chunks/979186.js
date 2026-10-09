@@ -19,8 +19,8 @@ var r = n(477900),
     w = n(557361),
     x = n(965830),
     E = n(318009),
-    b = n(92960),
-    C = n(14214),
+    C = n(92960),
+    b = n(14214),
     N = n(775602),
     O = n(697138),
     _ = n(933958),
@@ -37,8 +37,8 @@ var r = n(477900),
     U = n(267102),
     G = n(435558),
     K = n.n(G),
-    W = n(202091),
-    F = n(258873),
+    F = n(202091),
+    W = n(258873),
     B = n(622242),
     H = n(731738),
     V = n(834730),
@@ -63,7 +63,7 @@ var r = n(477900),
 let eu = K().throttle(
         () => {
             X.A.increment(
-                { name: H.K.APP_CRASHED, tags: [`reason:${F.J.UNHANDLED_JS_ERROR}`, `level:${B.k.FATAL}`] },
+                { name: H.K.APP_CRASHED, tags: [`reason:${W.J.UNHANDLED_JS_ERROR}`, `level:${B.k.FATAL}`] },
                 !0,
             );
         },
@@ -73,7 +73,7 @@ let eu = K().throttle(
     ec = 10 * Q.A.Millis.SECOND;
 function eh(e) {
     let { error: t, onLock: n, onReload: l, onDisable: s, onCrashDisabled: o } = e,
-        a = i.useMemo(() => new W.SpringValue(1), []),
+        a = i.useMemo(() => new F.SpringValue(1), []),
         d = i.useRef(null),
         [u, c] = i.useState(!1),
         [f, g] = i.useState(!1),
@@ -144,11 +144,11 @@ function eh(e) {
                   ],
               })
             : null,
-        b = u ? null : ea.intl.string(ea.t.oEJEFq);
+        C = u ? null : ea.intl.string(ea.t.oEJEFq);
     return (0, r.jsx)(el.$, {
         title: ea.intl.string(ea.t.U38qZj),
         body: E,
-        hint: p ? b : void 0,
+        hint: p ? C : void 0,
         confirmText: ea.intl.string(ea.t.a3HlgJ),
         cancelText: null != x ? ea.intl.string(ea.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: ed.Lo }),
@@ -227,8 +227,8 @@ var eg = n(97469),
     ew = n(19575),
     ex = n(346142),
     eE = n(869146),
-    eb = n(392164),
-    eC = n(577063);
+    eC = n(392164),
+    eb = n(577063);
 function eN(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && ey.isPlatformEmbedded && !n;
@@ -310,7 +310,7 @@ class e_ extends i.Component {
         let { guestWindow: e, channelId: t } = this.props,
             n = e.document;
         for (let e of ((this._combokeys = (0, R.I)(n.documentElement)),
-        [C.VT, C.rR, (0, b.LB)(t), ...(this.props.keybinds ?? [])]))
+        [b.VT, b.rR, (0, C.LB)(t), ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
                     this._combokeys.bindGlobal(t, (t, n) => ("function" == typeof e.action && e.action(t, n), !1));
@@ -334,8 +334,8 @@ class e_ extends i.Component {
                 appContext: m,
             } = this.props,
             p = eN({ withTitleBar: l, isFullScreen: i }),
-            x = n === eb.f,
-            b = x ? ef : L.A;
+            x = n === eC.f,
+            C = x ? ef : L.A;
         return (0, r.jsx)(d.Kd, {
             children: (0, r.jsxs)(
                 em.e,
@@ -351,7 +351,7 @@ class e_ extends i.Component {
                                     (0, r.jsx)(eD, {
                                         guestWindow: o,
                                         className: s()(a, { overlay: x }),
-                                        children: (0, r.jsxs)(b, {
+                                        children: (0, r.jsxs)(C, {
                                             children: [
                                                 (0, r.jsx)(j.Al, {}),
                                                 (0, r.jsx)(U.Wr, {
@@ -361,7 +361,7 @@ class e_ extends i.Component {
                                                         children: (0, r.jsxs)(P.Yf, {
                                                             children: [
                                                                 (0, r.jsxs)("div", {
-                                                                    className: eC.SW,
+                                                                    className: eb.SW,
                                                                     children: [
                                                                         p &&
                                                                             (0, r.jsx)(y.N, {
@@ -369,11 +369,11 @@ class e_ extends i.Component {
                                                                                 children: (e) =>
                                                                                     (0, r.jsx)(k.cq, {
                                                                                         windowKey: n,
-                                                                                        className: s()(e, eC.uv),
+                                                                                        className: s()(e, eb.uv),
                                                                                     }),
                                                                             }),
                                                                         (0, r.jsx)("div", {
-                                                                            className: s()(eC.Qs, u),
+                                                                            className: s()(eb.Qs, u),
                                                                             children: t,
                                                                         }),
                                                                     ],
