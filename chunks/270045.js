@@ -1,9 +1,9 @@
 n.d(t, { C: () => H });
 var s = n(477900),
     i = n(582128),
-    l = n(323889),
-    a = n(17928),
-    o = n(376357),
+    a = n(323889),
+    l = n(17928),
+    o = n(858899),
     u = n(477782),
     r = n(980707),
     c = n(743368),
@@ -12,15 +12,15 @@ var s = n(477900),
     _ = n(922016),
     C = n(442433),
     h = n(181658),
-    A = n(274670),
-    T = n(144779),
+    T = n(274670),
+    A = n(144779),
     p = n(976860),
     g = n(246356),
     I = n(957565),
     f = n(396813),
     N = n(859703),
-    m = n(738822),
-    v = n(104886),
+    v = n(738822),
+    m = n(104886),
     w = n(77870),
     R = n(18437),
     S = n(590202),
@@ -36,12 +36,12 @@ var s = n(477900),
     b = n(818348),
     U = n(660183);
 function F(e) {
-    let t = (0, a.bG)([N.A], () => N.A.getQuestPreviewOverride(m.uF.QUEST_BAR_V2), []),
-        n = (0, a.bG)([N.A], () => N.A.getQuestPreviewOverride(m.uF.ACTIVITY_PANEL), []),
-        _ = (0, a.bG)([N.A], () => N.A.getQuestPreviewOverride(m.uF.QUEST_LIVE_STREAM), []),
-        g = (0, a.bG)([N.A], () => N.A.getQuestPreviewOverride(m.uF.MEMBERS_LIST), []),
+    let t = (0, l.bG)([N.A], () => N.A.getQuestPreviewOverride(v.uF.QUEST_BAR_V2), []),
+        n = (0, l.bG)([N.A], () => N.A.getQuestPreviewOverride(v.uF.ACTIVITY_PANEL), []),
+        _ = (0, l.bG)([N.A], () => N.A.getQuestPreviewOverride(v.uF.QUEST_LIVE_STREAM), []),
+        g = (0, l.bG)([N.A], () => N.A.getQuestPreviewOverride(v.uF.MEMBERS_LIST), []),
         F = (0, O.vy)(e.questContent),
-        H = [m.uF.QUEST_BAR_V2, m.uF.QUEST_BAR].includes(e.questContent),
+        H = [v.uF.QUEST_BAR_V2, v.uF.QUEST_BAR].includes(e.questContent),
         V = (0, R.Ut)(),
         G = (0, M.wW)(),
         k = (0, q.wr)(e.quest),
@@ -73,7 +73,7 @@ function F(e) {
             ),
         });
     function z(e) {
-        return (0, o.P0)((0, o.ox)(new h.A(e, e.status).message, o.Ck.FAILURE));
+        return (0, o.P0)({ text: new h.A(e, e.status).message, variant: "critical" });
     }
     function $() {
         return (0, f.CV)(e.quest.id).catch(z);
@@ -85,7 +85,7 @@ function F(e) {
                     id: "delivery",
                     label: "Show in Quest Bar",
                     checked: t?.id === e.quest.id,
-                    action: () => J(m.uF.QUEST_BAR_V2),
+                    action: () => J(v.uF.QUEST_BAR_V2),
                 }),
             [J, e.quest.id, t?.id],
         ),
@@ -95,7 +95,7 @@ function F(e) {
                     id: "activity-panel",
                     label: "Show in Activity Panel",
                     checked: n?.id === e.quest.id,
-                    action: () => J(m.uF.ACTIVITY_PANEL),
+                    action: () => J(v.uF.ACTIVITY_PANEL),
                 }),
             [J, e.quest.id, n?.id],
         ),
@@ -105,7 +105,7 @@ function F(e) {
                     id: "channel-call-header",
                     label: "Show in Voice Channel Header",
                     checked: _?.id === e.quest.id,
-                    action: () => J(m.uF.QUEST_LIVE_STREAM),
+                    action: () => J(v.uF.QUEST_LIVE_STREAM),
                 }),
             [J, e.quest.id, _?.id],
         ),
@@ -115,14 +115,14 @@ function F(e) {
                     id: "members-list",
                     label: "Show in Members List",
                     checked: g?.id === e.quest.id,
-                    action: () => J(m.uF.MEMBERS_LIST),
+                    action: () => J(v.uF.MEMBERS_LIST),
                 }),
             [J, e.quest.id, g?.id],
         ),
-        el = i.useCallback(() => {
+        ea = i.useCallback(() => {
             (0, p.pX)(j.BVt.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
-        ea = e.shouldShowDisclosure && e.quest.id !== D.Fw;
+        el = e.shouldShowDisclosure && e.quest.id !== D.Fw;
     return (0, s.jsxs)(r.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
@@ -169,10 +169,10 @@ function F(e) {
                                 id: "learn-more",
                                 label: U.intl.string(U.t["Ws2Bl+"]),
                                 action: function () {
-                                    ((0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
-                                        ? (0, A.r)({
-                                              type: T.F.CLICK_INTERNAL,
-                                              adCreativeType: l.p.QUEST,
+                                    ((0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
+                                        ? (0, T.r)({
+                                              type: A.F.CLICK_INTERNAL,
+                                              adCreativeType: a.p.QUEST,
                                               adCreativeId: e.quest.id,
                                               questContentCTA: S.Cy.CONTEXT_MENU_LEARN_MORE,
                                               surfaceId: e.questContent,
@@ -192,7 +192,7 @@ function F(e) {
                                 icon: E.r,
                                 leadingAccessory: { type: "icon", icon: E.r },
                             }),
-                        ea &&
+                        el &&
                             (0, s.jsx)(u.Dr, {
                                 id: "display-disclosure",
                                 label: U.intl.string(U.t.GcsZKJ),
@@ -215,10 +215,10 @@ function F(e) {
                                 id: "hide-entrypoint",
                                 label: U.intl.string(U.t.NN79E9),
                                 action: function () {
-                                    ((0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
-                                        ? (0, A.r)({
-                                              type: T.F.CLICK_INTERNAL,
-                                              adCreativeType: l.p.QUEST,
+                                    ((0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
+                                        ? (0, T.r)({
+                                              type: A.F.CLICK_INTERNAL,
+                                              adCreativeType: a.p.QUEST,
                                               adCreativeId: e.quest.id,
                                               questContentCTA: S.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                               surfaceId: e.questContent,
@@ -291,7 +291,7 @@ function F(e) {
                                     (0, I.C)(e.quest.id);
                                 },
                             }),
-                            (0, s.jsx)(u.Dr, { id: "preview", label: U.intl.string(U.t.tx5Ax5), action: el }),
+                            (0, s.jsx)(u.Dr, { id: "preview", label: U.intl.string(U.t.tx5Ax5), action: ea }),
                         ],
                     },
                     "preview-controls",
@@ -303,7 +303,7 @@ function H(e) {
     let {
             children: t,
             onOpen: n,
-            onClose: a,
+            onClose: l,
             preventIdle: o,
             quest: u,
             questContent: r,
@@ -315,10 +315,10 @@ function H(e) {
         h = (0, M.wW)(),
         p = i.useRef(null),
         I = i.useCallback(() => {
-            ((0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
-                ? (0, A.r)({
-                      type: T.F.CLICK_INTERNAL,
-                      adCreativeType: l.p.QUEST,
+            ((0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
+                ? (0, T.r)({
+                      type: A.F.CLICK_INTERNAL,
+                      adCreativeType: a.p.QUEST,
                       adCreativeId: u.id,
                       questContentCTA: S.Cy.OPEN_CONTEXT_MENU,
                       surfaceId: r,
@@ -338,7 +338,7 @@ function H(e) {
     return (0, s.jsx)(_.Y, {
         targetElementRef: p,
         onRequestOpen: I,
-        onRequestClose: a,
+        onRequestClose: l,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return o

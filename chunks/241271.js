@@ -3804,9 +3804,12 @@ function sw(e) {
                 r({ action: "PRESS_ADD_WIDGET" }),
                 (0, sS.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("515293"), n.e("487697"), n.e("911581")]).then(
-                            n.bind(n, 51820),
-                        );
+                        let { default: e } = await Promise.all([
+                            n.e("515293"),
+                            n.e("487697"),
+                            n.e("752516"),
+                            n.e("911581"),
+                        ]).then(n.bind(n, 51820));
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: r });
                     },
                     { stackingBehavior: "stack" },
@@ -4680,9 +4683,12 @@ function aG(e) {
             (s({ action: "PRESS_ADD_WIDGET" }),
                 (0, sS.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("515293"), n.e("487697"), n.e("911581")]).then(
-                            n.bind(n, 51820),
-                        );
+                        let { default: e } = await Promise.all([
+                            n.e("515293"),
+                            n.e("487697"),
+                            n.e("752516"),
+                            n.e("911581"),
+                        ]).then(n.bind(n, 51820));
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },
                     { stackingBehavior: "stack" },
@@ -4978,7 +4984,7 @@ var ou = n(815021),
 n(667532);
 var og = n(862772),
     of = n(172218),
-    om = n(376357),
+    om = n(858899),
     op = n(2157),
     oh = n(95817),
     ox = n(74135),
@@ -5060,7 +5066,7 @@ function oj(e) {
                 try {
                     (await a2.A.addSkuToWishlist(t.id, n), d?.(), a?.({ tabSection: ro.RP.WISHLIST }));
                 } catch (e) {
-                    ((0, om.P0)((0, om.ox)(eU.intl.string(eU.t.F8FvUy), om.Ck.FAILURE)),
+                    ((0, om.P0)({ text: eU.intl.string(eU.t.F8FvUy), variant: "critical" }),
                         nh.O.announce(eU.intl.string(eU.t.F8FvUy)));
                 } finally {
                     m(!1);
@@ -5873,12 +5879,12 @@ let oJ = {
         [ro.jM.PROFILE_SAVE_GENERIC_FAILURE]: {
             message: eU.intl.string(eU.t["84MExs"]),
             icon: (0, i.jsx)(o$.XLargeIcon, { size: "sm", color: h.A.colors.ICON_FEEDBACK_CRITICAL }),
-            type: om.Ck.FAILURE,
+            type: "failure",
         },
         [ro.jM.SOMETHING_WENT_WRONG]: {
             message: eU.intl.string(eU.t.F8FvUy),
             icon: (0, i.jsx)(o$.XLargeIcon, { size: "sm", color: h.A.colors.ICON_FEEDBACK_CRITICAL }),
-            type: om.Ck.FAILURE,
+            type: "failure",
         },
     },
     oQ = (e) => {

@@ -9,7 +9,7 @@ var i = n(477900),
     c = n(477782),
     u = n(980707),
     _ = n(922016),
-    E = n(376357),
+    E = n(858899),
     A = n(862328),
     h = n(866665),
     f = n(67811),
@@ -386,9 +386,7 @@ function q(e, t, n, i, r) {
     return `${a}?${o.toString()}`;
 }
 function Q(e) {
-    (0, O.C)(e, () =>
-        (0, E.P0)({ id: "playground-link-copied", message: "Copied playground link", type: E.Ck.SUCCESS }),
-    );
+    (0, O.C)(e, () => (0, E.P0)({ text: "Copied playground link", variant: "success" }));
 }
 function J(e) {
     let { collection: t, story: n } = e,

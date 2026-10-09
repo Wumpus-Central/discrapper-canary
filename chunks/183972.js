@@ -1,6 +1,6 @@
 s.d(t, { RB: () => g, aB: () => m, x6: () => x });
 var i = s(636537),
-    n = s(376357),
+    n = s(858899),
     a = s(73153),
     l = s(181658),
     r = s(919466),
@@ -19,7 +19,7 @@ async function m(e) {
             return (a.h.dispatch({ type: "PARTNER_ACTIVATION_FETCH_SUCCESS", activationStatus: t.body }), t.body);
         } catch {
             (a.h.dispatch({ type: "PARTNER_ACTIVATION_FETCH_FAILURE" }),
-                (0, n.P0)((0, n.ox)(d.intl.string(d.t.F8FvUy), n.Ck.FAILURE)));
+                (0, n.P0)({ text: d.intl.string(d.t.F8FvUy), variant: "critical" }));
         }
     }
 }
@@ -44,7 +44,7 @@ async function g(e) {
                 a.h.dispatch({ type: "PARTNER_CANCELLATION_SUCCESS" }));
         } catch {
             (a.h.dispatch({ type: "PARTNER_CANCELLATION_FAILURE" }),
-                (0, n.P0)((0, n.ox)(d.intl.string(d.t.F8FvUy), n.Ck.FAILURE)));
+                (0, n.P0)({ text: d.intl.string(d.t.F8FvUy), variant: "critical" }));
         }
     }
 }

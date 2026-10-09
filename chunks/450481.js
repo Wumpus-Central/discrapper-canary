@@ -9,9 +9,9 @@ var i = n(582128),
     o = n(660183);
 function f(t) {
     let { product: e, onSuccess: f, onError: p } = t,
-        [d, E] = i.useState(!1),
-        { firstAvatarDecoration: R, firstProfileEffect: h, firstNameplate: g, firstProfileFrame: y } = (0, u.f5)(e),
-        A = (function (t) {
+        [d, R] = i.useState(!1),
+        { firstAvatarDecoration: h, firstProfileEffect: E, firstNameplate: g, firstProfileFrame: y } = (0, u.f5)(e),
+        w = (function (t) {
             switch (t.type) {
                 case r.R.AVATAR_DECORATION:
                     return o.intl.string(o.t.zOA4ax);
@@ -26,7 +26,7 @@ function f(t) {
                     return o.intl.string(o.t.tf1ZZ4);
             }
         })(e),
-        O = i.useMemo(
+        A = i.useMemo(
             () =>
                 (function (t) {
                     if ((0, c.pQ)(t.skuId)) return !1;
@@ -42,33 +42,32 @@ function f(t) {
         );
     return {
         handleUseNow: i.useCallback(async () => {
-            if (!O) return;
-            E(!0);
+            if (!A) return;
+            R(!0);
             let t = {};
             try {
-                if ((null != R && (t.avatarDecoration = R), null != h || null != y)) {
-                    let t = (0, l.yX)({ pendingProfileEffect: h ?? void 0, pendingProfileFrame: y ?? void 0 });
+                if ((null != h && (t.avatarDecoration = h), null != E || null != y)) {
+                    let t = (0, l.yX)({ pendingProfileEffect: E ?? void 0, pendingProfileFrame: y ?? void 0 });
                     await (0, s.gi)(t);
                 }
                 (null != g && (t.nameplate = g), Object.keys(t).length > 0 && (await (0, a._L)(t)));
                 {
-                    let {
-                        ToastPosition: t,
-                        ToastType: e,
-                        createToast: i,
-                        popToast: r,
-                        showToast: a,
-                    } = await Promise.all([n.e("304823"), n.e("223976"), n.e("977260")]).then(n.bind(n, 397927));
-                    (r(), a(i(A, e.MESSAGE, { duration: 6e3, position: t.TOP })));
+                    let { popToast: t, showToast: e } = await Promise.all([
+                        n.e("304823"),
+                        n.e("223976"),
+                        n.e("288688"),
+                        n.e("977260"),
+                    ]).then(n.bind(n, 397927));
+                    (t(), e({ text: w, duration: 6e3, position: "top" }));
                 }
                 f?.();
             } catch (t) {
                 p?.(t);
             } finally {
-                E(!1);
+                R(!1);
             }
-        }, [O, R, h, g, y, f, A, p]),
+        }, [A, h, E, g, y, f, w, p]),
         isApplying: d,
-        canUseNow: O,
+        canUseNow: A,
     };
 }

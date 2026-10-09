@@ -1,29 +1,29 @@
-t.d(n, { default: () => k });
+t.d(n, { default: () => p });
 var c = t(477900),
-    o = t(980707),
-    s = t(477782),
-    e = t(376357),
-    r = t(173936),
-    a = t(442433),
+    s = t(980707),
+    e = t(477782),
+    o = t(858899),
+    a = t(173936),
+    r = t(442433),
     l = t(957565),
     d = t(660183);
-function k(i) {
+function p(i) {
     let { link: n } = i;
-    return (0, c.jsx)(o.W, {
+    return (0, c.jsx)(s.W, {
         navId: "gif-picker",
-        onClose: a.Z_,
+        onClose: r.Z_,
         "aria-label": d.intl.string(d.t.XoasSC),
         onSelect: void 0,
-        children: (0, c.jsx)(s.Dr, {
+        children: (0, c.jsx)(e.Dr, {
             id: "gif-picker-copy-link",
             label: d.intl.string(d.t.WqhZss),
             action: () => {
                 (0, l.C)(n, () => {
-                    (0, e.P0)((0, e.ox)(d.intl.string(d.t["+5kSoW"]), e.Ck.SUCCESS));
+                    (0, o.P0)({ text: d.intl.string(d.t["+5kSoW"]), variant: "success" });
                 });
             },
-            icon: r.LinkIcon,
-            leadingAccessory: { type: "icon", icon: r.LinkIcon },
+            icon: a.LinkIcon,
+            leadingAccessory: { type: "icon", icon: a.LinkIcon },
         }),
     });
 }

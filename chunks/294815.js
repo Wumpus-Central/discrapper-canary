@@ -864,7 +864,7 @@ var nb = t(568598),
     nR = t(939249),
     nO = t(408278),
     nM = t(624479),
-    nP = t(376357),
+    nP = t(858899),
     nL = t(534890),
     nD = t(661531),
     nk = t(39623),
@@ -1064,7 +1064,7 @@ let nz = ["high", "medium", "low"],
                             onClick: (e) => {
                                 (e.stopPropagation(),
                                     (0, nF.C)(JSON.stringify(n, null, 2), () =>
-                                        (0, nP.P0)((0, nP.ox)("Copied conversation JSON", nP.Ck.SUCCESS)),
+                                        (0, nP.P0)({ text: "Copied conversation JSON", variant: "success" }),
                                     ));
                             },
                         }),

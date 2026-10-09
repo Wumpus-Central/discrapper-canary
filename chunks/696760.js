@@ -17,11 +17,11 @@ var i,
     I = n(176522),
     T = n(435558),
     p = n.n(T),
-    N = n(376357),
+    N = n(858899),
     S = n(147036),
     f = n(957565),
     O = n(660183);
-let L = (0, T.throttle)(() => (0, N.P0)((0, N.ox)(O.intl.string(O.t["+5kSoW"]), N.Ck.SUCCESS)), 3e3, {
+let L = (0, T.throttle)(() => (0, N.P0)({ text: O.intl.string(O.t["+5kSoW"]), variant: "success" }), 3e3, {
     leading: !0,
     trailing: !1,
 });
@@ -40,8 +40,8 @@ var m = n(265422),
     w = n(310419),
     j = n(488995),
     H = n(675704),
-    k = n(806964),
-    B = n(552049),
+    B = n(806964),
+    k = n(552049),
     F = n(877991),
     W = n(332779),
     K = n(274794),
@@ -197,8 +197,8 @@ let eC = {
         comboKeysBindGlobal: !0,
         action: () => (b._.dispatch(R.jej.TOGGLE_SOUNDBOARD), !1),
     },
-    [R.IWg.SCROLL_UP]: B.U5,
-    [R.IWg.SCROLL_DOWN]: B.fz,
+    [R.IWg.SCROLL_UP]: k.U5,
+    [R.IWg.SCROLL_DOWN]: k.fz,
     [R.IWg.QUICKSWITCHER_SHOW]: H.R,
     [R.IWg.CREATE_DM_GROUP]: {
         binds: ["mod+shift+t"],
@@ -267,7 +267,7 @@ let eC = {
             return (null == e || e.isManaged() || b._.dispatch(R.jej.UPLOAD_FILE, { channelId: e.id }), !1);
         },
     },
-    [R.IWg.RETURN_TO_AUDIO_CHANNEL]: k.u,
+    [R.IWg.RETURN_TO_AUDIO_CHANNEL]: B.u,
     [R.IWg.CALL_ACCEPT]: g.Yo,
     [R.IWg.CALL_START]: g.OX,
     [R.IWg.FOCUS_SEARCH]: {

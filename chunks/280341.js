@@ -4,7 +4,7 @@ var l,
     r = n(477900),
     a = n(582128),
     s = n(17928),
-    o = n(376357),
+    o = n(858899),
     u = n(73153),
     c = n(636537),
     d = n(277984),
@@ -1698,11 +1698,11 @@ function tD(e) {
     let z = a.useCallback(
             (e) => {
                 (K(e),
-                    (0, o.P0)(
-                        (0, o.ox)(void 0 !== A ? A : B.intl.string(B.t["VJPg+l"]), o.Ck.SUCCESS, {
-                            position: o.xJ.BOTTOM,
-                        }),
-                    ),
+                    (0, o.P0)({
+                        text: void 0 !== A ? A : B.intl.string(B.t["VJPg+l"]),
+                        variant: "success",
+                        position: "bottom",
+                    }),
                     c(F, e),
                     Y(w, !1));
             },

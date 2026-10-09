@@ -1,11 +1,11 @@
-n.d(t, { default: () => L });
+n.d(t, { default: () => I });
 var l,
     i = n(477900),
     a = n(582128),
     r = n(837381),
     s = n(189213),
     o = n(765178),
-    d = n(376357),
+    d = n(858899),
     u = n(506309),
     c = n(123292),
     g = n(834730),
@@ -13,21 +13,21 @@ var l,
     f = n(939249),
     m = n(112173),
     x = n(778712),
-    S = n(658675),
-    p = n(308528),
+    p = n(658675),
+    S = n(308528),
     v = n(928039),
     b = n(47167),
     j = n(359378),
-    C = n(598104),
-    k = n(980707),
-    y = n(477782);
+    y = n(598104),
+    T = n(980707),
+    k = n(477782);
 (n(321073), n(839272));
-var T = n(309199),
+var C = n(309199),
     E = n(734057),
     P = n(573163),
-    A = n(935208),
-    O = (((l = {}).NEWEST = "newest"), (l.OLDEST = "oldest"), l);
-function w(e, t) {
+    O = n(935208),
+    w = (((l = {}).NEWEST = "newest"), (l.OLDEST = "oldest"), l);
+function A(e, t) {
     return e.toSorted((e, n) => ("newest" === t ? n.lastActivity - e.lastActivity : e.lastActivity - n.lastActivity));
 }
 var D = n(186492),
@@ -37,30 +37,30 @@ function N(e) {
     let { sortOrder: t, onChangeSortOrder: n, closePopout: l } = e;
     return (0, i.jsx)("div", {
         className: z.k,
-        children: (0, i.jsx)(k.W, {
+        children: (0, i.jsx)(T.W, {
             navId: "clean-up-gdms-sort",
             "aria-label": M.intl.string(D.default.yySzqH),
             hideScroller: !0,
             onClose: l,
             onSelect: l,
-            children: (0, i.jsxs)(y.rX, {
+            children: (0, i.jsxs)(k.rX, {
                 children: [
-                    (0, i.jsx)(y.iD, {
+                    (0, i.jsx)(k.iD, {
                         id: "clean-up-gdms-sort-newest",
                         group: "clean-up-gdms-sort",
                         label: M.intl.string(D.default.VHmOpK),
-                        checked: t === O.NEWEST,
+                        checked: t === w.NEWEST,
                         action: () => {
-                            (n(O.NEWEST), l());
+                            (n(w.NEWEST), l());
                         },
                     }),
-                    (0, i.jsx)(y.iD, {
+                    (0, i.jsx)(k.iD, {
                         id: "clean-up-gdms-sort-oldest",
                         group: "clean-up-gdms-sort",
                         label: M.intl.string(D.default.NLTGck),
-                        checked: t === O.OLDEST,
+                        checked: t === w.OLDEST,
                         action: () => {
-                            (n(O.OLDEST), l());
+                            (n(w.OLDEST), l());
                         },
                     }),
                 ],
@@ -69,8 +69,8 @@ function N(e) {
     });
 }
 var H = n(373207);
-let I = { height: 480 };
-function L(e) {
+let G = { height: 480 };
+function I(e) {
     let { transitionState: t, onClose: n } = e,
         [l] = a.useState(() =>
             (function () {
@@ -84,31 +84,31 @@ function L(e) {
                     l = [];
                 for (let e of Object.values(E.A.getMutablePrivateChannels())) {
                     let t = (function (e, t) {
-                        if (!e.isGroupDM() || (0, T.k_)(e.id)) return null;
+                        if (!e.isGroupDM() || (0, C.k_)(e.id)) return null;
                         let n = (function (e, t) {
                             let n = P.Ay.lastMessageTimestamp(e);
                             if (n > 0) return n;
                             let l = P.Ay.lastMessageId(e) ?? t ?? e;
-                            return A.default.extractTimestamp(l);
+                            return O.default.extractTimestamp(l);
                         })(e.id, e.lastMessageId);
                         return n < t ? n : null;
                     })(e, n);
                     null != t && l.push({ channel: e, lastActivity: t });
                 }
-                return w(l, "oldest").slice(0, e);
+                return A(l, "oldest").slice(0, e);
             })(),
         ),
-        [g, h] = a.useState(O.OLDEST),
+        [g, h] = a.useState(w.OLDEST),
         [f, m] = a.useState(() => new Set(l.slice(0, 1e3).map((e) => e.channel.id))),
-        [x, S] = a.useState(!1),
-        b = a.useMemo(() => w(l, g), [l, g]),
+        [x, p] = a.useState(!1),
+        b = a.useMemo(() => A(l, g), [l, g]),
         j = 0 === l.length,
-        C = f.size,
-        k = Math.min(l.length, 1e3),
-        y = l.length <= 1e3,
-        z = k > 0 && C >= k,
-        N = C >= 1e3,
-        L = a.useCallback(
+        y = f.size,
+        T = Math.min(l.length, 1e3),
+        k = l.length <= 1e3,
+        z = T > 0 && y >= T,
+        N = y >= 1e3,
+        I = a.useCallback(
             (e, t) => {
                 let n = !f.has(e);
                 (n && f.size >= 1e3) ||
@@ -116,7 +116,7 @@ function L(e) {
                         o.O.announce(
                             M.intl.formatToPlainString(n ? D.default["SsUZo/"] : D.default.x03WqE, {
                                 name: t,
-                                count: n ? C + 1 : C - 1,
+                                count: n ? y + 1 : y - 1,
                             }),
                             "polite",
                         ),
@@ -125,24 +125,24 @@ function L(e) {
                         return (n.has(e) ? n.delete(e) : n.size < 1e3 && n.add(e), n);
                     }));
             },
-            [f, C],
+            [f, y],
         ),
         _ = a.useCallback(() => {
-            let e = C >= k,
-                t = e ? 0 : k;
+            let e = y >= T,
+                t = e ? 0 : T;
             (o.O.announce(
                 e ? M.intl.string(D.default.hhQnsH) : M.intl.formatToPlainString(D.default.GpUOWb, { count: t }),
                 "polite",
             ),
-                m((e) => (e.size >= k ? new Set() : new Set(b.slice(0, 1e3).map((e) => e.channel.id)))));
-        }, [b, k, C]),
-        F = a.useCallback(
+                m((e) => (e.size >= T ? new Set() : new Set(b.slice(0, 1e3).map((e) => e.channel.id)))));
+        }, [b, T, y]),
+        B = a.useCallback(
             async (e) => {
                 try {
-                    await p.A.bulkLeaveGroupDMs(e);
+                    await S.A.bulkLeaveGroupDMs(e);
                 } catch (t) {
                     let e;
-                    if ((S(!1), t?.status === 409)) e = M.intl.string(D.default.ojlzko);
+                    if ((p(!1), t?.status === 409)) e = M.intl.string(D.default.ojlzko);
                     else if (t?.status === 429) {
                         let n = t.body?.retry_after;
                         e =
@@ -150,29 +150,32 @@ function L(e) {
                                 ? M.intl.formatToPlainString(D.default.SHTZTm, { seconds: Math.ceil(n) })
                                 : M.intl.string(D.default.f5Xg0V);
                     } else e = M.intl.string(D.default["+HM0x2"]);
-                    (0, d.P0)((0, d.ox)(e, d.Ck.FAILURE));
+                    (0, d.P0)({ text: e, variant: "critical" });
                     return;
                 }
-                ((0, d.P0)((0, d.ox)(M.intl.formatToPlainString(D.default.b2r81u, { count: e.length }), d.Ck.SUCCESS)),
+                ((0, d.P0)({
+                    text: M.intl.formatToPlainString(D.default.b2r81u, { count: e.length }),
+                    variant: "success",
+                }),
                     n().catch(() => {}));
             },
             [n],
         ),
-        U = a.useCallback(() => {
+        F = a.useCallback(() => {
             let e = Array.from(f);
-            0 !== e.length && (S(!0), F(e));
-        }, [f, F]),
-        B = 0 === C ? M.intl.string(D.default.YBjUwi) : M.intl.formatToPlainString(D.default.SakG2D, { count: C }),
-        K = (0, u.W)(16),
-        q = a.useRef(null),
-        V = (0, v.A)("clean-up-inactive-gdms-modal", q),
+            0 !== e.length && (p(!0), B(e));
+        }, [f, B]),
+        K = 0 === y ? M.intl.string(D.default.YBjUwi) : M.intl.formatToPlainString(D.default.SakG2D, { count: y }),
+        q = (0, u.W)(16),
+        U = a.useRef(null),
+        V = (0, v.A)("clean-up-inactive-gdms-modal", U),
         Y = a.useMemo(
             () => ({
                 sections: [b.length],
                 sectionHeight: 0,
                 rowHeight: 48,
-                paddingBottom: K,
-                style: I,
+                paddingBottom: q,
+                style: G,
                 renderRow: (e) => {
                     let { row: t } = e,
                         n = b[t];
@@ -184,7 +187,7 @@ function L(e) {
                             gdm: n,
                             selected: l,
                             disabled: N && !l,
-                            onToggle: L,
+                            onToggle: I,
                             ariaSetSize: b.length,
                             ariaPosInSet: t + 1,
                         },
@@ -192,7 +195,7 @@ function L(e) {
                     );
                 },
             }),
-            [b, f, N, L, K],
+            [b, f, N, I, q],
         );
     return (0, i.jsx)(r.hD, {
         navigator: V,
@@ -209,14 +212,14 @@ function L(e) {
                         : (0, i.jsxs)("div", {
                               className: H.HO,
                               children: [
-                                  (0, i.jsx)(G, { sortOrder: g, onChangeSortOrder: h }),
+                                  (0, i.jsx)(R, { sortOrder: g, onChangeSortOrder: h }),
                                   (0, i.jsx)(c.Q, {
                                       variant: "primary",
                                       textVariant: "text-sm/medium",
                                       onClick: _,
                                       text: z
                                           ? M.intl.string(D.default.jxi9GF)
-                                          : y
+                                          : k
                                             ? M.intl.string(D.default.mKxGpP)
                                             : M.intl.formatToPlainString(D.default["9oRyjg"], { count: 1e3 }),
                                   }),
@@ -229,7 +232,7 @@ function L(e) {
                               ...a,
                               innerRole: void 0,
                               ref: (e) => {
-                                  ((q.current = e), (l.current = e?.getScrollerNode() ?? null));
+                                  ((U.current = e), (l.current = e?.getScrollerNode() ?? null));
                               },
                           },
                     actions: j
@@ -242,17 +245,17 @@ function L(e) {
                                   },
                               },
                           ]
-                        : [{ variant: "critical-primary", text: B, onClick: U, disabled: 0 === C, loading: x }],
-                    children: j ? (0, i.jsx)(R, {}) : void 0,
+                        : [{ variant: "critical-primary", text: K, onClick: F, disabled: 0 === y, loading: x }],
+                    children: j ? (0, i.jsx)(L, {}) : void 0,
                 });
             },
         }),
     });
 }
-function R() {
+function L() {
     return (0, i.jsxs)("div", {
         className: H.p$,
-        style: I,
+        style: G,
         children: [
             (0, i.jsx)(g.E, { variant: "text-md/medium", children: M.intl.string(D.default.s8TEkh) }),
             (0, i.jsx)(g.E, {
@@ -263,7 +266,7 @@ function R() {
         ],
     });
 }
-function G(e) {
+function R(e) {
     let { sortOrder: t, onChangeSortOrder: n } = e,
         l = a.useRef(null);
     return (0, i.jsx)(h.Y, {
@@ -301,12 +304,12 @@ function W(e) {
         d = t.channel.recipients.length + 1;
     return (0, i.jsx)(j.A, {
         listItemId: t.channel.id,
-        icon: (0, i.jsx)(C.A, { "aria-hidden": !0, size: x._3.SIZE_32, channel: t.channel }),
+        icon: (0, i.jsx)(y.A, { "aria-hidden": !0, size: x._3.SIZE_32, channel: t.channel }),
         label: o,
         subLabel: M.intl.formatToPlainString(M.t.ABMKx3, { members: d }),
         selected: n,
         disabled: l,
-        trailing: (0, i.jsx)(S.P, { checked: n, disabled: l }),
+        trailing: (0, i.jsx)(p.P, { checked: n, disabled: l }),
         onPress: () => a(t.channel.id, o),
         "aria-label": o,
         "aria-setsize": r,

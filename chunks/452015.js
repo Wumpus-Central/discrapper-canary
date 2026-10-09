@@ -8,7 +8,7 @@ var i = n(477900),
     u = n(554146),
     d = n(189213),
     c = n(862482),
-    h = n(376357),
+    h = n(858899),
     f = n(939249),
     g = n(97808),
     C = n(778712),
@@ -374,7 +374,7 @@ async function eM(e, t) {
                               remaining: Math.max(0, e.length - 2),
                           })
                         : er.intl.string(er.t.iRntUl)),
-                    (0, h.P0)((0, h.ox)(t, h.Ck.FAILURE)));
+                    (0, h.P0)({ text: t, variant: "critical" }));
             } else
                 l.length > 0 &&
                     (function (e) {
@@ -386,10 +386,10 @@ async function eM(e, t) {
                             username2: t[1] ?? "",
                             remaining: Math.max(0, t.length - 2),
                         });
-                        (0, h.P0)((0, h.ox)(n, h.Ck.SUCCESS));
+                        (0, h.P0)({ text: n, variant: "success" });
                     })(l);
         } catch {
-            (0, h.P0)((0, h.ox)(er.intl.string(er.t.iRntUl), h.Ck.FAILURE));
+            (0, h.P0)({ text: er.intl.string(er.t.iRntUl), variant: "critical" });
         }
 }
 var ev = n(279208),
@@ -561,7 +561,7 @@ function tt(e) {
         : O.A.openPrivateChannel({ recipientIds: t, location: n });
 }
 function tn() {
-    (0, h.P0)((0, h.ox)(er.intl.string(er.t.fEptJP), h.Ck.FAILURE));
+    (0, h.P0)({ text: er.intl.string(er.t.fEptJP), variant: "critical" });
 }
 function ti(e) {
     let { channel: t, onClose: n } = e,

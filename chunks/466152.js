@@ -1,6 +1,6 @@
 l.d(e, { A: () => I });
 var t = l(477900),
-    r = l(376357),
+    r = l(858899),
     i = l(192308),
     u = l(66834),
     a = l(913122),
@@ -17,7 +17,7 @@ var t = l(477900),
 function _(n, e) {
     u.A.batchChannelUpdate(n, e).catch((n) => {
         let e = new a.LG(n).getAnyErrorMessage() ?? A.intl.string(A.t.iufib1);
-        (0, r.P0)((0, r.ox)(e, r.Ck.FAILURE));
+        (0, r.P0)({ text: e, variant: "critical" });
     });
 }
 function I(n, e, r, u) {
@@ -35,8 +35,8 @@ function I(n, e, r, u) {
     });
     if (0 === C.length) return;
     let G = A ? I : null,
-        E = C.find((n) => n.id === e.id);
-    null != E &&
+        v = C.find((n) => n.id === e.id);
+    null != v &&
     null != G &&
     (function (n, e) {
         if (!h.A.can(g.xBc.MANAGE_ROLES, n) || !h.A.can(g.xBc.MANAGE_ROLES, e)) return !1;
@@ -53,7 +53,7 @@ function I(n, e, r, u) {
                       channel: e,
                       category: G,
                       onConfirm: () => {
-                          ((E.lock_permissions = !0), _(n, C));
+                          ((v.lock_permissions = !0), _(n, C));
                       },
                       onCancel: () => _(n, C),
                   });

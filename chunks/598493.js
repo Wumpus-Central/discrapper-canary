@@ -2926,20 +2926,20 @@ let lr = new Set(["failure", "unknown"]),
     });
 var lo = n(687813),
     lu = n(562708),
-    ld = n(376357),
+    ld = n(858899),
     lc = n(451704);
 async function lg() {
     try {
         await lm();
     } catch {
-        (0, ld.P0)({ id: "performance-trace-failed", type: ld.Ck.FAILURE, message: U.intl.string(U.t["8ihs9i"]) });
+        (0, ld.P0)({ text: U.intl.string(U.t["8ihs9i"]), variant: "critical" });
     }
 }
 async function lm() {
     var e;
     let t = nN.A.tracing;
     if (null == t) return;
-    (0, ld.P0)({ id: "performance-trace-capturing", type: ld.Ck.MESSAGE, message: U.intl.string(U.t.qGRW8d) });
+    (0, ld.P0)({ text: U.intl.string(U.t.qGRW8d) });
     let [n, i, s] = await Promise.all([
             t.capturePerformanceTrace({ durationMs: 3e4 }),
             nN.A.processUtils.getSystemInfo(),
@@ -2968,8 +2968,7 @@ async function lm() {
         })),
         o = `Discord-Trace-${n.startedAtISO.replace(/:/g, "-").replace(/\..*$/, "")}.zip`,
         { filePath: u } = await t.saveTraceToDownloads(a, o);
-    (nN.A.fileManager.showItemInFolder(u),
-        (0, ld.P0)({ id: "performance-trace-saved", type: ld.Ck.SUCCESS, message: U.intl.string(U.t.gpCRFS) }));
+    (nN.A.fileManager.showItemInFolder(u), (0, ld.P0)({ text: U.intl.string(U.t.gpCRFS), variant: "success" }));
 }
 let lA = (0, E.Tf)(h.X.CAPTURE_PERFORMANCE_TRACE, {
     useTitle: () => U.intl.string(U.t.o6Qr6n),
@@ -12656,11 +12655,7 @@ function hk(e) {
         h = T.useCallback(
             (e) => {
                 (0, uy.C)((0, hO.yA)(n), () => {
-                    ((0, ld.P0)({
-                        id: "experiment-link-copied",
-                        message: "Copied experiment link",
-                        type: ld.Ck.SUCCESS,
-                    }),
+                    ((0, ld.P0)({ text: "Copied experiment link", variant: "success" }),
                         e.preventDefault(),
                         e.stopPropagation());
                 });
@@ -13024,7 +13019,7 @@ let hF = (0, E.E2)(h.X.EXPERIMENTS_SETTING, {
                                         size: "sm",
                                         onClick: () => {
                                             (0, uy.C)(r, () => {
-                                                (0, ld.P0)((0, ld.ox)("Installation ID copied!", ld.Ck.SUCCESS));
+                                                (0, ld.P0)({ text: "Installation ID copied!", variant: "success" });
                                             });
                                         },
                                         text: "Copy",
@@ -18961,11 +18956,7 @@ async function _Q() {
     try {
         await If.A.confirmViewBackupCodes(e, !0);
     } catch (e) {
-        (0, ld.P0)({
-            message: e.body?.message ?? U.intl.string(U.t.F8FvUy),
-            type: ld.Ck.FAILURE,
-            id: "backup-code-regen-failed",
-        });
+        (0, ld.P0)({ text: e.body?.message ?? U.intl.string(U.t.F8FvUy), variant: "critical" });
     }
 }
 function _J(e) {
@@ -18988,12 +18979,7 @@ function _J(e) {
                       (e.preventDefault(), e.stopPropagation(), (0, uy.C)(i), s?.current?.focus());
               },
               onClick: function () {
-                  ((0, uy.C)(i),
-                      (0, ld.P0)({
-                          message: U.intl.string(U.t.mGZ66D),
-                          type: ld.Ck.SUCCESS,
-                          id: "backup-code-copied",
-                      }));
+                  ((0, uy.C)(i), (0, ld.P0)({ text: U.intl.string(U.t.mGZ66D), variant: "success" }));
               },
               children: l,
           })

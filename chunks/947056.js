@@ -10,39 +10,39 @@ var i,
     d = n(43990),
     m = n(803842),
     p = n(652215);
-let E = { [p.IWg.MODAL_CAROUSEL_NEXT]: m.$0, [p.IWg.MODAL_CAROUSEL_PREV]: m.$4, [p.IWg.CLOSE_MODAL]: m.cu },
-    h = { [p.IWg.CLOSE_MODAL]: m.cu };
-var f = n(775121),
+let h = { [p.IWg.MODAL_CAROUSEL_NEXT]: m.$0, [p.IWg.MODAL_CAROUSEL_PREV]: m.$4, [p.IWg.CLOSE_MODAL]: m.cu },
+    f = { [p.IWg.CLOSE_MODAL]: m.cu };
+var E = n(775121),
     g = n(775602),
     x = n(625494),
-    C = n(700331),
-    y = n(454290),
-    A = n(548411),
-    j = n(554830),
-    I = n(930125),
-    N = n(338717),
-    S = n(282108),
-    b = n(302031),
+    y = n(700331),
+    A = n(454290),
+    j = n(548411),
+    C = n(554830),
+    N = n(930125),
+    I = n(338717),
+    b = n(282108),
+    v = n(302031),
     T = n(267102),
     O = n(452282),
-    v = n(967758),
-    M = n(415097),
+    M = n(967758),
+    S = n(415097),
     _ = n(17928),
     D = n(676737),
-    k = (((i = {}).DEFAULT = "DEFAULT"), (i.FOCUS_SENSITIVE = "FOCUS_SENSITIVE"), (i.PINNED = "PINNED"), i);
+    P = (((i = {}).DEFAULT = "DEFAULT"), (i.FOCUS_SENSITIVE = "FOCUS_SENSITIVE"), (i.PINNED = "PINNED"), i);
 let L = l.memo(function (e) {
     let { children: t, mode: n = "DEFAULT" } = e,
-        { zoomed: i } = (0, y.Q)(),
+        { zoomed: i } = (0, A.Q)(),
         r = (0, _.bG)([g.Ay], () => g.Ay.keyboardModeEnabled);
     return t(s()(D.E3, { [D.R]: i && !r && "PINNED" !== n, [D.rB]: "FOCUS_SENSITIVE" === n }));
 });
-var P = n(827045);
+var k = n(827045);
 let R = l.memo(function (e) {
     let { items: t, currentIndex: n, children: i } = e,
         a = t[n],
         o = t.length > 1,
         c = (0, T._o)(),
-        u = (0, v.A)(o, { width: a.width, height: a.height }, c),
+        u = (0, M.A)(o, { width: a.width, height: a.height }, c),
         [d, m] = l.useState(0);
     return (
         l.useEffect(() => {
@@ -55,14 +55,14 @@ let R = l.memo(function (e) {
             if (t.length > 1) {
                 let e = t[(0, O.U3)(n - 1, t.length)],
                     i = t[(0, O.U3)(n + 1, t.length)];
-                ((0, M.Z)(e, !0), t.length > 2 && (0, M.Z)(i, !0));
+                ((0, S.Z)(e, !0), t.length > 2 && (0, S.Z)(i, !0));
             }
         }, [n, t]),
         (0, r.jsx)(L, {
-            mode: k.PINNED,
+            mode: P.PINNED,
             children: (e) =>
                 (0, r.jsx)("div", {
-                    className: s()(P.k4, e),
+                    className: s()(k.k4, e),
                     children: (0, r.jsx)(
                         "div",
                         { children: u.width > 0 && u.height > 0 && i(u.width, u.height) },
@@ -73,10 +73,10 @@ let R = l.memo(function (e) {
     );
 });
 var w = n(331322),
-    U = n(87221),
-    V = n(689175),
-    F = n(939249),
-    G = n(607470),
+    V = n(87221),
+    U = n(689175),
+    G = n(939249),
+    F = n(607470),
     X = n(619517),
     W = n(644447),
     z = n(591818),
@@ -97,7 +97,7 @@ let K = l.memo(function (e) {
             return null;
         })(t);
     return null == i && "VIDEO" === t.type
-        ? (0, r.jsx)(G.A, {
+        ? (0, r.jsx)(F.A, {
               src: `${t.url}#t=1`,
               preload: "metadata",
               muted: !0,
@@ -105,13 +105,13 @@ let K = l.memo(function (e) {
           })
         : null == i
           ? null
-          : (0, S.qo)({ type: I.D.GenericMedia, media: t }, n)
+          : (0, b.qo)({ type: N.D.GenericMedia, media: t }, n)
             ? (0, r.jsx)(w.B, {
                   align: "center",
                   justify: "center",
                   className: B.cd,
                   style: { width: 40, height: 40 },
-                  children: (0, r.jsx)(U.D, { size: "sm", color: "white" }),
+                  children: (0, r.jsx)(V.D, { size: "sm", color: "white" }),
               })
             : (0, r.jsx)(X.Ay, {
                   width: t.width ?? 40,
@@ -139,7 +139,7 @@ function Q(e) {
         }, [n]),
         (0, r.jsx)("div", {
             className: s()(B.IL, a),
-            children: (0, r.jsx)(V.Ch, {
+            children: (0, r.jsx)(U.Ch, {
                 orientation: "horizontal",
                 className: s()(B.nV, a),
                 ref: c,
@@ -148,7 +148,7 @@ function Q(e) {
                     let a = l === n,
                         c = a ? H.t["qv/U5V"] : H.t.zviMAG;
                     return (0, r.jsx)(
-                        F.D,
+                        G.D,
                         {
                             id: Z(l),
                             className: s()(B.Qq, { [B.AD]: !a, [B.$1]: 0 === l, [B.HV]: l === t.length - 1 }),
@@ -171,7 +171,7 @@ function $(e) {
     return (0, r.jsx)(J.m, {
         text: i,
         position: "bottom",
-        children: (0, r.jsx)(F.D, {
+        children: (0, r.jsx)(G.D, {
             onClick: (e) => {
                 t(e);
             },
@@ -189,13 +189,13 @@ function et(e) {
             o((e) => !e);
         }, []);
     return n
-        ? (0, r.jsx)(b.Bs.Provider, {
+        ? (0, r.jsx)(v.Bs.Provider, {
               value: a,
               children: (0, r.jsx)(
-                  b.Ay,
+                  v.Ay,
                   {
-                      type: b.Ay.Types.ATTACHMENT,
-                      reason: N.Oc.EXPLICIT_CONTENT,
+                      type: v.Ay.Types.ATTACHMENT,
+                      reason: I.Oc.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: c,
@@ -216,20 +216,20 @@ function en(e) {
         } = e,
         [c, u] = l.useState(i),
         d = l.useRef(i),
-        { zoomed: m, setZoomed: E } = (0, y.Q)(),
-        h = l.useCallback(
+        { zoomed: m, setZoomed: h } = (0, A.Q)(),
+        f = l.useCallback(
             (e) => {
                 var i;
-                (u((e = ((e % (i = t.length)) + i) % i)), (d.current = e), n?.(e), E(!1));
+                (u((e = ((e % (i = t.length)) + i) % i)), (d.current = e), n?.(e), h(!1));
             },
-            [n, t, E],
+            [n, t, h],
         );
     l.useEffect(() => {
         function e() {
-            return h(d.current + 1);
+            return f(d.current + 1);
         }
         function t() {
-            return h(d.current - 1);
+            return f(d.current - 1);
         }
         return (
             x._.subscribe(p.jej.MODAL_CAROUSEL_NEXT, e),
@@ -238,27 +238,27 @@ function en(e) {
                 (x._.unsubscribe(p.jej.MODAL_CAROUSEL_NEXT, e), x._.unsubscribe(p.jej.MODAL_CAROUSEL_PREV, t));
             }
         );
-    }, [h, E]);
-    let f = t[c],
-        g = (0, S.qo)({ type: I.D.GenericMedia, media: f }, a),
-        N = o
+    }, [f, h]);
+    let E = t[c],
+        g = (0, b.qo)({ type: N.D.GenericMedia, media: E }, a),
+        I = o
             ? (e) => {
                   (e.stopPropagation(), e.preventDefault());
               }
-            : () => C.l.markActionPerformed(C.N.CONTEXT_MENU_OPENED),
-        b = t.length > 1;
+            : () => y.l.markActionPerformed(y.N.CONTEXT_MENU_OPENED),
+        v = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(L, {
                 children: (e) =>
-                    b
+                    v
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)($, {
                                       onClick: (e) => {
                                           (e.stopPropagation(), x._.dispatch(p.jej.MODAL_CAROUSEL_PREV));
                                       },
-                                      icon: A.Z,
+                                      icon: j.Z,
                                       tooltip: H.intl.string(H.t.vgfxaA),
                                       className: s()(ee.vi, e),
                                   }),
@@ -266,7 +266,7 @@ function en(e) {
                                       onClick: (e) => {
                                           (e.stopPropagation(), x._.dispatch(p.jej.MODAL_CAROUSEL_NEXT));
                                       },
-                                      icon: j.K,
+                                      icon: C.K,
                                       tooltip: H.intl.string(H.t.XiOHRX),
                                       className: s()(ee.f8, e),
                                   }),
@@ -280,18 +280,18 @@ function en(e) {
                 children: (e, t) =>
                     (0, r.jsx)(et, {
                         isObscured: !m && g,
-                        src: f.url,
+                        src: E.url,
                         children: (n) =>
-                            (0, r.jsx)(z.Ay, { media: f, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: N }),
+                            (0, r.jsx)(z.Ay, { media: E, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: I }),
                     }),
             }),
-            b &&
+            v &&
                 (0, r.jsx)(L, {
                     children: (e) =>
                         (0, r.jsx)(Q, {
                             items: t,
                             currentIndex: c,
-                            onGalleryItemClick: h,
+                            onGalleryItemClick: f,
                             className: e,
                             enabledContentHarmTypeFlags: a,
                         }),
@@ -310,52 +310,52 @@ var ei = n(778712),
     ed = n(734057),
     em = n(935208),
     ep = n(192308),
-    eE = n(408278),
-    eh = n(92259),
-    ef = n(218429),
+    eh = n(408278),
+    ef = n(92259),
+    eE = n(218429),
     eg = n(292801),
-    ex = n(376357),
-    eC = n(32880),
-    ey = n(811893),
-    eA = n(980707),
-    ej = n(477782),
-    eI = n(624479),
-    eN = n(173936),
-    eS = n(922016),
-    eb = n(365199),
+    ex = n(858899),
+    ey = n(32880),
+    eA = n(811893),
+    ej = n(980707),
+    eC = n(477782),
+    eN = n(624479),
+    eI = n(173936),
+    eb = n(922016),
+    ev = n(365199),
     eT = n(50268),
     eO = n(843626),
-    ev = n(294454),
-    eM = n(803316),
+    eM = n(294454),
+    eS = n(803316),
     e_ = n(465856),
     eD = n(885386),
-    ek = n(957565),
+    eP = n(957565),
     eL = n(255438),
-    eP = n(123917),
+    ek = n(123917),
     eR = n(723702),
     ew = n(19575),
-    eU = n(256905),
-    eV = n(610365);
-function eF() {
-    (0, ep.closeModal)(eU.K);
+    eV = n(256905),
+    eU = n(610365);
+function eG() {
+    (0, ep.closeModal)(eV.K);
 }
-function eG(e) {
+function eF(e) {
     let { tooltipText: t, ...n } = e;
     return (0, r.jsx)(J.m, {
         text: t,
         position: "bottom",
         asContainer: !0,
-        children: (0, r.jsx)(eE.K, { variant: "icon-only", "aria-label": t, size: "sm", ...n }),
+        children: (0, r.jsx)(eh.K, { variant: "icon-only", "aria-label": t, size: "sm", ...n }),
     });
 }
 function eX() {
-    let { zoomed: e, setZoomed: t } = (0, y.Q)();
-    return (0, r.jsx)(eG, {
+    let { zoomed: e, setZoomed: t } = (0, A.Q)();
+    return (0, r.jsx)(eF, {
         onClick: () => {
-            (C.l.markActionPerformed(e ? C.N.ZOOM_OUT_BUTTON_PRESSED : C.N.ZOOM_IN_BUTTON_PRESSED), t(!e));
+            (y.l.markActionPerformed(e ? y.N.ZOOM_OUT_BUTTON_PRESSED : y.N.ZOOM_IN_BUTTON_PRESSED), t(!e));
         },
         tooltipText: e ? H.intl.string(H.t.vOFof8) : H.intl.string(H.t.Kt4gZ6),
-        icon: e ? eh.V : ef.r,
+        icon: e ? ef.V : eE.r,
     });
 }
 function eW(e) {
@@ -364,76 +364,76 @@ function eW(e) {
         i = t.sourceMetadata?.identifier,
         a = l.useCallback(() => {
             if (null != n && null != i) {
-                if ((C.l.markActionPerformed(C.N.FORWARD_PRESSED), "embed" === i.type))
-                    return void (0, ev.fO)({
+                if ((y.l.markActionPerformed(y.N.FORWARD_PRESSED), "embed" === i.type))
+                    return void (0, eM.fO)({
                         message: n,
                         source: "media-viewer",
                         forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
-                        onRequestSent: eF,
+                        onRequestSent: eG,
                     });
-                (0, ev.fO)({
+                (0, eM.fO)({
                     message: n,
                     source: "media-viewer",
                     forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
-                    onRequestSent: eF,
+                    onRequestSent: eG,
                 });
             }
         }, [n, i]);
     return null != n && null != i && (0, eO.p)(n)
-        ? (0, r.jsx)(eG, { onClick: a, tooltipText: H.intl.string(H.t.I3ltXO), icon: eg.t })
+        ? (0, r.jsx)(eF, { onClick: a, tooltipText: H.intl.string(H.t.I3ltXO), icon: eg.t })
         : null;
 }
 function ez(e) {
     let { item: t } = e,
         [n, i] = l.useState(!1),
-        a = (0, eM.bc)(t.original, t.url),
+        a = (0, eS.bc)(t.original, t.url),
         s = "VIDEO" === t.type,
         o = "IMAGE" === t.type,
         c = null != t.children,
-        u = (0, eM.e7)(a, t.contentType, t.originalContentType);
+        u = (0, eS.e7)(a, t.contentType, t.originalContentType);
     if (!(s || (eR.isPlatformEmbedded && !c && o && u))) return null;
-    let d = (0, eM.XW)(a, t.contentType, t.originalContentType, eM.N7);
+    let d = (0, eS.XW)(a, t.contentType, t.originalContentType, eS.N7);
     async function m() {
         if (
-            (C.l.markActionPerformed(C.N.SAVE_MEDIA_PRESSED),
-            "VIDEO" === t.type && (0, eP.h)({ href: d }),
+            (y.l.markActionPerformed(y.N.SAVE_MEDIA_PRESSED),
+            "VIDEO" === t.type && (0, ek.h)({ href: d }),
             "IMAGE" === t.type)
         ) {
             i(!0);
             try {
-                let e = await ew.Ay.saveImage(d, t.contentType, eM.N7);
+                let e = await ew.Ay.saveImage(d, t.contentType, eS.N7);
                 if (e === ew._0.ERRORED) throw Error(`DesktopNativeUtils.saveImage errored for ${d}`);
                 e === ew._0.SAVED &&
-                    (C.l.trackMediaViewerImageSaved({ url: d, success: !0 }),
-                    (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.cqpdJW), ex.Ck.SUCCESS)));
+                    (y.l.trackMediaViewerImageSaved({ url: d, success: !0 }),
+                    (0, ex.P0)({ text: H.intl.string(H.t.cqpdJW), variant: "success" }));
             } catch (e) {
-                (C.l.trackMediaViewerImageSaved({ url: d, success: !1 }),
-                    (0, ex.P0)((0, ex.ox)(H.intl.string(H.t["8Ve/S0"]), ex.Ck.FAILURE)));
+                (y.l.trackMediaViewerImageSaved({ url: d, success: !1 }),
+                    (0, ex.P0)({ text: H.intl.string(H.t["8Ve/S0"]), variant: "critical" }));
             } finally {
                 i(!1);
             }
         }
     }
-    return (0, r.jsx)(eG, {
+    return (0, r.jsx)(eF, {
         onClick: m,
         tooltipText: H.intl.string("VIDEO" === t.type ? H.t.JVuuz3 : H.t["S/xNKV"]),
         loading: n,
-        icon: eC.DownloadIcon,
+        icon: ey.DownloadIcon,
     });
 }
 function eq(e) {
     let { item: t } = e,
-        n = (0, eM.bc)(t.original, t.url);
-    if (!(0, eM.fW)(n)) return null;
-    let i = (0, eM.XW)(n, t.contentType, t.originalContentType);
-    return (0, r.jsx)(eG, {
+        n = (0, eS.bc)(t.original, t.url);
+    if (!(0, eS.fW)(n)) return null;
+    let i = (0, eS.XW)(n, t.contentType, t.originalContentType);
+    return (0, r.jsx)(eF, {
         onClick: () => {
-            (C.l.markActionPerformed(C.N.OPEN_LINK_PRESSED),
-                C.l.trackMediaViewerLinkOpened({ href: i }),
-                (0, eP.h)({ href: i }));
+            (y.l.markActionPerformed(y.N.OPEN_LINK_PRESSED),
+                y.l.trackMediaViewerLinkOpened({ href: i }),
+                (0, ek.h)({ href: i }));
         },
         tooltipText: H.intl.string(H.t.q5jLJB),
-        icon: ey.t,
+        icon: eA.t,
     });
 }
 function eH(e) {
@@ -449,7 +449,7 @@ function eH(e) {
             let c = (0, e_.A)(n.identifier),
                 u = (0, eL.Xq)(n.identifier.size / 1e3);
             return (0, r.jsxs)(
-                ej.Dr,
+                eC.Dr,
                 {
                     id: "media-viewer-details",
                     label: H.intl.string(H.t.sqBLa9),
@@ -465,51 +465,51 @@ function eH(e) {
         d = (function (e) {
             let { item: t, canCopyImage: n, canCopyLink: i, src: l } = e;
             async function a() {
-                C.l.markActionPerformed(C.N.COPY_IMAGE_PRESSED);
-                let e = (0, eM.XW)(l, t.contentType, t.originalContentType, eM.N7);
+                y.l.markActionPerformed(y.N.COPY_IMAGE_PRESSED);
+                let e = (0, eS.XW)(l, t.contentType, t.originalContentType, eS.N7);
                 try {
                     (await ew.Ay.copyImage(e, t.originalContentType ?? t.contentType),
-                        C.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
-                        (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.bhUpvC), ex.Ck.SUCCESS)));
+                        y.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
+                        (0, ex.P0)({ text: H.intl.string(H.t.bhUpvC), variant: "success" }));
                 } catch (t) {
-                    (C.l.trackMediaViewerImageCopied({ url: e, success: !1 }),
-                        (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.PTPbjx), ex.Ck.FAILURE)));
+                    (y.l.trackMediaViewerImageCopied({ url: e, success: !1 }),
+                        (0, ex.P0)({ text: H.intl.string(H.t.PTPbjx), variant: "critical" }));
                 }
             }
-            return (0, r.jsxs)(ej.rX, {
+            return (0, r.jsxs)(eC.rX, {
                 children: [
                     n &&
                         (0, r.jsx)(
-                            ej.Dr,
+                            eC.Dr,
                             {
                                 label: H.intl.string(H.t.tvUqWn),
                                 id: "media-viewer-copy-image",
-                                icon: eI.CopyIcon,
-                                leadingAccessory: { type: "icon", icon: eI.CopyIcon },
+                                icon: eN.CopyIcon,
+                                leadingAccessory: { type: "icon", icon: eN.CopyIcon },
                                 action: a,
                             },
                             "media-viewer-copy-image",
                         ),
                     i &&
                         (0, r.jsx)(
-                            ej.Dr,
+                            eC.Dr,
                             {
                                 id: "media-viewer-copy-link",
                                 label: H.intl.string(H.t["92CPQ+"]),
-                                icon: eN.LinkIcon,
-                                leadingAccessory: { type: "icon", icon: eN.LinkIcon },
+                                icon: eI.LinkIcon,
+                                leadingAccessory: { type: "icon", icon: eI.LinkIcon },
                                 action: function () {
-                                    C.l.markActionPerformed(C.N.COPY_LINK_PRESSED);
-                                    let e = (0, eM.XW)(l, t.contentType, t.originalContentType);
-                                    (0, ek.C)(
+                                    y.l.markActionPerformed(y.N.COPY_LINK_PRESSED);
+                                    let e = (0, eS.XW)(l, t.contentType, t.originalContentType);
+                                    (0, eP.C)(
                                         e,
                                         () => {
-                                            (C.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
-                                                (0, ex.P0)((0, ex.ox)(H.intl.string(H.t["L/PwZf"]), ex.Ck.SUCCESS)));
+                                            (y.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
+                                                (0, ex.P0)({ text: H.intl.string(H.t["L/PwZf"]), variant: "success" }));
                                         },
                                         () => {
-                                            (C.l.trackMediaViewerLinkCopied({ href: e, success: !1 }),
-                                                (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.uVV00B), ex.Ck.FAILURE)));
+                                            (y.l.trackMediaViewerLinkCopied({ href: e, success: !1 }),
+                                                (0, ex.P0)({ text: H.intl.string(H.t.uVV00B), variant: "critical" }));
                                         },
                                     );
                                 },
@@ -519,7 +519,7 @@ function eH(e) {
                 ],
             });
         })({ item: t, canCopyImage: n, canCopyLink: i, src: s });
-    return (0, r.jsxs)(eA.W, {
+    return (0, r.jsxs)(ej.W, {
         "data-menu-migrated": !0,
         navId: "image-menu",
         "aria-label": "placeholder",
@@ -530,11 +530,9 @@ function eH(e) {
 }
 function eB(e, t, n) {
     let i = l.useCallback((e) => {
-        (0, ek.C)(e, () =>
-            (0, ex.P0)({ message: H.intl.string(H.t.mGZ66D), type: ex.Ck.SUCCESS, id: "media-viewer-detail-copied" }),
-        );
+        (0, eP.C)(e, () => (0, ex.P0)({ text: H.intl.string(H.t.mGZ66D), variant: "success" }));
     }, []);
-    return (l) => (null != l ? (0, r.jsx)(ej.Dr, { action: () => i(l), label: e, subtext: l, id: t, ...n }, t) : null);
+    return (l) => (null != l ? (0, r.jsx)(eC.Dr, { action: () => i(l), label: e, subtext: l, id: t, ...n }, t) : null);
 }
 function eZ(e) {
     let { item: t } = e,
@@ -544,30 +542,30 @@ function eZ(e) {
         o = "IMAGE" === t.type,
         c = null == t.children,
         u = !t.animated,
-        d = (0, eM.bc)(t.original, t.url),
-        m = (0, eM.PK)(d, t.contentType, t.originalContentType),
+        d = (0, eS.bc)(t.original, t.url),
+        m = (0, eS.PK)(d, t.contentType, t.originalContentType),
         p = o && c && u && m,
-        E = (0, eM.fW)(d);
-    return s || p || E || t.sourceMetadata?.identifier?.type === "attachment"
-        ? (0, r.jsx)(eS.Y, {
+        h = (0, eS.fW)(d);
+    return s || p || h || t.sourceMetadata?.identifier?.type === "attachment"
+        ? (0, r.jsx)(eb.Y, {
               targetElementRef: n,
               shouldShow: i,
               align: "left",
               position: "top",
               spacing: 18,
               onRequestClose: () => a(!1),
-              animation: eS.Y.Animation.NONE,
+              animation: eb.Y.Animation.NONE,
               renderPopout: () =>
-                  (0, r.jsx)(eH, { item: t, canCopyImage: p, canCopyLink: E, onClose: () => a(!1), src: d }),
+                  (0, r.jsx)(eH, { item: t, canCopyImage: p, canCopyLink: h, onClose: () => a(!1), src: d }),
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(eG, {
+                  return (0, r.jsx)(eF, {
                       buttonRef: n,
                       tooltipText: H.intl.string(H.t["UKOtz+"]),
                       onClick: () => {
-                          (C.l.markActionPerformed(C.N.MORE_BUTTON_PRESSED), a(!i));
+                          (y.l.markActionPerformed(y.N.MORE_BUTTON_PRESSED), a(!i));
                       },
-                      icon: eb.MoreHorizontalIcon,
+                      icon: ev.MoreHorizontalIcon,
                   });
               },
           })
@@ -583,11 +581,11 @@ let eK = l.memo(function (e) {
     return (
         ("IMAGE" === t.type || !n) &&
         (0, r.jsx)(L, {
-            mode: k.FOCUS_SENSITIVE,
+            mode: P.FOCUS_SENSITIVE,
             children: (e) =>
                 (0, r.jsxs)("div", {
                     ref: a,
-                    className: s()(eV.uu, e),
+                    className: s()(eU.uu, e),
                     onClick: (e) => e.stopPropagation(),
                     onMouseLeave: o,
                     children: [
@@ -643,7 +641,7 @@ function eY(e) {
             null != l && (0, r.jsx)(eJ, { message: l }),
             (0, r.jsx)(eK, { item: t, hideMediaOptions: n }),
             (0, r.jsx)(L, {
-                mode: k.PINNED,
+                mode: P.PINNED,
                 children: (e) =>
                     (0, r.jsx)($, {
                         onClick: i,
@@ -667,19 +665,19 @@ function e1(e) {
             items: i,
             startingIndex: a,
             enabledContentHarmTypeFlags: m,
-            shouldHideMediaOptions: A = !1,
-            transitionState: j,
-            ...I
+            shouldHideMediaOptions: j = !1,
+            transitionState: C,
+            ...N
         } = e,
-        [N, S] = l.useState(a ?? 0),
-        [b, T] = l.useState(!1),
-        [O, v] = (0, c.z)(() => ({
+        [I, b] = l.useState(a ?? 0),
+        [v, T] = l.useState(!1),
+        [O, M] = (0, c.z)(() => ({
             scale: g.Ay.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
             config: { friction: 30, tension: 300 },
         })),
-        M = l.useRef(null);
+        S = l.useRef(null);
     l.useEffect(() => {
         if (null != t)
             return (
@@ -691,41 +689,41 @@ function e1(e) {
     }, [t]);
     let _ = l.useRef(null);
     (l.useEffect(() => {
-        if (j !== _.current)
-            switch (((_.current = j), j)) {
+        if (C !== _.current)
+            switch (((_.current = C), C)) {
                 case u.ip.ENTERING:
                     e0(O.scale, 1);
                     break;
                 case u.ip.EXITING:
                     g.Ay.useReducedMotion || (e0(O.x, 0), e0(O.y, 0), e0(O.scale, 0.9));
             }
-    }, [j, O]),
-        j === u.ip.HIDDEN && b && (T(!1), O.x.set(0), O.y.set(0), O.scale.set(1)),
+    }, [C, O]),
+        C === u.ip.HIDDEN && v && (T(!1), O.x.set(0), O.y.set(0), O.scale.set(1)),
         l.useEffect(() => {
             function e() {
-                (f.A.disable(), j === u.ip.ENTERED ? f.A.enableTemp(E) : f.A.enableTemp(h));
+                (E.A.disable(), C === u.ip.ENTERED ? E.A.enableTemp(h) : E.A.enableTemp(f));
             }
             function t() {
-                f.A.disableTemp();
+                E.A.disableTemp();
             }
-            (j === u.ip.ENTERED && (f.A.disable(), f.A.enableTemp(E)),
-                j === u.ip.HIDDEN && (f.A.disable(), f.A.enableTemp(h)));
-            let n = M.current?.ownerDocument?.defaultView;
+            (C === u.ip.ENTERED && (E.A.disable(), E.A.enableTemp(h)),
+                C === u.ip.HIDDEN && (E.A.disable(), E.A.enableTemp(f)));
+            let n = S.current?.ownerDocument?.defaultView;
             return (
                 n?.addEventListener("focus", e),
                 n?.addEventListener("blur", t),
                 () => {
-                    (n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), f.A.disableTemp());
+                    (n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), E.A.disableTemp());
                 }
             );
-        }, [j]));
+        }, [C]));
     let D = l.useCallback(
             (e) => {
-                (S(e), n?.(e), C.l.markActionPerformed(C.N.SELECTED_ITEM_CHANGE));
+                (b(e), n?.(e), y.l.markActionPerformed(y.N.SELECTED_ITEM_CHANGE));
             },
             [n],
         ),
-        k = l.useMemo(
+        P = l.useMemo(
             () => ({
                 scale: O.scale,
                 x: O.x,
@@ -736,12 +734,12 @@ function e1(e) {
                 setOffset(e, t, n) {
                     (e0(O.x, e, n?.immediate), e0(O.y, t, n?.immediate));
                 },
-                zoomed: b,
+                zoomed: v,
                 setZoomed(e) {
                     (T(e), e0(O.scale, e ? 2.5 : 1), e || (e0(O.x, 0), e0(O.y, 0)));
                 },
             }),
-            [b, O],
+            [v, O],
         );
     return (0, r.jsx)(d.N, {
         theme: p.NJ8.ONYX,
@@ -750,25 +748,25 @@ function e1(e) {
                 "data-migration-pending": !0,
                 hideShadow: !0,
                 className: s()(e$.O, e),
-                transitionState: j,
-                ...I,
+                transitionState: C,
+                ...N,
                 size: o.rI.DYNAMIC,
                 animation: o.WM.SUBTLE,
                 fullscreenOnMobile: !1,
                 onClick: t,
                 "aria-label": H.intl.string(H.t.AMTX3j),
                 parentComponent: "MediaViewerModal",
-                children: (0, r.jsxs)(y.f.Provider, {
-                    value: k,
+                children: (0, r.jsxs)(A.f.Provider, {
+                    value: P,
                     children: [
-                        (0, r.jsx)(eY, { item: i[N], hideMediaOptions: A, onClose: t }),
-                        (0, r.jsx)("div", { style: { display: "none" }, ref: M }),
+                        (0, r.jsx)(eY, { item: i[I], hideMediaOptions: j, onClose: t }),
+                        (0, r.jsx)("div", { style: { display: "none" }, ref: S }),
                         (0, r.jsx)(en, {
                             items: i,
-                            startIndex: N,
+                            startIndex: I,
                             onIndexChange: D,
                             enabledContentHarmTypeFlags: m,
-                            shouldHideMediaOptions: A,
+                            shouldHideMediaOptions: j,
                         }),
                     ],
                 }),

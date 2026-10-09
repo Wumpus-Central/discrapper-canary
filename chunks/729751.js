@@ -1,128 +1,128 @@
-(a.d(n, { default: () => _ }), a(321073));
-var l = a(477900),
-    t = a(582128),
+(a.d(t, { default: () => _ }), a(321073));
+var n = a(477900),
+    l = a(582128),
     i = a(834730),
-    r = a(376357),
+    r = a(858899),
     s = a(173936),
-    o = a(148494),
-    c = a(914718),
+    c = a(148494),
+    o = a(914718),
     d = a(451909),
     m = a(378570),
     u = a(446244),
     p = a(734057),
     v = a(957565),
     x = a(403362),
-    C = a(349085),
-    h = a(174861),
-    g = a(705285),
+    h = a(349085),
+    g = a(174861),
+    f = a(705285),
     k = a(381941),
-    f = a(660183),
-    w = a(511445);
+    w = a(660183),
+    C = a(511445);
 function N(e) {
-    let { server: n } = e,
-        a = (0, C.A)(n.gameId, "cover") ?? n.coverUrl;
-    return (0, l.jsxs)("div", {
-        className: w.sq,
+    let { server: t } = e,
+        a = (0, h.A)(t.gameId, "cover") ?? t.coverUrl;
+    return (0, n.jsxs)("div", {
+        className: C.sq,
         children: [
-            (0, l.jsxs)("div", {
-                className: w.kx,
+            (0, n.jsxs)("div", {
+                className: C.kx,
                 children: [
-                    (0, l.jsx)(i.E, {
+                    (0, n.jsx)(i.E, {
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: n.serverName,
+                        children: t.serverName,
                     }),
-                    (0, l.jsx)(i.E, {
+                    (0, n.jsx)(i.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
                         lineClamp: 1,
-                        children: `${n.gameName}  \u{2022}  ${n.planName}`,
+                        children: `${t.gameName}  \u{2022}  ${t.planName}`,
                     }),
-                    (0, l.jsx)(i.E, {
+                    (0, n.jsx)(i.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
                         lineClamp: 1,
-                        children: `${n.serverIp}  \u{2022}  ${n.location}`,
+                        children: `${t.serverIp}  \u{2022}  ${t.location}`,
                     }),
                 ],
             }),
             null != a &&
-                (0, l.jsx)("div", {
-                    className: w.wP,
-                    children: (0, l.jsx)("img", { className: w.N4, src: a, alt: "" }),
+                (0, n.jsx)("div", {
+                    className: C.wP,
+                    children: (0, n.jsx)("img", { className: C.N4, src: a, alt: "" }),
                 }),
         ],
     });
 }
 function _(e) {
-    let { server: n, source: a, onClose: i, ...C } = e,
-        w = t.useMemo(() => {
+    let { server: t, source: a, onClose: i, ...h } = e,
+        C = l.useMemo(() => {
             let e = {
-                v: h.Yw,
-                name: n.serverName,
-                game_id: n.gameId ?? "",
-                sku_id: n.instance.planId,
-                plan_name: n.planName,
-                image_url: n.coverUrl ?? null,
-                region_name: n.location,
-                provider: n.instance.providerType ?? null,
-                ip: n.instance.serverIP ?? null,
-                port: n.instance.port ?? null,
+                v: g.Yw,
+                name: t.serverName,
+                game_id: t.gameId ?? "",
+                sku_id: t.instance.planId,
+                plan_name: t.planName,
+                image_url: t.coverUrl ?? null,
+                region_name: t.location,
+                provider: t.instance.providerType ?? null,
+                ip: t.instance.serverIP ?? null,
+                port: t.instance.port ?? null,
                 generated_at: Date.now(),
             };
-            return (0, h.gG)(e);
-        }, [n]),
-        _ = t.useCallback(
-            async (e, l, t) => {
-                let { withMessage: s, transitionToDestination: c, closeAfterSend: v } = l;
-                t(!0);
+            return (0, g.gG)(e);
+        }, [t]),
+        _ = l.useCallback(
+            async (e, n, l) => {
+                let { withMessage: s, transitionToDestination: o, closeAfterSend: v } = n;
+                l(!0);
                 try {
-                    let l = (await Promise.all(e.map(u.pk))).filter(x.Vq);
-                    if (0 === l.length) return void t(!1);
+                    let n = (await Promise.all(e.map(u.pk))).filter(x.Vq);
+                    if (0 === n.length) return void l(!1);
                     v && i();
-                    let C = null != s && "" !== s,
-                        h = C
-                            ? `${w}
+                    let h = null != s && "" !== s,
+                        g = h
+                            ? `${C}
 
 ${s}`
-                            : w,
+                            : C,
                         N = [];
-                    for (let e of l) {
-                        let n = p.A.getChannel(e);
-                        null != n &&
-                            (await o.A.sendMessage(n.id, d.Ay.parse(n, h), !1, { location: k.Hx.GAME_SERVER_SHOP }),
-                            N.push(n));
+                    for (let e of n) {
+                        let t = p.A.getChannel(e);
+                        null != t &&
+                            (await c.A.sendMessage(t.id, d.Ay.parse(t, g), !1, { location: k.Hx.GAME_SERVER_SHOP }),
+                            N.push(t));
                     }
-                    ((0, g.iu)({ server: n, channels: N, hasContextMessage: C, source: a }),
-                        (0, r.P0)((0, r.ox)(f.intl.string(f.t.kwmYkt), r.Ck.SUCCESS)),
-                        c && null != l[0] && (0, m.iN)(l[0], { openTextInVoiceIfVoiceChannel: !0 }));
+                    ((0, f.iu)({ server: t, channels: N, hasContextMessage: h, source: a }),
+                        (0, r.P0)({ text: w.intl.string(w.t.kwmYkt), variant: "success" }),
+                        o && null != n[0] && (0, m.iN)(n[0], { openTextInVoiceIfVoiceChannel: !0 }));
                 } catch (e) {
-                    (0, r.P0)((0, r.ox)(f.intl.string(f.t.iufib1), r.Ck.FAILURE));
+                    (0, r.P0)({ text: w.intl.string(w.t.iufib1), variant: "critical" });
                 } finally {
-                    t(!1);
+                    l(!1);
                 }
             },
-            [i, w, n, a],
+            [i, C, t, a],
         ),
-        j = t.useMemo(
+        j = l.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        (0, v.C)(w, () => (0, r.P0)((0, r.ox)(f.intl.string(f.t["L/PwZf"]), r.Ck.SUCCESS)));
+                        (0, v.C)(C, () => (0, r.P0)({ text: w.intl.string(w.t["L/PwZf"]), variant: "success" }));
                     },
                     icon: s.LinkIcon,
                 },
             ],
-            [w],
+            [C],
         );
-    return (0, l.jsx)(c.ForwardModal, {
-        ...C,
+    return (0, n.jsx)(o.ForwardModal, {
+        ...h,
         onClose: i,
         source: a,
-        customPreview: (0, l.jsx)(N, { server: n }),
+        customPreview: (0, n.jsx)(N, { server: t }),
         customSendHandler: _,
         additionalActions: j,
     });

@@ -10,7 +10,7 @@ var s,
     S = n(235986),
     d = n(278941),
     u = n(665909),
-    _ = n(376357),
+    _ = n(858899),
     A = n(834730),
     E = n(821609),
     x = n(939249),
@@ -43,7 +43,7 @@ let U = function (t) {
                         (e(), (0, b.r)({ text: I.intl.string(I.t.FhgVWi), id: "safety-tools-report-false-positive" }));
                     })
                     .catch(() => {
-                        (r(!1), (0, _.P0)((0, _.ox)(I.intl.string(I.t.R0RpRX), _.Ck.FAILURE)));
+                        (r(!1), (0, _.P0)({ text: I.intl.string(I.t.R0RpRX), variant: "critical" }));
                     }));
         }, [n, e, s]);
     return (0, i.jsxs)(R, {
@@ -71,12 +71,12 @@ let U = function (t) {
         ],
     });
 };
-var k = n(17928),
-    y = n(661531),
-    N = n(320448),
-    Y = n(192308),
-    f = n(49229),
-    v = n(975807),
+var y = n(17928),
+    N = n(661531),
+    Y = n(320448),
+    k = n(192308),
+    v = n(49229),
+    f = n(975807),
     P = n(928658),
     M = n(426190),
     B = n(662502),
@@ -126,7 +126,7 @@ function Z(t) {
                         : null,
                 ],
             }),
-            (0, i.jsx)(N._, { size: "md", color: y.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, i.jsx)(Y._, { size: "md", color: N.A.colors.INTERACTIVE_TEXT_DEFAULT }),
         ],
     });
 }
@@ -136,8 +136,8 @@ let H = function (t) {
         c = (0, M.z)(),
         S = (0, D.W)(s),
         _ = null != (0, d.e)(s),
-        A = (0, k.bG)([W.A], () => W.A.isIgnored(e), [e]),
-        E = (0, k.bG)([W.A], () => W.A.isBlocked(e), [e]),
+        A = (0, y.bG)([W.A], () => W.A.isIgnored(e), [e]),
+        E = (0, y.bG)([W.A], () => W.A.isBlocked(e), [e]),
         x = l.useCallback(
             (t) => {
                 (0, u._$)({ channelId: s, warningId: r, senderId: e, warningType: a, cta: t, isNudgeWarning: _ });
@@ -145,13 +145,13 @@ let H = function (t) {
             [s, r, e, a, _],
         ),
         g = l.useCallback(() => {
-            ((0, Y.closeModal)(z.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM));
+            ((0, k.closeModal)(z.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM));
         }, [x]),
         m = l.useCallback(() => {
-            (f.A.unblockUser(e, { location: z.Ht }, s), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK));
+            (v.A.unblockUser(e, { location: z.Ht }, s), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK));
         }, [e, s, x]),
         O = l.useCallback(() => {
-            ((0, Y.closeModal)(z.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM));
+            ((0, k.closeModal)(z.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM));
         }, [x]),
         h = l.useMemo(
             () => [
@@ -163,8 +163,8 @@ let H = function (t) {
                     disabled: E,
                     onPress: () => {
                         A
-                            ? (f.A.unignoreUser(e, z.cb, s), x(u.Wm.USER_SAFETY_TOOLS_UNIGNORE))
-                            : (f.A.ignoreUser(e, z.cb, s), x(u.Wm.USER_SAFETY_TOOLS_IGNORE));
+                            ? (v.A.unignoreUser(e, z.cb, s), x(u.Wm.USER_SAFETY_TOOLS_UNIGNORE))
+                            : (v.A.ignoreUser(e, z.cb, s), x(u.Wm.USER_SAFETY_TOOLS_IGNORE));
                     },
                 },
                 {
@@ -176,7 +176,7 @@ let H = function (t) {
                     onPress: () => {
                         E
                             ? (m(), B.A.showUnblockSuccessToast(e, s))
-                            : (0, Y.openModalLazy)(async () => {
+                            : (0, k.openModalLazy)(async () => {
                                   let { default: t } = await n.e("784938").then(n.bind(n, 371185));
                                   return (n) => {
                                       let { transitionState: l, onClose: r } = n;
@@ -201,7 +201,7 @@ let H = function (t) {
                     subTitle: I.intl.string(I.t["0tydOa"]),
                     buttonText: I.intl.string(I.t.X27yhD),
                     onPress: () => {
-                        ((0, Y.closeModal)(z.V), (0, P.jJ)(S), x(u.Wm.USER_SAFETY_TOOLS_REPORT));
+                        ((0, k.closeModal)(z.V), (0, P.jJ)(S), x(u.Wm.USER_SAFETY_TOOLS_REPORT));
                     },
                 },
             ],
@@ -213,7 +213,7 @@ let H = function (t) {
                     subTitle: I.intl.string(I.t.iNcsrW),
                     buttonText: I.intl.string(I.t.rK4Gqv),
                     onPress: () => {
-                        ((0, v.A)(z.x7), x(u.Wm.USER_SAFETY_TOOLS_CTL));
+                        ((0, f.A)(z.x7), x(u.Wm.USER_SAFETY_TOOLS_CTL));
                     },
                 },
                 e = {
@@ -221,7 +221,7 @@ let H = function (t) {
                     subTitle: I.intl.string(I.t.g5uwC5),
                     buttonText: I.intl.string(I.t.rK4Gqv),
                     onPress: () => {
-                        ((0, v.A)(z.jR), x(u.Wm.USER_SAFETY_TOOLS_NO_FILTR));
+                        ((0, f.A)(z.jR), x(u.Wm.USER_SAFETY_TOOLS_NO_FILTR));
                     },
                 },
                 n = {
@@ -229,7 +229,7 @@ let H = function (t) {
                     subTitle: I.intl.string(I.t.S9O1ZZ),
                     buttonText: I.intl.string(I.t.rK4Gqv),
                     onPress: () => {
-                        ((0, v.A)(z.CL), x(u.Wm.USER_SAFETY_TOOLS_THROUGHLINE));
+                        ((0, f.A)(z.CL), x(u.Wm.USER_SAFETY_TOOLS_THROUGHLINE));
                     },
                 };
             return [
@@ -239,7 +239,7 @@ let H = function (t) {
                     subTitle: I.intl.string(I.t.LLBnNk),
                     buttonText: I.intl.string(I.t.rzvzyZ),
                     onPress: () => {
-                        ((0, w.A)({ source: K.y.KEYBIND, onClose: Y.closeAllModals }),
+                        ((0, w.A)({ source: K.y.KEYBIND, onClose: k.closeAllModals }),
                             x(u.Wm.USER_SAFETY_TOOLS_VIBING_WUMPUS));
                     },
                 },

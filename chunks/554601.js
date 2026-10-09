@@ -437,7 +437,7 @@ function eS(e) {
     });
 }
 var eT = n(991690),
-    eL = n(376357),
+    eL = n(858899),
     eb = n(173936),
     eR = n(192308),
     eO = n(365199),
@@ -510,7 +510,7 @@ function eQ(e) {
             (0, r.jsx)(L.D, {
                 onClick: () => {
                     let e = C ? (0, ek.W)({ applicationId: t.id, referrerId: N?.id }) : (0, ek.V)({ id: t.id, ...d });
-                    ((0, eG.C)(e, () => (0, eL.P0)((0, eL.ox)(et.intl.string(et.t["L/PwZf"]), eL.Ck.SUCCESS))),
+                    ((0, eG.C)(e, () => (0, eL.P0)({ text: et.intl.string(et.t["L/PwZf"]), variant: "success" })),
                         eF.default.track(es.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: t.id,
                             source: c,

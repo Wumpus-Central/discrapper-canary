@@ -3,12 +3,12 @@
     KE: () => O,
     Kx: () => b,
     Li: () => d,
-    Lv: () => $,
+    Lv: () => C,
     Ni: () => F,
     RN: () => u,
     aL: () => m,
-    ds: () => I,
-    eg: () => C,
+    ds: () => G,
+    eg: () => $,
     pd: () => R,
 }),
     i(321073),
@@ -18,7 +18,7 @@
 var n,
     t,
     r = i(582128);
-if (588245 != i.j) var l = i(376357);
+if (588245 != i.j) var l = i(858899);
 var o = i(626584),
     s = i(59318),
     _ = i(597404),
@@ -86,10 +86,10 @@ var b =
           t)
         : null;
 function F(e) {
-    (0, l.P0)((0, l.ox)(e, l.Ck.FAILURE));
+    (0, l.P0)({ text: e, variant: "critical" });
 }
 function w(e) {
-    (0, l.P0)((0, l.ox)(e, l.Ck.SUCCESS));
+    (0, l.P0)({ text: e, variant: "success" });
 }
 function E(e, a) {
     let i = new FileReader();
@@ -215,7 +215,7 @@ async function S(e, a) {
             }
         }
 }
-async function C(e) {
+async function $(e) {
     let a = {
         collectionFiles: [],
         avatarDecorationFiles: [],
@@ -244,7 +244,7 @@ async function C(e) {
         a
     );
 }
-function $(e) {
+function C(e) {
     return new Promise((a, i) => {
         let n = new window.Image(),
             t = setTimeout(() => i(Error("Timed out measuring image")), 15e3);
@@ -285,7 +285,7 @@ async function M(e, a, i) {
             t.map(async (e) => {
                 let { layer: a } = e;
                 try {
-                    return { layer: a, dims: await $(r[a.id]) };
+                    return { layer: a, dims: await C(r[a.id]) };
                 } catch (e) {
                     return (f.error(`Failed to measure preview layer ${a.id}:`, e), null);
                 }
@@ -294,7 +294,7 @@ async function M(e, a, i) {
     ).filter((e) => null != e);
     return { key: e, previewSrc: n, layers: l, layerSrcByLayerId: r, ...(0, p.l)(o) };
 }
-function I() {
+function G() {
     let [e, a] = r.useState(() => ({
             collectionFiles: [],
             avatarDecorationFiles: [],
@@ -305,7 +305,7 @@ function I() {
         { upsertCollectionAsset: i, upsertAvatarDecorationAsset: n, upsertProfileFrame: t } = (0, c.JE)(),
         l = r.useCallback(
             async (e) => {
-                let r = await C(e);
+                let r = await $(e);
                 (r.collectionFiles.forEach((e) => {
                     E(e, (e) => {
                         let a = R(e);

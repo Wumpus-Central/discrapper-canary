@@ -1,5 +1,5 @@
 n.d(t, { A: () => S });
-var i = n(376357),
+var i = n(858899),
     r = n(73153),
     a = n(574172),
     s = n(869146),
@@ -120,6 +120,6 @@ let m = !1,
         showRPCDisconnectErrorUI(e) {
             let { code: t, message: n } = e,
                 r = `${T.intl.formatToPlainString(T.t.hbiAO6, { code: t })}: ${n}`;
-            (0, i.P0)((0, i.ox)(r, i.Ck.FAILURE));
+            (0, i.P0)({ text: r, variant: "critical" });
         }
     })();

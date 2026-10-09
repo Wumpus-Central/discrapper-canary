@@ -2,7 +2,7 @@ t.d(n, { ExperimentEmbed: () => v });
 var l = t(477900),
     r = t(582128),
     a = t(17928),
-    i = t(376357),
+    i = t(858899),
     o = t(939249),
     s = t(173936),
     c = t(834730),
@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(776078),
     m = t(821609),
     h = t(280450),
-    p = t(287809),
-    g = t(957565),
+    g = t(287809),
+    p = t(957565),
     f = t(100392),
     A = t(102609),
     y = t(271478),
@@ -23,9 +23,7 @@ var l = t(477900),
 function k(e) {
     let { url: n } = e,
         t = r.useCallback(() => {
-            (0, g.C)(n, () =>
-                (0, i.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: i.Ck.SUCCESS }),
-            );
+            (0, p.C)(n, () => (0, i.P0)({ text: "Copied experiment link", variant: "success" }));
         }, [n]);
     return (0, l.jsx)(o.D, {
         className: C.wp,
@@ -38,24 +36,24 @@ function v(e) {
         t = (0, f.OL)(n),
         i = (0, f.Kb)(n),
         { experiments: o, overridesInfo: s } = (0, j.hI)(),
-        { experiments: g, overridesInfo: v } = (0, x.op)(),
-        N = r.useMemo(() => (null == t ? null : null != o[t] ? o[t] : g[t]), [o, g, t]),
-        S = r.useMemo(() => {
+        { experiments: p, overridesInfo: v } = (0, x.op)(),
+        N = r.useMemo(() => (null == t ? null : null != o[t] ? o[t] : p[t]), [o, p, t]),
+        b = r.useMemo(() => {
             if (null == t);
             else if (null != s[t]) return s[t];
             else if (null != v[t]) return v[t];
         }, [s, v, t]),
-        b = h.default.getId(),
-        T = (0, E.Fm)(N, b),
+        S = h.default.getId(),
+        T = (0, E.Fm)(N, S),
         L = r.useMemo(() => (0, f.GI)(N, T), [T, N]),
-        M = (0, a.bG)([p.default], () => {
-            let e = p.default.getCurrentUser();
+        M = (0, a.bG)([g.default], () => {
+            let e = g.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         });
     if (null == t || null == N) return null;
     let _ = (0, f.hp)(N).find((e) => e.value === i),
         P = null != _ ? I.Ps.EXPERIMENT_TREATMENT : I.Ps.EXPERIMENT,
-        R = null != S && null != _ && S.variantId === _.value,
+        R = null != b && null != _ && b.variantId === _.value,
         O = (0, l.jsx)(k, { url: n }),
         w = null;
     return (P === I.Ps.EXPERIMENT_TREATMENT && null != _
@@ -106,7 +104,7 @@ function v(e) {
                         })
                       : (0, l.jsx)("div", {
                             className: C.uh,
-                            children: (0, l.jsx)(y.g, { experiment: N, experimentId: t, overrideInfo: S }),
+                            children: (0, l.jsx)(y.g, { experiment: N, experimentId: t, overrideInfo: b }),
                         }),
               ],
           })

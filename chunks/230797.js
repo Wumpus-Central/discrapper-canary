@@ -392,7 +392,7 @@ var eT = n(284009),
     ek = n(34188),
     eR = n(408278),
     eL = n(173936),
-    eP = n(376357),
+    eP = n(858899),
     eM = n(939249),
     eD = n(996759),
     eO = n(800342),
@@ -674,7 +674,7 @@ function e1(e) {
                             size: "sm",
                             onClick: () => {
                                 (0, ez.C)(l, () => {
-                                    ((0, eP.P0)((0, eP.ox)(J.intl.string(J.t["L/PwZf"]), eP.Ck.SUCCESS)), o());
+                                    ((0, eP.P0)({ text: J.intl.string(J.t["L/PwZf"]), variant: "success" }), o());
                                 });
                             },
                             variant: "icon-only",

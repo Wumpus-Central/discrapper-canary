@@ -7,14 +7,14 @@ n.d(t, {
     _D: () => I._,
     I0: () => y.I,
     s7: () => H,
-    Lo: () => h,
+    Lo: () => p,
     me: () => N,
     Vm: () => l.Vm,
     ec: () => A,
     a6: () => C.a6,
     JW: () => C.JW,
     vW: () => B.v,
-    q7: () => p,
+    q7: () => h,
     _P: () => y._,
     f7: () => C.f7,
     oo: () => C.oo,
@@ -60,7 +60,7 @@ function f(e) {
         ],
     });
 }
-function h(e) {
+function p(e) {
     let { price: t, strikethrough: n = !1 } = e;
     return (0, a.jsx)(m.E, {
         tag: "span",
@@ -70,7 +70,7 @@ function h(e) {
         children: t,
     });
 }
-function p(e) {
+function h(e) {
     let { className: t, headingComponent: n, selection: l, onChange: s, planOptions: o, planOptionsComponents: c } = e,
         u = r.useCallback((e) => s([...e][0]), [s]);
     return (0, a.jsxs)("div", {
@@ -192,7 +192,7 @@ var y = n(596034),
     D = n(939249),
     S = n(307301),
     P = n(661531),
-    R = n(376357),
+    R = n(858899),
     O = n(459357),
     L = n(99696),
     k = n(580630),
@@ -225,11 +225,11 @@ function U(e) {
                       initialCode: i ?? "",
                       onComplete: (e) => {
                           let n = (0, k.$g)(e.amount, e.currency);
-                          ((0, R.P0)(
-                              (0, R.ox)(b.intl.formatToPlainString(w.default["66Wi6B"], { price: n }), R.Ck.SUCCESS, {
-                                  position: R.xJ.TOP,
-                              }),
-                          ),
+                          ((0, R.P0)({
+                              text: b.intl.formatToPlainString(w.default["66Wi6B"], { price: n }),
+                              variant: "success",
+                              position: "top",
+                          }),
                               t?.(e));
                       },
                       onClose: n,

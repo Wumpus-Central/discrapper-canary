@@ -1,6 +1,6 @@
 n.d(t, { A: () => g });
 var i = n(582128),
-    r = n(376357),
+    r = n(858899),
     l = n(887725),
     a = n(660183);
 function s(e) {
@@ -20,7 +20,7 @@ function s(e) {
                 return { text: a.intl.string(l.default.BLKD4B), ok: !1 };
         }
     })(e);
-    (0, r.P0)((0, r.ox)(t, n ? r.Ck.SUCCESS : r.Ck.FAILURE));
+    (0, r.P0)({ text: t, variant: n ? "success" : "critical" });
 }
 var o = n(51906),
     c = n(636537),

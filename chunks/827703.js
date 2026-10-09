@@ -1980,7 +1980,7 @@ let tU = { name: "Expressive Progress", component: tv.A, id: "expressive-progres
             tw,
         ],
     };
-var tG = l(376357),
+var tG = l(858899),
     tH = l(750338),
     t$ = l(713271),
     tW = l(639031),
@@ -2009,7 +2009,7 @@ let tz = { none: void 0, nitroWheel: r.t },
                 previewImageStyle: f,
             } = e;
             function g() {
-                return (0, tG.P0)((0, tG.ox)("CTA clicked!", tG.Ck.SUCCESS));
+                return (0, tG.P0)({ text: "CTA clicked!", variant: "success" });
             }
             let y = tz[d],
                 v =
@@ -2158,7 +2158,7 @@ let tQ = {
                             ...t,
                             id: "test-id",
                             progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
-                            onCtaClick: () => (0, tG.P0)((0, tG.ox)("CTA Clicked!", tG.Ck.SUCCESS)),
+                            onCtaClick: () => (0, tG.P0)({ text: "CTA Clicked!", variant: "success" }),
                         }),
                         (0, s.jsx)(t0, {}),
                     ],

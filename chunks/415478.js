@@ -1,8 +1,8 @@
-s.d(e, { default: () => A });
+s.d(e, { default: () => S });
 var n = s(477900),
     i = s(582128),
     a = s(17928),
-    r = s(376357),
+    r = s(858899),
     l = s(830215),
     o = s(631670);
 s(321073);
@@ -12,8 +12,8 @@ var h = s(451988),
     p = s(95477),
     u = s(652215),
     c = s(650583),
-    C = s(660183),
-    m = s(31008);
+    m = s(660183),
+    C = s(31008);
 class f extends i.PureComponent {
     static defaultProps = {
         canResend: !1,
@@ -34,16 +34,16 @@ class f extends i.PureComponent {
         if (!t)
             return [
                 {
-                    text: C.intl.string(C.t.v740sh),
+                    text: m.intl.string(m.t.v740sh),
                     variant: "primary",
                     onClick: this.handleVerify,
                     loading: s,
                     disabled: 0 === n.length || 0 === i.length,
                 },
             ];
-        let a = [{ variant: "secondary", text: C.intl.string(C.t.WnX4J2), onClick: this.handleResendEmail }];
+        let a = [{ variant: "secondary", text: m.intl.string(m.t.WnX4J2), onClick: this.handleResendEmail }];
         return (
-            e && a.push({ text: C.intl.string(C.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
+            e && a.push({ text: m.intl.string(m.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
             a
         );
     }
@@ -57,7 +57,7 @@ class f extends i.PureComponent {
                 gap: 20,
                 children: [
                     (0, n.jsx)(p.k, {
-                        label: C.intl.string(C.t.dI4d4S),
+                        label: m.intl.string(m.t.dI4d4S),
                         value: s,
                         error: t,
                         onChange: this.handleEmailChange,
@@ -65,7 +65,7 @@ class f extends i.PureComponent {
                         autoFocus: !0,
                     }),
                     (0, n.jsx)(p.k, {
-                        label: C.intl.string(C.t["CIGa+7"]),
+                        label: m.intl.string(m.t["CIGa+7"]),
                         type: "password",
                         value: i,
                         error: e,
@@ -83,15 +83,15 @@ class f extends i.PureComponent {
         return (
             (t =
                 e && null != s
-                    ? C.intl.format(C.t.JqLgQL, { email: s })
+                    ? m.intl.format(m.t.JqLgQL, { email: s })
                     : i
-                      ? C.intl.string(C.t.tSXg8O)
-                      : C.intl.string(C.t.KW5DEh)),
+                      ? m.intl.string(m.t.tSXg8O)
+                      : m.intl.string(m.t.KW5DEh)),
             (0, n.jsx)(d.k, {
                 transitionState: a,
-                title: C.intl.string(C.t["1MPz27"]),
+                title: m.intl.string(m.t["1MPz27"]),
                 subtitle: t,
-                graphic: { type: "image", src: m.A },
+                graphic: { type: "image", src: C.A },
                 onClose: this.props.onClose,
                 actions: this.getActions(),
                 children: !i && this.renderInputs(),
@@ -127,47 +127,47 @@ class f extends i.PureComponent {
     };
 }
 var E = s(836602),
-    k = s(774914),
-    y = s(870570),
-    R = s(287809),
-    v = s(446868);
-let A = function (t) {
+    y = s(774914),
+    k = s(870570),
+    v = s(287809),
+    R = s(446868);
+let S = function (t) {
     let { transitionState: e, onClose: s } = t,
         { formState: h, errors: d } = (0, a.cf)([E.A], () => ({
             formState: E.A.getFormState(),
             errors: E.A.getErrors(),
         })),
-        g = (0, a.bG)([R.default], () => R.default.getCurrentUser()),
-        p = (0, a.bG)([y.A], () => y.A.getAction()),
-        c = !v.A.isEmailReverification(p),
-        [m, A] = i.useState(!0),
-        S = h === u.XlH.SUBMITTING;
-    function b(t) {
+        g = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
+        p = (0, a.bG)([k.A], () => k.A.getAction()),
+        c = !R.A.isEmailReverification(p),
+        [C, S] = i.useState(!0),
+        b = h === u.XlH.SUBMITTING;
+    function x(t) {
         return d?.[t]?.[0] ?? "";
     }
-    let x = b("email"),
-        P = b("password");
+    let A = x("email"),
+        P = x("password");
     return (0, n.jsx)(f, {
         transitionState: e,
         email: g?.email,
-        emailError: x,
+        emailError: A,
         passwordError: P,
-        submitting: S,
-        canResend: m && !S && g?.email != null && 0 === x.length && 0 === P.length,
+        submitting: b,
+        canResend: C && !b && g?.email != null && 0 === A.length && 0 === P.length,
         canChange: c,
         onChangeEmailClick: function () {
-            A(!1);
+            S(!1);
         },
         onVerify: function (t, e) {
             ((0, o._L)({ email: t, password: e }).then((t) => {
                 t?.ok ||
                     (t?.body?.username != null
-                        ? (0, k.E)()
+                        ? (0, y.E)()
                         : 0 === P.length &&
-                          0 === x.length &&
-                          (0, r.P0)((0, r.ox)(C.intl.string(C.t.R0RpRX), r.Ck.FAILURE)));
+                          0 === A.length &&
+                          (0, r.P0)({ text: m.intl.string(m.t.R0RpRX), variant: "critical" }));
             }),
-                A(!0));
+                S(!0));
         },
         onResend: function () {
             l.A.verifyResend();

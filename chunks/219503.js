@@ -113,7 +113,7 @@ function z(e) {
     });
 }
 var Z = n(509434),
-    K = n(376357),
+    K = n(858899),
     q = n(224640),
     Y = n(921853),
     $ = n(20742),
@@ -335,7 +335,7 @@ function ev(e) {
             pendingRequests: t,
             linkedUsersProcessed: n,
             onActionError: () => {
-                (0, K.P0)((0, K.ox)(S.intl.string(ef.default.Wu8BK2), K.Ck.FAILURE));
+                (0, K.P0)({ text: S.intl.string(ef.default.Wu8BK2), variant: "critical" });
             },
         });
     return 0 === i.length
@@ -483,7 +483,7 @@ let eT = {
                     try {
                         await o({ type: M.Empty });
                     } catch {
-                        (0, K.P0)((0, K.ox)(S.intl.string(I.default["+QRSxc"]), K.Ck.FAILURE));
+                        (0, K.P0)({ text: S.intl.string(I.default["+QRSxc"]), variant: "critical" });
                     }
                 }, [o]),
                 [k, L] = r.useState(_);

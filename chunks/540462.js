@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(554146),
     h = n(451988),
     p = n(43990),
-    m = n(376357),
+    m = n(858899),
     A = n(38021),
     f = n(367513),
     x = n(442433),
@@ -895,7 +895,9 @@ let eq = function (e) {
         ea = (0, d.bG)([b.A], () => b.A.getFetchState(), []),
         es = (0, E.Ay)(ea);
     l.useEffect(() => {
-        ea === b.$.ERROR && es !== b.$.ERROR && (0, m.P0)((0, m.ox)(ez.intl.string(ez.t["AlJyI+"]), m.Ck.FAILURE));
+        ea === b.$.ERROR &&
+            es !== b.$.ERROR &&
+            (0, m.P0)({ text: ez.intl.string(ez.t["AlJyI+"]), variant: "critical" });
     }, [ea, es]);
     let er = (0, d.bG)([S.Ay], () => S.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]),
         eo = (0, U.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),

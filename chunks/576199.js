@@ -1,7 +1,7 @@
 n.d(t, { A: () => m });
 var r = n(477900),
     l = n(582128),
-    i = n(376357),
+    i = n(858899),
     s = n(866665),
     u = n(408278),
     a = n(173936),
@@ -25,7 +25,7 @@ function m(e) {
                     impressionId: S,
                     sourceQuestContent: m,
                 }),
-                (0, i.P0)((0, i.ox)(p.intl.string(p.t["+5kSoW"]), i.Ck.SUCCESS)));
+                (0, i.P0)({ text: p.intl.string(p.t["+5kSoW"]), variant: "success" }));
         }, [S, v, n.id, m]);
     return v
         ? (0, r.jsx)("div", {

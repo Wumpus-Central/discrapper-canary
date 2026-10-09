@@ -909,8 +909,8 @@ var e0 = n(789645),
     e7 = n(279208),
     e4 = n(747007),
     e9 = n(489673),
-    e5 = n(958590),
-    e8 = n(174459),
+    e8 = n(958590),
+    e5 = n(174459),
     e6 = n(957565),
     e3 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
@@ -921,10 +921,10 @@ function tn(e) {
         a = (0, s.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         o = (0, s.bG)(
-            [e5.A],
+            [e8.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e5.A.getInvite(e);
+                return null == e ? null : e8.A.getInvite(e);
             },
             [d, r],
         );
@@ -978,7 +978,7 @@ function tn(e) {
                             if (null == n || h) return;
                             (0, e6.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e5.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,
@@ -1301,9 +1301,12 @@ function tu(e) {
         onSave: function () {
             null != m.recurrenceRule && f && (0, V.DS)(u, m)
                 ? (0, x.openModalLazy)(async () => {
-                      let { ConfirmModal: e } = await Promise.all([n.e("304823"), n.e("223976"), n.e("977260")]).then(
-                          n.bind(n, 397927),
-                      );
+                      let { ConfirmModal: e } = await Promise.all([
+                          n.e("304823"),
+                          n.e("223976"),
+                          n.e("288688"),
+                          n.e("977260"),
+                      ]).then(n.bind(n, 397927));
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,

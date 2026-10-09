@@ -1,11 +1,11 @@
 (e.d(n, { A: () => E }), e(323874), e(14289), e(35956), e(321073));
 var i = e(477900);
 e(582128);
-var l = e(376357),
+var l = e(858899),
     a = e(477782),
     c = e(173936),
-    o = e(93688),
-    r = e(509434),
+    r = e(93688),
+    o = e(509434),
     s = e(803316),
     u = e(207133),
     d = e(885386),
@@ -18,9 +18,9 @@ var l = e(376357),
     y = e(652215),
     b = e(660183);
 let w = /^(tel|sms|mailto):([^?;]+)/,
-    C = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
+    _ = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
     k = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
-    _ = /^\/emojis\/\d+\./;
+    C = /^\/emojis\/\d+\./;
 function E(t, n, e, E) {
     let N = (0, u.A)(e?.getChannelId()),
         j = d.Q_.useSetting();
@@ -31,7 +31,7 @@ function E(t, n, e, E) {
         (!j &&
             (function (t) {
                 try {
-                    return _.test(new URL(t).pathname);
+                    return C.test(new URL(t).pathname);
                 } catch {
                     return !1;
                 }
@@ -45,7 +45,7 @@ function E(t, n, e, E) {
     function A(t) {
         (h.default.track(y.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: I, ...(0, v.N)() }),
             g.Ay.copy(t),
-            (0, l.P0)((0, l.ox)(b.intl.string(b.t["L/PwZf"]), l.Ck.SUCCESS)));
+            (0, l.P0)({ text: b.intl.string(b.t["L/PwZf"]), variant: "success" }));
     }
     function L(e, i) {
         if (null == t) return;
@@ -82,12 +82,12 @@ function E(t, n, e, E) {
     let P = (function (t) {
             try {
                 let n = new URL(t);
-                return "cdn.discordapp.com" === n.hostname && C.test(n.pathname);
+                return "cdn.discordapp.com" === n.hostname && _.test(n.pathname);
             } catch {
                 return !1;
             }
         })(t),
-        U =
+        M =
             !P &&
             (function (t) {
                 try {
@@ -96,14 +96,14 @@ function E(t, n, e, E) {
                     return !1;
                 }
             })(t),
-        M = P ? b.t["8xHmxo"] : U ? b.t["92CPQ+"] : b.t.WqhZss,
-        O = P ? b.t.w8ldGK : U ? b.t.q5FbIB : b.t.wuRE8M;
+        O = P ? b.t["8xHmxo"] : M ? b.t["92CPQ+"] : b.t.WqhZss,
+        R = P ? b.t.w8ldGK : M ? b.t.q5FbIB : b.t.wuRE8M;
     return [
         (0, i.jsx)(
             a.Dr,
             {
                 id: "copy-native-link",
-                label: b.intl.string(M),
+                label: b.intl.string(O),
                 leadingAccessory: { type: "icon", icon: c.LinkIcon },
                 action: function () {
                     null != t && A(t);
@@ -116,9 +116,9 @@ function E(t, n, e, E) {
             a.Dr,
             {
                 id: "open-native-link",
-                label: b.intl.string(O),
-                leadingAccessory: { type: "icon", icon: o.W },
-                trailingIndicator: { type: "icon", icon: r.I },
+                label: b.intl.string(R),
+                leadingAccessory: { type: "icon", icon: r.W },
+                trailingIndicator: { type: "icon", icon: o.I },
                 action: (t) => L(t),
             },
             "open-native-link",

@@ -1,7 +1,7 @@
 s.d(t, { A: () => h });
 var n = s(477900);
 s(582128);
-var a = s(376357),
+var a = s(858899),
     l = s(192308),
     i = s(174459),
     r = s(863922),
@@ -44,7 +44,7 @@ function c(e, t, s) {
         location: "Summary divider",
         rating: n,
     }),
-        (0, a.P0)((0, a.ox)(d.intl.string(d.t["d9+vQ8"]), a.Ck.SUCCESS)));
+        (0, a.P0)({ text: d.intl.string(d.t["d9+vQ8"]), variant: "success" }));
 }
 function h(e) {
     let { summary: t, channel: a, rating: i } = e;

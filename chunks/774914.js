@@ -1,6 +1,6 @@
-t.d(s, { E: () => k });
-var p = t(376357),
-    c = t(660183);
-function k() {
-    (0, p.P0)((0, p.ox)(c.intl.string(c.t["TGg/2k"]), p.Ck.FAILURE));
+a.d(i, { E: () => n });
+var c = a(858899),
+    s = a(660183);
+function n() {
+    (0, c.P0)({ text: s.intl.string(s.t["TGg/2k"]), variant: "critical" });
 }

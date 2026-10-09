@@ -1,81 +1,81 @@
-(l.d(t, { default: () => L }), l(321073));
-var s = l(477900),
-    i = l(582128),
-    n = l(503698),
-    a = l.n(n),
-    r = l(192308),
-    c = l(834730),
-    o = l(176781),
-    d = l(661531),
-    h = l(376357),
-    u = l(148494),
-    m = l(793574),
-    p = l(688810),
-    x = l(573435),
-    g = l(914718),
-    f = l(619517),
-    A = l(451909),
-    C = l(378570),
-    E = l(446244),
-    y = l(95701),
-    k = l(734057),
-    j = l(31717),
-    b = l(403362),
-    w = l(518960),
-    N = l(614584),
-    R = l(74847),
-    T = l(589553),
-    I = l(280483),
-    _ = l(696016),
-    v = l(381941),
-    O = l(660183),
-    P = l(954646),
-    S = l(739126);
-function F(e) {
+(i.d(t, { default: () => F }), i(321073));
+var l = i(477900),
+    s = i(582128),
+    n = i(503698),
+    a = i.n(n),
+    r = i(192308),
+    c = i(834730),
+    o = i(176781),
+    d = i(661531),
+    h = i(858899),
+    u = i(148494),
+    m = i(793574),
+    p = i(688810),
+    x = i(573435),
+    g = i(914718),
+    f = i(619517),
+    A = i(451909),
+    C = i(378570),
+    y = i(446244),
+    E = i(95701),
+    j = i(734057),
+    b = i(31717),
+    k = i(403362),
+    w = i(518960),
+    N = i(614584),
+    v = i(74847),
+    T = i(589553),
+    _ = i(280483),
+    O = i(696016),
+    P = i(381941),
+    R = i(660183),
+    S = i(954646),
+    I = i(739126);
+function M(e) {
     let { clips: t } = e,
-        l = t[0],
-        i = l.thumbnail,
+        i = t[0],
+        s = i.thumbnail,
         n = null;
     return (
-        "" !== i &&
-            ((n = (0, s.jsx)("div", {
-                className: a()(S.cR, S.JZ),
-                children: (0, s.jsx)(f.Ay, { className: S.xn, src: i, width: 56, height: 56 }),
+        "" !== s &&
+            ((n = (0, l.jsx)("div", {
+                className: a()(I.cR, I.JZ),
+                children: (0, l.jsx)(f.Ay, { className: I.xn, src: s, width: 56, height: 56 }),
             })),
             t.length > 1 &&
-                (n = (0, s.jsxs)("div", {
-                    className: S.EW,
+                (n = (0, l.jsxs)("div", {
+                    className: I.EW,
                     children: [
-                        (0, s.jsx)(x.Ay, {
+                        (0, l.jsx)(x.Ay, {
                             mask: x.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
                             children: n,
                         }),
-                        (0, s.jsxs)(c.E, {
-                            className: S.mB,
+                        (0, l.jsxs)(c.E, {
+                            className: I.mB,
                             variant: "text-xs/semibold",
                             color: "text-default",
                             children: ["+", t.length - 1],
                         }),
                     ],
                 }))),
-        (0, s.jsxs)("div", {
-            className: S.sq,
+        (0, l.jsxs)("div", {
+            className: I.sq,
             children: [
-                (0, s.jsx)("div", {
-                    className: S.FG,
-                    children: (0, s.jsxs)("div", {
-                        className: S.kp,
+                (0, l.jsx)("div", {
+                    className: I.FG,
+                    children: (0, l.jsxs)("div", {
+                        className: I.kp,
                         children: [
-                            (0, s.jsx)(o.x, { className: P.$, size: "refresh_sm", color: d.A.colors.TEXT_MUTED }),
-                            (0, s.jsx)(c.E, {
+                            (0, l.jsx)(o.x, { className: S.$, size: "refresh_sm", color: d.A.colors.TEXT_MUTED }),
+                            (0, l.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-muted",
                                 children:
                                     1 === t.length
-                                        ? (l.name ?? O.intl.string(O.t.Cyxddp))
-                                        : O.intl.formatToPlainString(O.t.SJ6pPX, { count: t.length }),
+                                        ? (i.name ?? R.intl.string(R.t.Cyxddp))
+                                        : R.intl.formatToPlainString(R.t.SJ6pPX, { count: t.length }),
                             }),
                         ],
                     }),
@@ -85,67 +85,67 @@ function F(e) {
         })
     );
 }
-function L(e) {
-    let { clips: t, onClose: l, analyticsLocations: n, ...a } = e;
-    (0, I.A)();
+function F(e) {
+    let { clips: t, onClose: i, analyticsLocations: n, ...a } = e;
+    (0, _.A)();
     let { analyticsLocations: c } = (0, p.Ay)(...n, m.A.CLIPS_SHARE_MODAL),
-        o = i.useCallback(
-            async (e, s, i) => {
-                let { withMessage: n, transitionToDestination: a, closeAfterSend: o } = s;
-                i(!0);
+        o = s.useCallback(
+            async (e, l, s) => {
+                let { withMessage: n, transitionToDestination: a, closeAfterSend: o } = l;
+                s(!0);
                 try {
-                    let s = [],
+                    let l = [],
                         d = [];
                     for (let e of t) {
                         let t = await (0, N.VO)(e, { analyticsLocations: c }),
-                            l = (0, T.A)(e, e.type === _.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                            i = (0, T.A)(e, e.type === O.nQ.SCREENSHOT ? "jpeg" : "mp4");
                         switch (e.type) {
-                            case _.nQ.CLIP:
-                            case _.nQ.VOICE_CLIP:
-                                (s.push(new File([t], l, { type: "video/mp4" })), d.push({ clip: e }));
+                            case O.nQ.CLIP:
+                            case O.nQ.VOICE_CLIP:
+                                (l.push(new File([t], i, { type: "video/mp4" })), d.push({ clip: e }));
                                 break;
-                            case _.nQ.SCREENSHOT:
-                                (s.push(new File([t], l, { type: "image/jpeg" })), d.push({}));
+                            case O.nQ.SCREENSHOT:
+                                (l.push(new File([t], i, { type: "image/jpeg" })), d.push({}));
                                 break;
                             default:
                                 e.type;
                         }
                     }
-                    let m = (await Promise.all(e.map(E.pk))).filter(b.Vq).filter((e) => (0, R.t)(e));
+                    let m = (await Promise.all(e.map(y.pk))).filter(k.Vq).filter((e) => (0, v.t)(e));
                     if (0 === m.length) {
-                        ((0, h.P0)((0, h.ox)(O.intl.string(O.t.iufib1), h.Ck.FAILURE)), i(!1));
+                        ((0, h.P0)({ text: R.intl.string(R.t.iufib1), variant: "critical" }), s(!1));
                         return;
                     }
-                    for (let e of (o && l(), m)) {
-                        let t = k.A.getChannel(e);
+                    for (let e of (o && i(), m)) {
+                        let t = j.A.getChannel(e);
                         null != t &&
-                            ((0, w.R)(s, t, j.C.ChannelMessage, {
+                            ((0, w.R)(l, t, b.C.ChannelMessage, {
                                 filesMetadata: d,
                                 origin: "unknown:clip_share",
                                 requireConfirm: !1,
                             }),
                             null != n &&
                                 "" !== n.trim() &&
-                                (await u.A.sendMessage(t.id, A.Ay.parse(t, n), !1, { location: v.Hx.FORWARDING })));
+                                (await u.A.sendMessage(t.id, A.Ay.parse(t, n), !1, { location: P.Hx.FORWARDING })));
                     }
                     a && 1 === m.length && ((0, C.iN)(m[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals());
                 } catch (e) {
-                    (0, h.P0)((0, h.ox)(O.intl.string(O.t.iufib1), h.Ck.FAILURE));
+                    (0, h.P0)({ text: R.intl.string(R.t.iufib1), variant: "critical" });
                 } finally {
-                    i(!1);
+                    s(!1);
                 }
             },
-            [t, l, c],
+            [t, i, c],
         ),
-        d = i.useCallback((e) => {
-            if (e instanceof y.YB && !(0, R.t)(e.id)) return { label: O.intl.string(O.t.iufib1) };
+        d = s.useCallback((e) => {
+            if (e instanceof E.YB && !(0, v.t)(e.id)) return { label: R.intl.string(R.t.iufib1) };
         }, []);
-    return (0, s.jsx)(g.ForwardModal, {
+    return (0, l.jsx)(g.ForwardModal, {
         ...a,
-        onClose: l,
-        customTitle: O.intl.string(O.t.I8lglT),
-        customSubtitle: O.intl.string(O.t.Ey7mOU),
-        customPreview: (0, s.jsx)(F, { clips: t }),
+        onClose: i,
+        customTitle: R.intl.string(R.t.I8lglT),
+        customSubtitle: R.intl.string(R.t.Ey7mOU),
+        customPreview: (0, l.jsx)(M, { clips: t }),
         customSendHandler: o,
         customValidateDestination: d,
     });

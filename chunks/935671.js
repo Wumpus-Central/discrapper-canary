@@ -1,6 +1,6 @@
 n.d(t, { sL: () => O, NP: () => I, XQ: () => f, Tn: () => g, yA: () => p, TC: () => h, AV: () => S, z8: () => R });
 var i = n(17928),
-    r = n(376357),
+    r = n(858899),
     a = n(73153),
     s = n(626584),
     l = n(952818),
@@ -100,12 +100,12 @@ async function O(e) {
             (await u.Ay.InstallSystemService(),
                 A.info("System service installed."),
                 o.default.track(_.HAw.SYSTEM_SERVICE_INSTALL_ATTEMPTED, { success: !0, source: e }),
-                C((0, r.ox)(E.intl.string(E.t.kQnWby), r.Ck.SUCCESS), t),
+                C({ text: E.intl.string(E.t.kQnWby), variant: "success" }, t),
                 m("after-install"));
         } catch (i) {
             let n = N(i);
             if (null == n && i instanceof Error) {
-                (C((0, r.ox)(E.intl.formatToPlainString(E.t.sdKYCE, { error: i.message }), r.Ck.FAILURE), t),
+                (C({ text: E.intl.formatToPlainString(E.t.sdKYCE, { error: i.message }), variant: "critical" }, t),
                     c.A.captureMessage("Unknown error during system service installation", { extra: { error: i } }),
                     A.error("System service install failed.", i),
                     o.default.track(_.HAw.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
@@ -116,7 +116,7 @@ async function O(e) {
                 return;
             }
             if (null == n) {
-                (C((0, r.ox)(E.intl.formatToPlainString(E.t.sdKYCE, { error: i }), r.Ck.FAILURE), t),
+                (C({ text: E.intl.formatToPlainString(E.t.sdKYCE, { error: i }), variant: "critical" }, t),
                     c.A.captureMessage("Really unknown error during system service installation", {
                         extra: { error: i },
                     }),
@@ -137,11 +137,11 @@ async function O(e) {
                 }),
                 -0x7ff8fb39 === n.error_code)
             ) {
-                (C((0, r.ox)(E.intl.string(E.t.xu9k8G), r.Ck.FAILURE), t),
+                (C({ text: E.intl.string(E.t.xu9k8G), variant: "critical" }, t),
                     A.error("User cancelled system service install."));
                 return;
             }
-            (C((0, r.ox)(E.intl.formatToPlainString(E.t.sdKYCE, { error: n.error_message }), r.Ck.FAILURE), t),
+            (C({ text: E.intl.formatToPlainString(E.t.sdKYCE, { error: n.error_message }), variant: "critical" }, t),
                 0 !== n.error_code &&
                     c.A.captureMessage("Error during system service installation", { extra: { error: n } }),
                 A.error("System service install failed.", n));
@@ -154,12 +154,12 @@ async function R(e) {
             (await S(),
                 await u.Ay.UninstallSystemService(),
                 A.info("System service uninstalled."),
-                C((0, r.ox)(E.intl.string(E.t.dThS5H), r.Ck.SUCCESS), t),
+                C({ text: E.intl.string(E.t.dThS5H), variant: "success" }, t),
                 o.default.track(_.HAw.SYSTEM_SERVICE_UNINSTALL_ATTEMPTED, { success: !0, source: e }));
         } catch (i) {
             let n = N(i);
             if (null == n && i instanceof Error) {
-                (C((0, r.ox)(E.intl.formatToPlainString(E.t.oHh3oI, { error: i.message }), r.Ck.FAILURE), t),
+                (C({ text: E.intl.formatToPlainString(E.t.oHh3oI, { error: i.message }), variant: "critical" }, t),
                     c.A.captureMessage("Unknown error during system service uninstallation", { extra: { error: i } }),
                     A.error("System service uninstall failed.", i),
                     o.default.track(_.HAw.SYSTEM_SERVICE_UNINSTALL_ATTEMPTED, {
@@ -170,7 +170,7 @@ async function R(e) {
                 return;
             }
             if (null == n) {
-                (C((0, r.ox)(E.intl.formatToPlainString(E.t.oHh3oI, { error: i }), r.Ck.FAILURE), t),
+                (C({ text: E.intl.formatToPlainString(E.t.oHh3oI, { error: i }), variant: "critical" }, t),
                     c.A.captureMessage("Really unknown error during system service uninstallation", {
                         extra: { error: i },
                     }),
@@ -188,7 +188,7 @@ async function R(e) {
                 error_code: n.error_code,
                 error_message: n.error_message,
             }),
-                C((0, r.ox)(E.intl.formatToPlainString(E.t.oHh3oI, { error: n.error_message }), r.Ck.FAILURE), t),
+                C({ text: E.intl.formatToPlainString(E.t.oHh3oI, { error: n.error_message }), variant: "critical" }, t),
                 c.A.captureMessage("Error during system service uninstallation", { extra: { error: n } }),
                 A.error("System service uninstall failed.", n));
         }

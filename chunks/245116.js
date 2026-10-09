@@ -1,7 +1,7 @@
 l.d(t, { fn: () => C, As: () => y, JQ: () => v });
 var a = l(477900),
     n = l(582128),
-    i = l(376357);
+    i = l(858899);
 let s = (0, l(945810).mj)({
     kind: "user",
     name: "2026-09-clips-editor-image-track",
@@ -152,12 +152,12 @@ async function g() {
         if (null == t) return null;
         let l = await m(t.bytes, t.fileName);
         if (!(await (l.src, (e = l.mimeType), Promise.resolve({ allowed: !0, checked: !1 }))).allowed)
-            return ((0, i.P0)((0, i.ox)(u.intl.string(c.default.uF5VXk), i.Ck.FAILURE)), null);
+            return ((0, i.P0)({ text: u.intl.string(c.default.uF5VXk), variant: "critical" }), null);
         return l;
     } catch (t) {
         o.nx.warn("Failed to add clip image track", t);
         let e = t instanceof d ? t.userMessage : u.intl.string(c.default["+20A3o"]);
-        return ((0, i.P0)((0, i.ox)(e, i.Ck.FAILURE)), null);
+        return ((0, i.P0)({ text: e, variant: "critical" }), null);
     }
 }
 function C() {

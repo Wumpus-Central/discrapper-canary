@@ -6,74 +6,74 @@ var a = n(477900),
     s = n(17928),
     o = n(189213),
     c = n(834730),
-    d = n(376357),
+    d = n(858899),
     u = n(289873),
     p = n(683438),
     m = n(331322),
-    A = n(308528),
-    h = n(148494),
+    h = n(308528),
+    A = n(148494),
     g = n(608299),
     y = n(928039),
-    C = n(139286),
-    f = n(429913),
-    _ = n(115718),
+    f = n(139286),
+    _ = n(429913),
+    C = n(115718),
     I = n(61916),
-    S = n(274652),
-    E = n(823099),
+    E = n(274652),
+    S = n(823099),
     x = n(451909),
-    w = n(151054),
-    M = n(734057),
-    T = n(31717),
-    v = n(576705),
-    k = n(522602),
-    U = n(287809),
-    b = n(174459),
-    D = n(741394),
-    R = n(998218),
+    v = n(151054),
+    w = n(734057),
+    M = n(31717),
+    T = n(576705),
+    b = n(522602),
+    D = n(287809),
+    k = n(174459),
+    R = n(741394),
+    U = n(998218),
     j = n(19575),
     N = n(933958),
-    L = n(652215),
-    P = n(381941),
-    F = n(660183),
-    H = n(868494);
-let O = (e, t) =>
-    e.type === _.rD.USER
-        ? t || null != M.A.getDMChannelFromUserId(e.record.id)
-        : e.type === _.rD.GROUP_DM ||
-          (e.record.type !== L.rbe.GUILD_FORUM &&
-              e.record.type !== L.rbe.GUILD_MEDIA &&
-              v.A.can(L.xBc.VIEW_CHANNEL, e.record) &&
-              v.A.can(L.xBc.SEND_MESSAGES, e.record) &&
-              v.A.can(L.xBc.ATTACH_FILES, e.record));
+    P = n(652215),
+    L = n(381941),
+    H = n(660183),
+    O = n(868494);
+let F = (e, t) =>
+    e.type === C.rD.USER
+        ? t || null != w.A.getDMChannelFromUserId(e.record.id)
+        : e.type === C.rD.GROUP_DM ||
+          (e.record.type !== P.rbe.GUILD_FORUM &&
+              e.record.type !== P.rbe.GUILD_MEDIA &&
+              T.A.can(P.xBc.VIEW_CHANNEL, e.record) &&
+              T.A.can(P.xBc.SEND_MESSAGES, e.record) &&
+              T.A.can(P.xBc.ATTACH_FILES, e.record));
 function G() {
     return (0, a.jsx)("div", {
-        className: H.w,
+        className: O.w,
         children: (0, a.jsx)(c.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: F.intl.string(F.t.V6nAfF),
+            children: H.intl.string(H.t.V6nAfF),
         }),
     });
 }
 function V(e) {
-    let { applicationId: t, mediaUrl: n, onClose: _, transitionState: v, ...V } = e,
+    let { applicationId: t, mediaUrl: n, onClose: C, transitionState: T, ...V } = e,
         B = (0, s.bG)([N.Ay], () => N.Ay.getCurrentEmbeddedActivity());
-    (0, C.A)({
+    (0, f.A)({
         type: l.ImpressionTypes.MODAL,
         name: l.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: { application_id: t, activity_session_id: B?.compositeInstanceId },
     });
-    let [q] = (0, f.A)([t]),
-        Y = (0, s.bG)([U.default], () => U.default.getCurrentUser()),
+    let [q] = (0, _.A)([t]),
+        Y = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
         [Q, W] = i.useState(null),
         [z, J] = i.useState(null),
         [K, X] = i.useState(!1),
         [Z, $] = i.useState(""),
         [ee, et] = i.useState([]),
         en = ee.length >= 10,
-        { results: ea, updateSearchText: ei } = (0, w.R)({
+        { results: ea, updateSearchText: ei } = (0, v.R)({
             selectedDestinations: ee,
-            channelFilter: O,
+            channelFilter: F,
             includeMissingDMs: !0,
         }),
         el = i.useCallback(
@@ -84,9 +84,9 @@ function V(e) {
         );
     (i.useEffect(() => {
         !(async function () {
-            let e = R.A.toURLSafe(n);
+            let e = U.A.toURLSafe(n);
             if (null == e) return;
-            let t = (0, D.uk)(e.pathname),
+            let t = (0, R.uk)(e.pathname),
                 a = await fetch(n),
                 i = new File([await a.arrayBuffer()], t);
             W(i);
@@ -107,10 +107,10 @@ function V(e) {
             );
         }, [K]));
     let er = i.useCallback(async () => {
-            await _();
-        }, [_]),
+            await C();
+        }, [C]),
         es = i.useCallback(async () => {
-            (b.default.track(L.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
+            (k.default.track(P.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
                 user_id: Y?.id,
                 application_id: t,
                 activity_session_id: B?.compositeInstanceId,
@@ -141,35 +141,35 @@ function V(e) {
             for (let t of ee)
                 if ("user" === t.type) e++;
                 else {
-                    let e = M.A.getChannel(t.id);
-                    e?.type === L.rbe.GROUP_DM ? n++ : a++;
+                    let e = w.A.getChannel(t.id);
+                    e?.type === P.rbe.GROUP_DM ? n++ : a++;
                 }
             async function i(e) {
                 let n;
-                n = "user" === e.type ? await A.A.ensurePrivateChannel(e.id) : e.id;
-                let a = M.A.getChannel(n);
+                n = "user" === e.type ? await h.A.ensurePrivateChannel(e.id) : e.id;
+                let a = w.A.getChannel(n);
                 if (null != Q) {
                     let e = new File([Q], Q.name, { type: Q.type });
                     g.A.addFile({
-                        file: { file: e, platform: S.x.WEB, origin: "unknown:activity_share" },
+                        file: { file: e, platform: E.x.WEB, origin: "unknown:activity_share" },
                         channelId: n,
-                        draftType: T.C.ChannelMessage,
+                        draftType: M.C.ChannelMessage,
                     });
                 }
-                let i = k.A.getUploads(n, T.C.ChannelMessage);
-                (h.A.sendMessage(
+                let i = b.A.getUploads(n, M.C.ChannelMessage);
+                (A.A.sendMessage(
                     n,
                     null != q
-                        ? x.Ay.parse(a, F.intl.formatToPlainString(F.t.jQULqL, { applicationName: `**${q.name}**` }))
+                        ? x.Ay.parse(a, H.intl.formatToPlainString(H.t.jQULqL, { applicationName: `**${q.name}**` }))
                         : { content: "", tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                     !1,
                     {
                         eagerDispatch: !1,
-                        location: P.Hx.ACTIVITY_SHARE,
+                        location: L.Hx.ACTIVITY_SHARE,
                         applicationId: t,
                         attachmentsToUpload: i,
                         onAttachmentUploadError: (e, t, n) => {
-                            (0, E.k)({
+                            (0, S.k)({
                                 file: e,
                                 guildId: a?.getGuildId() ?? null,
                                 analyticsLocations: [],
@@ -179,9 +179,9 @@ function V(e) {
                         },
                     },
                 ),
-                    g.A.clearAll(n, T.C.ChannelMessage));
+                    g.A.clearAll(n, M.C.ChannelMessage));
             }
-            b.default.track(L.HAw.ACTIVITY_SHARE_MOMENT_SEND, {
+            k.default.track(P.HAw.ACTIVITY_SHARE_MOMENT_SEND, {
                 user_id: Y?.id,
                 application_id: t,
                 activity_session_id: B?.compositeInstanceId,
@@ -192,14 +192,12 @@ function V(e) {
             try {
                 (await Promise.all(ee.map(i)),
                     null != q &&
-                        (0, d.P0)(
-                            (0, d.ox)(
-                                F.intl.formatToPlainString(F.t.jQULqL, { applicationName: q.name }),
-                                d.Ck.SUCCESS,
-                            ),
-                        ));
+                        (0, d.P0)({
+                            text: H.intl.formatToPlainString(H.t.jQULqL, { applicationName: q.name }),
+                            variant: "success",
+                        }));
             } catch (e) {
-                throw ((0, d.P0)((0, d.ox)(F.intl.string(F.t.PanA4J), d.Ck.FAILURE)), e);
+                throw ((0, d.P0)({ text: H.intl.string(H.t.PanA4J), variant: "critical" }), e);
             }
             er();
         }, [B, q, t, ee, Q, er, Y]),
@@ -221,16 +219,16 @@ function V(e) {
                   children: (e) => {
                       let { ref: t, ...i } = e;
                       return (0, a.jsx)(o.a, {
-                          transitionState: v,
+                          transitionState: T,
                           onClose: er,
                           size: "md",
-                          title: F.intl.string(F.t.r9qKow),
+                          title: H.intl.string(H.t.r9qKow),
                           input: (0, a.jsx)(p.I, {
                               query: Z,
                               onChange: el,
                               onClear: () => el(""),
-                              placeholder: F.intl.string(F.t["5h0QOP"]),
-                              "aria-label": F.intl.string(F.t["5h0QOP"]),
+                              placeholder: H.intl.string(H.t["5h0QOP"]),
+                              "aria-label": H.intl.string(H.t["5h0QOP"]),
                               autoFocus: !0,
                           }),
                           preview: (0, a.jsxs)(m.B, {
@@ -238,11 +236,11 @@ function V(e) {
                               align: "center",
                               gap: 12,
                               children: [
-                                  (0, a.jsx)("img", { alt: n, src: z, className: H.o }),
+                                  (0, a.jsx)("img", { alt: n, src: z, className: O.o }),
                                   ee.length >= 10
                                       ? (0, a.jsx)(c.E, {
                                             variant: "text-xs/normal",
-                                            children: F.intl.format(F.t.mdE9iE, { maxShares: 10 }),
+                                            children: H.intl.format(H.t.mdE9iE, { maxShares: 10 }),
                                         })
                                       : null,
                               ],
@@ -251,7 +249,7 @@ function V(e) {
                               ...(j.Ay.canCopyImage(n)
                                   ? [
                                         {
-                                            text: K ? F.intl.string(F.t.t5VZ88) : F.intl.string(F.t.tvUqWn),
+                                            text: K ? H.intl.string(H.t.t5VZ88) : H.intl.string(H.t.tvUqWn),
                                             onClick: es,
                                             variant: "secondary",
                                             disabled: K,
@@ -259,7 +257,7 @@ function V(e) {
                                     ]
                                   : []),
                               {
-                                  text: F.intl.string(F.t.TXNS7S),
+                                  text: H.intl.string(H.t.TXNS7S),
                                   onClick: ec,
                                   variant: "primary",
                                   disabled: ee.length <= 0,

@@ -1,4 +1,4 @@
-n.d(e, { default: () => P });
+n.d(e, { default: () => k });
 var a = n(477900),
     r = n(582128),
     l = n(719442),
@@ -13,54 +13,54 @@ var a = n(477900),
     g = n(885386),
     b = n(174459),
     p = n(723702),
-    S = n(19575),
-    T = n(820066),
-    x = n(636537),
-    y = n(376357),
-    C = n(152367),
-    h = n(192308),
-    A = n(869388),
-    j = n(147087),
-    D = n(773669),
-    E = n(186306),
-    _ = n(323350),
-    k = n(652215),
-    M = n(660183),
-    N = n(946190);
-function P(t) {
-    let { text: e, editor: P, target: I, onHeightUpdate: O, onSelect: R, clipboardHasMixedContent: X } = t,
-        U = r.useCallback(
+    T = n(19575),
+    x = n(820066),
+    y = n(636537),
+    h = n(858899),
+    S = n(152367),
+    A = n(192308),
+    j = n(869388),
+    D = n(147087),
+    C = n(773669),
+    _ = n(186306),
+    E = n(323350),
+    M = n(652215),
+    N = n(660183),
+    P = n(946190);
+function k(t) {
+    let { text: e, editor: k, target: O, onHeightUpdate: R, onSelect: X, clipboardHasMixedContent: v } = t,
+        I = r.useCallback(
             (t) => {
-                (i.rL.focus(P),
+                (i.rL.focus(k),
                     setTimeout(() => {
-                        (t?.(), T.VW.focus(P));
+                        (t?.(), x.VW.focus(k));
                     }, 0));
             },
-            [P],
+            [k],
         ),
         L = r.useCallback(() => {
-            (0, u.Z_)(U);
-        }, [U]),
-        v = r.useCallback(() => {
-            let t = S.Ay.readClipboard();
+            (0, u.Z_)(I);
+        }, [I]),
+        U = r.useCallback(() => {
+            let t = T.Ay.readClipboard();
             0 !== t.length &&
-                U(() => {
-                    l.gB.insertText(P, t);
+                I(() => {
+                    l.gB.insertText(k, t);
                 });
-        }, [U, P]),
-        [w, F] = (0, f.A)({ text: e, target: I, onHeightUpdate: O }),
+        }, [I, k]),
+        [w, F] = (0, f.A)({ text: e, target: O, onHeightUpdate: R }),
         G = (function (t) {
-            let e = (0, j.b)(),
-                l = (0, s.bG)([A.A], () => A.A.getTransforms()),
+            let e = (0, D.b)(),
+                l = (0, s.bG)([j.A], () => j.A.getTransforms()),
                 { selection: c } = t,
                 u =
                     null != c
-                        ? (0, _.WO)(T.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
+                        ? (0, E.WO)(x.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
                         : "",
                 d = r.useCallback(
                     (e) => {
                         (i.rL.focus(t),
-                            E.o.withSingleEntry(t, () => {
+                            _.o.withSingleEntry(t, () => {
                                 (t.deleteFragment(), t.insertText(e));
                             }));
                     },
@@ -70,16 +70,16 @@ function P(t) {
                     let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
                             if (!n) {
-                                (l(!0), (0, y.P0)((0, y.ox)(M.intl.string(M.t.p54KYY), y.Ck.AI)));
+                                (l(!0), (0, h.P0)({ text: N.intl.string(N.t.p54KYY), icon: S.D }));
                                 try {
-                                    let n = await x.Bo.post({
-                                        url: k.Rsh.AI_FIX_GRAMMAR,
+                                    let n = await y.Bo.post({
+                                        url: M.Rsh.AI_FIX_GRAMMAR,
                                         body: { content: t },
-                                        rejectWithError: (0, x.fT)(),
+                                        rejectWithError: (0, y.fT)(),
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, y.P0)((0, y.ox)(M.intl.string(M.t.mxQpUY), y.Ck.SUCCESS)));
+                                        (0, h.P0)({ text: N.intl.string(N.t.mxQpUY), variant: "success" }));
                                 } finally {
                                     l(!1);
                                 }
@@ -87,45 +87,44 @@ function P(t) {
                         }, [n, t, e]);
                     return (0, a.jsx)(o.Dr, {
                         id: "fix-grammar",
-                        label: n ? M.intl.string(M.t.p54KYY) : M.intl.string(M.t.fCpOHj),
-                        icon: C.D,
+                        label: n ? N.intl.string(N.t.p54KYY) : N.intl.string(N.t.fCpOHj),
+                        icon: S.D,
                         action: i,
                         disabled: n,
                     });
                 })(u, d),
                 f = (function (t, e) {
                     let [l, i] = r.useState(!1),
-                        c = (0, s.bG)([D.default], () => D.default.locale),
+                        c = (0, s.bG)([C.default], () => C.default.locale),
                         u = r.useCallback(
                             async (n, a) => {
                                 if (l) return;
                                 let r = n ?? c;
                                 i(!0);
                                 let s = a ?? r;
-                                (0, y.P0)(
-                                    (0, y.ox)(M.intl.formatToPlainString(M.t.Znl8Z8, { targetLanguage: s }), y.Ck.AI),
-                                );
+                                (0, h.P0)({
+                                    text: N.intl.formatToPlainString(N.t.Znl8Z8, { targetLanguage: s }),
+                                    icon: S.D,
+                                });
                                 try {
-                                    let n = await x.Bo.post({
-                                        url: k.Rsh.AI_TRANSLATE,
+                                    let n = await y.Bo.post({
+                                        url: M.Rsh.AI_TRANSLATE,
                                         body: { content: t, locale: r },
-                                        rejectWithError: (0, x.fT)(),
+                                        rejectWithError: (0, y.fT)(),
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, y.P0)(
-                                            (0, y.ox)(
-                                                M.intl.formatToPlainString(M.t.FtVUqm, { targetLanguage: s }),
-                                                y.Ck.SUCCESS,
-                                            ),
-                                        ));
+                                        (0, h.P0)({
+                                            text: N.intl.formatToPlainString(N.t.FtVUqm, { targetLanguage: s }),
+                                            variant: "success",
+                                        }));
                                 } finally {
                                     i(!1);
                                 }
                             },
                             [l, c, t, e],
                         ),
-                        d = (0, M.getAvailableLocales)().map((t) => {
+                        d = (0, N.getAvailableLocales)().map((t) => {
                             let e;
                             try {
                                 e = n(579832)(`./${t.value}.png`);
@@ -137,7 +136,7 @@ function P(t) {
                                 {
                                     id: `translate-${t.value}`,
                                     label: t.name,
-                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: N.M }),
+                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: P.M }),
                                     leadingAccessory: { type: "image", src: e },
                                     action: () => u(t.value, t.name),
                                     disabled: l,
@@ -147,7 +146,7 @@ function P(t) {
                         });
                     return (0, a.jsx)(o.Dr, {
                         id: "translate",
-                        label: l ? M.intl.string(M.t.SVKIdU) : M.intl.string(M.t["6epDlR"]),
+                        label: l ? N.intl.string(N.t.SVKIdU) : N.intl.string(N.t["6epDlR"]),
                         action: () => u(),
                         disabled: l,
                         children: d,
@@ -159,26 +158,22 @@ function P(t) {
                             async (t) => {
                                 if (null == l) {
                                     (i(t.id),
-                                        (0, y.P0)(
-                                            (0, y.ox)(
-                                                M.intl.formatToPlainString(M.t.rrf7Kf, { transformName: t.name }),
-                                                y.Ck.AI,
-                                            ),
-                                        ));
+                                        (0, h.P0)({
+                                            text: N.intl.formatToPlainString(N.t.rrf7Kf, { transformName: t.name }),
+                                            icon: S.D,
+                                        }));
                                     try {
-                                        let a = await x.Bo.post({
-                                            url: k.Rsh.AI_TEXT_TRANSFORM,
+                                        let a = await y.Bo.post({
+                                            url: M.Rsh.AI_TEXT_TRANSFORM,
                                             body: { content: e, prompt: t.prompt },
-                                            rejectWithError: (0, x.fT)(),
+                                            rejectWithError: (0, y.fT)(),
                                         });
                                         a.body &&
                                             (n(a.body.content),
-                                            (0, y.P0)(
-                                                (0, y.ox)(
-                                                    M.intl.formatToPlainString(M.t.qe4KvQ, { transformName: t.name }),
-                                                    y.Ck.SUCCESS,
-                                                ),
-                                            ));
+                                            (0, h.P0)({
+                                                text: N.intl.formatToPlainString(N.t.qe4KvQ, { transformName: t.name }),
+                                                variant: "success",
+                                            }));
                                     } finally {
                                         i(null);
                                     }
@@ -192,8 +187,8 @@ function P(t) {
                             o.Dr,
                             {
                                 id: `text-transform-${t.id}`,
-                                label: e ? M.intl.formatToPlainString(M.t.rrf7Kf, { transformName: t.name }) : t.name,
-                                icon: C.D,
+                                label: e ? N.intl.formatToPlainString(N.t.rrf7Kf, { transformName: t.name }) : t.name,
+                                icon: S.D,
                                 action: () => s(t),
                                 disabled: null != l,
                             },
@@ -208,16 +203,16 @@ function P(t) {
                           f,
                           (0, a.jsxs)(o.Dr, {
                               id: "text-transforms",
-                              label: M.intl.string(M.t["6YZezO"]),
-                              icon: C.D,
+                              label: N.intl.string(N.t["6YZezO"]),
+                              icon: S.D,
                               children: [
                                   g,
                                   g.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
                                   (0, a.jsx)(o.Dr, {
                                       id: "manage-text-transforms",
-                                      label: M.intl.string(M.t.IcDoaD),
+                                      label: N.intl.string(N.t.IcDoaD),
                                       action: () => {
-                                          (0, h.openModalLazy)(async () => {
+                                          (0, A.openModalLazy)(async () => {
                                               let { default: t } = await Promise.all([
                                                   n.e("378267"),
                                                   n.e("54191"),
@@ -231,13 +226,13 @@ function P(t) {
                       ],
                   })
                 : null;
-        })(P),
+        })(k),
         K = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
         V = g._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
-    let W = P.chatInputType?.commands?.enabled ?? !1,
-        Y = P.chatInputType?.stickers?.autoSuggest ?? !1,
-        B = P.chatInputType?.submit?.button ?? !1,
+    let W = k.chatInputType?.commands?.enabled ?? !1,
+        Y = k.chatInputType?.stickers?.autoSuggest ?? !1,
+        B = k.chatInputType?.submit?.button ?? !1,
         Z = W || Y,
         z =
             "" !== e
@@ -246,9 +241,9 @@ function P(t) {
                           o.Dr,
                           {
                               id: "cut",
-                              label: M.intl.string(M.t.pNPVhe),
+                              label: N.intl.string(N.t.pNPVhe),
                               shortcut: (0, p.isMac)() ? "\u2318X" : "Ctrl+X",
-                              action: () => S.Ay.cut(),
+                              action: () => T.Ay.cut(),
                           },
                           "cut",
                       ),
@@ -256,9 +251,9 @@ function P(t) {
                           o.Dr,
                           {
                               id: "copy",
-                              label: M.intl.string(M.t.OpuAlK),
+                              label: N.intl.string(N.t.OpuAlK),
                               shortcut: (0, p.isMac)() ? "\u2318C" : "Ctrl+C",
-                              action: () => S.Ay.copy(),
+                              action: () => T.Ay.copy(),
                           },
                           "copy",
                       ),
@@ -266,14 +261,14 @@ function P(t) {
                 : null,
         H = (0, a.jsx)(o.sL, {
             id: "command-suggestions",
-            label: M.intl.string(M.t["9rJKF7"]),
+            label: N.intl.string(N.t["9rJKF7"]),
             checked: V,
             action: () => {
                 let t = !V;
                 (g._3.updateSetting(t),
-                    b.default.track(k.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                    b.default.track(M.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: k.ZSU.CONTEXT_MENU },
+                        location: { object: M.ZSU.CONTEXT_MENU },
                     }));
             },
         });
@@ -281,14 +276,14 @@ function P(t) {
         "data-menu-migrated": !0,
         navId: "textarea-context",
         onClose: L,
-        "aria-label": M.intl.string(M.t.NWlDSI),
-        onSelect: R,
+        "aria-label": N.intl.string(N.t.NWlDSI),
+        onSelect: X,
         children: [
-            Z && (0, a.jsx)(o.Dr, { id: "suggestions", label: M.intl.string(M.t.zgxg7v), children: W && H }),
+            Z && (0, a.jsx)(o.Dr, { id: "suggestions", label: N.intl.string(N.t.zgxg7v), children: W && H }),
             B &&
                 (0, a.jsx)(o.sL, {
                     id: "submit-button",
-                    label: M.intl.string(M.t.G8XDyj),
+                    label: N.intl.string(N.t.G8XDyj),
                     checked: K,
                     action: () => {
                         (0, d.Xt)();
@@ -301,11 +296,11 @@ function P(t) {
                     z,
                     (0, a.jsx)(o.Dr, {
                         id: "paste",
-                        label: M.intl.string(M.t.lMUxVi),
+                        label: N.intl.string(N.t.lMUxVi),
                         shortcut: (0, p.isMac)() ? "\u2318V" : "Ctrl+V",
-                        action: () => S.Ay.paste(),
+                        action: () => T.Ay.paste(),
                     }),
-                    X && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: M.intl.string(M.t.X92Qnr), action: v }),
+                    v && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: N.intl.string(N.t.X92Qnr), action: U }),
                 ],
             }),
         ],

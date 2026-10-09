@@ -1,7 +1,7 @@
 n.d(t, { Do: () => g, Ki: () => m, Re: () => p, c_: () => A, kM: () => T, kb: () => f, vh: () => h, xP: () => I });
 var i = n(477900),
     r = n(873298),
-    a = n(376357),
+    a = n(858899),
     s = n(192308),
     l = n(157559),
     o = n(793574),
@@ -12,13 +12,13 @@ var i = n(477900),
     E = n(660183);
 function A(e) {
     let t = E.intl.formatToPlainString(E.t["CvHu/j"], { timestamp: new Date(e).valueOf() });
-    (0, d.Dc)({ message: t, icon: a.Ck.CLOCK });
+    (0, d.Dc)({ message: t, icon: "clock" });
 }
 function h(e) {
     if (e.body?.code !== _.t02.TOO_MANY_SCHEDULED_MESSAGES) {
         var t;
         return void ((t = e.body?.message ?? e.message),
-        (0, a.P0)((0, a.ox)(E.intl.formatToPlainString(E.t.PsJmUe, { error: t }), a.Ck.FAILURE)));
+        (0, a.P0)({ text: E.intl.formatToPlainString(E.t.PsJmUe, { error: t }), variant: "critical" }));
     }
     let { limit: d, isUpgradable: A } = (0, u.ZG)("ScheduledMessagesCreateRoadblock");
     A
@@ -43,20 +43,20 @@ function h(e) {
           });
 }
 function f() {
-    (0, d.Dc)({ message: E.intl.string(E.t.MXsMRk), icon: a.Ck.CLOCK });
+    (0, d.Dc)({ message: E.intl.string(E.t.MXsMRk), icon: "clock" });
 }
 function I(e) {
-    (0, a.P0)((0, a.ox)(E.intl.formatToPlainString(E.t.slM6In, { error: e }), a.Ck.FAILURE));
+    (0, a.P0)({ text: E.intl.formatToPlainString(E.t.slM6In, { error: e }), variant: "critical" });
 }
 function p() {
-    (0, d.Dc)({ message: E.intl.string(E.t["JF/LWn"]), icon: a.Ck.CLOCK });
+    (0, d.Dc)({ message: E.intl.string(E.t["JF/LWn"]), icon: "clock" });
 }
 function T(e) {
-    (0, a.P0)((0, a.ox)(E.intl.formatToPlainString(E.t.sUvyW3, { error: e }), a.Ck.FAILURE));
+    (0, a.P0)({ text: E.intl.formatToPlainString(E.t.sUvyW3, { error: e }), variant: "critical" });
 }
 function m() {
-    (0, d.Dc)({ message: E.intl.string(E.t["BHCm/d"]), icon: a.Ck.CLOCK });
+    (0, d.Dc)({ message: E.intl.string(E.t["BHCm/d"]), icon: "clock" });
 }
 function g(e) {
-    (0, a.P0)((0, a.ox)(E.intl.formatToPlainString(E.t["uy++C+"], { error: e }), a.Ck.FAILURE));
+    (0, a.P0)({ text: E.intl.formatToPlainString(E.t["uy++C+"], { error: e }), variant: "critical" });
 }

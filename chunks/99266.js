@@ -1,99 +1,101 @@
-i.d(t, { default: () => U });
-var l = i(477900),
-    a = i(582128),
+i.d(e, { default: () => w });
+var a = i(477900),
+    l = i(582128),
     s = i(834730),
     r = i(831544),
     n = i(432017),
-    c = i(376357),
+    c = i(858899),
     o = i(173936),
     d = i(148494),
     u = i(914718),
     m = i(451909),
     h = i(446244),
     x = i(734057),
-    C = i(957565),
+    p = i(957565),
     k = i(403362),
-    p = i(148166),
+    v = i(148166),
     f = i(381941),
-    v = i(660183),
+    C = i(660183),
     g = i(555414);
-function S(e) {
-    let { target: t } = e,
-        i = "artist" === t.kind;
-    return (0, l.jsxs)("div", {
+function j(t) {
+    let { target: e } = t,
+        i = "artist" === e.kind;
+    return (0, a.jsxs)("div", {
         className: g.sq,
         children: [
-            (0, l.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: g.kx,
                 children: [
-                    (0, l.jsx)(s.E, {
+                    (0, a.jsx)(s.E, {
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: t.title,
+                        children: e.title,
                     }),
-                    null != t.subtitle &&
-                        (0, l.jsx)(s.E, {
+                    null != e.subtitle &&
+                        (0, a.jsx)(s.E, {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             lineClamp: 1,
-                            children: t.subtitle,
+                            children: e.subtitle,
                         }),
                 ],
             }),
-            (0, l.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: g.SZ,
-                children: (0, l.jsx)(p.R, { src: t.imageUrl, isCircular: i, FallbackIcon: i ? r.MicrophoneIcon : n.T }),
+                children: (0, a.jsx)(v.R, { src: e.imageUrl, isCircular: i, FallbackIcon: i ? r.MicrophoneIcon : n.T }),
             }),
         ],
     });
 }
-function U(e) {
-    let { target: t, onClose: i, ...s } = e,
-        r = a.useCallback(
-            async (e, l, a) => {
-                let { withMessage: s, closeAfterSend: r } = l;
-                a(!0);
+function w(t) {
+    let { target: e, onClose: i, ...s } = t,
+        r = l.useCallback(
+            async (t, a, l) => {
+                let { withMessage: s, closeAfterSend: r } = a;
+                l(!0);
                 try {
-                    let l = (await Promise.all(e.map(h.pk))).filter(k.Vq);
-                    if (0 === l.length) return void a(!1);
+                    let a = (await Promise.all(t.map(h.pk))).filter(k.Vq);
+                    if (0 === a.length) return void l(!1);
                     r && i();
-                    let n = `${t.shareUrl}
+                    let n = `${e.shareUrl}
 
 `;
-                    for (let e of l) {
-                        let t = x.A.getChannel(e);
-                        null != t &&
-                            (await d.A.sendMessage(t.id, m.Ay.parse(t, n + (s ?? "")), !1, {
+                    for (let t of a) {
+                        let e = x.A.getChannel(t);
+                        null != e &&
+                            (await d.A.sendMessage(e.id, m.Ay.parse(e, n + (s ?? "")), !1, {
                                 location: f.Hx.GUILD_SPACE,
                             }));
                     }
-                    (0, c.P0)((0, c.ox)(v.intl.string(v.t.kwmYkt), c.Ck.SUCCESS));
-                } catch (e) {
-                    (0, c.P0)((0, c.ox)(v.intl.string(v.t.iufib1), c.Ck.FAILURE));
+                    (0, c.P0)({ text: C.intl.string(C.t.kwmYkt), variant: "success" });
+                } catch (t) {
+                    (0, c.P0)({ text: C.intl.string(C.t.iufib1), variant: "critical" });
                 } finally {
-                    a(!1);
+                    l(!1);
                 }
             },
-            [i, t.shareUrl],
+            [i, e.shareUrl],
         ),
-        n = a.useMemo(
+        n = l.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () =>
-                        (0, C.C)(t.shareUrl, () => (0, c.P0)((0, c.ox)(v.intl.string(v.t["L/PwZf"]), c.Ck.SUCCESS))),
+                        (0, p.C)(e.shareUrl, () =>
+                            (0, c.P0)({ text: C.intl.string(C.t["L/PwZf"]), variant: "success" }),
+                        ),
                     icon: o.LinkIcon,
                 },
             ],
-            [t.shareUrl],
+            [e.shareUrl],
         );
-    return (0, l.jsx)(u.ForwardModal, {
+    return (0, a.jsx)(u.ForwardModal, {
         ...s,
         onClose: i,
         source: "guild-space-popular-music",
-        customPreview: (0, l.jsx)(S, { target: t }),
+        customPreview: (0, a.jsx)(j, { target: e }),
         customSendHandler: r,
         additionalActions: n,
     });

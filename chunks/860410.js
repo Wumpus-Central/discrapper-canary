@@ -1,5 +1,5 @@
 n.d(t, { A: () => E });
-var i = n(376357),
+var i = n(858899),
     r = n(439372),
     a = n(666860),
     s = n(280450),
@@ -11,14 +11,15 @@ var i = n(376357),
 class _ extends r.A {
     actions = {
         GUILD_BULK_BAN_FAILED: (e) => {
-            ((0, i.P0)((0, i.ox)(u.intl.string(u.t.mICAWY), i.Ck.FAILURE)), d.E.getState().clearSelection(e.guildId));
+            ((0, i.P0)({ text: u.intl.string(u.t.mICAWY), variant: "critical" }),
+                d.E.getState().clearSelection(e.guildId));
         },
         GUILD_BULK_BAN_UPDATE: (e) => {
             let { bannedUsers: t, failedUsers: n, targetUserIds: r } = e.bulkBan,
                 _ = null != r ? r : [...t, ...n];
             (n.length > 0 && 0 === t.length
-                ? (0, i.P0)((0, i.ox)(u.intl.string(u.t.mICAWY), i.Ck.FAILURE))
-                : ((0, i.P0)((0, i.ox)(u.intl.string(u.t.AsCe5I), i.Ck.SUCCESS)),
+                ? (0, i.P0)({ text: u.intl.string(u.t.mICAWY), variant: "critical" })
+                : ((0, i.P0)({ text: u.intl.string(u.t.AsCe5I), variant: "success" }),
                   l.default.track(c.HAw.BULK_MODERATION_ACTION_COMPLETED, {
                       ...(0, a.H$)(e.guildId),
                       action_type: o.Nj.BAN,

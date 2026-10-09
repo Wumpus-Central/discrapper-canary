@@ -1,72 +1,74 @@
-n.d(i, { default: () => E });
-var e = n(477900),
-    s = n(582128),
-    l = n(731738),
-    r = n(17928),
-    a = n(189213),
-    c = n(376357),
-    d = n(331322),
-    o = n(834730),
-    u = n(548118),
-    m = n(807393),
-    S = n(885386),
-    x = n(71393),
-    D = n(115063),
-    h = n(510264),
-    p = n(386936),
-    A = n(660183),
-    f = n(368549);
-function E(t) {
-    let { transitionState: i, guildId: n, onClose: E } = t,
-        g = (0, r.bG)([x.A], () => x.A.getGuild(n));
+e.d(i, { default: () => v });
+var n = e(477900),
+    s = e(582128),
+    r = e(731738),
+    a = e(17928),
+    l = e(189213),
+    c = e(858899),
+    d = e(331322),
+    u = e(834730),
+    o = e(548118),
+    m = e(807393),
+    x = e(885386),
+    D = e(71393),
+    h = e(115063),
+    S = e(510264),
+    p = e(386936),
+    A = e(660183),
+    f = e(368549);
+function v(t) {
+    let { transitionState: i, guildId: e, onClose: v } = t,
+        g = (0, a.bG)([D.A], () => D.A.getGuild(e));
     if (
         (s.useEffect(() => {
-            ((0, h.Q)(n), (0, p.$)(p.s.MODAL_VIEWED, n), m.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW }));
-        }, [n]),
+            ((0, S.Q)(e), (0, p.$)(p.s.MODAL_VIEWED, e), m.A.increment({ name: r.K.DM_SETTINGS_UPSELL_VIEW }));
+        }, [e]),
         null == g)
     )
         return null;
-    function v(t) {
+    function E(t) {
         t.preventDefault();
-        let i = (0, D.Tb)();
-        (i.add(n),
-            S.$s.updateSetting(Array.from(i)).then(() => (0, c.P0)((0, c.ox)(A.intl.string(A.t.rlYD1W), c.Ck.SUCCESS))),
-            E(),
-            (0, p.$)(p.s.MODAL_DISABLED_DMS, n));
+        let i = (0, h.Tb)();
+        (i.add(e),
+            x.$s
+                .updateSetting(Array.from(i))
+                .then(() => (0, c.P0)({ text: A.intl.string(A.t.rlYD1W), variant: "success" })),
+            v(),
+            (0, p.$)(p.s.MODAL_DISABLED_DMS, e));
     }
-    return (0, e.jsx)("form", {
-        onSubmit: v,
-        children: (0, e.jsx)(a.a, {
+    return (0, n.jsx)("form", {
+        onSubmit: E,
+        children: (0, n.jsx)(l.a, {
             transitionState: i,
-            onClose: E,
+            onClose: v,
             title: A.intl.string(A.t.w2BvnL),
             subtitle: A.intl.format(A.t.Depjkv, { guild_name: g.name }),
             actions: [
                 {
                     text: A.intl.string(A.t.PsWbcp),
                     onClick: function () {
-                        (E(), (0, p.$)(p.s.MODAL_DISMISSED, n));
+                        (v(), (0, p.$)(p.s.MODAL_DISMISSED, e));
                     },
                     variant: "secondary",
                 },
-                { text: A.intl.string(A.t.TD7iUx), onClick: v },
+                { text: A.intl.string(A.t.TD7iUx), onClick: E },
             ],
-            children: (0, e.jsxs)(d.B, {
+            children: (0, n.jsxs)(d.B, {
                 direction: "vertical",
                 gap: 8,
                 children: [
-                    (0, e.jsx)(o.E, {
+                    (0, n.jsx)(u.E, {
                         variant: "text-md/medium",
                         color: "text-muted",
                         children: A.intl.string(A.t.KPB2iw),
                     }),
-                    (0, e.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: f.bo,
-                        children: (0, e.jsxs)("div", {
+                        children: (0, n.jsxs)("div", {
                             className: f.OA,
                             children: [
-                                (0, e.jsx)(u.Ay, { guild: g, size: u.Ay.Sizes.SMALL }),
-                                (0, e.jsx)(o.E, { className: f.J5, variant: "text-md/semibold", children: g.name }),
+                                (0, n.jsx)(o.Ay, { guild: g, size: o.Ay.Sizes.SMALL }),
+                                (0, n.jsx)(u.E, { className: f.J5, variant: "text-md/semibold", children: g.name }),
                             ],
                         }),
                     }),

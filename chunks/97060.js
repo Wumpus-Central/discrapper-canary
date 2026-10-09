@@ -1,4 +1,4 @@
-n.d(e, { default: () => G });
+n.d(e, { default: () => U });
 var a = n(477900),
     r = n(582128),
     i = n(17928),
@@ -61,7 +61,7 @@ function m(t) {
         }),
     });
 }
-var d = n(376357),
+var d = n(858899),
     x = n(331322),
     h = n(95477),
     f = n(123292),
@@ -69,7 +69,7 @@ var d = n(376357),
     R = n(836602),
     y = n(562708),
     O = n(499785);
-function I() {
+function v() {
     let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return O.A.put({
         url: C.Rsh.USER_EMAIL,
@@ -90,7 +90,7 @@ async function M(t) {
         })
     ).body;
 }
-function v(t) {
+function I(t) {
     let { error: e, setEmailToken: n, setError: s, onNext: l, onClose: o, transitionState: E } = t,
         [u, A] = r.useState(!1),
         [C, N] = r.useState(""),
@@ -108,14 +108,14 @@ function v(t) {
             A(!1);
         }
     }
-    async function v() {
+    async function I() {
         if (!S) {
             k(!0);
             try {
-                (await I(!0), (0, d.P0)((0, d.ox)(_.intl.string(_.t["84yeoz"]), d.Ck.SUCCESS)));
+                (await v(!0), (0, d.P0)({ text: _.intl.string(_.t["84yeoz"]), variant: "success" }));
             } catch (e) {
                 let t = new p.A(e).getAnyErrorMessage();
-                null != t && (0, d.P0)((0, d.ox)(t, d.Ck.FAILURE));
+                null != t && (0, d.P0)({ text: t, variant: "critical" });
             } finally {
                 k(!1);
             }
@@ -142,7 +142,7 @@ function v(t) {
                         onChange: N,
                         inputRef: y,
                     }),
-                    (0, a.jsx)(f.Q, { textVariant: "text-sm/normal", text: _.intl.string(_.t.K0NPQ6), onClick: v }),
+                    (0, a.jsx)(f.Q, { textVariant: "text-sm/normal", text: _.intl.string(_.t.K0NPQ6), onClick: I }),
                 ],
             }),
         })
@@ -155,10 +155,10 @@ function L(t) {
     async function A(t) {
         (t.preventDefault(), E(!0));
         try {
-            (await I(), e());
+            (await v(), e());
         } catch (e) {
             let t = new p.A(e).getAnyErrorMessage();
-            null != t && (0, d.P0)((0, d.ox)(t, d.Ck.FAILURE));
+            null != t && (0, d.P0)({ text: t, variant: "critical" });
         } finally {
             E(!1);
         }
@@ -232,7 +232,7 @@ function j(t) {
     );
 }
 var D = n(117816);
-function U(t) {
+function w(t) {
     let { onNext: e, onClose: n, transitionState: r } = t;
     return (0, a.jsxs)(c.k, {
         graphic: { type: "image", src: D.A },
@@ -253,65 +253,65 @@ function U(t) {
         ],
     });
 }
-var w = n(355097);
-function G(t) {
+var G = n(355097);
+function U(t) {
     let { transitionState: e, onClose: n } = t,
         c = (0, i.bG)([l.default], () => l.default.getCurrentUser());
     r.useEffect(() => (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED), () => (0, s.Uo)()), []);
     let E = c?.verified,
-        _ = E ? w.ko.CONFIRM_START : w.ko.EMAIL_AND_PASSWORD,
+        _ = E ? G.ko.CONFIRM_START : G.ko.EMAIL_AND_PASSWORD,
         [A, g] = r.useState(_),
         [S, k] = r.useState(null),
         [d, x] = r.useState(null),
         [h, f] = r.useState(""),
         [p, R] = r.useState();
     switch (A) {
-        case w.ko.CONFIRM_START:
-            return (0, a.jsx)(L, { onNext: () => g(w.ko.CONFIRM_CODE), onClose: n, transitionState: e });
-        case w.ko.CONFIRM_CODE:
-            return (0, a.jsx)(v, {
+        case G.ko.CONFIRM_START:
+            return (0, a.jsx)(L, { onNext: () => g(G.ko.CONFIRM_CODE), onClose: n, transitionState: e });
+        case G.ko.CONFIRM_CODE:
+            return (0, a.jsx)(I, {
                 error: d,
                 setError: x,
                 setEmailToken: k,
-                onNext: () => g(w.ko.CHANGE_EMAIL_REASONS),
+                onNext: () => g(G.ko.CHANGE_EMAIL_REASONS),
                 transitionState: e,
                 onClose: n,
             });
-        case w.ko.CHANGE_EMAIL_REASONS:
+        case G.ko.CHANGE_EMAIL_REASONS:
             return (0, a.jsx)(N, {
                 onNext: () => (
                     o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: p }),
-                    null != p && u.qr.has(p) ? g(w.ko.CHANGE_EMAIL_WARNING) : g(w.ko.EMAIL_AND_PASSWORD)
+                    null != p && u.qr.has(p) ? g(G.ko.CHANGE_EMAIL_WARNING) : g(G.ko.EMAIL_AND_PASSWORD)
                 ),
                 transitionState: e,
                 onClose: n,
                 reason: p,
                 onReasonChange: R,
             });
-        case w.ko.CHANGE_EMAIL_WARNING:
-            return (0, a.jsx)(U, {
+        case G.ko.CHANGE_EMAIL_WARNING:
+            return (0, a.jsx)(w, {
                 onNext: () => {
                     (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: p }),
-                        g(w.ko.EMAIL_AND_PASSWORD));
+                        g(G.ko.EMAIL_AND_PASSWORD));
                 },
                 onClose: n,
                 transitionState: e,
             });
-        case w.ko.EMAIL_AND_PASSWORD:
+        case G.ko.EMAIL_AND_PASSWORD:
             return (0, a.jsx)(j, {
                 emailToken: S,
                 onBack: E
-                    ? () => g(null != p && u.qr.has(p) ? w.ko.CHANGE_EMAIL_WARNING : w.ko.CHANGE_EMAIL_REASONS)
+                    ? () => g(null != p && u.qr.has(p) ? G.ko.CHANGE_EMAIL_WARNING : G.ko.CHANGE_EMAIL_REASONS)
                     : null,
                 onNext: (t) => {
                     (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: p }),
                         f(t),
-                        g(w.ko.COMPLETE));
+                        g(G.ko.COMPLETE));
                 },
                 onClose: n,
                 transitionState: e,
             });
-        case w.ko.COMPLETE:
+        case G.ko.COMPLETE:
             return (0, a.jsx)(m, { email: h, onClose: n, transitionState: e });
         default:
             return null;

@@ -3,8 +3,8 @@ var i,
     r = n(477900),
     l = n(582128),
     s = n(323889),
-    o = n(17928),
-    u = n(453903),
+    u = n(17928),
+    o = n(453903),
     a = n(462887),
     c = n(834730),
     d = n(939249),
@@ -16,10 +16,10 @@ var i,
     C = n(274670),
     _ = n(144779),
     I = n(429913),
-    S = n(409626),
-    T = n(921138),
-    p = n(459746),
-    N = n(311043),
+    T = n(409626),
+    S = n(921138),
+    N = n(459746),
+    p = n(311043),
     h = n(569926),
     L = n(363195),
     R = n(174459),
@@ -29,64 +29,64 @@ var i,
     x = n(561844),
     P = n(18437),
     M = n(590202),
-    y = n(971649),
-    D = n(657792),
+    D = n(971649),
+    y = n(657792),
     k = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
     q = n(190107),
     w = n(652215),
-    U = n(660183),
-    j = n(398889);
+    j = n(660183),
+    U = n(398889);
 function Q(e) {
     let t,
         n,
         i,
         { quest: l, onClose: s } = e,
-        u = (0, o.bG)([L.A], () => L.A.getState().theme),
-        m = (0, a.M)(u) ? w.NJ8.DARK : w.NJ8.LIGHT;
+        o = (0, u.bG)([L.A], () => L.A.getState().theme),
+        m = (0, a.M)(o) ? w.NJ8.DARK : w.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
-        className: j.N1,
+        className: U.N1,
         children: [
             (0, r.jsxs)("div", {
-                className: j.VW,
+                className: U.VW,
                 children: [
                     (0, r.jsx)("img", {
-                        className: j.rC,
+                        className: U.rC,
                         alt: l.config.messages.gameTitle,
                         src: (0, O.tW)(l, O.fY.GAME_TILE, m).url,
                     }),
                     (0, r.jsxs)("div", {
-                        className: j.if,
+                        className: U.if,
                         children: [
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-strong",
                                 children:
                                     ((t = {
-                                        [q.Li.PACKAGE_ACTION_ADVENTURE]: U.t.PYFVdf,
-                                        [q.Li.PACKAGE_RPG_MMO]: U.t.rFQo2F,
-                                        [q.Li.PACKAGE_RACING_SPORTS]: U.t.zDRa6g,
-                                        [q.Li.PACKAGE_SANDBOX_CREATIVE]: U.t.vz9U2Q,
-                                        [q.Li.PACKAGE_FAMILY_FRIENDLY]: U.t.IOiAE0,
-                                        [q.Li.PACKAGE_HOLIDAY_SEASON]: U.t.cJPqvD,
-                                        [q.Li.PACKAGE_NEW_YEARS]: U.t.S0w2mv,
+                                        [q.Li.PACKAGE_ACTION_ADVENTURE]: j.t.PYFVdf,
+                                        [q.Li.PACKAGE_RPG_MMO]: j.t.rFQo2F,
+                                        [q.Li.PACKAGE_RACING_SPORTS]: j.t.zDRa6g,
+                                        [q.Li.PACKAGE_SANDBOX_CREATIVE]: j.t.vz9U2Q,
+                                        [q.Li.PACKAGE_FAMILY_FRIENDLY]: j.t.IOiAE0,
+                                        [q.Li.PACKAGE_HOLIDAY_SEASON]: j.t.cJPqvD,
+                                        [q.Li.PACKAGE_NEW_YEARS]: j.t.S0w2mv,
                                     }),
                                     (i =
                                         (null != (n = l.config.features.find((e) => e in t)) ? t[n] : null) ??
-                                        U.t["D+DkEH"]),
-                                    U.intl.string(i)),
+                                        j.t["D+DkEH"]),
+                                    j.intl.string(i)),
                             }),
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: U.intl.string(U.t.VgN1Bn),
+                                children: j.intl.string(j.t.VgN1Bn),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, r.jsx)(d.D, {
-                className: j.b,
-                "aria-label": U.intl.string(U.t.cpT0Cq),
+                className: U.b,
+                "aria-label": j.intl.string(j.t.cpT0Cq),
                 onClick: s,
                 children: (0, r.jsx)(f.P, { size: "md", color: "currentColor" }),
             }),
@@ -94,12 +94,12 @@ function Q(e) {
     });
 }
 function b(e) {
-    let { quest: t, game: i, sourceQuestContent: u, onGameProfileModalOpen: a, onGameProfileModalClose: c } = e,
+    let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: a, onGameProfileModalClose: c } = e,
         f = (0, P.Ut)(),
-        E = (0, y.wW)(),
-        I = (0, o.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        T = l.useRef(null),
-        N = null != i.gameRecord;
+        E = (0, D.wW)(),
+        I = (0, u.bG)([A.Ay], () => A.Ay.useReducedMotion),
+        S = l.useRef(null),
+        p = null != i.gameRecord;
     function h() {
         (0, G.E5)(G.kI.STEP_3_CLICKED_EXTERNAL, "game_sheet_external")
             ? (0, C.r)({
@@ -108,18 +108,18 @@ function b(e) {
                   adCreativeId: t.id,
                   questContentCTA: M.Cy.GAME_STORE_OPEN_GAME_LINK,
                   surfaceId: v.uF.SPONSORED_QUEST_SHEET,
-                  sourceQuestContent: u,
+                  sourceQuestContent: o,
                   impressionId: E(),
               })
             : f({
                   questId: t.id,
                   questContent: v.uF.SPONSORED_QUEST_SHEET,
                   questContentCTA: M.Cy.GAME_STORE_OPEN_GAME_LINK,
-                  sourceQuestContent: u,
+                  sourceQuestContent: o,
               });
     }
     async function L() {
-        N &&
+        p &&
             ((0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_application")
                 ? (0, C.r)({
                       type: _.F.CLICK_INTERNAL,
@@ -127,14 +127,14 @@ function b(e) {
                       adCreativeId: t.id,
                       questContentCTA: M.Cy.GAME_PROFILE_OPEN,
                       surfaceId: v.uF.SPONSORED_QUEST_SHEET,
-                      sourceQuestContent: u,
+                      sourceQuestContent: o,
                       impressionId: E(),
                   })
                 : f({
                       questId: t.id,
                       questContent: v.uF.SPONSORED_QUEST_SHEET,
                       questContentCTA: M.Cy.GAME_PROFILE_OPEN,
-                      sourceQuestContent: u,
+                      sourceQuestContent: o,
                   }),
             await (0, m.openModalLazy)(
                 async () => {
@@ -588,6 +588,7 @@ function b(e) {
                         n.e("344265"),
                         n.e("817852"),
                         n.e("831145"),
+                        n.e("489949"),
                         n.e("556967"),
                         n.e("133179"),
                         n.e("146566"),
@@ -713,6 +714,7 @@ function b(e) {
                         n.e("703166"),
                         n.e("628752"),
                         n.e("262841"),
+                        n.e("97210"),
                         n.e("434691"),
                         n.e("509793"),
                         n.e("753589"),
@@ -803,7 +805,7 @@ function b(e) {
                     return (t) =>
                         (0, r.jsx)(e, {
                             gameId: i.gameId,
-                            source: S.GameProfileSources.GameSheet,
+                            source: T.GameProfileSources.GameSheet,
                             trackExternalAction: h,
                             ...t,
                         });
@@ -814,32 +816,32 @@ function b(e) {
     }
     let R = l.useCallback(
             (e) => {
-                if (null == T.current || I) return;
-                let t = T.current.getBoundingClientRect(),
+                if (null == S.current || I) return;
+                let t = S.current.getBoundingClientRect(),
                     n = e.clientX - t.left,
                     i = e.clientY - t.top,
                     r = t.width / 2,
                     l = t.height / 2;
-                T.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
+                S.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
             },
             [I],
         ),
         O = l.useCallback(() => {
-            null == T.current || I || (T.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+            null == S.current || I || (S.current.style.transform = "rotateX(0deg) rotateY(0deg)");
         }, [I]);
     return (0, r.jsx)(g.m, {
         text: i.name,
         children: (0, r.jsx)(d.D, {
-            className: j.zR,
+            className: U.zR,
             onClick: L,
             onMouseMove: R,
             onMouseLeave: O,
             children: (0, r.jsx)("div", {
-                ref: T,
-                className: j._M,
+                ref: S,
+                className: U._M,
                 children:
                     null != i.gameRecord
-                        ? (0, r.jsx)(p.Ay, { game: i.gameRecord, className: j.xe, size: p.wu.SMALL })
+                        ? (0, r.jsx)(N.Ay, { game: i.gameRecord, className: U.xe, size: N.wu.SMALL })
                         : null,
             }),
         }),
@@ -879,7 +881,7 @@ function X(e) {
         quest: t,
         applications: i,
         onClose: s,
-        sourceQuestContent: u,
+        sourceQuestContent: o,
         impressionRef: a,
         onGameProfileModalOpen: c,
         onGameProfileModalClose: d,
@@ -887,13 +889,13 @@ function X(e) {
     (0, I.A)(i);
     let f = l.useMemo(() => i, [i]);
     (0, h.x)(f);
-    let g = (0, o.bG)([N.A], () => f.some((e) => N.A.isFetching(e))),
-        E = (0, o.bG)([N.A], () => f.some((e) => N.A.didFetchingFail(e))),
-        A = (0, o.yK)([N.A], () =>
+    let g = (0, u.bG)([p.A], () => f.some((e) => p.A.isFetching(e))),
+        E = (0, u.bG)([p.A], () => f.some((e) => p.A.didFetchingFail(e))),
+        A = (0, u.yK)([p.A], () =>
             f
-                .map((e) => N.A.getGame(e))
+                .map((e) => p.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, T.oS)(e.id))
+                .filter((e) => (0, S.oS)(e.id))
                 .slice(0, 10),
         ),
         C = l.useMemo(() => A.map((e) => ({ gameId: e.id, name: e.name, gameRecord: e })).slice(0, 10), [A]),
@@ -901,11 +903,11 @@ function X(e) {
             let e = C.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [C.length]),
-        S = !g && 0 === C.length,
-        p = E || S;
+        T = !g && 0 === C.length,
+        N = E || T;
     if (
         (l.useEffect(() => {
-            if (p) {
+            if (N) {
                 let e = E ? k.FETCH_FAILED : k.NO_GAMES_AVAILABLE;
                 (R.default.track(w.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     s(),
@@ -914,32 +916,32 @@ function X(e) {
                         return (t) => (0, r.jsx)(e, { ...t });
                     }));
             }
-        }, [p, E, t.id, s]),
-        g && !p)
+        }, [N, E, t.id, s]),
+        g && !N)
     ) {
         let e = Math.min(i.length, 10);
         return (0, r.jsxs)("div", {
-            className: j.kL,
+            className: U.kL,
             children: [
                 (0, r.jsx)(Q, { quest: t, onClose: s }),
                 (0, r.jsx)("div", {
-                    className: j.LA,
-                    children: i.slice(0, e).map((e) => (0, r.jsx)("div", { className: j.Vj }, e)),
+                    className: U.LA,
+                    children: i.slice(0, e).map((e) => (0, r.jsx)("div", { className: U.Vj }, e)),
                 }),
             ],
         });
     }
-    return p
+    return N
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
                   a.current = e;
               },
-              className: j.kL,
+              className: U.kL,
               children: [
                   (0, r.jsx)(Q, { quest: t, onClose: s }),
                   (0, r.jsxs)("div", {
-                      className: j.LA,
+                      className: U.LA,
                       children: [
                           C.map((e) =>
                               (0, r.jsx)(
@@ -947,7 +949,7 @@ function X(e) {
                                   {
                                       quest: t,
                                       game: e,
-                                      sourceQuestContent: u,
+                                      sourceQuestContent: o,
                                       onGameProfileModalOpen: c,
                                       onGameProfileModalClose: d,
                                   },
@@ -965,7 +967,7 @@ function K(e) {
             targetElementRef: t,
             applications: n,
             children: i,
-            onGameSheetOpened: o,
+            onGameSheetOpened: u,
             onGameSheetClosed: a,
             quest: c,
             sourceQuestContent: d,
@@ -974,16 +976,16 @@ function K(e) {
         } = e,
         [g, A] = l.useState(!1),
         I = l.useRef(null),
-        S = t?.current != null,
-        T = S ? t : I;
-    function p() {
+        T = t?.current != null,
+        S = T ? t : I;
+    function N() {
         A(!0);
     }
-    function N() {
+    function p() {
         A(!1);
     }
     return (0, r.jsx)(E.Y, {
-        targetElementRef: T,
+        targetElementRef: S,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -993,12 +995,12 @@ function K(e) {
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: f,
-                onGameProfileModalOpen: p,
-                onGameProfileModalClose: N,
+                onGameProfileModalOpen: N,
+                onGameProfileModalClose: p,
             });
         },
         onRequestOpen: function () {
-            (o?.(),
+            (u?.(),
                 (0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_popout")
                     ? (0, C.r)({
                           type: _.F.CLICK_INTERNAL,
@@ -1018,11 +1020,11 @@ function K(e) {
                       }));
         },
         onRequestClose: function () {
-            if (g) return u.o;
+            if (g) return o.o;
             a?.();
         },
-        position: S ? "right" : "top",
-        align: S ? "bottom" : void 0,
+        position: T ? "right" : "top",
+        align: T ? "bottom" : void 0,
         spacing: 20,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
@@ -1030,10 +1032,10 @@ function K(e) {
     });
 }
 let V = function (e) {
-    let t = (0, y.QK)();
+    let t = (0, D.QK)();
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(D.R, {
+        : (0, r.jsx)(y.R, {
               questOrQuests: e.quest,
               questContent: v.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,

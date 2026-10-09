@@ -7,10 +7,10 @@ var i = n(477900),
     o = n(207803),
     u = n(836602),
     d = n(624826),
-    c = n(376357),
+    c = n(858899),
     g = n(660183);
 function m() {
-    (0, c.P0)((0, c.ox)(g.intl.string(g.t["84MExs"]), c.Ck.FAILURE));
+    (0, c.P0)({ text: g.intl.string(g.t["84MExs"]), variant: "critical" });
 }
 var A = n(159001);
 function E() {
@@ -57,7 +57,7 @@ function E() {
                 let { bannerOriginalMd5: t, ...n } = i,
                     l = await (0, o.gi)(n, e, t);
                 ((s = s && (l?.ok ?? !1)),
-                    l?.ok ? (0, A.RE)() : (0, c.P0)((0, c.ox)(g.intl.string(g.t.s35OuK), c.Ck.FAILURE)));
+                    l?.ok ? (0, A.RE)() : (0, c.P0)({ text: g.intl.string(g.t.s35OuK), variant: "critical" }));
             }
             (s && (0, A.x8)(), E(!1));
         }, [e]),

@@ -224,9 +224,12 @@ function P() {
             onLogout: function () {
                 (0, o.openModalLazy)(
                     async () => {
-                        let { ConfirmModal: e } = await Promise.all([n.e("304823"), n.e("223976"), n.e("977260")]).then(
-                            n.bind(n, 397927),
-                        );
+                        let { ConfirmModal: e } = await Promise.all([
+                            n.e("304823"),
+                            n.e("223976"),
+                            n.e("288688"),
+                            n.e("977260"),
+                        ]).then(n.bind(n, 397927));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 title: R.intl.string(R.t["2jxGer"]),

@@ -18,8 +18,8 @@ var n = r(477900),
     v = r(65238),
     L = r(773669),
     S = r(975571),
-    I = r(304210),
-    f = r(324157),
+    f = r(304210),
+    I = r(324157),
     A = r(480750),
     x = r(727142);
 let O = function (e) {
@@ -168,7 +168,7 @@ let U = function (e) {
             })
           : null;
 };
-var F = r(376357),
+var F = r(858899),
     K = r(765178),
     V = r(39418),
     W = r(828596),
@@ -211,7 +211,7 @@ function en(e) {
             onClaim: C,
         } = e,
         v = null != s ? d : i,
-        { handleInlineHelpTextClick: L, handleClaim: S, handleUseNowClick: I } = er(t, r, C);
+        { handleInlineHelpTextClick: L, handleClaim: S, handleUseNowClick: f } = er(t, r, C);
     return (0, n.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
@@ -236,7 +236,7 @@ function en(e) {
                         useNowButtonVariant: p,
                         isClaiming: h,
                         onClaim: S,
-                        onUseNowClick: I,
+                        onUseNowClick: f,
                     }),
                 ],
             }),
@@ -253,8 +253,8 @@ function el(e) {
             backgroundUrl: C,
             title: v,
             description: L,
-            progressText: I,
-            timeLeftText: f,
+            progressText: f,
+            timeLeftText: I,
             contentThemeClassName: x,
             rewardProduct: y,
             claimRewardButtonVariant: k,
@@ -276,7 +276,7 @@ function el(e) {
         className: a()(J.N, x),
         style: { backgroundImage: `url(${C})` },
         children: [
-            (0, n.jsx)(R, { assetPath: s, progress: i, progressText: I, progressColor: p }),
+            (0, n.jsx)(R, { assetPath: s, progress: i, progressText: f, progressColor: p }),
             (0, n.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
@@ -293,8 +293,8 @@ function el(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != I && (0, n.jsx)(O, { text: I, indicatorColor: p ?? b }),
-                            null != f && (0, n.jsx)(O, { icon: c.ClockIcon, text: f }),
+                            null != f && (0, n.jsx)(O, { text: f, indicatorColor: p ?? b }),
+                            null != I && (0, n.jsx)(O, { icon: c.ClockIcon, text: I }),
                         ],
                     }),
                 ],
@@ -364,13 +364,13 @@ function es(e) {
         C.showProgressRing && null == S)
     )
         return null;
-    let I = C.showProgressRing && null != S,
+    let f = C.showProgressRing && null != S,
         {
             title: x,
             description: O,
             progressText: y,
             timeLeftText: k,
-        } = (0, f.MZ)({
+        } = (0, I.MZ)({
             promotion: s,
             promotionProgress: S,
             progressIndicator: g.progressIndicator,
@@ -382,7 +382,7 @@ function es(e) {
             promotion: s,
             surface: r,
             assetPath: C.assetPath,
-            progress: I ? S : null,
+            progress: f ? S : null,
             progressColor: m?.progressColor,
             backgroundUrl: E.backgroundUrl,
             title: x,
@@ -400,7 +400,7 @@ function es(e) {
 }
 let ea = function (e) {
     let { variant: t, surface: r, collectionId: s } = e,
-        a = (0, I.S)(),
+        a = (0, f.S)(),
         { analyticsLocations: i } = (0, p.Ay)(),
         {
             onClaim: o,
@@ -426,7 +426,7 @@ let ea = function (e) {
                                 await (0, W.cF)(o, z.FYj);
                             } catch (e) {
                                 ((0, V.o)(e),
-                                    (0, F.P0)((0, F.ox)(H.intl.string(H.t.F8FvUy), F.Ck.FAILURE)),
+                                    (0, F.P0)({ text: H.intl.string(H.t.F8FvUy), variant: "critical" }),
                                     K.O.announce(H.intl.string(H.t.F8FvUy)),
                                     n(!1));
                                 return;

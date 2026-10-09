@@ -7,7 +7,7 @@ var s,
     c = l(17928);
 if (221552 == l.j) var r = l(939249);
 if (221552 == l.j) var o = l(366010);
-if (221552 == l.j) var v = l(376357);
+if (221552 == l.j) var v = l(858899);
 if (221552 == l.j) var d = l(834730);
 if (221552 == l.j) var A = l(926268);
 if (221552 == l.j) var g = l(346411);
@@ -64,20 +64,20 @@ let L = new Z(u.h, {
 var O = l(793943),
     V = l(742589),
     j = l(402860),
-    R = l(287809),
-    M = l(147964),
+    M = l(287809),
+    R = l(147964),
     S = l(174459),
     D = l(975571),
     y = l(371794),
     H = l(439303),
-    F = l(353281);
-let P = (0, l(945810).mj)({
+    P = l(353281);
+let F = (0, l(945810).mj)({
         name: "2026-09-application-test-mode-quick-access",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    b = 221552 == l.j ? P : null;
+    b = 221552 == l.j ? F : null;
 var U = l(676924),
     k = l(995393),
     B = l(616633),
@@ -95,10 +95,10 @@ function Q(t) {
         n,
         { storefront: f, selectedPageIndex: u } = t,
         N = (0, o.M)((0, p.Ay)()),
-        _ = (0, c.bG)([R.default], () => R.default.getCurrentUser()),
+        _ = (0, c.bG)([M.default], () => M.default.getCurrentUser()),
         Z = (0, H.jM)(),
-        { analyticsLocations: P } = (0, I.Ay)(),
-        { navigateToStorefrontPage: Q } = (0, F.H)(),
+        { analyticsLocations: F } = (0, I.Ay)(),
+        { navigateToStorefrontPage: Q } = (0, P.H)(),
         z = f?.applicationId,
         { enabled: W } = b.useConfig({ location: "SocialLayerStorefrontHeader" }),
         $ =
@@ -110,7 +110,7 @@ function Q(t) {
                 null != e && l && s === x.INITIALIZED && C();
             }, [e, l, s]),
             n),
-        K = (0, c.bG)([M.A], () => null != z && M.A.inTestModeForApplication(z)),
+        K = (0, c.bG)([R.A], () => null != z && R.A.inTestModeForApplication(z)),
         X = a.useCallback(() => {
             _?.id != null &&
                 (0, j.openUserProfileModal)({
@@ -123,15 +123,15 @@ function Q(t) {
             (S.default.track(T.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: Z?.sessionId,
                 cta_type: k.ST.LEARN_MORE,
-                location_stack: P,
+                location_stack: F,
             }),
                 window.open(D.A.getArticleURL(T.MVz.SOCIAL_LAYER_STOREFRONT)));
-        }, [Z, P]),
+        }, [Z, F]),
         te = a.useCallback(() => {
             null != z &&
                 (0, E.q1)(z).then((t) => {
                     null == t
-                        ? (0, v.P0)((0, v.ox)(M.A.error ?? G.intl.string(G.t.SDP0vo), v.Ck.FAILURE))
+                        ? (0, v.P0)({ text: R.A.error ?? G.intl.string(G.t.SDP0vo), variant: "critical" })
                         : (0, O.nf)(O.HP.APPLICATION_TEST_MODE_DEBUG, {
                               shouldAutoOpenGameProfile: !1,
                               initialTabId: B.t.STOREFRONT,

@@ -8,14 +8,14 @@ var t = l(477900),
     d = l(887129),
     u = l(17928),
     c = l(661531),
-    x = l(376357),
+    x = l(858899),
     g = l(602853),
     h = l(545442),
     m = l(173936),
     f = l(866665),
     j = l(834730),
-    R = l(939249),
-    b = l(789645),
+    b = l(939249),
+    R = l(789645),
     C = l(559106),
     y = l(922016),
     v = l(307301),
@@ -40,14 +40,14 @@ var t = l(477900),
     O = l(434367);
 let X = c.A.unsafe_rawColors.PRIMARY_300;
 function W() {
-    (0, x.P0)((0, x.ox)(J.intl.string(J.t.fEptJP), x.Ck.FAILURE));
+    (0, x.P0)({ text: J.intl.string(J.t.fEptJP), variant: "critical" });
 }
 function Y(e) {
     let { role: n, guildId: l, trailing: i, itemRef: r, labelId: o, className: a, style: d } = e,
         c = (0, P.Xx)({ roleId: n.id, size: 12, guildId: l }),
         x = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
-        R = (0, k.X_)(l, n, n.colorStrings),
-        b = n.tags?.guild_connections === null,
+        b = (0, k.X_)(l, n, n.colorStrings),
+        R = n.tags?.guild_connections === null,
         C = (0, g.r)(X).hex(),
         y = n.colorString ?? C;
     return (0, t.jsxs)("div", {
@@ -56,9 +56,9 @@ function Y(e) {
         style: d,
         children: [
             "dot" === x
-                ? (0, t.jsx)(h.W, { className: O.m4, color: y, background: !1, colors: R, tooltip: !1 })
-                : (0, t.jsx)(h.R, { color: y, colors: R }),
-            b &&
+                ? (0, t.jsx)(h.W, { className: O.m4, color: y, background: !1, colors: b, tooltip: !1 })
+                : (0, t.jsx)(h.R, { color: y, colors: b }),
+            R &&
                 (0, t.jsx)(m.LinkIcon, {
                     className: O.AP,
                     size: "custom",
@@ -85,7 +85,7 @@ function Y(e) {
         ],
     });
 }
-function U(e) {
+function $(e) {
     let { role: n, canRemove: l, onRemoveRole: r, onContextMenu: s, ...o } = e,
         { tabIndex: d, ...u } = (0, a.rm)(n.id),
         c = (0, M.GV)(),
@@ -100,12 +100,12 @@ function U(e) {
                   text: J.intl.string(J.t["T+3Adg"]),
                   spacing: 4,
                   ariaHidden: !0,
-                  children: (0, t.jsx)(R.D, {
+                  children: (0, t.jsx)(b.D, {
                       "aria-label": J.intl.formatToPlainString(J.t.QrxwhY, { roleName: n.name }),
                       onClick: x,
                       className: O.DT,
                       tabIndex: d,
-                      children: (0, t.jsx)(b.P, { size: "xxs", color: "currentColor" }),
+                      children: (0, t.jsx)(R.P, { size: "xxs", color: "currentColor" }),
                   }),
               })
             : void 0;
@@ -120,7 +120,7 @@ function U(e) {
         }),
     });
 }
-function $(e) {
+function B(e) {
     let { roleCount: n, children: l } = e,
         r = i.useMemo(() => `roles-${(0, o.A)()}`, []),
         s = (0, d.Ay)({ id: r, isEnabled: !0, scrollToStart: H.js$, scrollToEnd: H.js$, wrap: !0 }),
@@ -135,7 +135,7 @@ function $(e) {
         }),
     });
 }
-function B(e) {
+function Q(e) {
     let { userId: n, guild: l, showLabel: r = !1, onAddRole: o, buttonRef: a } = e,
         d = (0, u.bG)([T.default], () => T.default.getCurrentUser()),
         c = null != d ? z.HJ(l, d.id) : null,
@@ -143,7 +143,7 @@ function B(e) {
         g = x?.roles ?? [],
         h = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         m = i.useRef(null),
-        b = a ?? m,
+        R = a ?? m,
         C = i.useCallback(
             async (e) => {
                 let t = _.Ay.getMember(l.id, n),
@@ -161,7 +161,7 @@ function B(e) {
         return !(0, L.Oy)(e) && !e.managed && G.A.isRoleHigher(l, c, e) && -1 === g.indexOf(e.id);
     }
     return (0, t.jsx)(y.Y, {
-        targetElementRef: b,
+        targetElementRef: R,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
@@ -173,8 +173,8 @@ function B(e) {
                 text: J.intl.string(J.t.e3Wlyw),
                 shouldShow: !r,
                 ariaHidden: !0,
-                children: (0, t.jsxs)(R.D, {
-                    innerRef: b,
+                children: (0, t.jsxs)(b.D, {
+                    innerRef: R,
                     "aria-label": J.intl.string(J.t.e3Wlyw),
                     className: s()(O.c9, { [O.MS]: r }),
                     ...e,
@@ -191,7 +191,7 @@ function B(e) {
             }),
     });
 }
-function F(e) {
+function U(e) {
     let { userId: n, guild: l, roles: t, allowEditing: r, readOnly: s } = e,
         o = (0, u.bG)([T.default], () => T.default.getCurrentUser()),
         a = I.Q_.useSetting(),
@@ -218,7 +218,7 @@ function F(e) {
         hasDeveloperContextMenu: g,
     };
 }
-function Q(e, n, l) {
+function F(e, n, l) {
     return i.useCallback(
         async (t) => {
             let i = _.Ay.getMember(n, e),
@@ -259,11 +259,11 @@ function V(e) {
             canRemoveAnyRoles: x,
             hasDeveloperContextMenu: g,
             isRoleRemovable: h,
-        } = F({ userId: n, guild: l, roles: i, allowEditing: u, readOnly: d }),
-        m = Q(n, l.id, o),
+        } = U({ userId: n, guild: l, roles: i, allowEditing: u, readOnly: d }),
+        m = F(n, l.id, o),
         f = K();
     function j() {
-        return (0, t.jsx)(B, { userId: n, guild: l, showLabel: 0 === i.length, onAddRole: a });
+        return (0, t.jsx)(Q, { userId: n, guild: l, showLabel: 0 === i.length, onAddRole: a });
     }
     return 0 === i.length
         ? c
@@ -273,12 +273,12 @@ function V(e) {
               className: s()(O.MR, r),
               children:
                   c || x || g
-                      ? (0, t.jsxs)($, {
+                      ? (0, t.jsxs)(B, {
                             roleCount: i.length,
                             children: [
                                 i.map((e) =>
                                     (0, t.jsx)(
-                                        U,
+                                        $,
                                         {
                                             role: e,
                                             guildId: l.id,
@@ -308,7 +308,7 @@ function q(e) {
     return (0, t.jsx)(f.m, {
         text: o,
         ariaHidden: !0,
-        children: (0, t.jsx)(R.D, {
+        children: (0, t.jsx)(b.D, {
             innerRef: r,
             "aria-label": a,
             onClick: i,
@@ -342,9 +342,9 @@ function ee(e) {
             canRemoveAnyRoles: m,
             hasDeveloperContextMenu: f,
             isRoleRemovable: j,
-        } = F({ userId: n, guild: l, roles: r, allowEditing: x, readOnly: g }),
-        R = Q(n, l.id, d),
-        b = K(),
+        } = U({ userId: n, guild: l, roles: r, allowEditing: x, readOnly: g }),
+        b = F(n, l.id, d),
+        R = K(),
         C = i.useRef({});
     function y(e, n) {
         null != n ? (C.current[e] = n) : delete C.current[e];
@@ -390,7 +390,7 @@ function ee(e) {
             : null;
     }
     function _() {
-        return (0, t.jsx)(B, { buttonRef: k, userId: n, guild: l, showLabel: 0 === r.length, onAddRole: a });
+        return (0, t.jsx)(Q, { buttonRef: k, userId: n, guild: l, showLabel: 0 === r.length, onAddRole: a });
     }
     return 0 === r.length
         ? h
@@ -400,19 +400,19 @@ function ee(e) {
               className: s()(O.MR, o),
               children:
                   h || m || f
-                      ? (0, t.jsxs)($, {
+                      ? (0, t.jsxs)(B, {
                             roleCount: r.length,
                             children: [
                                 E.map((e, n) =>
                                     (0, t.jsx)(
-                                        U,
+                                        $,
                                         {
                                             role: e,
                                             guildId: l.id,
                                             canRemove: j(e.id),
-                                            onRemoveRole: m ? R : void 0,
+                                            onRemoveRole: m ? b : void 0,
                                             itemRef: (n) => y(e.id, n),
-                                            onContextMenu: f ? (n) => b(n, e.id) : void 0,
+                                            onContextMenu: f ? (n) => R(n, e.id) : void 0,
                                             style: { maxWidth: N || n !== v.length - 1 ? 268 : A },
                                         },
                                         e.id,
