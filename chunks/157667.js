@@ -1483,7 +1483,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eq.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 634407, Version Hash: a2b76c0ea21dd0f2dbd59cdc449cff9b91dfdb64`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 634411, Version Hash: 12801328e5bd892d78ff9487d448307602da5c69`,
 ),
     F.A.setTags({ appContext: K.QCW }),
     eO.A.initBasic(),
@@ -26239,7 +26239,7 @@ let yN = "isHideDevBanner",
                     className: tf()(yS.Wz, yS.mr),
                     children: [
                         (0, w.jsx)(yg, { className: yS.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "634407" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "634411" }),
                         (0, w.jsx)(r, {}),
                     ],
                 })
@@ -51117,7 +51117,8 @@ class H2 extends ef.Ay.PersistedStore {
     n(802958),
     n(456874),
     n(79858),
-    n(997187));
+    n(997187),
+    n(921955));
 var H3 = n(674378);
 let H6 = "ActivityTrackingStore",
     H5 = 30 * iA.A.Millis.MINUTE,
@@ -51305,8 +51306,7 @@ let j_ = new ju(V.h, {
     n(568004),
     n(645959),
     n(321191),
-    n(750128),
-    n(921955));
+    n(750128));
 let jE = !1;
 ((0, ig.as)(), ef.Ay.initialize(), FV.loadServer());
 let jA = (0, tq.Fe)({

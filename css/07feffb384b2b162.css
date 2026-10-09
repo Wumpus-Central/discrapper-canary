@@ -38,6 +38,14 @@
     background-color: var(--interactive-background-hover)
 }
 
+.sectionHeader__2fe50 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    padding-inline: var(--space-8)
+}
+
 .result__2fe50 {
     align-items: start;
     display: flex;
@@ -119,4 +127,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=80004d0f3a93ca54.css.map*/
+/*# sourceMappingURL=07feffb384b2b162.css.map*/

@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { A: () => _ }), n(321073));
+(n.d(t, { A: () => M }), n(321073));
 var i = n(17928),
     l = n(73153),
     s = n(308368),
@@ -12,131 +12,189 @@ var i = n(17928),
     f = n(994500),
     g = n(287809),
     m = n(645959),
-    p = n(652215);
-let A = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
-    y = null,
+    p = n(652215),
+    A = n(660183);
+let y = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     v = null,
-    w = [],
-    x = [];
-function E(e) {
-    ((w = [...w, e]), (x = x.map((e) => ({ ...e, sent: w.includes(e.data.record.id) }))), O.emitChange());
+    w = null,
+    x = [],
+    E = [],
+    C = [];
+function b(e) {
+    ((x = [...x, e]),
+        (C = _((E = E.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: x.includes(e.data.record.id) }))))),
+        k.emitChange());
 }
-function b() {
-    ((y = null), null != r && (r.destroy(), (r = null)), null != v && v());
+function N(e) {
+    let t = v?.application_id;
+    return null != t && null != h.A.findActivity(e, (e) => e.application_id === t, null, !1);
 }
-function C() {
-    let e = null != y && null != y.application_id ? c.A.getApplicationActivity(y.application_id) : null;
-    if (null != y && (null == e || null == e.party || null == e.party.id)) return b();
+function O(e) {
+    return { type: o.rD.HEADER, sent: !1, data: (0, o.jF)(e) };
 }
-class N extends i.Ay.Store {
+function _(e) {
+    if (v?.application_id == null) return e;
+    let t = [],
+        n = [];
+    for (let r of e) r.type === o.rD.USER && !0 === r.playingSameGame ? t.push(r) : n.push(r);
+    return 0 === t.length || 0 === n.length
+        ? e
+        : [O(A.intl.formatToPlainString(A.t.HBJiRR, { name: v.name })), ...t, O(A.intl.string(A.t.Jf0OOQ)), ...n];
+}
+function D() {
+    return (
+        (null != v || null != r) &&
+        ((v = null), null != r && (r.destroy(), (r = null)), null != w && (w(), (w = null)), !0)
+    );
+}
+function I(e) {
+    if (null == v || null == r) return !1;
+    let t =
+            null != e
+                ? new Set(
+                      e.map((e) => {
+                          let { user: t } = e;
+                          return t.id;
+                      }),
+                  )
+                : null,
+        n = E.map((e) => {
+            if (e.type !== o.rD.USER || (null != t && !t.has(e.data.record.id))) return e;
+            let n = h.A.getStatus(e.data.record.id),
+                r = N(e.data.record.id);
+            return n === e.status && r === e.playingSameGame ? e : { ...e, status: n, playingSameGame: r };
+        });
+    return !n.every((e, t) => e === E[t]) && ((C = _((E = n))), !0);
+}
+function S() {
+    return I(null);
+}
+function T() {
+    let e = null != v && null != v.application_id ? c.A.getApplicationActivity(v.application_id) : null;
+    return null != v && (null == e || null == e.party || null == e.party.id) && D();
+}
+class j extends i.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
         this.waitFor(d.A, u.A, c.A, h.A, m.A, g.default);
     }
     getActivity() {
-        return y;
+        return v;
     }
     getQuery() {
         return r?.query ?? "";
     }
     getResults() {
-        return x;
+        return C;
     }
 }
-let O = new N(l.h, {
+let k = new j(l.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            ((y = e.activity),
-                (v = e.resolve),
-                (w = []),
+            ((v = e.activity),
+                (w = e.resolve),
+                (x = []),
                 null == r &&
                     (r = new o.Ay(
                         (e, t) => {
                             let n;
-                            ((x = (
-                                "" === t.trim()
-                                    ? ((n = []),
-                                      m.A.getPrivateChannelIds().forEach((e) => {
-                                          let t = d.A.getChannel(e);
-                                          if (null != t)
-                                              if (t.type === p.rbe.DM) {
-                                                  let e = t.getRecipientId(),
-                                                      r = null != e ? g.default.getUser(e) : null;
-                                                  null != r && n.push({ type: o.rD.USER, record: r, score: 0 });
-                                              } else
-                                                  t.isMultiUserDM() &&
-                                                      n.push({ type: o.rD.GROUP_DM, record: t, score: 0 });
-                                      }),
-                                      n)
-                                    : e
-                            )
-                                .map((e) => {
-                                    switch (e.type) {
-                                        case o.rD.USER: {
-                                            let { record: t } = e;
-                                            return {
-                                                type: o.rD.USER,
-                                                sent: w.includes(t.id),
-                                                status: h.A.getStatus(t.id),
-                                                data: e,
-                                            };
+                            ((C = _(
+                                (E = (
+                                    "" === t.trim()
+                                        ? ((n = []),
+                                          m.A.getPrivateChannelIds().forEach((e) => {
+                                              let t = d.A.getChannel(e);
+                                              if (null != t)
+                                                  if (t.type === p.rbe.DM) {
+                                                      let e = t.getRecipientId(),
+                                                          r = null != e ? g.default.getUser(e) : null;
+                                                      null != r && n.push({ type: o.rD.USER, record: r, score: 0 });
+                                                  } else
+                                                      t.isMultiUserDM() &&
+                                                          n.push({ type: o.rD.GROUP_DM, record: t, score: 0 });
+                                          }),
+                                          n)
+                                        : e
+                                )
+                                    .map((e) => {
+                                        switch (e.type) {
+                                            case o.rD.USER: {
+                                                let { record: t } = e;
+                                                return {
+                                                    type: o.rD.USER,
+                                                    sent: x.includes(t.id),
+                                                    status: h.A.getStatus(t.id),
+                                                    playingSameGame: N(t.id),
+                                                    data: e,
+                                                };
+                                            }
+                                            case o.rD.TEXT_CHANNEL: {
+                                                let { record: t } = e,
+                                                    n = d.A.getChannel(t.parent_id),
+                                                    r = u.A.getGuild(t.guild_id);
+                                                return {
+                                                    type: o.rD.TEXT_CHANNEL,
+                                                    sent: x.includes(t.id),
+                                                    categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
+                                                    guildName: r?.name ?? "",
+                                                    data: e,
+                                                };
+                                            }
+                                            case o.rD.GROUP_DM: {
+                                                let { record: t } = e;
+                                                return { type: o.rD.GROUP_DM, sent: x.includes(t.id), data: e };
+                                            }
+                                            default:
+                                                return null;
                                         }
-                                        case o.rD.TEXT_CHANNEL: {
-                                            let { record: t } = e,
-                                                n = d.A.getChannel(t.parent_id),
-                                                r = u.A.getGuild(t.guild_id);
-                                            return {
-                                                type: o.rD.TEXT_CHANNEL,
-                                                sent: w.includes(t.id),
-                                                categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
-                                                guildName: r?.name ?? "",
-                                                data: e,
-                                            };
-                                        }
-                                        case o.rD.GROUP_DM: {
-                                            let { record: t } = e;
-                                            return { type: o.rD.GROUP_DM, sent: w.includes(t.id), data: e };
-                                        }
-                                        default:
-                                            return null;
-                                    }
-                                })
-                                .filter((e) => null != e)),
-                                O.emitChange());
+                                    })
+                                    .filter((e) => null != e)),
+                            )),
+                                k.emitChange());
                         },
-                        A,
+                        y,
                         100,
                     )),
                 r.search(""));
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;
-            null != r && r.search(t);
+            if (null == r || t === r.query) return !1;
+            r.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == y) return;
+            if (null == v) return !1;
             let t = e.channelId,
                 n = e.userId;
-            null != t
-                ? s.A.sendActivityInvite({
-                      channelId: t,
-                      type: p.xL.JOIN,
-                      activity: y,
-                      location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => E(t))
-                : null != n &&
-                  s.A.sendActivityInviteUser({
-                      userId: n,
-                      type: p.xL.JOIN,
-                      activity: y,
-                      location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => E(n));
+            return (
+                null != t
+                    ? s.A.sendActivityInvite({
+                          channelId: t,
+                          type: p.xL.JOIN,
+                          activity: v,
+                          location: "Channel Text Area - Invite to Join Modal",
+                      }).then(() => b(t))
+                    : null != n &&
+                      s.A.sendActivityInviteUser({
+                          userId: n,
+                          type: p.xL.JOIN,
+                          activity: v,
+                          location: "Channel Text Area - Invite to Join Modal",
+                      }).then(() => b(n)),
+                !1
+            );
         },
-        ACTIVITY_INVITE_MODAL_CLOSE: b,
+        ACTIVITY_INVITE_MODAL_CLOSE: D,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != y && (b(), !0);
+            return !!t && null != v && (D(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: C,
-        RPC_APP_DISCONNECTED: C,
+        PRESENCE_UPDATES: function (e) {
+            let { updates: t } = e;
+            return I(t);
+        },
+        PRESENCES_REPLACE: S,
+        CONNECTION_OPEN_SUPPLEMENTAL: S,
+        LOCAL_ACTIVITY_UPDATE: T,
+        RPC_APP_DISCONNECTED: T,
     }),
-    _ = 221552 == n.j ? O : null;
+    M = 221552 == n.j ? k : null;
