@@ -221,16 +221,16 @@ function b(e) {
             priceOptions: B,
             setCurrency: H,
             expressCheckoutSubmitting: W,
-            isOrderLocked: V,
+            isOrderLocked: Y,
         } = (0, C.t4)((e) => ({
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             isOrderLocked: e.get("isOrderLocked"),
         })),
-        { dropdownCurrencies: Y, displayCurrency: K } = (0, P.Jn)(),
+        { dropdownCurrencies: V, displayCurrency: K } = (0, P.Jn)(),
         Z = i.useCallback(() => O(!0), []),
-        q = i.useMemo(() => V || W || (m ?? !1), [V, W, m]),
+        q = i.useMemo(() => Y || W || (m ?? !1), [Y, W, m]),
         { giftCardCheckboxProps: z, disabled: $ } = i.useMemo(
             () =>
                 null != I
@@ -252,11 +252,11 @@ function b(e) {
                 return {
                     label: E.intl.string(E.t["/AAR02"]),
                     selectedCurrency: B.currency ?? K,
-                    currencies: Y,
+                    currencies: V,
                     onChange: H,
                     disabled: $,
                 };
-        }, [y, B.currency, K, Y, H, $]),
+        }, [y, B.currency, K, V, H, $]),
         ee = i.useMemo(() => ({ ...D, ...p, onPaymentSourceAdd: f }), [D, f, p]),
         et = null != z && z.checked,
         en = F || k || Q,
@@ -264,7 +264,7 @@ function b(e) {
             if (!M || null == z) return null;
             let e = en ? N.r : N.K,
                 t = z.disabled || $;
-            return (0, l.jsx)(v.o, { ...z, className: e, disabled: t });
+            return (0, l.jsx)("div", { className: e, children: (0, l.jsx)(v.o, { ...z, disabled: t }) });
         }, [M, z, en, $]),
         ei = M && et,
         er = ei && F && w,
