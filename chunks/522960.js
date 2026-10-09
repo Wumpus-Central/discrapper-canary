@@ -3816,7 +3816,7 @@ function nW(e) {
             null != r && (0, c.jsx)("div", { className: nV.highlightBento, children: r }),
             (0, c.jsx)("div", {
                 className: nV.bentoBoxesGrid,
-                children: s.map((e, t) => {
+                children: s.flatMap((e, t) => {
                     let s;
                     switch (e.length) {
                         case 3:
@@ -3828,15 +3828,13 @@ function nW(e) {
                         default:
                             s = nF.A0.LARGE;
                     }
-                    return (0, c.jsx)(c.Fragment, {
-                        children: e.map((e) =>
-                            (0, c.jsx)(
-                                nH.A,
-                                { index: t + +!!l, ...e, size: s, shouldLoadVideo: n, isReducedMotion: a },
-                                e.name,
-                            ),
+                    return e.map((e) =>
+                        (0, c.jsx)(
+                            nH.A,
+                            { index: t + +!!l, ...e, size: s, shouldLoadVideo: n, isReducedMotion: a },
+                            e.name,
                         ),
-                    });
+                    );
                 }),
             }),
         ],
@@ -4881,18 +4879,7 @@ let ak = function (e) {
             };
         })({ styles: aO }),
         r = (0, e8.bG)([ea.Ay], () => ea.Ay.useReducedMotion),
-        { analyticsLocations: d } = (0, A.Ay)(),
-        m = [
-            l.emoji,
-            l.streaming,
-            l.upload,
-            l.customAppIcons,
-            l.soundboard,
-            l.videoBackground,
-            l.superReactions,
-            l.stickersPremiumPerk,
-            l.badgeAlt,
-        ];
+        { analyticsLocations: d } = (0, A.Ay)();
     return (0, c.jsxs)("div", {
         className: u()(aO.perksContainer, t, {
             [aO.partiallyHidden]: i && !n,
@@ -4907,7 +4894,20 @@ let ak = function (e) {
             }),
             (0, c.jsx)("div", {
                 className: u()(aO.perkCardContainer, { [aO.perkCardContainerExpanded]: n }),
-                children: m.map((e) => null != e && (0, c.jsx)(aL, { ...e }, e.title)),
+                children: [
+                    "emoji",
+                    "streaming",
+                    "upload",
+                    "customAppIcons",
+                    "soundboard",
+                    "videoBackground",
+                    "superReactions",
+                    "stickersPremiumPerk",
+                    "badgeAlt",
+                ].map((e) => {
+                    let t = l[e];
+                    return null != t && (0, c.jsx)(aL, { ...t }, e);
+                }),
             }),
             i &&
                 (0, c.jsxs)(c.Fragment, {
