@@ -9,11 +9,7 @@ function l() {
 async function o(e, t) {
     let n,
         l = r.A.getWindowOpen(s.MLl.ACTIVITY_POPOUT);
-    e &&
-        !l &&
-        i.h.wait(() => {
-            i.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
-        });
+    e && !l && i.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
     try {
         n = await t();
     } catch {

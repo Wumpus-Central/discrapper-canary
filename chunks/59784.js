@@ -12,20 +12,18 @@ let d = new Map(),
 function x(e) {
     return null != e.removed_at ? o.xI.REMOVED : null != e.accepted_at ? o.xI.ACCEPTED : o.xI.PENDING;
 }
-function h(e) {
-    let { messages: t } = e;
-    return t.map((e) => g(e)).some(Boolean);
-}
 function g(e) {
+    let { messages: t } = e;
+    return t.map((e) => h(e)).some(Boolean);
+}
+function h(e) {
     if (e.type !== i.l.PREMIUM_GROUP_INVITE) return !1;
     let t = e.content;
     if (null == t || "" === t || !a.default.isProbablyAValidSnowflake(t)) return !1;
     let n = d.get(t);
     return (
         (null == n || n.state === o.xI.UNKNOWN) &&
-        (d.set(t, { state: o.xI.FETCHING, invite: null, errorStatus: null }),
-        l.h.wait(() => (0, r.el)(t).catch(c.FXj)),
-        !0)
+        (d.set(t, { state: o.xI.FETCHING, invite: null, errorStatus: null }), (0, r.el)(t).catch(c.FXj), !0)
     );
 }
 class f extends s.Ay.Store {
@@ -134,11 +132,11 @@ let A = new f(l.h, {
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        return g(t);
+        return h(t);
     },
-    LOCAL_MESSAGES_LOADED: h,
-    LOAD_MESSAGES_SUCCESS: h,
-    LOAD_MESSAGES_AROUND_SUCCESS: h,
+    LOCAL_MESSAGES_LOADED: g,
+    LOAD_MESSAGES_SUCCESS: g,
+    LOAD_MESSAGES_AROUND_SUCCESS: g,
     LOGOUT: function () {
         ((d = new Map()), (u = !1), (m = !1));
     },

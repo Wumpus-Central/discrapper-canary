@@ -63,23 +63,16 @@ let S = {
                 ));
     },
     handleSystemPrefersReducedMotionChanged(e) {
-        a.h.wait(() => {
-            c.RJ(e.matches ? "reduce" : "no-preference");
-        });
+        c.RJ(e.matches ? "reduce" : "no-preference");
     },
     handleSystemColorPreferencesChanged() {
         let e = E.Fc.NO_PREFERENCE;
         I.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
         let t = (!d.isPlatformEmbedded || g()) && T.matches ? "active" : "none";
-        a.h.wait(() => {
-            (s.LA(e), c.RI(t));
-        });
+        (s.LA(e), c.RI(t));
     },
     handleSystemPrefersContrastChanged() {
         let e = "no-preference";
-        (h.matches ? (e = "more") : f.matches && (e = "less"),
-            a.h.wait(() => {
-                c.Jb(e);
-            }));
+        (h.matches ? (e = "more") : f.matches && (e = "less"), c.Jb(e));
     },
 };

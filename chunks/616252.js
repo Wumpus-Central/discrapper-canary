@@ -20,7 +20,7 @@ let n = {
     },
     clearSearchQueryText: function (e) {
         let t = (0, a.bS)(e);
-        r.h.wait(() => r.h.dispatch({ type: "SEARCH_QUERY_TEXT_CLEAR", id: t }));
+        r.h.dispatch({ type: "SEARCH_QUERY_TEXT_CLEAR", id: t });
     },
     setShowBlockedResults: function (e, t) {
         let s = (0, a.bS)(e);

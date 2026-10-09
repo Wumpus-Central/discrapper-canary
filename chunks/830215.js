@@ -38,9 +38,7 @@ function y(e) {
 }
 let D = {
     startSession(e) {
-        d.h.wait(() => {
-            d.h.dispatch({ type: "START_SESSION", token: e });
-        });
+        d.h.dispatch({ type: "START_SESSION", token: e });
     },
     login(e) {
         let { login: t, password: n, undelete: i, source: r, giftCodeSKUId: s, invite: o, isMultiAccount: u } = e;

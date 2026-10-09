@@ -6,9 +6,7 @@ var i = n(636537),
 function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
-        r.h.wait(() => {
-            r.h.dispatch({ type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: e });
-        }),
+        r.h.dispatch({ type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: e }),
         i.Bo.get({
             url: s.Rsh.ENTITLEMENTS_FOR_APPLICATION(e),
             oldFormErrors: !0,

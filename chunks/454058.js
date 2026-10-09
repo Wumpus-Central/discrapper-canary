@@ -35,17 +35,12 @@ function O(e, t) {
         !c.A.getChannel(t)?.isThread() &&
         null == A.Ay.ackMessageId(t) &&
         0 === A.Ay.getMentionCount(t) &&
-        r.h.wait(() =>
-            (0, a.ack)(
-                t,
-                {
-                    object: p.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED,
-                    objectType: p.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                },
-                !0,
-                !0,
-                I.default.atPreviousMillisecond(t),
-            ),
+        (0, a.ack)(
+            t,
+            { object: p.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: p.AnalyticsObjectTypes.ACK_AUTOMATIC },
+            !0,
+            !0,
+            I.default.atPreviousMillisecond(t),
         );
 }
 function R(e) {

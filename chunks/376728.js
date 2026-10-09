@@ -306,7 +306,7 @@ let ef = {
         return r?.code;
     },
     async getAllFriendInvites(e) {
-        if ((await new Promise((e) => h.h.wait(() => e(null))), Y.A.getFriendInvitesFetching()))
+        if (Y.A.getFriendInvitesFetching())
             return null != ec ? ec.then((e) => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
         ((ec = _.Bo.get({ url: ei.Rsh.FRIEND_INVITES, context: { location: e }, rejectWithError: (0, _.fT)() })),
             h.h.dispatch({ type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: new Date() }));

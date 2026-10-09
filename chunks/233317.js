@@ -14,12 +14,12 @@ function _() {
 }
 function R(e) {
     let { subscriptionId: t } = e;
-    (s.h.wait(() => (0, E.mm)(t).catch(r.FXj)), (M.membersData.isUpdating = !1));
+    ((0, E.mm)(t).catch(r.FXj), (M.membersData.isUpdating = !1));
 }
-function h() {
+function U() {
     M.membersData.isUpdating = !1;
 }
-class U extends i.Ay.Store {
+class h extends i.Ay.Store {
     initialize() {
         this.waitFor(m.A);
     }
@@ -57,10 +57,10 @@ class U extends i.Ay.Store {
         return n.LM;
     }
 }
-let c = new U(s.h, {
+let c = new h(s.h, {
     PREMIUM_GROUP_MEMBERS_REQUEST: function (e) {
         let { subscriptionId: t } = e;
-        return !M.membersData.isFetching && (s.h.wait(() => (0, E.mm)(t).catch(r.FXj)), !0);
+        return !M.membersData.isFetching && ((0, E.mm)(t).catch(r.FXj), !0);
     },
     PREMIUM_GROUP_MEMBERS_FETCH_START: function () {
         M.membersData.isFetching = !0;
@@ -73,7 +73,7 @@ let c = new U(s.h, {
         M.membersData.isFetching = !1;
     },
     PREMIUM_GROUP_MEMBERSHIP_REQUEST: function () {
-        return !M.membershipData.isFetching && (s.h.wait(() => (0, E.JV)().catch(r.FXj)), !0);
+        return !M.membershipData.isFetching && ((0, E.JV)().catch(r.FXj), !0);
     },
     PREMIUM_GROUP_MEMBERSHIP_FETCH_START: function () {
         M.membershipData.isFetching = !0;
@@ -90,17 +90,17 @@ let c = new U(s.h, {
     },
     PREMIUM_GROUP_INVITE_USERS_START: _,
     PREMIUM_GROUP_INVITE_USERS_SUCCESS: R,
-    PREMIUM_GROUP_INVITE_USERS_FAILURE: h,
+    PREMIUM_GROUP_INVITE_USERS_FAILURE: U,
     PREMIUM_GROUP_REMOVE_MEMBER_START: _,
     PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS: R,
-    PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: h,
+    PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: U,
     PREMIUM_GROUP_REMOVE_INVITE_START: _,
     PREMIUM_GROUP_REMOVE_INVITE_SUCCESS: R,
     PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function (e) {
         let { errorCode: t, subscriptionId: a } = e;
         if (t === n.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED)
-            return (s.h.wait(() => (0, E.mm)(a).catch(r.FXj)), (M.membersData.isUpdating = !1), !0);
-        h();
+            return ((0, E.mm)(a).catch(r.FXj), (M.membersData.isUpdating = !1), !0);
+        U();
     },
     LOGOUT: function () {
         M = {

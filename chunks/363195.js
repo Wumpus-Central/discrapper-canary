@@ -110,9 +110,7 @@ let v = new D(a.h, {
                         },
                         m.Sb.INFREQUENT_USER_ACTION,
                     ),
-                a.h.wait(() => {
-                    a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });
-                })),
+                a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } })),
             y()
         );
     },

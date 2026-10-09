@@ -15,20 +15,18 @@ function C(e) {
             discoverySessionId: d,
             skuId: C,
             analyticsLocations: c,
-            analyticsObject: h,
-            isGift: f = !1,
+            analyticsObject: f,
+            isGift: h = !1,
             giftMessage: k,
             giftingOrigin: g,
             giftRecipient: m,
             onClose: M,
             onComplete: P,
         } = e,
-        E = f ? "gift-payment-modal" : "payment-modal",
+        E = h ? "gift-payment-modal" : "payment-modal",
         O = r.default.getCurrentUser();
     O?.verified
-        ? (l.h.wait(() => {
-              l.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
-          }),
+        ? (l.h.dispatch({ type: "PAYMENT_MODAL_OPEN" }),
           (function (e) {
               let {
                   discoverySessionId: n,
@@ -43,8 +41,8 @@ function C(e) {
                   giftRecipient: p,
                   onClose: C,
                   onCloseCallback: c,
-                  onCloseRequest: h,
-                  onComplete: f,
+                  onCloseRequest: f,
+                  onComplete: h,
               } = e;
               s.UnifiedCheckoutFlowManagerSingletons[s.CL.COLLECTIBLES_CHECKOUT]
                   .get()
@@ -52,20 +50,20 @@ function C(e) {
                       unifiedCheckoutProviderProps: { analyticsLocations: t },
                       checkoutConfiguration: { skuId: o, discoverySessionId: n },
                       giftContextProps: { isGift: u, giftMessage: r, giftingOrigin: d, giftRecipient: p },
-                      checkoutHandlers: { onClose: C, onComplete: f },
+                      checkoutHandlers: { onClose: C, onComplete: h },
                       forwardedPaymentModalProps: { onStepChange: l, analyticsObject: a },
-                      modalAPIOptions: { modalKey: i, onCloseCallback: c, onCloseRequest: h },
+                      modalAPIOptions: { modalKey: i, onCloseCallback: c, onCloseRequest: f },
                   });
           })({
               discoverySessionId: d,
               skuId: C,
               analyticsLocations: c,
-              analyticsObject: h,
+              analyticsObject: f,
               onStepChange: function (e) {
                   n = e;
               },
               modalKey: E,
-              isGift: f,
+              isGift: h,
               giftMessage: k,
               giftingOrigin: g,
               giftRecipient: m,

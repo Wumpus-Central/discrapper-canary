@@ -271,34 +271,32 @@ let j = {
     getDetectableGames() {
         if (!g.A.canFetchDetectableGames()) return;
         let e = g.A.detectableGamesEtag;
-        d.h.wait(() => {
-            (d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                L.A.get({
-                    url: null != U ? `https://${U}/detectables/games-v1.json` : G,
-                    headers: { "If-None-Match": e },
-                    retries: 1,
-                    oldFormErrors: !0,
-                    trackedActionData: {
-                        event: r.NetworkActionNames.DETECTABLE_APPLICATIONS_FETCH,
-                        properties: (t) => (0, o.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
-                    },
-                    rejectWithError: (0, l.fT)(),
-                }).then(
-                    (e) => {
-                        let {
-                            body: t,
-                            headers: { etag: n },
-                        } = e;
-                        d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: t, etag: n });
-                    },
-                    (e) => {
-                        let { status: t } = e;
-                        304 === t
-                            ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: g.A.detectableGamesEtag })
-                            : d.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
-                    },
-                ));
-        });
+        (d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
+            L.A.get({
+                url: null != U ? `https://${U}/detectables/games-v1.json` : G,
+                headers: { "If-None-Match": e },
+                retries: 1,
+                oldFormErrors: !0,
+                trackedActionData: {
+                    event: r.NetworkActionNames.DETECTABLE_APPLICATIONS_FETCH,
+                    properties: (t) => (0, o.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
+                },
+                rejectWithError: (0, l.fT)(),
+            }).then(
+                (e) => {
+                    let {
+                        body: t,
+                        headers: { etag: n },
+                    } = e;
+                    d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: t, etag: n });
+                },
+                (e) => {
+                    let { status: t } = e;
+                    304 === t
+                        ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: g.A.detectableGamesEtag })
+                        : d.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
+                },
+            ));
     },
     getDetectableBlocklist() {
         if (!g.A.canFetchExecutableBlocklist()) return;
@@ -339,33 +337,31 @@ let j = {
     getDetectableNonGames() {
         if (!I.A.canFetch()) return;
         let e = I.A.etag;
-        d.h.wait(() => {
-            (d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
-                L.A.get({
-                    url: null != U ? `https://${U}/detectables/non-games-v1.json` : x,
-                    headers: { "If-None-Match": e },
-                    retries: 1,
-                    trackedActionData: {
-                        event: r.NetworkActionNames.DETECTABLE_NON_GAMES_FETCH,
-                        properties: (t) => (0, o.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
-                    },
-                    rejectWithError: (0, l.fT)(),
-                }).then(
-                    (e) => {
-                        let {
-                            body: t,
-                            headers: { etag: n },
-                        } = e;
-                        d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: t, etag: n });
-                    },
-                    (e) => {
-                        let { status: t } = e;
-                        304 === t
-                            ? d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: I.A.etag })
-                            : d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
-                    },
-                ));
-        });
+        (d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
+            L.A.get({
+                url: null != U ? `https://${U}/detectables/non-games-v1.json` : x,
+                headers: { "If-None-Match": e },
+                retries: 1,
+                trackedActionData: {
+                    event: r.NetworkActionNames.DETECTABLE_NON_GAMES_FETCH,
+                    properties: (t) => (0, o.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
+                },
+                rejectWithError: (0, l.fT)(),
+            }).then(
+                (e) => {
+                    let {
+                        body: t,
+                        headers: { etag: n },
+                    } = e;
+                    d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: t, etag: n });
+                },
+                (e) => {
+                    let { status: t } = e;
+                    304 === t
+                        ? d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: I.A.etag })
+                        : d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
+                },
+            ));
     },
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: i, distributor: r, sku: a, executableName: s } = e,

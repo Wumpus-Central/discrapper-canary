@@ -11,9 +11,7 @@ function d(e) {
     {
         let { flushSync: t } = n(333007);
         t(() => {
-            i.h.wait(() => {
-                i.h.dispatch({ type: "CONTEXT_MENU_CLOSE" }).finally(e);
-            });
+            i.h.dispatch({ type: "CONTEXT_MENU_CLOSE" }).finally(e);
         });
     }
 }

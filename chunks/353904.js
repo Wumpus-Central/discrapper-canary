@@ -5,24 +5,24 @@ var l = s(477900),
     n = s(935462),
     r = s(821609),
     h = s(297264),
-    o = s(73153),
-    c = s(356645),
-    d = s(636537),
+    o = s(356645),
+    c = s(636537),
+    d = s(73153),
     u = s(568004),
     p = s(652215);
 async function A(t, e, s, l) {
     if (u.A.needsToFetchBuildSize(s)) {
-        o.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_START", buildId: s });
+        d.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_START", buildId: s });
         try {
-            let a = await d.Bo.post({
+            let a = await c.Bo.post({
                 url: p.Rsh.APPLICATION_BUILD_SIZE(t, e, s),
                 body: { manifest_ids: l },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
-            o.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_SUCCESS", buildId: s, sizeKB: a.body.size_kb });
+            d.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_SUCCESS", buildId: s, sizeKB: a.body.size_kb });
         } catch (t) {
-            o.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_FAIL", buildId: s });
+            d.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_FAIL", buildId: s });
         }
     }
 }
@@ -321,16 +321,11 @@ class Z extends a.Component {
     isUnmounted = !1;
     fetchInstallSize() {
         let { applicationId: t, branchId: e, buildId: s, manifestIds: l, buildSizeKB: a } = this.props;
-        null != s &&
-            null != l &&
-            null == a &&
-            o.h.wait(() => {
-                A(t, e, s, l);
-            });
+        null != s && null != l && null == a && A(t, e, s, l);
     }
     componentDidMount() {
         let { applicationId: t, branchId: e, buildId: s, manifestIds: l } = this.props;
-        null == s || null == l ? (0, c.n)(t, e) : this.fetchInstallSize();
+        null == s || null == l ? (0, o.n)(t, e) : this.fetchInstallSize();
     }
     componentDidUpdate(t) {
         (this.props.buildId !== t.buildId || this.props.manifestIds !== t.manifestIds) && this.fetchInstallSize();
@@ -359,10 +354,10 @@ class Z extends a.Component {
         let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
         if (null != e && null != s) {
             var a;
-            (l || o.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_STORE_TERMS" }),
+            (l || d.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_STORE_TERMS" }),
                 null != t &&
                     null != t.eulaId &&
-                    ((a = t.eulaId), o.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_EULA", eulaId: a })),
+                    ((a = t.eulaId), d.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_EULA", eulaId: a })),
                 this.install(e, s));
         } else throw Error("Unexpected missing build info for non-premium product");
     };

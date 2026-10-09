@@ -5,15 +5,13 @@ var i = n(607399),
     s = n(73153),
     l = n(731854);
 function o(e, t) {
-    s.h.wait(() => {
-        s.h.dispatch({
-            type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
-            context: l.x.DEFAULT,
-            userId: e,
-            videoToggleState: t,
-            persist: !1,
-            isAutomatic: !0,
-        });
+    s.h.dispatch({
+        type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
+        context: l.x.DEFAULT,
+        userId: e,
+        videoToggleState: t,
+        persist: !1,
+        isAutomatic: !0,
     });
 }
 var d = n(927813),

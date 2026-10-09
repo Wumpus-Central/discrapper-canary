@@ -51,12 +51,10 @@ let f = new h(l.h, {
         let e = d.Ay.getRunningDiscordApplicationIds();
         for (let t of a.filter((t) => !e.includes(t))) {
             let e = c.A.getActiveLibraryApplication(t);
-            null != e &&
-                l.h.wait(() => {
-                    try {
-                        o.O(e.id, e.branchId);
-                    } catch (e) {}
-                });
+            if (null != e)
+                try {
+                    o.O(e.id, e.branchId);
+                } catch (e) {}
         }
         return ((a = e), !1);
     },

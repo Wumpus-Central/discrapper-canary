@@ -11429,10 +11429,8 @@ let cK = function (e) {
         switch (
             (R.useEffect(() => {
                 null != e &&
-                    eg.h.wait(() => {
-                        (0, dS.Fy)(e.id).then(() => {
-                            n(1);
-                        });
+                    (0, dS.Fy)(e.id).then(() => {
+                        n(1);
                     });
             }, [e]),
             t)

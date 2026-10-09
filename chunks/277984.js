@@ -670,7 +670,7 @@ async function ea() {
     if (!c.A.isPaymentSourceFetching)
         try {
             let e = a.Bo.get({ url: N.Rsh.BILLING_PAYMENT_SOURCES, oldFormErrors: !0, rejectWithError: !1 });
-            s.h.wait(() => s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_START", request: e }));
+            s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_START", request: e });
             let t = await e;
             return (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_SUCCESS", paymentSources: t.body }), t);
         } catch (e) {
@@ -730,9 +730,7 @@ async function ed() {
     }
 }
 async function ec() {
-    s.h.wait(() => {
-        s.h.dispatch({ type: "BILLING_SUBSCRIPTION_FETCH_START" });
-    });
+    s.h.dispatch({ type: "BILLING_SUBSCRIPTION_FETCH_START" });
     try {
         let e = en.En.ADD_PERKS_IF_DETECTED,
             t = u.A.getLastLazyPerkSync();
@@ -752,9 +750,7 @@ async function ec() {
     }
 }
 async function eu() {
-    s.h.wait(() => {
-        s.h.dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
-    });
+    s.h.dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
     try {
         let e = await a.Bo.get({
             url: N.Rsh.BILLING_SUBSCRIPTIONS,
@@ -992,7 +988,7 @@ async function eL() {
     if (!e && null != c.A.ipCountryCodeRequest) return c.A.ipCountryCodeRequest;
     try {
         let e = a.Bo.get({ url: N.Rsh.BILLING_COUNTRY_CODE, rejectWithError: !1 });
-        s.h.wait(() => s.h.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request: e }));
+        s.h.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request: e });
         let t = await e,
             n = t.body.country_code;
         return (s.h.dispatch({ type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: n }), t);
@@ -1031,7 +1027,7 @@ async function eD() {
     if (!e && null != c.A.ipLocationRequest) return c.A.ipLocationRequest;
     try {
         let e = a.Bo.get({ url: N.Rsh.BILLING_LOCATION, rejectWithError: !1 });
-        s.h.wait(() => s.h.dispatch({ type: "BILLING_IP_LOCATION_FETCH_START", request: e }));
+        s.h.dispatch({ type: "BILLING_IP_LOCATION_FETCH_START", request: e });
         let t = await e,
             n = t.body.country_code,
             i = t.body.subdivision_code;

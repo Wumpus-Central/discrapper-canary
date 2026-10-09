@@ -150,9 +150,8 @@ let k = new V(u.h, {
             }),
             null != e.received_installation_id)
         ) {
-            let t = (0, o.m0)(e.code),
-                n = e.received_installation_id;
-            u.h.wait(() => d.Ay.setReceivedInstallationIdForInviteCode(t, n));
+            let t = (0, o.m0)(e.code);
+            d.Ay.setReceivedInstallationIdForInviteCode(t, e.received_installation_id);
         }
     },
     INVITE_MODAL_CLOSE: function () {

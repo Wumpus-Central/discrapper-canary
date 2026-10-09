@@ -1,11 +1,11 @@
 (s.r(e), s.d(e, { default: () => H }));
 var n = s(477900),
-    i = s(582128),
-    r = s(806163),
+    r = s(582128),
+    i = s(806163),
     o = s(17928),
-    a = s(73153);
-function l(t) {
-    a.h.wait(() => a.h.dispatch({ type: "APPLICATION_STORE_LOCATION_CHANGE", location: t }));
+    l = s(73153);
+function a(t) {
+    l.h.dispatch({ type: "APPLICATION_STORE_LOCATION_CHANGE", location: t });
 }
 var d = s(820284),
     A = s(803842),
@@ -13,8 +13,8 @@ var d = s(820284),
     c = s(652215);
 let u = { ...I.zR, [c.IWg.CAROUSEL_NEXT]: A.FK, [c.IWg.CAROUSEL_PREV]: A.B0 };
 var T = s(775121),
-    h = s(277984),
-    P = s(268218),
+    P = s(277984),
+    h = s(268218),
     p = s(670735),
     O = s(976860),
     C = s(210714),
@@ -33,14 +33,14 @@ let B = o.Ay.connectStores([S.default], () => ({ user: S.default.getCurrentUser(
         (0, E.A)(function (t) {
             let { user: e } = t,
                 s = (0, o.bG)([_.default], () => _.default.isAuthenticated()),
-                { analyticsLocations: i } = (0, L.Ay)(j.A.HOME_PAGE_PREMIUM_TAB);
+                { analyticsLocations: r } = (0, L.Ay)(j.A.HOME_PAGE_PREMIUM_TAB);
             return s
                 ? (0, n.jsxs)("div", {
                       className: f.ql,
                       children: [
                           null == e && (0, n.jsx)(g.A, {}),
                           (0, n.jsx)(L.f5, {
-                              value: i,
+                              value: r,
                               children:
                                   null == e
                                       ? (0, n.jsx)(N.A, {
@@ -52,20 +52,20 @@ let B = o.Ay.connectStores([S.default], () => ({ user: S.default.getCurrentUser(
                           }),
                       ],
                   })
-                : (0, n.jsx)(r.rd, { to: c.BVt.LOGIN });
+                : (0, n.jsx)(i.rd, { to: c.BVt.LOGIN });
         }),
     ),
     y = (0, E.A)(function () {
-        return (0, n.jsxs)(r.dO, {
+        return (0, n.jsxs)(i.dO, {
             children: [
-                (0, n.jsx)(r.qh, { path: c.BVt.APPLICATION_STORE, exact: !0, render: () => (0, n.jsx)(B, {}) }),
-                (0, n.jsx)(r.rd, { to: c.BVt.APP }),
+                (0, n.jsx)(i.qh, { path: c.BVt.APPLICATION_STORE, exact: !0, render: () => (0, n.jsx)(B, {}) }),
+                (0, n.jsx)(i.rd, { to: c.BVt.APP }),
             ],
         });
     });
 var V = s(660183),
     b = s(409564);
-let v = (0, P.Fe)({
+let v = (0, h.Fe)({
     createPromise: () =>
         Promise.all([
             s.e("678674"),
@@ -79,14 +79,14 @@ let v = (0, P.Fe)({
     webpackId: 673809,
 });
 o.Ay.initialize();
-class G extends i.PureComponent {
+class G extends r.PureComponent {
     stopListeningToHistory;
     componentDidMount() {
-        (l(this.props.location),
+        (a(this.props.location),
             (this.stopListeningToHistory = (0, O.JK)().listen((t) => {
-                t.pathname.startsWith(c.BVt.APPLICATION_STORE) && l(t);
+                t.pathname.startsWith(c.BVt.APPLICATION_STORE) && a(t);
             })),
-            this.props.isAuthenticated && (0, h.$o)(),
+            this.props.isAuthenticated && (0, P.$o)(),
             T.A.disable(),
             T.A.setLayout(u),
             T.A.enable(),
@@ -99,28 +99,28 @@ class G extends i.PureComponent {
             T.A.enable());
     }
     renderContent = () =>
-        (0, n.jsxs)(r.dO, {
+        (0, n.jsxs)(i.dO, {
             children: [
-                (0, n.jsx)(r.qh, {
+                (0, n.jsx)(i.qh, {
                     path: c.BVt.APPLICATION_STORE,
                     exact: !0,
                     render: () =>
                         (0, n.jsx)(d.A, { page: c.liQ.STORE_DIRECTORY_HOME, root: !0, children: (0, n.jsx)(y, {}) }),
                 }),
-                (0, n.jsx)(r.rd, {
+                (0, n.jsx)(i.rd, {
                     from: c.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
                     to: c.BVt.APPLICATION_STORE,
                 }),
-                (0, n.jsx)(r.rd, {
+                (0, n.jsx)(i.rd, {
                     from: c.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
                     to: c.BVt.APPLICATION_STORE,
                 }),
-                (0, n.jsx)(r.rd, {
+                (0, n.jsx)(i.rd, {
                     from: c.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
                     to: c.BVt.APPLICATION_STORE,
                 }),
-                (0, n.jsx)(r.rd, { from: c.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"), to: c.BVt.APPLICATION_STORE }),
-                (0, n.jsx)(r.rd, { to: c.BVt.APP }),
+                (0, n.jsx)(i.rd, { from: c.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"), to: c.BVt.APPLICATION_STORE }),
+                (0, n.jsx)(i.rd, { to: c.BVt.APP }),
             ],
         });
     renderCustomErrorMessage() {
@@ -140,7 +140,7 @@ class G extends i.PureComponent {
     }
 }
 let H = function (t) {
-    let e = (0, r.zy)(),
+    let e = (0, i.zy)(),
         s = (0, o.bG)([_.default], () => _.default.isAuthenticated());
     return (0, n.jsx)(G, { ...t, location: e, isAuthenticated: s });
 };

@@ -991,18 +991,16 @@ function tq(e) {
                 t.hasError ||
                 t.collapsed ||
                 0 !== l.length ||
-                tu.h.wait(() => {
-                    ((0, tS.ack)(
-                        t.channelId,
-                        {
-                            section: eO.JJy.INBOX,
-                            object: eO.ZSU.ACK_INBOX_FORUM_NO_POSTS,
-                            objectType: eO.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                        },
-                        !0,
-                    ),
-                        s(t.channelId));
-                });
+                ((0, tS.ack)(
+                    t.channelId,
+                    {
+                        section: eO.JJy.INBOX,
+                        object: eO.ZSU.ACK_INBOX_FORUM_NO_POSTS,
+                        objectType: eO.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                    },
+                    !0,
+                ),
+                s(t.channelId));
         }),
         (0, a.jsx)("div", {
             className: t$.k,
@@ -1267,21 +1265,19 @@ class nJ extends nS.EventEmitter {
     getNumUnreadChannels = () => this.state.channels.length;
     markChannelRead = (e) => {
         let { channelId: t, newestUnreadMessageId: n } = e;
-        tu.h.wait(() => {
-            "guild-events" === e.type
-                ? tS.hK(e.guildId, nz.P.GUILD_EVENT, n)
-                : tS.ack(
-                      t,
-                      {
-                          section: eO.JJy.INBOX,
-                          object: eO.ZSU.ACK_INBOX_NEWEST_UNREAD_MESSAGE,
-                          objectType: eO.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                      },
-                      !0,
-                      void 0,
-                      n,
-                  );
-        });
+        "guild-events" === e.type
+            ? tS.hK(e.guildId, nz.P.GUILD_EVENT, n)
+            : tS.ack(
+                  t,
+                  {
+                      section: eO.JJy.INBOX,
+                      object: eO.ZSU.ACK_INBOX_NEWEST_UNREAD_MESSAGE,
+                      objectType: eO.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                  },
+                  !0,
+                  void 0,
+                  n,
+              );
         let s = this.state.channels.find((e) => e.channelId === t);
         (null != s && this.undoStack.push(s), 1 === this.state.channels.length)
             ? this.deleteChannel(t)
@@ -1311,7 +1307,7 @@ class nJ extends nS.EventEmitter {
         (t < 0 ? n.push(e) : n.splice(t, 0, e), this.setState({ scrollToChannelIndex: t, channels: n }));
     };
     markGuildRead = (e) => {
-        (tu.h.wait(() => (0, nb.A)([e], eO.JJy.INBOX)),
+        ((0, nb.A)([e], eO.JJy.INBOX),
             this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
             this.maybeLoadMore());
     };
@@ -1890,18 +1886,16 @@ let st = "Inbox",
                     t.collapsed ||
                     "messages" !== t.type ||
                     0 !== t.messages.length ||
-                    tu.h.wait(() => {
-                        ((0, tS.ack)(
-                            t.channelId,
-                            {
-                                section: eO.JJy.INBOX,
-                                object: eO.ZSU.ACK_INBOX_CHANNEL_NO_MESSAGES,
-                                objectType: eO.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                            },
-                            !0,
-                        ),
-                            s(t.channelId));
-                    });
+                    ((0, tS.ack)(
+                        t.channelId,
+                        {
+                            section: eO.JJy.INBOX,
+                            object: eO.ZSU.ACK_INBOX_CHANNEL_NO_MESSAGES,
+                            objectType: eO.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                        },
+                        !0,
+                    ),
+                    s(t.channelId));
             }),
             !t.hasLoadedAnything)
         )

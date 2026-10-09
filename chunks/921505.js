@@ -4682,7 +4682,7 @@ let rd = [
                     } = e,
                     { onClose: i, renderPurchaseConfirmation: a, continueSessionToInitialStep: s } = t;
                 c.useEffect(() => {
-                    ek.A.isLoadedForPremiumSKUs() || nD.h.wait(() => (0, ir.zS)());
+                    ek.A.isLoadedForPremiumSKUs() || (0, ir.zS)();
                 }, []);
                 let {
                         selectedSkuId: u,

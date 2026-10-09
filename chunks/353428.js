@@ -261,11 +261,7 @@ function q(e) {
         l?.isStaff() &&
             null != i &&
             !i.isStaff() &&
-            (0, R.A)(i.id, i.getAvatarURL(void 0, 80), {
-                dispatchWait: !0,
-                withMutualGuilds: !0,
-                withMutualFriendsCount: !0,
-            });
+            (0, R.A)(i.id, i.getAvatarURL(void 0, 80), { withMutualGuilds: !0, withMutualFriendsCount: !0 });
     }, [l, i]),
     n.isDM() && l?.isStaff() && null != i)
         ? i.isStaff()

@@ -4891,9 +4891,7 @@ class oq extends T.PureComponent {
         };
     }
     componentWillUnmount() {
-        ts.h.wait(() => {
-            ((0, ov.ey)(), (0, ov.tc)());
-        });
+        ((0, ov.ey)(), (0, ov.tc)());
     }
     handleSubmit = (e) => {
         if ((e.preventDefault(), e.stopPropagation(), 0 === Object.values(this.state.dirtyFields).filter(ig.Vq).length))
@@ -7148,9 +7146,7 @@ function cc() {
         [n, i] = T.useState(!1);
     if (
         (T.useEffect(() => {
-            ts.h.wait(() => {
-                (0, cd.XJ)().then(() => i(!0));
-            });
+            (0, cd.XJ)().then(() => i(!0));
         }, []),
         !n)
     )
@@ -8249,9 +8245,9 @@ let gd = function () {
         (0, cV.i)();
         let g = (0, cU.m)();
         T.useEffect(() => {
-            ts.h.wait(async () => {
+            !(async function () {
                 (e || (await Promise.all([ov.hP(), ov.$o(), (0, cv.zS)(null, null, I.tF5.DISCOVERY)])), a(!1));
-            });
+            })();
         }, [e]);
         let [m, A] = T.useState(!1);
         if (e) return (0, S.jsx)(u5.uK, {});
@@ -9371,9 +9367,7 @@ var mc = n(819677);
 let mg = (0, E.E2)(h.X.PREMIUM_GUILD_SUBSCRIPTIONS_SETTING, {
         Component: function () {
             T.useEffect(() => {
-                ts.h.wait(() => {
-                    (ov.hP(), ov.$o(), (0, gh.CD)(), (0, cv.zS)(null, null, I.tF5.DISCOVERY), (0, gh.tO)(!0));
-                });
+                (ov.hP(), ov.$o(), (0, gh.CD)(), (0, cv.zS)(null, null, I.tF5.DISCOVERY), (0, gh.tO)(!0));
             }, []);
             let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, f.cf)([o8.A], () => ({
                     hasFetchedSubscriptions: o8.A.hasFetchedSubscriptions(),
@@ -11426,9 +11420,10 @@ let Ex = function () {
         }, [d, r, o, x.length]),
         T.useEffect(
             () => (
-                ts.h.wait(() => {
-                    ((0, cv.zS)(), ov.hP(), (0, gh.CD)(), ov.$o());
-                }),
+                (0, cv.zS)(),
+                ov.hP(),
+                (0, gh.CD)(),
+                ov.$o(),
                 function () {
                     m5.A.resetState();
                 }
@@ -17135,7 +17130,7 @@ function fs(e) {
             guildId: t?.id,
         }),
         { pendingDisplayNameStyles: m } = (0, S9.B0)(s, t?.id);
-    return (T.useEffect(() => () => ts.h.wait(S8.IM), []), a)
+    return (T.useEffect(() => S8.IM, []), a)
         ? (0, S.jsx)(og.A, {})
         : r
           ? (0, S.jsxs)(ez.f5, {
@@ -17967,7 +17962,7 @@ function Io() {
         u = (0, fH.A)() && null != n ? fx.Ay.parse(void 0, n).content : n,
         d = ax.Ay.canUsePremiumProfileCustomization(e),
         { analyticsLocations: c } = (0, ez.Ay)(tw.A.USER_SETTINGS_USER_PROFILE);
-    T.useEffect(() => () => ts.h.wait(S1.IM), []);
+    T.useEffect(() => S1.IM, []);
     let [g, m] = T.useState(!1),
         A = !d,
         E = T.useRef(null);
@@ -18178,10 +18173,7 @@ function IE() {
 let Ih = (0, E.t_)(h.X.PROFILE_PANEL, {
         useTitle: () => U.intl.string(U.t["vi7f+q"]),
         notice: { stores: [S3.A], element: S2.A },
-        initialize: () => () =>
-            ts.h.wait(() => {
-                (0, S1.F7)();
-            }),
+        initialize: () => S1.F7,
         buildLayout: () => [Im],
     }),
     Ix = (0, E.i4)(h.X.PROFILE_SIDEBAR_ITEM, {

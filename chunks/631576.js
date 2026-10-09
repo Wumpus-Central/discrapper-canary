@@ -7,7 +7,7 @@
     p9: () => A,
     sl: () => K,
     uK: () => v,
-    vr: () => w,
+    vr: () => P,
     x5: () => m,
     zk: () => f,
 }),
@@ -36,9 +36,7 @@ async function f(t, e) {
 async function y() {
     let { locale: t = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (h.A.isFetchingStickerPacks || h.A.hasLoadedStickerPacks) return;
-    c.h.wait(() => {
-        c.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
-    });
+    c.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
     let {
         body: { sticker_packs: e },
     } = await a.Bo.get({ url: I.Rsh.STICKER_PACKS, query: { locale: t }, rejectWithError: (0, a.fT)() });
@@ -116,7 +114,7 @@ function v(t) {
         p.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function w(t) {
+function P(t) {
     l.bW.updateAsync(
         "favoriteStickers",
         (e) => {

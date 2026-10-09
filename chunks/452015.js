@@ -27,30 +27,30 @@ var i = n(477900),
     L = n(192308);
 if (221552 == n.j) var x = n(888366);
 if (221552 == n.j) var D = n(241541);
-var R = n(73153),
-    O = n(387755),
-    w = n(308528),
-    U = n(711950),
-    P = n(376728);
+var R = n(387755),
+    O = n(308528),
+    w = n(711950),
+    U = n(376728),
+    P = n(73153);
 let b = {
     search(e, t) {
-        R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY", query: e, channelId: t });
+        P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY", query: e, channelId: t });
     },
     clear(e) {
-        R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY", query: "", channelId: e });
+        P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY", query: "", channelId: e });
     },
     select(e) {
-        R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT", row: e });
+        P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT", row: e });
     },
     addUser(e) {
-        R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_ADD_USER", userId: e });
+        P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_ADD_USER", userId: e });
     },
     removeUser(e) {
-        R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER", userId: e });
+        P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER", userId: e });
     },
-    open: (e) => R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN", channelId: e }),
+    open: (e) => P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN", channelId: e }),
     close() {
-        R.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE" });
+        P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE" });
     },
 };
 var V = n(49229),
@@ -326,7 +326,7 @@ async function eM(e, t) {
     }
     if (0 !== n.length)
         try {
-            let t = await P.Ay.createInvite(
+            let t = await U.Ay.createInvite(
                     e,
                     {
                         max_age: (function (e) {
@@ -557,8 +557,8 @@ function te(e) {
 function tt(e) {
     let { recipientIds: t, location: n, useGroupDmShell: i = !1 } = e;
     return i && 1 === t.length
-        ? w.A.createGroupDmShell({ recipientId: t[0], location: n })
-        : w.A.openPrivateChannel({ recipientIds: t, location: n });
+        ? O.A.createGroupDmShell({ recipientId: t[0], location: n })
+        : O.A.openPrivateChannel({ recipientIds: t, location: n });
 }
 function tn() {
     (0, h.P0)((0, h.ox)(er.intl.string(er.t.fEptJP), h.Ck.FAILURE));
@@ -645,10 +645,8 @@ class ts extends l.PureComponent {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        R.h.wait(() => {
-            b.open(e?.id).then(() => {
-                this.trackModalOpened();
-            });
+        b.open(e?.id).then(() => {
+            this.trackModalOpened();
         });
         let t = (0, H.dI)(e);
         (ee.default.track(en.HAw.OPEN_POPOUT, {
@@ -682,7 +680,7 @@ class ts extends l.PureComponent {
         (eH._.unsubscribe(en.jej.SCROLL_PAGE_UP, this.scrollPageUp),
             eH._.unsubscribe(en.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
-            R.h.wait(() => b.close()));
+            b.close());
     }
     scrollPageUp = () => {
         this.scrollerRef.current?.scrollPageUp({ animate: !0 });
@@ -726,7 +724,7 @@ class ts extends l.PureComponent {
         null == e ||
             !e.isMultiUserDM() ||
             this.isPartyFull() ||
-            P.Ay.createInvite(e.id, { max_age: this.props.inviteMaxAgeSeconds }, en.PE1.GROUP_DM);
+            U.Ay.createInvite(e.id, { max_age: this.props.inviteMaxAgeSeconds }, en.PE1.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -1329,7 +1327,7 @@ class ts extends l.PureComponent {
         };
     })();
     handleAddFriendNavigation = () => {
-        (U.A.transitionToSection(en.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
+        (w.A.transitionToSection(en.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
     };
     handleScroll = () => {
         let e = this.scrollerRef.current;
@@ -1357,7 +1355,7 @@ class ts extends l.PureComponent {
         let n = {};
         ("" !== this.state.newChannelName && (n.name = this.state.newChannelName),
             null != this.state.previewIcon && (n.icon = this.state.previewIcon),
-            (null != n.name || null != n.icon) && w.A.updateChannel(e, n, t),
+            (null != n.name || null != n.icon) && O.A.updateChannel(e, n, t),
             ee.default.track(en.HAw.GDM_EDIT_INTERACTED, {
                 channel_id: e,
                 channel_type: en.rbe.GROUP_DM,
@@ -1371,7 +1369,7 @@ class ts extends l.PureComponent {
             { channel: n } = this.props,
             i = (0, H.dI)(n),
             l = !0;
-        1 === e.length && (l = null == w.A._openCachedDMChannel(e[0]));
+        1 === e.length && (l = null == O.A._openCachedDMChannel(e[0]));
         let r = (0, H.g4)(e);
         ee.default.track(en.HAw.CREATE_DM_USER_LIST_CLICKED, {
             ...i,
@@ -1415,9 +1413,9 @@ class ts extends l.PureComponent {
     };
     _addRecipientsToExistingGroupDM = (e, t, n) => {
         let i = eb.A.getChannelId() === e;
-        (t.length > 0 ? w.A.addRecipients(e, t, en.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
+        (t.length > 0 ? O.A.addRecipients(e, t, en.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
             .then((e) => {
-                (this.props.onComplete?.(e), eM(e, n), i && t.length > 0 && O.A.ring(e, t, "dm_invite"));
+                (this.props.onComplete?.(e), eM(e, n), i && t.length > 0 && R.A.ring(e, t, "dm_invite"));
             })
             .catch(tn);
     };
@@ -1427,15 +1425,15 @@ class ts extends l.PureComponent {
             s = r ? [...n, t] : n,
             a = r ? i : [...i, t];
         (r && n.length > 0
-            ? w.A.addRecipients(e, n, en.ThZ.ADD_FRIENDS_TO_DM)
+            ? O.A.addRecipients(e, n, en.ThZ.ADD_FRIENDS_TO_DM)
             : s.length > 0 || a.length > 0
               ? tt({ recipientIds: s, location: "New Group DM", useGroupDmShell: a.length > 0 })
               : Promise.resolve(e)
         )
             .then((t) => {
                 if ((this.props.onComplete?.(t), eM(t, a), l)) {
-                    if (t !== e) return void O.A.call(t, !1, !0);
-                    n.length > 0 && O.A.ring(t, n, "dm_invite");
+                    if (t !== e) return void R.A.call(t, !1, !0);
+                    n.length > 0 && R.A.ring(t, n, "dm_invite");
                 }
             })
             .catch(tn);

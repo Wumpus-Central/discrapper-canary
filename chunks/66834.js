@@ -53,7 +53,7 @@ let F = {
             E = t.lurker ?? !1,
             A = y.default.getCurrentUser();
         if (A?.hasFlag(P.nhx.QUARANTINED)) return ((0, p.default)(), new Promise((e, t) => t(Error())));
-        s.h.wait(() => s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: E, source: i, loadId: r }));
+        s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: E, source: i, loadId: r });
         try {
             let t = L.A.getGuildId(),
                 o = e === t && null != O.A.getGuild(e) ? R.Ay.getChannelId(e) : null,

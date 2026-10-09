@@ -1750,18 +1750,16 @@ let tT = function (e) {
         () => () => {
             let e = eQ.Ay.lastMessageId(n.id);
             null != e &&
-                nf.h.wait(() => {
-                    (0, nJ.ack)(
-                        n.id,
-                        {
-                            object: eo.ZSU.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
-                            objectType: eo.AnalyticsObjectTypes.ACK_AUTOMATIC,
-                        },
-                        !0,
-                        !0,
-                        e,
-                    );
-                });
+                (0, nJ.ack)(
+                    n.id,
+                    {
+                        object: eo.ZSU.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
+                        objectType: eo.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                    },
+                    !0,
+                    !0,
+                    e,
+                );
         },
         [n.id],
     );
@@ -2181,9 +2179,7 @@ var ig = t(925166),
     iI = t(857253),
     ij = t(872363);
 let iE = function (e, n) {
-    nf.h.wait(() => {
-        nf.h.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: e, guildId: n });
-    });
+    nf.h.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: e, guildId: n });
 };
 var iC = t(561446),
     iy = t(300233),

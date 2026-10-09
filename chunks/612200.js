@@ -9,18 +9,14 @@ function l(e, t) {
         i.h.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: e, channelId: t }));
 }
 function o(e) {
-    (i.h.wait(() => i.h.dispatch({ type: "AGE_GATE_MODAL_CLOSE" })),
+    (i.h.dispatch({ type: "AGE_GATE_MODAL_CLOSE" }),
         void 0 !== e && r.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: a.AM.AGE_GATE_CLOSE }));
 }
 function d(e) {
-    (i.h.wait(() => {
-        i.h.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
-    }),
+    (i.h.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" }),
         r.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: a.AM.AGE_GATE_SUCCESS }));
 }
 function c(e, t) {
-    (i.h.wait(() => {
-        i.h.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage: t });
-    }),
+    (i.h.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage: t }),
         r.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: a.AM.AGE_GATE_FAILURE }));
 }

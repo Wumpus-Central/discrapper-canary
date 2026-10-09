@@ -980,9 +980,7 @@ function ny(e, t) {
                     U.GH(n, { soundshare_session: r }).then((e) => {
                         null == e ||
                             H.Ay.shouldContinueWithoutElevatedProcessForPID(n) ||
-                            M.h.wait(() => {
-                                M.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_FAILED", errorMessage: e });
-                            });
+                            M.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_FAILED", errorMessage: e });
                     }),
                 { soundshareId: t, soundshareSession: a }
             );
@@ -1334,14 +1332,12 @@ class nF extends y.Ay.Store {
             tt.on(D.bg.ClipsInitFailure, (e, t) => {
                 let n = to < 3;
                 ((to += 1),
-                    M.h.wait(() => {
-                        (M.h.dispatch({ type: "CLIPS_INIT_FAILURE", errMsg: e, applicationName: t }),
-                            n
-                                ? M.h.dispatch({ type: "CLIPS_RESTART" })
-                                : eQ.warn(
-                                      `Clips init failure budget exhausted (${to} consecutive unhealthy attempts); skipping auto-restart. A settings flip / game change / app restart will retry.`,
-                                  ));
-                    }));
+                    M.h.dispatch({ type: "CLIPS_INIT_FAILURE", errMsg: e, applicationName: t }),
+                    n
+                        ? M.h.dispatch({ type: "CLIPS_RESTART" })
+                        : eQ.warn(
+                              `Clips init failure budget exhausted (${to} consecutive unhealthy attempts); skipping auto-restart. A settings flip / game change / app restart will retry.`,
+                          ));
             }),
             tt.on(D.bg.ClipsRecordingHealthy, () => {
                 0 !== to && (eQ.info(`Clips bridge reported healthy; resetting restart budget (was ${to}).`), (to = 0));
@@ -1398,9 +1394,7 @@ class nF extends y.Ay.Store {
                 null !== t && eD.default.track(ev.HAw.VOICE_QUEUE_METRICS, t);
             }),
             tt.setOnVideoContainerResized((e, t, n) => {
-                M.h.wait(() =>
-                    M.h.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId: e, dimensions: { width: t, height: n } }),
-                );
+                M.h.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId: e, dimensions: { width: t, height: n } });
             }),
             nM(),
             l.reset(),

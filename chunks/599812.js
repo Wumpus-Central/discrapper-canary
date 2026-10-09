@@ -1,22 +1,21 @@
-n.d(t, { A: () => G });
+n.d(t, { A: () => w });
 var i = n(132500),
     r = n(141931),
     a = n(451988),
-    s = n(73153),
-    l = n(439372),
-    o = n(626584),
-    d = n(206885),
-    c = n(41984),
-    u = n(296027),
-    _ = n(950869),
-    E = n(871633),
-    A = n(763827),
-    h = n(531685),
-    f = n(174459),
-    I = n(927813),
-    p = n(973522),
-    T = n(19575);
-class m {
+    s = n(439372),
+    l = n(626584),
+    o = n(206885),
+    d = n(41984),
+    c = n(296027),
+    u = n(950869),
+    _ = n(871633),
+    E = n(763827),
+    A = n(531685),
+    h = n(174459),
+    f = n(927813),
+    I = n(973522),
+    p = n(19575);
+class T {
     pids = new Set();
     enabled = !1;
     enable() {
@@ -24,7 +23,7 @@ class m {
     }
     disable() {
         if (this.enabled) {
-            for (let e of ((this.enabled = !1), this.pids)) T.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1);
+            for (let e of ((this.enabled = !1), this.pids)) p.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1);
             this.pids.clear();
         }
     }
@@ -32,26 +31,26 @@ class m {
         this.enabled = !1;
     }
     startMonitoringPid(e) {
-        (this.pids.add(e), this.enabled && T.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0));
+        (this.pids.add(e), this.enabled && p.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0));
     }
     stopMonitoringPid(e) {
         this.pids.has(e) &&
-            (this.pids.delete(e), this.enabled && T.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1));
+            (this.pids.delete(e), this.enabled && p.Ay.SetSystemServicePerformanceMonitorEnabled(e, !1));
     }
     getSnapshot(e) {
         return this.enabled && this.pids.has(e)
-            ? T.Ay.GetSystemServicePerformanceMonitorSnapshot(e)
+            ? p.Ay.GetSystemServicePerformanceMonitorSnapshot(e)
             : Promise.resolve(null);
     }
 }
-let g = new m();
-var S = n(952818),
-    N = n(687658),
-    C = n(321034);
-let O = new o.A("RunningGameSystemMetricsMonitor"),
-    R = [50, 95, 99];
-function L(e) {
-    let t = e.getReport(R);
+let m = new T();
+var g = n(952818),
+    S = n(687658),
+    N = n(321034);
+let C = new l.A("RunningGameSystemMetricsMonitor"),
+    O = [50, 95, 99];
+function R(e) {
+    let t = e.getReport(O);
     return {
         p50: t.percentiles[50] ?? 0,
         p95: t.percentiles[95] ?? 0,
@@ -61,10 +60,10 @@ function L(e) {
         min: t.min,
     };
 }
-class y {
-    cpuHistogram = new N.d();
-    memoryHistogram = new N.d();
-    discordMemoryHistogram = new N.d();
+class L {
+    cpuHistogram = new S.d();
+    memoryHistogram = new S.d();
+    discordMemoryHistogram = new S.d();
     lastCpuSnapshot = null;
     samplingInterval = null;
     enable() {
@@ -86,9 +85,9 @@ class y {
             )
         )
             return null;
-        let e = L(this.cpuHistogram),
-            t = L(this.memoryHistogram),
-            n = L(this.discordMemoryHistogram);
+        let e = R(this.cpuHistogram),
+            t = R(this.memoryHistogram),
+            n = R(this.discordMemoryHistogram);
         return (
             this.resetHistograms(),
             {
@@ -114,16 +113,16 @@ class y {
         );
     }
     resetHistograms() {
-        ((this.cpuHistogram = new N.d()),
-            (this.memoryHistogram = new N.d()),
-            (this.discordMemoryHistogram = new N.d()));
+        ((this.cpuHistogram = new S.d()),
+            (this.memoryHistogram = new S.d()),
+            (this.discordMemoryHistogram = new S.d()));
     }
     async takeSample() {
         (this.sampleDiscordMemory(), await this.sampleCpuAndMemory());
     }
     async sampleCpuAndMemory() {
         try {
-            let e = await C.A.getSystemMetrics();
+            let e = await N.A.getSystemMetrics();
             if (null == e) return;
             if (e.memoryTotal > 0) {
                 let t = ((e.memoryTotal - e.memoryFree) / e.memoryTotal) * 100;
@@ -136,37 +135,37 @@ class y {
             }
             this.lastCpuSnapshot = e;
         } catch (e) {
-            O.warn("Failed to sample CPU/memory metrics", e?.message);
+            C.warn("Failed to sample CPU/memory metrics", e?.message);
         }
     }
     sampleDiscordMemory() {
         try {
             let e;
             if (null == this.lastCpuSnapshot || this.lastCpuSnapshot.memoryTotal <= 0) return;
-            let t = C.A.getCurrentMemoryUsageKB();
+            let t = N.A.getCurrentMemoryUsageKB();
             if (null != t && t > 0) e = 1024 * t;
             else {
-                let t = C.A.getMemoryUsageDetails();
+                let t = N.A.getMemoryUsageDetails();
                 if (null == t || (e = Object.values(t).reduce((e, t) => e + t, 0)) <= 0) return;
             }
             let n = (e / this.lastCpuSnapshot.memoryTotal) * 100;
             this.discordMemoryHistogram.addSample(n);
         } catch (e) {
-            O.warn("Failed to sample Discord memory metrics", e?.message);
+            C.warn("Failed to sample Discord memory metrics", e?.message);
         }
     }
 }
-let D = new y();
-var v = n(863160),
-    b = n(652215);
-let M = new o.A("RunningGameHeartbeatManager"),
-    P = 5 * I.A.Millis.MINUTE;
-function U() {
-    let e = h.A.isFocused(),
-        t = h.A.isVisible();
+let y = new L();
+var D = n(863160),
+    v = n(652215);
+let b = new l.A("RunningGameHeartbeatManager"),
+    M = 5 * f.A.Millis.MINUTE;
+function P() {
+    let e = A.A.isFocused(),
+        t = A.A.isVisible();
     return e ? "focused" : t ? "visible" : "hidden";
 }
-class w extends l.A {
+class U extends s.A {
     heartbeatInterval = new a.IX();
     gameSessions = new Map();
     windowStateDurations = { focused: 0, visible: 0, hidden: 0 };
@@ -174,9 +173,9 @@ class w extends l.A {
     windowStateLastChangeTime = 0;
     windowTrackingEnabled = !1;
     actions = {
-        APPLICATIONS_FETCH_SUCCESS: () => this.handleGameIdentityChange(),
-        GAMES_DATABASE_UPDATE: () => this.handleGameIdentityChange(),
-        LOCAL_ACTIVITY_UPDATE: () => this.handleGameIdentityChange(),
+        APPLICATIONS_FETCH_SUCCESS: () => this.scheduleHeartbeatTracking(),
+        GAMES_DATABASE_UPDATE: () => this.scheduleHeartbeatTracking(),
+        LOCAL_ACTIVITY_UPDATE: () => this.scheduleHeartbeatTracking(),
         LOGOUT: () => this.handleLogout(),
         POST_CONNECTION_OPEN: () => this.scheduleHeartbeatTracking(),
         RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChanged(e),
@@ -186,26 +185,23 @@ class w extends l.A {
     };
     handleSystemServiceInitialize(e) {
         let { status: t, modules: n } = e;
-        n.includes("tool-service") && ("running" === t.state ? g.enable() : g.reset());
+        n.includes("tool-service") && ("running" === t.state ? m.enable() : m.reset());
     }
     _terminate() {
-        (this.heartbeatInterval.stop(), g.disable(), D.disable(), this.disableWindowTracking());
+        (this.heartbeatInterval.stop(), m.disable(), y.disable(), this.disableWindowTracking());
     }
     handleLogout() {
-        (g.disable(),
-            D.disable(),
+        (m.disable(),
+            y.disable(),
             this.disableWindowTracking(),
             this.gameSessions.clear(),
             this.heartbeatInterval.stop());
-    }
-    handleGameIdentityChange() {
-        s.h.wait(() => this.scheduleHeartbeatTracking());
     }
     enableWindowTracking() {
         this.windowTrackingEnabled ||
             ((this.windowTrackingEnabled = !0),
             (this.windowStateDurations = { focused: 0, visible: 0, hidden: 0 }),
-            (this.windowStateTrackingState = U()),
+            (this.windowStateTrackingState = P()),
             (this.windowStateLastChangeTime = performance.now()));
     }
     disableWindowTracking() {
@@ -216,7 +212,7 @@ class w extends l.A {
         let e = performance.now();
         ((this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
             (this.windowStateLastChangeTime = e),
-            (this.windowStateTrackingState = U()));
+            (this.windowStateTrackingState = P()));
     }
     getWindowStateDurationsSnapshot() {
         let e = performance.now();
@@ -245,56 +241,56 @@ class w extends l.A {
     }
     scheduleHeartbeatTracking() {
         if ((this.processSessionChanges(), 0 === this.gameSessions.size)) {
-            (this.heartbeatInterval.stop(), D.disable(), this.disableWindowTracking());
+            (this.heartbeatInterval.stop(), y.disable(), this.disableWindowTracking());
             return;
         }
-        (D.enable(),
+        (y.enable(),
             this.enableWindowTracking(),
-            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(P, this.logRunningGameHeartbeats));
+            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(M, this.logRunningGameHeartbeats));
     }
     handleRunningGamesChanged = (e) => {
         this.scheduleHeartbeatTracking();
     };
     stopMonitoringPidIfInactive(e) {
-        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || g.stopMonitoringPid(e);
+        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || m.stopMonitoringPid(e);
     }
     logHeartbeat(e, t, n, i, a) {
         let s = e.runningGame,
             l = performance.now(),
-            o = t ? 0 : Math.round(l - e.lastHeartbeatTime);
+            _ = t ? 0 : Math.round(l - e.lastHeartbeatTime);
         e.lastHeartbeatTime = l;
-        let { gameId: E, gameName: h } = (0, p.wH)(s),
-            I = {
-                game_id: E,
-                game_name: h,
+        let { gameId: A, gameName: f } = (0, I.wH)(s),
+            p = {
+                game_id: A,
+                game_name: f,
                 game_distributor: s.distributor,
                 game_distributor_game_id: s.sku,
-                game_metadata: (0, p.EQ)(s, null != s.processGame, (0, p.wH)((0, v.Un)(s)).gameId),
-                game_executable: (0, p.Ic)(s.exePath),
-                game_detection_enabled: (0, S.Xr)(s),
+                game_metadata: (0, I.EQ)(s, null != s.processGame, (0, I.wH)((0, D.Un)(s)).gameId),
+                game_executable: (0, I.Ic)(s.exePath),
+                game_detection_enabled: (0, g.Xr)(s),
                 initial_heartbeat: t,
                 final_heartbeat: n,
                 game_session_id: e.sessionId,
-                duration_tracked_ms: o,
-                rtc_connection_id: A.A.getRTCConnectionId(),
-                media_session_id: A.A.getMediaSessionId(),
+                duration_tracked_ms: _,
+                rtc_connection_id: E.A.getRTCConnectionId(),
+                media_session_id: E.A.getMediaSessionId(),
             },
             T = (function (e) {
-                if (!d.O) return null;
-                let t = u.default.getTrackedGameByPid(e);
+                if (!o.O) return null;
+                let t = c.default.getTrackedGameByPid(e);
                 return {
                     overlay_state: t?.state ?? null,
-                    overlay_method: null != t ? c.Ue[t.overlayMethod] : null,
-                    overlay_version: _.A.getNativeModule()?.version() ?? 0,
+                    overlay_method: null != t ? d.Ue[t.overlayMethod] : null,
+                    overlay_version: u.A.getNativeModule()?.version() ?? 0,
                 };
             })(s.pid),
-            m = { discord_window_state: U() };
-        return g
+            S = { discord_window_state: P() };
+        return m
             .getSnapshot(s.pid)
             .then((e) => {
-                f.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
-                    ...I,
-                    ...m,
+                h.default.track(v.HAw.RUNNING_GAME_HEARTBEAT, {
+                    ...p,
+                    ...S,
                     ...(a ?? {}),
                     ...(e ?? {}),
                     ...(i ?? {}),
@@ -302,10 +298,10 @@ class w extends l.A {
                 });
             })
             .catch((e) => {
-                (t || e instanceof r.Fh || M.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
-                    f.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
-                        ...I,
-                        ...m,
+                (t || e instanceof r.Fh || b.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
+                    h.default.track(v.HAw.RUNNING_GAME_HEARTBEAT, {
+                        ...p,
+                        ...S,
                         ...(a ?? {}),
                         ...(i ?? {}),
                         ...(T ?? {}),
@@ -313,7 +309,7 @@ class w extends l.A {
             });
     }
     processSessionChanges() {
-        let e = S.Ay.getRunningGames(),
+        let e = g.Ay.getRunningGames(),
             t = performance.now(),
             n = new Set(),
             r = this.windowTrackingEnabled ? this.peekWindowStateDurations() : null;
@@ -323,7 +319,7 @@ class w extends l.A {
                 if (null != e.processGame) return `social_sdk:${e.id}`;
                 let t = null != e.name ? e.name : "",
                     n = `${e.id ?? e.exePath}:${t}`,
-                    i = e.distributor === b.d3x.ROBLOX ? (0, E.hD)(e) : null;
+                    i = e.distributor === v.d3x.ROBLOX ? (0, _.hD)(e) : null;
                 return (null != i && (n += `:${i}`), n);
             })(a);
             if ((n.add(e), this.gameSessions.has(e))) {
@@ -333,7 +329,7 @@ class w extends l.A {
                     let s = n.runningGame.pid,
                         l = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
                     (this.gameSessions.set(e, l),
-                        g.startMonitoringPid(a.pid),
+                        m.startMonitoringPid(a.pid),
                         this.logHeartbeat(n, !1, !0, null, r).finally(() => {
                             this.stopMonitoringPidIfInactive(s);
                         }),
@@ -341,7 +337,7 @@ class w extends l.A {
                 } else n.runningGame = a;
             } else {
                 let n = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
-                (this.gameSessions.set(e, n), g.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
+                (this.gameSessions.set(e, n), m.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
             }
         }
         for (let [e, t] of this.gameSessions)
@@ -354,9 +350,9 @@ class w extends l.A {
             }
     }
     logRunningGameHeartbeats = () => {
-        let e = D.getSnapshot(),
+        let e = y.getSnapshot(),
             t = this.getWindowStateDurationsSnapshot();
         for (let n of this.gameSessions.values()) this.logHeartbeat(n, !1, !1, e, t);
     };
 }
-let G = new w();
+let w = new U();

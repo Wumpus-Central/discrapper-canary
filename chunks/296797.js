@@ -23,23 +23,18 @@ class g extends o.A {
     canonicalGameIdByPid = {};
     actions = {
         POST_CONNECTION_OPEN: () => {
-            (this.handlePostConnectionOpen(),
-                this.prefetchSdkApplications(),
-                a.h.wait(() => this.updateSocialSdkGames()));
+            (this.handlePostConnectionOpen(), this.prefetchSdkApplications(), this.updateSocialSdkGames());
         },
         RUNNING_GAMES_CHANGE: (e) => {
-            (this.fetchRunningGameRecords(e),
-                this.prefetchSdkApplications(),
-                a.h.wait(() => this.updateSocialSdkGames()));
+            (this.fetchRunningGameRecords(e), this.prefetchSdkApplications(), this.updateSocialSdkGames());
         },
-        LOCAL_ACTIVITY_UPDATE: () =>
-            a.h.wait(() => {
-                (this.prefetchSdkApplications(), this.updateSocialSdkGames());
-            }),
-        START_SESSION: () => a.h.wait(() => this.updateSocialSdkGames()),
-        RPC_APP_DISCONNECTED: () => a.h.wait(() => this.updateSocialSdkGames()),
-        APPLICATION_FETCH_SUCCESS: () => a.h.wait(() => this.updateSocialSdkGames()),
-        APPLICATIONS_FETCH_SUCCESS: () => a.h.wait(() => this.updateSocialSdkGames()),
+        LOCAL_ACTIVITY_UPDATE: () => {
+            (this.prefetchSdkApplications(), this.updateSocialSdkGames());
+        },
+        START_SESSION: () => this.updateSocialSdkGames(),
+        RPC_APP_DISCONNECTED: () => this.updateSocialSdkGames(),
+        APPLICATION_FETCH_SUCCESS: () => this.updateSocialSdkGames(),
+        APPLICATIONS_FETCH_SUCCESS: () => this.updateSocialSdkGames(),
     };
     updateSocialSdkGames() {
         let e = {};

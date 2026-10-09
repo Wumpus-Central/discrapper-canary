@@ -22,7 +22,7 @@ let _ = {
             sessionId: _ = null,
             mediaSessionId: E = null,
         } = e;
-        (r.h.wait(() => r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: l, distributor: n })),
+        (r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: l, distributor: n }),
             i.Bo.post({
                 url: c.Rsh.ACTIVITIES,
                 body: {

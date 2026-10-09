@@ -51,7 +51,7 @@ let _ = function (e) {
         M = y?.themeColors?.[0] != null && y?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && O && (0, E.A)(c, void 0, { guildId: _, dispatchWait: !0 });
+            null != c && O && (0, E.A)(c, void 0, { guildId: _ });
         }, [O, c, _]),
         null == n)
     )

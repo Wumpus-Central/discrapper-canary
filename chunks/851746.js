@@ -31,7 +31,7 @@ function R(e) {
 function L(e) {
     let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    !A.has(t) && !E.has(t) && (E.add(t), a.h.wait(() => (0, l.kZ)(t).catch(o.FXj)));
+    !A.has(t) && !E.has(t) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));
 }
 class y extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
@@ -88,7 +88,7 @@ class y extends r.Ay.Store {
 let D = new y(a.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
-        (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), a.h.wait(() => (0, l.kZ)(t).catch(o.FXj)));
+        (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));
     },
     BILLING_REFERRALS_REMAINING_FETCH_START: function (e) {
         let {} = e;

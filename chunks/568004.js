@@ -35,7 +35,7 @@ function b() {
         t = [];
     for (let n of e) O.hasOwnProperty(n) || ((O[n] = null), t.push(n));
     if (0 === t.length) return !1;
-    l.h.wait(() => o.r(t));
+    o.r(t);
 }
 function M(e, t) {
     if (null != g[t] && f.A.shouldBeInstalled(e, t)) {
@@ -130,7 +130,7 @@ let w = new U(l.h, {
             let { id: t, liveBuildId: i } = e;
             if (i !== O[t]) {
                 let e = n[t];
-                null != e && l.h.wait(() => d.n(e.id, e.branchId, !0));
+                null != e && d.n(e.id, e.branchId, !0);
             }
             O[t] = i;
         }
@@ -148,7 +148,7 @@ let w = new U(l.h, {
         for (let e of t) n.add(e.application_id);
         for (let e in A.A.libraryApplications) {
             let t = A.A.libraryApplications[e];
-            n.has(t.id) && (0, p.XZ)(t) && l.h.wait(() => d.n(t.id, t.branchId));
+            n.has(t.id) && (0, p.XZ)(t) && d.n(t.id, t.branchId);
         }
     },
 });

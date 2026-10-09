@@ -11,13 +11,13 @@ var i = n(477900),
     g = n(993077),
     m = n(289873),
     A = n(834730),
-    E = n(73153),
-    h = n(661439),
-    x = n(73825),
-    p = n(928039),
-    S = n(277984),
-    T = n(235986),
-    f = n(39190),
+    E = n(661439),
+    h = n(73825),
+    x = n(928039),
+    p = n(277984),
+    S = n(235986),
+    T = n(39190),
+    f = n(73153),
     I = n(380098);
 let _ = [],
     N = !1;
@@ -40,7 +40,7 @@ class y extends d.Ay.Store {
         return N;
     }
 }
-let b = new y(E.h, {
+let b = new y(f.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of ((N = !0), t)) {
@@ -127,8 +127,8 @@ function eG(e) {
     let { description: t, cost: n } = e;
     return (0, i.jsx)("li", {
         className: eb.mg,
-        children: (0, i.jsxs)(T.A, {
-            justify: T.A.Justify.BETWEEN,
+        children: (0, i.jsxs)(S.A, {
+            justify: S.A.Justify.BETWEEN,
             children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)("div", { children: n })],
         }),
     });
@@ -350,10 +350,10 @@ class eV extends s.PureComponent {
                       .sort((e, t) => e.createdAt.getTime() - t.createdAt.getTime())
                       .map((e) =>
                           (0, i.jsxs)(
-                              T.A,
+                              S.A,
                               {
-                                  justify: T.A.Justify.BETWEEN,
-                                  align: T.A.Align.CENTER,
+                                  justify: S.A.Justify.BETWEEN,
+                                  align: S.A.Align.CENTER,
                                   children: [
                                       this.renderPaymentSource(e),
                                       (0, i.jsx)(A.E, {
@@ -756,9 +756,9 @@ class eV extends s.PureComponent {
                     focusProps: { offset: 4 },
                     ...n,
                     children: [
-                        (0, i.jsxs)(T.A, {
+                        (0, i.jsxs)(S.A, {
                             className: eb.J7,
-                            align: T.A.Align.CENTER,
+                            align: S.A.Align.CENTER,
                             "data-expanded": s,
                             children: [
                                 this.renderDescription(),
@@ -839,24 +839,24 @@ function eB(e) {
     s.useEffect(() => {
         d.current?.scrollTo({ to: 0 });
     }, [g]);
-    let x = s.useCallback(
+    let S = s.useCallback(
             (e) => {
                 m(e);
                 let n = t[t.length - 1].id;
-                e >= o - 2 && A !== n && ((0, S.CK)(10, n), E(n));
+                e >= o - 2 && A !== n && ((0, p.CK)(10, n), E(n));
             },
             [t, o, A],
         ),
-        T = (0, p.A)("billing-history", d);
+        f = (0, x.A)("billing-history", d);
     return (0, i.jsx)(u.hD, {
-        navigator: T,
+        navigator: f,
         children: (0, i.jsx)(u.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, i.jsx)(f.A, {
+                return (0, i.jsx)(T.A, {
                     className: ew.GD,
                     currentPageIndex: g,
-                    onChangePage: x,
+                    onChangePage: S,
                     numPages: o,
                     showPageCount: !1,
                     ref: t,
@@ -881,9 +881,7 @@ class ez extends s.PureComponent {
         return Math.max(Math.ceil(this.props.paymentGroups.length / 10), 1);
     }
     componentDidMount() {
-        E.h.wait(() => {
-            ((0, h.X)(), (0, S.CK)(30));
-        });
+        ((0, E.X)(), (0, p.CK)(30));
     }
     renderPremiumExternalSubscription(e) {
         return (
@@ -929,7 +927,7 @@ class ez extends s.PureComponent {
                                         ? null
                                         : (0, i.jsx)("div", {
                                               className: r()(ew.Nj, ew.Bd),
-                                              children: (0, i.jsxs)(T.A, {
+                                              children: (0, i.jsxs)(S.A, {
                                                   className: ew.Yi,
                                                   children: [
                                                       (0, i.jsx)("div", {
@@ -1021,10 +1019,7 @@ function eX(e) {
         o = (0, d.yK)([v.A], () => v.A.getPlanIdsForSkus(Array.from(a))),
         u = s.useCallback(() => o.length === r.size, [o, r]);
     s.useEffect(() => {
-        u() ||
-            E.h.wait(() => {
-                a.forEach((e) => (0, x.ur)(e, void 0, void 0, !0, void 0));
-            });
+        u() || a.forEach((e) => (0, h.ur)(e, void 0, void 0, !0, void 0));
     }, [u, a]);
     let c = (0, d.bG)([b], () => b.hasFetchedPayments);
     return (0, i.jsx)(ez, { ...e, payments: t, paymentGroups: n, subscription: l, hasFetchedPayments: c });

@@ -120,9 +120,7 @@ async function N(e, t, n) {
         quantity: C,
         applyWalletBalance: O,
     } = { ...g, ...n };
-    a.h.wait(() => {
-        a.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t, isGift: p, loadId: S });
-    });
+    a.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t, isGift: p, loadId: S });
     let R = (0, c.Fs)(e);
     try {
         let e = {

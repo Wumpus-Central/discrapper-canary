@@ -301,25 +301,21 @@ let B = new F(s.h, {
                 if (!b) {
                     let i = l.A.fileManager.dirname(n[c].installPath);
                     (T.A.getInstallationPath(e, t) !== i &&
-                        s.h.wait(() => {
-                            s.h.dispatch({
-                                type: "DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS",
-                                applicationId: e,
-                                branchId: t,
-                                installationPath: i,
-                            });
+                        s.h.dispatch({
+                            type: "DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS",
+                            applicationId: e,
+                            branchId: t,
+                            installationPath: i,
                         }),
                         -1 === p.A.getQueuePosition(e, t) &&
                             (n[c].type === m.WTw.INSTALLING || n[c].type === m.WTw.UPDATING) &&
                             E.A.hasApplication(e, t) &&
                             T.A.shouldBeInstalled(e, t) &&
-                            s.h.wait(() => {
-                                s.h.dispatch({
-                                    type: "DISPATCH_APPLICATION_UPDATE",
-                                    applicationId: e,
-                                    branchId: t,
-                                    automatic: !0,
-                                });
+                            s.h.dispatch({
+                                type: "DISPATCH_APPLICATION_UPDATE",
+                                applicationId: e,
+                                branchId: t,
+                                automatic: !0,
                             }));
                 }
             }

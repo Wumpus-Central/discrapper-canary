@@ -292,6 +292,11 @@
     flex: 1
 }
 
+.labelAccessory__49f30 {
+    display: flex;
+    flex: 0 0 auto
+}
+
 .trailing__49f30 {
     flex: 0 0 auto;
     margin-inline-start: auto
@@ -2605,4 +2610,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=51bf58e0897cad35.css.map*/
+/*# sourceMappingURL=025d75d1d5c3ee9b.css.map*/

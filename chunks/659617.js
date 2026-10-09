@@ -310,12 +310,7 @@ async function Y(e, t, i, r) {
                         let n = A.A.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != n) {
                             let i = N.A.getChannel(n);
-                            return (
-                                o.h.wait(() => {
-                                    null == i ? t() : e(i);
-                                }),
-                                !1
-                            );
+                            return (null == i ? t() : e(i), !1);
                         }
                     }));
             });
@@ -325,13 +320,7 @@ async function Y(e, t, i, r) {
         (null == a.body && t(),
             N.A.addConditionalChangeListener(() => {
                 let t = N.A.getChannel(a.body.id);
-                if (null != t)
-                    return (
-                        o.h.wait(() => {
-                            e(t);
-                        }),
-                        !1
-                    );
+                if (null != t) return (e(t), !1);
             }));
     });
     try {

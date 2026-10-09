@@ -157,7 +157,7 @@ let D = new y(a.h, {
                     streamId: t ?? "",
                 });
             }),
-            a.h.wait(() => s.ho()));
+            s.ho());
     },
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function (e) {
         T = T.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);

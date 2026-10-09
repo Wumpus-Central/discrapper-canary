@@ -9,9 +9,7 @@ var n = r(636537),
     o = r(652215);
 let _ = new i.A("VirtualCurrencyActionCreators");
 async function u() {
-    a.h.wait(() => {
-        a.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
-    });
+    a.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
     try {
         let e = await n.Bo.get({ url: o.Rsh.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: !1 }),
             t = e.body.balance;
@@ -22,9 +20,7 @@ async function u() {
     }
 }
 async function E() {
-    a.h.wait(() => {
-        a.h.dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
-    });
+    a.h.dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
     try {
         let e = await n.Bo.get({ url: o.Rsh.VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED, rejectWithError: !1 }),
             t = e.body.total_redeemed;
@@ -43,10 +39,7 @@ async function h(e) {
         onRedeemFail: h,
         shouldRefetchBalance: R = !0,
     } = e;
-    (a.h.wait(() => {
-        a.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t });
-    }),
-        i?.());
+    (a.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t }), i?.());
     try {
         let e = c.A.get(t),
             l = e?.applicationId,

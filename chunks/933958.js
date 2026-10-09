@@ -192,10 +192,7 @@ function X(e) {
                       (!0 === O
                           ? (j = N.Gd.DISCONNECTED)
                           : P
-                            ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW),
-                              a.h.wait(() => {
-                                  a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
-                              }))
+                            ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW), a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }))
                             : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
