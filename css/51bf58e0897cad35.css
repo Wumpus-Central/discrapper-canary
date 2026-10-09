@@ -402,6 +402,14 @@
     position: relative
 }
 
+.channelName_d7e468 {
+    cursor: pointer
+}
+
+.channelName_d7e468:hover {
+    text-decoration: underline
+}
+
 .joinButton_d7e468 {
     opacity: 0;
     transition: opacity 80ms ease-out
@@ -2597,4 +2605,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=ba8f765e573b3bcd.css.map*/
+/*# sourceMappingURL=51bf58e0897cad35.css.map*/
