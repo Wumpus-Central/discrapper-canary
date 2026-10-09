@@ -1,4 +1,4 @@
-(i.d(t, { Cr: () => y, I1: () => I, Nj: () => k, UB: () => z, SX: () => w, R6: () => E }), i(938796));
+(i.d(t, { Cr: () => y, I1: () => I, Nj: () => k, UB: () => z, SX: () => E, R6: () => w }), i(938796));
 var a = i(477900),
     n = i(582128),
     l = i(665260);
@@ -165,7 +165,6 @@ function M(e) {
                             compactTimeDisplay: !0,
                             autoHideVolumeSlider: !0,
                             autoSizeControlBar: !0,
-                            withVideoHalo: !0,
                         }),
                         (0, a.jsx)(A._z, {
                             alt: n.description,
@@ -185,7 +184,7 @@ function k(e) {
     let t = e.item.originalItem;
     return (0, A.gL)({ ...e, fileSize: t.size, fileName: (0, _.A)(t), src: t.url });
 }
-function w(e) {
+function E(e) {
     let { message: t, item: i } = e,
         a = i.originalItem,
         l = (0, s.dx)(s.k0.VOICE_MESSAGE, a.id),
@@ -242,7 +241,7 @@ function w(e) {
         playbackCacheKey: l,
     });
 }
-function E(e) {
+function w(e) {
     let t = e.item.originalItem;
     return (0, A._d)({ ...e, url: t.url, fileName: (0, _.A)(t), fileSize: t.size, contentType: t.content_type });
 }
