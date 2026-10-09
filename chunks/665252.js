@@ -547,9 +547,21 @@ function ex(e) {
         w = r.useCallback(() => {
             (0, A.CZ)(l, n, k);
         }, [k, n, l]),
-        M = (0, u.bG)([C.A], () => C.A.isPlayingSound(l.soundId), [l]);
-    if (null == t || null == T) return null;
-    let { emojiId: P, emojiName: D, emojiAnimated: U, name: V } = l;
+        M = (0, u.bG)([C.A], () => C.A.isPlayingSound(l.soundId), [l]),
+        P = r.useRef(null),
+        D = r.useRef(null),
+        [U, V] = r.useState(0);
+    if (
+        (r.useLayoutEffect(() => {
+            let e = P.current;
+            if (null == e) return;
+            let t = e.offsetWidth;
+            (null == D.current && (D.current = t), V(D.current - t));
+        }, [c, T]),
+        null == t || null == T)
+    )
+        return null;
+    let { emojiId: W, emojiName: F, emojiAnimated: B, name: K } = l;
     return (0, i.jsxs)("div", {
         className: a()(ep.Iv, { [ep.E$]: d }),
         style: { height: 36 },
@@ -585,19 +597,21 @@ function ex(e) {
             (0, i.jsx)(m.m, {
                 text: d ? el.intl.string(el.t.VqNHoS) : null,
                 children: (0, i.jsxs)(f.D, {
+                    innerRef: P,
+                    style: { marginInlineEnd: U },
                     className: a()(ep.nG, { [ep.Tz]: M, [ep.Jx]: d }),
                     onClick: d ? () => null : w,
-                    "aria-label": el.intl.formatToPlainString(el.t.VOmeSq, { name: V }),
+                    "aria-label": el.intl.formatToPlainString(el.t.VOmeSq, { name: K }),
                     children: [
-                        (null != D || null != P) &&
+                        (null != F || null != W) &&
                             (0, i.jsx)(x.A, {
                                 size: "reaction",
                                 className: ep.FA,
-                                emojiId: P,
-                                emojiName: D,
-                                animated: U,
+                                emojiId: W,
+                                emojiName: F,
+                                animated: B,
                             }),
-                        (0, i.jsx)(p.E, { variant: "text-md/medium", children: V }),
+                        (0, i.jsx)(p.E, { variant: "text-md/medium", children: K }),
                         (0, i.jsx)("div", { className: ep.SU }),
                         (0, i.jsxs)(p.E, {
                             variant: "text-md/medium",
