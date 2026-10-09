@@ -5779,6 +5779,28 @@
     }
   },
   {
+    "name": "2026-10-desktop-conjure-title-bar",
+    "kind": "user",
+    "defaultConfig": {
+      "leftEntrypoint": false,
+      "workingAnimation": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "leftEntrypoint": true,
+        "workingAnimation": false
+      },
+      "2": {
+        "leftEntrypoint": true,
+        "workingAnimation": true
+      }
+    }
+  },
+  {
     "name": "2026-10-desktop-game-perf",
     "kind": "user",
     "defaultConfig": {

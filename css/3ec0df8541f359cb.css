@@ -261,6 +261,7 @@ svg.selectModeIcon_eb0c63 {
 
 .projectsSidebarList_eb0c63 {
     --custom-conjure-projects-inset: var(--space-8);
+    --custom-conjure-unread-pill-inset: var(--custom-conjure-projects-inset);
     flex: 1;
     min-height: 0;
     padding: var(--custom-conjure-projects-inset)
@@ -328,19 +329,6 @@ svg.selectModeIcon_eb0c63 {
 .projectCardDeleting_eb0c63 {
     opacity: .5;
     pointer-events: none
-}
-
-.projectUnreadPill_eb0c63 {
-    background-color: var(--interactive-text-active);
-    border-end-end-radius: var(--radius-xs);
-    border-start-end-radius: var(--radius-xs);
-    height: var(--space-8);
-    inset-inline-start: calc(var(--custom-conjure-projects-inset)*-1);
-    margin-top: calc(var(--space-4)*-1);
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    width: var(--space-4)
 }
 
 .projectCardSelect_eb0c63 {
@@ -494,4 +482,4 @@ svg.selectModeIcon_eb0c63 {
     text-align: center
 }
 
-/*# sourceMappingURL=dfb8f4fd658e5758.css.map*/
+/*# sourceMappingURL=3ec0df8541f359cb.css.map*/

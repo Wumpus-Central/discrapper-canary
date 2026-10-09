@@ -74,8 +74,55 @@
     gap: var(--space-4)
 }
 
-.iconShine_a735aa {
-    color: var(--text-strong);
+.slot__8306d {
+    align-items: center;
+    display: flex
+}
+
+html:not(.platform-web) .slot__8306d:nth-child(2) {
+    padding-inline-start: calc(var(--space-4) + 1px)
+}
+
+.slot__8306d:first-child {
+    padding-inline-start: calc(var(--custom-guild-list-width) + var(--space-12) + var(--space-4) + 1px)
+}
+
+.entry__8306d {
+    color: var(--icon-muted)
+}
+
+.entry__8306d.open__8306d,
+.entry__8306d:hover {
+    color: var(--icon-strong)
+}
+
+.full-motion .mentionBadge__8306d {
+    transition: all .2s cubic-bezier(0, 0, .2, 1.1)
+}
+
+.mentionBadgeEstimated__8306d {
+    min-width: calc(var(--space-24) + var(--space-4))
+}
+
+.wand__8306d {
+    display: block;
+    height: var(--icon-size-sm);
+    position: relative;
+    width: var(--icon-size-sm)
+}
+
+.wand__8306d>svg {
+    display: block
+}
+
+.sparkle__8306d {
+    transform-box: fill-box;
+    transform-origin: center
+}
+
+.shine__8306d {
+    display: none;
+    inset: 0;
     -webkit-mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
     mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
     -webkit-mask-position: 100% 0;
@@ -88,15 +135,33 @@
     position: absolute
 }
 
-.iconShineOpen_a735aa {
-    color: var(--text-brand)
+.working__8306d {
+    color: var(--illo-purple-40)
 }
 
-.full-motion .iconShine_a735aa {
-    animation: conjure-title-bar-wand-shine_a735aa 2s linear infinite
+.working__8306d .sparkle__8306d {
+    color: var(--illo-purple-30)
 }
 
-@keyframes conjure-title-bar-wand-shine_a735aa {
+.working__8306d .shine__8306d,
+.working__8306d .shine__8306d .sparkle__8306d {
+    color: var(--illo-pink-40)
+}
+
+.full-motion .working__8306d .shine__8306d {
+    animation: conjure-title-bar-shine__8306d 2s linear infinite;
+    display: block
+}
+
+.full-motion .working__8306d .sparkleSmall__8306d {
+    animation: conjure-title-bar-twinkle__8306d 2s ease-in-out infinite
+}
+
+.full-motion .working__8306d .sparkleLarge__8306d {
+    animation: conjure-title-bar-twinkle__8306d 2s ease-in-out -1s infinite
+}
+
+@keyframes conjure-title-bar-shine__8306d {
     0% {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0
@@ -108,4 +173,24 @@
     }
 }
 
-/*# sourceMappingURL=2b93036d6483e484.css.map*/
+@keyframes conjure-title-bar-twinkle__8306d {
+
+    0%,
+    to {
+        opacity: .35;
+        transform: scale(.55) rotate(0deg)
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25) rotate(45deg)
+    }
+}
+
+.enable-forced-colors .working__8306d,
+.enable-forced-colors .working__8306d .shine__8306d,
+.enable-forced-colors .working__8306d .sparkle__8306d {
+    color: Highlight
+}
+
+/*# sourceMappingURL=0adb9bce84374c61.css.map*/

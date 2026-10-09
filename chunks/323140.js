@@ -42,7 +42,6 @@ e.exports = {
     OY: "projectCard_eb0c63",
     Pl: "projectSettingsAction_eb0c63",
     Wy: "projectCardDeleting_eb0c63",
-    SB: "projectUnreadPill_eb0c63",
     W6: "projectCardSelect_eb0c63",
     VJ: "projectIcon_eb0c63",
     M2: "projectCardAction_eb0c63",

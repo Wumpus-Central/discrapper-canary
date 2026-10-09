@@ -1,0 +1,35 @@
+.iconShine_a735aa {
+    color: var(--text-strong);
+    -webkit-mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
+    mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 400% 100%;
+    mask-size: 400% 100%;
+    pointer-events: none;
+    position: absolute
+}
+
+.iconShineOpen_a735aa {
+    color: var(--text-brand)
+}
+
+.full-motion .iconShine_a735aa {
+    animation: conjure-title-bar-wand-shine_a735aa 2s linear infinite
+}
+
+@keyframes conjure-title-bar-wand-shine_a735aa {
+    0% {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0
+    }
+}
+
+/*# sourceMappingURL=36df8fc485faa87f.css.map*/
