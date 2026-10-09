@@ -51,10 +51,10 @@ function R(e) {
             priceOptions: e.checkoutPriceOptions,
             shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
         })),
-        V = F && W,
-        Y = i.useMemo(() => {
-            if (V && null != G) return () => G(g.pn.PLAN_SELECT);
-        }, [V, G]),
+        Y = F && W,
+        V = i.useMemo(() => {
+            if (Y && null != G) return () => G(g.pn.PLAN_SELECT);
+        }, [Y, G]),
         K = (function (e) {
             let {
                     invoiceSummaryType: t,
@@ -90,7 +90,7 @@ function R(e) {
             subscriptionPlan: c,
             isPremiumGroupPurchase: k,
             isPrepaidPaymentSource: R,
-            isClickPurchaseItemToEdit: V,
+            isClickPurchaseItemToEdit: Y,
             quantity: B,
         }),
         Z = (function (e) {
@@ -230,7 +230,7 @@ function R(e) {
         headerIconSrc: $,
         headerIconComponent: J,
         bottomSubText: D,
-        onClick: Y,
+        onClick: V,
     });
 }
 function O(e) {

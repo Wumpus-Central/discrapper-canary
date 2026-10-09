@@ -345,8 +345,8 @@ n(321073);
 var B = n(38785),
     H = n(577381),
     W = n(845012),
-    V = n(134638);
-function Y(e) {
+    Y = n(134638);
+function V(e) {
     let {
             loading: t,
             disabled: n,
@@ -421,7 +421,7 @@ function Y(e) {
                   planPricesLoading: b,
               }))
             : null != p &&
-              (D = (0, i.jsx)(V._, {
+              (D = (0, i.jsx)(Y._, {
                   type: c.u$.SUBSCRIPTION_SWITCH_PLAN,
                   invoicePreview: p,
                   subscriptionPlan: E,
@@ -479,7 +479,7 @@ function Z(e) {
         })),
         { isPremiumPurchase: B, isPremiumGroupPurchase: H } = (0, p.t4)((e) => e.get("selectedPlanAttributes")),
         W = (0, E.g)(A, _),
-        { showFractionalPremiumBanner: V, fractionalPremiumInfo: Z } = (0, f._V)({
+        { showFractionalPremiumBanner: Y, fractionalPremiumInfo: Z } = (0, f._V)({
             premiumSubscription: O,
             selectedPlanId: v,
             planGroup: n,
@@ -618,11 +618,11 @@ function Z(e) {
                       }),
             [Z, b, N, ep, X, O, P, W, el],
         );
-    return (0, i.jsx)(Y, {
+    return (0, i.jsx)(V, {
         loading: j,
         disabled: q,
         isInPastDueCheckout: a,
-        showFractionalPremiumBanner: V,
+        showFractionalPremiumBanner: Y,
         fractionalPremiumInfo: Z,
         isPremiumGroupPurchase: H,
         paymentRestrictionBannerType: er,

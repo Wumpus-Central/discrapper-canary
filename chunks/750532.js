@@ -47,10 +47,10 @@ function R(e) {
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
         W = (0, C.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        V = D?.productLine === x.EZt.COLLECTIBLES,
-        Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        Y = D?.productLine === x.EZt.COLLECTIBLES,
+        V = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, A.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
+        Z = G && (0, A.Ik)(B) && U === v.pn.CONFIRM && null != F && !Y && !V,
         q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);

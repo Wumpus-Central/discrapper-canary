@@ -87,18 +87,18 @@ function j(e) {
         H = (0, c.bG)([S.A], () => S.A.get(n));
     o()(null != H, "Missing subscriptionPlan");
     let W = (0, y.m6)(H.id),
-        V = (0, g.Sq)(),
-        Y = (0, y.L_)({ planId: n, isGift: w, priceOptions: s, subscriptionPlan: H }),
+        Y = (0, g.Sq)(),
+        V = (0, y.L_)({ planId: n, isGift: w, priceOptions: s, subscriptionPlan: H }),
         K = (0, y.y8)(n, !1, w, s),
-        Z = null != Y && !P,
+        Z = null != V && !P,
         q = i.useCallback(() => {
             let e = b(t, H, {
                 userLocale: M,
-                isEligibleForBOGOPromotion: V,
+                isEligibleForBOGOPromotion: Y,
                 shouldShowSavingsPercent: Z,
                 isGift: w,
                 planId: n,
-                savingsPercent: Y,
+                savingsPercent: V,
                 priceOptions: s,
                 isEligibleForTrial: j,
             });
@@ -114,7 +114,7 @@ function j(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [M, V, H, t, Z, w, n, Y, s, j]),
+        }, [M, Y, H, t, Z, w, n, V, s, j]),
         z = i.useMemo(
             () => (0, y.D8)(H.interval, w, u, H.intervalCount, U, W),
             [H.interval, H.intervalCount, w, u, U, W],
@@ -226,7 +226,7 @@ function j(e) {
                             discountAmountOff: F,
                             discountOffer: G,
                             isDiscountApplicableToPlan: $,
-                            savingsPercent: Y,
+                            savingsPercent: V,
                         }),
                     }),
                 }),

@@ -5,8 +5,8 @@ var r = n(582128),
     s = n(964486),
     a = n(626584),
     u = n(739508),
-    o = n(71532),
-    c = n(648335),
+    c = n(71532),
+    o = n(648335),
     d = n(908166),
     f = n(818348);
 let h = new a.A("useStripePaymentElementOptions"),
@@ -18,8 +18,8 @@ function m() {
         s = (0, l.r)(i.A.colors.INPUT_BACKGROUND_DEFAULT),
         a = (0, l.r)(i.A.colors.INPUT_BORDER_DEFAULT),
         u = e.theme ?? "flat",
-        o = e.colorText ?? n.hex(),
-        c = e.colorBackground ?? t.hex(),
+        c = e.colorText ?? n.hex(),
+        o = e.colorBackground ?? t.hex(),
         d = e.inputBackgroundColor ?? s.hex(),
         f = a.hex(),
         h = e.tabBackgroundColor ?? s.hex(),
@@ -28,9 +28,9 @@ function m() {
         elementsAppearance: r.useMemo(
             () => ({
                 theme: u,
-                variables: { colorText: o, colorBackground: c },
+                variables: { colorText: c, colorBackground: o },
                 rules: {
-                    ".Label": { ...p, color: o, marginBottom: "8px" },
+                    ".Label": { ...p, color: c, marginBottom: "8px" },
                     ".Input": { backgroundColor: d, borderColor: f, borderWidth: "1px", borderStyle: "solid" },
                     ".Error": { ...p },
                     ".CheckboxInput": { border: `1px solid ${f}` },
@@ -38,12 +38,12 @@ function m() {
                     ...(null != m ? { ".Tab--selected": { backgroundColor: m } } : {}),
                 },
             }),
-            [u, o, c, d, f, h, m],
+            [u, c, o, d, f, h, m],
         ),
         elementsAppearanceOptions: {
             theme: u,
-            colorText: o,
-            colorBackground: c,
+            colorText: c,
+            colorBackground: o,
             inputBackgroundColor: d,
             tabBackgroundColor: h,
         },
@@ -59,7 +59,7 @@ function C(e) {
         [g, _] = r.useState([]),
         { customPaymentMethods: P, customPaymentMethodIdsToSourceTypes: A } = r.useMemo(
             () => ({
-                customPaymentMethods: (0, c.Dd)(y),
+                customPaymentMethods: (0, o.Dd)(y),
                 customPaymentMethodIdsToSourceTypes: y.reduce(
                     (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                     {},
@@ -94,7 +94,7 @@ function C(e) {
         x();
     });
     let { elementsAppearance: v, elementsAppearanceOptions: R } = m(n),
-        M = (0, o.PU)(),
+        M = (0, c.PU)(),
         T = r.useMemo(
             () =>
                 C

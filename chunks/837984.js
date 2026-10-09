@@ -72,13 +72,13 @@ function p() {
                     if (((v = t), null == n || null == l || 0 === p || null == r)) return;
                     let j = Number(r.dataset.effortCentre),
                         M = r.hasAttribute("data-effort-live"),
-                        w = Number.isFinite(j) && Math.abs(j - u) > 16;
-                    if (!x && (!M || w)) return;
+                        S = Number.isFinite(j) && Math.abs(j - u) > 16;
+                    if (!x && (!M || S)) return;
                     y = Math.min(1, Math.max(0, y + ((M ? 1 : -1) * a) / 260));
-                    let S = n.getBoundingClientRect(),
-                        k = S.width > 0 ? S.width / p : 1,
+                    let w = n.getBoundingClientRect(),
+                        k = w.width > 0 ? w.width / p : 1,
                         P = r.getBoundingClientRect(),
-                        N = (P.left - S.left) / k,
+                        N = (P.left - w.left) / k,
                         E = (1 - Math.min(1, Math.abs(N + P.width / k / 2 - u) / 16)) * y;
                     if (E < 0.01) {
                         (x && l.clearRect(0, 0, p, h), (x = !1));
@@ -129,13 +129,13 @@ function p() {
                     }
                     l.globalAlpha = 1;
                 })));
-            let w = document.fonts;
-            null != w && w.load(`${m}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(j, () => void 0);
-            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(M);
+            let S = document.fonts;
+            null != S && S.load(`${m}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(j, () => void 0);
+            let w = "u" < typeof ResizeObserver ? null : new ResizeObserver(M);
             return (
-                S?.observe(n),
+                w?.observe(n),
                 () => {
-                    (cancelAnimationFrame(b), S?.disconnect());
+                    (cancelAnimationFrame(b), w?.disconnect());
                 }
             );
         }, [t]),
@@ -181,7 +181,7 @@ function m(e) {
             },
             [j],
         );
-    function w(e) {
+    function S(e) {
         if (u) return;
         let l = "ArrowRight" === e.key ? 1 : "ArrowLeft" === e.key ? -1 : 0;
         if (0 === l) return;
@@ -348,7 +348,7 @@ function m(e) {
                                 "aria-label": e,
                                 disabled: u,
                                 className: h.ds,
-                                onKeyDown: w,
+                                onKeyDown: S,
                                 onPointerEnter: () => g(n),
                                 onPointerLeave: () => g((e) => (e === n ? -1 : e)),
                                 onFocus: () => g(n),

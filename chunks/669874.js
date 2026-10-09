@@ -19,7 +19,7 @@ class a extends r.z {
             isGift: s,
             purchaseType: a,
             locationStack: u,
-            checkoutStepsHistory: o,
+            checkoutStepsHistory: c,
         } = this.props;
         return {
             loadId: t,
@@ -30,7 +30,7 @@ class a extends r.z {
             skuIds: l,
             locationStack: u,
             checkoutStepsHistory:
-                null != o ? o.map((e) => (e.toLowerCase().includes("auth") ? e.replaceAll("auth", "a") : e)) : [],
+                null != c ? c.map((e) => (e.toLowerCase().includes("auth") ? e.replaceAll("auth", "a") : e)) : [],
             ...(e instanceof i.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
         };
     }

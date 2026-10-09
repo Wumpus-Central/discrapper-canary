@@ -1,4 +1,4 @@
-(n.d(t, { A: () => B }), n(321073));
+(n.d(t, { A: () => V }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -196,7 +196,7 @@ function z(e) {
     let { textVariant: t, className: n } = e;
     return (0, l.jsx)(u.E, { variant: t, className: a()(f.Om, n), "aria-hidden": !0, children: "\u2022" });
 }
-function B(e) {
+function V(e) {
     let {
         user: t,
         activities: n,
@@ -241,14 +241,14 @@ function B(e) {
         ),
         M = n?.find((e) => e.name === T?.name),
         D = t?.bot === !0,
-        B = (0, o.bG)([N.A], () => N.A.isBlockedOrIgnored(t?.id)),
-        V = y?.state != null,
+        V = (0, o.bG)([N.A], () => N.A.isBlockedOrIgnored(t?.id)),
+        B = y?.state != null,
         F = null != C,
         J = !F && null != u,
         H = k.length + (F || J ? 1 : 0),
         W = H > 1,
         K = y?.state != null && "xs" === p;
-    if (B) return null;
+    if (V) return null;
     function Y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = !0 === e || S;
@@ -289,7 +289,7 @@ function B(e) {
         return (0, l.jsx)(U, {
             textVariant: `text-${p}/medium`,
             className: j,
-            hasCustomStatusText: V,
+            hasCustomStatusText: B,
             totalActivityCount: H,
         });
     }

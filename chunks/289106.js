@@ -21,8 +21,8 @@ var l = n(582128),
     C = n(246338),
     j = n(803101),
     M = n(248675),
-    w = n(660183);
-function S(e) {
+    S = n(660183);
+function w(e) {
     let { installScope: t, integrationStatus: n, guildName: l, appChannelName: i } = e;
     if (null == e.status) return null;
     let a = "up_to_date" === e.status.state && e.liveNameOutdated ? { ...e.status, state: "changes" } : e.status,
@@ -36,24 +36,24 @@ function S(e) {
                         switch (e) {
                             case "bot":
                                 return {
-                                    update: w.intl.string(M.default.JpDnbE),
-                                    open: w.intl.string(M.default.NNIwRu),
+                                    update: S.intl.string(M.default.JpDnbE),
+                                    open: S.intl.string(M.default.NNIwRu),
                                     destination: "dm",
                                     navigatesOnFirstPublish: !0,
                                     navigatesOnUpdate: !1,
                                 };
                             case "activity":
                                 return {
-                                    update: w.intl.string(M.default.QesMDC),
-                                    open: w.intl.string(M.default.iyQTsb),
+                                    update: S.intl.string(M.default.QesMDC),
+                                    open: S.intl.string(M.default.iyQTsb),
                                     destination: "launch",
                                     navigatesOnFirstPublish: !1,
                                     navigatesOnUpdate: !1,
                                 };
                             case "widget":
                                 return {
-                                    update: w.intl.string(M.default["LUi/55"]),
-                                    open: w.intl.string(M.default.TXUK1g),
+                                    update: S.intl.string(M.default["LUi/55"]),
+                                    open: S.intl.string(M.default.TXUK1g),
                                     destination: "profile",
                                     navigatesOnFirstPublish: !0,
                                     navigatesOnUpdate: !0,
@@ -64,11 +64,11 @@ function S(e) {
                     })(r)
                   : (function (e, t, n) {
                         if (null == t) return null;
-                        let l = w.intl.formatToPlainString(M.default.fTgw6C, { server: t });
+                        let l = S.intl.formatToPlainString(M.default.fTgw6C, { server: t });
                         switch (e) {
                             case "bot":
                                 return {
-                                    update: w.intl.string(M.default.JpDnbE),
+                                    update: S.intl.string(M.default.JpDnbE),
                                     open: l,
                                     destination: "guild",
                                     navigatesOnFirstPublish: !0,
@@ -76,16 +76,16 @@ function S(e) {
                                 };
                             case "activity":
                                 return {
-                                    update: w.intl.string(M.default.QesMDC),
-                                    open: null == n ? l : w.intl.formatToPlainString(M.default.l9xGQD, { channel: n }),
+                                    update: S.intl.string(M.default.QesMDC),
+                                    open: null == n ? l : S.intl.formatToPlainString(M.default.l9xGQD, { channel: n }),
                                     destination: "channel",
                                     navigatesOnFirstPublish: !0,
                                     navigatesOnUpdate: !1,
                                 };
                             case "automod":
                                 return {
-                                    update: w.intl.string(M.default.bwBMMn),
-                                    open: w.intl.string(M.default.KjbLum),
+                                    update: S.intl.string(M.default.bwBMMn),
+                                    open: S.intl.string(M.default.KjbLum),
                                     destination: "automod",
                                     navigatesOnFirstPublish: !1,
                                     navigatesOnUpdate: !1,
@@ -118,7 +118,7 @@ function S(e) {
         };
     let o = (function (e) {
             let { installScope: t, guildName: n, canManageGuild: l } = e;
-            return "guild" !== t || !1 !== l ? null : w.intl.format(M.default.N4NkyR, { server: n ?? "" });
+            return "guild" !== t || !1 !== l ? null : S.intl.format(M.default.N4NkyR, { server: n ?? "" });
         })(e),
         d = (0, g.Qg)({
             installScope: t,
@@ -138,7 +138,7 @@ function S(e) {
                     ? (function (e) {
                           let { installScope: t, guildName: n, canManageChannels: l, usesAppChannels: i } = e;
                           return "guild" === t && i && !1 === l
-                              ? w.intl.format(M.default.eHYXFg, { server: n ?? "" })
+                              ? S.intl.format(M.default.eHYXFg, { server: n ?? "" })
                               : null;
                       })(e)
                     : null,
@@ -146,9 +146,9 @@ function S(e) {
         },
         p = null != u && (c ? u.navigatesOnUpdate : u.navigatesOnFirstPublish);
     if (d && n?.bot_permissions_changed === !0)
-        return { ...f, label: w.intl.string(M.default["tUeY/h"]), action: "review_permissions", navigatesOnPublish: p };
-    let h = u?.update ?? w.intl.string(M.default.QesMDC);
-    return { ...f, label: c ? h : w.intl.string(M.default["120EFN"]), action: "publish", navigatesOnPublish: p };
+        return { ...f, label: S.intl.string(M.default["tUeY/h"]), action: "review_permissions", navigatesOnPublish: p };
+    let h = u?.update ?? S.intl.string(M.default.QesMDC);
+    return { ...f, label: c ? h : S.intl.string(M.default["120EFN"]), action: "publish", navigatesOnPublish: p };
 }
 var k = n(516288),
     P = n(308528),
@@ -258,8 +258,8 @@ function q(e, t, n) {
                 20088 === e.code && (0, b.U1)(r).catch(() => {}),
                 Error(
                     null != (t = e.detail?.trim()) && "" !== t
-                        ? w.intl.formatToPlainString(M.default["7ZsIF1"], { reason: t })
-                        : w.intl.string(M.default.gMWZeG),
+                        ? S.intl.formatToPlainString(M.default["7ZsIF1"], { reason: t })
+                        : S.intl.string(M.default.gMWZeG),
                 )
             );
         }),
@@ -284,7 +284,7 @@ function q(e, t, n) {
                             .catch(() => {}));
             },
             (e) => {
-                (U(r, !1), i.showError(e instanceof Error ? e.message : w.intl.string(M.default.gMWZeG)));
+                (U(r, !1), i.showError(e instanceof Error ? e.message : S.intl.string(M.default.gMWZeG)));
             },
         ),
         null != s && null != e.guildId)
@@ -314,7 +314,7 @@ function $(e) {
 function V(e, t) {
     let n = F(e, t.guildId);
     if (null == n) return;
-    let l = S({
+    let l = w({
         ...n.input,
         status: null == n.input.status ? null : { ...n.input.status, state: "up_to_date" },
     })?.destination;
@@ -326,7 +326,7 @@ async function Z(e, t, n) {
     if (!0 === n.busy || Q.has(e)) return;
     let a = F(e, l);
     if (null == a || v.Ay.isProjectPublishing(e)) return;
-    let r = S(a.input);
+    let r = w(a.input);
     if (null != r) {
         if (
             ((0, y.yJ)(e, {
@@ -395,7 +395,7 @@ function X(e, t) {
             integrationStatus: C,
             guildName: j,
             appChannelName: M,
-            appChannelPending: w,
+            appChannelPending: S,
             canManageGuild: k,
             canManageChannels: P,
             usesAppChannels: N,
@@ -436,14 +436,14 @@ function X(e, t) {
                           integrationStatus: C,
                           guildName: j,
                           appChannelName: M,
-                          appChannelPending: w,
+                          appChannelPending: S,
                           canManageGuild: k,
                           canManageChannels: P,
                           usesAppChannels: N,
                           botInGuild: E,
                           liveNameOutdated: I,
                       },
-            [g, y, A, C, j, M, w, k, P, N, E, I],
+            [g, y, A, C, j, M, S, k, P, N, E, I],
         ),
         R = _?.status?.state ?? null,
         L = _?.installScope === "guild" && _.status?.surface === "bot";
@@ -459,7 +459,7 @@ function X(e, t) {
             !s.A.isFetchingApplication(O) &&
             (0, u.TA)(O).catch(() => {});
     }, [O, T]);
-    let W = l.useMemo(() => (null == _ ? null : S(_)), [_]),
+    let W = l.useMemo(() => (null == _ ? null : w(_)), [_]),
         B = l.useCallback(
             (t) => {
                 null != e &&

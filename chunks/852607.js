@@ -96,8 +96,8 @@ var L = n(534479),
     B = n(655857),
     H = n(427675),
     W = n(642639),
-    V = n(652215),
-    Y = n(202541);
+    Y = n(652215),
+    V = n(202541);
 function K(e) {
     let { handleStepChange: t } = e,
         n = (0, W.t4)((e) => e.selectedSkuId),
@@ -117,9 +117,9 @@ function K(e) {
         if (m || u || null == n) return;
         let e = c[n];
         p &&
-        (e?.productLine === V.EZt.COLLECTIBLES ||
-            e?.productLine === V.EZt.APPLICATION ||
-            e?.productLine === V.EZt.SOCIAL_LAYER_GAME_ITEM)
+        (e?.productLine === Y.EZt.COLLECTIBLES ||
+            e?.productLine === Y.EZt.APPLICATION ||
+            e?.productLine === Y.EZt.SOCIAL_LAYER_GAME_ITEM)
             ? t(r.pn.GIFT_CUSTOMIZATION)
             : 0 === Object.keys(a).length
               ? t(r.pn.ADD_PAYMENT_STEPS)
@@ -161,7 +161,7 @@ function Z(e) {
         { isGift: I } = (0, N.Pv)(),
         A = (0, D.A)({ isGift: I, skuId: d }),
         T = !S || !E || y || !c,
-        b = (0, g.bG)([U.A], () => U.A.applicationIdsFetched.has(Y.tv));
+        b = (0, g.bG)([U.A], () => U.A.applicationIdsFetched.has(V.tv));
     (0, v.A)(
         "Payment Modal",
         T,
@@ -176,14 +176,14 @@ function Z(e) {
     );
     let j = (0, W.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: A }));
     return (i.useEffect(() => {
-        (b || (0, P.LM)(Y.tv),
+        (b || (0, P.LM)(V.tv),
             T ||
                 f ||
                 (null == s || C
                     ? null != o
                         ? a(o)
                         : null != n
-                          ? n !== Y.gD.PREMIUM_GROUP_MONTH || u
+                          ? n !== V.gD.PREMIUM_GROUP_MONTH || u
                               ? a(r.pn.REVIEW)
                               : a(r.pn.ADD_PAYMENT_STEPS)
                           : j

@@ -215,7 +215,7 @@ function b(e) {
         W = i.useMemo(() => (null != E ? E : () => {}), [E]);
     if (b) return (0, l.jsx)("div", { className: v.h, children: (0, l.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }) });
     if (w) return (0, l.jsx)(N, { onClick: E, disabled: x, variant: k });
-    let V = (0, l.jsx)(p.v, {
+    let Y = (0, l.jsx)(p.v, {
         value: F ?? null,
         options: H,
         onChange: D,
@@ -224,5 +224,5 @@ function b(e) {
         newPaymentMethodOptionLabel: R,
         noticeMessage: B,
     });
-    return null != M ? (0, l.jsx)(o.m, { asContainer: !0, text: M, children: V }) : V;
+    return null != M ? (0, l.jsx)(o.m, { asContainer: !0, text: M, children: Y }) : Y;
 }

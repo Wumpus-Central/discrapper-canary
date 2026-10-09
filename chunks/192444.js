@@ -1,17 +1,17 @@
 n.d(t, {
     lk: () => I,
-    NN: () => m,
-    n6: () => p,
+    NN: () => S,
+    n6: () => T,
     OO: () => f,
     Ig: () => _,
-    aD: () => T,
-    Se: () => A,
-    uK: () => c,
+    aD: () => p,
+    Se: () => E,
+    uK: () => d,
     Ds: () => g,
     LV: () => N,
     Mk: () => O,
-    sy: () => E,
-    d: () => S,
+    sy: () => A,
+    d: () => m,
 });
 var r,
     u,
@@ -23,8 +23,8 @@ var r,
         r),
     s = n(945810),
     a = n(646917),
-    d = n(576761);
-let c = (0, s.mj)({
+    c = n(576761);
+let d = (0, s.mj)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -42,13 +42,13 @@ let c = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let A = (0, s.mj)({
+let E = (0, s.mj)({
     name: "2026-07-ios-attribution",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var E =
+var A =
     (((u = {})[(u.DEFAULT = 0)] = "DEFAULT"),
     (u[(u.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
     (u[(u.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
@@ -69,11 +69,11 @@ function I(e) {
     let { enabled: t } = C.useConfig({ location: e }),
         n = (0, a.z)();
     return {
-        shouldShowBonusOrbsUX: n !== d.MA.INELIGIBLE && n !== d.MA.XBOX_GAME_PASS && t,
+        shouldShowBonusOrbsUX: n !== c.MA.INELIGIBLE && n !== c.MA.XBOX_GAME_PASS && t,
         multiplier: l.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
-let p = (0, s.mj)({
+let T = (0, s.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -85,7 +85,7 @@ let p = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let T = (0, s.mj)({
+let p = (0, s.mj)({
     name: "2026-05-quest-home-tile-redesign",
     kind: "user",
     defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
@@ -103,13 +103,13 @@ let T = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let m = (0, s.mj)({
+let S = (0, s.mj)({
     name: "2026-09-mobile-quest-home-sort-priority",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var S =
+var m =
     588245 != n.j
         ? (((i = {})[(i.CONTROL = 0)] = "CONTROL"),
           (i[(i.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),

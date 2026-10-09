@@ -13,8 +13,8 @@ var r = n(503698),
     m = n(280450),
     A = n(200749),
     E = n(660183),
-    f = n(604889);
-let g = n(913516);
+    g = n(604889);
+let f = n(913516);
 function p(e) {
     let { participant: t, width: n, noArt: r = !1, selected: p = !1 } = e,
         C = n < 195,
@@ -25,10 +25,10 @@ function p(e) {
             }),
         );
     return (0, i.jsx)("div", {
-        className: l()(f.Qs, f.FY),
+        className: l()(g.Qs, g.FY),
         children: (0, i.jsx)(A.A, {
-            className: f.FP,
-            artURL: g,
+            className: g.FP,
+            artURL: f,
             noArt: r,
             selected: p,
             size: (0, A.J)(n),
@@ -36,10 +36,10 @@ function p(e) {
             description: p
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: l()(f.t2, { [f.y8]: !C }),
+                      className: l()(g.t2, { [g.y8]: !C }),
                       children: [
                           (0, i.jsx)("div", {
-                              className: f.lO,
+                              className: g.lO,
                               children: (0, i.jsx)(a.$, {
                                   variant: "secondary",
                                   size: C ? "sm" : "md",
@@ -48,7 +48,7 @@ function p(e) {
                           }),
                           _
                               ? (0, i.jsx)("div", {
-                                    className: l()(f.lO, f.EU),
+                                    className: l()(g.lO, g.EU),
                                     children: (0, i.jsx)(o.m, {
                                         text: E.intl.string(E.t.wCrzut),
                                         children: (0, i.jsx)(u.K, {

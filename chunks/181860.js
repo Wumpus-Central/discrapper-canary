@@ -82,8 +82,8 @@ var R = n(951305),
     B = n(332026),
     H = n(810498),
     W = n(557679),
-    V = n(452027),
-    Y = n(403581),
+    Y = n(452027),
+    V = n(403581),
     K = n(202541),
     Z = n(341535),
     q = n(318824);
@@ -142,7 +142,7 @@ function X(e) {
         gap: 24,
         padding: { bottom: 12 },
         children: [
-            (0, l.jsx)(V.D, {
+            (0, l.jsx)(Y.D, {
                 label: N.intl.string(Z.default.UWycjR),
                 role: "radiogroup",
                 children: (0, l.jsx)("div", {
@@ -189,7 +189,7 @@ function X(e) {
                     }),
                 }),
             }),
-            (0, l.jsx)(V.D, {
+            (0, l.jsx)(Y.D, {
                 label: N.intl.string(Z.default.H3pTAa),
                 role: "group",
                 children: (0, l.jsxs)("div", {
@@ -211,7 +211,7 @@ function X(e) {
                                         (0, l.jsx)("div", {
                                             className: q.E6,
                                             "aria-hidden": "true",
-                                            children: (0, l.jsx)(Y.t, { size: "md", color: S.A.colors.ICON_STRONG }),
+                                            children: (0, l.jsx)(V.t, { size: "md", color: S.A.colors.ICON_STRONG }),
                                         }),
                                         (0, l.jsxs)(u.B, {
                                             gap: 4,
@@ -571,8 +571,8 @@ function ej(e) {
         B = w ?? N,
         W = n ?? p;
     a()(null != W, "Price option has to be set");
-    let V = y?.discount?.planIds,
-        Y = null != y && l.some((e) => V?.includes(e)) && null != y.discount,
+    let Y = y?.discount?.planIds,
+        V = null != y && l.some((e) => Y?.includes(e)) && null != y.discount,
         K = null != I && l.includes(I) ? (0, D.y8)(I, !1, A, W) : void 0,
         Z = null != B ? B.id : void 0,
         q = null != Z && l.includes(Z);
@@ -593,7 +593,7 @@ function ej(e) {
         { ipCountryCode: J } = (0, eh.A)(),
         X = "HR" === J && null != Q && Q.currency === ex.Yr.EUR,
         ee = (0, D.J$)(W.paymentSourceId),
-        et = !A && (Y || (null != U && E && null != r)),
+        et = !A && (V || (null != U && E && null != r)),
         { copy: en } = eb();
     return {
         skuId: c,
@@ -605,7 +605,7 @@ function ej(e) {
         hasSeenCollectiblesInSkuSelect: j,
         shouldShowTrialOrDiscountLayout: et,
         shouldShowHRKEuroWarning: X,
-        shouldShowTotalInSubscriptionFlow: !E && !Y && q && u,
+        shouldShowTotalInSubscriptionFlow: !E && !V && q && u,
         canContinue: q,
         isPrepaid: ee,
         radioGroupRef: z,
@@ -619,7 +619,7 @@ function ej(e) {
         isEligibleForTrial: E,
         userTrialOffer: S,
         trialPeriodCopy: en,
-        isPlansEligibleForDiscount: Y,
+        isPlansEligibleForDiscount: V,
         discountedPlanRegularPrice: K,
     };
 }
@@ -867,9 +867,9 @@ function eG(e) {
             shouldShowHRKEuroWarning: D,
             shouldShowTotalInSubscriptionFlow: F,
             canContinue: H,
-            trialPeriodCopy: V,
+            trialPeriodCopy: Y,
         } = ej({ selectedPlanId: n, priceOptions: r, planOptions: a, subscriptionPeriodEnd: s, showTotal: o }),
-        { discountAmountOff: Y, applicablePlan: Z, discountOffer: q } = (0, C.t4)((e) => e.premiumDiscountInfo),
+        { discountAmountOff: V, applicablePlan: Z, discountOffer: q } = (0, C.t4)((e) => e.premiumDiscountInfo),
         z = (0, G.ds)(),
         $ = B.Ay.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
         Q = (0, W.M)({ isGift: y, giftRecipient: g, selectedPlanId: h?.id }),
@@ -930,7 +930,7 @@ function eG(e) {
                     fractionalPremiumInfo: el,
                     enablePremiumBrandRefresh: !0,
                     variant: A ? eI.uA.TRIAL : void 0,
-                    trialPeriod: A ? V : void 0,
+                    trialPeriod: A ? Y : void 0,
                     trialEnd: A ? s : void 0,
                 }),
             er &&
@@ -956,14 +956,14 @@ function eG(e) {
                                 (0, l.jsx)(d.E, {
                                     variant: "text-sm/normal",
                                     className: e_.Tz,
-                                    children: ek(e, { subscriptionPeriodEnd: s, trialPeriodCopy: V }),
+                                    children: ek(e, { subscriptionPeriodEnd: s, trialPeriodCopy: Y }),
                                 }),
                                 (0, l.jsx)("hr", { className: e_.RA }),
                             ],
                         });
-                    if (i && null != Y && null != T && null != Z && n === Z) {
+                    if (i && null != V && null != T && null != Z && n === Z) {
                         let e = h?.interval === K.WT.YEAR,
-                            t = (0, U.$g)(T.amount - Y, T.currency),
+                            t = (0, U.$g)(T.amount - V, T.currency),
                             n = (0, U.$g)(T.amount, T.currency);
                         return (0, l.jsxs)("div", {
                             children: [

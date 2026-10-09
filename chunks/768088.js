@@ -11,7 +11,7 @@ var r = n(205693),
     d = n(660183);
 function h(e) {
     let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: E = !1 } = e,
-        f = (function (e) {
+        g = (function (e) {
             switch (e?.type) {
                 case s.iy.SCREENSHARE_OS_ERROR:
                     return d.intl.format(d.t.e9LMuh, { errorMessage: e.errorMessage });
@@ -20,14 +20,14 @@ function h(e) {
                     return d.intl.string(d.t.rSlOep);
             }
         })(m),
-        g = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
+        f = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
     return (0, i.jsx)(u.A, {
-        header: f,
+        header: g,
         size: (0, u.J)(n),
         noArt: E,
         selected: A,
         description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(c.MVz.STREAM_FAILED) }),
-        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: g }),
+        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: f }),
         onCTAClick: () => {
             ((0, l.W)(r.x.STREAM, t.ownerId), (0, a.A)(t));
         },

@@ -5,8 +5,8 @@ var r = n(477900),
     s = n.n(i),
     a = n(333007),
     u = n(17928),
-    o = n(430993),
-    c = n(430690),
+    c = n(430993),
+    o = n(430690),
     d = n(71804),
     f = n(883645),
     h = n(601194),
@@ -61,8 +61,8 @@ function y(e) {
                       children: [
                           R
                               ? null
-                              : (0, r.jsx)(o.c, {
-                                    children: (0, r.jsx)(c.t, {
+                              : (0, r.jsx)(c.c, {
+                                    children: (0, r.jsx)(o.t, {
                                         shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: a,
                                         centered: !1,
@@ -74,7 +74,7 @@ function y(e) {
                                             .filter((e) => null != e.key)
                                             .map((e) =>
                                                 (0, r.jsx)(
-                                                    c.q,
+                                                    o.q,
                                                     {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {

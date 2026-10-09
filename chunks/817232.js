@@ -69,8 +69,8 @@ var L = n(885386),
     w = n(174459),
     U = n(796774),
     z = n(209932),
-    B = n(807348),
-    V = n(813564),
+    V = n(807348),
+    B = n(813564),
     F = n(792348),
     J = n(708793),
     H = n(980504),
@@ -143,7 +143,7 @@ function en(e) {
                     e.currentTarget.blur(),
                     r
                         ? (0, U.eS)(t.soundId)
-                        : ((0, V.Ni)({ sound: t, location: { ...s, object: $.ZSU.SOUNDBOARD_SOUND } }),
+                        : ((0, B.Ni)({ sound: t, location: { ...s, object: $.ZSU.SOUNDBOARD_SOUND } }),
                           (0, U.Rp)(t.soundId)));
             },
             [r, t, s],
@@ -177,7 +177,7 @@ function el(e) {
             onMouseEnter: G,
             onSelectItem: P,
             analyticsLocations: D,
-            buttonOverlay: w = B.If.PLAY,
+            buttonOverlay: w = V.If.PLAY,
             showLockForDisabledSound: U = !0,
             inNitroLockedSection: z = !1,
             isAnimated: J = !0,
@@ -234,7 +234,7 @@ function el(e) {
             [eO, eu],
         ),
         eR = null != em || null != ex,
-        ek = !(0, V.Ir)(eh, x, h) && !$,
+        ek = !(0, B.Ir)(eh, x, h) && !$,
         eG = y || (_ && !ek),
         eP = C.LW.useStore().bottomPosition ?? 0,
         eM = eN.current?.getBoundingClientRect().bottom ?? 0,
@@ -246,7 +246,7 @@ function el(e) {
             eD(!1);
         }, []),
         ez = ek && U;
-    function eB(e) {
+    function eV(e) {
         (eS &&
             !ev &&
             ((eb.current = Math.min(eb.current + 0.01, 0.1)),
@@ -255,7 +255,7 @@ function el(e) {
             ? P(e)
             : R || eg(D);
     }
-    let eV = (0, l.jsx)("div", {
+    let eB = (0, l.jsx)("div", {
         onMouseEnter: ew,
         onMouseLeave: eU,
         children: et({ sound: x, previewSound: ep, disabled: ek && !y }),
@@ -329,7 +329,7 @@ function el(e) {
                         g,
                     ),
                     onClick: (e) => {
-                        eB?.(e);
+                        eV?.(e);
                     },
                     onContextMenu: _ && !ek ? ej : void 0,
                     children: [
@@ -349,7 +349,7 @@ function el(e) {
                         }),
                         (function () {
                             switch (w) {
-                                case B.If.ADD:
+                                case V.If.ADD:
                                     return (0, l.jsxs)("div", {
                                         className: Q.ec,
                                         children: [
@@ -357,7 +357,7 @@ function el(e) {
                                             (0, l.jsxs)("div", {
                                                 className: Q.O5,
                                                 children: [
-                                                    eV,
+                                                    eB,
                                                     (0, l.jsxs)("div", {
                                                         className: Q.c9,
                                                         children: [
@@ -378,10 +378,10 @@ function el(e) {
                                             }),
                                         ],
                                     });
-                                case B.If.NONE:
+                                case V.If.NONE:
                                     return null;
-                                case B.If.PLAY:
-                                case B.If.SOUNDMOJI:
+                                case V.If.PLAY:
+                                case V.If.SOUNDMOJI:
                                 default:
                                     return ez && !z
                                         ? (0, l.jsxs)(l.Fragment, {
@@ -392,7 +392,7 @@ function el(e) {
                                                       className: Q.d7,
                                                       children: (0, l.jsxs)("div", {
                                                           className: Q.O5,
-                                                          children: [eG && eV, eG && eJ],
+                                                          children: [eG && eB, eG && eJ],
                                                       }),
                                                   }),
                                               ],
@@ -404,7 +404,7 @@ function el(e) {
                                                   (0, l.jsx)("div", {
                                                       className: Q.O5,
                                                       children:
-                                                          w === B.If.SOUNDMOJI
+                                                          w === V.If.SOUNDMOJI
                                                               ? (0, l.jsx)(T.Ay, {
                                                                     sound: x,
                                                                     channel: h,
@@ -412,7 +412,7 @@ function el(e) {
                                                                     renderSoundButton: ei,
                                                                 })
                                                               : (0, l.jsxs)(l.Fragment, {
-                                                                    children: [eG && eV, eF(), eG && eJ],
+                                                                    children: [eG && eB, eF(), eG && eJ],
                                                                 }),
                                                   }),
                                               ],
@@ -428,7 +428,7 @@ function el(e) {
                     shouldShow: !eL,
                     children: (0, l.jsx)("div", {
                         className: Q.ET,
-                        children: !z && (0, l.jsxs)("div", { className: Q.ld, children: [eV, eJ] }),
+                        children: !z && (0, l.jsxs)("div", { className: Q.ld, children: [eB, eJ] }),
                     }),
                 }),
             !0 === $ && (0, l.jsx)(M, { sound: x, containerDimensions: eH, ref: ee }),

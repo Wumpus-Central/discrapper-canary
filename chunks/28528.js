@@ -12,16 +12,16 @@ var i = n(477900),
     m = n(939249),
     A = n(717421),
     E = n(684013),
-    f = n(789645),
-    g = n(616566);
+    g = n(789645),
+    f = n(616566);
 let p = (e) => {
     let { className: t, onDismiss: n, "aria-label": r } = e;
     return (0, i.jsx)(m.D, {
         role: "button",
         onClick: n,
-        className: s()(g.r, t),
+        className: s()(f.r, t),
         "aria-label": r,
-        children: (0, i.jsx)(f.P, { size: "xs", color: "currentColor", colorClass: g.M }),
+        children: (0, i.jsx)(g.P, { size: "xs", color: "currentColor", colorClass: f.M }),
     });
 };
 p.displayName = "DismissButton";
@@ -42,8 +42,8 @@ let y = r.memo(function (e) {
             maxBodyLines: l,
             expand: A = !1,
             onNotificationShow: E,
-            onDismissClick: f,
-            onConfirmClick: g,
+            onDismissClick: g,
+            onConfirmClick: f,
             onCancelClick: C,
             onNotificationClick: S,
             hint: y,
@@ -68,15 +68,15 @@ let y = r.memo(function (e) {
     }, [E]);
     let H = r.useCallback(
             (e) => {
-                (e.stopPropagation(), f?.(e));
-            },
-            [f],
-        ),
-        B = r.useCallback(
-            (e) => {
                 (e.stopPropagation(), g?.(e));
             },
             [g],
+        ),
+        B = r.useCallback(
+            (e) => {
+                (e.stopPropagation(), f?.(e));
+            },
+            [f],
         ),
         K = r.useCallback(
             (e) => {
@@ -149,12 +149,12 @@ let y = r.memo(function (e) {
                                                               children: n,
                                                           })
                                                         : null),
-                                                    null == g && null == C
+                                                    null == f && null == C
                                                         ? null
                                                         : (0, i.jsxs)("div", {
                                                               className: v.UD,
                                                               children: [
-                                                                  null != g
+                                                                  null != f
                                                                       ? (0, i.jsx)("div", {
                                                                             className: v.x6,
                                                                             children: (0, i.jsx)(c.$, {
@@ -236,8 +236,8 @@ function M(e) {
                 onDismissClick: d,
                 onNotificationClick: h,
                 onConfirmClick: m,
-                onCancelClick: f,
-                renderFooter: g,
+                onCancelClick: g,
+                renderFooter: f,
                 animationWrapperClassName: p,
             },
         } = t,
@@ -284,11 +284,11 @@ function M(e) {
         ),
         O = r.useCallback(
             (e) => {
-                f?.(e, u);
+                g?.(e, u);
             },
-            [f, u],
+            [g, u],
         ),
-        M = r.useCallback((e, t) => g?.(e, u, t), [g, u]),
+        M = r.useCallback((e, t) => f?.(e, u, t), [f, u]),
         {
             props: {
                 onNotificationShow: j,
@@ -325,7 +325,7 @@ function M(e) {
                 onDismissClick: _,
                 onNotificationClick: I,
                 onConfirmClick: null != m ? v : void 0,
-                onCancelClick: null != f ? O : void 0,
+                onCancelClick: null != g ? O : void 0,
                 renderFooter: M,
                 expand: !1,
                 index: n,

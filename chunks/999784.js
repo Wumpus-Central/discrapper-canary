@@ -6,14 +6,14 @@ var l = n(503698),
     s = n(194261),
     a = n(834730),
     u = n(660183),
-    o = n(629264),
-    c = n(938442);
+    c = n(629264),
+    o = n(938442);
 function d() {
     return (0, r.jsxs)("div", {
-        className: i()(o.iG, c.Uu, c.Hu),
+        className: i()(c.iG, o.Uu, o.Hu),
         children: [
-            (0, r.jsx)(s.LockIcon, { size: "sm", color: "currentColor", className: o.hz }),
-            (0, r.jsx)(a.E, { variant: "text-sm/medium", className: o.aK, children: u.intl.string(u.t.Kv6Z4I) }),
+            (0, r.jsx)(s.LockIcon, { size: "sm", color: "currentColor", className: c.hz }),
+            (0, r.jsx)(a.E, { variant: "text-sm/medium", className: c.aK, children: u.intl.string(u.t.Kv6Z4I) }),
         ],
     });
 }

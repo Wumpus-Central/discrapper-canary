@@ -1,4 +1,4 @@
-n.d(t, { $w: () => u, uM: () => o });
+n.d(t, { $w: () => u, uM: () => c });
 var r = n(492462),
     l = n(806163);
 (n(809733), n(38405));
@@ -15,7 +15,7 @@ function u() {
         { deep_link_type: n, flow_type: i } = (0, r.parse)(e);
     return a(t, n, i);
 }
-function o() {
+function c() {
     let e = window.location.pathname,
         { deep_link_type: t, flow_type: n } = (0, r.parse)(window.location.search);
     return a(e, t, n);

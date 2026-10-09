@@ -1,31 +1,31 @@
-n.d(t, { A: () => d });
-var a = n(477900),
-    s = n(582128),
-    i = n(866665),
-    r = n(821609),
-    l = n(721157),
-    o = n(555393),
-    c = n(660183);
-function d(e) {
-    let t = (0, o.N)(),
-        n =
+a.d(t, { A: () => o });
+var n = a(477900),
+    s = a(582128),
+    i = a(866665),
+    r = a(821609),
+    l = a(721157),
+    c = a(555393),
+    d = a(660183);
+function o(e) {
+    let t = (0, c.N)(),
+        a =
             (t?.reason ?? null) === l.ON.TRIAL_USER_NOT_ELIGIBLE
-                ? c.intl.string(c.t["2S/5mX"])
-                : c.intl.string(c.t.GcPSts),
-        d = s.useRef(null);
+                ? d.intl.string(d.t["2S/5mX"])
+                : d.intl.string(d.t.GcPSts),
+        o = s.useRef(null);
     return t?.state === l.zE.BLOCK_CLAIM
-        ? (0, a.jsx)(i.m, {
-              text: n,
+        ? (0, n.jsx)(i.m, {
+              text: a,
               asContainer: !0,
-              anchorRef: d,
-              children: (0, a.jsx)(r.$, {
-                  buttonRef: d,
+              anchorRef: o,
+              children: (0, n.jsx)(r.$, {
+                  buttonRef: o,
                   fullWidth: e.fullWidth,
                   variant: "overlay-primary",
                   size: e.size,
-                  text: c.intl.string(c.t.rJbFM3),
+                  text: d.intl.string(d.t.rJbFM3),
                   disabled: !0,
               }),
           })
-        : (0, a.jsx)(r.$, { ...e });
+        : (0, n.jsx)(r.$, { ...e });
 }

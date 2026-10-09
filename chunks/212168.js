@@ -22,10 +22,10 @@ function c(e) {
         ref: u,
     } = e;
     if (!i) return t;
-    let { border: m, background: g } = d[n];
+    let { border: m, background: f } = d[n];
     return (0, a.jsx)("div", {
         ref: u,
         className: l()(m, s),
-        children: (0, a.jsx)("div", { className: l()(r ? g : o.Tp, c), children: t }),
+        children: (0, a.jsx)("div", { className: l()(r ? f : o.Tp, c), children: t }),
     });
 }

@@ -5,8 +5,8 @@ var r = n(477900),
     s = n(430993),
     a = n(834730),
     u = n(534479),
-    o = n(977445),
-    c = n(624210);
+    c = n(977445),
+    o = n(624210);
 let d = (0, n(945810).mj)({
     name: "2026-06-otp-orders-phase-1",
     kind: "user",
@@ -74,8 +74,8 @@ function _(e) {
                         let { skuId: t } = e;
                         M(!0);
                         try {
-                            let e = null != r && (0, o.Fs)(r),
-                                n = await (0, c.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
+                            let e = null != r && (0, c.Fs)(r),
+                                n = await (0, o.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
                             (A(n), null != p && p(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));

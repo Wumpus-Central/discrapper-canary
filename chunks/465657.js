@@ -89,7 +89,7 @@ function f(e) {
             [I, j],
         ),
         W = i.useMemo(() => S({ handlePaymentSourceAdd: H }), [S, H]),
-        V = (0, l.jsx)(d.U, {
+        Y = (0, l.jsx)(d.U, {
             resolveTenantReviewButtonProps: y,
             onBack: B,
             flowStartTime: T.startTime,
@@ -105,6 +105,6 @@ function f(e) {
             ...t,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: W }), (0, l.jsx)(u.UX, { children: V })],
+        children: [(0, l.jsx)(u.dZ, { children: W }), (0, l.jsx)(u.UX, { children: Y })],
     });
 }

@@ -12,8 +12,8 @@ var i = n(477900),
     m = n(869146),
     A = n(532294),
     E = n(723702),
-    f = n(41984),
-    g = n(127242),
+    g = n(41984),
+    f = n(127242),
     p = n(545807),
     C = n(392164),
     _ = n(85290);
@@ -105,7 +105,7 @@ let T = r.createContext(new S((0, p.b)()));
 function I(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
         o = r.useContext(T),
-        u = (0, c.bG)([g.A], () => g.A.hasRenderDebugMode(f.x7.ClickZones)),
+        u = (0, c.bG)([f.A], () => f.A.hasRenderDebugMode(g.x7.ClickZones)),
         d = (0, c.bG)([A.default], () => A.default.disableClickableRegions),
         [{ refHandler: h, setObserve: m }] = r.useState(() => {
             let e = null;

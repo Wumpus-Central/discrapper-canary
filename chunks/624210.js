@@ -4,14 +4,14 @@ var r = n(636537),
     i = n(652215);
 async function s(e) {
     let { skuId: t, paymentSourceId: n, paymentGateway: s, loadId: a, testMode: u } = e,
-        o = {};
-    (null != n && (o.payment_source_id = n), null != s && (o.payment_gateway = s));
-    let c = { order_line_items: [{ sku_id: t, quantity: 1, purchase_type: l.BM.ONE_TIME }], billing_facet: o };
-    u && (c.application_facet = { test_mode: !0 });
+        c = {};
+    (null != n && (c.payment_source_id = n), null != s && (c.payment_gateway = s));
+    let o = { order_line_items: [{ sku_id: t, quantity: 1, purchase_type: l.BM.ONE_TIME }], billing_facet: c };
+    u && (o.application_facet = { test_mode: !0 });
     let d = (
         await r.Bo.post({
             url: i.Rsh.ORDER_CREATE,
-            body: c,
+            body: o,
             context: null != a && "" !== a ? { load_id: a } : void 0,
             rejectWithError: !0,
         })

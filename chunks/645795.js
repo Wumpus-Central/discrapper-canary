@@ -5,8 +5,8 @@ var r,
     s = n(284009),
     a = n.n(s),
     u = n(17928),
-    o = n(834730),
-    c = n(38021),
+    c = n(834730),
+    o = n(38021),
     d = n(821609),
     f = n(830382),
     h = n(71804),
@@ -102,8 +102,8 @@ var b = n(700546),
 function B(e) {
     let t,
         { planId: n, startingPremiumSubscriptionPlanId: r, paymentSourceType: i } = e,
-        [s, c] = (0, u.yK)([y.A], () => [y.A.get(r), y.A.get(n)]);
-    if ((a()(null != s && null != c, "Missing startingPlan or newPlan"), k.LE.indexOf(r) < k.LE.indexOf(n)))
+        [s, o] = (0, u.yK)([y.A], () => [y.A.get(r), y.A.get(n)]);
+    if ((a()(null != s && null != o, "Missing startingPlan or newPlan"), k.LE.indexOf(r) < k.LE.indexOf(n)))
         switch (n) {
             case k.gD.PREMIUM_MONTH_TIER_1:
                 ((t = w.intl.string(w.t.knvOVz)), j.NcF.has(i ?? j.hes.UNKNOWN) && (t = w.intl.format(w.t.o6hBiR, {})));
@@ -136,9 +136,9 @@ function B(e) {
             default:
                 throw new h.v({ message: `Unexpected planId: ${n}`, extraSentryInformation: { planId: n } });
         }
-    else if (s.skuId === k.pe.TIER_2 && c.skuId === k.pe.TIER_1) t = w.intl.string(w.t.PNX4NM);
+    else if (s.skuId === k.pe.TIER_2 && o.skuId === k.pe.TIER_1) t = w.intl.string(w.t.PNX4NM);
     else
-        switch (c.skuId) {
+        switch (o.skuId) {
             case k.pe.TIER_0:
                 t = w.intl.string(w.t["XEoQ7+"]);
                 break;
@@ -149,9 +149,9 @@ function B(e) {
                 t = 1 !== s.intervalCount ? w.intl.string(w.t.qSZZVA) : w.intl.string(w.t.RNjcNg);
                 break;
             default:
-                throw Error(`Unexpected skuId: ${c.skuId}`);
+                throw Error(`Unexpected skuId: ${o.skuId}`);
         }
-    return (0, l.jsx)(o.E, {
+    return (0, l.jsx)(c.E, {
         variant: "text-md/medium",
         color: "interactive-text-default",
         className: F.Qq,
@@ -184,7 +184,7 @@ function G(e) {
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
-        { theme: K } = (0, c.wR)(),
+        { theme: K } = (0, o.wR)(),
         W = (0, u.bG)([I.A], () => (null != m ? I.A.get(m.id) : null)),
         Y = (0, _.b2)(R),
         q = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
@@ -211,21 +211,21 @@ function G(e) {
         }, [m, W]),
         Z)
     )
-        t = (0, l.jsx)(o.E, {
+        t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: F.Qq,
             children: w.intl.string(O.default["t+xzd8"]),
         });
     else if ("deeplink_to_desktop_app" === M || G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
-        t = (0, l.jsx)(o.E, {
+        t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: F.Qq,
             children: (0, l.jsxs)("p", { children: [w.intl.string(w.t.bIVRSQ), " ", w.intl.string(w.t["0UJqOy"])] }),
         });
     else if (null != W)
-        t = (0, l.jsx)(o.E, {
+        t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: F.Qq,
@@ -235,7 +235,7 @@ function G(e) {
         let e = y.A.get(r);
         (a()(null != e, "Missing plan"),
             e.skuId === k.pe.TIER_0
-                ? (t = (0, l.jsxs)(o.E, {
+                ? (t = (0, l.jsxs)(c.E, {
                       variant: "text-md/medium",
                       color: "interactive-text-default",
                       className: F.Qq,
@@ -249,7 +249,7 @@ function G(e) {
                       ],
                   }))
                 : (e.skuId === k.pe.TIER_1 || e.skuId === k.pe.TIER_2) &&
-                  (t = (0, l.jsxs)(o.E, {
+                  (t = (0, l.jsxs)(c.E, {
                       variant: "text-md/medium",
                       color: "interactive-text-default",
                       className: F.Qq,
@@ -268,13 +268,13 @@ function G(e) {
         (a()(null != e, "Missing plan"),
             (t = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(o.E, {
+                    (0, l.jsx)(c.E, {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
                         children: Q(e),
                     }),
-                    (0, l.jsx)(o.E, {
+                    (0, l.jsx)(c.E, {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
@@ -285,7 +285,7 @@ function G(e) {
     } else {
         let e = y.A.get(r);
         (a()(null != e, "Missing plan"),
-            (t = (0, l.jsx)(o.E, {
+            (t = (0, l.jsx)(c.E, {
                 variant: "text-md/medium",
                 color: "interactive-text-default",
                 className: F.Qq,
@@ -339,8 +339,8 @@ function Z(e) {
         {
             giftRecipient: i,
             selectedGiftStyle: s,
-            hasSentMessage: o,
-            giftMessageError: c,
+            hasSentMessage: c,
+            giftMessageError: o,
             isSendingMessage: d,
         } = (0, C.Pv)(),
         f = (0, u.bG)([y.A], () => y.A.get(t));
@@ -360,9 +360,9 @@ function Z(e) {
         subscriptionPlan: f,
         onClose: n,
         selectedGiftStyle: s,
-        hasSentMessage: o,
+        hasSentMessage: c,
         giftRecipient: i,
-        giftMessageError: c,
+        giftMessageError: o,
         isSendingMessage: d,
     });
 }

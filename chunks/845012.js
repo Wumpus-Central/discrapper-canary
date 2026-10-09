@@ -47,15 +47,15 @@ function x(e) {
             isEligibleForBOGOPromotion: B,
             premiumSubscriptionPlan: H,
             thePriceOptions: W,
-            skuId: V,
+            skuId: Y,
         } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: x, showTotal: N }),
-        { shouldShowPremiumSwitchPlanSelectText: Y, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
+        { shouldShowPremiumSwitchPlanSelectText: V, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
             let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
-                premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
+                premiumSwitchPlanSelectText: e ? (0, C.yq)(H, Y) : null,
             };
-        }, [H, B, V]),
+        }, [H, B, Y]),
         Z = i.useMemo(
             () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: x, trialPeriodCopy: G }) : b),
             [N, F, U, x, G, b],
@@ -207,7 +207,7 @@ function x(e) {
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  Y &&
+                  V &&
                       (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
                   (0, l.jsx)(d.me, {
                       headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),

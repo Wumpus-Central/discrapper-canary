@@ -37,8 +37,8 @@ var l = n(477900),
     w = n(465794),
     U = n(976860),
     z = n(309010),
-    B = n(967198),
-    V = n(287809),
+    V = n(967198),
+    B = n(287809),
     F = n(174459),
     J = n(486020),
     H = n(449054),
@@ -55,7 +55,7 @@ function ee(e) {
     let i,
         s,
         { node: a } = e;
-    (0, R.i)({ emojiId: a.emojiId, currentGuildId: B.A.getGuildId() });
+    (0, R.i)({ emojiId: a.emojiId, currentGuildId: V.A.getGuildId() });
     let r =
             ((n = t = a.name),
             (i = (0, o.bG)([Y.default], () => Y.default.locale.startsWith("en-"))),
@@ -279,15 +279,15 @@ function el(e) {
             demoMode: y = !1,
             nonce: k,
         } = e,
-        G = (0, o.bG)([V.default], () => V.default.getCurrentUser()),
-        U = (0, o.bG)([B.A], () => B.A.getGuildId()),
+        G = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
+        U = (0, o.bG)([V.A], () => V.A.getGuildId()),
         z = W.Ay.isPremium(G),
         J = null != U && (U === g?.id || U === b?.id),
         H = null != b,
         Y = g?.isDiscoverable() ?? !1;
     y && ((z = !0), (Y = !0), (H = !1), (J = !1));
     let ee = {
-            page: null != (0, o.bG)([B.A], () => B.A.getGuildId()) ? _.liQ.GUILD_CHANNEL : _.liQ.DM_CHANNEL,
+            page: null != (0, o.bG)([V.A], () => V.A.getGuildId()) ? _.liQ.GUILD_CHANNEL : _.liQ.DM_CHANNEL,
             section: _.JJy.EMOJI_UPSELL_POPOUT,
         },
         {
@@ -315,7 +315,7 @@ function el(e) {
         },
         { disableTrack: !en },
     );
-    let eo = B.A.getGuildId(),
+    let eo = V.A.getGuildId(),
         eu = (0, K.O)({
             sourceType: d,
             expressionSourceApplication: x,

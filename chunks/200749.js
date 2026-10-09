@@ -21,7 +21,7 @@ function d(e) {
         className: m,
         artURL: A,
         noArt: E = !1,
-        selected: f = !1,
+        selected: g = !1,
     } = e;
     return (0, i.jsxs)(o.A, {
         className: m,
@@ -48,7 +48,7 @@ function d(e) {
             null != c && (null == d || "small" !== h)
                 ? (0, i.jsx)(s.E, { color: "none", className: u.description, variant: "text-sm/medium", children: c })
                 : null,
-            f || null == n
+            g || null == n
                 ? null
                 : (0, i.jsx)("div", {
                       className: u.outerButton,

@@ -41,8 +41,8 @@ var T = n(202541),
     B = n(474012),
     H = n(607123),
     W = n(287809),
-    V = n(341535),
-    Y = n(189399);
+    Y = n(341535),
+    V = n(189399);
 function K(e) {
     let { Icon: t = U.t, iconSize: n, customGraphic: i, gradientColor: r = "nitro-pink", ...a } = e;
     return (0, l.jsx)(G.J, {
@@ -58,7 +58,7 @@ function Z(e) {
         o = i.useMemo(
             () =>
                 null != s && t.length > 1
-                    ? b.intl.format(V.default.XoHiqS, { name: s.name, count: t.length - 1 })
+                    ? b.intl.format(Y.default.XoHiqS, { name: s.name, count: t.length - 1 })
                     : s?.name,
             [s, t.length],
         ),
@@ -66,28 +66,28 @@ function Z(e) {
     return null == u
         ? null
         : (0, l.jsx)(G.A, {
-              className: Y.Xx,
+              className: V.Xx,
               gradientColor: r,
               customGraphic: (0, l.jsx)("div", {
-                  className: Y.yn,
+                  className: V.yn,
                   children: (0, l.jsx)("div", {
-                      className: k()(Y.ML, {
-                          [Y.M]: s?.type === w.R.AVATAR_DECORATION,
-                          [Y.Hm]: s?.type === w.R.PROFILE_EFFECT,
-                          [Y.hH]: s?.type === w.R.PROFILE_FRAME,
-                          [Y.qF]: s?.type === w.R.NAMEPLATE,
-                          [Y.l2]: s?.type === w.R.BUNDLE,
+                      className: k()(V.ML, {
+                          [V.M]: s?.type === w.R.AVATAR_DECORATION,
+                          [V.Hm]: s?.type === w.R.PROFILE_EFFECT,
+                          [V.hH]: s?.type === w.R.PROFILE_FRAME,
+                          [V.qF]: s?.type === w.R.NAMEPLATE,
+                          [V.l2]: s?.type === w.R.BUNDLE,
                       }),
                       children: (0, l.jsx)(H.pL, {
                           collectiblesItem: u,
                           user: a,
-                          nameplatePreviewStyle: Y.M4,
-                          nameplatePreviewRescalerStyle: Y.N1,
+                          nameplatePreviewStyle: V.M4,
+                          nameplatePreviewRescalerStyle: V.N1,
                       }),
                   }),
               }),
               children: (0, l.jsxs)("div", {
-                  className: Y.zN,
+                  className: V.zN,
                   children: [
                       (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", children: n }),
                       null != o && (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", children: o }),
@@ -146,8 +146,8 @@ function en(e) {
             referralTrialOfferId: B,
             isGift: H,
             activeSubscription: W,
-            shouldDisallowPlanSelection: V,
-            expressCheckoutSubmitting: Y,
+            shouldDisallowPlanSelection: Y,
+            expressCheckoutSubmitting: V,
             shouldUseStripeExpressCheckout: Q,
             premiumPlanOptions: en,
         } = (0, h.t4)((e) => ({
@@ -277,7 +277,7 @@ function en(e) {
         eC = es ?? ea,
         { giftRecipient: ef } = (0, m.Pv)(),
         eS = H && (0, g.Ik)(ef),
-        eE = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: eu })) && !eo && !V,
+        eE = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: eu })) && !eo && !Y,
         ey = L?.guild_id ?? void 0,
         eI = (0, r.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         { paymentSources: eA } = (0, u.j)(),
@@ -452,7 +452,7 @@ function en(e) {
             upperInlineNoticeProps: ew,
             planSelectContent: eE
                 ? (0, l.jsx)(X.X, {
-                      disabled: em || Y,
+                      disabled: em || V,
                       selectedPlanId: ei,
                       priceOptions: eU,
                       planOptions: en,
@@ -492,7 +492,7 @@ function en(e) {
         });
         eW = (0, l.jsx)(E._, { ...e, defaultExpanded: Q });
     }
-    let eV = eE
+    let eY = eE
             ? void 0
             : (0, l.jsx)(ee._, {
                   type: ec.type,
@@ -505,7 +505,7 @@ function en(e) {
                   guildId: ey,
                   handleStepChange: D,
               }),
-        eY = (0, l.jsx)(M.P, {
+        eV = (0, l.jsx)(M.P, {
             activeSubscription: W,
             isTrial: eu,
             plan: el,
@@ -520,10 +520,10 @@ function en(e) {
                 : (0, a.kw)({ subscriptionInvoiceRecord: ec.invoicePreview });
     return (0, l.jsx)(o.T_, {
         ...eF,
-        purchaseItemContent: eV,
+        purchaseItemContent: eY,
         subscriptionDetailsContent: eW,
         invoiceSummaryContent: eH,
-        legalContent: eY,
+        legalContent: eV,
         invoiceTotalDueValue: eK,
         invoiceTotalDueLabel: H ? b.intl.string(q.default.Zxav97) : b.intl.string(q.default.R0cZsM),
     });

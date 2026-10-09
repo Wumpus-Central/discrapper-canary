@@ -12,8 +12,8 @@ var i = n(477900),
     m = n(338771),
     A = n(616356),
     E = n(287809),
-    f = n(562153),
-    g = n(652215),
+    g = n(562153),
+    f = n(652215),
     p = n(660183);
 function C(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
@@ -26,7 +26,7 @@ function C(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: f.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: g.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
 function _(e) {
@@ -38,8 +38,8 @@ function _(e) {
             showReportOption: c = !1,
             handleGoLive: A,
             onClose: E,
-            onSelect: f,
-            appContext: _ = g.BRT.APP,
+            onSelect: g,
+            appContext: _ = f.BRT.APP,
             disableChangeWindows: b = !1,
             onInteraction: S,
         } = e,
@@ -55,10 +55,10 @@ function _(e) {
             appContext: _,
         });
     return (0, i.jsx)(u.A, {
-        section: g.JJy.CONTEXT_MENU,
+        section: f.JJy.CONTEXT_MENU,
         children: (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
-            onSelect: f,
+            onSelect: g,
             navId: "manage-streams",
             onClose: E,
             onInteraction: S,
