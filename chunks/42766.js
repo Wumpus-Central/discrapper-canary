@@ -1,9 +1,63 @@
-(n.d(t, { Ay: () => J, H_: () => u, PV: () => o, jf: () => c }), n(321073), n(134528), n(947204));
+(n.d(t, { PV: () => o, Ay: () => k, jf: () => c, H_: () => u }), n(321073));
 var i = n(17928),
     r = n(73153),
     a = n(287809),
-    s = n(164892),
-    l = n(746524);
+    s = n(164892);
+(n(134528), n(947204));
+class l {
+    seqOf;
+    items = [];
+    cached = null;
+    constructor(e) {
+        this.seqOf = e;
+    }
+    at(e) {
+        return this.items.at(e);
+    }
+    findIndex(e) {
+        return this.items.findIndex(e);
+    }
+    indexOfSeq(e) {
+        let t = 0,
+            n = this.items.length - 1;
+        for (; t <= n;) {
+            let i = (t + n) >> 1,
+                r = this.keyOf(this.items[i]);
+            if (r === e) return i;
+            r < e ? (t = i + 1) : (n = i - 1);
+        }
+        return -1;
+    }
+    insert(e) {
+        let t = this.keyOf(e),
+            n = this.items.length;
+        for (; n > 0 && this.keyOf(this.items[n - 1]) > t;) n--;
+        (this.items.splice(n, 0, e), (this.cached = null));
+    }
+    replace(e, t) {
+        if (this.keyOf(this.items[e]) === this.keyOf(t)) {
+            ((this.items[e] = t), (this.cached = null));
+            return;
+        }
+        (this.items.splice(e, 1), this.insert(t));
+    }
+    retain(e) {
+        let t = this.items.filter(e);
+        t.length !== this.items.length && ((this.items = t), (this.cached = null));
+    }
+    trim(e) {
+        this.items.length <= e || (this.items.splice(0, this.items.length - e), (this.cached = null));
+    }
+    values() {
+        return this.items;
+    }
+    snapshot() {
+        return ((this.cached ??= this.items.slice()), this.cached);
+    }
+    keyOf(e) {
+        return this.seqOf(e) ?? 1 / 0;
+    }
+}
 function o(e) {
     return e.owner_user_id === a.default.getCurrentUser()?.id;
 }
@@ -33,46 +87,17 @@ let _ = new Map(),
     R = [],
     L = new Map(),
     y = 0,
-    D = new Map(),
-    v = [],
-    b = new Map();
-function M(e, t, n) {
-    let i = e.get(t);
-    return (null == i && ((i = new l.g(n)), e.set(t, i)), i);
-}
-function P(e) {
+    D = new Map();
+function v(e) {
     return e.log.seq;
 }
-function U(e) {
-    return e.seq;
+let b = { status: "idle", truncated: !1, count: 0 },
+    M = new Map();
+function P(e, t, n) {
+    let i = M.get(e);
+    (null == i && ((i = new Map()), M.set(e, i)), i.set(t, n));
 }
-function w(e, t) {
-    let n = t.call_seq ?? t.entry_seq;
-    return e?.seq == null ? n : null == n ? e.seq : Math.min(e.seq, n);
-}
-function G(e) {
-    return 400 + (K.get(e)?.snapshot.size ?? 0);
-}
-let x = new Map();
-function k(e, t, n) {
-    return null != t && x.get(e)?.get(t) === n;
-}
-function F(e, t, n) {
-    if (null == t) return;
-    let i = x.get(e);
-    for (null == i && ((i = new Map()), x.set(e, i)), i.set(t, n); i.size > 800;) {
-        let e = i.keys().next();
-        if (!0 === e.done) break;
-        i.delete(e.value);
-    }
-}
-let B = { status: "idle", truncated: !1, count: 0 },
-    V = new Map();
-function H(e, t, n) {
-    let i = V.get(e);
-    (null == i && ((i = new Map()), V.set(e, i)), i.set(t, n));
-}
-class j extends i.Ay.Store {
+class U extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -129,11 +154,8 @@ class j extends i.Ay.Store {
         for (let e of t.values()) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (i += 1);
         return i;
     }
-    getTrace(e) {
-        return b.get(e)?.snapshot() ?? v;
-    }
     getHistoryState(e, t) {
-        return V.get(e)?.get(t) ?? B;
+        return M.get(e)?.get(t) ?? b;
     }
     getProjectsFetchState() {
         return S;
@@ -151,121 +173,27 @@ class j extends i.Ay.Store {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function W(e) {
+function w(e) {
     let { project: t } = e;
     _.set(t.id, t);
 }
-function Y(e) {
-    let { projectId: t, log: n } = e,
-        i = M(L, t, P);
-    if (null != n.seq && -1 !== i.indexOfSeq(n.seq)) return !1;
-    (i.insert({ key: ++y, log: n }), i.trim(500));
+function G(e) {
+    let t,
+        { projectId: n, log: i } = e,
+        r = (null == (t = L.get(n)) && ((t = new l(v)), L.set(n, t)), t);
+    if (null != i.seq && -1 !== r.indexOfSeq(i.seq)) return !1;
+    (r.insert({ key: ++y, log: i }), r.trim(500));
 }
-let K = new Map();
-function $(e, t) {
-    return `${e}:${t}`;
-}
-function z(e, t, n) {
-    K.get(e)?.touched.add($(t, n));
-}
-function X(e) {
-    let { projectId: t, scope: n, status: i, count: r, truncated: a } = e,
-        s = "trace" === n ? K.get(t) : void 0;
-    "trace" === n && K.delete(t);
-    let l = "trace" === n ? b.get(t) : void 0;
+function x(e) {
+    let { projectId: t, scope: n, status: i, count: r, truncated: a } = e;
     if ("failed" === i) {
-        l?.trim(400);
-        let e = V.get(t)?.get(n);
-        H(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+        let e = M.get(t)?.get(n);
+        P(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
         return;
     }
-    (null != s && l?.retain((e) => !s.snapshot.has($(e.kind, e.id)) || s.touched.has($(e.kind, e.id))),
-        l?.trim(400),
-        H(t, n, { status: "loaded", truncated: a, count: r }));
+    P(t, n, { status: "loaded", truncated: a, count: r });
 }
-function Z(e, t, n) {
-    return e.findIndex((e) => e.kind === t && e.id === n);
-}
-function q(e) {
-    let { projectId: t, modelCall: n } = e;
-    if ((z(t, "model", n.id), k(t, n.entry_id, n.status))) return !1;
-    let i = M(b, t, U),
-        r = Z(i, "model", n.id),
-        a = -1 === r ? null : i.at(r),
-        s = w(a, n),
-        l = {
-            kind: "model",
-            id: n.id,
-            ...(null != s ? { seq: s } : {}),
-            ...((n.turn_id ?? a?.turnId) != null ? { turnId: n.turn_id ?? a?.turnId } : {}),
-            agent: n.agent,
-            model: n.model,
-            status: n.status,
-            ...(function (e, t) {
-                let n = {};
-                for (let [i, r] of Object.entries(t)) {
-                    let t = r ?? e?.[i];
-                    "number" == typeof t && (n[i] = t);
-                }
-                return n;
-            })(a, {
-                promptTokens: n.prompt_tokens,
-                systemTokens: n.system_tokens,
-                toolsTokens: n.tools_tokens,
-                messagesTokens: n.messages_tokens,
-                tools: n.tools,
-                messages: n.messages,
-                durationMs: n.duration_ms,
-                inputTokens: n.input_tokens,
-                outputTokens: n.output_tokens,
-                cacheReadTokens: n.cache_read_tokens,
-                cacheWriteTokens: n.cache_write_tokens,
-                costUsd: n.cost_usd,
-            }),
-            ...((n.estimated ?? a?.estimated) === !0 ? { estimated: !0 } : {}),
-            ...(null != n.stop_reason ? { stopReason: n.stop_reason } : {}),
-            ...(null != n.error ? { error: n.error } : {}),
-            startedAt: a?.startedAt ?? n.ts,
-        };
-    (F(t, n.entry_id, n.status), null != a ? i.replace(r, l) : i.insert(l), i.trim(G(t)));
-}
-function Q(e) {
-    let { projectId: t, toolCall: n } = e;
-    if ((z(t, "tool", n.id), k(t, n.entry_id, n.status))) return !1;
-    let i = M(b, t, U),
-        r = Z(i, "tool", n.id),
-        a = -1 === r ? null : i.at(r),
-        s = n.summary ?? a?.summary,
-        l = n.fields ?? a?.fields,
-        o = n.schema ?? a?.schema,
-        d = n.detail_id ?? a?.detailId,
-        c = n.turn_id ?? a?.turnId,
-        u = n.parent_id ?? a?.parentId,
-        _ = w(a, n),
-        E = {
-            kind: "tool",
-            id: n.id,
-            ...(null != _ ? { seq: _ } : {}),
-            ...(null != c ? { turnId: c } : {}),
-            ...(null != u ? { parentId: u } : {}),
-            agent: n.agent,
-            tool: n.tool,
-            status: n.status,
-            ...(null != s ? { summary: s } : {}),
-            ...(null != l ? { fields: l } : {}),
-            ...(null != o ? { schema: o } : {}),
-            ...(null != d ? { detailId: d } : {}),
-            ...(null != n.duration_ms ? { durationMs: n.duration_ms } : {}),
-            ...(null != n.result_chars ? { resultChars: n.result_chars } : {}),
-            ...(!0 === n.result_truncated ? { resultTruncated: !0 } : {}),
-            ...(null != n.result_added ? { resultAdded: n.result_added } : {}),
-            ...(null != n.result_removed ? { resultRemoved: n.result_removed } : {}),
-            ...(null != n.error ? { error: n.error } : {}),
-            startedAt: a?.startedAt ?? n.ts,
-        };
-    (F(t, n.entry_id, n.status), null != a ? i.replace(r, E) : i.insert(E), i.trim(G(t)));
-}
-let J = new j(r.h, {
+let k = new U(r.h, {
     LOGOUT: function () {
         if (
             0 === _.size &&
@@ -277,9 +205,7 @@ let J = new j(r.h, {
             0 === p.size &&
             0 === L.size &&
             0 === N.size &&
-            0 === b.size &&
-            0 === V.size &&
-            0 === x.size &&
+            0 === M.size &&
             null == S &&
             null == m &&
             !g
@@ -296,15 +222,12 @@ let J = new j(r.h, {
             N.clear(),
             C.clear(),
             D.clear(),
-            b.clear(),
-            V.clear(),
-            x.clear(),
+            M.clear(),
             (S = null),
             (T = !1),
             (O = "unattempted"),
             (m = null),
-            (g = !1),
-            K.clear());
+            (g = !1));
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
@@ -328,8 +251,8 @@ let J = new j(r.h, {
         let { maxProjects: t } = e;
         ((m = t), (g = !0));
     },
-    CONJURE_PROJECT_CREATE_SUCCESS: W,
-    CONJURE_PROJECT_UPDATE_SUCCESS: W,
+    CONJURE_PROJECT_CREATE_SUCCESS: w,
+    CONJURE_PROJECT_UPDATE_SUCCESS: w,
     CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         E.set(t, n);
@@ -368,9 +291,7 @@ let J = new j(r.h, {
         f.delete(t),
         L.delete(t),
         D.delete(t),
-        b.delete(t),
-        V.delete(t),
-        x.delete(t),
+        M.delete(t),
         I))
             n === t && I.delete(e);
     },
@@ -383,20 +304,12 @@ let J = new j(r.h, {
         if ((I.get(t) ?? null) === n) return !1;
         null == n ? I.delete(t) : I.set(t, n);
     },
-    CONJURE_TRACE_REPLAY_STARTING: function (e) {
-        let { projectId: t } = e;
-        K.set(t, { snapshot: new Set((b.get(t)?.values() ?? v).map((e) => $(e.kind, e.id))), touched: new Set() });
-    },
-    CONJURE_HISTORY_LOAD_SETTLE: X,
+    CONJURE_HISTORY_LOAD_SETTLE: x,
     CONJURE_DEBUG_BACKLOG: function (e) {
         let { projectId: t, backlog: n } = e;
-        for (let e of n.logs) Y({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
-        for (let e of n.trace)
-            "debug_model_call" === e.type
-                ? q({ type: "CONJURE_MODEL_CALL_APPEND", projectId: t, modelCall: e })
-                : Q({ type: "CONJURE_TOOL_CALL_APPEND", projectId: t, toolCall: e });
+        for (let e of n.logs) G({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
         for (let e of n.states)
-            X({
+            x({
                 type: "CONJURE_HISTORY_LOAD_SETTLE",
                 projectId: t,
                 scope: e.scope,
@@ -405,7 +318,7 @@ let J = new j(r.h, {
                 truncated: !0 === e.truncated,
             });
     },
-    CONJURE_LOG_APPEND: Y,
+    CONJURE_LOG_APPEND: G,
     CONJURE_LOGS_SEEN: function (e) {
         let { projectId: t } = e,
             n = 0;
@@ -413,6 +326,4 @@ let J = new j(r.h, {
         if ((D.get(t) ?? 0) >= n) return !1;
         D.set(t, n);
     },
-    CONJURE_TOOL_CALL_APPEND: Q,
-    CONJURE_MODEL_CALL_APPEND: q,
 });

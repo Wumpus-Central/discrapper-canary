@@ -4368,7 +4368,7 @@ var sO = n(825244),
 function sK(e) {
     return (0, u.bG)([sH.A], () => (null !== e ? sH.A.getUserProfile(e ?? eh.dJq)?.application : void 0)) ?? void 0;
 }
-var sV = n(260498),
+var sV = n(42766),
     sz = n(5960),
     sW = n(616334),
     s$ = n(246338),

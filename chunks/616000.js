@@ -1,122 +1,79 @@
-(n.d(t, { c: () => E, A: () => w }), n(134528), n(947204));
+n.d(t, { A: () => _ });
 var r = n(17928),
     s = n(73153),
-    o = n(164892),
-    i = n(746524);
-let a = [],
-    l = [],
+    i = n(164892);
+(n(134528), n(947204));
+let o = [],
+    a = new Map(),
+    l = new Map(),
     c = new Map(),
     d = new Map(),
     u = new Map(),
     p = new Map(),
-    h = new Map(),
-    f = new Map(),
-    _ = new Map(),
-    g = new Map();
-class y extends r.Ay.Store {
+    h = new Map();
+class f extends r.Ay.Store {
     getStatus(e) {
-        return c.get(e) ?? null;
+        return a.get(e) ?? null;
     }
     getFetchState(e) {
-        return d.get(e) ?? "idle";
+        return l.get(e) ?? "idle";
     }
     getLastCompaction(e) {
-        return p.get(e) ?? null;
+        return d.get(e) ?? null;
     }
     getLastTurnUsage(e) {
-        return f.get(e) ?? null;
+        return p.get(e) ?? null;
     }
     getLastCompactionDecline(e) {
-        return h.get(e) ?? null;
-    }
-    getModelCalls(e) {
-        return _.get(e)?.snapshot() ?? a;
+        return u.get(e) ?? null;
     }
     getForceCompactionState(e) {
-        return u.get(e) ?? "idle";
+        return c.get(e) ?? "idle";
     }
     getTimingTraces(e) {
-        return g.get(e) ?? l;
+        return h.get(e) ?? o;
     }
     getTimingTrace(e, t) {
-        return g.get(e)?.find((e) => e.id === t) ?? null;
+        return h.get(e)?.find((e) => e.id === t) ?? null;
     }
 }
-function m(e) {
-    let t = _.get(e.projectId);
-    null == t && ((t = new i.g((e) => e.seq)), _.set(e.projectId, t));
-    let n = t.findIndex((t) => t.id === e.id),
-        r = -1 === n ? null : t.at(n);
-    if (null != r && (null == e.seq || (null != r.seq && r.seq <= e.seq))) return !1;
-    let s = {
-        id: e.id,
-        ...(null != e.seq ? { seq: e.seq } : {}),
-        role: e.role,
-        model: e.model,
-        stopReason: e.stopReason,
-        durationMs: e.durationMs,
-        inputTokens: e.inputTokens,
-        outputTokens: e.outputTokens,
-        cacheReadTokens: e.cacheReadTokens,
-        cacheWriteTokens: e.cacheWriteTokens,
-        taskId: e.taskId,
-        observedAt: r?.observedAt ?? e.observedAt,
-    };
-    (null != r ? t.replace(n, s) : t.insert(s), t.trim(200));
-}
-function E(e) {
-    let t = e.call_seq ?? e.entry_seq;
-    return {
-        id: e.id,
-        ...(null != t ? { seq: t } : {}),
-        role: "compaction" === e.agent ? "compaction" : "subagent" === e.agent ? "codegen" : "orchestrator",
-        model: e.model,
-        stopReason: "error" === e.status ? (e.stop_reason ?? "error") : e.stop_reason,
-        durationMs: e.duration_ms,
-        inputTokens: e.input_tokens ?? 0,
-        outputTokens: e.output_tokens ?? 0,
-        cacheReadTokens: e.cache_read_tokens ?? 0,
-        cacheWriteTokens: e.cache_write_tokens ?? 0,
-    };
-}
-let w = new y(s.h, {
+let _ = new f(s.h, {
     LOGOUT: function () {
         if (
+            0 === a.size &&
+            0 === l.size &&
             0 === c.size &&
             0 === d.size &&
             0 === u.size &&
             0 === p.size &&
-            0 === h.size &&
-            0 === f.size &&
-            0 === _.size &&
-            0 === g.size
+            0 === h.size
         )
             return !1;
-        (c.clear(), d.clear(), u.clear(), p.clear(), h.clear(), f.clear(), _.clear(), g.clear());
+        (a.clear(), l.clear(), c.clear(), d.clear(), u.clear(), p.clear(), h.clear());
     },
     CONJURE_DEBUG_STATUS_REQUESTED: function (e) {
         let { projectId: t } = e;
-        d.set(t, "loading");
+        l.set(t, "loading");
     },
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if ("open" === n) return !1;
-        let r = "pending" === u.get(t);
+        let r = "pending" === c.get(t);
         r &&
-            u.set(t, {
+            c.set(t, {
                 outcome: "failed",
                 reason: "Connection lost before the worker answered",
                 observedAt: new Date().toISOString(),
             });
-        let s = "loading" === d.get(t);
-        if ((s && d.set(t, "failed"), !r && !s)) return !1;
+        let s = "loading" === l.get(t);
+        if ((s && l.set(t, "failed"), !r && !s)) return !1;
     },
     CONJURE_DEBUG_STATUS_SET: function (e) {
         let { projectId: t, status: n, failed: r } = e;
-        r || null == n ? d.set(t, "failed") : (c.set(t, n), d.set(t, "loaded"));
+        r || null == n ? l.set(t, "failed") : (a.set(t, n), l.set(t, "loaded"));
     },
     CONJURE_DEBUG_COMPACTION_REPORT: function (e) {
-        p.set(e.projectId, {
+        d.set(e.projectId, {
             tokensBefore: e.tokensBefore,
             tokensAfter: e.tokensAfter,
             retainedMessages: e.retainedMessages,
@@ -125,7 +82,7 @@ let w = new y(s.h, {
         });
     },
     CONJURE_DEBUG_COMPACTION_DECLINED: function (e) {
-        h.set(e.projectId, {
+        u.set(e.projectId, {
             promptCeiling: e.promptCeiling,
             threshold: e.threshold,
             projected: e.projected,
@@ -136,33 +93,22 @@ let w = new y(s.h, {
     },
     CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED: function (e) {
         let { projectId: t } = e;
-        u.set(t, "pending");
+        c.set(t, "pending");
     },
     CONJURE_DEBUG_FORCE_COMPACTION_RESULT: function (e) {
-        u.set(e.projectId, {
+        c.set(e.projectId, {
             outcome: e.outcome,
             reason: e.reason,
             ...(!0 === e.pendingTurn ? { pendingTurn: !0 } : {}),
             observedAt: e.observedAt,
         });
     },
-    CONJURE_DEBUG_MODEL_CALL: m,
-    CONJURE_DEBUG_BACKLOG: function (e) {
-        let { projectId: t, backlog: n, observedAt: r } = e,
-            s = !1;
-        for (let e of n.trace)
-            "debug_model_call" === e.type &&
-                "started" !== e.status &&
-                !1 !== m({ type: "CONJURE_DEBUG_MODEL_CALL", projectId: t, ...E(e), observedAt: r }) &&
-                (s = !0);
-        return s;
-    },
     CONJURE_DEBUG_TIMING_TRACE: function (e) {
         let { projectId: t, batch: n, live: r } = e,
-            s = g.get(t) ?? [],
-            o = s.find((e) => e.id === n.trace_id) ?? null,
-            i = s
-                .filter((e) => e !== o)
+            s = h.get(t) ?? [],
+            i = s.find((e) => e.id === n.trace_id) ?? null,
+            o = s
+                .filter((e) => e !== i)
                 .concat(
                     (function (e, t, n) {
                         let r = new Map((e?.spans ?? []).map((e) => [e.id, e]));
@@ -185,33 +131,33 @@ let w = new y(s.h, {
                                 })(r.get(e.id), e),
                             );
                         let s = null == e || t.at >= e.as_of,
-                            o = s ? t.name : e.name;
+                            i = s ? t.name : e.name;
                         return {
                             id: t.trace_id,
-                            name: o,
+                            name: i,
                             started_at: t.started_at,
                             as_of: s ? t.at : e.as_of,
                             started_by: t.started_by,
                             spans: [...r.values()]
                                 .sort((e, t) => e.id - t.id)
-                                .map((e) => (null == e.parent && e.name !== o ? { ...e, name: o } : e)),
+                                .map((e) => (null == e.parent && e.name !== i ? { ...e, name: i } : e)),
                             dropped: Math.max(e?.dropped ?? 0, t.dropped),
                             live: s ? n : e.live,
                         };
-                    })(o, n, r),
+                    })(i, n, r),
                 )
                 .sort((e, t) => t.started_at + t.as_of - (e.started_at + e.as_of))
                 .slice(0, 100)
                 .sort((e, t) => e.started_at - t.started_at);
-        g.set(t, i);
+        h.set(t, o);
     },
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, turn: n } = e;
-        if (0 === (0, o.aM)(n.total)) return !1;
-        f.set(t, n);
+        if (0 === (0, i.aM)(n.total)) return !1;
+        p.set(t, n);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        (c.delete(t), d.delete(t), u.delete(t), p.delete(t), h.delete(t), f.delete(t), _.delete(t), g.delete(t));
+        (a.delete(t), l.delete(t), c.delete(t), d.delete(t), u.delete(t), p.delete(t), h.delete(t));
     },
 });

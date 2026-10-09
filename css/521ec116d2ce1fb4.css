@@ -151,24 +151,6 @@
     padding: var(--space-12) var(--space-12) 0
 }
 
-.trace_bd39c9 {
-    flex: 1;
-    flex-direction: column;
-    min-height: 0;
-    padding: var(--space-8) var(--space-12) 0
-}
-
-.trace_bd39c9,
-.traceToolbar_bd39c9 {
-    display: flex;
-    gap: var(--space-8)
-}
-
-.traceToolbar_bd39c9 {
-    align-items: center;
-    min-width: 0
-}
-
 .bar_b5b15b {
     align-items: flex-start;
     background: var(--background-surface-highest);
@@ -716,4 +698,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=c125195abd26d2fe.css.map*/
+/*# sourceMappingURL=521ec116d2ce1fb4.css.map*/

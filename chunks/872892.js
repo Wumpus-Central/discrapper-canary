@@ -1,6 +1,8 @@
 e.exports = {
     nd: "panel_e2dd98",
     XG: "scroller_e2dd98",
+    Ko: "panelToolbar_e2dd98",
+    fH: "panelSearch_e2dd98",
     p_: "list_e2dd98",
     nM: "row_e2dd98",
     sU: "rowTop_e2dd98",
@@ -46,8 +48,13 @@ e.exports = {
     _0: "detail_e2dd98",
     TQ: "detailTitle_e2dd98",
     vl: "detailBlock_e2dd98",
+    xd: "detailSection_e2dd98",
     M1: "stats_e2dd98",
     Fc: "statsBar_e2dd98",
     DJ: "statsSegment_e2dd98",
-    xZ: "mostTime_e2dd98",
+    Om: "dot_e2dd98",
+    Vf: "dotRunning_e2dd98",
+    Ty: "conjure-perf-trace-dot-pulse_e2dd98",
+    mo: "dotDone_e2dd98",
+    Sr: "dotError_e2dd98",
 };
