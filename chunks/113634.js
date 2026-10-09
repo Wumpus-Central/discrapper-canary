@@ -1891,7 +1891,7 @@ class ej extends p.A {
         this.encryptionWorker.postMessage({ type: eF.UPDATE_SSRC, userId: e, audioSsrc: t, videoSsrcs: n });
     }
     setupEncodedTransformsForTransceiver(e) {
-        (this.setupEncodedTransforms(e.sender), this.setupEncodedTransforms(e.receiver));
+        (this.setupEncodedTransforms(e.sender, eB.ENCRYPT), this.setupEncodedTransforms(e.receiver, eB.DECRYPT));
     }
     prepareSecureFramesTransition(e, t, n) {
         (this.prepareSecureFramesRatchets(e, t), n());
@@ -1962,11 +1962,14 @@ class ej extends p.A {
     makeUserKeyRatchet(e, t) {
         return t === this.dave.kDisabledVersion ? null : this.mlsSession.GetKeyRatchet(e);
     }
-    setupEncodedTransforms(e) {
-        if ("transform" in e) e.transform = new RTCRtpScriptTransform(this.encryptionWorker, {});
+    setupEncodedTransforms(e, t) {
+        if ("transform" in e) e.transform = new RTCRtpScriptTransform(this.encryptionWorker, { operation: t });
         else if ("createEncodedStreams" in e) {
-            let { readable: t, writable: n } = e.createEncodedStreams();
-            this.encryptionWorker.postMessage({ type: eF.RTC_TRANSFORM, readable: t, writable: n }, [t, n]);
+            let { readable: n, writable: i } = e.createEncodedStreams();
+            this.encryptionWorker.postMessage({ type: eF.RTC_TRANSFORM, operation: t, readable: n, writable: i }, [
+                n,
+                i,
+            ]);
         } else throw Error("Encoded transforms not supported");
     }
     setupKeyRatchetForUser(e, t, n) {
