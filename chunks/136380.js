@@ -9,7 +9,6 @@ e.exports = {
     p$: "emptyState_f5f9ed",
     ks: "emptyStateHeader_f5f9ed",
     WO: "emptyStateSubtext_f5f9ed",
-    QT: "emptyStateImage_f5f9ed",
     Lq: "loading_f5f9ed",
     yF: "divider_f5f9ed",
     AX: "promotionCard_f5f9ed",

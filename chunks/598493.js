@@ -7154,7 +7154,6 @@ function cc() {
         return (0, S.jsxs)("div", {
             className: cs.p$,
             children: [
-                (0, S.jsx)("div", { className: cs.QT }),
                 (0, S.jsx)(uC.H, { className: cs.ks, children: U.intl.string(U.t.B1qgZn) }),
                 (0, S.jsx)("p", {
                     className: cs.WO,

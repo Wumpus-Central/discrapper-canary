@@ -102,6 +102,7 @@ let r = new Set([
         i.M.TINY_BRONCO_NOTICE,
         i.M.PREMIUM_GIFT_QUANTITY_STEPPER_NEW_BADGE,
         i.M.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
+        i.M.PINOT_MEMBER_SETTING_NEW_BADGE,
     ]),
     a = {
         6: { is_server_arbitrated: !1 },
@@ -362,6 +363,7 @@ let r = new Set([
         840: { is_server_arbitrated: !0 },
         841: { is_server_arbitrated: !0 },
         845: { is_server_arbitrated: !0 },
+        848: { is_server_arbitrated: !1 },
     };
 function s(e) {
     return a[e]?.is_server_arbitrated === !0;
