@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { playgroundConfig: () => K, guildSpaceCollection: () => z }));
+(a.r(t), a.d(t, { playgroundConfig: () => ea, guildSpaceCollection: () => et }));
 var s = a(477900),
     l = a(582128),
     n = a(503698),
@@ -16,9 +16,9 @@ let c = {
             component: function (e) {
                 let { width: t, outcome: a } = e,
                     [n, c] = l.useState(!1),
-                    [u, p] = l.useState(a);
-                u !== a && (p(a), c(!1));
-                let h = l.useCallback(() => {
+                    [u, h] = l.useState(a);
+                u !== a && (h(a), c(!1));
+                let p = l.useCallback(() => {
                     switch (a) {
                         case "success":
                             return (c(!0), Promise.resolve());
@@ -37,7 +37,7 @@ let c = {
                               children:
                                   "Published \u2014 the real notice unmounts here, and the tab appears for members.",
                           })
-                        : (0, s.jsx)(o.A, { onPublish: h }),
+                        : (0, s.jsx)(o.A, { onPublish: p }),
                 });
             },
             controls: {
@@ -65,8 +65,8 @@ let c = {
     ],
 };
 var u = a(73153),
-    p = a(593673),
-    h = a(518782),
+    h = a(593673),
+    p = a(518782),
     m = a(529609);
 let _ = 0;
 function g(e, t, a, s) {
@@ -77,21 +77,21 @@ function g(e, t, a, s) {
         default_title: null,
         position: { column: a, order: s },
         config: { type: t, ...l },
-        requires_hydration: t === p.a.LEADERBOARD,
+        requires_hydration: t === h.a.LEADERBOARD,
         locked: !1,
     };
 }
 var y = a(81253);
 let f = [
-        g("left-2", p.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
-        g("right-1", p.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
-        g("left-1", p.a.IMAGE_TEXT, 0, 0, {
+        g("left-2", h.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
+        g("right-1", h.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
+        g("left-1", h.a.IMAGE_TEXT, 0, 0, {
             title: "Welcome to the server",
             body: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
             imageUrl: "https://placehold.co/640x180",
             imageAlt: "Server banner placeholder",
         }),
-        g("right-2", p.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
+        g("right-2", h.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
     b = f
         .filter((e) => {
@@ -103,9 +103,9 @@ let f = [
             return t;
         }),
     v = {
-        stat: h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+        stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
-        next_stat: h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+        next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
         previous_winner: "2",
         streak_count: 3,
         entries: [
@@ -174,7 +174,7 @@ let f = [
                                         requestId: e,
                                         widgets: b.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: p.a.LEADERBOARD, ...v } : null,
+                                            data: "success" === n ? { type: h.a.LEADERBOARD, ...v } : null,
                                         })),
                                     });
                                 }
@@ -215,61 +215,70 @@ let f = [
     };
 a(321073);
 var x = a(17928),
-    E = a(994500),
-    S = a(711014),
-    w = a(287809),
-    k = a(427262),
-    I = a(539888),
-    R = a(927813);
-let D = a(282435).sx.slice(0, 10),
-    T = [
-        { days: 7, totalSeconds: 7 * R.A.Seconds.DAY - 60, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
-        { days: 7, totalSeconds: 32 * R.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
-        { days: 5, totalSeconds: 26 * R.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
-        { days: 4, totalSeconds: 21 * R.A.Seconds.HOUR, gameIndexes: [1, 3, 5, 7, 9] },
-        { days: 3, totalSeconds: 14 * R.A.Seconds.HOUR, gameIndexes: [0, 1, 2, 3, 4] },
-        { days: 2, totalSeconds: 9 * R.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
-        { days: 2, totalSeconds: 8 * R.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
-        { days: 1, totalSeconds: 7 * R.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
-        { days: 1, totalSeconds: 6 * R.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
-        { days: 1, totalSeconds: 5 * R.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
-        { days: 1, totalSeconds: 4 * R.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
-        { days: 1, totalSeconds: 4 * R.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
-        { days: 1, totalSeconds: 3 * R.A.Seconds.HOUR + 2100, gameIndexes: [4] },
-        { days: 1, totalSeconds: 2 * R.A.Seconds.HOUR + 3060, gameIndexes: [7] },
-        { days: 1, totalSeconds: +R.A.Seconds.HOUR + 1320, gameIndexes: [2] },
+    E = a(331322),
+    S = a(994500),
+    w = a(711014),
+    k = a(287809),
+    D = a(927813),
+    I = a(427262),
+    R = a(795593),
+    T = a(539888);
+let C = a(282435).sx.slice(0, 10),
+    L = [
+        { days: 7, totalSeconds: 7 * D.A.Seconds.DAY - 60, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
+        { days: 7, totalSeconds: 32 * D.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
+        { days: 5, totalSeconds: 26 * D.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
+        { days: 4, totalSeconds: 21 * D.A.Seconds.HOUR, gameIndexes: [1, 3, 5, 7, 9] },
+        { days: 3, totalSeconds: 14 * D.A.Seconds.HOUR, gameIndexes: [0, 1, 2, 3, 4] },
+        { days: 2, totalSeconds: 9 * D.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
+        { days: 2, totalSeconds: 8 * D.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
+        { days: 1, totalSeconds: 7 * D.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
+        { days: 1, totalSeconds: 6 * D.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
+        { days: 1, totalSeconds: 5 * D.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
+        { days: 1, totalSeconds: 4 * D.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
+        { days: 1, totalSeconds: 4 * D.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
+        { days: 1, totalSeconds: 3 * D.A.Seconds.HOUR + 2100, gameIndexes: [4] },
+        { days: 1, totalSeconds: 2 * D.A.Seconds.HOUR + 3060, gameIndexes: [7] },
+        { days: 1, totalSeconds: +D.A.Seconds.HOUR + 1320, gameIndexes: [2] },
         { days: 1, totalSeconds: 3480, gameIndexes: [5] },
         { days: 1, totalSeconds: 2820, gameIndexes: [8] },
         { days: 1, totalSeconds: 2160, gameIndexes: [0] },
         { days: 1, totalSeconds: 1440, gameIndexes: [6] },
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
-var C = a(546184);
-let L = g("leaderboard", p.a.LEADERBOARD, 0, 0);
-function G(e) {
+var G = a(546184);
+let M = g("leaderboard", h.a.LEADERBOARD, 0, 0),
+    j = {
+        winningStat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+        winningStreak: 1,
+        winningValue: 40 * D.A.Millis.HOUR + 33 * D.A.Millis.MINUTE,
+    },
+    P = { ...j, winningStreak: 3 },
+    N = { currentLeaderStat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED };
+function F(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${C.Gt} ${a}`,
+        className: i()(G.Gt, a),
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let P = {
+let B = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
         let t,
             a,
             { state: n, stat: i, currentUserPlacement: o } = e,
-            d = (0, x.bG)([w.default], () => w.default.getCurrentUser()?.id),
-            c = (0, x.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
+            d = (0, x.bG)([k.default], () => k.default.getCurrentUser()?.id),
+            c = (0, x.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
             u =
-                ((t = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
+                ((t = (0, x.yK)([S.A], () => S.A.getFriendIDs())),
                 l.useMemo(
                     () =>
                         t
                             .flatMap((e) => {
-                                let t = w.default.getUser(e);
-                                return null == t ? [] : [{ id: e, name: k.Ay.getName(t) }];
+                                let t = k.default.getUser(e);
+                                return null == t ? [] : [{ id: e, name: I.Ay.getName(t) }];
                             })
                             .sort((e, t) => e.name.localeCompare(t.name))
                             .slice(0, 30)
@@ -285,23 +294,23 @@ let P = {
                 color: "text-muted",
                 children: "Waiting for the client to load a guild and your friends list\u2026",
             });
-        let p = (function (e) {
+        let h = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = D,
-                        stat: s = h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
-                        entryCount: l = T.length,
+                        gameIds: a = C,
+                        stat: s = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+                        entryCount: l = L.length,
                         ended: n = !1,
                     } = e,
-                    i = 0 === t.length ? [] : T.slice(0, l),
+                    i = 0 === t.length ? [] : L.slice(0, l),
                     r = Math.floor(Date.now() / 1e3);
                 return {
                     stat: s,
-                    week_start_ts: r - (n ? 8 : 3) * R.A.Seconds.DAY,
-                    next_stat: h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
+                    week_start_ts: r - (n ? 8 : 3) * D.A.Seconds.DAY,
+                    next_stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
                     previous_winner: t[0],
                     streak_count: 3,
-                    computed_at: new Date((r - R.A.Seconds.DAY) * 1e3).toISOString(),
+                    computed_at: new Date((r - D.A.Seconds.DAY) * 1e3).toISOString(),
                     entries: i.map((e, l) => {
                         let n;
                         return {
@@ -309,9 +318,9 @@ let P = {
                             name: n,
                             value: (function (e, t) {
                                 switch (t) {
-                                    case h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                                    case p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                                         return e.days;
-                                    case h.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                                    case p.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                                         return e.gameIndexes.length;
                                     default:
                                         return 1e3 * e.totalSeconds;
@@ -327,17 +336,17 @@ let P = {
             })({ memberIds: u, stat: i, entryCount: "empty" === n ? 2 : 20, ended: "ended" === n }),
             m = "on-podium" === o ? 2 : 12,
             _ = "absent" !== o && "outside-list" !== o && null != d,
-            g = { ...p, entries: _ ? p.entries.map((e) => (e.rank === m ? { ...e, user_id: d } : e)) : p.entries };
+            g = { ...h, entries: _ ? h.entries.map((e) => (e.rank === m ? { ...e, user_id: d } : e)) : h.entries };
         ("outside-list" === o &&
             null != d &&
             g.entries.push({
                 user_id: d,
                 name: "you",
-                value: p.entries[p.entries.length - 1].value,
+                value: h.entries[h.entries.length - 1].value,
                 rank: 25,
-                application_ids: p.entries[p.entries.length - 1].application_ids,
-                application_count: p.entries[p.entries.length - 1].application_count,
-                time_played_seconds: p.entries[p.entries.length - 1].time_played_seconds,
+                application_ids: h.entries[h.entries.length - 1].application_ids,
+                application_count: h.entries[h.entries.length - 1].application_count,
+                time_played_seconds: h.entries[h.entries.length - 1].time_played_seconds,
             }),
             (a =
                 "loading" === n
@@ -345,12 +354,52 @@ let P = {
                     : "error" === n
                       ? { status: "error" }
                       : { status: "success", data: g }));
-        let y = (0, s.jsx)(I.P, { guildId: c, widget: L, guildSpaceMode: "view", hydration: a });
+        let y = (0, s.jsx)(T.P, { guildId: c, widget: M, guildSpaceMode: "view", hydration: a });
         return (0, s.jsxs)("div", {
-            className: C.Zp,
+            className: G.Zp,
             children: [
-                (0, s.jsx)(G, { label: "Narrow column (380px)", className: C.sc, children: y }),
-                (0, s.jsx)(G, { label: "Wide column (685px)", className: C.U, children: y }),
+                (0, s.jsx)(F, { label: "Narrow column (380px)", className: G.sc, children: y }),
+                (0, s.jsx)(F, { label: "Wide column (685px)", className: G.U, children: y }),
+                null != d
+                    ? (0, s.jsx)(F, {
+                          label: "Badges",
+                          children: (0, s.jsxs)(E.B, {
+                              gap: 16,
+                              children: [
+                                  (0, s.jsxs)(E.B, {
+                                      direction: "horizontal",
+                                      align: "center",
+                                      gap: 8,
+                                      children: [
+                                          (0, s.jsx)(r.E, { variant: "text-sm/normal", children: "Winner" }),
+                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: j, leaderData: null }),
+                                      ],
+                                  }),
+                                  (0, s.jsxs)(E.B, {
+                                      direction: "horizontal",
+                                      align: "center",
+                                      gap: 8,
+                                      children: [
+                                          (0, s.jsx)(r.E, {
+                                              variant: "text-sm/normal",
+                                              children: "Winner on a streak",
+                                          }),
+                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: P, leaderData: null }),
+                                      ],
+                                  }),
+                                  (0, s.jsxs)(E.B, {
+                                      direction: "horizontal",
+                                      align: "center",
+                                      gap: 8,
+                                      children: [
+                                          (0, s.jsx)(r.E, { variant: "text-sm/normal", children: "Current leader" }),
+                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: null, leaderData: N }),
+                                      ],
+                                  }),
+                              ],
+                          }),
+                      })
+                    : null,
             ],
         });
     },
@@ -370,11 +419,11 @@ let P = {
         stat: {
             label: "Stat",
             type: "select",
-            defaultValue: h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
+            defaultValue: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
             options: [
-                { label: "Most Game Days", value: h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED },
-                { label: "Most Game Time", value: h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED },
-                { label: "Most Unique Games", value: h.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED },
+                { label: "Most Game Days", value: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED },
+                { label: "Most Game Time", value: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED },
+                { label: "Most Unique Games", value: p.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED },
             ],
         },
         currentUserPlacement: {
@@ -390,12 +439,12 @@ let P = {
         },
     },
 };
-var M = a(343508);
-let F = [32, 21, 15, 14, 9],
-    N = [3, 2, 0, 3, 1],
-    H = g("popular-music", p.a.POPULAR_MUSIC, 0, 0),
-    j = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
-    U = {
+var H = a(343508);
+let U = [32, 21, 15, 14, 9],
+    O = [3, 2, 0, 3, 1],
+    W = g("popular-music", h.a.POPULAR_MUSIC, 0, 0),
+    q = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
+    Y = {
         ranked_songs: [
             {
                 track_external_id: "2plbrEY59IikOBgBGLjaoe",
@@ -406,7 +455,7 @@ let F = [32, 21, 15, 14, 9],
                 plays: 21,
                 unique_listeners: 8,
                 plays_change_percent: 2,
-                facepile_user_ids: j,
+                facepile_user_ids: q,
             },
             {
                 track_external_id: "4eCwFoinvpIQi1kBEoAzQO",
@@ -417,7 +466,7 @@ let F = [32, 21, 15, 14, 9],
                 plays: 17,
                 unique_listeners: 6,
                 plays_change_percent: -4,
-                facepile_user_ids: j,
+                facepile_user_ids: q,
             },
             {
                 track_external_id: "1BxfuPKGuaTgP7aM0Bbdwr",
@@ -427,7 +476,7 @@ let F = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f003",
                 plays: 14,
                 unique_listeners: 5,
-                facepile_user_ids: j,
+                facepile_user_ids: q,
             },
             {
                 track_external_id: "0V3wPSX9ygBnCm8psDIegu",
@@ -447,7 +496,7 @@ let F = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f005",
                 plays: 9,
                 unique_listeners: 4,
-                facepile_user_ids: j,
+                facepile_user_ids: q,
             },
             {
                 track_external_id: "2takcwOaAZWiXQijPHIx7B",
@@ -506,7 +555,7 @@ let F = [32, 21, 15, 14, 9],
         plays_trend_pct: 0.02,
         computed_at: null,
     },
-    O = {
+    V = {
         plays_total: 0,
         distinct_listeners: 0,
         distinct_songs: 0,
@@ -514,8 +563,8 @@ let F = [32, 21, 15, 14, 9],
         listening_time_ms: 0,
         plays_trend_pct: null,
     },
-    B = {
-        ranked_songs: U.ranked_songs.map((e) => ({
+    z = {
+        ranked_songs: Y.ranked_songs.map((e) => ({
             track_external_id: e.track_external_id,
             track_title: null,
             artist_external_id: null,
@@ -524,18 +573,18 @@ let F = [32, 21, 15, 14, 9],
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
-        ranked_artists: U.ranked_artists.map((e) => ({
+        ranked_artists: Y.ranked_artists.map((e) => ({
             artist_external_id: e.artist_external_id,
             artist_name: null,
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
         top_listeners: [],
-        ...O,
+        ...V,
         computed_at: null,
     },
-    W = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...O, computed_at: null },
-    q = [
+    X = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...V, computed_at: null },
+    Z = [
         {
             artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6",
             artist_name: "Dayseeker",
@@ -548,26 +597,26 @@ let F = [32, 21, 15, 14, 9],
         },
         { artist_external_id: "6mEQK9m2krja6X1cfsAjfl", artist_name: "Ado", artist_image_hash: null },
     ];
-function Y(e, t, a) {
+function $(e, t, a) {
     return {
         ...e,
         top_listeners: t.map((e, t) => {
             let s;
             return a
-                ? ((s = U.ranked_songs[t % U.ranked_songs.length]),
+                ? ((s = Y.ranked_songs[t % Y.ranked_songs.length]),
                   {
                       user_id: e,
-                      plays: F[t] ?? 1,
+                      plays: U[t] ?? 1,
                       latest_track_external_id: 3 === t ? null : s.track_external_id,
                       latest_track_title: 3 === t ? null : s.track_title,
                       latest_artist_name: 3 === t ? null : s.artist_name,
                       latest_cover_art_hash: 3 === t ? null : s.cover_art_hash,
-                      artists: q.slice(0, N[t] ?? 0),
+                      artists: Z.slice(0, O[t] ?? 0),
                       artist_count: 0 === t ? 5 : null,
                   })
                 : {
                       user_id: e,
-                      plays: F[t] ?? 1,
+                      plays: U[t] ?? 1,
                       latest_track_external_id: null,
                       latest_track_title: null,
                       latest_artist_name: null,
@@ -577,24 +626,24 @@ function Y(e, t, a) {
         }),
     };
 }
-function V(e) {
+function K(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${M.Gt} ${a}`,
+        className: `${H.Gt} ${a}`,
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function $(e) {
+function Q(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${C.Gt} ${a}`,
+        className: `${G.Gt} ${a}`,
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function X(e) {
+function J(e) {
     let { mode: t, hydration: a, type: n, initialConfig: i, successData: r } = e,
         [o, d] = l.useState(i),
-        c = (0, s.jsx)(I.P, {
+        c = (0, s.jsx)(T.P, {
             guildId: "widget-slot-story-guild",
             widget: { id: "1", type: n, config: o },
             guildSpaceMode: t,
@@ -612,18 +661,18 @@ function X(e) {
             onCommitConfig: d,
         });
     return (0, s.jsxs)("div", {
-        className: C.Zp,
+        className: G.Zp,
         children: [
-            (0, s.jsx)($, { label: "Narrow column (380px)", className: C.sc, children: c }),
-            (0, s.jsx)($, { label: "Wide column (685px)", className: C.U, children: c }),
+            (0, s.jsx)(Q, { label: "Narrow column (380px)", className: G.sc, children: c }),
+            (0, s.jsx)(Q, { label: "Wide column (685px)", className: G.U, children: c }),
         ],
     });
 }
-let Z = {
+let ee = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    z = {
+    et = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
@@ -637,11 +686,11 @@ let Z = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, s.jsx)(X, {
+                            return (0, s.jsx)(J, {
                                 ...e,
-                                type: p.a.IMAGE_TEXT,
+                                type: h.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: Z,
+                                initialConfig: ee,
                                 successData: void 0,
                             });
                         },
@@ -671,7 +720,7 @@ let Z = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [P] },
+            { title: "Server Hub Gaming Leaderboard", stories: [B] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
@@ -683,15 +732,15 @@ let Z = {
                             let t,
                                 a,
                                 { state: n, mode: i, viewerPlacement: r } = e,
-                                o = (0, x.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
+                                o = (0, x.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
                                 d = (function (e, t) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: Y(U, t, !0) };
+                                            return { status: "success", data: $(Y, t, !0) };
                                         case "minimal":
-                                            return { status: "success", data: Y(B, t, !1) };
+                                            return { status: "success", data: $(z, t, !1) };
                                         case "empty":
-                                            return { status: "success", data: W };
+                                            return { status: "success", data: X };
                                         case "loading":
                                             return { status: "loading" };
                                         case "error":
@@ -699,19 +748,19 @@ let Z = {
                                     }
                                 })(
                                     n,
-                                    ((t = (0, x.bG)([w.default], () => w.default.getCurrentUser()?.id)),
-                                    (a = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
+                                    ((t = (0, x.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                                    (a = (0, x.yK)([S.A], () => S.A.getFriendIDs())),
                                     l.useMemo(() => {
-                                        let e = a.filter((e) => null != w.default.getUser(e)).slice(0, 5);
+                                        let e = a.filter((e) => null != k.default.getUser(e)).slice(0, 5);
                                         return ("listed" === r && null != t && e.splice(1, 1, t), e);
                                     }, [a, t, r])),
                                 );
                             function c(e) {
                                 return (0, s.jsx)(
-                                    I.P,
+                                    T.P,
                                     {
                                         guildId: o ?? "popular-music-story-guild",
-                                        widget: { ...H, id: `${H.id}-${e}` },
+                                        widget: { ...W, id: `${W.id}-${e}` },
                                         guildSpaceMode: i,
                                         hydration: d,
                                         onRemove: () => {},
@@ -720,21 +769,21 @@ let Z = {
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: M.Zp,
+                                className: H.Zp,
                                 children: [
-                                    (0, s.jsx)(V, {
+                                    (0, s.jsx)(K, {
                                         label: "Wide column (685px)",
-                                        className: M.U,
+                                        className: H.U,
                                         children: c("wide"),
                                     }),
-                                    (0, s.jsx)(V, {
+                                    (0, s.jsx)(K, {
                                         label: "Narrow column (380px)",
-                                        className: M.sc,
+                                        className: H.sc,
                                         children: c("narrow"),
                                     }),
-                                    (0, s.jsx)(V, {
+                                    (0, s.jsx)(K, {
                                         label: "Minimum width (320px)",
-                                        className: M.Bp,
+                                        className: H.Bp,
                                         children: c("minimum"),
                                     }),
                                 ],
@@ -778,4 +827,4 @@ let Z = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music"],
     },
-    K = { playgroundBaseUrl: "guild-space", collections: [z] };
+    ea = { playgroundBaseUrl: "guild-space", collections: [et] };

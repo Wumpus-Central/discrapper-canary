@@ -1,20 +1,36 @@
-n.d(t, { A: () => a });
-var l = n(17928),
-    i = n(696451);
-let s = 14 * n(927813).A.Millis.DAY;
-function a(e, t) {
-    return (0, l.bG)(
-        [i.Ay],
-        () =>
-            null != e
-                ? (function (e) {
-                      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-                      if (null == e || null == e.winningWeek || null == e.winningValue || 0 === e.winningValue)
-                          return null;
-                      let n = Date.parse(e.winningWeek);
-                      return isNaN(n) || t - n > s ? null : e;
-                  })(i.Ay.getMember(e, t)?.gamingLeaderboardData)
-                : null,
-        [e, t],
+l.d(n, { Ay: () => c, gj: () => f, iW: () => A });
+var t = l(17928),
+    a = l(696451),
+    r = l(927813);
+let i = 14 * r.A.Millis.DAY,
+    o = 8 * r.A.Millis.DAY;
+function s(e, n, l) {
+    if (null == e) return !1;
+    let t = Date.parse(e);
+    return !isNaN(t) && l - t <= n;
+}
+function u(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return null != e && s(e.winningWeek, i, n) ? e : null;
+}
+function d(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return null != e && s(e.currentLeaderWeek, o, n) ? e : null;
+}
+function c(e, n) {
+    return (0, t.bG)([a.Ay], () => (null != e ? u(a.Ay.getMember(e, n)?.gamingLeaderboardData) : null), [e, n]);
+}
+function A(e, n) {
+    return (0, t.bG)([a.Ay], () => (null != e ? d(a.Ay.getMember(e, n)?.gamingLeaderboardData) : null), [e, n]);
+}
+function f(e, n) {
+    return (0, t.bG)(
+        [a.Ay],
+        () => {
+            if (null == e) return !1;
+            let l = a.Ay.getMember(e, n)?.gamingLeaderboardData;
+            return null != u(l) || null != d(l);
+        },
+        [e, n],
     );
 }

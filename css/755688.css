@@ -16,6 +16,45 @@
     width: 600px
 }
 
+.badge_ca15ae {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    display: inline-flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-start: var(--space-4);
+    width: 24px
+}
+
+.card_ca15ae {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: var(--space-16);
+    width: 300px
+}
+
+.card_ca15ae,
+.mainContent_ca15ae {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.mainContent_ca15ae {
+    align-items: flex-start
+}
+
+.copy_ca15ae {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
 .layout_ff6017 {
     display: flex;
     flex-wrap: wrap;
@@ -63,4 +102,4 @@
     width: 320px
 }
 
-/*# sourceMappingURL=c905471ba31264b5.css.map*/
+/*# sourceMappingURL=755688.19420ea122ab56fb.css.map*/

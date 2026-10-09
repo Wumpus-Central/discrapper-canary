@@ -1,4 +1,4 @@
-(l.d(n, { ix: () => ne, Ay: () => nl, tO: () => e9 }), l(321073), l(938796));
+(l.d(n, { ix: () => ne, Ay: () => nl, tO: () => e5 }), l(321073), l(938796));
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -432,7 +432,7 @@ function eE(e) {
         : null;
 }
 var ey = l(32090),
-    eM = l(218150),
+    eM = l(795593),
     e_ = l(9842),
     eS = l(657048),
     eR = l(566908),
@@ -616,7 +616,7 @@ function e4(e) {
         ],
     });
 }
-let e5 = i.memo(function (e) {
+let e9 = i.memo(function (e) {
     let {
             message: n,
             author: l,
@@ -674,7 +674,7 @@ let e5 = i.memo(function (e) {
         ),
         { enabled: R } = (0, p.D8)({ guildId: M?.id, location: "MessageHeader" }),
         T = er.LX.useConfig({ location: "message_header" }).enabled,
-        w = null != (0, ey.A)(s, n.author.id),
+        w = (0, ey.gj)(s, n.author.id),
         O = i.useMemo(() => {
             let e = [];
             return (
@@ -723,7 +723,7 @@ let e5 = i.memo(function (e) {
               ],
           });
 });
-function e9(e, n, l) {
+function e5(e, n, l) {
     let {
         message: i,
         channel: a,
@@ -975,7 +975,7 @@ let nl = i.memo(function (e) {
             [n, I, a],
         ),
         O = (0, c.bG)([e$.A], () => nn(a, T, j, e$.A.getGuild(e.guildId)), [a, T, j, e.guildId]),
-        k = null != (0, ey.A)(e.guildId, n.author.id),
+        k = (0, ey.gj)(e.guildId, n.author.id),
         G = (0, eR.Sc)(),
         P = i.useMemo(() => {
             let e = [];
@@ -1005,7 +1005,7 @@ let nl = i.memo(function (e) {
                             ],
                         }),
                     }),
-                (0, t.jsx)(e5, {
+                (0, t.jsx)(e9, {
                     ...e,
                     message: n,
                     channel: I,

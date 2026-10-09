@@ -28,4 +28,16 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=77207a258716927c.css.map*/
+.optionalRow__21abf {
+    cursor: pointer
+}
+
+.optionalRowDisabled__21abf {
+    cursor: default
+}
+
+.optionalLabel__21abf {
+    flex: 1
+}
+
+/*# sourceMappingURL=4169205891aff51a.css.map*/
