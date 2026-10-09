@@ -21,7 +21,7 @@ function s(e) {
     return e instanceof Uint8Array;
 }
 function l(e) {
-    return null != e && "object" == typeof e && "uint8array" === e.__tag__;
+    return null != e && "object" == typeof e && "__tag__" in e && "uint8array" === e.__tag__;
 }
 (n.d(t, { I: () => l, Vf: () => r, We: () => a, c0: () => i, mg: () => s }),
     n(393431),

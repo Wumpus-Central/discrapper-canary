@@ -69,7 +69,7 @@ function g(e) {
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
     if ("number" == typeof e || "boolean" == typeof e) return String(e);
-    if ("function" == typeof e) return `[Function: ${e.name || "anonymous"}]`;
+    if ("function" == typeof e) return `[Function: ${"" !== e.name ? e.name : "anonymous"}]`;
     if (e instanceof Error) return `${e.name}: ${e.message}`;
     try {
         let t = new WeakSet();
