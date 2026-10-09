@@ -215,7 +215,7 @@
     border-radius: var(--radius-sm);
     cursor: pointer;
     height: var(--custom-friend-row-height);
-    padding: var(--space-8);
+    padding: var(--space-xs);
     position: relative;
     --custom-activity-status-emoji-size: 12px
 }
@@ -310,7 +310,7 @@
     box-shadow: inset 0 1px 0 var(--border-subtle);
     content: "";
     display: block;
-    height: 12px;
+    height: var(--space-md);
     margin-inline: var(--space-8)
 }
 
@@ -433,7 +433,7 @@
 
 .groupBackgroundEffect_d7e468 {
     border-inline-start: 1px solid color-mix(in srgb, var(--custom-group-color) 40%, transparent);
-    inset-block: 8px;
+    inset-block: var(--space-xs);
     inset-inline: -8px;
     pointer-events: none;
     position: absolute
@@ -2610,4 +2610,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=025d75d1d5c3ee9b.css.map*/
+/*# sourceMappingURL=9832369275a62ee0.css.map*/
