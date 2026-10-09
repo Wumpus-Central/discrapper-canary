@@ -5713,6 +5713,31 @@
     }
   },
   {
+    "name": "2026-10-collectibles-marketing-client-cache",
+    "kind": "user",
+    "defaultConfig": {
+      "ttlMs": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "ttlMs": 3600000
+      },
+      "2": {
+        "ttlMs": 10800000
+      },
+      "3": {
+        "ttlMs": 21600000
+      },
+      "4": {
+        "ttlMs": 86400000
+      }
+    }
+  },
+  {
     "name": "2026-10-contextual-referrals-gdm-member-list",
     "kind": "user",
     "defaultConfig": {

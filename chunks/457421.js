@@ -1,25 +1,45 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(73153);
-let a = {},
-    s = "NOT_FETCHED";
-class l extends i.Ay.Store {
+let a = { marketingsBySurfaces: null, fetchedAt: null },
+    s = {},
+    l = "NOT_FETCHED",
+    o = a;
+class d extends i.Ay.PersistedStore {
     static displayName = "CollectiblesMarketingsStore";
+    static persistKey = "CollectiblesMarketingsStore";
+    initialize(e) {
+        o = { marketingsBySurfaces: e?.marketingsBySurfaces ?? null, fetchedAt: e?.fetchedAt ?? null };
+    }
+    getState() {
+        return o;
+    }
     getMarketingBySurface(e) {
-        return a[e];
+        return s[e];
     }
     get fetchState() {
-        return s;
+        return l;
+    }
+    getCachedMarketingsBySurfaces(e) {
+        let { marketingsBySurfaces: t, fetchedAt: n } = o;
+        if (null == t || null == n) return null;
+        let i = Date.now() - n;
+        return i < 0 || i >= e ? null : t;
     }
 }
-let o = new l(r.h, {
+let c = new d(r.h, {
     COLLECTIBLES_MARKETING_FETCH: function () {
-        s = "FETCHING";
+        l = "FETCHING";
     },
     COLLECTIBLES_MARKETING_FETCH_SUCCESS: function (e) {
-        ((a = e.marketings.marketingsBySurfaces), (s = "FETCHED"));
+        ((s = e.marketings.marketingsBySurfaces),
+            (l = "FETCHED"),
+            (o = { marketingsBySurfaces: e.marketings.marketingsBySurfaces, fetchedAt: Date.now() }));
+    },
+    COLLECTIBLES_MARKETING_CACHE_RESTORED: function (e) {
+        ((s = e.marketings.marketingsBySurfaces), (l = "FETCHED"));
     },
     LOGOUT: function () {
-        ((a = {}), (s = "NOT_FETCHED"));
+        ((s = {}), (l = "NOT_FETCHED"), (o = a));
     },
 });

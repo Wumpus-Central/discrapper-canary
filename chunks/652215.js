@@ -6222,6 +6222,7 @@ var r5 =
         (e1.LFG_CHANNELS = "41832532728215"),
         (e1.CUSTOM_TYPING_INDICATOR = "42962943077271"),
         (e1.BUY_GIFT_CARDS = "41159846304279"),
+        (e1.MACARON_PROMOTION = "39188406147479"),
         e1),
     r4 = (((e2 = {}).INVALID_BILLING_ADDRESS = "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618"), e2);
 let r7 = "cdn.discordapp.com",

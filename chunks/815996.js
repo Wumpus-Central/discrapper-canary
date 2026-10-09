@@ -1,21 +1,22 @@
 n.d(t, {
-    h$: () => ec,
-    CK: () => en,
-    rh: () => es,
-    JJ: () => eo,
-    RE: () => ea,
-    Or: () => eu,
-    ue: () => eE,
-    Jp: () => er,
-    Sw: () => J,
-    Cz: () => Q,
-    iJ: () => el,
-    RD: () => ee,
-    gB: () => ei,
-    T2: () => eA,
-    gn: () => et,
-    Aq: () => e_,
-    LX: () => ed,
+    h$: () => e_,
+    CK: () => ei,
+    rh: () => el,
+    JJ: () => ed,
+    RE: () => es,
+    Or: () => eE,
+    FH: () => eu,
+    Jp: () => ea,
+    Sw: () => ee,
+    Cz: () => J,
+    iJ: () => eo,
+    RD: () => et,
+    ue: () => eh,
+    gB: () => er,
+    T2: () => ef,
+    gn: () => en,
+    Aq: () => eA,
+    LX: () => ec,
 });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
@@ -42,24 +43,25 @@ function I(e) {
         n = `[${t}] ${e}`;
     f.getState().addLog(n);
 }
-var p = n(4227),
-    T = n(870216),
-    m = n(993408),
-    g = n(442007),
-    S = n(510801);
-class N {
+var p = n(457421),
+    T = n(4227),
+    m = n(870216),
+    g = n(993408),
+    S = n(442007),
+    N = n(510801);
+class C {
     categories;
     collections;
     constructor(e) {
-        ((this.categories = e.categories.map((e) => S.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => g.A.fromServer(e))));
+        ((this.categories = e.categories.map((e) => N.A.fromServer(e))),
+            (this.collections = e.collections.map((e) => S.A.fromServer(e))));
     }
     static fromServer(e) {
-        return new N(e);
+        return new C(e);
     }
 }
-var C = n(488430);
-class O {
+var O = n(488430);
+class R {
     dismissibleContent;
     version;
     refTargetBackground;
@@ -68,7 +70,7 @@ class O {
     badgeCountdownEndsAt;
     showHoverGradient;
     constructor(e) {
-        ((this.type = C.G.BADGE),
+        ((this.type = O.G.BADGE),
             (this.dismissibleContent = e.dismissibleContent),
             (this.version = e.version),
             (this.refTargetBackground = e.refTargetBackground),
@@ -78,7 +80,7 @@ class O {
             (this.showHoverGradient = e.showHoverGradient));
     }
     static fromServer(e) {
-        return new O({
+        return new R({
             ...e,
             dismissibleContent: e.dismissible_content,
             refTargetBackground: e.ref_target_background,
@@ -88,8 +90,14 @@ class O {
             showHoverGradient: e.show_hover_gradient,
         });
     }
+    static fromPersisted(e) {
+        return new R({
+            ...e,
+            badgeCountdownEndsAt: null != e.badgeCountdownEndsAt ? new Date(e.badgeCountdownEndsAt) : void 0,
+        });
+    }
 }
-class R {
+class L {
     title;
     body;
     asset;
@@ -97,7 +105,7 @@ class R {
     version;
     revertTextColor;
     constructor(e) {
-        ((this.type = C.G.BANNER),
+        ((this.type = O.G.BANNER),
             (this.title = e.title),
             (this.body = e.body),
             (this.asset = e.asset),
@@ -106,10 +114,13 @@ class R {
             (this.revertTextColor = e.revert_text_color));
     }
     static fromServer(e) {
-        return new R(e);
+        return new L(e);
+    }
+    static fromPersisted(e) {
+        return new L({ ...e, popout_asset: e.popoutAsset, revert_text_color: e.revertTextColor });
     }
 }
-class L {
+class y {
     title;
     body;
     assetDark;
@@ -123,7 +134,7 @@ class L {
     showHoverGradient;
     displayType;
     constructor(e) {
-        ((this.type = C.G.COACHMARK),
+        ((this.type = O.G.COACHMARK),
             (this.title = e.title),
             (this.body = e.body),
             (this.assetDark = e.assetDark),
@@ -138,7 +149,7 @@ class L {
             (this.displayType = e.displayType));
     }
     static fromServer(e) {
-        return new L({
+        return new y({
             ...e,
             assetDark: e.asset_dark,
             assetLight: e.asset_light,
@@ -151,8 +162,14 @@ class L {
             displayType: e.display_type,
         });
     }
+    static fromPersisted(e) {
+        return new y({
+            ...e,
+            badgeCountdownEndsAt: null != e.badgeCountdownEndsAt ? new Date(e.badgeCountdownEndsAt) : void 0,
+        });
+    }
 }
-class y {
+class D {
     title;
     body;
     asset;
@@ -164,7 +181,7 @@ class y {
     badgeCountdownEndsAt;
     showHoverGradient;
     constructor(e) {
-        ((this.type = C.G.TAB_TOOLTIP),
+        ((this.type = O.G.TAB_TOOLTIP),
             (this.title = e.title),
             (this.body = e.body),
             (this.asset = e.asset),
@@ -177,7 +194,7 @@ class y {
             (this.showHoverGradient = e.showHoverGradient));
     }
     static fromServer(e) {
-        return new y({
+        return new D({
             ...e,
             dismissibleContent: e.dismissible_content,
             refTargetBackground: e.ref_target_background,
@@ -187,26 +204,32 @@ class y {
             showHoverGradient: e.show_hover_gradient,
         });
     }
+    static fromPersisted(e) {
+        return new D({
+            ...e,
+            badgeCountdownEndsAt: null != e.badgeCountdownEndsAt ? new Date(e.badgeCountdownEndsAt) : void 0,
+        });
+    }
 }
-class D {
+class v {
     marketingsBySurfaces;
     constructor(e) {
         this.marketingsBySurfaces = e;
     }
     static fromServer(e) {
-        return new D(
+        return new v(
             Object.fromEntries(
                 Object.entries(e?.marketings ?? {}).map((e) => {
                     let [t, n] = e;
                     switch (n?.type) {
-                        case C.G.BADGE:
-                            return [t, O.fromServer(n)];
-                        case C.G.BANNER:
+                        case O.G.BADGE:
                             return [t, R.fromServer(n)];
-                        case C.G.COACHMARK:
+                        case O.G.BANNER:
                             return [t, L.fromServer(n)];
-                        case C.G.TAB_TOOLTIP:
+                        case O.G.COACHMARK:
                             return [t, y.fromServer(n)];
+                        case O.G.TAB_TOOLTIP:
+                            return [t, D.fromServer(n)];
                         default:
                             return [t, void 0];
                     }
@@ -215,13 +238,13 @@ class D {
         );
     }
 }
-var v = n(986630),
-    b = n(384726),
-    M = n(696444),
-    P = n(474012),
-    U = n(758836),
-    w = n(652215);
-class G {
+var b = n(986630),
+    M = n(384726),
+    P = n(696444),
+    U = n(474012),
+    w = n(758836),
+    G = n(652215);
+class x {
     skuId;
     name;
     type;
@@ -282,20 +305,20 @@ class G {
             expires_at: h,
             ...f
         } = e;
-        return new G({
+        return new x({
             type: t,
             name: i,
             skuId: n,
-            premiumType: r === w.oA2 ? null : r,
+            premiumType: r === G.oA2 ? null : r,
             categorySkuId: a,
-            isCategoryReward: U.MS.some((e) => {
+            isCategoryReward: w.MS.some((e) => {
                 let { rewardSkuId: t } = e;
                 return t === n;
             }),
-            prices: (0, b.A)(s),
-            items: (0, P.Kh)(f.items),
-            bundledProducts: l?.map(M.A.fromServer),
-            variants: o?.map(v.x.fromServer),
+            prices: (0, M.A)(s),
+            items: (0, U.Kh)(f.items),
+            bundledProducts: l?.map(P.A.fromServer),
+            variants: o?.map(b.x.fromServer),
             googleSkuIds: f.google_sku_ids,
             eligibleOffers: f.eligible_offers,
             baseVariantName: d,
@@ -308,15 +331,15 @@ class G {
         });
     }
 }
-var x = n(651162);
-class k {
+var k = n(651162);
+class F {
     title;
     body;
     bannerUrl;
     endTime;
     textColor;
     constructor(e) {
-        ((this.type = x.g.COUNTDOWN_TIMER),
+        ((this.type = k.g.COUNTDOWN_TIMER),
             (this.title = e.title),
             (this.body = e.body),
             (this.bannerUrl = e.banner_url),
@@ -324,11 +347,11 @@ class k {
             (this.textColor = e.text_color));
     }
     static fromServer(e) {
-        return new k(e);
+        return new F(e);
     }
 }
-var F = n(424918);
-class B {
+var B = n(424918);
+class V {
     categoryStoreListingId;
     categorySkuId;
     name;
@@ -338,7 +361,7 @@ class B {
     bannerUrl;
     assetUrl;
     constructor(e) {
-        ((this.type = F.u.CATEGORY),
+        ((this.type = B.u.CATEGORY),
             (this.categoryStoreListingId = e.category_store_listing_id),
             (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
@@ -349,39 +372,39 @@ class B {
             (this.assetUrl = e.asset_url));
     }
     static fromServer(e) {
-        return new B(e);
-    }
-}
-class V {
-    subblocks;
-    constructor(e) {
-        ((this.type = x.g.FEATURED),
-            (this.subblocks = e.subblocks.map((e) => (e.type === F.u.CATEGORY ? B.fromServer(e) : (e.type, e)))));
-    }
-    static fromServer(e) {
         return new V(e);
     }
 }
 class H {
-    rankedSkuIds;
-    sortedSkuIds;
+    subblocks;
     constructor(e) {
-        ((this.type = x.g.FEED), (this.rankedSkuIds = e.ranked_sku_ids), (this.sortedSkuIds = e.sorted_sku_ids));
+        ((this.type = k.g.FEATURED),
+            (this.subblocks = e.subblocks.map((e) => (e.type === B.u.CATEGORY ? V.fromServer(e) : (e.type, e)))));
     }
     static fromServer(e) {
         return new H(e);
     }
 }
 class j {
-    isDismissible;
+    rankedSkuIds;
+    sortedSkuIds;
     constructor(e) {
-        ((this.type = x.g.GAME_SERVER_HOSTING_BANNER), (this.isDismissible = e.is_dismissible));
+        ((this.type = k.g.FEED), (this.rankedSkuIds = e.ranked_sku_ids), (this.sortedSkuIds = e.sorted_sku_ids));
     }
     static fromServer(e) {
         return new j(e);
     }
 }
 class W {
+    isDismissible;
+    constructor(e) {
+        ((this.type = k.g.GAME_SERVER_HOSTING_BANNER), (this.isDismissible = e.is_dismissible));
+    }
+    static fromServer(e) {
+        return new W(e);
+    }
+}
+class Y {
     categorySkuId;
     name;
     summary;
@@ -402,7 +425,7 @@ class W {
     bannerDisplayConfig;
     logoDisplayConfig;
     constructor(e) {
-        ((this.type = x.g.HERO),
+        ((this.type = k.g.HERO),
             (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
             (this.summary = e.summary.trim()),
@@ -420,14 +443,14 @@ class W {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, m.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, m.f6)(e.logo_display_config)));
+            (this.bannerDisplayConfig = (0, g.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, g.f6)(e.logo_display_config)));
     }
     static fromServer(e) {
-        return new W(e);
+        return new Y(e);
     }
 }
-class Y {
+class K {
     title;
     body;
     helpCenterUrl;
@@ -436,7 +459,7 @@ class Y {
     bannerUrl;
     bannerAnimatedUrl;
     constructor(e) {
-        ((this.type = x.g.IMMERSIVE_BANNER),
+        ((this.type = k.g.IMMERSIVE_BANNER),
             (this.title = e.title),
             (this.body = e.body),
             (this.helpCenterUrl = e.help_center_url),
@@ -446,10 +469,10 @@ class Y {
             (this.bannerAnimatedUrl = e.banner_animated_url));
     }
     static fromServer(e) {
-        return new Y(e);
+        return new K(e);
     }
 }
-class K {
+class $ {
     name;
     rankedSkuIds;
     categorySkuId;
@@ -459,7 +482,7 @@ class K {
     desktopBackgroundImage;
     mobileBackgroundImage;
     constructor(e) {
-        ((this.type = x.g.SHELF),
+        ((this.type = k.g.SHELF),
             (this.name = e.name),
             (this.rankedSkuIds = e.ranked_sku_ids),
             (this.categorySkuId = e.category_sku_id ?? null),
@@ -470,10 +493,10 @@ class K {
             (this.mobileBackgroundImage = e.mobile_background_image ?? null));
     }
     static fromServer(e) {
-        return new K(e);
+        return new $(e);
     }
 }
-class $ {
+class z {
     applicationId;
     headerText;
     subheaderText;
@@ -486,7 +509,7 @@ class $ {
     termsUrl;
     backgroundImageUrl;
     constructor(e) {
-        ((this.type = x.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER),
+        ((this.type = k.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER),
             (this.applicationId = e.application_id),
             (this.headerText = e.header_text),
             (this.subheaderText = e.subheader_text),
@@ -500,10 +523,10 @@ class $ {
             (this.backgroundImageUrl = e.background_image_url));
     }
     static fromServer(e) {
-        return new $(e);
+        return new z(e);
     }
 }
-class z {
+class X {
     title;
     body;
     categoryStoreListingId;
@@ -518,7 +541,7 @@ class z {
     isDismissible;
     dismissibleContentVersion;
     constructor(e) {
-        ((this.type = x.g.WIDE_BANNER),
+        ((this.type = k.g.WIDE_BANNER),
             (this.title = e.title),
             (this.body = e.body),
             (this.categoryStoreListingId = e.category_store_listing_id),
@@ -534,73 +557,73 @@ class z {
             (this.dismissibleContentVersion = e.dismissible_content_version));
     }
     static fromServer(e) {
-        return new z(e);
+        return new X(e);
     }
 }
-class X {
+class Z {
     shopBlocks;
     categories;
     constructor(e) {
         ((this.shopBlocks = e.shop_blocks
             .map((e) => {
                 switch (e.type) {
-                    case x.g.HERO:
-                        return W.fromServer(e);
-                    case x.g.FEATURED:
-                        return V.fromServer(e);
-                    case x.g.FEED:
-                        return H.fromServer(e);
-                    case x.g.WIDE_BANNER:
-                        return z.fromServer(e);
-                    case x.g.SHELF:
-                        return K.fromServer(e);
-                    case x.g.COUNTDOWN_TIMER:
-                        return k.fromServer(e);
-                    case x.g.IMMERSIVE_BANNER:
+                    case k.g.HERO:
                         return Y.fromServer(e);
-                    case x.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER:
-                        return $.fromServer(e);
-                    case x.g.GAME_SERVER_HOSTING_BANNER:
+                    case k.g.FEATURED:
+                        return H.fromServer(e);
+                    case k.g.FEED:
                         return j.fromServer(e);
+                    case k.g.WIDE_BANNER:
+                        return X.fromServer(e);
+                    case k.g.SHELF:
+                        return $.fromServer(e);
+                    case k.g.COUNTDOWN_TIMER:
+                        return F.fromServer(e);
+                    case k.g.IMMERSIVE_BANNER:
+                        return K.fromServer(e);
+                    case k.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER:
+                        return z.fromServer(e);
+                    case k.g.GAME_SERVER_HOSTING_BANNER:
+                        return W.fromServer(e);
                     default:
                         return;
                 }
             })
             .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => S.A.fromServer(e))));
+            (this.categories = e.categories.map((e) => N.A.fromServer(e))));
     }
     static fromServer(e) {
-        return new X(e);
+        return new Z(e);
     }
 }
-var Z = n(100057),
-    q = n(181774);
-function Q(e) {
+var q = n(100057),
+    Q = n(181774);
+function J(e) {
     let { tab: t, initialCollectionId: i, ...r } = e;
     {
         let { default: e } = n(830543),
             { default: a } = n(408166);
-        (J(r),
+        (ee(r),
             e(),
             (0, E.M)(),
             a(),
             (0, _.pX)(
                 null != i
-                    ? w.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i)
+                    ? G.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i)
                     : null != t
-                      ? w.BVt.COLLECTIBLES_SHOP_WITH_TAB(t)
-                      : w.BVt.COLLECTIBLES_SHOP,
+                      ? G.BVt.COLLECTIBLES_SHOP_WITH_TAB(t)
+                      : G.BVt.COLLECTIBLES_SHOP,
             ));
     }
 }
-function J(e) {
+function ee(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_OPEN", ...e });
 }
-function ee(e) {
+function et(e) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId: e });
 }
-(n(457421), n(295811));
-function et(e, t) {
+n(295811);
+function en(e, t) {
     return (
         !!e?.noCache == !!t?.noCache &&
         !!e?.includeUnpublished == !!t?.includeUnpublished &&
@@ -612,31 +635,31 @@ function et(e, t) {
         e?.skipNumCategories === t?.skipNumCategories
     );
 }
-async function en(e, t, n) {
+async function ei(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
-    let i = (0, q.ao)(e),
+    let i = (0, Q.ao)(e),
         r = c.Ay.get("shop_show_debug_overlay");
     (e?.logPerf &&
-        (0, Z.z)({
+        (0, q.z)({
             sessionId: n?.sessionId,
-            checkpoint: Z.t.CATEGORIES_FETCH_STARTED,
+            checkpoint: q.t.CATEGORIES_FETCH_STARTED,
             tab: n?.tab,
             unpublishedCategoriesShown: e?.includeUnpublished,
             cacheDisabled: e?.noCache,
         }),
         r && I(`fetchCollectiblesCategories started: ${JSON.stringify(i, null, 2)}`));
     try {
-        let a = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
+        let a = await l.Bo.get({ url: G.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
         (e?.logPerf &&
-            (0, Z.z)({
+            (0, q.z)({
                 sessionId: n?.sessionId,
-                checkpoint: Z.t.CATEGORIES_FETCH_COMPLETED,
+                checkpoint: q.t.CATEGORIES_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: e?.includeUnpublished,
                 cacheDisabled: e?.noCache,
             }),
             r && I(`fetchCollectiblesCategories completed ${a.body.categories.length} categories`),
-            o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: N.fromServer(a.body), noOp: t }));
+            o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: C.fromServer(a.body), noOp: t }));
     } catch (t) {
         let e = new d.LG(t);
         ((0, u.o)(e),
@@ -644,21 +667,21 @@ async function en(e, t, n) {
             r && I(`fetchCollectiblesCategories failed: ${e.message}`));
     }
 }
-async function ei() {
-    if (p.A.isFetching) return;
+async function er() {
+    if (T.A.isFetching) return;
     o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
     let e = c.Ay.get("shop_show_debug_overlay");
     e && I("fetchCollectiblesPurchases started");
     try {
         let t = {
-            url: w.Rsh.COLLECTIBLES_PURCHASES,
+            url: G.Rsh.COLLECTIBLES_PURCHASES,
             rejectWithError: !0,
             query: { variants_return_style: s.g.VARIANTS_GROUP },
         };
         e && I(`fetchCollectiblesPurchases request: ${JSON.stringify(t, null, 2)}`);
         let n = await l.Bo.get(t);
         (e && I(`fetchCollectiblesPurchases completed with ${n.body.length} purchases`),
-            o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: n.body.map(G.fromServer) }));
+            o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: n.body.map(x.fromServer) }));
     } catch (n) {
         let t = new d.LG(n);
         throw (
@@ -669,18 +692,18 @@ async function ei() {
         );
     }
 }
-async function er(e, t) {
+async function ea(e, t) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
     try {
         let n = { locale: A.default.locale };
         (t?.countryCode !== null && (n.country_code = t?.countryCode),
             t?.paymentGateway !== null && (n.payment_gateway = t?.paymentGateway),
             t?.includeBundles !== null && (n.include_bundles = t?.includeBundles));
-        let i = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_PRODUCTS(e), rejectWithError: !0, query: n });
+        let i = await l.Bo.get({ url: G.Rsh.COLLECTIBLES_PRODUCTS(e), rejectWithError: !0, query: n });
         o.h.dispatch({
             type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
             skuId: e,
-            product: v.A.fromServer(i.body),
+            product: b.A.fromServer(i.body),
             endedAt: Date.now(),
         });
     } catch (n) {
@@ -689,30 +712,30 @@ async function er(e, t) {
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t, endedAt: Date.now() }));
     }
 }
-async function ea(e, t) {
-    h.A.isFetchingProduct(e) || h.A.isProductFetchBackedOff(e) || (await er(e, t));
+async function es(e, t) {
+    h.A.isFetchingProduct(e) || h.A.isProductFetchBackedOff(e) || (await ea(e, t));
 }
-function es(e) {
+function el(e) {
     let t = Date.now();
-    for (let n of (0, m.XS)([e]))
+    for (let n of (0, g.XS)([e]))
         null == h.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }
-async function el(e) {
+async function eo(e) {
     o.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
     try {
-        let t = await l.Bo.put({ url: w.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
-        o.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: e, purchases: t.body?.map(G.fromServer) });
+        let t = await l.Bo.put({ url: G.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
+        o.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: e, purchases: t.body?.map(x.fromServer) });
     } catch (n) {
         let t = new d.LG(n);
         throw (o.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: e, error: t }), t);
     }
 }
-async function eo(e, t) {
+async function ed(e, t) {
     try {
         return (
             await l.Bo.get({
-                url: w.Rsh.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+                url: G.Rsh.COLLECTIBLES_VALID_GIFT_RECIPIENT,
                 query: { sku_id: t, recipient_id: e },
                 rejectWithError: !0,
             })
@@ -721,62 +744,92 @@ async function eo(e, t) {
         return ((0, u.o)(new d.LG(e)), !1);
     }
 }
-async function ed(e) {
+async function ec(e) {
     let { release: t = a.P.PROD } = e;
     o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
     let n = { platform: r.DESKTOP };
     t !== a.P.PROD && (n.release = t);
     try {
-        let e = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_MARKETING, query: n, rejectWithError: !0 });
-        o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: D.fromServer(e.body) });
+        let e = await l.Bo.get({ url: G.Rsh.COLLECTIBLES_MARKETING, query: n, rejectWithError: !0 });
+        o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: v.fromServer(e.body) });
     } catch (e) {
         ((0, u.o)(new d.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" }));
     }
 }
-async function ec(e, t, n) {
+function eu(e) {
+    let { ttlMs: t } = e,
+        n = p.A.getCachedMarketingsBySurfaces(t);
+    return (
+        null != n &&
+        (o.h.dispatch({
+            type: "COLLECTIBLES_MARKETING_CACHE_RESTORED",
+            marketings: new v(
+                Object.fromEntries(
+                    Object.entries(n).map((e) => {
+                        let [t, n] = e;
+                        switch (n?.type) {
+                            case O.G.BADGE:
+                                return [t, R.fromPersisted(n)];
+                            case O.G.BANNER:
+                                return [t, L.fromPersisted(n)];
+                            case O.G.COACHMARK:
+                                return [t, y.fromPersisted(n)];
+                            case O.G.TAB_TOOLTIP:
+                                return [t, D.fromPersisted(n)];
+                            default:
+                                return [t, void 0];
+                        }
+                    }),
+                ),
+            ),
+        }),
+        !0)
+    );
+}
+async function e_(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
-    let i = (0, q.ao)(t, e);
+    let i = (0, Q.ao)(t, e);
     t?.logPerf &&
-        (0, Z.z)({
+        (0, q.z)({
             sessionId: n?.sessionId,
-            checkpoint: Z.t.SHOP_HOME_FETCH_STARTED,
+            checkpoint: q.t.SHOP_HOME_FETCH_STARTED,
             tab: n?.tab,
             unpublishedCategoriesShown: t?.includeUnpublished,
             cacheDisabled: t?.noCache,
         });
     try {
-        let r = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_SHOP, query: i, rejectWithError: !0 });
+        let r = await l.Bo.get({ url: G.Rsh.COLLECTIBLES_SHOP, query: i, rejectWithError: !0 });
         (t?.logPerf &&
-            (0, Z.z)({
+            (0, q.z)({
                 sessionId: n?.sessionId,
-                checkpoint: Z.t.SHOP_HOME_FETCH_COMPLETED,
+                checkpoint: q.t.SHOP_HOME_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: t?.includeUnpublished,
                 cacheDisabled: t?.noCache,
             }),
-            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: X.fromServer(r.body) }));
+            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: Z.fromServer(r.body) }));
     } catch (n) {
         let t = new d.LG(n);
         ((0, u.o)(t), o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t }));
     }
 }
-function eu(e) {
+function eE(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride: e });
 }
-function e_(e) {
+function eA(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride: e });
 }
-function eE(e) {
+function eh(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
 }
-async function eA(e) {
+async function ef(e) {
     let { tab: t, abortSignal: n } = e;
-    if (T.A.isFetchingLayout(t)) return;
-    let i = T.A.getLayoutFetchError(t);
+    if (m.A.isFetchingLayout(t)) return;
+    let i = m.A.getLayoutFetchError(t);
     if (i?.status !== 404 && i?.status !== 429)
         try {
             o.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: t });
-            let e = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_SHOP_TAB_LAYOUT(t), rejectWithError: !0, signal: n });
+            let e = await l.Bo.get({ url: G.Rsh.COLLECTIBLES_SHOP_TAB_LAYOUT(t), rejectWithError: !0, signal: n });
             o.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: t, layoutId: e.body.layout_id });
         } catch (n) {
             let e = new d.LG(n);
