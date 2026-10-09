@@ -1710,13 +1710,21 @@ let lc = {
         [ex.rbe.GUILD_FORUM]: "forum",
         [ex.rbe.GUILD_MEDIA]: "media",
     },
-    ld = { channel: "#", role: "@", user: "@" };
-var lf = n(155078);
-function lm(e) {
+    ld = { channel: "#", role: "@", user: "@" },
+    lf = {
+        channel: [es.default["9+dfPT"], es.default.pGSJqE],
+        role: [es.default["2VkCoD"], es.default.c8YlX8],
+        user: [es.default.GZIAxl, es.default["4bptbQ"]],
+    };
+function lm(e, t) {
+    return eu.intl.string(lf[e][+!!t]);
+}
+var lh = n(155078);
+function lg(e) {
     return e.options.some((e) => null != e.image);
 }
-let lh = [];
-function lg(e, t) {
+let lp = [];
+function lx(e, t) {
     return {
         image: e,
         selected: t,
@@ -1728,13 +1736,13 @@ function lg(e, t) {
         onLink: () => Promise.resolve(!1),
     };
 }
-var lp = n(890497),
-    lx = n(300344),
-    lv = n(614733),
-    lj = n(904363),
-    lb = n(950902),
-    ly = n(384017);
-function lk(e) {
+var lv = n(890497),
+    lj = n(300344),
+    lb = n(614733),
+    ly = n(904363),
+    lk = n(950902),
+    lw = n(384017);
+function lA(e) {
     let {
             guildId: t,
             question: n,
@@ -1751,23 +1759,27 @@ function lk(e) {
         m = !0 === n.multi_select,
         h = l.map((e) => e.id);
     function g(e) {
-        let t = n.input ?? "channel";
-        return e.slice(0, 10).map((e) => ({
-            id: e,
-            name: o.find((t) => t.value === e)?.label ?? l.find((t) => t.id === e)?.name ?? e,
-            ...(function (e, t) {
-                if ("channel" === e) {
-                    var n;
-                    let l = null == (n = V.A.getChannel(t)?.type) ? void 0 : lc[n];
-                    return { kind: e, ...(null == l ? {} : { channel_type: l }) };
-                }
-                if ("user" === e) {
-                    let n = tX.default.getUser(t)?.username;
-                    return { kind: e, ...(null == n ? {} : { username: n }) };
-                }
-                return { kind: e };
-            })(t, e),
-        }));
+        var t, r;
+        return (
+            (t = n.input ?? "channel"),
+            (r = (e) => o.find((t) => t.value === e)?.label),
+            e.slice(0, 10).map((e) => ({
+                id: e,
+                name: r(e) ?? l.find((t) => t.id === e)?.name ?? e,
+                ...(function (e, t) {
+                    if ("channel" === e) {
+                        var n;
+                        let l = null == (n = V.A.getChannel(t)?.type) ? void 0 : lc[n];
+                        return { kind: e, ...(null == l ? {} : { channel_type: l }) };
+                    }
+                    if ("user" === e) {
+                        let n = tX.default.getUser(t)?.username;
+                        return { kind: e, ...(null == n ? {} : { username: n }) };
+                    }
+                    return { kind: e };
+                })(t, e),
+            }))
+        );
     }
     let p = {
         options: o,
@@ -1783,17 +1795,17 @@ function lk(e) {
         hideLabel: !0,
     };
     return (0, a.jsx)("div", {
-        className: ly.YX,
+        className: lw.YX,
         "data-conjure-clarification-picker": n.input,
         children: m
-            ? (0, a.jsx)(lp.Z, {
+            ? (0, a.jsx)(lv.Z, {
                   ...p,
                   selectionMode: "multiple",
                   wrapTags: !0,
                   value: h,
                   onSelectionChange: (e) => i(g(e), t),
               })
-            : (0, a.jsx)(lp.Z, {
+            : (0, a.jsx)(lv.Z, {
                   ...p,
                   selectionMode: "single",
                   clearable: !0,
@@ -1802,41 +1814,33 @@ function lk(e) {
               }),
     });
 }
-let lw = {
-    channel: [es.default["9+dfPT"], es.default.pGSJqE],
-    role: [es.default["2VkCoD"], es.default.c8YlX8],
-    user: [es.default.GZIAxl, es.default["4bptbQ"]],
-};
-function lA(e, t) {
-    return eu.intl.string(lw[e][+!!t]);
-}
 function lN(e) {
     let { guildId: t, fallback: n, ...l } = e,
-        r = (0, lx.A)(t, l.question.channel_filter);
+        r = (0, lj.A)(t, l.question.channel_filter);
     return null == r
         ? n
-        : (0, a.jsx)(lk, { ...l, guildId: t, options: r, placeholder: lA("channel", !0 === l.question.multi_select) });
+        : (0, a.jsx)(lA, { ...l, guildId: t, options: r, placeholder: lm("channel", !0 === l.question.multi_select) });
 }
 function lS(e) {
     let { guildId: t, ...n } = e,
-        l = (0, lj.A)(t);
-    return (0, a.jsx)(lk, { ...n, guildId: t, options: l, placeholder: lA("role", !0 === n.question.multi_select) });
+        l = (0, ly.A)(t);
+    return (0, a.jsx)(lA, { ...n, guildId: t, options: l, placeholder: lm("role", !0 === n.question.multi_select) });
 }
 function lC(e) {
     let { guildId: t, ...n } = e,
-        { options: l, onQueryChange: r, matchSorterOptions: i } = (0, lv.A)(t);
-    return (0, a.jsx)(lk, {
+        { options: l, onQueryChange: r, matchSorterOptions: i } = (0, lb.A)(t);
+    return (0, a.jsx)(lA, {
         ...n,
         guildId: t,
         options: l,
         onQueryChange: r,
         matchSorterOptions: i,
-        placeholder: lA("user", !0 === n.question.multi_select),
+        placeholder: lm("user", !0 === n.question.multi_select),
     });
 }
 function lE(e) {
     let { projectId: t, fallback: n = null, ...l } = e,
-        r = (0, lb.Tj)(t, !0);
+        r = (0, lk.Tj)(t, !0);
     if (null == r) return n;
     switch (l.question.input) {
         case "channel":
@@ -2069,7 +2073,7 @@ function l1(e) {
                         lineClamp: 1,
                         className: lZ.pG,
                         children:
-                            "" !== (n = null != (t = r.image?.page_url ?? r.image?.url) ? (0, lf.E)(t) : "")
+                            "" !== (n = null != (t = r.image?.page_url ?? r.image?.url) ? (0, lh.E)(t) : "")
                                 ? (function (e) {
                                       let t = e.toLowerCase().split(".");
                                       if (t.length < 2 || /^\d+$/.test(t[t.length - 1]) || e.includes(":")) return e;
@@ -2376,7 +2380,7 @@ function l6(e) {
         d = !0 === t.recommended,
         f = null != t.detail && "" !== t.detail;
     return (0, a.jsxs)(b.D, {
-        className: u()(ly.uK, { [ly.ue]: l, [ly.h4]: !0 === o }),
+        className: u()(lw.uK, { [lw.ue]: l, [lw.h4]: !0 === o }),
         onClick: l ? void 0 : () => r(t),
         "aria-label": eu.intl.formatToPlainString(d ? es.default["2p6UFz"] : es.default.AQbxhf, { answer: t.label }),
         "aria-describedby": f ? c : void 0,
@@ -2388,18 +2392,18 @@ function l6(e) {
         "data-recommended": d ? "true" : void 0,
         children: [
             null != o
-                ? (0, a.jsx)("span", { className: ly.dy, children: (0, a.jsx)(li.P, { checked: o, disabled: l }) })
-                : (0, a.jsx)("span", { className: ly.Gy, "aria-hidden": !0, children: n }),
+                ? (0, a.jsx)("span", { className: lw.dy, children: (0, a.jsx)(li.P, { checked: o, disabled: l }) })
+                : (0, a.jsx)("span", { className: lw.Gy, "aria-hidden": !0, children: n }),
             (0, a.jsxs)("span", {
-                className: ly.qO,
+                className: lw.qO,
                 children: [
                     (0, a.jsx)("span", {
-                        className: ly.l8,
+                        className: lw.l8,
                         children: (0, a.jsx)(j.E, {
                             tag: "span",
                             variant: "text-md/medium",
                             color: "none",
-                            className: ly.ed,
+                            className: lw.ed,
                             children: t.label,
                         }),
                     }),
@@ -2419,7 +2423,7 @@ function l6(e) {
                       tag: "span",
                       variant: "text-xs/semibold",
                       color: "text-muted",
-                      className: ly.rM,
+                      className: lw.rM,
                       children: eu.intl.string(es.default.zku6r1),
                   })
                 : null,
@@ -2429,7 +2433,7 @@ function l6(e) {
 function l7(e) {
     let { projectId: t, question: n, selected: l, disabled: r, reachable: i = !0, onPick: s, own: u } = e,
         o = !0 === n.multi_select;
-    return lm(n)
+    return lg(n)
         ? (0, a.jsx)(l2, { projectId: t, question: n, selectedIds: l, disabled: r, reachable: i, onPick: s, own: u })
         : (0, a.jsx)(a.Fragment, {
               children: n.options.map((e, t) =>
@@ -2464,7 +2468,7 @@ function l9(e) {
         d = "" === l.trim() ? null : l,
         f = !0 === n.multi_select;
     return (0, a.jsxs)("div", {
-        className: u()(ly.Ge, ly.x1),
+        className: u()(lw.Ge, lw.x1),
         "data-direction": i,
         "aria-hidden": !0,
         children: [
@@ -2473,7 +2477,7 @@ function l9(e) {
                       tag: "div",
                       variant: "text-xs/normal",
                       color: "text-muted",
-                      className: ly.aK,
+                      className: lw.aK,
                       children: eu.intl.string(es.default.tE8qbz),
                   })
                 : null,
@@ -2484,15 +2488,15 @@ function l9(e) {
                 disabled: s,
                 onPick: () => void 0,
                 reachable: !1,
-                own: lg(o, c),
+                own: lx(o, c),
             }),
-            lm(n) || !1 === n.allow_custom
+            lg(n) || !1 === n.allow_custom
                 ? null
                 : (0, a.jsxs)("div", {
-                      className: ly.Xy,
+                      className: lw.Xy,
                       children: [
                           (0, a.jsx)("span", {
-                              className: ly.Gy,
+                              className: lw.Gy,
                               "aria-hidden": !0,
                               children: (0, a.jsx)(ls.PencilIcon, {
                                   size: "custom",
@@ -2501,7 +2505,7 @@ function l9(e) {
                                   color: "currentColor",
                               }),
                           }),
-                          null == d ? null : (0, a.jsx)("span", { className: u()(ly.Pu, ly.es), children: d }),
+                          null == d ? null : (0, a.jsx)("span", { className: u()(lw.Pu, lw.es), children: d }),
                       ],
                   }),
         ],
@@ -2534,8 +2538,8 @@ function re(e) {
         [W, X] = i.useState(null),
         J = d[B.id] ?? "",
         Y = !0 === B.multi_select,
-        Q = lm(B),
-        Z = Y ? (m[B.id] ?? l5) : ((t = o[B.id]), t?.kind === "option" ? [t.optionId] : lh),
+        Q = lg(B),
+        Z = Y ? (m[B.id] ?? l5) : ((t = o[B.id]), t?.kind === "option" ? [t.optionId] : lp),
         ee = (function (e, t, n) {
             let [l, r] = i.useState({}),
                 [a, s] = i.useState({}),
@@ -2558,7 +2562,7 @@ function re(e) {
                         let d = i.id,
                             m = !0 === i.multi_select,
                             h = l[d] ?? null;
-                        if (u) return lg(h, f(i));
+                        if (u) return lx(h, f(i));
                         function g(e) {
                             return s((t) => ({ ...t, [d]: e }));
                         }
@@ -2806,7 +2810,10 @@ function re(e) {
                       entities: ey,
                       ...(null == t ? {} : { guildId: t }),
                       ...("" === n ? {} : { custom: n }),
-                      text: [...ey.map((t) => `${ld[e]}${t.name}`), ...("" === n ? [] : [n])].join(", "),
+                      text: [
+                          ...ey.map((t) => (t.name.startsWith(ld[e]) ? t.name : `${ld[e]}${t.name}`)),
+                          ...("" === n ? [] : [n]),
+                      ].join(", "),
                   })
                 : null;
         }, [J, x, ey, B.id, B.input]),
@@ -2883,10 +2890,10 @@ function re(e) {
         ez = Q
             ? null
             : (0, a.jsxs)("div", {
-                  className: ly.Xy,
+                  className: lw.Xy,
                   children: [
                       (0, a.jsx)("span", {
-                          className: ly.Gy,
+                          className: lw.Gy,
                           "aria-hidden": !0,
                           children: (0, a.jsx)(ls.PencilIcon, {
                               size: "custom",
@@ -2911,13 +2918,13 @@ function re(e) {
                           "aria-label": eu.intl.formatToPlainString(es.default["4JeYPB"], { question: B.question }),
                           disabled: G,
                           rows: 1,
-                          className: ly.Pu,
+                          className: lw.Pu,
                           "data-conjure-clarification-other": B.id,
                       }),
                   ],
               });
     return (0, a.jsxs)("section", {
-        className: u()(ly.$O, { [ly.fI]: eE && !eM, [ly.Oh]: eM }),
+        className: u()(lw.$O, { [lw.fI]: eE && !eM, [lw.Oh]: eM }),
         role: "dialog",
         "aria-label": B.question,
         "data-conjure-clarification": l.id,
@@ -2929,13 +2936,13 @@ function re(e) {
         onKeyDown: e$,
         children: [
             (0, a.jsxs)("div", {
-                className: ly.rf,
+                className: lw.rf,
                 style: null == _ ? void 0 : { height: _.heading + _.rows },
                 "data-moving": R ? "" : void 0,
                 children: [
                     (0, a.jsxs)("div", {
                         ref: D,
-                        className: ly.wx,
+                        className: lw.wx,
                         children: [
                             (0, a.jsx)(j.E, {
                                 ref: z,
@@ -2945,7 +2952,7 @@ function re(e) {
                                 color: "text-subtle",
                                 selectable: !0,
                                 lineClamp: V ? void 0 : 5,
-                                className: u()(l4.TK, ly.R_, { [ly.TB]: "exit" === ea, [ly.JU]: "enter" === ea }),
+                                className: u()(l4.TK, lw.R_, { [lw.TB]: "exit" === ea, [lw.JU]: "enter" === ea }),
                                 children: er,
                             }),
                             eo || V
@@ -2982,14 +2989,14 @@ function re(e) {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: ly.Cg,
+                        className: lw.Cg,
                         style: null == _ ? void 0 : { insetBlockStart: _.heading },
                         children: (0, a.jsxs)("div", {
-                            className: ly.I,
+                            className: lw.I,
                             children: [
                                 (0, a.jsxs)("div", {
                                     ref: F,
-                                    className: ly.Ge,
+                                    className: lw.Ge,
                                     role: "group",
                                     "aria-labelledby": `${B.id}-label`,
                                     "data-direction": C?.direction,
@@ -3000,7 +3007,7 @@ function re(e) {
                                                   tag: "div",
                                                   variant: "text-xs/normal",
                                                   color: "text-muted",
-                                                  className: ly.aK,
+                                                  className: lw.aK,
                                                   children: eu.intl.string(es.default.tE8qbz),
                                               })
                                             : null,

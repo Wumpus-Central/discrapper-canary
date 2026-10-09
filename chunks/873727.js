@@ -36,7 +36,8 @@ function c() {
         let t = n.item(e);
         t.startsWith("--custom-") && (i[t] = n.getPropertyValue(t).trim());
     }
-    return { classNames: t, variables: i };
+    let r = n.getPropertyValue("--background-gradient-chat").trim();
+    return ("" !== r && (i["--background-gradient-chat"] = r), { classNames: t, variables: i });
 }
 function d() {
     let e =
