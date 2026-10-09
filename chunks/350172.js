@@ -69,56 +69,57 @@ function O(e) {
     return `${s(e)}:${e.offset}:${e.limit}`;
 }
 async function T(e) {
-    let {
-        applicationId: t,
-        offset: i,
-        limit: d,
-        useShopOrdering: T = !0,
-        includeUnpublishedProducts: h = !1,
-        includeUnpublishedCollections: p = !1,
-        ignoreCache: C = !1,
-    } = e;
-    if (!t) return;
-    let E = O(e),
-        S = s(e),
-        A = _.A.getCollectionPageFetchState(E);
-    if ("loading" === A) return;
-    let R = _.A.getCollectionPageFetchedAt(E);
-    if (!C && null != R) {
-        let e = "error" === A ? o.qq : o.HB;
-        if (Date.now() - R <= e) return;
+    let { retryAfterError: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        {
+            applicationId: i,
+            offset: d,
+            limit: T,
+            useShopOrdering: h = !0,
+            includeUnpublishedProducts: p = !1,
+            includeUnpublishedCollections: C = !1,
+            ignoreCache: E = !1,
+        } = e;
+    if (!i) return;
+    let S = O(e),
+        A = s(e),
+        R = _.A.getCollectionPageFetchState(S);
+    if ("loading" === R) return;
+    let F = _.A.getCollectionPageFetchedAt(S);
+    if (!E && null != F && !(t && "error" === R)) {
+        let e = "error" === R ? o.qq : o.HB;
+        if (Date.now() - F <= e) return;
     }
     try {
-        l.h.dispatch({ type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH", pageKey: E });
+        l.h.dispatch({ type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH", pageKey: S });
         let e = await (0, n.aP)({
             url: a.Rsh.STOREFRONT_COLLECTIONS_FOR_APPLICATION,
             query: {
-                application_id: t,
-                use_shop_ordering: T,
-                offset: i,
-                limit: d,
+                application_id: i,
+                use_shop_ordering: h,
+                offset: d,
+                limit: T,
                 include_pricing: !0,
                 locale: c.default.locale,
                 with_bundled_skus: !0,
                 include_google_sku_ids: !1,
-                include_unpublished_products: h,
-                include_unpublished_collections: p,
-                ignore_cache: C,
+                include_unpublished_products: p,
+                include_unpublished_collections: C,
+                ignore_cache: E,
             },
             rejectWithError: !0,
         });
         l.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS",
-            pageKey: E,
-            listKey: S,
-            applicationId: t,
+            pageKey: S,
+            listKey: A,
+            applicationId: i,
             collections: e.body.collections.map(u.A.fromServer),
             total: e.body.total,
         });
     } catch (e) {
         l.h.dispatch({
             type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE",
-            pageKey: E,
+            pageKey: S,
             apiError: new r.A(e),
         });
     }

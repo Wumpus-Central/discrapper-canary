@@ -11,9 +11,10 @@ var l = a(582128),
     m = a(758836);
 function p(e, t, a) {
     let p = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        h = (0, r.bG)([o.A], () => o.A.hasLoadedExperiments),
-        g = (0, r.bG)([i.A], () => i.A.skipNumCategories),
-        [v, x, f, b, y, S, C, w] = (0, r.yK)([c.A], () => [
+        h = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        g = (0, r.bG)([o.A], () => o.A.hasLoadedExperiments),
+        v = (0, r.bG)([i.A], () => i.A.skipNumCategories),
+        [x, f, b, y, S, C, w, E] = (0, r.yK)([c.A], () => [
             c.A.getShopBlocks(e),
             c.A.getLastSuccessfulFetch(e) ?? 0,
             c.A.getLastErrorTimestamp(e) ?? 0,
@@ -23,19 +24,19 @@ function p(e, t, a) {
             c.A.getHasKnownStaleData(e),
             c.A.getShopHomeConfigOverride(),
         ]),
-        E = (0, l.useMemo)(
+        k = (0, l.useMemo)(
             () => ({
                 ...t,
                 variantsReturnStyle: n.g.VARIANTS_GROUP,
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
-                shopHomeConfig: w,
-                skipNumCategories: g,
+                shopHomeConfig: E,
+                skipNumCategories: v,
             }),
-            [t, w, g],
+            [t, E, v],
         ),
-        k = (0, l.useMemo)(() => !(0, s.gn)(b, E), [b, E]),
-        A = ((e, t, a) => {
+        A = (0, l.useMemo)(() => !(0, s.gn)(y, k), [y, k]),
+        I = ((e, t, a) => {
             let [n, r] = (0, l.useState)(!1);
             return (
                 (0, l.useEffect)(() => {
@@ -64,21 +65,21 @@ function p(e, t, a) {
                 }, [t, a, e]),
                 n
             );
-        })(v, S ?? !1, p),
-        I = (0, l.useMemo)(() => !A && Date.now() - x < m.i0, [x, A]);
+        })(x, C ?? !1, p),
+        j = (0, l.useMemo)(() => !I && Date.now() - f < m.i0, [f, I]);
     return (
         (0, l.useEffect)(() => {
-            if (!h || S) return;
-            let t = Date.now() - f < m.Zq;
-            (null != y && t) || ((k || !I || C) && (0, s.h$)(e, E, a));
-        }, [h, S, y, f, I, C, k, E, e, a]),
+            if (h || !g || C) return;
+            let t = Date.now() - b < m.Zq;
+            (null != S && t) || ((A || !j || w) && (0, s.h$)(e, k, a));
+        }, [h, g, C, S, b, j, w, A, k, e, a]),
         {
-            isFetchingShopHome: S,
-            fetchShopHomeError: y,
-            shopBlocks: v,
+            isFetchingShopHome: C,
+            fetchShopHomeError: S,
+            shopBlocks: x,
             refreshShopHome: (0, l.useCallback)(() => {
-                (0, s.h$)(e, E, a);
-            }, [e, E, a]),
+                (0, s.h$)(e, k, a);
+            }, [e, k, a]),
         }
     );
 }
