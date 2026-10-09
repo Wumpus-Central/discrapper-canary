@@ -203,6 +203,7 @@ function e$(e) {
                         channelId: null,
                         currentUser: e,
                         isEmbedded: !1,
+                        isContentGated: !1,
                         ChannelStore: eI.A,
                         GuildStore: eE.A,
                         GuildMemberCountStore: eU.A,

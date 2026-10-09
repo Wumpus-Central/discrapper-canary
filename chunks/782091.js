@@ -1,15 +1,16 @@
-n.d(t, { J4: () => h, JH: () => A, dL: () => I, et: () => f, xy: () => E });
+n.d(t, { J4: () => f, JH: () => h, dL: () => p, et: () => I, xy: () => A });
 var i,
     r = n(17928),
-    a = n(734057),
-    s = n(71393),
-    l = n(576705),
-    o = n(977997),
-    d = n(170148),
-    c = n(818023),
-    u = n(652215),
-    _ = n(660183),
-    E =
+    a = n(323073),
+    s = n(734057),
+    l = n(71393),
+    o = n(576705),
+    d = n(977997),
+    c = n(170148),
+    u = n(818023),
+    _ = n(652215),
+    E = n(660183),
+    A =
         (((i = {})[(i.CAN_LAUNCH = 0)] = "CAN_LAUNCH"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),
         (i[(i.NO_CHANNEL_CONNECT_PERMISSION = 2)] = "NO_CHANNEL_CONNECT_PERMISSION"),
@@ -18,42 +19,64 @@ var i,
         (i[(i.IS_AFK_CHANNEL = 5)] = "IS_AFK_CHANNEL"),
         (i[(i.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 6)] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS"),
         (i[(i.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL = 7)] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL"),
+        (i[(i.CHANNEL_CONTENT_GATED = 8)] = "CHANNEL_CONTENT_GATED"),
         i);
-function A(e) {
-    let { channelId: t, ChannelStore: n, GuildStore: i, PermissionStore: r, VoiceStateStore: a } = e,
-        s = n.getChannel(t);
-    if (null == s) return 3;
-    if (!c.H5.includes(s.type)) return 7;
-    if (!(0, d.A)()) return 6;
-    if (null != s && !s.isPrivate()) {
-        let e = s.getGuildId();
+function h(e) {
+    let { channelId: t, isContentGated: n, ChannelStore: i, GuildStore: r, PermissionStore: a, VoiceStateStore: s } = e,
+        l = i.getChannel(t);
+    if (null == l) return 3;
+    if (!u.H5.includes(l.type)) return 7;
+    if (!(0, c.A)()) return 6;
+    if (null != l && !l.isPrivate()) {
+        let e = l.getGuildId();
         if (null == e) return 4;
-        let n = i.getGuild(e);
-        if (n?.afkChannelId === s.id) return 5;
-        let l = r.can(u.xBc.CONNECT, s);
-        if (!r.can(u.xBc.USE_EMBEDDED_ACTIVITIES, s)) return 1;
-        let o = a.getCurrentClientVoiceChannelId(s.getGuildId()) === t;
-        if (s.isVocal() && !o && !l) return 2;
+        let i = r.getGuild(e);
+        if (i?.afkChannelId === l.id) return 5;
+        let o = a.can(_.xBc.CONNECT, l);
+        if (!a.can(_.xBc.USE_EMBEDDED_ACTIVITIES, l)) return 1;
+        let d = s.getCurrentClientVoiceChannelId(l.getGuildId()) === t;
+        if (n) return 8;
+        if (l.isVocal() && !d && !o) return 2;
     }
     return 0;
 }
-function h(e) {
-    return A({ channelId: e, ChannelStore: a.A, GuildStore: s.A, PermissionStore: l.A, VoiceStateStore: o.A });
-}
 function f(e) {
-    return (0, r.bG)(
-        [a.A, s.A, l.A, o.A],
-        () => A({ channelId: e, ChannelStore: a.A, GuildStore: s.A, PermissionStore: l.A, VoiceStateStore: o.A }),
-        [e],
-    );
+    let t = s.A.getChannel(e);
+    return h({
+        channelId: e,
+        isContentGated: (0, a.qR)(t),
+        ChannelStore: s.A,
+        GuildStore: l.A,
+        PermissionStore: o.A,
+        VoiceStateStore: d.A,
+    });
 }
 function I(e) {
+    let t = (0, r.bG)([s.A], () => s.A.getChannel(e), [e]),
+        n = (0, a.vL)(t);
+    return (0, r.bG)(
+        [s.A, l.A, o.A, d.A],
+        () =>
+            h({
+                channelId: e,
+                isContentGated: n,
+                ChannelStore: s.A,
+                GuildStore: l.A,
+                PermissionStore: o.A,
+                VoiceStateStore: d.A,
+            }),
+        [e, n],
+    );
+}
+function p(e) {
     switch (e) {
         case 0:
-            return _.intl.string(_.t.qJvTKQ);
+            return E.intl.string(E.t.qJvTKQ);
         case 1:
-            return _.intl.string(_.t.hHGrWz);
+            return E.intl.string(E.t.hHGrWz);
+        case 8:
+            return E.intl.string(E.t.pKLV22);
         default:
-            return _.intl.string(_.t.j29zCr);
+            return E.intl.string(E.t.j29zCr);
     }
 }

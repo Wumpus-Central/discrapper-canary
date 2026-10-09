@@ -124,13 +124,16 @@ function et(e, t, n) {
             return null != t ? t : (q(e), null);
         })(a);
         if ((0, d.A)(i)) {
-            let t = (0, l.A)();
+            let t = (0, l.A)(),
+                n = w.A.getVoiceStateForUser(e.id)?.channelId,
+                r = L.A.getChannel(n);
             if (
                 (0, o.Ay)({
                     activity: i,
                     userId: e.id,
                     application: c,
-                    channelId: w.A.getVoiceStateForUser(e.id)?.channelId,
+                    channelId: n,
+                    isContentGated: (0, E.qR)(r),
                     currentUser: s,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: L.A,

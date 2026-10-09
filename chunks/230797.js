@@ -4113,6 +4113,9 @@ let aC = r.memo(function (e) {
                                 case ag.Gy.ACTIVITY_AGE_GATED:
                                     e = J.intl.string(J.t["4WuFRE"]);
                                     break;
+                                case ag.Gy.CHANNEL_CONTENT_GATED:
+                                    e = J.intl.string(J.t.pKLV22);
+                                    break;
                                 case ag.Gy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                                     e = J.intl.string(J.t.uGDCcw);
                                     break;
