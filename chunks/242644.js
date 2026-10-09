@@ -3,7 +3,7 @@ var a = o(477900);
 o(582128);
 let t =
     "https://cdn.discordapp.com/assets/content/bee5073bff85cffaf0f4236456029b067925cd9de6742c5bb582f0ce39f1fa49.riv";
-var r = o(845867),
+var r = o(509482),
     n = o(799226);
 let d = { "Icon Unlock": { reducedMotion: "boolean", locked: "boolean", fill: "color" } },
     i = { "Icon Unlock": ["State Machine 1"] };

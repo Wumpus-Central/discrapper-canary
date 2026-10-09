@@ -3,7 +3,7 @@ var a = e(477900);
 e(582128);
 let i =
     "https://cdn.discordapp.com/assets/content/53eb00aa300595b54d999e60d501f621ad4399918c568561f74b536b6f37c0ab.riv";
-var o = e(845867),
+var o = e(509482),
     s = e(799226);
 let c = { "Nitro Wishlist": { reducedMotion: "boolean", logoColor: "color" } },
     d = { "Nitro Wishlist": ["State Machine 1"] };

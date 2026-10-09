@@ -3,7 +3,7 @@ var t = r(477900);
 r(582128);
 let o =
     "https://cdn.discordapp.com/assets/content/478c4e2368b95b01e5322800305a95640e4044e34f0da08b51845bc91b51526e.riv";
-var c = r(845867),
+var c = r(509482),
     d = r(799226);
 let s = { "Badges Coachmark": { on: "boolean", reducedMotion: "boolean" } },
     n = { "Badges Coachmark": ["State Machine 1"] };

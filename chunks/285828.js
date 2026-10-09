@@ -3,7 +3,7 @@ var o = a(477900);
 a(582128);
 let t =
     "https://cdn.discordapp.com/assets/content/3f8d8cb2278b39eb8975ff5c252ed36a67addd54ae228a2b0d34691ddffa9104.riv";
-var d = a(845867),
+var d = a(509482),
     n = a(799226);
 let i = {
         "Gem L3": { reducedMotion: "boolean" },

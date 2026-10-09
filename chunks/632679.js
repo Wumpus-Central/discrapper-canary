@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 let r =
     "https://cdn.discordapp.com/assets/content/0e8095ebdbf89e1289f83a859a892a5790e8a76949d9bf9bb02e4dfc16190d10.riv";
-var a = n(845867),
+var a = n(509482),
     s = n(799226);
 let l = {
         "Teen Screen Time Illo": {},

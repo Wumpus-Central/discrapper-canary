@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 let r =
     "https://cdn.discordapp.com/assets/content/bd712b6e0f8e5ee33f7f102f7bb02e40850fe06ccdf425523f3093c838ef6a28.riv";
-var a = n(845867),
+var a = n(509482),
     s = n(799226);
 let l = {
         HoverDarkmode: { posy: "number", posx: "number" },

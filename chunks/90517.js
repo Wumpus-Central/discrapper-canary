@@ -3,7 +3,7 @@ var t = a(477900);
 a(582128);
 let o =
     "https://cdn.discordapp.com/assets/content/0ee832fb7026bd6a854e96096076fc8a7f77a42de83e540b99bcdc33415e97c2.riv";
-var i = a(845867),
+var i = a(509482),
     d = a(799226);
 let n = { "Nitro Referral Confirmation - Old Logo": {} },
     c = { "Nitro Referral Confirmation - Old Logo": ["State Machine 1"] };

@@ -3,7 +3,7 @@ var o = a(477900);
 a(582128);
 let r =
     "https://cdn.discordapp.com/assets/content/4e02ee0451e556464805350795ce905d3f1fae8d476d249189c0d236fd312029.riv";
-var d = a(845867),
+var d = a(509482),
     s = a(799226);
 let i = {
         "Boost Server": { reducedMotion: "boolean" },

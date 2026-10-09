@@ -3,7 +3,7 @@ var a = t(477900);
 t(582128);
 let n =
     "https://cdn.discordapp.com/assets/content/72e3c4b99b3c059f834115e197341d9ca7d5d5a133ba23b6b36e8be09b0a0a12.riv";
-var o = t(845867),
+var o = t(509482),
     b = t(799226);
 let d = {
         "Artboard 2": {

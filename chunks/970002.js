@@ -2,7 +2,7 @@ n.d(t, { e: () => d });
 var i = n(477900);
 n(582128);
 var r = n(671325),
-    a = n(845867),
+    a = n(509482),
     s = n(799226);
 let l = {
         Base: { EntryTrigger: "trigger", ExitTrigger: "trigger", PosX: "number", PosY: "number" },
