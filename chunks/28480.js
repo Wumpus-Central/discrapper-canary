@@ -15,7 +15,6 @@ function c(e, t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-(n(323874), n(14289), n(35956));
 var f = n(141931),
     h = n(941426),
     p = n(475735),
@@ -120,7 +119,7 @@ var x = n(508382),
     _ = n(192308),
     k = n(186111),
     W = n(539197);
-function L(e, t) {
+function C(e, t) {
     let n = e.getBoundingClientRect();
     return (
         2 >= Math.abs(n.left - t.left) &&
@@ -129,7 +128,7 @@ function L(e, t) {
         4 >= Math.abs(n.height - t.height)
     );
 }
-function C(e, t) {
+function L(e, t) {
     if (
         (0, _.hasAnyModalOpen)() ||
         k.A.hasLayers() ||
@@ -142,7 +141,7 @@ function C(e, t) {
                     if (++i > 500) return !0;
                     if (!(n.contains(e) || null != n.closest(`[${W.t$}]`) || r.some((e) => e.contains(n)))) {
                         var l;
-                        if (L(n, t)) {
+                        if (C(n, t)) {
                             r.push(n);
                             continue;
                         }
@@ -170,7 +169,7 @@ function C(e, t) {
                 a = t.top + r + ((t.height - 2 * r) * l) / 6,
                 u = document.elementsFromPoint(o, a),
                 s = u.indexOf(e);
-            if (-1 === s || !u.slice(0, s).every((e) => L(e, t))) return !0;
+            if (-1 === s || !u.slice(0, s).every((e) => C(e, t))) return !0;
         }
     return !1;
 }
@@ -286,17 +285,7 @@ async function F(e, t, n, r) {
           : { blob: y, scale: (h / t.width + p / t.height) / 2 };
 }
 function B(e) {
-    try {
-        let t = new URL(e.src, window.location.href);
-        return (
-            (t.search = ""),
-            (t.hash = ""),
-            (t.pathname = t.pathname.replace(/[^/]*$/, "")),
-            new URL("discord-cgi/screenshot", t).toString()
-        );
-    } catch {
-        return null;
-    }
+    return e.resolveUploadUrl().catch(() => null);
 }
 function J(e, t, n, r) {
     let i = { "content-type": n.type, "x-vibegrations-capture-id": t.captureId, "x-vibegrations-capture-meta": r };
@@ -327,8 +316,7 @@ async function z(e, t) {
         if (d.width < 40 || d.height < 40) return o("frame too small");
         let c = O(e);
         if (null == c) return o("frame identity unknown");
-        let f = B(e);
-        if (null == f) return o("frame has no resolvable upload url");
+        let f = B(t);
         r = performance.now();
         let h = `capture-prepare-${t.captureId}`;
         try {
@@ -365,11 +353,13 @@ async function z(e, t) {
         }
         if ((l("image"), s.data.byteLength > 5242880))
             return o("encoded capture too large", { bytes: s.data.byteLength });
-        let w = new Blob([s.data], { type: s.mimeType }),
-            g = await J(
-                f,
-                t,
+        let w = await f;
+        if (null == w) return o("no upload url");
+        let g = new Blob([s.data], { type: s.mimeType }),
+            v = await J(
                 w,
+                t,
+                g,
                 (function (e) {
                     try {
                         let t = JSON.parse(decodeURIComponent(e));
@@ -380,16 +370,16 @@ async function z(e, t) {
                     }
                 })(p.meta),
             );
-        if ((l("upload"), !g.ok)) return o("upload refused", { status: g.status });
-        let v = Math.round(performance.now() - n);
+        if ((l("upload"), !v.ok)) return o("upload refused", { status: v.status });
+        let y = Math.round(performance.now() - n);
         return (
-            $.verbose(`native capture uploaded in ${v}ms`, {
+            $.verbose(`native capture uploaded in ${y}ms`, {
                 id: t.captureId,
-                bytes: w.size,
+                bytes: g.size,
                 width: s.width,
                 height: s.height,
                 ...i,
-                totalMs: v,
+                totalMs: y,
             }),
             { status: "accepted" }
         );
@@ -418,46 +408,47 @@ async function X(e, t) {
         if ("visible" !== document.visibilityState) return D("window not visible");
         let o = j(e);
         if (null == o) return D("frame not fully on screen");
-        if (C(e, o)) return D("frame is covered by Discord UI");
-        let a = {
+        if (L(e, o)) return D("frame is covered by Discord UI");
+        let a = B(t),
+            u = {
                 x: Math.max(0, window.outerWidth - window.innerWidth),
                 y: Math.max(0, window.outerHeight - window.innerHeight),
             },
-            u = a.x > 2 || a.y > 2 ? await H() : null;
+            s = u.x > 2 || u.y > 2 ? await H() : null;
         try {
             l = await U(o);
         } finally {
-            u?.();
+            s?.();
         }
         if (null == l) return null;
-        let s = j(e);
+        let d = j(e);
         if (
-            null == s ||
-            Math.abs(s.left - o.left) > 1 ||
-            Math.abs(s.top - o.top) > 1 ||
-            Math.abs(s.width - o.width) > 1 ||
-            Math.abs(s.height - o.height) > 1
+            null == d ||
+            Math.abs(d.left - o.left) > 1 ||
+            Math.abs(d.top - o.top) > 1 ||
+            Math.abs(d.width - o.width) > 1 ||
+            Math.abs(d.height - o.height) > 1
         )
             return D("frame moved or resized during capture");
-        if (C(e, s)) return D("Discord UI covered the frame during capture");
-        let d = await F(l, o, a, t.spec);
-        if (null == d) return null;
-        let c = B(e);
-        if (null == c) return D("frame has no resolvable upload url");
-        let f = {
+        if (L(e, d)) return D("Discord UI covered the frame during capture");
+        let c = await F(l, o, u, t.spec);
+        if (null == c) return null;
+        let f = await a;
+        if (null == f) return D("no upload url");
+        let h = {
                 mode: "viewport",
                 bounds: { x: 0, y: 0, width: Math.round(o.width), height: Math.round(o.height) },
                 viewport: { width: Math.round(o.width), height: Math.round(o.height) },
-                scale: Math.round(1e3 * d.scale) / 1e3,
+                scale: Math.round(1e3 * c.scale) / 1e3,
                 devicePixelRatio: window.devicePixelRatio,
                 formFactor: o.width <= 768 ? "narrow" : "wide",
                 ...(null == t.build ? {} : { build: t.build }),
                 source: "native",
             },
-            h = await J(c, t, d.blob, encodeURIComponent(JSON.stringify(f)));
-        if (!h.ok) return D("upload refused", { status: h.status });
+            p = await J(f, t, c.blob, encodeURIComponent(JSON.stringify(h)));
+        if (!p.ok) return D("upload refused", { status: p.status });
         return (
-            $.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
+            $.verbose("native capture uploaded", { id: t.captureId, bytes: c.blob.size, scale: h.scale }),
             { status: "accepted" }
         );
     } catch (e) {
@@ -544,8 +535,9 @@ async function en(e, t) {
 function er() {
     null != Z && ((Z.released = !0), 0 === Z.active && et(Z));
 }
-var ei = n(853555),
-    el = n(873715);
+var ei = n(853555);
+(n(323874), n(14289), n(35956));
+var el = n(873715);
 let eo = null,
     ea = null,
     eu = new Map(),
@@ -742,7 +734,7 @@ async function eb(e, t, r) {
     if (null == s) return { status: "unavailable" };
     let d = null == a ? { uploadToken: void 0 } : await a();
     if (null == d) return { status: "unavailable" };
-    let c = V(s, { captureId: t, spec: l, build: o, uploadToken: d.uploadToken });
+    let c = V(s, { captureId: t, spec: l, build: o, uploadToken: d.uploadToken, resolveUploadUrl: u });
     function f(e) {
         return Promise.race([c, new Promise((t) => setTimeout(() => t(null), e))]);
     }
