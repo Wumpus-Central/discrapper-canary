@@ -86,7 +86,8 @@
 }
 
 .scroller_b1bfc6 {
-    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4))
+    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4));
+    z-index: 2
 }
 
 .topNavSpacer_b1bfc6 {
@@ -787,4 +788,4 @@
     }
 }
 
-/*# sourceMappingURL=209856.90649883e6463a98.css.map*/
+/*# sourceMappingURL=209856.957b69eaa5521e78.css.map*/

@@ -83,6 +83,7 @@
     --custom-spacing: 12px;
     --custom-compact-bar-height: 56px;
     --custom-top-nav-height: calc(var(--custom-compact-bar-height) + 1px);
+    --custom-top-nav-background: color-mix(in oklab, transparent 20%, var(--background-base-lower));
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -96,8 +97,22 @@
     inset-inline-end: var(--space-8);
     inset-inline-start: 0;
     position: absolute;
+    top: 0
+}
+
+.persistentTopNavWithGutter__8e830:before {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: var(--custom-top-nav-background);
+    border-bottom: 1px solid var(--border-normal);
+    content: "";
+    height: var(--custom-compact-bar-height);
+    inset-inline-start: 100%;
+    pointer-events: none;
+    position: absolute;
     top: 0;
-    z-index: 3
+    width: var(--space-8);
+    z-index: 1
 }
 
 .container__594cf {
@@ -171,7 +186,8 @@
 }
 
 .scroller__12335 {
-    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4))
+    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4));
+    z-index: 2
 }
 
 .topNavSpacer__12335 {
@@ -193,4 +209,4 @@
     padding-inline: calc(var(--custom-spacing) + var(--custom-spacing))
 }
 
-/*# sourceMappingURL=77eaab4e1d6d6c09.css.map*/
+/*# sourceMappingURL=74029d22d79a046d.css.map*/

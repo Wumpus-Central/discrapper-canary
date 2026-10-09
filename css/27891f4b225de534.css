@@ -1,10 +1,10 @@
 .header_d9667a {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background-color: color-mix(in oklab, transparent 20%, var(--background-base-lower));
+    background-color: var(--custom-top-nav-background);
     border-bottom: 1px solid var(--border-normal);
     position: relative;
-    z-index: 2
+    z-index: 3
 }
 
 .navRow_d9667a {
@@ -299,4 +299,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=341a2e076c7213b4.css.map*/
+/*# sourceMappingURL=27891f4b225de534.css.map*/
