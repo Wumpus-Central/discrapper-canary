@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 635491, Version Hash: fec2709275f123442dfba969dfa38000cdee51ea`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 635500, Version Hash: 52e5a69216ff7bd8f420e9cb31524bef080c659d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26067,7 +26067,7 @@ let y_ = "isHideDevBanner",
                     className: tE()(yu.Wz, yu.mr),
                     children: [
                         (0, M.jsx)(yc, { className: yu.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635491" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635500" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -33672,10 +33672,10 @@ async function by() {
             n.e("510630"),
             n.e("73662"),
             n.e("192461"),
-        ]).then(n.bind(n, 46975));
+        ]).then(n.bind(n, 596384));
     return (await e, t);
 }
-let bD = (0, tz.qT)({ createPromise: by, webpackId: 46975, name: "Channel", renderLoader: i9.l3 }),
+let bD = (0, tz.qT)({ createPromise: by, webpackId: 596384, name: "Channel", renderLoader: i9.l3 }),
     bv = (0, tz.Fe)({
         createPromise: () => n.e("322270").then(n.bind(n, 816015)),
         webpackId: 816015,
