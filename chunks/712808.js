@@ -7,7 +7,7 @@
     ss: () => eF,
     $S: () => eW,
     Mg: () => e3,
-    cS: () => ex,
+    cS: () => ej,
     R7: () => ey,
     aF: () => eX,
     Lj: () => eE,
@@ -39,7 +39,7 @@
     TP: () => eg,
     M$: () => e0,
     y_: () => eQ,
-    xE: () => ej,
+    xE: () => ex,
     nU: () => eq,
     P6: () => eT,
     _m: () => eP,
@@ -248,13 +248,13 @@ let D = new Map(),
     $ = new Set(),
     L = new Map(),
     H = new Map();
-function j(e, t) {
+function x(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let x = { location: "connection", code: T.xf.SEND_FAILED },
+let j = { location: "connection", code: T.xf.SEND_FAILED },
     B = { location: "agent", code: T.xf.AGENT_ERROR };
 function G(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : x;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : j;
     (o.h.dispatch({
         type: "CONJURE_CHAT_STEP_APPEND",
         projectId: e,
@@ -420,7 +420,7 @@ async function er(e, t) {
                         }),
                             ek.delete(t));
                         let i = n.pendingEvents;
-                        for (let r of ((n.pendingEvents = []), j(t, "open"), i)) e(t, n, r);
+                        for (let r of ((n.pendingEvents = []), x(t, "open"), i)) e(t, n, r);
                         (eo.get(t) ?? 0) > 0 && ei(t, n);
                         let a = n.pendingModelSettings;
                         if (((n.pendingModelSettings = null), null != a))
@@ -712,16 +712,6 @@ async function er(e, t) {
                                     turn: r.turn,
                                     project: r.project,
                                 });
-                        else if ("reaction" === r.kind)
-                            null != r.message_id &&
-                                null != r.emoji &&
-                                "" !== r.emoji &&
-                                o.h.dispatch({
-                                    type: "CONJURE_CHAT_MESSAGE_REACTION",
-                                    projectId: t,
-                                    id: r.message_id,
-                                    emoji: r.emoji,
-                                });
                         else if ("project_named" === r.kind) {
                             let e = k.Ay.getProject(t);
                             null != e &&
@@ -940,10 +930,10 @@ async function er(e, t) {
                 A(t, "Connection closed before the draft arrived"),
                 m(e),
                 t.disposed)
-                    ? j(e, "closed")
+                    ? x(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), j(e, "connecting"), t.backoff.fail(() => es(e)))
-                      : (j(e, "closed"),
+                      ? ((t.reconnectPending = !0), x(e, "connecting"), t.backoff.fail(() => es(e)))
+                      : (x(e, "closed"),
                         Q(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
             },
@@ -953,7 +943,7 @@ async function er(e, t) {
         });
     } catch (n) {
         if ((console.error("[vibegrations] ws open failed", n), t.disposed)) return;
-        (j(e, "failed"),
+        (x(e, "failed"),
             Q(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             v(t, "Connection failed before the publish result arrived"),
@@ -988,7 +978,7 @@ function es(e) {
         (n.debugOnDemand = !1),
         (n.disposed = !1),
         (n.reconnectPending = !1),
-        j(e, "connecting"),
+        x(e, "connecting"),
         er(e, n));
 }
 let eo = new Map();
@@ -1022,7 +1012,7 @@ function el(e) {
         ek.delete(t),
         C.A.releasePreviewControl(e),
         m(e),
-        j(e, "closed"),
+        x(e, "closed"),
         !0)
     );
 }
@@ -1368,17 +1358,17 @@ async function eH(e, t, n, r) {
     if (!a.ok) throw Error(`attachment upload failed (${a.status})`);
     return await a.json();
 }
-class ej extends Error {
+class ex extends Error {
     status;
     constructor(e) {
         (super(`export failed (${e})`), (this.status = e));
     }
 }
-async function ex(e, t) {
+async function ej(e, t) {
     let { ticket: n, baseUrl: r } = await (0, R.d)(e),
         s = new URLSearchParams({ ticket: n, name: t }),
         o = await fetch(`${r}/agent/export?${s}`);
-    if (!o.ok) throw new ej(o.status);
+    if (!o.ok) throw new ex(o.status);
     return await o.blob();
 }
 class eB extends Error {

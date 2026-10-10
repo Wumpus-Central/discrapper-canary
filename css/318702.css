@@ -1017,19 +1017,6 @@
     animation: reminder-leave_e5c405 .18s ease-in
 }
 
-.agentReaction__0d357 {
-    align-items: center;
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-sm);
-    display: inline-flex;
-    padding: 2px var(--space-6)
-}
-
-.agentReaction__0d357:not(:first-child) {
-    margin-top: var(--space-4)
-}
-
 .conjurMessage_a9077e {
     position: relative
 }
@@ -1165,4 +1152,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=584996.a0bac93cb748a876.css.map*/
+/*# sourceMappingURL=318702.5baca2c7dd71b38e.css.map*/
