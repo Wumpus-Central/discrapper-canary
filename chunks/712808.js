@@ -1,49 +1,51 @@
 (n.d(t, {
-    DM: () => eU,
-    tp: () => ep,
-    r2: () => e_,
-    gm: () => eL,
-    n6: () => e2,
-    ss: () => eF,
-    $S: () => eW,
-    Mg: () => e3,
-    cS: () => ej,
-    R7: () => ey,
-    aF: () => eX,
-    Lj: () => eE,
-    Y1: () => eS,
-    JI: () => eK,
-    Vm: () => eV,
-    oX: () => eG,
-    ms: () => eA,
-    TV: () => eh,
-    dv: () => ed,
-    Hc: () => ec,
-    Og: () => e1,
-    Bn: () => e5,
-    XZ: () => eb,
-    bq: () => em,
-    oB: () => ev,
-    ho: () => ez,
-    $D: () => eI,
-    fu: () => eu,
-    Ay: () => e7,
-    $C: () => ef,
-    Rw: () => ea,
-    vX: () => e$,
-    c9: () => eH,
-    ct: () => ew,
-    dz: () => eD,
-    PK: () => eZ,
-    Qe: () => eB,
-    TP: () => eg,
-    M$: () => e0,
-    y_: () => eQ,
-    xE: () => ex,
-    nU: () => eq,
-    P6: () => eT,
-    _m: () => eP,
-    Du: () => eN,
+    DM: () => eI,
+    tp: () => eh,
+    r2: () => eg,
+    gm: () => eB,
+    n6: () => e7,
+    ss: () => eX,
+    $S: () => eQ,
+    Mg: () => e8,
+    cS: () => eq,
+    R7: () => eE,
+    aF: () => e1,
+    Lj: () => eS,
+    Y1: () => eT,
+    VF: () => ew,
+    JI: () => eZ,
+    Vm: () => e0,
+    oX: () => ez,
+    ms: () => eD,
+    TV: () => ef,
+    dv: () => eu,
+    yR: () => em,
+    Hc: () => ed,
+    Og: () => e4,
+    Bn: () => e9,
+    XZ: () => eO,
+    bq: () => ek,
+    oB: () => eJ,
+    ho: () => eV,
+    $D: () => eH,
+    fu: () => ep,
+    Ay: () => tt,
+    $C: () => e_,
+    Rw: () => el,
+    vX: () => ej,
+    c9: () => eW,
+    ct: () => eC,
+    dz: () => eL,
+    PK: () => e2,
+    Qe: () => eF,
+    TP: () => ey,
+    M$: () => e5,
+    y_: () => eY,
+    xE: () => eG,
+    nU: () => eK,
+    P6: () => eR,
+    _m: () => eM,
+    Du: () => eP,
 }),
     n(321073),
     n(508300),
@@ -87,11 +89,11 @@ function E(e, t) {
               p.set(t, { resolve: n, timer: r, projectId: e });
           });
 }
-function m(e) {
+function S(e) {
     for (let [t, n] of [...p]) n.projectId === e && (p.delete(t), clearTimeout(n.timer), n.resolve(null));
     for (let t of [h, f]) for (let [n, r] of [...t]) r.projectId === e && g(t, n);
 }
-var S = n(573083),
+var m = n(573083),
     w = n(855859),
     b = n(371169),
     k = n(42766),
@@ -202,6 +204,14 @@ class O {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "force_compaction", ...(e ? { settle_pending: !0 } : {}) }));
     }
+    sendUndoContextSwitch(e) {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
+        this.socket.send(JSON.stringify({ type: "undo_context_switch", id: e }));
+    }
+    sendSmartContext(e) {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
+        this.socket.send(JSON.stringify({ type: "set_smart_context", enabled: e }));
+    }
     sendRestartSandbox() {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "restart_sandbox" }));
@@ -228,9 +238,9 @@ class O {
         (this.socket?.close(), (this.socket = null));
     }
 }
-var R = n(382541);
+var N = n(382541);
 (n(643210), n(944142), n(714917));
-var N = n(248675),
+var R = n(248675),
     v = n(660183);
 function U(e, t) {
     let n = e.pendingPublish;
@@ -248,15 +258,16 @@ function I(e) {
 let D = new Map(),
     M = new Map(),
     $ = new Set(),
+    H = new Map(),
     L = new Map(),
-    H = new Map();
-function x(e, t) {
+    x = new Map();
+function j(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let j = { location: "connection", code: T.xf.SEND_FAILED },
-    B = { location: "agent", code: T.xf.AGENT_ERROR };
+let B = { location: "connection", code: T.xf.SEND_FAILED },
+    W = { location: "agent", code: T.xf.AGENT_ERROR };
 function G(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : j;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : B;
     (o.h.dispatch({
         type: "CONJURE_CHAT_STEP_APPEND",
         projectId: e,
@@ -264,33 +275,33 @@ function G(e, t) {
     }),
         (0, T.Hy)(e, { ...n, message: t }));
 }
-function W(e) {
+function q(e) {
     return `optimistic:${e}`;
 }
-let q = new Map();
-function F(e, t) {
+let F = new Map();
+function z(e, t) {
     let { content: n, nonce: r, attachments: s } = t;
-    (q.set(r, a.default.getCurrentUser()?.id),
+    (F.set(r, a.default.getCurrentUser()?.id),
         o.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: W(r),
+            id: q(r),
             userId: a.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: s,
         }));
 }
-let z = { steered: !0, queued: !0, restarting: !0, answered: !0 };
-function Q(e, t, n) {
+let Q = { steered: !0, queued: !0, restarting: !0, answered: !0 };
+function K(e, t, n) {
     let r = t.pendingSends;
-    for (let s of ((t.pendingSends = []), r)) (F(e, s), G(e, n));
+    for (let s of ((t.pendingSends = []), r)) (z(e, s), G(e, n));
 }
-function K(e, t) {
+function X(e, t) {
     if (!0 === M.get(e)) return;
     let n = t.pendingSends;
     for (let r of ((t.pendingSends = []), n)) {
-        F(e, r);
+        z(e, r);
         try {
             t.ws.sendUserMessage(
                 r.content,
@@ -307,25 +318,25 @@ function K(e, t) {
 }
 async function V(e, t, n) {
     try {
-        let { ticket: r } = await (0, R.g)(n);
+        let { ticket: r } = await (0, N.g)(n);
         e.ws.sendUpstreamTicketAck(t, r);
     } catch (r) {
         let n = r?.status;
         e.ws.sendUpstreamTicketAck(t, void 0, 403 === n ? "forbidden" : "failed");
     }
 }
-let X = {
+let Y = {
         build_error: { location: "build", code: T.xf.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: T.xf.HEALTHCHECK_FAILED },
         error: { location: "agent", code: T.xf.AGENT_ERROR },
     },
-    Y = {
+    Z = {
         web: { location: "runtime_frame", code: T.xf.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: T.xf.RUNTIME_WORKER_ERROR },
     },
-    Z = new Map(),
-    ee = new Set();
-async function et(e, t, n) {
+    ee = new Map(),
+    et = new Set();
+async function en(e, t, n) {
     let r,
         s = Date.now();
     (console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe }),
@@ -336,7 +347,7 @@ async function et(e, t, n) {
             spec: n.spec,
             build: n.build,
             onAccepted: async () => (t.ws.sendCaptureAck(n.id, "accepted"), await E(e, n.id)),
-            resolveUploadUrl: () => eY(e),
+            resolveUploadUrl: () => e3(e),
         });
     } catch (e) {
         (console.error("[vibegrations] preview capture relay failed", e), (r = { status: "failed" }));
@@ -349,7 +360,7 @@ async function et(e, t, n) {
     }),
         t.ws.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
-async function en(e, t, n) {
+async function er(e, t, n) {
     let r = Date.now();
     console.debug("[vibegrations] control request received", {
         id: n.id,
@@ -374,10 +385,10 @@ async function en(e, t, n) {
             t.ws.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function er(e, t) {
+async function es(e, t) {
     t.ws.close();
     try {
-        let { ticket: n, baseUrl: r } = await (0, R.d)(e);
+        let { ticket: n, baseUrl: r } = await (0, N.d)(e);
         if (t.disposed) return;
         t.ws.open({
             url: r,
@@ -400,7 +411,7 @@ async function er(e, t) {
                     )
                         return void n.pendingEvents.push(r);
                     if ("history_page" === r.type) {
-                        if (r.requested !== ek.get(t) || (ek.delete(t), !0 === r.failed)) return;
+                        if (r.requested !== eN.get(t) || (eN.delete(t), !0 === r.failed)) return;
                         o.h.dispatch({
                             type: "CONJURE_CHAT_HISTORY_PREPEND",
                             projectId: t,
@@ -420,10 +431,10 @@ async function er(e, t) {
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                             degraded: !0 === r.degraded,
                         }),
-                            ek.delete(t));
+                            eN.delete(t));
                         let i = n.pendingEvents;
-                        for (let r of ((n.pendingEvents = []), x(t, "open"), i)) e(t, n, r);
-                        (eo.get(t) ?? 0) > 0 && ei(t, n);
+                        for (let r of ((n.pendingEvents = []), j(t, "open"), i)) e(t, n, r);
+                        (ei.get(t) ?? 0) > 0 && ea(t, n);
                         let a = n.pendingModelSettings;
                         if (((n.pendingModelSettings = null), null != a))
                             try {
@@ -431,29 +442,29 @@ async function er(e, t) {
                             } catch (e) {
                                 console.error("[vibegrations] staged model settings send failed", e);
                             }
-                        K(t, n);
+                        X(t, n);
                     } else if ("chat_state" === r.type)
                         (o.h.dispatch({ type: "CONJURE_CHAT_STOPPED_SET", projectId: t, stopped: r.stopped }),
-                            r.stopped || "open" !== D.get(t) || K(t, n));
+                            r.stopped || "open" !== D.get(t) || X(t, n));
                     else if ("user_message" === r.type) {
                         let e, n, s;
-                        ((n = (e = null != r.nonce && q.has(r.nonce)) && null != r.nonce ? q.get(r.nonce) : void 0),
+                        ((n = (e = null != r.nonce && F.has(r.nonce)) && null != r.nonce ? F.get(r.nonce) : void 0),
                             (s = e && (null == n || null == r.user_id || n === r.user_id)) &&
                                 null != r.nonce &&
-                                q.delete(r.nonce),
+                                F.delete(r.nonce),
                             o.h.dispatch({
                                 type: "CONJURE_CHAT_MESSAGE_APPEND",
                                 projectId: t,
                                 content: r.content,
                                 id: r.id,
-                                ...(s && null != r.nonce ? { optimisticId: W(r.nonce) } : {}),
+                                ...(s && null != r.nonce ? { optimisticId: q(r.nonce) } : {}),
                                 userId: r.user_id,
                                 timestamp: r.ts,
                                 attachments: r.attachments,
                             }));
                     } else if ("message_disposition" === r.type)
                         ((s = r.disposition),
-                            Object.prototype.hasOwnProperty.call(z, s) &&
+                            Object.prototype.hasOwnProperty.call(Q, s) &&
                                 o.h.dispatch({
                                     type: "CONJURE_CHAT_MESSAGE_DISPOSITION",
                                     projectId: t,
@@ -480,6 +491,14 @@ async function er(e, t) {
                     )
                         (o.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: t, event: r }),
                             "app_channel_deleted" !== r.type && (0, b.GO)(t));
+                    else if ("context_switch" === r.type)
+                        (o.h.dispatch({ type: "CONJURE_CHAT_CONTEXT_SWITCH", projectId: t, contextSwitch: r }),
+                            "reverted" === r.status &&
+                                (0, b.tZ)(t, { isPreview: !0 }).catch((e) => {
+                                    console.error("[vibegrations] post-revert refresh failed", t, e);
+                                }));
+                    else if ("smart_context" === r.type)
+                        o.h.dispatch({ type: "CONJURE_SMART_CONTEXT_SET", projectId: t, enabled: r.enabled });
                     else if ("side_reply" === r.type)
                         o.h.dispatch({
                             type: "CONJURE_CHAT_SIDE_REPLY",
@@ -520,7 +539,7 @@ async function er(e, t) {
                                       turnId: r.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : G(t, v.intl.string(N.default["913RMa"]), B);
+                                : G(t, v.intl.string(R.default["913RMa"]), W);
                         } else if ("thinking_lifecycle" === r.kind) {
                             let { phase: e, session: n, seq: s, ticks: i, elapsed_ms: a, text: l } = r;
                             null != e &&
@@ -620,7 +639,7 @@ async function er(e, t) {
                                       turnId: r.turn_id,
                                       patch: { proposal: r.proposal, kind: "proposal" },
                                   })
-                                : G(t, v.intl.string(N.default["0+RUWx"]), B);
+                                : G(t, v.intl.string(R.default["0+RUWx"]), W);
                         else if ("ideas" === r.kind)
                             null != r.ideas &&
                                 r.ideas.length > 0 &&
@@ -793,7 +812,7 @@ async function er(e, t) {
                                   }),
                                   ("build_error" === r.kind || "healthcheck_failed" === r.kind || "error" === r.kind) &&
                                       (0, T.Hy)(t, {
-                                          ...X[r.kind],
+                                          ...Y[r.kind],
                                           message: r.message,
                                           details: "build_error" === r.kind ? r.stderr_tail : void 0,
                                       }),
@@ -804,9 +823,9 @@ async function er(e, t) {
                     else {
                         let e;
                         "capture_preview" === r.type
-                            ? et(t, n, r).catch(() => {})
+                            ? en(t, n, r).catch(() => {})
                             : "control_preview" === r.type
-                              ? en(t, n, r).catch(() => {})
+                              ? er(t, n, r).catch(() => {})
                               : "control_abort" === r.type
                                 ? C.A.abortPreviewControl(t)
                                 : "control_claim" === r.type || "capture_claim" === r.type
@@ -820,8 +839,8 @@ async function er(e, t) {
                                     })(t, r.id, "capture_claim" === r.type ? r.upload_token : void 0)
                                   : "preview_operation" === r.type
                                     ? "begin" === r.phase
-                                        ? ((0, S.pF)(t, "tuning" === r.mode), C.A.beginPreviewOperation(t))
-                                        : ((0, S.pF)(t, !1), C.A.endPreviewOperation(t))
+                                        ? ((0, m.pF)(t, "tuning" === r.mode), C.A.beginPreviewOperation(t))
+                                        : ((0, m.pF)(t, !1), C.A.endPreviewOperation(t))
                                     : "browser_sessions" === r.type
                                       ? o.h.dispatch({
                                             type: "CONJURE_BROWSER_SESSIONS_SET",
@@ -890,8 +909,8 @@ async function er(e, t) {
                                                       (e = c.A.getTimingTrace(i, a)),
                                                       null == e ||
                                                           !(0, d.JQ)(e) ||
-                                                          ee.has(a) ||
-                                                          (ee.add(a),
+                                                          et.has(a) ||
+                                                          (et.add(a),
                                                           console.log(
                                                               "[vibegrations] timing trace",
                                                               JSON.stringify(e),
@@ -914,10 +933,10 @@ async function er(e, t) {
                                                           }),
                                                           (function (e, t) {
                                                               if (!0 === t.historical || "error" !== t.level) return;
-                                                              let n = null != t.source ? Y[t.source] : void 0;
+                                                              let n = null != t.source ? Z[t.source] : void 0;
                                                               if (null == n) return;
-                                                              let r = Z.get(e);
-                                                              null == r && ((r = new Set()), Z.set(e, r));
+                                                              let r = ee.get(e);
+                                                              null == r && ((r = new Set()), ee.set(e, r));
                                                               let s = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
                                                               r.has(s) ||
                                                                   r.size >= 10 ||
@@ -934,13 +953,13 @@ async function er(e, t) {
             onClose: () => {
                 (U(t, "Connection closed before the publish result arrived"),
                 A(t, "Connection closed before the draft arrived"),
-                m(e),
+                S(e),
                 t.disposed)
-                    ? x(e, "closed")
+                    ? j(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), x(e, "connecting"), t.backoff.fail(() => es(e)))
-                      : (x(e, "closed"),
-                        Q(e, t, "Connection closed before the message was sent"),
+                      ? ((t.reconnectPending = !0), j(e, "connecting"), t.backoff.fail(() => eo(e)))
+                      : (j(e, "closed"),
+                        K(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
             },
             onError: (e) => {
@@ -949,8 +968,8 @@ async function er(e, t) {
         });
     } catch (n) {
         if ((console.error("[vibegrations] ws open failed", n), t.disposed)) return;
-        (x(e, "failed"),
-            Q(e, t, n instanceof Error ? n.message : "ws open failed"),
+        (j(e, "failed"),
+            K(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             U(t, "Connection failed before the publish result arrived"),
             A(t, "Connection failed before the draft arrived"),
@@ -961,7 +980,7 @@ async function er(e, t) {
             }));
     }
 }
-function es(e) {
+function eo(e) {
     let t = P.get(e);
     null == t &&
         ((t = {
@@ -984,26 +1003,26 @@ function es(e) {
         (n.debugOnDemand = !1),
         (n.disposed = !1),
         (n.reconnectPending = !1),
-        x(e, "connecting"),
-        er(e, n));
+        j(e, "connecting"),
+        es(e, n));
 }
-let eo = new Map();
-function ei(e, t) {
+let ei = new Map();
+function ea(e, t) {
     t.debugOnDemand && t.ws.sendDebugSubscribe();
 }
-function ea(e) {
-    let t = eo.get(e) ?? 0;
-    eo.set(e, t + 1);
+function el(e) {
+    let t = ei.get(e) ?? 0;
+    ei.set(e, t + 1);
     let n = P.get(e);
     return (
-        0 === t && null != n && "open" === D.get(e) && ei(e, n),
+        0 === t && null != n && "open" === D.get(e) && ea(e, n),
         () => {
-            let t = (eo.get(e) ?? 1) - 1;
-            t > 0 ? eo.set(e, t) : eo.delete(e);
+            let t = (ei.get(e) ?? 1) - 1;
+            t > 0 ? ei.set(e, t) : ei.delete(e);
         }
     );
 }
-function el(e) {
+function ec(e) {
     var t;
     let n = P.get(e);
     return (
@@ -1015,20 +1034,20 @@ function el(e) {
         n.ws.close(),
         P.delete(e),
         (t = e),
-        ek.delete(t),
+        eN.delete(t),
         C.A.releasePreviewControl(e),
-        m(e),
-        x(e, "closed"),
+        S(e),
+        j(e, "closed"),
         !0)
     );
 }
-function ec(e) {
+function ed(e) {
     let t = P.get(e);
-    if (null == t) return void es(e);
+    if (null == t) return void eo(e);
     let n = D.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || es(e);
+    ("closed" !== n && "failed" !== n) || t.reconnectPending || eo(e);
 }
-function ed(e, t, n) {
+function eu(e, t, n) {
     let {
             templateId: r,
             remix: s,
@@ -1047,7 +1066,7 @@ function ed(e, t, n) {
         },
         d = P.get(e);
     if (null != d && ("connecting" === D.get(e) || d.reconnectPending)) return void d.pendingSends.push(c);
-    F(e, c);
+    z(e, c);
     try {
         if (null == d) throw Error("Not connected");
         d.ws.sendUserMessage(
@@ -1061,7 +1080,7 @@ function ed(e, t, n) {
         (console.error("[vibegrations] send failed", t), G(e, t instanceof Error ? t.message : "send failed"));
     }
 }
-function eu(e) {
+function ep(e) {
     let t = P.get(e);
     try {
         if (null == t) throw Error("Not connected");
@@ -1071,7 +1090,7 @@ function eu(e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
 }
-function ep(e, t, n) {
+function eh(e, t, n) {
     try {
         let r = P.get(e);
         if (null == r) throw Error("Not connected");
@@ -1080,7 +1099,7 @@ function ep(e, t, n) {
         console.error(`[vibegrations] ${n} queued message failed`, e);
     }
 }
-function eh(e) {
+function ef(e) {
     let t = !1;
     return new Promise((n, r) => {
         let s = P.get(e);
@@ -1105,7 +1124,7 @@ function eh(e) {
             t && o.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
-function ef(e) {
+function e_(e) {
     return new Promise((t, n) => {
         let r = P.get(e);
         if (null == r) return void n(Error("Not connected"));
@@ -1124,16 +1143,16 @@ function ef(e) {
         }
     });
 }
-function e_(e, t) {
+function eg(e, t) {
     let n = P.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function eg(e) {
+function ey(e) {
     P.get(e)?.ws.sendRefreshBrowserSessions();
 }
-function ey(e) {
+function eE(e) {
     o.h.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId: e });
     let t = P.get(e);
     try {
@@ -1144,7 +1163,7 @@ function ey(e) {
             o.h.dispatch({ type: "CONJURE_DEBUG_STATUS_SET", projectId: e, status: null, failed: !0 }));
     }
 }
-function eE(e) {
+function eS(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     o.h.dispatch({ type: "CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED", projectId: e });
     let n = P.get(e);
@@ -1162,7 +1181,22 @@ function eE(e) {
             }));
     }
 }
-function em(e) {
+function em(e, t) {
+    return eb(e, "undo context switch", (e) => e.sendUndoContextSwitch(t));
+}
+function ew(e, t) {
+    return eb(e, "smart context", (e) => e.sendSmartContext(t));
+}
+function eb(e, t, n) {
+    let r = P.get(e);
+    try {
+        if (null == r) throw Error("Not connected");
+        return (n(r.ws), !0);
+    } catch (e) {
+        return (console.error(`[vibegrations] ${t} send failed`, e), !1);
+    }
+}
+function ek(e) {
     o.h.dispatch({ type: "CONJURE_SANDBOX_RESTART_REQUESTED", projectId: e });
     let t = P.get(e);
     try {
@@ -1179,7 +1213,7 @@ function em(e) {
             }));
     }
 }
-function eS(e, t) {
+function eT(e, t) {
     let n = P.get(e);
     if (null == n) return !1;
     try {
@@ -1188,7 +1222,7 @@ function eS(e, t) {
         return !1;
     }
 }
-function ew(e, t) {
+function eC(e, t) {
     let n = P.get(e);
     try {
         if (null == n) throw Error("Not connected");
@@ -1197,7 +1231,7 @@ function ew(e, t) {
         return (console.error("[vibegrations] live reload send failed", e), !1);
     }
 }
-function eb(e, t) {
+function eO(e, t) {
     let n = P.get(e);
     try {
         if (null == n) throw Error("Not connected");
@@ -1206,22 +1240,22 @@ function eb(e, t) {
         console.error("[vibegrations] model settings send failed", e);
     }
 }
-let ek = new Map();
-function eT(e) {
+let eN = new Map();
+function eR(e) {
     let t = (0, l.bi)(e);
     if (null == t) return !1;
-    if (ek.get(e) === t) return !0;
+    if (eN.get(e) === t) return !0;
     let n = P.get(e);
-    return null != n && "open" === D.get(e) && (ek.set(e, t), n.ws.sendLoadHistory(t), !0);
+    return null != n && "open" === D.get(e) && (eN.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-let eC = new Map(),
-    eO = new Map();
-function eR(e) {
-    let t = eC.get(e);
+let ev = new Map(),
+    eU = new Map();
+function eA(e) {
+    let t = ev.get(e);
     if (null != t && t.expiresAt > Date.now()) return Promise.resolve(t.ticket);
-    let n = eO.get(e);
+    let n = eU.get(e);
     if (null != n) return n;
-    let r = (0, R.d)(e)
+    let r = (0, N.d)(e)
         .then((t) => {
             let n = (function (e) {
                 try {
@@ -1232,15 +1266,15 @@ function eR(e) {
                     return null;
                 }
             })(t.ticket);
-            return (null != n && eC.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
+            return (null != n && ev.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
         })
         .finally(() => {
-            eO.delete(e);
+            eU.delete(e);
         });
-    return (eO.set(e, r), r);
+    return (eU.set(e, r), r);
 }
-async function eN(e) {
-    let { ticket: t, baseUrl: n } = await (0, R.d)(e),
+async function eP(e) {
+    let { ticket: t, baseUrl: n } = await (0, N.d)(e),
         r = new URLSearchParams({ ticket: t }),
         s = await fetch(`${n}/agent/source-history?${r}`);
     if (!s.ok) throw Error(`version history failed (${s.status})`);
@@ -1251,8 +1285,8 @@ async function eN(e) {
         publishedSha: "string" == typeof o.publishedSha ? o.publishedSha : null,
     };
 }
-async function ev(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eJ(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n }),
         o = await fetch(`${r}/agent/source-history/${encodeURIComponent(t)}/restore?${s}`, { method: "POST" });
     if (!o.ok) {
@@ -1269,23 +1303,23 @@ async function ev(e, t) {
         i.entry
     );
 }
-async function eU(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eI(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n, environment: t }),
         o = await fetch(`${r}/agent/database/restore-points?${s}`);
     if (!o.ok) throw Error(`restore points failed (${o.status})`);
     let i = await o.json();
     return Array.isArray(i.restorePoints) ? i.restorePoints : [];
 }
-async function eA(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eD(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n, environment: t }),
         o = await fetch(`${r}/agent/database/restore-window?${s}`);
     if (!o.ok) throw Error(`restore window failed (${o.status})`);
     return await o.json();
 }
-async function eP(e, t, n) {
-    let { ticket: r, baseUrl: s } = await (0, R.d)(e),
+async function eM(e, t, n) {
+    let { ticket: r, baseUrl: s } = await (0, N.d)(e),
         o = new URLSearchParams({ ticket: r }),
         i = await fetch(`${s}/agent/database/restore-points?${o}`, {
             method: "POST",
@@ -1297,7 +1331,7 @@ async function eP(e, t, n) {
     if (null == a.restorePoint) throw Error("restore point create returned nothing");
     return a.restorePoint;
 }
-async function eJ(e, t) {
+async function e$(e, t) {
     var n;
     let r = t.ok && 202 !== t.status ? "" : (await t.text()).trim(),
         s =
@@ -1315,18 +1349,18 @@ async function eJ(e, t) {
         }
     return s;
 }
-async function eI(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eH(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n });
-    return eJ(
+    return e$(
         e,
         await fetch(`${r}/agent/database/restore-points/${encodeURIComponent(t)}/restore?${s}`, { method: "POST" }),
     );
 }
-async function eD(e, t, n) {
-    let { ticket: r, baseUrl: s } = await (0, R.d)(e),
+async function eL(e, t, n) {
+    let { ticket: r, baseUrl: s } = await (0, N.d)(e),
         o = new URLSearchParams({ ticket: r });
-    return eJ(
+    return e$(
         e,
         await fetch(`${s}/agent/database/restore?${o}`, {
             method: "POST",
@@ -1335,15 +1369,15 @@ async function eD(e, t, n) {
         }),
     );
 }
-function eM(e, t) {
+function ex(e, t) {
     return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
 }
-function e$(e, t) {
-    return eH(e, t, t.name, t.type);
+function ej(e, t) {
+    return eW(e, t, t.name, t.type);
 }
-async function eL(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
-        s = await fetch(`${eM(r, "from-url")}?${new URLSearchParams({ ticket: n })}`, {
+async function eB(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
+        s = await fetch(`${ex(r, "from-url")}?${new URLSearchParams({ ticket: n })}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ url: t }),
@@ -1353,10 +1387,10 @@ async function eL(e, t) {
         throw Error(null != o && "error" in o && "string" == typeof o.error ? o.error : "");
     return o;
 }
-async function eH(e, t, n, r) {
-    let { ticket: s, baseUrl: o } = await (0, R.d)(e),
+async function eW(e, t, n, r) {
+    let { ticket: s, baseUrl: o } = await (0, N.d)(e),
         i = new URLSearchParams({ ticket: s, name: n }),
-        a = await fetch(`${eM(o)}?${i}`, {
+        a = await fetch(`${ex(o)}?${i}`, {
             method: "POST",
             headers: { "content-type": "" !== r ? r : "application/octet-stream" },
             body: t,
@@ -1364,37 +1398,37 @@ async function eH(e, t, n, r) {
     if (!a.ok) throw Error(`attachment upload failed (${a.status})`);
     return await a.json();
 }
-class ex extends Error {
+class eG extends Error {
     status;
     constructor(e) {
         (super(`export failed (${e})`), (this.status = e));
     }
 }
-async function ej(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eq(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n, name: t }),
         o = await fetch(`${r}/agent/export?${s}`);
-    if (!o.ok) throw new ex(o.status);
+    if (!o.ok) throw new eG(o.status);
     return await o.blob();
 }
-class eB extends Error {
+class eF extends Error {
     status;
     constructor(e) {
         (super(`remix failed (${e})`), (this.status = e));
     }
 }
-async function eG(e, t) {
-    let [n, r] = await Promise.all([(0, R.g)(e), (0, R.d)(t)]),
+async function ez(e, t) {
+    let [n, r] = await Promise.all([(0, N.g)(e), (0, N.d)(t)]),
         s = new URLSearchParams({ ticket: n.ticket }),
         o = await fetch(`${n.baseUrl}/agent/fork?${s}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: r.ticket }),
         });
-    if (!o.ok) throw new eB(o.status);
+    if (!o.ok) throw new eF(o.status);
 }
-async function eW(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eQ(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n }),
         o = await fetch(`${r}/agent/secrets?${s}`, {
             method: "PUT",
@@ -1403,8 +1437,8 @@ async function eW(e, t) {
         });
     if (!o.ok) throw Error(`secret submission failed (${o.status})`);
 }
-async function eq(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function eK(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n }),
         o = await fetch(`${r}/agent/settings?${s}`, {
             method: "PUT",
@@ -1415,9 +1449,9 @@ async function eq(e, t) {
     let i = await o.json().catch(() => null);
     return { rebuildRequired: i?.rebuild_required === !0 };
 }
-function eF(e) {
+function eX(e) {
     (async function () {
-        let { ticket: t, baseUrl: n } = await (0, R.d)(e),
+        let { ticket: t, baseUrl: n } = await (0, N.d)(e),
             r = new URLSearchParams({ ticket: t }),
             s = await fetch(`${n}/agent/rebuild?${r}`, { method: "POST" });
         s.ok || console.warn("[vibegrations] settings rebuild request failed", e, s.status);
@@ -1425,12 +1459,12 @@ function eF(e) {
         console.warn("[vibegrations] settings rebuild request failed", e, t);
     });
 }
-function ez(e) {
+function eV(e) {
     return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
-async function eQ(e) {
+async function eY(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { ticket: n, baseUrl: r } = await (0, R.d)(e),
+        { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n });
     t && s.set("regenerate", "1");
     let o = await fetch(`${r}/agent/mcp-token?${s}`, { method: "POST" });
@@ -1439,10 +1473,10 @@ async function eQ(e) {
         a = "number" == typeof i.expires_in ? Date.now() + 1e3 * i.expires_in : Date.parse(i.expires_at);
     return { url: i.url, expiresAtMs: a };
 }
-async function eK(e, t) {
+async function eZ(e, t) {
     let n, r;
     try {
-        let { ticket: r, baseUrl: s } = await (0, R.d)(e);
+        let { ticket: r, baseUrl: s } = await (0, N.d)(e);
         n = await fetch(`${s}/agent/external-auth/authorize-url?${new URLSearchParams({ ticket: r })}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -1467,57 +1501,57 @@ async function eK(e, t) {
         ? { type: "url", url: r }
         : { type: "error", error: "unavailable" };
 }
-async function eV(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function e0(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = new URLSearchParams({ ticket: n }),
-        o = await fetch(`${eM(r, t)}?${s}`, { method: "DELETE", keepalive: !0 });
+        o = await fetch(`${ex(r, t)}?${s}`, { method: "DELETE", keepalive: !0 });
     if (!o.ok) throw Error(`attachment cleanup failed (${o.status})`);
 }
-async function eX(e, t) {
-    let { ticket: n, baseUrl: r } = await eR(e),
+async function e1(e, t) {
+    let { ticket: n, baseUrl: r } = await eA(e),
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
 }
-async function eY(e) {
-    let { ticket: t, baseUrl: n } = await eR(e);
+async function e3(e) {
+    let { ticket: t, baseUrl: n } = await eA(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }
-async function eZ(e, t) {
+async function e2(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { ticket: r, baseUrl: s } = await eR(e),
+        { ticket: r, baseUrl: s } = await eA(e),
         o = new URLSearchParams({ ticket: r });
-    return (n && o.set("download", "1"), `${eM(s, t)}?${o}`);
+    return (n && o.set("download", "1"), `${ex(s, t)}?${o}`);
 }
-async function e0(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, R.d)(e),
+async function e5(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, N.d)(e),
         s = await fetch(`${r}/agent/overlay-background?${new URLSearchParams({ ticket: n })}`, {
             method: "PUT",
             body: t,
         });
     if (!s.ok) throw Error(`overlay background upload failed (${s.status})`);
 }
-async function e1(e) {
-    let { ticket: t, baseUrl: n } = await (0, R.d)(e),
+async function e4(e) {
+    let { ticket: t, baseUrl: n } = await (0, N.d)(e),
         r = await fetch(`${n}/agent/overlay-background?${new URLSearchParams({ ticket: t })}`, { method: "DELETE" });
     if (!r.ok) throw Error(`overlay background reset failed (${r.status})`);
 }
-async function e3(e, t) {
-    let { ticket: n, baseUrl: r } = await eR(e);
+async function e8(e, t) {
+    let { ticket: n, baseUrl: r } = await eA(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }
-async function e2(e, t) {
+async function e7(e, t) {
     async function n() {
-        return fetch(await eZ(e, t), { method: "HEAD" });
+        return fetch(await e2(e, t), { method: "HEAD" });
     }
     let r = await n();
-    if ((401 === r.status && (eC.delete(e), (r = await n())), 404 === r.status)) return !1;
+    if ((401 === r.status && (ev.delete(e), (r = await n())), 404 === r.status)) return !1;
     if (!r.ok) throw Error(`attachment availability check failed (${r.status})`);
     return !0;
 }
-function e5(e) {
-    el(e);
+function e9(e) {
+    ec(e);
 }
-class e4 extends s.Ay.Store {
+class e6 extends s.Ay.Store {
     initialize() {
         this.waitFor(l.Ay, c.A, k.Ay, a.default);
     }
@@ -1528,17 +1562,20 @@ class e4 extends s.Ay.Store {
         return M.get(e) ?? !1;
     }
     getModelSettings(e) {
+        return H.get(e) ?? null;
+    }
+    getSmartContext(e) {
         return L.get(e) ?? null;
     }
     getSettings(e) {
-        return H.get(e) ?? null;
+        return x.get(e) ?? null;
     }
     getDeclaredConnections(e) {
-        return H.get(e)?.connections ?? e8;
+        return x.get(e)?.connections ?? te;
     }
 }
-let e8 = [],
-    e7 = new e4(o.h, {
+let te = [],
+    tt = new e6(o.h, {
         CONJURE_CHAT_CONN_STATE: function (e) {
             let { projectId: t, connState: n } = e;
             if (D.get(t) === n) return !1;
@@ -1551,24 +1588,29 @@ let e8 = [],
         },
         CONJURE_MODEL_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n, tierSettings: r, tiers: s, choices: o } = e;
-            L.set(t, { settings: n, tierSettings: r, tiers: s, choices: o });
+            H.set(t, { settings: n, tierSettings: r, tiers: s, choices: o });
         },
         CONJURE_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n } = e;
-            H.set(t, n);
+            x.set(t, n);
+        },
+        CONJURE_SMART_CONTEXT_SET: function (e) {
+            let { projectId: t, enabled: n } = e;
+            if (L.get(t) === n) return !1;
+            L.set(t, n);
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
-            if (!el(t)) return !1;
+            if (!ec(t)) return !1;
         },
         CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of Array.from(P.keys())) null == k.Ay.getProject(e) && el(e) && (t = !0);
+            for (let e of Array.from(P.keys())) null == k.Ay.getProject(e) && ec(e) && (t = !0);
             if (!t) return !1;
         },
         LOGOUT: function () {
             if (0 === P.size) return !1;
-            for (let e of Array.from(P.keys())) el(e);
-            (M.clear(), q.clear(), eC.clear());
+            for (let e of Array.from(P.keys())) ec(e);
+            (M.clear(), F.clear(), ev.clear());
         },
     });
