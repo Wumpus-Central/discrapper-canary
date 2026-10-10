@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"X2xOBn":["Nie uda\u0142o si\u0119 wczyta\u0107 Twoich aplikacji. Spr\xf3buj ponownie."],"KEB4Rm":["Brak"],"4S6iHa":["Na tym serwerze nie ma jeszcze dost\u0119pnych aplikacji"],"TQptZV":["Nie uda\u0142o si\u0119 znale\u017A\u0107 tej aplikacji."],"13FYwI":["Tej aplikacji nie mo\u017Cna uruchomi\u0107 na kanale g\u0142osowym."]}',
+    '{"ZtYyOx":["Widok aplikacji kana\u0142u"],"D+wwh8":["Zamknij aplikacj\u0119 kana\u0142u"],"X2xOBn":["Nie uda\u0142o si\u0119 wczyta\u0107 Twoich aplikacji. Spr\xf3buj ponownie."],"KEB4Rm":["Brak"],"4S6iHa":["Na tym serwerze nie ma jeszcze dost\u0119pnych aplikacji"],"TQptZV":["Nie uda\u0142o si\u0119 znale\u017A\u0107 tej aplikacji."],"wKSjL/":["Ta aplikacja otwiera si\u0119 w ramach kana\u0142u g\u0142osowego, gdy kto\u015B do niego do\u0142\u0105cza."],"AdT7SZ":["Aplikacja kana\u0142u"],"13FYwI":["Tej aplikacji nie mo\u017Cna uruchomi\u0107 na kanale g\u0142osowym."]}',
 );

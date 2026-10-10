@@ -1,1 +1,1 @@
-a.exports = JSON.parse('{"j4n5/K":["Daha Fazla Bilgi Edin"]}');
+a.exports = JSON.parse('{"6bWeWP":["Daha Fazla Bilgi Edin"],"j4n5/K":["Daha Fazla Bilgi Edin"]}');
