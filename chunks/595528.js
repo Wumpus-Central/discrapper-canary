@@ -956,6 +956,7 @@ function eZ(e) {
             title: e.title,
             body: e.body,
             nonce: e.nonce ?? null,
+            badgeCount: e.badge_count ?? null,
         });
     }),
     eH(

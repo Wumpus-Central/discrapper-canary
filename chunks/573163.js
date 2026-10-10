@@ -1951,16 +1951,18 @@ let e5 = new e6(_.h, {
             n.ackMessageId = void 0;
         },
         CONJURE_TURN_SETTLED: function (e) {
-            let { projectId: t, entityId: n } = e,
-                i = ew.get(t, eo.P.CONJURING_PROJECT);
-            ((i._persisted = !0), (i.ackMessageId = n), i.mentionCount++);
+            let { projectId: t, entityId: n, badgeCount: i } = e,
+                r = ew.get(t, eo.P.CONJURING_PROJECT);
+            ((r._persisted = !0), (r.ackMessageId = n), (r.mentionCount = i ?? r.mentionCount + 1));
         },
         CONJURE_PROJECT_ACK: function (e) {
             let { projectId: t } = e,
                 n = ew.getIfExists(t, eo.P.CONJURING_PROJECT);
-            if (null == n || 0 === n.mentionCount) return !1;
-            let i = W.default.fromTimestamp(Date.now());
-            return n.ack({ messageId: i, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
+            if (null == n) return !1;
+            let i = null == n.ackMessageId ? 0 : W.default.getNonTimestampBits(n.ackMessageId);
+            if (0 === n.mentionCount && 0 === i) return !1;
+            let r = W.default.fromTimestamp(Date.now());
+            return n.ack({ messageId: r, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;

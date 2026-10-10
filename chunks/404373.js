@@ -1,54 +1,61 @@
-n.d(t, { E1: () => p, NC: () => g, oF: () => m });
-var r = n(582128),
-    i = n(478104),
-    l = n(17928),
-    a = n(73153),
-    o = n(617617),
-    u = n(573163),
-    s = n(935208),
-    c = n(189714),
-    h = n(148087),
-    d = n(790782);
-function f(e, t, n) {
-    return n || 0 === e
-        ? null
-        : null != t && (s.default.getNonTimestampBits(t) & i.I.NEEDS_INPUT) != 0
-          ? i.I.NEEDS_INPUT
-          : i.I.FINISHED;
+e.d(n, { E1: () => P, NC: () => a, Yl: () => O, tz: () => J });
+var u = e(582128),
+    s = e(17928),
+    C = e(73153),
+    o = e(617617),
+    r = e(573163),
+    c = e(935208),
+    i = e(189714),
+    A = e(148087),
+    N = e(790782);
+function R(t, n) {
+    return t > 0 || (null != n && 0 !== c.default.getNonTimestampBits(n));
 }
-function m(e) {
-    return (0, l.bG)(
-        [u.Ay, o.A],
+function l(t, n, e) {
+    return e || !R(t, n) ? null : t;
+}
+function J(t) {
+    return R(r.Ay.getMentionCount(t, N.P.CONJURING_PROJECT), r.Ay.ackMessageId(t, N.P.CONJURING_PROJECT));
+}
+function O(t) {
+    return (0, s.bG)(
+        [r.Ay, o.A],
         () =>
-            null == e
+            null == t
                 ? null
-                : f(
-                      u.Ay.getMentionCount(e, d.P.CONJURING_PROJECT),
-                      u.Ay.ackMessageId(e, d.P.CONJURING_PROJECT),
-                      (0, c.j)(o.A.settings, e),
+                : l(
+                      r.Ay.getMentionCount(t, N.P.CONJURING_PROJECT),
+                      r.Ay.ackMessageId(t, N.P.CONJURING_PROJECT),
+                      (0, i.j)(o.A.settings, t),
                   ),
-        [e],
+        [t],
     );
 }
-function g() {
-    return (0, l.cf)([u.Ay, o.A], () => {
-        let e = 0,
-            t = 0;
-        for (let n of u.Ay.getResourceIds(d.P.CONJURING_PROJECT)) {
-            let r = f(
-                u.Ay.getMentionCount(n, d.P.CONJURING_PROJECT),
-                u.Ay.ackMessageId(n, d.P.CONJURING_PROJECT),
-                (0, c.j)(o.A.settings, n),
+function a() {
+    return (0, s.cf)([r.Ay, o.A], () => {
+        let t = 0,
+            n = 0;
+        for (let e of r.Ay.getResourceIds(N.P.CONJURING_PROJECT)) {
+            let u = l(
+                r.Ay.getMentionCount(e, N.P.CONJURING_PROJECT),
+                r.Ay.ackMessageId(e, N.P.CONJURING_PROJECT),
+                (0, i.j)(o.A.settings, e),
             );
-            null != r && (e++, r === i.I.NEEDS_INPUT && t++);
+            null != u && (t++, (n += u));
         }
-        return { hasUnread: e > 0, unreadCount: e, badgeCount: t };
+        return { hasUnread: t > 0, unreadCount: t, badgeCount: n };
     });
 }
-function p(e) {
-    let t = (0, l.bG)([u.Ay], () => null != e && u.Ay.getMentionCount(e, d.P.CONJURING_PROJECT) > 0, [e]),
-        n = (0, h.A)();
-    r.useEffect(() => {
-        null != e && t && n && a.h.dispatch({ type: "CONJURE_PROJECT_ACK", projectId: e });
-    }, [e, t, n]);
+function P(t) {
+    let n = (0, s.bG)(
+            [r.Ay],
+            () =>
+                null != t &&
+                R(r.Ay.getMentionCount(t, N.P.CONJURING_PROJECT), r.Ay.ackMessageId(t, N.P.CONJURING_PROJECT)),
+            [t],
+        ),
+        e = (0, A.A)();
+    u.useEffect(() => {
+        null != t && n && e && C.h.dispatch({ type: "CONJURE_PROJECT_ACK", projectId: t });
+    }, [t, n, e]);
 }
