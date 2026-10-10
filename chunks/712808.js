@@ -160,9 +160,11 @@ class O {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "publish" }));
     }
-    sendDraftPatchNotes(e) {
+    sendDraftPatchNotes(e, t) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
-        this.socket.send(JSON.stringify({ type: "draft_patch_notes", nonce: e }));
+        this.socket.send(
+            JSON.stringify({ type: "draft_patch_notes", nonce: e, ...(null != t ? { project_name: t } : {}) }),
+        );
     }
     sendLiveReload(e) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
@@ -1114,7 +1116,7 @@ function ef(e) {
             }, 45e3);
         r.pendingPatchNotesDraft = { resolve: t, reject: n, timeout: o, nonce: s };
         try {
-            r.ws.sendDraftPatchNotes(s);
+            r.ws.sendDraftPatchNotes(s, k.Ay.getProject(e)?.name);
         } catch (e) {
             ((r.pendingPatchNotesDraft = null),
                 clearTimeout(o),

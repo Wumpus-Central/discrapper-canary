@@ -147,12 +147,9 @@ async function j(t, e) {
     let n = await i.Bo.patch({ url: f.Rsh.CONJURE_PROJECT(t), body: e, rejectWithError: !1 });
     return (n.ok && l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
-function m(t, e) {
-    return j(t, e);
-}
-async function B(t, e) {
-    let n = await j(t, { icon: e });
-    if (n.ok) {
+async function m(t, e) {
+    let n = await j(t, e);
+    if (n.ok && (null != e.icon || null != e.description)) {
         let t = n.body.preview_application_id;
         if (null != t)
             try {
@@ -160,6 +157,9 @@ async function B(t, e) {
             } catch {}
     }
     return n;
+}
+function B(t, e) {
+    return m(t, { icon: e });
 }
 function b(t, e) {
     return j(t, e);

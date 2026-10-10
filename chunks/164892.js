@@ -1,34 +1,35 @@
 (n.d(t, {
-    A4: () => P,
-    CA: () => I,
-    Fl: () => d,
-    Hn: () => o,
-    Hv: () => u,
-    IU: () => _,
-    Ju: () => O,
-    Oq: () => R,
-    PY: () => y,
-    RX: () => E,
-    XB: () => m,
-    XE: () => M,
-    Zh: () => l,
-    a7: () => A,
-    aI: () => g,
-    aM: () => h,
+    A4: () => U,
+    CA: () => p,
+    Fl: () => c,
+    HR: () => s,
+    Hn: () => d,
+    Hv: () => _,
+    IU: () => E,
+    Ju: () => R,
+    Oq: () => L,
+    PY: () => D,
+    RX: () => A,
+    XB: () => g,
+    XE: () => P,
+    Zh: () => o,
+    a7: () => h,
+    aI: () => S,
+    aM: () => f,
     c6: () => r,
     eq: () => a,
-    km: () => S,
-    lN: () => N,
-    lO: () => U,
-    o2: () => C,
+    km: () => N,
+    lN: () => C,
+    lO: () => w,
+    o2: () => O,
     q7: () => i,
-    sM: () => L,
-    sj: () => f,
-    sq: () => s,
-    tr: () => c,
-    vC: () => v,
-    wU: () => p,
-    wV: () => T,
+    sM: () => y,
+    sj: () => I,
+    sq: () => l,
+    tr: () => u,
+    vC: () => b,
+    wU: () => T,
+    wV: () => m,
 }),
     n(938796));
 let i = Object.freeze({
@@ -43,44 +44,45 @@ let i = Object.freeze({
     }),
     r = 2,
     a = 128,
-    s = 25,
-    l = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
-function o(e) {
-    return ((e.flags ?? 0) & l.PUBLIC) != 0;
-}
+    s = 400,
+    l = 25,
+    o = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
 function d(e) {
-    return null != e.preview_application_id && e.preview_application_id === e.application_id;
+    return ((e.flags ?? 0) & o.PUBLIC) != 0;
 }
 function c(e) {
-    return ((e.flags ?? 0) & l.SHAREABLE) != 0;
+    return null != e.preview_application_id && e.preview_application_id === e.application_id;
 }
 function u(e) {
+    return ((e.flags ?? 0) & o.SHAREABLE) != 0;
+}
+function _(e) {
     let t = e.supported_surfaces ?? [];
     return t.includes(i.APP_CHANNEL) || ("guild" === e.install_scope && 0 === t.length);
 }
-function _(e) {
+function E(e) {
     return null != e.flags;
 }
-function E(e) {
+function A(e) {
     return null != e.collaborator_role_ids;
 }
-function A(e) {
+function h(e) {
     return Math.floor(100 * e);
 }
-function h(e) {
+function f(e) {
     return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function f(e) {
+function I(e) {
     return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function I(e) {
-    let t = f(e);
+function p(e) {
+    let t = I(e);
     return 0 === t ? 0 : e.cache_read_input_tokens / t;
 }
-function p(e) {
+function T(e) {
     return e ?? { input_tokens: 0, output_tokens: 0, cache_creation_input_tokens: 0, cache_read_input_tokens: 0 };
 }
-function T(e, t) {
+function m(e, t) {
     return {
         input_tokens: e.input_tokens + t.input_tokens,
         output_tokens: e.output_tokens + t.output_tokens,
@@ -88,22 +90,22 @@ function T(e, t) {
         cache_read_input_tokens: e.cache_read_input_tokens + t.cache_read_input_tokens,
     };
 }
-let m = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    g = 5242880,
-    S = 0x3200000,
-    N = 10,
-    C = 36e5;
-function O(e) {
-    return m.has(e) ? g : S;
+let g = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
+    S = 5242880,
+    N = 0x3200000,
+    C = 10,
+    O = 36e5;
+function R(e) {
+    return g.has(e) ? S : N;
 }
-function R(e, t) {
-    return e <= O(t);
+function L(e, t) {
+    return e <= R(t);
 }
-function L(e) {
+function y(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let y = ["simple", "balanced", "complex"],
-    D = [
+let D = ["simple", "balanced", "complex"],
+    v = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" },
@@ -113,14 +115,14 @@ let y = ["simple", "balanced", "complex"],
         { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
-    v = { main: D, subagent: D, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    b = [
+    b = { main: v, subagent: v, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    M = [
         { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
         { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
     ],
-    M = { main: b, subagent: b, thinking: v.thinking },
-    P = { tier: "balanced", provider: "openai" },
-    U = {
+    P = { main: M, subagent: M, thinking: b.thinking },
+    U = { tier: "balanced", provider: "openai" },
+    w = {
         simple: { model: "gpt-6-luna", thinking: "high" },
         balanced: { model: "claude-sonnet-5-5", thinking: "high" },
         complex: { model: "claude-opus-5-5", thinking: "high" },
