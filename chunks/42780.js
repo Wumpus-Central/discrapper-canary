@@ -5,62 +5,62 @@ var n = t(503698),
     s = t.n(n),
     a = t(192308),
     r = t(559106),
-    o = t(22231),
-    c = t(573435),
+    c = t(22231),
+    o = t(573435),
     d = t(946274),
     u = t(145497),
     m = t(263908),
     x = t(123213),
-    v = t(963402),
-    g = t(649640),
-    h = t(339984),
-    I = t(660183),
-    j = t(377476);
+    I = t(86376),
+    h = t(649640),
+    v = t(339984),
+    j = t(660183),
+    g = t(377476);
 function A(e) {
     let { profile: l, className: t } = e,
-        n = (0, g._3)(l);
+        n = (0, h._3)(l);
     return null != n
-        ? (0, i.jsx)("div", { className: s()(t, j.vK), style: { background: n } })
+        ? (0, i.jsx)("div", { className: s()(t, g.vK), style: { background: n } })
         : (0, i.jsx)(N, { profile: l, className: t });
 }
 function N(e) {
     let { profile: l, className: t } = e,
-        n = (0, g.b2)(),
-        a = (0, g.aG)({ profile: l, defaultColor: n.hex(), forceDefaultColor: null != l.brandColorPrimary }),
+        n = (0, h.b2)(),
+        a = (0, h.aG)({ profile: l, defaultColor: n.hex(), forceDefaultColor: null != l.brandColorPrimary }),
         r = l.brandColorPrimary ?? a;
-    return (0, i.jsx)("div", { className: s()(t, j.vK), style: { background: (0, g.n6)(r) } });
+    return (0, i.jsx)("div", { className: s()(t, g.vK), style: { background: (0, h.n6)(r) } });
 }
 function f(e) {
     let { profile: l, onIconChange: n } = e;
     return null == n
         ? (0, i.jsx)("div", {
-              className: j.H,
-              children: (0, i.jsx)(c.Ay, {
-                  mask: c.hW.CLAN_ICON,
+              className: g.H,
+              children: (0, i.jsx)(o.Ay, {
+                  mask: o.hW.CLAN_ICON,
                   width: 70,
                   height: 70,
                   children: (0, i.jsx)("div", {
-                      className: j.R3,
+                      className: g.R3,
                       children: (0, i.jsx)(u.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
                   }),
               }),
           })
         : (0, i.jsx)("div", {
-              className: j.H,
+              className: g.H,
               children: (0, i.jsx)(r.vN, {
                   within: !0,
-                  children: (0, i.jsx)(c.Ay, {
-                      mask: c.hW.CLAN_ICON,
+                  children: (0, i.jsx)(o.Ay, {
+                      mask: o.hW.CLAN_ICON,
                       width: 70,
                       height: 70,
                       children: (0, i.jsxs)("div", {
-                          className: s()(j.R3, j.vk),
+                          className: s()(g.R3, g.vk),
                           children: [
                               (0, i.jsx)(u.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
-                              (0, i.jsx)("div", { className: j.Lw }),
-                              (0, i.jsx)(o.PencilIcon, {
+                              (0, i.jsx)("div", { className: g.Lw }),
+                              (0, i.jsx)(c.PencilIcon, {
                                   size: "custom",
-                                  className: j.QY,
+                                  className: g.QY,
                                   width: 20,
                                   height: 20,
                                   color: "white",
@@ -102,7 +102,7 @@ function f(e) {
                                               ]).then(t.bind(t, 142630));
                                               return (t) =>
                                                   (0, i.jsx)(s, {
-                                                      uploadType: h.HL.GUILD_ICON,
+                                                      uploadType: v.HL.GUILD_ICON,
                                                       imageUri: e,
                                                       file: l,
                                                       onCrop: (e) => {
@@ -113,7 +113,7 @@ function f(e) {
                                                   });
                                           }, {});
                                   },
-                                  "aria-label": I.intl.string(I.t.r3JdsT),
+                                  "aria-label": j.intl.string(j.t.r3JdsT),
                               }),
                           ],
                       }),
@@ -128,20 +128,20 @@ function C(e) {
             className: n,
             disableCTA: a,
             CTAOverride: r,
-            onClose: o,
-            disableGuildNameClick: c,
+            onClose: c,
+            disableGuildNameClick: o,
         } = e,
         d = null;
     return (
-        null != r ? (d = r) : a || (d = (0, i.jsx)(x.A, { profile: l, onComplete: o })),
+        null != r ? (d = r) : a || (d = (0, i.jsx)(x.A, { profile: l, onComplete: c })),
         (0, i.jsxs)("div", {
-            className: s()(j.kL, n),
+            className: s()(g.kL, n),
             children: [
                 (0, i.jsx)(A, { profile: l }),
                 (0, i.jsx)(f, { onIconChange: t, profile: l }),
-                (0, i.jsx)(v.A, { profile: l, disableGuildNameClick: c }),
+                (0, i.jsx)(I.A, { profile: l, disableGuildNameClick: o }),
                 (0, i.jsx)(m.P, { profile: l }),
-                null != d && (0, i.jsx)("div", { className: j.UD, children: d }),
+                null != d && (0, i.jsx)("div", { className: g.UD, children: d }),
             ],
         })
     );
