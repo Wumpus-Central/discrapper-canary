@@ -185,17 +185,20 @@ function F(t) {
                                       : null,
                               ],
                           }),
-                          trailing: o
-                              ? null
-                              : (0, l.jsx)(m.$, {
-                                    variant: "secondary",
-                                    size: "sm",
-                                    text: V.intl.string(R.default["1NAPyC"]),
-                                    "aria-label": V.intl.formatToPlainString(R.default["2KgEnm"], { title: e.short }),
-                                    disabled: n,
-                                    onClick: () =>
-                                        (0, I.F)({ matchingBackup: (0, T.y0)(t, a), onConfirm: (e) => r(t, e) }),
-                                }),
+                          trailing:
+                              o || !1 === t.restorable
+                                  ? null
+                                  : (0, l.jsx)(m.$, {
+                                        variant: "secondary",
+                                        size: "sm",
+                                        text: V.intl.string(R.default["1NAPyC"]),
+                                        "aria-label": V.intl.formatToPlainString(R.default["2KgEnm"], {
+                                            title: e.short,
+                                        }),
+                                        disabled: n,
+                                        onClick: () =>
+                                            (0, I.F)({ matchingBackup: (0, T.y0)(t, a), onConfirm: (e) => r(t, e) }),
+                                    }),
                       },
                       t.sha,
                   );
