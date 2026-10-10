@@ -10023,11 +10023,11 @@ let uL = {
     };
 function u$(e) {
     let { projectId: t } = e,
-        { state: n, load: l } = {
+        { state: n } = {
             state: (0, d.bG)([i2.A], () => i2.A.getGitInfoState(t), [t]),
             load: i.useCallback(() => (0, ee.DK)(t), [t]),
         },
-        r = (function (e) {
+        l = (function (e) {
             let { pending: t, error: n, info: l, observedAt: r } = e;
             if (t) return { line: "Reading the repository", critical: !1 };
             if (null != n) return { line: n, critical: !0 };
@@ -10061,26 +10061,16 @@ function u$(e) {
     return (0, a.jsxs)(us, {
         title: "Git",
         children: [
-            (0, a.jsxs)("div", {
+            (0, a.jsx)("div", {
                 className: uR.Lj,
-                children: [
-                    (0, a.jsx)(w.$, {
-                        variant: "secondary",
-                        size: "sm",
-                        icon: t8.RefreshIcon,
-                        text: null != n.info ? "Refresh" : "Load Git Info",
-                        loading: n.pending,
-                        disabled: n.pending,
-                        onClick: l,
+                children:
+                    "" !== l.line &&
+                    (0, a.jsx)(v.E, {
+                        variant: "text-xs/normal",
+                        role: "status",
+                        color: l.critical ? "text-feedback-critical" : "text-muted",
+                        children: l.line,
                     }),
-                    "" !== r.line &&
-                        (0, a.jsx)(v.E, {
-                            variant: "text-xs/normal",
-                            role: "status",
-                            color: r.critical ? "text-feedback-critical" : "text-muted",
-                            children: r.line,
-                        }),
-                ],
             }),
             null != n.info &&
                 (function (e) {
@@ -11163,21 +11153,20 @@ function u7(e) {
         l = eH(),
         [r, s] = i.useState(() => (l && eG?.projectId === t ? "trace" : "logs")),
         o = (0, d.bG)([i2.A], () => i2.A.getStatus(t), [t]),
-        u = (0, d.bG)([i2.A], () => i2.A.getFetchState(t), [t]);
-    (i.useEffect(() => {
-        (0, ee.R7)(t);
-    }, [t]),
-        i.useEffect(() => (0, ee.Rw)(t), [t]));
-    let c = i.useCallback(() => (0, ee.R7)(t), [t]),
-        f = i.useCallback(() => {
-            if (!l) return !1;
-            let e = (function (e) {
-                if (null == eG || eG.projectId !== e) return null;
-                let { traceId: t } = eG;
-                return ((eG = null), t);
-            })(t);
-            return null != e && (o0(t, e), !0);
-        }, [t, l]);
+        u = (0, d.bG)([i2.A], () => i2.A.getFetchState(t), [t]),
+        c = i.useCallback(() => {
+            ((0, ee.R7)(t), (0, ee.DK)(t));
+        }, [t]);
+    (i.useEffect(() => c(), [c]), i.useEffect(() => (0, ee.Rw)(t), [t]));
+    let f = i.useCallback(() => {
+        if (!l) return !1;
+        let e = (function (e) {
+            if (null == eG || eG.projectId !== e) return null;
+            let { traceId: t } = eG;
+            return ((eG = null), t);
+        })(t);
+        return null != e && (o0(t, e), !0);
+    }, [t, l]);
     (i.useEffect(() => {
         f();
     }, [f]),
