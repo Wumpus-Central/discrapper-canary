@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 635418, Version Hash: 52d83d4904d0858abe064dfd5934361c3f4e5b32`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 635420, Version Hash: 25cd09b36fcb1b351ddaf2693a5bac3b799951b5`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26118,7 +26118,7 @@ let y_ = "isHideDevBanner",
                     className: tE()(yu.Wz, yu.mr),
                     children: [
                         (0, M.jsx)(yc, { className: yu.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635418" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635420" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -42394,46 +42394,49 @@ let Gq = new Set(["channels", "users", "events"]),
     GJ = new Set([w5.AM, w5.eK]),
     G0 = new WeakMap();
 async function G1(e, t) {
-    let i =
-        null !=
-        (function (e) {
-            try {
-                return wB(e);
-            } catch (e) {
-                if (e instanceof wP.A) return null;
-                throw e;
-            }
-        })(e)
-            ? (function (e) {
-                  let t,
-                      n = z.A.toURLSafe(e);
-                  if (null == n) return null;
-                  let { protocol: i, host: r, hostname: a } = n;
-                  if (z.A.isDiscordProtocol(i))
-                      t = (function (e) {
-                          let { hostname: t, pathname: n } = e;
-                          return GQ.has(t) || z.A.isDiscordHostname(t)
-                              ? n.startsWith("/")
-                                  ? n
-                                  : `/${n}`
-                              : `/${t}${n}`;
-                      })(n);
-                  else {
-                      if (!(z.A.isDiscordHostname(a) || z.A.isDiscordLocalhost(r, a))) return null;
-                      t = n.pathname;
-                  }
-                  let [, s] = t.split("/");
-                  return null != s && Gq.has(s) ? `https://discord.com${t}${n.search}${n.hash}` : null;
-              })(t)
-            : null;
+    let i = ax.A.getApplication(e.application?.id),
+        r = (0, nj.H)(nL.Ay.getCurrentEmbeddedActivity()?.location),
+        a = eB.isPlatformEmbedded ? (0, GY.Ay)({ application: i, channelId: r }) : void 0,
+        s =
+            null !=
+            (function (e) {
+                try {
+                    return wB(e);
+                } catch (e) {
+                    if (e instanceof wP.A) return null;
+                    throw e;
+                }
+            })(e)
+                ? (function (e) {
+                      let t,
+                          n = z.A.toURLSafe(e);
+                      if (null == n) return null;
+                      let { protocol: i, host: r, hostname: a } = n;
+                      if (z.A.isDiscordProtocol(i))
+                          t = (function (e) {
+                              let { hostname: t, pathname: n } = e;
+                              return GQ.has(t) || z.A.isDiscordHostname(t)
+                                  ? n.startsWith("/")
+                                      ? n
+                                      : `/${n}`
+                                  : `/${t}${n}`;
+                          })(n);
+                      else {
+                          if (!(z.A.isDiscordHostname(a) || z.A.isDiscordLocalhost(r, a))) return null;
+                          t = n.pathname;
+                      }
+                      let [, s] = t.split("/");
+                      return null != s && Gq.has(s) ? `https://discord.com${t}${n.search}${n.hash}` : null;
+                  })(t)
+                : null;
     if (
-        null != i &&
-        (eB.isPlatformEmbedded && GX.A.focus(null, !0),
+        null != s &&
+        (null != a && GX.A.focus(null, !0),
         (function (e) {
             let { default: t } = n(983555),
                 i = t(e);
             return null != i && !0 === i(null);
-        })(i))
+        })(s))
     )
         return (
             W.default.track(j.HAw.RPC_OPEN_EXTERNAL_LINK_CALLED, {
@@ -42443,16 +42446,9 @@ async function G1(e, t) {
             }),
             { opened: !0 }
         );
-    let r = nL.Ay.getCurrentEmbeddedActivity();
     try {
         let n = new URL(t).toString();
-        if (eB.isPlatformEmbedded) {
-            let e = (0, no.f)() ? j.MLl.ACTIVITY_POPOUT : null;
-            GX.A.focus(e, !0);
-        }
-        let i = ax.A.getApplication(e.application?.id),
-            a = (0, nj.H)(r?.location);
-        if (await Gz(i?.id, n))
+        if ((null != a && GX.A.focus(a, !0), await Gz(i?.id, n)))
             return (
                 (0, as.A)(n),
                 W.default.track(j.HAw.RPC_OPEN_EXTERNAL_LINK_CALLED, {
@@ -42491,7 +42487,7 @@ async function G1(e, t) {
                 (function (e) {
                     let { application: t, channelId: n } = e;
                     return null != (0, GY.Ay)({ application: t, channelId: n }) ? GW.KX : GW.SY;
-                })({ application: i, channelId: a }),
+                })({ application: i, channelId: r }),
             ),
         );
     } catch (e) {
