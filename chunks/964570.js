@@ -234,12 +234,12 @@ var eD = n(780964),
     e2 = n(953932),
     e3 = n(280483),
     e5 = n(890856),
-    e6 = n(713517),
-    e7 = n(609174),
+    e7 = n(713517),
+    e6 = n(609174),
     e8 = n(619744);
 function e4(e) {
     let { onBeforeEdit: t, variant: n = "primary" } = e,
-        a = (0, e7.Y_)(),
+        a = (0, e6.Y_)(),
         r = l.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), t?.(), (0, eH.p)({ initialEditingClipId: a.id }));
@@ -263,11 +263,11 @@ var e9 = n(82716),
 let tl = l.memo(function (e) {
     let { clip: t, isNew: n, onClose: a, className: s } = e,
         o = l.useRef(null),
-        { isHoveringOrFocusing: d } = (0, e6.A)(o),
+        { isHoveringOrFocusing: d } = (0, e7.A)(o),
         u = l.useCallback(() => {
             (a?.(), (0, eH.p)({ initialEditingClipId: t.id }));
         }, [t.id, a]);
-    return (0, i.jsx)(e7.Cl, {
+    return (0, i.jsx)(e6.Cl, {
         clip: t,
         children: (0, i.jsx)(e5.s, {
             ref: o,
@@ -690,8 +690,8 @@ function t5(e) {
           })
         : null;
 }
-var t6 = n(394816),
-    t7 = n(442228),
+var t7 = n(394816),
+    t6 = n(442228),
     t8 = n(885386),
     t4 = n(362862),
     t9 = n(621466),
@@ -1395,7 +1395,7 @@ function n0(e) {
         x = (0, tG.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, tU.A)(A, p, nF.R7.ACCOUNT_POPOUT);
     let { ref: E } = (0, eS.Ay)(),
-        { isHoveringOrFocusing: C, isHovering: _ } = (0, e6.A)(E);
+        { isHoveringOrFocusing: C, isHovering: _ } = (0, e7.A)(E);
     (l.useEffect(() => {
         a?.(E.current);
     }, [E, a]),
@@ -1675,7 +1675,7 @@ function n0(e) {
                                                 avatarSize: nQ.T[nX.d.POPOUT].avatarSize,
                                                 onOpenProfile: f ? void 0 : z,
                                             }),
-                                            (0, i.jsx)(t6.A, {
+                                            (0, i.jsx)(t7.A, {
                                                 ref: P,
                                                 user: t,
                                                 themeType: nX.d.POPOUT,
@@ -1706,7 +1706,7 @@ function n0(e) {
                                                 }),
                                             }),
                                             (0, i.jsx)(tK.A, { isPremiumUser: k, onInteraction: n }),
-                                            (0, i.jsx)(t7.A, {
+                                            (0, i.jsx)(t6.A, {
                                                 userId: t.id,
                                                 userBio: p?.bio,
                                                 hidePersonalInformation: S,
@@ -1912,8 +1912,8 @@ var n1 = n(518293),
     n2 = n(655116),
     n3 = n(438140),
     n5 = n(454719),
-    n6 = n(342296),
-    n7 = n(852712),
+    n7 = n(342296),
+    n6 = n(852712),
     n8 = n(389960),
     n4 = n(173660),
     n9 = n(616356),
@@ -2356,8 +2356,8 @@ var iX = n(348858),
     i2 = n(829773),
     i3 = n(42473),
     i5 = n(731854),
-    i6 = n(516171),
-    i7 = n(577755);
+    i7 = n(516171),
+    i6 = n(577755);
 function i8(e) {
     let {
             selfDeaf: t,
@@ -2413,12 +2413,12 @@ function i8(e) {
                         m = c ? iJ.t : i0.a;
                     return (0, i.jsxs)("div", {
                         ref: _,
-                        className: r()(i6.Lh, { [i6.v8]: h, [i6.q6]: c }),
+                        className: r()(i7.Lh, { [i7.v8]: h, [i7.q6]: c }),
                         children: [
                             (0, i.jsx)(i3.A, {
                                 "aria-checked": h,
                                 "aria-label": eO.intl.string(eO.t.wjcRFX),
-                                className: i6.eT,
+                                className: i7.eT,
                                 disabled: a,
                                 icon: (0, i.jsx)(v, {
                                     size: "custom",
@@ -2427,8 +2427,8 @@ function i8(e) {
                                     color: h ? nf.A.colors.ICON_VOICE_MUTED : "currentColor",
                                     className: o,
                                 }),
-                                iconForeground: h ? i7.o : void 0,
-                                innerClassName: r()({ [i7.T]: n }),
+                                iconForeground: h ? i6.o : void 0,
+                                innerClassName: r()({ [i6.T]: n }),
                                 onClick: s,
                                 onContextMenu: l,
                                 onMouseEnter: g,
@@ -2439,10 +2439,10 @@ function i8(e) {
                                 tooltipText: E,
                             }),
                             (0, i.jsx)(i3.A, {
-                                className: r()(i6.UT, { [i6.q6]: c }),
+                                className: r()(i7.UT, { [i7.q6]: c }),
                                 disabled: a,
                                 icon: (0, i.jsx)(m, {
-                                    className: i6.$$,
+                                    className: i7.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
@@ -2521,7 +2521,7 @@ function ld(e) {
         I = (0, d.bG)([li], () => li.getIsTutorialActive(ll.v.MUTE_TUTORIAL)),
         S = (0, d.bG)([ia.A], () => null != ia.A.getChannelId()),
         { name: b } = (0, ec.x5)(i5.oh.AUDIO_INPUT),
-        { enabledInputProfiles: y } = (0, n7.d)({ location: "MicrophoneButton" }),
+        { enabledInputProfiles: y } = (0, n6.d)({ location: "MicrophoneButton" }),
         N = l.useRef(null),
         j = n || s || a,
         R = (0, i4.L)(j ? "unmute" : "mute"),
@@ -2578,12 +2578,12 @@ function ld(e) {
                         s = a ? iJ.t : i0.a;
                     return (0, i.jsxs)("div", {
                         ref: N,
-                        className: r()(i6.Lh, { [i6.v8]: j, [i6.q6]: a }),
+                        className: r()(i7.Lh, { [i7.v8]: j, [i7.q6]: a }),
                         children: [
                             (0, i.jsx)(i3.A, {
                                 "aria-checked": j,
                                 "aria-label": eO.intl.string(eO.t.w4m945),
-                                className: i6.eT,
+                                className: i7.eT,
                                 disabled: o,
                                 icon: (0, i.jsx)(D, { size: "custom", width: 20, height: 20, color: G, className: u }),
                                 onClick: V,
@@ -2604,10 +2604,10 @@ function ld(e) {
                                 "aria-label": v
                                     ? eO.intl.formatToPlainString(eO.t["18wnuD"], { inputDeviceName: b })
                                     : eO.intl.string(eO.t.fRzCbB),
-                                className: r()(i6.UT, { [i6.q6]: a }),
+                                className: r()(i7.UT, { [i7.q6]: a }),
                                 disabled: o,
                                 icon: (0, i.jsx)(s, {
-                                    className: i6.$$,
+                                    className: i7.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
@@ -2796,7 +2796,7 @@ function ly(e) {
         }, [r]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lb.A)("1791621732604", !0);
+        let e = (0, lb.A)("1791643967504", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -2902,12 +2902,12 @@ function lw(e) {
         ? null
         : (0, i.jsx)(E.A, {
               object: tr.ZSU.AVATAR,
-              children: (0, i.jsx)(n6.A, {
+              children: (0, i.jsx)(n7.A, {
                   user: o,
                   targetElementRef: C,
                   clickTrap: !0,
                   preload: () =>
-                      (0, n5.A)(o.id, o.getAvatarURL(void 0, n6.S), {
+                      (0, n5.A)(o.id, o.getAvatarURL(void 0, n7.S), {
                           type: "account_popout",
                           withMutualGuilds: !1,
                           withMutualFriends: !1,
@@ -3201,7 +3201,8 @@ class lk extends l.PureComponent {
                     n.e("302458"),
                     n.e("556436"),
                     n.e("256172"),
-                    n.e("945210"),
+                    n.e("102137"),
+                    n.e("375971"),
                     n.e("655282"),
                     n.e("792818"),
                     n.e("861161"),
@@ -3785,7 +3786,7 @@ class lk extends l.PureComponent {
             (0, x.L3)(e, async () => {
                 let { default: e } = await Promise.all([n.e("360536"), n.e("678827")]).then(n.bind(n, 385318));
                 return () => {
-                    let { enabledInputProfiles: n } = (0, n7.d)({ location: "Account" });
+                    let { enabledInputProfiles: n } = (0, n6.d)({ location: "Account" });
                     return (0, i.jsx)(O.f5, {
                         value: t,
                         children: (0, i.jsx)(e, {

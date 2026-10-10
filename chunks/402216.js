@@ -1,28 +1,28 @@
-s.d(e, { Ay: () => E, ed: () => R, gv: () => u, u1: () => c });
-var i,
-    l = s(477900);
+s.d(t, { Ay: () => p, ed: () => c, gv: () => R });
+var l,
+    a = s(477900);
 s(582128);
-var r = s(503698),
-    a = s.n(r),
+var i = s(503698),
+    r = s.n(i),
     A = s(661531),
-    n = s(812993),
-    d = s(660183),
-    o = s(874888),
-    u = (((i = {}).RED = "RED"), (i.GRAY = "GRAY"), i);
-let R = { LARGE: o.Kp, SMALL: o.qx },
-    c = { [n.EG.ROUND]: o.qG, [n.EG.ROUND_LEFT]: o.HZ, [n.EG.ROUND_RIGHT]: o.q5, [n.EG.SQUARE]: "" };
-function p(t) {
-    let { className: e, style: s, shape: i = n.EG.ROUND, look: r = "RED", size: u = R.LARGE, count: p } = t,
-        E = null != p && p > 1 ? d.intl.format(d.t.hOnBrr, { count: p }) : d.intl.string(d.t.dI3q4h);
-    return "RED" === r
-        ? (0, l.jsx)(n.Lp, {
-              text: E,
-              className: a()(e, o.VD, u),
+    n = s(286134),
+    o = s(660183),
+    d = s(874888),
+    R = (((l = {}).RED = "RED"), (l.GRAY = "GRAY"), l);
+let c = n.oY;
+function u(e) {
+    let { className: t, style: s, shape: l, look: i = "RED", size: R = c.LARGE, count: u } = e,
+        p = null != u && u > 1 ? o.intl.format(o.t.hOnBrr, { count: u }) : o.intl.string(o.t.dI3q4h);
+    return "RED" === i
+        ? (0, a.jsx)(n.Ay, {
+              text: p,
+              className: t,
               color: A.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-              shape: c[i],
+              shape: l,
+              size: R,
               style: s,
           })
-        : (0, l.jsx)(n.Lp, { text: E, className: a()(e, o.VD, u, o.Oh), disableColor: !0, shape: c[i], style: s });
+        : (0, a.jsx)(n.Ay, { text: p, className: r()(t, d.O), disableColor: !0, shape: l, size: R, style: s });
 }
-((p.Looks = u), (p.Sizes = R));
-let E = p;
+((u.Looks = R), (u.Sizes = c));
+let p = u;

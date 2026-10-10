@@ -1,4 +1,4 @@
-a.d(t, { A: () => Y });
+a.d(t, { A: () => W });
 var s = a(477900),
     l = a(582128),
     r = a(503698),
@@ -7,153 +7,154 @@ var s = a(477900),
     c = a(23339),
     o = a(17928),
     _ = a(661531),
-    u = a(319060),
+    d = a(319060),
     p = a(192308),
-    d = a(403581),
-    E = a(866665),
-    A = a(939249),
-    m = a(812993),
-    y = a(844222),
-    I = a(866323),
-    R = a(717421),
-    x = a(212245),
-    T = a(688810),
-    L = a(402216),
-    O = a(10392),
+    u = a(403581),
+    A = a(866665),
+    E = a(939249),
+    m = a(844222),
+    y = a(866323),
+    I = a(717421),
+    R = a(212245),
+    x = a(688810),
+    T = a(402216),
+    L = a(10392),
     S = a(82498),
-    h = a(287809),
-    U = a(174459),
-    D = a(158045),
-    N = a(650338),
-    f = a(821715),
+    O = a(287809),
+    h = a(174459),
+    U = a(158045),
+    D = a(650338),
+    N = a(821715),
+    f = a(286134),
     C = a(652215),
     M = a(202541),
     P = a(660183),
     b = a(288507);
-let j = (0, c.xI)(u.A.LIVE_INDICATOR_BORDER_RADIUS),
+let j = (0, c.xI)(d.A.LIVE_INDICATOR_BORDER_RADIUS),
     k = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
     V = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
     v = { opacity: 0 },
     g = { opacity: 1 },
     w = { borderRadius: `${j}px ${j}px ${j}px ${j}px` },
     H = { borderRadius: `0px ${j}px ${j}px 0px` },
-    G = { mass: 1, tension: 500, friction: 18, clamp: !0 };
-function W(e) {
+    Q = { mass: 1, tension: 500, friction: 18, clamp: !0 };
+function Y(e) {
     let t,
         r,
         {
             participant: n,
             isUpsellEnabled: c,
-            shape: u,
-            size: y,
-            didTrackUpsellViewed: I,
-            setDidTrackUpsellViewed: R,
-            className: j,
-            premiumIndicator: k,
-            quality: V,
+            shape: d,
+            size: m,
+            didTrackUpsellViewed: y,
+            setDidTrackUpsellViewed: I,
+            className: T,
+            premiumIndicator: j,
+            quality: k,
         } = e,
-        { analyticsLocations: v } = (0, T.Ay)(),
-        g = null != (0, f.A)(n);
+        { analyticsLocations: V } = (0, x.Ay)(),
+        v = null != (0, N.A)(n);
     try {
-        t = (0, N.HB)(V);
+        t = (0, D.HB)(k);
     } catch (e) {
         t = !1;
     }
     try {
-        r = (0, N.OI)(V);
+        r = (0, D.OI)(k);
     } catch (e) {
         r = !1;
     }
-    let w = t || r,
-        { location: H } = (0, x.p)(),
-        G = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
-        W = c && !D.Ay.isPremium(G, M.PremiumTypes.TIER_1) && !D.Ay.canStreamQuality(D.Ay.StreamQuality.MID, G),
+    let g = t || r,
+        { location: w } = (0, R.p)(),
+        H = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
+        Q = c && !U.Ay.isPremium(H, M.PremiumTypes.TIER_1) && !U.Ay.canStreamQuality(U.Ay.StreamQuality.MID, H),
         Y = l.useCallback(() => {
-            W &&
-                w &&
+            Q &&
+                g &&
                 (0, p.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([a.e("493475"), a.e("18630")]).then(a.bind(a, 826789));
-                    return (t) => (0, s.jsx)(e, { ...t, analyticsSource: H });
+                    return (t) => (0, s.jsx)(e, { ...t, analyticsSource: w });
                 });
-        }, [W, w, H]);
+        }, [Q, g, w]);
     if (
         (l.useEffect(() => {
-            !I &&
-                w &&
-                (U.default.track(C.HAw.PREMIUM_UPSELL_VIEWED, {
+            !y &&
+                g &&
+                (h.default.track(C.HAw.PREMIUM_UPSELL_VIEWED, {
                     type: M.e.STREAM_QUALITY_INDICATOR,
                     has_premium_stream_fps: t,
                     has_premium_stream_resolution: r,
-                    location_stack: v,
+                    location_stack: V,
                 }),
-                (0, O.sq)(C.U7l.PREMIUM_UPSELL_VIEWED, v, () => (0, S.uq)(M.e.STREAM_QUALITY_INDICATOR, t, r)),
-                R(!0));
-        }, [t, r, w, I, R, v]),
-        null == V)
+                (0, L.sq)(C.U7l.PREMIUM_UPSELL_VIEWED, V, () => (0, S.uq)(M.e.STREAM_QUALITY_INDICATOR, t, r)),
+                I(!0));
+        }, [t, r, g, y, I, V]),
+        null == k)
     )
         return null;
-    let F = W && w,
-        Q = i()(b.t5, y, L.u1[u], g ? b.Y5 : b.Lc, { [b.vk]: F }),
-        $ = (0, s.jsxs)(s.Fragment, {
+    let W = Q && g,
+        F = i()(b.t5, d, v ? b.Y5 : b.Lc, { [b.vk]: W, [b.CF]: m === f.oY.SMALL }),
+        z = (0, s.jsxs)(s.Fragment, {
             children: [
-                w ? (0, s.jsx)(d.t, { size: "md", color: "currentColor", className: b.fY }) : null,
-                (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(V.maxResolution) }),
-                (0, s.jsx)("span", { children: (0, N.Bs)(V.maxFrameRate) }),
+                g ? (0, s.jsx)(u.t, { size: "md", color: "currentColor", className: b.fY }) : null,
+                (0, s.jsx)("span", { className: b.UD, children: (0, D.ME)(k.maxResolution) }),
+                (0, s.jsx)("span", { children: (0, D.Bs)(k.maxFrameRate) }),
             ],
         }),
-        z = (0, s.jsx)(E.m, {
-            text: g ? P.intl.string(P.t.q8TiVt) : w ? P.intl.string(P.t.IHgpEn) : P.intl.string(P.t.vLb0VW),
+        $ = (0, s.jsx)(A.m, {
+            text: v ? P.intl.string(P.t.q8TiVt) : g ? P.intl.string(P.t.IHgpEn) : P.intl.string(P.t.vLb0VW),
             position: "bottom",
-            children: F
-                ? (0, s.jsx)(A.D, { onClick: Y, className: Q, children: $ })
-                : (0, s.jsx)("span", { className: Q, children: $ }),
+            children: W
+                ? (0, s.jsx)(E.D, { onClick: Y, className: F, children: z })
+                : (0, s.jsx)("span", { className: F, children: z }),
         });
-    return (0, s.jsx)(m.Lp, {
-        text: z,
-        className: i()(j, b.AA, { [b.Dc]: w && k }),
+    return (0, s.jsx)(f.Ay, {
+        text: $,
+        className: i()(T, { [b.Dc]: g && j }),
         color: _.A.unsafe_rawColors.PRIMARY_500.css,
-        shape: L.u1[u],
+        shape: d,
+        size: m,
     });
 }
-let Y = (e) => {
+let W = (e) => {
     let { participant: t, showQuality: a, isUpsellEnabled: r = !0, size: c, className: o, premiumIndicator: _ } = e,
-        [u, p] = l.useState(!1),
-        d = (0, N.N5)(t),
-        { reducedMotion: E } = l.useContext(y.C),
-        A = a && null != d,
-        x = (0, I.p)(
-            A,
-            { enter: { from: E.enabled ? v : k, to: E.enabled ? g : V }, leave: E.enabled ? v : k, config: G },
+        [d, p] = l.useState(!1),
+        u = (0, D.N5)(t),
+        { reducedMotion: A } = l.useContext(m.C),
+        E = a && null != u,
+        R = (0, y.p)(
+            E,
+            { enter: { from: A.enabled ? v : k, to: A.enabled ? g : V }, leave: A.enabled ? v : k, config: Q },
             "animate-always",
         ),
-        T = (0, R.z)({ to: A ? H : w, config: G }, "animate-always");
+        x = (0, I.z)({ to: E ? H : w, config: Q }, "animate-always");
     return ((e) => {
         let { className: a, popoutProps: l } = e;
         return (0, s.jsxs)("div", {
             className: i()(b.dr, a),
             ...l,
             children: [
-                x((e, a) =>
+                R((e, a) =>
                     a
                         ? (0, s.jsx)(n.animated.div, {
                               style: e,
-                              children: (0, s.jsx)(W, {
+                              children: (0, s.jsx)(Y, {
                                   participant: t,
                                   size: c,
-                                  shape: m.EG.ROUND_LEFT,
+                                  shape: f.Qo.ROUND_LEFT,
                                   isUpsellEnabled: r,
-                                  didTrackUpsellViewed: u,
+                                  didTrackUpsellViewed: d,
                                   setDidTrackUpsellViewed: p,
                                   premiumIndicator: _,
-                                  quality: d,
+                                  quality: u,
                               }),
                           })
                         : null,
                 ),
                 (0, s.jsx)(n.animated.div, {
-                    style: T,
+                    style: x,
                     className: b.Ok,
-                    children: (0, s.jsx)(L.Ay, { look: L.gv.RED, size: c, shape: A ? m.EG.ROUND_RIGHT : m.EG.ROUND }),
+                    children: (0, s.jsx)(T.Ay, { look: T.gv.RED, size: c, shape: E ? f.Qo.ROUND_RIGHT : f.Qo.ROUND }),
                 }),
             ],
         });
