@@ -3197,6 +3197,7 @@ var iQ =
         (ec.UNDO_MARK_AS_READ = "Undo Mark as Read"),
         (ec.ACK_DECLINE_REQUEST_TO_JOIN = "Ack - Decline Request to Join"),
         (ec.ACK_DECLINE_REQUEST_TO_STREAM = "Ack - Decline Request to Stream"),
+        (ec.ACK_ACCEPT_REQUEST_TO_STREAM = "Ack - Accept Request to Stream"),
         (ec.ACK_GRAVITY_CLEAR_READ_STATES_BUTTON = "Ack - Gravity Clear Read States Button"),
         (ec.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON =
             "Ack - Gravity Regenerate Feed and Clear Read States Button"),
@@ -4003,6 +4004,7 @@ var rb =
         (ew.MODAL_SECTION_VIEWED = "modal_section_viewed"),
         (ew.DEVICE_DETECTED_PANEL_VIEWED = "device_detected_panel_viewed"),
         (ew.DEVICE_DETECTED_PANEL_DISMISSED = "device_detected_panel_dismissed"),
+        (ew.REQUEST_TO_STREAM_REMINDER_DISMISSED = "request_to_stream_reminder_dismissed"),
         (ew.HOVER_MENU_OPENED = "hover_menu_opened"),
         (ew.SCHEDULED_MESSAGE_TIME_PICKER_OPENED = "scheduled_message_time_picker_opened"),
         (ew.CREATE_GUILD_VIEWED = "create_guild_viewed"),

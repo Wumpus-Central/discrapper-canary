@@ -5287,6 +5287,22 @@
   },
   {
     "kind": "user",
+    "name": "2026-09-request-to-stream-new-entry-point",
+    "defaultConfig": {
+      "showReminderPanel": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showReminderPanel": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-09-rust-3p",
     "defaultConfig": {
       "enabled": false

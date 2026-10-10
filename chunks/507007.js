@@ -304,7 +304,7 @@ let eD = s.memo(function (e) {
                             n.e("307059"),
                             n.e("449145"),
                             n.e("343116"),
-                            n.e("139103"),
+                            n.e("711617"),
                             n.e("470314"),
                             n.e("70515"),
                             n.e("404524"),
@@ -391,15 +391,15 @@ function e6(e) {
         }),
     });
 }
-var e5 = n(866665),
-    e3 = n(786889),
-    e7 = n(90075);
+var e7 = n(866665),
+    e5 = n(786889),
+    e3 = n(90075);
 let e9 = function () {
-    return (0, l.jsx)(e5.m, {
+    return (0, l.jsx)(e7.m, {
         text: es.intl.string(es.t.GMZqSi),
         children: (0, l.jsx)("div", {
-            className: e7.k,
-            children: (0, l.jsx)(e3.A, { color: F.A.unsafe_rawColors.WHITE.css }),
+            className: e3.k,
+            children: (0, l.jsx)(e5.A, { color: F.A.unsafe_rawColors.WHITE.css }),
         }),
     });
 };
@@ -589,7 +589,7 @@ let tl = s.memo(function (e) {
                                 n.e("307059"),
                                 n.e("449145"),
                                 n.e("343116"),
-                                n.e("139103"),
+                                n.e("711617"),
                                 n.e("470314"),
                                 n.e("70515"),
                                 n.e("404524"),
@@ -687,7 +687,7 @@ function tA(e) {
                     n.e("307059"),
                     n.e("449145"),
                     n.e("343116"),
-                    n.e("139103"),
+                    n.e("711617"),
                     n.e("470314"),
                     n.e("70515"),
                     n.e("404524"),
@@ -718,7 +718,7 @@ function tA(e) {
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
-            (0, l.jsx)(e5.m, {
+            (0, l.jsx)(e7.m, {
                 targetElementRef: o,
                 __unsupportedReactNodeAsText: i.userNick,
                 position: "bottom",
