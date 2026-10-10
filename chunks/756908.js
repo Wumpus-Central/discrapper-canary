@@ -12925,51 +12925,39 @@ function dh(e) {
     } = e;
     return s?.type === "checking"
         ? (0, a.jsx)("div", { className: dm.q, children: (0, a.jsx)(k.y, {}) })
-        : s?.type === "permissions" && null != s.onAddPreviewBot
+        : s?.type === "permissions"
           ? (0, a.jsx)("div", {
                 className: dm.q,
-                children: (0, a.jsx)(cK, {
-                    title: ei.intl.string(ea.default.SWXbpN),
-                    children: (0, a.jsx)(w.$, {
-                        size: "md",
-                        text: ei.intl.string(ea.default.FH2Udn),
-                        onClick: s.onAddPreviewBot,
-                    }),
-                }),
+                children: null == s.authorizeProps ? (0, a.jsx)(k.y, {}) : (0, a.jsx)(c8, { ...s.authorizeProps }),
             })
-          : s?.type === "permissions"
-            ? (0, a.jsx)("div", {
-                  className: dm.q,
-                  children: null == s.authorizeProps ? (0, a.jsx)(k.y, {}) : (0, a.jsx)(c8, { ...s.authorizeProps }),
-              })
-            : i
-              ? null == t
-                  ? null
-                  : (0, a.jsxs)("div", {
-                        className: dm.R,
-                        children: [
-                            (0, tj.yf)(o, u)
-                                ? (0, a.jsx)(cW, { applicationId: t, surface: l, launch: r, frameOverlay: m })
-                                : null,
-                            "widget" === u && null != c
-                                ? "unavailable-authorization-revoked" === o.profileState
-                                    ? (0, a.jsx)("div", {
-                                          className: dm.q,
-                                          children: (0, a.jsx)(cK, {
-                                              wide: !0,
-                                              title: ei.intl.string(ea.default["08U+YO"]),
-                                              body: ei.intl.string(ea.default.pKBfrc),
-                                          }),
-                                      })
-                                    : (0, a.jsx)(df.A, { applicationId: c })
-                                : null,
-                            "overlay" === u && o.modes.includes("overlay")
-                                ? (0, a.jsx)(du, { applicationId: t, projectId: f, size: d })
-                                : null,
-                            "bot" === u && null != n ? (0, a.jsx)(c4, { previewApplicationId: n }) : null,
-                        ],
-                    })
-              : (0, a.jsx)(cM, { className: dm.q });
+          : i
+            ? null == t
+                ? null
+                : (0, a.jsxs)("div", {
+                      className: dm.R,
+                      children: [
+                          (0, tj.yf)(o, u)
+                              ? (0, a.jsx)(cW, { applicationId: t, surface: l, launch: r, frameOverlay: m })
+                              : null,
+                          "widget" === u && null != c
+                              ? "unavailable-authorization-revoked" === o.profileState
+                                  ? (0, a.jsx)("div", {
+                                        className: dm.q,
+                                        children: (0, a.jsx)(cK, {
+                                            wide: !0,
+                                            title: ei.intl.string(ea.default["08U+YO"]),
+                                            body: ei.intl.string(ea.default.pKBfrc),
+                                        }),
+                                    })
+                                  : (0, a.jsx)(df.A, { applicationId: c })
+                              : null,
+                          "overlay" === u && o.modes.includes("overlay")
+                              ? (0, a.jsx)(du, { applicationId: t, projectId: f, size: d })
+                              : null,
+                          "bot" === u && null != n ? (0, a.jsx)(c4, { previewApplicationId: n }) : null,
+                      ],
+                  })
+            : (0, a.jsx)(cM, { className: dm.q });
 }
 var dg = n(175841),
     dp = n(750506),
@@ -14397,58 +14385,54 @@ function d5(e) {
                       },
                   };
         }, [V, e5, e0, K, B, s?.preview_application_id]),
-        tt = D?.integration_installed === !1,
-        tr = i.useCallback(() => {
-            null != s && (0, nu.vL)(s.id, m).catch(() => {});
-        }, [m, s]),
-        ta = (0, tj.JR)(Q, ew)
-            ? { type: "permissions", authorizeProps: e8, onAddPreviewBot: tt ? tr : void 0 }
+        tt = (0, tj.JR)(Q, ew)
+            ? { type: "permissions", authorizeProps: e8 }
             : V && null == D
               ? { type: "checking" }
               : void 0,
-        ti = (0, d.bG)([ek.Ay], () => null != _ && ek.Ay.isProjectDeleting(_), [_]);
+        tr = (0, d.bG)([ek.Ay], () => null != _ && ek.Ay.isProjectDeleting(_), [_]);
     i.useEffect(() => {
-        ((null == s && u) || ti) && (0, q.bG)(eg.BVt.CHANNEL(m, ep.VV.CONJURE));
-    }, [m, s, u, ti]);
-    let ts = i.useMemo(() => ({ guildId: m, platform: d7, busy: V || K }), [m, V, K]),
-        to = (0, nu.Ay)(_, ts),
-        tu = to?.intent === "open" && "channel" === to.destination ? to.appChannelId : null,
-        tc = (0, d.bG)([H.A], () => (null == tu ? null : H.A.getChannel(tu)), [tu]),
-        td = (0, O.Ay)(tc),
-        tf = (0, F.gU)(tc),
-        tm =
-            null != td && null != tf
+        ((null == s && u) || tr) && (0, q.bG)(eg.BVt.CHANNEL(m, ep.VV.CONJURE));
+    }, [m, s, u, tr]);
+    let ta = i.useMemo(() => ({ guildId: m, platform: d7, busy: V || K }), [m, V, K]),
+        ti = (0, nu.Ay)(_, ta),
+        ts = ti?.intent === "open" && "channel" === ti.destination ? ti.appChannelId : null,
+        to = (0, d.bG)([H.A], () => (null == ts ? null : H.A.getChannel(ts)), [ts]),
+        tu = (0, O.Ay)(to),
+        tc = (0, F.gU)(to),
+        td =
+            null != tu && null != tc
                 ? ei.intl.format(ea.default.gR7PUV, {
-                      channel: td,
+                      channel: tu,
                       channelIconHook: (e, t) =>
-                          (0, a.jsx)(tf, { size: "xs", color: "currentColor", className: d0.Y2 }, t),
+                          (0, a.jsx)(tc, { size: "xs", color: "currentColor", className: d0.Y2 }, t),
                   })
-                : to?.label,
-        th = to?.upToDate === !0 ? ei.intl.string(ea.default.X0kGp2) : null,
-        tk =
-            null == to
+                : ti?.label,
+        tf = ti?.upToDate === !0 ? ei.intl.string(ea.default.X0kGp2) : null,
+        tm =
+            null == ti
                 ? null
                 : (0, a.jsx)("div", {
                       className: d0.As,
                       children: (0, a.jsx)(b.m, {
-                          text: th,
+                          text: tf,
                           asContainer: !0,
                           children: (0, a.jsx)(w.$, {
                               size: "sm",
-                              variant: to.upToDate ? "secondary" : "primary",
-                              loading: to.publishing,
-                              disabled: to.disabled,
-                              onClick: () => to.run("header"),
-                              text: tm,
+                              variant: ti.upToDate ? "secondary" : "primary",
+                              loading: ti.publishing,
+                              disabled: ti.disabled,
+                              onClick: () => ti.run("header"),
+                              text: td,
                           }),
                       }),
                   }),
-        tw = null == s ? void 0 : () => (0, nc.A)(s.id, { guildId: m, isPreview: !0, publishOptions: ts }),
-        tA = (0, a.jsx)(dX, {
+        th = null == s ? void 0 : () => (0, nc.A)(s.id, { guildId: m, isPreview: !0, publishOptions: ta }),
+        tk = (0, a.jsx)(dX, {
             title: s?.name ?? ei.intl.string(ea.default.G1WwgK),
             breadcrumb: { title: ei.intl.string(ea.default.uk6jhJ), onClick: c },
             project: s,
-            onOpenProjectSettings: tw,
+            onOpenProjectSettings: th,
             actions:
                 null == s
                     ? null
@@ -14518,7 +14502,7 @@ function d5(e) {
                                   icon: C.SettingsIcon,
                                   tooltip: ei.intl.string(ea.default.I2XSKe),
                                   "aria-label": ei.intl.string(ea.default.I2XSKe),
-                                  onClick: tw,
+                                  onClick: th,
                               }),
                               (0, a.jsx)(nk, {
                                   projectId: s.id,
@@ -14593,7 +14577,7 @@ function d5(e) {
                         ? (0, a.jsxs)("div", {
                               className: d0.j5,
                               children: [
-                                  tA,
+                                  tk,
                                   (0, a.jsxs)("div", {
                                       className: d0.sD,
                                       children: [
@@ -14617,7 +14601,7 @@ function d5(e) {
                               ],
                           })
                         : (0, a.jsx)(nu.bI.Provider, {
-                              value: ts,
+                              value: ta,
                               children: (0, a.jsx)(
                                   dV,
                                   {
@@ -14627,17 +14611,17 @@ function d5(e) {
                                       previewApplicationId: s.preview_application_id,
                                       surface: eB,
                                       frameLaunchParams: ef,
-                                      header: tA,
+                                      header: tk,
                                       chatOpen: h,
                                       onCloseChat: eS,
-                                      chatHeaderAction: tk,
+                                      chatHeaderAction: tm,
                                       debugOpen: y && p,
                                       onCloseDebug: eR,
                                       onRestoreVersion: eL,
                                       onImportProject: (0, ek.PV)(s) ? eY.open : void 0,
                                       restoreState: k,
                                       previewReady: W,
-                                      previewGate: ta,
+                                      previewGate: tt,
                                       availability: Z,
                                       activeMode: Q,
                                       widgetApplicationId: em,
