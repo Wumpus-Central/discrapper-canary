@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(73153),
     a = n(956518),
@@ -17,7 +17,10 @@ function A(e, t, n) {
     let i = u.get(e);
     return !!(0, o.x1)(i) && !!t(i.data) && (u.set(e, { ...i, data: n(i.data) }), !0);
 }
-class h extends i.Ay.Store {
+function h(e, t) {
+    return null != t && e.launchRequestId !== t;
+}
+class f extends i.Ay.Store {
     static displayName = "FramesStore";
     getFrame(e) {
         if (null != e) return u.get(e);
@@ -43,39 +46,42 @@ class h extends i.Ay.Store {
         return Array.from(u.values()).filter((t) => (0, l.A)(t.surface) === e);
     }
 }
-let f = new h(r.h, {
+let I = new f(r.h, {
     FRAME_LAUNCH_START: function (e) {
-        let { applicationId: t, frameId: n, surface: i, hostWindowKey: r } = e,
-            a = (0, o.Yf)(i);
+        let { applicationId: t, frameId: n, surface: i, hostWindowKey: r, launch: a, launchRequestId: s } = e,
+            l = (0, o.Yf)(i);
         (u.set(n, {
             id: n,
             applicationId: t,
-            intent: a,
+            intent: l,
             surface: i,
             state: "loading",
             data: null,
             hostWindowKey: r ?? null,
+            launch: a,
+            launchRequestId: s,
         }),
-            a === o.sV.MAIN && (_ = n));
+            l === o.sV.MAIN && (_ = n));
     },
     FRAME_LAUNCH: function (e) {
-        let { frameId: t, proxyTicket: n, launch: i, hostWindowKey: r } = e,
-            s = u.get(t);
-        if (null == s) return;
-        let l = (0, a.Ay)(s.applicationId);
-        if (null == l) {
+        let { frameId: t, proxyTicket: n, launch: i, hostWindowKey: r, launchRequestId: s } = e,
+            l = u.get(t);
+        if (null == l || h(l, s)) return !1;
+        let c = (0, a.Ay)(l.applicationId);
+        if (null == c) {
             (u.delete(t), _ === t && (_ = null));
             return;
         }
-        let { id: c, applicationId: E, intent: A, surface: h } = s;
+        let { id: E, applicationId: A, intent: f, surface: I } = l;
         u.set(t, {
-            id: c,
-            applicationId: E,
-            intent: A,
-            surface: h,
+            id: E,
+            applicationId: A,
+            intent: f,
+            surface: I,
+            launchRequestId: l.launchRequestId,
             state: "launched",
             data: {
-                url: l,
+                url: c,
                 connectedSince: Date.now(),
                 layoutMode: o.y0.FOCUSED,
                 activityPanelMode: d.Gd.PANEL,
@@ -91,7 +97,9 @@ let f = new h(r.h, {
         });
     },
     FRAME_LAUNCH_FAIL: function (e) {
-        let { frameId: t } = e;
+        let { frameId: t, launchRequestId: n } = e,
+            i = u.get(t);
+        if (null != i && h(i, n)) return !1;
         (u.delete(t), _ === t && (_ = null));
     },
     FRAME_STOP: function (e) {

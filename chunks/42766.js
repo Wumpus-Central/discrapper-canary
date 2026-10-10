@@ -258,11 +258,17 @@ let k = new U(r.h, {
         E.set(t, n);
     },
     CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
-        let { projectId: t, published: n, hasUnpublishedChanges: i, surface: r } = e,
-            a = n ? (i ? "changes" : "up_to_date") : "unpublished",
-            s = A.get(t);
-        if (s?.state === a && s.surface === r) return !1;
-        A.set(t, { state: a, surface: r });
+        let { projectId: t, published: n, hasUnpublishedChanges: i, surface: r, previewAppChannels: a } = e,
+            s = n ? (i ? "changes" : "up_to_date") : "unpublished",
+            l = A.get(t);
+        if (
+            l?.state === s &&
+            l.surface === r &&
+            l.previewAppChannels.length === a.length &&
+            l.previewAppChannels.every((e, t) => e === a[t])
+        )
+            return !1;
+        A.set(t, { state: s, surface: r, previewAppChannels: a });
     },
     CONJURE_PROJECT_PUBLISH_START: function (e) {
         let { projectId: t } = e;

@@ -1,5 +1,5 @@
 (n.d(t, {
-    DM: () => ev,
+    DM: () => eU,
     tp: () => ep,
     r2: () => e_,
     gm: () => eL,
@@ -23,7 +23,7 @@
     Bn: () => e5,
     XZ: () => eb,
     bq: () => em,
-    oB: () => eU,
+    oB: () => ev,
     ho: () => ez,
     $D: () => eI,
     fu: () => eu,
@@ -229,8 +229,8 @@ class O {
 var R = n(382541);
 (n(643210), n(944142), n(714917));
 var N = n(248675),
-    U = n(660183);
-function v(e, t) {
+    v = n(660183);
+function U(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
@@ -518,7 +518,7 @@ async function er(e, t) {
                                       turnId: r.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : G(t, U.intl.string(N.default["913RMa"]), B);
+                                : G(t, v.intl.string(N.default["913RMa"]), B);
                         } else if ("thinking_lifecycle" === r.kind) {
                             let { phase: e, session: n, seq: s, ticks: i, elapsed_ms: a, text: l } = r;
                             null != e &&
@@ -618,7 +618,7 @@ async function er(e, t) {
                                       turnId: r.turn_id,
                                       patch: { proposal: r.proposal, kind: "proposal" },
                                   })
-                                : G(t, U.intl.string(N.default["0+RUWx"]), B);
+                                : G(t, v.intl.string(N.default["0+RUWx"]), B);
                         else if ("ideas" === r.kind)
                             null != r.ideas &&
                                 r.ideas.length > 0 &&
@@ -651,6 +651,9 @@ async function er(e, t) {
                                 published: !0 === r.published,
                                 hasUnpublishedChanges: !0 === r.has_unpublished_changes,
                                 surface: I(r.surface),
+                                previewAppChannels: Array.isArray(r.preview_app_channels)
+                                    ? r.preview_app_channels.filter((e) => "string" == typeof e)
+                                    : [],
                             });
                         else if ("clarification" === r.kind)
                             null != r.clarification &&
@@ -737,6 +740,7 @@ async function er(e, t) {
                                         published: !0,
                                         hasUnpublishedChanges: !1,
                                         surface: e.surface,
+                                        previewAppChannels: e.previewAppChannels,
                                     });
                             }
                         } else if ("patch_notes_draft" === r.kind) {
@@ -926,7 +930,7 @@ async function er(e, t) {
                     }
                 })(e, t, n),
             onClose: () => {
-                (v(t, "Connection closed before the publish result arrived"),
+                (U(t, "Connection closed before the publish result arrived"),
                 A(t, "Connection closed before the draft arrived"),
                 m(e),
                 t.disposed)
@@ -946,7 +950,7 @@ async function er(e, t) {
         (x(e, "failed"),
             Q(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            v(t, "Connection failed before the publish result arrived"),
+            U(t, "Connection failed before the publish result arrived"),
             A(t, "Connection failed before the draft arrived"),
             (0, T.Hy)(e, {
                 location: "connection",
@@ -1004,7 +1008,7 @@ function el(e) {
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        v(n, "Connection closed before the publish result arrived"),
+        U(n, "Connection closed before the publish result arrived"),
         A(n, "Connection closed before the draft arrived"),
         n.ws.close(),
         P.delete(e),
@@ -1081,7 +1085,7 @@ function eh(e) {
         if (null == s) return void r(Error("Not connected"));
         if (null != s.pendingPublish) return void r(Error("Publish already in flight"));
         let i = setTimeout(() => {
-            v(s, "Publish timed out");
+            U(s, "Publish timed out");
         }, 9e5);
         ((s.pendingPublish = { resolve: n, reject: r, timeout: i }),
             (t = !0),
@@ -1245,7 +1249,7 @@ async function eN(e) {
         publishedSha: "string" == typeof o.publishedSha ? o.publishedSha : null,
     };
 }
-async function eU(e, t) {
+async function ev(e, t) {
     let { ticket: n, baseUrl: r } = await (0, R.d)(e),
         s = new URLSearchParams({ ticket: n }),
         o = await fetch(`${r}/agent/source-history/${encodeURIComponent(t)}/restore?${s}`, { method: "POST" });
@@ -1263,7 +1267,7 @@ async function eU(e, t) {
         i.entry
     );
 }
-async function ev(e, t) {
+async function eU(e, t) {
     let { ticket: n, baseUrl: r } = await (0, R.d)(e),
         s = new URLSearchParams({ ticket: n, environment: t }),
         o = await fetch(`${r}/agent/database/restore-points?${s}`);
