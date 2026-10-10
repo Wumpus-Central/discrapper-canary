@@ -1,0 +1,184 @@
+.scroller__4cd87 {
+    --custom-conjure-unread-pill-inset: var(--space-8);
+    flex: 1 1 auto;
+    min-height: 0;
+    padding-block: 0;
+    padding-inline: var(--space-8) 0
+}
+
+.list__4cd87 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.sectionHeading__4cd87 {
+    align-items: center;
+    display: flex;
+    height: var(--space-24);
+    margin: 0;
+    padding: var(--space-8) var(--space-8) 0
+}
+
+.rowHost__4cd87 {
+    --custom-conjure-glow-radius: var(--radius-md);
+    border-radius: var(--radius-md);
+    margin-bottom: 2px;
+    position: relative
+}
+
+.rowHost__4cd87:focus-within,
+.rowHost__4cd87:hover {
+    background: var(--interactive-background-hover)
+}
+
+.row__4cd87 {
+    align-items: center;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-12);
+    min-height: 74px;
+    padding: var(--space-8);
+    position: relative;
+    text-align: start;
+    width: 100%;
+    z-index: 0
+}
+
+.rowIcon__4cd87 {
+    align-self: flex-start
+}
+
+.guildIcon__4cd87 {
+    flex: 0 0 auto;
+    height: var(--space-32);
+    width: var(--space-32)
+}
+
+.rowBody__4cd87 {
+    flex: 1;
+    flex-direction: column
+}
+
+.rowBody__4cd87,
+.rowTitle__4cd87 {
+    display: flex;
+    min-width: 0
+}
+
+.rowTitle__4cd87 {
+    align-items: center;
+    gap: var(--space-8)
+}
+
+.projectName__4cd87 {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.rowSubline__4cd87 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.serverName__4cd87 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.rowStatus__4cd87 {
+    align-items: center;
+    color: var(--text-default);
+    display: flex;
+    gap: var(--space-8);
+    min-height: var(--space-20);
+    min-width: 0
+}
+
+.rowActivity__4cd87 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.rowStatus__4cd87 [data-conjure-turn-timer] {
+    margin-inline-start: auto;
+    padding-block-start: 0
+}
+
+.state__4cd87 {
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-24) var(--space-16);
+    text-align: center
+}
+
+.emptyState__4cd87,
+.state__4cd87 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.emptyState__4cd87 {
+    padding: var(--space-16)
+}
+
+.emptyGuilds__4cd87 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.emptyGuildRow__4cd87 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0;
+    padding: var(--space-4) var(--space-xs);
+    text-align: start;
+    width: 100%
+}
+
+.emptyGuildRow__4cd87:focus-within,
+.emptyGuildRow__4cd87:hover {
+    background: var(--interactive-background-hover)
+}
+
+.forMeIcon__4cd87 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-round);
+    color: var(--icon-strong);
+    display: flex;
+    flex: 0 0 auto;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.emptyGuildName__4cd87 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=f8b936aa591ff38f.css.map*/

@@ -1,0 +1,15 @@
+.demo_ae73d9 {
+    padding: var(--space-128)
+}
+
+.surface_ae73d9 {
+    background: var(--background-surface-higher);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    height: 180px;
+    position: relative;
+    width: var(--__demo-area)
+}
+
+/*# sourceMappingURL=c5a129fa0c1e4fe9.css.map*/

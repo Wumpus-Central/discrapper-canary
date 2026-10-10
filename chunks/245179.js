@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => ec, B0: () => B, BL: () => U, bi: () => er }), n(667532), n(321073));
+(n.d(t, { Ay: () => ec, B0: () => B, BL: () => U, Ji: () => Q, bi: () => er }), n(667532), n(321073));
 var i = n(17928),
     l = n(73153),
     s = n(695515),
@@ -169,16 +169,16 @@ function K(e) {
     );
 }
 function Q(e) {
-    if (null == e) return !1;
+    if (null == e) return null;
     let t = !1;
     for (let n = e.length - 1; n >= 0; n--) {
         let i = e[n];
-        if (!("assistant" !== i.role || K(i)) && ((!t && ((t = !0), !U(i))) || (null != i.turn_id && !U(i)))) return !0;
+        if (!("assistant" !== i.role || K(i)) && ((!t && ((t = !0), !U(i))) || (null != i.turn_id && !U(i)))) return i;
     }
-    return !1;
+    return null;
 }
 function Z(e) {
-    return Q(q.get(e));
+    return null != Q(q.get(e));
 }
 function ee(e, t, n, i, l) {
     if (null != l) {
@@ -413,7 +413,7 @@ let ec = new ei(l.h, {
             return;
         }
         let c = [...o, d];
-        (Q(c) || c.push(L("assistant", "")), q.set(t, c), et(t));
+        (null == Q(c) && c.push(L("assistant", "")), q.set(t, c), et(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: i, disposition: l } = e,
