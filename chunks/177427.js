@@ -5,5 +5,6 @@ e.exports = {
     Gf: "sectionTitle_bef5a8",
     N8: "statRow_bef5a8",
     x7: "statRowHead_bef5a8",
+    kS: "statLabelGroup_bef5a8",
     dh: "meterCritical_bef5a8",
 };

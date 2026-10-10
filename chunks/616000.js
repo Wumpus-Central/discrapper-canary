@@ -1,91 +1,139 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var r = n(17928),
     s = n(73153),
     o = n(164892);
 (n(134528), n(947204));
-let i = [],
-    a = new Map(),
-    l = new Map(),
+let i = { pending: !1, info: null, error: null, observedAt: null },
+    a = { phase: "idle" },
+    l = [],
     c = new Map(),
     d = new Map(),
     u = new Map(),
     p = new Map(),
     h = new Map(),
-    f = new Map();
-class _ extends r.Ay.Store {
+    f = new Map(),
+    _ = new Map(),
+    g = new Map(),
+    E = new Map(),
+    y = new Map(),
+    S = new Map();
+class w extends r.Ay.Store {
     getStatus(e) {
-        return a.get(e) ?? null;
+        return c.get(e) ?? null;
     }
     getFetchState(e) {
-        return l.get(e) ?? "idle";
-    }
-    getLastCompaction(e) {
-        return u.get(e) ?? null;
-    }
-    getLastTurnUsage(e) {
-        return h.get(e) ?? null;
-    }
-    getLastCompactionDecline(e) {
-        return p.get(e) ?? null;
-    }
-    getForceCompactionState(e) {
-        return c.get(e) ?? "idle";
-    }
-    getSandboxRestartState(e) {
         return d.get(e) ?? "idle";
     }
+    getLastCompaction(e) {
+        return g.get(e) ?? null;
+    }
+    getLastTurnUsage(e) {
+        return y.get(e) ?? null;
+    }
+    getLastCompactionDecline(e) {
+        return E.get(e) ?? null;
+    }
+    getForceCompactionState(e) {
+        return u.get(e) ?? "idle";
+    }
+    getSandboxRestartState(e) {
+        return p.get(e) ?? "idle";
+    }
+    getGitInfoState(e) {
+        return h.get(e) ?? i;
+    }
+    getRestartAgentState(e) {
+        return f.get(e) ?? a;
+    }
+    getInstancePollRequestedAt(e) {
+        return _.get(e) ?? null;
+    }
     getTimingTraces(e) {
-        return f.get(e) ?? i;
+        return S.get(e) ?? l;
     }
     getTimingTrace(e, t) {
-        return f.get(e)?.find((e) => e.id === t) ?? null;
+        return S.get(e)?.find((e) => e.id === t) ?? null;
     }
 }
-let g = new _(s.h, {
+function m(e, t, n) {
+    let r = f.get(e);
+    r?.phase === "restarting" &&
+        null != t &&
+        t !== r.instanceSince &&
+        f.set(e, { phase: "restarted", instanceSince: t, observedAt: n });
+}
+let T = new w(s.h, {
     LOGOUT: function () {
         if (
-            0 === a.size &&
-            0 === l.size &&
             0 === c.size &&
             0 === d.size &&
             0 === u.size &&
             0 === p.size &&
             0 === h.size &&
-            0 === f.size
+            0 === f.size &&
+            0 === _.size &&
+            0 === g.size &&
+            0 === E.size &&
+            0 === y.size &&
+            0 === S.size
         )
             return !1;
-        (a.clear(), l.clear(), c.clear(), d.clear(), u.clear(), p.clear(), h.clear(), f.clear());
+        (c.clear(),
+            d.clear(),
+            u.clear(),
+            p.clear(),
+            h.clear(),
+            f.clear(),
+            _.clear(),
+            g.clear(),
+            E.clear(),
+            y.clear(),
+            S.clear());
     },
     CONJURE_DEBUG_STATUS_REQUESTED: function (e) {
         let { projectId: t } = e;
-        l.set(t, "loading");
+        d.set(t, "loading");
     },
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if ("open" === n) return !1;
-        let r = "pending" === c.get(t);
+        let r = "pending" === u.get(t);
         r &&
-            c.set(t, {
+            u.set(t, {
                 outcome: "failed",
                 reason: "Connection lost before the worker answered",
                 observedAt: new Date().toISOString(),
             });
-        let s = "pending" === d.get(t);
+        let s = "pending" === p.get(t);
         s &&
-            d.set(t, {
+            p.set(t, {
                 outcome: "failed",
                 reason: "Connection lost before the worker answered",
                 observedAt: new Date().toISOString(),
             });
-        let o = "loading" === l.get(t);
-        if ((o && l.set(t, "failed"), !r && !s && !o)) return !1;
+        let o = "loading" === d.get(t);
+        o && d.set(t, "failed");
+        let i = h.get(t),
+            a = i?.pending === !0;
+        (a && h.set(t, { ...i, pending: !1, error: "Connection lost before the worker answered" }), _.delete(t));
+        let l = f.get(t)?.phase === "pending";
+        if (
+            (l &&
+                f.set(t, {
+                    phase: "failed",
+                    reason: "Connection lost before the worker answered",
+                    observedAt: new Date().toISOString(),
+                }),
+            !r && !s && !o && !a && !l)
+        )
+            return !1;
     },
     CONJURE_DEBUG_STATUS_SET: function (e) {
         let { projectId: t, status: n, failed: r } = e;
-        r || null == n ? l.set(t, "failed") : (a.set(t, n), l.set(t, "loaded"));
+        r || null == n ? d.set(t, "failed") : (c.set(t, n), d.set(t, "loaded"));
     },
     CONJURE_DEBUG_COMPACTION_REPORT: function (e) {
-        u.set(e.projectId, {
+        g.set(e.projectId, {
             tokensBefore: e.tokensBefore,
             tokensAfter: e.tokensAfter,
             retainedMessages: e.retainedMessages,
@@ -94,7 +142,7 @@ let g = new _(s.h, {
         });
     },
     CONJURE_DEBUG_COMPACTION_DECLINED: function (e) {
-        p.set(e.projectId, {
+        E.set(e.projectId, {
             promptCeiling: e.promptCeiling,
             threshold: e.threshold,
             projected: e.projected,
@@ -105,10 +153,10 @@ let g = new _(s.h, {
     },
     CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED: function (e) {
         let { projectId: t } = e;
-        c.set(t, "pending");
+        u.set(t, "pending");
     },
     CONJURE_DEBUG_FORCE_COMPACTION_RESULT: function (e) {
-        c.set(e.projectId, {
+        u.set(e.projectId, {
             outcome: e.outcome,
             reason: e.reason,
             ...(!0 === e.pendingTurn ? { pendingTurn: !0 } : {}),
@@ -117,15 +165,53 @@ let g = new _(s.h, {
     },
     CONJURE_SANDBOX_RESTART_REQUESTED: function (e) {
         let { projectId: t } = e;
-        d.set(t, "pending");
+        p.set(t, "pending");
     },
     CONJURE_SANDBOX_RESTART_RESULT: function (e) {
         let { projectId: t, outcome: n, reason: r, observedAt: s } = e;
-        d.set(t, { outcome: n, reason: r, observedAt: s });
+        p.set(t, { outcome: n, reason: r, observedAt: s });
+    },
+    CONJURE_DEBUG_GIT_INFO_REQUESTED: function (e) {
+        let { projectId: t } = e;
+        h.set(t, { ...(h.get(t) ?? i), pending: !0 });
+    },
+    CONJURE_DEBUG_GIT_INFO_RESULT: function (e) {
+        let { projectId: t, info: n, error: r, instanceSince: s, observedAt: o } = e,
+            a = h.get(t) ?? i;
+        (h.set(
+            t,
+            null != n
+                ? { pending: !1, info: n, error: null, observedAt: o }
+                : { ...a, pending: !1, error: r ?? "No answer", observedAt: o },
+        ),
+            m(t, s, o));
+    },
+    CONJURE_DEBUG_INSTANCE_POLL_REQUESTED: function (e) {
+        let { projectId: t, requestedAt: n } = e;
+        return (_.set(t, n), !1);
+    },
+    CONJURE_DEBUG_INSTANCE_SEEN: function (e) {
+        let { projectId: t, instanceSince: n, observedAt: r } = e;
+        (_.delete(t), m(t, n, r));
+    },
+    CONJURE_RESTART_AGENT_REQUESTED: function (e) {
+        let { projectId: t } = e;
+        f.set(t, { phase: "pending" });
+    },
+    CONJURE_RESTART_AGENT_RESULT: function (e) {
+        let { projectId: t, outcome: n, reason: r, instanceSince: s, observedAt: o } = e,
+            i = f.get(t)?.phase;
+        if ("restarting" === n) {
+            if ("pending" !== i) return !1;
+            f.set(t, { phase: "restarting", instanceSince: s ?? null, startedAt: Date.parse(o) });
+        } else if ("timed_out" === n) {
+            if ("restarting" !== i) return !1;
+            f.set(t, { phase: "failed", reason: r ?? "No new agent instance answered in time", observedAt: o });
+        } else f.set(t, { phase: "failed", reason: r ?? "no reason given", observedAt: o });
     },
     CONJURE_DEBUG_TIMING_TRACE: function (e) {
         let { projectId: t, batch: n, live: r } = e,
-            s = f.get(t) ?? [],
+            s = S.get(t) ?? [],
             o = s.find((e) => e.id === n.trace_id) ?? null,
             i = s
                 .filter((e) => e !== o)
@@ -169,15 +255,25 @@ let g = new _(s.h, {
                 .sort((e, t) => t.started_at + t.as_of - (e.started_at + e.as_of))
                 .slice(0, 100)
                 .sort((e, t) => e.started_at - t.started_at);
-        f.set(t, i);
+        S.set(t, i);
     },
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, turn: n } = e;
         if (0 === (0, o.aM)(n.total)) return !1;
-        h.set(t, n);
+        y.set(t, n);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        (a.delete(t), l.delete(t), c.delete(t), d.delete(t), u.delete(t), p.delete(t), h.delete(t), f.delete(t));
+        (c.delete(t),
+            d.delete(t),
+            u.delete(t),
+            p.delete(t),
+            h.delete(t),
+            f.delete(t),
+            _.delete(t),
+            g.delete(t),
+            E.delete(t),
+            y.delete(t),
+            S.delete(t));
     },
 });

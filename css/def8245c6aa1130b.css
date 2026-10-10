@@ -949,6 +949,12 @@
     justify-content: space-between
 }
 
+.statLabelGroup_bef5a8 {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-4)
+}
+
 .statRow_bef5a8>.meterCritical_bef5a8 {
     --custom-progressbar-indicator-color: var(--status-danger)
 }
@@ -972,6 +978,24 @@
     gap: var(--space-4)
 }
 
+.restartAgentRow__6f9eb {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
+.restartAgentRow__6f9eb>:first-child {
+    flex: 1 1 200px;
+    min-width: 0
+}
+
+.restartAgentRow__6f9eb>:last-child {
+    flex: none
+}
+
 .callRow__6f9eb {
     align-items: baseline;
     display: grid;
@@ -989,4 +1013,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=bcd963159e843db5.css.map*/
+/*# sourceMappingURL=def8245c6aa1130b.css.map*/

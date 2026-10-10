@@ -161,7 +161,7 @@ var _,
         ClockXIcon: () => Io.O,
         ClosedCaptionsIcon: () => Id,
         ClosedCaptionsOutlineIcon: () => Ic,
-        CloudDownloadIcon: () => Iu,
+        CloudDownloadIcon: () => Iu.$,
         CloudIcon: () => uq.h,
         CloudUploadIcon: () => I_.k,
         ClydeIcon: () => aD.p,
@@ -394,7 +394,7 @@ var _,
         LinkPlusIcon: () => mP.E,
         LinkshellIcon: () => mU,
         ListBulletsIcon: () => mw.ListBulletsIcon,
-        ListNumberedIcon: () => mG,
+        ListNumberedIcon: () => mG.e,
         ListViewIcon: () => mx.p,
         LocationIcon: () => mk.B,
         LockIcon: () => oF.LockIcon,
@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 635420, Version Hash: 25cd09b36fcb1b351ddaf2693a5bac3b799951b5`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 635421, Version Hash: 29c575470555f080280b3a1a3a38672e938c8019`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -14775,40 +14775,8 @@ function Ic(e) {
         ],
     });
 }
-function Iu(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r4.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, h_.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, M.jsxs)("svg", {
-        ...(0, hu.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, M.jsx)("path", {
-                d: "M18.3 23.7a1 1 0 0 0 1.4 0l4-4a1 1 0 0 0-1.4-1.4L20 20.58V14.9a1 1 0 0 0-2 .1v5.59l-.73-.73-1.56-1.57a1 1 0 0 0-1.42 1.42l4 4Z",
-                fill: "string" == typeof r ? r : r.css,
-                className: a,
-            }),
-            (0, M.jsx)("path", {
-                d: "M15.31 16.02a3 3 0 0 0-3.3 3.3c.04.34-.2.68-.55.68H6a5 5 0 0 1-3.2-8.85c.12-.1.2-.24.2-.4a6 6 0 0 1 4.55-5.57c.36-.1.64.26.57.62a6.03 6.03 0 0 0 .3 3.4c.12.32.58.15.58-.2a5.98 5.98 0 0 1 6-6 6 6 0 0 1 5.83 7.44c-.06.22.03.45.2.59a5 5 0 0 1 1.92 4.65c-.02.19-.19.32-.38.35-.28.04-.57-.16-.57-.45V15a3 3 0 0 0-6 0v.46c0 .35-.34.6-.69.56Z",
-                fill: "string" == typeof r ? r : r.css,
-                className: a,
-            }),
-        ],
-    });
-}
-var I_ = n(410232);
+var Iu = n(816943),
+    I_ = n(410232);
 function IE(e) {
     let {
             size: t = "md",
@@ -18559,34 +18527,9 @@ function mU(e) {
         }),
     });
 }
-var mw = n(916099);
-function mG(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r4.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, h_.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, M.jsx)("svg", {
-        ...(0, hu.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, M.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M5.87 8.42h1.95V10h-5.7V8.42H4.1V3.8C3.74 4.57 3.09 5 2.13 5.12V3.14c.41-.05.8-.2 1.19-.46.37-.26.63-.58.78-.96h1.77v6.7ZM10 5a1 1 0 0 0 0 2h11a1 1 0 1 0 0-2H10ZM10 17a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2h-7ZM7.42 22v-1.51h-3.8c.08-.27.24-.52.5-.76.26-.25.61-.5 1.07-.77.78-.44 1.34-.89 1.67-1.33.33-.44.5-.95.5-1.53 0-.78-.26-1.4-.77-1.85-.51-.47-1.2-.7-2.06-.7-.8 0-1.43.18-1.92.54-.48.36-.83.83-1.03 1.4l1.4.8c.14-.4.34-.7.59-.9.25-.22.55-.33.87-.33.39 0 .68.1.88.28.2.18.31.43.31.73 0 .28-.09.55-.26.8-.18.23-.54.51-1.08.83-.56.33-1.01.64-1.36.92-.33.28-.62.66-.86 1.14a4.01 4.01 0 0 0-.35 1.77V22h5.7Z",
-            className: a,
-        }),
-    });
-}
-var mx = n(115723),
+var mw = n(916099),
+    mG = n(714800),
+    mx = n(115723),
     mk = n(116085),
     mF = n(328162),
     mB = n(685761),
@@ -26118,7 +26061,7 @@ let y_ = "isHideDevBanner",
                     className: tE()(yu.Wz, yu.mr),
                     children: [
                         (0, M.jsx)(yc, { className: yu.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635420" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635421" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -29875,8 +29818,8 @@ let bl = (0, tz.Fe)({
                 n.e("815341"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 125044)),
-        webpackId: 125044,
+            ]).then(n.bind(n, 756908)),
+        webpackId: 756908,
         name: "VibegrationsScreen",
         renderLoader: bs,
     }),
