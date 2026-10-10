@@ -1,22 +1,48 @@
-(a.r(t), a.d(t, { collectiblesCollection: () => I, playgroundConfig: () => j }));
-var l = a(34188),
-    n = a(477900),
-    r = a(582128),
-    o = a(331322),
-    s = a(834730),
-    i = a(440938),
-    c = a(161918),
-    d = a(395856),
-    u = a(682301),
-    m = a(258245),
-    p = a(484469),
-    h = a(628989),
-    g = a(758836),
-    v = a(107481);
-function x(e) {
+(a.r(t), a.d(t, { collectiblesCollection: () => M, playgroundConfig: () => _ }));
+var r = a(34188),
+    l = a(477900),
+    n = a(582128),
+    o = a(834730),
+    s = a(262056);
+let i = {
+    title: "Promotions",
+    stories: [
+        {
+            name: "Promotion Progress Ring",
+            id: "promotion-progress-ring",
+            component: function (e) {
+                let { current: t, target: a, progressColor: r, segmentGap: n } = e;
+                return (0, l.jsx)(s.A, {
+                    current: t,
+                    target: a,
+                    progressColor: r,
+                    segmentGap: n,
+                    children: (0, l.jsxs)(o.E, { variant: "text-md/semibold", children: [t, "/", a] }),
+                });
+            },
+            controls: {
+                current: { label: "Current", type: "number", defaultValue: 1, minValue: 0 },
+                target: { label: "Target", type: "number", defaultValue: 3, minValue: 0 },
+                progressColor: { label: "Progress color", type: "color", defaultValue: void 0 },
+                segmentGap: { label: "Segment gap", type: "number", defaultValue: 4, minValue: 0 },
+            },
+        },
+    ],
+};
+var d = a(331322),
+    c = a(440938),
+    u = a(161918),
+    m = a(395856),
+    p = a(682301),
+    g = a(258245),
+    h = a(484469),
+    v = a(628989),
+    x = a(758836),
+    b = a(107481);
+function f(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }
-let f = {
+let y = {
     title: "Shop Loading",
     stories: [
         {
@@ -24,36 +50,36 @@ let f = {
             id: "shop-batched-sku-loader",
             component: function (e) {
                 let { skuIds: t } = e,
-                    a = r.useMemo(() => x(t), [t]),
-                    l = (0, u.hv)(a, { needsCategory: !1 });
-                return (0, n.jsxs)(o.B, {
+                    a = n.useMemo(() => f(t), [t]),
+                    r = (0, p.hv)(a, { needsCategory: !1 });
+                return (0, l.jsxs)(d.B, {
                     direction: "vertical",
                     gap: 16,
                     align: "start",
                     children: [
-                        (0, n.jsx)(s.E, {
+                        (0, l.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children:
                                 "Comma- or space-separate shop SKU IDs in the controls. Each tile resolves via the storefront APIs through CollectiblesShopManager \u2014 all IDs entered here coalesce into one batched request. Tiles show the skeleton until the SKU resolves.",
                         }),
-                        (0, n.jsx)("div", {
-                            className: v.Vg,
+                        (0, l.jsx)("div", {
+                            className: b.Vg,
                             children: a.map((e) => {
-                                let { state: t, product: a } = l[e] ?? { state: "loading", product: null };
-                                return (0, n.jsx)(
+                                let { state: t, product: a } = r[e] ?? { state: "loading", product: null };
+                                return (0, l.jsx)(
                                     "div",
                                     {
-                                        className: v.Vs,
+                                        className: b.Vs,
                                         children:
                                             "ready" === t && null != a
-                                                ? (0, n.jsxs)(n.Fragment, {
+                                                ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
-                                                          (0, n.jsx)(s.E, {
+                                                          (0, l.jsx)(o.E, {
                                                               variant: "text-sm/semibold",
                                                               children: a.name,
                                                           }),
-                                                          (0, n.jsx)(s.E, {
+                                                          (0, l.jsx)(o.E, {
                                                               variant: "text-xs/normal",
                                                               color: "text-muted",
                                                               children: e,
@@ -61,12 +87,12 @@ let f = {
                                                       ],
                                                   })
                                                 : "error" === t
-                                                  ? (0, n.jsxs)(s.E, {
+                                                  ? (0, l.jsxs)(o.E, {
                                                         variant: "text-sm/semibold",
                                                         color: "text-feedback-critical",
                                                         children: ["error: ", e],
                                                     })
-                                                  : (0, n.jsx)(p.A, {}),
+                                                  : (0, l.jsx)(h.A, {}),
                                     },
                                     e,
                                 );
@@ -82,27 +108,27 @@ let f = {
             id: "shop-product-card",
             component: function (e) {
                 let { skuIds: t, improvedLoading: a } = e,
-                    l = r.useMemo(() => x(t), [t]);
-                return (0, n.jsx)(d.k, {
+                    r = n.useMemo(() => f(t), [t]);
+                return (0, l.jsx)(m.k, {
                     value: a,
-                    children: (0, n.jsx)(c.iM, {
-                        tab: g.G2.HOME,
-                        children: (0, n.jsx)(i.R9, {
+                    children: (0, l.jsx)(u.iM, {
+                        tab: x.G2.HOME,
+                        children: (0, l.jsx)(c.R9, {
                             newValue: { sessionId: "playground" },
-                            children: (0, n.jsxs)(o.B, {
+                            children: (0, l.jsxs)(d.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, n.jsx)(s.E, {
+                                    (0, l.jsx)(o.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Renders real ProductCards. With the experiment toggle on, each card resolves through CollectiblesShopManager and shows a skeleton until ready; with it off, cards use the legacy CollectiblesCategoryStore path (empty in the playground).",
                                     }),
-                                    (0, n.jsx)("div", {
-                                        className: v.Vg,
-                                        children: l.map((e) => (0, n.jsx)(m.A, { skuId: e }, e)),
+                                    (0, l.jsx)("div", {
+                                        className: b.Vg,
+                                        children: r.map((e) => (0, l.jsx)(g.A, { skuId: e }, e)),
                                     }),
                                 ],
                             }),
@@ -120,18 +146,18 @@ let f = {
             id: "shop-home-feed",
             component: function (e) {
                 let { improvedLoading: t } = e;
-                return (0, n.jsx)(d.k, {
+                return (0, l.jsx)(m.k, {
                     value: t,
-                    children: (0, n.jsx)(c.iM, {
-                        tab: g.G2.HOME,
-                        children: (0, n.jsx)(i.R9, {
+                    children: (0, l.jsx)(u.iM, {
+                        tab: x.G2.HOME,
+                        children: (0, l.jsx)(c.R9, {
                             newValue: { sessionId: "playground" },
-                            children: (0, n.jsx)("div", {
-                                className: v.rO,
-                                children: (0, n.jsx)(h.A, {
+                            children: (0, l.jsx)("div", {
+                                className: b.rO,
+                                children: (0, l.jsx)(v.A, {
                                     handleTransition: () => {},
-                                    tab: g.G2.HOME,
-                                    transitionState: g.Pf.VISIBLE,
+                                    tab: x.G2.HOME,
+                                    transitionState: x.Pf.VISIBLE,
                                 }),
                             }),
                         }),
@@ -144,11 +170,11 @@ let f = {
         },
     ],
 };
-var b = a(278416),
-    y = a(297264),
-    S = a(173127),
-    C = a(703086);
-let w = {
+var S = a(278416),
+    C = a(297264),
+    w = a(173127),
+    E = a(703086);
+let A = {
     home: "Home",
     catalog: "Catalog",
     browse: "Browse",
@@ -160,10 +186,10 @@ let w = {
     "games-b": "Game B",
     "game servers": "Game Servers",
 };
-var E = a(821609),
-    k = a(793574),
-    A = a(722258);
-let I = {
+var k = a(821609),
+    I = a(793574),
+    j = a(722258);
+let M = {
         id: "collectibles",
         name: "Collectibles Shop",
         groups: [
@@ -176,27 +202,27 @@ let I = {
                         component: function (e) {
                             let { skuId: t } = e,
                                 a = t.trim(),
-                                { state: l } = (0, u.IK)(a, { needsCategory: !0 });
-                            return (0, n.jsxs)(o.B, {
+                                { state: r } = (0, p.IK)(a, { needsCategory: !0 });
+                            return (0, l.jsxs)(d.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
                                 children: [
-                                    (0, n.jsx)(s.E, {
+                                    (0, l.jsx)(o.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "Enter a shop SKU ID in the controls, then open the product details modal. The loader resolves the product + category from the storefront APIs (store-first, single item).",
                                     }),
-                                    (0, n.jsxs)(s.E, {
+                                    (0, l.jsxs)(o.E, {
                                         variant: "text-sm/semibold",
-                                        children: ["Resolver state: ", "" === a ? "idle (no skuId)" : l],
+                                        children: ["Resolver state: ", "" === a ? "idle (no skuId)" : r],
                                     }),
-                                    (0, n.jsx)(E.$, {
+                                    (0, l.jsx)(k.$, {
                                         text: "Open product details",
                                         disabled: "" === a,
                                         onClick: () =>
-                                            (0, A.B)({ skuId: a, analyticsLocations: [k.A.COLLECTIBLES_SHOP] }),
+                                            (0, j.B)({ skuId: a, analyticsLocations: [I.A.COLLECTIBLES_SHOP] }),
                                     }),
                                 ],
                             });
@@ -205,7 +231,7 @@ let I = {
                     },
                 ],
             },
-            f,
+            y,
             {
                 title: "Navigation",
                 stories: [
@@ -213,14 +239,14 @@ let I = {
                         name: "Navigation Menu",
                         id: "navigation-menu",
                         component: function () {
-                            let [e, t] = r.useState("home"),
-                                a = r.useCallback(
+                            let [e, t] = n.useState("home"),
+                                a = n.useCallback(
                                     (e, a) => () => {
                                         (window.history.pushState(null, "", a), t(e));
                                     },
                                     [],
                                 ),
-                                l = r.useMemo(
+                                r = n.useMemo(
                                     () => [
                                         {
                                             type: "page",
@@ -248,7 +274,7 @@ let I = {
                                                     type: "page",
                                                     key: "offer eligible",
                                                     text: "Offer Eligible",
-                                                    trailingIndicator: { type: "icon", icon: b.TagIcon },
+                                                    trailingIndicator: { type: "icon", icon: S.TagIcon },
                                                     onClick: a("offer eligible", "#offereligible"),
                                                 },
                                                 {
@@ -301,23 +327,23 @@ let I = {
                                     ],
                                     [a],
                                 );
-                            return (0, n.jsxs)("div", {
-                                className: C.MY,
+                            return (0, l.jsxs)("div", {
+                                className: E.MY,
                                 children: [
-                                    (0, n.jsx)("div", {
-                                        className: C.jr,
-                                        children: (0, n.jsx)(S.A, {
+                                    (0, l.jsx)("div", {
+                                        className: E.jr,
+                                        children: (0, l.jsx)(w.A, {
                                             "aria-label": "Playground Navigation",
-                                            className: C.C$,
-                                            options: l,
+                                            className: E.C$,
+                                            options: r,
                                             selectedKey: e,
                                             overflowLabel: "More",
                                             overflowExpandLabel: "More navigation options",
                                         }),
                                     }),
-                                    (0, n.jsx)("div", {
-                                        className: C.Qs,
-                                        children: (0, n.jsx)(y.D, { variant: "heading-lg/bold", children: w[e] ?? e }),
+                                    (0, l.jsx)("div", {
+                                        className: E.Qs,
+                                        children: (0, l.jsx)(C.D, { variant: "heading-lg/bold", children: A[e] ?? e }),
                                     }),
                                 ],
                             });
@@ -325,8 +351,9 @@ let I = {
                     },
                 ],
             },
+            i,
         ],
         tags: ["Collectibles", "Shop", "Storefront"],
-        IconComponent: l.U,
+        IconComponent: r.U,
     },
-    j = { playgroundBaseUrl: "collectibles", collections: [I] };
+    _ = { playgroundBaseUrl: "collectibles", collections: [M] };

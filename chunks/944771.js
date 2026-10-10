@@ -2804,6 +2804,7 @@ async function l() {
         ).slayerStorefrontPlaygroundConfig,
         (
             await Promise.all([
+                a.e("12089"),
                 a.e("329172"),
                 a.e("217991"),
                 a.e("629972"),
@@ -3011,7 +3012,8 @@ async function l() {
                 a.e("423538"),
                 a.e("96100"),
                 a.e("634225"),
-                a.e("160246"),
+                a.e("480427"),
+                a.e("171300"),
                 a.e("641794"),
                 a.e("259298"),
                 a.e("84993"),
@@ -3405,8 +3407,8 @@ async function l() {
                 a.e("384123"),
                 a.e("155202"),
                 a.e("179374"),
-                a.e("464219"),
-            ]).then(a.bind(a, 105182))
+                a.e("487501"),
+            ]).then(a.bind(a, 141044))
         ).playgroundConfig,
         (await a.e("166181").then(a.bind(a, 181828))).safetyPlaygroundConfig,
         (await Promise.all([a.e("895840"), a.e("989877"), a.e("264236"), a.e("932957")]).then(a.bind(a, 7084)))

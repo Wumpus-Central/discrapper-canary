@@ -1,0 +1,34 @@
+.wrapper_e7c354 {
+    align-items: center;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    position: relative;
+    width: 120px
+}
+
+.ring_e7c354 {
+    height: 100%;
+    inset: 0;
+    overflow: visible;
+    position: absolute;
+    width: 100%
+}
+
+.bar_e7c354,
+.segment_e7c354,
+.track_e7c354 {
+    fill: transparent
+}
+
+.bar_e7c354 {
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%
+}
+
+.barAnimated_e7c354 {
+    transition: stroke-dashoffset .35s
+}
+
+/*# sourceMappingURL=17ae7c7d03391df7.css.map*/
