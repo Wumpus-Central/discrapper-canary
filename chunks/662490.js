@@ -79,7 +79,7 @@ var L = n(536637),
     Y = n(28863),
     X = n(34188),
     H = n(597770),
-    W = n(512950),
+    W = n(683071),
     K = n(975807),
     Z = n(793574),
     q = n(688810),
@@ -710,14 +710,11 @@ class eV extends s.PureComponent {
                   children: [
                       (0, i.jsx)("div", { className: eb.ts }),
                       n.isSoftDeletedProduct
-                          ? (0, i.jsx)(W.p, {
-                                messageType: W.Y.WARNING,
-                                action: (0, i.jsx)(M.$, {
-                                    variant: "overlay-secondary",
-                                    text: ey.intl.string(ey.t.zoztQA),
-                                    onClick: () => (0, K.A)(ev(t)),
-                                }),
-                                children: ey.intl.string(ey.t["3AvulN"]),
+                          ? (0, i.jsx)(W.w, {
+                                type: "warning",
+                                message: ey.intl.string(ey.t["3AvulN"]),
+                                role: "static",
+                                action: { text: ey.intl.string(ey.t.zoztQA), onClick: () => (0, K.A)(ev(t)) },
                             })
                           : null != s &&
                             null != n.sku &&

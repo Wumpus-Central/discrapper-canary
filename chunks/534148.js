@@ -7,7 +7,7 @@ var i,
     o = n(136722),
     c = n(17928),
     d = n(192308),
-    u = n(512950),
+    u = n(683071),
     m = n(885574),
     g = n(821609),
     h = n(866665),
@@ -43,8 +43,8 @@ function W(e) {
     return { id: e.id, names: [e.name] };
 }
 n(172879);
-var G = n(43105),
-    D = n(834730),
+var D = n(43105),
+    G = n(834730),
     U = n(939249),
     B = n(241326),
     H = n(66834),
@@ -187,7 +187,7 @@ function ec(e) {
           )
         : (0, l.jsx)("div", {
               className: eo.dh,
-              children: (0, l.jsx)(D.E, { color: "text-muted", variant: "text-sm/normal", children: a }),
+              children: (0, l.jsx)(G.E, { color: "text-muted", variant: "text-sm/normal", children: a }),
           });
 }
 function ed(e) {
@@ -239,7 +239,7 @@ function ed(e) {
                 }),
             }),
         }),
-        E = (0, l.jsx)(G.A, {
+        E = (0, l.jsx)(D.A, {
             targetElementRef: j,
             title: O.intl.string(O.t.ufFDiC),
             body: O.intl.format(O.t.pW4Crz, {
@@ -357,7 +357,7 @@ function ef(e) {
             },
             [a, L, i, I],
         ),
-        G = s.useCallback(
+        D = s.useCallback(
             (e, t) => {
                 let n,
                     i,
@@ -403,13 +403,13 @@ function ef(e) {
             },
             [a, T],
         ),
-        D = s.useCallback(
+        G = s.useCallback(
             (e, n) => {
                 let i = {};
                 for (let [e, t] of Object.entries(T)) i[e] = { id: t.id, permission: t.permission, type: t.type };
-                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : G(e, n);
+                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : D(e, n);
             },
-            [t, T, M, W, G],
+            [t, T, M, W, D],
         ),
         U = s.useCallback(() => {
             let e = Object.keys(_);
@@ -422,7 +422,7 @@ function ef(e) {
                 ]).then(n.bind(n, 192991));
                 return (n) =>
                     (0, l.jsx)(t, {
-                        editPermissions: D,
+                        editPermissions: G,
                         guildId: a,
                         headerText: O.intl.string(O.t["i1c+kV"]),
                         hasMemberSearch: !1,
@@ -433,7 +433,7 @@ function ef(e) {
                         ...n,
                     });
             });
-        }, [D, _, a, y]),
+        }, [G, _, a, y]),
         B = s.useCallback(() => {
             let e = Object.keys(P);
             return (0, d.openModalLazy)(async () => {
@@ -445,7 +445,7 @@ function ef(e) {
                 ]).then(n.bind(n, 192991));
                 return (n) =>
                     (0, l.jsx)(t, {
-                        editPermissions: D,
+                        editPermissions: G,
                         guildId: a,
                         hasMemberSearch: !0,
                         headerText: O.intl.string(O.t["56jRn8"]),
@@ -456,7 +456,7 @@ function ef(e) {
                         ...n,
                     });
             });
-        }, [D, a, P, y]),
+        }, [G, a, P, y]),
         H = s.useCallback(
             () =>
                 (0, d.openModalLazy)(async () => {
@@ -490,9 +490,10 @@ function ef(e) {
     return (0, l.jsxs)(s.Fragment, {
         children: [
             z > 0
-                ? (0, l.jsx)(u.p, {
-                      messageType: u.Y.WARNING,
-                      children: O.intl.format(O.t["B/dFBH"], { removeCount: z }),
+                ? (0, l.jsx)(u.w, {
+                      type: "warning",
+                      message: O.intl.format(O.t["B/dFBH"], { removeCount: z }),
+                      role: "status",
                   })
                 : null,
             w
@@ -540,7 +541,7 @@ function ef(e) {
                                     commandId: i,
                                     noneSelectedText: e.noneSelectedText,
                                     overwrites: e.overwrites,
-                                    editPermissions: D,
+                                    editPermissions: G,
                                     hasAccessToMutatePermissions: R,
                                 }),
                             }),

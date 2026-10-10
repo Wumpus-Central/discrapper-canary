@@ -38,7 +38,7 @@ var i,
     w = n(858899),
     F = n(404778),
     B = n(193249),
-    H = n(512950),
+    H = n(683071),
     V = n(974544),
     z = n(134413),
     Y = n(780964),
@@ -789,11 +789,7 @@ function ts(e) {
                               onChange: r,
                               disabled: !n,
                           }),
-                          (0, p.jsx)(H.p, {
-                              messageType: H.Y.INFO,
-                              textVariant: "text-xs/normal",
-                              children: en.intl.string(en.t.JxO63z),
-                          }),
+                          (0, p.jsx)(H.w, { type: "info", message: en.intl.string(en.t.JxO63z), role: "static" }),
                       ],
                   }),
                   (0, p.jsx)(F.c, { className: el.yF }),
@@ -869,14 +865,14 @@ function tr(e) {
                               disabled: !s,
                           }),
                           a &&
-                              (0, p.jsx)(H.p, {
-                                  messageType: H.Y.INFO,
-                                  textVariant: "text-xs/normal",
-                                  children: en.intl.format(en.t.Xz1O0W, {
+                              (0, p.jsx)(H.w, {
+                                  type: "info",
+                                  message: en.intl.format(en.t.Xz1O0W, {
                                       onClick: function () {
                                           (0, W.openUserSettings)(Y.X.ACCOUNT_PANEL);
                                       },
                                   }),
+                                  role: "static",
                               }),
                       ],
                   }),
@@ -3390,7 +3386,7 @@ function iy(e) {
             });
     }, [t, i, e, s]);
 }
-var iR = n(683071),
+var iR = n(512950),
     iL = n(181658),
     iG = n(493540),
     iD =
@@ -3575,7 +3571,7 @@ function iP(e) {
     if (null != l)
         return (0, p.jsx)("div", {
             className: iU.U,
-            children: (0, p.jsx)(iR.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" }),
+            children: (0, p.jsx)(H.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" }),
         });
     let u = null;
     return (
@@ -3591,8 +3587,8 @@ function iP(e) {
         null != u
             ? (0, p.jsx)("div", {
                   className: iU.U,
-                  children: (0, p.jsx)(H.p, {
-                      messageType: H.Y.WARNING,
+                  children: (0, p.jsx)(iR.p, {
+                      messageType: iR.Y.WARNING,
                       action: (0, p.jsx)(eu.$, { variant: "overlay-secondary", text: t, onClick: s, loading: i }),
                       children: u,
                   }),
@@ -3722,7 +3718,7 @@ function ll(e) {
             null != j &&
                 (0, p.jsxs)(p.Fragment, {
                     children: [
-                        (0, p.jsx)(iR.w, { type: "critical", message: j.getAnyErrorMessage(), role: "alert" }),
+                        (0, p.jsx)(H.w, { type: "critical", message: j.getAnyErrorMessage(), role: "alert" }),
                         (0, p.jsx)(iY.h, { size: 16 }),
                     ],
                 }),
@@ -4728,7 +4724,7 @@ let sA = function (e) {
                   !i &&
                       (0, p.jsx)("div", {
                           className: sf.b8,
-                          children: (0, p.jsx)(iR.w, {
+                          children: (0, p.jsx)(H.w, {
                               type: "warning",
                               message: en.intl.string(en.t.t56qWO),
                               role: "static",
@@ -5728,8 +5724,9 @@ function aE(e) {
                   gap: 16,
                   children: [
                       null !== g &&
-                          (0, p.jsx)(H.p, { messageType: H.Y.ERROR, children: en.intl.string(en.t["9k8H/9"]) }),
-                      null !== E && (0, p.jsx)(H.p, { messageType: H.Y.ERROR, children: en.intl.string(en.t.up8gUr) }),
+                          (0, p.jsx)(H.w, { type: "critical", message: en.intl.string(en.t["9k8H/9"]), role: "alert" }),
+                      null !== E &&
+                          (0, p.jsx)(H.w, { type: "critical", message: en.intl.string(en.t.up8gUr), role: "alert" }),
                       m
                           ? (0, p.jsx)(i0.D, {
                                 disabled: !N,
@@ -6332,7 +6329,7 @@ function aX(e) {
         u = (0, p.jsxs)(ss.B, {
             gap: 16,
             children: [
-                (0, p.jsx)(H.p, { messageType: H.Y.WARNING, children: en.intl.string(en.t.xunxCo) }),
+                (0, p.jsx)(H.w, { type: "warning", message: en.intl.string(en.t.xunxCo), role: "static" }),
                 (0, p.jsx)(aV, {
                     label: en.intl.string(en.t.GK18KJ),
                     guildId: t,
@@ -7176,7 +7173,7 @@ function rM(e) {
     return (0, p.jsxs)("div", {
         className: rO.rf,
         children: [
-            null != l && (0, p.jsx)(iR.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" }),
+            null != l && (0, p.jsx)(H.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" }),
             !m &&
                 !d &&
                 !g &&
@@ -7996,9 +7993,9 @@ let oh = function () {
                             className: or.xp,
                             children: [
                                 M &&
-                                    (0, p.jsx)(H.p, {
-                                        messageType: H.Y.INFO,
-                                        children: en.intl.format(en.t.uMkfTo, {
+                                    (0, p.jsx)(H.w, {
+                                        type: "info",
+                                        message: en.intl.format(en.t.uMkfTo, {
                                             onClick: () =>
                                                 $.default.open(
                                                     i.id,
@@ -8007,6 +8004,7 @@ let oh = function () {
                                                     et.nd0.ROLE_SUBSCRIPTION_EMOJI,
                                                 ),
                                         }),
+                                        role: "static",
                                     }),
                                 (0, p.jsx)(eu.$, {
                                     text: en.intl.string(en.t["DU0dy/"]),
@@ -8161,7 +8159,7 @@ function op(e) {
         ? (0, p.jsxs)(p.Fragment, {
               children: [
                   (0, p.jsx)(iY.h, { size: 16 }),
-                  (0, p.jsx)(iR.w, {
+                  (0, p.jsx)(H.w, {
                       type: "warning",
                       message: en.intl.format(en.t.Yo0ZB2, { url: et.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
                       role: "static",
@@ -9028,7 +9026,7 @@ function o8(e) {
         : a.actionRequired
           ? (0, p.jsx)(o4, { guild: n })
           : null != s
-            ? (0, p.jsx)(iR.w, { type: "critical", message: s.message, role: "alert" })
+            ? (0, p.jsx)(H.w, { type: "critical", message: s.message, role: "alert" })
             : (0, p.jsxs)("div", {
                   className: o9.kL,
                   children: [
@@ -9133,7 +9131,9 @@ function dr(e) {
                         description: en.intl.string(en.t["uU/69/"]),
                         onChange: (e) => r(e),
                     }),
-                    S ? (0, p.jsx)(H.p, { messageType: H.Y.WARNING, children: en.intl.string(en.t.mIgfEu) }) : null,
+                    S
+                        ? (0, p.jsx)(H.w, { type: "warning", message: en.intl.string(en.t.mIgfEu), role: "status" })
+                        : null,
                 ],
             }),
             (0, p.jsx)(F.c, {}),
@@ -10374,7 +10374,7 @@ let ch = function () {
         children: [
             (0, p.jsx)(D.D, { variant: "heading-lg/semibold", children: en.intl.string(en.t["0wWfUG"]) }),
             (0, p.jsx)(G.E, { variant: "text-sm/normal", className: cg.h_, children: en.intl.format(en.t.NIZ60a, {}) }),
-            null != i ? (0, p.jsx)(iR.w, { type: i.type, children: i.message }) : null,
+            null != i ? (0, p.jsx)(H.w, { type: i.type, children: i.message }) : null,
             (0, p.jsxs)("div", {
                 className: cg.gE,
                 children: [
@@ -17809,13 +17809,13 @@ function xT(e) {
             (0, p.jsxs)("div", {
                 className: x_.QR,
                 children: [
-                    null != m ? (0, p.jsx)(H.p, { messageType: H.Y.WARNING, children: m }) : null,
+                    null != m ? (0, p.jsx)(H.w, { type: "warning", message: m, role: "static" }) : null,
                     x.map((e) =>
                         (0, p.jsx)(
-                            H.p,
+                            H.w,
                             {
-                                messageType: H.Y.WARNING,
-                                children: en.intl.format(xC.default["8ej+nd"], {
+                                type: "warning",
+                                message: en.intl.format(xC.default["8ej+nd"], {
                                     connectionName: e.name,
                                     date: e.migrationData?.deprecationDate.toLocaleDateString(h, {
                                         month: "long",
@@ -17823,6 +17823,7 @@ function xT(e) {
                                         year: "numeric",
                                     }),
                                 }),
+                                role: "static",
                             },
                             e.type,
                         ),
@@ -18895,10 +18896,13 @@ function hp(e) {
                             }),
                             (0, p.jsx)(hN, { query: r, setQuery: o, locked: g, handleAddClick: E }),
                             h
-                                ? (0, p.jsx)(H.p, {
+                                ? (0, p.jsx)("div", {
                                       className: hx.v6,
-                                      messageType: H.Y.INFO,
-                                      children: en.intl.string(en.t.RQxHZ8),
+                                      children: (0, p.jsx)(H.w, {
+                                          type: "info",
+                                          message: en.intl.string(en.t.RQxHZ8),
+                                          role: "status",
+                                      }),
                                   })
                                 : null,
                         ],

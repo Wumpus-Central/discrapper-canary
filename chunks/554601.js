@@ -965,7 +965,7 @@ var e8 = n(34188),
     e2 = n(700623),
     e3 = n(177953),
     e7 = n(825484),
-    e6 = n(512950),
+    e6 = n(683071),
     e9 = n(900797),
     e4 = n(847374),
     e5 = n(10716),
@@ -1348,10 +1348,13 @@ function tL(e) {
                   ],
               })
             : s && !i && (0, I.Z$)(n)
-              ? (0, r.jsx)(e6.p, {
+              ? (0, r.jsx)("div", {
                     className: tI.ai,
-                    messageType: e6.Y.WARNING,
-                    children: et.intl.format(et.t["s/3hjE"], {}),
+                    children: (0, r.jsx)(e6.w, {
+                        type: "warning",
+                        message: et.intl.format(et.t["s/3hjE"], {}),
+                        role: "static",
+                    }),
                 })
               : null
         : null;

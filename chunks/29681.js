@@ -1,32 +1,32 @@
-n.d(e, { default: () => C });
+n.d(e, { default: () => p });
 var a = n(477900),
     s = n(582128),
     i = n(17928),
     l = n(189213),
-    r = n(512950),
+    r = n(683071),
     c = n(297264),
     o = n(834730),
     d = n(28863),
     u = n(97260),
     h = n(635242),
     x = n(775121),
-    A = n(532624),
-    b = n(350535);
+    b = n(532624),
+    g = n(350535);
 n(980504);
 var m = n(652215),
-    g = n(660183),
-    p = n(767251);
-function C(t) {
+    A = n(660183),
+    C = n(767251);
+function p(t) {
     let { transitionState: e, onClose: n } = t,
-        C = (0, i.bG)([A.Ay], () => A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),
-        [y, N] = s.useState(C?.shortcut ?? []),
+        p = (0, i.bG)([b.Ay], () => b.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),
+        [y, v] = s.useState(p?.shortcut ?? []),
         f = s.useCallback(() => {
-            if (0 === y.length) return (null != C && u.A.deleteKeybind(C.id), n());
-            (null == C
+            if (0 === y.length) return (null != p && u.A.deleteKeybind(p.id), n());
+            (null == p
                 ? u.A.addKeybind({ action: m.hCu.SOUNDBOARD_HOLD, shortcut: y, enabled: !0, params: {} })
-                : u.A.setKeybind({ ...C, shortcut: y }),
+                : u.A.setKeybind({ ...p, shortcut: y }),
                 n());
-        }, [C, n, y]);
+        }, [p, n, y]);
     s.useEffect(
         () => (
             x.A.disable(),
@@ -36,39 +36,42 @@ function C(t) {
         ),
         [],
     );
-    let v = s.useMemo(
+    let j = s.useMemo(
         () => [
-            { text: g.intl.string(g.t["ETE/oC"]), onClick: n, variant: "secondary" },
-            { text: g.intl.string(g.t["R3BPH+"]), onClick: f, variant: "primary" },
+            { text: A.intl.string(A.t["ETE/oC"]), onClick: n, variant: "secondary" },
+            { text: A.intl.string(A.t["R3BPH+"]), onClick: f, variant: "primary" },
         ],
         [n, f],
     );
     return (0, a.jsxs)(l.a, {
         transitionState: e,
-        title: g.intl.string(g.t["0Osu3x"]),
-        actions: v,
+        title: A.intl.string(A.t["0Osu3x"]),
+        actions: j,
         onClose: n,
         children: [
-            (0, a.jsx)(r.p, { className: p.$e, messageType: r.Y.WARNING, children: g.intl.string(g.t["O2v/eP"]) }),
+            (0, a.jsx)("div", {
+                className: C.$e,
+                children: (0, a.jsx)(r.w, { type: "warning", message: A.intl.string(A.t["O2v/eP"]), role: "static" }),
+            }),
             (0, a.jsx)(c.D, {
-                className: p._5,
+                className: C._5,
                 variant: "eyebrow",
                 color: "text-default",
-                children: g.intl.string(g.t.UUpAD6),
+                children: A.intl.string(A.t.UUpAD6),
             }),
-            (0, a.jsx)(o.E, { className: p.XI, variant: "text-md/normal", children: g.intl.string(g.t["1xFbP/"]) }),
-            (0, a.jsx)(o.E, { className: p.lf, variant: "text-sm/normal", children: g.intl.string(g.t.laNlTl) }),
+            (0, a.jsx)(o.E, { className: C.XI, variant: "text-md/normal", children: A.intl.string(A.t["1xFbP/"]) }),
+            (0, a.jsx)(o.E, { className: C.lf, variant: "text-sm/normal", children: A.intl.string(A.t.laNlTl) }),
             (0, a.jsx)(c.D, {
-                className: p._5,
+                className: C._5,
                 variant: "eyebrow",
                 color: "text-default",
-                children: g.intl.string(g.t["1La4tC"]),
+                children: A.intl.string(A.t["1La4tC"]),
             }),
-            (0, a.jsx)(h.A, { defaultValue: y, onChange: N }),
+            (0, a.jsx)(h.A, { defaultValue: y, onChange: v }),
             (0, a.jsx)(d.Anchor, {
-                className: p.WA,
-                onClick: () => N((0, b.OH)("ctrl+`")),
-                children: g.intl.string(g.t["s7+2rQ"]),
+                className: C.WA,
+                onClick: () => v((0, g.OH)("ctrl+`")),
+                children: A.intl.string(A.t["s7+2rQ"]),
             }),
         ],
     });

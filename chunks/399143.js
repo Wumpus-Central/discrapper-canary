@@ -5,36 +5,36 @@ var i = n(477900),
     a = n(189213),
     s = n(289873),
     u = n(834730),
-    d = n(512950),
-    o = n(548118),
+    o = n(683071),
+    d = n(548118),
     c = n(71393),
     p = n(915043),
     x = n(660183),
     g = n(315357);
 function h(t) {
-    let { transitionState: e, onClose: n, sku: h, onSelect: m, currentGuildId: b } = t,
-        [f, v] = l.useState(),
-        { guilds: y, isFetching: I } = (0, p.sD)(h.applicationId, h.id, !0),
+    let { transitionState: e, onClose: n, sku: h, onSelect: b, currentGuildId: f } = t,
+        [y, m] = l.useState(),
+        { guilds: v, isFetching: I } = (0, p.sD)(h.applicationId, h.id, !0),
         j = l.useMemo(() => {
-            if (!I && null != b)
+            if (!I && null != f)
                 return (
-                    y.findIndex((t) => {
+                    v.findIndex((t) => {
                         let { id: e } = t;
-                        return e === b;
+                        return e === f;
                     }) >= 0
                 );
-        }, [b, y, I]);
+        }, [f, v, I]);
     l.useLayoutEffect(() => {
-        j && v(b);
-    }, [b, j]);
+        j && m(f);
+    }, [f, j]);
     let S = l.useMemo(() => {
         let t = [];
-        for (let e of y) {
+        for (let e of v) {
             let n = { value: e.id, label: e.name };
-            j && e.id === b ? t.unshift(n) : t.push(n);
+            j && e.id === f ? t.unshift(n) : t.push(n);
         }
         return t;
-    }, [b, y, j]);
+    }, [f, v, j]);
     return (0, i.jsx)(a.a, {
         title: x.intl.string(x.t["xgtI/K"]),
         subtitle: x.intl.string(x.t.rAXXxN),
@@ -45,9 +45,9 @@ function h(t) {
             {
                 variant: "primary",
                 text: x.intl.string(x.t["cY+Oob"]),
-                disabled: null == f,
+                disabled: null == y,
                 onClick: function () {
-                    null != f && (m(f), n());
+                    null != y && (b(y), n());
                 },
             },
         ],
@@ -57,19 +57,19 @@ function h(t) {
               ? (0, i.jsx)(r.p, {
                     "aria-label": x.intl.string(x.t["5qyruI"]),
                     options: S,
-                    value: f,
-                    onChange: v,
+                    value: y,
+                    onChange: m,
                     renderOptionPrefix: (t) => {
                         let e = t?.value,
                             n = null != e ? c.A.getGuild(e) : null;
-                        return null == n ? null : (0, i.jsx)(o.Ay, { guild: n, size: o.Ay.Sizes.MINI });
+                        return null == n ? null : (0, i.jsx)(d.Ay, { guild: n, size: d.Ay.Sizes.MINI });
                     },
                     renderOptionLabel: (t) => {
                         let { label: e, value: n } = t;
                         return (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsx)(u.E, { variant: "text-md/normal", children: e }),
-                                n === b &&
+                                n === f &&
                                     (0, i.jsx)(u.E, {
                                         variant: "text-xs/normal",
                                         color: "text-default",
@@ -80,9 +80,6 @@ function h(t) {
                     },
                     "data-migration-pending": !0,
                 })
-              : (0, i.jsx)(d.p, {
-                    messageType: d.Y.WARNING,
-                    children: (0, i.jsx)(u.E, { variant: "text-sm/normal", children: x.intl.string(x.t.M2TbbK) }),
-                }),
+              : (0, i.jsx)(o.w, { type: "warning", message: x.intl.string(x.t.M2TbbK), role: "static" }),
     });
 }

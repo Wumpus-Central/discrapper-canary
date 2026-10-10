@@ -5,7 +5,7 @@ var n = r(477900),
     s = r(189213),
     a = r(812993),
     i = r(661531),
-    c = r(512950),
+    c = r(683071),
     o = r(297264),
     f = r(289873),
     A = r(834730),
@@ -27,7 +27,7 @@ var C = r(827762),
     w = r(192820),
     S = r(277515);
 let T = new Map();
-async function F(e) {
+async function U(e) {
     let t = k.default.getId(),
         r = h.A.getSecureFramesRosterMapEntry(e),
         n = h.A.getSecureFramesRosterMapEntry(t);
@@ -48,8 +48,8 @@ async function F(e) {
               fingerprintUserKey: r,
           };
 }
-var U = r(731854);
-async function I(e) {
+var j = r(731854);
+async function F(e) {
     let t = h.A.getSecureFramesRosterMapEntry(e),
         r = h.A.getRTCConnection();
     if (null == t || null == r) return null;
@@ -58,10 +58,10 @@ async function I(e) {
     });
     return { fingerprint: C.fromByteArray(n), fingerprintUserKey: t };
 }
-var j = r(787392),
-    G = r(75811),
-    _ = r(930840),
-    v = r(652215),
+var I = r(787392),
+    v = r(75811),
+    G = r(930840),
+    _ = r(652215),
     M = r(660183),
     O = r(686418);
 function B(e) {
@@ -84,7 +84,7 @@ function D(e) {
                 o = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(t)),
                 f = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(n)),
                 A = l.useCallback(
-                    async () => (w.Ay.supports(U.O5.MLS_PAIRWISE_FINGERPRINTS) ? await I(t) : await F(t)),
+                    async () => (w.Ay.supports(j.O5.MLS_PAIRWISE_FINGERPRINTS) ? await F(t) : await U(t)),
                     [t],
                 ),
                 m = l.useRef(0),
@@ -145,7 +145,7 @@ function D(e) {
     let {
             isCurrentUserKeyPersistent: H,
             isOtherUserKeyPersistent: W,
-            loading: Y,
+            loading: Z,
         } = (function (e) {
             let { userId: t, userKey: r } = e,
                 [n, u] = l.useState(!0),
@@ -170,10 +170,10 @@ function D(e) {
                 { loading: n, isCurrentUserKeyPersistent: s, isOtherUserKeyPersistent: i }
             );
         })({ userId: r, userKey: P }),
-        Z = l.useCallback(() => {
-            null != P && ((0, p.bk)(r, P, W, a, v.ThZ.E2EE_USER_VERIFY_MODAL), C());
-        }, [P, r, W, a, C]),
         J = l.useCallback(() => {
+            null != P && ((0, p.bk)(r, P, W, a, _.ThZ.E2EE_USER_VERIFY_MODAL), C());
+        }, [P, r, W, a, C]),
+        Y = l.useCallback(() => {
             null != P && ((0, p.Dh)(r, P, W), C());
         }, [P, r, W, C]),
         [q, X] = l.useMemo(
@@ -195,9 +195,9 @@ function D(e) {
                     return (0, S.uo)(e);
                 }, [r]);
             return (0, u.bG)(
-                [j.A],
+                [I.A],
                 () => {
-                    let e = j.A.getUserVerifiedKeys(t);
+                    let e = I.A.getUserVerifiedKeys(t);
                     return null == e ? 0 : Object.keys(e).filter((e) => e !== n).length;
                 },
                 [n, t],
@@ -217,10 +217,13 @@ function D(e) {
                     className: O.Ot,
                     children: [
                         $ > 0 &&
-                            (0, n.jsx)(c.p, {
-                                messageType: c.Y.INFO,
+                            (0, n.jsx)("div", {
                                 className: O.Ht,
-                                children: M.intl.format(M.t.uZDkz0, { count: $ }),
+                                children: (0, n.jsx)(c.w, {
+                                    type: "info",
+                                    message: M.intl.format(M.t.uZDkz0, { count: $ }),
+                                    role: "static",
+                                }),
                             }),
                         (0, n.jsxs)("div", {
                             className: O.wx,
@@ -231,7 +234,7 @@ function D(e) {
                                     children: M.intl.string(M.t["/WPGnF"]),
                                 }),
                                 null != L &&
-                                    (0, n.jsx)(_.c, {
+                                    (0, n.jsx)(G.c, {
                                         className: O.nJ,
                                         chunks: L,
                                         color: i.A.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -246,7 +249,7 @@ function D(e) {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(G.j, { className: O.aY, chunks: L, columns: 3 }),
+                        (0, n.jsx)(v.j, { className: O.aY, chunks: L, columns: 3 }),
                     ],
                 }),
                 (0, n.jsx)(A.E, { className: O.qr, variant: "text-sm/normal", color: "text-muted", children: Q }),
@@ -254,8 +257,8 @@ function D(e) {
         }),
         er = {
             text: V ? M.intl.string(M.t["Osb+/n"]) : M.intl.string(M.t["0tvNAn"]),
-            disabled: null == L || Y,
-            onClick: V ? J : Z,
+            disabled: null == L || Z,
+            onClick: V ? Y : J,
         },
         en = { text: M.intl.string(M.t["ETE/oC"]), onClick: C, variant: "secondary" };
     return (0, n.jsx)(s.a, { onClose: C, ...ee, actions: [en, er], children: et });

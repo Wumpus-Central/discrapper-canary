@@ -12,7 +12,7 @@ var l = i(477900),
     x = i(885574),
     h = i(331322),
     g = i(821609),
-    f = i(512950),
+    f = i(683071),
     j = i(834730),
     v = i(241524),
     _ = i(915089),
@@ -79,11 +79,11 @@ var O = i(724609),
     F = i(580630),
     w = i(23339),
     V = i(319060),
-    Y = i(2242);
-let B = (0, w.xI)(V.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
+    B = i(2242);
+let Y = (0, w.xI)(V.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
     z = (0, w.xI)(V.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
 function K() {
-    return (0, v.A)(Y.Yl) ? z : B;
+    return (0, v.A)(B.Yl) ? z : Y;
 }
 var W = i(660183),
     X = i(149625);
@@ -336,7 +336,7 @@ let tC = function (t, e, i, s) {
             : E
               ? (r = W.intl.string(W.t["0lPoT2"]))
               : L && (r = W.intl.string(W.t.cEMaCt));
-    let D = (0, v.A)(Y.Yl);
+    let D = (0, v.A)(B.Yl);
     n.useEffect(() => {
         h && null != g && (0, ts.ur)(g);
     }, [h, g]);
@@ -544,7 +544,7 @@ let tP = function (t) {
         }, []),
         [w] = E.tx(i),
         [V] = E.I8(i),
-        [B] = E.V_(i),
+        [Y] = E.V_(i),
         [z] = E.hh(i),
         K =
             ((e = (0, I.dL)(i)),
@@ -555,8 +555,8 @@ let tP = function (t) {
                         e.max_num_active_trial_users > (e.num_active_trial_users ?? 0)),
                 [e],
             )),
-        X = null != B && null == y && K,
-        H = (0, v.A)(Y.Yl),
+        X = null != Y && null == y && K,
+        H = (0, v.A)(B.Yl),
         [$, q] = n.useState(!1),
         Q = $ || !H,
         J = (0, a.bG)([p.A], () => p.A.isViewingServerShop(s)),
@@ -574,8 +574,8 @@ let tP = function (t) {
                           children: [
                               W.intl.format(W.t.L2ouip, {
                                   trialPeriodDuration: (0, N.Gg)({
-                                      interval: B.interval,
-                                      interval_count: B.interval_count,
+                                      interval: Y.interval,
+                                      interval_count: Y.interval_count,
                                   }),
                               }),
                               (0, l.jsx)(u.m, {
@@ -618,12 +618,15 @@ let tP = function (t) {
                                                     })
                                                   : (0, l.jsxs)(l.Fragment, {
                                                         children: [
-                                                            A
+                                                            A || null == S
                                                                 ? null
-                                                                : (0, l.jsx)(f.p, {
+                                                                : (0, l.jsx)("div", {
                                                                       className: tS.Ht,
-                                                                      messageType: f.Y.INFO,
-                                                                      children: S,
+                                                                      children: (0, l.jsx)(f.w, {
+                                                                          type: "info",
+                                                                          message: S,
+                                                                          role: "status",
+                                                                      }),
                                                                   }),
                                                             (0, l.jsx)(g.$, {
                                                                 fullWidth: !0,

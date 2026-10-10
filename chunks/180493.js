@@ -1,69 +1,65 @@
-n.d(i, { default: () => b });
+n.d(i, { default: () => C });
 var e = n(477900),
     l = n(582128),
     a = n(284009),
     s = n.n(a),
     r = n(189213),
-    c = n(512950),
-    d = n(696986),
-    o = n(834730),
-    u = n(683071),
-    p = n(691885),
-    g = n(608461),
-    m = n(627363),
-    h = n(130771),
-    x = n(269927),
-    C = n(660183);
-function b(t) {
+    o = n(683071),
+    c = n(696986),
+    d = n(691885),
+    u = n(608461),
+    p = n(627363),
+    g = n(130771),
+    m = n(269927),
+    h = n(660183);
+function C(t) {
     let { transitionState: i, application: n, onClose: a } = t,
-        [b, f] = l.useState(n?.team?.id),
-        { teams: v } = (0, h.A)(),
-        y = l.useMemo(
+        [C, b] = l.useState(n?.team?.id),
+        { teams: f } = (0, g.A)(),
+        x = l.useMemo(
             () =>
-                v
-                    .filter((t) => t.payout_account_status === x.y.ACTIVE)
+                f
+                    .filter((t) => t.payout_account_status === m.y.ACTIVE)
                     .map((t) => ({ id: t.id, label: t.name, value: t.id })),
-            [v],
+            [f],
         ),
-        A = n?.team?.id !== b,
-        [j, { loading: k, error: I }] = (0, g.A)(m.Ay.transferApplication);
+        y = n?.team?.id !== C,
+        [v, { loading: A, error: k }] = (0, u.A)(p.Ay.transferApplication);
     async function w() {
         (s()(null != n, "no application"),
-            s()(null != b, "no team selected"),
-            null != (await j({ applicationId: n.id, teamId: b })) && a());
+            s()(null != C, "no team selected"),
+            null != (await v({ applicationId: n.id, teamId: C })) && a());
     }
-    let E = n?.team != null;
+    let j = n?.team != null;
     return (0, e.jsxs)(r.a, {
         transitionState: i,
-        title: E ? C.intl.string(C.t["4TveVv"]) : C.intl.string(C.t.feBUAV),
-        subtitle: E ? C.intl.string(C.t.c7HS0n) : C.intl.string(C.t.atZ50I),
+        title: j ? h.intl.string(h.t["4TveVv"]) : h.intl.string(h.t.feBUAV),
+        subtitle: j ? h.intl.string(h.t.c7HS0n) : h.intl.string(h.t.atZ50I),
         onClose: a,
         actions: [
-            { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: a },
-            { variant: "critical-primary", text: C.intl.string(C.t["R3BPH+"]), loading: k, disabled: !A, onClick: w },
+            { variant: "secondary", text: h.intl.string(h.t["ETE/oC"]), onClick: a },
+            { variant: "critical-primary", text: h.intl.string(h.t["R3BPH+"]), loading: A, disabled: !y, onClick: w },
         ],
         children: [
-            E
-                ? (0, e.jsxs)(c.p, {
-                      messageType: c.Y.WARNING,
-                      children: [
-                          C.intl.string(C.t.Caz8nL),
-                          (0, e.jsx)(d.h, { size: 4 }),
-                          (0, e.jsx)(o.E, { variant: "text-sm/normal", children: C.intl.string(C.t.u4ddHZ) }),
-                      ],
+            j
+                ? (0, e.jsx)(o.w, {
+                      type: "warning",
+                      title: h.intl.string(h.t.Caz8nL),
+                      message: h.intl.string(h.t.u4ddHZ),
+                      role: "static",
                   })
                 : null,
-            null != I ? (0, e.jsx)(u.w, { type: "critical", message: I.message, role: "alert" }) : null,
-            (0, e.jsx)(d.h, { size: 16 }),
-            (0, e.jsx)(p.l, {
+            null != k ? (0, e.jsx)(o.w, { type: "critical", message: k.message, role: "alert" }) : null,
+            (0, e.jsx)(c.h, { size: 16 }),
+            (0, e.jsx)(d.l, {
                 selectionMode: "single",
-                label: E ? C.intl.string(C.t.xZ6ZL6) : C.intl.string(C.t.bfmKdK),
+                label: j ? h.intl.string(h.t.xZ6ZL6) : h.intl.string(h.t.bfmKdK),
                 required: !0,
-                options: y,
-                placeholder: C.intl.string(C.t.QXf93A),
-                value: b,
-                disabled: 0 === y.length,
-                onSelectionChange: f,
+                options: x,
+                placeholder: h.intl.string(h.t.QXf93A),
+                value: C,
+                disabled: 0 === x.length,
+                onSelectionChange: b,
             }),
         ],
     });
