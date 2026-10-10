@@ -11,17 +11,17 @@ function o(e, t) {
 function u(e, t, r, l) {
     var u, c, d;
     let g,
-        E = o(e, t);
-    if (null == e || null == E) return t;
-    let m = (0, i.Q7)(E, r),
-        p = {
+        h = o(e, t);
+    if (null == e || null == h) return t;
+    let m = (0, i.Q7)(h, r),
+        E = {
             locale: l,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
-            helpCenterId: E.shared.helpCenter?.id,
+            helpCenterId: h.shared.helpCenter?.id,
         },
-        _ = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, p)) : t.title,
-        h = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, p)) : t.summary,
+        p = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, E)) : t.title,
+        _ = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, E)) : t.summary,
         C =
             null != m
                 ? ((u = m.rewardStates),
@@ -31,8 +31,8 @@ function u(e, t, r, l) {
                 : void 0;
     return {
         ...t,
-        title: _,
-        summary: h,
+        title: p,
+        summary: _,
         heroBannerUrl: C ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,

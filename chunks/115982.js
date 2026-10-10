@@ -1,4 +1,4 @@
-(n.d(t, { B4: () => d, C6: () => g, CT: () => p, Jf: () => h, Lf: () => x, SY: () => u, WQ: () => s, lt: () => k }),
+(n.d(t, { B4: () => o, C6: () => g, CT: () => p, Jf: () => h, Lf: () => x, SY: () => u, WQ: () => s, lt: () => k }),
     n(321073),
     n(134528),
     n(947204));
@@ -23,7 +23,7 @@ function u(e) {
     for (let n of e) (null == t || n.touched > t.touched) && (t = n);
     return t;
 }
-function o(e) {
+function d(e) {
     return (
         "node" === e.kind &&
         null != e.node &&
@@ -31,7 +31,7 @@ function o(e) {
         ("task" === e.node.node_kind || "task" === e.node.id)
     );
 }
-function d(e) {
+function o(e) {
     return c(e).items;
 }
 function c(e) {
@@ -40,38 +40,38 @@ function c(e) {
         l = null,
         a = null,
         i = 0;
-    for (let [u, d] of e.entries()) {
+    for (let [u, o] of e.entries()) {
         var s;
-        let e = d.segment;
+        let e = o.segment;
         if (
             (n.push(e ?? i),
-            "thinking" === d.kind ||
-                ((null == (s = d).task_id || "" === s.task_id) &&
+            "thinking" === o.kind ||
+                ((null == (s = o).task_id || "" === s.task_id) &&
                     ("error" === s.kind ||
                         "terminal_error" === s.kind ||
-                        (!("node" !== s.kind || null == s.node || o(s)) && !r(s.node)))))
+                        (!("node" !== s.kind || null == s.node || d(s)) && !r(s.node)))))
         ) {
             l = null;
             continue;
         }
-        if ("todos" === d.kind) {
-            if (null != d.task_id && "" !== d.task_id) continue;
-            let n = d.items ?? [];
+        if ("todos" === o.kind) {
+            if (null != o.task_id && "" !== o.task_id) continue;
+            let n = o.items ?? [];
             if (0 === n.length) continue;
             null != a
                 ? (a.todos = n)
                 : ((a = { type: "todos", key: `todos-${u}`, segment: e ?? i, todos: n }), t.push(a));
             continue;
         }
-        if ("assistant_delta" !== d.kind || (null != d.task_id && "" !== d.task_id)) continue;
-        let c = d.message ?? "";
+        if ("assistant_delta" !== o.kind || (null != o.task_id && "" !== o.task_id)) continue;
+        let c = o.message ?? "";
         if ("" !== c)
             if (null == l) {
                 i++;
                 let a = e ?? i;
                 ((n[u] = a), (l = { type: "message", key: `message-${u}`, segment: a, content: c }), t.push(l));
             } else l.content = c;
-        !0 === d.message_finished && (l = null);
+        !0 === o.message_finished && (l = null);
     }
     return { items: t, segmentOf: n };
 }
@@ -89,7 +89,7 @@ function h(e, t) {
             i = new Map(),
             s = 0,
             { segmentOf: u } = c(e);
-        function o(e, t, n) {
+        function d(e, t, n) {
             return {
                 id: e,
                 kind: t,
@@ -103,19 +103,19 @@ function h(e, t) {
                 segment: n,
             };
         }
-        function d(e, t) {
+        function o(e, t) {
             let n = a.get(e);
             if (null != n) return n;
-            let l = { taskId: e, task: o("task", "task", t), steps: [] };
+            let l = { taskId: e, task: d("task", "task", t), steps: [] };
             return (a.set(e, l), l);
         }
         function m(e, n, a, r) {
-            if ("task" === a || "task" === n) return null != e ? d(e, r).task : (t = t ?? o("task", "task", r));
+            if ("task" === a || "task" === n) return null != e ? o(e, r).task : (t = t ?? d("task", "task", r));
             let s = `${e ?? ""} ${n}`,
                 u = i.get(s);
             if (null != u) return u;
-            let c = o(n, "step", r);
-            return (i.set(s, c), null != e ? d(e, r).steps.push(c) : l.push(c), c);
+            let c = d(n, "step", r);
+            return (i.set(s, c), null != e ? o(e, r).steps.push(c) : l.push(c), c);
         }
         let f = (function (e) {
                 let t = new Set();
@@ -216,14 +216,14 @@ function g(e) {
     for (let e of a.steps) s.add(e.segment);
     for (let e of a.tasks) s.add(e.task.segment);
     let u = l.find((e) => "todos" === e.type)?.segment,
-        o = Math.max(0, ...i.keys(), ...s, ...(null != u ? [u] : [])),
-        d = [];
-    for (let e = 0; e <= o; e++) {
+        d = Math.max(0, ...i.keys(), ...s, ...(null != u ? [u] : [])),
+        o = [];
+    for (let e = 0; e <= d; e++) {
         let t = i.get(e),
             n = s.has(e),
             l = u === e;
         (null != t || n || l) &&
-            d.push({
+            o.push({
                 key: t?.key ?? `work-${e}`,
                 index: e,
                 ...(null != t ? { prose: t } : {}),
@@ -232,7 +232,7 @@ function g(e) {
                 ...(r.has(e) ? { durationMs: r.get(e) } : {}),
             });
     }
-    return d;
+    return o;
 }
 function p(e, t) {
     let { turnActive: n } = t,
@@ -247,7 +247,7 @@ function x(e) {
         if (null != n) {
             if ("assistant_delta" === n.kind && null != n.message && "" !== n.message) return !0;
             if (
-                !(o(n) || ("node" === n.kind && r(n.node))) &&
+                !(d(n) || ("node" === n.kind && r(n.node))) &&
                 ("node" === n.kind || "error" === n.kind || "terminal_error" === n.kind)
             )
                 break;

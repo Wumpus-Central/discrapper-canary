@@ -34,8 +34,8 @@ var i = n(477900),
     _ = n(769015),
     P = n(834409),
     W = n(671576),
-    G = n(405342),
-    D = n(939249),
+    D = n(405342),
+    G = n(939249),
     U = n(442433),
     B = n(950072),
     H = n(660183),
@@ -62,7 +62,7 @@ function V(e) {
               children: [
                   null != a && (0, i.jsx)(B.A, { className: z.Bc, role: a, guildId: s }),
                   r > 0 &&
-                      (0, i.jsx)(D.D, {
+                      (0, i.jsx)(G.D, {
                           className: z.yt,
                           onClick: c,
                           children: (0, i.jsx)(A.m, {
@@ -321,7 +321,7 @@ function ec(e) {
         S = () => {
             (0, b.openModalLazy)(
                 async () => (e) =>
-                    (0, i.jsx)(G.default, { ...e, channel: c, guild: n, source: en.PE1.SETTINGS_INVITE }),
+                    (0, i.jsx)(D.default, { ...e, channel: c, guild: n, source: en.PE1.SETTINGS_INVITE }),
             );
         },
         [y, O] = l.useState(62),

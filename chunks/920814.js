@@ -1,10 +1,10 @@
-n.d(t, { B: () => i });
-var s,
-    i =
+n.d(e, { B: () => s });
+var i,
+    s =
         221552 == n.j
-            ? (((s = {}).GUILD_PRODUCTS = "guild_products"),
-              (s.GUILD_ROLE_SUBSCRIPTIONS = "guild_role_subscriptions"),
-              (s.GUILD_PRODUCTS_PREVIEW = "guild_products_preview"),
-              (s.GUILD_SHOP_FULL_PREVIEW = "guild_shop_full_preview"),
-              s)
+            ? (((i = {}).GUILD_PRODUCTS = "guild_products"),
+              (i.GUILD_ROLE_SUBSCRIPTIONS = "guild_role_subscriptions"),
+              (i.GUILD_PRODUCTS_PREVIEW = "guild_products_preview"),
+              (i.GUILD_SHOP_FULL_PREVIEW = "guild_shop_full_preview"),
+              i)
             : null;

@@ -26,11 +26,11 @@ function g(e, t) {
         s,
         u,
         g,
-        { analyticsSource: E } = (0, i.lC)(t),
+        { analyticsSource: h } = (0, i.lC)(t),
         m = (0, l.I)(d, 5e3, [], { trailing: !0 }),
-        p = (0, a.uM)(),
-        _ = p?.sessionId,
-        h =
+        E = (0, a.uM)(),
+        p = E?.sessionId,
+        _ =
             ((r = n.useRef(0)),
             (s = n.useRef(!1)),
             (u = n.useRef(!1)),
@@ -80,16 +80,16 @@ function g(e, t) {
             ));
     return {
         handleScroll: n.useCallback(() => {
-            if (h() && null != e.current) {
+            if (_() && null != e.current) {
                 let t = e.current.getScrollerNode();
                 null != t &&
-                    m(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != _ ? _ : "", E, {
+                    m(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != p ? p : "", h, {
                         scrollTop: t.scrollTop,
                         scrollOffset: t.offsetHeight,
                         scrollHeight: t.scrollHeight,
                         scrollWidth: t.scrollWidth,
                     });
             }
-        }, [m, E, _, e, h]),
+        }, [m, h, p, e, _]),
     };
 }

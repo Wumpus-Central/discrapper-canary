@@ -1,4 +1,4 @@
-i.d(e, { H: () => S, y: () => _ });
+i.d(e, { H: () => S, y: () => N });
 var n = i(477900),
     l = i(582128),
     a = i(17928),
@@ -14,10 +14,10 @@ var n = i(477900),
     p = i(192820),
     m = i(576705),
     g = i(309010),
-    I = i(287809),
-    E = i(753070),
-    N = i(660183);
-function _(t) {
+    E = i(287809),
+    I = i(753070),
+    _ = i(660183);
+function N(t) {
     let {
             pid: e,
             analyticsLocation: i,
@@ -28,23 +28,23 @@ function _(t) {
         } = t,
         d = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
         A = (0, a.bG)([f.A], () => f.A.getChannel(d), [d]),
-        E = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
-        N = (0, a.bG)([p.Ay], () => (0, c.A)(p.Ay)),
-        _ = (0, a.bG)([y.A, m.A], () => null != A && (0, u.vz)(A, y.A, m.A));
+        I = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
+        _ = (0, a.bG)([p.Ay], () => (0, c.A)(p.Ay)),
+        N = (0, a.bG)([y.A, m.A], () => null != A && (0, u.vz)(A, y.A, m.A));
     return l.useCallback(async () => {
         await C({
             pid: e,
             voiceChannelId: d,
-            user: E,
-            canGoLive: N,
-            canStream: _,
+            user: I,
+            canGoLive: _,
+            canStream: N,
             analyticsLocation: i,
             allowOneClickGoLive: n,
             onBeforeShowModal: r,
             onOneClickGoLive: s,
             appContext: o,
         });
-    }, [e, d, E, N, _, i, n, r, s, o]);
+    }, [e, d, I, _, N, i, n, r, s, o]);
 }
 async function S(t) {
     let {
@@ -57,14 +57,14 @@ async function S(t) {
         } = t,
         s = g.Ay.getVoiceChannelId(),
         o = f.A.getChannel(s),
-        d = I.default.getCurrentUser(),
+        d = E.default.getCurrentUser(),
         A = null != o && (0, u.vz)(o, y.A, m.A),
-        E = (0, c.A)(p.Ay);
+        I = (0, c.A)(p.Ay);
     await C({
         pid: e,
         voiceChannelId: s,
         user: d,
-        canGoLive: E,
+        canGoLive: I,
         canStream: A,
         analyticsLocation: i,
         allowOneClickGoLive: n,
@@ -88,15 +88,15 @@ async function C(t) {
     if (u && c) {
         if (f && null !== l) {
             let t = A.A.getState().preset;
-            if (t === E.jQ.PRESET_DOCUMENTS) {
+            if (t === I.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, o.eO)({ location: "overlay _goLive" });
-                t = e ? E.jQ.PRESET_AUTO : E.jQ.PRESET_VIDEO;
+                t = e ? I.jQ.PRESET_AUTO : I.jQ.PRESET_VIDEO;
             }
             let [i] = await (0, d.A)(e, { preset: t });
             if (i) return void p?.();
         }
         if (null == a)
-            return void (0, r.P0)({ text: N.intl.string(N.t.OKnWyb), variant: "critical", surface: "overlay" });
+            return void (0, r.P0)({ text: _.intl.string(_.t.OKnWyb), variant: "critical", surface: "overlay" });
         (y?.(),
             (0, s.openModalLazy)(
                 async () => {

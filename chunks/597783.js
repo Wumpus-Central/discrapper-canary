@@ -11,13 +11,13 @@ var n = r(582128),
 function g(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         g = (0, i.uM)(),
-        E = (0, l.bG)([o.A], () => o.A.getProduct(e)),
+        h = (0, l.bG)([o.A], () => o.A.getProduct(e)),
         m = (0, c.i)(),
-        p = a.Ay.canUseShopDiscounts(m),
-        _ = n.useRef(null),
-        h = n.useCallback(() => {
-            let n = null != E ? (0, u.Br)(E, p, !1) : null,
-                l = null != E ? (0, u.c7)(E, p, !1) : void 0;
+        E = a.Ay.canUseShopDiscounts(m),
+        p = n.useRef(null),
+        _ = n.useCallback(() => {
+            let n = null != h ? (0, u.Br)(h, E, !1) : null,
+                l = null != h ? (0, u.c7)(h, E, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: g?.sessionId,
                 sku_id: e,
@@ -31,22 +31,22 @@ function g(e, t) {
                 type: r,
                 category_position: g?.categoryPosition,
             });
-        }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, p, t, E, e, r]),
+        }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, E, t, h, e, r]),
         C = n.useCallback(
             (e) => {
                 e
-                    ? null === _.current &&
-                      (_.current = setTimeout(() => {
-                          (h(), (_.current = null));
+                    ? null === p.current &&
+                      (p.current = setTimeout(() => {
+                          (_(), (p.current = null));
                       }, 1e3))
-                    : null !== _.current && (clearTimeout(_.current), (_.current = null));
+                    : null !== p.current && (clearTimeout(p.current), (p.current = null));
             },
-            [h],
+            [_],
         );
     return (
         n.useEffect(
             () => () => {
-                null !== _.current && (clearTimeout(_.current), (_.current = null));
+                null !== p.current && (clearTimeout(p.current), (p.current = null));
             },
             [e],
         ),

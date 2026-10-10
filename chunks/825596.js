@@ -1,4 +1,4 @@
-n.d(t, { A: () => M, i: () => P });
+n.d(t, { A: () => P, i: () => M });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -141,7 +141,7 @@ function L(e) {
         }),
     });
 }
-function P(e) {
+function M(e) {
     let {
             product: t,
             guildId: n,
@@ -207,7 +207,7 @@ function P(e) {
         }),
     });
 }
-function M(e) {
+function P(e) {
     let {
             product: t,
             guildId: n,
@@ -288,7 +288,7 @@ function M(e) {
                         ],
                     }),
                     !c &&
-                        (0, i.jsx)(P, {
+                        (0, i.jsx)(M, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,

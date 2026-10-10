@@ -1,24 +1,24 @@
-n.d(t, { $L: () => d, iI: () => o, j: () => u });
-var i = n(17928),
-    l = n(873298),
-    s = n(594061),
-    r = n(617617);
+r.d(t, { $L: () => o, iI: () => p, j: () => u });
+var s = r(17928),
+    i = r(873298),
+    n = r(594061),
+    c = r(617617);
 function u(e, t) {
     return e.vibegrations?.projects[t]?.muted === !0;
 }
-function o(e) {
-    return (0, i.bG)([r.A], () => u(r.A.settings, e), [e]);
+function p(e) {
+    return (0, s.bG)([c.A], () => u(c.A.settings, e), [e]);
 }
-function d(e, t) {
-    s.wc.updateAsync(
+function o(e, t) {
+    n.wc.updateAsync(
         "vibegrations",
-        (n) => {
-            if (t) n.projects[e] = l.ky.create({ muted: !0 });
+        (r) => {
+            if (t) r.projects[e] = i.ky.create({ muted: !0 });
             else {
-                if (null == n.projects[e]) return !1;
-                delete n.projects[e];
+                if (null == r.projects[e]) return !1;
+                delete r.projects[e];
             }
         },
-        s.Sb.INFREQUENT_USER_ACTION,
+        n.Sb.INFREQUENT_USER_ACTION,
     );
 }

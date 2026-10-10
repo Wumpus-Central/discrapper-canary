@@ -1,23 +1,23 @@
-n.d(t, { h: () => E });
-var s = n(477900);
+n.d(e, { h: () => E });
+var i = n(477900);
 n(582128);
-var i = n(192308),
+var s = n(192308),
     a = n(287809),
     l = n(166403),
     o = n(625494),
-    u = n(158045),
-    r = n(598653),
+    r = n(158045),
+    u = n(598653),
     c = n(202541),
     d = n(652215);
-function E(e) {
-    let { processedCode: t, channelContext: E, customGiftMessage: _, giftInfo: C } = e,
-        h = !1,
-        T = null,
-        A = a.default.getCurrentUser(),
-        p = (0, u.CC)(A?.premiumType, c.PremiumTypes.TIER_0);
-    (0, i.openModalLazy)(
+function E(t) {
+    let { processedCode: e, channelContext: E, customGiftMessage: _, giftInfo: C } = t,
+        T = !1,
+        g = null,
+        h = a.default.getCurrentUser(),
+        p = (0, r.CC)(h?.premiumType, c.PremiumTypes.TIER_0);
+    (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([
+            let { default: t } = await Promise.all([
                 n.e("489020"),
                 n.e("419121"),
                 n.e("162775"),
@@ -37,26 +37,26 @@ function E(e) {
                 n.e("307200"),
             ]).then(n.bind(n, 361845));
             return (n) =>
-                (0, s.jsx)(e, {
-                    code: t,
+                (0, i.jsx)(t, {
+                    code: e,
                     channelContext: E,
                     customGiftMessage: _,
                     emojiName: C?.emoji?.name,
                     soundId: C?.sound?.id,
-                    onComplete: (e, t) => {
-                        ((T = e),
-                            t && ((h = t), e.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, r.o)(!0)));
+                    onComplete: (t, e) => {
+                        ((g = t),
+                            e && ((T = e), t.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
                     },
                     ...n,
                 });
         },
         {
             onCloseCallback: () => {
-                h &&
-                    null != T &&
+                T &&
+                    null != g &&
                     !p &&
-                    T.isSubscription &&
-                    T?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
+                    g.isSubscription &&
+                    g?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
                     o._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },

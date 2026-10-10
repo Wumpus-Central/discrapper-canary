@@ -43,19 +43,19 @@ let _ = l.memo(function (e) {
             k = l ? C : v,
             R = T ? m : o,
             L = (0, x.x)(R, E.$),
-            P = {};
+            M = {};
         if (T && null != b) {
             let { accentColor: e, backgroundColor: i, opacity: l } = b,
                 s = (0, p.xp)(i ?? "", l) ?? "";
-            (S && (P.borderColor = i), (P.background = s), (t = e), (n = e));
+            (S && (M.borderColor = i), (M.background = s), (t = e), (n = e));
         }
-        let M = { minWidth: L, color: t, borderColor: n };
+        let P = { minWidth: L, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
             className: r()(k.reaction, k.reactionInner, a, { [k.reactionMe]: S, [k.reactionReadOnly]: g && !_ && !j }),
-            style: P,
+            style: M,
             children: [
                 (0, i.jsx)(A.A, { emojiId: s.id, emojiName: s.name, size: y, animated: T && s.animated }),
-                (0, i.jsx)("div", { className: k.reactionCount, style: M, children: R }),
+                (0, i.jsx)("div", { className: k.reactionCount, style: P, children: R }),
             ],
         });
     }),

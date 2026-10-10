@@ -87,13 +87,13 @@ function C(e) {
             cardHeight: k,
             thumbnailHeight: R = 187,
             descriptionTextVariant: L = "text-sm/normal",
-            isDraft: P = !1,
+            isDraft: M = !1,
         } = e,
-        M = (0, g.Ld)(),
+        P = (0, g.Ld)(),
         D = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(E, {
-                    showDraftBadge: P,
+                    showDraftBadge: M,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, i.jsx)("img", { alt: "", src: t, className: I.K_, style: { height: R } }),
                 }),
@@ -107,7 +107,7 @@ function C(e) {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     className: I.tZ,
-                                    id: M,
+                                    id: P,
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
@@ -156,7 +156,7 @@ function C(e) {
             ],
         });
     return null == j
-        ? (0, i.jsx)("article", { className: s()(I.Um, y ? I.sG : I.Wi), "aria-labelledby": M, children: D })
+        ? (0, i.jsx)("article", { className: s()(I.Um, y ? I.sG : I.Wi), "aria-labelledby": P, children: D })
         : (0, i.jsx)("div", {
               style: { width: b, height: k },
               children: (0, i.jsx)(h.s, {

@@ -6,12 +6,12 @@ var a = n(503698),
     i = n(323384),
     s = n(661531),
     u = n(627363),
-    o = n(486020),
-    d = n(470613);
+    d = n(486020),
+    o = n(470613);
 let c = {
-    header: { pixels: 20, className: d.wx },
-    card: { pixels: 40, className: d.Nr },
-    list: { pixels: 44, className: d.p_ },
+    header: { pixels: 20, className: o.wx },
+    card: { pixels: 40, className: o.Nr },
+    list: { pixels: 44, className: o.p_ },
 };
 function m(e) {
     let { project: t, size: n, className: a } = e,
@@ -20,14 +20,14 @@ function m(e) {
             let n = e.preview_application_id ?? e.application_id,
                 { data: l } = (0, u.YY)(n);
             return {
-                url: l?.icon != null ? o.Ay.getApplicationIconURL({ id: n, icon: l.icon, size: t }) : void 0,
+                url: l?.icon != null ? d.Ay.getApplicationIconURL({ id: n, icon: l.icon, size: t }) : void 0,
                 glyphSize: Math.round(0.6 * t),
                 radius: t / 4,
             };
         })(t, m);
     return null == h
         ? (0, l.jsx)("div", {
-              className: r()(d.Gt, d.qf, f, a),
+              className: r()(o.Gt, o.qf, f, a),
               "aria-hidden": !0,
               children: (0, l.jsx)(i.k, {
                   size: "custom",
@@ -36,5 +36,5 @@ function m(e) {
                   color: s.A.colors.INTERACTIVE_ICON_DEFAULT,
               }),
           })
-        : (0, l.jsx)("img", { alt: "", src: h, className: r()(d.Gt, d.Sl, f, a) });
+        : (0, l.jsx)("img", { alt: "", src: h, className: r()(o.Gt, o.Sl, f, a) });
 }

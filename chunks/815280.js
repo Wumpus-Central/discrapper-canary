@@ -10,13 +10,13 @@ var l = r(503698),
     c = r(531685),
     d = r(296344);
 let g = function (e) {
-    let { bannerStatic: t, bannerAnimated: r, bannerRive: l, isResponsive: g = !1, eventTargetRef: E } = e,
+    let { bannerStatic: t, bannerAnimated: r, bannerRive: l, isResponsive: g = !1, eventTargetRef: h } = e,
         m = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        p = (0, a.bG)([c.A], () => c.A.isFocused()),
-        _ = null != r && !m && p;
+        E = (0, a.bG)([c.A], () => c.A.isFocused()),
+        p = null != r && !m && E;
     return null != l
-        ? (0, n.jsx)(i._, { src: l, fit: "fit-width", eventTargetRef: E })
-        : _
+        ? (0, n.jsx)(i._, { src: l, fit: "fit-width", eventTargetRef: h })
+        : p
           ? (0, n.jsx)(u.A, { className: s()({ [d.no]: g }, d.BW, d.ud), src: r, autoPlay: !0, loop: !0 })
           : (0, n.jsx)("div", { className: s()({ [d.no]: g }, d.BW, d._e), style: { backgroundImage: `url(${t})` } });
 };

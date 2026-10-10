@@ -96,7 +96,7 @@ function _(e) {
                   null != x
                       ? (0, i.jsxs)(u.E, { className: R.Tc, variant: "text-sm/normal", children: ["(", x, ")"] })
                       : null,
-                  s ? (0, i.jsx)(G, { tooltipText: r }) : null,
+                  s ? (0, i.jsx)(D, { tooltipText: r }) : null,
               ],
           });
 }
@@ -136,7 +136,7 @@ function P(e) {
                       variant: "text-md/normal",
                       children: d.name,
                   }),
-                  r ? (0, i.jsx)(G, { tooltipText: o }) : null,
+                  r ? (0, i.jsx)(D, { tooltipText: o }) : null,
               ],
           });
 }
@@ -166,11 +166,11 @@ function W(e) {
                   d
                       ? null
                       : (0, i.jsx)(u.E, { className: R.Tc, variant: "text-sm/normal", children: O.Ay.getUserTag(r) }),
-                  l ? (0, i.jsx)(G, { tooltipText: s }) : null,
+                  l ? (0, i.jsx)(D, { tooltipText: s }) : null,
               ],
           });
 }
-function G(e) {
+function D(e) {
     let { tooltipText: t } = e;
     return (0, i.jsx)(x.m, {
         text: t,

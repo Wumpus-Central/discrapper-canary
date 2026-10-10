@@ -5,8 +5,8 @@ var l = n(477900),
     i = n.n(r),
     s = n(847374),
     u = n(320448),
-    o = n(834730),
-    d = n(939249),
+    d = n(834730),
+    o = n(939249),
     c = n(344587),
     m = n(248675),
     f = n(660183),
@@ -31,19 +31,19 @@ function g(e) {
     let N = a.useId(),
         S = a.useCallback(() => _((e) => !e), []),
         { text: A, phase: w } = (0, c.Q)(n),
-        I = b ? s.a : u._,
-        T = null != x,
+        T = b ? s.a : u._,
+        I = null != x,
         C = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: h.hd, children: t }),
-                (0, l.jsx)(o.E, {
+                (0, l.jsx)(d.E, {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
                     className: i()(h.qo, { [h._q]: "exit" === w, [h.GD]: "enter" === w }),
                     children: A,
                 }),
-                T ? (0, l.jsx)(I, { size: "xs", color: "currentColor", className: h.nD }) : null,
+                I ? (0, l.jsx)(T, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
         }),
         M = (0, l.jsxs)(l.Fragment, {
@@ -68,8 +68,8 @@ function g(e) {
         "data-conjure-turn-status": v ? "true" : void 0,
         style: null != p ? { "--custom-conjure-shimmer-tint": p } : void 0,
         children: [
-            T
-                ? (0, l.jsx)(d.D, {
+            I
+                ? (0, l.jsx)(o.D, {
                       tag: "div",
                       className: i()(h.ep, h.EK),
                       "aria-expanded": b,

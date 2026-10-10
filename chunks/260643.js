@@ -1,192 +1,192 @@
-(n.d(e, { En: () => N, K4: () => x, YX: () => V, eL: () => U, n5: () => M, sV: () => _, uO: () => O, ys: () => j }),
+(n.d(t, { En: () => V, K4: () => L, YX: () => F, eL: () => O, n5: () => D, sV: () => _, uO: () => W, ys: () => H }),
     n(323874),
     n(14289),
     n(35956));
-var l = n(141931),
-    i = n(941426),
-    a = n(73153),
-    r = n(756042),
+var i = n(141931),
+    a = n(941426),
+    r = n(73153),
+    l = n(756042),
     u = n(933958),
-    c = n(824613),
-    o = n(587895),
-    d = n(91242),
-    p = n(484697),
-    s = n(616356),
+    o = n(824613),
+    d = n(587895),
+    c = n(91242),
+    s = n(484697),
+    p = n(616356),
     f = n(192820),
-    h = n(309010),
-    m = n(338771),
-    I = n(652215),
-    y = n(165610),
-    A = n(731854);
-let g = "activity-frame:",
-    w = new i.Vy("activityStreamSource"),
-    v = new Map(),
-    T = new Set(),
-    C = null,
-    S = 0,
-    E = 0,
-    $ = new Set(),
-    F = !1,
-    R = null;
-function b() {
+    m = n(309010),
+    h = n(338771),
+    g = n(652215),
+    A = n(165610),
+    I = n(731854);
+let y = "activity-frame:",
+    S = new a.Vy("activityStreamSource"),
+    w = new Map(),
+    E = new Set(),
+    v = null,
+    C = 0,
+    T = 0,
+    R = new Set(),
+    b = !1,
+    $ = null;
+function P() {
     return window.DiscordNative?.activityCapture ?? null;
 }
 function _() {
-    return null != b() && f.Ay.supports(A.O5.ACTIVITY_CAPTURE);
+    return null != P() && f.Ay.supports(I.O5.ACTIVITY_CAPTURE);
 }
-function M(t) {
-    return _() && r.h.getConfig({ location: t }).enabled;
+function D(e) {
+    return _() && l.h.getConfig({ location: e }).enabled;
 }
-function k() {
-    let t = h.Ay.getVoiceChannelId(),
-        e = h.Ay.getChannelId();
+function M() {
+    let e = m.Ay.getVoiceChannelId(),
+        t = m.Ay.getChannelId();
     return [
-        d.A.getMainFrame(),
-        ...(null != t ? d.A.getFramesForChannel(t) : []),
-        ...(null != e && e !== t ? d.A.getFramesForChannel(e) : []),
+        c.A.getMainFrame(),
+        ...(null != e ? c.A.getFramesForChannel(e) : []),
+        ...(null != t && t !== e ? c.A.getFramesForChannel(t) : []),
     ]
-        .map(y.ny)
-        .filter((t) => null != t);
+        .map(A.ny)
+        .filter((e) => null != e);
 }
-function U() {
-    return k()[0] ?? null;
+function O() {
+    return M()[0] ?? null;
 }
-function V() {
-    let t = (function () {
-        let t = u.Ay.getCurrentEmbeddedActivity(),
-            e = null != t ? (0, c.XZ)(t.applicationId) : null;
-        if (null != t && null != e) return { applicationId: t.applicationId, iframeId: e };
-        for (let e of k())
-            if ((null == t || e.applicationId === t.applicationId) && null != e.data.iframeId)
-                return { applicationId: e.applicationId, iframeId: e.data.iframeId };
+function F() {
+    let e = (function () {
+        let e = u.Ay.getCurrentEmbeddedActivity(),
+            t = null != e ? (0, o.XZ)(e.applicationId) : null;
+        if (null != e && null != t) return { applicationId: e.applicationId, iframeId: t };
+        for (let t of M())
+            if ((null == e || t.applicationId === e.applicationId) && null != t.data.iframeId)
+                return { applicationId: t.applicationId, iframeId: t.data.iframeId };
         return null;
     })();
-    if (null == t) return null;
-    let e = o.A.getApplication(t.applicationId);
+    if (null == e) return null;
+    let t = d.A.getApplication(e.applicationId);
     return {
-        id: `${g}${t.iframeId}`,
-        name: e?.name ?? "",
-        url: e?.getIconURL(256) ?? "",
-        icon: e?.getIconURL(64) ?? void 0,
+        id: `${y}${e.iframeId}`,
+        name: t?.name ?? "",
+        url: t?.getIconURL(256) ?? "",
+        icon: t?.getIconURL(64) ?? void 0,
     };
 }
-function x(t) {
-    return t.id.startsWith(g);
+function L(e) {
+    return e.id.startsWith(y);
 }
-function L(t) {
-    return x(t) ? t.id.slice(g.length) : null;
+function k(e) {
+    return L(e) ? e.id.slice(y.length) : null;
 }
-function D(t, e, n) {
-    let l,
-        i = b();
+function U(e, t, n) {
+    let i,
+        a = P();
+    if (null == a) return null;
+    let r = (0, s.fl)(e);
+    if (null != r && r.clientWidth > 0 && r.clientHeight > 0) {
+        let e = Math.min(t.width / r.clientWidth, t.height / r.clientHeight);
+        i = { width: Math.max(1, Math.round(r.clientWidth * e)), height: Math.max(1, Math.round(r.clientHeight * e)) };
+    }
+    return a
+        .captureImage({ frameId: e, outputSize: i, format: "jpeg", quality: 80, timeoutMs: n })
+        .then((e) => new Blob([e.data], { type: e.mimeType }));
+}
+async function V(e, t) {
+    let n = k(e),
+        i = null != n ? U(n, t, 2e3) : null;
     if (null == i) return null;
-    let a = (0, p.fl)(t);
-    if (null != a && a.clientWidth > 0 && a.clientHeight > 0) {
-        let t = Math.min(e.width / a.clientWidth, e.height / a.clientHeight);
-        l = { width: Math.max(1, Math.round(a.clientWidth * t)), height: Math.max(1, Math.round(a.clientHeight * t)) };
-    }
-    return i
-        .captureImage({ frameId: t, outputSize: l, format: "jpeg", quality: 80, timeoutMs: n })
-        .then((t) => new Blob([t.data], { type: t.mimeType }));
-}
-async function N(t, e) {
-    let n = L(t),
-        l = null != n ? D(n, e, 2e3) : null;
-    if (null == l) return null;
     try {
-        return URL.createObjectURL(await l);
-    } catch (t) {
-        return (w.warn("Failed to capture activity preview", t), null);
+        return URL.createObjectURL(await i);
+    } catch (e) {
+        return (S.warn("Failed to capture activity preview", e), null);
     }
 }
-async function O(t, e) {
-    let n = L(t),
-        l = null != n ? D(n, e, 500) : null;
-    if (null == n || null == l) return null;
-    let i = R?.frameId === n ? R.url : null;
+async function W(e, t) {
+    let n = k(e),
+        i = null != n ? U(n, t, 500) : null;
+    if (null == n || null == i) return null;
+    let a = $?.frameId === n ? $.url : null;
     try {
-        var a;
-        let t = await ((a = await l),
-        new Promise((t, e) => {
+        var r;
+        let e = await ((r = await i),
+        new Promise((e, t) => {
             let n = new FileReader();
-            ((n.onload = () => t(n.result)), (n.onerror = () => e(n.error)), n.readAsDataURL(a));
+            ((n.onload = () => e(n.result)), (n.onerror = () => t(n.error)), n.readAsDataURL(r));
         }));
-        return ((R = { frameId: n, url: t }), t);
+        return (($ = { frameId: n, url: e }), e);
     } catch {
-        return i;
+        return a;
     }
 }
-function P(t) {
-    b()
-        ?.stop(t)
-        .catch((e) => w.warn(`Failed to stop activity capture ${t}`, e));
+function G(e) {
+    P()
+        ?.stop(e)
+        .catch((t) => S.warn(`Failed to stop activity capture ${e}`, t));
 }
-function Y(t, e) {
-    let { sound: n, frameRate: l } = e;
-    b()
-        ?.update(t, { audio: n, maxFrameRate: l })
-        .catch((e) => w.warn(`Failed to update activity capture ${t}`, e));
+function N(e, t) {
+    let { sound: n, frameRate: i } = t;
+    P()
+        ?.update(e, { audio: n, maxFrameRate: i })
+        .catch((t) => S.warn(`Failed to update activity capture ${e}`, t));
 }
-function G() {
-    let t = null != C && $.has(C);
-    t !== F &&
-        ((F = t),
-        a.h.dispatch({
+function j() {
+    let e = null != v && R.has(v);
+    e !== b &&
+        ((b = e),
+        r.h.dispatch({
             type: "MEDIA_ENGINE_VIDEO_STATE_CHANGED",
-            context: A.x.STREAM,
-            videoState: t ? I.uPF.PAUSED : I.uPF.PLAYING,
+            context: I.x.STREAM,
+            videoState: e ? g.uPF.PAUSED : g.uPF.PLAYING,
         }));
 }
-function W(t) {
-    let e = v.get(t);
-    null != e && (clearTimeout(e), v.delete(t));
+function x(e) {
+    let t = w.get(e);
+    null != t && (clearTimeout(t), w.delete(e));
 }
-function H(t) {
-    v.has(t) && (W(t), T.add(t));
+function Y(e) {
+    w.has(e) && (x(e), E.add(e));
 }
-async function j(t, e) {
+async function H(e, t) {
     let n,
-        { audio: i, maxFrameRate: a } = e,
-        r = b();
-    if (null == r || !x(t)) return null;
-    let u = ++S;
+        { audio: a, maxFrameRate: r } = t,
+        l = P();
+    if (null == l || !L(e)) return null;
+    let u = ++C;
     try {
-        ({ captureId: n } = await r.captureStream({ frameId: t.id.slice(g.length), audio: i, maxFrameRate: a }));
-    } catch (t) {
-        return (w.warn("Failed to start activity capture", t), null);
+        ({ captureId: n } = await l.captureStream({ frameId: e.id.slice(y.length), audio: a, maxFrameRate: r }));
+    } catch (e) {
+        return (S.warn("Failed to start activity capture", e), null);
     }
-    return u < E
-        ? (P(n), null)
-        : ((E = u),
-          v.set(
+    return u < T
+        ? (G(n), null)
+        : ((T = u),
+          w.set(
               n,
               window.setTimeout(() => {
-                  (w.warn(`Activity capture ${n} was never picked up by a stream`), H(n), P(n));
+                  (S.warn(`Activity capture ${n} was never picked up by a stream`), Y(n), G(n));
               }, 15e3),
           ),
-          { ...t, id: `${l.fS.ACTIVITY}:${n}` });
+          { ...e, id: `${i.fS.ACTIVITY}:${n}` });
 }
-(a.h.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", (t) => {
-    let { settings: e } = t;
-    if (e?.context != null && e.context !== A.x.STREAM) return;
-    let n = e?.desktopSettings?.sourceId,
-        i = `${l.fS.ACTIVITY}:`,
-        a = n?.startsWith(i) ? n.slice(i.length) : null;
-    if (null != a && T.delete(a)) {
-        (w.warn(`Activity capture ${a} stopped before the stream picked it up`),
-            setTimeout(() => (0, m.A)(s.A.getCurrentUserActiveStream())));
+(r.h.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", (e) => {
+    let { settings: t } = e;
+    if (t?.context != null && t.context !== I.x.STREAM) return;
+    let n = t?.desktopSettings?.sourceId,
+        a = `${i.fS.ACTIVITY}:`,
+        r = n?.startsWith(a) ? n.slice(a.length) : null;
+    if (null != r && E.delete(r)) {
+        (S.warn(`Activity capture ${r} stopped before the stream picked it up`),
+            setTimeout(() => (0, h.A)(p.A.getCurrentUserActiveStream())));
         return;
     }
-    let r = { sound: e?.desktopSettings?.sound, frameRate: e?.qualityOptions?.frameRate };
-    if (null != a && v.has(a)) {
-        (null != C && C !== a && P(C), (C = a), W(a), Y(a, r), setTimeout(G));
+    let l = { sound: t?.desktopSettings?.sound, frameRate: t?.qualityOptions?.frameRate };
+    if (null != r && w.has(r)) {
+        (null != v && v !== r && G(v), (v = r), x(r), N(r, l), setTimeout(j));
         return;
     }
-    null != a && a === C ? Y(a, r) : null != C && n !== `${l.fS.ACTIVITY}:${C}` && (P(C), (C = null), setTimeout(G));
+    null != r && r === v ? N(r, l) : null != v && n !== `${i.fS.ACTIVITY}:${v}` && (G(v), (v = null), setTimeout(j));
 }),
-    b()?.onStopped((t, e) => {
-        (w.info(`Activity capture ${t} stopped: ${e}`), $.delete(t), t === C ? (C = null) : H(t));
+    P()?.onStopped((e, t) => {
+        (S.info(`Activity capture ${e} stopped: ${t}`), R.delete(e), e === v ? (v = null) : Y(e));
     }),
-    b()?.onPausedChanged((t, e) => {
-        (w.info(`Activity capture ${t} ${e ? "paused" : "resumed"}`), e ? $.add(t) : $.delete(t), G());
+    P()?.onPausedChanged((e, t) => {
+        (S.info(`Activity capture ${e} ${t ? "paused" : "resumed"}`), t ? R.add(e) : R.delete(e), j());
     }));

@@ -1,17 +1,17 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => u });
 var l = n(477900),
     r = n(582128),
     a = n(598047),
     i = n(546772);
 let s = ["left", "middle", "right"];
-function u(e) {
+function o(e) {
     return !!e.altKey | (2 * !!e.ctrlKey) | (4 * !!e.metaKey) | (8 * !!e.shiftKey);
 }
-function o(e) {
+function u(e) {
     let {
             projectId: t,
             sessionId: n,
-            fps: o,
+            fps: u,
             interactive: c = !1,
             paused: d = !1,
             drawWidth: f,
@@ -43,15 +43,15 @@ function o(e) {
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
         A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-        N = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
-        S = (0, i.AV)(t, n),
-        C = r.useRef(S);
+        N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: A }),
+        C = (0, i.AV)(t, n),
+        S = r.useRef(C);
     (r.useEffect(() => {
-        if (C.current === S) return;
-        ((C.current = S), (x.current = null), b(!1));
+        if (S.current === C) return;
+        ((S.current = C), (x.current = null), b(!1));
         let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-    }, [S]),
+    }, [C]),
         r.useEffect(() => {
             g?.(N, j);
         }, [N, j, g]),
@@ -83,7 +83,7 @@ function o(e) {
                         ((v.current = null),
                             null != e && (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                     }),
-                    (v.current = { ...e, modifiers: u(l) }));
+                    (v.current = { ...e, modifiers: o(l) }));
                 return;
             }
             let r = s[l.button];
@@ -97,7 +97,7 @@ function o(e) {
                     ...a,
                     button: r,
                     clickCount: l.detail > 0 ? l.detail : 1,
-                    modifiers: u(l),
+                    modifiers: o(l),
                 }));
         };
     }
@@ -105,7 +105,7 @@ function o(e) {
         return (l) => {
             if (!c || "Escape" === l.key) return;
             l.preventDefault();
-            let r = l.getModifierState("AltGraph") ? -4 & u(l) : u(l);
+            let r = l.getModifierState("AltGraph") ? -4 & o(l) : o(l);
             ((0, i.ZL)(t, n, { type: "input_keyboard", eventType: e, key: l.key, code: l.code, modifiers: r }),
                 "keyDown" === e ? E.current.set(l.code, l.key) : E.current.delete(l.code));
             let a = "Enter" === l.key ? "\r" : l.key;
@@ -138,7 +138,7 @@ function o(e) {
                     ...I(e),
                     deltaX: e.deltaX,
                     deltaY: e.deltaY,
-                    modifiers: u(e),
+                    modifiers: o(e),
                 });
         },
         onKeyDown: _("keyDown"),

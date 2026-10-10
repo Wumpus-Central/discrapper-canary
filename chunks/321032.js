@@ -1,4 +1,4 @@
-n.d(t, { r: () => k, w: () => S });
+n.d(t, { r: () => M, w: () => w });
 var l = n(477900),
     i = n(582128),
     a = n(503698),
@@ -11,8 +11,8 @@ var l = n(477900),
     f = n(123292),
     p = n(95477),
     h = n(103557),
-    m = n(709066),
-    g = n(946274),
+    g = n(709066),
+    m = n(946274),
     b = n(240248),
     v = n(164892),
     x = n(535466),
@@ -40,11 +40,11 @@ function C(e) {
               children: c,
           });
 }
-function w(e) {
+function S(e) {
     let { iconURL: t, canRemove: n, disabled: a = !1, onChange: r } = e,
         s = i.useRef(null),
         [p, h] = i.useState(null);
-    function m() {
+    function g() {
         a || s.current?.activateUploadDialogue();
     }
     return (0, l.jsxs)(o.B, {
@@ -52,7 +52,7 @@ function w(e) {
         gap: 16,
         align: "center",
         children: [
-            (0, l.jsx)(C, { src: t, label: "", size: "lg", onClick: m, disabled: a }),
+            (0, l.jsx)(C, { src: t, label: "", size: "lg", onClick: g, disabled: a }),
             (0, l.jsxs)(o.B, {
                 gap: 8,
                 align: "start",
@@ -84,7 +84,7 @@ function w(e) {
                                 icon: c.UploadIcon,
                                 text: A.intl.string(null == t ? y.default.WpXHIP : y.default.iwCCor),
                                 "aria-label": null == t ? void 0 : A.intl.string(y.default["75j6Qp"]),
-                                onClick: m,
+                                onClick: g,
                                 disabled: a,
                             }),
                             n
@@ -101,7 +101,7 @@ function w(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(g.Ay, {
+            (0, l.jsx)(m.Ay, {
                 ref: s,
                 className: j.Fg,
                 multiple: !1,
@@ -116,7 +116,7 @@ function w(e) {
         ],
     });
 }
-function M(e) {
+function k(e) {
     let { name: t, nameError: n, onNameChange: i, description: a, onDescriptionChange: r, disabled: s = !1 } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -140,7 +140,7 @@ function M(e) {
         ],
     });
 }
-function S(e) {
+function w(e) {
     let { iconURL: t, name: n, description: i } = e;
     return (0, l.jsxs)(o.B, {
         gap: 8,
@@ -169,7 +169,7 @@ function S(e) {
                                         lineClamp: 1,
                                         children: n,
                                     }),
-                                    (0, l.jsx)(m.A, {}),
+                                    (0, l.jsx)(g.A, {}),
                                 ],
                             }),
                             (0, l.jsx)(u.E, {
@@ -185,13 +185,13 @@ function S(e) {
         ],
     });
 }
-function k(e) {
+function M(e) {
     let { iconURL: t, canRemove: n, onIconChange: i, previewName: a, inlinePreview: r = !0, ...s } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(w, { iconURL: t, canRemove: n, disabled: s.disabled, onChange: i }),
-            (0, l.jsx)(M, { ...s }),
-            r ? (0, l.jsx)(S, { iconURL: t, name: a, description: s.description.trim() }) : null,
+            (0, l.jsx)(S, { iconURL: t, canRemove: n, disabled: s.disabled, onChange: i }),
+            (0, l.jsx)(k, { ...s }),
+            r ? (0, l.jsx)(w, { iconURL: t, name: a, description: s.description.trim() }) : null,
         ],
     });
 }

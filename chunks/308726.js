@@ -14,10 +14,10 @@ var n = i(477900),
     p = i(866665),
     m = i(408278),
     g = i(297152),
-    I = i(834730),
-    E = i(821609),
-    N = i(308368),
-    _ = i(298990),
+    E = i(834730),
+    I = i(821609),
+    _ = i(308368),
+    N = i(298990),
     S = i(308528),
     C = i(730134),
     h = i(964486),
@@ -88,11 +88,11 @@ function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([W.default], () => W.default.getUser(i.author_id)),
-        [g, I] = l.useState("unsent"),
-        [E, _] = l.useState(!1);
+        [g, E] = l.useState("unsent"),
+        [I, N] = l.useState(!1);
     l.useEffect(() => {
         if ("sent" === g) {
-            let t = setTimeout(() => _(!0), 2e3);
+            let t = setTimeout(() => N(!0), 2e3);
             return () => clearTimeout(t);
         }
     }, [g]);
@@ -102,8 +102,8 @@ function ts(t) {
         if (null != u && "unsent" === g) {
             t.stopPropagation();
             try {
-                if ((I("sending"), h && null != C))
-                    await N.A.sendActivityInviteUser({
+                if ((E("sending"), h && null != C))
+                    await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN,
                         userId: u.id,
                         activity: C,
@@ -138,9 +138,9 @@ function ts(t) {
                     target_index: s,
                 }),
                     (0, tt.YX)(tn.uss.ACTIVITY, { type: tt.Z5.INVITE, value: tt.IP.INVITE_SENT, userId: u.id }),
-                    I("sent"));
+                    E("sent"));
             } catch (t) {
-                I("unsent");
+                E("unsent");
             }
         }
     }
@@ -155,7 +155,7 @@ function ts(t) {
     }
     let O = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === g ? (E ? d.ChatIcon : A.B) : h ? f.D : y.SendMessageIcon),
+        (e = "sent" === g ? (I ? d.ChatIcon : A.B) : h ? f.D : y.SendMessageIcon),
         (0, n.jsx)(p.m, {
             text: O,
             "aria-label": O,
@@ -163,7 +163,7 @@ function ts(t) {
                 icon: e,
                 "aria-label": O,
                 loading: "sending" === g,
-                onClick: E ? v : T,
+                onClick: I ? v : T,
                 variant: "subtle" === o ? "icon-only" : "secondary",
                 size: "sm",
             }),
@@ -182,7 +182,7 @@ function to(t) {
             t.stopPropagation();
             try {
                 (d("sending"),
-                    await N.A.sendActivityInviteUser({
+                    await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN_REQUEST,
                         userId: r.id,
                         activity: o,
@@ -241,7 +241,7 @@ function tu(t) {
                           (0, n.jsxs)("div", {
                               className: tr.Yn,
                               children: [
-                                  (0, n.jsx)(I.E, {
+                                  (0, n.jsx)(E.E, {
                                       className: tr.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
@@ -312,7 +312,7 @@ function td(t) {
                   !r &&
                       (0, n.jsx)("div", {
                           className: tr.v4,
-                          children: (0, n.jsx)(I.E, {
+                          children: (0, n.jsx)(E.E, {
                               variant: "text-xs/medium",
                               color: "subtle" === s ? "text-subtle" : "text-default",
                               tag: "div",
@@ -429,12 +429,12 @@ function ty(t) {
                   null != a && !s && l
                       ? (0, n.jsx)("div", {
                             className: tr.DJ,
-                            children: (0, n.jsx)(E.$, {
+                            children: (0, n.jsx)(I.$, {
                                 text: ta.intl.string(ta.t["6Qgrev"]),
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    ((0, _.qf)(a, !1, tn.BRT.POPOUT),
+                                    ((0, N.qf)(a, !1, tn.BRT.POPOUT),
                                         (0, tt.YX)(tn.uss.ACTIVITY, { type: tt.Z5.INVITE, value: tt.IP.PANEL_OPENED }));
                                 },
                             }),

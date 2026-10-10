@@ -29,8 +29,8 @@ var i,
     k = n(928550),
     R = n(689168),
     L = n(403362),
-    P = n(456060),
-    M = n(723702),
+    M = n(456060),
+    P = n(723702),
     D = n(850670),
     O = n(206589),
     U = n(125017);
@@ -237,7 +237,7 @@ function el(e) {
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ed ? (0, P.YC)(t, i, r, d, !1) : (0, l.jsx)(ei, { activity: f }), ed ? null : eu],
+                    children: [ed ? (0, M.YC)(t, i, r, d, !1) : (0, l.jsx)(ei, { activity: f }), ed ? null : eu],
                 }),
             [ed, t, i, r, d, f, eu],
         ),
@@ -291,7 +291,7 @@ function el(e) {
                 if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
                 if ((0, z.A)(t, F.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
             }
-            return (0, M.platformSupportsActivityJoin)() && o
+            return (0, P.platformSupportsActivityJoin)() && o
                 ? { canJoin: !0, remoteJoinPlatform: null }
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
@@ -308,7 +308,7 @@ function el(e) {
             null == f ||
             !(0, K.A)(f, t, n.id) ||
             !(0, z.A)(f, F.jUm.SYNC) ||
-            !M.isPlatformEmbedded ||
+            !P.isPlatformEmbedded ||
             (0, O.w)(y, f)
         ),
         eE = (function (e, t, n, i) {

@@ -5,8 +5,8 @@ var l = n(477900),
     i = n(164892),
     s = n(712808),
     u = n(922329),
-    o = n(248675),
-    d = n(660183),
+    d = n(248675),
+    o = n(660183),
     c = n(986109);
 function m(e) {
     let { projectId: t, attachments: n } = e,
@@ -41,7 +41,7 @@ function f(e) {
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
+        a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
 function g(e) {
@@ -64,7 +64,7 @@ function g(e) {
         : (0, l.jsx)(u.n, {
               name: r,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
+              ariaLabel: o.intl.formatToPlainString(d.default["g5+7Vs"], { name: r }),
               onClick: m,
           });
 }
@@ -109,7 +109,7 @@ function p(e) {
         : (0, l.jsx)(u.n, {
               name: g,
               thumbSrc: p,
-              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: g }),
+              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: g }),
               onClick: b,
               onThumbError: () => {
                   (x(null),

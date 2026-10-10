@@ -37,12 +37,12 @@ function p(t) {
             let t = r.Ay.getVisibleGame();
             return null != t && t.elevated && r.Ay.canShowAdminWarning;
         }),
-        I = (0, o.NP)();
+        E = (0, o.NP)();
     return g
         ? (0, n.jsx)(a.E, {
               variant: "text-xxs/semibold",
               color: y ? "text-feedback-warning" : "text-muted",
-              children: I
+              children: E
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
                             (t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL));

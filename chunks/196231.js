@@ -1,4 +1,4 @@
-r.d(t, { S: () => S });
+r.d(t, { S: () => f });
 var n = r(477900),
     l = r(582128),
     s = r(503698),
@@ -9,46 +9,46 @@ var n = r(477900),
     c = r(297264),
     d = r(821609),
     g = r(174459),
-    E = r(440938),
+    h = r(440938),
     m = r(590180),
-    p = r(597783),
-    _ = r(212407),
-    h = r(758836),
+    E = r(597783),
+    p = r(212407),
+    _ = r(758836),
     C = r(652215),
     v = r(660183),
     L = r(105499);
-function S(e) {
+function f(e) {
     let {
             category: t,
             subblock: r,
             badgeText: s,
-            enablePreview: S,
-            pageType: f = h.G2.HOME,
+            enablePreview: f,
+            pageType: S = _.G2.HOME,
             className: I,
-            handleTransition: A,
-            listItemProps: x,
+            handleTransition: x,
+            listItemProps: A,
         } = e,
-        O = r?.categorySkuId;
-    null == O && null != r && (O = m.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
-    let y = O ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: k } = (0, p.Z)(y, f, "marketing featured block"),
-        N = (0, _.s4)(t, r, S),
-        T = l.useRef(null),
-        b = r?.bodyText,
-        j = r?.name ?? t?.name,
-        B = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
-        w = (0, E.uM)();
+        k = r?.categorySkuId;
+    null == k && null != r && (k = m.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
+    let y = k ?? t?.skuId ?? "",
+        { handleCardVisibilityChange: O } = (0, E.Z)(y, S, "marketing featured block"),
+        N = (0, p.s4)(t, r, f),
+        j = l.useRef(null),
+        T = r?.bodyText,
+        b = r?.name ?? t?.name,
+        B = null != b ? v.intl.formatToPlainString(v.t.frSHlf, { destination: b }) : void 0,
+        w = (0, h.uM)();
     return (0, n.jsx)(i.L, {
-        innerRef: T,
-        onChange: k,
+        innerRef: j,
+        onChange: O,
         threshold: 0,
         children: (0, n.jsxs)(o.D, {
             className: a()(L.oT, I),
-            innerRef: T,
+            innerRef: j,
             style: { ...(null != N && { backgroundImage: `url(${N})` }) },
-            ...x,
+            ...A,
             onClick: () => {
-                (A({
+                (x({
                     sourceButton: "shop marketing tile",
                     categorySkuId: y,
                     isInternalShopDeeplink: !0,
@@ -57,7 +57,7 @@ function S(e) {
                     g.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: w?.sessionId,
                         sku_id: y,
-                        page_type: f,
+                        page_type: S,
                         page_section: w?.pageSection,
                         page_category: w?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
@@ -70,13 +70,13 @@ function S(e) {
                 (0, n.jsx)("div", {
                     className: L.Gh,
                     children:
-                        null != b &&
+                        null != T &&
                         (0, n.jsx)(c.D, {
                             lineClamp: 4,
                             className: L.BN,
                             style: { color: r?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
-                            children: b,
+                            children: T,
                         }),
                 }),
                 (0, n.jsx)("div", {
@@ -85,9 +85,9 @@ function S(e) {
                         variant: "overlay-primary",
                         text: v.intl.string(v.t.jVcuVY),
                         "aria-label": B,
-                        tabIndex: x?.tabIndex,
+                        tabIndex: A?.tabIndex,
                         onClick: (e) => {
-                            (A({
+                            (x({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: y,
                                 isInternalShopDeeplink: !0,
@@ -97,7 +97,7 @@ function S(e) {
                                 g.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                     collectibles_shop_session_id: w?.sessionId,
                                     sku_id: y,
-                                    page_type: f,
+                                    page_type: S,
                                     page_section: w?.pageSection,
                                     page_category: w?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
