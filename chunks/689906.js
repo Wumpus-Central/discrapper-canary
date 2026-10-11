@@ -1,37 +1,37 @@
-a.d(E, { A: () => c });
-var t = a(582128),
-    s = a(512750),
-    _ = a(192308),
-    u = a(468689),
-    R = a(568065),
-    r = a(652215);
-function c(e, E) {
-    let a = t.useCallback(
-        (a) => {
-            if ((a.stopPropagation(), E.type !== R.o9.LEVEL))
-                switch (((0, _.closeModal)(R.Fq), E.skuId)) {
-                    case s.SL:
-                        u.default.open(e, r.BEX.TAG, r.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+s.d(E, { A: () => n });
+var _ = s(582128),
+    a = s(512750),
+    t = s(192308),
+    R = s(468689),
+    r = s(568065),
+    c = s(652215);
+function n(e, E) {
+    let s = _.useCallback(
+        (s) => {
+            if ((s.stopPropagation(), E.type !== r.o9.LEVEL))
+                switch (((0, t.closeModal)(r.Fq), E.skuId)) {
+                    case a.SL:
+                        R.A.open(e, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case s.aN:
-                        u.default.open(e, r.BEX.ROLES, r.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case a.aN:
+                        R.A.open(e, c.BEX.ROLES, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case s.FB:
-                        u.default.open(
+                    case a.FB:
+                        R.A.open(
                             e,
-                            r.BEX.BOOST_PERKS,
-                            r.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
-                            r.nd0.BOOST_PERKS_VANITY_URL,
+                            c.BEX.BOOST_PERKS,
+                            c.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                            c.nd0.BOOST_PERKS_VANITY_URL,
                         );
                         return;
-                    case s.d0:
-                        u.default.open(e, r.BEX.GUILD_THEME, r.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case a.d0:
+                        R.A.open(e, c.BEX.GUILD_THEME, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case s.jF:
-                    case s.OJ:
-                    case s.Ht:
-                    case s.tv:
-                        ((0, _.closeAllModals)(), u.default.open(e, r.BEX.TAG, r.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
+                    case a.jF:
+                    case a.OJ:
+                    case a.Ht:
+                    case a.tv:
+                        ((0, t.closeAllModals)(), R.A.open(e, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
                         return;
                     default:
                         return;
@@ -39,5 +39,5 @@ function c(e, E) {
         },
         [e, E],
     );
-    return E.type === R.o9.PERK ? a : void 0;
+    return E.type === r.o9.PERK ? s : void 0;
 }

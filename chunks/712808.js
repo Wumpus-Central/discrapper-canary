@@ -27,7 +27,7 @@
     Bn: () => tt,
     XZ: () => eU,
     VW: () => eO,
-    bq: () => eb,
+    bq: () => eT,
     ho: () => e0,
     oB: () => eM,
     $D: () => eG,
@@ -98,8 +98,8 @@ function S(e) {
 }
 var w = n(573083),
     m = n(855859),
-    T = n(371169),
-    b = n(42766),
+    b = n(371169),
+    T = n(42766),
     k = n(385081),
     C = n(28480);
 class O {
@@ -319,7 +319,7 @@ function X(e, t) {
                 r.content,
                 r.nonce,
                 r.attachments?.map((e) => e.id),
-                b.Ay.getProject(e)?.name,
+                T.Ay.getProject(e)?.name,
                 { templateId: r.templateId, remix: r.remix, clarificationAnswers: r.clarificationAnswers },
             );
         } catch (t) {
@@ -502,11 +502,11 @@ async function es(e, t) {
                         "app_channel_deleted" === r.type
                     )
                         (o.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: t, event: r }),
-                            "app_channel_deleted" !== r.type && (0, T.GO)(t));
+                            "app_channel_deleted" !== r.type && (0, b.GO)(t));
                     else if ("context_switch" === r.type)
                         (o.h.dispatch({ type: "CONJURE_CHAT_CONTEXT_SWITCH", projectId: t, contextSwitch: r }),
                             "reverted" === r.status &&
-                                (0, T.tZ)(t, { isPreview: !0 }).catch((e) => {
+                                (0, b.tZ)(t, { isPreview: !0 }).catch((e) => {
                                     console.error("[vibegrations] post-revert refresh failed", t, e);
                                 }));
                     else if ("smart_context" === r.type)
@@ -687,6 +687,10 @@ async function es(e, t) {
                                 previewAppChannels: Array.isArray(r.preview_app_channels)
                                     ? r.preview_app_channels.filter((e) => "string" == typeof e)
                                     : [],
+                                publishedRevision:
+                                    "number" == typeof r.published_revision ? r.published_revision : null,
+                                publishedAt: "string" == typeof r.published_at ? r.published_at : null,
+                                publishing: !0 === r.publishing,
                             });
                         else if ("clarification" === r.kind)
                             null != r.clarification &&
@@ -749,7 +753,7 @@ async function es(e, t) {
                                     project: r.project,
                                 });
                         else if ("project_named" === r.kind) {
-                            let e = b.Ay.getProject(t);
+                            let e = T.Ay.getProject(t);
                             null != e &&
                                 null != r.name &&
                                 o.h.dispatch({
@@ -763,9 +767,9 @@ async function es(e, t) {
                                 null != e && (clearTimeout(e.timeout), e.resolve(r)),
                                 !0 !== r.ok)
                             )
-                                (0, T.Is)(t, r.error ?? "publish_result not ok", !1);
+                                (0, b.Is)(t, r.error ?? "publish_result not ok", !1);
                             else {
-                                let e = b.Ay.getPublishStatus(t);
+                                let e = T.Ay.getPublishStatus(t);
                                 null != e &&
                                     o.h.dispatch({
                                         type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
@@ -774,6 +778,8 @@ async function es(e, t) {
                                         hasUnpublishedChanges: !1,
                                         surface: e.surface,
                                         previewAppChannels: e.previewAppChannels,
+                                        publishedRevision: e.publishedRevision,
+                                        publishedAt: e.publishedAt,
                                     });
                             }
                         } else if ("patch_notes_draft" === r.kind) {
@@ -788,7 +794,7 @@ async function es(e, t) {
                                 function l(e) {
                                     null != s && "" !== s && n.ws.sendAppIconAck(s, e);
                                 }
-                                (0, T.Ru)(t, e)
+                                (0, b.Ru)(t, e)
                                     .then((e) => {
                                         (e.ok || console.error("[vibegrations] icon from agent rejected", t, e.status),
                                             l(e.ok ? "applied" : "failed"));
@@ -829,7 +835,7 @@ async function es(e, t) {
                                           details: "build_error" === r.kind ? r.stderr_tail : void 0,
                                       }),
                                   "preview_ready" === r.kind &&
-                                      (0, T.tZ)(t, { isPreview: !0 }).catch((e) => {
+                                      (0, b.tZ)(t, { isPreview: !0 }).catch((e) => {
                                           console.error("[vibegrations] post-preview-publish refresh failed", t, e);
                                       }));
                     else {
@@ -1111,7 +1117,7 @@ function eu(e, t, n) {
             c.content,
             c.nonce,
             c.attachments?.map((e) => e.id),
-            b.Ay.getProject(e)?.name,
+            T.Ay.getProject(e)?.name,
             { templateId: c.templateId, remix: c.remix, clarificationAnswers: c.clarificationAnswers },
         );
     } catch (t) {
@@ -1156,7 +1162,7 @@ function ef(e) {
         }
     })
         .catch((t) => {
-            throw ((0, T.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
+            throw ((0, b.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
         })
         .finally(() => {
             t && o.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
@@ -1173,7 +1179,7 @@ function e_(e) {
             }, 45e3);
         r.pendingPatchNotesDraft = { resolve: t, reject: n, timeout: o, nonce: s };
         try {
-            r.ws.sendDraftPatchNotes(s, b.Ay.getProject(e)?.name);
+            r.ws.sendDraftPatchNotes(s, T.Ay.getProject(e)?.name);
         } catch (e) {
             ((r.pendingPatchNotesDraft = null),
                 clearTimeout(o),
@@ -1220,12 +1226,12 @@ function eS(e) {
     }
 }
 function ew(e, t) {
-    return eT(e, "undo context switch", (e) => e.sendUndoContextSwitch(t));
+    return eb(e, "undo context switch", (e) => e.sendUndoContextSwitch(t));
 }
 function em(e, t) {
-    return eT(e, "smart context", (e) => e.sendSmartContext(t));
+    return eb(e, "smart context", (e) => e.sendSmartContext(t));
 }
-function eT(e, t, n) {
+function eb(e, t, n) {
     let r = P.get(e);
     try {
         if (null == r) throw Error("Not connected");
@@ -1234,7 +1240,7 @@ function eT(e, t, n) {
         return (console.error(`[vibegrations] ${t} send failed`, e), !1);
     }
 }
-function eb(e) {
+function eT(e) {
     o.h.dispatch({ type: "CONJURE_SANDBOX_RESTART_REQUESTED", projectId: e });
     let t = P.get(e);
     try {
@@ -1376,7 +1382,7 @@ async function eM(e, t) {
     if (null == i.entry) throw Error("version restore returned no commit");
     return (
         !0 === i.live ||
-            (0, T.tZ)(e, { isPreview: !0 }).catch((t) => {
+            (0, b.tZ)(e, { isPreview: !0 }).catch((t) => {
                 console.error("[vibegrations] post-version-restore refresh failed", e, t);
             }),
         i.entry
@@ -1422,7 +1428,7 @@ async function ex(e, t) {
                   : { ok: !1, code: 410 === n ? "expired" : "failed", message: r });
     if (s.ok)
         try {
-            (0, T.BD)(e);
+            (0, b.BD)(e);
         } catch (t) {
             console.error("[vibegrations] post-data-restore frame reload failed", e, t);
         }
@@ -1632,7 +1638,7 @@ function tt(e) {
 }
 class tn extends s.Ay.Store {
     initialize() {
-        this.waitFor(l.Ay, c.A, b.Ay, a.default);
+        this.waitFor(l.Ay, c.A, T.Ay, a.default);
     }
     getConnState(e) {
         return D.get(e) ?? "connecting";
@@ -1684,7 +1690,7 @@ let tr = [],
         },
         CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of Array.from(P.keys())) null == b.Ay.getProject(e) && ec(e) && (t = !0);
+            for (let e of Array.from(P.keys())) null == T.Ay.getProject(e) && ec(e) && (t = !0);
             if (!t) return !1;
         },
         LOGOUT: function () {

@@ -4,8 +4,8 @@ var s = l(477900),
     n = l(189213),
     t = l(192308),
     c = l(683071),
-    d = l(289873),
-    r = l(404778),
+    r = l(289873),
+    d = l(404778),
     o = l(178315),
     h = l(468689),
     u = l(466034),
@@ -14,10 +14,10 @@ var s = l(477900),
     m = l(661531),
     g = l(285796),
     v = l(297264),
-    C = l(834730),
-    b = l(821609),
-    p = l(953727);
-function A(e) {
+    A = l(834730),
+    C = l(821609),
+    b = l(953727);
+function p(e) {
     let {
         width: i = 24,
         height: l = 24,
@@ -26,7 +26,7 @@ function A(e) {
         ...t
     } = e;
     return (0, s.jsxs)("svg", {
-        ...(0, p.A)(t),
+        ...(0, b.A)(t),
         width: i,
         height: l,
         viewBox: "0 0 14 14",
@@ -40,37 +40,37 @@ function A(e) {
     });
 }
 var k = l(660183),
-    f = l(916423);
-function E(e) {
+    E = l(916423);
+function M(e) {
     let { name: i, description: l, checked: a, actionLabel: n, actionHandler: t } = e,
         c = null;
     return (
         (c = a
-            ? (0, s.jsx)(A, { width: 20, height: 20 })
+            ? (0, s.jsx)(p, { width: 20, height: 20 })
             : (0, s.jsx)(g.a, { size: "custom", color: m.A.colors.ICON_FEEDBACK_CRITICAL, width: 20, height: 20 })),
         (0, s.jsxs)("div", {
-            className: f.gd,
+            className: E.gd,
             children: [
-                (0, s.jsx)("div", { className: f.aV, children: c }),
+                (0, s.jsx)("div", { className: E.aV, children: c }),
                 (0, s.jsxs)("div", {
-                    className: j()(f.__invalid_checklistText, a && f.lu),
+                    className: j()(E.__invalid_checklistText, a && E.lu),
                     children: [
-                        (0, s.jsx)(v.D, { variant: "heading-md/semibold", className: f.LA, children: i }),
-                        (0, s.jsx)(C.E, { color: "interactive-text-default", variant: "text-sm/normal", children: l }),
+                        (0, s.jsx)(v.D, { variant: "heading-md/semibold", className: E.LA, children: i }),
+                        (0, s.jsx)(A.E, { color: "interactive-text-default", variant: "text-sm/normal", children: l }),
                     ],
                 }),
                 null != n &&
                     (0, s.jsx)("div", {
-                        className: f.dT,
-                        children: (0, s.jsx)(b.$, { variant: "primary", onClick: t, text: n, size: "sm" }),
+                        className: E.dT,
+                        children: (0, s.jsx)(C.$, { variant: "primary", onClick: t, text: n, size: "sm" }),
                     }),
             ],
         })
     );
 }
 l(848887);
-var M = l(413611),
-    _ = l(652215);
+var _ = l(413611),
+    f = l(652215);
 function w(e) {
     let { eligibility: i, eligibilityLoading: l, eligibilityError: n, guildId: x, onEligibilityBecameStale: j } = e,
         m = a.useMemo(
@@ -80,7 +80,7 @@ function w(e) {
                 actions: {
                     onEnableMFAClick: u.Ay.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        ((0, t.closeModal)(M.m), h.default.open(x, _.BEX.SAFETY, void 0, _.nd0.SAFETY_PERMISSIONS));
+                        ((0, t.closeModal)(_.m), h.A.open(x, f.BEX.SAFETY, void 0, f.nd0.SAFETY_PERMISSIONS));
                     },
                 },
             }),
@@ -90,21 +90,21 @@ function w(e) {
     return null != n
         ? (0, s.jsx)("div", { children: (0, s.jsx)(c.w, { type: "critical", message: n.message, role: "alert" }) })
         : null == g || l
-          ? (0, s.jsx)("div", { children: (0, s.jsx)(d.y, {}) })
+          ? (0, s.jsx)("div", { children: (0, s.jsx)(r.y, {}) })
           : (0, s.jsx)("div", {
                 children: g.map((e, i) =>
                     (0, s.jsxs)(
                         a.Fragment,
                         {
                             children: [
-                                (0, s.jsx)(E, {
+                                (0, s.jsx)(M, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler,
                                 }),
-                                i < g.length - 1 ? (0, s.jsx)(r.c, {}) : null,
+                                i < g.length - 1 ? (0, s.jsx)(d.c, {}) : null,
                             ],
                         },
                         e.checkedLabel,
@@ -118,21 +118,21 @@ function y(e) {
         eligibilityLoading: l,
         eligibilityError: a,
         refreshEligibility: c,
-        guildId: d,
-        transitionState: r,
+        guildId: r,
+        transitionState: d,
     } = e;
     return (0, s.jsx)(n.a, {
-        transitionState: r,
+        transitionState: d,
         title: k.intl.string(k.t["3s47iN"]),
         actions: [],
         onClose: async () => {
-            await (0, t.closeModal)(M.m);
+            await (0, t.closeModal)(_.m);
         },
         children: (0, s.jsx)(w, {
             eligibility: i,
             eligibilityLoading: l,
             eligibilityError: a,
-            guildId: d,
+            guildId: r,
             onEligibilityBecameStale: c,
         }),
     });

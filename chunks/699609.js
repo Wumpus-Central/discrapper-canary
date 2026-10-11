@@ -11,9 +11,9 @@ var i = n(477900),
     g = n(866665),
     h = n(695366),
     x = n(669953),
-    f = n(713125),
-    m = n(608401),
-    A = n(739455),
+    A = n(713125),
+    f = n(608401),
+    m = n(739455),
     S = n(468689),
     N = n(976860),
     v = n(309010),
@@ -53,14 +53,14 @@ function z(e) {
         d = a === M._.SERVER_SHOP,
         g = (0, o.bG)([L.Ay], () => (null != n ? L.Ay.getTrueMember(l, n.id) : null)),
         h = null != s ? r[(0, T.af)(s)] : null,
-        [x, f] = t.useState(() => {
+        [x, A] = t.useState(() => {
             let e = null == c ? [] : X.default.keys(c);
             return (null != h && e.push(h.id), e);
         }),
-        m = t.useRef(s);
+        f = t.useRef(s);
     t.useEffect(() => {
         let e = {},
-            l = m.current;
+            l = f.current;
         if (null != l && null != a) {
             for (let l of x) {
                 let n = r[l];
@@ -69,16 +69,16 @@ function z(e) {
             (0, p.IA)(l.id, { type: a, roles: e });
         }
     }, [x, a, r]);
-    let A = null != s && null != n && null != g ? u.find((e) => g.roles.includes(e.id)) : void 0,
+    let m = null != s && null != n && null != g ? u.find((e) => g.roles.includes(e.id)) : void 0,
         S = t.useMemo(
             () =>
                 null != s && null != n
                     ? u
                           .filter((e) => !(0, G.Oy)(e))
                           .filter((e) => !d || e.tags?.subscription_listing_id != null)
-                          .filter((e) => A?.id === e.id || P.wO(s, n.id, A, e))
+                          .filter((e) => m?.id === e.id || P.wO(s, n.id, m, e))
                     : [],
-            [s, n, d, A, u],
+            [s, n, d, m, u],
         ),
         N = t.useMemo(() => {
             let e = Array.from(S).map((e) => ({
@@ -109,7 +109,7 @@ function z(e) {
                   options: N,
                   value: x,
                   onSelectionChange: (e) => {
-                      f(e);
+                      A(e);
                   },
                   children: [
                       (0, i.jsx)(C.a3, { hideTags: !0, autoFocus: !0, placeholder: D.intl.string(D.t.Sojqsr) }),
@@ -185,10 +185,10 @@ function Z() {
         let { backToSettings: n } = e;
         null != l &&
             (w.A.isFullServerPreview(l) && (0, N.pX)(U.BVt.CHANNEL(l)),
-            f.Ay.shouldShowOnboarding(l) && (x.A.finishOnboarding(l), (0, m.Jg)(l)),
+            A.Ay.shouldShowOnboarding(l) && (x.A.finishOnboarding(l), (0, f.Jg)(l)),
             (0, p.rf)(l),
-            n && S.default.open(l, r),
-            r === U.BEX.ROLE_SUBSCRIPTIONS && (0, A.Fx)(l));
+            n && S.A.open(l, r),
+            r === U.BEX.ROLE_SUBSCRIPTIONS && (0, m.Fx)(l));
     }
     return (0, i.jsxs)(c.$T, {
         color: c.Hv.BRAND,

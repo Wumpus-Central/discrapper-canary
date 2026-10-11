@@ -2302,7 +2302,7 @@ function ir(e) {
                         size: "sm",
                         text: O.intl.string(O.t["1R7QIx"]),
                         onClick: function () {
-                            null != i && em.default.open(i, b.BEX.GUILD_AUTOMOD, void 0, b.nd0.AUTOMOD_MENTION_SPAM);
+                            null != i && em.A.open(i, b.BEX.GUILD_AUTOMOD, void 0, b.nd0.AUTOMOD_MENTION_SPAM);
                         },
                     }),
                 }),
@@ -3838,7 +3838,7 @@ let li = Object.freeze({
                 compact: n,
                 guildName: s,
                 onClick: function () {
-                    null != i && em.default.open(i, b.BEX.ACCESS, b.nd0.ACCESS_DISCOVERABLE);
+                    null != i && em.A.open(i, b.BEX.ACCESS, b.nd0.ACCESS_DISCOVERABLE);
                 },
                 onClickGuild: a,
             });

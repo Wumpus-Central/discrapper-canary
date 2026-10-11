@@ -16,8 +16,8 @@ var a = t(477900),
     b = t(834730),
     v = t(299163),
     p = t(926321),
-    N = t(908803),
-    A = t(661531),
+    A = t(908803),
+    N = t(661531),
     E = t(793574),
     G = t(688810),
     y = t(793943),
@@ -231,7 +231,7 @@ function ea(e) {
                 })(eg, J),
             [eg, J],
         ),
-        { key: eN, handleInternalChange: eA } = Q(ex),
+        { key: eA, handleInternalChange: eN } = Q(ex),
         { key: eE, handleInternalChange: eG } = Q(eb),
         { key: ey, handleInternalChange: eC } = Q(eh),
         eI = n.useCallback((e, l) => {
@@ -258,7 +258,7 @@ function ea(e) {
                 (0, y.Jp)(),
                 null != e &&
                     (l === M.v5.GUILD_SETTINGS
-                        ? C.default.open(e, H.BEX.GUILD_THEME, E.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME)
+                        ? C.A.open(e, H.BEX.GUILD_THEME, E.A.GUILD_POWERUPS_GUILD_SETTINGS_GUILD_THEME)
                         : l === M.v5.PERK_MODAL && (0, L.A)(e, E.A.GUILD_POWERUPS_OVERVIEW, r.d0)));
         }, []),
         eT = n.useCallback(async () => {
@@ -399,15 +399,15 @@ function ea(e) {
                                     background:
                                         "linear-gradient(90deg, rgb(255 0 0) 0%, rgb(255 255 0) 16.66%, rgb(0 255 0) 33.33%, rgb(0 255 255) 50%, rgb(0 0 255) 66.66%, rgb(255 0 255) 83.33%, rgb(255 0 0) 100%)",
                                     color: ev,
-                                    controlKey: eN,
+                                    controlKey: eA,
                                     min: 0,
                                     max: 359,
                                     defaultValue: ex,
                                     ariaLabel: O.intl.string(X.default.uSL2Gy),
-                                    onValuePreview: eA,
+                                    onValuePreview: eN,
                                     onValueCommit: (e) => {
                                         let l = (0, U.w3)((0, U.sR)(eg, e));
-                                        (eA(Y(l)), eI(l, eh));
+                                        (eN(Y(l)), eI(l, eh));
                                     },
                                 }),
                                 (0, a.jsx)(ee, {
@@ -511,9 +511,9 @@ function ea(e) {
                                         ? { type: "icon", asset: p.DiceIcon }
                                         : {
                                               type: "rive",
-                                              asset: N.m,
+                                              asset: A.m,
                                               riveProps: {
-                                                  dataBinding: { fill: A.A.colors.ICON_STRONG },
+                                                  dataBinding: { fill: N.A.colors.ICON_STRONG },
                                                   eventTargetRef: t,
                                               },
                                           },

@@ -1,27 +1,28 @@
 (n.d(t, {
-    FA: () => g,
-    K1: () => m,
-    KA: () => p,
-    Nc: () => v,
+    FA: () => m,
+    K1: () => p,
+    KA: () => g,
+    Nc: () => x,
     T4: () => f,
-    YD: () => i,
-    fd: () => x,
-    lG: () => s,
-    nY: () => o,
+    YD: () => r,
+    fd: () => b,
+    lG: () => u,
+    nY: () => s,
+    p9: () => o,
     u4: () => h,
-    v9: () => d,
-    y0: () => j,
+    v9: () => c,
+    y0: () => v,
 }),
     n(321073));
 var l = n(381849),
-    r = n(248675),
+    i = n(248675),
     a = n(660183);
-function i(e) {
+function r(e) {
     let t = Date.parse(e);
     return Number.isNaN(t) ? null : t;
 }
-function s(e) {
-    let t = i(e);
+function u(e) {
+    let t = r(e);
     return null == t
         ? { relative: null, absolute: null }
         : {
@@ -29,45 +30,45 @@ function s(e) {
               absolute: new Date(t).toLocaleString(),
           };
 }
-function o(e) {
+function s(e) {
     return new Date(e).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
-function u(e) {
+function o(e) {
     return new Date(e).toLocaleString(void 0, { dateStyle: "medium", timeStyle: "short" });
 }
-function c(e) {
+function d(e) {
     let t = new Date(e);
     return (t.setHours(0, 0, 0, 0), t.getTime());
 }
-function d(e, t, n) {
+function c(e, t, n) {
     let l = [];
-    for (let i of e) {
-        let e = t(i),
-            s = null == e ? "unknown" : String(c(e)),
-            o = l[l.length - 1];
-        null != o && o.key === s
-            ? o.items.push(i)
+    for (let r of e) {
+        let e = t(r),
+            u = null == e ? "unknown" : String(d(e)),
+            s = l[l.length - 1];
+        null != s && s.key === u
+            ? s.items.push(r)
             : l.push({
-                  key: s,
+                  key: u,
                   label:
                       null == e
                           ? null
                           : (function (e, t) {
-                                let n = c(e),
-                                    l = c(t);
-                                if (n === l) return a.intl.string(r.default.CADyoV);
-                                let i = new Date(l);
-                                if ((i.setDate(i.getDate() - 1), n === i.getTime()))
-                                    return a.intl.string(r.default.mghe4b);
-                                let s = new Date(e).getFullYear() === new Date(t).getFullYear();
+                                let n = d(e),
+                                    l = d(t);
+                                if (n === l) return a.intl.string(i.default.CADyoV);
+                                let r = new Date(l);
+                                if ((r.setDate(r.getDate() - 1), n === r.getTime()))
+                                    return a.intl.string(i.default.mghe4b);
+                                let u = new Date(e).getFullYear() === new Date(t).getFullYear();
                                 return new Date(e).toLocaleDateString(void 0, {
                                     weekday: "long",
                                     month: "long",
                                     day: "numeric",
-                                    year: s ? void 0 : "numeric",
+                                    year: u ? void 0 : "numeric",
                                 });
                             })(e, n),
-                  items: [i],
+                  items: [r],
               });
     }
     return l;
@@ -80,77 +81,77 @@ function f(e) {
                 .replace(/\s+/g, " ")
                 .trim();
             if ("" === t || "Deploy" === t) {
-                let e = a.intl.string(r.default.sFC5fT);
+                let e = a.intl.string(i.default.sFC5fT);
                 return { short: e, full: e };
             }
             if (/^Restore version [0-9a-f]{7,40}$/.test(t) || "Already at this version" === t) {
-                let e = a.intl.string(r.default.Vk8vB1);
+                let e = a.intl.string(i.default.Vk8vB1);
                 return { short: e, full: e };
             }
             return { short: t.length > 90 ? `${t.slice(0, 89).trimEnd()}\u{2026}` : t, full: t };
         })(e);
     return t
         ? {
-              short: a.intl.formatToPlainString(r.default.Z4n6LX, { title: n.short }),
-              full: a.intl.formatToPlainString(r.default.Z4n6LX, { title: n.full }),
+              short: a.intl.formatToPlainString(i.default.Z4n6LX, { title: n.short }),
+              full: a.intl.formatToPlainString(i.default.Z4n6LX, { title: n.full }),
           }
         : n;
 }
-function m(e) {
-    return a.intl.string("preview" === e ? r.default.Ebk40C : r.default.S65Rv3);
+function p(e) {
+    return a.intl.string("preview" === e ? i.default.Ebk40C : i.default.S65Rv3);
 }
 function h(e, t) {
-    return t ? a.intl.string(r.default.h3WBgO) : a.intl.string("preview" === e ? r.default.cjJdqL : r.default.yLsAhA);
+    return t ? a.intl.string(i.default.h3WBgO) : a.intl.string("preview" === e ? i.default.cjJdqL : i.default.yLsAhA);
 }
-function g(e) {
+function m(e) {
     return e.previewSha ?? e.entries[0]?.sha ?? null;
 }
-function p(e, t) {
+function g(e, t) {
     return { shown: t ? e : e.slice(0, 3), collapsible: e.length > 3 };
 }
-function x(e, t) {
-    let n = i(e.createdAt),
+function b(e, t) {
+    let n = r(e.createdAt),
         l = null != e.sourceSha ? t.get(e.sourceSha) : void 0;
     return {
         title: (function (e) {
             switch (e.origin) {
                 case "auto_deploy":
-                    if ("stable" === e.deployEnvironment) return a.intl.string(r.default["4TpI2y"]);
-                    if ("preview" === e.deployEnvironment) return a.intl.string(r.default.NdyxPu);
-                    return a.intl.string(r.default["4JCH6A"]);
+                    if ("stable" === e.deployEnvironment) return a.intl.string(i.default["4TpI2y"]);
+                    if ("preview" === e.deployEnvironment) return a.intl.string(i.default.NdyxPu);
+                    return a.intl.string(i.default["4JCH6A"]);
                 case "undo":
-                    return a.intl.string(r.default.VjJT5R);
+                    return a.intl.string(i.default.VjJT5R);
                 default: {
                     let t = e.label.trim();
                     return "" === t || "Manual restore point" === t
-                        ? a.intl.string(r.default.ObcM6b)
-                        : a.intl.formatToPlainString(r.default["UKyQ+E"], { label: t });
+                        ? a.intl.string(i.default.ObcM6b)
+                        : a.intl.formatToPlainString(i.default["UKyQ+E"], { label: t });
                 }
             }
         })(e),
         restoreToMs: e.expired ? null : n,
-        detail: [null != n ? u(n) : null, null != l ? a.intl.formatToPlainString(r.default.V7YNvf, { title: l }) : null]
+        detail: [null != n ? o(n) : null, null != l ? a.intl.formatToPlainString(i.default.V7YNvf, { title: l }) : null]
             .filter((e) => null != e)
             .join(" \xb7 "),
     };
 }
-function v(e, t) {
-    let n = u(t);
+function x(e, t) {
+    let n = o(t);
     return "stable" === e
         ? {
-              title: a.intl.string(r.default.G9wD92),
-              body: a.intl.formatToPlainString(r.default.vyxJO8, { time: n }),
-              confirmText: a.intl.string(r.default.kap49k),
+              title: a.intl.string(i.default.G9wD92),
+              body: a.intl.formatToPlainString(i.default.vyxJO8, { time: n }),
+              confirmText: a.intl.string(i.default.kap49k),
               critical: !0,
           }
         : {
-              title: a.intl.string(r.default.rR8rgj),
-              body: a.intl.formatToPlainString(r.default.KfgzUO, { environment: m(e), time: n }),
-              confirmText: a.intl.string(r.default.XfeFw5),
+              title: a.intl.string(i.default.rR8rgj),
+              body: a.intl.formatToPlainString(i.default.KfgzUO, { environment: p(e), time: n }),
+              confirmText: a.intl.string(i.default.XfeFw5),
               critical: !1,
           };
 }
-function j(e, t) {
+function v(e, t) {
     let n = null;
     for (let l of t)
         "auto_deploy" === l.origin &&

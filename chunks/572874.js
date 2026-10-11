@@ -1,6 +1,6 @@
 i.d(e, { default: () => w });
-var l = i(477900),
-    n = i(582128),
+var n = i(477900),
+    l = i(582128),
     a = i(17928),
     r = i(189213),
     s = i(834730),
@@ -9,8 +9,8 @@ var l = i(477900),
     u = i(266990),
     c = i(246338),
     f = i(60868),
-    m = i(374084),
-    A = i(894328),
+    A = i(374084),
+    m = i(894328),
     p = i(499211),
     C = i(317525),
     E = i(260509),
@@ -40,51 +40,51 @@ let w = (t) => {
         z =
             ((e = (0, a.bG)([C.A], () => (null != _ ? C.A.getRolesSnapshot(_.id) : void 0))),
             (i = (0, T.A)(_?.id)),
-            n.useMemo(() => {
+            l.useMemo(() => {
                 let t =
                         null != _ && null != e
                             ? (function (t, e, i) {
-                                  let l = new Set();
+                                  let n = new Set();
                                   for (let t of Object.keys(i.permissionOverwrites)) {
-                                      let n = e[t],
+                                      let l = e[t],
                                           a = i.permissionOverwrites[t];
-                                      (0, g.U)(n) && (0, G.Uj)(i, a) && l.add(n);
+                                      (0, g.U)(l) && (0, G.Uj)(i, a) && n.add(l);
                                   }
-                                  let n = e[(0, E.af)(t)],
-                                      a = !(0, b._m)(n, k.xBc.VIEW_CHANNEL),
+                                  let l = e[(0, E.af)(t)],
+                                      a = !(0, b._m)(l, k.xBc.VIEW_CHANNEL),
                                       r = (0, G.AN)(i, i.permissionOverwrites[t.id]);
-                                  if (a && !r) for (let t of Object.values(e)) (0, g.U)(t) && (0, G.iR)(t) && l.add(t);
-                                  return [...l];
+                                  if (a && !r) for (let t of Object.values(e)) (0, g.U)(t) && (0, G.iR)(t) && n.add(t);
+                                  return [...n];
                               })(_, e, w)
                             : [],
-                    l = 0;
+                    n = 0;
                 for (let e of t) {
                     let t = e.id;
                     if (null != t) {
                         let e = i?.[t];
-                        null != e && (l += e);
+                        null != e && (n += e);
                     }
                 }
-                return l;
+                return n;
             }, [i, _, w, e])),
-        [F, H] = n.useState(),
+        [F, H] = l.useState(),
         P = (0, a.bG)([B.default], () => w.isOwner(B.default.getId()), [w]),
         Y = (0, a.bG)([O.A], () => O.A.can(w.isThread() ? k.xBc.MANAGE_THREADS : k.xBc.MANAGE_CHANNELS, w), [w]),
         V = (0, a.bG)([y.A], () => y.A.getCount(w.id) ?? 0, [w.id]),
         J = L && (Y || (P && V < 1)),
         X = K.length > 0 && (w.type === k.rbe.GUILD_VOICE || w.type === k.rbe.GUILD_STAGE_VOICE);
     if (
-        (n.useEffect(() => {
+        (l.useEffect(() => {
             (async () => {
-                if (!(await (0, f.F)(w.getGuildId(), v))) return H(m.K5.DEFAULT);
-                let t = await (0, A.D)(w.getGuildId(), v);
+                if (!(await (0, f.F)(w.getGuildId(), v))) return H(A.K5.DEFAULT);
+                let t = await (0, m.D)(w.getGuildId(), v);
                 if (null != t) return H(t);
             })();
         }, [w, v]),
-        n.useEffect(() => {
+        l.useEffect(() => {
             null != _ &&
                 _.features.has(k.GuildFeatures.COMMUNITY) &&
-                (_.rulesChannelId === v ? H(m.K5.RULES) : _.publicUpdatesChannelId === v && H(m.K5.UPDATES));
+                (_.rulesChannelId === v ? H(A.K5.RULES) : _.publicUpdatesChannelId === v && H(A.K5.UPDATES));
         }, [_, v]),
         null == _)
     )
@@ -92,28 +92,28 @@ let w = (t) => {
     if (null != F) {
         let t;
         async function q() {
-            null != _ && (await x.default.open(_.id, k.BEX.ONBOARDING), await D());
+            null != _ && (await x.A.open(_.id, k.BEX.ONBOARDING), await D());
         }
         async function W() {
-            null != _ && (await x.default.open(_.id, k.BEX.COMMUNITY), await D());
+            null != _ && (await x.A.open(_.id, k.BEX.COMMUNITY), await D());
         }
         switch (F) {
-            case m.K5.DEFAULT:
+            case A.K5.DEFAULT:
                 t = U.intl.format(U.t.iWlB6h, { onClick: q });
                 break;
-            case m.K5.TODO:
+            case A.K5.TODO:
                 t = U.intl.format(U.t["/rjozD"], { onClick: q });
                 break;
-            case m.K5.RESOURCE:
+            case A.K5.RESOURCE:
                 t = U.intl.format(U.t.Nf5ptw, { onClick: q });
                 break;
-            case m.K5.RULES:
+            case A.K5.RULES:
                 t = U.intl.format(U.t["kB1f+3"], { reason: U.intl.string(U.t.yjrZPl), onClick: W });
                 break;
-            case m.K5.UPDATES:
+            case A.K5.UPDATES:
                 t = U.intl.format(U.t["kB1f+3"], { reason: U.intl.string(U.t["1B1/NB"]), onClick: W });
         }
-        return (0, l.jsx)(r.a, {
+        return (0, n.jsx)(r.a, {
             title: U.intl.string(U.t["TY/V+H"]),
             onClose: D,
             subtitle: t,
@@ -149,8 +149,8 @@ let w = (t) => {
                         deleteBody: U.intl.format(U.t.a6Gz9J, { channelName: R }),
                     };
     return null != j
-        ? (0, l.jsx)(u.lt, { app: j, channelId: w.id, onPlainConfirm: N, onClose: D, transitionState: S })
-        : (0, l.jsx)(r.a, {
+        ? (0, n.jsx)(u.lt, { app: j, channelId: w.id, onPlainConfirm: N, onClose: D, transitionState: S })
+        : (0, n.jsx)(r.a, {
               size: "sm",
               onClose: D,
               transitionState: S,
@@ -161,7 +161,7 @@ let w = (t) => {
                   { text: Z, onClick: N, variant: "critical-primary" },
               ],
               children: X
-                  ? (0, l.jsx)(s.E, {
+                  ? (0, n.jsx)(s.E, {
                         variant: "text-md/normal",
                         color: "text-default",
                         children: U.intl.format(U.t.Ze005A, { count: K.length }),

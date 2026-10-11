@@ -384,7 +384,7 @@ function eL(e, t) {
                               A = i
                                   ? () => {
                                         (r
-                                            ? ek.default.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            ? ek.A.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
                                             : null != u && (0, eR.A)(t, u),
                                             (0, g.closeAllModals)());
                                     }

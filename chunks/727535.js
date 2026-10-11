@@ -4243,7 +4243,7 @@ function sM(e) {
                                       disabled: !p,
                                       verified: i,
                                       onClick: () => {
-                                          (sS.default.open(t.guild_id, eh.BEX.MEMBERS), sS.default.selectRole(e.id));
+                                          (sS.A.open(t.guild_id, eh.BEX.MEMBERS), sS.A.selectRole(e.id));
                                       },
                                   },
                                   e.id,

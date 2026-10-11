@@ -1,31 +1,31 @@
-(n.d(t, { I: () => m, p: () => P }), n(938796));
-var l = n(477900),
-    a = n(582128),
-    s = n(821418),
-    i = n(665260),
-    r = n(17928),
-    c = n(862482),
-    o = n(331322),
-    d = n(193249),
-    u = n(834730),
-    x = n(28863),
-    h = n(416052),
-    A = n(967198),
-    g = n(351906),
-    I = n(174459),
-    p = n(735547),
-    N = n(939249),
-    _ = n(181658),
-    C = n(468689),
-    k = n(576705),
-    b = n(652215),
-    j = n(660183),
-    E = n(87617);
+(t.d(n, { I: () => m, p: () => P }), t(938796));
+var l = t(477900),
+    a = t(582128),
+    s = t(821418),
+    i = t(665260),
+    r = t(17928),
+    c = t(862482),
+    o = t(331322),
+    d = t(193249),
+    u = t(834730),
+    x = t(28863),
+    h = t(416052),
+    A = t(967198),
+    g = t(351906),
+    I = t(174459),
+    p = t(735547),
+    N = t(939249),
+    _ = t(181658),
+    C = t(468689),
+    k = t(576705),
+    b = t(652215),
+    j = t(660183),
+    E = t(87617);
 function v(e) {
-    let { guild: t, error: n, onClose: s } = e,
-        i = t.id,
+    let { guild: n, error: t, onClose: s } = e,
+        i = n.id,
         r = a.useCallback(() => {
-            (s(), C.default.open(i, b.BEX.INVITES));
+            (s(), C.A.open(i, b.BEX.INVITES));
         }, [i, s]),
         c = a.useCallback(
             (e) =>
@@ -56,14 +56,14 @@ function v(e) {
             [],
         ),
         d =
-            n instanceof _.A
-                ? n.code !== b.t02.TOO_MANY_INVITES
-                    ? n.getAnyErrorMessage()
-                    : k.A.can(b.xBc.MANAGE_GUILD, t)
+            t instanceof _.A
+                ? t.code !== b.t02.TOO_MANY_INVITES
+                    ? t.getAnyErrorMessage()
+                    : k.A.can(b.xBc.MANAGE_GUILD, n)
                       ? j.intl.format(j.t["H/RUY1"], { inviteListHook: c, inviteHelpHook: o })
                       : j.intl.string(j.t["/FxH6G"])
-                : "message" in n
-                  ? n.message
+                : "message" in t
+                  ? t.message
                   : j.intl.string(j.t.eAn6z2);
     return (0, l.jsx)(u.E, {
         className: E.gJ,
@@ -72,22 +72,22 @@ function v(e) {
         children: d,
     });
 }
-var S = n(172799);
+var S = t(172799);
 let m = r.Ay.connectStores([g.A], () => ({ hideValue: g.A.hideInstantInvites }))((e) => {
-    let { value: t, autoFocus: n, hideValue: a, onCopy: s, disabled: i } = e;
+    let { value: n, autoFocus: t, hideValue: a, onCopy: s, disabled: i } = e;
     return (0, l.jsx)(h.A, {
-        value: t,
+        value: n,
         hideMessage: a ? j.intl.string(j.t["6HzNgZ"]) : null,
         buttonColor: c.$n.Colors.BRAND,
         onCopy: s,
-        autoFocus: n,
+        autoFocus: t,
         disabled: i,
     });
 });
 function P(e) {
     let {
-            guild: t,
-            noInvitesAvailable: n,
+            guild: n,
+            noInvitesAvailable: t,
             showFriends: r,
             onClose: c,
             modalState: h,
@@ -126,7 +126,7 @@ function P(e) {
                     label: j.intl.string(j.t["1i1bUl"]),
                     description: j.intl.string(j.t["jvd/LF"]),
                 }),
-            n || H
+            t || H
                 ? null
                 : (0, l.jsxs)(u.E, {
                       variant: "text-xs/normal",
@@ -142,14 +142,14 @@ function P(e) {
                               : null,
                       ],
                   }),
-            !n && r && H
+            !t && r && H
                 ? (0, l.jsxs)(u.E, {
                       variant: "text-xs/normal",
                       className: E.PJ,
                       children: [j.intl.string(j.t["0M2U95"]), " "],
                   })
                 : null,
-            null != V ? (0, l.jsx)(v, { guild: t, error: V, onClose: c }) : null,
+            null != V ? (0, l.jsx)(v, { guild: n, error: V, onClose: c }) : null,
         ],
     });
 }

@@ -1749,7 +1749,7 @@ function t1(e) {
         I = (0, ei.bG)([tr.A], () => tr.A.can(Q.xBc.MANAGE_ROLES, l), [l]),
         N = i.useCallback(
             async (e) => {
-                I && (await t$.default.open(l.id, Q.BEX.ROLES), await t$.default.selectRole(e));
+                I && (await t$.A.open(l.id, Q.BEX.ROLES), await t$.A.selectRole(e));
             },
             [I, l.id],
         );

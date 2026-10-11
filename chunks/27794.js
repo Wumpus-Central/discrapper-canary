@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 635500, Version Hash: 52e5a69216ff7bd8f420e9cb31524bef080c659d`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 635512, Version Hash: ece6778d45c0966bba99440a57e3a1207cd98736`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -6409,7 +6409,7 @@ function oL(e) {
             tL.intl.format(oN.default.iMCLA5, { connectionName: o?.name, date: d }),
             (0, M.jsx)(lI.Z_, {
                 onClick: () => {
-                    (t(ru.i.TAKE_ACTION), oO.default.open(a, j.BEX.ROLES));
+                    (t(ru.i.TAKE_ACTION), oO.A.open(a, j.BEX.ROLES));
                 },
                 noticeType: r,
                 className: os.NS,
@@ -9225,8 +9225,7 @@ let ud = eI.memo(function () {
                     }),
                     null != t
                         ? (0, M.jsx)(lI.zr, {
-                              onClick: () =>
-                                  oO.default.open(t, j.BEX.GUILD_AUTOMOD, void 0, j.nd0.AUTOMOD_MENTION_SPAM),
+                              onClick: () => oO.A.open(t, j.BEX.GUILD_AUTOMOD, void 0, j.nd0.AUTOMOD_MENTION_SPAM),
                               children: tL.intl.string(tL.t["1R7QIx"]),
                           })
                         : null,
@@ -26067,7 +26066,7 @@ let y_ = "isHideDevBanner",
                     className: tE()(yu.Wz, yu.mr),
                     children: [
                         (0, M.jsx)(yc, { className: yu.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635500" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635512" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -29817,19 +29816,19 @@ let bl = (0, tz.Fe)({
                 n.e("141049"),
                 n.e("156751"),
                 n.e("502759"),
+                n.e("916519"),
                 n.e("996201"),
                 n.e("496914"),
-                n.e("81766"),
                 n.e("736410"),
                 n.e("935412"),
-                n.e("102903"),
+                n.e("238529"),
                 n.e("485601"),
                 n.e("483031"),
                 n.e("815341"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 144440)),
-        webpackId: 144440,
+            ]).then(n.bind(n, 707944)),
+        webpackId: 707944,
         name: "VibegrationsScreen",
         renderLoader: bs,
     }),
@@ -51563,7 +51562,7 @@ let jD = [
                 { guildId: n, section: i, subsection: r } = t.params;
             return (
                 (0, sF.B)(() => {
-                    oO.default.open(n, (0, Ut.A)(j.BEX, i), void 0, (0, Ut.A)(j.nd0, r));
+                    oO.A.open(n, (0, Ut.A)(j.BEX, i), void 0, (0, Ut.A)(j.nd0, r));
                 }),
                 (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(n) })
             );

@@ -341,7 +341,7 @@ function tt(e) {
                     text: e4.intl.string(e4.t.OgQQbG),
                     variant: "primary",
                     onClick: function () {
-                        e9.default.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
+                        e9.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
                     },
                 },
             ],
@@ -362,7 +362,7 @@ function tn(e) {
             text: e4.intl.string(e4.t.BQq86h),
             variant: "primary",
             onClick: function () {
-                e9.default.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                e9.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
         },
         onRequestClose: () => n(er.i.USER_DISMISS),
@@ -404,7 +404,7 @@ function to(e) {
                 text: e4.intl.string(e4.t["9l+df7"]),
                 variant: "primary",
                 onClick: function (e) {
-                    e9.default.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
+                    e9.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
                 },
             },
         ],
@@ -1221,7 +1221,7 @@ function nL(e) {
         type: j.n5X.COMMANDS_MIGRATION,
         image: "/assets/ab63b30e9bc8855c.svg",
         onClick: () => {
-            (n(), e9.default.open(t.id, j.BEX.INTEGRATIONS));
+            (n(), e9.A.open(t.id, j.BEX.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22,
@@ -1266,7 +1266,7 @@ function nO(e) {
               type: j.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: "/assets/eaaec668caed688e.svg",
               onClick: () => {
-                  (r(), e9.default.open(n.id, j.BEX.INTEGRATIONS));
+                  (r(), e9.A.open(n.id, j.BEX.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,
@@ -1283,7 +1283,7 @@ let nb = function (e) {
     return (0, s.jsx)(tU, {
         guild: t,
         onDismissed: n,
-        onClick: () => e9.default.open(t.id, j.BEX.COMMUNITY),
+        onClick: () => e9.A.open(t.id, j.BEX.COMMUNITY),
         message: e4.intl.string(e4.t["2klD0Z"]),
         trackingSource: j.kZU.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: j.n5X.PUBLIC_UPSELL,

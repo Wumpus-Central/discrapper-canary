@@ -860,7 +860,7 @@ function e3(e) {
     let { application: t, guild: n, integration: i, ...s } = e,
         a = (0, w.iD)(n.id, t.id);
     function r() {
-        M.default.disableIntegration(n.id, i.id).catch(() => {
+        M.A.disableIntegration(n.id, i.id).catch(() => {
             L.A.show({ title: $.intl.string($.t.wYqMmI), body: $.intl.string($.t.A4Mnst) });
         });
     }
@@ -1063,10 +1063,10 @@ function td(e) {
                     });
         }, [i, m, b]),
         E = s.useCallback(() => {
-            M.default.syncIntegration(n.id, i.id);
+            M.A.syncIntegration(n.id, i.id);
         }, [n.id, i.id]),
         v = s.useCallback(() => {
-            null != i.role_id && (M.default.setSection(eU.BEX.ROLES), M.default.selectRole(i.role_id));
+            null != i.role_id && (M.A.setSection(eU.BEX.ROLES), M.A.selectRole(i.role_id));
         }, [i.role_id]),
         {
             serviceName: y,
@@ -1438,13 +1438,13 @@ function tm(e) {
         g = e6.A.get(a),
         h = s.useCallback(
             async (e) => {
-                m() && (await M.default.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
+                m() && (await M.A.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
             },
             [m, i.id],
         ),
         x = s.useCallback(
             (e) => {
-                m() && (e.id === n?.id && u.A.stopEditingIntegration(), M.default.disableIntegration(i.id, e.id));
+                m() && (e.id === n?.id && u.A.stopEditingIntegration(), M.A.disableIntegration(i.id, e.id));
             },
             [m, n, i.id],
         ),

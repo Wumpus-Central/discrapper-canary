@@ -13,9 +13,9 @@ var a = n(477900),
     h = n(789645),
     x = n(334738),
     E = n(964486),
-    f = n(915089),
-    p = n(860071),
-    A = n(71393),
+    A = n(915089),
+    f = n(860071),
+    p = n(71393),
     j = n(573163),
     v = n(174459),
     N = n(403362);
@@ -34,9 +34,9 @@ var C = n(935208),
 function w(e) {
     let { guildId: t, onClose: n } = e,
         i = (0, s.bG)(
-            [A.A, I.A],
+            [p.A, I.A],
             () => {
-                let e = A.A.getGuild(t);
+                let e = p.A.getGuild(t);
                 return I.A.can(M.xBc.MANAGE_ROLES, e);
             },
             [t],
@@ -63,7 +63,7 @@ function w(e) {
                     className: P.Ec,
                     children: L.intl.format(L.t["K+DH2o"], {
                         onClick: () => {
-                            (y.default.open(t, M.BEX.ROLES), n());
+                            (y.A.open(t, M.BEX.ROLES), n());
                         },
                     }),
                 }),
@@ -76,8 +76,8 @@ var S = n(823508),
     q = n(968588);
 function z(e) {
     let { transitionState: t, onClose: l, guildId: _ } = e,
-        y = (0, f.GV)(),
-        I = (0, s.bG)([A.A], () => A.A.getGuild(_)),
+        y = (0, A.GV)(),
+        I = (0, s.bG)([p.A], () => p.A.getGuild(_)),
         P = (0, k.A)(I?.id),
         z = (0, G.Ay)(_),
         O = i.useRef(j.Ay.ackMessageId(_, V.P.GUILD_EVENT)),
@@ -95,7 +95,7 @@ function z(e) {
                 .filter(N.Vq)
                 .uniq()
                 .forEach((e) => {
-                    p.A.requestMember(_, e);
+                    f.A.requestMember(_, e);
                 });
         }, [_, z]),
         i.useEffect(() => {

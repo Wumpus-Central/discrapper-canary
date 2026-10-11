@@ -224,14 +224,14 @@ function ee(e) {
                 let l = o.filter((l) => l !== e.id);
                 e.tags?.guild_connections === null
                     ? P.A.unassignGuildRoleConnection(t.id, e.id).catch(B)
-                    : I.default.updateMemberRoles(t.id, s.id, l, [], [e.id]).catch(B);
+                    : I.A.updateMemberRoles(t.id, s.id, l, [], [e.id]).catch(B);
             },
             [o, t.id, s.id],
         ),
         R = r.useCallback(
             (e) => {
                 let l = o;
-                (l.includes(e) || (l = [...l, e]), I.default.updateMemberRoles(t.id, s.id, l, [e], []).catch(B));
+                (l.includes(e) || (l = [...l, e]), I.A.updateMemberRoles(t.id, s.id, l, [e], []).catch(B));
             },
             [o, t.id, s.id],
         ),

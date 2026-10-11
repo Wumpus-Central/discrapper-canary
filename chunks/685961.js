@@ -1037,7 +1037,7 @@ let to = (e) => {
     let o = i.useCallback(() => {
         (s(!0),
             u.Ay.trackWithMetadata(el.HAw.IAR_LEAVE_GUILD_BUTTON_CLICKED, { guild_id: t, report_id: l }),
-            tu.default.leaveGuild(t));
+            tu.A.leaveGuild(t));
     }, [t, l]);
     return null == r
         ? null
@@ -1262,7 +1262,7 @@ let tP = (e) => {
                 }),
                 null != o &&
                     null != c &&
-                    tu.default.disableIntegration(o, c.id).catch(() => {
+                    tu.A.disableIntegration(o, c.id).catch(() => {
                         tw.A.show({ title: T.intl.string(T.t.wYqMmI), body: T.intl.string(T.t.A4Mnst) });
                     }));
         }, [t.id, o, c, l]),

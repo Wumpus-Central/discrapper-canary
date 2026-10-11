@@ -2230,12 +2230,7 @@ function ik(e) {
                                 text: z.intl.string(z.t["I/XhUn"]),
                                 onClick: function () {
                                     ((0, iP.rf)(n),
-                                        iM.default.open(
-                                            n,
-                                            eo.BEX.ROLE_SUBSCRIPTIONS,
-                                            void 0,
-                                            eo.nd0.ROLE_SUBSCRIPTION_TIERS,
-                                        ),
+                                        iM.A.open(n, eo.BEX.ROLE_SUBSCRIPTIONS, void 0, eo.nd0.ROLE_SUBSCRIPTION_TIERS),
                                         (0, iL.Fx)(n));
                                 },
                             }),

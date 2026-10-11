@@ -85,14 +85,13 @@
     min-width: 0
 }
 
-.publishChannelIcon_eb0c63 {
-    height: 1em;
-    margin-bottom: .2rem;
-    margin-inline: var(--space-4) calc(var(--space-4)/2);
-    position: relative;
-    top: .05em;
-    vertical-align: middle;
-    width: 1em
+.publishingSpinner_eb0c63 {
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.publishingSpinner_eb0c63 .publishingSpinnerItem_eb0c63 {
+    stroke: currentColor
 }
 
 svg.selectModeIcon_eb0c63 {
@@ -482,4 +481,4 @@ svg.selectModeIcon_eb0c63 {
     text-align: center
 }
 
-/*# sourceMappingURL=3ec0df8541f359cb.css.map*/
+/*# sourceMappingURL=ee64865c48bcd3f7.css.map*/

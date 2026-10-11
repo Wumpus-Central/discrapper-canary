@@ -19,8 +19,8 @@ var t = l(477900),
     C = l(559106),
     y = l(922016),
     v = l(307301),
-    p = l(921853),
-    A = l(442433),
+    A = l(921853),
+    p = l(442433),
     w = l(66834),
     N = l(775602),
     M = l(915089),
@@ -150,14 +150,14 @@ function Q(e) {
                     i = t?.roles ?? [];
                 i.includes(e) || (i = [...i, e]);
                 try {
-                    (await S.default.updateMemberRoles(l.id, n, i, [e], []), o?.());
+                    (await S.A.updateMemberRoles(l.id, n, i, [e], []), o?.());
                 } catch {
                     W();
                 }
             },
             [l.id, n, o],
         );
-    function p(e) {
+    function A(e) {
         return !(0, L.Oy)(e) && !e.managed && G.A.isRoleHigher(l, c, e) && -1 === g.indexOf(e.id);
     }
     return (0, t.jsx)(y.Y, {
@@ -166,7 +166,7 @@ function Q(e) {
         align: "center",
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, t.jsx)(D.A, { guild: l, roleStyle: h, roleFilter: p, onSelect: C, onClose: n });
+            return (0, t.jsx)(D.A, { guild: l, roleStyle: h, roleFilter: A, onSelect: C, onClose: n });
         },
         children: (e) =>
             (0, t.jsx)(f.m, {
@@ -226,7 +226,7 @@ function F(e, n, l) {
             try {
                 (t.tags?.guild_connections === null
                     ? await w.A.unassignGuildRoleConnection(n, t.id)
-                    : await S.default.updateMemberRoles(n, e, r, [], [t.id]),
+                    : await S.A.updateMemberRoles(n, e, r, [], [t.id]),
                     l?.());
             } catch {
                 W();
@@ -237,7 +237,7 @@ function F(e, n, l) {
 }
 function K() {
     return i.useCallback((e, n) => {
-        (0, A.L3)(e, async () => {
+        (0, p.L3)(e, async () => {
             let { default: e } = await Promise.all([l.e("638221"), l.e("715687")]).then(l.bind(l, 646938));
             return (l) => (0, t.jsx)(e, { ...l, id: n, label: J.intl.string(J.t.sMsaLg) });
         });
@@ -314,7 +314,7 @@ function q(e) {
             onClick: i,
             className: s()(O.s6, { [O.X1]: !n }),
             children: n
-                ? (0, t.jsx)(p.n, { size: "xs", color: "currentColor" })
+                ? (0, t.jsx)(A.n, { size: "xs", color: "currentColor" })
                 : (0, t.jsx)(j.E, { variant: "text-xs/normal", color: "none", children: `+${l}` }),
         }),
     });
@@ -349,8 +349,8 @@ function ee(e) {
     function y(e, n) {
         null != n ? (C.current[e] = n) : delete C.current[e];
     }
-    let [v, p] = i.useState(r),
-        [A, w] = i.useState(268),
+    let [v, A] = i.useState(r),
+        [p, w] = i.useState(268),
         [N, M] = i.useState(!1),
         S = i.useRef(null),
         k = i.useRef(null),
@@ -378,7 +378,7 @@ function ee(e) {
                     ((e += o + 4), l.push(i));
                 }
             }
-            (p(l.length !== v.length || l.some((e, n) => e.id !== v[n]?.id) ? l : v), w(t), P.current++);
+            (A(l.length !== v.length || l.some((e, n) => e.id !== v[n]?.id) ? l : v), w(t), P.current++);
         }, [r, v, N]));
     let E = N ? r : v;
     function I() {
@@ -413,7 +413,7 @@ function ee(e) {
                                             onRemoveRole: m ? b : void 0,
                                             itemRef: (n) => y(e.id, n),
                                             onContextMenu: f ? (n) => R(n, e.id) : void 0,
-                                            style: { maxWidth: N || n !== v.length - 1 ? 268 : A },
+                                            style: { maxWidth: N || n !== v.length - 1 ? 268 : p },
                                         },
                                         e.id,
                                     ),
@@ -435,7 +435,7 @@ function ee(e) {
                                                     itemRef: (n) => y(e.id, n),
                                                     role: e,
                                                     guildId: l.id,
-                                                    style: { maxWidth: N || n !== v.length - 1 ? 268 : A },
+                                                    style: { maxWidth: N || n !== v.length - 1 ? 268 : p },
                                                 }),
                                             },
                                             e.id,

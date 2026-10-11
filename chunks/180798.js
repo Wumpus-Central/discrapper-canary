@@ -13,21 +13,21 @@ var r = t(17928),
     A = t(696451),
     h = t(317525),
     p = t(71393),
-    f = t(576705),
-    b = t(403362),
-    y = t(652215),
-    R = t(660183),
+    b = t(576705),
+    y = t(403362),
+    R = t(652215),
+    f = t(660183),
     m = t(798819);
 function _(l, e, t) {
     return {
         type: "roleDot",
         variant: "dot" === e ? "dot" : "circle",
-        color: l.colorString ?? y.TpD,
+        color: l.colorString ?? R.TpD,
         colors: t ? l.colorStrings : null,
     };
 }
 function j(l, e, t) {
-    let r = l.colorString ?? y.TpD,
+    let r = l.colorString ?? R.TpD,
         o = t ? l.colorStrings : null;
     return (0, n.jsx)("div", {
         className: m.roleDotAccessory,
@@ -50,13 +50,13 @@ function v(l, e) {
             isGuildMember: M,
             canManageRoles: O,
         } = (0, r.cf)(
-            [A.Ay, f.A],
+            [A.Ay, b.A],
             () => {
                 let t = A.Ay.getMember(e, l);
                 return {
                     userRoles: null != t ? t.roles : [],
                     isGuildMember: null != t,
-                    canManageRoles: null != v && f.A.can(y.xBc.MANAGE_ROLES, v),
+                    canManageRoles: null != v && b.A.can(R.xBc.MANAGE_ROLES, v),
                 };
             },
             [l, e, v],
@@ -67,25 +67,25 @@ function v(l, e) {
         let n = S.includes(t.id);
         try {
             (n
-                ? await a.default.updateMemberRoles(
+                ? await a.A.updateMemberRoles(
                       e,
                       l,
                       S.filter((l) => l !== t.id),
                       [],
                       [t.id],
                   )
-                : await a.default.updateMemberRoles(e, l, S.concat([t.id]), [t.id], []),
+                : await a.A.updateMemberRoles(e, l, S.concat([t.id]), [t.id], []),
                 E(n ? d.Nj.REMOVE_ROLE : d.Nj.ADD_ROLE));
         } catch {
-            (0, o.P0)({ text: R.intl.string(R.t.fEptJP), variant: "critical" });
+            (0, o.P0)({ text: f.intl.string(f.t.fEptJP), variant: "critical" });
         }
     }
-    let L = f.A.getHighestRole(v),
+    let L = b.A.getHighestRole(v),
         w =
             O && !m
                 ? x.map((l) => {
                       if ((0, g.Oy)(l)) return null;
-                      let e = l.managed || !f.A.isRoleHigher(v, L, l),
+                      let e = l.managed || !b.A.isRoleHigher(v, L, l),
                           t = S.includes(l.id);
                       return e && !t
                           ? null
@@ -112,13 +112,13 @@ function v(l, e) {
                                 l.id,
                             ),
                   );
-    return 0 === (w = w.filter(b.Vq)).length
+    return 0 === (w = w.filter(y.Vq)).length
         ? null
         : t
           ? w
           : (0, n.jsx)(c.Dr, {
                 id: "roles",
-                label: R.intl.formatToPlainString(R.t.PCs0oo, { numRoles: w.length }),
+                label: f.intl.formatToPlainString(f.t.PCs0oo, { numRoles: w.length }),
                 children: w,
             });
 }

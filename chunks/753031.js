@@ -1,7 +1,7 @@
 s.d(t, { default: () => b });
 var i,
-    a = s(477900),
-    n = s(582128),
+    n = s(477900),
+    a = s(582128),
     r = s(562708),
     l = s(139033),
     c = s(189213),
@@ -13,10 +13,10 @@ var i,
     E = s(683071),
     h = s(150934),
     _ = s(398590),
-    p = s(966327),
-    N = s(139286),
-    x = s(235986),
-    A = s(468689),
+    A = s(966327),
+    p = s(139286),
+    N = s(235986),
+    x = s(468689),
     I = s(773669),
     R = s(486020),
     j = s(562153),
@@ -31,28 +31,28 @@ let g = function () {
 };
 function b(e) {
     let { guild: t, toUser: i, fromUser: I, onClose: b, transitionState: L } = e,
-        [T, M] = n.useState(!1),
+        [T, M] = a.useState(!1),
         C = t.features.has(S.GuildFeatures.VERIFIED) || t.features.has(S.GuildFeatures.PARTNERED),
         F = C ? w.intl.format(w.t.A37vwK, { ticketUrl: g() }) : null,
         k =
             t.features.has(S.GuildFeatures.CREATOR_MONETIZABLE) ||
             t.features.has(S.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
     async function G(e) {
-        await A.default.transferOwnership(t.id, i.id, v.EMAIL, e);
+        await x.A.transferOwnership(t.id, i.id, v.EMAIL, e);
     }
     async function P() {
-        await A.default.sendTransferOwnershipPincode(t.id, !0);
+        await x.A.sendTransferOwnershipPincode(t.id, !0);
     }
     async function Z(e) {
         (e.preventDefault(), b());
         try {
             I.mfaEnabled || null == I.email
-                ? (await A.default.transferOwnership(t.id, i.id, I.mfaEnabled ? v.MFA : null), (0, _.jH)())
-                : (await A.default.sendTransferOwnershipPincode(t.id),
+                ? (await x.A.transferOwnership(t.id, i.id, I.mfaEnabled ? v.MFA : null), (0, _.jH)())
+                : (await x.A.sendTransferOwnershipPincode(t.id),
                   (0, o.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([s.e("932606"), s.e("919840")]).then(s.bind(s, 79779));
                       return (t) =>
-                          (0, a.jsx)(e, {
+                          (0, n.jsx)(e, {
                               ...t,
                               onFormSubmit: G,
                               onResend: P,
@@ -74,28 +74,28 @@ function b(e) {
                 });
         }
     }
-    (0, N.A)({ type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.GUILD_TRANSFER_OWNERSHIP });
+    (0, p.A)({ type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.GUILD_TRANSFER_OWNERSHIP });
     let D = j.Ay.getNickname(t.id, void 0, i),
         H = i.hasAvatarForGuild(t.id);
     function V() {
-        return (0, a.jsxs)("span", {
+        return (0, n.jsxs)("span", {
             className: O.v_,
             children: [
                 null != t.icon
-                    ? (0, a.jsx)(d.eu, {
+                    ? (0, n.jsx)(d.eu, {
                           src: R.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 16 }),
                           size: u._3.SIZE_16,
                           className: O.sD,
                           "aria-hidden": !0,
                       })
                     : null,
-                (0, a.jsx)(m.E, { className: O.J5, variant: "text-sm/bold", children: t.name }),
+                (0, n.jsx)(m.E, { className: O.J5, variant: "text-sm/bold", children: t.name }),
             ],
         });
     }
-    return (0, a.jsx)("form", {
+    return (0, n.jsx)("form", {
         onSubmit: Z,
-        children: (0, a.jsxs)(c.a, {
+        children: (0, n.jsxs)(c.a, {
             title: w.intl.string(w.t.Z5s7PM),
             actions: [
                 { text: w.intl.string(w.t["ETE/oC"]), onClick: b, variant: "secondary" },
@@ -104,7 +104,7 @@ function b(e) {
             onClose: b,
             transitionState: L,
             children: [
-                (0, a.jsx)(m.E, {
+                (0, n.jsx)(m.E, {
                     variant: "text-sm/normal",
                     className: O.uI,
                     children:
@@ -113,25 +113,25 @@ function b(e) {
                                   GuildHook: V,
                                   user: (0, y.QV)(i),
                                   AKAHook: function () {
-                                      return (0, a.jsxs)("span", {
+                                      return (0, n.jsxs)("span", {
                                           className: O.Dy,
                                           children: [
-                                              (0, a.jsx)("span", {
+                                              (0, n.jsx)("span", {
                                                   className: O.RV,
-                                                  children: (0, a.jsx)(f.E, {
+                                                  children: (0, n.jsx)(f.E, {
                                                       type: { text: w.intl.string(w.t.l1QVfj) },
                                                       variant: "default",
                                                   }),
                                               }),
                                               H
-                                                  ? (0, a.jsx)(d.eu, {
+                                                  ? (0, n.jsx)(d.eu, {
                                                         src: i.getAvatarURL(t.id, 16, !0),
                                                         size: u._3.SIZE_16,
                                                         className: O.H,
                                                         "aria-hidden": !0,
                                                     })
                                                   : null,
-                                              (0, a.jsx)(m.E, {
+                                              (0, n.jsx)(m.E, {
                                                   className: O.$R,
                                                   variant: "text-sm/normal",
                                                   children: D ?? y.Ay.getName(i),
@@ -142,30 +142,30 @@ function b(e) {
                               })
                             : w.intl.format(w.t["2XLnG0"], { GuildHook: V, user: (0, y.QV)(i) }),
                 }),
-                (0, a.jsxs)(x.A, {
+                (0, n.jsxs)(N.A, {
                     className: O.nS,
-                    justify: x.A.Justify.CENTER,
+                    justify: N.A.Justify.CENTER,
                     children: [
-                        (0, a.jsx)("div", {
+                        (0, n.jsx)("div", {
                             className: O.HT,
-                            children: (0, a.jsx)(p.A, { user: I, size: u._3.SIZE_80 }),
+                            children: (0, n.jsx)(A.A, { user: I, size: u._3.SIZE_80 }),
                         }),
-                        (0, a.jsx)("div", {
+                        (0, n.jsx)("div", {
                             className: O.to,
-                            children: (0, a.jsx)(p.A, { user: i, size: u._3.SIZE_80 }),
+                            children: (0, n.jsx)(A.A, { user: i, size: u._3.SIZE_80 }),
                         }),
                     ],
                 }),
                 k &&
-                    (0, a.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: O.rk,
-                        children: (0, a.jsx)(E.w, {
+                        children: (0, n.jsx)(E.w, {
                             type: "info",
                             message: w.intl.format(w.t.LAlucb, { server_subscription_owner_transfer_article: S.Oi0 }),
                             role: "static",
                         }),
                     }),
-                (0, a.jsx)(h.S, {
+                (0, n.jsx)(h.S, {
                     label: w.intl.format(w.t.xm6ACJ, { username: (0, y.QV)(i) }),
                     disabled: C,
                     checked: T,
@@ -173,7 +173,7 @@ function b(e) {
                         M(e);
                     },
                 }),
-                null != F && (0, a.jsx)(E.w, { type: "warning", message: F, role: "static" }),
+                null != F && (0, n.jsx)(E.w, { type: "warning", message: F, role: "static" }),
             ],
         }),
     });

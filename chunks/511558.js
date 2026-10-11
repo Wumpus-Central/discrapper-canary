@@ -719,7 +719,7 @@ var tc = n(817232),
     th = n(307301),
     tm = n(468689);
 function tf(e) {
-    (tm.default.open(e, ev.BEX.SOUNDBOARD),
+    (tm.A.open(e, ev.BEX.SOUNDBOARD),
         (0, e8.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("860350"),

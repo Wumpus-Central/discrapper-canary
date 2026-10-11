@@ -986,7 +986,7 @@ function to(e) {
                           title: ez.intl.string(ez.t.ZzdgUm),
                           subtitle: ez.intl.format(ez.t.DwY2vN, {
                               onClick: () => {
-                                  (z.default.open(t.id, eF.BEX.ONBOARDING), n.onClose());
+                                  (z.A.open(t.id, eF.BEX.ONBOARDING), n.onClose());
                               },
                           }),
                           actions: [{ text: ez.intl.string(ez.t.BddRzS), onClick: n.onClose }],

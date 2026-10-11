@@ -1,4 +1,4 @@
-n.d(i, { default: () => h });
+n.d(t, { default: () => h });
 var s = n(477900);
 n(582128);
 var r = n(980707),
@@ -11,25 +11,25 @@ var r = n(980707),
     u = n(468689),
     p = n(555325),
     b = n(652215);
-function h(t) {
-    var i;
-    let { guild: n, onSelect: h } = t,
+function h(i) {
+    var t;
+    let { guild: n, onSelect: h } = i,
         S = (0, p.EI)(n)
             ? (0, s.jsx)(e.Dr, {
                   id: "role-subscription-settings",
                   label: d.intl.string(d.t.jMN5ZG),
                   action: () => {
-                      u.default.open(n.id, b.BEX.ROLE_SUBSCRIPTIONS);
+                      u.A.open(n.id, b.BEX.ROLE_SUBSCRIPTIONS);
                   },
               })
             : null,
         g =
-            ((i = n.id),
+            ((t = n.id),
             (0, s.jsx)(e.Dr, {
                 id: "role-subscription-copy-link",
                 label: d.intl.string(d.t.WqhZss),
                 action: () => {
-                    (0, o.C)((0, a.n)(i, c.VV.ROLE_SUBSCRIPTIONS));
+                    (0, o.C)((0, a.n)(t, c.VV.ROLE_SUBSCRIPTIONS));
                 },
             }));
     return (0, s.jsx)(r.W, {

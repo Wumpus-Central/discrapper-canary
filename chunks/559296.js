@@ -775,7 +775,7 @@ let nt = (e) => {
             [],
         );
     function f() {
-        t3.default.open(t.guild_id, eX.BEX.ROLE_SUBSCRIPTIONS);
+        t3.A.open(t.guild_id, eX.BEX.ROLE_SUBSCRIPTIONS);
     }
     let v = a?.features.has(eX.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)
             ? eZ.intl.string(eZ.t.n0q7sI)
@@ -1162,12 +1162,7 @@ function nu(e) {
                                         optOutHook: (e) =>
                                             (0, i.jsx)(na.A, {
                                                 onClick: () =>
-                                                    t3.default.open(
-                                                        t.id,
-                                                        eX.BEX.MODERATION,
-                                                        null,
-                                                        eX.nd0.SAFETY_OVERVIEW,
-                                                    ),
+                                                    t3.A.open(t.id, eX.BEX.MODERATION, null, eX.nd0.SAFETY_OVERVIEW),
                                                 children: e,
                                             }),
                                     }),

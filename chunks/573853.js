@@ -543,7 +543,7 @@ let e9 = function (e) {
                           variant: "primary",
                           text: eA.intl.string(eA.t.bwNjug),
                           onClick: function () {
-                              ((0, F.v8)(), e6.default.open(n, ey.BEX.STICKERS, u));
+                              ((0, F.v8)(), e6.A.open(n, ey.BEX.STICKERS, u));
                           },
                       }),
                   ],

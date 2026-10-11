@@ -1,26 +1,26 @@
-i.d(e, { default: () => c });
-var a = i(477900),
-    l = i(582128),
-    n = i(189213),
-    s = i(468689),
-    r = i(660183);
+e.d(i, { default: () => c });
+var n = e(477900),
+    s = e(582128),
+    a = e(189213),
+    l = e(468689),
+    r = e(660183);
 let c = function (t) {
-    let { name: e, guildId: i, onClose: c, ...u } = t,
-        o = l.useCallback(() => {
-            (c?.(), s.default.leaveGuild(i));
-        }, [i, c]),
-        d = l.useMemo(
+    let { name: i, guildId: e, onClose: c, ...o } = t,
+        u = s.useCallback(() => {
+            (c?.(), l.A.leaveGuild(e));
+        }, [e, c]),
+        d = s.useMemo(
             () => [
-                { variant: "secondary", text: r.intl.string(r.t.J2TBi3), onClick: o },
+                { variant: "secondary", text: r.intl.string(r.t.J2TBi3), onClick: u },
                 { text: r.intl.string(r.t.TyCVIq), onClick: c },
             ],
-            [o, c],
+            [u, c],
         );
-    return (0, a.jsx)(n.a, {
+    return (0, n.jsx)(a.a, {
         title: r.intl.string(r.t.aCAiGl),
-        subtitle: r.intl.format(r.t["4cJV9S"], { serverName: e }),
+        subtitle: r.intl.format(r.t["4cJV9S"], { serverName: i }),
         actions: d,
         onClose: c,
-        ...u,
+        ...o,
     });
 };
