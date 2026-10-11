@@ -3,7 +3,7 @@ var n = r(477900),
     i = r(582128),
     l = r(17928),
     a = r(245179),
-    o = r(42766),
+    o = r(260498),
     s = r(246338),
     u = r(659723),
     c = r(248675),
@@ -11,7 +11,7 @@ var n = r(477900),
     d = r(831283);
 function f(e) {
     let { projectId: t } = e,
-        r = (0, l.bG)([a.Ay], () => null != t && a.Ay.isThinking(t), [t]),
+        r = (0, l.bG)([a.A], () => null != t && a.A.isThinking(t), [t]),
         [o, s] = i.useState(r ? t : null);
     return (
         r && o !== t && s(t),
@@ -34,11 +34,10 @@ function f(e) {
 function m(e) {
     let { guildId: t } = e,
         r = (0, l.bG)(
-            [a.Ay, o.Ay],
+            [a.A, o.Ay],
             () =>
-                a.Ay.getActivityOrderedProjectIds().find(
-                    (e) => (0, s.Ot)(o.Ay.getProject(e), t) && a.Ay.isThinking(e),
-                ) ?? null,
+                a.A.getActivityOrderedProjectIds().find((e) => (0, s.Ot)(o.Ay.getProject(e), t) && a.A.isThinking(e)) ??
+                null,
             [t],
         );
     return (0, n.jsx)(f, { projectId: r });

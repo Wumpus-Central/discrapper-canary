@@ -1,0 +1,24 @@
+n.d(t, { V5: () => i, VF: () => a, yR: () => l });
+var s = n(73153),
+    r = n(975189),
+    o = n(664619);
+let i = {
+    context_switch(e, t) {
+        let { projectId: n } = t;
+        (s.h.dispatch({ type: "CONJURE_CHAT_CONTEXT_SWITCH", projectId: n, contextSwitch: e }),
+            "reverted" === e.status &&
+                (0, o.tZ)(n, { isPreview: !0 }).catch((e) => {
+                    console.error("[vibegrations] post-revert refresh failed", n, e);
+                }));
+    },
+    smart_context(e, t) {
+        let { projectId: n } = t;
+        s.h.dispatch({ type: "CONJURE_SMART_CONTEXT_SET", projectId: n, enabled: e.enabled });
+    },
+};
+function l(e, t) {
+    return (0, r.b4)(e, "undo context switch", (e) => e.sendUndoContextSwitch(t));
+}
+function a(e, t) {
+    return (0, r.b4)(e, "smart context", (e) => e.sendSmartContext(t));
+}

@@ -1,69 +1,69 @@
-n.d(t, { A: () => w, Y: () => U });
-var l = n(477900),
+n.d(l, { A: () => F, Y: () => O });
+var t = n(477900),
     s = n(582128),
     i = n(435558),
     a = n.n(i),
     r = n(317097),
-    o = n(17928),
-    u = n(473193),
+    u = n(17928),
+    o = n(473193),
     c = n(364522),
     d = n(545442),
     m = n(922016),
     x = n(442433),
     h = n(589158),
-    j = n(964486),
+    f = n(964486),
     p = n(775602),
-    g = n(793574),
-    f = n(688810),
-    N = n(282006),
-    I = n(485947),
-    A = n(386784),
-    v = n(545868),
-    b = n(332173),
-    S = n(176201),
-    E = n(676608),
-    C = n(342296),
-    T = n(260509),
-    y = n(734057),
-    O = n(696451),
-    k = n(317525),
+    j = n(793574),
+    A = n(688810),
+    g = n(282006),
+    N = n(485947),
+    v = n(386784),
+    I = n(545868),
+    S = n(332173),
+    T = n(176201),
+    C = n(676608),
+    b = n(342296),
+    y = n(260509),
+    E = n(734057),
+    M = n(696451),
+    R = n(317525),
     G = n(71393),
     _ = n(287809),
-    R = n(427262),
-    P = n(660183),
-    M = n(165648),
-    L = n(778724);
-function D(e) {
-    let { member: t, guildId: i, channelId: a, role: r } = e,
-        u = s.useRef(null),
-        c = (0, o.bG)([G.A], () => G.A.getGuild(i)?.ownerId, [i]),
-        d = (0, o.bG)([_.default], () => _.default.getUser(t.userId), [t.userId]),
-        m = (0, o.bG)([y.A], () => y.A.getChannel(a), [a]);
+    U = n(427262),
+    k = n(660183),
+    w = n(165648),
+    D = n(778724);
+function P(e) {
+    let { member: l, guildId: i, channelId: a, role: r } = e,
+        o = s.useRef(null),
+        c = (0, u.bG)([G.A], () => G.A.getGuild(i)?.ownerId, [i]),
+        d = (0, u.bG)([_.default], () => _.default.getUser(l.userId), [l.userId]),
+        m = (0, u.bG)([E.A], () => E.A.getChannel(a), [a]);
     return null == d || null == m
         ? null
-        : (0, l.jsx)(
-              C.A,
+        : (0, t.jsx)(
+              b.A,
               {
-                  targetElementRef: u,
-                  userId: t.userId,
+                  targetElementRef: o,
+                  userId: l.userId,
                   guildId: i,
                   channelId: a,
                   roleId: r.id,
                   spacing: 14,
                   children: (e, s) => {
                       let { isShown: a } = s;
-                      return (0, l.jsx)(
+                      return (0, t.jsx)(
                           h.A,
                           {
-                              ref: u,
+                              ref: o,
                               selected: a,
-                              colorString: t.colorString,
-                              colorStrings: t.colorStrings,
+                              colorString: l.colorString,
+                              colorStrings: l.colorStrings,
                               colorRoleName: r.name,
                               user: d,
-                              isOwner: t.userId === c,
-                              nick: t.nick,
-                              premiumSince: null == t.premiumSince ? null : new Date(t.premiumSince),
+                              isOwner: l.userId === c,
+                              nick: l.nick,
+                              premiumSince: null == l.premiumSince ? null : new Date(l.premiumSince),
                               channel: m,
                               guildId: i,
                               onContextMenu: (e) => {
@@ -91,20 +91,21 @@ function D(e) {
                                           n.e("189673"),
                                           n.e("21921"),
                                           n.e("695445"),
-                                          n.e("28102"),
+                                          n.e("828111"),
                                           n.e("890027"),
                                           n.e("536200"),
+                                          n.e("28102"),
                                           n.e("882073"),
                                           n.e("797558"),
                                           n.e("638221"),
                                           n.e("571210"),
+                                          n.e("428296"),
                                           n.e("676418"),
                                           n.e("691994"),
                                           n.e("592028"),
                                           n.e("229787"),
                                           n.e("425906"),
                                           n.e("123216"),
-                                          n.e("428296"),
                                           n.e("936320"),
                                           n.e("166495"),
                                           n.e("576665"),
@@ -116,9 +117,9 @@ function D(e) {
                                           n.e("682337"),
                                           n.e("538887"),
                                           n.e("454625"),
+                                          n.e("332470"),
                                           n.e("235313"),
                                           n.e("843719"),
-                                          n.e("332470"),
                                           n.e("371133"),
                                           n.e("41991"),
                                           n.e("624198"),
@@ -169,133 +170,133 @@ function D(e) {
                                           n.e("184841"),
                                           n.e("105539"),
                                       ]).then(n.bind(n, 107632));
-                                      return (t) =>
-                                          (0, l.jsx)(e, { ...t, user: d, guildId: i, channel: m, showMediaItems: !0 });
+                                      return (l) =>
+                                          (0, t.jsx)(e, { ...l, user: d, guildId: i, channel: m, showMediaItems: !0 });
                                   });
                               },
                               ...e,
                           },
-                          t.userId,
+                          l.userId,
                       );
                   },
               },
-              t.userId,
+              l.userId,
           );
 }
-function U(e) {
-    let { popoutProps: t, roleId: n, guildId: i, channelId: r } = e,
+function O(e) {
+    let { popoutProps: l, roleId: n, guildId: i, channelId: r } = e,
         d = s.useRef(null);
-    ((0, j.Ay)(() => {
-        t.setPopoutRef?.(d.current);
+    ((0, f.Ay)(() => {
+        l.setPopoutRef?.(d.current);
     }),
-        (0, j.l0)(() => {
-            t.setPopoutRef?.(null);
+        (0, f.l0)(() => {
+            l.setPopoutRef?.(null);
         }));
-    let m = (0, A.A)(i),
-        x = (0, o.bG)(
+    let m = (0, v.A)(i),
+        x = (0, u.bG)(
             [G.A],
             () => {
                 let e = G.A.getGuild(i);
-                return null == e ? null : (0, T.af)(e);
+                return null == e ? null : (0, y.af)(e);
             },
             [i],
         ),
-        h = (0, o.yK)(
-            [O.Ay, _.default],
+        h = (0, u.yK)(
+            [M.Ay, _.default],
             () => {
-                let e = O.Ay.getMembers(i),
-                    t = null == n || n === x ? e : e.filter((e) => e.roles.includes(n));
-                return a()(t)
+                let e = M.Ay.getMembers(i),
+                    l = null == n || n === x ? e : e.filter((e) => e.roles.includes(n));
+                return a()(l)
                     .filter((e) => null != _.default.getUser(e.userId))
-                    .sortBy((e) => e.nick ?? R.Ay.getName(_.default.getUser(e.userId)))
+                    .sortBy((e) => e.nick ?? U.Ay.getName(_.default.getUser(e.userId)))
                     .value();
             },
             [i, n, x],
         ),
-        p = (0, o.bG)(
-            [k.A],
+        p = (0, u.bG)(
+            [R.A],
             () => {
                 let e = n ?? x;
-                return null == e ? null : k.A.getRole(i, e);
+                return null == e ? null : R.A.getRole(i, e);
             },
             [i, n, x],
         ),
-        g = null == n ? null : m?.[n],
-        f = s.useMemo(
+        j = null == n ? null : m?.[n],
+        A = s.useMemo(
             () =>
                 null != p
-                    ? h.map((e) => (0, l.jsx)(D, { member: e, guildId: i, channelId: r, role: p }, e.userId))
+                    ? h.map((e) => (0, t.jsx)(P, { member: e, guildId: i, channelId: r, role: p }, e.userId))
                     : [],
             [r, i, p, h],
         );
     return null == p
         ? null
-        : (0, l.jsx)(u.C.Provider, {
+        : (0, t.jsx)(o.C.Provider, {
               value: void 0,
-              children: (0, l.jsx)("div", {
-                  className: M.qm,
+              children: (0, t.jsx)("div", {
+                  className: w.qm,
                   ref: d,
-                  ...t,
-                  children: (0, l.jsxs)(c.Ip, {
-                      className: M.bY,
+                  ...l,
+                  children: (0, t.jsxs)(c.Ip, {
+                      className: w.bY,
                       children: [
-                          (0, l.jsx)(N.Y, { id: n, guildId: i, title: p.name, count: g, className: M.sd }),
-                          f,
-                          null == g || g <= f.length
+                          (0, t.jsx)(g.Y, { id: n, guildId: i, title: p.name, count: j, className: w.sd }),
+                          A,
+                          null == j || j <= A.length
                               ? null
-                              : (0, l.jsx)(I.A, {
-                                    className: M.sd,
-                                    children: P.intl.formatToPlainString(P.t["9oMmZC"], { count: g - f.length }),
+                              : (0, t.jsx)(N.A, {
+                                    className: w.sd,
+                                    children: k.intl.formatToPlainString(k.t["9oMmZC"], { count: j - A.length }),
                                 }),
                       ],
                   }),
               }),
           });
 }
-function w(e) {
-    let { roleId: t, channelId: n, roleName: i, guildId: a, children: u, inlinePreview: c = !1 } = e,
-        { analyticsLocations: x } = (0, f.Ay)(g.A.ROLE_MENTION),
-        h = (0, o.bG)([p.Ay], () => p.Ay.roleStyle),
-        j = (0, o.bG)([k.A], () => (null == a || null == t ? null : k.A.getRole(a, t))),
-        N = (0, E.jV)(a, j),
-        I = !c && null != j && !(0, S.Qv)(j),
-        A = I && "dot" === h,
-        C = I && "username" === h,
-        T = N && null != j ? j.colorStrings : null,
-        y = s.useRef(null);
-    function O(e) {
-        return (0, l.jsxs)(b.A, {
-            ref: y,
-            className: M.Dz,
-            color: C ? j.color : null,
-            roleColors: C ? T : null,
+function F(e) {
+    let { roleId: l, channelId: n, roleName: i, guildId: a, children: o, inlinePreview: c = !1 } = e,
+        { analyticsLocations: x } = (0, A.Ay)(j.A.ROLE_MENTION),
+        h = (0, u.bG)([p.Ay], () => p.Ay.roleStyle),
+        f = (0, u.bG)([R.A], () => (null == a || null == l ? null : R.A.getRole(a, l))),
+        g = (0, C.jV)(a, f),
+        N = !c && null != f && !(0, T.Qv)(f),
+        v = N && "dot" === h,
+        b = N && "username" === h,
+        y = g && null != f ? f.colorStrings : null,
+        E = s.useRef(null);
+    function M(e) {
+        return (0, t.jsxs)(S.A, {
+            ref: E,
+            className: w.Dz,
+            color: b ? f.color : null,
+            roleColors: b ? y : null,
             ...e,
             children: [
-                A &&
-                    null != j.color &&
-                    (0, l.jsx)(d.W, {
-                        color: (0, r.Hl)(j.color),
-                        colors: T,
-                        className: L.m,
+                v &&
+                    null != f.color &&
+                    (0, t.jsx)(d.W, {
+                        color: (0, r.Hl)(f.color),
+                        colors: y,
+                        className: D.m,
                         background: !1,
                         tooltip: !1,
                     }),
-                u,
+                o,
             ],
         });
     }
-    return c || null == n || null == a || (null == t && "@everyone" !== i)
-        ? (0, l.jsx)(f.f5, { value: x, children: O() })
-        : (0, l.jsx)(f.f5, {
+    return c || null == n || null == a || (null == l && "@everyone" !== i)
+        ? (0, t.jsx)(A.f5, { value: x, children: M() })
+        : (0, t.jsx)(A.f5, {
               value: x,
-              children: (0, l.jsx)(m.Y, {
-                  targetElementRef: y,
+              children: (0, t.jsx)(m.Y, {
+                  targetElementRef: E,
                   preload: async () => {
-                      null != t && (await (0, v.a)(a, t));
+                      null != l && (await (0, I.a)(a, l));
                   },
-                  renderPopout: (e) => (0, l.jsx)(U, { guildId: a, channelId: n, roleId: t, popoutProps: e }),
+                  renderPopout: (e) => (0, t.jsx)(O, { guildId: a, channelId: n, roleId: l, popoutProps: e }),
                   position: "right",
-                  children: O,
+                  children: M,
               }),
           });
 }

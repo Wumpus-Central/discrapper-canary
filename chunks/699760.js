@@ -12,7 +12,7 @@ var n = i(477900),
     m = i(825484),
     g = i(821609),
     x = i(957565),
-    f = i(712808);
+    f = i(860402);
 let p = { setTimeout: (t, e) => setTimeout(t, e), clearTimeout: (t) => clearTimeout(t), now: () => Date.now() };
 class C {
     fetchConnection;

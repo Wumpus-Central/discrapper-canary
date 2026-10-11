@@ -51,7 +51,7 @@ let m = i.memo(function (e) {
                 s = [],
                 p = 0,
                 x = 0,
-                y = (function () {
+                M = (function () {
                     let e = [];
                     for (let t = 0; t < 3; t++)
                         e.push({
@@ -64,9 +64,9 @@ let m = i.memo(function (e) {
                         });
                     return e;
                 })(),
-                M = d.home.blob,
-                w = d.home.twink,
-                A = d.home.alpha,
+                w = d.home.blob,
+                A = d.home.twink,
+                y = d.home.alpha,
                 j = u[c],
                 R = [],
                 N = 0,
@@ -151,7 +151,7 @@ let m = i.memo(function (e) {
             function q(e) {
                 var t, n, l;
                 if (i <= 0 || o <= 0) return;
-                (r.clearRect(0, 0, i, o), (r.globalAlpha = A));
+                (r.clearRect(0, 0, i, o), (r.globalAlpha = y));
                 let a = j,
                     u = "right" === g.current,
                     c = u ? o : i,
@@ -171,14 +171,14 @@ let m = i.memo(function (e) {
                                     l = 1 - Math.sqrt(n * n + i * i * 1.8);
                                 return l < 0 ? 0 : l * l;
                             })(f, m, h);
-                    for (let e = 0; e < y.length; e++) {
-                        let t = y[e],
+                    for (let e = 0; e < M.length; e++) {
+                        let t = M[e],
                             r = f - t.x,
                             n = m - t.y,
                             i = (r * r + n * n) / (t.radius * t.radius);
                         g += t.strength * Math.exp(-i) * 0.7;
                     }
-                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * w + l.phase),
+                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * A + l.phase),
                         v = g - (l.threshold + p);
                     1;
                     if (!(v <= -0.1)) {
@@ -244,10 +244,10 @@ let m = i.memo(function (e) {
                     })(t, e));
                 let n = d[m.current] ?? d.home,
                     i = 1 - Math.exp(-r / 80);
-                ((M += (n.blob - M) * i), (w += (n.twink - w) * i), (A += (n.alpha - A) * i));
-                let l = 1.5 * M;
-                for (let e = 0; e < y.length; e++) {
-                    let t = y[e];
+                ((w += (n.blob - w) * i), (A += (n.twink - A) * i), (y += (n.alpha - y) * i));
+                let l = 1.5 * w;
+                for (let e = 0; e < M.length; e++) {
+                    let t = M[e];
                     ((t.x += t.vx * r * l),
                         (t.y += t.vy * r * l),
                         (t.x < -0.1 || t.x > 1.1) && (t.vx *= -1),
@@ -286,7 +286,7 @@ let m = i.memo(function (e) {
 var g = r(839806);
 function p(e) {
     let { projectId: t, orientation: r = "bottom", state: i } = e,
-        o = (0, l.bG)([a.Ay], () => (a.Ay.isThinking(t) ? "thinking" : "conversation"), [t]),
+        o = (0, l.bG)([a.A], () => (a.A.isThinking(t) ? "thinking" : "conversation"), [t]),
         s = i ?? o,
         u = "right" === r ? `${g.ys} ${g.WR}` : g.ys;
     return (0, n.jsxs)("div", {

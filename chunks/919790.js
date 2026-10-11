@@ -1,16 +1,16 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var l = n(477900),
     a = n(582128),
     r = n(256905),
-    i = n(164892),
-    s = n(712808),
+    i = n(666476),
+    s = n(989145),
     u = n(922329),
-    d = n(248675),
-    o = n(660183),
+    o = n(248675),
+    d = n(660183),
     c = n(986109);
-function m(e) {
+function f(e) {
     let { projectId: t, attachments: n } = e,
-        r = n.filter(f),
+        r = n.filter(m),
         [i, s] = a.useState(() => new Set()),
         u = a.useCallback((e) => {
             s((t) => (t.has(e) ? t : new Set(t).add(e)));
@@ -20,7 +20,7 @@ function m(e) {
         children: n.map((e, n) =>
             null == e.id
                 ? (0, l.jsx)(h, { name: e.name }, n)
-                : f(e)
+                : m(e)
                   ? (0, l.jsx)(
                         p,
                         {
@@ -36,18 +36,18 @@ function m(e) {
         ),
     });
 }
-function f(e) {
+function m(e) {
     return null != e.id && i.XB.has(e.content_type);
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
+        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
 function g(e) {
     let { projectId: t, id: n, name: r } = e,
         [i, c] = a.useState(!1),
-        m = a.useCallback(() => {
+        f = a.useCallback(() => {
             (0, s.n6)(t, n)
                 .then(async (e) => {
                     if (!e) return void c(!0);
@@ -64,20 +64,20 @@ function g(e) {
         : (0, l.jsx)(u.n, {
               name: r,
               thumbSrc: null,
-              ariaLabel: o.intl.formatToPlainString(d.default["g5+7Vs"], { name: r }),
-              onClick: m,
+              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
+              onClick: f,
           });
 }
 function p(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: m } = e,
-        { id: f, name: g } = n[i],
+    let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: f } = e,
+        { id: m, name: g } = n[i],
         [p, x] = a.useState(null),
-        k = c.has(f),
-        [j, v] = a.useState(0);
+        k = c.has(m),
+        [v, j] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
-            (0, s.PK)(t, f).then(
+            (0, s.PK)(t, m).then(
                 (t) => {
                     e || x(t);
                 },
@@ -87,7 +87,7 @@ function p(e) {
                 e = !0;
             }
         );
-    }, [t, f, j]);
+    }, [t, m, v]);
     let b = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
@@ -109,13 +109,13 @@ function p(e) {
         : (0, l.jsx)(u.n, {
               name: g,
               thumbSrc: p,
-              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: g }),
+              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: g }),
               onClick: b,
               onThumbError: () => {
                   (x(null),
-                      (0, s.n6)(t, f).then(
+                      (0, s.n6)(t, m).then(
                           (e) => {
-                              e ? 0 === j && v(1) : m(f);
+                              e ? 0 === v && j(1) : f(m);
                           },
                           () => {},
                       ));

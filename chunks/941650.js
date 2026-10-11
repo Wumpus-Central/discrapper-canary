@@ -1,0 +1,17 @@
+e.exports = {
+    MM: "projectInfo_ab0f55",
+    OY: "projectCard_ab0f55",
+    Pl: "projectSettingsAction_ab0f55",
+    Wy: "projectCardDeleting_ab0f55",
+    W6: "projectCardSelect_ab0f55",
+    VJ: "projectIcon_ab0f55",
+    M2: "projectCardAction_ab0f55",
+    rb: "projectPeople_ab0f55",
+    j1: "projectName_ab0f55",
+    Ub: "projectTitleRow_ab0f55",
+    h3: "projectMetadata_ab0f55",
+    Wb: "projectServerName_ab0f55",
+    zM: "projectLastEdited_ab0f55",
+    fs: "projectMentionBadge_ab0f55",
+    cy: "projectMetadataSeparator_ab0f55",
+};

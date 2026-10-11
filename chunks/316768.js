@@ -1,4 +1,4 @@
-(e.d(l, { A: () => P }), e(321073));
+(e.d(n, { A: () => v }), e(321073));
 var t = e(477900),
     i = e(582128),
     c = e(17928),
@@ -8,124 +8,125 @@ var t = e(477900),
     d = e(624479),
     a = e(70688),
     s = e(976860),
-    A = e(712808),
-    p = e(42766),
+    A = e(591277),
+    p = e(260498),
     g = e(95264),
-    I = e(616334),
-    y = e(246338),
-    f = e(696451),
-    _ = e(71393),
-    h = e(576705),
-    b = e(935208),
-    x = e(164892),
+    I = e(442331),
+    y = e(616334),
+    f = e(246338),
+    _ = e(696451),
+    h = e(71393),
+    b = e(576705),
+    x = e(935208),
     C = e(371169),
-    E = e(652215),
-    D = e(577964),
-    G = e(746080),
-    N = e(165610),
-    V = e(248675),
-    j = e(660183);
-function P(n, l, e) {
-    var P;
-    let v,
-        T,
+    E = e(951178),
+    D = e(652215),
+    G = e(577964),
+    N = e(746080),
+    V = e(165610),
+    j = e(248675),
+    P = e(660183);
+function v(l, n, e) {
+    var v;
+    let T,
         B,
         L,
         M,
-        F = (0, y.w$)(n, e),
-        H =
-            ((P = F ? n : null),
-            (T = null != (v = (0, y.us)(P))),
-            (B = P?.guild_id ?? null),
-            (L = (0, c.bG)(
-                [_.A, h.A],
+        F,
+        S = (0, f.w$)(l, e),
+        m =
+            ((v = S ? l : null),
+            (B = null != (T = (0, f.us)(v))),
+            (L = v?.guild_id ?? null),
+            (M = (0, c.bG)(
+                [h.A, b.A],
                 () => {
-                    let n = null != B ? _.A.getGuild(B) : null;
-                    return null != n && h.A.can(E.xBc.MANAGE_GUILD, n);
+                    let l = null != L ? h.A.getGuild(L) : null;
+                    return null != l && b.A.can(D.xBc.MANAGE_GUILD, l);
                 },
-                [B],
+                [L],
             )),
-            (M = (0, c.yK)([f.Ay], () => (null != B ? (f.Ay.getSelfMember(B)?.roles ?? []) : []), [B])),
+            (F = (0, c.yK)([_.Ay], () => (null != L ? (_.Ay.getSelfMember(L)?.roles ?? []) : []), [L])),
             i.useEffect(() => {
-                T && null != v && (0, C.hF)(B ?? void 0);
-            }, [T, v, B, L, M]),
+                B && null != T && (0, C.hF)(L ?? void 0);
+            }, [B, T, L, M, F]),
             (0, c.bG)(
                 [p.Ay],
                 () => {
-                    if (null == v) return null;
-                    let n = p.Ay.findProjectByApplicationId(v);
-                    if (null == n || (0, p.PV)(n)) return n;
-                    let l = null != B ? b.default.castGuildIdAsEveryoneGuildRoleId(B) : null,
-                        e = (n.collaborator_role_ids ?? []).some((n) => n === l || M.includes(n));
-                    return n.guild_id === B && (0, x.Hn)(n) && (L || e) ? n : null;
+                    if (null == T) return null;
+                    let l = p.Ay.findProjectByApplicationId(T);
+                    if (null == l || (0, p.PV)(l)) return l;
+                    let n = null != L ? x.default.castGuildIdAsEveryoneGuildRoleId(L) : null,
+                        e = (l.collaborator_role_ids ?? []).some((l) => l === n || F.includes(l));
+                    return l.guild_id === L && (0, E.XE)(l) && (M || e) ? l : null;
                 },
-                [v, L, M, B],
+                [T, M, F, L],
             )),
-        S = H?.id ?? null,
-        m = n.guild_id ?? null;
+        H = m?.id ?? null,
+        O = l.guild_id ?? null;
     i.useEffect(() => {
-        null != S && (0, A.Hc)(S);
-    }, [S]);
-    let O = (0, c.bG)([A.Ay], () => null != S && null != A.Ay.getSettings(S), [S]),
-        k = l?.id,
-        w = i.useCallback(() => (0, D.A)(k, m, n.id), [k, m, n.id]);
-    if (!F || null == H || null == m) return [];
-    let U = [
+        null != H && (0, A.Hc)(H);
+    }, [H]);
+    let k = (0, c.bG)([I.A], () => null != H && null != I.A.getSettings(H), [H]),
+        w = n?.id,
+        U = i.useCallback(() => (0, G.A)(w, O, l.id), [w, O, l.id]);
+    if (!S || null == m || null == O) return [];
+    let R = [
         (0, t.jsx)(
             o.Dr,
             {
                 id: "conjure-edit",
                 icon: u.PencilIcon,
                 leadingAccessory: { type: "icon", icon: u.PencilIcon },
-                label: j.intl.string(V.default.jMMrDM),
-                action: () => (0, s.pX)(E.BVt.CHANNEL(m, G.VV.CONJURE, H.id)),
+                label: P.intl.string(j.default.jMMrDM),
+                action: () => (0, s.pX)(D.BVt.CHANNEL(O, N.VV.CONJURE, m.id)),
             },
             "edit",
         ),
     ];
     return (
-        (O || (0, p.PV)(H)) &&
-            U.push(
+        (k || (0, p.PV)(m)) &&
+            R.push(
                 (0, t.jsx)(
                     o.Dr,
                     {
                         id: "conjure-settings",
                         icon: r.SettingsIcon,
                         leadingAccessory: { type: "icon", icon: r.SettingsIcon },
-                        label: j.intl.string(V.default.I2XSKe),
-                        action: () => (0, I.A)(H.id, { guildId: m, initialTab: "app" }),
+                        label: P.intl.string(j.default.I2XSKe),
+                        action: () => (0, y.A)(m.id, { guildId: O, initialTab: "app" }),
                     },
                     "settings",
                 ),
             ),
-        (0, p.H_)(H) &&
-            U.push(
+        (0, p.H_)(m) &&
+            R.push(
                 (0, t.jsx)(
                     o.Dr,
                     {
                         id: "conjure-remix",
                         icon: d.CopyIcon,
                         leadingAccessory: { type: "icon", icon: d.CopyIcon },
-                        label: j.intl.string(V.default["9wQTdG"]),
-                        action: () => (0, g.A)(H, m),
+                        label: P.intl.string(j.default["9wQTdG"]),
+                        action: () => (0, g.A)(m, O),
                     },
                     "remix",
                 ),
             ),
-        (0, N.x1)(l) &&
-            U.push(
+        (0, V.x1)(n) &&
+            R.push(
                 (0, t.jsx)(
                     o.Dr,
                     {
                         id: "conjure-close",
                         icon: a.DoorExitIcon,
                         leadingAccessory: { type: "icon", icon: a.DoorExitIcon },
-                        label: j.intl.string(V.default["/TlGcK"]),
-                        action: w,
+                        label: P.intl.string(j.default["/TlGcK"]),
+                        action: U,
                     },
                     "close",
                 ),
             ),
-        U
+        R
     );
 }

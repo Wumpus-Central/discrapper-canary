@@ -406,7 +406,7 @@ function $(e) {
             { collection: t, story: i, controlOverrides: r } = e(b, M);
         return (e) => (
             e?.preventDefault(),
-            Promise.all([n.e("558676"), n.e("60800"), n.e("129263")])
+            Promise.all([n.e("60800"), n.e("129263")])
                 .then(n.bind(n, 965042))
                 .then((e) => {
                     let { openPlayground: n } = e;

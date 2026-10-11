@@ -1,36 +1,36 @@
-n.d(t, { A: () => eE });
-var r = n(264686),
-    i = n(625180),
-    l = n(91242),
-    o = n(976860),
-    a = n(803224),
-    u = n(531685),
-    s = n(479975);
+n.d(t, { A: () => eN });
+var i = n(264686),
+    r = n(625180),
+    a = n(91242),
+    s = n(976860),
+    l = n(803224),
+    o = n(531685),
+    d = n(479975);
 n(884868);
-var d = n(573083);
-function c(e, t) {
+var c = n(573083);
+function u(e, t) {
     try {
         t();
     } catch (t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-var f = n(141931),
-    h = n(941426),
-    p = n(475735),
-    w = n(192820),
-    m = n(192888),
-    g = n(809685),
-    v = n(777977),
-    y = n(484697);
+var _ = n(141931),
+    E = n(941426),
+    A = n(475735),
+    h = n(192820),
+    f = n(192888),
+    I = n(809685),
+    p = n(777977),
+    T = n(484697);
 (n(321073), n(667532));
-var b = n(112420),
-    M = n(652215);
-function I(e) {
+var m = n(112420),
+    g = n(652215);
+function S(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
-let E = {
-    [M.e$_.OPEN_CONTEXT_MENU]: (e) =>
+let N = {
+    [g.e$_.OPEN_CONTEXT_MENU]: (e) =>
         "custom" !== e.args.type
             ? { result: { opened: !0 }, answered: "opened, no selection to make" }
             : {
@@ -39,87 +39,87 @@ let E = {
                   options: (function e(t) {
                       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                       if (!Array.isArray(t)) return n;
-                      for (let r of t) {
+                      for (let i of t) {
                           if (n.length >= 40) break;
-                          if (null == r || "object" != typeof r) continue;
-                          let t = I(r.id);
-                          (null != t && n.push(t), e(r.items, n));
+                          if (null == i || "object" != typeof i) continue;
+                          let t = S(i.id);
+                          (null != t && n.push(t), e(i.items, n));
                       }
                       return n;
                   })(e.args.items),
               },
-    [M.e$_.SHOW_CONFIRM_MODAL]: (e) => ({
+    [g.e$_.SHOW_CONFIRM_MODAL]: (e) => ({
         result: "confirm" === e.args.type ? { confirmed: !1 } : { acknowledged: !1 },
         answered: "dismissed",
-        subject: I(e.args.title),
+        subject: S(e.args.title),
     }),
-    [M.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [g.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
-        subject: I(e.args.url),
+        subject: S(e.args.url),
     }),
-    [M.e$_.SHARE_CONTENT]: (e) => ({
+    [g.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
-        subject: I(e.args.preview_title) ?? I(e.args.content),
+        subject: S(e.args.preview_title) ?? S(e.args.content),
     }),
-    [M.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [M.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [M.e$_.OPEN_GAME_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [M.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [M.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [M.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [M.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [M.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [M.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [g.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [g.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [g.e$_.OPEN_GAME_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [g.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [g.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [g.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [g.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [g.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [g.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
-Object.keys(E);
-let T = { drain: () => [], end: () => {}, iframeId: null },
-    S = [];
-function P(e) {
-    let t = S.find((t) => t.iframeId === e.iframeId);
+Object.keys(N);
+let C = { drain: () => [], end: () => {}, iframeId: null },
+    O = [];
+function R(e) {
+    let t = O.find((t) => t.iframeId === e.iframeId);
     if (null == t) return null;
-    let n = E[e.cmd];
+    let n = N[e.cmd];
     if (null == n) return null;
-    let { result: r, answered: i, options: l, subject: o } = n(e);
+    let { result: i, answered: r, options: a, subject: s } = n(e);
     return (
         t.recorded.length < 20 &&
             t.recorded.push({
                 command: e.cmd,
-                answered: i,
-                ...(null != l && l.length > 0 ? { options: l } : {}),
-                ...(null != o ? { subject: o } : {}),
+                answered: r,
+                ...(null != a && a.length > 0 ? { options: a } : {}),
+                ...(null != s ? { subject: s } : {}),
             }),
-        { result: r }
+        { result: i }
     );
 }
-function O(e) {
+function L(e) {
     let t = e.contentWindow;
-    return null == t ? null : ((0, y.lw)(t) ?? null);
+    return null == t ? null : ((0, T.lw)(t) ?? null);
 }
-function A(e, t) {
-    var n = O(e);
-    if (null == n) return T;
-    let r = { iframeId: n, recorded: [] };
+function y(e, t) {
+    var n = L(e);
+    if (null == n) return C;
+    let i = { iframeId: n, recorded: [] };
     return (
-        t?.beneathBatches === !0 ? S.push(r) : S.unshift(r),
-        1 === S.length && (0, b.C)(P),
+        t?.beneathBatches === !0 ? O.push(i) : O.unshift(i),
+        1 === O.length && (0, m.C)(R),
         {
             iframeId: n,
-            drain: () => r.recorded.splice(0, r.recorded.length),
+            drain: () => i.recorded.splice(0, i.recorded.length),
             end: () => {
-                let e = S.indexOf(r);
-                -1 !== e && (S.splice(e, 1), 0 === S.length && (0, b.C)(null));
+                let e = O.indexOf(i);
+                -1 !== e && (O.splice(e, 1), 0 === O.length && (0, m.C)(null));
             },
         }
     );
 }
-var x = n(508382),
-    N = n(365912),
-    _ = n(192308),
-    k = n(186111),
-    W = n(539197);
-function C(e, t) {
+var D = n(508382),
+    v = n(365912),
+    b = n(192308),
+    M = n(186111),
+    P = n(539197);
+function U(e, t) {
     let n = e.getBoundingClientRect();
     return (
         2 >= Math.abs(n.left - t.left) &&
@@ -128,31 +128,31 @@ function C(e, t) {
         4 >= Math.abs(n.height - t.height)
     );
 }
-function L(e, t) {
+function w(e, t) {
     if (
-        (0, _.hasAnyModalOpen)() ||
-        k.A.hasLayers() ||
+        (0, b.hasAnyModalOpen)() ||
+        M.A.hasLayers() ||
         (function (e, t) {
-            let n = [...document.getElementsByClassName(N.Pb), ...document.querySelectorAll(`[${x.IP}]`)],
-                r = [],
-                i = 0;
-            for (let o of n)
-                for (let n of o.querySelectorAll("*")) {
-                    if (++i > 500) return !0;
-                    if (!(n.contains(e) || null != n.closest(`[${W.t$}]`) || r.some((e) => e.contains(n)))) {
-                        var l;
-                        if (C(n, t)) {
-                            r.push(n);
+            let n = [...document.getElementsByClassName(v.Pb), ...document.querySelectorAll(`[${D.IP}]`)],
+                i = [],
+                r = 0;
+            for (let s of n)
+                for (let n of s.querySelectorAll("*")) {
+                    if (++r > 500) return !0;
+                    if (!(n.contains(e) || null != n.closest(`[${P.t$}]`) || i.some((e) => e.contains(n)))) {
+                        var a;
+                        if (U(n, t)) {
+                            i.push(n);
                             continue;
                         }
                         if (
-                            ((l = n.getBoundingClientRect()),
-                            l.width > 0 &&
-                                l.height > 0 &&
-                                l.left < t.right &&
-                                l.right > t.left &&
-                                l.top < t.bottom &&
-                                l.bottom > t.top)
+                            ((a = n.getBoundingClientRect()),
+                            a.width > 0 &&
+                                a.height > 0 &&
+                                a.left < t.right &&
+                                a.right > t.left &&
+                                a.top < t.bottom &&
+                                a.bottom > t.top)
                         )
                             return !0;
                     }
@@ -162,26 +162,26 @@ function L(e, t) {
     )
         return !0;
     let n = Math.min(4, t.width / 4),
-        r = Math.min(4, t.height / 4);
-    for (let i = 0; i < 7; i++)
-        for (let l = 0; l < 7; l++) {
-            let o = t.left + n + ((t.width - 2 * n) * i) / 6,
-                a = t.top + r + ((t.height - 2 * r) * l) / 6,
-                u = document.elementsFromPoint(o, a),
-                s = u.indexOf(e);
-            if (-1 === s || !u.slice(0, s).every((e) => C(e, t))) return !0;
+        i = Math.min(4, t.height / 4);
+    for (let r = 0; r < 7; r++)
+        for (let a = 0; a < 7; a++) {
+            let s = t.left + n + ((t.width - 2 * n) * r) / 6,
+                l = t.top + i + ((t.height - 2 * i) * a) / 6,
+                o = document.elementsFromPoint(s, l),
+                d = o.indexOf(e);
+            if (-1 === d || !o.slice(0, d).every((e) => U(e, t))) return !0;
         }
     return !1;
 }
-var R = n(731854);
-let $ = new h.Vy("VibegrationsNativeCapture");
-function D(e, t) {
-    return ($.verbose(`native capture not used: ${e}`, t ?? {}), null);
+var G = n(731854);
+let x = new E.Vy("VibegrationsNativeCapture");
+function k(e, t) {
+    return (x.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
-function q() {
+function F() {
     return window.DiscordNative?.activityCapture ?? null;
 }
-function j(e) {
+function B(e) {
     let t = e.getBoundingClientRect();
     return t.width < 40 ||
         t.height < 40 ||
@@ -192,33 +192,33 @@ function j(e) {
         ? null
         : t;
 }
-async function U(e) {
+async function V(e) {
     let t = window.DiscordNative,
         n = await t?.window?.getMediaSourceId?.();
-    if (null == n) return D("no media source id for our own window");
-    let r = n.split(":")[1];
-    if (null == r || "" === r) return D("unrecognized media source id", { sourceId: n });
-    let i = Math.min(
+    if (null == n) return k("no media source id for our own window");
+    let i = n.split(":")[1];
+    if (null == i || "" === i) return k("unrecognized media source id", { sourceId: n });
+    let r = Math.min(
             window.devicePixelRatio,
             1,
             1568 / Math.max(e.width, e.height),
             Math.sqrt(115e4 / (e.width * e.height)),
         ),
-        l = Math.ceil(window.outerWidth * i),
-        o = Math.ceil(window.outerHeight * i),
-        a = w.Ay.getMediaEngine();
-    if (a.supports(R.O5.WINDOW_PREVIEWS))
+        a = Math.ceil(window.outerWidth * r),
+        s = Math.ceil(window.outerHeight * r),
+        l = h.Ay.getMediaEngine();
+    if (l.supports(G.O5.WINDOW_PREVIEWS))
         try {
-            let e = p.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
-                t = await a.getSingleWindowPreview(r, l, o, e);
+            let e = A.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
+                t = await l.getSingleWindowPreview(i, a, s, e);
             if (null != t && "" !== t.url) return t.url;
         } catch {}
-    let u = await t?.desktopCapture?.getDesktopCaptureSources({
-            types: [f.fS.WINDOW],
-            thumbnailSize: { width: l, height: o },
+    let o = await t?.desktopCapture?.getDesktopCaptureSources({
+            types: [_.fS.WINDOW],
+            thumbnailSize: { width: a, height: s },
         }),
-        s = u?.find((e) => e.id.split(":")[1] === r);
-    return null == s || "" === s.url ? D("own window missing from capture sources") : s.url;
+        d = o?.find((e) => e.id.split(":")[1] === i);
+    return null == d || "" === d.url ? k("own window missing from capture sources") : d.url;
 }
 async function H() {
     let e = document.createElement("div");
@@ -230,136 +230,136 @@ async function H() {
         () => e.remove()
     );
 }
-async function F(e, t, n, r) {
-    let i = new Image();
-    if (((i.decoding = "async"), (i.src = e), await i.decode(), 0 === i.naturalWidth || 0 === i.naturalHeight))
-        return D("window still decoded empty");
-    let l = i.naturalWidth / window.outerWidth,
-        o = i.naturalHeight / window.outerHeight;
-    if (l <= 0 || o <= 0 || Math.abs(l - o) > 0.03 * l)
-        return D("window still does not match the window geometry", {
-            image: { width: i.naturalWidth, height: i.naturalHeight },
+async function j(e, t, n, i) {
+    let r = new Image();
+    if (((r.decoding = "async"), (r.src = e), await r.decode(), 0 === r.naturalWidth || 0 === r.naturalHeight))
+        return k("window still decoded empty");
+    let a = r.naturalWidth / window.outerWidth,
+        s = r.naturalHeight / window.outerHeight;
+    if (a <= 0 || s <= 0 || Math.abs(a - s) > 0.03 * a)
+        return k("window still does not match the window geometry", {
+            image: { width: r.naturalWidth, height: r.naturalHeight },
             window: { width: window.outerWidth, height: window.outerHeight },
         });
-    let a = (function (e, t, n, r) {
-        let i = t.x > 2 ? [0, t.x] : [0],
-            l = t.y > 2 ? [0, t.y] : [0];
-        if (1 === i.length && 1 === l.length) return { x: 0, y: 0 };
-        for (let t of i)
-            for (let i of l)
+    let l = (function (e, t, n, i) {
+        let r = t.x > 2 ? [0, t.x] : [0],
+            a = t.y > 2 ? [0, t.y] : [0];
+        if (1 === r.length && 1 === a.length) return { x: 0, y: 0 };
+        for (let t of r)
+            for (let r of a)
                 if (
                     (function (e, t, n) {
-                        let r = document.createElement("canvas");
-                        ((r.width = 1), (r.height = 1));
-                        let i = r.getContext("2d");
-                        if (null == i) return !1;
-                        i.drawImage(e, t, n, 1, 1, 0, 0, 1, 1);
-                        let [l, o, a] = i.getImageData(0, 0, 1, 1).data;
-                        return l > 150 && a > 150 && o < Math.min(l, a) - 80;
-                    })(e, Math.round((t + 43) * n), Math.round((i + 43) * r))
+                        let i = document.createElement("canvas");
+                        ((i.width = 1), (i.height = 1));
+                        let r = i.getContext("2d");
+                        if (null == r) return !1;
+                        r.drawImage(e, t, n, 1, 1, 0, 0, 1, 1);
+                        let [a, s, l] = r.getImageData(0, 0, 1, 1).data;
+                        return a > 150 && l > 150 && s < Math.min(a, l) - 80;
+                    })(e, Math.round((t + 43) * n), Math.round((r + 43) * i))
                 )
-                    return { x: t, y: i };
+                    return { x: t, y: r };
         return null;
-    })(i, n, l, o);
-    if (null == a) return D("document not found inside the window still", { inset: n });
-    let u = Math.max(0, Math.floor((a.x + t.left) * l)),
-        s = Math.max(0, Math.floor((a.y + t.top) * o)),
-        d = Math.min(i.naturalWidth - u, Math.round(t.width * l)),
-        c = Math.min(i.naturalHeight - s, Math.round(t.height * o));
-    if (d < 1 || c < 1) return D("crop resolved empty");
-    let f = Math.min(1, 1568 / Math.max(d, c), Math.sqrt(115e4 / (d * c))),
-        h = Math.max(1, Math.round(d * f)),
-        p = Math.max(1, Math.round(c * f)),
-        w = document.createElement("canvas");
-    ((w.width = h), (w.height = p));
-    let m = w.getContext("2d");
-    if (null == m) return D("no 2d context");
-    m.drawImage(i, u, s, d, c, 0, 0, h, p);
-    let g = `image/${r?.format ?? "webp"}`,
-        v = Math.min(1, Math.max(0, (r?.quality ?? 92) / 100)),
-        y = await new Promise((e) => w.toBlob(e, g, v));
-    return null == y || y.type !== g
-        ? D("encode failed", { type: g })
-        : y.size > 5242880
-          ? D("encoded capture too large", { bytes: y.size })
-          : { blob: y, scale: (h / t.width + p / t.height) / 2 };
+    })(r, n, a, s);
+    if (null == l) return k("document not found inside the window still", { inset: n });
+    let o = Math.max(0, Math.floor((l.x + t.left) * a)),
+        d = Math.max(0, Math.floor((l.y + t.top) * s)),
+        c = Math.min(r.naturalWidth - o, Math.round(t.width * a)),
+        u = Math.min(r.naturalHeight - d, Math.round(t.height * s));
+    if (c < 1 || u < 1) return k("crop resolved empty");
+    let _ = Math.min(1, 1568 / Math.max(c, u), Math.sqrt(115e4 / (c * u))),
+        E = Math.max(1, Math.round(c * _)),
+        A = Math.max(1, Math.round(u * _)),
+        h = document.createElement("canvas");
+    ((h.width = E), (h.height = A));
+    let f = h.getContext("2d");
+    if (null == f) return k("no 2d context");
+    f.drawImage(r, o, d, c, u, 0, 0, E, A);
+    let I = `image/${i?.format ?? "webp"}`,
+        p = Math.min(1, Math.max(0, (i?.quality ?? 92) / 100)),
+        T = await new Promise((e) => h.toBlob(e, I, p));
+    return null == T || T.type !== I
+        ? k("encode failed", { type: I })
+        : T.size > 5242880
+          ? k("encoded capture too large", { bytes: T.size })
+          : { blob: T, scale: (E / t.width + A / t.height) / 2 };
 }
-function B(e) {
+function W(e) {
     return e.resolveUploadUrl().catch(() => null);
 }
-function J(e, t, n, r) {
-    let i = { "content-type": n.type, "x-vibegrations-capture-id": t.captureId, "x-vibegrations-capture-meta": r };
+function Y(e, t, n, i) {
+    let r = { "content-type": n.type, "x-vibegrations-capture-id": t.captureId, "x-vibegrations-capture-meta": i };
     return (
-        null != t.build && (i["x-vibegrations-build"] = t.build),
-        null != t.uploadToken && (i["x-vibegrations-capture-token"] = t.uploadToken),
-        fetch(e, { method: "POST", headers: i, body: n })
+        null != t.build && (r["x-vibegrations-build"] = t.build),
+        null != t.uploadToken && (r["x-vibegrations-capture-token"] = t.uploadToken),
+        fetch(e, { method: "POST", headers: r, body: n })
     );
 }
-function G(e, t) {
-    (0, m.W)(e, "capture-release", { prepareId: t }, { timeoutMs: 1e3 }).catch(() => {});
+function K(e, t) {
+    (0, f.W)(e, "capture-release", { prepareId: t }, { timeoutMs: 1e3 }).catch(() => {});
 }
-async function z(e, t) {
+async function $(e, t) {
     let n = performance.now(),
-        r = n,
-        i = {};
-    function l(e) {
+        i = n,
+        r = {};
+    function a(e) {
         let t = performance.now();
-        ((i[`${e}Ms`] = Math.round(t - r)), (r = t));
+        ((r[`${e}Ms`] = Math.round(t - i)), (i = t));
     }
-    function o(e, t) {
-        return D(e, { ...t, ...i, totalMs: Math.round(performance.now() - n) });
+    function s(e, t) {
+        return k(e, { ...t, ...r, totalMs: Math.round(performance.now() - n) });
     }
     try {
-        let u,
-            s,
-            d = e.getBoundingClientRect();
-        if (d.width < 40 || d.height < 40) return o("frame too small");
-        let c = O(e);
-        if (null == c) return o("frame identity unknown");
-        let f = B(t);
-        r = performance.now();
-        let h = `capture-prepare-${t.captureId}`;
+        let o,
+            d,
+            c = e.getBoundingClientRect();
+        if (c.width < 40 || c.height < 40) return s("frame too small");
+        let u = L(e);
+        if (null == u) return s("frame identity unknown");
+        let _ = W(t);
+        i = performance.now();
+        let E = `capture-prepare-${t.captureId}`;
         try {
-            var a;
-            u = await ((a = t.spec),
-            (0, m.W)(e, "capture-prepare", null == a ? {} : { spec: a }, { id: h, timeoutMs: 1e3 }));
+            var l;
+            o = await ((l = t.spec),
+            (0, f.W)(e, "capture-prepare", null == l ? {} : { spec: l }, { id: E, timeoutMs: 1e3 }));
         } catch (t) {
-            return (l("prepare"), G(e, h), o("frame did not prepare", { err: t }));
+            return (a("prepare"), K(e, E), s("frame did not prepare", { err: t }));
         }
-        if ((l("prepare"), "ready" !== u.phase)) return o("frame refused", { code: u.code, error: u.error });
-        let p = u;
+        if ((a("prepare"), "ready" !== o.phase)) return s("frame refused", { code: o.code, error: o.error });
+        let A = o;
         try {
-            s = await (function (e, t, n) {
-                let r = q();
-                if (null == r) return Promise.reject(Error("activityCapture unavailable"));
-                let { bounds: i, viewport: l, scale: o } = t;
-                return r.captureImage({
+            d = await (function (e, t, n) {
+                let i = F();
+                if (null == i) return Promise.reject(Error("activityCapture unavailable"));
+                let { bounds: r, viewport: a, scale: s } = t;
+                return i.captureImage({
                     frameId: e,
-                    rect: i,
-                    viewportSize: l,
+                    rect: r,
+                    viewportSize: a,
                     outputSize: {
-                        width: Math.max(1, Math.round(i.width * o)),
-                        height: Math.max(1, Math.round(i.height * o)),
+                        width: Math.max(1, Math.round(r.width * s)),
+                        height: Math.max(1, Math.round(r.height * s)),
                     },
                     format: n?.format ?? "webp",
                     quality: n?.quality ?? 92,
                     timeoutMs: 1500,
                 });
-            })(c, p, t.spec);
+            })(u, A, t.spec);
         } catch (e) {
-            return (l("image"), o("host capture failed", { err: e }));
+            return (a("image"), s("host capture failed", { err: e }));
         } finally {
-            G(e, h);
+            K(e, E);
         }
-        if ((l("image"), s.data.byteLength > 5242880))
-            return o("encoded capture too large", { bytes: s.data.byteLength });
-        let w = await f;
-        if (null == w) return o("no upload url");
-        let g = new Blob([s.data], { type: s.mimeType }),
-            v = await J(
-                w,
+        if ((a("image"), d.data.byteLength > 5242880))
+            return s("encoded capture too large", { bytes: d.data.byteLength });
+        let h = await _;
+        if (null == h) return s("no upload url");
+        let I = new Blob([d.data], { type: d.mimeType }),
+            p = await Y(
+                h,
                 t,
-                g,
+                I,
                 (function (e) {
                     try {
                         let t = JSON.parse(decodeURIComponent(e));
@@ -368,106 +368,106 @@ async function z(e, t) {
                     } catch {
                         return e;
                     }
-                })(p.meta),
+                })(A.meta),
             );
-        if ((l("upload"), !v.ok)) return o("upload refused", { status: v.status });
-        let y = Math.round(performance.now() - n);
+        if ((a("upload"), !p.ok)) return s("upload refused", { status: p.status });
+        let T = Math.round(performance.now() - n);
         return (
-            $.verbose(`native capture uploaded in ${y}ms`, {
+            x.verbose(`native capture uploaded in ${T}ms`, {
                 id: t.captureId,
-                bytes: g.size,
-                width: s.width,
-                height: s.height,
-                ...i,
-                totalMs: y,
+                bytes: I.size,
+                width: d.width,
+                height: d.height,
+                ...r,
+                totalMs: T,
             }),
             { status: "accepted" }
         );
     } catch (e) {
-        return o("threw", { err: e });
+        return s("threw", { err: e });
     }
 }
-async function X(e, t) {
+async function z(e, t) {
     try {
-        var n, r, i;
-        let l;
-        if (null == window.DiscordNative) return D("not the desktop app");
+        var n, i, r;
+        let a;
+        if (null == window.DiscordNative) return k("not the desktop app");
         if (
             ((n = t.spec),
             null != n &&
                 "viewport" !==
                     (n.mode ??
-                        (null != (r = n.target) &&
-                        ((null != r.ref && "" !== r.ref) || (null != r.selector && "" !== r.selector))
+                        (null != (i = n.target) &&
+                        ((null != i.ref && "" !== i.ref) || (null != i.selector && "" !== i.selector))
                             ? "element"
-                            : null != (i = n.rect) && i.width > 0 && i.height > 0
+                            : null != (r = n.rect) && r.width > 0 && r.height > 0
                               ? "rect"
                               : "viewport")))
         )
-            return D("targeted capture needs the frame DOM", { spec: t.spec });
-        if ("visible" !== document.visibilityState) return D("window not visible");
-        let o = j(e);
-        if (null == o) return D("frame not fully on screen");
-        if (L(e, o)) return D("frame is covered by Discord UI");
-        let a = B(t),
-            u = {
+            return k("targeted capture needs the frame DOM", { spec: t.spec });
+        if ("visible" !== document.visibilityState) return k("window not visible");
+        let s = B(e);
+        if (null == s) return k("frame not fully on screen");
+        if (w(e, s)) return k("frame is covered by Discord UI");
+        let l = W(t),
+            o = {
                 x: Math.max(0, window.outerWidth - window.innerWidth),
                 y: Math.max(0, window.outerHeight - window.innerHeight),
             },
-            s = u.x > 2 || u.y > 2 ? await H() : null;
+            d = o.x > 2 || o.y > 2 ? await H() : null;
         try {
-            l = await U(o);
+            a = await V(s);
         } finally {
-            s?.();
+            d?.();
         }
-        if (null == l) return null;
-        let d = j(e);
+        if (null == a) return null;
+        let c = B(e);
         if (
-            null == d ||
-            Math.abs(d.left - o.left) > 1 ||
-            Math.abs(d.top - o.top) > 1 ||
-            Math.abs(d.width - o.width) > 1 ||
-            Math.abs(d.height - o.height) > 1
+            null == c ||
+            Math.abs(c.left - s.left) > 1 ||
+            Math.abs(c.top - s.top) > 1 ||
+            Math.abs(c.width - s.width) > 1 ||
+            Math.abs(c.height - s.height) > 1
         )
-            return D("frame moved or resized during capture");
-        if (L(e, d)) return D("Discord UI covered the frame during capture");
-        let c = await F(l, o, u, t.spec);
-        if (null == c) return null;
-        let f = await a;
-        if (null == f) return D("no upload url");
-        let h = {
+            return k("frame moved or resized during capture");
+        if (w(e, c)) return k("Discord UI covered the frame during capture");
+        let u = await j(a, s, o, t.spec);
+        if (null == u) return null;
+        let _ = await l;
+        if (null == _) return k("no upload url");
+        let E = {
                 mode: "viewport",
-                bounds: { x: 0, y: 0, width: Math.round(o.width), height: Math.round(o.height) },
-                viewport: { width: Math.round(o.width), height: Math.round(o.height) },
-                scale: Math.round(1e3 * c.scale) / 1e3,
+                bounds: { x: 0, y: 0, width: Math.round(s.width), height: Math.round(s.height) },
+                viewport: { width: Math.round(s.width), height: Math.round(s.height) },
+                scale: Math.round(1e3 * u.scale) / 1e3,
                 devicePixelRatio: window.devicePixelRatio,
-                formFactor: o.width <= 768 ? "narrow" : "wide",
+                formFactor: s.width <= 768 ? "narrow" : "wide",
                 ...(null == t.build ? {} : { build: t.build }),
                 source: "native",
             },
-            p = await J(f, t, c.blob, encodeURIComponent(JSON.stringify(h)));
-        if (!p.ok) return D("upload refused", { status: p.status });
+            A = await Y(_, t, u.blob, encodeURIComponent(JSON.stringify(E)));
+        if (!A.ok) return k("upload refused", { status: A.status });
         return (
-            $.verbose("native capture uploaded", { id: t.captureId, bytes: c.blob.size, scale: h.scale }),
+            x.verbose("native capture uploaded", { id: t.captureId, bytes: u.blob.size, scale: E.scale }),
             { status: "accepted" }
         );
     } catch (e) {
-        return D("threw", { err: e });
+        return k("threw", { err: e });
     }
 }
-async function V(e, t) {
-    return (null != q() ? await z(e, t) : null) ?? X(e, t);
+async function X(e, t) {
+    return (null != F() ? await $(e, t) : null) ?? z(e, t);
 }
-var Y = n(251363),
-    K = n(621466);
+var Z = n(251363),
+    q = n(621466);
 let Q = !1;
 (document.addEventListener("compositionstart", () => (Q = !0), !0),
     document.addEventListener("compositionend", () => (Q = !1), !0));
-let Z = null;
+let J = null;
 function ee(e) {
-    if ((0, K.vq)(e, HTMLInputElement) || (0, K.vq)(e, HTMLTextAreaElement)) {
-        let { selectionStart: t, selectionEnd: n, selectionDirection: r } = e;
-        return null == t || null == n ? null : () => e.setSelectionRange(t, n, r ?? void 0);
+    if ((0, q.vq)(e, HTMLInputElement) || (0, q.vq)(e, HTMLTextAreaElement)) {
+        let { selectionStart: t, selectionEnd: n, selectionDirection: i } = e;
+        return null == t || null == n ? null : () => e.setSelectionRange(t, n, i ?? void 0);
     }
     let t = document.getSelection(),
         n = null != t && t.rangeCount > 0 ? t.getRangeAt(0).cloneRange() : null;
@@ -479,7 +479,7 @@ function ee(e) {
 }
 function et(e) {
     (e.stop(),
-        Z === e && (Z = null),
+        J === e && (J = null),
         e.personActed ||
             (function e(t) {
                 let n = document.activeElement;
@@ -492,13 +492,13 @@ function et(e) {
 }
 async function en(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => null;
-    null != Z && Z.iframe !== e && er();
-    let r =
-        Z?.iframe === e
-            ? Z
+    null != J && J.iframe !== e && ei();
+    let i =
+        J?.iframe === e
+            ? J
             : (function (e) {
                   let t = document.activeElement;
-                  if (!(0, K.vq)(t, HTMLElement) || t === e || t === document.body) return null;
+                  if (!(0, q.vq)(t, HTMLElement) || t === e || t === document.body) return null;
                   let n = {
                       iframe: e,
                       element: t,
@@ -508,47 +508,47 @@ async function en(e, t) {
                       released: !1,
                       holdRequested: !1,
                       stop: () => {
-                          (document.removeEventListener("blur", r, !0),
-                              document.removeEventListener("pointerdown", i, !0));
+                          (document.removeEventListener("blur", i, !0),
+                              document.removeEventListener("pointerdown", r, !0));
                       },
                   };
-                  function r(e) {
-                      (0, K.vq)(e.target, Node) &&
+                  function i(e) {
+                      (0, q.vq)(e.target, Node) &&
                           n.element.contains(e.target) &&
                           (n.restoreSelection = ee(n.element) ?? n.restoreSelection);
                   }
-                  function i() {
+                  function r() {
                       ((n.personActed = !0), 0 === n.active && et(n));
                   }
-                  return (document.addEventListener("blur", r, !0), document.addEventListener("pointerdown", i, !0), n);
+                  return (document.addEventListener("blur", i, !0), document.addEventListener("pointerdown", r, !0), n);
               })(e);
-    if (null == r) return await t();
-    ((Z = r), (r.active += 1));
+    if (null == i) return await t();
+    ((J = i), (i.active += 1));
     try {
         return await t();
     } finally {
-        ((r.active -= 1), (r.holdRequested = n() ?? r.holdRequested));
-        let t = !r.personActed && !r.released && r.holdRequested && document.activeElement === e;
-        0 !== r.active || t || et(r);
+        ((i.active -= 1), (i.holdRequested = n() ?? i.holdRequested));
+        let t = !i.personActed && !i.released && i.holdRequested && document.activeElement === e;
+        0 !== i.active || t || et(i);
     }
 }
-function er() {
-    null != Z && ((Z.released = !0), 0 === Z.active && et(Z));
+function ei() {
+    null != J && ((J.released = !0), 0 === J.active && et(J));
 }
-var ei = n(853555);
+var er = n(853555);
 (n(323874), n(14289), n(35956));
-var el = n(873715);
-let eo = null,
-    ea = null,
-    eu = new Map(),
-    es = null,
-    ed = 0;
-function ec() {
+var ea = n(873715);
+let es = null,
+    el = null,
+    eo = new Map(),
+    ed = null,
+    ec = 0;
+function eu() {
     return window.DiscordNative?.frameDebugger ?? null;
 }
-async function ef(e) {
+async function e_(e) {
     let t = await Promise.race([
-        (0, el.J)(e, `native-cdp-${Date.now()}-${++ed}`, {
+        (0, ea.J)(e, `native-cdp-${Date.now()}-${++ec}`, {
             steps: [{ action: "cdp", calls: [{ method: "Runtime.releaseObjectGroup", params: {} }] }],
             passive: !0,
         }),
@@ -558,116 +558,137 @@ async function ef(e) {
     let n = t.response.results[0]?.value?.events;
     return Array.isArray(n) ? n.slice(-200) : [];
 }
-async function eh(e, t) {
-    let n = ec(),
-        r = (function (e) {
+async function eE(e, t) {
+    let n = eu(),
+        i = (function (e) {
             try {
                 return new URL(e.src, window.location.href).origin;
             } catch {
                 return null;
             }
         })(t);
-    if (null == n || null == r) return null;
-    if (eo?.projectId === e && eo.origin === r) return eo;
-    if (null != ea) {
-        let t = ea,
+    if (null == n || null == i) return null;
+    if (es?.projectId === e && es.origin === i) return es;
+    if (null != el) {
+        let t = el,
             n = await t.result;
-        return t.projectId === e && t.origin === r ? n : null;
+        return t.projectId === e && t.origin === i ? n : null;
     }
-    let i = { projectId: e, origin: r, cancelled: !1, result: Promise.resolve(null) };
-    function l() {
-        return i.cancelled;
+    let r = { projectId: e, origin: i, cancelled: !1, result: Promise.resolve(null) };
+    function a() {
+        return r.cancelled;
     }
-    ((i.result = (async () => {
-        let i;
+    ((r.result = (async () => {
+        let r;
         try {
-            i = await n.attach(r);
+            r = await n.attach(i);
         } catch {
             return null;
         }
         if (
-            (es !== n &&
-                ((es = n),
+            (ed !== n &&
+                ((ed = n),
                 n.onDetached((e) => {
-                    eo?.id === e && ((0, W.nI)(eo.projectId), (eo = null));
+                    es?.id === e && ((0, P.nI)(es.projectId), (es = null));
                 }),
                 n.onInput?.((e, t) => {
-                    eo?.id === e && (0, W.NL)(eo.projectId, t);
+                    es?.id === e && (0, P.NL)(es.projectId, t);
                 })),
-            l())
+            a())
         )
             return (n.detach().catch(() => {}), "cancelled");
-        let o = { id: i, projectId: e, origin: r, earlierEvents: [] };
-        return ((eo = o), (o.earlierEvents = await ef(t).catch(() => [])), l() ? "cancelled" : o);
+        let s = { id: r, projectId: e, origin: i, earlierEvents: [] };
+        return ((es = s), (s.earlierEvents = await e_(t).catch(() => [])), a() ? "cancelled" : s);
     })()),
-        (ea = i));
+        (el = r));
     try {
-        return await i.result;
+        return await r.result;
     } finally {
-        ea === i && (ea = null);
+        el === r && (el = null);
     }
 }
-function ep(e, t) {
+function eA(e, t) {
     return { status: "completed", response: { ok: e.ok, results: [e], ...("" === t ? {} : { build: t }) } };
 }
-async function ew(e, t, n) {
-    let r,
-        i = ec(),
-        l = (function (e) {
+async function eh(e, t, n) {
+    let i,
+        r = eu(),
+        a = (function (e) {
             if (!0 === e.passive || !0 === e.snapshot || 1 !== e.steps.length) return null;
             let t = e.steps[0],
                 n = t.calls;
             return "cdp" !== t.action || !Array.isArray(n) || 0 === n.length || n.length > 200 ? null : n;
         })(n);
-    if (null == i || null == l) return null;
-    let o = await eh(e, t);
-    if (null == o) return null;
-    if ("cancelled" === o)
-        return ep({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: 0 }, "");
-    let a = Date.now(),
-        u = null != i.onInput;
-    u && (0, W.W8)(e, t);
-    let s = new Promise((e) => {
-        r = setTimeout(() => e("timeout"), 1e4);
+    if (null == r || null == a) return null;
+    let s = await eE(e, t);
+    if (null == s) return null;
+    if ("cancelled" === s)
+        return eA({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: 0 }, "");
+    let l = Date.now(),
+        o = null != r.onInput;
+    o && (0, P.W8)(e, t);
+    let d = new Promise((e) => {
+        i = setTimeout(() => e("timeout"), 1e4);
     });
     try {
-        let t = await Promise.race([i.runBatch(l), s]),
-            n = Date.now() - a;
+        let t = await Promise.race([r.runBatch(a), d]),
+            n = Date.now() - l;
         if ("timeout" === t)
             return (
-                em(e), ep({ action: "cdp", ok: !1, code: "timeout", message: "the batch ran out of time", ms: n }, "")
+                ef(e), eA({ action: "cdp", ok: !1, code: "timeout", message: "the batch ran out of time", ms: n }, "")
             );
         if (t.stopped)
-            return ep({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: n }, t.build);
-        let r = [...o.earlierEvents.splice(0), ...t.events],
-            u = { replies: t.replies, url: t.url, title: t.title, doc: t.doc, ...(r.length > 0 ? { events: r } : {}) };
-        return ep({ action: "cdp", ok: !0, value: u, ms: n }, t.build);
+            return eA({ action: "cdp", ok: !1, code: "blocked", message: "stopped by the user", ms: n }, t.build);
+        let i = [...s.earlierEvents.splice(0), ...t.events],
+            o = { replies: t.replies, url: t.url, title: t.title, doc: t.doc, ...(i.length > 0 ? { events: i } : {}) };
+        return eA({ action: "cdp", ok: !0, value: o, ms: n }, t.build);
     } catch (t) {
-        return (em(e), { status: "failed", message: t instanceof Error ? t.message : "the preview debugger failed" });
+        return (ef(e), { status: "failed", message: t instanceof Error ? t.message : "the preview debugger failed" });
     } finally {
-        (clearTimeout(r), u && (0, W.bq)(e));
+        (clearTimeout(i), o && (0, P.bq)(e));
     }
 }
-function em(e) {
-    let t = ec(),
-        n = eu.get(e);
-    (null != n && ((n.cancelled = !0), eu.delete(e)),
-        ea?.projectId === e && (ea.cancelled = !0),
-        (0, W.nI)(e),
-        null != t && eo?.projectId === e && ((eo = null), t.detach().catch(() => {})));
+function ef(e) {
+    let t = eu(),
+        n = eo.get(e);
+    (null != n && ((n.cancelled = !0), eo.delete(e)),
+        el?.projectId === e && (el.cancelled = !0),
+        (0, P.nI)(e),
+        null != t && es?.projectId === e && ((es = null), t.detach().catch(() => {})));
 }
-var eg = n(226178),
-    ev = n(165610);
-async function ey(e) {
-    let { onClose: t, ...r } = e,
-        { openOAuth2Modal: i } = await Promise.resolve().then(n.bind(n, 887909));
-    i((0, eg.i)(r), t);
+var eI = n(226178),
+    ep = n(165610);
+async function eT(e) {
+    let { onClose: t, ...i } = e,
+        { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 887909));
+    r((0, eI.i)(i), t);
 }
-async function eb(e, t, r) {
-    let { probe: i, spec: l, build: o, onAccepted: a, resolveUploadUrl: u } = r;
-    if (!0 === i) return { status: (0, ei.rQ)(e) ? "accepted" : "unavailable" };
-    if (l?.mode === "widget") {
-        let { captureConjureProfileWidget: r } = await Promise.all([
+async function em(e, t, i) {
+    let { probe: r, spec: a, build: s, onAccepted: l, resolveUploadUrl: o } = i;
+    if (!0 === r) return { status: (0, er.rQ)(e) ? "accepted" : "unavailable" };
+    if (a?.mode === "widget") {
+        let { captureConjureProfileWidget: i } = await Promise.all([
+            n.e("644013"),
+            n.e("896691"),
+            n.e("971156"),
+            n.e("260009"),
+            n.e("779367"),
+            n.e("552653"),
+            n.e("85427"),
+            n.e("247917"),
+            n.e("89530"),
+            n.e("64769"),
+            n.e("329172"),
+            n.e("992956"),
+            n.e("880150"),
+            n.e("490743"),
+            n.e("457428"),
+            n.e("7452"),
+            n.e("529787"),
+            n.e("60002"),
+            n.e("189423"),
+            n.e("415695"),
+            n.e("629972"),
             n.e("253781"),
             n.e("977306"),
             n.e("638781"),
@@ -676,28 +697,70 @@ async function eb(e, t, r) {
             n.e("560570"),
             n.e("471043"),
             n.e("352456"),
-            n.e("318702"),
+            n.e("132497"),
             n.e("258759"),
             n.e("912597"),
             n.e("424199"),
+            n.e("496818"),
+            n.e("587618"),
+            n.e("828598"),
+            n.e("645499"),
+            n.e("615643"),
             n.e("777489"),
             n.e("968201"),
-            n.e("87183"),
+            n.e("273350"),
             n.e("70594"),
             n.e("993103"),
             n.e("188941"),
+            n.e("543039"),
+            n.e("244560"),
+            n.e("253729"),
+            n.e("827708"),
+            n.e("266900"),
+            n.e("948804"),
+            n.e("695445"),
+            n.e("611523"),
+            n.e("199999"),
+            n.e("828111"),
+            n.e("536200"),
+            n.e("183776"),
             n.e("425544"),
+            n.e("776195"),
+            n.e("672727"),
+            n.e("809915"),
+            n.e("812310"),
+            n.e("428296"),
+            n.e("165595"),
+            n.e("445124"),
+            n.e("832823"),
+            n.e("511527"),
+            n.e("763070"),
+            n.e("381933"),
             n.e("936320"),
+            n.e("628439"),
+            n.e("756148"),
+            n.e("225990"),
+            n.e("539620"),
+            n.e("133902"),
+            n.e("183534"),
+            n.e("498215"),
             n.e("466322"),
+            n.e("593176"),
+            n.e("621624"),
             n.e("121435"),
             n.e("53374"),
+            n.e("858514"),
             n.e("463095"),
+            n.e("784041"),
+            n.e("869546"),
             n.e("682337"),
             n.e("133179"),
+            n.e("238412"),
             n.e("454625"),
             n.e("693832"),
             n.e("193158"),
             n.e("455924"),
+            n.e("661008"),
             n.e("201050"),
             n.e("265696"),
             n.e("250478"),
@@ -719,92 +782,90 @@ async function eb(e, t, r) {
             n.e("254973"),
             n.e("327198"),
             n.e("504098"),
-            n.e("245691"),
-            n.e("76367"),
+            n.e("920593"),
             n.e("664430"),
             n.e("375234"),
-            n.e("845928"),
             n.e("916519"),
             n.e("192847"),
             n.e("815341"),
             n.e("539166"),
-            n.e("794624"),
+            n.e("407327"),
         ]).then(n.bind(n, 399503));
-        return await r(e, { captureId: t, build: o, onAccepted: a, resolveUploadUrl: u });
+        return await i(e, { captureId: t, build: s, onAccepted: l, resolveUploadUrl: o });
     }
-    let s = await (0, ei.o$)(e, 6e3);
-    if (null == s) return { status: "unavailable" };
-    let d = null == a ? { uploadToken: void 0 } : await a();
+    let d = await (0, er.o$)(e, 6e3);
     if (null == d) return { status: "unavailable" };
-    let c = V(s, { captureId: t, spec: l, build: o, uploadToken: d.uploadToken, resolveUploadUrl: u });
-    function f(e) {
-        return Promise.race([c, new Promise((t) => setTimeout(() => t(null), e))]);
+    let c = null == l ? { uploadToken: void 0 } : await l();
+    if (null == c) return { status: "unavailable" };
+    let u = X(d, { captureId: t, spec: a, build: s, uploadToken: c.uploadToken, resolveUploadUrl: o });
+    function _(e) {
+        return Promise.race([u, new Promise((t) => setTimeout(() => t(null), e))]);
     }
-    let h = await f(3e3);
-    if (null != h) return h;
-    let p = await (0, Y.i)(s, t, l, d.uploadToken);
-    return "accepted" === p.status ? p : ((await f(3e3)) ?? p);
+    let E = await _(3e3);
+    if (null != E) return E;
+    let A = await (0, Z.i)(d, t, a, c.uploadToken);
+    return "accepted" === A.status ? A : ((await _(3e3)) ?? A);
 }
-async function eM(e, t, n, r) {
-    if (!(0, ei.rQ)(e)) return { status: "unavailable" };
-    let i = (0, d.Wg)(e);
+async function eg(e, t, n, i) {
+    if (!(0, er.rQ)(e)) return { status: "unavailable" };
+    let r = (0, c.Wg)(e);
     try {
-        let i = await (0, ei.o$)(e, 6e3);
-        if (null == i) return { status: "unavailable" };
-        let l = await r?.();
-        if (!1 === l) return { status: "unavailable" };
-        let o = A(i);
+        let r = await (0, er.o$)(e, 6e3);
+        if (null == r) return { status: "unavailable" };
+        let a = await i?.();
+        if (!1 === a) return { status: "unavailable" };
+        let s = y(r);
         try {
-            let r = !1,
-                l = await en(
-                    i,
+            let i = !1,
+                a = await en(
+                    r,
                     async () => {
-                        let l = await ew(e, i, n);
-                        return null != l ? l : ((r = !0), await (0, el.J)(i, t, n));
+                        let a = await eh(e, r, n);
+                        return null != a ? a : ((i = !0), await (0, ea.J)(r, t, n));
                     },
                     () =>
-                        r
+                        i
                             ? !n.steps.some((e) => /"Input\.(dispatchKeyEvent|insertText)"/.test(JSON.stringify(e)))
                             : null,
                 );
-            if ("completed" !== l.status) return l;
-            let a = [...eI.drain(e), ...o.drain()];
-            if (0 === a.length) return l;
-            return { ...l, response: { ...l.response, native: a } };
+            if ("completed" !== a.status) return a;
+            let l = [...eS.drain(e), ...s.drain()];
+            if (0 === l.length) return a;
+            return { ...a, response: { ...a.response, native: l } };
         } finally {
-            o.end();
+            s.end();
         }
     } finally {
-        i();
+        r();
     }
 }
-let eI = (function (e) {
+let eS = (function (e) {
     let t = new Map();
     function n(e) {
         let n = t.get(e);
-        (null != n && (t.delete(e), c("closing the operation session", () => n.end())), (0, d.YN)(e));
+        (null != n && (t.delete(e), u("closing the operation session", () => n.end())), (0, c.YN)(e));
     }
     return {
-        begin: function (r) {
-            (0, d.oJ)(r);
-            let i = e(r);
-            if (null == i) return;
-            let l = t.get(r);
-            if (null != l) {
-                if (null != l.iframeId && l.iframeId === i.identity) return;
-                (t.delete(r), c("replacing a stale operation session", () => l.end()));
+        begin: function (i) {
+            (0, c.oJ)(i);
+            let r = e(i);
+            if (null == r) return;
+            let a = t.get(i);
+            if (null != a) {
+                if (null != a.iframeId && a.iframeId === r.identity) return;
+                (t.delete(i), u("replacing a stale operation session", () => a.end()));
             }
-            (c("dismissing what was left standing", () => i.dismiss()),
-                c("opening the operation session", () => {
-                    let e = i.open(),
-                        l = (0, d.W3)(() => {
-                            (0, d.wK)(r) || n(r);
+            (u("dismissing what was left standing", () => r.dismiss()),
+                u("opening the operation session", () => {
+                    let e = r.open(),
+                        a = (0, c.W3)(() => {
+                            (0, c.wK)(i) || n(i);
                         });
-                    t.set(r, {
+                    t.set(i, {
                         iframeId: e.iframeId,
                         drain: () => e.drain(),
                         end: () => {
-                            (l(), e.end());
+                            (a(), e.end());
                         },
                     });
                 }));
@@ -813,63 +874,63 @@ let eI = (function (e) {
         drain: (e) => t.get(e)?.drain() ?? [],
     };
 })((e) => {
-    let t = (0, ei.UJ)(e);
+    let t = (0, er.UJ)(e);
     return null == t
         ? null
         : {
-              identity: O(t),
+              identity: L(t),
               dismiss: () =>
                   (function (e) {
                       let t = e.contentWindow;
                       if (null == t) return;
-                      let n = (0, y.lw)(t);
-                      null != n && ((0, g.ir)(n), (0, v.OR)(n));
+                      let n = (0, T.lw)(t);
+                      null != n && ((0, I.ir)(n), (0, p.OR)(n));
                   })(t),
-              open: () => A(t, { beneathBatches: !0 }),
+              open: () => y(t, { beneathBatches: !0 }),
           };
 });
-(0, d.h2)((e) => {
-    (em(e), er());
-    let t = (0, ei.UJ)(e);
+(0, c.h2)((e) => {
+    (ef(e), ei());
+    let t = (0, er.UJ)(e);
     null != t &&
-        (0, m.W)(
+        (0, f.W)(
             t,
             "control-end",
             {},
             { timeoutMs: 2e3, retryMs: 400, sourceMatch: "origin", label: "control end" },
         ).catch(() => {});
 });
-let eE = {
-    openConjureAppInstallModal: ey,
+let eN = {
+    openConjureAppInstallModal: eT,
     isWindowFocused: function () {
-        return u.A.isFocused();
+        return o.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return a.A.getDesktopType() === M.nRU.NEVER;
+        return l.A.getDesktopType() === g.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
-        let { title: t, body: i, route: l, sound: a, volume: u } = e;
-        r.default.showNotification(
+        let { title: t, body: r, route: a, sound: l, volume: o } = e;
+        i.default.showNotification(
             n(608598),
             t,
-            i,
+            r,
             { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
             {
-                sound: a,
-                volume: u,
-                fallbackDeepLink: null == l ? void 0 : (0, s.Id)(l),
-                onClick: null == l ? void 0 : () => (0, o.pX)(l),
+                sound: l,
+                volume: o,
+                fallbackDeepLink: null == a ? void 0 : (0, d.Id)(a),
+                onClick: null == a ? void 0 : () => (0, s.pX)(a),
                 isUserAvatar: !1,
             },
         );
     },
-    relayPreviewCapture: eb,
-    relayPreviewControl: eM,
+    relayPreviewCapture: em,
+    relayPreviewControl: eg,
     abortPreviewControl: function (e) {
-        (em(e), er());
-        let t = (0, ei.UJ)(e);
+        (ef(e), ei());
+        let t = (0, er.UJ)(e);
         null != t &&
-            (0, m.W)(
+            (0, f.W)(
                 t,
                 "control-abort",
                 {},
@@ -877,28 +938,28 @@ let eE = {
             ).catch(() => {});
     },
     beginPreviewOperation: function (e) {
-        (eI.begin(e),
+        (eS.begin(e),
             (function (e) {
-                if (null == ec() || eu.has(e)) return;
+                if (null == eu() || eo.has(e)) return;
                 let t = { cancelled: !1 };
-                (eu.set(e, t),
-                    (0, ei.o$)(e, 6e3)
-                        .then((n) => (null == n || t.cancelled ? null : eh(e, n)))
+                (eo.set(e, t),
+                    (0, er.o$)(e, 6e3)
+                        .then((n) => (null == n || t.cancelled ? null : eE(e, n)))
                         .catch(() => {})
                         .finally(() => {
-                            eu.get(e) === t && eu.delete(e);
+                            eo.get(e) === t && eo.delete(e);
                         }));
             })(e));
     },
     endPreviewOperation: function (e) {
-        (eI.end(e), em(e), er());
+        (eS.end(e), ef(e), ei());
     },
     releasePreviewControl: function (e) {
-        (0, d.GU)(e);
+        (0, c.GU)(e);
     },
     reloadAppFrames: function (e) {
         if (null != e)
-            for (let t of l.A.getAllFrames())
-                (0, ev.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && i.A.refreshProxyTicket(t.id);
+            for (let t of a.A.getAllFrames())
+                (0, ep.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
     },
 };

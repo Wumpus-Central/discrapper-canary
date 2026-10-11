@@ -17,8 +17,8 @@ var n = l(477900),
     j = l(248675),
     p = l(660183),
     g = l(699900);
-let y = { shield: s.l, hammer: u.w, group: d.n };
-function C(e) {
+let C = { shield: s.l, hammer: u.w, group: d.n };
+function k(e) {
     let { error: t } = e;
     return null != t
         ? (0, n.jsx)("div", {
@@ -27,16 +27,16 @@ function C(e) {
           })
         : (0, n.jsx)("div", { className: g.Lq, children: (0, n.jsx)(c.y, {}) });
 }
-function k(e) {
+function y(e) {
     let { intro: t, error: l } = e;
     return null == t
-        ? (0, n.jsx)(C, { error: l })
+        ? (0, n.jsx)(k, { error: l })
         : (0, n.jsxs)("div", {
               className: g.rf,
               children: [
                   (0, n.jsx)(o.E, { variant: "text-md/medium", color: "text-default", children: t.lead }),
                   t.points.map((e, t) => {
-                      let l = y[e.icon];
+                      let l = C[e.icon];
                       return (0, n.jsxs)(
                           "div",
                           {
@@ -118,7 +118,7 @@ function E(e) {
 function N(e) {
     let { question: t, answer: l, disabled: a, error: i, onChange: r } = e;
     return null == t
-        ? (0, n.jsx)(C, { error: i })
+        ? (0, n.jsx)(k, { error: i })
         : (0, n.jsxs)("div", {
               className: g.rf,
               children: [
@@ -153,7 +153,7 @@ function S(e) {
             onClose: h,
         } = e,
         [m, g] = a.useState(0),
-        [y, C] = a.useState(() => (s.some((e) => e.id === l) ? l : (s[0]?.id ?? null))),
+        [C, k] = a.useState(() => (s.some((e) => e.id === l) ? l : (s[0]?.id ?? null))),
         [S, w] = a.useState(null),
         [M, z] = a.useState([]),
         [A, F] = a.useState(!1),
@@ -161,10 +161,10 @@ function S(e) {
         D = a.useRef(null),
         L = a.useRef(!1);
     a.useEffect(() => {
-        if (null == y) return;
+        if (null == C) return;
         let e = !1;
         return (
-            u(y)
+            u(C)
                 .then((t) => {
                     ((D.current = t), e ? o(t) : w(t));
                 })
@@ -176,8 +176,8 @@ function S(e) {
             }
         );
     }, []);
-    let T = (0, i.bG)([f.Ay], () => (null == S ? null : (0, v.Wn)(f.Ay.getMessages(S))), [S]),
-        q = (0, i.bG)([f.Ay], () => null != S && null != f.Ay.getFinishedAt(S), [S]) && null == T;
+    let T = (0, i.bG)([f.A], () => (null == S ? null : (0, v.Wn)(f.A.getMessages(S))), [S]),
+        q = (0, i.bG)([f.A], () => null != S && null != f.A.getFinishedAt(S), [S]) && null == T;
     a.useEffect(() => {
         q && null != S && ((L.current = !0), c(S), h().catch(() => void 0));
     }, [h, c, S, q]);
@@ -204,15 +204,15 @@ function S(e) {
                 _(null));
         }, []),
         Y = a.useCallback(async () => {
-            if (!A && null != S && null != y && (0, v.n0)(W, M)) {
+            if (!A && null != S && null != C && (0, v.n0)(W, M)) {
                 (F(!0), _(null));
                 try {
-                    (await d(S, y, (0, v.kt)(W, M)), (L.current = !0), await h());
+                    (await d(S, C, (0, v.kt)(W, M)), (L.current = !0), await h());
                 } catch (e) {
                     (_((0, b.mG)(e)), F(!1));
                 }
             }
-        }, [M, h, d, y, S, W, A]),
+        }, [M, h, d, C, S, W, A]),
         Z = { text: p.intl.string(p.t["13/7kX"]), variant: "secondary", onClick: Q, disabled: A },
         ee = { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: O, disabled: A },
         et = J?.optional === !0 && "" === K.trim(),
@@ -220,13 +220,13 @@ function S(e) {
             text: p.intl.string(et ? p.t["5Wxrcd"] : p.t.PDTjLN),
             variant: "primary",
             onClick: U,
-            disabled: ("server" === X && null == y) || ("object" == typeof X && !(0, v.Fl)(J, K)),
+            disabled: ("server" === X && null == C) || ("object" == typeof X && !(0, v.Fl)(J, K)),
         },
         en = {
             text: p.intl.string(j.default["5iv8MF"]),
             variant: "primary",
             onClick: Y,
-            disabled: null == S || null == y || !(0, v.n0)(W, M),
+            disabled: null == S || null == C || !(0, v.n0)(W, M),
             loading: A,
         },
         ea = "about" === X ? t.name : "server" === X ? R.title : (J?.title ?? t.name);
@@ -237,8 +237,8 @@ function S(e) {
         size: "md",
         actions: "none" === H ? [ee] : [0 === m ? ee : Z, B ? en : el],
         children: [
-            "about" === X ? (0, n.jsx)(k, { intro: I, error: G }) : null,
-            "server" === X ? (0, n.jsx)(E, { guilds: s, value: y, hint: R.hint, disabled: A, onChange: C }) : null,
+            "about" === X ? (0, n.jsx)(y, { intro: I, error: G }) : null,
+            "server" === X ? (0, n.jsx)(E, { guilds: s, value: C, hint: R.hint, disabled: A, onChange: k }) : null,
             "object" == typeof X
                 ? (0, n.jsx)(
                       N,

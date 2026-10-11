@@ -1,8 +1,8 @@
 n.d(t, { A: () => x });
 var i = n(17928),
     r = n(73153),
-    s = n(42766),
-    l = n(164892);
+    s = n(260498),
+    l = n(951178);
 function a(e) {
     return (
         "user" === e.install_scope && e.supported_surfaces?.includes(l.q7.OVERLAY) === !0 && null != e.overlay_widget
