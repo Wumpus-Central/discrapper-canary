@@ -6171,21 +6171,13 @@ function i8(e) {
         variant: "text-md/normal",
         color: "text-default",
         children: el.intl.format(
-            (function (e, t) {
-                if (!0 === e.channel_skipped) return en.default.ev23Cw;
-                if (!e.update) return null == t ? en.default.MOrR29 : en.default["/npn7F"];
-                switch (e.surface) {
-                    case "bot":
-                        return en.default.zfpeIL;
-                    case "widget":
-                        return en.default.DxCfTh;
-                    case "automod":
-                        return en.default["8ytGC3"];
-                    case "activity":
-                    case null:
-                        return en.default.WSmpBT;
-                }
-            })(n, a),
+            !0 === n.channel_skipped
+                ? en.default.ev23Cw
+                : n.update
+                  ? en.default.gQzuLC
+                  : null == a
+                    ? en.default.MOrR29
+                    : en.default["/npn7F"],
             { name: l, server: a ?? "" },
         ),
     });
