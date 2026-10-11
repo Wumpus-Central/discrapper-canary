@@ -41,7 +41,6 @@
     cursor: pointer;
     display: flex;
     gap: var(--space-12);
-    min-height: 74px;
     padding: var(--space-8);
     position: relative;
     text-align: start;
@@ -49,8 +48,10 @@
     z-index: 0
 }
 
-.rowIcon__4cd87 {
-    align-self: flex-start
+.badgedIcon__4cd87 {
+    flex: 0 0 auto;
+    margin-block-end: calc(var(--space-4)*-1);
+    margin-inline-end: calc(var(--space-4)*-1)
 }
 
 .guildIcon__4cd87 {
@@ -77,45 +78,28 @@
 
 .projectName__4cd87 {
     max-width: 100%;
+    text-overflow: ellipsis
+}
+
+.projectName__4cd87,
+.statusLine__4cd87 {
     min-width: 0;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.rowSubline__4cd87 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4);
-    min-width: 0
+.statusLine__4cd87 {
+    display: block
 }
 
-.serverName__4cd87 {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.rowStatus__4cd87 {
-    align-items: center;
-    color: var(--text-default);
-    display: flex;
-    gap: var(--space-8);
-    min-height: var(--space-20);
-    min-width: 0
-}
-
-.rowActivity__4cd87 {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.rowStatus__4cd87 [data-conjure-turn-timer] {
+.rowTitle__4cd87 [data-conjure-turn-timer] {
+    -webkit-backdrop-filter: blur(28px);
+    backdrop-filter: blur(28px);
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    margin-block: calc(var(--space-4)*-1);
     margin-inline-start: auto;
-    padding-block-start: 0
+    padding: var(--space-4) var(--space-xs)
 }
 
 .state__4cd87 {
@@ -181,4 +165,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=f8b936aa591ff38f.css.map*/
+/*# sourceMappingURL=259ccacb82e7e89d.css.map*/

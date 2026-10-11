@@ -1,44 +1,47 @@
-r.d(t, { Ay: () => f, X8: () => m });
-var n = r(477900),
-    i = r(582128),
-    l = r(17928),
-    a = r(245179),
-    o = r(260498),
-    s = r(246338),
-    u = r(659723),
-    c = r(248675),
-    h = r(660183),
-    d = r(831283);
+n.d(t, { Ay: () => f, X8: () => m });
+var r = n(477900),
+    i = n(582128),
+    l = n(17928),
+    a = n(245179),
+    o = n(260498),
+    s = n(246338),
+    u = n(659723),
+    c = n(248675),
+    h = n(660183),
+    d = n(831283);
 function f(e) {
-    let { projectId: t } = e,
-        r = (0, l.bG)([a.A], () => null != t && a.A.isThinking(t), [t]),
-        [o, s] = i.useState(r ? t : null);
+    let { projectId: t, intensity: n } = e,
+        o = (0, l.bG)([a.A], () => null != t && a.A.isThinking(t), [t]),
+        [s, f] = i.useState(o ? t : null);
     return (
-        r && o !== t && s(t),
+        o && s !== t && f(t),
         i.useEffect(() => {
-            if (r || null == o) return;
-            let e = setTimeout(() => s(null), 300);
+            if (o || null == s) return;
+            let e = setTimeout(() => f(null), 300);
             return () => clearTimeout(e);
-        }, [r, o]),
-        (0, n.jsx)("span", {
+        }, [o, s]),
+        (0, r.jsx)("span", {
             className: d.W,
-            "data-page": r ? void 0 : "chat",
-            "data-thinking": r ? "" : void 0,
-            role: r ? "img" : void 0,
-            "aria-label": r ? h.intl.string(c.default["Y8pS+n"]) : void 0,
-            "aria-hidden": !r || void 0,
-            children: null == o ? null : (0, n.jsx)(u.A, { projectId: o, orientation: "right", state: "thinking" }),
+            "data-page": o ? void 0 : "chat",
+            "data-thinking": o ? "" : void 0,
+            role: o ? "img" : void 0,
+            "aria-label": o ? h.intl.string(c.default["Y8pS+n"]) : void 0,
+            "aria-hidden": !o || void 0,
+            children:
+                null == s
+                    ? null
+                    : (0, r.jsx)(u.A, { projectId: s, orientation: "right", state: "thinking", intensity: n }),
         })
     );
 }
 function m(e) {
     let { guildId: t } = e,
-        r = (0, l.bG)(
+        n = (0, l.bG)(
             [a.A, o.Ay],
             () =>
                 a.A.getActivityOrderedProjectIds().find((e) => (0, s.Ot)(o.Ay.getProject(e), t) && a.A.isThinking(e)) ??
                 null,
             [t],
         );
-    return (0, n.jsx)(f, { projectId: r });
+    return (0, r.jsx)(f, { projectId: n });
 }

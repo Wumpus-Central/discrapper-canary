@@ -1,7 +1,15 @@
-.trigger__7605d {
-    align-items: center;
-    display: flex;
-    flex: 0 0 auto
+.demo_ae73d9 {
+    padding: var(--space-128)
+}
+
+.surface_ae73d9 {
+    background: var(--background-surface-higher);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    height: 180px;
+    position: relative;
+    width: var(--__demo-area)
 }
 
 .loader__8cd1f {
@@ -266,4 +274,4 @@
     background: var(--background-mod-subtle)
 }
 
-/*# sourceMappingURL=3fdc911549ee8c28.css.map*/
+/*# sourceMappingURL=a8d5d7a3c944ccdc.css.map*/
