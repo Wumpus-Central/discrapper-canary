@@ -504,6 +504,12 @@
     text-decoration: underline
 }
 
+.stepLineError__76711 {
+    color: var(--status-danger);
+    display: inline-flex;
+    flex-shrink: 0
+}
+
 .stepChevron__76711 {
     color: var(--text-muted);
     flex-shrink: 0;
@@ -564,4 +570,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=504715.655e2d1999adee2a.css.map*/
+/*# sourceMappingURL=504715.2bded3a8b396de83.css.map*/
