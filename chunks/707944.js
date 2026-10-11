@@ -14349,16 +14349,16 @@ function d3(e) {
                               eg
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            "overlay" === Y
-                                                ? null
-                                                : (0, r.jsx)(q.A.Icon, {
+                                            "frame" === Y
+                                                ? (0, r.jsx)(q.A.Icon, {
                                                       icon: eP ? dZ : dQ,
                                                       tooltip: eR,
                                                       "aria-label": eR,
                                                       selected: eP,
                                                       onClick: eL,
-                                                  }),
-                                            eP && "overlay" !== Y
+                                                  })
+                                                : null,
+                                            eP && "frame" === Y
                                                 ? (0, r.jsx)(q.A.Icon, {
                                                       icon: d0,
                                                       tooltip: eD,
