@@ -163,9 +163,13 @@
     pointer-events: auto
 }
 
-.incompleteNotice__10897 {
+.incompleteNotice__10897,
+.remixNotice__10897 {
     flex: 0 0 auto;
-    margin-block-end: var(--space-8);
+    margin-block-end: var(--space-8)
+}
+
+.incompleteNotice__10897 {
     position: relative
 }
 
@@ -730,4 +734,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=f03255c04222d41d.css.map*/
+/*# sourceMappingURL=38e3216a5252d9a5.css.map*/
