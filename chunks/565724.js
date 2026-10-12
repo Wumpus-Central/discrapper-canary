@@ -14116,7 +14116,7 @@ let d9 = new Map(),
 function ft() {
     let e = new Map();
     for (let t of new Set([...e1.A.getActivityOrderedProjectIds(), ...(0, nu.T7)()])) {
-        if (!e1.A.isThinking(t) && !(0, nu.wK)(t)) continue;
+        if (!(e1.A.isThinking(t) || (0, nu.wK)(t))) continue;
         let n = (function (e) {
             let t = G.Ay.getProject(e)?.preview_application_id;
             if (null == t) return null;
