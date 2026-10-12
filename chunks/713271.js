@@ -1,6 +1,6 @@
-n.d(t, { N: () => a });
+n.d(t, { N: () => r });
 var i,
-    a =
+    r =
         (((i = {}).REFERRAL_PROGRAM = "referralProgram"),
         (i.SERVER_PROFILES = "serverProfiles"),
         (i.SHOW_YOUR_STYLE = "showYourStyle"),
@@ -10,7 +10,6 @@ var i,
         (i.CUSTOM_THEMES = "customThemes"),
         (i.DISPLAY_NAME_STYLES = "displayNameStyles"),
         (i.PREMIUM_GROUP = "premiumGroup"),
-        (i.CALL_OF_DUTY = "callOfDuty"),
         (i.THREE_P_PROMOTIONS = "threePPromotions"),
         (i.ORB_REWARDS = "orbRewards"),
         (i.ORB_MULTIPLIER = "orbMultiplier"),

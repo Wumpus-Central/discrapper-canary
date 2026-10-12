@@ -486,8 +486,8 @@ function e1(e) {
 }
 var e2 = t(538303);
 let e3 = eY.DN.SIZE_32,
-    e7 = { [eZ.E8.NO_CHAT]: e2.Oo, [eZ.E8.RESIZABLE]: e2.Ig };
-function e9(e) {
+    e9 = { [eZ.E8.NO_CHAT]: e2.Oo, [eZ.E8.RESIZABLE]: e2.Ig };
+function e7(e) {
     let { maxHeight: n, connectedLocation: t, renderExternalHeader: i } = e,
         r = (0, eB.A)(),
         o = (0, m.yK)([ej.Ay], () => ej.Ay.getEmbeddedActivitiesForLocationIncludingHidden(t), [t]),
@@ -592,7 +592,7 @@ function e9(e) {
             theme: eo.NJ8.DARK,
             children: (e) =>
                 (0, l.jsxs)("div", {
-                    className: a()(e2.iE, e7[g], e),
+                    className: a()(e2.iE, e9[g], e),
                     ref: p,
                     style: D,
                     children: [
@@ -716,7 +716,7 @@ function e6(e) {
     let o = s?.applicationId;
     return r !== eZ.Gd.PANEL || null == o || a || null == i || null == s || (0, ev.A)(i)
         ? null
-        : (0, l.jsx)(e9, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
+        : (0, l.jsx)(e7, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
 }
 var e5 = t(90804),
     e8 = t(748975),
@@ -1268,8 +1268,8 @@ function n2(e) {
     });
 }
 var n3 = t(268218),
-    n7 = t(726249),
-    n9 = t(334738),
+    n9 = t(726249),
+    n7 = t(334738),
     n6 = t(208882),
     n5 = t(938764),
     n8 = t(519480),
@@ -1767,7 +1767,7 @@ let tD = function (e) {
         () => () => {
             let e = eQ.Ay.lastMessageId(n.id);
             null != e &&
-                (0, n9.ack)(
+                (0, n7.ack)(
                     n.id,
                     {
                         object: eo.ZSU.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
@@ -1917,8 +1917,8 @@ var tk = t(826673),
     t1 = t(200273),
     t2 = t(565846),
     t3 = t(57907),
-    t7 = t(375500),
-    t9 = t(707653),
+    t9 = t(375500),
+    t7 = t(707653),
     t6 = t(50268),
     t5 = t(378570),
     t8 = t(162199),
@@ -2046,7 +2046,7 @@ function ix(e) {
         s = (0, tQ.A)(n, "Sidebar Overflow"),
         r = (0, tZ.A)(n),
         a = (0, t3.A)(n),
-        o = (0, t7.A)(n),
+        o = (0, t9.A)(n),
         d = (0, tK.A)(n),
         c = (0, tJ.A)(n),
         u = (0, t2.A)(n.id),
@@ -2054,7 +2054,7 @@ function ix(e) {
         m = (0, t$.A)(n),
         A = (0, tX.A)(n),
         p = (0, t6.A)({ id: n.id, label: z.intl.string(z.t.DQ797g) }),
-        g = (0, t9.A)(n),
+        g = (0, t7.A)(n),
         x = (0, t0.A)(n),
         f = (0, tq.$)(1e3);
     function I() {
@@ -2436,18 +2436,18 @@ let i1 = function (e) {
 };
 var i2 = t(306788),
     i3 = t(863922),
-    i7 = t(822074),
-    i9 = t(521732);
+    i9 = t(822074),
+    i7 = t(521732);
 function i6(e) {
     let { channel: n } = e,
         t = (0, e4.ni)(n),
-        i = (0, m.bG)([i7.A], () => i7.A.shouldShowTopicsBar());
+        i = (0, m.bG)([i9.A], () => i9.A.shouldShowTopicsBar());
     return (0, l.jsx)(nh.Ay.Icon, {
         icon: i2.K,
         onClick: function () {
             (et.default.track(eo.HAw.SUMMARIES_SIDEBAR_TOGGLED, {
                 summaries_sidebar_open: !i,
-                source: i9.er.TOOLBAR_BUTTON,
+                source: i7.er.TOOLBAR_BUTTON,
                 guild_id: n.guild_id,
                 channel_id: n.id,
                 channel_type: n.type,
@@ -2902,8 +2902,8 @@ var l0 = (((i = {}).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"), i),
     l1 = t(376943),
     l2 = t(394953),
     l3 = t(683063),
-    l7 = t(403581),
-    l9 = t(241541),
+    l9 = t(403581),
+    l7 = t(241541),
     l6 = t(709066),
     l5 = t(87664),
     l8 = t(247676),
@@ -3201,7 +3201,7 @@ function sC(e) {
                                           children: (0, l.jsxs)("span", {
                                               className: ec.BY,
                                               children: [
-                                                  (0, l.jsx)(l7.t, {
+                                                  (0, l.jsx)(l9.t, {
                                                       size: "xxs",
                                                       color: "currentColor",
                                                       className: ec.K4,
@@ -3228,7 +3228,7 @@ function sC(e) {
                                   children: (0, l.jsx)(lM.NE, {
                                       channel: n,
                                       text: z.intl.string(z.t.NB5DFD),
-                                      icon: l9.D,
+                                      icon: l7.D,
                                       variant: "secondary",
                                       fullWidth: !0,
                                       allowFrictionlessGDMUpsell: !d,
@@ -3307,8 +3307,8 @@ function s0(e, n) {
 var s1 = t(659617),
     s2 = t(474078),
     s3 = t(636537),
-    s7 = t(152367),
-    s9 = t(147087);
+    s9 = t(152367),
+    s7 = t(147087);
 async function s6(e) {
     try {
         let n = await s3.Bo.post({
@@ -3432,7 +3432,7 @@ function ri(e) {
                 } = e,
                 [o, d] = s.useState(!1),
                 [c, u] = s.useState(!1),
-                h = (0, s9.b)(),
+                h = (0, s7.b)(),
                 m = s.useCallback(async () => {
                     if (h) {
                         d(!0);
@@ -3462,7 +3462,7 @@ function ri(e) {
                         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                         if (h)
                             return {
-                                icon: s7.D,
+                                icon: s9.D,
                                 onClick: m,
                                 "aria-label": z.intl.string(z.t.ZF2oBs),
                                 disabled: e || o || (null == t && a.textValue.trim().length < 10),
@@ -3479,7 +3479,7 @@ function ri(e) {
                             ? (0, l.jsx)(eN.m, {
                                   text: z.intl.string(z.t.ZF2oBs),
                                   children: (0, l.jsx)(nG.K, {
-                                      icon: s7.D,
+                                      icon: s9.D,
                                       variant: "secondary",
                                       size: "sm",
                                       "aria-label": z.intl.string(z.t.ZF2oBs),
@@ -3876,7 +3876,7 @@ function rx(e) {
         A = (0, tQ.A)(n, "Toolbar Overflow"),
         p = (0, tZ.A)(n),
         g = (0, rm.A)(n),
-        x = (0, t9.A)(n),
+        x = (0, t7.A)(n),
         f = (0, t0.A)(n),
         I = n.isThread()
             ? (0, l.jsx)(ns.Dr, {
@@ -4077,8 +4077,8 @@ function r1(e) {
 }
 var r2 = t(518477),
     r3 = t(996988),
-    r7 = t(207634),
-    r9 = t(561419),
+    r9 = t(207634),
+    r7 = t(561419),
     r6 = t(396095);
 function r5(e) {
     let { user: n, channel: t, isRedesignEnabled: i } = e,
@@ -4108,14 +4108,14 @@ function r5(e) {
                 displayProfile: o,
                 themeType: r3.d.SIDEBAR,
                 themeOverride: d,
-                className: i ? a()(r9.BK, "user-profile-sidebar-redesign") : void 0,
+                className: i ? a()(r7.BK, "user-profile-sidebar-redesign") : void 0,
                 children: [
                     (0, l.jsxs)(tR.d_, {
-                        className: i ? r9.BE : void 0,
+                        className: i ? r7.BE : void 0,
                         children: [
                             (0, l.jsx)(rX.A, { children: (0, l.jsx)(rK.A, { user: n }) }),
                             (0, l.jsxs)("div", {
-                                className: r9.wx,
+                                className: r7.wx,
                                 children: [
                                     (0, l.jsx)(rB.A, {
                                         user: n,
@@ -4130,7 +4130,7 @@ function r5(e) {
                                         user: n,
                                         displayProfile: o,
                                         channelId: t.id,
-                                        avatarSize: r7.T[r3.d.SIDEBAR].avatarSize,
+                                        avatarSize: r9.T[r3.d.SIDEBAR].avatarSize,
                                         onOpenProfile: r ? void 0 : g,
                                     }),
                                 ],
@@ -4546,8 +4546,8 @@ function a3(e) {
             return null;
     }
 }
-var a7 = t(158045),
-    a9 = t(249203),
+var a9 = t(158045),
+    a7 = t(249203),
     a6 = t(419731),
     a5 = t(695904),
     a8 = t(116331),
@@ -4560,7 +4560,7 @@ function ot(e) {
         { trackUserProfileAction: d, trackUserProfileWishlistAction: c } = (0, rU.NJ)(),
         u = (0, s.useId)(),
         { hasNewWishlistItems: h, newWishlistItemCount: A, shouldLogExposure: p } = (0, a8.A)(t),
-        g = (0, m.bG)([a9.A], () => a9.A.getEntry(t.id)?.lastViewedAt ?? null, [t.id]),
+        g = (0, m.bG)([a7.A], () => a7.A.getEntry(t.id)?.lastViewedAt ?? null, [t.id]),
         x = (0, s.useCallback)(() => {
             (h && d({ action: "PRESS_NEW_CONTENT_WISHLIST", section: r2.RP.WISHLIST }), i());
         }, [h, i, d]),
@@ -4575,8 +4575,8 @@ function ot(e) {
         E = (0, s.useMemo)(() => {
             let e = f.slice(0, 3).map((e) => ({ item: e, source: ao.uS.WISHLIST }));
             if (a && e.length < 3) {
-                let n = f.some((e) => a7.Ay.isPremiumSku(e.skuId));
-                if (!a7.Ay.isPremiumAtLeast(t.premiumType, a$.PremiumTypes.TIER_2) && !n) {
+                let n = f.some((e) => a9.Ay.isPremiumSku(e.skuId));
+                if (!a9.Ay.isPremiumAtLeast(t.premiumType, a$.PremiumTypes.TIER_2) && !n) {
                     let n = aw.A.fromSKU((0, aL.rI)());
                     null != n && e.push({ item: n, source: ao.uS.POPULAR });
                 }
@@ -5002,13 +5002,13 @@ function ox(e) {
                     themeType: r3.d.SIDEBAR,
                     themeOverride: c,
                     profileFrameSkuIdOverride: r ? d?.profileFrame?.skuId : null,
-                    className: r ? a()(r9.BK, "user-profile-sidebar-redesign") : void 0,
+                    className: r ? a()(r7.BK, "user-profile-sidebar-redesign") : void 0,
                     isPrivate: d?.private === !0,
                     children: [
                         d?.private === !0 && (0, l.jsx)(ah.A, {}),
-                        null != I.interactionType && (0, l.jsx)(al.animated.div, { style: j, className: r9.tB }),
+                        null != I.interactionType && (0, l.jsx)(al.animated.div, { style: j, className: r7.tB }),
                         (0, l.jsxs)(tR.d_, {
-                            className: a()(r && r9.BE, !r && null != E && r9.It),
+                            className: a()(r && r7.BE, !r && null != E && r7.It),
                             children: [
                                 (0, l.jsxs)(rX.A, {
                                     children: [
@@ -5017,7 +5017,7 @@ function ox(e) {
                                     ],
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: r9.wx,
+                                    className: r7.wx,
                                     children: [
                                         (0, l.jsx)(rB.A, {
                                             user: n,
@@ -5027,14 +5027,14 @@ function ox(e) {
                                                 ? { bannerWidth: 300, bannerHeight: 105, themePadding: 2 }
                                                 : void 0,
                                             animateOnHoverOrFocusOnly: !x,
-                                            className: r9.vK,
+                                            className: r7.vK,
                                         }),
-                                        (0, l.jsx)(au.A, { className: r9.oR }),
+                                        (0, l.jsx)(au.A, { className: r7.oR }),
                                         (0, l.jsx)(rF.A, {
                                             user: n,
                                             displayProfile: d,
                                             channelId: i.id,
-                                            avatarSize: r7.T[r3.d.SIDEBAR].avatarSize,
+                                            avatarSize: r9.T[r3.d.SIDEBAR].avatarSize,
                                             onOpenProfile: o ? void 0 : C,
                                         }),
                                         (0, l.jsx)(ax.A, {
@@ -5057,7 +5057,7 @@ function ox(e) {
                                 !r &&
                                     y &&
                                     (0, l.jsx)("div", {
-                                        className: r9.sJ,
+                                        className: r7.sJ,
                                         children: (0, l.jsx)(am.A, {
                                             user: n,
                                             widgets: d.widgets,
@@ -5066,7 +5066,7 @@ function ox(e) {
                                     }),
                                 !r &&
                                     (0, l.jsx)("div", {
-                                        className: r9.vS,
+                                        className: r7.vS,
                                         children: (0, l.jsx)(oi, {
                                             profileOwner: n,
                                             unownedWishlistItems: N,
@@ -5389,8 +5389,8 @@ function o1(e, n) {
 }
 var o2 = t(468581),
     o3 = t(808666),
-    o7 = t(414499),
-    o9 = t(323384),
+    o9 = t(414499),
+    o7 = t(323384),
     o6 = t(55730),
     o5 = t(765379),
     o8 = t(359549),
@@ -5667,7 +5667,7 @@ let d1 = (e) => {
 };
 var d2 = t(381941),
     d3 = t(231188);
-let d7 = (0, n3.Fe)({
+let d9 = (0, n3.Fe)({
         createPromise: () =>
             Promise.all([
                 t.e("419121"),
@@ -5696,7 +5696,7 @@ let d7 = (0, n3.Fe)({
                 t.e("227853"),
                 t.e("286615"),
                 t.e("311541"),
-                t.e("472847"),
+                t.e("795854"),
                 t.e("870088"),
                 t.e("300641"),
                 t.e("932020"),
@@ -5826,14 +5826,14 @@ let d7 = (0, n3.Fe)({
             ]).then(t.bind(t, 316725)),
         webpackId: 316725,
     }),
-    d9 = s.createContext(void 0);
+    d7 = s.createContext(void 0);
 function d6(e) {
     let { children: n } = e,
         t = s.useRef(null),
         i = s.useId();
     return (
         (0, dl.tj)(t),
-        (0, l.jsx)(d9.Provider, {
+        (0, l.jsx)(d7.Provider, {
             value: i,
             children: (0, l.jsx)("div", {
                 ref: t,
@@ -6380,7 +6380,7 @@ function ci(e) {
         }),
         v = (0, m.bG)([dT.A], () => dT.A.getDetectableIdsToApplicationIds()),
         N = I ? C : void 0,
-        T = s.useContext(d9);
+        T = s.useContext(d7);
     return (0, l.jsxs)("div", {
         className: d3.au,
         children: [
@@ -6435,7 +6435,7 @@ function ci(e) {
                 ],
             }),
             null != E && null != v[E]
-                ? (0, l.jsx)(d7, {
+                ? (0, l.jsx)(d9, {
                       className: d3.zu,
                       applicationId: E,
                       userIds: [f.author_id],
@@ -6484,7 +6484,7 @@ function cl(e) {
         { largeImage: N, smallImage: T } = (0, dF.D8)(y, b ?? v),
         { largeImage: S } = (0, dF.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         O = (0, m.bG)([dT.A], () => dT.A.getDetectableIdsToApplicationIds()),
-        M = s.useContext(d9);
+        M = s.useContext(d7);
     return (0, l.jsxs)("div", {
         className: d3.au,
         children: [
@@ -6561,7 +6561,7 @@ function cl(e) {
                 ],
             }),
             null != I && null != O[I]
-                ? (0, l.jsx)(d7, {
+                ? (0, l.jsx)(d9, {
                       className: d3.zu,
                       applicationId: I,
                       userIds: [x.author_id],
@@ -6618,7 +6618,7 @@ let cr = function (e) {
                       fullWidth: !0,
                       onClick: m,
                       text: z.intl.string(z.t["jaYS/h"]),
-                      icon: o7.h,
+                      icon: o9.h,
                   }),
         E =
             null != I || r
@@ -6629,7 +6629,7 @@ let cr = function (e) {
                       fullWidth: !0,
                       onClick: u,
                       text: z.intl.string(z.t.GDWYR8),
-                      icon: o9.k,
+                      icon: o7.k,
                   }),
         j = [I, g && !r ? f : E].filter(sx.Vq);
     return (0, l.jsxs)(d6, {
@@ -6670,7 +6670,7 @@ function cA(e) {
             {
                 variant: "primary",
                 size: "md",
-                icon: o7.h,
+                icon: o9.h,
                 text: z.intl.string(z.t["jaYS/h"]),
                 onClick: function () {
                     s?.();
@@ -6865,7 +6865,7 @@ function cT(e) {
             },
             actions: [
                 {
-                    icon: o7.h,
+                    icon: o9.h,
                     text: z.intl.string(z.t["jaYS/h"]),
                     onClick: function () {
                         o?.();
@@ -7114,8 +7114,8 @@ let c3 = function (e) {
         ],
     });
 };
-var c7 = t(514243),
-    c9 = t(347306),
+var c9 = t(514243),
+    c7 = t(347306),
     c6 = t(123917),
     c5 = t(998218);
 let c8 = function (e) {
@@ -7139,12 +7139,12 @@ let c8 = function (e) {
                       subtitle: t.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(cy.A, {
                           onClick: a,
-                          Icon: c9.k,
+                          Icon: c7.k,
                           "aria-label": z.intl.string(z.t.jdJYXw),
                       }),
                       badges: (0, l.jsx)(dt.mG, {
                           location: dt.N5.POPOUT,
-                          children: c7.R.map((e, n) => (0, l.jsx)(e, { entry: t }, n)),
+                          children: c9.R.map((e, n) => (0, l.jsx)(e, { entry: t }, n)),
                       }),
                       onClickTitle: o,
                       onClickThumbnail: o,
@@ -7174,7 +7174,7 @@ function ue(e) {
         case oS.ContentInventoryEntryType.PLAYED_GAME:
             return (0, l.jsx)(ca.A, { ...t, entry: n });
         case oS.ContentInventoryEntryType.WATCHED_MEDIA:
-            return (0, l.jsx)(c7.A, { ...t, entry: n });
+            return (0, l.jsx)(c9.A, { ...t, entry: n });
         case oS.ContentInventoryEntryType.TOP_GAME:
             return (0, l.jsx)(c2.Ay, { ...t, entry: n });
         case oS.ContentInventoryEntryType.TOP_ARTIST:
@@ -9034,7 +9034,7 @@ class uX extends s.PureComponent {
             });
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(n7.HI, { location: y, subsection: t ?? void 0 }),
+                (0, l.jsx)(n9.HI, { location: y, subsection: t ?? void 0 }),
                 u ? (0, l.jsx)("div", { className: uG.zP, children: b }) : b,
                 x && (0, l.jsx)(uK, {}),
             ],

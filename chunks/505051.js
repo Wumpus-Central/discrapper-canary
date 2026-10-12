@@ -1,5 +1,5 @@
 a.r(
-    (e.exports = {
+    (o.exports = {
         boxBackdrop: "boxBackdrop__53b4c",
         boxContainer: "boxContainer__53b4c",
         bentoSectionHeader: "bentoSectionHeader__53b4c",
@@ -22,7 +22,6 @@ a.r(
         overlayImageMode: "overlayImageMode__53b4c",
         textBox: "textBox__53b4c",
         gradientBackground: "gradientBackground__53b4c",
-        callOfDutyGradient: "callOfDutyGradient__53b4c",
         xboxGradient: "xboxGradient__53b4c",
         youtubeGradient: "youtubeGradient__53b4c",
         macaronGradient: "macaronGradient__53b4c",
