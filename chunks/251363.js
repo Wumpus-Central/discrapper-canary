@@ -10,7 +10,7 @@ function s(e, t, n, a) {
         e,
         "capture-now",
         { ...(null == n ? {} : { spec: n }), ...(null == a ? {} : { uploadToken: a }) },
-        { id: t, timeoutMs: 8e3, retryMs: 400, sourceMatch: "origin", label: "capture-now" },
+        { id: t, timeoutMs: 15e3, retryMs: 400, sourceMatch: "origin", label: "capture-now" },
     ).then(
         (e) =>
             (console.debug("[vibegrations] preview frame answered capture", { id: t, phase: e.phase, code: e.code }),

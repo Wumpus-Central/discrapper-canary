@@ -1,4 +1,4 @@
-n.d(t, { A: () => eN });
+n.d(t, { A: () => ey });
 var i = n(264686),
     r = n(625180),
     a = n(91242),
@@ -456,7 +456,9 @@ async function z(e, t) {
     }
 }
 async function X(e, t) {
-    return (null != F() ? await $(e, t) : null) ?? z(e, t);
+    return "visible" !== document.visibilityState
+        ? k("window not visible")
+        : ((null != F() ? await $(e, t) : null) ?? z(e, t));
 }
 var Z = n(251363),
     q = n(621466);
@@ -656,14 +658,61 @@ function ef(e) {
         (0, P.nI)(e),
         null != t && es?.projectId === e && ((es = null), t.detach().catch(() => {})));
 }
-var eI = n(226178),
-    ep = n(165610);
-async function eT(e) {
+var eI = n(226178);
+let ep = new WeakMap();
+function eT(e) {
+    return new Promise((t) => setTimeout(t, e));
+}
+function em(e, t) {
+    return e.width === t.width && e.height === t.height;
+}
+function eg(e, t, n) {
+    let i = t.width - e.width,
+        r = t.height - e.height;
+    return i >= -2 && r >= -2 && i <= n && r <= n;
+}
+async function eS(e, t) {
+    let n = t,
+        i = ep.get(n),
+        r = null;
+    for (let t = Date.now() + 1500; Date.now() < t; await eT(50)) {
+        var a, s;
+        let t =
+            (a = n = (0, er.UJ)(e) ?? n).isConnected && a.getClientRects().length > 0 && a.clientWidth > 0
+                ? { width: a.clientWidth, height: a.clientHeight }
+                : null;
+        if (null == t) continue;
+        let l = await ((s = n),
+        (0, f.W)(s, "viewport", {}, { timeoutMs: 300 }).then(
+            (e) => {
+                let { width: t, height: n } = e;
+                return { width: t, height: n };
+            },
+            () => null,
+        ));
+        if (null == l) {
+            await eT(150);
+            break;
+        }
+        let o = l.width > 0 && l.height > 0,
+            d = null != i && em(i.viewport, l),
+            c = d && null != i && em(i.box, t),
+            u = !d && null != r && em(r, l) && eg(l, t, 32);
+        if (c || (o && (eg(l, t, 2) || u))) {
+            ep.set(n, { box: t, viewport: l });
+            break;
+        }
+        r = l;
+    }
+    return n;
+}
+var eN = n(165610);
+async function eC(e) {
     let { onClose: t, ...i } = e,
         { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 887909));
     r((0, eI.i)(i), t);
 }
-async function em(e, t, i) {
+async function eO(e, t, i) {
     let { probe: r, spec: a, build: s, onAccepted: l, resolveUploadUrl: o } = i;
     if (!0 === r) return { status: (0, er.rQ)(e) ? "accepted" : "unavailable" };
     if (a?.mode === "widget") {
@@ -792,20 +841,27 @@ async function em(e, t, i) {
         ]).then(n.bind(n, 399503));
         return await i(e, { captureId: t, build: s, onAccepted: l, resolveUploadUrl: o });
     }
-    let d = await (0, er.o$)(e, 6e3);
-    if (null == d) return { status: "unavailable" };
-    let c = null == l ? { uploadToken: void 0 } : await l();
-    if (null == c) return { status: "unavailable" };
-    let u = X(d, { captureId: t, spec: a, build: s, uploadToken: c.uploadToken, resolveUploadUrl: o });
-    function _(e) {
-        return Promise.race([u, new Promise((t) => setTimeout(() => t(null), e))]);
+    let d = (0, c.Wg)(e);
+    try {
+        let n = await (0, er.o$)(e, 6e3);
+        if (null == n) return { status: "unavailable" };
+        let i = null == l ? { uploadToken: void 0 } : await l();
+        if (null == i) return { status: "unavailable" };
+        let r = await eS(e, n),
+            d = X(r, { captureId: t, spec: a, build: s, uploadToken: i.uploadToken, resolveUploadUrl: o });
+        function u(e) {
+            return Promise.race([d, new Promise((t) => setTimeout(() => t(null), e))]);
+        }
+        let c = await u(3e3);
+        if (null != c) return c;
+        let _ = await (0, Z.i)(r, t, a, i.uploadToken);
+        if ("accepted" === _.status) return _;
+        return (await u(3e3)) ?? _;
+    } finally {
+        d();
     }
-    let E = await _(3e3);
-    if (null != E) return E;
-    let A = await (0, Z.i)(d, t, a, c.uploadToken);
-    return "accepted" === A.status ? A : ((await _(3e3)) ?? A);
 }
-async function eg(e, t, n, i) {
+async function eR(e, t, n, i) {
     if (!(0, er.rQ)(e)) return { status: "unavailable" };
     let r = (0, c.Wg)(e);
     try {
@@ -813,32 +869,33 @@ async function eg(e, t, n, i) {
         if (null == r) return { status: "unavailable" };
         let a = await i?.();
         if (!1 === a) return { status: "unavailable" };
-        let s = y(r);
+        let s = await eS(e, r),
+            l = y(s);
         try {
             let i = !1,
-                a = await en(
-                    r,
+                r = await en(
+                    s,
                     async () => {
-                        let a = await eh(e, r, n);
-                        return null != a ? a : ((i = !0), await (0, ea.J)(r, t, n));
+                        let r = await eh(e, s, n);
+                        return null != r ? r : ((i = !0), await (0, ea.J)(s, t, n));
                     },
                     () =>
                         i
                             ? !n.steps.some((e) => /"Input\.(dispatchKeyEvent|insertText)"/.test(JSON.stringify(e)))
                             : null,
                 );
-            if ("completed" !== a.status) return a;
-            let l = [...eS.drain(e), ...s.drain()];
-            if (0 === l.length) return a;
-            return { ...a, response: { ...a.response, native: l } };
+            if ("completed" !== r.status) return r;
+            let a = [...eL.drain(e), ...l.drain()];
+            if (0 === a.length) return r;
+            return { ...r, response: { ...r.response, native: a } };
         } finally {
-            s.end();
+            l.end();
         }
     } finally {
         r();
     }
 }
-let eS = (function (e) {
+let eL = (function (e) {
     let t = new Map();
     function n(e) {
         let n = t.get(e);
@@ -899,8 +956,8 @@ let eS = (function (e) {
             { timeoutMs: 2e3, retryMs: 400, sourceMatch: "origin", label: "control end" },
         ).catch(() => {});
 });
-let eN = {
-    openConjureAppInstallModal: eT,
+let ey = {
+    openConjureAppInstallModal: eC,
     isWindowFocused: function () {
         return o.A.isFocused();
     },
@@ -923,8 +980,8 @@ let eN = {
             },
         );
     },
-    relayPreviewCapture: em,
-    relayPreviewControl: eg,
+    relayPreviewCapture: eO,
+    relayPreviewControl: eR,
     abortPreviewControl: function (e) {
         (ef(e), ei());
         let t = (0, er.UJ)(e);
@@ -937,7 +994,7 @@ let eN = {
             ).catch(() => {});
     },
     beginPreviewOperation: function (e) {
-        (eS.begin(e),
+        (eL.begin(e),
             (function (e) {
                 if (null == eu() || eo.has(e)) return;
                 let t = { cancelled: !1 };
@@ -951,7 +1008,7 @@ let eN = {
             })(e));
     },
     endPreviewOperation: function (e) {
-        (eS.end(e), ef(e), ei());
+        (eL.end(e), ef(e), ei());
     },
     releasePreviewControl: function (e) {
         (0, c.GU)(e);
@@ -959,6 +1016,6 @@ let eN = {
     reloadAppFrames: function (e) {
         if (null != e)
             for (let t of a.A.getAllFrames())
-                (0, ep.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
+                (0, eN.x1)(t) && t.applicationId === e && !t.data.proxyTicketRefreshing && r.A.refreshProxyTicket(t.id);
     },
 };

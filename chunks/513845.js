@@ -2,7 +2,7 @@ n.d(_, { BD: () => o, GG: () => c, HV: () => r, Lw: () => p, R2: () => a });
 var i = n(73153),
     e = n(260498),
     l = n(951178),
-    u = n(28480);
+    u = n(649162);
 function a(t) {
     u.A.reloadAppFrames(t);
 }
