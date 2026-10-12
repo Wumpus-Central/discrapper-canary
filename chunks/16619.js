@@ -1,4 +1,4 @@
-(n.d(t, { nM: () => y, qh: () => _, rX: () => w, z9: () => S }), n(321073));
+(n.d(t, { nM: () => b, qh: () => y, rX: () => w, z9: () => S }), n(321073));
 var l = n(582128),
     a = n(17928),
     r = n(587895),
@@ -27,6 +27,7 @@ function j(e, t) {
                 e.projectId === l.projectId &&
                 e.activity === l.activity &&
                 e.name === l.name &&
+                e.project.updated_at === l.project.updated_at &&
                 e.guildId === l.guildId &&
                 e.guildName === l.guildName &&
                 e.notInServer === l.notInServer &&
@@ -35,10 +36,10 @@ function j(e, t) {
         })
     );
 }
-function b(e, t) {
+function _(e, t) {
     return e.length === t.length && e.every((e, n) => e === t[n]);
 }
-function y(e) {
+function b(e) {
     return e.notInServer
         ? {
               serverName: v.intl.string(k.default["08PzLy"]),
@@ -54,7 +55,7 @@ function y(e) {
                 label: v.intl.formatToPlainString(k.default["hd+GF1"], { name: e.name, server: e.guildName }),
             };
 }
-function _(e) {
+function y(e) {
     let [t, n] = l.useState(0),
         { entries: d, nextExpiry: c } = (0, a.bG)(
             [p.Ay, f.A, o.A, u.Ay, s.A, r.A, i.Bt],
@@ -127,7 +128,7 @@ function S(e) {
                 .filter((t) => (0, h.sM)(t, e))
                 .sort((e, t) => e.name.localeCompare(t.name)),
         [e],
-        b,
+        _,
     );
 }
 function w(e) {
