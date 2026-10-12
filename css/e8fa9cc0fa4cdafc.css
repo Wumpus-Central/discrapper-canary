@@ -92,6 +92,26 @@
     display: block
 }
 
+.rowTrailing__4cd87 {
+    flex: 0 0 auto;
+    gap: var(--space-6);
+    margin-inline-start: auto
+}
+
+.helpers__4cd87,
+.rowTrailing__4cd87 {
+    align-items: center;
+    display: flex
+}
+
+.helpers__4cd87 {
+    gap: var(--space-4)
+}
+
+.helper__4cd87 {
+    display: flex
+}
+
 .rowTitle__4cd87 [data-conjure-turn-timer] {
     -webkit-backdrop-filter: blur(28px);
     backdrop-filter: blur(28px);
@@ -165,4 +185,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=259ccacb82e7e89d.css.map*/
+/*# sourceMappingURL=e8fa9cc0fa4cdafc.css.map*/

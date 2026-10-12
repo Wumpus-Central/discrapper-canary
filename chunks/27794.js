@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 635675, Version Hash: 1ef48f639bc2ad3e49c66e2f1264c4c2da14f9a1`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 635678, Version Hash: d92484d00e8c3b9073cb9e2f6a6b1ed08bf92ac8`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4290,7 +4290,7 @@ let a1 = (0, i8.Fe)({
                 n.e("502759"),
                 n.e("543575"),
                 n.e("496914"),
-                n.e("472115"),
+                n.e("758642"),
                 n.e("999045"),
             ]).then(n.bind(n, 32002)),
         webpackId: 32002,
@@ -26062,7 +26062,7 @@ let y_ = "isHideDevBanner",
                     className: tE()(yu.Wz, yu.mr),
                     children: [
                         (0, M.jsx)(yc, { className: yu.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635675" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635678" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -29818,13 +29818,13 @@ let bl = (0, tz.Fe)({
                 n.e("736410"),
                 n.e("935412"),
                 n.e("238529"),
-                n.e("472115"),
+                n.e("758642"),
                 n.e("815341"),
                 n.e("149929"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 565724)),
-        webpackId: 565724,
+            ]).then(n.bind(n, 865077)),
+        webpackId: 865077,
         name: "VibegrationsScreen",
         renderLoader: bs,
     }),
