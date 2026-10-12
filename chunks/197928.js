@@ -1,18 +1,18 @@
-let n, r, i, _, o, I, l, s, a;
-var A,
-    S,
+let n, r, i, _, o, I, l, s, a, A;
+var S,
     T,
     O,
     R,
     N,
-    c,
     u,
+    c,
     L,
     d,
     C,
-    p = E(214958),
-    g = E.n(p);
-function D() {
+    p,
+    g = E(214958),
+    D = E.n(g);
+function P() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -24,7 +24,7 @@ function D() {
         null != e.VencordNative
     );
 }
-function P() {
+function M() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -34,20 +34,21 @@ function P() {
     );
 }
 ((n = E(973117).n), (r = E(28967).n));
-let M = (0, E(132500).A)();
-var f = E(264572).Buffer;
-let G = "deviceProperties",
-    m = "referralProperties",
-    U = window.DiscordNative;
-if (null != U) {
+let f = (0, E(132500).A)();
+var G = E(264572).Buffer;
+let m = "deviceProperties",
+    U = "referralProperties";
+function h() {}
+let w = window.DiscordNative;
+if (null != w) {
     let e,
-        t = U.app.getVersion(),
-        E = U.process.platform,
-        n = U.os.release,
-        r = U.os.arch,
-        _ = U.os.appArch,
-        o = U.app.getReleaseChannel(),
-        I = P();
+        t = w.app.getVersion(),
+        E = w.process.platform,
+        n = w.os.release,
+        r = w.os.arch,
+        _ = w.os.appArch,
+        o = w.app.getReleaseChannel(),
+        I = M();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -71,14 +72,14 @@ if (null != U) {
             os_arch: r,
             app_arch: _,
             system_locale: I,
-            has_client_mods: D(),
-            client_launch_id: M,
+            has_client_mods: P(),
+            client_launch_id: f,
         }),
-        g().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = g().ua || ""), (i.browser_version = g().version || "")),
+        D().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = D().ua || ""), (i.browser_version = D().version || "")),
         "linux" === E)
     ) {
-        let e = U.crashReporter.getMetadata();
+        let e = w.crashReporter.getMetadata();
         ((i.window_manager = e.wm),
             (i.distro = e.distro),
             (i.runtime_environment = e.runtime_environment),
@@ -86,14 +87,14 @@ if (null != U) {
     } else
         "darwin" === E ? (i.os_sdk_version = n?.split(".")[0]) : "win32" === E && (i.os_sdk_version = n?.split(".")[2]);
 }
-function h(e, t) {
+function $(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let E = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === E || ("string" != typeof E[1] && E[1].length) ? "" : decodeURIComponent(E[1]).replace(/\+/g, " ");
 }
-let w = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function $() {
+let B = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function H() {
     var e;
     let t,
         E,
@@ -105,8 +106,8 @@ function $() {
             ...n,
             ...((e = window.location.href),
             (E = {}),
-            w.forEach((t) => {
-                let n = h(e, t);
+            B.forEach((t) => {
+                let n = $(e, t);
                 n.length > 0 && (E[t] = n);
             }),
             E),
@@ -126,7 +127,7 @@ function $() {
                                   : null;
                 if (null != n) {
                     t.search_engine = n;
-                    let e = h(E, "yahoo" !== n ? "q" : "p");
+                    let e = $(E, "yahoo" !== n ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -137,10 +138,12 @@ function $() {
 if (null == i)
     try {
         i = (function () {
-            let e = n.get(G);
-            if (null == e) {
-                let t;
-                (((t = {}).os = (function () {
+            let e,
+                t,
+                E = n.get(m);
+            if (null == E) {
+                let e;
+                (((e = {}).os = (function () {
                     let { userAgent: e } = window.navigator;
                     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
                     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -153,7 +156,7 @@ if (null == i)
                     else if (/Linux/i.test(e)) return "Linux";
                     else return "";
                 })()),
-                    (t.browser = (function () {
+                    (e.browser = (function () {
                         let { userAgent: e, vendor: t = "" } = window.navigator,
                             { opera: E } = window,
                             n = (function (e) {
@@ -191,36 +194,37 @@ if (null == i)
                         else if (/Gecko/.test(e)) return "Mozilla";
                         else return "";
                     })()),
-                    (t.device = (function () {
-                        let { userAgent: e } = window.navigator;
-                        if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
-                        if (/Windows Phone/i.test(e)) return "Windows Phone";
-                        if (/Android/.test(e)) return "Android";
-                        if (/iPhone/.test(e)) return "iPhone";
-                        if (/iPad/.test(e)) return "iPad";
+                    (e.device = (function () {
+                        let e = h(),
+                            { userAgent: t } = window.navigator;
+                        if (null != e) return e.device;
+                        if (/(BlackBerry|PlayBook|BB10)/i.test(t)) return "BlackBerry";
+                        if (/Windows Phone/i.test(t)) return "Windows Phone";
+                        if (/Android/.test(t)) return "Android";
+                        if (/iPhone/.test(t)) return "iPhone";
+                        else if (/iPad/.test(t)) return "iPad";
                         else return "";
                     })()),
-                    (t.system_locale = P()),
-                    (t.has_client_mods = D()),
-                    (e = t),
-                    n.set(G, e));
+                    (e.system_locale = M()),
+                    (e.has_client_mods = P()),
+                    (E = e),
+                    n.set(m, E));
             }
-            let t = n.get(m);
-            null == t && ((t = $()), n.set(m, t));
-            let E = r.get(m);
-            if (null == E) {
-                var i;
+            let i = n.get(U);
+            null == i && ((i = H()), n.set(U, i));
+            let _ = r.get(U);
+            if (null == _) {
+                var o;
                 let e;
-                ((i = $()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (E = e), r.set(m, E));
+                ((o = H()), (e = {}), Object.keys(o).map((t) => (e[`${t}_current`] = o[t])), (_ = e), r.set(U, _));
             }
             return {
-                ...e,
-                ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: g().version || "" },
-                    os_version: g()?.os?.version ?? "",
-                },
-                ...t,
                 ...E,
+                ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: D().version || "" }),
+                (t = h()),
+                null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: D()?.os?.version ?? "" }),
+                ...i,
+                ..._,
             };
         })();
     } catch (e) {
@@ -230,26 +234,27 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("635848", 10))) || (I.client_build_number = s),
-    null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
+    isNaN((s = parseInt("635882", 10))) || (I.client_build_number = s),
+    null == (a = w?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
         } catch (e) {}
         return null;
     })()),
-    (I.has_client_mods = D()),
-    (I.client_launch_id = M),
+    (I.has_client_mods = P()),
+    (I.client_launch_id = f),
+    null != (A = h()?.installSource) && (I.install_source = A),
     (function (e) {
         try {
-            f.from(JSON.stringify(e)).toString("base64");
+            G.from(JSON.stringify(e)).toString("base64");
         } catch (e) {
             return null;
         }
     })((i = { ...i, ...I })));
-var B = E(824120),
-    H = E.n(B);
-function v(e) {
+var v = E(824120),
+    y = E.n(v);
+function b(e) {
     let t = [];
     for (let E = 0; E < e.length; E++) {
         let n = Number(e[E]);
@@ -257,13 +262,13 @@ function v(e) {
     }
     return t;
 }
-class y {
+class F {
     parts;
     str;
     static fromString(e) {
-        return new y(
+        return new F(
             (function (e) {
-                let t = v(e),
+                let t = b(e),
                     E = [, , , ,];
                 for (let e = 0; e < 4; e++)
                     E[3 - e] = (function (e, t) {
@@ -284,7 +289,7 @@ class y {
         let t = [, , , ,],
             E = Math.floor(e / 16);
         for (let n = 0; n < 4; n++) t[3 - n] = n === E ? 1 << (e - 16 * E) : 0;
-        return new y(t);
+        return new F(t);
     }
     static asUintN(e, t) {
         let { parts: E } = t,
@@ -303,18 +308,18 @@ class y {
     }
     and(e) {
         let { parts: t } = e;
-        return new y(this.parts.map((e, E) => e & t[E]));
+        return new F(this.parts.map((e, E) => e & t[E]));
     }
     or(e) {
         let { parts: t } = e;
-        return new y(this.parts.map((e, E) => e | t[E]));
+        return new F(this.parts.map((e, E) => e | t[E]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new y(this.parts.map((e, E) => e ^ t[E]));
+        return new F(this.parts.map((e, E) => e ^ t[E]));
     }
     not() {
-        return new y(this.parts.map((e) => ~e));
+        return new F(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -325,59 +330,59 @@ class y {
         let e = Array(16);
         return (
             this.parts.forEach((t, E) => {
-                let n = v(t.toString());
+                let n = b(t.toString());
                 for (let t = 0; t < 4; t++) e[t + 4 * E] = n[3 - t] || 0;
             }),
-            (this.str = H().fromArray(e, 16).toString())
+            (this.str = y().fromArray(e, 16).toString())
         );
     }
     toJSON() {
         return this.toString();
     }
 }
-let b = (function () {
+let Y = (function () {
     try {
         return !0;
     } catch (e) {
         return !1;
     }
 })();
-b &&
+Y &&
     null == BigInt.prototype.toJSON &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let F = {},
-    Y = (
-        b
+let V = {},
+    W = (
+        Y
             ? function (e) {
                   return BigInt(e);
               }
             : function (e) {
-                  return e instanceof y
+                  return e instanceof F
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != F[e] || (F[e] = y.fromString(e)), F[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != V[e] || (V[e] = F.fromString(e)), V[e]);
               }
     )(0),
-    V = b
+    k = Y
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : W,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : W,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W;
               return e.or(t);
           },
-    W = b
+    K = Y
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return y.fromBit(e);
+              return F.fromBit(e);
           };
-class k {
+class x {
     value;
     constructor(e) {
         this.value = e;
@@ -386,7 +391,7 @@ class k {
         return this.value;
     }
 }
-function K(e, t) {
+function j(e, t) {
     let E = {};
     for (let n of Object.keys(e)) {
         let r = e[n];
@@ -401,7 +406,7 @@ function K(e, t) {
                     return e.map((e) =>
                         null == e
                             ? e
-                            : e instanceof k
+                            : e instanceof x
                               ? e.toString()
                               : null == t
                                 ? encodeURIComponent(e)
@@ -416,9 +421,9 @@ function K(e, t) {
     }
     return E;
 }
-let x = "u" < typeof location ? "" : location.protocol,
-    j = x + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
-    Q = x + "//discord.gg";
+let Q = "u" < typeof location ? "" : location.protocol,
+    X = Q + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
+    q = Q + "//discord.gg";
 (Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -461,270 +466,270 @@ let x = "u" < typeof location ? "" : location.protocol,
     }),
     Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
     Object.freeze({ 0: "subscription", 1: "sku" }));
-let X = Object.freeze({
-    CREATE_INSTANT_INVITE: W(0),
-    KICK_MEMBERS: W(1),
-    BAN_MEMBERS: W(2),
-    ADMINISTRATOR: W(3),
-    MANAGE_CHANNELS: W(4),
-    MANAGE_GUILD: W(5),
-    CHANGE_NICKNAME: W(26),
-    MANAGE_NICKNAMES: W(27),
-    MANAGE_ROLES: W(28),
-    MANAGE_WEBHOOKS: W(29),
-    MANAGE_GUILD_EXPRESSIONS: W(30),
-    CREATE_GUILD_EXPRESSIONS: W(43),
-    VIEW_AUDIT_LOG: W(7),
-    VIEW_CHANNEL: W(10),
-    VIEW_GUILD_ANALYTICS: W(19),
-    VIEW_CREATOR_MONETIZATION_ANALYTICS: W(41),
-    MODERATE_MEMBERS: W(40),
-    USE_EMBEDDED_ACTIVITIES: W(39),
-    USE_EXTERNAL_APPS: W(50),
-    SEND_MESSAGES: W(11),
-    SEND_TTS_MESSAGES: W(12),
-    MANAGE_MESSAGES: W(13),
-    EMBED_LINKS: W(14),
-    ATTACH_FILES: W(15),
-    READ_MESSAGE_HISTORY: W(16),
-    MENTION_EVERYONE: W(17),
-    USE_EXTERNAL_EMOJIS: W(18),
-    ADD_REACTIONS: W(6),
-    USE_APPLICATION_COMMANDS: W(31),
-    MANAGE_THREADS: W(34),
-    CREATE_PUBLIC_THREADS: W(35),
-    CREATE_PRIVATE_THREADS: W(36),
-    USE_EXTERNAL_STICKERS: W(37),
-    SEND_MESSAGES_IN_THREADS: W(38),
-    SEND_VOICE_MESSAGES: W(46),
-    SEND_POLLS: W(49),
-    PIN_MESSAGES: W(51),
-    BYPASS_SLOWMODE: W(52),
-    MANAGE_OFFICIAL_MESSAGES: W(53),
-    CONNECT: W(20),
-    SPEAK: W(21),
-    MUTE_MEMBERS: W(22),
-    DEAFEN_MEMBERS: W(23),
-    MOVE_MEMBERS: W(24),
-    USE_VAD: W(25),
-    PRIORITY_SPEAKER: W(8),
-    STREAM: W(9),
-    USE_SOUNDBOARD: W(42),
-    USE_EXTERNAL_SOUNDS: W(45),
-    SET_VOICE_CHANNEL_STATUS: W(48),
-    REQUEST_TO_SPEAK: W(32),
-    MANAGE_EVENTS: W(33),
-    CREATE_EVENTS: W(44),
+let J = Object.freeze({
+    CREATE_INSTANT_INVITE: K(0),
+    KICK_MEMBERS: K(1),
+    BAN_MEMBERS: K(2),
+    ADMINISTRATOR: K(3),
+    MANAGE_CHANNELS: K(4),
+    MANAGE_GUILD: K(5),
+    CHANGE_NICKNAME: K(26),
+    MANAGE_NICKNAMES: K(27),
+    MANAGE_ROLES: K(28),
+    MANAGE_WEBHOOKS: K(29),
+    MANAGE_GUILD_EXPRESSIONS: K(30),
+    CREATE_GUILD_EXPRESSIONS: K(43),
+    VIEW_AUDIT_LOG: K(7),
+    VIEW_CHANNEL: K(10),
+    VIEW_GUILD_ANALYTICS: K(19),
+    VIEW_CREATOR_MONETIZATION_ANALYTICS: K(41),
+    MODERATE_MEMBERS: K(40),
+    USE_EMBEDDED_ACTIVITIES: K(39),
+    USE_EXTERNAL_APPS: K(50),
+    SEND_MESSAGES: K(11),
+    SEND_TTS_MESSAGES: K(12),
+    MANAGE_MESSAGES: K(13),
+    EMBED_LINKS: K(14),
+    ATTACH_FILES: K(15),
+    READ_MESSAGE_HISTORY: K(16),
+    MENTION_EVERYONE: K(17),
+    USE_EXTERNAL_EMOJIS: K(18),
+    ADD_REACTIONS: K(6),
+    USE_APPLICATION_COMMANDS: K(31),
+    MANAGE_THREADS: K(34),
+    CREATE_PUBLIC_THREADS: K(35),
+    CREATE_PRIVATE_THREADS: K(36),
+    USE_EXTERNAL_STICKERS: K(37),
+    SEND_MESSAGES_IN_THREADS: K(38),
+    SEND_VOICE_MESSAGES: K(46),
+    SEND_POLLS: K(49),
+    PIN_MESSAGES: K(51),
+    BYPASS_SLOWMODE: K(52),
+    MANAGE_OFFICIAL_MESSAGES: K(53),
+    CONNECT: K(20),
+    SPEAK: K(21),
+    MUTE_MEMBERS: K(22),
+    DEAFEN_MEMBERS: K(23),
+    MOVE_MEMBERS: K(24),
+    USE_VAD: K(25),
+    PRIORITY_SPEAKER: K(8),
+    STREAM: K(9),
+    USE_SOUNDBOARD: K(42),
+    USE_EXTERNAL_SOUNDS: K(45),
+    SET_VOICE_CHANNEL_STATUS: K(48),
+    REQUEST_TO_SPEAK: K(32),
+    MANAGE_EVENTS: K(33),
+    CREATE_EVENTS: K(44),
 });
 (!(function () {
     for (var e = arguments.length, t = Array(e), E = 0; E < e; E++) t[E] = arguments[E];
     let n = t[0];
-    for (let e = 1; e < t.length; e++) n = V(n, t[e]);
+    for (let e = 1; e < t.length; e++) n = k(n, t[e]);
 })(
-    X.KICK_MEMBERS,
-    X.BAN_MEMBERS,
-    X.ADMINISTRATOR,
-    X.MANAGE_CHANNELS,
-    X.MANAGE_GUILD,
-    X.MANAGE_ROLES,
-    X.MANAGE_MESSAGES,
-    X.MANAGE_THREADS,
-    X.MODERATE_MEMBERS,
+    J.KICK_MEMBERS,
+    J.BAN_MEMBERS,
+    J.ADMINISTRATOR,
+    J.MANAGE_CHANNELS,
+    J.MANAGE_GUILD,
+    J.MANAGE_ROLES,
+    J.MANAGE_MESSAGES,
+    J.MANAGE_THREADS,
+    J.MODERATE_MEMBERS,
 ),
     Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }));
-let q = Object.freeze({
-    WELCOME: `${j}/welcome/`,
-    ME: `${j}/channels/@me`,
-    SETTINGS: (e, t) => `${j}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
-    CONNECTION: (e) => `${j}/connections/${e}`,
-    CHANGELOGS: `${j}/settings/changelogs`,
-    LOGIN: `${j}/login`,
-    LOGIN_WITH_REDIRECT: (e) => `${j}/login?redirect_to=${e}`,
-    REGISTER: `${j}/register`,
-    REGISTER_WITH_REDIRECT: (e) => `${j}/register?redirect_to=${e}`,
-    CREATE_GUILD: `${j}/guilds/create`,
-    VANITY_INVITE: (e) => `${Q}/${e}`,
-    HYPESQUAD_ONLINE: `${j}/settings/hypesquad-online`,
-    BROWSE_NITRO_TITLES: `${j}/store/browse?type=nitro`,
-    SKU_DETAILS: (e, t) => `${j}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+let z = Object.freeze({
+    WELCOME: `${X}/welcome/`,
+    ME: `${X}/channels/@me`,
+    SETTINGS: (e, t) => `${X}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
+    CONNECTION: (e) => `${X}/connections/${e}`,
+    CHANGELOGS: `${X}/settings/changelogs`,
+    LOGIN: `${X}/login`,
+    LOGIN_WITH_REDIRECT: (e) => `${X}/login?redirect_to=${e}`,
+    REGISTER: `${X}/register`,
+    REGISTER_WITH_REDIRECT: (e) => `${X}/register?redirect_to=${e}`,
+    CREATE_GUILD: `${X}/guilds/create`,
+    VANITY_INVITE: (e) => `${q}/${e}`,
+    HYPESQUAD_ONLINE: `${X}/settings/hypesquad-online`,
+    BROWSE_NITRO_TITLES: `${X}/store/browse?type=nitro`,
+    SKU_DETAILS: (e, t) => `${X}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
     MESSAGE: (e, t, E) => `/channels/${e}/${t}/${E}`,
     CHANNEL: (e, t) => `/channels/${e}/${t}`,
-    REPORT: `${j}/report`,
-    QUEST_PREVIEW_TOOL_2: (e) => `${j}/quest-preview/${e}`,
-    QUEST_HOME_PREVIEW: (e) => `${j}/quest-home?ad_creative_ids=${e}`,
-    QUEST_BAR_PREVIEW: (e) => `${j}/quest-bar-preview?ad_creative_ids=${e}`,
+    REPORT: `${X}/report`,
+    QUEST_PREVIEW_TOOL_2: (e) => `${X}/quest-preview/${e}`,
+    QUEST_HOME_PREVIEW: (e) => `${X}/quest-home?ad_creative_ids=${e}`,
+    QUEST_BAR_PREVIEW: (e) => `${X}/quest-bar-preview?ad_creative_ids=${e}`,
 });
-var J =
-    (((A = J || {}).INDEX = "/"),
-    (A.INDEX_WORD = "/index"),
-    (A.INDEX_BUCKET = "/index/:bucketId"),
-    (A.CHANGELOGS = "/changelogs/:date"),
-    (A.COMMUNITY = "/community"),
-    (A.COMPANY = "/company"),
-    (A.COMPANY_INFORMATION = "/company-information"),
-    (A.CREATORS = "/creators"),
-    (A.DOWNLOADS = "/downloads"),
-    (A.DOWNLOAD = "/download"),
-    (A.GAMING = "/gaming"),
-    (A.PRIVACY = "/privacy"),
-    (A.TOS = "/tos"),
-    (A.TERMS = "/terms"),
-    (A.STORE_TERMS = "/store-terms"),
-    (A.ACKNOWLEDGEMENTS = "/acknowledgements"),
-    (A.LICENSES = "/licenses"),
-    (A.PARTNERS = "/partners"),
-    (A.HYPESQUAD = "/hypesquad"),
-    (A.HYPESQUAD_RIOT = "/hypesquad-riot"),
-    (A.BRANDING = "/branding"),
-    (A.ERROR_404 = "/404"),
-    (A.JOBS = "/jobs"),
-    (A.JOB = "/jobs/:jobId"),
-    (A.STREAMKIT = "/streamkit"),
-    (A.SECURITY = "/security"),
-    (A.NITRO = "/nitro"),
-    (A.DISCOVER = "/servers"),
-    (A.QUESTS = "/ads/quests"),
-    (A.GUIDELINES = "/guidelines"),
-    (A.RICH_PRESENCE = "/rich-presence"),
-    (A.VERIFICATION = "/verification"),
-    (A.OPEN_SOURCE = "/open-source"),
-    (A.WARFRAME = "/warframe"),
-    (A.REMOTE_AUTH = "/ra/:remoteAuthFingerprint"),
-    (A.SAFETY_LANDING = "/safetycenter"),
-    (A.SAFETY_ARTICLE_ROOT = "/safety"),
-    (A.SAFETY_ARTICLE = "/safety/:article"),
-    (A.NEWSROOM = "/newsroom"),
-    (A.INSPIRATION = "/inspiration"),
-    (A.MOD_ACADEMY_LANDING = "/moderation"),
-    (A.MOD_ACADEMY_EXAM = "/moderation/exam"),
-    (A.MOD_ACADEMY_ARTICLE = "/moderation/:article"),
-    (A.BLOG = "/blog"),
-    (A.BUILD = "/build"),
-    (A.DEVELOPERS = "/developers"),
-    (A.APP_DIRECTORY = "/application-directory"),
-    (A.REFRESH_INDEX = "/new"),
-    (A.REFRESH_INDEX_WORD = "/new/index"),
-    (A.REFRESH_COMPANY = "/new/company"),
-    (A.REFRESH_DOWNLOAD = "/new/download"),
-    (A.REFRESH_PRIVACY = "/new/privacy"),
-    (A.REFRESH_TERMS = "/new/terms"),
-    (A.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements"),
-    (A.REFRESH_LICENSES = "/new/licenses"),
-    (A.REFRESH_BRANDING = "/new/branding"),
-    (A.REFRESH_JOBS = "/new/jobs"),
-    (A.REFRESH_JOB = "/new/jobs/:jobId"),
-    (A.REFRESH_STREAMKIT = "/new/streamkit"),
-    (A.REFRESH_NITRO = "/new/nitro"),
-    (A.REFRESH_GUIDELINES = "/new/guidelines"),
-    (A.REFRESH_SAFETY_LANDING = "/new/safety"),
-    (A.REFRESH_SAFETY_ARTICLE = "/new/safety/:article"),
-    (A.COLLEGE = "/college"),
-    (A.LEAGUE_CLUBS = "/league-communities"),
-    (A.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams"),
-    (A.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter"),
-    (A.LEGACY_DEV_NEWSLETTER = "/newsletter"),
-    (A.LEGAL_ARCHIVE = "/archive/"),
-    (A.TERMS_MAY_2020 = "/archive/terms/may-2020"),
-    (A.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020"),
-    (A.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020"),
-    (A.FALL_RELEASE_2023 = "/fallrelease"),
-    (A.MOBILE_REDESIGN_2023 = "/mobile"),
-    (A.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019"),
-    (A.REFRESH_WHY_DISCORD = "/why-discord-is-different"),
-    (A.WHY_DISCORD = "/why-discord"),
-    (A.XBOX_OFFER = "/discord-xbox-offer-2020"),
-    (A.COLLEGE_BRUINS = "/bruins"),
-    (A.COLLEGE_ANTEATERS = "/anteaters"),
-    (A.COLLEGE_GAUCHOS = "/gauchos"),
-    (A.COLLEGE_BEARS = "/bears"),
-    (A.COLLEGE_SLUGS = "/slugs"),
-    (A.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram"),
-    (A.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter"),
-    (A.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
-    (A.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
-    A);
-(K(q),
-    K(J),
+var Z =
+    (((S = Z || {}).INDEX = "/"),
+    (S.INDEX_WORD = "/index"),
+    (S.INDEX_BUCKET = "/index/:bucketId"),
+    (S.CHANGELOGS = "/changelogs/:date"),
+    (S.COMMUNITY = "/community"),
+    (S.COMPANY = "/company"),
+    (S.COMPANY_INFORMATION = "/company-information"),
+    (S.CREATORS = "/creators"),
+    (S.DOWNLOADS = "/downloads"),
+    (S.DOWNLOAD = "/download"),
+    (S.GAMING = "/gaming"),
+    (S.PRIVACY = "/privacy"),
+    (S.TOS = "/tos"),
+    (S.TERMS = "/terms"),
+    (S.STORE_TERMS = "/store-terms"),
+    (S.ACKNOWLEDGEMENTS = "/acknowledgements"),
+    (S.LICENSES = "/licenses"),
+    (S.PARTNERS = "/partners"),
+    (S.HYPESQUAD = "/hypesquad"),
+    (S.HYPESQUAD_RIOT = "/hypesquad-riot"),
+    (S.BRANDING = "/branding"),
+    (S.ERROR_404 = "/404"),
+    (S.JOBS = "/jobs"),
+    (S.JOB = "/jobs/:jobId"),
+    (S.STREAMKIT = "/streamkit"),
+    (S.SECURITY = "/security"),
+    (S.NITRO = "/nitro"),
+    (S.DISCOVER = "/servers"),
+    (S.QUESTS = "/ads/quests"),
+    (S.GUIDELINES = "/guidelines"),
+    (S.RICH_PRESENCE = "/rich-presence"),
+    (S.VERIFICATION = "/verification"),
+    (S.OPEN_SOURCE = "/open-source"),
+    (S.WARFRAME = "/warframe"),
+    (S.REMOTE_AUTH = "/ra/:remoteAuthFingerprint"),
+    (S.SAFETY_LANDING = "/safetycenter"),
+    (S.SAFETY_ARTICLE_ROOT = "/safety"),
+    (S.SAFETY_ARTICLE = "/safety/:article"),
+    (S.NEWSROOM = "/newsroom"),
+    (S.INSPIRATION = "/inspiration"),
+    (S.MOD_ACADEMY_LANDING = "/moderation"),
+    (S.MOD_ACADEMY_EXAM = "/moderation/exam"),
+    (S.MOD_ACADEMY_ARTICLE = "/moderation/:article"),
+    (S.BLOG = "/blog"),
+    (S.BUILD = "/build"),
+    (S.DEVELOPERS = "/developers"),
+    (S.APP_DIRECTORY = "/application-directory"),
+    (S.REFRESH_INDEX = "/new"),
+    (S.REFRESH_INDEX_WORD = "/new/index"),
+    (S.REFRESH_COMPANY = "/new/company"),
+    (S.REFRESH_DOWNLOAD = "/new/download"),
+    (S.REFRESH_PRIVACY = "/new/privacy"),
+    (S.REFRESH_TERMS = "/new/terms"),
+    (S.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements"),
+    (S.REFRESH_LICENSES = "/new/licenses"),
+    (S.REFRESH_BRANDING = "/new/branding"),
+    (S.REFRESH_JOBS = "/new/jobs"),
+    (S.REFRESH_JOB = "/new/jobs/:jobId"),
+    (S.REFRESH_STREAMKIT = "/new/streamkit"),
+    (S.REFRESH_NITRO = "/new/nitro"),
+    (S.REFRESH_GUIDELINES = "/new/guidelines"),
+    (S.REFRESH_SAFETY_LANDING = "/new/safety"),
+    (S.REFRESH_SAFETY_ARTICLE = "/new/safety/:article"),
+    (S.COLLEGE = "/college"),
+    (S.LEAGUE_CLUBS = "/league-communities"),
+    (S.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams"),
+    (S.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter"),
+    (S.LEGACY_DEV_NEWSLETTER = "/newsletter"),
+    (S.LEGAL_ARCHIVE = "/archive/"),
+    (S.TERMS_MAY_2020 = "/archive/terms/may-2020"),
+    (S.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020"),
+    (S.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020"),
+    (S.FALL_RELEASE_2023 = "/fallrelease"),
+    (S.MOBILE_REDESIGN_2023 = "/mobile"),
+    (S.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019"),
+    (S.REFRESH_WHY_DISCORD = "/why-discord-is-different"),
+    (S.WHY_DISCORD = "/why-discord"),
+    (S.XBOX_OFFER = "/discord-xbox-offer-2020"),
+    (S.COLLEGE_BRUINS = "/bruins"),
+    (S.COLLEGE_ANTEATERS = "/anteaters"),
+    (S.COLLEGE_GAUCHOS = "/gauchos"),
+    (S.COLLEGE_BEARS = "/bears"),
+    (S.COLLEGE_SLUGS = "/slugs"),
+    (S.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram"),
+    (S.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter"),
+    (S.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
+    (S.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
+    S);
+(j(z),
+    j(Z),
     Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     }));
-let z = "dQw4w9WgXcQ:",
-    Z = null,
-    ee = window.DiscordNative;
-null != ee && (Z = ee.safeStorage);
-let et = !1,
-    eE = {},
-    en = !1;
-function er(e) {
+let ee = "dQw4w9WgXcQ:",
+    et = null,
+    eE = window.DiscordNative;
+null != eE && (et = eE.safeStorage);
+let en = !1,
+    er = {},
+    ei = !1;
+function e_(e) {
     return null == e || 0 === e.length
         ? { decryptedToken: null, wasEncrypted: !1 }
-        : Z?.isEncryptionAvailable() && e.startsWith(z)
-          ? { decryptedToken: Z.decryptString(e.substring(z.length)), wasEncrypted: !0 }
+        : et?.isEncryptionAvailable() && e.startsWith(ee)
+          ? { decryptedToken: et.decryptString(e.substring(ee.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-var ei =
-        (((S = {})[(S.DISPATCH = 0)] = "DISPATCH"),
-        (S[(S.HEARTBEAT = 1)] = "HEARTBEAT"),
-        (S[(S.IDENTIFY = 2)] = "IDENTIFY"),
-        (S[(S.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
-        (S[(S.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
-        (S[(S.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
-        (S[(S.RESUME = 6)] = "RESUME"),
-        (S[(S.RECONNECT = 7)] = "RECONNECT"),
-        (S[(S.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
-        (S[(S.INVALID_SESSION = 9)] = "INVALID_SESSION"),
-        (S[(S.HELLO = 10)] = "HELLO"),
-        (S[(S.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
-        (S[(S.CALL_CONNECT = 13)] = "CALL_CONNECT"),
-        (S[(S.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
-        (S[(S.STREAM_CREATE = 18)] = "STREAM_CREATE"),
-        (S[(S.STREAM_DELETE = 19)] = "STREAM_DELETE"),
-        (S[(S.STREAM_WATCH = 20)] = "STREAM_WATCH"),
-        (S[(S.STREAM_PING = 21)] = "STREAM_PING"),
-        (S[(S.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
-        (S[(S.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
-        (S[(S.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
-        (S[(S.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
-        (S[(S.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
-        (S[(S.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
-        (S[(S.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
-        (S[(S.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
-        (S[(S.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
-        (S[(S.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
-        (S[(S.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
-        (S[(S.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
-        (S[(S.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
-        (S[(S.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
-        S),
-    e_ = E(377941),
-    eo = E.n(e_),
-    eI =
-        (((T = {}).ALL = "ALL"),
-        (T.AVATAR_DECORATION = "AVATAR_DECORATION"),
-        (T.PROFILE_EFFECT = "PROFILE_EFFECT"),
-        (T.NAMEPLATE = "NAMEPLATE"),
-        (T.PROFILE_FRAME = "PROFILE_FRAME"),
-        (T.BUNDLE = "BUNDLE"),
+var eo =
+        (((T = {})[(T.DISPATCH = 0)] = "DISPATCH"),
+        (T[(T.HEARTBEAT = 1)] = "HEARTBEAT"),
+        (T[(T.IDENTIFY = 2)] = "IDENTIFY"),
+        (T[(T.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
+        (T[(T.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
+        (T[(T.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
+        (T[(T.RESUME = 6)] = "RESUME"),
+        (T[(T.RECONNECT = 7)] = "RECONNECT"),
+        (T[(T.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
+        (T[(T.INVALID_SESSION = 9)] = "INVALID_SESSION"),
+        (T[(T.HELLO = 10)] = "HELLO"),
+        (T[(T.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
+        (T[(T.CALL_CONNECT = 13)] = "CALL_CONNECT"),
+        (T[(T.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
+        (T[(T.STREAM_CREATE = 18)] = "STREAM_CREATE"),
+        (T[(T.STREAM_DELETE = 19)] = "STREAM_DELETE"),
+        (T[(T.STREAM_WATCH = 20)] = "STREAM_WATCH"),
+        (T[(T.STREAM_PING = 21)] = "STREAM_PING"),
+        (T[(T.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
+        (T[(T.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
+        (T[(T.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
+        (T[(T.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
+        (T[(T.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
+        (T[(T.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
+        (T[(T.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
+        (T[(T.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
+        (T[(T.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
+        (T[(T.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
+        (T[(T.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
+        (T[(T.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
+        (T[(T.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
+        (T[(T.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         T),
-    el = (((O = {}).ASC = "asc"), (O.DESC = "desc"), O),
+    eI = E(377941),
+    el = E.n(eI),
     es =
-        (((R = {}).PRICE = "price"),
-        (R.ALPHABETICAL = "alphabetical"),
-        (R.RECENCY = "recency"),
-        (R.POPULARITY = "popularity"),
-        (R.RELEVANCE = "relevance"),
-        R),
-    ea =
-        (((N = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
-        (N.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
-        (N.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
-        N),
+        (((O = {}).ALL = "ALL"),
+        (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
+        (O.PROFILE_EFFECT = "PROFILE_EFFECT"),
+        (O.NAMEPLATE = "NAMEPLATE"),
+        (O.PROFILE_FRAME = "PROFILE_FRAME"),
+        (O.BUNDLE = "BUNDLE"),
+        O),
+    ea = (((R = {}).ASC = "asc"), (R.DESC = "desc"), R),
     eA =
+        (((N = {}).PRICE = "price"),
+        (N.ALPHABETICAL = "alphabetical"),
+        (N.RECENCY = "recency"),
+        (N.POPULARITY = "popularity"),
+        (N.RELEVANCE = "relevance"),
+        N),
+    eS =
+        (((u = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
+        (u.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
+        (u.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        u),
+    eT =
         (((c = {}).HOME = "home"),
         (c.CATALOG = "catalog"),
         (c.ORBS = "orbs"),
@@ -743,34 +748,34 @@ var ei =
         c);
 (Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",
-    FRACTIONAL_PREMIUM: ea.PREMIUM_TIER_2_3_DAY,
-    FRACTIONAL_PREMIUM_1_DAY: ea.PREMIUM_TIER_2_1_DAY,
+    FRACTIONAL_PREMIUM: eS.PREMIUM_TIER_2_3_DAY,
+    FRACTIONAL_PREMIUM_1_DAY: eS.PREMIUM_TIER_2_1_DAY,
 }),
-    eI.AVATAR_DECORATION,
-    eI.NAMEPLATE,
-    eI.PROFILE_EFFECT,
-    eI.PROFILE_FRAME,
-    eI.BUNDLE,
-    es.RELEVANCE,
-    el.DESC,
-    es.RECENCY,
-    el.DESC,
-    es.PRICE,
-    el.ASC,
-    es.PRICE,
-    el.DESC,
-    es.POPULARITY,
-    el.DESC);
-var eS = (((u = {}).ABOUT = "about"), (u.STORE = "store"), u),
-    eT =
-        (((L = {}).GENERAL = "general"),
-        (L.IMAGES = "images"),
-        (L.PREMIUM_DEPRECATED = "premium"),
-        (L.STORE = "store"),
-        (L.PRIVACY = "privacy"),
-        L);
-let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
-    eR = K(
+    es.AVATAR_DECORATION,
+    es.NAMEPLATE,
+    es.PROFILE_EFFECT,
+    es.PROFILE_FRAME,
+    es.BUNDLE,
+    eA.RELEVANCE,
+    ea.DESC,
+    eA.RECENCY,
+    ea.DESC,
+    eA.PRICE,
+    ea.ASC,
+    eA.PRICE,
+    ea.DESC,
+    eA.POPULARITY,
+    ea.DESC);
+var eO = (((L = {}).ABOUT = "about"), (L.STORE = "store"), L),
+    eR =
+        (((d = {}).GENERAL = "general"),
+        (d.IMAGES = "images"),
+        (d.PREMIUM_DEPRECATED = "premium"),
+        (d.STORE = "store"),
+        (d.PRIVACY = "privacy"),
+        d);
+let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
+    eu = j(
         Object.freeze({
             INDEX: "/",
             APP: "/app",
@@ -876,7 +881,7 @@ let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
-            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eS.STORE}/${t}`,
+            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eO.STORE}/${t}`,
             GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
             GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
             GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -913,7 +918,7 @@ let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             APPLICATION_DIRECTORY: "/application-directory",
             APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
             APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eT.STORE}/${t}`,
+            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eR.STORE}/${t}`,
             APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
             FAMILY_CENTER: "/family-center",
             FAMILY_CENTER_MY_FAMILY: (e, t) => `/feature/family-center/my-family/${e}/${t}`,
@@ -931,7 +936,7 @@ let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             REPORT_SECOND_LOOK: "/report-review",
             COLLECTIBLES_SHOP: "/shop",
             COLLECTIBLES_SHOP_GAME_SHOP: (e, t, E, n) => {
-                let r = `/shop?tab=${eA.GAME_SHOPS}&applicationId=${e}`;
+                let r = `/shop?tab=${eT.GAME_SHOPS}&applicationId=${e}`;
                 return (
                     null != t && (r += `&pageIndex=${t}`),
                     null != E && (r += `&skuId=${E}`),
@@ -960,30 +965,30 @@ let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
         }),
         [":", "?", "@"],
     ),
-    eN = new Set(
+    ec = new Set(
         Object.values(
-            (((d = {}).CONJURE = "conjuring"),
-            (d.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
-            (d.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
-            (d.GAME_SHOP = "game-shop"),
-            (d.GUILD_SHOP = "shop"),
-            (d.MEMBER_APPLICATIONS = "member-applications"),
-            (d.GUILD_HOME = "@home"),
-            (d.CHANNEL_BROWSER = "channel-browser"),
-            (d.GUILD_ONBOARDING = "onboarding"),
-            (d.CUSTOMIZE_COMMUNITY = "customize-community"),
-            (d.MEMBER_SAFETY = "member-safety"),
-            (d.GUILD_BOOSTS = "boosts"),
-            (d.GAME_SERVERS = "game-servers"),
-            (d.REPORT_TO_MOD = "report-to-mod"),
-            (d.GUILD_OFFICIAL_MESSAGES = "official-messages"),
-            (d.GUILD_SPACE = "guild-space"),
-            d),
+            (((C = {}).CONJURE = "conjuring"),
+            (C.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+            (C.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
+            (C.GAME_SHOP = "game-shop"),
+            (C.GUILD_SHOP = "shop"),
+            (C.MEMBER_APPLICATIONS = "member-applications"),
+            (C.GUILD_HOME = "@home"),
+            (C.CHANNEL_BROWSER = "channel-browser"),
+            (C.GUILD_ONBOARDING = "onboarding"),
+            (C.CUSTOMIZE_COMMUNITY = "customize-community"),
+            (C.MEMBER_SAFETY = "member-safety"),
+            (C.GUILD_BOOSTS = "boosts"),
+            (C.GAME_SERVERS = "game-servers"),
+            (C.REPORT_TO_MOD = "report-to-mod"),
+            (C.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+            (C.GUILD_SPACE = "guild-space"),
+            C),
         ),
     );
-function ec(e, t) {
+function eL(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return new k(`:${eo()(e)}(${t})${E ? "?" : ""}`);
+    return new x(`:${el()(e)}(${t})${E ? "?" : ""}`);
 }
 (Object.freeze({
     GUILD_FEED_REMOVED: 1,
@@ -1007,81 +1012,81 @@ function ec(e, t) {
     HAS_ONLY_SYSTEM_MESSAGES: 8388608,
 }),
     Object.values(
-        (((C = {}).GUILD_HOME = "home"),
-        (C.SERVER_GUIDE = "guide"),
-        (C.CHANNEL_BROWSER = "browse"),
-        (C.CUSTOMIZE_COMMUNITY = "customize"),
-        (C.LINKED_ROLES = "linked-roles"),
-        C),
+        (((p = {}).GUILD_HOME = "home"),
+        (p.SERVER_GUIDE = "guide"),
+        (p.CHANNEL_BROWSER = "browse"),
+        (p.CUSTOMIZE_COMMUNITY = "customize"),
+        (p.LINKED_ROLES = "linked-roles"),
+        p),
     ));
-let eu = {
+let ed = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = eO.map(eo()).join("|");
-        return ec(e, `${E}|\\d+`, { optional: t });
+            E = eN.map(el()).join("|");
+        return eL(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...eN].map(eo()).join("|");
-        return ec(e, `${E}|\\d+`, { optional: t });
+            E = [...ec].map(el()).join("|");
+        return eL(e, `${E}|\\d+`, { optional: t });
     },
 };
-var eL = E(806163);
-let ed = new Set([
-    eR.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
-    eR.APP_WITH_GIFT_CODE(":giftCode"),
-    eR.APP,
-    eR.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-    eR.SETTINGS(":section", ":subsection?"),
-    eR.USER_GUILD_NOTIFICATION_SETTINGS(eu.guildId()),
-    eR.APPLICATION_LIBRARY_INVENTORY,
-    eR.WELCOME(eu.guildId({ optional: !0 }), eu.channelId({ optional: !0 })),
-    eR.GUILD_EVENT_DETAILS(eu.guildId({ optional: !0 }), ":guildEventId"),
-    eR.GUILD_SETTINGS(eu.guildId(), ":section?", ":subsection?"),
-    eR.CHANNEL_THREAD_VIEW(eu.guildId(), eu.channelId(), ":threadId", ":messageId?"),
-    eR.CHANNEL(eu.guildId(), eu.channelId({ optional: !0 }), ":messageId?"),
-    eR.ACTIVITY,
-    eR.ACTIVITIES,
-    eR.ACTIVITIES_HAPPENING_NOW,
-    eR.ACTIVITY_DETAILS(":applicationId"),
-    eR.APPLICATION_LIBRARY,
-    eR.APPLICATION_STORE,
-    eR.MESSAGE_REQUESTS,
-    eR.COLLECTIBLES_SHOP,
-    eR.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
-    eR.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-    eR.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
-    eR.GUILD_DISCOVERY,
-    eR.QUEST_HOME_DEPRECATED,
-    eR.QUEST_HOME,
-    eR.ICYMI,
-    eR.GLOBAL_DISCOVERY,
-    eR.GUILD_MEMBER_VERIFICATION(eu.guildId()),
-    eR.GUILD_MEMBER_VERIFICATION_FOR_HUB(eu.guildId(), ":inviteCode?"),
-    eR.GUILD_BOOSTING_MARKETING(eu.guildId()),
-    eR.GUILD_FEATURE(":feature", eu.guildId()),
-    eR.FEATURE(":feature"),
-    eR.FAMILY_CENTER,
-    eR.APPLICATION_DIRECTORY,
-    eR.GAME_SHOP(eu.guildId(), ":shopSkuId?", ":shopSlug?"),
+var eC = E(806163);
+let ep = new Set([
+    eu.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
+    eu.APP_WITH_GIFT_CODE(":giftCode"),
+    eu.APP,
+    eu.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+    eu.SETTINGS(":section", ":subsection?"),
+    eu.USER_GUILD_NOTIFICATION_SETTINGS(ed.guildId()),
+    eu.APPLICATION_LIBRARY_INVENTORY,
+    eu.WELCOME(ed.guildId({ optional: !0 }), ed.channelId({ optional: !0 })),
+    eu.GUILD_EVENT_DETAILS(ed.guildId({ optional: !0 }), ":guildEventId"),
+    eu.GUILD_SETTINGS(ed.guildId(), ":section?", ":subsection?"),
+    eu.CHANNEL_THREAD_VIEW(ed.guildId(), ed.channelId(), ":threadId", ":messageId?"),
+    eu.CHANNEL(ed.guildId(), ed.channelId({ optional: !0 }), ":messageId?"),
+    eu.ACTIVITY,
+    eu.ACTIVITIES,
+    eu.ACTIVITIES_HAPPENING_NOW,
+    eu.ACTIVITY_DETAILS(":applicationId"),
+    eu.APPLICATION_LIBRARY,
+    eu.APPLICATION_STORE,
+    eu.MESSAGE_REQUESTS,
+    eu.COLLECTIBLES_SHOP,
+    eu.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
+    eu.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
+    eu.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
+    eu.GUILD_DISCOVERY,
+    eu.QUEST_HOME_DEPRECATED,
+    eu.QUEST_HOME,
+    eu.ICYMI,
+    eu.GLOBAL_DISCOVERY,
+    eu.GUILD_MEMBER_VERIFICATION(ed.guildId()),
+    eu.GUILD_MEMBER_VERIFICATION_FOR_HUB(ed.guildId(), ":inviteCode?"),
+    eu.GUILD_BOOSTING_MARKETING(ed.guildId()),
+    eu.GUILD_FEATURE(":feature", ed.guildId()),
+    eu.FEATURE(":feature"),
+    eu.FAMILY_CENTER,
+    eu.APPLICATION_DIRECTORY,
+    eu.GAME_SHOP(ed.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
 !(function () {
     if (null == window.WebSocket || null == window._ws) return;
     let e =
         ((function () {
-            if (en) return;
-            ((o = n.get("token")), (eE = n.get("tokens") || {}));
-            let { decryptedToken: e, wasEncrypted: t } = er(o);
-            ((et = t),
+            if (ei) return;
+            ((o = n.get("token")), (er = n.get("tokens") || {}));
+            let { decryptedToken: e, wasEncrypted: t } = e_(o);
+            ((en = t),
                 (_ = e),
                 [
-                    ...Object.entries(eE)
+                    ...Object.entries(er)
                         .map((e) => {
                             let [t, E] = e,
-                                { decryptedToken: n, wasEncrypted: r } = er(E);
-                            return ((et = r || et), [t, n]);
+                                { decryptedToken: n, wasEncrypted: r } = e_(E);
+                            return ((en = r || en), [t, n]);
                         })
                         .filter((e) => {
                             let [t, E] = e;
@@ -1091,7 +1096,7 @@ let ed = new Set([
                     let [E, n] = t;
                     return ((e[E] = n), e);
                 }, {}),
-                (en = !0));
+                (ei = !0));
         })(),
         _);
     if (null == e || __OVERLAY__) return;
@@ -1104,7 +1109,7 @@ let ed = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of ed) if (null != (0, eL.B6)(e, { path: t })) return !0;
+                for (let t of ep) if (null != (0, eC.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )
@@ -1125,7 +1130,7 @@ let ed = new Set([
         }
         let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
         var o = r({
-            op: ei.IDENTIFY,
+            op: eo.IDENTIFY,
             d: {
                 token: e,
                 capabilities: (function (e) {
