@@ -1,15 +1,14 @@
-n.d(t, { R: () => m, p: () => l });
+n.d(t, { R: () => l, p: () => s });
 var o = n(477900),
     a = n(582128),
-    i = n(66713),
-    u = n(284009),
-    r = n.n(u);
-let s = 588245 != n.j ? a.createContext(void 0) : null;
-function l(e) {
+    i = n(284009),
+    u = n.n(i);
+let r = 588245 != n.j ? a.createContext(void 0) : null;
+function s(e) {
     let { children: t } = e,
         [n, i] = a.useState(null),
         u = a.useMemo(() => ({ setComponentToSnapshot: i }), [i]);
-    return (0, o.jsxs)(s.Provider, {
+    return (0, o.jsxs)(r.Provider, {
         value: u,
         children: [
             t,
@@ -22,29 +21,30 @@ function l(e) {
         ],
     });
 }
-function m(e) {
-    let { renderComponent: t, imageOptions: n } = e,
-        o = a.useContext(s);
-    r()(null != o, "useComponentToImageContext must be used within a ComponentToImageProvider");
-    let [u, l] = a.useState(!1);
+function l(e) {
+    let { renderComponent: t, imageOptions: o } = e,
+        i = a.useContext(r);
+    u()(null != i, "useComponentToImageContext must be used within a ComponentToImageProvider");
+    let [s, l] = a.useState(!1);
     return {
-        generatingImage: u,
+        generatingImage: s,
         generateImage: function () {
             return (
-                r()(null != o, "useComponentToImageContext must be used within a ComponentToImageProvider"),
+                u()(null != i, "useComponentToImageContext must be used within a ComponentToImageProvider"),
                 new Promise((e, a) => {
-                    async function u(t) {
-                        r()(null != o, "useComponentToImageContext must be used within a ComponentToImageProvider");
+                    async function r(t) {
+                        u()(null != i, "useComponentToImageContext must be used within a ComponentToImageProvider");
                         try {
-                            let o = await (0, i.ZR)(t, n);
-                            (r()(null != o, "Unable to generate image"), e(o));
+                            let { snapdom: a } = await n.e("763632").then(n.bind(n, 588339)),
+                                i = await a.toBlob(t, { ...o, format: "png" });
+                            (u()(null != i, "Unable to generate image"), e(i));
                         } catch (e) {
                             a(e);
                         } finally {
-                            (l(!1), o.setComponentToSnapshot(null));
+                            (l(!1), i.setComponentToSnapshot(null));
                         }
                     }
-                    (l(!0), o.setComponentToSnapshot(t({ generateImageRef: u })));
+                    (l(!0), i.setComponentToSnapshot(t({ generateImageRef: r })));
                 })
             );
         },

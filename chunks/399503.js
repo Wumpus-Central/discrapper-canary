@@ -42,7 +42,7 @@ function b(e) {
 function v(e, t) {
     let { generateImage: i } = (0, s.R)({
             renderComponent: (e) => (null == t ? null : (0, a.jsx)(b, { ...e, applicationId: t })),
-            imageOptions: { pixelRatio: 2, cacheBust: !1 },
+            imageOptions: { scale: 2, dpr: 1 },
         }),
         l = r.useRef(i);
     (r.useLayoutEffect(() => {
