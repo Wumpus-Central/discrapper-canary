@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 635728, Version Hash: 829ae2f94f8405c17e54f3c0d21fd70151904fd8`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 635740, Version Hash: d5c938ad52c67946387e7c354cbee1c0cfbb3b43`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26062,7 +26062,7 @@ let y_ = "isHideDevBanner",
                     className: tE()(yu.Wz, yu.mr),
                     children: [
                         (0, M.jsx)(yc, { className: yu.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635728" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "635740" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -37998,7 +37998,7 @@ class UY extends nE.A {
                         { onCloseRequest: j.tEg, onCloseCallback: e, modalKey: r },
                     );
                 },
-                predicate: () => 0 === Ux.A.totalGuilds && !eB.isPlatformEmbedded,
+                predicate: () => 0 === Ux.A.totalGuilds && !eB.isPlatformEmbedded && i !== UF.zY.INVITE_UNCLAIMED,
             },
             { key: "New User Age Gate", open: lP.v, predicate: () => nM.xq() && !0 },
             {
