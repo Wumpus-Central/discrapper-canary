@@ -1,8 +1,8 @@
 let i, l, s;
 (n.d(t, { A: () => ee, y: () => v }), n(321073));
-var a,
-    r = n(435558),
-    o = n.n(r),
+var r,
+    a = n(435558),
+    o = n.n(a),
     d = n(136722),
     c = n(317097),
     u = n(17928),
@@ -20,7 +20,7 @@ var a,
     S = n(927573),
     C = n(652215),
     _ = n(178758),
-    v = (((a = {}).SOLID = "solid"), (a.GRADIENT = "gradient"), (a.HOLOGRAPHIC = "holographic"), a);
+    v = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
 let T = {
         [S.T$.DISPLAY]: [
             "name",
@@ -314,12 +314,12 @@ let $ = new Z(
                           l = q(t);
                       if (null == l) return !1;
                       let s = (0, h.K3)(n),
-                          a = P.get(t);
+                          r = P.get(t);
                       return (
-                          null != a &&
-                          ((a.styleColors[i] = n),
-                          (a.currentStyle = i),
-                          P.set(t, { ...a }),
+                          null != r &&
+                          ((r.styleColors[i] = n),
+                          (r.currentStyle = i),
+                          P.set(t, { ...r }),
                           X(l, { color: n.primary_color, colors: n, colorString: s.primaryColor, colorStrings: s }))
                       );
                   },
@@ -337,8 +337,8 @@ let $ = new Z(
                       let { id: t, section: n } = e,
                           l = Y(t, n);
                       if (null == l) return !1;
-                      let { fields: s, role: a, original: r } = l;
-                      (X(a, o().pick(r, s)), (s.includes("color") || s.includes("colors")) && z(i?.id, [r]));
+                      let { fields: s, role: r, original: a } = l;
+                      (X(r, o().pick(a, s)), (s.includes("color") || s.includes("colors")) && z(i?.id, [a]));
                   },
                   GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES: function (e) {
                       let { id: t } = e,
@@ -349,9 +349,9 @@ let $ = new Z(
                       let { id: t, section: n } = e,
                           i = Y(t, n);
                       if (null == i) return !1;
-                      let { fields: l, role: s, original: a } = i,
-                          r = { ...a, ...o().pick(s, l) };
-                      ((D = D.map((e) => (e.id === t ? r : e))), (0, j.nk)(s, r) && w(t));
+                      let { fields: l, role: s, original: r } = i,
+                          a = { ...r, ...o().pick(s, l) };
+                      ((D = D.map((e) => (e.id === t ? a : e))), (0, j.nk)(s, a) && w(t));
                   },
                   GUILD_SETTINGS_ROLE_SELECT: function (e) {
                       let { role: t, searchQuery: n } = e;
@@ -375,12 +375,12 @@ let $ = new Z(
                       if (null == l) return !1;
                       P.set(t, { currentStyle: n, styleColors: l.styleColors });
                       let s = l.styleColors[n],
-                          a = (0, h.K3)(s);
+                          r = (0, h.K3)(s);
                       return X(i, {
                           color: s.primary_color ?? void 0,
                           colors: s,
-                          colorString: a.primaryColor,
-                          colorStrings: a,
+                          colorString: r.primaryColor,
+                          colorStrings: r,
                       });
                   },
                   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {

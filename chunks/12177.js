@@ -1,4 +1,4 @@
-(n.d(t, { DM: () => o, ms: () => u, oB: () => s, $D: () => f, _m: () => c, Du: () => i, dz: () => m }),
+(n.d(t, { DM: () => o, ms: () => u, oB: () => s, $D: () => m, _m: () => c, Du: () => i, dz: () => f }),
     n(323874),
     n(14289),
     n(35956));
@@ -81,7 +81,7 @@ async function d(e, t) {
         }
     return a;
 }
-async function f(e, t) {
+async function m(e, t) {
     let { ticket: n, baseUrl: r } = await (0, l.d)(e),
         a = new URLSearchParams({ ticket: n });
     return d(
@@ -89,7 +89,7 @@ async function f(e, t) {
         await fetch(`${r}/agent/database/restore-points/${encodeURIComponent(t)}/restore?${a}`, { method: "POST" }),
     );
 }
-async function m(e, t, n) {
+async function f(e, t, n) {
     let { ticket: r, baseUrl: a } = await (0, l.d)(e),
         i = new URLSearchParams({ ticket: r });
     return d(

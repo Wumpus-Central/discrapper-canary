@@ -1,7 +1,7 @@
 t.d(n, { i: () => u });
 var l = t(73153),
-    r = t(976860),
-    a = t(696451),
+    a = t(976860),
+    r = t(696451),
     i = t(317525),
     o = t(71393),
     s = t(652215),
@@ -22,15 +22,15 @@ function u(e, n, t) {
                 break;
             case "linked-roles":
                 if (null != t) {
-                    let n = a.Ay.getSelfMember(e);
+                    let n = r.Ay.getSelfMember(e);
                     if (null == n) return;
-                    let r = i.A.getRole(e, t);
-                    null == r || n.roles.includes(r.id)
+                    let a = i.A.getRole(e, t);
+                    null == a || n.roles.includes(a.id)
                         ? l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e })
-                        : l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e, role: r });
+                        : l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e, role: a });
                 } else l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e });
         }
     function d(n) {
-        null != e && null != u && u.features.has(s.GuildFeatures.COMMUNITY) && (0, r.pX)(s.BVt.CHANNEL(e, n));
+        null != e && null != u && u.features.has(s.GuildFeatures.COMMUNITY) && (0, a.pX)(s.BVt.CHANNEL(e, n));
     }
 }

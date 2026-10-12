@@ -1,15 +1,15 @@
-(n.d(t, { k: () => u, p: () => a }), n(134528), n(947204));
-var r = n(28480);
-let i = new Map(),
-    l = new Map();
+(a.d(t, { k: () => u, p: () => r }), a(134528), a(947204));
+var n = a(28480);
+let p = new Map(),
+    s = new Map();
 function o(e, t) {
-    let n = l.get(e);
-    null != n && n.source !== t && Date.now() - n.at < 3e4
-        ? l.delete(e)
-        : (l.set(e, { source: t, at: Date.now() }), r.A.reloadAppFrames(e));
+    let a = s.get(e);
+    null != a && a.source !== t && Date.now() - a.at < 3e4
+        ? s.delete(e)
+        : (s.set(e, { source: t, at: Date.now() }), n.A.reloadAppFrames(e));
 }
-function a(e, t) {
-    return i.get(e) !== t && (i.set(e, t), o(e, "frame"), !0);
+function r(e, t) {
+    return p.get(e) !== t && (p.set(e, t), o(e, "frame"), !0);
 }
 function u(e) {
     o(e, "deploy");

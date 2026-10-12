@@ -1,7 +1,7 @@
 r.d(t, {
     B6: () => S,
-    Ix: () => y,
-    W5: () => D,
+    Ix: () => b,
+    W5: () => I,
     W6: () => P,
     XZ: () => g,
     dO: () => R,
@@ -125,7 +125,7 @@ var d = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
     },
     m = p("Router-History"),
     g = p("Router"),
-    y = (function (e) {
+    b = (function (e) {
         function t(t) {
             var r;
             return (
@@ -176,7 +176,7 @@ var d = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
         );
     })(a.Component);
 a.Component;
-var b = (function (e) {
+var y = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -232,7 +232,7 @@ function x(e) {
             );
         return i
             ? (u(h), null)
-            : a.createElement(b, {
+            : a.createElement(y, {
                   onMount: function () {
                       u(h);
                   },
@@ -369,7 +369,7 @@ function k() {
     var e = A(g).match;
     return e ? e.params : {};
 }
-function D(e) {
+function I(e) {
     var t = T(),
         r = A(g).match;
     return e ? S(t.pathname, e) : r;

@@ -1,6 +1,6 @@
-n.d(t, { r: () => s });
-var l = n(705751);
+n.d(l, { r: () => s });
+var t = n(705751);
 function s(e) {
-    let t;
-    return (e.isSystemUser() ? (t = l.nu.SYSTEM_DM) : e.bot && (t = l.nu.BOT), t);
+    let l;
+    return (e.isSystemUser() ? (l = t.nu.SYSTEM_DM) : e.bot && (l = t.nu.BOT), l);
 }

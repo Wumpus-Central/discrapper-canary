@@ -1,21 +1,21 @@
-i.d(t, { A: () => l });
-var s = i(582128),
-    n = i(17928),
-    r = i(885386),
-    a = i(994500);
-function l(e) {
-    let t = r.j0.useSetting(),
-        { isBlocked: i, isIgnored: l } = (0, n.cf)([a.A], () => ({
-            isBlocked: a.A.isBlocked(e),
-            isIgnored: a.A.isIgnored(e),
+t.d(i, { A: () => a });
+var s = t(582128),
+    n = t(17928),
+    r = t(885386),
+    l = t(994500);
+function a(e) {
+    let i = r.j0.useSetting(),
+        { isBlocked: t, isIgnored: a } = (0, n.cf)([l.A], () => ({
+            isBlocked: l.A.isBlocked(e),
+            isIgnored: l.A.isIgnored(e),
         })),
-        [c, o] = (0, s.useState)(i || l);
+        [c, d] = (0, s.useState)(t || a);
     return (
-        (0, s.useEffect)(() => o(i || l), [i, l]),
+        (0, s.useEffect)(() => d(t || a), [t, a]),
         [
-            c && !(l && t),
+            c && !(a && i),
             (0, s.useCallback)(() => {
-                o(!1);
+                d(!1);
             }, []),
         ]
     );

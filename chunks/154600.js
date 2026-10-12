@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Vs: "tile__1526b",
     mY: "tileLarge__1526b",
     sT: "tileSmall__1526b",

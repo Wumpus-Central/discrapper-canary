@@ -1,4 +1,4 @@
-e.d(l, { A: () => s });
+e.d(n, { A: () => s });
 var t = e(91242),
     i = e(457827),
     c = e(574172),
@@ -7,22 +7,22 @@ var t = e(91242),
     r = e(808728),
     d = e(576705),
     a = e(652215);
-function s(n, l, e) {
-    (null != n &&
+function s(l, n, e) {
+    (null != l &&
         o.A.getWindowOpen(a.MLl.ACTIVITY_POPOUT) &&
-        t.A.getMainFrame()?.id === n &&
+        t.A.getMainFrame()?.id === l &&
         (0, c.close)(a.MLl.ACTIVITY_POPOUT),
-        (0, i.r)(n),
+        (0, i.r)(l),
         (0, u.pX)(
-            (function (n, l) {
-                if (null == n) return a.BVt.FRIENDS;
-                let e = r.Ay.getDefaultChannel(n);
-                if (null != e && e.id !== l) return a.BVt.CHANNEL(n, e.id);
-                let t = r.Ay.getFirstChannel(n, (n) => {
-                    let { channel: e } = n;
-                    return e.id !== l && d.A.can(a.xBc.VIEW_CHANNEL, e);
+            (function (l, n) {
+                if (null == l) return a.BVt.FRIENDS;
+                let e = r.Ay.getDefaultChannel(l);
+                if (null != e && e.id !== n) return a.BVt.CHANNEL(l, e.id);
+                let t = r.Ay.getFirstChannel(l, (l) => {
+                    let { channel: e } = l;
+                    return e.id !== n && d.A.can(a.xBc.VIEW_CHANNEL, e);
                 });
-                return null != t ? a.BVt.CHANNEL(n, t.id) : a.BVt.FRIENDS;
-            })(l, e),
+                return null != t ? a.BVt.CHANNEL(l, t.id) : a.BVt.FRIENDS;
+            })(n, e),
         ));
 }

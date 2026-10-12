@@ -2,8 +2,8 @@
 var i = n(582128),
     l = n(975807),
     s = n(660183),
-    a = n(975571),
-    r = n(477900),
+    r = n(975571),
+    a = n(477900),
     o = n(95035),
     d = n(702841),
     c = n(555337),
@@ -30,16 +30,16 @@ function h(e) {
         E = (function (e) {
             let { onEnableMFAClick: t, onMFAEnabled: n } = e,
                 { isUserMFAEnabled: l, isModerationMFAEnabled: s } = g(),
-                a = i.useCallback(async () => {
+                r = i.useCallback(async () => {
                     (await t(), n?.());
                 }, [t, n]),
-                d = i.useCallback((e) => (0, r.jsx)(o.A, { onClick: a, children: e }), [a]);
+                d = i.useCallback((e) => (0, a.jsx)(o.A, { onClick: r, children: e }), [r]);
             return l && s ? x : d;
         })({ onEnableMFAClick: h });
     return i.useMemo(() => {
         var t;
         if (null == e) return null;
-        let { minimumOwnerAgeInYears: i, minimumSize: r } = e,
+        let { minimumOwnerAgeInYears: i, minimumSize: a } = e,
             o = !e.noRecentViolations,
             g = [
                 {
@@ -47,13 +47,13 @@ function h(e) {
                     checkedLabel: s.intl.string(s.t["1lGNPZ"]),
                     uncheckedLabel: s.intl.string(s.t["D+gTJt"]),
                     description: s.intl.format(s.t.HFY0m6, {
-                        communityGuidelinesUrl: a.A.getArticleURL(m.MVz.PUBLIC_GUILD_GUILDLINES),
+                        communityGuidelinesUrl: r.A.getArticleURL(m.MVz.PUBLIC_GUILD_GUILDLINES),
                     }),
                     checked: e.noRecentViolations,
                     actionLabel: o ? s.intl.string(s.t["xU2fl+"]) : void 0,
                     actionHandler: o
                         ? function () {
-                              return (0, l.A)(a.A.getSubmitRequestURL());
+                              return (0, l.A)(r.A.getSubmitRequestURL());
                           }
                         : void 0,
                 },
@@ -68,13 +68,13 @@ function h(e) {
                     description: s.intl.formatToPlainString(s.t.DW1Vae, { minimumOwnerAgeInYears: i }),
                     checked: e.meetsOwnerAgeRequirement,
                 }),
-            null != r &&
+            null != a &&
                 null != e.hasSufficientMembers &&
                 g.push({
                     key: "member_count_requirement",
                     checkedLabel: s.intl.string(s.t.j7wXWo),
                     uncheckedLabel: s.intl.string(s.t.W0suNz),
-                    description: s.intl.formatToPlainString(s.t.up53zR, { minimumSize: r }),
+                    description: s.intl.formatToPlainString(s.t.up53zR, { minimumSize: a }),
                     checked: e.hasSufficientMembers,
                 }),
             null != e.minimumAgeInDays &&

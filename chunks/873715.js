@@ -1,10 +1,10 @@
-n.d(t, { J: () => l });
-var r = n(884868),
-    i = n(192888);
-function l(e, t, n) {
-    return (0, i.W)(e, "control", n, {
+n.d(t, { J: () => a });
+var i = n(884868),
+    r = n(192888);
+function a(e, t, n) {
+    return (0, r.W)(e, "control", n, {
         id: t,
-        timeoutMs: (0, r.d5)(n),
+        timeoutMs: (0, i.d5)(n),
         retryMs: 400,
         sourceMatch: "origin",
         label: "control",
@@ -14,7 +14,7 @@ function l(e, t, n) {
                 ? { status: "completed", response: e }
                 : { status: "failed", message: "the preview frame returned a malformed control result" },
         (e) =>
-            e instanceof r.fq
+            e instanceof i.fq
                 ? { status: "failed", message: "the preview frame did not answer the control batch" }
                 : { status: "unavailable" },
     );

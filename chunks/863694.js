@@ -7,14 +7,14 @@ var i = n(435558),
     d = n(555337),
     o = n(652215);
 let c = !1,
-    u = null,
-    I = new Set();
+    I = null,
+    u = new Set();
 function E() {
     ((c = !1),
-        (u = null),
-        null != (u = d.A.getGuildId()) &&
+        (I = null),
+        null != (I = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            (I = new Set(a.A.getDefaultChannelIds(u))));
+            (u = new Set(a.A.getDefaultChannelIds(I))));
 }
 class N extends s.Ay.Store {
     static displayName = "GuildSettingsDefaultChannelsStore";
@@ -22,19 +22,19 @@ class N extends s.Ay.Store {
         this.waitFor(d.A, a.A);
     }
     hasChanges() {
-        if (null == u) return !1;
-        let t = a.A.getDefaultChannelIds(u).sort(),
-            e = Array.from(I).sort();
+        if (null == I) return !1;
+        let t = a.A.getDefaultChannelIds(I).sort(),
+            e = Array.from(u).sort();
         return !l().isEqual(t, e);
     }
     get guildId() {
-        return u;
+        return I;
     }
     get submitting() {
         return c;
     }
     get editedDefaultChannelIds() {
-        return I;
+        return u;
     }
 }
 let S = new N(r.h, {
@@ -48,7 +48,7 @@ let S = new N(r.h, {
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (t) {
         let { channelId: e } = t;
-        (I = new Set(I)).has(e) ? I.delete(e) : I.add(e);
+        (u = new Set(u)).has(e) ? u.delete(e) : u.add(e);
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
         c = !0;

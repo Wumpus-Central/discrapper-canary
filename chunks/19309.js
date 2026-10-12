@@ -1,5 +1,5 @@
-n.d(t, { A: () => l });
-function l(e) {
-    let t = e?.getBoundingClientRect();
-    return null == t ? null : { x: t.left, y: t.top };
+n.d(l, { A: () => t });
+function t(e) {
+    let l = e?.getBoundingClientRect();
+    return null == l ? null : { x: l.left, y: l.top };
 }

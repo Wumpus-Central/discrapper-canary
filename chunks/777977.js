@@ -1,23 +1,23 @@
-t.d(u, { $P: () => r, Eh: () => f, OR: () => o, Ps: () => c });
-let l = null,
-    i = new Set();
-function e() {
-    for (let n of i) n();
+n.d(t, { $P: () => d, Eh: () => o, OR: () => l, Ps: () => s });
+let i = null,
+    r = new Set();
+function a() {
+    for (let e of r) e();
 }
-function c(n) {
-    ((l = { ...n }), e());
+function s(e) {
+    ((i = { ...e }), a());
 }
-function o(n) {
-    null != l && (null == n || l.iframeId === n) && ((l = null), e());
+function l(e) {
+    null != i && (null == e || i.iframeId === e) && ((i = null), a());
 }
-function f() {
-    return l;
+function o() {
+    return i;
 }
-function r(n) {
+function d(e) {
     return (
-        i.add(n),
+        r.add(e),
         () => {
-            i.delete(n);
+            r.delete(e);
         }
     );
 }

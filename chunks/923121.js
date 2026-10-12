@@ -2,8 +2,8 @@
 var i = n(73153),
     l = n(157559),
     s = n(913122),
-    a = n(403362),
-    r = n(352821),
+    r = n(403362),
+    a = n(352821),
     o = n(107795),
     d = n(539916),
     c = n(660183);
@@ -23,7 +23,7 @@ function h() {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_RESET" });
 }
 async function E(e) {
-    let t = r.A.getEditedConnections(),
+    let t = a.A.getEditedConnections(),
         n = [];
     if (
         (t.forEach((e) => {
@@ -46,7 +46,7 @@ async function E(e) {
             i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_SUCCESS", guildId: u, connections: m }));
     } catch (i) {
         let { fieldName: e, error: t } = new s.LG(i).getAnyErrorMessageAndField() ?? {},
-            n = [e, t].filter(a.Vq).join(": ");
+            n = [e, t].filter(r.Vq).join(": ");
         throw (j([n]), l.A.show({ title: c.intl.string(c.t.iLdiqY), body: n }), i);
     }
 }
@@ -55,5 +55,5 @@ function j(e) {
 }
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t || r.A.hasChanges() ? E(e) : Promise.resolve();
+    return t || a.A.hasChanges() ? E(e) : Promise.resolve();
 }

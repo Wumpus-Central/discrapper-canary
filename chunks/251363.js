@@ -1,15 +1,15 @@
-n.d(t, { i: () => o, o: () => l });
-var r = n(884868),
-    i = n(192888);
-function l(e, t) {
+n.d(t, { i: () => s, o: () => a });
+var i = n(884868),
+    r = n(192888);
+function a(e, t) {
     let n = e?.querySelector("iframe");
     return null != n ? n : null == t ? null : document.querySelector(`[data-frame-id="${CSS.escape(t)}"] iframe`);
 }
-function o(e, t, n, l) {
-    return (0, i.W)(
+function s(e, t, n, a) {
+    return (0, r.W)(
         e,
         "capture-now",
-        { ...(null == n ? {} : { spec: n }), ...(null == l ? {} : { uploadToken: l }) },
+        { ...(null == n ? {} : { spec: n }), ...(null == a ? {} : { uploadToken: a }) },
         { id: t, timeoutMs: 8e3, retryMs: 400, sourceMatch: "origin", label: "capture-now" },
     ).then(
         (e) =>
@@ -17,6 +17,6 @@ function o(e, t, n, l) {
             "accepted" === e.phase)
                 ? { status: "accepted" }
                 : { status: "failed", code: e.code, message: e.error },
-        (e) => (e instanceof r.fq ? { status: "failed" } : { status: "unavailable" }),
+        (e) => (e instanceof i.fq ? { status: "failed" } : { status: "unavailable" }),
     );
 }

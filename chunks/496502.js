@@ -1,21 +1,21 @@
-n.d(t, { v: () => u });
-var l = n(477900),
+n.d(t, { v: () => c });
+var i = n(477900),
     s = n(582128),
-    i = n(442433),
-    a = n(71393),
-    r = n(287809),
+    l = n(442433),
+    r = n(71393),
+    a = n(287809),
     o = n(158045);
-function u(e, t) {
+function c(e, t) {
     return s.useCallback(
         (s) => {
-            let u;
+            let c;
             s.stopPropagation();
-            let c = a.A.getGuild(e.guildId),
-                d = r.default.getCurrentUser();
-            (null != c || o.Ay.canUseCustomCallSounds(d)) &&
-                ((u = r.default.getCurrentUser()),
-                (null != c || o.Ay.canUseCustomCallSounds(u)) &&
-                    (0, i.L3)(s, async () => {
+            let d = r.A.getGuild(e.guildId),
+                u = a.default.getCurrentUser();
+            (null != d || o.Ay.canUseCustomCallSounds(u)) &&
+                ((c = a.default.getCurrentUser()),
+                (null != d || o.Ay.canUseCustomCallSounds(c)) &&
+                    (0, l.L3)(s, async () => {
                         let { default: s } = await Promise.all([
                             n.e("503376"),
                             n.e("926132"),
@@ -24,7 +24,7 @@ function u(e, t) {
                             n.e("482861"),
                             n.e("61440"),
                         ]).then(n.bind(n, 710339));
-                        return (n) => (0, l.jsx)(s, { ...n, soundGuild: c, activeCallGuildId: t, sound: e });
+                        return (n) => (0, i.jsx)(s, { ...n, soundGuild: d, activeCallGuildId: t, sound: e });
                     }));
         },
         [e, t],

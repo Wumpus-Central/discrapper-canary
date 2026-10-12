@@ -1,17 +1,17 @@
-let r, i;
-n.d(t, { Ie: () => f, NL: () => p, W8: () => h, X2: () => v, bq: () => w, nI: () => m, t$: () => o });
-var l = n(582128);
-let o = "data-conjure-agent-cursor",
-    a = null,
-    u = !1,
-    s = new Set();
-function d(e) {
-    for (let t of ((a = e), s)) t();
-}
+let i, r;
+n.d(t, { Ie: () => _, NL: () => A, W8: () => E, X2: () => p, bq: () => h, nI: () => f, t$: () => s });
+var a = n(582128);
+let s = "data-conjure-agent-cursor",
+    l = null,
+    o = !1,
+    d = new Set();
 function c(e) {
-    null != a && d({ ...a, ...e });
+    for (let t of ((l = e), d)) t();
 }
-function f(e) {
+function u(e) {
+    null != l && c({ ...l, ...e });
+}
+function _(e) {
     let t = e.getBoundingClientRect(),
         n = e.offsetWidth > 0 ? t.width / e.offsetWidth : 1;
     return {
@@ -22,36 +22,36 @@ function f(e) {
         scale: n,
     };
 }
-function h(e, t) {
-    if (((u = !0), clearTimeout(r), a?.projectId === e && a.iframe === t)) return void c({ shown: !0 });
+function E(e, t) {
+    if (((o = !0), clearTimeout(i), l?.projectId === e && l.iframe === t)) return void u({ shown: !0 });
     let n = Math.round(t.clientWidth / 2),
-        i = Math.round(t.clientHeight / 2);
-    d({ projectId: e, iframe: t, x: n, y: i, pressX: n, pressY: i, shown: !0, pressed: !1, presses: 0, dipping: !1 });
+        r = Math.round(t.clientHeight / 2);
+    c({ projectId: e, iframe: t, x: n, y: r, pressX: n, pressY: r, shown: !0, pressed: !1, presses: 0, dipping: !1 });
 }
-function p(e, t) {
-    let { x: n, y: r, type: l } = t;
-    if (a?.projectId === e) {
-        if ("mousePressed" !== l) return void c({ x: n, y: r, shown: !0, dipping: !1 });
-        (c({ x: n, y: r, pressX: n, pressY: r, shown: !0, pressed: !0, presses: a.presses + 1, dipping: !0 }),
-            clearTimeout(i),
-            (i = setTimeout(() => c({ pressed: !1 }), 140)));
+function A(e, t) {
+    let { x: n, y: i, type: a } = t;
+    if (l?.projectId === e) {
+        if ("mousePressed" !== a) return void u({ x: n, y: i, shown: !0, dipping: !1 });
+        (u({ x: n, y: i, pressX: n, pressY: i, shown: !0, pressed: !0, presses: l.presses + 1, dipping: !0 }),
+            clearTimeout(r),
+            (r = setTimeout(() => u({ pressed: !1 }), 140)));
     }
 }
-function w(e) {
-    a?.projectId === e &&
-        ((u = !1),
-        clearTimeout(r),
-        (r = setTimeout(() => {
-            u || c({ shown: !1 });
+function h(e) {
+    l?.projectId === e &&
+        ((o = !1),
+        clearTimeout(i),
+        (i = setTimeout(() => {
+            o || u({ shown: !1 });
         }, 8e3)));
 }
-function m(e) {
-    (null == a || a.projectId === e) && ((u = !1), clearTimeout(r), clearTimeout(i), d(null));
+function f(e) {
+    (null == l || l.projectId === e) && ((o = !1), clearTimeout(i), clearTimeout(r), c(null));
 }
-function g(e) {
-    return (s.add(e), () => s.delete(e));
+function I(e) {
+    return (d.add(e), () => d.delete(e));
 }
-function v(e) {
-    let t = l.useSyncExternalStore(g, () => a);
+function p(e) {
+    let t = a.useSyncExternalStore(I, () => l);
     return t?.projectId === e ? t : null;
 }

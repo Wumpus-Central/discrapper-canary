@@ -1,48 +1,48 @@
-i.d(t, { Ay: () => h, t$: () => d });
-var s = i(17928),
-    n = i(734057),
-    r = i(576705),
-    a = i(977997),
-    l = i(818348);
-let c = { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A },
-    o = Object.freeze({ voiceState: void 0, voiceChannel: void 0 });
-function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c,
-        i = (function (e) {
-            let { userId: t, guildId: i, includeNonDiscoverable: s = !1 } = e,
+t.d(i, { Ay: () => h, t$: () => o });
+var s = t(17928),
+    n = t(734057),
+    r = t(576705),
+    l = t(977997),
+    a = t(818348);
+let c = { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: l.A },
+    d = Object.freeze({ voiceState: void 0, voiceChannel: void 0 });
+function o(e) {
+    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c,
+        t = (function (e) {
+            let { userId: i, guildId: t, includeNonDiscoverable: s = !1 } = e,
                 n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
-            return null != i && null != t
+            return null != t && null != i
                 ? s
-                    ? n.VoiceStateStore.getVoiceState(i, t)
-                    : n.VoiceStateStore.getDiscoverableVoiceState(i, t)
-                : null != t
+                    ? n.VoiceStateStore.getVoiceState(t, i)
+                    : n.VoiceStateStore.getDiscoverableVoiceState(t, i)
+                : null != i
                   ? s
-                      ? n.VoiceStateStore.getVoiceStateForUser(t)
-                      : n.VoiceStateStore.getDiscoverableVoiceStateForUser(t)
+                      ? n.VoiceStateStore.getVoiceStateForUser(i)
+                      : n.VoiceStateStore.getDiscoverableVoiceStateForUser(i)
                   : void 0;
-        })(e, t),
+        })(e, i),
         s = (function (e) {
-            let { voiceState: t } = e,
-                i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
-            if (t?.channelId != null) return i.ChannelStore.getChannel(t.channelId);
-        })({ voiceState: i }, t);
+            let { voiceState: i } = e,
+                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
+            if (i?.channelId != null) return t.ChannelStore.getChannel(i.channelId);
+        })({ voiceState: t }, i);
     return !(function (e) {
-        let { voiceState: t, voiceChannel: i } = e,
+        let { voiceState: i, voiceChannel: t } = e,
             s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
-        return null != t && (i?.isPrivate() || s.PermissionStore.can(l.xB.VIEW_CHANNEL, i));
-    })({ voiceState: i, voiceChannel: s }, t)
-        ? o
-        : { voiceState: i, voiceChannel: s };
+        return null != i && (t?.isPrivate() || s.PermissionStore.can(a.xB.VIEW_CHANNEL, t));
+    })({ voiceState: t, voiceChannel: s }, i)
+        ? d
+        : { voiceState: t, voiceChannel: s };
 }
 function h(e) {
-    let { userId: t, guildId: i, includeNonDiscoverable: l } = e;
+    let { userId: i, guildId: t, includeNonDiscoverable: a } = e;
     return (0, s.cf)(
-        [n.A, r.A, a.A],
+        [n.A, r.A, l.A],
         () =>
-            d(
-                { userId: t, guildId: i, includeNonDiscoverable: l },
-                { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A },
+            o(
+                { userId: i, guildId: t, includeNonDiscoverable: a },
+                { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: l.A },
             ),
-        [i, t, l],
+        [t, i, a],
     );
 }

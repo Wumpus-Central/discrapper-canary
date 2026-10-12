@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -17,7 +18,7 @@
             p,
             m,
             g,
-            y = {
+            b = {
                 bgColor: "#d00",
                 textColor: "#fff",
                 fontFamily: "sans-serif",
@@ -35,7 +36,7 @@
             (f.ie = !1),
             (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
             (f.supported = f.chrome || f.ff || f.opera));
-        var b = [];
+        var y = [];
         ((h = function () {}), (l = d = !1));
         var w = {};
         ((w.ready = function () {
@@ -43,7 +44,7 @@
         }),
             (w.reset = function () {
                 l &&
-                    ((b = []),
+                    ((y = []),
                     (c = !1),
                     (u = !1),
                     i.clearRect(0, 0, a, n),
@@ -55,18 +56,18 @@
             (w.start = function () {
                 if (l && !u) {
                     var e = function () {
-                        ((c = b[0]), (u = !1), b.length > 0 && (b.shift(), w.start()));
+                        ((c = y[0]), (u = !1), y.length > 0 && (y.shift(), w.start()));
                     };
-                    if (b.length > 0) {
+                    if (y.length > 0) {
                         u = !0;
                         var r = function () {
                             (["type", "animation", "bgColor", "textColor", "fontFamily", "fontStyle"].forEach(
                                 function (e) {
-                                    e in b[0].options && (t[e] = b[0].options[e]);
+                                    e in y[0].options && (t[e] = y[0].options[e]);
                                 },
                             ),
                                 E.run(
-                                    b[0].options,
+                                    y[0].options,
                                     function () {
                                         e();
                                     },
@@ -282,10 +283,10 @@
                       _.setIcon(o))
                     : r();
             }),
-            ((t = S(y, e)).bgColor = C(t.bgColor)),
+            ((t = S(b, e)).bgColor = C(t.bgColor)),
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
-            (t.animation = E.types["" + t.animation] ? t.animation : y.animation),
+            (t.animation = E.types["" + t.animation] ? t.animation : b.animation),
             (g = t.win.document));
         var R = t.position.indexOf("up") > -1,
             A = t.position.indexOf("left") > -1;
@@ -297,7 +298,7 @@
                     (E.types["" + t.animation][P] = T));
             }
         return (
-            (t.type = v["" + t.type] ? t.type : y.type),
+            (t.type = v["" + t.type] ? t.type : b.type),
             (r = _.getIcon()),
             (o = document.createElement("canvas")),
             (s = document.createElement("img")),
@@ -341,8 +342,8 @@
                                         ["fontStyle", "fontFamily"].forEach(function (e) {
                                             e in t && (r.options[e] = t[e]);
                                         }),
-                                        b.push(r),
-                                        b.length > 100)
+                                        y.push(r),
+                                        y.length > 100)
                                     )
                                         throw Error("Too many badges requests in queue.");
                                     w.start();

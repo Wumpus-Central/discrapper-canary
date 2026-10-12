@@ -2,8 +2,8 @@ n.d(t, { A: () => I });
 var i = n(17928),
     l = n(73153),
     s = n(591552),
-    a = n(374084),
-    r = n(555337),
+    r = n(374084),
+    a = n(555337),
     o = n(982832),
     d = n(660496),
     c = n(863694),
@@ -18,13 +18,13 @@ let j = new Set(),
     N = null;
 function p(e) {
     let { subsection: t } = e;
-    if (r.A.getGuildId() === N) return !1;
-    ((f = t === E.nd0.SERVER_GUIDE ? x.Hy.HOME_SETTINGS : x.Hy.LANDING), (N = r.A.getGuildId()));
+    if (a.A.getGuildId() === N) return !1;
+    ((f = t === E.nd0.SERVER_GUIDE ? x.Hy.HOME_SETTINGS : x.Hy.LANDING), (N = a.A.getGuildId()));
 }
 class A extends i.Ay.Store {
     static displayName = "GuildSettingsOnboardingStore";
     initialize() {
-        (this.waitFor(s.A, c.A, g.A, m.A, u.A, o.A, r.A), this.syncWith([s.A, c.A, g.A, m.A, u.A, o.A], () => !0));
+        (this.waitFor(s.A, c.A, g.A, m.A, u.A, o.A, a.A), this.syncWith([s.A, c.A, g.A, m.A, u.A, o.A], () => !0));
     }
     isEducationUpsellDismissed(e) {
         return j.has(e);
@@ -50,7 +50,7 @@ class A extends i.Ay.Store {
         if (f === x.Hy.DEFAULT_CHANNELS) return c.A.editedDefaultChannelIds.size > 0;
         if (f === x.Hy.CUSTOMIZATION_QUESTIONS)
             return g.A.editedOnboardingPrompts.length > 0 || u.A.getEditedConnections().length > 0;
-        if (f === x.Hy.HOME_SETTINGS) return !(0, a.jJ)(m.A.getSettings());
+        if (f === x.Hy.HOME_SETTINGS) return !(0, r.jJ)(m.A.getSettings());
         if (f === x.Hy.CONNECTIONS) return u.A.getEditedConnections().length > 0;
         return !1;
     }

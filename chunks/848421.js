@@ -1,4 +1,4 @@
-r.d(t, { Kl: () => N });
+r.d(t, { Kl: () => j });
 var n,
     i,
     o,
@@ -41,9 +41,9 @@ let T = c.createElement(function () {
         s,
         u =
             ((o = c.useContext(E)),
-            (a = (x.UseRouteError, (t = c.useContext(v)) || (0, p.Oi)(!1), t)),
+            (a = (C.UseRouteError, (t = c.useContext(v)) || (0, p.Oi)(!1), t)),
             (s =
-                (x.UseRouteError,
+                (C.UseRouteError,
                 (i = ((r = c.useContext(b)) || (0, p.Oi)(!1), (n = r)).matches[n.matches.length - 1]).route.id ||
                     (0, p.Oi)(!1),
                 i.route.id)),
@@ -102,8 +102,8 @@ function w(e) {
         c.createElement(b.Provider, { value: t }, n)
     );
 }
-var x =
-    (((n = x || {}).UseBlocker = "useBlocker"),
+var C =
+    (((n = C || {}).UseBlocker = "useBlocker"),
     (n.UseLoaderData = "useLoaderData"),
     (n.UseActionData = "useActionData"),
     (n.UseRouteError = "useRouteError"),
@@ -114,11 +114,11 @@ var x =
     (n.UseNavigateStable = "useNavigate"),
     (n.UseRouteId = "useRouteId"),
     n);
-let C = {};
+let x = {};
 function D(e) {
     (0, p.Oi)(!1);
 }
-function k(e) {
+function I(e) {
     let {
         basename: t = "/",
         children: r = null,
@@ -146,7 +146,7 @@ function k(e) {
         ? null
         : c.createElement(y.Provider, { value: l }, c.createElement(m.Provider, { children: r, value: E }));
 }
-function A(e) {
+function k(e) {
     let { children: t, location: r } = e;
     return (function (e, t) {
         let r;
@@ -219,7 +219,7 @@ function A(e) {
                         (p = n.route.errorElement || T),
                         u &&
                             (l < 0 && 0 === i
-                                ? ((o = "route-fallback"), C[o] || (C[o] = !0), (f = !0), (h = null))
+                                ? ((o = "route-fallback"), x[o] || (x[o] = !0), (f = !0), (h = null))
                                 : l === i && ((f = !0), (h = n.route.hydrateFallbackElement || null))));
                     let g = t.concat(a.slice(0, i + 1)),
                         v = () => {
@@ -321,8 +321,8 @@ function A(e) {
     );
 }
 l.startTransition;
-var I =
-    (((i = I || {})[(i.pending = 0)] = "pending"), (i[(i.success = 1)] = "success"), (i[(i.error = 2)] = "error"), i);
+var A =
+    (((i = A || {})[(i.pending = 0)] = "pending"), (i[(i.success = 1)] = "success"), (i[(i.error = 2)] = "error"), i);
 (new Promise(() => {}), c.Component);
 var P = r(806163);
 try {
@@ -340,22 +340,22 @@ try {
     ((a = u || (u = {})).UseFetcher = "useFetcher"),
     (a.UseFetchers = "useFetchers"),
     (a.UseScrollRestoration = "useScrollRestoration"));
-let j =
+let N =
     "u" > typeof window && void 0 !== window.document && void 0 !== window.document.createElement
         ? c.useLayoutEffect
         : () => {};
-function N(e) {
+function j(e) {
     let { children: t } = e,
         r = (0, P.W6)(),
         [n, i] = c.useState(() => ({ location: r.location, action: r.action }));
     return (
-        j(() => {
+        N(() => {
             r.listen((e, t) => i({ location: e, action: t }));
         }, [r]),
         c.createElement(
-            k,
+            I,
             { navigationType: n.action, location: n.location, navigator: r },
-            c.createElement(A, null, c.createElement(D, { path: "*", element: t })),
+            c.createElement(k, null, c.createElement(D, { path: "*", element: t })),
         )
     );
 }

@@ -1,7 +1,7 @@
-n.d(t, { A: () => o });
-var i = n(17928),
-    l = n(73153),
-    a = n(381941);
+t.d(n, { A: () => o });
+var i = t(17928),
+    l = t(73153),
+    a = t(381941);
 let s = {};
 class r extends i.Ay.Store {
     static displayName = "SendMessageOptionsStore";
@@ -11,8 +11,8 @@ class r extends i.Ay.Store {
 }
 let o = new r(l.h, {
     MESSAGE_CREATE: function (e) {
-        let { message: t, sendMessageOptions: n } = e;
-        (null != n && (s[t.id] = { ...n, location: n.location ?? a.Hx.OTHER }),
-            null != t.nonce && t.nonce !== t.id && t.nonce in s && delete s[t.nonce]);
+        let { message: n, sendMessageOptions: t } = e;
+        (null != t && (s[n.id] = { ...t, location: t.location ?? a.Hx.OTHER }),
+            null != n.nonce && n.nonce !== n.id && n.nonce in s && delete s[n.nonce]);
     },
 });

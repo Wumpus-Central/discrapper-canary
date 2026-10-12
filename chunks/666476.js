@@ -1,14 +1,14 @@
-n.d(t, { Ju: () => s, Oq: () => u, XB: () => l, aI: () => a, km: () => r, o2: () => i, sM: () => o });
+n.d(t, { Ju: () => s, Oq: () => o, XB: () => l, aI: () => a, km: () => i, o2: () => r, sM: () => d });
 let l = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
     a = 5242880,
-    r = 0x3200000,
-    i = 36e5;
+    i = 0x3200000,
+    r = 36e5;
 function s(e) {
-    return l.has(e) ? a : r;
+    return l.has(e) ? a : i;
 }
-function u(e, t) {
+function o(e, t) {
     return e <= s(t);
 }
-function o(e) {
+function d(e) {
     return `${Math.round(e / 1048576)} MB`;
 }

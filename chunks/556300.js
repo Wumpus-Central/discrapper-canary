@@ -1,8 +1,8 @@
 t.d(n, { A: () => m });
 var l = t(477900);
 t(582128);
-var r = t(192308),
-    a = t(442433),
+var a = t(192308),
+    r = t(442433),
     i = t(332173),
     o = t(37632),
     s = t(734057),
@@ -12,19 +12,19 @@ var r = t(192308),
 function m(e) {
     return {
         react(n, m, h) {
-            let g = s.A.getChannel(n.channelId),
-                p = h.noStyleAndInteraction
+            let p = s.A.getChannel(n.channelId),
+                g = h.noStyleAndInteraction
                     ? void 0
                     : (t) => {
                           (e.shouldStopPropagation && t?.stopPropagation(),
                               (0, c.o)(n.guildId, n.channelId, n.messageId),
-                              e.shouldCloseDefaultModals && (0, r.closeAllModals)());
+                              e.shouldCloseDefaultModals && (0, a.closeAllModals)());
                       },
-                f =
-                    h.noStyleAndInteraction || null == n.channelId || (null == g && null == n.originalLink)
+                x =
+                    h.noStyleAndInteraction || null == n.channelId || (null == p && null == n.originalLink)
                         ? d.tEg
                         : (e) => {
-                              (0, a.L3)(e, async () => {
+                              (0, r.L3)(e, async () => {
                                   let { default: e } = await Promise.all([
                                       t.e("638221"),
                                       t.e("343266"),
@@ -33,8 +33,8 @@ function m(e) {
                                   return (t) =>
                                       (0, l.jsx)(e, {
                                           ...t,
-                                          channel: g,
-                                          channelId: g?.id ?? n.channelId,
+                                          channel: p,
+                                          channelId: p?.id ?? n.channelId,
                                           originalLink: n.originalLink,
                                           messageId: n.messageId,
                                       });
@@ -44,8 +44,8 @@ function m(e) {
                 i.A,
                 {
                     role: "link",
-                    onClick: p,
-                    onContextMenu: f,
+                    onClick: g,
+                    onContextMenu: x,
                     className: "channelMention",
                     children: [
                         null != n.inContent ? m(n.inContent, h) : null,

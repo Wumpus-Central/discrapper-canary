@@ -1,13 +1,13 @@
-n.d(t, { A: () => r, b: () => a });
-var l = n(17928),
+n.d(t, { A: () => a, b: () => r });
+var i = n(17928),
     s = n(501592),
-    i = n(287809);
-function a(e, t) {
+    l = n(287809);
+function r(e, t) {
     return null != e && !1 === t && (0, s.K)(e.contentClassification);
 }
-function r(e) {
-    return a(
+function a(e) {
+    return r(
         e,
-        (0, l.bG)([i.default], () => i.default.getCurrentUser()?.nsfwAllowed),
+        (0, i.bG)([l.default], () => l.default.getCurrentUser()?.nsfwAllowed),
     );
 }

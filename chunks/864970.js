@@ -1,36 +1,36 @@
 n.d(t, { o: () => c });
 var r = n(477900),
-    o = n(582128),
-    a = n(844222),
+    a = n(582128),
+    o = n(844222),
     l = n(834730),
-    i = n(140735);
+    u = n(140735);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-var u = n(146806),
+var i = n(146806),
     s = n(411239);
-let c = o.memo(function (e) {
+let c = a.memo(function (e) {
     let {
             text: t,
             variant: n = "text-md/normal",
             color: c,
-            delay: d = 3e3,
-            initialDelay: f = 0,
+            delay: f = 3e3,
+            initialDelay: d = 0,
             duration: m = 1e3,
             onComplete: h,
             onStart: p,
             trailingWidth: y,
             className: g,
-            ref: x,
+            ref: w,
         } = e,
-        w = o.useRef(null),
-        C = o.useRef(null),
-        M = Array.isArray(t) ? t.join("\0") : t,
-        A = o.useMemo(() => M.split("\0"), [M]),
-        [N, R] = o.useState(0),
-        { reducedMotion: v } = o.useContext(a.C),
-        b = (function () {
-            let [e, t] = o.useState(() => "u" < typeof document || document.hasFocus());
+        C = a.useRef(null),
+        M = a.useRef(null),
+        x = Array.isArray(t) ? t.join("\0") : t,
+        A = a.useMemo(() => x.split("\0"), [x]),
+        [N, R] = a.useState(0),
+        { reducedMotion: v } = a.useContext(o.C),
+        E = (function () {
+            let [e, t] = a.useState(() => "u" < typeof document || document.hasFocus());
             return (
-                o.useEffect(() => {
+                a.useEffect(() => {
                     function e() {
                         t(!0);
                     }
@@ -48,29 +48,29 @@ let c = o.memo(function (e) {
                 e
             );
         })(),
-        E = o.useRef(0),
-        S = o.useRef(null),
-        $ = o.useRef(null),
-        L = o.useRef(!0),
-        T = o.useRef(h),
-        F = o.useRef(p),
-        j = o.useRef(A),
-        q = o.useRef(m),
-        B = o.useRef(v.enabled);
-    o.useEffect(() => {
-        ((T.current = h), (F.current = p), (j.current = A), (q.current = m), (B.current = v.enabled));
+        S = a.useRef(0),
+        b = a.useRef(null),
+        L = a.useRef(null),
+        F = a.useRef(!0),
+        T = a.useRef(h),
+        $ = a.useRef(p),
+        q = a.useRef(A),
+        k = a.useRef(m),
+        W = a.useRef(v.enabled);
+    a.useEffect(() => {
+        ((T.current = h), ($.current = p), (q.current = A), (k.current = m), (W.current = v.enabled));
     });
-    let [k, W] = o.useState(M);
-    k !== M && (W(M), R(0));
-    let z = A.length > 0 ? N % A.length : 0,
-        D = A[z] ?? "",
-        H = o.useCallback(() => {
+    let [B, j] = a.useState(x);
+    B !== x && (j(x), R(0));
+    let H = A.length > 0 ? N % A.length : 0,
+        z = A[H] ?? "",
+        U = a.useCallback(() => {
             R((e) => e + 1);
         }, []);
     return (
-        o.useImperativeHandle(x, () => ({ play: H, stop: () => C.current?.stop() }), [H]),
-        o.useEffect(() => {
-            let e = w.current;
+        a.useImperativeHandle(w, () => ({ play: U, stop: () => M.current?.stop() }), [U]),
+        a.useEffect(() => {
+            let e = C.current;
             if (null == e) return;
             let t = (function (e, t) {
                 let n = {
@@ -89,116 +89,116 @@ let c = o.memo(function (e) {
                         "u" > typeof window && "function" == typeof window.matchMedia
                             ? window.matchMedia("(prefers-reduced-motion: reduce)")
                             : null,
-                    o = null,
                     a = null,
+                    o = null,
                     l = [],
-                    i = [],
+                    u = [],
                     s = [],
                     c = [],
-                    d = new Uint8Array(0),
-                    f = !1,
+                    f = new Uint8Array(0),
+                    d = !1,
                     m = -1,
                     h = [],
                     p = [],
                     y = [],
                     g = [],
-                    x = !1,
-                    w = 0,
+                    w = !1,
                     C = 0,
                     M = 0,
+                    x = 0,
                     A = 0,
                     N = 0,
                     R = 0,
                     v = 0,
-                    b = 0,
-                    E = !1;
-                function S() {
+                    E = 0,
+                    S = !1;
+                function b() {
                     ((l = Array.from(n.from)),
-                        (i = Array.from(n.to)),
-                        (w = Math.max(l.length, i.length)),
-                        ((o = document.createElement("span")).className = n.classNames.textLayer),
-                        (x = !1),
-                        (s = Array(w)),
-                        (d = new Uint8Array(w)));
-                    for (let e = 0; e < w; e++) {
-                        let t = document.createElement("span");
-                        ((t.className = n.classNames.char), (t.textContent = l[e] ?? ""), o.appendChild(t), (s[e] = t));
-                    }
-                    (((a = document.createElement("span")).className = n.classNames.glyphLayer),
-                        (a.style.opacity = "0"),
-                        (m = 0),
-                        (e.textContent = ""),
-                        e.appendChild(o),
-                        e.appendChild(a),
-                        (function () {
-                            if (
-                                ((h = Array(w).fill(0)),
-                                (p = Array(w).fill(0)),
-                                null == o || null == a || "function" != typeof getComputedStyle)
-                            ) {
-                                C = Math.max(1, w);
-                                return;
-                            }
-                            let e = o.getBoundingClientRect().width;
-                            for (let e = 0; e < w; e++) h[e] = s[e].getBoundingClientRect().width;
-                            for (let e = 0; e < w; e++) s[e].textContent = i[e] ?? "";
-                            let t = o.getBoundingClientRect().width;
-                            for (let e = 0; e < w; e++) p[e] = s[e].getBoundingClientRect().width;
-                            for (let e = 0; e < w; e++)
-                                ((s[e].textContent = l[e] ?? ""), (s[e].style.width = `${h[e]}px`));
-                            let r = parseFloat(getComputedStyle(a).fontSize),
-                                c = Number.isFinite(r) && 0 !== r ? r : 16,
-                                d = Math.max(e, t);
-                            C = (0, u.xf)(d, c, w, n.trailingWidth);
-                        })(),
-                        (c = Array(C)),
-                        (y = Array(C).fill(-1)),
-                        (g = (0, u.k6)(C, n.rng)));
+                        (u = Array.from(n.to)),
+                        (C = Math.max(l.length, u.length)),
+                        ((a = document.createElement("span")).className = n.classNames.textLayer),
+                        (w = !1),
+                        (s = Array(C)),
+                        (f = new Uint8Array(C)));
                     for (let e = 0; e < C; e++) {
                         let t = document.createElement("span");
-                        ((t.className = n.classNames.glyphCell), a.appendChild(t), (c[e] = t));
+                        ((t.className = n.classNames.char), (t.textContent = l[e] ?? ""), a.appendChild(t), (s[e] = t));
+                    }
+                    (((o = document.createElement("span")).className = n.classNames.glyphLayer),
+                        (o.style.opacity = "0"),
+                        (m = 0),
+                        (e.textContent = ""),
+                        e.appendChild(a),
+                        e.appendChild(o),
+                        (function () {
+                            if (
+                                ((h = Array(C).fill(0)),
+                                (p = Array(C).fill(0)),
+                                null == a || null == o || "function" != typeof getComputedStyle)
+                            ) {
+                                M = Math.max(1, C);
+                                return;
+                            }
+                            let e = a.getBoundingClientRect().width;
+                            for (let e = 0; e < C; e++) h[e] = s[e].getBoundingClientRect().width;
+                            for (let e = 0; e < C; e++) s[e].textContent = u[e] ?? "";
+                            let t = a.getBoundingClientRect().width;
+                            for (let e = 0; e < C; e++) p[e] = s[e].getBoundingClientRect().width;
+                            for (let e = 0; e < C; e++)
+                                ((s[e].textContent = l[e] ?? ""), (s[e].style.width = `${h[e]}px`));
+                            let r = parseFloat(getComputedStyle(o).fontSize),
+                                c = Number.isFinite(r) && 0 !== r ? r : 16,
+                                f = Math.max(e, t);
+                            M = (0, i.xf)(f, c, C, n.trailingWidth);
+                        })(),
+                        (c = Array(M)),
+                        (y = Array(M).fill(-1)),
+                        (g = (0, i.k6)(M, n.rng)));
+                    for (let e = 0; e < M; e++) {
+                        let t = document.createElement("span");
+                        ((t.className = n.classNames.glyphCell), o.appendChild(t), (c[e] = t));
                     }
                     ((v = 0),
-                        (b = 0),
-                        f ||
+                        (E = 0),
+                        d ||
                             "u" < typeof document ||
                             null == document.fonts ||
                             ("loaded" !== document.fonts.status &&
-                                ((f = !0),
+                                ((d = !0),
                                 document.fonts.ready.then(() => {
-                                    if (((f = !1), null == o || 0 === w || E)) return;
-                                    let e = 4 === d[w - 1];
-                                    (S(), e && q());
+                                    if (((d = !1), null == a || 0 === C || S)) return;
+                                    let e = 4 === f[C - 1];
+                                    (b(), e && k());
                                 }))));
                 }
-                function $(e, t) {
-                    let r = d[e];
+                function L(e, t) {
+                    let r = f[e];
                     if (r === t) return;
-                    let o = s[e];
-                    ((o.textContent = (0, u.Hz)(l, i, e, t)),
-                        (o.className =
+                    let a = s[e];
+                    ((a.textContent = (0, i.Hz)(l, u, e, t)),
+                        (a.className =
                             2 === t
                                 ? `${n.classNames.char} ${n.classNames.scrambled}`
                                 : 1 === t || 3 === t
                                   ? `${n.classNames.char} ${n.classNames.shifted}`
                                   : n.classNames.char));
-                    let a = (0, u.qR)(r),
-                        c = (0, u.qR)(t);
-                    (c !== a && (o.style.width = `${(c ? p : h)[e] ?? 0}px`), (d[e] = t));
+                    let o = (0, i.qR)(r),
+                        c = (0, i.qR)(t);
+                    (c !== o && (a.style.width = `${(c ? p : h)[e] ?? 0}px`), (f[e] = t));
                 }
-                function L(e) {
+                function F(e) {
                     let t = Math.min(1, Math.max(0, (e - A) / n.duration)),
-                        r = (0, u.xm)(t),
-                        { start: o, end: l } = (0, u.py)(r, w),
-                        i = Math.min(s.length, Math.max(l, b));
-                    for (let e = Math.min(o, v); e < i; e++) $(e, (0, u.Xu)(e, r, w));
-                    ((v = o),
-                        (b = l),
+                        r = (0, i.xm)(t),
+                        { start: a, end: l } = (0, i.py)(r, C),
+                        u = Math.min(s.length, Math.max(l, E));
+                    for (let e = Math.min(a, v); e < u; e++) L(e, (0, i.Xu)(e, r, C));
+                    ((v = a),
+                        (E = l),
                         (function (e) {
-                            let t = Math.round(100 * (0, u.M8)(e));
-                            t !== m && null != a && ((a.style.opacity = String(t / 100)), (m = t));
-                            for (let t = 0; t < C; t++) {
-                                let r = (0, u.GL)(t, e, C);
+                            let t = Math.round(100 * (0, i.M8)(e));
+                            t !== m && null != o && ((o.style.opacity = String(t / 100)), (m = t));
+                            for (let t = 0; t < M; t++) {
+                                let r = (0, i.GL)(t, e, M);
                                 if (r !== y[t]) {
                                     var n;
                                     ((c[t].textContent = r < 0 ? "" : ((n = t), r < 6 ? "123456".charAt(r) : g[n])),
@@ -206,74 +206,74 @@ let c = o.memo(function (e) {
                                 }
                             }
                         })(r),
-                        r < 1 ? (M = requestAnimationFrame(L)) : (q(), (E = !1), n.onComplete?.()));
+                        r < 1 ? (x = requestAnimationFrame(F)) : (k(), (S = !1), n.onComplete?.()));
                 }
                 function T() {
-                    (null != a && (a.style.opacity = "0"), (m = 0));
-                    for (let e = 0; e < C; e++) -1 !== y[e] && ((c[e].textContent = ""), (y[e] = -1));
+                    (null != o && (o.style.opacity = "0"), (m = 0));
+                    for (let e = 0; e < M; e++) -1 !== y[e] && ((c[e].textContent = ""), (y[e] = -1));
                 }
-                function F(e) {
-                    x !== e &&
-                        null != o &&
-                        ((o.className = e
+                function $(e) {
+                    w !== e &&
+                        null != a &&
+                        ((a.className = e
                             ? `${n.classNames.textLayer} ${n.classNames.hidden}`
                             : n.classNames.textLayer),
-                        (x = e));
+                        (w = e));
                 }
-                function j(e) {
-                    null != o && (o.style.transition = e ? "opacity 220ms linear" : "");
-                }
-                function q() {
-                    for (let e = 0; e < w; e++) $(e, 4);
-                    (j(!1), F(!1), T(), (v = 0), (b = 0));
-                }
-                function B() {
-                    (0 !== R && clearTimeout(R), (R = 0));
+                function q(e) {
+                    null != a && (a.style.transition = e ? "opacity 220ms linear" : "");
                 }
                 function k() {
-                    (0 !== M && cancelAnimationFrame(M), (M = 0), B(), (N = 0), (E = !1), q());
+                    for (let e = 0; e < C; e++) L(e, 4);
+                    (q(!1), $(!1), T(), (v = 0), (E = 0));
+                }
+                function W() {
+                    (0 !== R && clearTimeout(R), (R = 0));
+                }
+                function B() {
+                    (0 !== x && cancelAnimationFrame(x), (x = 0), W(), (N = 0), (S = !1), k());
                 }
                 return (
-                    S(),
+                    b(),
                     {
                         play: function () {
-                            if ((0 !== M && cancelAnimationFrame(M), (M = 0), B(), 0 === w))
+                            if ((0 !== x && cancelAnimationFrame(x), (x = 0), W(), 0 === C))
                                 return void n.onComplete?.();
                             let e = n.reducedMotion ?? r?.matches === !0;
                             if (n.respectReducedMotion && e) {
                                 (T(),
-                                    j(!0),
-                                    F(!0),
-                                    (E = !0),
+                                    q(!0),
+                                    $(!0),
+                                    (S = !0),
                                     n.onStart?.(),
                                     (R = window.setTimeout(() => {
                                         R = 0;
-                                        for (let e = 0; e < w; e++) $(e, 4);
+                                        for (let e = 0; e < C; e++) L(e, 4);
                                         ((v = 0),
-                                            (b = 0),
-                                            F(!1),
+                                            (E = 0),
+                                            $(!1),
                                             (R = window.setTimeout(() => {
-                                                ((R = 0), j(!1), (E = !1), n.onComplete?.());
+                                                ((R = 0), q(!1), (S = !1), n.onComplete?.());
                                             }, 220)));
                                     }, 220)));
                                 return;
                             }
-                            (j(!1),
-                                (E = !0),
+                            (q(!1),
+                                (S = !0),
                                 (N = 0),
                                 (A = performance.now()),
                                 n.onStart?.(),
-                                (M = requestAnimationFrame(L)));
+                                (x = requestAnimationFrame(F)));
                         },
                         pause: function () {
-                            E && 0 === N && 0 !== M && (cancelAnimationFrame(M), (M = 0), (N = performance.now()));
+                            S && 0 === N && 0 !== x && (cancelAnimationFrame(x), (x = 0), (N = performance.now()));
                         },
                         resume: function () {
-                            E && 0 !== N && ((A += performance.now() - N), (N = 0), (M = requestAnimationFrame(L)));
+                            S && 0 !== N && ((A += performance.now() - N), (N = 0), (x = requestAnimationFrame(F)));
                         },
-                        stop: k,
+                        stop: B,
                         setTransition: function (e, t) {
-                            (k(), (n.from = e), (n.to = t), S());
+                            (B(), (n.from = e), (n.to = t), b());
                         },
                         setOptions: function (e) {
                             (void 0 !== e.duration && (n.duration = e.duration),
@@ -281,34 +281,34 @@ let c = o.memo(function (e) {
                                 void 0 !== e.trailingWidth && (n.trailingWidth = e.trailingWidth));
                         },
                         destroy: function () {
-                            (0 !== M && cancelAnimationFrame(M),
-                                (M = 0),
-                                B(),
+                            (0 !== x && cancelAnimationFrame(x),
+                                (x = 0),
+                                W(),
                                 (N = 0),
-                                (E = !1),
+                                (S = !1),
                                 (e.textContent = n.to),
-                                (x = !1),
-                                (o = null),
+                                (w = !1),
                                 (a = null),
+                                (o = null),
                                 (s = []),
                                 (c = []),
                                 (l = []),
-                                (i = []),
-                                (d = new Uint8Array(0)),
+                                (u = []),
+                                (f = new Uint8Array(0)),
                                 (h = []),
                                 (p = []),
                                 (y = []),
                                 (g = []),
-                                (w = 0),
-                                (C = 0));
+                                (C = 0),
+                                (M = 0));
                         },
                         get running() {
-                            return E;
+                            return S;
                         },
                     }
                 );
             })(e, {
-                to: j.current[0] ?? "",
+                to: q.current[0] ?? "",
                 trailingWidth: y,
                 classNames: {
                     textLayer: s.fo,
@@ -320,53 +320,53 @@ let c = o.memo(function (e) {
                     hidden: s.R,
                 },
                 onComplete: () => T.current?.(),
-                onStart: () => F.current?.(),
+                onStart: () => $.current?.(),
             });
             return (
-                (C.current = t),
+                (M.current = t),
                 () => {
-                    (t.destroy(), (C.current = null));
+                    (t.destroy(), (M.current = null));
                 }
             );
         }, []),
-        o.useEffect(() => {
-            C.current?.setOptions({ duration: m, reducedMotion: v.enabled, trailingWidth: y });
+        a.useEffect(() => {
+            M.current?.setOptions({ duration: m, reducedMotion: v.enabled, trailingWidth: y });
         }, [m, v.enabled, y]),
-        o.useEffect(() => {
-            let e = C.current;
+        a.useEffect(() => {
+            let e = M.current;
             if (null == e) return;
-            let t = `${M}:${N}`;
-            if ($.current !== t) {
-                $.current = t;
-                let n = S.current;
-                ((S.current = D),
-                    (L.current = null == n),
-                    null == n ? e.setTransition(D, D) : (e.setTransition(n, D), e.play()));
+            let t = `${x}:${N}`;
+            if (L.current !== t) {
+                L.current = t;
+                let n = b.current;
+                ((b.current = z),
+                    (F.current = null == n),
+                    null == n ? e.setTransition(z, z) : (e.setTransition(n, z), e.play()));
             }
-            if (null != d) {
-                let e = B.current ? 440 : q.current;
-                E.current = L.current ? d + f : d + e;
+            if (null != f) {
+                let e = W.current ? 440 : k.current;
+                S.current = F.current ? f + d : f + e;
             }
-        }, [M, N, z, D, d, f]),
-        o.useEffect(() => {
-            let e = C.current;
+        }, [x, N, H, z, f, d]),
+        a.useEffect(() => {
+            let e = M.current;
             if (null == e) return;
-            if (!b) return void e.pause();
-            if ((e.resume(), null == d)) return;
-            let t = Date.now() + E.current,
-                n = window.setTimeout(H, E.current);
+            if (!E) return void e.pause();
+            if ((e.resume(), null == f)) return;
+            let t = Date.now() + S.current,
+                n = window.setTimeout(U, S.current);
             return () => {
-                (window.clearTimeout(n), (E.current = Math.max(0, t - Date.now())));
+                (window.clearTimeout(n), (S.current = Math.max(0, t - Date.now())));
             };
-        }, [b, N, H, d]),
+        }, [E, N, U, f]),
         (0, r.jsxs)(l.E, {
             variant: n,
             color: c,
             tag: "span",
             className: g,
             children: [
-                (0, r.jsx)("span", { ref: w, className: s.Hc, "aria-hidden": !0 }),
-                (0, r.jsx)(i.A, { children: D }),
+                (0, r.jsx)("span", { ref: C, className: s.Hc, "aria-hidden": !0 }),
+                (0, r.jsx)(u.A, { children: z }),
             ],
         })
     );

@@ -1,20 +1,20 @@
-(n.d(t, { Ng: () => i, UJ: () => l, o$: () => a, rQ: () => o }), n(321073));
-let r = new Map();
-function i(e, t) {
-    let n = r.get(e) ?? [];
+(n.d(t, { Ng: () => r, UJ: () => a, o$: () => l, rQ: () => s }), n(321073));
+let i = new Map();
+function r(e, t) {
+    let n = i.get(e) ?? [];
     return (
         n.push(t),
-        r.set(e, n),
+        i.set(e, n),
         () => {
-            let n = r.get(e);
+            let n = i.get(e);
             if (null == n) return;
-            let i = n.indexOf(t);
-            (-1 !== i && n.splice(i, 1), 0 === n.length && r.delete(e));
+            let r = n.indexOf(t);
+            (-1 !== r && n.splice(r, 1), 0 === n.length && i.delete(e));
         }
     );
 }
-function l(e) {
-    let t = r.get(e);
+function a(e) {
+    let t = i.get(e);
     if (null == t) return null;
     for (let n = t.length - 1; n >= 0; n--)
         try {
@@ -25,36 +25,36 @@ function l(e) {
         }
     return null;
 }
-function o(e) {
-    return r.has(e);
+function s(e) {
+    return i.has(e);
 }
-function a(e, t, n) {
-    let r = l(e);
-    return null != r
-        ? Promise.resolve(r)
-        : o(e) && n?.aborted !== !0
+function l(e, t, n) {
+    let i = a(e);
+    return null != i
+        ? Promise.resolve(i)
+        : s(e) && n?.aborted !== !0
           ? (console.debug("[vibegrations] preview frame not ready, waiting", { projectId: e, timeoutMs: t }),
-            new Promise((r) => {
-                let i = Date.now(),
-                    a = i + t;
-                function u(t) {
-                    (window.clearInterval(d),
-                        n?.removeEventListener("abort", s),
+            new Promise((i) => {
+                let r = Date.now(),
+                    l = r + t;
+                function o(t) {
+                    (window.clearInterval(c),
+                        n?.removeEventListener("abort", d),
                         console.debug("[vibegrations] preview frame wait finished", {
                             projectId: e,
                             found: null != t,
-                            ms: Date.now() - i,
+                            ms: Date.now() - r,
                         }),
-                        r(t));
+                        i(t));
                 }
-                function s() {
-                    u(null);
+                function d() {
+                    o(null);
                 }
-                let d = window.setInterval(() => {
-                    let t = l(e);
-                    (null != t || Date.now() >= a || !o(e)) && u(t);
+                let c = window.setInterval(() => {
+                    let t = a(e);
+                    (null != t || Date.now() >= l || !s(e)) && o(t);
                 }, 100);
-                n?.addEventListener("abort", s, { once: !0 });
+                n?.addEventListener("abort", d, { once: !0 });
             }))
           : Promise.resolve(null);
 }

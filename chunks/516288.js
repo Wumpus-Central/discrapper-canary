@@ -1,4 +1,4 @@
-n.d(t, { k: () => r, t: () => s });
+n.d(t, { k: () => r, t: () => u });
 var l,
     i = n(248675),
     a = n(660183),
@@ -7,7 +7,7 @@ var l,
         (l.MISSING_MANAGE_SERVER = "missing-manage-server"),
         (l.MISSING_MANAGE_CHANNELS = "missing-manage-channels"),
         l);
-function s(e, t) {
+function u(e, t) {
     switch (e) {
         case "no-preview":
             return {

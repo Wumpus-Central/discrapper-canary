@@ -1,20 +1,20 @@
-(i.d(t, { I: () => a, U: () => r }), i(321073));
-var s = i(435558),
-    n = i(652215);
+(t.d(i, { I: () => l, U: () => r }), t(321073));
+var s = t(435558),
+    n = t(652215);
 function r(e) {
     return (0, s.uniqWith)(
         e.filter((e) => {
-            let { type: t } = e;
-            return t !== n.$pd.CUSTOM_STATUS && t !== n.$pd.HANG_STATUS;
+            let { type: i } = e;
+            return i !== n.$pd.CUSTOM_STATUS && i !== n.$pd.HANG_STATUS;
         }),
-        (e, t) =>
-            (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
-            (null != e.name && null != t.name && e.name === t.name),
+        (e, i) =>
+            (null != e.application_id && null != i.application_id && e.application_id === i.application_id) ||
+            (null != e.name && null != i.name && e.name === i.name),
     );
 }
-function a(e) {
-    let { stream: t, live: i = [], voiceChannel: s, voiceActivity: n, isPrivate: r = !1 } = e,
-        a = [];
-    for (let e of (null != t && a.push({ type: "stream", stream: t }), i)) a.push({ type: "live", activity: e });
-    return (r || null != t || null != n || null == s || a.push({ type: "voice", voiceChannel: s }), a);
+function l(e) {
+    let { stream: i, live: t = [], voiceChannel: s, voiceActivity: n, isPrivate: r = !1 } = e,
+        l = [];
+    for (let e of (null != i && l.push({ type: "stream", stream: i }), t)) l.push({ type: "live", activity: e });
+    return (r || null != i || null != n || null == s || l.push({ type: "voice", voiceChannel: s }), l);
 }

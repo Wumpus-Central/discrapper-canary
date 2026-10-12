@@ -20,7 +20,7 @@ var n = r(271434);
         return ((t.keys = l), t);
     }
     if (n(t)) {
-        for (var f, p = r, m = a, g = [], y = 0; y < t.length; y++) g.push(e(t[y], p, m).source);
+        for (var f, p = r, m = a, g = [], b = 0; b < t.length; b++) g.push(e(t[b], p, m).source);
         return (((f = RegExp("(?:" + g.join("|") + ")", c(m))).keys = p), f);
     }
     return ((i = r), u(o(t, (s = a)), i, s));
@@ -48,15 +48,15 @@ function o(e, t) {
             p = r[2],
             m = r[3],
             g = r[4],
-            y = r[5],
-            b = r[6],
+            b = r[5],
+            y = r[6],
             w = r[7];
         s && (n.push(s), (s = ""));
         var v = null != p && null != f && f !== p,
-            M = "+" === b || "*" === b,
-            x = "?" === b || "*" === b,
+            M = "+" === y || "*" === y,
+            x = "?" === y || "*" === y,
             _ = r[2] || c,
-            C = g || y;
+            C = g || b;
         n.push({
             name: m || o++,
             prefix: p || "",

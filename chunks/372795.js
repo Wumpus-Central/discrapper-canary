@@ -14,8 +14,8 @@ function u(e) {
             fps: u,
             interactive: c = !1,
             paused: d = !1,
-            drawWidth: f,
-            className: m,
+            drawWidth: m,
+            className: f,
             "aria-label": h,
             onStateChange: g,
         } = e,
@@ -42,16 +42,16 @@ function u(e) {
             [t, n],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+        A = null == m ? 0 : Math.round(m * Math.min(w, 2)),
         N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: A }),
-        C = (0, i.AV)(t, n),
-        S = r.useRef(C);
+        S = (0, i.AV)(t, n),
+        C = r.useRef(S);
     (r.useEffect(() => {
-        if (S.current === C) return;
-        ((S.current = C), (x.current = null), b(!1));
+        if (C.current === S) return;
+        ((C.current = S), (x.current = null), b(!1));
         let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-    }, [C]),
+    }, [S]),
         r.useEffect(() => {
             g?.(N, j);
         }, [N, j, g]),
@@ -72,7 +72,7 @@ function u(e) {
             y: Math.round(((e.clientY - a) / (t.height * l)) * s),
         };
     }
-    function M(e) {
+    function _(e) {
         return (l) => {
             if (!c) return;
             if ("mouseMoved" === e) {
@@ -101,7 +101,7 @@ function u(e) {
                 }));
         };
     }
-    function _(e) {
+    function M(e) {
         return (l) => {
             if (!c || "Escape" === l.key) return;
             l.preventDefault();
@@ -117,7 +117,7 @@ function u(e) {
     }
     return (0, l.jsx)("canvas", {
         ref: p,
-        className: m,
+        className: f,
         role: c ? "application" : "img",
         "aria-label": h,
         tabIndex: c ? 0 : -1,
@@ -127,9 +127,9 @@ function u(e) {
         onContextMenu: function (e) {
             c && e.preventDefault();
         },
-        onMouseDown: M("mousePressed"),
-        onMouseUp: M("mouseReleased"),
-        onMouseMove: M("mouseMoved"),
+        onMouseDown: _("mousePressed"),
+        onMouseUp: _("mouseReleased"),
+        onMouseMove: _("mouseMoved"),
         onWheel: function (e) {
             c &&
                 (0, i.ZL)(t, n, {
@@ -141,8 +141,8 @@ function u(e) {
                     modifiers: o(e),
                 });
         },
-        onKeyDown: _("keyDown"),
-        onKeyUp: _("keyUp"),
+        onKeyDown: M("keyDown"),
+        onKeyUp: M("keyUp"),
         onBlur: function () {
             for (let [e, l] of E.current)
                 (0, i.ZL)(t, n, { type: "input_keyboard", eventType: "keyUp", key: l, code: e, modifiers: 0 });

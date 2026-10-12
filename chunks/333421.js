@@ -1,9 +1,9 @@
-t.d(n, { AG: () => a, my: () => r, uJ: () => i });
+t.d(n, { AG: () => r, my: () => a, uJ: () => i });
 let l = RegExp("^dev://devtools/([-\\w._0-9]+)(/([-\\w._0-9]+))?$", "i");
-function r(e) {
+function a(e) {
     return l.test(e);
 }
-function a(e) {
+function r(e) {
     let n = e.match(l);
     return null == n || null == n[1] ? null : n[1];
 }

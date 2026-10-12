@@ -1,10 +1,10 @@
-u.d(e, { NK: () => n, XV: () => i });
-var a = u(991690),
-    l = u(248675),
-    d = u(660183);
-let n = 221552 == u.j ? ["frame", "widget", "overlay", "bot"] : null;
-(l.default.FKuG6X, l.default.oOAVlP, l.default.EnTNKg, l.default.uE5z15);
-let f = { [a.U.APP_CHANNEL]: l.default.xI4N6Q, [a.U.VOICE_CHANNEL]: l.default.oWMDh6, [a.U.MAIN]: l.default["0ICBnS"] };
-function i(t) {
-    return d.intl.string(f[t]);
+l.d(t, { NK: () => a, XV: () => o });
+var n = l(991690),
+    u = l(248675),
+    r = l(660183);
+let a = 221552 == l.j ? ["frame", "widget", "overlay", "bot"] : null;
+(u.default.FKuG6X, u.default.oOAVlP, u.default.EnTNKg, u.default.uE5z15);
+let i = { [n.U.APP_CHANNEL]: u.default.xI4N6Q, [n.U.VOICE_CHANNEL]: u.default.oWMDh6, [n.U.MAIN]: u.default["0ICBnS"] };
+function o(e) {
+    return r.intl.string(i[e]);
 }

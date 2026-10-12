@@ -1,7 +1,7 @@
-n.d(t, { A: () => u });
-var i = n(17928),
-    l = n(73153),
-    a = n(967198);
+t.d(n, { A: () => u });
+var i = t(17928),
+    l = t(73153),
+    a = t(967198);
 let s = null,
     r = null,
     o = { reportedMessages: {} };
@@ -17,8 +17,8 @@ class d extends i.Ay.PersistedStore {
         (null != e &&
             (o.reportedMessages = Object.fromEntries(
                 Object.entries(e.reportedMessages).map((e) => {
-                    let [t, n] = e;
-                    return [t, new Set(n)];
+                    let [n, t] = e;
+                    return [n, new Set(t)];
                 }),
             )),
             this.syncWith([a.A], c));
@@ -32,27 +32,27 @@ class d extends i.Ay.PersistedStore {
     getReportedMessages() {
         return o.reportedMessages;
     }
-    hasReportedMessage(e, t) {
-        return o.reportedMessages[e]?.has(t) ?? !1;
+    hasReportedMessage(e, n) {
+        return o.reportedMessages[e]?.has(n) ?? !1;
     }
 }
 let u = new d(l.h, {
     REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: function (e) {
-        let { channelId: t, messageId: n } = e;
-        (null == o.reportedMessages[t] && (o.reportedMessages[t] = new Set()), o.reportedMessages[t].add(n));
+        let { channelId: n, messageId: t } = e;
+        (null == o.reportedMessages[n] && (o.reportedMessages[n] = new Set()), o.reportedMessages[n].add(t));
     },
     GUILD_BAN_ADD: function (e) {
-        let { user: t, guildId: n } = e;
-        n !== s || (null != r && r.set(t.id, !0));
+        let { user: n, guildId: t } = e;
+        t !== s || (null != r && r.set(n.id, !0));
     },
     GUILD_BAN_REMOVE: function (e) {
-        let { user: t, guildId: n } = e;
-        n !== s || (null != r && r.set(t.id, !1));
+        let { user: n, guildId: t } = e;
+        t !== s || (null != r && r.set(n.id, !1));
     },
     GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
-        let { bans: t, guildId: n, userIds: i } = e;
-        if (n !== s) return;
-        let l = new Set(t.map((e) => e.user?.id)),
+        let { bans: n, guildId: t, userIds: i } = e;
+        if (t !== s) return;
+        let l = new Set(n.map((e) => e.user?.id)),
             a = Array.from(new Set(i ?? [])).filter((e) => !l.has(e));
         (null == r && (r = new Map()),
             l.forEach((e) => {

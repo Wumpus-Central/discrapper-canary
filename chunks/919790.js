@@ -1,18 +1,18 @@
 n.d(t, { A: () => f });
 var l = n(477900),
     a = n(582128),
-    r = n(256905),
-    i = n(666476),
+    i = n(256905),
+    r = n(666476),
     s = n(989145),
-    u = n(922329),
-    o = n(248675),
-    d = n(660183),
+    o = n(922329),
+    d = n(248675),
+    u = n(660183),
     c = n(986109);
 function f(e) {
     let { projectId: t, attachments: n } = e,
-        r = n.filter(m),
-        [i, s] = a.useState(() => new Set()),
-        u = a.useCallback((e) => {
+        i = n.filter(m),
+        [r, s] = a.useState(() => new Set()),
+        o = a.useCallback((e) => {
             s((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
     return (0, l.jsx)("div", {
@@ -25,10 +25,10 @@ function f(e) {
                         p,
                         {
                             projectId: t,
-                            viewableImages: r,
-                            viewerIndex: r.indexOf(e),
-                            unavailableIds: i,
-                            markUnavailable: u,
+                            viewableImages: i,
+                            viewerIndex: i.indexOf(e),
+                            unavailableIds: r,
+                            markUnavailable: o,
                         },
                         n,
                     )
@@ -37,16 +37,16 @@ function f(e) {
     });
 }
 function m(e) {
-    return null != e.id && i.XB.has(e.content_type);
+    return null != e.id && r.XB.has(e.content_type);
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
-    return (0, l.jsx)(u.p, { name: a, compact: !0 });
+        a = n ? u.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
+    return (0, l.jsx)(o.p, { name: a, compact: !0 });
 }
 function g(e) {
-    let { projectId: t, id: n, name: r } = e,
-        [i, c] = a.useState(!1),
+    let { projectId: t, id: n, name: i } = e,
+        [r, c] = a.useState(!1),
         f = a.useCallback(() => {
             (0, s.n6)(t, n)
                 .then(async (e) => {
@@ -59,21 +59,21 @@ function g(e) {
                 })
                 .catch(() => {});
         }, [t, n]);
-    return i
-        ? (0, l.jsx)(h, { name: r, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
-              name: r,
+    return r
+        ? (0, l.jsx)(h, { name: i, unavailable: !0 })
+        : (0, l.jsx)(o.n, {
+              name: i,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
+              ariaLabel: u.intl.formatToPlainString(d.default["g5+7Vs"], { name: i }),
               onClick: f,
           });
 }
 function p(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: f } = e,
-        { id: m, name: g } = n[i],
+    let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: f } = e,
+        { id: m, name: g } = n[r],
         [p, x] = a.useState(null),
         k = c.has(m),
-        [v, j] = a.useState(0);
+        [b, v] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
@@ -87,35 +87,35 @@ function p(e) {
                 e = !0;
             }
         );
-    }, [t, m, v]);
-    let b = a.useCallback(() => {
+    }, [t, m, b]);
+    let j = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
         ).then(
             (e) => {
-                null != e[i] &&
-                    (0, r.R)({
+                null != e[r] &&
+                    (0, i.R)({
                         items: e.filter((e) => null != e),
-                        startingIndex: e.slice(0, i).filter((e) => null != e).length,
+                        startingIndex: e.slice(0, r).filter((e) => null != e).length,
                         shouldHideMediaOptions: !0,
                         location: "VibegrationsChat",
                     });
             },
             () => {},
         );
-    }, [t, n, i, c]);
+    }, [t, n, r, c]);
     return k
         ? (0, l.jsx)(h, { name: g, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
+        : (0, l.jsx)(o.n, {
               name: g,
               thumbSrc: p,
-              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: g }),
-              onClick: b,
+              ariaLabel: u.intl.formatToPlainString(d.default.GtNukg, { name: g }),
+              onClick: j,
               onThumbError: () => {
                   (x(null),
                       (0, s.n6)(t, m).then(
                           (e) => {
-                              e ? 0 === v && j(1) : f(m);
+                              e ? 0 === b && v(1) : f(m);
                           },
                           () => {},
                       ));
