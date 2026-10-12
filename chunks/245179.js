@@ -165,16 +165,17 @@ let v = new R(l.h, {
             u = w.has(t) ? (c.get(t) ?? []) : [];
         (w.set(t, i ?? null), !0 === l ? q.add(t) : q.delete(t), g.delete(t), C.delete(t), E.delete(t));
         let o = new Set(),
-            d = n.filter((e) => null == e.id || (!o.has(e.id) && (o.add(e.id), !0))).map(r.u6),
-            a = null != i && !0 !== l ? d.findIndex((e) => null != e.id) : -1,
-            f = -1 === a ? -1 : u.findIndex((e) => e.id === d[a].id);
-        (-1 !== f && w.set(t, s ?? null), c.set(t, (0, r.YF)(-1 === f ? d : [...u.slice(0, f), ...d.slice(a)])), N(t));
+            d = n.filter((e) => null == e.id || (!o.has(e.id) && (o.add(e.id), !0))),
+            a = (0, r.Bd)(d),
+            f = null != i && !0 !== l ? a.findIndex((e) => null != e.id) : -1,
+            _ = -1 === f ? -1 : u.findIndex((e) => e.id === a[f].id);
+        (-1 !== _ && w.set(t, s ?? null), c.set(t, (0, r.YF)(-1 === _ ? a : [...u.slice(0, _), ...a.slice(f)])), N(t));
     },
     CONJURE_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
         if ((w.set(t, i), 0 === n.length)) return;
         let l = c.get(t) ?? [],
-            s = n.map(r.u6),
+            s = (0, r.Bd)(n),
             u = new Set(l.flatMap((e) => (null == e.id ? [] : [e.id]))),
             o = s.filter((e) => null == e.id || !u.has(e.id));
         c.set(t, (0, r.YF)([...o, ...l]));
