@@ -1,72 +1,81 @@
-l.d(e, { default: () => p });
+l.d(e, { default: () => v });
 var a = l(477900),
-    n = l(582128),
-    s = l(189213),
+    s = l(582128),
+    n = l(189213),
     i = l(834730),
     r = l(821609),
-    c = l(95477),
-    d = l(957565),
-    o = l(591277);
+    d = l(95477),
+    o = l(957565),
+    c = l(591277);
 (l(323874), l(14289), l(35956));
 var u = l(382541);
-async function m(t, e) {
+class x extends Error {}
+async function h(t, e) {
     let { ticket: l, baseUrl: a } = await (0, u.d)(t),
-        n = new URLSearchParams({ ticket: l }),
-        s = await fetch(`${a}/agent/secrets?${n}`, {
+        s = new URLSearchParams({ ticket: l }),
+        n = await fetch(`${a}/agent/secrets?${s}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(e),
         });
-    if (!s.ok) throw Error(`secret submission failed (${s.status})`);
+    if (410 === n.status) throw new x("secret request expired");
+    if (!n.ok) throw Error(`secret submission failed (${n.status})`);
 }
-var x = l(248675),
-    h = l(660183),
-    f = l(622344);
-function p(t) {
-    let { projectId: e, request: l, transitionState: u, onClose: p } = t,
-        [v, b] = n.useState({}),
-        [g, j] = n.useState(!1),
-        [y, k] = n.useState(!1),
-        [C, w] = n.useState(null),
-        E = n.useCallback((t) => {
-            (0, d.C)(t, () => w(t));
+var m = l(248675),
+    f = l(660183),
+    p = l(622344);
+function v(t) {
+    let { projectId: e, request: l, transitionState: u, onClose: v } = t,
+        [b, g] = s.useState({}),
+        [j, y] = s.useState(!1),
+        [w, k] = s.useState(!1),
+        [C, E] = s.useState(null),
+        S = s.useCallback((t) => {
+            (0, o.C)(t, () => E(t));
         }, []),
-        S = n.useCallback((t, e) => {
-            null != e && (k(!1), b((l) => ({ ...l, [e]: t })));
+        _ = s.useCallback((t, e) => {
+            null != e && (k(!1), g((l) => ({ ...l, [e]: t })));
         }, []),
-        N = l.fields.map((t) => t.name).filter((t) => "" !== (v[t] ?? "").trim()),
-        U = N.length > 0,
-        _ = N.length < l.fields.length,
-        M = n.useCallback(
+        q = l.fields.map((t) => t.name).filter((t) => "" !== (b[t] ?? "").trim()),
+        N = q.length > 0,
+        O = q.length < l.fields.length,
+        T = s.useCallback(
             async (t) => {
-                if ((t.preventDefault(), U && !g)) {
-                    (j(!0), k(!1));
+                if ((t.preventDefault(), N && !j)) {
+                    (y(!0), k(!1));
                     try {
-                        (await m(e, { secrets: Object.fromEntries(N.map((t) => [t, v[t].trim()])) }),
-                            (0, o.dv)(e, h.intl.string(_ ? x.default.sMQt5O : x.default.UGqnoV)),
-                            await p());
-                    } catch {
+                        (await h(e, {
+                            secrets: Object.fromEntries(q.map((t) => [t, b[t].trim()])),
+                            ...(null != l.request_id ? { request_id: l.request_id } : {}),
+                        }),
+                            (0, c.dv)(e, f.intl.string(O ? m.default.sMQt5O : m.default.UGqnoV)),
+                            await v());
+                    } catch (t) {
+                        if (t instanceof x) {
+                            ((0, c.dv)(e, f.intl.string(m.default.KVBvVy)), await v());
+                            return;
+                        }
                         k(!0);
                     } finally {
-                        j(!1);
+                        y(!1);
                     }
                 }
             },
-            [U, N, _, p, e, g, v],
+            [N, q, O, v, e, l.request_id, j, b],
         );
     return (0, a.jsx)("form", {
-        onSubmit: M,
-        children: (0, a.jsx)(s.a, {
+        onSubmit: T,
+        children: (0, a.jsx)(n.a, {
             transitionState: u,
-            onClose: p,
-            title: h.intl.string(x.default.TuMGZp),
+            onClose: v,
+            title: f.intl.string(m.default.TuMGZp),
             size: "md",
             actions: [
-                { text: h.intl.string(h.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: g },
-                { text: h.intl.string(x.default.DUdtms), variant: "primary", type: "submit", loading: g, disabled: !U },
+                { text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: v, disabled: j },
+                { text: f.intl.string(m.default.DUdtms), variant: "primary", type: "submit", loading: j, disabled: !N },
             ],
             children: (0, a.jsxs)("div", {
-                className: f._I,
+                className: p._I,
                 children: [
                     null != l.note && "" !== l.note
                         ? (0, a.jsx)(i.E, {
@@ -80,27 +89,27 @@ function p(t) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         selectable: !0,
-                        children: h.intl.string(x.default.jgDBJZ),
+                        children: f.intl.string(m.default.jgDBJZ),
                     }),
                     l.fields.length > 1
                         ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               selectable: !0,
-                              children: h.intl.string(x.default["La+pe4"]),
+                              children: f.intl.string(m.default["La+pe4"]),
                           })
                         : null,
                     (l.copy_values ?? []).length > 0
                         ? (0, a.jsx)("ul", {
-                              className: f.vU,
+                              className: p.vU,
                               children: (l.copy_values ?? []).map((t) =>
                                   (0, a.jsxs)(
                                       "li",
                                       {
-                                          className: f.Jq,
+                                          className: p.Jq,
                                           children: [
                                               (0, a.jsxs)("div", {
-                                                  className: f.ll,
+                                                  className: p.ll,
                                                   children: [
                                                       (0, a.jsx)(i.E, {
                                                           variant: "text-xs/semibold",
@@ -109,7 +118,7 @@ function p(t) {
                                                           children: t.label,
                                                       }),
                                                       (0, a.jsx)("span", {
-                                                          className: f.Ml,
+                                                          className: p.Ml,
                                                           children: (0, a.jsx)(i.E, {
                                                               variant: "text-xs/normal",
                                                               color: "text-default",
@@ -122,8 +131,8 @@ function p(t) {
                                               (0, a.jsx)(r.$, {
                                                   variant: "secondary",
                                                   size: "sm",
-                                                  text: h.intl.string(C === t.value ? h.t.t5VZ88 : h.t.OpuAlK),
-                                                  onClick: () => E(t.value),
+                                                  text: f.intl.string(C === t.value ? f.t.t5VZ88 : f.t.OpuAlK),
+                                                  onClick: () => S(t.value),
                                               }),
                                           ],
                                       },
@@ -133,28 +142,43 @@ function p(t) {
                           })
                         : null,
                     l.fields.map((t) =>
-                        (0, a.jsx)(
-                            c.k,
+                        (0, a.jsxs)(
+                            "div",
                             {
-                                label: t.label,
-                                helperText: null != t.hint && "" !== t.hint ? t.hint : void 0,
-                                name: t.name,
-                                type: "password",
-                                autoComplete: "off",
-                                value: v[t.name] ?? "",
-                                onChange: S,
-                                disabled: g,
-                                fullWidth: !0,
+                                className: p.QI,
+                                children: [
+                                    (0, a.jsx)(d.k, {
+                                        label: t.label,
+                                        helperText: null != t.hint && "" !== t.hint ? t.hint : void 0,
+                                        name: t.name,
+                                        type: "password",
+                                        autoComplete: "off",
+                                        value: b[t.name] ?? "",
+                                        onChange: _,
+                                        disabled: j,
+                                        fullWidth: !0,
+                                    }),
+                                    (t.hosts ?? []).length > 0
+                                        ? (0, a.jsx)(i.E, {
+                                              variant: "text-xs/normal",
+                                              color: "text-muted",
+                                              selectable: !0,
+                                              children: f.intl.formatToPlainString(m.default.Ww9HFO, {
+                                                  hosts: (t.hosts ?? []).join(", "),
+                                              }),
+                                          })
+                                        : null,
+                                ],
                             },
                             t.name,
                         ),
                     ),
-                    y
+                    w
                         ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: h.intl.string(x.default.IrMuew),
+                              children: f.intl.string(m.default.IrMuew),
                           })
                         : null,
                 ],

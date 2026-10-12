@@ -165,7 +165,14 @@ let s = {
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
                     turnId: e.turn_id,
-                    patch: { secretRequest: { fields: a, note: e.note, copy_values: e.copy_values } },
+                    patch: {
+                        secretRequest: {
+                            request_id: e.request_id,
+                            fields: a,
+                            note: e.note,
+                            copy_values: e.copy_values,
+                        },
+                    },
                 });
         },
         collect_settings(e, t) {
