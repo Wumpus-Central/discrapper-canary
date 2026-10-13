@@ -2,8 +2,8 @@ p.d(t, { A: () => c });
 var s = p(477900);
 p(582128);
 var n = p(562708),
-    i = p(877624),
-    o = p(62010),
+    o = p(877624),
+    i = p(62010),
     r = p(406810),
     a = p(139286);
 function c(e) {
@@ -11,9 +11,9 @@ function c(e) {
     return ((0, a.A)({
         type: n.ImpressionTypes.VIEW,
         name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: i.C.PREMIUM_TAB, component_id: t, promotion_id: p },
+        properties: { component_type: o.C.PREMIUM_TAB, component_id: t, promotion_id: p },
     }),
     _)
-        ? (0, s.jsx)(o.E, { type: { text: d }, icon: r.ClockIcon, variant: "default" })
-        : (0, s.jsx)(o.E, { type: { text: c }, variant: "expressive" });
+        ? (0, s.jsx)(i.E, { type: { text: d }, icon: r.ClockIcon, variant: "secondary" })
+        : (0, s.jsx)(i.E, { type: { text: c }, variant: "expressive" });
 }

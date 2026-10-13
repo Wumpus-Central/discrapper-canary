@@ -1,9 +1,9 @@
-r.r(
+a.r(
     (e.exports = {
         badge: "badge_c2b88c",
         label: "label_c2b88c",
-        default: "default_c2b88c",
-        brand: "brand_c2b88c",
+        secondary: "secondary_c2b88c",
+        primary: "primary_c2b88c",
         expressive: "expressive_c2b88c",
         "rarity-common": "rarity-common_c2b88c",
         "rarity-epic": "rarity-epic_c2b88c",

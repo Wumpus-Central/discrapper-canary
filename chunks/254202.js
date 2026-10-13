@@ -207,7 +207,7 @@ function G(e) {
                     !(0, l.isEmpty)(T) &&
                         (0, n.jsx)(f.E, {
                             variant: "text-xs/bold",
-                            color: et === k.L.EXPIRED ? "badge-text-default" : "badge-expressive-text-default",
+                            color: et === k.L.EXPIRED ? "badge-secondary-text" : "badge-expressive-text",
                             className: V.Io,
                             children: T,
                         }),

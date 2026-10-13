@@ -1,21 +1,21 @@
-a.d(t, { n: () => x });
+a.d(t, { n: () => p });
 var l = a(477900),
     s = a(582128),
     n = a(503698),
-    c = a.n(n),
-    i = a(62010),
-    r = a(331322),
+    i = a.n(n),
+    r = a(62010),
+    c = a(331322),
     d = a(834730),
     u = a(64584),
     o = a(735693);
-function x(e) {
-    let { children: t, label: a, description: n, badge: x, ...h } = e,
-        { spacing: p } = s.useContext(u.c),
+function p(e) {
+    let { children: t, label: a, description: n, badge: p, ...x } = e,
+        { spacing: h } = s.useContext(u.c),
         m = s.useId(),
         g = null != n && "" !== n;
     return (0, l.jsxs)("fieldset", {
-        ...h,
-        className: c()(o.lI, h.className),
+        ...x,
+        className: i()(o.lI, x.className),
         "aria-describedby": g ? m : void 0,
         children: [
             null != a
@@ -24,7 +24,7 @@ function x(e) {
                       variant: "text-lg/medium",
                       color: "text-strong",
                       className: o.o1,
-                      children: [a, null != x && (0, l.jsx)(i.E, { type: x, variant: "brand" })],
+                      children: [a, null != p && (0, l.jsx)(r.E, { type: p, variant: "primary" })],
                   })
                 : null,
             g
@@ -36,7 +36,7 @@ function x(e) {
                       children: n,
                   })
                 : null,
-            (0, l.jsx)(r.B, { direction: "vertical", gap: p, children: t }),
+            (0, l.jsx)(c.B, { direction: "vertical", gap: h, children: t }),
         ],
     });
 }

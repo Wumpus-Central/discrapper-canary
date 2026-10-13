@@ -3466,8 +3466,6 @@
     --background-tile-gradient-pink-end: rgba(102, 0, 102, .3);
     --background-tile-gradient-pink-start: rgba(179, 38, 156, .3);
     --background-voice-muted: rgba(209, 46, 56, .12);
-    --badge-background-brand: #5966f2;
-    --badge-background-default: hsla(240, 4%, 61%, .16);
     --badge-common-background: hsla(240, 4%, 61%, .24);
     --badge-common-border: #82828a;
     --badge-common-text: #c9c9cf;
@@ -3475,19 +3473,21 @@
     --badge-epic-border-gradient-end: #a157f2;
     --badge-epic-border-gradient-start: #ff4dd1;
     --badge-epic-text: #c99efa;
-    --badge-expressive-background-default: #fff;
-    --badge-expressive-text-default: #2e3036;
+    --badge-expressive-background: #fff;
+    --badge-expressive-text: #2e3036;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #ff9142;
     --badge-notification-background: #d12e38;
+    --badge-primary-background: #5966f2;
+    --badge-primary-text: #fff;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
     --badge-rare-text: #a1a8fa;
-    --badge-text-brand: #fff;
-    --badge-text-default: #fff;
+    --badge-secondary-background: hsla(240, 4%, 61%, .16);
+    --badge-secondary-text: #fff;
     --bg-surface-raised: #383b40;
     --black: #000;
     --blur-fallback: rgba(31, 31, 33, .96);
@@ -4213,8 +4213,6 @@
     --background-tile-gradient-pink-end: rgba(252, 153, 232, .3);
     --background-tile-gradient-pink-start: rgba(250, 230, 255, .3);
     --background-voice-muted: rgba(209, 46, 56, .12);
-    --badge-background-brand: #5966f2;
-    --badge-background-default: hsla(240, 4%, 61%, .16);
     --badge-common-background: hsla(240, 4%, 61%, .24);
     --badge-common-border: #82828a;
     --badge-common-text: #5e616b;
@@ -4222,19 +4220,21 @@
     --badge-epic-border-gradient-end: #a157f2;
     --badge-epic-border-gradient-start: #ff4dd1;
     --badge-epic-text: #612bb0;
-    --badge-expressive-background-default: #5966f2;
-    --badge-expressive-text-default: #fff;
+    --badge-expressive-background: #5966f2;
+    --badge-expressive-text: #fff;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #f25e0c;
     --badge-notification-background: #d12e38;
+    --badge-primary-background: #5966f2;
+    --badge-primary-text: #fff;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
     --badge-rare-text: #2e36ad;
-    --badge-text-brand: #fff;
-    --badge-text-default: #29292e;
+    --badge-secondary-background: hsla(240, 4%, 61%, .16);
+    --badge-secondary-text: #29292e;
     --bg-surface-raised: #fff;
     --black: #000;
     --blur-fallback: rgba(64, 66, 74, .96);
@@ -4960,8 +4960,6 @@
     --background-tile-gradient-pink-end: rgba(102, 0, 102, .3);
     --background-tile-gradient-pink-start: rgba(179, 38, 156, .3);
     --background-voice-muted: rgba(209, 46, 56, .12);
-    --badge-background-brand: #5966f2;
-    --badge-background-default: hsla(240, 4%, 61%, .2);
     --badge-common-background: hsla(240, 4%, 61%, .24);
     --badge-common-border: #82828a;
     --badge-common-text: #c9c9cf;
@@ -4969,19 +4967,21 @@
     --badge-epic-border-gradient-end: #a157f2;
     --badge-epic-border-gradient-start: #ff4dd1;
     --badge-epic-text: #c99efa;
-    --badge-expressive-background-default: #fff;
-    --badge-expressive-text-default: #2e3036;
+    --badge-expressive-background: #fff;
+    --badge-expressive-text: #2e3036;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #ff9142;
     --badge-notification-background: #d12e38;
+    --badge-primary-background: #5966f2;
+    --badge-primary-text: #fff;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
     --badge-rare-text: #a1a8fa;
-    --badge-text-brand: #fff;
-    --badge-text-default: #dbdbde;
+    --badge-secondary-background: hsla(240, 4%, 61%, .2);
+    --badge-secondary-text: #dbdbde;
     --bg-surface-raised: #131318;
     --black: #000;
     --blur-fallback: rgba(33, 33, 41, .96);
@@ -5707,8 +5707,6 @@
     --background-tile-gradient-pink-end: rgba(102, 0, 102, .3);
     --background-tile-gradient-pink-start: rgba(179, 38, 156, .3);
     --background-voice-muted: rgba(209, 46, 56, .12);
-    --badge-background-brand: #5966f2;
-    --badge-background-default: hsla(240, 4%, 61%, .16);
     --badge-common-background: hsla(240, 4%, 61%, .24);
     --badge-common-border: #82828a;
     --badge-common-text: #c9c9cf;
@@ -5716,19 +5714,21 @@
     --badge-epic-border-gradient-end: #a157f2;
     --badge-epic-border-gradient-start: #ff4dd1;
     --badge-epic-text: #c99efa;
-    --badge-expressive-background-default: #fff;
-    --badge-expressive-text-default: #2e3036;
+    --badge-expressive-background: #fff;
+    --badge-expressive-text: #2e3036;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
     --badge-mythic-text: #ff9142;
     --badge-notification-background: #d12e38;
+    --badge-primary-background: #5966f2;
+    --badge-primary-text: #fff;
     --badge-rare-background: rgba(89, 102, 242, .24);
     --badge-rare-border-gradient-end: #2e36ad;
     --badge-rare-border-gradient-start: #5966f2;
     --badge-rare-text: #a1a8fa;
-    --badge-text-brand: #fff;
-    --badge-text-default: #fafafa;
+    --badge-secondary-background: hsla(240, 4%, 61%, .16);
+    --badge-secondary-text: #fafafa;
     --bg-surface-raised: #26262e;
     --black: #000;
     --blur-fallback: rgba(43, 46, 54, .96);
@@ -6403,4 +6403,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=f0af978098c8a5b4.css.map*/
+/*# sourceMappingURL=c49107d466941932.css.map*/

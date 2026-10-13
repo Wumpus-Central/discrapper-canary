@@ -120,7 +120,7 @@ function b(e) {
                                                   className: O.RV,
                                                   children: (0, n.jsx)(f.E, {
                                                       type: { text: w.intl.string(w.t.l1QVfj) },
-                                                      variant: "default",
+                                                      variant: "secondary",
                                                   }),
                                               }),
                                               H

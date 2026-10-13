@@ -1760,7 +1760,7 @@ function ib(e) {
                                       (0, s.jsx)("div", {
                                           className: iS.k3,
                                           children: (0, s.jsx)(iC.E, {
-                                              variant: "default",
+                                              variant: "secondary",
                                               type: {
                                                   text: J.intl.formatToPlainString(J.t.ehZXlZ, { rank: i.l30Rank }),
                                               },

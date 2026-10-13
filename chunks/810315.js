@@ -208,7 +208,7 @@ let ed = a.memo(function (e) {
                 o &&
                     (0, r.jsx)("div", {
                         className: eo.yW,
-                        children: (0, r.jsx)($.E, { type: "new", variant: "brand" }),
+                        children: (0, r.jsx)($.E, { type: "new", variant: "primary" }),
                     }),
             ],
         });
@@ -255,7 +255,7 @@ let em = a.memo(function (e) {
                 text: er.intl.string(es.default.vCzwM7),
                 selected: n,
                 onClick: A,
-                trailing: c ? (0, r.jsx)($.E, { type: "new", variant: "brand" }) : null,
+                trailing: c ? (0, r.jsx)($.E, { type: "new", variant: "primary" }) : null,
             }),
             p && C(),
         ],
@@ -327,7 +327,7 @@ function eR(e) {
             },
             [t.id],
         ),
-        A = d ? (0, r.jsx)($.E, { type: "new", variant: "brand" }) : null,
+        A = d ? (0, r.jsx)($.E, { type: "new", variant: "primary" }) : null,
         f = u
             ? (0, r.jsxs)("div", {
                   className: ev.c,
@@ -876,7 +876,7 @@ let t7 = F(
                                                           text: _.tooltip,
                                                           children: (0, r.jsx)($.E, {
                                                               type: { text: _.label },
-                                                              variant: "default",
+                                                              variant: "secondary",
                                                           }),
                                                       }),
                                                   })
@@ -1657,7 +1657,7 @@ function it(e) {
             i ||
             u ||
             (A = (0, r.jsx)(eA.Lp, {
-                color: m.A.colors.BADGE_BACKGROUND_BRAND.css,
+                color: m.A.colors.BADGE_PRIMARY_BACKGROUND.css,
                 text: er.intl.string(er.t.y2b7CA),
             })),
         (0, r.jsx)(et.G, {
@@ -1904,7 +1904,7 @@ function iy(e) {
                 d
                     ? (0, r.jsx)("div", {
                           className: iR.Ad,
-                          children: (0, r.jsx)($.E, { type: "new", variant: "brand" }),
+                          children: (0, r.jsx)($.E, { type: "new", variant: "primary" }),
                       })
                     : (0, r.jsx)("img", {
                           src: (0, iS.n)("server_products/storefront/money.gif"),
@@ -2557,7 +2557,7 @@ function lD(e) {
     if (iK(A)) return (0, r.jsx)(n_.A, { mentionsCount: A, isMentionLowImportance: f });
     if (o) return (0, r.jsx)(lv, { locked: d });
     if (c)
-        return (0, r.jsx)(eA.Lp, { text: er.intl.string(er.t.y2b7CA), color: m.A.colors.BADGE_BACKGROUND_BRAND.css });
+        return (0, r.jsx)(eA.Lp, { text: er.intl.string(er.t.y2b7CA), color: m.A.colors.BADGE_PRIMARY_BACKGROUND.css });
     if (!u && g === nE.e.ALL_MESSAGES && t.isForumLikeChannel() && null != S && S > 0)
         return (0, r.jsx)(e1.E, {
             variant: "text-xs/semibold",
@@ -3978,7 +3978,7 @@ function sw(e) {
                             onClick: p,
                             children: (0, r.jsx)(e1.E, {
                                 variant: "text-xs/semibold",
-                                color: "badge-text-brand",
+                                color: "badge-primary-text",
                                 className: sO.pM,
                                 children: er.intl.format(er.t.EQcLyp, { count: m }),
                             }),

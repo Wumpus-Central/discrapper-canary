@@ -251,8 +251,8 @@
 }
 
 .numberBadge__0b563 {
-    background-color: var(--badge-background-default);
-    color: var(--badge-text-default)
+    background-color: var(--badge-secondary-background);
+    color: var(--badge-secondary-text)
 }
 
 .container__0b563,
@@ -271,4 +271,4 @@
     display: none
 }
 
-/*# sourceMappingURL=bfdf9647dc618318.css.map*/
+/*# sourceMappingURL=5f9fd4861e2fb5fe.css.map*/

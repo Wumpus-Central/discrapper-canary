@@ -216,7 +216,7 @@ function eq(e) {
         !0 === t
             ? (l = (0, i.jsx)("div", {
                   className: ez.Ad,
-                  children: (0, i.jsx)(L.E, { type: { text: Q.intl.string(Q.t.psHMa6) }, variant: "brand" }),
+                  children: (0, i.jsx)(L.E, { type: { text: Q.intl.string(Q.t.psHMa6) }, variant: "primary" }),
               }))
             : !0 === n && (l = (0, i.jsx)(em.A, { className: ez.Ad })),
         l

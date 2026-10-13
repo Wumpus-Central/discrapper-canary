@@ -112,7 +112,7 @@ function I(e) {
                             className: A.eg,
                             children: [
                                 (0, r.jsx)(S.D, { variant: "heading-md/medium", color: "text-strong", children: i }),
-                                null != c && (0, r.jsx)(k.E, { type: c, variant: "brand" }),
+                                null != c && (0, r.jsx)(k.E, { type: c, variant: "primary" }),
                             ],
                         }),
                         null != s && (0, r.jsx)(f.E, { variant: "text-sm/normal", color: "text-subtle", children: s }),

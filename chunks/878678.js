@@ -27,8 +27,8 @@ var s = i(477900),
     b = i(807098),
     C = i(637706),
     G = i(788883),
-    M = i(7667),
-    y = i(990854);
+    y = i(7667),
+    M = i(990854);
 function P() {
     let e = (0, j.c)(I.C.GUILD_BOOST_MARKETING_PAGE_BANNER),
         t =
@@ -36,32 +36,32 @@ function P() {
                 ? e.properties.properties.guildBoostMarketingPageBanner
                 : null,
         i = (0, b.T)(t?.asset),
-        { countdownText: n, terms: r } = (0, M.A)(e?.promotionId ?? "");
+        { countdownText: n, terms: r } = (0, y.A)(e?.promotionId ?? "");
     if (null == e || null == t) return null;
     let a = (0, C.C)(t.helpArticle, ""),
         l = [t.body, r].filter((e) => "" !== e).join(" ");
     return (0, s.jsxs)("div", {
-        className: y.kL,
+        className: M.kL,
         children: [
             (0, s.jsx)(G.A, {
                 componentType: I.C.GUILD_BOOST_MARKETING_PAGE_BANNER,
                 componentId: e.id,
                 promotionId: e.promotionId,
             }),
-            null != i && "" !== i && (0, s.jsx)("img", { src: i, className: y.LY, alt: "" }),
+            null != i && "" !== i && (0, s.jsx)("img", { src: i, className: M.LY, alt: "" }),
             (0, s.jsxs)("div", {
-                className: y.er,
+                className: M.er,
                 children: [
                     null != n &&
                         (0, s.jsxs)("div", {
-                            className: y.qW,
+                            className: M.qW,
                             children: [
                                 (0, s.jsx)(R.ClockIcon, {
                                     size: "custom",
                                     width: 12,
                                     height: 12,
                                     color: "currentColor",
-                                    className: y.y,
+                                    className: M.y,
                                 }),
                                 (0, s.jsx)(v.E, { variant: "text-xs/semibold", color: "text-default", children: n }),
                             ],
@@ -79,7 +79,7 @@ function P() {
                                             children: [
                                                 "" !== l && " ",
                                                 (0, s.jsx)(N.Anchor, {
-                                                    className: y.nf,
+                                                    className: M.nf,
                                                     href: a.url,
                                                     children: a.linkText,
                                                 }),
@@ -449,8 +449,8 @@ var ej = i(512750),
     eb = i(948134),
     eC = i(628049),
     eG = i(568065),
-    eM = i(394107);
-let ey =
+    ey = i(394107);
+let eM =
     "https://cdn.discordapp.com/assets/content/2b844e74bd90a5e0ccb408b039a4915f295d8b9c192c823a4afc69c1fc3604a2.png";
 var eP = i(383272);
 let eV = new Set([...Array.from(eG.aH), ...Array.from(eG.m_), ej.FB]);
@@ -482,7 +482,7 @@ function ek(e) {
         [N, j] = n.useState(!1),
         [b, C] = n.useState(!1),
         G = N || b,
-        M = n.useCallback(() => {
+        y = n.useCallback(() => {
             let e = d.A.getGuild(t);
             null != e &&
                 (0, Y.g)({
@@ -495,7 +495,7 @@ function ek(e) {
                     guild: e,
                 });
         }, [t, h]),
-        y = n.useCallback(() => {
+        M = n.useCallback(() => {
             (p(), (0, eO.A)(t, l.A.GUILD_POWERUPS_MARKETING, E.skuId));
         }, [t, E.skuId, p]),
         P = { tension: 400, friction: 30 },
@@ -566,7 +566,7 @@ function ek(e) {
                                         className: eD.Vv,
                                         variant: "text-sm/semibold",
                                         children: Z.intl.formatToPlainString(
-                                            null != m ? eM.default["G/aTXi"] : eM.default.r9pa9K,
+                                            null != m ? ey.default["G/aTXi"] : ey.default.r9pa9K,
                                             { boostCount: u },
                                         ),
                                     }),
@@ -597,7 +597,7 @@ function ek(e) {
                         children: (0, s.jsx)(w.$, {
                             variant: "primary",
                             text: Z.intl.string(Z.t.oPAx73),
-                            onClick: M,
+                            onClick: y,
                             fullWidth: !0,
                         }),
                     }),
@@ -607,16 +607,22 @@ function ek(e) {
                             children: (0, s.jsx)(w.$, {
                                 variant: "secondary",
                                 text: Z.intl.string(Z.t.GoCQxU),
-                                onClick: y,
+                                onClick: M,
                                 fullWidth: !0,
                             }),
                         }),
                 ],
             }),
             "new" === _ &&
-                (0, s.jsx)("div", { className: eD.AP, children: (0, s.jsx)(eI.E, { type: "new", variant: "brand" }) }),
+                (0, s.jsx)("div", {
+                    className: eD.AP,
+                    children: (0, s.jsx)(eI.E, { type: "new", variant: "primary" }),
+                }),
             "beta" === _ &&
-                (0, s.jsx)("div", { className: eD.AP, children: (0, s.jsx)(eI.E, { type: "beta", variant: "brand" }) }),
+                (0, s.jsx)("div", {
+                    className: eD.AP,
+                    children: (0, s.jsx)(eI.E, { type: "beta", variant: "primary" }),
+                }),
         ],
     });
 }
@@ -674,13 +680,13 @@ function ez(e) {
                     t && null != i
                         ? {
                               skuId: eC.W5,
-                              title: Z.intl.string(eM.default["B3OfL/"]),
-                              description: Z.intl.format(eM.default["+UqyGU"], { gameName: s, gameName2: a }),
+                              title: Z.intl.string(ey.default["B3OfL/"]),
+                              description: Z.intl.format(ey.default["+UqyGU"], { gameName: s, gameName2: a }),
                               cost: i,
                               dependencies: [],
                               type: eG.o9.PERK,
-                              animatedImageUrl: ey,
-                              staticImageUrl: ey,
+                              animatedImageUrl: eM,
+                              staticImageUrl: eM,
                           }
                         : null,
                 [t, i, s, a],
@@ -881,20 +887,20 @@ function eX(e) {
         });
     }, [i.id, t, g]);
     let G = (0, A.C$)(i.id, "GuildBoostingMarketingRefresh"),
-        M = (0, r.bG)([x.A], () => x.A.shouldFetchCatalogForGuild(i.id));
+        y = (0, r.bG)([x.A], () => x.A.shouldFetchCatalogForGuild(i.id));
     n.useEffect(() => {
-        G && M && (0, f.z9)(i.id);
-    }, [i.id, G, M]);
-    let y = (0, r.bG)([S.A], () => S.A.hasFetchedPowerupCatalog(i.id));
+        G && y && (0, f.z9)(i.id);
+    }, [i.id, G, y]);
+    let M = (0, r.bG)([S.A], () => S.A.hasFetchedPowerupCatalog(i.id));
     return (
         n.useEffect(() => {
-            if (l && y) {
+            if (l && M) {
                 let e = setTimeout(() => {
                     b();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [l, b, y]),
+        }, [l, b, M]),
         (0, s.jsxs)(s.Fragment, {
             children: [
                 null != a &&

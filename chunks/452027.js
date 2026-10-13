@@ -129,7 +129,7 @@ function A(e) {
                       null != g
                           ? (0, i.jsx)("span", {
                                 className: _.fC,
-                                children: (0, i.jsx)(s.E, { type: g, variant: "brand" }),
+                                children: (0, i.jsx)(s.E, { type: g, variant: "primary" }),
                             })
                           : null,
                   ],

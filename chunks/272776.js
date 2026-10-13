@@ -10117,7 +10117,7 @@ let Am = function (e) {
                                                           className: Au.Bi,
                                                           children: (0, p.jsx)(m2.E, {
                                                               type: { text: U.intl.string(U.t["sBl3X/"]) },
-                                                              variant: "default",
+                                                              variant: "secondary",
                                                           }),
                                                       }),
                                                   })
@@ -13820,7 +13820,7 @@ function x8(e) {
     let { markAsDismissed: t } = e;
     return (
         T.useEffect(() => t(mU.i.AUTO_DISMISS), [t]),
-        (0, p.jsx)("div", { className: x4.Ad, children: (0, p.jsx)(m2.E, { type: "new", variant: "brand" }) })
+        (0, p.jsx)("div", { className: x4.Ad, children: (0, p.jsx)(m2.E, { type: "new", variant: "primary" }) })
     );
 }
 function x7(e) {
@@ -14139,7 +14139,10 @@ function Su(e) {
                             ((n = [
                                 (0, p.jsx)(
                                     "div",
-                                    { className: Sr.Z3, children: (0, p.jsx)(m2.E, { type: "new", variant: "brand" }) },
+                                    {
+                                        className: Sr.Z3,
+                                        children: (0, p.jsx)(m2.E, { type: "new", variant: "primary" }),
+                                    },
                                     "badge",
                                 ),
                                 (0, p.jsx)(
@@ -16491,7 +16494,7 @@ function Tw(e) {
     return (0, p.jsx)(am.A, {
         title: U.intl.string(eX.default["86GtGH"]),
         titleBadge: m
-            ? (0, p.jsx)("div", { className: Tk.A, children: (0, p.jsx)(m2.E, { type: "new", variant: "brand" }) })
+            ? (0, p.jsx)("div", { className: Tk.A, children: (0, p.jsx)(m2.E, { type: "new", variant: "primary" }) })
             : void 0,
         className: i,
         showPremiumIcon: s,
@@ -16677,7 +16680,7 @@ function TQ(e) {
         hasBackground: d,
         title: i,
         titleBadge: d
-            ? (0, p.jsx)("div", { className: Tq.Ad, children: (0, p.jsx)(m2.E, { type: "new", variant: "brand" }) })
+            ? (0, p.jsx)("div", { className: Tq.Ad, children: (0, p.jsx)(m2.E, { type: "new", variant: "primary" }) })
             : void 0,
         description: d ? U.intl.string(U.t.yMoMAt) : void 0,
         errors: a,

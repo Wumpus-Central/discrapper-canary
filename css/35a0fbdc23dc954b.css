@@ -52,7 +52,7 @@
 .statusIcon_a51bc0 {
     background-color: var(--icon-feedback-positive);
     border-radius: 50%;
-    color: var(--badge-text-brand);
+    color: var(--badge-primary-text);
     height: 20px;
     justify-content: center;
     width: 20px
@@ -96,4 +96,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=8ee5a7922e0148a5.css.map*/
+/*# sourceMappingURL=35a0fbdc23dc954b.css.map*/

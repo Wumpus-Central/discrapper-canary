@@ -67,7 +67,7 @@ function H(e) {
             image: null != r ? (0, i.jsx)("img", { className: k.L8, alt: "", src: r }) : void 0,
             badge:
                 null != t
-                    ? (0, i.jsx)(M.E, { type: { text: t.toUpperCase() }, variant: "brand", icon: C.ClockIcon })
+                    ? (0, i.jsx)(M.E, { type: { text: t.toUpperCase() }, variant: "primary", icon: C.ClockIcon })
                     : void 0,
             textGroupClassName: k.RI,
             title: (0, i.jsx)(m.E, { variant: "text-md/medium", color: "text-default", children: n }),

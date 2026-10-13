@@ -142,19 +142,19 @@ var _ = e(742589),
     T = e(683271),
     S = e(558060),
     R = e(381969),
-    b = e(920814),
-    w = e(435558),
-    E = e.n(w),
-    N = e(793574),
-    U = e(250627),
-    V = e(330075),
+    w = e(920814),
+    E = e(435558),
+    N = e.n(E),
+    U = e(793574),
+    V = e(250627),
+    b = e(330075),
     D = e(284683),
     k = e(660183),
     P = e(660516);
 function G(i) {
     let { guildId: t, productId: e } = i,
-        { listingsLoaded: r } = (0, U.bb)(t),
-        d = (0, U.fZ)(t),
+        { listingsLoaded: r } = (0, V.bb)(t),
+        d = (0, V.fZ)(t),
         a = l.useRef(null),
         { sortOption: o } = (0, S.R)(),
         c = l.useMemo(
@@ -177,7 +177,7 @@ function G(i) {
                         default:
                             return i;
                     }
-                    return E().orderBy(i, [e], [s]);
+                    return N().orderBy(i, [e], [s]);
                 })(d, o),
             [d, o],
         );
@@ -205,11 +205,11 @@ function G(i) {
                                           }, 2e3));
                                   },
                                   children: (0, s.jsx)(
-                                      V.i,
+                                      b.i,
                                       {
                                           guildProductListing: i,
                                           guildId: t,
-                                          location: N.A.GUILD_SHOP_PAGE,
+                                          location: U.A.GUILD_SHOP_PAGE,
                                           shouldShowFullDescriptionButton: !1,
                                           hideRoleTag: !0,
                                           lineClamp: 2,
@@ -340,7 +340,11 @@ function ig(i) {
                     }),
                 ],
             }),
-            C && (0, s.jsx)("div", { className: ij.Ad, children: (0, s.jsx)(ii.E, { type: "new", variant: "brand" }) }),
+            C &&
+                (0, s.jsx)("div", {
+                    className: ij.Ad,
+                    children: (0, s.jsx)(ii.E, { type: "new", variant: "primary" }),
+                }),
             null != o &&
                 (0, s.jsx)(it.D, {
                     className: ij.EP,
@@ -359,19 +363,19 @@ function ip(i) {
         o = (0, Q.bG)([ir.Ay], () => ir.Ay.useReducedMotion),
         C = n.map((i) => {
             switch (i) {
-                case b.B.GUILD_PRODUCTS:
+                case w.B.GUILD_PRODUCTS:
                     return (0, s.jsx)(
                         ig,
                         {
                             icon: (0, s.jsx)(iC.A, { width: 20, height: 20 }),
                             title: k.intl.string(k.t.odvTUp),
                             body: k.intl.string(k.t["0JFpRW"]),
-                            selected: l === b.B.GUILD_PRODUCTS,
-                            onClick: () => r(b.B.GUILD_PRODUCTS),
+                            selected: l === w.B.GUILD_PRODUCTS,
+                            onClick: () => r(w.B.GUILD_PRODUCTS),
                         },
                         i,
                     );
-                case b.B.GUILD_ROLE_SUBSCRIPTIONS:
+                case w.B.GUILD_ROLE_SUBSCRIPTIONS:
                     return (0, s.jsx)(
                         ig,
                         {
@@ -383,12 +387,12 @@ function ip(i) {
                                       openRoleSubPage: () => (0, io.pX)(q.BVt.CHANNEL(t.id, ih.VV.ROLE_SUBSCRIPTIONS)),
                                   }),
                             disabled: !e,
-                            selected: l === b.B.GUILD_ROLE_SUBSCRIPTIONS,
-                            onClick: () => r(b.B.GUILD_ROLE_SUBSCRIPTIONS),
+                            selected: l === w.B.GUILD_ROLE_SUBSCRIPTIONS,
+                            onClick: () => r(w.B.GUILD_ROLE_SUBSCRIPTIONS),
                         },
                         i,
                     );
-                case b.B.GUILD_PRODUCTS_PREVIEW:
+                case w.B.GUILD_PRODUCTS_PREVIEW:
                     return (0, s.jsx)(
                         ig,
                         {
@@ -408,9 +412,9 @@ function ip(i) {
                                   }),
                             title: k.intl.string(k.t.odvTUp),
                             body: k.intl.string(k.t["827i8I"]),
-                            selected: l === b.B.GUILD_PRODUCTS_PREVIEW,
+                            selected: l === w.B.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                (r(b.B.GUILD_PRODUCTS_PREVIEW), Y.w.set(ix.Db, "true"));
+                                (r(w.B.GUILD_PRODUCTS_PREVIEW), Y.w.set(ix.Db, "true"));
                             },
                             onPreviewDismiss: d,
                             isNew: a,
@@ -430,7 +434,7 @@ function ip(i) {
                 className: ij.uW,
                 children: [
                     (0, s.jsx)("div", { className: ij.vR, children: C }),
-                    l === b.B.GUILD_PRODUCTS && (0, s.jsx)(iu.default, {}),
+                    l === w.B.GUILD_PRODUCTS && (0, s.jsx)(iu.default, {}),
                 ],
             }),
         ],
@@ -491,7 +495,7 @@ function iR() {
         ],
     });
 }
-function ib(i) {
+function iw(i) {
     let { guildId: t } = i;
     return (0, s.jsxs)("div", {
         className: iT.Bh,
@@ -504,30 +508,30 @@ function ib(i) {
         ],
     });
 }
-var iw = e(821609),
-    iE = e(952270),
-    iN = e(546821);
-function iU() {
+var iE = e(821609),
+    iN = e(952270),
+    iU = e(546821);
+function iV() {
     let { selectedTab: i, isPhantomPreview: t, handlePreviewDismiss: e } = (0, R.k)();
     return t
         ? (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsxs)("div", {
-                      className: iN.ZF,
+                      className: iU.ZF,
                       children: [
-                          (0, s.jsx)(iE.EyeSlashIcon, { size: "xs", color: "currentColor" }),
+                          (0, s.jsx)(iN.EyeSlashIcon, { size: "xs", color: "currentColor" }),
                           (0, s.jsx)(K.E, {
                               variant: "text-sm/normal",
-                              className: iN.cP,
+                              className: iU.cP,
                               children:
-                                  i === b.B.GUILD_PRODUCTS_PREVIEW
+                                  i === w.B.GUILD_PRODUCTS_PREVIEW
                                       ? k.intl.string(k.t.F4Z0nV)
                                       : k.intl.string(k.t.pzTFpM),
                           }),
                       ],
                   }),
-                  (0, s.jsx)(iw.$, {
-                      text: i === b.B.GUILD_PRODUCTS_PREVIEW ? k.intl.string(k.t.YF35pV) : k.intl.string(k.t.r30bky),
+                  (0, s.jsx)(iE.$, {
+                      text: i === w.B.GUILD_PRODUCTS_PREVIEW ? k.intl.string(k.t.YF35pV) : k.intl.string(k.t.r30bky),
                       size: "sm",
                       variant: "secondary",
                       onClick: e,
@@ -536,7 +540,7 @@ function iU() {
           })
         : null;
 }
-var iV = e(43136),
+var ib = e(43136),
     iD = e(575926),
     ik = e(412728),
     iP = e(760497),
@@ -554,16 +558,16 @@ function iO(i) {
               children: (0, s.jsxs)("div", {
                   className: iP.hQ,
                   children: [
-                      (0, s.jsx)(iV.A, { guild: n, subscriptionsSettings: r }),
+                      (0, s.jsx)(ib.A, { guild: n, subscriptionsSettings: r }),
                       (0, s.jsx)(c.h, { size: 32 }),
                       u.length > 0 && (0, s.jsx)(ip, { guild: n }),
                       (0, s.jsxs)("div", {
                           className: iP.v_,
                           children: [
                               (0, s.jsx)(c.h, { size: 32 }),
-                              o && (0, s.jsx)(ib, { guildId: t }),
-                              d === b.B.GUILD_PRODUCTS && (0, s.jsx)(G, { guildId: t, productId: e }),
-                              d === b.B.GUILD_ROLE_SUBSCRIPTIONS && (0, s.jsx)(X, { guildId: t }),
+                              o && (0, s.jsx)(iw, { guildId: t }),
+                              d === w.B.GUILD_PRODUCTS && (0, s.jsx)(G, { guildId: t, productId: e }),
+                              d === w.B.GUILD_ROLE_SUBSCRIPTIONS && (0, s.jsx)(X, { guildId: t }),
                           ],
                       }),
                   ],
@@ -576,14 +580,14 @@ function iB(i) {
         c = (0, a.bG)([v.A], () => v.A.getGuild(t)),
         { shouldHideGuildPurchaseEntryPoints: p, restrictionsLoading: m } = (0, j.MH)(t),
         { selectedTab: L, isPhantomPreview: A, categoryTabs: S } = (0, R.k)(),
-        b = r && (null == c || (0 === S.length && !A) || (p && !m));
+        w = r && (null == c || (0 === S.length && !A) || (p && !m));
     return (
         l.useEffect(() => {
-            b && (0, T.B)(t, ih.VV.GUILD_SHOP);
-        }, [t, b]),
+            w && (0, T.B)(t, ih.VV.GUILD_SHOP);
+        }, [t, w]),
         (0, h.A)(
             { type: ik.z.PAGE, name: d.ImpressionNames.GUILD_SHOP_PAGE, properties: { product_id: e, tab: L } },
-            { disableTrack: b },
+            { disableTrack: w },
         ),
         (0, s.jsxs)("div", {
             "data-has-border": !0,
@@ -597,7 +601,7 @@ function iB(i) {
                             color: o.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
                         }),
                         (0, s.jsx)(_.A.Title, { children: k.intl.string(k.t.al5EXL) }),
-                        (0, s.jsx)(iU, {}),
+                        (0, s.jsx)(iV, {}),
                     ],
                 }),
                 (0, s.jsx)(x.d_, {
@@ -613,7 +617,7 @@ function iB(i) {
 function iy(i) {
     let { guildId: t, productId: e, initialTab: l } = i;
     return (
-        null == l && null != e && (l = b.B.GUILD_PRODUCTS),
+        null == l && null != e && (l = w.B.GUILD_PRODUCTS),
         (0, s.jsx)(R.A, {
             initialTab: l,
             guildId: t,

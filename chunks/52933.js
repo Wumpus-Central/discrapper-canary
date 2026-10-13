@@ -1,8 +1,8 @@
 n.d(t, { Ay: () => A, BA: () => j });
 var s = n(477900),
     l = n(503698),
-    a = n.n(l),
-    i = n(62010),
+    i = n.n(l),
+    a = n(62010),
     r = n(866665),
     c = n(366605),
     d = n(872162),
@@ -17,14 +17,14 @@ function j(e) {
     let { channel: t, isNew: n } = e,
         s = (0, h.kt)(t),
         l = s.slice(void 0, 3),
-        a = s.slice(3),
-        i = s.length > 3 ? s.length - 3 : 0,
+        i = s.slice(3),
+        a = s.length > 3 ? s.length - 3 : 0,
         r = t.hasFlag(g.lx.PINNED),
         c = l.length > 0 || r || n;
     return {
         shownTags: l,
-        remainingTags: a,
-        moreTagsCount: i,
+        remainingTags: i,
+        moreTagsCount: a,
         isPinned: r,
         shouldRenderTagsRow: c,
         forumPostContainsTags: s.length > 0,
@@ -39,17 +39,17 @@ function A(e) {
             isPinned: p,
             shouldRenderTagsRow: N,
         } = j({ channel: t, isNew: n }),
-        { enabled: b } = o.A.useConfig({ location: "forum-post-tags" }),
-        { tagFilter: y } = (0, u.R)(t.id),
+        { enabled: y } = o.A.useConfig({ location: "forum-post-tags" }),
+        { tagFilter: b } = (0, u.R)(t.id),
         C = (0, m.cq)(g);
     return N
         ? (0, s.jsxs)("div", {
-              className: a()(f._A, h),
+              className: i()(f._A, h),
               children: [
                   n
                       ? (0, s.jsx)("div", {
                             className: f.Ad,
-                            children: (0, s.jsx)(i.E, { type: "new", variant: "brand" }),
+                            children: (0, s.jsx)(a.E, { type: "new", variant: "primary" }),
                         })
                       : null,
                   p &&
@@ -60,7 +60,7 @@ function A(e) {
                               children: (0, s.jsx)(c.t, { size: "custom", width: 16, height: 16, color: "white" }),
                           }),
                       }),
-                  b
+                  y
                       ? (0, s.jsx)(d.C, {
                             variant: "filter",
                             label: x.intl.string(x.t["P/y+sj"]),
@@ -70,11 +70,11 @@ function A(e) {
                       : g.map((e) =>
                             (0, s.jsx)(
                                 m.Ay,
-                                { tag: e, size: m.Ay.Sizes.SMALL, className: a()(l, { [f.At]: y.has(e.id) }) },
+                                { tag: e, size: m.Ay.Sizes.SMALL, className: i()(l, { [f.At]: b.has(e.id) }) },
                                 e.id,
                             ),
                         ),
-                  v > 0 ? (0, s.jsx)(m.q6, { tags: A, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: b }) : null,
+                  v > 0 ? (0, s.jsx)(m.q6, { tags: A, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: y }) : null,
               ],
           })
         : null;

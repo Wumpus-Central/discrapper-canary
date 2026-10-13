@@ -24,9 +24,9 @@ var n = s(477900),
     I = s(859703),
     q = s(104886),
     y = s(112142),
-    b = s(3738),
+    p = s(3738),
     T = s(77870),
-    p = s(646917),
+    b = s(646917),
     D = s(561844),
     L = s(590202),
     w = s(651892),
@@ -61,7 +61,7 @@ function tt(t) {
             expansionSpring: +!!a,
             config: { tension: 250, friction: 20, clamp: !0 },
         }),
-        ti = (0, p.z)(),
+        ti = (0, b.z)(),
         ta = (0, T.SD)(e, ti),
         tl = ti === k.MA.NITRO && ta,
         tr = (0, Q.Ic)(e),
@@ -76,7 +76,7 @@ function tt(t) {
         tC = e.userStatus?.orbQuantityClaimed ?? (0, U._Z)(e.config),
         tf = (0, U.wo)(e.config, tc),
         { completedRatio: tg, completedRatioDisplay: tj } = (0, T.O9)(e),
-        tN = (0, b.A9)(e, o, Y.rE.EMBED_DESKTOP, A.GameProfileSources.QuestEmbed, R),
+        tN = (0, p.A9)(e, o, Y.rE.EMBED_DESKTOP, A.GameProfileSources.QuestEmbed, R),
         tv = (0, F.Pd)(e),
         tA = i.useMemo(
             () =>
@@ -131,7 +131,7 @@ function tt(t) {
         tI = i.useMemo(() => (0, Q.Ic)(e) && !(0, M.GR)(e.userStatus), [e]),
         tq = (0, T.do)({ quest: e, content: s, ctaContent: L.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
         ty = (0, w.wr)(e),
-        tb = i.useCallback(() => {
+        tp = i.useCallback(() => {
             tI
                 ? tq()
                 : ((0, H.mA)({ fromContent: s, questId: e.id }),
@@ -154,7 +154,7 @@ function tt(t) {
                         }));
         }, [tI, tq, e.id, s, r, o]),
         tT = (0, m.bG)([I.A], () => null != I.A.questEnrollmentBlockedUntil, []),
-        tp = y.t.useConfig({ location: Y.rE.EMBED_DESKTOP });
+        tb = y.t.useConfig({ location: Y.rE.EMBED_DESKTOP });
     return (0, n.jsxs)("div", {
         className: Z.kL,
         ref: R,
@@ -271,9 +271,9 @@ function tt(t) {
                                   variant: "secondary",
                                   text: tI ? ty : V.intl.string(V.t.LLLLPD),
                                   fullWidth: !0,
-                                  onClick: tb,
+                                  onClick: tp,
                               }),
-                              tp.enabled && tp.enabledQuestStates.has(tv)
+                              tb.enabled && tb.enabledQuestStates.has(tv)
                                   ? (0, n.jsx)(z.A, {
                                         quest: e,
                                         surface: F.V3.QUEST_EMBED,
@@ -397,7 +397,7 @@ function tf(t) {
                                         className: tC.Bv,
                                         children: (0, n.jsx)(tr.E, {
                                             type: { text: V.intl.string(V.t.SKNnqq) },
-                                            variant: "brand",
+                                            variant: "primary",
                                         }),
                                     }),
                                 (0, n.jsx)(th.C, {

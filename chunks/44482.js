@@ -56,7 +56,7 @@ function E(e) {
             case "avatar":
                 return (0, i.jsx)("img", { "aria-hidden": !0, alt: "", src: t.src, className: u.CD });
             case "badge":
-                return (0, i.jsx)(l.E, { type: t.badgeType, variant: "brand" });
+                return (0, i.jsx)(l.E, { type: t.badgeType, variant: "primary" });
             default:
                 return null;
         }

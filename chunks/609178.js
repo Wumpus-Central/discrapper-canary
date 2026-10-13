@@ -88,7 +88,7 @@ function U(e) {
                                             children:
                                                 K ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        null != W && (0, i.jsx)(m.E, { type: { text: W }, variant: "brand" }),
+                                        null != W && (0, i.jsx)(m.E, { type: { text: W }, variant: "primary" }),
                                         (0, i.jsx)(f.D, {
                                             className: r()(M.DD, { [M.GU]: null != W }),
                                             variant: "heading-xl/bold",

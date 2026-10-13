@@ -2964,7 +2964,7 @@ function nt(e) {
                             null != e.badgeText &&
                             (0, c.jsx)("div", {
                                 className: ne.fQ,
-                                children: (0, c.jsx)(eF.E, { type: { text: e.badgeText }, variant: "brand" }),
+                                children: (0, c.jsx)(eF.E, { type: { text: e.badgeText }, variant: "primary" }),
                             }),
                         (0, c.jsxs)(et.B, {
                             direction: "horizontal",

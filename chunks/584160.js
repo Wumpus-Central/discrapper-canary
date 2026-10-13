@@ -24,7 +24,7 @@ function d(e) {
     n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
     let S = { headerBadgeText: m, headerBadgeIcon: C, headerBadgeVariant: h };
     "beta" === p
-        ? ((S.headerBadgeText = o.intl.string(o.t.oW0eUd)), (S.headerBadgeVariant = "default"))
+        ? ((S.headerBadgeText = o.intl.string(o.t.oW0eUd)), (S.headerBadgeVariant = "secondary"))
         : "trial" === p
           ? ((S.headerBadgeText = o.intl.string(s.default["mWL08+"])), (S.headerBadgeIcon = i.TagIcon))
           : "promo" === p && (S.headerBadgeText = o.intl.string(s.default.Fjpyfj));

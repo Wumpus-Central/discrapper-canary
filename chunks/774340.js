@@ -1,8 +1,8 @@
 (a.r(s), a.d(s, { default: () => el }));
 var t = a(477900),
     l = a(582128),
-    n = a(687966),
-    i = a(17928),
+    i = a(687966),
+    n = a(17928),
     c = a(62010),
     d = a(834730),
     r = a(289873),
@@ -36,7 +36,7 @@ function V(e) {
     let { className: s } = e,
         a = (0, k.Ay)(),
         l = (0, M.q)(a),
-        n = (0, L.TM)()
+        i = (0, L.TM)()
             ? l
                 ? "https://cdn.discordapp.com/assets/content/69d4b14501d44f2aec986761083e10f965087103272626a5db7505f48986f1fd.mp4"
                 : "https://cdn.discordapp.com/assets/content/47dc147701661ba3fabce79f4ce1b2bd45760d8c7c9dc70082fca884101bdb1f.mp4"
@@ -53,9 +53,9 @@ function V(e) {
                     fallbackImage: l
                         ? "https://cdn.discordapp.com/assets/content/d8e2decd311794ae583d9165897e2b70181ec10c3553511d03bbeb3876a3f0af.png"
                         : "https://cdn.discordapp.com/assets/content/da80e999bcef3fc647b6697e4b4cbe396505f1517f06fe6e47eb4e24c5538bc9.png",
-                    children: (0, t.jsx)("source", { src: n }),
+                    children: (0, t.jsx)("source", { src: i }),
                 },
-                n,
+                i,
             ),
         ],
     });
@@ -111,8 +111,8 @@ var w = a(628049),
     O = a(660183);
 function Y(e) {
     let { guildId: s } = e,
-        n = (0, x.A)(s),
-        i = l.useRef(null),
+        i = (0, x.A)(s),
+        n = l.useRef(null),
         { analyticsLocations: c } = (0, _.Ay)(R.A.GAME_SERVER_PAGE),
         r = l.useCallback(() => {
             let e = j.A.getGuild(s);
@@ -141,24 +141,24 @@ function Y(e) {
                 className: T.Qs,
                 children: [
                     (0, t.jsx)("div", {
-                        ref: i,
+                        ref: n,
                         className: T._q,
-                        children: (0, t.jsx)(p.E, { eventTargetRef: i, fit: "contain", stateMachine: "SM_Main_Int" }),
+                        children: (0, t.jsx)(p.E, { eventTargetRef: n, fit: "contain", stateMachine: "SM_Main_Int" }),
                     }),
                     (0, t.jsx)(S.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: n ? O.intl.string(z.default.SbXvFG) : O.intl.string(z.default.ryqCyJ),
+                        children: i ? O.intl.string(z.default.SbXvFG) : O.intl.string(z.default.ryqCyJ),
                     }),
                     (0, t.jsx)(d.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         className: T.h_,
-                        children: n ? O.intl.string(z.default.D1YcNp) : O.intl.string(z.default.iSX4z8),
+                        children: i ? O.intl.string(z.default.D1YcNp) : O.intl.string(z.default.iSX4z8),
                     }),
                     (0, t.jsx)("div", {
                         className: T.Uo,
-                        children: n
+                        children: i
                             ? (0, t.jsxs)(t.Fragment, {
                                   children: [
                                       (0, t.jsx)(G.$, {
@@ -207,7 +207,7 @@ var q = a(143407),
 let W = { ...w.ZN, initialStep: w.HS.SERVER_SETTINGS };
 function Z(e) {
     let { guildId: s, isAdmin: a } = e,
-        { state: n, shouldFetchCatalog: c } = (0, i.cf)([N.A], () => ({
+        { state: i, shouldFetchCatalog: c } = (0, n.cf)([N.A], () => ({
             state: N.A.getStateForGuild(s),
             shouldFetchCatalog: N.A.shouldFetchCatalogForGuild(s),
         }));
@@ -215,8 +215,8 @@ function Z(e) {
         c && (0, v.z9)(s);
     }, [s, c]);
     let { catalog: d, instances: m } = l.useMemo(
-            () => ({ catalog: Object.values(n?.catalog ?? {}), instances: Object.values(n?.instances ?? {}) }),
-            [n?.catalog, n?.instances],
+            () => ({ catalog: Object.values(i?.catalog ?? {}), instances: Object.values(i?.instances ?? {}) }),
+            [i?.catalog, i?.instances],
         ),
         u = m.length >= w.ZI;
     return 0 === d.length
@@ -294,7 +294,7 @@ function el(e) {
         { guildId: b } = e;
     (0, A.tR)(b);
     let p = (0, g.U)("GameServerPage"),
-        S = (0, i.bG)([j.A], () => j.A.getGuild(b)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1);
+        S = (0, n.bG)([j.A], () => j.A.getGuild(b)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1);
     ((s = S ? b : null),
         (a = (0, ee.j)()),
         l.useEffect(() => {
@@ -302,7 +302,7 @@ function el(e) {
             let e = !0,
                 t = null,
                 l = 0,
-                n = (function i() {
+                i = (function n() {
                     return setTimeout(
                         () => {
                             null == s ||
@@ -312,14 +312,14 @@ function el(e) {
                                         .then(() => (l = 0))
                                         .catch(() => (l = Math.min(l + 1, 4)))
                                         .finally(() => {
-                                            e && (n = i());
+                                            e && (i = n());
                                         })));
                         },
                         es * Math.pow(2, l) + Math.random() * ea,
                     );
                 })();
             return () => {
-                ((e = !1), t?.abort(), clearTimeout(n));
+                ((e = !1), t?.abort(), clearTimeout(i));
             };
         }, [s, a]),
         l.useEffect(() => {
@@ -327,7 +327,7 @@ function el(e) {
         }, [b, S]));
     let G = (0, x.A)(b),
         I = (0, E.N)("GameServerPage"),
-        R = (0, i.bG)([N.A], () => N.A.getStateForGuild(b)),
+        R = (0, n.bG)([N.A], () => N.A.getStateForGuild(b)),
         _ = l.useMemo(() => {
             if (!R?.hasFetchedInstances) return;
             let e = Object.values(R.instances ?? {});
@@ -342,9 +342,9 @@ function el(e) {
                 className: et.KE,
                 toolbar: (0, t.jsx)("div", {}),
                 children: [
-                    (0, t.jsx)(u.Ay.Icon, { icon: n.GameControllerIcon, "aria-label": "" }),
+                    (0, t.jsx)(u.Ay.Icon, { icon: i.GameControllerIcon, "aria-label": "" }),
                     (0, t.jsx)(u.Ay.Title, { children: O.intl.string(z.default.vCzwM7) }),
-                    (0, t.jsx)(c.E, { type: "beta", variant: "brand" }),
+                    (0, t.jsx)(c.E, { type: "beta", variant: "primary" }),
                     (0, t.jsx)(u.Ay.Divider, { className: et.yF }),
                     (0, t.jsx)(d.E, {
                         variant: "text-sm/normal",

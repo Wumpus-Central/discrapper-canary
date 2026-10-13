@@ -4607,7 +4607,7 @@ function a8(e) {
                                       h &&
                                           (0, l.jsx)(aT.Lp, {
                                               text: z.intl.format(z.t.akCCqu, { count: A }),
-                                              color: nk.A.colors.BADGE_BACKGROUND_BRAND.css,
+                                              color: nk.A.colors.BADGE_PRIMARY_BACKGROUND.css,
                                           }),
                                   ],
                               }),

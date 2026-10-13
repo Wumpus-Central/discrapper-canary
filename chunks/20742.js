@@ -168,7 +168,7 @@ function C(e) {
     return (0, i.jsx)("div", {
         className: p.headerBadge,
         "data-position": n,
-        children: (0, i.jsx)(o.E, { variant: "brand", ...r }),
+        children: (0, i.jsx)(o.E, { variant: "primary", ...r }),
     });
 }
 function O(e) {

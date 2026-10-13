@@ -39,7 +39,7 @@ function I(t) {
     }
 }
 function C() {
-    return (0, l.jsx)("div", { className: T.Ad, children: (0, l.jsx)(x.E, { type: "new", variant: "brand" }) });
+    return (0, l.jsx)("div", { className: T.Ad, children: (0, l.jsx)(x.E, { type: "new", variant: "primary" }) });
 }
 function L(t) {
     let { children: e, className: n, tooltipText: r } = t;

@@ -458,8 +458,8 @@
 }
 
 .numberBadge__2ea32 {
-    background-color: var(--badge-background-default);
-    color: var(--badge-text-default)
+    background-color: var(--badge-secondary-background);
+    color: var(--badge-secondary-text)
 }
 
 .newBadge__2ea32 {
@@ -558,4 +558,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=3e426143eef208a6.css.map*/
+/*# sourceMappingURL=1ddfe215fc6612dc.css.map*/

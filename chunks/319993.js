@@ -24,8 +24,8 @@ var i,
     C = n(862482),
     S = n(821609),
     O = n(66834),
-    T = n(624793),
-    y = n(639245),
+    y = n(624793),
+    T = n(639245),
     k = n(188645),
     P = n(796774),
     _ = n(807348),
@@ -146,7 +146,7 @@ function B(e) {
         w = O === M.JOIN_GUILD,
         U = !j && C,
         B = l.useMemo(
-            () => (p ? T.GO.createFromGuildRecord(g) : null != I ? T.GO.createFromDiscoverableGuild(I) : void 0),
+            () => (p ? y.GO.createFromGuildRecord(g) : null != I ? y.GO.createFromDiscoverableGuild(I) : void 0),
             [g, p, I],
         );
     return U
@@ -181,7 +181,7 @@ function B(e) {
                                       }),
                                       (0, s.jsx)("div", {
                                           className: z.Ff,
-                                          children: (0, s.jsx)(y.G7, {
+                                          children: (0, s.jsx)(T.G7, {
                                               expressionSourceGuild: B,
                                               hasJoinedExpressionSourceGuild: p,
                                               isDisplayingJoinGuildButtonInPopout: w,
@@ -195,7 +195,7 @@ function B(e) {
                   }),
                   (0, s.jsx)("div", {
                       className: z.aZ,
-                      children: (0, s.jsx)(m.E, { type: { text: "BETA" }, variant: "brand" }),
+                      children: (0, s.jsx)(m.E, { type: { text: "BETA" }, variant: "primary" }),
                   }),
               ],
           });
@@ -229,7 +229,7 @@ function H(e) {
     return n || l || "0" === t.guildId || t.guildId === r || !i
         ? (0, s.jsx)("div", {
               className: z.aZ,
-              children: (0, s.jsx)(m.E, { type: { text: "BETA" }, variant: "brand" }),
+              children: (0, s.jsx)(m.E, { type: { text: "BETA" }, variant: "primary" }),
           })
         : (0, s.jsxs)("div", {
               className: z.Mq,
@@ -245,7 +245,7 @@ function H(e) {
                               className: z.sD,
                               children: D.intl.string(D.t["BMw+7I"]),
                           }),
-                          (0, s.jsx)(m.E, { type: { text: "BETA" }, variant: "brand" }),
+                          (0, s.jsx)(m.E, { type: { text: "BETA" }, variant: "primary" }),
                       ],
                   }),
               ],

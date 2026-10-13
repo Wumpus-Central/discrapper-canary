@@ -29,8 +29,8 @@ let i = {
         },
     ],
 };
-var d = a(331322),
-    c = a(440938),
+var c = a(331322),
+    d = a(440938),
     u = a(161918),
     m = a(395856),
     p = a(682301),
@@ -38,8 +38,8 @@ var d = a(331322),
     h = a(484469),
     v = a(628989),
     x = a(758836),
-    b = a(107481);
-function f(e) {
+    f = a(107481);
+function b(e) {
     return e.split(/[\s,]+/).filter((e) => "" !== e);
 }
 let y = {
@@ -50,9 +50,9 @@ let y = {
             id: "shop-batched-sku-loader",
             component: function (e) {
                 let { skuIds: t } = e,
-                    a = n.useMemo(() => f(t), [t]),
+                    a = n.useMemo(() => b(t), [t]),
                     r = (0, p.hv)(a, { needsCategory: !1 });
-                return (0, l.jsxs)(d.B, {
+                return (0, l.jsxs)(c.B, {
                     direction: "vertical",
                     gap: 16,
                     align: "start",
@@ -64,13 +64,13 @@ let y = {
                                 "Comma- or space-separate shop SKU IDs in the controls. Each tile resolves via the storefront APIs through CollectiblesShopManager \u2014 all IDs entered here coalesce into one batched request. Tiles show the skeleton until the SKU resolves.",
                         }),
                         (0, l.jsx)("div", {
-                            className: b.Vg,
+                            className: f.Vg,
                             children: a.map((e) => {
                                 let { state: t, product: a } = r[e] ?? { state: "loading", product: null };
                                 return (0, l.jsx)(
                                     "div",
                                     {
-                                        className: b.Vs,
+                                        className: f.Vs,
                                         children:
                                             "ready" === t && null != a
                                                 ? (0, l.jsxs)(l.Fragment, {
@@ -108,14 +108,14 @@ let y = {
             id: "shop-product-card",
             component: function (e) {
                 let { skuIds: t, improvedLoading: a } = e,
-                    r = n.useMemo(() => f(t), [t]);
+                    r = n.useMemo(() => b(t), [t]);
                 return (0, l.jsx)(m.k, {
                     value: a,
                     children: (0, l.jsx)(u.iM, {
                         tab: x.G2.HOME,
-                        children: (0, l.jsx)(c.R9, {
+                        children: (0, l.jsx)(d.R9, {
                             newValue: { sessionId: "playground" },
-                            children: (0, l.jsxs)(d.B, {
+                            children: (0, l.jsxs)(c.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
@@ -127,7 +127,7 @@ let y = {
                                             "Renders real ProductCards. With the experiment toggle on, each card resolves through CollectiblesShopManager and shows a skeleton until ready; with it off, cards use the legacy CollectiblesCategoryStore path (empty in the playground).",
                                     }),
                                     (0, l.jsx)("div", {
-                                        className: b.Vg,
+                                        className: f.Vg,
                                         children: r.map((e) => (0, l.jsx)(g.A, { skuId: e }, e)),
                                     }),
                                 ],
@@ -150,10 +150,10 @@ let y = {
                     value: t,
                     children: (0, l.jsx)(u.iM, {
                         tab: x.G2.HOME,
-                        children: (0, l.jsx)(c.R9, {
+                        children: (0, l.jsx)(d.R9, {
                             newValue: { sessionId: "playground" },
                             children: (0, l.jsx)("div", {
-                                className: b.rO,
+                                className: f.rO,
                                 children: (0, l.jsx)(v.A, {
                                     handleTransition: () => {},
                                     tab: x.G2.HOME,
@@ -203,7 +203,7 @@ let M = {
                             let { skuId: t } = e,
                                 a = t.trim(),
                                 { state: r } = (0, p.IK)(a, { needsCategory: !0 });
-                            return (0, l.jsxs)(d.B, {
+                            return (0, l.jsxs)(c.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
@@ -320,7 +320,7 @@ let M = {
                                             type: "page",
                                             key: "game servers",
                                             text: "Game Servers",
-                                            badge: { type: "beta", variant: "brand" },
+                                            badge: { type: "beta", variant: "primary" },
                                             route: "#gameservers",
                                             onClick: a("game servers", "#gameservers"),
                                         },

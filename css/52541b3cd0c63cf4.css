@@ -233,9 +233,9 @@
 }
 
 .tileNewDot_a1294d {
-    background: var(--badge-background-brand);
+    background: var(--badge-primary-background);
     border-radius: 50%;
-    box-shadow: 0 0 var(--space-4) var(--badge-background-brand);
+    box-shadow: 0 0 var(--space-4) var(--badge-primary-background);
     height: var(--space-4);
     inset-block-start: var(--space-4);
     inset-inline-end: var(--space-4);
@@ -391,4 +391,4 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=8ce8f91da39720b5.css.map*/
+/*# sourceMappingURL=52541b3cd0c63cf4.css.map*/

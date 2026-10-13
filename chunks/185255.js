@@ -194,7 +194,7 @@ function ev(e) {
                                             }),
                                             !m &&
                                                 (0, p.jsx)(ec.Lp, {
-                                                    color: ea.A.colors.BADGE_BACKGROUND_BRAND.css,
+                                                    color: ea.A.colors.BADGE_PRIMARY_BACKGROUND.css,
                                                     text: en.intl.string(en.t.y2b7CA),
                                                 }),
                                         ],
@@ -2706,7 +2706,7 @@ function nK(e) {
     let { className: t } = e;
     return (0, p.jsx)("div", {
         className: k()(nW.H, t ?? nW.o),
-        children: (0, p.jsx)(nY.E, { type: { text: en.intl.string(en.t.G6GWZ4) }, variant: "brand" }),
+        children: (0, p.jsx)(nY.E, { type: { text: en.intl.string(en.t.G6GWZ4) }, variant: "primary" }),
     });
 }
 var nX = n(194117),
@@ -7280,7 +7280,7 @@ function aU(e) {
                                             className: ak.KR,
                                             children: (0, p.jsx)(nY.E, {
                                                 type: { text: en.intl.string(en.t.nhbtEl) },
-                                                variant: "default",
+                                                variant: "secondary",
                                             }),
                                         }),
                                     N &&
@@ -7288,7 +7288,7 @@ function aU(e) {
                                             className: ak.s7,
                                             children: (0, p.jsx)(nY.E, {
                                                 type: { text: en.intl.string(en.t.aiwXeq) },
-                                                variant: "default",
+                                                variant: "secondary",
                                             }),
                                         }),
                                     null != h &&
@@ -22639,7 +22639,7 @@ function fB(e) {
                                                                                             className: fx.Ad,
                                                                                             children: (0, p.jsx)(nY.E, {
                                                                                                 type: "new",
-                                                                                                variant: "brand",
+                                                                                                variant: "primary",
                                                                                             }),
                                                                                         })
                                                                                       : null,
@@ -24770,7 +24770,7 @@ function pM(e) {
                                                     color: "text-default",
                                                     children: en.intl.string(en.t["0JLdD3"]),
                                                 }),
-                                                (0, p.jsx)(nY.E, { type: "new", variant: "brand" }),
+                                                (0, p.jsx)(nY.E, { type: "new", variant: "primary" }),
                                             ],
                                         }),
                                         (0, p.jsx)(G.E, {

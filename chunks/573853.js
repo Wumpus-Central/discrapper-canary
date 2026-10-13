@@ -2159,7 +2159,7 @@ let nf = 498 + nd.as.MEDIUM,
                                                                                 null != ea &&
                                                                                     (0, l.jsx)(g.E, {
                                                                                         type: "new",
-                                                                                        variant: "brand",
+                                                                                        variant: "primary",
                                                                                     }),
                                                                             ],
                                                                         }),

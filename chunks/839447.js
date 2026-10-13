@@ -57,7 +57,7 @@ function m(e) {
                             n.isUnseen &&
                             (0, l.jsx)("div", {
                                 className: d.Ad,
-                                children: (0, l.jsx)(r.E, { type: "new", variant: "brand" }),
+                                children: (0, l.jsx)(r.E, { type: "new", variant: "primary" }),
                             }),
                         a &&
                             (0, l.jsx)("div", {

@@ -17,7 +17,7 @@ let d = function (e) {
     let { badge: n } = e;
     switch (n.badgeType) {
         case c.Xi.BETA:
-            return (0, r.jsx)(s.E, { type: "beta", variant: "brand" });
+            return (0, r.jsx)(s.E, { type: "beta", variant: "primary" });
         case c.Xi.COUNT:
             return (0, r.jsx)(u, { badge: n });
         case c.Xi.WARNING:

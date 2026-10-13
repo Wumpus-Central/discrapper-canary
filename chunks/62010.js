@@ -7,10 +7,10 @@ var i = n(477900),
     o = n(834730),
     d = n(963434);
 function c(e) {
-    return "string" == typeof e || e.hasOwnProperty("text") ? { type: e, variant: "brand" } : e;
+    return "string" == typeof e || e.hasOwnProperty("text") ? { type: e, variant: "primary" } : e;
 }
 function u(e) {
-    let { type: t, variant: n = "default", icon: r } = e,
+    let { type: t, variant: n = "secondary", icon: r } = e,
         { i18n: c } = (0, l.G9)(),
         u = (function (e, t) {
             switch (e) {

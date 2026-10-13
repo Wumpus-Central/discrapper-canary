@@ -1,11 +1,11 @@
 i.d(s, { default: () => S });
 var t = i(477900),
     a = i(189213),
-    n = i(834730),
-    r = i(363487),
+    r = i(834730),
+    n = i(363487),
     l = i(582128),
-    d = i(503698),
-    c = i.n(d),
+    c = i(503698),
+    d = i.n(c),
     o = i(62010),
     x = i(104510),
     u = i(661531),
@@ -21,29 +21,29 @@ var t = i(477900),
     b = i(660183),
     k = i(434031);
 function w(e) {
-    let { canUseBoosts: s, guildId: i, powerup: a, isNewPerk: r, forceStaticImages: d } = e,
+    let { canUseBoosts: s, guildId: i, powerup: a, isNewPerk: n, forceStaticImages: c } = e,
         [w, f] = l.useState(!1),
         S = (0, v.Ay)(i, a),
-        _ = (0, h.e)(a, S, !1),
-        y = (0, v.dy)(S),
-        { disabled: E } = (0, p.A)(i, a, y),
+        y = (0, h.e)(a, S, !1),
+        _ = (0, v.dy)(S),
+        { disabled: E } = (0, p.A)(i, a, _),
         { onActivate: C, error: M } = (0, I.A)(i, a);
     (0, A.A)(M);
     let P = !s || E,
-        T = y && !P,
+        T = _ && !P,
         q = (0, t.jsxs)(t.Fragment, {
             children: [
                 (0, t.jsxs)("div", {
                     className: k.R9,
                     children: [
                         (0, t.jsx)("div", {
-                            className: c()(k._W, { [k.vu]: y }),
-                            children: (0, t.jsx)(g.l, { powerup: a, isHovering: !P && w, forceStaticImage: d }),
+                            className: d()(k._W, { [k.vu]: _ }),
+                            children: (0, t.jsx)(g.l, { powerup: a, isHovering: !P && w, forceStaticImage: c }),
                         }),
-                        r &&
+                        n &&
                             (0, t.jsx)("div", {
                                 className: k.qS,
-                                children: (0, t.jsx)(o.E, { type: "new", variant: "brand" }),
+                                children: (0, t.jsx)(o.E, { type: "new", variant: "primary" }),
                             }),
                     ],
                 }),
@@ -54,18 +54,18 @@ function w(e) {
                             className: k.U7,
                             children: [
                                 (0, t.jsx)("div", {
-                                    children: (0, t.jsx)(n.E, {
+                                    children: (0, t.jsx)(r.E, {
                                         variant: "text-sm/medium",
-                                        color: (y || w) && !P ? "text-strong" : "text-subtle",
+                                        color: (_ || w) && !P ? "text-strong" : "text-subtle",
                                         children: a.description,
                                     }),
                                 }),
                                 (0, t.jsxs)("div", {
                                     children: [
-                                        _?.type === "expiring" && (0, t.jsx)(j.P5, { dateString: _.expiringAt }),
-                                        _?.type === "removing" && (0, t.jsx)(j.Yq, { removingAt: _.removingAt }),
-                                        _?.type === "active" && (0, t.jsx)(j.TG, { text: _.statusText }),
-                                        null == _ &&
+                                        y?.type === "expiring" && (0, t.jsx)(j.P5, { dateString: y.expiringAt }),
+                                        y?.type === "removing" && (0, t.jsx)(j.Yq, { removingAt: y.removingAt }),
+                                        y?.type === "active" && (0, t.jsx)(j.TG, { text: y.statusText }),
+                                        null == y &&
                                             (0, t.jsxs)("div", {
                                                 className: k.II,
                                                 children: [
@@ -73,7 +73,7 @@ function w(e) {
                                                         size: "sm",
                                                         color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                     }),
-                                                    (0, t.jsx)(n.E, {
+                                                    (0, t.jsx)(r.E, {
                                                         variant: "text-sm/medium",
                                                         color: "text-subtle",
                                                         children: b.intl.formatToPlainString(b.t.t2Wbo1, {
@@ -92,15 +92,15 @@ function w(e) {
                 }),
             ],
         });
-    return y
+    return _
         ? (0, t.jsx)("div", {
-              className: c()(k.nK, k.RO, { [k.r9]: P }),
+              className: d()(k.nK, k.RO, { [k.r9]: P }),
               onMouseEnter: () => f(!0),
               onMouseLeave: () => f(!1),
               children: q,
           })
         : (0, t.jsx)(m.D, {
-              className: c()(k.nK, { [k.r9]: P }),
+              className: d()(k.nK, { [k.r9]: P }),
               onMouseEnter: () => f(!0),
               onMouseLeave: () => f(!1),
               "aria-disabled": P,
@@ -116,19 +116,19 @@ function S(e) {
             guildId: s,
             title: i,
             description: l,
-            powerups: d,
-            newPowerupSkuIdSet: c,
+            powerups: c,
+            newPowerupSkuIdSet: d,
             forceStaticImages: o,
             footerInfoText: x,
             footerAction: u,
             ...m
         } = e,
-        p = (0, r.A)(s),
+        p = (0, n.A)(s),
         v =
             null != x && x.length > 0
                 ? (0, t.jsx)("div", {
                       className: f.x,
-                      children: (0, t.jsx)(n.E, {
+                      children: (0, t.jsx)(r.E, {
                           variant: "text-sm/semibold",
                           color: "text-feedback-warning",
                           children: x,
@@ -143,10 +143,10 @@ function S(e) {
         ...m,
         children: (0, t.jsx)("div", {
             className: f.p,
-            children: d.map((e) =>
+            children: c.map((e) =>
                 (0, t.jsx)(
                     w,
-                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: c?.has(e.skuId), forceStaticImages: o },
+                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: d?.has(e.skuId), forceStaticImages: o },
                     e.skuId,
                 ),
             ),

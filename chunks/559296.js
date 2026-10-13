@@ -311,7 +311,7 @@ function e5(e) {
                     s
                         ? (0, i.jsx)("div", {
                               className: e0.Ad,
-                              children: (0, i.jsx)(er.E, { type: "new", variant: "brand" }),
+                              children: (0, i.jsx)(er.E, { type: "new", variant: "primary" }),
                           })
                         : null,
                 ],
@@ -3976,7 +3976,7 @@ function sm(e) {
                             S
                                 ? (0, i.jsx)("div", {
                                       className: iO.Ad,
-                                      children: (0, i.jsx)(er.E, { type: "new", variant: "brand" }),
+                                      children: (0, i.jsx)(er.E, { type: "new", variant: "primary" }),
                                   })
                                 : null,
                         ],

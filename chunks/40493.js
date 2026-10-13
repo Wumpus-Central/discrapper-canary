@@ -20,11 +20,11 @@ function p(e) {
         N = (0, u.dA)(T?.endDate),
         k = null != N,
         j = (0, c.Ay)(k),
-        x = l.useRef(null);
+        y = l.useRef(null);
     l.useEffect(() => {
         !0 !== j || k || (n(), p(f.i.AUTO_DISMISS));
     }, [j, k, n, p]);
-    let y = {
+    let x = {
         text: m.intl.string(m.t.Ve9Ge6),
         icon: o.GiftIcon,
         onClick: () => {
@@ -33,9 +33,9 @@ function p(e) {
     };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: x, children: b }),
+            (0, i.jsx)("div", { ref: y, children: b }),
             (0, i.jsx)(r.H, {
-                targetElementRef: x,
+                targetElementRef: y,
                 shouldShow: !0,
                 disableMediaViewer: !0,
                 position: "top",
@@ -44,8 +44,10 @@ function p(e) {
                 body: A?.body ?? "",
                 assetUrl: h ?? "",
                 badge:
-                    I && null != N ? { type: { text: N.toUpperCase() }, variant: "brand", icon: s.ClockIcon } : void 0,
-                action: y,
+                    I && null != N
+                        ? { type: { text: N.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
+                        : void 0,
+                action: x,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
                     (n(), p(f.i.USER_DISMISS));

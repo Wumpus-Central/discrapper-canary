@@ -62,7 +62,7 @@ function D(e) {
                     (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
-            o && (0, i.jsx)(u.E, { type: "new", variant: "brand" }),
+            o && (0, i.jsx)(u.E, { type: "new", variant: "primary" }),
         ],
     });
 }

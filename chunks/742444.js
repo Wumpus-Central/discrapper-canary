@@ -1490,10 +1490,10 @@ let e_ = {
                     variant: {
                         label: "Variant",
                         type: "select",
-                        defaultValue: "default",
+                        defaultValue: "secondary",
                         options: [
-                            { label: "Default", value: "default" },
-                            { label: "Brand", value: "brand" },
+                            { label: "Secondary", value: "secondary" },
+                            { label: "Primary", value: "primary" },
                             { label: "Expressive", value: "expressive" },
                             { label: "Rarity \u2014 Common", value: "rarity-common" },
                             { label: "Rarity \u2014 Rare", value: "rarity-rare" },

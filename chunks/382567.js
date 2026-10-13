@@ -174,7 +174,7 @@ let er = function (e) {
     let { badge: t } = e;
     switch (t.badgeType) {
         case es.Xi.NEW:
-            return (0, i.jsx)(ei.E, { type: "new", variant: "brand" });
+            return (0, i.jsx)(ei.E, { type: "new", variant: "primary" });
         case es.Xi.STRONGLY_DISCOURAGED_CUSTOM:
             let { StronglyDiscouragedCustomComponent: n } = t;
             return (0, i.jsx)(n, {});
@@ -914,13 +914,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "636807",
-        s = "8cf47df3ddfe2bd94fbfad0b8597b46a437c1548".substring(0, 7),
+        n = "636821",
+        s = "b2faebf64beb310e5707155e7e2787df287d2a52".substring(0, 7),
         r = eY.A?.app.getVersion(),
         l = eY.A?.app.getBuildNumber(),
         c = eY.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1791928763489", !1) : null,
+        u = null != o ? (0, eq.A)("1791929120074", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();

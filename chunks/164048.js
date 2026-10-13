@@ -18,8 +18,8 @@ var l = n(477900),
     j = n(565645),
     C = n(736653),
     v = n(236285),
-    _ = n(386784),
-    y = n(660183),
+    y = n(386784),
+    _ = n(660183),
     N = n(455168);
 function E(e) {
     let { guildId: t, option: n, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,
@@ -29,7 +29,7 @@ function E(e) {
         O = i.useRef(null),
         { reducedMotion: T } = i.useContext(u.C),
         D = (0, s.bG)([v.Ay], () => n.emoji?.id != null && (v.Ay.getCustomEmojiById(n.emoji?.id)?.animated ?? !1)),
-        H = (0, _.A)(t, 1e3),
+        H = (0, y.A)(t, 1e3),
         K = null == H || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => H[e])),
         L = I && !a && n.isUnseen,
         U = (0, m.z)(
@@ -125,14 +125,14 @@ function E(e) {
                             children: (0, l.jsx)(x.E, {
                                 variant: "text-xs/normal",
                                 color: "text-overlay-light",
-                                children: y.intl.format(y.t.EgKsZA, { memberCount: K }),
+                                children: _.intl.format(_.t.EgKsZA, { memberCount: K }),
                             }),
                         }),
                 ),
                 L &&
                     (0, l.jsx)("div", {
                         className: N.Ad,
-                        children: (0, l.jsx)(A.E, { type: "new", variant: "brand" }),
+                        children: (0, l.jsx)(A.E, { type: "new", variant: "primary" }),
                     }),
             ],
         }),

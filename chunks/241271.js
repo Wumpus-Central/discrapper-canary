@@ -2497,7 +2497,7 @@ function lE(e) {
             ? (0, i.jsx)("div", {
                   className: lf.IO,
                   "aria-hidden": !0,
-                  children: (0, i.jsx)(na.E, { type: "new", variant: "brand" }),
+                  children: (0, i.jsx)(na.E, { type: "new", variant: "primary" }),
               })
             : void 0,
         children: [

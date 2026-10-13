@@ -35,7 +35,7 @@ function h(n) {
     let { badge: e } = n;
     if (null == e) return null;
     let l = (0, t.U)(e);
-    return (0, r.jsx)("div", { className: o.badgeContainer, children: (0, r.jsx)(t.E, { variant: "brand", ...l }) });
+    return (0, r.jsx)("div", { className: o.badgeContainer, children: (0, r.jsx)(t.E, { variant: "primary", ...l }) });
 }
 function x(n) {
     let { body: e } = n;

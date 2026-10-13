@@ -69,11 +69,11 @@
 }
 
 .card__5b393.expired__5b393 .pill__5b393 {
-    background-color: var(--badge-background-default, hsla(240, 4%, 61%, .16))
+    background-color: var(--badge-secondary-background, hsla(240, 4%, 61%, .16))
 }
 
 .pill__5b393 {
-    background-color: var(--badge-expressive-background-default);
+    background-color: var(--badge-expressive-background);
     border-radius: var(--radius-round);
     inset-inline-start: var(--space-24);
     padding: 2px 8px;
@@ -371,4 +371,4 @@
     }
 }
 
-/*# sourceMappingURL=b2ec8a1e33bb5ccc.css.map*/
+/*# sourceMappingURL=dcacaa5c9c72ae3d.css.map*/
