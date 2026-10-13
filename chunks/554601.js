@@ -623,7 +623,7 @@ function eQ(e) {
                                                         n.e("724086"),
                                                         n.e("358937"),
                                                         n.e("448738"),
-                                                        n.e("699806"),
+                                                        n.e("529933"),
                                                         n.e("686889"),
                                                         n.e("84978"),
                                                         n.e("894292"),
@@ -758,7 +758,6 @@ function eQ(e) {
                                                         n.e("831445"),
                                                         n.e("278412"),
                                                         n.e("235996"),
-                                                        n.e("736926"),
                                                         n.e("50097"),
                                                         n.e("319383"),
                                                         n.e("703166"),
@@ -964,11 +963,11 @@ function e1(e) {
 var e8 = n(34188),
     e2 = n(700623),
     e3 = n(177953),
-    e6 = n(825484),
-    e7 = n(683071),
+    e7 = n(825484),
+    e6 = n(683071),
     e9 = n(900797),
-    e4 = n(847374),
-    e5 = n(10716),
+    e5 = n(847374),
+    e4 = n(10716),
     te = n(702841),
     tt = n(150934),
     tn = n(95477),
@@ -982,11 +981,11 @@ function ta(e) {
             useActivityUrlOverride: i,
             filter: s,
         } = (0, te.cf)(
-            [e5.A],
+            [e4.A],
             () => ({
-                activityUrlOverride: e5.A.getActivityUrlOverride(),
-                useActivityUrlOverride: e5.A.getUseActivityUrlOverride(),
-                filter: e5.A.getFilter(),
+                activityUrlOverride: e4.A.getActivityUrlOverride(),
+                useActivityUrlOverride: e4.A.getUseActivityUrlOverride(),
+                filter: e4.A.getFilter(),
             }),
             [],
         );
@@ -1148,7 +1147,7 @@ var tI = n(576917),
 function ty(e) {
     let { context: t, application: n, videoUrl: l, imageCoverUrl: i, sectionName: s, hasCommands: a } = e,
         c = o.useMemo(() => (0, I.u8)(n) ?? "", [n]),
-        d = (0, A.bG)([e5.A], () => e5.A.inDevModeForApplication(n.id)),
+        d = (0, A.bG)([e4.A], () => e4.A.inDevModeForApplication(n.id)),
         { isSlideReady: u } = (0, h.uM)(),
         [m, p] = o.useState(!1);
     o.useEffect(() => {
@@ -1338,7 +1337,7 @@ function tL(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Z$)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e6.e, {
+            ? (0, r.jsxs)(e7.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1350,7 +1349,7 @@ function tL(e) {
             : s && !i && (0, I.Z$)(n)
               ? (0, r.jsx)("div", {
                     className: tI.ai,
-                    children: (0, r.jsx)(e7.w, {
+                    children: (0, r.jsx)(e6.w, {
                         type: "warning",
                         message: et.intl.format(et.t["s/3hjE"], {}),
                         role: "static",
@@ -1417,7 +1416,7 @@ function tb(e) {
                           }),
                           h
                               ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e4.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1507,10 +1506,10 @@ var tU = n(724002),
 function tY() {
     let e = (0, tX.z)(),
         t = eY.Q_.getSetting(),
-        n = (0, A.bG)([e5.A], () => e5.A.getFetchState(), []);
+        n = (0, A.bG)([e4.A], () => e4.A.getFetchState(), []);
     return (
         o.useEffect(() => {
-            e && t && n === e5.$.INITIALIZED && (0, tz.S)();
+            e && t && n === e4.$.INITIALIZED && (0, tz.S)();
         }, [e, n, t]),
         null
     );
@@ -1530,10 +1529,10 @@ var tq = n(111042),
     t8 = n(594061),
     t2 = n(935208),
     t3 = n(630248),
-    t6 = n(355097);
-function t7(e, t) {
+    t7 = n(355097);
+function t6(e, t) {
     o.useEffect(() => {
-        t8.bW.loadIfUncached(t6.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t8.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1576,8 +1575,8 @@ function t7(e, t) {
     }, [s, l, n, t]);
 }
 var t9 = n(457408),
-    t4 = n(712440),
-    t5 = n(733110),
+    t5 = n(712440),
+    t4 = n(733110),
     ne = n(73153);
 let nt = 10 * Y.A.Millis.MINUTE,
     nn = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -2194,7 +2193,7 @@ var nQ = n(984516),
     n8 = n(994369),
     n2 = n(240591),
     n3 = n(46477);
-function n6(e, t) {
+function n7(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2244,7 +2243,7 @@ function n6(e, t) {
         i,
     ).slice(0, i);
 }
-function n7(e, t) {
+function n6(e, t) {
     let n = t3.A.getScoreWithoutLoadingLatest(e.id);
     return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
@@ -2253,11 +2252,11 @@ function n9(e, t) {
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n4(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n5 = n(562708),
+var n4 = n(562708),
     le = n(139286),
     lt = n(520117);
 function ln(e) {
@@ -2267,8 +2266,8 @@ function ln(e) {
         trackSearchResultsItemImpressionRef: (0, lt.A)({
             onVisible: function () {
                 (0, le.x)({
-                    type: n5.ImpressionTypes.VIEW,
-                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                    type: n4.ImpressionTypes.VIEW,
+                    name: n4.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -2492,7 +2491,7 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n6(c, {
+                    return n7(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2587,7 +2586,7 @@ function lm(e) {
                                 let n = z.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return z.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n4,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2629,7 +2628,7 @@ function lm(e) {
                                     }),
                             ));
                     } else a && (u = m);
-                    return n6(u, {
+                    return n7(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2676,7 +2675,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n7, n9],
+                        sortComparers: [n6, n9],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3021,7 +3020,7 @@ let lE = [],
     l_ = tw.K.APP_LAUNCHER_IN_TEXT;
 function lI(e) {
     let { context: t, entrypoint: n, searchQuery: l, setSearchQuery: i, setScroller: s, isScrollCloseToBottom: a } = e,
-        c = (0, A.bG)([e5.A], () => e5.A.getIsEnabled(), []),
+        c = (0, A.bG)([e4.A], () => e4.A.getIsEnabled(), []),
         d = n === _.s4.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
         u = (0, I.sw)(n),
         m = !(0, I.sw)(n),
@@ -3163,13 +3162,13 @@ function lv(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
+                        s = (0, A.bG)([t4.default], () => t4.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t5.FetchState.NOT_FETCHED && t4.A.fetch();
+                        i && s === t4.FetchState.NOT_FETCHED && t5.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t5.default], () =>
+                    let a = (0, A.yK)([t4.default], () =>
                             i
-                                ? t5.default
+                                ? t4.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(t0.F.APPLICATIONS_COMMANDS))
                                 : [],
@@ -3180,7 +3179,7 @@ function lv(e) {
                             let e = [];
                             return (c && e.push(ni.gq), e);
                         }, [c]),
-                        u = t7(r, a),
+                        u = t6(r, a),
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3359,7 +3358,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t7(
+                c = t6(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
