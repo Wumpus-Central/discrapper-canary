@@ -10,9 +10,9 @@ var l = n(582128),
 function c(e, t) {
     let { id: n, status: u, error: c } = t,
         f = (0, i.bG)([r.Ay], () => "open" === r.Ay.getConnState(e), [e]),
-        p = (0, i.bG)([a.A, r.Ay], () => !r.Ay.isChatStopped(e) && !a.A.isThinking(e) && !a.A.isCompacting(e), [e]),
-        [h, m] = l.useState(null),
-        g = l.useCallback(() => m({ frame: t, ok: (0, s.yR)(e, n) }), [t, e, n]),
+        p = (0, i.bG)([a.A], () => !a.A.isThinking(e) && !a.A.isCompacting(e), [e]),
+        [h, g] = l.useState(null),
+        m = l.useCallback(() => g({ frame: t, ok: (0, s.yR)(e, n) }), [t, e, n]),
         b = h?.frame === t ? h : null,
         x = b?.ok === !0 && f;
     if ("undone" === u) return null;
@@ -35,7 +35,7 @@ function c(e, t) {
                       text: d.intl.string("active" === u ? o.default["7q2YyD"] : o.default.FzX9h8),
                       confirm: "committed" === u,
                       disabled: !f || x || ("committed" === u && !p),
-                      onPress: g,
+                      onPress: m,
                   },
     };
 }
