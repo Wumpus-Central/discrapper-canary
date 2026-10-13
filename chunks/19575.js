@@ -356,6 +356,21 @@ let K = {
         setFocused(e) {
             this.getDiscordUtils().inputSetFocused(e);
         },
+        isWaylandGlobalShortcutsAvailable() {
+            return !!I.isPlatformEmbedded && (this.getDiscordUtils().isWaylandGlobalShortcutsAvailable?.() ?? !1);
+        },
+        setWaylandPortalShortcutsCallback(e) {
+            I.isPlatformEmbedded && this.getDiscordUtils().setWaylandPortalShortcutsCallback?.(e);
+        },
+        reofferWaylandPortalShortcut(e) {
+            I.isPlatformEmbedded && this.getDiscordUtils().reofferWaylandPortalShortcut?.(e);
+        },
+        canOpenWaylandPortalShortcutSettings() {
+            return !!I.isPlatformEmbedded && (this.getDiscordUtils().canOpenWaylandPortalShortcutSettings?.() ?? !1);
+        },
+        openWaylandPortalShortcutSettings() {
+            I.isPlatformEmbedded && this.getDiscordUtils().openWaylandPortalShortcutSettings?.();
+        },
         setObservedGamesCallback(e, t, n, i) {
             try {
                 y = {};
