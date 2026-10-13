@@ -192,7 +192,8 @@ function c(e) {
                   ? ((g.buttonRef = p), (g.ref = A))
                   : "innerRef" in t.props
                     ? ((g.innerRef = m), (g.ref = A))
-                    : ((g.ref = A), (g.innerRef = A)),
+                    : ((g.ref = A),
+                      "function" == typeof t.type && t.type.prototype?.isReactComponent != null && (g.innerRef = A)),
             i.cloneElement(t, g)),
         U = (function (e, t, n, i, r, s, l) {
             if (!e) return null;
