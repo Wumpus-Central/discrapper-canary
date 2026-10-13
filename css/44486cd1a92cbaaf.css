@@ -850,6 +850,16 @@
     text-align: center
 }
 
+.sentLink_a9c009 {
+    color: var(--text-muted);
+    cursor: pointer
+}
+
+.sentLink_a9c009:focus-visible,
+.sentLink_a9c009:hover {
+    text-decoration: underline
+}
+
 .conjurMessage_a9077e {
     position: relative
 }
@@ -985,4 +995,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=9b89116472286059.css.map*/
+/*# sourceMappingURL=44486cd1a92cbaaf.css.map*/

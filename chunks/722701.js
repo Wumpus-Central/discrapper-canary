@@ -1,11 +1,12 @@
-n.d(t, { A: () => d });
-var r = n(17928),
-    s = n(73153),
+n.d(t, { A: () => u });
+var s = n(17928),
+    r = n(73153),
     o = n(260498);
 let i = new Map(),
     l = new Set(),
-    a = new Set();
-class c extends r.Ay.Store {
+    a = new Set(),
+    c = [];
+class d extends s.Ay.Store {
     initialize() {
         this.waitFor(o.Ay);
     }
@@ -19,7 +20,7 @@ class c extends r.Ay.Store {
         return a.has(e);
     }
 }
-let d = new c(s.h, {
+let u = new d(r.h, {
     LOGOUT: function () {
         if (0 === i.size && 0 === l.size && 0 === a.size) return !1;
         (i.clear(), l.clear(), a.clear());
@@ -30,29 +31,47 @@ let d = new c(s.h, {
         if (!t) return !1;
     },
     CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
+        var t;
         let {
-                projectId: t,
-                published: n,
+                projectId: n,
+                published: s,
                 hasUnpublishedChanges: r,
-                surface: s,
-                previewAppChannels: o,
-                publishedRevision: l = null,
-                publishedAt: a = null,
-                publishing: c = !1,
+                surface: o,
+                previewAppChannels: l,
+                publishedRevision: a = null,
+                publishedAt: d = null,
+                publishing: u = !1,
+                patchNotesSent: p,
             } = e,
-            d = n ? (r ? "changes" : "up_to_date") : "unpublished",
-            u = i.get(t);
+            h = s ? (r ? "changes" : "up_to_date") : "unpublished",
+            f = i.get(n),
+            _ =
+                null == p ||
+                ((t = f?.patchNotesSent ?? c),
+                t.length === p.length &&
+                    t.every((e, t) => e.publishedRevision === p[t].publishedRevision && e.messageId === p[t].messageId))
+                    ? (f?.patchNotesSent ?? c)
+                    : p;
         if (
-            u?.state === d &&
-            u.surface === s &&
-            u.previewAppChannels.length === o.length &&
-            u.previewAppChannels.every((e, t) => e === o[t]) &&
-            u.publishedRevision === l &&
-            u.publishedAt === a &&
-            u.publishing === c
+            f?.state === h &&
+            f.surface === o &&
+            f.previewAppChannels.length === l.length &&
+            f.previewAppChannels.every((e, t) => e === l[t]) &&
+            f.publishedRevision === a &&
+            f.publishedAt === d &&
+            f.publishing === u &&
+            f.patchNotesSent === _
         )
             return !1;
-        i.set(t, { state: d, surface: s, previewAppChannels: o, publishedRevision: l, publishedAt: a, publishing: c });
+        i.set(n, {
+            state: h,
+            surface: o,
+            previewAppChannels: l,
+            publishedRevision: a,
+            publishedAt: d,
+            publishing: u,
+            patchNotesSent: _,
+        });
     },
     CONJURE_PROJECT_PUBLISH_START: function (e) {
         let { projectId: t } = e;
@@ -66,6 +85,15 @@ let d = new c(s.h, {
         let { projectId: t, pending: n } = e;
         if (a.has(t) === n) return !1;
         n ? a.add(t) : a.delete(t);
+    },
+    CONJURE_PROJECT_PATCH_NOTES_SENT: function (e) {
+        let { projectId: t, sent: n } = e,
+            s = i.get(t);
+        if (null == s) return !1;
+        i.set(t, {
+            ...s,
+            patchNotesSent: [...(s.patchNotesSent ?? c).filter((e) => e.publishedRevision !== n.publishedRevision), n],
+        });
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
