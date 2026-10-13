@@ -284,8 +284,8 @@ let V = {
             videoUrl: { ...V.videoUrl, defaultValue: r.Im },
         },
     },
-    P = { tension: 500, friction: 30, clamp: !0 },
-    w = {
+    w = { tension: 500, friction: 30, clamp: !0 },
+    P = {
         name: "Timeline Indicators",
         id: "timeline-indicators-generic",
         component: function (e) {
@@ -296,7 +296,7 @@ let V = {
                         r = i.useRef(null),
                         [{ expansion: s }, d] = (0, g.z)(() => ({
                             expansion: 0,
-                            config: P,
+                            config: w,
                             onRest: () => {
                                 null == r.current && n(null);
                             },
@@ -469,28 +469,27 @@ function W(e) {
     };
 }
 function H(e) {
-    let { quest: t, isPortrait: a, children: l, isFullscreenEnabled: n = !1, setIsFullscreenEnabled: r = F.tEg } = e,
-        s = i.useMemo(
+    let { quest: t, children: a, isFullscreenEnabled: l = !1, setIsFullscreenEnabled: n = F.tEg } = e,
+        r = i.useMemo(
             () => ({
                 quest: t,
                 sourceQuestContent: j.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
-                isPortrait: a,
                 onClose: F.tEg,
-                isFullscreenEnabled: n,
-                setIsFullscreenEnabled: r,
+                isFullscreenEnabled: l,
+                setIsFullscreenEnabled: n,
                 maxProgressSec: 0,
                 targetSec: 0,
             }),
-            [t, a, n, r],
+            [t, l, n],
         ),
-        d = i.useMemo(() => ({ questConfig: t.config }), [t.config]);
+        s = i.useMemo(() => ({ questConfig: t.config }), [t.config]);
     return (0, o.jsx)(I.R, {
         questOrQuests: t,
         questContent: j.uF.VIDEO_MODAL,
         sourceQuestContent: j.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
-            (0, o.jsx)(O.l.Provider, { value: d, children: (0, o.jsx)(O.a.Provider, { value: s, children: l }) }),
+            (0, o.jsx)(O.l.Provider, { value: s, children: (0, o.jsx)(O.a.Provider, { value: r, children: a }) }),
     });
 }
 function q(e) {
@@ -533,7 +532,6 @@ function q(e) {
         },
         children: (0, o.jsx)(H, {
             quest: g,
-            isPortrait: u,
             isFullscreenEnabled: p,
             setIsFullscreenEnabled: c,
             children: (0, o.jsx)(D.A, {
@@ -653,7 +651,6 @@ function X(e) {
                 style: J(u, p),
                 children: (0, o.jsx)(H, {
                     quest: x,
-                    isPortrait: p,
                     children: (0, o.jsx)(_.A, {
                         targetTimeSec: c.target,
                         parentTransitionState: d.ip.ENTERED,
@@ -684,7 +681,7 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
         id: "video-quest",
         name: "Video Player",
         groups: [
-            { title: "Discord Video Player (Generic)", stories: [E, T, A, w] },
+            { title: "Discord Video Player (Generic)", stories: [E, T, A, P] },
             {
                 title: "Discord Multi Video Player (Experimental)",
                 stories: [
@@ -851,7 +848,6 @@ let Z = { label: "Full Episode (shows reward indicator)", type: "boolean", defau
                                         style: J(s, !1),
                                         children: (0, o.jsx)(H, {
                                             quest: m,
-                                            isPortrait: !1,
                                             children: (0, o.jsx)(_.A, {
                                                 targetTimeSec: p.target,
                                                 parentTransitionState: d.ip.ENTERED,

@@ -4,7 +4,6 @@ let l = r.createContext({
         quest: null,
         sourceQuestContent: null,
         videoSessionId: "",
-        isPortrait: !1,
         isFullscreenEnabled: !1,
         onClose: () => {},
         setIsFullscreenEnabled: () => {},
