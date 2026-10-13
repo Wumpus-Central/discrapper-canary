@@ -23,8 +23,8 @@ var r = n(477900),
     A = n(242874),
     x = n(810498),
     v = n(531536),
-    R = n(219271),
-    M = n(427358),
+    M = n(219271),
+    R = n(427358),
     T = n(7133),
     L = n(994500),
     b = n(351906),
@@ -69,13 +69,13 @@ function er(e) {
         [_, P] = l.useState(!1),
         { isLoading: x, potentialRecipients: v } = (function () {
             l.useEffect(() => {
-                (S.A.fetchRelationships(), (0, R.u)());
+                (S.A.fetchRelationships(), (0, M.u)());
             }, []);
-            let { userAffinities: e, isLoading: t } = (0, c.cf)([M.A], () => ({
-                    userAffinities: M.A.getUserAffinitiesMap(),
-                    isLoading: M.A.isFetching(),
+            let { userAffinities: e, isLoading: t } = (0, c.cf)([R.A], () => ({
+                    userAffinities: R.A.getUserAffinitiesMap(),
+                    isLoading: R.A.isFetching(),
                 })),
-                n = l.useMemo(() => Array.from(e.keys()).sort((e, t) => M.A.compare(e, t)), [e]),
+                n = l.useMemo(() => Array.from(e.keys()).sort((e, t) => R.A.compare(e, t)), [e]),
                 r = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
                 i = l.useMemo(() => [...n, ...u().difference(r, n)], [r, n]);
             return {
@@ -281,14 +281,14 @@ function eu(e) {
             subscriptionPlan: _,
             selectedGiftStyle: A,
             onClose: v,
-            hasSentMessage: R,
-            giftRecipient: M,
+            hasSentMessage: M,
+            giftRecipient: R,
             giftMessageError: L,
             isSendingMessage: k,
         } = e,
         [F, B] = l.useState(h.e.Modes.DEFAULT),
         D = (0, c.bG)([b.A], () => b.A.enabled),
-        G = R || (null != A && null != M),
+        G = M || (null != A && null != R),
         Z = S?.productLine === ei.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: K,
@@ -387,22 +387,22 @@ function eu(e) {
                                 variant: "heading-lg/semibold",
                                 className: s()({ [ea.wx]: null == A && !Z, [ea.$A]: null != A && !Z }),
                                 children:
-                                    null != M || (R && null == L)
+                                    null != R || (M && null == L)
                                         ? ee.intl.string(ee.t.zOmK9N)
                                         : null != L
                                           ? ee.intl.string(ee.t.d1lrmU)
                                           : ee.intl.string(ee.t["/s1xR7"]),
                             }),
-                            (R && null != M && null == L) || G
+                            (M && null != R && null == L) || G
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsxs)("div", {
                                               className: ea.jx,
                                               children: [
-                                                  (0, r.jsx)(g.A, { user: M, size: m._3.SIZE_24 }),
+                                                  (0, r.jsx)(g.A, { user: R, size: m._3.SIZE_24 }),
                                                   (0, r.jsx)(C.D, {
                                                       variant: "heading-lg/semibold",
-                                                      children: H.Ay.getName(M),
+                                                      children: H.Ay.getName(R),
                                                   }),
                                               ],
                                           }),
@@ -476,16 +476,16 @@ function ec(e) {
 function eo(e) {
     let { giftCode: t, onClose: n } = e;
     l.useEffect(() => {
-        (S.A.fetchRelationships(), (0, R.u)());
+        (S.A.fetchRelationships(), (0, M.u)());
     }, []);
     let [i, s] = l.useState(),
         [a, o] = l.useState(!1),
         [f, h] = l.useState(!1),
-        { userAffinities: p, isLoading: C } = (0, c.cf)([M.A], () => ({
-            userAffinities: M.A.getUserAffinitiesMap(),
-            isLoading: M.A.isFetching(),
+        { userAffinities: p, isLoading: C } = (0, c.cf)([R.A], () => ({
+            userAffinities: R.A.getUserAffinitiesMap(),
+            isLoading: R.A.isFetching(),
         })),
-        E = Array.from(p.keys()).sort((e, t) => M.A.compare(e, t)),
+        E = Array.from(p.keys()).sort((e, t) => R.A.compare(e, t)),
         I = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
         _ = u().difference(I, E),
         P = [...E, ..._],

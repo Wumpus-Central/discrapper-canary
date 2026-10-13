@@ -1,21 +1,21 @@
-n.d(t, { I: () => E, _: () => N });
-var l,
-    a = n(477900);
-n(582128);
-var r = n(834730),
-    s = n(150934),
-    i = n(118982),
-    o = n(403362),
-    c = n(975571),
-    d = n(158045),
-    u = n(580630),
-    m = n(652215),
-    x = n(202541),
-    f = n(583741),
-    p = n(660183),
-    h = n(484742);
+l.d(t, { I: () => E, _: () => N });
+var n,
+    a = l(477900);
+l(582128);
+var r = l(834730),
+    s = l(150934),
+    i = l(118982),
+    o = l(403362),
+    c = l(975571),
+    d = l(158045),
+    u = l(580630),
+    m = l(652215),
+    x = l(202541),
+    f = l(583741),
+    p = l(660183),
+    h = l(484742);
 function j(e) {
-    let { value: t, onChange: n } = e;
+    let { value: t, onChange: l } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.E, {
@@ -23,7 +23,7 @@ function j(e) {
                 color: "text-muted",
                 children: p.intl.string(f.default["5dmUS+"]),
             }),
-            (0, a.jsx)(s.S, { label: p.intl.string(f.default.XBtSMa), checked: t, onChange: n }),
+            (0, a.jsx)(s.S, { label: p.intl.string(f.default.XBtSMa), checked: t, onChange: l }),
         ],
     });
 }
@@ -31,16 +31,16 @@ let v = { [x.WT.DAY]: f.default.iPorlt, [x.WT.MONTH]: f.default["8CYJ8Y"], [x.WT
 function g(e) {
     let {
             purchaseButtonText: t,
-            totalDue: n,
-            renewalPrice: l,
+            totalDue: l,
+            renewalPrice: n,
             currency: a,
             interval: r,
             intervalCount: s,
             startDate: i,
             multiPeriodDiscountAttributes: o,
         } = e,
-        x = (0, u.$g)(n, a),
-        f = (0, u.$g)(l, a),
+        x = (0, u.$g)(l, a),
+        f = (0, u.$g)(n, a),
         h = m.X7G.PAID_TERMS,
         j = m.qF7.CONTACT_US,
         g = c.A.getArticleURL(m.MVz.BILLING);
@@ -51,13 +51,13 @@ function g(e) {
         interval: p.intl.formatToPlainString(v[r], { intervalCount: s }),
         startDate: i,
         multiPeriodDiscountAttributes: (function (e) {
-            let { currency: t, multiPeriodDiscountAttributes: n } = e;
-            if (null != n)
+            let { currency: t, multiPeriodDiscountAttributes: l } = e;
+            if (null != l)
                 return {
-                    discountedRenewalPrice: (0, u.$g)(n.discountedRenewalPrice, t),
-                    discountEndDate: n.discountEndDate,
-                    priceWithoutDiscount: (0, u.$g)(n.priceWithoutDiscount, t),
-                    trialDuration: (0, d.re)({ intervalType: n.intervalType, intervalCount: n.intervalCount }),
+                    discountedRenewalPrice: (0, u.$g)(l.discountedRenewalPrice, t),
+                    discountEndDate: l.discountEndDate,
+                    priceWithoutDiscount: (0, u.$g)(l.priceWithoutDiscount, t),
+                    trialDuration: (0, d.re)({ intervalType: l.intervalType, intervalCount: l.intervalCount }),
                 };
         })({ multiPeriodDiscountAttributes: o, currency: a }),
         paidServicesTermsUrl: h,
@@ -66,18 +66,18 @@ function g(e) {
     };
 }
 var E =
-    (((l = {})[(l.Subscription = 0)] = "Subscription"),
-    (l[(l.SubscriptionTrial = 1)] = "SubscriptionTrial"),
-    (l[(l.SubscriptionApplication = 2)] = "SubscriptionApplication"),
-    (l[(l.GuildProductOneTimePurchase = 3)] = "GuildProductOneTimePurchase"),
-    (l[(l.OrbsRedemption = 4)] = "OrbsRedemption"),
-    (l[(l.Shop = 5)] = "Shop"),
-    (l[(l.PremiumAppsOneTimePurchase = 6)] = "PremiumAppsOneTimePurchase"),
-    (l[(l.GiftNitro = 7)] = "GiftNitro"),
-    (l[(l.GiftShop = 8)] = "GiftShop"),
-    (l[(l.GiftGameShop = 9)] = "GiftGameShop"),
-    (l[(l.OrbsGameShop = 10)] = "OrbsGameShop"),
-    l);
+    (((n = {})[(n.Subscription = 0)] = "Subscription"),
+    (n[(n.SubscriptionTrial = 1)] = "SubscriptionTrial"),
+    (n[(n.SubscriptionApplication = 2)] = "SubscriptionApplication"),
+    (n[(n.GuildProductOneTimePurchase = 3)] = "GuildProductOneTimePurchase"),
+    (n[(n.OrbsRedemption = 4)] = "OrbsRedemption"),
+    (n[(n.Shop = 5)] = "Shop"),
+    (n[(n.PremiumAppsOneTimePurchase = 6)] = "PremiumAppsOneTimePurchase"),
+    (n[(n.GiftNitro = 7)] = "GiftNitro"),
+    (n[(n.GiftShop = 8)] = "GiftShop"),
+    (n[(n.GiftGameShop = 9)] = "GiftGameShop"),
+    (n[(n.OrbsGameShop = 10)] = "OrbsGameShop"),
+    n);
 function N(e) {
     return (0, a.jsxs)("div", {
         className: h.k,
@@ -88,46 +88,46 @@ function N(e) {
                 color: "text-muted",
                 children: (function (e) {
                     let t = m.X7G.PAID_TERMS,
-                        n = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
+                        l = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
                     switch (e.type) {
                         case 0:
                         case 1:
-                            let l = g(e);
-                            if (null != l.multiPeriodDiscountAttributes) {
+                            let n = g(e);
+                            if (null != n.multiPeriodDiscountAttributes) {
                                 let {
                                     discountEndDate: e,
                                     discountedRenewalPrice: t,
-                                    priceWithoutDiscount: n,
+                                    priceWithoutDiscount: l,
                                     trialDuration: a,
-                                } = l.multiPeriodDiscountAttributes;
+                                } = n.multiPeriodDiscountAttributes;
                                 return p.intl.format(f.default["A+qfZ+"], {
-                                    purchaseButtonText: l.purchaseButtonText,
-                                    totalDue: l.totalDue,
+                                    purchaseButtonText: n.purchaseButtonText,
+                                    totalDue: n.totalDue,
                                     trialOrDiscountPrice: t,
                                     trialDuration: a,
                                     trialOrDiscountEndDate: e,
-                                    fullRenewalPrice: n,
-                                    interval: l.interval,
-                                    subscriptionsFaqUrl: l.subscriptionsFaqUrl,
-                                    paidServicesTermsUrl: l.paidServicesTermsUrl,
-                                    contactUsUrl: l.contactUsUrl,
+                                    fullRenewalPrice: l,
+                                    interval: n.interval,
+                                    subscriptionsFaqUrl: n.subscriptionsFaqUrl,
+                                    paidServicesTermsUrl: n.paidServicesTermsUrl,
+                                    contactUsUrl: n.contactUsUrl,
                                 });
                             }
-                            if (1 === e.type) return p.intl.format(f.default["2pNIbI"], l);
-                            return p.intl.format(f.default.OH1Evm, l);
+                            if (1 === e.type) return p.intl.format(f.default["2pNIbI"], n);
+                            return p.intl.format(f.default.OH1Evm, n);
                         case 2:
                             return p.intl.format(f.default.bbgJdE, g(e));
                         case 4:
                             return p.intl.format(f.default.IP93kX, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: n,
+                                virtualGoodsTermsUrl: l,
                             });
                         case 5:
                             return p.intl.format(f.default.ITY3j6, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: n,
+                                virtualGoodsTermsUrl: l,
                             });
                         case 3:
                             return p.intl.format(f.default.EOOWpo, { ...e, paidServicesTermsUrl: t });
@@ -139,7 +139,7 @@ function N(e) {
                             return p.intl.format(f.default.BkYev7, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: n,
+                                virtualGoodsTermsUrl: l,
                             });
                         case 9:
                         case 10:

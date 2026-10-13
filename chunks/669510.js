@@ -1,16 +1,16 @@
-n.d(t, { _: () => u });
-var l = n(477900),
-    a = n(582128),
-    r = n(503698),
-    s = n.n(r),
-    i = n(834730),
-    o = n(580630),
-    c = n(777485),
-    d = n(564082);
+l.d(t, { _: () => u });
+var n = l(477900),
+    a = l(582128),
+    r = l(503698),
+    s = l.n(r),
+    i = l(834730),
+    o = l(580630),
+    c = l(777485),
+    d = l(564082);
 function u(e) {
     let {
             label: t,
-            totalLineItemLabel: n,
+            totalLineItemLabel: l,
             totalLineItemLabelSubText: r,
             totalLineItemValueSubText: u,
             showTotalWhenCollapsed: m = !1,
@@ -26,24 +26,24 @@ function u(e) {
                 t = (0, o.$g)(e, h);
             return (0, o.CE)(t, f, p);
         }, [x, h, f, p]),
-        N = (0, l.jsxs)(c.h, {
+        N = (0, n.jsxs)(c.h, {
             label: t,
             defaultExpanded: j,
             isDisabled: x.length <= 0,
             onExpandedChange: g,
             collapsedContent: m
-                ? (0, l.jsx)(i.E, { variant: "text-md/normal", color: "text-subtle", children: E })
+                ? (0, n.jsx)(i.E, { variant: "text-md/normal", color: "text-subtle", children: E })
                 : null,
             children: [
                 x.map((e) => {
-                    let { formatWithoutRate: t, amount: n, ...a } = e,
-                        r = (0, o.$g)(n, h),
+                    let { formatWithoutRate: t, amount: l, ...a } = e,
+                        r = (0, o.$g)(l, h),
                         s = t ? r : (0, o.CE)(r, f, p);
-                    return (0, l.jsx)(c.i, { value: s, ...a }, a.id);
+                    return (0, n.jsx)(c.i, { value: s, ...a }, a.id);
                 }),
-                (0, l.jsx)("div", { className: d.m }),
-                (0, l.jsx)(c.i, {
-                    label: n ?? t,
+                (0, n.jsx)("div", { className: d.m }),
+                (0, n.jsx)(c.i, {
+                    label: l ?? t,
                     labelSubText: r,
                     value: E,
                     subText: u,
@@ -52,5 +52,5 @@ function u(e) {
                 }),
             ],
         });
-    return (0, l.jsx)("div", { className: s()({ [d.k]: v }), children: N });
+    return (0, n.jsx)("div", { className: s()({ [d.k]: v }), children: N });
 }

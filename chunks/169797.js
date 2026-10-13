@@ -1,4 +1,4 @@
-n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => b, s3: () => x });
+n.d(t, { DJ: () => R, Jg: () => T, KT: () => L, lo: () => M, oH: () => b, s3: () => x });
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -60,7 +60,7 @@ function x(e) {
     });
 }
 let v = { top: 16, bottom: 8 };
-function R(e) {
+function M(e) {
     let { onBackClick: t, primaryButtonProps: n, portalClassName: l, stripeExpressCheckoutComponent: i } = e,
         { variant: a } = n,
         { setCheckoutFooterContentNode: o } = (0, I.ck)(),
@@ -87,7 +87,7 @@ function R(e) {
         ],
     });
 }
-function M(e) {
+function R(e) {
     let { className: t } = e;
     return (0, r.jsx)("div", { className: s()(A.g4, t), children: (0, r.jsx)(_.I, {}) });
 }
@@ -99,7 +99,7 @@ function T(e) {
             ...s,
             maxHeight: l,
             contentOutsideContainer: (0, r.jsx)(h.A, {}),
-            children: i ? (0, r.jsx)(M, {}) : t,
+            children: i ? (0, r.jsx)(R, {}) : t,
         }),
     });
 }
@@ -132,7 +132,7 @@ function b(e) {
                     headerBadgeIcon: a,
                 }),
                 (0, r.jsx)(f.c, { children: d }),
-                (0, r.jsx)(R, { onBackClick: u, primaryButtonProps: c }),
+                (0, r.jsx)(M, { onBackClick: u, primaryButtonProps: c }),
             ],
         }),
     });

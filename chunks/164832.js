@@ -17,9 +17,9 @@ var i = n(477900),
     _ = n(174459),
     T = n(792656),
     C = n(962644),
-    A = n(35587),
-    E = n(412260),
-    h = n(852218),
+    E = n(35587),
+    h = n(412260),
+    A = n(852218),
     x = n(194261),
     O = n(297264),
     v = n(144165),
@@ -100,7 +100,7 @@ function K() {
     return (0, S.i)("ThirdPartyPromotionPartnerConfigs") ? D.intl.string(D.t.nmvvaN) : D.intl.string(D.t.igiSKe);
 }
 let V = {
-    [h.KS]: {
+    [A.KS]: {
         getLockedPreview: () => ({ title: F(), body: K(), asset: H }),
         landingUrl: "https://steelseries.com/",
         recurringCardAsset: H,
@@ -109,7 +109,7 @@ let V = {
             config: { getTitle: F, getBody: K, getBodyClaimed: () => D.t.w8CXUl },
         },
     },
-    [h.XY]: {
+    [A.XY]: {
         getLockedPreview: () => ({
             title: (0, S.i)("ThirdPartyPromotionPartnerConfigs")
                 ? D.intl.formatToPlainString(M.default.PF1aT5, { discountPercentage: L.aW })
@@ -139,7 +139,7 @@ let V = {
             },
         },
     },
-    [h.NC]: {
+    [A.NC]: {
         getLockedPreview: () => ({
             title: D.intl.string(U.default.CwMGMb),
             body: D.intl.string(U.default.TgHy6p),
@@ -158,7 +158,7 @@ let V = {
         },
         showSectionHeaders: !1,
     },
-    [h.P_]: {
+    [A.P_]: {
         getLockedPreview: () => ({
             title: D.intl.string(w.default.ecPCdG),
             body: D.intl.string(w.default.evF0PO),
@@ -216,7 +216,7 @@ function Q(e) {
         _ = [...s].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
         T = g ? _ : _.slice(0, 1),
         C = !g && _.length > 1,
-        A =
+        E =
             ((t = s[0]?.partnerId ?? ""),
             (n = (0, r.bG)([P.A], () => (0, o.M)(P.A.theme))),
             null == (l = V[t]?.logos) ? void 0 : n ? l.dark : l.light);
@@ -244,7 +244,7 @@ function Q(e) {
                                             ? e.outboundRedemptionPageLink
                                             : (n?.landingUrl ?? ""),
                                 }),
-                            partnerLogo: A,
+                            partnerLogo: E,
                             showPartnerImage: !0,
                             claimButtonPlacement: I.u5.FOOTER,
                             footerContent: (0, i.jsx)(I.vw, {}),
@@ -285,7 +285,7 @@ function ee(e) {
             onClose: c,
             analyticsLocationsProp: u,
         } = e,
-        { promotionsLoaded: f } = (0, A.y7)(),
+        { promotionsLoaded: f } = (0, E.y7)(),
         { analyticsLocations: g } = (0, p.Ay)(u);
     return f
         ? (0, i.jsx)(p.f5, {
@@ -344,7 +344,7 @@ function en(e) {
     let { partnerIds: t, title: n, subtitle: a, modalTeaser: l, transitionState: o, onClose: c } = e,
         f = (0, r.bG)([P.A], () => P.A.theme),
         [g, p] = (0, r.bG)(
-            [E.A],
+            [h.A],
             () => {
                 let e = [],
                     n = [];
@@ -354,7 +354,7 @@ function en(e) {
                         function a(e) {
                             return null != G(i, e.outboundTitle);
                         }
-                        let r = E.A.getPromotionsByPartner(t);
+                        let r = h.A.getPromotionsByPartner(t);
                         (e.push(...r.recurring.filter(a)), n.push(...r.oneTime.filter(a)));
                     }),
                     [e, n]
@@ -363,13 +363,13 @@ function en(e) {
             [t],
             J,
         ),
-        { promotionsLoaded: _, claimedOutboundPromotionCodeMap: T } = (0, A.y7)();
+        { promotionsLoaded: _, claimedOutboundPromotionCodeMap: T } = (0, E.y7)();
     if (!_) return (0, i.jsx)(m.y, {});
     let C = t
             .map((e) => V[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
-        h = C ? { recurring: D.intl.string(M.default["9Y2p6p"]), oneTime: D.intl.string(M.default.Wm58LR) } : void 0,
+        A = C ? { recurring: D.intl.string(M.default["9Y2p6p"]), oneTime: D.intl.string(M.default.Wm58LR) } : void 0,
         x = (0, i.jsx)(d.B, {
             direction: "vertical",
             gap: 12,
@@ -401,11 +401,11 @@ function en(e) {
                         direction: "vertical",
                         gap: 12,
                         children: [
-                            null != h &&
+                            null != A &&
                                 (0, i.jsx)(u.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: h.recurring,
+                                    children: A.recurring,
                                 }),
                             (0, i.jsx)(Q, { records: g, claimedOutboundPromotionCodeMap: T, theme: f }),
                         ],
@@ -418,11 +418,11 @@ function en(e) {
                                   direction: "vertical",
                                   gap: 12,
                                   children: [
-                                      null != h &&
+                                      null != A &&
                                           (0, i.jsx)(u.E, {
                                               variant: "text-md/medium",
                                               color: "text-subtle",
-                                              children: h.oneTime,
+                                              children: A.oneTime,
                                           }),
                                       x,
                                   ],

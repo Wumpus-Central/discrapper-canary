@@ -1,3 +1,3 @@
-n.d(t, { A: () => l });
-let l =
+l.d(t, { A: () => n });
+let n =
     "https://cdn.discordapp.com/assets/content/12b31ddb6470a59ecf9103c1aee866f9fdb3331727949eb88029160c02be9e0e.png";
