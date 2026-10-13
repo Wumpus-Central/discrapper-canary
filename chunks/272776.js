@@ -20000,7 +20000,7 @@ let CY = (0, E.zD)(h.X.DATA_USAGE_STATISTICS_SETTING, {
     }),
     CX = (0, E.zZ)(h.X.DATA_USAGE_CATEGORY, {
         useTitle: () => U.intl.string(U.t.QDAriI),
-        useInlineNotice: () => Cp() ?? void 0,
+        useInlineNotice: Cp,
         initialize: () => {
             CA.A.fetchedConsents || (0, Cg.Q)();
         },
