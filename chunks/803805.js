@@ -1,18 +1,18 @@
 (n.d(t, {
     Do: () => T,
-    F1: () => x,
-    Q8: () => N,
-    Qn: () => D,
+    F1: () => F,
+    Q8: () => O,
+    Qn: () => b,
     TL: () => d,
-    Zc: () => O,
+    Zc: () => L,
     aw: () => u,
-    cC: () => w,
+    cC: () => x,
     gW: () => g,
-    kc: () => P,
+    kc: () => w,
     tC: () => h,
     tQ: () => I,
     uz: () => E,
-    zT: () => L,
+    zT: () => D,
 }),
     n(321073));
 var i,
@@ -30,14 +30,15 @@ class c extends l.G {
             { no: 3, name: "favorite_stickers", kind: "message", T: () => I },
             { no: 4, name: "sticker_frecency", kind: "message", T: () => T },
             { no: 5, name: "favorite_emojis", kind: "message", T: () => g },
-            { no: 6, name: "emoji_frecency", kind: "message", T: () => N },
-            { no: 7, name: "application_command_frecency", kind: "message", T: () => O },
-            { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => D },
-            { no: 9, name: "application_frecency", kind: "message", T: () => w },
-            { no: 10, name: "heard_sound_frecency", kind: "message", T: () => b },
-            { no: 11, name: "played_sound_frecency", kind: "message", T: () => P },
-            { no: 12, name: "guild_and_channel_frecency", kind: "message", T: () => x },
-            { no: 13, name: "emoji_reaction_frecency", kind: "message", T: () => N },
+            { no: 6, name: "emoji_frecency", kind: "message", T: () => O },
+            { no: 7, name: "application_command_frecency", kind: "message", T: () => L },
+            { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => b },
+            { no: 9, name: "application_frecency", kind: "message", T: () => x },
+            { no: 10, name: "heard_sound_frecency", kind: "message", T: () => P },
+            { no: 11, name: "played_sound_frecency", kind: "message", T: () => w },
+            { no: 12, name: "guild_and_channel_frecency", kind: "message", T: () => F },
+            { no: 13, name: "emoji_reaction_frecency", kind: "message", T: () => O },
+            { no: 14, name: "pinned_emoji_packs", kind: "message", T: () => N },
         ]);
     }
     create(e) {
@@ -70,28 +71,31 @@ class c extends l.G {
                     a.favoriteEmojis = g.internalBinaryRead(e, e.uint32(), n, a.favoriteEmojis);
                     break;
                 case 6:
-                    a.emojiFrecency = N.internalBinaryRead(e, e.uint32(), n, a.emojiFrecency);
+                    a.emojiFrecency = O.internalBinaryRead(e, e.uint32(), n, a.emojiFrecency);
                     break;
                 case 7:
-                    a.applicationCommandFrecency = O.internalBinaryRead(e, e.uint32(), n, a.applicationCommandFrecency);
+                    a.applicationCommandFrecency = L.internalBinaryRead(e, e.uint32(), n, a.applicationCommandFrecency);
                     break;
                 case 8:
-                    a.favoriteSoundboardSounds = D.internalBinaryRead(e, e.uint32(), n, a.favoriteSoundboardSounds);
+                    a.favoriteSoundboardSounds = b.internalBinaryRead(e, e.uint32(), n, a.favoriteSoundboardSounds);
                     break;
                 case 9:
-                    a.applicationFrecency = w.internalBinaryRead(e, e.uint32(), n, a.applicationFrecency);
+                    a.applicationFrecency = x.internalBinaryRead(e, e.uint32(), n, a.applicationFrecency);
                     break;
                 case 10:
-                    a.heardSoundFrecency = b.internalBinaryRead(e, e.uint32(), n, a.heardSoundFrecency);
+                    a.heardSoundFrecency = P.internalBinaryRead(e, e.uint32(), n, a.heardSoundFrecency);
                     break;
                 case 11:
-                    a.playedSoundFrecency = P.internalBinaryRead(e, e.uint32(), n, a.playedSoundFrecency);
+                    a.playedSoundFrecency = w.internalBinaryRead(e, e.uint32(), n, a.playedSoundFrecency);
                     break;
                 case 12:
-                    a.guildAndChannelFrecency = x.internalBinaryRead(e, e.uint32(), n, a.guildAndChannelFrecency);
+                    a.guildAndChannelFrecency = F.internalBinaryRead(e, e.uint32(), n, a.guildAndChannelFrecency);
                     break;
                 case 13:
-                    a.emojiReactionFrecency = N.internalBinaryRead(e, e.uint32(), n, a.emojiReactionFrecency);
+                    a.emojiReactionFrecency = O.internalBinaryRead(e, e.uint32(), n, a.emojiReactionFrecency);
+                    break;
+                case 14:
+                    a.pinnedEmojiPacks = N.internalBinaryRead(e, e.uint32(), n, a.pinnedEmojiPacks);
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -112,21 +116,23 @@ class c extends l.G {
                 T.internalBinaryWrite(e.stickerFrecency, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteEmojis &&
                 g.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
-            e.emojiFrecency && N.internalBinaryWrite(e.emojiFrecency, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
+            e.emojiFrecency && O.internalBinaryWrite(e.emojiFrecency, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             e.applicationCommandFrecency &&
-                O.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
+                L.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteSoundboardSounds &&
-                D.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
+                b.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             e.applicationFrecency &&
-                w.internalBinaryWrite(e.applicationFrecency, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
+                x.internalBinaryWrite(e.applicationFrecency, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.heardSoundFrecency &&
-                b.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
+                P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
             e.playedSoundFrecency &&
-                P.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
+                w.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
             e.guildAndChannelFrecency &&
-                x.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.O0.LengthDelimited).fork(), n).join(),
+                F.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.O0.LengthDelimited).fork(), n).join(),
             e.emojiReactionFrecency &&
-                N.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.O0.LengthDelimited).fork(), n).join());
+                O.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.O0.LengthDelimited).fork(), n).join(),
+            e.pinnedEmojiPacks &&
+                N.internalBinaryWrite(e.pinnedEmojiPacks, t.tag(14, r.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -310,7 +316,7 @@ let I = new f();
 class p extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.StickerFrecency", [
-            { no: 1, name: "stickers", kind: "map", K: 6, V: { kind: "message", T: () => L } },
+            { no: 1, name: "stickers", kind: "map", K: 6, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -349,7 +355,7 @@ class p extends l.G {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -357,13 +363,13 @@ class p extends l.G {
                     );
             }
         }
-        e[a ?? "0"] = s ?? L.create();
+        e[a ?? "0"] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.stickers))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.stickers[i], t, n),
+                D.internalBinaryWrite(e.stickers[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
@@ -409,8 +415,52 @@ class m extends l.G {
 let g = new m();
 class S extends l.G {
     constructor() {
+        super("discord_protos.discord_users.v1.PinnedEmojiPacks", [
+            { no: 1, name: "pack_ids", kind: "scalar", repeat: 1, T: 6 },
+        ]);
+    }
+    create(e) {
+        let t = { packIds: [] };
+        return (
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, a.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = i ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s;) {
+            let [t, i] = e.tag();
+            if (1 === t)
+                if (i === r.O0.LengthDelimited)
+                    for (let t = e.int32() + e.pos; e.pos < t;) a.packIds.push(e.fixed64().toString());
+                else a.packIds.push(e.fixed64().toString());
+            else {
+                let s = n.readUnknownField;
+                if ("throw" === s)
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                let l = e.skip(i);
+                !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, l);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        if (e.packIds.length) {
+            t.tag(1, r.O0.LengthDelimited).fork();
+            for (let n = 0; n < e.packIds.length; n++) t.fixed64(e.packIds[n]);
+            t.join();
+        }
+        let i = n.writeUnknownFields;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
+    }
+}
+let N = new S();
+class C extends l.G {
+    constructor() {
         super("discord_protos.discord_users.v1.EmojiFrecency", [
-            { no: 1, name: "emojis", kind: "map", K: 9, V: { kind: "message", T: () => L } },
+            { no: 1, name: "emojis", kind: "map", K: 9, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -449,7 +499,7 @@ class S extends l.G {
                     a = t.string();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -457,23 +507,23 @@ class S extends l.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? L.create();
+        e[a ?? ""] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.emojis))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.emojis[i], t, n),
+                D.internalBinaryWrite(e.emojis[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let N = new S();
-class C extends l.G {
+let O = new C();
+class R extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.ApplicationCommandFrecency", [
-            { no: 1, name: "application_commands", kind: "map", K: 9, V: { kind: "message", T: () => L } },
+            { no: 1, name: "application_commands", kind: "map", K: 9, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -512,7 +562,7 @@ class C extends l.G {
                     a = t.string();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -520,20 +570,20 @@ class C extends l.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? L.create();
+        e[a ?? ""] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.applicationCommands))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.applicationCommands[i], t, n),
+                D.internalBinaryWrite(e.applicationCommands[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let O = new C();
-class R extends l.G {
+let L = new R();
+class y extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FrecencyItem", [
             { no: 1, name: "total_uses", kind: "scalar", T: 13 },
@@ -592,8 +642,8 @@ class R extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let L = new R();
-class y extends l.G {
+let D = new y();
+class v extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteSoundboardSounds", [
             { no: 1, name: "sound_ids", kind: "scalar", repeat: 1, T: 6 },
@@ -649,11 +699,11 @@ class y extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let D = new y();
-class v extends l.G {
+let b = new v();
+class M extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.HeardSoundFrecency", [
-            { no: 1, name: "heard_sounds", kind: "map", K: 9, V: { kind: "message", T: () => L } },
+            { no: 1, name: "heard_sounds", kind: "map", K: 9, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -692,7 +742,7 @@ class v extends l.G {
                     a = t.string();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -700,23 +750,23 @@ class v extends l.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? L.create();
+        e[a ?? ""] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.heardSounds))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.heardSounds[i], t, n),
+                D.internalBinaryWrite(e.heardSounds[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let b = new v();
-class M extends l.G {
+let P = new M();
+class U extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.PlayedSoundFrecency", [
-            { no: 1, name: "played_sounds", kind: "map", K: 9, V: { kind: "message", T: () => L } },
+            { no: 1, name: "played_sounds", kind: "map", K: 9, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -755,7 +805,7 @@ class M extends l.G {
                     a = t.string();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -763,23 +813,23 @@ class M extends l.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? L.create();
+        e[a ?? ""] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.playedSounds))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.playedSounds[i], t, n),
+                D.internalBinaryWrite(e.playedSounds[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let P = new M();
-class U extends l.G {
+let w = new U();
+class G extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.ApplicationFrecency", [
-            { no: 1, name: "applications", kind: "map", K: 9, V: { kind: "message", T: () => L } },
+            { no: 1, name: "applications", kind: "map", K: 9, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -818,7 +868,7 @@ class U extends l.G {
                     a = t.string();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -826,23 +876,23 @@ class U extends l.G {
                     );
             }
         }
-        e[a ?? ""] = s ?? L.create();
+        e[a ?? ""] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.applications))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.applications[i], t, n),
+                D.internalBinaryWrite(e.applications[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let w = new U();
-class G extends l.G {
+let x = new G();
+class k extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildAndChannelFrecency", [
-            { no: 1, name: "guild_and_channels", kind: "map", K: 6, V: { kind: "message", T: () => L } },
+            { no: 1, name: "guild_and_channels", kind: "map", K: 6, V: { kind: "message", T: () => D } },
         ]);
     }
     create(e) {
@@ -881,7 +931,7 @@ class G extends l.G {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    s = L.internalBinaryRead(t, t.uint32(), n);
+                    s = D.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -889,16 +939,16 @@ class G extends l.G {
                     );
             }
         }
-        e[a ?? "0"] = s ?? L.create();
+        e[a ?? "0"] = s ?? D.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.guildAndChannels))
             (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                L.internalBinaryWrite(e.guildAndChannels[i], t, n),
+                D.internalBinaryWrite(e.guildAndChannels[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let x = new G();
+let F = new k();

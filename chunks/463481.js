@@ -1584,7 +1584,7 @@ let nb = (0, N.A)(function (e) {
         [S, N] = (0, _.yK)([e3.A], () => [e3.A.getCurrentUserActiveStream(), e3.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
         R = m?.type === F.rbe.GUILD_SPACE ? null : O,
-        b = (0, _.bG)([ew.A, tl.Ay], y.eL),
+        b = (0, _.bG)([ew.A], () => (0, t1.ny)(ew.A.getMainFrame())),
         U = (0, _.bG)([ti.A, tr.A], () => null == p || ez.vz(p, ti.A, tr.A, !1)),
         [G] = (0, eA.A)([
             (function () {
