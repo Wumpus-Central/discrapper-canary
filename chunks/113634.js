@@ -2119,32 +2119,41 @@ class eQ extends eA {
         if ((this.daveSessionManager?.createUser(e), 0 === t))
             return void this.logger.warn(`Attempting to create user ${e} with 0 audio SSRC`);
         this.logger.info(`Creating user: ${e} with audio SSRC: ${t} and video SSRCs: ${n?.join(",") ?? 0}`);
-        let i = !1,
-            r = this.users.get(e);
-        if ((null == r && (r = {}), r.audioSSRC !== t)) {
-            ((r.audioSSRC = t), (i = !0), this.unassignedStreams.audio.push({ cname: e, ssrc: t }));
+        let i = [t, ...(n ?? [])].find((t) => this.isSSRCOwnedByOtherUser(t, e));
+        if (null != i) return void this.logger.error(`Refusing to create user ${e}, SSRC ${i} is already in use`);
+        let r = !1,
+            a = this.users.get(e);
+        if ((null == a && (a = {}), a.audioSSRC !== t)) {
+            (this.releaseSSRC(a.audioSSRC, e),
+                (a.audioSSRC = t),
+                (r = !0),
+                this.unassignedStreams.audio.push({ cname: e, ssrc: t }));
             let n = this.inactiveTransceivers.audio.length,
-                a = this.unassignedStreams.audio.length,
-                s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + a - n;
+                i = this.unassignedStreams.audio.length,
+                s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + i - n;
             this.addTransceivers("audio", "recvonly", s);
         }
-        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === r.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === a.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
-                if (r.videoSSRC !== t) {
-                    ((r.videoSSRC = t), (i = !0), this.unassignedStreams.video.push({ cname: e, ssrc: t }));
+                if (a.videoSSRC !== t) {
+                    (this.releaseSSRC(a.videoSSRC, e),
+                        (a.videoSSRC = t),
+                        (r = !0),
+                        this.unassignedStreams.video.push({ cname: e, ssrc: t }));
                     let n = this.inactiveTransceivers.video.length,
-                        a = this.unassignedStreams.video.length,
-                        s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + a - n;
+                        i = this.unassignedStreams.video.length,
+                        s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + i - n;
                     this.addTransceivers("video", "recvonly", s);
                 }
-            } else null != r.videoSSRC && ((r.videoSSRC = void 0), (i = !0));
+            } else null != a.videoSSRC && (this.releaseSSRC(a.videoSSRC, e), (a.videoSSRC = void 0), (r = !0));
         }
-        if (i) {
-            (this.users.set(e, r), t > 0 && this.userIdsBySsrc.set(t, e));
-            let i = null != n && n.length > 0 ? n[0] : 0;
-            (i > 0 && this.userIdsBySsrc.set(i, e),
-                this.daveSessionManager?.updateSsrcs(e, t, n ?? []),
+        if (r) {
+            this.users.set(e, a);
+            let n = a.videoSSRC ?? 0;
+            (t > 0 && this.userIdsBySsrc.set(t, e),
+                n > 0 && this.userIdsBySsrc.set(n, e),
+                this.daveSessionManager?.updateSsrcs(e, t, n > 0 ? [n] : []),
                 this.logger.info("Renegotiating: User joined"),
                 this.handleNegotiationNeeded());
         }
@@ -2162,6 +2171,14 @@ class eQ extends eA {
         }
     }
     getUserIdBySsrc = (e) => this.userIdsBySsrc.get(e);
+    isSSRCOwnedByOtherUser(e, t) {
+        if (e <= 0) return !1;
+        let n = this.userIdsBySsrc.get(e);
+        return null != n && n !== t;
+    }
+    releaseSSRC(e, t) {
+        null != e && this.userIdsBySsrc.get(e) === t && this.userIdsBySsrc.delete(e);
+    }
     setBitRate(e) {
         this.voiceBitrate !== e &&
             (super.setBitRate(e), this.setAudioEncoderParameters([{ parameter: eE.AUDIO_BITRATE, value: e }]));
@@ -2465,7 +2482,6 @@ class eQ extends eA {
         } = this.parseLocalDescription();
         ((this.codecs = o),
             (this.extensions = _),
-            (d !== this.audioSSRC || c !== this.videoSSRC) && this.daveSessionManager?.updateSsrcs(this.userId, d, [c]),
             (this.audioSSRC = d),
             (this.videoSSRC = c),
             (this.videoReady = c > 0 && u > 0),
@@ -2540,6 +2556,9 @@ class eQ extends eA {
             let r = this.users.get(e);
             if (r?.videoSSRC?.toString?.() !== i && r?.audioSSRC?.toString?.() !== i)
                 return void this.logger.info(`Got stale ssrc ${i} for ${n.kind} track, user ID ${e}`);
+            let a = this.userIdsBySsrc.get(Number(i));
+            if (a !== e)
+                return void this.logger.error(`SSRC ${i} for ${n.kind} track is owned by ${a}, not user ID ${e}`);
             (this.createOutput(e, n),
                 (n.onunmute = () => this.createOutput(e, n)),
                 (n.onmute = () => {
