@@ -9124,13 +9124,14 @@ function o8(e) {
             recalling: o = !1,
             controlling: u = !1,
             publishPending: c = !1,
-            spoken: d,
-            onSpokenChange: m,
+            publishing: d = !1,
+            spoken: m,
+            onSpokenChange: f,
         } = e,
-        f = i.useRef(null),
-        h = i.useId(),
-        [g, p] = i.useState(null),
-        x = (0, o3.xu)({
+        h = i.useRef(null),
+        g = i.useId(),
+        [p, x] = i.useState(null),
+        v = (0, o3.xu)({
             activity: t,
             compacting: n,
             saving: l,
@@ -9139,39 +9140,40 @@ function o8(e) {
             recalling: o,
             controlling: u,
             publishPending: c,
+            publishing: d,
         }),
-        v = N.intl.string(x),
-        j = x === o3.kx["0"],
-        [b, y] = i.useState(d ?? v),
-        w = (0, sM.A)();
-    (l || (0, o3.E4)(v, b) || (!w && !j)) && b !== v && y(v);
-    let k = i.useRef(v);
+        j = N.intl.string(v),
+        b = v === o3.kx["0"],
+        [y, w] = i.useState(m ?? j),
+        k = (0, sM.A)();
+    (l || (0, o3.E4)(j, y) || (!k && !b)) && y !== j && w(j);
+    let C = i.useRef(j);
     (i.useEffect(() => {
-        k.current = v;
-    }, [v]),
-        i.useEffect(() => {
-            m?.(b);
-        }, [b, m]));
-    let C = i.useRef(null),
-        S = i.useRef(b);
-    i.useEffect(() => {
-        S.current = b;
-    }, [b]);
-    let E = i.useRef(j),
-        I = i.useRef(0);
-    (i.useEffect(() => {
-        ((E.current = j), !j && (0, o3.E8)(S.current) && y(k.current));
+        C.current = j;
     }, [j]),
         i.useEffect(() => {
-            if (!w) return;
+            f?.(y);
+        }, [y, f]));
+    let S = i.useRef(null),
+        E = i.useRef(y);
+    i.useEffect(() => {
+        E.current = y;
+    }, [y]);
+    let I = i.useRef(b),
+        _ = i.useRef(0);
+    (i.useEffect(() => {
+        ((I.current = b), !b && (0, o3.E8)(E.current) && w(C.current));
+    }, [b]),
+        i.useEffect(() => {
+            if (!k) return;
             let e = 0,
                 t = 0;
             function n() {
-                E.current
-                    ? ((I.current = (0, o3.E8)(S.current) ? I.current + 1 : 0), y((0, o3.Ov)(I.current)))
-                    : k.current !== S.current
-                      ? y(k.current)
-                      : C.current?.play();
+                I.current
+                    ? ((_.current = (0, o3.E8)(E.current) ? _.current + 1 : 0), w((0, o3.Ov)(_.current)))
+                    : C.current !== E.current
+                      ? w(C.current)
+                      : S.current?.play();
             }
             return (
                 (e = window.setTimeout(() => {
@@ -9181,39 +9183,39 @@ function o8(e) {
                     (window.clearTimeout(e), window.clearInterval(t));
                 }
             );
-        }, [w]));
-    let _ = null != t && "" !== t.text,
-        M = t?.session ?? null,
-        T = _ && null != M && g === M,
-        P = i.useCallback(() => {
-            _ && null != M && p((e) => (e === M ? null : M));
-        }, [_, M]),
-        R = i.useCallback(() => p(null), []);
+        }, [k]));
+    let M = null != t && "" !== t.text,
+        T = t?.session ?? null,
+        P = M && null != T && p === T,
+        R = i.useCallback(() => {
+            M && null != T && x((e) => (e === T ? null : T));
+        }, [M, T]),
+        L = i.useCallback(() => x(null), []);
     return (0, a.jsx)(ei.Y, {
-        targetElementRef: f,
+        targetElementRef: h,
         position: "top",
         align: "left",
-        shouldShow: T,
-        onRequestClose: R,
-        renderPopout: () => (0, a.jsx)(o6, { id: h, activity: t }),
+        shouldShow: P,
+        onRequestClose: L,
+        renderPopout: () => (0, a.jsx)(o6, { id: g, activity: t }),
         children: () =>
             (0, a.jsxs)(ef.D, {
-                innerRef: f,
-                className: W()(o4.hF, _ && o4.Xd),
+                innerRef: h,
+                className: W()(o4.hF, M && o4.Xd),
                 "aria-label": N.intl.string(
                     r
                         ? A.default.qqlUiW
-                        : x === A.default.j8tmjK
+                        : v === A.default.j8tmjK
                           ? A.default.j8tmjK
-                          : j
+                          : b
                             ? o3.kx["0"]
                             : A.default["Uuj/gh"],
                 ),
-                "aria-expanded": T,
-                "aria-describedby": T ? h : void 0,
+                "aria-expanded": P,
+                "aria-describedby": P ? g : void 0,
                 "data-conjure-thinking-trigger": !0,
-                "data-conjure-activity": N.intl.string(x),
-                onClick: P,
+                "data-conjure-activity": N.intl.string(v),
+                onClick: R,
                 children: [
                     (0, a.jsx)("span", {
                         className: o4.bl,
@@ -9221,11 +9223,11 @@ function o8(e) {
                     }),
                     (0, a.jsx)("span", {
                         className: o4.xu,
-                        "aria-hidden": !!u || !!j || void 0,
-                        children: w
+                        "aria-hidden": !!u || !!b || void 0,
+                        children: k
                             ? (0, a.jsx)(eb.o, {
-                                  ref: C,
-                                  text: b,
+                                  ref: S,
+                                  text: y,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
                                   duration: o3.vg,
@@ -9237,7 +9239,7 @@ function o8(e) {
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
                                   className: o4.yE,
-                                  children: b,
+                                  children: y,
                               }),
                     }),
                 ],
@@ -9385,7 +9387,8 @@ function uo(e) {
         ),
         b = null == f ? null : (0, o3.uc)(f),
         y = null != o,
-        w = o ?? (n ? l : void 0);
+        w = o ?? (n ? l : void 0),
+        k = n || r || y || !0 === m;
     return (0, a.jsxs)("div", {
         className: us.jf,
         children: [
@@ -9395,7 +9398,7 @@ function uo(e) {
                 "aria-live": "polite",
                 "data-conjure-activity": !0,
                 children: [
-                    n || r || y || u || g || !0 === m
+                    k || u || g || p
                         ? (0, a.jsx)(o8, {
                               activity: c,
                               compacting: d,
@@ -9404,7 +9407,8 @@ function uo(e) {
                               remixing: y,
                               recalling: u,
                               controlling: g,
-                              publishPending: p,
+                              publishPending: p && k,
+                              publishing: p,
                               spoken: x,
                               onSpokenChange: j,
                           })
