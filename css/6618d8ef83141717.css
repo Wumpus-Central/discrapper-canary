@@ -2539,6 +2539,10 @@
     color: var(--icon-strong)
 }
 
+.header_b5f5a6>.button_b5f5a6 {
+    flex: 1
+}
+
 .modeSelectButton_b5f5a6 {
     border-radius: var(--radius-sm);
     cursor: pointer
@@ -2610,4 +2614,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=9832369275a62ee0.css.map*/
+/*# sourceMappingURL=6618d8ef83141717.css.map*/
