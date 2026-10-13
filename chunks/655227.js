@@ -107,7 +107,6 @@ let r = (0, n(945810).mj)({
         i.M.TINY_BRONCO,
         i.M.TINY_BRONCO_SETTINGS,
         i.M.TINY_BRONCO_NOTICE,
-        i.M.PREMIUM_GIFT_QUANTITY_STEPPER_NEW_BADGE,
         i.M.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
         i.M.PINOT_MEMBER_SETTING_NEW_BADGE,
     ]);
@@ -368,7 +367,6 @@ let l = {
     816: { is_server_arbitrated: !0 },
     817: { is_server_arbitrated: !0 },
     818: { is_server_arbitrated: !0 },
-    823: { is_server_arbitrated: !1 },
     825: { is_server_arbitrated: !0 },
     826: { is_server_arbitrated: !0 },
     831: { is_server_arbitrated: !0 },
