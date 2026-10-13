@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => y });
 var i = n(385244),
     r = n(718564),
     a = n(807081),
@@ -47,7 +47,19 @@ function O(e) {
 function R(e) {
     return (0, a.$)(o.intl.formatToParts(o.t.ihxM9x, { username: e, usernameOnClick: l.tEg }));
 }
-let L = {
+function L(e, t) {
+    return null == t
+        ? (0, a.$)(o.intl.formatToParts(o.t.EAkHd2, { appName: e, appNameOnClick: l.tEg }))
+        : (0, a.$)(
+              o.intl.formatToParts(o.t["x6G/Rr"], {
+                  username: t,
+                  usernameOnClick: l.tEg,
+                  appName: e,
+                  appNameOnClick: l.tEg,
+              }),
+          );
+}
+let y = {
     stringify: function (e, t) {
         let n = (function (e) {
                 let [t] = e.mentions ?? [];
@@ -74,8 +86,8 @@ let L = {
                 );
             case l.lAJ.RECIPIENT_REMOVE:
                 if (null == n) return;
-                let L = e.author;
-                if (null == L || L.id === n.id)
+                let y = e.author;
+                if (null == y || y.id === n.id)
                     return (0, a.$)(o.intl.formatToParts(o.t["Qn5+Lf"], { username: C, usernameOnClick: l.tEg }));
                 return (0, a.$)(
                     o.intl.formatToParts(o.t.QtZ0RD, {
@@ -86,8 +98,8 @@ let L = {
                     }),
                 );
             case l.lAJ.CALL:
-                let { call: y } = e;
-                if (null != y && -1 === y.participants.indexOf(I.default.getId()))
+                let { call: D } = e;
+                if (null != D && -1 === D.participants.indexOf(I.default.getId()))
                     return (0, a.$)(o.intl.formatToParts(o.t.DbgSA0, { username: C, usernameOnClick: l.tEg }));
                 return;
             case l.lAJ.CHANNEL_NAME_CHANGE:
@@ -103,14 +115,15 @@ let L = {
             case l.lAJ.CHANNEL_PINNED_MESSAGE:
                 return (0, a.$)(o.intl.formatToParts(o.t["/M60j0"], { username: C, usernameOnClick: l.tEg }));
             case l.lAJ.USER_JOIN:
+                if (e.author?.bot === !0) return L(C, null != e.actor ? S.Ay.getName(null, N, e.actor) : null);
                 return (0, a.$)(o.intl.formatToParts(O(e.id), { username: C, usernameOnClick: l.tEg }));
             case l.lAJ.GUILD_BOOST:
                 return R(C);
             case l.lAJ.GUILD_BOOST_TIER_1:
             case l.lAJ.GUILD_BOOST_TIER_2:
             case l.lAJ.GUILD_BOOST_TIER_3:
-                let D;
-                return null == (D = p.A.getChannel(N)) || null == T.A.getGuild(D.getGuildId())
+                let v;
+                return null == (v = p.A.getChannel(N)) || null == T.A.getGuild(v.getGuildId())
                     ? R(C)
                     : (0, a.$)(o.intl.formatToParts(o.t.ihxM9x, { username: C, usernameOnClick: l.tEg }));
             case l.lAJ.GUILD_INVITE_REMINDER:
@@ -136,8 +149,8 @@ let L = {
                 );
             case l.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof f.Ay) return null;
-                let v = (0, E.p_)((0, _.rh)(e));
-                return (0, a.$)((0, A.P)({ application: e.application, username: v.nick }));
+                let b = (0, E.p_)((0, _.rh)(e));
+                return (0, a.$)((0, A.P)({ application: e.application, username: b.nick }));
             case l.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED:
                 if (e instanceof f.Ay) return null;
                 return (0, a.$)((0, h.g6)({ application: e.application, username: (0, E.p_)((0, _.rh)(e)).nick }));
@@ -172,19 +185,19 @@ let L = {
                 }
                 return e.content;
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED:
-                var b = e.content;
-                let M = p.A.getChannel(N);
-                if (null == M) return null;
-                let P = T.A.getGuild(M.getGuildId());
-                return null == P
+                var M = e.content;
+                let P = p.A.getChannel(N);
+                if (null == P) return null;
+                let U = T.A.getGuild(P.getGuildId());
+                return null == U
                     ? null
                     : (0, a.$)(
                           o.intl.formatToParts(o.t.iOuWPk, {
                               username: C,
-                              guildName: P.name,
+                              guildName: U.name,
                               time:
-                                  "" !== b
-                                      ? new Date(b).toLocaleString(o.intl.currentLocale, {
+                                  "" !== M
+                                      ? new Date(M).toLocaleString(o.intl.currentLocale, {
                                             hour: "numeric",
                                             minute: "2-digit",
                                         })
@@ -192,12 +205,12 @@ let L = {
                           }),
                       );
             case l.lAJ.GUILD_INCIDENT_ALERT_MODE_DISABLED:
-                let U = p.A.getChannel(N);
-                if (null == U) return null;
-                let w = T.A.getGuild(U.getGuildId());
-                return null == w
+                let w = p.A.getChannel(N);
+                if (null == w) return null;
+                let G = T.A.getGuild(w.getGuildId());
+                return null == G
                     ? null
-                    : (0, a.$)(o.intl.formatToParts(o.t.axmbpm, { username: C, guildName: w.name }));
+                    : (0, a.$)(o.intl.formatToParts(o.t.axmbpm, { username: C, guildName: G.name }));
             case l.lAJ.GUILD_SPACE_MESSAGE: {
                 let n = (0, u.Nu)(e instanceof f.Ay ? e.guildSpaceData?.leaderboard : e.guild_space_data?.leaderboard),
                     i = (0, c.U_)(n, g.default.getUser(n?.userId), g.default.getUser(n?.secondaryUserId));
@@ -241,4 +254,5 @@ let L = {
     getSystemMessageBotJoin: function (e) {
         return null == C[e] ? null : o.intl.format(o.t.xw1Ij0, { learnOnClick: { onClick: () => window.open(C[e]) } });
     },
+    getSystemMessageAppAdded: L,
 };

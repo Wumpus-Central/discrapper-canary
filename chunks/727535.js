@@ -1302,18 +1302,21 @@ let nU = r.memo(function (e) {
         } = e,
         m = n.state === eJ.a.LOADED ? n.message : void 0,
         g = (0, e7.X4)(m),
-        p = (0, e$.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        A = (0, eq.U)(),
-        f = r.useMemo(() => {
+        p = (0, e7.d8)(m?.actor, l).nick,
+        A = (0, e$.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        f = (0, eq.U)(),
+        x = r.useMemo(() => {
             if (null == m) return null;
             let e = (0, nR.A)(m);
             if (e.type === eh.lAJ.USER_JOIN)
-                return (0, nM.$)(
-                    eL.intl.formatToParts(nP.A.getSystemMessageUserJoin(e.id), {
-                        username: null != g ? g.nick : e.author.username,
-                        usernameHook: (e) => e,
-                    }),
-                );
+                return e.author.bot
+                    ? nP.A.getSystemMessageAppAdded(null != g ? g.nick : e.author.username, null != e.actor ? p : null)
+                    : (0, nM.$)(
+                          eL.intl.formatToParts(nP.A.getSystemMessageUserJoin(e.id), {
+                              username: null != g ? g.nick : e.author.username,
+                              usernameHook: (e) => e,
+                          }),
+                      );
             if (e.type === eh.lAJ.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, nM.$)(
                     (0, nD.WC)({
@@ -1329,15 +1332,15 @@ let nU = r.memo(function (e) {
             if (e.type === eh.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, nM.$)((0, nL.uk)({ application: e?.application, username: g?.nick }));
             if (null != e.content && "" !== e.content) {
-                let t = { formatInline: !0, allowLinks: !0, postProcessor: A ? ty.A : void 0 },
+                let t = { formatInline: !0, allowLinks: !0, postProcessor: f ? ty.A : void 0 },
                     n = e.isFirstMessageInForumPost(l)
                         ? { ...t, noStyleAndInteraction: !0, allowHeading: !0, allowList: !0, allowGameMentions: !0 }
-                        : { ...t, formatInline: !0, allowHeading: p, allowList: p, allowGameMentions: !0 };
+                        : { ...t, formatInline: !0, allowHeading: A, allowList: A, allowGameMentions: !0 };
                 return (0, nO.Ay)(e, n).content;
             }
             return null;
-        }, [m, g, l, p, A]),
-        { isReplyAuthorBlocked: x, isReplyAuthorIgnored: C } = (0, u.cf)(
+        }, [m, g, p, l, A, f]),
+        { isReplyAuthorBlocked: C, isReplyAuthorIgnored: E } = (0, u.cf)(
             [nN.A],
             () => ({
                 isReplyAuthorBlocked: null != m && nN.A.isBlockedForMessage(m),
@@ -1345,32 +1348,32 @@ let nU = r.memo(function (e) {
             }),
             [m],
         ),
-        E = (0, tn.r4)(m?.author.id, l.id),
-        S = (0, tn.Ck)(t, n, l),
-        I = (0, tn.H9)(m, l, s, c),
-        j = (0, tn.Ge)(o, c),
-        y = r.useCallback(() => {
+        S = (0, tn.r4)(m?.author.id, l.id),
+        I = (0, tn.Ck)(t, n, l),
+        j = (0, tn.H9)(m, l, s, c),
+        y = (0, tn.Ge)(o, c),
+        v = r.useCallback(() => {
             c({ referencedUsernameProfile: !1, referencedAvatarProfile: !1 });
         }, [c]),
-        v = (0, e7.X4)(t);
+        _ = (0, e7.X4)(t);
     return (0, a.jsx)(nG.A, {
         repliedAuthor: g,
         baseMessage: t,
         channel: l,
-        baseAuthor: v,
+        baseAuthor: _,
         referencedMessage: n,
-        content: f,
+        content: x,
         compact: i,
-        isReplyAuthorBlocked: x,
-        isReplyAuthorIgnored: C,
+        isReplyAuthorBlocked: C,
+        isReplyAuthorIgnored: E,
         showAvatarPopout: o,
         showUsernamePopout: s,
         renderPopout: nS.A,
-        onClickAvatar: j,
-        onClickUsername: I,
-        onClickReply: S,
-        onContextMenu: E,
-        onPopoutRequestClose: y,
+        onClickAvatar: y,
+        onClickUsername: j,
+        onClickReply: I,
+        onContextMenu: S,
+        onPopoutRequestClose: v,
         isReplySpineClickable: d,
         showReplySpine: h,
     });
