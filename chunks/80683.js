@@ -428,23 +428,27 @@ function ef(e) {
                     let e = y.A.getPendingReturn();
                     return null == e || e.channelId !== t ? null : e;
                 }),
-                l = i.useCallback(() => {
-                    null != n &&
+                [l, s] = i.useState(null),
+                a = null != n && l === n,
+                o = i.useCallback(() => {
+                    null == n ||
+                        a ||
+                        (s(n),
                         I.default.returnToGameProfile({
                             gameId: n.gameId,
                             source: n.source ?? j.GameProfileSources.AnnouncementChannelReturn,
                             initialScrollOffset: n.initialScrollOffset,
                             initialTab: n.tab,
-                        });
-                }, [n]),
-                s = (0, r.bG)([S.A], () => (n?.gameId != null ? S.A.getGame(n.gameId) : null));
+                        }));
+                }, [n, a]),
+                c = (0, r.bG)([S.A], () => (n?.gameId != null ? S.A.getGame(n.gameId) : null));
             i.useEffect(() => {
-                if (s?.id != null) return () => I.default.clearGameProfilePendingReturn(s.id);
-            }, [s?.id]);
-            let a = s?.name;
-            if (null == s || null == a) return null;
-            let o = s?.getIconURL(v.eQT) ?? void 0;
-            return { gameId: s.id, gameName: a, gameIconUrl: o, onReturnToGameProfile: l };
+                if (c?.id != null) return () => I.default.clearGameProfilePendingReturn(c.id);
+            }, [c?.id]);
+            let d = c?.name;
+            if (null == c || null == d) return null;
+            let u = c?.getIconURL(v.eQT) ?? void 0;
+            return { gameId: c.id, gameName: d, gameIconUrl: u, isReturning: a, onReturnToGameProfile: o };
         })({ channelId: t.id }),
         D = {
             ...o,

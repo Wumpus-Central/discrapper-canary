@@ -708,11 +708,11 @@ let _ = {
                         n.e("238672"),
                         n.e("631951"),
                         n.e("571180"),
-                        n.e("549334"),
+                        n.e("597138"),
                         n.e("86454"),
                         n.e("913954"),
                         n.e("994646"),
-                    ]).then(n.bind(n, 533173));
+                    ]).then(n.bind(n, 796329));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
                 { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
@@ -1405,11 +1405,11 @@ let _ = {
                         n.e("238672"),
                         n.e("631951"),
                         n.e("571180"),
-                        n.e("549334"),
+                        n.e("597138"),
                         n.e("86454"),
                         n.e("913954"),
                         n.e("994646"),
-                    ]).then(n.bind(n, 533173));
+                    ]).then(n.bind(n, 796329));
                     return (n) =>
                         (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, initialTab: l, ...n }, t);
                 },

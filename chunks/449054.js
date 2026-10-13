@@ -24,25 +24,25 @@ var i = n(66834),
 async function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         o = arguments.length > 3 ? arguments[3] : void 0,
-        { channelId: c, onSuccess: _, joinSource: E, loadId: A, shouldNavigate: h = !0 } = n,
-        f = (0, s.JK)(),
-        I = d.A.getGuild(e),
-        p = { sourceLocationStack: o, state: { analyticsSource: t } };
-    if (null != I && null != I.joinedAt)
+        { channelId: c, onSuccess: _, joinSource: E, loadId: A, shouldNavigate: h = !0, openChannel: f = !1 } = n,
+        I = (0, s.JK)(),
+        p = d.A.getGuild(e),
+        T = { sourceLocationStack: o, state: { analyticsSource: t } };
+    if (null != p && null != p.joinedAt)
         h &&
             (null == c
-                ? (0, l.u)(e, p)
-                : (0, r.A)(u.BVt.CHANNEL(e, c, n.messageId), { ...p, navigationReplace: !0, openChannel: !0 }));
-    else if (null != I && a.A.isLurking(e))
+                ? (0, l.u)(e, { ...T, openChannel: f })
+                : (0, r.A)(u.BVt.CHANNEL(e, c, n.messageId), { ...T, navigationReplace: !0, openChannel: !0 }));
+    else if (null != p && a.A.isLurking(e))
         h &&
             (await i.A.transitionToGuildSync(
                 e,
                 {
-                    ...p,
+                    ...T,
                     welcomeModalChannelId: c,
                     navigationReplace: null != c,
-                    openChannel: null != c,
-                    search: f.location.search,
+                    openChannel: f || null != c,
+                    search: I.location.search,
                 },
                 c,
                 n.messageId,
@@ -54,11 +54,11 @@ async function _(e, t) {
                 (await i.A.transitionToGuildSync(
                     e,
                     {
-                        ...p,
+                        ...T,
                         welcomeModalChannelId: c,
                         navigationReplace: null != c,
-                        openChannel: null != c,
-                        search: f.location.search,
+                        openChannel: f || null != c,
+                        search: I.location.search,
                     },
                     c,
                     n.messageId,
