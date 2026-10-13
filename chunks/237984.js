@@ -5,7 +5,7 @@ var r = n(156828),
     a = n(192308),
     s = n(391973),
     l = n(574172),
-    o = n(38502),
+    o = n(32584),
     d = n(644434),
     c = n(392164);
 let u = { defaultWidth: 1280, defaultHeight: 720, focusable: !0 },
@@ -466,7 +466,7 @@ async function E() {
                 n.e("715958"),
                 n.e("560042"),
                 n.e("655825"),
-                n.e("407326"),
+                n.e("931073"),
                 n.e("348567"),
                 n.e("452075"),
                 n.e("900277"),
@@ -1282,8 +1282,8 @@ async function E() {
                 n.e("881104"),
                 n.e("258469"),
                 n.e("12925"),
-            ]).then(n.bind(n, 362151)),
-        webpackId: 362151,
+            ]).then(n.bind(n, 397824)),
+        webpackId: 397824,
         name: "AppOverlay",
     });
     await l.open(c.f, (e) => (0, i.jsx)(t, { withTitleBar: !1, windowKey: e }), e ? u : _);

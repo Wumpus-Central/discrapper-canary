@@ -697,7 +697,7 @@ var _,
         WaveformSlashIcon: () => Oe,
         WebhookIcon: () => Ot.X,
         WebhookPlusIcon: () => On,
-        WidgetsIcon: () => Oi,
+        WidgetsIcon: () => Oi.f,
         WidgetsMinusIcon: () => Or,
         WidgetsPlusIcon: () => Oa.X,
         WidgetsRetryIcon: () => Os,
@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 636029, Version Hash: bcbb169ed52c6f8675249a3b6338b28f1157fdb4`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 636040, Version Hash: a8a890afb5f1cffdb5dd37a58df4ccf420b15235`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -23232,32 +23232,7 @@ function On(e) {
         ],
     });
 }
-function Oi(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r5.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hs.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, ha.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M18.45 1.85a3 3 0 0 0-4.1 1.1l-1.5 2.6a3 3 0 0 0 1.1 4.1l2.6 1.5a3 3 0 0 0 4.1-1.1l1.5-2.6a3 3 0 0 0-1.1-4.1l-2.6-1.5ZM5 2a3 3 0 0 0-3 3v3a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5ZM5 13a3 3 0 0 0-3 3v3a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3v-3a3 3 0 0 0-3-3H5ZM13 16a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3v-3Z",
-            className: a,
-        }),
-    });
-}
+var Oi = n(632015);
 function Or(e) {
     let {
             size: t = "md",
@@ -25952,7 +25927,7 @@ let L9 = "isHideDevBanner",
                     className: t_()(L8.Wz, L8.mr),
                     children: [
                         (0, b.jsx)(L7, { className: L8.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "636029" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "636040" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })

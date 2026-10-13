@@ -1,72 +1,40 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(73153),
-    s = n(260498),
-    l = n(951178);
+    l = n(260498),
+    s = n(951178);
 function a(e) {
     return (
-        "user" === e.install_scope && e.supported_surfaces?.includes(l.q7.OVERLAY) === !0 && null != e.overlay_widget
+        "user" === e.install_scope && e.supported_surfaces?.includes(s.q7.OVERLAY) === !0 && null != e.overlay_widget
     );
 }
-var o = n(644434);
-let d = [],
-    u = { hiddenApplicationIds: [] },
-    c = u,
-    h = new Set(),
-    m = d;
-function g(e) {
-    ((c = { hiddenApplicationIds: e }), (h = new Set(e)));
+let o = [],
+    d = o;
+function u() {
+    let e = l.Ay.getOwnedProjects().filter(a);
+    (e.length === d.length && e.every((e, t) => e === d[t])) || (d = 0 === e.length ? o : e);
 }
-function p() {
-    let e = s.Ay.getOwnedProjects().filter(a);
-    (e.length === m.length && e.every((e, t) => e === m[t])) || (m = 0 === e.length ? d : e);
-}
-class f extends i.Ay.PersistedStore {
+class c extends i.Ay.Store {
     static displayName = "ConjureOverlayWidgetsStore";
-    static persistKey = "ConjureOverlayWidgets";
-    initialize(e) {
-        (g(e?.hiddenApplicationIds ?? u.hiddenApplicationIds), p(), this.syncWith([s.Ay], () => (p(), !0)));
-    }
-    getState() {
-        return c;
+    initialize() {
+        (u(), this.syncWith([l.Ay], () => (u(), !0)));
     }
     getProjects() {
-        return m;
+        return d;
     }
     getProject(e) {
-        if (null != e) return m.find((t) => t.application_id === e);
+        if (null != e) return d.find((t) => t.application_id === e);
     }
     getFetchStatus() {
-        let e = s.Ay.getOwnedProjectsFetchState();
+        let e = l.Ay.getOwnedProjectsFetchState();
         return "unattempted" === e ? "idle" : e;
     }
     hasFetchSucceeded() {
-        return s.Ay.hasFetchedOwnedProjects();
-    }
-    getHiddenApplicationIds() {
-        return h;
-    }
-    isHidden(e) {
-        return h.has(e);
+        return l.Ay.hasFetchedOwnedProjects();
     }
 }
-let x = new f(r.h, {
+let h = new c(r.h, {
     LOGOUT: function () {
-        ((m = d), g([]));
-    },
-    LAYOUT_DELETE_ALL_WIDGETS: function (e) {
-        let { layoutId: t } = e;
-        if (t !== o.GJ || 0 === h.size) return !1;
-        g([]);
-    },
-    CONJURE_OVERLAY_WIDGET_HIDE: function (e) {
-        let { applicationId: t } = e;
-        if (h.has(t)) return !1;
-        g([...c.hiddenApplicationIds, t]);
-    },
-    CONJURE_OVERLAY_WIDGET_SHOW: function (e) {
-        let { applicationId: t } = e;
-        if (!h.has(t)) return !1;
-        g(c.hiddenApplicationIds.filter((e) => e !== t));
+        d = o;
     },
 });

@@ -45,7 +45,7 @@ var T = n(777334),
     y = n(761821),
     D = n(280450),
     v = n(760751),
-    b = n(38502),
+    b = n(32584),
     M = n(174459),
     P = n(19575),
     U = n(9302),
@@ -748,7 +748,7 @@ let eC = new eN(
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "bcbb169ed52c6f8675249a3b6338b28f1157fdb4"),
+                      (n.append("build_id", "a8a890afb5f1cffdb5dd37a58df4ccf420b15235"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
