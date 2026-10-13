@@ -5270,6 +5270,7 @@ function iq(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 selectable: !0,
+                                lineClamp: 3,
                                 children: (0, a.jsx)(ik, { text: t.description, commandNames: l }),
                             }),
                             (0, a.jsx)(iD, { names: t.channelNames }),
@@ -5337,6 +5338,7 @@ function iz(e) {
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
                                                 tag: "span",
+                                                lineClamp: 3,
                                                 children: (0, a.jsx)(ik, { text: e.description, commandNames: o }),
                                             }),
                                             (0, a.jsx)(iD, { names: e.channelNames }),
@@ -5687,11 +5689,13 @@ function iY(e) {
                         l = e === nP.q7.BOT && c > 0 && ab(m, nP.q7.APPLICATION_COMMANDS),
                         r = A.intl.string(aj[e]),
                         a = A.intl.string(aM[e]);
+                    n
+                        ? ((r = A.intl.formatToPlainString(N.default["75EkE8"], { count: t.length })),
+                          (a = A.intl.string(N.default.OMNwmi)))
+                        : l && (a = A.intl.formatToPlainString(N.default.Xa5mPA, { count: c }));
+                    let i = m.surface_descriptions?.[e]?.trim();
                     return (
-                        n
-                            ? ((r = A.intl.formatToPlainString(N.default["75EkE8"], { count: t.length })),
-                              (a = A.intl.string(N.default.OMNwmi)))
-                            : l && (a = A.intl.formatToPlainString(N.default.Xa5mPA, { count: c })),
+                        null != i && "" !== i && (a = i),
                         {
                             surface: e,
                             title: r,
