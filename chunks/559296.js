@@ -2092,13 +2092,12 @@ function lp(e) {
                     className: lm.Fg,
                     ref: o,
                     onChange: function (e) {
-                        null != c &&
-                            (l?.(),
-                            (0, lu.R)(e.currentTarget.files, c, tc.C.FirstThreadMessage, {
-                                requireConfirm: !0,
-                                origin: "file_picker",
-                            }),
-                            (e.currentTarget.value = null));
+                        if (null == c) return;
+                        l?.();
+                        let { files: t } = e.currentTarget;
+                        (null != t &&
+                            (0, lu.R)(t, c, tc.C.FirstThreadMessage, { requireConfirm: !0, origin: "file_picker" }),
+                            (e.currentTarget.value = ""));
                     },
                     multiple: c.rateLimitPerUser <= 0,
                     tabIndex: -1,
@@ -2530,13 +2529,15 @@ function lW(e) {
         }, [o]),
         h = s.useCallback(
             (e) => {
-                (null != c && n7.A.remove(t.id, c.id, n9.oU.CREATE_FORUM_POST.drafts.type),
-                    (0, lu.R)(e.currentTarget.files, t, n9.oU.CREATE_FORUM_POST.drafts.type, {
+                null != c && n7.A.remove(t.id, c.id, n9.oU.CREATE_FORUM_POST.drafts.type);
+                let { files: n } = e.currentTarget;
+                (null != n &&
+                    (0, lu.R)(n, t, n9.oU.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
                         origin: "file_picker",
                     }),
-                    (e.currentTarget.value = null));
+                    (e.currentTarget.value = ""));
             },
             [t, c],
         );

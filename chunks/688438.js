@@ -743,8 +743,9 @@ function eq(e) {
         color: "transparent",
         look: "blank",
         onChange: function (e) {
-            ((0, ej.R)(e.currentTarget.files, t, ex.C.ChannelMessage, { requireConfirm: !0, origin: "file_picker" }),
-                (e.currentTarget.value = null));
+            let { files: n } = e.currentTarget;
+            (null != n && (0, ej.R)(n, t, ex.C.ChannelMessage, { requireConfirm: !0, origin: "file_picker" }),
+                (e.currentTarget.value = ""));
         },
         children: (0, l.jsx)(X.H, {
             size: "custom",
