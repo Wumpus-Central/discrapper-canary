@@ -4,16 +4,16 @@ var i = n(17928),
     a = n(594061),
     s = n(617617);
 function l(e, t) {
-    return e.vibegrations?.projects[t]?.muted === !0;
+    return e.conjure?.projects[t]?.muted === !0;
 }
 function o(e) {
     return (0, i.bG)([s.A], () => l(s.A.settings, e), [e]);
 }
 function d(e, t) {
     a.wc.updateAsync(
-        "vibegrations",
+        "conjure",
         (n) => {
-            if (t) n.projects[e] = r.ky.create({ muted: !0 });
+            if (t) n.projects[e] = r.Zy.create({ muted: !0 });
             else {
                 if (null == n.projects[e]) return !1;
                 delete n.projects[e];

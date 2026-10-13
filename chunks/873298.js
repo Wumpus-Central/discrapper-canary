@@ -20,6 +20,7 @@
     X9: () => e$,
     Y2: () => w,
     YW: () => eO,
+    Zy: () => tJ,
     ak: () => ti,
     eF: () => G,
     fL: () => K,
@@ -27,7 +28,6 @@
     iL: () => ea,
     ju: () => Q,
     kW: () => et,
-    ky: () => tJ,
     nT: () => el,
     nx: () => eh,
     oJ: () => eV,
@@ -270,7 +270,7 @@ class es extends b.G {
             { no: 24, name: "ads", kind: "message", T: () => tV },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
             { no: 26, name: "app_version_settings", kind: "message", T: () => tX },
-            { no: 27, name: "vibegrations", kind: "message", T: () => tq },
+            { no: 27, name: "conjure", kind: "message", T: () => tq },
         ]);
     }
     create(e) {
@@ -366,7 +366,7 @@ class es extends b.G {
                     r.appVersionSettings = tX.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
                     break;
                 case 27:
-                    r.vibegrations = tq.internalBinaryRead(e, e.uint32(), n, r.vibegrations);
+                    r.conjure = tq.internalBinaryRead(e, e.uint32(), n, r.conjure);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -410,7 +410,7 @@ class es extends b.G {
                 t$.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, y.O0.LengthDelimited).fork(), n).join(),
             e.appVersionSettings &&
                 tX.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join(),
-            e.vibegrations && tq.internalBinaryWrite(e.vibegrations, t.tag(27, y.O0.LengthDelimited).fork(), n).join());
+            e.conjure && tq.internalBinaryWrite(e.conjure, t.tag(27, y.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -4507,7 +4507,7 @@ class tz extends b.G {
 let tX = new tz();
 class tZ extends b.G {
     constructor() {
-        super("discord_protos.discord_users.v1.VibegrationsSettings", [
+        super("discord_protos.discord_users.v1.ConjureSettings", [
             { no: 1, name: "projects", kind: "map", K: 6, V: { kind: "message", T: () => tJ } },
         ]);
     }
@@ -4551,7 +4551,7 @@ class tZ extends b.G {
                     break;
                 default:
                     throw new globalThis.Error(
-                        "unknown map entry field for field discord_protos.discord_users.v1.VibegrationsSettings.projects",
+                        "unknown map entry field for field discord_protos.discord_users.v1.ConjureSettings.projects",
                     );
             }
         }
@@ -4570,7 +4570,7 @@ class tZ extends b.G {
 let tq = new tZ();
 class tQ extends b.G {
     constructor() {
-        super("discord_protos.discord_users.v1.VibegrationsProjectSettings", [
+        super("discord_protos.discord_users.v1.ConjureProjectSettings", [
             { no: 1, name: "muted", kind: "scalar", T: 8 },
         ]);
     }
