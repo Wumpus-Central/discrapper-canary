@@ -95,6 +95,11 @@ let r = {
         inlineRequire: () => n(323617).A,
         hasStoreChangeListeners: !0,
     },
+    DesktopTTIUpdateCheckDeadlineExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(797474).A,
+        hasStoreChangeListeners: !0,
+    },
     DiceRollLifecycleManager: {
         actions: ["CHANNEL_SELECT", "DICE_ROLL_START"],
         inlineRequire: () => n(545185).A,
