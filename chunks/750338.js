@@ -9,14 +9,14 @@ var n = a(477900),
     o = a(821609),
     u = a(745396),
     m = a(85463),
-    p = a(834730),
-    b = a(297264),
+    b = a(834730),
+    p = a(297264),
     f = a(825484),
     h = a(315629),
     g = a(241524),
     R = a(303136),
-    E = a(607470),
-    x = a(174459),
+    x = a(607470),
+    E = a(174459),
     N = a(676279),
     A = a(406860),
     _ = a(610557),
@@ -29,8 +29,8 @@ let P = (e) => {
             title: a,
             caption: i,
             description: P,
-            descriptionCta: T,
-            previewImage: C,
+            descriptionCta: C,
+            previewImage: T,
             videoUrl: U,
             shouldLoadVideo: M,
             index: j,
@@ -59,7 +59,7 @@ let P = (e) => {
         et = s.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    x.default.track(v.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                    E.default.track(v.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                 }, 800),
             [t],
         ),
@@ -67,7 +67,7 @@ let P = (e) => {
             className: r()(I.captionWrapper, I[`${k}`]),
             children:
                 "string" == typeof i
-                    ? (0, n.jsx)(p.E, { variant: "text-sm/normal", color: "text-muted", children: i })
+                    ? (0, n.jsx)(b.E, { variant: "text-sm/normal", color: "text-muted", children: i })
                     : i,
         });
     function en() {
@@ -78,10 +78,10 @@ let P = (e) => {
     }
     let ei = k === _.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
     function er() {
-        let e = null != T && null != L,
+        let e = null != C && null != L,
             t = null != V && V.length > 0;
         if (!e && !t) return null;
-        let a = e ? [{ variant: "secondary", onClick: L, text: T }] : V;
+        let a = e ? [{ variant: "secondary", onClick: L, text: C }] : V;
         return (0, n.jsx)("div", {
             className: I.bentoBoxButton,
             children: (0, n.jsx)(f.e, {
@@ -114,7 +114,7 @@ let P = (e) => {
                                     className: I.badgeContainer,
                                     children: (0, n.jsx)("div", {
                                         className: I.badge,
-                                        children: (0, n.jsx)(b.D, {
+                                        children: (0, n.jsx)(p.D, {
                                             variant: W,
                                             color: "text-overlay-light",
                                             children: B,
@@ -126,10 +126,10 @@ let P = (e) => {
                                     children: (0, n.jsx)(c.E, { type: { text: B }, variant: w }),
                                 }),
                         null != i && k === _.A0.LARGE && ea,
-                        (0, n.jsx)(b.D, { variant: ei, color: "text-strong", className: I.header, children: a }),
+                        (0, n.jsx)(p.D, { variant: ei, color: "text-strong", className: I.header, children: a }),
                     ],
                 }),
-                (0, n.jsx)(p.E, {
+                (0, n.jsx)(b.E, {
                     variant: "text-md/medium",
                     color: "text-strong",
                     className: I.description,
@@ -143,15 +143,15 @@ let P = (e) => {
         return (0, n.jsxs)("div", {
             className: r()(I.boxArtContainer, I[`${k}`], H),
             children: [
-                null == U && (0, u.O)(C) && "string" != typeof C
-                    ? C
+                null == U && (0, u.O)(T) && "string" != typeof T
+                    ? T
                     : (0, n.jsx)(
-                          E.A,
+                          x.A,
                           {
                               playsInline: !0,
                               preload: M ? "auto" : "none",
                               muted: !0,
-                              poster: C,
+                              poster: T,
                               loop: !0,
                               className: r()(Q ? I.overlayImage : I.boxVideo, { [S]: null != S }),
                               ref: z,

@@ -17,8 +17,8 @@ var i,
     _ = n(174459),
     T = n(58703),
     C = n(975571),
-    E = n(38405),
-    A = n(264779),
+    A = n(38405),
+    E = n(264779),
     h = n(962644),
     x = n(852218),
     O = n(652215),
@@ -147,7 +147,7 @@ function j(e) {
                       onClick: () => {
                           (null != d
                               ? d()
-                              : (0, A.kd)({
+                              : (0, E.kd)({
                                     promotionId: t.id,
                                     promotionTitle: t.outboundTitle,
                                     partnerId: t.partnerId,
@@ -158,7 +158,7 @@ function j(e) {
                                   null != e && r(e);
                               })
                               .catch((e) => {
-                                  !1 === (null != c && c(e)) && (l(!0), E.A.captureException(e));
+                                  !1 === (null != c && c(e)) && (l(!0), A.A.captureException(e));
                               });
                       },
                   }),
@@ -182,8 +182,8 @@ function M(e) {
             isClaiming: P,
             hideClaimButton: _ = !1,
         } = e,
-        [T, E] = r.useState(t.code),
-        [A, h] = r.useState(!1),
+        [T, A] = r.useState(t.code),
+        [E, h] = r.useState(!1),
         v = null == T;
     return (0, a.jsxs)("div", {
         className: R.lA,
@@ -210,7 +210,7 @@ function M(e) {
                                             (0, a.jsx)(g.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: A
+                                                children: E
                                                     ? N.intl.format(N.t.i2EuFO, {
                                                           helpdeskArticle: C.A.getArticleURL(O.MVz.RECURRING_PROMOTION),
                                                       })
@@ -238,8 +238,8 @@ function M(e) {
                                 (0, a.jsx)(j, {
                                     recurrence: t,
                                     canBeClaimed: v,
-                                    hasClaimError: A,
-                                    setCode: E,
+                                    hasClaimError: E,
+                                    setCode: A,
                                     setHasClaimError: h,
                                     analyticsLocations: u,
                                     onClaim: m,
@@ -271,8 +271,8 @@ function M(e) {
                     children: (0, a.jsx)(j, {
                         recurrence: t,
                         canBeClaimed: v,
-                        hasClaimError: A,
-                        setCode: E,
+                        hasClaimError: E,
+                        setCode: A,
                         setHasClaimError: h,
                         className: R.qx,
                         analyticsLocations: u,

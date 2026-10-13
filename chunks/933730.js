@@ -18,8 +18,8 @@ var i,
     T = n(75678),
     C = n(202541);
 n(92737);
-var E = n(652215),
-    A = n(49999),
+var A = n(652215),
+    E = n(49999),
     h = n(660183),
     x = n(137326),
     O =
@@ -42,10 +42,10 @@ function v(e) {
         { analyticsLocations: j } = (0, b.Ay)(y),
         L = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
         M = r.useCallback(() => {
-            (0, P.A)(E.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: I }) });
+            (0, P.A)(A.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: I }) });
         }, [I]),
         U = r.useCallback(() => {
-            switch ((n(A.i.TAKE_ACTION), N)) {
+            switch ((n(E.i.TAKE_ACTION), N)) {
                 case 0:
                     M();
                     break;
@@ -68,7 +68,7 @@ function v(e) {
             (0, a.jsx)("div", { children: S }),
             (0, a.jsx)(o.x, {
                 targetElementRef: t,
-                onRequestClose: () => n(A.i.USER_DISMISS),
+                onRequestClose: () => n(E.i.USER_DISMISS),
                 alignmentStrategy: "edge",
                 align: "top",
                 position: "right",
@@ -76,7 +76,7 @@ function v(e) {
                 children: (0, a.jsxs)("div", {
                     "data-mana-component": "popover",
                     children: [
-                        (0, a.jsx)(m.p, { onClick: () => n(A.i.USER_DISMISS) }),
+                        (0, a.jsx)(m.p, { onClick: () => n(E.i.USER_DISMISS) }),
                         null != v &&
                             (0, a.jsx)("div", {
                                 className: x.Q,
