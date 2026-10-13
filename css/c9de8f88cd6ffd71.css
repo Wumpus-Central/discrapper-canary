@@ -58,10 +58,19 @@
     min-width: 0
 }
 
+.incomingRow__6149a {
+    cursor: pointer
+}
+
+.incomingRow__6149a:focus-within {
+    background-color: var(--background-mod-subtle)
+}
+
 .ignoreButton__6149a {
     opacity: 0
 }
 
+.incomingRow__6149a.rowActive__6149a .ignoreButton__6149a,
 .incomingRow__6149a:focus-within .ignoreButton__6149a,
 .incomingRow__6149a:hover .ignoreButton__6149a {
     opacity: 1
@@ -2614,4 +2623,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=6618d8ef83141717.css.map*/
+/*# sourceMappingURL=c9de8f88cd6ffd71.css.map*/
