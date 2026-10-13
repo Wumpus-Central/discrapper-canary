@@ -890,7 +890,8 @@ function tc(e) {
               children: (e, n) => {
                   let { isShown: i } = n,
                       a = A || w || i,
-                      o = (0, l.jsxs)("div", {
+                      o = !u && (a || E),
+                      p = (0, l.jsxs)("div", {
                           className: r()(to.kL, { [to.vu]: a }),
                           onMouseOver: () => {
                               A || (b(!0), g());
@@ -953,7 +954,8 @@ function tc(e) {
                                                           (0, l.jsx)(tx, { subtitle: d }),
                                                       ],
                                                   }),
-                                                  null != t.gameAppId &&
+                                                  !o &&
+                                                      null != t.gameAppId &&
                                                       s !== eZ.ik.GAME &&
                                                       (0, l.jsx)(tu, {
                                                           gameAppId: t.gameAppId,
@@ -964,8 +966,7 @@ function tc(e) {
                                       ],
                                   }),
                               }),
-                              !u &&
-                                  (a || E) &&
+                              o &&
                                   (0, l.jsx)("div", {
                                       className: to.Mj,
                                       children: (0, l.jsx)(I.m, {
@@ -991,7 +992,7 @@ function tc(e) {
                                 asContainer: !0,
                                 tag: "div",
                                 ariaHidden: !0,
-                                children: o,
+                                children: p,
                             })
                           : (0, l.jsx)(eq.u, {
                                 title: t.name,
@@ -1000,9 +1001,9 @@ function tc(e) {
                                 asContainer: !0,
                                 element: "div",
                                 ariaHidden: !0,
-                                children: o,
+                                children: p,
                             })
-                      : o;
+                      : p;
               },
           });
 }
