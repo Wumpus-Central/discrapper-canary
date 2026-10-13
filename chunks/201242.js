@@ -22,6 +22,7 @@ let E = {
         numBounces: 4,
         irradianceMinDistance: 1,
         binauralDecode: !0,
+        mixLevel: 1,
         room: {
             minCorner: { x: -8, y: -1.2, z: -6 },
             maxCorner: { x: 12, y: 1.6, z: 10 },
