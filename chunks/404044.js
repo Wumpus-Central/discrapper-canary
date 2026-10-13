@@ -6,13 +6,13 @@ var i = n(439372),
     l = n(765682),
     o = n(652215);
 class d extends i.A {
-    actions = this.isEnabled() ? { AUDIO_SET_MODE: this.handleAudioSetMode } : {};
+    actions = { AUDIO_SET_MODE: (e) => this.handleAudioSetMode(e) };
     isEnabled() {
         return (0, r.isDesktop)() && (0, r.isMac)() && !a.P.isDiscordTestSet();
     }
     handleAudioSetMode(e) {
         let { mode: t } = e;
-        t === o.TBI.PUSH_TO_TALK && s.A.requestPermission(l.iL.INPUT_MONITORING);
+        this.isEnabled() && t === o.TBI.PUSH_TO_TALK && s.A.requestPermission(l.iL.INPUT_MONITORING);
     }
 }
 let c = new d();
