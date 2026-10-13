@@ -149,6 +149,10 @@ class N extends a.Ay.Store {
     getMemberListSections(e) {
         return p[e]?.sections;
     }
+    isMember(e, t) {
+        let n = p[e];
+        return null == n ? null : n.allUserIds.has(t);
+    }
     canUserViewChannel(e, t, n) {
         let i = p[e];
         if (null == i) return !1;
