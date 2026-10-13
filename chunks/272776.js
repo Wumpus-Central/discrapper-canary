@@ -6425,7 +6425,6 @@ let dC = (0, E.zZ)(h.X.GIFT_CARDS_MARKETING_BANNER_CATEGORY, {
                       title: U.intl.string(oI.default.Ja5Q8Z),
                       graphicSrc: oT,
                       actions: i,
-                      footnote: U.intl.format(oI.default.ztNU94, { termsUrl: I.X7G.GIFT_CARD_TERMS }),
                       children: (0, p.jsxs)(Z.B, {
                           direction: "vertical",
                           align: "start",
