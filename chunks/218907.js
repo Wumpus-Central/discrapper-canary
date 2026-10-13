@@ -4520,10 +4520,10 @@ class tm extends m.A {
         return this._isStageChannel;
     }
     _maybeRefuseDaveDowngrade(e, t, n) {
-        if (0 !== t) return !1;
+        if (Number.isInteger(t) && t > 0 && t <= 65535) return !1;
         let i = this._latchIsStageChannel();
         return (
-            ("init" !== e || !0 !== i) &&
+            (0 !== t || "init" !== e || !0 !== i) &&
             (this.logger.error(`Refusing DAVE protocol downgrade to version ${t} at ${e}, disconnecting.`),
             this.recordEvent({ c: 12, s: e }),
             eu.default.track(eC.HAw.DAVE_DOWNGRADE_REFUSED, {
