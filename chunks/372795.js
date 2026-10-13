@@ -42,19 +42,19 @@ function u(e) {
             [t, n],
         ),
         k = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        A = null == m ? 0 : Math.round(m * Math.min(k, 2)),
-        N = (0, i.KK)(t, n, { fps: u, onFrame: w, enabled: !d && y, width: A }),
-        S = (0, i.AV)(t, n),
-        C = r.useRef(S);
+        N = null == m ? 0 : Math.round(m * Math.min(k, 2)),
+        A = (0, i.KK)(t, n, { fps: u, onFrame: w, enabled: !d && y, width: N }),
+        C = (0, i.AV)(t, n),
+        S = r.useRef(C);
     (r.useEffect(() => {
-        if (C.current === S) return;
-        ((C.current = S), (x.current = null), b(!1));
+        if (S.current === C) return;
+        ((S.current = C), (x.current = null), b(!1));
         let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-    }, [S]),
+    }, [C]),
         r.useEffect(() => {
-            g?.(N, j);
-        }, [N, j, g]),
+            g?.(A, j);
+        }, [A, j, g]),
         r.useEffect(() => {
             c && p.current?.focus();
         }, [c]));

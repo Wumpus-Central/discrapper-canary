@@ -27,8 +27,8 @@ var i,
     w = n(866323),
     N = n(939249),
     _ = n(834730),
-    R = n(259788),
-    O = n(302614),
+    O = n(259788),
+    R = n(302614),
     M = n(981033);
 let D = { mass: 1, tension: 600, friction: 60, clamp: !0 };
 function z(e) {
@@ -38,7 +38,7 @@ function z(e) {
         [o, d] = v.useState(0),
         u = v.useRef(0),
         [c, h] = v.useState(0),
-        { timeToLiveMs: m, reappearTimeMs: g } = R.Ay.useState(
+        { timeToLiveMs: m, reappearTimeMs: g } = O.Ay.useState(
             (e) => ({ timeToLiveMs: e.timeToLiveMs, reappearTimeMs: e.reappearTimeMs }),
             y(),
         ),
@@ -93,7 +93,7 @@ function z(e) {
                       (0, l.jsx)(b.animated.div, {
                           style: e,
                           className: M.r2,
-                          children: (0, l.jsx)(O.A, {
+                          children: (0, l.jsx)(R.A, {
                               className: C()(M.VC, A && M.Nd),
                               children: (0, l.jsx)(N.D, {
                                   onClick: x,
@@ -351,8 +351,8 @@ let eN = new Set([ej.XYD.ENDED, ej.XYD.FAILED, ej.XYD.PAUSED]),
                   ],
               });
     });
-var eR = n(765671),
-    eO = n(531685),
+var eO = n(765671),
+    eR = n(531685),
     eM = n(365971),
     eD = n(129537);
 let ez = 9 / 16,
@@ -659,8 +659,8 @@ function e2(e) {
         N = y.length,
         _ = (0, P.bG)([Y.A], () => Y.A.getWindowState(e0.f), []),
         {
-            tileWidth: R,
-            tileHeight: O,
+            tileWidth: O,
+            tileHeight: R,
             widgetWidth: M,
             widgetHeight: D,
             containerRef: z,
@@ -671,10 +671,10 @@ function e2(e) {
                     width: "number" == typeof l.width ? l.width : 256,
                     height: "number" == typeof l.height ? l.height : 256 * ez,
                 },
-                { width: o = s, height: d = a, ref: u } = (0, eR.Ay)(),
+                { width: o = s, height: d = a, ref: u } = (0, eO.Ay)(),
                 c = (0, eU.A)(),
                 h = (0, eM.Q2)(c),
-                m = (0, P.bG)([eO.A], () => eO.A.windowSize(h), [h]),
+                m = (0, P.bG)([eR.A], () => eR.A.windowSize(h), [h]),
                 g = (function (e) {
                     let {
                             tileCount: t,
@@ -904,8 +904,8 @@ function e2(e) {
                 ref: z,
                 children: (0, l.jsx)(e$, {
                     widgetId: a,
-                    tileWidth: R,
-                    tileHeight: O,
+                    tileWidth: O,
+                    tileHeight: R,
                     locked: u,
                     layout: E,
                     activeStreams: b,
@@ -955,7 +955,7 @@ function e7(e) {
             (m(), S(), I());
         }, [m, S, I]),
         [w, N] = v.useState(!0),
-        [R, M] = v.useState(!0),
+        [O, M] = v.useState(!0),
         [D, z] = v.useState(!0),
         [k, L] = v.useState(!0),
         [V, U] = v.useState(!0);
@@ -995,14 +995,14 @@ function e7(e) {
                               }),
                           ],
                       }),
-                  (R || !t) &&
+                  (O || !t) &&
                       (0, l.jsxs)("div", {
                           className: e9.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
                                       className: e9.On,
-                                      children: (0, l.jsx)(e5.d, { checked: R, onChange: (e) => M(e) }),
+                                      children: (0, l.jsx)(e5.d, { checked: O, onChange: (e) => M(e) }),
                                   }),
                               (0, l.jsxs)(_.E, {
                                   variant: "text-md/normal",
@@ -1140,7 +1140,7 @@ function e7(e) {
                   !t &&
                       (0, l.jsx)("div", {
                           className: e9.m8,
-                          children: (0, l.jsx)(O.A, {
+                          children: (0, l.jsx)(R.A, {
                               children: (0, l.jsx)(e3.$, { variant: "primary", text: "Reset Frame Data", onClick: b }),
                           }),
                       }),
@@ -1178,17 +1178,17 @@ var te = n(417098),
     tw = n(477782),
     tN = n(650338),
     t_ = n(915725),
-    tR = n(226640),
-    tO = n(753070),
+    tO = n(226640),
+    tR = n(753070),
     tM = n(268378);
 function tD(e) {
     let { onClose: t } = e,
         n = (0, tT.E)(),
         i = (0, P.bG)([t_.Ay], () => t_.Ay.getSettings().clipsQuality),
         r = (0, P.bG)([t_.Ay], () => t_.Ay.getSettings().clipsLength),
-        s = (0, tR.Qu)(),
-        a = (0, tR.gF)(),
-        o = (0, tR.Fz)();
+        s = (0, tO.Qu)(),
+        a = (0, tO.gF)(),
+        o = (0, tO.Fz)();
     return (0, l.jsxs)(tb.W, {
         navId: "overlay-clips-menu",
         "aria-label": eC.intl.string(tM.default["YvJKD+"]),
@@ -1224,7 +1224,7 @@ function tD(e) {
             }),
             (0, l.jsx)(tw.Dr, {
                 id: "clips-resolution",
-                subtext: (0, tO.zr)(i.resolution),
+                subtext: (0, tR.zr)(i.resolution),
                 label: eC.intl.string(eC.t.aFudZJ),
                 children: a.map((e) => {
                     let { id: t, value: n, label: r } = e;
@@ -1977,8 +1977,8 @@ var nh = n(408278),
     nw = n(220884),
     nN = n(145567),
     n_ = n(778712),
-    nR = n(290863),
-    nO = n(172491),
+    nO = n(290863),
+    nR = n(172491),
     nM = n(912156),
     nD = (((i = {})[(i.SIZE_24 = 24)] = "SIZE_24"), (i[(i.SIZE_40 = 40)] = "SIZE_40"), i);
 function nz(e, t) {
@@ -2008,10 +2008,10 @@ let nk = v.memo(function (e) {
         u = t?.isPrivate() ?? !1,
         c = t?.isMultiUserDM() ?? !1,
         h = n?.id,
-        g = (0, P.bG)([nR.A], () => (null != h ? nR.A.getStatus(h) : null), [h]),
-        p = (0, P.bG)([nR.A], () => null != h && nR.A.isMobileOnline(h), [h]);
+        g = (0, P.bG)([nO.A], () => (null != h ? nO.A.getStatus(h) : null), [h]),
+        p = (0, P.bG)([nO.A], () => null != h && nO.A.isMobileOnline(h), [h]);
     if (u || c)
-        return (0, l.jsx)(nO.h, {
+        return (0, l.jsx)(nR.h, {
             channel: t ?? null,
             user: n,
             "aria-hidden": !0,
@@ -2228,7 +2228,7 @@ function nB(e) {
         m = n?.isDM() ? (i?.id ?? null) : null,
         g =
             ((t = (0, P.bG)(
-                [nR.A],
+                [nO.A],
                 () => {
                     if (null != m)
                         return (
@@ -2236,7 +2236,7 @@ function nB(e) {
                                 for (let t of e)
                                     if (t.type === ej.$pd.PLAYING && null != t.application_id) return t.application_id;
                                 return null;
-                            })(nR.A.getActivities(m)) ?? void 0
+                            })(nO.A.getActivities(m)) ?? void 0
                         );
                 },
                 [m],
@@ -2675,9 +2675,9 @@ let n6 = v.memo(function (e) {
             );
         })({ channel: j, guild: I, user: S }),
         _ = j?.isPrivate() ?? !1,
-        R = I?.name ?? "",
-        O = _ ? void 0 : A,
-        M = _ ? A : "" !== R ? R : A,
+        O = I?.name ?? "",
+        R = _ ? void 0 : A,
+        M = _ ? A : "" !== O ? O : A,
         D = (() => {
             if (null == j || _) return null;
             let e = (0, tC.gU)(j, I);
@@ -2686,7 +2686,7 @@ let n6 = v.memo(function (e) {
     return null == j
         ? (0, l.jsx)("div", { className: n3.R })
         : (0, l.jsx)(nE.u, {
-              title: O,
+              title: R,
               body: M,
               asset: D,
               assetSize: 20,
@@ -3065,7 +3065,7 @@ function iE(e) {
             nd.D,
         ),
         a = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: o = e.width - n, height: d = e.height - n, ref: u } = (0, eR.Ay)(e.locked, e.widget.pinned),
+        { width: o = e.width - n, height: d = e.height - n, ref: u } = (0, eO.Ay)(e.locked, e.widget.pinned),
         { participantTileWidth: c, visibleParticipants: h } = (0, ic.i4)(a ? o : d, r, {
             tileWidth: 192,
             tileMinWidth: 120,
@@ -3186,12 +3186,12 @@ let i_ = v.memo(function (e) {
         ],
     });
 });
-function iR(e) {
+function iO(e) {
     let { applicationId: t } = e,
         n = (0, P.bG)([f.A], () => f.A.getProject(t)?.name, [t]);
     return (0, l.jsx)(iI.Pl, { children: null != n && "" !== n ? n : eC.intl.string(ib.default.nXsF71) });
 }
-function iO(e, t) {
+function iR(e, t) {
     return null != e && Number.isFinite(e) ? e : t;
 }
 n(321073);
@@ -3508,13 +3508,13 @@ let iH = v.memo(function (e) {
                     ? (0, l.jsx)(i_, { applicationId: t.meta.applicationId, locked: n, dragging: i, dragStart: r })
                     : null;
             },
-            renderTitle: (e) => ((0, eG.Du)(e) ? (0, l.jsx)(iR, { applicationId: e.meta.applicationId }) : null),
+            renderTitle: (e) => ((0, eG.Du)(e) ? (0, l.jsx)(iO, { applicationId: e.meta.applicationId }) : null),
             renderButtons: (e) => ((0, eG.Du)(e) ? (0, l.jsx)(iI.O0, { id: e.id, pinned: e.pinned }) : null),
             resizeValidation: (e) => {
                 let { widget: t, computedSize: n, containerSpecs: i } = e,
                     r = X.A.getWidgetDefaultSettings(ej.uss.CONJURE)?.minSize,
-                    l = iO(t.minSize.width, r?.width ?? 0),
-                    s = iO(t.minSize.height, r?.height ?? 0),
+                    l = iR(t.minSize.width, r?.width ?? 0),
+                    s = iR(t.minSize.height, r?.height ?? 0),
                     a = Math.max(l, i.maxX - i.minX),
                     o = Math.max(s, i.maxY - i.minY);
                 return { width: Math.min(Math.max(n.width, l), a), height: Math.min(Math.max(n.height, s), o) };

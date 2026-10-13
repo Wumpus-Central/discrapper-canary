@@ -33,12 +33,12 @@ function w(e) {
 }
 let N = 7e3;
 function _(e, t) {
-    return R(
+    return O(
         (0, a.bG)([E.A], () => E.A.getWidget(e), [e]),
         t,
     );
 }
-function R(e, t) {
+function O(e, t) {
     let n = r.useRef(e?.showExtrasHintTimestamp),
         [i, l] = r.useState(!1),
         s = (0, T.A)(),
@@ -70,11 +70,11 @@ function R(e, t) {
         i && s
     );
 }
-let O = 8e3;
+let R = 8e3;
 function M(e) {
     let { children: t, widgetId: n } = e,
         r = (0, a.bG)([E.A], () => E.A.getWidget(n), [n]);
-    return R(r, O)
+    return O(r, R)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(I.A, {

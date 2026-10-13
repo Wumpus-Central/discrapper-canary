@@ -14,8 +14,8 @@ var i = n(477900),
     E = n(661439),
     h = n(73825),
     x = n(928039),
-    p = n(277984),
-    S = n(235986),
+    S = n(277984),
+    p = n(235986),
     T = n(39190),
     f = n(73153),
     I = n(380098);
@@ -104,8 +104,8 @@ var L = n(536637),
     eE = n(90165),
     eh = n(147925),
     ex = n(174459),
-    ep = n(957565),
-    eS = n(58703),
+    eS = n(957565),
+    ep = n(58703),
     eT = n(580630),
     ef = n(427262),
     eI = n(219887),
@@ -127,8 +127,8 @@ function eG(e) {
     let { description: t, cost: n } = e;
     return (0, i.jsx)("li", {
         className: eb.mg,
-        children: (0, i.jsxs)(S.A, {
-            justify: S.A.Justify.BETWEEN,
+        children: (0, i.jsxs)(p.A, {
+            justify: p.A.Justify.BETWEEN,
             children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)("div", { children: n })],
         }),
     });
@@ -148,7 +148,7 @@ function eM(e) {
                 u(!1);
             },
             onClick: function () {
-                (0, ep.C)(t, () => {
+                (0, eS.C)(t, () => {
                     (u(!0), a(!0));
                 });
             },
@@ -350,10 +350,10 @@ class eV extends s.PureComponent {
                       .sort((e, t) => e.createdAt.getTime() - t.createdAt.getTime())
                       .map((e) =>
                           (0, i.jsxs)(
-                              S.A,
+                              p.A,
                               {
-                                  justify: S.A.Justify.BETWEEN,
-                                  align: S.A.Align.CENTER,
+                                  justify: p.A.Justify.BETWEEN,
+                                  align: p.A.Align.CENTER,
                                   children: [
                                       this.renderPaymentSource(e),
                                       (0, i.jsx)(A.E, {
@@ -684,7 +684,7 @@ class eV extends s.PureComponent {
         let E = (0, i.jsx)(A.E, {
                 variant: "text-sm/normal",
                 className: eb.p6,
-                children: (0, eS.i$)(R()(u.createdAt), "MM/DD/YYYY"),
+                children: (0, ep.i$)(R()(u.createdAt), "MM/DD/YYYY"),
             }),
             h = u.isGift
                 ? (0, i.jsx)(U.m, {
@@ -753,9 +753,9 @@ class eV extends s.PureComponent {
                     focusProps: { offset: 4 },
                     ...n,
                     children: [
-                        (0, i.jsxs)(S.A, {
+                        (0, i.jsxs)(p.A, {
                             className: eb.J7,
-                            align: S.A.Align.CENTER,
+                            align: p.A.Align.CENTER,
                             "data-expanded": s,
                             children: [
                                 this.renderDescription(),
@@ -796,8 +796,8 @@ function ek(e) {
     s.useEffect(() => {
         g && null != c && (0, ei.TA)(c);
     }, [c, g]);
-    let p = (0, d.bG)([eg.A], () => eg.A.getGuild(A?.guildId)),
-        S = o ? A : void 0,
+    let S = (0, d.bG)([eg.A], () => eg.A.getGuild(A?.guildId)),
+        p = o ? A : void 0,
         T = a.subscription,
         f = (0, d.bG)([v.A], () => (null != T && T.type !== e_.rzx.PREMIUM ? v.A.get(T.items[0].planId) : null)),
         I = (0, d.bG)(
@@ -811,9 +811,9 @@ function ek(e) {
         { analyticsLocations: _ } = (0, q.Ay)(Z.A.BILLING_SETTINGS_BILLING);
     return (0, i.jsx)(eV, {
         applicationStatistics: m,
-        application: g ? x : S,
+        application: g ? x : p,
         analyticsLocations: _,
-        guild: p,
+        guild: S,
         stickerPack: null,
         paymentSources: E,
         locale: n,
@@ -836,11 +836,11 @@ function eB(e) {
     s.useEffect(() => {
         d.current?.scrollTo({ to: 0 });
     }, [g]);
-    let S = s.useCallback(
+    let p = s.useCallback(
             (e) => {
                 m(e);
                 let n = t[t.length - 1].id;
-                e >= o - 2 && A !== n && ((0, p.CK)(10, n), E(n));
+                e >= o - 2 && A !== n && ((0, S.CK)(10, n), E(n));
             },
             [t, o, A],
         ),
@@ -853,7 +853,7 @@ function eB(e) {
                 return (0, i.jsx)(T.A, {
                     className: ew.GD,
                     currentPageIndex: g,
-                    onChangePage: S,
+                    onChangePage: p,
                     numPages: o,
                     showPageCount: !1,
                     ref: t,
@@ -878,7 +878,7 @@ class ez extends s.PureComponent {
         return Math.max(Math.ceil(this.props.paymentGroups.length / 10), 1);
     }
     componentDidMount() {
-        ((0, E.X)(), (0, p.CK)(30));
+        ((0, E.X)(), (0, S.CK)(30));
     }
     renderPremiumExternalSubscription(e) {
         return (
@@ -924,7 +924,7 @@ class ez extends s.PureComponent {
                                         ? null
                                         : (0, i.jsx)("div", {
                                               className: r()(ew.Nj, ew.Bd),
-                                              children: (0, i.jsxs)(S.A, {
+                                              children: (0, i.jsxs)(p.A, {
                                                   className: ew.Yi,
                                                   children: [
                                                       (0, i.jsx)("div", {

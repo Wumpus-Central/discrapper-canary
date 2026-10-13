@@ -14,8 +14,8 @@ var i = n(477900),
     E = n(741231),
     h = n(95035),
     x = n(830543),
-    p = n(317525),
-    S = n(71393),
+    S = n(317525),
+    p = n(71393),
     T = n(652215),
     f = n(660183),
     I = n(460103);
@@ -33,7 +33,7 @@ function N(e) {
     let { guildId: t, guildProductListingId: n } = e,
         r = (0, d.Qi)(t, n, { requireCurrentGuild: !1 }),
         a = (0, g.z)(r),
-        o = (0, l.bG)([S.A], () => S.A.getGuild(t)),
+        o = (0, l.bG)([p.A], () => p.A.getGuild(t)),
         u = r?.role_id != null && r?.attachments_count === 0 ? f.intl.string(f.t.H11qcT) : a,
         c = s.useCallback(async () => {
             (o?.features.has(T.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
@@ -57,13 +57,13 @@ function C(e) {
         s = (0, d.Qi)(t, n, { requireCurrentGuild: !1 }),
         u = (0, l.bG)([c.A], () => c.A.getGuildProductFetchState(n) === c.e.FETCHING),
         g = s?.role_id,
-        E = (0, l.bG)([p.A], () => (null != g ? p.A.getRole(t, g) : void 0), [t, g]),
+        E = (0, l.bG)([S.A], () => (null != g ? S.A.getRole(t, g) : void 0), [t, g]),
         h = (0, A.A)({ guildId: t, productId: n }),
         x = (s?.attachments?.length ?? 0) > 0,
-        S = null != E;
+        p = null != E;
     return u
         ? (0, i.jsx)("div", { className: I.hT, children: (0, i.jsx)(a.y, {}) })
-        : null != s && (x || S)
+        : null != s && (x || p)
           ? (0, i.jsxs)("div", {
                 className: I.hT,
                 children: [
@@ -79,7 +79,7 @@ function C(e) {
                                 (0, i.jsx)(r.$, { ...h }),
                             ],
                         }),
-                    S &&
+                    p &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 x && (0, i.jsx)("div", { className: I.yF }),

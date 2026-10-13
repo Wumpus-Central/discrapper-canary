@@ -5,19 +5,19 @@ var r = n(477900),
     s = n.n(l),
     o = n(258873),
     a = n(622242),
-    d = n(731738),
-    u = n(70298),
+    u = n(731738),
+    d = n(70298),
     c = n(17928),
     h = n(397613),
     f = n(821609),
     g = n(825484),
-    m = n(148810),
-    p = n(521502),
+    p = n(148810),
+    m = n(521502),
     A = n(380610),
     y = n(807393),
     v = n(976860),
-    w = n(174459),
-    x = n(38405),
+    x = n(174459),
+    w = n(38405),
     E = n(19575),
     C = n(721668),
     b = n(652215),
@@ -25,11 +25,11 @@ var r = n(477900),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    if (null == (0, c.bG)([p.A], () => ((0, A.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null)))
+    if (null == (0, c.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
     async function n() {
         try {
-            (t(!0), await (0, m.iD)(), window.location.reload(!0));
+            (t(!0), await (0, p.iD)(), window.location.reload(!0));
         } catch (e) {
             t(!1);
         }
@@ -46,7 +46,7 @@ let D = s().throttle(
     (e) => {
         y.A.increment(
             {
-                name: d.K.APP_CRASHED,
+                name: u.K.APP_CRASHED,
                 tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
             },
             !0,
@@ -64,9 +64,9 @@ class I extends i.PureComponent {
     triggerSoftCrash(e, t) {
         let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
-        let r = (0, u.b)(),
-            i = x.A.captureCrash(e, { extra: t });
-        (w.default.track(b.HAw.APP_CRASHED, {
+        let r = (0, d.b)(),
+            i = w.A.captureCrash(e, { extra: t });
+        (x.default.track(b.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,

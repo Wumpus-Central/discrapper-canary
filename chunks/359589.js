@@ -1,8 +1,8 @@
-n.d(t, { Ay: () => b, FT: () => g, bR: () => m });
+n.d(t, { Ay: () => b, FT: () => m, bR: () => g });
 var l = n(477900),
     i = n(582128),
-    a = n(691885),
-    r = n(193249),
+    r = n(691885),
+    a = n(193249),
     u = n(834730),
     s = n(534554),
     o = n(56681),
@@ -11,11 +11,11 @@ var l = n(477900),
     f = n(248675),
     p = n(660183),
     h = n(944847);
-function g(e, t) {
+function m(e, t) {
     let [n, l] = i.useState(null),
-        [a, r] = i.useState(e);
+        [r, a] = i.useState(e);
     return (
-        e !== a && (r(e), l(null)),
+        e !== r && (a(e), l(null)),
         [
             n ?? e,
             i.useCallback(
@@ -27,53 +27,53 @@ function g(e, t) {
         ]
     );
 }
-function m(e) {
+function g(e) {
     let { settings: t, tiers: n, choices: u, disabled: d, onChange: c } = e,
         h = i.useMemo(
             () => u.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: o.oU[e.provider] })),
             [u.main],
         ),
-        g = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: o.hW[e] ?? e, value: e })), [u.thinking]);
-    function m(e) {
+        m = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: o.hW[e] ?? e, value: e })), [u.thinking]);
+    function g(e) {
         c((0, s.CM)(e));
     }
     let b = (0, s.Id)(t, n, t.tier);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != b
-                ? (0, l.jsx)(a.l, {
+                ? (0, l.jsx)(r.l, {
                       label: p.intl.string(f.default["59TDiR"]),
                       options: h,
                       value: b,
-                      onSelectionChange: (e) => m((0, s.t7)(t, t.tier, e)),
+                      onSelectionChange: (e) => g((0, s.t7)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: d,
                       fullWidth: !0,
                   })
                 : null,
-            (0, l.jsx)(a.l, {
+            (0, l.jsx)(r.l, {
                 label: p.intl.string(f.default.fpdVCO),
-                options: g,
+                options: m,
                 value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
-                onSelectionChange: (e) => m({ ...t, thinking: e }),
+                onSelectionChange: (e) => g({ ...t, thinking: e }),
                 selectionMode: "single",
                 disabled: d,
                 fullWidth: !0,
             }),
             (0, s.gz)(t, n, u.main)
-                ? (0, l.jsx)(r.d, {
+                ? (0, l.jsx)(a.d, {
                       label: p.intl.string(f.default["5AblQX"]),
                       description: p.intl.string(f.default.QnUV8M),
                       checked: !0 === t.fast,
                       disabled: d,
-                      onChange: (e) => m({ ...t, fast: e }),
+                      onChange: (e) => g({ ...t, fast: e }),
                   })
                 : null,
         ],
     });
 }
 function b(e) {
-    let { settings: t, tiers: n, choices: i, disabled: a, onChange: r } = e,
+    let { settings: t, tiers: n, choices: i, disabled: r, onChange: a } = e,
         o = d.P.indexOf(t.tier);
     return (0, l.jsxs)("div", {
         className: h.OA,
@@ -119,15 +119,15 @@ function b(e) {
                         activeIndex: o,
                         stops: d.P.map(s.D0),
                         ariaLabel: p.intl.string(f.default.aBPQxX),
-                        disabled: a,
+                        disabled: r,
                         onSelect: function (e) {
                             let n = d.P[e];
-                            null != n && n !== t.tier && r((0, s.CM)((0, s.j6)(t, n)));
+                            null != n && n !== t.tier && a((0, s.CM)((0, s.j6)(t, n)));
                         },
                     }),
                 ],
             }),
-            (0, l.jsx)(m, { settings: t, tiers: n, choices: i, disabled: a, onChange: r }),
+            (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: r, onChange: a }),
         ],
     });
 }

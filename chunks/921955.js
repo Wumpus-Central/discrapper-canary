@@ -1,28 +1,28 @@
 let r;
-(n.d(t, { A: () => M }), n(321073));
+(n.d(t, { A: () => L }), n(321073));
 var i = n(17928),
     l = n(73153),
     s = n(308368),
     o = n(115718),
     a = n(47167),
-    d = n(734057),
-    u = n(71393),
+    u = n(734057),
+    d = n(71393),
     c = n(480595),
     h = n(290863),
     f = n(994500),
     g = n(287809),
-    m = n(645959),
-    p = n(652215),
+    p = n(645959),
+    m = n(652215),
     A = n(660183);
 let y = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     v = null,
-    w = null,
-    x = [],
+    x = null,
+    w = [],
     E = [],
     C = [];
 function b(e) {
-    ((x = [...x, e]),
-        (C = _((E = E.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: x.includes(e.data.record.id) }))))),
+    ((w = [...w, e]),
+        (C = _((E = E.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: w.includes(e.data.record.id) }))))),
         k.emitChange());
 }
 function N(e) {
@@ -44,7 +44,7 @@ function _(e) {
 function D() {
     return (
         (null != v || null != r) &&
-        ((v = null), null != r && (r.destroy(), (r = null)), null != w && (w(), (w = null)), !0)
+        ((v = null), null != r && (r.destroy(), (r = null)), null != x && (x(), (x = null)), !0)
     );
 }
 function I(e) {
@@ -69,14 +69,14 @@ function I(e) {
 function S() {
     return I(null);
 }
-function T() {
+function j() {
     let e = null != v && null != v.application_id ? c.A.getApplicationActivity(v.application_id) : null;
     return null != v && (null == e || null == e.party || null == e.party.id) && D();
 }
-class j extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
-        this.waitFor(d.A, u.A, c.A, h.A, m.A, g.default);
+        this.waitFor(u.A, d.A, c.A, h.A, p.A, g.default);
     }
     getActivity() {
         return v;
@@ -88,11 +88,11 @@ class j extends i.Ay.Store {
         return C;
     }
 }
-let k = new j(l.h, {
+let k = new T(l.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             ((v = e.activity),
-                (w = e.resolve),
-                (x = []),
+                (x = e.resolve),
+                (w = []),
                 null == r &&
                     (r = new o.Ay(
                         (e, t) => {
@@ -101,10 +101,10 @@ let k = new j(l.h, {
                                 (E = (
                                     "" === t.trim()
                                         ? ((n = []),
-                                          m.A.getPrivateChannelIds().forEach((e) => {
-                                              let t = d.A.getChannel(e);
+                                          p.A.getPrivateChannelIds().forEach((e) => {
+                                              let t = u.A.getChannel(e);
                                               if (null != t)
-                                                  if (t.type === p.rbe.DM) {
+                                                  if (t.type === m.rbe.DM) {
                                                       let e = t.getRecipientId(),
                                                           r = null != e ? g.default.getUser(e) : null;
                                                       null != r && n.push({ type: o.rD.USER, record: r, score: 0 });
@@ -121,7 +121,7 @@ let k = new j(l.h, {
                                                 let { record: t } = e;
                                                 return {
                                                     type: o.rD.USER,
-                                                    sent: x.includes(t.id),
+                                                    sent: w.includes(t.id),
                                                     status: h.A.getStatus(t.id),
                                                     playingSameGame: N(t.id),
                                                     data: e,
@@ -129,11 +129,11 @@ let k = new j(l.h, {
                                             }
                                             case o.rD.TEXT_CHANNEL: {
                                                 let { record: t } = e,
-                                                    n = d.A.getChannel(t.parent_id),
-                                                    r = u.A.getGuild(t.guild_id);
+                                                    n = u.A.getChannel(t.parent_id),
+                                                    r = d.A.getGuild(t.guild_id);
                                                 return {
                                                     type: o.rD.TEXT_CHANNEL,
-                                                    sent: x.includes(t.id),
+                                                    sent: w.includes(t.id),
                                                     categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
                                                     guildName: r?.name ?? "",
                                                     data: e,
@@ -141,7 +141,7 @@ let k = new j(l.h, {
                                             }
                                             case o.rD.GROUP_DM: {
                                                 let { record: t } = e;
-                                                return { type: o.rD.GROUP_DM, sent: x.includes(t.id), data: e };
+                                                return { type: o.rD.GROUP_DM, sent: w.includes(t.id), data: e };
                                             }
                                             default:
                                                 return null;
@@ -169,14 +169,14 @@ let k = new j(l.h, {
                 null != t
                     ? s.A.sendActivityInvite({
                           channelId: t,
-                          type: p.xL.JOIN,
+                          type: m.xL.JOIN,
                           activity: v,
                           location: "Channel Text Area - Invite to Join Modal",
                       }).then(() => b(t))
                     : null != n &&
                       s.A.sendActivityInviteUser({
                           userId: n,
-                          type: p.xL.JOIN,
+                          type: m.xL.JOIN,
                           activity: v,
                           location: "Channel Text Area - Invite to Join Modal",
                       }).then(() => b(n)),
@@ -194,7 +194,7 @@ let k = new j(l.h, {
         },
         PRESENCES_REPLACE: S,
         CONNECTION_OPEN_SUPPLEMENTAL: S,
-        LOCAL_ACTIVITY_UPDATE: T,
-        RPC_APP_DISCONNECTED: T,
+        LOCAL_ACTIVITY_UPDATE: j,
+        RPC_APP_DISCONNECTED: j,
     }),
-    M = 221552 == n.j ? k : null;
+    L = 221552 == n.j ? k : null;

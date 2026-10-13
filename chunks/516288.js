@@ -1,8 +1,8 @@
-n.d(t, { k: () => r, t: () => u });
+n.d(t, { k: () => a, t: () => u });
 var l,
     i = n(248675),
-    a = n(660183),
-    r =
+    r = n(660183),
+    a =
         (((l = {}).NO_PREVIEW = "no-preview"),
         (l.MISSING_MANAGE_SERVER = "missing-manage-server"),
         (l.MISSING_MANAGE_CHANNELS = "missing-manage-channels"),
@@ -11,18 +11,18 @@ function u(e, t) {
     switch (e) {
         case "no-preview":
             return {
-                title: a.intl.string(i.default.ZNGLFE),
-                body: a.intl.string(i.default.ffxKGK),
-                action: a.intl.string(i.default["/omTNx"]),
+                title: r.intl.string(i.default.ZNGLFE),
+                body: r.intl.string(i.default.ffxKGK),
+                action: r.intl.string(i.default["/omTNx"]),
             };
         case "missing-manage-server":
-            return { title: a.intl.string(i.default.qpffbI), body: t ?? "", action: a.intl.string(a.t.BddRzS) };
+            return { title: r.intl.string(i.default.qpffbI), body: t ?? "", action: r.intl.string(r.t.BddRzS) };
         case "missing-manage-channels":
             return {
-                title: a.intl.string(i.default.qpffbI),
+                title: r.intl.string(i.default.qpffbI),
                 body: t ?? "",
-                action: a.intl.string(i.default.dVtQRH),
-                cancel: a.intl.string(a.t["ETE/oC"]),
+                action: r.intl.string(i.default.dVtQRH),
+                cancel: r.intl.string(r.t["ETE/oC"]),
             };
     }
 }

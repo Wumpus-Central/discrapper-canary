@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     _B: "attachmentChip__6fe49",
     gJ: "attachmentThumb__6fe49",
     Wd: "attachmentChipBody__6fe49",

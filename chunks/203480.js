@@ -5,13 +5,13 @@ var r = n(582128),
     s = n(192308),
     o = n(312138),
     a = n(775121),
-    d = n(955572),
-    u = n(775602),
+    u = n(955572),
+    d = n(775602),
     c = n(502229),
     h = n(532624),
     f = n(350535),
     g = n(650583);
-function m(e) {
+function p(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
     e.key !== g.N$.Tab ||
         t ||
@@ -19,11 +19,11 @@ function m(e) {
         (0, s.hasAnyModalOpen)() ||
         c.A.maybeShowKeyboardNavigationExplainerModal();
 }
-function p() {
-    (0, d.Bm)();
+function m() {
+    (0, u.Bm)();
 }
 let A = function (e, t) {
-    let n = (0, l.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
+    let n = (0, l.bG)([d.Ay], () => d.Ay.keyboardModeEnabled);
     (0, o.Op)(n);
     let s = (0, r.useCallback)(
         (e) => {
@@ -55,7 +55,7 @@ let A = function (e, t) {
                 null == r ||
                     h.Ay.hasExactKeybind(r) ||
                     a.A.hasBind(f.Qd(r[0]) ?? "") ||
-                    ((0, d.uS)(), n && !t && e.preventDefault());
+                    ((0, u.uS)(), n && !t && e.preventDefault());
             })(e, t);
         },
         [t],
@@ -64,11 +64,11 @@ let A = function (e, t) {
         (0, r.useLayoutEffect)(
             () => (
                 n
-                    ? (e.addEventListener("mousedown", p), e.addEventListener("keydown", m))
+                    ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", p))
                     : e.addEventListener("keydown", s),
                 () => {
                     n
-                        ? (e.removeEventListener("mousedown", p), e.removeEventListener("keydown", m))
+                        ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", p))
                         : e.removeEventListener("keydown", s);
                 }
             ),

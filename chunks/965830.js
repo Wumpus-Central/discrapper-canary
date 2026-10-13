@@ -6,7 +6,7 @@ var i = n(676999),
     s = n(765178),
     o = n(425763),
     a = n(660183);
-class d {
+class u {
     announcer;
     constructor(e) {
         if (null != e) this.announcer = e;
@@ -39,7 +39,7 @@ class d {
         return e.getAttribute("data-dnd-name") ?? e.getAttribute("aria-label") ?? t;
     }
 }
-class u {
+class d {
     container;
     svg;
     foreignObject;
@@ -194,8 +194,8 @@ class f {
     }
 }
 let g = [" ", "Enter"],
-    m = ["Escape"];
-function p(e) {
+    p = ["Escape"];
+function m(e) {
     (e.preventDefault(), e.stopImmediatePropagation());
 }
 function A(e, t) {
@@ -230,8 +230,8 @@ class v {
             (this.sourcePreviewNodes = new Map()),
             (this.sourcePreviewNodeOptions = new Map()),
             (this.targetNodes = new Map()),
-            (this._previewer = new u(t.document)),
-            (this._announcer = new d(n?.announcer)));
+            (this._previewer = new d(t.document)),
+            (this._announcer = new u(n?.announcer)));
     }
     setup() {
         if (v.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
@@ -245,7 +245,7 @@ class v {
             this.endDrag());
     }
     handleGlobalKeyDown = (e) => {
-        this.monitor.isDragging() && A(e, m) && (this.endDrag(e), this._announcer.announceCancel());
+        this.monitor.isDragging() && A(e, p) && (this.endDrag(e), this._announcer.announceCancel());
     };
     setDndMode(e) {
         this.options?.onDndModeChanged(e);
@@ -298,7 +298,7 @@ class v {
         if (!y(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
             return;
         if (this.monitor.isDragging()) return void this.actions.publishDragSource();
-        p(t);
+        m(t);
         let n = this.sourceNodes.get(e);
         null != n &&
             ((this._navigator = new f(n, this.targetNodes, this.manager, this._previewer, this._announcer)),
@@ -316,28 +316,28 @@ class v {
         A(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
-        (null != e && p(e),
+        (null != e && m(e),
             this._navigator?.disconnect(),
             this._previewer.clear(),
             this.monitor.isDragging() && this.actions.endDrag(),
             this.setDndMode(!1));
     }
 }
-let w = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
-    x = (0, l.eV)(
+let x = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
+    w = (0, l.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
     E = {
         backends: [
-            { id: "html5", backend: i.t, transition: x },
+            { id: "html5", backend: i.t, transition: w },
             {
                 id: "keyboard",
                 backend: (e, t, n) => new v(e, t, n),
                 context: { window, document },
                 options: { onDndModeChanged: o.ef, announcer: s.O },
                 preview: !0,
-                transition: w,
+                transition: x,
             },
         ],
     };

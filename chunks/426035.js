@@ -1,22 +1,22 @@
-n.d(e, { AS: () => E, Du: () => d, kF: () => f, ug: () => _, wv: () => C, xI: () => h });
+n.d(e, { AS: () => s, Du: () => _, kF: () => C, ug: () => E, wv: () => h, xI: () => p });
 var r = n(587895),
     i = n(321191),
     l = n(808728),
     u = n(71393),
-    o = n(576705),
-    a = n(246338),
-    c = n(951178),
-    s = n(652215);
-function d(t) {
+    a = n(576705),
+    c = n(246338),
+    o = n(951178),
+    d = n(652215);
+function _(t) {
     return r.A.getApplication(t.application_id)?.bot?.id ?? t.application_id;
 }
-function _(t) {
+function E(t) {
     let e = t.preview_application_id;
     return null == e ? null : (r.A.getApplication(e)?.bot?.id ?? e);
 }
-function E(t, e) {
+function s(t, e) {
     if (null == e) return null;
-    let n = i.A.getMutualGuilds(d(t));
+    let n = i.A.getMutualGuilds(_(t));
     return null == n
         ? null
         : n.some((t) => {
@@ -24,23 +24,23 @@ function E(t, e) {
               return n.id === e;
           });
 }
-function C(t, e) {
-    return (null != e && o.A.canManageUser(s.xBc.KICK_MEMBERS, e, t)) || o.A.can(s.xBc.MANAGE_GUILD, t);
-}
 function h(t, e) {
+    return (null != e && a.A.canManageUser(d.xBc.KICK_MEMBERS, e, t)) || a.A.can(d.xBc.MANAGE_GUILD, t);
+}
+function p(t, e) {
     return l.Ay.getChannels(t)
         [l.I6].map((t) => {
             let { channel: e } = t;
             return e;
         })
-        .filter((t) => (0, a.us)(t) === e);
+        .filter((t) => (0, c.us)(t) === e);
 }
-function f(t) {
+function C(t) {
     if ("user" === t.install_scope || null == t.guild_id || null == u.A.getGuild(t.guild_id)) return null;
-    let e = E(t, t.guild_id);
-    return !0 === e || h(t.guild_id, t.application_id).length > 0
+    let e = s(t, t.guild_id);
+    return !0 === e || p(t.guild_id, t.application_id).length > 0
         ? "in_server"
-        : (t.supported_surfaces?.length ?? 0) > 0 && ((0, c.Hv)(t) || !1 === e)
+        : (t.supported_surfaces?.length ?? 0) > 0 && ((0, o.Hv)(t) || !1 === e)
           ? "not_in_server"
           : null;
 }

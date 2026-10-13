@@ -1,4 +1,4 @@
-n.d(t, { Ax: () => w, Lk: () => C, cu: () => x, hK: () => E });
+n.d(t, { Ax: () => x, Lk: () => C, cu: () => w, hK: () => E });
 var r = n(477900);
 n(582128);
 var i = n(73153),
@@ -6,14 +6,14 @@ var i = n(73153),
     s = n(979186),
     o = n(574172),
     a = n(734057),
-    d = n(763827),
-    u = n(532294),
+    u = n(763827),
+    d = n(532294),
     c = n(19575),
     h = n(317084),
     f = n(980504),
     g = n(652215),
-    m = n(660183);
-let p = {
+    p = n(660183);
+let m = {
         width: f.ed.width,
         height: f.ed.height,
         resizable: !1,
@@ -28,47 +28,47 @@ let p = {
         titleBarStyle: null,
     },
     A = f.ed.padding,
-    y = p.width - A,
-    v = p.height - A;
-async function w(e) {
-    let t = d.A.getGuildId(),
-        n = d.A.getChannelId(),
+    y = m.width - A,
+    v = m.height - A;
+async function x(e) {
+    let t = u.A.getGuildId(),
+        n = u.A.getChannelId(),
         i = a.A.getChannel(n);
     if (null == t || null == i) return;
-    let { x: l, y: u } = await c.Ay.invoke("GET_MOUSE_COORDINATES");
+    let { x: l, y: d } = await c.Ay.invoke("GET_MOUSE_COORDINATES");
     (0, o.open)(
         g.MLl.SOUNDBOARD,
         (n) =>
             (0, r.jsx)(s.A, {
                 windowKey: n,
                 withTitleBar: !1,
-                title: m.intl.string(m.t["IiA///"]),
-                onBlur: x,
+                title: p.intl.string(p.t["IiA///"]),
+                onBlur: w,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
                     channel: i,
                     width: y,
                     height: v,
                     keepOpen: e,
-                    onClose: x,
+                    onClose: w,
                     analyticsSource: "global",
                 }),
             }),
-        { ...p, left: l - p.width / 2, top: u - p.height / 2 },
+        { ...m, left: l - m.width / 2, top: d - m.height / 2 },
     );
 }
-function x() {
+function w() {
     (0, o.close)(g.MLl.SOUNDBOARD);
 }
 function E(e, t) {
     let n = l.A.isOverlayV3EnabledForPID(t),
-        r = u.default.disableClickableRegions;
+        r = d.default.disableClickableRegions;
     (n || r || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
         i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e }));
 }
 function C(e) {
     i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
     let t = l.A.isOverlayV3EnabledForPID(e),
-        n = u.default.disableClickableRegions;
-    u.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
+        n = d.default.disableClickableRegions;
+    d.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
 }

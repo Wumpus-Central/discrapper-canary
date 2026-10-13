@@ -84,12 +84,12 @@ function u(e) {
         }
         if (!u.id.startsWith(d)) continue;
         let a = u.settled_at ?? -1 / 0,
-            c = i.filter((e) => u.created_at < e.at && e.at < a);
+            f = i.filter((e) => u.created_at < e.at && e.at < a);
         i = [];
-        let f = [...c].sort((e, t) => e.at - t.at),
-            _ = f.map((e) => e.at),
+        let c = [...f].sort((e, t) => e.at - t.at),
+            _ = c.map((e) => e.at),
             p =
-                0 === f.length
+                0 === c.length
                     ? null
                     : (function (e, t) {
                           if (null == e) return null;
@@ -105,7 +105,7 @@ function u(e) {
         if (null == p || p.slice(0, -1).every((e) => 0 === e.length)) continue;
         let h = u.id.slice(d.length),
             g = u.created_at;
-        for (let [e, i] of f.entries()) {
+        for (let [e, i] of c.entries()) {
             let s = `${u.id}:${e}`,
                 r = {
                     id: s,
@@ -118,9 +118,9 @@ function u(e) {
                     continued: !0,
                     finished_at: i.at,
                 };
-            (n.set(c[e].index, p[e].length > 0 ? [r, t[i.index]] : [t[i.index]]), (g = i.at));
+            (n.set(f[e].index, p[e].length > 0 ? [r, t[i.index]] : [t[i.index]]), (g = i.at));
         }
-        t[r] = { ...u, turn_id: h, steps: (0, l.Zu)(p[f.length]), created_at: g };
+        t[r] = { ...u, turn_id: h, steps: (0, l.Zu)(p[c.length]), created_at: g };
     }
     return 0 === n.size ? t : t.flatMap((e, t) => n.get(t) ?? [e]);
 }

@@ -5,14 +5,14 @@ var r = n(477900),
     s = n(508382),
     o = n(17928),
     a = n(980707),
-    d = n(442433),
-    u = n(139286),
+    u = n(442433),
+    d = n(139286),
     c = n(267102),
     h = n(363195),
     f = n(712687),
     g = n(625494),
-    m = n(652215);
-function p() {
+    p = n(652215);
+function m() {
     window.getSelection()?.removeAllRanges();
 }
 function A(e) {
@@ -21,7 +21,7 @@ function A(e) {
             close: n,
             onUnmount: o,
             target: a,
-            rect: d,
+            rect: u,
             position: h,
             align: f,
             impressionName: g,
@@ -29,22 +29,22 @@ function A(e) {
             disableClickTrap: y = !1,
             repositionOnContentChange: v = !1,
         } = e,
-        w = i.useRef(n);
+        x = i.useRef(n);
     i.useEffect(() => {
-        w.current = n;
+        x.current = n;
     });
-    let x = i.useRef(o);
+    let w = i.useRef(o);
     (i.useEffect(() => {
-        x.current = o;
+        w.current = o;
     }),
-        i.useEffect(() => () => x.current?.(), []),
-        (0, u.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
+        i.useEffect(() => () => w.current?.(), []),
+        (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, c.aL)(),
         C = i.useCallback(() => {
-            E.dispatch(m.jej.POPOUT_SHOW);
+            E.dispatch(p.jej.POPOUT_SHOW);
         }, [E]),
         b = i.useCallback(() => {
-            E.dispatch(m.jej.POPOUT_HIDE);
+            E.dispatch(p.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
     return (0, r.jsx)(s.Ow, {
@@ -54,9 +54,9 @@ function A(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? C() : (b(), "outside-press" === n && setTimeout(p, 0), w.current());
+            e ? C() : (b(), "outside-press" === n && setTimeout(m, 0), x.current());
         },
-        overrideTargetRect: d,
+        overrideTargetRect: u,
         placement: (0, s.Pv)(h ?? "right", f ?? "top"),
         blockPointerEvents: !y,
         crossAccessFlip: !1,
@@ -74,7 +74,7 @@ class y extends i.PureComponent {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            g._.subscribe(m.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            g._.subscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
@@ -92,7 +92,7 @@ class y extends i.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         (e.removeEventListener("resize", this.closeResize, !0),
-            g._.unsubscribe(m.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
+            g._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
     }
     closeResize = (e) => {
         let { renderWindow: t } = this.props;
@@ -113,12 +113,12 @@ class y extends i.PureComponent {
                 renderWindow: o,
                 renderLazy: a,
             } = this.props,
-            d = this.state.render ?? this.props.render;
+            u = this.state.render ?? this.props.render;
         return n &&
             null != s &&
             null != l &&
             null != t &&
-            null != d &&
+            null != u &&
             l.context === e &&
             t.ownerDocument?.defaultView === o
             ? (0, r.jsx)(A, {
@@ -134,7 +134,7 @@ class y extends i.PureComponent {
                   repositionOnContentChange: null != a || !0 === l.repositionOnContentChange,
                   children: (n, r) => {
                       let { position: s } = n;
-                      return d({ position: s, theme: i, onHeightUpdate: r, config: l, target: t, context: e });
+                      return u({ position: s, theme: i, onHeightUpdate: r, config: l, target: t, context: e });
                   },
               })
             : null;
@@ -148,5 +148,5 @@ function v() {
         } = (0, o.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
         l = (0, o.bG)([h.A], () => h.A.theme),
         { appContext: s, renderWindow: a } = i.useContext(c.Ay);
-    return (0, r.jsx)(y, { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: d.Z_ }, t);
+    return (0, r.jsx)(y, { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: u.Z_ }, t);
 }

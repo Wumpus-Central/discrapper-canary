@@ -14,8 +14,8 @@ var i = n(477900),
     E = n(739508),
     h = n(935208),
     x = n(240248),
-    p = n(660183),
-    S = n(986485),
+    S = n(660183),
+    p = n(986485),
     T = n(849405);
 function f(e) {
     let { children: t, className: n } = e,
@@ -59,51 +59,51 @@ class I extends s.PureComponent {
     getLabel(e) {
         return e instanceof A.YS
             ? e.isStripeLinkBankAccount
-                ? p.intl.formatToPlainString(p.t.ixNwPL, {
+                ? S.intl.formatToPlainString(S.t.ixNwPL, {
                       date: new Date(h.default.extractTimestamp(e.id)).toLocaleDateString(),
                   })
-                : p.intl.format(p.t["o/dsrL"], { brand: (0, x.$G)(e.brand), last_4: e.last4 })
+                : S.intl.format(S.t["o/dsrL"], { brand: (0, x.$G)(e.brand), last_4: e.last4 })
             : e instanceof A.SJ
-              ? p.intl.string(p.t["2dgEq+"])
+              ? S.intl.string(S.t["2dgEq+"])
               : e instanceof A.A0
-                ? p.intl.string(p.t["edKX/1"])
+                ? S.intl.string(S.t["edKX/1"])
                 : e instanceof A.Qh
-                  ? p.intl.string(p.t["y+0MQZ"])
+                  ? S.intl.string(S.t["y+0MQZ"])
                   : e instanceof A.Tu
-                    ? p.intl.string(p.t.u25uL0)
+                    ? S.intl.string(S.t.u25uL0)
                     : e instanceof A.Ux
-                      ? p.intl.string(p.t.boznHN)
+                      ? S.intl.string(S.t.boznHN)
                       : e instanceof A.F_
-                        ? p.intl.string(p.t.PjehcF)
+                        ? S.intl.string(S.t.PjehcF)
                         : e instanceof A.Xj
-                          ? p.intl.string(p.t.T5davE)
+                          ? S.intl.string(S.t.T5davE)
                           : e instanceof A.am
-                            ? p.intl.string(p.t.J0A1Vk)
+                            ? S.intl.string(S.t.J0A1Vk)
                             : e instanceof A._1
-                              ? p.intl.string(p.t.jYOezc)
+                              ? S.intl.string(S.t.jYOezc)
                               : e instanceof A.i6
-                                ? p.intl.string(p.t.CSVexi)
+                                ? S.intl.string(S.t.CSVexi)
                                 : e instanceof A.cg
-                                  ? p.intl.string(p.t["43J8JK"])
+                                  ? S.intl.string(S.t["43J8JK"])
                                   : e instanceof A.UG
-                                    ? p.intl.string(p.t["1ITkfq"])
+                                    ? S.intl.string(S.t["1ITkfq"])
                                     : e instanceof A.EE
                                       ? null == e.bank
-                                          ? p.intl.string(p.t.nSbwqC)
-                                          : p.intl.format(p.t["9kUlRU"], { bank: (0, d.o)(e.bank) })
+                                          ? S.intl.string(S.t.nSbwqC)
+                                          : S.intl.format(S.t["9kUlRU"], { bank: (0, d.o)(e.bank) })
                                       : e instanceof A.rJ
-                                        ? p.intl.format(p.t.hSPoZw, { bank: (0, d.j)(e.bank) })
+                                        ? S.intl.format(S.t.hSPoZw, { bank: (0, d.j)(e.bank) })
                                         : e instanceof A.FQ
-                                          ? p.intl.string(p.t["+rbTmL"])
+                                          ? S.intl.string(S.t["+rbTmL"])
                                           : e instanceof A.Pw
-                                            ? p.intl.string(p.t.RFi12i)
+                                            ? S.intl.string(S.t.RFi12i)
                                             : e instanceof A.LQ
-                                              ? p.intl.string(S.default["/FQWfA"])
+                                              ? S.intl.string(p.default["/FQWfA"])
                                               : e instanceof A.IE
-                                                ? p.intl.string(p.t.JG3WQU)
+                                                ? S.intl.string(S.t.JG3WQU)
                                                 : e instanceof A.WV
-                                                  ? p.intl.string(p.t.JkKNss)
-                                                  : p.intl.string(p.t.jdPblk);
+                                                  ? S.intl.string(S.t.JkKNss)
+                                                  : S.intl.string(S.t.jdPblk);
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
@@ -114,7 +114,7 @@ class I extends s.PureComponent {
             n = null;
         return (
             e instanceof A.YS && !e.isStripeLinkBankAccount
-                ? (n = p.intl.formatToPlainString(p.t["8rTTuf"], {
+                ? (n = S.intl.formatToPlainString(S.t["8rTTuf"], {
                       month: (0, E.eS)(e.expiresMonth, t),
                       year: e.expiresYear,
                   }))
@@ -151,10 +151,10 @@ class I extends s.PureComponent {
                             align: c.A.Align.CENTER,
                             children: [
                                 this.renderDescription(),
-                                r && e ? (0, i.jsx)(f, { className: T.Zn, children: p.intl.string(p.t.bBvAEH) }) : null,
-                                s ? (0, i.jsx)(f, { className: T.NV, children: p.intl.string(p.t.YCrcPL) }) : null,
+                                r && e ? (0, i.jsx)(f, { className: T.Zn, children: S.intl.string(S.t.bBvAEH) }) : null,
+                                s ? (0, i.jsx)(f, { className: T.NV, children: S.intl.string(S.t.YCrcPL) }) : null,
                                 r && t.invalid
-                                    ? (0, i.jsx)(f, { className: T.tG, children: p.intl.string(p.t["851k93"]) })
+                                    ? (0, i.jsx)(f, { className: T.tG, children: S.intl.string(S.t["851k93"]) })
                                     : null,
                             ],
                         }),

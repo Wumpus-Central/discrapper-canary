@@ -27,8 +27,8 @@ var i = n(477900),
     w = n(403362),
     N = n(996439),
     _ = n(3451),
-    R = n(810412),
-    O = n(412477),
+    O = n(810412),
+    R = n(412477),
     M = n(233741),
     D = n(243612),
     z = n(202091),
@@ -253,7 +253,7 @@ let eE = r.memo(function (e) {
                 connectedOn: w,
                 ref: _,
             } = e,
-            O = (0, a.bG)([S.default], () => S.default.getId() === d.id, [d.id]),
+            R = (0, a.bG)([S.default], () => S.default.getId() === d.id, [d.id]),
             { ref: M, width: D } = (0, H.Ay)(),
             { showConnectedAnimation: z } = eA(w, I),
             k = v?.sessionId,
@@ -272,14 +272,14 @@ let eE = r.memo(function (e) {
             [Z, W, X] = (0, a.yK)(
                 [eo.Ay],
                 () =>
-                    O
+                    R
                         ? [
                               !eo.Ay.isSupported() || eo.Ay.isSelfMute() || eo.Ay.isSelfMutedTemporarily(),
                               eo.Ay.isSelfDeaf(),
                               !1,
                           ]
                         : [!eo.Ay.isSupported() || eo.Ay.isLocalMute(d.id), !1, eo.Ay.isLocalVideoDisabled(d.id)],
-                [O, d.id],
+                [R, d.id],
             ),
             K = (0, a.bG)(
                 [E.A],
@@ -358,10 +358,10 @@ let eE = r.memo(function (e) {
                                                   className: eh.ZA,
                                                   iconClassName: eh.Ow,
                                                   isWatching: K,
-                                                  localMute: Z && !O,
+                                                  localMute: Z && !R,
                                                   localVideoDisabled: X,
                                                   mute: F.isVoiceMuted(),
-                                                  deaf: F.isVoiceDeafened() || (W && !O),
+                                                  deaf: F.isVoiceDeafened() || (W && !R),
                                                   serverMute: F.mute || F.suppress,
                                                   serverDeaf: F.deaf,
                                                   disabled: !1,
@@ -374,9 +374,9 @@ let eE = r.memo(function (e) {
                                                       className: eh.fc,
                                                       disableGuildProfile: !0,
                                                       onShowProfile: () => {
-                                                          (0, R.YX)(ee.uss.VOICE_V3, {
-                                                              type: R.Z5.VOICE,
-                                                              value: R.IP.PROFILE_OPENED,
+                                                          (0, O.YX)(ee.uss.VOICE_V3, {
+                                                              type: O.Z5.VOICE,
+                                                              value: O.IP.PROFILE_OPENED,
                                                               userId: d.id,
                                                           });
                                                       },
@@ -389,7 +389,7 @@ let eE = r.memo(function (e) {
                                           ],
                                       }),
                               }),
-                        !O &&
+                        !R &&
                             (0, i.jsx)(eE, {
                                 nick: c,
                                 connectedOn: w,
@@ -434,7 +434,7 @@ let eE = r.memo(function (e) {
                             },
                             "aria-hidden": !0,
                         }),
-                        !O &&
+                        !R &&
                             (0, i.jsx)(eE, { nick: c, connectedOn: w, isSettingsPreview: I, voiceBackgroundWidth: D }),
                         ed && (h === ee.pwA.NEVER || (!Q && h === ee.pwA.ONLY_WHILE_SPEAKING))
                             ? null
@@ -463,9 +463,9 @@ let eE = r.memo(function (e) {
                                                       className: eh.fc,
                                                       disableGuildProfile: !0,
                                                       onShowProfile: () => {
-                                                          (0, R.YX)(ee.uss.VOICE_V3, {
-                                                              type: R.Z5.VOICE,
-                                                              value: R.IP.PROFILE_OPENED,
+                                                          (0, O.YX)(ee.uss.VOICE_V3, {
+                                                              type: O.Z5.VOICE,
+                                                              value: O.IP.PROFILE_OPENED,
                                                               userId: d.id,
                                                           });
                                                       },
@@ -478,10 +478,10 @@ let eE = r.memo(function (e) {
                                                   className: eh.ZA,
                                                   iconClassName: eh.Ow,
                                                   isWatching: K,
-                                                  localMute: Z && !O,
+                                                  localMute: Z && !R,
                                                   localVideoDisabled: X,
                                                   mute: F.isVoiceMuted(),
-                                                  deaf: F.isVoiceDeafened() || (W && !O),
+                                                  deaf: F.isVoiceDeafened() || (W && !R),
                                                   serverMute: F.mute || F.suppress,
                                                   serverDeaf: F.deaf,
                                                   disabled: !1,
@@ -533,7 +533,7 @@ let eE = r.memo(function (e) {
                         n.e("658980"),
                     ]).then(n.bind(n, 535503));
                     return (
-                        (0, R.YX)(ee.uss.VOICE_V3, { type: R.Z5.VOICE, value: R.IP.SETTINGS_OPENED, userId: t.id }),
+                        (0, O.YX)(ee.uss.VOICE_V3, { type: O.Z5.VOICE, value: O.IP.SETTINGS_OPENED, userId: t.id }),
                         (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -544,9 +544,9 @@ let eE = r.memo(function (e) {
                                 onShowProfile: () => j(t.id),
                                 appContext: ee.BRT.OVERLAY,
                                 onWatchStream: () => {
-                                    (0, R.YX)(ee.uss.VOICE_V3, {
-                                        type: R.Z5.GO_LIVE,
-                                        value: R.IP.ENABLED,
+                                    (0, O.YX)(ee.uss.VOICE_V3, {
+                                        type: O.Z5.GO_LIVE,
+                                        value: O.IP.ENABLED,
                                         userId: t.id,
                                     });
                                 },
@@ -558,7 +558,7 @@ let eE = r.memo(function (e) {
             d && j(null);
         }, [d]),
             r.useEffect(() => {
-                null != S && (0, R.YX)(ee.uss.VOICE_V3, { type: R.Z5.GO_LIVE, value: R.IP.STREAM_PREVIEWED });
+                null != S && (0, O.YX)(ee.uss.VOICE_V3, { type: O.Z5.GO_LIVE, value: O.IP.STREAM_PREVIEWED });
             }, [S]));
         let y = r.useCallback(
             (e) => {
@@ -576,7 +576,7 @@ let eE = r.memo(function (e) {
                     })),
                     null != e &&
                         null != i &&
-                        (0, R.YX)(ee.uss.VOICE_V3, { type: R.Z5.GO_LIVE, value: R.IP.ENABLED, userId: e.ownerId }));
+                        (0, O.YX)(ee.uss.VOICE_V3, { type: O.Z5.GO_LIVE, value: O.IP.ENABLED, userId: e.ownerId }));
             },
             [l, t],
         );
@@ -678,7 +678,7 @@ let eb = r.memo(function (e) {
             avatarSizeMode: A,
             maxDisplayedVoiceStates: S = 8,
         } = e,
-        I = (0, R.Dk)(
+        I = (0, O.Dk)(
             () =>
                 (function (e) {
                     let [t, n] = e;
@@ -699,7 +699,7 @@ let eb = r.memo(function (e) {
         );
     r.useEffect(() => {
         C &&
-            (0, R.Y)(ee.uss.VOICE_V3, {
+            (0, O.Y)(ee.uss.VOICE_V3, {
                 locked: b.default.isInstanceLocked(),
                 shownUserIds: Array.from(I),
                 liveUserIds: T,
@@ -763,7 +763,7 @@ let eb = r.memo(function (e) {
           })
         : c || !g
           ? null
-          : (0, i.jsx)(O.g, { emptyText: ec.intl.string(ec.t.hEh0l1), icon: d.H });
+          : (0, i.jsx)(R.g, { emptyText: ec.intl.string(ec.t.hEh0l1), icon: d.H });
 });
 function ew(e) {
     let { isSettingsPreview: t } = e,
