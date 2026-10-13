@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { A: () => Y }), n(321073));
+(n.d(t, { A: () => K }), n(321073));
 var r = n(17928),
     a = n(506774),
     s = n(73153),
@@ -45,16 +45,19 @@ function B(e) {
 function V(e) {
     return e.split(/[/\\]/).pop();
 }
-function H(e, t) {
+function H(e) {
+    return e.trim().toLowerCase();
+}
+function j(e, t) {
     let n = S.get(t);
     void 0 === n ? S.set(t, e) : Array.isArray(n) ? n.push(e) : S.set(t, [n, e]);
 }
-function j(e) {
+function W(e) {
     let t = e instanceof d.xg ? B(e) : e;
-    for (let n of (g.set(e.id, t), H(t.id, t.name.toLowerCase()), e.aliases)) H(t.id, n.toLowerCase());
+    for (let n of (g.set(e.id, t), j(t.id, H(t.name)), e.aliases)) j(t.id, H(n));
     if ((0, h.isDesktop)()) for (let n of e.executables) N.set(n.name, t.id);
 }
-class W extends r.Ay.PersistedStore {
+class Y extends r.Ay.PersistedStore {
     static displayName = "GameStore";
     static persistKey = "GameStore";
     static migrations = [
@@ -80,7 +83,7 @@ class W extends r.Ay.PersistedStore {
             null != e.blocklistEtag && (v = e.blocklistEtag),
             null != e.blocklistExecutables && (b = e.blocklistExecutables),
             null != e.blocklistPatterns && (M = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
-            e.detectableGames?.forEach((e) => j(e)));
+            e.detectableGames?.forEach((e) => W(e)));
     }
     getState() {
         return (0, h.isDesktop)()
@@ -107,7 +110,7 @@ class W extends r.Ay.PersistedStore {
     }
     searchGamesByName(e) {
         if (null == e) return [];
-        let t = S.get(e.toLowerCase());
+        let t = S.get(H(e));
         return void 0 === t ? [] : Array.isArray(t) ? t : [t];
     }
     findGame(e, t) {
@@ -269,10 +272,10 @@ class W extends r.Ay.PersistedStore {
         ((C[e] = !0), a.w.set(T, C));
     }
 }
-let Y = new W(s.h, {
+let K = new Y(s.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (g.clear(), S.clear(), N.clear(), t)) j(e);
+        for (let e of (g.clear(), S.clear(), N.clear(), t)) W(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -283,7 +286,7 @@ let Y = new W(s.h, {
     GAMES_DATABASE_UPDATE: function (e) {
         let { games: t, etag: n } = e;
         for (let e of (null != n && O !== n && (g.clear(), S.clear(), N.clear(), (O = n)), t))
-            j(
+            W(
                 (function (e) {
                     let { executables: t, aliases: n, third_party_skus: i } = e;
                     return {
