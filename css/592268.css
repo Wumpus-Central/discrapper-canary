@@ -95,6 +95,10 @@
     width: 100%
 }
 
+.gridItem__208a2 .card__208a2:hover {
+    transform: scale(100%)
+}
+
 @container (max-width: 360px) {
     .grid__208a2 {
         grid-template-columns: 1fr
@@ -260,4 +264,4 @@
     opacity: .8
 }
 
-/*# sourceMappingURL=592268.3429143ef00a109d.css.map*/
+/*# sourceMappingURL=592268.b74dccf5eb7f9023.css.map*/
