@@ -105,7 +105,6 @@ function Q(e) {
                         }, []);
                     return {
                         iconURL: t ?? l.iconURL,
-                        icon: t,
                         setIcon: n,
                         description: r,
                         setDescription: s,
