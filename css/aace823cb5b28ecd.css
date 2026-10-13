@@ -6,6 +6,16 @@
     padding-inline: var(--space-8) 0
 }
 
+.search__4cd87 {
+    flex: 0 0 auto;
+    padding-block: var(--space-8) 0;
+    padding-inline: var(--space-16)
+}
+
+.searchEmpty__4cd87 {
+    padding: var(--space-16) var(--space-8)
+}
+
 .list__4cd87 {
     display: flex;
     flex-direction: column;
@@ -24,6 +34,7 @@
 
 .rowHost__4cd87 {
     --custom-conjure-glow-radius: var(--radius-md);
+    --custom-conjure-glow-mask-stop: 7.5%;
     border-radius: var(--radius-md);
     margin-bottom: 2px;
     position: relative
@@ -32,6 +43,12 @@
 .rowHost__4cd87:focus-within,
 .rowHost__4cd87:hover {
     background: var(--interactive-background-hover)
+}
+
+.conjuringUser__4cd87 {
+    display: flex;
+    flex: 0 0 auto;
+    margin-inline-start: auto
 }
 
 .row__4cd87 {
@@ -49,9 +66,13 @@
 }
 
 .badgedIcon__4cd87 {
+    display: block;
     flex: 0 0 auto;
-    margin-block-end: calc(var(--space-4)*-1);
-    margin-inline-end: calc(var(--space-4)*-1)
+    overflow: visible
+}
+
+.badgedIconImage__4cd87 {
+    vertical-align: top
 }
 
 .guildIcon__4cd87 {
@@ -78,18 +99,31 @@
 
 .projectName__4cd87 {
     max-width: 100%;
-    text-overflow: ellipsis
-}
-
-.projectName__4cd87,
-.statusLine__4cd87 {
     min-width: 0;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.rowMeta__4cd87 {
+    align-items: baseline;
+    display: flex;
+    gap: var(--space-8);
+    min-width: 0
+}
+
+.updatedAt__4cd87 {
+    flex: 0 0 auto;
+    margin-inline-start: auto;
     white-space: nowrap
 }
 
 .statusLine__4cd87 {
-    display: block
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .rowTrailing__4cd87 {
@@ -185,4 +219,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=e8fa9cc0fa4cdafc.css.map*/
+/*# sourceMappingURL=aace823cb5b28ecd.css.map*/

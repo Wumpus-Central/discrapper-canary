@@ -31,6 +31,7 @@ function v(e, t) {
                 e.guildId === l.guildId &&
                 e.guildName === l.guildName &&
                 e.notInServer === l.notInServer &&
+                e.owned === l.owned &&
                 e.guild === l.guild
             );
         })
@@ -72,40 +73,41 @@ function w(e) {
                     let a = new Set(),
                         i = [],
                         r = null;
-                    function s(e) {
+                    function s(e, n) {
                         if (a.has(e.id)) return;
-                        let n = (0, g.wu)(e);
-                        if (null != n && !l(n)) return;
+                        let s = (0, g.wu)(e);
+                        if (null != s && !l(s)) return;
                         a.add(e.id);
-                        let s = f.A.isThinking(e.id),
-                            o = f.A.getFinishedAt(e.id),
-                            u = (0, g.Uk)({ thinking: s, finishedAt: o, now: t });
-                        if ("done" === u && null != o) {
-                            let e = o + 6e4;
+                        let o = f.A.isThinking(e.id),
+                            u = f.A.getFinishedAt(e.id),
+                            c = (0, g.Uk)({ thinking: o, finishedAt: u, now: t });
+                        if ("done" === c && null != u) {
+                            let e = u + 6e4;
                             r = null == r ? e : Math.min(r, e);
                         }
-                        let c = (null == n ? null : d.A.getGuild(n)) ?? null;
+                        let m = (null == s ? null : d.A.getGuild(s)) ?? null;
                         i.push({
                             project: e,
                             projectId: e.id,
                             name: e.name,
-                            guildId: n,
-                            guild: c,
-                            guildName: c?.name ?? null,
+                            guildId: s,
+                            guild: m,
+                            guildName: m?.name ?? null,
                             notInServer: "not_in_server" === (0, x.kF)(e),
-                            activity: u,
+                            owned: n,
+                            activity: c,
                             sortTime: (function (e, t) {
                                 if (null != t) return t;
                                 if (null == e.updated_at) return 0;
                                 let n = Date.parse(e.updated_at);
                                 return Number.isNaN(n) ? 0 : n;
-                            })(e, o),
+                            })(e, u),
                         });
                     }
-                    for (let e of p.Ay.getOwnedProjects()) s(e);
+                    for (let e of p.Ay.getOwnedProjects()) s(e, !0);
                     for (let e of Object.values(d.A.getGuilds()))
                         if (p.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
-                            for (let t of p.Ay.getSharedProjects(e.id)) s(t);
+                            for (let t of p.Ay.getSharedProjects(e.id)) s(t, !1);
                     return { entries: (0, g.Ng)(i), nextExpiry: r };
                 })(e),
             [e, t],

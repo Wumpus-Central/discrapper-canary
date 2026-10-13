@@ -1,14 +1,15 @@
 n.d(t, {
-    B0: () => o,
-    B5: () => _,
+    B0: () => d,
+    B5: () => p,
     BL: () => s,
+    DZ: () => u,
     Ji: () => r,
     Si: () => c,
-    _D: () => f,
-    gi: () => a,
-    pZ: () => p,
-    q2: () => u,
-    s3: () => d,
+    _D: () => _,
+    gi: () => f,
+    pZ: () => h,
+    q2: () => o,
+    s3: () => a,
 });
 var i = n(891784),
     l = n(149987);
@@ -28,34 +29,40 @@ function r(e) {
     let t = !1;
     for (let n = e.length - 1; n >= 0; n--) {
         let i = e[n];
-        if (!("assistant" !== i.role || _(i)) && ((!t && ((t = !0), !s(i))) || (null != i.turn_id && !s(i)))) return i;
+        if (!("assistant" !== i.role || p(i)) && ((!t && ((t = !0), !s(i))) || (null != i.turn_id && !s(i)))) return i;
     }
     return null;
 }
 function u(e) {
+    let t = r(e);
+    if (null == e || null == t) return null;
+    for (let n = e.indexOf(t) - 1; n >= 0; n--) if ("user" === e[n].role) return e[n].user_id ?? null;
+    return null;
+}
+function o(e) {
     return null != r(e);
 }
-function o(e, t) {
+function d(e, t) {
     let n = e[t],
         i = n?.turn_id;
     if (null == n || "assistant" !== n.role || null == i || "" !== n.content || s(n)) return !1;
     for (let n = t - 1; n >= 0; n--) {
         let t = e[n];
         if ("user" === t.role) break;
-        if (d(t, i)) return s(t) && !0 !== t.continued;
+        if (a(t, i)) return s(t) && !0 !== t.continued;
     }
     return !1;
 }
-function d(e, t) {
+function a(e, t) {
     return e.turn_id === t || e.id === `${i.o_}${t}`;
 }
-function a(e, t) {
+function f(e, t) {
     if (null == t) return -1;
-    for (let n = e.length - 1; n >= 0; n--) if (d(e[n], t)) return n;
+    for (let n = e.length - 1; n >= 0; n--) if (a(e[n], t)) return n;
     return -1;
 }
 function c(e, t) {
-    let n = a(e, t);
+    let n = f(e, t);
     if (-1 !== n) return n;
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
@@ -63,11 +70,11 @@ function c(e, t) {
     }
     return -1;
 }
-function f(e, t, n) {
+function _(e, t, n) {
     let i = e.slice();
     return ((i[t] = n), i);
 }
-function _(e) {
+function p(e) {
     return (
         "side_reply" === e.kind ||
         "publish_notice" === e.kind ||
@@ -75,6 +82,6 @@ function _(e) {
         "context_boundary" === e.kind
     );
 }
-function p(e) {
-    return "assistant" === e.role && !_(e) && !s(e) && !0 !== e.stopRequested;
+function h(e) {
+    return "assistant" === e.role && !p(e) && !s(e) && !0 !== e.stopRequested;
 }

@@ -19,6 +19,7 @@
 }
 
 .backgroundContainer__845c6 {
+    background: var(--background-base-low);
     border: 1px solid var(--app-frame-border);
     position: absolute;
     top: 0;
@@ -136,16 +137,16 @@ html:not(.platform-web) .slot__8306d:nth-child(2) {
 }
 
 .working__8306d {
-    color: var(--illo-purple-40)
+    color: oklch(from var(--illo-purple-40) calc(l * .95) calc(c * .8) h)
 }
 
 .working__8306d .sparkle__8306d {
-    color: var(--illo-purple-30)
+    color: oklch(from var(--illo-purple-30) calc(l * .95) calc(c * .8) h)
 }
 
 .working__8306d .shine__8306d,
 .working__8306d .shine__8306d .sparkle__8306d {
-    color: var(--illo-pink-40)
+    color: oklch(from var(--illo-pink-40) calc(l * .95) calc(c * .8) h)
 }
 
 .full-motion .working__8306d .shine__8306d {
@@ -193,4 +194,4 @@ html:not(.platform-web) .slot__8306d:nth-child(2) {
     color: Highlight
 }
 
-/*# sourceMappingURL=0adb9bce84374c61.css.map*/
+/*# sourceMappingURL=c0c4b0c3b3306c38.css.map*/

@@ -1,4 +1,4 @@
-n.d(e, { E1: () => R, NC: () => p, Yl: () => f, tz: () => h });
+n.d(e, { E1: () => y, NC: () => p, W5: () => f, Yl: () => R, tz: () => h });
 var r = n(582128),
     i = n(17928),
     l = n(73153),
@@ -18,7 +18,7 @@ function C(t, e, n) {
 function h(t) {
     return E(o.Ay.getMentionCount(t, _.P.CONJURING_PROJECT), o.Ay.ackMessageId(t, _.P.CONJURING_PROJECT));
 }
-function f(t) {
+function R(t) {
     return (0, i.bG)(
         [o.Ay, u.A],
         () =>
@@ -30,6 +30,19 @@ function f(t) {
                       (0, s.j)(u.A.settings, t),
                   ),
         [t],
+    );
+}
+function f() {
+    return (0, i.yK)([o.Ay, u.A], () =>
+        o.Ay.getResourceIds(_.P.CONJURING_PROJECT).filter(
+            (t) =>
+                null !=
+                C(
+                    o.Ay.getMentionCount(t, _.P.CONJURING_PROJECT),
+                    o.Ay.ackMessageId(t, _.P.CONJURING_PROJECT),
+                    (0, s.j)(u.A.settings, t),
+                ),
+        ),
     );
 }
 function p(t) {
@@ -60,7 +73,7 @@ function p(t) {
         [t],
     );
 }
-function R(t) {
+function y(t) {
     let e = (0, i.bG)(
             [o.Ay],
             () =>
