@@ -3304,7 +3304,7 @@ function lC(e) {
                         else {
                             let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + D.Rsh.SSO,
                                 n = { ...t, token: eJ.default.getToken() };
-                            window.location = `${e}?${(0, m.stringify)(n)}`;
+                            window.location.href = `${e}?${(0, m.stringify)(n)}`;
                         }
                     },
                     [a, r],

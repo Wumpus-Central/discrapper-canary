@@ -587,16 +587,19 @@ class et extends a.PureComponent {
             { onPlay: t, volume: s, autoMute: n } = this.props,
             { current: a } = this.mediaRef;
         if (null != a) {
-            let l = {};
+            let l = this.state.volume;
             if ("function" == typeof s) {
                 let e = s();
-                e !== this.state.volume && ((a.volume = e), (l.volume = e));
+                e !== this.state.volume && ((a.volume = e), (l = e));
             }
+            let i = this.state.muted;
             if ("function" == typeof n) {
                 let e = n();
-                e !== this.state.muted && ((a.muted = e), (l.muted = e));
+                e !== this.state.muted && ((a.muted = e), (i = e));
             }
-            (this.setState(l), a.play(), t?.(e, a.currentTime * j.A.Millis.SECOND, a.duration * j.A.Millis.SECOND));
+            (this.setState({ volume: l, muted: i }),
+                a.play(),
+                t?.(e, a.currentTime * j.A.Millis.SECOND, a.duration * j.A.Millis.SECOND));
         }
     }
     getWidth() {

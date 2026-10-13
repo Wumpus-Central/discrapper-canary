@@ -399,7 +399,7 @@ function eT(e) {
             (0, l.jsx)("div", { className: v()(eS.content, { [eS.staticSize]: !i }, n), style: e, children: t }),
     });
 }
-((eN.Background = (e) => {
+((eN.Background = function (e) {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
     let i = [eI, e_, eT];
@@ -410,7 +410,7 @@ function eT(e) {
             if ("string" == typeof t.type) return a.cloneElement(t, { style: o });
             {
                 if (i.includes(t.type)) return (0, l.jsx)(eC.Provider, { value: o, children: t });
-                let e = t.type.displayName;
+                let e = "displayName" in t.type ? t.type.displayName : t.type.name;
                 throw Error(
                     `Widget.Background cannot be wrapped around ${e}. Pass a DOM node or one of ${i.map((e) => "Widget." + e.name).join(",")}`,
                 );

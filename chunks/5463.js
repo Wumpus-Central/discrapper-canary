@@ -54,12 +54,10 @@ function o(e, t, n, i, r) {
     return { top: a, left: l, bottom: s, right: o };
 }
 function d(e) {
-    let { top: t, left: n, bottom: i, right: r } = e;
-    return (
-        0 === t || t <= i ? (i = null) : (t = null),
-        0 === n || n <= r ? (r = null) : (n = null),
-        { top: t, left: n, bottom: i, right: r }
-    );
+    let { top: t, left: n, bottom: i, right: r } = e,
+        a = 0 === t || t <= i,
+        s = 0 === n || n <= r;
+    return { top: a ? t : void 0, left: s ? n : void 0, bottom: a ? void 0 : i, right: s ? void 0 : r };
 }
 function c(e) {
     let { top: t, left: n, bottom: i, right: r } = e;

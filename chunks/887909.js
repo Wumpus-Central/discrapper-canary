@@ -1101,7 +1101,7 @@ function e7(e) {
                             ? (0, j.pX)(et.BVt.OAUTH2_AUTHORIZED, {
                                   state: { application: eI?.application, guild: eW },
                               })
-                            : (window.location = n.location);
+                            : (window.location.href = n.location);
                     } else eO(!1);
                 } catch (t) {
                     let e = t.body;

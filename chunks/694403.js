@@ -55,16 +55,17 @@ function S(e) {
     return e.foundNestedMaskedLink;
 }
 function N(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    for (let i of (Array.isArray(e) || (e = [e]), e)) {
-        if (void 0 === i || !t.includes(i.type)) return null;
-        if (i.type === _.D.INLINE_CODE) {
-            let e = [...t, ...n];
-            if (null == N(i.validationChildContent, e)) return null;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+        i = Array.isArray(e) ? e : [e];
+    for (let e of i) {
+        if (void 0 === e || !t.includes(e.type)) return null;
+        if (e.type === _.D.INLINE_CODE) {
+            let i = [...t, ...n];
+            if (null == N(e.validationChildContent, i)) return null;
         }
-        if (Array.isArray(i.content) && null == N(i.content, t)) return null;
+        if (Array.isArray(e.content) && null == N(e.content, t)) return null;
     }
-    return e;
+    return i;
 }
 function C(e) {
     if ((0, d.rL)(e) || h(e).whitespaceSanitized !== e) return !0;
