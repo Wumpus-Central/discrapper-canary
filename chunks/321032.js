@@ -1,197 +1,145 @@
-n.d(t, { r: () => M, w: () => k });
+n.d(t, { r: () => A });
 var l = n(477900),
     i = n(582128),
-    a = n(503698),
-    r = n.n(a),
+    r = n(503698),
+    a = n.n(r),
     u = n(750943),
-    s = n(834730),
+    s = n(22231),
     o = n(331322),
-    d = n(821609),
-    c = n(95635),
-    f = n(123292),
-    p = n(95477),
-    h = n(103557),
-    g = n(709066),
-    m = n(946274),
-    b = n(240248),
-    x = n(951178),
-    v = n(535466),
-    y = n(248675),
-    A = n(660183),
-    j = n(154600);
-function C(e) {
-    let { src: t, label: n, size: i, onClick: a, disabled: o } = e,
-        d = r()(j.Vs, "lg" === i ? j.mY : j.sT),
-        c =
-            null != t
-                ? (0, l.jsx)("img", { className: j.uP, src: t, alt: "" })
-                : null != a
-                  ? (0, l.jsx)(u.X, { size: "md", color: "currentColor" })
-                  : (0, l.jsx)(s.E, { variant: "text-md/semibold", color: "text-muted", children: (0, b.oN)(n) });
-    return null == a
-        ? (0, l.jsx)("div", { className: d, children: c })
-        : (0, l.jsx)("button", {
-              type: "button",
-              tabIndex: -1,
-              "aria-hidden": !0,
-              disabled: o,
-              className: r()(d, j.Bk, { [j.A6]: null == t }),
-              onClick: a,
-              children: c,
-          });
-}
-function S(e) {
-    let { iconURL: t, canRemove: n, disabled: a = !1, onChange: r } = e,
-        u = i.useRef(null),
-        [p, h] = i.useState(null);
-    function g() {
-        a || u.current?.activateUploadDialogue();
-    }
-    return (0, l.jsxs)(o.B, {
-        direction: "horizontal",
-        gap: 16,
-        align: "center",
+    d = n(95477),
+    c = n(834730),
+    f = n(103557),
+    p = n(946274),
+    h = n(951178),
+    g = n(535466),
+    m = n(248675),
+    b = n(660183),
+    v = n(154600);
+function x(e) {
+    let { iconURL: t, disabled: n, onChange: r, onError: o } = e,
+        d = i.useRef(null),
+        c = null == t;
+    return (0, l.jsxs)("div", {
+        className: v.iA,
         children: [
-            (0, l.jsx)(C, { src: t, label: "", size: "lg", onClick: g, disabled: a }),
-            (0, l.jsxs)(o.B, {
-                gap: 8,
-                align: "start",
-                children: [
-                    (0, l.jsxs)(o.B, {
-                        gap: 4,
-                        children: [
-                            (0, l.jsx)(s.E, {
-                                variant: "text-sm/medium",
-                                color: "text-strong",
-                                children: A.intl.string(y.default.M3q9QZ),
-                            }),
-                            (0, l.jsx)(s.E, {
-                                variant: "text-xs/normal",
-                                color: null != p ? "text-feedback-critical" : "text-muted",
-                                "aria-live": "polite",
-                                children: p ?? A.intl.string(y.default.F6L3s4),
-                            }),
-                        ],
-                    }),
-                    (0, l.jsxs)(o.B, {
-                        direction: "horizontal",
-                        gap: 12,
-                        align: "center",
-                        children: [
-                            (0, l.jsx)(d.$, {
-                                size: "sm",
-                                variant: "secondary",
-                                icon: c.UploadIcon,
-                                text: A.intl.string(null == t ? y.default.WpXHIP : y.default.iwCCor),
-                                "aria-label": null == t ? void 0 : A.intl.string(y.default["75j6Qp"]),
-                                onClick: g,
-                                disabled: a,
-                            }),
-                            n
-                                ? (0, l.jsx)(f.Q, {
-                                      variant: "secondary",
-                                      text: A.intl.string(y.default.gqtFOS),
-                                      onClick: () => {
-                                          (h(null), r(null));
-                                      },
-                                      disabled: a,
-                                  })
-                                : null,
-                        ],
-                    }),
-                ],
+            (0, l.jsx)("button", {
+                type: "button",
+                className: a()(v.Vs, { [v.A6]: c }),
+                "aria-label": b.intl.string(c ? b.t["MsUY/S"] : b.t["6yrpFR"]),
+                disabled: n,
+                onClick: () => d.current?.activateUploadDialogue(),
+                children: c
+                    ? (0, l.jsx)(u.X, { size: "md", color: "currentColor" })
+                    : (0, l.jsxs)(l.Fragment, {
+                          children: [
+                              (0, l.jsx)("img", { className: v.uP, src: t, alt: "" }),
+                              (0, l.jsx)("span", {
+                                  className: v.Jx,
+                                  children: (0, l.jsx)(s.PencilIcon, {
+                                      size: "custom",
+                                      width: 20,
+                                      height: 20,
+                                      color: "currentColor",
+                                  }),
+                              }),
+                          ],
+                      }),
             }),
-            (0, l.jsx)(m.Ay, {
-                ref: u,
-                className: j.Fg,
+            (0, l.jsx)(p.Ay, {
+                ref: d,
+                className: v.Fg,
                 multiple: !1,
-                filters: [{ name: A.intl.string(A.t["Sp2NF+"]), extensions: v.En }],
-                maxFileSizeBytes: v.Q0,
+                filters: [{ name: b.intl.string(b.t["Sp2NF+"]), extensions: g.En }],
+                maxFileSizeBytes: g.Q0,
                 onChange: (e) => {
-                    (h(null), r(e));
+                    (o(null), r(e));
                 },
-                onFileSizeError: () => h(A.intl.string(y.default.ZTAAMc)),
+                onFileSizeError: () => o(b.intl.string(m.default.ZTAAMc)),
                 "aria-hidden": !0,
             }),
         ],
     });
 }
-function w(e) {
-    let { name: t, nameError: n, onNameChange: i, description: a, onDescriptionChange: r, disabled: u = !1 } = e;
+function y(e, t, n) {
+    e.style.setProperty(
+        "--custom-app-icon-size",
+        `${(function (e, t) {
+            let n = t.offsetHeight;
+            for (let l = t; null != l && l !== e; l = l.offsetParent) n += l.offsetTop;
+            return n;
+        })(t, n)}px`,
+    );
+}
+function A(e) {
+    let t,
+        n,
+        {
+            iconURL: r,
+            onIconChange: a,
+            name: u,
+            nameError: s,
+            onNameChange: p,
+            description: g,
+            onDescriptionChange: A,
+            disabled: j = !1,
+        } = e,
+        [S, C] = i.useState(null),
+        { rowRef: w, fieldRef: k } =
+            ((t = i.useRef(null)),
+            (n = i.useRef(null)),
+            i.useLayoutEffect(() => {
+                let e = t.current,
+                    l = n.current,
+                    i = l?.querySelector("input")?.parentElement;
+                if (null == e || null == l || null == i) return;
+                y(e, l, i);
+                let r = new ResizeObserver(() => y(e, l, i));
+                return (r.observe(l), r.observe(i), () => r.disconnect());
+            }, []),
+            { rowRef: t, fieldRef: n });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(p.k, {
-                label: A.intl.string(y.default.GWBCF9),
-                value: t,
-                onChange: i,
-                error: n,
-                maxLength: x.eq,
-                disabled: u,
-                fullWidth: !0,
-            }),
-            (0, l.jsx)(h.f, {
-                label: A.intl.string(y.default.ynaGa1),
-                placeholder: A.intl.string(y.default["I+3UTL"]),
-                value: a,
-                onChange: r,
-                maxLength: x.HR,
-                disabled: u,
-            }),
-        ],
-    });
-}
-function k(e) {
-    let { iconURL: t, name: n, description: i } = e;
-    return (0, l.jsxs)(o.B, {
-        gap: 8,
-        children: [
-            (0, l.jsx)(s.E, {
-                variant: "text-xs/semibold",
-                color: "text-muted",
-                children: A.intl.string(y.default.KhR80V),
-            }),
-            (0, l.jsxs)("div", {
-                className: j.B0,
-                "aria-live": "polite",
+            (0, l.jsxs)(o.B, {
+                gap: 8,
                 children: [
-                    (0, l.jsx)(C, { src: t, label: n, size: "sm" }),
                     (0, l.jsxs)("div", {
-                        className: j.Wi,
+                        ref: w,
+                        className: v.S7,
                         children: [
-                            (0, l.jsxs)(o.B, {
-                                direction: "horizontal",
-                                gap: 4,
-                                align: "center",
-                                children: [
-                                    (0, l.jsx)(s.E, {
-                                        variant: "text-md/semibold",
-                                        color: "text-strong",
-                                        lineClamp: 1,
-                                        children: n,
-                                    }),
-                                    (0, l.jsx)(g.A, {}),
-                                ],
-                            }),
-                            (0, l.jsx)(s.E, {
-                                variant: "text-sm/normal",
-                                color: "" === i ? "text-muted" : "text-default",
-                                lineClamp: 2,
-                                children: "" === i ? A.intl.string(y.default.yQ158z) : i,
+                            (0, l.jsx)(x, { iconURL: r, disabled: j, onChange: a, onError: C }),
+                            (0, l.jsx)("div", {
+                                ref: k,
+                                className: v.yD,
+                                children: (0, l.jsx)(d.k, {
+                                    label: b.intl.string(m.default.GWBCF9),
+                                    value: u,
+                                    onChange: p,
+                                    error: s,
+                                    maxLength: h.eq,
+                                    disabled: j,
+                                    fullWidth: !0,
+                                }),
                             }),
                         ],
                     }),
+                    null != S
+                        ? (0, l.jsx)(c.E, {
+                              variant: "text-xs/normal",
+                              color: "text-feedback-critical",
+                              "aria-live": "polite",
+                              children: S,
+                          })
+                        : null,
                 ],
             }),
-        ],
-    });
-}
-function M(e) {
-    let { iconURL: t, canRemove: n, onIconChange: i, previewName: a, inlinePreview: r = !0, ...u } = e;
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            (0, l.jsx)(S, { iconURL: t, canRemove: n, disabled: u.disabled, onChange: i }),
-            (0, l.jsx)(w, { ...u }),
-            r ? (0, l.jsx)(k, { iconURL: t, name: a, description: u.description.trim() }) : null,
+            (0, l.jsx)(f.f, {
+                label: b.intl.string(m.default.ynaGa1),
+                placeholder: b.intl.string(m.default["I+3UTL"]),
+                value: g,
+                onChange: A,
+                maxLength: h.HR,
+                disabled: j,
+            }),
         ],
     });
 }

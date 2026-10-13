@@ -12,8 +12,8 @@ var n = t(477900),
     p = t(696208),
     h = t(591277),
     f = t(557744),
-    m = t(223347),
-    x = t(359589),
+    x = t(223347),
+    m = t(359589),
     b = t(260498),
     j = t(722701),
     S = t(329356),
@@ -48,8 +48,8 @@ function Q(e) {
     let {
             projectId: l,
             guildId: t,
-            initialTab: m,
-            scopeKeys: x,
+            initialTab: x,
+            scopeKeys: m,
             note: Q,
             notifyAgent: V,
             isPreview: q,
@@ -116,13 +116,13 @@ function Q(e) {
                 })(e),
                 { changes: p, commit: h } = g,
                 f = (0, A.Q)(e),
-                m = f.save,
-                x = r?.collaborator_role_ids ?? [],
+                x = f.save,
+                m = r?.collaborator_role_ids ?? [],
                 [j, S] = i.useState(r?.name ?? ""),
                 [v, D] = i.useState(null),
                 [H, Q] = i.useState(j),
                 [T, V] = i.useState(r?.flags ?? 0),
-                [q, N] = i.useState(() => [...x]),
+                [q, N] = i.useState(() => [...m]),
                 [X, M] = i.useState(!1),
                 [z, K] = i.useState(null),
                 [O, W] = i.useState(null),
@@ -138,7 +138,7 @@ function Q(e) {
                 ec = ei && T !== (v?.flags ?? r?.flags ?? 0),
                 eo =
                     es &&
-                    ((t = v?.roleIds ?? x),
+                    ((t = v?.roleIds ?? m),
                     !((s = q instanceof Set ? q : new Set(q)).size === t.length && t.every((e) => s.has(e)))),
                 eg = ed || ec || eo || g.changed,
                 ep = eg || d.changed || f.changed,
@@ -148,12 +148,12 @@ function Q(e) {
                 ef = i.useCallback((e, l) => {
                     (V((t) => (l ? t | e : t & ~e)), W(null), $(null));
                 }, []),
-                em = i.useCallback((e) => {
+                ex = i.useCallback((e) => {
                     e.length > Z.sq
                         ? W(U.intl.formatToPlainString(J.default["dH7+/Z"], { max: Z.sq }))
                         : (N(e), W(null), $(null));
                 }, []),
-                ex = i.useCallback(async () => {
+                em = i.useCallback(async () => {
                     if (null == r || !ep || X) return null;
                     let t = ed ? (0, G.p)(en) : null;
                     if (null != t) return (K(t), "project");
@@ -171,21 +171,20 @@ function Q(e) {
                             (S(en), D({ flags: T, roleIds: [...q] }), h());
                         }
                         if (!c()) return ($(U.intl.string(J.default.XzkNBw)), "project");
-                        if (!m()) return (el(U.intl.string(J.default["9JPr8h"])), "experimental");
+                        if (!x()) return (el(U.intl.string(J.default["9JPr8h"])), "experimental");
                         return null;
                     } catch {
                         return ($(U.intl.string(J.default["9JPr8h"])), "project");
                     } finally {
                         M(!1);
                     }
-                }, [T, ec, h, p, c, m, eg, l, ep, er, ed, r, e, eo, X, q, en]);
+                }, [T, ec, h, p, c, x, eg, l, ep, er, ed, r, e, eo, X, q, en]);
             return {
                 fields: (0, n.jsxs)(C.B, {
                     gap: 20,
                     children: [
                         (0, n.jsx)(E.r, {
                             iconURL: g.iconURL,
-                            canRemove: null != g.icon,
                             onIconChange: (e) => {
                                 (g.setIcon(e), $(null));
                             },
@@ -196,7 +195,6 @@ function Q(e) {
                             onDescriptionChange: (e) => {
                                 (g.setDescription(e), $(null));
                             },
-                            previewName: "" === en ? j : en,
                             disabled: X,
                         }),
                         ei
@@ -248,7 +246,7 @@ function Q(e) {
                                           disabled: X || !er,
                                           "aria-invalid": null != O,
                                           "aria-errormessage": null != O ? et : void 0,
-                                          onSelectionChange: em,
+                                          onSelectionChange: ex,
                                       }),
                                       (0, n.jsx)(o.E, {
                                           variant: "text-xs/normal",
@@ -312,13 +310,13 @@ function Q(e) {
                 canSave: ep && "" !== en,
                 saving: X,
                 nameChanged: ed,
-                submit: ex,
+                submit: em,
             };
         })(l, z?.guild_id ?? t ?? void 0),
         [$, ee] = i.useState(null);
     return (0, n.jsx)(v.A, {
         projectId: l,
-        scopeKeys: x,
+        scopeKeys: m,
         note: Q,
         notifyAgent: V,
         isPreview: q,
@@ -329,11 +327,11 @@ function Q(e) {
                 e.secretCount > 0 && t.push("secrets"),
                 K?.tierSettings != null && t.push("model"),
                 W && t.push("experimental"));
-            let i = [$, m].find((e) => null != e && t.includes(e)) ?? t[0],
+            let i = [$, x].find((e) => null != e && t.includes(e)) ?? t[0],
                 a = e.isScoped,
                 h = Y.saving || e.saving,
                 f = e.canSave || (!a && Y.canSave);
-            async function x(n) {
+            async function m(n) {
                 if ((n.preventDefault(), !f || h)) return;
                 let r = !a && Y.nameChanged,
                     [u, d] = await Promise.all([a ? null : Y.submit(), e.submit()]);
@@ -361,7 +359,7 @@ function Q(e) {
             }
             let v = U.intl.string(a ? J.default["jZjP+I"] : J.default.I2XSKe);
             return (0, n.jsx)("form", {
-                onSubmit: x,
+                onSubmit: m,
                 children: (0, n.jsxs)(r.d, {
                     transitionState: X,
                     onClose: M,
@@ -384,7 +382,7 @@ function Q(e) {
                                       }),
                             children: [
                                 a || "app" === i ? e.fields : null,
-                                a || "project" !== i ? null : Y.fields,
+                                a || "project" !== i ? null : (0, n.jsx)("div", { className: D.f, children: Y.fields }),
                                 a || "experimental" !== i ? null : Y.experimentalFields,
                                 a || "secrets" !== i ? null : e.secretFields,
                                 a || "model" !== i || K?.tierSettings == null
@@ -423,7 +421,7 @@ function Q(e) {
 function T(e) {
     let { projectId: l, modelSettings: t, tierSettings: s } = e,
         r = (0, a.bG)([h.Ay], () => "open" === h.Ay.getConnState(l), [l]),
-        u = i.useCallback((e) => (0, m.X)(l, e), [l]),
-        [d, c] = (0, x.FT)(s, u);
-    return (0, n.jsx)(x.Ay, { settings: d, tiers: t.tiers, choices: t.choices, disabled: !r, onChange: c });
+        u = i.useCallback((e) => (0, x.X)(l, e), [l]),
+        [d, c] = (0, m.FT)(s, u);
+    return (0, n.jsx)(m.Ay, { settings: d, tiers: t.tiers, choices: t.choices, disabled: !r, onChange: c });
 }

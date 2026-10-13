@@ -2237,29 +2237,26 @@ function lf(e) {
         [v, j] = i.useState(!1),
         b = c.trim(),
         y = b === n ? null : (0, lm.p)(b),
-        w = h ?? u,
-        k = m.trim();
-    function C() {
+        w = h ?? u;
+    function k() {
         (r(), o());
     }
-    async function S(e) {
+    async function C(e) {
         if ((e.preventDefault(), v || null != y)) return;
         (j(!0), x(null));
         let r = await (0, td.$l)(t, { name: b, icon: h, description: m }, { name: n, description: l });
-        (j(!1), r) ? C() : x(N.intl.string(A.default.Fi7boI));
+        (j(!1), r) ? k() : x(N.intl.string(A.default.Fi7boI));
     }
-    let E = "" === b ? n : b;
     return (0, a.jsx)("form", {
-        onSubmit: S,
+        onSubmit: C,
         children: (0, a.jsx)(tp.a, {
             transitionState: s,
             onClose: o,
             title: N.intl.string(A.default.OmOWDq),
             subtitle: N.intl.string(A.default.Gzmlyg),
             size: "sm",
-            preview: (0, a.jsx)(ld.w, { iconURL: w, name: E, description: k }),
             actions: [
-                { text: N.intl.string(A.default["bz/M68"]), variant: "secondary", onClick: C, disabled: v },
+                { text: N.intl.string(A.default["bz/M68"]), variant: "secondary", onClick: k, disabled: v },
                 {
                     text: N.intl.string(A.default.dyIV6M),
                     variant: "primary",
@@ -2273,7 +2270,6 @@ function lf(e) {
                 children: [
                     (0, a.jsx)(ld.r, {
                         iconURL: w,
-                        canRemove: null != h,
                         onIconChange: (e) => {
                             (g(e), x(null));
                         },
@@ -2282,8 +2278,6 @@ function lf(e) {
                         onNameChange: d,
                         description: m,
                         onDescriptionChange: f,
-                        previewName: E,
-                        inlinePreview: !1,
                         disabled: v,
                     }),
                     null != p
