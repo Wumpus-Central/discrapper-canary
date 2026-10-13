@@ -23,7 +23,7 @@ var n,
     _ = a(192820),
     S = a(157257),
     N = a(507868),
-    A = a(915725),
+    A = a(274372),
     k = a(341923),
     D = a(614584),
     I = a(423341),
@@ -218,24 +218,24 @@ function H() {
                 l = e.filter((e) => e.applicationId === n).slice(0, 10);
             (A.Ay.devSetLastClipsSession(z(n, l)), (0, O.w9)());
         }, []),
-        _ = o.useCallback(
+        p = o.useCallback(
             (e) => {
                 e ? s() : (0, O.yj)();
             },
             [s],
         ),
-        N = o.useCallback(
+        _ = o.useCallback(
             (e) => {
                 (n(e), t && l(e));
             },
             [l, t],
         ),
-        [k, T] = o.useState(B.rb.KILL),
-        [R, M] = o.useState(1),
-        [L, P] = o.useState(""),
-        [U, F] = o.useState(""),
-        V = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
-        H = o.useCallback((e) => {
+        [N, k] = o.useState(B.rb.KILL),
+        [T, R] = o.useState(1),
+        [M, L] = o.useState(""),
+        [P, U] = o.useState(""),
+        F = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
+        V = o.useCallback((e) => {
             e
                 ? (0, c.A)({
                       title: "Stash all gaming sessions?",
@@ -249,217 +249,210 @@ function H() {
                   })
                 : D.mN(!1);
         }, []),
-        [K, Y] = o.useState([]),
-        [q, J] = o.useState(void 0),
-        Q = o.useCallback((e) => {
-            (Y(e), J((t) => (null != t && e.includes(t) ? t : e[0])));
+        [H, K] = o.useState([]),
+        [Y, q] = o.useState(void 0),
+        J = o.useCallback((e) => {
+            (K(e), q((t) => (null != t && e.includes(t) ? t : e[0])));
         }, []),
-        X = o.useCallback(async () => {
+        Q = o.useCallback(async () => {
             let e = y.A.clips.debugListStashedClipDeciderSessions;
-            null != e && Q(await e());
-        }, [Q]);
-    o.useEffect(() => {
-        let e = !0,
-            t = y.A.clips.debugListStashedClipDeciderSessions;
-        if (null != t)
-            return (
-                t().then((t) => {
-                    e && Q(t);
-                }),
-                () => {
-                    e = !1;
-                }
-            );
-    }, [Q]);
-    let Z = (0, d.bG)([A.Ay], () => A.Ay.getState().clipsSettings.enableAutoclipping),
-        ee = (0, d.bG)([A.Ay], () => A.Ay.getEnableAutoclipping());
-    return (0, r.jsx)(g.Ip, {
-        children: (0, r.jsxs)(v.l, {
-            children: [
-                (0, r.jsx)(u.n, {
-                    label: "Send Test Signals",
-                    children: (0, r.jsxs)(h.M, {
+            null != e && J(await e());
+        }, [J]);
+    return (
+        o.useEffect(() => {
+            let e = !0,
+                t = y.A.clips.debugListStashedClipDeciderSessions;
+            if (null != t)
+                return (
+                    t().then((t) => {
+                        e && J(t);
+                    }),
+                    () => {
+                        e = !1;
+                    }
+                );
+        }, [J]),
+        (0, r.jsx)(g.Ip, {
+            children: (0, r.jsxs)(v.l, {
+                children: [
+                    (0, r.jsx)(u.n, {
+                        label: "Send Test Signals",
+                        children: (0, r.jsxs)(h.M, {
+                            children: [
+                                (0, r.jsx)(x.$, { text: "Manual", onClick: () => D.Ts({ type: B.Gy.MANUAL }) }),
+                                (0, r.jsx)(x.$, {
+                                    text: "Distributed",
+                                    onClick: () =>
+                                        D.Ts({
+                                            type: B.Gy.DISTRIBUTED,
+                                            remoteTriggerUserId: "123",
+                                            remoteTriggerClipId: "456",
+                                        }),
+                                }),
+                                (0, r.jsx)(x.$, {
+                                    text: "Shouting",
+                                    onClick: () => D.Ts({ type: B.Gy.SHOUTING, userId: "123", confidence: 1 }),
+                                }),
+                                (0, r.jsx)(x.$, {
+                                    text: "Laughter",
+                                    onClick: () => I.A.debugCreateRankableLaughterClip(),
+                                }),
+                            ],
+                        }),
+                    }),
+                    (0, r.jsxs)(u.n, {
+                        label: "Game Event Creator",
                         children: [
-                            (0, r.jsx)(x.$, { text: "Manual", onClick: () => D.Ts({ type: B.Gy.MANUAL }) }),
-                            (0, r.jsx)(x.$, {
-                                text: "Distributed",
-                                onClick: () =>
-                                    D.Ts({
-                                        type: B.Gy.DISTRIBUTED,
-                                        remoteTriggerUserId: "123",
-                                        remoteTriggerClipId: "456",
+                            (0, r.jsxs)(h.M, {
+                                children: [
+                                    (0, r.jsx)(j.l, {
+                                        label: "Event Type",
+                                        value: N,
+                                        onSelectionChange: (e) => k(e),
+                                        options: [
+                                            { id: "kill", label: "Kill", value: B.rb.KILL },
+                                            { id: "multikill", label: "Multikill", value: B.rb.MULTIKILL },
+                                            { id: "death", label: "Death", value: B.rb.DEATH },
+                                            { id: "assist", label: "Assist", value: B.rb.ASSIST },
+                                            { id: "item", label: "Item", value: B.rb.ITEM },
+                                            { id: "victory", label: "Victory", value: B.rb.VICTORY },
+                                            { id: "defeat", label: "Defeat", value: B.rb.DEFEAT },
+                                            { id: "level_up", label: "Level Up", value: B.rb.LEVEL_UP },
+                                            { id: "treasure", label: "Treasure", value: B.rb.TREASURE },
+                                            {
+                                                id: "objective_kill",
+                                                label: "Objective Kill",
+                                                value: B.rb.OBJECTIVE_KILL,
+                                            },
+                                        ],
+                                        selectionMode: "single",
+                                        fullWidth: !0,
                                     }),
+                                    (0, r.jsx)(j.l, {
+                                        label: "Importance",
+                                        value: T,
+                                        onSelectionChange: R,
+                                        options: [
+                                            { id: "low", label: "Low", value: 0 },
+                                            { id: "medium", label: "Medium", value: 0.5 },
+                                            { id: "high", label: "High", value: 1 },
+                                        ],
+                                        selectionMode: "single",
+                                        fullWidth: !0,
+                                    }),
+                                ],
+                            }),
+                            (0, r.jsx)(f.k, {
+                                label: "Title (optional)",
+                                value: M,
+                                onChange: L,
+                                placeholder: "e.g., First Blood",
+                            }),
+                            (0, r.jsx)(f.k, {
+                                label: "Description (optional)",
+                                value: P,
+                                onChange: U,
+                                placeholder: "e.g., Killed enemy ADC in bot lane",
                             }),
                             (0, r.jsx)(x.$, {
-                                text: "Shouting",
-                                onClick: () => D.Ts({ type: B.Gy.SHOUTING, userId: "123", confidence: 1 }),
+                                text: "Create Game Event",
+                                onClick: () => {
+                                    D.Ts({
+                                        type: B.Gy.GAME_EVENT,
+                                        eventType: N,
+                                        importance: T,
+                                        title: M,
+                                        description: P,
+                                    });
+                                },
                             }),
-                            (0, r.jsx)(x.$, { text: "Laughter", onClick: () => I.A.debugCreateRankableLaughterClip() }),
+                            (0, r.jsx)(m.d, {
+                                label: "Auto-stash decider data",
+                                description:
+                                    "Stashes every gaming session to your Desktop when it ends. Resets to off on each Discord launch.",
+                                checked: F,
+                                onChange: V,
+                            }),
+                            (0, r.jsx)(j.l, {
+                                label: "Stash session (re-run ranking)",
+                                value: Y,
+                                onSelectionChange: (e) => q(e),
+                                options: H.map((e) => ({ id: e, label: e, value: e })),
+                                placeholder: 0 === H.length ? "No stashed sessions" : "Most recent",
+                                disabled: 0 === H.length,
+                                selectionMode: "single",
+                                fullWidth: !0,
+                            }),
+                            (0, r.jsxs)(h.M, {
+                                children: [
+                                    (0, r.jsx)(x.$, {
+                                        text: "re-run ranking",
+                                        onClick: () => {
+                                            I.i.debugRerunRanking(Y).catch((e) => {
+                                                B.nx.error("re-run ranking failed", e);
+                                            });
+                                        },
+                                    }),
+                                    (0, r.jsx)(x.$, {
+                                        text: "run automontage",
+                                        onClick: () => {
+                                            I.i.debugRunAutoMontage(Y).catch((e) => {
+                                                B.nx.error("run automontage failed", e);
+                                            });
+                                        },
+                                    }),
+                                    (0, r.jsx)(x.$, {
+                                        text: "refresh sessions",
+                                        variant: "secondary",
+                                        onClick: () => {
+                                            Q();
+                                        },
+                                    }),
+                                ],
+                            }),
                         ],
                     }),
-                }),
-                (0, r.jsxs)(u.n, {
-                    label: "Game Event Creator",
-                    children: [
-                        (0, r.jsxs)(h.M, {
-                            children: [
-                                (0, r.jsx)(j.l, {
-                                    label: "Event Type",
-                                    value: k,
-                                    onSelectionChange: (e) => T(e),
-                                    options: [
-                                        { id: "kill", label: "Kill", value: B.rb.KILL },
-                                        { id: "multikill", label: "Multikill", value: B.rb.MULTIKILL },
-                                        { id: "death", label: "Death", value: B.rb.DEATH },
-                                        { id: "assist", label: "Assist", value: B.rb.ASSIST },
-                                        { id: "item", label: "Item", value: B.rb.ITEM },
-                                        { id: "victory", label: "Victory", value: B.rb.VICTORY },
-                                        { id: "defeat", label: "Defeat", value: B.rb.DEFEAT },
-                                        { id: "level_up", label: "Level Up", value: B.rb.LEVEL_UP },
-                                        { id: "treasure", label: "Treasure", value: B.rb.TREASURE },
-                                        { id: "objective_kill", label: "Objective Kill", value: B.rb.OBJECTIVE_KILL },
-                                    ],
-                                    selectionMode: "single",
-                                    fullWidth: !0,
-                                }),
-                                (0, r.jsx)(j.l, {
-                                    label: "Importance",
-                                    value: R,
-                                    onSelectionChange: M,
-                                    options: [
-                                        { id: "low", label: "Low", value: 0 },
-                                        { id: "medium", label: "Medium", value: 0.5 },
-                                        { id: "high", label: "High", value: 1 },
-                                    ],
-                                    selectionMode: "single",
-                                    fullWidth: !0,
-                                }),
-                            ],
-                        }),
-                        (0, r.jsx)(f.k, {
-                            label: "Title (optional)",
-                            value: L,
-                            onChange: P,
-                            placeholder: "e.g., First Blood",
-                        }),
-                        (0, r.jsx)(f.k, {
-                            label: "Description (optional)",
-                            value: U,
-                            onChange: F,
-                            placeholder: "e.g., Killed enemy ADC in bot lane",
-                        }),
-                        (0, r.jsx)(x.$, {
-                            text: "Create Game Event",
-                            onClick: () => {
-                                D.Ts({ type: B.Gy.GAME_EVENT, eventType: k, importance: R, title: L, description: U });
-                            },
-                        }),
-                        (0, r.jsx)(m.d, {
-                            label: "Auto-stash decider data",
-                            description:
-                                "Stashes every gaming session to your Desktop when it ends. Resets to off on each Discord launch.",
-                            checked: V,
-                            onChange: H,
-                        }),
-                        (0, r.jsx)(j.l, {
-                            label: "Stash session (re-run ranking)",
-                            value: q,
-                            onSelectionChange: (e) => J(e),
-                            options: K.map((e) => ({ id: e, label: e, value: e })),
-                            placeholder: 0 === K.length ? "No stashed sessions" : "Most recent",
-                            disabled: 0 === K.length,
-                            selectionMode: "single",
-                            fullWidth: !0,
-                        }),
-                        (0, r.jsxs)(h.M, {
-                            children: [
-                                (0, r.jsx)(x.$, {
-                                    text: "re-run ranking",
-                                    onClick: () => {
-                                        I.i.debugRerunRanking(q).catch((e) => {
-                                            B.nx.error("re-run ranking failed", e);
-                                        });
-                                    },
-                                }),
-                                (0, r.jsx)(x.$, {
-                                    text: "run automontage",
-                                    onClick: () => {
-                                        I.i.debugRunAutoMontage(q).catch((e) => {
-                                            B.nx.error("run automontage failed", e);
-                                        });
-                                    },
-                                }),
-                                (0, r.jsx)(x.$, {
-                                    text: "refresh sessions",
-                                    variant: "secondary",
-                                    onClick: () => {
-                                        X();
-                                    },
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-                (0, r.jsx)(u.n, { label: "Clip Metadata Tool", children: (0, r.jsx)(G.A, {}) }),
-                (0, r.jsx)(b.c, {}),
-                (0, r.jsx)($, {}),
-                (0, r.jsx)(b.c, {}),
-                (0, r.jsx)(W, {}),
-                (0, r.jsx)(b.c, {}),
-                (0, r.jsxs)(u.n, {
-                    label: "Reminder UI",
-                    children: [
-                        (0, r.jsx)(m.d, {
-                            label: "Clips Quick Bar",
-                            description:
-                                "Force-show the inline quick bar above the account panel. Fabricates a session (up to 10 clips) from your recent clips so it can be tested without capturing a real game session.",
-                            checked: e,
-                            onChange: _,
-                        }),
-                        (0, r.jsx)(m.d, {
-                            label: "Clips Reminder",
-                            description:
-                                "Force-show the post-session ClipsReminder panel. Fabricates a session from your most recent clips (and game) so it can be tested without capturing a real game session.",
-                            checked: t,
-                            onChange: i,
-                        }),
-                        (0, r.jsx)(j.l, {
-                            label: "Clip count",
-                            value: a,
-                            onSelectionChange: N,
-                            options: [
-                                { id: "1", label: "1 clip", value: 1 },
-                                { id: "2", label: "2 clips", value: 2 },
-                                { id: "3", label: "3 clips", value: 3 },
-                            ],
-                            selectionMode: "single",
-                            fullWidth: !0,
-                        }),
-                        (0, r.jsx)(b.c, {}),
-                        (0, r.jsxs)(u.n, {
-                            label: "Clips Settings",
-                            children: [
-                                (0, r.jsxs)(p.E, {
-                                    variant: "text-md/normal",
-                                    children: ["autoclippingEnabled (internal): ", String(Z)],
-                                }),
-                                (0, r.jsxs)(p.E, {
-                                    variant: "text-md/normal",
-                                    children: ["autoclippingEnabled (exposed): ", String(ee)],
-                                }),
-                                (0, r.jsx)(x.$, {
-                                    text: "unset autoclipping default",
-                                    onClick: () => {
-                                        D.uL(void 0, !1);
-                                    },
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            ],
-        }),
-    });
+                    (0, r.jsx)(u.n, { label: "Clip Metadata Tool", children: (0, r.jsx)(G.A, {}) }),
+                    (0, r.jsx)(b.c, {}),
+                    (0, r.jsx)($, {}),
+                    (0, r.jsx)(b.c, {}),
+                    (0, r.jsx)(W, {}),
+                    (0, r.jsx)(b.c, {}),
+                    (0, r.jsxs)(u.n, {
+                        label: "Reminder UI",
+                        children: [
+                            (0, r.jsx)(m.d, {
+                                label: "Clips Quick Bar",
+                                description:
+                                    "Force-show the inline quick bar above the account panel. Fabricates a session (up to 10 clips) from your recent clips so it can be tested without capturing a real game session.",
+                                checked: e,
+                                onChange: p,
+                            }),
+                            (0, r.jsx)(m.d, {
+                                label: "Clips Reminder",
+                                description:
+                                    "Force-show the post-session ClipsReminder panel. Fabricates a session from your most recent clips (and game) so it can be tested without capturing a real game session.",
+                                checked: t,
+                                onChange: i,
+                            }),
+                            (0, r.jsx)(j.l, {
+                                label: "Clip count",
+                                value: a,
+                                onSelectionChange: _,
+                                options: [
+                                    { id: "1", label: "1 clip", value: 1 },
+                                    { id: "2", label: "2 clips", value: 2 },
+                                    { id: "3", label: "3 clips", value: 3 },
+                                ],
+                                selectionMode: "single",
+                                fullWidth: !0,
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
 }
 var K = a(503698),
     Y = a.n(K),
@@ -20235,7 +20228,7 @@ function pX() {
     });
 }
 var pZ = a(963935),
-    p0 = a(798244),
+    p0 = a(272776),
     p1 = a(555738);
 function p2(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

@@ -3147,22 +3147,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-07-autoclipping-default-override",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-07-autoclipping-marketing",
     "defaultConfig": {
       "enableMarketing": false
