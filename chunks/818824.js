@@ -3,7 +3,7 @@ var l = n(582128),
     i = n(997101),
     r = n(17928),
     a = n(615405),
-    s = n(642639);
+    s = n(504560);
 function o() {
     let { hasAcceptedTerms: e, setHasAcceptedTerms: t } = (0, s.t4)((e) => ({
             hasAcceptedTerms: e.hasAcceptedTerms,

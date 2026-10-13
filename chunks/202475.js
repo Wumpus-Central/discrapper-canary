@@ -4,7 +4,7 @@ var r = n(582128),
     i = n(277984),
     s = n(295405),
     a = n(67480),
-    u = n(642639);
+    u = n(504560);
 function c(e) {
     let t = null != e && e.shouldAllowFetchPaymentSources,
         {
