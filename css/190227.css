@@ -1017,6 +1017,56 @@
     animation: reminder-leave_e5c405 .18s ease-in
 }
 
+.swap__8ec62 {
+    display: grid;
+    min-width: 0;
+    overflow: clip;
+    overflow-clip-margin: var(--space-8)
+}
+
+.layer__8ec62 {
+    align-self: start;
+    grid-area: 1/1;
+    min-width: 0
+}
+
+.leaving__8ec62 {
+    opacity: 0;
+    pointer-events: none
+}
+
+.leaving__8ec62 [data-conjure-tip-icon] {
+    visibility: hidden
+}
+
+@keyframes tip-enter__8ec62 {
+    0% {
+        opacity: 0
+    }
+}
+
+@keyframes tip-leave__8ec62 {
+    0% {
+        opacity: 1
+    }
+}
+
+.full-motion .entering__8ec62 {
+    animation: tip-enter__8ec62 .26s ease-out
+}
+
+.full-motion .leaving__8ec62 {
+    animation: tip-leave__8ec62 .14s ease-in
+}
+
+.tips_bc2bb4 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0;
+    padding-block: var(--space-20) var(--space-4)
+}
+
 .contextBoundary__2ee00 {
     flex-direction: column;
     margin: var(--space-16) 0
@@ -1194,4 +1244,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=132497.bff7586baad112d8.css.map*/
+/*# sourceMappingURL=190227.94738c085b6be628.css.map*/
