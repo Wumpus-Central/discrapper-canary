@@ -822,8 +822,8 @@ function eA(e) {
                               ? []
                               : Array.isArray(t)
                                 ? e(t)
-                                : t.type === a.Fragment
-                                  ? (e(t.props.children) ?? [])
+                                : a.isValidElement(t) && t.type === a.Fragment
+                                  ? e(t.props.children)
                                   : [t],
                       );
             })(t).reduce((t, n) => {

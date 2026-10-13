@@ -51,7 +51,7 @@ function A() {
     (i.useEffect(() => {
         let r;
         if (null != s) return;
-        for (let e of t.keys()) e.startsWith("openid.") && (null == r && (r = {}), (r[e] = t.get(e)));
+        for (let e of t.keys()) e.startsWith("openid.") && (null == r && (r = {}), (r[e] = t.get(e) ?? void 0));
         let n = (0, E.mw)(C);
         !(async function () {
             if (null == n || !O.A.isSupported(n)) return;

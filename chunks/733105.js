@@ -1902,51 +1902,52 @@ function tX(e) {
     }
     s.useEffect(() => (window.addEventListener("scroll", eb, !0), () => window.removeEventListener("scroll", eb)));
     let ej = eh.map((e) => {
-        let t = !ex && e.integration.id === eg?.integration.id;
-        return (function (e, t, n, i, s) {
-            let { application: a, integration: r } = t,
-                o = [];
-            return (
-                null != r.user
-                    ? o.push({
-                          icon: C.ClockIcon,
-                          text: $.intl.formatToPlainString($.t.Nu9sat, {
-                              timestamp: eu.default.extractTimestamp(r.id),
-                              user: em.Ay.getUserTag(r.user),
+            let t = !ex && e.integration.id === eg?.integration.id;
+            return (function (e, t, n, i, s) {
+                let { application: a, integration: r } = t,
+                    o = [];
+                return (
+                    null != r.user
+                        ? o.push({
+                              icon: C.ClockIcon,
+                              text: $.intl.formatToPlainString($.t.Nu9sat, {
+                                  timestamp: eu.default.extractTimestamp(r.id),
+                                  user: em.Ay.getUserTag(r.user),
+                              }),
+                          })
+                        : o.push({
+                              icon: C.ClockIcon,
+                              text: $.intl.formatToPlainString($.t.gcdJ8J, {
+                                  timestamp: eu.default.extractTimestamp(r.id),
+                              }),
                           }),
-                      })
-                    : o.push({
-                          icon: C.ClockIcon,
-                          text: $.intl.formatToPlainString($.t.gcdJ8J, {
-                              timestamp: eu.default.extractTimestamp(r.id),
-                          }),
-                      }),
-                (0, l.jsx)(
-                    tL,
-                    {
-                        name: a.name,
-                        imageSrc: ed.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 48 }),
-                        integration: t,
-                        buttonText: $.intl.string($.t["Z/qRnM"]),
-                        hasNextSection: !0,
-                        onButtonClick: () => {
-                            (n(a.id),
-                                ty.default.track(eU.HAw.APP_MANAGE_CTA_CLICKED, {
-                                    application_id: a.id,
-                                    guild_id: e?.id,
-                                    is_admin: null != e ? A.A.can(eU.xBc.ADMINISTRATOR, e) : void 0,
-                                }));
+                    (0, l.jsx)(
+                        tL,
+                        {
+                            name: a.name,
+                            imageSrc: ed.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 48 }),
+                            integration: t,
+                            buttonText: $.intl.string($.t["Z/qRnM"]),
+                            hasNextSection: !0,
+                            onButtonClick: () => {
+                                (n(a.id),
+                                    ty.default.track(eU.HAw.APP_MANAGE_CTA_CLICKED, {
+                                        application_id: a.id,
+                                        guild_id: e?.id,
+                                        is_admin: null != e ? A.A.can(eU.xBc.ADMINISTRATOR, e) : void 0,
+                                    }));
+                            },
+                            details: o,
+                            guildId: e?.id,
+                            isScrolling: i,
+                            canShowMigrationTooltip: s,
                         },
-                        details: o,
-                        guildId: e?.id,
-                        isScrolling: i,
-                        canShowMigrationTooltip: s,
-                    },
-                    `integration-${r.id}`,
-                )
-            );
-        })(w, e, z, ep, t);
-    });
+                        `integration-${r.id}`,
+                    )
+                );
+            })(w, e, z, ep, t);
+        }),
+        eN = ej;
     0 === ej.length &&
         Z &&
         ((t = w?.id),
@@ -1999,13 +2000,13 @@ function tX(e) {
                 ],
             }),
         })),
-        (ej = eo > 0 ? d : u));
-    let eN = b.A.getArticleURL(eU.MVz.INTEGRATIONS),
-        eE = null != R ? $.t.YV0vh6 : $.t.FnZEJs,
-        eC = [];
+        (eN = eo > 0 ? d : u));
+    let eE = b.A.getArticleURL(eU.MVz.INTEGRATIONS),
+        eC = null != R ? $.t.YV0vh6 : $.t.FnZEJs,
+        ev = [];
     if (J) {
         let e, t, s, a, r;
-        (eC.push(
+        (ev.push(
             ((n = P.length),
             n > 0 ? (t = (0, l.jsx)(tD.u, { size: "xs" })) : (e = $.intl.string($.t.lOQqJK)),
             (0, l.jsx)(
@@ -2024,7 +2025,7 @@ function tX(e) {
             )),
         ),
             (null == R || tK.XD.has(R.type) || W.length > 0) &&
-                eC.push(
+                ev.push(
                     ((i = W.length),
                     i > 0
                         ? ((r = (0, l.jsx)(tD.u, { size: "xs" })), (a = H))
@@ -2047,7 +2048,7 @@ function tX(e) {
     }
     (null == R &&
         et.length > 0 &&
-        eC.push(
+        ev.push(
             ((a = et.length),
             (0, l.jsx)(
                 tL,
@@ -2063,7 +2064,7 @@ function tX(e) {
             )),
         ),
         ea &&
-            eC.push(
+            ev.push(
                 ((j = e6.A.get(eU.fg2.TWITCH)),
                 en > 0
                     ? ((f = (0, l.jsx)(tD.u, { size: "xs" })),
@@ -2089,7 +2090,7 @@ function tX(e) {
                 )),
             ),
         er &&
-            eC.push(
+            ev.push(
                 ((L = e6.A.get(eU.fg2.YOUTUBE)),
                 ei > 0
                     ? ((O = (0, l.jsx)(tD.u, { size: "xs" })),
@@ -2114,20 +2115,20 @@ function tX(e) {
                     "integrations-youtube",
                 )),
             ));
-    let ev = null != R && X && null != ee;
+    let eT = null != R && X && null != ee;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(I.E, { variant: "text-sm/normal", children: $.intl.format(eE, { helpdeskArticle: eN }) }),
+            (0, l.jsx)(I.E, { variant: "text-sm/normal", children: $.intl.format(eC, { helpdeskArticle: eE }) }),
             (0, l.jsx)(S.c, { className: tQ.yF }),
             D || q || null == w
                 ? (0, l.jsx)(tU.y, { className: tQ.__invalid_spinner, type: tU.y.Type.SPINNING_CIRCLE })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          eC,
-                          ev &&
+                          ev,
+                          eT &&
                               (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      eC.length > 0 ? (0, l.jsx)(S.c, { className: tQ.yF }) : null,
+                                      ev.length > 0 ? (0, l.jsx)(S.c, { className: tQ.yF }) : null,
                                       (0, l.jsx)(c.D, {
                                           variant: "heading-md/semibold",
                                           className: tQ.bV,
@@ -2147,14 +2148,14 @@ function tX(e) {
                           Z
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        eC.length > 0 || ev ? (0, l.jsx)(S.c, { className: tQ.yF }) : null,
+                                        ev.length > 0 || eT ? (0, l.jsx)(S.c, { className: tQ.yF }) : null,
                                         (0, l.jsx)(c.D, {
                                             variant: "heading-md/semibold",
                                             className: tQ.bV,
                                             children: $.intl.string($.t.pUBKht),
                                         }),
                                         eo > 4 ? (0, l.jsx)(tZ, { query: F, setQuery: Y }) : null,
-                                        ej,
+                                        eN,
                                     ],
                                 })
                               : null,

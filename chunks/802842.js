@@ -150,19 +150,18 @@ class eI {
         }
         let r = {};
         for (let t of i) {
-            let { id: i } = t,
-                a = w.A.getScoreWithoutFetchingLatest(i);
+            let i = w.A.getScoreWithoutFetchingLatest(t.id);
             if (e === ei.rD.USER && t instanceof M.cq)
                 switch (t.type) {
                     case E.rbe.DM:
-                        r[(i = t.getRecipientId())] = 1 + a / n;
+                        r[t.getRecipientId()] = 1 + i / n;
                         break;
                     case E.rbe.GROUP_DM: {
                         let e = t.recipients.length;
-                        for (let i of t.recipients) r[i] = 1 + (a / n) * (1 / e);
+                        for (let a of t.recipients) r[a] = 1 + (i / n) * (1 / e);
                     }
                 }
-            else r[i] = 1 + a / n;
+            else r[t.id] = 1 + i / n;
         }
         for (let e of j.A.getFriendIDs()) r[e] = (r[e] ?? 1) + 0.2;
         for (let e of _.A.getDMUserIds()) r[e] = (r[e] ?? 1) + 0.1;

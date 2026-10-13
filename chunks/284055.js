@@ -8624,7 +8624,7 @@ class uW extends s.PureComponent {
     };
     renderFollowButton = () => {
         let { showFollowButton: e, channel: n } = this.props;
-        return e
+        return e && null != n
             ? (0, l.jsx)("div", {
                   className: uL.u8,
                   children: (0, l.jsx)(x.$, {

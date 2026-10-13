@@ -62,8 +62,8 @@ class D extends i.Ay.PersistedStore {
     static persistKey = "ThemeStore";
     static migrations = [
         (e) => {
-            let t = e.theme;
-            return ("amoled" === t && (t = E.NJ8.ONYX), { ...e, theme: t });
+            let t = "amoled" === e.theme ? E.NJ8.ONYX : e.theme;
+            return { ...e, theme: t };
         },
         (e) => e,
     ];

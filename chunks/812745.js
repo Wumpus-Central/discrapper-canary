@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, Be: () => p, Nj: () => f, y3: () => v });
+(n.d(t, { Ay: () => I, Be: () => p, Nj: () => f, y3: () => v }), n(205816));
 var r,
     i = n(477900),
     a = n(582128),
@@ -103,7 +103,9 @@ class g extends a.PureComponent {
     static Types = p;
     static Sizes = v;
     static getType(e) {
-        return null == e ? "unknown" : p[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        if (null == e) return "unknown";
+        let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
+        return Object.hasOwn(p, t) ? p[t] : "unknown";
     }
     static defaultProps = { size: v.SMALL, flipped: !1 };
     render() {

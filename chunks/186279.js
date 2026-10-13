@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 636492, Version Hash: e1486a6c0a50e380e92d20732a5b4e79864806d4`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 636495, Version Hash: 077e7893a02a6ed773048f9a9f5db02fcdd406b8`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -2821,7 +2821,7 @@ class iJ extends e_.Ay.Store {
         return iX ? iY : iz;
     }
     getFirstIncomingCallId() {
-        return iX ? null : iz.values().next().value;
+        return iX ? null : (iz.values().next().value ?? null);
     }
     hasIncomingCalls() {
         return !iX && iz.size > 0;
@@ -25934,7 +25934,7 @@ let ye = "isHideDevBanner",
                     className: t_()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "636492" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "636495" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -47909,8 +47909,16 @@ let Fv = new e$.A("RPCServer:PostMessage"),
         loadServer() {
             for (let e of (eF.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
                 this.rpcServer.registerTransport(e);
-            for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
-            for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
+            let e = this.rpcCommandHandlers;
+            for (let t of Object.values(H.e$_)) {
+                let n = e[t];
+                null != n && this.rpcServer.setCommandHandler(t, n);
+            }
+            let t = this.rpcEventHandlers;
+            for (let e of Object.values(H.ZE4)) {
+                let n = t[e];
+                null != n && this.rpcServer.setEventHandler(e, n);
+            }
         }
         init() {
             ((this.rpcServer.getCurrentUser = () => ek.default.getCurrentUser()),

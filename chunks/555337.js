@@ -113,7 +113,8 @@ function e_(e) {
     return null != n && (u === o ? (o = u = n) : (u = n), !0);
 }
 function eS(e) {
-    let { guildId: n, section: l, subsection: i, location: r } = e,
+    let { guildId: n, section: l, subsection: i } = e,
+        r = "GUILD_SETTINGS_INIT" === e.type ? e.location : void 0,
         I = p.A.getGuild(n);
     if (null == I) return eT();
     let _ = A.A.getProfile(n);

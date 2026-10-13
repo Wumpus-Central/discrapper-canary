@@ -160,8 +160,7 @@ class d extends a.Component {
         let { step: t, steps: e } = this.props;
         ((this.prevStep = t), (this.prevSteps = e));
     }
-    getBaseHeight = () =>
-        null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0;
+    getBaseHeight = () => (null != this.prevStep ? this.stepHeights[this.prevStep] : void 0) ?? 0;
     getDirection = () => {
         let { steps: t, step: e } = this.props,
             i = null != this.prevStep ? t.indexOf(this.prevStep) : -1,

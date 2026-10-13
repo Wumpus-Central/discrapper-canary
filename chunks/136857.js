@@ -143,10 +143,11 @@ class I extends l.A {
                 (delete this.fields[n], (this.fields[e] = t));
             }
         }
-        null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);
+        const n = "string" != typeof e ? e.body : null;
+        null != n && "payment_id" in n && "string" == typeof n.payment_id && (this.paymentId = n.payment_id);
     }
     _isInFieldSet(e) {
-        for (let t in this.fields) if (e.has(t)) return !0;
+        for (let t of e) if (t in this.fields) return !0;
     }
     hasCardError() {
         return this._isInFieldSet(A);

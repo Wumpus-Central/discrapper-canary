@@ -265,7 +265,7 @@ class tA extends l.PureComponent {
         null != this.props.cloudSyncState &&
             this.props.cloudSyncState.type === w.VX0.DONE &&
             null != this.props.cloudSyncState.timestamp &&
-            (null == t.cloudSyncState || null == t.cloudSyncState.timestamp) &&
+            (t.cloudSyncState?.type !== w.VX0.DONE || null == t.cloudSyncState.timestamp) &&
             this.setRecentlySyncedTimeout();
     }
     componentWillUnmount() {

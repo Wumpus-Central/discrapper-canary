@@ -18,7 +18,11 @@ function f(e, t, n, i) {
     let r,
         a = window.GLOBAL_ENV.CDN_HOST;
     if (null == i)
-        switch (t.mimeType || t.mime_type) {
+        switch (
+            (function (e) {
+                if ("string" != typeof e) return "mimeType" in e ? e.mimeType : e.mime_type;
+            })(t)
+        ) {
             case "video/quicktime":
             case "video/mp4":
                 i = "mp4";
