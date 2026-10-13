@@ -14525,7 +14525,7 @@ function m1(e) {
             g = i.useRef(0),
             p = i.useRef(null),
             x = i.useCallback(() => {
-                let l = (0, dz.ow)(e, t);
+                let l = (0, dz.n5)(e, t);
                 if (null == l) return;
                 p.current = l;
                 let i = {
@@ -14574,12 +14574,12 @@ function m1(e) {
                 (x(), j());
             }, [j, x]),
             i.useLayoutEffect(() => {
-                let n = (0, dz.ow)(e, t);
+                let n = (0, dz.n5)(e, t);
                 null != n && n !== p.current && j();
             }),
             i.useEffect(() => {
                 function n(n) {
-                    n.target === (0, dz.ow)(e, t) && ((p.current = null), j());
+                    n.target === (0, dz.n5)(e, t) && ((p.current = null), j());
                 }
                 return (document.addEventListener("load", n, !0), () => document.removeEventListener("load", n, !0));
             }, [t, e, j]),

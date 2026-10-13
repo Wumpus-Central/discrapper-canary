@@ -569,7 +569,7 @@ async function eE(e, t) {
                 return null;
             }
         })(t);
-    if (null == n || null == i) return null;
+    if (null == n || null == i || t.ownerDocument !== document) return null;
     if (es?.projectId === e && es.origin === i) return es;
     if (null != el) {
         let t = el,
