@@ -574,35 +574,34 @@ async function em(e, t) {
                 })
             ).body,
             L =
-                R.creative?.creative_type !== a.p.BOUNTY ||
-                $.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled
-                    ? R.creative
-                    : null,
-            y = null,
-            D = null;
-        if (null != L)
-            switch (L.creative_type) {
+                e !== H.p9.MOBILE_HOME_DOCK_AREA ||
+                $.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled,
+            y = R.creative?.creative_type !== a.p.BOUNTY || L ? R.creative : null,
+            D = null,
+            b = null;
+        if (null != y)
+            switch (y.creative_type) {
                 case a.p.QUEST:
-                    ((i = (0, q.Yn)(L.creative_content)), (y = { type: a.p.QUEST, questId: i.id }));
+                    ((i = (0, q.Yn)(y.creative_content)), (D = { type: a.p.QUEST, questId: i.id }));
                     break;
                 case a.p.BOUNTY:
-                    let b = (0, u.t)(L.creative_content);
-                    y = { type: a.p.BOUNTY, bounty: b };
+                    let M = (0, u.t)(y.creative_content);
+                    D = { type: a.p.BOUNTY, bounty: M };
                     break;
                 case a.p.NO_FILL:
-                    D = L.creative_content?.ad_content_id ?? null;
+                    b = y.creative_content?.ad_content_id ?? null;
             }
         else {
             let e = R.quest;
-            null != e && ((i = (0, q.Yn)(e)), (y = { type: a.p.QUEST, questId: i.id }));
+            null != e && ((i = (0, q.Yn)(e)), (D = { type: a.p.QUEST, questId: i.id }));
         }
         if (
             (o.h.dispatch({
                 type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
                 quest: i,
-                creative: y,
-                isNoFill: L?.creative_type === a.p.NO_FILL,
-                noFillAdContentId: D,
+                creative: D,
+                isNoFill: y?.creative_type === a.p.NO_FILL,
+                noFillAdContentId: b,
                 adDecisionData: {
                     ad_id: R.ad_identifiers?.ad_id,
                     adset_id: R.ad_identifiers?.adset_id,
@@ -624,7 +623,7 @@ async function em(e, t) {
             k.recordQuestRequestApiResponse("/quests/decision", {
                 wasSuccessful: !0,
                 adRequestId: String(R.request_id),
-                currentCreative: y,
+                currentCreative: D,
                 currentFetchedAt: n,
             }),
             null == i)
