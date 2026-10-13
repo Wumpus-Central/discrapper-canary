@@ -10,6 +10,61 @@
     padding: 0 0 var(--space-16)
 }
 
+.channel_a1865b {
+    display: contents
+}
+
+.channelHeader_a1865b,
+.composer_a1865b {
+    display: none
+}
+
+@container conjure-plan-surface-nav (min-width: 720px) {
+    [data-conjure-plan-preview-frame] .channel_a1865b {
+        background: var(--background-base-lower);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-sm);
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        min-width: 0;
+        overflow: hidden
+    }
+
+    [data-conjure-plan-preview-frame] .channelHeader_a1865b {
+        align-items: center;
+        border-bottom: 1px solid var(--border-subtle);
+        color: var(--icon-subtle);
+        display: flex;
+        gap: var(--space-4);
+        padding: var(--space-8) var(--space-12)
+    }
+
+    [data-conjure-plan-preview-frame] .channel_a1865b .chat_a1865b {
+        border: none;
+        border-radius: 0;
+        flex: 1 0 auto;
+        justify-content: flex-end;
+        padding-bottom: var(--space-8)
+    }
+
+    [data-conjure-plan-preview-frame] .composer_a1865b {
+        align-items: center;
+        background: var(--background-mod-normal);
+        border-radius: var(--radius-sm);
+        color: var(--icon-subtle);
+        display: flex;
+        gap: var(--space-8);
+        margin: 0 var(--space-12) var(--space-12);
+        padding: var(--space-8) var(--space-12)
+    }
+
+    [data-conjure-plan-preview-frame][data-conjure-plan-preview-tight] .channelHeader_a1865b,
+    [data-conjure-plan-preview-frame][data-conjure-plan-preview-tight] .composer_a1865b {
+        display: none
+    }
+}
+
 .menu_a1865b {
     box-shadow: none;
     max-width: 100%;
@@ -153,7 +208,7 @@
 }
 
 .navContainer__5573f {
-    container-type: inline-size;
+    container: conjure-plan-surface-nav/inline-size;
     min-width: 0
 }
 
@@ -206,7 +261,7 @@
     min-width: 0
 }
 
-@container (min-width: 720px) {
+@container conjure-plan-surface-nav (min-width: 720px) {
     .navLayout__5573f {
         align-items: start;
         display: grid;
@@ -224,10 +279,13 @@
     }
 
     .previewContent__5573f {
+        display: flex;
         flex: 0 0 auto;
+        flex-direction: column;
+        min-height: 100%;
         transform-origin: top center;
         width: 100%
     }
 }
 
-/*# sourceMappingURL=354f388b4bbee12f.css.map*/
+/*# sourceMappingURL=f0ac1e8480a1044b.css.map*/

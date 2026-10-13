@@ -1,5 +1,8 @@
-e.exports = {
+_.exports = {
     TE: "chat_a1865b",
+    Ix: "channel_a1865b",
+    ZO: "channelHeader_a1865b",
+    DA: "composer_a1865b",
     MK: "menu_a1865b",
     Gy: "menuLabel_a1865b",
     Rz: "menuTarget_a1865b",
