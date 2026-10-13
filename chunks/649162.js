@@ -456,9 +456,9 @@ async function z(e, t) {
     }
 }
 async function X(e, t) {
-    return "visible" !== document.visibilityState
-        ? k("window not visible")
-        : ((null != F() ? await $(e, t) : null) ?? z(e, t));
+    if ("visible" !== document.visibilityState) return k("window not visible");
+    let n = null != F() ? await $(e, t) : null;
+    return null != n ? n : e.ownerDocument !== document ? k("frame in another window") : z(e, t);
 }
 var Z = n(251363),
     q = n(621466);
@@ -853,7 +853,7 @@ async function eO(e, t, i) {
         }
         let c = await u(3e3);
         if (null != c) return c;
-        let _ = await (0, Z.i)(r, t, a, i.uploadToken);
+        let _ = await (0, Z.iU)(r, t, a, i.uploadToken);
         if ("accepted" === _.status) return _;
         return (await u(3e3)) ?? _;
     } finally {

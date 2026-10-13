@@ -33,7 +33,7 @@ function A(e) {
                 return t.width < 1 || t.height < 1
                     ? null
                     : { left: t.left, top: t.top, width: t.width, height: t.height };
-            })((0, p.o)(null, m));
+            })((0, p.ow)(null, m));
             N((t) =>
                 (
                     null == t || null == e
