@@ -2,23 +2,23 @@ let i, r, a, s, l, o, d, c, u;
 (n.r(t),
     n.d(t, {
         encodeProperties: () => I,
-        isThrottled: () => eN,
+        isThrottled: () => eC,
         SpanComponentNames: () => J.yk,
         analyticsTrackingStoreMaker: () => q,
-        getOS: () => eu,
+        getOS: () => e_,
         SpanTtiNames: () => J.wJ,
-        getDevice: () => eA,
-        getCampaignParams: () => ef,
+        getDevice: () => eh,
+        getCampaignParams: () => eI,
         ImpressionNames: () => J.IJ,
         ImpressionGroups: () => Q.q,
-        getBrowser: () => eE,
-        getSuperPropertiesBase64: () => em,
-        trackMaker: () => eC,
+        getBrowser: () => eA,
+        getSuperPropertiesBase64: () => eg,
+        trackMaker: () => eO,
         AnalyticsActionHandlers: () => K,
         NetworkActionNames: () => J.D3,
         ImpressionTypes: () => Q.z,
-        getSuperProperties: () => eT,
-        extendSuperProperties: () => ep,
+        getSuperProperties: () => em,
+        extendSuperProperties: () => eT,
     }));
 var _ = n(812729),
     E = n.n(_),
@@ -308,17 +308,18 @@ var en = n(70298),
     ea = n(362474),
     es = n(71931);
 let el = "deviceProperties",
-    eo = "referralProperties";
-function ed() {}
-let ec = window.DiscordNative;
-if (null != ec) {
+    eo = "devicePropertiesVersion",
+    ed = "referralProperties";
+function ec() {}
+let eu = window.DiscordNative;
+if (null != eu) {
     let e,
-        t = ec.app.getVersion(),
-        n = ec.process.platform,
-        i = ec.os.release,
-        r = ec.os.arch,
-        s = ec.os.appArch,
-        l = ec.app.getReleaseChannel(),
+        t = eu.app.getVersion(),
+        n = eu.process.platform,
+        i = eu.os.release,
+        r = eu.os.arch,
+        s = eu.os.appArch,
+        l = eu.app.getReleaseChannel(),
         o = (0, ei.c)();
     switch (n) {
         case "win32":
@@ -350,7 +351,7 @@ if (null != ec) {
             ((a.browser_user_agent = et().ua || ""), (a.browser_version = et().version || "")),
         "linux" === n)
     ) {
-        let e = ec.crashReporter.getMetadata();
+        let e = eu.crashReporter.getMetadata();
         ((a.window_manager = e.wm),
             (a.distro = e.distro),
             (a.runtime_environment = e.runtime_environment),
@@ -358,7 +359,7 @@ if (null != ec) {
     } else
         "darwin" === n ? (a.os_sdk_version = i?.split(".")[0]) : "win32" === n && (a.os_sdk_version = i?.split(".")[2]);
 }
-function eu() {
+function e_() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -369,13 +370,13 @@ function eu() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
-function e_(e, t) {
+function eE(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function eE() {
+function eA() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window,
         i = (function (e) {
@@ -408,8 +409,8 @@ function eE() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-function eA() {
-    let e = ed(),
+function eh() {
+    let e = ec(),
         { userAgent: t } = window.navigator;
     if (null != e) return e.device;
     if (/(BlackBerry|PlayBook|BB10)/i.test(t)) return "BlackBerry";
@@ -419,18 +420,18 @@ function eA() {
     else if (/iPad/.test(t)) return "iPad";
     else return "";
 }
-let eh = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function ef(e) {
+let ef = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function eI(e) {
     let t = {};
     return (
-        eh.forEach((n) => {
-            let i = e_(e, n);
+        ef.forEach((n) => {
+            let i = eE(e, n);
             i.length > 0 && (t[n] = i);
         }),
         t
     );
 }
-function eI() {
+function ep() {
     let e,
         t = {};
     return (
@@ -438,7 +439,7 @@ function eI() {
         (t.referring_domain = (e = document.referrer.split("/")).length >= 3 ? e[2] : ""),
         (t = {
             ...t,
-            ...ef(window.location.href),
+            ...eI(window.location.href),
             ...(function () {
                 let e,
                     t = {},
@@ -455,7 +456,7 @@ function eI() {
                                   : null;
                 if (null != i) {
                     t.search_engine = i;
-                    let e = e_(n, "yahoo" !== i ? "q" : "p");
+                    let e = eE(n, "yahoo" !== i ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -469,28 +470,30 @@ if (null == a)
             let e,
                 t,
                 n = er.w.get(el);
-            if (null == n) {
+            if (null == n || 1 !== er.w.get(eo)) {
                 let e;
-                (((e = {}).os = eu()),
-                    (e.browser = eE()),
-                    (e.device = eA()),
+                (((e = {}).os = e_()),
+                    (e.browser = eA()),
+                    (e.device = eh()),
+                    (e.device_model_name = ""),
                     (e.system_locale = (0, ei.c)()),
                     (e.has_client_mods = (0, en.b)()),
                     (n = e),
-                    er.w.set(el, n));
+                    er.w.set(el, n),
+                    er.w.set(eo, 1));
             }
-            let i = er.w.get(eo);
-            null == i && ((i = eI()), er.w.set(eo, i));
-            let r = ea.u.get(eo);
+            let i = er.w.get(ed);
+            null == i && ((i = ep()), er.w.set(ed, i));
+            let r = ea.u.get(ed);
             if (null == r) {
                 var a;
                 let e;
-                ((a = eI()), (e = {}), Object.keys(a).map((t) => (e[`${t}_current`] = a[t])), (r = e), ea.u.set(eo, r));
+                ((a = ep()), (e = {}), Object.keys(a).map((t) => (e[`${t}_current`] = a[t])), (r = e), ea.u.set(ed, r));
             }
             return {
                 ...n,
                 ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: et().version || "" }),
-                (t = ed()),
+                (t = ec()),
                 null != t
                     ? { ...e, os_version: t.systemVersion || "" }
                     : { ...e, os_version: et()?.os?.version ?? "" }),
@@ -501,22 +504,22 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function ep(e) {
+function eT(e) {
     s = I((a = { ...a, ...e }));
 }
-function eT() {
+function em() {
     return a;
 }
-function em() {
+function eg() {
     return s;
 }
-ep(
+eT(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("636637", 10))) || (l.client_build_number = d),
-    null == (c = ec?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
+    isNaN((d = parseInt("636659", 10))) || (l.client_build_number = d),
+    null == (c = eu?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
@@ -525,15 +528,15 @@ ep(
     })()),
     (l.has_client_mods = (0, en.b)()),
     (l.client_launch_id = es.C),
-    null != (u = ed()?.installSource) && (l.install_source = u),
+    null != (u = ec()?.installSource) && (l.install_source = u),
     l),
 );
-let eg = {},
-    eS = {};
-function eN(e) {
-    return null != eg[e] && eg[e] > Date.now();
+let eS = {},
+    eN = {};
+function eC(e) {
+    return null != eS[e] && eS[e] > Date.now();
 }
-let eC = (e) => {
+let eO = (e) => {
     let { addBreadcrumb: t, analyticEventConfigs: i, dispatcher: r, TRACK_ACTION_NAME: a } = e,
         s = function (e, t, n) {
             return new Promise((i) => {
@@ -555,14 +558,14 @@ let eC = (e) => {
         if (("function" == typeof o && (o = o(l) ?? null), null != o))
             if ("throttlePeriod" in o) {
                 let t = [e, ...o.throttleKeys(l)].join("_");
-                if (eN(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
+                if (eC(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
                     return Promise.resolve();
                 if (o.deduplicate) {
-                    let e = eS[t];
+                    let e = eN[t];
                     if (E()(e, l)) return Promise.resolve();
-                    eS[t] = l;
+                    eN[t] = l;
                 }
-                eg[t] = Date.now() + o.throttlePeriod;
+                eS[t] = Date.now() + o.throttlePeriod;
             } else if ("throttlePercent" in o) {
                 if (Math.random() > o.throttlePercent) return Promise.resolve();
             } else h()(!1, `Unsupported analytics event config: ${o}`);

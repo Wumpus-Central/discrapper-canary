@@ -37,17 +37,18 @@ function M() {
 let f = (0, E(132500).A)();
 var G = E(264572).Buffer;
 let m = "deviceProperties",
-    U = "referralProperties";
-function h() {}
-let w = window.DiscordNative;
-if (null != w) {
+    U = "devicePropertiesVersion",
+    h = "referralProperties";
+function w() {}
+let $ = window.DiscordNative;
+if (null != $) {
     let e,
-        t = w.app.getVersion(),
-        E = w.process.platform,
-        n = w.os.release,
-        r = w.os.arch,
-        _ = w.os.appArch,
-        o = w.app.getReleaseChannel(),
+        t = $.app.getVersion(),
+        E = $.process.platform,
+        n = $.os.release,
+        r = $.os.arch,
+        _ = $.os.appArch,
+        o = $.app.getReleaseChannel(),
         I = M();
     switch (E) {
         case "win32":
@@ -79,7 +80,7 @@ if (null != w) {
             ((i.browser_user_agent = D().ua || ""), (i.browser_version = D().version || "")),
         "linux" === E)
     ) {
-        let e = w.crashReporter.getMetadata();
+        let e = $.crashReporter.getMetadata();
         ((i.window_manager = e.wm),
             (i.distro = e.distro),
             (i.runtime_environment = e.runtime_environment),
@@ -87,14 +88,14 @@ if (null != w) {
     } else
         "darwin" === E ? (i.os_sdk_version = n?.split(".")[0]) : "win32" === E && (i.os_sdk_version = n?.split(".")[2]);
 }
-function $(e, t) {
+function B(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let E = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === E || ("string" != typeof E[1] && E[1].length) ? "" : decodeURIComponent(E[1]).replace(/\+/g, " ");
 }
-let B = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function H() {
+let H = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function v() {
     var e;
     let t,
         E,
@@ -106,8 +107,8 @@ function H() {
             ...n,
             ...((e = window.location.href),
             (E = {}),
-            B.forEach((t) => {
-                let n = $(e, t);
+            H.forEach((t) => {
+                let n = B(e, t);
                 n.length > 0 && (E[t] = n);
             }),
             E),
@@ -127,7 +128,7 @@ function H() {
                                   : null;
                 if (null != n) {
                     t.search_engine = n;
-                    let e = $(E, "yahoo" !== n ? "q" : "p");
+                    let e = B(E, "yahoo" !== n ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -141,7 +142,7 @@ if (null == i)
             let e,
                 t,
                 E = n.get(m);
-            if (null == E) {
+            if (null == E || 1 !== n.get(U)) {
                 let e;
                 (((e = {}).os = (function () {
                     let { userAgent: e } = window.navigator;
@@ -195,7 +196,7 @@ if (null == i)
                         else return "";
                     })()),
                     (e.device = (function () {
-                        let e = h(),
+                        let e = w(),
                             { userAgent: t } = window.navigator;
                         if (null != e) return e.device;
                         if (/(BlackBerry|PlayBook|BB10)/i.test(t)) return "BlackBerry";
@@ -205,23 +206,25 @@ if (null == i)
                         else if (/iPad/.test(t)) return "iPad";
                         else return "";
                     })()),
+                    (e.device_model_name = ""),
                     (e.system_locale = M()),
                     (e.has_client_mods = P()),
                     (E = e),
-                    n.set(m, E));
+                    n.set(m, E),
+                    n.set(U, 1));
             }
-            let i = n.get(U);
-            null == i && ((i = H()), n.set(U, i));
-            let _ = r.get(U);
+            let i = n.get(h);
+            null == i && ((i = v()), n.set(h, i));
+            let _ = r.get(h);
             if (null == _) {
                 var o;
                 let e;
-                ((o = H()), (e = {}), Object.keys(o).map((t) => (e[`${t}_current`] = o[t])), (_ = e), r.set(U, _));
+                ((o = v()), (e = {}), Object.keys(o).map((t) => (e[`${t}_current`] = o[t])), (_ = e), r.set(h, _));
             }
             return {
                 ...E,
                 ...((e = { browser_user_agent: window.navigator.userAgent || "", browser_version: D().version || "" }),
-                (t = h()),
+                (t = w()),
                 null != t ? { ...e, os_version: t.systemVersion || "" } : { ...e, os_version: D()?.os?.version ?? "" }),
                 ...i,
                 ..._,
@@ -234,8 +237,8 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("636637", 10))) || (I.client_build_number = s),
-    null == (a = w?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
+    isNaN((s = parseInt("636659", 10))) || (I.client_build_number = s),
+    null == (a = $?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
@@ -244,7 +247,7 @@ if (null == i)
     })()),
     (I.has_client_mods = P()),
     (I.client_launch_id = f),
-    null != (A = h()?.installSource) && (I.install_source = A),
+    null != (A = w()?.installSource) && (I.install_source = A),
     (function (e) {
         try {
             G.from(JSON.stringify(e)).toString("base64");
@@ -252,9 +255,9 @@ if (null == i)
             return null;
         }
     })((i = { ...i, ...I })));
-var v = E(824120),
-    y = E.n(v);
-function b(e) {
+var y = E(824120),
+    b = E.n(y);
+function F(e) {
     let t = [];
     for (let E = 0; E < e.length; E++) {
         let n = Number(e[E]);
@@ -262,13 +265,13 @@ function b(e) {
     }
     return t;
 }
-class F {
+class Y {
     parts;
     str;
     static fromString(e) {
-        return new F(
+        return new Y(
             (function (e) {
-                let t = b(e),
+                let t = F(e),
                     E = [, , , ,];
                 for (let e = 0; e < 4; e++)
                     E[3 - e] = (function (e, t) {
@@ -289,7 +292,7 @@ class F {
         let t = [, , , ,],
             E = Math.floor(e / 16);
         for (let n = 0; n < 4; n++) t[3 - n] = n === E ? 1 << (e - 16 * E) : 0;
-        return new F(t);
+        return new Y(t);
     }
     static asUintN(e, t) {
         let { parts: E } = t,
@@ -308,18 +311,18 @@ class F {
     }
     and(e) {
         let { parts: t } = e;
-        return new F(this.parts.map((e, E) => e & t[E]));
+        return new Y(this.parts.map((e, E) => e & t[E]));
     }
     or(e) {
         let { parts: t } = e;
-        return new F(this.parts.map((e, E) => e | t[E]));
+        return new Y(this.parts.map((e, E) => e | t[E]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new F(this.parts.map((e, E) => e ^ t[E]));
+        return new Y(this.parts.map((e, E) => e ^ t[E]));
     }
     not() {
-        return new F(this.parts.map((e) => ~e));
+        return new Y(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -330,59 +333,59 @@ class F {
         let e = Array(16);
         return (
             this.parts.forEach((t, E) => {
-                let n = b(t.toString());
+                let n = F(t.toString());
                 for (let t = 0; t < 4; t++) e[t + 4 * E] = n[3 - t] || 0;
             }),
-            (this.str = y().fromArray(e, 16).toString())
+            (this.str = b().fromArray(e, 16).toString())
         );
     }
     toJSON() {
         return this.toString();
     }
 }
-let Y = (function () {
+let V = (function () {
     try {
         return !0;
     } catch (e) {
         return !1;
     }
 })();
-Y &&
+V &&
     null == BigInt.prototype.toJSON &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let V = {},
-    W = (
-        Y
+let W = {},
+    k = (
+        V
             ? function (e) {
                   return BigInt(e);
               }
             : function (e) {
-                  return e instanceof F
+                  return e instanceof Y
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != V[e] || (V[e] = F.fromString(e)), V[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != W[e] || (W[e] = Y.fromString(e)), W[e]);
               }
     )(0),
-    k = Y
+    K = V
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : W,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : W,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
               return e.or(t);
           },
-    K = Y
+    x = V
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return F.fromBit(e);
+              return Y.fromBit(e);
           };
-class x {
+class j {
     value;
     constructor(e) {
         this.value = e;
@@ -391,7 +394,7 @@ class x {
         return this.value;
     }
 }
-function j(e, t) {
+function Q(e, t) {
     let E = {};
     for (let n of Object.keys(e)) {
         let r = e[n];
@@ -406,7 +409,7 @@ function j(e, t) {
                     return e.map((e) =>
                         null == e
                             ? e
-                            : e instanceof x
+                            : e instanceof j
                               ? e.toString()
                               : null == t
                                 ? encodeURIComponent(e)
@@ -421,9 +424,9 @@ function j(e, t) {
     }
     return E;
 }
-let Q = "u" < typeof location ? "" : location.protocol,
-    X = Q + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
-    q = Q + "//discord.gg";
+let X = "u" < typeof location ? "" : location.protocol,
+    q = X + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
+    J = X + "//discord.gg";
 (Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -466,103 +469,103 @@ let Q = "u" < typeof location ? "" : location.protocol,
     }),
     Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
     Object.freeze({ 0: "subscription", 1: "sku" }));
-let J = Object.freeze({
-    CREATE_INSTANT_INVITE: K(0),
-    KICK_MEMBERS: K(1),
-    BAN_MEMBERS: K(2),
-    ADMINISTRATOR: K(3),
-    MANAGE_CHANNELS: K(4),
-    MANAGE_GUILD: K(5),
-    CHANGE_NICKNAME: K(26),
-    MANAGE_NICKNAMES: K(27),
-    MANAGE_ROLES: K(28),
-    MANAGE_WEBHOOKS: K(29),
-    MANAGE_GUILD_EXPRESSIONS: K(30),
-    CREATE_GUILD_EXPRESSIONS: K(43),
-    VIEW_AUDIT_LOG: K(7),
-    VIEW_CHANNEL: K(10),
-    VIEW_GUILD_ANALYTICS: K(19),
-    VIEW_CREATOR_MONETIZATION_ANALYTICS: K(41),
-    MODERATE_MEMBERS: K(40),
-    USE_EMBEDDED_ACTIVITIES: K(39),
-    USE_EXTERNAL_APPS: K(50),
-    SEND_MESSAGES: K(11),
-    SEND_TTS_MESSAGES: K(12),
-    MANAGE_MESSAGES: K(13),
-    EMBED_LINKS: K(14),
-    ATTACH_FILES: K(15),
-    READ_MESSAGE_HISTORY: K(16),
-    MENTION_EVERYONE: K(17),
-    USE_EXTERNAL_EMOJIS: K(18),
-    ADD_REACTIONS: K(6),
-    USE_APPLICATION_COMMANDS: K(31),
-    MANAGE_THREADS: K(34),
-    CREATE_PUBLIC_THREADS: K(35),
-    CREATE_PRIVATE_THREADS: K(36),
-    USE_EXTERNAL_STICKERS: K(37),
-    SEND_MESSAGES_IN_THREADS: K(38),
-    SEND_VOICE_MESSAGES: K(46),
-    SEND_POLLS: K(49),
-    PIN_MESSAGES: K(51),
-    BYPASS_SLOWMODE: K(52),
-    MANAGE_OFFICIAL_MESSAGES: K(53),
-    CONNECT: K(20),
-    SPEAK: K(21),
-    MUTE_MEMBERS: K(22),
-    DEAFEN_MEMBERS: K(23),
-    MOVE_MEMBERS: K(24),
-    USE_VAD: K(25),
-    PRIORITY_SPEAKER: K(8),
-    STREAM: K(9),
-    USE_SOUNDBOARD: K(42),
-    USE_EXTERNAL_SOUNDS: K(45),
-    SET_VOICE_CHANNEL_STATUS: K(48),
-    REQUEST_TO_SPEAK: K(32),
-    MANAGE_EVENTS: K(33),
-    CREATE_EVENTS: K(44),
+let z = Object.freeze({
+    CREATE_INSTANT_INVITE: x(0),
+    KICK_MEMBERS: x(1),
+    BAN_MEMBERS: x(2),
+    ADMINISTRATOR: x(3),
+    MANAGE_CHANNELS: x(4),
+    MANAGE_GUILD: x(5),
+    CHANGE_NICKNAME: x(26),
+    MANAGE_NICKNAMES: x(27),
+    MANAGE_ROLES: x(28),
+    MANAGE_WEBHOOKS: x(29),
+    MANAGE_GUILD_EXPRESSIONS: x(30),
+    CREATE_GUILD_EXPRESSIONS: x(43),
+    VIEW_AUDIT_LOG: x(7),
+    VIEW_CHANNEL: x(10),
+    VIEW_GUILD_ANALYTICS: x(19),
+    VIEW_CREATOR_MONETIZATION_ANALYTICS: x(41),
+    MODERATE_MEMBERS: x(40),
+    USE_EMBEDDED_ACTIVITIES: x(39),
+    USE_EXTERNAL_APPS: x(50),
+    SEND_MESSAGES: x(11),
+    SEND_TTS_MESSAGES: x(12),
+    MANAGE_MESSAGES: x(13),
+    EMBED_LINKS: x(14),
+    ATTACH_FILES: x(15),
+    READ_MESSAGE_HISTORY: x(16),
+    MENTION_EVERYONE: x(17),
+    USE_EXTERNAL_EMOJIS: x(18),
+    ADD_REACTIONS: x(6),
+    USE_APPLICATION_COMMANDS: x(31),
+    MANAGE_THREADS: x(34),
+    CREATE_PUBLIC_THREADS: x(35),
+    CREATE_PRIVATE_THREADS: x(36),
+    USE_EXTERNAL_STICKERS: x(37),
+    SEND_MESSAGES_IN_THREADS: x(38),
+    SEND_VOICE_MESSAGES: x(46),
+    SEND_POLLS: x(49),
+    PIN_MESSAGES: x(51),
+    BYPASS_SLOWMODE: x(52),
+    MANAGE_OFFICIAL_MESSAGES: x(53),
+    CONNECT: x(20),
+    SPEAK: x(21),
+    MUTE_MEMBERS: x(22),
+    DEAFEN_MEMBERS: x(23),
+    MOVE_MEMBERS: x(24),
+    USE_VAD: x(25),
+    PRIORITY_SPEAKER: x(8),
+    STREAM: x(9),
+    USE_SOUNDBOARD: x(42),
+    USE_EXTERNAL_SOUNDS: x(45),
+    SET_VOICE_CHANNEL_STATUS: x(48),
+    REQUEST_TO_SPEAK: x(32),
+    MANAGE_EVENTS: x(33),
+    CREATE_EVENTS: x(44),
 });
 (!(function () {
     for (var e = arguments.length, t = Array(e), E = 0; E < e; E++) t[E] = arguments[E];
     let n = t[0];
-    for (let e = 1; e < t.length; e++) n = k(n, t[e]);
+    for (let e = 1; e < t.length; e++) n = K(n, t[e]);
 })(
-    J.KICK_MEMBERS,
-    J.BAN_MEMBERS,
-    J.ADMINISTRATOR,
-    J.MANAGE_CHANNELS,
-    J.MANAGE_GUILD,
-    J.MANAGE_ROLES,
-    J.MANAGE_MESSAGES,
-    J.MANAGE_THREADS,
-    J.MODERATE_MEMBERS,
+    z.KICK_MEMBERS,
+    z.BAN_MEMBERS,
+    z.ADMINISTRATOR,
+    z.MANAGE_CHANNELS,
+    z.MANAGE_GUILD,
+    z.MANAGE_ROLES,
+    z.MANAGE_MESSAGES,
+    z.MANAGE_THREADS,
+    z.MODERATE_MEMBERS,
 ),
     Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }));
-let z = Object.freeze({
-    WELCOME: `${X}/welcome/`,
-    ME: `${X}/channels/@me`,
-    SETTINGS: (e, t) => `${X}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
-    CONNECTION: (e) => `${X}/connections/${e}`,
-    CHANGELOGS: `${X}/settings/changelogs`,
-    LOGIN: `${X}/login`,
-    LOGIN_WITH_REDIRECT: (e) => `${X}/login?redirect_to=${e}`,
-    REGISTER: `${X}/register`,
-    REGISTER_WITH_REDIRECT: (e) => `${X}/register?redirect_to=${e}`,
-    CREATE_GUILD: `${X}/guilds/create`,
-    VANITY_INVITE: (e) => `${q}/${e}`,
-    HYPESQUAD_ONLINE: `${X}/settings/hypesquad-online`,
-    BROWSE_NITRO_TITLES: `${X}/store/browse?type=nitro`,
-    SKU_DETAILS: (e, t) => `${X}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+let Z = Object.freeze({
+    WELCOME: `${q}/welcome/`,
+    ME: `${q}/channels/@me`,
+    SETTINGS: (e, t) => `${q}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
+    CONNECTION: (e) => `${q}/connections/${e}`,
+    CHANGELOGS: `${q}/settings/changelogs`,
+    LOGIN: `${q}/login`,
+    LOGIN_WITH_REDIRECT: (e) => `${q}/login?redirect_to=${e}`,
+    REGISTER: `${q}/register`,
+    REGISTER_WITH_REDIRECT: (e) => `${q}/register?redirect_to=${e}`,
+    CREATE_GUILD: `${q}/guilds/create`,
+    VANITY_INVITE: (e) => `${J}/${e}`,
+    HYPESQUAD_ONLINE: `${q}/settings/hypesquad-online`,
+    BROWSE_NITRO_TITLES: `${q}/store/browse?type=nitro`,
+    SKU_DETAILS: (e, t) => `${q}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
     MESSAGE: (e, t, E) => `/channels/${e}/${t}/${E}`,
     CHANNEL: (e, t) => `/channels/${e}/${t}`,
-    REPORT: `${X}/report`,
-    QUEST_PREVIEW_TOOL_2: (e) => `${X}/quest-preview/${e}`,
-    QUEST_HOME_PREVIEW: (e) => `${X}/quest-home?ad_creative_ids=${e}`,
-    QUEST_BAR_PREVIEW: (e) => `${X}/quest-bar-preview?ad_creative_ids=${e}`,
+    REPORT: `${q}/report`,
+    QUEST_PREVIEW_TOOL_2: (e) => `${q}/quest-preview/${e}`,
+    QUEST_HOME_PREVIEW: (e) => `${q}/quest-home?ad_creative_ids=${e}`,
+    QUEST_BAR_PREVIEW: (e) => `${q}/quest-bar-preview?ad_creative_ids=${e}`,
 });
-var Z =
-    (((S = Z || {}).INDEX = "/"),
+var ee =
+    (((S = ee || {}).INDEX = "/"),
     (S.INDEX_WORD = "/index"),
     (S.INDEX_BUCKET = "/index/:bucketId"),
     (S.CHANGELOGS = "/changelogs/:date"),
@@ -650,29 +653,29 @@ var Z =
     (S.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
     (S.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
     S);
-(j(z),
-    j(Z),
+(Q(Z),
+    Q(ee),
     Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     }));
-let ee = "dQw4w9WgXcQ:",
-    et = null,
-    eE = window.DiscordNative;
-null != eE && (et = eE.safeStorage);
-let en = !1,
-    er = {},
-    ei = !1;
-function e_(e) {
+let et = "dQw4w9WgXcQ:",
+    eE = null,
+    en = window.DiscordNative;
+null != en && (eE = en.safeStorage);
+let er = !1,
+    ei = {},
+    e_ = !1;
+function eo(e) {
     return null == e || 0 === e.length
         ? { decryptedToken: null, wasEncrypted: !1 }
-        : et?.isEncryptionAvailable() && e.startsWith(ee)
-          ? { decryptedToken: et.decryptString(e.substring(ee.length)), wasEncrypted: !0 }
+        : eE?.isEncryptionAvailable() && e.startsWith(et)
+          ? { decryptedToken: eE.decryptString(e.substring(et.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
-var eo =
+var eI =
         (((T = {})[(T.DISPATCH = 0)] = "DISPATCH"),
         (T[(T.HEARTBEAT = 1)] = "HEARTBEAT"),
         (T[(T.IDENTIFY = 2)] = "IDENTIFY"),
@@ -706,9 +709,9 @@ var eo =
         (T[(T.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (T[(T.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         T),
-    eI = E(377941),
-    el = E.n(eI),
-    es =
+    el = E(377941),
+    es = E.n(el),
+    ea =
         (((O = {}).ALL = "ALL"),
         (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
         (O.PROFILE_EFFECT = "PROFILE_EFFECT"),
@@ -716,20 +719,20 @@ var eo =
         (O.PROFILE_FRAME = "PROFILE_FRAME"),
         (O.BUNDLE = "BUNDLE"),
         O),
-    ea = (((R = {}).ASC = "asc"), (R.DESC = "desc"), R),
-    eA =
+    eA = (((R = {}).ASC = "asc"), (R.DESC = "desc"), R),
+    eS =
         (((N = {}).PRICE = "price"),
         (N.ALPHABETICAL = "alphabetical"),
         (N.RECENCY = "recency"),
         (N.POPULARITY = "popularity"),
         (N.RELEVANCE = "relevance"),
         N),
-    eS =
+    eT =
         (((u = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
         (u.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
         (u.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
         u),
-    eT =
+    eO =
         (((c = {}).HOME = "home"),
         (c.CATALOG = "catalog"),
         (c.ORBS = "orbs"),
@@ -748,34 +751,34 @@ var eo =
         c);
 (Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",
-    FRACTIONAL_PREMIUM: eS.PREMIUM_TIER_2_3_DAY,
-    FRACTIONAL_PREMIUM_1_DAY: eS.PREMIUM_TIER_2_1_DAY,
+    FRACTIONAL_PREMIUM: eT.PREMIUM_TIER_2_3_DAY,
+    FRACTIONAL_PREMIUM_1_DAY: eT.PREMIUM_TIER_2_1_DAY,
 }),
-    es.AVATAR_DECORATION,
-    es.NAMEPLATE,
-    es.PROFILE_EFFECT,
-    es.PROFILE_FRAME,
-    es.BUNDLE,
-    eA.RELEVANCE,
-    ea.DESC,
-    eA.RECENCY,
-    ea.DESC,
-    eA.PRICE,
-    ea.ASC,
-    eA.PRICE,
-    ea.DESC,
-    eA.POPULARITY,
-    ea.DESC);
-var eO = (((L = {}).ABOUT = "about"), (L.STORE = "store"), L),
-    eR =
+    ea.AVATAR_DECORATION,
+    ea.NAMEPLATE,
+    ea.PROFILE_EFFECT,
+    ea.PROFILE_FRAME,
+    ea.BUNDLE,
+    eS.RELEVANCE,
+    eA.DESC,
+    eS.RECENCY,
+    eA.DESC,
+    eS.PRICE,
+    eA.ASC,
+    eS.PRICE,
+    eA.DESC,
+    eS.POPULARITY,
+    eA.DESC);
+var eR = (((L = {}).ABOUT = "about"), (L.STORE = "store"), L),
+    eN =
         (((d = {}).GENERAL = "general"),
         (d.IMAGES = "images"),
         (d.PREMIUM_DEPRECATED = "premium"),
         (d.STORE = "store"),
         (d.PRIVACY = "privacy"),
         d);
-let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
-    eu = j(
+let eu = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
+    ec = Q(
         Object.freeze({
             INDEX: "/",
             APP: "/app",
@@ -881,7 +884,7 @@ let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             GLOBAL_DISCOVERY_APPS_CATEGORY: (e) => `/discovery/applications/categories/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
             GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
-            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eO.STORE}/${t}`,
+            GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) => `/discovery/applications/${e}/${eR.STORE}/${t}`,
             GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
             GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
             GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -918,7 +921,7 @@ let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             APPLICATION_DIRECTORY: "/application-directory",
             APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
             APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eR.STORE}/${t}`,
+            APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${eN.STORE}/${t}`,
             APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
             FAMILY_CENTER: "/family-center",
             FAMILY_CENTER_MY_FAMILY: (e, t) => `/feature/family-center/my-family/${e}/${t}`,
@@ -936,7 +939,7 @@ let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             REPORT_SECOND_LOOK: "/report-review",
             COLLECTIBLES_SHOP: "/shop",
             COLLECTIBLES_SHOP_GAME_SHOP: (e, t, E, n) => {
-                let r = `/shop?tab=${eT.GAME_SHOPS}&applicationId=${e}`;
+                let r = `/shop?tab=${eO.GAME_SHOPS}&applicationId=${e}`;
                 return (
                     null != t && (r += `&pageIndex=${t}`),
                     null != E && (r += `&skuId=${E}`),
@@ -965,7 +968,7 @@ let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
         }),
         [":", "?", "@"],
     ),
-    ec = new Set(
+    eL = new Set(
         Object.values(
             (((C = {}).CONJURE = "conjuring"),
             (C.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
@@ -986,9 +989,9 @@ let eN = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             C),
         ),
     );
-function eL(e, t) {
+function ed(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return new x(`:${el()(e)}(${t})${E ? "?" : ""}`);
+    return new j(`:${es()(e)}(${t})${E ? "?" : ""}`);
 }
 (Object.freeze({
     GUILD_FEED_REMOVED: 1,
@@ -1019,74 +1022,74 @@ function eL(e, t) {
         (p.LINKED_ROLES = "linked-roles"),
         p),
     ));
-let ed = {
+let eC = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = eN.map(el()).join("|");
-        return eL(e, `${E}|\\d+`, { optional: t });
+            E = eu.map(es()).join("|");
+        return ed(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...ec].map(el()).join("|");
-        return eL(e, `${E}|\\d+`, { optional: t });
+            E = [...eL].map(es()).join("|");
+        return ed(e, `${E}|\\d+`, { optional: t });
     },
 };
-var eC = E(806163);
-let ep = new Set([
-    eu.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
-    eu.APP_WITH_GIFT_CODE(":giftCode"),
-    eu.APP,
-    eu.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-    eu.SETTINGS(":section", ":subsection?"),
-    eu.USER_GUILD_NOTIFICATION_SETTINGS(ed.guildId()),
-    eu.APPLICATION_LIBRARY_INVENTORY,
-    eu.WELCOME(ed.guildId({ optional: !0 }), ed.channelId({ optional: !0 })),
-    eu.GUILD_EVENT_DETAILS(ed.guildId({ optional: !0 }), ":guildEventId"),
-    eu.GUILD_SETTINGS(ed.guildId(), ":section?", ":subsection?"),
-    eu.CHANNEL_THREAD_VIEW(ed.guildId(), ed.channelId(), ":threadId", ":messageId?"),
-    eu.CHANNEL(ed.guildId(), ed.channelId({ optional: !0 }), ":messageId?"),
-    eu.ACTIVITY,
-    eu.ACTIVITIES,
-    eu.ACTIVITIES_HAPPENING_NOW,
-    eu.ACTIVITY_DETAILS(":applicationId"),
-    eu.APPLICATION_LIBRARY,
-    eu.APPLICATION_STORE,
-    eu.MESSAGE_REQUESTS,
-    eu.COLLECTIBLES_SHOP,
-    eu.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
-    eu.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-    eu.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
-    eu.GUILD_DISCOVERY,
-    eu.QUEST_HOME_DEPRECATED,
-    eu.QUEST_HOME,
-    eu.ICYMI,
-    eu.GLOBAL_DISCOVERY,
-    eu.GUILD_MEMBER_VERIFICATION(ed.guildId()),
-    eu.GUILD_MEMBER_VERIFICATION_FOR_HUB(ed.guildId(), ":inviteCode?"),
-    eu.GUILD_BOOSTING_MARKETING(ed.guildId()),
-    eu.GUILD_FEATURE(":feature", ed.guildId()),
-    eu.FEATURE(":feature"),
-    eu.FAMILY_CENTER,
-    eu.APPLICATION_DIRECTORY,
-    eu.GAME_SHOP(ed.guildId(), ":shopSkuId?", ":shopSlug?"),
+var ep = E(806163);
+let eg = new Set([
+    ec.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
+    ec.APP_WITH_GIFT_CODE(":giftCode"),
+    ec.APP,
+    ec.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+    ec.SETTINGS(":section", ":subsection?"),
+    ec.USER_GUILD_NOTIFICATION_SETTINGS(eC.guildId()),
+    ec.APPLICATION_LIBRARY_INVENTORY,
+    ec.WELCOME(eC.guildId({ optional: !0 }), eC.channelId({ optional: !0 })),
+    ec.GUILD_EVENT_DETAILS(eC.guildId({ optional: !0 }), ":guildEventId"),
+    ec.GUILD_SETTINGS(eC.guildId(), ":section?", ":subsection?"),
+    ec.CHANNEL_THREAD_VIEW(eC.guildId(), eC.channelId(), ":threadId", ":messageId?"),
+    ec.CHANNEL(eC.guildId(), eC.channelId({ optional: !0 }), ":messageId?"),
+    ec.ACTIVITY,
+    ec.ACTIVITIES,
+    ec.ACTIVITIES_HAPPENING_NOW,
+    ec.ACTIVITY_DETAILS(":applicationId"),
+    ec.APPLICATION_LIBRARY,
+    ec.APPLICATION_STORE,
+    ec.MESSAGE_REQUESTS,
+    ec.COLLECTIBLES_SHOP,
+    ec.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
+    ec.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
+    ec.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
+    ec.GUILD_DISCOVERY,
+    ec.QUEST_HOME_DEPRECATED,
+    ec.QUEST_HOME,
+    ec.ICYMI,
+    ec.GLOBAL_DISCOVERY,
+    ec.GUILD_MEMBER_VERIFICATION(eC.guildId()),
+    ec.GUILD_MEMBER_VERIFICATION_FOR_HUB(eC.guildId(), ":inviteCode?"),
+    ec.GUILD_BOOSTING_MARKETING(eC.guildId()),
+    ec.GUILD_FEATURE(":feature", eC.guildId()),
+    ec.FEATURE(":feature"),
+    ec.FAMILY_CENTER,
+    ec.APPLICATION_DIRECTORY,
+    ec.GAME_SHOP(eC.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
 !(function () {
     if (null == window.WebSocket || null == window._ws) return;
     let e =
         ((function () {
-            if (ei) return;
-            ((o = n.get("token")), (er = n.get("tokens") || {}));
-            let { decryptedToken: e, wasEncrypted: t } = e_(o);
-            ((en = t),
+            if (e_) return;
+            ((o = n.get("token")), (ei = n.get("tokens") || {}));
+            let { decryptedToken: e, wasEncrypted: t } = eo(o);
+            ((er = t),
                 (_ = e),
                 [
-                    ...Object.entries(er)
+                    ...Object.entries(ei)
                         .map((e) => {
                             let [t, E] = e,
-                                { decryptedToken: n, wasEncrypted: r } = e_(E);
-                            return ((en = r || en), [t, n]);
+                                { decryptedToken: n, wasEncrypted: r } = eo(E);
+                            return ((er = r || er), [t, n]);
                         })
                         .filter((e) => {
                             let [t, E] = e;
@@ -1096,7 +1099,7 @@ let ep = new Set([
                     let [E, n] = t;
                     return ((e[E] = n), e);
                 }, {}),
-                (ei = !0));
+                (e_ = !0));
         })(),
         _);
     if (null == e || __OVERLAY__) return;
@@ -1109,7 +1112,7 @@ let ep = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of ep) if (null != (0, eC.B6)(e, { path: t })) return !0;
+                for (let t of eg) if (null != (0, ep.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )
@@ -1130,7 +1133,7 @@ let ep = new Set([
         }
         let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
         var o = r({
-            op: eo.IDENTIFY,
+            op: eI.IDENTIFY,
             d: {
                 token: e,
                 capabilities: (function (e) {
