@@ -371,7 +371,6 @@ let l = {
     823: { is_server_arbitrated: !1 },
     825: { is_server_arbitrated: !0 },
     826: { is_server_arbitrated: !0 },
-    827: { is_server_arbitrated: !0 },
     831: { is_server_arbitrated: !0 },
     839: { is_server_arbitrated: !1 },
     840: { is_server_arbitrated: !0 },

@@ -2,7 +2,7 @@ n.d(t, { fY: () => d, ny: () => u, uq: () => c, vc: () => o });
 var i = n(722793);
 let a = n(722793).A,
     r = n(52503),
-    l = n(308932).A,
+    l = n(179657).A,
     s = { enabled: !1, phase: i.H.NONE },
     o = null != a ? a.useConfig : () => s,
     d = null != r ? r.useMacaronPerkCard : () => null,
