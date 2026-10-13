@@ -339,8 +339,8 @@ class eZ extends l.PureComponent {
                                     let { default: t } = await Promise.all([
                                         n.e("463317"),
                                         n.e("926132"),
-                                        n.e("146652"),
                                         n.e("893190"),
+                                        n.e("146652"),
                                         n.e("391763"),
                                         n.e("189673"),
                                         n.e("882073"),
@@ -391,8 +391,8 @@ class eZ extends l.PureComponent {
                                     let { default: t } = await Promise.all([
                                         n.e("463317"),
                                         n.e("926132"),
-                                        n.e("146652"),
                                         n.e("893190"),
+                                        n.e("146652"),
                                         n.e("189673"),
                                         n.e("882073"),
                                         n.e("797558"),

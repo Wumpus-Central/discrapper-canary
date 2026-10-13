@@ -2584,8 +2584,8 @@ let n6 = v.memo(function (e) {
                                 let { default: e } = await Promise.all([
                                     n.e("463317"),
                                     n.e("926132"),
-                                    n.e("146652"),
                                     n.e("893190"),
+                                    n.e("146652"),
                                     n.e("189673"),
                                     n.e("882073"),
                                     n.e("797558"),
@@ -2655,8 +2655,8 @@ let n6 = v.memo(function (e) {
                             (0, g.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("926132"),
-                                    n.e("146652"),
                                     n.e("893190"),
+                                    n.e("146652"),
                                     n.e("955557"),
                                     n.e("343266"),
                                     n.e("309004"),
@@ -2925,8 +2925,8 @@ let ig = v.memo(function (e) {
                             let { default: e } = await Promise.all([
                                 n.e("463317"),
                                 n.e("926132"),
-                                n.e("146652"),
                                 n.e("893190"),
+                                n.e("146652"),
                                 n.e("189673"),
                                 n.e("882073"),
                                 n.e("797558"),

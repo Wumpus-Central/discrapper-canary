@@ -89,8 +89,8 @@ let eu = er.Ay.getEnableHardwareAcceleration(),
                         (0, j.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 t.e("926132"),
-                                t.e("146652"),
                                 t.e("893190"),
+                                t.e("146652"),
                                 t.e("882073"),
                                 t.e("691994"),
                                 t.e("576665"),
@@ -3014,8 +3014,8 @@ function sg(e) {
             let { default: e } = await Promise.all([
                 t.e("463317"),
                 t.e("926132"),
-                t.e("146652"),
                 t.e("893190"),
+                t.e("146652"),
                 t.e("189673"),
                 t.e("882073"),
                 t.e("797558"),
@@ -8468,8 +8468,8 @@ class uW extends s.PureComponent {
                 let { default: e } = await Promise.all([
                     t.e("463317"),
                     t.e("926132"),
-                    t.e("146652"),
                     t.e("893190"),
+                    t.e("146652"),
                     t.e("189673"),
                     t.e("882073"),
                     t.e("797558"),
