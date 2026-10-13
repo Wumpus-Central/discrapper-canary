@@ -11,8 +11,8 @@ var l = n(477900),
     f = n(123292),
     p = n(95477),
     h = n(103557),
-    m = n(709066),
-    g = n(946274),
+    g = n(709066),
+    m = n(946274),
     b = n(240248),
     x = n(951178),
     v = n(535466),
@@ -44,7 +44,7 @@ function S(e) {
     let { iconURL: t, canRemove: n, disabled: a = !1, onChange: r } = e,
         u = i.useRef(null),
         [p, h] = i.useState(null);
-    function m() {
+    function g() {
         a || u.current?.activateUploadDialogue();
     }
     return (0, l.jsxs)(o.B, {
@@ -52,7 +52,7 @@ function S(e) {
         gap: 16,
         align: "center",
         children: [
-            (0, l.jsx)(C, { src: t, label: "", size: "lg", onClick: m, disabled: a }),
+            (0, l.jsx)(C, { src: t, label: "", size: "lg", onClick: g, disabled: a }),
             (0, l.jsxs)(o.B, {
                 gap: 8,
                 align: "start",
@@ -84,7 +84,7 @@ function S(e) {
                                 icon: c.UploadIcon,
                                 text: A.intl.string(null == t ? y.default.WpXHIP : y.default.iwCCor),
                                 "aria-label": null == t ? void 0 : A.intl.string(y.default["75j6Qp"]),
-                                onClick: m,
+                                onClick: g,
                                 disabled: a,
                             }),
                             n
@@ -101,7 +101,7 @@ function S(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(g.Ay, {
+            (0, l.jsx)(m.Ay, {
                 ref: u,
                 className: j.Fg,
                 multiple: !1,
@@ -169,7 +169,7 @@ function k(e) {
                                         lineClamp: 1,
                                         children: n,
                                     }),
-                                    (0, l.jsx)(m.A, {}),
+                                    (0, l.jsx)(g.A, {}),
                                 ],
                             }),
                             (0, l.jsx)(s.E, {

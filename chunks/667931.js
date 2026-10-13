@@ -3,8 +3,8 @@
     H$: () => S,
     IE: () => O,
     JQ: () => a,
-    N5: () => b,
-    Sj: () => y,
+    N5: () => C,
+    Sj: () => T,
     TK: () => d,
     TN: () => E,
     W7: () => m,
@@ -14,7 +14,7 @@
     hB: () => p,
     lQ: () => l,
     lp: () => c,
-    nF: () => T,
+    nF: () => y,
     rQ: () => g,
     vH: () => _,
     wu: () => u,
@@ -110,7 +110,7 @@ function d(e) {
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...b(a),
+                    ...C(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
@@ -132,7 +132,7 @@ function d(e) {
         i = 0.1 * (s.end - s.start);
     return (
         N(s, (e) => {
-            e.significant = C(e) >= i;
+            e.significant = b(e) >= i;
         }),
         s
     );
@@ -156,7 +156,7 @@ function u(e, t) {
                           count: o.reduce((e, t) => e + t.count, 0),
                           start: Math.min(...o.map((e) => e.start)),
                           end: Math.max(...o.map((e) => e.end)),
-                          totalMs: o.reduce((e, t) => e + C(t), 0),
+                          totalMs: o.reduce((e, t) => e + b(t), 0),
                       }),
                     (o = []));
             }
@@ -219,7 +219,7 @@ function m(e) {
         }),
     );
 }
-function T(e) {
+function y(e) {
     let t = e / 6,
         n = 10 ** Math.floor(Math.log10(t)),
         r = [1, 2, 5, 10].map((e) => e * n).find((e) => e >= t) ?? t,
@@ -227,7 +227,7 @@ function T(e) {
     for (let t = 0; t <= e; t += r) s.push(t);
     return s;
 }
-function y(e) {
+function T(e) {
     return null == e
         ? ""
         : Object.entries(e)
@@ -237,13 +237,13 @@ function y(e) {
               })
               .join(" ");
 }
-function C(e) {
+function b(e) {
     return e.count > 1 ? e.totalMs : e.end - e.start;
 }
 function N(e, t) {
     for (let n of (t(e), e.children)) N(n, t);
 }
-function b(e) {
+function C(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         r = (-1 === t ? "" : e.name.slice(t + 1))
@@ -267,7 +267,7 @@ function R(e, t) {
     );
 }
 function w(e) {
-    return `${e.name} ${y(e.attrs)}`;
+    return `${e.name} ${T(e.attrs)}`;
 }
 function k(e) {
     let t = new Map();

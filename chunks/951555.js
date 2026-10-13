@@ -90,7 +90,7 @@ function k(e) {
         if (null == t) throw Error("missing subscription and paymentSource");
         (null == e ? await x.r6(t, n, i, X, a) : await x.uK(t, e, i, X, a), K(!1), q(n));
     }
-    async function J(e, n, i) {
+    async function $(e, n, i) {
         K(!0);
         let s = await (0, O.OQ)({
                 subscriptionId: t.id,
@@ -113,15 +113,15 @@ function k(e) {
               )
             : i(e, s.currency, l);
     }
-    function $(e) {
+    function J(e) {
         ((0, v.c_)(e.id, (0, j.MP)(t)).then(() => {
-            J(e, void 0, Q);
+            $(e, void 0, Q);
         }),
             "function" == typeof n && n(e.id));
     }
     let ee = () => {
         (0, d.openModalLazy)(
-            async () => (e) => (0, i.jsx)(p.default, { ...e, onAddPaymentSource: $, analyticsLocation: a }),
+            async () => (e) => (0, i.jsx)(p.default, { ...e, onAddPaymentSource: J, analyticsLocation: a }),
             {
                 onCloseCallback: () => {
                     (0, h.ET)();
@@ -162,7 +162,7 @@ function k(e) {
                     hidePersonalInformation: k,
                     selectedPaymentSourceId: e,
                     onChange: function (e) {
-                        null != e && J(e, void 0, Q);
+                        null != e && $(e, void 0, Q);
                     },
                     onPaymentSourceAdd: ee,
                     dropdownLoading: W,
@@ -183,7 +183,7 @@ function k(e) {
                                   selectedCurrency: Z,
                                   currencies: a,
                                   onChange: (e) => {
-                                      J(void 0, e, Q);
+                                      $(void 0, e, Q);
                                   },
                               }),
                           }),

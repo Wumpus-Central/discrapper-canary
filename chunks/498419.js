@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -12,9 +13,9 @@
             c,
             u,
             h,
-            d,
-            f,
             p,
+            f,
+            d,
             m,
             g,
             b = {
@@ -36,26 +37,26 @@
             (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
             (f.supported = f.chrome || f.ff || f.opera));
         var y = [];
-        ((h = function () {}), (l = d = !1));
-        var w = {};
-        ((w.ready = function () {
-            ((l = !0), w.reset(), h());
+        ((h = function () {}), (l = p = !1));
+        var v = {};
+        ((v.ready = function () {
+            ((l = !0), v.reset(), h());
         }),
-            (w.reset = function () {
+            (v.reset = function () {
                 l &&
                     ((y = []),
                     (c = !1),
                     (u = !1),
                     i.clearRect(0, 0, a, n),
                     i.drawImage(s, 0, 0, a, n),
-                    _.setIcon(o),
-                    window.clearTimeout(p),
+                    x.setIcon(o),
+                    window.clearTimeout(d),
                     window.clearTimeout(m));
             }),
-            (w.start = function () {
+            (v.start = function () {
                 if (l && !u) {
                     var e = function () {
-                        ((c = y[0]), (u = !1), y.length > 0 && (y.shift(), w.start()));
+                        ((c = y[0]), (u = !1), y.length > 0 && (y.shift(), v.start()));
                     };
                     if (y.length > 0) {
                         u = !0;
@@ -65,7 +66,7 @@
                                     e in y[0].options && (t[e] = y[0].options[e]);
                                 },
                             ),
-                                E.run(
+                                S.run(
                                     y[0].options,
                                     function () {
                                         e();
@@ -74,7 +75,7 @@
                                 ));
                         };
                         c
-                            ? E.run(
+                            ? S.run(
                                   c.options,
                                   function () {
                                       r();
@@ -85,8 +86,8 @@
                     }
                 }
             }));
-        var v = {},
-            M = function (e) {
+        var w = {},
+            _ = function (e) {
                 return (
                     (e.n = "number" == typeof e.n ? Math.abs(0 | e.n) : e.n),
                     (e.x = a * e.x),
@@ -97,18 +98,18 @@
                     e
                 );
             };
-        function x(e) {
-            if (e.paused || e.ended || d) return !1;
+        function M(e) {
+            if (e.paused || e.ended || p) return !1;
             try {
                 (i.clearRect(0, 0, a, n), i.drawImage(e, 0, 0, a, n));
             } catch (e) {}
             ((m = setTimeout(function () {
-                x(e);
-            }, E.duration)),
-                _.setIcon(o));
+                M(e);
+            }, S.duration)),
+                x.setIcon(o));
         }
-        ((v.circle = function (e) {
-            e = M(e);
+        ((w.circle = function (e) {
+            e = _(e);
             var r = !1;
             (2 === e.len
                 ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (r = !0))
@@ -144,8 +145,8 @@
                     : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
                 i.closePath());
         }),
-            (v.rectangle = function (e) {
-                e = M(e);
+            (w.rectangle = function (e) {
+                e = _(e);
                 (2 === e.len
                     ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w))
                     : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)),
@@ -167,7 +168,7 @@
                         : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
                     i.closePath());
             }));
-        var _ = {};
+        var x = {};
         function C(e) {
             e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, r, n) {
                 return t + t + r + r + n + n;
@@ -175,14 +176,14 @@
             var t = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
             return !!t && { r: parseInt(t[1], 16), g: parseInt(t[2], 16), b: parseInt(t[3], 16) };
         }
-        function S(e, t) {
+        function R(e, t) {
             var r,
                 n = {};
             for (r in e) n[r] = e[r];
             for (r in t) n[r] = t[r];
             return n;
         }
-        ((_.getIcon = function () {
+        ((x.getIcon = function () {
             var e = !1;
             return (
                 t.element
@@ -207,7 +208,7 @@
                 e
             );
         }),
-            (_.setIcon = function (e) {
+            (x.setIcon = function (e) {
                 var n = e.toDataURL("image/png");
                 if ((t.dataUrl && t.dataUrl(n), t.element))
                     (t.element.setAttribute("href", n), t.element.setAttribute("src", n));
@@ -225,10 +226,10 @@
                         o.parentNode && o.parentNode.removeChild(o));
                 } else r.setAttribute("href", n);
             }));
-        var E = {};
-        ((E.duration = 40),
-            (E.types = {}),
-            (E.types.fade = [
+        var S = {};
+        ((S.duration = 40),
+            (S.types = {}),
+            (S.types.fade = [
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.2 },
@@ -241,8 +242,8 @@
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (E.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
-            (E.types.pop = [
+            (S.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
+            (S.types.pop = [
                 { x: 1, y: 1, w: 0, h: 0, o: 1 },
                 { x: 0.9, y: 0.9, w: 0.1, h: 0.1, o: 1 },
                 { x: 0.8, y: 0.8, w: 0.2, h: 0.2, o: 1 },
@@ -251,7 +252,7 @@
                 { x: 0.5, y: 0.5, w: 0.5, h: 0.5, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (E.types.popFade = [
+            (S.types.popFade = [
                 { x: 0.75, y: 0.75, w: 0, h: 0, o: 0 },
                 { x: 0.65, y: 0.65, w: 0.1, h: 0.1, o: 0.2 },
                 { x: 0.6, y: 0.6, w: 0.2, h: 0.2, o: 0.4 },
@@ -260,7 +261,7 @@
                 { x: 0.45, y: 0.45, w: 0.5, h: 0.5, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (E.types.slide = [
+            (S.types.slide = [
                 { x: 0.4, y: 1, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
@@ -270,35 +271,35 @@
                 { x: 0.4, y: 0.5, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (E.run = function (e, r, n, a) {
-                var i = E.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : t.animation];
+            (S.run = function (e, r, n, a) {
+                var i = S.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : t.animation];
                 ((a = !0 === n ? (void 0 !== a ? a : i.length - 1) : void 0 !== a ? a : 0),
                 (r = r || function () {}),
                 a < i.length && a >= 0)
-                    ? (v[t.type](S(e, i[a])),
-                      (p = setTimeout(function () {
-                          (n ? (a -= 1) : (a += 1), E.run(e, r, n, a));
-                      }, E.duration)),
-                      _.setIcon(o))
+                    ? (w[t.type](R(e, i[a])),
+                      (d = setTimeout(function () {
+                          (n ? (a -= 1) : (a += 1), S.run(e, r, n, a));
+                      }, S.duration)),
+                      x.setIcon(o))
                     : r();
             }),
-            ((t = S(b, e)).bgColor = C(t.bgColor)),
+            ((t = R(b, e)).bgColor = C(t.bgColor)),
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
-            (t.animation = E.types["" + t.animation] ? t.animation : b.animation),
+            (t.animation = S.types["" + t.animation] ? t.animation : b.animation),
             (g = t.win.document));
-        var R = t.position.indexOf("up") > -1,
+        var E = t.position.indexOf("up") > -1,
             A = t.position.indexOf("left") > -1;
-        if (R || A)
-            for (var P = 0; P < E.types["" + t.animation].length; P++) {
-                var T = E.types["" + t.animation][P];
-                (R && (T.y < 0.6 ? (T.y = T.y - 0.4) : (T.y = T.y - 2 * T.y + (1 - T.w))),
+        if (E || A)
+            for (var P = 0; P < S.types["" + t.animation].length; P++) {
+                var T = S.types["" + t.animation][P];
+                (E && (T.y < 0.6 ? (T.y = T.y - 0.4) : (T.y = T.y - 2 * T.y + (1 - T.w))),
                     A && (T.x < 0.6 ? (T.x = T.x - 0.4) : (T.x = T.x - 2 * T.x + (1 - T.h))),
-                    (E.types["" + t.animation][P] = T));
+                    (S.types["" + t.animation][P] = T));
             }
         return (
-            (t.type = v["" + t.type] ? t.type : b.type),
-            (r = _.getIcon()),
+            (t.type = w["" + t.type] ? t.type : b.type),
+            (r = x.getIcon()),
             (o = document.createElement("canvas")),
             (s = document.createElement("img")),
             r.hasAttribute("href")
@@ -309,7 +310,7 @@
                           (o.height = n),
                           (o.width = a),
                           (i = o.getContext("2d")),
-                          w.ready());
+                          v.ready());
                   }),
                   s.setAttribute("src", r.getAttribute("href")))
                 : ((s.onload = function () {
@@ -320,7 +321,7 @@
                           (o.height = n),
                           (o.width = a),
                           (i = o.getContext("2d")),
-                          w.ready());
+                          v.ready());
                   }),
                   s.setAttribute("src", "")),
             {
@@ -332,9 +333,9 @@
                                     var r = { type: "badge", options: { n: e } };
                                     if (
                                         ("animation" in t &&
-                                            E.types["" + t.animation] &&
+                                            S.types["" + t.animation] &&
                                             (r.options.animation = "" + t.animation),
-                                        "type" in t && v["" + t.type] && (r.options.type = "" + t.type),
+                                        "type" in t && w["" + t.type] && (r.options.type = "" + t.type),
                                         ["bgColor", "textColor"].forEach(function (e) {
                                             e in t && (r.options[e] = C(t[e]));
                                         }),
@@ -345,8 +346,8 @@
                                         y.length > 100)
                                     )
                                         throw Error("Too many badges requests in queue.");
-                                    w.start();
-                                } else w.reset();
+                                    v.start();
+                                } else v.reset();
                             } catch (e) {
                                 throw Error("Error setting badge. Message: " + e.message);
                             }
@@ -357,13 +358,13 @@
                     ((h = function () {
                         try {
                             if ("stop" === e) {
-                                ((d = !0), w.reset(), (d = !1));
+                                ((p = !0), v.reset(), (p = !1));
                                 return;
                             }
                             e.addEventListener(
                                 "play",
                                 function () {
-                                    x(this);
+                                    M(this);
                                 },
                                 !1,
                             );
@@ -382,7 +383,7 @@
                                 l = t / a < r / n ? t / a : r / n;
                             (s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
-                                    (i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), _.setIcon(o));
+                                    (i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), x.setIcon(o));
                                 }),
                                 s.setAttribute("src", e.getAttribute("src")),
                                 (s.height = r / l),
@@ -412,7 +413,7 @@
                             (h = function () {
                                 try {
                                     if ("stop" === e) {
-                                        ((d = !0), w.reset(), (d = !1));
+                                        ((p = !0), v.reset(), (p = !1));
                                         return;
                                     }
                                     (((t = document.createElement("video")).width = a),
@@ -420,7 +421,7 @@
                                         navigator.getUserMedia(
                                             { video: !0, audio: !1 },
                                             function (e) {
-                                                ((t.src = URL.createObjectURL(e)), t.play(), x(t));
+                                                ((t.src = URL.createObjectURL(e)), t.play(), M(t));
                                             },
                                             function () {},
                                         ));
@@ -431,7 +432,7 @@
                             l && h());
                     }
                 },
-                reset: w.reset,
+                reset: v.reset,
                 browser: { supported: f.supported },
             }
         );

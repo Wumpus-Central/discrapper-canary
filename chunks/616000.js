@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => T });
 var r = n(17928),
     s = n(73153),
     o = n(242779);
@@ -55,14 +55,14 @@ class m extends r.Ay.Store {
         return O.get(e)?.find((e) => e.id === t) ?? null;
     }
 }
-function T(e, t, n) {
+function y(e, t, n) {
     let r = f.get(e);
     r?.phase === "restarting" &&
         null != t &&
         t !== r.instanceSince &&
         f.set(e, { phase: "restarted", instanceSince: t, observedAt: n });
 }
-let y = new m(s.h, {
+let T = new m(s.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -184,7 +184,7 @@ let y = new m(s.h, {
                 ? { pending: !1, info: n, error: null, observedAt: o }
                 : { ...l, pending: !1, error: r ?? "No answer", observedAt: o },
         ),
-            T(t, s, o));
+            y(t, s, o));
     },
     CONJURE_DEBUG_INSTANCE_POLL_REQUESTED: function (e) {
         let { projectId: t, requestedAt: n } = e;
@@ -192,7 +192,7 @@ let y = new m(s.h, {
     },
     CONJURE_DEBUG_INSTANCE_SEEN: function (e) {
         let { projectId: t, instanceSince: n, observedAt: r } = e;
-        (_.delete(t), T(t, n, r));
+        (_.delete(t), y(t, n, r));
     },
     CONJURE_RESTART_AGENT_REQUESTED: function (e) {
         let { projectId: t } = e;

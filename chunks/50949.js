@@ -1,16 +1,16 @@
 n.d(t, { z: () => d });
 var i = n(975571),
-    a = n(852218),
-    r = n(164832),
+    r = n(852218),
+    a = n(164832),
     l = n(652215),
-    o = n(762359),
-    s = n(660183);
+    s = n(762359),
+    o = n(660183);
 function d(e) {
-    (0, r.P)({
+    (0, a.P)({
         analyticsLocations: e,
-        partnerIds: [a.NC],
+        partnerIds: [r.NC],
         isLocked: !0,
-        title: s.intl.string(o.default.TDZUui),
-        subtitle: s.intl.format(o.default.BTLkvw, { helpCenterUrl: i.A.getArticleURL(l.MVz.YOUTUBE_PROMOTION) }),
+        title: o.intl.string(s.default.TDZUui),
+        subtitle: o.intl.format(s.default.BTLkvw, { helpCenterUrl: i.A.getArticleURL(l.MVz.YOUTUBE_PROMOTION) }),
     });
 }

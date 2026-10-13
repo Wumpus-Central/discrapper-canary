@@ -1,13 +1,13 @@
 r.d(t, {
-    B6: () => S,
+    B6: () => R,
     Ix: () => b,
     W5: () => I,
     W6: () => P,
     XZ: () => g,
-    dO: () => R,
+    dO: () => E,
     g: () => k,
-    qh: () => E,
-    rd: () => x,
+    qh: () => S,
+    rd: () => M,
     zy: () => T,
 });
 var n = r(750573),
@@ -20,13 +20,13 @@ var n = r(750573),
     u = r(353719),
     h = r.n(u);
 (r(53635), r(725664), r(833871));
-var d = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : void 0 !== r.g ? r.g : {},
+var p = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : void 0 !== r.g ? r.g : {},
     f =
         a.createContext ||
         function (e, t) {
             var r,
                 o,
-                s = "__create-react-context-" + (d.__global_unique_id__ = (d.__global_unique_id__ || 0) + 1) + "__",
+                s = "__create-react-context-" + (p.__global_unique_id__ = (p.__global_unique_id__ || 0) + 1) + "__",
                 l = (function (e) {
                     function r() {
                         for (var t, r, n, a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
@@ -119,12 +119,12 @@ var d = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
             })(a.Component);
             return (((o = {})[s] = i().object), (c.contextTypes = o), { Provider: l, Consumer: c });
         },
-    p = function (e) {
+    d = function (e) {
         var t = f();
         return ((t.displayName = e), t);
     },
-    m = p("Router-History"),
-    g = p("Router"),
+    m = d("Router-History"),
+    g = d("Router"),
     b = (function (e) {
         function t(t) {
             var r;
@@ -198,22 +198,22 @@ var y = (function (e) {
             t
         );
     })(a.Component),
-    w = {},
-    v = 0;
-function M(e, t) {
+    v = {},
+    w = 0;
+function _(e, t) {
     return (
         void 0 === e && (e = "/"),
         void 0 === t && (t = {}),
         "/" === e
             ? e
             : (function (e) {
-                  if (w[e]) return w[e];
+                  if (v[e]) return v[e];
                   var t = h().compile(e);
-                  return (v < 1e4 && ((w[e] = t), v++), t);
+                  return (w < 1e4 && ((v[e] = t), w++), t);
               })(e)(t, { pretty: !0 })
     );
 }
-function x(e) {
+function M(e) {
     var t = e.computedMatch,
         r = e.to,
         n = e.push,
@@ -226,8 +226,8 @@ function x(e) {
             h = (0, s.yJ)(
                 t
                     ? "string" == typeof r
-                        ? M(r, t.params)
-                        : (0, c.A)({}, r, { pathname: M(r.pathname, t.params) })
+                        ? _(r, t.params)
+                        : (0, c.A)({}, r, { pathname: _(r.pathname, t.params) })
                     : r,
             );
         return i
@@ -244,9 +244,9 @@ function x(e) {
               });
     });
 }
-var _ = {},
+var x = {},
     C = 0;
-function S(e, t) {
+function R(e, t) {
     (void 0 === t && (t = {}), ("string" == typeof t || Array.isArray(t)) && (t = { path: t }));
     var r = t,
         n = r.path,
@@ -261,7 +261,7 @@ function S(e, t) {
         if (t) return t;
         var n = (function (e, t) {
                 var r = "" + t.end + t.strict + t.sensitive,
-                    n = _[r] || (_[r] = {});
+                    n = x[r] || (x[r] = {});
                 if (n[e]) return n[e];
                 var a = [],
                     o = { regexp: h()(e, a, t), keys: a };
@@ -272,7 +272,7 @@ function S(e, t) {
             l = a.exec(e);
         if (!l) return null;
         var u = l[0],
-            d = l.slice(1),
+            p = l.slice(1),
             f = e === u;
         return o && !f
             ? null
@@ -281,12 +281,12 @@ function S(e, t) {
                   url: "/" === r && "" === u ? "/" : u,
                   isExact: f,
                   params: i.reduce(function (e, t, r) {
-                      return ((e[t.name] = d[r]), e);
+                      return ((e[t.name] = p[r]), e);
                   }, {}),
               };
     }, null);
 }
-var E = (function (e) {
+var S = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -298,12 +298,12 @@ var E = (function (e) {
                 t || (0, l.A)(!1);
                 var r,
                     n = e.props.location || t.location,
-                    o = e.props.computedMatch ? e.props.computedMatch : e.props.path ? S(n.pathname, e.props) : t.match,
+                    o = e.props.computedMatch ? e.props.computedMatch : e.props.path ? R(n.pathname, e.props) : t.match,
                     i = (0, c.A)({}, t, { location: n, match: o }),
                     s = e.props,
                     u = s.children,
                     h = s.component,
-                    d = s.render;
+                    p = s.render;
                 return (
                     Array.isArray(u) && ((r = u), 0 === a.Children.count(r)) && (u = null),
                     a.createElement(
@@ -316,8 +316,8 @@ var E = (function (e) {
                                     : u
                                 : h
                                   ? a.createElement(h, i)
-                                  : d
-                                    ? d(i)
+                                  : p
+                                    ? p(i)
                                     : null
                             : "function" == typeof u
                               ? u(i)
@@ -330,7 +330,7 @@ var E = (function (e) {
     );
 })(a.Component);
 a.Component;
-var R = (function (e) {
+var E = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -348,7 +348,7 @@ var R = (function (e) {
                             if (null == n && a.isValidElement(e)) {
                                 r = e;
                                 var i = e.props.path || e.props.from;
-                                n = i ? S(o.pathname, (0, c.A)({}, e.props, { path: i })) : t.match;
+                                n = i ? R(o.pathname, (0, c.A)({}, e.props, { path: i })) : t.match;
                             }
                         }),
                         n ? a.cloneElement(r, { location: o, computedMatch: n }) : null
@@ -372,5 +372,5 @@ function k() {
 function I(e) {
     var t = T(),
         r = A(g).match;
-    return e ? S(t.pathname, e) : r;
+    return e ? R(t.pathname, e) : r;
 }

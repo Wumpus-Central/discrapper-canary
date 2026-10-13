@@ -1,6 +1,6 @@
-(n.d(t, { T: () => r, g: () => a }), n(582128));
+(n.d(t, { T: () => a, g: () => r }), n(582128));
 var i,
-    a =
+    r =
         (((i = {})[(i.WHAT_YOU_LOSE = 1)] = "WHAT_YOU_LOSE"),
         (i[(i.CONFIRM = 2)] = "CONFIRM"),
         (i[(i.PREVIEW = 3)] = "PREVIEW"),
@@ -9,7 +9,7 @@ var i,
         (i[(i.PAUSE_SELECT = 6)] = "PAUSE_SELECT"),
         (i[(i.PAUSE_CONFIRM = 7)] = "PAUSE_CONFIRM"),
         i);
-let r = {
+let a = {
     1: "What You're Losing",
     2: "Confirm Cancellation",
     3: "Preview Updated Subscription",

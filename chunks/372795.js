@@ -24,7 +24,7 @@ function u(e) {
         v = r.useRef(null),
         [j, b] = r.useState(!1),
         y = (0, a.A)(),
-        k = r.useCallback(
+        w = r.useCallback(
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
@@ -41,9 +41,9 @@ function u(e) {
             },
             [t, n],
         ),
-        w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        A = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-        N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: A }),
+        k = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
+        A = null == m ? 0 : Math.round(m * Math.min(k, 2)),
+        N = (0, i.KK)(t, n, { fps: u, onFrame: w, enabled: !d && y, width: A }),
         S = (0, i.AV)(t, n),
         C = r.useRef(S);
     (r.useEffect(() => {

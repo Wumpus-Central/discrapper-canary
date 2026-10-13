@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => A, KK: () => N, ZL: () => y });
+n.d(t, { gG: () => b, j_: () => k, EG: () => j, HJ: () => w, AV: () => A, KK: () => N, ZL: () => y });
 var l = n(582128),
     r = n(158390),
     a = n(73153),
@@ -183,7 +183,7 @@ function y(e, t, n) {
     let l = d.get(`${e}:${t}`);
     l?.controlState === "granted" && l.socket?.send(n);
 }
-function k(e, t) {
+function w(e, t) {
     let n = l.useCallback(
         (n) => {
             let l = m(e, t);
@@ -198,7 +198,7 @@ function k(e, t) {
     );
     return l.useSyncExternalStore(n, () => d.get(`${e}:${t}`)?.controlState ?? "off");
 }
-function w(e, t, n) {
+function k(e, t, n) {
     return d.get(`${e}:${t}`)?.lastFrame === n;
 }
 function A(e, t) {
