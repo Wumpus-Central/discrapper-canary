@@ -1,4 +1,4 @@
-n.d(t, { t: () => h });
+n.d(t, { t: () => C });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -11,22 +11,22 @@ var i = n(503698),
     d = n(180522),
     p = n(354972),
     m = n(129068);
-function h(e) {
+function C(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
-            emojiConfetti: h,
-            soundEffect: C,
+            emojiConfetti: C,
+            soundEffect: h,
             setEmojiConfetti: f,
             setSoundEffect: S,
         } = (0, s.Pv)(),
         E = (0, u.lo)(n, t),
         y = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        I = E !== u.tB.DEFAULT;
+        A = E !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            I &&
+            A &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
@@ -49,12 +49,12 @@ function h(e) {
                                 className: r()(m.b7, m.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: C,
+                                        sound: h,
                                         onSelect: function (e) {
                                             null != S && S(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(p.A, { setEmojiConfetti: f, emojiConfetti: null == h ? void 0 : h }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: f, emojiConfetti: null == C ? void 0 : C }),
                                 ],
                             }),
                     ],

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y, CY: () => f, ti: () => C });
+n.d(t, { Ay: () => y, CY: () => f, ti: () => h });
 var l,
     i = n(477900);
 n(582128);
@@ -11,8 +11,8 @@ var r = n(503698),
     d = n(331322),
     p = n(999784),
     m = n(660183),
-    h = n(88045),
-    C =
+    C = n(88045),
+    h =
         (((l = {})[(l.CONTINUE = 0)] = "CONTINUE"),
         (l[(l.UPGRADE = 1)] = "UPGRADE"),
         (l[(l.PURCHASE = 2)] = "PURCHASE"),
@@ -34,7 +34,7 @@ function S(e) {
             type: l,
             disabled: a,
             onClick: u,
-            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: h.C4 }),
+            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: C.C4 }),
             loading: o,
             text: r,
         };
@@ -47,13 +47,13 @@ function E(e) {
             primaryIcon: l,
             primaryCTA: r,
             primaryType: s,
-            primaryText: C,
+            primaryText: h,
             primaryTooltip: f,
             primaryDisabled: E,
             primarySubmitting: y,
-            onPrimary: I,
+            onPrimary: A,
         } = e,
-        A =
+        I =
             null == t
                 ? null
                 : (0, i.jsx)(o.Q, { text: n ?? m.intl.string(m.t["13/7kX"]), onClick: t, variant: "secondary" }),
@@ -66,25 +66,25 @@ function E(e) {
             children: [
                 (0, i.jsx)(p.A, {}),
                 (function () {
-                    if (null == r || null == C) return null;
+                    if (null == r || null == h) return null;
                     let e = {
                         primaryIcon: l,
                         primaryCTA: r,
                         primaryType: s,
-                        primaryText: C,
+                        primaryText: h,
                         primaryDisabled: E,
                         primarySubmitting: y,
-                        onPrimary: I,
+                        onPrimary: A,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(S, { ...e }) })
-                        : (0, i.jsx)(S, { ...e, onPrimary: I });
+                        : (0, i.jsx)(S, { ...e, onPrimary: A });
                 })(),
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == A }), children: [A, g] }),
+        children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == I }), children: [I, g] }),
     });
 }
-E.CTAType = C;
+E.CTAType = h;
 let y = E;

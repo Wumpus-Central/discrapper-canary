@@ -1,4 +1,4 @@
-n.d(t, { E: () => A });
+n.d(t, { E: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(403581),
@@ -10,13 +10,13 @@ var l = n(477900),
     d = n(158045),
     p = n(615396),
     m = n(465657),
-    h = n(463376),
-    C = n(558620),
+    C = n(463376),
+    h = n(558620),
     f = n(504560),
     S = n(652215),
     E = n(583741),
     y = n(660183);
-class I {
+class A {
     isTrial;
     isGift;
     selectedPlan;
@@ -86,14 +86,14 @@ class I {
     };
     resolveInternalState = (e, t) => ({ disablePurchase: this.resolveDisabledPurchase(e, t) });
 }
-function A(e) {
-    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: r } = (0, h.i)(),
+function I(e) {
+    let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: r } = (0, C.i)(),
         {
             activeSubscription: p,
             isPremium: S,
             isGift: E,
             checkoutPriceOptions: y,
-            isInOneStepSubscriptionCheckout: A,
+            isInOneStepSubscriptionCheckout: I,
             shouldDisallowPlanSelection: g,
             verifiedTrialId: P,
             effectivePlanGroup: v,
@@ -107,29 +107,29 @@ function A(e) {
             verifiedTrialId: n.getVerifiedTrialId({ trialId: e.trialId }),
             effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
         })),
-        x = (0, C.A)(),
+        x = (0, h.A)(),
         _ = null != e.openInvoiceId,
         T = null == e.initialPlanId && null == e.subscriptionTier,
-        N = i.useMemo(() => !g && (A ? T && S : S), [A, T, S, g]),
+        N = i.useMemo(() => !g && (I ? T && S : S), [I, T, S, g]),
         { claimableRewards: b } = (0, a.Pv)(),
         j = (0, u.px)(x, E, b),
         R = e.handleStepChange,
         O = i.useCallback(
             () =>
-                A
+                I
                     ? void R(s.pn.SKU_SELECT)
                     : n
                       ? void R(s.pn.ADD_PAYMENT_STEPS)
                       : j
                         ? void R(s.pn.SELECT_FREE_SKU)
                         : R(s.pn.PLAN_SELECT),
-            [R, A, j, n],
+            [R, I, j, n],
         ),
         M = (0, d.J$)(y.paymentSourceId),
-        L = (0, h.R)({ hasOpenInvoice: _ ?? !1 }),
+        L = (0, C.R)({ hasOpenInvoice: _ ?? !1 }),
         k = i.useMemo(
             () =>
-                new I({
+                new A({
                     isTrial: t,
                     isGift: E,
                     selectedPlan: x,

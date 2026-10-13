@@ -1,7 +1,7 @@
 s.d(t, { Ir: () => p, h5: () => _, l_: () => E, ou: () => L, pn: () => m, zT: () => A });
 var n,
-    r = s(582128),
-    a = s(913122),
+    a = s(582128),
+    r = s(913122),
     i = s(71804),
     l = s(626584),
     o = s(739508),
@@ -78,14 +78,14 @@ function _(e, t) {
 }
 function L(e) {
     if (null != e) {
-        if (!(e instanceof a.Ey)) throw (d.error(e), (0, o.pM)(e), Error("Unexpected error type"));
+        if (!(e instanceof r.Ey)) throw (d.error(e), (0, o.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
         if (e.hasAddressError()) return "address";
     }
     return null;
 }
 function A(e, t, s) {
-    r.useEffect(() => {
+    a.useEffect(() => {
         null != e && "review" !== e && t !== c.h.WAITING && t !== c.h.COMPLETED && s(c.h.WAITING);
     }, [e, t, s]);
 }

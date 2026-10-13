@@ -17,12 +17,12 @@ function d(e) {
             relocationCountry: d,
             headerBadgePreset: p,
             headerBadgeText: m,
-            headerBadgeIcon: h,
-            headerBadgeVariant: C,
+            headerBadgeIcon: C,
+            headerBadgeVariant: h,
         } = e,
         f = o.intl.string(o.t.q9EGps);
     n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
-    let S = { headerBadgeText: m, headerBadgeIcon: h, headerBadgeVariant: C };
+    let S = { headerBadgeText: m, headerBadgeIcon: C, headerBadgeVariant: h };
     "beta" === p
         ? ((S.headerBadgeText = o.intl.string(o.t.oW0eUd)), (S.headerBadgeVariant = "default"))
         : "trial" === p

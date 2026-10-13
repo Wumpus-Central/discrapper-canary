@@ -50,7 +50,7 @@ var I = n(730215),
         (i[(i.PARENTAL_CONSENT_CONNECTION = 10)] = "PARENTAL_CONSENT_CONNECTION"),
         (i[(i.APP_STORE_PARENTAL_REVOCATION = 11)] = "APP_STORE_PARENTAL_REVOCATION"),
         i);
-let y = {
+let N = {
         EMAIL_VERIFICATION: "email_verification",
         PHONE_VERIFICATION: "phone_verification",
         GENERIC_CALL_TO_ACTION: "generic_call_to_action",
@@ -59,7 +59,7 @@ let y = {
         PARENTAL_CONSENT_CONNECTION: "parental_consent_connection",
         APP_STORE_PARENTAL_REVOCATION: "app_store_parental_revocation",
     },
-    N = new Set(Object.values(y)),
+    y = new Set(Object.values(N)),
     j = new Set([10]),
     R = new Set([11]);
 (S.intl.string(I.default["Qm6K/s"]),
@@ -476,9 +476,9 @@ let eT = {
                 _ = E ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
                 T = E ? A : g.pending_requests.length,
                 b = (0, w.bG)([Q.A], () => Q.A.getLinkCode()),
-                y = (0, w.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
-                N = b ?? g.link_code,
-                j = y ?? Date.parse(g.link_code_expires_at),
+                N = (0, w.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
+                y = b ?? g.link_code,
+                j = N ?? Date.parse(g.link_code_expires_at),
                 R = r.useCallback(async () => {
                     try {
                         await o({ type: M.Empty });
@@ -523,7 +523,7 @@ let eT = {
                                     direction: "vertical",
                                     align: "center",
                                     gap: 16,
-                                    children: (0, a.jsx)(ei.r, { linkCode: N, expiresAt: j, onRefresh: p }),
+                                    children: (0, a.jsx)(ei.r, { linkCode: y, expiresAt: j, onRefresh: p }),
                                 }),
                             (0, a.jsx)("div", {
                                 hidden: V,
@@ -630,14 +630,14 @@ let eT = {
     };
 var eS = n(754302),
     eb = n(700265);
-let ey = {
+let eN = {
         [b.EMAIL_VERIFICATION]: S.intl.string(I.default.HC4IiR),
         [b.REFRESH_APP]: S.intl.string(I.default.SzfxQ3),
         [b.AGE_VERIFICATION]: S.intl.string(I.default["dSkE/A"]),
         [b.PARENTAL_CONSENT_CONNECTION]: S.intl.string(I.default.dMMSA0),
         [b.APP_STORE_PARENTAL_REVOCATION]: S.intl.string(I.default.Z87TFb),
     },
-    eN = function () {
+    ey = function () {
         let { task: e } = T(),
             t = e.flow_context.tasks,
             n = t.findIndex((t) => t.task_type === e.task_type),
@@ -666,7 +666,7 @@ let ey = {
                                     (0, a.jsx)(
                                         eS.B,
                                         {
-                                            title: ey[e.task_type] ?? "",
+                                            title: eN[e.task_type] ?? "",
                                             listType: "numbered",
                                             index: t,
                                             color: t === n ? "text-strong" : t < n ? "feedback-positive" : "text-muted",
@@ -700,7 +700,7 @@ function eM(e) {
     let u = j.has(s.task_type);
     return (0, a.jsxs)(_.Provider, {
         value: d,
-        children: [!u && (0, a.jsx)(eN, {}), (0, a.jsx)(eI, { onSubmit: n, disabled: i, transitionState: l })],
+        children: [!u && (0, a.jsx)(ey, {}), (0, a.jsx)(eI, { onSubmit: n, disabled: i, transitionState: l })],
     });
 }
 let eO = function (e) {
@@ -714,13 +714,13 @@ let eO = function (e) {
             try {
                 let e = await E();
                 if (null == e) return void n();
-                !(0, g.uJ)(e.ui_component?.component.type) && N.has(e.ui_component.component.type)
+                !(0, g.uJ)(e.ui_component?.component.type) && y.has(e.ui_component.component.type)
                     ? l(e)
                     : l({
                           task_id: e.task_id,
                           task_type: b.REFRESH_APP,
                           assignment_id: e.assignment_id,
-                          ui_component: { component: { type: y.REFRESH_APP, data: {} } },
+                          ui_component: { component: { type: N.REFRESH_APP, data: {} } },
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {

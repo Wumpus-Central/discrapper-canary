@@ -1,4 +1,4 @@
-n.d(t, { EB: () => C, T3: () => f });
+n.d(t, { EB: () => h, T3: () => f });
 var l = n(477900),
     i = n(582128),
     r = n(17928),
@@ -10,15 +10,15 @@ var l = n(477900),
     d = n(504560),
     p = n(67480),
     m = n(951305),
-    h = n(652215);
-function C(e) {
+    C = n(652215);
+function h(e) {
     let {
             skuId: t,
             paymentSourceType: n = null,
             purchaseButtonText: i,
             isGift: o,
             checkoutLegalType: m = c.I0.GiftGameShop,
-            hasSeparateAccountLinkNotice: C = !1,
+            hasSeparateAccountLinkNotice: h = !1,
         } = e,
         { immediateDelivery: f } = (0, u.U)(),
         S = (function (e) {
@@ -33,9 +33,9 @@ function C(e) {
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                 })),
                 m = (0, r.bG)([p.A], () => p.A.get(t), [t]),
-                C = m?.productLine,
+                h = m?.productLine,
                 f = m?.applicationId,
-                S = (0, r.bG)([s.A], () => (C === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, C]),
+                S = (0, r.bG)([s.A], () => (h === C.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(f) : null), [f, h]),
                 { fetched: E, hasAlreadyLinked: y } = (0, a.RD)(S);
             return {
                 type: l,
@@ -44,7 +44,7 @@ function C(e) {
                 applicationId: f,
                 shouldAppendDisclaimer: i || (E && (o ? y : !y)),
             };
-        })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: m, hasSeparateAccountLinkNotice: C });
+        })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: m, hasSeparateAccountLinkNotice: h });
     return (0, l.jsx)(c._P, { variant: S, paymentSourceType: n, immediateDelivery: f });
 }
 function f(e) {

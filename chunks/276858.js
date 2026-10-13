@@ -10,14 +10,14 @@ var l = n(477900),
     d = n(550238),
     p = n(648335),
     m = n(211528),
-    h = n(504560),
-    C = n(783327),
+    C = n(504560),
+    h = n(783327),
     f = n(38405),
     S = n(240248),
     E = n(166532),
     y = n(676230),
-    I = n(818348),
-    A = n(400400);
+    A = n(818348),
+    I = n(400400);
 let g = [E.pn.PAYMENT_ELEMENT],
     P = [
         E.pn.PAYPAL_INFORMATION,
@@ -37,8 +37,8 @@ function x(e) {
             stripeElementsRef: c,
             paymentElementSelectedType: d,
             paymentMethodOrder: p,
-            addressElementKey: h,
-            analyticsContext: C,
+            addressElementKey: C,
+            analyticsContext: h,
             paymentElementFooter: f,
         } = e,
         S = (0, r.useElements)();
@@ -65,13 +65,13 @@ function x(e) {
             }
         }, [d]);
     return (0, l.jsxs)("div", {
-        className: s()(A.kL, { [A.rf]: !_ }),
+        className: s()(I.kL, { [I.rf]: !_ }),
         children: [
             (0, l.jsxs)("div", {
-                className: s()(v ? A.RK : [A.R, A.$u], {
-                    [A.df]: null == d,
-                    [A._m]: d === I.he.CARD,
-                    [A.JD]: d === I.he.PAYPAL,
+                className: s()(v ? I.RK : [I.R, I.$u], {
+                    [I.df]: null == d,
+                    [I._m]: d === A.he.CARD,
+                    [I.JD]: d === A.he.PAYPAL,
                 }),
                 children: [
                     (0, l.jsx)(m.Wf, {
@@ -79,16 +79,16 @@ function x(e) {
                         paymentMethodOrder: p,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
-                        analyticsContext: C,
+                        analyticsContext: h,
                     }),
                     v && f,
                 ],
             }),
             (0, l.jsx)("div", {
-                className: s()(A.K_, x ? A.RK : [A.R, A.vg]),
+                className: s()(I.K_, x ? I.RK : [I.R, I.vg]),
                 children: (0, l.jsx)(m.KS, {
                     ...u,
-                    internalKey: h,
+                    internalKey: C,
                     renderAsStandaloneElement: T,
                     billingAddressInfo: n,
                 }),
@@ -98,7 +98,7 @@ function x(e) {
 }
 function _() {
     return (0, l.jsx)("div", {
-        className: s()(A.kL, A.rf, A.g4),
+        className: s()(I.kL, I.rf, I.g4),
         children: (0, l.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS }),
     });
 }
@@ -111,7 +111,7 @@ function T(e) {
             customPaymentMethodIdsToSourceTypes: o,
             paymentMethodOrder: u,
         } = (0, c.p)({ onSetupError: t }),
-        d = (0, C.S)();
+        d = (0, h.S)();
     return a || null != s || null == d
         ? (0, l.jsx)(_, {})
         : (0, l.jsx)(r.Elements, {
@@ -131,11 +131,11 @@ function b(e) {
             continueSessionToInitialStep: o,
         } = e,
         c = i.useRef(null),
-        C = i.useRef(null),
-        [y, A] = i.useState(!1),
+        h = i.useRef(null),
+        [y, I] = i.useState(!1),
         [g, P] = i.useState(!1),
         x = o === E.pn.CREDIT_CARD_INFORMATION || o === E.pn.PAYMENT_ELEMENT,
-        [_, T] = i.useState(x ? I.he.CARD : null),
+        [_, T] = i.useState(x ? A.he.CARD : null),
         [b, j] = i.useState(!1),
         [R, O] = i.useState(void 0),
         M = (function (e) {
@@ -146,14 +146,14 @@ function b(e) {
             O(Date.now().toString());
         }, []);
     i.useEffect(() => {
-        t === E.pn.PAYMENT_ELEMENT && (C.current = null);
+        t === E.pn.PAYMENT_ELEMENT && (h.current = null);
     }, [t]);
-    let k = (0, h.t4)((e) => e.linkWalletEnabled),
+    let k = (0, C.t4)((e) => e.linkWalletEnabled),
         w = i.useMemo(() => (k ? N : N.filter((e) => "link" !== e)), [k]),
         D = i.useMemo(
             () => ({
                 onChange: (e, t) => {
-                    (s && null != l && l.log("PaymentElements onChange event:", e), A(e.complete), T(t));
+                    (s && null != l && l.log("PaymentElements onChange event:", e), I(e.complete), T(t));
                 },
                 onReady: () => {
                     P(!0);
@@ -259,7 +259,7 @@ function b(e) {
         stripePaymentElementProps: D,
         stripeAddressElementProps: U,
         stripeElementsRef: c,
-        lastConfirmedSetupIntentRef: C,
+        lastConfirmedSetupIntentRef: h,
         paymentElementReady: y,
         paymentElementLoaded: g,
         paymentElementSelectedType: _,

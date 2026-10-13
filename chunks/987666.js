@@ -15,8 +15,8 @@ function c(e) {
             discriminatedInvoicePreview: d,
             overrideRenewalDate: p,
             fractionalPremiumInfo: m,
-            isInvoiceBilledImmediately: h = !0,
-            unifiedLegalType: C,
+            isInvoiceBilledImmediately: C = !0,
+            unifiedLegalType: h,
             discountOffer: f,
             subscriptionTrial: S,
         } = e,
@@ -25,28 +25,28 @@ function c(e) {
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
     if (d.type === a.u$.LOADING) return null;
-    let { invoicePreview: I } = d,
-        A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+    let { invoicePreview: A } = d,
+        I = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? A,
         g = (0, r.de)({
             overrideRenewalDate: p,
-            currentInvoice: h ? I : void 0,
-            renewalInvoice: A,
+            currentInvoice: C ? A : void 0,
+            renewalInvoice: I,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: m,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(A, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(I, t, {
             discountOffer: f,
             subscriptionTrial: S,
         }),
         x = {
             purchaseButtonText: y,
-            totalDue: h ? I.total : 0,
+            totalDue: C ? A.total : 0,
             renewalPrice: P,
             multiPeriodDiscountAttributes: v,
-            currency: I.currency,
+            currency: A.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
             startDate: g,
         };
-    return (0, l.jsx)(o._P, { variant: { type: C, ...x }, paymentSourceType: n, immediateDelivery: E });
+    return (0, l.jsx)(o._P, { variant: { type: h, ...x }, paymentSourceType: n, immediateDelivery: E });
 }

@@ -11,8 +11,8 @@ var r = n(17928),
     d = n(287809),
     p = n(660183),
     m = n(634090),
-    h = n(626768),
-    C = n(464896),
+    C = n(626768),
+    h = n(464896),
     f = (((l = {})[(l.SHOP_PAGE = 0)] = "SHOP_PAGE"), (l[(l.GIFT_MODAL = 1)] = "GIFT_MODAL"), l);
 let S = function (e) {
     let { onRetry: t, errorOrigin: n, errorMessage: l } = e,
@@ -26,7 +26,7 @@ let S = function (e) {
     return (0, i.jsxs)("div", {
         className: E,
         children: [
-            (0, i.jsx)("img", { className: m.__invalid_loadIssueImg, src: (0, a.M)(f) ? h : C, alt: "" }),
+            (0, i.jsx)("img", { className: m.__invalid_loadIssueImg, src: (0, a.M)(f) ? C : h, alt: "" }),
             (0, i.jsx)(s.D, { className: m.st, variant: "heading-xl/semibold", children: p.intl.string(p.t.i5SQ74) }),
             (0, i.jsx)(o.E, { className: m.h_, variant: "text-md/normal", children: y }),
             S && null != l && (0, i.jsx)(o.E, { variant: "text-md/normal", children: "staff-only debug: " + l }),

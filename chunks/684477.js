@@ -14,27 +14,27 @@ function p(e) {
             layout: n,
             renderStepBody: p,
             renderLeftColumn: m,
-            renderRightColumn: h,
-            renderBottomContent: C,
+            renderRightColumn: C,
+            renderBottomContent: h,
             primaryCTAButtonProps: f,
             onBackClick: S,
         } = e,
         { hasPaymentSources: E } = (0, u.j)(),
         y = E ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
-        I = i.useCallback(() => t(y), [t, y]),
-        A = i.useMemo(
+        A = i.useCallback(() => t(y), [t, y]),
+        I = i.useMemo(
             () =>
                 n === s.X.CUSTOM_STEP_BODY
                     ? p()
                     : (0, l.jsxs)(l.Fragment, {
-                          children: [(0, l.jsxs)("div", { className: d.D, children: [m(), h()] }), null != C && C()],
+                          children: [(0, l.jsxs)("div", { className: d.D, children: [m(), C()] }), null != h && h()],
                       }),
-            [n, p, m, h, C],
+            [n, p, m, C, h],
         ),
-        g = i.useMemo(() => ({ ...f, onClick: I, text: c.intl.string(c.t.XiOHRX) }), [f, I]);
+        g = i.useMemo(() => ({ ...f, onClick: A, text: c.intl.string(c.t.XiOHRX) }), [f, A]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.dZ, { children: A }),
+            (0, l.jsx)(a.dZ, { children: I }),
             (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: S, primaryCTAButtonProps: g }) }),
         ],
     });

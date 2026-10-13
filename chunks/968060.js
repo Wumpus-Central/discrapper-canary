@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,27 +10,27 @@ var l = n(477900),
     d = n(479909),
     p = n(915089),
     m = n(95701),
-    h = n(202541),
-    C = n(652215),
+    C = n(202541),
+    h = n(652215),
     f = n(660183),
     S = n(540796);
-let E = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
+let E = (0, m.createChannelRecord)({ id: "1", type: h.rbe.DM }),
     y = (0, p.Ld)();
-function I(e) {
+function A(e) {
     let {
             label: t = f.intl.string(f.t.B3miE8),
             onTextChange: n,
             pendingText: r,
             currentText: p,
             className: m,
-            innerClassName: C,
-            disableThemedBackground: I = !1,
+            innerClassName: h,
+            disableThemedBackground: A = !1,
         } = e,
-        [A, g] = i.useState(r ?? p),
-        [P, v] = i.useState((0, c.x7)(A)),
+        [I, g] = i.useState(r ?? p),
+        [P, v] = i.useState((0, c.x7)(I)),
         x = i.useRef(!1);
     function _(e, t, l) {
-        t !== A && (g(t), v(l), n(t));
+        t !== I && (g(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -57,12 +57,12 @@ function I(e) {
                             (0, l.jsx)(d.Ay, {
                                 "aria-describedby": `${e.describedById} ${y}`,
                                 "aria-labelledby": e.labelId,
-                                innerClassName: a()(S.Tg, C),
+                                innerClassName: a()(S.Tg, h),
                                 editorClassName: S.OT,
-                                maxCharacterCount: h.Jo,
+                                maxCharacterCount: C.Jo,
                                 onChange: _,
                                 channel: E,
-                                textValue: A,
+                                textValue: I,
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
@@ -73,9 +73,9 @@ function I(e) {
                                 },
                                 focused: x.current,
                                 onSubmit: T,
-                                disableThemedBackground: I,
+                                disableThemedBackground: A,
                             }),
-                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
+                            (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: C.Jo }) }),
                         ],
                     }),
             }),

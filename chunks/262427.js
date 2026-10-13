@@ -46,12 +46,12 @@ function c(e) {
         customGraphic: d,
         className: p,
         textVariant: m = "text-sm/medium",
-        textColor: h = "currentColor",
+        textColor: C = "currentColor",
     } = e;
     return (0, l.jsx)(u, {
         className: r()(o.Cu, p),
         gradientColor: n,
         ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
-        children: (0, l.jsx)(s.E, { variant: m, color: h, className: o.Ct, children: t }),
+        children: (0, l.jsx)(s.E, { variant: m, color: C, className: o.Ct, children: t }),
     });
 }

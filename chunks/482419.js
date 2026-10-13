@@ -16,8 +16,8 @@ function c(e) {
             isCustomGift: p,
         } = e,
         { invoicePreview: m } = t,
-        h = [];
-    h =
+        C = [];
+    C =
         t.type === a.u$.PREMIUM_GIFT
             ? (0, i.fk)(m, { isCustomGift: p, isPrepaidPaymentSource: d, subscriptionPlan: n })
             : (0, i.IY)(m, {
@@ -26,13 +26,13 @@ function c(e) {
                   subscriptionPlan: n,
                   subscriptionTrial: c,
               }).lineItems;
-    let C = (0, r.lp)(m, { manualLineItems: h, includeTaxLineItem: !0 }),
+    let h = (0, r.lp)(m, { manualLineItems: C, includeTaxLineItem: !0 }),
         f = (0, r.Dn)(m);
     return (
-        null != f && C.push(f),
+        null != f && h.push(f),
         (0, l.jsx)(s.Vm, {
             label: u.intl.string(o.default.eoXh7B),
-            lineItems: C,
+            lineItems: h,
             currency: m.currency,
             defaultExpanded: null != f,
         })

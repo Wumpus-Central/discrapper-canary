@@ -1,7 +1,7 @@
 n.d(t, { ON: () => c, P3: () => f, Sw: () => g, ij: () => u, zE: () => m });
 var i,
-    r,
-    a = n(158045),
+    a,
+    r = n(158045),
     l = n(202541),
     s = n(652215),
     o = n(660183);
@@ -17,7 +17,7 @@ function u(e, t) {
         return e?.isPremiumGroupMember() === !0
             ? { isEligible: !0, reason: null }
             : { isEligible: !1, reason: "no_subscription" };
-    let n = (0, a.EL)(t);
+    let n = (0, r.EL)(t);
     if (null == n || l.hd[n.planId]?.premiumType !== l.PremiumTypes.TIER_2)
         return { isEligible: !1, reason: "not_tier_2_subscription" };
     let i = t.status === s.Dmq.PAUSED && e?.isFractionalPremium() === !0;
@@ -27,7 +27,7 @@ function u(e, t) {
             : { isEligible: !0, reason: null }
         : { isEligible: !1, reason: "subscription_status_not_allowed" };
 }
-var m = (((r = {}).CAN_CLAIM = "CAN_CLAIM"), (r.BLOCK_CLAIM = "BLOCKED"), (r.UPSELL = "UPSELL"), r);
+var m = (((a = {}).CAN_CLAIM = "CAN_CLAIM"), (a.BLOCK_CLAIM = "BLOCKED"), (a.UPSELL = "UPSELL"), a);
 function f(e) {
     switch (e) {
         case null:
