@@ -482,8 +482,8 @@ function m(e) {
         N = (0, a.tA)({ isGift: !0, giftRecipient: n }),
         k = h && null != n,
         j = I && null == n,
-        x = k || j,
-        y = N && null != n;
+        y = k || j,
+        x = N && null != n;
     return {
         openGiftModal: i.useCallback(() => {
             null != A
@@ -497,7 +497,7 @@ function m(e) {
                       giftMessage: p,
                   })
                 : T
-                  ? y
+                  ? x
                       ? s({
                             giftRecipient: n,
                             analyticsLocations: t,
@@ -528,7 +528,7 @@ function m(e) {
                             giftMessage: p,
                             giftingOrigin: f.vQ.GUILD_CHANNEL,
                         })
-                      : y && null != n
+                      : x && null != n
                         ? s({
                               giftRecipient: n,
                               analyticsLocations: t,
@@ -545,8 +545,8 @@ function m(e) {
                               analyticsObject: u ?? r,
                               giftMessage: p,
                           });
-        }, [T, k, j, y, n, t, m, r, o, u, p, A]),
-        shouldShowWishlistModal: y,
-        shouldShowGiftSelectionModal: x,
+        }, [T, k, j, x, n, t, m, r, o, u, p, A]),
+        shouldShowWishlistModal: x,
+        shouldShowGiftSelectionModal: y,
     };
 }

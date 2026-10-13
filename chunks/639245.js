@@ -24,8 +24,8 @@ var i = n(477900),
     C = n(702841),
     S = n(71393),
     O = n(236285),
-    T = n(770335),
-    y = n(624793),
+    y = n(770335),
+    T = n(624793),
     k = n(652215),
     P = n(731383),
     _ = n(548118),
@@ -202,7 +202,7 @@ function en(e) {
                         (e = O.Ay),
                         (n = S.A),
                         (i = null != t ? e.getCustomEmojiById(t) : null),
-                        i?.type === T.i.GUILD
+                        i?.type === y.i.GUILD
                             ? { emoji: i, joinedEmojiSourceGuildRecord: n.getGuild(i?.guildId) }
                             : { emoji: null, joinedEmojiSourceGuildRecord: null }
                     );
@@ -212,7 +212,7 @@ function en(e) {
                 o = (!r || a) && null != t,
                 [c, d] = s.useState(o),
                 [u, m] = s.useState(null),
-                x = null != i ? y.GO.createFromGuildRecord(i) : null,
+                x = null != i ? T.GO.createFromGuildRecord(i) : null,
                 [h, j] = s.useState(x),
                 [g, p] = s.useState(null),
                 I = s.useRef(n);
@@ -222,13 +222,13 @@ function en(e) {
                 }),
                 s.useEffect(() => {
                     async function e() {
-                        let e = null != t ? await (0, y.g_)(t) : null;
+                        let e = null != t ? await (0, T.g_)(t) : null;
                         if (null != e)
                             switch ((m(e.type), e.type)) {
-                                case y.rV.APPLICATION:
+                                case T.rV.APPLICATION:
                                     p(e.application);
                                     break;
-                                case y.rV.GUILD:
+                                case T.rV.GUILD:
                                     j(e.guild);
                             }
                         (d(!1), I.current?.());
@@ -276,7 +276,7 @@ function ei(e) {
             closePopout: C,
             onToggleShowMoreEmojis: S,
             guildEmoji: O,
-            demoMode: T = !1,
+            demoMode: y = !1,
             nonce: _,
         } = e,
         G = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
@@ -285,7 +285,7 @@ function ei(e) {
         K = null != U && (U === g?.id || U === E?.id),
         H = null != E,
         X = g?.isDiscoverable() ?? !1;
-    T && ((z = !0), (X = !0), (H = !1), (K = !1));
+    y && ((z = !0), (X = !0), (H = !1), (K = !1));
     let ee = {
             page: null != (0, o.bG)([J.A], () => J.A.getGuildId()) ? k.liQ.GUILD_CHANNEL : k.liQ.DM_CHANNEL,
             section: k.JJy.EMOJI_UPSELL_POPOUT,
@@ -344,7 +344,7 @@ function ei(e) {
             popoutData: ec,
             emojiSourceGuildId: g?.id,
             nonce: _,
-            demoMode: T,
+            demoMode: y,
         }),
         ex = ec.type === W.u.JOIN_GUILD,
         eh = ec.type === W.u.GET_PREMIUM,
@@ -355,7 +355,7 @@ function ei(e) {
         children: [
             (function () {
                 async function e() {
-                    if (T || null == g || H) return;
+                    if (y || null == g || H) return;
                     C();
                     let e = g.id;
                     try {
@@ -450,7 +450,7 @@ function ei(e) {
                             children: H ? q.intl.string(q.t.ohTzZH) : q.intl.string(q.t["eLfh+a"]),
                         }),
                         (0, i.jsx)(et, {
-                            expressionSourceGuild: g ?? y.GO.createFromGuildRecord(E),
+                            expressionSourceGuild: g ?? T.GO.createFromGuildRecord(E),
                             hasJoinedExpressionSourceGuild: H,
                             isDisplayingJoinGuildButtonInPopout: ex,
                             closePopout: C,
@@ -464,7 +464,7 @@ function ei(e) {
                                             n &&
                                                 (S?.(),
                                                 ej ||
-                                                    T ||
+                                                    y ||
                                                     V.default.track(k.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, em),
                                                 eg(!ej));
                                         },

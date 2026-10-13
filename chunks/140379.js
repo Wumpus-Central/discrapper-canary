@@ -5,7 +5,7 @@ e.exports = {
     cY: "checkUndraw__714a9",
     nj: "checkboxOption__714a9",
     YK: "spacing__714a9",
-    GA: "labeled__714a9 " + r(736541)["text-md/normal"],
+    GA: "labeled__714a9 " + a(736541)["text-md/normal"],
     Gu: "withLeadingIcon__714a9",
     fb: "checkboxIndicator__714a9",
     Ho: "checkStroke__714a9",

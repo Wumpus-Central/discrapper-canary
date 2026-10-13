@@ -2,7 +2,7 @@ i.d(t, {
     Wp: () => v,
     pj: () => C,
     cq: () => I,
-    Jr: () => M,
+    Jr: () => y,
     hU: () => P,
     as: () => L,
     e_: () => G,
@@ -10,7 +10,7 @@ i.d(t, {
     jL: () => b,
     K: () => S,
     tT: () => R,
-    dk: () => y,
+    dk: () => M,
     z9: () => x,
     Kz: () => O,
     Ce: () => U,
@@ -326,7 +326,7 @@ function G(e, t, i) {
         oldFormErrors: !0,
     });
 }
-function M(e) {
+function y(e) {
     return n.Bo.get({ url: A.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             r.h.dispatch({
@@ -336,7 +336,7 @@ function M(e) {
         },
     );
 }
-function y() {
+function M() {
     return n.Bo.get({ url: A.Rsh.GAME_SERVER_MY_REGIONS, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             r.h.dispatch({

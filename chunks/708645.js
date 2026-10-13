@@ -1,4 +1,4 @@
-n.d(t, { ZQ: () => f, sn: () => o, uh: () => c });
+n.d(t, { ZQ: () => m, sn: () => o, uh: () => c });
 var l = n(477900),
     r = n(582128),
     a = n(17928),
@@ -17,7 +17,7 @@ function y(e) {
         { placement: r } = d.fM.useConfig({ location: t });
     return (0, l.jsx)(u.Provider, { value: r, children: n });
 }
-function f(e) {
+function m(e) {
     let { user: t, guildId: n, location: r, children: d } = e,
         u = (0, a.bG)([i.default], () => i.default.getId() === t.id),
         c = (0, s.A)({ userId: t.id, guildId: n });

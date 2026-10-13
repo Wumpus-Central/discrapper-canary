@@ -74,7 +74,7 @@ function v(e) {
             (0, c.TA)(t.application_id).catch(() => {});
     }, [p, t.application_id]);
     let x = p?.name ?? f.intl.string(f.t.cgPbaZ),
-        { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: _, fetched: y } = (0, s.RD)(p),
+        { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: y, fetched: _ } = (0, s.RD)(p),
         N = (0, l.jsx)(u.A, { game: p, size: u.M.MEDIUM }),
         E = i.useCallback(() => {
             (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
@@ -83,20 +83,20 @@ function v(e) {
                 application_id: t.application_id ?? void 0,
                 location: h,
             }),
-                _({ analyticsLocations: g }));
-        }, [_, n, t.application_id, h, g]);
+                y({ analyticsLocations: g }));
+        }, [y, n, t.application_id, h, g]);
     return (0, l.jsx)(j, {
         displayName: x,
         description: t.description,
         icon: N,
-        isLoading: !y,
+        isLoading: !_,
         isConnected: A,
         canConnect: v,
         onConnect: E,
     });
 }
-var _ = n(462887),
-    y = n(173936),
+var y = n(462887),
+    _ = n(173936),
     N = n(736653),
     E = n(573648),
     w = n(456647);
@@ -154,10 +154,10 @@ function I(e) {
         x = i.useMemo(() => {
             if (null != t.provider_id) {
                 let e = E.A.get(t.provider_id),
-                    n = e?.icon != null ? ((0, _.M)(o) ? e.icon.darkPNG : e.icon.lightPNG) : null;
+                    n = e?.icon != null ? ((0, y.M)(o) ? e.icon.darkPNG : e.icon.lightPNG) : null;
                 if (null != n) return (0, l.jsx)("img", { src: n, alt: s, width: 40, height: 40 });
             }
-            return (0, l.jsx)(y.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
+            return (0, l.jsx)(_.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
         }, [t.provider_id, o, s]);
     return (0, l.jsx)(j, {
         displayName: s,

@@ -5,8 +5,8 @@ var r = a(582128),
     o = a(736056),
     s = a(815996),
     i = a(590180),
-    d = a(295811),
-    c = a(651162),
+    c = a(295811),
+    d = a(651162),
     u = a(652215),
     m = a(758836);
 function p(e, t, a) {
@@ -14,15 +14,15 @@ function p(e, t, a) {
         g = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         h = (0, n.bG)([o.A], () => o.A.hasLoadedExperiments),
         v = (0, n.bG)([i.A], () => i.A.skipNumCategories),
-        [x, b, f, y, S, C, w, E] = (0, n.yK)([d.A], () => [
-            d.A.getShopBlocks(e),
-            d.A.getLastSuccessfulFetch(e) ?? 0,
-            d.A.getLastErrorTimestamp(e) ?? 0,
-            d.A.getLastFetchOptions(e),
-            d.A.getFetchShopHomeError(e),
-            d.A.getIsFetchingShopHome(e),
-            d.A.getHasKnownStaleData(e),
-            d.A.getShopHomeConfigOverride(),
+        [x, f, b, y, S, C, w, E] = (0, n.yK)([c.A], () => [
+            c.A.getShopBlocks(e),
+            c.A.getLastSuccessfulFetch(e) ?? 0,
+            c.A.getLastErrorTimestamp(e) ?? 0,
+            c.A.getLastFetchOptions(e),
+            c.A.getFetchShopHomeError(e),
+            c.A.getIsFetchingShopHome(e),
+            c.A.getHasKnownStaleData(e),
+            c.A.getShopHomeConfigOverride(),
         ]),
         A = (0, r.useMemo)(
             () => ({
@@ -45,9 +45,9 @@ function p(e, t, a) {
                             ((r = null),
                             e.forEach((e) => {
                                 let t = null;
-                                (e.type === c.g.IMMERSIVE_BANNER
+                                (e.type === d.g.IMMERSIVE_BANNER
                                     ? (t = null != e.endTime ? e.endTime.getTime() : null)
-                                    : e.type === c.g.COUNTDOWN_TIMER && (t = e.endTime.getTime()),
+                                    : e.type === d.g.COUNTDOWN_TIMER && (t = e.endTime.getTime()),
                                     (null == r || (null != t && t < r)) && (r = t));
                             }),
                             r);
@@ -66,13 +66,13 @@ function p(e, t, a) {
                 l
             );
         })(x, C ?? !1, p),
-        j = (0, r.useMemo)(() => !I && Date.now() - b < m.i0, [b, I]);
+        j = (0, r.useMemo)(() => !I && Date.now() - f < m.i0, [f, I]);
     return (
         (0, r.useEffect)(() => {
             if (g || !h || C) return;
-            let t = Date.now() - f < m.Zq;
+            let t = Date.now() - b < m.Zq;
             (null != S && t) || ((k || !j || w) && (0, s.h$)(e, A, a));
-        }, [g, h, C, S, f, j, w, k, A, e, a]),
+        }, [g, h, C, S, b, j, w, k, A, e, a]),
         {
             isFetchingShopHome: C,
             fetchShopHomeError: S,
