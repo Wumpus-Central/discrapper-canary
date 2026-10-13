@@ -1,0 +1,233 @@
+.chat_a1865b {
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 var(--space-16)
+}
+
+.menu_a1865b {
+    box-shadow: none;
+    max-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.menu_a1865b .menuLabel_a1865b {
+    overflow-wrap: anywhere;
+    white-space: normal
+}
+
+.menuTarget_a1865b {
+    display: grid
+}
+
+.menuTarget_a1865b>* {
+    grid-area: 1/1
+}
+
+.hoverBar_a1865b {
+    margin-top: var(--space-8);
+    margin-inline-end: var(--space-16);
+    z-index: 1
+}
+
+.hoverBar_a1865b,
+.menuAnchor_a1865b {
+    align-self: start;
+    justify-self: end
+}
+
+.menuAnchor_a1865b {
+    margin-top: var(--space-12);
+    margin-inline-end: calc(var(--space-16) + 44px);
+    max-width: calc(100% - var(--space-16) - 44px);
+    z-index: 2
+}
+
+.clickedUsername_a1865b {
+    text-decoration: underline
+}
+
+.userMenuAnchor_a1865b {
+    align-self: start;
+    justify-self: start;
+    margin-top: calc(var(--space-16) + var(--space-24));
+    margin-inline-start: var(--custom-message-margin-left-content-cozy);
+    max-width: calc(100% - var(--custom-message-margin-left-content-cozy));
+    z-index: 2
+}
+
+.menuAppIcon_a1865b {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px
+}
+
+.thumb__5573f {
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+    width: 72px
+}
+
+.thumbSelected__5573f {
+    border-color: var(--border-strong)
+}
+
+.thumbScale__5573f {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 384px;
+    zoom: .1875;
+    pointer-events: none
+}
+
+.iconTile__5573f {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    color: var(--icon-subtle);
+    display: flex;
+    flex: 0 0 auto;
+    height: var(--space-32);
+    justify-content: center;
+    width: var(--space-32)
+}
+
+.text__5573f {
+    flex-direction: column
+}
+
+.text__5573f,
+.titleLine__5573f {
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.titleLine__5573f {
+    align-items: center
+}
+
+.titleIcon__5573f {
+    color: var(--icon-subtle);
+    flex: 0 0 auto
+}
+
+.chips__5573f {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4)
+}
+
+.chip__5573f {
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-xs);
+    padding: var(--space-4) var(--space-8)
+}
+
+.single__5573f {
+    flex-direction: column
+}
+
+.single__5573f,
+.singleHeader__5573f {
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+.singleHeader__5573f {
+    align-items: flex-start
+}
+
+.navContainer__5573f {
+    container-type: inline-size;
+    min-width: 0
+}
+
+.navLayout__5573f {
+    gap: var(--space-12)
+}
+
+.nav__5573f,
+.navLayout__5573f {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.nav__5573f {
+    gap: var(--space-4)
+}
+
+.navItem__5573f {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-12);
+    min-width: 0;
+    padding: var(--space-8);
+    text-align: start;
+    width: 100%
+}
+
+.navItem__5573f:hover {
+    background: var(--background-mod-subtle)
+}
+
+.navItemSelected__5573f,
+.navItemSelected__5573f:hover {
+    background: var(--background-mod-normal)
+}
+
+.navText__5573f {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.navText__5573f,
+.panel__5573f {
+    min-width: 0
+}
+
+@container (min-width: 720px) {
+    .navLayout__5573f {
+        align-items: start;
+        display: grid;
+        gap: var(--space-16);
+        grid-template-columns: minmax(300px, 2fr) minmax(0, 3fr)
+    }
+
+    .previewFrame__5573f {
+        align-items: flex-start;
+        aspect-ratio: 3/2;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%
+    }
+
+    .previewContent__5573f {
+        flex: 0 0 auto;
+        transform-origin: top center;
+        width: 100%
+    }
+}
+
+/*# sourceMappingURL=354f388b4bbee12f.css.map*/

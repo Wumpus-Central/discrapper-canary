@@ -552,6 +552,26 @@
     max-width: 360px
 }
 
+.full-motion .enter__591a3>* {
+    animation: conjure-quote-enter__591a3 .6s cubic-bezier(.2, .8, .2, 1) both
+}
+
+.full-motion .enter__591a3>:nth-child(2) {
+    animation-delay: .18s
+}
+
+@keyframes conjure-quote-enter__591a3 {
+    0% {
+        opacity: 0;
+        transform: translateY(6px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
 .overlay__0f6b9 {
     align-items: center;
     -webkit-backdrop-filter: blur(20px);
@@ -698,4 +718,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=521ec116d2ce1fb4.css.map*/
+/*# sourceMappingURL=3c5f838cbedab49f.css.map*/

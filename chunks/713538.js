@@ -697,7 +697,7 @@ var _,
         WaveformSlashIcon: () => Oe,
         WebhookIcon: () => Ot.X,
         WebhookPlusIcon: () => On,
-        WidgetsIcon: () => Oi.f,
+        WidgetsIcon: () => Oi,
         WidgetsMinusIcon: () => Or,
         WidgetsPlusIcon: () => Oa.X,
         WidgetsRetryIcon: () => Os,
@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 635995, Version Hash: fe79eac226ba6ed07ffbd5a883768a7fa1c24d26`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 635997, Version Hash: 82d07133afdbbc989d4acd98910d3e31715bbb41`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -4356,8 +4356,7 @@ let a0 = (0, i7.Fe)({
                 n.e("814431"),
                 n.e("759086"),
                 n.e("763214"),
-                n.e("504374"),
-                n.e("190227"),
+                n.e("422037"),
                 n.e("101105"),
                 n.e("263406"),
                 n.e("1955"),
@@ -23234,7 +23233,32 @@ function On(e) {
         ],
     });
 }
-var Oi = n(632015);
+function Oi(e) {
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = r5.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: a = "",
+            ...s
+        } = e,
+        l = (0, hs.J)(t),
+        o = l?.width ?? n,
+        d = l?.height ?? i;
+    return (0, b.jsx)("svg", {
+        ...(0, ha.A)(s),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: o,
+        height: d,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: (0, b.jsx)("path", {
+            fill: "string" == typeof r ? r : r.css,
+            d: "M18.45 1.85a3 3 0 0 0-4.1 1.1l-1.5 2.6a3 3 0 0 0 1.1 4.1l2.6 1.5a3 3 0 0 0 4.1-1.1l1.5-2.6a3 3 0 0 0-1.1-4.1l-2.6-1.5ZM5 2a3 3 0 0 0-3 3v3a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5ZM5 13a3 3 0 0 0-3 3v3a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3v-3a3 3 0 0 0-3-3H5ZM13 16a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3v-3Z",
+            className: a,
+        }),
+    });
+}
 function Or(e) {
     let {
             size: t = "md",
@@ -25929,7 +25953,7 @@ let L9 = "isHideDevBanner",
                     className: t_()(L8.Wz, L8.mr),
                     children: [
                         (0, b.jsx)(L7, { className: L8.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "635995" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "635997" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29326,7 +29350,9 @@ let v6 = (0, t$.Fe)({
                 n.e("58353"),
                 n.e("17256"),
                 n.e("377016"),
-                n.e("190227"),
+                n.e("101979"),
+                n.e("422037"),
+                n.e("491585"),
                 n.e("298480"),
                 n.e("174275"),
                 n.e("831541"),
@@ -29691,8 +29717,8 @@ let v6 = (0, t$.Fe)({
                 n.e("149929"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 770245)),
-        webpackId: 770245,
+            ]).then(n.bind(n, 489795)),
+        webpackId: 489795,
         name: "VibegrationsScreen",
         renderLoader: v3,
     }),
@@ -37985,7 +38011,7 @@ let Uz = (0, i7.Fe)({
                 n.e("113561"),
                 n.e("368991"),
                 n.e("223213"),
-                n.e("190227"),
+                n.e("422037"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("101105"),
@@ -38612,7 +38638,7 @@ let Uz = (0, i7.Fe)({
                 n.e("368991"),
                 n.e("256172"),
                 n.e("223213"),
-                n.e("190227"),
+                n.e("422037"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("101105"),
@@ -39027,7 +39053,7 @@ let Uz = (0, i7.Fe)({
                 n.e("368991"),
                 n.e("256172"),
                 n.e("223213"),
-                n.e("190227"),
+                n.e("422037"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("828849"),
@@ -39405,7 +39431,7 @@ let Uz = (0, i7.Fe)({
                 n.e("113561"),
                 n.e("368991"),
                 n.e("223213"),
-                n.e("190227"),
+                n.e("422037"),
                 n.e("377109"),
                 n.e("656997"),
                 n.e("101105"),
@@ -52277,8 +52303,7 @@ let j$ = (0, t$.Fe)({
             n.e("814431"),
             n.e("759086"),
             n.e("763214"),
-            n.e("504374"),
-            n.e("190227"),
+            n.e("422037"),
             n.e("101105"),
             n.e("263406"),
             n.e("1955"),

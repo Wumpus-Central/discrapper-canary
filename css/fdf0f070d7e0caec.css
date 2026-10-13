@@ -22,6 +22,20 @@
     position: relative
 }
 
+.full-motion .previewPane__26ee5 {
+    animation: conjure-preview-enter__26ee5 .24s ease-out both
+}
+
+@keyframes conjure-preview-enter__26ee5 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .clip__7de94 {
     direction: ltr;
     overflow: hidden;
@@ -332,4 +346,4 @@
     width: 1px
 }
 
-/*# sourceMappingURL=4c0687a005aa3aee.css.map*/
+/*# sourceMappingURL=fdf0f070d7e0caec.css.map*/
