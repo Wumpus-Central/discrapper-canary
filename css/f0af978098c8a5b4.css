@@ -3623,6 +3623,9 @@
     --chip-yellow-medium-text: #733800;
     --collectibles-tab-gradient-center: #6ba8f5;
     --collectibles-tab-gradient-inner: rgba(0, 130, 140, .5);
+    --collectibles-tab-gradient-orange-center: #f25e0c;
+    --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
+    --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
     --collectibles-tab-gradient-outer: rgba(0, 22, 31, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
@@ -4367,6 +4370,9 @@
     --chip-yellow-medium-text: #733800;
     --collectibles-tab-gradient-center: #6ba8f5;
     --collectibles-tab-gradient-inner: rgba(33, 128, 232, .5);
+    --collectibles-tab-gradient-orange-center: #f25e0c;
+    --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
+    --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
     --collectibles-tab-gradient-outer: rgba(97, 43, 176, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
@@ -5111,6 +5117,9 @@
     --chip-yellow-medium-text: #733800;
     --collectibles-tab-gradient-center: #6ba8f5;
     --collectibles-tab-gradient-inner: rgba(33, 128, 232, .5);
+    --collectibles-tab-gradient-orange-center: #f25e0c;
+    --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
+    --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
     --collectibles-tab-gradient-outer: rgba(97, 43, 176, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
@@ -5855,6 +5864,9 @@
     --chip-yellow-medium-text: #733800;
     --collectibles-tab-gradient-center: #6ba8f5;
     --collectibles-tab-gradient-inner: rgba(33, 128, 232, .5);
+    --collectibles-tab-gradient-orange-center: #f25e0c;
+    --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
+    --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
     --collectibles-tab-gradient-outer: rgba(97, 43, 176, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
@@ -6391,4 +6403,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=c8c2cb8bf06509b3.css.map*/
+/*# sourceMappingURL=f0af978098c8a5b4.css.map*/

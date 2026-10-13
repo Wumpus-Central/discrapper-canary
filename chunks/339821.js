@@ -71,6 +71,7 @@ let p = function () {
                                   srcLightHovered: e.buttonBGHoverLight,
                               },
                               showHoverGradient: t.showHoverGradient,
+                              version: t.version,
                           };
                       if (t?.type === a.G.COACHMARK) {
                           let e = t.refTargetBackground;
@@ -111,6 +112,7 @@ let p = function () {
                                     srcLightHovered: e.buttonBGHoverLight,
                                 },
                                 showHoverGradient: t.showHoverGradient,
+                                version: t.version,
                             }
                           : null;
                   })(y, C),
