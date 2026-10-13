@@ -536,6 +536,34 @@ function ea(e) {
                         })(e)
                     );
                 },
+                getWalletLegBalance: () => {
+                    let e = i().checkoutInvoicePreview?.paymentLegs;
+                    if (null == e) return null;
+                    let t = e.find((e) => e.payment_gateway === b.kM_.TDS && null != e.available_balance);
+                    return t?.available_balance ?? null;
+                },
+                getIsSplitPaymentMode: (e) => {
+                    let { splitPaymentsEnabled: t, giftCardsEnabled: n } = e,
+                        r = i();
+                    return (
+                        t && n && null != r.getGiftCardWallet() && r.checkoutInvoicePreview?.applyWalletBalance != null
+                    );
+                },
+                getEffectivePaymentSourceId: (e) => {
+                    let { isSplitPaymentMode: t } = e,
+                        n = i(),
+                        { paymentSourceId: r, pendingPaymentSourceId: a } = n;
+                    if (null != a && r === a) return a;
+                    let s = (function (e) {
+                        let { paymentSourceId: t } = e;
+                        if (null == t) return null;
+                        let n = e.getDropdownPaymentSources().find((e) => e.id === t);
+                        return null != n && n.enabled ? n.id : null;
+                    })(n);
+                    if (t) return s;
+                    let l = n.getGiftCardWallet();
+                    return null != l && l.enabled && r === l.id ? l.id : s;
+                },
             }),
             ...(function (e) {
                 let t = [],

@@ -158,7 +158,10 @@ class l extends s {
             (this.paymentLegs = e.paymentLegs ?? []));
     }
     getWalletAmount() {
-        return this.paymentLegs.reduce((e, t) => (t.payment_gateway === a.kM_.TDS ? e + t.amount : e), 0);
+        return this.paymentLegs.reduce(
+            (e, t) => (t.payment_gateway === a.kM_.TDS ? e + t.amount - (t.amount_short ?? 0) : e),
+            0,
+        );
     }
     getAmountDue() {
         return this.total - this.getWalletAmount();
