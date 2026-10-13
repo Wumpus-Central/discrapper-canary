@@ -1,4 +1,16 @@
-(n.d(t, { r2: () => Y, Hc: () => z, fu: () => K, Bn: () => V, Ay: () => ee, Rw: () => q, P6: () => X, dv: () => F }),
+(n.r(t),
+    n.d(t, {
+        default: () => en,
+        resetHistoryPaging: () => V,
+        closeConnection: () => Z,
+        loadOlderHistory: () => X,
+        stageModelSettings: () => Y,
+        closeAllConnections: () => ee,
+        ensureConnection: () => z,
+        interruptTurn: () => K,
+        sendUserMessage: () => F,
+        subscribeDebugBacklog: () => q,
+    }),
     n(321073));
 var s = n(158390),
     r = n(17928),
@@ -20,8 +32,8 @@ var s = n(158390),
     m = n(962998),
     y = n(525530),
     N = n(743082),
-    T = n(385081),
-    b = n(649162);
+    b = n(385081),
+    T = n(649162);
 class C {
     socket = null;
     open(e) {
@@ -351,7 +363,7 @@ async function x(e, t) {
                             !(function (e, t) {
                                 let { projectId: n } = t;
                                 if ("turn_result" === e.kind) {
-                                    ((0, T.hV)(n, e),
+                                    ((0, b.hV)(n, e),
                                         "deployed" === e.result &&
                                             o.h.dispatch({
                                                 type: "CONJURE_CHAT_TURN_PATCH",
@@ -401,9 +413,9 @@ async function x(e, t) {
             (t.pendingModelSettings = null),
             (0, m.Mz)(e, "Connection failed before the publish result arrived"),
             (0, m.BC)(e, "Connection failed before the draft arrived"),
-            (0, T.Hy)(e, {
+            (0, b.Hy)(e, {
                 location: "connection",
-                code: T.xf.WS_OPEN_FAILED,
+                code: b.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
@@ -450,20 +462,18 @@ function q(e) {
     );
 }
 function $(e) {
-    var t;
-    let n = U.get(e);
+    let t = U.get(e);
     return (
-        null != n &&
-        ((n.disposed = !0),
-        n.backoff.cancel(),
+        null != t &&
+        ((t.disposed = !0),
+        t.backoff.cancel(),
         (0, m.Mz)(e, "Connection closed before the publish result arrived"),
         (0, m.BC)(e, "Connection closed before the draft arrived"),
-        n.ws.close(),
+        t.ws.close(),
         U.delete(e),
         (0, k.ng)(e),
-        (t = e),
-        Q.delete(t),
-        b.A.releasePreviewControl(e),
+        V(e),
+        T.A.releasePreviewControl(e),
         (0, g.RP)(e),
         J(e, "closed"),
         !0)
@@ -535,9 +545,16 @@ function X(e) {
     return null != n && "open" === A.get(e) && (Q.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 function V(e) {
+    Q.delete(e);
+}
+function Z(e) {
     $(e);
 }
-class Z extends r.Ay.Store {
+function ee() {
+    for (let e of Array.from(U.keys())) $(e);
+    (I.clear(), (0, w.j_)());
+}
+class et extends r.Ay.Store {
     initialize() {
         this.waitFor(c.A, p.A, S.Ay, l.default);
     }
@@ -545,7 +562,7 @@ class Z extends r.Ay.Store {
         return A.get(e) ?? "connecting";
     }
 }
-let ee = new Z(o.h, {
+let en = new et(o.h, {
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (A.get(t) === n) return !1;
@@ -562,7 +579,6 @@ let ee = new Z(o.h, {
     },
     LOGOUT: function () {
         if (0 === U.size) return !1;
-        for (let e of Array.from(U.keys())) $(e);
-        (I.clear(), (0, w.j_)());
+        ee();
     },
 });

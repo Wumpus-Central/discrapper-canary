@@ -10,8 +10,8 @@ var n = t(477900),
     o = t(834730),
     g = t(289873),
     p = t(696208),
-    h = t(591277),
-    f = t(557744),
+    f = t(591277),
+    h = t(557744),
     x = t(223347),
     m = t(359589),
     b = t(260498),
@@ -58,8 +58,8 @@ function Q(e) {
             onClose: M,
         } = e,
         z = (0, a.bG)([b.Ay], () => b.Ay.getProject(l), [l]),
-        K = (0, a.bG)([f.A], () => f.A.getModelSettings(l), [l]),
-        O = (0, a.bG)([h.Ay], () => "open" === h.Ay.getConnState(l), [l]),
+        K = (0, a.bG)([h.A], () => h.A.getModelSettings(l), [l]),
+        O = (0, a.bG)([f.default], () => "open" === f.default.getConnState(l), [l]),
         W = null != z && (0, b.PV)(z),
         Y = (function (e, l) {
             var t;
@@ -113,9 +113,9 @@ function Q(e) {
                         commit: o,
                     };
                 })(e),
-                { changes: p, commit: h } = g,
-                f = (0, A.Q)(e),
-                x = f.save,
+                { changes: p, commit: f } = g,
+                h = (0, A.Q)(e),
+                x = h.save,
                 m = r?.collaborator_role_ids ?? [],
                 [j, S] = i.useState(r?.name ?? ""),
                 [v, D] = i.useState(null),
@@ -140,11 +140,11 @@ function Q(e) {
                     ((t = v?.roleIds ?? m),
                     !((s = q instanceof Set ? q : new Set(q)).size === t.length && t.every((e) => s.has(e)))),
                 eg = ed || ec || eo || g.changed,
-                ep = eg || d.changed || f.changed,
-                eh = i.useCallback((e) => {
+                ep = eg || d.changed || h.changed,
+                ef = i.useCallback((e) => {
                     (Q(e), K(null), $(null));
                 }, []),
-                ef = i.useCallback((e, l) => {
+                eh = i.useCallback((e, l) => {
                     (V((t) => (l ? t | e : t & ~e)), W(null), $(null));
                 }, []),
                 ex = i.useCallback((e) => {
@@ -167,7 +167,7 @@ function Q(e) {
                     try {
                         if (eg) {
                             if (!(await (0, L.CW)(e, n)).ok) return ($(U.intl.string(J.default["9JPr8h"])), "project");
-                            (S(en), D({ flags: T, roleIds: [...q] }), h());
+                            (S(en), D({ flags: T, roleIds: [...q] }), f());
                         }
                         if (!c()) return ($(U.intl.string(J.default.XzkNBw)), "project");
                         if (!x()) return (el(U.intl.string(J.default["9JPr8h"])), "experimental");
@@ -177,7 +177,7 @@ function Q(e) {
                     } finally {
                         M(!1);
                     }
-                }, [T, ec, h, p, c, x, eg, l, ep, er, ed, r, e, eo, X, q, en]);
+                }, [T, ec, f, p, c, x, eg, l, ep, er, ed, r, e, eo, X, q, en]);
             return {
                 fields: (0, n.jsxs)(C.B, {
                     gap: 20,
@@ -189,7 +189,7 @@ function Q(e) {
                             },
                             name: H,
                             nameError: z,
-                            onNameChange: eh,
+                            onNameChange: ef,
                             description: g.description,
                             onDescriptionChange: (e) => {
                                 (g.setDescription(e), $(null));
@@ -202,7 +202,7 @@ function Q(e) {
                                   description: U.intl.string(J.default.mD4GBH),
                                   checked: eu,
                                   disabled: X,
-                                  onChange: (e) => ef(Z.Zh.SHAREABLE, e),
+                                  onChange: (e) => eh(Z.Zh.SHAREABLE, e),
                               })
                             : null,
                         ei && ea
@@ -211,7 +211,7 @@ function Q(e) {
                                   description: U.intl.string(J.default.SQZGoV),
                                   checked: er,
                                   disabled: X,
-                                  onChange: (e) => ef(Z.Zh.PUBLIC, e),
+                                  onChange: (e) => eh(Z.Zh.PUBLIC, e),
                               })
                             : null,
                         d.available
@@ -290,10 +290,10 @@ function Q(e) {
                         (0, n.jsx)(k.d, {
                             label: U.intl.string(J.default["4liZ45"]),
                             description: U.intl.string(J.default.I5cl7p),
-                            checked: f.checked,
+                            checked: h.checked,
                             disabled: X,
                             onChange: (e) => {
-                                (f.setChecked(e), el(null));
+                                (h.setChecked(e), el(null));
                             },
                         }),
                         null != ee
@@ -328,10 +328,10 @@ function Q(e) {
                 W && t.push("experimental"));
             let i = [$, x].find((e) => null != e && t.includes(e)) ?? t[0],
                 a = e.isScoped,
-                h = Y.saving || e.saving,
-                f = e.canSave || (!a && Y.canSave);
+                f = Y.saving || e.saving,
+                h = e.canSave || (!a && Y.canSave);
             async function m(n) {
-                if ((n.preventDefault(), !f || h)) return;
+                if ((n.preventDefault(), !h || f)) return;
                 let r = !a && Y.nameChanged,
                     [u, d] = await Promise.all([a ? null : Y.submit(), e.submit()]);
                 if (null == u && d) {
@@ -401,13 +401,13 @@ function Q(e) {
                         (0, n.jsx)(p.H, {
                             actionsFullWidth: !0,
                             actions: [
-                                { text: U.intl.string(U.t["ETE/oC"]), variant: "secondary", onClick: M, disabled: h },
+                                { text: U.intl.string(U.t["ETE/oC"]), variant: "secondary", onClick: M, disabled: f },
                                 {
                                     text: U.intl.string(a ? J.default.A7dQd9 : U.t["R3BPH+"]),
                                     variant: "primary",
                                     type: "submit",
-                                    loading: h,
-                                    disabled: !f,
+                                    loading: f,
+                                    disabled: !h,
                                 },
                             ],
                         }),
@@ -419,7 +419,7 @@ function Q(e) {
 }
 function T(e) {
     let { projectId: l, modelSettings: t, tierSettings: s } = e,
-        r = (0, a.bG)([h.Ay], () => "open" === h.Ay.getConnState(l), [l]),
+        r = (0, a.bG)([f.default], () => "open" === f.default.getConnState(l), [l]),
         u = i.useCallback((e) => (0, x.X)(l, e), [l]),
         [d, c] = (0, m.FT)(s, u);
     return (0, n.jsx)(m.Ay, { settings: d, tiers: t.tiers, choices: t.choices, disabled: !r, onChange: c });

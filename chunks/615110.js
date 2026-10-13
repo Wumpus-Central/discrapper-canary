@@ -1,4 +1,4 @@
-l.d(e, { default: () => v });
+l.d(t, { default: () => v });
 var a = l(477900),
     s = l(582128),
     n = l(189213),
@@ -10,13 +10,13 @@ var a = l(477900),
 (l(323874), l(14289), l(35956));
 var u = l(382541);
 class x extends Error {}
-async function h(t, e) {
-    let { ticket: l, baseUrl: a } = await (0, u.d)(t),
+async function h(e, t) {
+    let { ticket: l, baseUrl: a } = await (0, u.d)(e),
         s = new URLSearchParams({ ticket: l }),
         n = await fetch(`${a}/agent/secrets?${s}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(e),
+            body: JSON.stringify(t),
         });
     if (410 === n.status) throw new x("secret request expired");
     if (!n.ok) throw Error(`secret submission failed (${n.status})`);
@@ -24,35 +24,35 @@ async function h(t, e) {
 var m = l(248675),
     f = l(660183),
     p = l(622344);
-function v(t) {
-    let { projectId: e, request: l, transitionState: u, onClose: v } = t,
+function v(e) {
+    let { projectId: t, request: l, transitionState: u, onClose: v } = e,
         [b, g] = s.useState({}),
         [j, y] = s.useState(!1),
         [w, k] = s.useState(!1),
         [C, E] = s.useState(null),
-        S = s.useCallback((t) => {
-            (0, o.C)(t, () => E(t));
+        S = s.useCallback((e) => {
+            (0, o.C)(e, () => E(e));
         }, []),
-        _ = s.useCallback((t, e) => {
-            null != e && (k(!1), g((l) => ({ ...l, [e]: t })));
+        _ = s.useCallback((e, t) => {
+            null != t && (k(!1), g((l) => ({ ...l, [t]: e })));
         }, []),
-        q = l.fields.map((t) => t.name).filter((t) => "" !== (b[t] ?? "").trim()),
+        q = l.fields.map((e) => e.name).filter((e) => "" !== (b[e] ?? "").trim()),
         N = q.length > 0,
-        O = q.length < l.fields.length,
-        T = s.useCallback(
-            async (t) => {
-                if ((t.preventDefault(), N && !j)) {
+        U = q.length < l.fields.length,
+        M = s.useCallback(
+            async (e) => {
+                if ((e.preventDefault(), N && !j)) {
                     (y(!0), k(!1));
                     try {
-                        (await h(e, {
-                            secrets: Object.fromEntries(q.map((t) => [t, b[t].trim()])),
+                        (await h(t, {
+                            secrets: Object.fromEntries(q.map((e) => [e, b[e].trim()])),
                             ...(null != l.request_id ? { request_id: l.request_id } : {}),
                         }),
-                            (0, c.dv)(e, f.intl.string(O ? m.default.sMQt5O : m.default.UGqnoV)),
+                            (0, c.sendUserMessage)(t, f.intl.string(U ? m.default.sMQt5O : m.default.UGqnoV)),
                             await v());
-                    } catch (t) {
-                        if (t instanceof x) {
-                            ((0, c.dv)(e, f.intl.string(m.default.KVBvVy)), await v());
+                    } catch (e) {
+                        if (e instanceof x) {
+                            ((0, c.sendUserMessage)(t, f.intl.string(m.default.KVBvVy)), await v());
                             return;
                         }
                         k(!0);
@@ -61,10 +61,10 @@ function v(t) {
                     }
                 }
             },
-            [N, q, O, v, e, l.request_id, j, b],
+            [N, q, U, v, t, l.request_id, j, b],
         );
     return (0, a.jsx)("form", {
-        onSubmit: T,
+        onSubmit: M,
         children: (0, a.jsx)(n.a, {
             transitionState: u,
             onClose: v,
@@ -102,7 +102,7 @@ function v(t) {
                     (l.copy_values ?? []).length > 0
                         ? (0, a.jsx)("ul", {
                               className: p.vU,
-                              children: (l.copy_values ?? []).map((t) =>
+                              children: (l.copy_values ?? []).map((e) =>
                                   (0, a.jsxs)(
                                       "li",
                                       {
@@ -115,7 +115,7 @@ function v(t) {
                                                           variant: "text-xs/semibold",
                                                           color: "text-muted",
                                                           tag: "span",
-                                                          children: t.label,
+                                                          children: e.label,
                                                       }),
                                                       (0, a.jsx)("span", {
                                                           className: p.Ml,
@@ -123,7 +123,7 @@ function v(t) {
                                                               variant: "text-xs/normal",
                                                               color: "text-default",
                                                               selectable: !0,
-                                                              children: t.value,
+                                                              children: e.value,
                                                           }),
                                                       }),
                                                   ],
@@ -131,46 +131,46 @@ function v(t) {
                                               (0, a.jsx)(r.$, {
                                                   variant: "secondary",
                                                   size: "sm",
-                                                  text: f.intl.string(C === t.value ? f.t.t5VZ88 : f.t.OpuAlK),
-                                                  onClick: () => S(t.value),
+                                                  text: f.intl.string(C === e.value ? f.t.t5VZ88 : f.t.OpuAlK),
+                                                  onClick: () => S(e.value),
                                               }),
                                           ],
                                       },
-                                      t.label,
+                                      e.label,
                                   ),
                               ),
                           })
                         : null,
-                    l.fields.map((t) =>
+                    l.fields.map((e) =>
                         (0, a.jsxs)(
                             "div",
                             {
                                 className: p.QI,
                                 children: [
                                     (0, a.jsx)(d.k, {
-                                        label: t.label,
-                                        helperText: null != t.hint && "" !== t.hint ? t.hint : void 0,
-                                        name: t.name,
+                                        label: e.label,
+                                        helperText: null != e.hint && "" !== e.hint ? e.hint : void 0,
+                                        name: e.name,
                                         type: "password",
                                         autoComplete: "off",
-                                        value: b[t.name] ?? "",
+                                        value: b[e.name] ?? "",
                                         onChange: _,
                                         disabled: j,
                                         fullWidth: !0,
                                     }),
-                                    (t.hosts ?? []).length > 0
+                                    (e.hosts ?? []).length > 0
                                         ? (0, a.jsx)(i.E, {
                                               variant: "text-xs/normal",
                                               color: "text-muted",
                                               selectable: !0,
                                               children: f.intl.formatToPlainString(m.default.Ww9HFO, {
-                                                  hosts: (t.hosts ?? []).join(", "),
+                                                  hosts: (e.hosts ?? []).join(", "),
                                               }),
                                           })
                                         : null,
                                 ],
                             },
-                            t.name,
+                            e.name,
                         ),
                     ),
                     w

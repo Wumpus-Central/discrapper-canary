@@ -10,8 +10,8 @@ var a = i(477900),
     c = i(371169),
     h = i(246338);
 (i(17928), i(945810), i(71393));
-var f = i(652215),
-    C = i(746080),
+var C = i(652215),
+    f = i(746080),
     g = i(248675),
     p = i(660183);
 function m(t) {
@@ -34,19 +34,19 @@ function m(t) {
             let e = null;
             try {
                 ((e = await (0, c.gA)({ guild_id: y, install_scope: "user" })),
-                    (0, d.Hc)(e),
-                    (0, d.dv)(
+                    (0, d.ensureConnection)(e),
+                    (0, d.sendUserMessage)(
                         e,
                         [
                             "Build a profile card (an application profile widget) for my Discord profile.\nRead the data from the public source below \u2014 it must be reachable without a login.\nRecommend which fields the card should show and ask me to confirm or edit them before you build.\n",
                             t,
                         ].join("\n"),
                     ),
-                    (0, s.pX)(f.BVt.CHANNEL(y, C.VV.CONJURE, e)),
+                    (0, s.pX)(C.BVt.CHANNEL(y, f.VV.CONJURE, e)),
                     V());
             } catch (t) {
                 if (null != e) {
-                    ((0, s.pX)(f.BVt.CHANNEL(y, C.VV.CONJURE, e)), V());
+                    ((0, s.pX)(C.BVt.CHANNEL(y, f.VV.CONJURE, e)), V());
                     return;
                 }
                 v((0, u.mG)(t));

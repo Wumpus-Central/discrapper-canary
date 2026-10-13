@@ -1,68 +1,99 @@
-n.d(t, { Ay: () => N });
+n.d(t, { Ay: () => L });
 var i = n(17928),
-    r = n(73153),
-    a = n(885576),
-    s = n(309010),
-    l = n(967198),
-    o = n(260498),
-    d = n(189117),
-    c = n(652215),
-    u = n(746080);
-let _ = null,
-    E = null,
-    A = null,
-    h = null;
-function f() {
-    null != A && (clearTimeout(A), (A = null));
-}
-function I(e) {
-    let t = d.ZR.filter((t) => t !== e);
-    return t[Math.floor(Math.random() * t.length)];
-}
-function p() {
-    null != h && (clearTimeout(h), (h = null));
-}
+    r = n(636537),
+    a = n(73153),
+    s = n(885576),
+    l = n(309010),
+    o = n(967198),
+    d = n(793480),
+    c = n(260498),
+    u = n(189117),
+    _ = n(652215),
+    E = n(746080);
+let A = null,
+    h = null,
+    f = null,
+    I = null,
+    p = !1;
 function T() {
-    return (f(), p(), (_ = null), null != E && ((E = null), !0));
+    null != f && (clearTimeout(f), (f = null));
 }
 function m(e) {
+    let t = u.ZR.filter((t) => t !== e);
+    return t[Math.floor(Math.random() * t.length)];
+}
+function g() {
+    null != I && (clearTimeout(I), (I = null));
+}
+function S() {
+    return (T(), g(), (A = null), null != h && ((h = null), !0));
+}
+function N(e) {
     let { withGracePeriod: t } = e;
-    if (a.A.isIdle() || (null != _ && null == o.Ay.getProject(_))) return T();
+    if (s.A.isIdle() || (null != A && null == c.Ay.getProject(A))) return S();
     let n = (function () {
-        if (s.Ay.getChannelId() !== u.VV.CONJURE) return null;
-        let e = l.A.getGuildId();
+        if (l.Ay.getChannelId() !== E.VV.CONJURE) return null;
+        let e = o.A.getGuildId();
         if (null == e) return null;
-        let t = o.Ay.getSelectedProjectId(e);
-        return null == t || null == o.Ay.getProject(t) ? null : t;
+        let t = c.Ay.getSelectedProjectId(e);
+        return null == t || null == c.Ay.getProject(t) ? null : t;
     })();
     return null == n
-        ? null != E && t
-            ? (null == A &&
-                  (A = setTimeout(() => {
-                      ((A = null), T() && S.emitChange());
+        ? null != h && t
+            ? (null == f &&
+                  (f = setTimeout(() => {
+                      ((f = null), S() && R.emitChange());
                   }, 3e4)),
               !1)
-            : T()
-        : (f(),
-          (n !== _ || null == E) &&
-              ((_ = n),
-              (E = { type: c.$pd.PLAYING, name: d.Vb, details: I(), timestamps: { start: Date.now() } }),
+            : S()
+        : (T(),
+          (n !== A || null == h) &&
+              ((A = n),
+              (h = { type: _.$pd.PLAYING, name: u.Vb, details: m(), timestamps: { start: Date.now() } }),
               !(function e() {
-                  (p(),
-                      (h = setTimeout(() => {
-                          ((h = null), null != E && ((E = { ...E, details: I(E.details) }), e(), S.emitChange()));
+                  (g(),
+                      (I = setTimeout(() => {
+                          ((I = null), null != h && ((h = { ...h, details: m(h.details) }), e(), R.emitChange()));
                       }, 3e5)));
               })(),
               !0));
 }
-class g extends i.Ay.Store {
+async function C() {
+    if (!p && ((p = !0), (0, d.zN)("conjure_resume")))
+        try {
+            let [{ body: e }, { ensureConnection: t }] = await Promise.all([
+                r.Bo.get({ url: _.Rsh.CONJURE_PROJECTS, rejectWithError: !0 }),
+                Promise.all([
+                    n.e("661008"),
+                    n.e("265696"),
+                    n.e("718556"),
+                    n.e("356664"),
+                    n.e("399624"),
+                    n.e("722440"),
+                    n.e("337341"),
+                    n.e("552094"),
+                    n.e("736621"),
+                ]).then(n.bind(n, 591277)),
+            ]);
+            e.filter((e) => !0 === e.running)
+                .slice(0, 5)
+                .forEach((e) => t(e.id));
+        } catch {
+            p = !1;
+        }
+}
+class O extends i.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
-        this.syncWith([a.A, s.Ay, l.A, o.Ay], () => m({ withGracePeriod: !0 }));
+        this.syncWith([s.A, l.Ay, o.A, c.Ay], () => N({ withGracePeriod: !0 }));
     }
     getActivity() {
-        return E;
+        return h;
     }
 }
-let S = new g(r.h, { CONNECTION_OPEN: () => m({ withGracePeriod: !1 }), LOGOUT: T }),
-    N = S;
+let R = new O(a.h, {
+        CONNECTION_OPEN: () => N({ withGracePeriod: !1 }),
+        POST_CONNECTION_OPEN: () => (C(), !1),
+        LOGOUT: () => ((p = !1), S()),
+    }),
+    L = R;

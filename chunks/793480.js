@@ -1,4 +1,4 @@
-n.d(t, { L0: () => d, OC: () => c, TW: () => u, m0: () => o });
+n.d(t, { L0: () => d, OC: () => c, TW: () => _, m0: () => o, zN: () => u });
 var i = n(17928),
     r = n(945810),
     a = n(71393),
@@ -22,5 +22,10 @@ function c(e, t) {
     return !1;
 }
 function u(e) {
+    for (let t of Object.values(a.A.getGuilds()))
+        if (l.getConfig({ guildId: t.id, location: e }, { autoTrackExposure: !1 }).enabled) return !0;
+    return !1;
+}
+function _(e) {
     return (0, i.bG)([a.A, r.Bt], () => c(Object.values(a.A.getGuilds()), e), [e]);
 }

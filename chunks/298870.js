@@ -53,9 +53,9 @@ async function N(e, t) {
 var A = n(248675),
     C = n(660183);
 async function S(e, t, n) {
-    (0, x.Hc)(e);
+    (0, x.ensureConnection)(e);
     let l = await (0, p.vX)(e, t);
-    (0, x.dv)(e, n, [l]);
+    (0, x.sendUserMessage)(e, n, [l]);
 }
 function E(e) {
     let t = "" === e.type ? "application/octet-stream" : e.type;
@@ -2980,7 +2980,7 @@ function rC(e, t) {
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = rx(e, "chat"),
         a = r.length > 0 && r.every((e) => "ready" === e.status) ? rA(e, "chat") : [];
-    (0, x.dv)(e, t, [...l, ...a], { clarificationAnswers: n });
+    (0, x.sendUserMessage)(e, t, [...l, ...a], { clarificationAnswers: n });
 }
 function rS(e, t) {
     let [n, l] = i.useState(null),
@@ -8898,7 +8898,7 @@ let ua = i.memo(function (e) {
                 nearBottom: e.scrollHeight - e.clientHeight - e.scrollTop < 600,
                 pinned: g.current,
             });
-            "older" === n ? (0, x.P6)(t) : null != n && $(n);
+            "older" === n ? (0, x.loadOlderHistory)(t) : null != n && $(n);
         }, [h, g, t]);
     i.useImperativeHandle(
         j,
@@ -8931,7 +8931,7 @@ let ua = i.memo(function (e) {
                 }
                 let a = z.current.findIndex((t) => "user" === t.kind && t.message.id === e);
                 if (-1 === a) {
-                    (0, x.P6)(t) && (K.current = e);
+                    (0, x.loadOlderHistory)(t) && (K.current = e);
                     return;
                 }
                 (v(),
@@ -9551,7 +9551,7 @@ function uC(e) {
         l,
         { projectId: r, restoreState: s, onRestoreVersion: u, onImportProject: c } = e,
         d = (0, o.bG)([e0.A], () => e0.A.getMessages(r), [r]),
-        m = (0, o.bG)([x.Ay], () => x.Ay.getConnState(r), [r]),
+        m = (0, o.bG)([x.default], () => x.default.getConnState(r), [r]),
         h = (0, o.bG)([e0.A], () => e0.A.getProjectUsage(r), [r]),
         g = (0, o.bG)([e0.A], () => e0.A.getThinkingActivity(r), [r]),
         v = (0, o.bG)([e0.A], () => e0.A.isCompacting(r), [r]),
@@ -9655,7 +9655,7 @@ function uC(e) {
         return (r.observe(e), null != t && r.observe(t), () => r.disconnect());
     }, [N]),
         i.useEffect(() => {
-            (0, x.Hc)(r);
+            (0, x.ensureConnection)(r);
         }, [r]),
         (0, rW.E1)(r));
     let O = nI(r),
@@ -9686,7 +9686,7 @@ function uC(e) {
         z = (0, o.bG)([rG.A], () => rG.A.getSetupStartedAt(r), [r]),
         q = i.useCallback(
             (e, t) => {
-                (0, x.dv)(r, e, t);
+                (0, x.sendUserMessage)(r, e, t);
             },
             [r],
         ),
@@ -9729,7 +9729,7 @@ function uC(e) {
             },
             [O, q, r],
         ),
-        U = i.useCallback(() => (0, x.fu)(r), [r]),
+        U = i.useCallback(() => (0, x.interruptTurn)(r), [r]),
         B = i.useCallback((e) => rC(r, e.implementation_prompt), [r]),
         [V, K] = (function (e) {
             let [t, n] = i.useState(() => r3(e)),
@@ -12361,7 +12361,7 @@ function ds(e) {
         m = i.useCallback(() => {
             ((0, uI.R7)(t), (0, uI.DK)(t));
         }, [t]);
-    (i.useEffect(() => m(), [m]), i.useEffect(() => (0, x.Rw)(t), [t]));
+    (i.useEffect(() => m(), [m]), i.useEffect(() => (0, x.subscribeDebugBacklog)(t), [t]));
     let f = i.useCallback(() => {
         if (!l) return !1;
         let e = (function (e) {
@@ -13023,7 +13023,7 @@ function dS(e) {
                 null == u ||
                     null == F ||
                     ((nf(F.draft) || (e?.length ?? 0) !== 0) &&
-                        ((0, x.dv)(
+                        ((0, x.sendUserMessage)(
                             u,
                             (function (e, t) {
                                 let { kind: n, name: l } = nh(e),
@@ -14171,7 +14171,7 @@ function mP(e) {
                     return () => clearTimeout(e);
                 }, [n]));
             let s = i.useCallback(() => {
-                null != e && (l(!0), (0, x.fu)(e));
+                null != e && (l(!0), (0, x.interruptTurn)(e));
             }, [e]);
             return { stop: t ? s : null, stopping: n };
         })(n),
@@ -14675,7 +14675,7 @@ function m2(e) {
         }, [l, I]),
         i.useEffect(() => {
             null != t &&
-                ((0, x.Hc)(t),
+                ((0, x.ensureConnection)(t),
                 mz ||
                     ((mz = !0),
                     e0.A.addChangeListener(mq),
@@ -15203,11 +15203,11 @@ function m3(e) {
         eE = i.useCallback(() => j(!1), []),
         eI = i.useCallback(() => {
             var e, t;
-            (null != c && ((e = c.id), (t = eh?.id), (0, x.Bn)(e), (0, nV.r)(t)), f());
+            (null != c && ((e = c.id), (t = eh?.id), (0, x.closeConnection)(e), (0, nV.r)(t)), f());
         }, [c, eh?.id, f]),
         e_ =
             ((r = i.useCallback(() => {
-                null != c && (y(), (0, x.dv)(c.id, C.intl.string(A.default.oU20rd)));
+                null != c && (y(), (0, x.sendUserMessage)(c.id, C.intl.string(A.default.oU20rd)));
             }, [c, y])),
             {
                 onExport: r,
@@ -15574,8 +15574,8 @@ function m9(e) {
     let q = i.useCallback(
             async (e, t, n) => {
                 let l = await (0, U.gA)({ guild_id: t, install_scope: n });
-                ((0, x.Hc)(l),
-                    (0, x.r2)(l, D ?? O),
+                ((0, x.ensureConnection)(l),
+                    (0, x.stageModelSettings)(l, D ?? O),
                     e(l),
                     (0, d.pX)(eW.BVt.CHANNEL(t, eJ.VV.CONJURE, l)),
                     v(""),
@@ -15590,7 +15590,7 @@ function m9(e) {
                 if ("idea" !== n && "submitting" !== n) {
                     (null != e && v(e), y(!0), k(null));
                     try {
-                        await q((e) => (0, x.dv)(e, t), $, L);
+                        await q((e) => (0, x.sendUserMessage)(e, t), $, L);
                     } catch (e) {
                         k((0, M.mG)(e));
                     } finally {
@@ -15608,7 +15608,7 @@ function m9(e) {
                         await q(
                             (t) => {
                                 var n;
-                                (0, x.dv)(
+                                (0, x.sendUserMessage)(
                                     t,
                                     ((n = e.name),
                                     C.intl.formatToPlainString(A.default["0PQip6"], { templateName: n })),
@@ -15631,7 +15631,12 @@ function m9(e) {
         X = i.useCallback(
             async (e, t) => {
                 let n = await (0, U.gA)({ guild_id: t, install_scope: "guild" });
-                return ((0, x.Hc)(n), (0, x.r2)(n, D ?? O), (0, x.dv)(n, (0, H.Wl)(e)), n);
+                return (
+                    (0, x.ensureConnection)(n),
+                    (0, x.stageModelSettings)(n, D ?? O),
+                    (0, x.sendUserMessage)(n, (0, H.Wl)(e)),
+                    n
+                );
             },
             [D],
         ),
@@ -15640,7 +15645,9 @@ function m9(e) {
                 let e = await (0, U.M7)(t, { guild_id: n, preview_guild_id: n });
                 if (!e.ok) throw new M.DS((0, M.hj)(e), e.status);
             }
-            ((0, x.dv)(t, l, void 0, { templateId: e.id }), (0, d.pX)(eW.BVt.CHANNEL(n, eJ.VV.CONJURE, t)), z(null));
+            ((0, x.sendUserMessage)(t, l, void 0, { templateId: e.id }),
+                (0, d.pX)(eW.BVt.CHANNEL(n, eJ.VV.CONJURE, t)),
+                z(null));
         }, []),
         Q = i.useCallback((e) => {
             (0, U.xx)(e).catch(() => void 0);
@@ -15661,8 +15668,8 @@ function m9(e) {
                 let r = null;
                 try {
                     ((r = await (0, U.gA)({ guild_id: n, install_scope: t })),
-                        (0, x.Hc)(r),
-                        (0, x.r2)(r, D ?? O),
+                        (0, x.ensureConnection)(r),
+                        (0, x.stageModelSettings)(r, D ?? O),
                         await S(r, e, C.intl.string(A.default["LUc7/5"])),
                         (0, d.pX)(eW.BVt.CHANNEL(n, eJ.VV.CONJURE, r)),
                         z(null));
