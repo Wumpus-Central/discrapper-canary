@@ -148,15 +148,19 @@
     pointer-events: none
 }
 
+.iconThumb__5573f,
 .iconTile__5573f {
     align-items: center;
-    background: var(--background-mod-normal);
-    border-radius: var(--radius-sm);
     color: var(--icon-subtle);
     display: flex;
+    justify-content: center
+}
+
+.iconTile__5573f {
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
     flex: 0 0 auto;
     height: var(--space-32);
-    justify-content: center;
     width: var(--space-32)
 }
 
@@ -288,4 +292,4 @@
     }
 }
 
-/*# sourceMappingURL=f0ac1e8480a1044b.css.map*/
+/*# sourceMappingURL=f21c3636e6576a8c.css.map*/

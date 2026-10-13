@@ -2,6 +2,7 @@ _.exports = {
     FF: "thumb__5573f",
     IM: "thumbSelected__5573f",
     j8: "thumbScale__5573f",
+    KI: "iconThumb__5573f",
     oL: "iconTile__5573f",
     Qq: "text__5573f",
     Nl: "titleLine__5573f",
