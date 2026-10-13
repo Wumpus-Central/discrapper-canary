@@ -194,8 +194,8 @@ function en(e) {
             emoji: m,
             isFetching: x,
         } = (function (e) {
-            let { emojiId: t, refreshPositionKey: n } = e,
-                { joinedEmojiSourceGuildRecord: i, emoji: l } = (0, C.cf)([O.Ay, S.A], () => {
+            let { emojiId: t, refreshPositionKey: n, skipKnownGuildEmojiFetch: i = !1 } = e,
+                { joinedEmojiSourceGuildRecord: l, emoji: r } = (0, C.cf)([O.Ay, S.A], () => {
                     var e, n;
                     let i;
                     return (
@@ -207,42 +207,42 @@ function en(e) {
                             : { emoji: null, joinedEmojiSourceGuildRecord: null }
                     );
                 }),
-                r = null != i,
-                a = null != i && i.features.has(k.GuildFeatures.DISCOVERABLE),
-                o = (!r || a) && null != t,
-                [c, d] = s.useState(o),
-                [u, m] = s.useState(null),
-                x = null != i ? T.GO.createFromGuildRecord(i) : null,
-                [h, j] = s.useState(x),
-                [g, p] = s.useState(null),
-                I = s.useRef(n);
+                a = null != l,
+                o = null != l && l.features.has(k.GuildFeatures.DISCOVERABLE),
+                c = null != t && !(i && null != r) && (!a || o),
+                [d, u] = s.useState(c),
+                [m, x] = s.useState(null),
+                h = null != l ? T.GO.createFromGuildRecord(l) : null,
+                [j, g] = s.useState(h),
+                [p, I] = s.useState(null),
+                N = s.useRef(n);
             return (
                 s.useEffect(() => {
-                    I.current = n;
+                    N.current = n;
                 }),
                 s.useEffect(() => {
                     async function e() {
                         let e = null != t ? await (0, T.g_)(t) : null;
                         if (null != e)
-                            switch ((m(e.type), e.type)) {
+                            switch ((x(e.type), e.type)) {
                                 case T.rV.APPLICATION:
-                                    p(e.application);
+                                    I(e.application);
                                     break;
                                 case T.rV.GUILD:
-                                    j(e.guild);
+                                    g(e.guild);
                             }
-                        (d(!1), I.current?.());
+                        (u(!1), N.current?.());
                     }
-                    (I.current?.(), o) ? e() : I.current?.();
-                }, [t, o]),
+                    (N.current?.(), c) ? e() : N.current?.();
+                }, [t, c]),
                 {
-                    expressionSourceGuild: h,
-                    expressionSourceApplication: g,
-                    sourceType: u,
-                    joinedEmojiSourceGuildRecord: i,
-                    hasJoinedEmojiSourceGuild: r,
-                    emoji: l,
-                    isFetching: c,
+                    expressionSourceGuild: j,
+                    expressionSourceApplication: p,
+                    sourceType: m,
+                    joinedEmojiSourceGuildRecord: l,
+                    hasJoinedEmojiSourceGuild: a,
+                    emoji: r,
+                    isFetching: d,
                 }
             );
         })({ emojiId: t.emojiId, refreshPositionKey: l });
