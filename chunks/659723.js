@@ -4,7 +4,7 @@ var n = r(477900),
     l = r(17928),
     a = r(245179);
 r(321073);
-var o = r(148087),
+var o = r(218394),
     s = r(725927);
 let u = [6, 8, 10, 12],
     c = 0,
@@ -30,7 +30,7 @@ let m = i.memo(function (e) {
     i.useEffect(() => {
         g.current = r;
     }, [r]);
-    let p = (0, o.A)(),
+    let p = (0, o.j)(),
         v = i.useRef(p),
         b = i.useRef(null);
     (i.useEffect(() => {
@@ -65,8 +65,8 @@ let m = i.memo(function (e) {
                     return e;
                 })(),
                 w = d.home.blob,
-                A = d.home.twink,
-                y = d.home.alpha,
+                y = d.home.twink,
+                A = d.home.alpha,
                 j = u[c],
                 R = [],
                 N = 0,
@@ -151,7 +151,7 @@ let m = i.memo(function (e) {
             function q(e) {
                 var t, n, l;
                 if (i <= 0 || o <= 0) return;
-                (r.clearRect(0, 0, i, o), (r.globalAlpha = y));
+                (r.clearRect(0, 0, i, o), (r.globalAlpha = A));
                 let a = j,
                     u = "right" === g.current,
                     c = u ? o : i,
@@ -178,7 +178,7 @@ let m = i.memo(function (e) {
                             i = (r * r + n * n) / (t.radius * t.radius);
                         g += t.strength * Math.exp(-i) * 0.7;
                     }
-                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * A + l.phase),
+                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * y + l.phase),
                         v = g - (l.threshold + p);
                     1;
                     if (!(v <= -0.1)) {
@@ -244,7 +244,7 @@ let m = i.memo(function (e) {
                     })(t, e));
                 let n = d[m.current] ?? d.home,
                     i = 1 - Math.exp(-r / 80);
-                ((w += (n.blob - w) * i), (A += (n.twink - A) * i), (y += (n.alpha - y) * i));
+                ((w += (n.blob - w) * i), (y += (n.twink - y) * i), (A += (n.alpha - A) * i));
                 let l = 1.5 * w;
                 for (let e = 0; e < M.length; e++) {
                     let t = M[e];
