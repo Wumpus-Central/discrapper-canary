@@ -845,7 +845,29 @@ function tb(e) {
                       a = C || k || i,
                       o = a || T,
                       h = !u && o,
-                      I = (0, l.jsx)("div", {
+                      I = (0, l.jsxs)(l.Fragment, {
+                          children: [
+                              (0, l.jsxs)("div", {
+                                  className: tA.rf,
+                                  children: [
+                                      (0, l.jsx)(y.E, {
+                                          variant: "text-md/medium",
+                                          color: "text-default",
+                                          lineClamp: 1,
+                                          children: (0, l.jsx)(tf.A, {
+                                              userName: t.name,
+                                              displayNameStyles: L,
+                                              effectDisplayType: o ? th.G.ANIMATED : th.G.PLAIN,
+                                              loop: !0,
+                                          }),
+                                      }),
+                                      (0, l.jsx)(tP, { subtitle: d }),
+                                  ],
+                              }),
+                              !h && (0, l.jsx)(tR, { row: t, sectionType: s }),
+                          ],
+                      }),
+                      A = (0, l.jsx)("div", {
                           className: r()(tA.kL, { [tA.vu]: o }),
                           onMouseOver: () => {
                               C || (v(!0), p());
@@ -887,24 +909,7 @@ function tb(e) {
                                                   "aria-hidden": !0,
                                                   className: tA.LY,
                                               }),
-                                              (0, l.jsxs)("div", {
-                                                  className: tA.rf,
-                                                  children: [
-                                                      (0, l.jsx)(y.E, {
-                                                          variant: "text-md/medium",
-                                                          color: "text-default",
-                                                          lineClamp: 1,
-                                                          children: (0, l.jsx)(tf.A, {
-                                                              userName: t.name,
-                                                              displayNameStyles: L,
-                                                              effectDisplayType: o ? th.G.ANIMATED : th.G.PLAIN,
-                                                              loop: !0,
-                                                          }),
-                                                      }),
-                                                      (0, l.jsx)(tP, { subtitle: d }),
-                                                  ],
-                                              }),
-                                              !h && (0, l.jsx)(tR, { row: t, sectionType: s }),
+                                              u ? (0, l.jsx)(eZ.A, { children: I }) : I,
                                           ],
                                       }),
                                       !u &&
@@ -926,7 +931,7 @@ function tb(e) {
                                 asContainer: !0,
                                 tag: "div",
                                 ariaHidden: !0,
-                                children: I,
+                                children: A,
                             })
                           : (0, l.jsx)(eQ.u, {
                                 title: t.name,
@@ -935,9 +940,9 @@ function tb(e) {
                                 asContainer: !0,
                                 element: "div",
                                 ariaHidden: !0,
-                                children: I,
+                                children: A,
                             })
-                      : I;
+                      : A;
               },
           });
 }
