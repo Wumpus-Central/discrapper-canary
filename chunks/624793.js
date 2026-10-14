@@ -17,7 +17,22 @@ async function u(e) {
             ? (t = { guild: _.createFromServer(n.guild), type: n.type })
             : n?.type === "APPLICATION"
               ? (t = { application: E.createFromServer(n.application), type: n.type })
-              : n?.type === "PACK" && (t = { type: n.type });
+              : n?.type === "PACK" &&
+                (t = {
+                    type: n.type,
+                    pack:
+                        null != n.pack
+                            ? {
+                                  id: n.pack.id,
+                                  name: n.pack.name,
+                                  previewEmojis: n.pack.preview_emojis.map((e) => ({
+                                      id: e.id,
+                                      name: e.name,
+                                      animated: e.animated,
+                                  })),
+                              }
+                            : null,
+                });
     } catch {}
     return t;
 }
