@@ -68,7 +68,7 @@ function C() {
 var y = n(562073),
     T = n(189213),
     R = n(192308),
-    k = n(588571),
+    k = n(645449),
     D = n(61567),
     w = n(660183),
     L = n(397462);
@@ -143,7 +143,7 @@ function M(e) {
         ],
     });
 }
-function U(e) {
+function G(e) {
     let { title: t, titleIcon: n, accessory: i, trailing: a, actions: s } = e;
     return (0, l.jsxs)("div", {
         className: L.wx,
@@ -163,7 +163,7 @@ function U(e) {
         ],
     });
 }
-function G(e) {
+function U(e) {
     let { title: t, boostPrice: n, powerupSkuId: i, LockedPreview: a, guildId: s } = e,
         d = (0, r.bG)([j.A], () => (null != i ? j.A.getStateForGuild(s)?.allPowerups[i] : void 0), [s, i]);
     return (0, l.jsxs)(m.B, {
@@ -291,7 +291,7 @@ function P(e) {
                       onEdit: x,
                       onRemove: r,
                   })
-                : (0, l.jsx)(U, {
+                : (0, l.jsx)(G, {
                       title: C,
                       titleIcon: b,
                       accessory: N,
@@ -302,7 +302,7 @@ function P(e) {
                 className: L.rf,
                 children:
                     null != u
-                        ? (0, l.jsx)(G, {
+                        ? (0, l.jsx)(U, {
                               title: S,
                               boostPrice: u.boostPrice,
                               powerupSkuId: u.powerupSkuId,
