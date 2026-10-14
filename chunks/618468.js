@@ -115,7 +115,6 @@ class M extends C.G {
             { no: 1, name: "type", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Rule.Type", v] },
             { no: 2, name: "filters", kind: "message", repeat: 1, T: () => x },
             { no: 3, name: "override", kind: "message", T: () => w },
-            { no: 4, name: "is_sunset_rule", kind: "scalar", T: 8 },
             {
                 no: 5,
                 name: "subtype",
@@ -127,7 +126,7 @@ class M extends C.G {
         ]);
     }
     create(e) {
-        let t = { type: 0, filters: [], isSunsetRule: !1, subtype: 0, hash: "" };
+        let t = { type: 0, filters: [], subtype: 0, hash: "" };
         return (
             globalThis.Object.defineProperty(t, N.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, S.x)(this, t, e),
@@ -148,9 +147,6 @@ class M extends C.G {
                     break;
                 case 3:
                     r.override = w.internalBinaryRead(e, e.uint32(), n, r.override);
-                    break;
-                case 4:
-                    r.isSunsetRule = e.bool();
                     break;
                 case 5:
                     r.subtype = e.int32();
@@ -176,7 +172,6 @@ class M extends C.G {
         for (let i = 0; i < e.filters.length; i++)
             x.internalBinaryWrite(e.filters[i], t.tag(2, g.O0.LengthDelimited).fork(), n).join();
         (e.override && w.internalBinaryWrite(e.override, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.isSunsetRule && t.tag(4, g.O0.Varint).bool(e.isSunsetRule),
             0 !== e.subtype && t.tag(5, g.O0.Varint).int32(e.subtype),
             "" !== e.hash && t.tag(6, g.O0.LengthDelimited).string(e.hash),
             e.title && D.hU.internalBinaryWrite(e.title, t.tag(7, g.O0.LengthDelimited).fork(), n).join());
