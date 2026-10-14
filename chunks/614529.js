@@ -1,4 +1,4 @@
-(n.d(t, { _S: () => R, b5: () => L, q6: () => O }), n(321073));
+(n.d(t, { _S: () => L, b5: () => y, q6: () => R }), n(321073));
 var i,
     r,
     a,
@@ -351,20 +351,27 @@ var A =
     A.ELEMENTAL,
     A.SHIMMER,
     A.WITCHY);
-let g = (0, n(945810).mj)({
+var g = n(945810);
+(0, g.mj)({
     name: "2026-09-build-a-bear",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var S = n(443155),
-    N = n(922704);
+let S = (0, g.mj)({
+    name: "2026-09-build-a-bear-cards",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var N = n(443155),
+    C = n(922704);
 n(763166);
-var C = n(660183);
-function O(e) {
+var O = n(660183);
+function R(e) {
     var t, n;
     return !(function (e) {
-        let { enabled: t } = g.getConfig({ location: e });
+        let { enabled: t } = S.getConfig({ location: e });
         return t;
     })("transformCheckpoint2026CardComponent") ||
         (null == e.character && null == e.stats)
@@ -422,15 +429,15 @@ function O(e) {
                       : void 0,
           };
 }
-function R(e) {
+function L(e) {
     let t = e.components[0];
     return null == t || t.type !== _.I5.CHECKPOINT_CARD ? null : t.checkpointData;
 }
-function L(e) {
+function y(e) {
     switch (e.version) {
-        case S.wk.V2025:
-            return C.intl.string(N.default.goiR2u);
-        case S.wk.V2026:
+        case N.wk.V2025:
+            return O.intl.string(C.default.goiR2u);
+        case N.wk.V2026:
         default:
             return null;
     }
