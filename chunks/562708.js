@@ -4,7 +4,7 @@ let i, r, a, s, l, o, d, c, u;
         encodeProperties: () => I,
         isThrottled: () => eC,
         SpanComponentNames: () => J.yk,
-        analyticsTrackingStoreMaker: () => q,
+        analyticsTrackingStoreMaker: () => Z,
         getOS: () => e_,
         SpanTtiNames: () => J.wJ,
         getDevice: () => eh,
@@ -75,13 +75,13 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
     $ = [],
     z = null,
     X = !1,
-    Z = () => Promise.resolve({ sessionId: void 0 }),
-    q = (e) => {
+    q = () => Promise.resolve({ sessionId: void 0 }),
+    Z = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: a,
-            getSessionId: s = Z,
+            getSessionId: s = q,
             TRACKING_URL: l,
             drainTimeoutOverride: o,
             waitFor: d,
@@ -282,7 +282,7 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 let { analyticsToken: t, userId: n } = e;
                 return (null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1);
             }));
-        class q extends m.Ay.Store {
+        class Z extends m.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
@@ -295,7 +295,7 @@ let W = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                     }, e);
             };
         }
-        return new q(t, n);
+        return new Z(t, n);
     };
 var Q = n(412728),
     J = n(239947),
@@ -518,7 +518,7 @@ eT(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("637816", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("637821", 10))) || (l.client_build_number = d),
     null == (c = eu?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

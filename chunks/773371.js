@@ -1,6 +1,6 @@
 let i;
 (n.r(t),
-    n.d(t, { ACTION_DENYLIST: () => Z, getOverlayURL: () => e_, default: () => eO, OverlayPIDStatus: () => x }),
+    n.d(t, { ACTION_DENYLIST: () => q, getOverlayURL: () => e_, default: () => eO, OverlayPIDStatus: () => x }),
     n(393431),
     n(532706),
     n(42231),
@@ -108,7 +108,7 @@ class z {
         ((this.isDispatching = !0), e.forEach((e) => l.h.dispatch(e)), (this.isDispatching = !1));
     };
     queueDispatch = (e) =>
-        !(!V() || Z.has(e.type)) &&
+        !(!V() || q.has(e.type)) &&
         (this.isDispatching
             ? this.waitingActionsToFlush.add(e)
             : ("USER_SETTINGS_PROTO_UPDATE" === e.type &&
@@ -125,7 +125,7 @@ class z {
         !1);
 }
 let X = new z(),
-    Z = new Set([
+    q = new Set([
         "CONNECTION_OPEN",
         "CONNECTION_RESUMED",
         "CONNECTION_CLOSED",
@@ -260,7 +260,7 @@ let X = new z(),
         "CLIPS_PROMOTE_CLIP_CANDIDATE",
         "CLIPS_MONTAGE_RENDER_DONE",
     ]),
-    q = new Set(),
+    Z = new Set(),
     Q = new E.A("OverlayBridgeStore"),
     J = {};
 function ee(e) {
@@ -728,7 +728,7 @@ let eC = new eN(
                           (Y.has(n) && ec(void 0), null != i && null != k[n]) &&
                           (t || "READY" === i || "CRASHED" === i)
                       ) {
-                          if ((t ? $.delete(n) : $.add(n), q.clear(), null != eg && (clearTimeout(eg), (eg = null), t)))
+                          if ((t ? $.delete(n) : $.add(n), Z.clear(), null != eg && (clearTimeout(eg), (eg = null), t)))
                               return;
                           t
                               ? em(t, n)
@@ -739,16 +739,16 @@ let eC = new eN(
                   },
                   OVERLAY_ACTIVATE_REGION: function (e) {
                       let { region: t } = e;
-                      (q.add(t), em(!1, W));
+                      (Z.add(t), em(!1, W));
                   },
                   OVERLAY_DEACTIVATE_ALL_REGIONS: function () {
-                      (q.clear(), em(!0, W));
+                      (Z.clear(), em(!0, W));
                   },
                   RPC_SERVER_READY: function (e) {
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "6c9d025534a4615f0fb40fa5ad06f58340a6cc7c"),
+                      (n.append("build_id", "2881963da9155018fcd5dd98c5d21f089eb8183b"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
