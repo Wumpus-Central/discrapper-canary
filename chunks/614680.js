@@ -967,7 +967,13 @@ function si(e) {
                         variant: "text-md/medium",
                         color: "text-default",
                         children: U.intl.format(z.default.gYzaCr, {
-                            displayNameHook: () => (0, a.jsx)(ey.A, { userName: i, displayNameStyles: t }),
+                            displayNameHook: () =>
+                                (0, a.jsx)(ey.A, {
+                                    userName: i,
+                                    displayNameStyles: t,
+                                    effectDisplayType: eC.G.ANIMATED,
+                                    loop: !0,
+                                }),
                         }),
                     }),
                     (0, a.jsx)(eb.E, {
