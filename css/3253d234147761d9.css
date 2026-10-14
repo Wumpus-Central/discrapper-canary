@@ -523,6 +523,13 @@ header.headerCollapsed__42f4e {
     margin-block: calc((18px - var(--space-32))/2)
 }
 
+.body_e75562 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
 .clarification_d4831f {
     --custom-clarification-travel: 400ms;
     --custom-clarification-stagger: 100ms;
@@ -1071,4 +1078,4 @@ header.headerCollapsed__42f4e {
     min-block-size: calc(var(--space-32) + var(--space-8))
 }
 
-/*# sourceMappingURL=1808c5bdfd58e762.css.map*/
+/*# sourceMappingURL=3253d234147761d9.css.map*/

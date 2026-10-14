@@ -48,6 +48,7 @@ function r(e) {
     null != e.context_switch && (t.contextSwitch = e.context_switch),
     null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
     null != e.restore_proposal && (t.restoreProposal = e.restore_proposal),
+    null != e.app_build_request && (t.appBuildRequest = e.app_build_request),
     null != e.source_sha && (t.sourceSha = e.source_sha),
     null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
     null != e.steps

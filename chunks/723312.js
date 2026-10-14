@@ -10,7 +10,7 @@
         withdrawUserMessage: () => Y,
         interruptTurn: () => Q,
         sendUserMessage: () => z,
-        subscribeDebugBacklog: () => q,
+        subscribeDebugBacklog: () => j,
         showUserMessage: () => K,
     }),
     n(321073));
@@ -36,7 +36,7 @@ var s = n(158390),
     b = n(743082),
     N = n(385081),
     T = n(1371);
-class w {
+class C {
     socket = null;
     open(e) {
         let { url: t, ticket: n, onEvent: s, onClose: r, onError: o } = e;
@@ -201,9 +201,9 @@ class w {
         (this.socket?.close(), (this.socket = null));
     }
 }
-var C = n(382541),
-    k = n(649121),
-    R = n(975189);
+var k = n(382541),
+    R = n(649121),
+    w = n(975189);
 (n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
 let U = new Map(),
     A = new Map(),
@@ -211,18 +211,18 @@ let U = new Map(),
 function J(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-function D(e) {
+function I(e) {
     return `optimistic:${e}`;
 }
-let I = new Map();
+let D = new Map();
 function M(e, t) {
     let { content: n, nonce: s, attachments: r } = t;
-    (I.set(s, l.default.getCurrentUser()?.id),
+    (D.set(s, l.default.getCurrentUser()?.id),
         o.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: D(s),
+            id: I(s),
             userId: l.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: r,
@@ -234,6 +234,16 @@ function P(e, t, n) {
 }
 let L = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.ow, ...b.WO, ...u.V5 },
     G = {
+        app_build_request(e, t) {
+            let { projectId: n } = t;
+            null != e.app_build_request &&
+                o.h.dispatch({
+                    type: "CONJURE_CHAT_TURN_PATCH",
+                    projectId: n,
+                    turnId: e.turn_id,
+                    patch: { appBuildRequest: e.app_build_request },
+                });
+        },
         ...d.Un,
         ...h.d5,
         ...E.uk,
@@ -278,7 +288,7 @@ let L = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.ow, .
 async function B(e, t) {
     t.ws.close();
     try {
-        let { ticket: n, baseUrl: s } = await (0, C.d)(e);
+        let { ticket: n, baseUrl: s } = await (0, k.d)(e);
         if (t.disposed) return;
         t.ws.open({
             url: s,
@@ -313,7 +323,7 @@ async function B(e, t) {
                                 V.delete(t));
                             let i = n.pendingEvents;
                             for (let s of ((n.pendingEvents = []), J(t, "open"), i)) e(t, n, s);
-                            (H.get(t) ?? 0) > 0 && j(t, n);
+                            (H.get(t) ?? 0) > 0 && q(t, n);
                             let l = n.pendingModelSettings;
                             if (((n.pendingModelSettings = null), null != l))
                                 try {
@@ -346,16 +356,16 @@ async function B(e, t) {
                         }
                         case "user_message":
                             let i, l, a;
-                            ((l = (i = null != s.nonce && I.has(s.nonce)) && null != s.nonce ? I.get(s.nonce) : void 0),
+                            ((l = (i = null != s.nonce && D.has(s.nonce)) && null != s.nonce ? D.get(s.nonce) : void 0),
                                 (a = i && (null == l || null == s.user_id || l === s.user_id)) &&
                                     null != s.nonce &&
-                                    I.delete(s.nonce),
+                                    D.delete(s.nonce),
                                 o.h.dispatch({
                                     type: "CONJURE_CHAT_MESSAGE_APPEND",
                                     projectId: t,
                                     content: s.content,
                                     id: s.id,
-                                    ...(a && null != s.nonce ? { optimisticId: D(s.nonce) } : {}),
+                                    ...(a && null != s.nonce ? { optimisticId: I(s.nonce) } : {}),
                                     userId: s.user_id,
                                     timestamp: s.ts,
                                     attachments: s.attachments,
@@ -426,7 +436,7 @@ function W(e) {
     let t = U.get(e);
     null == t &&
         ((t = {
-            ws: new w(),
+            ws: new C(),
             backoff: new s.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -437,7 +447,7 @@ function W(e) {
             debugOnDemand: !1,
         }),
         U.set(e, t),
-        (0, R.Sm)(e, t.ws));
+        (0, w.Sm)(e, t.ws));
     let n = t;
     ((n.pendingEvents = []),
         (n.helloSeen = !1),
@@ -448,15 +458,15 @@ function W(e) {
         B(e, n));
 }
 let H = new Map();
-function j(e, t) {
+function q(e, t) {
     t.debugOnDemand && t.ws.sendDebugSubscribe();
 }
-function q(e) {
+function j(e) {
     let t = H.get(e) ?? 0;
     H.set(e, t + 1);
     let n = U.get(e);
     return (
-        0 === t && null != n && "open" === A.get(e) && j(e, n),
+        0 === t && null != n && "open" === A.get(e) && q(e, n),
         () => {
             let t = (H.get(e) ?? 1) - 1;
             t > 0 ? H.set(e, t) : H.delete(e);
@@ -473,7 +483,7 @@ function $(e) {
         (0, O.BC)(e, "Connection closed before the draft arrived"),
         t.ws.close(),
         U.delete(e),
-        (0, R.ng)(e),
+        (0, w.ng)(e),
         ee(e),
         T.A.releasePreviewControl(e),
         (0, g.RP)(e),
@@ -530,11 +540,11 @@ function K(e, t, n) {
     let s = (0, i.m)();
     return (
         M(e, { content: t.trim(), nonce: s, attachments: null != n && n.length > 0 ? n : void 0 }),
-        { nonce: s, messageKey: D(s) }
+        { nonce: s, messageKey: I(s) }
     );
 }
 function Y(e, t) {
-    (I.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: D(t), withdrawn: !0 }));
+    (D.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: I(t), withdrawn: !0 }));
 }
 function Q(e) {
     let t = U.get(e);
@@ -568,7 +578,7 @@ function et(e) {
 }
 function en() {
     for (let e of Array.from(U.keys())) $(e);
-    (I.clear(), (0, k.j_)());
+    (D.clear(), (0, R.j_)());
 }
 class es extends r.Ay.Store {
     initialize() {
