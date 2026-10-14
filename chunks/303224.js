@@ -443,7 +443,7 @@ function eL(e) {
                                       n.e("403032"),
                                       n.e("746309"),
                                       n.e("720210"),
-                                      n.e("82389"),
+                                      n.e("537596"),
                                       n.e("132502"),
                                       n.e("230029"),
                                       n.e("891089"),
@@ -505,12 +505,13 @@ function eL(e) {
                                       n.e("32781"),
                                       n.e("488990"),
                                       n.e("332470"),
-                                      n.e("469187"),
+                                      n.e("545527"),
                                       n.e("35403"),
                                       n.e("203589"),
                                       n.e("662355"),
                                       n.e("872648"),
                                       n.e("565065"),
+                                      n.e("88160"),
                                       n.e("329218"),
                                       n.e("622825"),
                                       n.e("692513"),
@@ -903,9 +904,9 @@ var e0 = n(789645),
     e2 = n(279208),
     e4 = n(747007),
     e9 = n(489673),
-    e8 = n(958590),
-    e3 = n(174459),
-    e5 = n(957565),
+    e5 = n(958590),
+    e8 = n(174459),
+    e3 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
@@ -915,10 +916,10 @@ function tn(e) {
         a = (0, s.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         o = (0, s.bG)(
-            [e8.A],
+            [e5.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e8.A.getInvite(e);
+                return null == e ? null : e5.A.getInvite(e);
             },
             [d, r],
         );
@@ -970,9 +971,9 @@ function tn(e) {
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e5.C)(e);
+                            (0, e3.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,
