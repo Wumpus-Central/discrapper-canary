@@ -30,10 +30,10 @@ function T(e) {
 
 ${j.intl.formatToPlainString(N.default["2ECgBx"], { channel: e })}`;
 }
-var G = l(962998),
-    I = l(951465),
-    _ = l(381941),
-    w = l(906559);
+var I = l(962998),
+    _ = l(951465),
+    w = l(381941),
+    G = l(906559);
 let M = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function R(e) {
     let {
@@ -45,16 +45,19 @@ function R(e) {
             transitionState: O,
             onClose: $,
         } = e,
-        B = (0, i.bG)([v.Ay], () =>
-            v.Ay.getChannels(l)
-                [v.I6].filter((e) => {
-                    let { channel: t } = e;
-                    return !t.isGuildVocal() && !t.isThread() && !t.isForumLikeChannel();
-                })
-                .map((e) => {
-                    let { channel: t } = e;
-                    return t;
-                }),
+        B = (0, i.yK)(
+            [v.Ay],
+            () =>
+                v.Ay.getChannels(l)
+                    [v.I6].filter((e) => {
+                        let { channel: t } = e;
+                        return !t.isGuildVocal() && !t.isThread() && !t.isForumLikeChannel();
+                    })
+                    .map((e) => {
+                        let { channel: t } = e;
+                        return t;
+                    }),
+            [l],
         ),
         U = (0, i.bG)([v.Ay], () => (0, E.i8)(l, R), [l, R]),
         F = (0, b.A)() - T(A).length,
@@ -64,8 +67,8 @@ function R(e) {
             let e = S.w.get(P)?.[R];
             return null != e && B.some((t) => t.id === e) ? e : null;
         }),
-        [{ textValue: D, richValue: J }, z] = a.useState(() => (0, g.N3)()),
-        [K, W] = a.useState(!1),
+        [{ textValue: D, richValue: J }, K] = a.useState(() => (0, g.N3)()),
+        [z, W] = a.useState(!1),
         [Z, q] = a.useState(!0),
         [X, ee] = a.useState(!1),
         [et, el] = a.useState(void 0),
@@ -78,7 +81,7 @@ function R(e) {
         a.useEffect(() => {
             let e = !1;
             return (
-                (0, G.$C)(t).then(
+                (0, I.$C)(t).then(
                     (t) => {
                         !e &&
                             (q(!1),
@@ -88,7 +91,7 @@ function R(e) {
                                 : null == t.notes ||
                                   "" === t.notes ||
                                   ei.current ||
-                                  z((0, g.ur)(t.notes.slice(0, Q.current))));
+                                  K((0, g.ur)(t.notes.slice(0, Q.current))));
                     },
                     () => {
                         e || (q(!1), ee(!0));
@@ -100,7 +103,7 @@ function R(e) {
             );
         }, [t]));
     let er = a.useCallback((e, t, l) => {
-            ((ei.current = !0), z({ textValue: t, richValue: l }));
+            ((ei.current = !0), K({ textValue: t, richValue: l }));
         }, []),
         eu = a.useMemo(
             () => B.map((e) => ({ id: e.id, value: e.id, label: (0, f.m1)(e, y.default, k.A), leading: (0, m.gU)(e) })),
@@ -116,12 +119,12 @@ function R(e) {
                 try {
                     var e;
                     let n = p.Ay.parse(ed, null == eh ? ec : `${ec}${eh}`),
-                        a = await h.A.sendMessage(ed.id, n, !1, { location: _.Hx.CONJURE_PATCH_NOTES });
+                        a = await h.A.sendMessage(ed.id, n, !1, { location: w.Hx.CONJURE_PATCH_NOTES });
                     if (a?.ok === !1) throw Error("send failed");
                     ((e = ed.id), S.w.set(P, { ...S.w.get(P), [R]: e }));
                     let i = a?.body?.id;
                     (null != i &&
-                        (0, G.BG)(t, { publishedRevision: L, guildId: l, channelId: ed.id, messageId: i }, et),
+                        (0, I.BG)(t, { publishedRevision: L, guildId: l, channelId: ed.id, messageId: i }, et),
                         $());
                 } catch {
                     ((0, r.P0)({ text: j.intl.string(N.default["6oEjjD"]), variant: "critical" }), ea(!1));
@@ -144,18 +147,18 @@ function R(e) {
             },
         ],
         children: (0, n.jsx)("div", {
-            className: w.rf,
+            className: G.rf,
             children:
                 null != eo
                     ? (0, n.jsxs)("div", {
-                          className: w.dY,
+                          className: G.dY,
                           children: [
                               (0, n.jsx)(u.D, {
                                   variant: "heading-md/semibold",
                                   children: j.intl.string(N.default.r4du8k),
                               }),
                               (0, n.jsxs)("div", {
-                                  className: w.Q2,
+                                  className: G.Q2,
                                   children: [
                                       (0, n.jsx)(x.Ay, {
                                           type: C.oU.CONJURE_PATCH_NOTES,
@@ -164,19 +167,19 @@ function R(e) {
                                           placeholder: j.intl.string(Z ? N.default.aYQksU : N.default["3hV1Gc"]),
                                           textValue: D,
                                           richValue: J,
-                                          focused: K,
+                                          focused: z,
                                           onChange: er,
                                           onFocus: () => W(!0),
                                           onBlur: () => W(!1),
                                           onSubmit: M,
-                                          parentModalKey: I.x,
+                                          parentModalKey: _.x,
                                           autoCompletePosition: "bottom",
                                           emojiPickerCloseOnModalOuterClick: !0,
                                           disableThemedBackground: !0,
                                           maxCharacterCount: F,
-                                          editorClassName: w.Tw,
+                                          editorClassName: G.Tw,
                                       }),
-                                      Z ? (0, n.jsx)(d.y, { type: d.t.SPINNING_CIRCLE_SIMPLE, className: w.n5 }) : null,
+                                      Z ? (0, n.jsx)(d.y, { type: d.t.SPINNING_CIRCLE_SIMPLE, className: G.n5 }) : null,
                                       X
                                           ? (0, n.jsx)(o.E, {
                                                 variant: "text-sm/normal",
@@ -185,7 +188,7 @@ function R(e) {
                                             })
                                           : null,
                                       (0, n.jsxs)("div", {
-                                          className: w.Q6,
+                                          className: G.Q6,
                                           children: [
                                               (0, n.jsx)(o.E, {
                                                   variant: "text-sm/medium",
