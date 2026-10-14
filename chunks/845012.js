@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(448013),
     S = n(773669),
     E = n(97352),
-    y = n(158045),
-    A = n(580630),
+    A = n(158045),
+    y = n(580630),
     I = n(202541),
     g = n(660183),
     P = n(583741),
@@ -99,9 +99,9 @@ function x(e) {
                             { isCurrentPlan: p, disabled: S } = (0, h.cD)(T, e),
                             b = E.A.get(e);
                         a()(null != b, "Missing subscriptionPlan");
-                        let L = (0, y.L_)({ planId: e, isGift: N, priceOptions: u, subscriptionPlan: b }),
+                        let L = (0, A.L_)({ planId: e, isGift: N, priceOptions: u, subscriptionPlan: b }),
                             k = null != L && null == R,
-                            w = (0, y.y8)(e, !1, N, u),
+                            w = (0, A.y8)(e, !1, N, u),
                             D = (0, f.gS)(T, b, {
                                 userLocale: j,
                                 isEligibleForBOGOPromotion: v,
@@ -122,12 +122,12 @@ function x(e) {
                                 let { isEligibleForTrial: n } = t;
                                 return n
                                     ? g.intl.formatToPlainString(g.t.hXcaLT, {
-                                          price: (0, A.$g)(0, e.currency, {
+                                          price: (0, y.$g)(0, e.currency, {
                                               minimumFractionDigits: 0,
                                               maximumFractionDigits: 0,
                                           }),
                                       })
-                                    : (0, A.$g)(e.amount, e.currency);
+                                    : (0, y.$g)(e.amount, e.currency);
                             })(w, { isEligibleForTrial: d }),
                             F = G,
                             B = r && null != M && e === M ? O : null;
@@ -140,16 +140,16 @@ function x(e) {
                                         : b.interval === I.WT.MONTH &&
                                           (null != B &&
                                               (F = g.intl.format(g.t.hXcaLT, {
-                                                  price: (0, A.$g)(w.amount - B, w.currency),
+                                                  price: (0, y.$g)(w.amount - B, w.currency),
                                               })),
                                           (t = g.intl.format(P.default.JsSin7, {
-                                              priceRate: (0, A.CE)(G, b.interval, b.intervalCount),
+                                              priceRate: (0, y.CE)(G, b.interval, b.intervalCount),
                                               intervalCount: R.discount.intervalCount,
                                           })))
                                     : (0, m.hm)(R) &&
                                       b.interval === I.WT.YEAR &&
                                       null != B &&
-                                      ((F = g.intl.format(g.t.hXcaLT, { price: (0, A.$g)(w.amount - B, w.currency) })),
+                                      ((F = g.intl.format(g.t.hXcaLT, { price: (0, y.$g)(w.amount - B, w.currency) })),
                                       (i = G),
                                       (t = g.intl.format(g.t.VZ8Tvh, { regularPrice: G })),
                                       (o = g.intl.formatToPlainString(P.default.nsG1jw, {

@@ -26,7 +26,7 @@ function E(e) {
     } = e;
     return n === C.Yr.DISCORD_ORB
         ? (0, l.jsx)(I, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(A, {
+        : (0, l.jsx)(y, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -35,7 +35,7 @@ function E(e) {
               variant: s,
           });
 }
-function y(e) {
+function A(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
@@ -59,7 +59,7 @@ function y(e) {
             return (t.source, null);
     }
 }
-function A(e) {
+function y(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
@@ -96,7 +96,7 @@ function A(e) {
     return (0, l.jsxs)("div", {
         className: r()(S.kL, a),
         children: [
-            null != i ? (0, l.jsx)(y, { config: i }) : null,
+            null != i ? (0, l.jsx)(A, { config: i }) : null,
             (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: C }),
         ],
     });

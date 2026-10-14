@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(773669),
     S = n(97352),
     E = n(45938),
-    y = n(158045),
-    A = n(580630),
+    A = n(158045),
+    y = n(580630),
     I = n(529412),
     g = n(557679),
     P = n(35587),
@@ -26,7 +26,7 @@ var l = n(477900),
     T = n(268431);
 function N(e, t) {
     let n = e.interval === x.WT.YEAR ? _.t.ECT4A5 : _.t.v9QeON;
-    return _.intl.format(n, { price: (0, A.$g)(t.amount, t.currency) });
+    return _.intl.format(n, { price: (0, y.$g)(t.amount, t.currency) });
 }
 function b(e) {
     return { type: "badge", textBadgeVariant: "eyebrow", text: e };
@@ -87,13 +87,13 @@ function R(e) {
         { discountOffer: F, discountAmountOff: B, applicablePlan: H } = k,
         W = (0, c.bG)([S.A], () => S.A.get(n));
     o()(null != W, "Missing subscriptionPlan");
-    let V = (0, y.m6)(W.id),
+    let V = (0, A.m6)(W.id),
         Y = G && V === x.PremiumTypes.TIER_2,
         K = (0, I.qi)({ location: `PremiumSwitchPlanSelectOption${Y ? "" : "-DISABLED"}` }),
         Z = G && (!Y || !K || r),
         q = (0, P.Sq)(),
-        z = (0, y.L_)({ planId: n, isGift: D, priceOptions: s, subscriptionPlan: W }),
-        $ = (0, y.y8)(n, !1, D, s),
+        z = (0, A.L_)({ planId: n, isGift: D, priceOptions: s, subscriptionPlan: W }),
+        $ = (0, A.y8)(n, !1, D, s),
         Q = null != z && !v,
         J = i.useCallback(() => {
             let e = j(t, W, {
@@ -120,7 +120,7 @@ function R(e) {
                   : null;
         }, [L, q, W, t, Q, D, n, z, s, R]),
         X = i.useMemo(
-            () => (0, y.D8)(W.interval, D, u, W.intervalCount, G, V),
+            () => (0, A.D8)(W.interval, D, u, W.intervalCount, G, V),
             [W.interval, W.intervalCount, D, u, G, V],
         ),
         ee = null != H && n === H;
@@ -131,12 +131,12 @@ function R(e) {
         ? _.intl.format(_.t.hXcaLT, {
               price:
                   b && null != B && ee
-                      ? (0, A.$g)($.amount - B, $.currency)
+                      ? (0, y.$g)($.amount - B, $.currency)
                       : R
-                        ? (0, A.$g)(0, $.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                        : (0, A.$g)($.amount, $.currency),
+                        ? (0, y.$g)(0, $.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                        : (0, y.$g)($.amount, $.currency),
           })
-        : (0, A.$g)($.amount, $.currency);
+        : (0, y.$g)($.amount, $.currency);
     return (0, l.jsxs)(p.D, {
         role: "radio",
         "aria-checked": r,
@@ -172,7 +172,7 @@ function R(e) {
                                         (0, l.jsx)("div", {
                                             className: T._R,
                                             children: _.intl.format(_.t.ori2Jm, {
-                                                currencyAmount: (0, A.$g)($.amount, $.currency),
+                                                currencyAmount: (0, y.$g)($.amount, $.currency),
                                             }),
                                         }),
                                 ],
@@ -211,12 +211,12 @@ function R(e) {
                                 ? e.interval === x.WT.YEAR
                                     ? _.intl.format(_.t["EQmTl+"], {
                                           numYears: a?.discount.intervalCount ?? x.OJ,
-                                          regularPrice: (0, A.$g)(n.amount, n.currency),
+                                          regularPrice: (0, y.$g)(n.amount, n.currency),
                                       })
                                     : _.intl.format(_.t["VeE/4E"], {
                                           numMonths: a?.discount.intervalCount ?? x.OJ,
-                                          discountedPrice: (0, A.$g)(n.amount - r, n.currency),
-                                          regularPrice: (0, A.$g)(n.amount, n.currency),
+                                          discountedPrice: (0, y.$g)(n.amount - r, n.currency),
+                                          regularPrice: (0, y.$g)(n.amount, n.currency),
                                       })
                                 : i
                                   ? N(e, n)

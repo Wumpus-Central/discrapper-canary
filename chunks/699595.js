@@ -21,9 +21,9 @@ function u(e) {
             currency: n.currency,
             metadata: c,
         }),
-        y = f ? d : S,
-        A = l.useMemo(() => {
-            let e = p ? (y ?? null) : null;
+        A = f ? d : S,
+        y = l.useMemo(() => {
+            let e = p ? (A ?? null) : null;
             return {
                 discountOffer: m,
                 applicablePlan: C,
@@ -31,7 +31,7 @@ function u(e) {
                 discountAmountOff: null != C ? (0, a.pg)(e, C) : null,
                 discountInvoiceError: E,
             };
-        }, [m, C, y, E, p]);
+        }, [m, C, A, E, p]);
     return (
         (t = (0, s.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;
@@ -39,13 +39,13 @@ function u(e) {
         })),
         l.useEffect(
             () => (
-                t(A),
+                t(y),
                 () => {
                     t(r.T);
                 }
             ),
-            [A, t],
+            [y, t],
         ),
-        A
+        y
     );
 }

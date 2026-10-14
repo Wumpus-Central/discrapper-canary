@@ -1,4 +1,4 @@
-l.d(t, { B6: () => c, MX: () => u, WK: () => o, XG: () => d });
+l.d(t, { B6: () => c, MX: () => o, WK: () => u, XG: () => d });
 var n = l(17928),
     i = l(30370),
     s = l(606072),
@@ -12,14 +12,14 @@ function d() {
 function c() {
     return (0, n.bG)([i.A], () => i.A.getAccounts().filter(r).length > 0);
 }
-function o() {
+function u() {
     return (0, n.bG)([i.A], () =>
         i.A.getAccounts()
             .filter(r)
             .some((e) => e.showActivity),
     );
 }
-function u(e) {
+function o(e) {
     let { isSharingActivityInGuild: t, hasFetchedConsents: l, hasPersonalizationConsent: n } = (0, s.T4)(e);
-    return { isSpotifyConnected: c(), hasFetchedConsents: l, isContributing: o() && t && n };
+    return { isSpotifyConnected: c(), hasFetchedConsents: l, isContributing: u() && t && n };
 }

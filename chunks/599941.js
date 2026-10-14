@@ -2,13 +2,13 @@
     KE: () => g,
     Tq: () => I,
     XE: () => P,
-    Yc: () => A,
+    Yc: () => y,
     cY: () => m,
     dB: () => C,
     dL: () => v,
     eb: () => S,
     et: () => E,
-    hc: () => y,
+    hc: () => A,
     uP: () => f,
     uk: () => h,
 }),
@@ -125,12 +125,12 @@ function E() {
         },
     };
 }
-function y() {
+function A() {
     let [e, t] = (0, a.A)(u.mK),
         { loading: n, error: l } = t;
     return { error: l, submitting: n, archiveSubscriptionListing: e };
 }
-function A() {
+function y() {
     let [e, t] = l.useState(!1),
         [n, i] = l.useState(null);
     return {

@@ -67,7 +67,7 @@ function h(e) {
             y(e);
         }, []),
         P = N ? p.caretHoverable : void 0,
-        U = {
+        O = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
@@ -87,7 +87,7 @@ function h(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...U,
+        ...O,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [

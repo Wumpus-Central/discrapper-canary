@@ -1,4 +1,4 @@
-n.d(t, { x: () => A });
+n.d(t, { x: () => y });
 var l = n(284009),
     i = n.n(l),
     r = n(999129),
@@ -15,9 +15,9 @@ var l = n(284009),
     f = n(566980),
     S = n(280341),
     E = n(652215),
-    y = n(202541);
-function A(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: A, continueSessionToInitialStep: I } = e,
+    A = n(202541);
+function y(e) {
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: y, continueSessionToInitialStep: I } = e,
         { paymentSources: g } = (0, a.j)(),
         {
             selectedSkuId: P,
@@ -55,7 +55,7 @@ function A(e) {
             isGift: w,
         },
         U =
-            A ??
+            y ??
             function () {
                 l(Object.values(g).length < 1 && null == n ? h.pn.PLAN_SELECT : h.pn.REVIEW, {
                     trackedFromStep: h.pn.PAYMENT_ELEMENT,
@@ -90,7 +90,7 @@ function A(e) {
         },
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
-            (0, m.isDesktop)() && null != P && [y.pe.TIER_0, y.pe.TIER_2].includes(P) && !w && null == j,
+            (0, m.isDesktop)() && null != P && [A.pe.TIER_0, A.pe.TIER_2].includes(P) && !w && null == j,
         continueSessionToInitialStep: I,
     });
 }

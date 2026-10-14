@@ -36,15 +36,15 @@ function R(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        [P, U] = l.useState(!1),
-        O = (0, o.bG)([p.A], () => p.A.isFocused()),
+        [P, O] = l.useState(!1),
+        U = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
         { bannerSrc: w, status: k } = (0, b.A)({
             displayProfile: n,
             pendingBanner: A,
             size: y,
-            canAnimate: M || !B ? P : O,
+            canAnimate: M || !B ? P : U,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
@@ -60,8 +60,8 @@ function R(e) {
         height: C,
         cutout: z,
         overlay: R,
-        onInteractionStart: () => U(!0),
-        onInteractionEnd: () => U(!1),
+        onInteractionStart: () => O(!0),
+        onInteractionEnd: () => O(!1),
     });
 }
 function v(e) {

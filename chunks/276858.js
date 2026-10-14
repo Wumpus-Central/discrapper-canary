@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(38405),
     S = n(240248),
     E = n(166532),
-    y = n(676230),
-    A = n(818348),
+    A = n(676230),
+    y = n(818348),
     I = n(400400);
 let g = [E.pn.PAYMENT_ELEMENT],
     P = [
@@ -59,8 +59,8 @@ function x(e) {
         ),
         T = i.useMemo(() => {
             if (null == d) return !1;
-            if ((0, y.i)(d)) {
-                let { renderAddressElementInStandaloneMode: e } = y.F[d];
+            if ((0, A.i)(d)) {
+                let { renderAddressElementInStandaloneMode: e } = A.F[d];
                 return e ?? !1;
             }
         }, [d]);
@@ -70,8 +70,8 @@ function x(e) {
             (0, l.jsxs)("div", {
                 className: s()(v ? I.RK : [I.R, I.$u], {
                     [I.df]: null == d,
-                    [I._m]: d === A.he.CARD,
-                    [I.JD]: d === A.he.PAYPAL,
+                    [I._m]: d === y.he.CARD,
+                    [I.JD]: d === y.he.PAYPAL,
                 }),
                 children: [
                     (0, l.jsx)(m.Wf, {
@@ -132,10 +132,10 @@ function b(e) {
         } = e,
         c = i.useRef(null),
         h = i.useRef(null),
-        [y, I] = i.useState(!1),
+        [A, I] = i.useState(!1),
         [g, P] = i.useState(!1),
         x = o === E.pn.CREDIT_CARD_INFORMATION || o === E.pn.PAYMENT_ELEMENT,
-        [_, T] = i.useState(x ? A.he.CARD : null),
+        [_, T] = i.useState(x ? y.he.CARD : null),
         [b, j] = i.useState(!1),
         [R, O] = i.useState(void 0),
         M = (function (e) {
@@ -260,7 +260,7 @@ function b(e) {
         stripeAddressElementProps: U,
         stripeElementsRef: c,
         lastConfirmedSetupIntentRef: h,
-        paymentElementReady: y,
+        paymentElementReady: A,
         paymentElementLoaded: g,
         paymentElementSelectedType: _,
         setPaymentElementSelectedType: T,

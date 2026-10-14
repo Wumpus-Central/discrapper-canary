@@ -92,7 +92,7 @@ var p = n(95477),
     f = n(832208),
     S = n(660183),
     E = n(782328);
-let y = [
+let A = [
         "AE",
         "AG",
         "AN",
@@ -163,10 +163,10 @@ let y = [
         "ZA",
         "ZW",
     ],
-    A = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
+    y = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    I = Object.freeze(A.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    I = Object.freeze(y.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
     g = (0, C.Ld)(),
     P = (0, C.Ld)(),
     v = (0, C.Ld)(),
@@ -210,7 +210,7 @@ let R = { US: c, CA: s },
     }),
     L = (e, t) => {
         let n = t?.allowedBillingAddressCountries,
-            l = null != n && n.length > 0 ? A.filter((e) => n.includes(e.value)) : A,
+            l = null != n && n.length > 0 ? y.filter((e) => n.includes(e.value)) : y,
             i = t?.countryHelperText;
         return {
             name: "country",
@@ -498,7 +498,7 @@ class B extends a.PureComponent {
             default:
                 (e && !n.postalCode) ||
                     this.hasValue(t.postalCode) ||
-                    y.includes(i ?? "") ||
+                    A.includes(i ?? "") ||
                     (l.postalCode = S.intl.string(S.t.LRlhb1));
         }
         return l;

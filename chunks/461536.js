@@ -68,8 +68,8 @@ function j(e) {
         {
             tooltipId: M,
             isVisible: P,
-            targetElementRef: U,
-            trigger: O,
+            targetElementRef: O,
+            trigger: U,
         } = (0, i.D)({ children: t, targetElementRef: T, delay: v.In, onTooltipShow: y, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
         G = (0, a.jsxs)("div", {
@@ -126,7 +126,7 @@ function j(e) {
                       children: (0, a.jsx)(m.R, {
                           isVisible: P,
                           isRendered: !0,
-                          targetElementRef: U,
+                          targetElementRef: O,
                           content: G,
                           position: C,
                           align: "center",
@@ -136,6 +136,6 @@ function j(e) {
                   })
                 : null,
         );
-    return (0, a.jsxs)(a.Fragment, { children: [O, (0, a.jsx)(p.A, { id: M, children: w }), k] });
+    return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(p.A, { id: M, children: w }), k] });
 }
 let T = j;

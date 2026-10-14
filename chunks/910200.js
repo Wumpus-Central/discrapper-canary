@@ -23,7 +23,7 @@ function C(e) {
         trailing: S,
         ...E
     } = e;
-    function y() {
+    function A() {
         return (0, l.jsx)(c.A, {
             className: r()(m.Xx, t),
             gradientColor: C,
@@ -43,10 +43,10 @@ function C(e) {
         });
     }
     return null != h && "object" == typeof h
-        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: y() })
+        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: A() })
         : null != h && "string" == typeof h
-          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: y() })
-          : y();
+          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: A() })
+          : A();
 }
 function h(e) {
     let { trailingText: t, ...n } = e;

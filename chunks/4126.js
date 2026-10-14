@@ -1,4 +1,4 @@
-n.d(t, { Mx: () => y, kj: () => S, iH: () => A, KF: () => f, ri: () => E, $K: () => I });
+n.d(t, { Mx: () => A, kj: () => S, iH: () => y, KF: () => f, ri: () => E, $K: () => I });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -96,7 +96,7 @@ function S(e) {
 function E() {
     return (0, l.jsx)("hr", { className: h.yF });
 }
-function y(e) {
+function A(e) {
     let { className: t, title: n, description: i, ...r } = e;
     return (0, l.jsxs)("div", {
         className: t,
@@ -107,7 +107,7 @@ function y(e) {
         ],
     });
 }
-function A(e) {
+function y(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
         className: r()(h.iq, a),

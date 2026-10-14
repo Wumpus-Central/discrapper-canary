@@ -60,10 +60,10 @@ function c(e) {
     let P = l.useCallback(() => {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
-        U = l.useCallback(() => {
+        O = l.useCallback(() => {
             v && M(!1);
         }, [M, v]),
-        O = l.useCallback(() => {
+        U = l.useCallback(() => {
             if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
                 R.current = !1;
                 return;
@@ -129,8 +129,8 @@ function c(e) {
         }, []);
     return (0, a.jsxs)("div", {
         onMouseEnter: P,
-        onMouseLeave: U,
-        onFocus: O,
+        onMouseLeave: O,
+        onFocus: U,
         onBlur: B,
         children: [
             t,
