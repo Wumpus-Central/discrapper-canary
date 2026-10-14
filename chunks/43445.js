@@ -71,7 +71,7 @@ async function I(e, t) {
                 .slice(0, 64)
                 .replace(/-+$/g, "")
                 .toLowerCase()),
-            `${"" === n ? "vibegration" : n}.zip`),
+            `${"" === n ? "conjure" : n}.zip`),
         r = await N(e, l);
     await y(r, l);
 }
@@ -998,7 +998,7 @@ function t$(e) {
                     I(t, n)
                         .catch((e) => {
                             let n;
-                            (console.error("[vibegrations] project export failed", t, e),
+                            (console.error("[conjure] project export failed", t, e),
                                 (0, u.P0)({
                                     text:
                                         409 === (n = e instanceof w ? e.status : null)
@@ -2022,7 +2022,7 @@ function nv(e, t) {
         try {
             n();
         } catch (e) {
-            console.error("[vibegrations] design feedback subscriber threw", e);
+            console.error("[conjure] design feedback subscriber threw", e);
         }
 }
 function nj(e) {
@@ -2615,7 +2615,7 @@ function l0(e, t, n, l) {
 }
 function l1(e, t) {
     (0, g.Vm)(e, t).catch((e) => {
-        console.error("[vibegrations] attachment cleanup failed", e);
+        console.error("[conjure] attachment cleanup failed", e);
     });
 }
 function l2(e, t) {
@@ -2713,7 +2713,7 @@ function rt(e, t, n, l) {
                         : l1(e, a.id);
                 },
                 (l) => {
-                    (console.error("[vibegrations] attachment upload failed", l),
+                    (console.error("[conjure] attachment upload failed", l),
                         l0(e, t, n.localId, { status: "error", errorText: A.intl.string(C.default["kUw/b1"]) }));
                 },
             );
@@ -12566,7 +12566,7 @@ function dA(e) {
                 ),
                 `conjure-traces-${t}.json`,
             ).catch((e) => {
-                console.error("[vibegrations] trace export failed", t, e);
+                console.error("[conjure] trace export failed", t, e);
             });
         }, [t, n]);
     return (0, a.jsx)(es.Y, {
@@ -16486,7 +16486,7 @@ function hs(e) {
                                         (e) => {
                                             d() &&
                                                 (l({ entry: n, status: "failed" }),
-                                                console.error("[vibegrations] version restore failed", c, e),
+                                                console.error("[conjure] version restore failed", c, e),
                                                 (0, u.P0)({
                                                     text: A.intl.string(C.default["PSdo+w"]),
                                                     variant: "critical",

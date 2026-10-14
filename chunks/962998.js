@@ -1,13 +1,13 @@
 n.d(t, { $C: () => u, BC: () => g, BG: () => p, Mz: () => f, TV: () => d, qy: () => a, rS: () => c });
-var s = n(73153),
-    r = n(975189),
+var r = n(73153),
+    s = n(975189),
     o = n(260498),
     i = n(664619),
     l = n(722701);
 let a = {
         publish_notice(e, t) {
             let { projectId: n } = t;
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_CHAT_PUBLISH_NOTICE",
                 projectId: n,
                 id: e.id,
@@ -21,7 +21,7 @@ let a = {
         publish_cta(e, t) {
             let { projectId: n } = t;
             null != e.publish_cta &&
-                s.h.dispatch({
+                r.h.dispatch({
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
                     turnId: e.turn_id,
@@ -30,7 +30,7 @@ let a = {
         },
         publish_status(e, t) {
             let { projectId: n } = t;
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
                 projectId: n,
                 published: !0 === e.published,
@@ -63,13 +63,13 @@ let a = {
         },
         publish_result(e, t) {
             let { projectId: n } = t,
-                r = h.get(n);
-            if ((h.delete(n), null != r && (clearTimeout(r.timeout), r.resolve(e)), !0 !== e.ok))
+                s = h.get(n);
+            if ((h.delete(n), null != s && (clearTimeout(s.timeout), s.resolve(e)), !0 !== e.ok))
                 (0, i.Is)(n, e.error ?? "publish_result not ok", !1);
             else {
                 let e = l.A.getPublishStatus(n);
                 null != e &&
-                    s.h.dispatch({
+                    r.h.dispatch({
                         type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
                         projectId: n,
                         published: !0,
@@ -83,14 +83,14 @@ let a = {
         },
         patch_notes_draft(e, t) {
             let { projectId: n } = t,
-                s = _.get(n);
-            null != s && s.nonce === e.nonce && (_.delete(n), clearTimeout(s.timeout), s.resolve(e));
+                r = _.get(n);
+            null != r && r.nonce === e.nonce && (_.delete(n), clearTimeout(r.timeout), r.resolve(e));
         },
     };
 function d(e) {
     let t = !1;
     return new Promise((n, o) => {
-        let i = (0, r.KY)(e);
+        let i = (0, s.KY)(e);
         if (null == i) return void o(Error("Not connected"));
         if (h.has(e)) return void o(Error("Publish already in flight"));
         let l = setTimeout(() => {
@@ -98,7 +98,7 @@ function d(e) {
         }, 9e5);
         (h.set(e, { resolve: n, reject: o, timeout: l }),
             (t = !0),
-            s.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
+            r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
         try {
             i.sendPublish();
         } catch (t) {
@@ -109,13 +109,13 @@ function d(e) {
             throw ((0, i.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
         })
         .finally(() => {
-            t && s.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
+            t && r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
 function u(e) {
     return new Promise((t, n) => {
-        let s = (0, r.KY)(e);
-        if (null == s) return void n(Error("Not connected"));
+        let r = (0, s.KY)(e);
+        if (null == r) return void n(Error("Not connected"));
         g(e, "Superseded by a newer draft request");
         let i = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             l = setTimeout(() => {
@@ -123,20 +123,20 @@ function u(e) {
             }, 45e3);
         _.set(e, { resolve: t, reject: n, timeout: l, nonce: i });
         try {
-            s.sendDraftPatchNotes(i, o.Ay.getProject(e)?.name);
+            r.sendDraftPatchNotes(i, o.Ay.getProject(e)?.name);
         } catch (t) {
             (_.delete(e), clearTimeout(l), n(t instanceof Error ? t : Error("draft send failed")));
         }
     });
 }
 function p(e, t, n) {
-    s.h.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId: e, sent: t });
+    r.h.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId: e, sent: t });
     try {
-        let s = (0, r.KY)(e);
-        if (null == s) throw Error("Not connected");
-        s.sendPatchNotesSent(t, n);
+        let r = (0, s.KY)(e);
+        if (null == r) throw Error("Not connected");
+        r.sendPatchNotesSent(t, n);
     } catch (t) {
-        console.warn("[vibegrations] could not record sent patch notes", e, t);
+        console.warn("[conjure] could not record sent patch notes", e, t);
     }
 }
 let h = new Map();

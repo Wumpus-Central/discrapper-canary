@@ -12,7 +12,7 @@ function u(e, t) {
     try {
         t();
     } catch (t) {
-        console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
+        console.error(`[conjure] preview native surfaces: ${e} failed`, t);
     }
 }
 var _ = n(324641),

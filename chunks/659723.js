@@ -235,7 +235,7 @@ let m = i.memo(function (e) {
                             (E = -1),
                             P(),
                             console.log(
-                                "[Vibegrations/glow-dither] perf degrade \u2192 spacing",
+                                "[Conjure/glow-dither] perf degrade \u2192 spacing",
                                 j,
                                 "avg",
                                 n.toFixed(2),

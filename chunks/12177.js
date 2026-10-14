@@ -23,7 +23,7 @@ async function s(e, t) {
     return (
         !0 === r.live ||
             (0, a.tZ)(e, { isPreview: !0 }).catch((t) => {
-                console.error("[vibegrations] post-version-restore refresh failed", e, t);
+                console.error("[conjure] post-version-restore refresh failed", e, t);
             }),
         r.entry
     );
@@ -63,7 +63,7 @@ async function d(e, t) {
         try {
             (0, r.BD)(e);
         } catch (t) {
-            console.error("[vibegrations] post-data-restore frame reload failed", e, t);
+            console.error("[conjure] post-data-restore frame reload failed", e, t);
         }
     return a;
 }

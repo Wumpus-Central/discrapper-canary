@@ -11,8 +11,8 @@ var a = i(477900),
     p = i(238490),
     f = i(409478),
     h = i(979892);
-let g = new l.Vy("VibegrationsWidgetCapture"),
-    w = new Map();
+let w = new l.Vy("ConjureWidgetCapture"),
+    g = new Map();
 function m() {
     return new Promise((e) => requestAnimationFrame(() => e()));
 }
@@ -58,7 +58,7 @@ function v(e, t) {
                     Promise.all([(0, u.un)(t, { force: !0 }), d.A.fetchUserApplicationIdentitiesWithProfiles(e.id)]),
                     4e3,
                     "refreshing the widget data timed out",
-                ).catch((e) => g.warn("widget data refresh skipped", { err: e }));
+                ).catch((e) => w.warn("widget data refresh skipped", { err: e }));
                 let a = o.A.getConfig(t)?.surfaces;
                 if (
                     !(0, p.yZ)({
@@ -78,9 +78,9 @@ function v(e, t) {
                 return (s.close(), { blob: r, ...f });
             };
             return (
-                w.set(e, i),
+                g.set(e, i),
                 () => {
-                    w.get(e) === i && w.delete(e);
+                    g.get(e) === i && g.delete(e);
                 }
             );
         }, [e, t]));
@@ -101,13 +101,13 @@ function A(e, t, i) {
 async function T(e, t) {
     let i,
         a,
-        r = w.get(e);
+        r = g.get(e);
     if (null == r) return { status: "unavailable" };
     try {
         [i, a] = await Promise.all([r(), A(t.resolveUploadUrl(), 12e3, "resolving the upload URL timed out")]);
     } catch (e) {
         return (
-            g.warn("widget capture preparation failed", { err: e }),
+            w.warn("widget capture preparation failed", { err: e }),
             { status: "failed", message: e instanceof Error ? e.message : "preparing the widget capture failed" }
         );
     }
@@ -135,7 +135,7 @@ async function T(e, t) {
         let e = await fetch(a, { method: "POST", headers: s, body: i.blob });
         if (!e.ok) return { status: "failed", message: `the widget upload was refused (${e.status})` };
     } catch (e) {
-        return (g.warn("widget upload failed", { err: e }), { status: "failed", message: "the widget upload failed" });
+        return (w.warn("widget upload failed", { err: e }), { status: "failed", message: "the widget upload failed" });
     }
     return { status: "accepted" };
 }

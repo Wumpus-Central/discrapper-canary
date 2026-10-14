@@ -28,7 +28,7 @@ function _(e, t, n, i) {
         { id: t, timeoutMs: 15e3, retryMs: 400, sourceMatch: "origin", label: "capture-now" },
     ).then(
         (e) =>
-            (console.debug("[vibegrations] preview frame answered capture", { id: t, phase: e.phase, code: e.code }),
+            (console.debug("[conjure] preview frame answered capture", { id: t, phase: e.phase, code: e.code }),
             "accepted" === e.phase)
                 ? { status: "accepted" }
                 : { status: "failed", code: e.code, message: e.error },

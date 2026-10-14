@@ -31,7 +31,7 @@ function r(e, t, n, r) {
         }
         function m() {
             (A += 1) > 1 &&
-                console.debug("[vibegrations] re-offering call to the preview frame", {
+                console.debug("[conjure] re-offering call to the preview frame", {
                     call: r.label ?? t,
                     id: _,
                     attempt: A,

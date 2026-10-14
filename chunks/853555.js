@@ -21,7 +21,7 @@ function a(e) {
             let e = t[n]();
             if (null != e && null != e.contentWindow) return e;
         } catch (t) {
-            console.debug("[vibegrations] preview frame lookup threw", { projectId: e, err: t });
+            console.debug("[conjure] preview frame lookup threw", { projectId: e, err: t });
         }
     return null;
 }
@@ -33,14 +33,14 @@ function l(e, t, n) {
     return null != i
         ? Promise.resolve(i)
         : s(e) && n?.aborted !== !0
-          ? (console.debug("[vibegrations] preview frame not ready, waiting", { projectId: e, timeoutMs: t }),
+          ? (console.debug("[conjure] preview frame not ready, waiting", { projectId: e, timeoutMs: t }),
             new Promise((i) => {
                 let r = Date.now(),
                     l = r + t;
                 function o(t) {
                     (window.clearInterval(c),
                         n?.removeEventListener("abort", d),
-                        console.debug("[vibegrations] preview frame wait finished", {
+                        console.debug("[conjure] preview frame wait finished", {
                             projectId: e,
                             found: null != t,
                             ms: Date.now() - r,

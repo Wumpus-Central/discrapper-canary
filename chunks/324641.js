@@ -74,7 +74,7 @@ function f(e, t) {
     return !1;
 }
 var I = n(731854);
-let p = new r.Vy("VibegrationsNativeCapture");
+let p = new r.Vy("ConjureNativeCapture");
 function T(e, t) {
     return (p.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }

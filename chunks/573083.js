@@ -20,7 +20,7 @@ function l() {
         try {
             e();
         } catch (e) {
-            console.error("[vibegrations] control lease subscriber threw", e);
+            console.error("[conjure] control lease subscriber threw", e);
         }
 }
 function o(e) {
@@ -28,7 +28,7 @@ function o(e) {
         try {
             t(e);
         } catch (e) {
-            console.error("[vibegrations] control release subscriber threw", e);
+            console.error("[conjure] control release subscriber threw", e);
         }
 }
 function d(e) {
@@ -36,7 +36,7 @@ function d(e) {
     ((t.holders += 1), r.set(e, t));
     let n = !1,
         i = setTimeout(() => {
-            (console.warn("[vibegrations] control lease expired without release", { projectId: e }), a());
+            (console.warn("[conjure] control lease expired without release", { projectId: e }), a());
         }, 35e3);
     function a() {
         if (n || ((n = !0), clearTimeout(i), r.get(e) !== t)) return;

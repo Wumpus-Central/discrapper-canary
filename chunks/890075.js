@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638386, Version Hash: 021804b2a58cffece3c0da48853b15474b515077`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638394, Version Hash: 103ac3eeb6a66a4c7972b5fc958be52dd65c13fc`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -4317,7 +4317,7 @@ let a2 = (0, i7.Fe)({
                 n.e("999045"),
             ]).then(n.bind(n, 213655)),
         webpackId: 213655,
-        name: "VibegrationsTitleBarButton",
+        name: "ConjureTitleBarButton",
     }),
     a6 = (0, i7.Fe)({
         createPromise: () =>
@@ -25903,7 +25903,7 @@ let yr = "isHideDevBanner",
                     className: t_()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638386" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638394" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29670,7 +29670,7 @@ let v9 = (0, t$.Fe)({
                 n.e("526274"),
             ]).then(n.bind(n, 43445)),
         webpackId: 43445,
-        name: "VibegrationsScreen",
+        name: "ConjureScreen",
         renderLoader: v8,
     }),
     br = (0, t$.Fe)({
@@ -44342,7 +44342,7 @@ class ks {
                 "Managed video views require a Frame transport",
             );
         let n = (0, x8.fl)(t.iframeId)?.contentWindow;
-        if (null == n) throw new wC.A({ errorCode: H.Lw6.INVALID_COMMAND }, "The Vibegration Frame is not mounted");
+        if (null == n) throw new wC.A({ errorCode: H.Lw6.INVALID_COMMAND }, "The Conjure Frame is not mounted");
         return { frameWindow: n, targetOrigin: e.source.origin };
     }
     prepareApplicationStreamingStart(e) {
@@ -44727,7 +44727,7 @@ class ks {
         let a = i || tf.A.getSelectedParticipantId(t) === e,
             s = null != n && ((0, x3.au)() ? (0, x3.sj)(n) : (0, x6.ZE)(n)) > 0;
         a || s
-            ? ki.info("Leaving Vibegrations-acquired Go Live watch active for another Discord consumer")
+            ? ki.info("Leaving Conjure-acquired Go Live watch active for another Discord consumer")
             : (0, uF.vN)(e, !1, !1);
     }
     applyDisplaySize(e, t, n) {

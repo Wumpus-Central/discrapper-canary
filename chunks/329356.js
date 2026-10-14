@@ -125,7 +125,7 @@ function D(e, t, n) {
                         null != e.guildId && q(l),
                         (0, S.tZ)(a, { isPreview: !1 })
                             .catch((e) => {
-                                console.error("[vibegrations] post-publish refresh failed", a, e);
+                                console.error("[conjure] post-publish refresh failed", a, e);
                             })
                             .then(() => (u && !0 !== t.channel_skipped ? O(a, r) : void 0))
                             .finally(() => W(a, !1))
@@ -294,7 +294,7 @@ function V(e, t) {
                 null != e &&
                     null != r &&
                     U(e, t, r).catch((t) => {
-                        console.error("[vibegrations] publish action failed", e, t);
+                        console.error("[conjure] publish action failed", e, t);
                     });
             },
             [e, r],

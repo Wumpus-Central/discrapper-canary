@@ -1,20 +1,20 @@
-n.d(t, { KY: () => i, Sm: () => a, b4: () => c, ng: () => o });
+n.d(t, { KY: () => o, Sm: () => a, b4: () => c, ng: () => i });
 let r = new Map();
-function i(e) {
+function o(e) {
     return r.get(e);
 }
 function a(e, t) {
     r.set(e, t);
 }
-function o(e) {
+function i(e) {
     r.delete(e);
 }
 function c(e, t, n) {
-    let i = r.get(e);
+    let o = r.get(e);
     try {
-        if (null == i) throw Error("Not connected");
-        return (n(i), !0);
+        if (null == o) throw Error("Not connected");
+        return (n(o), !0);
     } catch (e) {
-        return (console.error(`[vibegrations] ${t} send failed`, e), !1);
+        return (console.error(`[conjure] ${t} send failed`, e), !1);
     }
 }
