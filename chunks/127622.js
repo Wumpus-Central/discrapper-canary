@@ -13490,21 +13490,25 @@ function mu(e) {
         [r, s] = i.useState("all"),
         [u, c] = i.useState(""),
         d = i.useMemo(() => {
-            let e = u.trim().toLowerCase();
-            return n.filter((t) => {
-                var n, l;
-                return (
-                    "string" == typeof (n = t.log).message &&
-                    "string" == typeof n.level &&
-                    "string" == typeof n.ts &&
-                    ("all" === r ||
-                        ("preview" === (l = t.log.source) || "stable" === l || "web" === l ? l : "other") === r) &&
-                    ("" === e ||
-                        t.log.message.toLowerCase().includes(e) ||
-                        t.log.level.includes(e) ||
-                        (t.log.source?.toLowerCase().includes(e) ?? !1))
-                );
-            });
+            let e;
+            return (
+                (e = u.trim().toLowerCase()),
+                n.filter((t) => {
+                    var n;
+                    let { log: l } = t;
+                    return (
+                        "string" == typeof l.message &&
+                        "string" == typeof l.level &&
+                        "string" == typeof l.ts &&
+                        ("all" === r ||
+                            ("preview" === (n = l.source) || "stable" === n || "web" === n ? n : "other") === r) &&
+                        ("" === e ||
+                            l.message.toLowerCase().includes(e) ||
+                            l.level.includes(e) ||
+                            (l.source?.toLowerCase().includes(e) ?? !1))
+                    );
+                })
+            );
         }, [n, r, u]),
         m = i.useRef(null),
         f = i.useRef(!0);
