@@ -59,12 +59,12 @@ let l = { chance: 0.2, cooldown: 864e5 },
                 },
             ],
         },
-        [s.MW.VIBEGRATIONS]: {
+        [s.MW.CONJURE]: {
             cooldown: 36e5,
             chance: 1,
             group: s.h0.BUILDER,
-            hotspot: i._2.VIBEGRATIONS_FEEDBACK,
-            storageKey: "lastVibegrationsFeedback",
-            feedbackType: s.MW.VIBEGRATIONS,
+            hotspot: i._2.CONJURE_FEEDBACK,
+            storageKey: "lastConjureFeedback",
+            feedbackType: s.MW.CONJURE,
         },
     };

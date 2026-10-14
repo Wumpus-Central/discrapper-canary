@@ -40,7 +40,7 @@ let f = [
         _.iL.VOICE,
         _.iL.IN_APP_REPORTS,
         _.iL.SEARCH_RESULTS,
-        _.iL.VIBEGRATIONS,
+        _.iL.CONJURE,
     ].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
     I = ["bad", "neutral", "good"],
     p = 864e13;

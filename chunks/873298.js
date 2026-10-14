@@ -239,7 +239,7 @@ var i,
         (L[(L.ACTIVITY = 3)] = "ACTIVITY"),
         (L[(L.IN_APP_REPORTS = 4)] = "IN_APP_REPORTS"),
         (L[(L.SEARCH_RESULTS = 8)] = "SEARCH_RESULTS"),
-        (L[(L.VIBEGRATIONS = 10)] = "VIBEGRATIONS"),
+        (L[(L.CONJURE = 10)] = "CONJURE"),
         L);
 class es extends b.G {
     constructor() {
