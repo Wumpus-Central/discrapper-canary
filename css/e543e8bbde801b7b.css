@@ -385,10 +385,17 @@
 }
 
 .badge__2906f {
-    background-color: var(--background-mod-subtle);
     border-radius: var(--radius-xs);
     cursor: pointer;
     padding: 0 var(--space-4)
+}
+
+.badgeActive__2906f {
+    background-color: var(--background-code)
+}
+
+.badgeEnded__2906f {
+    background-color: var(--background-mod-subtle)
 }
 
 .header__50a6a {
@@ -424,4 +431,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=efcef7c1a532c759.css.map*/
+/*# sourceMappingURL=e543e8bbde801b7b.css.map*/

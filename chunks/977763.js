@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { playgroundConfig: () => ea, guildSpaceCollection: () => et }));
+(a.r(t), a.d(t, { playgroundConfig: () => es, guildSpaceCollection: () => ea }));
 var s = a(477900),
     l = a(582128),
     n = a(503698),
@@ -222,9 +222,10 @@ var x = a(17928),
     D = a(927813),
     I = a(427262),
     R = a(795593),
-    T = a(539888);
-let C = a(282435).sx.slice(0, 10),
-    L = [
+    T = a(539888),
+    C = a(282435);
+let L = [...C.sx.slice(0, 2), "1442738138211553383", ...C.sx.slice(2, 9)],
+    G = [
         { days: 7, totalSeconds: 7 * D.A.Seconds.DAY - 60, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
         { days: 7, totalSeconds: 32 * D.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
         { days: 5, totalSeconds: 26 * D.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
@@ -246,23 +247,23 @@ let C = a(282435).sx.slice(0, 10),
         { days: 1, totalSeconds: 1440, gameIndexes: [6] },
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
-var G = a(546184);
-let M = g("leaderboard", h.a.LEADERBOARD, 0, 0),
-    j = {
+var M = a(546184);
+let j = g("leaderboard", h.a.LEADERBOARD, 0, 0),
+    P = {
         winningStat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         winningStreak: 1,
         winningValue: 40 * D.A.Millis.HOUR + 33 * D.A.Millis.MINUTE,
     },
-    P = { ...j, winningStreak: 3 },
-    N = { currentLeaderStat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED };
-function F(e) {
+    N = { ...P, winningStreak: 3 },
+    F = { currentLeaderStat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED };
+function B(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: i()(G.Gt, a),
+        className: i()(M.Gt, a),
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let B = {
+let H = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
@@ -297,12 +298,12 @@ let B = {
         let h = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = C,
+                        gameIds: a = L,
                         stat: s = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
-                        entryCount: l = L.length,
+                        entryCount: l = G.length,
                         ended: n = !1,
                     } = e,
-                    i = 0 === t.length ? [] : L.slice(0, l),
+                    i = 0 === t.length ? [] : G.slice(0, l),
                     r = Math.floor(Date.now() / 1e3);
                 return {
                     stat: s,
@@ -354,14 +355,14 @@ let B = {
                     : "error" === n
                       ? { status: "error" }
                       : { status: "success", data: g }));
-        let y = (0, s.jsx)(T.P, { guildId: c, widget: M, guildSpaceMode: "view", hydration: a });
+        let y = (0, s.jsx)(T.P, { guildId: c, widget: j, guildSpaceMode: "view", hydration: a });
         return (0, s.jsxs)("div", {
-            className: G.Zp,
+            className: M.Zp,
             children: [
-                (0, s.jsx)(F, { label: "Narrow column (380px)", className: G.sc, children: y }),
-                (0, s.jsx)(F, { label: "Wide column (685px)", className: G.U, children: y }),
+                (0, s.jsx)(B, { label: "Narrow column (380px)", className: M.sc, children: y }),
+                (0, s.jsx)(B, { label: "Wide column (685px)", className: M.U, children: y }),
                 null != d
-                    ? (0, s.jsx)(F, {
+                    ? (0, s.jsx)(B, {
                           label: "Badges",
                           children: (0, s.jsxs)(E.B, {
                               gap: 16,
@@ -372,7 +373,7 @@ let B = {
                                       gap: 8,
                                       children: [
                                           (0, s.jsx)(r.E, { variant: "text-sm/normal", children: "Winner" }),
-                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: j, leaderData: null }),
+                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: P, leaderData: null }),
                                       ],
                                   }),
                                   (0, s.jsxs)(E.B, {
@@ -384,7 +385,7 @@ let B = {
                                               variant: "text-sm/normal",
                                               children: "Winner on a streak",
                                           }),
-                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: P, leaderData: null }),
+                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: N, leaderData: null }),
                                       ],
                                   }),
                                   (0, s.jsxs)(E.B, {
@@ -393,7 +394,7 @@ let B = {
                                       gap: 8,
                                       children: [
                                           (0, s.jsx)(r.E, { variant: "text-sm/normal", children: "Current leader" }),
-                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: null, leaderData: N }),
+                                          (0, s.jsx)(R.J, { guildId: c, userId: d, winnerData: null, leaderData: F }),
                                       ],
                                   }),
                               ],
@@ -439,12 +440,12 @@ let B = {
         },
     },
 };
-var H = a(343508);
-let U = [32, 21, 15, 14, 9],
-    O = [3, 2, 0, 3, 1],
-    W = g("popular-music", h.a.POPULAR_MUSIC, 0, 0),
-    q = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
-    Y = {
+var U = a(343508);
+let O = [32, 21, 15, 14, 9],
+    W = [3, 2, 0, 3, 1],
+    q = g("popular-music", h.a.POPULAR_MUSIC, 0, 0),
+    Y = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
+    V = {
         ranked_songs: [
             {
                 track_external_id: "2plbrEY59IikOBgBGLjaoe",
@@ -455,7 +456,7 @@ let U = [32, 21, 15, 14, 9],
                 plays: 21,
                 unique_listeners: 8,
                 plays_change_percent: 2,
-                facepile_user_ids: q,
+                facepile_user_ids: Y,
             },
             {
                 track_external_id: "4eCwFoinvpIQi1kBEoAzQO",
@@ -466,7 +467,7 @@ let U = [32, 21, 15, 14, 9],
                 plays: 17,
                 unique_listeners: 6,
                 plays_change_percent: -4,
-                facepile_user_ids: q,
+                facepile_user_ids: Y,
             },
             {
                 track_external_id: "1BxfuPKGuaTgP7aM0Bbdwr",
@@ -476,7 +477,7 @@ let U = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f003",
                 plays: 14,
                 unique_listeners: 5,
-                facepile_user_ids: q,
+                facepile_user_ids: Y,
             },
             {
                 track_external_id: "0V3wPSX9ygBnCm8psDIegu",
@@ -496,7 +497,7 @@ let U = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f005",
                 plays: 9,
                 unique_listeners: 4,
-                facepile_user_ids: q,
+                facepile_user_ids: Y,
             },
             {
                 track_external_id: "2takcwOaAZWiXQijPHIx7B",
@@ -555,7 +556,7 @@ let U = [32, 21, 15, 14, 9],
         plays_trend_pct: 0.02,
         computed_at: null,
     },
-    V = {
+    z = {
         plays_total: 0,
         distinct_listeners: 0,
         distinct_songs: 0,
@@ -563,8 +564,8 @@ let U = [32, 21, 15, 14, 9],
         listening_time_ms: 0,
         plays_trend_pct: null,
     },
-    z = {
-        ranked_songs: Y.ranked_songs.map((e) => ({
+    X = {
+        ranked_songs: V.ranked_songs.map((e) => ({
             track_external_id: e.track_external_id,
             track_title: null,
             artist_external_id: null,
@@ -573,18 +574,18 @@ let U = [32, 21, 15, 14, 9],
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
-        ranked_artists: Y.ranked_artists.map((e) => ({
+        ranked_artists: V.ranked_artists.map((e) => ({
             artist_external_id: e.artist_external_id,
             artist_name: null,
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
         top_listeners: [],
-        ...V,
+        ...z,
         computed_at: null,
     },
-    X = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...V, computed_at: null },
-    Z = [
+    Z = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...z, computed_at: null },
+    $ = [
         {
             artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6",
             artist_name: "Dayseeker",
@@ -597,26 +598,26 @@ let U = [32, 21, 15, 14, 9],
         },
         { artist_external_id: "6mEQK9m2krja6X1cfsAjfl", artist_name: "Ado", artist_image_hash: null },
     ];
-function $(e, t, a) {
+function K(e, t, a) {
     return {
         ...e,
         top_listeners: t.map((e, t) => {
             let s;
             return a
-                ? ((s = Y.ranked_songs[t % Y.ranked_songs.length]),
+                ? ((s = V.ranked_songs[t % V.ranked_songs.length]),
                   {
                       user_id: e,
-                      plays: U[t] ?? 1,
+                      plays: O[t] ?? 1,
                       latest_track_external_id: 3 === t ? null : s.track_external_id,
                       latest_track_title: 3 === t ? null : s.track_title,
                       latest_artist_name: 3 === t ? null : s.artist_name,
                       latest_cover_art_hash: 3 === t ? null : s.cover_art_hash,
-                      artists: Z.slice(0, O[t] ?? 0),
+                      artists: $.slice(0, W[t] ?? 0),
                       artist_count: 0 === t ? 5 : null,
                   })
                 : {
                       user_id: e,
-                      plays: U[t] ?? 1,
+                      plays: O[t] ?? 1,
                       latest_track_external_id: null,
                       latest_track_title: null,
                       latest_artist_name: null,
@@ -626,21 +627,21 @@ function $(e, t, a) {
         }),
     };
 }
-function K(e) {
-    let { label: t, className: a, children: l } = e;
-    return (0, s.jsxs)("div", {
-        className: `${H.Gt} ${a}`,
-        children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
-    });
-}
 function Q(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${G.Gt} ${a}`,
+        className: `${U.Gt} ${a}`,
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
 function J(e) {
+    let { label: t, className: a, children: l } = e;
+    return (0, s.jsxs)("div", {
+        className: `${M.Gt} ${a}`,
+        children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
+    });
+}
+function ee(e) {
     let { mode: t, hydration: a, type: n, initialConfig: i, successData: r } = e,
         [o, d] = l.useState(i),
         c = (0, s.jsx)(T.P, {
@@ -661,18 +662,18 @@ function J(e) {
             onCommitConfig: d,
         });
     return (0, s.jsxs)("div", {
-        className: G.Zp,
+        className: M.Zp,
         children: [
-            (0, s.jsx)(Q, { label: "Narrow column (380px)", className: G.sc, children: c }),
-            (0, s.jsx)(Q, { label: "Wide column (685px)", className: G.U, children: c }),
+            (0, s.jsx)(J, { label: "Narrow column (380px)", className: M.sc, children: c }),
+            (0, s.jsx)(J, { label: "Wide column (685px)", className: M.U, children: c }),
         ],
     });
 }
-let ee = {
+let et = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    et = {
+    ea = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
@@ -686,11 +687,11 @@ let ee = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, s.jsx)(J, {
+                            return (0, s.jsx)(ee, {
                                 ...e,
                                 type: h.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: ee,
+                                initialConfig: et,
                                 successData: void 0,
                             });
                         },
@@ -720,7 +721,7 @@ let ee = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [B] },
+            { title: "Server Hub Gaming Leaderboard", stories: [H] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
@@ -736,11 +737,11 @@ let ee = {
                                 d = (function (e, t) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: $(Y, t, !0) };
+                                            return { status: "success", data: K(V, t, !0) };
                                         case "minimal":
-                                            return { status: "success", data: $(z, t, !1) };
+                                            return { status: "success", data: K(X, t, !1) };
                                         case "empty":
-                                            return { status: "success", data: X };
+                                            return { status: "success", data: Z };
                                         case "loading":
                                             return { status: "loading" };
                                         case "error":
@@ -760,7 +761,7 @@ let ee = {
                                     T.P,
                                     {
                                         guildId: o ?? "popular-music-story-guild",
-                                        widget: { ...W, id: `${W.id}-${e}` },
+                                        widget: { ...q, id: `${q.id}-${e}` },
                                         guildSpaceMode: i,
                                         hydration: d,
                                         onRemove: () => {},
@@ -769,21 +770,21 @@ let ee = {
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: H.Zp,
+                                className: U.Zp,
                                 children: [
-                                    (0, s.jsx)(K, {
+                                    (0, s.jsx)(Q, {
                                         label: "Wide column (685px)",
-                                        className: H.U,
+                                        className: U.U,
                                         children: c("wide"),
                                     }),
-                                    (0, s.jsx)(K, {
+                                    (0, s.jsx)(Q, {
                                         label: "Narrow column (380px)",
-                                        className: H.sc,
+                                        className: U.sc,
                                         children: c("narrow"),
                                     }),
-                                    (0, s.jsx)(K, {
+                                    (0, s.jsx)(Q, {
                                         label: "Minimum width (320px)",
-                                        className: H.Bp,
+                                        className: U.Bp,
                                         children: c("minimum"),
                                     }),
                                 ],
@@ -827,4 +828,4 @@ let ee = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music"],
     },
-    ea = { playgroundBaseUrl: "guild-space", collections: [et] };
+    es = { playgroundBaseUrl: "guild-space", collections: [ea] };
