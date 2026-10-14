@@ -1,4 +1,4 @@
-n.d(t, { M: () => eM });
+n.d(t, { M: () => eR });
 var r = n(477900),
     l = n(582128),
     i = n(688810),
@@ -132,10 +132,10 @@ function A(e) {
 }
 var x = n(800342),
     v = n(328968),
-    M = n(202541);
-function R() {
+    R = n(202541);
+function M() {
     let e = (0, d.t4)((e) => e.skuIds),
-        t = l.useMemo(() => e.filter((e) => !M.oz.includes(e)), [e]),
+        t = l.useMemo(() => e.filter((e) => !R.oz.includes(e)), [e]),
         n = (0, C.bG)([v.A], () => t.filter((e) => null == v.A.getForSKU(e) && !v.A.isFetchingForSKU(e)), [t]);
     return (
         l.useEffect(() => {
@@ -192,6 +192,7 @@ function F() {
             priceOptions: o,
             selectedSkuId: f,
             setPurchasePreviewError: h,
+            invoicePreviewRefetchKey: p,
         } = (0, d.t4)((e) => ({
             purchaseState: e.purchaseState,
             applicationId: e.applicationId,
@@ -199,31 +200,32 @@ function F() {
             priceOptions: e.checkoutPriceOptions,
             selectedSkuId: e.selectedSkuId,
             setPurchasePreviewError: e.setPurchasePreviewError,
+            invoicePreviewRefetchKey: e.invoicePreviewRefetchKey,
         })),
-        p = c === L.h.PURCHASING || c === L.h.COMPLETED,
+        m = c === L.h.PURCHASING || c === L.h.COMPLETED,
         {
-            applyWalletBalance: m,
-            currency: C,
-            splitPaymentsEnabled: E,
+            applyWalletBalance: C,
+            currency: E,
+            splitPaymentsEnabled: y,
         } = O({ location: "HeadlessCheckoutStoreOTPInvoiceFetcher", currency: o.loaded ? o.currency : void 0 }),
-        { enabled: y } = (0, T.c)({ location: "HeadlessCheckoutStoreOTPInvoiceFetcher" }),
-        I = (0, d.t4)((e) =>
+        { enabled: I } = (0, T.c)({ location: "HeadlessCheckoutStoreOTPInvoiceFetcher" }),
+        S = (0, d.t4)((e) =>
             e.getEffectivePaymentSourceId({
-                isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: E, giftCardsEnabled: y }),
+                isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: y, giftCardsEnabled: I }),
             }),
         ),
-        [S, g] =
+        [g, _] =
             ((e = l.useMemo(
                 () => ({
                     applicationId: u,
                     skuId: f,
-                    paymentSourceId: I,
+                    paymentSourceId: S,
                     isGift: a,
-                    currency: C,
-                    preventFetch: p,
-                    applyWalletBalance: m,
+                    currency: E,
+                    preventFetch: m,
+                    applyWalletBalance: C,
                 }),
-                [u, f, I, a, C, p, m],
+                [u, f, S, a, E, m, C],
             )),
             (t = (0, l.useRef)(e)),
             (n = (0, l.useRef)(!1)),
@@ -265,12 +267,12 @@ function F() {
                 },
                 [i],
             )),
-            (0, k.$n)(e, s, void 0));
+            (0, k.$n)(e, s, p));
     return (
-        (0, U.F)(S, g),
+        (0, U.F)(g, _),
         l.useEffect(() => {
-            h(g);
-        }, [g, h]),
+            h(_);
+        }, [_, h]),
         null
     );
 }
@@ -280,7 +282,7 @@ function D() {
     return ((0, B.c)({ applicationId: e, skuIDs: t }), null);
 }
 var G = n(166532);
-function Z(e) {
+function K(e) {
     let { fetchParams: t, refetchKey: n } = e,
         [r, i] = (0, k.YV)(t, n),
         { setCheckoutInvoicePreview: s } = (0, d.t4)((e) => ({
@@ -293,7 +295,7 @@ function Z(e) {
         null
     );
 }
-function K(e) {
+function Z(e) {
     let { fetchParams: t, refetchKey: n } = e,
         [r, i] = (0, k.C8)(t, n),
         { setCheckoutInvoicePreview: s } = (0, d.t4)((e) => ({
@@ -342,11 +344,13 @@ function q() {
             fetchRenewalInvoicePreviewRequest: i,
             setFetchCheckoutInvoicePreviewRequest: s,
             setFetchRenewalInvoicePreviewRequest: a,
+            invoicePreviewRefetchKey: u,
         } = (0, d.t4)((e) => ({
             setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
             setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
             fetchCheckoutInvoicePreviewRequest: e.fetchCheckoutInvoicePreviewRequest,
             fetchRenewalInvoicePreviewRequest: e.fetchRenewalInvoicePreviewRequest,
+            invoicePreviewRefetchKey: e.invoicePreviewRefetchKey,
         }));
     return (l.useEffect(() => {
         let n = t.current;
@@ -357,14 +361,16 @@ function q() {
         : (null != i && i.type,
           (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != n && "subscription_checkout_invoice" === n.type && (0, r.jsx)(Z, { fetchParams: n.params }),
+                  null != n &&
+                      "subscription_checkout_invoice" === n.type &&
+                      (0, r.jsx)(K, { fetchParams: n.params, refetchKey: u }),
                   null != n &&
                       "subscription_checkout_invoice_get_request" === n.type &&
-                      (0, r.jsx)(K, { fetchParams: n.params }),
+                      (0, r.jsx)(Z, { fetchParams: n.params, refetchKey: u }),
                   null != n &&
                       "premium_one_time_gift_purchase_invoice" === n.type &&
-                      (0, r.jsx)(W, { fetchParams: n.params }),
-                  null != i && (0, r.jsx)(Y, { fetchParams: i.params }),
+                      (0, r.jsx)(W, { fetchParams: n.params, refetchKey: u }),
+                  null != i && (0, r.jsx)(Y, { fetchParams: i.params, refetchKey: u }),
               ],
           }));
 }
@@ -713,7 +719,7 @@ function ex(e) {
             initialCheckoutPaymentSourceId: P,
             defaultPaymentSourceId: x,
             eligiblePaymentGateways: v,
-            hasFetchedPaymentSources: M,
+            hasFetchedPaymentSources: R,
             paymentSources: T,
             hasPaymentSources: L,
         } = (function (e) {
@@ -761,7 +767,7 @@ function ex(e) {
                 startingPremiumSubscriptionPlanId: null != i.activeSubscription ? i.activeSubscription?.planId : null,
             };
             return (
-                M && (e.startedPaymentFlowWithPaymentSources = L),
+                R && (e.startedPaymentFlowWithPaymentSources = L),
                 (0, d.y$)({
                     checkoutInitParameters: i,
                     startingValues: e,
@@ -791,7 +797,7 @@ function ex(e) {
     return (0, r.jsxs)(d.Ni, {
         value: b,
         children: [
-            (0, r.jsx)(A, { hasFetchedPaymentSources: M, hasPaymentSources: L }),
+            (0, r.jsx)(A, { hasFetchedPaymentSources: R, hasPaymentSources: L }),
             (0, r.jsx)(eP, {}),
             (0, r.jsx)(ef, {}),
             i.unifiedCheckoutFlow !== m.C.ORB_CHECKOUT && (0, r.jsx)(eS, {}),
@@ -806,12 +812,12 @@ function ex(e) {
                 activeSubscription: i.activeSubscription,
                 defaultPaymentSourceId: x,
                 eligiblePaymentGateways: v,
-                hasFetchedPaymentSources: M,
+                hasFetchedPaymentSources: R,
                 paymentSources: T,
                 initialPaymentSourceId: i.initialPaymentSourceId,
             }),
             N && (0, r.jsx)(q, {}),
-            j && (0, r.jsx)(R, {}),
+            j && (0, r.jsx)(M, {}),
             U && (0, r.jsx)(D, {}),
             H && (0, r.jsx)(F, {}),
             c,
@@ -819,7 +825,7 @@ function ex(e) {
     });
 }
 var ev = n(783327);
-function eM(e) {
+function eR(e) {
     let {
             stepConfigs: t,
             breadcrumbs: n,
@@ -846,7 +852,7 @@ function eM(e) {
                 customCheckoutFlow: o ?? p,
                 unifiedCheckoutFlow: d.unifiedCheckoutFlow,
                 paymentGateway: d.paymentGateway,
-                applicationId: d.applicationId ?? M.tv,
+                applicationId: d.applicationId ?? R.tv,
                 tenantParamsMap: d.tenantParamsMap ?? {},
             }),
             [
@@ -874,11 +880,11 @@ function eM(e) {
             loadId: i,
             discoverySessionId: a,
             checkoutInitParameters: m,
-            children: (0, r.jsx)(eR, { ...d, skuIDs: h, purchaseType: u }),
+            children: (0, r.jsx)(eM, { ...d, skuIDs: h, purchaseType: u }),
         }),
     });
 }
-function eR(e) {
+function eM(e) {
     let { errorHandlingBehavior: t = "close-and-alert", onErrorReported: n, skuIDs: s, children: f } = e,
         { paymentSources: h } = (0, u.j)(),
         {

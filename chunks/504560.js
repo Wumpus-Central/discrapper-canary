@@ -716,6 +716,8 @@ function es(e) {
                     checkoutInvoiceError: n ?? null,
                     pendingPaymentSourceId: null != t && null == e.order ? null : e.pendingPaymentSourceId,
                 })),
+            invoicePreviewRefetchKey: 0,
+            refetchInvoicePreviews: () => e((e) => ({ invoicePreviewRefetchKey: e.invoicePreviewRefetchKey + 1 })),
             fetchRenewalInvoicePreviewRequest: null,
             setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: v(t, i) }),
             renewalInvoicePreview: null,
