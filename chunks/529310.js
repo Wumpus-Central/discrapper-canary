@@ -24,8 +24,8 @@ var l = n(477900),
     f = n(34188),
     S = n(661531),
     E = n(939249),
-    y = n(398590),
-    A = n(793574),
+    A = n(398590),
+    y = n(793574),
     I = n(688810),
     g = n(878678),
     P = n(361158),
@@ -42,8 +42,8 @@ let j = function (e) {
     function r() {
         (t(),
             (0, v.pX)(T.BVt.COLLECTIBLES_SHOP),
-            (0, x.Cz)({ analyticsSource: A.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
-            (0, y.jH)(),
+            (0, x.Cz)({ analyticsSource: y.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+            (0, A.jH)(),
             (0, P.dF)(g.Zt));
     }
     return i
@@ -79,7 +79,7 @@ var R = n(951305),
     U = n(580630),
     G = n(881489),
     F = n(774962),
-    B = n(332026),
+    B = n(163074),
     H = n(810498),
     W = n(557679),
     V = n(452027),
@@ -124,7 +124,7 @@ function X(e) {
         })),
         C = !$(o) && Q(o) ? o : 3,
         [f, E] = i.useState(() => ($(o) ? "preset" : "custom")),
-        [y, A] = i.useState(() => String(C)),
+        [A, y] = i.useState(() => String(C)),
         [I, g] = i.useState(C),
         P = i.useId(),
         v = i.useId(),
@@ -249,7 +249,7 @@ function X(e) {
                                     inputMode: "numeric",
                                     pattern: "[0-9]*",
                                     maxLength: String(50).length,
-                                    value: y,
+                                    value: A,
                                     "aria-labelledby": v,
                                     "aria-describedby": x,
                                     onChange: function (e) {
@@ -257,16 +257,16 @@ function X(e) {
                                         if (!/^\d*$/.test(t)) return;
                                         if ("" !== t && Number(t) > 50) {
                                             let e = String(50);
-                                            (E("custom"), A(e), g(50), c(50));
+                                            (E("custom"), y(e), g(50), c(50));
                                             return;
                                         }
-                                        A(t);
+                                        y(t);
                                         let n = Number(t);
                                         Q(n) && (E("custom"), g(n), c(n));
                                     },
                                     onBlur: function () {
-                                        let e = Number(y);
-                                        A(String(Q(e) ? e : I));
+                                        let e = Number(A);
+                                        y(String(Q(e) ? e : I));
                                     },
                                 }),
                                 (0, l.jsxs)(u.B, {
@@ -416,8 +416,8 @@ function eE(e) {
             checkoutPriceOptions: e.checkoutPriceOptions,
             activeSubscription: e.activeSubscription,
         })),
-        { userTrialOffer: S, isEligibleForTrial: E, discountOffer: y } = (0, m.i)(),
-        A = (0, en.YJ)(y),
+        { userTrialOffer: S, isEligibleForTrial: E, discountOffer: A } = (0, m.i)(),
+        y = (0, en.YJ)(A),
         {
             isGift: I,
             giftRecipient: g,
@@ -438,20 +438,20 @@ function eE(e) {
         B = w ?? N,
         W = n ?? p;
     a()(null != W, "Price option has to be set");
-    let V = y?.discount?.planIds,
-        Y = null != y && l.some((e) => V?.includes(e)) && null != y.discount,
-        K = null != A && l.includes(A) ? (0, D.y8)(A, !1, I, W) : void 0,
+    let V = A?.discount?.planIds,
+        Y = null != A && l.some((e) => V?.includes(e)) && null != A.discount,
+        K = null != y && l.includes(y) ? (0, D.y8)(y, !1, I, W) : void 0,
         Z = null != B ? B.id : void 0,
         q = null != Z && l.includes(Z);
     (i.useEffect(() => {
         if (q) return void d(Z, { shouldUpdateQuantity: !1 });
-        let e = !I && null != A && l.includes(A) ? A : null;
+        let e = !I && null != y && l.includes(y) ? y : null;
         if (null == O || I) d(e ?? l[0]);
         else if (null != O) {
             let e = l.find((e) => e !== O.id);
             null != e && d(e);
         }
-    }, [q, I, l, O, d, Z, A]),
+    }, [q, I, l, O, d, Z, y]),
         i.useEffect(() => {
             b && null != _ && _.length > 0 && T(_);
         }, [_, T, b]));
@@ -490,7 +490,7 @@ function eE(e) {
         discountedPlanRegularPrice: K,
     };
 }
-function ey(e) {
+function eA(e) {
     let { isPrepaid: t, selectedPlan: n, selectedPlanPrice: i, intervalType: r, className: a } = e;
     return (0, l.jsxs)("div", {
         className: a,
@@ -510,7 +510,7 @@ function ey(e) {
         ],
     });
 }
-function eA(e) {
+function ey(e) {
     let {
         giftRecipient: t,
         customGiftMessage: n,
@@ -528,7 +528,7 @@ function eA(e) {
         switchPlanSelectComponent: S,
         warningComponent: E,
     } = e;
-    function y(e) {
+    function A(e) {
         return (0, l.jsxs)(u.B, {
             gap: 8,
             children: [
@@ -562,7 +562,7 @@ function eA(e) {
                                         currentText: n,
                                     });
                             })(),
-                            y(S),
+                            A(S),
                             E,
                             !a && (0, l.jsx)(j, { onClose: h }),
                         ],
@@ -573,12 +573,12 @@ function eA(e) {
                 className: eC.Du,
                 children: [
                     (0, l.jsx)(ep.Z, { className: m ? eC.KW : void 0, giftRecipient: t }),
-                    y(S),
+                    A(S),
                     o &&
                         f &&
                         null != d &&
                         null != p &&
-                        (0, l.jsx)(ey, { selectedPlan: d, selectedPlanPrice: p, intervalType: null, isPrepaid: s }),
+                        (0, l.jsx)(eA, { selectedPlan: d, selectedPlanPrice: p, intervalType: null, isPrepaid: s }),
                     E,
                     !a && (0, l.jsx)(j, { onClose: h }),
                 ],
@@ -676,7 +676,7 @@ function e_(e) {
             o &&
                 null != t &&
                 null != n &&
-                (0, l.jsx)(ey, {
+                (0, l.jsx)(eA, {
                     className: u,
                     selectedPlan: t,
                     selectedPlanPrice: n,
@@ -706,8 +706,8 @@ function eT(e) {
             premiumSubscription: f,
             premiumSubscriptionPlan: S,
             isEligibleForBOGOPromotion: E,
-            isGift: y,
-            thePriceOptions: A,
+            isGift: A,
+            thePriceOptions: y,
             isEligibleForTrial: I,
             giftRecipient: g,
             customGiftMessage: P,
@@ -729,19 +729,19 @@ function eT(e) {
         } = eE({ selectedPlanId: n, priceOptions: r, planOptions: a, subscriptionPeriodEnd: s, showTotal: o }),
         { discountAmountOff: Y, applicablePlan: Z, discountOffer: q } = (0, h.t4)((e) => e.premiumDiscountInfo),
         z = (0, G.ds)(),
-        $ = B.Ay.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
-        Q = (0, W.M)({ isGift: y, giftRecipient: g, selectedPlanId: C?.id }) && $ === B.o3.PRESETS;
+        { enabled: $ } = B.A.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
+        Q = (0, W.M)({ isGift: A, giftRecipient: g, selectedPlanId: C?.id });
     function J() {
         return (0, l.jsx)(eg, {
             disabled: t,
             planOptions: a,
             radioGroupRef: L,
             radioGroupProps: k,
-            isGift: y,
+            isGift: A,
             isPrepaid: M,
             premiumSubscription: f,
             selectedPlan: C,
-            thePriceOptions: A,
+            thePriceOptions: y,
             shouldShowTrialOrDiscountLayout: R,
             isEligibleForTrial: I,
             isPlansEligibleForDiscount: _,
@@ -751,11 +751,11 @@ function eT(e) {
         premiumSubscription: f,
         selectedPlanId: n,
         planGroup: i,
-        isGift: y,
+        isGift: A,
         fractionalPremiumInfoArgs: { forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 },
     });
-    if (y)
-        return (0, l.jsx)(eA, {
+    if (A)
+        return (0, l.jsx)(ey, {
             giftRecipient: g,
             customGiftMessage: P,
             setCustomGiftMessage: v,
@@ -767,7 +767,7 @@ function eT(e) {
             selectedPlanPrice: w,
             useCompactGiftComponents: u,
             quantityPresetsSelector:
-                Q && null != C && null != w
+                Q && $ && null != C && null != w
                     ? (0, l.jsx)(X, { selectedPlanId: C.id, planOptions: a, unitPrice: w })
                     : null,
             handleClose: p,

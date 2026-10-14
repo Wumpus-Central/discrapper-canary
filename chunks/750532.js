@@ -11,12 +11,12 @@ var l = n(477900),
     p = n(504560),
     m = n(242874),
     C = n(573359),
-    h = n(332026),
+    h = n(163074),
     f = n(557679),
     S = n(892349),
     E = n(35587),
-    y = n(180522),
-    A = n(637969),
+    A = n(180522),
+    y = n(637969),
     I = n(45938),
     g = n(158045),
     P = n(951305),
@@ -46,7 +46,7 @@ function R(e) {
         U = (0, u.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
-        W = (0, h.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
+        { enabled: W } = h.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
         V = D?.productLine === x.EZt.COLLECTIBLES,
         Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
@@ -77,7 +77,7 @@ function R(e) {
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(y.A, {
+                                children: (0, l.jsx)(A.A, {
                                     defaultAnimationState: m.oA.LOOP,
                                     giftStyle: F,
                                     className: b.qq,
@@ -91,7 +91,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(A.A, {
+                              ? (0, l.jsx)(y.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: E,
                                     premiumType: _.WN[n],
