@@ -269,6 +269,14 @@
     }
 }
 
+.autocomplete_f3ac5f {
+    border-radius: var(--radius-sm);
+    bottom: calc(100% + var(--space-8));
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    inset-inline: 0;
+    position: absolute
+}
+
 .composer__86f16 {
     align-items: stretch;
     -webkit-backdrop-filter: blur(28px);
@@ -995,4 +1003,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=44486cd1a92cbaaf.css.map*/
+/*# sourceMappingURL=cc77f318b6ef0c74.css.map*/
