@@ -347,18 +347,18 @@ function C(e) {
                         l = Math.abs(t) > 0.5 ? e : l + 0.1 * t;
                     }
                 } else l = G() ?? null;
-                (null != l &&
-                    Number.isFinite(l) &&
-                    ((em.current = l),
-                    (ed.current = l),
-                    es({ playbackPxSpring: Math.min(Math.max(0, (l / A) * eu), eu), immediate: !0 })),
-                    (e = requestAnimationFrame(t)));
+                if (null != l && Number.isFinite(l)) {
+                    ((em.current = l), (ed.current = l));
+                    let e = Math.min(Math.max(0, (l / A) * eu), eu);
+                    eo.set(e);
+                }
+                e = requestAnimationFrame(t);
             })),
             () => {
                 (cancelAnimationFrame(e), (em.current = null), (ef.current = null));
             }
         );
-    }, [a, G, A, eu, es]);
+    }, [a, G, A, eu, eo]);
     let ep = a && null != G && A > 0;
     l.useEffect(() => {
         let e;
