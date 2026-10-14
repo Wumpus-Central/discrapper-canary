@@ -220,26 +220,35 @@
     background-color: var(--background-mod-subtle)
 }
 
+.container__79ea5.active__79ea5 .actions__79ea5,
+.container__79ea5:hover .actions__79ea5 {
+    margin-inline-start: var(--space-4);
+    opacity: 1;
+    overflow: visible;
+    width: auto
+}
+
 .row__79ea5 {
     border-radius: var(--radius-sm);
     cursor: pointer;
     height: var(--custom-friend-row-height);
     padding: var(--space-xs);
-    position: relative;
     --custom-activity-status-emoji-size: 12px
 }
 
-.moreButton__79ea5,
+.actions__79ea5,
 .row__79ea5 {
     align-items: center;
-    display: flex
+    display: flex;
+    position: relative
 }
 
-.moreButton__79ea5 {
-    bottom: var(--space-8);
-    inset-inline-end: var(--space-8);
-    position: absolute;
-    top: var(--space-8)
+.actions__79ea5 {
+    flex: 0 0 auto;
+    gap: var(--space-8);
+    opacity: 0;
+    overflow: hidden;
+    width: 0
 }
 
 .content__79ea5 {
@@ -255,20 +264,12 @@
     min-width: 0
 }
 
-.name__79ea5 {
-    text-overflow: ellipsis
-}
-
-.name__79ea5,
 .subtitleText__79ea5 {
+    display: flex;
+    gap: var(--space-4);
     min-width: 0;
     overflow: hidden;
     white-space: nowrap
-}
-
-.subtitleText__79ea5 {
-    display: flex;
-    gap: var(--space-4)
 }
 
 .subtitleLabel__79ea5 {
@@ -2623,4 +2624,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=c9de8f88cd6ffd71.css.map*/
+/*# sourceMappingURL=63b710b9d9c71c2c.css.map*/
