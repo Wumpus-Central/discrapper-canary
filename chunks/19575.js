@@ -1147,6 +1147,16 @@ let K = {
             (0, I.isWindows)() ? (g.dotaGsi?.deleteDotaGsiConfig(e) ?? Promise.resolve(!1)) : Promise.resolve(!1),
         debugLogDotaGsiPayload: (e) =>
             (0, I.isWindows)() ? (g.dotaGsi?.debugLogDotaGsiPayload(e) ?? Promise.resolve()) : Promise.resolve(),
+        readRocketLeagueStatsApiConfig() {
+            let e = { installed: !1, config: {} };
+            return (0, I.isWindows)()
+                ? (g.rocketLeagueStatsApi?.readRocketLeagueStatsApiConfig() ?? Promise.resolve(e))
+                : Promise.resolve(e);
+        },
+        writeRocketLeagueStatsApiConfig: (e) =>
+            (0, I.isWindows)()
+                ? (g.rocketLeagueStatsApi?.writeRocketLeagueStatsApiConfig(e) ?? Promise.resolve(!1))
+                : Promise.resolve(!1),
         appViewed() {
             (0, I.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(c.APP_VIEWED));
         },

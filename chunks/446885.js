@@ -16,7 +16,7 @@ var i = a(626333),
     d = a(979563),
     m = a(268378),
     c = a(660183);
-let u = {
+let S = {
     Save: { eventName: d.d.Save, eventType: s.rb.OBJECTIVE_KILL, getTitle: () => c.intl.string(m.default.Rt7Y2b) },
     EpicSave: {
         eventName: d.d.EpicSave,
@@ -59,7 +59,7 @@ let u = {
     FirstTouch: { eventName: d.d.FirstTouch, eventType: s.rb.UNCLASSIFIED },
     OwnGoal: { eventName: d.d.OwnGoal, eventType: s.rb.UNCLASSIFIED },
 };
-function S(e, t) {
+function u(e, t) {
     let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return (0, i.K)({
         type: s.Gy.GAME_EVENT,
@@ -95,35 +95,35 @@ class T {
                 );
             }
             case o.MatchCreated:
-                return [S(d.d.MatchStart, s.rb.UNCLASSIFIED, { hiddenFromTimeline: !0 })];
+                return [u(d.d.MatchStart, s.rb.UNCLASSIFIED, { hiddenFromTimeline: !0 })];
             case o.MatchEnded: {
                 let t = [];
                 if (null != this.localTeamNum && e.Data?.WinnerTeamNum != null) {
                     let a = e.Data.WinnerTeamNum === this.localTeamNum;
                     t.push(
-                        S(a ? d.d.Victory : d.d.Defeat, a ? s.rb.VICTORY : s.rb.DEFEAT, {
+                        u(a ? d.d.Victory : d.d.Defeat, a ? s.rb.VICTORY : s.rb.DEFEAT, {
                             title: c.intl.string(a ? m.default.p65UF0 : m.default.saS9BW),
                         }),
                     );
                 }
-                return (t.push(S(d.d.MatchEnd, s.rb.UNCLASSIFIED, { hiddenFromTimeline: !0 })), t);
+                return (t.push(u(d.d.MatchEnd, s.rb.UNCLASSIFIED, { hiddenFromTimeline: !0 })), t);
             }
             case o.MatchDestroyed:
-                return [S(d.d.MatchEnd, s.rb.UNCLASSIFIED, { hiddenFromTimeline: !0 })];
+                return [u(d.d.MatchEnd, s.rb.UNCLASSIFIED, { hiddenFromTimeline: !0 })];
             case o.GoalScored: {
                 let t = e.Data;
                 if (this.isLocal(t?.Scorer))
                     return (
                         (this.localTeamNum = t?.Scorer?.TeamNum ?? this.localTeamNum),
                         [
-                            S(d.d.Goal, s.rb.OBJECTIVE_KILL, {
+                            u(d.d.Goal, s.rb.OBJECTIVE_KILL, {
                                 title: c.intl.string(m.default.cOToac),
                                 additionalData: { goalSpeed: t?.GoalSpeed, goalTime: t?.GoalTime },
                             }),
                         ]
                     );
                 if (this.isLocal(t?.Assister))
-                    return [S(d.d.Assist, s.rb.ASSIST, { title: c.intl.string(m.default.qlCPiQ) })];
+                    return [u(d.d.Assist, s.rb.ASSIST, { title: c.intl.string(m.default.qlCPiQ) })];
                 return (s.nx.info(`[RL] goal by ${t?.Scorer?.Name} ignored (localPlayer=${this.localPlayerName})`), []);
             }
             case o.StatfeedEvent: {
@@ -132,17 +132,17 @@ class T {
                 if (null == a) return [];
                 if ("Demolish" === a) {
                     if (this.isLocal(t?.MainTarget))
-                        return [S(d.d.Demolition, s.rb.KILL, { title: c.intl.string(m.default.IJqCEW) })];
+                        return [u(d.d.Demolition, s.rb.KILL, { title: c.intl.string(m.default.IJqCEW) })];
                     if (this.isLocal(t?.SecondaryTarget))
-                        return [S(d.d.Demolished, s.rb.DEATH, { title: c.intl.string(m.default.GdVA11) })];
+                        return [u(d.d.Demolished, s.rb.DEATH, { title: c.intl.string(m.default.GdVA11) })];
                 }
-                let n = u[a];
+                let n = S[a];
                 if (
                     null != n &&
                     (this.isLocal(t?.MainTarget) || (!0 === n.matchEitherTarget && this.isLocal(t?.SecondaryTarget)))
                 )
                     return [
-                        S(n.eventName, n.eventType, { title: n.getTitle?.(), hiddenFromTimeline: null == n.getTitle }),
+                        u(n.eventName, n.eventType, { title: n.getTitle?.(), hiddenFromTimeline: null == n.getTitle }),
                     ];
                 return (
                     s.nx.info(
@@ -159,7 +159,7 @@ class T {
         return null != this.localPlayerName && e?.Name === this.localPlayerName;
     }
 }
-var N = a(190443);
+var N = a(775363);
 function v(e) {
     let t = !1,
         a = null,
@@ -187,7 +187,7 @@ function v(e) {
                 s.nx.info("[RL] starting stats API listener"),
                 (function e() {
                     if (!t) return;
-                    let n = new WebSocket(N.Q);
+                    let n = new WebSocket((0, N.S)());
                     ((a = n),
                         (n.onopen = () => {
                             (i.succeed(), s.nx.info("[RL] stats API connected"));
@@ -217,3 +217,4 @@ function v(e) {
         getState: () => null,
     };
 }
+a(190443);
