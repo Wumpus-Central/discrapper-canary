@@ -570,6 +570,19 @@ function es(e) {
                     let l = n.getGiftCardWallet();
                     return null != l && l.enabled && r === l.id ? l.id : s;
                 },
+                getWalletSettlesCheckoutAlone: (e) => {
+                    let { isSplitPaymentMode: t, walletCoversTotal: n } = e,
+                        r = i(),
+                        a = r.getGiftCardWallet();
+                    return (
+                        !!t &&
+                        null != a &&
+                        !!a.enabled &&
+                        !!n &&
+                        (r.applyWalletBalance ?? r.checkoutInvoicePreview?.applyWalletBalance) === !0 &&
+                        !r.getDropdownPaymentSources().some((e) => e.enabled)
+                    );
+                },
             }),
             ...(function (e) {
                 let t = [],

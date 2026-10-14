@@ -261,14 +261,21 @@ function E(e) {
             isWalletBalanceLoaded: K,
             isWalletCoverageLoading: q,
         } = f({ giftCardsEnabled: E }),
-        Z = null != S && null != R && S === R.id;
+        Z = null != S && null != R && S === R.id,
+        z = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: V }));
     (l.useEffect(() => {
-        j && k && null != w && a(w);
-    }, [j, k, w, a]),
+        if (j && null != R) {
+            if (z) {
+                null == i && a(R.id);
+                return;
+            }
+            k && a(w);
+        }
+    }, [j, R, z, k, i, w, a]),
         l.useEffect(() => {
             !Z && K && !Y && k && a(w);
         }, [Z, K, Y, k, a, w]));
-    let z = l.useMemo(
+    let $ = l.useMemo(
         () =>
             null == R
                 ? null
@@ -300,7 +307,7 @@ function E(e) {
         isSubscriptionPaidByWallet: Z,
         handleGiftCardCreditsToggle: H,
         handleDropdownPaymentSourceChange: G,
-        giftCardCheckboxProps: z,
+        giftCardCheckboxProps: $,
         walletCoversSubtotal: Y,
         walletCoversTotal: V,
         isWalletBalanceLoaded: K,
