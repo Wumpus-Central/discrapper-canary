@@ -5922,5 +5922,35 @@
         "enabled": true
       }
     }
+  },
+  {
+    "name": "2026-10-web-streaming-optimizations",
+    "kind": "user",
+    "defaultConfig": {
+      "degradationPreference": "default",
+      "motionContentHint": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "degradationPreference": "maintain-framerate",
+        "motionContentHint": false
+      },
+      "2": {
+        "degradationPreference": "default",
+        "motionContentHint": true
+      },
+      "3": {
+        "degradationPreference": "maintain-framerate",
+        "motionContentHint": true
+      },
+      "4": {
+        "degradationPreference": "balanced",
+        "motionContentHint": false
+      }
+    }
   }
 ]

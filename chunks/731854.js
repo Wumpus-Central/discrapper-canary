@@ -255,6 +255,9 @@ var ed =
         (I.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS = "swallow_volume_only_speaking_events"),
         (I.BROWSER_TRANSCEIVER_PADDING_REMOVAL = "browser_transceiver_padding_removal"),
         (I.INTEL_GPU_DISABLE = "intel_gpu_disable"),
+        (I.WEB_STREAMING_MAINTAIN_FRAMERATE = "web_streaming_maintain_framerate"),
+        (I.WEB_STREAMING_BALANCED = "web_streaming_balanced"),
+        (I.WEB_STREAMING_MOTION_CONTENT_HINT = "web_streaming_motion_content_hint"),
         I),
     eI = (((p = {})[(p.AUTO = 1)] = "AUTO"), (p[(p.FULL = 2)] = "FULL"), p),
     ep =

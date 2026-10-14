@@ -2080,6 +2080,12 @@ class eQ extends eA {
                 (this.videoTransceiver = n.getTransceivers()[1])),
             (e.experiments ?? []).includes("browser_transceiver_padding_removal") &&
                 this.setExperimentFlag(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL, !0),
+            (e.experiments ?? []).includes("web_streaming_maintain_framerate") &&
+                this.setExperimentFlag(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE, !0),
+            (e.experiments ?? []).includes("web_streaming_balanced") &&
+                this.setExperimentFlag(D.fd.WEB_STREAMING_BALANCED, !0),
+            (e.experiments ?? []).includes("web_streaming_motion_content_hint") &&
+                this.setExperimentFlag(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT, !0),
             !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) &&
                 (this.addTransceivers("audio", "recvonly", 10),
                 this.videoSupported && this.addTransceivers("video", "recvonly", 10)),
@@ -2107,12 +2113,21 @@ class eQ extends eA {
     }
     setStream(e) {
         let t = "closed" === this.iceConnectionState;
-        (null != e &&
-            !t &&
-            (eq(this.audioTransceiver, e.getAudioTracks()[0]),
-            this.videoSupported && eq(this.videoTransceiver, e.getVideoTracks()[0])),
-            this.logger.info("Renegotiating: Streams changed"),
-            this.handleNegotiationNeeded());
+        if (null != e && !t && (eq(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
+            let t = e.getVideoTracks()[0],
+                n = this.context === D.x.STREAM;
+            (n &&
+                null != t &&
+                this.experimentFlags.has(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT) &&
+                (t.contentHint = "motion"),
+                eq(this.videoTransceiver, t),
+                n && this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE)
+                    ? this.setVideoDegradationPreference("maintain-framerate")
+                    : n &&
+                      this.experimentFlags.has(D.fd.WEB_STREAMING_BALANCED) &&
+                      this.setVideoDegradationPreference("balanced"));
+        }
+        (this.logger.info("Renegotiating: Streams changed"), this.handleNegotiationNeeded());
     }
     createUser(e, t, n) {
         if (e === this.userId) return void this.logger.error("Refusing to create remote user for the local user ID");
@@ -2257,6 +2272,25 @@ class eQ extends eA {
                 (e) => a(e),
             )
             .catch((e) => a(e));
+    }
+    setVideoDegradationPreference(e) {
+        let t = this.videoTransceiver?.sender;
+        if (null == t) return;
+        let n = t.getParameters();
+        if (null == n.encodings || n.degradationPreference === e) return;
+        (this.logger.info(
+            `UnifiedConnection.setVideoDegradationPreference: from '${n.degradationPreference}' to '${e}'`,
+        ),
+            (n.degradationPreference = e));
+        let i = (e) => {
+            this.logger.error(`UnifiedConnection.setVideoDegradationPreference: setParameters failed: "${e}"`);
+        };
+        t.setParameters(n)
+            .then(
+                () => {},
+                (e) => i(e),
+            )
+            .catch((e) => i(e));
     }
     setAudioEncoderParameters(e) {
         let t = { [eE.AUDIO_BITRATE]: "maxBitrate" },
