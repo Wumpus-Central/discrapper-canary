@@ -31,6 +31,11 @@
     height: 100%
 }
 
+.platform-win .scroller__5906b {
+    height: calc(100% - var(--custom-app-top-bar-height));
+    margin-top: var(--custom-app-top-bar-height)
+}
+
 .content__5906b {
     display: flex;
     flex-direction: column;
@@ -859,4 +864,4 @@
     background-image: url(/assets/b00e3f0a7090b61f.svg)
 }
 
-/*# sourceMappingURL=89c3913dfec8a49d.css.map*/
+/*# sourceMappingURL=48f7bf6293c8b0df.css.map*/

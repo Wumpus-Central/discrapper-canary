@@ -6,6 +6,11 @@
     height: 100vh
 }
 
+.platform-win .settingsVerticalScroller_fa2640 {
+    height: calc(100vh - var(--custom-app-top-bar-height));
+    margin-top: var(--custom-app-top-bar-height)
+}
+
 .settingsHorizontalScroller_fa2640 {
     margin-inline: 0 64px !important;
     max-width: unset !important
@@ -287,4 +292,4 @@
     height: 1px
 }
 
-/*# sourceMappingURL=130b8c8645616ba3.css.map*/
+/*# sourceMappingURL=492b708ff81ebe8c.css.map*/
