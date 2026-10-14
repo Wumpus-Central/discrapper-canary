@@ -510,7 +510,9 @@ class W extends N.A {
     lastCaptureOverrides = "";
     overrideCodecResetAt = 0;
     desktopDegradationPreference = (0, b.lE)().DegradationPreference.MAINTAIN_FRAMERATE;
-    sourceDesktopDegradationPreference = (0, b.lE)().DegradationPreference.DISABLED;
+    sourceDesktopDegradationPreference =
+        (0, b.lE)().DegradationPreference.MAINTAIN_FRAMERATE_AND_RESOLUTION ??
+        (0, b.lE)().DegradationPreference.DISABLED;
     videoDegradationPreference = (0, b.lE)().DegradationPreference.BALANCED;
     localPans = {};
     remoteAudioSSRCs = {};
