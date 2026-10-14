@@ -17,8 +17,8 @@ var i = n(477900),
     I = n(687966),
     j = n(404778),
     E = n(793574),
-    v = n(688810),
-    A = n(206828),
+    A = n(688810),
+    v = n(206828),
     C = n(486610),
     b = n(531913),
     y = n(417270),
@@ -152,8 +152,8 @@ let M = Object.assign(
                         canStartAuthorization: j,
                         startAuthorization: C,
                         token: b,
-                    } = (0, A.RD)(f),
-                    { analyticsLocations: y } = (0, v.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
+                    } = (0, v.RD)(f),
+                    { analyticsLocations: y } = (0, A.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
                     N = r.useCallback(() => {
                         j &&
                             (t({

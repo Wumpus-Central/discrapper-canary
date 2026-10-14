@@ -18,10 +18,10 @@ function C(e) {
     l.useEffect(() => {
         (0, A.N)(I, E.YX.VIEWED);
     }, [I]);
-    let p = l.useCallback(() => {
+    let N = l.useCallback(() => {
             null != C && (C(), (0, A.N)(I, E.YX.DISMISS));
         }, [I, C]),
-        N = l.useCallback(() => {
+        p = l.useCallback(() => {
             (n(), (0, A.N)(I, E.YX.LEARN_MORE));
         }, [I, n]);
     return (0, i.jsxs)("div", {
@@ -34,12 +34,12 @@ function C(e) {
                 children:
                     null != r
                         ? h.intl.format(t, {
-                              hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t),
+                              hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: p, children: e }, t),
                               count: r,
                           })
-                        : h.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t) }),
+                        : h.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: p, children: e }, t) }),
             }),
-            T && (0, i.jsx)(c.D, { className: _.b, onClick: p, children: (0, i.jsx)(u.P, {}) }),
+            T && (0, i.jsx)(c.D, { className: _.b, onClick: N, children: (0, i.jsx)(u.P, {}) }),
         ],
     });
 }

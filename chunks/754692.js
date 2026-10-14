@@ -80,8 +80,8 @@ function C(e) {
         };
     }, []);
     let T = null != g && n,
-        p = T ? c.D : "div";
-    return (0, i.jsxs)(p, {
+        N = T ? c.D : "div";
+    return (0, i.jsxs)(N, {
         className: d()(h.kL, T && h.b),
         onClick: function () {
             T && g();

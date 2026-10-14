@@ -21,7 +21,7 @@ function A(e) {
         [r, h] = i.useState(!1),
         C = i.useRef(null),
         A = a()(S.Qq, S.Ow);
-    function y(e) {
+    function g(e) {
         return (0, l.jsxs)("div", {
             className: S.ZC,
             children: [
@@ -36,7 +36,7 @@ function A(e) {
             ],
         });
     }
-    function g(e) {
+    function y(e) {
         let { emoji: n } = e;
         null != t && (t(n), h(!1));
     }
@@ -52,11 +52,11 @@ function A(e) {
                 children: (0, l.jsx)(m.A, {
                     analyticsOverride: E,
                     closePopout: t,
-                    onSelectEmoji: g,
+                    onSelectEmoji: y,
                     wrapper: "div",
                     pickerIntention: I,
                     showAddEmojiButton: !1,
-                    renderHeader: y,
+                    renderHeader: g,
                     headerClassName: S.a8,
                     className: S.vX,
                     listHeaderClassName: S.vX,

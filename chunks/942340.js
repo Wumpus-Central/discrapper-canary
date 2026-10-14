@@ -93,8 +93,8 @@ function C(e) {
     (0, s.Ay)(() => {
         x();
     });
-    let { elementsAppearance: v, elementsAppearanceOptions: M } = m(n),
-        R = (0, c.PU)(),
+    let { elementsAppearance: v, elementsAppearanceOptions: R } = m(n),
+        M = (0, c.PU)(),
         T = r.useMemo(
             () =>
                 C
@@ -102,18 +102,18 @@ function C(e) {
                     : {
                           clientSecret: l,
                           appearance: v,
-                          locale: R,
+                          locale: M,
                           customPaymentMethods: P,
                           paymentMethodCreation: "manual",
                       },
-            [v, R, l, P, C],
+            [v, M, l, P, C],
         ),
         L = {
             setupError: a,
             customPaymentMethods: P,
             customPaymentMethodIdsToSourceTypes: A,
             paymentMethodOrder: g,
-            elementsAppearanceOptions: M,
+            elementsAppearanceOptions: R,
         };
     return null == l || null == T || C
         ? { ...L, isLoading: !0, elementsOptions: T, setupIntentSecret: l }

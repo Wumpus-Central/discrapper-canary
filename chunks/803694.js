@@ -167,8 +167,8 @@ function E(e) {
         { enabled: I } = (0, o.U)({ location: u }),
         {
             pendingPaymentSourceId: A,
-            hasInitialPaymentSourceSeed: y,
-            hasAddedPaymentSourceThisSession: g,
+            hasInitialPaymentSourceSeed: g,
+            hasAddedPaymentSourceThisSession: y,
             applyWalletBalance: P,
             previewApplyWalletBalance: v,
             setApplyWalletBalance: x,
@@ -210,10 +210,10 @@ function E(e) {
                 pendingPaymentSourceId: A,
                 paymentSourceId: i,
                 giftCardsEnabled: E,
-                hasInitialPaymentSourceSeed: y,
-                hasAddedPaymentSourceThisSession: g,
+                hasInitialPaymentSourceSeed: g,
+                hasAddedPaymentSourceThisSession: y,
             }),
-            [T, N, S, O, d, A, i, E, y, g],
+            [T, N, S, O, d, A, i, E, g, y],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(U), [U])),
@@ -259,15 +259,15 @@ function E(e) {
             walletCoversSubtotal: Y,
             walletCoversTotal: V,
             isWalletBalanceLoaded: K,
-            isWalletCoverageLoading: Z,
+            isWalletCoverageLoading: q,
         } = f({ giftCardsEnabled: E }),
-        q = null != S && null != R && S === R.id;
+        Z = null != S && null != R && S === R.id;
     (l.useEffect(() => {
         j && k && null != w && a(w);
     }, [j, k, w, a]),
         l.useEffect(() => {
-            !q && K && !Y && k && a(w);
-        }, [q, K, Y, k, a, w]));
+            !Z && K && !Y && k && a(w);
+        }, [Z, K, Y, k, a, w]));
     let z = l.useMemo(
         () =>
             null == R
@@ -285,11 +285,11 @@ function E(e) {
                         giftCardWallet: R,
                         checked: k,
                         onChange: H,
-                        loading: Z,
-                        disabled: !Z && !Y,
-                        disabledTooltip: Z || Y ? void 0 : h.intl.string(C.default.ccWIdu),
+                        loading: q,
+                        disabled: !q && !Y,
+                        disabledTooltip: q || Y ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, j, P, v, W, k, H, Y, Z],
+        [R, j, P, v, W, k, H, Y, q],
     );
     return {
         giftCardsEnabled: E,
@@ -297,14 +297,14 @@ function E(e) {
         dropdownPaymentSourceId: D,
         giftCardWallet: R,
         isGiftCardCreditsChecked: k,
-        isSubscriptionPaidByWallet: q,
+        isSubscriptionPaidByWallet: Z,
         handleGiftCardCreditsToggle: H,
         handleDropdownPaymentSourceChange: G,
         giftCardCheckboxProps: z,
         walletCoversSubtotal: Y,
         walletCoversTotal: V,
         isWalletBalanceLoaded: K,
-        isWalletCoverageLoading: Z,
+        isWalletCoverageLoading: q,
         isSplitPaymentMode: j,
     };
 }

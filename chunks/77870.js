@@ -13,13 +13,13 @@
     YW: () => eU,
     zW: () => ez,
     NC: () => ep,
-    Hv: () => ev,
+    Hv: () => eP,
     j$: () => eQ,
     fc: () => ew,
     SD: () => eg,
     aC: () => eY,
     FA: () => eJ,
-    LS: () => eP,
+    LS: () => ev,
     p5: () => e0,
     Ns: () => e8,
     Iq: () => eO,
@@ -32,7 +32,7 @@
     mn: () => eI,
     C5: () => eW,
     sb: () => e1,
-    I3: () => eD,
+    I3: () => ek,
     Qo: () => eV,
     In: () => eB,
     H6: () => ej,
@@ -40,7 +40,7 @@
     F3: () => eF,
     L1: () => eS,
     do: () => eR,
-    oH: () => ek,
+    oH: () => eD,
     S5: () => eh,
     Du: () => eq,
 }),
@@ -70,8 +70,8 @@ var A = n(517846),
 n(674658);
 var g = n(27620),
     N = n(773669),
-    P = n(885386),
-    v = n(734057),
+    v = n(885386),
+    P = n(734057),
     L = n(30370),
     h = n(287809),
     R = n(174459),
@@ -79,9 +79,9 @@ var g = n(27620),
     y = n(403362),
     M = n(975571),
     w = n(723702),
-    D = n(158045);
+    k = n(158045);
 (n(695323), n(265704));
-var k = n(178540),
+var D = n(178540),
     U = n(396813),
     Q = n(859703),
     q = n(738822),
@@ -438,7 +438,7 @@ function eO() {
     );
 }
 function eg(e, t) {
-    let n = eP(e),
+    let n = ev(e),
         r = (0, Z.ks)(e.config),
         u = (0, Z.KK)(e.config),
         i = t !== J.MA.INELIGIBLE;
@@ -454,14 +454,14 @@ function eN(e) {
         [e],
     );
 }
-function eP(e) {
+function ev(e) {
     return (0, I.bG)([Q.A], () => null != e && Q.A.isQuestExpired(e.id), [e]);
 }
-function ev() {
+function eP() {
     return (0, I.bG)([Q.A], () => Q.A.isQuestAccessSuspended, []);
 }
 function eL(e, t, n) {
-    let r = (0, I.bG)([v.A], () => v.A.getChannel(t?.channelId) ?? null),
+    let r = (0, I.bG)([P.A], () => P.A.getChannel(t?.channelId) ?? null),
         u = (0, I.bG)([Q.A], () => null != Q.A.questEnrollmentBlockedUntil, []),
         i = (0, I.bG)([h.default], () => h.default.getCurrentUser()?.id),
         o = (0, I.bG)([Q.A], () => null != e && Q.A.isQuestExpired(e.id), [e]);
@@ -523,10 +523,10 @@ let ew = (e) => {
         n
     );
 };
-function eD(e) {
+function ek(e) {
     return o.useMemo(() => (0, ee.JC)(e), [e]);
 }
-function ek(e) {
+function eD(e) {
     let t = o.useMemo(() => {
         let t = new Set();
         for (let n of e) {
@@ -539,12 +539,12 @@ function ek(e) {
 }
 function eU(e) {
     let t = (0, I.bG)([Q.A], () => Q.A.quests),
-        n = ek(Array.from(t.values())),
+        n = eD(Array.from(t.values())),
         r = o.useMemo(() => {
             let n = (0, et.$e)(t, er.zO);
             return (0, $.BM)(n, e);
         }, [e, t, n]);
-    return eP(r) ? null : r;
+    return ev(r) ? null : r;
 }
 function eQ(e) {
     return o.useMemo(
@@ -581,8 +581,8 @@ function eG(e) {
     let { questId: t, preview: n, beforeRequest: r, afterRequest: u } = e,
         [i, l] = o.useState(!1),
         s = (0, I.bG)([L.A], () => L.A.getAccounts()),
-        a = (0, k.O)((e) => e.clearErrorHintsByType),
-        c = o.useCallback((e) => k.O.getState().setErrorHints(t, e), [t]);
+        a = (0, D.O)((e) => e.clearErrorHintsByType),
+        c = o.useCallback((e) => D.O.getState().setErrorHints(t, e), [t]);
     return (
         o.useEffect(() => {
             a(t, E._.EXPIRED_CREDENTIAL);
@@ -637,7 +637,7 @@ function eX(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, I.bG)([N.default], () => N.default.locale),
         { percentComplete: r } = ew(e),
-        u = eD(e),
+        u = ek(e),
         i = null != u ? u.percentComplete : r,
         o = 100 * i,
         l = null == u || t ? (0, _.l9)(n, i, { roundingMode: "floor" }) : `${u?.progress}/${u?.target}`;
@@ -706,10 +706,10 @@ function eV(e, t) {
     ];
 }
 function eY(e) {
-    let t = eD(e),
+    let t = ek(e),
         n = ew(e),
         [r] = eV(e, n),
-        u = eP(e),
+        u = ev(e),
         i = e.userStatus?.enrolledAt != null,
         o = e.userStatus?.completedAt != null,
         l = f.o.DESKTOP.has(n.taskType) && n.percentComplete > 0,
@@ -774,7 +774,7 @@ function eJ(e) {
         u = (0, Z.$5)(e),
         i = (0, Z.Y7)(e),
         o = (0, Z.JX)(e),
-        l = (0, D.TW)(t, ei.PremiumTypes.TIER_2);
+        l = (0, k.TW)(t, ei.PremiumTypes.TIER_2);
     if (null == r) return eo.intl.formatToPlainString(eo.t.l9uXL8, { decorationName: n });
     let s = eo.intl.formatToPlainString(eo.t.o97tNn, { rewardName: n }),
         a = eo.intl.formatToPlainString(eo.t.PkyRZo, { rewardName: n, expirationDate: u }),
@@ -802,7 +802,7 @@ function e0() {
 }
 function e1(e) {
     let t = e?.userStatus != null && (0, W.gO)(e.userStatus, q.uF.ACTIVITY_PANEL),
-        n = eP(e ?? null),
+        n = ev(e ?? null),
         r = e?.userStatus?.claimedAt != null,
         u = (0, I.bG)([Q.A], () => null != Q.A.questEnrollmentBlockedUntil, []);
     return !t && !n && !r && !u;
@@ -863,7 +863,7 @@ function e9(e) {
     }, [t, n]);
 }
 function e4(e) {
-    let t = P.H1.useSetting(),
+    let t = v.H1.useSetting(),
         n = e.userStatus?.enrolledAt != null;
     return o.useCallback(() => {
         if (n) return;

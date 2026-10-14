@@ -1,4 +1,4 @@
-n.d(t, { US: () => v, BD: () => D, X8: () => y, mH: () => R });
+n.d(t, { US: () => v, BD: () => D, X8: () => y, mH: () => b });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -31,8 +31,8 @@ let I = r().throttle(function (e, t) {
             channelPredicate: C = () => !0,
             guildPredicate: I = () => !0,
             guildFeaturePredicate: T = () => !1,
-            ensureChatIsVisible: p = () => !1,
-            withVoiceChannels: N = !1,
+            ensureChatIsVisible: N = () => !1,
+            withVoiceChannels: p = !1,
         } = t,
         S = o.A.getState().guildId ?? _.ME,
         f = o.A.getState().channelId,
@@ -43,13 +43,13 @@ let I = r().throttle(function (e, t) {
                 ? r.slice(a).concat(r.slice(0, a), l)
                 : (r.splice(a, 0, l), r.slice(a + 1).concat(r.slice(0, a + 1)))),
         L = e > 0 ? 0 : O.length - 1,
-        m = g(S, N),
-        b = m.indexOf(f) + e;
+        m = g(S, p),
+        R = m.indexOf(f) + e;
     for (; null != S && "" !== S;) {
-        if (((A = m[b]), I(S)))
+        if (((A = m[R]), I(S)))
             for (; null != A && "" !== A;) {
                 if ("string" == typeof A) {
-                    if (C(S, A)) return (0, h.i)(S, A, !1, p(S, A));
+                    if (C(S, A)) return (0, h.i)(S, A, !1, N(S, A));
                 } else if ("object" == typeof A && T(A.resourceId, A.type))
                     return (
                         S !== c.A.getGuildId() && (0, h.i)(S, d.Ay.getDefaultChannel(S)?.id),
@@ -81,39 +81,39 @@ let I = r().throttle(function (e, t) {
                             return (t) => (0, i.jsx)(e, { ...t, guildId: S });
                         })
                     );
-                ((b += e), (A = m[b]));
+                ((R += e), (A = m[R]));
             }
         if (((L += e), null == (S = O[L]) || "" === S)) break;
-        ((m = g(S, N)), (b = e < 0 ? m.length - 1 : 0));
+        ((m = g(S, p)), (R = e < 0 ? m.length - 1 : 0));
     }
     E._.dispatch(_.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, _.ugG);
 var T = n(455234),
-    p = n(95701),
-    N = n(734057),
+    N = n(95701),
+    p = n(734057),
     S = n(573163),
     f = n(309010),
     O = n(543465);
 let L = (e, t) => {
-        let n = N.A.getChannel(t);
+        let n = p.A.getChannel(t);
         return (
             null != n &&
-            ((0, p.Gw)(n.type) || _.kvI.GUILD_VOCAL_PRIMARY.has(n.type)
+            ((0, N.Gw)(n.type) || _.kvI.GUILD_VOCAL_PRIMARY.has(n.type)
                 ? S.Ay.getMentionCount(t) > 0 || f.Ay.getVoiceChannelId() === t
                 : (!O.Ay.isChannelMuted(e, t) || S.Ay.getMentionCount(t) > 0) && (0, T.Y)(n))
         );
     },
     m = (e, t) =>
         t === C.P.GUILD_EVENT ? !O.Ay.isMuteScheduledEventsEnabled(e) && S.Ay.hasUnread(e, t) : S.Ay.hasUnread(e, t),
-    b = (e, t) => {
-        let n = N.A.getChannel(t);
+    R = (e, t) => {
+        let n = p.A.getChannel(t);
         return (
             null != n &&
             !!_.kvI.GUILD_VOCAL.has(n.type) &&
             (S.Ay.getMentionCount(t) > 0 || (f.Ay.getVoiceChannelId() === t && S.Ay.getUnreadCount(t) > 0))
         );
     },
-    R = {
+    b = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
@@ -123,7 +123,7 @@ let L = (e, t) => {
                     channelPredicate: L,
                     guildPredicate: (t) => t === e || !O.Ay.isMuted(t),
                     guildFeaturePredicate: m,
-                    ensureChatIsVisible: b,
+                    ensureChatIsVisible: R,
                     withVoiceChannels: !0,
                 }),
                 !1
@@ -140,7 +140,7 @@ let L = (e, t) => {
                     channelPredicate: L,
                     guildPredicate: (t) => t === e || !O.Ay.isMuted(t),
                     guildFeaturePredicate: m,
-                    ensureChatIsVisible: b,
+                    ensureChatIsVisible: R,
                     withVoiceChannels: !0,
                 }),
                 !1
@@ -151,10 +151,10 @@ let L = (e, t) => {
     D = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (I(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (I(1, { channelPredicate: U, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
     },
     y = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (I(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (I(-1, { channelPredicate: U, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
     };

@@ -1,7 +1,7 @@
 r.d(t, { A: () => i });
 var n = r(17928),
-    a = r(73153);
-class l extends n.Ay.Store {
+    l = r(73153);
+class a extends n.Ay.Store {
     static displayName = "VirtualCurrencyStore";
     _entitlements = null;
     _redeemingSkuId = null;
@@ -16,7 +16,7 @@ class l extends n.Ay.Store {
     _onboardingModalOpenedPrior = !1;
     _balancePillOverlay = !1;
     constructor() {
-        super(a.h, {
+        super(l.h, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -140,4 +140,4 @@ class l extends n.Ay.Store {
         this._onboardingModalOpenedPrior = !1;
     }
 }
-let i = new l();
+let i = new a();

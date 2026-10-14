@@ -24,10 +24,10 @@ function T(e) {
         T = s.useCallback(() => {
             (t(C.i.TAKE_ACTION), o.A.openUrl(E.A.getArticleURL(_.MVz.TIGGER_PAWTECT_LEARN_MORE)));
         }, [t]),
-        p = s.useCallback(() => {
+        N = s.useCallback(() => {
             (t(C.i.TAKE_ACTION), (0, A.openUserSettings)(u.X.ACCOUNT_STANDING_CATEGORY));
         }, [t]),
-        N = s.useCallback(() => {
+        p = s.useCallback(() => {
             t(C.i.USER_DISMISS);
         }, [t]),
         S = i ? I.intl.string(g.default.f7c7qE) : I.intl.string(g.default.jssaTD),
@@ -36,11 +36,11 @@ function T(e) {
             : { text: I.intl.string(g.default["Bp/1dq"]), link: h.m5, external: !0 },
         O = i
             ? { text: I.intl.string(g.default["+7NlgO"]), variant: "primary", onClick: T }
-            : { text: I.intl.string(g.default.jjpcno), variant: "primary", onClick: p };
+            : { text: I.intl.string(g.default.jjpcno), variant: "primary", onClick: N };
     return (0, r.jsx)(a.A, {
         targetElementRef: n,
         shouldShow: !0,
-        onRequestClose: N,
+        onRequestClose: p,
         position: "top",
         caretConfig: { align: "end" },
         size: "md",

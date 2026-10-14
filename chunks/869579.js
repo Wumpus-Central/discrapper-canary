@@ -51,8 +51,8 @@ var b = n(716357),
     D = n(313627),
     j = n(344351),
     G = n(795816),
-    T = n(933958),
-    R = n(44167),
+    R = n(933958),
+    T = n(44167),
     w = n(872188),
     L = n(868285),
     N = n(36525),
@@ -69,8 +69,8 @@ var b = n(716357),
     z = n(192308),
     K = n(775602),
     $ = n(855823),
-    V = n(61567),
-    X = n(660183),
+    X = n(61567),
+    V = n(660183),
     Y = n(517228);
 function J(e) {
     let { widget: t, onClick: n } = e,
@@ -101,7 +101,7 @@ function J(e) {
                                     (0, l.jsx)(a.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
-                                        children: X.intl.string(V.default.IuT87w),
+                                        children: V.intl.string(X.default.IuT87w),
                                     }),
                                 ],
                             }),
@@ -124,7 +124,7 @@ function J(e) {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       lineClamp: 1,
-                                      children: X.intl.format(V.default["8wD0Un"], { boostPrice: d }),
+                                      children: V.intl.format(X.default["8wD0Un"], { boostPrice: d }),
                                   }),
                               ],
                           })
@@ -132,7 +132,7 @@ function J(e) {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               lineClamp: 1,
-                              children: X.intl.string(V.default.Lx0P8k),
+                              children: V.intl.string(X.default.Lx0P8k),
                           }),
                 ],
             }),
@@ -155,8 +155,8 @@ function Q(e) {
             p(t);
         }, [t]),
         (0, l.jsx)(B.a, {
-            title: X.intl.string(V.default.L8Xfoo),
-            subtitle: X.intl.string(V.default["N8nJ+T"]),
+            title: V.intl.string(X.default.L8Xfoo),
+            subtitle: V.intl.string(X.default["N8nJ+T"]),
             actions: [],
             ...u,
             children: (0, l.jsx)("div", {
@@ -227,7 +227,7 @@ function er(e) {
         g = "saving" === c,
         m = g || u,
         h = m || !f,
-        E = o ?? X.intl.string(V.default.HmFYc5),
+        E = o ?? V.intl.string(X.default.HmFYc5),
         p = r.useCallback(() => {
             h || (0, A.Fj)(t);
         }, [t, h]),
@@ -254,7 +254,7 @@ function er(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: M.T,
-                                text: X.intl.string(V.default.L8Xfoo),
+                                text: V.intl.string(X.default.L8Xfoo),
                                 disabled: m,
                                 onClick: () => Z(t, s),
                             }),
@@ -272,7 +272,7 @@ function er(e) {
                                 : (0, l.jsx)(a.E, {
                                       variant: "text-sm/medium",
                                       color: "text-subtle",
-                                      children: X.intl.format(V.default.hpAg80, { panelCount: d }),
+                                      children: V.intl.format(X.default.hpAg80, { panelCount: d }),
                                   }),
                         ],
                     }),
@@ -457,8 +457,8 @@ function eb(e) {
             onRemovalAnimationEnd: j,
         } = e,
         G = r.useRef(null),
-        T = r.useRef(null),
-        R = (0, i.bG)([_.A], () => (n.requires_hydration ? _.A.getHydration(t, n.id) : void 0), [
+        R = r.useRef(null),
+        T = (0, i.bG)([_.A], () => (n.requires_hydration ? _.A.getHydration(t, n.id) : void 0), [
             t,
             n.id,
             n.requires_hydration,
@@ -466,12 +466,12 @@ function eb(e) {
         w = (0, ey.K)(t, n),
         { isDragging: L, dragSourcePosition: N } = (0, ev.gY)({
             dragRef: G,
-            dropRef: T,
+            dropRef: R,
             index: c,
             listType: eg,
             itemType: ef,
             itemId: n.id,
-            itemPreviewProps: { getSourceElement: () => T.current },
+            itemPreviewProps: { getSourceElement: () => R.current },
             onDrop: (e) => g(e.id),
             onReorder: f,
             onEnd: (e, t) => m(e.id, t.didDrop()),
@@ -483,7 +483,7 @@ function eb(e) {
         M = o && null != N && !k && N < c,
         O = r.useCallback(
             (e) => {
-                ((T.current = e), h(n.id, e));
+                ((R.current = e), h(n.id, e));
             },
             [h, n.id],
         );
@@ -505,7 +505,7 @@ function eb(e) {
                 guildId: t,
                 widget: n,
                 guildSpaceMode: "edit",
-                hydration: R,
+                hydration: T,
                 lock: w,
                 dragHandleRef: G,
                 disabled: E,
@@ -533,7 +533,7 @@ function eS(e, t, n, l) {
 var eD = n(492784);
 function ej(e) {
     let { column: t, disabled: n, onInsert: r } = e,
-        i = X.intl.formatToPlainString(1 === t ? V.default.U0SqHk : V.default["9Ctu9P"], { positionNumber: 1 });
+        i = V.intl.formatToPlainString(1 === t ? X.default.U0SqHk : X.default["9Ctu9P"], { positionNumber: 1 });
     return (0, l.jsxs)(k.B, {
         className: ec.Y$,
         align: "center",
@@ -543,13 +543,13 @@ function ej(e) {
             (0, l.jsx)(a.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: X.intl.string(V.default["/OtM0k"]),
+                children: V.intl.string(X.default["/OtM0k"]),
             }),
             (0, l.jsx)(U.$, {
                 variant: "secondary",
                 size: "sm",
                 icon: M.T,
-                text: X.intl.string(V.default.L8Xfoo),
+                text: V.intl.string(X.default.L8Xfoo),
                 "aria-label": i,
                 disabled: n,
                 onClick: () => r(t, 0),
@@ -558,9 +558,9 @@ function ej(e) {
     });
 }
 var eG = n(663341);
-function eT(e) {
+function eR(e) {
     let { column: t, index: n, placement: r, onInsert: i } = e,
-        a = X.intl.formatToPlainString(1 === t ? V.default["h9P9H+"] : V.default.xboFyi, { positionNumber: n + 1 });
+        a = V.intl.formatToPlainString(1 === t ? X.default["h9P9H+"] : X.default.xboFyi, { positionNumber: n + 1 });
     return (0, l.jsxs)(W.D, {
         className: ea()(ec.kZ, { [ec.j2]: "before" === r, [ec.AO]: "after" === r }),
         onClick: () => i(t, n),
@@ -575,8 +575,8 @@ function eT(e) {
         ],
     });
 }
-function eR(e, t, n) {
-    return X.intl.formatToPlainString(1 === e ? V.default.O9RvHQ : V.default["+cSvS8"], {
+function eT(e, t, n) {
+    return V.intl.formatToPlainString(1 === e ? X.default.O9RvHQ : X.default["+cSvS8"], {
         positionNumber: t,
         positionCount: n,
     });
@@ -624,8 +624,8 @@ function ew(e) {
             getColumnElement: D,
             getSlotElement: j,
             gridDropSurfaceRef: G,
-            handleColumnHover: T,
-            handleDragEnd: R,
+            handleColumnHover: R,
+            handleDragEnd: T,
             canAcceptPointerDrop: w,
             placeholderHeight: L,
             registerColumnElement: N,
@@ -754,10 +754,10 @@ function ew(e) {
                     return null;
                 })(),
                 G = c && m?.widgetId === s && (null == j || m.column !== j.column || m.index !== j.index) ? m : null,
-                T = r.useCallback((e, t) => {
+                R = r.useCallback((e, t) => {
                     C.current[e] = t;
                 }, []),
-                R = r.useCallback((e) => C.current[e] ?? null, []),
+                T = r.useCallback((e) => C.current[e] ?? null, []),
                 w = r.useCallback((e, t) => {
                     null == t ? _.current.delete(e) : _.current.set(e, t);
                 }, []),
@@ -892,14 +892,14 @@ function ew(e) {
                 {
                     effectiveDestination: G,
                     draggedLocation: j,
-                    getColumnElement: R,
+                    getColumnElement: T,
                     getSlotElement: L,
                     gridDropSurfaceRef: A,
                     handleColumnHover: U,
                     handleDragEnd: q,
                     canAcceptPointerDrop: F,
                     placeholderHeight: v,
-                    registerColumnElement: T,
+                    registerColumnElement: R,
                     registerSlotElement: w,
                     snapshotSlotRects: D,
                 }
@@ -1060,7 +1060,7 @@ function ew(e) {
                                 column: n,
                                 isPointerDragging: p,
                                 registerColumnElement: N,
-                                onDragHover: T,
+                                onDragHover: R,
                                 children: [
                                     (function (e, n) {
                                         if (0 === e.length && !f)
@@ -1111,7 +1111,7 @@ function ew(e) {
                                                     className: ec.O4,
                                                     children: [
                                                         h &&
-                                                            (0, l.jsx)(eT, {
+                                                            (0, l.jsx)(eR, {
                                                                 column: n,
                                                                 index: g,
                                                                 placement: "before",
@@ -1127,10 +1127,10 @@ function ew(e) {
                                                             leftColumnCount: c[0].length,
                                                             isKeyboardMode: m,
                                                             isSaving: E,
-                                                            getDropLabel: eR,
+                                                            getDropLabel: eT,
                                                             onReorder: z,
                                                             onDrop: w,
-                                                            onDragEnd: R,
+                                                            onDragEnd: T,
                                                             registerSlotElement: P,
                                                             isSettling:
                                                                 x?.type === "settling" && x.widgetId === a.id && !m,
@@ -1146,7 +1146,7 @@ function ew(e) {
                                                         }),
                                                         h &&
                                                             g === e.length - 1 &&
-                                                            (0, l.jsx)(eT, {
+                                                            (0, l.jsx)(eR, {
                                                                 column: n,
                                                                 index: e.length,
                                                                 placement: "after",
@@ -1163,7 +1163,7 @@ function ew(e) {
                                         !E &&
                                         (0, l.jsx)(e_, {
                                             column: n,
-                                            dndName: X.intl.string(1 === n ? V.default.fWef0G : V.default.KcdDyT),
+                                            dndName: V.intl.string(1 === n ? X.default.fWef0G : X.default.KcdDyT),
                                             onDropAtEnd: $,
                                         }),
                                     p && (0, l.jsx)("div", { className: ec.XP, "aria-hidden": !0 }),
@@ -1193,8 +1193,8 @@ var eL = n(529609),
     ez = n(498642),
     eK = n(486020),
     e$ = n(488428),
-    eV = n(776231),
-    eX = n(986898);
+    eX = n(776231),
+    eV = n(986898);
 function eY(e) {
     let { guildId: t, header: n, canEdit: u, isEditing: s, isSaving: c } = e,
         d = (0, i.bG)([f.A], () => f.A.getGuild(t), [t]),
@@ -1218,7 +1218,7 @@ function eY(e) {
                                   { CDN_HOST: l, API_ENDPOINT: r } = window.GLOBAL_ENV,
                                   i = E.Rsh.GUILD_SPACE_BANNER(e, t, n),
                                   a = null != l ? `https://${l}${i}` : location.protocol + r + i,
-                                  u = { size: (0, eV.kr)(1200 * (0, eV.mZ)()) };
+                                  u = { size: (0, eX.kr)(1200 * (0, eX.mZ)()) };
                               return ("jpg" === n && (u.quality = "lossless"), (a += `?${e$.stringify(u)}`));
                           })(d.id, n.custom_banner_hash)
                         : eK.Ay.getGuildBannerURL({ id: d.id, banner: d.banner }),
@@ -1228,21 +1228,21 @@ function eY(e) {
     return null == d
         ? null
         : (0, l.jsxs)("div", {
-              className: eX.wx,
+              className: eV.wx,
               children: [
                   null != v
-                      ? (0, l.jsx)("img", { className: eX.vK, src: v, alt: "" })
-                      : (0, l.jsx)("div", { className: eX.vK, style: { background: _ }, "aria-hidden": !0 }),
-                  (0, l.jsx)("div", { className: eX.f5, "aria-hidden": !0 }),
+                      ? (0, l.jsx)("img", { className: eV.vK, src: v, alt: "" })
+                      : (0, l.jsx)("div", { className: eV.vK, style: { background: _ }, "aria-hidden": !0 }),
+                  (0, l.jsx)("div", { className: eV.f5, "aria-hidden": !0 }),
                   s
                       ? (0, l.jsxs)("div", {
-                            className: eX.j0,
+                            className: eV.j0,
                             children: [
                                 (0, l.jsx)(eq.A, {
                                     variant: "secondary",
                                     icon: eN.ImageIcon,
                                     size: "sm",
-                                    text: X.intl.string(V.default["EN+0gW"]),
+                                    text: V.intl.string(X.default["EN+0gW"]),
                                     onChange: (e) => (0, A.pC)(t, e),
                                     maxFileSizeBytes: 0xa00000,
                                     onFileSizeError: () => (0, eF.A)(0xa00000),
@@ -1250,13 +1250,13 @@ function eY(e) {
                                 }),
                                 y
                                     ? (0, l.jsx)(O.m, {
-                                          text: X.intl.string(V.default["CunK+J"]),
+                                          text: V.intl.string(X.default["CunK+J"]),
                                           ariaHidden: !0,
                                           children: (0, l.jsx)(eP.K, {
                                               variant: "critical-secondary",
                                               size: "sm",
                                               icon: ek.TrashIcon,
-                                              "aria-label": X.intl.string(V.default["CunK+J"]),
+                                              "aria-label": V.intl.string(X.default["CunK+J"]),
                                               onClick: () => (0, A.pC)(t, null),
                                               disabled: c,
                                           }),
@@ -1266,17 +1266,17 @@ function eY(e) {
                         })
                       : null,
                   (0, l.jsxs)("div", {
-                      className: eX.D_,
+                      className: eV.D_,
                       children: [
                           (0, l.jsx)(eB.Ay, {
-                              className: eX.Kk,
+                              className: eV.Kk,
                               guild: d,
                               size: eB.Ay.Sizes.LARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
                           (0, l.jsxs)("div", {
-                              className: eX.pq,
+                              className: eV.pq,
                               children: [
                                   (0, l.jsx)(eU.D, {
                                       variant: "heading-lg/semibold",
@@ -1285,36 +1285,36 @@ function eY(e) {
                                       children: d.name,
                                   }),
                                   (0, l.jsxs)("div", {
-                                      className: eX.M1,
+                                      className: eV.M1,
                                       children: [
                                           null != o
                                               ? (0, l.jsxs)("div", {
-                                                    className: eX.dJ,
+                                                    className: eV.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: eX.RS, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: eV.RS, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "text-xs/semibold",
                                                             color: "currentColor",
-                                                            children: X.intl.format(V.default.G08ClG, { count: o }),
+                                                            children: V.intl.format(X.default.G08ClG, { count: o }),
                                                         }),
                                                     ],
                                                 })
                                               : null,
                                           null != g
                                               ? (0, l.jsxs)("div", {
-                                                    className: eX.dJ,
+                                                    className: eV.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: eX.kq, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: eV.kq, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "text-xs/semibold",
                                                             color: "currentColor",
-                                                            children: X.intl.format(V.default["rp7bx+"], { count: g }),
+                                                            children: V.intl.format(X.default["rp7bx+"], { count: g }),
                                                         }),
                                                     ],
                                                 })
                                               : null,
                                           (0, l.jsxs)("div", {
-                                              className: eX.dJ,
+                                              className: eV.dJ,
                                               children: [
                                                   (0, l.jsx)(F._, {
                                                       size: "xs",
@@ -1324,7 +1324,7 @@ function eY(e) {
                                                   (0, l.jsx)(a.E, {
                                                       variant: "text-xs/semibold",
                                                       color: "currentColor",
-                                                      children: X.intl.format(V.default.DwFqrb, {
+                                                      children: V.intl.format(X.default.DwFqrb, {
                                                           count: d.premiumSubscriberCount,
                                                       }),
                                                   }),
@@ -1340,7 +1340,7 @@ function eY(e) {
                       !s &&
                       (0, l.jsx)(U.$, {
                           icon: eM.PencilIcon,
-                          text: X.intl.string(V.default.KcOpCm),
+                          text: V.intl.string(X.default.KcOpCm),
                           size: "sm",
                           onClick: () => (0, A.Wd)(t),
                       }),
@@ -1368,11 +1368,11 @@ function e3(e) {
         r.useEffect(() => {
             (0, c.L4)(m, !1, { respectBackoff: !0 });
         }, [m]),
-        (t = (0, R.n)()),
+        (t = (0, T.n)()),
         r.useEffect(
             () => () => {
                 if (null == t) return;
-                let e = T.Ay.getCurrentEmbeddedActivity();
+                let e = R.Ay.getCurrentEmbeddedActivity();
                 null != e &&
                     e.location.kind === j.T.GUILD_CHANNEL &&
                     e.location.channel_id === t &&
@@ -1445,7 +1445,7 @@ function e3(e) {
         r.useEffect(() => {
             U || null == W || "saving" === H || (0, A.iX)(m);
         }, [U, W, H, m]));
-    let V = r.useMemo(
+    let X = r.useMemo(
             () =>
                 (q ?? [])
                     .filter((e) => {
@@ -1458,15 +1458,15 @@ function e3(e) {
                     }),
             [q],
         ),
-        Y = (0, i.yK)([_.A], () => _.A.getWidgetIdsToHydrate(m, V), [m, V]),
+        Y = (0, i.yK)([_.A], () => _.A.getWidgetIdsToHydrate(m, X), [m, X]),
         J = r.useRef(null);
     return (r.useEffect(() => {
         if (J.current !== m && null != L) {
-            ((J.current = m), I(m, V, !0));
+            ((J.current = m), I(m, X, !0));
             return;
         }
         I(m, Y);
-    }, [m, L, V, Y]),
+    }, [m, L, X, Y]),
     null == L || null == q)
         ? (0, l.jsx)("div", {
               className: e6.MY,
@@ -1474,12 +1474,12 @@ function e3(e) {
                   className: e6.F,
                   children:
                       "error" !== N || P
-                          ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": X.intl.string(X.t.ZTNur7) })
+                          ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": V.intl.string(V.t.ZTNur7) })
                           : (0, l.jsx)(a.E, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
                                 role: "alert",
-                                children: X.intl.string(X.t.F8FvUy),
+                                children: V.intl.string(V.t.F8FvUy),
                             }),
               }),
           })

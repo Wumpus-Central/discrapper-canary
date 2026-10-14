@@ -17,8 +17,8 @@ var l = n(477900),
     E = n(97352),
     I = n(158045),
     A = n(580630),
-    y = n(202541),
-    g = n(660183),
+    g = n(202541),
+    y = n(660183),
     P = n(583741),
     v = n(904541);
 function x(e) {
@@ -56,11 +56,11 @@ function x(e) {
                 premiumSwitchPlanSelectText: e ? (0, C.yq)(H, Y) : null,
             };
         }, [H, B, Y]),
-        Z = i.useMemo(
+        q = i.useMemo(
             () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: x, trialPeriodCopy: G }) : b),
             [N, F, U, x, G, b],
         ),
-        q = i.useMemo(() => (r.length > 0 ? y.hd[r[0]].premiumType : void 0), [r]),
+        Z = i.useMemo(() => (r.length > 0 ? g.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, p.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         $ = i.useCallback(
             (e) => {
@@ -121,7 +121,7 @@ function x(e) {
                             G = (function (e, t) {
                                 let { isEligibleForTrial: n } = t;
                                 return n
-                                    ? g.intl.formatToPlainString(g.t.hXcaLT, {
+                                    ? y.intl.formatToPlainString(y.t.hXcaLT, {
                                           price: (0, A.$g)(0, e.currency, {
                                               minimumFractionDigits: 0,
                                               maximumFractionDigits: 0,
@@ -135,31 +135,31 @@ function x(e) {
                             (null != R &&
                                 !d &&
                                 ((0, m.p2)(R)
-                                    ? b.interval === y.WT.YEAR
-                                        ? (t = g.intl.format(P.default.ODKoJd, { percent: L ?? "" }))
-                                        : b.interval === y.WT.MONTH &&
+                                    ? b.interval === g.WT.YEAR
+                                        ? (t = y.intl.format(P.default.ODKoJd, { percent: L ?? "" }))
+                                        : b.interval === g.WT.MONTH &&
                                           (null != B &&
-                                              (F = g.intl.format(g.t.hXcaLT, {
+                                              (F = y.intl.format(y.t.hXcaLT, {
                                                   price: (0, A.$g)(w.amount - B, w.currency),
                                               })),
-                                          (t = g.intl.format(P.default.JsSin7, {
+                                          (t = y.intl.format(P.default.JsSin7, {
                                               priceRate: (0, A.CE)(G, b.interval, b.intervalCount),
                                               intervalCount: R.discount.intervalCount,
                                           })))
                                     : (0, m.hm)(R) &&
-                                      b.interval === y.WT.YEAR &&
+                                      b.interval === g.WT.YEAR &&
                                       null != B &&
-                                      ((F = g.intl.format(g.t.hXcaLT, { price: (0, A.$g)(w.amount - B, w.currency) })),
+                                      ((F = y.intl.format(y.t.hXcaLT, { price: (0, A.$g)(w.amount - B, w.currency) })),
                                       (i = G),
-                                      (t = g.intl.format(g.t.VZ8Tvh, { regularPrice: G })),
-                                      (o = g.intl.formatToPlainString(P.default.nsG1jw, {
+                                      (t = y.intl.format(y.t.VZ8Tvh, { regularPrice: G })),
+                                      (o = y.intl.formatToPlainString(P.default.nsG1jw, {
                                           savingsText: (0, s.l9)(j, parseInt(R.discount.amount) / 100),
                                       })))),
                             x &&
                                 (_ && d
                                     ? (t = (0, f.O7)(b, w))
                                     : p
-                                      ? (t = g.intl.string(g.t.ymSxhy))
+                                      ? (t = y.intl.string(y.t.ymSxhy))
                                       : "string" != typeof D || U || (t = D)),
                             U && !p)
                         ) {
@@ -184,7 +184,7 @@ function x(e) {
                             id: e,
                             value: e,
                             primaryText: (0, c.YR)(b.interval, b.intervalCount, !0),
-                            subText: l ? g.intl.string(g.t.ZTNur7) : F,
+                            subText: l ? y.intl.string(y.t.ZTNur7) : F,
                             subTextStrikethrough: l ? null : i,
                             secondarySubText: l ? null : t,
                             badgeText: l ? null : H,
@@ -203,15 +203,15 @@ function x(e) {
             showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
-    return null == q
+    return null == Z
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   V &&
                       (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
                   (0, l.jsx)(d.me, {
-                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
-                      headingSubText: Z,
+                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
+                      headingSubText: q,
                       planRadioOptions: Q,
                       value: R?.id ?? "",
                       onChange: $,

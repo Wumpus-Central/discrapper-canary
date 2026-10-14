@@ -1,4 +1,4 @@
-n.d(t, { Rs: () => D, fw: () => Z, Ay: () => G });
+n.d(t, { Rs: () => D, fw: () => K, Ay: () => G });
 var r,
     l = n(477900),
     i = n(582128),
@@ -37,7 +37,7 @@ function v(e) {
         }),
     });
 }
-function M(e) {
+function R(e) {
     let { color: t = "white", className: n } = e;
     return (0, l.jsx)("svg", {
         className: n,
@@ -52,7 +52,7 @@ function M(e) {
         }),
     });
 }
-function R(e) {
+function M(e) {
     let { color: t = "white", className: n } = e;
     return (0, l.jsx)("svg", {
         className: n,
@@ -78,11 +78,11 @@ let L = function (e) {
                 let n = (0, A.M)(t) ? "white" : "black";
                 switch (e) {
                     case x.Or.PREMIUM_UPDATED:
-                        return (0, l.jsx)(R, { color: n, className: T.gd });
+                        return (0, l.jsx)(M, { color: n, className: T.gd });
                     case x.Or.PREMIUM_ACTIVATED:
                         return (0, l.jsx)(v, { color: n, className: T.gd });
                     case x.Or.PREMIUM_PAYMENT_STARTED:
-                        return (0, l.jsx)(M, { color: n, className: T.gd });
+                        return (0, l.jsx)(R, { color: n, className: T.gd });
                     default:
                         return null;
                 }
@@ -171,22 +171,22 @@ function G(e) {
             hideClose: E,
             postSuccessGuild: A,
             paymentSourceType: v,
-            startingFractionalPremiumEndsAt: M,
-            customCTAType: R,
+            startingFractionalPremiumEndsAt: R,
+            customCTAType: M,
         } = e,
         T = (0, u.bG)([P.A], () => P.A.isDisplayingWowMomentConfirmation),
         {
             isPremiumGroupPurchase: D,
             customCheckoutFlow: G,
-            startingIsInPastDueCheckout: Z,
+            startingIsInPastDueCheckout: K,
         } = (0, p.t4)((e) => ({
             isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
-        { theme: K } = (0, o.wR)(),
+        { theme: Z } = (0, o.wR)(),
         W = (0, u.bG)([I.A], () => (null != m ? I.A.get(m.id) : null)),
-        Y = (0, _.b2)(M),
+        Y = (0, _.b2)(R),
         q = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function Q(e) {
         return D
@@ -209,7 +209,7 @@ function G(e) {
             let { applicationId: e, id: t } = m;
             (0, f.EX)(e, t).catch(j.FXj);
         }, [m, W]),
-        Z)
+        K)
     )
         t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
@@ -217,7 +217,7 @@ function G(e) {
             className: F.Qq,
             children: w.intl.string(O.default["t+xzd8"]),
         });
-    else if ("deeplink_to_desktop_app" === R || G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
+    else if ("deeplink_to_desktop_app" === M || G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
         t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
@@ -306,7 +306,7 @@ function G(e) {
     if (
         ((n = D
             ? w.intl.string(H.default.clIveA)
-            : "deeplink_to_desktop_app" === R || G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+            : "deeplink_to_desktop_app" === M || G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? w.intl.string(w.t.sRApon)
               : null != W
                 ? w.intl.formatToPlainString(w.t["1qGgm4"], { skuName: W.name })
@@ -322,7 +322,7 @@ function G(e) {
     return (0, l.jsxs)("div", {
         className: F.EL,
         children: [
-            !J && (0, l.jsx)(L, { type: $(), theme: K }),
+            !J && (0, l.jsx)(L, { type: $(), theme: Z }),
             t,
             E || q
                 ? null
@@ -334,7 +334,7 @@ function G(e) {
         ],
     });
 }
-function Z(e) {
+function K(e) {
     let { planId: t, onClose: n, shouldUsePostPurchaseRecipientDelivery: r = !1 } = e,
         {
             giftRecipient: i,

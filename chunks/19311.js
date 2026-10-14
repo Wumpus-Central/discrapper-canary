@@ -53,11 +53,11 @@ function E(e) {
             primarySubmitting: I,
             onPrimary: A,
         } = e,
-        y =
+        g =
             null == t
                 ? null
                 : (0, i.jsx)(o.Q, { text: n ?? m.intl.string(m.t["13/7kX"]), onClick: t, variant: "secondary" }),
-        g = (0, i.jsxs)(d.B, {
+        y = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
             gap: 0,
@@ -83,7 +83,7 @@ function E(e) {
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == y }), children: [y, g] }),
+        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == g }), children: [g, y] }),
     });
 }
 E.CTAType = C;

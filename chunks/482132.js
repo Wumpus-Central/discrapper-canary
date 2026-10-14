@@ -42,8 +42,8 @@ function y(e) {
             extraSentryInformation: { stepConfig: x, step: a, unifiedCheckoutFlow: A, stepConfigs: y },
         });
     let v = x?.options?.hideSlider ?? !1,
-        M = x?.options?.hideDefaultModalBody ?? !1,
-        R = x?.options?.sliderBodyClassName,
+        R = x?.options?.hideDefaultModalBody ?? !1,
+        M = x?.options?.sliderBodyClassName,
         T = a === C.pn.REVIEW,
         L = l.useCallback(
             (e, t) => {
@@ -59,7 +59,7 @@ function y(e) {
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          M
+                          R
                               ? null
                               : (0, r.jsx)(c.c, {
                                     children: (0, r.jsx)(o.t, {
@@ -78,7 +78,7 @@ function y(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {
-                                                            className: s()(E.OO, { [E.Wq]: T }, R),
+                                                            className: s()(E.OO, { [E.Wq]: T }, M),
                                                             ref: (t) => L(t, e.key),
                                                             onSubmit: (e) => e.preventDefault(),
                                                         }),

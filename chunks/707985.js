@@ -5,8 +5,8 @@ function i(e) {
             canChat: n,
             renderReactions: i,
             canAddNewReactions: l,
-            isLurking: o,
-            communicationDisabled: a,
+            isLurking: a,
+            communicationDisabled: o,
             isActiveChannelOrUnarchivableThread: r,
             isAutomodQuarantined: s,
         } = e,
@@ -17,7 +17,7 @@ function i(e) {
         f = (n || c) && r && !d;
     return {
         disableReactionReads: !i,
-        disableReactionCreates: o || !f || !m,
-        disableReactionUpdates: u || o || !f || !0 === a || !0 === s,
+        disableReactionCreates: a || !f || !m,
+        disableReactionUpdates: u || a || !f || !0 === o || !0 === s,
     };
 }

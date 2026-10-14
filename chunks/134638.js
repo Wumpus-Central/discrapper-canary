@@ -17,8 +17,8 @@ var l = n(477900),
     E = n(67480),
     I = n(486020),
     A = n(158045),
-    y = n(580630),
-    g = n(166532),
+    g = n(580630),
+    y = n(166532),
     P = n(888751),
     v = n(652215),
     x = n(202541),
@@ -53,7 +53,7 @@ function R(e) {
         })),
         Y = F && W,
         V = i.useMemo(() => {
-            if (Y && null != G) return () => G(g.pn.PLAN_SELECT);
+            if (Y && null != G) return () => G(y.pn.PLAN_SELECT);
         }, [Y, G]),
         K = (function (e) {
             let {
@@ -93,7 +93,7 @@ function R(e) {
             isClickPurchaseItemToEdit: Y,
             quantity: B,
         }),
-        Z = (function (e) {
+        q = (function (e) {
             let { guildId: t, invoiceSummaryType: n, giftRecipient: l } = e,
                 i = (0, r.bG)([f.A], () => (null != t ? f.A.getGuild(t) : null), [t]);
             return M(n) && null != l
@@ -102,7 +102,7 @@ function R(e) {
                   ? { type: "guildSubscription", guild: i }
                   : void 0;
         })({ guildId: w, invoiceSummaryType: t, giftRecipient: L }),
-        q = (function (e) {
+        Z = (function (e) {
             let { invoiceSummaryType: t, guildId: n, giftRecipient: l } = e;
             return M(t)
                 ? null != l
@@ -163,10 +163,10 @@ function R(e) {
                         d = M(t),
                         p = t === s.u$.PREMIUM_WITH_TRIAL,
                         f = (d ? c?.amount : c?.subscriptionPlanPrice) ?? 0,
-                        S = (0, y.$g)(f, l.currency),
-                        E = (0, y.CE)(S, n.interval, n.intervalCount),
+                        S = (0, g.$g)(f, l.currency),
+                        E = (0, g.CE)(S, n.interval, n.intervalCount),
                         I = null,
-                        g = null,
+                        y = null,
                         v = !1,
                         x = E,
                         _ = o?.discountOffer;
@@ -176,24 +176,24 @@ function R(e) {
                     else if (d) {
                         if (((x = S), (0, P.uH)(n))) {
                             let e = (0, A.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            ((I = null != e ? (0, y.$g)(e * u, l.currency) : null), (v = !0));
+                            ((I = null != e ? (0, g.$g)(e * u, l.currency) : null), (v = !0));
                         }
                     } else if (r) {
                         let e = (0, m.pg)(l, n.id);
                         if (null != a && a.discount.applicableSubscriptionInterval === n.interval && null != e) {
-                            let t = (0, y.$g)(f - e, l.currency);
+                            let t = (0, g.$g)(f - e, l.currency);
                             ((x = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
                                 (I = T.intl.format(N.default.JsSin7, {
-                                    priceRate: (0, y.CE)(S, n.interval, n.intervalCount),
+                                    priceRate: (0, g.CE)(S, n.interval, n.intervalCount),
                                     intervalCount: a.discount.intervalCount,
                                 })));
                         }
                     } else if ((0, A.xq)(n.id) && null != _) {
                         let e = (0, m.pg)(l, n.id);
                         if ((0, h.Ro)(l, _.discount.id) && null != e) {
-                            let t = (0, y.$g)(f - e, l.currency);
+                            let t = (0, g.$g)(f - e, l.currency);
                             ((x = T.intl.format(T.t.hXcaLT, { price: t })),
-                                (g = S),
+                                (y = S),
                                 (I = (0, m.hm)(_)
                                     ? T.intl.format(T.t.VZ8Tvh, { regularPrice: S })
                                     : T.intl.format(N.default.JsSin7, {
@@ -202,7 +202,7 @@ function R(e) {
                                       })));
                         }
                     }
-                    return { price: x, priceStrikethroughText: g, priceSubText: I, priceSubTextHasStrikethrough: v };
+                    return { price: x, priceStrikethroughText: y, priceSubText: I, priceSubTextHasStrikethrough: v };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,
@@ -218,12 +218,12 @@ function R(e) {
         er = ((0, A.ys)(c.id) ? (0, A.m6)(c.id) : void 0) === x.PremiumTypes.TIER_2;
     return (0, l.jsx)(u.f7, {
         label: K,
-        description: q,
+        description: Z,
         price: et,
         priceStrikethroughText: en,
         priceSubText: el,
         priceSubTextHasStrikethrough: ei,
-        target: Z,
+        target: q,
         graphic: (0, l.jsx)(O, { subscriptionPlan: c, storeListing: U }),
         omitDefaultIconBackground: er,
         header: z,

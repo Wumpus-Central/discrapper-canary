@@ -18,19 +18,19 @@ let h = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
 function T() {
     (h.stop(), (_ = !1));
 }
-function p() {
+function N() {
     let e = u.A.isEnabled(),
         t = u.A.comboSoundsEnabled;
     return !!e && !!t && null != d.Ay.getChannelId();
 }
-function N() {
-    if (0 === g.length || !p() || C) return;
+function p() {
+    if (0 === g.length || !N() || C) return;
     C = !0;
     let [e, t] = g[g.length - 1];
     ((0, r.Ak)(e, t), (I = setTimeout(S, 1e3)));
 }
 function S() {
-    (g.pop(), (C = !1), N());
+    (g.pop(), (C = !1), p());
 }
 class f extends l.A {
     _initialize() {
@@ -62,7 +62,7 @@ class f extends l.A {
         T();
     }
     startAudio() {
-        if (!p()) return;
+        if (!N()) return;
         let e = d.Ay.getChannelId();
         if (null == e) return;
         let t = a.default.getId(),
@@ -72,11 +72,11 @@ class f extends l.A {
         n && l >= 7 ? _ || (h.loop(), (_ = !0)) : T();
     }
     playAchievementUnlockSound() {
-        p() &&
+        N() &&
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     n = o.A.isConnected();
-                (g.push([e, t * (n ? 0.1 : 1)]), N());
+                (g.push([e, t * (n ? 0.1 : 1)]), p());
             })("poggermode_achievement_unlock");
     }
 }

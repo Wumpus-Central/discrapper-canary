@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => R, Fv: () => m, kF: () => O, Oc: () => L, GY: () => b }), n(667532));
+(n.d(t, { M$: () => b, Fv: () => m, kF: () => O, Oc: () => L, GY: () => R }), n(667532));
 var i = n(310953),
     l = n(473529),
     r = n(519059),
@@ -58,8 +58,8 @@ function I() {
     }
 }
 var T = n(963169),
-    p = n(345942),
-    N = n(309010),
+    N = n(345942),
+    p = n(309010),
     S = n(967198),
     f = n(723702);
 let O = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
@@ -72,17 +72,17 @@ let O = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) 
             if (null != S.A.getGuildId()) e = _.ME;
             else {
                 let t = S.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, h.i)(t, N.Ay.getChannelId(t)));
+                null != t && ((e = t), (0, h.i)(t, p.Ay.getChannelId(t)));
             }
-            return (null != e && (0, p.u)(e), !1);
+            return (null != e && (0, N.u)(e), !1);
         },
     },
-    b = {
+    R = {
         binds: (0, f.isMac)() || (0, f.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.OE)("keybind"), !1),
     },
-    R = {
+    b = {
         binds: (0, f.isMac)() || (0, f.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.Qb)("keybind"), !1),

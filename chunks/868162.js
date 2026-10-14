@@ -1,4 +1,4 @@
-n.d(t, { A: () => b, x: () => f });
+n.d(t, { A: () => R, x: () => f });
 var i = n(435558),
     l = n.n(i),
     r = n(17928),
@@ -16,8 +16,8 @@ let h = { ignoredDevices: {} },
     g = {},
     I = {},
     T = {},
-    p = { id: null, justChanged: !1 },
     N = { id: null, justChanged: !1 },
+    p = { id: null, justChanged: !1 },
     S = /\((.+)\)\s*$/;
 function f(e) {
     if ((0, u.getPlatform)() === u.PlatformTypes.WINDOWS) {
@@ -57,35 +57,35 @@ class m extends r.Ay.DeviceSettingsStore {
         return g;
     }
     get lastInputSystemDevice() {
-        return p;
+        return N;
     }
     get outputDevices() {
         return I;
     }
     get lastOutputSystemDevice() {
-        return N;
+        return p;
     }
 }
-let b = new m(s.h, {
+let R = new m(s.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
-        ((p.justChanged = !1),
+        ((N.justChanged = !1),
             t.forEach((e) => {
                 if (e.id === E.dx) {
                     let t = e.originalId ?? e.originalName;
-                    (t !== p.id && (p.justChanged = !0), (p.id = t));
+                    (t !== N.id && (N.justChanged = !0), (N.id = t));
                     return;
                 }
                 i[f(e)] = e.id;
             }));
         let r = {};
         if (
-            ((N.justChanged = !1),
+            ((p.justChanged = !1),
             n.forEach((e) => {
                 if (e.id === E.dx) {
                     let t = e.originalId ?? e.originalName;
-                    (t !== N.id && (N.justChanged = !0), (N.id = t));
+                    (t !== p.id && (p.justChanged = !0), (p.id = t));
                     return;
                 }
                 r[f(e)] = e.id;

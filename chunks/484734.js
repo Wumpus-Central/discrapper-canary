@@ -1,9 +1,9 @@
 n.d(t, {
-    KJ: () => k,
+    KJ: () => B,
     N_: () => Y,
     vw: () => Z,
     lg: () => F,
-    nG: () => B,
+    nG: () => k,
     c3: () => H,
     OS: () => j,
     Y9: () => K,
@@ -26,8 +26,8 @@ var i = n(477900),
     g = n(659421),
     I = n(329308),
     T = n(571694),
-    p = n(47167),
-    N = n(713654),
+    N = n(47167),
+    p = n(713654),
     S = n(503698),
     f = n.n(S),
     O = n(62986);
@@ -40,15 +40,15 @@ let L = function (e) {
           : null;
 };
 var m = n(769015),
-    b = n(106191),
-    R = n(548118),
+    R = n(106191),
+    b = n(548118),
     v = n(376943),
     U = n(636585),
     D = n(71393),
     y = n(994500),
     G = n(287809),
-    P = n(147036),
-    M = n(427262),
+    M = n(147036),
+    P = n(427262),
     x = n(660183),
     V = n(445388);
 class w extends l.PureComponent {
@@ -100,7 +100,7 @@ class j extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: V._C,
-            children: (0, i.jsx)(R.Ay, { tabIndex: -1, guild: e, size: R.Ay.Sizes.MINI, className: V.$f }),
+            children: (0, i.jsx)(b.Ay, { tabIndex: -1, guild: e, size: b.Ay.Sizes.MINI, className: V.$f }),
         });
     }
     renderName() {
@@ -143,9 +143,9 @@ class H extends l.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
-            t = (0, N.gU)(e);
+            t = (0, p.gU)(e);
         if (null == t) return null;
-        let n = (0, P.Jg)(e) ?? "";
+        let n = (0, M.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
             className: V.zc,
             role: "img",
@@ -159,11 +159,11 @@ class H extends l.Component {
             { mentions: n, category: l, channel: r, isMentionLowImportance: s } = this.props;
         return (
             null != n && n > 0 && (e = (0, i.jsx)(L, { className: V.qS, value: n, lowImportance: s })),
-            null != l && (t = (0, i.jsx)("span", { className: V.N4, children: (0, p.m1)(l, G.default, y.A) })),
+            null != l && (t = (0, i.jsx)("span", { className: V.N4, children: (0, N.m1)(l, G.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: V.UU,
                 children: [
-                    (0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(r, G.default, y.A) }),
+                    (0, i.jsx)("span", { className: V.YW, children: (0, N.m1)(r, G.default, y.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -196,8 +196,8 @@ class H extends l.Component {
     getAccessibilityLabel() {
         let { channel: e } = this.props,
             t = D.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, p.m1)(e, G.default, y.A),
-            i = (0, P.Jg)(e);
+            n = (0, N.m1)(e, G.default, y.A),
+            i = (0, M.Jg)(e);
         return x.intl.formatToPlainString(x.t["Vw/da+"], { name: n, type: i, guild: t });
     }
     render() {
@@ -215,7 +215,7 @@ class H extends l.Component {
         });
     }
 }
-class B extends l.Component {
+class k extends l.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
@@ -230,7 +230,7 @@ class B extends l.Component {
             null != t && t > 0 && (e = (0, i.jsx)(L, { className: V.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: V.UU,
-                children: [(0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(n, G.default, y.A) }), e],
+                children: [(0, i.jsx)("span", { className: V.YW, children: (0, N.m1)(n, G.default, y.A) }), e],
             })
         );
     }
@@ -243,7 +243,7 @@ class B extends l.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, p.m1)(e, G.default, y.A);
+            n = (0, N.m1)(e, G.default, y.A);
         return null != t && t > 0
             ? x.intl.formatToPlainString(x.t.LYdVfN, { name: n, mentions: t })
             : x.intl.formatToPlainString(x.t.lLSbno, { name: n });
@@ -263,7 +263,7 @@ class B extends l.Component {
         });
     }
 }
-class k extends l.Component {
+class B extends l.Component {
     renderIcon() {
         let { user: e, status: t, isMobile: n } = this.props;
         return (0, i.jsx)("div", {
@@ -283,7 +283,7 @@ class k extends l.Component {
             i = y.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
-                (e = i ?? M.Ay.getName(t)),
+                (e = i ?? P.Ay.getName(t)),
             e
         );
     }
@@ -298,7 +298,7 @@ class k extends l.Component {
                 children: [
                     (0, i.jsx)("span", { className: V.YW, children: l }),
                     e,
-                    (0, i.jsx)("span", { className: V.Xh, children: M.Ay.getUserTag(t) }),
+                    (0, i.jsx)("span", { className: V.Xh, children: P.Ay.getUserTag(t) }),
                 ],
             })
         );
@@ -313,7 +313,7 @@ class k extends l.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: t } = this.props,
             n = this.getDisplayNickname(),
-            i = M.Ay.getUserTag(t);
+            i = P.Ay.getUserTag(t);
         return null != e && e > 0
             ? x.intl.formatToPlainString(x.t["6b9UrR"], { name: n, id: i, mentions: e })
             : x.intl.formatToPlainString(x.t.GWYOAY, { name: n, id: i });
@@ -371,7 +371,7 @@ function W(e) {
         children: (0, i.jsxs)("div", {
             className: V.xr,
             children: [
-                (0, i.jsx)("div", { className: V.zc, children: (0, i.jsx)(b.A, { game: t, iconClassName: V.bN }) }),
+                (0, i.jsx)("div", { className: V.zc, children: (0, i.jsx)(R.A, { game: t, iconClassName: V.bN }) }),
                 (0, i.jsxs)("div", {
                     className: V.UU,
                     children: [

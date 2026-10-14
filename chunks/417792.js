@@ -17,7 +17,7 @@ function _(e) {
         g = (0, l.bG)([s.default], () => s.default.getId()),
         I = (0, u.P)(),
         T = (0, l.bG)([a.A], () => a.A.ipCountryCode),
-        { hasFetchedPaymentSources: p, hasValidPaymentMethod: N } = (0, l.cf)(
+        { hasFetchedPaymentSources: N, hasValidPaymentMethod: p } = (0, l.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
@@ -43,6 +43,6 @@ function _(e) {
                     null == e && (h = g);
                 }));
         }, [f, g]),
-        S && h !== g && p && !N
+        S && h !== g && N && !p
     );
 }

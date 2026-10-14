@@ -45,8 +45,8 @@ function _(e) {
             order: A,
             isCreateOrderLoading: x,
             createOrderError: v,
-            shouldBlockOnOrderCreation: M,
-            isOrderCreationEnabled: R,
+            shouldBlockOnOrderCreation: R,
+            isOrderCreationEnabled: M,
         } = (function (e) {
             let t,
                 {
@@ -67,12 +67,12 @@ function _(e) {
                 _ = null != n ? n[0] : void 0,
                 [P, A] = (0, l.useState)(null),
                 [x, v] = (0, l.useState)(null),
-                [M, R] = (0, l.useState)(g),
+                [R, M] = (0, l.useState)(g),
                 T = (0, l.useRef)(!1),
                 L = (0, l.useCallback)(
                     async (e) => {
                         let { skuId: t } = e;
-                        R(!0);
+                        M(!0);
                         try {
                             let e = null != r && (0, c.Fs)(r),
                                 n = await (0, o.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
@@ -86,7 +86,7 @@ function _(e) {
                                 }),
                                 v(e));
                         } finally {
-                            R(!1);
+                            M(!1);
                         }
                     },
                     [r, i, u, p],
@@ -97,7 +97,7 @@ function _(e) {
                 }, [_, t, P, L, x]),
                 {
                     order: P,
-                    isCreateOrderLoading: M,
+                    isCreateOrderLoading: R,
                     createOrderError: x,
                     shouldBlockOnOrderCreation: g,
                     isOrderCreationEnabled: t,
@@ -112,8 +112,8 @@ function _(e) {
             loadId: t,
             onOrderCreated: S,
         }),
-        T = l.useMemo(() => ({ order: A, isOrderCreationEnabled: R }), [A, R]);
-    if (M) {
+        T = l.useMemo(() => ({ order: A, isOrderCreationEnabled: M }), [A, M]);
+    if (R) {
         if (x) return (0, r.jsx)(g, { renderModalProps: _, children: (0, r.jsx)(u.A, {}) });
         else if (null != v)
             return (0, r.jsx)(g, {

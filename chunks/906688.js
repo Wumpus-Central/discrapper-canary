@@ -27,8 +27,8 @@ function _(e) {
     if (null == C) return null;
     let g = (0, s.Kj)(l),
         { name: I, rarity: T } = C,
-        { color: p } = (0, u.ag)(T),
-        N = (0, r.M)(_) ? E : h,
+        { color: N } = (0, u.ag)(T),
+        p = (0, r.M)(_) ? E : h,
         S = (g.size - g.offset - 2 * g.stroke) * 0.8,
         f = g.size - g.stroke,
         O = { width: 0.4 * S, height: 0.4 * S },
@@ -40,13 +40,13 @@ function _(e) {
         children: [
             (0, i.jsx)("div", {
                 className: A.r5,
-                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? p : N.trophy, width: S, height: S }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? N : p.trophy, width: S, height: S }),
             }),
             !n &&
                 (0, i.jsx)("div", {
                     className: A.dq,
                     style: L,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...O }),
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: p.locked, ...O }),
                 }),
             n &&
                 T === u.md.LEGENDARY &&

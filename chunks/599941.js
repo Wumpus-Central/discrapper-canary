@@ -1,6 +1,6 @@
 (n.d(t, {
-    KE: () => g,
-    Tq: () => y,
+    KE: () => y,
+    Tq: () => g,
     XE: () => P,
     Yc: () => A,
     cY: () => m,
@@ -154,10 +154,10 @@ function A() {
         clearError: () => i(null),
     };
 }
-function y(e) {
+function g(e) {
     return (0, i.bG)([c.A], () => (null != e ? c.A.getSubscriptionSettings(e) : void 0));
 }
-function g() {
+function y() {
     let [e, t] = l.useState(!1),
         [n, i] = l.useState(null);
     return {

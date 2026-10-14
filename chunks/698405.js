@@ -1,8 +1,8 @@
-n.d(t, { A: () => I, w: () => N });
+n.d(t, { A: () => E, w: () => j });
 var i,
     l = n(477900),
-    o = n(582128),
-    a = n(17928),
+    a = n(582128),
+    o = n(17928),
     r = n(862482),
     s = n(305866),
     c = n(297264),
@@ -14,16 +14,16 @@ var i,
     h = n(857071),
     p = n(652215),
     A = n(660183),
-    E = n(521790),
-    N = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
-let I = function (e) {
-    let { type: t, guild: i, closePopout: N, ctaRef: I } = e,
-        T = (0, f.GV)(),
-        [j, R] = o.useState(!1),
-        x = (0, a.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
-    o.useEffect(() => {
-        j && !x && N();
-    }, [j, x, N]);
+    N = n(521790),
+    j = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
+let E = function (e) {
+    let { type: t, guild: i, closePopout: j, ctaRef: E } = e,
+        x = (0, f.GV)(),
+        [I, T] = a.useState(!1),
+        R = (0, o.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
+    a.useEffect(() => {
+        I && !R && j();
+    }, [I, R, j]);
     let b = null,
         v = A.intl.string(A.t.d7b1p6);
     switch (t) {
@@ -38,37 +38,37 @@ let I = function (e) {
     }
     if (null == b) return null;
     async function C() {
-        R(!0);
+        T(!0);
         try {
-            (await m.A.joinGuild(i.id, { source: p.Q4z.CHAT_INPUT_BLOCKER }), N());
+            (await m.A.joinGuild(i.id, { source: p.Q4z.CHAT_INPUT_BLOCKER }), j());
         } catch {
-            R(!1);
+            T(!1);
         }
     }
     return (0, l.jsxs)(s.l, {
-        className: E.kL,
-        "aria-labelledby": T,
+        className: N.kL,
+        "aria-labelledby": x,
         children: [
-            (0, l.jsx)("img", { alt: "", className: E.Sl, src: n(303528) }),
+            (0, l.jsx)("img", { alt: "", className: N.Sl, src: n(303528) }),
             (0, l.jsxs)("div", {
-                className: E.Qs,
+                className: N.Qs,
                 children: [
-                    (0, l.jsx)(c.D, { variant: "heading-md/semibold", id: T, children: b }),
+                    (0, l.jsx)(c.D, { variant: "heading-md/semibold", id: x, children: b }),
                     (0, l.jsx)(u.E, { color: "text-default", variant: "text-sm/normal", children: v }),
                     (0, l.jsxs)("div", {
-                        className: E.UD,
+                        className: N.UD,
                         children: [
                             (0, l.jsx)(d.$, {
                                 variant: "primary",
                                 text: A.intl.string(A.t["9VLmlZ"]),
-                                buttonRef: I,
+                                buttonRef: E,
                                 onClick: C,
-                                loading: j,
+                                loading: I,
                             }),
                             (0, l.jsx)(r.$n, {
-                                onClick: N,
+                                onClick: j,
                                 look: r.$n.Looks.BLANK,
-                                className: E.ZT,
+                                className: N.ZT,
                                 children: A.intl.string(A.t["2m+Sqk"]),
                             }),
                         ],
