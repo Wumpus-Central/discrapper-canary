@@ -1,81 +1,3 @@
-.attachmentChip__6fe49 {
-    align-items: center;
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    color: var(--icon-muted);
-    display: flex;
-    gap: var(--space-8);
-    max-width: 100%;
-    padding: var(--space-4) var(--space-8)
-}
-
-.attachmentThumb__6fe49 {
-    border-radius: var(--radius-xs);
-    flex: 0 0 auto;
-    height: var(--space-32);
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: var(--space-32)
-}
-
-.attachmentChipBody__6fe49 {
-    display: flex;
-    flex-direction: column;
-    min-width: 0
-}
-
-.attachmentName__6fe49 {
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.attachmentChipCompact__6fe49 {
-    gap: var(--space-4)
-}
-
-.attachmentChipButton__6fe49 {
-    cursor: pointer;
-    text-align: start;
-    transition: background-color .2s ease, border-color .2s ease
-}
-
-.attachmentChipButton__6fe49:hover {
-    background: var(--background-mod-normal);
-    border-color: var(--border-normal)
-}
-
-.attachmentChipCompact__6fe49 .attachmentThumb__6fe49 {
-    height: var(--space-20);
-    width: var(--space-20)
-}
-
-.attachmentSpinner__6fe49 {
-    flex: 0 0 auto;
-    height: var(--space-16);
-    width: var(--space-16)
-}
-
-.attachmentRemoveButton__6fe49 {
-    align-items: center;
-    background: transparent;
-    border: none;
-    border-radius: var(--radius-round);
-    color: var(--icon-muted);
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    padding: var(--space-4)
-}
-
-.attachmentRemoveButton__6fe49:hover {
-    background: var(--interactive-background-hover);
-    color: var(--icon-default)
-}
-
 .chatLogList__0e5cb {
     box-sizing: border-box;
     display: flex;
@@ -405,4 +327,4 @@
     }
 }
 
-/*# sourceMappingURL=3386ee2716ada502.css.map*/
+/*# sourceMappingURL=23ed8e83cca6af27.css.map*/

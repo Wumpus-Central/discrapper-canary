@@ -11,20 +11,22 @@ function u(e) {
     return i()(d._B, { [d.ND]: e });
 }
 function c(e) {
-    let { name: t, thumbSrc: n = null, compact: a = !1, subText: i, children: o, onThumbError: u } = e;
+    let { name: t, thumbSrc: n = null, thumb: a, compact: i = !1, subText: o, children: u, onThumbError: c } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != n
-                ? (0, l.jsx)("img", { src: n, alt: "", className: d.gJ, onError: u })
-                : (0, l.jsx)(r.FileIcon, { size: a ? "xs" : "sm", color: "currentColor" }),
+            null != a
+                ? a
+                : null != n
+                  ? (0, l.jsx)("img", { src: n, alt: "", className: d.gJ, onError: c })
+                  : (0, l.jsx)(r.FileIcon, { size: i ? "xs" : "sm", color: "currentColor" }),
             (0, l.jsxs)("div", {
                 className: d.Wd,
                 children: [
                     (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: d.Rr, children: t }),
-                    i,
+                    o,
                 ],
             }),
-            o,
+            u,
         ],
     });
 }

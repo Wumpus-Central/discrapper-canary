@@ -1,4 +1,4 @@
-(n.d(t, { A: () => v, b: () => U }), n(667532), n(321073), n(30146));
+(n.d(t, { A: () => U, b: () => v }), n(667532), n(321073), n(30146));
 var i = n(17928),
     l = n(73153),
     s = n(260498),
@@ -128,10 +128,10 @@ class R extends i.Ay.Store {
 }
 let w = new Map(),
     q = new Set();
-function U(e) {
+function v(e) {
     return w.get(e) ?? null;
 }
-let v = new R(l.h, {
+let U = new R(l.h, {
     LOGOUT: function () {
         if (
             0 === f.size &&
@@ -224,12 +224,17 @@ let v = new R(l.h, {
             A(t));
     },
     CONJURE_CHAT_MESSAGE_CANCELLED: function (e) {
-        let { projectId: t, id: n } = e,
-            i = f.get(t);
-        if (null == i) return !1;
-        let l = i.filter((e) => e.id !== n && e.in_reply_to !== n);
-        if (l.length === i.length) return !1;
-        f.set(t, l);
+        let { projectId: t, id: n, withdrawn: i } = e,
+            l = f.get(t);
+        if (null == l) return !1;
+        let s = !0 === i ? l[l.findIndex((e) => e.id === n) + 1] : void 0,
+            r =
+                null != s && "assistant" === s.role && "" === s.content && null == s.turn_id && 0 === s.steps.length
+                    ? s.id
+                    : null,
+            u = l.filter((e) => e.id !== n && e.in_reply_to !== n && e.id !== r);
+        if (u.length === l.length) return !1;
+        (f.set(t, u), null != r && A(t));
     },
     CONJURE_CHAT_SIDE_REPLY: function (e) {
         let { projectId: t, id: n, inReplyTo: i, content: l, timestamp: s } = e,
