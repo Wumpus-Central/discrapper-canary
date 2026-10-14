@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => I });
 var o = n(477900),
     l = n(582128),
     a = n(877624),
@@ -9,71 +9,80 @@ var o = n(477900),
     u = n(549996),
     p = n(498470),
     c = n(807098),
-    b = n(637706),
-    m = n(788883),
-    A = n(49999);
-function _(e) {
-    let { children: t, targetElementRef: n, dismissPopover: _ } = e,
-        f = (0, u.c)(a.C.PREMIUM_TAB_POPOVER),
-        I =
-            null != f && "premiumTabPopover" === f.properties.properties.oneofKind
-                ? f.properties.properties.premiumTabPopover
+    b = n(92551),
+    m = n(637706),
+    A = n(788883),
+    _ = n(49999),
+    f = n(660183);
+function I(e) {
+    let { children: t, targetElementRef: n, dismissPopover: I } = e,
+        T = (0, u.c)(a.C.PREMIUM_TAB_POPOVER),
+        N =
+            null != T && "premiumTabPopover" === T.properties.properties.oneofKind
+                ? T.properties.properties.premiumTabPopover
                 : null,
-        T = (0, c.T)(I?.asset),
-        N = l.useMemo(() => null != T && (0, s.r1)(T), [T]),
-        g = f?.id,
-        E = f?.promotionId;
-    if (null == I || null == g || null == E) return t;
-    let y = (0, o.jsx)(m.A, {
+        g = (0, c.T)(N?.asset),
+        E = l.useMemo(() => null != g && (0, s.r1)(g), [g]),
+        y = T?.id,
+        S = T?.promotionId;
+    if (null == N || null == T || null == y || null == S) return t;
+    let C = T.getFormatVariableValues(f.intl.currentLocale),
+        O = (0, b.n)(N.header, C);
+    if (!O.ok) return t;
+    let R = (0, b.d)(N.body, C);
+    if (!R.ok) return t;
+    let h = (0, b.n)(N.button?.copy ?? "", C);
+    if (!h.ok) return t;
+    let P = (0, o.jsx)(A.A, {
             componentType: a.C.PREMIUM_TAB_POPOVER,
-            componentId: g,
-            promotionId: E,
+            componentId: y,
+            promotionId: S,
             dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
         }),
-        { icon: S, iconPosition: C } = (0, p.x)({ buttonAction: I.button?.buttonAction });
-    function O() {
-        return _(A.i.USER_DISMISS);
+        { icon: v, iconPosition: M } = (0, p.x)({ buttonAction: N.button?.buttonAction });
+    function L() {
+        return I(_.i.USER_DISMISS);
     }
-    let R =
-            I.button?.copy != null
+    let x =
+            null != N.button
                 ? {
-                      text: I.button.copy,
+                      text: h.content,
                       variant: "expressive",
                       onClick: (0, p.h)({
-                          buttonAction: I.button.buttonAction,
-                          deeplinkSection: I.button.deeplinkSection,
-                          applicationId: I.button.navigableStorefrontApplicationId?.value,
-                          onClose: O,
+                          buttonAction: N.button.buttonAction,
+                          deeplinkSection: N.button.deeplinkSection,
+                          applicationId: N.button.navigableStorefrontApplicationId?.value,
+                          onClose: L,
                       }),
-                      icon: S,
-                      iconPosition: C,
+                      icon: v,
+                      iconPosition: M,
                   }
                 : void 0,
-        h = (0, b.C)(I.helpArticle, I.helpArticleId),
-        P = null != h ? { text: h.linkText, link: h.url } : void 0,
-        v = {
+        U = (0, m.C)(N.helpArticle, N.helpArticleId),
+        G = null != U ? { text: U.linkText, link: U.url } : void 0,
+        B = {
             targetElementRef: n,
-            title: I.header,
-            body: I.body,
-            textLink: P,
+            title: O.content,
+            body: R.content,
+            textLink: G,
             position: "right",
             alignmentStrategy: "edge",
             align: "top",
             caretConfig: { align: "start" },
-            onRequestClose: O,
+            onRequestClose: L,
         };
-    if (N) {
-        let e = { ...v, assetUrl: T ?? "", action: R, disableMediaViewer: !0 };
+    if (E) {
+        let e = { ...B, assetUrl: g ?? "", action: x, disableMediaViewer: !0 };
         return (0, o.jsxs)(o.Fragment, {
-            children: [y, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
+            children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
         });
     }
-    let M = {
-        ...v,
-        graphic: null != T ? { type: "image", src: T, aspectRatio: "16/9" } : void 0,
+    let D = {
+        ...B,
+        graphic: null != g ? { type: "image", src: g, aspectRatio: "16/9" } : void 0,
         size: "md",
-        actions: null != R ? [R] : void 0,
+        actions: null != x ? [x] : void 0,
         gradientColor: "nitro-pink",
     };
-    return (0, o.jsxs)(o.Fragment, { children: [y, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...M })] });
+    return (0, o.jsxs)(o.Fragment, { children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...D })] });
 }
