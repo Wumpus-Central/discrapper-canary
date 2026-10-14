@@ -7,13 +7,13 @@ function l(e) {
     return e.owner_user_id === a.default.getCurrentUser()?.id;
 }
 function o(e) {
-    return (0, s.XE)(e) && null != e.guild_id;
+    return (0, s.pL)(e) && null != e.guild_id;
 }
 function d(e) {
     return l(e) || o(e);
 }
 function c(e) {
-    return l(e) || (0, s.tr)(e) || o(e);
+    return l(e) || o(e) || (0, s.XE)(e);
 }
 let u = new Map(),
     _ = new Map(),

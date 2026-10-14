@@ -37,7 +37,7 @@ function h(e, t) {
         .filter((e) => !A.has(e.type));
 }
 function f(e) {
-    return { isPublic: (e & u.Zh.PUBLIC) != 0, isShared: (e & u.Zh.SHAREABLE) != 0 };
+    return { isPublic: (e & u.Zh.PUBLIC) != 0, isGuildCollaboration: (e & u.Zh.GUILD_COLLABORATION) != 0 };
 }
 function I(e) {
     return e?.type === _.rbe.GUILD_APP ? (e.application_id ?? null) : null;

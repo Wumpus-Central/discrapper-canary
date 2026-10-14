@@ -1,4 +1,4 @@
-(t.d(l, { default: () => Q }), t(321073));
+(t.d(l, { default: () => V }), t(321073));
 var n = t(477900),
     i = t(582128),
     a = t(17928),
@@ -23,52 +23,52 @@ var C = t(331322),
     k = t(193249),
     y = t(890497),
     A = t(862026),
-    P = t(904363),
-    I = t(535466),
+    I = t(904363),
+    P = t(535466),
     E = t(321032),
-    w = t(502707),
-    R = t(944142),
-    _ = t(788493),
-    F = t(532247),
-    L = t(371169),
-    Z = t(951178),
-    B = t(246338),
-    G = t(277085),
-    J = t(248675),
-    U = t(660183),
-    D = t(453430);
-let H = {
-    project: J.default.W0eQfN,
-    app: J.default.lFaJYF,
-    secrets: J.default.vDpCPU,
-    model: J.default.Rs3qc9,
-    experimental: J.default["0Pe9uw"],
+    R = t(502707),
+    _ = t(944142),
+    w = t(788493),
+    L = t(532247),
+    F = t(371169),
+    T = t(951178),
+    U = t(246338),
+    Z = t(277085),
+    G = t(248675),
+    J = t(660183),
+    B = t(453430);
+let D = {
+    project: G.default.W0eQfN,
+    app: G.default.lFaJYF,
+    secrets: G.default.vDpCPU,
+    model: G.default.Rs3qc9,
+    experimental: G.default["0Pe9uw"],
 };
-function Q(e) {
+function V(e) {
     let {
             projectId: l,
             guildId: t,
             initialTab: x,
             scopeKeys: m,
-            note: Q,
-            notifyAgent: V,
+            note: V,
+            notifyAgent: Q,
             isPreview: q,
-            publishOptions: N,
-            transitionState: X,
-            onClose: M,
+            publishOptions: H,
+            transitionState: O,
+            onClose: X,
         } = e,
         z = (0, a.bG)([b.Ay], () => b.Ay.getProject(l), [l]),
-        K = (0, a.bG)([h.A], () => h.A.getModelSettings(l), [l]),
-        O = (0, a.bG)([f.default], () => "open" === f.default.getConnState(l), [l]),
+        M = (0, a.bG)([h.A], () => h.A.getModelSettings(l), [l]),
+        K = (0, a.bG)([f.default], () => "open" === f.default.getConnState(l), [l]),
         W = null != z && (0, b.PV)(z),
         Y = (function (e, l) {
             var t;
             let s,
                 r = (0, a.bG)([b.Ay], () => b.Ay.getProject(e), [e]),
-                u = (0, P.A)(l),
+                u = (0, I.A)(l),
                 d = (function (e) {
-                    let l = (0, a.bG)([R.A], () => R.A.getLiveReload(e), [e]),
-                        t = (0, w.A)(e),
+                    let l = (0, a.bG)([_.A], () => _.A.getLiveReload(e), [e]),
+                        t = (0, R.A)(e),
                         [n, s] = i.useState(null),
                         [r, u] = i.useState(null);
                     null != r && l !== r.before && u(null);
@@ -76,13 +76,13 @@ function Q(e) {
                     null != n && n === d && s(null);
                     let c = null != l && null != n && n !== d,
                         o = i.useCallback(
-                            () => !c || null == n || (!!(0, _.c)(e, n) && (u({ enabled: n, before: l }), s(null), !0)),
+                            () => !c || null == n || (!!(0, w.c)(e, n) && (u({ enabled: n, before: l }), s(null), !0)),
                             [c, n, l, e],
                         );
                     return {
                         available: null != l && !t,
                         checked: n ?? d ?? !1,
-                        description: null == l ? "" : (0, F.oV)(l),
+                        description: null == l ? "" : (0, L.oV)(l),
                         changed: c,
                         setChecked: s,
                         save: o,
@@ -90,7 +90,7 @@ function Q(e) {
                 })(e),
                 c = d.save,
                 g = (function (e) {
-                    let l = (0, I.Ay)(e),
+                    let l = (0, P.Ay)(e),
                         [t, n] = i.useState(null),
                         [a, s] = i.useState(null),
                         r = a ?? l.description,
@@ -118,23 +118,23 @@ function Q(e) {
                 x = h.save,
                 m = r?.collaborator_role_ids ?? [],
                 [j, S] = i.useState(r?.name ?? ""),
-                [v, D] = i.useState(null),
-                [H, Q] = i.useState(j),
-                [T, V] = i.useState(r?.flags ?? 0),
-                [q, N] = i.useState(() => [...m]),
-                [X, M] = i.useState(!1),
-                [z, K] = i.useState(null),
-                [O, W] = i.useState(null),
+                [v, B] = i.useState(null),
+                [D, V] = i.useState(j),
+                [N, Q] = i.useState(r?.flags ?? 0),
+                [q, H] = i.useState(() => [...m]),
+                [O, X] = i.useState(!1),
+                [z, M] = i.useState(null),
+                [K, W] = i.useState(null),
                 [Y, $] = i.useState(null),
                 [ee, el] = i.useState(null),
                 et = i.useId(),
-                en = H.trim(),
-                ei = null != r && (0, Z.IU)(r),
+                en = D.trim(),
+                ei = null != r && (0, T.IU)(r),
                 ea = null != r && "user" !== r.install_scope,
-                es = ea && null != l && (0, Z.RX)(r),
-                { isPublic: er, isShared: eu } = (0, B.n5)(T),
+                es = ea && null != l && (0, T.RX)(r),
+                { isPublic: er, isGuildCollaboration: eu } = (0, U.n5)(N),
                 ed = null != r && en !== j,
-                ec = ei && T !== (v?.flags ?? r?.flags ?? 0),
+                ec = ei && N !== (v?.flags ?? r?.flags ?? 0),
                 eo =
                     es &&
                     ((t = v?.roleIds ?? m),
@@ -142,42 +142,42 @@ function Q(e) {
                 eg = ed || ec || eo || g.changed,
                 ep = eg || d.changed || h.changed,
                 ef = i.useCallback((e) => {
-                    (Q(e), K(null), $(null));
+                    (V(e), M(null), $(null));
                 }, []),
                 eh = i.useCallback((e, l) => {
-                    (V((t) => (l ? t | e : t & ~e)), W(null), $(null));
+                    (Q((t) => (l ? t | e : t & ~e)), W(null), $(null));
                 }, []),
                 ex = i.useCallback((e) => {
-                    e.length > Z.sq
-                        ? W(U.intl.formatToPlainString(J.default["dH7+/Z"], { max: Z.sq }))
-                        : (N(e), W(null), $(null));
+                    e.length > T.sq
+                        ? W(J.intl.formatToPlainString(G.default["dH7+/Z"], { max: T.sq }))
+                        : (H(e), W(null), $(null));
                 }, []),
                 em = i.useCallback(async () => {
-                    if (null == r || !ep || X) return null;
-                    let t = ed ? (0, G.p)(en) : null;
-                    if (null != t) return (K(t), "project");
+                    if (null == r || !ep || O) return null;
+                    let t = ed ? (0, Z.p)(en) : null;
+                    if (null != t) return (M(t), "project");
                     let n = { ...p };
                     (ed && (n.name = en),
-                        ec && (n.flags = T),
+                        ec && (n.flags = N),
                         eo && (n.collaborator_role_ids = [...q].sort()),
-                        null == r.guild_id && null != l && (eo || (ec && er)) && (n.guild_id = l),
-                        M(!0),
+                        null == r.guild_id && null != l && (eo || (ec && eu)) && (n.guild_id = l),
+                        X(!0),
                         $(null),
                         el(null));
                     try {
                         if (eg) {
-                            if (!(await (0, L.CW)(e, n)).ok) return ($(U.intl.string(J.default["9JPr8h"])), "project");
-                            (S(en), D({ flags: T, roleIds: [...q] }), f());
+                            if (!(await (0, F.CW)(e, n)).ok) return ($(J.intl.string(G.default["9JPr8h"])), "project");
+                            (S(en), B({ flags: N, roleIds: [...q] }), f());
                         }
-                        if (!c()) return ($(U.intl.string(J.default.XzkNBw)), "project");
-                        if (!x()) return (el(U.intl.string(J.default["9JPr8h"])), "experimental");
+                        if (!c()) return ($(J.intl.string(G.default.XzkNBw)), "project");
+                        if (!x()) return (el(J.intl.string(G.default["9JPr8h"])), "experimental");
                         return null;
                     } catch {
-                        return ($(U.intl.string(J.default["9JPr8h"])), "project");
+                        return ($(J.intl.string(G.default["9JPr8h"])), "project");
                     } finally {
-                        M(!1);
+                        X(!1);
                     }
-                }, [T, ec, f, p, c, x, eg, l, ep, er, ed, r, e, eo, X, q, en]);
+                }, [N, ec, f, p, c, x, eg, l, ep, eu, ed, r, e, eo, O, q, en]);
             return {
                 fields: (0, n.jsxs)(C.B, {
                     gap: 20,
@@ -187,39 +187,39 @@ function Q(e) {
                             onIconChange: (e) => {
                                 (g.setIcon(e), $(null));
                             },
-                            name: H,
+                            name: D,
                             nameError: z,
                             onNameChange: ef,
                             description: g.description,
                             onDescriptionChange: (e) => {
                                 (g.setDescription(e), $(null));
                             },
-                            disabled: X,
+                            disabled: O,
                         }),
                         ei
                             ? (0, n.jsx)(k.d, {
-                                  label: U.intl.string(J.default.gchQFO),
-                                  description: U.intl.string(J.default.mD4GBH),
-                                  checked: eu,
-                                  disabled: X,
-                                  onChange: (e) => eh(Z.Zh.SHAREABLE, e),
+                                  label: J.intl.string(G.default.ujIxRm),
+                                  description: J.intl.string(G.default.gT8zk1),
+                                  checked: er,
+                                  disabled: O,
+                                  onChange: (e) => eh(T.Zh.PUBLIC, e),
                               })
                             : null,
                         ei && ea
                             ? (0, n.jsx)(k.d, {
-                                  label: U.intl.string(J.default.lVvR4E),
-                                  description: U.intl.string(J.default.SQZGoV),
-                                  checked: er,
-                                  disabled: X,
-                                  onChange: (e) => eh(Z.Zh.PUBLIC, e),
+                                  label: J.intl.string(G.default.lVvR4E),
+                                  description: J.intl.string(G.default.SQZGoV),
+                                  checked: eu,
+                                  disabled: O,
+                                  onChange: (e) => eh(T.Zh.GUILD_COLLABORATION, e),
                               })
                             : null,
                         d.available
                             ? (0, n.jsx)(k.d, {
-                                  label: U.intl.string(J.default.eEo0ye),
+                                  label: J.intl.string(G.default.eEo0ye),
                                   description: d.description,
                                   checked: d.checked,
-                                  disabled: X,
+                                  disabled: O,
                                   onChange: (e) => {
                                       (d.setChecked(e), $(null));
                                   },
@@ -232,43 +232,43 @@ function Q(e) {
                                       (0, n.jsx)(o.E, {
                                           variant: "text-sm/normal",
                                           color: "text-subtle",
-                                          children: U.intl.string(J.default["9MdtK9"]),
+                                          children: J.intl.string(G.default["9MdtK9"]),
                                       }),
                                       (0, n.jsx)(y.Z, {
                                           selectionMode: "multiple",
-                                          label: U.intl.string(J.default["pO3+p5"]),
-                                          placeholder: U.intl.string(J.default.gvL7QS),
+                                          label: J.intl.string(G.default["pO3+p5"]),
+                                          placeholder: J.intl.string(G.default.gvL7QS),
                                           value: q,
                                           options: u,
                                           maxOptionsVisible: 6,
                                           wrapTags: !0,
-                                          disabled: X || !er,
-                                          "aria-invalid": null != O,
-                                          "aria-errormessage": null != O ? et : void 0,
+                                          disabled: O || !eu,
+                                          "aria-invalid": null != K,
+                                          "aria-errormessage": null != K ? et : void 0,
                                           onSelectionChange: ex,
                                       }),
                                       (0, n.jsx)(o.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
-                                          children: U.intl.formatToPlainString(J.default.g5I05P, {
+                                          children: J.intl.formatToPlainString(G.default.g5I05P, {
                                               count: q.length,
-                                              max: Z.sq,
+                                              max: T.sq,
                                           }),
                                       }),
-                                      er
+                                      eu
                                           ? null
                                           : (0, n.jsx)(o.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
-                                                children: U.intl.string(J.default.nZw5r9),
+                                                children: J.intl.string(G.default.nZw5r9),
                                             }),
-                                      null != O
+                                      null != K
                                           ? (0, n.jsx)(o.E, {
                                                 id: et,
                                                 variant: "text-xs/normal",
                                                 color: "text-feedback-critical",
                                                 role: "alert",
-                                                children: O,
+                                                children: K,
                                             })
                                           : null,
                                   ],
@@ -288,10 +288,10 @@ function Q(e) {
                     gap: 20,
                     children: [
                         (0, n.jsx)(k.d, {
-                            label: U.intl.string(J.default["4liZ45"]),
-                            description: U.intl.string(J.default.I5cl7p),
+                            label: J.intl.string(G.default["4liZ45"]),
+                            description: J.intl.string(G.default.I5cl7p),
                             checked: h.checked,
-                            disabled: X,
+                            disabled: O,
                             onChange: (e) => {
                                 (h.setChecked(e), el(null));
                             },
@@ -307,7 +307,7 @@ function Q(e) {
                     ],
                 }),
                 canSave: ep && "" !== en,
-                saving: X,
+                saving: O,
                 nameChanged: ed,
                 submit: em,
             };
@@ -316,15 +316,15 @@ function Q(e) {
     return (0, n.jsx)(v.A, {
         projectId: l,
         scopeKeys: m,
-        note: Q,
-        notifyAgent: V,
+        note: V,
+        notifyAgent: Q,
         isPreview: q,
         children: (e) => {
             let t = [];
             (W && t.push("project"),
                 e.loaded && (e.valueCount > 0 || 0 === e.secretCount) && t.push("app"),
                 e.secretCount > 0 && t.push("secrets"),
-                K?.tierSettings != null && t.push("model"),
+                M?.tierSettings != null && t.push("model"),
                 W && t.push("experimental"));
             let i = [$, x].find((e) => null != e && t.includes(e)) ?? t[0],
                 a = e.isScoped,
@@ -336,32 +336,32 @@ function Q(e) {
                     [u, d] = await Promise.all([a ? null : Y.submit(), e.submit()]);
                 if (null == u && d) {
                     let e;
-                    (await M(),
+                    (await X(),
                         r &&
-                            null != N &&
+                            null != H &&
                             null != (e = b.Ay.getProject(l)) &&
                             (0, S.qF)(e) &&
                             (j.A.getPublishStatus(l)?.state ?? "unpublished") !== "unpublished" &&
                             (0, s.A)({
-                                title: U.intl.string(J.default["48pvCR"]),
-                                subtitle: U.intl.string(J.default["Xk+JsJ"]),
-                                confirmText: U.intl.string(J.default.guoHDk),
-                                cancelText: U.intl.string(J.default.HSyPrY),
+                                title: J.intl.string(G.default["48pvCR"]),
+                                subtitle: J.intl.string(G.default["Xk+JsJ"]),
+                                confirmText: J.intl.string(G.default.guoHDk),
+                                cancelText: J.intl.string(G.default.HSyPrY),
                                 variant: "primary",
                                 onConfirm: () => {
-                                    (0, S.FZ)(l, "name_prompt", N).catch(() => {});
+                                    (0, S.FZ)(l, "name_prompt", H).catch(() => {});
                                 },
                             }));
                     return;
                 }
                 null != u ? ee(u) : "secrets" !== i && ee(t.includes("app") ? "app" : "secrets");
             }
-            let v = U.intl.string(a ? J.default["jZjP+I"] : J.default.I2XSKe);
+            let v = J.intl.string(a ? G.default["jZjP+I"] : G.default.I2XSKe);
             return (0, n.jsx)("form", {
                 onSubmit: m,
                 children: (0, n.jsxs)(r.d, {
-                    transitionState: X,
-                    onClose: M,
+                    transitionState: O,
+                    onClose: X,
                     "aria-label": v,
                     size: "lg",
                     children: [
@@ -374,36 +374,36 @@ function Q(e) {
                                           selectedItem: i,
                                           type: "top",
                                           onItemSelect: (e) => ee(e),
-                                          "aria-label": U.intl.string(J.default["2dtUiI"]),
+                                          "aria-label": J.intl.string(G.default["2dtUiI"]),
                                           children: t.map((e) =>
-                                              (0, n.jsx)(c.V.Item, { id: e, children: U.intl.string(H[e]) }, e),
+                                              (0, n.jsx)(c.V.Item, { id: e, children: J.intl.string(D[e]) }, e),
                                           ),
                                       }),
                             children: [
                                 a || "app" === i ? e.fields : null,
-                                a || "project" !== i ? null : (0, n.jsx)("div", { className: D.f, children: Y.fields }),
+                                a || "project" !== i ? null : (0, n.jsx)("div", { className: B.f, children: Y.fields }),
                                 a || "experimental" !== i ? null : Y.experimentalFields,
                                 a || "secrets" !== i ? null : e.secretFields,
-                                a || "model" !== i || K?.tierSettings == null
+                                a || "model" !== i || M?.tierSettings == null
                                     ? null
-                                    : (0, n.jsx)(T, { projectId: l, modelSettings: K, tierSettings: K.tierSettings }),
+                                    : (0, n.jsx)(N, { projectId: l, modelSettings: M, tierSettings: M.tierSettings }),
                                 a || null != i
                                     ? null
-                                    : O
+                                    : K
                                       ? (0, n.jsx)(o.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: U.intl.string(J.default.lJJayk),
+                                            children: J.intl.string(G.default.lJJayk),
                                         })
-                                      : (0, n.jsx)("div", { className: D.L, children: (0, n.jsx)(g.y, {}) }),
+                                      : (0, n.jsx)("div", { className: B.L, children: (0, n.jsx)(g.y, {}) }),
                             ],
                         }),
                         (0, n.jsx)(p.H, {
                             actionsFullWidth: !0,
                             actions: [
-                                { text: U.intl.string(U.t["ETE/oC"]), variant: "secondary", onClick: M, disabled: f },
+                                { text: J.intl.string(J.t["ETE/oC"]), variant: "secondary", onClick: X, disabled: f },
                                 {
-                                    text: U.intl.string(a ? J.default.A7dQd9 : U.t["R3BPH+"]),
+                                    text: J.intl.string(a ? G.default.A7dQd9 : J.t["R3BPH+"]),
                                     variant: "primary",
                                     type: "submit",
                                     loading: f,
@@ -417,7 +417,7 @@ function Q(e) {
         },
     });
 }
-function T(e) {
+function N(e) {
     let { projectId: l, modelSettings: t, tierSettings: s } = e,
         r = (0, a.bG)([f.default], () => "open" === f.default.getConnState(l), [l]),
         u = i.useCallback((e) => (0, x.X)(l, e), [l]),

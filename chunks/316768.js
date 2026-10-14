@@ -28,39 +28,39 @@ var t = e(477900),
     P = e(660183);
 function v(n, l, e) {
     var v;
-    let T,
+    let L,
+        T,
         B,
-        L,
         M,
         F,
         S = (0, f.w$)(n, e),
         m =
             ((v = S ? n : null),
-            (B = null != (T = (0, f.us)(v))),
-            (L = v?.guild_id ?? null),
+            (T = null != (L = (0, f.us)(v))),
+            (B = v?.guild_id ?? null),
             (M = (0, c.bG)(
                 [h.A, C.A],
                 () => {
-                    let n = null != L ? h.A.getGuild(L) : null;
+                    let n = null != B ? h.A.getGuild(B) : null;
                     return null != n && C.A.can(D.xBc.MANAGE_GUILD, n);
                 },
-                [L],
+                [B],
             )),
-            (F = (0, c.yK)([_.Ay], () => (null != L ? (_.Ay.getSelfMember(L)?.roles ?? []) : []), [L])),
+            (F = (0, c.yK)([_.Ay], () => (null != B ? (_.Ay.getSelfMember(B)?.roles ?? []) : []), [B])),
             i.useEffect(() => {
-                B && null != T && (0, x.hF)(L ?? void 0);
-            }, [B, T, L, M, F]),
+                T && null != L && (0, x.hF)(B ?? void 0);
+            }, [T, L, B, M, F]),
             (0, c.bG)(
                 [p.Ay],
                 () => {
-                    if (null == T) return null;
-                    let n = p.Ay.findProjectByApplicationId(T);
+                    if (null == L) return null;
+                    let n = p.Ay.findProjectByApplicationId(L);
                     if (null == n || (0, p.PV)(n)) return n;
-                    let l = null != L ? b.default.castGuildIdAsEveryoneGuildRoleId(L) : null,
+                    let l = null != B ? b.default.castGuildIdAsEveryoneGuildRoleId(B) : null,
                         e = (n.collaborator_role_ids ?? []).some((n) => n === l || F.includes(n));
-                    return n.guild_id === L && (0, E.XE)(n) && (M || e) ? n : null;
+                    return n.guild_id === B && (0, E.pL)(n) && (M || e) ? n : null;
                 },
-                [T, M, F, L],
+                [L, M, F, B],
             )),
         O = m?.id ?? null,
         k = n.guild_id ?? null;
