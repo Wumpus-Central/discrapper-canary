@@ -1,24 +1,3 @@
-.selectButton_ac381c {
-    border: 1px solid var(--user-profile-border);
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    display: inline-flex;
-    padding: 2px;
-    padding-inline-start: var(--space-4);
-    transition: background 50ms ease-in
-}
-
-.selectButton_ac381c.isPlaceholder_ac381c {
-    padding-inline-start: 6px
-}
-
-.selectButton_ac381c:focus-visible,
-.selectButton_ac381c:hover,
-.selectButton_ac381c[aria-expanded=true] {
-    background: var(--user-profile-background-hover);
-    transition: background .15s ease-out
-}
-
 .selectButtonPill_ac381c {
     align-items: center;
     background: var(--background-mod-subtle);
@@ -73,8 +52,7 @@
     margin-inline-start: 2px
 }
 
-.selectButtonPill_ac381c[aria-expanded=true] .selectButtonChevron_ac381c,
-.selectButton_ac381c[aria-expanded=true] .selectButtonChevron_ac381c {
+.selectButtonPill_ac381c[aria-expanded=true] .selectButtonChevron_ac381c {
     transform: rotate(180deg)
 }
 
@@ -129,7 +107,6 @@
     padding: 0
 }
 
-.enable-forced-colors .selectButton_ac381c,
 .enable-forced-colors .selectButtonPill_ac381c {
     border: 1px solid ButtonText
 }
@@ -648,4 +625,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=0f245f636a3a5b49.css.map*/
+/*# sourceMappingURL=96ee09de752e7ff4.css.map*/
