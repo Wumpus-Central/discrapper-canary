@@ -3429,7 +3429,7 @@ class tg extends m.A {
             (0, eh.isWeb)() &&
                 B.getConfig({ location: "RTCConnection" }).enabled &&
                 t.push("browser_transceiver_padding_removal"),
-            (0, eh.isWeb)() && this.context === Y.x.STREAM)
+            (0, eh.isWeb)() && this.context === Y.x.STREAM && this.isStreamSender())
         ) {
             let { degradationPreference: e, motionContentHint: n } = X.getConfig({ location: "RTCConnection" });
             ("maintain-framerate" === e
@@ -4816,6 +4816,9 @@ class tg extends m.A {
         return {};
     }
     getMediaStreamKey() {}
+    isStreamSender() {
+        return !1;
+    }
     getAudioDeviceStates = () => ({
         input_device: this.getInputDeviceName(),
         input_device_count: Object.keys(el.Ay.getInputDevices()).length,

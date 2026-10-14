@@ -713,6 +713,9 @@ class j extends A.A {
     getMediaStreamKey() {
         return this.streamKey;
     }
+    isStreamSender() {
+        return this.isOwner;
+    }
     sendVideo(e, t, n, i) {
         super.sendVideo(
             e,
