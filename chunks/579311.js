@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"X2xOBn":["Tvoje aplikace se nepoda\u0159ilo na\u010D\xedst. Zkus to znovu."],"KEB4Rm":["\u017D\xe1dn\xe9"],"4S6iHa":["Na tomto serveru zat\xedm nejsou k\xa0dispozici \u017E\xe1dn\xe9 aplikace"],"TQptZV":["Tuto aplikaci se nepoda\u0159ilo naj\xedt."],"13FYwI":["Tato aplikace nem\u016F\u017Ee b\u011B\u017Eet v\xa0hlasov\xe9m kan\xe1lu."]}',
+    '{"ZtYyOx":["Zobrazen\xed aplikace kan\xe1lu"],"D+wwh8":["Zav\u0159\xedt aplikaci kan\xe1lu"],"X2xOBn":["Tvoje aplikace se nepoda\u0159ilo na\u010D\xedst. Zkus to znovu."],"KEB4Rm":["\u017D\xe1dn\xe9"],"4S6iHa":["Na tomto serveru zat\xedm nejsou k\xa0dispozici \u017E\xe1dn\xe9 aplikace"],"TQptZV":["Tuto aplikaci se nepoda\u0159ilo naj\xedt."],"wKSjL/":["Tato aplikace se otev\u0159e jako sou\u010D\xe1st hlasov\xe9ho kan\xe1lu, kdy\u017E se lid\xe9 p\u0159idaj\xed."],"AdT7SZ":["Aplikace kan\xe1lu"],"13FYwI":["Tato aplikace nem\u016F\u017Ee b\u011B\u017Eet v\xa0hlasov\xe9m kan\xe1lu."]}',
 );
