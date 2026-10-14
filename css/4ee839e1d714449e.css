@@ -36,36 +36,11 @@
 }
 
 .rank__86e10 {
-    align-items: center;
-    display: flex;
     flex-shrink: 0;
-    height: var(--space-32);
-    justify-content: center;
-    width: var(--space-24)
+    height: var(--space-32)
 }
 
-.rankFirst__86e10 {
-    background-image: url(/assets/04e856bcc7f2a4e9.svg)
-}
-
-.rankFirst__86e10,
-.rankSecond__86e10 {
-    background-size: cover;
-    height: var(--space-24);
-    width: var(--space-24)
-}
-
-.rankSecond__86e10 {
-    background-image: url(/assets/d6bae03b4c2a4616.svg)
-}
-
-.rankThird__86e10 {
-    background-image: url(/assets/e4e7a103decb1955.svg);
-    background-size: cover;
-    height: var(--space-24);
-    width: var(--space-24)
-}
-
+.rank__86e10,
 .rankNumber__86e10 {
     align-items: center;
     display: flex;
@@ -193,21 +168,6 @@
     inset-inline-end: calc(var(--space-4)*-1);
     position: absolute;
     width: var(--space-24)
-}
-
-.medalBadge_c6c010.medalFirst_c6c010 {
-    background-image: url(/assets/04e856bcc7f2a4e9.svg);
-    background-size: cover
-}
-
-.medalBadge_c6c010.medalSecond_c6c010 {
-    background-image: url(/assets/d6bae03b4c2a4616.svg);
-    background-size: cover
-}
-
-.medalBadge_c6c010.medalThird_c6c010 {
-    background-image: url(/assets/e4e7a103decb1955.svg);
-    background-size: cover
 }
 
 .pillar_c6c010 {
@@ -431,4 +391,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=e543e8bbde801b7b.css.map*/
+/*# sourceMappingURL=4ee839e1d714449e.css.map*/
