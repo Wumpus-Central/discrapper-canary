@@ -1,4 +1,4 @@
-(n.d(t, { A: () => R }), n(323874), n(14289), n(35956));
+(n.d(t, { A: () => L }), n(323874), n(14289), n(35956));
 var i = n(477450),
     r = n.n(i),
     a = n(435558),
@@ -37,33 +37,43 @@ function T(e) {
     return null != e && (u.test(e) || (t && I.has(e.toLowerCase())));
 }
 function m(e) {
-    return null != e && "discord:" === e;
+    let t = (0, o.fb)();
+    return null != t && e === `media--${t}`;
 }
 function g(e) {
+    return null != e && "discord:" === e;
+}
+function S(e) {
+    var t;
+    let n;
     if (null == e) return !1;
-    let t = d.A.toURLSafe(e);
+    let i = d.A.toURLSafe(e);
     return (
-        null != t &&
-        ((!!(0, o.iT)() && ("localhost" === t.hostname || "127.0.0.1" === t.hostname)) ||
-            t.hostname === window.GLOBAL_ENV.CDN_HOST ||
-            _.test(t.hostname))
+        null != i &&
+        ((!!(0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname)) ||
+            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || m(t)))) ||
+            i.hostname === window.GLOBAL_ENV.CDN_HOST ||
+            _.test(i.hostname))
     );
 }
-function S(e, t, n) {
+function N(e, t, n) {
     if (!p(t, n) || null == e) return !1;
     let i = d.A.toURLSafe(e);
     return (
         null != i &&
-        ((!!(0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
+        (!!(
+            ((0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
+            ((0, o.iT)() && m(i.hostname))
+        ) ||
             E.test(i.hostname))
     );
 }
-function N(e) {
+function C(e) {
     if (null == e) return !1;
     let t = d.A.toURLSafe(e);
     return null != t && A.has(t.hostname);
 }
-function C(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null != e) {
         let n = d.A.toURLSafe(e)?.hostname;
@@ -71,10 +81,10 @@ function C(e) {
     }
     return !1;
 }
-function O(e) {
-    return null != e && m(l.parse(e).protocol);
+function R(e) {
+    return null != e && g(l.parse(e).protocol);
 }
-let R = {
+let L = {
     URL_REGEX: f,
     makeUrl: function (e, t) {
         let n = (t ?? (0, o.m6)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
@@ -85,19 +95,19 @@ let R = {
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: m,
-    isDiscordUrl: C,
-    isDiscordUri: O,
+    isDiscordProtocol: g,
+    isDiscordUrl: O,
+    isDiscordUri: R,
     isDiscordCdnUrl: function (e) {
         return null != e && l.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
-    isDiscordDirectAssetUrl: g,
-    isDiscordProxiedAssetUrl: S,
-    isAllowedGifProviderUrl: N,
+    isDiscordDirectAssetUrl: S,
+    isDiscordProxiedAssetUrl: N,
+    isAllowedGifProviderUrl: C,
     isDiscordAssetUrl: function (e, t, n) {
-        return !!(g(e) || S(e, t, n) || N(e));
+        return !!(S(e) || N(e, t, n) || C(e));
     },
-    isDiscordUrlOrUri: (e) => C(e) || O(e),
+    isDiscordUrlOrUri: (e) => O(e) || R(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
         return (

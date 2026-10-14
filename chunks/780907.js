@@ -30,7 +30,7 @@ var i = n(488428),
     b = n(652215),
     M = n(818023),
     P = n(165610);
-let U = window.GLOBAL_ENV.CDN_HOST;
+let U = (0, n(403362).iT)() ? void 0 : window.GLOBAL_ENV.CDN_HOST;
 function w(e, t) {
     return null != U ? `https://${U}${e}` : t;
 }
