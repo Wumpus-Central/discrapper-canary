@@ -1,4 +1,4 @@
-n.d(t, { Zt: () => eP, yo: () => eT });
+n.d(t, { Zt: () => eS, yo: () => eT });
 var l,
     i,
     r = n(477900),
@@ -57,14 +57,14 @@ function C(e) {
         source: r ?? void 0,
     });
 }
-var S =
+var P =
         (((i = {})[(i.SHOP = 1)] = "SHOP"),
         (i[(i.QUEST = 2)] = "QUEST"),
         (i[(i.PREMIUM_PROMOTION = 3)] = "PREMIUM_PROMOTION"),
         (i[(i.REWARD = 4)] = "REWARD"),
         (i[(i.INTERNAL = 5)] = "INTERNAL"),
         i),
-    P = n(38405),
+    S = n(38405),
     M = n(503698),
     T = n.n(M),
     k = n(834730),
@@ -142,7 +142,8 @@ function V(e) {
         ],
     });
 }
-function W(e, t) {
+var W = n(701974);
+function K(e, t) {
     return (
         e.length === t.length &&
         e.every(
@@ -154,39 +155,38 @@ function W(e, t) {
     );
 }
 var B = n(708645),
-    K = n(554146),
-    Q = n(131607),
-    q = n(43105),
-    Y = n(844222),
-    H = n(403581),
-    z = n(626584),
-    X = n(531685),
-    $ = n(49999),
-    Z = n(701974),
+    Q = n(554146),
+    q = n(131607),
+    Y = n(43105),
+    H = n(844222),
+    z = n(403581),
+    X = n(626584),
+    $ = n(531685),
+    Z = n(49999),
     J = n(78294);
-let ee = new z.A("TryDisplayNameStyleMarketingPopover");
+let ee = new X.A("TryDisplayNameStyleMarketingPopover");
 function et(e) {
     let { markAsDismissed: t, targetElementRef: n, onDismissibleContentClick: l } = e,
         i = o.useRef(null),
-        s = (0, p.bG)([X.A], () => X.A.isFocused()),
-        { reducedMotion: a } = o.useContext(Y.C);
+        s = (0, p.bG)([$.A], () => $.A.isFocused()),
+        { reducedMotion: a } = o.useContext(H.C);
     return (
         o.useEffect(() => {
             null != i.current && (!a.enabled && s ? i.current.play().catch(ee.error) : i.current.pause());
         }, [s, a.enabled]),
-        (0, r.jsx)(q.A, {
+        (0, r.jsx)(Y.A, {
             graphic: { type: "video", ref: i, src: J.A, aspectRatio: "21/9", loop: !0 },
             gradientColor: "nitro-pink",
-            title: G.intl.string(Z.default.t8z5gn),
+            title: G.intl.string(W.default.t8z5gn),
             size: "lg",
-            body: G.intl.string(Z.default.ajHWbZ),
+            body: G.intl.string(W.default.ajHWbZ),
             position: "right",
             alignmentStrategy: "edge",
             align: "top",
             caretConfig: { align: "start" },
             targetElementRef: n,
-            onRequestClose: () => t($.i.USER_DISMISS),
-            actions: [{ text: G.intl.string(Z.default["D7+kY/"]), variant: "primary", icon: H.t, onClick: l }],
+            onRequestClose: () => t(Z.i.USER_DISMISS),
+            actions: [{ text: G.intl.string(W.default["D7+kY/"]), variant: "primary", icon: z.t, onClick: l }],
         })
     );
 }
@@ -228,7 +228,7 @@ var eO = n(183555),
     ev = n(993401),
     ej = n(996988),
     eC = n(207566);
-function eS(e) {
+function eP(e) {
     var t;
     let l,
         {
@@ -256,12 +256,12 @@ function eS(e) {
             tooltipText: G.intl.string(G.t["UKOtz+"]),
             "aria-label": G.intl.string(G.t["UKOtz+"]),
         },
-        K = (0, ex.A)({
+        Q = (0, ex.A)({
             user: i,
             guildId: A,
             onAction: () => D({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: F }),
         }),
-        Q = (0, ea.A)({
+        q = (0, ea.A)({
             user: i,
             guildId: A,
             location: w,
@@ -270,7 +270,7 @@ function eS(e) {
             onIgnore: () => D({ action: "IGNORE", analyticsLocations: F }),
             onUnblock: () => D({ action: "UNBLOCK", analyticsLocations: F }),
         }),
-        q = (0, em.A)({
+        Y = (0, em.A)({
             user: i,
             guildId: A,
             location: w,
@@ -279,7 +279,7 @@ function eS(e) {
             onIgnore: () => D({ action: "IGNORE", analyticsLocations: F }),
             onUnignore: () => D({ action: "UNIGNORE", analyticsLocations: F }),
         }),
-        Y = (function (e) {
+        H = (function (e) {
             let { user: t, guildId: n, color: l, onAction: i, location: o = d.A.CONTEXT_MENU, appContext: s } = e,
                 a = e_.useExperiment({ location: o }, { autoTrackExposure: !0 }).enabled,
                 u = (0, p.bG)([_.default], () => _.default.getId() === t.id);
@@ -299,7 +299,7 @@ function eS(e) {
             color: "danger",
             onAction: () => D({ action: "REPORT", analyticsLocations: F }),
         }),
-        z = (function (e) {
+        X = (function (e) {
             let { user: t, guildId: n, color: l, onAction: i, appContext: o } = e,
                 s = (0, p.bG)([eI.Ay], () => eI.Ay.get("iar_testing")),
                 a = (0, p.bG)([g.default], () => g.default.getCurrentUser());
@@ -319,7 +319,7 @@ function eS(e) {
             color: "danger",
             onAction: () => D({ action: "REPORT", analyticsLocations: F }),
         }),
-        X = (function (e) {
+        $ = (function (e) {
             let { user: t, guildId: n, onSuccess: l } = e,
                 i = (0, E.Ay)(t.id, n ?? void 0),
                 s = eE.Q_.useSetting(),
@@ -377,7 +377,7 @@ function eS(e) {
                     : d
                 : null;
         })({ user: i, guildId: A, onSuccess: (e) => D({ action: e, analyticsLocations: F }) }),
-        $ = (function (e, t, n) {
+        Z = (function (e, t, n) {
             let l = (0, p.bG)([_.default], () => _.default.getId() === e.id),
                 i = x(e.id, t),
                 { analyticsLocations: o } = (0, f.Ay)(d.A.USER_PROFILE_OVERFLOW_MENU),
@@ -394,71 +394,71 @@ function eS(e) {
                                 isShoppableItem:
                                     null != t &&
                                     ("function" != typeof t.isAvailable
-                                        ? (P.A.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", {
+                                        ? (S.A.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", {
                                               extra: { skuId: t.id, skuType: t.type },
                                           }),
                                           !1)
-                                        : t.isAvailable() && t.tenantMetadata?.collectibles?.sourceType === S.SHOP),
+                                        : t.isAvailable() && t.tenantMetadata?.collectibles?.sourceType === P.SHOP),
                                 productType: t?.tenantMetadata?.collectibles?.type,
                             };
                         }),
                     [i],
-                    W,
+                    K,
                 ),
                 u = i.length > 0 || null != s;
-            return l || !u
-                ? null
-                : (0, r.jsxs)(c.Dr, {
-                      id: "shop-this-look",
-                      label: G.intl.string(G.t.xNdRDO),
-                      children: [
-                          s,
-                          (0, r.jsx)(c.rX, {
-                              children: a.map((e) => {
-                                  let { skuId: t, isShoppableItem: l, productType: i } = e;
-                                  return (0, r.jsx)(
-                                      c.Dr,
-                                      {
-                                          id: `shop-this-look-${t}`,
-                                          navigable: l,
-                                          disabled: !l,
-                                          keepItemStyles: l,
-                                          render: (e) => {
-                                              let { disabled: l } = e;
-                                              return (0, r.jsx)(V, { skuId: t, disabled: l, source: n });
-                                          },
-                                          action: l
-                                              ? () => {
-                                                    (C({
-                                                        action: j.ROW_CLICKED,
-                                                        skuId: t,
-                                                        productType: i,
-                                                        isDisabled: !1,
-                                                        source: n,
-                                                    }),
-                                                        (0, O.B)({
-                                                            skuId: t,
-                                                            analyticsLocations: o,
-                                                            analyticsSource: d.A.USER_PROFILE_OVERFLOW_MENU,
-                                                        }));
-                                                }
-                                              : void 0,
-                                      },
-                                      t,
-                                  );
-                              }),
-                          }),
-                      ],
-                  });
+            if (l || !u) return null;
+            let R = null != s ? G.intl.string(W.default["2PKrQO"]) : G.intl.string(G.t.xNdRDO);
+            return (0, r.jsxs)(c.Dr, {
+                id: "shop-this-look",
+                label: R,
+                children: [
+                    s,
+                    (0, r.jsx)(c.rX, {
+                        children: a.map((e) => {
+                            let { skuId: t, isShoppableItem: l, productType: i } = e;
+                            return (0, r.jsx)(
+                                c.Dr,
+                                {
+                                    id: `shop-this-look-${t}`,
+                                    navigable: l,
+                                    disabled: !l,
+                                    keepItemStyles: l,
+                                    render: (e) => {
+                                        let { disabled: l } = e;
+                                        return (0, r.jsx)(V, { skuId: t, disabled: l, source: n });
+                                    },
+                                    action: l
+                                        ? () => {
+                                              (C({
+                                                  action: j.ROW_CLICKED,
+                                                  skuId: t,
+                                                  productType: i,
+                                                  isDisabled: !1,
+                                                  source: n,
+                                              }),
+                                                  (0, O.B)({
+                                                      skuId: t,
+                                                      analyticsLocations: o,
+                                                      analyticsSource: d.A.USER_PROFILE_OVERFLOW_MENU,
+                                                  }));
+                                          }
+                                        : void 0,
+                                },
+                                t,
+                            );
+                        }),
+                    }),
+                ],
+            });
         })(i, A, U),
-        Z = (0, I.p7)(i, A),
-        J = [
+        J = (0, I.p7)(i, A),
+        ee = [
             [
                 m,
                 (0, eh.A)({ user: i, location: "UserProfileOverflowMenuButton" }),
+                J,
                 Z,
-                $,
-                K,
+                Q,
                 (function (e) {
                     let { user: t } = e,
                         l = (function (e) {
@@ -498,17 +498,17 @@ function eS(e) {
                         ? (0, r.jsx)(c.Dr, {
                               id: "referral-profile-share-nitro",
                               label: G.intl.string(G.t.JSSBzo),
-                              iconLeft: H.t,
-                              leadingAccessory: { type: "icon", icon: H.t, size: "sm" },
+                              iconLeft: z.t,
+                              leadingAccessory: { type: "icon", icon: z.t, size: "sm" },
                               action: s,
                           })
                         : null;
                 })({ user: i }),
             ],
-            [q, Q, Y, z],
-            [X],
+            [Y, q, H, X],
+            [$],
         ];
-    return J.every((e) => e.every((e) => null == e))
+    return ee.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(f.f5, {
               value: F,
@@ -525,20 +525,20 @@ function eS(e) {
                           onSelect: void 0,
                           onClose: t,
                           "aria-label": G.intl.string(G.t.AXIHpV),
-                          children: J.map((e, t) => (0, r.jsx)(c.rX, { children: e.map((e) => e) }, t)),
+                          children: ee.map((e, t) => (0, r.jsx)(c.rX, { children: e.map((e) => e) }, t)),
                       });
                   },
                   children: (e) => L({ ...e, ...B }),
               }),
           });
 }
-function eP(e) {
+function eS(e) {
     let t = o.useRef(null);
     return (0, r.jsx)(B.ZQ, {
         user: e.user,
         guildId: e.guildId,
         location: "UserProfileOverflowMenuIconButton",
-        children: (0, r.jsx)(eS, {
+        children: (0, r.jsx)(eP, {
             ...e,
             popoutTargetRef: t,
             children: (e) => (0, r.jsx)(ev.q3, { buttonRef: t, ...e }),
@@ -550,19 +550,19 @@ function eM(e) {
         { themeType: n } = (0, eN.E)(),
         l = n === ej.d.POPOUT,
         { isVisible: i, markAsDismissed: s } = (function (e) {
-            let [t, n] = (0, Q.kn)(e ? [K.M.DISPLAY_NAME_STYLES_TRY_COACHMARK] : []);
+            let [t, n] = (0, q.kn)(e ? [Q.M.DISPLAY_NAME_STYLES_TRY_COACHMARK] : []);
             return { isVisible: null != t, markAsDismissed: n };
         })((0, B.sn)() && l),
         [a, u] = o.useState(!1),
         c = o.useCallback(() => {
-            (u(!0), s($.i.TAKE_ACTION));
+            (u(!0), s(Z.i.TAKE_ACTION));
         }, [s]);
     return (0, r.jsxs)("div", {
         className: eC.g2,
         children: [
             (0, r.jsx)("div", {
                 className: i ? eC.t8 : void 0,
-                children: (0, r.jsx)(eS, {
+                children: (0, r.jsx)(eP, {
                     ...e,
                     popoutTargetRef: t,
                     shouldShow: l ? a : void 0,

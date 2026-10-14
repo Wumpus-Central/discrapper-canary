@@ -1,4 +1,4 @@
-n.d(t, { gE: () => U, p7: () => w, n8: () => L });
+n.d(t, { gE: () => U, p7: () => b, n8: () => w });
 var l = n(477900),
     r = n(582128),
     a = n(17928),
@@ -15,11 +15,11 @@ var l = n(477900),
     x = n(661531),
     p = n(913563),
     _ = n(898985),
-    A = n(660184),
+    g = n(660184),
     h = n(701974),
     v = n(660183),
     j = n(547961);
-function g(e) {
+function A(e) {
     let { displayNameStyles: t } = e,
         { name: n } = (0, _._)(t.effectId),
         r = v.intl.string((0, p.A)(t.fontId));
@@ -29,7 +29,7 @@ function g(e) {
             (0, l.jsx)("div", {
                 className: j.Vs,
                 "aria-hidden": !0,
-                children: (0, l.jsx)(A.A, { userName: "Gg", displayNameStyles: t, textVariant: "text-lg/semibold" }),
+                children: (0, l.jsx)(g.A, { userName: "Gg", displayNameStyles: t, textVariant: "text-lg/semibold" }),
             }),
             (0, l.jsxs)("div", {
                 className: j.Qq,
@@ -55,23 +55,23 @@ function g(e) {
         ],
     });
 }
-var F = n(62010),
-    O = n(32014);
-function M() {
+var M = n(62010),
+    N = n(32014);
+function F() {
     return (0, l.jsxs)("div", {
-        className: O.w,
+        className: N.w,
         children: [
             (0, l.jsx)(E.E, {
                 variant: "text-sm/medium",
                 color: "text-muted",
-                children: v.intl.string(h.default.oAYuZw),
+                children: v.intl.string(h.default.NJLgMs),
             }),
-            (0, l.jsx)(F.E, { type: "beta", variant: "primary" }),
+            (0, l.jsx)(M.E, { type: "beta", variant: "primary" }),
         ],
     });
 }
-var N = n(259065);
-function b(e, t, n) {
+var L = n(259065);
+function O(e, t, n) {
     let l = (0, m.uh)(),
         i = (0, f.A)({ userId: e.id, guildId: t }),
         { analyticsLocations: s } = (0, u.Ay)(n),
@@ -81,16 +81,16 @@ function b(e, t, n) {
         E && null != d && (0, c.A)(d, void 0, { waitForRefetch: !1 }).catch(() => {});
     }, [E, d]);
     let x = r.useCallback(() => {
-        null != i && (0, N.L)({ analyticsLocations: s, tryOnDisplayNameStyles: i, tryOnStyleOwner: e });
+        null != i && (0, L.L)({ analyticsLocations: s, tryOnDisplayNameStyles: i, tryOnStyleOwner: e });
     }, [s, i, e]);
     return { placement: l, tryOnDisplayNameStyles: i, openTryOnEditor: x };
 }
-function w(e, t) {
-    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: a } = b(e, t, d.A.USER_PROFILE_OVERFLOW_MENU);
+function b(e, t) {
+    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: a } = O(e, t, d.A.USER_PROFILE_OVERFLOW_MENU);
     return (0, y.rA)(n, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
         ? (0, l.jsx)(i.Dr, {
               id: "try-display-name-style",
-              label: v.intl.string(h.default.oAYuZw),
+              label: v.intl.string(h.default.NJLgMs),
               badge: { type: "beta", variant: "primary" },
               leadingAccessory: { type: "icon", icon: s.t },
               action: a,
@@ -98,31 +98,31 @@ function w(e, t) {
         : null;
 }
 function U(e, t) {
-    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: a } = b(e, t, []);
+    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: a } = O(e, t, []);
     return (0, y.rA)(n, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
         ? (0, l.jsx)(i.Dr, {
               id: "try-display-name-style",
-              label: v.intl.string(h.default.oAYuZw),
+              label: v.intl.string(h.default.NJLgMs),
               leadingAccessory: { type: "icon", icon: s.t },
               action: a,
           })
         : null;
 }
-function L(e, t) {
-    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: a } = b(e, t, d.A.USER_PROFILE_OVERFLOW_MENU);
+function w(e, t) {
+    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: a } = O(e, t, d.A.USER_PROFILE_OVERFLOW_MENU);
     return (0, y.rA)(n, y.yw.SUBMENU) && null != r
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(i.Dr, {
                       id: "try-display-name-style-header",
                       navigable: !1,
-                      render: () => (0, l.jsx)(M, {}),
+                      render: () => (0, l.jsx)(F, {}),
                   }),
                   (0, l.jsx)(i.Dr, {
                       id: "try-display-name-style-row",
                       navigable: !0,
                       keepItemStyles: !0,
-                      render: () => (0, l.jsx)(g, { displayNameStyles: r }),
+                      render: () => (0, l.jsx)(A, { displayNameStyles: r }),
                       action: a,
                   }),
               ],
