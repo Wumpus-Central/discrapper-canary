@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 637239, Version Hash: d0706babc2cda5c68aee202f7511f106b0087e0f`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 637258, Version Hash: 026f270cbac5f3932f5f61aad24fb55d406fd8d2`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -25868,7 +25868,7 @@ let ye = "isHideDevBanner",
                     className: t_()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "637239" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "637258" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -42697,80 +42697,82 @@ let G3 = ["1402418171662569542"],
                         socket: n,
                         args: { pid: i, activity: r },
                         isSocketConnected: a,
-                    } = e;
-                if (
-                    (n.authorization.scopes.has(wZ.F.RPC) ||
-                        n.authorization.scopes.has(wZ.F.RPC_ACTIVITIES_WRITE) ||
-                        n.authorization.scopes.has(v3.hj) ||
-                        wy(n),
-                    !G6.includes(n.transport))
-                )
+                    } = e,
+                    s =
+                        !n.authorization.scopes.has(wZ.F.RPC) &&
+                        !n.authorization.scopes.has(wZ.F.RPC_ACTIVITIES_WRITE) &&
+                        !n.authorization.scopes.has(v3.hj),
+                    l = null;
+                if ((s && (l = wy(n)), !G6.includes(n.transport)))
                     throw new wm.A(
                         { errorCode: H.Lw6.INVALID_COMMAND },
                         `command not available from "${n.transport}" transport`,
                     );
                 if (null == i && v3.z4.IPC === n.transport)
                     throw new wm.A({ errorCode: H.Lw6.INVALID_COMMAND }, "nonzero pid required");
-                let s = n.application.id ?? void 0;
+                let o = n.application.id ?? void 0;
                 if (null == r)
                     return (
                         x.h.dispatch({
                             type: "LOCAL_ACTIVITY_UPDATE",
                             socketId: n.id,
                             pid: i,
-                            applicationId: s,
+                            applicationId: o,
                             activity: r,
                         }),
                         Promise.resolve(r)
                     );
-                let l = {};
-                (r.name || (r.name = n.application.name), (r.application_id = s));
-                let o = n.transport === v3.z4.POST_MESSAGE;
-                r.platform = o ? H.yTV.EMBEDDED : H.yTV.DESKTOP;
-                let d = ak.A.getApplication(s ?? void 0),
-                    c = r.instance ?? !1,
-                    u = r.party?.privacy;
+                let d = {},
+                    c = (0, sA.A)(l?.frame.surface);
+                (null != c && (0, sE.Xs)(nT.A.getChannel(c), "setActivity") && (d.channel_id = c),
+                    r.name || (r.name = n.application.name),
+                    (r.application_id = o));
+                let u = n.transport === v3.z4.POST_MESSAGE;
+                r.platform = u ? H.yTV.EMBEDDED : H.yTV.DESKTOP;
+                let _ = ak.A.getApplication(o ?? void 0),
+                    E = r.instance ?? !1,
+                    A = r.party?.privacy;
                 (delete r.instance, delete r.party?.privacy);
-                let _ = (0, G1.E)(r, c, o, null != d && (0, G2.X)(d) && o, u);
-                _ > 0 && (r.flags = _);
-                let { assets: E, party: A, secrets: h, timestamps: f, buttons: I, type: p } = r;
-                if ((null == p && (r.type = H.$pd.PLAYING), null != h)) {
+                let h = (0, G1.E)(r, E, u, null != _ && (0, G2.X)(_) && u, A);
+                h > 0 && (r.flags = h);
+                let { assets: f, party: I, secrets: p, timestamps: T, buttons: m, type: g } = r;
+                if ((null == g && (r.type = H.$pd.PLAYING), null != p)) {
                     let e = ib()
-                        .values(h)
+                        .values(p)
                         .filter((e) => !!e);
-                    if (null != A && ib().intersection(e, [A.id]).length > 0 && (null == s || !G3.includes(s)))
+                    if (null != I && ib().intersection(e, [I.id]).length > 0 && (null == o || !G3.includes(o)))
                         throw new wm.A(
                             { errorCode: H.Lw6.INVALID_ACTIVITY_SECRET },
                             "secrets cannot match the party id",
                         );
                     if (ib().uniq(e).length < e.length)
                         throw new wm.A({ errorCode: H.Lw6.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
-                    if (null != I)
+                    if (null != m)
                         throw new wm.A(
                             { errorCode: H.Lw6.INVALID_ACTIVITY_SECRET },
                             "secrets cannot currently be sent with buttons",
                         );
                 }
                 if (
-                    (null != I && ((l.button_urls = I.map((e) => e.url)), (r.buttons = I.map((e) => e.label))),
-                    (r.metadata = l),
-                    null != f)
+                    (null != m && ((d.button_urls = m.map((e) => e.url)), (r.buttons = m.map((e) => e.label))),
+                    (r.metadata = d),
+                    null != T)
                 )
-                    for (let e of Object.keys(f))
-                        Date.now().toString().length - f[e].toString().length > 2 &&
-                            (f[e] = Math.floor(f[e] * iu.A.Millis.SECOND));
-                if (null == E) t = Promise.resolve([]);
+                    for (let e of Object.keys(T))
+                        Date.now().toString().length - T[e].toString().length > 2 &&
+                            (T[e] = Math.floor(T[e] * iu.A.Millis.SECOND));
+                if (null == f) t = Promise.resolve([]);
                 else {
                     if (null == n.application || null == n.application.id) throw Error();
-                    t = (0, uj.RG)(n.application.id, [E.large_image, E.small_image, E.invite_cover_image]);
+                    t = (0, uj.RG)(n.application.id, [f.large_image, f.small_image, f.invite_cover_image]);
                 }
                 return t.then((e) => {
-                    let [t, l, o] = e;
+                    let [t, s, l] = e;
                     if (
-                        (null != E &&
-                            (null != t ? (E.large_image = t) : delete E.large_image,
-                            null != l ? (E.small_image = l) : delete E.small_image,
-                            null != o ? (E.invite_cover_image = o) : delete E.invite_cover_image),
+                        (null != f &&
+                            (null != t ? (f.large_image = t) : delete f.large_image,
+                            null != s ? (f.small_image = s) : delete f.small_image,
+                            null != l ? (f.invite_cover_image = l) : delete f.invite_cover_image),
                         !a())
                     )
                         return;
@@ -42778,12 +42780,12 @@ let G3 = ["1402418171662569542"],
                         type: "LOCAL_ACTIVITY_UPDATE",
                         socketId: n.id,
                         pid: i,
-                        applicationId: s,
+                        applicationId: o,
                         activity: r,
-                        partyPrivacy: u,
+                        partyPrivacy: A,
                     });
                     let { secrets: d, party: c } = r,
-                        _ = {
+                        u = {
                             application_id: n.application.id,
                             type: r.type,
                             name: r.name,
@@ -42797,11 +42799,11 @@ let G3 = ["1402418171662569542"],
                                 r.assets?.small_url != null,
                         };
                     return (
-                        null != d && ((_.has_match_secret = !!d.match), (_.has_join_secret = !!d.join)),
-                        null != E && (_.has_images = !!(E.large_image || E.small_image || E.invite_cover_image)),
+                        null != d && ((u.has_match_secret = !!d.match), (u.has_join_secret = !!d.join)),
+                        null != f && (u.has_images = !!(f.large_image || f.small_image || f.invite_cover_image)),
                         null != c &&
-                            ((_.party_max = null != c.size && c.size[1] > 0 ? c.size[1] : void 0), (_.party_id = c.id)),
-                        j.default.track(H.HAw.ACTIVITY_UPDATED, _),
+                            ((u.party_max = null != c.size && c.size[1] > 0 ? c.size[1] : void 0), (u.party_id = c.id)),
+                        j.default.track(H.HAw.ACTIVITY_UPDATED, u),
                         r
                     );
                 });
