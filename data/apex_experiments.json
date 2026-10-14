@@ -5682,6 +5682,22 @@
     }
   },
   {
+    "name": "2026-10-desktop-conjure-native-preview-view",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-desktop-game-perf",
     "kind": "user",
     "defaultConfig": {

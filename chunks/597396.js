@@ -1,72 +1,73 @@
-(n.d(t, { o: () => $ }), n(323874), n(14289), n(35956));
+(n.d(t, { o: () => W }), n(323874), n(14289), n(35956));
 var r = n(477900),
     u = n(582128),
     l = n(503698),
     o = n.n(l),
-    i = n(727522),
-    s = n(134559),
-    c = n(132500),
-    a = n(440454),
-    f = n(484697),
-    d = n(363195),
-    m = n(625494),
-    E = n(851907),
-    p = n(435558),
-    h = n(17928),
-    j = n(192308),
-    O = n(267102),
-    b = n(186111),
-    w = n(712687),
-    x = n(652215),
+    s = n(727522),
+    i = n(134559),
+    c = n(17928),
+    a = n(765548),
+    f = n(132500),
+    d = n(440454),
+    m = n(484697),
+    p = n(363195),
+    E = n(625494),
+    h = n(851907),
+    j = n(435558),
+    O = n(192308),
+    b = n(267102),
+    w = n(186111),
+    x = n(712687),
+    S = n(652215),
     R = n(775602);
-let S = (0, p.debounce)((e) => {
+let v = (0, j.debounce)((e) => {
         setTimeout(() => {
             e.current?.focus();
         }, 0);
     }, 50),
-    L = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-var v = n(333007),
-    A = n(866665),
-    y = n(955418),
-    M = n(533550);
-function T(e) {
-    let { iframeId: t } = e,
-        n = u.useSyncExternalStore(y.SV, y.NO);
-    if ((u.useEffect(() => () => (0, y.ny)(t), [t]), null == n || n.iframeId !== t)) return null;
-    let l = (0, f.fl)(t);
-    return null == l ? null : v.createPortal((0, r.jsx)(g, { tooltip: n, iframe: l }), l.ownerDocument.body);
-}
+    A = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
+var y = n(333007),
+    L = n(866665),
+    M = n(955418),
+    T = n(533550);
 function g(e) {
+    let { iframeId: t } = e,
+        n = u.useSyncExternalStore(M.SV, M.NO);
+    if ((u.useEffect(() => () => (0, M.ny)(t), [t]), null == n || n.iframeId !== t)) return null;
+    let l = (0, m.fl)(t);
+    return null == l ? null : y.createPortal((0, r.jsx)(I, { tooltip: n, iframe: l }), l.ownerDocument.body);
+}
+function I(e) {
     let { tooltip: t, iframe: n } = e,
         [, l] = u.useReducer((e) => e + 1, 0);
     u.useLayoutEffect(() => {
         l();
     }, []);
     let o = n.getBoundingClientRect(),
-        i = o.left + Math.min(Math.max(t.x, 0), o.width),
-        s = o.top + Math.min(Math.max(t.y, 0), o.height);
-    return (0, r.jsx)(A.m, {
+        s = o.left + Math.min(Math.max(t.x, 0), o.width),
+        i = o.top + Math.min(Math.max(t.y, 0), o.height);
+    return (0, r.jsx)(L.m, {
         text: t.text,
         keyboardShortcut: t.shortcut,
         position: t.position ?? "top",
         align: t.align ?? "center",
         forceOpen: !0,
-        positionKey: `${i},${s}`,
-        children: (0, r.jsx)("span", { className: M.Y, style: { left: i, top: s } }),
+        positionKey: `${s},${i}`,
+        children: (0, r.jsx)("span", { className: T.Y, style: { left: s, top: i } }),
     });
 }
-var I = n(673953),
-    N = n(342296),
-    P = n(777977),
-    _ = n(504115);
-function U(e) {
-    let { iframeId: t } = e,
-        n = u.useSyncExternalStore(P.$P, P.Eh);
-    if ((u.useEffect(() => () => (0, P.OR)(t), [t]), null == n || n.iframeId !== t)) return null;
-    let l = (0, f.fl)(t);
-    return null == l ? null : v.createPortal((0, r.jsx)(C, { popout: n, iframe: l }), l.ownerDocument.body);
-}
+var N = n(673953),
+    P = n(342296),
+    _ = n(777977),
+    U = n(504115);
 function C(e) {
+    let { iframeId: t } = e,
+        n = u.useSyncExternalStore(_.$P, _.Eh);
+    if ((u.useEffect(() => () => (0, _.OR)(t), [t]), null == n || n.iframeId !== t)) return null;
+    let l = (0, m.fl)(t);
+    return null == l ? null : y.createPortal((0, r.jsx)(H, { popout: n, iframe: l }), l.ownerDocument.body);
+}
+function H(e) {
     let { popout: t, iframe: n } = e,
         l = u.useRef(null),
         [, o] = u.useReducer((e) => e + 1, 0);
@@ -77,60 +78,66 @@ function C(e) {
             let e = n.ownerDocument.defaultView;
             if (null != e) return (e.addEventListener("blur", r), () => e.removeEventListener("blur", r));
             function r() {
-                n.ownerDocument.activeElement === n && (0, P.OR)(t.iframeId);
+                n.ownerDocument.activeElement === n && (0, _.OR)(t.iframeId);
             }
         }, [n, t.iframeId]));
-    let i = n.getBoundingClientRect(),
-        s = i.left + Math.min(Math.max(t.x, 0), i.width),
-        c = i.top + Math.min(Math.max(t.y, 0), i.height);
-    return (0, r.jsx)(N.A, {
+    let s = n.getBoundingClientRect(),
+        i = s.left + Math.min(Math.max(t.x, 0), s.width),
+        c = s.top + Math.min(Math.max(t.y, 0), s.height);
+    return (0, r.jsx)(P.A, {
         userId: t.userId,
         targetElementRef: l,
         shouldShow: !0,
         position: "right",
         align: "top",
-        appContext: (0, I.cH)(n),
-        positionKey: `${s},${c}`,
+        appContext: (0, N.cH)(n),
+        positionKey: `${i},${c}`,
         clickTrap: !0,
-        onRequestClose: () => (0, P.OR)(t.iframeId),
-        children: () => (0, r.jsx)("span", { ref: l, className: _.Y, style: { left: s, top: c } }),
+        onRequestClose: () => (0, _.OR)(t.iframeId),
+        children: () => (0, r.jsx)("span", { ref: l, className: U.Y, style: { left: i, top: c } }),
     });
 }
-var H = n(809685),
-    k = n(698398);
-function D(e) {
+var k = n(809685),
+    D = n(429582),
+    $ = n(698398);
+let F = "autoplay; encrypted-media";
+function G(e) {
     let {
             url: t,
             className: n,
             style: l,
             shouldRefocus: o,
-            queryParams: p,
-            allowPopups: v = !1,
-            referrerPolicy: A = "origin",
-            onLoad: M,
-            onIframeMount: g,
-            onIframeUnmount: I,
-            onGuestReload: N,
-            contextSource: _,
+            queryParams: j,
+            allowPopups: y = !1,
+            referrerPolicy: L = "origin",
+            onLoad: T,
+            onIframeMount: I,
+            onIframeUnmount: N,
+            onGuestReload: P,
+            contextSource: U,
+            nativeView: H = !1,
         } = e,
-        C = (0, E.xi)({}),
-        k = (0, i.useMemoOne)(() => (0, c.A)(), [t]),
-        D = u.useRef(null),
-        $ = (function (e, t) {
+        $ = (0, h.xi)({}),
+        G = (0, s.useMemoOne)(() => (0, f.A)(), [t]),
+        W = u.useRef(null),
+        [B, K] = u.useState(!1),
+        V = H && !B && (0, D.H9)(),
+        Y = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-                r = (0, h.bG)([R.Ay], () => R.Ay.keyboardModeEnabled),
-                l = (function () {
-                    let e = (0, j.useModalsStore)(
+                r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : t,
+                l = (0, c.bG)([R.Ay], () => R.Ay.keyboardModeEnabled),
+                o = (function () {
+                    let e = (0, O.useModalsStore)(
                             (e) =>
                                 !Object.entries(e).every((e) => {
                                     let [t, n] = e;
                                     return 0 === n.length;
                                 }),
                         ),
-                        t = (0, h.bG)([w.A], () => w.A.isOpen()),
-                        n = (0, h.bG)([b.A], () => b.A.hasLayers()),
+                        t = (0, c.bG)([x.A], () => x.A.isOpen()),
+                        n = (0, c.bG)([w.A], () => w.A.hasLayers()),
                         [r, l] = u.useState(!1),
-                        o = (0, O.aL)();
+                        o = (0, b.aL)();
                     return (
                         u.useEffect(() => {
                             function e() {
@@ -140,151 +147,192 @@ function D(e) {
                                 l(!1);
                             }
                             return (
-                                o.subscribe(x.jej.POPOUT_SHOW, e),
-                                o.subscribe(x.jej.POPOUT_HIDE, t),
+                                o.subscribe(S.jej.POPOUT_SHOW, e),
+                                o.subscribe(S.jej.POPOUT_HIDE, t),
                                 () => {
-                                    (o.unsubscribe(x.jej.POPOUT_SHOW, e), o.unsubscribe(x.jej.POPOUT_HIDE, t));
+                                    (o.unsubscribe(S.jej.POPOUT_SHOW, e), o.unsubscribe(S.jej.POPOUT_HIDE, t));
                                 }
                             );
                         }, [o]),
                         e || t || r || n
                     );
                 })(),
-                [o, i] = u.useState(!1),
-                s = (0, O.aL)();
+                [s, i] = u.useState(!1),
+                a = (0, b.aL)();
             return (
                 u.useEffect(() => {
-                    if (t) return (n.addEventListener("blur", e), () => n.removeEventListener("blur", e));
+                    if (r) return (n.addEventListener("blur", e), () => n.removeEventListener("blur", e));
                     function e() {
-                        l && (s.dispatch(x.jej.POPOUT_CLOSE), m._.dispatch(x.jej.CONTEXT_MENU_CLOSE));
+                        o && (a.dispatch(S.jej.POPOUT_CLOSE), E._.dispatch(S.jej.CONTEXT_MENU_CLOSE));
                     }
-                }, [n, l, t, s]),
+                }, [n, o, r, a]),
                 u.useEffect(() => {
-                    if (r || !o || !t) return;
-                    let { current: u } = e,
-                        i = l;
-                    function s(t) {
+                    if (l || !s || !t) return;
+                    let { current: r } = e,
+                        u = o;
+                    function i(t) {
                         let n = t.relatedTarget;
                         setTimeout(() => {
-                            (null != n && ("BUTTON" !== n.tagName || n.hasAttribute("aria-expanded"))) || i || S(e);
+                            (null != n && ("BUTTON" !== n.tagName || n.hasAttribute("aria-expanded"))) || u || v(e);
                         }, 100);
                     }
                     return (
-                        u?.addEventListener("focusout", s),
-                        n.document.activeElement?.tagName === "IFRAME" || i || u?.focus(),
+                        r?.addEventListener("focusout", i),
+                        n.document.activeElement?.tagName === "IFRAME" || u || r?.focus(),
                         () => {
-                            (u?.removeEventListener("focusout", s), (i = !0));
+                            (r?.removeEventListener("focusout", i), (u = !0));
                         }
                     );
-                }, [t, o, r, e, n, l]),
+                }, [t, s, l, e, n, o]),
                 i
             );
-        })(D, o, null == C ? window : C),
-        F = { ...p, frame_id: k, platform: s.v.DESKTOP },
-        [B, G] = u.useState(!1),
-        W = d.A.theme,
-        K = { ...l };
-    null == K.colorScheme && (K.colorScheme = W === x.NJ8.LIGHT ? "light" : "dark");
-    let V = u.useCallback(
+        })(W, o && !V, null == $ ? window : $, o),
+        Q = { ...j, frame_id: G, platform: i.v.DESKTOP },
+        X = null != t ? `${t}?${new URLSearchParams(Q)}` : null,
+        J = (function (e) {
+            let { allowPopups: t } = e,
+                n = A;
+            return (t && (n = [...A, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" "));
+        })({ allowPopups: y }),
+        [Z, q] = u.useState(!1),
+        z = (0, c.bG)([p.A], () => p.A.theme),
+        ee = { ...l };
+    null == ee.colorScheme && (ee.colorScheme = z === S.NJ8.LIGHT ? "light" : "dark");
+    let et = u.useRef(null);
+    function en(e) {
+        (et.current === G && ((0, M.ny)(G), (0, k.ir)(G), (0, _.OR)(G), P?.(G)),
+            (et.current = G),
+            null != e.contentWindow && e.contentWindow.postMessage([d.A.HELLO, Q], t ?? ""),
+            Y(!0),
+            T?.(e));
+    }
+    let er = u.useRef(null),
+        { colorScheme: eu } = ee,
+        el = (0, a.A)(() => (null != X ? { src: X, sandbox: J, allow: F, referrerPolicy: L, colorScheme: eu } : null)),
+        eo = (0, a.A)(en),
+        es = u.useCallback(
             (e) => {
-                ((D.current = e), null == e)
-                    ? (0, f.$9)(k)
-                    : ((0, f.M7)(k, e), null != e.contentWindow && (0, f.Yt)(e.contentWindow, k));
+                if (((W.current = e), null == e)) {
+                    (er.current?.destroy(), (er.current = null), (0, m.$9)(G));
+                    return;
+                }
+                let t = el();
+                (V &&
+                    null != t &&
+                    ((er.current = (0, D.xW)(
+                        e,
+                        G,
+                        t,
+                        () => eo(e),
+                        () => K(!0),
+                    )),
+                    null == er.current && K(!0)),
+                    (0, m.M7)(G, e),
+                    null != e.contentWindow && (0, m.Yt)(e.contentWindow, G));
             },
-            [k],
-        ),
-        Y = u.useRef(null);
+            [G, V, el, eo],
+        );
     return (
-        u.useEffect(() => () => (0, H.ir)(k), [k]),
+        u.useEffect(() => () => (0, k.ir)(G), [G]),
         !(function (e, t) {
             let {
                     onIframeMount: n,
                     onIframeUnmount: r,
                     isNewIframe: l = !0,
                     isIframeRetiring: o = !0,
-                    contextSource: i,
+                    contextSource: s,
                 } = t,
-                s = u.useRef(n),
+                i = u.useRef(n),
                 c = u.useRef(r),
                 a = u.useRef(l),
                 f = u.useRef(o),
-                d = u.useRef(i);
+                d = u.useRef(s);
             (u.useEffect(() => {
-                ((s.current = n), (c.current = r), (a.current = l), (f.current = o), (d.current = i));
+                ((i.current = n), (c.current = r), (a.current = l), (f.current = o), (d.current = s));
             }),
                 u.useEffect(
                     () => (
                         a.current &&
-                            (m._.dispatch(x.jej.IFRAME_MOUNT, { id: e, data: { contextSource: d.current } }),
-                            s.current?.(e)),
+                            (E._.dispatch(S.jej.IFRAME_MOUNT, { id: e, data: { contextSource: d.current } }),
+                            i.current?.(e)),
                         () => {
-                            f.current && (m._.dispatch(x.jej.IFRAME_UNMOUNT, { id: e }), c.current?.(e));
+                            f.current && (E._.dispatch(S.jej.IFRAME_UNMOUNT, { id: e }), c.current?.(e));
                         }
                     ),
                     [e],
                 ));
-        })(k, { onIframeMount: g, onIframeUnmount: I, contextSource: (0, i.useMemoOne)(() => _, [t]) }),
+        })(G, { onIframeMount: I, onIframeUnmount: N, contextSource: (0, s.useMemoOne)(() => U, [t]) }),
         u.useEffect(() => {
             function e(e) {
                 let { resizing: t } = e;
-                G(t);
+                q(t);
             }
             return (
-                m._.subscribe(x.jej.MANUAL_IFRAME_RESIZING, e),
+                E._.subscribe(S.jej.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    m._.unsubscribe(x.jej.MANUAL_IFRAME_RESIZING, e);
+                    E._.unsubscribe(S.jej.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
-        B && (K.pointerEvents = "none"),
-        null != t
+        u.useEffect(() => {
+            er.current?.setInputSuspended(Z);
+        }, [Z, es]),
+        u.useEffect(() => {
+            null != eu && er.current?.setColorScheme(eu);
+        }, [eu, es]),
+        Z && (ee.pointerEvents = "none"),
+        null != X
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)("iframe", {
-                          ref: V,
-                          style: K,
-                          allow: "autoplay; encrypted-media",
-                          referrerPolicy: A,
-                          onLoad: function (e) {
-                              let n = e.target;
-                              (Y.current === k && ((0, y.ny)(k), (0, H.ir)(k), (0, P.OR)(k), N?.(k)),
-                                  (Y.current = k),
-                                  null != n.contentWindow && n.contentWindow.postMessage([a.A.HELLO, F], t ?? ""),
-                                  $(!0),
-                                  M?.(n));
-                          },
-                          sandbox: (function (e) {
-                              let { allowPopups: t } = e,
-                                  n = L;
-                              return (t && (n = [...L, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" "));
-                          })({ allowPopups: v }),
-                          className: n,
-                          src: `${t}?${new URLSearchParams(F)}`,
-                      }),
-                      (0, r.jsx)(T, { iframeId: k }),
-                      (0, r.jsx)(U, { iframeId: k }),
+                      V
+                          ? (0, r.jsx)(
+                                "iframe",
+                                {
+                                    ref: es,
+                                    style: { ...ee, colorScheme: "normal", pointerEvents: "none" },
+                                    sandbox: "",
+                                    className: n,
+                                },
+                                "native-view",
+                            )
+                          : (0, r.jsx)(
+                                "iframe",
+                                {
+                                    ref: es,
+                                    style: ee,
+                                    allow: F,
+                                    referrerPolicy: L,
+                                    onLoad: (e) => en(e.currentTarget),
+                                    sandbox: J,
+                                    className: n,
+                                    src: X,
+                                },
+                                "page",
+                            ),
+                      (0, r.jsx)(g, { iframeId: G }),
+                      (0, r.jsx)(C, { iframeId: G }),
                   ],
               })
             : null
     );
 }
-function $(e) {
+function W(e) {
     let { transparentWhileLoading: t = !1, ...n } = e,
         { onLoad: l } = n,
-        [i, s] = u.useState(!1),
+        [s, i] = u.useState(!1),
         c = u.useCallback(
             (e) => {
-                (s(!0), l?.(e));
+                (i(!0), l?.(e));
             },
             [l],
         );
     return (0, r.jsxs)("div", {
-        className: k.Qf,
+        className: $.Qf,
         children: [
-            !i && (0, r.jsx)("div", { className: o()(k.Qf, !0 !== t ? k.SL : void 0) }),
+            !s && (0, r.jsx)("div", { className: o()($.Qf, !0 !== t ? $.SL : void 0) }),
             (0, r.jsx)("div", {
-                className: o()(k.Qf, i ? void 0 : k.Ar),
-                children: (0, r.jsx)(D, { ...n, onLoad: c }),
+                className: o()($.Qf, s ? void 0 : $.Ar),
+                children: (0, r.jsx)(G, { ...n, onLoad: c }),
             }),
         ],
     });
