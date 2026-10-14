@@ -143,6 +143,7 @@ let I = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
     new _("2026-08-android-jank-per-screen", "Android Per-Screen Jank Aggregation"),
+    new f("2026-10-android-chat-preinflation", "Android Chat Preinflation", 3),
     new _("2026-09-ios-callkit-connected-on-rtc", "iOS: show CallKit connected only once voice flows"),
     new _(
         "2026-08-android-rn-reparenting-flag",
