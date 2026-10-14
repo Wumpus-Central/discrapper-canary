@@ -173,6 +173,7 @@
 }
 
 .customTrigger_a10fa3.selected_a10fa3 {
+    border-color: var(--border-focus);
     box-shadow: none
 }
 
@@ -391,4 +392,4 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=52541b3cd0c63cf4.css.map*/
+/*# sourceMappingURL=f5ef8f27a21c29d2.css.map*/
