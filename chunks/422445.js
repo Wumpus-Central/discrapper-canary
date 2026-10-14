@@ -1,28 +1,29 @@
-(n.r(t), n.d(t, { default: () => T }));
+(n.r(t), n.d(t, { default: () => U }));
 var i = n(477900),
     s = n(582128),
     l = n(991690),
-    a = n(333007),
-    r = n(17928),
-    c = n(192308),
-    d = n(148494),
-    u = n(281969),
-    h = n(672929),
-    o = n(20465),
-    f = n(249288),
-    p = n(251363),
-    g = n(717519);
-function A(e) {
+    a = n(631828),
+    r = n(333007),
+    c = n(17928),
+    d = n(192308),
+    u = n(148494),
+    h = n(281969),
+    o = n(672929),
+    f = n(20465),
+    p = n(249288),
+    g = n(251363),
+    A = n(717519);
+function w(e) {
     let t,
-        { channelId: n, applicationId: l, surface: A, onOpenChat: w } = e,
-        E = (0, h.A)(l, A),
+        { channelId: n, applicationId: l, surface: a, onOpenChat: w } = e,
+        E = (0, o.A)(l, a),
         m = E?.id ?? null,
         b =
-            ((t = s.useCallback((e) => u.A.subscribe(e), [])),
-            s.useSyncExternalStore(t, () => null != m && u.A.isFrameVisible(m))),
-        j = (0, r.bG)([f.A], () => f.A.getToastsEnabled(n), [n]),
+            ((t = s.useCallback((e) => h.A.subscribe(e), [])),
+            s.useSyncExternalStore(t, () => null != m && h.A.isFrameVisible(m))),
+        j = (0, c.bG)([p.A], () => p.A.getToastsEnabled(n), [n]),
         I = b && j,
-        x = (0, c.useHasAnyModalOpen)(),
+        x = (0, d.useHasAnyModalOpen)(),
         [C, N] = s.useState(null);
     s.useEffect(() => {
         if (!I) return;
@@ -33,7 +34,7 @@ function A(e) {
                 return t.width < 1 || t.height < 1
                     ? null
                     : { left: t.left, top: t.top, width: t.width, height: t.height };
-            })((0, p.ow)(null, m));
+            })((0, g.ow)(null, m));
             N((t) =>
                 (
                     null == t || null == e
@@ -55,108 +56,109 @@ function A(e) {
     }, [I, m]);
     let S = s.useCallback(
         (e) => {
-            (w(), d.A.jumpToMessage({ channelId: e.channel_id, messageId: e.id, flash: !0 }));
+            (w(), u.A.jumpToMessage({ channelId: e.channel_id, messageId: e.id, flash: !0 }));
         },
         [w],
     );
     return !I || null == C || x
         ? null
-        : (0, a.createPortal)(
+        : (0, r.createPortal)(
               (0, i.jsx)("div", {
-                  className: g.T,
+                  className: A.T,
                   style: { top: C.top, left: C.left, width: C.width, height: C.height / 2 },
                   children: (0, i.jsx)("div", {
-                      className: g.f,
-                      children: (0, i.jsx)(o.A, { channelId: n, onToastClick: S }),
+                      className: A.f,
+                      children: (0, i.jsx)(f.A, { channelId: n, onToastClick: S }),
                   }),
               }),
               document.body,
           );
 }
-var w = n(73153),
-    E = n(334105),
-    m = n(761640),
-    b = n(573163),
-    j = n(246338),
-    I = n(343030),
-    x = n(150861),
-    C = n(317608),
-    N = n(378859),
-    S = n(338941),
-    v = n(130745),
-    y = n(660183),
-    _ = n(728846);
-function k(e) {
+var E = n(73153),
+    m = n(334105),
+    b = n(761640),
+    j = n(573163),
+    I = n(246338),
+    x = n(343030),
+    C = n(150861),
+    N = n(317608),
+    S = n(378859),
+    v = n(338941),
+    y = n(130745),
+    _ = n(660183),
+    k = n(728846);
+function T(e) {
     let { applicationId: t, channel: n, showChatToasts: a } = e,
         r = s.useMemo(() => ({ type: l.U.APP_CHANNEL, channelId: n.id, guildId: n.guild_id }), [n.id, n.guild_id]),
-        { frame: c, state: d } = (0, S.A)({ applicationId: t, surface: r });
-    switch (((0, v.A)(n.id), d)) {
-        case S.n.Launched:
+        { frame: c, state: d } = (0, v.A)({ applicationId: t, surface: r });
+    switch (((0, y.A)(n.id), d)) {
+        case v.n.Launched:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.A, { frameId: c.id, level: I.A.WithinAppContent, className: _.Z }),
+                    (0, i.jsx)(N.A, { frameId: c.id, level: x.A.WithinAppContent, className: k.Z }),
                     a
-                        ? (0, i.jsx)(A, {
+                        ? (0, i.jsx)(w, {
                               channelId: n.id,
                               applicationId: t,
                               surface: r,
-                              onOpenChat: () => (0, E.fJ)(n.getGuildId(), n.id),
+                              onOpenChat: () => (0, m.fJ)(n.getGuildId(), n.id),
                           })
                         : null,
                 ],
             });
-        case S.n.RenderingElsewhere:
-            return (0, i.jsx)(N.A, { className: _.w, description: y.intl.string(y.t["2KIDX+"]) });
-        case S.n.NoApplication:
-            return (0, i.jsx)(N.A, { className: _.w, description: y.intl.string(y.t.izggZO) });
-        case S.n.DoesNotSupportSurface:
-            return (0, i.jsx)(N.A, { className: _.w, description: y.intl.string(y.t["iUWcU/"]) });
-        case S.n.Error:
-            return (0, i.jsx)(N.A, {
-                className: _.w,
-                heading: y.intl.string(y.t.VquUff),
-                error: y.intl.string(y.t["Sd9D/R"]),
+        case v.n.RenderingElsewhere:
+            return (0, i.jsx)(S.A, { className: k.w, description: _.intl.string(_.t["2KIDX+"]) });
+        case v.n.NoApplication:
+            return (0, i.jsx)(S.A, { className: k.w, description: _.intl.string(_.t.izggZO) });
+        case v.n.DoesNotSupportSurface:
+            return (0, i.jsx)(S.A, { className: k.w, description: _.intl.string(_.t["iUWcU/"]) });
+        case v.n.Error:
+            return (0, i.jsx)(S.A, {
+                className: k.w,
+                heading: _.intl.string(_.t.VquUff),
+                error: _.intl.string(_.t["Sd9D/R"]),
             });
-        case S.n.AwaitingLaunch:
-        case S.n.Loading:
-            return (0, i.jsx)(N.j, { className: _.w });
+        case v.n.AwaitingLaunch:
+        case v.n.Loading:
+            return (0, i.jsx)(S.j, { className: k.w });
     }
 }
-function T(e) {
+function U(e) {
     let t,
         n,
         l,
-        a,
-        { channel: c } = e,
-        d = c.application_id;
-    (0, x.A)(c);
-    let u = (0, j.w$)(c, "AppChannel"),
-        h =
-            ((t = c.id),
-            (n = (0, E.cz)(t)),
-            (l = (0, r.bG)([b.Ay], () => b.Ay.hasUnread(t) || b.Ay.wasUnreadOnSelect(t), [t])),
-            (a = s.useRef(!0)),
+        r,
+        { channel: d } = e,
+        u = (0, a.a)(d),
+        h = d.application_id ?? u;
+    (0, C.A)(d);
+    let o = (0, I.w$)(d, "AppChannel"),
+        f =
+            ((t = d.id),
+            (n = (0, m.cz)(t)),
+            (l = (0, c.bG)([j.Ay], () => j.Ay.hasUnread(t) || j.Ay.wasUnreadOnSelect(t), [t])),
+            (r = s.useRef(!0)),
             s.useEffect(() => {
-                a.current = !0;
+                r.current = !0;
             }, [t]),
             s.useEffect(() => {
-                u &&
+                o &&
                     l &&
-                    a.current &&
-                    ((a.current = !1), null == m.Ay.getSidebarState(t) && (0, E.fJ)(c.getGuildId(), t));
-            }, [u, l, c, t]),
+                    r.current &&
+                    ((r.current = !1), null == b.Ay.getSidebarState(t) && (0, m.fJ)(d.getGuildId(), t));
+            }, [o, l, d, t]),
             s.useEffect(() => {
                 function e(e) {
-                    e.channelId === t && (a.current = !1);
+                    e.channelId === t && (r.current = !1);
                 }
-                return (w.h.subscribe("MESSAGE_CREATE", e), () => w.h.unsubscribe("MESSAGE_CREATE", e));
+                return (E.h.subscribe("MESSAGE_CREATE", e), () => E.h.unsubscribe("MESSAGE_CREATE", e));
             }, [t]),
             n);
-    return null == d
-        ? (0, i.jsx)(N.A, {
-              className: _.w,
-              heading: y.intl.string(y.t.tU5fiM),
-              description: y.intl.string(y.t.E94mJf),
+    return null == h
+        ? (0, i.jsx)(S.A, {
+              className: k.w,
+              heading: _.intl.string(_.t.tU5fiM),
+              description: _.intl.string(_.t.E94mJf),
           })
-        : (0, i.jsx)(k, { applicationId: d, channel: c, showChatToasts: u && !h });
+        : (0, i.jsx)(T, { applicationId: h, channel: d, showChatToasts: o && !f });
 }

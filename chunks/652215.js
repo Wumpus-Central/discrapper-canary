@@ -5633,6 +5633,7 @@ let rw = Object.freeze({
     PARENT: tk.jB(33),
     DISABLE_RELATIONSHIPS_ACCESS: tk.jB(34),
     QUEST: tk.jB(38),
+    DM_OPENS_ACTIVITY: tk.jB(42),
 });
 var rG =
     (((ek = {}).MFA_WARNING = "MFA_WARNING"),

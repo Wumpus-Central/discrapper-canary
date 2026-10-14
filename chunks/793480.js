@@ -27,5 +27,6 @@ function u(e) {
     return !1;
 }
 function _(e) {
-    return (0, i.bG)([a.A, r.Bt], () => c(Object.values(a.A.getGuilds()), e), [e]);
+    let { autoTrackExposure: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return (0, i.bG)([a.A, r.Bt], () => (t ? c(Object.values(a.A.getGuilds()), e) : u(e)), [e, t]);
 }
