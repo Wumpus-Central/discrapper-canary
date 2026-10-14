@@ -97,16 +97,16 @@ var ee = l(558514),
     eg = l(192867),
     ey = l(403369),
     eT = l(939249),
-    ev = l(834730),
-    eE = l(695904),
-    eN = l(116331),
-    eC = l(827258),
+    ev = l(498032),
+    eE = l(834730),
+    eN = l(695904),
+    eC = l(116331),
     eS = l(518477),
     eU = l(482007);
 function e_(e) {
     let { user: i, onOpenProfile: l } = e,
         { trackUserProfileAction: r } = (0, N.NJ)(),
-        { hasNewWishlistItems: d, newWishlistItemCount: o, shouldLogExposure: t } = (0, eN.A)(i),
+        { hasNewWishlistItems: d, newWishlistItemCount: o, shouldLogExposure: t } = (0, eC.A)(i),
         a = null != l,
         u = a && d,
         c = n.useRef(!1);
@@ -119,7 +119,7 @@ function e_(e) {
     return a
         ? (0, s.jsxs)(s.Fragment, {
               children: [
-                  t && (0, s.jsx)(eE.kM, { location: "UserProfilePopout" }),
+                  t && (0, s.jsx)(eN.kM, { location: "UserProfilePopout" }),
                   u &&
                       (0, s.jsx)(eT.D, {
                           onClick: p,
@@ -128,8 +128,8 @@ function e_(e) {
                           children: (0, s.jsxs)(F.A.Overlay, {
                               className: eU.Uq,
                               children: [
-                                  (0, s.jsx)(eC.A, { className: eU.Pf }),
-                                  (0, s.jsx)(ev.E, {
+                                  (0, s.jsx)(ev.N, { className: eU.Pf }),
+                                  (0, s.jsx)(eE.E, {
                                       variant: "text-xs/medium",
                                       children: Q.intl.format(Q.t.wKJfIg, { count: o }),
                                   }),

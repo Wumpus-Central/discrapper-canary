@@ -1,4 +1,4 @@
-n.d(t, { EG: () => c, Gu: () => _, JI: () => h, Lp: () => A, SC: () => I, fk: () => f, hV: () => E, o6: () => u });
+n.d(t, { EG: () => c, Gu: () => _, JI: () => h, Lp: () => A, fk: () => f, hV: () => E, o6: () => u });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -79,15 +79,4 @@ function f(e) {
         "aria-label": A,
         children: (0, i.jsx)(t, { className: d.Kk, color: "currentColor" }),
     });
-}
-function I(e) {
-    let {
-        className: t,
-        color: n = s.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
-        shape: r = c.ROUND,
-        disableColor: l = !1,
-        style: o,
-        ...u
-    } = e;
-    return (0, i.jsx)("div", { className: a()(t, d.Ky, r), style: { backgroundColor: l ? void 0 : n, ...o }, ...u });
 }

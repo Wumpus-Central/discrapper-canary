@@ -4302,11 +4302,11 @@ let aO = (0, l4.mj)({
 var aP = t(666810),
     aL = t(394300),
     aD = t(575593),
-    ak = t(44120),
-    aw = t(75678),
-    aG = t(317560),
-    aU = t(99161),
-    aF = t(827258),
+    ak = t(498032),
+    aw = t(44120),
+    aG = t(75678),
+    aU = t(317560),
+    aF = t(99161),
     aH = t(661492),
     aB = t(146423),
     aV = t(662349),
@@ -4378,7 +4378,7 @@ function a$(e) {
                 !0 === p ? z.intl.formatToPlainString(z.t.s9RZ1r, { label: n }) : n),
             onHoverOrFocusChange: T,
             children: [
-                !0 === p && (0, l.jsx)(aF.A, { className: aK.Pf }),
+                !0 === p && (0, l.jsx)(ak.N, { className: aK.Pf }),
                 y &&
                     (0, l.jsx)(aV.A, {
                         spec: f,
@@ -4399,14 +4399,14 @@ function aQ(e) {
             P.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         ),
         o = s.useCallback(() => {
-            (0, aU.a)(
+            (0, aF.a)(
                 n,
                 { isGift: !0, giftRecipient: t, giftingOrigin: aq.vQ.USER_PROFILE_WISHLIST },
                 { analyticsLocations: a },
             );
         }, [n, t, a]),
         d = s.useCallback(() => {
-            (0, aG.R)({
+            (0, aU.R)({
                 skuId: n.id,
                 applicationId: n.applicationId,
                 isStorefront: !1,
@@ -4427,7 +4427,7 @@ function aQ(e) {
 function aJ(e) {
     let { sku: n, wishlistOwner: t, analyticsLocations: i, ...r } = e,
         o = s.useCallback(() => {
-            (0, ak.A)({
+            (0, aw.A)({
                 skuId: n.id,
                 isGift: !0,
                 giftingOrigin: aq.vQ.USER_PROFILE_WISHLIST,
@@ -4461,7 +4461,7 @@ function aZ(e) {
     let { sku: n, wishlistOwner: t, analyticsLocations: i, source: r, style: o, ...d } = e,
         c = s.useCallback(() => {
             let e = n.id;
-            (0, aw.A)({
+            (0, aG.A)({
                 isGift: !0,
                 giftRecipient: t,
                 giftingOrigin: aq.vQ.USER_PROFILE_WISHLIST,
@@ -5641,7 +5641,7 @@ let d1 = (0, nJ.Fe)({
                 t.e("669130"),
                 t.e("70866"),
                 t.e("802890"),
-                t.e("377109"),
+                t.e("232960"),
                 t.e("74886"),
                 t.e("713273"),
                 t.e("656997"),

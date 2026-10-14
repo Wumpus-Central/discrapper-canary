@@ -7,6 +7,5 @@ _.exports = {
     u3: "iconBadge__463b7 base__463b7",
     Do: "numberBadge__463b7 base__463b7",
     Kk: "icon__463b7",
-    Ky: "circleBadge__463b7",
     BE: "premiumBadge__463b7",
 };
