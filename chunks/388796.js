@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 637696, Version Hash: 67b6e0d0bb8c1adb7fa4ac9a42548abf4a2d92b2`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 637726, Version Hash: a1b2f3be1fe5601d67c31eff98fdc3cd8891fdf0`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -3871,30 +3871,41 @@ function r5() {
         i = (0, th.A)(),
         [r, a] = (0, rl.kn)(i || e ? [] : [rw.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], { bypassAutoDismiss: !0 }),
         s = r === rw.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK,
-        { analyticsLocations: l } = (0, rk.Ay)(),
-        o = ef.useCallback(() => {
+        [l, o] = ef.useState(null);
+    ef.useEffect(() => {
+        if (!s) return;
+        let e = n.current?.parentElement;
+        if (null == e) return;
+        let t = new ResizeObserver((e) => {
+            let [t] = e;
+            return o(t.contentRect.width);
+        });
+        return (t.observe(e), () => t.disconnect());
+    }, [s]);
+    let { analyticsLocations: d } = (0, rk.Ay)(),
+        c = ef.useCallback(() => {
             (a(rc.i.TAKE_ACTION),
-                (0, rB.RQ)({ open: !e, source: rB.TY.TOGGLE_BUTTON, analyticsLocations: l }),
+                (0, rB.RQ)({ open: !e, source: rB.TY.TOGGLE_BUTTON, analyticsLocations: d }),
                 rx.A.setFriendsSidebarCollapsed(e),
                 e && (0, rQ.sk)());
-        }, [e, a, l]),
-        d = ef.useCallback(() => {
+        }, [e, a, d]),
+        u = ef.useCallback(() => {
             rx.A.setFriendsSidebarCollapsed(!1);
         }, []),
-        c = e ? tR.intl.string(r0.default.ZsAL7q) : tR.intl.string(r0.default.sgse8P);
+        _ = e ? tR.intl.string(r0.default.ZsAL7q) : tR.intl.string(r0.default.sgse8P);
     return (0, b.jsxs)(b.Fragment, {
         children: [
             (0, b.jsx)(rS.m, {
                 position: "bottom",
-                text: c,
+                text: _,
                 ariaHidden: !0,
                 children: (0, b.jsxs)(tE.D, {
                     innerRef: n,
                     tag: "div",
                     role: "button",
-                    "aria-label": c,
+                    "aria-label": _,
                     "aria-pressed": e,
-                    onClick: o,
+                    onClick: c,
                     className: r6.j,
                     children: [
                         (0, b.jsx)(r2.A, { hasOnlineFriends: t > 0 }),
@@ -3902,7 +3913,7 @@ function r5() {
                     ],
                 }),
             }),
-            s && (0, b.jsx)(r1, { targetElementRef: n, markAsDismissed: a, onShowFriendsList: d }),
+            s && null != l && (0, b.jsx)(r1, { targetElementRef: n, markAsDismissed: a, onShowFriendsList: u }, l),
         ],
     });
 }
@@ -25864,7 +25875,7 @@ let yt = "isHideDevBanner",
                     className: t_()(ye.Wz, ye.mr),
                     children: [
                         (0, b.jsx)(L9, { className: ye.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "637696" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "637726" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
