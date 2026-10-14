@@ -21,10 +21,10 @@ var l,
     A = n(813564),
     b = n(73153),
     I = n(734057),
-    N = n(927813),
-    v = n(714736);
+    v = n(927813),
+    N = n(714736);
 n(980504);
-let T = 7.5 * N.A.Millis.SECOND,
+let T = 7.5 * v.A.Millis.SECOND,
     j = new Map(),
     _ = new Map(),
     k = new Map();
@@ -59,7 +59,7 @@ let O = new R(b.h, {
         if (null == t || null == s) return !1;
         let c = I.A.getChannel(n)?.getGuildId();
         if (null == c) return !1;
-        let { enabled: d } = (0, v.j)(c, "handleSoundPlayStart");
+        let { enabled: d } = (0, N.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
         let h = {
             soundId: t,
@@ -112,6 +112,8 @@ let O = new R(b.h, {
         })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
     },
     VOICE_CHANNEL_SELECT: function (e) {
+        let { currentVoiceChannelId: t, channelId: n } = e;
+        if (t === n) return !1;
         (k.forEach(clearTimeout), k.clear(), (_ = new Map()), (j = new Map()));
     },
     SOUNDBOARD_ECHO_EXPIRED: function (e) {
@@ -527,8 +529,8 @@ function eE(e) {
             playedByUserIds: g,
             startedAt: b,
             showDetails: I,
-            onDetailsMouseEnter: N,
-            onDetailsMouseLeave: v,
+            onDetailsMouseEnter: v,
+            onDetailsMouseLeave: N,
         } = e,
         { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([w.default, L.A], () => {
             let e = L.A.isBlockedOrIgnored(o ?? void 0);
@@ -559,8 +561,8 @@ function eE(e) {
             })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: b }, analyticsLocations: k });
     }, [k, s, T, n, d, t, l, b]);
     let R = r.useCallback(() => {
-            N(l.soundId);
-        }, [N, l.soundId]),
+            v(l.soundId);
+        }, [v, l.soundId]),
         O = r.useCallback(() => {
             (0, A.CZ)(l, n, k);
         }, [k, n, l]),
@@ -591,7 +593,7 @@ function eE(e) {
                     return (0, i.jsx)("div", {
                         ref: r,
                         onMouseEnter: R,
-                        onMouseLeave: v,
+                        onMouseLeave: N,
                         children: (0, i.jsx)(ec, {
                             guildId: t,
                             channelId: n,
@@ -607,7 +609,7 @@ function eE(e) {
                     (0, i.jsx)("div", {
                         ref: _,
                         onMouseEnter: R,
-                        onMouseLeave: v,
+                        onMouseLeave: N,
                         children: (0, i.jsx)(ex, { authorUser: T, mostRecentPlayedUser: j, guildId: t, channelId: n }),
                     }),
             }),
