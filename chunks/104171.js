@@ -51,16 +51,17 @@ class U extends n.PureComponent {
     state = { popoutUserId: null };
     _ref = n.createRef();
     defaultRenderUser = (e, r, s) => {
-        let n,
-            { showUserPopout: l, guildId: c, size: d, dimEmptyUsers: h } = this.props;
+        let l,
+            { showUserPopout: c, guildId: d, size: h, dimEmptyUsers: o, avatarBackground: f } = this.props;
         if (null == e)
             if (!this.props.showDefaultAvatarsForNullUsers)
-                return (0, t.jsx)("div", { className: i()(p.F2, { [p.F_]: h }) });
+                return (0, t.jsx)("div", { className: i()(p.F2, { [p.F_]: o }) });
             else {
                 let e = (s ?? 0) % m.A.DEFAULT_AVATARS.length,
                     r = m.A.DEFAULT_AVATARS[e];
                 return (0, t.jsx)("img", { src: r, alt: "", className: p.my });
             }
+        let x = g(e, s);
         if (e === _) {
             let e = (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.SIZE_24;
@@ -76,11 +77,14 @@ class U extends n.PureComponent {
                     default:
                         return 10;
                 }
-            })(d);
-            n = (0, t.jsx)(u.UserIcon, { size: "custom", color: "currentColor", width: e, height: e });
-        } else n = (0, t.jsx)("img", { src: e.getAvatarURL(c, d), alt: e.username, className: p.my });
-        let o = (0, t.jsx)("div", { className: p.WK, children: n }, g(e, s));
-        return l && e !== _
+            })(h);
+            l = (0, t.jsx)(u.UserIcon, { size: "custom", color: "currentColor", width: e, height: e });
+        } else l = (0, t.jsx)("img", { src: e.getAvatarURL(d, h), alt: e.username, className: p.my });
+        let S =
+            !0 === f || e === _
+                ? (0, t.jsx)("div", { className: p.WK, children: l }, x)
+                : (0, t.jsx)(n.Fragment, { children: l }, x);
+        return c && e !== _
             ? (0, t.jsx)(
                   a.D,
                   {
@@ -89,11 +93,11 @@ class U extends n.PureComponent {
                           null != e && this.setState({ popoutUserId: e.id });
                       },
                       tabIndex: -1,
-                      children: o,
+                      children: S,
                   },
-                  g(e, s),
+                  x,
               )
-            : o;
+            : S;
     };
     renderUsers() {
         let { users: e, max: r, renderUser: s = this.defaultRenderUser, size: n, extraDetail: l } = this.props,

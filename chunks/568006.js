@@ -642,6 +642,7 @@ function ej(e) {
                     max: l > 0 ? Math.min(l, 8) : 8,
                     size: M.DN.SIZE_16,
                     dimEmptyUsers: !0,
+                    avatarBackground: !0,
                 }),
             (0, i.jsx)(r.E, { variant: "text-xs/medium", color: "none", children: c }),
         ],
