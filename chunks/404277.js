@@ -1,34 +1,35 @@
-r.d(a, { A: () => p });
-var n = r(477900),
-    s = r(582128),
-    t = r(574211),
-    l = r(31300),
-    o = r(646270),
-    i = r(687966),
-    c = r(140735),
-    d = r(773669),
-    m = r(108015),
-    h = r(468039);
-let u = { [t.Z.DESKTOP]: l.k, [t.Z.MOBILE]: o.u, [t.Z.CONSOLE]: i.GameControllerIcon };
-function p(e) {
-    let { platforms: a } = e,
-        r = s.useMemo(() => (0, m.RV)(a), [a]),
-        t = s.useMemo(() => new Intl.ListFormat(d.default.locale).format(r.map(m.n7)), [r]);
-    return (0, n.jsxs)(n.Fragment, {
+s.d(r, { A: () => x });
+var t = s(477900),
+    a = s(582128),
+    n = s(574211),
+    l = s(31300),
+    i = s(646270),
+    o = s(687966),
+    d = s(924895),
+    h = s(140735),
+    c = s(773669),
+    m = s(108015),
+    u = s(468039);
+let p = { [n.Z.DESKTOP]: l.k, [n.Z.MOBILE]: i.u, [n.Z.CONSOLE]: o.GameControllerIcon, [n.Z.ROBLOX]: d.H };
+function x(e) {
+    let { platforms: r } = e,
+        s = a.useMemo(() => (0, m.RV)(r), [r]),
+        n = a.useMemo(() => new Intl.ListFormat(c.default.locale).format(s.map(m.n7)), [s]);
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, n.jsx)("span", {
-                className: h.B,
+            (0, t.jsx)("span", {
+                className: u.B,
                 "aria-hidden": !0,
-                children: r.map((e) => {
-                    let a = u[e];
-                    return (0, n.jsx)(
+                children: s.map((e) => {
+                    let r = p[e];
+                    return (0, t.jsx)(
                         "span",
-                        { className: h.t, children: (0, n.jsx)(a, { size: "xs", color: "currentColor" }) },
+                        { className: u.t, children: (0, t.jsx)(r, { size: "xs", color: "currentColor" }) },
                         e,
                     );
                 }),
             }),
-            r.length > 0 && (0, n.jsx)(c.A, { children: t }),
+            s.length > 0 && (0, t.jsx)(h.A, { children: n }),
         ],
     });
 }
