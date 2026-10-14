@@ -1,4 +1,4 @@
-r.d(n, { default: () => F });
+r.d(n, { default: () => O });
 var i = r(477900);
 r(582128);
 var l = r(980707),
@@ -26,30 +26,32 @@ var l = r(980707),
     E = r(317910),
     k = r(475777),
     f = r(868548),
-    S = r(173522),
-    I = r(995102),
-    L = r(288104),
-    M = r(969128),
+    M = r(173522),
+    S = r(995102),
+    I = r(288104),
+    L = r(969128),
     U = r(342321),
-    Z = r(704543),
-    H = r(57907),
-    V = r(652215);
-function w(e) {
+    Z = r(660273),
+    H = r(704543),
+    V = r(57907),
+    w = r(652215);
+function D(e) {
     let { channel: n, onSelect: r } = e,
         a = (0, f.A)(n),
         d = (0, N.A)(n),
         A = (0, j.C)(n),
         x = (0, u.A)(n),
         C = (0, X.A)(n),
-        p = (0, S.A)(n),
-        g = (0, I.A)(n),
-        _ = (0, H.A)(n),
+        p = (0, M.A)(n),
+        g = (0, S.A)(n),
+        _ = (0, V.A)(n),
         b = n.isThread() ? _ : g,
-        m = (0, o.A)({ id: n.id, label: T.intl.string(T.t.gFHI3k) }),
-        v = (0, c.A)(n),
-        E = (0, U.A)(n, U._),
-        k = (0, h.A)(n, void 0, "ChannelListTextChannelContextMenu"),
-        M = (0, L.A)(n);
+        m = (0, Z.A)(n, "Context Menu"),
+        v = (0, o.A)({ id: n.id, label: T.intl.string(T.t.gFHI3k) }),
+        E = (0, c.A)(n),
+        k = (0, U.A)(n, U._),
+        L = (0, h.A)(n, void 0, "ChannelListTextChannelContextMenu"),
+        H = (0, I.A)(n);
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-context",
@@ -58,26 +60,26 @@ function w(e) {
         onSelect: r,
         children: [
             (0, i.jsx)(s.rX, { children: a }),
-            (0, i.jsx)(s.rX, { children: k }),
+            (0, i.jsx)(s.rX, { children: L }),
             (0, i.jsxs)(s.rX, { children: [C, p, x] }),
-            (0, i.jsx)(s.rX, { children: d }),
-            (0, i.jsxs)(s.rX, { children: [b, M] }),
-            (0, i.jsx)(s.rX, { children: v }),
+            (0, i.jsxs)(s.rX, { children: [n.isThread() ? m : null, d] }),
+            (0, i.jsxs)(s.rX, { children: [b, H] }),
             (0, i.jsx)(s.rX, { children: E }),
+            (0, i.jsx)(s.rX, { children: k }),
             (0, i.jsx)(s.rX, { children: A }),
-            (0, i.jsx)(s.rX, { children: m }),
+            (0, i.jsx)(s.rX, { children: v }),
         ],
     });
 }
-function D(e) {
+function F(e) {
     let n,
         { channel: r, guild: a, onSelect: d } = e,
         A = (0, f.A)(r),
         x = (0, N.A)(r),
         X = (0, j.z)(r),
         u = (0, j.C)(r),
-        H = (0, Z.A)(r),
-        V = (0, M.A)(r),
+        Z = (0, H.A)(r),
+        V = (0, L.A)(r),
         w =
             ((n = (0, p.bG)([_.A], () => _.A.didAgree(r.id))),
             r.isSpoilerChannel() && n
@@ -87,19 +89,19 @@ function D(e) {
                       action: () => g.A.clearSpoilerAgree(r.id),
                   })
                 : null),
-        D = (0, I.A)(r),
+        D = (0, S.A)(r),
         F = (0, E.A)(r),
         O = (0, k.A)(r, a),
         W = (0, b.A)(r, a),
         z = (0, m.A)(r, a),
         G = (0, v.A)(r),
         q = (0, o.A)({ id: r.id, label: T.intl.string(T.t.gFHI3k) }),
-        y = (0, S.A)(r),
+        y = (0, M.A)(r),
         B = (0, c.A)(r),
         J = (0, U.A)(r, U._),
         K = (0, C.A)(r),
         P = (0, h.A)(r, void 0, "ChannelListTextChannelContextMenu"),
-        Q = (0, L.A)(r);
+        Q = (0, I.A)(r);
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated": !0,
         navId: "channel-context",
@@ -110,7 +112,7 @@ function D(e) {
             (0, i.jsx)(s.rX, { children: A }, "mark-as-read-or-favorite"),
             (0, i.jsx)(s.rX, { children: X }),
             (0, i.jsx)(s.rX, { children: P }, "conjure"),
-            (0, i.jsxs)(s.rX, { children: [O, K, H, V, x] }, "channel-actions"),
+            (0, i.jsxs)(s.rX, { children: [O, K, Z, V, x] }, "channel-actions"),
             (0, i.jsxs)(s.rX, { children: [D, Q] }, "notifications"),
             (0, i.jsx)(s.rX, { children: w }, "spoiler"),
             (0, i.jsx)(s.rX, { children: y }),
@@ -122,12 +124,12 @@ function D(e) {
         ],
     });
 }
-let F = (0, d.A)(
+let O = (0, d.A)(
     (0, a.A)(
         function (e) {
-            return (0, x.DZ)() ? (0, i.jsx)(w, { ...e }) : (0, i.jsx)(D, { ...e });
+            return (0, x.DZ)() ? (0, i.jsx)(D, { ...e }) : (0, i.jsx)(F, { ...e });
         },
-        { object: V.ZSU.CONTEXT_MENU },
+        { object: w.ZSU.CONTEXT_MENU },
     ),
     [A.A.CONTEXT_MENU, A.A.CHANNEL_LIST_TEXT_CHANNEL_MENU],
 );
