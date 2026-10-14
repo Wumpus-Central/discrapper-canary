@@ -2018,20 +2018,24 @@ let eJ = new c.A("ConnectionStore"),
 async function e5(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
-        n = m.Ay.getVoiceChannelId();
-    if (null != n) {
+        n = s.w.get("discord_update_restart_timestamp"),
+        i = null != n && Date.now() - parseInt(n, 10) < 3e5;
+    s.w.remove("discord_update_restart_timestamp");
+    let r = m.Ay.getVoiceChannelId();
+    if (null != r) {
         let e = s.w.get("discord_watchdog_restart_timestamp"),
-            i = null != e && Date.now() - parseInt(e, 10) < 6e4;
+            n = null != e && Date.now() - parseInt(e, 10) < 6e4;
         if (
             (s.w.remove("discord_watchdog_restart_timestamp"),
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
+                n ||
                 i ||
                 (await eQ?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
                 !e2)
         ) {
-            let e = f.A.getChannel(n);
-            null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, _.A)(n));
-        } else (p.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null));
+            let e = f.A.getChannel(r);
+            null != e && ((t = { guildId: e.getGuildId(), channelId: r }), (0, _.A)(r));
+        } else (p.A.setLastSessionVoiceChannelId(null != r ? r : null), o.default.selectVoiceChannel(null));
     }
     (H.update(t, !0), (e2 = !1), (e6 = null));
 }

@@ -42,9 +42,14 @@ class T extends s.A {
     quitAndInstall() {
         this.updateAvailable &&
             (this.nativeUpdateAvailable
-                ? null != this._bootstrapper
-                    ? this._bootstrapper.finishBootstrap()
-                    : _.Ay.send("QUIT_AND_INSTALL")
+                ? (r.w.set("discord_update_restart_timestamp", Date.now().toString()),
+                  _.Ay.flushStorageData()
+                      .catch((e) => p.warn("Failed to flush storage before update restart", e))
+                      .finally(() => {
+                          null != this._bootstrapper
+                              ? this._bootstrapper.finishBootstrap()
+                              : _.Ay.send("QUIT_AND_INSTALL");
+                      }))
                 : location.reload(!0));
     }
     isNewUpdater() {
@@ -114,7 +119,7 @@ class T extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "3fae27a04452da2a5f3fbaa4591651c4d678d43d" === e.body.hash)
+                    if (null == e.body || "e629e60b82a1df56e1f83516838559e17d342193" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? A : h;

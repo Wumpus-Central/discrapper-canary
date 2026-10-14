@@ -278,6 +278,9 @@ let z = new $(h.h, {
         let { channelId: t, guildId: n } = e;
         (null == s || t !== s.channelId) && ((s = { channelId: t, guildId: n }), G());
     },
+    AUTO_UPDATER_QUIT_AND_INSTALL: function () {
+        return null != l && null != d && ((o = Date.now()), G(), !1);
+    },
     LOGOUT: function () {
         ((b = {}), (a = null), (r = void 0), (P = {}), (s = {}), (l = null), A.w.remove(v));
     },
