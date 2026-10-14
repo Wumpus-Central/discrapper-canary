@@ -56,9 +56,13 @@ class d extends a.PureComponent {
         this._isMounted && i(e, t);
     };
     handleFileError = async () => {
-        let { openUploadError: e } = await Promise.all([i.e("454048"), i.e("300699"), i.e("599666")]).then(
-            i.bind(i, 494921),
-        );
+        let { openUploadError: e } = await Promise.all([
+            i.e("454048"),
+            i.e("300699"),
+            i.e("599666"),
+            i.e("534822"),
+            i.e("536200"),
+        ]).then(i.bind(i, 494921));
         e({ title: r.intl.string(r.t["0egKg3"]), help: r.intl.string(r.t["7PnXqu"]) });
     };
     render() {

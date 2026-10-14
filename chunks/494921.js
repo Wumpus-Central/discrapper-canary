@@ -1,60 +1,82 @@
-n.d(e, { openUploadError: () => L, D: () => I });
-var c = n(477900);
-n(582128);
-var o = n(189213),
-    i = n(192308),
-    a = n(523527),
-    s = n(17928),
-    r = n(967198),
-    d = n(676279),
-    l = n(453771),
-    p = n(831318),
-    f = n(660183);
+c.d(e, { openUploadError: () => y, D: () => S });
+var n = c(477900);
+c(582128);
+var i = c(189213),
+    o = c(192308),
+    a = c(523527),
+    s = c(17928),
+    _ = c(964486),
+    l = c(793574),
+    d = c(688810),
+    L = c(763827),
+    r = c(967198),
+    A = c(174459),
+    E = c(676279),
+    p = c(453771),
+    P = c(158045),
+    u = c(10392),
+    f = c(82498),
+    I = c(831318),
+    U = c(202541),
+    O = c(652215),
+    M = c(660183);
 let b = function (t) {
-    let { handleLearnMore: e, effectiveMaxSize: n, ...o } = t,
-        i = (0, s.bG)([r.A], () => r.A.getGuildId()),
-        a = (0, l.Iu)({ guildId: i, maxSize: n }),
-        b = (0, d.TM)()
+    let { handleLearnMore: e, effectiveMaxSize: c, ...i } = t,
+        o = (0, s.bG)([r.A], () => r.A.getGuildId()),
+        { analyticsLocations: a } = (0, d.Ay)(l.A.FILE_UPLOAD_POPOUT, l.A.PREMIUM_UPSELL_MODAL);
+    (0, _.Ay)(() => {
+        (A.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, {
+            type: U.e.LARGER_FILE_UPLOAD_UPSELL,
+            location_section: O.JJy.FILE_UPLOAD_UPSELL_MODAL,
+            location_stack: a,
+            sku_id: (0, P.mH)(U.pe.TIER_2),
+            voice_guild_id: L.A.getGuildId() ?? null,
+        }),
+            (0, u.sq)(O.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, f.uq)(U.e.LARGER_FILE_UPLOAD_UPSELL)));
+    });
+    let b = (0, p.Iu)({ guildId: o, maxSize: c }),
+        D = (0, E.TM)()
             ? "https://cdn.discordapp.com/assets/content/951fb14c4f181e23caa1730b070ffd1b04bf13850e686221fc596c3d7fd7b234.mov"
             : "https://cdn.discordapp.com/assets/content/cedc17f03dee621e55eb1b301c68372f08ac64f32ce656ac5b9cbc0fc0d149f0.webm";
-    return (0, c.jsx)(p.A, {
-        title: f.intl.string(f.t["9C+41g"]),
-        subtitle: a,
-        graphic: { type: "video", src: b, loop: !0, loopAt: 2.1 },
-        secondaryCTA: f.intl.string(f.t.ZnqyZ2),
-        onSecondaryClick: e,
-        ...o,
+    return (0, n.jsx)(d.f5, {
+        value: a,
+        children: (0, n.jsx)(I.A, {
+            title: M.intl.string(M.t["9C+41g"]),
+            subtitle: b,
+            graphic: { type: "video", src: D, loop: !0, loopAt: 2.1 },
+            secondaryCTA: M.intl.string(M.t.ZnqyZ2),
+            onSecondaryClick: e,
+            ...i,
+        }),
     });
 };
-var u = n(976860),
-    A = n(174459),
-    _ = n(652215);
-function O(t) {
-    let { title: e, help: n, showPremiumUpsell: i, effectiveMaxSize: s, transitionState: r, onClose: d } = t;
-    return i
-        ? (0, c.jsx)(b, {
-              transitionState: r,
-              onClose: d,
+var D = c(976860);
+function R(t) {
+    let { title: e, help: c, showPremiumUpsell: o, effectiveMaxSize: s, transitionState: _, onClose: l } = t;
+    return o
+        ? (0, n.jsx)(b, {
+              transitionState: _,
+              onClose: l,
               handleLearnMore: function () {
                   ((0, a.A)(),
-                      d(),
-                      A.default.track(_.HAw.PREMIUM_PROMOTION_OPENED, {
-                          location_section: _.JJy.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: _.ZSU.NAVIGATION_LINK,
+                      l(),
+                      A.default.track(O.HAw.PREMIUM_PROMOTION_OPENED, {
+                          location_section: O.JJy.FILE_UPLOAD_UPSELL_MODAL,
+                          location_object: O.ZSU.NAVIGATION_LINK,
                       }),
-                      (0, u.pX)(_.BVt.APPLICATION_STORE));
+                      (0, D.pX)(O.BVt.APPLICATION_STORE));
               },
               effectiveMaxSize: s,
           })
-        : (0, c.jsx)(o.a, {
+        : (0, n.jsx)(i.a, {
               title: e,
-              subtitle: n,
-              transitionState: r,
-              actions: [{ text: f.intl.string(f.t["NX+WJN"]), onClick: d, variant: "primary" }],
-              onClose: d,
+              subtitle: c,
+              transitionState: _,
+              actions: [{ text: M.intl.string(M.t["NX+WJN"]), onClick: l, variant: "primary" }],
+              onClose: l,
           });
 }
-let I = "UPLOAD_ERROR_MODAL_KEY";
-function L(t) {
-    (0, i.openModal)((e) => (0, c.jsx)(O, { ...e, ...t }), { modalKey: I });
+let S = "UPLOAD_ERROR_MODAL_KEY";
+function y(t) {
+    (0, o.openModal)((e) => (0, n.jsx)(R, { ...e, ...t }), { modalKey: S });
 }

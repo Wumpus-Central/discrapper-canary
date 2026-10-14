@@ -2491,7 +2491,7 @@
 
 .infoBlockText_fcd769 {
     color: var(--text-muted);
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-md) var(--space-xl) var(--space-xs);
     text-align: center
 }
 
@@ -2624,4 +2624,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=63b710b9d9c71c2c.css.map*/
+/*# sourceMappingURL=2307678dd810be38.css.map*/

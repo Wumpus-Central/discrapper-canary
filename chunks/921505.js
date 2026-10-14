@@ -1919,7 +1919,7 @@ async function nd(e, t) {
     return (0, nc.VA)(
         e,
         n.map((e) => e.id),
-        t,
+        { disablePowerupAutoApply: t },
     );
 }
 function np() {

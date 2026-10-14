@@ -65,7 +65,7 @@ async function E() {
     return (r.h.dispatch({ type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: e }), e);
 }
 async function A(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    let { disablePowerupAutoApply: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     r.h.dispatch({ type: "GUILD_APPLY_BOOST_START" });
     try {
         let a = await i.Bo.put({

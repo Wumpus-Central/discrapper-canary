@@ -1,4 +1,4 @@
-l.d(e, { default: () => Z });
+l.d(e, { default: () => Y });
 var n = l(477900),
     i = l(582128),
     s = l(284009),
@@ -19,30 +19,30 @@ var n = l(477900),
     j = l(503698),
     v = l.n(j),
     E = l(695366),
-    N = l(548118),
-    b = l(814925),
-    A = l(868652),
+    A = l(548118),
+    N = l(814925),
+    b = l(868652),
     y = l(645619),
     U = l(434564),
     I = l(166403),
-    P = l(313375),
-    M = l(61780),
+    M = l(313375),
+    P = l(61780),
     T = l(660183),
     _ = l(741096);
-function k(t) {
+function w(t) {
     let { tier: e } = t;
     return (0, n.jsxs)("div", {
         className: _._v,
         children: [
-            (0, n.jsx)(b.A, {
+            (0, n.jsx)(N.A, {
                 className: _.U2,
-                children: (0, n.jsx)(P.A, { tier: e, color: "currentColor", className: _.Zw }),
+                children: (0, n.jsx)(M.A, { tier: e, color: "currentColor", className: _.Zw }),
             }),
             (0, C.gb)(e),
         ],
     });
 }
-function w(t) {
+function k(t) {
     let { guild: e, subscriptionChange: l } = t,
         i = (0, U.A)(e.id);
     if (0 === l) return null;
@@ -52,7 +52,7 @@ function w(t) {
     return 0 === r
         ? null
         : (0, n.jsxs)(n.Fragment, {
-              children: [(0, n.jsx)(M.A, { className: r > 0 ? _.$P : _.q0 }), (0, n.jsx)(k, { tier: a })],
+              children: [(0, n.jsx)(P.A, { className: r > 0 ? _.$P : _.q0 }), (0, n.jsx)(w, { tier: a })],
           });
 }
 function D(t) {
@@ -72,17 +72,17 @@ function D(t) {
               ],
           });
 }
-function R(t) {
+function G(t) {
     let { guild: e, subscriptionChange: l, className: s } = t,
         a = (0, r.bG)([y.A], () => null != y.A.getStateForGuild(e.id));
     return (
         i.useEffect(() => {
-            a || (0, A.Xd)(e.id);
+            a || (0, b.Xd)(e.id);
         }, [a, e.id]),
         (0, n.jsxs)("div", {
             className: v()(_.gt, s),
             children: [
-                (0, n.jsx)(N.Ay, { className: _.$f, guild: e, size: N.Ay.Sizes.LARGE, active: !0 }),
+                (0, n.jsx)(A.Ay, { className: _.$f, guild: e, size: A.Ay.Sizes.LARGE, active: !0 }),
                 (0, n.jsxs)("div", {
                     className: _.CR,
                     children: [
@@ -95,8 +95,8 @@ function R(t) {
                         (0, n.jsxs)("div", {
                             className: _.jp,
                             children: [
-                                (0, n.jsx)(k, { tier: e.premiumTier }),
-                                (0, n.jsx)(w, { guild: e, subscriptionChange: l }),
+                                (0, n.jsx)(w, { tier: e.premiumTier }),
+                                (0, n.jsx)(k, { guild: e, subscriptionChange: l }),
                             ],
                         }),
                     ],
@@ -105,7 +105,7 @@ function R(t) {
         })
     );
 }
-var G = l(652215),
+var R = l(652215),
     L = l(680759);
 let O = { type: "rive", rive: p.D, aspectRatio: "16/9" };
 function F(t) {
@@ -136,11 +136,11 @@ function F(t) {
         actions: u,
         children: [
             (0, n.jsx)(c.E, { variant: "text-md/normal", children: T.intl.string(T.t.yTlZV0) }),
-            (0, n.jsx)(R, { className: L.g, guild: l, subscriptionChange: i }),
+            (0, n.jsx)(G, { className: L.g, guild: l, subscriptionChange: i }),
             (0, n.jsx)(c.E, {
                 variant: "text-md/normal",
                 className: L.$,
-                children: T.intl.formatToPlainString(T.t.KPnDlu, { days: G.FI6, slotCount: i }),
+                children: T.intl.formatToPlainString(T.t.KPnDlu, { days: R.FI6, slotCount: i }),
             }),
             s > 0 ? (0, n.jsx)(D, { canceledCount: s }) : null,
             null != r &&
@@ -152,8 +152,8 @@ var B = l(636441),
     V = l(587491);
 l(321073);
 var z = l(935208),
-    K = l(171882);
-let J = {
+    J = l(171882);
+let K = {
     type: "image",
     src: "https://cdn.discordapp.com/assets/content/23384b90abfa30e78ebbd0910893fe031231876c363df46dffaadf32326e117e.svg",
     aspectRatio: "16/9",
@@ -179,7 +179,7 @@ function $(t) {
     return (0, n.jsxs)(f.k, {
         transitionState: e,
         onClose: m,
-        graphic: J,
+        graphic: K,
         title: T.intl.string(T.t["PR0n//"]),
         actions: h,
         children: [
@@ -189,22 +189,22 @@ function $(t) {
             }),
             (0, n.jsx)(c.E, {
                 variant: "text-xs/bold",
-                className: K.bV,
+                className: J.bV,
                 children: T.intl.format(T.t["5zQYEz"], { guildCount: x ?? 0 }),
             }),
             null != g
                 ? z.default
                       .keys(g)
                       .map((t) =>
-                          (0, n.jsx)(R, { className: K.A, guild: g[t][0], subscriptionChange: -1 * g[t].length }, t),
+                          (0, n.jsx)(G, { className: J.A, guild: g[t][0], subscriptionChange: -1 * g[t].length }, t),
                       )
                 : null,
             (0, n.jsx)(c.E, {
                 variant: "text-xs/normal",
-                className: K.bV,
+                className: J.bV,
                 children: T.intl.format(T.t.ct6oxD, { slotCount: a }),
             }),
-            (0, n.jsx)("div", { className: K.P4, children: (0, n.jsx)(R, { guild: l, subscriptionChange: s.length }) }),
+            (0, n.jsx)("div", { className: J.P4, children: (0, n.jsx)(G, { guild: l, subscriptionChange: s.length }) }),
             r > 0 ? (0, n.jsx)(D, { canceledCount: r }) : null,
             null != d &&
                 (0, n.jsx)(c.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: d.message }),
@@ -212,9 +212,8 @@ function $(t) {
     });
 }
 var H = l(285753),
-    Q = l(568065),
-    Y = l(406476);
-let Z = function (t) {
+    Q = l(406476);
+let Y = function (t) {
     let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: p, transitionState: f, onClose: j } = t,
         v = (0, C.D$)(g.A.boostSlots);
     (a()(null != e || null != l, "Must either provide slots or an initial selected guild"),
@@ -225,12 +224,12 @@ let Z = function (t) {
             "CONFIRM",
             "SUCCESS",
         ].filter((t) => null != t),
-        [N, b] = (0, r.yK)([m.A], () => [m.A.isModifyingAppliedBoost, m.A.applyBoostError]),
-        [A, y] = i.useState(E[0]),
+        [A, N] = (0, r.yK)([m.A], () => [m.A.isModifyingAppliedBoost, m.A.applyBoostError]),
+        [b, y] = i.useState(E[0]),
         [U, I] = i.useState(!1),
-        [P, M] = i.useState(l),
-        [_, k] = i.useState(e ?? v.slice(0, 1)),
-        w = i.useMemo(
+        [M, P] = i.useState(l),
+        [_, w] = i.useState(e ?? v.slice(0, 1)),
+        k = i.useMemo(
             () =>
                 null == _
                     ? []
@@ -241,16 +240,16 @@ let Z = function (t) {
             [_],
         ),
         D = i.useMemo(() => _?.[0]?.premiumGuildSubscription != null, [_]),
-        R = (0, H.A)("CONFIRM" === A || "SUCCESS" === A);
+        G = (0, H.A)("CONFIRM" === b || "SUCCESS" === b);
     function L() {
         return (
-            j("SUCCESS" === A),
-            h.default.track(G.HAw.MODAL_DISMISSED, { type: G.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s }),
+            j("SUCCESS" === b),
+            h.default.track(R.HAw.MODAL_DISMISSED, { type: R.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s }),
             Promise.resolve()
         );
     }
     i.useEffect(() => {
-        h.default.track(G.HAw.OPEN_MODAL, { type: G.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s });
+        h.default.track(R.HAw.OPEN_MODAL, { type: R.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s });
     }, [s]);
     let O = {
         UNUSED_QUANTITY_SELECT: () => (
@@ -265,24 +264,24 @@ let Z = function (t) {
                     { variant: "primary", text: T.intl.string(T.t["/uwYda"]), onClick: () => y("CONFIRM") },
                 ],
                 children: (0, n.jsxs)("div", {
-                    className: Y.pS,
+                    className: Q.pS,
                     children: [
                         (0, n.jsx)(c.E, {
                             variant: "text-md/normal",
-                            className: Y.TH,
+                            className: Q.TH,
                             children: T.intl.string(T.t.x5qw5U),
                         }),
                         (0, n.jsxs)("div", {
-                            className: Y.g9,
+                            className: Q.g9,
                             children: [
                                 (0, n.jsx)(d.l, {
                                     value: _.length,
-                                    onChange: (t) => k(v.slice(0, t)),
+                                    onChange: (t) => w(v.slice(0, t)),
                                     minValue: 1,
                                     maxValue: v.length,
                                 }),
                                 (0, n.jsx)(c.E, {
-                                    className: Y.v$,
+                                    className: Q.v$,
                                     variant: "text-md/normal",
                                     children: T.intl.string(T.t["Vl8TC+"]),
                                 }),
@@ -296,18 +295,18 @@ let Z = function (t) {
             (0, n.jsx)(S.default, {
                 onClose: L,
                 onSelectGuild: (t) => {
-                    (M(t), y("CONFIRM"));
+                    (P(t), y("CONFIRM"));
                 },
                 transitionState: f,
                 isTransfer: D,
-                selectedSlotGuilds: w,
+                selectedSlotGuilds: k,
             }),
         CONFIRM() {
-            if (null == P) return null;
+            if (null == M) return null;
             let t = _.filter((t) => (0, C.I5)(t)).length,
                 e = _.length;
             async function l() {
-                if ((I(!1), null != P && _?.length !== 0)) {
+                if ((I(!1), null != M && _?.length !== 0)) {
                     a()(
                         !_.some((t) => t.isOnCooldown()),
                         "Cannot use a premium guild subscription slot while on cooldown",
@@ -320,12 +319,12 @@ let Z = function (t) {
                             }),
                         ),
                             await (0, u.VA)(
-                                P.id,
+                                M.id,
                                 _.map((t) => {
                                     let { id: e } = t;
                                     return e;
                                 }),
-                                p === Q.Pn.PERK,
+                                { disablePowerupAutoApply: null != p },
                             ),
                             y("SUCCESS"));
                     } catch (t) {
@@ -336,42 +335,42 @@ let Z = function (t) {
             return D
                 ? (0, n.jsx)($, {
                       transitionState: f,
-                      toGuild: P,
-                      fromGuilds: w,
+                      toGuild: M,
+                      fromGuilds: k,
                       slotCount: e,
                       canceledCount: t,
-                      isModifyingSubscription: N,
-                      error: U ? b : null,
+                      isModifyingSubscription: A,
+                      error: U ? N : null,
                       onConfirm: l,
                       onClose: L,
                   })
                 : (0, n.jsx)(F, {
                       transitionState: f,
-                      guild: P,
+                      guild: M,
                       slotCount: e,
                       canceledCount: t,
-                      isModifyingSubscription: N,
-                      error: U ? b : null,
+                      isModifyingSubscription: A,
+                      error: U ? N : null,
                       onConfirm: l,
                       onClose: L,
                   });
         },
         SUCCESS: () =>
             (0, n.jsx)(V.A, {
-                mediaUrls: R.mediaUrls,
-                isSuccess: R.isSuccess,
+                mediaUrls: G.mediaUrls,
+                isSuccess: G.isSuccess,
                 transitionState: f,
                 onClose: L,
                 children: (t, e) =>
                     (0, n.jsx)(B.A, {
                         transitionState: f,
-                        guild: P,
+                        guild: M,
                         guildBoostQuantity: _.length,
                         isTransfer: D,
                         graphic: t,
                         onClose: e,
                     }),
             }),
-    }[A];
+    }[b];
     return null == O ? null : O();
 };
