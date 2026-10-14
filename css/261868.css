@@ -2441,6 +2441,34 @@
     line-height: 30px
 }
 
+.selectionBox__42077 {
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-12);
+    outline: 1px solid var(--border-normal);
+    padding: var(--space-12)
+}
+
+.selected__42077 {
+    background-color: var(--background-surface-high);
+    outline: 2px solid var(--brand-500)
+}
+
+.renewalOptions__42077 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.renewalOption__42077 {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: var(--space-8);
+    min-width: 0;
+    padding: var(--space-8)
+}
+
 .planOption__25679 {
     align-items: center;
     color: var(--interactive-text-default);
@@ -2451,6 +2479,15 @@
 
 .planOneTimeCost__25679 {
     margin-top: 8px
+}
+
+.recurringGiftPlanOption__25679 .planOption__25679 {
+    padding: 0
+}
+
+.recurringGiftPlanOption__25679 .planOneTimeCost__25679 {
+    color: var(--text-muted);
+    margin-top: var(--space-4)
 }
 
 .selectionBox__25679 {
@@ -2687,4 +2724,4 @@
     margin-top: 16px
 }
 
-/*# sourceMappingURL=529933.117bfb0f2d6da9a2.css.map*/
+/*# sourceMappingURL=261868.6dcceffbcdea44e8.css.map*/

@@ -90,6 +90,7 @@ async function S(e, t, n, i, l) {
             (s.gifting_facet = {
                 is_gift: !0,
                 gift_customization: {
+                    is_recurring: l.is_recurring,
                     recipient_id: l.recipient_id,
                     gift_style: l.gift_style,
                     emoji_id: l.emoji_id,
