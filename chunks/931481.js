@@ -1,4 +1,4 @@
-n.d(e, { A: () => R });
+n.d(e, { A: () => j });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -52,25 +52,25 @@ var I = n(562153),
     y = n(939496),
     p = n(996988),
     N = n(216057);
-function R(t) {
+function j(t) {
     let { user: e, guildId: n, channelId: s, applicationId: f, isGameRelationship: m = !1, className: g } = t,
         { themeType: h } = (0, y.E)(),
-        R = h === p.d.MODAL_V2,
-        j = I.Ay.getName(n, s, e),
-        { trackUserProfileAction: C } = (0, v.NJ)(),
-        { newestAnalyticsLocation: _ } = (0, u.Ay)(),
-        { acceptFriendRequest: b, cancelFriendRequest: P } = (0, A.I)({
+        j = h === p.d.MODAL_V2,
+        C = I.Ay.getName(n, s, e),
+        { trackUserProfileAction: R } = (0, v.NJ)(),
+        { newestAnalyticsLocation: b } = (0, u.Ay)(),
+        { acceptFriendRequest: _, cancelFriendRequest: k } = (0, A.I)({
             userId: e.id,
             applicationId: f,
             isGameRelationship: m,
-            location: _,
+            location: b,
         }),
-        k = l.useCallback(() => {
-            (b(), C({ action: m ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
-        }, [b, m, C]),
+        P = l.useCallback(() => {
+            (_(), R({ action: m ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
+        }, [_, m, R]),
         w = l.useCallback(() => {
-            (P(), C({ action: m ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
-        }, [P, m, C]),
+            (k(), R({ action: m ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
+        }, [k, m, R]),
         S = null != f,
         L = (0, o.h)(f);
     return S && null == L
@@ -82,7 +82,7 @@ function R(t) {
                       ? (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
                             children: E.intl.format(m ? E.t.syHjLL : E.t.V15uUI, {
-                                username: j,
+                                username: C,
                                 applicationIcon: () =>
                                     (0, i.jsx)(c.A, { className: N.Gt, game: L, size: c.M.XXSMALL }, L?.id),
                                 applicationName: L?.name,
@@ -90,16 +90,16 @@ function R(t) {
                         })
                       : (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: E.intl.format(E.t.uIomXw, { username: j }),
+                            children: E.intl.format(E.t.uIomXw, { username: C }),
                         }),
                   (0, i.jsx)(x, { userId: e.id, analyticsLocation: "User Profile" }),
                   (0, i.jsxs)("div", {
                       className: N.UD,
                       children: [
                           (0, i.jsx)(d.$, {
-                              variant: R ? "secondary" : "primary",
+                              variant: j ? "secondary" : "primary",
                               size: "sm",
-                              onClick: k,
+                              onClick: P,
                               text: E.intl.string(E.t.Zcibdf),
                           }),
                           (0, i.jsx)(d.$, {

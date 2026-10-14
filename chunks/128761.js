@@ -1,7 +1,7 @@
 (n.d(t, {
-    FA: () => m,
+    FA: () => g,
     K1: () => p,
-    KA: () => g,
+    KA: () => m,
     Nc: () => v,
     T4: () => f,
     YD: () => a,
@@ -103,10 +103,10 @@ function p(e) {
 function h(e, t) {
     return t ? r.intl.string(i.default.h3WBgO) : r.intl.string("preview" === e ? i.default.cjJdqL : i.default.yLsAhA);
 }
-function m(e) {
+function g(e) {
     return e.previewSha ?? e.entries[0]?.sha ?? null;
 }
-function g(e, t) {
+function m(e, t) {
     return { shown: t ? e : e.slice(0, 3), collapsible: e.length > 3 };
 }
 function b(e, t) {

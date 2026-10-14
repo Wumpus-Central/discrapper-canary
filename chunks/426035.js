@@ -1,4 +1,4 @@
-n.d(e, { AS: () => s, Du: () => _, kF: () => C, ug: () => E, wv: () => h, xI: () => p });
+n.d(e, { AS: () => h, Du: () => _, kF: () => C, ug: () => E, wv: () => s, xI: () => p });
 var r = n(587895),
     i = n(321191),
     l = n(808728),
@@ -14,7 +14,7 @@ function E(t) {
     let e = t.preview_application_id;
     return null == e ? null : (r.A.getApplication(e)?.bot?.id ?? e);
 }
-function s(t, e) {
+function h(t, e) {
     if (null == e) return null;
     let n = i.A.getMutualGuilds(_(t));
     return null == n
@@ -24,7 +24,7 @@ function s(t, e) {
               return n.id === e;
           });
 }
-function h(t, e) {
+function s(t, e) {
     return (null != e && a.A.canManageUser(d.xBc.KICK_MEMBERS, e, t)) || a.A.can(d.xBc.MANAGE_GUILD, t);
 }
 function p(t, e) {
@@ -37,7 +37,7 @@ function p(t, e) {
 }
 function C(t) {
     if ("user" === t.install_scope || null == t.guild_id || null == u.A.getGuild(t.guild_id)) return null;
-    let e = s(t, t.guild_id);
+    let e = h(t, t.guild_id);
     return !0 === e || p(t.guild_id, t.application_id).length > 0
         ? "in_server"
         : (t.supported_surfaces?.length ?? 0) > 0 && ((0, o.Hv)(t) || !1 === e)

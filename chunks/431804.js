@@ -1,5 +1,5 @@
-t.d(e, { r: () => r, y: () => s });
-var n,
-    o,
-    r = (((n = {}).PLAY = "play"), (n.PAUSE = "pause"), (n.BACK_TO_CONVERSATION = "back_to_conversation"), n),
-    s = (((o = {}).INAPPROPRIATE_CONVERSATION = "inappropriate_conversation"), (o.KEYBIND = "keybind"), o);
+o.d(e, { r: () => r, y: () => s });
+var t,
+    n,
+    r = (((t = {}).PLAY = "play"), (t.PAUSE = "pause"), (t.BACK_TO_CONVERSATION = "back_to_conversation"), t),
+    s = (((n = {}).INAPPROPRIATE_CONVERSATION = "inappropriate_conversation"), (n.KEYBIND = "keybind"), n);

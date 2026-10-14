@@ -11,8 +11,8 @@ var l = n(477900),
     f = n(890497),
     p = n(245179),
     h = n(723312),
-    m = n(300344),
-    g = n(614733),
+    g = n(300344),
+    m = n(614733),
     b = n(904363),
     v = n(513845),
     x = n(442331),
@@ -23,7 +23,7 @@ var l = n(477900),
     C = n(183265);
 let w = { values: {}, secrets: {} };
 function k(e) {
-    let { projectId: t, scopeKeys: n, note: f, notifyAgent: m = !1, isPreview: g = !1, children: b } = e,
+    let { projectId: t, scopeKeys: n, note: f, notifyAgent: g = !1, isPreview: m = !1, children: b } = e,
         A = (0, r.bG)([x.A], () => x.A.getSettings(t)),
         [k, M] = i.useState(w),
         [E, N] = i.useState({}),
@@ -47,7 +47,7 @@ function k(e) {
         B = (n ?? []).filter((e) => O.some((t) => t.key === e) || q.has(e)),
         U = B.length > 0,
         z = B.some((e) => q.has(e)),
-        $ = i.useMemo(() => {
+        V = i.useMemo(() => {
             let e = {};
             for (let [n, l] of Object.entries(k.values)) {
                 var t;
@@ -90,14 +90,14 @@ function k(e) {
                 })(F, n),
             };
         }, [k, F, D]),
-        V = null != $.values || null != $.secrets,
+        $ = null != V.values || null != V.secrets,
         H = i.useCallback(async () => {
-            if (!V || P) return !0;
+            if (!$ || P) return !0;
             (I(!0), L(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, $);
+                let { rebuildRequired: e } = await (0, y.nU)(t, V);
                 return (
-                    m || p.A.hasPendingSettingsRequest(t)
+                    g || p.A.hasPendingSettingsRequest(t)
                         ? (0, h.sendUserMessage)(t, S.intl.string(j.default["08bsJL"]))
                         : e
                           ? (0, y.ss)(t)
@@ -111,7 +111,7 @@ function k(e) {
             } finally {
                 I(!1);
             }
-        }, [V, m, t, P, $]);
+        }, [$, g, t, P, V]);
     function Y(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -172,7 +172,7 @@ function k(e) {
                   _,
                   {
                       projectId: t,
-                      isPreview: g,
+                      isPreview: m,
                       def: e,
                       hint: n,
                       value: k.values[e.key] ?? D[e.key],
@@ -328,7 +328,7 @@ function k(e) {
             loaded: null != A,
             valueCount: O.length,
             secretCount: W.length,
-            canSave: V,
+            canSave: $,
             saving: P,
             isScoped: U,
             submit: H,
@@ -370,7 +370,7 @@ function M(e) {
 }
 function E(e) {
     let { guildId: t, fallback: n, ...i } = e,
-        r = (0, m.A)(t, i.def.channel_filter);
+        r = (0, g.A)(t, i.def.channel_filter);
     return null == r ? n : (0, l.jsx)(M, { ...i, options: r, placeholder: S.intl.string(j.default.iZIF9m) });
 }
 function N(e) {
@@ -379,7 +379,7 @@ function N(e) {
 }
 function P(e) {
     let { guildId: t, ...n } = e,
-        { options: i, onQueryChange: r, matchSorterOptions: a } = (0, g.A)(t, (0, A.TN)(n.value));
+        { options: i, onQueryChange: r, matchSorterOptions: a } = (0, m.A)(t, (0, A.TN)(n.value));
     return (0, l.jsx)(M, { ...n, options: i, onQueryChange: r, matchSorterOptions: a });
 }
 function _(e) {

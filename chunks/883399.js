@@ -15,50 +15,50 @@ var E = l(271866),
     p = l(736653),
     m = l(793574),
     I = l(688810),
-    w = l(885386),
-    f = l(636537),
-    u = l(73153),
+    f = l(885386),
+    u = l(636537),
+    w = l(73153),
     T = l(652215);
 async function C() {
-    u.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_START" });
+    w.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_START" });
     try {
-        let t = await f.Bo.get({
+        let t = await u.Bo.get({
             url: T.Rsh.APPLICATIONS,
             query: { with_team_applications: !0 },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
-        u.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_SUCCESS", applicationIds: t.body.map((t) => t.id) });
+        w.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_SUCCESS", applicationIds: t.body.map((t) => t.id) });
     } catch (t) {
-        u.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_FAIL" });
+        w.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_FAIL" });
     }
 }
-var x =
+var N =
     (((s = {}).INITIALIZED = "INITIALIZED"), (s.LOADING = "LOADING"), (s.LOADED = "LOADED"), (s.ERROR = "ERROR"), s);
-let N = x.INITIALIZED,
+let x = N.INITIALIZED,
     _ = new Set();
 class Z extends c.Ay.Store {
     static displayName = "DeveloperApplicationsStore";
     getFetchState() {
-        return N;
+        return x;
     }
     isDeveloperOfApplication(t) {
         return null != t && _.has(t);
     }
 }
-let L = new Z(u.h, {
+let L = new Z(w.h, {
     LOGOUT: function () {
-        ((N = x.INITIALIZED), (_ = new Set()));
+        ((x = N.INITIALIZED), (_ = new Set()));
     },
     DEVELOPER_APPLICATIONS_FETCH_START() {
-        N = x.LOADING;
+        x = N.LOADING;
     },
     DEVELOPER_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { applicationIds: e } = t;
-        ((N = x.LOADED), (_ = new Set(e)));
+        ((x = N.LOADED), (_ = new Set(e)));
     },
     DEVELOPER_APPLICATIONS_FETCH_FAIL() {
-        N = x.ERROR;
+        x = N.ERROR;
     },
 });
 var O = l(793943),
@@ -78,8 +78,8 @@ let F = (0, l(945810).mj)({
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
     b = 221552 == l.j ? F : null;
-var U = l(676924),
-    k = l(995393),
+var k = l(676924),
+    U = l(995393),
     B = l(616633),
     J = l(518477),
     G = l(660183),
@@ -93,21 +93,21 @@ function Q(t) {
     let l,
         s,
         n,
-        { storefront: f, selectedPageIndex: u } = t,
-        N = (0, o.M)((0, p.Ay)()),
+        { storefront: u, selectedPageIndex: w } = t,
+        x = (0, o.M)((0, p.Ay)()),
         _ = (0, c.bG)([M.default], () => M.default.getCurrentUser()),
         Z = (0, H.jM)(),
         { analyticsLocations: F } = (0, I.Ay)(),
         { navigateToStorefrontPage: Q } = (0, P.H)(),
-        z = f?.applicationId,
+        z = u?.applicationId,
         { enabled: W } = b.useConfig({ location: "SocialLayerStorefrontHeader" }),
         $ =
             ((e = W ? z : null),
-            (l = w.Q_.useSetting()),
+            (l = f.Q_.useSetting()),
             (s = (0, c.bG)([L], () => L.getFetchState())),
             (n = (0, c.bG)([L], () => L.isDeveloperOfApplication(e))),
             a.useEffect(() => {
-                null != e && l && s === x.INITIALIZED && C();
+                null != e && l && s === N.INITIALIZED && C();
             }, [e, l, s]),
             n),
         K = (0, c.bG)([R.A], () => null != z && R.A.inTestModeForApplication(z)),
@@ -122,7 +122,7 @@ function Q(t) {
         tt = a.useCallback(() => {
             (S.default.track(T.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: Z?.sessionId,
-                cta_type: k.ST.LEARN_MORE,
+                cta_type: U.ST.LEARN_MORE,
                 location_stack: F,
             }),
                 window.open(D.A.getArticleURL(T.MVz.SOCIAL_LAYER_STOREFRONT)));
@@ -141,12 +141,12 @@ function Q(t) {
         tl = a.useCallback(() => {
             Q?.(0);
         }, [Q]);
-    if (null == f) return null;
-    let ts = null != f.logoAssetId ? (0, y.YE)(f.applicationId, f.logoAssetId, 128) : null,
-        ti = null != f.lightThemeLogoAssetId ? (0, y.YE)(f.applicationId, f.lightThemeLogoAssetId, 128) : null,
+    if (null == u) return null;
+    let ts = null != u.logoAssetId ? (0, y.YE)(u.applicationId, u.logoAssetId, 128) : null,
+        ti = null != u.lightThemeLogoAssetId ? (0, y.YE)(u.applicationId, u.lightThemeLogoAssetId, 128) : null,
         ta = null;
     return (
-        (ta = N ? (ts ?? ti) : (ti ?? ts)),
+        (ta = x ? (ts ?? ti) : (ti ?? ts)),
         (0, i.jsxs)(V.A, {
             disableDoubleClick: !0,
             className: Y.N1,
@@ -155,20 +155,20 @@ function Q(t) {
                     onClick: tl,
                     className: Y.gn,
                     children: [
-                        null != ta && (0, i.jsx)("img", { className: Y.wm, src: ta, alt: f.title }),
-                        (0, i.jsx)(V.A.Title, { children: f.title }),
+                        null != ta && (0, i.jsx)("img", { className: Y.wm, src: ta, alt: u.title }),
+                        (0, i.jsx)(V.A.Title, { children: u.title }),
                     ],
                 }),
-                f.pages.length > 1 &&
+                u.pages.length > 1 &&
                     (0, i.jsx)("div", {
                         className: Y.YC,
-                        children: f.pages.map((t, e) =>
+                        children: u.pages.map((t, e) =>
                             (0, i.jsx)(
                                 V.A.Title,
                                 {
                                     onClick: () => Q?.(e),
                                     wrapperClassName: Y.oB,
-                                    className: h()(Y.xT, { [Y.ys]: u === e }),
+                                    className: h()(Y.xT, { [Y.ys]: w === e }),
                                     children: (0, i.jsx)(d.E, { variant: "text-sm/medium", children: t.title }),
                                 },
                                 `${t.title}-${e}`,
@@ -184,7 +184,7 @@ function Q(t) {
                             ariaLabel: G.intl.string(G.t["7lZ31J"]),
                             className: Y.ij,
                         }),
-                        (0, i.jsx)(U.A, { location: m.A.SOCIAL_LAYER_STOREFRONT }),
+                        (0, i.jsx)(k.A, { location: m.A.SOCIAL_LAYER_STOREFRONT }),
                         (0, i.jsx)(q, {
                             onClick: tt,
                             ariaLabel: G.intl.string(G.t.hvVgAZ),
