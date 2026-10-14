@@ -50,51 +50,27 @@
     overflow: hidden
 }
 
-.sidebarFull__9a9f5 {
-    flex: 1 1 auto;
-    min-height: 0
-}
-
-.containerFull__9a9f5 {
-    border-end-start-radius: 0;
-    border-inline: none;
-    border-start-start-radius: 0;
-    flex: 1 1 auto;
-    width: 100%
-}
-
 .enable-forced-colors .resizeHandle__9a9f5 {
     background-color: ButtonText;
     width: 4px
 }
 
 .channelView_ea14bc {
-    display: flex;
     flex: 1;
     flex-direction: row;
-    min-height: 0;
-    min-width: 0;
     position: relative
 }
 
-.channelViewChatFull_ea14bc {
-    flex-direction: column
-}
-
-.channelViewChatFull_ea14bc .channelViewMain_ea14bc {
-    flex: 0 0 auto
-}
-
-.channelViewChatFull_ea14bc .channelViewPreview_ea14bc {
-    display: none
+.channelView_ea14bc,
+.channelViewMain_ea14bc {
+    display: flex;
+    min-height: 0;
+    min-width: 0
 }
 
 .channelViewMain_ea14bc {
-    display: flex;
     flex: 1;
-    flex-direction: column;
-    min-height: 0;
-    min-width: 0
+    flex-direction: column
 }
 
 .channelViewMainPanel_ea14bc {
@@ -165,4 +141,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=d8fb022b43d52d31.css.map*/
+/*# sourceMappingURL=b1d33caa81f4e61f.css.map*/
