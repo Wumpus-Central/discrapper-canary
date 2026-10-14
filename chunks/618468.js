@@ -2474,6 +2474,7 @@ var tn = n(335871),
         (l[(l.AV_WORKER = 6)] = "AV_WORKER"),
         (l[(l.SEO = 7)] = "SEO"),
         (l[(l.MARKETING = 8)] = "MARKETING"),
+        (l[(l.DESIGN_DOCS = 9)] = "DESIGN_DOCS"),
         l),
     ts = (((o = {})[(o.ENABLED = 0)] = "ENABLED"), (o[(o.DISABLED = 1)] = "DISABLED"), o),
     tl =
