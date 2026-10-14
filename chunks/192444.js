@@ -7,6 +7,7 @@ n.d(t, {
     aD: () => p,
     Se: () => E,
     uK: () => d,
+    Ay: () => v,
     Ds: () => g,
     LV: () => N,
     Mk: () => O,
@@ -151,6 +152,12 @@ let N = (0, s.mj)({
 });
 (0, s.mj)({
     name: "2026-09-mobile-quest-reward-button-to-secondary-button",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+let v = (0, s.mj)({
+    name: "2026-10-clickable-hero-banner",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },

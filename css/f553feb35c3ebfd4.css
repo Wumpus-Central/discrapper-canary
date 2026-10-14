@@ -332,6 +332,13 @@
     padding: 4px 8px
 }
 
+.clickableOverlay__4972f {
+    border-radius: inherit;
+    inset: 0;
+    position: absolute;
+    z-index: 1
+}
+
 .themeSection_f7cedc,
 .themeSelector_f7cedc {
     align-items: flex-start;
@@ -488,4 +495,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=993db2a90a474040.css.map*/
+/*# sourceMappingURL=f553feb35c3ebfd4.css.map*/

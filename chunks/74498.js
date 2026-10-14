@@ -9,4 +9,5 @@ e.exports = {
     hw: "heroAssetBlurredB__4972f",
     wm: "logo__4972f",
     yu: "sponsoredTag__4972f",
+    fj: "clickableOverlay__4972f",
 };

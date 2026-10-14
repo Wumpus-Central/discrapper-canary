@@ -116,6 +116,14 @@
     z-index: 2
 }
 
+.contentClickThrough__43da9 {
+    pointer-events: none
+}
+
+.contentClickThrough__43da9 button {
+    pointer-events: auto
+}
+
 .contentBody__43da9 {
     max-width: 540px
 }
@@ -242,4 +250,4 @@
     inset-inline-end: var(--space-8)
 }
 
-/*# sourceMappingURL=882297.f061a08ceb413eab.css.map*/
+/*# sourceMappingURL=882297.009fc2e1d5ac23d4.css.map*/

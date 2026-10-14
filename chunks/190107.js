@@ -85,6 +85,7 @@ var g =
     (r.QUESTS_STORE = "quests_store"),
     (r.QUEST_CHANNEL_CALL_HEADER = "quests_channel_call_header"),
     (r.QUEST_HOME_DESKTOP = "quest_home_desktop"),
+    (r.QUEST_HOME_HERO = "quest_home_hero"),
     (r.QUEST_HOME_HERO_SHELF_DESKTOP = "quest_home_hero_shelf_desktop"),
     (r.QUEST_HOME_DEFAULT_BANNER = "quest_home_default_banner"),
     (r.QUEST_HOME_MOBILE = "quest_home_mobile"),
