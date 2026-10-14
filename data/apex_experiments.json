@@ -5934,6 +5934,22 @@
     }
   },
   {
+    "name": "2026-10-remove-quests-from-discovery",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-server-tag-upsell-on-profile",
     "kind": "user",
     "defaultConfig": {
