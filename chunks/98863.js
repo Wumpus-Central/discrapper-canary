@@ -781,9 +781,16 @@ function tb(e) {
                     [tI.A],
                     () => {
                         let t = tI.A.getActivities(e.userId);
-                        return null != e.gameActivityIndex ? t[e.gameActivityIndex] : t[0];
+                        return null != e.gameActivityIndex
+                            ? t[e.gameActivityIndex]
+                            : e.isListening
+                              ? (t.find((e) => {
+                                    let { type: t } = e;
+                                    return t === ej.$pd.LISTENING;
+                                }) ?? t[0])
+                              : t[0];
                     },
-                    [e.userId, e.gameActivityIndex],
+                    [e.userId, e.gameActivityIndex, e.isListening],
                 ),
                 s = i?.type === ej.$pd.PLAYING || i?.type === ej.$pd.COMPETING ? "text-voice-connected" : "text-muted",
                 r = null != e.voiceChannelId && !n,
@@ -836,7 +843,7 @@ function tb(e) {
                 let n =
                     t && (e.status_display_type === eX.A.NAME || null == e.status_display_type)
                         ? (e.details ?? e.state)
-                        : (0, e5.A)(e).text;
+                        : (0, e5.A)(e, !0).text;
                 switch (e.type) {
                     case ej.$pd.PLAYING:
                     case ej.$pd.COMPETING:
