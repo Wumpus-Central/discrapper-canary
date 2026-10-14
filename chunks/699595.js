@@ -9,29 +9,29 @@ function u(e) {
     let t,
         { priceOptions: n, trialId: u, metadata: c, discountInvoicePreview: d } = e,
         { isEligibleForDiscount: p, discountOffer: m } = (0, o.i)(),
-        C = (0, a.YJ)(m),
-        h = !0 === n.loaded,
+        h = (0, a.YJ)(m),
+        C = !0 === n.loaded,
         f = null != d,
         [S, E] = (0, i.YV)({
-            items: null != C ? [{ planId: C, quantity: 1 }] : [],
+            items: null != h ? [{ planId: h, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: f || !p || null == C || !h,
+            preventFetch: f || !p || null == h || !C,
             trialId: u,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
             metadata: c,
         }),
-        A = f ? d : S,
-        y = l.useMemo(() => {
-            let e = p ? (A ?? null) : null;
+        I = f ? d : S,
+        A = l.useMemo(() => {
+            let e = p ? (I ?? null) : null;
             return {
                 discountOffer: m,
-                applicablePlan: C,
+                applicablePlan: h,
                 discountInvoicePreview: e,
-                discountAmountOff: null != C ? (0, a.pg)(e, C) : null,
+                discountAmountOff: null != h ? (0, a.pg)(e, h) : null,
                 discountInvoiceError: E,
             };
-        }, [m, C, A, E, p]);
+        }, [m, h, I, E, p]);
     return (
         (t = (0, s.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;
@@ -39,13 +39,13 @@ function u(e) {
         })),
         l.useEffect(
             () => (
-                t(y),
+                t(A),
                 () => {
                     t(r.T);
                 }
             ),
-            [y, t],
+            [A, t],
         ),
-        y
+        A
     );
 }

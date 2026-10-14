@@ -1,4 +1,4 @@
-n.d(t, { t: () => C });
+n.d(t, { t: () => h });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -11,22 +11,22 @@ var i = n(503698),
     d = n(180522),
     p = n(354972),
     m = n(129068);
-function C(e) {
+function h(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
-            emojiConfetti: C,
-            soundEffect: h,
+            emojiConfetti: h,
+            soundEffect: C,
             setEmojiConfetti: f,
             setSoundEffect: S,
         } = (0, s.Pv)(),
         E = (0, u.lo)(n, t),
-        A = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        y = E !== u.tB.DEFAULT;
+        I = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        A = E !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            y &&
+            A &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
@@ -44,17 +44,17 @@ function C(e) {
                                       })
                                     : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        A &&
+                        I &&
                             (0, l.jsxs)("div", {
                                 className: r()(m.b7, m.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: h,
+                                        sound: C,
                                         onSelect: function (e) {
                                             null != S && S(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(p.A, { setEmojiConfetti: f, emojiConfetti: null == C ? void 0 : C }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: f, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],

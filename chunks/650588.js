@@ -10,16 +10,16 @@ var l = n(477900),
     d = n(939249),
     p = n(7807),
     m = n(807348),
-    C = n(511558),
-    h = n(660183),
+    h = n(511558),
+    C = n(660183),
     f = n(649028);
 let S = [54, 8, 8, 8];
 function E(e) {
     let { onSelect: t, sound: n } = e,
         [r, E] = i.useState(!1),
-        A = i.useRef(null),
-        y = a()(f.Qq, f.Ow);
-    function I(e) {
+        I = i.useRef(null),
+        A = a()(f.Qq, f.Ow);
+    function y(e) {
         (E(!1), t?.(e));
     }
     function g(e) {
@@ -29,8 +29,8 @@ function E(e) {
                 (0, l.jsxs)("div", {
                     className: f.__invalid_customGiftHeaderText,
                     children: [
-                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: h.intl.string(h.t.aThJz8) }),
-                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: h.intl.string(h.t.stGFA3) }),
+                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: C.intl.string(C.t.aThJz8) }),
+                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: C.intl.string(C.t.stGFA3) }),
                     ],
                 }),
                 (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -38,7 +38,7 @@ function E(e) {
         });
     }
     return (0, l.jsx)(u.Y, {
-        targetElementRef: A,
+        targetElementRef: I,
         shouldShow: r,
         position: "bottom",
         align: "left",
@@ -46,13 +46,13 @@ function E(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.l, {
-                children: (0, l.jsx)(C.A, {
+                children: (0, l.jsx)(h.A, {
                     suppressPlaySound: !0,
                     shouldShowLockedSounds: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: I,
+                    onSelect: y,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: m.If.ADD,
                     listPadding: S,
@@ -65,7 +65,7 @@ function E(e) {
             (0, l.jsx)(d.D, {
                 className: a()(f.kL, f.Ow),
                 onClick: () => E(!0),
-                innerRef: A,
+                innerRef: I,
                 children:
                     null == n
                         ? (0, l.jsxs)("div", {
@@ -79,10 +79,10 @@ function E(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: A,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: h.intl.string(h.t.aThJz8),
+                                      children: C.intl.string(C.t.aThJz8),
                                   }),
                               ],
                           })
@@ -90,13 +90,13 @@ function E(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: A,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: A,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

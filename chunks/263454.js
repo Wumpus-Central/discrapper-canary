@@ -1,1 +1,1 @@
-c.exports = { Gt: "gameIcon__5a366" };
+e.exports = { Gt: "gameIcon__5a366" };

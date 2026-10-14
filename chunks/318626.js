@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     iE: "wrapper_c19a55",
     oE: "compact_c19a55",
     E: "cozy_c19a55",
@@ -62,7 +62,7 @@ e.exports = {
     YQ: "timestampInline_c19a55",
     CC: "alt_c19a55",
     ET: "timestampVisibleOnHover_c19a55",
-    IW: "usernameColorOnName_c19a55 " + _(601645).WY,
+    IW: "usernameColorOnName_c19a55 " + c(601645).WY,
     TK: "headerText_c19a55",
     yF: "hasRoleIcon_c19a55",
     hB: "hasBadges_c19a55",

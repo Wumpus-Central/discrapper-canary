@@ -1,50 +1,50 @@
-l.d(t, { A: () => m });
-var n = l(477900),
-    i = l(582128),
-    a = l(765178),
-    s = l(885574),
-    r = l(834730),
-    d = l(821609),
-    c = l(61567),
-    u = l(660183),
-    o = l(146108);
+n.d(t, { A: () => m });
+var l = n(477900),
+    i = n(582128),
+    a = n(765178),
+    s = n(885574),
+    r = n(834730),
+    d = n(821609),
+    c = n(61567),
+    o = n(660183),
+    u = n(146108);
 function m(e) {
     let { onPublish: t } = e,
-        [l, m] = i.useState(!1),
+        [n, m] = i.useState(!1),
         [x, h] = i.useState(!1),
         f = i.useCallback(async () => {
             (m(!0), h(!1));
             try {
-                (await t(), a.O.announce(u.intl.string(c.default.pDzipI)));
+                (await t(), a.O.announce(o.intl.string(c.default.pDzipI)));
             } catch {
                 h(!0);
             } finally {
                 m(!1);
             }
         }, [t]);
-    return (0, n.jsxs)("div", {
-        className: o.lm,
+    return (0, l.jsxs)("div", {
+        className: u.lm,
         children: [
-            (0, n.jsx)(s.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
+            (0, l.jsx)(s.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
             x
-                ? (0, n.jsx)(r.E, {
+                ? (0, l.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-feedback-critical",
-                      className: o.iU,
+                      className: u.iU,
                       role: "alert",
-                      children: u.intl.string(u.t.F8FvUy),
+                      children: o.intl.string(o.t.F8FvUy),
                   })
-                : (0, n.jsx)(r.E, {
+                : (0, l.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      className: o.iU,
-                      children: u.intl.string(c.default.Z2z85q),
+                      className: u.iU,
+                      children: o.intl.string(c.default.Z2z85q),
                   }),
-            (0, n.jsx)(d.$, {
+            (0, l.jsx)(d.$, {
                 variant: "secondary",
                 size: "sm",
-                text: u.intl.string(c.default["yul+0g"]),
-                loading: l,
+                text: o.intl.string(c.default["yul+0g"]),
+                loading: n,
                 onClick: f,
             }),
         ],

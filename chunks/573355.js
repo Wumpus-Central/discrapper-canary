@@ -88,8 +88,8 @@ function C(e) {
         ],
     });
 }
-let S = [];
-function P(e) {
+let P = [];
+function S(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: r } = e,
         [o, a] = i.useState(!1),
         u = i.useCallback(() => a(!0), []),
@@ -100,7 +100,7 @@ function P(e) {
                           let { applicationId: t } = e;
                           return t;
                       })
-                    : S,
+                    : P,
             [o, t],
         ),
         d = (0, h.A)(c, o),
@@ -230,7 +230,7 @@ function F(e) {
             onMouseEnter: d,
             ariaLabel: f,
             icon: p,
-        } = P({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: o }),
+        } = S({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: o }),
         R = b({ user: t, analyticsLocation: s }),
         E = i.useRef(null),
         g = { icon: p, __unsupportedReactNodeAsText: c, "aria-label": f, onMouseEnter: d, ...a };
@@ -264,7 +264,7 @@ function w(e) {
             onMouseEnter: d,
             ariaLabel: f,
             icon: p,
-        } = P({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: o }),
+        } = S({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: o }),
         R = b({ user: t, analyticsLocation: s }),
         E = i.useRef(null),
         g = { icon: p, __unsupportedReactNodeAsText: c, "aria-label": f, onMouseEnter: d, ...a };

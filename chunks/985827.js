@@ -1,4 +1,4 @@
-c.exports = {
+e.exports = {
     ft: "containerCompact__6c253",
     Qs: "content__6c253",
     $J: "boostIcon__6c253",

@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,18 +10,18 @@ var l = n(477900),
     d = n(939249),
     p = n(460905),
     m = n(879064),
-    C = n(652215),
-    h = n(307731),
+    h = n(652215),
+    C = n(307731),
     f = n(660183),
     S = n(290484);
-let E = { section: C.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    A = h.EmojiIntention.GIFT;
-function y(e) {
+let E = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
+    I = C.EmojiIntention.GIFT;
+function A(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [r, C] = i.useState(!1),
-        h = i.useRef(null),
-        y = a()(S.Qq, S.Ow);
-    function I(e) {
+        [r, h] = i.useState(!1),
+        C = i.useRef(null),
+        A = a()(S.Qq, S.Ow);
+    function y(e) {
         return (0, l.jsxs)("div", {
             className: S.ZC,
             children: [
@@ -38,14 +38,14 @@ function y(e) {
     }
     function g(e) {
         let { emoji: n } = e;
-        null != t && (t(n), C(!1));
+        null != t && (t(n), h(!1));
     }
     return (0, l.jsx)(u.Y, {
-        targetElementRef: h,
+        targetElementRef: C,
         shouldShow: r,
         position: "bottom",
         align: "left",
-        onRequestClose: () => C(!1),
+        onRequestClose: () => h(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.l, {
@@ -54,9 +54,9 @@ function y(e) {
                     closePopout: t,
                     onSelectEmoji: g,
                     wrapper: "div",
-                    pickerIntention: A,
+                    pickerIntention: I,
                     showAddEmojiButton: !1,
-                    renderHeader: I,
+                    renderHeader: y,
                     headerClassName: S.a8,
                     className: S.vX,
                     listHeaderClassName: S.vX,
@@ -68,8 +68,8 @@ function y(e) {
         children: () =>
             (0, l.jsx)(d.D, {
                 className: a()(S.kL, S.Ow),
-                onClick: () => C(!0),
-                innerRef: h,
+                onClick: () => h(!0),
+                innerRef: C,
                 children:
                     n?.name == null
                         ? (0, l.jsxs)("div", {
@@ -83,7 +83,7 @@ function y(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: A,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: f.intl.string(f.t.Hl2Ige),
@@ -94,12 +94,12 @@ function y(e) {
                               className: S.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: A,
                                       variant: "text-sm/semibold",
                                       children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: y,
+                                      className: A,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name.replace(/_/g, " "),

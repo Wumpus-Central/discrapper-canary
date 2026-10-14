@@ -10,14 +10,14 @@ var l = n(477900),
     d = n(580133),
     p = n(504560),
     m = n(242874),
-    C = n(573359),
-    h = n(163074),
+    h = n(573359),
+    C = n(163074),
     f = n(557679),
     S = n(892349),
     E = n(35587),
-    A = n(180522),
-    y = n(637969),
-    I = n(45938),
+    I = n(180522),
+    A = n(637969),
+    y = n(45938),
     g = n(158045),
     P = n(951305),
     v = n(166532),
@@ -40,17 +40,17 @@ function R(e) {
             purchaseState: e.purchaseState,
             quantity: e.quantity,
         })),
-        O = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        O = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
         { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, o.i)(),
         D = (0, c.S3)(),
         U = (0, u.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
-        { enabled: W } = h.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        V = D?.productLine === x.EZt.COLLECTIBLES,
-        Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
+        Y = D?.productLine === x.EZt.COLLECTIBLES,
+        V = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
+        Z = G && (0, y.Ik)(B) && U === v.pn.CONFIRM && null != F && !Y && !V,
         q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
@@ -77,7 +77,7 @@ function R(e) {
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(A.A, {
+                                children: (0, l.jsx)(I.A, {
                                     defaultAnimationState: m.oA.LOOP,
                                     giftStyle: F,
                                     className: b.qq,
@@ -91,7 +91,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(y.A, {
+                              ? (0, l.jsx)(A.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: E,
                                     premiumType: _.WN[n],

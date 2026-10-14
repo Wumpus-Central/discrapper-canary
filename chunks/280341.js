@@ -10,13 +10,13 @@ var l,
     d = n(277984),
     p = n(70142),
     m = n(739508),
-    C = n(184015),
-    h = n(723702),
+    h = n(184015),
+    C = n(723702),
     f = n(652215);
 function S() {
     let e = p.A.getClient();
     null != e &&
-        (0, C.j)().then((t) => {
+        (0, h.j)().then((t) => {
             t.venmo
                 .create({ client: e, allowDesktop: !0, paymentMethodUsage: "multi_use" })
                 .then((e) => {
@@ -30,7 +30,7 @@ function S() {
 function E() {
     let e = p.A.getClient();
     null != e &&
-        (0, C.j)().then((t) => {
+        (0, h.j)().then((t) => {
             t.paypal
                 .create({ client: e })
                 .then((e) => {
@@ -71,12 +71,12 @@ function E() {
                 .catch(() => u.h.dispatch({ type: "BRAINTREE_CREATE_PAYPAL_CLIENT_FAIL" }));
         });
 }
-function A() {
+function I() {
     let e = p.A.getPayPalClient();
     if (null == e) throw Error("braintree paypal client must be initialized before calling this");
     u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" });
     let t = Promise.resolve("");
-    ((0, h.isDesktop)() && (t = (0, d.jf)(f.hes.PAYPAL)),
+    ((0, C.isDesktop)() && (t = (0, d.jf)(f.hes.PAYPAL)),
         t
             .then(() => e.tokenize({ flow: "vault" }))
             .then((e) => {
@@ -104,7 +104,7 @@ function A() {
                       m.pM(Error(`Braintree Paypal Error: ${t} ${n} ${l}`)));
             }));
 }
-function y() {
+function A() {
     let e = p.A.getVenmoClient();
     if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
     (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_START" }),
@@ -122,7 +122,7 @@ function y() {
                       m.pM(Error(`Braintree Venmo Error: ${t} ${n} ${l}`)));
             }));
 }
-function I(e, t) {
+function y(e, t) {
     if (null == e) return Promise.resolve();
     u.h.dispatch(t);
     try {
@@ -187,7 +187,7 @@ async function W() {
         (u.h.dispatch({ type: "ADYEN_CREATE_CLIENT_SUCCESS", client: l }),
             (function (e) {
                 if (null != F.cashAppPayComponent) {
-                    (Y(), V());
+                    (V(), Y());
                     return;
                 }
                 let t = e
@@ -225,14 +225,14 @@ async function W() {
         ((0, m.pM)(e), u.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" }));
     }
 }
-function V() {
+function Y() {
     let e = F.cashAppPayComponent;
     if (null == e) throw Error("Adyen CashAppPay component must be created before mounting.");
     try {
         e.mount(`#${w.h}`);
     } catch (e) {}
 }
-function Y() {
+function V() {
     F.cashAppPayComponent?.unmount();
 }
 function K() {
@@ -266,10 +266,10 @@ function ee(e) {
             onBillingAddressChange: c,
         }),
         { returnToPaymentElementStep: p, remountAddressElement: m } = d,
-        C = a.useCallback(() => {
+        h = a.useCallback(() => {
             (l(M.pn.ADDRESS), Q.Ky.includes(o) && m());
         }, [l, m, o]),
-        h = a.useCallback(
+        C = a.useCallback(
             (e) => {
                 p(e);
             },
@@ -278,12 +278,12 @@ function ee(e) {
         f = a.useMemo(
             () => ({
                 stripePaymentElementState: d,
-                defaultOnBackHandler: h,
-                onSubmitCustomPaymentMethodSubStep: C,
+                defaultOnBackHandler: C,
+                onSubmitCustomPaymentMethodSubStep: h,
                 hasSelectedPaymentElementSourceType: null != d.paymentElementSelectedType,
                 ...n,
             }),
-            [d, h, C, n],
+            [d, C, h, n],
         );
     return (0, r.jsx)(X.Provider, { value: f, children: t });
 }
@@ -319,45 +319,45 @@ var er = n(683071),
     ed = n(287809),
     ep = n(832208),
     em = n(643909),
-    eC = n(661531),
-    eh = n(602853),
+    eh = n(661531),
+    eC = n(602853),
     ef = n(281595),
     eS = n(513098),
     eE = n(151167);
-let eA = function (e) {
+let eI = function (e) {
     let t = a.useRef(null),
         { stripeType: n, flipped: l, updateCompleted: i, onFocus: s, onBlur: o } = e,
         [u, c] = a.useState(ec.Be.UNKNOWN),
         [d, p] = a.useState(!1),
-        [m, C] = a.useState(!1),
-        [h, f] = a.useState(null),
+        [m, h] = a.useState(!1),
+        [C, f] = a.useState(null),
         [S, E] = a.useState({}),
-        A = (0, em.useElements)(),
-        y = a.useCallback(() => {
-            if (null != A)
+        I = (0, em.useElements)(),
+        A = a.useCallback(() => {
+            if (null != I)
                 switch (n) {
                     case "cardNumber": {
-                        let e = A.getElement(em.CardNumberElement);
+                        let e = I.getElement(em.CardNumberElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardExpiry": {
-                        let e = A.getElement(em.CardExpiryElement);
+                        let e = I.getElement(em.CardExpiryElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardCvc": {
-                        let e = A.getElement(em.CardCvcElement);
+                        let e = I.getElement(em.CardCvcElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                     }
                 }
-        }, [A, n]),
-        I = a.useCallback(
+        }, [I, n]),
+        y = a.useCallback(
             (e) => {
-                (m || e.empty || C(!0), null != i && i(e.complete), null != e.error && p(!1));
+                (m || e.empty || h(!0), null != i && i(e.complete), null != e.error && p(!1));
             },
             [m, i],
         ),
@@ -368,10 +368,10 @@ let eA = function (e) {
             (p(!1), o?.());
         }, [o]),
         v = a.useCallback(() => {
-            if (null != A)
+            if (null != I)
                 switch (n) {
                     case "cardNumber": {
-                        let e = A.getElement(em.CardNumberElement);
+                        let e = I.getElement(em.CardNumberElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (u !== e.brand && c(e.brand),
@@ -380,46 +380,46 @@ let eA = function (e) {
                                     : null != e.error
                                       ? f(B.intl.string(B.t.x4pWtJ))
                                       : f(null),
-                                I(e));
+                                y(e));
                         }),
                             e.on("focus", g),
                             e.on("blur", P));
                         break;
                     }
                     case "cardExpiry": {
-                        let e = A.getElement(em.CardExpiryElement);
+                        let e = I.getElement(em.CardExpiryElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
-                            (null != e.error || (e.empty && m) ? f(B.intl.string(B.t["9/zZdl"])) : f(null), I(e));
+                            (null != e.error || (e.empty && m) ? f(B.intl.string(B.t["9/zZdl"])) : f(null), y(e));
                         }),
                             e.on("focus", g),
                             e.on("blur", P));
                         break;
                     }
                     case "cardCvc": {
-                        let e = A.getElement(em.CardCvcElement);
+                        let e = I.getElement(em.CardCvcElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
-                            (null != e.error || (e.empty && m) ? f(B.intl.string(B.t.ro4isZ)) : f(null), I(e));
+                            (null != e.error || (e.empty && m) ? f(B.intl.string(B.t.ro4isZ)) : f(null), y(e));
                         }),
                             e.on("focus", g),
                             e.on("blur", P));
                     }
                 }
-        }, [P, I, g, u, A, m, n]);
+        }, [P, y, g, u, I, m, n]);
     a.useEffect(
         () => (
             v(),
             () => {
-                y();
+                A();
             }
         ),
-        [v, y],
+        [v, A],
     );
-    let x = (0, eh.r)(eC.A.colors.TEXT_SUBTLE).hex(),
-        _ = (0, eh.r)(eC.A.colors.TEXT_STRONG).hex();
+    let x = (0, eC.r)(eh.A.colors.TEXT_SUBTLE).hex(),
+        _ = (0, eC.r)(eh.A.colors.TEXT_STRONG).hex();
     function T() {
-        return es()(eS.vB, { [eS.Tn]: null !== h, [eS.iH]: d, [eS.yD]: "cardNumber" === n });
+        return es()(eS.vB, { [eS.Tn]: null !== C, [eS.iH]: d, [eS.yD]: "cardNumber" === n });
     }
     return (
         a.useLayoutEffect(() => {
@@ -466,13 +466,13 @@ let eA = function (e) {
                             });
                     }
                 })(),
-                (0, r.jsx)(ef.U, { error: h }),
+                (0, r.jsx)(ef.U, { error: C }),
             ],
         })
     );
 };
-var ey = n(719941),
-    eI = n(782328);
+var eA = n(719941),
+    ey = n(782328);
 let eg = function (e) {
     let { onCardInfoChange: t, error: n } = e,
         l = a.useRef(t),
@@ -480,7 +480,7 @@ let eg = function (e) {
         [o, u] = a.useState({}),
         [c, d] = a.useState({ name: "", country: "", postalCode: "" }),
         [p, m] = a.useState({}),
-        [C, h] = a.useState({}),
+        [h, C] = a.useState({}),
         { setFocusLockDisabled: f } = a.useContext(eo.M);
     a.useEffect(() => () => {
         void 0 !== f && f(!1);
@@ -491,7 +491,7 @@ let eg = function (e) {
     function E(e, t) {
         !!o[e] !== t && u((n) => ({ ...n, [e]: t }));
     }
-    let A = a.useCallback(
+    let I = a.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
@@ -501,34 +501,34 @@ let eg = function (e) {
     );
     return (
         a.useEffect(() => {
-            let e = o.cardNumber && o.cardExpiry && o.cardCvc && 0 === Object.keys(A(!0)).length;
+            let e = o.cardNumber && o.cardExpiry && o.cardCvc && 0 === Object.keys(I(!0)).length;
             l.current({ name: c.name }, !!e);
-        }, [o, c, A]),
+        }, [o, c, I]),
         (0, r.jsxs)("div", {
             children: [
                 ed.default.getCurrentUser()?.nsfwAllowed
                     ? (0, r.jsxs)("div", {
-                          className: ey.Rm,
+                          className: eA.Rm,
                           children: [
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.eo, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.DR, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.k4, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.a3, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.CY, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.Q5, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.YA, ey.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.eo, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.DR, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.k4, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.a3, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.CY, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.Q5, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.YA, eA.Ud) }),
                           ],
                       })
                     : (0, r.jsxs)("div", {
-                          className: ey.Rm,
+                          className: eA.Rm,
                           children: [
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.aq, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.VX, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.Yi, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.qR, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.m2, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey.Ij, ey.Ud) }),
-                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, ey._V, ey.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.aq, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.VX, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.Yi, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.qR, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.m2, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA.Ij, eA.Ud) }),
+                              (0, r.jsx)("div", { className: es()(ec.y3.SMALL, eA._V, eA.Ud) }),
                           ],
                       }),
                 (0, r.jsx)(ep.A, {
@@ -539,9 +539,9 @@ let eg = function (e) {
                                     id: "card-number",
                                     name: "cardNumber",
                                     title: () => B.intl.string(B.t.cVyJ3o),
-                                    getClassNameForLayout: () => eI.c6,
+                                    getClassNameForLayout: () => ey.c6,
                                     renderInput: () =>
-                                        (0, r.jsx)(eA, {
+                                        (0, r.jsx)(eI, {
                                             stripeType: "cardNumber",
                                             flipped: i,
                                             updateCompleted: (e) => E("cardNumber", e),
@@ -556,9 +556,9 @@ let eg = function (e) {
                                     id: "card-expiration-date",
                                     name: "cardExpiry",
                                     title: () => B.intl.string(B.t["CeBa/4"]),
-                                    getClassNameForLayout: () => eI.ep,
+                                    getClassNameForLayout: () => ey.ep,
                                     renderInput: () =>
-                                        (0, r.jsx)(eA, {
+                                        (0, r.jsx)(eI, {
                                             stripeType: "cardExpiry",
                                             updateCompleted: (e) => E("cardExpiry", e),
                                             onFocus: S,
@@ -568,9 +568,9 @@ let eg = function (e) {
                                     id: "card-cvc",
                                     name: "cardCvc",
                                     title: () => B.intl.string(B.t.Fd3rOz),
-                                    getClassNameForLayout: () => eI.ep,
+                                    getClassNameForLayout: () => ey.ep,
                                     renderInput: () =>
-                                        (0, r.jsx)(eA, {
+                                        (0, r.jsx)(eI, {
                                             stripeType: "cardCvc",
                                             updateCompleted: (e) => E("cardCvc", e),
                                             onFocus: () => {
@@ -591,29 +591,29 @@ let eg = function (e) {
                                     title: () => B.intl.string(B.t.VUlFdU),
                                     autoComplete: "cc-name",
                                     placeholder: () => B.intl.string(B.t["yf7ms+"]),
-                                    getClassNameForLayout: () => eI.c6,
+                                    getClassNameForLayout: () => ey.c6,
                                     renderInput: (e) => (0, r.jsx)(eu.k, { ...e }),
                                 },
                             ],
                         },
                     ],
-                    errors: C,
+                    errors: h,
                     formError: n,
                     values: c,
                     onFieldChange: function (e, t) {
                         if ("name" !== t && "country" !== t && "postalCode" !== t) return;
                         let n = { ...c },
                             l = { ...p },
-                            i = { name: C.name };
+                            i = { name: h.name };
                         (p[t] || "" === e || (l[t] = !0),
                             (n[t] = e),
                             l[t] && "" === e ? "name" === t && (i.name = B.intl.string(B.t.lIkVsi)) : delete i[t],
                             d(n),
                             m(l),
-                            h(i));
+                            C(i));
                     },
                     onFieldBlur: function () {
-                        h(A());
+                        C(I());
                     },
                 }),
             ],
@@ -754,13 +754,13 @@ let eL = {
 var ek = n(685094);
 class ew extends a.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && A();
+        null != this.props.paypalClient && I();
     }
     componentDidUpdate(e) {
-        null == e.paypalClient && null != this.props.paypalClient && A();
+        null == e.paypalClient && null != this.props.paypalClient && I();
     }
     componentWillUnmount() {
-        I(p.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
+        y(p.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
             null != p.A.getClient() && E();
         });
     }
@@ -784,13 +784,13 @@ var eU = n(297264),
     eF = n(351665);
 class eB extends a.PureComponent {
     componentDidMount() {
-        null != this.props.venmoClient && y();
+        null != this.props.venmoClient && A();
     }
     componentDidUpdate(e) {
-        null == e.venmoClient && null != this.props.venmoClient && y();
+        null == e.venmoClient && null != this.props.venmoClient && A();
     }
     componentWillUnmount() {
-        I(p.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
+        y(p.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
             null != p.A.getClient() && S();
         });
     }
@@ -830,15 +830,15 @@ let eH = s.Ay.connectStores([p.A, j.A], () => ({
     venmoClient: p.A.getVenmoClient(),
 }))(eB);
 var eW = n(891197),
-    eV = n(462887),
-    eY = n(331322),
+    eY = n(462887),
+    eV = n(331322),
     eK = n(736653),
     eZ = n(438983);
 let eq = function (e) {
     let t = (0, eK.Ay)(),
         n = a.useRef(null),
         [l, i] = a.useState({}),
-        s = (0, eh.r)(eC.A.colors.BACKGROUND_BASE_LOWER).hex();
+        s = (0, eC.r)(eh.A.colors.BACKGROUND_BASE_LOWER).hex();
     switch (
         (a.useLayoutEffect(() => {
             let { current: e } = n;
@@ -856,18 +856,18 @@ let eq = function (e) {
                     backgroundColor: s,
                     padding: "12px",
                     "::placeholder": { color: l.getPropertyValue("color") },
-                    borderRadius: eC.A.radii.xs,
+                    borderRadius: eh.A.radii.xs,
                 },
             });
         }, [n, s]),
         e.type)
     ) {
         case eb.he.PRZELEWY24: {
-            let i = (0, eV.M)(t) ? "/assets/f4150b3aed6c4679.svg" : "/assets/8b825aafb2e4dbed.svg",
+            let i = (0, eY.M)(t) ? "/assets/f4150b3aed6c4679.svg" : "/assets/8b825aafb2e4dbed.svg",
                 { onNameChange: a, onEmailChange: s, onP24BankChange: o, p24BankValue: u, billingAddressInfo: c } = e;
             return (0, r.jsx)("div", {
                 className: eZ.rf,
-                children: (0, r.jsxs)(eY.B, {
+                children: (0, r.jsxs)(eV.B, {
                     gap: 16,
                     children: [
                         (0, r.jsx)(eu.k, {
@@ -885,7 +885,7 @@ let eq = function (e) {
                             onChange: (e) => a(e),
                             value: c.name,
                         }),
-                        (0, r.jsxs)(eY.B, {
+                        (0, r.jsxs)(eV.B, {
                             gap: 4,
                             children: [
                                 (0, r.jsx)(eG.E, { variant: "text-sm/semibold", children: B.intl.string(B.t.De3b8t) }),
@@ -905,10 +905,10 @@ let eq = function (e) {
         }
         case eb.he.EPS: {
             let { onAccountHolderNameChange: i, onEPSBankChange: a, epsBankValue: s, billingAddressInfo: o } = e,
-                u = (0, eV.M)(t) ? "/assets/025b24b0055c8d81.svg" : "/assets/1dae7d71a65fd90f.svg";
+                u = (0, eY.M)(t) ? "/assets/025b24b0055c8d81.svg" : "/assets/1dae7d71a65fd90f.svg";
             return (0, r.jsx)("div", {
                 className: eZ.rf,
-                children: (0, r.jsxs)(eY.B, {
+                children: (0, r.jsxs)(eV.B, {
                     gap: 16,
                     children: [
                         (0, r.jsx)(eu.k, {
@@ -919,7 +919,7 @@ let eq = function (e) {
                             onChange: (e) => i(e),
                             value: o.name,
                         }),
-                        (0, r.jsxs)(eY.B, {
+                        (0, r.jsxs)(eV.B, {
                             gap: 4,
                             children: [
                                 (0, r.jsx)(eG.E, { variant: "text-sm/semibold", children: B.intl.string(B.t.dFyV07) }),
@@ -995,8 +995,8 @@ function tl(e) {
         {
             browserCheckoutState: p,
             browserCheckoutStateLoadId: m,
-            browserCheckoutStateSkuId: C,
-            browserCheckoutStatePlanId: h,
+            browserCheckoutStateSkuId: h,
+            browserCheckoutStatePlanId: C,
         } = (0, s.cf)([te], () => ({
             browserCheckoutState: te.browserCheckoutState,
             browserCheckoutStateLoadId: te.loadId,
@@ -1005,7 +1005,7 @@ function tl(e) {
         })),
         S = (0, e0.A)(),
         { isGift: E } = (0, e1.Pv)(),
-        [A, y] = a.useState(!1);
+        [I, A] = a.useState(!1);
     switch (n) {
         case M.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
             t = f.do8.GOOGLE_PAY;
@@ -1016,8 +1016,8 @@ function tl(e) {
     return (
         a.useEffect(() => {
             let e = setTimeout(() => {
-                A ||
-                    (y(!0),
+                I ||
+                    (A(!0),
                     (0, d.Ze)(c.loadId),
                     (0, e2.my)(
                         {
@@ -1030,12 +1030,12 @@ function tl(e) {
                     ));
             }, 1e3);
             return () => clearTimeout(e);
-        }, [S, E, c, i, y, A, t]),
+        }, [S, E, c, i, A, I, t]),
         a.useEffect(() => {
-            (null !== C && (tt.oz.includes(C) && ((0, eX.ur)(C), (0, d.hP)()), o(C)),
-                null !== h && u(h),
+            (null !== h && (tt.oz.includes(h) && ((0, eX.ur)(h), (0, d.hP)()), o(h)),
+                null !== C && u(C),
                 m === c.loadId && p === e4.DONE && l());
-        }, [o, u, p, m, C, h, c, l]),
+        }, [o, u, p, m, h, C, c, l]),
         (0, r.jsxs)("div", {
             className: tn.rf,
             children: [
@@ -1064,9 +1064,9 @@ function ta(e) {
         l = (0, s.bG)([j.A], () => j.A.adyenPaymentData);
     a.useEffect(
         () => (
-            null == l && null != n && (V(), K()),
+            null == l && null != n && (Y(), K()),
             () => {
-                Y();
+                V();
             }
         ),
         [l, n],
@@ -1120,21 +1120,21 @@ function tp(e) {
             paymentElementSelectedType: c,
             returnToPaymentElementStep: d,
             stripeElementsRef: p,
-            lastConfirmedSetupIntentRef: C,
+            lastConfirmedSetupIntentRef: h,
         } = a,
-        h = (0, N.S)(),
+        C = (0, N.S)(),
         { createSetupIntent: f } = (0, to.x)(),
         { contextMetadata: S } = (0, T.t4)((e) => ({ contextMetadata: e.contextMetadata })),
         {
             isSubmittingCurrentStep: E,
-            billingAddressState: A,
-            setIsSubmittingCurrentStep: y,
-            hasRedirectURL: I,
+            billingAddressState: I,
+            setIsSubmittingCurrentStep: A,
+            hasRedirectURL: y,
             setHasRedirectURL: g,
             isAuthenticating: P,
         } = t;
     async function v() {
-        y(!0);
+        A(!0);
         let e = s ? c : i.methodType,
             n = p.current,
             r = null != e && (0, tc.i)(e) ? tc.F[e] : null;
@@ -1148,14 +1148,14 @@ function tp(e) {
             let e = await a({
                 ...t,
                 analyticsLocation: o,
-                stripe: h,
+                stripe: C,
                 shouldUsePaymentElement: s,
                 stripeElements: n,
-                lastConfirmedSetupIntentRef: C,
+                lastConfirmedSetupIntentRef: h,
                 createSetupIntent: f,
                 overwriteSubscriptionPaymentSource: u,
             });
-            ("redirect-url" === e.responseType ? g(e.hasRedirectURL) : l(e.paymentSource), I || y(!1));
+            ("redirect-url" === e.responseType ? g(e.hasRedirectURL) : l(e.paymentSource), y || A(!1));
         } catch (e) {
             if (e instanceof ts.Ey) {
                 let t = Object.keys(e.fields).sort(),
@@ -1179,7 +1179,7 @@ function tp(e) {
                         },
                     }));
             }
-            (y(!1), td.warn(`Error confirming submitting Address Step for Payment Source Type: ${x}`, e));
+            (A(!1), td.warn(`Error confirming submitting Address Step for Payment Source Type: ${x}`, e));
         }
     }
     let x = i.methodType,
@@ -1209,21 +1209,21 @@ function tp(e) {
         primaryCTA: q.Ay.CTAType.CONTINUE,
         primaryText: B.intl.string(B.t.PDTjLN),
         primarySubmitting: E,
-        primaryDisabled: !A.isValid || P,
+        primaryDisabled: !I.isValid || P,
         onPrimary: v,
     });
 }
 var tm = n(648335);
-let tC = new z.A("PaymentElementStepFooter.tsx");
-function th(e) {
+let th = new z.A("PaymentElementStepFooter.tsx");
+function tC(e) {
     let { addPaymentMethodStepState: t } = e,
         { setIsSubmittingCurrentStep: n, setBillingAddressState: l, isSubmittingCurrentStep: i } = t,
         s = (0, N.S)(),
         { paymentElementOnNextCallback: o, handleStepChange: u, stripePaymentElementState: c, onReturn: p } = et(),
         {
             paymentElementSelectedType: m,
-            stripeElementsRef: C,
-            remountAddressElement: h,
+            stripeElementsRef: h,
+            remountAddressElement: C,
             onBackFromPaymentElement: f,
             paymentElementReady: S,
         } = c,
@@ -1236,8 +1236,8 @@ function th(e) {
                 if (null != e && null != e.submitPaymentElementStepHandler) {
                     (await e.submitPaymentElementStepHandler({
                         stripe: s,
-                        stripeElements: C.current,
-                        remountAddressElement: h,
+                        stripeElements: h.current,
+                        remountAddressElement: C,
                         setBillingAddressState: l,
                     }),
                         u(e.stepAfterPaymentElement ?? M.pn.ADDRESS));
@@ -1247,16 +1247,16 @@ function th(e) {
                 if (null != t) return void u(t);
                 u(M.pn.ADDRESS);
             } catch (e) {
-                tC.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
+                th.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
             } finally {
                 n(!1);
             }
-        }, [o, m, C, h, u, s, n, l]),
-        A = a.useCallback(() => {
+        }, [o, m, h, C, u, s, n, l]),
+        I = a.useCallback(() => {
             (f(), null != p && p());
         }, [f, p]);
     return (0, r.jsx)(el, {
-        onBack: A,
+        onBack: I,
         primaryCTA: q.Ay.CTAType.CONTINUE,
         primaryType: "submit",
         primaryText: B.intl.string(B.t.PDTjLN),
@@ -1268,7 +1268,7 @@ function th(e) {
 var tf = n(814935),
     tS = n(24404);
 let tE = new z.A("AddPaymentMethodSubstepRegistry.tsx");
-function tA(e) {
+function tI(e) {
     let { setCreditCardState: t, setBillingAddressState: n } = e,
         l = a.useCallback(
             (e, l) => {
@@ -1279,7 +1279,7 @@ function tA(e) {
         i = (0, s.bG)([j.A], () => j.A.error);
     return (0, r.jsx)(eR, { billingError: i, onCardInfoChange: l });
 }
-function ty(e) {
+function tA(e) {
     let { setIsSubmittingCurrentStep: t, setTokenState: n, isSubmittingCurrentStep: l, creditCardState: i } = e,
         { handleStepChange: a, onReturn: s } = et(),
         o = (0, N.S)();
@@ -1310,7 +1310,7 @@ function ty(e) {
         },
     });
 }
-function tI() {
+function ty() {
     let { currentStep: e, redirectToCardInput: t, onComplete: n } = et();
     return (0, r.jsx)(tl, { step: e, onPurchaseComplete: () => n(e), onHandoffFailure: t });
 }
@@ -1378,7 +1378,7 @@ function t_(e) {
             return a
                 ? n()
                 : void (null == (e = p.A.getLastURL())
-                      ? A()
+                      ? I()
                       : (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" }), window.open(e)));
         },
     });
@@ -1391,29 +1391,29 @@ function tT(e) {
         onBack: () => i(eb.he.VENMO),
         primaryCTA: q.Ay.CTAType.CONTINUE,
         primaryText: l ? B.intl.string(B.t.PDTjLN) : B.intl.string(B.t["4KoTLM"]),
-        onPrimary: () => (l ? a() : void y()),
+        onPrimary: () => (l ? a() : void A()),
     });
 }
 let tN = {
     [M.pn.CREDIT_CARD_INFORMATION]: {
-        renderStepBody: (e) => (0, r.jsx)(tA, { ...e }),
-        renderStepFooter: (e) => (0, r.jsx)(ty, { ...e }),
+        renderStepBody: (e) => (0, r.jsx)(tI, { ...e }),
+        renderStepFooter: (e) => (0, r.jsx)(tA, { ...e }),
     },
     [M.pn.AWAITING_BROWSER_CHECKOUT]: {
-        renderStepBody: () => (0, r.jsx)(tI, {}),
+        renderStepBody: () => (0, r.jsx)(ty, {}),
         renderStepFooter: () => (0, r.jsx)(tg, {}),
     },
     [M.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY]: {
-        renderStepBody: () => (0, r.jsx)(tI, {}),
+        renderStepBody: () => (0, r.jsx)(ty, {}),
         renderStepFooter: () => (0, r.jsx)(tg, {}),
     },
     [M.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY]: {
-        renderStepBody: () => (0, r.jsx)(tI, {}),
+        renderStepBody: () => (0, r.jsx)(ty, {}),
         renderStepFooter: () => (0, r.jsx)(tg, {}),
     },
     [M.pn.PAYMENT_ELEMENT]: {
         renderStepBody: () => null,
-        renderStepFooter: (e) => (0, r.jsx)(th, { addPaymentMethodStepState: e }),
+        renderStepFooter: (e) => (0, r.jsx)(tC, { addPaymentMethodStepState: e }),
     },
     [M.pn.EPS_INFORMATION]: {
         renderStepBody: (e) => {
@@ -1481,8 +1481,8 @@ function tb(e) {
             onBackFromPaymentElement: d,
             paymentElementLoaded: p,
             paymentElementSelectedType: m,
-            stripeElementsRef: C,
-            stripePaymentElementProps: h,
+            stripeElementsRef: h,
+            stripePaymentElementProps: C,
             stripeAddressElementProps: f,
             addressElementKey: S,
         } = i;
@@ -1490,8 +1490,8 @@ function tb(e) {
         step: s,
         analyticsContext: null != n ? { activitySessionId: c, contextMetadata: u, analyticsData: n } : void 0,
         paymentElementSelectedType: m,
-        stripeElementsRef: C,
-        stripePaymentElementProps: h,
+        stripeElementsRef: h,
+        stripePaymentElementProps: C,
         stripeAddressElementProps: f,
         addressElementKey: S,
         billingAddressInfo: t.info,
@@ -1573,13 +1573,13 @@ function tD(e) {
             onComplete: c,
             onStepChange: p,
             header: m,
-            analyticsLocation: C,
-            analyticsData: h,
+            analyticsLocation: h,
+            analyticsData: C,
             overwriteSubscriptionPaymentSource: S = !1,
             useCheckoutStep: E = !1,
-            isEligibleForTrial: A = !1,
-            allowDesktopRedirectPurchase: y = !1,
-            toastContent: I,
+            isEligibleForTrial: I = !1,
+            allowDesktopRedirectPurchase: A = !1,
+            toastContent: y,
             continueSessionToInitialStep: g,
         } = e,
         v = (0, N.S)(),
@@ -1589,8 +1589,8 @@ function tD(e) {
         }));
     (0, P.l0)(b);
     let w = a.useMemo(
-            () => (n === M.pn.PAYMENT_ELEMENT ? (y ? M.pn.AWAITING_BROWSER_CHECKOUT : M.pn.PAYMENT_ELEMENT) : n),
-            [n, y],
+            () => (n === M.pn.PAYMENT_ELEMENT ? (A ? M.pn.AWAITING_BROWSER_CHECKOUT : M.pn.PAYMENT_ELEMENT) : n),
+            [n, A],
         ),
         {
             CREDIT_CARD_STEPS: D,
@@ -1646,7 +1646,7 @@ function tD(e) {
             return { CREDIT_CARD_STEPS: r, CASH_APP_STEPS: p, PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: m };
         })({ prependSteps: l, appendSteps: i }),
         [F, H] = a.useState(w),
-        [W, V] = a.useState(
+        [W, Y] = a.useState(
             (function (e) {
                 switch (e) {
                     case M.pn.CREDIT_CARD_INFORMATION:
@@ -1661,7 +1661,7 @@ function tD(e) {
     a.useEffect(() => {
         (0, d.IV)();
     }, []);
-    let Y = a.useCallback(
+    let V = a.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                 (H(e), t && p({ currentStep: F, toStep: e }));
@@ -1672,13 +1672,13 @@ function tD(e) {
             (e) => {
                 O.default.track(f.HAw.PAYMENT_FLOW_ADD_SOURCE_COMPLETED, {
                     load_id: x.loadId,
-                    analytics_location: C,
+                    analytics_location: h,
                     payment_source_id: e.id,
                     payment_source_type: e.type,
                     payment_source_country: e.paymentMethodCountry,
                 });
             },
-            [x.loadId, C],
+            [x.loadId, h],
         ),
         Z = (0, s.bG)([j.A], () => j.A.error),
         q = a.useRef(Z);
@@ -1689,24 +1689,24 @@ function tD(e) {
                 Z !== e &&
                 O.default.track(f.HAw.PAYMENT_FLOW_ADD_SOURCE_ERROR, {
                     load_id: x.loadId,
-                    analytics_location: C,
+                    analytics_location: h,
                     payment_source_type: W.methodType,
                     error_code: Z.code,
                     error_message: Z.message,
                 }));
-    }, [Z, x.loadId, C, W.methodType]);
+    }, [Z, x.loadId, h, W.methodType]);
     let z = a.useCallback(
             (e) => {
                 (K(e),
                     (0, o.P0)({
-                        text: void 0 !== I ? I : B.intl.string(B.t["VJPg+l"]),
+                        text: void 0 !== y ? y : B.intl.string(B.t["VJPg+l"]),
                         variant: "success",
                         position: "bottom",
                     }),
                     c(F, e),
-                    Y(w, !1));
+                    V(w, !1));
             },
-            [Y, w, F, c, I, K],
+            [V, w, F, c, y, K],
         ),
         { setPaymentSourceId: $, setBillingAddressState: Q } = t,
         J = a.useCallback(
@@ -1731,21 +1731,21 @@ function tD(e) {
             })();
         }, [X]));
     let el = a.useCallback(() => {
-            (V(D), Y(M.pn.PAYMENT_ELEMENT));
-        }, [V, Y, D]),
+            (Y(D), V(M.pn.PAYMENT_ELEMENT));
+        }, [Y, V, D]),
         er = a.useCallback(
             (e) => {
                 let { steps: t, methodType: n } = G[e];
-                V({ steps: t, methodType: n === eb.he.UNKNOWN ? e : n });
+                Y({ steps: t, methodType: n === eb.he.UNKNOWN ? e : n });
             },
-            [V, G],
+            [Y, G],
         ),
         ea = a.useCallback(() => {
-            V({ steps: [...l, ...ej, ...i], methodType: eb.he.CARD });
-        }, [V, l, i]),
+            Y({ steps: [...l, ...ej, ...i], methodType: eb.he.CARD });
+        }, [Y, l, i]),
         es = a.useMemo(
             () => ({
-                handleStepChange: Y,
+                handleStepChange: V,
                 continueSessionToInitialStep: g,
                 currentStep: F,
                 paymentMethodSteps: W,
@@ -1756,11 +1756,11 @@ function tD(e) {
                 onComplete: c,
                 onReturn: u,
                 completeSteps: J,
-                analyticsLocation: C,
-                analyticsData: h,
+                analyticsLocation: h,
+                analyticsData: C,
                 overwriteSubscriptionPaymentSource: S,
             }),
-            [Y, g, F, W, Q, el, er, ea, C, c, u, J, h, S],
+            [V, g, F, W, Q, el, er, ea, h, c, u, J, C, S],
         );
     if (!(F in tN))
         throw new _.v({ message: `Unexpected Add Payment sub-step: ${F}`, extraSentryInformation: { currentStep: F } });
@@ -1770,7 +1770,7 @@ function tD(e) {
     return E
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  A && (0, r.jsx)(L.A, { className: tf.At, isEligibleForTrial: A }),
+                  I && (0, r.jsx)(L.A, { className: tf.At, isEligibleForTrial: I }),
                   (0, r.jsxs)(ee, {
                       ...es,
                       children: [
@@ -1809,7 +1809,7 @@ function tU(e) {
         i = (0, s.bG)([F], () => F.cashAppPayComponent),
         r = (0, s.bG)([x.A], () => x.A.data?.allowed_payment_source_types ?? null);
     ((0, P.Ay)(() => {
-        ((0, C.j)().then((e) => {
+        ((0, h.j)().then((e) => {
             e.client
                 .create({ authorization: f.Gg3.BRAINTREE.KEY })
                 .then((e) => {
@@ -1842,10 +1842,10 @@ function tU(e) {
             null == i && null != r && r.includes(eb.he.CASH_APP) && W();
         }, [r, i]));
     let [o, c] = a.useState(t),
-        h = (0, v.Ay)(t);
-    t !== h && null != t && null == o && c(t);
-    let [A, y] = a.useState(() => ({ info: tk, isValid: !1 })),
-        [I, _] = a.useState(() => ({ info: tw, isValid: !1 })),
+        C = (0, v.Ay)(t);
+    t !== C && null != t && null == o && c(t);
+    let [I, A] = a.useState(() => ({ info: tk, isValid: !1 })),
+        [y, _] = a.useState(() => ({ info: tw, isValid: !1 })),
         [N, O] = a.useState(""),
         [M, L] = a.useState(""),
         [k, w] = a.useState(() => ({ token: null })),
@@ -1856,7 +1856,7 @@ function tU(e) {
             j.A.venmoUsername,
             j.A.adyenPaymentData,
         ]),
-        { paymentAuthError: V, isAwaitingPaymentAuthentication: Y } = (0, T.t4)((e) => ({
+        { paymentAuthError: Y, isAwaitingPaymentAuthentication: V } = (0, T.t4)((e) => ({
             paymentAuthError: e.paymentAuthError,
             isAwaitingPaymentAuthentication: e.isAwaitingPaymentAuthentication,
         }));
@@ -1894,11 +1894,11 @@ function tU(e) {
             paymentSourceId: o,
             hasFetchedPaymentSources: l,
             setPaymentSourceId: c,
-            creditCardState: A,
-            setCreditCardState: y,
+            creditCardState: I,
+            setCreditCardState: A,
             tokenState: k,
             setTokenState: w,
-            billingAddressState: I,
+            billingAddressState: y,
             setBillingAddressState: _,
             isSubmittingCurrentStep: K,
             setIsSubmittingCurrentStep: Z,
@@ -1908,8 +1908,8 @@ function tU(e) {
             braintreeNonce: U,
             venmoUsername: B,
             adyenPaymentData: H,
-            paymentError: null != V ? V : G,
-            paymentAuthenticationState: Y ? b.oc.PENDING : null != V ? b.oc.ERROR : b.oc.NONE,
+            paymentError: null != Y ? Y : G,
+            paymentAuthenticationState: V ? b.oc.PENDING : null != Y ? b.oc.ERROR : b.oc.NONE,
             purchaseError: $,
             setPurchaseError: Q,
             purchaseErrorBlockRef: J,

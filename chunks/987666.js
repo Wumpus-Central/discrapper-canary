@@ -15,38 +15,38 @@ function c(e) {
             discriminatedInvoicePreview: d,
             overrideRenewalDate: p,
             fractionalPremiumInfo: m,
-            isInvoiceBilledImmediately: C = !0,
-            unifiedLegalType: h,
+            isInvoiceBilledImmediately: h = !0,
+            unifiedLegalType: C,
             discountOffer: f,
             subscriptionTrial: S,
         } = e,
         { immediateDelivery: E } = (0, s.U)(),
-        { checkoutReviewButtonLabel: A } = (0, u.t4)((e) => ({
+        { checkoutReviewButtonLabel: I } = (0, u.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
     if (d.type === a.u$.LOADING) return null;
-    let { invoicePreview: y } = d,
-        I = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? y,
+    let { invoicePreview: A } = d,
+        y = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? A,
         g = (0, r.de)({
             overrideRenewalDate: p,
-            currentInvoice: C ? y : void 0,
-            renewalInvoice: I,
+            currentInvoice: h ? A : void 0,
+            renewalInvoice: y,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: m,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(I, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(y, t, {
             discountOffer: f,
             subscriptionTrial: S,
         }),
         x = {
-            purchaseButtonText: A,
-            totalDue: C ? y.total : 0,
+            purchaseButtonText: I,
+            totalDue: h ? A.total : 0,
             renewalPrice: P,
             multiPeriodDiscountAttributes: v,
-            currency: y.currency,
+            currency: A.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
             startDate: g,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ...x }, paymentSourceType: n, immediateDelivery: E });
+    return (0, l.jsx)(o._P, { variant: { type: C, ...x }, paymentSourceType: n, immediateDelivery: E });
 }

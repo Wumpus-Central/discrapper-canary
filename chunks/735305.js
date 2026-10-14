@@ -1,4 +1,4 @@
-n.d(t, { x: () => y });
+n.d(t, { x: () => A });
 var l = n(284009),
     i = n.n(l),
     r = n(999129),
@@ -10,14 +10,14 @@ var l = n(284009),
     d = n(504560),
     p = n(174459),
     m = n(723702),
-    C = n(951305),
-    h = n(166532),
+    h = n(951305),
+    C = n(166532),
     f = n(566980),
     S = n(280341),
     E = n(652215),
-    A = n(202541);
-function y(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: y, continueSessionToInitialStep: I } = e,
+    I = n(202541);
+function A(e) {
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: A, continueSessionToInitialStep: y } = e,
         { paymentSources: g } = (0, a.j)(),
         {
             selectedSkuId: P,
@@ -42,7 +42,7 @@ function y(e) {
         { paymentAuthenticationState: O } = (0, s.o)(),
         { isPremiumGroupPurchase: M, isEligibleForTrial: L } = (0, o.i)(),
         { step: k } = (0, u.Ay)(),
-        { isGift: w } = (0, C.Pv)(),
+        { isGift: w } = (0, h.Pv)(),
         D = {
             ...(0, S.p)(),
             paymentSources: g,
@@ -55,27 +55,27 @@ function y(e) {
             isGift: w,
         },
         U =
-            y ??
+            A ??
             function () {
-                l(Object.values(g).length < 1 && null == n ? h.pn.PLAN_SELECT : h.pn.REVIEW, {
-                    trackedFromStep: h.pn.PAYMENT_ELEMENT,
+                l(Object.values(g).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
+                    trackedFromStep: C.pn.PAYMENT_ELEMENT,
                 });
             };
     i()(null != k, "Step should be set here");
     let G = (0, r.A)(() => Date.now(), [k]),
-        F = h.pn.PAYMENT_ELEMENT;
+        F = C.pn.PAYMENT_ELEMENT;
     return (0, S.Y)({
         addPaymentMethodStepState: D,
         initialStep: F,
-        prependSteps: [h.pn.PROMOTION_INFO],
-        appendSteps: [h.pn.REVIEW, h.pn.CONFIRM],
+        prependSteps: [C.pn.PROMOTION_INFO],
+        appendSteps: [C.pn.REVIEW, C.pn.CONFIRM],
         useCheckoutStep: !0,
         analyticsData: t,
         onReturn: M ? void 0 : U,
         onComplete: (e) => {
-            h.l_.has(e)
-                ? (v(f.h.COMPLETED), l(h.pn.CONFIRM, { trackedFromStep: e }))
-                : l(h.pn.REVIEW, { trackedFromStep: e });
+            C.l_.has(e)
+                ? (v(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
+                : l(C.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
@@ -90,7 +90,7 @@ function y(e) {
         },
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
-            (0, m.isDesktop)() && null != P && [A.pe.TIER_0, A.pe.TIER_2].includes(P) && !w && null == j,
-        continueSessionToInitialStep: I,
+            (0, m.isDesktop)() && null != P && [I.pe.TIER_0, I.pe.TIER_2].includes(P) && !w && null == j,
+        continueSessionToInitialStep: y,
     });
 }

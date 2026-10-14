@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(786567),
     p = n(202475),
     m = n(883645),
-    C = n(504560),
-    h = n(26279);
+    h = n(504560),
+    C = n(26279);
 function f(e) {
     let {
             customFooterProps: t,
@@ -20,9 +20,9 @@ function f(e) {
             subscriptionMetadata: f,
             renderStepBody: S,
             resolveInternalState: E,
-            resolveTenantReviewButtonProps: A,
-            handleStepChange: y,
-            openInvoiceId: I,
+            resolveTenantReviewButtonProps: I,
+            handleStepChange: A,
+            openInvoiceId: y,
             analyticsData: g,
             analyticsLocation: P,
         } = e,
@@ -37,7 +37,7 @@ function f(e) {
             checkoutPaymentSources: R,
             hasCheckoutContextLoaded: O,
             invoicePreview: M,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
             paymentSourceId: e.paymentSourceId,
@@ -62,7 +62,7 @@ function f(e) {
         }, [R, O, v]),
         G = (0, s.iB)({ paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
-            let e = { disablePurchase: G || _ === h.uH.DEV_STORYBOOK_CHECKOUT };
+            let e = { disablePurchase: G || _ === C.uH.DEV_STORYBOOK_CHECKOUT };
             return null != E
                 ? E(
                       { ...e },
@@ -84,27 +84,27 @@ function f(e) {
         }, [b, n]),
         H = i.useCallback(
             (e) => {
-                (j(e?.linkWalletEnabled ?? !0), y(o.pn.ADD_PAYMENT_STEPS));
+                (j(e?.linkWalletEnabled ?? !0), A(o.pn.ADD_PAYMENT_STEPS));
             },
-            [y, j],
+            [A, j],
         ),
         W = i.useMemo(() => S({ handlePaymentSourceAdd: H }), [S, H]),
-        V = (0, l.jsx)(d.U, {
-            resolveTenantReviewButtonProps: A,
+        Y = (0, l.jsx)(d.U, {
+            resolveTenantReviewButtonProps: I,
             onBack: B,
             flowStartTime: T.startTime,
             onPaymentSourceAdd: H,
             disablePurchase: F,
             analyticsLocation: P,
             baseAnalyticsData: g,
-            openInvoiceId: I,
-            handleStepChange: y,
+            openInvoiceId: y,
+            handleStepChange: A,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
             metadata: f,
             ...t,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: W }), (0, l.jsx)(u.UX, { children: V })],
+        children: [(0, l.jsx)(u.dZ, { children: W }), (0, l.jsx)(u.UX, { children: Y })],
     });
 }

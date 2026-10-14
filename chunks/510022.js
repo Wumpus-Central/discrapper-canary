@@ -8,9 +8,9 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
     u = (e) => {
         let { sku: t, application: u, analyticsLocations: c, entitlement: d, contextKey: p } = e,
             m = p ?? (0, i.getInteractingModalContext)(),
-            C = !1;
-        function h(e) {
-            C = e.shouldIgnoreCloseRequest;
+            h = !1;
+        function C(e) {
+            h = e.shouldIgnoreCloseRequest;
         }
         (0, i.openModalLazy)(
             async () => {
@@ -30,14 +30,14 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
                         application: u,
                         analyticsLocations: c,
                         entitlement: d,
-                        onSetIgnoreCloseRequest: h,
+                        onSetIgnoreCloseRequest: C,
                     });
             },
             {
                 modalKey: o,
                 contextKey: m,
                 onCloseRequest: () => {
-                    C || (0, i.closeModal)(o, m);
+                    h || (0, i.closeModal)(o, m);
                 },
                 onCloseCallback: () => {
                     r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {

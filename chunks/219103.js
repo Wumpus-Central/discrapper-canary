@@ -11,8 +11,8 @@ var i = n(503698),
     d = n(318254),
     p = n(580630),
     m = n(993408),
-    C = n(818348),
-    h = n(660183),
+    h = n(818348),
+    C = n(660183),
     f = n(181666),
     S = n(967957);
 function E(e) {
@@ -24,9 +24,9 @@ function E(e) {
         discount: a = m.rr,
         variant: s = "text-md/semibold",
     } = e;
-    return n === C.Yr.DISCORD_ORB
-        ? (0, l.jsx)(I, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(y, {
+    return n === h.Yr.DISCORD_ORB
+        ? (0, l.jsx)(y, { orbAmount: t, className: r, discount: a, variant: s })
+        : (0, l.jsx)(A, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -35,7 +35,7 @@ function E(e) {
               variant: s,
           });
 }
-function A(e) {
+function I(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
@@ -43,8 +43,8 @@ function A(e) {
             let e = (0, l.jsx)(a.t, { size: n, color: "currentColor", className: S.Kk });
             if ("tooltip" === t.displayMode)
                 return (0, l.jsx)(s.m, {
-                    text: h.intl.string(h.t.MPFyJ5),
-                    "aria-label": h.intl.string(h.t.X3Ekj8),
+                    text: C.intl.string(C.t.MPFyJ5),
+                    "aria-label": C.intl.string(C.t.X3Ekj8),
                     children: e,
                 });
             return e;
@@ -52,14 +52,14 @@ function A(e) {
         case m.D0.THIRDPARTY: {
             let e = (0, l.jsx)(o.TagIcon, { size: n, color: "currentColor", className: S.Kk });
             if ("tooltip" === t.displayMode)
-                return (0, l.jsx)(s.m, { text: h.intl.string(f.default.DePOcS), children: e });
+                return (0, l.jsx)(s.m, { text: C.intl.string(f.default.DePOcS), children: e });
             return e;
         }
         default:
             return (t.source, null);
     }
 }
-function y(e) {
+function A(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
@@ -69,12 +69,12 @@ function y(e) {
             variant: o = "heading-md/semibold",
         } = e,
         d = (0, p.RS)(t, n),
-        C =
+        h =
             s !== m.rr && s.discountPercentage >= m.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
-                              children: h.intl.format(h.t.niC6DK, {
+                              children: C.intl.format(C.t.niC6DK, {
                                   price: d,
                                   discountPercentage: s.discountPercentage,
                               }),
@@ -89,26 +89,26 @@ function y(e) {
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(u.A, { children: h.intl.format(h.t["6C36MF"], { price: d }) }),
+                          (0, l.jsx)(u.A, { children: C.intl.format(C.t["6C36MF"], { price: d }) }),
                           (0, l.jsx)("span", { "aria-hidden": !0, className: a, children: d }),
                       ],
                   });
     return (0, l.jsxs)("div", {
         className: r()(S.kL, a),
         children: [
-            null != i ? (0, l.jsx)(A, { config: i }) : null,
-            (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: C }),
+            null != i ? (0, l.jsx)(I, { config: i }) : null,
+            (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: h }),
         ],
     });
 }
-function I(e) {
+function y(e) {
     let { orbAmount: t, className: n, discount: i = m.rr, variant: a = "text-md/semibold" } = e,
         s =
             i !== m.rr && i.discountPercentage >= m.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
-                              children: h.intl.format(h.t.ckguyq, {
+                              children: C.intl.format(C.t.ckguyq, {
                                   orbAmount: t,
                                   discountPercentage: i.discountPercentage,
                               }),
@@ -123,7 +123,7 @@ function I(e) {
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(u.A, { children: h.intl.format(h.t["a/Y8PK"], { orbAmount: t }) }),
+                          (0, l.jsx)(u.A, { children: C.intl.format(C.t["a/Y8PK"], { orbAmount: t }) }),
                           (0, l.jsx)("span", { "aria-hidden": !0, children: t }),
                       ],
                   });
