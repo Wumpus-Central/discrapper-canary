@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638137, Version Hash: 7d0a78619ea30fde00267e3eb170b63378698d04`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638151, Version Hash: 9e562c796d69a7767fea563ccadc648ddf9a8370`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -25892,7 +25892,7 @@ let yi = "isHideDevBanner",
                     className: t_()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638137" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638151" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -40349,7 +40349,7 @@ function wb(e) {
     return { frame: t, iframeId: e.source.iframeId };
 }
 function wM(e) {
-    return ak.A.getApplication(e)?.vibegrationsProjectId != null || bQ.Ay.isConjureProjectApplication(e);
+    return ak.A.getApplication(e)?.conjureProjectId != null || bQ.Ay.isConjureProjectApplication(e);
 }
 function wP(e) {
     let t = bQ.Ay.findProjectByApplicationId(e);

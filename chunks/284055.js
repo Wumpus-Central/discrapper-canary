@@ -837,7 +837,7 @@ function nR(e) {
             [n.guild_id],
         ),
         r = (0, nN.m0)({ guildId: n.guild_id, location: "ConjureHostedAppCloseButton" });
-    if (null == t || i?.vibegrationsProjectId == null || !r || s) return null;
+    if (null == t || i?.conjureProjectId == null || !r || s) return null;
     let a = z.intl.string(nS.default["/TlGcK"]);
     return (0, l.jsx)(nh.Ay.Icon, {
         icon: ny.DoorExitIcon,

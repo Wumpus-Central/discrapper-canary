@@ -19,7 +19,6 @@ function s(e, t, n) {
         case i.a.LEADERBOARD:
         case i.a.WHITEBOARD:
         case i.a.POPULAR_MUSIC:
-        case i.a.LIVE_ACTIVITY:
         case i.a.POPULAR_GAMES:
             return { ...l, type: e, config: { type: e } };
     }

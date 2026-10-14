@@ -398,30 +398,32 @@ var ed = n(698441),
 function ep(e) {
     let { message: t, channel: n, compact: i } = e,
         s = n.guild_id,
-        r = (0, e_.Nu)(t.guildSpaceData?.leaderboard),
-        o = (0, c.bG)([v.default], () =>
-            (0, eA.U_)(r, v.default.getUser(r?.userId), v.default.getUser(r?.secondaryUserId)),
-        ),
-        d = o?.subject ?? null,
-        u = o?.previousLeader ?? null,
-        m = (0, k.d8)(d, n),
-        x = (0, k.d8)(u, n),
-        g = (0, C.P)({ user: d ?? void 0, channelId: n.id, guildId: s, messageId: t.id })(m),
-        h = (0, C.P)({ user: u ?? void 0, channelId: n.id, guildId: s, messageId: t.id })(x),
-        f = a.useCallback(() => {
+        r = t.guildSpaceData?.leaderboard,
+        o = a.useMemo(() => (0, e_.Nu)(r), [r]),
+        d = o?.userId,
+        u = o?.secondaryUserId,
+        [m, x] = (0, c.yK)([v.default], () => [v.default.getUser(d), v.default.getUser(u)], [d, u]),
+        g = a.useMemo(() => (0, eA.U_)(o, m, x), [o, m, x]),
+        h = g?.subject ?? null,
+        f = g?.previousLeader ?? null,
+        A = (0, k.d8)(h, n),
+        _ = (0, k.d8)(f, n),
+        E = (0, C.P)({ user: h ?? void 0, channelId: n.id, guildId: s, messageId: t.id })(A),
+        p = (0, C.P)({ user: f ?? void 0, channelId: n.id, guildId: s, messageId: t.id })(_),
+        N = a.useCallback(() => {
             null != s &&
                 ((0, ef.jb)(s, ef.Rk.LEADERBOARD_SYSTEM_MESSAGE),
                 (0, eh.vn)(s, ea.VV.GUILD_SPACE, { source: "Leaderboard System Message" }));
         }, [s]);
-    if (null == o || null == s) return null;
-    let A = (0, eA.Sx)(o.data, { username: m.nick, previousUsername: x.nick });
-    if (null == A) return null;
-    let _ = O.intl.format(A.message, { ...A.values, usernameHook: g, previousUsernameHook: h });
+    if (null == g || null == s) return null;
+    let j = (0, eA.Sx)(g.data, { username: A.nick, previousUsername: _.nick });
+    if (null == j) return null;
+    let T = O.intl.format(j.message, { ...j.values, usernameHook: E, previousUsernameHook: p });
     return (0, l.jsxs)(I.A, {
         iconNode: (0, l.jsx)(ex.TrophyIcon, { size: "sm", color: eg.A.colors.ICON_MUTED }),
         timestamp: t.timestamp,
         compact: i,
-        children: [_, (0, l.jsx)(I.A.Action, { onClick: f, children: O.intl.string(eE.default.O1h3uU) })],
+        children: [T, (0, l.jsx)(I.A.Action, { onClick: N, children: O.intl.string(eE.default.O1h3uU) })],
     });
 }
 var eC = n(193885),

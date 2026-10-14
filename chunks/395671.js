@@ -136,7 +136,7 @@ class I extends f {
     linkedGames;
     deepLinkUri;
     applicationAccountLinkBenefitConfig;
-    vibegrationsProjectId;
+    conjureProjectId;
     static createFromServer(e) {
         return new I({
             ...e,
@@ -181,7 +181,7 @@ class I extends f {
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
-            vibegrationsProjectId: e.vibegrations_project_id,
+            conjureProjectId: e.conjure_project_id,
             parentId: e.parent_id,
         });
     }
@@ -224,7 +224,7 @@ class I extends f {
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
                 e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config),
-            (this.vibegrationsProjectId = e.vibegrationsProjectId ?? e.vibegrations_project_id),
+            (this.conjureProjectId = e.conjureProjectId ?? e.conjure_project_id),
             (this.parentId = e.parentId ?? e.parent_id));
     }
     getCanonicalGameId() {
@@ -298,7 +298,7 @@ class I extends f {
             deepLinkUri: e.deepLinkUri ?? this.deepLinkUri,
             applicationAccountLinkBenefitConfig:
                 e.applicationAccountLinkBenefitConfig ?? this.applicationAccountLinkBenefitConfig,
-            vibegrationsProjectId: e.vibegrationsProjectId ?? this.vibegrationsProjectId,
+            conjureProjectId: e.conjureProjectId ?? this.conjureProjectId,
             contentClassification: e.contentClassification ?? this.contentClassification,
             parentId: e.parentId ?? this.parentId,
         });

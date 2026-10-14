@@ -106,12 +106,9 @@ let f = [
         stat: h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
-        previous_winner: "2",
-        streak_count: 3,
         entries: [
             {
                 user_id: "1",
-                name: "wumpus",
                 value: 84e5,
                 rank: 1,
                 application_ids: ["1"],
@@ -120,7 +117,6 @@ let f = [
             },
             {
                 user_id: "2",
-                name: "clyde",
                 value: 62e5,
                 rank: 2,
                 application_ids: ["1", "2"],
@@ -129,7 +125,6 @@ let f = [
             },
             {
                 user_id: "3",
-                name: "nelly",
                 value: 41e5,
                 rank: 3,
                 application_ids: ["2"],
@@ -309,30 +304,24 @@ let H = {
                     stat: l,
                     week_start_ts: r - (n ? 8 : 3) * I.A.Seconds.DAY,
                     next_stat: h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
-                    previous_winner: t[0],
-                    streak_count: 3,
                     computed_at: new Date((r - I.A.Seconds.DAY) * 1e3).toISOString(),
-                    entries: i.map((e, s) => {
-                        let n;
-                        return {
-                            user_id: (n = t[s % t.length]),
-                            name: n,
-                            value: (function (e, t) {
-                                switch (t) {
-                                    case h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
-                                        return e.days;
-                                    case h.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
-                                        return e.gameIndexes.length;
-                                    default:
-                                        return 1e3 * e.totalSeconds;
-                                }
-                            })(e, l),
-                            rank: s + 1,
-                            application_ids: e.gameIndexes.flatMap((e) => a[e % a.length] ?? []).slice(0, 2),
-                            application_count: e.gameIndexes.length,
-                            time_played_seconds: e.totalSeconds,
-                        };
-                    }),
+                    entries: i.map((e, s) => ({
+                        user_id: t[s % t.length],
+                        value: (function (e, t) {
+                            switch (t) {
+                                case h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                                    return e.days;
+                                case h.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                                    return e.gameIndexes.length;
+                                default:
+                                    return 1e3 * e.totalSeconds;
+                            }
+                        })(e, l),
+                        rank: s + 1,
+                        application_ids: e.gameIndexes.flatMap((e) => a[e % a.length] ?? []).slice(0, 2),
+                        application_count: e.gameIndexes.length,
+                        time_played_seconds: e.totalSeconds,
+                    })),
                 };
             })({ memberIds: u, stat: i, entryCount: "empty" === n ? 2 : 20, ended: "ended" === n }),
             m = "on-podium" === o ? 2 : 12,
@@ -342,7 +331,6 @@ let H = {
             null != d &&
             _.entries.push({
                 user_id: d,
-                name: "you",
                 value: p.entries[p.entries.length - 1].value,
                 rank: 25,
                 application_ids: p.entries[p.entries.length - 1].application_ids,

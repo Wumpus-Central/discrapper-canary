@@ -5754,7 +5754,7 @@
     "kind": "user",
     "defaultConfig": {
       "skipSilentDelayEstimatorFfts": false,
-      "basicProcessEnumeration": false
+      "processPollingPerf": false
     },
     "variations": {
       "0": {
@@ -5763,7 +5763,7 @@
       },
       "1": {
         "skipSilentDelayEstimatorFfts": true,
-        "basicProcessEnumeration": true
+        "processPollingPerf": true
       }
     }
   },

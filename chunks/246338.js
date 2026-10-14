@@ -82,7 +82,7 @@ function O(e, t) {
 function R(e, t, n) {
     return (
         e?.type === _.rbe.GUILD_APP &&
-        n?.vibegrationsProjectId != null &&
+        n?.conjureProjectId != null &&
         t?.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
     );
 }

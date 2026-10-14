@@ -263,17 +263,9 @@ let K = (0, G.mj)({
             3: { degradationPreference: "maintain-framerate", motionContentHint: !0 },
             4: { degradationPreference: "balanced", motionContentHint: !1 },
         },
-    }),
-    q = (0, G.mj)({
-        name: "2026-10-desktop-general-perf",
-        kind: "user",
-        defaultConfig: { skipSilentDelayEstimatorFfts: !1, basicProcessEnumeration: !1 },
-        variations: {
-            0: { skipSilentDelayEstimatorFfts: !1, basicProcessEnumeration: !1 },
-            1: { skipSilentDelayEstimatorFfts: !0, basicProcessEnumeration: !0 },
-        },
     });
-var Z = n(559633);
+var q = n(339829),
+    Z = n(559633);
 class Q {
     createdTime;
     timestampProducer;
@@ -3421,7 +3413,7 @@ class tg extends m.A {
     _chooseExperiments(e) {
         let t = [];
         if ((0, eh.isDesktop)() && this.context === Y.x.DEFAULT) {
-            let { skipSilentDelayEstimatorFfts: e } = q.getConfig({ location: "capture_processing_delay_estimator" });
+            let { skipSilentDelayEstimatorFfts: e } = (0, q.L)("capture_processing_delay_estimator");
             e && t.push("skip_silent_delay_estimator_ffts");
         }
         (this._recordingEnabled && t.push("connection_log"),

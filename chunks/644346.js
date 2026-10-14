@@ -18,8 +18,8 @@ var h = n(633075),
     I = n(17928),
     j = n(939249),
     E = n(772838),
-    v = n(140735),
-    A = n(834730),
+    A = n(140735),
+    v = n(834730),
     C = n(866665),
     b = n(192308),
     y = n(922016),
@@ -53,7 +53,7 @@ function O(e) {
                     ...e,
                     children: [
                         (0, i.jsx)(E.W, { size: "sm" }),
-                        (0, i.jsx)(v.A, { id: c, children: W.intl.string(W.t.bsuqFn) }),
+                        (0, i.jsx)(A.A, { id: c, children: W.intl.string(W.t.bsuqFn) }),
                     ],
                 }),
             }),
@@ -67,14 +67,14 @@ function G(e) {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
             className: S.HE,
             children: [
-                (0, i.jsx)(A.E, {
+                (0, i.jsx)(v.E, {
                     variant: "text-sm/normal",
                     color: "none",
                     children: W.intl.format(n ? W.t["zvln/l"] : W.t["7cdwhg"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
-                (0, i.jsx)(A.E, {
+                (0, i.jsx)(v.E, {
                     variant: "text-sm/normal",
                     color: "none",
                     children: W.intl.format(W.t["4e0rM4"], {
@@ -356,9 +356,7 @@ var M = n(297264),
     B = n(587895),
     H = n(928658);
 function K(e, t, n) {
-    n?.vibegrationsProjectId != null
-        ? (0, H.r3)({ application: n, entrypoint: "user_profile_widget" })
-        : (0, H.GJ)(e, t);
+    n?.conjureProjectId != null ? (0, H.r3)({ application: n, entrypoint: "user_profile_widget" }) : (0, H.GJ)(e, t);
 }
 var Y = n(216473);
 function q(e) {
@@ -439,7 +437,7 @@ function V(e) {
                 className: J.DD,
                 children: [
                     (0, i.jsx)(M.D, { variant: "heading-sm/medium", color: "text-default", id: n, children: s }),
-                    null != o && (0, i.jsx)(A.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
+                    null != o && (0, i.jsx)(v.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
             (0, i.jsx)(Z, { widget: r, actionButtons: c, disabledInteraction: l, userId: t, additionalMenuItems: u }),
@@ -490,10 +488,10 @@ function $(e) {
         }),
         j = null != I,
         E = j && t < I,
-        v = j && t > I;
+        A = j && t > I;
     return (0, i.jsxs)("div", {
         ref: g,
-        className: a()(Q.wX, { [Q.A]: E, [Q.Ze]: v, [Q.Id]: p }),
+        className: a()(Q.wX, { [Q.A]: E, [Q.Ze]: A, [Q.Id]: p }),
         "aria-label": W.intl.formatToPlainString(W.t.YLczh4, { positionNumber: t + 1 }),
         children: [(0, i.jsx)(O, { buttonRef: u, widget: n, className: Q.vn, additionalMenuItems: l }), s],
     });
@@ -509,8 +507,8 @@ function ee(e) {
             index: I,
             trailingContent: j,
             headerTitle: E,
-            headerSubtitle: v,
-            headerActionButtons: A,
+            headerSubtitle: A,
+            headerActionButtons: v,
             headerClassName: C,
             additionalManageWidgetMenuItems: b,
         } = e,
@@ -543,8 +541,8 @@ function ee(e) {
                     userId: t,
                     headingId: y,
                     title: E,
-                    subtitle: v,
-                    actionButtons: A,
+                    subtitle: A,
+                    actionButtons: v,
                     widget: n,
                     disableInteraction: m,
                     className: C,
