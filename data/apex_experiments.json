@@ -5882,6 +5882,31 @@
     }
   },
   {
+    "name": "2026-10-recurring-referral-reminder",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "bottomSheetEnabled": false,
+      "notificationEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "bottomSheetEnabled": true,
+        "notificationEnabled": false
+      },
+      "2": {
+        "enabled": true,
+        "bottomSheetEnabled": false,
+        "notificationEnabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-server-tag-upsell-on-profile",
     "kind": "user",
     "defaultConfig": {
