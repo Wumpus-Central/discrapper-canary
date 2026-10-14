@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => k }));
+(n.r(t), n.d(t, { default: () => T }));
 var i = n(477900),
     s = n(582128),
     l = n(991690),
@@ -83,17 +83,18 @@ var w = n(73153),
     C = n(317608),
     N = n(378859),
     S = n(338941),
-    v = n(660183),
-    y = n(728846);
-function _(e) {
+    v = n(130745),
+    y = n(660183),
+    _ = n(728846);
+function k(e) {
     let { applicationId: t, channel: n, showChatToasts: a } = e,
         r = s.useMemo(() => ({ type: l.U.APP_CHANNEL, channelId: n.id, guildId: n.guild_id }), [n.id, n.guild_id]),
         { frame: c, state: d } = (0, S.A)({ applicationId: t, surface: r });
-    switch (d) {
+    switch (((0, v.A)(n.id), d)) {
         case S.n.Launched:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.A, { frameId: c.id, level: I.A.WithinAppContent, className: y.Z }),
+                    (0, i.jsx)(C.A, { frameId: c.id, level: I.A.WithinAppContent, className: _.Z }),
                     a
                         ? (0, i.jsx)(A, {
                               channelId: n.id,
@@ -105,23 +106,23 @@ function _(e) {
                 ],
             });
         case S.n.RenderingElsewhere:
-            return (0, i.jsx)(N.A, { className: y.w, description: v.intl.string(v.t["2KIDX+"]) });
+            return (0, i.jsx)(N.A, { className: _.w, description: y.intl.string(y.t["2KIDX+"]) });
         case S.n.NoApplication:
-            return (0, i.jsx)(N.A, { className: y.w, description: v.intl.string(v.t.izggZO) });
+            return (0, i.jsx)(N.A, { className: _.w, description: y.intl.string(y.t.izggZO) });
         case S.n.DoesNotSupportSurface:
-            return (0, i.jsx)(N.A, { className: y.w, description: v.intl.string(v.t["iUWcU/"]) });
+            return (0, i.jsx)(N.A, { className: _.w, description: y.intl.string(y.t["iUWcU/"]) });
         case S.n.Error:
             return (0, i.jsx)(N.A, {
-                className: y.w,
-                heading: v.intl.string(v.t.VquUff),
-                error: v.intl.string(v.t["Sd9D/R"]),
+                className: _.w,
+                heading: y.intl.string(y.t.VquUff),
+                error: y.intl.string(y.t["Sd9D/R"]),
             });
         case S.n.AwaitingLaunch:
         case S.n.Loading:
-            return (0, i.jsx)(N.j, { className: y.w });
+            return (0, i.jsx)(N.j, { className: _.w });
     }
 }
-function k(e) {
+function T(e) {
     let t,
         n,
         l,
@@ -153,9 +154,9 @@ function k(e) {
             n);
     return null == d
         ? (0, i.jsx)(N.A, {
-              className: y.w,
-              heading: v.intl.string(v.t.tU5fiM),
-              description: v.intl.string(v.t.E94mJf),
+              className: _.w,
+              heading: y.intl.string(y.t.tU5fiM),
+              description: y.intl.string(y.t.E94mJf),
           })
-        : (0, i.jsx)(_, { applicationId: d, channel: c, showChatToasts: u && !h });
+        : (0, i.jsx)(k, { applicationId: d, channel: c, showChatToasts: u && !h });
 }
