@@ -552,6 +552,7 @@ function eQ(e) {
                                                         n.e("410526"),
                                                         n.e("202985"),
                                                         n.e("603619"),
+                                                        n.e("833292"),
                                                         n.e("222969"),
                                                         n.e("515363"),
                                                         n.e("315513"),
@@ -566,7 +567,7 @@ function eQ(e) {
                                                         n.e("795854"),
                                                         n.e("870088"),
                                                         n.e("300641"),
-                                                        n.e("932020"),
+                                                        n.e("571163"),
                                                         n.e("586662"),
                                                         n.e("831377"),
                                                         n.e("611137"),
@@ -965,8 +966,8 @@ var e8 = n(34188),
     e3 = n(177953),
     e7 = n(825484),
     e6 = n(683071),
-    e9 = n(900797),
-    e5 = n(847374),
+    e5 = n(900797),
+    e9 = n(847374),
     e4 = n(10716),
     te = n(702841),
     tt = n(150934),
@@ -1415,8 +1416,8 @@ function tb(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e9.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1574,8 +1575,8 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t9 = n(457408),
-    t5 = n(712440),
+var t5 = n(457408),
+    t9 = n(712440),
     t4 = n(733110),
     ne = n(73153);
 let nt = 10 * Y.A.Millis.MINUTE,
@@ -2247,12 +2248,12 @@ function n6(e, t) {
     let n = t3.A.getScoreWithoutLoadingLatest(e.id);
     return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n9(e, t) {
+function n5(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n5(e, t) {
+function n9(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2586,7 +2587,7 @@ function lm(e) {
                                 let n = z.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return z.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n5,
+                            n9,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2675,7 +2676,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n6, n9],
+                        sortComparers: [n6, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3164,7 +3165,7 @@ function lv(e) {
                         } = e,
                         s = (0, A.bG)([t4.default], () => t4.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t4.FetchState.NOT_FETCHED && t5.A.fetch();
+                        i && s === t4.FetchState.NOT_FETCHED && t9.A.fetch();
                     }, [i, s]);
                     let a = (0, A.yK)([t4.default], () =>
                             i
@@ -3183,7 +3184,7 @@ function lv(e) {
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t9.A)(e.id));
+                            return !(!1 === m && (0, t5.A)(e.id));
                         }
                         return l
                             ? u
@@ -3380,7 +3381,7 @@ function lS(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t9.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t5.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),
