@@ -14,6 +14,7 @@ let c = new Set([
     s.n_.QuadraKill,
     s.n_.PentaKill,
     s.n_.DragonSteal,
+    s.n_.ElderDragonSteal,
     s.n_.BaronSteal,
 ]);
 class u {

@@ -233,9 +233,8 @@ function H() {
         [N, k] = o.useState(B.rb.KILL),
         [T, R] = o.useState(1),
         [M, L] = o.useState(""),
-        [P, U] = o.useState(""),
-        F = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
-        V = o.useCallback((e) => {
+        P = (0, d.bG)([A.Ay], () => A.Ay.isAutoStashEnabled()),
+        U = o.useCallback((e) => {
             e
                 ? (0, c.A)({
                       title: "Stash all gaming sessions?",
@@ -249,15 +248,15 @@ function H() {
                   })
                 : D.mN(!1);
         }, []),
-        [H, K] = o.useState([]),
-        [Y, q] = o.useState(void 0),
-        J = o.useCallback((e) => {
-            (K(e), q((t) => (null != t && e.includes(t) ? t : e[0])));
+        [F, V] = o.useState([]),
+        [H, K] = o.useState(void 0),
+        Y = o.useCallback((e) => {
+            (V(e), K((t) => (null != t && e.includes(t) ? t : e[0])));
         }, []),
-        Q = o.useCallback(async () => {
+        q = o.useCallback(async () => {
             let e = y.A.clips.debugListStashedClipDeciderSessions;
-            null != e && J(await e());
-        }, [J]);
+            null != e && Y(await e());
+        }, [Y]);
     return (
         o.useEffect(() => {
             let e = !0,
@@ -265,13 +264,13 @@ function H() {
             if (null != t)
                 return (
                     t().then((t) => {
-                        e && J(t);
+                        e && Y(t);
                     }),
                     () => {
                         e = !1;
                     }
                 );
-        }, [J]),
+        }, [Y]),
         (0, r.jsx)(g.Ip, {
             children: (0, r.jsxs)(v.l, {
                 children: [
@@ -343,43 +342,31 @@ function H() {
                                 ],
                             }),
                             (0, r.jsx)(f.k, {
-                                label: "Title (optional)",
+                                label: "Description (optional)",
                                 value: M,
                                 onChange: L,
-                                placeholder: "e.g., First Blood",
-                            }),
-                            (0, r.jsx)(f.k, {
-                                label: "Description (optional)",
-                                value: P,
-                                onChange: U,
                                 placeholder: "e.g., Killed enemy ADC in bot lane",
                             }),
                             (0, r.jsx)(x.$, {
                                 text: "Create Game Event",
                                 onClick: () => {
-                                    D.Ts({
-                                        type: B.Gy.GAME_EVENT,
-                                        eventType: N,
-                                        importance: T,
-                                        title: M,
-                                        description: P,
-                                    });
+                                    D.Ts({ type: B.Gy.GAME_EVENT, eventType: N, importance: T, description: M });
                                 },
                             }),
                             (0, r.jsx)(m.d, {
                                 label: "Auto-stash decider data",
                                 description:
                                     "Stashes every gaming session to your Desktop when it ends. Resets to off on each Discord launch.",
-                                checked: F,
-                                onChange: V,
+                                checked: P,
+                                onChange: U,
                             }),
                             (0, r.jsx)(j.l, {
                                 label: "Stash session (re-run ranking)",
-                                value: Y,
-                                onSelectionChange: (e) => q(e),
-                                options: H.map((e) => ({ id: e, label: e, value: e })),
-                                placeholder: 0 === H.length ? "No stashed sessions" : "Most recent",
-                                disabled: 0 === H.length,
+                                value: H,
+                                onSelectionChange: (e) => K(e),
+                                options: F.map((e) => ({ id: e, label: e, value: e })),
+                                placeholder: 0 === F.length ? "No stashed sessions" : "Most recent",
+                                disabled: 0 === F.length,
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
@@ -388,7 +375,7 @@ function H() {
                                     (0, r.jsx)(x.$, {
                                         text: "re-run ranking",
                                         onClick: () => {
-                                            I.i.debugRerunRanking(Y).catch((e) => {
+                                            I.i.debugRerunRanking(H).catch((e) => {
                                                 B.nx.error("re-run ranking failed", e);
                                             });
                                         },
@@ -396,7 +383,7 @@ function H() {
                                     (0, r.jsx)(x.$, {
                                         text: "run automontage",
                                         onClick: () => {
-                                            I.i.debugRunAutoMontage(Y).catch((e) => {
+                                            I.i.debugRunAutoMontage(H).catch((e) => {
                                                 B.nx.error("run automontage failed", e);
                                             });
                                         },
@@ -405,7 +392,7 @@ function H() {
                                         text: "refresh sessions",
                                         variant: "secondary",
                                         onClick: () => {
-                                            Q();
+                                            q();
                                         },
                                     }),
                                 ],

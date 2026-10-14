@@ -61,7 +61,7 @@ class S extends i.A {
                     name: "cs2-gsi",
                     applicationId: f.w,
                     isEnabled: () => g(f.w) && u.A.getConfig({ location: m }).enableCs2Gsi,
-                    importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
+                    importHandler: () => n.e("860838").then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
@@ -75,7 +75,7 @@ class S extends i.A {
                     name: "rocket-league",
                     applicationId: T.e,
                     isEnabled: () => g(T.e) && h.A.getConfig({ location: m }).enableRocketLeagueEvents,
-                    importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
+                    importHandler: () => n.e("182150").then(n.bind(n, 446885)),
                 },
             ]))
                 switch (e.type) {

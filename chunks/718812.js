@@ -1,14 +1,20 @@
-l.d(t, { h: () => s });
+l.d(t, { h: () => r });
 var a = l(582128),
-    n = l(696016),
-    i = l(660183);
-function s(e) {
+    n = l(374816),
+    i = l(696016),
+    s = l(660183);
+function r(e) {
     return a.useMemo(() => {
         if (null != e.name && "" !== e.name) return "";
         if (e.decision?.signal != null) {
             let t = e.decision?.signal;
-            if (t.type === n.Gy.GAME_EVENT) return t.description ?? t.title ?? i.intl.string(i.t.Cyxddp);
+            if (t.type === i.Gy.GAME_EVENT)
+                return (
+                    t.description ??
+                    (0, n.PZ)(e.applicationId, i.Gy.GAME_EVENT, t.eventName) ??
+                    s.intl.string(s.t.Cyxddp)
+                );
         }
-        return i.intl.string(i.t.Cyxddp);
-    }, [e.name, e.decision]);
+        return s.intl.string(s.t.Cyxddp);
+    }, [e.name, e.decision, e.applicationId]);
 }

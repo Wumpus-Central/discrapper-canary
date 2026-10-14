@@ -1,90 +1,98 @@
-(n.d(t, { Ae: () => c, Q_: () => _, Uq: () => d, gD: () => u, lz: () => E }), n(321073));
+(n.d(t, { Ae: () => u, B: () => A, Q_: () => E, Uq: () => c, gD: () => _, lz: () => h }), n(321073));
 var i,
-    r = n(174459),
-    a = n(271520),
-    s = n(696016),
-    l = n(652215),
-    o = n(731854);
-function d(e) {
+    r,
+    a = n(174459),
+    s = n(271520),
+    l = n(696016),
+    o = n(652215),
+    d = n(731854);
+function c(e) {
     return new Date(e).toISOString();
 }
-function c(e) {
+function u(e) {
     if (null == e.syncTimestamp) return;
     let t = e.editMetadata?.end != null ? 1e3 * e.editMetadata.end : e.length;
     return new Date(e.syncTimestamp - (e.length - t)).toISOString();
 }
-function u(e) {
-    return e.slice(0, s.GU);
+function _(e) {
+    return e.slice(0, l.GU);
 }
-var _ =
-    (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
-    (i[(i.KILL = 1)] = "KILL"),
-    (i[(i.MULTIKILL = 2)] = "MULTIKILL"),
-    (i[(i.DEATH = 3)] = "DEATH"),
-    i);
-function E(e) {
-    if ((e.timeline?.length ?? 0) === 0 || e.decision?.timestamp == null) return;
+var E =
+        (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
+        (i[(i.KILL = 1)] = "KILL"),
+        (i[(i.MULTIKILL = 2)] = "MULTIKILL"),
+        (i[(i.DEATH = 3)] = "DEATH"),
+        i),
+    A =
+        (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
+        (r[(r.LAUGHTER = 1)] = "LAUGHTER"),
+        (r[(r.SHOUTING = 2)] = "SHOUTING"),
+        r);
+function h(e) {
+    if (((e.timeline?.length ?? 0) === 0 && (e.audioEvents?.length ?? 0) === 0) || e.decision?.timestamp == null)
+        return;
     let t = e.editMetadata ?? { start: 0, end: e.length / 1e3 },
         n = e.decision.timestamp - e.length,
         i = n + 1e3 * t.start,
-        d = n + 1e3 * t.end,
-        c = (0, a.h)("getClipEventsTimeline"),
+        r = n + 1e3 * t.end,
+        c = (0, s.h)("getClipEventsTimeline"),
         u = e.timeline
             .filter(
                 (t) =>
-                    (e.editMetadata?.voiceAudio !== !1 && t.signal.type === s.Gy.SPEAKING) ||
-                    (c && t.signal.type === s.Gy.GAME_EVENT),
+                    (e.editMetadata?.voiceAudio !== !1 && t.signal.type === l.Gy.SPEAKING) ||
+                    (c && t.signal.type === l.Gy.GAME_EVENT),
             )
-            .sort((e, t) => e.timestamp - t.timestamp);
-    if (0 === u.length) return;
-    let _ = new Map(),
-        E = [],
-        A = new Map();
+            .sort((e, t) => e.timestamp - t.timestamp),
+        _ = e.editMetadata?.voiceAudio !== !1 ? (e.audioEvents ?? []) : [];
+    if (0 === u.length && 0 === _.length) return;
+    let E = new Map(),
+        A = [];
     for (let e of u) {
-        if (e.signal.type !== s.Gy.SPEAKING) continue;
+        if (e.signal.type !== l.Gy.SPEAKING) continue;
         if (e.timestamp >= i) break;
-        let t = (e.signal.speakingFlags & o.ME.VOICE) === o.ME.VOICE;
-        _.set(e.signal.userId, t);
+        let t = (e.signal.speakingFlags & d.ME.VOICE) === d.ME.VOICE;
+        E.set(e.signal.userId, t);
     }
-    for (let [e, t] of _) t && E.push({ timestamp_ms: 0, speaking: { user_id: e, speaking_flags: o.ME.VOICE } });
+    for (let [e, t] of E) t && A.push({ timestamp_ms: 0, speaking: { user_id: e, speaking_flags: d.ME.VOICE } });
     for (let e of u)
-        if (e.signal.type === s.Gy.SPEAKING) {
+        if (e.signal.type === l.Gy.SPEAKING) {
             if (e.timestamp < i) continue;
-            if (e.timestamp > d) break;
-            let t = (e.signal.speakingFlags & o.ME.VOICE) === o.ME.VOICE;
-            if ((_.get(e.signal.userId) ?? !1) === t) continue;
-            (_.set(e.signal.userId, t),
-                E.push({
+            if (e.timestamp > r) break;
+            let t = (e.signal.speakingFlags & d.ME.VOICE) === d.ME.VOICE;
+            if ((E.get(e.signal.userId) ?? !1) === t) continue;
+            (E.set(e.signal.userId, t),
+                A.push({
                     timestamp_ms: Math.round(e.timestamp - i),
                     speaking: { user_id: e.signal.userId, speaking_flags: e.signal.speakingFlags },
                 }));
-        } else if (e.signal.type === s.Gy.GAME_EVENT) {
-            let t;
+        } else if (e.signal.type === l.Gy.GAME_EVENT) {
             if (e.timestamp < i) continue;
-            if (e.timestamp > d) break;
+            if (e.timestamp > r) break;
+            let t = 0;
             switch (e.signal.eventType) {
-                case s.rb.KILL:
+                case l.rb.KILL:
                     t = 1;
                     break;
-                case s.rb.MULTIKILL:
+                case l.rb.MULTIKILL:
                     t = 2;
+                    break;
+                case l.rb.DEATH:
+                    t = 3;
             }
-            if (null == t) continue;
-            let n = Math.round(e.timestamp - i),
-                r = A.get(n);
-            if (null != r) {
-                2 === t && (E[r].game = { type: t });
-                continue;
-            }
-            (A.set(n, E.length), E.push({ timestamp_ms: n, game: { type: t } }));
+            A.push({ timestamp_ms: Math.round(e.timestamp - i), game: { type: t, event_name: e.signal.eventName } });
         }
-    let h = E.slice(0, s.td);
+    for (let e of _)
+        e.peakMs < i ||
+            e.peakMs > r ||
+            A.push({ timestamp_ms: Math.round(e.peakMs - i), emotion: { type: e.type === l.Gy.LAUGHTER ? 1 : 2 } });
+    A.sort((e, t) => e.timestamp_ms - t.timestamp_ms);
+    let h = A.slice(0, l.td);
     return (
-        h.length !== E.length &&
-            r.default.track(l.HAw.CLIP_TIMELINE_TRIMMED, {
+        h.length !== A.length &&
+            a.default.track(o.HAw.CLIP_TIMELINE_TRIMMED, {
                 clip_uuid: e.id,
-                clip_event_timeline_size: E.length,
-                clip_runtime: s.sT,
+                clip_event_timeline_size: A.length,
+                clip_runtime: l.sT,
             }),
         h.length > 0 ? h : void 0
     );

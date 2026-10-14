@@ -171,7 +171,7 @@ function P(e) {
             },
             [t, J, el, F, N, B, R, es, e_, ec, er, eb],
         ),
-        eI = (0, w.T)(t.clip_events_timeline ?? []),
+        eI = (0, w.T)(t.clip_events_timeline ?? [], t.application?.id, t.duration_secs ?? ec),
         eM = (0, b.A)({ attachment: t, channelId: B, guildId: J, messageId: R, width: et, height: ei }),
         ey = l.useCallback(
             (e) =>

@@ -24,7 +24,6 @@ function v(e, t) {
         eventName: e,
         score: 0,
         importance: 0,
-        title: i.title,
         description: i.description,
         hiddenFromTimeline: i.hiddenFromTimeline,
         clipWindow: i.clipWindow,
@@ -93,7 +92,7 @@ class p {
                 m.nx.info(
                     `[LoL] connected to Live Client API \u{2014} game started (player=${this.activePlayerName ?? "?"})`,
                 ),
-                this.emitLifecycleEvent(o.n_.GameStart, h.intl.string(h.t["94Kji7"]), h.intl.string(h.t.fyCsox))),
+                this.emitLifecycleEvent(o.n_.GameStart, h.intl.string(h.t.fyCsox))),
             (this.currentHealthFraction = (function (e) {
                 let { currentHealth: t, maxHealth: i } = e.championStats;
                 return i <= 0 ? 1 : Math.max(0, Math.min(1, t / i));
@@ -108,8 +107,7 @@ class p {
         ) {
             for (let e of (m.nx.info("[LoL] game ended (no API response)"), this.teamFightTracker.onGameEnd()))
                 this.emitTeamFightResult(e);
-            (this.emitLifecycleEvent(o.n_.GameEnd, h.intl.string(h.t.hlOYoA), h.intl.string(h.t.NxavgD)),
-                this.resetGameState());
+            (this.emitLifecycleEvent(o.n_.GameEnd, h.intl.string(h.t.NxavgD)), this.resetGameState());
         }
     }
     async pollPlayerState(e) {
@@ -142,18 +140,15 @@ class p {
         this.activePlayerTeam = u(t.team);
     }
     updateDeadState(e) {
-        e !== this.isDead &&
-            ((this.isDead = e),
-            e || this.emitLifecycleEvent(o.n_.Respawn, h.intl.string(h.t.ebbBDl), h.intl.string(h.t.CCiFY7)));
+        e !== this.isDead && ((this.isDead = e), e || this.emitLifecycleEvent(o.n_.Respawn, h.intl.string(h.t.CCiFY7)));
     }
-    emitLifecycleEvent(e, t, i) {
+    emitLifecycleEvent(e, t) {
         (m.nx.info(`[LoL] lifecycle marker: ${e}`),
             this.emitSignal({
                 type: m.Gy.GAME_EVENT,
                 eventType: m.rb.UNCLASSIFIED,
                 eventName: e,
-                title: t,
-                description: i,
+                description: t,
                 score: 0,
                 importance: 0,
             }));
@@ -257,17 +252,14 @@ class p {
                 case "ChampionKill":
                     if (e.playerIsKiller)
                         return v(o.n_.ChampionKill, m.rb.KILL, {
-                            title: h.intl.string(h.t.ky6syM),
                             description: h.intl.formatToPlainString(h.t["2sxvfW"], { name: e.victimName }),
                         });
                     if (e.playerIsAssister)
                         return v(o.n_.ChampionAssist, m.rb.ASSIST, {
-                            title: h.intl.string(h.t["3CK6jo"]),
                             description: h.intl.formatToPlainString(h.t.NyJvKf, { name: e.victimName }),
                         });
                     if (e.victimIsActivePlayer)
                         return v(o.n_.ChampionDeath, m.rb.DEATH, {
-                            title: h.intl.string(h.t["C/WqTT"]),
                             description: h.intl.formatToPlainString(h.t["wZ/IFO"], { name: e.killerName }),
                         });
                     return null;
@@ -275,69 +267,48 @@ class p {
                     if (e.killerIsActivePlayer) {
                         let t = d(e.killStreak),
                             i = o.Br[t],
-                            { title: l, description: a } = (() => {
+                            l = (() => {
                                 switch (t) {
                                     case 2:
-                                        return {
-                                            title: h.intl.string(h.t["+K7bbR"]),
-                                            description: h.intl.string(h.t["+zq0aZ"]),
-                                        };
+                                        return h.intl.string(h.t["+zq0aZ"]);
                                     case 3:
-                                        return {
-                                            title: h.intl.string(h.t.fzI1wr),
-                                            description: h.intl.string(h.t.brXPUX),
-                                        };
+                                        return h.intl.string(h.t.brXPUX);
                                     case 4:
-                                        return {
-                                            title: h.intl.string(h.t.ntn0Eu),
-                                            description: h.intl.string(h.t.GcWpwl),
-                                        };
+                                        return h.intl.string(h.t.GcWpwl);
                                     case 5:
-                                        return {
-                                            title: h.intl.string(h.t.JMxzCr),
-                                            description: h.intl.string(h.t["9yXGOS"]),
-                                        };
+                                        return h.intl.string(h.t["9yXGOS"]);
                                     default:
-                                        return { title: void 0, description: void 0 };
+                                        return;
                                 }
                             })();
-                        return v(i, m.rb.MULTIKILL, { title: l, description: a });
+                        return v(i, m.rb.MULTIKILL, { description: l });
                     }
                     return null;
                 case "LevelUp":
                     return v(o.n_.LevelUp, m.rb.LEVEL_UP, {
-                        title: h.intl.string(h.t["cp+kpc"]),
                         description: h.intl.formatToPlainString(h.t["le5/P1"], { level: e.newLevel }),
                     });
                 case "ItemPurchase":
                     return v(o.n_.ItemPurchase, m.rb.ITEM, {
-                        title: h.intl.string(h.t["89CDAj"]),
                         description: h.intl.formatToPlainString(h.t.cpRNkD, { itemName: e.itemName }),
                         hiddenFromTimeline: !0,
                     });
                 case "TurretKill":
                     if (e.playerHelpedKill)
-                        return v(o.n_.TurretKill, m.rb.OBJECTIVE_KILL, {
-                            title: h.intl.string(h.t["SoivN/"]),
-                            description: h.intl.string(h.t.eZ1OSn),
-                        });
+                        return v(o.n_.TurretKill, m.rb.OBJECTIVE_KILL, { description: h.intl.string(h.t.eZ1OSn) });
                     return null;
                 case "InhibitorKill":
                     if (e.playerHelpedKill)
-                        return v(o.n_.InhibitorKill, m.rb.OBJECTIVE_KILL, {
-                            title: h.intl.string(h.t["0Ttct6"]),
-                            description: h.intl.string(h.t.Pewjjq),
-                        });
+                        return v(o.n_.InhibitorKill, m.rb.OBJECTIVE_KILL, { description: h.intl.string(h.t.Pewjjq) });
                     return null;
                 case "DragonKill":
                     if (e.playerHelpedKill) {
+                        let t = "Elder" === e.drakeName;
                         if (e.stolen)
-                            return v(o.n_.DragonSteal, m.rb.OBJECTIVE_KILL, {
-                                title: h.intl.formatToPlainString(h.t.DUQK8U, { drakeName: e.drakeName }),
+                            return v(t ? o.n_.ElderDragonSteal : o.n_.DragonSteal, m.rb.OBJECTIVE_KILL, {
                                 description: h.intl.formatToPlainString(h.t["8qsedd"], { killerName: e.killerName }),
                             });
-                        return v(o.n_.DragonKill, m.rb.OBJECTIVE_KILL, {
-                            title: h.intl.formatToPlainString(h.t["AjNN1/"], { drakeName: e.drakeName }),
+                        return v(t ? o.n_.ElderDragonKill : o.n_.DragonKill, m.rb.OBJECTIVE_KILL, {
                             description: h.intl.formatToPlainString(h.t.HlopAO, { killerName: e.killerName }),
                         });
                     }
@@ -346,25 +317,16 @@ class p {
                     if (e.playerHelpedKill) {
                         if (e.stolen)
                             return v(o.n_.BaronSteal, m.rb.OBJECTIVE_KILL, {
-                                title: h.intl.string(h.t["+WhzbK"]),
                                 description: h.intl.formatToPlainString(h.t.FUBbYu, { killerName: e.killerName }),
                             });
                         return v(o.n_.BaronKill, m.rb.OBJECTIVE_KILL, {
-                            title: h.intl.string(h.t.KohKss),
                             description: h.intl.formatToPlainString(h.t["4yYLUi"], { killerName: e.killerName }),
                         });
                     }
                     return null;
                 case "GameEnd":
-                    if (e.win)
-                        return v(o.n_.Victory, m.rb.VICTORY, {
-                            title: h.intl.string(h.t.vS7yZW),
-                            description: h.intl.string(h.t.qkARs9),
-                        });
-                    return v(o.n_.Defeat, m.rb.DEFEAT, {
-                        title: h.intl.string(h.t["+sdglm"]),
-                        description: h.intl.string(h.t.xdsqBt),
-                    });
+                    if (e.win) return v(o.n_.Victory, m.rb.VICTORY, { description: h.intl.string(h.t.qkARs9) });
+                    return v(o.n_.Defeat, m.rb.DEFEAT, { description: h.intl.string(h.t.xdsqBt) });
                 default:
                     return null;
             }
@@ -407,13 +369,11 @@ class p {
         );
         let p = s
             ? v(o.n_.TeamFightWin, m.rb.UNCLASSIFIED, {
-                  title: h.intl.string(h.t["+1CM/5"]),
                   description: h.intl.formatToPlainString(h.t["2bu+0V"], { allyKills: a, enemyKills: n }),
                   clipWindow: u,
                   additionalData: d,
               })
             : v(o.n_.TeamFight, m.rb.UNCLASSIFIED, {
-                  title: h.intl.string(h.t.zi28x1),
                   description: h.intl.formatToPlainString(h.t.HTJgep, { allyKills: a, enemyKills: n }),
                   clipWindow: u,
                   additionalData: d,

@@ -1,74 +1,48 @@
-(i.r(t), i.d(t, { default: () => g }));
+(i.r(t), i.d(t, { default: () => _ }));
 var l = i(72611),
     n = i(31048);
 i(321073);
-var a = i(132500),
-    r = i(309470),
+var r = i(132500),
+    a = i(309470),
     s = i(115171);
 function o(e) {
     return "radiant" === e ? "LEFT" : "dire" === e ? "RIGHT" : null;
 }
-var h = i(144705),
-    m = i(696016),
-    u = i(826685),
-    d = i(268378),
-    c = i(660183);
-let p = new Map([
+var m = i(144705),
+    h = i(696016),
+    d = i(826685),
+    u = i(268378),
+    p = i(660183);
+let c = new Map([
     ...[0, 1, 2, 3, 4].map((e) => [String(e), "LEFT"]),
     ...[5, 6, 7, 8, 9].map((e) => [String(e), "RIGHT"]),
 ]);
 function f(e) {
     return !0 === e ? void 0 : e;
 }
-function I(e, t) {
+function S(e, t) {
     return ("DOTA_GAMERULES_STATE_GAME_IN_PROGRESS" === e || "DOTA_GAMERULES_STATE_PRE_GAME" === e) && !1 !== t;
 }
-function S(e, t, i) {
-    let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        n = {
-            type: m.Gy.GAME_EVENT,
-            eventType: t,
-            eventName: e,
-            score: 0,
-            importance: 0,
-            hiddenFromTimeline: l.hiddenFromTimeline ?? !1,
-            description: l.description,
-            clipWindow: l.clipWindow,
-            additionalData: i,
-        };
+function T(e, t, i) {
+    let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return {
-        ...n,
-        title: (function (e) {
-            switch (e.eventName) {
-                case h.I.Kill:
-                    return c.intl.string(d.default.gQErX1);
-                case h.I.MultiKill:
-                    return c.intl.string(d.default.Y7CAoY);
-                case h.I.Assist:
-                    return c.intl.string(d.default.CuzcRY);
-                case h.I.Death:
-                    return c.intl.string(d.default.NEFeB0);
-                case h.I.RoshanKill:
-                    return c.intl.string(d.default.bzNi8X);
-                case h.I.TeamFightWin:
-                    return c.intl.string(d.default["3RgAlG"]);
-                case h.I.TeamFight:
-                    return c.intl.string(d.default.Qm57HT);
-                case h.I.GameEnd:
-                    return c.intl.string(e.additionalData.win ? d.default.fyRdwo : d.default.TcGz5R);
-                case h.I.InMatchChange:
-                case h.I.PlayStateChange:
-                    return;
-            }
-        })(n),
+        type: h.Gy.GAME_EVENT,
+        eventType: t,
+        eventName: e,
+        score: 0,
+        importance: 0,
+        hiddenFromTimeline: l.hiddenFromTimeline ?? !1,
+        description: l.description,
+        clipWindow: l.clipWindow,
+        additionalData: i,
     };
 }
-class T {
+class I {
     multiKillChain = [];
     lastKillMs = null;
     wasInMatch = !0;
     handledRoshanKillTimes = new Set();
-    teamFightTracker = new r.Ay(u.L);
+    teamFightTracker = new a.Ay(d.L);
     handledHeroKillKeys = new Set();
     heroKillsPrimed = !1;
     processPayload(e, t) {
@@ -80,7 +54,7 @@ class T {
         let n = null != e.map;
         (n !== this.wasInMatch &&
             ((this.wasInMatch = n),
-            l(S(h.I.InMatchChange, m.rb.UNCLASSIFIED, { id: (0, a.A)(), inMatch: n }, { hiddenFromTimeline: !0 }))),
+            l(T(m.I.InMatchChange, h.rb.UNCLASSIFIED, { id: (0, r.A)(), inMatch: n }, { hiddenFromTimeline: !0 }))),
             null == e.map &&
                 ((this.handledRoshanKillTimes = new Set()),
                 (this.multiKillChain = []),
@@ -88,30 +62,30 @@ class T {
                 this.teamFightTracker.reset(),
                 (this.handledHeroKillKeys = new Set()),
                 (this.heroKillsPrimed = !1)));
-        let r = f(e.previously?.player),
+        let a = f(e.previously?.player),
             o = f(e.previously?.map),
-            u = f(e.previously?.hero),
-            d = r?.kills,
-            c = e.player?.kills;
-        if ("number" == typeof d && "number" == typeof c && c > d)
-            for (let e = 0; e < c - d; e++) {
-                let e = (0, a.A)();
-                (l(S(h.I.Kill, m.rb.KILL, { id: e })),
+            d = f(e.previously?.hero),
+            u = a?.kills,
+            p = e.player?.kills;
+        if ("number" == typeof u && "number" == typeof p && p > u)
+            for (let e = 0; e < p - u; e++) {
+                let e = (0, r.A)();
+                (l(T(m.I.Kill, h.rb.KILL, { id: e })),
                     null != this.lastKillMs && t - this.lastKillMs <= 18e3
                         ? this.multiKillChain.push(e)
                         : (this.multiKillChain = [e]),
                     (this.lastKillMs = t),
                     this.multiKillChain.length >= 2 &&
-                        l(S(h.I.MultiKill, m.rb.MULTIKILL, { id: (0, a.A)(), killIds: [...this.multiKillChain] })));
+                        l(T(m.I.MultiKill, h.rb.MULTIKILL, { id: (0, r.A)(), killIds: [...this.multiKillChain] })));
             }
-        let p = r?.assists,
-            T = e.player?.assists,
-            g = "number" == typeof p && "number" == typeof T && T > p ? T - p : 0;
-        for (let e = 0; e < g; e++) l(S(h.I.Assist, m.rb.ASSIST, { id: (0, a.A)() }));
-        let y = r?.deaths,
+        let c = a?.assists,
+            I = e.player?.assists,
+            _ = "number" == typeof c && "number" == typeof I && I > c ? I - c : 0;
+        for (let e = 0; e < _; e++) l(T(m.I.Assist, h.rb.ASSIST, { id: (0, r.A)() }));
+        let y = a?.deaths,
             K = e.player?.deaths;
         if ("number" == typeof y && "number" == typeof K && K > y) {
-            for (let e = 0; e < K - y; e++) l(S(h.I.Death, m.rb.DEATH, { id: (0, a.A)() }));
+            for (let e = 0; e < K - y; e++) l(T(m.I.Death, h.rb.DEATH, { id: (0, r.A)() }));
             ((this.multiKillChain = []), (this.lastKillMs = null));
         }
         for (let t of e.events ?? [])
@@ -120,29 +94,29 @@ class T {
                 (null == t.game_time ||
                     this.handledRoshanKillTimes.has(t.game_time) ||
                     (this.handledRoshanKillTimes.add(t.game_time),
-                    l(S(h.I.RoshanKill, m.rb.OBJECTIVE_KILL, { id: (0, a.A)() }))));
-        let _ = e.map?.clock_time;
-        if ("number" == typeof _)
-            for (let i of (this.trackHeroKills(e, g), this.teamFightTracker.onTick(_)))
-                this.emitTeamFight(i, e, _, t, l);
-        let A = e.map?.game_state,
-            E = o?.game_state ?? A;
-        if ("DOTA_GAMERULES_STATE_POST_GAME" === A && "DOTA_GAMERULES_STATE_POST_GAME" !== E) {
-            if ("number" == typeof _)
-                for (let i of this.teamFightTracker.onGameEnd()) this.emitTeamFight(i, e, _, t, l);
+                    l(T(m.I.RoshanKill, h.rb.OBJECTIVE_KILL, { id: (0, r.A)() }))));
+        let A = e.map?.clock_time;
+        if ("number" == typeof A)
+            for (let i of (this.trackHeroKills(e, _), this.teamFightTracker.onTick(A)))
+                this.emitTeamFight(i, e, A, t, l);
+        let E = e.map?.game_state,
+            g = o?.game_state ?? E;
+        if ("DOTA_GAMERULES_STATE_POST_GAME" === E && "DOTA_GAMERULES_STATE_POST_GAME" !== g) {
+            if ("number" == typeof A)
+                for (let i of this.teamFightTracker.onGameEnd()) this.emitTeamFight(i, e, A, t, l);
             let i = e.map?.win_team != null && e.map.win_team === e.player?.team_name;
-            l(S(h.I.GameEnd, m.rb.UNCLASSIFIED, { id: (0, a.A)(), win: i }));
+            l(T(m.I.GameEnd, h.rb.UNCLASSIFIED, { id: (0, r.A)(), win: i }));
         }
         let b = e.hero?.alive,
-            M = u?.alive ?? b,
-            F = I(A, b);
+            M = d?.alive ?? b,
+            v = S(E, b);
         return (
-            F !== I(E, M) &&
+            v !== S(g, M) &&
                 l(
-                    S(
-                        h.I.PlayStateChange,
-                        m.rb.UNCLASSIFIED,
-                        { id: (0, a.A)(), playing: F },
+                    T(
+                        m.I.PlayStateChange,
+                        h.rb.UNCLASSIFIED,
+                        { id: (0, r.A)(), playing: v },
                         { hiddenFromTimeline: !0 },
                     ),
                 ),
@@ -161,13 +135,13 @@ class T {
                     return null;
                 }
                 if ("object" != typeof t || null == t) return null;
-                let { type: i, time: l, playerid1: n, playerid2: a } = t;
+                let { type: i, time: l, playerid1: n, playerid2: r } = t;
                 return "CHAT_MESSAGE_HERO_KILL" === i &&
                     "number" == typeof l &&
                     Number.isFinite(l) &&
                     "number" == typeof n &&
-                    "number" == typeof a
-                    ? { timeS: l, victimId: n, killerId: a }
+                    "number" == typeof r
+                    ? { timeS: l, victimId: n, killerId: r }
                     : null;
             })(i);
             if (null == e) continue;
@@ -186,55 +160,55 @@ class T {
             n = o(e.player?.team_name);
         for (let e of i) {
             let i = String(e.killerId),
-                a = t > 0 && null != l && e.killerId !== l && p.get(i) === n,
-                r = {
+                r = t > 0 && null != l && e.killerId !== l && c.get(i) === n,
+                a = {
                     eventTimeS: e.timeS,
                     killerName: i,
                     victimName: String(e.victimId),
-                    assisters: a ? [String(l)] : [],
+                    assisters: r ? [String(l)] : [],
                 };
-            this.teamFightTracker.onKill(r, p);
+            this.teamFightTracker.onKill(a, c);
         }
     }
     emitTeamFight(e, t, i, l, n) {
         let s = t.player?.player_slot,
-            u = o(t.player?.team_name);
-        if (!e.qualified || null == s || null == u || !e.participants.has(String(s))) return;
-        let p = l - (i - e.endTimeS) * 1e3,
+            d = o(t.player?.team_name);
+        if (!e.qualified || null == s || null == d || !e.participants.has(String(s))) return;
+        let c = l - (i - e.endTimeS) * 1e3,
             {
                 allyKills: f,
-                enemyKills: I,
-                winning: T,
-                clipWindow: g,
+                enemyKills: S,
+                winning: I,
+                clipWindow: _,
                 additionalData: y,
-            } = (0, r.Jo)(e, u, l - (i - e.startTimeS) * 1e3, p),
-            K = { id: (0, a.A)(), ...y },
-            _ = T
-                ? S(h.I.TeamFightWin, m.rb.UNCLASSIFIED, K, {
-                      description: c.intl.formatToPlainString(d.default.h9gDdS, { allyKills: f, enemyKills: I }),
-                      clipWindow: g,
+            } = (0, a.Jo)(e, d, l - (i - e.startTimeS) * 1e3, c),
+            K = { id: (0, r.A)(), ...y },
+            A = I
+                ? T(m.I.TeamFightWin, h.rb.UNCLASSIFIED, K, {
+                      description: p.intl.formatToPlainString(u.default.h9gDdS, { allyKills: f, enemyKills: S }),
+                      clipWindow: _,
                   })
-                : S(h.I.TeamFight, m.rb.UNCLASSIFIED, K, {
-                      description: c.intl.formatToPlainString(d.default.no2oEG, { allyKills: f, enemyKills: I }),
-                      clipWindow: g,
+                : T(m.I.TeamFight, h.rb.UNCLASSIFIED, K, {
+                      description: p.intl.formatToPlainString(u.default.no2oEG, { allyKills: f, enemyKills: S }),
+                      clipWindow: _,
                   });
-        n(_, p);
+        n(A, c);
     }
 }
-function g(e) {
+function _(e) {
     let t = !1,
-        i = new T();
-    function a(t) {
+        i = new I();
+    function r(t) {
         let l = (0, n.l)();
-        for (let { signal: n, timestampMs: a } of i.processPayload(t, l))
-            (m.nx.info(`[Dota2] emit event: ${n.eventName} score=${n.score} importance=${n.importance}`), e(n, a));
+        for (let { signal: n, timestampMs: r } of i.processPayload(t, l))
+            (h.nx.info(`[Dota2] emit event: ${n.eventName} score=${n.score} importance=${n.importance}`), e(n, r));
     }
     return {
         start() {
-            t || ((t = !0), (i = new T()), m.nx.info("[Dota2] starting GSI listener"), (0, l.$D)(a));
+            t || ((t = !0), (i = new I()), h.nx.info("[Dota2] starting GSI listener"), (0, l.$D)(r));
         },
         stop() {
-            t && ((t = !1), m.nx.info("[Dota2] stopping GSI listener"), (0, l.US)());
+            t && ((t = !1), h.nx.info("[Dota2] stopping GSI listener"), (0, l.US)());
         },
         getState: () => null,
     };

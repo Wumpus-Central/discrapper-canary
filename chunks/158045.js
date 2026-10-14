@@ -1530,24 +1530,21 @@ let t$ = Object.freeze({
                   })
                 : eR.intl.format(eR.t.qEIzyi, { endDate: t.toDate(), price: s });
         }
-        {
-            var l;
-            if (e.status === S.Dmq.BILLING_RETRY)
-                return eR.intl.format(eR.t.EMTLOT, {
-                    endDate: c()(e.currentPeriodStart).add(N.bx, "days").toDate(),
-                    price: s,
-                });
-            if (e.status === S.Dmq.ACCOUNT_HOLD)
-                return e.isPurchasedViaGoogle && !(0, I.xv)()
-                    ? eR.intl.format(eR.t["dtcxw+"], {
-                          endDate: c()(e.currentPeriodStart).add(N.ph, "days").toDate(),
+        if (e.status === S.Dmq.BILLING_RETRY || e.status === S.Dmq.ACCOUNT_HOLD) {
+            let t = c()(e.currentPeriodStart)
+                .add(e.status === S.Dmq.BILLING_RETRY ? N.bx : N.ph, "days")
+                .toDate();
+            return e.isPurchasedExternally
+                ? e.isPurchasedViaGoogle && (0, I.xv)()
+                    ? eR.intl.format(eR.t["IlJ/HV"], { endDate: t })
+                    : eR.intl.format(eR.t["dtcxw+"], {
+                          endDate: t,
                           paymentGatewayName: eO.qm[e.paymentGateway],
                           paymentSourceLink: tp(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"),
                       })
-                    : eR.intl.format(eR.t.EMTLOT, {
-                          endDate: c()(e.currentPeriodStart).add(N.ph, "days").toDate(),
-                          price: s,
-                      });
+                : eR.intl.format(eR.t.EMTLOT, { endDate: t, price: s });
+        } else {
+            var l;
             if (null != (l = e).paymentSourceId && tr(l.paymentSourceId))
                 return eR.intl.format(eR.t.awpB0C, { prepaidEndDate: e.currentPeriodEnd });
             if (e.status === S.Dmq.UNPAID) return eR.intl.format(eR.t.CzTKom, { maxProcessingTimeInDays: N.G4 });

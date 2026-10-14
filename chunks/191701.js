@@ -1042,7 +1042,7 @@ let eC = new eS(s.h, {
                                     case Z.Gy.LAUGHTER:
                                         return `Laughter detected (${t.confidence.toFixed(2)})`;
                                     case Z.Gy.GAME_EVENT:
-                                        return `Game event: ${t.title ?? t.eventType}`;
+                                        return `Game event: ${t.eventName ?? t.eventType}`;
                                     case Z.Gy.DISTRIBUTED:
                                         return "Distributed clip from another user";
                                     case Z.Gy.SPEAKING:

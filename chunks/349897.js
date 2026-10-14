@@ -1,48 +1,52 @@
-n.d(t, { T: () => y });
+(n.d(t, { T: () => T }), n(321073));
 var r = n(477900),
     l = n(582128),
-    a = n(503698),
-    i = n.n(a),
+    i = n(503698),
+    a = n.n(i),
     u = n(202091),
     s = n(505124),
     c = n(661531),
-    o = n(866665),
-    d = n(43990),
-    m = n(717421),
-    f = n(713608),
-    h = n(918715),
+    o = n(43990),
+    d = n(683063),
+    m = n(713608),
+    f = n(918715),
+    h = n(717421),
     g = n(271520),
     p = n(762555),
-    v = n(268378),
-    x = n(660183),
-    S = n(328115);
-function C(e) {
+    v = n(374816),
+    x = n(696016),
+    S = n(268378),
+    E = n(660183),
+    y = n(328115);
+function b(e) {
     let {
         leftPx: t,
         rightPx: n,
         setHoveredIndex: l,
-        isAnimated: a,
+        isAnimated: i,
         index: m,
         activated: f,
         expansionSpring: h,
         icon: g,
-        tooltip: p,
+        title: p,
+        body: v,
     } = e;
-    return (0, r.jsx)(o.m, {
-        delay: 300,
-        text: p,
-        children: (0, r.jsx)(d.N, {
-            theme: s.NJ.ONYX,
-            children: (e) =>
-                (0, r.jsx)(u.animated.div, {
-                    className: i()(S.z, e),
+    return (0, r.jsx)(o.N, {
+        theme: s.NJ.ONYX,
+        children: (e) =>
+            (0, r.jsx)(d.u, {
+                title: p ?? void 0,
+                body: v,
+                position: "top",
+                children: (0, r.jsx)(u.animated.div, {
+                    className: a()(y.z, e),
                     onMouseEnter: () => l(m),
                     onMouseLeave: () => l(null),
                     style: {
-                        left: a ? h.to((e) => t - e) : t,
+                        left: i ? h.to((e) => t - e) : t,
                         right: n,
-                        width: a ? h.to((e) => `${E + 2 * e}px`) : E,
-                        height: a ? h.to((e) => `${E + 2 * e}px`) : E,
+                        width: i ? h.to((e) => `${C + 2 * e}px`) : C,
+                        height: i ? h.to((e) => `${C + 2 * e}px`) : C,
                     },
                     children: (0, r.jsx)(g, {
                         size: "custom",
@@ -51,62 +55,120 @@ function C(e) {
                         color: f ? c.A.colors.INTERACTIVE_ICON_ACTIVE : c.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
-        }),
+            }),
     });
 }
-let E = 12,
-    b = { tension: 500, friction: 30, clamp: !0 };
-function y(e) {
-    let [t, n] = l.useState(null),
-        a = l.useRef(null),
-        [{ expansion: i }, u] = (0, m.z)(() => ({
+let C = 12,
+    A = { tension: 500, friction: 30, clamp: !0 };
+function j(e) {
+    switch (e) {
+        case p.B.LAUGHTER:
+            return x.Gy.LAUGHTER;
+        case p.B.SHOUTING:
+            return x.Gy.SHOUTING;
+        default:
+            return null;
+    }
+}
+function I(e, t) {
+    if (null != t.emotion) {
+        let n = j(t.emotion.type);
+        return null == n ? 0 : ((0, v.$b)(e, n) ?? 0);
+    }
+    return null != t.game
+        ? null == t.game.event_name
+            ? 0
+            : ((0, v.$b)(e, x.Gy.GAME_EVENT, t.game.event_name) ?? 0)
+        : 0;
+}
+function _(e, t) {
+    if (null != t.emotion) {
+        let n = j(t.emotion.type);
+        return null == n ? null : (0, v.u6)(e, n);
+    }
+    if (null != t.game) {
+        if (null != t.game.event_name) return (0, v.u6)(e, x.Gy.GAME_EVENT, t.game.event_name);
+        switch (t.game.type) {
+            case p.Q_.MULTIKILL:
+            case p.Q_.KILL:
+                return m.q;
+            case p.Q_.DEATH:
+                return f.V;
+        }
+    }
+    return null;
+}
+function T(e, t, n) {
+    let [i, a] = l.useState(null),
+        u = l.useRef(null),
+        [{ expansion: s }, c] = (0, h.z)(() => ({
             expansion: 0,
-            config: b,
+            config: A,
             onRest: () => {
-                null == a.current && n(null);
+                null == u.current && a(null);
             },
         })),
-        s = l.useCallback(
+        o = l.useCallback(
             (e) => {
-                ((a.current = e), null != e ? (n(e), u({ expansion: 4 })) : u({ expansion: 0 }));
+                ((u.current = e), null != e ? (a(e), c({ expansion: 4 })) : c({ expansion: 0 }));
             },
-            [u],
+            [c],
         ),
-        c = g.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-        o = l.useMemo(() => (c ? e.filter((e) => null != e.game) : []), [e, c]),
-        d = l.useMemo(() => o.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: E, gapPx: 4 })), [o]),
-        S = l.useCallback(
+        d = g.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+        m = l.useMemo(() => {
+            let r = e
+                .filter((e) => ((d && null != e.game) || null != e.emotion) && null != _(t, e))
+                .map((e) => {
+                    var t;
+                    return {
+                        event: e,
+                        position: ((t = e.timestamp_ms), null == n || n <= 0 ? null : (t / 1e3 / n) * 100),
+                    };
+                })
+                .filter((e) => null != e.position);
+            (r.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms),
+                r.sort((e, n) => I(t, n.event) - I(t, e.event)));
+            let l = [];
+            for (let e of r) l.some((t) => Math.abs(t.position - e.position) < v.Vd) || l.push(e);
+            return (l.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms), l.map((e) => e.event));
+        }, [e, d, t, n]),
+        f = l.useMemo(() => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: C, gapPx: 4 })), [m]),
+        p = l.useCallback(
             (e, n) => {
-                let l,
-                    a,
-                    u = t === e.index,
-                    c = o[e.index];
-                if (null == c) return null;
-                let d = n > e.leftPx;
-                switch (c.game.type) {
-                    case p.Q_.MULTIKILL:
-                        ((a = x.intl.string(v.default.PMLPER)), (l = f.q));
-                        break;
-                    case p.Q_.KILL:
-                        ((l = f.q), (a = x.intl.string(v.default.fYdqnM)));
-                        break;
-                    case p.Q_.DEATH:
-                        ((l = h.V), (a = x.intl.string(v.default.MhIx41)));
-                }
-                return null == l || null == a
+                let l = i === e.index,
+                    a = m[e.index];
+                if (null == a) return null;
+                let u = n > e.leftPx,
+                    c = _(t, a),
+                    d =
+                        null != a.emotion
+                            ? E.intl.string(S.default["ry+jxm"])
+                            : null != a.game
+                              ? E.intl.string(S.default["347DBb"])
+                              : null;
+                return null == c || null == d
                     ? null
-                    : (0, r.jsx)(C, {
+                    : (0, r.jsx)(b, {
                           ...e,
-                          activated: d,
+                          activated: u,
                           gapPx: 4,
-                          tooltip: a,
-                          expansionSpring: i,
-                          setHoveredIndex: s,
-                          isAnimated: u,
-                          icon: l,
+                          title: (function (e, t) {
+                              if (null != t.emotion) {
+                                  let n = j(t.emotion.type);
+                                  return null == n ? null : (0, v.PZ)(e, n);
+                              }
+                              return null != t.game && null != t.game.event_name
+                                  ? (0, v.PZ)(e, x.Gy.GAME_EVENT, t.game.event_name)
+                                  : null;
+                          })(t, a),
+                          body: d,
+                          expansionSpring: s,
+                          setHoveredIndex: o,
+                          isAnimated: l,
+                          icon: c,
                       });
             },
-            [t, o, s, i],
+            [i, m, o, s, t],
         );
-    return { indicators: d, animatingIndex: t, expansionSpring: i, hoverExpansionPx: 4, renderIndicator: S };
+    return { indicators: f, animatingIndex: i, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: p };
 }

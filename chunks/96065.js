@@ -9,7 +9,7 @@ var a = l(477900),
     u = l(256905),
     d = l(635793),
     m = l(164386);
-function h() {
+function f() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", { className: m.OC }),
@@ -28,28 +28,28 @@ function h() {
     });
 }
 l(321073);
-var f = l(503698),
-    p = l.n(f),
+var h = l(503698),
+    p = l.n(h),
     x = l(435558),
     v = l.n(x),
     g = l(194498),
-    C = l(607470),
-    y = l(176781),
-    j = l(901127);
-function b(e) {
+    j = l(607470),
+    b = l(176781),
+    y = l(901127);
+function C(e) {
     let { className: t } = e;
     return (0, a.jsx)("div", {
-        className: p()(j.L, t),
-        children: (0, a.jsx)(y.x, { size: "lg", color: "currentColor" }),
+        className: p()(y.L, t),
+        children: (0, a.jsx)(b.x, { size: "lg", color: "currentColor" }),
     });
 }
-var w = l(367974),
+var N = l(367974),
     E = l(376595),
-    N = l(773503),
+    w = l(773503),
     k = l(362081);
 let A = [],
-    I = [];
-function T() {
+    L = [];
+function R() {
     let { subscribe: e, soundboardAudioEnabled: t, voiceAudioEnabled: l, clip: i } = (0, k.T)(),
         s = i.decision?.timestamp ?? 0,
         r = n.useMemo(() => new E.H(i.timeline ?? []), [i.timeline]),
@@ -72,24 +72,24 @@ function T() {
                 }),
             [e, c],
         ),
-        (0, a.jsx)(N.A, {
+        (0, a.jsx)(w.A, {
             speakingUserIds: l ? u.speakingUserIds : A,
-            activeSoundboards: t ? u.activeSoundboards : I,
+            activeSoundboards: t ? u.activeSoundboards : L,
             userIds: i.users,
             guildId: i.guildId,
             channelId: i.channelId,
         })
     );
 }
-var L = l(696016),
+var I = l(696016),
     M = l(933092),
-    R = l(24468);
+    T = l(24468);
 function D(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: a, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && l && a && n)
-        if (e.includes(L.gC.ALL)) return !1;
+        if (e.includes(I.gC.ALL)) return !1;
         else return !0;
-    return e.includes(L.gC.APPLICATION) ? !l : e.includes(L.gC.VOICE) ? !a : !e.includes(L.gC.SOUNDBOARD) || !n;
+    return e.includes(I.gC.APPLICATION) ? !l : e.includes(I.gC.VOICE) ? !a : !e.includes(I.gC.SOUNDBOARD) || !n;
 }
 function S(e) {
     let { setRef: t, audioTrackLabel: l, src: i, muted: s } = e,
@@ -113,11 +113,11 @@ function S(e) {
         src: i ?? void 0,
         muted: s,
         preload: "auto",
-        className: R.R,
+        className: T.R,
         onLoadedMetadata: o,
     });
 }
-function _(e) {
+function O(e) {
     let { overlay: t, cropFraming: l, frameAspectRatio: i, loop: s = !0, ref: r } = e,
         {
             cropStart: o,
@@ -125,94 +125,94 @@ function _(e) {
             setVideoPlayerRef: u,
             videoURL: d,
             audioURL: m,
-            applicationAudioEnabled: h,
-            voiceAudioEnabled: f,
+            applicationAudioEnabled: f,
+            voiceAudioEnabled: h,
             soundboardAudioEnabled: v,
-            clip: y,
+            clip: b,
         } = (0, k.T)(),
-        j = n.useRef({}),
+        y = n.useRef({}),
         E = n.useRef(null),
-        N = n.useRef(!1),
-        [A, I] = n.useState([]),
-        _ = n.useCallback(() => {
-            let e = j.current.main;
+        w = n.useRef(!1),
+        [A, L] = n.useState([]),
+        O = n.useCallback(() => {
+            let e = y.current.main;
             if (null == e) return;
             let t = (0, x.round)(e.currentTime, 3),
                 l = (0, x.round)(o, 3);
             if (t >= (null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3)) || t < l) {
-                for (let e of Object.values(j.current)) null != e && (e.currentTime = o);
+                for (let e of Object.values(y.current)) null != e && (e.currentTime = o);
                 return !0;
             }
         }, [o, c]),
-        O = n.useCallback((e) => {
+        P = n.useCallback((e) => {
             let t = [];
             for (let l of Object.values(e.currentTarget.audioTracks))
-                l.label.includes(L.gC.APPLICATION)
+                l.label.includes(I.gC.APPLICATION)
                     ? (l.enabled = !0)
-                    : l.label.includes(L.gC.VOICE) || l.label.includes(L.gC.SOUNDBOARD)
+                    : l.label.includes(I.gC.VOICE) || l.label.includes(I.gC.SOUNDBOARD)
                       ? ((l.enabled = !1), t.includes(l.label) || t.push(l.label))
                       : (l.enabled = !1);
-            I(t);
+            L(t);
         }, []),
-        P = n.useCallback(() => {
-            for (let e of ((N.current = !0), _(), Object.values(j.current))) null != e && e.play();
-        }, [_]),
-        G = n.useCallback(() => {
-            for (let e of Object.values(j.current)) null != e && e.pause();
+        _ = n.useCallback(() => {
+            for (let e of ((w.current = !0), O(), Object.values(y.current))) null != e && e.play();
+        }, [O]),
+        z = n.useCallback(() => {
+            for (let e of Object.values(y.current)) null != e && e.pause();
         }, []);
     (0, g.A)(() => {
-        if (N.current) {
+        if (w.current) {
             if (!s) {
-                let e = j.current.main;
+                let e = y.current.main;
                 if (null != e) {
                     let t = null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3);
                     if ((0, x.round)(e.currentTime, 3) >= t) {
-                        (G(), (N.current = !1));
+                        (z(), (w.current = !1));
                         return;
                     }
                 }
             }
-            _() && P();
+            O() && _();
         }
     });
-    let U = n.useCallback((e) => {
-            for (let t of (j.current.main?.paused && (N.current = !1), Object.values(j.current)))
+    let $ = n.useCallback((e) => {
+            for (let t of (y.current.main?.paused && (w.current = !1), Object.values(y.current)))
                 null != t && (t.currentTime = e);
         }, []),
-        B = n.useCallback(() => {
-            j.current.main?.paused ? P() : G();
-        }, [P, G]),
-        K = n.useCallback((e) => {
-            j.current.main = e;
+        U = n.useCallback(() => {
+            y.current.main?.paused ? _() : z();
+        }, [_, z]),
+        G = n.useCallback((e) => {
+            y.current.main = e;
         }, []),
-        z = n.useCallback((e, t) => {
-            j.current[t] = e;
+        B = n.useCallback((e, t) => {
+            y.current[t] = e;
         }, []);
     n.useImperativeHandle(r, () => {
-        let e = { play: P, seek: U, pause: G, videoElement: j.current.main };
+        let e = { play: _, seek: $, pause: z, videoElement: y.current.main };
         return (u(e), e);
-    }, [P, U, G, u]);
-    let $ = n.useCallback(() => {
-        U(o);
-    }, [U, o]);
+    }, [_, $, z, u]);
+    let H = n.useCallback(() => {
+        $(o);
+    }, [$, o]);
     n.useLayoutEffect(() => {
-        let e = j.current;
+        let e = y.current;
         return () => {
-            for (let t of Object.values(e)) (0, w.A)(t);
+            for (let t of Object.values(e)) (0, N.A)(t);
         };
     }, []);
-    let F = y.type === L.nQ.VOICE_CLIP,
-        H = !0 === l && !F && null != i;
+    let V = b.type === I.nQ.VOICE_CLIP,
+        X = !0 === l && !V && null != i;
     return (n.useLayoutEffect(() => {
         let e = E.current;
         if (null == e) return;
-        if (!H) {
+        if (!X) {
             ((e.style.width = ""), (e.style.height = ""));
             return;
         }
         function t() {
             let e = E.current,
-                t = j.current.main;
+                t = y.current.main;
             null != e &&
                 null != t &&
                 ((e.style.width = ""),
@@ -225,63 +225,63 @@ function _(e) {
         if (null == l) return;
         let a = new ResizeObserver(t);
         return (a.observe(l), () => a.disconnect());
-    }, [H, i]),
+    }, [X, i]),
     null == d)
         ? null
         : (0, a.jsxs)("div", {
               ref: E,
-              className: p()(M.DV, H && M.Ln),
+              className: p()(M.DV, X && M.Ln),
               children: [
-                  F
+                  V
                       ? (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)("audio", { ref: K, src: d, muted: !0, preload: "auto" }),
-                                (0, a.jsx)(b, { className: M.Ap }),
+                                (0, a.jsx)("audio", { ref: G, src: d, muted: !0, preload: "auto" }),
+                                (0, a.jsx)(C, { className: M.Ap }),
                             ],
                         })
-                      : (0, a.jsx)(C.A, {
-                            onClick: B,
-                            className: p()(M.Ap, H && M.HU),
-                            style: H ? { aspectRatio: i } : void 0,
-                            ref: K,
+                      : (0, a.jsx)(j.A, {
+                            onClick: U,
+                            className: p()(M.Ap, X && M.HU),
+                            style: X ? { aspectRatio: i } : void 0,
+                            ref: G,
                             src: d,
                             muted: D(":all", {
-                                applicationAudioEnabled: h,
-                                voiceAudioEnabled: f,
+                                applicationAudioEnabled: f,
+                                voiceAudioEnabled: h,
                                 soundboardAudioEnabled: v,
-                                isVoiceClip: F,
+                                isVoiceClip: V,
                             }),
                             preload: "auto",
-                            onLoadedData: $,
+                            onLoadedData: H,
                         }),
-                  (0, a.jsx)(T, {}),
+                  (0, a.jsx)(R, {}),
                   t,
                   (0, a.jsx)("audio", {
                       id: "ClipsPlayerAudioTrack:application",
                       src: m ?? void 0,
                       muted: D(":application", {
-                          applicationAudioEnabled: h,
-                          voiceAudioEnabled: f,
+                          applicationAudioEnabled: f,
+                          voiceAudioEnabled: h,
                           soundboardAudioEnabled: v,
-                          isVoiceClip: F,
+                          isVoiceClip: V,
                       }),
-                      className: R.R,
+                      className: T.R,
                       preload: "auto",
-                      ref: (e) => z(e, "main:application"),
-                      onLoadedMetadata: O,
+                      ref: (e) => B(e, "main:application"),
+                      onLoadedMetadata: P,
                   }),
                   A.map((e) =>
                       (0, a.jsx)(
                           S,
                           {
-                              setRef: z,
+                              setRef: B,
                               audioTrackLabel: e,
                               src: m,
                               muted: D(e, {
-                                  applicationAudioEnabled: h,
-                                  voiceAudioEnabled: f,
+                                  applicationAudioEnabled: f,
+                                  voiceAudioEnabled: h,
                                   soundboardAudioEnabled: v,
-                                  isVoiceClip: F,
+                                  isVoiceClip: V,
                               }),
                           },
                           e,
@@ -290,32 +290,32 @@ function _(e) {
               ],
           });
 }
-function O(e, t) {
-    let l = e / L.YM;
-    return (t && (l /= L.iJ), l);
+function P(e, t) {
+    let l = e / I.YM;
+    return (t && (l /= I.iJ), l);
 }
-var P = l(22745);
-function G() {
+var _ = l(22745);
+function z() {
     let { clip: e } = (0, k.T)();
     return "" !== e.thumbnail
-        ? (0, a.jsx)("img", { className: P.T, src: e.thumbnail, alt: "", "aria-hidden": !0 })
+        ? (0, a.jsx)("img", { className: _.T, src: e.thumbnail, alt: "", "aria-hidden": !0 })
         : null;
 }
-var U = l(17928),
-    B = l(342952),
-    K = l(834730),
-    z = l(778712),
-    $ = l(429913),
-    F = l(47167),
-    H = l(713654),
-    V = l(769015),
-    Z = l(145497),
-    X = l(734057),
-    W = l(71393),
-    q = l(287809),
-    Y = l(58703),
+var $ = l(17928),
+    U = l(342952),
+    G = l(834730),
+    B = l(778712),
+    H = l(429913),
+    V = l(47167),
+    X = l(713654),
+    F = l(769015),
+    W = l(145497),
+    Z = l(734057),
+    K = l(71393),
+    Y = l(287809),
+    Q = l(58703),
     J = l(403362),
-    Q = l(818433),
+    q = l(818433),
     ee = l(620828);
 function et(e) {
     let { icon: t, label: l } = e;
@@ -323,18 +323,18 @@ function et(e) {
         className: ee.Ho,
         children: [
             null != t && (0, a.jsx)("div", { className: ee.t8, children: t }),
-            (0, a.jsx)(K.E, { variant: "text-xs/normal", color: "text-subtle", className: ee.Mk, children: l }),
+            (0, a.jsx)(G.E, { variant: "text-xs/normal", color: "text-subtle", className: ee.Mk, children: l }),
         ],
     });
 }
 function el() {
     let { clip: e } = (0, k.T)(),
-        t = (0, $.h)(e.applicationId),
-        l = (0, U.yK)([q.default], () => e.users.map(q.default.getUser).filter(J.Vq)),
-        n = (0, U.bG)([W.A], () => (null != e.guildId ? W.A.getGuild(e.guildId) : null)),
-        i = (0, U.bG)([X.A], () => (null != e.channelId ? X.A.getChannel(e.channelId) : null)),
-        s = (0, F.Ay)(i),
-        r = null != i ? (0, H.gU)(i, n) : null,
+        t = (0, H.h)(e.applicationId),
+        l = (0, $.yK)([Y.default], () => e.users.map(Y.default.getUser).filter(J.Vq)),
+        n = (0, $.bG)([K.A], () => (null != e.guildId ? K.A.getGuild(e.guildId) : null)),
+        i = (0, $.bG)([Z.A], () => (null != e.channelId ? Z.A.getChannel(e.channelId) : null)),
+        s = (0, V.Ay)(i),
+        r = null != i ? (0, X.gU)(i, n) : null,
         o = t?.name ?? e.applicationName,
         c =
             null != i && null != r
@@ -343,23 +343,23 @@ function el() {
     return (0, a.jsxs)("div", {
         className: ee.wx,
         children: [
-            (0, a.jsx)(Q.A, { variant: "text-md/medium", className: ee.DD }),
+            (0, a.jsx)(q.A, { variant: "text-md/medium", className: ee.DD }),
             (0, a.jsxs)("div", {
                 className: ee.KW,
                 children: [
                     null != o &&
                         "" !== o &&
                         (0, a.jsx)(et, {
-                            icon: null != t ? (0, a.jsx)(V.A, { game: t, size: V.M.XXSMALL }) : void 0,
+                            icon: null != t ? (0, a.jsx)(F.A, { game: t, size: F.M.XXSMALL }) : void 0,
                             label: o,
                         }),
-                    null != n && (0, a.jsx)(et, { icon: (0, a.jsx)(Z.Ay, { guild: n, iconSize: 16 }), label: n.name }),
+                    null != n && (0, a.jsx)(et, { icon: (0, a.jsx)(W.Ay, { guild: n, iconSize: 16 }), label: n.name }),
                     null != c && (0, a.jsx)(et, { icon: c, label: s ?? "" }),
-                    (0, a.jsx)(et, { label: (0, Y.mk)(new Date(e.createdAt)) }),
+                    (0, a.jsx)(et, { label: (0, Q.mk)(new Date(e.createdAt)) }),
                     l.length > 0 &&
                         (0, a.jsx)("div", {
                             className: ee.Ho,
-                            children: (0, a.jsx)(B.A, { users: l, maxUsers: 10, size: z._3.SIZE_16 }),
+                            children: (0, a.jsx)(U.A, { users: l, maxUsers: 10, size: B._3.SIZE_16 }),
                         }),
                 ],
             }),
@@ -367,7 +367,7 @@ function el() {
     });
 }
 var ea = l(973177);
-let en = { [L.yz.ORIGINAL]: null, [L.yz.PORTRAIT_9_16]: 9 / 16, [L.yz.LANDSCAPE_16_9]: 16 / 9 };
+let en = { [I.yz.ORIGINAL]: null, [I.yz.PORTRAIT_9_16]: 9 / 16, [I.yz.LANDSCAPE_16_9]: 16 / 9 };
 function ei() {
     let { cropPreset: e, videoPlayerRef: t } = (0, k.T)(),
         l = n.useRef(null),
@@ -388,16 +388,16 @@ function ei() {
                     u = en[e],
                     d = o,
                     m = c,
-                    h = r.width,
-                    f = r.height;
+                    f = r.width,
+                    h = r.height;
                 (null != u &&
-                    ((f = (h = Math.min(r.width, r.height * u)) / u),
-                    (d = o + (r.width - h) / 2),
-                    (m = c + (r.height - f) / 2)),
+                    ((h = (f = Math.min(r.width, r.height * u)) / u),
+                    (d = o + (r.width - f) / 2),
+                    (m = c + (r.height - h) / 2)),
                     (n.style.left = `${d}px`),
                     (n.style.top = `${m}px`),
-                    (n.style.width = `${h}px`),
-                    (n.style.height = `${f}px`));
+                    (n.style.width = `${f}px`),
+                    (n.style.height = `${h}px`));
             }
             n();
             let s = new ResizeObserver(n);
@@ -433,40 +433,40 @@ function ec(e) {
             sizing: u,
             aspectRatio: d,
             resizable: m = !0,
-            selected: h,
-            visible: f,
+            selected: f,
+            visible: h,
             onSelect: v,
             onChange: g,
-            children: C,
+            children: j,
         } = e,
-        y = n.useRef(null),
-        j = n.useRef(null),
         b = n.useRef(null),
-        w = n.useRef(l),
+        y = n.useRef(null),
+        C = n.useRef(null),
+        N = n.useRef(l),
         E = n.useRef(i),
-        N = n.useRef(s),
+        w = n.useRef(s),
         A = n.useRef(d),
-        I = n.useCallback(
+        L = n.useCallback(
             (e) => {
                 let t,
-                    l = j.current;
+                    l = y.current;
                 if (null == l) return;
-                let { x: a, y: n } = w.current;
+                let { x: a, y: n } = N.current;
                 if (
                     ((l.style.left = `${e.left + a * e.width}px`),
                     (l.style.top = `${e.top + n * e.height}px`),
                     (l.style.transform = `translate(-50%, -50%) rotate(${E.current}deg)`),
                     "fixed" === u)
                 ) {
-                    ((t = N.current * e.width), (l.style.width = `${t}px`));
+                    ((t = w.current * e.width), (l.style.width = `${t}px`));
                     let a = A.current;
                     l.style.height = null != a && a > 0 ? `${t / a}px` : "auto";
-                } else ((t = N.current * e.height), (l.style.fontSize = `${t}px`));
+                } else ((t = w.current * e.height), (l.style.fontSize = `${t}px`));
                 l.style.setProperty("--clip-track-scale", `${t}px`);
             },
             [u],
         ),
-        T = (function (e, t) {
+        R = (function (e, t) {
             let { videoPlayerRef: l } = (0, k.T)(),
                 a = n.useRef(null);
             return (
@@ -494,17 +494,17 @@ function ec(e) {
                 }, [e, t, l]),
                 a
             );
-        })(y, I);
+        })(b, L);
     n.useEffect(() => {
-        ((w.current = l), (E.current = i), (N.current = s), (A.current = d));
-        let e = T.current;
-        null != e && I(e);
-    }, [l, i, s, d, I, T]);
+        ((N.current = l), (E.current = i), (w.current = s), (A.current = d));
+        let e = R.current;
+        null != e && L(e);
+    }, [l, i, s, d, L, R]);
     let M = n.useCallback(
             (e) => {
-                let t = b.current,
-                    l = T.current,
-                    a = y.current?.getBoundingClientRect();
+                let t = C.current,
+                    l = R.current,
+                    a = b.current?.getBoundingClientRect();
                 if (null != t && null != l && null != a)
                     switch (t.mode) {
                         case "move":
@@ -523,34 +523,34 @@ function ec(e) {
                         }
                         case "rotate": {
                             let l = eu(t.centerX, t.centerY, e.clientX, e.clientY);
-                            g({ rotationDeg: (0, L.Ew)(t.baseRotationDeg + l - t.startAngleDeg) });
+                            g({ rotationDeg: (0, I.Ew)(t.baseRotationDeg + l - t.startAngleDeg) });
                         }
                     }
             },
-            [g, o, c, T],
+            [g, o, c, R],
         ),
-        R = n.useCallback(() => {
-            b.current = null;
+        T = n.useCallback(() => {
+            C.current = null;
         }, []);
     n.useEffect(
         () => (
             document.addEventListener("mousemove", M),
-            document.addEventListener("mouseup", R),
+            document.addEventListener("mouseup", T),
             () => {
-                (document.removeEventListener("mousemove", M), document.removeEventListener("mouseup", R));
+                (document.removeEventListener("mousemove", M), document.removeEventListener("mouseup", T));
             }
         ),
-        [M, R],
+        [M, T],
     );
     let D = n.useCallback(
             (e) => (t) => {
-                (t.stopPropagation(), t.preventDefault(), v(), j.current?.focus({ preventScroll: !0 }));
-                let a = T.current,
-                    n = y.current?.getBoundingClientRect();
+                (t.stopPropagation(), t.preventDefault(), v(), y.current?.focus({ preventScroll: !0 }));
+                let a = R.current,
+                    n = b.current?.getBoundingClientRect();
                 if (null == a || null == n || 0 === a.width || 0 === a.height) return;
                 let r = n.left + a.left + l.x * a.width,
                     o = n.top + a.top + l.y * a.height;
-                b.current = {
+                C.current = {
                     mode: e,
                     centerX: r,
                     centerY: o,
@@ -564,7 +564,7 @@ function ec(e) {
                     startAngleDeg: eu(r, o, t.clientX, t.clientY),
                 };
             },
-            [v, l, i, s, T],
+            [v, l, i, s, R],
         ),
         S = n.useCallback(
             (e) => {
@@ -575,7 +575,7 @@ function ec(e) {
                         if ("ArrowRight" !== e.key) return;
                         t = 1;
                     }
-                    (e.preventDefault(), e.stopPropagation(), g({ rotationDeg: (0, L.Ew)(i + t * L.p4) }));
+                    (e.preventDefault(), e.stopPropagation(), g({ rotationDeg: (0, I.Ew)(i + t * I.p4) }));
                     return;
                 }
                 let t = e.shiftKey ? 0.05 : 0.01,
@@ -604,20 +604,20 @@ function ec(e) {
             [g, l, i],
         );
     return (0, a.jsx)("div", {
-        ref: y,
+        ref: b,
         className: er.DW,
         children: (0, a.jsxs)(r.D, {
-            innerRef: j,
-            className: p()(er.aP, { [er.$A]: h }),
-            style: { display: f ? void 0 : "none" },
+            innerRef: y,
+            className: p()(er.aP, { [er.$A]: f }),
+            style: { display: h ? void 0 : "none" },
             "aria-label": t,
             "aria-keyshortcuts": "Alt+ArrowLeft Alt+ArrowRight",
             onClick: v,
             onMouseDown: D("move"),
             onKeyDown: S,
             children: [
-                C,
-                h &&
+                j,
+                f &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)("div", { "aria-hidden": !0, className: er.t$ }),
@@ -647,16 +647,16 @@ function eu(e, t, l, a) {
 }
 var ed = l(245116),
     em = l(268378),
-    eh = l(660183),
-    ef = l(545052);
+    ef = l(660183),
+    eh = l(545052);
 function ep(e) {
     let { track: t, selected: l, onSelect: i } = e,
         { useCurrentTime: s } = (0, k.T)(),
         { updateImageTrackData: r } = (0, ed.fn)(),
         o = s(),
-        { src: c, position: u, rotationDeg: d, widthFraction: m, naturalWidth: h, naturalHeight: f } = t.data,
-        p = t.data.shadow ?? L.xy,
-        x = t.data.shadowColor ?? L.pk,
+        { src: c, position: u, rotationDeg: d, widthFraction: m, naturalWidth: f, naturalHeight: h } = t.data,
+        p = t.data.shadow ?? I.xy,
+        x = t.data.shadowColor ?? I.pk,
         v = n.useCallback(
             (e) => {
                 let { position: l, rotationDeg: a, scale: n } = e;
@@ -670,31 +670,31 @@ function ep(e) {
             [r, t.id],
         ),
         g = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
-        C = L.EC[p],
-        y =
-            C > 0
-                ? `drop-shadow(0 calc(${C * L.HA} * var(--clip-track-scale)) calc(${C} * var(--clip-track-scale)) ${x})`
+        j = I.EC[p],
+        b =
+            j > 0
+                ? `drop-shadow(0 calc(${j * I.HA} * var(--clip-track-scale)) calc(${j} * var(--clip-track-scale)) ${x})`
                 : void 0;
     return (0, a.jsx)(ec, {
-        label: eh.intl.formatToPlainString(em.default.lZuIri, { fileName: t.data.fileName }),
+        label: ef.intl.formatToPlainString(em.default.lZuIri, { fileName: t.data.fileName }),
         position: u,
         rotationDeg: d,
         scale: m,
-        minScale: L.DX,
-        maxScale: L.nS,
+        minScale: I.DX,
+        maxScale: I.nS,
         sizing: "fixed",
-        aspectRatio: h / f,
+        aspectRatio: f / h,
         selected: l,
         visible: g,
         onSelect: i,
         onChange: v,
         children: (0, a.jsx)("img", {
-            className: ef.S,
+            className: eh.S,
             src: c,
             alt: "",
             "aria-hidden": !0,
             draggable: !1,
-            style: { filter: y },
+            style: { filter: b },
         }),
     });
 }
@@ -705,8 +705,8 @@ function ev(e) {
         { updateTextTrackData: r } = (0, ed.fn)(),
         o = s(),
         { text: c, position: u, style: d } = t.data,
-        m = t.data.rotationDeg ?? L.ad,
-        h = n.useCallback(
+        m = t.data.rotationDeg ?? I.ad,
+        f = n.useCallback(
             (e) => {
                 let { position: l, rotationDeg: a, scale: n } = e;
                 r(t.id, (e) => ({
@@ -718,21 +718,21 @@ function ev(e) {
             },
             [r, t.id],
         ),
-        f = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
-        p = L.mO[d.strokeWidth];
+        h = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
+        p = I.mO[d.strokeWidth];
     return (0, a.jsxs)(ec, {
-        label: eh.intl.formatToPlainString(em.default.EDmwVf, { text: c }),
+        label: ef.intl.formatToPlainString(em.default.EDmwVf, { text: c }),
         position: u,
         rotationDeg: m,
         scale: d.fontSize,
-        minScale: L.z2,
-        maxScale: L.T7,
+        minScale: I.z2,
+        maxScale: I.T7,
         sizing: "content",
         resizable: !1,
         selected: l,
-        visible: f,
+        visible: h,
         onSelect: i,
-        onChange: h,
+        onChange: f,
         children: [
             p > 0 &&
                 (0, a.jsx)("span", {
@@ -750,27 +750,27 @@ function ev(e) {
     });
 }
 var eg = l(702841),
-    eC = l(408278),
-    ey = l(461150),
-    ej = l(782134),
-    eb = l(113494),
-    ew = l(898196),
+    ej = l(408278),
+    eb = l(461150),
+    ey = l(782134),
+    eC = l(113494),
+    eN = l(898196),
     eE = l(559106),
-    eN = l(765671),
+    ew = l(765671),
     ek = l(531685);
 (l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162));
 var eA = l(661531),
-    eI = l(602853),
-    eT = l(602674),
-    eL = l(335416),
+    eL = l(602853),
+    eR = l(602674),
+    eI = l(335416),
     eM = l(556250);
-let eR = new Map(),
+let eT = new Map(),
     eD = n.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: s, className: r, alwaysRenderContainer: o = !1 } = e,
             c = n.useRef(null),
-            { ref: u, width: d, height: m } = (0, eN.Ay)(),
-            [h, f] = n.useState(null),
-            x = (0, eI.r)(eA.A.colors.BACKGROUND_MOD_STRONG).hex();
+            { ref: u, width: d, height: m } = (0, ew.Ay)(),
+            [f, h] = n.useState(null),
+            x = (0, eL.r)(eA.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (n.useEffect(
             () => (
                 (c.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
@@ -783,20 +783,20 @@ let eR = new Map(),
         n.useEffect(() => {
             if (0 === d || 0 === i.length || null == c.current) return;
             let e = `${t}-${i.map((e) => e.trackName).join(",")}-${d}`,
-                l = eR.get(e);
-            if (null != l) return void f(l.waveform);
+                l = eT.get(e);
+            if (null != l) return void h(l.waveform);
             let a = c.current,
                 n = !1;
             function s(t) {
                 if (n) return;
                 let { waveform: l, error: a } = t.data;
-                null != a ? L.nx.error("Failed to load waveform:", a) : (eR.set(e, { waveform: l }), f(l));
+                null != a ? I.nx.error("Failed to load waveform:", a) : (eT.set(e, { waveform: l }), h(l));
             }
             return (
                 a.addEventListener("message", s),
                 (async function () {
                     try {
-                        let e = (0, eT.v)();
+                        let e = (0, eR.v)();
                         if (null == e) throw Error("Failed to create audio context");
                         let t = await Promise.all(i.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
                         if (n) return;
@@ -812,7 +812,7 @@ let eR = new Map(),
                         }
                         a.postMessage({ trackChannels: l, width: d }, s);
                     } catch (e) {
-                        n || L.nx.error("Failed to decode audio:", e);
+                        n || I.nx.error("Failed to decode audio:", e);
                     }
                 })(),
                 () => {
@@ -821,20 +821,20 @@ let eR = new Map(),
             );
         }, [i, t, d]),
         n.useEffect(() => {
-            if (null == u.current || null == h || (d ?? 0) === 0 || (m ?? 0) === 0) return;
+            if (null == u.current || null == f || (d ?? 0) === 0 || (m ?? 0) === 0) return;
             let e = u.current,
                 t = e.getContext("2d");
             if (null == t) return;
             let { width: l, height: a } = e,
-                n = l / h.length,
-                i = -(n * (eL.Jh.waveformBarWidth - 1));
+                n = l / f.length,
+                i = -(n * (eI.Jh.waveformBarWidth - 1));
             (t.clearRect(0, 0, l, a), (t.fillStyle = x));
-            for (let e = 0; e < h.length; e++) {
-                let l = h[e] * a,
+            for (let e = 0; e < f.length; e++) {
+                let l = f[e] * a,
                     s = e * n + i;
                 t.fillRect(s, a, n - i, -l);
             }
-        }, [x, d, u, m, h]),
+        }, [x, d, u, m, f]),
         0 === i.length)
             ? o
                 ? (0, a.jsx)("div", { className: p()(eM.k, r), onMouseDown: s })
@@ -851,44 +851,44 @@ let eR = new Map(),
               });
     });
 var eS = l(683063),
-    e_ = l(565645),
-    eO = l(562153),
-    eP = l(869036),
-    eG = l(931540);
-function eU(e, t) {
-    return (0, eP.$)(e, t.type, t.type === L.Gy.GAME_EVENT ? t.eventName : void 0);
+    eO = l(565645),
+    eP = l(562153),
+    e_ = l(374816),
+    ez = l(931540);
+function e$(e, t) {
+    return (0, e_.$b)(e, t.type, t.type === I.Gy.GAME_EVENT ? t.eventName : void 0);
 }
-function eB(e) {
+function eU(e) {
     return { timestamp: e.peakMs, signal: { type: e.type, userId: e.userId, confidence: e.peakConfidence } };
 }
-function eK(e) {
+function eG(e) {
     let { icon: t, title: l, body: n, position: i, compact: s } = e;
     return (0, a.jsx)(eS.u, {
         title: l,
         body: n,
         position: "top",
         children: (0, a.jsx)("div", {
-            className: p()(eG.H, { [eG.c]: s }),
+            className: p()(ez.H, { [ez.c]: s }),
             style: { left: `${i}%` },
             children: (0, a.jsx)(t, { size: "refresh_sm", color: eA.A.colors.ICON_DEFAULT }),
         }),
     });
 }
-let ez = { [L.Gy.LAUGHTER]: em.default.bTC23D, [L.Gy.SHOUTING]: em.default["3gqpuo"] };
-function e$(e) {
+let eB = { [I.Gy.LAUGHTER]: em.default.bTC23D, [I.Gy.SHOUTING]: em.default["3gqpuo"] };
+function eH(e) {
     let { icon: t, signal: l, guildId: n, position: i, compact: s } = e,
-        r = (0, U.bG)([q.default], () => q.default.getUser(l.userId)),
-        o = (0, eO.tx)(n, null, r);
+        r = (0, $.bG)([Y.default], () => Y.default.getUser(l.userId)),
+        o = (0, eP.tx)(n, null, r);
     return null == l.emojiId && null == l.emojiName
-        ? (0, a.jsx)(eK, { icon: t, title: l.name, body: o, position: i, compact: s })
+        ? (0, a.jsx)(eG, { icon: t, title: l.name, body: o, position: i, compact: s })
         : (0, a.jsx)(eS.u, {
               title: l.name,
               body: o,
               position: "top",
               children: (0, a.jsx)("div", {
-                  className: p()(eG.H, { [eG.c]: s }),
+                  className: p()(ez.H, { [ez.c]: s }),
                   style: { left: `${i}%` },
-                  children: (0, a.jsx)(e_.A, {
+                  children: (0, a.jsx)(eO.A, {
                       emojiId: l.emojiId ?? null,
                       emojiName: l.emojiName ?? null,
                       animated: l.emojiAnimated,
@@ -897,33 +897,33 @@ function e$(e) {
               }),
           });
 }
-let eF = n.memo(function (e) {
+let eV = n.memo(function (e) {
     let { clip: t, videoLength: l, compact: i = !1 } = e,
         s = t.audioEvents,
         r = t.applicationId,
         o = n.useMemo(() => {
             let e = t.timeline.filter(
-                (e) => !e.signal.hiddenFromTimeline && !(e.signal.type === L.Gy.SOUNDBOARD && !e.signal.playing),
+                (e) => !e.signal.hiddenFromTimeline && !(e.signal.type === I.Gy.SOUNDBOARD && !e.signal.playing),
             );
             return (
                 null != s
                     ? (e = e.filter((e) => {
                           var t;
-                          return (t = e.signal.type) !== L.Gy.LAUGHTER && t !== L.Gy.SHOUTING;
-                      })).push(...s.map(eB))
+                          return (t = e.signal.type) !== I.Gy.LAUGHTER && t !== I.Gy.SHOUTING;
+                      })).push(...s.map(eU))
                     : (e = (function (e) {
                           let t = e
-                                  .filter((e) => e.signal.type === L.Gy.LAUGHTER && e.signal.confidence > 0.8)
+                                  .filter((e) => e.signal.type === I.Gy.LAUGHTER && e.signal.confidence > 0.8)
                                   .sort((e, t) => e.timestamp - t.timestamp),
                               l = new Set(),
                               a = 0;
                           for (let e = 1; e <= t.length; e++)
                               (e < t.length && t[e].timestamp - t[e - 1].timestamp < 2500) ||
                                   (e - a >= 2 && l.add(t[e - 1]), (a = e));
-                          return e.filter((e) => e.signal.type !== L.Gy.LAUGHTER || l.has(e));
+                          return e.filter((e) => e.signal.type !== I.Gy.LAUGHTER || l.has(e));
                       })(e)),
-                (e = e.filter((e) => eU(r, e.signal) > 0)).sort((e, t) => e.timestamp - t.timestamp),
-                e.sort((e, t) => eU(r, t.signal) - eU(r, e.signal)),
+                (e = e.filter((e) => e$(r, e.signal) > 0)).sort((e, t) => e.timestamp - t.timestamp),
+                e.sort((e, t) => e$(r, t.signal) - e$(r, e.signal)),
                 e
             );
         }, [t.timeline, s, r]);
@@ -936,52 +936,54 @@ let eF = n.memo(function (e) {
         d = [];
     for (let e of o) {
         let t = c(e.timestamp);
-        null != t && (d.some((e) => 3 > Math.abs(e - t)) || (u.push(e), d.push(t)));
+        null != t && (d.some((e) => Math.abs(e - t) < e_.Vd) || (u.push(e), d.push(t)));
     }
     return u.map(function (e) {
-        var l;
+        var l, n;
         if (e.signal.hiddenFromTimeline) return null;
-        let n = c(e.timestamp);
-        if (null == n) return null;
-        let s = ((l = e.signal), (0, eP.u)(r, l.type, l.type === L.Gy.GAME_EVENT ? l.eventName : void 0));
+        let s = c(e.timestamp);
         if (null == s) return null;
-        let o = `${e.timestamp}-${e.signal.type}`;
+        let o = ((l = e.signal), (0, e_.u6)(r, l.type, l.type === I.Gy.GAME_EVENT ? l.eventName : void 0));
+        if (null == o) return null;
+        let u = `${e.timestamp}-${e.signal.type}`;
         switch (e.signal.type) {
-            case L.Gy.LAUGHTER:
-            case L.Gy.SHOUTING:
+            case I.Gy.LAUGHTER:
+            case I.Gy.SHOUTING:
                 return (0, a.jsx)(
-                    eK,
+                    eG,
                     {
-                        icon: s,
-                        title: eh.intl.string(ez[e.signal.type]),
-                        body: eh.intl.string(em.default["ry+jxm"]),
-                        position: n,
+                        icon: o,
+                        title: ef.intl.string(eB[e.signal.type]),
+                        body: ef.intl.string(em.default["ry+jxm"]),
+                        position: s,
                         compact: i,
                     },
-                    o,
+                    u,
                 );
-            case L.Gy.GAME_EVENT:
+            case I.Gy.GAME_EVENT:
                 return (0, a.jsx)(
-                    eK,
+                    eG,
                     {
-                        icon: s,
-                        title: e.signal.title ?? "",
-                        body: eh.intl.string(em.default["347DBb"]),
-                        position: n,
+                        icon: o,
+                        title:
+                            ((n = e.signal),
+                            (0, e_.PZ)(r, n.type, n.type === I.Gy.GAME_EVENT ? n.eventName : void 0) ?? ""),
+                        body: ef.intl.string(em.default["347DBb"]),
+                        position: s,
                         compact: i,
                     },
-                    `${o}-${e.signal.eventName ?? ""}`,
+                    `${u}-${e.signal.eventName ?? ""}`,
                 );
-            case L.Gy.SOUNDBOARD:
+            case I.Gy.SOUNDBOARD:
                 if (!e.signal.playing) return null;
-                return (0, a.jsx)(e$, { icon: s, signal: e.signal, guildId: t.guildId, position: n, compact: i }, o);
+                return (0, a.jsx)(eH, { icon: o, signal: e.signal, guildId: t.guildId, position: s, compact: i }, u);
             default:
                 return null;
         }
     });
 });
-var eH = l(590936);
-let eV = n.memo(function (e) {
+var eX = l(590936);
+let eF = n.memo(function (e) {
     let { videoLength: t, clip: l, onMouseDown: i, noBottomMargin: s = !1, compact: r = !1 } = e,
         { timeNotches: o, subNotches: c } = n.useMemo(() => {
             let e;
@@ -1019,18 +1021,18 @@ let eV = n.memo(function (e) {
             return { timeNotches: l, subNotches: n };
         }, [t]);
     return (0, a.jsx)("div", {
-        className: p()(eH.ZX, { [eH.dZ]: s, [eH.oE]: r }),
+        className: p()(eX.ZX, { [eX.dZ]: s, [eX.oE]: r }),
         onMouseDown: i,
         children: (0, a.jsxs)("div", {
-            className: eH.QY,
+            className: eX.QY,
             children: [
                 c.map((e, t) =>
                     (0, a.jsx)(
                         "div",
                         {
-                            className: eH.MJ,
+                            className: eX.MJ,
                             style: { left: `${e.position}%` },
-                            children: (0, a.jsx)("div", { className: eH.p }),
+                            children: (0, a.jsx)("div", { className: eX.p }),
                         },
                         `sub-${t}`,
                     ),
@@ -1039,14 +1041,14 @@ let eV = n.memo(function (e) {
                     (0, a.jsxs)(
                         "div",
                         {
-                            className: eH.Cv,
+                            className: eX.Cv,
                             style: { left: `${e.position}%` },
                             children: [
-                                (0, a.jsx)("div", { className: eH.d9 }),
-                                (0, a.jsxs)(K.E, {
+                                (0, a.jsx)("div", { className: eX.d9 }),
+                                (0, a.jsxs)(G.E, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
-                                    className: eH.Mz,
+                                    className: eX.Mz,
                                     children: [Math.round(e.time), "s"],
                                 }),
                             ],
@@ -1054,13 +1056,13 @@ let eV = n.memo(function (e) {
                         t,
                     ),
                 ),
-                (0, a.jsx)(eF, { clip: l, videoLength: t, compact: r }),
+                (0, a.jsx)(eV, { clip: l, videoLength: t, compact: r }),
             ],
         }),
     });
 });
-var eZ = l(591246);
-function eX(e) {
+var eW = l(591246);
+function eZ(e) {
     let {
             label: t,
             text: l,
@@ -1072,23 +1074,23 @@ function eX(e) {
             onSelect: d,
             onChangeRange: m,
         } = e,
-        h = n.useRef(null),
         f = n.useRef(null),
+        h = n.useRef(null),
         [v, g] = n.useState(null),
-        C = n.useCallback(() => {
-            let e = h.current;
+        j = n.useCallback(() => {
+            let e = f.current;
             if (null == e) return 0;
             let t = e.getBoundingClientRect();
             return 0 === t.width ? 0 : c / t.width;
         }, [c]),
-        y = n.useCallback(
+        b = n.useCallback(
             (e) => {
-                let t = f.current;
+                let t = h.current;
                 if (null == t) return;
-                let l = (e.clientX - t.clientX) * C();
-                if ("start" === t.mode) m((0, x.clamp)(t.initialStart + l, 0, t.initialEnd - L.Cx), t.initialEnd);
+                let l = (e.clientX - t.clientX) * j();
+                if ("start" === t.mode) m((0, x.clamp)(t.initialStart + l, 0, t.initialEnd - I.Cx), t.initialEnd);
                 else if ("end" === t.mode) {
-                    let e = (0, x.clamp)(t.initialEnd + l, t.initialStart + L.Cx, c);
+                    let e = (0, x.clamp)(t.initialEnd + l, t.initialStart + I.Cx, c);
                     m(t.initialStart, e);
                 } else {
                     let e = t.initialEnd - t.initialStart,
@@ -1096,31 +1098,31 @@ function eX(e) {
                     m(a, a + e);
                 }
             },
-            [C, m, c],
+            [j, m, c],
         ),
-        j = n.useCallback(() => {
-            ((f.current = null), g(null));
+        y = n.useCallback(() => {
+            ((h.current = null), g(null));
         }, []);
     n.useEffect(() => {
         if (null != v)
             return (
-                document.addEventListener("mousemove", y),
-                document.addEventListener("mouseup", j),
+                document.addEventListener("mousemove", b),
+                document.addEventListener("mouseup", y),
                 () => {
-                    (document.removeEventListener("mousemove", y), document.removeEventListener("mouseup", j));
+                    (document.removeEventListener("mousemove", b), document.removeEventListener("mouseup", y));
                 }
             );
-    }, [v, y, j]);
-    let b = n.useCallback(
+    }, [v, b, y]);
+    let C = n.useCallback(
             (e) => (t) => {
                 (t.stopPropagation(),
                     d(),
-                    (f.current = { mode: e, clientX: t.clientX, initialStart: s, initialEnd: o }),
+                    (h.current = { mode: e, clientX: t.clientX, initialStart: s, initialEnd: o }),
                     g(e));
             },
             [d, s, o],
         ),
-        w = n.useCallback(
+        N = n.useCallback(
             (e) => {
                 let t = e.shiftKey ? 1 : 0.1,
                     l = o - s,
@@ -1139,20 +1141,20 @@ function eX(e) {
                     l = !1,
                     a = s;
                 ("ArrowLeft" === e.key
-                    ? ((l = !0), (a = (0, x.clamp)(s - t, 0, o - L.Cx)))
-                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(s + t, 0, o - L.Cx))),
+                    ? ((l = !0), (a = (0, x.clamp)(s - t, 0, o - I.Cx)))
+                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(s + t, 0, o - I.Cx))),
                     l && (e.preventDefault(), e.stopPropagation(), m(a, o)));
             },
             [s, o, m],
         ),
-        N = n.useCallback(
+        w = n.useCallback(
             (e) => {
                 let t = e.shiftKey ? 1 : 0.1,
                     l = !1,
                     a = o;
                 ("ArrowLeft" === e.key
-                    ? ((l = !0), (a = (0, x.clamp)(o - t, s + L.Cx, c)))
-                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(o + t, s + L.Cx, c))),
+                    ? ((l = !0), (a = (0, x.clamp)(o - t, s + I.Cx, c)))
+                    : "ArrowRight" === e.key && ((l = !0), (a = (0, x.clamp)(o + t, s + I.Cx, c))),
                     l && (e.preventDefault(), e.stopPropagation(), m(s, a)));
             },
             [s, o, c, m],
@@ -1160,24 +1162,24 @@ function eX(e) {
         k = 0 === c ? 0 : (s / c) * 100,
         A = 0 === c ? 0 : ((o - s) / c) * 100;
     return (0, a.jsx)("div", {
-        className: eZ.nM,
+        className: eW.nM,
         children: (0, a.jsxs)("div", {
-            ref: h,
-            className: eZ.hz,
+            ref: f,
+            className: eW.hz,
             children: [
                 (0, a.jsx)(eE.vN, {
                     children: (0, a.jsx)(r.D, {
-                        className: p()(eZ.u4, { [eZ.jX]: u }),
+                        className: p()(eW.u4, { [eW.jX]: u }),
                         style: { left: `${k}%`, width: `${A}%`, backgroundColor: i },
-                        onMouseDown: b("move"),
-                        onKeyDown: w,
+                        onMouseDown: C("move"),
+                        onKeyDown: N,
                         "aria-label": t,
                         children: (0, a.jsx)("div", {
-                            className: eZ.Kq,
-                            children: (0, a.jsx)(K.E, {
+                            className: eW.Kq,
+                            children: (0, a.jsx)(G.E, {
                                 variant: "text-sm/medium",
                                 color: "none",
-                                className: eZ.Vd,
+                                className: eW.Vd,
                                 children: l,
                             }),
                         }),
@@ -1185,41 +1187,41 @@ function eX(e) {
                 }),
                 (0, a.jsx)(eE.vN, {
                     children: (0, a.jsx)("button", {
-                        className: eZ.YQ,
+                        className: eW.YQ,
                         style: { left: `${k}%` },
-                        onMouseDown: b("start"),
+                        onMouseDown: C("start"),
                         onKeyDown: E,
                         role: "slider",
                         tabIndex: 0,
                         "aria-valuemin": 0,
                         "aria-valuenow": s,
-                        "aria-valuemax": o - L.Cx,
+                        "aria-valuemax": o - I.Cx,
                         "aria-label": t,
-                        children: (0, a.jsx)("div", { className: eZ.gt }),
+                        children: (0, a.jsx)("div", { className: eW.gt }),
                     }),
                 }),
                 (0, a.jsx)(eE.vN, {
                     children: (0, a.jsx)("button", {
-                        className: eZ.JZ,
+                        className: eW.JZ,
                         style: { left: `${k + A}%` },
-                        onMouseDown: b("end"),
-                        onKeyDown: N,
+                        onMouseDown: C("end"),
+                        onKeyDown: w,
                         role: "slider",
                         tabIndex: 0,
-                        "aria-valuemin": s + L.Cx,
+                        "aria-valuemin": s + I.Cx,
                         "aria-valuenow": o,
                         "aria-valuemax": c,
                         "aria-label": t,
-                        children: (0, a.jsx)("div", { className: eZ.gt }),
+                        children: (0, a.jsx)("div", { className: eW.gt }),
                     }),
                 }),
             ],
         }),
     });
 }
-var eW = l(711127),
-    eq = l(503535);
-function eY(e) {
+var eK = l(711127),
+    eY = l(503535);
+function eQ(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),
         l = Math.floor(e % 60),
@@ -1228,11 +1230,11 @@ function eY(e) {
 }
 function eJ(e) {
     let t = Math.floor(e / 60),
-        l = eh.intl.formatToPlainString(eh.t.iXLF9W, { minutes: t }),
-        a = eh.intl.formatToPlainString(eh.t.geSp4K, { seconds: e % 60 });
+        l = ef.intl.formatToPlainString(ef.t.iXLF9W, { minutes: t }),
+        a = ef.intl.formatToPlainString(ef.t.geSp4K, { seconds: e % 60 });
     return `${l} ${a}`;
 }
-function eQ(e) {
+function eq(e) {
     let { voiceAudioTracks: t, transitionState: l } = e,
         {
             useCurrentTime: i,
@@ -1243,59 +1245,59 @@ function eQ(e) {
             cropDuration: u,
             setCropStart: d,
             setCropEnd: m,
-            play: h,
-            pause: f,
+            play: f,
+            pause: h,
             subscribe: v,
             seek: g,
-            clip: C,
-            generateThumbnails: y,
-            videoDimensions: j,
+            clip: j,
+            generateThumbnails: b,
+            videoDimensions: y,
         } = (0, k.T)(),
-        { tracks: b, selectedTrackId: w, setSelectedTrackId: E, updateTrackRange: N } = (0, ed.fn)(),
+        { tracks: C, selectedTrackId: N, setSelectedTrackId: E, updateTrackRange: w } = (0, ed.fn)(),
         A = i(),
-        [I, T] = n.useState(null),
+        [L, R] = n.useState(null),
         M = n.useRef(null),
-        R = n.useRef(null),
+        T = n.useRef(null),
         [D, S] = n.useState(!1),
-        [_, P] = n.useState(null);
+        [O, _] = n.useState(null);
     n.useEffect(
         () =>
             v({
                 onPlay: () => {
-                    (T(null), S(!1));
+                    (R(null), S(!1));
                 },
             }),
         [v],
     );
-    let { ref: G, width: U = 0, height: B = 0 } = (0, eN.Ay)(),
-        z = (0, eg.bG)([ek.A], () => ek.A.windowSize()),
-        $ = n.useRef(null),
-        F = n.useCallback(() => {
-            let e = G.current;
-            null != e && P(e.getBoundingClientRect());
-        }, [G]);
+    let { ref: z, width: $ = 0, height: U = 0 } = (0, ew.Ay)(),
+        B = (0, eg.bG)([ek.A], () => ek.A.windowSize()),
+        H = n.useRef(null),
+        V = n.useCallback(() => {
+            let e = z.current;
+            null != e && _(e.getBoundingClientRect());
+        }, [z]);
     (n.useMemo(() => {
-        (z.width, z.height, F());
-    }, [z.width, z.height, U, l, F]),
+        (B.width, B.height, V());
+    }, [B.width, B.height, $, l, V]),
         n.useEffect(() => {
-            let e = $.current;
-            if (null != e) return (e.addEventListener("scroll", F), () => e.removeEventListener("scroll", F));
-        }, [F]));
-    let H = n.useCallback(
+            let e = H.current;
+            if (null != e) return (e.addEventListener("scroll", V), () => e.removeEventListener("scroll", V));
+        }, [V]));
+    let X = n.useCallback(
             (e, t) => {
-                if (null == s || null == _) return;
-                let l = (((0, x.clamp)(e, _.left, _.right) - _.left) / _.width) * s,
+                if (null == s || null == O) return;
+                let l = (((0, x.clamp)(e, O.left, O.right) - O.left) / O.width) * s,
                     a = (0, x.clamp)(l, 0, s),
-                    n = I;
-                (null == n && t && ((n = "playhead"), r && (f(), S(!0)), T(n)),
+                    n = L;
+                (null == n && t && ((n = "playhead"), r && (h(), S(!0)), R(n)),
                     "start" === n ? d(a) : "end" === n ? m(a) : "playhead" === n && g((0, x.clamp)(a, o, c)));
             },
-            [s, _, I, o, c, r, f, d, m, g],
+            [s, O, L, o, c, r, h, d, m, g],
         ),
-        V = n.useCallback(
+        F = n.useCallback(
             (e) => {
                 if (null == s) return;
-                let t = O(s, e.shiftKey),
+                let t = P(s, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -1308,10 +1310,10 @@ function eQ(e) {
             },
             [s, d, o],
         ),
-        Z = n.useCallback(
+        W = n.useCallback(
             (e) => {
                 if (null == s) return;
-                let t = O(s, e.shiftKey),
+                let t = P(s, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -1324,56 +1326,56 @@ function eQ(e) {
             },
             [s, m, c],
         ),
-        X = n.useCallback(
+        Z = n.useCallback(
             (e) => {
-                H(e.clientX, !0);
+                X(e.clientX, !0);
             },
-            [H],
+            [X],
         ),
-        W = n.useCallback(
+        K = n.useCallback(
             (e) => (t) => {
-                (t.stopPropagation(), r && (f(), S(!0)), T(e));
+                (t.stopPropagation(), r && (h(), S(!0)), R(e));
             },
-            [r, f],
+            [r, h],
         ),
-        q = n.useCallback(
+        Y = n.useCallback(
             (e) => {
-                H(e.clientX, !1);
+                X(e.clientX, !1);
             },
-            [H],
+            [X],
         ),
-        Y = n.useCallback(() => {
-            (D && h(), S(!1), T(null));
-        }, [D, h]);
+        Q = n.useCallback(() => {
+            (D && f(), S(!1), R(null));
+        }, [D, f]);
     n.useEffect(
         () => (
-            document.addEventListener("mousemove", q),
-            document.addEventListener("mouseup", Y),
+            document.addEventListener("mousemove", Y),
+            document.addEventListener("mouseup", Q),
             () => {
-                (document.removeEventListener("mousemove", q), document.removeEventListener("mouseup", Y));
+                (document.removeEventListener("mousemove", Y), document.removeEventListener("mouseup", Q));
             }
         ),
-        [q, Y],
+        [Y, Q],
     );
-    let { numberOfPreviews: J, timelinePreviewWidth: Q } = n.useMemo(() => {
-        if (null == j) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
-        let e = Math.ceil(B * (j.width / j.height));
-        return { numberOfPreviews: Math.ceil(U / e), timelinePreviewWidth: e };
-    }, [B, U, j]);
+    let { numberOfPreviews: J, timelinePreviewWidth: q } = n.useMemo(() => {
+        if (null == y) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
+        let e = Math.ceil(U * (y.width / y.height));
+        return { numberOfPreviews: Math.ceil($ / e), timelinePreviewWidth: e };
+    }, [U, $, y]);
     n.useEffect(() => {
-        if (0 === J || 0 === Q) return;
-        let e = G.current;
+        if (0 === J || 0 === q) return;
+        let e = z.current;
         if (null == e) return;
-        ((e.height = B), (e.width = U));
+        ((e.height = U), (e.width = $));
         let t = e.getContext("2d");
         if (null == t) return;
-        ((t.fillStyle = "transparent"), t.fillRect(0, 0, U, B));
+        ((t.fillStyle = "transparent"), t.fillRect(0, 0, $, U));
         let l = [];
-        for (let e = 0; e < J; e++) l.push((Q / U) * s * e);
-        return y(l, Q, B, (e) => {
-            for (let l = 0; l < e.length; l++) (t.drawImage(e[l], Q * l, 0, Q, B), e[l].close());
+        for (let e = 0; e < J; e++) l.push((q / $) * s * e);
+        return b(l, q, U, (e) => {
+            for (let l = 0; l < e.length; l++) (t.drawImage(e[l], q * l, 0, q, U), e[l].close());
         });
-    }, [B, G, s, J, Q, y, U]);
+    }, [U, z, s, J, q, b, $]);
     let ee = A - o,
         et = n.useCallback(() => {
             g(Math.max(o, A - 10));
@@ -1382,97 +1384,97 @@ function eQ(e) {
             g(Math.min(c, A + 10));
         }, [c, A, g]),
         ea = n.useCallback(() => {
-            r ? f() : h();
-        }, [r, h, f]),
+            r ? h() : f();
+        }, [r, f, h]),
         en = (o / s) * 100,
         ei = (1 - (s - c) / s) * 100,
         es = {
             background: `linear-gradient(to right, var(--black-500) ${en}%, transparent ${en}%, transparent ${ei}%, var(--black-500) ${ei}%)`,
         };
     return (0, a.jsxs)("div", {
-        className: eq.f4,
+        className: eY.f4,
         children: [
-            (0, a.jsx)("div", { className: eq.qs }),
+            (0, a.jsx)("div", { className: eY.qs }),
             (0, a.jsxs)("div", {
-                className: eq.lx,
+                className: eY.lx,
                 children: [
                     (0, a.jsx)("div", {
-                        className: eq.k2,
+                        className: eY.k2,
                         children: (0, a.jsx)("div", {
-                            ref: R,
-                            className: eq.re,
-                            children: (0, a.jsxs)(K.E, {
+                            ref: T,
+                            className: eY.re,
+                            children: (0, a.jsxs)(G.E, {
                                 variant: "text-xs/medium",
-                                className: eq.g7,
+                                className: eY.g7,
                                 color: "text-muted",
                                 children: [
-                                    (0, a.jsx)("span", { className: eq.$k, children: eY(ee) }),
-                                    (0, a.jsx)("span", { className: eq.xW, children: " / " }),
-                                    eY(u),
+                                    (0, a.jsx)("span", { className: eY.$k, children: eQ(ee) }),
+                                    (0, a.jsx)("span", { className: eY.xW, children: " / " }),
+                                    eQ(u),
                                 ],
                             }),
                         }),
                     }),
                     (0, a.jsxs)("div", {
-                        className: eq.s2,
+                        className: eY.s2,
                         children: [
-                            (0, a.jsx)(eC.K, {
+                            (0, a.jsx)(ej.K, {
                                 size: "sm",
                                 variant: "icon-only",
-                                icon: ey.q,
+                                icon: eb.q,
                                 onClick: et,
-                                "aria-label": eh.intl.string(eW.default["dRVF+Z"]),
+                                "aria-label": ef.intl.string(eK.default["dRVF+Z"]),
                             }),
-                            (0, a.jsx)(eC.K, {
+                            (0, a.jsx)(ej.K, {
                                 size: "sm",
-                                icon: r ? eb.PauseIcon : ej.PlayIcon,
+                                icon: r ? eC.PauseIcon : ey.PlayIcon,
                                 onClick: ea,
-                                "aria-label": eh.intl.string(r ? eh.t.ZcgDJX : eh.t.RscU7I),
+                                "aria-label": ef.intl.string(r ? ef.t.ZcgDJX : ef.t.RscU7I),
                                 variant: "icon-only",
                             }),
-                            (0, a.jsx)(eC.K, {
+                            (0, a.jsx)(ej.K, {
                                 size: "sm",
                                 variant: "icon-only",
-                                icon: ew.i,
+                                icon: eN.i,
                                 onClick: el,
-                                "aria-label": eh.intl.string(eW.default.yV2FLL),
+                                "aria-label": ef.intl.string(eK.default.yV2FLL),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: eq.fL,
-                ref: $,
+                className: eY.fL,
+                ref: H,
                 children: [
-                    (0, a.jsx)(eV, { onMouseDown: X, videoLength: s, clip: C, noBottomMargin: !0, compact: !0 }),
+                    (0, a.jsx)(eF, { onMouseDown: Z, videoLength: s, clip: j, noBottomMargin: !0, compact: !0 }),
                     (0, a.jsx)(eD, {
-                        onMouseDown: X,
+                        onMouseDown: Z,
                         voiceAudioTracks: t,
-                        clipId: C.id,
-                        className: eq.ou,
+                        clipId: j.id,
+                        className: eY.ou,
                         alwaysRenderContainer: !0,
                     }),
                     (0, a.jsx)("div", {
-                        className: eq.iI,
+                        className: eY.iI,
                         children: (0, a.jsxs)("div", {
-                            className: eq.Qp,
+                            className: eY.Qp,
                             children: [
-                                (0, a.jsx)("div", { className: eq.bd }),
+                                (0, a.jsx)("div", { className: eY.bd }),
                                 (0, a.jsx)("div", {
-                                    className: eq.PH,
+                                    className: eY.PH,
                                     children: (0, a.jsxs)("div", {
-                                        className: p()(eq.IO, { [eq.Dg]: null != I }),
-                                        onMouseDown: X,
+                                        className: p()(eY.IO, { [eY.Dg]: null != L }),
+                                        onMouseDown: Z,
                                         children: [
-                                            (0, a.jsx)("canvas", { className: eq.Ay, ref: G }),
+                                            (0, a.jsx)("canvas", { className: eY.Ay, ref: z }),
                                             (0, a.jsx)(eE.vN, {
                                                 children: (0, a.jsx)("div", {
                                                     tabIndex: 0,
                                                     ref: M,
-                                                    className: eq.lG,
+                                                    className: eY.lG,
                                                     children: (0, a.jsx)("svg", {
-                                                        className: eq.$6,
+                                                        className: eY.$6,
                                                         width: "10",
                                                         height: "7.5",
                                                         viewBox: "0 0 8 6",
@@ -1485,9 +1487,9 @@ function eQ(e) {
                                                     }),
                                                 }),
                                             }),
-                                            (0, a.jsx)("div", { className: eq.QT, style: es }),
+                                            (0, a.jsx)("div", { className: eY.QT, style: es }),
                                             (0, a.jsxs)("div", {
-                                                className: eq.Ws,
+                                                className: eY.Ws,
                                                 style: {
                                                     left: null != s ? `${(o / s) * 100}%` : "0",
                                                     right: null != s ? `${((s - c) / s) * 100}%` : "0",
@@ -1495,20 +1497,20 @@ function eQ(e) {
                                                 children: [
                                                     (0, a.jsx)(eE.vN, {
                                                         children: (0, a.jsxs)("button", {
-                                                            className: eq.uI,
-                                                            onMouseDown: W("start"),
-                                                            onKeyDown: V,
+                                                            className: eY.uI,
+                                                            onMouseDown: K("start"),
+                                                            onKeyDown: F,
                                                             role: "slider",
                                                             tabIndex: 0,
                                                             "aria-valuemin": 0,
                                                             "aria-valuenow": o,
                                                             "aria-valuetext": eJ(o),
-                                                            "aria-valuemax": c - L.zj,
-                                                            "aria-label": eh.intl.string(eh.t["+BTvw8"]),
+                                                            "aria-valuemax": c - I.zj,
+                                                            "aria-label": ef.intl.string(ef.t["+BTvw8"]),
                                                             children: [
-                                                                (0, a.jsx)("div", { className: eq.FV }),
+                                                                (0, a.jsx)("div", { className: eY.FV }),
                                                                 (0, a.jsxs)("svg", {
-                                                                    className: eq.lm,
+                                                                    className: eY.lm,
                                                                     width: "8",
                                                                     height: "56",
                                                                     viewBox: "0 0 8 56",
@@ -1528,20 +1530,20 @@ function eQ(e) {
                                                     }),
                                                     (0, a.jsx)(eE.vN, {
                                                         children: (0, a.jsxs)("button", {
-                                                            className: eq.H1,
-                                                            onMouseDown: W("end"),
-                                                            onKeyDown: Z,
+                                                            className: eY.H1,
+                                                            onMouseDown: K("end"),
+                                                            onKeyDown: W,
                                                             role: "slider",
                                                             tabIndex: 0,
-                                                            "aria-valuemin": o + L.zj,
+                                                            "aria-valuemin": o + I.zj,
                                                             "aria-valuenow": c,
                                                             "aria-valuetext": eJ(c),
                                                             "aria-valuemax": s,
-                                                            "aria-label": eh.intl.string(eh.t.bBgBYo),
+                                                            "aria-label": ef.intl.string(ef.t.bBgBYo),
                                                             children: [
-                                                                (0, a.jsx)("div", { className: eq.kn }),
+                                                                (0, a.jsx)("div", { className: eY.kn }),
                                                                 (0, a.jsxs)("svg", {
-                                                                    className: eq.mN,
+                                                                    className: eY.mN,
                                                                     width: "8",
                                                                     height: "56",
                                                                     viewBox: "0 0 8 56",
@@ -1564,37 +1566,37 @@ function eQ(e) {
                                         ],
                                     }),
                                 }),
-                                b.map((e) =>
+                                C.map((e) =>
                                     (0, a.jsx)(
-                                        eX,
+                                        eZ,
                                         {
                                             label: (function (e) {
                                                 switch (e) {
-                                                    case L.Me.TEXT:
-                                                        return eh.intl.string(em.default.WvkbtB);
-                                                    case L.Me.IMAGE:
-                                                        return eh.intl.string(em.default.heHHUW);
+                                                    case I.Me.TEXT:
+                                                        return ef.intl.string(em.default.WvkbtB);
+                                                    case I.Me.IMAGE:
+                                                        return ef.intl.string(em.default.heHHUW);
                                                     default:
                                                         return "";
                                                 }
                                             })(e.type),
                                             text: (function (e) {
                                                 switch (e.type) {
-                                                    case L.Me.TEXT:
+                                                    case I.Me.TEXT:
                                                         return e.data.text;
-                                                    case L.Me.IMAGE:
+                                                    case I.Me.IMAGE:
                                                         return e.data.fileName;
                                                     default:
                                                         return "";
                                                 }
                                             })(e),
-                                            color: L.mY[e.type],
+                                            color: I.mY[e.type],
                                             startSec: e.startSec,
                                             endSec: e.endSec,
                                             totalDurationSec: s,
-                                            selected: w === e.id,
+                                            selected: N === e.id,
                                             onSelect: () => E(e.id),
-                                            onChangeRange: (t, l) => N(e.id, t, l),
+                                            onChangeRange: (t, l) => w(e.id, t, l),
                                         },
                                         e.id,
                                     ),
@@ -1612,30 +1614,30 @@ function e0(e) {
         {
             cropStart: l,
             cropEnd: m,
-            videoPlayerRef: f,
+            videoPlayerRef: h,
             videoURL: p,
             audioTracks: x,
             clip: v,
             activeTool: g,
-            cropPreset: C,
-            videoDimensions: y,
+            cropPreset: j,
+            videoDimensions: b,
         } = (0, k.T)(),
-        { analyticsLocations: j } = (0, c.Ay)(o.A.CLIPS_EDITOR),
-        { tracks: b, selectedTrackId: w, setSelectedTrackId: E, removeTrack: N } = (0, ed.fn)(),
-        A = v.type === L.nQ.SCREENSHOT;
+        { analyticsLocations: y } = (0, c.Ay)(o.A.CLIPS_EDITOR),
+        { tracks: C, selectedTrackId: N, setSelectedTrackId: E, removeTrack: w } = (0, ed.fn)(),
+        A = v.type === I.nQ.SCREENSHOT;
     n.useEffect(() => {
         if (!A) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         function e(e) {
             if ((0, i.Cw)(document.activeElement)) return;
             if ("Delete" === e.key) {
-                null != w && (e.stopPropagation(), e.preventDefault(), N(w));
+                null != N && (e.stopPropagation(), e.preventDefault(), w(N));
                 return;
             }
-            let t = f.current;
+            let t = h.current;
             if (null == t) return;
-            let a = f.current?.videoElement;
+            let a = h.current?.videoElement;
             if (null == a) return;
-            let n = O(a.duration, e.shiftKey),
+            let n = P(a.duration, e.shiftKey),
                 s = !1;
             switch (e.key) {
                 case " ":
@@ -1649,9 +1651,9 @@ function e0(e) {
             }
             s && (e.stopPropagation(), e.preventDefault());
         }
-    }, [f, A, v.type, l, m, w, N]);
-    let I = n.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
-        T = n.useCallback(() => {
+    }, [h, A, v.type, l, m, N, w]);
+    let L = n.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
+        R = n.useCallback(() => {
             (0, u.R)(
                 {
                     items: [{ type: "IMAGE", url: v.thumbnail, proxyUrl: v.thumbnail, alt: v.name ?? "" }],
@@ -1665,9 +1667,9 @@ function e0(e) {
         return (0, a.jsxs)("div", {
             className: ea.OJ,
             children: [
-                (0, a.jsx)(G, {}),
+                (0, a.jsx)(z, {}),
                 t !== s.ip.ENTERED
-                    ? (0, a.jsx)(h, {})
+                    ? (0, a.jsx)(f, {})
                     : (0, a.jsxs)(a.Fragment, {
                           children: [
                               (0, a.jsx)(el, {}),
@@ -1675,7 +1677,7 @@ function e0(e) {
                                   className: M.zT,
                                   children: (0, a.jsx)(r.D, {
                                       className: M.xS,
-                                      onClick: T,
+                                      onClick: R,
                                       children: (0, a.jsx)("img", {
                                           className: M.V_,
                                           src: v.thumbnail,
@@ -1687,64 +1689,64 @@ function e0(e) {
                       }),
             ],
         });
-    let R = null == p || t !== s.ip.ENTERED,
-        D = v.type === L.nQ.VOICE_CLIP,
+    let T = null == p || t !== s.ip.ENTERED,
+        D = v.type === I.nQ.VOICE_CLIP,
         S = g === d.Y.CROP,
-        P = null != y ? y.width / y.height : null,
-        U = S
-            ? P
+        _ = null != b ? b.width / b.height : null,
+        $ = S
+            ? _
             : (function (e, t) {
                   switch (e) {
-                      case L.yz.PORTRAIT_9_16:
+                      case I.yz.PORTRAIT_9_16:
                           return 9 / 16;
-                      case L.yz.LANDSCAPE_16_9:
+                      case I.yz.LANDSCAPE_16_9:
                           return 16 / 9;
-                      case L.yz.ORIGINAL:
+                      case I.yz.ORIGINAL:
                       default:
                           return t;
                   }
-              })(C, P),
-        B = null;
+              })(j, _),
+        U = null;
     return (
-        (B =
+        (U =
             S && !D
                 ? (0, a.jsx)(ei, {})
-                : b.map((e) => {
+                : C.map((e) => {
                       switch (e.type) {
-                          case L.Me.TEXT:
-                              return (0, a.jsx)(ev, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
-                          case L.Me.IMAGE:
-                              return (0, a.jsx)(ep, { track: e, selected: e.id === w, onSelect: () => E(e.id) }, e.id);
+                          case I.Me.TEXT:
+                              return (0, a.jsx)(ev, { track: e, selected: e.id === N, onSelect: () => E(e.id) }, e.id);
+                          case I.Me.IMAGE:
+                              return (0, a.jsx)(ep, { track: e, selected: e.id === N, onSelect: () => E(e.id) }, e.id);
                           default:
                               return null;
                       }
                   })),
         (0, a.jsx)(c.f5, {
-            value: j,
+            value: y,
             children: (0, a.jsxs)("div", {
                 className: ea.OJ,
                 children: [
-                    (0, a.jsx)(G, {}),
+                    (0, a.jsx)(z, {}),
                     (0, a.jsx)("div", {
                         className: ea.zT,
-                        children: R
-                            ? (0, a.jsx)(h, {})
+                        children: T
+                            ? (0, a.jsx)(f, {})
                             : (0, a.jsxs)(a.Fragment, {
                                   children: [
                                       (0, a.jsx)(el, {}),
                                       (0, a.jsx)("div", {
                                           className: ea.x3,
-                                          children: (0, a.jsx)(_, {
-                                              ref: f,
+                                          children: (0, a.jsx)(O, {
+                                              ref: h,
                                               cropFraming: !D,
-                                              frameAspectRatio: U,
-                                              overlay: B,
+                                              frameAspectRatio: $,
+                                              overlay: U,
                                               loop: !1,
                                           }),
                                       }),
                                       (0, a.jsx)("div", {
                                           className: ea.fL,
-                                          children: (0, a.jsx)(eQ, { transitionState: t, voiceAudioTracks: I }),
+                                          children: (0, a.jsx)(eq, { transitionState: t, voiceAudioTracks: L }),
                                       }),
                                   ],
                               }),

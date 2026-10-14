@@ -23,6 +23,10 @@ function s(e) {
         case r.n_.DragonKill:
             return { ...e, score: 0.1, importance: 1 };
         case r.n_.DragonSteal:
+        case r.n_.ElderDragonKill:
+            return { ...e, score: 0.2, importance: 1 };
+        case r.n_.ElderDragonSteal:
+            return { ...e, score: 0.4, importance: 1 };
         case r.n_.BaronKill:
             return { ...e, score: 0.2, importance: 1 };
         case r.n_.BaronSteal:
