@@ -28,9 +28,9 @@ let S = function (e) {
     let { channelId: t, popoutType: n, width: S, height: T, idle: R, onClose: O } = e,
         L = (0, m.Us)(),
         P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
-        M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
-        w = (0, s.bG)([g.A], () => g.A.getGuild(M?.getGuildId())),
-        U = (0, s.bG)([j.Ay], () => null != M && j.Ay.getVoiceChannelId() === M.id),
+        w = (0, s.bG)([x.A], () => x.A.getChannel(t)),
+        M = (0, s.bG)([g.A], () => g.A.getGuild(w?.getGuildId())),
+        U = (0, s.bG)([j.Ay], () => null != w && j.Ay.getVoiceChannelId() === w.id),
         {
             participants: D,
             filteredParticipants: V,
@@ -39,7 +39,7 @@ let S = function (e) {
             layout: B,
             participantsOpen: F,
         } = (0, s.cf)([d.A], () => {
-            let e = null != M ? d.A.getLayout(M.id, L) : v.DUB.NORMAL;
+            let e = null != w ? d.A.getLayout(w.id, L) : v.DUB.NORMAL;
             return {
                 participants: d.A.getParticipants(t),
                 filteredParticipants: d.A.getFilteredParticipants(t),
@@ -51,7 +51,7 @@ let S = function (e) {
         }),
         z = (0, s.bG)([u.default], () => u.default.getAwaitingRemoteSessionInfo());
     return ((0, l.useEffect)(() => {
-        if (null != M)
+        if (null != w)
             return (
                 I._.subscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
@@ -59,24 +59,24 @@ let S = function (e) {
                 }
             );
         function e() {
-            null != M && (0, N.UV)(!1, t);
+            null != w && (0, N.UV)(!1, t);
         }
-    }, [M, t]),
-    null == M)
+    }, [w, t]),
+    null == w)
         ? null
         : (0, i.jsx)(r.D, {
               style: { width: S, height: T },
               className: _.Lw,
               onClick: function (e) {
-                  null == M || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || O();
+                  null == w || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || O();
               },
               tabIndex: -1,
               "aria-hidden": !0,
               children: (0, i.jsx)(A.A, {
                   inCall: U,
-                  channel: M,
+                  channel: w,
                   hasConnectPermission: !0,
-                  guild: w,
+                  guild: M,
                   participants: D,
                   filteredParticipants: V,
                   participantsVersion: G,
@@ -85,17 +85,17 @@ let S = function (e) {
                   idle: R,
                   mode: k,
                   onSelectParticipant: function (e, t) {
-                      if (null != M) {
+                      if (null != w) {
                           if (
                               (0, b.Ay)(e) &&
-                              (0, p.eo)(M, y.A, g.A, C.A, u.default)[0] &&
+                              (0, p.eo)(w, y.A, g.A, C.A, u.default)[0] &&
                               0 ===
                                   f.A.getAllActiveStreams().filter(
                                       (t) => (0, h._z)(t) === e.id && t.state !== v.XYD.ENDED,
                                   ).length
                           )
                               return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
-                          P?.id === e.id ? o.A.selectParticipant(M.id, null) : o.A.selectParticipant(M.id, e.id);
+                          P?.id === e.id ? o.A.selectParticipant(w.id, null) : o.A.selectParticipant(w.id, e.id);
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {

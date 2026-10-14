@@ -3,7 +3,7 @@
     B4: () => en,
     Do: () => b,
     Gw: () => P,
-    IY: () => q,
+    IY: () => Z,
     JT: () => z,
     LE: () => Q,
     Le: () => H,
@@ -41,7 +41,7 @@
     tr: () => m,
     uL: () => R,
     wE: () => W,
-    xR: () => Z,
+    xR: () => q,
     zy: () => L,
 }),
     n(938796));
@@ -245,8 +245,8 @@ let z = new Set([
         I.rbe.GUILD_MEDIA,
         I.rbe.GUILD_APP,
     ]),
-    Z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT]),
-    q = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA, I.rbe.GUILD_APP]),
+    q = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT]),
+    Z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA, I.rbe.GUILD_APP]),
     Q = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_ANNOUNCEMENT,

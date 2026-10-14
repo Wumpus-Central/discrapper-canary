@@ -529,9 +529,9 @@ function b(e) {
             avatarCutoutHeight: $,
             avatarCutoutRadius: z,
             fill: X,
-            ...Z
+            ...q
         } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
-        q = (0, T.FT)(m),
+        Z = (0, T.FT)(m),
         Q = (0, T.Kj)(m),
         J = 2.5 * Q.status,
         ee = 1.5 * Q.status,
@@ -561,10 +561,10 @@ function b(e) {
             children: [
                 (0, i.jsxs)("mask", {
                     id: B,
-                    width: q,
-                    height: q,
+                    width: Z,
+                    height: Z,
                     children: [
-                        (0, i.jsx)("circle", { cx: q / 2, cy: q / 2, r: q / 2, fill: "white" }),
+                        (0, i.jsx)("circle", { cx: Z / 2, cy: Z / 2, r: Z / 2, fill: "white" }),
                         (0, i.jsx)(l.animated.rect, { color: "black", x: W, y: Y, width: K, height: $, rx: z, ry: z }),
                     ],
                 }),
@@ -572,8 +572,8 @@ function b(e) {
                     className: g.__invalid_foreignObject,
                     x: 0,
                     y: 0,
-                    width: q,
-                    height: q,
+                    width: Z,
+                    height: Z,
                     mask: `url(#${B})`,
                     children: (0, i.jsx)(D, {
                         src: O,
@@ -605,7 +605,7 @@ function b(e) {
                                 viewBox: `0 0 ${J} ${ee}`,
                                 className: M ? g.Oi : void 0,
                                 children: [
-                                    (0, _.pF)(Z, Q.status, V),
+                                    (0, _.pF)(q, Q.status, V),
                                     (0, i.jsx)(l.animated.rect, { fill: X, width: J, height: ee, mask: `url(#${V})` }),
                                     (0, i.jsx)(u.C, {
                                         ref: A,

@@ -214,7 +214,7 @@ var W = n(223637),
     $ = n(683412),
     z = n(236285),
     X = n(690521);
-let Z = {
+let q = {
     s: { requiredFirstCharacters: ["~"], match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/) },
     highlight: { order: D.Ay.order, match: () => null },
     emoji: {
@@ -279,7 +279,7 @@ let Z = {
         parse: (e, t, n) => ({ type: "em", content: t(e[1], n), originalMatch: e }),
     },
 };
-var q = n(78390),
+var Z = n(78390),
     Q = n(379418),
     J = n(551965),
     ee = n(73510),
@@ -583,8 +583,8 @@ let ec = {
             parse(e, t, n) {
                 let [, i, r] = e,
                     a = n.guildId ?? ed(n.channelId) ?? void 0,
-                    s = (0, q.Q)(i),
-                    l = (0, q.f)(_.A, i, r, a);
+                    s = (0, Z.Q)(i),
+                    l = (0, Z.f)(_.A, i, r, a);
                 function o(e) {
                     return null == e ? null : [{ type: "text", content: e }];
                 }
@@ -604,7 +604,7 @@ let ec = {
         list: K.A,
         subtext: $.A,
     },
-    eu = (0, J.A)([ec, Z]),
+    eu = (0, J.A)([ec, q]),
     e_ = r().omit(eu, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]),
     eE = r().omit(eu, [
         "inlineCode",

@@ -137,7 +137,7 @@ function X(e) {
         o.id === F.location.id &&
         r === F.applicationId &&
         ((!G && Array.from(F.userIds).some((e) => e === w)) || !k)
-            ? q(F)
+            ? Z(F)
             : G &&
               (null == F || F.applicationId !== r || F.location.id !== o.id) &&
               (x === d.default.getSessionId() &&
@@ -219,12 +219,12 @@ function X(e) {
         $(M, o.id).upsert(r, o.id, t),
         null != (n = (0, T.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, T.D)(o))).upsert(r, o.id, t)));
 }
-function Z(e) {
+function q(e) {
     e.activity_instances?.forEach((e) => {
         X(e);
     });
 }
-function q(e) {
+function Z(e) {
     (D.delete(e.applicationId), E._.dispatch(C.jej.RELEASE_ACTIVITY_WEB_VIEW));
 }
 function Q(e) {
@@ -389,18 +389,18 @@ let ee = new J(a.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            (b.clear(), v.clear(), M.clear(), t.forEach((e) => Z(e)));
+            (b.clear(), v.clear(), M.clear(), t.forEach((e) => q(e)));
             let n = d.default.getId();
             for (let e of Array.from(D.values()))
                 ee
                     .getEmbeddedActivitiesForLocationIncludingHidden(e.location)
                     .some(
                         (t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n),
-                    ) || q(e);
+                    ) || Z(e);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            Z(t);
+            q(t);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,

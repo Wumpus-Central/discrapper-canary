@@ -1,4 +1,4 @@
-l.d(t, { fn: () => C, As: () => y, JQ: () => v });
+l.d(t, { fn: () => j, As: () => b, JQ: () => v });
 var a = l(477900),
     n = l(582128),
     i = l(858899);
@@ -54,7 +54,7 @@ async function m(e, t) {
             };
         let s = Math.max(1, Math.round(l.width * i)),
             r = Math.max(1, Math.round(l.height * i)),
-            { src: m, mimeType: h } = (function (e, t, l) {
+            { src: m, mimeType: f } = (function (e, t, l) {
                 let a = document.createElement("canvas");
                 ((a.width = t), (a.height = l));
                 let n = a.getContext("2d");
@@ -64,12 +64,12 @@ async function m(e, t) {
                     s = i.startsWith(`data:${o.w6}`) ? o.w6 : "image/png";
                 return { src: i, mimeType: s };
             })(l, s, r);
-        return { src: m, mimeType: h, fileName: t, naturalWidth: s, naturalHeight: r };
+        return { src: m, mimeType: f, fileName: t, naturalWidth: s, naturalHeight: r };
     } finally {
         l.close();
     }
 }
-async function h() {
+async function f() {
     let e;
     try {
         e = await r.A.fileManager.openFiles(
@@ -83,7 +83,7 @@ async function h() {
     let t = e[0];
     return null == t ? null : { bytes: t.data, fileName: t.filename };
 }
-var f = l(635793),
+var h = l(635793),
     p = l(362081);
 let x = n.createContext(null);
 function v(e) {
@@ -96,33 +96,33 @@ function v(e) {
             removeTrack: u,
             updateTrackRange: d,
             updateTextTrackData: m,
-            updateImageTrackData: h,
+            updateImageTrackData: f,
         } = (0, p.T)(),
         { enabled: v } = s.useConfig({ location: "ClipsEditorContextProvider" }),
-        [C, y] = n.useState(null),
-        j = n.useCallback(
+        [j, b] = n.useState(null),
+        y = n.useCallback(
             (e) => {
-                (i(f.Y.NONE), y(e));
+                (i(h.Y.NONE), b(e));
             },
             [i],
         ),
-        b = n.useCallback(() => {
-            y(o());
+        C = n.useCallback(() => {
+            b(o());
         }, [o]),
-        w = n.useCallback(async () => {
+        N = n.useCallback(async () => {
             let e = await g();
-            null != e && y(c(e));
+            null != e && b(c(e));
         }, [c]),
         E = n.useCallback(
             async (e) => {
                 let t = await g();
-                null != t && h(e, (e) => ({ ...e, ...t }));
+                null != t && f(e, (e) => ({ ...e, ...t }));
             },
-            [h],
+            [f],
         ),
-        N = n.useCallback(
+        w = n.useCallback(
             (e) => {
-                (u(e), y((t) => (t === e ? null : t)));
+                (u(e), b((t) => (t === e ? null : t)));
             },
             [u],
         ),
@@ -130,25 +130,25 @@ function v(e) {
         A = n.useMemo(
             () => ({
                 tracks: r,
-                selectedTrackId: C,
-                setSelectedTrackId: j,
-                addTextTrack: b,
-                pickAndAddImageTrack: w,
+                selectedTrackId: j,
+                setSelectedTrackId: y,
+                addTextTrack: C,
+                pickAndAddImageTrack: N,
                 pickAndReplaceImage: E,
-                removeTrack: N,
+                removeTrack: w,
                 updateTrackRange: d,
                 updateTextTrackData: m,
-                updateImageTrackData: h,
+                updateImageTrackData: f,
                 editorFeatures: k,
             }),
-            [r, C, j, b, w, E, N, d, m, h, k],
+            [r, j, y, C, N, E, w, d, m, f, k],
         );
     return (0, a.jsx)(x.Provider, { value: A, children: t });
 }
 async function g() {
     try {
         var e;
-        let t = await h();
+        let t = await f();
         if (null == t) return null;
         let l = await m(t.bytes, t.fileName);
         if (!(await (l.src, (e = l.mimeType), Promise.resolve({ allowed: !0, checked: !1 }))).allowed)
@@ -160,11 +160,11 @@ async function g() {
         return ((0, i.P0)({ text: e, variant: "critical" }), null);
     }
 }
-function C() {
+function j() {
     let e = n.useContext(x);
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
-function y() {
-    return C().editorFeatures;
+function b() {
+    return j().editorFeatures;
 }

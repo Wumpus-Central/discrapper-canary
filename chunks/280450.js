@@ -48,8 +48,8 @@ let R = new A.A("AuthenticationStore"),
     $ = null,
     z = !1,
     X = !1,
-    Z = [];
-function q(e) {
+    q = [];
+function Z(e) {
     let t = null != a.getToken(),
         n = null != o.w.get(f.ilC);
     R.verbose(e, { tokenManagerHasToken: t, storageHasToken: n });
@@ -110,13 +110,13 @@ function et() {
     ((w = U), (U = null), o.w.remove(L));
 }
 function en(e, t) {
-    (q("setAuthToken called."), (null == t || t !== v) && a.removeAnalyticsToken(), a.setToken(e, t));
+    (Z("setAuthToken called."), (null == t || t !== v) && a.removeAnalyticsToken(), a.setToken(e, t));
 }
 function ei(e) {
     ((x = e), a.setAnalyticsToken(e));
 }
 function er() {
-    return (q("removeAuthToken called."), a.removeAnalyticsToken(), a.removeToken());
+    return (Z("removeAuthToken called."), a.removeAnalyticsToken(), a.removeToken());
 }
 function ea() {
     let e = [];
@@ -124,7 +124,7 @@ function ea() {
         W && e.push({ type: "totp" }),
         Y && e.push({ type: "backup" }),
         H && e.push({ type: "sms" }),
-        (Z = e));
+        (q = e));
 }
 function es(e) {
     let { installation: t } = e;
@@ -139,7 +139,7 @@ function el() {
         }));
 }
 function eo(e) {
-    q("handleLogout called.");
+    Z("handleLogout called.");
     let t = er();
     (e?.isSwitchingAccount || (t && et(), J()),
         l.Ay.PersistedStore.clearAll({
@@ -229,7 +229,7 @@ class ed extends l.Ay.Store {
         return V;
     }
     getMFAMethods() {
-        return Z;
+        return q;
     }
     getLoginInstanceId() {
         return r;
@@ -267,7 +267,7 @@ let ec = new ed(
                 staticAuthSessionId: s,
                 apexExperiments: l,
             } = e;
-            (q("handleConnectionOpen called"),
+            (Z("handleConnectionOpen called"),
                 S.A.setUser(t.id, t.username, t.email ?? void 0, (0, T.A)(t)),
                 (b = n),
                 (M = i),
@@ -291,7 +291,7 @@ let ec = new ed(
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            q(`handleConnectionClosed called with code ${t}.`);
+            Z(`handleConnectionClosed called with code ${t}.`);
             let i = n(192308).hasModalOpen;
             if (4004 === t) {
                 if (F || i(O.jc) || i(O.Uy)) return void el();
@@ -384,7 +384,7 @@ let ec = new ed(
         },
         UPDATE_TOKEN: function (e) {
             let { token: t, userId: n } = e;
-            (q("handleUpdateToken called"), en(t, n), et());
+            (Z("handleUpdateToken called"), en(t, n), et());
         },
         EXPERIMENTS_FETCH: (e) => {
             ee(e);

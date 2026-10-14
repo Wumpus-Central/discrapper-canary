@@ -15,7 +15,7 @@ n.d(t, {
     hr: () => B,
     N: () => eO,
     IV: () => ey,
-    jV: () => Z,
+    jV: () => q,
     im: () => j,
     tc: () => eN,
     ne: () => M,
@@ -429,12 +429,12 @@ async function X(e) {
         );
     return _.id;
 }
-function Z(e) {
+function q(e) {
     if (N.DYY.has(e.type)) return null;
     if (v.Kc.has(e.type)) return N.DYY.has(e.type) ? null : JSON.stringify({ type: v.Kc.get(e.type) ?? null });
     return X(e);
 }
-let q = {
+let Z = {
         [v.he.GIROPAY]: {
             confirmationType: "stripe_redirect_confirmation",
             constructStripeConfirmPaymentHandler: (e) => {
@@ -532,10 +532,10 @@ class ee extends J {
         if (
             (super(e, t),
             (function (e) {
-                return N.CmT.has(e) && e in q;
+                return N.CmT.has(e) && e in Z;
             })(this.paymentSourceType))
         )
-            this.handlerRegistry = q[this.paymentSourceType];
+            this.handlerRegistry = Z[this.paymentSourceType];
         else if (this.paymentSourceType in Q) this.handlerRegistry = Q[this.paymentSourceType];
         else throw R("Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
     }
@@ -801,7 +801,7 @@ async function e_(e) {
                     return { plan_id: t, quantity: n };
                 }),
                 payment_source_id: null != n ? n.id : null,
-                payment_source_token: null != n ? await Z(n) : null,
+                payment_source_token: null != n ? await q(n) : null,
                 trial_id: i,
                 return_url: p,
                 code: r,
@@ -843,7 +843,7 @@ async function eE(e, t, n, i, r) {
             url: N.Rsh.BILLING_INVOICE_MANUAL_PAYMENT(e.id, t),
             body: {
                 payment_source_id: null != n ? n.id : null,
-                payment_source_token: null != n ? await Z(n) : null,
+                payment_source_token: null != n ? await q(n) : null,
                 return_url: d,
                 currency: i,
                 purchase_token: (0, h.r)(),
@@ -897,7 +897,7 @@ async function eI(e, t, n, i, r, d, c) {
         let l = {
             status: t.status,
             payment_source_id: t.paymentSource?.id,
-            payment_source_token: null != t.paymentSource ? await Z(t.paymentSource) : null,
+            payment_source_token: null != t.paymentSource ? await q(t.paymentSource) : null,
             currency: t.currency,
             gateway_checkout_context: await (0, E.ob)(t.paymentSource),
             load_id: c,

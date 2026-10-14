@@ -226,7 +226,7 @@ class G extends C.G {
             { no: 5, name: "user_in_guild", kind: "message", oneof: "filter", T: () => V },
             { no: 6, name: "user_ids", kind: "message", oneof: "filter", T: () => j },
             { no: 7, name: "client_locale", kind: "message", oneof: "filter", T: () => $ },
-            { no: 8, name: "client_location", kind: "message", oneof: "filter", T: () => q },
+            { no: 8, name: "client_location", kind: "message", oneof: "filter", T: () => Z },
             { no: 9, name: "client_ip", kind: "message", oneof: "filter", T: () => ed },
             { no: 10, name: "user_locale", kind: "message", oneof: "filter", T: () => Y },
             { no: 11, name: "bot", kind: "message", oneof: "filter", T: () => ew },
@@ -237,7 +237,7 @@ class G extends C.G {
             { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e$ },
             { no: 17, name: "always", kind: "message", oneof: "filter", T: () => eX },
             { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => X },
-            { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => eq },
+            { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => eZ },
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => eJ },
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => e1 },
             { no: 22, name: "guild_ids", kind: "message", oneof: "filter", T: () => e3 },
@@ -301,7 +301,7 @@ class G extends C.G {
                 case 8:
                     r.filter = {
                         oneofKind: "clientLocation",
-                        clientLocation: q.internalBinaryRead(e, e.uint32(), n, r.filter.clientLocation),
+                        clientLocation: Z.internalBinaryRead(e, e.uint32(), n, r.filter.clientLocation),
                     };
                     break;
                 case 9:
@@ -364,7 +364,7 @@ class G extends C.G {
                 case 19:
                     r.filter = {
                         oneofKind: "unitIdInExperiment",
-                        unitIdInExperiment: eq.internalBinaryRead(e, e.uint32(), n, r.filter.unitIdInExperiment),
+                        unitIdInExperiment: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.unitIdInExperiment),
                     };
                     break;
                 case 20:
@@ -459,7 +459,7 @@ class G extends C.G {
             "clientLocale" === e.filter.oneofKind &&
                 $.internalBinaryWrite(e.filter.clientLocale, t.tag(7, g.O0.LengthDelimited).fork(), n).join(),
             "clientLocation" === e.filter.oneofKind &&
-                q.internalBinaryWrite(e.filter.clientLocation, t.tag(8, g.O0.LengthDelimited).fork(), n).join(),
+                Z.internalBinaryWrite(e.filter.clientLocation, t.tag(8, g.O0.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
                 ed.internalBinaryWrite(e.filter.clientIp, t.tag(9, g.O0.LengthDelimited).fork(), n).join(),
             "userLocale" === e.filter.oneofKind &&
@@ -481,7 +481,7 @@ class G extends C.G {
             "clientSystemLocale" === e.filter.oneofKind &&
                 X.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, g.O0.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
-                eq.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, g.O0.LengthDelimited).fork(), n).join(),
+                eZ.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, g.O0.LengthDelimited).fork(), n).join(),
             "userPremiumType" === e.filter.oneofKind &&
                 eJ.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, g.O0.LengthDelimited).fork(), n).join(),
             "unitIdMatchesFilterSnapshot" === e.filter.oneofKind &&
@@ -774,7 +774,7 @@ class z extends C.G {
     }
 }
 let X = new z();
-class Z extends C.G {
+class q extends C.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.ClientLocation",
@@ -813,7 +813,7 @@ class Z extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let q = new Z();
+let Z = new q();
 class Q extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.ClientLocation.Place", [
@@ -2045,7 +2045,7 @@ class ez extends C.G {
     }
 }
 let eX = new ez();
-class eZ extends C.G {
+class eq extends C.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UnitIdInExperiment",
@@ -2101,7 +2101,7 @@ class eZ extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eq = new eZ();
+let eZ = new eq();
 class eQ extends C.G {
     constructor() {
         super(

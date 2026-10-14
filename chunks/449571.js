@@ -51,7 +51,7 @@ function Y(e) {
         $ = (0, h.h)(b),
         z = A?.launchId,
         X = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
-        { dockedRect: Z, isHidden: q } = (0, l.cf)([O.A], () => {
+        { dockedRect: q, isHidden: Z } = (0, l.cf)([O.A], () => {
             let e = O.A.pipWindow;
             return { dockedRect: null != e ? O.A.getDockedRect(e.id) : null, isHidden: O.A.isEmbeddedActivityHidden() };
         }),
@@ -80,7 +80,7 @@ function Y(e) {
         eo = ei && es && el,
         ed = ei && ee?.type !== V.lp.ACTIVITY,
         ec = !ei && K === F.Gd.PIP,
-        eu = (!en || (en && (ed || ec || eo) && null == Z)) && !q,
+        eu = (!en || (en && (ed || ec || eo) && null == q)) && !Z,
         e_ = eu && null != O.A.pipVideoWindow && null != O.A.pipActivityWindow;
     function eE() {
         if (null != t) {
@@ -123,7 +123,7 @@ function Y(e) {
                     [j.N7]: r && !A.config?.useInteractivePIP,
                     [H.p0]: eu && !a,
                     [H.ST]: eu && a,
-                    [H.R]: q,
+                    [H.R]: Z,
                     [H.Gq]: e_,
                 }),
                 noBorder: !eu,

@@ -1503,7 +1503,7 @@ var j =
         (_[(_.OS_SIGNAL_CONFIRMED = 12)] = "OS_SIGNAL_CONFIRMED"),
         (_[(_.TNS_DETERMINATION = 13)] = "TNS_DETERMINATION"),
         _),
-    Z =
+    q =
         (((E = {})[(E.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (E[(E.K_ID = 1)] = "K_ID"),
         (E[(E.PERSONA = 2)] = "PERSONA"),
@@ -1513,7 +1513,7 @@ var j =
         (E[(E.APPLE_APP_STORE = 6)] = "APPLE_APP_STORE"),
         (E[(E.GOOGLE_PLAY = 7)] = "GOOGLE_PLAY"),
         E),
-    q =
+    Z =
         (((A = {})[(A.AGE_ASSURANCE_GROUP_UNSPECIFIED = 0)] = "AGE_ASSURANCE_GROUP_UNSPECIFIED"),
         (A[(A.AGE_ASSURANCE_GROUP_13 = 1)] = "AGE_ASSURANCE_GROUP_13"),
         (A[(A.AGE_ASSURANCE_GROUP_14 = 2)] = "AGE_ASSURANCE_GROUP_14"),
@@ -2837,14 +2837,14 @@ class eB extends O.G {
                 no: 4,
                 name: "vendor",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceVendor", Z, "AGE_ASSURANCE_VENDOR_"],
+                T: () => ["discord_protos.users.v1.AgeAssuranceVendor", q, "AGE_ASSURANCE_VENDOR_"],
             },
             { no: 5, name: "verified_at", kind: "message", T: () => L.D },
             {
                 no: 6,
                 name: "estimated_age_group",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceGroup", q],
+                T: () => ["discord_protos.users.v1.AgeAssuranceGroup", Z],
             },
             { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 },
             { no: 8, name: "cooldown_reset_at", kind: "message", T: () => L.D },
@@ -3129,7 +3129,7 @@ class ez extends O.G {
     }
 }
 let eX = new ez();
-class eZ extends O.G {
+class eq extends O.G {
     constructor() {
         super("discord_protos.users.v1.GuildShardingConfig", [
             { no: 1, name: "shards", kind: "scalar", repeat: 1, T: 5 },
@@ -3171,8 +3171,8 @@ class eZ extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-new eZ();
-class eq extends O.G {
+new eq();
+class eZ extends O.G {
     constructor() {
         super("discord_protos.users.v1.QuestMetadata", [{ no: 1, name: "quests_completed", kind: "scalar", T: 13 }]);
     }
@@ -3206,7 +3206,7 @@ class eq extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eQ = new eq();
+let eQ = new eZ();
 class eJ extends O.G {
     constructor() {
         super("discord_protos.users.v1.PremiumState", [

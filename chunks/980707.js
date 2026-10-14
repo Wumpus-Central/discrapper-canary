@@ -220,8 +220,8 @@ function X(e) {
         children: (0, r.jsx)(i, { "aria-hidden": !0, color: a, ...o, className: l()(D.icon, s) }),
     });
 }
-var Z = n(869431);
-function q(e) {
+var q = n(869431);
+function Z(e) {
     let {
             color: t = "default",
             label: n,
@@ -267,7 +267,7 @@ function q(e) {
         }, [p, N]),
         (0, r.jsxs)(w.D, {
             innerRef: H,
-            className: l()(D.item, D.labelContainer, Z.nM, M[t], C, { [D.disabled]: I, [D.focused]: p, [O ?? ""]: p }),
+            className: l()(D.item, D.labelContainer, q.nM, M[t], C, { [D.disabled]: I, [D.focused]: p, [O ?? ""]: p }),
             onClick: I ? void 0 : Y,
             "aria-disabled": I,
             ...T,
@@ -490,7 +490,7 @@ function er(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: m,
-        className: l()(D.item, D.checkboxContainer, D.labelContainer, Z.nM, M[t], f, {
+        className: l()(D.item, D.checkboxContainer, D.labelContainer, q.nM, M[t], f, {
             [D.disabled]: _,
             [D.focused]: E,
             [I ?? ""]: E,
@@ -557,7 +557,7 @@ function es(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: p,
-        className: l()(D.item, D.labelContainer, Z.nM, M[t], { [D.disabled]: _, [D.focused]: E }),
+        className: l()(D.item, D.labelContainer, q.nM, M[t], { [D.disabled]: _, [D.focused]: E }),
         onClick: _ ? void 0 : T,
         ...A,
         "aria-checked": s,
@@ -1096,7 +1096,7 @@ function eA(e) {
                 className: l()(D.scroller, { [D.scrollerWithScrollbar]: !i }),
                 children: [
                     0 === h.length &&
-                        (0, r.jsx)(q, {
+                        (0, r.jsx)(Z, {
                             disabled: !0,
                             void_label: () => (0, r.jsx)(ef, {}),
                             menuItemProps: M.getItemProps({ path: ["empty"] }),
@@ -1136,7 +1136,7 @@ function eA(e) {
                                             A = [...i, o.key],
                                             h = n.isFocused(A),
                                             f = (0, r.jsx)(
-                                                q,
+                                                Z,
                                                 {
                                                     ...o.props,
                                                     ...(null != o.label

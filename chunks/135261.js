@@ -1,4 +1,4 @@
-n.d(t, { A: () => N, P: () => I });
+n.d(t, { A: () => v, P: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -27,22 +27,22 @@ function I(e) {
         : (0, l.jsxs)("div", {
               className: b.Uo,
               children: [
-                  (0, l.jsx)(v, {
+                  (0, l.jsx)(N, {
                       slateEditor: t,
                       markdownSyntax: "bold",
                       children: (0, l.jsx)(u.$, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)(v, {
+                  (0, l.jsx)(N, {
                       slateEditor: t,
                       markdownSyntax: "italics",
                       children: (0, l.jsx)(c.y, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)(v, {
+                  (0, l.jsx)(N, {
                       slateEditor: t,
                       markdownSyntax: "underline",
                       children: (0, l.jsx)(d.q, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)(v, {
+                  (0, l.jsx)(N, {
                       slateEditor: t,
                       markdownSyntax: "strikethrough",
                       children: (0, l.jsx)(h.t, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
@@ -55,7 +55,7 @@ function I(e) {
                           children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                       }),
                   !n?.disableInlineCode &&
-                      (0, l.jsx)(v, {
+                      (0, l.jsx)(N, {
                           slateEditor: t,
                           markdownSyntax: "inlineCode",
                           children: (0, l.jsx)(f.G, {
@@ -66,7 +66,7 @@ function I(e) {
                               className: s()(b.Kk, i),
                           }),
                       }),
-                  (0, l.jsx)(v, {
+                  (0, l.jsx)(N, {
                       slateEditor: t,
                       markdownSyntax: "spoiler",
                       children: (0, l.jsx)(p.EyeIcon, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
@@ -74,7 +74,7 @@ function I(e) {
               ],
           });
 }
-function N(e) {
+function v(e) {
     let { getSlateEditor: t, containerRef: n, options: r, ref: s } = e,
         u = i.useRef(null),
         [c, d] = i.useState(!1),
@@ -149,13 +149,13 @@ function N(e) {
                 y: Math.max(n.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, s.y)),
             };
         }, [n, c, t]),
-        [A, N] = i.useState(0),
-        [v, T] = i.useState(0);
+        [A, v] = i.useState(0),
+        [N, T] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
             if (null == S || null == y || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            (T(e.width / 2), N(e.height + 12));
+            (T(e.width / 2), v(e.height + 12));
         }, [S, y]),
         null == S || null == y)
     )
@@ -168,7 +168,7 @@ function N(e) {
                   id: "slate-toolbar",
                   ref: u,
                   className: b.KE,
-                  style: { top: y - A, left: S - v },
+                  style: { top: y - A, left: S - N },
                   onMouseDown: (e) => {
                       (e.preventDefault(), e.stopPropagation());
                   },
@@ -179,7 +179,7 @@ function N(e) {
               }),
           });
 }
-function v(e) {
+function N(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         r = !1;
     if (t?.selection != null) {

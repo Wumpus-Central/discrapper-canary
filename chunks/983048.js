@@ -15,8 +15,8 @@ var s = n(503698),
     E = n(793574),
     h = n(688810),
     x = n(531260),
-    S = n(626584),
-    p = n(811656),
+    p = n(626584),
+    S = n(811656),
     T = n(75678),
     f = n(832946),
     I = n(97352),
@@ -121,7 +121,7 @@ var F = n(327479),
     Y = n(652215),
     X = n(601107),
     H = n(704277);
-let W = new S.A("SubscriptionHeader.tsx"),
+let W = new p.A("SubscriptionHeader.tsx"),
     K = { page: Y.liQ.USER_SETTINGS, section: Y.JJy.SETTINGS_PREMIUM, object: Y.ZSU.CARD },
     Z = [Y.Dmq.PAUSED, Y.Dmq.PAUSE_PENDING, Y.Dmq.BILLING_RETRY];
 function q(e) {
@@ -238,7 +238,7 @@ let ee = function (e) {
             subscription: t,
             currentInvoicePreview: s,
             renewalInvoicePreview: r,
-            paymentSource: S,
+            paymentSource: p,
             busy: _,
             analyticsLocation: G,
         } = e,
@@ -283,10 +283,10 @@ let ee = function (e) {
         if (null != t && null != t.premiumPlanIdFromItems) {
             let e = I.A.get(t.premiumPlanIdFromItems);
             if (null == e) return void W.info(`Plan not fetched for plan id: ${t.premiumPlanIdFromItems}`);
-            let l = (0, j._w)(e, S?.id, !1),
+            let l = (0, j._w)(e, p?.id, !1),
                 d = l.length > 0 ? l[0] : t.currency,
                 c = !0;
-            if ((1 === l.length && S?.id === t.paymentSourceId && (0, j.jJ)(e.id, d, S?.id) && (c = !1), c))
+            if ((1 === l.length && p?.id === t.paymentSourceId && (0, j.jJ)(e.id, d, p?.id) && (c = !1), c))
                 (0, T.A)({
                     initialPlanId: t.premiumPlanIdFromItems,
                     analyticsLocations: M,
@@ -322,7 +322,7 @@ let ee = function (e) {
                                             D.A.isDisplayingWowMomentConfirmation && D.A.isAnimated
                                                 ? setTimeout(() => {
                                                       n.onClose();
-                                                  }, p.K)
+                                                  }, S.K)
                                                 : await n.onClose());
                                     },
                                 });
@@ -335,7 +335,7 @@ let ee = function (e) {
                                     D.A.isDisplayingWowMomentConfirmation && D.A.isAnimated
                                         ? setTimeout(() => {
                                               (0, u.closeModal)(e);
-                                          }, p.K)
+                                          }, S.K)
                                         : (0, u.closeModal)(e));
                             },
                             modalKey: e,

@@ -1,8 +1,8 @@
 (n.d(t, {
     C5: () => H,
     CQ: () => U,
-    D6: () => Z,
-    DA: () => q,
+    D6: () => q,
+    DA: () => Z,
     EG: () => G,
     Fj: () => K,
     Nu: () => W,
@@ -424,7 +424,7 @@ function X(e, t) {
         )
     );
 }
-function Z(e) {
+function q(e) {
     return (
         i.useEffect(() => {
             E.bW.loadIfNecessary();
@@ -432,7 +432,7 @@ function Z(e) {
         (0, s.yK)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
     );
 }
-function q(e, t, n) {
+function Z(e, t, n) {
     if (null == n) return N.tm.NONE;
     let i = e.map((e) => e.id ?? e.uniqueName ?? e.name),
         r = t.map((e) => e.id);

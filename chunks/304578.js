@@ -1,7 +1,7 @@
 (n.d(t, {
     Yd: () => W,
     lq: () => Q,
-    ok: () => q,
+    ok: () => Z,
     v1: () => er,
     Ay: () => eu,
     If: () => ed,
@@ -229,11 +229,11 @@ function z(e) {
 function X(e) {
     return y("author_type", K(), e);
 }
-function Z(e) {
+function q(e) {
     let t = e.getMatch(1);
     return "true" === t ? (e.setData("pinned", !0), !0) : "false" === t && (e.setData("pinned", !1), !0);
 }
-function q(e) {
+function Z(e) {
     return $(e, Y());
 }
 function Q(e) {
@@ -611,7 +611,7 @@ function ea(e) {
             componentType: "ANSWER",
             follows: [D.LWr.FILTER_PINNED],
             queryKey: "pinned",
-            validator: Z,
+            validator: q,
         },
         [D.LWr.FILTER_AUTHOR_TYPE]: {
             regex: V(v.intl.string(v.t.us8IQi)),

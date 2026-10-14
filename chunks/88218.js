@@ -47,18 +47,18 @@ let p = function (e) {
             className: N,
             listPadding: C,
             rowCount: O,
-            getScrollOffsetForIndex: S,
-            categoryHeight: x,
+            getScrollOffsetForIndex: x,
+            categoryHeight: S,
             onScroll: T,
             renderCategoryListItem: y,
             rowCountBySection: j,
             renderSection: R,
             navId: b,
-            itemIdPrefix: L,
+            itemIdPrefix: v,
         } = e,
-        v = d.useStore((e) => e.activeCategoryIndex),
-        M = null != b && null != L,
-        { itemIdForIndex: D, parseIndex: P } = s.useMemo(() => g(L ?? "expression-category-"), [L]),
+        L = d.useStore((e) => e.activeCategoryIndex),
+        M = null != b && null != v,
+        { itemIdForIndex: D, parseIndex: P } = s.useMemo(() => g(v ?? "expression-category-"), [v]),
         w = (function (e) {
             let {
                     navId: t,
@@ -130,11 +130,11 @@ let p = function (e) {
                         }),
                     [n],
                 ),
-                S = s.useCallback(() => {
+                x = s.useCallback(() => {
                     let e = E(l) ?? g.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
-                x = s.useCallback(() => {
+                S = s.useCallback(() => {
                     let e = E(l) ?? g.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
@@ -144,8 +144,8 @@ let p = function (e) {
                     setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: O,
-                    onNavigateNextAtEnd: S,
-                    onNavigatePreviousAtStart: x,
+                    onNavigateNextAtEnd: x,
+                    onNavigatePreviousAtStart: S,
                 }),
                 y = T.setFocus;
             return (
@@ -171,8 +171,8 @@ let p = function (e) {
             itemIdForIndex: D,
             parseIndex: P,
             rowCount: O,
-            activeIndex: v,
-            getScrollOffsetForIndex: S,
+            activeIndex: L,
+            getScrollOffsetForIndex: x,
             enabled: M,
         });
     !(function (e) {
@@ -190,7 +190,7 @@ let p = function (e) {
                     (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
         }, [t, n, i]);
-    })({ activeIndex: v, categoryListRef: t, getScrollOffsetForIndex: S });
+    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: x });
     let U = s.useCallback(
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
@@ -198,8 +198,8 @@ let p = function (e) {
             },
             [n, d],
         ),
-        G = s.useCallback((e) => y(l[e], e, () => U(e), v === e), [v, l, U, y]),
-        k = s.useMemo(() => ("function" == typeof x ? (e) => x(l[e], e) : x), [l, x]),
+        G = s.useCallback((e) => y(l[e], e, () => U(e), L === e), [L, l, U, y]),
+        k = s.useMemo(() => ("function" == typeof S ? (e) => S(l[e], e) : S), [l, S]),
         F = (0, i.jsx)(o.A, {
             listPadding: C,
             onScroll: T,

@@ -3,10 +3,10 @@ n.d(t, {
     S_: () => j,
     w6: () => Y,
     od: () => K,
-    Ub: () => Z,
+    Ub: () => q,
     zN: () => Q,
     tV: () => ee,
-    _2: () => q,
+    _2: () => Z,
     kG: () => et,
     Ye: () => X,
     uM: () => J,
@@ -235,7 +235,7 @@ async function X(e) {
         (0, g.ad)().hasAccess &&
         (await H([e], { categoryName: D.A }, "auto_thread_join", { silent: !0 }));
 }
-function Z(e) {
+function q(e) {
     F({
         update: (t) => {
             if (
@@ -254,7 +254,7 @@ function Z(e) {
         },
     });
 }
-function q(e, t) {
+function Z(e, t) {
     F({
         update: (n) => {
             let i = null != t ? [t] : Object.keys(n.favoriteChannels),

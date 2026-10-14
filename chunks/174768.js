@@ -75,7 +75,7 @@ function z(e) {
         (Y = Date.now()),
         (i =
             i ??
-            new d.Ay(Z, U(), null != n ? 100 : 5, { frecencyBoosters: !0, blacklist: s, allowSnowflake: !0 }, 100)),
+            new d.Ay(q, U(), null != n ? 100 : 5, { frecencyBoosters: !0, blacklist: s, allowSnowflake: !0 }, 100)),
         (B = null),
         (V = r.length),
         (k = n),
@@ -84,7 +84,7 @@ function z(e) {
 function X(e) {
     ((j = j.filter((t) => t !== e)).unshift(e), j.length > 8 && (j.length = 8));
 }
-function Z(e, t) {
+function q(e, t) {
     if (
         !(function (e, t) {
             if (e.length !== t.length) return !1;
@@ -261,7 +261,7 @@ function Z(e, t) {
         ee.emitChange();
     }
 }
-function q() {
+function Z() {
     ((B = null), (V = 0), (H = []), null != i && (i.destroy(), (i = null)));
 }
 function Q() {
@@ -323,9 +323,9 @@ let ee = new J(o.h, {
         CONNECTION_OPEN_SUPPLEMENTAL: K,
         QUICKSWITCHER_SHOW: z,
         SHOW_ACTION_SHEET_QUICK_SWITCHER: z,
-        QUICKSWITCHER_HIDE: q,
-        OVERLAY_SET_INPUT_LOCKED: q,
-        HIDE_ACTION_SHEET_QUICK_SWITCHER: q,
+        QUICKSWITCHER_HIDE: Z,
+        OVERLAY_SET_INPUT_LOCKED: Z,
+        HIDE_ACTION_SHEET_QUICK_SWITCHER: Z,
         QUICKSWITCHER_SEARCH: function (e) {
             let { query: t, queryMode: n } = e,
                 r = t.trim();

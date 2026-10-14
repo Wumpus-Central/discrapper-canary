@@ -21,8 +21,8 @@ var l = n(477900),
     y = n(427262),
     w = n(248675),
     _ = n(660183),
-    S = n(59678);
-function N(e) {
+    N = n(59678);
+function S(e) {
     let { userId: t } = e,
         n = (0, k.bG)([j.default], () => j.default.getUser(t), [t]),
         a = (0, y.tx)(n);
@@ -32,7 +32,7 @@ function N(e) {
         text: i,
         ariaHidden: !0,
         children: (0, l.jsx)("span", {
-            className: S.jz,
+            className: N.jz,
             role: "img",
             "aria-label": i,
             children: (0, l.jsx)(v.A, { user: n, size: b._3.SIZE_16, "aria-hidden": !0 }),
@@ -51,16 +51,16 @@ function M(e) {
         y = "failed" === n.status ? "text-feedback-critical" : "detail" === i ? "text-muted" : "text-default",
         M = "text-muted" === y,
         T = m && M ? "none" : h && M ? "currentColor" : y,
-        C = r()(S.iq, { [I.Hz]: m && M }),
+        C = r()(N.iq, { [I.Hz]: m && M }),
         P = "detail" === i ? "text-md/normal" : "text-sm/normal",
         H = "detail" === i ? "text-sm/normal" : "text-xs/normal",
-        $ = null != t ? n.screenshots : [],
-        W = null != t ? n.attachments : [];
-    if (0 === j.length && 0 === $.length && 0 === W.length)
+        W = null != t ? n.screenshots : [],
+        B = null != t ? n.attachments : [];
+    if (0 === j.length && 0 === W.length && 0 === B.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
-            className: S.Dx,
+            className: N.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
                 variant: P,
@@ -70,15 +70,15 @@ function M(e) {
                 children: (0, l.jsx)(A.A, { text: v, variant: P, prose: !0 }),
             }),
         });
-    let B = h ? o.a : d._;
+    let D = h ? o.a : d._;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
         "data-conjure-entrance": !0,
-        className: S.Dx,
+        className: N.Dx,
         children: [
             (0, l.jsxs)(u.D, {
                 tag: "div",
-                className: S.kG,
+                className: N.kG,
                 "aria-expanded": h,
                 "aria-controls": k,
                 "aria-label": _.intl.formatToPlainString(w.default["KE1KI+"], { step: v }),
@@ -91,14 +91,14 @@ function M(e) {
                         className: C,
                         children: (0, l.jsx)(A.A, { text: v, variant: P, prose: !0 }),
                     }),
-                    (0, l.jsx)(B, { size: "xs", color: "currentColor", className: S.Ue }),
+                    (0, l.jsx)(D, { size: "xs", color: "currentColor", className: N.Ue }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 id: k,
                 hidden: !h,
                 "data-conjure-entrance": !0,
-                className: S.yJ,
+                className: N.yJ,
                 children: [
                     j.map((e, t) => {
                         let a = n.detailDrivenBy[t],
@@ -106,7 +106,7 @@ function M(e) {
                         return (0, l.jsxs)(
                             "div",
                             {
-                                className: S.l6,
+                                className: N.l6,
                                 children: [
                                     (0, l.jsx)(s.E, {
                                         tag: "div",
@@ -116,13 +116,13 @@ function M(e) {
                                         className: r()({ [I.Hz]: m && M }),
                                         children: (0, l.jsx)(A.A, { text: e, variant: H }),
                                     }),
-                                    null != a ? (0, l.jsx)(N, { userId: a }) : null,
+                                    null != a ? (0, l.jsx)(S, { userId: a }) : null,
                                     null != i
                                         ? (0, l.jsx)(c.m, {
                                               text: i,
                                               ariaHidden: !0,
                                               children: (0, l.jsx)("span", {
-                                                  className: S.n9,
+                                                  className: N.n9,
                                                   role: "img",
                                                   "aria-label": i,
                                                   children: (0, l.jsx)(f.WarningIcon, {
@@ -137,13 +137,13 @@ function M(e) {
                             t,
                         );
                     }),
-                    null != t && $.length > 0
+                    null != t && W.length > 0
                         ? (0, l.jsx)("div", {
-                              className: S.y8,
-                              children: $.map((e) => (0, l.jsx)(E, { projectId: t, screenshotId: e }, e)),
+                              className: N.y8,
+                              children: W.map((e) => (0, l.jsx)(E, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && W.length > 0 ? (0, l.jsx)(g.A, { projectId: t, attachments: W }) : null,
+                    null != t && B.length > 0 ? (0, l.jsx)(g.A, { projectId: t, attachments: B }) : null,
                 ],
             }),
         ],

@@ -68,8 +68,8 @@ var v = n(885386),
     $ = n(67480),
     z = n(583613),
     X = n(403362),
-    Z = n(149790),
-    q = n(695184),
+    q = n(149790),
+    Z = n(695184),
     Q = n(488926),
     J = n(257120),
     ee = n(935208),
@@ -134,7 +134,7 @@ class eI {
             i = [];
         switch (e) {
             case ei.rD.GUILD:
-                i = t.filter((e) => (0, Z.fh)(e));
+                i = t.filter((e) => (0, q.fh)(e));
                 break;
             case ei.rD.USER:
                 i = t.filter((e) => e instanceof M.YB && e.type === E.rbe.DM);
@@ -367,7 +367,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     let e = eR(o.id, r);
                     if (e.length > 0) return e;
                 }
-                ((t = x.Ay.getMembers(d.guild_id).filter(eS)), a && q.A.requestMembers(d.guild_id, i, r));
+                ((t = x.Ay.getMembers(d.guild_id).filter(eS)), a && Z.A.requestMembers(d.guild_id, i, r));
             }
             return eC({
                 query: i,
@@ -394,7 +394,7 @@ let eL = (0, z.L_)((e, t, n) => {
             }
             let o = x.Ay.getMembers(t).filter(eS);
             return (
-                r && n.length > 0 && q.A.requestMembers(t, n, i),
+                r && n.length > 0 && Z.A.requestMembers(t, n, i),
                 eC({ query: n, members: o, limit: i, filter: s, allowSnowflake: l })
             );
         },
@@ -405,7 +405,7 @@ let eL = (0, z.L_)((e, t, n) => {
         queryAllUsers(e) {
             let { query: t, filter: n, boosters: i, limit: r = 10, request: a = !0 } = e;
             return (
-                a && t.length > 0 && q.A.requestMembers(null, t, r),
+                a && t.length > 0 && Z.A.requestMembers(null, t, r),
                 this.queryUsers({
                     query: t,
                     limit: r,

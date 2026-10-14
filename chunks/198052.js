@@ -57,7 +57,7 @@ function W(e) {
                 ? ((function (e) {
                       let t = j(e);
                       if (0 === t.size()) return;
-                      let n = es(e) || Z(t) ? L._Of.VIDEO : L._Of.VOICE;
+                      let n = es(e) || q(t) ? L._Of.VIDEO : L._Of.VOICE;
                       n === L._Of.VOICE ? (delete w[e], delete G[e]) : (w[e] = n);
                   })(n),
                   (function (e) {
@@ -120,10 +120,10 @@ function X(e, t) {
     let n = $(e);
     (null == t ? delete P[e] : (P[e] = t), n !== $(e) && U[e].toggleCount++);
 }
-function Z(e) {
+function q(e) {
     return e.size(C.r4.STREAM) > 0 || e.size(C.r4.VIDEO) > 0 || e.hasEmbeddedActivity();
 }
-function q(e) {
+function Z(e) {
     (delete M[e], delete P[e], delete w[e], delete G[e], delete B[e]);
 }
 function Q() {
@@ -136,7 +136,7 @@ function Q() {
         (i = u.default.getRemoteSessionId()),
         (r = N.A.getVoiceStateForSession(h.default.getId(), i)),
         r?.channelId != null && e.push(r?.channelId),
-        s().difference(v, e).forEach(q),
+        s().difference(v, e).forEach(Z),
         (a = s().difference(e, v)),
         (v = e),
         a),
@@ -164,7 +164,7 @@ function er(e) {
     let {
         channel: { id: t },
     } = e;
-    return (b.delete(t), delete F[t], q(t));
+    return (b.delete(t), delete F[t], Z(t));
 }
 function ea(e) {
     let { streamKey: t } = e,
@@ -278,7 +278,7 @@ class el extends l.Ay.PersistedStore {
 }
 let eo = new el(o.h, {
     CONNECTION_OPEN: function () {
-        for (let e of v) q(e);
+        for (let e of v) Z(e);
         Q();
     },
     CONNECTION_OPEN_SUPPLEMENTAL: Q,
@@ -326,7 +326,7 @@ let eo = new el(o.h, {
     CALL_UPDATE: ei,
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        return q(t);
+        return Z(t);
     },
     CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
         var t;
@@ -346,7 +346,7 @@ let eo = new el(o.h, {
             } catch (e) {
                 y.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
             }
-            Z(r) || (x[n] = !1);
+            q(r) || (x[n] = !1);
         }
     },
     CHANNEL_RTC_POPOUT_PARTICIPANT: function (e) {
@@ -443,6 +443,6 @@ let eo = new el(o.h, {
             0 === n.length)
         )
             return !1;
-        s().forEach(n, (e) => q(e));
+        s().forEach(n, (e) => Z(e));
     },
 });

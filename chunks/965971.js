@@ -1,4 +1,4 @@
-n.d(t, { A: () => q });
+n.d(t, { A: () => Z });
 var i = n(132500),
     r = n(499979),
     a = n(73153),
@@ -679,7 +679,7 @@ class X {
               });
     }
 }
-class Z extends l.A {
+class q extends l.A {
     actions = __OVERLAY__
         ? { MESSAGE_ACKED: X.handleMessageAcked, MESSAGE_CREATE: X.handleMessageCreate }
         : {
@@ -700,4 +700,4 @@ class Z extends l.A {
               OVERLAY_TRACK_STATE_CHANGED: $,
           };
 }
-let q = new Z();
+let Z = new q();

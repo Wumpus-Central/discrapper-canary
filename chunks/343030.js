@@ -1,9 +1,9 @@
-a.d(t, { A: () => l, p: () => n });
-var s,
-    l =
-        (((s = {}).Backstage = "backstage"),
-        (s.WithinAppContent = "within-app-content"),
-        (s.WithinCallContent = "within-call-content"),
-        (s.AboveAppContent = "above-app-content"),
-        s);
+a.d(t, { A: () => s, p: () => n });
+var l,
+    s =
+        (((l = {}).Backstage = "backstage"),
+        (l.WithinAppContent = "within-app-content"),
+        (l.WithinCallContent = "within-call-content"),
+        (l.AboveAppContent = "above-app-content"),
+        l);
 let n = { backstage: -1, "within-app-content": 0, "within-call-content": 0, "above-app-content": 1 };

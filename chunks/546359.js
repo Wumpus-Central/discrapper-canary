@@ -247,11 +247,11 @@ function X() {
         })(),
     );
 }
-function Z(e) {
+function q(e) {
     let { relationship: t } = e;
     return W(() => $(t.id));
 }
-function q(e) {
+function Z(e) {
     return W(() => {
         let t = !1;
         for (let n of y.values()) n.voiceChannelId === e && (t = $(n.userId) || t);
@@ -323,9 +323,9 @@ let et = new ee(a.h, {
         let { user: t } = e;
         return W(() => !!u.A.isFriend(t.id) && $(t.id));
     },
-    RELATIONSHIP_ADD: Z,
-    RELATIONSHIP_UPDATE: Z,
-    RELATIONSHIP_REMOVE: Z,
+    RELATIONSHIP_ADD: q,
+    RELATIONSHIP_UPDATE: q,
+    RELATIONSHIP_REMOVE: q,
     USER_UPDATE: function (e) {
         let { user: t } = e;
         return W(() => !!u.A.isFriend(t.id) && $(t.id));
@@ -365,11 +365,11 @@ let et = new ee(a.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return q(t.id);
+        return Z(t.id);
     },
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        return q(t);
+        return Z(t);
     },
     FRIENDS_LIST_SET_GROUPING_MODE: function (e) {
         let { mode: t } = e;

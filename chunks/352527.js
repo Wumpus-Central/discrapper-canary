@@ -1,28 +1,28 @@
-n.d(t, { A: () => o });
-var i = n(582128),
-    l = n(688810),
-    a = n(614584),
-    r = n(74847),
-    s = n(406980);
+s.d(t, { A: () => o });
+var a = s(582128),
+    n = s(688810),
+    r = s(614584),
+    i = s(74847),
+    l = s(406980);
 let o = function (e) {
-    let { analyticsLocations: t } = (0, l.Ay)();
+    let { analyticsLocations: t } = (0, n.Ay)();
     return {
-        onShareClick: i.useCallback(
-            async (n) => {
-                let { clips: i, onShareComplete: l, messageReference: o, povTargetInformation: d } = n;
-                if (0 === i.length) return;
-                let u = (0, r.t)(e);
-                (0, a.H1)(i.map((e) => e.id));
+        onShareClick: a.useCallback(
+            async (s) => {
+                let { clips: a, onShareComplete: n, messageReference: o, povTargetInformation: u } = s;
+                if (0 === a.length) return;
+                let d = (0, i.t)(e);
+                (0, r.H1)(a.map((e) => e.id));
                 try {
-                    await (0, s.K)(i, {
-                        channelId: u ? e : void 0,
+                    await (0, l.K)(a, {
+                        channelId: d ? e : void 0,
                         analyticsLocations: t,
                         messageReference: o,
-                        povTargetInformation: d,
+                        povTargetInformation: u,
                     });
                 } catch (e) {
                 } finally {
-                    ((0, a.H1)(null), l?.());
+                    ((0, r.H1)(null), n?.());
                 }
             },
             [e, t],

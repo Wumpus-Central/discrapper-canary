@@ -104,15 +104,15 @@ async function X(e) {
         }
         return n;
     }
-    return (await Z(e), ee.indices[t] ?? V);
+    return (await q(e), ee.indices[t] ?? V);
 }
-async function Z(e) {
+async function q(e) {
     let t = new AbortController(),
         n = new o.K();
     (K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
         await (0, L.E)(e, t).then(n.resolve).catch(n.reject));
 }
-function q(e) {
+function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { target: n, index: i } = e,
         r = S.default.getCurrentUser()?.id;
@@ -293,15 +293,15 @@ let ee = new J(c.h, {
         LOGOUT: z,
         CONNECTION_OPEN: function () {
             for (let e of Object.values(ee.indices)) e.serverVersion = x;
-            for (let e of W) q(e);
+            for (let e of W) Z(e);
             ((W = []), (j = !0));
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
             let { target: t } = e,
                 n = Y(t);
-            eu(ee.indices[n] ?? V) && Z(t);
+            eu(ee.indices[n] ?? V) && q(t);
         },
-        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: q,
+        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: Z,
         APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
             let { target: t } = e;
             K(t, { fetchState: { fetching: !1, retryAfter: Date.now() + 5e3 } });

@@ -18,7 +18,7 @@
     ee: () => tg,
     $k: () => ta,
     VA: () => tH,
-    Dd: () => eZ,
+    Dd: () => eq,
     kX: () => tt,
     To: () => tK,
     _e: () => te,
@@ -184,8 +184,8 @@ let P = new M(T.w.ANIMATED_EMOJIS),
     $ = new M("boostDiscount"),
     z = new M("freeBoosts"),
     X = new M(T.w.STREAM_MID_QUALITY),
-    Z = new M(T.w.STREAM_HIGH_QUALITY),
-    q = new M(T.w.CUSTOM_NOTIFICATION_SOUNDS),
+    q = new M(T.w.STREAM_HIGH_QUALITY),
+    Z = new M(T.w.CUSTOM_NOTIFICATION_SOUNDS),
     Q = new M("fancyVoiceChannelReactions"),
     J = new M("installPremiumApplications"),
     ee = new M("redeemPremiumPerks"),
@@ -214,7 +214,7 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
             $,
             z,
             X,
-            Z,
+            q,
             Q,
             J,
             ee,
@@ -225,7 +225,7 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
             ea,
             Y,
             W,
-            q,
+            Z,
             k,
             es,
         ]),
@@ -247,7 +247,7 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
         [W, _.bb.PREMIUM_COLLECTIBLES],
         [K, _.bb.CLIENT_THEMES],
         [X, _.bb.STREAM_MID_QUALITY],
-        [Z, _.bb.STREAM_HIGH_QUALITY],
+        [q, _.bb.STREAM_HIGH_QUALITY],
         [et, _.bb.VIDEO_FILTER_ASSETS],
         [en, _.bb.INCREASED_GUILD_LIMIT],
         [ei, _.bb.INCREASED_MESSAGE_LENGTH],
@@ -591,7 +591,7 @@ function eX(e, t) {
     if (e === N.WT.YEAR) return 12 * t;
     throw Error(`${e} interval subscription period not implemented`);
 }
-function eZ(e) {
+function eq(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
         case N.PremiumTypes.TIER_0:
@@ -602,7 +602,7 @@ function eZ(e) {
             return eR.intl.string(eR.t.lG6a5x);
     }
 }
-function eq(e) {
+function eZ(e) {
     let {
             subscription: t,
             planId: n,
@@ -797,7 +797,7 @@ function eQ(e) {
         f = eI.A.get(c);
     return (
         o()(null != f, "Missing plan"),
-        eq({
+        eZ({
             subscription: d,
             planId: f.id,
             price:
@@ -1447,7 +1447,7 @@ let t$ = Object.freeze({
         if (e === N.WT.MONTH) return eR.intl.string(eR.t.FPybU7);
         throw Error(`Invalid interval type: ${e}`);
     },
-    getPlanDescription: eq,
+    getPlanDescription: eZ,
     isPremiumSku: function (e) {
         return e === N.pe.TIER_0 || e === N.pe.TIER_1 || e === N.pe.TIER_2;
     },
@@ -1695,7 +1695,7 @@ let t$ = Object.freeze({
         return e_(K, e);
     },
     canStreamQuality: function (e, t) {
-        return "high" === e ? e_(Z, t) : e_(X, t);
+        return "high" === e ? e_(q, t) : e_(X, t);
     },
     canUseQuestOrbMultiplier: tv,
     hasFreeBoosts: function (e) {

@@ -19,7 +19,7 @@ n.d(t, {
     gB: () => B,
     A6: () => L,
     fO: () => y,
-    Pc: () => q,
+    Pc: () => Z,
     mg: () => G,
     cY: () => Y,
     uz: () => j,
@@ -33,7 +33,7 @@ n.d(t, {
     pc: () => et,
     GD: () => M,
     qh: () => D,
-    kL: () => Z,
+    kL: () => q,
     TY: () => m,
 });
 var i,
@@ -186,20 +186,20 @@ let k = "1333839522189938740",
         A.n.PLAY_ACTIVITY,
     ]),
     X = { is_targeted: !1 };
-var Z =
+var q =
         (((d = {}).SUGGESTED = "suggested"),
         (d.MOST_RECENT = "most_recent"),
         (d.EXPIRING_SOON = "expiring_soon"),
         (d.RECENTLY_ENROLLED = "recently_enrolled"),
         d),
-    q = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
+    Z = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
     Q =
         (((u = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
         (u.COLLECTIBLE = "reward_collectible"),
         (u.IN_GAME = "reward_in_game"),
         u);
 function J(e) {
-    return Object.values(q).includes(e)
+    return Object.values(Z).includes(e)
         ? { group: "task", filter: e }
         : Object.values(Q).includes(e)
           ? { group: "reward", filter: e }

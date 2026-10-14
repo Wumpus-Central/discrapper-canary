@@ -66,7 +66,7 @@ function X(e, t, n, i) {
     let a = { ...r };
     ((a[t] = n), $(e, a, i));
 }
-function Z(e, t) {
+function q(e, t) {
     let n = Y(e);
     if (null == n) return;
     let i = n.timer;
@@ -82,7 +82,7 @@ function Z(e, t) {
     }
     (X(e, "timer", i, "timeOverlayEvent"), eh.emitChange());
 }
-async function q(e) {
+async function Z(e) {
     let t = Y(e);
     if (null != t) return t;
     let n = u.Ay.getGameOrTransformedSubgameForPID(e),
@@ -232,7 +232,7 @@ async function J(e) {
         return;
     }
     if (!(W() || b)) return void D.verbose(`Skipping track for pid ${e} - overlay is disabled`);
-    let t = await q(e);
+    let t = await Z(e);
     if (null == t) return void D.error(`Failed to track game ${e}`);
     (j(e, "game_tracking_starting", { game_name: t.gameName, fullscreen_type: t.fullscreenType }),
         X(e, "state", m.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION, "maybeTrackGame - 1"),
@@ -240,7 +240,7 @@ async function J(e) {
         D.verbose(`Determining initial overlay method for pid ${e}`));
     let n = await en(e);
     (D.verbose(`Overlay method for pid ${e}: ${(0, N.gK)(n.overlayMethod)}`),
-        Z(e, m.sf.SCREEN_TYPE_RESOLUTION),
+        q(e, m.sf.SCREEN_TYPE_RESOLUTION),
         await ei(e, n, "maybeTrackGame - 2"),
         (function e(t) {
             null == x &&
@@ -626,8 +626,8 @@ let eh = new eA(
                               D.verbose(`Updating overlay state for pid ${e.pid} to ${e.overlayState}`),
                               e.overlayState === m.AR.WAITING_FOR_POPOUT_OPEN ||
                               e.overlayState === m.AR.WAITING_FOR_OVERLAY_OPEN
-                                  ? Z(e.pid, m.sf.MODULE_TRACKING)
-                                  : e.overlayState === m.AR.OVERLAY_RENDERING && Z(e.pid, m.sf.OVERLAY_RENDERING),
+                                  ? q(e.pid, m.sf.MODULE_TRACKING)
+                                  : e.overlayState === m.AR.OVERLAY_RENDERING && q(e.pid, m.sf.OVERLAY_RENDERING),
                               !0
                           );
                   },

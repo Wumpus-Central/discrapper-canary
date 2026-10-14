@@ -58,8 +58,8 @@ function m(e, t, n, a) {
                 style: $,
                 innerId: z,
                 innerRole: X,
-                innerAriaLabel: Z,
-                innerAriaMultiselectable: q,
+                innerAriaLabel: q,
+                innerAriaMultiselectable: Z,
                 innerAriaOrientation: Q,
                 innerClassName: J,
                 innerTag: ee = "div",
@@ -297,8 +297,8 @@ function m(e, t, n, a) {
                             (0, i.jsx)(ee, {
                                 id: z,
                                 role: X,
-                                "aria-label": Z,
-                                "aria-multiselectable": q,
+                                "aria-label": q,
+                                "aria-multiselectable": Z,
                                 "aria-orientation": Q,
                                 style: { height: e_ },
                                 className: s()(T.Qs, J),
@@ -366,7 +366,7 @@ function m(e, t, n, a) {
                                     }),
                                 }),
                             }),
-                        [ee, z, X, Z, q, Q, e_, J, eE, x, k, P, U, w, F, eu, et],
+                        [ee, z, X, q, Z, Q, e_, J, eE, x, k, P, U, w, F, eu, et],
                     ),
                     r.useMemo(
                         () =>

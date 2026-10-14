@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => Z });
+n.d(t, { A: () => q });
 var r = n(506774),
     a = n(73153),
     s = n(157559),
@@ -252,4 +252,4 @@ class X extends d.A {
         a.h.unsubscribe("CONNECTION_OPEN", w);
     }
 }
-let Z = new X();
+let q = new X();

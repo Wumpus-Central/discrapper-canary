@@ -1,14 +1,14 @@
 function r(e) {
     return Math.floor(100 * e);
 }
-function a(e) {
+function i(e) {
     return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function i(e) {
+function a(e) {
     return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
 function o(e) {
-    let t = i(e);
+    let t = a(e);
     return 0 === t ? 0 : e.cache_read_input_tokens / t;
 }
 function c(e) {
@@ -22,4 +22,4 @@ function l(e, t) {
         cache_read_input_tokens: e.cache_read_input_tokens + t.cache_read_input_tokens,
     };
 }
-n.d(t, { CA: () => o, a7: () => r, aM: () => a, sj: () => i, wU: () => c, wV: () => l });
+n.d(t, { CA: () => o, a7: () => r, aM: () => i, sj: () => a, wU: () => c, wV: () => l });

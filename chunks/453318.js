@@ -214,8 +214,8 @@ function M(e) {
             isCollapsible: $,
             hasValue: z,
             handleSelectionChange: X,
-            onSelectionChange: Z,
-            isOpen: q,
+            onSelectionChange: q,
+            isOpen: Z,
             setIsOpen: Q,
             options: J,
             selectedOptions: ee,
@@ -232,8 +232,8 @@ function M(e) {
             K || Q?.((e) => (e || b.current?.focus(), !e));
         }, [K, Q]),
         ec = r.useCallback(() => {
-            !0 === V && ("multiple" === x ? Z([]) : Z(null), ei(""), b.current?.focus());
-        }, [Z, x, V, ei]),
+            !0 === V && ("multiple" === x ? q([]) : q(null), ei(""), b.current?.focus());
+        }, [q, x, V, ei]),
         eu = r.useCallback(
             (e) => {
                 (ea(!0), h?.(e), b.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0));
@@ -279,7 +279,7 @@ function M(e) {
                     case "PageDown":
                         if (
                             ((n = "PageDown" === e.key ? 10 : 1),
-                            0 === t || (e.preventDefault(), Q?.(!0), e.altKey || !q))
+                            0 === t || (e.preventDefault(), Q?.(!0), e.altKey || !Z))
                         )
                             return;
                         G((e) => {
@@ -300,7 +300,7 @@ function M(e) {
                             Q?.(!0));
                         break;
                     case "Enter":
-                        if ((e.preventDefault(), e.stopPropagation(), !q)) {
+                        if ((e.preventDefault(), e.stopPropagation(), !Z)) {
                             if (0 === t) return;
                             Q?.(!0);
                             return;
@@ -330,7 +330,7 @@ function M(e) {
                         G(t - 1);
                 }
             },
-            [x, H, V, z, Y, q, N, ec, X, ee, en, Q, et, w, G],
+            [x, H, V, z, Y, Z, N, ec, X, ee, en, Q, et, w, G],
         ),
         ep = r.useCallback(
             (e) => {
@@ -381,7 +381,7 @@ function M(e) {
                 clearable: V,
                 fullWidth: !0,
                 showChevronButton: _,
-                isOpen: !!q,
+                isOpen: !!Z,
                 isInert: K,
                 hasValue: z,
                 hasError: P?.errorMessageId != null,
@@ -409,7 +409,7 @@ function M(e) {
                                     "aria-autocomplete": "list",
                                     "aria-busy": B,
                                     "aria-controls": j,
-                                    "aria-expanded": !$ || q,
+                                    "aria-expanded": !$ || Z,
                                     "aria-activedescendant": eo,
                                     "aria-labelledby": P?.labelId,
                                     "aria-describedby": P?.describedById,

@@ -12,7 +12,7 @@
     fq: () => w,
     jz: () => N,
     mq: () => z,
-    n5: () => Z,
+    n5: () => q,
     nG: () => K,
     nY: () => X,
     pV: () => g,
@@ -238,6 +238,6 @@ function X(e) {
         t,
     );
 }
-function Z(e) {
+function q(e) {
     if (null != e) return f.A.getGuildIdFromApplicationId(e) ?? l.A.getApplication(e)?.guildId;
 }

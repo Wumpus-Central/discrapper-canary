@@ -20,15 +20,15 @@ var i = n(477900),
     N = n(158045),
     C = n(10392),
     O = n(82498),
-    S = n(732280),
-    x = n(369805),
+    x = n(732280),
+    S = n(369805),
     T = n(989790),
     y = n(632150),
     j = n(792656),
     R = n(202541),
     b = n(652215),
-    L = n(148155),
-    v = n(660183),
+    v = n(148155),
+    L = n(660183),
     M = n(237790),
     D = n(592551),
     P = n(644242),
@@ -54,9 +54,9 @@ function U(e) {
             ),
             F?.());
     }, [F, G]);
-    let H = (0, S.V)(),
-        X = s.useCallback(() => (0, N.LE)(H, R.pe.TIER_2) ?? v.intl.string(v.t.pj0XBN), [H]),
-        W = (0, x.A)(R.pe.TIER_2),
+    let H = (0, x.V)(),
+        X = s.useCallback(() => (0, N.LE)(H, R.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
+        W = (0, S.A)(R.pe.TIER_2),
         Z = (0, T.O9)();
     t = V
         ? (0, _.TM)()
@@ -65,12 +65,12 @@ function U(e) {
         : (0, _.TM)()
           ? P.A
           : w.A;
-    let Y = V || B ? "nitro-pink" : "green";
+    let z = V || B ? "nitro-pink" : "green";
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.p, { onClick: k, isVisible: !0 }),
             (0, i.jsx)(c.h, {
-                color: Y,
+                color: z,
                 className: M.kL,
                 children: (0, i.jsxs)(u.l, {
                     "aria-label": n,
@@ -107,7 +107,7 @@ function U(e) {
                                     Z &&
                                     (0, i.jsx)("div", {
                                         className: M.Zr,
-                                        children: (0, i.jsx)(y.A, { subtitle: v.intl.string(L.default.BkJYQ5) }),
+                                        children: (0, i.jsx)(y.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
                                     }),
                             ],
                         }),
@@ -129,7 +129,7 @@ function U(e) {
                                                 (0, g.jH)(),
                                                 (0, A.pX)(b.BVt.APPLICATION_STORE));
                                         },
-                                        text: v.intl.string(v.t.ZnqyZ2),
+                                        text: L.intl.string(L.t.ZnqyZ2),
                                         fullWidth: !0,
                                     }),
                                     (0, i.jsx)(j.A, {

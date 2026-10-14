@@ -80,7 +80,7 @@ function X() {
         ],
     });
 }
-function Z(e) {
+function q(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = D.eh.useSetting().customUserThemeSettings,
@@ -154,7 +154,7 @@ function Z(e) {
         ],
     });
 }
-var q = n(385803),
+var Z = n(385803),
     Q = n(652215),
     J = n(202541),
     ee = n(185928),
@@ -274,12 +274,12 @@ function eu(e) {
     }
     return (
         a.useEffect(() => {
-            ((N === q.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
+            ((N === Z.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 L && (0, r.jsx)(A.A, { id: y, children: $.intl.string($.t.JIZSqz) }),
-                (0, r.jsx)(Z, {
+                (0, r.jsx)(q, {
                     size: i,
                     isDisabled: t,
                     ariaDescribedBy: b,
@@ -290,7 +290,7 @@ function eu(e) {
                             "SETTINGS" === s && (0, v.default)());
                     },
                 }),
-                q.Jm.filter(q.Qm).map((e, n) =>
+                Z.Jm.filter(Z.Qm).map((e, n) =>
                     (0, r.jsx)(
                         H.MX,
                         {
@@ -309,7 +309,7 @@ function eu(e) {
                 ),
                 (function () {
                     if (!h) return null;
-                    let e = q.ag[c.ju.EASTER_EGG];
+                    let e = Z.ag[c.ju.EASTER_EGG];
                     if (null == e) return null;
                     async function t() {
                         let { default: e } = await n.e("103408").then(n.t.bind(n, 707827, 19));
@@ -365,7 +365,7 @@ function e_(e) {
                 onSelect: () => _(en.NJ.LIGHT),
                 tabIndex: E ? void 0 : 0,
             }),
-            q.f5.map((e) =>
+            Z.f5.map((e) =>
                 (0, r.jsx)(H.zy, { size: t, theme: e, isSelected: c && !u && o === e, onSelect: () => _(e) }, e),
             ),
             !i && !n && (0, r.jsx)(H.zy, { size: t, theme: "system", isSelected: c && u, onSelect: () => _("system") }),

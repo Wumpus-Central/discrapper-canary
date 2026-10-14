@@ -1,4 +1,4 @@
-n.d(t, { Pb: () => P, Ti: () => O, di: () => M, nM: () => R, nd: () => L });
+n.d(t, { Pb: () => P, Ti: () => O, di: () => w, nM: () => R, nd: () => L });
 var i = n(477900);
 n(582128);
 var l = n(17928),
@@ -86,7 +86,7 @@ function P(e) {
         ],
     });
 }
-function M(e) {
+function w(e) {
     let { channel: t, className: n } = e,
         { parentAnalyticsLocation: a } = (0, h.Ay)(),
         s = (0, l.bG)([p.A], () => p.A.getStageAudienceSidebarOpen(t.id), [t.id]),

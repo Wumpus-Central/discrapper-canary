@@ -1,4 +1,4 @@
-(n.d(t, { Cp: () => T, Gf: () => S, Sw: () => b, V4: () => R, ak: () => x, dK: () => C, dZ: () => O }), n(321073));
+(n.d(t, { Cp: () => T, Gf: () => x, Sw: () => b, V4: () => R, ak: () => S, dK: () => C, dZ: () => O }), n(321073));
 var i = n(435558),
     s = n.n(i),
     l = n(636537),
@@ -34,7 +34,7 @@ function O(e) {
             () => o.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
         ));
 }
-function S(e) {
+function x(e) {
     let { guildId: t, image: n, name: i, roles: s, analyticsLocation: r, originalMd5: a } = e;
     return (
         o.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
@@ -51,7 +51,7 @@ function S(e) {
         )
     );
 }
-function x(e, t, n) {
+function S(e, t, n) {
     return (
         o.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         l.Bo.del({

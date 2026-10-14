@@ -23,8 +23,8 @@ var g = n(503698),
     E = n(821609),
     h = n(297264),
     x = n(834730),
-    S = n(688810),
-    p = n(139286),
+    p = n(688810),
+    S = n(139286),
     T = n(793943),
     f = n(996254),
     I = n(830543),
@@ -34,8 +34,8 @@ var g = n(503698),
     y = n(114149);
 function b(e) {
     let { className: t } = e,
-        { analyticsLocations: n } = (0, S.Ay)();
-    (0, p.A)({
+        { analyticsLocations: n } = (0, p.Ay)();
+    (0, S.A)({
         name: A.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: A.ImpressionTypes.VIEW,
         properties: { location_stack: n },
@@ -152,7 +152,7 @@ let K = (0, i.E2)(s.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
-        let { analyticsLocations: t } = (0, S.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
+        let { analyticsLocations: t } = (0, p.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
             [n, i, s, a, o] = (0, l.yK)([D.A, r.A], () => [
                 D.A.themePreferenceForSystemTheme(X.Fc.LIGHT),
                 D.A.themePreferenceForSystemTheme(X.Fc.DARK),

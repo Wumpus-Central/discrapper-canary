@@ -1121,8 +1121,8 @@ class X extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let Z = new X();
-class q extends l.G {
+let q = new X();
+class Z extends l.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PaymentModalBanner", [
             { no: 1, name: "asset_url", kind: "scalar", T: 9 },
@@ -1183,7 +1183,7 @@ class q extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let Q = new q();
+let Q = new Z();
 var J = n(670474);
 class ee extends l.G {
     constructor() {
@@ -1270,7 +1270,7 @@ class ei extends l.G {
             { no: 4, name: "premium_tab", kind: "message", oneof: "properties", T: () => et },
             { no: 5, name: "marketing_page_banner", kind: "message", oneof: "properties", T: () => J.C },
             { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => Q },
-            { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => Z },
+            { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => q },
             { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => $ },
             { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => Y.l },
             { no: 10, name: "gift_plan_selection_card_banner", kind: "message", oneof: "properties", T: () => W.s },
@@ -1343,7 +1343,7 @@ class ei extends l.G {
                 case 7:
                     a.properties = {
                         oneofKind: "mobileBottomSheet",
-                        mobileBottomSheet: Z.internalBinaryRead(e, e.uint32(), n, a.properties.mobileBottomSheet),
+                        mobileBottomSheet: q.internalBinaryRead(e, e.uint32(), n, a.properties.mobileBottomSheet),
                     };
                     break;
                 case 8:
@@ -1537,7 +1537,7 @@ class ei extends l.G {
             "paymentModalBanner" === e.properties.oneofKind &&
                 Q.internalBinaryWrite(e.properties.paymentModalBanner, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             "mobileBottomSheet" === e.properties.oneofKind &&
-                Z.internalBinaryWrite(e.properties.mobileBottomSheet, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
+                q.internalBinaryWrite(e.properties.mobileBottomSheet, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             "giftIcon" === e.properties.oneofKind &&
                 $.internalBinaryWrite(e.properties.giftIcon, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             "giftIconCoachmark" === e.properties.oneofKind &&

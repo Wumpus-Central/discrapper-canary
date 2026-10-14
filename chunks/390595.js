@@ -163,11 +163,11 @@ function X(e) {
           ? (U.warn(`Throwing away client session with invalid version: ${e.version}, expected ${R.Ir}`), null)
           : e;
 }
-async function Z() {
+async function q() {
     let e = await er(!1);
     null != e && c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, r.C);
 }
-function q() {
+function Z() {
     let e = _.default.getToken();
     (j !== e && ((j = e), s.w.remove(M), (F = { state: "loaded", session: null }), W(), (k = 0)), z());
 }
@@ -189,15 +189,15 @@ function et(e) {
     V !== n && ((V = n), z());
 }
 function en() {
-    ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), q());
+    ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), Z());
 }
 function ei() {
     (I.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
         A.A.addChangeListener(Q),
-        _.default.addChangeListener(q),
+        _.default.addChangeListener(Z),
         l.h.subscribe("WINDOW_FOCUS", J),
         l.h.subscribe("APP_STATE_UPDATE", et),
-        l.h.subscribe("CONNECTION_OPEN", Z),
+        l.h.subscribe("CONNECTION_OPEN", q),
         (0, N.JK)().listen(ee),
         z(),
         null == G &&

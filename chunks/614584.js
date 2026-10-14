@@ -394,7 +394,7 @@ async function $(e, t, n) {
 (n(323874), n(14289), n(35956), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var z = n(284009),
     X = n.n(z);
-async function Z(e) {
+async function q(e) {
     let t,
         { default: i } = await n.e("25777").then(n.t.bind(n, 293384, 19)),
         r = i.createFile(!1),
@@ -413,7 +413,7 @@ async function Z(e) {
         o = e.slice(t + 4, t + 8 + 16, e.type);
     return new Blob([l, new Uint8Array([0, 0, 0, 24]), o], { type: e.type });
 }
-var q = n(956050),
+var Z = n(956050),
     Q = n(160330),
     J = n(201538);
 async function ee(e) {
@@ -607,7 +607,7 @@ async function ec(e) {
             else {
                 let e = "";
                 try {
-                    e = await (0, q.m)(a.A.clips.getClipProtocolURLFromPath(b), 0);
+                    e = await (0, Z.m)(a.A.clips.getClipProtocolURLFromPath(b), 0);
                 } catch (e) {
                     O.nx.warn("Failed to generate clip thumbnail:", e);
                 }
@@ -881,7 +881,7 @@ function eL(e) {
 async function ey(e, t) {
     let n = eR(e);
     try {
-        ((n.thumbnail = await (0, q.m)(a.A.clips.getClipProtocolURLFromPath(n.filepath), 0)),
+        ((n.thumbnail = await (0, Z.m)(a.A.clips.getClipProtocolURLFromPath(n.filepath), 0)),
             await a.A.clips.updateClipMetadata(n.filepath, U(n)));
     } catch (e) {
         O.nx.warn("finalizeMontageClip: failed to generate montage thumbnail:", e);
@@ -948,7 +948,7 @@ async function eb(e, t) {
             let t = await a.A.clips.loadClip(h),
                 n = new Blob([t.data], { type: "video/mp4" });
             if (e.type === O.nQ.SCREENSHOT || f) return n;
-            return Z(n);
+            return q(n);
         } finally {
             await eM(h);
         }

@@ -5,30 +5,30 @@ var i = n(477900),
     r = n(17928),
     s = n(636537),
     o = n(192308),
-    d = n(830215),
-    u = n(398590),
+    u = n(830215),
+    d = n(398590),
     c = n(631670),
-    h = n(475743),
-    m = n(775121),
+    m = n(475743),
+    h = n(775121),
     f = n(139286),
     p = n(80556),
     g = n(557722),
     A = n(363195),
     v = n(870570),
-    x = n(446868),
-    E = n(503698),
-    C = n.n(E),
+    E = n(446868),
+    x = n(503698),
+    C = n.n(x),
     _ = n(607399),
     T = n(821609),
     I = n(331322),
     S = n(297264),
-    b = n(834730),
-    y = n(700525),
-    N = n(975571),
+    y = n(834730),
+    N = n(700525),
+    b = n(975571),
     j = n(652215),
     R = n(660183),
     M = n(690807);
-let O = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
+let O = b.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
 class w extends l.PureComponent {
     static defaultProps = { types: [j.Fz7.CAPTCHA], onCaptchaVerify: j.tEg, onLogout: j.tEg };
     renderFields() {
@@ -36,8 +36,8 @@ class w extends l.PureComponent {
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
                 e === j.Fz7.CAPTCHA
-                    ? (0, i.jsx)(y.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
+                    ? (0, i.jsx)(N.A, { onVerify: l, theme: n }, t)
+                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: E.A.getButtonTitle(e) }, e),
             ),
         });
     }
@@ -75,7 +75,7 @@ class w extends l.PureComponent {
                                             variant: "heading-xl/normal",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(b.E, {
+                                        (0, i.jsx)(y.E, {
                                             variant: "text-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -98,7 +98,7 @@ class w extends l.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(b.E, {
+                        (0, i.jsx)(y.E, {
                             variant: "text-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
@@ -109,13 +109,13 @@ class w extends l.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(b.E, {
+                                (0, i.jsx)(y.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: b.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, i.jsx)(b.E, {
+                                (0, i.jsx)(y.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -132,13 +132,13 @@ class w extends l.PureComponent {
         t?.(e);
     };
 }
-var k = n(87404),
-    L = n(53516);
+var L = n(87404),
+    k = n(53516);
 function P() {
     let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
-        E = x.A.getVerificationTypes(e),
+        x = E.A.getVerificationTypes(e),
         [C, _] = l.useState(0),
-        T = (0, h.Ay)(E);
+        T = (0, m.Ay)(x);
     function I() {
         ((0, c.Cw)(),
             (0, o.openModalLazy)(
@@ -148,7 +148,7 @@ function P() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: k.H1, Layer: p.Ay },
+                { modalKey: L.H1, Layer: p.Ay },
             ));
     }
     return (
@@ -156,23 +156,23 @@ function P() {
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
-                properties: { verification_type: E[0], verification_types: E },
+                properties: { verification_type: x[0], verification_types: x },
             },
             {},
-            [E.toString()],
+            [x.toString()],
         ),
         l.useEffect(
             () => (
-                m.A.disable(),
+                h.A.disable(),
                 () => {
-                    m.A.enable();
+                    h.A.enable();
                 }
             ),
             [],
         ),
         l.useEffect(() => {
             T?.[0] === j.Fz7.PHONE &&
-                E?.[0] === j.Fz7.EMAIL &&
+                x?.[0] === j.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { Alert: e } = await Promise.all([n.e("844331"), n.e("21553")]).then(n.bind(n, 381512));
@@ -184,11 +184,11 @@ function P() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: k.Pr, Layer: p.Ay, onCloseCallback: I },
+                    { modalKey: L.Pr, Layer: p.Ay, onCloseCallback: I },
                 );
-        }, [E, T]),
+        }, [x, T]),
         (0, i.jsx)(w, {
-            types: E,
+            types: x,
             captchaKey: C,
             onCaptchaVerify: function (e) {
                 s.Bo.post({
@@ -196,7 +196,7 @@ function P() {
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                }).then(u.jH, () => {
+                }).then(d.jH, () => {
                     _((e) => e + 1);
                 });
             },
@@ -218,7 +218,7 @@ function P() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: L.V, Layer: p.Ay },
+                          { modalKey: k.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {
@@ -236,7 +236,7 @@ function P() {
                                 subtitle: R.intl.string(R.t.SUnWBB),
                                 confirmText: R.intl.string(R.t["2jxGer"]),
                                 cancelText: R.intl.string(R.t["ETE/oC"]),
-                                onConfirm: () => d.A.logout("verification"),
+                                onConfirm: () => u.A.logout("verification"),
                                 ...t,
                             });
                     },

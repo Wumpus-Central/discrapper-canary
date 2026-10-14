@@ -143,7 +143,7 @@ function z(e) {
 function X(e) {
     return ((e.flags ?? 0) & D.nhx.STAFF) === D.nhx.STAFF || null != e.personal_connection_id;
 }
-function Z(e, t, n, i) {
+function q(e, t, n, i) {
     let r = `${t.type}|${e}`,
         a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
     switch (t.type) {
@@ -155,7 +155,7 @@ function Z(e, t, n, i) {
             throw Error(`Unknown experiment type: ${t}`);
     }
 }
-function q(e) {
+function Z(e) {
     switch (e.type) {
         case y.Vh.USER:
             return z(`${e.bucket}|${e.revision}`);
@@ -195,8 +195,8 @@ function J(e) {
     }
     if (n.override) return !1;
     let c = o === y.vf.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
-        _ = Z(t, n, i, c),
-        A = q(n);
+        _ = q(t, n, i, c),
+        A = Z(n);
     if ((d && x.get(_) === A) || Q(_, A)) return !1;
     switch (n.type) {
         case y.Vh.USER: {
@@ -262,7 +262,7 @@ function J(e) {
             } else E.default.track(e, a, { flush: !0, fingerprint: s });
         }
     }
-    d ? x.set(_, A) : ((G[Z(t, n, i, c)] = { time: Date.now(), hash: q(n) }), e_(G));
+    d ? x.set(_, A) : ((G[q(t, n, i, c)] = { time: Date.now(), hash: Z(n) }), e_(G));
 }
 function ee(e) {
     let [t, n] = e;
@@ -726,7 +726,7 @@ class ef extends _.A {
         };
     }
     hasExperimentTrackedExposure(e, t, n, i) {
-        return Q(Z(e, t, n, i), q(t));
+        return Q(q(e, t, n, i), Z(t));
     }
 }
 let eI = new ef();

@@ -263,8 +263,8 @@ let V = BigInt(0),
     $ = BigInt(256),
     z = BigInt(65536),
     X = BigInt(0x1000000),
-    Z = BigInt(0x80000000),
-    q = BigInt(0x100000000),
+    q = BigInt(0x80000000),
+    Z = BigInt(0x100000000),
     Q = BigInt(0x10000000000),
     J = BigInt(0x1000000000000),
     ee = BigInt("72057594037927936"),
@@ -465,7 +465,7 @@ let eu = new (class {
                     let t = e < V,
                         n = t ? -e : e;
                     if (n < en)
-                        if ((this._expand(11), 1 === this._safeBigIntEncoding && n < Z))
+                        if ((this._expand(11), 1 === this._safeBigIntEncoding && n < q))
                             n < $ && !t
                                 ? ((this._u[this._i++] = 97), this._v.setBigUint64(this._i++, n, !0))
                                 : ((this._u[this._i++] = 98),
@@ -527,7 +527,7 @@ let eu = new (class {
                         let r = i[i.length - 1],
                             a =
                                 8 * i.length -
-                                (r < q
+                                (r < Z
                                     ? r < z
                                         ? r < $
                                             ? 7
@@ -1459,7 +1459,7 @@ let eW = (0, eo.mj)({
     e$ = new Set(["READY", "INITIAL_GUILD"]),
     ez = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
     eX = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
-    eZ = new Set([
+    eq = new Set([
         "READY",
         "INITIAL_GUILD",
         "READY_SUPPLEMENTAL",
@@ -1479,7 +1479,7 @@ let eW = (0, eo.mj)({
         "STREAM_DELETE",
         "STREAM_UPDATE",
     ]),
-    eq = {};
+    eZ = {};
 class eQ {
     socket;
     scheduler = new ej();
@@ -1540,7 +1540,7 @@ class eQ {
             (this.shouldFlushImmediately(e)
                 ? (this.scheduler.clearWorkTimeout(), this.flush())
                 : this.scheduler.hasWorkScheduled || this.scheduler.requestWorkTimeout(this.flush),
-            eZ.has(e) && this.scheduler.markCriticalWorkScheduled());
+            eq.has(e) && this.scheduler.markCriticalWorkScheduled());
     }
     flush = (e) => {
         if (this.paused) return !0;
@@ -1555,7 +1555,7 @@ class eQ {
         return (a > eU && !r && eY.log(`Dispatched ${i.length} messages in ${a}ms`), r);
     };
     getDispatchTimings() {
-        return eq;
+        return eZ;
     }
     getSchedulerTelemetry() {
         return this.scheduler.telemetry;
@@ -1588,8 +1588,8 @@ class eQ {
                             (this.dispatchOne(l),
                             (a = performance.now() - o),
                             !(function (e, t) {
-                                let [n, i] = eq[e] ?? [0, 0];
-                                eq[e] = [(n * i + t) / (i + 1), i + 1];
+                                let [n, i] = eZ[e] ?? [0, 0];
+                                eZ[e] = [(n * i + t) / (i + 1), i + 1];
                             })(l.type, a),
                             (function (e, t, n) {
                                 if (null == n) return !1;

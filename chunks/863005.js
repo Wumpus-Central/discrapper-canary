@@ -1,4 +1,4 @@
-(n.d(t, { A: () => q }), n(321073));
+(n.d(t, { A: () => Z }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -216,7 +216,7 @@ let Y = {},
     $ = {},
     z = {},
     X = {};
-class Z extends a.Ay.Store {
+class q extends a.Ay.Store {
     static displayName = "ActiveJoinedThreadsStore";
     initialize() {
         (this.waitFor(A.A, d.A, c.A, h.A, u.Ay, _.Ay), this.syncWith([_.Ay], x));
@@ -273,7 +273,7 @@ class Z extends a.Ay.Store {
         return r().size(p[e]?.[t] ?? {}) + r().size(m[e]?.[t] ?? {});
     }
 }
-let q = new Z(s.h, {
+let Z = new q(s.h, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     THREAD_LIST_SYNC: function (e) {

@@ -72,14 +72,14 @@ var j = n(521427),
     $ = n(734057),
     z = n(498642),
     X = n(544180);
-let Z = new S.A("MessageRoundtripTrackerStore");
-function q(e) {
+let q = new S.A("MessageRoundtripTrackerStore");
+function Z(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
 function Q(e) {
     let t = $.A.getBasicChannel(e.channelId);
     if (null == t)
-        return void Z.warn(`Ignoring a messageData for channel ${e.channelId} because we can't find that channel.`);
+        return void q.warn(`Ignoring a messageData for channel ${e.channelId} because we can't find that channel.`);
     if (Math.random() > 0.1) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
@@ -122,14 +122,14 @@ class J extends W.Ay.Store {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, apiResponseTimestamp: Date.now() };
-            q(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            Z(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, gatewaySeenTimestamp: Date.now() };
-            q(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            Z(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
 }
@@ -902,9 +902,9 @@ ${a}`),
                 [K, z] = (0, ep.Ay)(l);
             K && ((l = z), (Y = (0, a.UI)(Y, D.pr7.SUPPRESS_NOTIFICATIONS)));
             let X = $.A.getChannel(e),
-                Z = eN.A.getGuild(X?.guild_id);
-            (0, j.Zv)(Z, X, "_sendMessage") && (Y = (0, a.UI)(Y, D.pr7.IS_GUILD_OFFICIAL));
-            let q = !1,
+                q = eN.A.getGuild(X?.guild_id);
+            (0, j.Zv)(q, X, "_sendMessage") && (Y = (0, a.UI)(Y, D.pr7.IS_GUILD_OFFICIAL));
+            let Z = !1,
                 Q = n.messageReference?.type === D.SH7.FORWARD;
             if (
                 "" === l &&
@@ -919,7 +919,7 @@ ${a}`),
                 (null == t.components || 0 === t.components.length)
             )
                 if (null == x || !(x.length > 0)) return Promise.resolve();
-                else q = !0;
+                else Z = !0;
             let J = null != C ? D.lAJ.REPLY : D.lAJ.DEFAULT,
                 ea = n.nonce ?? (0, ei.m)(),
                 ed = (0, en.Ay)({
@@ -1006,7 +1006,7 @@ ${a}`),
                     });
                     if (null == t) return;
                     let r = t.attachments;
-                    if (((i = t.uploader), q && (null == r || 0 === r.length))) return;
+                    if (((i = t.uploader), Z && (null == r || 0 === r.length))) return;
                     null != r && (ec.message.attachments = r.map((e, t) => (0, eG.OW)(e, t)));
                 } catch (r) {
                     let { file: e, code: t, reason: n, responseBody: i } = r;

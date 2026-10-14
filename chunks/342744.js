@@ -14,20 +14,20 @@ var i = n(477900),
     E = n(688810),
     h = n(277984),
     x = n(253390),
-    S = n(166403),
-    p = n(158045),
+    p = n(166403),
+    S = n(158045),
     T = n(682502),
     f = n(816571),
     I = n(660183),
     _ = n(17456);
 async function N(e, t, n, i) {
-    let s = (0, p.aE)(e, t);
+    let s = (0, S.aE)(e, t);
     (await (0, c.Ey)(n),
         await (0, h.nV)(
             e,
             { items: s },
             { amount: 0, currency: e.currency },
-            (0, p.UC)(s, e.currency, e.paymentSourceId),
+            (0, S.UC)(s, e.currency, e.paymentSourceId),
             i,
         ));
 }
@@ -67,9 +67,9 @@ function v(e) {
     let { guildBoostSlotId: t, transitionState: n, onClose: l } = e,
         { analyticsLocations: u } = (0, E.Ay)(A.A.GUILD_BOOST_UNCANCELLATION_MODAL);
     s.useEffect(() => {
-        S.A.hasFetchedSubscriptions() || (0, h.hP)();
+        p.A.hasFetchedSubscriptions() || (0, h.hP)();
     }, []);
-    let d = (0, a.bG)([S.A], () => S.A.getPremiumTypeSubscription()),
+    let d = (0, a.bG)([p.A], () => p.A.getPremiumTypeSubscription()),
         [c, T] = s.useState(1),
         [_, C] = s.useState(!1),
         [y, v] = s.useState(null),
@@ -79,7 +79,7 @@ function v(e) {
                     (C(!0), v(null));
                     let e = (0, x.v)(d, 1);
                     (r()(
-                        (0, p.bx)(e) <= (0, p.bx)(d.additionalPlans),
+                        (0, S.bx)(e) <= (0, S.bx)(d.additionalPlans),
                         "Uncanceling should not increase the number of guild subscriptions",
                     ),
                         await N(d, e, t, u),

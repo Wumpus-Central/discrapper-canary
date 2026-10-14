@@ -1,83 +1,83 @@
-s.d(a, { A: () => p, R: () => f });
-var i = s(477900),
-    r = s(582128),
-    n = s(503698),
-    l = s.n(n),
-    c = s(834730),
-    t = s(866665),
-    d = s(559106),
-    m = s(939249),
-    o = s(409626),
-    u = s(692969),
-    x = s(207803),
-    j = s(591179),
-    h = s(485745),
-    v = s(660183),
-    N = s(365611);
-function f(e) {
-    let { imageSrc: a, gameName: s } = e,
-        [n, l] = r.useState(!1),
-        t = s ?? v.intl.string(v.t.GIWFlF);
-    return n || null == a
+a.d(r, { A: () => N, R: () => g });
+var i = a(477900),
+    n = a(582128),
+    s = a(503698),
+    t = a.n(s),
+    l = a(834730),
+    c = a(866665),
+    o = a(559106),
+    d = a(939249),
+    m = a(409626),
+    u = a(692969),
+    x = a(207803),
+    h = a(591179),
+    p = a(485745),
+    f = a(660183),
+    j = a(365611);
+function g(e) {
+    let { imageSrc: r, gameName: a } = e,
+        [s, t] = n.useState(!1),
+        c = a ?? f.intl.string(f.t.GIWFlF);
+    return s || null == r
         ? (0, i.jsx)("div", {
               role: "img",
-              "aria-label": t,
-              className: N.Np,
-              children: (0, i.jsx)(c.E, { variant: "text-xxs/medium", lineClamp: 3, "aria-hidden": !0, children: t }),
+              "aria-label": c,
+              className: j.Np,
+              children: (0, i.jsx)(l.E, { variant: "text-xxs/medium", lineClamp: 3, "aria-hidden": !0, children: c }),
           })
-        : (0, i.jsx)("img", { src: a, alt: t, className: N.$_, onError: () => l(!0), onLoad: () => l(!1) });
+        : (0, i.jsx)("img", { src: r, alt: c, className: j.$_, onError: () => t(!0), onLoad: () => t(!1) });
 }
-function g(e) {
-    let { imageSrc: a, gameName: s, gameId: n, userId: c, className: g, hideTooltip: p = !1, coverRef: I } = e,
-        k = !(0, j.X)("GameCover"),
-        C = (0, h.A)(k),
-        b = (0, u.A)({
+function v(e) {
+    let { imageSrc: r, gameName: a, gameId: s, userId: l, className: v, hideTooltip: N = !1, coverRef: k } = e,
+        I = !(0, h.X)("GameCover"),
+        b = (0, p.A)(I),
+        C = (0, u.A)({
             location: "GameCover",
-            gameId: n,
-            source: o.GameProfileSources.UserProfile,
-            sourceUserId: c,
+            gameId: s,
+            source: m.GameProfileSources.UserProfile,
+            sourceUserId: l,
             trackEntryPointImpression: !0,
         }),
-        L = s ?? v.intl.string(v.t.GIWFlF),
-        P = v.intl.formatToPlainString(v.t["8QLQB+"], { gameName: L }),
-        R = r.useCallback(
+        P = a ?? f.intl.string(f.t.GIWFlF),
+        G = f.intl.formatToPlainString(f.t["8QLQB+"], { gameName: P }),
+        S = n.useCallback(
             (e) => {
-                if (C) {
+                if (b) {
                     (e.preventDefault(), e.stopPropagation(), (0, x.VQ)());
                     return;
                 }
-                b?.(e);
+                C?.(e);
             },
-            [C, b],
+            [b, C],
         );
-    function S(e) {
-        return p ? e : (0, i.jsx)(t.m, { text: L, ariaHidden: !0, children: e });
+    function F(e) {
+        return N ? e : (0, i.jsx)(c.m, { text: P, ariaHidden: !0, children: e });
     }
-    return S(
-        null == b
-            ? (0, i.jsx)(d.vN, {
+    return F(
+        null == C
+            ? (0, i.jsx)(o.vN, {
                   children: (0, i.jsx)("div", {
-                      ref: I,
-                      className: g,
+                      ref: k,
+                      className: v,
                       tabIndex: -1,
-                      children: (0, i.jsx)(f, { imageSrc: a, gameName: s }),
+                      children: (0, i.jsx)(g, { imageSrc: r, gameName: a }),
                   }),
               })
-            : (0, i.jsx)(m.D, {
-                  innerRef: I,
-                  onClick: R,
-                  "aria-label": P,
-                  className: l()(N.vk, g),
-                  children: (0, i.jsx)(f, { imageSrc: a, gameName: s }),
+            : (0, i.jsx)(d.D, {
+                  innerRef: k,
+                  onClick: S,
+                  "aria-label": G,
+                  className: t()(j.vk, v),
+                  children: (0, i.jsx)(g, { imageSrc: r, gameName: a }),
               }),
     );
 }
-function p(e) {
-    let { gameId: a, userId: s, className: r, disableInteraction: n = !1, hideTooltip: c, coverRef: t, ...m } = e,
-        o = l()(N.PY, r);
-    return n
-        ? (0, i.jsx)(d.vN, {
-              children: (0, i.jsx)("div", { ref: t, className: o, tabIndex: -1, children: (0, i.jsx)(f, { ...m }) }),
+function N(e) {
+    let { gameId: r, userId: a, className: n, disableInteraction: s = !1, hideTooltip: l, coverRef: c, ...d } = e,
+        m = t()(j.PY, n);
+    return s
+        ? (0, i.jsx)(o.vN, {
+              children: (0, i.jsx)("div", { ref: c, className: m, tabIndex: -1, children: (0, i.jsx)(g, { ...d }) }),
           })
-        : (0, i.jsx)(g, { className: o, gameId: a, userId: s, hideTooltip: c, coverRef: t, ...m });
+        : (0, i.jsx)(v, { className: m, gameId: r, userId: a, hideTooltip: l, coverRef: c, ...d });
 }

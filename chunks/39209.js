@@ -45,7 +45,7 @@ function E(e) {
     }
     let h = null != t.paymentSource && t.status === c.__.COMPLETED,
         x = n?.invoiceLink,
-        S = n?.refundInvoiceLinks;
+        p = n?.refundInvoiceLinks;
     return t.hasInvoiceURL && null == n
         ? (0, i.jsxs)("div", {
               className: m.It,
@@ -66,8 +66,8 @@ function E(e) {
                 className: m.It,
                 children: [
                     (0, i.jsx)(r.Anchor, { href: x, children: g.intl.formatToPlainString(g.t.R0xzCN, {}) }),
-                    null != S
-                        ? S.map((e, t) =>
+                    null != p
+                        ? p.map((e, t) =>
                               (0, i.jsx)(
                                   r.Anchor,
                                   { className: m.oe, href: e, children: g.intl.formatToPlainString(g.t["3x6NGw"], {}) },

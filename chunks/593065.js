@@ -102,13 +102,13 @@ var W = n(97469),
     $ = n(645959),
     z = n(715069),
     X = n(652215),
-    Z = n(307636);
-let q = r.memo(function () {
+    q = n(307636);
+let Z = r.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
         height: "428",
         viewBox: "0 0 184 428",
-        className: Z.Ie,
+        className: q.Ie,
         children: [
             (0, i.jsx)("rect", { x: 40, y: 6, width: 144, height: 20, rx: 10 }),
             (0, i.jsx)("circle", { cx: 16, cy: 16, r: 16 }),
@@ -226,7 +226,7 @@ class Q extends r.Component {
         return 0 === t
             ? this.renderChild(n)
             : 0 === n && 0 === r.length
-              ? (0, i.jsx)(q, {}, "no-private-channels")
+              ? (0, i.jsx)(Z, {}, "no-private-channels")
               : this.renderDM(t, n);
     };
     renderSection = (e) => {
@@ -236,18 +236,18 @@ class Q extends r.Component {
             : (0, i.jsxs)(
                   C.A,
                   {
-                      className: Z._e,
+                      className: q._e,
                       children: [
-                          (0, i.jsx)("span", { className: Z.TK, children: V.intl.string(V.t.YUU0RF) }),
+                          (0, i.jsx)("span", { className: q.TK, children: V.intl.string(V.t.YUU0RF) }),
                           (0, i.jsxs)("div", {
-                              className: Z.$s,
+                              className: q.$s,
                               children: [
-                                  (0, i.jsx)(j, { className: s()(Z.U2, Z.Mj), iconClassName: Z.Br }),
+                                  (0, i.jsx)(j, { className: s()(q.U2, q.Mj), iconClassName: q.Br }),
                                   (0, i.jsx)(v.Ay, {
                                       tooltip: V.intl.string(V.t.bA875g),
                                       tooltipPosition: "top",
-                                      className: Z.U2,
-                                      iconClassName: Z.Br,
+                                      className: q.U2,
+                                      iconClassName: q.Br,
                                       icon: E.T,
                                       subscribeToGlobalHotkey: !0,
                                   }),
@@ -288,7 +288,7 @@ class Q extends r.Component {
                                     (a.current = e?.getScrollerNode() ?? null));
                             },
                             onScroll: this.handleScroll,
-                            className: Z.XG,
+                            className: q.XG,
                             sectionHeight: this.getSectionHeight,
                             paddingTop: t,
                             paddingBottom: 8,

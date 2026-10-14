@@ -238,8 +238,8 @@ var W = n(73825),
     $ = n(628856),
     z = n(870600),
     X = n(945096),
-    Z = n(996512),
-    q = n(518782),
+    q = n(996512),
+    Z = n(518782),
     Q = n(437517),
     J = n(505527),
     ee = n(455598),
@@ -539,7 +539,7 @@ function eY(e, t, n) {
         p = e_.Ay.getMember(e, t.id),
         T = (0, $.t)(A),
         m = (0, X.mT)(h),
-        g = (0, q.Rt)(f);
+        g = (0, Z.Rt)(f);
     (null != p &&
         p.nick === a &&
         p.avatar === s &&
@@ -620,7 +620,7 @@ function eX(e, t) {
         processedAtTimestamp: e.processed_at_timestamp,
     };
 }
-function eZ(e) {
+function eq(e) {
     eF.add(e);
 }
 (eH(
@@ -1134,14 +1134,14 @@ function eZ(e) {
     eV(["GUILD_MEMBERS_CHUNK"], (e) => {
         a.Ay.Emitter.batched(() => {
             (ek.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
-                null != e.presences && ez(e.presences, e.guild_id).forEach(eZ),
+                null != e.presences && ez(e.presences, e.guild_id).forEach(eq),
                 eP.A.flush("GUILD_MEMBERS_CHUNK"));
         });
     }),
     eV(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
         a.Ay.Emitter.batched(() => {
             (eW({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
-                null != e.presences && ez(e.presences, e.guild_id).forEach(eZ),
+                null != e.presences && ez(e.presences, e.guild_id).forEach(eq),
                 eP.A.flush());
         });
     }),
@@ -1164,7 +1164,7 @@ function eZ(e) {
                 flags: e.flags,
                 collectibles: (0, $.t)(e.collectibles),
                 displayNameStyles: (0, X.mT)(e.display_name_styles),
-                gamingLeaderboardData: (0, q.Rt)(e.member_gaming_leaderboard_data),
+                gamingLeaderboardData: (0, Z.Rt)(e.member_gaming_leaderboard_data),
                 vadColors: e.vad_colors ?? null,
             });
         },
@@ -1287,7 +1287,7 @@ function eZ(e) {
         eW({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
     }),
     eV(["PRESENCE_UPDATE"], (e) => {
-        eZ(eX(e, e.guild_id));
+        eq(eX(e, e.guild_id));
     }),
     eV(["PRESENCES_REPLACE"], (e) => {
         eW({ type: "PRESENCES_REPLACE", presences: ez(e, void 0) });
@@ -1486,7 +1486,7 @@ function eZ(e) {
                 let { member: n } = t;
                 if ((eY(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: i } = n;
-                eZ(eX(i, e.guild_id));
+                eq(eX(i, e.guild_id));
             }
             (e.ops.forEach((e) => {
                 switch (e.op) {
@@ -1986,13 +1986,13 @@ function eZ(e) {
         });
     }),
     eV(["GUILD_ROOM_CONNECT"], (e, t) => {
-        eW({ type: t, room: (0, Z.S)(e) });
+        eW({ type: t, room: (0, q.S)(e) });
     }),
     eV(["GUILD_ROOM_DISCONNECT"], (e, t) => {
         eW({ type: t, userId: e.user_id, roomId: e.room_id });
     }),
     eV(["GUILD_ROOM_UPDATE"], (e, t) => {
-        eW({ type: t, room: (0, Z.S)(e) });
+        eW({ type: t, room: (0, q.S)(e) });
     }),
     eV(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
         eW({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
@@ -2004,7 +2004,7 @@ function eZ(e) {
             numMutualGuilds: e.num_mutual_guilds,
         });
     }));
-var eq = n(355097);
+var eZ = n(355097);
 let eQ = window.DiscordNative;
 B.dispatcher.getDispatchHandler = function (e) {
     return eB[e];
@@ -2251,7 +2251,7 @@ let tt = new te(l.h, {
     CLIPS_SETTINGS_UPDATE: e4,
     RUNNING_GAMES_CHANGE: e4,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
-        e.settings.type === eq.oD.PRELOADED_USER_SETTINGS &&
+        e.settings.type === eZ.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
             e4();
     },

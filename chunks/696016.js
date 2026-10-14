@@ -21,10 +21,10 @@ n.d(t, {
     QY: () => er,
     Qw: () => eD,
     RC: () => en,
-    SC: () => Z,
+    SC: () => q,
     T7: () => ep,
     UY: () => eA,
-    U_: () => q,
+    U_: () => Z,
     V0: () => y,
     VP: () => V,
     Vi: () => O,
@@ -124,8 +124,8 @@ let K = 10,
     $ = 100,
     z = 75,
     X = 0x3c0000000,
-    Z = ".autoclip-cache",
-    q = 0;
+    q = ".autoclip-cache",
+    Z = 0;
 var Q =
         (((s = {}).ALL = ":all"),
         (s.APPLICATION = ":application"),

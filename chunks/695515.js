@@ -206,11 +206,11 @@ function X(e) {
     let { linkedUsers: t } = e;
     G(t, !0);
 }
-function Z(e) {
+function q(e) {
     let { linkCode: t, expiresAt: n } = e;
     ((f = t), (I = n));
 }
-function q(e) {
+function Z(e) {
     let { tab: t } = e;
     p = t;
 }
@@ -274,8 +274,8 @@ class en extends r.A {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: Y,
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: z,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: X,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Z,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: q,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: q,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: Z,
             SET_LOCATION_METADATA: ee,
             LOGOUT: et,
         });

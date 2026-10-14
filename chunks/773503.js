@@ -1,68 +1,68 @@
-n.d(t, { A: () => E });
-var i = n(477900),
-    l = n(582128),
-    a = n(435558),
-    r = n.n(a),
-    s = n(17928),
-    o = n(97808),
-    d = n(778712),
-    u = n(834730),
-    c = n(7807),
-    h = n(661531),
-    m = n(565645),
-    f = n(287809),
-    p = n(562153),
-    g = n(401381);
-function A(e) {
-    let { avatarURL: t, avatarLabel: n, text: l, leading: a } = e;
-    return (0, i.jsxs)("div", {
-        className: g.AB,
+s.d(t, { A: () => I });
+var a = s(477900),
+    n = s(582128),
+    r = s(435558),
+    i = s.n(r),
+    l = s(17928),
+    o = s(97808),
+    u = s(778712),
+    d = s(834730),
+    c = s(7807),
+    m = s(661531),
+    h = s(565645),
+    p = s(287809),
+    g = s(562153),
+    S = s(401381);
+function v(e) {
+    let { avatarURL: t, avatarLabel: s, text: n, leading: r } = e;
+    return (0, a.jsxs)("div", {
+        className: S.AB,
         children: [
-            (0, i.jsx)(o.eu, { "aria-label": n, size: d._3.SIZE_24, src: t }),
-            (0, i.jsxs)(u.E, {
-                className: g.PW,
+            (0, a.jsx)(o.eu, { "aria-label": s, size: u._3.SIZE_24, src: t }),
+            (0, a.jsxs)(d.E, {
+                className: S.PW,
                 color: "text-overlay-light",
                 variant: "text-sm/normal",
-                children: [a, l],
+                children: [r, n],
             }),
         ],
     });
 }
-function v(e) {
-    let { user: t, guildId: n, channelId: l } = e,
-        a = (0, p.tx)(n, l, t);
-    return null == t ? null : (0, i.jsx)(A, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: a, text: a });
+function C(e) {
+    let { user: t, guildId: s, channelId: n } = e,
+        r = (0, g.tx)(s, n, t);
+    return null == t ? null : (0, a.jsx)(v, { avatarURL: t.getAvatarURL(s, 24, !1), avatarLabel: r, text: r });
 }
-function x(e) {
-    let { soundboard: t, user: n, guildId: l } = e;
-    if (null == n) return null;
-    let a =
+function f(e) {
+    let { soundboard: t, user: s, guildId: n } = e;
+    if (null == s) return null;
+    let r =
         null != t.emojiId || null != t.emojiName
-            ? (0, i.jsx)(m.A, {
+            ? (0, a.jsx)(h.A, {
                   emojiId: t.emojiId ?? null,
                   emojiName: t.emojiName ?? null,
                   animated: t.emojiAnimated ?? !1,
                   alt: t.name,
                   size: "reaction",
               })
-            : (0, i.jsx)(c.J, { size: "refresh_sm", color: h.A.colors.ICON_DEFAULT });
-    return (0, i.jsx)(A, { avatarURL: n.getAvatarURL(l, 24, !1), avatarLabel: n.username, text: t.name, leading: a });
+            : (0, a.jsx)(c.J, { size: "refresh_sm", color: m.A.colors.ICON_DEFAULT });
+    return (0, a.jsx)(v, { avatarURL: s.getAvatarURL(n, 24, !1), avatarLabel: s.username, text: t.name, leading: r });
 }
-let E = l.memo(function (e) {
-    let { speakingUserIds: t, activeSoundboards: n, userIds: l, guildId: a, channelId: o } = e,
-        d = (0, s.cf)([f.default], () => r().pick(f.default.getUsers(), l));
-    return (0, i.jsxs)("div", {
-        className: g.zr,
+let I = n.memo(function (e) {
+    let { speakingUserIds: t, activeSoundboards: s, userIds: n, guildId: r, channelId: o } = e,
+        u = (0, l.cf)([p.default], () => i().pick(p.default.getUsers(), n));
+    return (0, a.jsxs)("div", {
+        className: S.zr,
         children: [
             t.map((e) => {
-                let t = d[e];
-                return (0, i.jsx)(v, { user: t, guildId: a, channelId: o }, e);
+                let t = u[e];
+                return (0, a.jsx)(C, { user: t, guildId: r, channelId: o }, e);
             }),
-            n.map((e) => {
-                let t = d[e.userId];
-                return (0, i.jsx)(
-                    x,
-                    { soundboard: e, user: t, guildId: a, channelId: o },
+            s.map((e) => {
+                let t = u[e.userId];
+                return (0, a.jsx)(
+                    f,
+                    { soundboard: e, user: t, guildId: r, channelId: o },
                     `${e.soundboardId}:${e.userId}`,
                 );
             }),

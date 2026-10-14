@@ -1,4 +1,4 @@
-(n.d(t, { Ng: () => Y, Ay: () => Z, Id: () => x }), n(321073), n(323874), n(14289), n(35956), n(142703));
+(n.d(t, { Ng: () => Y, Ay: () => q, Id: () => x }), n(321073), n(323874), n(14289), n(35956), n(142703));
 var i = n(435558),
     r = n.n(i),
     a = n(481613),
@@ -346,7 +346,7 @@ async function X(e, t, n, i, r) {
               trackingProps: i,
           };
 }
-let Z = {
+let q = {
     hasPermission: K,
     requestPermission: function (e) {
         if (o.A?.features.supports("notifications"))

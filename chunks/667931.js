@@ -3,7 +3,7 @@
     H$: () => S,
     IE: () => m,
     JQ: () => a,
-    N5: () => w,
+    N5: () => C,
     Sj: () => b,
     TK: () => d,
     TN: () => E,
@@ -77,7 +77,7 @@ function c(e) {
     return !e.live && !a(e);
 }
 function d(e) {
-    let t = R(e);
+    let t = w(e);
     function n(e) {
         return !t.has(e.id) && null != e.end && null == e.error;
     }
@@ -110,20 +110,20 @@ function d(e) {
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...w(a),
+                    ...C(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
                 },
                 f = new Map();
-            for (let e of p) n(e) && f.set(k(e), (f.get(k(e)) ?? 0) + 1);
+            for (let e of p) n(e) && f.set(R(e), (f.get(R(e)) ?? 0) + 1);
             let _ = new Set();
             for (let e of p) {
-                let t = k(e);
+                let t = R(e);
                 if (n(e) && (f.get(t) ?? 0) >= 4) {
                     if (_.has(t)) continue;
                     _.add(t);
-                    let e = p.filter((e) => n(e) && k(e) === t);
+                    let e = p.filter((e) => n(e) && R(e) === t);
                     h.children.push(s(e, o + 1, p, d));
                 } else h.children.push(s([e], o + 1, p, d));
             }
@@ -167,7 +167,7 @@ function u(e, t) {
     );
 }
 function p(e) {
-    return { collapsed: C(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
+    return { collapsed: k(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
 }
 function h(e, t, n) {
     let s = [...p(t).collapsed].filter((e) => !n.has(e));
@@ -178,10 +178,10 @@ function f(e) {
     return (T(e, (e) => t.add(e.key)), t);
 }
 function _(e) {
-    return { collapsed: new Set(), revealed: C(e, () => !0) };
+    return { collapsed: new Set(), revealed: k(e, () => !0) };
 }
 function g(e) {
-    return { collapsed: C(e, (e) => e.depth > 0), revealed: new Set() };
+    return { collapsed: k(e, (e) => e.depth > 0), revealed: new Set() };
 }
 function E(e, t) {
     if (!e.collapsed.has(t.key)) return { ...e, collapsed: new Set(e.collapsed).add(t.key) };
@@ -211,7 +211,7 @@ function m(e, t) {
     );
 }
 function O(e) {
-    let t = R(e);
+    let t = w(e);
     return new Map(
         e.spans.map((n) => {
             let s = U(e, n);
@@ -243,7 +243,7 @@ function N(e) {
 function T(e, t) {
     for (let n of (t(e), e.children)) T(n, t);
 }
-function w(e) {
+function C(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         s = (-1 === t ? "" : e.name.slice(t + 1))
@@ -257,7 +257,7 @@ function w(e) {
         category: r[n] ?? "other",
     };
 }
-function C(e, t) {
+function k(e, t) {
     let n = new Set();
     return (
         !(function e(s) {
@@ -266,10 +266,10 @@ function C(e, t) {
         n
     );
 }
-function k(e) {
+function R(e) {
     return `${e.name} ${b(e.attrs)}`;
 }
-function R(e) {
+function w(e) {
     let t = new Map();
     for (let n of e.spans) {
         let e = t.get(n.parent) ?? [];

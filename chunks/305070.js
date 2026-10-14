@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(265431),
     b = n(459016),
     I = n(861382),
-    N = n(355622),
-    v = n(820066),
+    v = n(355622),
+    N = n(820066),
     T = n(696451),
     j = n(576705),
     _ = n(351906),
@@ -54,7 +54,7 @@ function W(e) {
                     [j.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
@@ -118,7 +118,7 @@ function W(e) {
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
-            null != E && (S = v.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
+            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
             let C = {
                     ...e,
                     navigator: g,
@@ -128,9 +128,9 @@ function W(e) {
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: r === N.oU.RULES_INPUT,
+                    hideMentionDescription: r === v.oU.RULES_INPUT,
                     emojiIntention:
-                        r === N.oU.RULES_INPUT
+                        r === v.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
                             : p
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI

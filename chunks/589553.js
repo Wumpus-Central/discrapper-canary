@@ -1,9 +1,9 @@
-l.d(a, { A: () => s });
-var t = l(439818),
-    n = l(696016);
-function s(e, a) {
-    let l = (0, t.A)((0, n.cM)(e.createdAt)),
-        s = (0, t.A)(null != e.name && "" !== e.name ? e.name : l),
-        i = "" !== s ? s : l;
-    return `${i}.${a}`;
+a.d(e, { A: () => i });
+var n = a(439818),
+    t = a(696016);
+function i(l, e) {
+    let a = (0, n.A)((0, t.cM)(l.createdAt)),
+        i = (0, n.A)(null != l.name && "" !== l.name ? l.name : a),
+        d = "" !== i ? i : a;
+    return `${d}.${e}`;
 }

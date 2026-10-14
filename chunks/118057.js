@@ -33,7 +33,7 @@ function u(e) {
             [h],
         ),
         [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
-        { columnCounts: O, focusedX: S, focusedY: x } = N,
+        { columnCounts: O, focusedX: x, focusedY: S } = N,
         [T] = i.useState(() => (0, r.nF)(C, 16));
     return (
         i.useEffect(() => {
@@ -57,7 +57,7 @@ function u(e) {
                 _ = i.useRef(h),
                 N = c(o(t, u, d)),
                 [C, O] = i.useState(!1),
-                [S, x] = i.useState(!1),
+                [x, S] = i.useState(!1),
                 [T, y] = i.useState(!1),
                 [j] = i.useState(
                     () =>
@@ -81,12 +81,12 @@ function u(e) {
                         let i = o(t, e, n);
                         (null != f ? f(e, n, i) : Promise.resolve()).then(() => {
                             let e = c(i);
-                            null != e ? (R(e), x(!1)) : requestAnimationFrame(() => x(!0));
+                            null != e ? (R(e), S(!1)) : requestAnimationFrame(() => S(!0));
                         });
                     },
                     [t, f, R],
                 ),
-                L = i.useCallback(
+                v = i.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, i] = null != E ? E(u, d) : [u, d];
@@ -97,22 +97,22 @@ function u(e) {
                     },
                     [I, u, d, E, t, R],
                 ),
-                [v, M] = i.useState(!1);
+                [L, M] = i.useState(!1);
             i.useEffect(() => {
-                if (!v || !C) return;
+                if (!L || !C) return;
                 M(!1);
                 let e = c(o(t, u, d));
                 if (null != e) return void R(e);
                 O(!1);
                 let n = c(o(t));
                 null != n && R(n);
-            }, [t, v, C, R, u, d]);
+            }, [t, L, C, R, u, d]);
             let D = i.useCallback((e) => {
                 _.current && null == e && M(!0);
             }, []);
             (i.useEffect(() => {
-                C && S && null != N && (R(N), x(!1));
-            }, [S, N]),
+                C && x && null != N && (R(N), S(!1));
+            }, [x, N]),
                 i.useEffect(() => {
                     C && (T || b(u, d), y(!1));
                 }, [u, d]));
@@ -125,7 +125,7 @@ function u(e) {
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
                         ) {
-                            (e.preventDefault(), e.stopPropagation(), L());
+                            (e.preventDefault(), e.stopPropagation(), v());
                             return;
                         }
                         let t = (function (e) {
@@ -170,16 +170,16 @@ function u(e) {
                                     null != m ? m(u, d, e) : null != N && N.click());
                         }
                     },
-                    [L, I, A, N, m, u, d],
+                    [v, I, A, N, m, u, d],
                 ),
                 w = i.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
                             ? (C || (O(!0), y(!0)), !1)
                             : C
-                              ? (L(!1), !1)
-                              : void (g && null != N ? b(u, d) : L(!0)),
-                    [C, g, N, L, b, u, d],
+                              ? (v(!1), !1)
+                              : void (g && null != N ? b(u, d) : v(!0)),
+                    [C, g, N, v, b, u, d],
                 ),
                 U = i.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
@@ -223,8 +223,8 @@ function u(e) {
         })({
             navId: t,
             columnCounts: O,
-            focusedX: S,
-            focusedY: x,
+            focusedX: x,
+            focusedY: S,
             dispatch: T,
             onSelect: m,
             prepareFocus: f,

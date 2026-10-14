@@ -32,7 +32,7 @@ function b(e) {
         }, [a]),
         y = (0, x.Ay)(s),
         T = null != s ? (0, f.gU)(s) : null,
-        S =
+        v =
             null != s
                 ? (0, t.jsxs)(c.B, {
                       direction: "horizontal",
@@ -49,7 +49,7 @@ function b(e) {
                       ],
                   })
                 : C.intl.string(C.t["q38/ae"]),
-        v = i.useCallback((e) => {
+        S = i.useCallback((e) => {
             null != e && I(e.scrollHeight - e.clientHeight > 1);
         }, []),
         k = i.useCallback(() => {
@@ -65,7 +65,7 @@ function b(e) {
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
                           (0, t.jsx)(o.E, {
-                              ref: v,
+                              ref: S,
                               variant: "text-md/medium",
                               color: "text-muted",
                               className: E.VA,
@@ -91,7 +91,7 @@ function b(e) {
         onAgree: _,
         onDisagree: b,
         modalType: m.A5.SPOILER_CHANNEL,
-        title: S,
+        title: v,
         subtitle: R,
         description: C.intl.string(C.t["08bm2Z"]),
         agreement: C.intl.string(C.t.KmRwcW),

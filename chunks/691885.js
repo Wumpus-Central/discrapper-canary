@@ -51,8 +51,8 @@ function O(e) {
         {
             isOpen: z,
             setIsOpen: X,
-            refs: Z,
-            floatingStyles: q,
+            refs: q,
+            floatingStyles: Z,
             getReferenceProps: Q,
             getFloatingProps: J,
             transitionStyles: ee,
@@ -258,7 +258,7 @@ function O(e) {
                     H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
                 }, 10)));
     }, [eN, ev, F]);
-    let eM = (0, o.A)(es, Z.setReference),
+    let eM = (0, o.A)(es, q.setReference),
         eP = r.useCallback(
             (e) => {
                 if (eA) return;
@@ -360,10 +360,10 @@ function O(e) {
                         !eA &&
                             z &&
                             (0, i.jsx)("div", {
-                                ref: Z.setFloating,
+                                ref: q.setFloating,
                                 className: C.S_,
                                 ...J(),
-                                style: { ...q, ...ee },
+                                style: { ...Z, ...ee },
                                 children: (0, i.jsx)(A.q, {
                                     id: et,
                                     tabIndex: -1,

@@ -142,7 +142,7 @@ function X() {
     }
     j = "0";
 }
-function Z() {
+function q() {
     let { notifyingChannelIds: e, staleChannelIds: t } = (function () {
         let e = g.Ay.getFlattenedGuildIds().flatMap((e) => I.Ay.getSelectableChannelIds(e)),
             t = u.A.getAllActiveJoinedThreads();
@@ -226,7 +226,7 @@ function Z() {
         }
     (k.updateChannelIds(G), X());
 }
-function q() {
+function Z() {
     ((w = {}),
         (G = null),
         (x = []),
@@ -243,7 +243,7 @@ function q() {
 function Q() {
     if (null == (0, R.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
         return !1;
-    for (let e of (q(), Z(), G ?? [])) {
+    for (let e of (Z(), q(), G ?? [])) {
         let t = z(e);
         null != t && ((w[e].loadState = v.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? null));
     }
@@ -260,7 +260,7 @@ function Q() {
     );
 }
 function J() {
-    let e = Z(),
+    let e = q(),
         t = (function () {
             let e = d.Ay.getSettingsFilteredMentions();
             if (null == e) return !1;
@@ -385,7 +385,7 @@ let ei = new en(s.h, {
             })(n),
             a = r.mentioned;
         if (!i) {
-            if (x.includes(t)) Z();
+            if (x.includes(t)) q();
             else if (!a) return !1;
             else if (!(0, d.pK)(r)) return !1;
         }
@@ -405,7 +405,7 @@ let ei = new en(s.h, {
     },
     CONNECTION_OPEN: Q,
     LOGOUT: function () {
-        q();
+        Z();
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: J,
     USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: J,

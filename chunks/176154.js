@@ -1,4 +1,4 @@
-(n.d(t, { lx: () => $, kY: () => z, TB: () => J, Wv: () => K, q1: () => X, nR: () => Z }), n(938796));
+(n.d(t, { lx: () => $, kY: () => z, TB: () => J, Wv: () => K, q1: () => X, nR: () => q }), n(938796));
 var i = n(665260),
     r = n(17928),
     a = n(155718),
@@ -242,7 +242,7 @@ function X(e, t) {
         ) && P.Ay.getNewForumThreadsCreated(t)
     );
 }
-function Z(e) {
+function q(e) {
     let { message: t, channel: n, reactor: i, includeSelectedChannel: r } = e,
         a = U.default.getCurrentUser(),
         s = U.default.getUser(t.author?.id);
@@ -254,7 +254,7 @@ function Z(e) {
         (!r && _(n.id))
     );
 }
-function q(e, t, n) {
+function Z(e, t, n) {
     return `${(0, o.az)(e)} (${(0, o.az)((0, E.m1)(t, U.default, b.A, !0))}${null != n ? `, ${(0, o.az)((0, E.m1)(n, U.default, b.A))}` : ""})`;
 }
 function Q(e, t, n, i) {
@@ -297,13 +297,13 @@ function J(e, t, n) {
         case j.rbe.PRIVATE_THREAD:
             let o = y.A.getChannel(e.parent_id);
             t.type === j.lAJ.THREAD_STARTER_MESSAGE && null != o
-                ? (l = q(l, o, y.A.getChannel(o.parent_id)))
+                ? (l = Z(l, o, y.A.getChannel(o.parent_id)))
                 : (0, g.A)(t)
-                  ? null != D.A.getGuild(e.getGuildId()) && (l = q(l, e, o))
-                  : (l = q(l, e, o));
+                  ? null != D.A.getGuild(e.getGuildId()) && (l = Z(l, e, o))
+                  : (l = Z(l, e, o));
             break;
         case j.rbe.GROUP_DM:
-            (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, b.A)) || (l = q(l, e));
+            (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, b.A)) || (l = Z(l, e));
     }
     let d = t.content;
     if ((0, g.A)(t) && null == (d = G.A.stringify(t, e)))

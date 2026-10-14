@@ -299,8 +299,8 @@ function $(e) {
 }
 var z = n(811315),
     X = n.n(z),
-    Z = n(529412),
-    q = n(75304),
+    q = n(529412),
+    Z = n(75304),
     Q = n(442467),
     J = n(403362),
     ee = n(427262);
@@ -575,7 +575,7 @@ function ea(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, Z.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled: i && (0, q.dW)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;
@@ -583,7 +583,7 @@ function ea(e) {
                 }
                 return {
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(q.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {

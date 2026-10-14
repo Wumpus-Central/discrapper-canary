@@ -100,8 +100,8 @@ let j = new h.A("RunningGameStore"),
     ],
     z = [],
     X = !0,
-    Z = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
-    q = new Set(),
+    q = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
+    Z = new Set(),
     Q = [],
     J = [],
     ee = [],
@@ -334,7 +334,7 @@ function eY() {
                 if (null == i) return t;
                 for (let r of M.A.getLaunchOptions(n.id, n.branchId)) {
                     let a = `${n.id}:${n.branchId}`;
-                    q.has(a) || ((e = !0), q.add(a));
+                    Z.has(a) || ((e = !0), Z.add(a));
                     let { fullExecutablePath: s } = r,
                         l = s.replace(/\\/g, "/").toLowerCase();
                     ((ed[l] = i.id),
@@ -417,7 +417,7 @@ function e$(e) {
         }),
         eu.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         ej(),
-        w.A.setRecentGames(ez().map((e) => eW(e, eq, D.A, v.A))));
+        w.A.setRecentGames(ez().map((e) => eW(e, eZ, D.A, v.A))));
 }
 function ez() {
     let e = a().values(eu.gameOverrides);
@@ -592,7 +592,7 @@ if (Y) {
             (null != eE && eE(),
             (eE = (0, o.O)(
                 () => {
-                    ((eE = null), e(), eq.emitChange());
+                    ((eE = null), e(), eZ.emitChange());
                 },
                 { timeout: 2e3 },
             )),
@@ -603,7 +603,7 @@ if (Y) {
 function eX() {
     f.A.hasLoadedExperiments && K.length > 0 && (e$(K), (K = []));
 }
-class eZ extends d.Ay.Store {
+class eq extends d.Ay.Store {
     static displayName = "RunningGameStore";
     initialize() {
         let e = c.w.get(W) ?? {
@@ -769,13 +769,13 @@ class eZ extends d.Ay.Store {
         em.add((0, A.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
-        return Z[e] ?? { state: "unknown" };
+        return q[e] ?? { state: "unknown" };
     }
     isSystemServiceInitialized(e) {
-        return Z[e]?.state === "running";
+        return q[e]?.state === "running";
     }
 }
-let eq = new eZ(u.h, {
+let eZ = new eq(u.h, {
         RUNNING_GAMES_CHANGE: function (e) {
             e$(ee);
         },
@@ -922,7 +922,7 @@ let eq = new eZ(u.h, {
         },
         SYSTEM_SERVICE_INITIALIZE: function (e) {
             let { status: t, modules: n } = e;
-            for (let e of n) Z[e] = t;
+            for (let e of n) q[e] = t;
         },
         RUNNING_GAME_SET_DEBUG_GAME: function (e) {
             (null != et && (ee = ee.filter((e) => e !== et)), null != (et = e.game) && (ee = [et, ...ee]), eP());
@@ -932,4 +932,4 @@ let eq = new eZ(u.h, {
             return (ea.setCanonicalGameIds(t), eM());
         },
     }),
-    eQ = eq;
+    eQ = eZ;

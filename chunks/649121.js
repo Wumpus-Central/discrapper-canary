@@ -1,11 +1,11 @@
 (n.d(t, { BK: () => o, j_: () => l, yn: () => c }), n(508300));
 var r = n(382541);
-let a = new Map(),
-    i = new Map();
+let i = new Map(),
+    a = new Map();
 function o(e) {
-    let t = a.get(e);
+    let t = i.get(e);
     if (null != t && t.expiresAt > Date.now()) return Promise.resolve(t.ticket);
-    let n = i.get(e);
+    let n = a.get(e);
     if (null != n) return n;
     let o = (0, r.d)(e)
         .then((t) => {
@@ -18,16 +18,16 @@ function o(e) {
                     return null;
                 }
             })(t.ticket);
-            return (null != n && a.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
+            return (null != n && i.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
         })
         .finally(() => {
-            i.delete(e);
+            a.delete(e);
         });
-    return (i.set(e, o), o);
+    return (a.set(e, o), o);
 }
 function c(e) {
-    a.delete(e);
+    i.delete(e);
 }
 function l() {
-    a.clear();
+    i.clear();
 }

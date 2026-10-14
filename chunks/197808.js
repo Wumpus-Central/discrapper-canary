@@ -120,12 +120,12 @@ let G = a.Ay.connectStores([T.A, l.Ay, O.A, S.A, C.Ay, N.A, _.A, m.Ay, A.A], (e)
         $ = null != Y && _.A.getChatOpen(Y),
         z = I || g,
         X = z && null != s && (0, o.q)(s.applicationId),
-        Z = !z && null != t && K;
+        q = !z && null != t && K;
     return {
         selectedPIPWindow: t,
         pipWindows: 0 === j.length ? U : j,
         pipWidth: B,
-        maxX: x.width - (Z && $ ? W : 0),
+        maxX: x.width - (q && $ ? W : 0),
         maxY: x.height,
         dockedRect: N.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {

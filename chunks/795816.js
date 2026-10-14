@@ -59,8 +59,8 @@ var i = n(562708),
     $ = n(969151),
     z = n(817636),
     X = n(782091),
-    Z = n(108959),
-    q = n(400115),
+    q = n(108959),
+    Z = n(400115),
     Q = n(90804),
     J = n(946255),
     ee = n(859007),
@@ -110,7 +110,7 @@ async function ed(e) {
             (0, ee.y)({ applicationId: i, launch: { customId: I, referrerId: f } }))
         )
             return (
-                (0, q.j)(i, {
+                (0, Z.j)(i, {
                     isStart: s,
                     inviterUserId: p,
                     channelId: t ?? null,
@@ -360,7 +360,7 @@ async function eu(e) {
     )
         return { result: "failure", reason: 7 };
     if (null != u) {
-        let e = (0, Z.A)(u.id),
+        let e = (0, q.A)(u.id),
             n = et.lk.includes(u.type);
         if (e) {
             if (!(await (0, Q.A)({ channelId: u.id, bypassChangeModal: null != t })))

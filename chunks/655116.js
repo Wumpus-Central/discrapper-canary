@@ -44,8 +44,8 @@ let b = A.A.get(v.fg2.SPOTIFY),
     $ = {},
     z = {},
     X = !1,
-    Z = null;
-function q() {
+    q = null;
+function Z() {
     for (let e in K) {
         let t = K[e];
         if (!t.connected || null == $[e]) continue;
@@ -174,7 +174,7 @@ function er(e, t) {
     for (let n of $[e]) n.is_active = n.id === t;
 }
 function ea(e, t, n) {
-    let i = q();
+    let i = Z();
     if (null == i) return !1;
     let { socket: a, device: s } = i,
         { sync_id: l, party: o, timestamps: d } = t;
@@ -199,7 +199,7 @@ function es() {
     });
     let e = null != r ? r.trackId : null;
     ((r = null), B.info("Listen along stopped"));
-    let t = q();
+    let t = Z();
     if (null == t) return;
     let { socket: n } = t,
         i = z[n.accountId];
@@ -230,7 +230,7 @@ function el() {
 }
 function eo() {
     if (null == i) return;
-    let e = q();
+    let e = Z();
     if (null == e) return;
     let { socket: t } = e;
     ((X = !0),
@@ -339,7 +339,7 @@ class e_ extends d.Ay.Store {
         (this.waitFor(p.default, T.A, m.A, g.A, I.Ay, S.A, N.A),
             this.syncWith([g.A], () =>
                 (function () {
-                    if (null == r || null == q()) return !1;
+                    if (null == r || null == Z()) return !1;
                     let { userId: e } = r,
                         t = J(e);
                     if (null == t)
@@ -362,7 +362,7 @@ class e_ extends d.Ay.Store {
         return Object.keys(K).length > 0;
     }
     getActiveSocketAndDevice() {
-        return q();
+        return Z();
     }
     getPlayableComputerDevices() {
         let e = [];
@@ -376,7 +376,7 @@ class e_ extends d.Ay.Store {
     }
     canPlay(e) {
         let { sync_id: t, party: n } = e;
-        return null != q() && null != t && null != n && null != n.id && (0, D.pH)(n.id);
+        return null != Z() && null != t && null != n && null != n.id && (0, D.pH)(n.id);
     }
     getSyncingWith() {
         return r;
@@ -470,7 +470,7 @@ let eE = new e_(_.h, {
                     (null == e ? ($[s].push(A), (I = !0)) : (0, c.A)(e, A) || (Object.assign(e, A), (I = !0)),
                         er(s, A.id));
                 } else (($[s] = [A]), (I = !0));
-            o ? Z?.start(U, eo) : ((u = null), Z?.stop());
+            o ? q?.start(U, eo) : ((u = null), q?.stop());
             let m = T.A.getAccount(s, v.fg2.SPOTIFY);
             if (null == m) return I;
             let g = z[s],
@@ -529,7 +529,7 @@ let eE = new e_(_.h, {
         ACTIVITY_PLAY: function (e) {
             let t,
                 { activity: n, metadata: i } = e,
-                a = q();
+                a = Z();
             if (null == a) return !1;
             let { socket: s, device: l } = a,
                 { sync_id: o, party: d } = n;
@@ -575,12 +575,12 @@ let eE = new e_(_.h, {
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
             let { settings: t } = e;
             if (t?.desktopSettings != null) {
-                Z?.stop();
+                q?.stop();
                 let { sourceId: e, sound: n } = t?.desktopSettings;
                 null != e && I.Ay.getObservedAppNameForWindow(e) === b.name && n
-                    ? (Z = new u.IX()).start(U, eo)
-                    : (Z?.stop(), (Z = null));
-            } else null == t && (Z?.stop(), (Z = null));
+                    ? (q = new u.IX()).start(U, eo)
+                    : (q?.stop(), (q = null));
+            } else null == t && (q?.stop(), (q = null));
         },
     }),
     eA = eE;

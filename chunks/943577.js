@@ -63,10 +63,10 @@ function X(e) {
     let t = j.get(e);
     return (null == t && ((t = new O.A({ name: e })), j.set(e, t)), t);
 }
-function Z(e) {
+function q(e) {
     return (null == W[e] && (W = { ...W, [e]: new C.A({ url: e }) }), W[e]);
 }
-function q(e) {
+function Z(e) {
     K.has(e) || Y.add(e);
 }
 function Q(e) {
@@ -74,9 +74,9 @@ function Q(e) {
     if (null != e.application_id && e.application_id !== k.$W) {
         let t = h.A.getApplication(e.application_id);
         if (null != t) return t;
-        q(e.application_id);
+        Z(e.application_id);
     }
-    return (0, _.A)(e) && null != e.url ? Z(e.url) : (0, u.A)(e) ? X(e.name) : null;
+    return (0, _.A)(e) && null != e.url ? q(e.url) : (0, u.A)(e) ? X(e.name) : null;
 }
 function J(e) {
     let t = w.A.getVoiceStateForUser(e);
@@ -119,9 +119,9 @@ function et(e, t, n) {
                 );
             if (e === N.WY) return N.HT;
             if (e.startsWith(O.W)) return X(e.slice(O.W.length));
-            if (e.startsWith(C.K)) return Z(e.slice(C.K.length));
+            if (e.startsWith(C.K)) return q(e.slice(C.K.length));
             let t = h.A.getApplication(e);
-            return null != t ? t : (q(e), null);
+            return null != t ? t : (Z(e), null);
         })(a);
         if ((0, d.A)(i)) {
             let t = (0, l.A)(),

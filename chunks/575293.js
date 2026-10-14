@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(71393),
     b = n(225142),
     I = n(374084),
-    N = n(101611),
-    v = n(473529),
+    v = n(101611),
+    N = n(473529),
     T = n(111487),
     j = n(652215),
     _ = n(660183),
@@ -58,12 +58,12 @@ function L(e) {
 }
 function w(e) {
     let { guildId: t, channel: n, className: r } = e,
-        { channelAction: c, completed: x } = (0, N.j4)(t, n),
-        E = (0, N.Lr)(t, c?.channelId),
+        { channelAction: c, completed: x } = (0, v.j4)(t, n),
+        E = (0, v.Lr)(t, c?.channelId),
         y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         C = c?.actionType === I.NewMemberActionTypes.VIEW,
         A = (0, d.r)(h.A.colors.WHITE),
-        v = R[(0, S.C)()],
+        N = R[(0, S.C)()],
         [T, j] = i.useState(!1),
         [w] = i.useState(new a.A.Value(0)),
         [M] = i.useState(new a.A.Value(0));
@@ -87,7 +87,7 @@ function w(e) {
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
+                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: s()(k.vK, k.vk, { [k.pJ]: n.isForumChannel() }),
                                 onClick: P,
@@ -117,7 +117,7 @@ function w(e) {
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: s()(k.vK, { [k.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
+                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: [
                                 (0, l.jsx)(L, {
                                     channelId: c.channelId,
@@ -155,9 +155,9 @@ function w(e) {
 }
 function M(e) {
     let { guildId: t, channel: n, className: i } = e,
-        r = (0, v.d)(t),
+        r = (0, N.d)(t),
         s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, N.jY)(t),
+        a = (0, v.jY)(t),
         u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || s || !r || !u ? null : (0, l.jsx)(w, { guildId: t, channel: n, className: i });
 }

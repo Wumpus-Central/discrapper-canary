@@ -30,8 +30,8 @@ var i = n(477900),
 let O = 10 * j.A.Millis.SECOND,
     L = { tension: 220, friction: 30, clamp: !0 },
     P = { x: "100%" },
-    M = { x: "0%" },
-    w = { x: "-100%" };
+    w = { x: "0%" },
+    M = { x: "-100%" };
 function U(e) {
     let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: j } = e,
         U = (0, o.yK)(
@@ -78,10 +78,10 @@ function U(e) {
         ei = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         el = (0, c.p)(H, {
             keys: () => `${D.sequence}:${(0, x._z)(H)}`,
-            initial: M,
+            initial: w,
             from: P,
-            enter: M,
-            leave: w,
+            enter: w,
+            leave: M,
             config: L,
         });
     function ea() {

@@ -141,7 +141,7 @@ function X() {
         e
     );
 }
-function Z(e) {
+function q(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = c.A.get(n);
     if (null == l || !(0, S.vp)(e)) return !1;
@@ -154,7 +154,7 @@ function Z(e) {
     )),
         c.A.commit(l));
 }
-function q(e) {
+function Z(e) {
     let { type: t, messageData: n } = e,
         { message: i } = n,
         r = (0, u.cR)(n),
@@ -409,7 +409,7 @@ let J = new Q(o.h, {
                       )),
                 c.A.commit(r));
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: q,
+        MESSAGE_SEND_FAILED_AUTOMOD: Z,
         AUTO_MODERATION_CONTENT_DELETED: function (e) {
             let { message: t, thread: n, notice: i } = e;
             if (null == t || null != n) return !1;
@@ -420,7 +420,7 @@ let J = new Q(o.h, {
                 c.A.commit(a),
                 k.set(t.id, i));
         },
-        MESSAGE_EDIT_FAILED_AUTOMOD: q,
+        MESSAGE_EDIT_FAILED_AUTOMOD: Z,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,
@@ -509,14 +509,14 @@ let J = new Q(o.h, {
         RELATIONSHIP_REMOVE: X,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},
-        MESSAGE_REACTION_ADD: Z,
+        MESSAGE_REACTION_ADD: q,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { channelId: t, messageId: n, reactions: i } = e,
                 r = c.A.get(t);
             if (null == r) return !1;
             ((r = r.update(n, (e) => e.addReactionBatch(i, w.default.getCurrentUser()?.id))), c.A.commit(r));
         },
-        MESSAGE_REACTION_REMOVE: Z,
+        MESSAGE_REACTION_REMOVE: q,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { channelId: t, messageId: n } = e,
                 i = c.A.get(t);

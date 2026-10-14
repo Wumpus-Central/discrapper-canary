@@ -54,8 +54,8 @@ function S(e) {
         $ = Y?.fullWidth ?? g,
         z = null != _,
         X = r.useRef(null),
-        Z = j ?? X,
-        q = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: Z, disabled: F }),
+        q = j ?? X,
+        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: q, disabled: F }),
         Q = "expressive" === n,
         J = r.useContext(d.C),
         { theme: ee, i18n: et } = (0, E.G9)(),
@@ -68,9 +68,9 @@ function S(e) {
     let er = (0, i.jsxs)("div", {
             className: s()(I.buttonChildren, { [I.loading]: R }),
             children: [
-                null != q && "start" === h && q,
+                null != Z && "start" === h && Z,
                 z && (0, i.jsx)(f.E, { tag: "span", variant: T[K], color: "none", lineClamp: 1, children: _ }),
-                null != q && "end" === h && q,
+                null != Z && "end" === h && Z,
             ],
         }),
         ea = F || R,
@@ -99,7 +99,7 @@ function S(e) {
                 })(n, z),
                 { [I.hasText]: z, [I.fullWidth]: $, [I.rounded]: D },
             ),
-            ref: Z,
+            ref: q,
             rel: b,
             type: v,
             onClick: ea ? (e) => e.preventDefault() : M,
@@ -116,7 +116,7 @@ function S(e) {
                 Q &&
                     (0, i.jsx)(C, {
                         hasReducedMotion: J.reducedMotion.enabled,
-                        buttonRef: Z,
+                        buttonRef: q,
                         isLightMode: en,
                         disabled: F,
                     }),

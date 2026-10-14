@@ -1,22 +1,22 @@
 n.d(t, { A: () => d });
 var r = n(582128),
     l = n(17928),
-    a = n(232835),
-    i = n(403362),
+    i = n(232835),
+    a = n(403362),
     u = n(274372),
     s = n(458977),
     c = n(110742),
     o = n(394039);
 function d(e) {
     let { attachment: t, messageId: n, channelId: d, guildId: m, width: f, height: h } = e,
-        g = (0, l.bG)([a.A], () => (null != d && null != n ? a.A.getMessage(d, n) : void 0), [d, n]),
+        g = (0, l.bG)([i.A], () => (null != d && null != n ? i.A.getMessage(d, n) : void 0), [d, n]),
         p = r.useMemo(() => (0, c.Vi)(t), [t]),
         { enableDistributedClips: v } = s.A.useConfig({ location: "useMultiSourceConfig" }),
         x = (0, l.bG)([u.Ay], () => u.Ay.getMatchingPOVReferences(t.id), [t.id]),
-        S = (0, l.yK)([a.A], () =>
+        S = (0, l.yK)([i.A], () =>
             x
-                .map((e) => a.A.getMessage(e.channelId, e.messageId))
-                .filter(i.Vq)
+                .map((e) => i.A.getMessage(e.channelId, e.messageId))
+                .filter(a.Vq)
                 .sort((e, t) => e.id.localeCompare(t.id))
                 .slice(0, 3),
         );

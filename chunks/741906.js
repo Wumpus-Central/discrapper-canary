@@ -225,7 +225,7 @@ function $(e) {
             systemForcedColors: $,
             useReducedMotion: z,
             alwaysShowLinkDecorations: X,
-            highContrastMode: Z,
+            highContrastMode: q,
         } = (0, c.cf)([v.default, I.Ay, b.A, D.A, M.A], () => ({
             locale: v.default.locale,
             theme: n ?? b.A.theme,
@@ -243,7 +243,7 @@ function $(e) {
             alwaysShowLinkDecorations: I.Ay.alwaysShowLinkDecorations,
             highContrastMode: I.Ay.isHighContrastModeEnabled,
         })),
-        q = (function (e, t) {
+        Z = (function (e, t) {
             let [n, i] = a.useState(0),
                 r = (0, m.aL)();
             a.useEffect(() => {
@@ -431,7 +431,7 @@ function $(e) {
                 fontScale: x,
                 fontScaleClass: k,
                 keyboardModeEnabled: F,
-                mouseMode: q,
+                mouseMode: Z,
                 saturation: B,
                 desaturateUserColors: V,
                 useForcedColors: H,
@@ -439,7 +439,7 @@ function $(e) {
                 useReducedMotion: z,
                 alwaysShowLinkDecorations: X,
                 hardwareAccelerationEnabled: d,
-                highContrastMode: Z,
+                highContrastMode: q,
                 isPopoutWindow: l,
                 rootClassName: o()(es, {
                     "refresh-fast-follow-avatars": ee,

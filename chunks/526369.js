@@ -35,8 +35,8 @@ function b(e) {
             popoutType: L,
         } = e,
         P = (0, f.Us)() === E.BRT.POPOUT,
-        M = (0, r.bG)([C.A], () => C.A.getGuild(S.guild_id), [S.guild_id]),
-        { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
+        w = (0, r.bG)([C.A], () => C.A.getGuild(S.guild_id), [S.guild_id]),
+        { dismissedActivityEntryPointTileChannel: M } = (0, N.P)(),
         U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
         D = (0, g.vp)(S.id, t),
         V = l.useCallback(() => {
@@ -45,19 +45,19 @@ function b(e) {
             });
         }, [S.id]);
     l.useEffect(() => {
-        null != w &&
-            S.id !== w &&
+        null != M &&
+            S.id !== M &&
             (0, s.r)(() => {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [S.id, w]);
-    let G = (0, r.bG)([j.A], () => S.isPrivate() || (0, A.K)(j.A, M, S), [M, S]),
-        k = M?.afkChannelId === S.id,
+    }, [S.id, M]);
+    let G = (0, r.bG)([j.A], () => S.isPrivate() || (0, A.K)(j.A, w, S), [w, S]),
+        k = w?.afkChannelId === S.id,
         B = S.userLimit <= 0 || S.userLimit > 1,
         F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(S.id).length <= 0),
         z = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
         H = (0, d.et)(S.id) !== d.xy.CAN_LAUNCH,
-        W = null != w && w === S.id,
+        W = null != M && M === S.id,
         Y = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
@@ -87,7 +87,7 @@ function b(e) {
     );
     let $ = F && !H,
         [K, X] = (0, p._)();
-    null != M &&
+    null != w &&
         !k &&
         !S.isGuildStageVoice() &&
         (K
@@ -96,7 +96,7 @@ function b(e) {
               ? Y.push((e) =>
                     (0, i.jsx)(y.y, {
                         channel: S,
-                        guild: M,
+                        guild: w,
                         width: e,
                         inPopout: P,
                         handleClose: V,
@@ -109,7 +109,7 @@ function b(e) {
                 Y.push((e) =>
                     (0, i.jsx)(y.y, {
                         channel: S,
-                        guild: M,
+                        guild: w,
                         width: e,
                         inPopout: P,
                         handleClose: V,

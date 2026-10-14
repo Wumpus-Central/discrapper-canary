@@ -1,12 +1,12 @@
 a.d(t, { A: () => r });
-var s = a(477900),
-    l = a(582128),
+var l = a(477900),
+    s = a(582128),
     n = a(333007),
     i = a(558960);
 function r(e) {
     let { frameId: t, level: a, className: r, overlay: o } = e,
-        d = l.useRef(null);
-    l.useLayoutEffect(() => {
+        d = s.useRef(null);
+    s.useLayoutEffect(() => {
         let e = d.current;
         if (null != e)
             return (
@@ -16,10 +16,10 @@ function r(e) {
                 }
             );
     }, [t, a]);
-    let c = l.useSyncExternalStore(i.A.subscribe, () => i.A.getFrameEntry(t)?.overlay ?? null);
-    return (0, s.jsxs)(s.Fragment, {
+    let c = s.useSyncExternalStore(i.A.subscribe, () => i.A.getFrameEntry(t)?.overlay ?? null);
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, s.jsx)("div", { ref: d, className: r, style: { pointerEvents: "none" } }),
+            (0, l.jsx)("div", { ref: d, className: r, style: { pointerEvents: "none" } }),
             null != o && null != c ? (0, n.createPortal)(o, c) : null,
         ],
     });

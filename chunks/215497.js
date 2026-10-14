@@ -36,7 +36,7 @@ let E = function (e) {
             ref: b,
         } = e,
         I = r.useRef(null),
-        { onFocus: N, ...v } = (0, o.rm)(t),
+        { onFocus: v, ...N } = (0, o.rm)(t),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
             return {
@@ -55,12 +55,12 @@ let E = function (e) {
                 ),
                 isFocused: t,
             };
-        })(N),
+        })(v),
         _ = 0 === A,
         k = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
-            ...v,
+            ...N,
             onFocus: T,
             onBlur: j,
             onClick: function (e) {

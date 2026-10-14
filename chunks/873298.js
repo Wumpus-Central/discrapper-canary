@@ -9,11 +9,11 @@
     Ju: () => eT,
     KJ: () => eu,
     KP: () => $,
-    NS: () => Z,
+    NS: () => q,
     PZ: () => J,
     Q0: () => ed,
     Qd: () => W,
-    Sx: () => q,
+    Sx: () => Z,
     TO: () => x,
     TY: () => ej,
     Tz: () => F,
@@ -162,14 +162,14 @@ var i,
         (I[(I.PERSONAL = 1)] = "PERSONAL"),
         (I[(I.GUILD = 2)] = "GUILD"),
         I),
-    Z =
+    q =
         (((p = {})[(p.UNSET_UI_DENSITY = 0)] = "UNSET_UI_DENSITY"),
         (p[(p.COMPACT = 1)] = "COMPACT"),
         (p[(p.COZY = 2)] = "COZY"),
         (p[(p.RESPONSIVE = 3)] = "RESPONSIVE"),
         (p[(p.DEFAULT = 4)] = "DEFAULT"),
         p),
-    q =
+    Z =
         (((T = {})[(T.UNSET = 0)] = "UNSET"),
         (T[(T.DARK = 1)] = "DARK"),
         (T[(T.LIGHT = 2)] = "LIGHT"),
@@ -254,7 +254,7 @@ class es extends b.G {
             { no: 8, name: "privacy", kind: "message", T: () => eY },
             { no: 9, name: "debug", kind: "message", T: () => e$ },
             { no: 10, name: "game_library", kind: "message", T: () => eX },
-            { no: 11, name: "status", kind: "message", T: () => eq },
+            { no: 11, name: "status", kind: "message", T: () => eZ },
             { no: 12, name: "localization", kind: "message", T: () => e1 },
             { no: 13, name: "appearance", kind: "message", T: () => e5 },
             { no: 14, name: "guild_folders", kind: "message", T: () => tt },
@@ -270,7 +270,7 @@ class es extends b.G {
             { no: 24, name: "ads", kind: "message", T: () => tV },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
             { no: 26, name: "app_version_settings", kind: "message", T: () => tX },
-            { no: 27, name: "conjure", kind: "message", T: () => tq },
+            { no: 27, name: "conjure", kind: "message", T: () => tZ },
         ]);
     }
     create(e) {
@@ -318,7 +318,7 @@ class es extends b.G {
                     r.gameLibrary = eX.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
                     break;
                 case 11:
-                    r.status = eq.internalBinaryRead(e, e.uint32(), n, r.status);
+                    r.status = eZ.internalBinaryRead(e, e.uint32(), n, r.status);
                     break;
                 case 12:
                     r.localization = e1.internalBinaryRead(e, e.uint32(), n, r.localization);
@@ -366,7 +366,7 @@ class es extends b.G {
                     r.appVersionSettings = tX.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
                     break;
                 case 27:
-                    r.conjure = tq.internalBinaryRead(e, e.uint32(), n, r.conjure);
+                    r.conjure = tZ.internalBinaryRead(e, e.uint32(), n, r.conjure);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -389,7 +389,7 @@ class es extends b.G {
             e.privacy && eY.internalBinaryWrite(e.privacy, t.tag(8, y.O0.LengthDelimited).fork(), n).join(),
             e.debug && e$.internalBinaryWrite(e.debug, t.tag(9, y.O0.LengthDelimited).fork(), n).join(),
             e.gameLibrary && eX.internalBinaryWrite(e.gameLibrary, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
-            e.status && eq.internalBinaryWrite(e.status, t.tag(11, y.O0.LengthDelimited).fork(), n).join(),
+            e.status && eZ.internalBinaryWrite(e.status, t.tag(11, y.O0.LengthDelimited).fork(), n).join(),
             e.localization && e1.internalBinaryWrite(e.localization, t.tag(12, y.O0.LengthDelimited).fork(), n).join(),
             e.appearance && e5.internalBinaryWrite(e.appearance, t.tag(13, y.O0.LengthDelimited).fork(), n).join(),
             e.guildFolders && tt.internalBinaryWrite(e.guildFolders, t.tag(14, y.O0.LengthDelimited).fork(), n).join(),
@@ -410,7 +410,7 @@ class es extends b.G {
                 t$.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, y.O0.LengthDelimited).fork(), n).join(),
             e.appVersionSettings &&
                 tX.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join(),
-            e.conjure && tq.internalBinaryWrite(e.conjure, t.tag(27, y.O0.LengthDelimited).fork(), n).join());
+            e.conjure && tZ.internalBinaryWrite(e.conjure, t.tag(27, y.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -2735,7 +2735,7 @@ class ez extends b.G {
     }
 }
 let eX = new ez();
-class eZ extends b.G {
+class eq extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
             { no: 1, name: "status", kind: "message", T: () => M.hU },
@@ -2796,7 +2796,7 @@ class eZ extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eq = new eZ();
+let eZ = new eq();
 class eQ extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomStatus", [
@@ -2963,7 +2963,7 @@ let e3 = new e2();
 class e6 extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppearanceSettings", [
-            { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", q] },
+            { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", Z] },
             { no: 2, name: "developer_mode", kind: "scalar", T: 8 },
             { no: 3, name: "client_theme_settings", kind: "message", T: () => e9 },
             { no: 4, name: "mobile_redesign_disabled", kind: "scalar", T: 8 },
@@ -2983,7 +2983,7 @@ class e6 extends b.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_users.v1.LaunchPadMode", ee],
             },
-            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", Z] },
+            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", q] },
             {
                 no: 13,
                 name: "swipe_right_to_left_mode",
@@ -4505,7 +4505,7 @@ class tz extends b.G {
     }
 }
 let tX = new tz();
-class tZ extends b.G {
+class tq extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureSettings", [
             { no: 1, name: "projects", kind: "map", K: 6, V: { kind: "message", T: () => tJ } },
@@ -4567,7 +4567,7 @@ class tZ extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tq = new tZ();
+let tZ = new tq();
 class tQ extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureProjectSettings", [

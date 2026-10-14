@@ -1,6 +1,6 @@
-a.d(t, { A: () => p });
-var s = a(256693),
-    l = a(343030);
+a.d(t, { A: () => h });
+var l = a(256693),
+    s = a(343030);
 class n {
     config;
     entries = new Map();
@@ -32,15 +32,15 @@ class n {
     hasFrameEntry(e) {
         return this.entries.has(e);
     }
-    registerFrameTarget(e, t, a, s) {
-        let l = this.targets.get(e);
-        (null == l && ((l = new Map()), this.targets.set(e, l)),
-            l.set(t, { target: t, level: a, seq: this.attachSeq++, state: s }),
+    registerFrameTarget(e, t, a, l) {
+        let s = this.targets.get(e);
+        (null == s && ((s = new Map()), this.targets.set(e, s)),
+            s.set(t, { target: t, level: a, seq: this.attachSeq++, state: l }),
             this.reconcile(e));
     }
     updateFrameTargetState(e, t, a) {
-        let s = this.targets.get(e)?.get(t);
-        null != s && s.state !== a && ((s.state = a), this.emitChange());
+        let l = this.targets.get(e)?.get(t);
+        null != l && l.state !== a && ((l.state = a), this.emitChange());
     }
     removeFrameTarget(e, t) {
         let a = this.targets.get(e);
@@ -68,7 +68,7 @@ class n {
         if (null == t) return null;
         let a = null;
         for (let e of t.values())
-            (null == a || l.p[e.level] > l.p[a.level] || (l.p[e.level] === l.p[a.level] && e.seq > a.seq)) && (a = e);
+            (null == a || s.p[e.level] > s.p[a.level] || (s.p[e.level] === s.p[a.level] && e.seq > a.seq)) && (a = e);
         return a;
     }
     background(e) {
@@ -79,12 +79,12 @@ class n {
     reconcileCondemned() {
         let e = this.backgrounded.size - this.config.maxBackgrounded,
             t = 0;
-        for (let [a, s] of this.backgrounded) {
-            let l = t < e;
-            (l !== s.condemned &&
-                (clearTimeout(s.timer),
-                (s.timer = this.armEviction(a, l ? 3e3 : this.config.timeoutMs)),
-                (s.condemned = l)),
+        for (let [a, l] of this.backgrounded) {
+            let s = t < e;
+            (s !== l.condemned &&
+                (clearTimeout(l.timer),
+                (l.timer = this.armEviction(a, s ? 3e3 : this.config.timeoutMs)),
+                (l.condemned = s)),
                 t++);
         }
     }
@@ -101,7 +101,7 @@ class n {
 }
 var i = a(281969),
     r = a(457827);
-let o = { [l.A.Backstage]: 0, [l.A.WithinAppContent]: 1, [l.A.WithinCallContent]: 3, [l.A.AboveAppContent]: 1002 };
+let o = { [s.A.Backstage]: 0, [s.A.WithinAppContent]: 1, [s.A.WithinCallContent]: 3, [s.A.AboveAppContent]: 1002 };
 class d {
     _pool = null;
     setPool(e) {
@@ -133,12 +133,12 @@ class c extends d {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
     position(e, t, a) {
-        let s = t.getBoundingClientRect();
+        let l = t.getBoundingClientRect();
         ((e.style.display = "block"),
             (e.style.zIndex = String(o[a])),
-            (e.style.transform = `translate(${s.left}px, ${s.top}px)`),
-            (e.style.width = `${s.width}px`),
-            (e.style.height = `${s.height}px`));
+            (e.style.transform = `translate(${l.left}px, ${l.top}px)`),
+            (e.style.width = `${l.width}px`),
+            (e.style.height = `${l.height}px`));
     }
     tick = () => {
         for (let [e, { target: t, level: a }] of this.placed) this.position(e, t, a);
@@ -160,7 +160,7 @@ class u extends d {
         (e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none"));
     }
 }
-class h extends n {
+class p extends n {
     strategy = "function" == typeof Element.prototype.moveBefore ? new u() : new c();
     constructor() {
         super({ maxBackgrounded: 3, timeoutMs: 3e5 });
@@ -173,19 +173,19 @@ class h extends n {
     }
     removeFrameEntry(e) {
         let t = this.getFrameEntry(e);
-        (super.removeFrameEntry(e), t?.container.remove(), (0, s.fS)(e) || i.A.removeFrame(e));
+        (super.removeFrameEntry(e), t?.container.remove(), (0, l.fS)(e) || i.A.removeFrame(e));
     }
     place(e, t, a) {
         let n = this.getFrameEntry(e);
         null != n &&
-            (this.strategy.place(n.container, t, a), (0, s.fS)(e) || i.A.setFrameVisible(e, a !== l.A.Backstage));
+            (this.strategy.place(n.container, t, a), (0, l.fS)(e) || i.A.setFrameVisible(e, a !== s.A.Backstage));
     }
     unplace(e) {
         let t = this.getFrameEntry(e);
-        null != t && (this.strategy.unplace(t.container), (0, s.fS)(e) || i.A.setFrameVisible(e, !1));
+        null != t && (this.strategy.unplace(t.container), (0, l.fS)(e) || i.A.setFrameVisible(e, !1));
     }
     destroyFrame(e) {
-        (0, s.fS)(e) ? (0, s.aQ)(e) : (0, r.r)(e);
+        (0, l.fS)(e) ? (0, l.aQ)(e) : (0, r.r)(e);
     }
 }
-let p = new h();
+let h = new p();

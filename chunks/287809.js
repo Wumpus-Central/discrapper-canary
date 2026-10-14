@@ -286,11 +286,11 @@ function X(e) {
     let { messages: t } = e;
     return (t.forEach((e) => P(e, !0)), !1);
 }
-function Z(e) {
+function q(e) {
     let { firstMessages: t, owners: n } = e;
     (null != t && t.forEach((e) => P(e, !0)), null != n && n.forEach((e) => D(e.user, !0)));
 }
-function q(e) {
+function Z(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: i } = e;
@@ -599,9 +599,9 @@ class eV extends T.A {
             AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eO,
             GIFT_CODE_RESOLVE_SUCCESS: eR,
             GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eL,
-            LOAD_THREADS_SUCCESS: Z,
-            LOAD_ARCHIVED_THREADS_SUCCESS: Z,
-            LOAD_FORUM_POSTS: q,
+            LOAD_THREADS_SUCCESS: q,
+            LOAD_ARCHIVED_THREADS_SUCCESS: q,
+            LOAD_FORUM_POSTS: Z,
             GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: J,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: et,
             NOTIFICATION_CENTER_ITEM_CREATE: en,

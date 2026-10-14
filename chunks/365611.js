@@ -1,4 +1,4 @@
-a.exports = {
+_.exports = {
     Wp: "gameCover__1a3d6",
     PY: "coverContainer__1a3d6 gameCover__1a3d6",
     $_: "gameCoverImage__1a3d6 gameCover__1a3d6",

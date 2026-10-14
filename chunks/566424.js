@@ -29,8 +29,8 @@ function g(e) {
         i && w.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [i]);
     let _ = a.useId(),
-        S = a.useCallback(() => y((e) => !e), []),
-        { text: N, phase: A } = (0, c.Q)(n),
+        N = a.useCallback(() => y((e) => !e), []),
+        { text: S, phase: A } = (0, c.Q)(n),
         I = j ? s.a : o._,
         M = null != x,
         T = (0, l.jsxs)(l.Fragment, {
@@ -41,7 +41,7 @@ function g(e) {
                     variant: "text-md/normal",
                     color: "currentColor",
                     className: r()(h.qo, { [h._q]: "exit" === A, [h.GD]: "enter" === A }),
-                    children: N,
+                    children: S,
                 }),
                 M ? (0, l.jsx)(I, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
@@ -74,8 +74,8 @@ function g(e) {
                       className: r()(h.ep, h.EK),
                       "aria-expanded": j,
                       "aria-controls": _,
-                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: N }),
-                      onClick: S,
+                      "aria-label": m.intl.formatToPlainString(f.default.yByAPh, { activity: S }),
+                      onClick: N,
                       children: E,
                   })
                 : (0, l.jsx)("div", { className: h.ep, children: E }),

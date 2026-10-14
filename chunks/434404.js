@@ -39,7 +39,7 @@ function x() {
                 }),
             [],
         ),
-        S = r.useCallback((e) => {
+        p = r.useCallback((e) => {
             (i(e),
                 h.nextTick(() => {
                     (d.Ay.updateLocale(e),
@@ -52,14 +52,14 @@ function x() {
         description: A.intl.string(A.t.rTPlcq),
         value: t,
         options: x,
-        onSelectionChange: S,
+        onSelectionChange: p,
     });
 }
-let S = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
+let p = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [A.intl.string(A.t.IHMsPn)],
     Component: () => (0, l.jsx)(x, {}),
 });
-var p = n(873298),
+var S = n(873298),
     T = n(885386);
 let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
@@ -68,10 +68,10 @@ let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         setValue: (e) => T.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: A.intl.string(A.t.FMWYvb), value: p.PZ.AUTO },
-                { name: A.intl.string(A.t.p8NOwi), value: p.PZ.H12 },
-                { name: A.intl.string(A.t["+o/sOo"]), value: p.PZ.H23 },
+                { name: A.intl.string(A.t.FMWYvb), value: S.PZ.AUTO },
+                { name: A.intl.string(A.t.p8NOwi), value: S.PZ.H12 },
+                { name: A.intl.string(A.t["+o/sOo"]), value: S.PZ.H23 },
             ];
         },
     }),
-    I = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, f] });
+    I = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [p, f] });

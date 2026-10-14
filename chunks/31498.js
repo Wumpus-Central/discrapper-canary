@@ -163,17 +163,17 @@ class p extends l.EventEmitter {
         let A = c.eK.getSetting();
         d.allowSoundmoji = d.allowSoundmoji ? A : d.allowSoundmoji;
         let { results: b, metadata: I } = E.queryResults(this.props.channel, this.props.guild, S, d, y),
-            N = 0;
-        for (let e of Object.values(b)) Array.isArray(e) && (N += e.length);
+            v = 0;
+        for (let e of Object.values(b)) Array.isArray(e) && (v += e.length);
         l && S.length > 0 && S !== this.state.query?.queryText && (0, s.AR)(x, d);
-        let v = !0 === b.isLoading,
-            T = this.shouldShow(N, v, E),
+        let N = !0 === b.isLoading,
+            T = this.shouldShow(v, N, E),
             j = this.state.selectedIndex;
-        (!T || v ? (j = null) : null != j && j >= N && (j = N - 1),
+        (!T || N ? (j = null) : null != j && j >= v && (j = v - 1),
             T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, I),
             this.endGameSearchSessionIfLeaving(x),
             this.setState({
-                query: { type: x, typeInfo: E, queryText: S, results: b, resultCount: N, options: d, isLoading: v },
+                query: { type: x, typeInfo: E, queryText: S, results: b, resultCount: v, options: d, isLoading: N },
                 isVisible: T,
                 selectedIndex: j,
                 hadInitialResults: !0,

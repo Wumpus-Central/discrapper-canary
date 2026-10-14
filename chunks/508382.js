@@ -94,8 +94,8 @@ function A(e) {
     }, [V, m, T]);
     let $ = (0, s.s9)(K),
         z = (0, s.Mk)(K, { restMs: G, delay: { open: G, close: 0 }, enabled: "hover" === w, handleClose: (0, s.iB)() }),
-        { getReferenceProps: X, getFloatingProps: Z } = (0, s.bv)([$, z]),
-        q = W.hide?.referenceHidden ? "hidden" : "visible",
+        { getReferenceProps: X, getFloatingProps: q } = (0, s.bv)([$, z]),
+        Z = W.hide?.referenceHidden ? "hidden" : "visible",
         Q = y ? c.sM : r.Fragment,
         J = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
@@ -113,12 +113,12 @@ function A(e) {
                                 id: I,
                                 className: d()(p, u.q),
                                 [_]: !0,
-                                style: { ...H, visibility: q },
+                                style: { ...H, visibility: Z },
                                 ref: V.setFloating,
-                                ...Z(),
+                                ...q(),
                                 children: (0, i.jsx)(E.Provider, {
                                     value: J,
-                                    children: b({ placement: j, update: Y, hidden: "hidden" === q, shift: W.shift }),
+                                    children: b({ placement: j, update: Y, hidden: "hidden" === Z, shift: W.shift }),
                                 }),
                             })),
                             "none" === n

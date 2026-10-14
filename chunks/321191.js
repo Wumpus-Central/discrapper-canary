@@ -300,7 +300,7 @@ function X(e) {
     }
     i && y.add(t);
 }
-function Z(e) {
+function q(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
     (L.get(t)?.delete(n ?? R), y.delete(t));
     let a = D.get(t) ?? {
@@ -327,7 +327,7 @@ function Z(e) {
     }
     i?.status === 404 && (P.set(t, 0), M.set(t, w), U.set(t, G));
 }
-function q(e) {
+function Z(e) {
     F = !0;
 }
 function Q(e) {
@@ -436,9 +436,9 @@ class eo extends A.A {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
             USER_PROFILE_FETCH_START: X,
-            USER_PROFILE_FETCH_FAILURE: Z,
+            USER_PROFILE_FETCH_FAILURE: q,
             USER_PROFILE_FETCH_SUCCESS: $,
-            USER_PROFILE_UPDATE_START: q,
+            USER_PROFILE_UPDATE_START: Z,
             USER_PROFILE_UPDATE_SUCCESS: Q,
             USER_PROFILE_UPDATE_FAILURE: J,
             WIDGET_PENDING_SAVE_SUCCESS: ee,

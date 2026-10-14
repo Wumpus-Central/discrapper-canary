@@ -46,7 +46,7 @@ n.d(t, {
     WY: () => el,
     Zk: () => e5,
     vL: () => e_,
-    hV: () => q,
+    hV: () => Z,
     tz: () => ev,
     on: () => eL,
     b0: () => Y,
@@ -65,7 +65,7 @@ n.d(t, {
     Zr: () => ea,
     eh: () => e$,
     uB: () => ee,
-    wv: () => Z,
+    wv: () => q,
     jP: () => eP,
     tP: () => W,
     PZ: () => tr,
@@ -75,7 +75,7 @@ n.d(t, {
     Pw: () => eJ,
     rs: () => eB,
     uh: () => X,
-    S0: () => eZ,
+    S0: () => eq,
     Zp: () => P,
     qN: () => ti,
     iM: () => j,
@@ -377,13 +377,13 @@ let F = I(
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    Z = I(
+    q = I(
         "notifications",
         "notifyFriendsOnGoLive",
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    q = I(
+    Z = I(
         "notifications",
         "notifyFriendsOnComeOnline",
         (e) => e?.value ?? !0,
@@ -825,7 +825,7 @@ let eY = p(
         () => S.A.getOverride("animateEmoji")?.value,
         () => (0, a.bG)([S.A], () => S.A.getOverride("animateEmoji")?.value),
     ),
-    eZ = T(
+    eq = T(
         p(
             I(
                 "textAndImages",
@@ -840,17 +840,17 @@ let eY = p(
         () => S.A.getOverride("animateStickers")?.value,
         () => (0, a.bG)([S.A], () => S.A.getOverride("animateStickers")?.value),
     ),
-    eq = [],
+    eZ = [],
     eQ = I(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eq,
+        (e) => e ?? eZ,
         (e) => e,
     ),
     eJ = I(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eq,
+        (e) => e ?? eZ,
         (e) => e,
         { delay: f.Sb.FREQUENT_USER_ACTION },
     ),

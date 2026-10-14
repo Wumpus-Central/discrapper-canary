@@ -217,7 +217,7 @@ function X(e, t) {
                   nick: t.nick,
                   guildId: e,
                   avatar: t.avatar,
-                  avatarDecoration: Z(t),
+                  avatarDecoration: q(t),
                   guildRoles: N.A.getUnsafeMutableRoles(i.id),
                   roles: t.roles,
                   premiumSince: t.premium_since,
@@ -237,10 +237,10 @@ function X(e, t) {
           U++,
           !0);
 }
-function Z(e) {
+function q(e) {
     return (0, c.Xq)(e.avatar_decoration_data);
 }
-function q(e, t) {
+function Z(e, t) {
     let n = L[e];
     if (null == n || null == n[t]) return !1;
     (delete n[t], F(e, t), U++);
@@ -262,7 +262,7 @@ function J(e) {
                 nick: r.nick,
                 guildId: e.id,
                 avatar: r.avatar,
-                avatarDecoration: Z(r),
+                avatarDecoration: q(r),
                 guildRoles: N.A.getUnsafeMutableRoles(n.id),
                 roles: r.roles,
                 premiumSince: r.premium_since,
@@ -577,11 +577,11 @@ let ed = new eo(l.h, {
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        q(t, n.id);
+        Z(t, n.id);
     },
     GUILD_MEMBER_REMOVE_LOCAL: function (e) {
         let { guildId: t, userId: n } = e;
-        q(t, n);
+        Z(t, n);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
@@ -646,7 +646,7 @@ let ed = new eo(l.h, {
             nick: t.nick,
             guildId: n,
             avatar: t.avatar,
-            avatarDecoration: Z(t),
+            avatarDecoration: q(t),
             guildRoles: N.A.getUnsafeMutableRoles(r.id),
             roles: t.roles,
             premiumSince: t.premium_since,

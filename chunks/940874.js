@@ -1,19 +1,19 @@
 n.d(t, { Gu: () => _, NW: () => s, OA: () => h, Un: () => u, tp: () => f });
 var r = n(73153),
-    a = n(975189),
-    i = n(371169),
+    i = n(975189),
+    a = n(371169),
     o = n(385081),
     c = n(248675),
     l = n(660183);
 let s = {
         message_disposition(e, t) {
             var n;
-            let { projectId: a } = t;
+            let { projectId: i } = t;
             ((n = e.disposition),
                 Object.prototype.hasOwnProperty.call(y, n) &&
                     r.h.dispatch({
                         type: "CONJURE_CHAT_MESSAGE_DISPOSITION",
-                        projectId: a,
+                        projectId: i,
                         id: e.id,
                         activeTurnId: e.active_turn_id,
                         disposition: e.disposition,
@@ -59,26 +59,26 @@ let s = {
     u = {
         reply(e, t) {
             let { projectId: n } = t,
-                a = e.message ?? "";
-            "" !== a
+                i = e.message ?? "";
+            "" !== i
                 ? r.h.dispatch({
                       type: "CONJURE_CHAT_TURN_PATCH",
                       projectId: n,
                       turnId: e.turn_id,
-                      patch: { content: a, kind: "message" },
+                      patch: { content: i, kind: "message" },
                   })
                 : _(n, l.intl.string(c.default["913RMa"]), p);
         },
         thinking_lifecycle(e, t) {
             let { projectId: n } = t,
-                { phase: a, session: i, seq: o, ticks: c, elapsed_ms: l, text: s } = e;
-            null != a &&
+                { phase: i, session: a, seq: o, ticks: c, elapsed_ms: l, text: s } = e;
+            null != i &&
                 null != o &&
-                null != i &&
+                null != a &&
                 r.h.dispatch({
                     type: "CONJURE_CHAT_THINKING_SET",
                     projectId: n,
-                    activity: { phase: a, session: i, seq: o, ticks: c ?? 0, elapsedMs: l ?? 0, text: s ?? "" },
+                    activity: { phase: i, session: a, seq: o, ticks: c ?? 0, elapsedMs: l ?? 0, text: s ?? "" },
                 });
         },
         compaction(e, t) {
@@ -93,13 +93,13 @@ let s = {
         },
         todos(e, t) {
             let { projectId: n } = t,
-                a = e.items ?? [];
-            a.length > 0 &&
+                i = e.items ?? [];
+            i.length > 0 &&
                 (r.h.dispatch({
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
                     turnId: e.turn_id,
-                    patch: { todos: a },
+                    patch: { todos: i },
                 }),
                 h(n, e));
         },
@@ -159,8 +159,8 @@ let s = {
         },
         collect_secrets(e, t) {
             let { projectId: n } = t,
-                a = e.fields ?? [];
-            a.length > 0 &&
+                i = e.fields ?? [];
+            i.length > 0 &&
                 r.h.dispatch({
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
@@ -168,7 +168,7 @@ let s = {
                     patch: {
                         secretRequest: {
                             request_id: e.request_id,
-                            fields: a,
+                            fields: i,
                             note: e.note,
                             copy_values: e.copy_values,
                         },
@@ -231,7 +231,7 @@ function h(e, t) {
 }
 function f(e, t, n) {
     try {
-        let r = (0, a.KY)(e);
+        let r = (0, i.KY)(e);
         if (null == r) throw Error("Not connected");
         r.sendQueuedMessageAction(n, t);
     } catch (e) {
@@ -246,7 +246,7 @@ function C(e, t) {
 function T(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
-        "app_channel_deleted" !== e.type && (0, i.GO)(n));
+        "app_channel_deleted" !== e.type && (0, a.GO)(n));
 }
 let g = {
         build_error: { location: "build", code: o.xf.BUILD_FAILED },

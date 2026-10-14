@@ -180,7 +180,7 @@ let u = r.memo((e) => {
         }),
         [F, N, W, M],
     );
-    let { visibleItems: X, listOffset: Z } = r.useMemo(() => {
+    let { visibleItems: X, listOffset: q } = r.useMemo(() => {
             if (-1 === M || -1 === v) return { visibleItems: null, listOffset: 0 };
             let e = v + M,
                 t = 0,
@@ -221,7 +221,7 @@ let u = r.memo((e) => {
             }
             return { visibleItems: i, listOffset: n };
         }, [k, B, F, V, a, u, _, A, E, v, K, N, h, x, M]),
-        q = r.useMemo(() => ({ top: Z, right: a?.[1] ?? 0, bottom: a?.[2] ?? 0, left: a?.[3] ?? 0 }), [Z, a]),
+        Z = r.useMemo(() => ({ top: q, right: a?.[1] ?? 0, bottom: a?.[2] ?? 0, left: a?.[3] ?? 0 }), [q, a]),
         Q = r.useMemo(() => ({ height: W }), [W]),
         J = O ? l.zC : l.Ch;
     return (0, i.jsxs)(J, {
@@ -230,7 +230,7 @@ let u = r.memo((e) => {
         ref: U,
         onScroll: z,
         children: [
-            (0, i.jsx)("div", { role: y, className: d.Dw, style: q, children: X }),
+            (0, i.jsx)("div", { role: y, className: d.Dw, style: Z, children: X }),
             (0, i.jsx)("div", { className: d.W7, style: Q }),
         ],
     });

@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => k, EG: () => j, HJ: () => w, AV: () => N, KK: () => C, ZL: () => y });
+n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => N, KK: () => C, ZL: () => y });
 var l = n(582128),
     r = n(158390),
     a = n(73153),
@@ -86,7 +86,7 @@ function m(e, t) {
         let a = {
             projectId: e,
             sessionId: t,
-            startedAt: g(e, t),
+            startedAt: p(e, t),
             subscribers: new Set(),
             socket: null,
             socketKey: null,
@@ -113,10 +113,10 @@ function f(e, t) {
 function h(e, t) {
     if (e.controlState !== t) for (let n of ((e.controlState = t), e.controlListeners)) n(t);
 }
-function g(e, t) {
+function p(e, t) {
     return i.A.getSessions(e).find((e) => e.id === t)?.started_at ?? null;
 }
-function p(e) {
+function g(e) {
     (e.backoff.cancel(),
         e.socket?.close(),
         (e.socket = null),
@@ -125,7 +125,7 @@ function p(e) {
 }
 function x(e) {
     if (0 === e.subscribers.size || null == e.startedAt || c.has(e.projectId)) {
-        (p(e), f(e, "connecting"));
+        (g(e), f(e, "connecting"));
         return;
     }
     let t = [...e.subscribers],
@@ -134,7 +134,7 @@ function x(e) {
         r = e.control ? "control" : "view",
         a = `${r}:${n}:${l}`;
     if (e.socketKey === a && (null != e.socket || e.backoff.pending)) return;
-    (p(e), (e.socketKey = a));
+    (g(e), (e.socketKey = a));
     let i = new u({
         projectId: e.projectId,
         sessionId: e.sessionId,
@@ -155,9 +155,9 @@ function x(e) {
         },
         onClosed: (t) => {
             if (e.socket !== i) return;
-            if ((p(e), 4403 === t))
+            if ((g(e), 4403 === t))
                 return void (function (e) {
-                    for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), f(t, "connecting"));
+                    for (let t of (c.add(e), d.values())) t.projectId === e && (g(t), v(t), f(t, "connecting"));
                 })(e.projectId);
             let n = 4409 === t && e.control;
             (n && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
@@ -183,7 +183,7 @@ function y(e, t, n) {
     let l = d.get(`${e}:${t}`);
     l?.controlState === "granted" && l.socket?.send(n);
 }
-function w(e, t) {
+function k(e, t) {
     let n = l.useCallback(
         (n) => {
             let l = m(e, t);
@@ -198,7 +198,7 @@ function w(e, t) {
     );
     return l.useSyncExternalStore(n, () => d.get(`${e}:${t}`)?.controlState ?? "off");
 }
-function k(e, t, n) {
+function w(e, t, n) {
     return d.get(`${e}:${t}`)?.lastFrame === n;
 }
 function N(e, t) {
@@ -249,9 +249,9 @@ function C(e, t, n) {
 }
 (i.A.addChangeListener(function () {
     for (let e of d.values()) {
-        let t = g(e.projectId, e.sessionId);
+        let t = p(e.projectId, e.sessionId);
         if (t !== e.startedAt) {
-            if (((e.startedAt = t), p(e), null == t)) {
+            if (((e.startedAt = t), g(e), null == t)) {
                 v(e);
                 continue;
             }

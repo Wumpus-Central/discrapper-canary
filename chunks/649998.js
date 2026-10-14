@@ -87,7 +87,7 @@ function C(e) {
                 }
             });
         }, [B, v]));
-    let { activeIndex: X, handleKeyDown: Z } = R(k, H);
+    let { activeIndex: X, handleKeyDown: q } = R(k, H);
     r.useEffect(() => {
         if (null != X && k && -1 !== a) {
             let e = (0, o.t$)(B, I(B, X)),
@@ -95,7 +95,7 @@ function C(e) {
             t?.focus();
         }
     }, [X, H, k, B, a]);
-    let q = r.useCallback(
+    let Z = r.useCallback(
             (e, t) =>
                 N(
                     H[
@@ -173,7 +173,7 @@ function C(e) {
             },
             role: void 0,
             tabIndex: a,
-            rowHeight: q,
+            rowHeight: Z,
             sections: e ? C.map((e) => e.count) : [H.length],
             sectionHeight: 26 * !!e,
             renderSection: e
@@ -235,7 +235,7 @@ function C(e) {
                     "aria-busy": w,
                     ref: n,
                     onKeyDown: (e) => {
-                        (r?.(e), Z(e));
+                        (r?.(e), q(e));
                     },
                     ...l,
                     role: "listbox",

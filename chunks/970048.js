@@ -68,7 +68,7 @@ let $ = 20 * P.A.Millis.SECOND;
 var z = n(877717);
 n(321073);
 var X = n(803301);
-let Z = {
+let q = {
         [d.iy.NO_AUDIO_INPUT_DETECTED]: {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
@@ -314,7 +314,7 @@ let Z = {
             makeErrorContextKey: (e) => `${e.mediaSessionId}`,
         },
     },
-    q = new a.A("AVErrorManager");
+    Z = new a.A("AVErrorManager");
 function Q(e, t) {
     let n = new Set();
     for (let i of e) t.has(i) || n.add(i);
@@ -354,13 +354,13 @@ class J extends r.A {
             t = null != e ? (o.A.getVoiceStateForChannel(e) ?? null) : null,
             n = s.A.getAllActiveStreams(),
             r = new Map();
-        for (let i of Object.values(Z)) {
+        for (let i of Object.values(q)) {
             let a = i.getActiveErrors({ voiceChannelId: e, voiceState: t, activeStreams: n });
             if (null != a)
                 for (let e of a)
                     r.set(
                         (function (e) {
-                            let t = Z[e.type];
+                            let t = q[e.type];
                             return `${e.type}:${t?.makeErrorContextKey(e)}`;
                         })(e),
                         e,
@@ -368,7 +368,7 @@ class J extends r.A {
         }
         let a = M.A.getActiveErrors();
         if (!(a instanceof Map))
-            return void q.error(`existingErrors is not a Map: ${a} type: ${Object.prototype.toString.call(a)}`);
+            return void Z.error(`existingErrors is not a Map: ${a} type: ${Object.prototype.toString.call(a)}`);
         if (0 === r.size && 0 === a.size) return;
         let c = new Set(r.keys()),
             u = new Set(a.keys());
@@ -382,7 +382,7 @@ class J extends r.A {
                 let t = a.get(e);
                 if (null != t) {
                     let { type: e, ...n } = t;
-                    q.info(`Error resolved: ${e} ${JSON.stringify(n)}`);
+                    Z.info(`Error resolved: ${e} ${JSON.stringify(n)}`);
                 }
             }
         i.h.dispatch({ type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: r });
@@ -415,8 +415,8 @@ class J extends r.A {
                     K = null != o ? N.A.getRTCConnection(o) : null,
                     $ = null != o ? K : g.A.getRTCConnection(),
                     z = null != o ? K?.analyticsContext?.streamApplication : null,
-                    { resolution: X, fps: Z } = p.A.getState(),
-                    { gameName: q, gameId: Q, exe: J, distributor: ee } = (0, A.wH)(z),
+                    { resolution: X, fps: q } = p.A.getState(),
+                    { gameName: Z, gameId: Q, exe: J, distributor: ee } = (0, A.wH)(z),
                     et = r.isErrorOutbound,
                     en = c ?? y.x.DEFAULT,
                     ei = null != Y ? Y.ownerId : j,
@@ -472,13 +472,13 @@ class J extends r.A {
                             bitrate: b(et, ea, ei)?.bitrate ?? null,
                             target_bitrate: et ? (D(ea)?.bitrateTarget ?? null) : null,
                             fps: (et ? (D(en)?.frameRateEncode ?? null) : (v(en, ei)?.frameRateDecode ?? null)) ?? null,
-                            target_fps: en === y.x.STREAM && et ? Z : null,
+                            target_fps: en === y.x.STREAM && et ? q : null,
                             sender_user_id: Y?.ownerId ?? null,
                             stream_region: K?.getRegion() ?? null,
                             stream_source_type: et ? (K?.analyticsContext?.streamSourceType ?? null) : null,
                             num_stream_viewers: K?.analyticsContext?.numViewers ?? null,
                             video_input_resolution_height: et ? (X ?? null) : null,
-                            video_input_frame_rate: et ? (Z ?? null) : null,
+                            video_input_frame_rate: et ? (q ?? null) : null,
                             screenshare_capture_method: (function (e) {
                                 let t = f.A.getConnectionStats(e),
                                     n = f.A.getLastConnectionStats(e);
@@ -504,7 +504,7 @@ class J extends r.A {
                                 for (let [e, t] of Object.entries(i)) t > r && ((r = t), (a = e));
                                 return r > 0 ? a : null;
                             })(ea),
-                            share_application_name: q ?? null,
+                            share_application_name: Z ?? null,
                             share_application_id: Q ?? null,
                             share_application_executable: J ?? null,
                             share_application_distributor: ee ?? null,

@@ -78,17 +78,17 @@ function z(e, t) {
 function X(e) {
     null != m.get(e) && (m = new Map(m)).delete(e);
 }
-function Z(e) {
+function q(e) {
     let t = new Set(u);
     (t.delete(e), (u = t));
 }
-function q(e) {
+function Z(e) {
     let t = new Set(A);
     (t.delete(e), (A = t));
 }
 function Q(e) {
     let { adCreativeId: t } = e;
-    q(t);
+    Z(t);
 }
 function J() {
     null != j && (clearTimeout(j), (j = null));
@@ -324,11 +324,11 @@ let en = new et(M.h, {
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
             let { enrolledQuestUserStatus: t } = e;
-            ($(t.questId, { userStatus: t }), Z(t.questId));
+            ($(t.questId, { userStatus: t }), q(t.questId));
         },
         QUESTS_ENROLL_FAILURE: function (e) {
             let { questId: t } = e;
-            Z(t);
+            q(t);
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -392,11 +392,11 @@ let en = new et(M.h, {
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
-            ($(t.questId, { userStatus: t }), q(t.questId));
+            ($(t.questId, { userStatus: t }), Z(t.questId));
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
             let { questId: t } = e;
-            q(t);
+            Z(t);
         },
         AD_CONTENT_DISMISS_BEGIN: function (e) {
             let { adCreativeId: t } = e,

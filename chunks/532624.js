@@ -259,14 +259,14 @@ function X(e) {
         K(t);
     }
 }
-function Z(e, t) {
+function q(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return (
         null == s().find(M, (t) => t.action === e && (!n || t.managed === n)) &&
         (K($({ action: e, enabled: !0, shortcut: (0, T.OH)(t), managed: !0, params: {} })), !0)
     );
 }
-function q(e) {
+function Z(e) {
     let t = !1;
     return (
         s().each(M, (n) => {
@@ -316,23 +316,23 @@ let Q = {},
         },
         function () {
             return V()
-                ? q(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK)
-                : !!m.default.getAnyGlobalEnabledOverlay() && Z(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, R());
+                ? Z(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK)
+                : !!m.default.getAnyGlobalEnabledOverlay() && q(g.hCu.TOGGLE_OVERLAY_INPUT_LOCK, R());
         },
         function () {
             return V()
-                ? q(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET)
-                : !!m.default.getAnyGlobalEnabledOverlay() && Z(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");
+                ? Z(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET)
+                : !!m.default.getAnyGlobalEnabledOverlay() && q(g.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");
         },
         function () {
-            let e = q(g.hCu.SOUNDBOARD_HOLD);
-            return Z(g.hCu.SOUNDBOARD_HOLD, "ctrl+`", !1) || e;
+            let e = Z(g.hCu.SOUNDBOARD_HOLD);
+            return q(g.hCu.SOUNDBOARD_HOLD, "ctrl+`", !1) || e;
         },
         function () {
-            return (0, f.isLinux)() ? q(g.hCu.SAVE_CLIP) : Z(g.hCu.SAVE_CLIP, S.Ot);
+            return (0, f.isLinux)() ? Z(g.hCu.SAVE_CLIP) : q(g.hCu.SAVE_CLIP, S.Ot);
         },
         function () {
-            return (0, f.isLinux)() ? q(g.hCu.SAVE_SCREENSHOT) : Z(g.hCu.SAVE_SCREENSHOT, S.sz);
+            return (0, f.isLinux)() ? Z(g.hCu.SAVE_SCREENSHOT) : q(g.hCu.SAVE_SCREENSHOT, S.sz);
         },
     ];
 function ee() {

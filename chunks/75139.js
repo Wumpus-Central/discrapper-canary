@@ -30,8 +30,8 @@ var i = n(477900),
     O = n(480890),
     L = n(812771),
     P = n(58736),
-    M = n(267102),
-    w = n(342296),
+    w = n(267102),
+    M = n(342296),
     U = n(280450),
     D = n(696451),
     V = n(576705),
@@ -53,7 +53,7 @@ let Q = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
         { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
         E = l.useRef(null),
-        b = (0, M.Us)(),
+        b = (0, w.Us)(),
         { newestAnalyticsLocation: R } = (0, S.Ay)(_.A.AUDIENCE_TILE),
         L = (0, d.bG)([D.Ay], () => D.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         P = N === H.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
@@ -114,7 +114,7 @@ let Q = l.memo(function (e) {
                 { context: b },
             ));
     }
-    return (0, i.jsx)(w.A, {
+    return (0, i.jsx)(M.A, {
         targetElementRef: E,
         user: C,
         guildId: r,
