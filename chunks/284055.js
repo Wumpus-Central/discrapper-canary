@@ -7359,7 +7359,7 @@ function ug(e) {
                 },
                 { isBaseEligible: t } = si(),
                 i = (0, m.bG)([uh.A], () => uh.A.getMemberCount(e), [e]);
-            return null != e && !!t && !!n && null != i && !(i <= 200);
+            return null != e && !!t && !!n && null != i && !(i >= 200);
         })(n);
     return (0, l.jsx)(lm.zJ, {
         contentType: t ? A.M.CONTEXTUAL_REFERRAL_SERVER_CHANNEL_MEMBER_LIST_EMBED : null,
@@ -8346,8 +8346,8 @@ let uH = (0, nQ.Fe)({ createPromise: uF, webpackId: 507007, name: "StageChannelC
                 t.e("683302"),
                 t.e("249681"),
                 t.e("728136"),
-                t.e("507775"),
                 t.e("428235"),
+                t.e("507775"),
                 t.e("369501"),
                 t.e("161058"),
                 t.e("333097"),

@@ -1,1 +1,7 @@
-e.exports = { nM: "row_e4169f", iL: "userCell_e4169f", nz: "affinityCell_e4169f", K8: "sortableHeader_e4169f" };
+e.exports = {
+    nd: "panel_e4169f",
+    nM: "row_e4169f",
+    iL: "userCell_e4169f",
+    nz: "affinityCell_e4169f",
+    K8: "sortableHeader_e4169f",
+};

@@ -187,6 +187,13 @@
     gap: var(--space-4)
 }
 
+.panel_e4169f {
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.panel_e4169f,
 .row_e4169f {
     display: flex
 }
@@ -898,4 +905,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=38c313a5c39f7aa3.css.map*/
+/*# sourceMappingURL=7488fb812139050e.css.map*/
