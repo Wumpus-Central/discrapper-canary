@@ -367,8 +367,8 @@ n(142703);
 var $ = n(434933),
     z = n.n($),
     X = n(811315),
-    Z = n.n(X),
-    q = n(201327);
+    q = n.n(X),
+    Z = n(201327);
 let Q = new B();
 class J extends R.EventEmitter {
     stream = new MediaStream();
@@ -377,7 +377,7 @@ class J extends R.EventEmitter {
     destroyed = !1;
     destroy() {
         (null != this.stream && (Q.release(this.stream), (this.stream = null)),
-            null != this.streamId && (0, q.it)(this.streamId),
+            null != this.streamId && (0, Z.it)(this.streamId),
             (this.destroyed = !0));
     }
     getStreamId() {
@@ -414,10 +414,10 @@ class J extends R.EventEmitter {
     }
     setStream(e) {
         return (
-            null != this.streamId && ((0, q.it)(this.streamId), (this.streamId = null)),
+            null != this.streamId && ((0, Z.it)(this.streamId), (this.streamId = null)),
             (this.stream = e),
             (e.onaddtrack = (e) => this.emit("add-video-track", e)),
-            e.getVideoTracks().length > 0 && (this.streamId = (0, q.ju)(e)),
+            e.getVideoTracks().length > 0 && (this.streamId = (0, Z.ju)(e)),
             this.emit("stream", e),
             this.emit("video", this.getStreamId()),
             e
@@ -571,7 +571,7 @@ class er extends p.A {
     }
     destroy() {
         (this.audioElement?.pause(),
-            null != this.videoStreamId && (0, q.it)(this.videoStreamId),
+            null != this.videoStreamId && (0, Z.it)(this.videoStreamId),
             null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)),
             null != this.levelNode &&
                 (this.levelNode.disconnect(), this.levelNode.port.postMessage("close"), (this.levelNode = null)),
@@ -602,11 +602,11 @@ class er extends p.A {
         }
         return (
             "video" === e.kind &&
-                (null != this.videoStreamId && (0, q.it)(this.videoStreamId),
+                (null != this.videoStreamId && (0, Z.it)(this.videoStreamId),
                 this.stream.getVideoTracks().forEach((t) => {
                     e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
                 }),
-                (this.videoStreamId = (0, q.ju)(this.stream)),
+                (this.videoStreamId = (0, Z.ju)(this.stream)),
                 this.emit("video", this.videoStreamId)),
             "audio" === e.kind &&
                 this.stream.getAudioTracks().forEach((t) => {
@@ -619,7 +619,7 @@ class er extends p.A {
         return (
             this.stream.removeTrack(e),
             "video" === e.kind &&
-                (null != this.videoStreamId && (0, q.it)(this.videoStreamId), this.emit("video", null)),
+                (null != this.videoStreamId && (0, Z.it)(this.videoStreamId), this.emit("video", null)),
             this.stream.getTracks().length
         );
     }
@@ -1138,7 +1138,7 @@ class eA extends S.A {
             for (let t of this.videoStreamParameters) {
                 let i = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === i) return void n(Error("Invalid rid"));
-                Z()(this.videoStreamParameters[i], e[i]) || (this.videoStreamParameters[i] = { ...e[i] });
+                q()(this.videoStreamParameters[i], e[i]) || (this.videoStreamParameters[i] = { ...e[i] });
             }
             t();
         });
@@ -1225,6 +1225,7 @@ class eA extends S.A {
     stopAllSamplesLocalPlayback() {}
     setVideoQualityMeasurement(e) {}
     setVideoEncoderExperiments(e) {}
+    setVideoEncoderLatencyProfile(e) {}
     setSingleCpuCopy(e) {}
     setAudioLatencyMeasurement(e) {}
     setAudioVideoOverridesTransport(e) {}
@@ -1447,7 +1448,7 @@ function ey(e, t) {
         },
         { outboundStreams: [], codecs: [], audioSSRC: 0, videoSSRC: 0, rtxSSRC: 0 },
     );
-    return ((n.codecs = ep()(n.codecs, Z())), n);
+    return ((n.codecs = ep()(n.codecs, q())), n);
 }
 function eD(e, t) {
     let { codecs: n } = ey(e, t),
@@ -2016,8 +2017,8 @@ let eW = new g.Vy("LibDaveManager"),
 function eX() {
     return ("Firefox" !== A().name || !(e_.It < 142)) && e_.PF && e_.zU;
 }
-let eZ = A().name?.toLowerCase().includes("firefox");
-function eq(e, t) {
+let eq = A().name?.toLowerCase().includes("firefox");
+function eZ(e, t) {
     (e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly"));
 }
 class eQ extends eA {
@@ -2113,14 +2114,14 @@ class eQ extends eA {
     }
     setStream(e) {
         let t = "closed" === this.iceConnectionState;
-        if (null != e && !t && (eq(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
+        if (null != e && !t && (eZ(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
             let t = e.getVideoTracks()[0],
                 n = this.context === D.x.STREAM;
             (n &&
                 null != t &&
                 this.experimentFlags.has(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT) &&
                 (t.contentHint = "motion"),
-                eq(this.videoTransceiver, t),
+                eZ(this.videoTransceiver, t),
                 n && this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE)
                     ? this.setVideoDegradationPreference("maintain-framerate")
                     : n &&
@@ -2148,7 +2149,7 @@ class eQ extends eA {
                 s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + i - n;
             this.addTransceivers("audio", "recvonly", s);
         }
-        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === a.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!eq || void 0 === a.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
                 if (a.videoSSRC !== t) {
@@ -2831,14 +2832,14 @@ class e6 extends R.EventEmitter {
             }),
             (this.id = e.getVideoTracks()[0].label),
             (this.stream = e),
-            (this.streamId = (0, q.ju)(e)),
+            (this.streamId = (0, Z.ju)(e)),
             (this.pool = t));
     }
     reuse() {
         (this.removeAllListeners(), this.pool.release(this));
     }
     destroy() {
-        (this.removeAllListeners(), (0, q.it)(this.streamId), this.stream.getTracks().forEach((e) => e.stop()));
+        (this.removeAllListeners(), (0, Z.it)(this.streamId), this.stream.getTracks().forEach((e) => e.stop()));
     }
     reset() {
         this.refreshSpeaking();
@@ -2880,7 +2881,7 @@ function e9(e) {
         if (null != e)
             return (
                 (0, O.NM)(t),
-                (e.srcObject = (0, q.yL)(t)),
+                (e.srcObject = (0, Z.yL)(t)),
                 () => {
                     ((0, O.gm)(t), (e.srcObject = null), e.load());
                 }

@@ -264,7 +264,7 @@ let K = (0, G.mj)({
             4: { degradationPreference: "balanced", motionContentHint: !1 },
         },
     }),
-    Z = (0, G.mj)({
+    q = (0, G.mj)({
         name: "2026-10-desktop-general-perf",
         kind: "user",
         defaultConfig: { skipSilentDelayEstimatorFfts: !1, basicProcessEnumeration: !1 },
@@ -273,7 +273,7 @@ let K = (0, G.mj)({
             1: { skipSilentDelayEstimatorFfts: !0, basicProcessEnumeration: !0 },
         },
     });
-var q = n(559633);
+var Z = n(559633);
 class Q {
     createdTime;
     timestampProducer;
@@ -1059,8 +1059,8 @@ var eH = n(4511),
 let e$ = { any: 100 },
     ez = { any: 0 },
     eX = 30 * eb.A.Millis.SECOND,
-    eZ = 120 * eb.A.Millis.SECOND,
-    eq = -1 !== (0, eW.EL)();
+    eq = 120 * eb.A.Millis.SECOND,
+    eZ = -1 !== (0, eW.EL)();
 var eQ = (((s = {}).UserSSRCUpdate = "user-ssrc-update"), (s.Update = "update"), s);
 function eJ(e) {
     return (0, eh.isWeb)() ? { ...ez } : { any: e };
@@ -1162,7 +1162,7 @@ class e0 extends m.A {
     };
     invertWants(e, t) {
         for (let n of Object.values(this.videoSsrcs)) {
-            if (!eq) {
+            if (!eZ) {
                 for (let i of n) e[i.ssrc] = t;
                 continue;
             }
@@ -1178,7 +1178,7 @@ class e0 extends m.A {
                 n = e.getWantsLevel(),
                 i = eJ(n),
                 r = i;
-            ((0, eh.isWeb)() && (e.invertWants(i, n), eq && (r = { ...i })), e.updateOffscreenUsers());
+            ((0, eh.isWeb)() && (e.invertWants(i, n), eZ && (r = { ...i })), e.updateOffscreenUsers());
             let a = (0, eh.isDesktop)() && e.isOneToOneCall() && !e.isStageChannel;
             for (let [r, s] of eY.default.entries(e.videoSsrcs)) {
                 let l = [],
@@ -1212,7 +1212,7 @@ class e0 extends m.A {
                 (t.includes(r) || (void 0 !== e.remoteVideoSsrcs[r] && !(0, ej.A)(e.remoteVideoSsrcs[r], l))) &&
                     ((e.remoteVideoSsrcs[r] = [...l]), e.emit("user-ssrc-update", r, e.audioSsrcs[r], l));
             }
-            let s = eq ? r : i;
+            let s = eZ ? r : i;
             for (let [t, n] of Object.entries(e.audioSsrcs)) e.connection?.getLocalMute(t) && (s[n] = 0);
             return (
                 null == e.connection || eg().isEqual(e.latestWants, s) || ((e.latestWants = s), e.emit("update", s)), s
@@ -1320,7 +1320,7 @@ class e0 extends m.A {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? eZ : eX;
+        return this.isStageChannel ? eq : eX;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : Y.r8.NO_OVERRIDE;
@@ -2894,6 +2894,7 @@ class tg extends m.A {
     _goLiveQualityManager;
     _remoteVideoSinkWants;
     _connection;
+    _videoEncoderLatencyProfile = Y.$o.DEFAULT;
     _hasCodecs;
     _mediaEngineConnectionId;
     _readyData;
@@ -3373,6 +3374,9 @@ class tg extends m.A {
     setAvSyncEnabled(e, t) {
         this._connection?.setAvSyncEnabled(e, t);
     }
+    setVideoEncoderLatencyProfile(e) {
+        ((this._videoEncoderLatencyProfile = e), this._connection?.setVideoEncoderLatencyProfile(e));
+    }
     setSimulcastDebugOverride(e, t, n) {
         t === this.context && t === Y.x.DEFAULT && this._localMediaSinkWantsManager?.setSimulcastDebugOverride(e, n);
     }
@@ -3417,7 +3421,7 @@ class tg extends m.A {
     _chooseExperiments(e) {
         let t = [];
         if ((0, eh.isDesktop)() && this.context === Y.x.DEFAULT) {
-            let { skipSilentDelayEstimatorFfts: e } = Z.getConfig({ location: "capture_processing_delay_estimator" });
+            let { skipSilentDelayEstimatorFfts: e } = q.getConfig({ location: "capture_processing_delay_estimator" });
             e && t.push("skip_silent_delay_estimator_ffts");
         }
         (this._recordingEnabled && t.push("connection_log"),
@@ -3713,7 +3717,7 @@ class tg extends m.A {
                 };
             (Promise.all([
                 (async () => (await this._systemResources?.getBatteryLevelStats()) ?? { batteryUsageRounded: null })(),
-                q.A.getKrispModel(),
+                Z.A.getKrispModel(),
                 el.Ay.getKrispEnableStats()
                     ? el.Ay.getMediaEngine().getNoiseCancellationStats()
                     : Promise.resolve(null),
@@ -3851,6 +3855,7 @@ class tg extends m.A {
             (e && (t += ",singleCpuCopy"), u.setVideoQualityMeasurement(t), u.setSingleCpuCopy(e));
         }
         (u.setVideoEncoderExperiments(el.Ay.getVideoEncoderExperiments(this.context, this.getVoiceParticipantType())),
+            u.setVideoEncoderLatencyProfile(this._videoEncoderLatencyProfile),
             u.on(g.yq.Speaking, (e, t, n) => {
                 (this.userId === e && this.sendSpeaking(t, n), this.emit(eC.q.Speaking, e, t));
             }),

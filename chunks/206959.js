@@ -1097,6 +1097,9 @@ class W extends N.A {
         ((this.videoEncoderExperiments = e),
             this.conn.setTransportOptions({ videoEncoderExperiments: this.videoEncoderExperiments }));
     }
+    setVideoEncoderLatencyProfile(e) {
+        this.conn.setTransportOptions({ videoEncoderLatencyProfile: e });
+    }
     setSingleCpuCopy(e) {
         ((this.singleCpuCopy = e), this.conn.setTransportOptions({ singleCpuCopy: this.singleCpuCopy }));
     }
@@ -1756,8 +1759,8 @@ function $() {
 n(667532);
 var z = n(477900),
     X = n(582128),
-    Z = n(503698),
-    q = n.n(Z),
+    q = n(503698),
+    Z = n.n(q),
     Q = n(229209);
 let J = new c.Vy("DirectVideo");
 function ee(e) {
@@ -1839,7 +1842,7 @@ function ee(e) {
                         );
                     }
             }, [i, n]),
-            (0, z.jsx)("div", { className: q()("media-engine-video", l), ref: d, ...o })
+            (0, z.jsx)("div", { className: Z()("media-engine-video", l), ref: d, ...o })
         );
     })(e, ee.onContainerResized);
 }
