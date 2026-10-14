@@ -1,4 +1,4 @@
-n.d(t, { default: () => h });
+n.d(t, { default: () => I });
 var i = n(636537),
     r = n(73153),
     a = n(730852),
@@ -7,21 +7,23 @@ var i = n(636537),
     o = n(935208),
     d = n(371794),
     c = n(698441),
-    u = n(794782),
-    _ = n(929267),
-    E = n(988794),
-    A = n(652215);
-let h = {
+    u = n(955817),
+    _ = n(444092),
+    E = n(794782),
+    A = n(929267),
+    h = n(988794),
+    f = n(652215);
+let I = {
     startEvent: (e, t) =>
-        i.Bo.patch({ url: A.Rsh.GUILD_EVENT(t, e), body: { status: E.XG.ACTIVE }, rejectWithError: (0, i.fT)() }),
+        i.Bo.patch({ url: f.Rsh.GUILD_EVENT(t, e), body: { status: h.XG.ACTIVE }, rejectWithError: (0, i.fT)() }),
     endEvent: (e, t) =>
-        i.Bo.patch({ url: A.Rsh.GUILD_EVENT(t, e), body: { status: E.XG.COMPLETED }, rejectWithError: (0, i.fT)() }),
+        i.Bo.patch({ url: f.Rsh.GUILD_EVENT(t, e), body: { status: h.XG.COMPLETED }, rejectWithError: (0, i.fT)() }),
     joinVoiceEvent(e, t) {
-        (a.default.selectVoiceChannel(t), (0, s.pX)(A.BVt.CHANNEL(e, t)));
+        (a.default.selectVoiceChannel(t), (0, s.pX)(f.BVt.CHANNEL(e, t)));
     },
     saveEvent(e, t, n) {
-        let r = E.GW.has(t.entityType) ? t.channelId : null,
-            a = E.o_.has(t.entityType) ? t.entityMetadata : null,
+        let r = h.GW.has(t.entityType) ? t.channelId : null,
+            a = h.o_.has(t.entityType) ? t.entityMetadata : null,
             s = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
             l = {
                 name: t.name,
@@ -33,9 +35,9 @@ let h = {
                 entity_type: t.entityType,
                 channel_id: r,
                 entity_metadata: a,
-                recurrence_rule: (0, u.RX)(t.recurrenceRule),
+                recurrence_rule: (0, E.RX)(t.recurrenceRule),
             };
-        return i.Bo.patch({ url: A.Rsh.GUILD_EVENT(n, e), body: l, rejectWithError: (0, i.fT)() });
+        return i.Bo.patch({ url: f.Rsh.GUILD_EVENT(n, e), body: l, rejectWithError: (0, i.fT)() });
     },
     createGuildEvent(e, t) {
         let n = {
@@ -48,22 +50,37 @@ let h = {
             entity_type: e.entityType,
             channel_id: e.channelId,
             entity_metadata: e.entityMetadata,
-            recurrence_rule: (0, u.RX)(e.recurrenceRule),
+            recurrence_rule: (0, E.RX)(e.recurrenceRule),
         };
-        return i.Bo.post({ url: A.Rsh.GUILD_EVENTS_FOR_GUILD(t), body: n, rejectWithError: (0, i.fT)() });
+        return i.Bo.post({ url: f.Rsh.GUILD_EVENTS_FOR_GUILD(t), body: n, rejectWithError: (0, i.fT)() });
     },
-    async fetchGuildEvent(e, t) {
-        let { body: n } = await (0, d.aP)({ url: A.Rsh.GUILD_EVENT(e, t), rejectWithError: (0, i.fT)() });
-        return (r.h.dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: n }), n);
+    fetchGuildEvent(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        async function a() {
+            let { body: n } = await (0, d.aP)({ url: f.Rsh.GUILD_EVENT(e, t), rejectWithError: (0, i.fT)() });
+            return (r.h.dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: n }), n);
+        }
+        return (0, _.bL)(
+            e,
+            t,
+            () =>
+                "foreground" === n.priority
+                    ? a()
+                    : (0, u.xJ)(() => {
+                          let e = c.Ay.getGuildScheduledEvent(t);
+                          return null != e ? Promise.resolve(e) : a();
+                      }),
+            n,
+        );
     },
     async fetchGuildEventsForGuild(e) {
-        let t = { url: A.Rsh.GUILD_EVENTS_FOR_GUILD(e), rejectWithError: (0, i.fT)() },
+        let t = { url: f.Rsh.GUILD_EVENTS_FOR_GUILD(e), rejectWithError: (0, i.fT)() },
             { body: n } = await (0, d.aP)(t);
         return (r.h.dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: e, guildScheduledEvents: n }), n);
     },
     async fetchGuildEventUserCounts(e, t, n) {
         let a = {
-                url: A.Rsh.GUILD_EVENT_USER_COUNTS(e, t),
+                url: f.Rsh.GUILD_EVENT_USER_COUNTS(e, t),
                 query: { guild_scheduled_event_exception_ids: n },
                 rejectWithError: (0, i.fT)(),
             },
@@ -82,11 +99,11 @@ let h = {
         );
     },
     cancelGuildEvent: (e, t) =>
-        i.Bo.patch({ url: A.Rsh.GUILD_EVENT(t, e), body: { status: E.XG.CANCELED }, rejectWithError: (0, i.fT)() }),
-    deleteGuildEvent: (e, t) => i.Bo.del({ url: A.Rsh.GUILD_EVENT(t, e), rejectWithError: (0, i.fT)() }),
+        i.Bo.patch({ url: f.Rsh.GUILD_EVENT(t, e), body: { status: h.XG.CANCELED }, rejectWithError: (0, i.fT)() }),
+    deleteGuildEvent: (e, t) => i.Bo.del({ url: f.Rsh.GUILD_EVENT(t, e), rejectWithError: (0, i.fT)() }),
     async getGuildEventsForCurrentUser(e) {
         let { body: t } = await i.Bo.get({
-            url: A.Rsh.USER_GUILD_EVENTS,
+            url: f.Rsh.USER_GUILD_EVENTS,
             query: { guild_ids: [e] },
             rejectWithError: (0, i.fT)(),
         });
@@ -105,7 +122,7 @@ let h = {
                     response: a,
                 }),
                 await i.Bo.put({
-                    url: A.Rsh.USER_GUILD_EVENT(n, e, t),
+                    url: f.Rsh.USER_GUILD_EVENT(n, e, t),
                     body: { response: a },
                     rejectWithError: (0, i.fT)(),
                 })
@@ -138,7 +155,7 @@ let h = {
                         guildEventExceptionId: t,
                         response: s.response,
                     }),
-                    await i.Bo.del({ url: A.Rsh.USER_GUILD_EVENT(n, e, t), rejectWithError: (0, i.fT)() })
+                    await i.Bo.del({ url: f.Rsh.USER_GUILD_EVENT(n, e, t), rejectWithError: (0, i.fT)() })
                 );
             } catch (i) {
                 throw (
@@ -155,7 +172,7 @@ let h = {
             }
     },
     async updateRsvp(e, t, n, i, r) {
-        if (null != (0, _.TS)(e, t))
+        if (null != (0, A.TS)(e, t))
             try {
                 (await this.deleteRsvpForGuildEvent(e, t, n), r?.());
             } catch (e) {
@@ -169,10 +186,10 @@ let h = {
             }
     },
     async fetchUsersForGuildEvent(e, t, n) {
-        let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : E.C1;
+        let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.C1;
         if (null == e || null == n) return [];
         let s = await i.Bo.get({
-            url: A.Rsh.GUILD_EVENT_USERS(n, e, t),
+            url: f.Rsh.GUILD_EVENT_USERS(n, e, t),
             query: { limit: a, with_member: !0 },
             rejectWithError: (0, i.fT)(),
         });
@@ -190,7 +207,7 @@ let h = {
     createGuildEventException(e, t, n) {
         let { original_scheduled_start_time: r, scheduled_start_time: a, scheduled_end_time: s, is_canceled: l } = e;
         return i.Bo.post({
-            url: A.Rsh.GUILD_EVENT_EXCEPTIONS(t, n),
+            url: f.Rsh.GUILD_EVENT_EXCEPTIONS(t, n),
             body: { original_scheduled_start_time: r, scheduled_start_time: a, scheduled_end_time: s, is_canceled: l },
             rejectWithError: (0, i.fT)(),
         });
@@ -198,13 +215,13 @@ let h = {
     updateGuildEventException(e, t, n, r) {
         let { scheduled_start_time: a, scheduled_end_time: s, is_canceled: l } = e;
         return i.Bo.patch({
-            url: A.Rsh.GUILD_EVENT_EXCEPTION(t, n, r),
+            url: f.Rsh.GUILD_EVENT_EXCEPTION(t, n, r),
             body: { scheduled_start_time: a, scheduled_end_time: s, is_canceled: l },
             rejectWithError: (0, i.fT)(),
         });
     },
     deleteGuildEventException: (e, t, n) =>
-        i.Bo.del({ url: A.Rsh.GUILD_EVENT_EXCEPTION(e, t, n), rejectWithError: (0, i.fT)() }),
+        i.Bo.del({ url: f.Rsh.GUILD_EVENT_EXCEPTION(e, t, n), rejectWithError: (0, i.fT)() }),
     deleteRecurrence(e, t, n, i) {
         if (null != i)
             return this.updateGuildEventException(

@@ -78,7 +78,7 @@ async function Y(e, t) {
     if (null == r)
         try {
             let { default: i } = await Promise.resolve().then(n.bind(n, 496092));
-            r = await i.fetchGuildEvent(e, t);
+            r = await i.fetchGuildEvent(e, t, { priority: "foreground" });
         } catch {
             i();
             return;
