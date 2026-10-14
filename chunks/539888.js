@@ -1,60 +1,60 @@
-n.d(t, { P: () => P });
-var l = n(477900),
-    i = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    r = n(17928),
-    d = n(866665),
-    c = n(408278),
-    o = n(22231),
-    u = n(241326),
-    m = n(331322),
-    x = n(834730),
-    h = n(104510),
-    f = n(661531),
-    g = n(821609),
-    j = n(645619),
-    p = n(915667),
-    v = n(451395),
-    _ = n(328006),
-    A = n(857909),
-    E = n(334840),
-    N = n(393750);
+l.d(t, { P: () => P });
+var n = l(477900),
+    i = l(582128),
+    a = l(503698),
+    s = l.n(a),
+    r = l(17928),
+    d = l(866665),
+    c = l(408278),
+    o = l(22231),
+    u = l(241326),
+    m = l(331322),
+    x = l(834730),
+    h = l(104510),
+    f = l(661531),
+    g = l(821609),
+    j = l(645619),
+    p = l(915667),
+    v = l(451395),
+    _ = l(328006),
+    A = l(857909),
+    N = l(334840),
+    E = l(393750);
 let b = [
     { avatar: _.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
     { avatar: A.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
-    { avatar: E.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
+    { avatar: N.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
 function I(e) {
     let { width: t } = e;
-    return (0, l.jsx)("div", { className: N.M0, style: { width: t } });
+    return (0, n.jsx)("div", { className: E.M0, style: { width: t } });
 }
 function S(e) {
-    let { rank: t, row: n } = e;
-    return (0, l.jsxs)("div", {
-        className: N.nM,
+    let { rank: t, row: l } = e;
+    return (0, n.jsxs)("div", {
+        className: E.nM,
         children: [
-            (0, l.jsx)("div", {
-                className: N.Tm,
+            (0, n.jsx)("div", {
+                className: E.Tm,
                 "aria-hidden": !0,
-                children: (0, l.jsx)(x.E, {
+                children: (0, n.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: N._k,
+                    className: E._k,
                     children: t,
                 }),
             }),
-            (0, l.jsx)("img", { className: N.my, src: n.avatar, alt: "", "aria-hidden": !0 }),
-            (0, l.jsxs)("div", {
-                className: N.n_,
+            (0, n.jsx)("img", { className: E.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
+            (0, n.jsxs)("div", {
+                className: E.n_,
                 "aria-hidden": !0,
                 children: [
-                    (0, l.jsx)(I, { width: n.topBarWidth }),
-                    (0, l.jsxs)("div", {
-                        className: N.O3,
+                    (0, n.jsx)(I, { width: l.topBarWidth }),
+                    (0, n.jsxs)("div", {
+                        className: E.O3,
                         children: [
-                            (0, l.jsx)(I, { width: n.bottomBarWidths[0] }),
-                            (0, l.jsx)(I, { width: n.bottomBarWidths[1] }),
+                            (0, n.jsx)(I, { width: l.bottomBarWidths[0] }),
+                            (0, n.jsx)(I, { width: l.bottomBarWidths[1] }),
                         ],
                     }),
                 ],
@@ -63,19 +63,19 @@ function S(e) {
     });
 }
 function C() {
-    return (0, l.jsx)("div", { className: N.kL, children: b.map((e, t) => (0, l.jsx)(S, { rank: t + 1, row: e }, t)) });
+    return (0, n.jsx)("div", { className: E.kL, children: b.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
 }
-var y = n(562073),
-    T = n(189213),
-    R = n(192308),
-    k = n(645449),
-    D = n(61567),
-    w = n(660183),
-    L = n(397462);
-function M(e) {
+var y = l(562073),
+    T = l(189213),
+    R = l(192308),
+    k = l(492784),
+    D = l(61567),
+    w = l(660183),
+    M = l(397462);
+function L(e) {
     let {
         title: t,
-        widgetName: n,
+        widgetName: l,
         titleIcon: i,
         accessory: a,
         disabled: r = !1,
@@ -84,37 +84,37 @@ function M(e) {
         onEdit: h,
         onRemove: f,
     } = e;
-    return (0, l.jsxs)("div", {
-        className: s()(L.wx, { [L.kZ]: null != m }),
+    return (0, n.jsxs)("div", {
+        className: s()(M.wx, { [M.kZ]: null != m }),
         children: [
-            (0, l.jsx)("div", {
+            (0, n.jsx)("div", {
                 ref: m,
-                className: L.T_,
-                "data-dnd-name": n,
-                children: (0, l.jsxs)("div", {
-                    className: L.i8,
+                className: M.T_,
+                "data-dnd-name": l,
+                children: (0, n.jsxs)("div", {
+                    className: M.i8,
                     children: [
                         null != m &&
-                            (0, l.jsx)("div", {
-                                className: L.BU,
-                                children: (0, l.jsx)(v.jV, {
+                            (0, n.jsx)("div", {
+                                className: M.BU,
+                                children: (0, n.jsx)(v.jV, {
                                     iconSize: "xs",
-                                    "aria-label": w.intl.formatToPlainString(D.default.NV85DR, { widgetName: n }),
+                                    "aria-label": w.intl.formatToPlainString(D.default.NV85DR, { widgetName: l }),
                                 }),
                             }),
-                        null != i && (0, l.jsx)("div", { className: L.gr, children: i }),
+                        null != i && (0, n.jsx)("div", { className: M.gr, children: i }),
                         t,
                         a,
                     ],
                 }),
             }),
-            (0, l.jsxs)("div", {
-                className: L.o1,
+            (0, n.jsxs)("div", {
+                className: M.o1,
                 children: [
                     x &&
-                        (0, l.jsx)(d.m, {
+                        (0, n.jsx)(d.m, {
                             text: w.intl.string(w.t.bt75uw),
-                            children: (0, l.jsx)(c.K, {
+                            children: (0, n.jsx)(c.K, {
                                 variant: "icon-only",
                                 size: "sm",
                                 icon: o.PencilIcon,
@@ -124,16 +124,16 @@ function M(e) {
                             }),
                         }),
                     null != f &&
-                        (0, l.jsx)(d.m, {
+                        (0, n.jsx)(d.m, {
                             text: w.intl.string(w.t.Mm07Yc),
-                            children: (0, l.jsx)(c.K, {
+                            children: (0, n.jsx)(c.K, {
                                 variant: "icon-only",
                                 size: "sm",
                                 icon: u.TrashIcon,
                                 "aria-label":
-                                    "" === n
+                                    "" === l
                                         ? w.intl.string(w.t.Mm07Yc)
-                                        : w.intl.formatToPlainString(D.default.hmNYxk, { widgetName: n }),
+                                        : w.intl.formatToPlainString(D.default.hmNYxk, { widgetName: l }),
                                 disabled: r,
                                 onClick: f,
                             }),
@@ -144,67 +144,67 @@ function M(e) {
     });
 }
 function G(e) {
-    let { title: t, titleIcon: n, accessory: i, trailing: a, actions: s } = e;
-    return (0, l.jsxs)("div", {
-        className: L.wx,
+    let { title: t, titleIcon: l, accessory: i, trailing: a, actions: s } = e;
+    return (0, n.jsxs)("div", {
+        className: M.wx,
         children: [
-            (0, l.jsxs)("div", {
-                className: L.i8,
-                children: [null != n && (0, l.jsx)("div", { className: L.gr, children: n }), t, i],
+            (0, n.jsxs)("div", {
+                className: M.i8,
+                children: [null != l && (0, n.jsx)("div", { className: M.gr, children: l }), t, i],
             }),
             (null != a || null != s) &&
-                (0, l.jsxs)("div", {
-                    className: L.Bo,
+                (0, n.jsxs)("div", {
+                    className: M.Bo,
                     children: [
-                        null != a && (0, l.jsx)("div", { className: L.o5, children: a }),
-                        null != s && (0, l.jsx)("div", { className: L.o1, children: s }),
+                        null != a && (0, n.jsx)("div", { className: M.o5, children: a }),
+                        null != s && (0, n.jsx)("div", { className: M.o1, children: s }),
                     ],
                 }),
         ],
     });
 }
 function U(e) {
-    let { title: t, boostPrice: n, powerupSkuId: i, LockedPreview: a, guildId: s } = e,
+    let { title: t, boostPrice: l, powerupSkuId: i, LockedPreview: a, guildId: s } = e,
         d = (0, r.bG)([j.A], () => (null != i ? j.A.getStateForGuild(s)?.allPowerups[i] : void 0), [s, i]);
-    return (0, l.jsxs)(m.B, {
-        className: L.xt,
+    return (0, n.jsxs)(m.B, {
+        className: M.xt,
         align: "center",
         justify: "center",
         gap: 32,
         children: [
-            (0, l.jsxs)(m.B, {
+            (0, n.jsxs)(m.B, {
                 align: "center",
                 gap: 16,
                 children: [
-                    (0, l.jsx)("div", {
-                        className: L.$x,
-                        children: null != a ? (0, l.jsx)(a, { alt: "", ariaHidden: !0 }) : (0, l.jsx)(C, {}),
+                    (0, n.jsx)("div", {
+                        className: M.$x,
+                        children: null != a ? (0, n.jsx)(a, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(C, {}),
                     }),
-                    (0, l.jsxs)(m.B, {
+                    (0, n.jsxs)(m.B, {
                         align: "center",
                         gap: 8,
                         children: [
-                            (0, l.jsx)(x.E, {
+                            (0, n.jsx)(x.E, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
                                 children: w.intl.formatToPlainString(D.default.G5zCGV, { widgetName: t }),
                             }),
-                            null != n &&
-                                n > 0 &&
-                                (0, l.jsxs)(m.B, {
+                            null != l &&
+                                l > 0 &&
+                                (0, n.jsxs)(m.B, {
                                     direction: "horizontal",
                                     align: "center",
                                     justify: "center",
                                     gap: 4,
                                     children: [
-                                        (0, l.jsx)(h._, {
+                                        (0, n.jsx)(h._, {
                                             size: "sm",
                                             color: f.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                         }),
-                                        (0, l.jsx)(x.E, {
+                                        (0, n.jsx)(x.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: w.intl.format(D.default["8wD0Un"], { boostPrice: n }),
+                                            children: w.intl.format(D.default["8wD0Un"], { boostPrice: l }),
                                         }),
                                     ],
                                 }),
@@ -212,7 +212,7 @@ function U(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(g.$, {
+            (0, n.jsx)(g.$, {
                 variant: "expressive",
                 size: "sm",
                 icon: h._,
@@ -229,7 +229,7 @@ function U(e) {
 function P(e) {
     let {
             guildId: t,
-            widget: n,
+            widget: l,
             guildSpaceMode: a,
             hydration: s,
             onRemove: r,
@@ -238,19 +238,19 @@ function P(e) {
             disabled: o = !1,
             lock: u,
         } = e,
-        m = k.m[n.type],
+        m = k.m[l.type],
         x = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&
                 null == u &&
                 (function (e) {
-                    let { widget: t, Edit: n, onCommit: i } = e,
+                    let { widget: t, Edit: l, onCommit: i } = e,
                         a = (e) =>
-                            (0, l.jsx)(T.a, {
+                            (0, n.jsx)(T.a, {
                                 title: t.default_title ?? void 0,
                                 actions: [],
                                 ...e,
-                                children: (0, l.jsx)(n, {
+                                children: (0, n.jsx)(l, {
                                     widget: t,
                                     commit: function (t) {
                                         (i(t), e.onClose());
@@ -261,55 +261,55 @@ function P(e) {
                                 }),
                             });
                     (0, R.openModalLazy)(() => Promise.resolve(a), { modalKey: "guild-space-widget-edit" });
-                })({ widget: n, Edit: m.Edit, onCommit: d });
-        }, [n, m, d, u]);
+                })({ widget: l, Edit: m.Edit, onCommit: d });
+        }, [l, m, d, u]);
     if (null == m) return null;
     let { View: h, Edit: f, HeaderAccessory: g, HeaderActions: j, Title: p, TitleIcon: v, ViewHeaderTrailing: _ } = m,
         A = "edit" === a,
-        E = null != f && null != d && null == u,
-        N = null != g ? (0, l.jsx)(g, { hydration: s, guildId: t }) : null,
-        b = null != v ? (0, l.jsx)(v, { hydration: s }) : null,
-        I = null == u && null != j ? (0, l.jsx)(j, { hydration: s, guildId: t, column: n.position.column }) : null,
-        S = n.default_title ?? "",
+        N = null != f && null != d && null == u,
+        E = null != g ? (0, n.jsx)(g, { hydration: s, guildId: t }) : null,
+        b = null != v ? (0, n.jsx)(v, { hydration: s }) : null,
+        I = null == u && null != j ? (0, n.jsx)(j, { hydration: s, guildId: t, column: l.position.column }) : null,
+        S = l.default_title ?? "",
         C =
             null != p && null == u
-                ? (0, l.jsx)(p, { widget: n, hydration: s, guildSpaceMode: a, guildId: t })
-                : (0, l.jsx)(y.q, { children: S });
-    return (0, l.jsxs)("div", {
-        className: L.kL,
+                ? (0, n.jsx)(p, { widget: l, hydration: s, guildSpaceMode: a, guildId: t })
+                : (0, n.jsx)(y.q, { children: S });
+    return (0, n.jsxs)("div", {
+        className: M.kL,
         "data-guild-space-widget": "",
         children: [
             A
-                ? (0, l.jsx)(M, {
+                ? (0, n.jsx)(L, {
                       title: C,
                       widgetName: S,
                       titleIcon: b,
-                      accessory: N,
+                      accessory: E,
                       disabled: o,
                       dragHandleRef: c,
-                      canEdit: E,
+                      canEdit: N,
                       onEdit: x,
                       onRemove: r,
                   })
-                : (0, l.jsx)(G, {
+                : (0, n.jsx)(G, {
                       title: C,
                       titleIcon: b,
-                      accessory: N,
-                      trailing: null != _ && null == u ? (0, l.jsx)(_, { widget: n, hydration: s, title: S }) : null,
+                      accessory: E,
+                      trailing: null != _ && null == u ? (0, n.jsx)(_, { widget: l, hydration: s, title: S }) : null,
                       actions: I,
                   }),
-            (0, l.jsx)("div", {
-                className: L.rf,
+            (0, n.jsx)("div", {
+                className: M.rf,
                 children:
                     null != u
-                        ? (0, l.jsx)(U, {
+                        ? (0, n.jsx)(U, {
                               title: S,
                               boostPrice: u.boostPrice,
                               powerupSkuId: u.powerupSkuId,
                               LockedPreview: m.LockedPreview,
                               guildId: t,
                           })
-                        : (0, l.jsx)(h, { widget: n, hydration: s, guildSpaceMode: a, guildId: t }),
+                        : (0, n.jsx)(h, { widget: l, hydration: s, guildSpaceMode: a, guildId: t }),
             }),
         ],
     });

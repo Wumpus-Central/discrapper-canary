@@ -51,10 +51,10 @@ function g(e) {
         $ = (0, f.mH)(P),
         z = D || $ !== (0, f.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
         X = z?.rewardSkuIds[0] ?? null,
-        Z = !1;
-    function q() {
-        Z ||
-            ((Z = !0),
+        q = !1;
+    function Z() {
+        q ||
+            ((q = !0),
             h._.dispatch(p.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                 ? setTimeout(() => {
@@ -433,7 +433,6 @@ function g(e) {
         n.e("935715"),
         n.e("836545"),
         n.e("273232"),
-        n.e("466322"),
         n.e("894747"),
         n.e("593176"),
         n.e("621624"),
@@ -444,6 +443,7 @@ function g(e) {
         n.e("482815"),
         n.e("256616"),
         n.e("132191"),
+        n.e("466322"),
         n.e("858514"),
         n.e("240511"),
         n.e("344265"),
@@ -623,8 +623,8 @@ function g(e) {
                     skipConfirm: !!H,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
-                            Z ||
-                                ((Z = !0),
+                            q ||
+                                ((q = !0),
                                 h._.dispatch(p.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                                     ? setTimeout(() => {
@@ -666,7 +666,7 @@ function g(e) {
                 modalAPIOptions: {
                     modalKey: K,
                     skipCloseModalOnCloseRequest: !0,
-                    onCloseRequest: q,
+                    onCloseRequest: Z,
                     onCloseCallback: Q,
                 },
             }),

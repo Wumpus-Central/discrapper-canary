@@ -1,3 +1,116 @@
+.smallCardItem__02912 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 246px
+}
+
+.row_a54042 {
+    display: flex;
+    gap: var(--space-md);
+    overflow: hidden;
+    width: 100%
+}
+
+.row_a54042>:nth-child(2) {
+    --custom-game-profile-skeleton-animation-delay: 150ms
+}
+
+.row_a54042>:nth-child(3) {
+    --custom-game-profile-skeleton-animation-delay: 300ms
+}
+
+.row_a54042>:nth-child(4) {
+    --custom-game-profile-skeleton-animation-delay: 450ms
+}
+
+.gap16_a54042 {
+    gap: var(--space-16)
+}
+
+.sticky__2fc34 {
+    position: sticky;
+    top: 0;
+    z-index: 2
+}
+
+.bannerContainer__2fc34 {
+    align-items: center;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
+    justify-content: space-between;
+    padding: var(--space-10) var(--space-24)
+}
+
+.bannerContainer__2fc34 strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.bannerContainer__2fc34:before {
+    background: linear-gradient(90deg, var(--opacity-black-60) 0, var(--transparent) 80%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: -1
+}
+
+.bannerContainer__2fc34.theme-light:before {
+    background: linear-gradient(90deg, var(--opacity-black-28) 0, var(--transparent) 100%)
+}
+
+.bannerContainer__2fc34.nitroPinkGradient__2fc34:before {
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
+}
+
+.bannerTextContainer__2fc34 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    text-align: start
+}
+
+.icon__2fc34 {
+    flex-shrink: 0
+}
+
+.countdownDaysContainer__2fc34 {
+    gap: var(--space-4)
+}
+
+.countdownDaysContainer__2fc34,
+.countdownSecondsContainer__2fc34 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0
+}
+
+.countdownSecondsContainer__2fc34 {
+    gap: var(--space-xxs)
+}
+
+.countdownSecondsDigit__2fc34 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-xs, 4px);
+    display: flex;
+    justify-content: center;
+    padding: var(--space-4)
+}
+
+.countdownSecondsDigit__2fc34.fixedWidth__2fc34 {
+    padding: var(--space-4) 0;
+    width: var(--space-16)
+}
+
+.countdownSecondsColon__2fc34 {
+    color: var(--background-base-lowest)
+}
+
 .banner_ffa099.banner_ffa099 {
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -2307,4 +2420,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=83158bedde55e029.css.map*/
+/*# sourceMappingURL=c24aa2b1c30d1a28.css.map*/

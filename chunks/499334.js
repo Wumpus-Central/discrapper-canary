@@ -1,36 +1,36 @@
 e.d(t, { default: () => p });
-var n = e(477900),
-    s = e(582128),
-    a = e(189213),
+var s = e(477900),
+    a = e(582128),
+    n = e(189213),
     l = e(377980),
     u = e(581298),
     d = e(419954),
     r = e(606072),
     c = e(61567),
-    h = e(660183),
-    o = e(306898);
+    o = e(660183),
+    h = e(306898);
 function p(i) {
-    let { guildId: t, requirement: e, transitionState: p, onClose: g } = i,
-        _ = s.useMemo(
+    let { guildId: t, requirement: e, description: p, transitionState: g, onClose: _ } = i,
+        b = a.useMemo(
             () =>
                 (0, d.zZ)("guild_space_sharing_modal", {
                     initialize: r.zE,
                     buildLayout: () =>
                         (0, r.UF)({
                             guildId: t,
-                            useGuildSharingTitle: () => h.intl.string(h.t.eZhXQa),
+                            useGuildSharingTitle: () => o.intl.string(o.t.eZhXQa),
                             requirement: e,
                         }),
                 }),
             [t, e],
         ),
-        { node: b } = (0, u.Ay)(_, "");
-    return (0, n.jsx)(a.a, {
-        transitionState: p,
-        onClose: g,
-        title: h.intl.string(c.default["3LJ1u9"]),
-        subtitle: h.intl.string(c.default.PJn0ih),
+        { node: k } = (0, u.Ay)(b, "");
+    return (0, s.jsx)(n.a, {
+        transitionState: g,
+        onClose: _,
+        title: o.intl.string(c.default["3LJ1u9"]),
+        subtitle: p,
         actions: [],
-        children: (0, n.jsx)("div", { className: o.W, children: (0, n.jsx)(l.A, { node: b }) }),
+        children: (0, s.jsx)("div", { className: h.W, children: (0, s.jsx)(l.A, { node: k }) }),
     });
 }
