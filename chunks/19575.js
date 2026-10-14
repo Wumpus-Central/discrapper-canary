@@ -1157,6 +1157,10 @@ let K = {
             (0, I.isWindows)()
                 ? (g.rocketLeagueStatsApi?.writeRocketLeagueStatsApiConfig(e) ?? Promise.resolve(!1))
                 : Promise.resolve(!1),
+        debugLogRocketLeagueStatsApiMessage: (e) =>
+            (0, I.isWindows)()
+                ? (g.rocketLeagueStatsApi?.debugLogRocketLeagueStatsApiMessage(e) ?? Promise.resolve())
+                : Promise.resolve(),
         appViewed() {
             (0, I.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(c.APP_VIEWED));
         },

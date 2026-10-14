@@ -38,13 +38,13 @@ function r(e) {
         case i.d.LongGoal:
         case i.d.LowFive:
         case i.d.BreakoutDamage:
-        case i.d.OwnGoal:
             return { ...e, score: 0.05, importance: 0 };
         case i.d.Center:
         case i.d.Clear:
         case i.d.FirstTouch:
             return { ...e, score: 0.01, importance: 0 };
         case i.d.Demolished:
+        case i.d.OwnGoal:
         case i.d.Defeat:
         case i.d.MatchStart:
         case i.d.MatchEnd:

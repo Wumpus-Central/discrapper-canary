@@ -262,7 +262,7 @@ var _,
         EmojiSquintingFaceWithTongueIcon: () => pG,
         EmojiTiredFaceIcon: () => px,
         EmojiUnamusedFaceIcon: () => pk,
-        EmojiUpsideDownFaceIcon: () => pF,
+        EmojiUpsideDownFaceIcon: () => pF.N,
         EmojiWearyFaceIcon: () => pB,
         EmojiWinkingFaceIcon: () => pV,
         EmojiWinkingFaceWithTongueIcon: () => pH,
@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 637337, Version Hash: 073de0c83b69424e3be8d71103a7a219bebddb68`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 637350, Version Hash: 9a6b1e0e5d0613c88f0e4b23b3f6fdf74927e017`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -17081,34 +17081,7 @@ function pk(e) {
         }),
     });
 }
-function pF(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r7.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hl.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, hs.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            fillRule: "evenodd",
-            d: "M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22Zm5.5 10a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm-11 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9.8-1.17a1 1 0 0 1-1.39-.27 3.5 3.5 0 0 0-5.82 0 1 1 0 1 1-1.66-1.12 5.5 5.5 0 0 1 9.14 0 1 1 0 0 1-.27 1.4Z",
-            clipRule: "evenodd",
-            className: a,
-        }),
-    });
-}
+var pF = n(420663);
 function pB(e) {
     let {
             size: t = "md",
@@ -25869,7 +25842,7 @@ let ye = "isHideDevBanner",
                     className: t_()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "637337" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "637350" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
