@@ -10,43 +10,47 @@ var l = n(477900),
     o = n(287809),
     y = n(245175),
     m = n(708645),
-    f = n(609425),
-    E = n(834730),
+    E = n(609425),
+    f = n(834730),
     x = n(661531),
     p = n(913563),
     _ = n(898985),
-    g = n(660184),
-    h = n(701974),
-    v = n(660183),
+    h = n(660184),
+    v = n(701974),
+    g = n(660183),
     j = n(547961);
 function A(e) {
     let { displayNameStyles: t } = e,
         { name: n } = (0, _._)(t.effectId),
-        r = v.intl.string((0, p.A)(t.fontId));
+        r = g.intl.string((0, p.A)(t.fontId));
     return (0, l.jsxs)("div", {
         className: j.nM,
         children: [
             (0, l.jsx)("div", {
                 className: j.Vs,
                 "aria-hidden": !0,
-                children: (0, l.jsx)(g.A, { userName: "Gg", displayNameStyles: t, textVariant: "text-lg/semibold" }),
+                children: (0, l.jsx)(f.E, {
+                    variant: "text-lg/semibold",
+                    color: "none",
+                    children: (0, l.jsx)(h.A, { userName: "Gg", displayNameStyles: t }),
+                }),
             }),
             (0, l.jsxs)("div", {
                 className: j.Qq,
                 children: [
-                    (0, l.jsx)(E.E, {
+                    (0, l.jsx)(f.E, {
                         variant: "text-sm/semibold",
                         color: "text-default",
-                        children: v.intl.format(h.default.DC7gJB, { fontName: r, effectName: n }),
+                        children: g.intl.format(v.default.DC7gJB, { fontName: r, effectName: n }),
                     }),
                     (0, l.jsxs)("div", {
                         className: j.VA,
                         children: [
                             (0, l.jsx)(s.t, { size: "xs", color: x.A.colors.TEXT_SUBTLE }),
-                            (0, l.jsx)(E.E, {
+                            (0, l.jsx)(f.E, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
-                                children: v.intl.string(h.default.M4qsJL),
+                                children: g.intl.string(v.default.M4qsJL),
                             }),
                         ],
                     }),
@@ -61,10 +65,10 @@ function F() {
     return (0, l.jsxs)("div", {
         className: N.w,
         children: [
-            (0, l.jsx)(E.E, {
+            (0, l.jsx)(f.E, {
                 variant: "text-sm/medium",
                 color: "text-muted",
-                children: v.intl.string(h.default.NJLgMs),
+                children: g.intl.string(v.default.NJLgMs),
             }),
             (0, l.jsx)(M.E, { type: "beta", variant: "primary" }),
         ],
@@ -73,13 +77,13 @@ function F() {
 var L = n(259065);
 function O(e, t, n) {
     let l = (0, m.uh)(),
-        i = (0, f.A)({ userId: e.id, guildId: t }),
+        i = (0, E.A)({ userId: e.id, guildId: t }),
         { analyticsLocations: s } = (0, u.Ay)(n),
         d = (0, a.bG)([o.default], () => o.default.getCurrentUser()?.id),
-        E = !(0, y.rA)(l, y.yw.OFF) && null != i;
+        f = !(0, y.rA)(l, y.yw.OFF) && null != i;
     r.useEffect(() => {
-        E && null != d && (0, c.A)(d, void 0, { waitForRefetch: !1 }).catch(() => {});
-    }, [E, d]);
+        f && null != d && (0, c.A)(d, void 0, { waitForRefetch: !1 }).catch(() => {});
+    }, [f, d]);
     let x = r.useCallback(() => {
         null != i && (0, L.L)({ analyticsLocations: s, tryOnDisplayNameStyles: i, tryOnStyleOwner: e });
     }, [s, i, e]);
@@ -90,7 +94,7 @@ function b(e, t) {
     return (0, y.rA)(n, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
         ? (0, l.jsx)(i.Dr, {
               id: "try-display-name-style",
-              label: v.intl.string(h.default.NJLgMs),
+              label: g.intl.string(v.default.NJLgMs),
               badge: { type: "beta", variant: "primary" },
               leadingAccessory: { type: "icon", icon: s.t },
               action: a,
@@ -102,7 +106,7 @@ function U(e, t) {
     return (0, y.rA)(n, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
         ? (0, l.jsx)(i.Dr, {
               id: "try-display-name-style",
-              label: v.intl.string(h.default.NJLgMs),
+              label: g.intl.string(v.default.NJLgMs),
               leadingAccessory: { type: "icon", icon: s.t },
               action: a,
           })
