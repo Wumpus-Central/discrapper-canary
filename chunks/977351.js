@@ -619,7 +619,7 @@ var Z = n(959129),
 let er = "playground-gift-customization-banner",
     ei = "playground-gift-customization-banner-promotion",
     ed = J.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
-var es = n(365990),
+var es = n(489248),
     eu = n(95701);
 function ep(e) {
     let { id: t, component_type: n, promotion_id: o, properties: l } = e;

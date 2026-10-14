@@ -165,7 +165,7 @@ class X extends r.Component {
         });
     }
 }
-let Z = _.Ay.connectStores([M.Ay, y.A], (e) => {
+let q = _.Ay.connectStores([M.Ay, y.A], (e) => {
         let { channel: t } = e;
         return {
             unread: M.Ay.hasUnread(t.id),
@@ -174,7 +174,7 @@ let Z = _.Ay.connectStores([M.Ay, y.A], (e) => {
             category: y.A.getChannel(t.parent_id),
         };
     })(X),
-    q = _.Ay.connectStores([U.Ay], (e) => {
+    Z = _.Ay.connectStores([U.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
@@ -583,7 +583,6 @@ class en extends r.PureComponent {
                         n.e("958038"),
                         n.e("532039"),
                         n.e("719466"),
-                        n.e("178565"),
                         n.e("630267"),
                         n.e("576909"),
                         n.e("27355"),
@@ -1220,7 +1219,7 @@ class en extends r.PureComponent {
                 return (0, i.jsx)(k.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
             case S.rD.TEXT_CHANNEL:
                 return (0, i.jsx)(
-                    Z,
+                    q,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1235,7 +1234,7 @@ class en extends r.PureComponent {
                 );
             case S.rD.VOICE_CHANNEL:
                 return (0, i.jsx)(
-                    q,
+                    Z,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,

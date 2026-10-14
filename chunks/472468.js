@@ -82,14 +82,9 @@ var R = n(951305),
     B = n(371710),
     H = n(163074),
     W = n(810498),
-    Y = n(557679);
-let V = (0, n(945810).mj)({
-    name: "2026-10-gifted-subscriptions",
-    kind: "user",
-    defaultConfig: !1,
-    variations: { 0: !1, 1: !0 },
-});
-var K = n(202541),
+    Y = n(557679),
+    V = n(547902),
+    K = n(202541),
     Z = n(650583),
     q = n(452027),
     z = n(403581),
@@ -770,18 +765,17 @@ function ej(e) {
         } = ey({ selectedPlanId: n, priceOptions: a, planOptions: s, subscriptionPeriodEnd: o, showTotal: u }),
         { discountAmountOff: $, applicablePlan: Q, discountOffer: J } = (0, C.t4)((e) => e.premiumDiscountInfo),
         X = (function (e) {
-            var t;
-            let { isGift: n, giftRecipient: l, planOptions: r, location: a } = e,
-                s = (0, C.t4)((e) => e.setSelectedPlanId),
-                { hasAppliedRecurringGiftDefaultPlan: o, setHasAppliedRecurringGiftDefaultPlan: u } = (0, R.Pv)(),
-                c = (0, B.Cu)({ isGift: n, giftRecipient: l, planOptions: r }),
-                d = ((t = { location: a }), V.useConfig(t)),
-                p = c && d;
+            let { isGift: t, giftRecipient: n, planOptions: l, location: r } = e,
+                a = (0, C.t4)((e) => e.setSelectedPlanId),
+                { hasAppliedRecurringGiftDefaultPlan: s, setHasAppliedRecurringGiftDefaultPlan: o } = (0, R.Pv)(),
+                u = (0, B.Cu)({ isGift: t, giftRecipient: n, planOptions: l }),
+                c = (0, V.u)({ location: r }),
+                d = u && c;
             return (
                 i.useEffect(() => {
-                    p && !o && r.includes(K.gD.PREMIUM_MONTH_TIER_2) && (u(!0), s(K.gD.PREMIUM_MONTH_TIER_2));
-                }, [o, p, r, u, s]),
-                p
+                    d && !s && l.includes(K.gD.PREMIUM_MONTH_TIER_2) && (o(!0), a(K.gD.PREMIUM_MONTH_TIER_2));
+                }, [s, d, l, o, a]),
+                d
             );
         })({ isGift: A, giftRecipient: P, planOptions: s, location: "PremiumSwitchPlanSelectBody" }),
         ee = (0, G.ds)(),

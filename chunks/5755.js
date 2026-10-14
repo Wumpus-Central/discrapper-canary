@@ -2,8 +2,8 @@ t.d(n, { $: () => m });
 var i = t(582128),
     l = t(75678),
     a = t(594832),
-    r = t(477900),
-    o = t(192308);
+    o = t(477900),
+    r = t(192308);
 function s(e) {
     let {
         giftRecipient: n,
@@ -13,7 +13,7 @@ function s(e) {
         analyticsObject: s,
         giftMessage: c,
     } = e;
-    return (0, o.openModalLazy)(
+    return (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 t.e("586662"),
@@ -243,7 +243,6 @@ function s(e) {
                 t.e("958038"),
                 t.e("532039"),
                 t.e("719466"),
-                t.e("178565"),
                 t.e("630267"),
                 t.e("576909"),
                 t.e("27355"),
@@ -436,7 +435,7 @@ function s(e) {
                 t.e("626314"),
             ]).then(t.bind(t, 740305));
             return (t) =>
-                (0, r.jsx)(e, {
+                (0, o.jsx)(e, {
                     ...t,
                     giftRecipient: n,
                     analyticsLocations: l,
@@ -456,85 +455,85 @@ let d = (0, u.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    g = (0, u.mj)({
+    f = (0, u.mj)({
         name: "2026-02-non-dm-gifting-modal-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
 var C = t(990820),
-    f = t(202541);
+    g = t(202541);
 function m(e) {
     let {
             giftRecipient: n,
             analyticsLocations: t,
-            analyticsObject: r,
-            wishlistAnalyticsObject: o,
+            analyticsObject: o,
+            wishlistAnalyticsObject: r,
             premiumAnalyticsObject: u,
             analyticsLocation: m,
-            giftMessage: p,
-            subscriptionTier: A,
+            giftMessage: A,
+            subscriptionTier: p,
             location: b,
         } = e,
-        { enabled: h } = d.useConfig({ location: b }),
-        { enabled: I } = g.useConfig({ location: b }),
-        T = (0, c.F5)(b),
+        { enabled: T } = d.useConfig({ location: b }),
+        { enabled: I } = f.useConfig({ location: b }),
+        h = (0, c.F5)(b),
         N = (0, a.tA)({ isGift: !0, giftRecipient: n }),
-        k = h && null != n,
-        j = I && null == n,
-        y = k || j,
-        x = N && null != n;
+        j = T && null != n,
+        k = I && null == n,
+        y = j || k,
+        _ = N && null != n;
     return {
         openGiftModal: i.useCallback(() => {
-            null != A
+            null != p
                 ? (0, l.A)({
                       isGift: !0,
                       giftRecipient: n ?? void 0,
-                      subscriptionTier: A,
+                      subscriptionTier: p,
                       analyticsLocations: t,
                       analyticsLocation: m,
-                      analyticsObject: u ?? r,
-                      giftMessage: p,
+                      analyticsObject: u ?? o,
+                      giftMessage: A,
                   })
-                : T
-                  ? x
+                : h
+                  ? _
                       ? s({
                             giftRecipient: n,
                             analyticsLocations: t,
                             analyticsLocation: m,
-                            analyticsObject: o ?? r,
-                            giftMessage: p,
+                            analyticsObject: r ?? o,
+                            giftMessage: A,
                         })
                       : (0, C.A)({
                             giftRecipient: n ?? void 0,
                             analyticsLocations: t,
                             analyticsLocation: m,
-                            analyticsObject: o ?? r,
-                            giftMessage: p,
+                            analyticsObject: r ?? o,
+                            giftMessage: A,
                         })
-                  : k && null != n
+                  : j && null != n
                     ? (0, C.A)({
                           giftRecipient: n,
                           analyticsLocations: t,
                           analyticsLocation: m,
-                          analyticsObject: o ?? r,
-                          giftMessage: p,
+                          analyticsObject: r ?? o,
+                          giftMessage: A,
                       })
-                    : j
+                    : k
                       ? (0, C.A)({
                             analyticsLocations: t,
                             analyticsLocation: m,
-                            analyticsObject: o ?? r,
-                            giftMessage: p,
-                            giftingOrigin: f.vQ.GUILD_CHANNEL,
+                            analyticsObject: r ?? o,
+                            giftMessage: A,
+                            giftingOrigin: g.vQ.GUILD_CHANNEL,
                         })
-                      : x && null != n
+                      : _ && null != n
                         ? s({
                               giftRecipient: n,
                               analyticsLocations: t,
                               analyticsLocation: m,
-                              analyticsObject: o ?? r,
-                              giftMessage: p,
+                              analyticsObject: r ?? o,
+                              giftMessage: A,
                           })
                         : (0, l.A)({
                               isGift: !0,
@@ -542,11 +541,11 @@ function m(e) {
                               initialPlanId: null,
                               analyticsLocations: t,
                               analyticsLocation: m,
-                              analyticsObject: u ?? r,
-                              giftMessage: p,
+                              analyticsObject: u ?? o,
+                              giftMessage: A,
                           });
-        }, [T, k, j, x, n, t, m, r, o, u, p, A]),
-        shouldShowWishlistModal: x,
+        }, [h, j, k, _, n, t, m, o, r, u, A, p]),
+        shouldShowWishlistModal: _,
         shouldShowGiftSelectionModal: y,
     };
 }
