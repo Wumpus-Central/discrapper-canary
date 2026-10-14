@@ -1,4 +1,4 @@
-n.d(i, { default: () => $ });
+n.d(i, { default: () => en });
 var s = n(477900);
 n(582128);
 var r = n(980707),
@@ -8,35 +8,37 @@ var r = n(980707),
     a = n(358367),
     o = n(155718),
     c = n(468389),
-    h = n(793574),
-    u = n(810845),
-    m = n(854182),
-    x = n(422229),
+    u = n(793574),
+    h = n(810845),
+    x = n(854182),
+    m = n(422229),
     A = n(855187),
     j = n(479335),
     g = n(50268),
-    v = n(844065),
-    p = n(803664),
-    I = n(29293),
-    C = n(509302),
-    _ = n(497600),
+    v = n(708645),
+    p = n(630821),
+    I = n(844065),
+    C = n(803664),
+    U = n(29293),
+    _ = n(509302),
+    f = n(497600),
     w = n(646911),
-    U = n(239211),
-    f = n(373397),
-    E = n(17928),
-    N = n(661531),
-    M = n(192308),
-    b = n(732159),
-    X = n(778712),
-    k = n(834730),
-    T = n(97808),
+    E = n(239211),
+    M = n(373397),
+    N = n(17928),
+    b = n(661531),
+    X = n(192308),
+    k = n(732159),
+    T = n(778712),
+    D = n(834730),
+    G = n(97808),
     R = n(308528),
     S = n(297413),
-    D = n(966327),
-    G = n(287809),
-    O = n(660183),
-    Z = n(575721);
-function z(e) {
+    O = n(966327),
+    Z = n(287809),
+    z = n(660183),
+    y = n(575721);
+function B(e) {
     let { color: i, className: n } = e;
     return (0, s.jsx)("svg", {
         className: n,
@@ -66,199 +68,202 @@ function z(e) {
         }),
     });
 }
-var y = n(984894),
-    B = n(399476),
-    L = n(889460),
-    P = n(448290),
-    W = n(301541),
-    Y = n(460597),
-    F = n(734057),
-    H = n(313998),
-    q = n(198229),
-    J = n(243949),
-    K = n(972432),
-    Q = n(77544),
-    V = n(652215);
-let $ = (0, a.A)(
-    (0, l.A)(
-        function (e) {
-            var i, n;
-            let l,
-                a,
-                h,
-                {
-                    user: V,
-                    channel: $,
-                    context: ee,
-                    showChatItems: ei = !0,
-                    showMediaItems: en = !1,
-                    showChannelCallItems: es = !1,
-                    showModalItems: er = !0,
-                    onSelect: ed,
-                    onHeightUpdate: et,
-                    onInteraction: el,
-                } = e,
-                ea = (0, J.A)({ userId: V.id, guildId: null }),
-                eo = (0, P.A)(V, null, $.id, ee),
-                ec = $.id,
-                eh = (0, H.A)(V, ec),
-                eu = (0, W.A)(V.id, ee),
-                em = (0, f.A)({ user: V, context: ee }),
-                ex = (0, _.A)({ user: V, channelId: $.id, context: ee }),
-                eA = (0, I.A)({ user: V }),
-                ej = (0, K.A)(V.id),
-                eg =
-                    ((i = V.id),
-                    (n = $.id),
-                    (l = (0, E.bG)([G.default], () => G.default.getCurrentUser(), [])),
-                    null == (a = (0, E.bG)([F.A], () => F.A.getChannel(n), [n])) ||
-                    a.isOwner(i) ||
-                    null == l ||
-                    !a.isOwner(l.id) ||
-                    !a.recipients?.includes(i)
-                        ? null
-                        : (0, s.jsx)(d.Dr, {
-                              id: "remove",
-                              label: O.intl.string(O.t["n5zMI+"]),
-                              action: () => R.A.removeRecipient(n, i),
-                              color: "danger",
-                          })),
-                ev = (0, q.A)(V.id),
-                ep = (0, j.u)({ userId: V.id, channelId: $.id, guildId: $.getGuildId() }),
-                eI = (0, y.A)(V.id, $.id),
-                eC = (0, L.A)({ user: V }),
-                e_ = (0, c.A)(null, V),
-                ew = (0, p.A)({ user: V }),
-                eU = (0, C.A)({ user: V }),
-                ef = (0, Y.A)({ user: V }),
-                eE = (0, U.A)({ user: V, location: "GroupDMUserContextMenu" }),
-                eN = (0, B.A)({ user: V, location: "GroupDMUserContextMenu" }),
-                eM = (0, g.A)({ id: V.id, label: O.intl.string(O.t["/AXYnE"]) }),
-                eb = (0, Q.A)(V.id),
-                eX = (0, x.A)(V.id),
-                ek = (0, m.A)($.id),
-                eT = (0, v.A)(V),
-                eR = (0, A.A)(V.id),
-                eS = (0, u.A)($.id, V.id),
-                eD = (0, w.A)({
-                    commandType: o.kc.USER,
-                    commandTargetId: V.id,
-                    channel: $,
-                    guildId: void 0,
-                    onHeightUpdate: et,
-                }),
-                eG =
-                    null == (h = (0, E.bG)([G.default], () => G.default.getCurrentUser())) ||
-                    $.ownerId !== h.id ||
-                    V.id === h.id
-                        ? null
-                        : (0, s.jsx)(d.Dr, {
-                              id: "make-dm-owner",
-                              color: "danger",
-                              label: O.intl.string(O.t["6t3CyN"]),
-                              action: () => {
-                                  (0, M.openModal)((e) =>
-                                      (0, s.jsx)(b.u, {
-                                          title: O.intl.string(O.t.WZoUsm),
-                                          confirmText: O.intl.string(O.t["cY+Oob"]),
-                                          cancelText: O.intl.string(O.t["ETE/oC"]),
-                                          onConfirm: () => R.A.setDMOwner($.id, V.id),
-                                          ...e,
-                                          children: (0, s.jsxs)("div", {
-                                              className: Z.Uh,
+var L = n(984894),
+    P = n(399476),
+    W = n(889460),
+    Y = n(448290),
+    F = n(301541),
+    H = n(460597),
+    q = n(734057),
+    J = n(313998),
+    K = n(198229),
+    Q = n(243949),
+    V = n(972432),
+    $ = n(77544),
+    ee = n(652215);
+function ei(e) {
+    var i, n;
+    let l,
+        a,
+        u,
+        {
+            user: v,
+            channel: ee,
+            context: ei,
+            showChatItems: en = !0,
+            showMediaItems: es = !1,
+            showChannelCallItems: er = !1,
+            showModalItems: ed = !0,
+            onSelect: et,
+            onHeightUpdate: el,
+            onInteraction: ea,
+        } = e,
+        eo = (0, Q.A)({ userId: v.id, guildId: null }),
+        ec = (0, p.gE)(v, void 0),
+        eu = (0, Y.A)(v, null, ee.id, ei),
+        eh = ee.id,
+        ex = (0, J.A)(v, eh),
+        em = (0, F.A)(v.id, ei),
+        eA = (0, M.A)({ user: v, context: ei }),
+        ej = (0, f.A)({ user: v, channelId: ee.id, context: ei }),
+        eg = (0, U.A)({ user: v }),
+        ev = (0, V.A)(v.id),
+        ep =
+            ((i = v.id),
+            (n = ee.id),
+            (l = (0, N.bG)([Z.default], () => Z.default.getCurrentUser(), [])),
+            null == (a = (0, N.bG)([q.A], () => q.A.getChannel(n), [n])) ||
+            a.isOwner(i) ||
+            null == l ||
+            !a.isOwner(l.id) ||
+            !a.recipients?.includes(i)
+                ? null
+                : (0, s.jsx)(d.Dr, {
+                      id: "remove",
+                      label: z.intl.string(z.t["n5zMI+"]),
+                      action: () => R.A.removeRecipient(n, i),
+                      color: "danger",
+                  })),
+        eI = (0, K.A)(v.id),
+        eC = (0, j.u)({ userId: v.id, channelId: ee.id, guildId: ee.getGuildId() }),
+        eU = (0, L.A)(v.id, ee.id),
+        e_ = (0, W.A)({ user: v }),
+        ef = (0, c.A)(null, v),
+        ew = (0, C.A)({ user: v }),
+        eE = (0, _.A)({ user: v }),
+        eM = (0, H.A)({ user: v }),
+        eN = (0, E.A)({ user: v, location: "GroupDMUserContextMenu" }),
+        eb = (0, P.A)({ user: v, location: "GroupDMUserContextMenu" }),
+        eX = (0, g.A)({ id: v.id, label: z.intl.string(z.t["/AXYnE"]) }),
+        ek = (0, $.A)(v.id),
+        eT = (0, m.A)(v.id),
+        eD = (0, x.A)(ee.id),
+        eG = (0, I.A)(v),
+        eR = (0, A.A)(v.id),
+        eS = (0, h.A)(ee.id, v.id),
+        eO = (0, w.A)({
+            commandType: o.kc.USER,
+            commandTargetId: v.id,
+            channel: ee,
+            guildId: void 0,
+            onHeightUpdate: el,
+        }),
+        eZ =
+            null == (u = (0, N.bG)([Z.default], () => Z.default.getCurrentUser())) ||
+            ee.ownerId !== u.id ||
+            v.id === u.id
+                ? null
+                : (0, s.jsx)(d.Dr, {
+                      id: "make-dm-owner",
+                      color: "danger",
+                      label: z.intl.string(z.t["6t3CyN"]),
+                      action: () => {
+                          (0, X.openModal)((e) =>
+                              (0, s.jsx)(k.u, {
+                                  title: z.intl.string(z.t.WZoUsm),
+                                  confirmText: z.intl.string(z.t["cY+Oob"]),
+                                  cancelText: z.intl.string(z.t["ETE/oC"]),
+                                  onConfirm: () => R.A.setDMOwner(ee.id, v.id),
+                                  ...e,
+                                  children: (0, s.jsxs)("div", {
+                                      className: y.Uh,
+                                      children: [
+                                          (0, s.jsx)(B, { color: b.A.unsafe_rawColors.PRIMARY_300.css }),
+                                          (0, s.jsxs)("div", {
+                                              className: y.nS,
                                               children: [
-                                                  (0, s.jsx)(z, { color: N.A.unsafe_rawColors.PRIMARY_300.css }),
-                                                  (0, s.jsxs)("div", {
-                                                      className: Z.nS,
-                                                      children: [
-                                                          (0, s.jsx)("div", {
-                                                              className: Z.HT,
-                                                              children: (0, s.jsx)(D.A, {
-                                                                  user: h,
-                                                                  size: X._3.SIZE_80,
-                                                              }),
-                                                          }),
-                                                          (0, s.jsx)("div", {
-                                                              className: Z.to,
-                                                              children: (0, s.jsx)(D.A, {
-                                                                  user: V,
-                                                                  size: X._3.SIZE_80,
-                                                              }),
-                                                          }),
-                                                      ],
+                                                  (0, s.jsx)("div", {
+                                                      className: y.HT,
+                                                      children: (0, s.jsx)(O.A, { user: u, size: T._3.SIZE_80 }),
                                                   }),
-                                                  (0, s.jsx)(k.E, {
-                                                      variant: "text-md/normal",
-                                                      children: O.intl.format(O.t.gsBb3F, {
-                                                          usernameHook: (e, i) =>
-                                                              (0, s.jsx)(
-                                                                  S.A,
-                                                                  {
-                                                                      usernameIcon: (0, s.jsx)(T.eu, {
-                                                                          className: Z.jj,
-                                                                          src: V.getAvatarURL(void 0, 16),
-                                                                          size: X._3.SIZE_16,
-                                                                          "aria-hidden": !0,
-                                                                      }),
-                                                                      className: Z.xK,
-                                                                      usernameClass: Z.Xh,
-                                                                      discriminatorClass: Z.D2,
-                                                                      user: V,
-                                                                  },
-                                                                  i,
-                                                              ),
-                                                      }),
+                                                  (0, s.jsx)("div", {
+                                                      className: y.to,
+                                                      children: (0, s.jsx)(O.A, { user: v, size: T._3.SIZE_80 }),
                                                   }),
                                               ],
                                           }),
-                                      }),
-                                  );
-                              },
-                          }),
-                eO = V.isNonUserBot(),
-                eZ = $.isManaged(),
-                ez = $.recipients?.includes(V.id);
-            return (0, s.jsxs)(r.W, {
-                "data-menu-migrated": !0,
-                navId: "user-context",
-                onClose: t.Z_,
-                "aria-label": O.intl.string(O.t.liqwPJ),
-                onSelect: ed,
-                onInteraction: el,
-                children: [
-                    !eO &&
-                        (0, s.jsxs)(s.Fragment, {
+                                          (0, s.jsx)(D.E, {
+                                              variant: "text-md/normal",
+                                              children: z.intl.format(z.t.gsBb3F, {
+                                                  usernameHook: (e, i) =>
+                                                      (0, s.jsx)(
+                                                          S.A,
+                                                          {
+                                                              usernameIcon: (0, s.jsx)(G.eu, {
+                                                                  className: y.jj,
+                                                                  src: v.getAvatarURL(void 0, 16),
+                                                                  size: T._3.SIZE_16,
+                                                                  "aria-hidden": !0,
+                                                              }),
+                                                              className: y.xK,
+                                                              usernameClass: y.Xh,
+                                                              discriminatorClass: y.D2,
+                                                              user: v,
+                                                          },
+                                                          i,
+                                                      ),
+                                              }),
+                                          }),
+                                      ],
+                                  }),
+                              }),
+                          );
+                      },
+                  }),
+        ez = v.isNonUserBot(),
+        ey = ee.isManaged(),
+        eB = ee.recipients?.includes(v.id);
+    return (0, s.jsxs)(r.W, {
+        "data-menu-migrated": !0,
+        navId: "user-context",
+        onClose: t.Z_,
+        "aria-label": z.intl.string(z.t.liqwPJ),
+        onSelect: et,
+        onInteraction: ea,
+        children: [
+            !ez &&
+                (0, s.jsxs)(s.Fragment, {
+                    children: [
+                        (0, s.jsx)(d.rX, { children: eG }),
+                        (0, s.jsxs)(d.rX, {
+                            children: [ed && eo, ed && ec, en && eu, em, eA, !ey && ex, ed && ej, ed && eg, ek],
+                        }),
+                        es && (0, s.jsx)(d.rX, { children: ev }),
+                        eB && (0, s.jsxs)(d.rX, { children: [!ey && ep, eZ] }),
+                        (0, s.jsx)(d.rX, { children: ed && ef }),
+                        er && (0, s.jsxs)(d.rX, { children: [eS, eD, eT] }),
+                        (0, s.jsxs)(d.rX, {
                             children: [
-                                (0, s.jsx)(d.rX, { children: eT }),
-                                (0, s.jsxs)(d.rX, {
-                                    children: [er && ea, ei && eo, eu, em, !eZ && eh, er && ex, er && eA, eb],
-                                }),
-                                en && (0, s.jsx)(d.rX, { children: ej }),
-                                ez && (0, s.jsxs)(d.rX, { children: [!eZ && eg, eG] }),
-                                (0, s.jsx)(d.rX, { children: er && e_ }),
-                                es && (0, s.jsxs)(d.rX, { children: [eS, ek, eX] }),
-                                (0, s.jsxs)(d.rX, {
-                                    children: [
-                                        en && ev,
-                                        en && ep,
-                                        en && eI,
-                                        en && eR,
-                                        eD,
-                                        er && eC,
-                                        ew,
-                                        eU,
-                                        ef,
-                                        er && eN,
-                                        er && eE,
-                                    ],
-                                }),
+                                es && eI,
+                                es && eC,
+                                es && eU,
+                                es && eR,
+                                eO,
+                                ed && e_,
+                                ew,
+                                eE,
+                                eM,
+                                ed && eb,
+                                ed && eN,
                             ],
                         }),
-                    (0, s.jsx)(d.rX, { children: eM }),
-                ],
+                    ],
+                }),
+            (0, s.jsx)(d.rX, { children: eX }),
+        ],
+    });
+}
+let en = (0, a.A)(
+    (0, l.A)(
+        function (e) {
+            return (0, s.jsx)(v.ZQ, {
+                user: e.user,
+                guildId: void 0,
+                location: "GroupDMUserContextMenu",
+                children: (0, s.jsx)(ei, { ...e }),
             });
         },
-        { object: V.ZSU.CONTEXT_MENU },
+        { object: ee.ZSU.CONTEXT_MENU },
     ),
-    [h.A.CONTEXT_MENU, h.A.GROUP_DM_USER_MENU],
+    [u.A.CONTEXT_MENU, u.A.GROUP_DM_USER_MENU],
 );
