@@ -868,7 +868,7 @@ function tb(e) {
                                   className: tA.nM,
                                   children: [
                                       (0, l.jsx)(to.A, {
-                                          nameplate: o ? M : null,
+                                          nameplate: o || !u ? M : null,
                                           hovered: a,
                                           content: f,
                                           placement: ta.u.FRIENDS_LIST,
@@ -1595,7 +1595,7 @@ function no() {
         (t = (0, e$.r)(w.A.space.SPACE_XS)),
         (n = (0, e$.r)(w.A.space.SPACE_SM)),
         {
-            rowHeight: 32 + 2 * t,
+            rowHeight: 32 + (t + 1) * 2,
             sectionHeaderHeight: 24 + n + e,
             sectionDividerHeight: (s = (0, e$.r)(w.A.space.SPACE_MD)),
             subgroupPadding: s,
