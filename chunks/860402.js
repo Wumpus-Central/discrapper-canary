@@ -1,29 +1,21 @@
-(n.d(t, { JI: () => s, ho: () => a, y_: () => i }), n(323874), n(14289), n(35956));
-var l = n(382541),
+n.d(t, { JI: () => s, ho: () => a, y_: () => i });
+var l = n(688954),
     r = n(785389);
 function a(e) {
     return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
 async function i(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { ticket: n, baseUrl: r } = await (0, l.d)(e),
-        a = new URLSearchParams({ ticket: n });
-    t && a.set("regenerate", "1");
-    let i = await fetch(`${r}/agent/mcp-token?${a}`, { method: "POST" });
-    if (!i.ok) throw Error(`mcp token failed (${i.status})`);
-    let s = await i.json(),
-        o = "number" == typeof s.expires_in ? Date.now() + 1e3 * s.expires_in : Date.parse(s.expires_at);
-    return { url: s.url, expiresAtMs: o };
+        n = await (0, l.h)(e, "/agent/mcp-token", { method: "POST", query: t ? { regenerate: "1" } : void 0 });
+    if (!n.ok) throw Error(`mcp token failed (${n.status})`);
+    let r = await n.json(),
+        a = "number" == typeof r.expires_in ? Date.now() + 1e3 * r.expires_in : Date.parse(r.expires_at);
+    return { url: r.url, expiresAtMs: a };
 }
 async function s(e, t) {
     let n, a;
     try {
-        let { ticket: r, baseUrl: a } = await (0, l.d)(e);
-        n = await fetch(`${a}/agent/external-auth/authorize-url?${new URLSearchParams({ ticket: r })}`, {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({ connection_type: t }),
-        });
+        n = await (0, l.h)(e, "/agent/external-auth/authorize-url", { method: "POST", json: { connection_type: t } });
     } catch {
         return { type: "error", error: "unavailable" };
     }

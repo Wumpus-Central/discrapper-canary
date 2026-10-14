@@ -3,10 +3,10 @@
     n(14289),
     n(35956));
 var r = n(73153),
-    a = n(940874),
-    i = n(382541),
-    o = n(649121),
-    c = n(975189),
+    i = n(940874),
+    a = n(649121),
+    o = n(975189),
+    c = n(688954),
     l = n(664619),
     s = n(1371),
     u = n(392739),
@@ -52,14 +52,14 @@ let _ = {
     h = {
         preview_ready(e, t) {
             let { projectId: n } = t;
-            ((0, a.OA)(n, e),
+            ((0, i.OA)(n, e),
                 (0, l.tZ)(n, { isPreview: !0 }).catch((e) => {
                     console.error("[vibegrations] post-preview-publish refresh failed", n, e);
                 }));
         },
     };
 function f(e, t) {
-    let n = (0, c.KY)(e);
+    let n = (0, o.KY)(e);
     if (null == n) return !1;
     try {
         return (n.sendOverlayBackgroundBlur(t), !0);
@@ -68,30 +68,25 @@ function f(e, t) {
     }
 }
 async function C(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, o.BK)(e),
-        a = new URLSearchParams({ ticket: n });
-    return `${r}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
+    let { ticket: n, baseUrl: r } = await (0, a.BK)(e),
+        i = new URLSearchParams({ ticket: n });
+    return `${r}/agent/screenshots/${encodeURIComponent(t)}?${i}`;
 }
 async function T(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, i.d)(e),
-        a = await fetch(`${r}/agent/overlay-background?${new URLSearchParams({ ticket: n })}`, {
-            method: "PUT",
-            body: t,
-        });
-    if (!a.ok) throw Error(`overlay background upload failed (${a.status})`);
+    let n = await (0, c.h)(e, "/agent/overlay-background", { method: "PUT", body: t });
+    if (!n.ok) throw Error(`overlay background upload failed (${n.status})`);
 }
 async function g(e) {
-    let { ticket: t, baseUrl: n } = await (0, i.d)(e),
-        r = await fetch(`${n}/agent/overlay-background?${new URLSearchParams({ ticket: t })}`, { method: "DELETE" });
-    if (!r.ok) throw Error(`overlay background reset failed (${r.status})`);
+    let t = await (0, c.h)(e, "/agent/overlay-background", { method: "DELETE" });
+    if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }
 async function y(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, o.BK)(e);
+    let { ticket: n, baseUrl: r } = await (0, a.BK)(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }
 async function E(e, t, n) {
     let r,
-        a = Date.now();
+        i = Date.now();
     (console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe }),
         !0 !== n.probe && n.spec?.mode === "widget" && (0, p.b)(e, "widget"));
     try {
@@ -109,7 +104,7 @@ async function E(e, t, n) {
         id: n.id,
         status: r.status,
         code: r.code,
-        ms: Date.now() - a,
+        ms: Date.now() - i,
     }),
         t.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
@@ -121,17 +116,17 @@ async function A(e, t, n) {
         steps: n.request?.steps?.length,
     });
     try {
-        let a = await s.A.relayPreviewControl(
+        let i = await s.A.relayPreviewControl(
             e,
             n.id,
             n.request,
             async () => (t.sendControlAck(n.id, "accepted"), (await (0, u.bm)(e, n.id)) != null),
         );
-        (console.debug("[vibegrations] control relay answered", { id: n.id, status: a.status, ms: Date.now() - r }),
-            "completed" === a.status
-                ? t.sendControlAck(n.id, "completed", a.response)
-                : "failed" === a.status
-                  ? t.sendControlAck(n.id, "failed", void 0, a.message)
+        (console.debug("[vibegrations] control relay answered", { id: n.id, status: i.status, ms: Date.now() - r }),
+            "completed" === i.status
+                ? t.sendControlAck(n.id, "completed", i.response)
+                : "failed" === i.status
+                  ? t.sendControlAck(n.id, "failed", void 0, i.message)
                   : t.sendControlAck(n.id, "unavailable"));
     } catch (e) {
         (console.error("[vibegrations] preview control relay failed", e),
@@ -139,6 +134,6 @@ async function A(e, t, n) {
     }
 }
 async function k(e) {
-    let { ticket: t, baseUrl: n } = await (0, o.BK)(e);
+    let { ticket: t, baseUrl: n } = await (0, a.BK)(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }

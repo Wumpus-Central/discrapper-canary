@@ -6,73 +6,66 @@ var a = l(477900),
     r = l(821609),
     d = l(95477),
     o = l(957565),
-    c = l(591277);
-(l(323874), l(14289), l(35956));
-var u = l(382541);
+    c = l(591277),
+    u = l(688954);
 class x extends Error {}
-async function h(e, t) {
-    let { ticket: l, baseUrl: a } = await (0, u.d)(e),
-        s = new URLSearchParams({ ticket: l }),
-        n = await fetch(`${a}/agent/secrets?${s}`, {
-            method: "PUT",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(t),
-        });
-    if (410 === n.status) throw new x("secret request expired");
-    if (!n.ok) throw Error(`secret submission failed (${n.status})`);
+async function m(e, t) {
+    let l = await (0, u.h)(e, "/agent/secrets", { method: "PUT", json: t });
+    if (410 === l.status) throw new x("secret request expired");
+    if (!l.ok) throw Error(`secret submission failed (${l.status})`);
 }
-var m = l(248675),
+var h = l(248675),
     f = l(660183),
     p = l(622344);
 function v(e) {
     let { projectId: t, request: l, transitionState: u, onClose: v } = e,
         [b, g] = s.useState({}),
-        [j, y] = s.useState(!1),
-        [w, k] = s.useState(!1),
+        [j, k] = s.useState(!1),
+        [w, y] = s.useState(!1),
         [C, E] = s.useState(null),
-        S = s.useCallback((e) => {
+        _ = s.useCallback((e) => {
             (0, o.C)(e, () => E(e));
         }, []),
-        _ = s.useCallback((e, t) => {
-            null != t && (k(!1), g((l) => ({ ...l, [t]: e })));
+        q = s.useCallback((e, t) => {
+            null != t && (y(!1), g((l) => ({ ...l, [t]: e })));
         }, []),
-        q = l.fields.map((e) => e.name).filter((e) => "" !== (b[e] ?? "").trim()),
-        N = q.length > 0,
-        U = q.length < l.fields.length,
-        M = s.useCallback(
+        S = l.fields.map((e) => e.name).filter((e) => "" !== (b[e] ?? "").trim()),
+        M = S.length > 0,
+        N = S.length < l.fields.length,
+        U = s.useCallback(
             async (e) => {
-                if ((e.preventDefault(), N && !j)) {
-                    (y(!0), k(!1));
+                if ((e.preventDefault(), M && !j)) {
+                    (k(!0), y(!1));
                     try {
-                        (await h(t, {
-                            secrets: Object.fromEntries(q.map((e) => [e, b[e].trim()])),
+                        (await m(t, {
+                            secrets: Object.fromEntries(S.map((e) => [e, b[e].trim()])),
                             ...(null != l.request_id ? { request_id: l.request_id } : {}),
                         }),
-                            (0, c.sendUserMessage)(t, f.intl.string(U ? m.default.sMQt5O : m.default.UGqnoV)),
+                            (0, c.sendUserMessage)(t, f.intl.string(N ? h.default.sMQt5O : h.default.UGqnoV)),
                             await v());
                     } catch (e) {
                         if (e instanceof x) {
-                            ((0, c.sendUserMessage)(t, f.intl.string(m.default.KVBvVy)), await v());
+                            ((0, c.sendUserMessage)(t, f.intl.string(h.default.KVBvVy)), await v());
                             return;
                         }
-                        k(!0);
+                        y(!0);
                     } finally {
-                        y(!1);
+                        k(!1);
                     }
                 }
             },
-            [N, q, U, v, t, l.request_id, j, b],
+            [M, S, N, v, t, l.request_id, j, b],
         );
     return (0, a.jsx)("form", {
-        onSubmit: M,
+        onSubmit: U,
         children: (0, a.jsx)(n.a, {
             transitionState: u,
             onClose: v,
-            title: f.intl.string(m.default.TuMGZp),
+            title: f.intl.string(h.default.TuMGZp),
             size: "md",
             actions: [
                 { text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: v, disabled: j },
-                { text: f.intl.string(m.default.DUdtms), variant: "primary", type: "submit", loading: j, disabled: !N },
+                { text: f.intl.string(h.default.DUdtms), variant: "primary", type: "submit", loading: j, disabled: !M },
             ],
             children: (0, a.jsxs)("div", {
                 className: p._I,
@@ -89,14 +82,14 @@ function v(e) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         selectable: !0,
-                        children: f.intl.string(m.default.jgDBJZ),
+                        children: f.intl.string(h.default.jgDBJZ),
                     }),
                     l.fields.length > 1
                         ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               selectable: !0,
-                              children: f.intl.string(m.default["La+pe4"]),
+                              children: f.intl.string(h.default["La+pe4"]),
                           })
                         : null,
                     (l.copy_values ?? []).length > 0
@@ -132,7 +125,7 @@ function v(e) {
                                                   variant: "secondary",
                                                   size: "sm",
                                                   text: f.intl.string(C === e.value ? f.t.t5VZ88 : f.t.OpuAlK),
-                                                  onClick: () => S(e.value),
+                                                  onClick: () => _(e.value),
                                               }),
                                           ],
                                       },
@@ -154,7 +147,7 @@ function v(e) {
                                         type: "password",
                                         autoComplete: "off",
                                         value: b[e.name] ?? "",
-                                        onChange: _,
+                                        onChange: q,
                                         disabled: j,
                                         fullWidth: !0,
                                     }),
@@ -163,7 +156,7 @@ function v(e) {
                                               variant: "text-xs/normal",
                                               color: "text-muted",
                                               selectable: !0,
-                                              children: f.intl.formatToPlainString(m.default.Ww9HFO, {
+                                              children: f.intl.formatToPlainString(h.default.Ww9HFO, {
                                                   hosts: (e.hosts ?? []).join(", "),
                                               }),
                                           })
@@ -178,7 +171,7 @@ function v(e) {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: f.intl.string(m.default.IrMuew),
+                              children: f.intl.string(h.default.IrMuew),
                           })
                         : null,
                 ],

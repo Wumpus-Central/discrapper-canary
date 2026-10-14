@@ -1,67 +1,53 @@
-(n.d(t, { DM: () => o, ms: () => u, oB: () => s, $D: () => m, _m: () => c, Du: () => i, dz: () => f }),
-    n(323874),
-    n(14289),
-    n(35956));
-var l = n(382541),
+n.d(t, { DM: () => o, ms: () => u, oB: () => s, $D: () => m, _m: () => c, Du: () => i, dz: () => f });
+var l = n(688954),
     r = n(513845),
     a = n(664619);
 async function i(e) {
-    let { ticket: t, baseUrl: n } = await (0, l.d)(e),
-        r = new URLSearchParams({ ticket: t }),
-        a = await fetch(`${n}/agent/source-history?${r}`);
-    if (!a.ok) throw Error(`version history failed (${a.status})`);
-    let i = await a.json();
+    let t = await (0, l.h)(e, "/agent/source-history");
+    if (!t.ok) throw Error(`version history failed (${t.status})`);
+    let n = await t.json();
     return {
-        entries: Array.isArray(i.entries) ? i.entries : [],
-        previewSha: "string" == typeof i.previewSha ? i.previewSha : null,
-        publishedSha: "string" == typeof i.publishedSha ? i.publishedSha : null,
+        entries: Array.isArray(n.entries) ? n.entries : [],
+        previewSha: "string" == typeof n.previewSha ? n.previewSha : null,
+        publishedSha: "string" == typeof n.publishedSha ? n.publishedSha : null,
     };
 }
 async function s(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, l.d)(e),
-        i = new URLSearchParams({ ticket: n }),
-        s = await fetch(`${r}/agent/source-history/${encodeURIComponent(t)}/restore?${i}`, { method: "POST" });
-    if (!s.ok) {
-        let e = (await s.text()).trim();
-        throw Error(`version restore failed (${s.status})${"" === e ? "" : `: ${e}`}`);
+    let n = await (0, l.h)(e, `/agent/source-history/${encodeURIComponent(t)}/restore`, { method: "POST" });
+    if (!n.ok) {
+        let e = (await n.text()).trim();
+        throw Error(`version restore failed (${n.status})${"" === e ? "" : `: ${e}`}`);
     }
-    let o = await s.json();
-    if (null == o.entry) throw Error("version restore returned no commit");
+    let r = await n.json();
+    if (null == r.entry) throw Error("version restore returned no commit");
     return (
-        !0 === o.live ||
+        !0 === r.live ||
             (0, a.tZ)(e, { isPreview: !0 }).catch((t) => {
                 console.error("[vibegrations] post-version-restore refresh failed", e, t);
             }),
-        o.entry
+        r.entry
     );
 }
 async function o(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, l.d)(e),
-        a = new URLSearchParams({ ticket: n, environment: t }),
-        i = await fetch(`${r}/agent/database/restore-points?${a}`);
-    if (!i.ok) throw Error(`restore points failed (${i.status})`);
-    let s = await i.json();
-    return Array.isArray(s.restorePoints) ? s.restorePoints : [];
+    let n = await (0, l.h)(e, "/agent/database/restore-points", { query: { environment: t } });
+    if (!n.ok) throw Error(`restore points failed (${n.status})`);
+    let r = await n.json();
+    return Array.isArray(r.restorePoints) ? r.restorePoints : [];
 }
 async function u(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, l.d)(e),
-        a = new URLSearchParams({ ticket: n, environment: t }),
-        i = await fetch(`${r}/agent/database/restore-window?${a}`);
-    if (!i.ok) throw Error(`restore window failed (${i.status})`);
-    return await i.json();
+    let n = await (0, l.h)(e, "/agent/database/restore-window", { query: { environment: t } });
+    if (!n.ok) throw Error(`restore window failed (${n.status})`);
+    return await n.json();
 }
 async function c(e, t, n) {
-    let { ticket: r, baseUrl: a } = await (0, l.d)(e),
-        i = new URLSearchParams({ ticket: r }),
-        s = await fetch(`${a}/agent/database/restore-points?${i}`, {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(null != n && "" !== n.trim() ? { environment: t, label: n } : { environment: t }),
-        });
-    if (!s.ok) throw Error(`restore point create failed (${s.status})`);
-    let o = await s.json();
-    if (null == o.restorePoint) throw Error("restore point create returned nothing");
-    return o.restorePoint;
+    let r = await (0, l.h)(e, "/agent/database/restore-points", {
+        method: "POST",
+        json: null != n && "" !== n.trim() ? { environment: t, label: n } : { environment: t },
+    });
+    if (!r.ok) throw Error(`restore point create failed (${r.status})`);
+    let a = await r.json();
+    if (null == a.restorePoint) throw Error("restore point create returned nothing");
+    return a.restorePoint;
 }
 async function d(e, t) {
     var n;
@@ -82,22 +68,10 @@ async function d(e, t) {
     return a;
 }
 async function m(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, l.d)(e),
-        a = new URLSearchParams({ ticket: n });
-    return d(
-        e,
-        await fetch(`${r}/agent/database/restore-points/${encodeURIComponent(t)}/restore?${a}`, { method: "POST" }),
-    );
+    let n = await (0, l.h)(e, `/agent/database/restore-points/${encodeURIComponent(t)}/restore`, { method: "POST" });
+    return d(e, n);
 }
 async function f(e, t, n) {
-    let { ticket: r, baseUrl: a } = await (0, l.d)(e),
-        i = new URLSearchParams({ ticket: r });
-    return d(
-        e,
-        await fetch(`${a}/agent/database/restore?${i}`, {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({ environment: t, timestampMs: n }),
-        }),
-    );
+    let r = await (0, l.h)(e, "/agent/database/restore", { method: "POST", json: { environment: t, timestampMs: n } });
+    return d(e, r);
 }
