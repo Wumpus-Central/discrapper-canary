@@ -3621,12 +3621,12 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #6ba8f5;
-    --collectibles-tab-gradient-inner: rgba(0, 130, 140, .5);
+    --collectibles-tab-gradient-center: #73adf5;
+    --collectibles-tab-gradient-inner: rgba(161, 87, 242, .25);
     --collectibles-tab-gradient-orange-center: #f25e0c;
     --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
     --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
-    --collectibles-tab-gradient-outer: rgba(0, 22, 31, 0);
+    --collectibles-tab-gradient-outer: rgba(0, 115, 227, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -4368,12 +4368,12 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #6ba8f5;
-    --collectibles-tab-gradient-inner: rgba(33, 128, 232, .5);
+    --collectibles-tab-gradient-center: #73adf5;
+    --collectibles-tab-gradient-inner: rgba(161, 87, 242, .25);
     --collectibles-tab-gradient-orange-center: #f25e0c;
     --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
     --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
-    --collectibles-tab-gradient-outer: rgba(97, 43, 176, 0);
+    --collectibles-tab-gradient-outer: rgba(0, 115, 227, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -5115,12 +5115,12 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #6ba8f5;
-    --collectibles-tab-gradient-inner: rgba(33, 128, 232, .5);
+    --collectibles-tab-gradient-center: #73adf5;
+    --collectibles-tab-gradient-inner: rgba(161, 87, 242, .25);
     --collectibles-tab-gradient-orange-center: #f25e0c;
     --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
     --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
-    --collectibles-tab-gradient-outer: rgba(97, 43, 176, 0);
+    --collectibles-tab-gradient-outer: rgba(46, 54, 173, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -5862,12 +5862,12 @@
     --chip-yellow-light-text: #572100;
     --chip-yellow-medium-background: #faab00;
     --chip-yellow-medium-text: #733800;
-    --collectibles-tab-gradient-center: #6ba8f5;
-    --collectibles-tab-gradient-inner: rgba(33, 128, 232, .5);
+    --collectibles-tab-gradient-center: #73adf5;
+    --collectibles-tab-gradient-inner: rgba(161, 87, 242, .25);
     --collectibles-tab-gradient-orange-center: #f25e0c;
     --collectibles-tab-gradient-orange-inner: rgba(189, 41, 51, .5);
     --collectibles-tab-gradient-orange-outer: rgba(133, 22, 33, 0);
-    --collectibles-tab-gradient-outer: rgba(97, 43, 176, 0);
+    --collectibles-tab-gradient-outer: rgba(0, 115, 227, 0);
     --content-inventory-media-seekbar-container: hsla(240, 7%, 80%, .24);
     --content-inventory-overlay-text-primary: hsla(0, 0%, 100%, .85);
     --content-inventory-overlay-text-secondary: hsla(0, 0%, 100%, .7);
@@ -6403,4 +6403,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=c49107d466941932.css.map*/
+/*# sourceMappingURL=c39574840f5dd150.css.map*/
