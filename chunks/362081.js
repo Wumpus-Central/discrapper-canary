@@ -73,8 +73,8 @@ function C(e) {
             cropPreset: H,
         } = _,
         V = n.useRef(null),
-        X = n.useRef(D),
-        [Z, W] = n.useState(L),
+        Z = n.useRef(D),
+        [X, W] = n.useState(L),
         [q, Y] = n.useState(!1),
         [J, Q] = n.useState(!1),
         ee = n.useRef(new Set()),
@@ -300,8 +300,8 @@ function C(e) {
             eg,
         ),
         n.useEffect(() => {
-            Z > 0 && K <= 0 && L <= 0 && O((e) => ({ ...e, cropEnd: Z }));
-        }, [Z, K, L]));
+            X > 0 && K <= 0 && L <= 0 && O((e) => ({ ...e, cropEnd: X }));
+        }, [X, K, L]));
     let eM = n.useMemo(() => K - B, [B, K]),
         eR = n.useCallback(
             (e) => (
@@ -327,10 +327,10 @@ function C(e) {
             setCropStart: w,
             setCropEnd: n.useCallback(
                 (e) => {
-                    let t = (0, i.clamp)(e, B + 1, Z);
+                    let t = (0, i.clamp)(e, B + 1, X);
                     (O((e) => ({ ...e, cropEnd: t })), V?.current?.seek(t));
                 },
-                [B, Z, O, V],
+                [B, X, O, V],
             ),
             setCrop: n.useCallback(
                 (e, t) => {
@@ -362,7 +362,7 @@ function C(e) {
         let e = V.current?.videoElement;
         if (null == e || !et.current) return;
         let t = e.currentTime;
-        (X.current !== t && ((X.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
+        (Z.current !== t && ((Z.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
             A.current?.style.setProperty("--custom-video-progress", `${(t / e.duration) * 100}%`));
     }),
         n.useEffect(() => {
@@ -418,7 +418,7 @@ function C(e) {
         eF = n.useMemo(
             () =>
                 function () {
-                    let [e, t] = n.useState(X.current);
+                    let [e, t] = n.useState(Z.current);
                     return (
                         n.useEffect(() => {
                             let e = {
@@ -436,12 +436,12 @@ function C(e) {
                         e
                     );
                 },
-            [X, ee],
+            [Z, ee],
         ),
         eH = n.useMemo(
             () => ({
                 useCurrentTime: eF,
-                duration: Z,
+                duration: X,
                 isPlaying: q,
                 isLoaded: J,
                 cropStart: B,
@@ -488,7 +488,7 @@ function C(e) {
             [
                 I,
                 eF,
-                Z,
+                X,
                 q,
                 J,
                 B,

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     U0: "lineContainer__9897f",
     my: "avatar__9897f",
     iE: "wrapper__9897f",

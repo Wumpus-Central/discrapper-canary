@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => b });
 var s = n(17928),
     r = n(73153),
     o = n(242779);
@@ -16,8 +16,8 @@ let i = { pending: !1, info: null, error: null, observedAt: null },
     g = new Map(),
     E = new Map(),
     S = new Map(),
-    O = new Map();
-class m extends s.Ay.Store {
+    m = new Map();
+class O extends s.Ay.Store {
     getStatus(e) {
         return c.get(e) ?? null;
     }
@@ -49,10 +49,10 @@ class m extends s.Ay.Store {
         return _.get(e) ?? null;
     }
     getTimingTraces(e) {
-        return O.get(e) ?? a;
+        return m.get(e) ?? a;
     }
     getTimingTrace(e, t) {
-        return O.get(e)?.find((e) => e.id === t) ?? null;
+        return m.get(e)?.find((e) => e.id === t) ?? null;
     }
 }
 function y(e, t, n) {
@@ -62,7 +62,7 @@ function y(e, t, n) {
         t !== s.instanceSince &&
         f.set(e, { phase: "restarted", instanceSince: t, observedAt: n });
 }
-let N = new m(r.h, {
+let b = new O(r.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -75,7 +75,7 @@ let N = new m(r.h, {
             0 === g.size &&
             0 === E.size &&
             0 === S.size &&
-            0 === O.size
+            0 === m.size
         )
             return !1;
         (c.clear(),
@@ -88,7 +88,7 @@ let N = new m(r.h, {
             g.clear(),
             E.clear(),
             S.clear(),
-            O.clear());
+            m.clear());
     },
     CONJURE_DEBUG_STATUS_REQUESTED: function (e) {
         let { projectId: t } = e;
@@ -211,7 +211,7 @@ let N = new m(r.h, {
     },
     CONJURE_DEBUG_TIMING_TRACE: function (e) {
         let { projectId: t, batch: n, live: s } = e,
-            r = O.get(t) ?? [],
+            r = m.get(t) ?? [],
             o = r.find((e) => e.id === n.trace_id) ?? null,
             i = r
                 .filter((e) => e !== o)
@@ -255,7 +255,7 @@ let N = new m(r.h, {
                 .sort((e, t) => t.started_at + t.as_of - (e.started_at + e.as_of))
                 .slice(0, 100)
                 .sort((e, t) => e.started_at - t.started_at);
-        O.set(t, i);
+        m.set(t, i);
     },
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, turn: n } = e;
@@ -274,6 +274,6 @@ let N = new m(r.h, {
             g.delete(t),
             E.delete(t),
             S.delete(t),
-            O.delete(t));
+            m.delete(t));
     },
 });

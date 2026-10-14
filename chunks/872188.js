@@ -1,8 +1,8 @@
 l.d(t, { A: () => m });
 var n = l(477900),
     i = l(582128),
-    s = l(765178),
-    a = l(885574),
+    a = l(765178),
+    s = l(885574),
     r = l(834730),
     d = l(821609),
     c = l(61567),
@@ -15,7 +15,7 @@ function m(e) {
         f = i.useCallback(async () => {
             (m(!0), h(!1));
             try {
-                (await t(), s.O.announce(u.intl.string(c.default.pDzipI)));
+                (await t(), a.O.announce(u.intl.string(c.default.pDzipI)));
             } catch {
                 h(!0);
             } finally {
@@ -25,7 +25,7 @@ function m(e) {
     return (0, n.jsxs)("div", {
         className: o.lm,
         children: [
-            (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
+            (0, n.jsx)(s.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
             x
                 ? (0, n.jsx)(r.E, {
                       variant: "text-sm/medium",

@@ -17,21 +17,21 @@ function i(e) {
             .sort(n),
     ];
 }
-function s(e) {
+function a(e) {
     return e.flatMap((e, t) =>
         e.map((e, l) =>
             e.position.column === t && e.position.order === l ? e : { ...e, position: { column: t, order: l } },
         ),
     );
 }
-function a(e) {
-    return s(i(e));
+function s(e) {
+    return a(i(e));
 }
 function r(e, t, l) {
     let n = i(e),
-        a = n[+(l?.column === 1)],
-        r = l?.index ?? a.length;
-    return (a.splice(Math.max(0, Math.min(r, a.length)), 0, t), s(n));
+        s = n[+(l?.column === 1)],
+        r = l?.index ?? s.length;
+    return (s.splice(Math.max(0, Math.min(r, s.length)), 0, t), a(n));
 }
 function d(e, t, l, n) {
     let i =
@@ -41,7 +41,7 @@ function d(e, t, l, n) {
                       let { id: t } = e;
                       return t !== n;
                   }),
-        s = (
+        a = (
             null == n
                 ? t
                 : t.filter((e) => {
@@ -49,19 +49,19 @@ function d(e, t, l, n) {
                       return t !== n;
                   })
         )[l];
-    if (null == s) return i.length;
-    let a = i.findIndex((e) => {
+    if (null == a) return i.length;
+    let s = i.findIndex((e) => {
         let { id: t } = e;
-        return t === s.id;
+        return t === a.id;
     });
-    return -1 === a ? i.length : a;
+    return -1 === s ? i.length : s;
 }
 function c(e, t, l, n) {
-    let a = e.find((e) => {
+    let s = e.find((e) => {
         let { id: l } = e;
         return l === t;
     });
-    if (null == a) return null;
+    if (null == s) return null;
     let r = i(e),
         d = [
             r[0].filter((e) => {
@@ -74,6 +74,6 @@ function c(e, t, l, n) {
             }),
         ],
         c = d[+(1 === l)];
-    return (c.splice(Math.max(0, Math.min(n, c.length)), 0, a), s(d));
+    return (c.splice(Math.max(0, Math.min(n, c.length)), 0, s), a(d));
 }
-l.d(t, { Gm: () => c, O6: () => d, QD: () => r, Rl: () => i, W$: () => a });
+l.d(t, { Gm: () => c, O6: () => d, QD: () => r, Rl: () => i, W$: () => s });

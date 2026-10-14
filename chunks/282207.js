@@ -43,8 +43,8 @@ var a = l(477900),
     F = l(503698),
     H = l.n(F),
     V = l(31300),
-    X = l(646270),
-    Z = l(748562),
+    Z = l(646270),
+    X = l(748562),
     W = l(477155),
     q = l(939249),
     Y = l(417270),
@@ -55,8 +55,8 @@ var a = l(477900),
     el = l(367454);
 let ea = [
     { preset: J.yz.ORIGINAL, icon: V.k, label: Q.default.CujCES },
-    { preset: J.yz.PORTRAIT_9_16, icon: X.u, label: Q.default["34PW6m"] },
-    { preset: J.yz.LANDSCAPE_16_9, icon: Z.U, label: Q.default.ywAdnD },
+    { preset: J.yz.PORTRAIT_9_16, icon: Z.u, label: Q.default["34PW6m"] },
+    { preset: J.yz.LANDSCAPE_16_9, icon: X.U, label: Q.default.ywAdnD },
 ];
 function en() {
     let { cropPreset: e, setCropPreset: t, setActiveTool: l } = (0, $.T)();
@@ -496,8 +496,8 @@ function eb(e) {
             voiceAudioEnabled: F,
             setVoiceAudioEnabled: H,
             applicationAudioEnabled: V,
-            setApplicationAudioEnabled: X,
-            soundboardAudioEnabled: Z,
+            setApplicationAudioEnabled: Z,
+            soundboardAudioEnabled: X,
             setSoundboardAudioEnabled: W,
             pause: q,
             clip: Y,
@@ -717,7 +717,7 @@ function eb(e) {
                                                     : (0, a.jsx)(E.L, { size: "sm", color: "currentColor" }),
                                             label: eA,
                                             enabled: V,
-                                            onToggle: X,
+                                            onToggle: Z,
                                         }),
                                         (0, a.jsx)(ey, {
                                             icon: (0, a.jsx)(N.MicrophoneIcon, { size: "sm", color: "currentColor" }),
@@ -730,7 +730,7 @@ function eb(e) {
                                         (0, a.jsx)(ey, {
                                             icon: (0, a.jsx)(k.J, { size: "sm", color: "currentColor" }),
                                             label: ee.intl.string(Q.default["/VVQKJ"]),
-                                            enabled: Z,
+                                            enabled: X,
                                             disabled: 0 === ek,
                                             onToggle: W,
                                         }),
