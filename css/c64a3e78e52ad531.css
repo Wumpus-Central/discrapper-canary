@@ -52,6 +52,17 @@
     flex-shrink: 0
 }
 
+.hiddenAvatar__86e10 {
+    align-items: center;
+    background-color: var(--border-subtle);
+    border-radius: var(--radius-round);
+    display: flex;
+    flex-shrink: 0;
+    height: var(--space-32);
+    justify-content: center;
+    width: var(--space-32)
+}
+
 .member__86e10 {
     flex: 1;
     min-width: 0
@@ -391,4 +402,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=4ee839e1d714449e.css.map*/
+/*# sourceMappingURL=c64a3e78e52ad531.css.map*/

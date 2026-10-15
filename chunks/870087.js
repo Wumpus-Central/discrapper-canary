@@ -7,6 +7,7 @@ _.exports = {
     Tm: "rank__86e10",
     mH: "rankNumber__86e10",
     my: "avatar__86e10",
+    gt: "hiddenAvatar__86e10",
     Dc: "member__86e10",
     TH: "metric__86e10",
     bf: "metricPrimary__86e10",
