@@ -168,13 +168,13 @@ var eq = t(110384),
     e0 = t(131607),
     e8 = t(928658),
     e1 = t(400528),
-    e7 = t(892340),
-    e2 = t(715757),
+    e2 = t(892340),
+    e7 = t(715757),
     e4 = t(967198),
     e6 = t(287809),
     e5 = t(628691),
     e9 = t(49999),
-    e3 = t(39470),
+    e3 = t(256416),
     ne = t(663417),
     nn = t(965407),
     nt = t(249700),
@@ -305,8 +305,8 @@ function nB(e) {
             channel: n0,
             mediaItem: n8,
             textSelection: n1,
-            favoriteableType: n7,
-            favoriteableId: n2,
+            favoriteableType: n2,
+            favoriteableId: n7,
             favoriteableName: n4,
             itemHref: n6,
             itemSrc: n5,
@@ -871,7 +871,7 @@ function nB(e) {
         tR = (0, ey.A)(nQ, n0),
         tw =
             ((nH = (0, x.bG)([e4.A], () => e4.A.getGuildId())),
-            (nz = (0, e2.Qo)(nH)),
+            (nz = (0, e7.Qo)(nH)),
             (0, e5.ul)(nQ)
                 ? (0, l.jsx)(r.Dr, {
                       id: "report",
@@ -897,7 +897,7 @@ function nB(e) {
                 : null),
         tP = (function (e) {
             let n = (0, x.bG)([e1.A], () => e1.A.hasReportedMessage(e.channel_id, e.id)),
-                t = (0, e7.KB)(e),
+                t = (0, e2.KB)(e),
                 i = t ? [eW.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, s] = (0, e0.kn)(i);
             return ((0, eY.l0)(() => {
@@ -918,7 +918,7 @@ function nB(e) {
                   })
                 : null;
         })(nQ),
-        tk = (0, eD.A)({ type: n7, id: n2, name: n4 }),
+        tk = (0, eD.A)({ type: n2, id: n7, name: n4 }),
         tB = (function (e, n) {
             let { perGuildMaxCount: t } = N.i$[H],
                 { isLoading: i, saveRule: s, errorMessage: o } = (0, R.S)(),
@@ -1153,7 +1153,7 @@ function nB(e) {
                         }),
                 ],
             });
-        })({ messageId: nQ.id, itemId: n2, type: n7, imageSrc: n5 }),
+        })({ messageId: nQ.id, itemId: n7, type: n2, imageSrc: n5 }),
         tV = (0, l.jsx)(r.rX, { children: tJ ?? tq }),
         tW = (0, l.jsxs)(r.rX, { children: [tk, tB, tF, tX, tH, tz] });
     return (0, l.jsxs)(o.W, {

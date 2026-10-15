@@ -680,7 +680,7 @@ var ek = n(269115),
     eP = n(758836),
     eB = n(49999),
     eH = n(818348),
-    eU = n(394107),
+    eU = n(344045),
     eF = n(196064);
 let eV = "GAME_SERVER_HOSTING_BANNER";
 function eG(e) {
@@ -954,7 +954,7 @@ let e1 = function (e) {
 var e2 = n(172218),
     e5 = n(28863),
     e4 = n(9530);
-let e9 = function (e) {
+let e3 = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
         l = (0, e2.K)(
             (e) => {
@@ -1011,7 +1011,7 @@ let e9 = function (e) {
         ],
     });
 };
-var e3 = n(449543),
+var e9 = n(449543),
     e6 = n(197935),
     e8 = n(275161),
     e7 = n(554661);
@@ -1094,7 +1094,7 @@ let tn = function (e) {
                                           e.skuId,
                                       ),
                               })
-                            : (0, i.jsx)(e3.A, {
+                            : (0, i.jsx)(e9.A, {
                                   gap: "xl",
                                   edgeFade: v ? "sm" : void 0,
                                   children: E.map((e, n) =>
@@ -1449,7 +1449,7 @@ let tx = function (e) {
                                     break;
                                 case u.g.IMMERSIVE_BANNER:
                                     d = (0, i.jsx)(
-                                        e9,
+                                        e3,
                                         { immersiveBannerBlock: e, onVisibilityChange: (e) => h(!e) },
                                         a,
                                     );

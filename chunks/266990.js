@@ -8,7 +8,7 @@ var n = l(477900),
     o = l(733791),
     s = l(298702),
     c = l(706935),
-    d = l(248675),
+    d = l(261425),
     f = l(105292);
 function A(e) {
     let { app: t, title: l, heading: s, body: A, items: g, confirmText: m, onPlainConfirm: b, children: h, ...v } = e,

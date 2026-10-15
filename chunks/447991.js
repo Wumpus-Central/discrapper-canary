@@ -6,7 +6,7 @@ var t = s(477900),
 let l = a.lazy(() =>
         (0, n.sq)({
             createPromise: () =>
-                Promise.all([s.e("216870"), s.e("643612"), s.e("133179"), s.e("334127")]).then(s.bind(s, 266546)),
+                Promise.all([s.e("216870"), s.e("390098"), s.e("133179"), s.e("334127")]).then(s.bind(s, 266546)),
             webpackId: 266546,
             name: "DiscordVideoPlayer",
         }),

@@ -3,7 +3,7 @@ let n = r(574253),
     a = r(176891),
     i = r(176891),
     s = r(798401),
-    o = r(167385),
+    o = r(389766),
     u = RegExp(
         `([0-9]{1,2})(?:\xba|\xaa|\xb0)?(?:\\s*(?:desde|de|\\-|\\\u{2013}|ao?|\\s)\\s*([0-9]{1,2})(?:\xba|\xaa|\xb0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(${(0, s.matchAnyPattern)(a.MONTH_DICTIONARY)})(?:\\s*(?:de|,)?\\s*(${i.YEAR_PATTERN}))?(?=\\W|$)`,
         "i",

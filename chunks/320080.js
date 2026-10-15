@@ -891,9 +891,9 @@ let e1 = (0, a.memo)(
 var e3 = t(435558),
     e2 = t.n(e3),
     e4 = t(837381),
-    e8 = t(847374),
+    e6 = t(847374),
     e7 = t(912592),
-    e6 = t(821609),
+    e8 = t(821609),
     e9 = t(475825),
     e5 = t(928039),
     ne = t(625494);
@@ -917,7 +917,7 @@ let nn = { [eL.Ur.UNREAD]: !0, [eL.Ur.TODAY]: !0, [eL.Ur.YESTERDAY]: !1, [eL.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? nt : nn }));
         },
     }));
-var na = t(871423),
+var na = t(645617),
     ni = t(875436);
 function nl(e) {
     e.stopPropagation();
@@ -939,7 +939,7 @@ function nr(e) {
                     className: ni.P7,
                     children: (0, e3.capitalize)(eD.intl.string(eL.v7[n]).toLowerCase()),
                 }),
-                (0, s.jsx)(e8.a, { size: "xxs", className: ni.ai }),
+                (0, s.jsx)(e6.a, { size: "xxs", className: ni.ai }),
             ],
         }),
     });
@@ -971,7 +971,7 @@ function nc() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e6.$, {
+                (0, s.jsx)(e8.$, {
                     variant: "secondary",
                     onClick: () => (0, _.tZ)(e),
                     text: eD.intl.string(na.default.klSpfs),

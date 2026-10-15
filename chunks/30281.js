@@ -3367,7 +3367,7 @@ var nu = a(825484),
     nb = a(967198),
     ny = a(942370),
     nE = a(105292),
-    nC = a(211850),
+    nC = a(538524),
     nS = a(681135);
 function n_() {
     var e;
@@ -8047,7 +8047,7 @@ let rH = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/Settings.lottie": () =>
         a.e("494483").then(a.t.bind(a, 155806, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/Soundboard.lottie": () =>
-        a.e("350115").then(a.t.bind(a, 535662, 17)),
+        a.e("350115").then(a.t.bind(a, 313281, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/Sticker.lottie": () =>
         a.e("897473").then(a.t.bind(a, 956248, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/Waveform.lottie": () =>
@@ -8277,7 +8277,7 @@ let rH = {
     "discord_common/js/shared/animations/app/premium_marketing_surface/unlock.lottiejson": () =>
         a.e("131838").then(a.t.bind(a, 650125, 19)),
     "discord_common/js/shared/animations/app/premium_marketing/index.lottiejson": () =>
-        a.e("406954").then(a.t.bind(a, 186910, 19)),
+        a.e("406954").then(a.t.bind(a, 964529, 19)),
     "discord_common/js/shared/animations/app/premium_payment_guild/index.lottiejson": () =>
         a.e("945870").then(a.t.bind(a, 738503, 19)),
     "discord_common/js/shared/animations/app/premium-activated-tier-1/premium-activated-tier-1.lottiejson": () =>
@@ -8517,7 +8517,7 @@ let rQ = {
                     a.e("708364"),
                     a.e("452823"),
                     a.e("8422"),
-                    a.e("779348"),
+                    a.e("556967"),
                     a.e("647011"),
                     a.e("269178"),
                     a.e("553584"),
@@ -9896,7 +9896,7 @@ let og = {
         let { default: e } = await Promise.all([
                 a.e("36781"),
                 a.e("713710"),
-                a.e("36395"),
+                a.e("803461"),
                 a.e("155925"),
                 a.e("137381"),
                 a.e("259375"),
@@ -9921,7 +9921,7 @@ let og = {
         let { default: e } = await Promise.all([
                 a.e("36781"),
                 a.e("713710"),
-                a.e("36395"),
+                a.e("803461"),
                 a.e("155925"),
                 a.e("137381"),
                 a.e("259375"),
@@ -10041,7 +10041,7 @@ let og = {
     },
     OtherFriendRequestsModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("827776"),
+            a.e("605395"),
             a.e("979862"),
             a.e("791370"),
             a.e("548018"),

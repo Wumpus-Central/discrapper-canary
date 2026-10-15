@@ -42,11 +42,11 @@ function P(e) {
     }, [t?.entitlements]);
 }
 var R = l(105292),
-    L = l(25525),
+    L = l(356863),
     D = l(144977),
     O = l(628049),
     U = l(568065),
-    B = l(394107),
+    B = l(344045),
     V = l(929729),
     M = l(517826);
 function W(e) {
@@ -695,7 +695,7 @@ function e0(e) {
     return { variant: e, content: u, isReserved: d };
 }
 var e1 = l(463080);
-function e8(e) {
+function e6(e) {
     let { text: t } = e,
         l = (0, j.c)("Tier3OverrideNotice");
     return (0, n.jsx)("div", {
@@ -703,7 +703,7 @@ function e8(e) {
         children: (0, n.jsx)(I.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
-function e6(e) {
+function e8(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ep.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
             ? { shouldShow: !0, text: R.intl.string(L.default.l9n4QZ) }
@@ -755,7 +755,7 @@ function e6(e) {
                       color: d ? "text-strong" : "text-subtle",
                       children: R.intl.string(L.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, n.jsx)(e8, { text: l.text }),
+                  l.shouldShow && (0, n.jsx)(e6, { text: l.text }),
                   s.shouldShow &&
                       (0, n.jsx)(eQ, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
                   o.shouldShow &&
@@ -797,10 +797,10 @@ function e2(e) {
         ],
     });
 }
-var e5 = l(862482),
-    e3 = l(944304),
-    e7 = l(975571),
-    e4 = l(380572);
+var e3 = l(862482),
+    e5 = l(944304),
+    e4 = l(975571),
+    e7 = l(380572);
 function te(e) {
     let { count: t, type: l } = e,
         i = (0, j.c)("GuildPowerupsBoostInfo"),
@@ -815,12 +815,12 @@ function te(e) {
             }
         })(t, l);
     return (0, n.jsxs)("div", {
-        className: e4.k,
+        className: e7.k,
         role: "img",
         "aria-label": `${t}, ${s}`,
         children: [
             (0, n.jsxs)("div", {
-                className: e4.N,
+                className: e7.N,
                 "aria-hidden": "true",
                 children: [
                     (0, n.jsx)(f._, {
@@ -865,7 +865,7 @@ function tl(e) {
                             className: tt.C2,
                             variant: a ? "experimental/body-sm/medium" : "text-xs/semibold",
                             children: R.intl.format(L.default.fXE30d, {
-                                helpDeskArticle: e7.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
+                                helpDeskArticle: e4.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
                             }),
                         }),
                     ],
@@ -878,15 +878,15 @@ function tl(e) {
                         (0, n.jsx)(te, { count: o, type: U.yG.TOTAL }),
                     ],
                 }),
-                (0, n.jsx)(e3.A, {
+                (0, n.jsx)(e5.A, {
                     className: tt.S6,
                     guild: l,
                     analyticsLocation: {
                         page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                         section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: e5.XD.CUSTOM,
-                    size: e5.lO.LARGE,
+                    color: e3.XD.CUSTOM,
+                    size: e3.lO.LARGE,
                     icon: (0, n.jsx)(f._, {
                         className: tt.Ng,
                         size: "sm",
@@ -979,15 +979,15 @@ function tA(e) {
                               className: tg.$J,
                           }),
                       }),
-                  (0, n.jsx)(e3.A, {
+                  (0, n.jsx)(e5.A, {
                       guild: l,
                       className: tg.Qs,
                       analyticsLocation: {
                           page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: e5.XD.BRAND,
-                      size: e5.lO.MEDIUM,
+                      color: e3.XD.BRAND,
+                      size: e3.lO.MEDIUM,
                       fullWidth: !0,
                       icon: (0, n.jsx)(f._, { color: "currentColor", size: "sm" }),
                   }),
@@ -1467,7 +1467,7 @@ function tk(e) {
                               children: [
                                   P
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e6, { guildId: N })],
+                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e8, { guildId: N })],
                                         })
                                       : (0, n.jsx)(tT, { guildId: N }),
                                   (0, n.jsx)(tC, { guildId: N }),

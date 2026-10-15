@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(793277),
     a = r(115835),
-    i = r(167385);
+    i = r(389766);
 class s extends i.AbstractParserWithWordBoundaryChecking {
     innerPattern() {
         return RegExp("(?:binnen|in|binnen de|voor)\\s*(" + n.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");

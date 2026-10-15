@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(793277),
     a = r(798401),
-    i = r(167385),
+    i = r(389766),
     s = r(855616),
     o = RegExp(
         `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(${(0, a.matchAnyPattern)(n.WEEKDAY_DICTIONARY)})(?=\\W|$)`,

@@ -1072,7 +1072,7 @@ var ea = a(356118),
     el = a(652215),
     en = a(758836),
     er = a(105292),
-    es = a(855494);
+    es = a(346148);
 let eo = { prioritizedCurrency: en.Hi.ORBS },
     ei = {
         name: "Remote Layouts",
