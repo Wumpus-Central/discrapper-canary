@@ -17,5 +17,4 @@ _.exports = {
     Rb: "barDetail__40b01",
     w9: "barTitle__40b01",
     lC: "barActions__40b01",
-    y4: "announcer__40b01",
 };
