@@ -176,7 +176,12 @@
 }
 
 .questName__956c6 {
-    margin-bottom: 4px
+    font-size: 12px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .02em;
+    line-height: 16px;
+    margin-bottom: 4px;
+    text-transform: uppercase
 }
 
 .subtitleRow__956c6 {
@@ -216,4 +221,4 @@
     top: 0
 }
 
-/*# sourceMappingURL=314001.1315b9189c9cf296.css.map*/
+/*# sourceMappingURL=314001.11a37a6f9cb27f40.css.map*/
