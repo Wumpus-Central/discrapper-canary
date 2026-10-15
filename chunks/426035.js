@@ -1,4 +1,4 @@
-n.d(e, { AS: () => h, Du: () => _, kF: () => C, ug: () => E, wv: () => s, xI: () => p });
+n.d(e, { AS: () => h, Du: () => _, kF: () => p, ug: () => E, wv: () => s, xI: () => C });
 var r = n(587895),
     i = n(321191),
     l = n(808728),
@@ -27,7 +27,7 @@ function h(t, e) {
 function s(t, e) {
     return (null != e && a.A.canManageUser(d.xBc.KICK_MEMBERS, e, t)) || a.A.can(d.xBc.MANAGE_GUILD, t);
 }
-function p(t, e) {
+function C(t, e) {
     return l.Ay.getChannels(t)
         [l.I6].map((t) => {
             let { channel: e } = t;
@@ -35,10 +35,10 @@ function p(t, e) {
         })
         .filter((t) => (0, c.us)(t) === e);
 }
-function C(t) {
+function p(t) {
     if ("user" === t.install_scope || null == t.guild_id || null == u.A.getGuild(t.guild_id)) return null;
     let e = h(t, t.guild_id);
-    return !0 === e || p(t.guild_id, t.application_id).length > 0
+    return !0 === e || C(t.guild_id, t.application_id).length > 0
         ? "in_server"
         : (t.supported_surfaces?.length ?? 0) > 0 && ((0, o.Hv)(t) || !1 === e)
           ? "not_in_server"

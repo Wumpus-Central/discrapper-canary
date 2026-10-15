@@ -1,4 +1,4 @@
-t.d(a, { KS: () => x, Wf: () => y, ZB: () => P });
+t.d(a, { KS: () => x, Wf: () => f, ZB: () => g });
 var l = t(477900),
     n = t(582128),
     r = t(643909),
@@ -14,8 +14,8 @@ var l = t(477900),
     E = t(648335),
     p = t(652215),
     C = t(818348),
-    g = t(400400);
-let y = n.memo(function (e) {
+    y = t(400400);
+let f = n.memo(function (e) {
     let {
             paymentMethodOrder: a,
             wallets: t = [],
@@ -24,9 +24,9 @@ let y = n.memo(function (e) {
             options: d,
             onChange: m,
             step: A,
-            ...g
+            ...y
         } = e,
-        y = (0, i.bG)([o.default], () => {
+        f = (0, i.bG)([o.default], () => {
             let e = o.default.getCurrentUser();
             return null != e ? e.email : null;
         }),
@@ -34,7 +34,7 @@ let y = n.memo(function (e) {
             let e = o.default.getCurrentUser();
             return null != e ? e.globalName : null;
         }),
-        P = n.useCallback(
+        g = n.useCallback(
             (e) => {
                 if (A !== u.pn.PAYMENT_ELEMENT) return;
                 let a = (0, E.Wn)(e.value.type, s);
@@ -62,20 +62,20 @@ let y = n.memo(function (e) {
             }),
             [t],
         ),
-        T = n.useMemo(
-            () => ({ billingDetails: { ...(null != y && { email: y }), ...(null != _ && { name: _ }) } }),
-            [y, _],
+        P = n.useMemo(
+            () => ({ billingDetails: { ...(null != f && { email: f }), ...(null != _ && { name: _ }) } }),
+            [f, _],
         ),
-        f = n.useMemo(
+        T = n.useMemo(
             () => ({
                 id: "stripe-payment-element",
-                options: { layout: { type: "tabs" }, wallets: x, defaultValues: T, paymentMethodOrder: a, ...d },
-                onChange: P,
-                ...g,
+                options: { layout: { type: "tabs" }, wallets: x, defaultValues: P, paymentMethodOrder: a, ...d },
+                onChange: g,
+                ...y,
             }),
-            [x, T, d, g, P, a],
+            [x, P, d, y, g, a],
         );
-    return (0, l.jsx)(r.PaymentElement, { ...f });
+    return (0, l.jsx)(r.PaymentElement, { ...T });
 });
 function _(e) {
     let { children: a } = e,
@@ -88,7 +88,7 @@ function _(e) {
         children: a,
     });
 }
-function P(e) {
+function g(e) {
     return null != e && null != e && (!(0, h.uJ)(e.line1) || !(0, h.uJ)(e.city));
 }
 let x = n.memo(function (e) {
@@ -104,7 +104,7 @@ let x = n.memo(function (e) {
         A = null != c && c.length > 0 ? c[0] : (0, h.uJ)(s.country) ? "" : s.country,
         E = n.useMemo(() => {
             let { name: e, address: a } = (0, d._Z)({ ...s, country: A });
-            return null != a && P(a)
+            return null != a && g(a)
                 ? {
                       ...(null != e && "" !== e && { name: e }),
                       address: Object.fromEntries(
@@ -134,7 +134,7 @@ let x = n.memo(function (e) {
         ? (0, l.jsxs)(_, {
               children: [
                   (0, l.jsx)("div", {
-                      className: g.R,
+                      className: y.R,
                       children: (0, l.jsx)(r.PaymentElement, { id: "stripe-payment-element" }),
                   }),
                   C,

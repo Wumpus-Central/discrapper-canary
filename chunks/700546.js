@@ -1,25 +1,25 @@
-t.d(e, { A: () => p });
+t.d(a, { A: () => p });
 var l = t(477900),
     n = t(17928),
-    s = t(821609),
-    r = t(297264),
-    h = t(344346),
-    i = t(303136),
+    r = t(821609),
+    s = t(297264),
+    i = t(344346),
+    h = t(303136),
     c = t(287809),
-    o = t(676279),
-    u = t(573359),
+    u = t(676279),
+    o = t(573359),
     d = t(659746),
     m = t(660183),
     A = t(902062);
-let p = function (a) {
-    let { type: e, text: t, buttonText: p, buttonLoading: P, hideClose: E, onClose: M } = a,
+let p = function (e) {
+    let { type: a, text: t, buttonText: p, buttonLoading: E, hideClose: P, onClose: M } = e,
         C = (0, n.bG)([c.default], () => c.default.getCurrentUser()),
-        T = (0, n.bG)([u.A], () => u.A.nameplatePreviewOverrides),
-        g = (0, o.TM)()
+        T = (0, n.bG)([o.A], () => o.A.nameplatePreviewOverrides),
+        y = (0, u.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
-        y = (function (a) {
-            switch (a) {
+        I = (function (e) {
+            switch (e) {
                 case d.Or.PREMIUM_UPDATED:
                     return m.intl.string(m.t["75Wt0E"]);
                 case d.Or.PREMIUM_ACTIVATED:
@@ -27,22 +27,22 @@ let p = function (a) {
                 default:
                     return m.intl.string(m.t.X79Az5);
             }
-        })(e);
+        })(a);
     return (0, l.jsxs)("div", {
         className: A.kL,
         children: [
-            (0, l.jsx)(r.D, { className: A.wx, variant: "nitro-lg", color: "text-strong", children: y }),
+            (0, l.jsx)(s.D, { className: A.wx, variant: "nitro-lg", color: "text-strong", children: I }),
             null != C &&
                 (0, l.jsxs)("div", {
                     className: A.Dz,
                     children: [
-                        (0, l.jsx)(i.A, {
+                        (0, l.jsx)(h.A, {
                             fallbackImage:
                                 "https://cdn.discordapp.com/assets/content/3ce3d676b7d77ce5184982326720c020ad6ba69d47068473e0096a62472a81d6.png",
                             className: A.d9,
-                            children: (0, l.jsx)("source", { src: g }),
+                            children: (0, l.jsx)("source", { src: y }),
                         }),
-                        (0, l.jsx)(h.A, {
+                        (0, l.jsx)(i.A, {
                             user: C,
                             isHighlighted: !0,
                             nameplate: null,
@@ -55,15 +55,15 @@ let p = function (a) {
                     ],
                 }),
             (0, l.jsx)("div", { className: A.FS, children: t }),
-            !E &&
+            !P &&
                 (0, l.jsx)("div", {
                     className: A.qr,
-                    children: (0, l.jsx)(s.$, {
+                    children: (0, l.jsx)(r.$, {
                         variant: "expressive",
                         fullWidth: !0,
                         text: p,
                         onClick: M,
-                        loading: P,
+                        loading: E,
                     }),
                 }),
         ],

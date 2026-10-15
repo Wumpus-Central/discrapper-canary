@@ -13,8 +13,8 @@ function E(t) {
     let { processedCode: e, channelContext: E, customGiftMessage: _, giftInfo: C } = t,
         T = !1,
         g = null,
-        h = a.default.getCurrentUser(),
-        p = (0, r.CC)(h?.premiumType, c.PremiumTypes.TIER_0);
+        p = a.default.getCurrentUser(),
+        h = (0, r.CC)(p?.premiumType, c.PremiumTypes.TIER_0);
     (0, s.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
@@ -54,7 +54,7 @@ function E(t) {
             onCloseCallback: () => {
                 T &&
                     null != g &&
-                    !p &&
+                    !h &&
                     g.isSubscription &&
                     g?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
                     o._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);

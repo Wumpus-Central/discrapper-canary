@@ -20,8 +20,8 @@ var r = n(477900),
     g = n(966327),
     _ = n(674658),
     P = n(769015),
-    A = n(242874),
-    x = n(810498),
+    x = n(242874),
+    A = n(810498),
     v = n(531536),
     R = n(175452),
     M = n(427358),
@@ -45,8 +45,8 @@ var r = n(477900),
     Y = n(590180),
     q = n(450047),
     Q = n(61750),
-    z = n(192308),
-    V = n(780964),
+    V = n(192308),
+    z = n(780964),
     X = n(766075),
     $ = n(403362),
     J = n(758836),
@@ -67,7 +67,7 @@ function er(e) {
         } = e,
         [C, E] = l.useState([]),
         [_, P] = l.useState(!1),
-        { isLoading: x, potentialRecipients: v } = (function () {
+        { isLoading: A, potentialRecipients: v } = (function () {
             l.useEffect(() => {
                 (S.A.fetchRelationships(), (0, R.u)());
             }, []);
@@ -115,7 +115,7 @@ function er(e) {
         try {
             if (U) {
                 let e = b[0];
-                (await (0, A.UN)(e, t), (l = { recipients: [e], failedRecipients: [] }));
+                (await (0, x.UN)(e, t), (l = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == s) throw Error("Checkout session ID must be defined");
                 let e = await (0, K.kW)(C, s),
@@ -138,7 +138,7 @@ function er(e) {
                 canShowGiftingBadgePostPurchase: f,
                 openGiftingBadgePostPurchaseModal: h,
             }),
-            (0, z.openModalLazy)(async () => {
+            (0, V.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([n.e("719466"), n.e("692318")]).then(n.bind(n, 150061));
                 return (n) => (0, r.jsx)(t, { ...n, ...e });
             }));
@@ -186,7 +186,7 @@ function er(e) {
                                               label: ee.intl.string(et.default.ZolTTE),
                                               hideLabel: !0,
                                               placeholder: ee.intl.string(et.default.xdDO7f),
-                                              loading: x || j,
+                                              loading: A || j,
                                               disabled: j || _,
                                               value: C,
                                               onSelectionChange: ed,
@@ -198,7 +198,7 @@ function er(e) {
                                       selectionMode: "single",
                                       label: ee.intl.string(ee.t.MJw05f),
                                       placeholder: ee.intl.string(ee.t.J019jZ),
-                                      loading: x || j,
+                                      loading: A || j,
                                       disabled: j || _,
                                       value: C[0],
                                       onSelectionChange: (e) => ed(null != e ? [e] : []),
@@ -213,7 +213,7 @@ function er(e) {
                         message: ee.intl.format(et.default.ZvgWUV, {
                             giftCount: i,
                             onInventoryClick: function () {
-                                (p(), (0, I.bz)(), (0, X.openUserSettings)(V.X.GIFT_PANEL, { analyticsLocations: T }));
+                                (p(), (0, I.bz)(), (0, X.openUserSettings)(z.X.GIFT_PANEL, { analyticsLocations: T }));
                             },
                         }),
                         role: "static",
@@ -279,7 +279,7 @@ function eu(e) {
             application: y,
             sku: S,
             subscriptionPlan: _,
-            selectedGiftStyle: A,
+            selectedGiftStyle: x,
             onClose: v,
             hasSentMessage: R,
             giftRecipient: M,
@@ -288,19 +288,19 @@ function eu(e) {
         } = e,
         [F, B] = l.useState(h.e.Modes.DEFAULT),
         D = (0, c.bG)([b.A], () => b.A.enabled),
-        G = R || (null != A && null != M),
+        G = R || (null != x && null != M),
         K = S?.productLine === ei.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: Z,
             openGiftingBadgePostPurchaseModal: W,
             canShowGiftingBadgePostPurchase: Y,
         } = (0, w.Pv)(),
-        q = (0, x.Mq)(_) && Z.length > 0,
+        q = (0, A.Mq)(_) && Z.length > 0,
         Q = Y && 0 === Z.length;
-    function z() {
+    function V() {
         return null != _ ? _.skuId : null != S ? S.id : null;
     }
-    function V() {
+    function z() {
         let e;
         return null != L
             ? ee.intl.string(ee.t.qB8aya)
@@ -353,7 +353,7 @@ function eu(e) {
               className: ea.EL,
               children: [
                   null != y
-                      ? (0, r.jsx)(P.A, { game: y, className: ea.__invalid_icon, size: P.M.LARGE, skuId: z() })
+                      ? (0, r.jsx)(P.A, { game: y, className: ea.__invalid_icon, size: P.M.LARGE, skuId: V() })
                       : null,
                   (0, r.jsx)(E.y, { type: E.t.PULSING_ELLIPSIS }),
               ],
@@ -380,12 +380,12 @@ function eu(e) {
                                       game: y,
                                       className: ea.__invalid_icon,
                                       size: P.M.LARGE,
-                                      skuId: z(),
+                                      skuId: V(),
                                   })
                                 : null,
                             (0, r.jsx)(C.D, {
                                 variant: "heading-lg/semibold",
-                                className: s()({ [ea.wx]: null == A && !K, [ea.$A]: null != A && !K }),
+                                className: s()({ [ea.wx]: null == x && !K, [ea.$A]: null != x && !K }),
                                 children:
                                     null != M || (R && null == L)
                                         ? ee.intl.string(ee.t.zOmK9N)
@@ -406,12 +406,12 @@ function eu(e) {
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsx)("div", { className: ea._c, children: V() }),
+                                          (0, r.jsx)("div", { className: ea._c, children: z() }),
                                       ],
                                   })
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)("div", { className: ea.I0, children: V() }),
+                                          (0, r.jsx)("div", { className: ea.I0, children: z() }),
                                           null == L &&
                                               (0, r.jsx)(eo, {
                                                   giftCode: t,
@@ -489,9 +489,9 @@ function eo(e) {
         I = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
         _ = u().difference(I, E),
         P = [...E, ..._],
-        x = (0, c.bG)([k.default], () => k.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
-    if (null == x || 0 === x.length) return null;
-    let v = u().sortBy(x, (e) => P.indexOf(e.id));
+        A = (0, c.bG)([k.default], () => k.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
+    if (null == A || 0 === A.length) return null;
+    let v = u().sortBy(A, (e) => P.indexOf(e.id));
     return (0, r.jsxs)("div", {
         className: ea.vt,
         children: [
@@ -521,7 +521,7 @@ function eo(e) {
                             loading: f,
                             onClick: () => {
                                 (h(!0),
-                                    (0, A.UN)(i, t)
+                                    (0, x.UN)(i, t)
                                         .then(() => {
                                             n();
                                         })

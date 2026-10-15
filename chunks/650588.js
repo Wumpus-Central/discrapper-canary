@@ -18,11 +18,11 @@ function E(e) {
     let { onSelect: t, sound: n } = e,
         [r, E] = i.useState(!1),
         I = i.useRef(null),
-        A = a()(f.Qq, f.Ow);
-    function g(e) {
+        g = a()(f.Qq, f.Ow);
+    function y(e) {
         (E(!1), t?.(e));
     }
-    function y(e) {
+    function A(e) {
         return (0, l.jsxs)("div", {
             className: f.Ry,
             children: [
@@ -52,11 +52,11 @@ function E(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: g,
+                    onSelect: y,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: m.If.ADD,
                     listPadding: S,
-                    renderHeader: y,
+                    renderHeader: A,
                     defaultSoundsOnly: !0,
                 }),
             });
@@ -79,7 +79,7 @@ function E(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: g,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: C.intl.string(C.t.aThJz8),
@@ -90,13 +90,13 @@ function E(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: g,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: g,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

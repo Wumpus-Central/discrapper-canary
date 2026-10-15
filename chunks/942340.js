@@ -57,7 +57,7 @@ function C(e) {
         [y, I] = r.useState([]),
         { createSetupIntentDeduped: S } = (0, d.x)(),
         [g, _] = r.useState([]),
-        { customPaymentMethods: P, customPaymentMethodIdsToSourceTypes: A } = r.useMemo(
+        { customPaymentMethods: P, customPaymentMethodIdsToSourceTypes: x } = r.useMemo(
             () => ({
                 customPaymentMethods: (0, o.Dd)(y),
                 customPaymentMethodIdsToSourceTypes: y.reduce(
@@ -67,7 +67,7 @@ function C(e) {
             }),
             [y],
         ),
-        x = r.useCallback(async () => {
+        A = r.useCallback(async () => {
             try {
                 let e,
                     t,
@@ -91,7 +91,7 @@ function C(e) {
             E(!1);
         }, [t, S]);
     (0, s.Ay)(() => {
-        x();
+        A();
     });
     let { elementsAppearance: v, elementsAppearanceOptions: R } = m(n),
         M = (0, c.PU)(),
@@ -111,7 +111,7 @@ function C(e) {
         L = {
             setupError: a,
             customPaymentMethods: P,
-            customPaymentMethodIdsToSourceTypes: A,
+            customPaymentMethodIdsToSourceTypes: x,
             paymentMethodOrder: g,
             elementsAppearanceOptions: R,
         };

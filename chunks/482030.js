@@ -10,20 +10,20 @@ var i = n(582128),
     u = n(264322),
     s = n(392054),
     A = n(247186),
-    _ = n(999915),
-    E = n(551965),
-    h = n(625494),
-    y = n(211401),
+    h = n(999915),
+    _ = n(551965),
+    y = n(625494),
+    E = n(211401),
     f = n(989837),
     m = n(500049),
-    v = n(652215),
-    I = n(660183);
+    I = n(652215),
+    v = n(660183);
 let b = {
-        ..._.Ay.RULES.commandMention,
-        parse: (e, t, n) => ({ content: _.Ay.RULES.commandMention.parse(e, t, n).content }),
+        ...h.Ay.RULES.commandMention,
+        parse: (e, t, n) => ({ content: h.Ay.RULES.commandMention.parse(e, t, n).content }),
     },
     g = l().pick(
-        (0, E.A)([_.Ay.RULES, { commandMention: b }, (0, A.Ay)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
+        (0, _.A)([h.Ay.RULES, { commandMention: b }, (0, A.Ay)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
         [
             "commandMention",
             "customEmoji",
@@ -50,9 +50,9 @@ function C(e) {
             sectionName: l,
             commandName: c,
             autoDismissOnClick: A = !0,
-            launchingComponentId: _,
-            submitting: E = !1,
-            fetchesApplication: h = !0,
+            launchingComponentId: h,
+            submitting: _ = !1,
+            fetchesApplication: y = !0,
             onConfirmActivityLaunchChecksAlertOpen: b,
         } = e,
         g = (0, r.p)(),
@@ -68,7 +68,7 @@ function C(e) {
                 }, [e]),
                 t
             );
-        })((0, d.Hq)({ context: t, applicationId: n.id, fetchesApplication: h })),
+        })((0, d.Hq)({ context: t, applicationId: n.id, fetchesApplication: y })),
         C = (0, o.bG)([f.A], () => f.A.entrypoint()),
         S = i.useMemo(() => {
             if ("channel" !== t.type) return n.bot?.id ?? (0, u.Sx)(t, n.id).descriptor?.botId;
@@ -80,8 +80,8 @@ function C(e) {
             locationObject: g.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                (A && y.k(m.Se.ACTIVITY),
-                    (0, p.zV)(v.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                (A && E.k(m.Se.ACTIVITY),
+                    (0, p.zV)(I.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: a,
                         application_id: t,
                         section_name: l,
@@ -89,20 +89,20 @@ function C(e) {
                         source: C,
                     }));
             },
-            launchingComponentId: _,
+            launchingComponentId: h,
             commandOrigin: s.iw.APPLICATION_LAUNCHER,
             sectionName: l,
             source: C,
-            fetchesApplication: h,
+            fetchesApplication: y,
             onConfirmActivityLaunchChecksAlertOpen: b,
         }),
         L = "primary",
-        P = c ?? I.intl.string(I.t.zKX8Nu);
+        N = c ?? v.intl.string(v.t.zKX8Nu);
     return (
         T === d.o6.JOIN
-            ? ((L = "active"), (P = I.intl.string(I.t.d9PsMj)))
-            : T !== d.o6.LEAVE || E || ((L = "critical-primary"), (P = I.intl.string(I.t["Hi1/aQ"]))),
-        { onActivityItemSelected: w, activityAction: T, buttonVariant: L, buttonText: P }
+            ? ((L = "active"), (N = v.intl.string(v.t.d9PsMj)))
+            : T !== d.o6.LEAVE || _ || ((L = "critical-primary"), (N = v.intl.string(v.t["Hi1/aQ"]))),
+        { onActivityItemSelected: w, activityAction: T, buttonVariant: L, buttonText: N }
     );
 }
 function S(e, t) {
@@ -111,7 +111,7 @@ function S(e, t) {
             () =>
                 (0, a.debounce)(
                     (e, t) => {
-                        (0, p.zV)(v.HAw.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, { type: e, source: t });
+                        (0, p.zV)(I.HAw.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, { type: e, source: t });
                     },
                     400,
                     { leading: !1, trailing: !0 },
@@ -123,5 +123,5 @@ function S(e, t) {
     }, [e, t, n, l]);
 }
 function w(e) {
-    h._.dispatchToLastSubscribed(v.jej.OPEN_APP_LAUNCHER, { applicationId: e });
+    y._.dispatchToLastSubscribed(I.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }

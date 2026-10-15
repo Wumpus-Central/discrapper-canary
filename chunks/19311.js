@@ -51,13 +51,13 @@ function E(e) {
             primaryTooltip: f,
             primaryDisabled: E,
             primarySubmitting: I,
-            onPrimary: A,
+            onPrimary: g,
         } = e,
-        g =
+        y =
             null == t
                 ? null
                 : (0, i.jsx)(o.Q, { text: n ?? m.intl.string(m.t["13/7kX"]), onClick: t, variant: "secondary" }),
-        y = (0, i.jsxs)(d.B, {
+        A = (0, i.jsxs)(d.B, {
             direction: "horizontal",
             align: "center",
             gap: 0,
@@ -74,16 +74,16 @@ function E(e) {
                         primaryText: C,
                         primaryDisabled: E,
                         primarySubmitting: I,
-                        onPrimary: A,
+                        onPrimary: g,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(S, { ...e }) })
-                        : (0, i.jsx)(S, { ...e, onPrimary: A });
+                        : (0, i.jsx)(S, { ...e, onPrimary: g });
                 })(),
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == g }), children: [g, y] }),
+        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == y }), children: [y, A] }),
     });
 }
 E.CTAType = C;

@@ -1,1 +1,1 @@
-s.exports = { J: "spinnerColor_c66b00" };
+e.exports = { J: "spinnerColor_c66b00" };

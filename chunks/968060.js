@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -16,7 +16,7 @@ var l = n(477900),
     S = n(540796);
 let E = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
     I = (0, p.Ld)();
-function A(e) {
+function g(e) {
     let {
             label: t = f.intl.string(f.t.B3miE8),
             onTextChange: n,
@@ -24,13 +24,13 @@ function A(e) {
             currentText: p,
             className: m,
             innerClassName: C,
-            disableThemedBackground: A = !1,
+            disableThemedBackground: g = !1,
         } = e,
-        [g, y] = i.useState(r ?? p),
-        [P, v] = i.useState((0, c.x7)(g)),
+        [y, A] = i.useState(r ?? p),
+        [P, v] = i.useState((0, c.x7)(y)),
         x = i.useRef(!1);
     function _(e, t, l) {
-        t !== g && (y(t), v(l), n(t));
+        t !== y && (A(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -44,7 +44,7 @@ function A(e) {
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(p);
-                (y(p), v(e));
+                (A(p), v(e));
             }
         }, [r, p]),
         (0, l.jsx)("div", {
@@ -62,7 +62,7 @@ function A(e) {
                                 maxCharacterCount: h.Jo,
                                 onChange: _,
                                 channel: E,
-                                textValue: g,
+                                textValue: y,
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
@@ -73,7 +73,7 @@ function A(e) {
                                 },
                                 focused: x.current,
                                 onSubmit: T,
-                                disableThemedBackground: A,
+                                disableThemedBackground: g,
                             }),
                             (0, l.jsx)(o.A, { id: I, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
                         ],

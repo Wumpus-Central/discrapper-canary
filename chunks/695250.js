@@ -1,13 +1,13 @@
-l.d(e, { m: () => h });
-var s = l(477900);
-l(582128);
-var i = l(661531),
-    a = l(996682),
-    n = l(27989);
+e.d(l, { m: () => h });
+var s = e(477900);
+e(582128);
+var i = e(661531),
+    a = e(996682),
+    n = e(27989);
 function h(t) {
     let {
-            size: e = "md",
-            width: l,
+            size: l = "md",
+            width: e,
             height: h,
             color: c = i.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: r = "",
@@ -17,14 +17,14 @@ function h(t) {
             tertiaryColorClass: A = "",
             ...g
         } = t,
-        E = (0, n.J)(e),
-        p = E?.width ?? l,
-        m = E?.height ?? h;
+        E = (0, n.J)(l),
+        m = E?.width ?? e,
+        p = E?.height ?? h;
     return (0, s.jsxs)("svg", {
         ...(0, a.A)(g),
         xmlns: "http://www.w3.org/2000/svg",
-        width: p,
-        height: m,
+        width: m,
+        height: p,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

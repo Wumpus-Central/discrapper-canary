@@ -42,8 +42,8 @@ function _(e) {
             children: P,
         } = e,
         {
-            order: A,
-            isCreateOrderLoading: x,
+            order: x,
+            isCreateOrderLoading: A,
             createOrderError: v,
             shouldBlockOnOrderCreation: R,
             isOrderCreationEnabled: M,
@@ -65,8 +65,8 @@ function _(e) {
             t = I ? E : !!S && !0 !== a && y;
             let g = I && E,
                 _ = null != n ? n[0] : void 0,
-                [P, A] = (0, l.useState)(null),
-                [x, v] = (0, l.useState)(null),
+                [P, x] = (0, l.useState)(null),
+                [A, v] = (0, l.useState)(null),
                 [R, M] = (0, l.useState)(g),
                 T = (0, l.useRef)(!1),
                 L = (0, l.useCallback)(
@@ -76,7 +76,7 @@ function _(e) {
                         try {
                             let e = null != r && (0, c.Fs)(r),
                                 n = await (0, o.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
-                            (A(n), null != p && p(n));
+                            (x(n), null != p && p(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, h.gr)(n) ||
@@ -93,12 +93,12 @@ function _(e) {
                 );
             return (
                 (0, l.useEffect)(() => {
-                    t && null != _ && (null != P || null != x || T.current || ((T.current = !0), L({ skuId: _ })));
-                }, [_, t, P, L, x]),
+                    t && null != _ && (null != P || null != A || T.current || ((T.current = !0), L({ skuId: _ })));
+                }, [_, t, P, L, A]),
                 {
                     order: P,
                     isCreateOrderLoading: R,
-                    createOrderError: x,
+                    createOrderError: A,
                     shouldBlockOnOrderCreation: g,
                     isOrderCreationEnabled: t,
                 }
@@ -112,9 +112,9 @@ function _(e) {
             loadId: t,
             onOrderCreated: S,
         }),
-        T = l.useMemo(() => ({ order: A, isOrderCreationEnabled: M }), [A, M]);
+        T = l.useMemo(() => ({ order: x, isOrderCreationEnabled: M }), [x, M]);
     if (R) {
-        if (x) return (0, r.jsx)(g, { renderModalProps: _, children: (0, r.jsx)(u.A, {}) });
+        if (A) return (0, r.jsx)(g, { renderModalProps: _, children: (0, r.jsx)(u.A, {}) });
         else if (null != v)
             return (0, r.jsx)(g, {
                 renderModalProps: _,

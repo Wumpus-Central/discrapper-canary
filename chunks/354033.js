@@ -17,16 +17,16 @@ var i = n(503698),
     S = n(500345),
     E = n(599941),
     I = n(320137),
-    A = n(417360),
-    g = n(759625),
-    y = n(2242),
+    g = n(417360),
+    y = n(759625),
+    A = n(2242),
     P = n(660183),
     v = n(631907),
     x = n(200791);
 function _(e) {
     let { onClose: t, listing: n, step: i, guildId: a } = e,
         s = (0, E.Tq)(a),
-        c = (0, m.A)(y.TQ),
+        c = (0, m.A)(A.TQ),
         d = (function () {
             if (c) return null;
             let e =
@@ -65,7 +65,7 @@ function T(e) {
         r = (0, a.bG)([C.A], () => C.A.getGuild(i), [i]),
         o = (0, I.A)(i).filter((e) => e.roles.includes(n.role_id)),
         u = n.role_benefits.benefits.filter(S.B1).slice(0, null === o.length ? 4 : 3),
-        m = (0, A.A)(u).slice(0, null === o.length ? 4 : 3);
+        m = (0, g.A)(u).slice(0, null === o.length ? 4 : 3);
     return (0, l.jsxs)("div", {
         className: v.RP,
         children: [
@@ -93,7 +93,7 @@ function T(e) {
                         (0, l.jsx)("div", {
                             className: v.M3,
                             children: m.map((e) =>
-                                (0, l.jsx)(g.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, S.nh)(e)),
+                                (0, l.jsx)(y.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, S.nh)(e)),
                             ),
                         }),
                     ],

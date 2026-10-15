@@ -163,11 +163,11 @@ let I = [
         "ZA",
         "ZW",
     ],
-    A = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
+    g = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    g = Object.freeze(A.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
-    y = (0, h.Ld)(),
+    y = Object.freeze(g.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    A = (0, h.Ld)(),
     P = (0, h.Ld)(),
     v = (0, h.Ld)(),
     x = (0, h.Ld)(),
@@ -191,7 +191,7 @@ let R = { US: c, CA: s },
     O = { US: d, CA: o },
     M = (e, t) => ({
         name: "name",
-        id: y,
+        id: A,
         title: () => S.intl.string(S.t.vyuULb),
         autoComplete: "name",
         getClassNameForLayout: (e) =>
@@ -210,7 +210,7 @@ let R = { US: c, CA: s },
     }),
     L = (e, t) => {
         let n = t?.allowedBillingAddressCountries,
-            l = null != n && n.length > 0 ? A.filter((e) => n.includes(e.value)) : A,
+            l = null != n && n.length > 0 ? g.filter((e) => n.includes(e.value)) : g,
             i = t?.countryHelperText;
         return {
             name: "country",
@@ -242,7 +242,7 @@ let R = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in g && n(g[i], e.name);
+                        i in y && n(y[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);

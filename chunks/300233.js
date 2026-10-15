@@ -30,11 +30,11 @@ function h(e) {
         A = (0, r.bG)([i.A], () => i.A.isConnected()),
         E = (0, r.bG)([u.A], () => (null != a ? u.A.getSubscriptionGroupListingsForGuildFetchState(a) : u.e.FETCHED)),
         [p, C] = n.useState(!0 === c),
-        g = n.useCallback(() => {
+        y = n.useCallback(() => {
             if (null == a || !A || !0 === m) return;
             let e = u.A.getSubscriptionGroupListingsForGuildFetchState(a);
             (p || e === u.e.NOT_FETCHED) && (C(!1), s.WA(a, { includeSoftDeleted: h, countryCode: d }));
         }, [A, a, h, d, m, p]),
-        y = E === u.e.FETCHED && !p;
-    return (0, l.jsx)(o.Provider, { value: { listingsLoaded: y, fetchGroupListingsForGuild: g }, children: t });
+        f = E === u.e.FETCHED && !p;
+    return (0, l.jsx)(o.Provider, { value: { listingsLoaded: f, fetchGroupListingsForGuild: y }, children: t });
 }
