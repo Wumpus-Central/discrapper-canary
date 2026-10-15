@@ -1,4 +1,4 @@
-(n.d(t, { V1: () => Y, HB: () => W }), n(321073));
+(n.d(t, { V1: () => Y, $Q: () => W }), n(321073));
 var i = n(106983),
     r = n(144705),
     a = n(786661),
@@ -290,9 +290,10 @@ let G = {
                     ? null
                     : { type: e, config: r, durationMs: a.durationMs, resolved: a.resolved, skipped: a.skipped };
             },
+            weight: 2,
         },
         {
-            type: "highlight_reels",
+            type: "cs2_highlight_reels",
             applicationIds: a.E.applicationIds,
             kind: "preset",
             settings: {
@@ -307,9 +308,10 @@ let G = {
                 shoutingThreshold: 0.5,
                 events: G,
             },
+            weight: 2,
         },
         {
-            type: "kill_compilation",
+            type: "cs2_kill_compilation",
             applicationIds: a.E.applicationIds,
             kind: "preset",
             settings: {
@@ -322,6 +324,7 @@ let G = {
                 maxDurationMs: 9e4,
                 events: x,
             },
+            weight: 1,
         },
         {
             type: "league_of_legends_game_highlights",
@@ -337,6 +340,7 @@ let G = {
                 maxDurationMs: 9e4,
                 events: k,
             },
+            weight: 2,
         },
         {
             type: "league_of_legends_kill_compil",
@@ -352,6 +356,7 @@ let G = {
                 maxDurationMs: 6e4,
                 events: F,
             },
+            weight: 1,
         },
         {
             type: "dota_2_game_highlights",
@@ -367,6 +372,7 @@ let G = {
                 maxDurationMs: 9e4,
                 events: B,
             },
+            weight: 2,
         },
         {
             type: "dota_2_kill_compil",
@@ -382,6 +388,7 @@ let G = {
                 maxDurationMs: 6e4,
                 events: V,
             },
+            weight: 1,
         },
         {
             type: "rocket_league_goal_and_save_compil",
@@ -397,29 +404,43 @@ let G = {
                 maxDurationMs: 6e4,
                 events: H,
             },
+            weight: 1,
         },
     ];
 function W(e) {
-    var t,
-        n = ((t = e.gameId), j.filter((e) => null == e.applicationIds || (null != t && e.applicationIds.includes(t)))),
-        i = e;
-    let r = (function (e) {
+    var t = (function (e, t) {
+            var n, i;
+            let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+            return (
+                (n = e.filter((e) => null == e.applicationIds || (null != t && e.applicationIds.includes(t)))),
+                (i = r),
+                n
+                    .map((e) => ({ montage: e, key: Math.pow(i(), 1 / e.weight) }))
+                    .sort((e, t) => t.key - e.key)
+                    .map((e) => {
+                        let { montage: t } = e;
+                        return t;
+                    })
+            );
+        })(j, e.gameId),
+        n = e;
+    let i = (function (e) {
         let t = [];
         for (let n of e)
             null != n.decision && t.push({ id: n.id, filepath: n.filepath, length: n.length, decision: n.decision });
         return t;
-    })(i.clipCandidates);
-    if (0 === r.length)
+    })(n.clipCandidates);
+    if (0 === i.length)
         return (
             f.nx.info(
-                `automontage: no usable clip candidates in this session (received ${i.clipCandidates.length}) - skipping montage`,
+                `automontage: no usable clip candidates in this session (received ${n.clipCandidates.length}) - skipping montage`,
             ),
             null
         );
-    for (let e of n) {
+    for (let e of t) {
         let t =
             "custom" === e.kind
-                ? e.build(e.type, i, r)
+                ? e.build(e.type, n, i)
                 : (function (e, t, n, i) {
                       var r, a, s, l;
                       let o,
@@ -749,7 +770,7 @@ function W(e) {
                                   resolved: N.resolved,
                                   skipped: N.skipped,
                               };
-                  })(e.type, e.settings, i, r);
+                  })(e.type, e.settings, n, i);
         if (null != t) return t;
     }
     return null;

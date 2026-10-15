@@ -199,7 +199,7 @@ class f {
                 localUserId: a.default.getId(),
                 gameId: this.gameId ?? void 0,
             },
-            r = (0, u.HB)(n);
+            r = (0, u.$Q)(n);
         return null == r
             ? (h.nx.info("decider: no auto-montage could be built for this session"), null)
             : (h.nx.info(

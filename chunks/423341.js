@@ -438,7 +438,7 @@ class U extends l.A {
                 gameId: i.gameId,
             },
             a = performance.now(),
-            s = (0, v.HB)(r),
+            s = (0, v.$Q)(r),
             l = performance.now() - a;
         if (null == s) return void M.nx.info(`debugRunAutoMontage: no montage could be built (took ${l.toFixed(1)}ms)`);
         M.nx.info(
