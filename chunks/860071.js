@@ -1,10 +1,11 @@
-(n.d(t, { A: () => T }), n(321073));
-var i = n(17928),
-    r = n(73153),
-    a = n(435558),
-    s = n.n(a),
-    l = n(451988);
-class o {
+(n.d(t, { A: () => N }), n(321073));
+var i = n(448761),
+    r = n(17928),
+    a = n(73153),
+    s = n(435558),
+    l = n.n(s),
+    o = n(451988);
+class d {
     _guildId;
     _pendingRequests = new Set();
     _sentRequests = new Set();
@@ -39,11 +40,11 @@ class o {
         this._pendingRequests.add(e);
     }
 }
-class d {
+class c {
     _onChange;
     _guildMemberExists;
     _guildStates = {};
-    _flush = new l.J_(0, () => this.flushRequests());
+    _flush = new o.J_(0, () => this.flushRequests());
     constructor(e, t) {
         ((this._guildMemberExists = e), (this._onChange = t));
     }
@@ -57,21 +58,21 @@ class d {
         this._getGuildState(e).acknowledge(t);
     }
     flushRequests() {
-        s().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
+        l().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
     }
     requestUnacknowledged() {
-        s().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || e, !1) && this._flush.delay();
+        l().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || e, !1) && this._flush.delay();
     }
     _getGuildState(e) {
         let t = this._guildStates[e];
-        return (null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t);
+        return (null == t && (t = this._guildStates[e] = new d(e, this._guildMemberExists)), t);
     }
     getDebugState(e) {
         let t = [],
             n = [],
             i = [];
         return (
-            s().forEach(this._guildStates, (r) => {
+            l().forEach(this._guildStates, (r) => {
                 (r._pendingRequests.has(e) && t.push(r._guildId),
                     r._unacknowledgedRequests.has(e) && n.push(r._guildId),
                     r._sentRequests.has(e) && i.push(r._guildId));
@@ -80,32 +81,37 @@ class d {
         );
     }
 }
-var c = n(734057),
-    u = n(696451);
-let _ = new d(u.Ay.isMember, (e, t) => {
-    r.h.dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds: [e], userIds: t });
+var u = n(518782),
+    _ = n(734057),
+    E = n(696451),
+    A = n(309010);
+let h = new c(E.Ay.isMember, (e, t) => {
+    a.h.dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds: [e], userIds: t });
 });
-function E() {
-    _.reset();
+function f() {
+    h.reset();
 }
-function A(e, t) {
-    return (_.request(e, t), !1);
+function I(e, t) {
+    return (h.request(e, t), !1);
 }
-function h(e, t) {
+function p(e, t) {
+    for (let n of (0, u.e7)(t.guild_space_data?.leaderboard)) I(e, n);
+}
+function T(e, t) {
     return (
         t.forEach((t) => {
-            let { author: n, mentions: i } = t;
-            (null != n && A(e, n.id), i?.forEach((t) => A(e, t.id)));
+            let { author: n, mentions: r } = t;
+            (null != n && I(e, n.id), r?.forEach((t) => I(e, t.id)), t.type === i.l.GUILD_SPACE_MESSAGE && p(e, t));
         }),
         !1
     );
 }
-function f(e) {
+function m(e) {
     let { channelId: t, messages: n } = e,
-        i = c.A.getChannel(t);
-    return null != i && null != i.guild_id && h(i.guild_id, n);
+        i = _.A.getChannel(t);
+    return null != i && null != i.guild_id && T(i.guild_id, n);
 }
-function I(e) {
+function g(e) {
     let { guildId: t, data: n } = e;
     if (null == t) return !1;
     let i = [];
@@ -118,53 +124,53 @@ function I(e) {
                 });
             });
         }),
-        h(t, i)
+        T(t, i)
     );
 }
-class p extends i.Ay.Store {
+class S extends r.Ay.Store {
     static displayName = "GuildMemberRequesterStore";
     initialize() {
-        this.waitFor(c.A, u.Ay);
+        this.waitFor(_.A, E.Ay, A.Ay);
     }
     requestMember(e, t) {
-        A(e, t);
+        I(e, t);
     }
     getDebugState(e) {
-        return _.getDebugState(e);
+        return h.getDebugState(e);
     }
 }
-let T = new p(r.h, {
-    CONNECTION_CLOSED: E,
-    CONNECTION_OPEN: E,
+let N = new S(a.h, {
+    CONNECTION_CLOSED: f,
+    CONNECTION_OPEN: f,
     CONNECTION_RESUMED: function () {
-        return (_.requestUnacknowledged(), !1);
+        return (h.requestUnacknowledged(), !1);
     },
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
         let { chunks: t } = e;
         for (let e of t)
             (e.members.forEach((t) => {
-                _.acknowledge(e.guildId, t.user.id);
+                h.acknowledge(e.guildId, t.user.id);
             }),
-                null != e.notFound && e.notFound.forEach((t) => _.acknowledge(e.guildId, t)));
+                null != e.notFound && e.notFound.forEach((t) => h.acknowledge(e.guildId, t)));
         return !1;
     },
-    SEARCH_MESSAGES_SUCCESS: I,
+    SEARCH_MESSAGES_SUCCESS: g,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, messages: n } = e;
-        return h(t.guildId, n);
+        return T(t.guildId, n);
     },
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: I,
-    LOCAL_MESSAGES_LOADED: f,
-    LOAD_MESSAGES_SUCCESS: f,
-    LOAD_MESSAGES_AROUND_SUCCESS: f,
-    LOAD_RECENT_MENTIONS_SUCCESS: f,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: g,
+    LOCAL_MESSAGES_LOADED: m,
+    LOAD_MESSAGES_SUCCESS: m,
+    LOAD_MESSAGES_AROUND_SUCCESS: m,
+    LOAD_RECENT_MENTIONS_SUCCESS: m,
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { pins: t, channelId: n } = e,
-            i = c.A.getChannel(n);
+            i = _.A.getChannel(n);
         return (
             null != i &&
             null != i.guild_id &&
-            h(
+            T(
                 i.guild_id,
                 t.map((e) => {
                     let { message: t } = e;
@@ -173,14 +179,20 @@ let T = new p(r.h, {
             )
         );
     },
+    MESSAGE_CREATE: function (e) {
+        let { guildId: t, channelId: n, message: r } = e;
+        if (n !== A.Ay.getCurrentlySelectedChannelId()) return !1;
+        let a = t ?? _.A.getChannel(n)?.guild_id;
+        return null != a && (r.type === i.l.GUILD_SPACE_MESSAGE && p(a, r), !1);
+    },
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { channelId: t, messages: n, messageReferences: i } = e,
-            r = c.A.getChannel(t);
-        return null != r && null != r.guild_id && h(r.guild_id, n.concat(i));
+            r = _.A.getChannel(t);
+        return null != r && null != r.guild_id && T(r.guild_id, n.concat(i));
     },
     CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { channelId: t, rawConversations: n } = e,
-            i = c.A.getChannel(t);
+            i = _.A.getChannel(t);
         if (null == i || null == i.guild_id) return !1;
         let r = n
             .map((e) => {
@@ -188,6 +200,6 @@ let T = new p(r.h, {
                 return t ?? [];
             })
             .flat();
-        return h(i.guild_id, r);
+        return T(i.guild_id, r);
     },
 });

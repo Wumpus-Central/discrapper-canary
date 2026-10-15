@@ -21,9 +21,7 @@ let l = {
     },
 };
 function o(e, t, n) {
-    if (null == e || null == t) return null;
-    let i = n ?? null;
-    return e.event === r.zu.LEADER_CHANGED && null == i ? null : { data: e, subject: t, previousLeader: i };
+    return null == e ? null : { data: e, subject: t ?? null, previousLeader: n ?? null };
 }
 function d(e, t) {
     let n,

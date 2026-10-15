@@ -1,4 +1,4 @@
-n.d(t, { Nu: () => l, RE: () => a, Rt: () => o, zu: () => s });
+n.d(t, { Nu: () => o, RE: () => a, Rt: () => d, e7: () => l, zu: () => s });
 var i,
     r,
     a =
@@ -14,6 +14,9 @@ var i,
         (r[(r.LEADER_CHANGED = 3)] = "LEADER_CHANGED"),
         r);
 function l(e) {
+    return null == e ? [] : [e.user_id, e.secondary_user_id].filter((e) => null != e);
+}
+function o(e) {
     return null != e &&
         null != e.user_id &&
         null != e.value &&
@@ -33,7 +36,7 @@ function l(e) {
           }
         : null;
 }
-function o(e) {
+function d(e) {
     if (null == e) return null;
     let t = e.winning_stat ?? null,
         n = e.winning_streak ?? null,

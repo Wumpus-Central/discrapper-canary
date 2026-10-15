@@ -218,7 +218,8 @@ let y = {
                 let r = t.getGuildId(),
                     a = (0, c.Sx)(i.data, {
                         username: S.Ay.getName(r, N, i.subject),
-                        previousUsername: null != i.previousLeader ? S.Ay.getName(r, N, i.previousLeader) : "",
+                        previousUsername:
+                            i.data.event === u.zu.LEADER_CHANGED ? S.Ay.getName(r, N, i.previousLeader) : "",
                     });
                 if (null == a) return e.content;
                 return o.intl.formatToPlainString(a.message, {
