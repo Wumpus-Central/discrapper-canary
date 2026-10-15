@@ -4,17 +4,18 @@ var i = n(477900),
     a = n(683071),
     s = n(592551);
 function l(e) {
-    let { message: t, type: n } = e,
-        l = null == t || 0 === t.length || null == n,
-        [o, d] = r.useState(n ?? "info"),
-        [c, u] = r.useState(t ?? "");
+    let { message: t, type: n, role: l } = e,
+        o = null == t || 0 === t.length || null == n,
+        [d, c] = r.useState(n ?? "info"),
+        [u, _] = r.useState(t ?? ""),
+        [E, A] = r.useState(l ?? "status");
     return (
         r.useEffect(() => {
-            (null != n && d(n), null != t && u(t));
-        }, [n, t]),
+            (null != n && c(n), null != t && _(t), null != l && A(l));
+        }, [n, t, l]),
         (0, i.jsx)("div", {
-            className: l ? s.sectionHidden : s.section,
-            children: (0, i.jsx)(a.w, { type: o, hidden: l, children: c }),
+            className: o ? s.sectionHidden : s.section,
+            children: (0, i.jsx)(a.w, { type: d, hidden: o, message: u, role: E }),
         })
     );
 }

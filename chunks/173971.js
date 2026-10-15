@@ -371,7 +371,7 @@ function V(t) {
                                 skuName: l.name,
                                 applicationName: r.name,
                             }),
-                            role: "static",
+                            role: "none",
                         }),
                     }),
                     null != S && (0, a.jsx)(X, { confettiTarget: S, emojiName: g }),

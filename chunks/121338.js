@@ -58,7 +58,7 @@ function k(t) {
                                 children: (0, s.jsx)(c.w, {
                                     type: "warning",
                                     message: f.intl.format(f.t["dSTy/w"], { applicationName: b }),
-                                    role: "static",
+                                    role: "none",
                                 }),
                             }),
                             (0, s.jsx)("div", {

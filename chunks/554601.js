@@ -1353,7 +1353,7 @@ function tL(e) {
                     children: (0, r.jsx)(e6.w, {
                         type: "warning",
                         message: et.intl.format(et.t["s/3hjE"], {}),
-                        role: "static",
+                        role: "none",
                     }),
                 })
               : null

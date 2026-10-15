@@ -376,6 +376,7 @@ function Y(e) {
                     e.push({
                         type: "warning",
                         message: h.intl.string(M.default["yrk+N6"]),
+                        role: "none",
                         key: "past-due-restore-notice",
                     }),
                 l &&
@@ -383,7 +384,7 @@ function Y(e) {
                         directContent: (0, i.jsx)(S.l, { fractionalPremiumInfo: a }),
                         key: "fractional-premium-notice",
                     }),
-                s && e.push({ type: "info", message: (0, f.Nn)(), key: "premium-group-purchase-notice" }),
+                s && e.push({ type: "info", message: (0, f.Nn)(), role: "none", key: "premium-group-purchase-notice" }),
                 null != o &&
                     e.push({
                         type: "warning",
@@ -395,9 +396,11 @@ function Y(e) {
                                     return h.intl.string(h.t["6d44F5"]);
                             }
                         })(o),
+                        role: "status",
                         key: "payment-restriction-banner-notice",
                     }),
-                null != u && e.push({ type: "critical", message: u.message, key: "invoice-error-notice" }),
+                null != u &&
+                    e.push({ type: "critical", message: u.message, role: "alert", key: "invoice-error-notice" }),
                 e
             );
         }, [_, s, o, u, l, a]),

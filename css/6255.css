@@ -356,6 +356,11 @@
     gap: var(--space-4)
 }
 
+.copyContainer__03a26 a {
+    color: currentColor;
+    text-decoration: underline
+}
+
 .positive__03a26 {
     background: var(--background-feedback-positive);
     border: 1px solid var(--inlinenotice-border-positive)
@@ -392,4 +397,4 @@
     color: var(--icon-feedback-critical)
 }
 
-/*# sourceMappingURL=6255.ccb06008cb8bc8d7.css.map*/
+/*# sourceMappingURL=6255.6ce5380e274f9d2a.css.map*/

@@ -32,7 +32,7 @@ function c(e) {
         size: N,
         children: [
             (0, i.jsx)(o.rQ, { title: n, subtitle: c }),
-            (0, i.jsx)(d.i, { message: I?.message, type: I?.type }),
+            (0, i.jsx)(d.i, { message: I?.message, type: I?.type, role: I?.role }),
             (0, i.jsx)(s.c, { controls: u, listProps: f, onScroll: p, scrollerRef: T, children: m }),
             (0, i.jsx)(l.j, { children: _ }),
             (0, i.jsx)(a.H, { leading: A, leadingLayout: h, actions: E, actionsFullWidth: null == A }),

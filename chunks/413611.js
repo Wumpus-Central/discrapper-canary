@@ -1,4 +1,4 @@
-n.d(t, { m: () => C, A: () => b });
+n.d(t, { m: () => S, A: () => T });
 var i = n(477900),
     l = n(582128),
     s = n(192308),
@@ -16,38 +16,40 @@ var i = n(477900),
     j = n(287809),
     f = n(493540),
     N = n(469993),
-    p = n(512950),
-    A = n(105292);
-function I(e) {
+    p = n(105292);
+function A(e) {
     let t,
         {
             resubmittingEnableRequest: n,
             resubmissionError: l,
             createEnableRequest: s,
+            resubmittedRequest: r,
             requestRejectedNoticeText: a,
             reapplyNoticeText: o,
             isApplicationPending: d,
         } = e;
     if (null != l) return (0, i.jsx)(c.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" });
-    let u = null;
+    let u = null,
+        m = "none";
     return (
         d
-            ? (u = A.intl.string(A.t.OrkTBn))
+            ? ((u = p.intl.string(p.t.OrkTBn)), (m = r ? "status" : "none"))
             : null != a
-              ? (u = a)
-              : null != o && ((u = o), (t = A.intl.string(A.t["YKw/NQ"]))),
+              ? ((u = a), (m = "none"))
+              : null != o && ((u = o), (m = "none"), (t = p.intl.string(p.t["YKw/NQ"]))),
         null != u
-            ? (0, i.jsx)(p.p, {
-                  messageType: p.Y.WARNING,
-                  action: (0, i.jsx)(r.$, { variant: "overlay-secondary", text: t, onClick: s, loading: n }),
-                  children: u,
+            ? (0, i.jsx)(c.w, {
+                  type: "warning",
+                  message: u,
+                  role: m,
+                  action: null != t ? { text: t, onClick: s, loading: n } : void 0,
               })
             : null
     );
 }
-var S = n(98332);
-let C = "role_subscriptions_eligibility_modal";
-function _(e) {
+var I = n(98332);
+let S = "role_subscriptions_eligibility_modal";
+function C(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
     return (0, i.jsx)(r.$, {
         variant: "expressive",
@@ -67,15 +69,15 @@ function _(e) {
                             guildId: t.id,
                         });
                 },
-                { modalKey: C },
+                { modalKey: S },
             );
         },
         size: "md",
-        text: A.intl.string(A.t.NL5ZNS),
+        text: p.intl.string(p.t.NL5ZNS),
         icon: a.E,
     });
 }
-function v(e) {
+function _(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
@@ -112,23 +114,23 @@ function v(e) {
                 }, [e, void 0, a]),
             };
         })(t.id),
-        [p, I] = l.useState(!1);
+        [A, I] = l.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.S, {
                 onChange: function () {
                     I((e) => !e);
                 },
-                checked: p,
+                checked: A,
                 label: n,
             }),
             (0, i.jsx)(d.h, { size: 24 }),
             (0, i.jsx)(r.$, {
-                disabled: !p || !s,
+                disabled: !A || !s,
                 onClick: m,
                 loading: u,
                 variant: "expressive",
-                text: A.intl.string(A.t.NL5ZNS),
+                text: p.intl.string(p.t.NL5ZNS),
             }),
             null != a &&
                 (0, i.jsxs)(i.Fragment, {
@@ -140,7 +142,7 @@ function v(e) {
         ],
     });
 }
-function T(e) {
+function v(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
             eligibilityLoading: l,
@@ -153,9 +155,9 @@ function T(e) {
         } = n;
     return o
         ? c
-            ? (0, i.jsx)(I, { ...n })
-            : (0, i.jsx)(v, { guild: t, checkboxText: d })
-        : (0, i.jsx)(_, {
+            ? (0, i.jsx)(A, { ...n })
+            : (0, i.jsx)(_, { guild: t, checkboxText: d })
+        : (0, i.jsx)(C, {
               guild: t,
               eligibility: a,
               eligibilityLoading: l,
@@ -163,28 +165,28 @@ function T(e) {
               refreshEligibility: r,
           });
 }
-function b(e) {
+function T(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, i.jsxs)("div", {
-        className: S.OQ,
+        className: I.OQ,
         children: [
-            (0, i.jsx)("img", { className: S.hV, src: "/assets/45b68ce4917d46f1.svg", alt: A.intl.string(A.t.Af4klP) }),
+            (0, i.jsx)("img", { className: I.hV, src: "/assets/45b68ce4917d46f1.svg", alt: p.intl.string(p.t.Af4klP) }),
             (0, i.jsxs)("div", {
-                className: S.mv,
+                className: I.mv,
                 children: [
                     (0, i.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        children: A.intl.string(A.t["PqYfh/"]),
+                        children: p.intl.string(p.t["PqYfh/"]),
                     }),
                     (0, i.jsx)(d.h, { size: 12 }),
                     (0, i.jsx)(m.E, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: A.intl.string(A.t["41wkMc"]),
+                        children: p.intl.string(p.t["41wkMc"]),
                     }),
                     (0, i.jsx)(d.h, { size: 24 }),
-                    (0, i.jsx)(T, { guild: t, monetizationEligibility: n }),
+                    (0, i.jsx)(v, { guild: t, monetizationEligibility: n }),
                 ],
             }),
         ],

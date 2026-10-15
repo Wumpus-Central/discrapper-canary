@@ -1,63 +1,65 @@
-r.d(n, { A: () => _, V: () => M });
+r.d(n, { A: () => k, V: () => _ });
 var t,
     i = r(477900);
 r(582128);
 var s = r(28863),
-    l = r(683071),
-    a = r(331322),
+    a = r(683071),
+    l = r(331322),
     o = r(885574),
     c = r(738188),
     d = r(834730),
     u = r(404778),
     h = r(975807),
     x = r(379257),
-    j = r(306537),
-    f = r(36149),
+    f = r(306537),
+    j = r(36149),
     p = r(975571),
     A = r(418208),
-    v = r(652215),
-    T = r(105292);
-function g() {
-    return (0, f.yM)()
-        ? T.intl.format(T.t.iWGjcg, {
+    g = r(652215),
+    m = r(105292);
+function v(e) {
+    return e
+        ? m.intl.format(m.t.iWGjcg, {
               hook: (e) =>
                   (0, i.jsx)(s.Anchor, {
                       onClick: (e) => {
                           (e.preventDefault(),
                               e.stopPropagation(),
-                              (0, h.A)(p.A.getArticleURL(v.MVz.TIGGER_PAWTECT_LEARN_MORE)));
+                              (0, h.A)(p.A.getArticleURL(g.MVz.TIGGER_PAWTECT_LEARN_MORE)));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
                   }),
           })
-        : T.intl.format(T.t.edpbxy, {
+        : m.intl.format(m.t.edpbxy, {
               hook: (e) =>
                   (0, i.jsx)(s.Anchor, {
                       onClick: (e) => {
                           (e.preventDefault(),
                               e.stopPropagation(),
-                              x.A.showAgeVerificationGetStartedModal({ entryPoint: j.q1.START_STAGE_PROMPT }));
+                              x.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.START_STAGE_PROMPT }));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
                   }),
           });
 }
-function m(e) {
+function T(e) {
     let { className: n } = e,
-        r = (0, f.yM)();
+        r = (0, j.yM)(),
+        t = v(r);
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsx)(l.w, { type: r ? "info" : "warning", children: (0, i.jsx)(g, {}) }),
+        children: (0, i.jsx)(a.w, { type: r ? "info" : "warning", message: t, role: "none" }),
     });
 }
 function y(e) {
     let { className: n } = e,
-        r = (0, f.yM)();
+        r = (0, j.yM)(),
+        t = v(r);
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsxs)(a.B, {
+        children: (0, i.jsxs)(l.B, {
             direction: "horizontal",
             gap: 4,
             align: "center",
@@ -65,21 +67,21 @@ function y(e) {
                 r
                     ? (0, i.jsx)(o.CircleInformationIcon, { size: "refresh_sm", color: "var(--text-default)" })
                     : (0, i.jsx)(c.WarningIcon, { size: "refresh_sm", color: "var(--text-default)" }),
-                (0, i.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: (0, i.jsx)(g, {}) }),
+                (0, i.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: t }),
             ],
         }),
     });
 }
-var M = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
-function _(e) {
+var _ = (((t = {})[(t.TOP = 0)] = "TOP"), (t[(t.BOTTOM = 1)] = "BOTTOM"), t);
+function k(e) {
     let { className: n, noBackground: r, divider: t, channelId: s } = e;
     if (!(0, A.Vv)(s ?? void 0)) return null;
-    let l = Array.isArray(t) ? t : null != t ? [t] : [];
+    let a = Array.isArray(t) ? t : null != t ? [t] : [];
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            l.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
-            (0, i.jsx)("div", { className: n, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(m, {}) }),
-            l?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
+            a.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
+            (0, i.jsx)("div", { className: n, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(T, {}) }),
+            a?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
         ],
     });
 }

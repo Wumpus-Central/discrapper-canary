@@ -241,7 +241,7 @@ function K(t) {
         onClose: r,
         title: V.intl.string(R.default.qywOto),
         subtitle: V.intl.formatToPlainString(R.default.sXGNm5, { environment: (0, E.K1)(a) }),
-        notice: x ? { message: V.intl.string(R.default.TOxYEF), type: "critical" } : void 0,
+        notice: x ? { message: V.intl.string(R.default.TOxYEF), type: "critical", role: "alert" } : void 0,
         actions: [
             { text: V.intl.string(V.t["ETE/oC"]), variant: "secondary", onClick: r },
             {

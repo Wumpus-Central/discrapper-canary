@@ -60,7 +60,7 @@ function o(e) {
         ],
         actionBarInput: null != o ? (0, i.jsx)(l.e, { ...o }) : void 0,
         role: "alertdialog",
-        notice: null != g ? { message: g, type: "critical" } : void 0,
+        notice: null != g ? { message: g, type: "critical", role: "alert" } : void 0,
         ...A,
         children: E,
     });

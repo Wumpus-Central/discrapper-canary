@@ -350,7 +350,7 @@ function eq(e) {
                       children: (0, l.jsx)(I.w, {
                           type: "info",
                           message: ez.intl.format(ez.t["Xq++FA"], { appName: d.name }),
-                          role: "static",
+                          role: "none",
                       }),
                   })
                 : null,
@@ -2317,11 +2317,7 @@ class nZ extends i.PureComponent {
                               disabled: !a || null != e.linkedLobby || _,
                           }),
                           null != e.linkedLobby
-                              ? (0, l.jsx)(I.w, {
-                                    type: "warning",
-                                    message: ez.intl.string(ez.t.EvavKG),
-                                    role: "static",
-                                })
+                              ? (0, l.jsx)(I.w, { type: "warning", message: ez.intl.string(ez.t.EvavKG), role: "none" })
                               : null,
                       ],
                   })
@@ -2352,11 +2348,7 @@ class nZ extends i.PureComponent {
                                   checked: e.type === eF.rbe.GUILD_ANNOUNCEMENT,
                                   disabled: !a,
                               }),
-                              (0, l.jsx)(I.w, {
-                                  type: "info",
-                                  message: ez.intl.string(ez.t["2Ab4Id"]),
-                                  role: "static",
-                              }),
+                              (0, l.jsx)(I.w, { type: "info", message: ez.intl.string(ez.t["2Ab4Id"]), role: "none" }),
                           ],
                       })
                     : null,

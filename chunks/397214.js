@@ -859,7 +859,7 @@ function eM(e) {
                 : (0, i.jsx)(L.w, {
                       type: "info",
                       message: eo.intl.format(eo.t.vFekBs, { onViewBadges: B }),
-                      role: "static",
+                      role: "none",
                   }),
         eN = (0, s.bG)([J.A], () => J.A.hasConsented(y.YAq.PERSONALIZATION)),
         ep = (0, N.Jn)(h.badge_id) && !A && !eN;
@@ -930,7 +930,7 @@ function eM(e) {
                                                 onGoToSettings: () =>
                                                     (0, Z.openUserSettings)(H.X.DATA_USAGE_PERSONALIZATION_SETTING),
                                             }),
-                                            role: "static",
+                                            role: "none",
                                         }),
                                     eg,
                                     !(0, Y.uJ)(x) &&
@@ -1289,7 +1289,7 @@ function e1(e) {
             : (0, i.jsx)(L.w, {
                   type: "info",
                   message: eo.intl.format(eo.t.vFekBs, { onViewBadges: w }),
-                  role: "static",
+                  role: "none",
               }),
         ed = (function (e) {
             let { badge: t, isViewingOtherUser: n } = e,
@@ -1377,7 +1377,7 @@ function e1(e) {
                                                     onGoToSettings: () =>
                                                         (0, Z.openUserSettings)(H.X.DATA_USAGE_PERSONALIZATION_SETTING),
                                                 }),
-                                                role: "static",
+                                                role: "none",
                                             }),
                                         e_ &&
                                             (0, i.jsxs)("div", {

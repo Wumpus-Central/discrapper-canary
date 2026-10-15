@@ -230,12 +230,14 @@ function ea(e) {
                             e.push({
                                 type: "warning",
                                 message: j.intl.string(j.t.OvMyMd),
+                                role: "none",
                                 key: "test-mode-warning-notice",
                             }),
                         c &&
                             e.push({
                                 type: "critical",
                                 message: j.intl.string(j.t.tAmECt),
+                                role: "alert",
                                 key: "dev-shelf-error-notice",
                             }),
                         e.length > 0 ? e : null
@@ -245,7 +247,12 @@ function ea(e) {
                     let e = [];
                     return (
                         null != d &&
-                            e.push({ type: "info", message: d, key: "social-layer-game-item-disclaimer-notice" }),
+                            e.push({
+                                type: "info",
+                                message: d,
+                                role: "status",
+                                key: "social-layer-game-item-disclaimer-notice",
+                            }),
                         e.length > 0 ? e : null
                     );
                 }, [d]),

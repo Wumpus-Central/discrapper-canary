@@ -1,10 +1,10 @@
-n.d(e, { m: () => j });
-var r = n(477900);
+n.d(t, { m: () => j });
+var l = n(477900);
 n(582128);
-var l = n(224640),
+var r = n(224640),
     a = n(430993),
-    i = n(834730),
-    s = n(696208),
+    s = n(834730),
+    i = n(696208),
     c = n(683071),
     o = n(478016),
     d = n(665711),
@@ -12,9 +12,9 @@ var l = n(224640),
     x = n(188275),
     m = n(105292),
     h = n(778491);
-function j(t) {
+function j(e) {
     let {
-        sku: e,
+        sku: t,
         application: n,
         primaryCTAButtonProps: c,
         transitionState: o,
@@ -25,39 +25,39 @@ function j(t) {
         bodyText: f,
         title: C,
         reward: N,
-    } = t;
-    return (0, r.jsxs)(l.d, {
+    } = e;
+    return (0, l.jsxs)(r.d, {
         transitionState: o,
         onClose: d,
         "aria-label": C,
         children: [
-            (0, r.jsx)(u.z, { sku: e, title: C, reward: N }),
-            (0, r.jsxs)(a.c, {
+            (0, l.jsx)(u.z, { sku: t, title: C, reward: N }),
+            (0, l.jsxs)(a.c, {
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: h.S3,
                         children: [
-                            (0, r.jsx)(i.E, {
+                            (0, l.jsx)(s.E, {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
                                 className: h.jJ,
                                 children: f,
                             }),
-                            (0, r.jsx)(v, { isConnected: j, application: n }),
+                            (0, l.jsx)(v, { isConnected: j, application: n }),
                         ],
                     }),
                     !p &&
                         !j &&
-                        (0, r.jsx)(i.E, {
+                        (0, l.jsx)(s.E, {
                             variant: "text-md/normal",
                             className: h.tl,
                             color: "text-feedback-warning",
                             children: m.intl.formatToPlainString(m.t.AYQq05, { applicationName: n.name }),
                         }),
                     !j &&
-                        (0, r.jsx)("div", {
+                        (0, l.jsx)("div", {
                             className: h.ZT,
-                            children: (0, r.jsx)(i.E, {
+                            children: (0, l.jsx)(s.E, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
                                 children: m.intl.formatToPlainString(m.t.TTj7ME, { numDays: x.tG }),
@@ -65,7 +65,7 @@ function j(t) {
                         }),
                     g &&
                         !j &&
-                        (0, r.jsx)(i.E, {
+                        (0, l.jsx)(s.E, {
                             variant: "text-md/normal",
                             className: h.tl,
                             color: "text-feedback-positive",
@@ -73,26 +73,26 @@ function j(t) {
                         }),
                 ],
             }),
-            null != c && (0, r.jsx)(s.H, { actions: [c], actionsFullWidth: !0 }),
+            null != c && (0, l.jsx)(i.H, { actions: [c], actionsFullWidth: !0 }),
         ],
     });
 }
-function v(t) {
-    let { isConnected: e, application: n } = t;
-    return e
-        ? (0, r.jsx)("div", {
+function v(e) {
+    let { isConnected: t, application: n } = e;
+    return t
+        ? (0, l.jsx)("div", {
               className: h.II,
-              children: (0, r.jsxs)("div", {
+              children: (0, l.jsxs)("div", {
                   className: h.jf,
                   children: [
-                      (0, r.jsxs)("div", {
+                      (0, l.jsxs)("div", {
                           className: h.iN,
                           children: [
-                              (0, r.jsx)("div", {
+                              (0, l.jsx)("div", {
                                   className: h.I8,
-                                  children: (0, r.jsx)(o.U, { size: "xs", color: "currentColor" }),
+                                  children: (0, l.jsx)(o.U, { size: "xs", color: "currentColor" }),
                               }),
-                              (0, r.jsx)(i.E, {
+                              (0, l.jsx)(s.E, {
                                   variant: "text-md/normal",
                                   className: h.qS,
                                   color: "text-subtle",
@@ -100,15 +100,12 @@ function v(t) {
                               }),
                           ],
                       }),
-                      (0, r.jsx)("div", {
+                      (0, l.jsx)("div", {
                           className: h.vA,
-                          children: (0, r.jsx)(d.W, { application: n, iconSize: 20 }),
+                          children: (0, l.jsx)(d.W, { application: n, iconSize: 20 }),
                       }),
                   ],
               }),
           })
-        : (0, r.jsx)(c.w, {
-              type: "warning",
-              children: (0, r.jsx)(i.E, { variant: "text-sm/medium", children: m.intl.string(m.t.Plv1Xk) }),
-          });
+        : (0, l.jsx)(c.w, { type: "warning", message: m.intl.string(m.t.Plv1Xk), role: "none" });
 }

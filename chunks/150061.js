@@ -6,16 +6,16 @@ var l = i(17928),
     a = i(772707),
     r = i(683071),
     c = i(793574),
-    u = i(688810),
-    s = i(590180),
-    d = i(450047),
-    p = i(61750),
+    s = i(688810),
+    u = i(590180),
+    p = i(450047),
+    d = i(61750),
     g = i(780964),
     f = i(766075),
-    h = i(427262),
-    y = i(5755),
-    C = i(652215),
-    m = i(758836),
+    y = i(427262),
+    h = i(5755),
+    m = i(652215),
+    C = i(758836),
     A = i(341535),
     T = i(105292),
     k = i(711729);
@@ -30,15 +30,15 @@ function v(t) {
             canShowGiftingBadgePostPurchase: j,
             openGiftingBadgePostPurchaseModal: x,
         } = t,
-        { analyticsLocations: I } = (0, u.Ay)(c.A.PREMIUM_GIFT_SUCCESS_MODAL),
-        { openGiftModal: S } = (0, y.$)({
+        { analyticsLocations: I } = (0, s.Ay)(c.A.PREMIUM_GIFT_SUCCESS_MODAL),
+        { openGiftModal: S } = (0, h.$)({
             giftRecipient: void 0,
             analyticsLocations: I,
-            analyticsObject: { object: C.ZSU.BUTTON_CTA, objectType: C.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: m.ZSU.BUTTON_CTA, objectType: m.AnalyticsObjectTypes.GIFT },
             location: "bulk-gift-success-modal",
         }),
-        _ = (0, d.D)(O),
-        [E, ...P] = (0, l.yK)([s.A], () => O.map((t) => s.A.getProduct(t)).filter((t) => null != t)),
+        _ = (0, p.D)(O),
+        [E, ...P] = (0, l.yK)([u.A], () => O.map((t) => u.A.getProduct(t)).filter((t) => null != t)),
         G = b[0],
         N = w.length > 0;
     return null != G || N
@@ -51,12 +51,12 @@ function v(t) {
                         onClick: function () {
                             null != E &&
                                 (v(),
-                                (0, p.A)({
+                                (0, d.A)({
                                     product: E,
                                     remainingProducts: P,
                                     shouldShowPromotionalExperience: !0,
                                     analyticsLocations: I,
-                                    purchaseType: m.gs.PROMOTIONAL,
+                                    purchaseType: C.gs.PROMOTIONAL,
                                     onCloseCallback: j ? x : void 0,
                                 }));
                         },
@@ -85,7 +85,7 @@ function v(t) {
               title: T.intl.string(A.default.owluOg),
               subtitle:
                   null != G
-                      ? T.intl.format(A.default.wiBqTu, { recipientName: h.Ay.getName(G), otherCount: b.length - 1 })
+                      ? T.intl.format(A.default.wiBqTu, { recipientName: y.Ay.getName(G), otherCount: b.length - 1 })
                       : void 0,
               actions: [n],
               children:
@@ -95,11 +95,12 @@ function v(t) {
                       children: (0, e.jsx)(r.w, {
                           type: "warning",
                           iconAlign: "center",
-                          children: T.intl.format(A.default.p0mYoH, {
+                          message: T.intl.format(A.default.p0mYoH, {
                               onInventoryClick: function () {
                                   (v(), (0, f.openUserSettings)(g.X.GIFT_PANEL, { analyticsLocations: I }));
                               },
                           }),
+                          role: "none",
                       }),
                   }),
           }))

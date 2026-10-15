@@ -1,4 +1,4 @@
-(a.r(l), a.d(l, { manaCollection: () => tf, playgroundConfig: () => tV }));
+(a.r(l), a.d(l, { manaCollection: () => tv, playgroundConfig: () => tg }));
 var t = a(477900),
     o = a(582128),
     n = a(17928),
@@ -2087,13 +2087,11 @@ let lm = {
                               }),
                           ],
                       })
-                    : (0, t.jsxs)(lc.w, {
+                    : (0, t.jsx)(lc.w, {
                           type: "critical",
-                          children: [
-                              "This component is experimental and only available behind the ",
-                              (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                              " experiment. Do not use this in production yet.",
-                          ],
+                          message:
+                              "This component is experimental and only available behind the 2025-10-mana-date-inputs experiment. Do not use this in production yet.",
+                          role: "none",
                       });
             },
             controls: {
@@ -2391,13 +2389,11 @@ let lV = {
                               }),
                           ],
                       })
-                    : (0, t.jsxs)(lc.w, {
+                    : (0, t.jsx)(lc.w, {
                           type: "critical",
-                          children: [
-                              "This component is experimental and only available behind the ",
-                              (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                              " experiment. Do not use this in production yet.",
-                          ],
+                          message:
+                              "This component is experimental and only available behind the 2025-10-mana-date-inputs experiment. Do not use this in production yet.",
+                          role: "none",
                       });
             },
             controls: {
@@ -2701,13 +2697,11 @@ let l$ = {
                               }),
                           ],
                       })
-                    : (0, t.jsxs)(lc.w, {
+                    : (0, t.jsx)(lc.w, {
                           type: "critical",
-                          children: [
-                              "This component is experimental and only available behind the ",
-                              (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                              " experiment. Do not use this in production yet.",
-                          ],
+                          message:
+                              "This component is experimental and only available behind the 2025-10-mana-date-inputs experiment. Do not use this in production yet.",
+                          role: "none",
                       });
             },
             controls: {
@@ -3054,152 +3048,64 @@ let l3 = {
         },
     ],
 };
-var l6 = a(292825);
-let l8 = ["info", "success", "warning", "critical"],
-    l9 = {
-        name: "InlineNotice",
-        id: "inline-notice",
-        component: function (e) {
-            let { text: l, type: a, iconAlign: o, hidden: n } = e;
-            return (0, t.jsx)(lc.w, { type: a, iconAlign: o, hidden: n, children: l });
-        },
-        controls: {
-            type: {
-                label: "Type",
-                type: "select",
-                defaultValue: "info",
-                options: l8.map((e) => ({ label: e, value: e })),
-            },
-            text: { label: "Text", type: "text", defaultValue: "This is an inline notice" },
-            iconAlign: {
-                label: "Icon Align",
-                type: "select",
-                defaultValue: "start",
-                options: [
-                    { label: "Start", value: "start" },
-                    { label: "Center", value: "center" },
-                ],
-            },
-            hidden: { label: "Hidden", type: "boolean", defaultValue: !1 },
-        },
+var l6 = a(292825),
+    l8 = a(105292);
+let l9 = {
+    type: {
+        label: "Type",
+        type: "select",
+        defaultValue: "critical",
+        options: ["info", "success", "warning", "critical"].map((e) => ({ label: e, value: e })),
     },
-    l5 = {
-        name: "Old vs New",
-        id: "inline-notice-comparison",
-        component: function (e) {
-            let { type: l, text: a, hidden: n, iconAlign: i, title: s, dismissable: r, ctaText: d, role: u } = e,
-                c = (0, lL.G9)(),
-                [b, p] = o.useState(!1),
-                m = o.useMemo(() => {
-                    let e = (c.experiments?.enabledExperiments ?? []).filter(
-                        (e) => "mana-notification-components" !== e,
-                    );
-                    return { ...c, experiments: { ...c.experiments, enabledExperiments: e } };
-                }, [c]);
-            return (0, t.jsxs)(h.B, {
-                gap: 24,
-                children: [
-                    (0, t.jsxs)(h.B, {
-                        gap: 8,
-                        children: [
-                            (0, t.jsx)(e6.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: "Old (HelpMessage-backed)",
-                            }),
-                            (0, t.jsx)(lL.GE, {
-                                value: m,
-                                children: (0, t.jsx)(lc.w, { type: l, iconAlign: i, hidden: n, children: a }),
-                            }),
-                        ],
-                    }),
-                    (0, t.jsxs)(h.B, {
-                        gap: 8,
-                        children: [
-                            (0, t.jsx)(e6.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: "New (refreshed notice)",
-                            }),
-                            b
-                                ? (0, t.jsx)(h.B, {
-                                      direction: "horizontal",
-                                      children: (0, t.jsx)(R.$, {
-                                          text: "Reset dismissed notice",
-                                          variant: "secondary",
-                                          size: "sm",
-                                          onClick: () => p(!1),
-                                      }),
-                                  })
-                                : (0, t.jsx)(l6.a, {
-                                      type: "success" === l ? "positive" : l,
-                                      title: "" === s ? void 0 : s,
-                                      message: a,
-                                      hidden: n,
-                                      onDismiss: r ? () => p(!0) : void 0,
-                                      action: "" === d ? void 0 : { text: d, onClick: () => {} },
-                                      role: u,
-                                  }),
-                        ],
-                    }),
-                ],
-            });
-        },
-        controls: {
-            type: {
-                label: "Shared: Type",
-                type: "select",
-                defaultValue: "critical",
-                options: l8.map((e) => ({ label: e, value: e })),
-            },
-            text: {
-                label: "Shared: Message",
-                type: "text",
-                defaultValue: "Something went wrong. Please try again, or reach out to support if it keeps happening.",
-            },
-            hidden: { label: "Shared: Hidden", type: "boolean", defaultValue: !1 },
-            iconAlign: {
-                label: "Old: Icon align",
-                type: "select",
-                defaultValue: "start",
-                options: [
-                    { label: "Start", value: "start" },
-                    { label: "Center", value: "center" },
-                ],
-            },
-            title: { label: "New: Title (empty for none)", type: "text", defaultValue: "Notice title" },
-            dismissable: { label: "New: Dismissable", type: "boolean", defaultValue: !0 },
-            ctaText: { label: "New: CTA text (empty for none)", type: "text", defaultValue: "Take action" },
-            role: {
-                label: "New: Role (screen reader behavior)",
-                type: "select",
-                defaultValue: "alert",
-                options: [
-                    { label: "alert (announce immediately)", value: "alert" },
-                    { label: "status (announce when idle)", value: "status" },
-                    { label: "static (no announcement)", value: "static" },
-                ],
-            },
-        },
-    };
-var l7 = a(935063),
-    ae = a(307301),
-    al = a(683438),
-    aa = a(103557),
-    at = a(404778),
-    ao = a(34011),
-    an = a(193885),
-    ai = a(661531),
-    as = a(584454);
-let ar = [
-        { id: "strength", label: "Strength", icon: l7.X },
-        { id: "wisdom", label: "Wisdom", icon: { type: "role", color: ai.A.unsafe_rawColors.BRAND_500.css } },
+    text: {
+        label: "Message",
+        type: "text",
+        defaultValue: "Something went wrong. Please try again, or reach out to support if it keeps happening.",
+    },
+    withLink: { label: "Message: use real copy with a link", type: "boolean", defaultValue: !1 },
+    hidden: { label: "Hidden", type: "boolean", defaultValue: !1 },
+    iconAlign: {
+        label: "Old only: Icon align",
+        type: "select",
+        defaultValue: "start",
+        options: [
+            { label: "Start", value: "start" },
+            { label: "Center", value: "center" },
+        ],
+    },
+    title: { label: "Title (empty for none)", type: "text", defaultValue: "Notice title" },
+    dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
+    ctaText: { label: "CTA text (empty for none)", type: "text", defaultValue: "Take action" },
+    ctaLoading: { label: "CTA loading", type: "boolean", defaultValue: !1 },
+    role: {
+        label: "Role (screen reader behavior)",
+        type: "select",
+        defaultValue: "alert",
+        options: [
+            { label: "alert (announce immediately)", value: "alert" },
+            { label: "status (announce when idle)", value: "status" },
+            { label: "none (no announcement)", value: "none" },
+        ],
+    },
+};
+var l5 = a(935063),
+    l7 = a(307301),
+    ae = a(683438),
+    al = a(103557),
+    aa = a(404778),
+    at = a(34011),
+    ao = a(193885),
+    an = a(661531),
+    ai = a(584454);
+let as = [
+        { id: "strength", label: "Strength", icon: l5.X },
+        { id: "wisdom", label: "Wisdom", icon: { type: "role", color: an.A.unsafe_rawColors.BRAND_500.css } },
         { id: "charisma", label: "Charisma" },
         { id: "intelligence", label: "Intelligence" },
         { id: "dexterity", label: "Dexterity" },
         { id: "constitution", label: "Constitution" },
     ],
-    ad = {
+    ar = {
         title: "Input Components",
         stories: [
             {
@@ -3207,7 +3113,7 @@ let ar = [
                 component: function (e) {
                     let { leading: l, trailing: a, ...n } = e,
                         [i, s] = o.useState(""),
-                        [d, u] = o.useState(ar),
+                        [d, u] = o.useState(as),
                         c = o.useCallback(
                             (e) => {
                                 u(d.filter((l) => !e.has(l.id)));
@@ -3226,14 +3132,14 @@ let ar = [
                                         case "tags":
                                             return { type: "tags", label: "Tags", items: d, onRemove: c };
                                         case "icon":
-                                            return { icon: l7.X, onClick: r.tE, "aria-label": "At" };
+                                            return { icon: l5.X, onClick: r.tE, "aria-label": "At" };
                                         case "text":
                                             return "https://discord.gg/";
                                         default:
                                             return;
                                     }
                                 })(l),
-                                trailing: "icon" === a ? { icon: ae.j, onClick: r.tE, "aria-label": "At" } : void 0,
+                                trailing: "icon" === a ? { icon: l7.j, onClick: r.tE, "aria-label": "At" } : void 0,
                                 maxLength: 500,
                             }),
                             "tags" === l
@@ -3241,7 +3147,7 @@ let ar = [
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",
-                                      onClick: () => u(ar),
+                                      onClick: () => u(as),
                                   })
                                 : null,
                         ],
@@ -3297,7 +3203,7 @@ let ar = [
                 name: "SearchBar",
                 component: function (e) {
                     let [l, a] = o.useState("");
-                    return (0, t.jsx)(al.I, {
+                    return (0, t.jsx)(ae.I, {
                         ...e,
                         query: l,
                         onChange: a,
@@ -3325,7 +3231,7 @@ let ar = [
                 id: "text-area",
                 component: function (e) {
                     let [l, a] = o.useState("");
-                    return (0, t.jsx)(aa.f, { ...e, value: l, onChange: a });
+                    return (0, t.jsx)(al.f, { ...e, value: l, onChange: a });
                 },
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Example Label" },
@@ -3350,7 +3256,7 @@ let ar = [
                         [u, c] = o.useState("Name"),
                         [b, p] = o.useState(null),
                         [m, x] = o.useState(0),
-                        y = (0, t.jsx)(ao.w, {
+                        y = (0, t.jsx)(at.w, {
                             ...d,
                             label: "Editable text",
                             error: "" === l ? void 0 : l,
@@ -3360,7 +3266,7 @@ let ar = [
                             onCommit: p,
                             size: "content" === r ? void 0 : r,
                             trailing: s
-                                ? { icon: an.V, "aria-label": "Example accessory", onClick: () => x((e) => e + 1) }
+                                ? { icon: ao.V, "aria-label": "Example accessory", onClick: () => x((e) => e + 1) }
                                 : void 0,
                             value: u,
                         }),
@@ -3464,7 +3370,7 @@ let ar = [
                 id: "number-input",
                 component: function (e) {
                     let [l, a] = o.useState(0);
-                    return (0, t.jsx)(as.Q, { ...e, value: l, onChange: a });
+                    return (0, t.jsx)(ai.Q, { ...e, value: l, onChange: a });
                 },
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Example Label" },
@@ -3533,27 +3439,27 @@ let ar = [
                                     (0, t.jsx)(eE.k, { ...x, clearable: !0 }),
                                     (0, t.jsx)(eE.k, {
                                         ...x,
-                                        leading: { icon: l7.X, onClick: r.tE, "aria-label": "At" },
+                                        leading: { icon: l5.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eE.k, { ...x, leading: l7.X }),
+                                    (0, t.jsx)(eE.k, { ...x, leading: l5.X }),
                                     (0, t.jsx)(eE.k, { ...x, leading: "https://discord.gg/" }),
                                     (0, t.jsx)(eE.k, {
                                         ...x,
-                                        trailing: { icon: l7.X, onClick: r.tE, "aria-label": "At" },
+                                        trailing: { icon: l5.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eE.k, { ...x, trailing: l7.X }),
+                                    (0, t.jsx)(eE.k, { ...x, trailing: l5.X }),
                                     (0, t.jsx)(eE.k, {
                                         ...x,
-                                        leading: { type: "tags", label: "Tags", items: ar.slice(0, 3) },
+                                        leading: { type: "tags", label: "Tags", items: as.slice(0, 3) },
                                     }),
                                 ],
                             }),
-                            (0, t.jsx)(at.c, {}),
+                            (0, t.jsx)(aa.c, {}),
                             (0, t.jsxs)(lF.n, {
                                 label: "Search Bar",
                                 children: [
-                                    (0, t.jsx)(al.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
-                                    (0, t.jsx)(al.I, {
+                                    (0, t.jsx)(ae.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
+                                    (0, t.jsx)(ae.I, {
                                         query: u,
                                         onChange: r.tE,
                                         size: "sm",
@@ -3562,8 +3468,8 @@ let ar = [
                                     }),
                                 ],
                             }),
-                            (0, t.jsx)(at.c, {}),
-                            (0, t.jsx)(lF.n, { label: "Text Area", children: (0, t.jsx)(aa.f, { ...x }) }),
+                            (0, t.jsx)(aa.c, {}),
+                            (0, t.jsx)(lF.n, { label: "Text Area", children: (0, t.jsx)(al.f, { ...x }) }),
                         ],
                     });
                 },
@@ -3585,27 +3491,27 @@ let ar = [
         ],
     };
 a(321073);
-var au = a(102079),
-    ac = a(224640),
-    ab = a(430993),
-    ap = a(276293),
-    am = a(189213),
-    ax = a(890497),
-    ay = a(772707),
-    ah = a(347704),
-    av = a(192308),
-    ag = a(116833),
-    af = a(521489),
-    aV = a(314116);
-let aj = "/assets/f66ae7bb8510ab4f.svg";
-function aC() {
+var ad = a(102079),
+    au = a(224640),
+    ac = a(430993),
+    ab = a(276293),
+    ap = a(189213),
+    am = a(890497),
+    ax = a(772707),
+    ay = a(347704),
+    ah = a(192308),
+    av = a(116833),
+    ag = a(521489),
+    af = a(314116);
+let aV = "/assets/f66ae7bb8510ab4f.svg";
+function aj() {
     return (0, t.jsx)(e6.E, {
         variant: "text-sm/normal",
         color: "text-subtle",
         children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
     });
 }
-function aS(e) {
+function aC(e) {
     let { setIsSafetyAccepted: l, setIsHelmetSelected: a } = e,
         [n, i] = o.useState([]),
         s = [
@@ -3620,7 +3526,7 @@ function aS(e) {
         (0, t.jsx)(lv.$, { label: "Safety checklist", options: s, selectedValues: n, onChange: i })
     );
 }
-function ak(e) {
+function aS(e) {
     let { setIsPasscodeValid: l } = e,
         [a, n] = o.useState("");
     return (0, t.jsx)(eE.k, {
@@ -3631,7 +3537,7 @@ function ak(e) {
         },
     });
 }
-function aw(e) {
+function ak(e) {
     let {
             callbackDelay: l,
             failOnNext: a,
@@ -3654,7 +3560,8 @@ function aw(e) {
                 s && alert("onNext callback fired"),
                 a)
             ) {
-                if ("" !== r.trim()) return (f({ message: r, type: d }), !1);
+                if ("" !== r.trim())
+                    return (f({ message: r, type: d, role: "critical" === d ? "alert" : "status" }), !1);
                 throw Error("onNext failed");
             }
             return !0;
@@ -3666,7 +3573,10 @@ function aw(e) {
                 i && alert("onComplete callback fired"),
                 n)
             ) {
-                if ("" !== r.trim()) throw (f({ message: r, type: d }), Error("Custom error"));
+                if ("" !== r.trim())
+                    throw (
+                        f({ message: r, type: d, role: "critical" === d ? "alert" : "status" }), Error("Custom error")
+                    );
                 throw Error("onComplete failed");
             }
         }, [l, n, i, r, d]),
@@ -3676,9 +3586,9 @@ function aw(e) {
                 modalProps: {
                     title: "Verify radness",
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
-                    notice: null != g ? { message: g.message, type: g.type } : void 0,
+                    notice: g ?? void 0,
                 },
-                body: (0, t.jsx)(aC, {}),
+                body: (0, t.jsx)(aj, {}),
                 nextButtonProps: { text: "Verify" },
                 onNext: V,
             },
@@ -3690,15 +3600,16 @@ function aw(e) {
                         "Before we get started verifying your radness, we need to make sure you're safe and sound.",
                     notice:
                         null != g
-                            ? { message: g.message, type: g.type }
+                            ? g
                             : h
                               ? {
                                     message: "Great job, helmets are important for protecting your brain!",
                                     type: "warning",
+                                    role: "status",
                                 }
                               : void 0,
                 },
-                body: (0, t.jsx)(aS, { setIsSafetyAccepted: m, setIsHelmetSelected: v }),
+                body: (0, t.jsx)(aC, { setIsSafetyAccepted: m, setIsHelmetSelected: v }),
                 nextEnabled: p,
                 onNext: V,
             },
@@ -3707,17 +3618,17 @@ function aw(e) {
                 modalProps: {
                     title: "Enter passcode",
                     subtitle: "Enter your passcode to complete the radness verification process.",
-                    notice: null != g ? { message: g.message, type: g.type } : void 0,
+                    notice: g ?? void 0,
                 },
-                body: (0, t.jsx)(ak, { setIsPasscodeValid: y }),
+                body: (0, t.jsx)(aS, { setIsPasscodeValid: y }),
                 nextButtonProps: { text: "Verify passcode" },
                 nextEnabled: x,
             },
         ],
         S = C.slice(1).map((e) => e.stepKey);
-    return (0, t.jsx)(ah.t, { steps: C, currentStepKey: c, numberedSteps: S, onStepChange: b, onComplete: j, ...u });
+    return (0, t.jsx)(ay.t, { steps: C, currentStepKey: c, numberedSteps: S, onStepChange: b, onComplete: j, ...u });
 }
-let aM = {
+let aw = {
     title: "Modal",
     stories: [
         {
@@ -3726,7 +3637,7 @@ let aM = {
             docs: "https://design.discord.tools/components/web/modals/modal",
             component: function (e) {
                 let { showPreview: l, showInput: a, subtitleIcon: o, ...n } = e,
-                    i = o ? { text: n.subtitle ?? "Default subtitle", leadingIcon: ap.N } : n.subtitle;
+                    i = o ? { text: n.subtitle ?? "Default subtitle", leadingIcon: ab.N } : n.subtitle;
                 return (0, t.jsxs)(h.B, {
                     gap: 16,
                     align: "center",
@@ -3739,15 +3650,15 @@ let aM = {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
-                                (0, av.openModal)(
+                                (0, ah.openModal)(
                                     (e) =>
-                                        (0, t.jsx)(am.a, {
+                                        (0, t.jsx)(ap.a, {
                                             ...e,
                                             ...n,
                                             title: n.title,
                                             subtitle: i,
                                             input: a
-                                                ? (0, t.jsx)(al.I, {
+                                                ? (0, t.jsx)(ae.I, {
                                                       placeholder: "Search...",
                                                       onChange: () => {},
                                                       query: "",
@@ -3777,7 +3688,7 @@ let aM = {
                                             children: (0, t.jsxs)(h.B, {
                                                 gap: 16,
                                                 children: [
-                                                    (0, t.jsx)(ax.Z, {
+                                                    (0, t.jsx)(am.Z, {
                                                         maxOptionsVisible: 10,
                                                         label: "Example Select",
                                                         selectionMode: "multiple",
@@ -3864,7 +3775,7 @@ let aM = {
                             variant: "primary",
                             text: "Open Confirm Modal",
                             onClick: () =>
-                                (0, aV.A)({
+                                (0, af.A)({
                                     ...r,
                                     subtitle: d,
                                     cancelText: "" === l ? void 0 : l,
@@ -3913,11 +3824,11 @@ let aM = {
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
                 let { graphic: l, subtitleIcon: n, ...i } = e,
-                    s = n ? { text: i.subtitle ?? "Default subtitle", leadingIcon: ap.N } : i.subtitle,
+                    s = n ? { text: i.subtitle ?? "Default subtitle", leadingIcon: ab.N } : i.subtitle,
                     r = o.useMemo(() => {
                         switch (l) {
                             case 0:
-                                return { type: "image", src: aj };
+                                return { type: "image", src: aV };
                             case 1:
                                 return {
                                     type: "lottie",
@@ -3925,19 +3836,19 @@ let aM = {
                                     aspectRatio: "6/4",
                                 };
                             case 2:
-                                return { type: "rive", rive: au.Q };
+                                return { type: "rive", rive: ad.Q };
                             case 3:
                                 return {
                                     type: "video",
                                     src: "https://cdn.discordapp.com/assets/content/06fafa729efafb6235e0ee9df9482566fa9e74b96a792a9265dca70113c71ab7.webm",
-                                    fallbackImageSrc: aj,
+                                    fallbackImageSrc: aV,
                                     loop: !0,
                                     loopAt: 2.5,
                                 };
                             case 4:
                                 return {
                                     type: "dynamic",
-                                    component: ag.DynamicGraphicComponent.DEMO,
+                                    component: av.DynamicGraphicComponent.DEMO,
                                     aspectRatio: "6/4",
                                     props: { text: "Dynamic Content" },
                                 };
@@ -3957,9 +3868,9 @@ let aM = {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
-                                (0, av.openModal)(
+                                (0, ah.openModal)(
                                     (e) =>
-                                        (0, t.jsx)(ay.k, {
+                                        (0, t.jsx)(ax.k, {
                                             ...e,
                                             ...i,
                                             title: i.title,
@@ -4031,7 +3942,7 @@ let aM = {
                 let { dynamicText: l, ...o } = e,
                     n = {
                         type: "dynamic",
-                        component: ag.DynamicGraphicComponent.DEMO,
+                        component: av.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
                         props: { text: l },
                     };
@@ -4048,7 +3959,7 @@ let aM = {
                             variant: "primary",
                             text: "Open Dynamic Graphic Modal",
                             onClick: () =>
-                                (0, av.openModalLazy)(
+                                (0, ah.openModalLazy)(
                                     async () => {
                                         let { ExpressiveModal: e } = await a.e("304823").then(a.bind(a, 158954));
                                         return (l) =>
@@ -4127,8 +4038,8 @@ let aM = {
                             variant: "primary",
                             text: "Open Layer Modal",
                             onClick: () =>
-                                (0, av.openModal)((e) =>
-                                    (0, t.jsx)(af.N, {
+                                (0, ah.openModal)((e) =>
+                                    (0, t.jsx)(ag.N, {
                                         ...e,
                                         ...l,
                                         children: (0, t.jsx)(h.B, {
@@ -4170,8 +4081,8 @@ let aM = {
                             variant: "primary",
                             text: "Open MultiStepModal",
                             onClick: () =>
-                                (0, av.openModal)((e) =>
-                                    (0, t.jsx)(aw, {
+                                (0, ah.openModal)((e) =>
+                                    (0, t.jsx)(ak, {
                                         ...e,
                                         callbackDelay: l,
                                         failOnNext: a,
@@ -4223,13 +4134,13 @@ let aM = {
                             variant: "primary",
                             text: "Open BaseModal",
                             onClick: () =>
-                                (0, av.openModal)(
+                                (0, ah.openModal)(
                                     (e) =>
-                                        (0, t.jsx)(ac.d, {
+                                        (0, t.jsx)(au.d, {
                                             ...e,
                                             ...o,
                                             "aria-label": "Base Modal Example",
-                                            children: (0, t.jsx)(ab.c, {
+                                            children: (0, t.jsx)(ac.c, {
                                                 children: (0, t.jsxs)(h.B, {
                                                     gap: 16,
                                                     children: [
@@ -4324,18 +4235,17 @@ let aM = {
         },
     ],
 };
-var aT = a(249686),
-    aI = a.n(aT),
-    aD = a(43105),
-    aE = a(206248),
-    aL = a(353795),
-    aA = a(273875),
-    aN = a(798618),
-    aR = a(916845),
-    aB = a(627330),
-    aO = a(105292),
-    aP = a(489387);
-function az(e) {
+var aM = a(249686),
+    aT = a.n(aM),
+    aI = a(43105),
+    aD = a(206248),
+    aE = a(353795),
+    aL = a(273875),
+    aA = a(798618),
+    aN = a(916845),
+    aR = a(627330),
+    aB = a(489387);
+function aO(e) {
     let {
             steps: l,
             caretConfig: a = { align: "center" },
@@ -4367,7 +4277,7 @@ function az(e) {
         }, [s]);
     if (!d || null == m) return null;
     let g = {
-            text: m.action?.text ?? (x ? aO.intl.string(aO.t.i4jeWR) : aO.intl.string(aO.t.PDTjLN)),
+            text: m.action?.text ?? (x ? l8.intl.string(l8.t.i4jeWR) : l8.intl.string(l8.t.PDTjLN)),
             variant: m.action?.variant ?? "primary",
             onClick: y,
             ...m.action,
@@ -4385,30 +4295,30 @@ function az(e) {
                 ? { alignmentStrategy: "edge", align: c.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, t.jsx)(aA.x, {
+    return (0, t.jsx)(aL.x, {
         ...f,
         children: (0, t.jsxs)("div", {
             ref: r,
             children: [
-                (0, t.jsx)(aR.q, { onClick: v, variant: null != m.gradientColor ? "color-mix" : void 0 }),
+                (0, t.jsx)(aN.q, { onClick: v, variant: null != m.gradientColor ? "color-mix" : void 0 }),
                 null != m.graphic &&
                     (0, t.jsx)("div", {
-                        className: O()(aP.graphic, { [aP[`graphic--${n}`]]: null != n }),
-                        children: (0, t.jsx)(aL.v, {
+                        className: O()(aB.graphic, { [aB[`graphic--${n}`]]: null != n }),
+                        children: (0, t.jsx)(aE.v, {
                             ...m.graphic,
                             aspectRatio: m.graphic.aspectRatio ?? ("sm" === n ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, t.jsx)(aB.D, { title: m.title, body: m.body, badge: m.badge, textLink: m.textLink }),
+                (0, t.jsx)(aR.D, { title: m.title, body: m.body, badge: m.badge, textLink: m.textLink }),
                 (0, t.jsx)("div", {
-                    className: aP.actionBar,
+                    className: aB.actionBar,
                     children: (0, t.jsxs)("div", {
-                        className: aP.multistepActionLayout,
+                        className: aB.multistepActionLayout,
                         children: [
                             (0, t.jsx)(e6.E, {
                                 variant: "text-xs/normal",
-                                className: aP.multistepIndicator,
-                                children: aO.intl.formatToPlainString(aO.t.rO31eY, {
+                                className: aB.multistepIndicator,
+                                children: l8.intl.formatToPlainString(l8.t.rO31eY, {
                                     count: b + 1,
                                     totalSteps: l.length,
                                 }),
@@ -4417,14 +4327,14 @@ function az(e) {
                         ],
                     }),
                 }),
-                (0, t.jsx)(aN.F, {}),
+                (0, t.jsx)(aA.F, {}),
             ],
         }),
     });
 }
-let aG =
+let aP =
         "https://cdn.discordapp.com/assets/content/26736d800236761a21973e6fe690dfd5fa484f664976b3bba91b98d5d47bb1f7.svg",
-    a$ = {
+    az = {
         title: "Popover",
         stories: [
             {
@@ -4449,7 +4359,7 @@ let aG =
                         style: { display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" },
                         children: [
                             (0, t.jsx)(
-                                aD.A,
+                                aI.A,
                                 {
                                     ...c,
                                     position: u,
@@ -4465,7 +4375,7 @@ let aG =
                                               src:
                                                   "sm" === d
                                                       ? "https://cdn.discordapp.com/assets/content/7c8ee05f499cdf960d0b69208667276e8ca276aa2edcee6141d55e237d1ed5d2.svg"
-                                                      : aG,
+                                                      : aP,
                                           }
                                         : void 0,
                                     caretConfig: { align: i },
@@ -4582,7 +4492,7 @@ let aG =
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                aE.H,
+                                aD.H,
                                 {
                                     ...i,
                                     targetElementRef: d,
@@ -4591,7 +4501,7 @@ let aG =
                                     title: "Video Popover Demo",
                                     body: "Click the video to view it in the media viewer!",
                                     assetUrl: n,
-                                    previewUrl: aI()(a) ? void 0 : a,
+                                    previewUrl: aT()(a) ? void 0 : a,
                                     badge: "new",
                                     action: l ? { text: "Learn More", onClick: () => r(!1) } : void 0,
                                 },
@@ -4628,7 +4538,7 @@ let aG =
                             {
                                 title: "Welcome to the Feature!",
                                 body: "This is the first step of our multi-step introduction.",
-                                asset: (0, t.jsx)("img", { src: aG, alt: "Step 1" }),
+                                asset: (0, t.jsx)("img", { src: aP, alt: "Step 1" }),
                                 badge: "new",
                                 action: { text: "Next" },
                                 gradientColor: "blue",
@@ -4646,7 +4556,7 @@ let aG =
                             {
                                 title: "Get Started!",
                                 body: "You're all set to begin using this awesome feature.",
-                                asset: (0, t.jsx)("img", { src: aG, alt: "Step 3" }),
+                                asset: (0, t.jsx)("img", { src: aP, alt: "Step 3" }),
                                 action: { text: "Get Started", variant: l ? "expressive" : void 0 },
                                 gradientColor: "nitro-pink",
                                 textLink: { text: "Learn More", link: "https://discord.com", external: !0 },
@@ -4655,7 +4565,7 @@ let aG =
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                az,
+                                aO,
                                 {
                                     ...a,
                                     targetElementRef: s,
@@ -4691,8 +4601,8 @@ let aG =
             },
         ],
     };
-var aF = a(911608);
-let a_ = {
+var aG = a(911608);
+let a$ = {
         title: "ProgressBar",
         stories: [
             {
@@ -4703,8 +4613,8 @@ let a_ = {
                         r = "" !== i ? i : void 0,
                         d = "" !== s ? s : "Progress";
                     return a
-                        ? (0, t.jsx)(aF.z, { isIndeterminate: !0, size: o, animate: n, valueLabel: r, "aria-label": d })
-                        : (0, t.jsx)(aF.z, { value: l, size: o, animate: n, valueLabel: r, "aria-label": d });
+                        ? (0, t.jsx)(aG.z, { isIndeterminate: !0, size: o, animate: n, valueLabel: r, "aria-label": d })
+                        : (0, t.jsx)(aG.z, { value: l, size: o, animate: n, valueLabel: r, "aria-label": d });
                 },
                 controls: {
                     value: { label: "Value", type: "slider", defaultValue: 50, minValue: 0, maxValue: 100 },
@@ -4727,7 +4637,7 @@ let a_ = {
             },
         ],
     },
-    aH = {
+    aF = {
         title: "RadioGroup",
         stories: [
             {
@@ -4859,7 +4769,7 @@ let a_ = {
             },
         ],
     },
-    aq = {
+    a_ = {
         title: "RangeCalendar",
         stories: [
             {
@@ -4885,13 +4795,11 @@ let a_ = {
                             s({ start: (0, lr._U)("2024-12-01"), end: (0, lr._U)("2024-12-31") });
                         }, []);
                     if (!lp("RangeCalendarStory"))
-                        return (0, t.jsxs)(lc.w, {
+                        return (0, t.jsx)(lc.w, {
                             type: "critical",
-                            children: [
-                                "This component is experimental and only available behind the ",
-                                (0, t.jsx)("code", { children: "2025-10-mana-date-inputs" }),
-                                " experiment. Do not use this in production yet.",
-                            ],
+                            message:
+                                "This component is experimental and only available behind the 2025-10-mana-date-inputs experiment. Do not use this in production yet.",
+                            role: "none",
                         });
                     function b(e) {
                         return null == e ? "None" : (0, ld.default)(e.toDate((0, ls.Xj)()), "MMMM d, yyyy");
@@ -4954,10 +4862,10 @@ let a_ = {
             },
         ],
     };
-var aU = a(593924),
-    aW = a(844222),
-    aX = a(272318);
-let aZ = Object.entries(aU)
+var aH = a(593924),
+    aq = a(844222),
+    aU = a(272318);
+let aW = Object.entries(aH)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -4967,11 +4875,11 @@ let aZ = Object.entries(aU)
         return { name: l, Component: a };
     })
     .sort((e, l) => e.name.localeCompare(l.name));
-var aK = a(649998),
-    aY = a(715022),
-    aJ = a(453318),
-    aQ = a(379649);
-let a0 = [
+var aX = a(649998),
+    aZ = a(715022),
+    aK = a(453318),
+    aY = a(379649);
+let aJ = [
         { label: "Aardvark", value: "aardvark", id: "aardvark", description: "This is an aardvark" },
         { label: "Cat", value: "cat", id: "cat", description: "This is a cat" },
         { label: "Dog", value: "dog", id: "dog" },
@@ -4979,22 +4887,22 @@ let a0 = [
         { label: "Panda", value: "panda", id: "panda" },
         { label: "Snake", value: "snake", id: "snake", disabled: !0 },
     ],
-    a1 = [
+    aQ = [
         {
             label: "Aardvark",
             value: "aardvark",
             id: "aardvark",
-            leading: ap.N,
+            leading: ab.N,
             trailing: { type: "badge", badgeType: "new" },
             description: "This is an aardvark",
         },
-        { label: "Cat", value: "cat", id: "cat", leading: ap.N, trailing: "20m", description: "This is a cat" },
-        { label: "Dog", value: "dog", id: "dog", leading: ap.N },
-        { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: aQ } },
-        { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: aQ } },
-        { label: "Snake", value: "snake", id: "snake", leading: ap.N, disabled: !0 },
+        { label: "Cat", value: "cat", id: "cat", leading: ab.N, trailing: "20m", description: "This is a cat" },
+        { label: "Dog", value: "dog", id: "dog", leading: ab.N },
+        { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: aY } },
+        { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: aY } },
+        { label: "Snake", value: "snake", id: "snake", leading: ab.N, disabled: !0 },
     ],
-    a2 = [
+    a0 = [
         {
             label: "Domesticated",
             options: [
@@ -5012,7 +4920,7 @@ let a0 = [
             ],
         },
     ],
-    a4 = {
+    a1 = {
         title: "Select",
         stories: [
             {
@@ -5022,7 +4930,7 @@ let a0 = [
                     let { selectionMode: l, withLeadingAndTrailing: a, withGroups: n, withLongLabels: i, ...s } = e,
                         [r, d] = o.useState(void 0),
                         [u, c] = o.useState([]),
-                        b = a6(a, s.asyncOptions, n, i);
+                        b = a4(a, s.asyncOptions, n, i);
                     return "single" === l
                         ? (0, t.jsx)(l_.l, { ...s, selectionMode: l, options: b, onSelectionChange: d, value: r })
                         : (0, t.jsx)(l_.l, { ...s, selectionMode: l, options: b, onSelectionChange: c, value: u });
@@ -5080,10 +4988,10 @@ let a0 = [
                     let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: n, withGroups: i, ...s } = e,
                         [r, d] = o.useState(void 0),
                         [u, c] = o.useState([]),
-                        b = a6(a, n, i);
+                        b = a4(a, n, i);
                     return "single" === l
-                        ? (0, t.jsx)(ax.Z, { ...s, selectionMode: l, onSelectionChange: d, value: r, options: b })
-                        : (0, t.jsx)(ax.Z, { ...s, selectionMode: l, onSelectionChange: c, value: u, options: b });
+                        ? (0, t.jsx)(am.Z, { ...s, selectionMode: l, onSelectionChange: d, value: r, options: b })
+                        : (0, t.jsx)(am.Z, { ...s, selectionMode: l, onSelectionChange: c, value: u, options: b });
                 },
                 controls: {
                     selectionMode: {
@@ -5142,16 +5050,16 @@ let a0 = [
                             ...m
                         } = e,
                         { required: x, disabled: y } = m,
-                        h = a6(c, m.asyncOptions, b),
+                        h = a4(c, m.asyncOptions, b),
                         [v, g] = o.useState(null);
-                    return (0, t.jsxs)(aJ.iS, {
+                    return (0, t.jsxs)(aK.iS, {
                         selectionMode: l,
                         onSelectionChange: g,
                         options: h,
                         value: v,
                         ...m,
                         children: [
-                            (0, t.jsx)(aJ.a3, {
+                            (0, t.jsx)(aK.a3, {
                                 label: a,
                                 hideLabel: n,
                                 placeholder: p,
@@ -5163,7 +5071,7 @@ let a0 = [
                                 successMessage: d,
                                 wrapTags: u,
                             }),
-                            (0, t.jsx)(aJ.X2, {}),
+                            (0, t.jsx)(aK.X2, {}),
                         ],
                     });
                 },
@@ -5216,12 +5124,12 @@ let a0 = [
                             withGroups: s,
                         } = e,
                         [r, d] = o.useState(null),
-                        { flatOptions: u, groups: c } = o.useMemo(() => (0, aY.yG)(a2), []);
-                    return (0, t.jsx)(aK.q, {
+                        { flatOptions: u, groups: c } = o.useMemo(() => (0, aZ.yG)(a0), []);
+                    return (0, t.jsx)(aX.q, {
                         selectionMode: l,
                         required: a,
                         shouldFocusWrap: n,
-                        items: s ? u : i ? a1 : a0,
+                        items: s ? u : i ? aQ : aJ,
                         groups: s ? c : void 0,
                         onSelectionChange: d,
                         selectedItems: r,
@@ -5249,24 +5157,24 @@ let a0 = [
             },
         ],
     };
-function a3(e) {
+function a2(e) {
     return {
         ...e,
         label: `${e.label} \u{2014} a very long option label for testing marquee scrolling speed and overflow in the Select playground`,
     };
 }
-function a6(e, l, a, t) {
+function a4(e, l, a, t) {
     let n = o.useRef(null);
     return o.useMemo(() => {
         let o = t
                 ? a
-                    ? a2.map((e) => ({ ...e, options: e.options.map(a3) }))
-                    : (e ? a1 : a0).map(a3)
+                    ? a0.map((e) => ({ ...e, options: e.options.map(a2) }))
+                    : (e ? aQ : aJ).map(a2)
                 : a
-                  ? a2
+                  ? a0
                   : e
-                    ? a1
-                    : a0,
+                    ? aQ
+                    : aJ,
             i = `${a ?? !1}-${e ?? !1}-${t ?? !1}`;
         return l
             ? (e) => {
@@ -5280,7 +5188,7 @@ function a6(e, l, a, t) {
             : o;
     }, [e, l, a, t]);
 }
-let a8 = {
+let a3 = {
     title: "Switch",
     stories: [
         {
@@ -5316,19 +5224,19 @@ let a8 = {
         },
     ],
 };
-var a9 = a(11779),
-    a5 = a(872162);
-let a7 = [
-        { id: "strength", label: "Strength", icon: a9.r },
+var a6 = a(11779),
+    a8 = a(872162);
+let a9 = [
+        { id: "strength", label: "Strength", icon: a6.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
     ],
-    te = [
+    a5 = [
         { id: "safety", label: "Safety Center", href: "https://discord.com/safety" },
         { id: "support", label: "Support", href: "https://support.discord.com" },
     ],
-    tl = {
+    a7 = {
         title: "TagGroup",
         stories: [
             {
@@ -5339,7 +5247,7 @@ let a7 = [
                         d = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
                         u = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: a9.r },
+                                { id: "strength", label: "Strength", icon: a6.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -5360,7 +5268,7 @@ let a7 = [
                         m = o.useCallback(() => {
                             b(u);
                         }, [u]),
-                        x = (0, t.jsx)(a5.C, {
+                        x = (0, t.jsx)(a8.C, {
                             label: "Character attributes",
                             disabled: l,
                             layout: s,
@@ -5406,7 +5314,7 @@ let a7 = [
                 id: "tag-group-links",
                 component: function (e) {
                     let { disabled: l } = e;
-                    return (0, t.jsx)(a5.C, { mode: "link", label: "Discord resources", disabled: l, items: te });
+                    return (0, t.jsx)(a8.C, { mode: "link", label: "Discord resources", disabled: l, items: a5 });
                 },
                 controls: { disabled: { label: "Disabled", type: "boolean", defaultValue: !1 } },
             },
@@ -5422,11 +5330,11 @@ let a7 = [
                         }, []);
                     return (0, t.jsx)(h.B, {
                         gap: 24,
-                        children: (0, t.jsx)(a5.C, {
+                        children: (0, t.jsx)(a8.C, {
                             variant: "filter",
                             label: "Character attributes",
                             disabled: l,
-                            items: a7,
+                            items: a9,
                             selectionMode: n,
                             selectedKeys: s,
                             onSelectionChange: u,
@@ -5463,9 +5371,9 @@ let a7 = [
             },
         ],
     };
-var ta = a(364522),
-    tt = a(404544);
-let to = {
+var te = a(364522),
+    tl = a(404544);
+let ta = {
     name: "Text",
     id: "text",
     component: e6.E,
@@ -5497,22 +5405,22 @@ let to = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var tn = a(252392),
-    ti = a(260509),
-    ts = a(711014),
-    tr = a(690521);
-let td = ["Wumpus", "Discord Staff", "Design Systems Team"],
-    tu = { label: "Text", type: "text", defaultValue: "This is a toast message" };
-var tc = a(782641),
-    tb = a(381275);
-let tp = Object.assign(
+var tt = a(252392),
+    to = a(260509),
+    tn = a(711014),
+    ti = a(690521);
+let ts = ["Wumpus", "Discord Staff", "Design Systems Team"],
+    tr = { label: "Text", type: "text", defaultValue: "This is a toast message" };
+var td = a(782641),
+    tu = a(381275);
+let tc = Object.assign(
     function (e) {
         let { children: l, "aria-label": a, "aria-labelledby": o } = e;
-        return (0, t.jsx)(tc.M, {
+        return (0, t.jsx)(td.M, {
             "data-mana-component": "toolbar",
             "aria-label": a,
             "aria-labelledby": o,
-            className: tb.KE,
+            className: tu.KE,
             children: l,
         });
     },
@@ -5524,7 +5432,7 @@ let tp = Object.assign(
                 "data-mana-component": "toolbar-group",
                 "aria-label": a,
                 "aria-labelledby": o,
-                className: tb.Os,
+                className: tu.Os,
                 children: l,
             });
         },
@@ -5533,15 +5441,15 @@ let tp = Object.assign(
                 role: "separator",
                 "aria-orientation": "vertical",
                 "data-mana-component": "toolbar-separator",
-                className: tb.me,
+                className: tu.me,
             });
         },
     },
 );
-var tm = a(866665),
-    tx = a(683063),
-    ty = a(557464);
-let th = {
+var tb = a(866665),
+    tp = a(683063),
+    tm = a(557464);
+let tx = {
     title: "Tooltip",
     stories: [
         {
@@ -5564,7 +5472,7 @@ let th = {
                         if ("center" !== i && null != i)
                             return "custom" === i ? { align: i, customOffset: s } : { align: i };
                     }, [i, s]);
-                return (0, t.jsx)(tm.m, {
+                return (0, t.jsx)(tb.m, {
                     text: l,
                     position: a,
                     align: n,
@@ -5643,8 +5551,8 @@ let th = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    h = o.useMemo(() => (n ? { type: "image", src: ty.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(tx.u, {
+                    h = o.useMemo(() => (n ? { type: "image", src: tm.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(tp.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5728,27 +5636,27 @@ let th = {
         },
     ],
 };
-var tv = a(508382),
-    tg = a(393743);
-let tf = {
+var ty = a(508382),
+    th = a(393743);
+let tv = {
         id: "mana",
         name: "Mana",
         groups: [
             {
                 title: "Text",
                 stories: [
-                    to,
+                    ta,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(ta.Ar, {
-                                className: tt.H,
+                            return (0, t.jsx)(te.Ar, {
+                                className: tl.H,
                                 children: Object.values(X).map((l) =>
                                     (0, t.jsxs)(
                                         N.Z,
                                         {
-                                            className: tt.N,
+                                            className: tl.N,
                                             children: [
                                                 (0, t.jsx)(e6.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(e6.E, {
@@ -5780,14 +5688,14 @@ let tf = {
                             let [e, l] = o.useState(!1),
                                 [a, n] = o.useState(!1),
                                 i = e ? "Unmute microphone" : "Mute microphone";
-                            return (0, t.jsxs)(tp, {
+                            return (0, t.jsxs)(tc, {
                                 "aria-label": "Message actions",
                                 children: [
-                                    (0, t.jsxs)(tp.Group, {
+                                    (0, t.jsxs)(tc.Group, {
                                         "aria-label": "Response actions",
                                         children: [
                                             (0, t.jsx)(R.$, { variant: "secondary", text: "Reply" }),
-                                            (0, t.jsx)(tm.m, {
+                                            (0, t.jsx)(tb.m, {
                                                 text: "More options",
                                                 children: (0, t.jsx)(eU.K, {
                                                     variant: "secondary",
@@ -5797,11 +5705,11 @@ let tf = {
                                             }),
                                         ],
                                     }),
-                                    (0, t.jsx)(tp.Separator, {}),
-                                    (0, t.jsxs)(tp.Group, {
+                                    (0, t.jsx)(tc.Separator, {}),
+                                    (0, t.jsxs)(tc.Group, {
                                         "aria-label": "Message options",
                                         children: [
-                                            (0, t.jsx)(tm.m, {
+                                            (0, t.jsx)(tb.m, {
                                                 text: i,
                                                 children: (0, t.jsx)(eX.k, {
                                                     icon: eZ.MicrophoneIcon,
@@ -5826,33 +5734,141 @@ let tf = {
             lg,
             lV,
             l$,
-            aH,
-            aq,
-            a8,
-            aM,
+            aF,
+            a_,
+            a3,
+            aw,
             {
                 title: "InlineNotice",
                 stories: [
-                    l9,
                     {
-                        name: "All Types",
-                        id: "inline-notice-types",
+                        name: "InlineNotice",
+                        id: "inline-notice",
                         component: function (e) {
-                            let { text: l } = e;
-                            return (0, t.jsx)(h.B, {
-                                gap: 16,
-                                children: l8.map((e) => (0, t.jsx)(lc.w, { type: e, children: `${e}: ${l}` }, e)),
-                            });
+                            let {
+                                    type: l,
+                                    text: a,
+                                    withLink: n,
+                                    hidden: i,
+                                    iconAlign: s,
+                                    title: r,
+                                    dismissable: d,
+                                    ctaText: u,
+                                    ctaLoading: c,
+                                    role: b,
+                                } = e,
+                                [p, m] = o.useState(!1),
+                                x = n
+                                    ? l8.intl.format(l8.t.MOIaNd, { keyboardNavArticle: "https://support.discord.com" })
+                                    : a;
+                            return p
+                                ? (0, t.jsx)(h.B, {
+                                      direction: "horizontal",
+                                      children: (0, t.jsx)(R.$, {
+                                          text: "Reset dismissed notice",
+                                          variant: "secondary",
+                                          size: "sm",
+                                          onClick: () => m(!1),
+                                      }),
+                                  })
+                                : (0, t.jsx)(lc.w, {
+                                      type: l,
+                                      iconAlign: s,
+                                      hidden: i,
+                                      message: x,
+                                      title: "" === r ? void 0 : r,
+                                      onDismiss: d ? () => m(!0) : void 0,
+                                      action: "" === u ? void 0 : { text: u, onClick: () => {}, loading: c },
+                                      role: b,
+                                  });
                         },
-                        controls: { text: { label: "Text", type: "text", defaultValue: "This is an inline notice" } },
+                        controls: l9,
                     },
-                    l5,
+                    {
+                        name: "Old vs New",
+                        id: "inline-notice-comparison",
+                        component: function (e) {
+                            let {
+                                    type: l,
+                                    text: a,
+                                    withLink: n,
+                                    hidden: i,
+                                    iconAlign: s,
+                                    title: r,
+                                    dismissable: d,
+                                    ctaText: u,
+                                    ctaLoading: c,
+                                    role: b,
+                                } = e,
+                                p = (0, lL.G9)(),
+                                [m, x] = o.useState(!1),
+                                y = o.useMemo(() => {
+                                    let e = (p.experiments?.enabledExperiments ?? []).filter(
+                                        (e) => "mana-notification-components" !== e,
+                                    );
+                                    return { ...p, experiments: { ...p.experiments, enabledExperiments: e } };
+                                }, [p]),
+                                v = {
+                                    hidden: i,
+                                    message: n
+                                        ? l8.intl.format(l8.t.MOIaNd, {
+                                              keyboardNavArticle: "https://support.discord.com",
+                                          })
+                                        : a,
+                                    title: "" === r ? void 0 : r,
+                                    onDismiss: d ? () => x(!0) : void 0,
+                                    action: "" === u ? void 0 : { text: u, onClick: () => {}, loading: c },
+                                    role: b,
+                                };
+                            return m
+                                ? (0, t.jsx)(h.B, {
+                                      direction: "horizontal",
+                                      children: (0, t.jsx)(R.$, {
+                                          text: "Reset dismissed notice",
+                                          variant: "secondary",
+                                          size: "sm",
+                                          onClick: () => x(!1),
+                                      }),
+                                  })
+                                : (0, t.jsxs)(h.B, {
+                                      gap: 24,
+                                      children: [
+                                          (0, t.jsxs)(h.B, {
+                                              gap: 8,
+                                              children: [
+                                                  (0, t.jsx)(e6.E, {
+                                                      variant: "text-sm/semibold",
+                                                      color: "text-subtle",
+                                                      children: "Old (HelpMessage-backed)",
+                                                  }),
+                                                  (0, t.jsx)(lL.GE, {
+                                                      value: y,
+                                                      children: (0, t.jsx)(lc.w, { type: l, iconAlign: s, ...v }),
+                                                  }),
+                                              ],
+                                          }),
+                                          (0, t.jsxs)(h.B, {
+                                              gap: 8,
+                                              children: [
+                                                  (0, t.jsx)(e6.E, {
+                                                      variant: "text-sm/semibold",
+                                                      color: "text-subtle",
+                                                      children: "New (refreshed notice)",
+                                                  }),
+                                                  (0, t.jsx)(l6.a, { type: "success" === l ? "positive" : l, ...v }),
+                                              ],
+                                          }),
+                                      ],
+                                  });
+                        },
+                        controls: l9,
+                    },
                 ],
             },
-            ad,
-            a4,
+            ar,
+            a1,
+            az,
             a$,
-            a_,
             {
                 title: "Toast",
                 stories: [
@@ -5864,58 +5880,58 @@ let tf = {
                             return (0, t.jsxs)(h.B, {
                                 gap: 12,
                                 children: [
-                                    (0, t.jsx)(tn.y, { text: l, variant: "default" }),
-                                    (0, t.jsx)(tn.y, { text: l, variant: "default", icon: lx.CircleInformationIcon }),
-                                    (0, t.jsx)(tn.y, {
+                                    (0, t.jsx)(tt.y, { text: l, variant: "default" }),
+                                    (0, t.jsx)(tt.y, { text: l, variant: "default", icon: lx.CircleInformationIcon }),
+                                    (0, t.jsx)(tt.y, {
                                         text: l,
                                         variant: "default",
                                         icon: lx.CircleInformationIcon,
-                                        iconColor: ai.A.colors.ICON_BRAND,
-                                        secondaryIconColor: ai.A.colors.ICON_DEFAULT,
+                                        iconColor: an.A.colors.ICON_BRAND,
+                                        secondaryIconColor: an.A.colors.ICON_DEFAULT,
                                     }),
-                                    (0, t.jsx)(tn.y, {
+                                    (0, t.jsx)(tt.y, {
                                         text: l,
                                         variant: "default",
                                         icon: p.StarIcon,
-                                        iconColor: ai.A.colors.ICON_BRAND,
+                                        iconColor: an.A.colors.ICON_BRAND,
                                     }),
-                                    (0, t.jsx)(tn.y, { text: l, variant: "success" }),
-                                    (0, t.jsx)(tn.y, { text: l, variant: "critical" }),
+                                    (0, t.jsx)(tt.y, { text: l, variant: "success" }),
+                                    (0, t.jsx)(tt.y, { text: l, variant: "critical" }),
                                 ],
                             });
                         },
-                        controls: { text: tu },
+                        controls: { text: tr },
                     },
                     {
                         name: "Toasts with entities",
                         id: "toast-entities",
                         component: function (e) {
                             let { text: l } = e,
-                                a = (0, n.bG)([ts.Ay, eg.A], () =>
-                                    ts.Ay.getFlattenedGuildIds()
+                                a = (0, n.bG)([tn.Ay, eg.A], () =>
+                                    tn.Ay.getFlattenedGuildIds()
                                         .map((e) => eg.A.getGuild(e))
                                         .find((e) => e?.icon != null),
                                 ),
-                                o = tr.Ay.getURL("\uD83D\uDC4B"),
-                                i = tr.Ay.getURL("\uD83D\uDD25");
+                                o = ti.Ay.getURL("\uD83D\uDC4B"),
+                                i = ti.Ay.getURL("\uD83D\uDD25");
                             return (0, t.jsxs)(h.B, {
                                 gap: 12,
                                 children: [
-                                    (0, t.jsx)(tn.y, {
+                                    (0, t.jsx)(tt.y, {
                                         text: l,
                                         icon:
                                             "" !== o
                                                 ? { type: "emoji", src: o, alt: "\uD83D\uDC4B" }
                                                 : { type: "emoji", unicode: "\uD83D\uDC4B" },
                                     }),
-                                    (0, t.jsx)(tn.y, {
+                                    (0, t.jsx)(tt.y, {
                                         text: l,
                                         icon:
                                             "" !== i
                                                 ? { type: "emoji", src: i, alt: "\uD83D\uDD25" }
                                                 : { type: "emoji", unicode: "\uD83D\uDD25" },
                                     }),
-                                    (0, t.jsx)(tn.y, {
+                                    (0, t.jsx)(tt.y, {
                                         text: l,
                                         icon: {
                                             type: "avatar",
@@ -5924,23 +5940,23 @@ let tf = {
                                         },
                                     }),
                                     null != a &&
-                                        (0, t.jsx)(tn.y, {
+                                        (0, t.jsx)(tt.y, {
                                             text: a.name,
-                                            icon: { type: "guild", src: (0, ti.Iv)(a, 48), name: a.name },
+                                            icon: { type: "guild", src: (0, to.Iv)(a, 48), name: a.name },
                                         }),
-                                    td.map((e) =>
-                                        (0, t.jsx)(tn.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
+                                    ts.map((e) =>
+                                        (0, t.jsx)(tt.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
                                     ),
                                 ],
                             });
                         },
-                        controls: { text: tu },
+                        controls: { text: tr },
                     },
                 ],
             },
-            th,
+            tx,
             li,
-            tl,
+            a7,
             lY,
             {
                 title: "FloatingLayer",
@@ -5959,7 +5975,7 @@ let tf = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(tv.Ow, {
+                            return (0, t.jsx)(ty.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -5971,7 +5987,7 @@ let tf = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: tg.q,
+                                        className: th.q,
                                         children: (0, t.jsx)(e6.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -6035,13 +6051,13 @@ let tf = {
                         id: "rive-all-animations",
                         component: function () {
                             let [e, l] = o.useState(!0),
-                                a = o.useContext(aW.C),
+                                a = o.useContext(aq.C),
                                 [n, i] = o.useState(0);
-                            return (0, t.jsxs)(aW.C.Provider, {
+                            return (0, t.jsxs)(aq.C.Provider, {
                                 value: { ...a, reducedMotion: { ...a.reducedMotion, enabled: e } },
                                 children: [
                                     (0, t.jsx)("div", {
-                                        className: aX.QT,
+                                        className: aU.QT,
                                         children: (0, t.jsxs)(h.B, {
                                             gap: 8,
                                             children: [
@@ -6060,16 +6076,16 @@ let tf = {
                                     (0, t.jsx)(
                                         "div",
                                         {
-                                            className: aX.Vg,
-                                            children: aZ.map((e) => {
+                                            className: aU.Vg,
+                                            children: aW.map((e) => {
                                                 let { name: l, Component: a } = e;
                                                 return (0, t.jsxs)(
                                                     "div",
                                                     {
-                                                        className: aX.Hn,
+                                                        className: aU.Hn,
                                                         children: [
                                                             (0, t.jsx)("div", {
-                                                                className: aX.k$,
+                                                                className: aU.k$,
                                                                 children: (0, t.jsx)(a, {
                                                                     style: { width: "100%", height: "100%" },
                                                                 }),
@@ -6077,7 +6093,7 @@ let tf = {
                                                             (0, t.jsx)(e6.E, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-subtle",
-                                                                className: aX.Pf,
+                                                                className: aU.Pf,
                                                                 children: l,
                                                             }),
                                                         ],
@@ -6096,4 +6112,4 @@ let tf = {
             },
         ],
     },
-    tV = { collections: [tf, eR] };
+    tg = { collections: [tv, eR] };

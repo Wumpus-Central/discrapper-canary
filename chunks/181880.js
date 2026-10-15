@@ -107,8 +107,8 @@ function M(e) {
                     label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                x && (0, i.jsx)(u.w, { type: "warning", children: N.intl.string(N.t.tTHQAy) }),
-                null != M && (0, i.jsx)(u.w, { type: "critical", children: M }),
+                x && (0, i.jsx)(u.w, { type: "warning", message: N.intl.string(N.t.tTHQAy), role: "status" }),
+                null != M && (0, i.jsx)(u.w, { type: "critical", message: M, role: "alert" }),
             ],
         }),
     });

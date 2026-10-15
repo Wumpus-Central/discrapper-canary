@@ -70,7 +70,7 @@ function h(e) {
             ? null
             : (0, i.jsx)("div", {
                   className: d.OK,
-                  children: (0, i.jsx)(r.w, { type: "info", message: p, role: "static" }),
+                  children: (0, i.jsx)(r.w, { type: "info", message: p, role: "none" }),
               })
         : "trial" === n && null != u && null != c
           ? "" === p

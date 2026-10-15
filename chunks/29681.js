@@ -51,7 +51,7 @@ function p(t) {
         children: [
             (0, a.jsx)("div", {
                 className: C.$e,
-                children: (0, a.jsx)(r.w, { type: "warning", message: A.intl.string(A.t["O2v/eP"]), role: "static" }),
+                children: (0, a.jsx)(r.w, { type: "warning", message: A.intl.string(A.t["O2v/eP"]), role: "none" }),
             }),
             (0, a.jsx)(c.D, {
                 className: C._5,

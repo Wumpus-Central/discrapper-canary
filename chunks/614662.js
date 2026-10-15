@@ -216,7 +216,7 @@ function er(e) {
                                 (p(), (0, I.bz)(), (0, X.openUserSettings)(z.X.GIFT_PANEL, { analyticsLocations: T }));
                             },
                         }),
-                        role: "static",
+                        role: "none",
                     }),
                 ],
             }),

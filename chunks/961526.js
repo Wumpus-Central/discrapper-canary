@@ -1322,7 +1322,7 @@ function t4() {
                 0 === t
                     ? $.intl.format(J.default.S5kmfO, { learnMoreHook: n })
                     : $.intl.format(J.default["5jm+T3"], { count: t, learnMoreHook: n }),
-            role: "static",
+            role: "none",
         }),
     });
 }

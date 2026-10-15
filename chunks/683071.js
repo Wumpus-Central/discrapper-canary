@@ -1,49 +1,73 @@
-n.d(t, { w: () => c });
+n.d(t, { w: () => u });
 var i = n(477900);
 n(582128);
 var r = n(821609),
-    a = n(512950),
-    s = n(460890),
-    l = n(292825),
-    o = n(331322),
-    d = n(834730);
-function c(e) {
-    let { type: t, hidden: n, iconAlign: c, children: u, message: _, role: E, title: A, action: h, onDismiss: f } = e;
-    if ((0, s.G9)().experiments?.enabledExperiments?.includes("mana-notification-components"))
-        return (0, i.jsx)(l.a, {
+    a = n(815021),
+    s = n(512950),
+    l = n(460890),
+    o = n(292825),
+    d = n(331322),
+    c = n(834730);
+function u(e) {
+    let { type: t, hidden: n, iconAlign: u, children: _, message: E, role: A, title: h, action: f, onDismiss: I } = e,
+        { i18n: p, experiments: T } = (0, l.G9)();
+    if (T?.enabledExperiments?.includes("mana-notification-components"))
+        return (0, i.jsx)(o.a, {
             type: "success" === t ? "positive" : t,
             hidden: n,
-            message: _ ?? u,
-            role: E ?? "static",
-            title: A,
-            action: h,
-            onDismiss: f,
+            message: E ?? _,
+            role: A ?? "none",
+            title: h,
+            action: f,
+            onDismiss: I,
         });
-    return (0, i.jsx)(a.p, {
+    return (0, i.jsx)(s.p, {
         messageType: (function (e) {
             switch (e) {
                 case "critical":
-                    return a.Y.ERROR;
+                    return s.Y.ERROR;
                 case "warning":
-                    return a.Y.WARNING;
+                    return s.Y.WARNING;
                 case "info":
-                    return a.Y.INFO;
+                    return s.Y.INFO;
                 case "success":
-                    return a.Y.POSITIVE;
+                    return s.Y.POSITIVE;
             }
         })(t),
         hidden: n,
-        iconAlign: c,
+        iconAlign: u,
         action:
-            null != h
-                ? (0, i.jsx)(r.$, { variant: "secondary", size: "sm", text: h.text, onClick: h.onClick })
+            null != f || null != I
+                ? (0, i.jsxs)(d.B, {
+                      direction: "horizontal",
+                      align: "center",
+                      gap: 8,
+                      fullWidth: !1,
+                      children: [
+                          null != f
+                              ? (0, i.jsx)(r.$, {
+                                    variant: "secondary",
+                                    size: "sm",
+                                    text: f.text,
+                                    onClick: f.onClick,
+                                    loading: f.loading,
+                                })
+                              : null,
+                          null != I
+                              ? (0, i.jsx)(a.J, { "aria-label": p.DISMISS_BUTTON_LABEL, size: "sm", onClick: I })
+                              : null,
+                      ],
+                  })
                 : void 0,
         children:
-            null != A
-                ? (0, i.jsxs)(o.B, {
+            null != h
+                ? (0, i.jsxs)(d.B, {
                       gap: 4,
-                      children: [A, (0, i.jsx)(d.E, { variant: "text-sm/normal", children: _ })],
+                      children: [
+                          (0, i.jsx)(c.E, { tag: "div", variant: "heading-md/medium", children: h }),
+                          (0, i.jsx)(c.E, { variant: "text-sm/normal", children: E }),
+                      ],
                   })
-                : (u ?? _),
+                : (_ ?? E),
     });
 }

@@ -21,12 +21,13 @@ function c() {
                           }, 0)
                       ]
                   ],
-                  children: e
+                  message: e
                       .map((e) => {
                           let { message: t } = e;
                           return t;
                       })
                       .join(" "),
+                  role: "status",
               }),
           });
 }

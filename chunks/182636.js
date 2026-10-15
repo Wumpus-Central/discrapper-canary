@@ -1874,7 +1874,8 @@ function t5(e) {
               className: t3.l,
               children: (0, i.jsx)(t7.w, {
                   type: "warning",
-                  children: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
+                  message: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
+                  role: "none",
               }),
           });
 }

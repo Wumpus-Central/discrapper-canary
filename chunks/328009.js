@@ -79,7 +79,7 @@ function P(t) {
                 stepKey: E.INIT,
                 modalProps: {
                     title: F ? k.intl.string(k.t.wePEBF) : k.intl.string(k.t.vrOCCk),
-                    notice: null != K ? { message: K, type: "critical" } : void 0,
+                    notice: null != K ? { message: K, type: "critical", role: "alert" } : void 0,
                 },
                 body: (0, a.jsx)(c.B, {
                     className: A.PM,

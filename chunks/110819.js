@@ -81,7 +81,7 @@ function y(t) {
                     }),
                 ],
             }),
-            (0, r.jsx)(c.w, { type: "info", message: m.intl.string(m.t.CUBxDB), role: "static" }),
+            (0, r.jsx)(c.w, { type: "info", message: m.intl.string(m.t.CUBxDB), role: "none" }),
         ],
     });
 }
@@ -160,7 +160,7 @@ function N(t) {
             stepKey: "PROOF",
             modalProps: {
                 title: m.intl.string(m.t["7lo8+e"]),
-                notice: null != d ? { message: d, type: "critical" } : void 0,
+                notice: null != d ? { message: d, type: "critical", role: "alert" } : void 0,
             },
             body: "DNS" === b ? (0, r.jsx)(y, { domain: l, proof: o }) : (0, r.jsx)(S, { domain: l, proof: o }),
             secondaryActionButtonProps: {

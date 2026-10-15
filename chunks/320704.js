@@ -1159,7 +1159,7 @@ let ev = [],
                                 children: (0, n.jsx)(d.w, {
                                     type: "info",
                                     message: X.intl.format(X.t["gQeg/R"], { handleClick: $ }),
-                                    role: "static",
+                                    role: "none",
                                 }),
                             }),
                         (0, n.jsx)(eF, {

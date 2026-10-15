@@ -560,7 +560,7 @@ function tj(e) {
         title: h ? v : (0, tf.WX)((0, tv.tb)(C.default.x6FvsZ, n.appName)),
         subtitle: h ? (0, tf.J)(n) : A.intl.string(C.default["8OKM1N"]),
         "aria-label": v,
-        notice: null == m ? void 0 : { message: m, type: "critical" },
+        notice: null == m ? void 0 : { message: m, type: "critical", role: "alert" },
         actions: [
             { text: A.intl.string(A.t["ETE/oC"]), variant: "secondary", onClick: r.onClose },
             {
@@ -614,7 +614,7 @@ function tk(e) {
         title: m,
         subtitle: A.intl.string(C.default.wve4kB),
         "aria-label": m,
-        notice: null == s ? void 0 : { message: s, type: "critical" },
+        notice: null == s ? void 0 : { message: s, type: "critical", role: "alert" },
         actions: [
             { text: A.intl.string(A.t["ETE/oC"]), variant: "secondary", onClick: n.onClose },
             {
@@ -1312,7 +1312,7 @@ function t3() {
                   type: "info",
                   iconAlign: "center",
                   message: A.intl.format(C.default["6anmu1"], { channel: t1, onNavigate: t }),
-                  role: "static",
+                  role: "none",
               }),
           });
 }

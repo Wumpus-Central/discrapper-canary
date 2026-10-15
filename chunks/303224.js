@@ -108,8 +108,8 @@ var M = n(794782),
     ed = n(418208),
     eu = n(652215),
     eo = n(105292);
-function ec() {
-    return (0, ea.yM)()
+function ec(e) {
+    return e
         ? eo.intl.format(eo.t.iWGjcg, {
               hook: (e) =>
                   (0, i.jsx)(Z.Anchor, {
@@ -137,15 +137,17 @@ function ec() {
 }
 function ex(e) {
     let { className: t } = e,
-        n = (0, ea.yM)();
+        n = (0, ea.yM)(),
+        l = ec(n);
     return (0, i.jsx)("div", {
         className: t,
-        children: (0, i.jsx)(J.w, { type: n ? "info" : "warning", children: (0, i.jsx)(ec, {}) }),
+        children: (0, i.jsx)(J.w, { type: n ? "info" : "warning", message: l, role: "status" }),
     });
 }
 function eg(e) {
     let { className: t } = e,
-        n = (0, ea.yM)();
+        n = (0, ea.yM)(),
+        l = ec(n);
     return (0, i.jsx)("div", {
         className: t,
         children: (0, i.jsxs)(W.B, {
@@ -156,7 +158,7 @@ function eg(e) {
                 n
                     ? (0, i.jsx)(ee.CircleInformationIcon, { size: "refresh_sm", color: "var(--text-default)" })
                     : (0, i.jsx)(et.WarningIcon, { size: "refresh_sm", color: "var(--text-default)" }),
-                (0, i.jsx)(g.E, { color: "text-default", variant: "text-sm/medium", children: (0, i.jsx)(ec, {}) }),
+                (0, i.jsx)(g.E, { color: "text-default", variant: "text-sm/medium", children: l }),
             ],
         }),
     });

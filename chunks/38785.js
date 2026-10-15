@@ -1,4 +1,4 @@
-t.d(a, { T_: () => v, Ed: () => _, yg: () => g });
+t.d(a, { T_: () => v, Ed: () => g, yg: () => _ });
 var l = t(477900),
     n = t(582128),
     r = t(503698),
@@ -17,7 +17,7 @@ var c = t(901930),
     C = t(583741),
     y = t(105292),
     f = t(66414);
-function _(e) {
+function g(e) {
     let { className: a, shouldShowUnifiedHeader: t, headerBadgeConfig: n } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -26,18 +26,18 @@ function _(e) {
         ],
     });
 }
-function g() {
+function _() {
     return (0, l.jsx)(A.Jg, {
         transitionState: s.i.ENTERED,
         onClose: p.tEg,
         size: "md",
         isModalContentLoading: !0,
-        children: (0, l.jsx)(_, { shouldShowUnifiedHeader: !0 }),
+        children: (0, l.jsx)(g, { shouldShowUnifiedHeader: !0 }),
     });
 }
 function x(e) {
     return null != e && "object" == typeof e && "message" in e && "type" in e
-        ? (0, l.jsx)(u.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
+        ? (0, l.jsx)(u.w, { type: e.type, hidden: e.hidden, message: e.message, role: e.role }, e.key)
         : (0, l.jsx)(n.Fragment, { children: e.directContent }, e.key);
 }
 function P(e) {
@@ -150,7 +150,7 @@ function v(e) {
             legalContent: d,
             invoiceTotalDueLabel: A = y.intl.string(C.default.R0cZsM),
             invoiceTotalDueValue: p,
-            shouldShowGlobalNotices: g,
+            shouldShowGlobalNotices: _,
             showUpperNoticesAboveGlobalNotices: x,
             footerInlineNoticeProps: P,
             headerBadgeConfig: T,
@@ -159,7 +159,7 @@ function v(e) {
         N = I(P),
         { setCheckoutFooterLineItemNode: L } = (0, o.ck)();
     return s
-        ? (0, l.jsx)(_, { className: v, shouldShowUnifiedHeader: !0 })
+        ? (0, l.jsx)(g, { className: v, shouldShowUnifiedHeader: !0 })
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
@@ -167,7 +167,7 @@ function v(e) {
                       children: [
                           (0, l.jsx)(M, {
                               upperInlineNoticeProps: a,
-                              shouldShowGlobalNotices: g,
+                              shouldShowGlobalNotices: _,
                               showUpperNoticesAboveGlobalNotices: x,
                           }),
                           t,

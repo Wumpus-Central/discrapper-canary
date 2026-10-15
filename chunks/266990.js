@@ -36,7 +36,7 @@ function A(e) {
         title: null == s ? l : (0, o.WX)(s),
         subtitle: A,
         "aria-label": l,
-        notice: null == C ? void 0 : { message: C, type: "critical" },
+        notice: null == C ? void 0 : { message: C, type: "critical", role: "alert" },
         actions: [
             { text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: v.onClose },
             {

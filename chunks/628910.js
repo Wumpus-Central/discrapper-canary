@@ -1,10 +1,10 @@
 i.d(e, { default: () => P });
 var s = i(477900),
     r = i(582128),
-    a = i(104510),
+    n = i(104510),
     l = i(661531),
-    n = i(866665),
-    o = i(821609),
+    o = i(866665),
+    a = i(821609),
     c = i(772707),
     d = i(683071),
     u = i(834730),
@@ -52,7 +52,7 @@ var j = i(568065),
     N = i(105292),
     y = i(115087);
 function C(t) {
-    return (0, s.jsx)(a._, { ...t, color: l.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
+    return (0, s.jsx)(n._, { ...t, color: l.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
 }
 function P(t) {
     var e;
@@ -78,7 +78,7 @@ function P(t) {
                 ? [
                       {
                           text: N.intl.string(g.default.AOQgki),
-                          icon: a._,
+                          icon: n._,
                           variant: "primary",
                           size: "md",
                           disabled: O,
@@ -92,10 +92,10 @@ function P(t) {
         K = N.intl.formatToPlainString(g.default["5HQUzD"], { boostCount: A.cost }),
         M =
             q && D
-                ? (0, s.jsx)(n.m, {
+                ? (0, s.jsx)(o.m, {
                       text: K,
                       delay: 100,
-                      children: (0, s.jsx)(o.$, {
+                      children: (0, s.jsx)(a.$, {
                           variant: "secondary",
                           size: "md",
                           fullWidth: !0,
@@ -130,7 +130,7 @@ function P(t) {
                 null != U &&
                 (0, s.jsx)("div", {
                     className: y.P,
-                    children: (0, s.jsx)(d.w, { type: "info", message: U, role: "static" }),
+                    children: (0, s.jsx)(d.w, { type: "info", message: U, role: "none" }),
                 }),
             null != P && (0, s.jsx)(u.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: P }),
         ],

@@ -21,8 +21,8 @@ var i = n(477900),
     S = n(241326),
     k = n(780777),
     w = n(565150),
-    E = n(521502),
-    C = n(851023),
+    C = n(521502),
+    E = n(851023),
     _ = n(215497),
     O = n(914905),
     A = n(176634),
@@ -35,14 +35,14 @@ var i = n(477900),
     M = n(58703),
     T = n(723702);
 n(321073);
-var D = n(562708),
-    V = n(144009),
-    W = n(363195),
-    $ = n(499785),
-    z = n(652215),
+var V = n(562708),
+    W = n(144009),
+    $ = n(363195),
+    z = n(499785),
+    D = n(652215),
     q = n(105292);
 async function H() {
-    return (await s.Bo.get({ url: z.Rsh.BUG_REPORTS, rejectWithError: !1 })).body;
+    return (await s.Bo.get({ url: D.Rsh.BUG_REPORTS, rejectWithError: !1 })).body;
 }
 function U(e) {
     let t = e?.name ?? "",
@@ -54,7 +54,7 @@ async function G(e, t, n) {
         { name: "name", value: e.name },
         { name: "priority", value: `${e.priority}` },
         { name: "override_platform_information", value: `${t.overridePlatformInformation}` },
-        { name: "theme", value: W.A.theme },
+        { name: "theme", value: $.A.theme },
     ];
     ("" !== e.description && i.push({ name: "description", value: e.description }),
         "" !== e.url && i.push({ name: "external_url", value: e.url }),
@@ -76,14 +76,14 @@ async function G(e, t, n) {
             i.push({ name: "client_build_number", value: t.clientBuildNumber }),
             i.push({ name: "release_channel", value: window.GLOBAL_ENV.RELEASE_CHANNEL }),
             i.push({ name: "locale", value: t.locale })),
-        (0, V.a)(z.Umv.WEB_APP));
+        (0, W.a)(D.Umv.WEB_APP));
     try {
-        return await $.A.post({
-            url: z.Rsh.BUG_REPORTS,
+        return await z.A.post({
+            url: D.Rsh.BUG_REPORTS,
             attachments: n,
             fields: i,
             trackedActionData: {
-                event: D.NetworkActionNames.BUG_REPORT_SUBMIT,
+                event: V.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: { priority: e.priority, asana_inbox_id: a },
             },
             rejectWithError: !1,
@@ -99,10 +99,10 @@ let F = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map
     value: e,
 }));
 function Z(e) {
-    let { transitionState: t, onClose: D } = e,
-        V = a.useRef(null),
+    let { transitionState: t, onClose: V } = e,
         W = a.useRef(null),
-        [$, z] = a.useState(!1),
+        $ = a.useRef(null),
+        [z, D] = a.useState(!1),
         [Z, X] = a.useState(""),
         [J, Q] = a.useState(""),
         [K, ee] = a.useState(),
@@ -130,7 +130,7 @@ function Z(e) {
         [eb, ej] = a.useState(""),
         [ey, eS] = a.useState(""),
         [ek, ew] = a.useState(!1),
-        [eE, eC] = a.useState(!1),
+        [eC, eE] = a.useState(!1),
         [e_, eO] = a.useState(!1),
         [eA, eL] = a.useState(null);
     a.useEffect(() => {
@@ -140,8 +140,8 @@ function Z(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "5454e90cdc4a809c767ce6e841c2e1e858881a6f" !== e.body.hash) {
-                let e = new Date("1792087437224"),
+            if (null != e.body && "109032e06305123109e7a5ff583e16c62cbf5f00" !== e.body.hash) {
+                let e = new Date("1792087594424"),
                     t = new Date(),
                     n = (0, M.Tf)(t, e);
                 n.hours > 6 && eL(n.hours);
@@ -152,7 +152,7 @@ function Z(e) {
             let e = R.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
-        eI = (0, r.bG)([E.A], () => E.A.getCurrentBuildOverride().overrides?.discord_web),
+        eI = (0, r.bG)([C.A], () => C.A.getCurrentBuildOverride().overrides?.discord_web),
         { overridesInfo: eB } = (0, I.hI)(),
         { overridesInfo: eR } = (0, N.op)(),
         eP = Object.entries({ ...eB, ...eR }).map((e) => {
@@ -162,7 +162,7 @@ function Z(e) {
     async function eM() {
         if ((eO(!1), "" === Z || "" === J || null == K)) return void ew(!0);
         let e = el?.features?.find((e) => U(e) === es);
-        (eC(!0), ew(!1));
+        (eE(!0), ew(!1));
         let t = ei
                 .map((e) => {
                     let { item: t } = e;
@@ -192,10 +192,10 @@ function Z(e) {
                     : { overridePlatformInformation: eu },
                 t,
             ).catch(() => eO(!0));
-        (eC(!1),
+        (eE(!1),
             null != a && a.ok
                 ? (eN && window.open(a.body.permalink_url, "_blank"),
-                  D(),
+                  V(),
                   (0, c.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("89514"), n.e("876587")]).then(n.bind(n, 369323));
                       return (t) => (0, i.jsx)(e, { ...t, asanaTask: a.body });
@@ -210,7 +210,7 @@ function Z(e) {
             eN && e();
         }, [eN]),
         a.useEffect(() => {
-            ei.length > 0 && W.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+            ei.length > 0 && $.current?.scrollIntoView({ behavior: "smooth", block: "end" });
         }, [ei]),
         (0, A.A)({
             onPasteFiles: a.useCallback((e) => {
@@ -234,51 +234,37 @@ function Z(e) {
             "aria-label": q.intl.string(q.t.mCCdwi),
             title: q.intl.string(q.t["5LqopY"]),
             actions: [
-                { variant: "secondary", text: q.intl.string(q.t["ETE/oC"]), onClick: D, autoFocus: !1 },
+                { variant: "secondary", text: q.intl.string(q.t["ETE/oC"]), onClick: V, autoFocus: !1 },
                 {
                     variant: "primary",
                     text: eN ? "Submit and Open Report" : "Submit Report",
-                    loading: eE,
+                    loading: eC,
                     onClick: eM,
                     autoFocus: !1,
                 },
             ],
-            onClose: D,
+            onClose: V,
             children: (0, i.jsxs)("div", {
                 children: [
                     (0, i.jsxs)(m.B, {
                         gap: 8,
                         children: [
                             null != eI &&
-                                (0, i.jsxs)(h.w, {
+                                (0, i.jsx)(h.w, {
                                     type: "critical",
-                                    children: [
-                                        (0, i.jsx)(p.D, {
-                                            variant: "heading-md/medium",
-                                            children: q.intl.string(q.t["ZP/hEx"]),
-                                        }),
-                                        (0, i.jsx)(d.E, {
-                                            variant: "text-sm/normal",
-                                            children: q.intl.format(q.t["yY60+7"], {
-                                                buildOverrideHook: () => (0, i.jsx)("b", { children: eI?.id }),
-                                            }),
-                                        }),
-                                    ],
+                                    title: q.intl.string(q.t["ZP/hEx"]),
+                                    message: q.intl.format(q.t["yY60+7"], {
+                                        buildOverrideHook: () => (0, i.jsx)("b", { children: eI?.id }),
+                                    }),
+                                    role: "none",
                                 }),
                             null == eI &&
                                 null != eA &&
-                                (0, i.jsxs)(h.w, {
+                                (0, i.jsx)(h.w, {
                                     type: "critical",
-                                    children: [
-                                        (0, i.jsx)(p.D, {
-                                            variant: "heading-md/medium",
-                                            children: q.intl.formatToPlainString(q.t["ql2Q/e"], { hours: eA }),
-                                        }),
-                                        (0, i.jsx)(d.E, {
-                                            variant: "text-sm/normal",
-                                            children: q.intl.string(q.t.x18RUs),
-                                        }),
-                                    ],
+                                    title: q.intl.formatToPlainString(q.t["ql2Q/e"], { hours: eA }),
+                                    message: q.intl.string(q.t.x18RUs),
+                                    role: "status",
                                 }),
                             eN &&
                                 Object.keys(eP).length > 0 &&
@@ -425,11 +411,11 @@ function Z(e) {
                                                 })
                                                 ?.sort((e, t) => e.label.localeCompare(t.label)) ?? []
                                         );
-                                    })(el, $),
+                                    })(el, z),
                                     disabled: null == el,
                                     onSelectionChange: (e) => eo(e),
                                     matchSorterOptions: { keys: ["label", "value"] },
-                                    onQueryChange: (e) => z("" !== e.target.value.trim()),
+                                    onQueryChange: (e) => D("" !== e.target.value.trim()),
                                 }),
                             (0, i.jsx)(v.k, {
                                 label: q.intl.string(q.t["7p5pqh"]),
@@ -488,14 +474,14 @@ function Z(e) {
                                 variant: "secondary",
                                 text: q.intl.string(q.t.HVxmOD),
                                 onClick: function () {
-                                    V.current?.activateUploadDialogue();
+                                    W.current?.activateUploadDialogue();
                                 },
                                 fullWidth: !0,
                             }),
                             (0, i.jsx)("div", {
                                 className: Y.Fg,
                                 children: (0, i.jsx)(k.A, {
-                                    ref: V,
+                                    ref: W,
                                     onChange: function (e) {
                                         e.currentTarget?.files?.[0] != null &&
                                             ea([
@@ -518,7 +504,7 @@ function Z(e) {
                                 ? (0, i.jsx)(y.D, {
                                       label: "Preview",
                                       children: (0, i.jsx)("div", {
-                                          ref: W,
+                                          ref: $,
                                           className: Y.ZO,
                                           children:
                                               ei.length > 0 &&
@@ -534,7 +520,7 @@ function Z(e) {
                                                                       (0, i.jsx)("div", {
                                                                           className: Y.eA,
                                                                           children: (0, i.jsx)(L.Ay, {
-                                                                              children: (0, i.jsx)(C.A, {
+                                                                              children: (0, i.jsx)(E.A, {
                                                                                   tooltip: q.intl.string(q.t.vN7REz),
                                                                                   onClick: () => {
                                                                                       var t;

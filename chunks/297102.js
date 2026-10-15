@@ -50,7 +50,7 @@ let x = function (t) {
             direction: "vertical",
             gap: 16,
             children: [
-                (0, n.jsx)(a.w, { type: "info", message: m.intl.string(m.t.El4aXl), role: "static" }),
+                (0, n.jsx)(a.w, { type: "info", message: m.intl.string(m.t.El4aXl), role: "none" }),
                 C.map((t, e) => (0, n.jsx)(u.PQ, { variant: "clickable", ...t }, e)),
                 (0, n.jsx)(c.E, {
                     variant: "text-xs/medium",

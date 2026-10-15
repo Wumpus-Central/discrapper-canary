@@ -1683,7 +1683,7 @@ function t3(e) {
                       (0, r.jsx)(e5.w, {
                           type: "critical",
                           message: H.intl.format(H.t["/m3Y3s"], { paymentGatewayName: e2.qm[m.paymentGateway] }),
-                          role: "static",
+                          role: "none",
                       }),
                       b,
                   ],
@@ -5598,7 +5598,7 @@ function r9(e) {
 function ae(e) {
     let { fractionalPremiumInfo: t } = e,
         n = (0, ty.NQ)({ fractionalPremiumInfo: t, variant: ty.uA.TRIAL });
-    return null != n && "" !== n ? (0, r.jsx)(e5.w, { type: "info", message: n, role: "static" }) : null;
+    return null != n && "" !== n ? (0, r.jsx)(e5.w, { type: "info", message: n, role: "none" }) : null;
 }
 function at(e) {
     let { plan: t, renewalInvoicePreview: n } = e;
@@ -6253,7 +6253,7 @@ let aB = {
                                     (0, r.jsx)(e5.w, {
                                         type: "info",
                                         message: H.intl.string(H.t.lORYb6),
-                                        role: "static",
+                                        role: "none",
                                     }),
                                 null != _ &&
                                     (0, r.jsx)(ay.O0, {
@@ -6592,9 +6592,19 @@ let st = { payment_gateway: e2.kM.VIRTUAL_CURRENCY, currency: eG.Yri.DISCORD_ORB
                                     let e = [];
                                     return (
                                         null != A &&
-                                            e.push({ type: "warning", message: A, key: "test-mode-warning-notice" }),
+                                            e.push({
+                                                type: "warning",
+                                                message: A,
+                                                role: "none",
+                                                key: "test-mode-warning-notice",
+                                            }),
                                         null != C &&
-                                            e.push({ type: "critical", message: C, key: "orb-checkout-error-notice" }),
+                                            e.push({
+                                                type: "critical",
+                                                message: C,
+                                                role: "alert",
+                                                key: "orb-checkout-error-notice",
+                                            }),
                                         e
                                     );
                                 }

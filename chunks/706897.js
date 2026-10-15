@@ -646,7 +646,7 @@ function eo(e) {
         size: "md",
         title: I.intl.string(E.default.yyPbqI),
         subtitle: I.intl.string(E.default["+y6KsI"]),
-        notice: null != y ? { message: y, type: "critical" } : void 0,
+        notice: null != y ? { message: y, type: "critical", role: "alert" } : void 0,
         actions: [],
         children: (0, n.jsxs)("div", {
             className: el.jE,

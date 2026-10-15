@@ -3113,8 +3113,9 @@ function lX(e) {
                       style: { marginBottom: 16 },
                       children: (0, s.jsx)(lN.w, {
                           type: "info",
-                          children:
+                          message:
                               "If you don't see the Payment Element components, that means you must be added to the correct experiment to see this story. Reach out to a Payments Engineer to get access.",
+                          role: "none",
                       }),
                   }),
                   (0, s.jsxs)("div", {

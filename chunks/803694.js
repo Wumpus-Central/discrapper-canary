@@ -326,6 +326,6 @@ function I(e) {
         d = c && null != o && null != u && o === u,
         { walletCoversTotal: p, isWalletBalanceLoaded: m } = f({ giftCardsEnabled: c });
     return l.useMemo(() => {
-        if (d && m && !p) return { type: "warning", key: "wallet-insufficient-balance", message: n };
+        if (d && m && !p) return { type: "warning", key: "wallet-insufficient-balance", message: n, role: "status" };
     }, [d, m, p, n]);
 }

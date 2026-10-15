@@ -1,20 +1,20 @@
-n.d(i, { default: () => C });
-var e = n(477900),
-    l = n(582128),
-    a = n(284009),
-    s = n.n(a),
-    r = n(189213),
-    o = n(683071),
-    c = n(696986),
-    d = n(691885),
-    u = n(608461),
-    p = n(627363),
-    g = n(130771),
-    m = n(269927),
-    h = n(105292);
+i.d(n, { default: () => C });
+var e = i(477900),
+    l = i(582128),
+    a = i(284009),
+    s = i.n(a),
+    r = i(189213),
+    o = i(683071),
+    c = i(696986),
+    d = i(691885),
+    u = i(608461),
+    p = i(627363),
+    g = i(130771),
+    m = i(269927),
+    h = i(105292);
 function C(t) {
-    let { transitionState: i, application: n, onClose: a } = t,
-        [C, b] = l.useState(n?.team?.id),
+    let { transitionState: n, application: i, onClose: a } = t,
+        [C, b] = l.useState(i?.team?.id),
         { teams: f } = (0, g.A)(),
         x = l.useMemo(
             () =>
@@ -23,16 +23,16 @@ function C(t) {
                     .map((t) => ({ id: t.id, label: t.name, value: t.id })),
             [f],
         ),
-        y = n?.team?.id !== C,
+        y = i?.team?.id !== C,
         [v, { loading: A, error: k }] = (0, u.A)(p.Ay.transferApplication);
     async function w() {
-        (s()(null != n, "no application"),
+        (s()(null != i, "no application"),
             s()(null != C, "no team selected"),
-            null != (await v({ applicationId: n.id, teamId: C })) && a());
+            null != (await v({ applicationId: i.id, teamId: C })) && a());
     }
-    let j = n?.team != null;
+    let j = i?.team != null;
     return (0, e.jsxs)(r.a, {
-        transitionState: i,
+        transitionState: n,
         title: j ? h.intl.string(h.t["4TveVv"]) : h.intl.string(h.t.feBUAV),
         subtitle: j ? h.intl.string(h.t.c7HS0n) : h.intl.string(h.t.atZ50I),
         onClose: a,
@@ -46,7 +46,7 @@ function C(t) {
                       type: "warning",
                       title: h.intl.string(h.t.Caz8nL),
                       message: h.intl.string(h.t.u4ddHZ),
-                      role: "static",
+                      role: "none",
                   })
                 : null,
             null != k ? (0, e.jsx)(o.w, { type: "critical", message: k.message, role: "alert" }) : null,
