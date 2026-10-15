@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(302031),
     C = n(734057),
     A = n(515718),
-    b = n(851023),
-    I = n(215497),
+    I = n(851023),
+    b = n(215497),
     N = n(105292),
     v = n(268378),
     T = n(429955);
@@ -34,8 +34,8 @@ function _(e) {
             type: y.Ay.Types.ATTACHMENT,
             onReveal: () => u(!0),
             className: s()(T.spoilerContainer, {
-                [T.sizeXSmall]: a === I.L.XSMALL,
-                [T.sizeXXSmall]: a === I.L.XXSMALL,
+                [T.sizeXSmall]: a === b.L.XSMALL,
+                [T.sizeXXSmall]: a === b.L.XXSMALL,
             }),
             children: (e) =>
                 (0, l.jsxs)("div", {
@@ -62,10 +62,10 @@ function _(e) {
     });
 }
 function k(e) {
-    let { file: t, alt: n, spoiler: r, size: a = I.L.MEDIUM, onMouseEnter: u } = e,
+    let { file: t, alt: n, spoiler: r, size: a = b.L.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [h, m] = i.useState({ width: 0, height: 0 }),
-        f = a === I.L.SMALL;
+        f = a === b.L.SMALL;
     i.useEffect(() => {
         if (null == t || !1 === j.includes(t.type)) return;
         let e = URL.createObjectURL(t);
@@ -92,8 +92,8 @@ function k(e) {
                           className: s()(T.media, {
                               [T.spoiler]: e,
                               [T.imageSmall]: f,
-                              [T.sizeXSmall]: a === I.L.XSMALL,
-                              [T.sizeXXSmall]: a === I.L.XXSMALL,
+                              [T.sizeXSmall]: a === b.L.XSMALL,
+                              [T.sizeXXSmall]: a === b.L.XXSMALL,
                           }),
                           "aria-hidden": !0,
                           alt: n ?? "",
@@ -132,7 +132,7 @@ function R(e) {
             file: t,
             alt: n,
             spoiler: r,
-            size: a = I.L.MEDIUM,
+            size: a = b.L.MEDIUM,
             onMouseEnter: o,
             onVideoLoadError: u,
             clip: c,
@@ -165,8 +165,8 @@ function R(e) {
                             src: h,
                             className: s()(T.media, {
                                 [T.spoiler]: e,
-                                [T.sizeXSmall]: a === I.L.XSMALL,
-                                [T.sizeXXSmall]: a === I.L.XXSMALL,
+                                [T.sizeXSmall]: a === b.L.XSMALL,
+                                [T.sizeXXSmall]: a === b.L.XXSMALL,
                             }),
                             onError: u,
                             preload: "metadata",
@@ -191,7 +191,7 @@ function R(e) {
     );
 }
 function O(e) {
-    let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
+    let { upload: t, size: n = b.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === E.x.WEB
         ? (0, l.jsx)(k, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
@@ -209,9 +209,9 @@ function O(e) {
           : (0, l.jsx)("div", {
                 onMouseEnter: r,
                 className: s()(T.icon, T[t.classification ?? ""], {
-                    [T.imageSmall]: n === I.L.SMALL,
-                    [T.sizeXSmall]: n === I.L.XSMALL,
-                    [T.sizeXXSmall]: n === I.L.XXSMALL,
+                    [T.imageSmall]: n === b.L.SMALL,
+                    [T.sizeXSmall]: n === b.L.XSMALL,
+                    [T.sizeXXSmall]: n === b.L.XXSMALL,
                 }),
                 children: (0, l.jsx)("div", {
                     className: T.tags,
@@ -228,13 +228,13 @@ function L(e) {
             upload: o,
             keyboardModeEnabled: g,
             label: x,
-            size: E = I.L.MEDIUM,
+            size: E = b.L.MEDIUM,
             canEdit: S = !0,
             hideFileName: y = !1,
             clip: A,
         } = e,
         j = null != A,
-        _ = E === I.L.SMALL,
+        _ = E === b.L.SMALL,
         k = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
     function R() {
         p.A.remove(t, o.id, r);
@@ -305,11 +305,11 @@ function L(e) {
                       });
               });
     }
-    return (0, l.jsxs)(I.A, {
+    return (0, l.jsxs)(b.A, {
         actions: (0, l.jsxs)(i.Fragment, {
             children: [
                 S
-                    ? (0, l.jsx)(b.A, {
+                    ? (0, l.jsx)(I.A, {
                           className: s()({ [T.action]: _ }),
                           tooltip: j ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
                           onClick: () => {
@@ -329,7 +329,7 @@ function L(e) {
                       })
                     : null,
                 S
-                    ? (0, l.jsx)(b.A, {
+                    ? (0, l.jsx)(I.A, {
                           className: s()({ [T.action]: _ }),
                           tooltip: j ? N.intl.string(v.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
                           onClick: L,
@@ -340,7 +340,7 @@ function L(e) {
                           }),
                       })
                     : null,
-                (0, l.jsx)(b.A, {
+                (0, l.jsx)(I.A, {
                     className: s()({ [T.action]: _ }),
                     tooltip: j ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
                     onClick: R,

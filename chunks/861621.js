@@ -1,6 +1,6 @@
 n.d(t, { A: () => r });
-var o = n(652215);
-let i = "<removed>";
+var i = n(652215);
+let o = "<removed>";
 function r(e) {
     var t, n;
     let r = { ...e };
@@ -9,9 +9,9 @@ function r(e) {
             "string" == typeof t.cmd &&
             (r = (function (e) {
                 switch (e.cmd) {
-                    case o.e$_.AUTHENTICATE:
-                    case o.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return { ...e, args: { ...e.args, access_token: i } };
+                    case i.e$_.AUTHENTICATE:
+                    case i.e$_.GET_PROVIDER_ACCESS_TOKEN:
+                        return { ...e, args: { ...e.args, access_token: o } };
                     default:
                         return { ...e };
                 }
@@ -20,9 +20,9 @@ function r(e) {
             "string" == typeof n.cmd &&
             (r = (function (e) {
                 switch (e.cmd) {
-                    case o.e$_.AUTHENTICATE:
-                    case o.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return { ...e, data: { ...e.data, access_token: i } };
+                    case i.e$_.AUTHENTICATE:
+                    case i.e$_.GET_PROVIDER_ACCESS_TOKEN:
+                        return { ...e, data: { ...e.data, access_token: o } };
                     default:
                         return { ...e };
                 }

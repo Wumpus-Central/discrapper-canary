@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(453771),
     C = n(741394),
     A = n(355622),
-    b = n(408018),
-    I = n(579940),
+    I = n(408018),
+    b = n(579940),
     N = n(734057),
     v = n(573163),
     T = n(531685),
@@ -107,7 +107,7 @@ class V extends i.PureComponent {
         l && (e += " ");
         let i = t + e + n,
             { onChange: r } = this.props;
-        r?.(null, i, (0, b.x7)(i));
+        r?.(null, i, (0, I.x7)(i));
         let s = t.length + e.length;
         this.setState({ nextSelection: s }, () => {
             this.props.maybeShowAutocomplete();
@@ -249,7 +249,7 @@ class V extends i.PureComponent {
         let { onChange: t, allowNewLines: n } = this.props,
             l = e.currentTarget.value,
             i = n ? l : l.replace("\n", "");
-        t?.(e, i, (0, b.x7)(i));
+        t?.(e, i, (0, I.x7)(i));
     };
     insertEmoji(e) {
         let { emoji: t, addSpace: n = !1 } = e;
@@ -407,8 +407,8 @@ function eS(e) {
             className: x,
             id: y,
             disabled: C,
-            submitting: b,
-            placeholder: I,
+            submitting: I,
+            placeholder: b,
             required: N,
             textAreaPaddingClassName: v,
             onChange: T,
@@ -429,8 +429,8 @@ function eS(e) {
             spellcheckEnabled: ey,
             canUseCommands: eC,
             disableAutoFocus: eA,
-            disableEnterToSubmit: eb,
-            allowNewLines: eI,
+            disableEnterToSubmit: eI,
+            allowNewLines: eb,
             "aria-owns": eN,
             "aria-expanded": ev,
             "aria-haspopup": eT,
@@ -445,7 +445,7 @@ function eS(e) {
         eM = i.useRef(null),
         eP = i.useRef(!0),
         eD = i.useRef(!0),
-        eU = C || b,
+        eU = C || I,
         eV = i.useCallback(
             (e, t, n) => {
                 let { value: l, selection: i } = n,
@@ -798,13 +798,13 @@ function eS(e) {
         })({
             editor: eB,
             channel: g,
-            disableEnterToSubmit: eb,
+            disableEnterToSubmit: eI,
             onKeyDown: O,
             onKeyUp: w,
             onTab: M,
             onEnter: U,
             onSpace: V,
-            allowNewLines: eI,
+            allowNewLines: eb,
             submit: eG,
             hideAutocomplete: eh,
             moveSelection: eS,
@@ -949,7 +949,7 @@ function eS(e) {
                     channelId: g.id,
                     guildId: g.guild_id,
                     className: s()(eE.gf, v),
-                    placeholder: I,
+                    placeholder: b,
                     readOnly: eU,
                     spellCheck: ey,
                     autoFocus: !eA,
@@ -990,15 +990,15 @@ class eA extends i.Component {
     _unsubscribe;
     _initTimeoutId = null;
     _cachedEditorWindow = null;
-    _emptyRichValue = (0, b.x7)("");
+    _emptyRichValue = (0, I.x7)("");
     constructor(e) {
         (super(e),
-            (this._unsubscribe = I.Y0.subscribe((e) => {
+            (this._unsubscribe = b.Y0.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
             })),
-            (this.state = { focused: !1, submitting: !1, popup: I.Y0.getState() }));
+            (this.state = { focused: !1, submitting: !1, popup: b.Y0.getState() }));
     }
     _getEditorWindow() {
         let e = this.ref?.current?.getSlateEditor?.()?.windowContext?.renderWindow;
@@ -1020,7 +1020,7 @@ class eA extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             let e;
             ((e = this.props.useSlate ? this.props.textValue : (0, H.WO)(this.props.richValue, { mode: "plain" })),
-                this.props.onChange?.(null, e, (0, b.x7)(e)));
+                this.props.onChange?.(null, e, (0, I.x7)(e)));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -1159,8 +1159,8 @@ class eA extends i.Component {
                 id: E,
                 required: y,
                 maxCharacterCount: C,
-                allowNewLines: b,
-                "aria-describedby": I,
+                allowNewLines: I,
+                "aria-describedby": b,
                 "aria-labelledby": N,
                 accessibilityLabel: v,
                 showValueWhenDisabled: T,
@@ -1185,7 +1185,7 @@ class eA extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: b,
+                allowNewLines: I,
                 onChange: i,
                 onResize: a,
                 onKeyDown: r,
@@ -1205,7 +1205,7 @@ class eA extends i.Component {
                 "aria-expanded": null !== _.id || void 0,
                 "aria-activedescendant": _.activeDescendant ?? void 0,
                 "aria-invalid": e.length > C,
-                "aria-describedby": I,
+                "aria-describedby": b,
                 "aria-labelledby": N,
                 "aria-autocomplete": "list",
             },
@@ -1234,7 +1234,7 @@ class eA extends i.Component {
         c.A.saveDraft(e, t, this.props.type.drafts.type, n);
     };
     handleClearText = () => {
-        this.props.onChange?.(null, "", (0, b.x7)(""));
+        this.props.onChange?.(null, "", (0, I.x7)(""));
     };
     handleInsertText = (e) => {
         let { plainText: t, rawText: n, addSpace: l = !1 } = e;

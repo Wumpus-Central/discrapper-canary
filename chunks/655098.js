@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(17928),
     C = n(866665),
     A = n(778712),
-    b = n(939249),
-    I = n(545442),
+    I = n(939249),
+    b = n(545442),
     N = n(922016),
     v = n(565645),
     T = n(730134),
@@ -92,7 +92,7 @@ function et(e) {
             position: "top",
             "aria-label": Q.Ay.getUserTag(r, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(b.D, { tag: "span", children: o }),
+            children: (0, l.jsx)(I.D, { tag: "span", children: o }),
         });
     }
     return o;
@@ -116,7 +116,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(I.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(b.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       s.name,
                   ],

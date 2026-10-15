@@ -9,10 +9,10 @@ function o(e) {
         o = (0, s.A)(n.type),
         [u, c] = l.useState(),
         [d, m] = l.useState(),
-        [p, g] = l.useState(),
-        [h, x] = l.useState(),
-        f = n.id.split(":").at(-1),
-        A = t === f,
+        [g, p] = l.useState(),
+        [f, h] = l.useState(),
+        x = n.id.split(":").at(-1),
+        A = t === x,
         v = l.useCallback((e, t, n) => {
             var i, l;
             let s = n ? r.Ay.getOutboundStats(t) : r.Ay.getInboundStats(e, t),
@@ -22,22 +22,22 @@ function o(e) {
                         : i.width + " x " + i.height;
             (c("unknown" === a ? "-" : (s?.codec ?? "unknown")),
                 m("unknown" === a ? "-" : a),
-                g(
+                p(
                     s?.bitrateEstimate !== void 0
                         ? ((l = s.bitrateEstimate), `${(l / 1e3).toFixed(2)} Kbps`)
                         : "unknown",
                 ),
-                x("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
+                h("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
         }, []);
     return (
         l.useEffect(() => {
             function e() {
-                return v(f, o, A);
+                return v(x, o, A);
             }
             e();
             let t = setInterval(e, 1e3);
             return () => clearInterval(t);
-        }, [A, f, o, v]),
+        }, [A, x, o, v]),
         (0, i.jsxs)("div", {
             className: a.w,
             children: [
@@ -55,14 +55,14 @@ function o(e) {
                 }),
                 (0, i.jsxs)("div", {
                     className: a.l,
-                    children: [(0, i.jsx)("span", { children: "FPS: " }), (0, i.jsx)("strong", { children: h })],
+                    children: [(0, i.jsx)("span", { children: "FPS: " }), (0, i.jsx)("strong", { children: f })],
                 }),
                 A &&
                     (0, i.jsxs)("div", {
                         className: a.l,
                         children: [
                             (0, i.jsx)("span", { children: "Bitrate Estimate: " }),
-                            (0, i.jsx)("strong", { children: p }),
+                            (0, i.jsx)("strong", { children: g }),
                         ],
                     }),
             ],

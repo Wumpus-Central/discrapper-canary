@@ -1,13 +1,13 @@
 n.d(t, { A: () => l });
-var o = n(435558),
-    i = n.n(o),
+var i = n(435558),
+    o = n.n(i),
     r = n(636401),
     s = n(652215);
 class l {
     source;
     version;
     encoding;
-    id = i().uniqueId();
+    id = o().uniqueId();
     authorization = { authing: !1, scopes: new Set(), accessToken: null, expires: new Date(0) };
     application = { id: null, name: null, icon: null };
     abortController = new AbortController();

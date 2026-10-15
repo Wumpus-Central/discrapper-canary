@@ -11,13 +11,13 @@ var n = l(477900),
 function m(e) {
     let { onPublish: t } = e,
         [l, m] = i.useState(!1),
-        [x, h] = i.useState(!1),
-        f = i.useCallback(async () => {
-            (m(!0), h(!1));
+        [x, f] = i.useState(!1),
+        h = i.useCallback(async () => {
+            (m(!0), f(!1));
             try {
                 (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
             } catch {
-                h(!0);
+                f(!0);
             } finally {
                 m(!1);
             }
@@ -45,7 +45,7 @@ function m(e) {
                 size: "sm",
                 text: o.intl.string(c.default["yul+0g"]),
                 loading: l,
-                onClick: f,
+                onClick: h,
             }),
         ],
     });

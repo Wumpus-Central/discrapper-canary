@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(256449),
     C = n(194004),
     A = n(378058),
-    b = n(105292),
-    I = n(193833);
+    I = n(105292),
+    b = n(193833);
 function N(e) {
     return e.preventDefault();
 }
@@ -36,37 +36,37 @@ function j(e, t) {
 }
 function _(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
-    return b.intl.formatToPlainString(b.t.rk6pOw, { stickerName: t });
+    return I.intl.formatToPlainString(I.t.rk6pOw, { stickerName: t });
 }
 function k(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: r, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
-        className: s()(I.c6, { [I.v2]: n || r }),
+        className: s()(b.c6, { [b.v2]: n || r }),
         style: { height: a, width: a },
         children: [
             n
                 ? (0, l.jsxs)("div", {
-                      className: I.z3,
+                      className: b.z3,
                       children: [
                           (0, l.jsx)(h.d, {
                               size: "custom",
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: I.ik,
+                              className: b.ik,
                           }),
                           u &&
                               (0, l.jsx)(m.E, {
-                                  className: I.kc,
+                                  className: b.kc,
                                   color: "text-default",
                                   variant: "text-sm/normal",
-                                  children: b.intl.string(b.t["tWYWJ+"]),
+                                  children: I.intl.string(I.t["tWYWJ+"]),
                               }),
                       ],
                   })
                 : t,
-            o && i && (0, l.jsx)("div", { className: I.Mz }),
+            o && i && (0, l.jsx)("div", { className: b.Mz }),
         ],
     });
 }
@@ -130,7 +130,7 @@ function R(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": C ? b.intl.string(b.t.yEvsK9) : _(s),
+              "aria-label": C ? I.intl.string(I.t.yEvsK9) : _(s),
               ref: m,
               children: (0, l.jsx)(k, {
                   hasError: C,
@@ -138,7 +138,7 @@ function R(e) {
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: f,
-                  children: j((0, l.jsx)("canvas", { className: I.ex, ref: g }), s),
+                  children: j((0, l.jsx)("canvas", { className: b.ex, ref: g }), s),
               }),
           });
 }
@@ -159,7 +159,7 @@ let O = (e) => {
             [E, S] = i.useState(!1),
             y = i.useRef(null),
             C = i.useRef(null),
-            b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
+            I = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
             v = i.useCallback(() => {
                 x(!1);
             }, []),
@@ -175,7 +175,7 @@ let O = (e) => {
         i.useLayoutEffect(() => {
             C.current?.complete === !0 && x(!1);
         }, []),
-        null == b)
+        null == I)
             ? null
             : (0, l.jsx)(d.L, {
                   innerRef: c,
@@ -183,7 +183,7 @@ let O = (e) => {
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
-                      className: s()(o, I.__invalid_pngImageWrapper),
+                      className: s()(o, b.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, l.jsx)(k, {
                           hasError: E,
@@ -193,9 +193,9 @@ let O = (e) => {
                           withLoadingIndicator: h,
                           children: j(
                               (0, l.jsx)("img", {
-                                  className: I.r3,
+                                  className: b.r3,
                                   alt: _(n),
-                                  src: b,
+                                  src: I,
                                   draggable: !1,
                                   onError: T,
                                   onLoad: v,
@@ -233,20 +233,20 @@ let O = (e) => {
                 (e, i) =>
                     i &&
                     (0, l.jsx)(E.nE, {
-                        className: I.O2,
+                        className: b.O2,
                         fixed: !0,
                         align: "center",
                         position: "center",
                         targetRef: a,
                         children: () =>
                             (0, l.jsxs)("div", {
-                                className: I._7,
+                                className: b._7,
                                 children: [
                                     (0, l.jsx)(u.animated.div, {
-                                        className: I.tm,
+                                        className: b.tm,
                                         style: e,
                                         children: (0, l.jsx)(w, {
-                                            className: I.__invalid_overlaySticker,
+                                            className: b.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
                                             isInteracting: s,
@@ -258,11 +258,11 @@ let O = (e) => {
                                     }),
                                     r &&
                                         (0, l.jsx)(u.animated.div, {
-                                            className: I.av,
+                                            className: b.av,
                                             style: A,
                                             children: (0, l.jsx)(m.E, {
                                                 variant: "text-sm/medium",
-                                                className: I.FZ,
+                                                className: b.FZ,
                                                 children: d.name,
                                             }),
                                         }),

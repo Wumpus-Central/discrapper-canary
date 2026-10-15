@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(404374),
     C = n(10392),
     A = n(82498),
-    b = n(734057),
-    I = n(309010),
+    I = n(734057),
+    b = n(309010),
     N = n(174459),
     v = n(652215),
     T = n(105292),
@@ -33,8 +33,8 @@ function _() {
 }
 function k(e) {
     let { className: t, iconOnly: n } = e,
-        r = (0, o.bG)([I.Ay, b.A], () => {
-            let e = b.A.getChannel(I.Ay.getChannelId());
+        r = (0, o.bG)([b.Ay, I.A], () => {
+            let e = I.A.getChannel(b.Ay.getChannelId());
             return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
@@ -78,12 +78,12 @@ function L(e) {
         y = (0, p.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
-        b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > v.uvi && S,
+        I = n.length,
+        b = null != t.upsellLongMessages && (I ?? 0) > v.uvi && S,
         N = null != t.upsellLongMessages && !S,
-        j = C - b,
+        j = C - I,
         _ = j > A;
-    (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
+    (0, a.$)({ currentLength: I, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
     let L =
             0 === j
                 ? T.intl.string(T.t.tU6YQ7)
@@ -102,7 +102,7 @@ function L(e) {
                 (0, l.jsxs)("div", {
                     className: O.SW,
                     children: [
-                        I && P
+                        b && P
                             ? (0, l.jsx)(u.m, {
                                   text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: C }),
                                   position: "top",

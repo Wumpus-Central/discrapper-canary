@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => f, e9: () => g, qd: () => p });
+n.d(t, { Ay: () => x, e9: () => p, qd: () => g });
 var i = n(477900),
     l = n(582128),
     s = n(435558),
@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(290863),
     d = n(174459),
     m = n(652215);
-let p = { x: 0, y: 0 },
-    g = l.createContext({
+let g = { x: 0, y: 0 },
+    p = l.createContext({
         enabled: !1,
         zoomLevel: 1,
         minZoom: 1,
@@ -26,13 +26,13 @@ let p = { x: 0, y: 0 },
         setIsSlidering: () => {},
         videoAspectRatio: 16 / 9,
         setVideoAspectRatio: () => {},
-        panOffset: p,
+        panOffset: g,
         setPanOffset: () => {},
-        clampPanOffset: () => p,
+        clampPanOffset: () => g,
         doZoom: () => {},
         wrapperRef: l.createRef(),
     }),
-    h = (0, s.debounce)((e, t, n) => {
+    f = (0, s.debounce)((e, t, n) => {
         let i = null,
             l = null;
         if (null != n && (0, o.wL)(n)) {
@@ -47,11 +47,11 @@ let p = { x: 0, y: 0 },
             share_application_id: l,
         });
     }, 2e3),
-    x = l.memo(function (e) {
+    h = l.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
             [c, d] = l.useState(n),
-            [m, x] = l.useState(!1),
-            [f, A] = l.useState(!1),
+            [m, h] = l.useState(!1),
+            [x, A] = l.useState(!1),
             [v, E] = l.useState(!1),
             [C, j] = l.useState(!1),
             [I, S] = l.useState(16 / 9),
@@ -61,9 +61,9 @@ let p = { x: 0, y: 0 },
         (0, a.l0)(() => {
             y.current?.stop();
         });
-        let D = l.useCallback(
+        let R = l.useCallback(
                 (e, t) => {
-                    if (null == b.current) return p;
+                    if (null == b.current) return g;
                     let n = t ?? c,
                         i = b.current.clientWidth,
                         l = b.current.clientHeight,
@@ -77,19 +77,19 @@ let p = { x: 0, y: 0 },
                 (e, i, l) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == i || a === c) return;
-                    x(!0);
+                    h(!0);
                     let u = a / c;
-                    (N((e) => D({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
+                    (N((e) => R({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
                         d(a),
-                        h(a, l, t),
+                        f(a, l, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
-                            x(!1);
+                            h(!1);
                         }));
                 },
-                [D, o, n, t, c],
+                [R, o, n, t, c],
             ),
-            k = l.useMemo(
+            L = l.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -97,8 +97,8 @@ let p = { x: 0, y: 0 },
                     maxZoom: o,
                     setZoomLevel: d,
                     isZooming: m,
-                    setIsZooming: x,
-                    isDragging: f,
+                    setIsZooming: h,
+                    isDragging: x,
                     setIsDragging: A,
                     isWheeling: v,
                     setIsWheeling: E,
@@ -110,12 +110,12 @@ let p = { x: 0, y: 0 },
                     panOffset: _,
                     setPanOffset: N,
                     wrapperRef: b,
-                    clampPanOffset: D,
+                    clampPanOffset: R,
                 }),
-                [D, T, f, C, v, m, o, n, _, I, c],
+                [R, T, x, C, v, m, o, n, _, I, c],
             );
-        return (0, i.jsx)(g.Provider, { value: k, children: u });
+        return (0, i.jsx)(p.Provider, { value: L, children: u });
     });
-function f(e) {
-    return e.enableZoom ? (0, i.jsx)(x, { ...e }) : e.children;
+function x(e) {
+    return e.enableZoom ? (0, i.jsx)(h, { ...e }) : e.children;
 }

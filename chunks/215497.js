@@ -33,9 +33,9 @@ let E = function (e) {
             onKeyDown: y,
             draftType: C,
             size: A = 1,
-            ref: b,
+            ref: I,
         } = e,
-        I = r.useRef(null),
+        b = r.useRef(null),
         { onFocus: N, ...v } = (0, o.rm)(t),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
@@ -64,8 +64,8 @@ let E = function (e) {
             onFocus: T,
             onBlur: j,
             onClick: function (e) {
-                if (0 === e.detail && null != I.current) {
-                    let e = I.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != b.current) {
+                    let e = b.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
@@ -91,10 +91,10 @@ let E = function (e) {
                 }
             },
             className: a()(p.Se, l),
-            ref: b,
+            ref: I,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: I,
+                ref: b,
                 children: [
                     s,
                     k

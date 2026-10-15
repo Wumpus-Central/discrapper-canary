@@ -9,11 +9,11 @@ var i = n(477900),
     c = n(922016),
     d = n(43990),
     m = n(408278),
-    p = n(597770),
-    g = n(409626),
-    h = n(692969),
-    x = n(738250),
-    f = n(852105),
+    g = n(597770),
+    p = n(409626),
+    f = n(692969),
+    h = n(738250),
+    x = n(852105),
     A = n(240248),
     v = n(818023),
     E = n(818348),
@@ -21,11 +21,11 @@ var i = n(477900),
     j = n(584841);
 function I(e) {
     let { applicationId: t, hideApplicationName: n } = e,
-        { gameId: l, gameRecord: s } = (0, x.A)({ applicationId: t }),
-        c = (0, h.A)({
+        { gameId: l, gameRecord: s } = (0, h.A)({ applicationId: t }),
+        c = (0, f.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             gameId: l ?? void 0,
-            source: g.GameProfileSources.CallTile,
+            source: p.GameProfileSources.CallTile,
             trackEntryPointImpression: !0,
         }),
         d = s?.getIconURL(v.iu.SMALL);
@@ -49,14 +49,14 @@ function I(e) {
 }
 function S(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: o, idle: u } = e,
-        [g, h] = l.useState(!1),
-        x = l.useRef(null),
-        A = l.useCallback(() => h(!0), []),
-        v = l.useCallback(() => h(!1), []),
+        [p, f] = l.useState(!1),
+        h = l.useRef(null),
+        A = l.useCallback(() => f(!0), []),
+        v = l.useCallback(() => f(!1), []),
         I = C.intl.string(C.t["wg/30i"]);
     return (0, i.jsx)(c.Y, {
-        targetElementRef: x,
-        shouldShow: g,
+        targetElementRef: h,
+        shouldShow: p,
         animation: c.Y.Animation.FADE,
         position: "left",
         align: "bottom",
@@ -65,14 +65,14 @@ function S(e) {
         renderPopout: () =>
             (0, i.jsx)(d.N, {
                 theme: E.NJ.DARK,
-                children: (e) => (0, i.jsx)(f.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
+                children: (e) => (0, i.jsx)(x.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
             }),
         children: () =>
             (0, i.jsx)("div", {
-                ref: x,
+                ref: h,
                 children: (0, i.jsx)(a.m, {
                     text: I,
-                    shouldShow: !g && void 0,
+                    shouldShow: !p && void 0,
                     children: (0, i.jsx)("div", {
                         className: r()(j.V7, { [j.kl]: o, [j.N7]: u }),
                         children: (0, i.jsx)(m.K, {
@@ -82,7 +82,7 @@ function S(e) {
                                 (e.stopPropagation(), A());
                             },
                             "aria-label": I,
-                            icon: p.GiftIcon,
+                            icon: g.GiftIcon,
                         }),
                     }),
                 }),

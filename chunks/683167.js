@@ -25,10 +25,10 @@ function C(e) {
 function A(e) {
     return null != e && "applicationCommandOption" === e.type && e.optionType === E.n4.STRING;
 }
-function b(e) {
+function I(e) {
     return A(p.VW.getCurrentInline(e)?.[0]);
 }
-function I(e, t, n) {
+function b(e, t, n) {
     let l,
         i,
         r,
@@ -590,23 +590,23 @@ function w(e) {
                         return (
                             (e.rendersTrailingNewline = A),
                             (e.insertBreak = () => {
-                                b(e) ? i("\n") : C(e) && l();
+                                I(e) ? i("\n") : C(e) && l();
                             }),
                             (e.insertSoftBreak = () => {
                                 e.insertBreak();
                             }),
                             (e.deleteBackward = (n) => {
                                 let l = p.ZF.toPoint(e.selection);
-                                "line" === n && null != l && b(e) ? I(e, l, !0) : t(n);
+                                "line" === n && null != l && I(e) ? b(e, l, !0) : t(n);
                             }),
                             (e.deleteForward = (t) => {
                                 let l = p.ZF.toPoint(e.selection);
-                                "line" === t && null != l && b(e) ? I(e, l, !1) : n(t);
+                                "line" === t && null != l && I(e) ? b(e, l, !1) : n(t);
                             }),
                             (e.insertText = (t) => {
                                 if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void i(t);
                                 let n = t.split(/\r\n|\r|\n/);
-                                b(e)
+                                I(e)
                                     ? i(n.join("\n"))
                                     : C(e)
                                       ? m.o.withSingleEntry(e, () => {

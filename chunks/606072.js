@@ -1,4 +1,4 @@
-(l.d(t, { F6: () => f, T4: () => _, UF: () => A, kG: () => v, zE: () => p }), l(321073));
+(l.d(t, { F6: () => h, T4: () => _, UF: () => A, kG: () => v, zE: () => p }), l(321073));
 var n,
     i = l(582128),
     s = l(17928),
@@ -10,8 +10,8 @@ var n,
     u = l(153488),
     m = l(71393),
     x = l(115063),
-    h = l(652215);
-function f(e, t) {
+    f = l(652215);
+function h(e, t) {
     let { useTitle: l, useDisabled: n } = t;
     return (0, r.zD)("guild_space_sharing_modal_guild_activity_sharing_setting", {
         useTitle: l,
@@ -38,7 +38,7 @@ function _(e) {
         l = !d.JG.useSetting().includes(e),
         { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
             hasFetchedConsents: u.A.fetchedConsents,
-            hasPersonalizationConsent: u.A.hasConsented(h.YAq.PERSONALIZATION),
+            hasPersonalizationConsent: u.A.hasConsented(f.YAq.PERSONALIZATION),
         })),
         r = null,
         c = !t || !l,
@@ -59,7 +59,7 @@ function A(e) {
         i = [];
     return (
         ("activity_sharing" === n || "all" === n) &&
-            (i.push(c._), i.push(f(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
+            (i.push(c._), i.push(h(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
         ("personalization" === n || "all" === n) && i.push(o._),
         i
     );

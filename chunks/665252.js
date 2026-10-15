@@ -19,8 +19,8 @@ var l,
     y = n(688810),
     C = n(209932),
     A = n(813564),
-    b = n(73153),
-    I = n(734057),
+    I = n(73153),
+    b = n(734057),
     N = n(927813),
     v = n(714736);
 n(980504);
@@ -30,7 +30,7 @@ let T = 7.5 * N.A.Millis.SECOND,
     k = new Map();
 class R extends u.Ay.Store {
     initialize() {
-        this.waitFor(I.A);
+        this.waitFor(b.A);
     }
     static displayName = "SoundboardEchoStore";
     getActiveSoundboardEchoes() {
@@ -43,7 +43,7 @@ class R extends u.Ay.Store {
         return j.get(e);
     }
 }
-let O = new R(b.h, {
+let O = new R(I.h, {
     VOICE_CHANNEL_EFFECT_SEND: function (e) {
         let {
             soundId: t,
@@ -57,7 +57,7 @@ let O = new R(b.h, {
             isEcho: u,
         } = e;
         if (null == t || null == s) return !1;
-        let c = I.A.getChannel(n)?.getGuildId();
+        let c = b.A.getChannel(n)?.getGuildId();
         if (null == c) return !1;
         let { enabled: d } = (0, v.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
@@ -106,7 +106,7 @@ let O = new R(b.h, {
             ((j = c),
                 null != (t = k.get(l)) && clearTimeout(t),
                 (n = setTimeout(() => {
-                    b.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
+                    I.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
                 }, T)),
                 k.set(l, n));
         })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
@@ -527,8 +527,8 @@ function eE(e) {
             count: c,
             disabled: d,
             playedByUserIds: g,
-            startedAt: b,
-            showDetails: I,
+            startedAt: I,
+            showDetails: b,
             onDetailsMouseEnter: N,
             onDetailsMouseLeave: v,
         } = e,
@@ -558,8 +558,8 @@ function eE(e) {
                     is_author: s === w.default.getCurrentUser()?.id,
                     location_stack: i,
                 });
-            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: b }, analyticsLocations: k });
-    }, [k, s, T, n, d, t, l, b]);
+            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: I }, analyticsLocations: k });
+    }, [k, s, T, n, d, t, l, I]);
     let R = r.useCallback(() => {
             N(l.soundId);
         }, [N, l.soundId]),
@@ -587,7 +587,7 @@ function eE(e) {
         children: [
             (0, i.jsx)(h.Y, {
                 targetElementRef: _,
-                shouldShow: I,
+                shouldShow: b,
                 renderPopout: (e) => {
                     let { setPopoutRef: r } = e;
                     return (0, i.jsx)("div", {
@@ -599,7 +599,7 @@ function eE(e) {
                             channelId: n,
                             sound: l,
                             playedByUserIds: g,
-                            startedAt: b,
+                            startedAt: I,
                         }),
                     });
                 },
@@ -693,7 +693,7 @@ function eS(e) {
     let A = r.useCallback((e) => {
             (clearTimeout(C.current), y(e));
         }, []),
-        b = r.useCallback(() => {
+        I = r.useCallback(() => {
             (clearTimeout(C.current), (C.current = setTimeout(() => y(null), 200)));
         }, []);
     return (0, i.jsx)("div", {
@@ -713,7 +713,7 @@ function eS(e) {
                             ...l.echo,
                             disabled: l.echo.disabled ?? !1,
                             onDetailsMouseEnter: A,
-                            onDetailsMouseLeave: b,
+                            onDetailsMouseLeave: I,
                             showDetails: S === l.echo.sound.soundId,
                         }),
                     }),
