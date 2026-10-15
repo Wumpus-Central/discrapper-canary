@@ -15,20 +15,20 @@ var n = l(477900),
     g = l(408018),
     x = l(479909),
     p = l(451909),
-    b = l(135621),
-    v = l(808728),
+    v = l(135621),
+    b = l(808728),
     k = l(994500),
     y = l(287809),
     E = l(246338),
     S = l(506774),
-    N = l(248675),
-    j = l(660183);
+    j = l(248675),
+    N = l(660183);
 let A = `<#${"9".repeat(20)}>`,
-    P = "VibegrationsPatchNotesLastChannelsByApp";
+    P = "ConjurePatchNotesLastChannelsByApp";
 function T(e) {
     return `
 
-${j.intl.formatToPlainString(N.default["2ECgBx"], { channel: e })}`;
+${N.intl.formatToPlainString(j.default["2ECgBx"], { channel: e })}`;
 }
 var I = l(962998),
     _ = l(951465),
@@ -40,16 +40,16 @@ function R(e) {
             projectId: t,
             guildId: l,
             applicationId: R,
-            projectName: V,
-            publishedRevision: L,
-            transitionState: O,
+            projectName: L,
+            publishedRevision: O,
+            transitionState: V,
             onClose: $,
         } = e,
         B = (0, i.yK)(
-            [v.Ay],
+            [b.Ay],
             () =>
-                v.Ay.getChannels(l)
-                    [v.I6].filter((e) => {
+                b.Ay.getChannels(l)
+                    [b.I6].filter((e) => {
                         let { channel: t } = e;
                         return !t.isGuildVocal() && !t.isThread() && !t.isForumLikeChannel();
                     })
@@ -59,8 +59,8 @@ function R(e) {
                     }),
             [l],
         ),
-        U = (0, i.bG)([v.Ay], () => (0, E.i8)(l, R), [l, R]),
-        F = (0, b.A)() - T(A).length,
+        U = (0, i.bG)([b.Ay], () => (0, E.i8)(l, R), [l, R]),
+        F = (0, v.A)() - T(A).length,
         Q = a.useRef(F);
     Q.current = F;
     let [H, Y] = a.useState(() => {
@@ -124,22 +124,22 @@ function R(e) {
                     ((e = ed.id), S.w.set(P, { ...S.w.get(P), [R]: e }));
                     let i = a?.body?.id;
                     (null != i &&
-                        (0, I.BG)(t, { publishedRevision: L, guildId: l, channelId: ed.id, messageId: i }, et),
+                        (0, I.BG)(t, { publishedRevision: O, guildId: l, channelId: ed.id, messageId: i }, et),
                         $());
                 } catch {
-                    ((0, r.P0)({ text: j.intl.string(N.default["6oEjjD"]), variant: "critical" }), ea(!1));
+                    ((0, r.P0)({ text: N.intl.string(j.default["6oEjjD"]), variant: "critical" }), ea(!1));
                 }
             }
-        }, [ed, ec, eh, R, t, L, l, et, $]);
+        }, [ed, ec, eh, R, t, O, l, et, $]);
     return (0, n.jsx)(s.a, {
-        transitionState: O,
+        transitionState: V,
         onClose: $,
-        title: j.intl.formatToPlainString(N.default.lsYQII, { projectName: V }),
+        title: N.intl.formatToPlainString(j.default.lsYQII, { projectName: L }),
         size: "lg",
         actions: [
-            { text: j.intl.string(j.t["ETE/oC"]), variant: "secondary", onClick: $ },
+            { text: N.intl.string(N.t["ETE/oC"]), variant: "secondary", onClick: $ },
             {
-                text: j.intl.string(N.default["69aIG4"]),
+                text: N.intl.string(j.default["69aIG4"]),
                 variant: "primary",
                 onClick: ef,
                 disabled: "" === ec || ec.length > F || null == ed || en,
@@ -155,7 +155,7 @@ function R(e) {
                           children: [
                               (0, n.jsx)(u.D, {
                                   variant: "heading-md/semibold",
-                                  children: j.intl.string(N.default.r4du8k),
+                                  children: N.intl.string(j.default.r4du8k),
                               }),
                               (0, n.jsxs)("div", {
                                   className: G.Q2,
@@ -163,8 +163,8 @@ function R(e) {
                                       (0, n.jsx)(x.Ay, {
                                           type: C.oU.CONJURE_PATCH_NOTES,
                                           channel: eo,
-                                          accessibilityLabel: j.intl.string(N.default.r4du8k),
-                                          placeholder: j.intl.string(Z ? N.default.aYQksU : N.default["3hV1Gc"]),
+                                          accessibilityLabel: N.intl.string(j.default.r4du8k),
+                                          placeholder: N.intl.string(Z ? j.default.aYQksU : j.default["3hV1Gc"]),
                                           textValue: D,
                                           richValue: J,
                                           focused: z,
@@ -184,7 +184,7 @@ function R(e) {
                                           ? (0, n.jsx)(o.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
-                                                children: j.intl.string(N.default["Em8bo+"]),
+                                                children: N.intl.string(j.default["Em8bo+"]),
                                             })
                                           : null,
                                       (0, n.jsxs)("div", {
@@ -193,15 +193,15 @@ function R(e) {
                                               (0, n.jsx)(o.E, {
                                                   variant: "text-sm/medium",
                                                   color: "text-subtle",
-                                                  children: j.intl.string(N.default.Gd63Fl),
+                                                  children: N.intl.string(j.default.Gd63Fl),
                                               }),
                                               (0, n.jsx)(c.Z, {
                                                   selectionMode: "single",
-                                                  label: j.intl.string(N.default.Gd63Fl),
+                                                  label: N.intl.string(j.default.Gd63Fl),
                                                   hideLabel: !0,
                                                   options: eu,
                                                   value: H ?? void 0,
-                                                  placeholder: j.intl.string(N.default["7CvxMC"]),
+                                                  placeholder: N.intl.string(j.default["7CvxMC"]),
                                                   onSelectionChange: (e) => {
                                                       ((es.current = !0), Y(e));
                                                   },

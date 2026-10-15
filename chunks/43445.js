@@ -1214,12 +1214,12 @@ function tG(e, t) {
     }
 }
 var tB = n(506774);
-let tK = "VibegrationsProjectsPanelOpen";
+let tK = "ConjureProjectsPanelOpen";
 function tV() {
     return tB.w.get(tK) ?? null;
 }
 function tH(e) {
-    return `VibegrationsProjectsPanel:${e}`;
+    return `ConjureProjectsPanel:${e}`;
 }
 var tW = n(95264),
     tX = n(631417);
@@ -1999,7 +1999,7 @@ function nc(e) {
         t.join(" ")
     );
 }
-let nd = "[vibegrations:selected] ",
+let nd = "[conjure:selected] ",
     nm = " \u2014 ";
 function nf(e) {
     if (!e.startsWith(nd)) return null;
@@ -5880,7 +5880,7 @@ var ir = n(874421),
     ia = n(404373),
     ii = n(435558),
     is = n.n(ii);
-let io = "VibegrationsComposerDrafts";
+let io = "ConjureComposerDrafts";
 function iu() {
     return tB.w.get(io) ?? {};
 }
@@ -15297,7 +15297,7 @@ function fu(e) {
                     null != (e = lf.A.getFrame(u)) &&
                         ((0, lu.x1)(e) &&
                         e.data.prefersPictureInPictureOnNavigateAway &&
-                        ft.Ay.allowVibegrationsPictureInPictureOnNavigateAway
+                        ft.Ay.allowConjurePictureInPictureOnNavigateAway
                             ? (e.intent === lu.sV.INLINE && lI.A.promoteFrame(u),
                               lI.A.updateFrameLayoutMode({ frameId: u, layoutMode: lu.y0.PIP }))
                             : e.intent === lu.sV.MAIN && lI.A.demoteMainFrame(u));
@@ -16094,7 +16094,7 @@ function hl(e) {
     let { open: t, maxWidth: n, onWidthChange: l, children: r } = e,
         s = (0, f9.r)(ea.A.modules.chat.RESIZE_HANDLE_WIDTH),
         o = i.useRef(null),
-        [u, c] = (0, he.V)("VibegrationsChatSidebarWidth", 460),
+        [u, c] = (0, he.V)("ConjureChatSidebarWidth", 460),
         [d, m] = i.useState(u ?? 460),
         f = (0, ii.clamp)(d, 360, n);
     i.useLayoutEffect(() => {

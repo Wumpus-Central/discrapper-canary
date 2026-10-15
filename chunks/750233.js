@@ -7,7 +7,7 @@ let s = { lastProjectIdByGuildId: {} },
     o = s;
 class d extends i.Ay.PersistedStore {
     static displayName = "ConjureBuilderRouteStore";
-    static persistKey = "VibegrationsBuilderRoute";
+    static persistKey = "ConjureBuilderRoute";
     initialize(e) {
         o = e ?? s;
     }
