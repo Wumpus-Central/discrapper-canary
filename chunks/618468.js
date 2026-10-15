@@ -2492,6 +2492,7 @@ var tn = n(335871),
         (_[(_.SEO_INSTALLATION_PAGE_LOAD = 1)] = "SEO_INSTALLATION_PAGE_LOAD"),
         (_[(_.MARKETING_INSTALLATION_PAGE_LOAD = 2)] = "MARKETING_INSTALLATION_PAGE_LOAD"),
         (_[(_.INVITE_GUILD_RESOLVE = 3)] = "INVITE_GUILD_RESOLVE"),
+        (_[(_.ADS_BUDGET_AB_DECISION = 4)] = "ADS_BUDGET_AB_DECISION"),
         _),
     tu =
         (((E = {})[(E.DEFAULT = 0)] = "DEFAULT"),
