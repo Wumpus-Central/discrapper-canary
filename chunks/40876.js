@@ -77,7 +77,7 @@ let r = {
     },
     DesktopSettingExperimentBridgeManager: {
         actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(468287).A,
+        inlineRequire: () => n(292199).A,
         hasStoreChangeListeners: !0,
     },
     DesktopTTIEarlyUpdateCheckExperimentManager: {

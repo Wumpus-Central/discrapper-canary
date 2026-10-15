@@ -46,7 +46,7 @@ class T {
 let m = new T();
 var g = n(952818),
     S = n(687658),
-    N = n(451704),
+    N = n(384077),
     C = n(321034);
 let O = new l.A("RunningGameSystemMetricsMonitor"),
     R = [50, 95, 99];
