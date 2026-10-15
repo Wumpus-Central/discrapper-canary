@@ -502,7 +502,7 @@ function e2(e) {
             [t, n],
         );
     i.useEffect(() => {
-        null != n && ((0, e1.Y)(n), l.forEach(e1.Y));
+        null != n && ((0, e1.Y_)(n), l.forEach(e1.Y_));
     }, [n, l]);
     let r = (0, o.bG)([eQ.default], () => (null == n ? null : eQ.default.getUser(n)), [n]),
         a = (0, o.yK)([eQ.default], () => l.map((e) => eQ.default.getUser(e)).filter((e) => null != e), [l]);
@@ -9819,36 +9819,31 @@ function cc(e) {
     });
 }
 function cd(e) {
-    let { content: t, createdAt: n, userId: l, accessories: r, groupStart: s, onQueuedAction: u } = e;
-    i.useEffect(() => (0, e1.Y)(l), [l]);
-    let c = (0, o.bG)(
-            [eQ.default],
-            () => (0, e1.T)(l, null != l ? eQ.default.getUser(l) : null, eQ.default.getCurrentUser()),
-            [l],
-        ),
-        d = i.useMemo(() => (0, sR.FT)(c, null), [c]),
-        m = i.useMemo(() => nf(t), [t]),
-        f = m?.body ?? t,
-        h = (0, oB.Qu)(f),
-        p = i.useMemo(() => {
-            if (null == c) return null;
-            let e = (0, sr.Ay)({ channelId: cl.id, content: f, author: c });
+    let { content: t, createdAt: n, userId: l, accessories: r, groupStart: s, onQueuedAction: o } = e,
+        u = (0, e1.vm)(l),
+        c = i.useMemo(() => (0, sR.FT)(u, null), [u]),
+        d = i.useMemo(() => nf(t), [t]),
+        m = d?.body ?? t,
+        f = (0, oB.Qu)(m),
+        h = i.useMemo(() => {
+            if (null == u) return null;
+            let e = (0, sr.Ay)({ channelId: cl.id, content: m, author: u });
             return (0, sl.rh)({ ...e, timestamp: ci(n, e.timestamp), state: eW.cmJ.SENT });
-        }, [f, c, n]);
-    return null == p
+        }, [m, u, n]);
+    return null == h
         ? null
         : (0, a.jsx)(
               cm,
               {
-                  message: p,
-                  author: d,
-                  content: f,
-                  selected: m?.label,
+                  message: h,
+                  author: c,
+                  content: m,
+                  selected: d?.label,
                   accessories: r,
                   groupStart: s,
-                  onQueuedAction: u,
+                  onQueuedAction: o,
               },
-              h,
+              f,
           );
 }
 function cm(e) {
@@ -9899,11 +9894,7 @@ function cf(e) {
         h = i.useMemo(() => (0, sR.FT)(null, null), []),
         p = i.useMemo(() => ({ ...h, nick: "Conjure", colorString: "var(--text-brand)" }), [h]),
         g = r?.userId,
-        x = (0, o.bG)(
-            [eQ.default],
-            () => (0, e1.T)(g, null != g ? eQ.default.getUser(g) : null, eQ.default.getCurrentUser()),
-            [g],
-        ),
+        x = (0, e1.vm)(g),
         v = i.useMemo(() => (null == r ? null : nf(r.content)), [r]),
         j = i.useMemo(() => {
             if (null == r || null == x) return null;
@@ -10121,7 +10112,7 @@ function cj(e) {
     let { projectId: t, event: n } = e,
         l = (function (e, t, n) {
             let l = t.actor_user_id;
-            i.useEffect(() => (0, e1.Y)(l), [l]);
+            i.useEffect(() => (0, e1.Y_)(l), [l]);
             let r = (0, o.bG)([eQ.default], () => (null == l ? null : eQ.default.getUser(l)), [l]),
                 a = (0, eZ.tx)(r),
                 s = uR(e),

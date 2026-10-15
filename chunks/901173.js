@@ -57,7 +57,7 @@ function A(e) {
     );
     return (
         i.useEffect(() => {
-            for (let e of t) (0, l.Y)(e);
+            for (let e of t) (0, l.Y_)(e);
         }, [t]),
         (0, r.bG)([a.default], () => t.filter((e) => null != a.default.getUser(e)).length, [t])
     );
