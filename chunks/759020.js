@@ -4,5 +4,5 @@ e.exports = {
     FS: "textContainer__14a18",
     YS: "guildNameContainer__14a18",
     J5: "guildName__14a18",
-    o1: "actions__14a18",
+    Rn: "memberCounts__14a18",
 };

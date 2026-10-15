@@ -179,7 +179,7 @@
 
 .guildIcon_adbbea,
 .skeletonGuildIcon_adbbea {
-    border: var(--size-4) solid var(--background-surface-high);
+    border: var(--size-4) solid var(--custom-game-profile-guild-icon-border-color, var(--background-surface-high));
     border-radius: var(--radius-md);
     box-sizing: border-box
 }
@@ -288,8 +288,8 @@
     align-items: center;
     display: flex;
     gap: var(--space-8);
-    height: var(--size-32);
-    justify-content: space-between
+    justify-content: space-between;
+    min-height: var(--size-32)
 }
 
 .skeletonTitle__0b616 {
@@ -299,4 +299,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=27891f4b225de534.css.map*/
+/*# sourceMappingURL=30a630fab9a7b105.css.map*/

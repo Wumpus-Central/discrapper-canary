@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 639734, Version Hash: fa23bb13f464093b41dde3d7900fb47ce8908b78`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 639742, Version Hash: 5d66b647cf2af36d8d1c8e54c06db9e7af2400de`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4240,7 +4240,7 @@ n(801416);
 let a3 = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("664809"),
+                n.e("80501"),
                 n.e("237403"),
                 n.e("12343"),
                 n.e("649500"),
@@ -25836,7 +25836,7 @@ let ya = "isHideDevBanner",
                     className: tE()(yr.Wz, yr.mr),
                     children: [
                         (0, M.jsx)(yi, { className: yr.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "639734" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "639742" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -28194,7 +28194,7 @@ n(999900);
 let be = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("664809"),
+                n.e("80501"),
                 n.e("237403"),
                 n.e("12343"),
                 n.e("649500"),
@@ -29051,7 +29051,7 @@ let be = (0, tz.Fe)({
                 n.e("516620"),
                 n.e("261259"),
                 n.e("947665"),
-                n.e("664809"),
+                n.e("80501"),
                 n.e("865429"),
                 n.e("284777"),
                 n.e("167906"),
@@ -31408,7 +31408,7 @@ let be = (0, tz.Fe)({
                 n.e("267732"),
                 n.e("183715"),
                 n.e("408203"),
-                n.e("664809"),
+                n.e("80501"),
                 n.e("237403"),
                 n.e("12343"),
                 n.e("917910"),
@@ -52173,7 +52173,7 @@ let jk = [
                             n.e("125043"),
                             n.e("658423"),
                             n.e("242693"),
-                            n.e("664809"),
+                            n.e("80501"),
                             n.e("102075"),
                             n.e("101105"),
                             n.e("263406"),
@@ -52389,9 +52389,9 @@ let jk = [
                             n.e("842775"),
                             n.e("61224"),
                             n.e("238672"),
-                            n.e("24172"),
+                            n.e("109541"),
                             n.e("714078"),
-                        ]).then(n.bind(n, 750823));
+                        ]).then(n.bind(n, 336388));
                         return (t) => (0, M.jsx)(e, { gameId: i, source: _n.GameProfileSources.Deeplink, ...t });
                     });
                 }),
@@ -55798,7 +55798,7 @@ let Yg = (0, i8.Fe)({
                 n.e("20409"),
                 n.e("267732"),
                 n.e("183715"),
-                n.e("664809"),
+                n.e("80501"),
                 n.e("237403"),
                 n.e("12343"),
                 n.e("860350"),

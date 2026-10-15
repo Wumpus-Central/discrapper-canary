@@ -32,6 +32,15 @@
     padding: var(--space-4)
 }
 
+.clickable__96733 {
+    cursor: pointer
+}
+
+.clickable__96733:hover {
+    --custom-game-profile-guild-icon-border-color: var(--background-surface-higher);
+    background-color: var(--background-surface-higher)
+}
+
 .container__14a18 {
     background-color: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
@@ -76,12 +85,7 @@
     white-space: nowrap
 }
 
-.actions__14a18 {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-16);
-    justify-content: flex-end;
+.memberCounts__14a18 {
     margin-inline-start: auto
 }
 
@@ -99,12 +103,8 @@
     padding: var(--space-16)
 }
 
-.list_b1bfc6,
-.toolbar_b1bfc6 {
-    display: flex
-}
-
 .list_b1bfc6 {
+    display: flex;
     flex-direction: column
 }
 
@@ -118,31 +118,25 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
 }
 
+.card_b1bfc6,
 .skeletonCard_b1bfc6 {
-    flex-direction: column;
-    gap: var(--space-8);
     padding: var(--space-16)
 }
 
+.card_b1bfc6,
 .skeletonCard_b1bfc6,
 .skeletonListItem_b1bfc6 {
     background-color: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    display: flex
+    border-radius: var(--radius-lg)
 }
 
 .skeletonListItem_b1bfc6 {
     align-items: center;
+    display: flex;
     gap: var(--space-12);
     padding-block: var(--space-8);
     padding-inline: var(--space-8) var(--space-16)
-}
-
-.skeletonCardTop_b1bfc6 {
-    display: flex;
-    gap: var(--space-12);
-    margin-block-end: auto
 }
 
 .skeletonIcon_b1bfc6 {
@@ -167,9 +161,17 @@
 }
 
 .skeletonDescription_b1bfc6 {
-    border-radius: var(--radius-xs);
-    height: var(--size-12);
     width: 90%
 }
 
-/*# sourceMappingURL=3545d39e1837f91d.css.map*/
+.skeletonDescription_b1bfc6,
+.skeletonMemberCounts_b1bfc6 {
+    border-radius: var(--radius-xs);
+    height: var(--size-12)
+}
+
+.skeletonMemberCounts_b1bfc6 {
+    width: var(--size-160)
+}
+
+/*# sourceMappingURL=fa54b372befd7e49.css.map*/
