@@ -1,4 +1,4 @@
-n.d(t, { k: () => f });
+n.d(t, { k: () => I });
 var i = n(77729),
     r = n(311043),
     a = n(280450),
@@ -11,8 +11,9 @@ var i = n(77729),
     _ = n(598213),
     E = n(799),
     A = n(160330),
-    h = n(696016);
-class f {
+    h = n(696016),
+    f = n(660183);
+class I {
     gameId;
     startedAt;
     id = crypto.randomUUID();
@@ -218,6 +219,7 @@ class f {
             d = i.A.fileManager.join(l.Ay.getSettings().storageLocation, `${e.type}_${n.id}.mp4`);
         return {
             ...n,
+            name: f.intl.string(u.qn[e.type]),
             filepath: d,
             type: h.nQ.CLIP,
             applicationName: o ?? n.applicationName,

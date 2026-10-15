@@ -1,4 +1,4 @@
-(n.d(t, { V1: () => Y, $Q: () => W }), n(321073));
+(n.d(t, { qn: () => x, V1: () => $, $Q: () => K }), n(321073));
 var i = n(106983),
     r = n(144705),
     a = n(786661),
@@ -109,16 +109,27 @@ function P(e, t) {
     return n;
 }
 var U = n(801344),
-    w = n(979563);
-let G = {
+    w = n(979563),
+    G = n(660183);
+let x = {
+        cs2_round_summary: G.t.oPqa86,
+        cs2_highlight_reels: G.t.XdSaQW,
+        cs2_kill_compilation: G.t.c52s8D,
+        league_of_legends_game_highlights: G.t.WSShfj,
+        league_of_legends_kill_compil: G.t.FDhlax,
+        dota_2_game_highlights: G.t.UTFgtm,
+        dota_2_kill_compil: G.t.zym7WV,
+        rocket_league_goal_and_save_compil: G.t.kYrpvi,
+    },
+    k = {
         "audio:laughter": { beforeMs: 3e3, afterMs: 2e3 },
         "audio:shouting": { beforeMs: 3e3, afterMs: 2e3 },
         [`game:${i.C.Kill}`]: { beforeMs: 1250, afterMs: 1250 },
         [`game:${i.C.MultiKill}`]: { beforeMs: 1250, afterMs: 1250 },
         [`game:${i.C.Death}`]: { beforeMs: 1250, afterMs: 1250 },
     },
-    x = { [`game:${i.C.Kill}`]: { beforeMs: 2e3, afterMs: 1e3 } },
-    k = {
+    F = { [`game:${i.C.Kill}`]: { beforeMs: 2e3, afterMs: 1e3 } },
+    B = {
         [`game:${U.n_.ChampionKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${U.n_.DoubleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${U.n_.TripleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
@@ -128,28 +139,28 @@ let G = {
         [`game:${U.n_.DragonSteal}`]: { beforeMs: 5e3, afterMs: 1e3 },
         [`game:${U.n_.BaronSteal}`]: { beforeMs: 5e3, afterMs: 1e3 },
     },
-    F = {
+    V = {
         [`game:${U.n_.ChampionKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${U.n_.DoubleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${U.n_.TripleKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${U.n_.QuadraKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${U.n_.PentaKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
     },
-    B = {
+    H = {
         [`game:${r.I.Kill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${r.I.MultiKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${r.I.TeamFightWin}`]: { beforeMs: 3e3, afterMs: 0 },
     },
-    V = {
+    j = {
         [`game:${r.I.Kill}`]: { beforeMs: 6e3, afterMs: 2e3 },
         [`game:${r.I.MultiKill}`]: { beforeMs: 6e3, afterMs: 2e3 },
     },
-    H = {
+    W = {
         [`game:${w.d.Goal}`]: { beforeMs: 8e3, afterMs: 3e3 },
         [`game:${w.d.Save}`]: { beforeMs: 5e3, afterMs: 3e3 },
         [`game:${w.d.EpicSave}`]: { beforeMs: 5e3, afterMs: 3e3 },
     },
-    j = [
+    Y = [
         {
             type: "cs2_round_summary",
             applicationIds: a.E.applicationIds,
@@ -306,7 +317,7 @@ let G = {
                 maxDurationMs: 9e4,
                 laughterThreshold: 0.75,
                 shoutingThreshold: 0.5,
-                events: G,
+                events: k,
             },
             weight: 2,
         },
@@ -322,7 +333,7 @@ let G = {
                 blendMs: 300,
                 minDurationMs: 25e3,
                 maxDurationMs: 9e4,
-                events: x,
+                events: F,
             },
             weight: 1,
         },
@@ -338,7 +349,7 @@ let G = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 9e4,
-                events: k,
+                events: B,
             },
             weight: 2,
         },
@@ -354,7 +365,7 @@ let G = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 6e4,
-                events: F,
+                events: V,
             },
             weight: 1,
         },
@@ -370,7 +381,7 @@ let G = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 9e4,
-                events: B,
+                events: H,
             },
             weight: 2,
         },
@@ -386,7 +397,7 @@ let G = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 6e4,
-                events: V,
+                events: j,
             },
             weight: 1,
         },
@@ -402,12 +413,12 @@ let G = {
                 blendMs: 300,
                 minDurationMs: 3e4,
                 maxDurationMs: 6e4,
-                events: H,
+                events: W,
             },
             weight: 1,
         },
     ];
-function W(e) {
+function K(e) {
     var t = (function (e, t) {
             var n, i;
             let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
@@ -422,7 +433,7 @@ function W(e) {
                         return t;
                     })
             );
-        })(j, e.gameId),
+        })(Y, e.gameId),
         n = e;
     let i = (function (e) {
         let t = [];
@@ -775,6 +786,6 @@ function W(e) {
     }
     return null;
 }
-function Y(e, t, n) {
+function $(e, t, n) {
     return (0, g.BA)(e.resolved, t, e.config, n);
 }
