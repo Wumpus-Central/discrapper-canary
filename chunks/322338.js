@@ -518,7 +518,8 @@ let eI = function (e) {
             e.channelId,
             t,
         ]),
-        n = (0, a.bG)([U.A], () => U.A.getQuestPreviewOverride(j.uF.QUEST_LIVE_STREAM), []),
-        u = e.previewQuest ?? n;
-    return s || null != u ? (0, l.jsx)(eQ, { ...e, previewQuest: u }) : null;
+        n = (0, a.bG)([U.A], () => U.A.getQuestPreviewOverride(j.uF.QUEST_LIVE_STREAM), []);
+    if (null == e.previewQuest && !s) return null;
+    let u = e.previewQuest ?? n;
+    return (0, l.jsx)(eQ, { ...e, previewQuest: u });
 };
