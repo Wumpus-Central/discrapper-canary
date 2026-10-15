@@ -175,6 +175,7 @@ class f {
                 clipCandidates: [...e],
                 localUserId: a.default.getId(),
                 gameId: this.gameId ?? void 0,
+                fps: l.Ay.getSettings().clipsQuality.frameRate,
             },
             r = i.A.clips.debugStashClipDeciderData;
         if (null == r) return;
@@ -198,6 +199,7 @@ class f {
                 decisionSignals: t,
                 localUserId: a.default.getId(),
                 gameId: this.gameId ?? void 0,
+                fps: l.Ay.getSettings().clipsQuality.frameRate,
             },
             r = (0, u.$Q)(n);
         return null == r

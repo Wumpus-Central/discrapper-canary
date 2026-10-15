@@ -9,6 +9,9 @@ async function l(e, t) {
     if (!(l.width > 0 && l.height > 0))
         throw Error(`auto-montage: invalid source resolution ${l.width}x${l.height} for ${n}`);
     return (
-        s.nx.info(`decider: auto-montage output resolution ${l.width}x${l.height} taken from ${n}`), (0, a.V1)(e, t, l)
+        s.nx.info(
+            `decider: auto-montage output resolution ${l.width}x${l.height} taken from ${n}, fps ${e.config.fps} from clips quality settings`,
+        ),
+        (0, a.V1)(e, t, l)
     );
 }

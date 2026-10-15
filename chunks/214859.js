@@ -155,7 +155,7 @@ let G = {
             applicationIds: a.E.applicationIds,
             kind: "custom",
             build: function (e, t, n) {
-                let r = { ...g.yC, audioTrackLabel: "0:all", blendMs: 300 },
+                let r = { ...g.yC, fps: t.fps, audioTrackLabel: "0:all", blendMs: 300 },
                     a = (function (e) {
                         let t,
                             n,
@@ -616,7 +616,7 @@ function W(e) {
                                     (a = n.localUserId),
                                     t.includeOtherUsers ? [...r] : r.filter((e) => e.userId === a))
                                   : [],
-                          S = { ...g.yC, blendMs: t.blendMs },
+                          S = { ...g.yC, fps: n.fps, blendMs: t.blendMs },
                           N = (function (e) {
                               let {
                                       selected: t,
