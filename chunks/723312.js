@@ -36,7 +36,7 @@ var r = n(158390),
     N = n(743082),
     T = n(385081),
     C = n(1371);
-class b {
+class k {
     socket = null;
     open(e) {
         let { url: t, ticket: n, onEvent: r, onClose: s, onError: o } = e;
@@ -201,7 +201,7 @@ class b {
         (this.socket?.close(), (this.socket = null));
     }
 }
-var k = n(382541),
+var b = n(382541),
     R = n(649121),
     w = n(975189);
 (n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
@@ -272,9 +272,20 @@ let L = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.ow, .
                     });
             }
         },
+        app_cover_set(e, t) {
+            let { projectId: n } = t;
+            void 0 !== e.cover_image &&
+                (0, m.Vl)(n, e.cover_image)
+                    .then((e) => {
+                        e.ok || console.error("[conjure] cover from agent rejected", n, e.status);
+                    })
+                    .catch((e) => {
+                        console.error("[conjure] cover from agent failed", n, e);
+                    });
+        },
         ...O.rS,
     },
-    x = new Set([
+    j = new Set([
         "hello",
         "history",
         "capture_preview",
@@ -285,17 +296,17 @@ let L = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.ow, .
         "preview_operation",
         "request_upstream_ticket",
     ]);
-async function B(e, t) {
+async function x(e, t) {
     t.ws.close();
     try {
-        let { ticket: n, baseUrl: r } = await (0, k.d)(e);
+        let { ticket: n, baseUrl: r } = await (0, b.d)(e);
         if (t.disposed) return;
         t.ws.open({
             url: r,
             ticket: n,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    if ((console.debug("[conjure] ws event", r.type), !x.has(r.type) && "open" !== A.get(t)))
+                    if ((console.debug("[conjure] ws event", r.type), !j.has(r.type) && "open" !== A.get(t)))
                         return void n.pendingEvents.push(r);
                     let s = { projectId: t, ws: n.ws };
                     switch (r.type) {
@@ -409,7 +420,7 @@ async function B(e, t) {
                 t.disposed)
                     ? J(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), J(e, "connecting"), t.backoff.fail(() => j(e)))
+                      ? ((t.reconnectPending = !0), J(e, "connecting"), t.backoff.fail(() => B(e)))
                       : (J(e, "closed"),
                         P(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
@@ -432,11 +443,11 @@ async function B(e, t) {
             }));
     }
 }
-function j(e) {
+function B(e) {
     let t = U.get(e);
     null == t &&
         ((t = {
-            ws: new b(),
+            ws: new k(),
             backoff: new r.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -455,7 +466,7 @@ function j(e) {
         (n.disposed = !1),
         (n.reconnectPending = !1),
         J(e, "connecting"),
-        B(e, n));
+        x(e, n));
 }
 let W = new Map();
 function H(e, t) {
@@ -493,9 +504,9 @@ function $(e) {
 }
 function F(e) {
     let t = U.get(e);
-    if (null == t) return void j(e);
+    if (null == t) return void B(e);
     let n = A.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || j(e);
+    ("closed" !== n && "failed" !== n) || t.reconnectPending || B(e);
 }
 function z(e, t, n) {
     let {

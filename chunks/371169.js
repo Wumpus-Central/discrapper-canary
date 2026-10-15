@@ -1,17 +1,18 @@
 (n.d(e, {
     CW: () => F,
-    GO: () => x,
-    K: () => W,
+    GO: () => H,
+    K: () => x,
     M7: () => M,
     Ru: () => B,
-    U1: () => v,
-    b8: () => b,
-    dm: () => H,
+    U1: () => b,
+    Vl: () => m,
+    b8: () => L,
+    dm: () => z,
     gA: () => k,
     hF: () => T,
     l5: () => G,
     tF: () => I,
-    xx: () => m,
+    xx: () => W,
 }),
     n(321073),
     n(938796));
@@ -62,7 +63,7 @@ async function g() {
                 }
                 if ((await (0, l.yy)(5e3 * Math.random()), null == h.Ay.getProject(t)))
                     try {
-                        await v(t);
+                        await b(t);
                     } catch (n) {
                         let e = (0, E.$k)(n);
                         (403 === e || 404 === e) && U(t);
@@ -91,7 +92,7 @@ async function j() {
         if ((N.delete(e), !P.has(e))) {
             if ((P.add(e), null == h.Ay.getProject(e))) {
                 try {
-                    let t = await v(e);
+                    let t = await b(e);
                     n = t.ok ? 200 : t.status;
                 } catch (t) {
                     n = (0, E.$k)(t);
@@ -107,21 +108,21 @@ async function j() {
               w || j();
           });
 }
-let L = null;
-async function b() {
+let v = null;
+async function L() {
     let t = d.default.getCurrentUser()?.id ?? null;
-    if (null == t || L === t || h.Ay.hasFetchedProjectLimit()) return;
-    L = t;
+    if (null == t || v === t || h.Ay.hasFetchedProjectLimit()) return;
+    v = t;
     let e = null;
     try {
         let { body: t } = await i.Bo.get({ url: p.Rsh.CONJURE_PROJECT_LIMIT, rejectWithError: !0 });
         e = t.max_projects;
     } catch {}
-    (L === t && (L = null),
+    (v === t && (v = null),
         d.default.getCurrentUser()?.id === t &&
             u.h.dispatch({ type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: e }));
 }
-async function v(t, e) {
+async function b(t, e) {
     let n = await i.Bo.get({ url: p.Rsh.CONJURE_PROJECT(t), rejectWithError: !1, signal: e });
     if (e?.aborted !== !0 && n.ok) {
         var r;
@@ -158,7 +159,7 @@ async function D(t, e) {
 }
 async function F(t, e) {
     let n = await D(t, e);
-    if (n.ok && (null != e.icon || null != e.description)) {
+    if (n.ok && (null != e.icon || null != e.description || "cover_image" in e)) {
         let t = n.body.preview_application_id;
         if (null != t)
             try {
@@ -169,6 +170,9 @@ async function F(t, e) {
 }
 function B(t, e) {
     return F(t, { icon: e });
+}
+function m(t, e) {
+    return F(t, { cover_image: e });
 }
 function M(t, e) {
     return D(t, e);
@@ -181,7 +185,7 @@ async function G(t) {
         return [];
     }
 }
-async function m(t) {
+async function W(t) {
     let e;
     u.h.dispatch({ type: "CONJURE_PROJECT_DELETE_START", projectId: t });
     try {
@@ -193,15 +197,15 @@ async function m(t) {
         u.h.dispatch({ type: e.ok ? "CONJURE_PROJECT_DELETE_SUCCESS" : "CONJURE_PROJECT_DELETE_FAIL", projectId: t }), e
     );
 }
-function W(t, e) {
-    m(t).then((t) => {
+function x(t, e) {
+    W(t).then((t) => {
         t.ok || e();
     }, e);
 }
-function x(t) {
+function H(t) {
     let e = h.Ay.getProject(t);
-    null != e && (v(t).catch(() => {}), (0, a.eO)((0, C.Du)(e), { withMutualGuilds: !0 }).catch(() => {}));
+    null != e && (b(t).catch(() => {}), (0, a.eO)((0, C.Du)(e), { withMutualGuilds: !0 }).catch(() => {}));
 }
-function H(t, e) {
+function z(t, e) {
     u.h.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId: t, projectId: e });
 }
