@@ -46,6 +46,7 @@ function I(e) {
         return (0, l.jsx)(s.u, {
             asset: A("jumbo"),
             title: n.name ?? "",
+            titleLineClamp: 1,
             body: r ? C.intl.string(C.t["515vjG"]) : "",
             ariaHidden: !0,
             ...x.Uk,
@@ -114,6 +115,7 @@ let E = (e) => {
         return (0, l.jsx)(s.u, {
             asset: P("jumbo"),
             title: n.name,
+            titleLineClamp: 1,
             body: r ? C.intl.string(C.t["515vjG"]) : "",
             ariaHidden: !0,
             ...x.Uk,

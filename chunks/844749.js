@@ -1,9 +1,12 @@
 _.exports = {
     gH: "emojiSection_d5cd2d",
     Gl: "customEmojiLabel_d5cd2d",
+    Os: "emojiPopout_d5cd2d",
+    t: "emojiDescription_d5cd2d",
+    tl: "guildSection_d5cd2d",
+    cC: "emojiName_d5cd2d",
     P$: "primaryEmoji_d5cd2d",
     lI: "ctaButton_d5cd2d",
-    tl: "guildSection_d5cd2d",
     YW: "guildTitle_d5cd2d",
     $f: "guildIcon_d5cd2d",
     oi: "guildIconNotClickable_d5cd2d",
