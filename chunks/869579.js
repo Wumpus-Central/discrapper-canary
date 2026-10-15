@@ -530,7 +530,7 @@ function eS(e, t, n, l) {
     }
     (r.addEventListener("scrollend", l, { once: !0 }), r.scrollTo({ top: s, behavior: "smooth" }));
 }
-var eD = n(492784);
+var eD = n(628679);
 function ej(e) {
     let { column: t, disabled: n, onInsert: r } = e,
         i = V.intl.formatToPlainString(1 === t ? X.default.U0SqHk : X.default["9Ctu9P"], { positionNumber: 1 });
