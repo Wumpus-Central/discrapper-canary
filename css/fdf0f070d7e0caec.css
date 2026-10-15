@@ -333,4 +333,17 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=30b1e312a6b80744.css.map*/
+.announcer__40b01 {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: fixed;
+    white-space: nowrap;
+    width: 1px
+}
+
+/*# sourceMappingURL=fdf0f070d7e0caec.css.map*/

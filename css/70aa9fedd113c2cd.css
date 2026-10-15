@@ -408,6 +408,19 @@
     min-width: 0
 }
 
+.announcer__71275 {
+    border: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: fixed;
+    white-space: nowrap;
+    width: 1px
+}
+
 .portalRoot__71275 {
     display: contents
 }
@@ -582,4 +595,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=7e24a17cf3c98f69.css.map*/
+/*# sourceMappingURL=70aa9fedd113c2cd.css.map*/
