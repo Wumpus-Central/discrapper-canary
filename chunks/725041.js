@@ -1,86 +1,103 @@
-n.d(t, { J: () => E, default: () => p });
+n.d(t, { J: () => I, default: () => S });
 var l = n(477900),
     r = n(582128),
     i = n(17928),
-    a = n(772707),
-    u = n(93675),
-    s = n(331322),
-    c = n(834730),
-    d = n(964486),
-    o = n(967198),
-    f = n(202762),
-    g = n(49999),
-    m = n(61567),
-    h = n(105292);
-let E = "GUILD_SPACE_NUX_MODAL";
-function p(e) {
-    let { guildId: t, markAsDismissed: n, transitionState: E, onClose: p } = e,
-        x = (0, i.bG)([o.A], () => o.A.getGuildId()),
-        A = r.useRef(x === t);
-    ((0, d.Ay)(() => {
-        A.current && n(g.i.AUTO_DISMISS);
+    a = n(331322),
+    s = n(834730),
+    u = n(772707),
+    c = n(93675),
+    d = n(902478),
+    o = n(663417),
+    f = n(366056),
+    g = n(964486),
+    m = n(468689),
+    h = n(71393),
+    E = n(967198),
+    p = n(202762),
+    x = n(593673),
+    A = n(652215),
+    C = n(49999),
+    _ = n(61567),
+    v = n(105292),
+    y = n(636531);
+let I = "GUILD_SPACE_NUX_MODAL";
+function b(e) {
+    let { icon: t, title: n, description: r } = e;
+    return (0, l.jsxs)(a.B, {
+        direction: "horizontal",
+        gap: 12,
+        children: [
+            (0, l.jsx)("div", { className: y.z, children: t }),
+            (0, l.jsxs)(a.B, {
+                gap: 0,
+                children: [
+                    (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-strong", children: n }),
+                    (0, l.jsx)(s.E, { variant: "text-sm/normal", color: "text-subtle", children: r }),
+                ],
+            }),
+        ],
+    });
+}
+function S(e) {
+    let { guildId: t, markAsDismissed: n, transitionState: s, onClose: y } = e,
+        I = (0, i.bG)([E.A], () => E.A.getGuildId()),
+        S = (0, i.bG)([h.A], () => h.A.getGuild(t)?.guildSpaceSettings?.publish_status === x.B.PUBLISHED, [t]),
+        D = r.useRef(I === t);
+    ((0, g.Ay)(() => {
+        D.current && n(C.i.AUTO_DISMISS);
     }),
         r.useEffect(() => {
-            x !== t && p();
-        }, [t, p, x]));
-    let C = r.useCallback(async () => {
-            ((0, f.Wd)(t), await p());
-        }, [t, p]),
-        _ = r.useCallback(async () => {
-            await p();
-        }, [p]);
-    return x !== t
+            I !== t && y();
+        }, [t, y, I]));
+    let j = r.useCallback(async () => {
+            ((0, p.Wd)(t), await y());
+        }, [t, y]),
+        G = r.useCallback(async () => {
+            (m.A.open(t, A.BEX.ENGAGEMENT, void 0, A.nd0.ENGAGEMENT_GUILD_SPACE), await y());
+        }, [t, y]);
+    return I !== t
         ? null
-        : (0, l.jsx)(a.k, {
+        : (0, l.jsx)(u.k, {
               size: "md",
-              transitionState: E,
-              onClose: p,
+              transitionState: s,
+              onClose: y,
               gradientColor: "blue",
               graphic: {
                   type: "rive",
-                  rive: u.f,
+                  rive: c.f,
                   aspectRatio: "16/9",
                   props: { dataBinding: { on: !0 }, withReducedMotion: "halt", fit: "contain" },
               },
-              title: h.intl.string(m.default.x9aorn),
-              subtitle: h.intl.string(m.default.HXmZlY),
+              title: v.intl.string(_.default.x9aorn),
+              subtitle: v.intl.string(_.default.HXmZlY),
               actions: [
-                  { text: h.intl.string(m.default.KcOpCm), variant: "secondary", onClick: C },
-                  { text: h.intl.string(h.t.RzWDqY), variant: "primary", onClick: _ },
+                  ...(S ? [{ text: v.intl.string(v.t["154/bL"]), variant: "secondary", onClick: G }] : []),
+                  { text: v.intl.string(_.default["/Ld1Ju"]), variant: "secondary", onClick: j },
               ],
-              children: (0, l.jsxs)(s.B, {
+              children: (0, l.jsxs)(a.B, {
                   gap: 16,
                   children: [
-                      (0, l.jsxs)(s.B, {
-                          gap: 4,
-                          children: [
-                              (0, l.jsx)(c.E, {
-                                  variant: "text-md/medium",
-                                  color: "text-strong",
-                                  children: h.intl.string(m.default.BNSdWl),
-                              }),
-                              (0, l.jsx)(c.E, {
-                                  variant: "text-sm/normal",
-                                  color: "text-subtle",
-                                  children: h.intl.string(m.default["2AoJt6"]),
-                              }),
-                          ],
+                      (0, l.jsx)(b, {
+                          icon: (0, l.jsx)(d.u, { size: "sm", color: "currentColor" }),
+                          title: v.intl.string(_.default.BNSdWl),
+                          description: v.intl.string(_.default["2AoJt6"]),
                       }),
-                      (0, l.jsxs)(s.B, {
-                          gap: 4,
-                          children: [
-                              (0, l.jsx)(c.E, {
-                                  variant: "text-md/medium",
-                                  color: "text-strong",
-                                  children: h.intl.string(m.default.OTYC2K),
-                              }),
-                              (0, l.jsx)(c.E, {
-                                  variant: "text-sm/normal",
-                                  color: "text-subtle",
-                                  children: h.intl.string(m.default.aQUPiQ),
-                              }),
-                          ],
+                      (0, l.jsx)(b, {
+                          icon: (0, l.jsx)(o.RefreshIcon, { size: "sm", color: "currentColor" }),
+                          title: v.intl.string(_.default.OTYC2K),
+                          description: v.intl.string(_.default.aQUPiQ),
                       }),
+                      S
+                          ? (0, l.jsx)(b, {
+                                icon: (0, l.jsx)(f.M, { size: "sm", color: "currentColor" }),
+                                title: v.intl.string(_.default.GMgGSC),
+                                description: v.intl.string(_.default.FurWLH),
+                            })
+                          : (0, l.jsx)(b, {
+                                icon: (0, l.jsx)(f.M, { size: "sm", color: "currentColor" }),
+                                title: v.intl.string(_.default.Hk5K1P),
+                                description: v.intl.string(_.default["vloG7/"]),
+                            }),
                   ],
               }),
           });

@@ -97,6 +97,17 @@
     background-color: var(--opacity-white-72)
 }
 
+.iconContainer_c1621f {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-shrink: 0;
+    height: 42px;
+    justify-content: center;
+    width: 42px
+}
+
 .page__7d655 {
     background-color: var(--background-base-lower);
     display: flex;
@@ -131,4 +142,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=96ee22115e2fbd2d.css.map*/
+/*# sourceMappingURL=8a2a4e6ecabbeb75.css.map*/

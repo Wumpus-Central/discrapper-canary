@@ -273,7 +273,7 @@ var _,
         EpicGamesBrandDarkIcon: () => pK,
         EpicGamesNeutralIcon: () => p$.r,
         ExpandGifIcon: () => pz,
-        ExperimentalCheckpointIcon: () => pX,
+        ExperimentalCheckpointIcon: () => pX.M,
         ExperimentalCommonIcon: () => pq.p,
         ExperimentalConfettiIcon: () => pZ._,
         ExperimentalCouchIcon: () => pQ.u,
@@ -335,7 +335,7 @@ var _,
         GooglePlayNeutralIcon: () => Tk.O,
         GridHorizontalIcon: () => TF,
         GridSquareIcon: () => TB.d,
-        GridVerticalIcon: () => TV,
+        GridVerticalIcon: () => TV.u,
         GroupArrowDownIcon: () => TH.U,
         GroupArrowRightIcon: () => Tj.M,
         GroupIcon: () => aG.n,
@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 639187, Version Hash: 2e8a08a17b69eb2feeac0937e0d5773ee1db4556`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 639190, Version Hash: d751548c8ee12bb58978870a18dd2f72aeacd55f`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -17350,35 +17350,8 @@ function pz(e) {
         }),
     });
 }
-function pX(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r7.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hl.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, hs.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            fillRule: "evenodd",
-            d: "M5.1 1a2.1 2.1 0 0 1 1.8 3.14h14.05c.84 0 1.34.94.87 1.63L19.1 9.85c-.23.35-.23.8 0 1.16l2.72 4.08c.47.7-.03 1.62-.87 1.62H6.15v5.24a1.05 1.05 0 0 1-2.1 0V4.91A2.1 2.1 0 0 1 5.1 1ZM16.3 7.6c-.4-.42-1.07-.42-1.48 0l-3.45 3.44-1.35-1.35a1.05 1.05 0 0 0-1.48 1.48l2.1 2.1c.4.4 1.06.4 1.47 0l4.2-4.2c.4-.4.4-1.07 0-1.48Z",
-            clipRule: "evenodd",
-            className: a,
-        }),
-    });
-}
-var pq = n(260981),
+var pX = n(366056),
+    pq = n(260981),
     pZ = n(191842),
     pQ = n(29540);
 function pJ(e) {
@@ -17988,34 +17961,9 @@ function TF(e) {
         }),
     });
 }
-var TB = n(481901);
-function TV(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r7.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hl.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, hs.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M4 22a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h5a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4ZM15 22a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5ZM13 9c0 1.1.9 2 2 2h5a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-5a2 2 0 0 0-2 2v5Z",
-            className: a,
-        }),
-    });
-}
-var TH = n(381844),
+var TB = n(481901),
+    TV = n(902478),
+    TH = n(381844),
     Tj = n(173054);
 function TW(e) {
     let {
@@ -25885,7 +25833,7 @@ let yr = "isHideDevBanner",
                     className: t_()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "639187" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "639190" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -30227,7 +30175,7 @@ let v9 = (0, t$.Fe)({
                 n.e("777612"),
                 n.e("899223"),
                 n.e("600552"),
-                n.e("908868"),
+                n.e("963302"),
                 n.e("704434"),
                 n.e("470068"),
                 n.e("491793"),

@@ -24440,17 +24440,24 @@ function px(e) {
                 (0, pg.B)(t, { enabled: e });
             },
             [t],
-        );
-    return (0, p.jsx)(l3.n, {
-        label: en.intl.string(en.t["04IVMq"]),
-        description: en.intl.string(en.t.K1URjQ),
-        children: (0, p.jsx)(B.d, {
-            label: en.intl.string(en.t.lgDNyX),
-            checked: i?.enabled ?? !1,
-            onChange: l,
-            disabled: !n,
-        }),
-    });
+        ),
+        s = R.useRef(null);
+    return (
+        EV(s, et.nd0.ENGAGEMENT_GUILD_SPACE),
+        (0, p.jsx)("div", {
+            ref: s,
+            children: (0, p.jsx)(l3.n, {
+                label: en.intl.string(en.t["04IVMq"]),
+                description: en.intl.string(en.t.K1URjQ),
+                children: (0, p.jsx)(B.d, {
+                    label: en.intl.string(en.t.lgDNyX),
+                    checked: i?.enabled ?? !1,
+                    onChange: l,
+                    disabled: !n,
+                }),
+            }),
+        })
+    );
 }
 function ph(e) {
     let { canManageGuild: t, afkTimeout: n, afkChannelId: i, label: l } = e,
