@@ -2,7 +2,7 @@ n.d(t, { B: () => c });
 var r = n(477900);
 n(582128);
 var i = n(683071),
-    a = n(504560),
+    a = n(123816),
     l = n(740053);
 let s = { info: "info", warning: "warning", critical: "critical" },
     u = ["info", "warning", "critical"];

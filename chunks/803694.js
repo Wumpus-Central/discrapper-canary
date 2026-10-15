@@ -1,7 +1,7 @@
 n.d(t, { A: () => I, iB: () => S, Y0: () => E });
 var l = n(582128),
     i = n(702841),
-    r = n(504560),
+    r = n(123816),
     a = n(166403),
     s = n(459357),
     o = n(813873),
@@ -166,9 +166,9 @@ function E(e) {
         { enabled: E } = (0, s.c)({ location: u }),
         { enabled: I } = (0, o.U)({ location: u }),
         {
-            pendingPaymentSourceId: A,
-            hasInitialPaymentSourceSeed: g,
-            hasAddedPaymentSourceThisSession: y,
+            pendingPaymentSourceId: g,
+            hasInitialPaymentSourceSeed: y,
+            hasAddedPaymentSourceThisSession: A,
             applyWalletBalance: P,
             previewApplyWalletBalance: v,
             setApplyWalletBalance: x,
@@ -207,13 +207,13 @@ function E(e) {
                 subscriptionPaymentSourceId: S,
                 giftCardWallet: O,
                 isReady: d,
-                pendingPaymentSourceId: A,
+                pendingPaymentSourceId: g,
                 paymentSourceId: i,
                 giftCardsEnabled: E,
-                hasInitialPaymentSourceSeed: g,
-                hasAddedPaymentSourceThisSession: y,
+                hasInitialPaymentSourceSeed: y,
+                hasAddedPaymentSourceThisSession: A,
             }),
-            [T, N, S, O, d, A, i, E, g, y],
+            [T, N, S, O, d, g, i, E, y, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(U), [U])),
@@ -256,13 +256,13 @@ function E(e) {
             [x, B],
         ),
         {
-            walletCoversSubtotal: Y,
-            walletCoversTotal: V,
+            walletCoversSubtotal: V,
+            walletCoversTotal: Y,
             isWalletBalanceLoaded: K,
-            isWalletCoverageLoading: q,
+            isWalletCoverageLoading: Z,
         } = f({ giftCardsEnabled: E }),
-        Z = null != S && null != R && S === R.id,
-        z = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: V }));
+        q = null != S && null != R && S === R.id,
+        z = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
     (l.useEffect(() => {
         if (j && null != R) {
             if (z) {
@@ -273,8 +273,8 @@ function E(e) {
         }
     }, [j, R, z, k, i, w, a]),
         l.useEffect(() => {
-            !Z && K && !Y && k && a(w);
-        }, [Z, K, Y, k, a, w]));
+            !q && K && !V && k && a(w);
+        }, [q, K, V, k, a, w]));
     let $ = l.useMemo(
         () =>
             null == R
@@ -292,11 +292,11 @@ function E(e) {
                         giftCardWallet: R,
                         checked: k,
                         onChange: H,
-                        loading: q,
-                        disabled: !q && !Y,
-                        disabledTooltip: q || Y ? void 0 : h.intl.string(C.default.ccWIdu),
+                        loading: Z,
+                        disabled: !Z && !V,
+                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, j, P, v, W, k, H, Y, q],
+        [R, j, P, v, W, k, H, V, Z],
     );
     return {
         giftCardsEnabled: E,
@@ -304,14 +304,14 @@ function E(e) {
         dropdownPaymentSourceId: D,
         giftCardWallet: R,
         isGiftCardCreditsChecked: k,
-        isSubscriptionPaidByWallet: Z,
+        isSubscriptionPaidByWallet: q,
         handleGiftCardCreditsToggle: H,
         handleDropdownPaymentSourceChange: G,
         giftCardCheckboxProps: $,
-        walletCoversSubtotal: Y,
-        walletCoversTotal: V,
+        walletCoversSubtotal: V,
+        walletCoversTotal: Y,
         isWalletBalanceLoaded: K,
-        isWalletCoverageLoading: q,
+        isWalletCoverageLoading: Z,
         isSplitPaymentMode: j,
     };
 }

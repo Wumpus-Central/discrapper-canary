@@ -3,7 +3,7 @@ var l = n(582128),
     i = n(543767),
     r = n(424776),
     a = n(511484),
-    s = n(504560),
+    s = n(123816),
     o = n(463376);
 function u(e) {
     let t,
@@ -22,7 +22,7 @@ function u(e) {
             metadata: c,
         }),
         I = f ? d : S,
-        A = l.useMemo(() => {
+        g = l.useMemo(() => {
             let e = p ? (I ?? null) : null;
             return {
                 discountOffer: m,
@@ -39,13 +39,13 @@ function u(e) {
         })),
         l.useEffect(
             () => (
-                t(A),
+                t(g),
                 () => {
                     t(r.T);
                 }
             ),
-            [A, t],
+            [g, t],
         ),
-        A
+        g
     );
 }

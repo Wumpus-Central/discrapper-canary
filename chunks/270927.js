@@ -10,15 +10,15 @@ var l = n(477900),
     d = n(38785),
     p = n(270537),
     m = n(241989),
-    h = n(504560),
+    h = n(123816),
     C = n(818296),
     f = n(486020),
     S = n(580630),
     E = n(403581),
     I = n(278416),
-    A = n(993408),
-    g = n(1076),
-    y = n(288106),
+    g = n(993408),
+    y = n(1076),
+    A = n(288106),
     P = n(604913),
     v = n(223311),
     x = n(306396),
@@ -43,7 +43,7 @@ function U(e) {
                     setCollectedModalOverrideTitle: l,
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
-                } = (0, g.z)(),
+                } = (0, y.z)(),
                 s = (0, v.A)(b.FYj),
                 o = null != n ? (0, _.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
@@ -52,7 +52,7 @@ function U(e) {
                     case P.hE.COLLECT_AND_CLAIM: {
                         let e = o?.progress;
                         if (null == n || null == e) break;
-                        if (o?.rewardStatus === y.GM.IN_PROGRESS) {
+                        if (o?.rewardStatus === A.GM.IN_PROGRESS) {
                             let t = Math.min(e.current + (0, x.oO)(n, u.collectionId), e.target);
                             l(j.intl.formatToPlainString(j.t.G9koyR, { current: t, target: e.target }));
                         } else l(void 0);
@@ -78,11 +78,11 @@ var G = n(951305),
     B = n.n(F),
     H = n(991690),
     W = n(17928),
-    Y = n(10716),
-    V = n(206828),
+    V = n(10716),
+    Y = n(206828),
     K = n(31823),
-    q = n(427675),
-    Z = n(977445),
+    Z = n(427675),
+    q = n(977445),
     z = n(118982),
     $ = n(566980),
     Q = n(319820),
@@ -145,12 +145,12 @@ function er(e) {
                 ? (function (e) {
                       let t = L.default.getCurrentUser(),
                           n = k.Ay.canUseShopDiscounts(t),
-                          l = (0, A.xM)(t),
-                          i = (0, A.WD)(e, { hasShopDiscount: n, discount: (0, A.fT)(e, n) });
+                          l = (0, g.xM)(t),
+                          i = (0, g.WD)(e, { hasShopDiscount: n, discount: (0, g.fT)(e, n) });
                       if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
-                          if (l === A.D0.NITRO)
+                          if (l === g.D0.NITRO)
                               return { PriceIcon: E.t, priceTooltip: j.intl.string(w.default.YUNJJa) };
-                          if (l === A.D0.THIRDPARTY)
+                          if (l === g.D0.THIRDPARTY)
                               return { PriceIcon: I.TagIcon, priceTooltip: j.intl.string(D.default.DePOcS) };
                       }
                       return {};
@@ -174,8 +174,8 @@ function ea(e) {
         }),
         { isGift: f, giftRecipient: E } = (0, G.Pv)(),
         {
-            sku: A,
-            application: g,
+            sku: g,
+            application: y,
             eligiblePaymentGateways: v,
             disabled: x,
         } = (function () {
@@ -184,7 +184,7 @@ function ea(e) {
                     purchaseState: e.purchaseState,
                 })),
                 { application: n } = (0, K.V)(),
-                l = (0, q.gU)();
+                l = (0, Z.gU)();
             B()(null != e, "Expected selectedSkuId");
             let i = l[e],
                 r = i?.eligiblePaymentGateways;
@@ -211,16 +211,16 @@ function ea(e) {
                               hasSeparateAccountLinkNotice: !0,
                           })
                         : (0, l.jsx)(J.T3, { paymentSourceType: i });
-                })(n, { skuId: A.id, paymentSourceType: m, isGift: f }),
-            [n, A.id, m, f],
+                })(n, { skuId: g.id, paymentSourceType: m, isGift: f }),
+            [n, g.id, m, f],
         ),
         { upperInlineNoticeProps: L, footerInlineNoticeProps: k } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
-                r = (0, W.bG)([Y.A], () => Y.A.getFetchState()),
-                { fetched: a, hasAlreadyLinked: s } = (0, V.RD)(n),
-                o = (0, Z.uS)(n.id),
+                r = (0, W.bG)([V.A], () => V.A.getFetchState()),
+                { fetched: a, hasAlreadyLinked: s } = (0, Y.RD)(n),
+                o = (0, q.uS)(n.id),
                 u = null != t && t.productLine === b.EZt.SOCIAL_LAYER_GAME_ITEM,
-                c = n.supportsEmbeddedSurface(H.U.MAIN) && r === Y.$.ERROR,
+                c = n.supportsEmbeddedSurface(H.U.MAIN) && r === V.$.ERROR,
                 d = u && a && !s && !l ? (0, z.k3)(n) : null;
             return {
                 upperInlineNoticeProps: i.useMemo(() => {
@@ -250,7 +250,7 @@ function ea(e) {
                     );
                 }, [d]),
             };
-        })({ sku: A, application: g, isGift: f }),
+        })({ sku: g, application: y, isGift: f }),
         D = i.useMemo(() => ({ paymentGatewayRestrictions: v, shouldUseUnifiedCheckoutUI: !0 }), [v]),
         F = (0, l.jsx)(c.N, {
             label: j.intl.string(j.t["u+Cw58"]),
@@ -259,7 +259,7 @@ function ea(e) {
             additionalPaymentSourceDropdownProps: D,
             disabled: x,
         }),
-        { product: ee } = (0, Q.AO)({ sku: A }),
+        { product: ee } = (0, Q.AO)({ sku: g }),
         { unifiedInvoiceSummaryProps: et, priceText: ea } = i.useMemo(
             () =>
                 (function (e) {
@@ -291,15 +291,15 @@ function ea(e) {
                         );
                     }
                     return { unifiedInvoiceSummaryProps: null, priceText: "", discount: null };
-                })({ sku: A, invoicePreview: r }),
-            [A, r],
+                })({ sku: g, invoicePreview: r }),
+            [g, r],
         ),
         es = i.useMemo(() => (null != et ? (0, l.jsx)(p.Vm, { ...et }) : null), [et]),
         eo = i.useMemo(() => {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: ea, sku: A, application: g, giftRecipient: E }),
+                (t = { priceText: ea, sku: g, application: y, giftRecipient: E }),
                 e === o.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(el, { ...t })
                     : e === o.C.GUILD_PRODUCT_CHECKOUT
@@ -308,7 +308,7 @@ function ea(e) {
                         ? (0, l.jsx)(er, { ...t })
                         : (0, l.jsx)(en, { ...t })
             );
-        }, [n, A, g, E, ea]),
+        }, [n, g, y, E, ea]),
         eu = i.useMemo(() => (null != r ? (0, S.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         ec = (0, C.g)(ee ?? null),
         ed = i.useMemo(
@@ -326,7 +326,7 @@ function ea(e) {
                                         return t
                                             ? null
                                             : (function (e) {
-                                                  if (e.rewardStatus !== y.GM.IN_PROGRESS) return null;
+                                                  if (e.rewardStatus !== A.GM.IN_PROGRESS) return null;
                                                   let t = e.progress;
                                                   if (null == t || null == e.endsAt) return null;
                                                   let n = (0, M.X)(e.endsAt);
@@ -373,8 +373,8 @@ function ea(e) {
                         });
                     }
                     return null;
-                })(n, { invoicePreview: r, isGift: f, promotion: ec, productLine: A.productLine }),
-            [n, r, f, ec, A.productLine],
+                })(n, { invoicePreview: r, isGift: f, promotion: ec, productLine: g.productLine }),
+            [n, r, f, ec, g.productLine],
         ),
         ep = i.useMemo(() => (null != ed ? { headerBadgeText: j.intl.string(w.default.Fjpyfj) } : {}), [ed]);
     return (0, l.jsxs)(l.Fragment, {

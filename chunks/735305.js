@@ -1,4 +1,4 @@
-n.d(t, { x: () => A });
+n.d(t, { x: () => g });
 var l = n(284009),
     i = n.n(l),
     r = n(999129),
@@ -7,7 +7,7 @@ var l = n(284009),
     o = n(463376),
     u = n(883645),
     c = n(601194),
-    d = n(504560),
+    d = n(123816),
     p = n(174459),
     m = n(723702),
     h = n(951305),
@@ -16,9 +16,9 @@ var l = n(284009),
     S = n(280341),
     E = n(652215),
     I = n(202541);
-function A(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: A, continueSessionToInitialStep: g } = e,
-        { paymentSources: y } = (0, a.j)(),
+function g(e) {
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: g, continueSessionToInitialStep: y } = e,
+        { paymentSources: A } = (0, a.j)(),
         {
             selectedSkuId: P,
             setPurchaseState: v,
@@ -45,7 +45,7 @@ function A(e) {
         { isGift: w } = (0, h.Pv)(),
         D = {
             ...(0, S.p)(),
-            paymentSources: y,
+            paymentSources: A,
             paymentSourceId: _,
             setPaymentSourceId: T,
             purchaseError: N,
@@ -55,9 +55,9 @@ function A(e) {
             isGift: w,
         },
         U =
-            A ??
+            g ??
             function () {
-                l(Object.values(y).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
+                l(Object.values(A).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
                     trackedFromStep: C.pn.PAYMENT_ELEMENT,
                 });
             };
@@ -91,6 +91,6 @@ function A(e) {
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
             (0, m.isDesktop)() && null != P && [I.pe.TIER_0, I.pe.TIER_2].includes(P) && !w && null == j,
-        continueSessionToInitialStep: g,
+        continueSessionToInitialStep: y,
     });
 }

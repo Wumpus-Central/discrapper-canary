@@ -8,7 +8,7 @@ var l = n(477900),
     u = n(883645),
     c = n(427675),
     d = n(580133),
-    p = n(504560),
+    p = n(123816),
     m = n(242874),
     h = n(573359),
     C = n(163074),
@@ -16,9 +16,9 @@ var l = n(477900),
     S = n(892349),
     E = n(35587),
     I = n(180522),
-    A = n(637969),
-    g = n(45938),
-    y = n(158045),
+    g = n(637969),
+    y = n(45938),
+    A = n(158045),
     P = n(951305),
     v = n(166532),
     x = n(652215),
@@ -47,12 +47,12 @@ function R(e) {
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
         { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        Y = D?.productLine === x.EZt.COLLECTIBLES,
-        V = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        V = D?.productLine === x.EZt.COLLECTIBLES,
+        Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        q = G && (0, g.Ik)(B) && U === v.pn.CONFIRM && null != F && !Y && !V,
-        Z = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
-        z = null != U && !Z.includes(U) && null != n,
+        Z = G && (0, y.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
+        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
+        z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == U) return;
@@ -67,10 +67,10 @@ function R(e) {
                       titleTextVariant: "heading-xl/semibold",
                       subtitle: T.intl.format(N.default.geFoof, {
                           giftCount: R,
-                          skuName: null != d ? (0, y.RH)(d) : "",
+                          skuName: null != d ? (0, A.RH)(d) : "",
                       }),
                   }))
-                : q
+                : Z
                   ? (e = (0, l.jsxs)("div", {
                         className: b.kL,
                         children: [
@@ -91,7 +91,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(A.A, {
+                              ? (0, l.jsx)(g.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: E,
                                     premiumType: _.WN[n],
@@ -108,7 +108,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, E, n, U, k, w, R, d, K, q, H, z, G, B, M, O, L]);
+    }, [F, $, E, n, U, k, w, R, d, K, Z, H, z, G, B, M, O, L]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, p.t4)((e) => ({

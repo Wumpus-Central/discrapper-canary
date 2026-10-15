@@ -1,4 +1,4 @@
-n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => b, s3: () => x });
+n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => b, s3: () => A });
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -16,12 +16,12 @@ var r = n(477900),
     E = n(708791),
     y = n(981036),
     I = n(725836),
-    S = n(504560),
+    S = n(123816),
     g = n(520149),
     _ = n(56763),
     P = n(652215),
-    A = n(126223);
-function x(e) {
+    x = n(126223);
+function A(e) {
     let {
             gradientColor: t,
             title: n,
@@ -33,7 +33,7 @@ function x(e) {
             ...d
         } = e,
         f = l.useCallback(
-            () => (null == c ? null : (0, r.jsx)("img", { alt: "", className: A.bI, src: (0, p.t)(c) })),
+            () => (null == c ? null : (0, r.jsx)("img", { alt: "", className: x.bI, src: (0, p.t)(c) })),
             [c],
         ),
         h = l.useMemo(() => {
@@ -61,27 +61,45 @@ function x(e) {
 }
 let v = { top: 16, bottom: 8 };
 function R(e) {
-    let { onBackClick: t, primaryButtonProps: n, portalClassName: l, stripeExpressCheckoutComponent: i } = e,
-        { variant: a } = n,
-        { setCheckoutFooterContentNode: o } = (0, I.ck)(),
-        { shouldUseStripeExpressCheckout: d } = (0, S.t4)((e) => ({
-            shouldUseStripeExpressCheckout: e.getShouldUseStripeExpressCheckout(),
-        })),
-        f = (0, r.jsx)(y.p, { ...n, variant: a ?? "active", autoFocus: !0 });
+    let { onBackClick: t, primaryButtonProps: n, portalClassName: i, stripeExpressCheckoutComponent: a } = e,
+        { variant: o } = n,
+        { setCheckoutFooterContentNode: d } = (0, I.ck)(),
+        { isExpressCheckoutEnabledForFooter: f, shouldExpressCheckoutBeVisible: h } = (0, S.t4)((e) => {
+            let t = e.getExpressCheckoutVisibilityState();
+            return {
+                isExpressCheckoutEnabledForFooter: t.isExpressCheckoutEnabledForFooter,
+                shouldExpressCheckoutBeVisible: t.shouldExpressCheckoutBeVisible,
+            };
+        }),
+        p = (0, r.jsx)(y.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
+        m = f && null != a,
+        g = m && h,
+        _ = null != t,
+        {
+            direction: P,
+            align: A,
+            justify: R,
+        } = l.useMemo(() => {
+            let e = "end";
+            return (
+                _ && !g && (e = "space-between"),
+                { direction: g ? "vertical" : "horizontal", align: g ? "stretch" : "center", justify: e }
+            );
+        }, [_, g]),
+        M = _ ? (0, r.jsx)(C.A, { onClick: t }) : null;
     return (0, r.jsxs)(u.j, {
         children: [
-            (0, r.jsx)("div", { ref: o, className: s()(A.K4, l) }),
+            (0, r.jsx)("div", { ref: d, className: s()(x.K4, i) }),
             (0, r.jsxs)(c.B, {
-                direction: "horizontal",
-                align: "center",
-                justify: null != t ? "space-between" : "end",
+                direction: P,
+                align: A,
+                justify: R,
                 fullWidth: !0,
                 padding: v,
                 children: [
-                    null != t ? (0, r.jsx)(C.A, { onClick: t }) : null,
-                    d && null != i
-                        ? (0, r.jsx)(E.O, { stripeExpressCheckoutComponent: i, primaryCheckoutButton: f })
-                        : f,
+                    g ? null : M,
+                    m ? (0, r.jsx)(E.Z, { stripeExpressCheckoutComponent: a, fallbackComponent: p }) : p,
+                    g && null != M ? (0, r.jsx)("div", { className: x.aY, children: M }) : null,
                 ],
             }),
         ],
@@ -89,7 +107,7 @@ function R(e) {
 }
 function M(e) {
     let { className: t } = e;
-    return (0, r.jsx)("div", { className: s()(A.g4, t), children: (0, r.jsx)(_.I, {}) });
+    return (0, r.jsx)("div", { className: s()(x.g4, t), children: (0, r.jsx)(_.I, {}) });
 }
 function T(e) {
     let { children: t, size: n = "md", maxHeight: l = "viewport", isModalContentLoading: i, ...s } = e;
@@ -123,7 +141,7 @@ function b(e) {
         children: (0, r.jsxs)(o.d, {
             ...h,
             children: [
-                (0, r.jsx)(x, {
+                (0, r.jsx)(A, {
                     gradientColor: n,
                     title: t,
                     countryCode: l,

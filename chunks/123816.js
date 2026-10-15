@@ -245,66 +245,68 @@ function N(e) {
 var C = n(563020),
     O = n(826469),
     R = n(158045),
-    L = n(202541);
-function y(e, t) {
+    L = n(652215),
+    y = n(202541);
+function D(e, t) {
     return null != e && null != e.checkout_context
         ? e.checkout_context
         : null != t && null != t.checkoutContext
           ? t.checkoutContext
           : null;
 }
-function D(e) {
+function v(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
-        : { isPremiumPurchase: (0, R.ys)(e), isPremiumGroupPurchase: e === L.gD.PREMIUM_GROUP_MONTH };
+        : { isPremiumPurchase: (0, R.ys)(e), isPremiumGroupPurchase: e === y.gD.PREMIUM_GROUP_MONTH };
 }
-function v(e, t) {
+function b(e) {
+    return e.type !== L.hes.TDS_WALLET;
+}
+function M(e, t) {
     if (null == e) return null;
     if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-var b = n(652215),
-    M = n(26279),
-    P = n(504275),
-    U = n(219538);
-let w = { lastOrderUpdateRevision: 0 };
-var G = n(158032),
-    x = n(830382),
-    k = n(136857),
-    F = n(739508),
-    B = n(71532),
-    V = n(660183);
-let H = [b.__0.COMPLETED, b.__0.FAILED, b.__0.CANCELED];
-async function j(e) {
+var P = n(26279),
+    U = n(504275),
+    w = n(219538);
+let G = { lastOrderUpdateRevision: 0 };
+var x = n(158032),
+    k = n(830382),
+    F = n(136857),
+    B = n(739508),
+    V = n(71532),
+    H = n(660183);
+let j = [L.__0.COMPLETED, L.__0.FAILED, L.__0.CANCELED];
+async function W(e) {
     if (null == e) return;
-    let { error: t } = await (0, B.ap)(e);
-    null != t && (0, F.pM)(Error(t), { extra: { authenticationError: t } });
+    let { error: t } = await (0, V.ap)(e);
+    null != t && (0, B.pM)(Error(t), { extra: { authenticationError: t } });
 }
-let W = {
+let Y = {
     paymentAuthError: null,
     isAwaitingPaymentAuthentication: !1,
     awaitingPaymentId: null,
     paymentAuthWasCancelled: !1,
 };
-var Y = n(155718),
-    K = n(202613);
-function $(e) {
+var K = n(155718),
+    $ = n(202613);
+function z(e) {
     return null == e ? null : e.taxInclusive ? e.total : e.total - e.tax;
 }
-function z(e) {
+function X(e) {
     let { checkoutInvoicePreview: t, renewalInvoicePreview: n } = e,
-        i = $(t),
-        r = $(n);
+        i = z(t),
+        r = z(n);
     return 0 === i && null != r ? { subtotal: r, total: n?.total ?? null } : { subtotal: i, total: t?.total ?? null };
 }
-var X = n(811315),
-    q = n.n(X),
-    Z = n(529412),
-    Q = n(75304),
-    J = n(442467),
-    ee = n(403362),
-    et = n(427262);
+var q = n(811315),
+    Z = n.n(q),
+    Q = n(529412),
+    J = n(75304),
+    ee = n(442467),
+    et = n(705822);
 let en = 1,
     [ei, er] = (0, m.A)();
 function ea(e) {
@@ -327,9 +329,9 @@ function es(e) {
             E =
                 ((u = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
-                    isPremiumPurchase: () => D(i().selectedPlanId).isPremiumPurchase,
-                    isPremiumGroupPurchase: () => D(i().selectedPlanId).isPremiumGroupPurchase,
-                    selectedPlanAttributes: () => D(i().selectedPlanId),
+                    isPremiumPurchase: () => v(i().selectedPlanId).isPremiumPurchase,
+                    isPremiumGroupPurchase: () => v(i().selectedPlanId).isPremiumGroupPurchase,
+                    selectedPlanAttributes: () => v(i().selectedPlanId),
                     premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
                     premiumDiscountPercent: () => {
                         let e = i().premiumDiscountInfo.discountOffer;
@@ -347,7 +349,7 @@ function es(e) {
                     },
                     checkoutContext: () => {
                         let { order: e, checkoutInvoicePreview: t } = i();
-                        return y(e, t);
+                        return D(e, t);
                     },
                     hasCheckoutContextLoaded: () => null != i().get("checkoutContext"),
                     checkoutStoreCountry: () => {
@@ -369,10 +371,7 @@ function es(e) {
                         let { get: e, paymentSourceId: t } = i();
                         return e("checkoutPaymentSources").find((e) => e.id === t) ?? null;
                     },
-                    hasFiatCheckoutPaymentSources: () =>
-                        i()
-                            .get("checkoutPaymentSources")
-                            .some((e) => e.type !== b.hes.TDS_WALLET && e.type !== b.hes.UNKNOWN),
+                    hasFiatCheckoutPaymentSources: () => i().get("checkoutPaymentSources").some(b),
                     isCheckoutDataLoading: () => {
                         let {
                             order: e,
@@ -380,7 +379,7 @@ function es(e) {
                             checkoutInvoiceError: n,
                             purchasePreviewError: r,
                         } = i();
-                        return null == n && null == r && (null == t || null == y(e, t));
+                        return null == n && null == r && (null == t || null == D(e, t));
                     },
                     primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
                     isOrderLocked: () => {
@@ -389,12 +388,12 @@ function es(e) {
                     },
                     isOrderSigningInProgress: () => {
                         let { order: e } = i();
-                        return null != e && e.status === M.Re.SIGNING_IN_PROGRESS;
+                        return null != e && e.status === P.Re.SIGNING_IN_PROGRESS;
                     },
                     isOrderAwaitingSettlement: () => i().isOrderSigning && i().get("isOrderSigningInProgress"),
                 });
         return {
-            ...(0, P.p)(e, i, t),
+            ...(0, U.p)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -421,7 +420,7 @@ function es(e) {
                         r = JSON.stringify(t),
                         { fetchSetupIntentRequestKey: a, fetchSetupIntentPromise: s, clearFetchSetupIntent: l } = i();
                     if (!n && null != s && a === r) return s;
-                    let o = (0, U.w)({ body: t });
+                    let o = (0, w.w)({ body: t });
                     return (
                         e({ fetchSetupIntentRequestKey: r, fetchSetupIntentPromise: o }),
                         o.catch(() => {
@@ -440,7 +439,7 @@ function es(e) {
             },
             ...((c = () => i().order),
             {
-                ...w,
+                ...G,
                 handleOrderUpdate: (t) => {
                     let { orderId: n, revision: i } = t,
                         r = c();
@@ -452,11 +451,11 @@ function es(e) {
                 },
             }),
             ...{
-                ...W,
+                ...Y,
                 handlePaymentFailure: (t) => {
                     let { error: n } = t,
                         { code: r, paymentId: a } = n;
-                    if (r !== k.tG.CONFIRMATION_REQUIRED && r !== k.tG.AUTHENTICATION_REQUIRED) {
+                    if (r !== F.tG.CONFIRMATION_REQUIRED && r !== F.tG.AUTHENTICATION_REQUIRED) {
                         i().isAwaitingPaymentAuthentication && e({ isAwaitingPaymentAuthentication: !1 });
                         return;
                     }
@@ -466,24 +465,24 @@ function es(e) {
                             awaitingPaymentId: a ?? null,
                             paymentAuthWasCancelled: !1,
                         }),
-                        r === k.tG.AUTHENTICATION_REQUIRED && j(a));
+                        r === F.tG.AUTHENTICATION_REQUIRED && W(a));
                 },
                 handlePaymentUpdate: (t) => {
                     let { payment: n } = t;
-                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && H.includes(n.status)) {
-                        if (n.status === b.__0.FAILED) {
+                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && j.includes(n.status)) {
+                        if (n.status === L.__0.FAILED) {
                             let t = n.metadata?.billing_error_code,
-                                i = t === k.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
+                                i = t === F.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
                             e({
                                 isAwaitingPaymentAuthentication: !1,
                                 awaitingPaymentId: null,
-                                paymentAuthError: new k.Ay(V.intl.string(V.t.khEaRI), i),
+                                paymentAuthError: new F.Ay(H.intl.string(H.t.khEaRI), i),
                             });
                             return;
                         }
                         (e({ isAwaitingPaymentAuthentication: !1, awaitingPaymentId: null, paymentAuthError: null }),
-                            (0, G.ET)(),
-                            (0, x.T3)());
+                            (0, x.ET)(),
+                            (0, k.T3)());
                     }
                 },
                 handlePaymentAuthenticationError: (t) => {
@@ -498,40 +497,26 @@ function es(e) {
                         paymentAuthWasCancelled: !0,
                     });
                 },
-                resetPaymentAuthentication: () => e({ ...W }),
+                resetPaymentAuthentication: () => e({ ...Y }),
             },
-            ...{
-                expressCheckoutSubmitting: !1,
-                setExpressCheckoutSubmitting: (t) => e({ expressCheckoutSubmitting: t }),
-                getShouldUseStripeExpressCheckout: () => {
-                    let e = i().getSharedTenantParams();
-                    return (
-                        !!((0, et.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, ee.m6)()) &&
-                        null != e &&
-                        !!e.shouldUseStripeExpressCheckout
-                    );
-                },
-            },
+            ...(0, et.e)(e, i),
             ...((_ = []),
             {
                 getPaymentSourceNotices: () => {
                     let e = i().get("checkoutContext")?.payment_notices;
-                    return null == e ? _ : e.filter((e) => e.subject_type === Y.SV.PAYMENT_SOURCE);
+                    return null == e ? _ : e.filter((e) => e.subject_type === K.SV.PAYMENT_SOURCE);
                 },
-                getDropdownPaymentSources: () =>
-                    i()
-                        .get("checkoutPaymentSources")
-                        .filter((e) => e.type !== b.hes.TDS_WALLET),
+                getDropdownPaymentSources: () => i().get("checkoutPaymentSources").filter(b),
                 getGiftCardWallet: () =>
                     i()
                         .get("checkoutPaymentSources")
-                        .find((e) => e.source instanceof K.LQ) ?? null,
-                getWalletCoverageSubtotal: () => z(i()).subtotal,
-                getWalletCoverageTotal: () => z(i()).total,
+                        .find((e) => e.source instanceof $.LQ) ?? null,
+                getWalletCoverageSubtotal: () => X(i()).subtotal,
+                getWalletCoverageTotal: () => X(i()).total,
                 getIsWalletCoverageLoading: () => {
                     let e = i();
                     return (
-                        0 === $(e.checkoutInvoicePreview) &&
+                        0 === z(e.checkoutInvoicePreview) &&
                         (function (e) {
                             let {
                                 fetchRenewalInvoicePreviewRequest: t,
@@ -545,7 +530,7 @@ function es(e) {
                 getWalletLegBalance: () => {
                     let e = i().checkoutInvoicePreview?.paymentLegs;
                     if (null == e) return null;
-                    let t = e.find((e) => e.payment_gateway === b.kM_.TDS && null != e.available_balance);
+                    let t = e.find((e) => e.payment_gateway === L.kM_.TDS && null != e.available_balance);
                     return t?.available_balance ?? null;
                 },
                 getIsSplitPaymentMode: (e) => {
@@ -594,7 +579,7 @@ function es(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, Z.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled: i && (0, Q.dW)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;
@@ -602,7 +587,7 @@ function es(e) {
                 }
                 return {
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(Q.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {
@@ -612,23 +597,25 @@ function es(e) {
                                 selectedSkuId: a,
                                 startedPaymentFlowWithPaymentSources: s,
                                 getShouldDisallowPlanSelection: l,
-                                getShouldUseStripeExpressCheckout: o,
+                                getIsExpressCheckoutEnabled: o,
                             } = e();
                         return (
-                            !!(l() || o()) ||
+                            !!l() ||
                             (function (e) {
                                 let {
                                     isTrial: t,
                                     isGift: n,
                                     selectedSkuId: i,
                                     startedPaymentFlowWithPaymentSources: r,
+                                    canPayWithoutSavedPaymentSource: a = !1,
                                 } = e;
-                                return !t && !n && null != i && L.oz.includes(i) && !!r;
+                                return !t && !n && null != i && y.oz.includes(i) && (!!r || a);
                             })({
                                 isTrial: n,
                                 isGift: r,
                                 selectedSkuId: i ?? a,
                                 startedPaymentFlowWithPaymentSources: s,
+                                canPayWithoutSavedPaymentSource: o(),
                             })
                         );
                     },
@@ -637,7 +624,7 @@ function es(e) {
                             { referralTrialOfferId: i, selectedSkuId: r, get: a } = e(),
                             s = a("isPremiumPurchase"),
                             l = n ?? i ?? null,
-                            o = null != l && l in L.kb ? L.kb[l].skus : [];
+                            o = null != l && l in y.kb ? y.kb[l].skus : [];
                         return null != l && (!s || o.includes(r)) ? l : null;
                     },
                     getEffectivePlanGroup: (n) => {
@@ -645,8 +632,8 @@ function es(e) {
                             { selectedPlanId: r } = e();
                         if (null != i && (null == r || i.includes(r))) return i;
                         if (null != r) {
-                            if ((0, R.xq)(r)) return L.LE;
-                            if ((0, R.z4)(r)) return L.DA;
+                            if ((0, R.xq)(r)) return y.LE;
+                            if ((0, R.z4)(r)) return y.DA;
                         }
                         return t;
                     },
@@ -654,7 +641,7 @@ function es(e) {
                         let t = i(e().selectedSkuId);
                         return null == t
                             ? null
-                            : q()(t, n.premiumPlanOptions)
+                            : Z()(t, n.premiumPlanOptions)
                               ? n.premiumPlanOptions
                               : ((n.premiumPlanOptions = t), t);
                     },
@@ -667,7 +654,7 @@ function es(e) {
                     },
                 };
             })(i),
-            ...(0, J.d)(e, i),
+            ...(0, ee.d)(e, i),
             get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: a,
             order: l,
@@ -720,7 +707,7 @@ function es(e) {
             quantity: en,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: v(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: M(t, i) }),
             checkoutInvoicePreview: null == l || (0, r.L)(l) ? null : s.A.createFromOrder(l),
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -732,7 +719,7 @@ function es(e) {
             invoicePreviewRefetchKey: 0,
             refetchInvoicePreviews: () => e((e) => ({ invoicePreviewRefetchKey: e.invoicePreviewRefetchKey + 1 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: v(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: M(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

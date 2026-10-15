@@ -2,12 +2,24 @@
     background-color: var(--interactive-text-default) !important
 }
 
-.hideVisibility__7d51c {
-    visibility: hidden
+.containerDimensions__7d51c {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 48px
+}
+
+.displayNone__7d51c {
+    display: none
 }
 
 .stripeExpressCheckoutContainer__7d51c {
     width: 100%
 }
 
-/*# sourceMappingURL=263406.b3fd11550c679c73.css.map*/
+.paymentSourceSelectorVariant__7d51c {
+    margin-bottom: var(--space-4)
+}
+
+/*# sourceMappingURL=263406.6f9795c0b36b76d1.css.map*/

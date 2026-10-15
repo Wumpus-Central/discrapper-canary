@@ -14,7 +14,7 @@ var i = n(477900),
     S = n(655857),
     f = n(883645),
     A = n(166532),
-    T = n(504560),
+    T = n(123816),
     m = n(442467),
     I = n(558620),
     h = n(427675),
@@ -187,14 +187,14 @@ function ee(e) {
         eZ = (0, h.S3)(),
         { isGift: eB, giftRecipient: eQ, customGiftMessage: eX, emojiConfetti: e$, soundEffect: e0 } = (0, Y.Pv)(),
         e1 = (0, f.Z8)(),
-        e5 = (0, f.s2)(),
-        e2 = l.useMemo(() => {
+        e2 = (0, f.s2)(),
+        e5 = l.useMemo(() => {
             if (null != e1) return e1.options;
         }, [e1]),
-        e6 = (0, f.qv)(),
-        e8 = "sm";
-    ef ? (e8 = "xl") : (eA || e5 === A.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
-    let e4 = null != e2 ? e2.modalSizeGetter : void 0,
+        e8 = (0, f.qv)(),
+        e6 = "sm";
+    ef ? (e6 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
+    let e4 = null != e5 ? e5.modalSizeGetter : void 0,
         e9 = (0, b.O)(),
         e3 = null != X && !eB && (0, w.U9)(e9, X),
         [e7, te] = l.useState({
@@ -284,15 +284,15 @@ function ee(e) {
             eB && null != eQ && null != e && (0, N.Yd)(eQ.id, e);
         }, [v, eB, eQ]),
         tr = l.useMemo(() => () => ee?.(eb === j.h.COMPLETED, eC), [ee, eb, eC]),
-        to = (0, a.A)(() => Date.now(), [e5]),
+        to = (0, a.A)(() => Date.now(), [e2]),
         tc = l.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: l, emitPaymentFlowLoadedEvent: a } = t,
                     s = Date.now();
                 if (e === A.pn.CONFIRM && (ts(), z?.(l), tu(), eh)) return void tr();
-                (e6(e), eE?.(e), ex(null), e === A.pn.ADD_PAYMENT_STEPS && ((0, u.ET)(), (0, r.T3)()));
-                let o = null != n ? n : e5;
+                (e8(e), eE?.(e), ex(null), e === A.pn.ADD_PAYMENT_STEPS && ((0, u.ET)(), (0, r.T3)()));
+                let o = null != n ? n : e2;
                 null === o || a
                     ? P.default.track(D.HAw.PAYMENT_FLOW_LOADED, {
                           ...e7,
@@ -311,10 +311,10 @@ function ee(e) {
                           gift_card_currency: ti,
                       });
             },
-            [e6, eE, ex, e5, ev, e7, to, ew.startTime, ts, z, tu, eh, tr, eM, tn, ti],
+            [e8, eE, ex, e2, ev, e7, to, ew.startTime, ts, z, tu, eh, tr, eM, tn, ti],
         );
     return (
-        (0, R.b)(e5, eJ, tc, eO, !1, void 0, ek),
+        (0, R.b)(e2, eJ, tc, eO, !1, void 0, ek),
         !(function (e) {
             let t = (0, f.s2)(),
                 { purchaseTokenAuthState: n } = (0, T.t4)((e) => ({
@@ -334,12 +334,12 @@ function ee(e) {
             isShaking: eS && eb === j.h.PURCHASING,
             intensity: 2,
             children: (0, i.jsx)($, {
-                step: e5,
+                step: e2,
                 transitionState: q,
                 isGift: eB,
                 giftRecipient: eQ,
                 returnRef: eI,
-                manaModalSize: e8,
+                manaModalSize: e6,
                 modalSizeOverride: eT,
                 modalSizeGetter: e4,
                 handleClose: tr,
