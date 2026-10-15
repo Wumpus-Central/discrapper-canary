@@ -1,8 +1,8 @@
-n.d(t, { d: () => o, g: () => c });
+n.d(t, { d: () => i, g: () => c });
 var r = n(636537),
-    i = n(361504),
+    o = n(361504),
     a = n(652215);
-function o(e) {
+function i(e) {
     return l(a.Rsh.CONJURE_PROJECT_WS_TICKET(e));
 }
 function c(e) {
@@ -10,5 +10,5 @@ function c(e) {
 }
 async function l(e) {
     let { body: t } = await r.Bo.post({ url: e, rejectWithError: !0 });
-    return { ticket: t.ticket, baseUrl: (0, i.d)() ?? t.url };
+    return { ticket: t.ticket, baseUrl: (0, o.d)() ?? t.url };
 }

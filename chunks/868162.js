@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, x: () => f });
+n.d(t, { A: () => b, x: () => f });
 var i = n(435558),
     l = n.n(i),
     r = n(17928),
@@ -11,13 +11,13 @@ var i = n(435558),
     A = n(792205),
     E = n(731854);
 let h = { ignoredDevices: {} },
-    _ = h,
-    C = !1,
+    C = h,
+    _ = !1,
     g = {},
-    I = {},
     T = {},
-    N = { id: null, justChanged: !1 },
+    I = {},
     p = { id: null, justChanged: !1 },
+    N = { id: null, justChanged: !1 },
     S = /\((.+)\)\s*$/;
 function f(e) {
     if ((0, u.getPlatform)() === u.PlatformTypes.WINDOWS) {
@@ -34,90 +34,90 @@ function O(e, t, n) {
           : e;
 }
 function L() {
-    let e = !l().isEmpty(T);
-    return (e && (T = {}), e);
+    let e = !l().isEmpty(I);
+    return (e && (I = {}), e);
 }
 class m extends r.Ay.DeviceSettingsStore {
     static displayName = "ConnectedDeviceStore";
     static persistKey = "ConnectedDeviceStore";
     static migrations = [(e) => (null == e.ignoredDevices ? { ...e, ignoredDevices: {} } : e)];
     initialize(e) {
-        (this.waitFor(d.Ay, o.A, c.A), (_ = e ?? h));
+        (this.waitFor(d.Ay, o.A, c.A), (C = e ?? h));
     }
     getUserAgnosticState() {
-        return _;
-    }
-    get initialized() {
         return C;
     }
+    get initialized() {
+        return _;
+    }
     get lastDeviceConnected() {
-        return T;
+        return I;
     }
     get inputDevices() {
         return g;
     }
     get lastInputSystemDevice() {
-        return N;
-    }
-    get outputDevices() {
-        return I;
-    }
-    get lastOutputSystemDevice() {
         return p;
     }
+    get outputDevices() {
+        return T;
+    }
+    get lastOutputSystemDevice() {
+        return N;
+    }
 }
-let R = new m(s.h, {
+let b = new m(s.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
-        ((N.justChanged = !1),
+        ((p.justChanged = !1),
             t.forEach((e) => {
                 if (e.id === E.dx) {
                     let t = e.originalId ?? e.originalName;
-                    (t !== N.id && (N.justChanged = !0), (N.id = t));
+                    (t !== p.id && (p.justChanged = !0), (p.id = t));
                     return;
                 }
                 i[f(e)] = e.id;
             }));
         let r = {};
         if (
-            ((p.justChanged = !1),
+            ((N.justChanged = !1),
             n.forEach((e) => {
                 if (e.id === E.dx) {
                     let t = e.originalId ?? e.originalName;
-                    (t !== p.id && (p.justChanged = !0), (p.id = t));
+                    (t !== N.id && (N.justChanged = !0), (N.id = t));
                     return;
                 }
                 r[f(e)] = e.id;
             }),
-            !C)
+            !_)
         ) {
-            ((g = i), (I = r), (C = !0));
+            ((g = i), (T = r), (_ = !0));
             return;
         }
         let s = Object.keys(g),
             a = Object.keys(i),
-            o = Object.keys(I),
+            o = Object.keys(T),
             d = Object.keys(r),
             u = l().difference(s, a),
             h = l().difference(o, d),
-            _ = l().difference(a, s),
+            C = l().difference(a, s),
             S = l().difference(d, o);
         return (
-            (u.length > 0 || h.length > 0) && (T = {}),
+            (u.length > 0 || h.length > 0) && (I = {}),
             c.A.isConnected() &&
-                (_.forEach((e) => {
-                    T[e] = O(T[e], e, A.E.INPUT);
+                (C.forEach((e) => {
+                    I[e] = O(I[e], e, A.E.INPUT);
                 }),
                 S.forEach((e) => {
-                    T[e] = O(T[e], e, A.E.OUTPUT);
+                    I[e] = O(I[e], e, A.E.OUTPUT);
                 })),
-            !(l().isEqual(s, a) && l().isEqual(o, d)) && ((g = i), (I = r), !0)
+            !(l().isEqual(s, a) && l().isEqual(o, d)) && ((g = i), (T = r), !0)
         );
     },
     RTC_CONNECTION_STATE: function () {
-        let e = c.A.isDisconnected() && !l().isEmpty(T);
-        return (e && (T = {}), e);
+        let e = c.A.isDisconnected() && !l().isEmpty(I);
+        return (e && (I = {}), e);
     },
     AUDIO_SET_INPUT_DEVICE: L,
     AUDIO_SET_OUTPUT_DEVICE: L,
@@ -128,20 +128,20 @@ let R = new m(s.h, {
             null != e && a.default.setInputDevice(e, { location: i });
         }
         if (n === A.f.OUTPUT || n === A.f.INPUT_AND_OUTPUT) {
-            let e = I[t];
+            let e = T[t];
             null != e && a.default.setOutputDevice(e, { location: i });
         }
-        T = {};
+        I = {};
     },
     CONNECTED_DEVICE_DONT_SWITCH: function () {
-        T = {};
+        I = {};
     },
     CONNECTED_DEVICE_IGNORE: function (e) {
         let { displayName: t } = e;
-        ((_.ignoredDevices[t] = !0), (T = {}));
+        ((C.ignoredDevices[t] = !0), (I = {}));
     },
     CONNECTED_DEVICE_NEVER_SHOW_MODAL: function (e) {
         let { neverShowModal: t } = e;
-        (t && (T = {}), (_.neverShowModal = t));
+        (t && (I = {}), (C.neverShowModal = t));
     },
 });

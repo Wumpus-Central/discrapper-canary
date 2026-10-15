@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { useMacaronPerkCard: () => E, useMacaronBentoBox: () => h }));
+(n.r(t), n.d(t, { useMacaronPerkCard: () => A, useMacaronBentoBox: () => C }));
 var i = n(477900),
     a = n(582128),
     r = n(793574),
@@ -14,27 +14,27 @@ var i = n(477900),
     b = n(685477),
     p = n(116314),
     P = n(429605),
-    _ = n(660183),
-    T = n(505051);
-let C = new Date(2026, 10, 18);
-function E(e) {
+    T = n(660183),
+    _ = n(505051);
+let E = new Date(2026, 10, 18);
+function A(e) {
     let { location: t } = e,
         { enabled: n, phase: o } = m.A.useConfig({ location: t }),
-        { analyticsLocations: T } = (0, l.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
-        E = null === (0, d.N)(),
-        h = null;
+        { analyticsLocations: _ } = (0, l.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
+        A = null === (0, d.N)(),
+        C = null;
     return (
         o === m.H.PHASE_ONE
-            ? (h = _.intl.formatToPlainString(p.default.XuYNQR, { date: C, rewardPercentage: 10 }))
+            ? (C = T.intl.formatToPlainString(p.default.XuYNQR, { date: E, rewardPercentage: 10 }))
             : o === m.H.PHASE_TWO &&
-              (h = _.intl.formatToPlainString(P.default["H6cz/6"], { date: C, rewardPercentage: 10 })),
+              (C = T.intl.formatToPlainString(P.default["H6cz/6"], { date: E, rewardPercentage: 10 })),
         (0, a.useMemo)(
             () =>
                 n
                     ? {
                           id: f.AQ,
-                          title: _.intl.string(P.default["NzvIo/"]),
-                          description: h,
+                          title: T.intl.string(P.default["NzvIo/"]),
+                          description: C,
                           subscriptionRequired: !0,
                           isThirdPartyPerk: !0,
                           backgroundAssetUrl:
@@ -46,67 +46,67 @@ function E(e) {
                               src: "https://cdn.discordapp.com/assets/content/32de478fcda44ae57324cd94a2f1b07b7cc942143c31d240bd1f1558d515df27.svg",
                               alt: "My Best Buy Plus",
                           }),
-                          ctaText: _.intl.string(b.default.vlafDc),
+                          ctaText: T.intl.string(b.default.vlafDc),
                           onCtaClick: () =>
                               (0, u.P)({
                                   partnerIds: [c.P_],
-                                  title: _.intl.string(P.default["0RERAa"]),
-                                  subtitle: _.intl.format(b.default.uytDvV, {
-                                      expirationDate: C,
+                                  title: T.intl.string(P.default["0RERAa"]),
+                                  subtitle: T.intl.format(b.default.uytDvV, {
+                                      expirationDate: E,
                                       termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
                                   }),
-                                  analyticsLocations: T,
+                                  analyticsLocations: _,
                               }),
-                          ctaDisabled: E,
-                          ctaLoading: E,
-                          pillText: _.intl.string(_.t.y2b7CA),
+                          ctaDisabled: A,
+                          ctaLoading: A,
+                          pillText: T.intl.string(T.t.y2b7CA),
                       }
                     : null,
-            [T, n, E, h, o],
+            [_, n, A, C, o],
         )
     );
 }
-function h(e) {
+function C(e) {
     let { location: t } = e,
         { enabled: n, phase: d } = m.A.useConfig({ location: t }),
         { analyticsLocations: f } = (0, l.Ay)(r.A.PREMIUM_MARKETING_BENTO_BOX),
-        E = null;
+        A = null;
     return (
         d === m.H.PHASE_ONE
-            ? (E = _.intl.format(p.default.MJep2r, {
-                  date: C,
+            ? (A = T.intl.format(p.default.MJep2r, {
+                  date: E,
                   rewardPercentage: 10,
                   termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               }))
             : d === m.H.PHASE_TWO &&
-              (E = _.intl.format(P.default["K/UZHJ"], {
-                  date: C,
+              (A = T.intl.format(P.default["K/UZHJ"], {
+                  date: E,
                   rewardPercentage: 10,
                   termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               })),
         (0, a.useMemo)(
             () =>
-                n && null != E
+                n && null != A
                     ? {
                           name: o.N.MACARON,
                           caption: (0, i.jsx)("img", {
                               src: "https://cdn.discordapp.com/assets/content/1f431ddb5bf6a9d72a9b80820551561bfce12d601c7fe17275ec2c0cc1ecd048.svg",
                               alt: "My Best Buy Plus",
                           }),
-                          title: _.intl.string(P.default["NzvIo/"]),
+                          title: T.intl.string(P.default["NzvIo/"]),
                           previewImage:
                               d === m.H.PHASE_ONE
                                   ? "https://cdn.discordapp.com/assets/content/7db5e6857b36d6ea33af3c6a57f9701f26539c29fdb613ff81ec5a51d544f23f.png"
                                   : "https://cdn.discordapp.com/assets/content/d2b00ed1d159f58e3b59d64ffb8386063ec48b58789f366785e534a1b74aea0f.png",
-                          containerClassName: T.macaronGradient,
-                          description: E,
-                          descriptionCta: _.intl.string(b.default.WMK6Pg),
+                          containerClassName: _.macaronGradient,
+                          description: A,
+                          descriptionCta: T.intl.string(b.default.WMK6Pg),
                           onClick: () =>
                               (0, u.P)({
                                   partnerIds: [c.P_],
-                                  title: _.intl.string(P.default["0RERAa"]),
-                                  subtitle: _.intl.format(b.default.uytDvV, {
-                                      expirationDate: C,
+                                  title: T.intl.string(P.default["0RERAa"]),
+                                  subtitle: T.intl.format(b.default.uytDvV, {
+                                      expirationDate: E,
                                       termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
                                   }),
                                   analyticsLocations: f,
@@ -114,7 +114,7 @@ function h(e) {
                               }),
                       }
                     : null,
-            [f, n, E, d],
+            [f, n, A, d],
         )
     );
 }

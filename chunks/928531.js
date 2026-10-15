@@ -1,4 +1,4 @@
-n.d(t, { yx: () => g, yv: () => I });
+n.d(t, { yx: () => g, yv: () => T });
 var i = n(435558),
     l = n.n(i),
     r = n(5180),
@@ -26,17 +26,17 @@ let E = l().throttle(function () {
     (0, u.i)(i, l === i ? null : l, !1);
 }, A.ugG);
 var h = n(114129),
-    _ = n(442325);
-function C(e, t) {
-    return !!e.includes("tab") && !!_.A.isEnabled() && !(_.A.getTabs().length <= 1) && ((0, h.TC)(t), !0);
+    C = n(442325);
+function _(e, t) {
+    return !!e.includes("tab") && !!C.A.isEnabled() && !(C.A.getTabs().length <= 1) && ((0, h.TC)(t), !0);
 }
 let g = {
         binds: ["mod+alt+down", "mod+shift+]", "ctrl+tab"],
         comboKeysBindGlobal: !0,
-        action: (e, t) => (e.preventDefault(), e.stopPropagation(), C(t, 1) || E(), !1),
+        action: (e, t) => (e.preventDefault(), e.stopPropagation(), _(t, 1) || E(), !1),
     },
-    I = {
+    T = {
         binds: ["mod+alt+up", "mod+shift+[", "ctrl+shift+tab"],
         comboKeysBindGlobal: !0,
-        action: (e, t) => (e.preventDefault(), e.stopPropagation(), C(t, -1) || E(-1), !1),
+        action: (e, t) => (e.preventDefault(), e.stopPropagation(), _(t, -1) || E(-1), !1),
     };

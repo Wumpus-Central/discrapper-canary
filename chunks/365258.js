@@ -1,4 +1,4 @@
-n.d(t, { AB: () => S, AI: () => A, Xc: () => I, ae: () => N, g8: () => g, gF: () => f, gS: () => p, vz: () => T });
+n.d(t, { AB: () => S, AI: () => A, Xc: () => T, ae: () => p, g8: () => g, gF: () => f, gS: () => N, vz: () => I });
 var i,
     l = n(873298),
     r = n(885386),
@@ -22,13 +22,13 @@ function h(e) {
             return -1;
     }
 }
-let _ = new Map([
+let C = new Map([
     [l.KP.FRIENDS_AND_ALL_GUILDS, E.ACTIVITY_STATUS_OFF],
     [l.KP.FRIENDS_AND_SMALL_GUILDS, E.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS],
     [l.KP.FRIENDS_ONLY, E.ACTIVITY_STATUS_ON],
 ]);
-function C(e) {
-    return _.get(e) ?? E.ACTIVITY_STATUS_OFF;
+function _(e) {
+    return C.get(e) ?? E.ACTIVITY_STATUS_OFF;
 }
 function g(e, t) {
     if (e === t) return null;
@@ -69,7 +69,7 @@ function g(e, t) {
           }),
           { affectedGuildIds: A, direction: l });
 }
-function I(e) {
+function T(e) {
     switch (e) {
         case E.ACTIVITY_STATUS_OFF:
             return u.intl.string(u.t.FzgQna).toLowerCase();
@@ -81,7 +81,7 @@ function I(e) {
             return "";
     }
 }
-function T(e, t) {
+function I(e, t) {
     return {
         title: u.intl.string(e ? u.t.eYDA7D : u.t["9jYwjo"]),
         subtitle: u.intl.format(e ? u.t["c5/jDc"] : u.t.ajzh8S, { settingName: t }),
@@ -89,7 +89,7 @@ function T(e, t) {
         toastContent: u.intl.string(e ? u.t.AdpgML : u.t["Q7E+QF"]),
     };
 }
-function N(e, t) {
+function p(e, t) {
     return {
         title: u.intl.string(e ? u.t.jRx1Aa : u.t.S0Y0bh),
         subtitle: u.intl.format(e ? u.t.Fs96LO : u.t.GcoYX8, { settingName: t }),
@@ -97,10 +97,10 @@ function N(e, t) {
         toastContent: u.intl.string(e ? u.t.AdpgML : u.t["Q7E+QF"]),
     };
 }
-function p(e, t) {
-    let n = C(t),
+function N(e, t) {
+    let n = _(t),
         i = r._Z.getSetting();
-    if (i === n || h(C(e)) > h(n) != h(i) > h(n)) return null;
+    if (i === n || h(_(e)) > h(n) != h(i) > h(n)) return null;
     let s = g(i, n);
     if (null == s) return null;
     let a = (function (e) {

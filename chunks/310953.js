@@ -25,7 +25,7 @@ function E(e, t, n) {
         a = arguments.length > 4 ? arguments[4] : void 0,
         o = (0, l.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
         A = (0, l.bG)([d.A], () => d.A.version),
-        { currentVoiceChannelId: E, selectedChannelId: _ } = (0, l.cf)([u.Ay], () => ({
+        { currentVoiceChannelId: E, selectedChannelId: C } = (0, l.cf)([u.Ay], () => ({
             currentVoiceChannelId: u.Ay.getVoiceChannelId(),
             selectedChannelId: u.Ay.getChannelId(),
         }));
@@ -33,7 +33,7 @@ function E(e, t, n) {
         () =>
             h(
                 t,
-                { currentVoiceChannelId: E, selectedChannelId: _ },
+                { currentVoiceChannelId: E, selectedChannelId: C },
                 { withVoiceChannels: r, withCurrentVoiceChannel: s },
                 a,
             ).map((e) => e.id),

@@ -1,4 +1,4 @@
-n.d(t, { _: () => I, U: () => T });
+n.d(t, { _: () => T, U: () => I });
 var i = n(477900),
     l = n(582128),
     r = n(858899),
@@ -11,7 +11,7 @@ var i = n(477900),
     A = n(64585),
     E = n(906688),
     h = n(857015);
-function _(e) {
+function C(e) {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
         width: "48",
@@ -67,10 +67,10 @@ function _(e) {
         ],
     });
 }
-function C(e) {
+function _(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: r, description: s, rarity: o, hideDescriptionUntilUnlock: C, onAction: g } = t,
-        { color: I } = (0, a.ag)(o);
+        { name: r, description: s, rarity: o, hideDescriptionUntilUnlock: _, onAction: g } = t,
+        { color: T } = (0, a.ag)(o);
     l.useEffect(() => {
         let e = setTimeout(() => {
             A.A.playAchievementUnlockSound();
@@ -79,12 +79,12 @@ function C(e) {
             clearTimeout(e);
         };
     }, []);
-    let T = null != g && n,
-        N = T ? c.D : "div";
-    return (0, i.jsxs)(N, {
-        className: d()(h.kL, T && h.b),
+    let I = null != g && n,
+        p = I ? c.D : "div";
+    return (0, i.jsxs)(p, {
+        className: d()(h.kL, I && h.b),
         onClick: function () {
-            T && g();
+            I && g();
         },
         children: [
             (0, i.jsx)("div", {
@@ -98,25 +98,25 @@ function C(e) {
                     (0, i.jsx)(u.E, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: C && !n ? "?????" : s(),
+                        children: _ && !n ? "?????" : s(),
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: h.Db, children: (0, i.jsx)(_, { color: I }) }),
+            (0, i.jsx)("div", { className: h.Db, children: (0, i.jsx)(C, { color: T }) }),
         ],
     });
 }
 var g = n(660183);
-function I(e) {
+function T(e) {
     s.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
 }
-function T(e, t) {
+function I(e, t) {
     let n = (0, a.vM)(e);
     null != n &&
         (0, r.P0)({
             text: g.intl.string(g.t.MPpEUA),
             position: "bottom",
             duration: 6e3,
-            __dangerouslyRenderContent: () => (0, i.jsx)(C, { achievement: n, unlocked: t }),
+            __dangerouslyRenderContent: () => (0, i.jsx)(_, { achievement: n, unlocked: t }),
         });
 }

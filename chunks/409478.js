@@ -11,8 +11,8 @@ var a = i(477900),
     p = i(139730),
     f = i(58216),
     h = i(287809),
-    g = i(238490),
-    w = i(844474);
+    w = i(238490),
+    g = i(844474);
 function m(e) {
     let { applicationId: t } = e,
         i = (0, l.bG)([h.default], () => h.default.getCurrentUser());
@@ -24,22 +24,22 @@ function b(e) {
         m = r.useMemo(() => new d.R({ applicationId: t }), [t]),
         b = (0, o.A)(i.id, t),
         v = b.surfaceConfigs,
-        A = (0, g.yZ)({
+        A = (0, w.yZ)({
             widgetTop: null != v[n.m.WIDGET_TOP],
             widgetBottom: null != v[n.m.WIDGET_BOTTOM],
             miniProfile: null != v[n.m.MINI_PROFILE],
         });
     return A.hasAny
         ? (0, a.jsx)("div", {
-              className: w.$C,
+              className: g.$C,
               children: (0, a.jsxs)("div", {
-                  className: w.PV,
+                  className: g.PV,
                   children: [
                       A.hasMainCard
                           ? (0, a.jsx)("div", {
-                                className: w.a9,
+                                className: g.a9,
                                 children: (0, a.jsx)(c.A.Overlay, {
-                                    className: w.Qb,
+                                    className: g.Qb,
                                     children: (0, a.jsx)(f.A, {
                                         user: i,
                                         widget: m,
@@ -53,7 +53,7 @@ function b(e) {
                           : null,
                       A.hasPopoutCard && null != h
                           ? (0, a.jsx)("div", {
-                                className: w.ql,
+                                className: g.ql,
                                 children: (0, a.jsx)(p.A, { application: h, rendererProps: b, renderText: u.hO }),
                             })
                           : null,

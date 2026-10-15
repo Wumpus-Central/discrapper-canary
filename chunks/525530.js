@@ -1,6 +1,6 @@
 (n.d(t, { CM: () => a, Io: () => l, ow: () => i }), n(323874), n(14289), n(35956));
-var s = n(73153),
-    r = n(382541),
+var r = n(73153),
+    s = n(382541),
     o = n(975189);
 let i = {
     request_upstream_ticket(e, t) {
@@ -9,17 +9,17 @@ let i = {
     },
     remix_state(e, t) {
         let { projectId: n } = t;
-        s.h.dispatch({ type: "CONJURE_REMIX_STATE_SET", projectId: n, pending: e.pending, failed: e.failed });
+        r.h.dispatch({ type: "CONJURE_REMIX_STATE_SET", projectId: n, pending: e.pending, failed: e.failed });
     },
 };
 async function l(e, t) {
-    let [n, s] = await Promise.all([(0, r.g)(e), (0, r.d)(t)]),
+    let [n, r] = await Promise.all([(0, s.g)(e), (0, s.d)(t)]),
         o = new URLSearchParams({ ticket: n.ticket });
     for (let e = 1; ; e++) {
         let t = await fetch(`${n.baseUrl}/agent/fork?${o}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ dest_ticket: s.ticket }),
+            body: JSON.stringify({ dest_ticket: r.ticket }),
         }).then(
             (e) => e.status,
             () => null,
@@ -36,10 +36,10 @@ function a(e) {
 }
 async function c(e, t, n) {
     try {
-        let { ticket: s } = await (0, r.g)(n);
-        e.sendUpstreamTicketAck(t, s);
-    } catch (s) {
-        let n = s?.status;
+        let { ticket: r } = await (0, s.g)(n);
+        e.sendUpstreamTicketAck(t, r);
+    } catch (r) {
+        let n = r?.status;
         e.sendUpstreamTicketAck(t, void 0, 403 === n ? "forbidden" : "failed");
     }
 }

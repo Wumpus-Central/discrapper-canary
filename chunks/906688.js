@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => C });
 var i = n(477900);
 n(582128);
 var l = n(661531),
@@ -20,15 +20,15 @@ let E = {
         locked: l.A.unsafe_rawColors.PRIMARY_400.css,
         unlocked: l.A.unsafe_rawColors.GREEN_330.css,
     };
-function _(e) {
+function C(e) {
     let { achievementId: t, unlocked: n, size: l = s._3.SIZE_40 } = e,
-        _ = (0, d.Ay)(),
-        C = (0, u.vM)(t);
-    if (null == C) return null;
+        C = (0, d.Ay)(),
+        _ = (0, u.vM)(t);
+    if (null == _) return null;
     let g = (0, s.Kj)(l),
-        { name: I, rarity: T } = C,
-        { color: N } = (0, u.ag)(T),
-        p = (0, r.M)(_) ? E : h,
+        { name: T, rarity: I } = _,
+        { color: p } = (0, u.ag)(I),
+        N = (0, r.M)(C) ? E : h,
         S = (g.size - g.offset - 2 * g.stroke) * 0.8,
         f = g.size - g.stroke,
         O = { width: 0.4 * S, height: 0.4 * S },
@@ -36,22 +36,22 @@ function _(e) {
     return (0, i.jsxs)("div", {
         className: A.kL,
         style: { width: f, height: f, padding: g.stroke },
-        "aria-label": `${I() ?? ""}`,
+        "aria-label": `${T() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
                 className: A.r5,
-                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? N : p.trophy, width: S, height: S }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? p : N.trophy, width: S, height: S }),
             }),
             !n &&
                 (0, i.jsx)("div", {
                     className: A.dq,
                     style: L,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: p.locked, ...O }),
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...O }),
                 }),
             n &&
-                T === u.md.LEGENDARY &&
+                I === u.md.LEGENDARY &&
                 (0, i.jsx)("div", { className: A.dq, style: L, children: (0, i.jsx)(c.A, { className: A.ox, ...O }) }),
         ],
     });
 }
-_.Sizes = s._3;
+C.Sizes = s._3;
