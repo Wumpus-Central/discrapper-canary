@@ -21,8 +21,8 @@ var l = t(477900),
     I = t(783327),
     _ = t(705822),
     g = t(202541),
-    x = t(649975),
-    v = t(105292),
+    v = t(649975),
+    x = t(105292),
     L = t(969933);
 let R = new A.A("StripeExpressCheckout.tsx"),
     f = { [g.WT.DAY]: "day", [g.WT.MONTH]: "month", [g.WT.YEAR]: "year" };
@@ -89,7 +89,7 @@ function S(e) {
                     ((D.current = H.id),
                         "vault_only" === a || j.current !== Z.total
                             ? ("purchase_if_possible" === a &&
-                                  (0, c.P0)({ text: v.intl.string(x.default.N2e4Tl), variant: "success" }),
+                                  (0, c.P0)({ text: x.intl.string(v.default.I6TESb), variant: "success" }),
                               W(!1))
                             : F(H));
             }
@@ -99,9 +99,9 @@ function S(e) {
                 let { stripe: t, elements: l, currentInvoiceTotal: n } = a;
                 function r(a) {
                     let t = (function (e) {
-                        if (null == e) return v.intl.string(x.default["6zCzw1"]);
+                        if (null == e) return x.intl.string(v.default["6zCzw1"]);
                         let a = e.message;
-                        return null != a && "" !== a ? a : v.intl.string(x.default["6zCzw1"]);
+                        return null != a && "" !== a ? a : x.intl.string(v.default["6zCzw1"]);
                     })(a);
                     (K(),
                         Y(a instanceof o.Ey ? a : new o.Ey(t)),
@@ -158,7 +158,7 @@ function S(e) {
                 if ("vault_only" === e) return { lineItems: [], applePay: void 0 };
                 let { subtotal: l, tax: n, total: i, taxInclusive: h } = a,
                     c = h ? i - n : l,
-                    u = n > 0 ? [{ name: v.intl.string(v.t.jiRvC7), amount: n }] : [];
+                    u = n > 0 ? [{ name: x.intl.string(x.t.jiRvC7), amount: n }] : [];
                 function o(e) {
                     return i > 0 ? [{ name: e, amount: c }, ...u] : [];
                 }
@@ -204,7 +204,7 @@ function S(e) {
     let $ = n.useMemo(() => {
         if (null == Z || null == X) return {};
         let { lineItems: e, applePay: a } = X;
-        return { billingAddressRequired: !0, lineItems: e, applePay: a };
+        return { billingAddressRequired: !0, layout: { overflow: "never" }, lineItems: e, applePay: a };
     }, [Z, X]);
     if (null == S || null == g || null == Z || !B) return null;
     let q = s || b;

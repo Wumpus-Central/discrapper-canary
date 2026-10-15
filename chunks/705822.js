@@ -54,9 +54,12 @@ function o(e, t) {
         },
         getExpressCheckoutConfig: (e) => {
             let { unifiedCheckoutFlow: n, isGift: i } = t();
-            return null == n || !s.has(n) || i
-                ? null
-                : r.I.getConfig({ location: e ?? "StripeExpressCheckoutStoreSlice" }, { autoTrackExposure: null != e });
+            if (null == n || !s.has(n) || i) return null;
+            let l = r.I.getConfig(
+                { location: e ?? "StripeExpressCheckoutStoreSlice" },
+                { autoTrackExposure: null != e },
+            );
+            return "review_footer" === l.configurationType && n === a.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT ? null : l;
         },
         getIsExpressCheckoutEnabled: (e) => {
             let n = t().getExpressCheckoutConfig(e);
