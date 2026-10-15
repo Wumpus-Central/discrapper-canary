@@ -208,6 +208,9 @@ class E extends _ {
             !0 === e() && (s = () => !1);
         };
     }
+    getInitialPage() {
+        return this.initialPage;
+    }
     setInitialPage(e) {
         this.initialPage = e;
     }
