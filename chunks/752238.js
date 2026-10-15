@@ -3,7 +3,7 @@ var n = l(625128),
     a = l(435558),
     r = l.n(a),
     u = l(319888);
-n.A.registerLanguage("ansi", u.A);
+n.A.registerLanguage("ansi", u.Ay);
 let g = /(<script\/?\\?>)|(html\\?`)/g,
     i = new Set(["html", "xml", "javascript", "typescript", "handlebars"]),
     s = /^[a-z0-9_+\-.#]+$/,

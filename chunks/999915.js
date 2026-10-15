@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => eN }), n(321073));
+(n.d(t, { Ay: () => eS }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(478676),
@@ -288,19 +288,18 @@ let en = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     ei = /^$|\n *$/,
     er = /^ *>>> ?/,
     ea = /^ *> ?/gm,
-    es = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/,
-    el = RegExp(h.y, "g");
-function eo(e) {
+    es = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+function el(e) {
     let t = (0, Y.W1)(e[1]);
     if (null == t) return { type: "text", content: e[1] };
     let { displayTarget: n, target: i } = t;
     return { type: "link", content: [{ type: "text", content: n }], target: i, title: void 0 };
 }
-function ed(e) {
+function eo(e) {
     let t = u.A.getChannel(e);
     return t?.getGuildId();
 }
-let ec = {
+let ed = {
         newline: s().defaultRules.newline,
         paragraph: s().defaultRules.paragraph,
         escape: {
@@ -335,7 +334,7 @@ let ec = {
             },
         },
         link: Y.Ay,
-        autolink: { ...s().defaultRules.autolink, parse: eo },
+        autolink: { ...s().defaultRules.autolink, parse: el },
         mailto: {
             ...s().defaultRules.mailto,
             match: s().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
@@ -385,7 +384,7 @@ let ec = {
                 }
                 return n;
             },
-            parse: eo,
+            parse: el,
         },
         strong: s().defaultRules.strong,
         em: s().defaultRules.em,
@@ -422,7 +421,7 @@ let ec = {
                         null != n.guildId
                             ? E.A.getGuild(n.guildId)
                             : null != n.channelId
-                              ? E.A.getGuild(ed(n.channelId))
+                              ? E.A.getGuild(eo(n.channelId))
                               : null,
                     s = null != a ? _.A.getRole(a.id, r) : null;
                 if (null == s) return { type: "text", content: `@${b.intl.string(b.t["YV4F/n"])}` };
@@ -582,7 +581,7 @@ let ec = {
             match: (e) => v.P0V.exec(e),
             parse(e, t, n) {
                 let [, i, r] = e,
-                    a = n.guildId ?? ed(n.channelId) ?? void 0,
+                    a = n.guildId ?? eo(n.channelId) ?? void 0,
                     s = (0, Z.Q)(i),
                     l = (0, Z.f)(_.A, i, r, a);
                 function o(e) {
@@ -604,9 +603,9 @@ let ec = {
         list: K.A,
         subtext: $.A,
     },
-    eu = (0, J.A)([ec, q]),
-    e_ = r().omit(eu, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]),
-    eE = r().omit(eu, [
+    ec = (0, J.A)([ed, q]),
+    eu = r().omit(ec, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]),
+    e_ = r().omit(ec, [
         "inlineCode",
         "codeBlock",
         "br",
@@ -623,7 +622,7 @@ let ec = {
         "soundboard",
         "gameMention",
     ]),
-    eA = r().omit(eu, [
+    eE = r().omit(ec, [
         "codeBlock",
         "br",
         "mention",
@@ -634,15 +633,15 @@ let ec = {
         "soundboard",
         "gameMention",
     ]),
-    eh = r().omit(
+    eA = r().omit(
         (0, J.A)([
-            eu,
+            ec,
             {
                 inlineCode: {
                     match(e, t, n) {
-                        let i = eu.codeBlock.match(e, t, n);
-                        if (null != i) return (i[1]?.toLowerCase() === "ansi" && (i[2] = i[2].replaceAll(el, "")), i);
-                        let r = eu.inlineCode.match(e, t, n);
+                        let i = ec.codeBlock.match(e, t, n);
+                        if (null != i) return (i[1]?.toLowerCase() === "ansi" && (i[2] = i[2].replaceAll(h.Q0, "")), i);
+                        let r = ec.inlineCode.match(e, t, n);
                         if (null != r) return r;
                     },
                 },
@@ -650,8 +649,8 @@ let ec = {
         ]),
         ["blockQuote", "codeBlock", "br"],
     ),
-    ef = r().omit(eu, ["codeBlock", "br", "blockQuote"]),
-    eI = r().omit(eu, [
+    eh = r().omit(ec, ["codeBlock", "br", "blockQuote"]),
+    ef = r().omit(ec, [
         "codeBlock",
         "br",
         "attachmentLink",
@@ -662,16 +661,16 @@ let ec = {
         "newline",
         "soundboard",
     ]),
-    ep = r().omit(eu, ["codeBlock", "blockQuote", "br"]),
-    eT = r().omit(eu, ["codeBlock", "br", "inlineCode"]);
-function em(e, t) {
+    eI = r().omit(ec, ["codeBlock", "blockQuote", "br"]),
+    ep = r().omit(ec, ["codeBlock", "br", "inlineCode"]);
+function eT(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
-function eg(e, t, n) {
+function em(e, t, n) {
     let i = t + n;
     return i === e.length || "" === e.charAt(i).trim();
 }
-let eS = (0, J.A)([
+let eg = (0, J.A)([
         {
             highlightWord: {
                 order: -1,
@@ -684,11 +683,11 @@ let eS = (0, J.A)([
                         return null;
                     let n = e.indexOf(t.highlightWord);
                     if (-1 === n) return null;
-                    let i = !em(e, n) || !eg(e, n, t.highlightWord.length);
+                    let i = !eT(e, n) || !em(e, n, t.highlightWord.length);
                     if (i)
                         do
                             ((n = e.indexOf(t.highlightWord, n + 1)),
-                                (i = !em(e, n) || !eg(e, n, t.highlightWord.length)));
+                                (i = !eT(e, n) || !em(e, n, t.highlightWord.length)));
                         while (i && -1 !== n);
                     if (-1 === n) return null;
                     let r = e.substring(0, n),
@@ -704,17 +703,17 @@ let eS = (0, J.A)([
                 },
             },
         },
-        r().omit(eu, ["url"]),
+        r().omit(ec, ["url"]),
     ]),
-    eN = {
-        RULES: eu,
-        CHANNEL_TOPIC_RULES: e_,
-        VOICE_CHANNEL_STATUS_RULES: eE,
-        EMBED_TITLE_RULES: eA,
-        INLINE_REPLY_RULES: eh,
-        GUILD_VERIFICATION_FORM_RULES: ef,
-        GUILD_EVENT_RULES: ep,
-        PROFILE_BIO_RULES: eI,
-        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eS,
-        NATIVE_SEARCH_RESULT_LINK_RULES: eT,
+    eS = {
+        RULES: ec,
+        CHANNEL_TOPIC_RULES: eu,
+        VOICE_CHANNEL_STATUS_RULES: e_,
+        EMBED_TITLE_RULES: eE,
+        INLINE_REPLY_RULES: eA,
+        GUILD_VERIFICATION_FORM_RULES: eh,
+        GUILD_EVENT_RULES: eI,
+        PROFILE_BIO_RULES: ef,
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eg,
+        NATIVE_SEARCH_RESULT_LINK_RULES: ep,
     };
