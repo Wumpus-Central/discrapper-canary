@@ -5959,6 +5959,28 @@
     }
   },
   {
+    "name": "2026-10-server-tag-upsell-on-guild-profile",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "ignoreSubscriptionPlatform": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "ignoreSubscriptionPlatform": false
+      },
+      "2": {
+        "enabled": true,
+        "ignoreSubscriptionPlatform": true
+      }
+    }
+  },
+  {
     "name": "2026-10-server-tag-upsell-on-profile",
     "kind": "user",
     "defaultConfig": {

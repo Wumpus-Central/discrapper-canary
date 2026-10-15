@@ -1,11 +1,13 @@
 n.d(a, { A: () => i });
-var s = n(477900);
+var t = n(477900);
 n(582128);
-var t = n(292036),
+var s = n(292036),
     l = n(922016);
 let r = (0, n(268218).Fe)({
     createPromise: () =>
         Promise.all([
+            n.e("638781"),
+            n.e("770925"),
             n.e("216112"),
             n.e("179301"),
             n.e("918347"),
@@ -20,6 +22,7 @@ let r = (0, n(268218).Fe)({
             n.e("10886"),
             n.e("424199"),
             n.e("645499"),
+            n.e("188941"),
             n.e("264236"),
             n.e("543039"),
             n.e("398125"),
@@ -67,30 +70,42 @@ let r = (0, n(268218).Fe)({
             n.e("203589"),
             n.e("491793"),
             n.e("214285"),
-            n.e("282783"),
+            n.e("432805"),
+            n.e("732194"),
             n.e("649520"),
             n.e("571470"),
             n.e("599141"),
             n.e("70008"),
-        ]).then(n.bind(n, 109026)),
-    webpackId: 109026,
-    renderLoader: () => (0, s.jsx)(t.s, {}),
+        ]).then(n.bind(n, 571705)),
+    webpackId: 571705,
+    renderLoader: () => (0, t.jsx)(s.s, {}),
 });
 function i(e) {
-    let { guildId: a, name: n, position: t = "right", onClose: i, targetElementRef: o, ...d } = e;
-    return (0, s.jsx)(l.Y, {
-        targetElementRef: o,
-        position: t,
+    let {
+        guildId: a,
+        name: n,
+        position: s = "right",
+        onClose: i,
+        onCreateTag: o,
+        returnRef: d,
+        targetElementRef: u,
+        ...c
+    } = e;
+    return (0, t.jsx)(l.Y, {
+        targetElementRef: u,
+        position: s,
         clickTrap: !0,
         renderPopout: (e) =>
-            (0, s.jsx)(r, {
+            (0, t.jsx)(r, {
                 ...e,
                 onClose: () => {
                     (e.closePopout(), i?.());
                 },
+                onCreateTag: o,
+                returnRef: d,
                 guildId: a,
                 name: n,
             }),
-        ...d,
+        ...c,
     });
 }

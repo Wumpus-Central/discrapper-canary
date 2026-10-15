@@ -103,10 +103,11 @@ function I(e) {
             contextGuildId: f,
             trailing: m,
             onClose: g,
+            onCreateTag: p,
         } = e,
-        p = null != s && s.length > 0,
-        _ = (0, u.r)(t),
-        A = t.isProvisional
+        _ = null != s && s.length > 0,
+        A = (0, u.r)(t),
+        N = t.isProvisional
             ? null
             : (0, a.jsx)(c.A, {
                   user: t,
@@ -118,10 +119,10 @@ function I(e) {
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: r()(x.AK, { [x.j6]: p, [x.w2]: null != _ }),
+        className: r()(x.AK, { [x.j6]: _, [x.w2]: null != A }),
         children: [
-            null != A && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(x.qp, x.vk), children: A }) : A,
-            p &&
+            null != N && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(x.qp, x.vk), children: N }) : N,
+            _ &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(v, {}),
@@ -138,6 +139,7 @@ function I(e) {
                 userId: t.id,
                 contextGuildId: f,
                 onClose: g,
+                onCreateTag: p,
                 textVariant: "text-xs/normal",
                 className: x.Bb,
             }),
@@ -161,6 +163,7 @@ function j(e) {
         contextGuildId: m,
         trailing: g,
         onClose: p,
+        onCreateTag: E,
     } = e;
     return (0, a.jsxs)("div", {
         className: l,
@@ -182,6 +185,7 @@ function j(e) {
                 contextGuildId: m,
                 onClickUsername: r,
                 onClose: p,
+                onCreateTag: E,
                 trailing: g,
             }),
         ],

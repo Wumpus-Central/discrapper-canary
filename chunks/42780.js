@@ -71,13 +71,11 @@ function f(e) {
                                       null != n &&
                                           (0, a.openModalLazy)(async () => {
                                               let { default: s } = await Promise.all([
-                                                  t.e("638781"),
                                                   t.e("655327"),
                                                   t.e("67702"),
                                                   t.e("1214"),
                                                   t.e("454048"),
                                                   t.e("863232"),
-                                                  t.e("188941"),
                                                   t.e("300699"),
                                                   t.e("349619"),
                                                   t.e("948804"),
@@ -128,10 +126,11 @@ function C(e) {
             CTAOverride: r,
             onClose: c,
             disableGuildNameClick: o,
+            footer: d,
         } = e,
-        d = null;
+        u = null;
     return (
-        null != r ? (d = r) : a || (d = (0, i.jsx)(x.A, { profile: l, onComplete: c })),
+        null != r ? (u = r) : a || (u = (0, i.jsx)(x.A, { profile: l, onComplete: c })),
         (0, i.jsxs)("div", {
             className: s()(g.kL, n),
             children: [
@@ -139,7 +138,8 @@ function C(e) {
                 (0, i.jsx)(f, { onIconChange: t, profile: l }),
                 (0, i.jsx)(I.A, { profile: l, disableGuildNameClick: o }),
                 (0, i.jsx)(m.P, { profile: l }),
-                null != d && (0, i.jsx)("div", { className: g.UD, children: d }),
+                null != u && (0, i.jsx)("div", { className: g.UD, children: u }),
+                d,
             ],
         })
     );

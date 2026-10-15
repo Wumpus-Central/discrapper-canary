@@ -1,0 +1,14 @@
+.upsell_d96764 {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-top: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-8);
+    justify-content: space-between;
+    padding: var(--space-12) var(--space-16);
+    width: 100%
+}
+
+/*# sourceMappingURL=770925.b2c2ef1a8e9424fc.css.map*/
