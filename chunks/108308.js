@@ -19,6 +19,5 @@ _.exports = {
     aC: "cardComment__71275",
     eB: "cardActions__71275",
     nv: "cardConfirm__71275",
-    y4: "announcer__71275",
     Li: "portalRoot__71275",
 };
