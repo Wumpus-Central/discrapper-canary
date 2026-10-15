@@ -1,21 +1,20 @@
-n.d(t, { t: () => s });
-var i,
-    r = (((i = {}).PORTRAIT = "9:16"), (i.LANDSCAPE = "16:9"), i),
-    a = n(291749);
-function s(e) {
+n.d(t, { t: () => a });
+var i = n(984827),
+    r = n(291749);
+function a(e) {
     var t;
     return {
         id: e.id,
         advertiserName: e.advertiser_name,
         productName: e.product_name,
-        productIcon: (0, a.Zf)(e.product_icon),
-        videoPreview: (0, a.Zf)(e.video_preview),
-        imagePreview: (0, a.Zf)(e.image_preview),
-        videoHls: (0, a.dv)(e.video_hls),
+        productIcon: (0, r.Zf)(e.product_icon),
+        videoPreview: (0, r.Zf)(e.video_preview),
+        imagePreview: (0, r.Zf)(e.image_preview),
+        videoHls: (0, r.dv)(e.video_hls),
         videoRenditions: (function (e) {
             if (null == e) return;
             let t = {};
-            for (let [n, i] of Object.entries(e)) Object.values(r).includes(n) && "" !== i && (t[n] = (0, a.dv)(i));
+            for (let [n, a] of Object.entries(e)) Object.values(i.x).includes(n) && "" !== a && (t[n] = (0, r.dv)(a));
             return Object.keys(t).length > 0 ? t : void 0;
         })(e.video_renditions),
         cta: {

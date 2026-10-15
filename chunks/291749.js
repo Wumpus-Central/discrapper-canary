@@ -1,13 +1,14 @@
 (n.d(t, {
-    Zf: () => C,
+    dv: () => O,
     i2: () => T,
     tW: () => S,
+    Zf: () => C,
     vm: () => R,
     fY: () => I,
-    WV: () => v,
+    WV: () => b,
     Yt: () => y,
     UX: () => D,
-    dv: () => O,
+    lR: () => v,
 }),
     n(134528),
     n(947204));
@@ -237,7 +238,12 @@ function D(e) {
           null != t.height && n.searchParams.set("height", `${L(t.height)}`),
           n.toString());
 }
-function v(e, t) {
+function v(e) {
+    let { assetUrl: t, width: n, height: i } = e,
+        r = (0, o.A)();
+    return D(t, { width: n * r, height: i * r, format: "webp" });
+}
+function b(e, t) {
     if (e.startsWith("blob:")) return e;
     let n = l.A.toURLSafe(e);
     return null == n
