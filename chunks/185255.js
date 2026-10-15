@@ -24658,43 +24658,50 @@ function pM(e) {
             },
             [t.id, s],
         ),
-        h = R.useCallback(() => l((e) => !e), []),
-        E = t.systemChannelId ?? pO,
-        j = (0, pR.g6)(t),
-        f = j || (0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
-        N = j || (0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
-        A =
+        h = R.useCallback(
+            (e) => {
+                (s(et.ogj.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS, !e),
+                    (0, pN.q9)(t.id, pN.PY.MUSIC_SYSTEM_MESSAGES, e));
+            },
+            [t.id, s],
+        ),
+        E = R.useCallback(() => l((e) => !e), []),
+        j = t.systemChannelId ?? pO,
+        f = (0, pR.g6)(t),
+        N = f || (0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+        A = f || (0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+        I =
             (0, pL.Zb)(t.id, "guild_settings") ||
             (0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_VOICE_SESSION_NOTIFICATIONS),
-        I = (0, pc.fX)(t.id, "guild_settings"),
-        S = !n || E === pO;
+        S = (0, pc.fX)(t.id, "guild_settings"),
+        C = !n || j === pO;
     return (0, p.jsxs)(p.Fragment, {
         children: [
             (0, p.jsx)(B.d, {
                 label: en.intl.string(en.t["+f0bXQ"]),
                 checked: !(0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_JOIN_NOTIFICATIONS),
                 onChange: r,
-                disabled: S,
+                disabled: C,
             }),
             (0, p.jsx)(B.d, {
                 label: en.intl.string(en.t["72k7jf"]),
                 checked: !(0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                 onChange: d,
-                disabled: S,
+                disabled: C,
             }),
             (0, p.jsx)(B.d, {
                 label: en.intl.string(en.t["2L8NCN"]),
                 checked: !(0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                 onChange: a,
-                disabled: S,
+                disabled: C,
             }),
             (0, p.jsx)(B.d, {
                 label: en.intl.string(en.t["NvnW+V"]),
                 checked: !(0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                 onChange: o,
-                disabled: S,
+                disabled: C,
             }),
-            f &&
+            N &&
                 (0, p.jsx)(B.d, {
                     label: en.intl.string(en.t["54n19R"]),
                     checked: !(0, x$.Lt)(
@@ -24702,9 +24709,9 @@ function pM(e) {
                         et.ogj.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS,
                     ),
                     onChange: c,
-                    disabled: S,
+                    disabled: C,
                 }),
-            N &&
+            A &&
                 (0, p.jsx)(B.d, {
                     label: en.intl.string(en.t["IhF5d+"]),
                     checked: !(0, x$.Lt)(
@@ -24712,16 +24719,16 @@ function pM(e) {
                         et.ogj.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
                     ),
                     onChange: m,
-                    disabled: S,
+                    disabled: C,
                 }),
-            A &&
+            I &&
                 (0, p.jsx)(B.d, {
                     label: en.intl.string(en.t.IMtHBW),
                     checked: !(0, x$.Lt)(t.systemChannelFlags, et.ogj.SUPPRESS_VOICE_SESSION_NOTIFICATIONS),
                     onChange: u,
-                    disabled: S,
+                    disabled: C,
                 }),
-            I &&
+            S &&
                 (0, p.jsx)(eL.N, {
                     isExpanded: i,
                     collapsibleContent: (0, p.jsxs)(ss.B, {
@@ -24736,7 +24743,7 @@ function pM(e) {
                                     et.ogj.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
                                 ),
                                 onChange: g,
-                                disabled: S,
+                                disabled: C,
                             }),
                             (0, p.jsx)(B.d, {
                                 label: en.intl.string(en.t["9tlK5J"]),
@@ -24745,7 +24752,17 @@ function pM(e) {
                                     et.ogj.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
                                 ),
                                 onChange: x,
-                                disabled: S,
+                                disabled: C,
+                            }),
+                            (0, p.jsx)(B.d, {
+                                label: en.intl.string(pG.default["5xxUI2"]),
+                                description: en.intl.string(pG.default.FMGoDB),
+                                checked: !(0, x$.Lt)(
+                                    t.systemChannelFlags,
+                                    et.ogj.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
+                                ),
+                                onChange: h,
+                                disabled: C,
                             }),
                         ],
                     }),
@@ -24755,7 +24772,7 @@ function pM(e) {
                             className: pD.DC,
                             "aria-expanded": i,
                             onClick: (e) => {
-                                (h(), t(e));
+                                (E(), t(e));
                             },
                             children: [
                                 (0, p.jsxs)(ss.B, {
