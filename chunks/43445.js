@@ -6222,11 +6222,16 @@ function iO(e) {
     });
 }
 var iq = n(377941),
-    iz = n.n(iq);
-function iF(e) {
-    return "launch" === e.kind || 4 === e.type ? "\u21EA /" : 2 === e.type || 3 === e.type ? "" : "/";
+    iz = n.n(iq),
+    iF = n(155718);
+function iU(e) {
+    return e.type === iF.kc.PRIMARY_ENTRY_POINT
+        ? "\u21EA /"
+        : e.type === iF.kc.USER || e.type === iF.kc.MESSAGE
+          ? ""
+          : "/";
 }
-let iU = {
+let iG = {
     [n3.q7.APP_CHANNEL]: C.default.zrk93C,
     [n3.q7.VOICE_CHANNEL]: C.default.r5Ra0p,
     [n3.q7.ACTIVITY]: A.t.IC5Ann,
@@ -6236,10 +6241,10 @@ let iU = {
     [n3.q7.BOT]: C.default.VFWfz1,
     [n3.q7.APPLICATION_COMMANDS]: C.default.w7JaEP,
 };
-function iG(e, t) {
+function iB(e, t) {
     return e.supported_surfaces?.includes(t) === !0;
 }
-let iB = {
+let iK = {
         [n3.q7.APP_CHANNEL]: C.default["3/aHX6"],
         [n3.q7.VOICE_CHANNEL]: C.default["3/aHX6"],
         [n3.q7.ACTIVITY]: C.default["3/aHX6"],
@@ -6249,18 +6254,17 @@ let iB = {
         [n3.q7.BOT]: null,
         [n3.q7.APPLICATION_COMMANDS]: null,
     },
-    iK = [n3.q7.OVERLAY, n3.q7.ACTIVITY, n3.q7.APP_CHANNEL, n3.q7.VOICE_CHANNEL];
-function iV(e) {
-    return iK.find((t) => iG(e, t)) ?? null;
+    iV = [n3.q7.OVERLAY, n3.q7.ACTIVITY, n3.q7.APP_CHANNEL, n3.q7.VOICE_CHANNEL];
+function iH(e) {
+    return iV.find((t) => iB(e, t)) ?? null;
 }
-var iH = n(155718);
 let iW = ["command", "user_command", "message_command", "message"],
-    iX = new Set([iH.kc.CHAT, iH.kc.USER, iH.kc.MESSAGE]);
+    iX = new Set([iF.kc.CHAT, iF.kc.USER, iF.kc.MESSAGE]);
 function iY(e) {
-    return e.type ?? iH.kc.CHAT;
+    return e.type ?? iF.kc.CHAT;
 }
 function iJ(e) {
-    return "launch" !== e.kind && iX.has(iY(e));
+    return iX.has(iY(e));
 }
 function iQ(e) {
     return "user_command" === e.kind || "message_command" === e.kind;
@@ -7121,11 +7125,11 @@ function om(e) {
         u,
         c,
         { projectId: d, proposal: m, version: f, onApprove: h } = e,
-        p = iG(m, n3.q7.AUTOMOD) ? m.automod : null,
+        p = iB(m, n3.q7.AUTOMOD) ? m.automod : null,
         { botExchanges: x } =
-            ((n = iG(m, n3.q7.APPLICATION_COMMANDS)),
+            ((n = iB(m, n3.q7.APPLICATION_COMMANDS)),
             (l =
-                iG(m, n3.q7.BOT) || n
+                iB(m, n3.q7.BOT) || n
                     ? null != m.bot
                         ? m.bot.interaction
                         : n && m.commands.some(iJ)
@@ -7168,9 +7172,9 @@ function om(e) {
                                           let n = e.description?.trim() ?? "",
                                               l = "" !== n ? n : t.reply;
                                           switch (iY(e)) {
-                                              case iH.kc.USER:
+                                              case iF.kc.USER:
                                                   return { kind: "user_command", user: e.name, bot: l };
-                                              case iH.kc.MESSAGE:
+                                              case iF.kc.MESSAGE:
                                                   return { kind: "message_command", user: e.name, bot: l };
                                               default:
                                                   return { kind: "command", user: `/${e.name}`, bot: l };
@@ -7293,7 +7297,7 @@ function om(e) {
                 );
             return i.useMemo(() => (null == a || null == u ? null : { applicationId: a, rendererProps: u }), [a, u]);
         })(d, m),
-        j = iG(m, n3.q7.PROFILE_WIDGET) ? v : null,
+        j = iB(m, n3.q7.PROFILE_WIDGET) ? v : null,
         b = f?.superseded === !0,
         y = m.what_changed?.trim() ?? "",
         k =
@@ -7301,7 +7305,7 @@ function om(e) {
             i.useMemo(
                 () =>
                     t
-                        .filter((e) => "/" === iF(e))
+                        .filter((e) => "/" === iU(e))
                         .map((e) => {
                             let { name: t } = e;
                             return t;
@@ -7322,7 +7326,7 @@ function om(e) {
                 content: (0, a.jsx)(od, {
                     projectId: d,
                     design: m.design_image,
-                    alt: A.intl.string(null == (s = iV(m)) ? C.default["3/aHX6"] : iB[s]),
+                    alt: A.intl.string(null == (s = iH(m)) ? C.default["3/aHX6"] : iK[s]),
                 }),
             }),
         x.length > 0 &&
@@ -7333,15 +7337,15 @@ function om(e) {
         null != j && (w.widget = { label: A.intl.string(C.default.ove4zH), content: (0, a.jsx)(os, { ...j }) }));
     let N = Object.keys(w),
         S =
-            ((u = iG(m, n3.q7.BOT)),
+            ((u = iB(m, n3.q7.BOT)),
             (c = m.commands.filter(iJ).length),
             i1
-                .filter((e) => iG(m, e) && !(u && e === n3.q7.APPLICATION_COMMANDS))
+                .filter((e) => iB(m, e) && !(u && e === n3.q7.APPLICATION_COMMANDS))
                 .map((e) => {
                     let t = e === n3.q7.APP_CHANNEL ? (m.app_channel_names ?? []) : [],
                         n = t.length > 1,
-                        l = e === n3.q7.BOT && c > 0 && iG(m, n3.q7.APPLICATION_COMMANDS),
-                        r = A.intl.string(iU[e]),
+                        l = e === n3.q7.BOT && c > 0 && iB(m, n3.q7.APPLICATION_COMMANDS),
+                        r = A.intl.string(iG[e]),
                         a = A.intl.string(i0[e]);
                     n
                         ? ((r = A.intl.formatToPlainString(C.default["75EkE8"], { count: t.length })),
@@ -7361,13 +7365,13 @@ function om(e) {
                                         (function (e, t) {
                                             switch (t) {
                                                 case "design":
-                                                    return iV(e);
+                                                    return iH(e);
                                                 case "widget":
                                                     return n3.q7.PROFILE_WIDGET;
                                                 case "automod":
                                                     return n3.q7.AUTOMOD;
                                                 case "bot":
-                                                    return iG(e, n3.q7.BOT) ? n3.q7.BOT : n3.q7.APPLICATION_COMMANDS;
+                                                    return iB(e, n3.q7.BOT) ? n3.q7.BOT : n3.q7.APPLICATION_COMMANDS;
                                             }
                                         })(m, t) === e,
                                 ) ?? null,
@@ -7465,9 +7469,9 @@ function om(e) {
                                               tag: "span",
                                               selectable: !0,
                                               children:
-                                                  "/" === iF(e)
+                                                  "/" === iU(e)
                                                       ? (0, a.jsx)(sV, { name: e.name })
-                                                      : `${iF(e)}${e.name}`,
+                                                      : `${iU(e)}${e.name}`,
                                           }),
                                           (0, a.jsx)(Q.E, {
                                               variant: "experimental/body-md/normal",
