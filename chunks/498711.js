@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 639362, Version Hash: 0cf79746c3964545f81699d3206ae12bd8f9ae13`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 639363, Version Hash: 554dfda642dd57b1f28e8d48a0b29890c27c3266`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25834,7 +25834,7 @@ let ya = "isHideDevBanner",
                     className: tE()(yr.Wz, yr.mr),
                     children: [
                         (0, M.jsx)(yi, { className: yr.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "639362" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "639363" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
