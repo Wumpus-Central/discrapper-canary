@@ -61,7 +61,9 @@ function R(e) {
                       ? null
                       : (0, b.parseBioReact)(t, void 0, { guildId: R }),
             [m, t, R],
-        );
+        ),
+        I = r && !d,
+        j = l.useMemo(() => ({ disableAnimations: I, disableInteractions: !1 }), [I]);
     return null == v
         ? null
         : (0, a.jsx)("div", {
@@ -71,10 +73,7 @@ function R(e) {
                   lineClamp: u ? c : void 0,
                   color: void 0 !== f ? f : void 0,
                   className: A.w,
-                  children: (0, a.jsx)(h.Y.Provider, {
-                      value: { disableAnimations: r && !d, disableInteractions: !1 },
-                      children: v,
-                  }),
+                  children: (0, a.jsx)(h.Y.Provider, { value: j, children: v }),
               }),
           });
 }

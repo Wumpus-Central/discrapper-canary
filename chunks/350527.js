@@ -284,8 +284,9 @@ let ev = l.memo(function (e) {
                         children: null == t ? (o ? null : eu.intl.string(eu.t.mE3KJN)) : e,
                     });
     }
+    let x = (0, U.A)(h, u);
     return (0, s.jsxs)(D.Bs.Provider, {
-        value: (0, U.A)(h, u),
+        value: x,
         children: [
             !c && (0, s.jsx)(ei.A, { channel: n, message: t, renderColon: null != g, hasUnreads: r }),
             (0, s.jsx)(f.M, { className: eh.JY, children: g }),

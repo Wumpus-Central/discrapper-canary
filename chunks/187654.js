@@ -243,9 +243,10 @@ function Z(e) {
         let e = F.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && V(e.offsetWidth < e.scrollWidth);
     }, []);
-    let $ = [A, D].filter((e) => null != e).join(", ");
+    let $ = [A, D].filter((e) => null != e).join(", "),
+        W = (0, I.A)(m, R);
     return (0, l.jsx)(y.Bs.Provider, {
-        value: (0, I.A)(m, R),
+        value: W,
         children: (0, l.jsxs)("ul", {
             role: "group",
             className: Q.JT,

@@ -483,26 +483,27 @@ function eO(e) {
     let y = (0, D.bG)([eC.A], () => eC.A.hasFetchedSubscriptions()),
         A = (0, D.bG)([eN.A], () => eN.A.defaultPaymentSourceId),
         P = null != S ? S.paymentSourceId : null,
-        v = (0, eT.p)(null != P ? P : y ? A : null);
-    return (0, r.jsx)(eb.Provider, {
-        value: {
-            disablePremiumUpsell: n,
-            closeGuildPerksModal: l,
-            guildId: a,
-            addPaymentMethodStepState: v,
-            premiumSubscriptionPaymentSourceId: P,
-            analyticsLocation: s,
-            analyticsSourceLocation: o,
-            forceDisableSubmitButton: m,
-            setForceDisableSubmitButton: h,
-            applicationId: u,
-            intent: d,
-            onSubscribeComplete: p,
-            flowStartTime: C,
-            existingAvailableSlotCount: f,
-        },
-        children: i,
-    });
+        v = (0, eT.p)(null != P ? P : y ? A : null),
+        x = c.useMemo(
+            () => ({
+                disablePremiumUpsell: n,
+                closeGuildPerksModal: l,
+                guildId: a,
+                addPaymentMethodStepState: v,
+                premiumSubscriptionPaymentSourceId: P,
+                analyticsLocation: s,
+                analyticsSourceLocation: o,
+                forceDisableSubmitButton: m,
+                setForceDisableSubmitButton: h,
+                applicationId: u,
+                intent: d,
+                onSubscribeComplete: p,
+                flowStartTime: C,
+                existingAvailableSlotCount: f,
+            }),
+            [n, l, a, v, P, s, o, m, u, d, p, C, f],
+        );
+    return (0, r.jsx)(eb.Provider, { value: x, children: i });
 }
 var eM = n(160946),
     eL = n(253390),
@@ -2257,12 +2258,11 @@ function nI() {
     return (eY()(null != e, "GuildProductPurchaseContext not found"), e);
 }
 function ng(e) {
-    let { children: t, skuId: n, ...l } = e,
+    let { children: t, skuId: n, guildId: l } = e,
         i = (0, D.bG)([nS.A], () => nS.A.getGuildProduct(n));
-    return (
-        eY()(null != i, "guildProductListing cannot be null"),
-        (0, r.jsx)(nE.Provider, { value: { guildProductListing: i, ...l }, children: t })
-    );
+    eY()(null != i, "guildProductListing cannot be null");
+    let a = c.useMemo(() => ({ guildProductListing: i, guildId: l }), [i, l]);
+    return (0, r.jsx)(nE.Provider, { value: a, children: t });
 }
 function ny(e) {
     let { handleClose: t } = e,
@@ -5299,33 +5299,31 @@ function rq(e) {
                         Y.current = !1;
                     }));
         }, [V, _]);
-    return (
-        (0, ep.QR)(v),
-        (0, ep.b)(T, v, _, N, !0, K),
-        (0, r.jsx)(rK.Provider, {
-            value: {
-                code: t,
-                giftCode: p,
-                plan: k,
-                promotion: w,
-                trial: U,
-                isDirectFulfillment: f,
-                hasResolvedGiftCode: u,
-                giftCodeResolveError: h,
-                hasFetchedMostRecentPremiumTypeSubscription: a,
-                recentSubscription: i,
-                premiumSubscription: s,
-                addPaymentMethodStepState: y,
-                priceOptions: B,
-                analyticsData: H,
-                handleClose: W,
-                redeemPromotion: V,
-                confirmedUpgrade: I,
-                setConfirmedUpgrade: g,
-            },
-            children: l,
-        })
+    ((0, ep.QR)(v), (0, ep.b)(T, v, _, N, !0, K));
+    let Z = c.useMemo(
+        () => ({
+            code: t,
+            giftCode: p,
+            plan: k,
+            promotion: w,
+            trial: U,
+            isDirectFulfillment: f,
+            hasResolvedGiftCode: u,
+            giftCodeResolveError: h,
+            hasFetchedMostRecentPremiumTypeSubscription: a,
+            recentSubscription: i,
+            premiumSubscription: s,
+            addPaymentMethodStepState: y,
+            priceOptions: B,
+            analyticsData: H,
+            handleClose: W,
+            redeemPromotion: V,
+            confirmedUpgrade: I,
+            setConfirmedUpgrade: g,
+        }),
+        [t, p, k, w, U, f, u, h, a, i, s, y, B, H, W, V, I],
     );
+    return (0, r.jsx)(rK.Provider, { value: Z, children: l });
 }
 var rz = n(830215),
     r$ = n(264779),

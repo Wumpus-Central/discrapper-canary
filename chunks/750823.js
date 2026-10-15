@@ -3336,31 +3336,39 @@ function iT(e) {
 function iy(e) {
     let { product: t, aspectRatio: l, listItemProps: n } = e,
         { skuId: i } = t,
-        a = r.useContext(iv.v3),
-        { trackAction: c } = U(),
-        o = r.useRef(null),
-        d = r.useCallback(
+        { flattenProductVariants: a, prioritizedCurrency: c, standalonePreview: o } = r.useContext(iv.v3),
+        { trackAction: d } = U(),
+        u = r.useRef(null),
+        m = r.useCallback(
             (e) => {
-                (c(T.GameProfileTrackActionActions.DiscordCollectiblesShopItem),
-                    (o.current = e.currentTarget),
+                (d(T.GameProfileTrackActionActions.DiscordCollectiblesShopItem),
+                    (u.current = e.currentTarget),
                     (0, ij.B)({
                         skuId: i,
                         analyticsLocations: [f.A.GAME_PROFILE],
                         analyticsSource: f.A.GAME_PROFILE,
                         shouldCheckoutWithOrbs: (0, iA.A)({ product: t }),
-                        returnRef: o,
+                        returnRef: u,
                     }));
             },
-            [c, i, t],
+            [d, i, t],
         ),
-        { flattenProductVariants: u, ...m } = a;
+        x = r.useMemo(
+            () => ({
+                flattenProductVariants: a ?? !0,
+                prioritizedCurrency: c,
+                standalonePreview: o,
+                productOverride: t,
+            }),
+            [a, c, o, t],
+        );
     return (0, s.jsx)(iv.v3.Provider, {
-        value: { flattenProductVariants: u ?? !0, ...m, productOverride: t },
+        value: x,
         children: (0, s.jsx)(ip.A, {
             skuId: i,
             aspectRatio: l,
             cardClassName: iS.N,
-            onClickCard: d,
+            onClickCard: m,
             hideWishlistButton: !0,
             hidePrice: !0,
             hidePrimaryCTA: !0,

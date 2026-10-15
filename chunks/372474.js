@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { layoutSystemCollection: () => eL, layoutSystemConfig: () => eP }));
+(a.r(t), a.d(t, { layoutSystemCollection: () => eP, layoutSystemConfig: () => eB }));
 var l = a(477900),
     n = a(582128),
     r = a(834730),
@@ -1073,7 +1073,8 @@ var ea = a(356118),
     en = a(758836),
     er = a(105292),
     es = a(855494);
-let eo = {
+let eo = { prioritizedCurrency: en.Hi.ORBS },
+    ei = {
         name: "Remote Layouts",
         id: "remote-layouts",
         component: function (e) {
@@ -1085,7 +1086,7 @@ let eo = {
             tenantId: { label: "Tenant Id", type: "text", defaultValue: el.FYj },
         },
     },
-    ei = {
+    ed = {
         name: "Remote Templates",
         id: "remote-templates",
         component: function (e) {
@@ -1097,20 +1098,20 @@ let eo = {
             tenantId: { label: "Tenant Id", type: "text", defaultValue: el.FYj },
         },
     };
-var ed = a(3830),
-    ec = a(338124),
-    eu = a(993077),
-    ex = a(824388);
-function eh(e) {
+var ec = a(3830),
+    eu = a(338124),
+    ex = a(993077),
+    eh = a(824388);
+function em(e) {
     let { color: t, children: a } = e;
-    return (0, l.jsx)(eu.Z, {
+    return (0, l.jsx)(ex.Z, {
         style: { backgroundColor: t, padding: "16px", minWidth: "100px", minHeight: "100px" },
         children: (0, l.jsx)(r.E, { variant: "text-md/semibold", children: a }),
     });
 }
-var em = a(32236),
-    eb = a(572204);
-let ep = {
+var eb = a(32236),
+    ep = a(572204);
+let eg = {
     title: "Mana",
     stories: [
         {
@@ -1126,36 +1127,36 @@ let ep = {
                         (0, l.jsxs)(S.B, {
                             direction: "vertical",
                             children: [
-                                (0, l.jsx)(ed.A, { ...e }),
+                                (0, l.jsx)(ec.A, { ...e }),
                                 (0, l.jsx)("hr", {}),
-                                (0, l.jsx)(ed.A, { href: e.href, ctaText: "Variant = primary", variant: "primary" }),
-                                (0, l.jsx)(ed.A, {
+                                (0, l.jsx)(ec.A, { href: e.href, ctaText: "Variant = primary", variant: "primary" }),
+                                (0, l.jsx)(ec.A, {
                                     href: e.href,
                                     ctaText: "Variant = secondary",
                                     variant: "secondary",
                                 }),
-                                (0, l.jsx)(ed.A, {
+                                (0, l.jsx)(ec.A, {
                                     href: e.href,
                                     ctaText: "Variant = critical-primary",
                                     variant: "critical-primary",
                                 }),
-                                (0, l.jsx)(ed.A, {
+                                (0, l.jsx)(ec.A, {
                                     href: e.href,
                                     ctaText: "Variant = critical-secondary",
                                     variant: "critical-secondary",
                                 }),
-                                (0, l.jsx)(ed.A, { href: e.href, ctaText: "Variant = active", variant: "active" }),
-                                (0, l.jsx)(ed.A, {
+                                (0, l.jsx)(ec.A, { href: e.href, ctaText: "Variant = active", variant: "active" }),
+                                (0, l.jsx)(ec.A, {
                                     href: e.href,
                                     ctaText: "Variant = overlay-primary",
                                     variant: "overlay-primary",
                                 }),
-                                (0, l.jsx)(ed.A, {
+                                (0, l.jsx)(ec.A, {
                                     href: e.href,
                                     ctaText: "Variant = overlay-secondary",
                                     variant: "overlay-secondary",
                                 }),
-                                (0, l.jsx)(ed.A, {
+                                (0, l.jsx)(ec.A, {
                                     href: e.href,
                                     ctaText: "Variant = expressive",
                                     variant: "expressive",
@@ -1195,17 +1196,17 @@ let ep = {
                             variant: "text-lg/semibold",
                             children: "Heading component for Layout System content.",
                         }),
-                        (0, l.jsx)(ec.A, { ...e }),
+                        (0, l.jsx)(eu.A, { ...e }),
                         (0, l.jsx)("hr", {}),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-sm/normal", variant: "heading-sm/normal" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-sm/medium", variant: "heading-sm/medium" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-sm/semibold", variant: "heading-sm/semibold" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-md/normal", variant: "heading-md/normal" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-md/medium", variant: "heading-md/medium" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-md/semibold", variant: "heading-md/semibold" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-lg/normal", variant: "heading-lg/normal" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-lg/medium", variant: "heading-lg/medium" }),
-                        (0, l.jsx)(ec.A, { content: "Variant = heading-lg/semibold", variant: "heading-lg/semibold" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-sm/normal", variant: "heading-sm/normal" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-sm/medium", variant: "heading-sm/medium" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-sm/semibold", variant: "heading-sm/semibold" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-md/normal", variant: "heading-md/normal" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-md/medium", variant: "heading-md/medium" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-md/semibold", variant: "heading-md/semibold" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-lg/normal", variant: "heading-lg/normal" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-lg/medium", variant: "heading-lg/medium" }),
+                        (0, l.jsx)(eu.A, { content: "Variant = heading-lg/semibold", variant: "heading-lg/semibold" }),
                     ],
                 });
             },
@@ -1241,12 +1242,12 @@ let ep = {
                         }),
                         (0, l.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
-                            children: (0, l.jsxs)(ex.A, {
+                            children: (0, l.jsxs)(eh.A, {
                                 ...e,
                                 children: [
-                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(em, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(em, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(em, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
@@ -1254,26 +1255,26 @@ let ep = {
                         (0, l.jsx)(r.E, { variant: "text-md/semibold", children: "Horizontal Stack" }),
                         (0, l.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
-                            children: (0, l.jsxs)(ex.A, {
+                            children: (0, l.jsxs)(eh.A, {
                                 ...e,
                                 direction: "horizontal",
                                 children: [
-                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(em, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(em, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(em, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
                         (0, l.jsx)(r.E, { variant: "text-md/semibold", children: "Vertical Stack" }),
                         (0, l.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
-                            children: (0, l.jsxs)(ex.A, {
+                            children: (0, l.jsxs)(eh.A, {
                                 ...e,
                                 direction: "vertical",
                                 children: [
-                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(em, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(em, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(em, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
@@ -1325,18 +1326,18 @@ let ep = {
                             variant: "text-lg/semibold",
                             children: "Text component for Layout System content.",
                         }),
-                        (0, l.jsx)(em.A, { ...e }),
+                        (0, l.jsx)(eb.A, { ...e }),
                         (0, l.jsx)("hr", {}),
-                        (0, l.jsx)(em.A, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
-                        (0, l.jsx)(em.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
+                        (0, l.jsx)(eb.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
                     ],
                 });
             },
@@ -1365,7 +1366,7 @@ let ep = {
             name: "Tooltip",
             id: "layout-system-tooltip",
             component: function (e) {
-                return (0, l.jsx)(eb.A, {
+                return (0, l.jsx)(ep.A, {
                     ...e,
                     children: (0, l.jsx)("div", {
                         style: { width: 300, background: "pink", borderRadius: 8, padding: 12 },
@@ -1390,10 +1391,10 @@ let ep = {
         },
     ],
 };
-var eg = a(206845),
-    ej = a(973125),
-    ef = a(857623);
-let ev = {
+var ej = a(206845),
+    ef = a(973125),
+    ev = a(857623);
+let ey = {
         id: "dummy-show-of-skeletons",
         children: [
             {
@@ -1454,7 +1455,7 @@ let ev = {
             },
         ],
     },
-    ey = {
+    ek = {
         title: "Recursive",
         stories: [
             {
@@ -1462,7 +1463,7 @@ let ev = {
                 id: "skulist",
                 component: function (e) {
                     let { skuIds: t, sortPurchased: a, eagerLoad: n, showSkeleton: o } = e,
-                        d = (0, ej.e)();
+                        d = (0, ef.e)();
                     return (0, l.jsxs)("div", {
                         children: [
                             (0, l.jsx)(s.D, {
@@ -1482,7 +1483,7 @@ let ev = {
                             (0, l.jsx)("br", {}),
                             (0, l.jsx)(i.Ay, {
                                 columns: 3,
-                                children: (0, l.jsx)(ef.A, {
+                                children: (0, l.jsx)(ev.A, {
                                     skuIds: t?.split(","),
                                     skuBlock: "ShopProductCard",
                                     sortPurchased: a,
@@ -1497,7 +1498,7 @@ let ev = {
                                 direction: "horizontal",
                                 children: [
                                     (0, l.jsx)(r.E, { variant: "text-sm/bold", children: "Avatar Decoration" }),
-                                    (0, l.jsx)(eg.A, {
+                                    (0, l.jsx)(ej.A, {
                                         text: er.intl.string(er.t.OpuAlK),
                                         delay: 0,
                                         "aria-label": !1,
@@ -1518,7 +1519,7 @@ let ev = {
                                 direction: "horizontal",
                                 children: [
                                     (0, l.jsx)(r.E, { variant: "text-sm/bold", children: "Profile Effect" }),
-                                    (0, l.jsx)(eg.A, {
+                                    (0, l.jsx)(ej.A, {
                                         text: er.intl.string(er.t.OpuAlK),
                                         delay: 0,
                                         "aria-label": !1,
@@ -1539,7 +1540,7 @@ let ev = {
                                 direction: "horizontal",
                                 children: [
                                     (0, l.jsx)(r.E, { variant: "text-sm/bold", children: "Nameplate" }),
-                                    (0, l.jsx)(eg.A, {
+                                    (0, l.jsx)(ej.A, {
                                         text: er.intl.string(er.t.OpuAlK),
                                         delay: 0,
                                         "aria-label": !1,
@@ -1618,7 +1619,7 @@ let ev = {
                             (0, l.jsx)("br", {}),
                             (0, l.jsx)("hr", {}),
                             (0, l.jsx)("br", {}),
-                            (0, l.jsx)(ea.Ay, { layout: ev }),
+                            (0, l.jsx)(ea.Ay, { layout: ey }),
                         ],
                     });
                 },
@@ -1626,34 +1627,34 @@ let ev = {
             },
         ],
     };
-var ek = a(575593),
-    eA = a(674658),
-    eS = a(88686),
-    eI = a(780898),
-    eV = a(214881),
-    ew = a(486020);
-let eE = function (e) {
+var eA = a(575593),
+    eS = a(674658),
+    eI = a(88686),
+    eV = a(780898),
+    ew = a(214881),
+    eE = a(486020);
+let eC = function (e) {
     let { skuId: t, size: a = 128, animated: n = !1 } = e,
-        { product: r } = (0, eA.q)(t, !0),
+        { product: r } = (0, eS.q)(t, !0),
         s = r?.items[0];
     if (null == s) return null;
-    if (s.type === ek.R.AVATAR_DECORATION) {
-        let e = ew.Ay.getAvatarDecorationURL({ avatarDecoration: s, size: a, canAnimate: n });
+    if (s.type === eA.R.AVATAR_DECORATION) {
+        let e = eE.Ay.getAvatarDecorationURL({ avatarDecoration: s, size: a, canAnimate: n });
         return null != e ? (0, l.jsx)("img", { src: e, alt: s.label }) : null;
     }
-    if (s.type === ek.R.PROFILE_EFFECT) {
+    if (s.type === eA.R.PROFILE_EFFECT) {
         let e = s.thumbnailPreviewSrc;
         return (0, l.jsx)("img", { src: e, alt: s.accessibilityLabel });
     }
-    if (s.type === ek.R.NAMEPLATE) {
-        let e = (0, eI.WK)(s);
-        return (0, l.jsx)(eV.A, { nameplate: e, placement: eS.u.PREVIEW });
+    if (s.type === eA.R.NAMEPLATE) {
+        let e = (0, eV.WK)(s);
+        return (0, l.jsx)(ew.A, { nameplate: e, placement: eI.u.PREVIEW });
     }
     return null;
 };
-var eC = a(538235),
-    eT = a(891167);
-let eL = {
+var eT = a(538235),
+    eL = a(891167);
+let eP = {
         id: "layout-system",
         name: "Layout System",
         groups: [
@@ -1819,7 +1820,7 @@ let eL = {
                                         },
                                     }),
                                     (0, l.jsx)(Q.v3.Provider, {
-                                        value: { prioritizedCurrency: en.Hi.ORBS },
+                                        value: eo,
                                         children: (0, l.jsx)("div", {
                                             style: { position: "relative" },
                                             children: (0, l.jsx)(ea.Ay, { layout: e }),
@@ -1830,8 +1831,8 @@ let eL = {
                         },
                         controls: {},
                     },
-                    eo,
                     ei,
+                    ed,
                     {
                         name: "Themed Images",
                         id: "themed-images",
@@ -1921,7 +1922,7 @@ let eL = {
                     },
                 ],
             },
-            ep,
+            eg,
             R,
             {
                 title: "Content Wrappers",
@@ -2163,7 +2164,7 @@ let eL = {
                 ],
             },
             Y,
-            ey,
+            ek,
             {
                 title: "Sku",
                 stories: [
@@ -2183,14 +2184,14 @@ let eL = {
                             let { skuId: t } = e;
                             return (0, l.jsxs)("div", {
                                 children: [
-                                    (0, l.jsx)(eE, { skuId: t }),
+                                    (0, l.jsx)(eC, { skuId: t }),
                                     (0, l.jsx)("hr", {}),
                                     (0, l.jsx)(r.E, { variant: "text-md/bold", children: "Sample Skus:" }),
                                     (0, l.jsxs)(S.B, {
                                         direction: "horizontal",
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-sm/bold", children: "Avatar Decoration" }),
-                                            (0, l.jsx)(eg.A, {
+                                            (0, l.jsx)(ej.A, {
                                                 text: er.intl.string(er.t.OpuAlK),
                                                 delay: 0,
                                                 "aria-label": !1,
@@ -2211,7 +2212,7 @@ let eL = {
                                         direction: "horizontal",
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-sm/bold", children: "Profile Effect" }),
-                                            (0, l.jsx)(eg.A, {
+                                            (0, l.jsx)(ej.A, {
                                                 text: er.intl.string(er.t.OpuAlK),
                                                 delay: 0,
                                                 "aria-label": !1,
@@ -2232,7 +2233,7 @@ let eL = {
                                         direction: "horizontal",
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-sm/bold", children: "Nameplate" }),
-                                            (0, l.jsx)(eg.A, {
+                                            (0, l.jsx)(ej.A, {
                                                 text: er.intl.string(er.t.OpuAlK),
                                                 delay: 0,
                                                 "aria-label": !1,
@@ -2275,7 +2276,7 @@ let eL = {
                                         children:
                                             "It's ONLY use is to be overriden by another block in `useComponentRegistry`",
                                     }),
-                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(eC.A, {}) }),
+                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(eT.A, {}) }),
                                 ],
                             });
                         },
@@ -2293,7 +2294,7 @@ let eL = {
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Static image" }),
                                             (0, l.jsx)("div", {
                                                 style: { height: 200 },
-                                                children: (0, l.jsx)(eT.A, { src: { src: t } }),
+                                                children: (0, l.jsx)(eL.A, { src: { src: t } }),
                                             }),
                                         ],
                                     }),
@@ -2302,7 +2303,7 @@ let eL = {
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Video asset" }),
                                             (0, l.jsx)("div", {
                                                 style: { height: 200 },
-                                                children: (0, l.jsx)(eT.A, { src: { src: a } }),
+                                                children: (0, l.jsx)(eL.A, { src: { src: a } }),
                                             }),
                                         ],
                                     }),
@@ -2328,4 +2329,4 @@ let eL = {
             },
         ],
     },
-    eP = { collections: [eL] };
+    eB = { collections: [eP] };

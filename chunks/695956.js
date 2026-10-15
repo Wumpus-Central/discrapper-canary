@@ -6052,9 +6052,13 @@ let tv = {
                         component: function () {
                             let [e, l] = o.useState(!0),
                                 a = o.useContext(aq.C),
-                                [n, i] = o.useState(0);
+                                [n, i] = o.useState(0),
+                                s = o.useMemo(
+                                    () => ({ ...a, reducedMotion: { ...a.reducedMotion, enabled: e } }),
+                                    [a, e],
+                                );
                             return (0, t.jsxs)(aq.C.Provider, {
-                                value: { ...a, reducedMotion: { ...a.reducedMotion, enabled: e } },
+                                value: s,
                                 children: [
                                     (0, t.jsx)("div", {
                                         className: aU.QT,

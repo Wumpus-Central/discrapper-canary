@@ -272,9 +272,10 @@ let e8 = s.memo(function (e) {
                         className: r()(e1.BK, e0.BK),
                         "aria-label": "",
                         children: null == t ? (c ? null : eZ.intl.string(eZ.t.mE3KJN)) : h,
-                    });
+                    }),
+        j = (0, eR.A)(u, d);
     return (0, i.jsxs)(eG.Bs.Provider, {
-        value: (0, eR.A)(u, d),
+        value: j,
         children: [
             null != o
                 ? (0, i.jsx)(ei.eu, {

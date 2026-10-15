@@ -1,25 +1,18 @@
-n.d(e, { R: () => p, default: () => a });
-var u = n(477900),
-    o = n(582128),
-    r = n(284009),
-    i = n.n(r),
-    s = n(284683);
-let d = o.createContext(void 0);
-function p() {
-    let t = o.useContext(d);
-    return (i()(null != t, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), t);
+u.d(t, { R: () => d, default: () => l });
+var n = u(477900),
+    o = u(582128),
+    s = u(284009),
+    i = u.n(s),
+    r = u(284683);
+let a = o.createContext(void 0);
+function d() {
+    let e = o.useContext(a);
+    return (i()(null != e, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), e);
 }
-function a(t) {
-    let { children: e, defaultSortOption: n = s.p$.NEWEST_ARRIVALS } = t,
-        [r, i] = o.useState(n);
-    return (0, u.jsx)(d.Provider, {
-        value: {
-            sortOption: r,
-            setSortOption: i,
-            onReset: function () {
-                return i(n);
-            },
-        },
-        children: e,
-    });
+function l(e) {
+    let { children: t, defaultSortOption: u = r.p$.NEWEST_ARRIVALS } = e,
+        [s, i] = o.useState(u),
+        d = o.useCallback(() => i(u), [u]),
+        l = o.useMemo(() => ({ sortOption: s, setSortOption: i, onReset: d }), [s, i, d]);
+    return (0, n.jsx)(a.Provider, { value: l, children: t });
 }

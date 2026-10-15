@@ -1,4 +1,4 @@
-s.d(t, { dX: () => L, Pv: () => P, Mq: () => C });
+s.d(t, { dX: () => L, Pv: () => P, Mq: () => y });
 var l = s(477900),
     i = s(582128),
     a = s(70283),
@@ -30,10 +30,10 @@ function L(e) {
             giftStyle: P,
             giftingOrigin: G,
             children: L,
-            additionalUserIds: y,
+            additionalUserIds: M,
         } = e,
-        C = (0, n.t4)((e) => e.selectedSkuId),
-        [M, _] = i.useState(!1),
+        y = (0, n.t4)((e) => e.selectedSkuId),
+        [C, _] = i.useState(!1),
         [w, T] = i.useState(!1),
         [O, b] = i.useState(R),
         [k, F] = i.useState(),
@@ -88,7 +88,7 @@ function L(e) {
     i.useEffect(() => {
         t && et && (0, r.o0)(a.$.GIFTING);
     }, [t, et]);
-    let ei = (0, p.Vt)(C, t),
+    let ei = (0, p.Vt)(y, t),
         [ea, er] = i.useState(!1),
         [en, eu] = i.useState(!1),
         [ec, ed] = i.useState(),
@@ -109,56 +109,55 @@ function L(e) {
             [O, ei, eu, er, ed],
         ),
         eg = i.useRef(new Set());
-    return (
-        i.useEffect(() => {
-            if (!V) return;
-            let e = q.filter((e) => !eg.current.has(e));
-            if (0 === e.length) return;
-            let t = E.default.getCurrentUser();
-            for (let s of e)
-                (S.default.track(x.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: s }),
-                    eg.current.add(s));
-        }, [q, V]),
-        (0, l.jsx)(j.Provider, {
-            value: {
-                isGift: t,
-                isRecurringGift: M,
-                setIsRecurringGift: _,
-                hasAppliedRecurringGiftDefaultPlan: w,
-                setHasAppliedRecurringGiftDefaultPlan: T,
-                giftCode: ei,
-                giftMessage: v,
-                giftRecipient: O,
-                setGiftRecipient: b,
-                giftRecipientError: k,
-                setGiftRecipientError: F,
-                validatingGiftRecipient: D,
-                setValidatingGiftRecipient: B,
-                soundEffect: Q,
-                setSoundEffect: Y,
-                emojiConfetti: K,
-                setEmojiConfetti: ee,
-                customGiftMessage: W,
-                setCustomGiftMessage: $,
-                selectedGiftStyle: H,
-                setSelectedGiftStyle: z,
-                sendGiftMessage: eo,
-                hasSentMessage: ea,
-                isSendingMessage: en,
-                giftMessageError: ec,
-                giftingOrigin: G,
-                claimableRewards: J,
-                selectedGiftingPromotionRewards: q,
-                setSelectedGiftingPromotionRewards: X,
-                additionalUserIds: y,
-                openGiftingBadgePostPurchaseModal: es,
-                canShowGiftingBadgePostPurchase: el,
-            },
-            children: L,
-        })
+    i.useEffect(() => {
+        if (!V) return;
+        let e = q.filter((e) => !eg.current.has(e));
+        if (0 === e.length) return;
+        let t = E.default.getCurrentUser();
+        for (let s of e)
+            (S.default.track(x.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: s }),
+                eg.current.add(s));
+    }, [q, V]);
+    let ef = i.useMemo(
+        () => ({
+            isGift: t,
+            isRecurringGift: C,
+            setIsRecurringGift: _,
+            hasAppliedRecurringGiftDefaultPlan: w,
+            setHasAppliedRecurringGiftDefaultPlan: T,
+            giftCode: ei,
+            giftMessage: v,
+            giftRecipient: O,
+            setGiftRecipient: b,
+            giftRecipientError: k,
+            setGiftRecipientError: F,
+            validatingGiftRecipient: D,
+            setValidatingGiftRecipient: B,
+            soundEffect: Q,
+            setSoundEffect: Y,
+            emojiConfetti: K,
+            setEmojiConfetti: ee,
+            customGiftMessage: W,
+            setCustomGiftMessage: $,
+            selectedGiftStyle: H,
+            setSelectedGiftStyle: z,
+            sendGiftMessage: eo,
+            hasSentMessage: ea,
+            isSendingMessage: en,
+            giftMessageError: ec,
+            giftingOrigin: G,
+            claimableRewards: J,
+            selectedGiftingPromotionRewards: q,
+            setSelectedGiftingPromotionRewards: X,
+            additionalUserIds: M,
+            openGiftingBadgePostPurchaseModal: es,
+            canShowGiftingBadgePostPurchase: el,
+        }),
+        [t, C, w, ei, v, O, k, D, Q, K, W, H, eo, ea, en, ec, G, J, q, M, es, el],
     );
+    return (0, l.jsx)(j.Provider, { value: ef, children: L });
 }
-let y = {
+let M = {
     isGift: !1,
     isRecurringGift: !1,
     setIsRecurringGift: x.tEg,
@@ -180,7 +179,7 @@ let y = {
     openGiftingBadgePostPurchaseModal: x.tEg,
     canShowGiftingBadgePostPurchase: !1,
 };
-function C(e) {
+function y(e) {
     let { children: t } = e;
-    return (0, l.jsx)(j.Provider, { value: y, children: t });
+    return (0, l.jsx)(j.Provider, { value: M, children: t });
 }

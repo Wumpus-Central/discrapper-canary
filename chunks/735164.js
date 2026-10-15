@@ -12,10 +12,11 @@ function d() {
     return i.useContext(o).isPremiumRebrand;
 }
 function m(e) {
-    let { children: t, className: n, isPremiumRebrand: i = !1 } = e;
+    let { children: t, className: n, isPremiumRebrand: a = !1 } = e,
+        s = i.useMemo(() => ({ isPremiumRebrand: a }), [a]);
     return (0, r.jsx)(o.Provider, {
-        value: { isPremiumRebrand: i },
-        children: (0, r.jsx)("div", { className: l()(c.tp, { [c.u0]: i }, n), children: t }),
+        value: s,
+        children: (0, r.jsx)("div", { className: l()(c.tp, { [c.u0]: a }, n), children: t }),
     });
 }
 function p(e) {

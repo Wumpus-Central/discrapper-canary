@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -57,7 +57,12 @@ function E(e) {
     });
 }
 function v(e) {
-    let { title: t, image: n, shouldShow: a = !0, forceOpen: d = !1, spacing: h, className: p, children: v } = e,
+    let { position: t, nudge: n, children: a } = e,
+        s = l.useMemo(() => ({ position: t, caretConfig: { align: "custom", customOffset: n } }), [t, n]);
+    return (0, i.jsx)(o.e.Provider, { value: s, children: a });
+}
+function b(e) {
+    let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: h, children: p } = e,
         b = l.useId(),
         _ = l.useRef(null),
         S = (0, r.bG)([C.A], () => C.A.theme),
@@ -66,23 +71,24 @@ function v(e) {
         children: [
             (0, i.jsx)(m.Y, {
                 targetElementRef: _,
-                shouldShow: a && (T || d),
+                shouldShow: a && (T || o),
                 position: "top",
                 align: "center",
-                spacing: h + 10,
+                spacing: d + 10,
                 animation: m.Y.Animation.FADE,
                 onRequestClose: () => R(!1),
                 renderPopout: (l) => {
-                    let { closePopout: a, setPopoutRef: r, position: d, nudge: u } = l;
-                    return (0, i.jsx)(o.e.Provider, {
-                        value: { position: d ?? "top", caretConfig: { align: "custom", customOffset: u } },
+                    let { closePopout: a, setPopoutRef: r, position: o, nudge: d } = l;
+                    return (0, i.jsx)(v, {
+                        position: o ?? "top",
+                        nudge: d,
                         children: (0, i.jsx)(A.N, {
                             theme: S,
                             children: (l) =>
                                 e.clickable
                                     ? (0, i.jsx)(f.D, {
                                           tag: "div",
-                                          className: p,
+                                          className: h,
                                           "aria-label": I.intl.formatToPlainString(y.default.hZobvN, { username: t }),
                                           onMouseEnter: O,
                                           onMouseLeave: L,
@@ -99,7 +105,7 @@ function v(e) {
                                       })
                                     : (0, i.jsxs)("div", {
                                           ref: r,
-                                          className: s()(N.hB, N.Kc, p, l),
+                                          className: s()(N.hB, N.Kc, h, l),
                                           children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(E, { title: t, image: n })],
                                       }),
                         }),
@@ -113,7 +119,7 @@ function v(e) {
                         onFocus: O,
                         onBlur: L,
                         ...e,
-                        children: l.cloneElement(v, { "aria-describedby": b }),
+                        children: l.cloneElement(p, { "aria-describedby": b }),
                     }),
             }),
             (0, i.jsxs)(x.A, {

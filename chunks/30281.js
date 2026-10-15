@@ -9108,32 +9108,34 @@ let og = {
             };
         function i(a) {
             let { ref: i, ...s } = a,
-                [d, c] = o.useState(null);
-            return (0, r.jsx)(t.Provider, {
-                value: {
-                    setStep: () => {},
-                    premiumType: n.TIER_2,
-                    onClose: s.onClose,
-                    transitionState: s.transitionState,
-                    premiumSubscription: l,
-                    analyticsLocations: [],
-                    analyticsLocation: void 0,
-                    confettiCanvas: null,
-                    churnUserDiscountOffer: null,
-                    isFetchingChurnDiscountOffer: !1,
-                    fullPrice: "$9.99",
-                    discountedPrice: void 0,
-                    planId: "511651880837840896",
-                    paymentsBlocked: !1,
-                    renewalInvoice: null,
-                    renewalInvoiceDetails: null,
-                    handleCancellation: async () => {},
-                    applyOffer: async () => {},
-                    pauseDuration: d,
-                    setPauseDuration: c,
-                },
-                children: (0, r.jsx)(e, {}),
-            });
+                [d, c] = o.useState(null),
+                { onClose: u, transitionState: m } = s,
+                h = o.useMemo(
+                    () => ({
+                        setStep: () => {},
+                        premiumType: n.TIER_2,
+                        onClose: u,
+                        transitionState: m,
+                        premiumSubscription: l,
+                        analyticsLocations: [],
+                        analyticsLocation: void 0,
+                        confettiCanvas: null,
+                        churnUserDiscountOffer: null,
+                        isFetchingChurnDiscountOffer: !1,
+                        fullPrice: "$9.99",
+                        discountedPrice: void 0,
+                        planId: "511651880837840896",
+                        paymentsBlocked: !1,
+                        renewalInvoice: null,
+                        renewalInvoiceDetails: null,
+                        handleCancellation: async () => {},
+                        applyOffer: async () => {},
+                        pauseDuration: d,
+                        setPauseDuration: c,
+                    }),
+                    [u, m, d],
+                );
+            return (0, r.jsx)(t.Provider, { value: h, children: (0, r.jsx)(e, {}) });
         }
         return ((i.displayName = "PremiumSubscriptionPauseModalWrapper"), (e) => (0, r.jsx)(i, { ...e }));
     },

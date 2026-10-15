@@ -8,8 +8,8 @@ var r = n(582128),
     o = n(217109),
     u = n(273340),
     d = n(449543),
-    h = n(735353),
-    m = n(560275),
+    m = n(735353),
+    h = n(560275),
     p = n(436476),
     f = n(873580),
     g = n(650993),
@@ -37,11 +37,11 @@ let M = {
     Carousel: s.A,
     Grid: o.Ay,
     GridItem: u.A,
-    Section: h.A,
+    Section: m.A,
     Card: i.A,
     BackgroundImage: a.A,
     GradientBackground: c.A,
-    Skeleton: m.A,
+    Skeleton: h.A,
     FeaturedChip: g.A,
     FeaturedCollection: E.A,
     FeaturedProduct: () => null,
@@ -49,15 +49,28 @@ let M = {
     GridItemShopProductCard: function (e) {
         let { skuId: t, auto: n, columns: l, rows: a } = e,
             { product: i } = (0, C.q)(t, !0),
-            s = r.useContext(k.v3);
+            {
+                flattenProductVariants: s,
+                productOverride: c,
+                prioritizedCurrency: o,
+                standalonePreview: d,
+            } = r.useContext(k.v3),
+            m = r.useMemo(
+                () => ({
+                    flattenProductVariants: s ?? !1,
+                    productOverride: c,
+                    prioritizedCurrency: o,
+                    standalonePreview: d,
+                }),
+                [s, c, o, d],
+            );
         if (null == i) return null;
-        let { flattenProductVariants: c, ...o } = s;
         if (i.type === j.R.BUNDLE) {
             let e = n ? 2 : l,
                 r = n ? 1 : a,
                 i = `${e}/${r}`;
             return (0, _.jsx)(k.v3.Provider, {
-                value: { flattenProductVariants: c ?? !1, ...o },
+                value: m,
                 children: (0, _.jsx)(u.A, {
                     columns: e,
                     rows: r,
@@ -70,7 +83,7 @@ let M = {
                 r = n ? 2 : a,
                 i = `${e}/${r}`;
             return (0, _.jsx)(k.v3.Provider, {
-                value: { flattenProductVariants: c ?? !1, ...o },
+                value: m,
                 children: (0, _.jsx)(u.A, {
                     columns: e,
                     rows: r,
@@ -79,12 +92,9 @@ let M = {
             });
         }
         return n
-            ? (0, _.jsx)(k.v3.Provider, {
-                  value: { flattenProductVariants: c ?? !1, ...o },
-                  children: (0, _.jsx)(b.A, { skuId: t, aspectRatio: "1/1" }),
-              })
+            ? (0, _.jsx)(k.v3.Provider, { value: m, children: (0, _.jsx)(b.A, { skuId: t, aspectRatio: "1/1" }) })
             : (0, _.jsx)(k.v3.Provider, {
-                  value: { flattenProductVariants: c ?? !1, ...o },
+                  value: m,
                   children: (0, _.jsx)(u.A, {
                       columns: l,
                       rows: a,

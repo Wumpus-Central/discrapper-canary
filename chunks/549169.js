@@ -1162,46 +1162,50 @@ let [tT, tC] = (0, ed.A)(),
             { analyticsLocations: a } = (0, A.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
             l = (0, eg.ds)(),
             r = (0, ex.QQ)(),
-            o = (0, x.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
-            d = null != o && o.status === eq.Dmq.CANCELED && null != i,
-            u = r && !d,
-            m = J.intl.string(J.t.qYKftX),
-            g = (0, eT.m)(),
-            { fractionalState: p, endsAt: f } = (0, er.A)(),
-            h = (0, el.Ay)(f, el.yE.CREDITS_ENDS_IN),
-            j = null;
-        if (p === tA.xc.NONE || l) j = (0, c.jsx)(eE, { text: m });
-        else {
-            u = !0;
-            let e = J.intl.format(J.t["yR+oDD"], {
-                helpCenterLink: eu.A.getArticleURL(eq.MVz.FRACTIONAL_PREMIUM_ABOUT),
-            });
-            j = (0, c.jsx)(en.A, {
-                text: e,
-                "aria-label": e.toString(),
-                tooltipClassName: tx.YL,
-                position: "right",
-                children: (e) =>
-                    (0, c.jsx)("div", {
-                        ...e,
-                        className: tx.V_,
-                        children: (0, c.jsx)("div", { className: tx.eL, children: (0, c.jsx)(eE, { text: h }) }),
-                    }),
-            });
-        }
-        return (0, c.jsx)(A.f5, {
-            value: a,
-            children: (0, c.jsx)(tT.Provider, {
-                value: {
-                    headingTop: j,
-                    showPill: u,
-                    shouldShowChurnVariant: d,
-                    premiumSubscription: o,
+            d = (0, x.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
+            u = null != d && d.status === eq.Dmq.CANCELED && null != i,
+            m = r && !u,
+            g = J.intl.string(J.t.qYKftX),
+            p = (0, eT.m)(),
+            { fractionalState: f, endsAt: h } = (0, er.A)(),
+            j = (0, el.Ay)(h, el.yE.CREDITS_ENDS_IN),
+            E = f !== tA.xc.NONE && !l;
+        E && (m = !0);
+        let b = o.useMemo(() => {
+                if (!E) return (0, c.jsx)(eE, { text: g });
+                let e = J.intl.format(J.t["yR+oDD"], {
+                    helpCenterLink: eu.A.getArticleURL(eq.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                });
+                return (0, c.jsx)(en.A, {
+                    text: e,
+                    "aria-label": e.toString(),
+                    tooltipClassName: tx.YL,
+                    position: "right",
+                    children: (e) =>
+                        (0, c.jsx)("div", {
+                            ...e,
+                            className: tx.V_,
+                            children: (0, c.jsx)("div", { className: tx.eL, children: (0, c.jsx)(eE, { text: j }) }),
+                        }),
+                });
+            }, [E, g, j]),
+            T = o.useMemo(
+                () => ({
+                    headingTop: b,
+                    showPill: m,
+                    shouldShowChurnVariant: u,
+                    premiumSubscription: d,
                     userDiscountOffer: i,
                     discountedPrice: n,
                     buttonVisibilityRef: s,
-                },
-                children: (0, c.jsx)(tb, { className: t, isInReverseTrial: l, shouldShowReferralProgressBar: g }),
+                }),
+                [b, m, u, d, i, n, s],
+            );
+        return (0, c.jsx)(A.f5, {
+            value: a,
+            children: (0, c.jsx)(tT.Provider, {
+                value: T,
+                children: (0, c.jsx)(tb, { className: t, isInReverseTrial: l, shouldShowReferralProgressBar: p }),
             }),
         });
     };

@@ -12,9 +12,10 @@ var n = t(947641),
 var o = t(56999);
 let h = i.createContext({ isCurrent: !1 });
 function m(e) {
-    let { children: s, isComplete: t, isCurrent: i, hasNextStep: r } = e;
+    let { children: s, isComplete: t, isCurrent: r, hasNextStep: d } = e,
+        x = i.useMemo(() => ({ isCurrent: r }), [r]);
     return (0, l.jsxs)("li", {
-        className: a()(o.gY, { [o.HP]: t }, { [o.fS]: i }, { [o.h4]: r }),
+        className: a()(o.gY, { [o.HP]: t }, { [o.fS]: r }, { [o.h4]: d }),
         children: [
             (0, l.jsxs)("div", {
                 className: o.cJ,
@@ -23,13 +24,10 @@ function m(e) {
                         className: o.$P,
                         children: t && (0, l.jsx)(n.r, { className: o.ap, color: c.A.colors.WHITE }),
                     }),
-                    r && (0, l.jsx)("div", { className: o.UK }),
+                    d && (0, l.jsx)("div", { className: o.UK }),
                 ],
             }),
-            (0, l.jsx)("div", {
-                className: o.M7,
-                children: (0, l.jsx)(h.Provider, { value: { isCurrent: i }, children: s }),
-            }),
+            (0, l.jsx)("div", { className: o.M7, children: (0, l.jsx)(h.Provider, { value: x, children: s }) }),
         ],
     });
 }

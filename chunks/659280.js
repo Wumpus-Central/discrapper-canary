@@ -1,4 +1,4 @@
-n.d(t, { Sz: () => em, Ay: () => eL, aI: () => eh });
+n.d(t, { Sz: () => em, Ay: () => ew, aI: () => eh });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -573,7 +573,12 @@ class eR extends ep {
         });
     }
 }
-class eO extends i.PureComponent {
+function eO(e) {
+    let { id: t, children: n } = e,
+        r = i.useMemo(() => ({ id: t }), [t]);
+    return (0, l.jsx)(ef.Provider, { value: r, children: n });
+}
+class eL extends i.PureComponent {
     static Generic = eg;
     static Loading = ex;
     static Title = eE;
@@ -593,8 +598,8 @@ class eO extends i.PureComponent {
     render() {
         let { children: e, className: t, innerClassName: n, id: r, ...a } = this.props;
         return i.Children.count(e) > 0
-            ? (0, l.jsx)(ef.Provider, {
-                  value: { id: r ?? "" },
+            ? (0, l.jsx)(eO, {
+                  id: r ?? "",
                   children: (0, l.jsx)("div", {
                       className: s()(I.nx, t),
                       children: (0, l.jsx)("div", { className: s()(I.Fv, n), ...a, children: e }),
@@ -603,4 +608,4 @@ class eO extends i.PureComponent {
             : null;
     }
 }
-let eL = eO;
+let ew = eL;

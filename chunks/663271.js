@@ -167,21 +167,22 @@ let I = (e) => {
                 });
             }
             c(e);
-        }, [o, n, l, c]);
-    return (0, s.jsx)(F.Provider, {
-        value: {
-            registerComponent: m,
-            unregisterComponent: C,
-            animatedComponents: o,
-            expandedContentRef: n,
-            collapsedContentRef: l,
-            recalculateAnimationPositions: p,
-            animatedComponentProps: u,
-            expansionSpring: i,
-            mountPoints: d,
-        },
-        children: t,
-    });
+        }, [o, n, l, c]),
+        f = r.useMemo(
+            () => ({
+                registerComponent: m,
+                unregisterComponent: C,
+                animatedComponents: o,
+                expandedContentRef: n,
+                collapsedContentRef: l,
+                recalculateAnimationPositions: p,
+                animatedComponentProps: u,
+                expansionSpring: i,
+                mountPoints: d,
+            }),
+            [m, C, o, n, l, p, u, i, d],
+        );
+    return (0, s.jsx)(F.Provider, { value: f, children: t });
 };
 var b = n(717421),
     O = n(775602);
@@ -211,8 +212,8 @@ function q(e) {
     );
 }
 var k = n(409626),
-    w = n(692969),
-    M = n(284846),
+    M = n(692969),
+    w = n(284846),
     P = n(190107);
 let D = r.createContext({
         onCtxMenuClose: () => {},
@@ -229,8 +230,8 @@ let D = r.createContext({
     G = r.createContext({ hasAlreadyLinked: void 0, onClickGameTitle: void 0 });
 function H(e) {
     let { children: t, quest: n } = e,
-        { hasAlreadyLinked: l } = (0, M.U)(n),
-        i = (0, w.A)({
+        { hasAlreadyLinked: l } = (0, w.U)(n),
+        i = (0, M.A)({
             applicationId: (0, A.xc)(n),
             location: P.rE.QUEST_INSTRUCTIONS,
             source: k.GameProfileSources.QuestBar,
@@ -746,8 +747,8 @@ function eL(e) {
 }
 var eq = n(290136),
     ek = n(661531),
-    ew = n(57718),
-    eM = n(393824);
+    eM = n(57718),
+    ew = n(393824);
 let eP = function (e) {
     let { isFullyExpanded: t, partnerBranding: n } = e,
         l = {
@@ -774,7 +775,7 @@ let eP = function (e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(o.animated.div, {
-                className: eM.tE,
+                className: ew.tE,
                 style: {
                     transform: (0, o.to)(
                         [
@@ -797,7 +798,7 @@ let eP = function (e) {
                 }),
             }),
             (0, s.jsxs)(o.animated.div, {
-                className: i()(eM.pm, { [eM.nd]: l }),
+                className: i()(ew.pm, { [ew.nd]: l }),
                 style: {
                     transform: (0, o.to)(
                         [d.to({ range: [0, 1], output: [0, -48] }), d.to({ range: [0, 1], output: [0, x] })],
@@ -805,9 +806,9 @@ let eP = function (e) {
                     ),
                 },
                 children: [
-                    (0, s.jsx)("div", { className: i()({ [eM.Iu]: !l }), children: n }),
+                    (0, s.jsx)("div", { className: i()({ [ew.Iu]: !l }), children: n }),
                     (0, s.jsx)(o.animated.div, {
-                        className: i()(eM.ol, { [eM.yZ]: l }),
+                        className: i()(ew.ol, { [ew.yZ]: l }),
                         style: { opacity: (0, Q.a)(d.to({ range: [0, 1], output: [l ? 1 : 0.7, 0] })) },
                         children: (0, s.jsx)(ev.E, {
                             color: "text-overlay-light",
@@ -822,7 +823,7 @@ let eP = function (e) {
     });
 };
 var eD = n(886030);
-let eG = (0, o.animated)(ew.Ay),
+let eG = (0, o.animated)(eM.Ay),
     eH = function () {
         let e = (0, el.wW)(),
             { expansionSpring: t } = r.useContext(F),
@@ -1588,21 +1589,21 @@ function tk(e) {
         ],
     });
 }
-async function tw(e, t, n, s) {
+async function tM(e, t, n, s) {
     (0, A.vv)(e)
         ? await (0, v.e0)(e, { questContent: t, questContentCTA: n, sourceQuestContent: s, sourceQuestContentCTA: n })
         : (0, ea.vA)(e)
           ? await (0, e2.Oy)(e.id, { questContent: t, questContentCTA: n, sourceQuestContent: s })
           : (0, e2.Oy)(e.id, { questContent: t, questContentCTA: n, sourceQuestContent: s });
 }
-function tM(e) {
+function tw(e) {
     let { overlayRef: t, containerRef: n } = e,
         { quest: l, isExpanded: i, isExpansionAnimationComplete: o } = r.useContext(D),
         { launchInGameActivity: a } = (0, E.zW)(l),
         u = (0, ea.vA)(l),
         c = r.useCallback(async () => {
             let e = u ? er.Cy.START_QUEST : er.Cy.ACCEPT_QUEST;
-            (await tw(l, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), u && a());
+            (await tM(l, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), u && a());
         }, [l, a, u]);
     return l.userStatus?.enrolledAt != null
         ? (0, s.jsx)(tk, { overlayRef: t, containerRef: n })
@@ -1664,7 +1665,7 @@ function tD(e) {
         className: t,
         layoutVariant: o ? "inset" : "flush",
         header: (0, s.jsxs)(s.Fragment, { children: [(0, s.jsx)(tP, {}), !o && (0, s.jsx)(eH, {})] }),
-        children: (0, s.jsx)(tM, { overlayRef: l, containerRef: n }),
+        children: (0, s.jsx)(tw, { overlayRef: l, containerRef: n }),
     });
 }
 var tG = n(621466),
@@ -1712,8 +1713,8 @@ function tJ(e) {
         q = V || (l && d && !B && !a),
         {
             isExpanded: k,
-            setIsExpanded: w,
-            expandQuestBar: M,
+            setIsExpanded: M,
+            expandQuestBar: w,
             isExpansionAnimationComplete: D,
             isVisibilityAnimationAtRest: G,
             expansionSpring: H,
@@ -1904,8 +1905,8 @@ function tJ(e) {
         })({
             quest: t,
             isExpanded: k,
-            setIsExpanded: w,
-            expandQuestBar: M,
+            setIsExpanded: M,
+            expandQuestBar: w,
             isQuestCompleted: U,
             isQuestAccepted: Q,
             prevIsQuestAccepted: N,

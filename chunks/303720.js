@@ -7,11 +7,22 @@ var r = n(477900),
 let c = function (e) {
     let { skuId: t, aspectRatio: n } = e,
         { product: c } = (0, a.q)(t, !0),
-        o = l.useContext(s.v3);
-    if (null == c) return null;
-    let { flattenProductVariants: u, ...d } = o;
-    return (0, r.jsx)(s.v3.Provider, {
-        value: { flattenProductVariants: u ?? !1, ...d },
-        children: (0, r.jsx)(i.A, { skuId: t, aspectRatio: n }),
-    });
+        {
+            flattenProductVariants: o,
+            productOverride: u,
+            prioritizedCurrency: d,
+            standalonePreview: m,
+        } = l.useContext(s.v3),
+        h = l.useMemo(
+            () => ({
+                flattenProductVariants: o ?? !1,
+                productOverride: u,
+                prioritizedCurrency: d,
+                standalonePreview: m,
+            }),
+            [o, u, d, m],
+        );
+    return null == c
+        ? null
+        : (0, r.jsx)(s.v3.Provider, { value: h, children: (0, r.jsx)(i.A, { skuId: t, aspectRatio: n }) });
 };

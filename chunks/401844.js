@@ -1,4 +1,4 @@
-(n.d(t, { iV: () => cr, OC: () => co, Ay: () => ca }), n(938796));
+(n.d(t, { iV: () => ca, OC: () => cd, Ay: () => co }), n(938796));
 var i,
     l,
     s = n(477900),
@@ -7313,7 +7313,12 @@ let cn = [O.Auw.GIFV],
             ? (0, s.jsx)(ab.A, { width: i, height: l, src: n, url: t, format: m.TL.IMAGE, className: ct.jj })
             : null;
     };
-class cr extends r.Component {
+function cr(e) {
+    let { url: t, image: n, video: i, thumbnail: l, providerName: a, children: o } = e,
+        d = r.useMemo(() => (0, d7.b)(t, n, i, l, a), [t, n, i, l, a]);
+    return (0, s.jsx)(i5.G.Provider, { value: d, children: o });
+}
+class ca extends r.Component {
     static defaultProps = { renderEmbeds: !0, compact: !1, hideInviteEmbedBanner: !1, hideActivityInvite: !1 };
     state = { showSuppressModal: !1, showRemoveAttachmentModal: !1, attachmentToDelete: null };
     getAcceptInviteContext = (e, t) => {
@@ -7644,9 +7649,13 @@ class cr extends r.Component {
         if (e.type === O.Auw.GIFT) return null;
         let m = cn.includes(e.type) ? e.url : (e.image?.url ?? e.video?.url);
         return (0, s.jsx)(
-            i5.G.Provider,
+            cr,
             {
-                value: (0, d7.b)(m, e.image, e.video, e.thumbnail, e.provider?.name),
+                url: m,
+                image: e.image,
+                video: e.video,
+                thumbnail: e.thumbnail,
+                providerName: e.provider?.name,
                 children: (0, s.jsx)(tf.Ay, {
                     embed: e,
                     obscureReason: u ?? void 0,
@@ -8096,7 +8105,7 @@ class cr extends r.Component {
               });
     }
 }
-function ca(e) {
+function co(e) {
     let t,
         {
             channel: n,
@@ -8164,7 +8173,7 @@ function ca(e) {
         D = (0, r9._f)(i.id, i.channel_id),
         U = (0, n1._R)(),
         G = (0, il.U)();
-    return (0, s.jsx)(cr, {
+    return (0, s.jsx)(ca, {
         canSuppressEmbeds: N,
         canDeleteAttachments: y,
         ...b,
@@ -8192,7 +8201,7 @@ function ca(e) {
         restrictedPreview: G,
     });
 }
-function co(e) {
+function cd(e) {
     let {
             message: t,
             channel: n,
@@ -8213,7 +8222,7 @@ function co(e) {
         x = (0, n3.P)(t),
         f = (0, r9._f)(t.id, t.channel_id),
         I = (0, lZ.A)(t);
-    return (0, s.jsx)(cr, {
+    return (0, s.jsx)(ca, {
         ...d,
         message: t,
         channel: n,

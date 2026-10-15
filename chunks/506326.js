@@ -298,29 +298,32 @@ function tC(t) {
         : null;
 }
 function tA(t) {
-    let e,
-        { location: n, children: l, className: i } = t;
-    return (
-        (e = (0, V.S1)(n, [1, 5, 6])
-            ? {
-                  defaultTextColor: "content-inventory-overlay-text-secondary",
-                  defaultIconColor: _.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-              }
-            : 2 === n
-              ? { defaultTextColor: "interactive-text-default" }
-              : 3 === n
-                ? { defaultTextColor: "text-muted" }
-                : 4 === n
-                  ? { defaultTextColor: "text-subtle", defaultIconColor: _.A.colors.TEXT_SUBTLE }
-                  : { defaultTextColor: "text-subtle" }),
-        (0, r.jsx)(z.Provider, {
-            value: { location: n, ...e },
-            children: (0, r.jsx)("div", {
-                className: a()(W.cV, { [W.u3]: 0 === n, [W.BQ]: (0, V.S1)(n, [1, 2, 10]), [W.DY]: 3 === n }, i),
-                children: l,
-            }),
-        })
-    );
+    let { location: e, children: n, className: l } = t,
+        o = i.useMemo(() => {
+            let t;
+            return (
+                (t = (0, V.S1)(e, [1, 5, 6])
+                    ? {
+                          defaultTextColor: "content-inventory-overlay-text-secondary",
+                          defaultIconColor: _.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+                      }
+                    : 2 === e
+                      ? { defaultTextColor: "interactive-text-default" }
+                      : 3 === e
+                        ? { defaultTextColor: "text-muted" }
+                        : 4 === e
+                          ? { defaultTextColor: "text-subtle", defaultIconColor: _.A.colors.TEXT_SUBTLE }
+                          : { defaultTextColor: "text-subtle" }),
+                { location: e, ...t }
+            );
+        }, [e]);
+    return (0, r.jsx)(z.Provider, {
+        value: o,
+        children: (0, r.jsx)("div", {
+            className: a()(W.cV, { [W.u3]: 0 === e, [W.BQ]: (0, V.S1)(e, [1, 2, 10]), [W.DY]: 3 === e }, l),
+            children: n,
+        }),
+    });
 }
 function th(t) {
     let { entry: e, location: n, className: l } = t,

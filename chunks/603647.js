@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => x });
+n.d(t, { A: () => C });
 var l = n(477900),
     s = n(582128),
     r = n(806163),
@@ -12,8 +12,8 @@ var l = n(477900),
     E = n(574094),
     I = n(736056),
     B = n(976860),
-    _ = n(540747),
-    m = n(426660),
+    m = n(540747),
+    _ = n(426660),
     p = n(652215),
     A = n(534373);
 let L = n(843020),
@@ -52,7 +52,7 @@ function R(e) {
 }
 let f = [p.BVt.VERIFY, p.BVt.VERIFY_HUB_EMAIL],
     N = [p.BVt.GIFT_CARD_REDEEM];
-function F(e) {
+function x(e) {
     let { children: t } = e,
         n = (function () {
             let [e, t] = s.useState(!1),
@@ -67,7 +67,7 @@ function F(e) {
                     : "loading";
         })(),
         a = (0, r.zy)(),
-        { hidden: o } = s.useContext(_.F),
+        { hidden: o } = s.useContext(m.F),
         u = N.includes(a.pathname),
         c = f.includes(a.pathname);
     if (u) return t;
@@ -75,7 +75,7 @@ function F(e) {
         case "default":
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    c ? (0, l.jsx)(m.A, {}) : (0, l.jsx)("img", { className: A.xX, src: L, alt: "" }),
+                    c ? (0, l.jsx)(_.A, {}) : (0, l.jsx)("img", { className: A.xX, src: L, alt: "" }),
                     o ? null : (0, l.jsx)("img", { className: A.F, src: V, alt: "" }),
                     t,
                 ],
@@ -84,6 +84,11 @@ function F(e) {
         case "loading":
             return null;
     }
+}
+function F(e) {
+    let { hidden: t, setHidden: n, children: i } = e,
+        r = s.useMemo(() => ({ hidden: t, setHidden: n }), [t, n]);
+    return (0, l.jsx)(m.F.Provider, { value: r, children: i });
 }
 class w extends s.Component {
     constructor(e) {
@@ -120,8 +125,9 @@ class w extends s.Component {
                     s.cloneElement(e, { transitionTo: B.pX, replaceWith: B.bG }),
                 ),
             });
-        return (0, l.jsx)(_.F.Provider, {
-            value: { hidden: t, setHidden: this.setAuthLogoHidden },
+        return (0, l.jsx)(F, {
+            hidden: t,
+            setHidden: this.setAuthLogoHidden,
             children: (0, l.jsx)("div", {
                 className: A.WA,
                 children: (0, l.jsx)(o.F, {
@@ -134,7 +140,7 @@ class w extends s.Component {
                                       (0, l.jsx)(E.A, { splash: e, children: n }),
                                   ],
                               })
-                            : (0, l.jsx)(F, { children: n }),
+                            : (0, l.jsx)(x, { children: n }),
                 }),
             }),
         });
@@ -153,4 +159,4 @@ class w extends s.Component {
         return e || a.Fr || a.v1 || t ? this.renderMobile() : this.renderDefault();
     }
 }
-let x = w;
+let C = w;

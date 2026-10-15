@@ -1,4 +1,4 @@
-(t.r(s), t.d(s, { default: () => su }));
+(t.r(s), t.d(s, { default: () => sm }));
 var a = t(477900),
     l = t(582128),
     n = t(503698),
@@ -993,7 +993,8 @@ function sd() {
     ((0, sr.P0)({ text: e, variant: "critical" }), so.O.announce(e));
 }
 var sc = t(226451);
-function su(e) {
+let su = { overrideSettings: !0 };
+function sm(e) {
     let s,
         {
             transitionState: t,
@@ -1136,7 +1137,7 @@ function su(e) {
         : (0, a.jsx)(g.f5, {
               value: eN,
               children: (0, a.jsx)(A.l.Provider, {
-                  value: { overrideSettings: !0 },
+                  value: su,
                   children: (0, a.jsxs)(m.EO, {
                       "data-migration-pending": !0,
                       transitionState: t,

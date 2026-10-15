@@ -6664,8 +6664,9 @@ function as() {
 }
 function ar(e) {
     let { initialTab: t, children: n } = e,
-        [i, l] = R.useState(t);
-    return (0, p.jsx)(al.Provider, { value: { currentTab: i, setCurrentTab: l }, children: n });
+        [i, l] = R.useState(t),
+        s = R.useMemo(() => ({ currentTab: i, setCurrentTab: l }), [i]);
+    return (0, p.jsx)(al.Provider, { value: s, children: n });
 }
 function aa() {
     let { editStateId: e, guildId: t } = ro(),

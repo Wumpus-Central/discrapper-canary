@@ -468,9 +468,10 @@ function eD(e) {
                           );
             }
             return e;
-        }, [s, t, r, l]);
+        }, [s, t, r, l]),
+        u = a.useMemo(() => ({ isPremiumRebrand: o }), [o]);
     return (0, n.jsx)(eO.Provider, {
-        value: { isPremiumRebrand: o },
+        value: u,
         children: (0, n.jsx)("div", {
             className: i()(ep.xP, { [ep.u0]: o, [ep.mK]: o && c.length <= 2 }),
             children: c,

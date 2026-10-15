@@ -55,8 +55,9 @@ let A = function (e) {
             [O],
         ),
         H = (0, u.W)({ location: "BaseMessage" }),
-        $ = (0, t.jsx)(o.C.Provider, {
-            value: { animate: D, setAnimate: L },
+        $ = i.useMemo(() => ({ animate: D, setAnimate: L }), [D]),
+        z = (0, t.jsx)(o.C.Provider, {
+            value: $,
             children: (0, t.jsx)(c.vN, {
                 ...M,
                 children: (0, t.jsxs)("div", {
@@ -88,5 +89,5 @@ let A = function (e) {
                 }),
             }),
         });
-    return p ? (0, t.jsx)(d.M, { children: $ }) : $;
+    return p ? (0, t.jsx)(d.M, { children: z }) : z;
 };

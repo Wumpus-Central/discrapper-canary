@@ -3772,20 +3772,21 @@ function lw(e) {
             (i((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
                 a((t) => (null == e ? t : { ...t, [e.type]: e })));
         }, []),
-        A = o.useCallback((e) => l.findLast((t) => t.type === e) ?? s[e], [l, s]);
-    return (0, r.jsx)(h.L8.Provider, {
-        value: {
-            history: l,
-            discard: s,
-            currentView: c,
-            pushHistory: m,
-            goBack: p,
-            getMostRecentHistoryItemByType: A,
-            isSlideReady: d,
-            setSlideReady: u,
-        },
-        children: n,
-    });
+        A = o.useCallback((e) => l.findLast((t) => t.type === e) ?? s[e], [l, s]),
+        f = o.useMemo(
+            () => ({
+                history: l,
+                discard: s,
+                currentView: c,
+                pushHistory: m,
+                goBack: p,
+                getMostRecentHistoryItemByType: A,
+                isSlideReady: d,
+                setSlideReady: u,
+            }),
+            [l, s, c, m, p, A, d],
+        );
+    return (0, r.jsx)(h.L8.Provider, { value: f, children: n });
 }
 function lW(e) {
     let { context: t, entrypoint: n } = e,

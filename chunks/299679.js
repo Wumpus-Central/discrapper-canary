@@ -7,6 +7,7 @@ function c() {
 }
 function l(e) {
     let { newValue: t, children: n } = e,
-        i = { ...c(), ...t };
-    return (0, r.jsx)(s.Provider, { value: i, children: n });
+        l = c(),
+        o = i.useMemo(() => ({ ...l, ...t }), [l, t]);
+    return (0, r.jsx)(s.Provider, { value: o, children: n });
 }

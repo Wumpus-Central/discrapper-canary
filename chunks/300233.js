@@ -35,6 +35,7 @@ function h(e) {
             let e = u.A.getSubscriptionGroupListingsForGuildFetchState(a);
             (p || e === u.e.NOT_FETCHED) && (C(!1), s.WA(a, { includeSoftDeleted: h, countryCode: d }));
         }, [A, a, h, d, m, p]),
-        f = E === u.e.FETCHED && !p;
-    return (0, l.jsx)(o.Provider, { value: { listingsLoaded: f, fetchGroupListingsForGuild: y }, children: t });
+        f = E === u.e.FETCHED && !p,
+        g = n.useMemo(() => ({ listingsLoaded: f, fetchGroupListingsForGuild: y }), [f, y]);
+    return (0, l.jsx)(o.Provider, { value: g, children: t });
 }

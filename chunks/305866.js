@@ -30,9 +30,10 @@ function u(e) {
                 T !== e && m(e);
             },
             [T],
-        );
+        ),
+        C = r.useMemo(() => ({ inDialog: !0, setFocusLockDisabled: N }), [N]);
     return (0, i.jsx)(c.Provider, {
-        value: { inDialog: !0, setFocusLockDisabled: N },
+        value: C,
         children: (0, i.jsxs)("div", {
             ...f,
             ref: S,

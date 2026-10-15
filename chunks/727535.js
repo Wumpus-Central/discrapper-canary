@@ -7077,9 +7077,10 @@ let od = r.memo(function (e) {
                 editingMessageId: (0, u.bG)([e2.A], () => e2.A.getEditingMessage(e.id)?.id),
                 isGameInvitesPost: A,
             };
-        })(t);
+        })(t),
+        v = (0, lq.A)(f, d);
     return (0, a.jsx)(lF.Bs.Provider, {
-        value: (0, lq.A)(f, d),
+        value: v,
         children: (0, a.jsx)(lX.t, {
             children: (0, a.jsx)(oc, {
                 ...c,

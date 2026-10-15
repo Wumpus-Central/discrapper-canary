@@ -316,10 +316,8 @@ let e4 = s.memo(function (e) {
                 children: F.intl.string(F.t["0KfDxM"]),
             });
     else g = null;
-    return (0, l.jsx)(e0.Bs.Provider, {
-        value: (0, eJ.A)(h, u),
-        children: (0, l.jsx)(eX.M, { className: e3.JY, children: g }),
-    });
+    let x = (0, eJ.A)(h, u);
+    return (0, l.jsx)(e0.Bs.Provider, { value: x, children: (0, l.jsx)(eX.M, { className: e3.JY, children: g }) });
 });
 var e2 = n(599036);
 function e5(e) {

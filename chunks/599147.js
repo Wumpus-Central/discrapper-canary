@@ -36,46 +36,45 @@ function j(e) {
         } = e,
         { analyticsLocations: f } = (0, h.Ay)(b.A.USER_SETTINGS),
         [g, v] = n.useState(C(x));
-    return (
-        (0, n.useEffect)(() => {
-            v(C(x));
-        }, [x]),
-        (0, a.jsx)(y.CancellationContext.Provider, {
-            value: {
-                setStep: m,
-                premiumType: r,
-                onClose: l,
-                transitionState: t,
-                premiumSubscription: i,
-                analyticsLocations: f,
-                analyticsLocation: S.ThZ.USER_SETTINGS,
-                confettiCanvas: null,
-                churnUserDiscountOffer: o,
-                isFetchingChurnDiscountOffer: !1,
-                fullPrice: "$9.99",
-                discountedPrice: "$4.99",
-                planId: s,
-                paymentsBlocked: !1,
-                renewalInvoice: u,
-                renewalInvoiceDetails: d,
-                handleCancellation: () =>
-                    new Promise((e, t) => {
-                        setTimeout(() => {
-                            c ? t() : e();
-                        }, 1e3);
-                    }),
-                applyOffer: () =>
-                    new Promise((e, t) => {
-                        setTimeout(() => {
-                            p ? t() : e();
-                        }, 1e3);
-                    }),
-                pauseDuration: null,
-                setPauseDuration: () => {},
-            },
-            children: g,
-        })
+    (0, n.useEffect)(() => {
+        v(C(x));
+    }, [x]);
+    let E = n.useMemo(
+        () => ({
+            setStep: m,
+            premiumType: r,
+            onClose: l,
+            transitionState: t,
+            premiumSubscription: i,
+            analyticsLocations: f,
+            analyticsLocation: S.ThZ.USER_SETTINGS,
+            confettiCanvas: null,
+            churnUserDiscountOffer: o,
+            isFetchingChurnDiscountOffer: !1,
+            fullPrice: "$9.99",
+            discountedPrice: "$4.99",
+            planId: s,
+            paymentsBlocked: !1,
+            renewalInvoice: u,
+            renewalInvoiceDetails: d,
+            handleCancellation: () =>
+                new Promise((e, t) => {
+                    setTimeout(() => {
+                        c ? t() : e();
+                    }, 1e3);
+                }),
+            applyOffer: () =>
+                new Promise((e, t) => {
+                    setTimeout(() => {
+                        p ? t() : e();
+                    }, 1e3);
+                }),
+            pauseDuration: null,
+            setPauseDuration: () => {},
+        }),
+        [m, r, l, t, i, f, o, s, u, d, c, p],
     );
+    return (0, a.jsx)(y.CancellationContext.Provider, { value: E, children: g });
 }
 function C(e) {
     switch (e) {

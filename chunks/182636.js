@@ -1839,8 +1839,9 @@ function t0(e) {
             let i = (0, j.cv)(t);
             return n.games.length > i;
         }),
-        [a, s] = o.useState(l);
-    return (0, i.jsx)(tZ.Provider, { value: { expanded: a, setExpanded: s }, children: n });
+        [a, s] = o.useState(l),
+        r = o.useMemo(() => ({ expanded: a, setExpanded: s }), [a]);
+    return (0, i.jsx)(tZ.Provider, { value: r, children: n });
 }
 function t1() {
     let e = o.useContext(tZ);
