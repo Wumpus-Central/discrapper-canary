@@ -5988,6 +5988,22 @@
     }
   },
   {
+    "name": "2026-10-request-to-stream-non-games",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-server-tag-upsell-on-guild-profile",
     "kind": "user",
     "defaultConfig": {

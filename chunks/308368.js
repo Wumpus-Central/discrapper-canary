@@ -69,8 +69,8 @@ let _ = {
             (e) => (
                 a.Ay.trackWithMetadata(c.HAw.INVITE_SENT, {
                     location: _,
-                    invite_type: i.type === c.$pd.LISTENING ? c.G2g.SPOTIFY : c.G2g.APPLICATION,
-                    application_id: i.application_id,
+                    invite_type: i?.type === c.$pd.LISTENING ? c.G2g.SPOTIFY : c.G2g.APPLICATION,
+                    application_id: i?.application_id,
                     guild_id: E.getGuildId(),
                     channel_id: E.id,
                     message_id: null != e ? e.body.id : null,

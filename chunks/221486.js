@@ -1,4 +1,4 @@
-n.d(e, { X: () => d, i: () => c });
+n.d(e, { X: () => c, i: () => d });
 var i = n(477900);
 n(582128);
 var s = n(17928),
@@ -7,7 +7,7 @@ var s = n(17928),
     o = n(560595),
     r = n(760751),
     u = n(723702);
-function c(t) {
+function d(t) {
     let e = (0, s.bG)([r.A], () => (null != t ? r.A.getGameByApplication(t)?.id : void 0), [t]);
     return (0, s.bG)(
         [l.Ay, r.A],
@@ -26,7 +26,7 @@ function c(t) {
         [t, e],
     );
 }
-function d(t, e) {
+function c(t, e) {
     (0, u.isWindows)()
         ? (0, o.A)(t.pid)
         : (0, a.openModalLazy)(async () => {
@@ -45,8 +45,8 @@ function d(t, e) {
                   n.e("118577"),
                   n.e("39404"),
                   n.e("82001"),
-                  n.e("191782"),
                   n.e("352435"),
+                  n.e("191782"),
                   n.e("190088"),
               ]).then(n.bind(n, 266536));
               return (n) => (0, i.jsx)(t, { ...n, analyticsLocations: e });

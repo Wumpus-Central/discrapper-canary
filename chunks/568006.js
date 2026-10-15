@@ -26,7 +26,7 @@ function C(e) {
         S = (0, s.bG)([g.A], () => g.A.getCurrentUserActiveStream()),
         b = (0, s.bG)([p.A], () => p.A.getChannelId()),
         k = (0, x.A)(n.id),
-        R = (0, i.jsx)(i.Fragment, { children: (0, o.Wf)(n, r, t) }),
+        R = (0, i.jsx)(i.Fragment, { children: (0, o.uk)(n, r, t) }),
         { analyticsLocations: L } = (0, c.Ay)(a, d.A.REQUEST_TO_STREAM_INVITE_EMBED),
         M = v.intl.string(E.default["5+172e"]),
         P = !1;

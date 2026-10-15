@@ -177,19 +177,20 @@ function W(e) {
                 },
                 x =
                     null != u
-                        ? null == (N = null != (m = (T = u).activity.session_id) ? m : S.default.getSessionId())
-                            ? null
-                            : {
-                                  type: T.type,
-                                  session_id: N,
-                                  target_user_id: T.targetUserId,
-                                  party_id: T.activity.party?.id,
-                              }
+                        ? ((T = u),
+                          null == (N = null != (m = T.activity?.session_id) ? m : S.default.getSessionId())
+                              ? null
+                              : {
+                                    type: T.type,
+                                    session_id: N,
+                                    target_user_id: T.targetUserId,
+                                    party_id: T.activity?.party?.id,
+                                })
                         : null;
             if (
                 (null != x &&
                     null != u &&
-                    ((G.message.application_id = u.activity.application_id), (G.message.activity = x)),
+                    ((G.message.application_id = u.activity?.application_id), (G.message.activity = x)),
                 null != f && f.length > 0)
             )
                 try {
