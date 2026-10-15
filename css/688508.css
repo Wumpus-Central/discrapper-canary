@@ -78,6 +78,19 @@
     transition: var(--custom-zoom-indicator-transition)
 }
 
+.button__43cfb {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    pointer-events: auto;
+    transition: opacity .2s ease-in-out
+}
+
+.button__43cfb.idle__43cfb {
+    opacity: 0;
+    pointer-events: none
+}
+
 .voiceChannelEffectEmojiContainer__66db8 {
     background: var(--background-surface-high);
     border-radius: 50%;
@@ -126,4 +139,4 @@
     margin-inline-end: 8px
 }
 
-/*# sourceMappingURL=223213.4c3d41f13601d262.css.map*/
+/*# sourceMappingURL=688508.6608f5f89889101d.css.map*/

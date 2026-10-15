@@ -1,4 +1,4 @@
-(n.d(t, { P7: () => f, aK: () => E, kZ: () => T, o: () => A, xM: () => I, xm: () => p }), n(321073));
+(n.d(t, { P7: () => f, aK: () => E, dy: () => T, kZ: () => S, o: () => A, xM: () => m, xm: () => g }), n(321073));
 var i,
     r,
     a = n(158390),
@@ -51,7 +51,32 @@ async function f(e, t, n) {
         l = { users: r.map((e) => new d.A(e)), nextIndex: a };
     return (h.set(i, l), l);
 }
-function I() {
+let I = new a.A(30 * c.A.Millis.SECOND, 5 * c.A.Millis.MINUTE, !0),
+    p = 0;
+async function T(e) {
+    if (!(Date.now() < p)) {
+        l.h.dispatch({ type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_START", recipientIds: e });
+        try {
+            let t = await s.Bo.post({
+                url: _.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
+                body: { index: 0, user_ids: e },
+                oldFormErrors: !0,
+                rejectWithError: !1,
+            });
+            (I.succeed(),
+                (p = 0),
+                l.h.dispatch({
+                    type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_SUCCESS",
+                    recipientIds: e,
+                    eligibleRecipientIds: t.body.users.map((e) => e.id),
+                }));
+        } catch {
+            ((p = Date.now() + I.fail()),
+                l.h.dispatch({ type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_FAILURE", recipientIds: e }));
+        }
+    }
+}
+function m() {
     return (
         l.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
         s.Bo.get({ url: _.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
@@ -79,7 +104,7 @@ function I() {
         )
     );
 }
-async function p(e) {
+async function g(e) {
     let t = [],
         n = new Map();
     for (let i of e)
@@ -92,7 +117,7 @@ async function p(e) {
         }
     return (l.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n);
 }
-async function T(e) {
+async function S(e) {
     try {
         let t = await s.Bo.get({ url: _.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }),
             n = null != t.body ? o.A.createFromServer(t.body) : null;
@@ -104,4 +129,3 @@ async function T(e) {
         l.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: e });
     }
 }
-new a.A(30 * c.A.Millis.SECOND, 5 * c.A.Millis.MINUTE, !0);

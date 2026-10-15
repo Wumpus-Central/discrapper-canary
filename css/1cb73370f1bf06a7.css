@@ -17,11 +17,12 @@
 }
 
 .heroImage__2e856 {
+    aspect-ratio: 16/9;
     display: block;
-    height: 162px;
+    max-width: 288px;
     -o-object-fit: contain;
     object-fit: contain;
-    width: 288px
+    width: 100%
 }
 
 .title__2e856 {
@@ -40,4 +41,4 @@
     padding: var(--space-24)
 }
 
-/*# sourceMappingURL=de992f73f811c376.css.map*/
+/*# sourceMappingURL=1cb73370f1bf06a7.css.map*/
