@@ -766,6 +766,7 @@
   "GET_REFERRALS_REMAINING": "/users/@me/referrals/eligibility",
   "GET_REFERRAL_ELIGIBLE_USERS": "/users/@me/referrals/eligible-users",
   "CREATE_REFERRAL": "/users/@me/referrals/:param",
+  "CONTEXTUAL_REFERRAL_UPSELL_DISMISSALS": "/users/@me/contextual-referral-upsell-dismissals",
   "FAMILY_CENTER_TEEN_ACTIVITY": "/family-center/:param/activity",
   "FAMILY_CENTER_TEEN_ACTIVITY_ME": "/family-center/@me",
   "FAMILY_CENTER_TEEN_ACTIVITY_MORE": "/family-center/more-activity/:param/:param/:param/:param",
