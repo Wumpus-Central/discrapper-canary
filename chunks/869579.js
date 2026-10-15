@@ -1,10 +1,10 @@
-(n.r(t), n.d(t, { default: () => e9 }));
+(n.r(t), n.d(t, { default: () => e3 }));
 var l = n(477900),
     r = n(582128),
     i = n(17928),
     a = n(834730),
-    u = n(289873),
-    s = n(689175),
+    s = n(289873),
+    u = n(689175),
     c = n(250527),
     d = n(868652),
     o = n(645619),
@@ -51,34 +51,34 @@ var b = n(716357),
     D = n(313627),
     j = n(344351),
     G = n(795816),
-    R = n(933958),
-    T = n(44167),
-    w = n(872188),
-    L = n(868285),
+    T = n(933958),
+    L = n(44167),
+    R = n(872188),
+    w = n(868285),
     N = n(36525),
     P = n(871682),
     k = n(331322),
     U = n(821609),
     M = n(499373),
-    O = n(866665),
-    B = n(189213),
-    W = n(939249),
-    H = n(245604),
+    B = n(866665),
+    O = n(189213),
+    H = n(939249),
+    W = n(245604),
     F = n(104510),
-    q = n(661531),
-    z = n(192308),
-    K = n(775602),
-    $ = n(855823),
+    z = n(661531),
+    K = n(192308),
+    $ = n(775602),
+    q = n(855823),
     X = n(61567),
     V = n(105292),
     Y = n(517228);
 function J(e) {
     let { widget: t, onClick: n } = e,
-        r = (0, i.bG)([K.Ay], () => K.Ay.useReducedMotion),
-        { catalog_image_static_url: u, catalog_image_animated_url: s } = t.assets,
-        c = (r ? null : s) ?? u,
+        r = (0, i.bG)([$.Ay], () => $.Ay.useReducedMotion),
+        { catalog_image_static_url: s, catalog_image_animated_url: u } = t.assets,
+        c = (r ? null : u) ?? s,
         d = t.boost_price;
-    return (0, l.jsxs)(W.D, {
+    return (0, l.jsxs)(H.D, {
         className: Y.HL,
         onClick: n,
         children: [
@@ -97,7 +97,7 @@ function J(e) {
                                 justify: "center",
                                 gap: 4,
                                 children: [
-                                    (0, l.jsx)(H.U, {}),
+                                    (0, l.jsx)(W.U, {}),
                                     (0, l.jsx)(a.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
@@ -119,7 +119,7 @@ function J(e) {
                               align: "center",
                               gap: 4,
                               children: [
-                                  (0, l.jsx)(F._, { size: "sm", color: q.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, l.jsx)(F._, { size: "sm", color: z.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
                                   (0, l.jsx)(a.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
@@ -140,13 +140,13 @@ function J(e) {
     });
 }
 function Q(e) {
-    let { guildId: t, insertionTarget: n, onAddWidget: a, ...u } = e,
-        s = (0, i.yK)(
+    let { guildId: t, insertionTarget: n, onAddWidget: a, ...s } = e,
+        u = (0, i.yK)(
             [x.A, C.A],
             () => {
                 let e = C.A.getDraft(t)?.widgets ?? [],
                     n = x.A.getWidgets(t) ?? [];
-                return (0, $.aU)(n, e);
+                return (0, q.aU)(n, e);
             },
             [t],
         );
@@ -154,20 +154,20 @@ function Q(e) {
         r.useEffect(() => {
             p(t);
         }, [t]),
-        (0, l.jsx)(B.a, {
+        (0, l.jsx)(O.a, {
             title: V.intl.string(X.default.L8Xfoo),
             subtitle: V.intl.string(X.default["N8nJ+T"]),
             actions: [],
-            ...u,
+            ...s,
             children: (0, l.jsx)("div", {
                 className: Y.Vg,
-                children: s.map((e) =>
+                children: u.map((e) =>
                     (0, l.jsx)(
                         J,
                         {
                             widget: e,
                             onClick: () => {
-                                (a(e, n), u.onClose());
+                                (a(e, n), s.onClose());
                             },
                         },
                         e.type,
@@ -179,7 +179,7 @@ function Q(e) {
 }
 function Z(e, t, n) {
     let r = (r) => (0, l.jsx)(Q, { guildId: e, insertionTarget: n, onAddWidget: t, ...r });
-    (0, z.openModalLazy)(() => Promise.resolve(r), { modalKey: "guild-space-add-widget" });
+    (0, K.openModalLazy)(() => Promise.resolve(r), { modalKey: "guild-space-add-widget" });
 }
 let ee = r.createContext(null);
 function et(e) {
@@ -197,8 +197,8 @@ function et(e) {
             ),
             [],
         ),
-        u = r.useMemo(() => ({ addWidget: i, registerAddWidgetHandler: a }), [i, a]);
-    return (0, l.jsx)(ee.Provider, { value: u, children: t });
+        s = r.useMemo(() => ({ addWidget: i, registerAddWidgetHandler: a }), [i, a]);
+    return (0, l.jsx)(ee.Provider, { value: s, children: t });
 }
 function en() {
     let e = r.useContext(ee);
@@ -207,8 +207,8 @@ function en() {
 }
 var el = n(992303);
 function er(e) {
-    let { guildId: t, isEditing: n, isRemovalPending: u } = e,
-        { addWidget: s } = en(),
+    let { guildId: t, isEditing: n, isRemovalPending: s } = e,
+        { addWidget: u } = en(),
         {
             saveStatus: c,
             panelCount: d,
@@ -225,7 +225,7 @@ function er(e) {
             [t],
         ),
         g = "saving" === c,
-        m = g || u,
+        m = g || s,
         h = m || !f,
         E = o ?? V.intl.string(X.default.HmFYc5),
         p = r.useCallback(() => {
@@ -234,7 +234,7 @@ function er(e) {
         x = r.useCallback(() => {
             (0, A.iX)(t);
         }, [t]);
-    return (0, l.jsx)(L.F, {
+    return (0, l.jsx)(w.F, {
         component: "div",
         children:
             n &&
@@ -256,10 +256,10 @@ function er(e) {
                                 icon: M.T,
                                 text: V.intl.string(X.default.L8Xfoo),
                                 disabled: m,
-                                onClick: () => Z(t, s),
+                                onClick: () => Z(t, u),
                             }),
                             "error" === c
-                                ? (0, l.jsx)(O.m, {
+                                ? (0, l.jsx)(B.m, {
                                       text: E,
                                       children: (0, l.jsx)(a.E, {
                                           variant: "text-sm/medium",
@@ -282,8 +282,8 @@ function er(e) {
 }
 var ei = n(503698),
     ea = n.n(ei),
-    eu = n(425763),
-    es = n(754674),
+    es = n(425763),
+    eu = n(754674),
     ec = n(294918);
 function ed(e) {
     let { height: t } = e;
@@ -298,17 +298,17 @@ var eh = n(204581),
 let ep = "canvas, iframe, video";
 function ex(e) {
     let { isKeyboardMode: t, targetColumn: n, getColumnElement: i } = e,
-        { isDragging: a, item: u } = (0, eo.V)((e) => ({
+        { isDragging: a, item: s } = (0, eo.V)((e) => ({
             isDragging: e.isDragging() && e.getItemType() === em,
             item: e.getItem(),
         })),
-        s = (0, eh.u)(),
+        u = (0, eh.u)(),
         c = r.useRef(null),
         d = r.useRef(null);
     return (r.useLayoutEffect(() => {
         let e = c.current;
         if (!a || t || null == e) return;
-        let n = s.getMonitor();
+        let n = u.getMonitor();
         function l() {
             let t = n.getSourceClientOffset();
             if (null == t) {
@@ -318,11 +318,11 @@ function ex(e) {
             ((e.style.transform = `translate3d(${t.x}px, ${t.y}px, 0)`), (e.style.visibility = "visible"));
         }
         return (l(), n.subscribeToOffsetChange(l));
-    }, [s, a, t]),
+    }, [u, a, t]),
     r.useLayoutEffect(() => {
         let e = d.current,
             n = c.current,
-            l = a ? u?.itemPreviewProps?.getSourceElement?.() : null;
+            l = a ? s?.itemPreviewProps?.getSourceElement?.() : null;
         if (!a || t || null == e || null == n || null == l) return;
         let r = l.cloneNode(!0);
         n.style.width = `${l.getBoundingClientRect().width}px`;
@@ -348,7 +348,7 @@ function ex(e) {
             e.replaceChildren(r),
             () => e.replaceChildren()
         );
-    }, [a, t, u]),
+    }, [a, t, s]),
     r.useLayoutEffect(() => {
         let e = c.current;
         if (!a || t || null == e || null == n) return;
@@ -358,10 +358,10 @@ function ex(e) {
             e.style.width = `${l.clientWidth}px`;
         }
         r();
-        let u = new ResizeObserver(r);
-        return (u.observe(l), () => u.disconnect());
+        let s = new ResizeObserver(r);
+        return (s.observe(l), () => s.disconnect());
     }, [i, a, t, n]),
-    !a || t || null == u)
+    !a || t || null == s)
         ? null
         : (0, eE.createPortal)(
               (0, l.jsx)("div", {
@@ -375,27 +375,27 @@ function ex(e) {
 }
 var eA = n(949152);
 function eC(e) {
-    let { column: t, children: n, isPointerDragging: i, registerColumnElement: a, onDragHover: u } = e,
-        s = r.useRef(null),
+    let { column: t, children: n, isPointerDragging: i, registerColumnElement: a, onDragHover: s } = e,
+        u = r.useRef(null),
         [, c] = (0, eA.H)({
             accept: em,
             canDrop: () => i,
             hover: (e, n) => {
                 if (!i) return;
                 let l = n.getClientOffset();
-                null != l && u(e.id, t, l);
+                null != l && s(e.id, t, l);
             },
         }),
         d = r.useCallback(
             (e) => {
-                ((s.current = e), a(t, e));
+                ((u.current = e), a(t, e));
             },
             [t, a],
         );
     return (
         r.useLayoutEffect(
             () => (
-                c(s),
+                c(u),
                 () => {
                     c(null);
                 }
@@ -408,7 +408,7 @@ function eC(e) {
 function e_(e) {
     let { column: t, dndName: n, onDropAtEnd: i } = e,
         a = r.useRef(null),
-        [{ isOver: u }, s] = (0, eA.H)({
+        [{ isOver: s }, u] = (0, eA.H)({
             accept: em,
             drop: (e) => i(e.id, t),
             collect: (e) => ({ isOver: e.isOver({ shallow: !0 }) && e.canDrop() }),
@@ -416,14 +416,14 @@ function e_(e) {
     return (
         r.useLayoutEffect(
             () => (
-                s(a),
+                u(a),
                 () => {
-                    s(null);
+                    u(null);
                 }
             ),
-            [s],
+            [u],
         ),
-        (0, l.jsx)("div", { ref: a, className: ea()(ec.wr, { [ec.SX]: u }), "data-dnd-name": n })
+        (0, l.jsx)("div", { ref: a, className: ea()(ec.wr, { [ec.SX]: s }), "data-dnd-name": n })
     );
 }
 var ev = n(451395),
@@ -434,8 +434,8 @@ function eb(e) {
             guildId: t,
             widget: n,
             column: a,
-            positionNumber: u,
-            columnWidgetCount: s,
+            positionNumber: s,
+            columnWidgetCount: u,
             flatIndex: c,
             leftColumnCount: d,
             isKeyboardMode: o,
@@ -457,21 +457,21 @@ function eb(e) {
             onRemovalAnimationEnd: j,
         } = e,
         G = r.useRef(null),
-        R = r.useRef(null),
-        T = (0, i.bG)([_.A], () => (n.requires_hydration ? _.A.getHydration(t, n.id) : void 0), [
+        T = r.useRef(null),
+        L = (0, i.bG)([_.A], () => (n.requires_hydration ? _.A.getHydration(t, n.id) : void 0), [
             t,
             n.id,
             n.requires_hydration,
         ]),
-        w = (0, ey.K)(t, n),
-        { isDragging: L, dragSourcePosition: N } = (0, ev.gY)({
+        R = (0, ey.K)(t, n),
+        { isDragging: w, dragSourcePosition: N } = (0, ev.gY)({
             dragRef: G,
-            dropRef: R,
+            dropRef: T,
             index: c,
             listType: eg,
             itemType: ef,
             itemId: n.id,
-            itemPreviewProps: { getSourceElement: () => R.current },
+            itemPreviewProps: { getSourceElement: () => T.current },
             onDrop: (e) => g(e.id),
             onReorder: f,
             onEnd: (e, t) => m(e.id, t.didDrop()),
@@ -481,19 +481,19 @@ function eb(e) {
         k = null != P && P !== a,
         U = o && null != N && (k || N > c),
         M = o && null != N && !k && N < c,
-        O = r.useCallback(
+        B = r.useCallback(
             (e) => {
-                ((R.current = e), h(n.id, e));
+                ((T.current = e), h(n.id, e));
             },
             [h, n.id],
         );
     return (0, l.jsxs)("div", {
-        ref: O,
-        className: ea()(ec.NI, { [ec.cB]: L, [ec.Ni]: C, [ec.fJ]: y, [ec.Hu]: I, [ec.kC]: S, [ec.ne]: U, [ec.O3]: M }),
+        ref: B,
+        className: ea()(ec.NI, { [ec.cB]: w, [ec.Ni]: C, [ec.fJ]: y, [ec.Hu]: I, [ec.kC]: S, [ec.ne]: U, [ec.O3]: M }),
         onAnimationEnd: (e) => {
             e.target === e.currentTarget && (S ? j(n.id) : C ? v(n.id) : I && b(n.id));
         },
-        "data-dnd-name": p(a, u, s),
+        "data-dnd-name": p(a, s, u),
         children: [
             I &&
                 (0, l.jsx)("div", {
@@ -505,8 +505,8 @@ function eb(e) {
                 guildId: t,
                 widget: n,
                 guildSpaceMode: "edit",
-                hydration: T,
-                lock: w,
+                hydration: L,
+                lock: R,
                 dragHandleRef: G,
                 disabled: E,
                 onRemove: () => x(n.id),
@@ -520,15 +520,15 @@ function eS(e, t, n, l) {
     if (null == r) return void l();
     let i = e.getBoundingClientRect(),
         a = r.getBoundingClientRect(),
-        u = Math.max(
+        s = Math.max(
             0,
             Math.min(i.top - a.top + r.scrollTop - (r.clientHeight - i.height) / 2, r.scrollHeight - r.clientHeight),
         );
-    if (n || 1 > Math.abs(r.scrollTop - u)) {
-        ((r.scrollTop = u), l());
+    if (n || 1 > Math.abs(r.scrollTop - s)) {
+        ((r.scrollTop = s), l());
         return;
     }
-    (r.addEventListener("scrollend", l, { once: !0 }), r.scrollTo({ top: u, behavior: "smooth" }));
+    (r.addEventListener("scrollend", l, { once: !0 }), r.scrollTo({ top: s, behavior: "smooth" }));
 }
 var eD = n(492784);
 function ej(e) {
@@ -558,10 +558,10 @@ function ej(e) {
     });
 }
 var eG = n(663341);
-function eR(e) {
+function eT(e) {
     let { column: t, index: n, placement: r, onInsert: i } = e,
         a = V.intl.formatToPlainString(1 === t ? X.default["h9P9H+"] : X.default.xboFyi, { positionNumber: n + 1 });
-    return (0, l.jsxs)(W.D, {
+    return (0, l.jsxs)(H.D, {
         className: ea()(ec.kZ, { [ec.j2]: "before" === r, [ec.AO]: "after" === r }),
         onClick: () => i(t, n),
         "aria-label": a,
@@ -575,24 +575,24 @@ function eR(e) {
         ],
     });
 }
-function eT(e, t, n) {
+function eL(e, t, n) {
     return V.intl.formatToPlainString(1 === e ? X.default.O9RvHQ : X.default["+cSvS8"], {
         positionNumber: t,
         positionCount: n,
     });
 }
-function ew(e) {
-    let { guildId: t, widgets: n, onRemovalPendingChange: a, scrollerRef: u } = e,
-        s = r.useMemo(() => (0, es.Rl)(n), [n]),
+function eR(e) {
+    let { guildId: t, widgets: n, onRemovalPendingChange: a, scrollerRef: s } = e,
+        u = r.useMemo(() => (0, eu.Rl)(n), [n]),
         c = r.useMemo(
             () =>
-                s.map((e) =>
+                u.map((e) =>
                     e.filter((e) => {
                         let { type: t } = e;
                         return null != eD.m[t];
                     }),
                 ),
-            [s],
+            [u],
         ),
         d = r.useMemo(() => [...c[0], ...c[1]], [c]),
         o = (0, eo.V)((e) =>
@@ -602,8 +602,8 @@ function ew(e) {
         ),
         f = o.isDragging,
         g = o.isDragging ? o.widgetId : null,
-        m = (0, eu.VU)(),
-        h = (0, i.bG)([K.Ay], () => K.Ay.useReducedMotion),
+        m = (0, es.VU)(),
+        h = (0, i.bG)([$.Ay], () => $.Ay.useReducedMotion),
         E = (0, i.bG)([C.A], () => "saving" === C.A.getSaveStatus(t), [t]),
         p = f && !m,
         [x, _] = r.useState(null),
@@ -624,10 +624,10 @@ function ew(e) {
             getColumnElement: D,
             getSlotElement: j,
             gridDropSurfaceRef: G,
-            handleColumnHover: R,
-            handleDragEnd: T,
-            canAcceptPointerDrop: w,
-            placeholderHeight: L,
+            handleColumnHover: T,
+            handleDragEnd: L,
+            canAcceptPointerDrop: R,
+            placeholderHeight: w,
             registerColumnElement: N,
             registerSlotElement: P,
             snapshotSlotRects: k,
@@ -638,8 +638,8 @@ function ew(e) {
                 i,
                 {
                     columns: a,
-                    draftColumns: u,
-                    draggedWidgetId: s,
+                    draftColumns: s,
+                    draggedWidgetId: u,
                     isPointerDragging: c,
                     isKeyboardMode: d,
                     isSaving: o,
@@ -679,11 +679,11 @@ function ew(e) {
                                             })(),
                                             i = r?.getBoundingClientRect(),
                                             a = i?.top ?? 0,
-                                            u = i?.bottom ?? window.innerHeight,
-                                            s = l - a < 96 ? -1 : +(u - l < 96);
-                                        if (0 === s) return;
-                                        let c = Math.ceil(24 * (1 - (s < 0 ? l - a : u - l) / 96));
-                                        (null != r ? r.scrollBy({ top: s * c }) : window.scrollBy({ top: s * c }),
+                                            s = i?.bottom ?? window.innerHeight,
+                                            u = l - a < 96 ? -1 : +(s - l < 96);
+                                        if (0 === u) return;
+                                        let c = Math.ceil(24 * (1 - (u < 0 ? l - a : s - l) / 96));
+                                        (null != r ? r.scrollBy({ top: u * c }) : window.scrollBy({ top: u * c }),
                                             (t.current = requestAnimationFrame(e)));
                                     })));
                         },
@@ -694,13 +694,13 @@ function ew(e) {
                 { clearSlotMotion: S, snapshotSlotRects: D } = (function (e) {
                     let { columns: t, pendingDestination: n, reduceMotion: l, slotElementsRef: i } = e,
                         a = r.useRef(new Map()),
-                        u = r.useRef(new Map()),
-                        s = r.useCallback(() => {
-                            (u.current.forEach((e) => e.cancel()), u.current.clear());
+                        s = r.useRef(new Map()),
+                        u = r.useCallback(() => {
+                            (s.current.forEach((e) => e.cancel()), s.current.clear());
                         }, []),
                         c = r.useCallback(() => {
-                            (a.current.clear(), s());
-                        }, [s]),
+                            (a.current.clear(), u());
+                        }, [u]),
                         d = r.useCallback(
                             (e) => {
                                 l ||
@@ -714,54 +714,54 @@ function ew(e) {
                     return (
                         r.useLayoutEffect(() => {
                             if (l) {
-                                (a.current.clear(), s());
+                                (a.current.clear(), u());
                                 return;
                             }
                             let e = a.current;
                             0 !== e.size &&
                                 (i.current.forEach((t, n) => {
-                                    (u.current.get(n)?.cancel(), u.current.delete(n));
+                                    (s.current.get(n)?.cancel(), s.current.delete(n));
                                     let l = e.get(n);
                                     if (null == l) return;
                                     let r = t.getBoundingClientRect(),
                                         i = l.left - r.left,
                                         a = l.top - r.top;
                                     if (1 > Math.abs(i) && 1 > Math.abs(a)) return;
-                                    let s = t.animate(
+                                    let u = t.animate(
                                         [{ transform: `translate(${i}px, ${a}px)` }, { transform: "translate(0, 0)" }],
                                         { duration: 140, easing: "cubic-bezier(0.2, 0, 0, 1)" },
                                     );
                                     function c() {
-                                        u.current.get(n) === s && u.current.delete(n);
+                                        s.current.get(n) === u && s.current.delete(n);
                                     }
-                                    (u.current.set(n, s), (s.onfinish = c), (s.oncancel = c));
+                                    (s.current.set(n, u), (u.onfinish = c), (u.oncancel = c));
                                 }),
                                 e.clear());
-                        }, [s, t, n, l, i]),
-                        r.useEffect(() => s, [s]),
+                        }, [u, t, n, l, i]),
+                        r.useEffect(() => u, [u]),
                         { clearSlotMotion: c, snapshotSlotRects: d }
                     );
                 })({ columns: a, pendingDestination: m, reduceMotion: f, slotElementsRef: _ }),
                 j = (() => {
-                    if (null == s) return null;
+                    if (null == u) return null;
                     for (let [e, t] of a.entries()) {
                         let n = t.findIndex((e) => {
                             let { id: t } = e;
-                            return t === s;
+                            return t === u;
                         });
                         if (-1 !== n) return { column: e, index: n };
                     }
                     return null;
                 })(),
-                G = c && m?.widgetId === s && (null == j || m.column !== j.column || m.index !== j.index) ? m : null,
-                R = r.useCallback((e, t) => {
+                G = c && m?.widgetId === u && (null == j || m.column !== j.column || m.index !== j.index) ? m : null,
+                T = r.useCallback((e, t) => {
                     C.current[e] = t;
                 }, []),
-                T = r.useCallback((e) => C.current[e] ?? null, []),
-                w = r.useCallback((e, t) => {
+                L = r.useCallback((e) => C.current[e] ?? null, []),
+                R = r.useCallback((e, t) => {
                     null == t ? _.current.delete(e) : _.current.set(e, t);
                 }, []),
-                L = r.useCallback((e) => _.current.get(e) ?? null, []),
+                w = r.useCallback((e) => _.current.get(e) ?? null, []),
                 N = r.useCallback((e, t, n) => {
                     if (e === t) return !0;
                     let l = C.current[0]?.getBoundingClientRect(),
@@ -818,15 +818,15 @@ function ew(e) {
                             if (null == e) return;
                             let i = e.getBoundingClientRect(),
                                 a = t.x < i.left ? i.left - t.x : Math.max(0, t.x - i.right),
-                                u = t.y < i.top ? i.top - t.y : Math.max(0, t.y - i.bottom),
-                                s = a * a + u * u;
-                            s < l && ((n = r), (l = s));
+                                s = t.y < i.top ? i.top - t.y : Math.max(0, t.y - i.bottom),
+                                u = a * a + s * s;
+                            u < l && ((n = r), (l = u));
                         }),
                             U(e, n, t));
                     },
                     [U],
                 ),
-                [, O] = (0, eA.H)({
+                [, B] = (0, eA.H)({
                     accept: em,
                     canDrop: () => c,
                     drop: () => ({}),
@@ -838,21 +838,21 @@ function ew(e) {
                 });
             r.useLayoutEffect(
                 () => (
-                    O(A),
+                    B(A),
                     () => {
-                        O(null);
+                        B(null);
                     }
                 ),
-                [O],
+                [B],
             );
-            let B = r.useCallback((e) => {
+            let O = r.useCallback((e) => {
                     let t = p.current;
                     if (t?.widgetId === e) return t;
                     let n = E.current;
                     return n?.widgetId === e ? n : null;
                 }, []),
-                W = r.useCallback((e, t) => (0, es.O6)(u[t.column] ?? [], a[t.column] ?? [], t.index, e), [a, u]),
-                H = r.useCallback(() => {
+                H = r.useCallback((e, t) => (0, eu.O6)(s[t.column] ?? [], a[t.column] ?? [], t.index, e), [a, s]),
+                W = r.useCallback(() => {
                     (null != x.current && cancelAnimationFrame(x.current),
                         (x.current = null),
                         (p.current = null),
@@ -863,26 +863,26 @@ function ew(e) {
                         I());
                 }, [S, I]),
                 F = r.useCallback(() => c, [c]),
-                q = r.useCallback(
+                z = r.useCallback(
                     (e, t) => {
-                        let n = B(e);
+                        let n = O(e);
                         (t &&
                             !d &&
                             null != n &&
                             (null == j || n.column !== j.column || n.index !== j.index) &&
-                            g(e, n.column, W(e, n)),
-                            H());
+                            g(e, n.column, H(e, n)),
+                            W());
                     },
-                    [H, j, B, W, d, g],
+                    [W, j, O, H, d, g],
                 );
             return (
                 r.useLayoutEffect(() => {
-                    if (!c || null == s) return;
-                    let e = _.current.get(s);
+                    if (!c || null == u) return;
+                    let e = _.current.get(u);
                     if (null == e) return;
                     let t = e.getBoundingClientRect().height;
                     t > 0 && t !== v && y(t);
-                }, [s, c, v]),
+                }, [u, c, v]),
                 r.useEffect(
                     () => () => {
                         null != x.current && cancelAnimationFrame(x.current);
@@ -892,21 +892,21 @@ function ew(e) {
                 {
                     effectiveDestination: G,
                     draggedLocation: j,
-                    getColumnElement: T,
-                    getSlotElement: L,
+                    getColumnElement: L,
+                    getSlotElement: w,
                     gridDropSurfaceRef: A,
                     handleColumnHover: U,
-                    handleDragEnd: q,
+                    handleDragEnd: z,
                     canAcceptPointerDrop: F,
                     placeholderHeight: v,
-                    registerColumnElement: R,
-                    registerSlotElement: w,
+                    registerColumnElement: T,
+                    registerSlotElement: R,
                     snapshotSlotRects: D,
                 }
             );
         })({
             columns: c,
-            draftColumns: s,
+            draftColumns: u,
             draggedWidgetId: g,
             isPointerDragging: p,
             isKeyboardMode: m,
@@ -917,8 +917,8 @@ function ew(e) {
         {
             clearWidgetEntrance: U,
             handleAddWidget: M,
-            isEntrancePreparing: O,
-            isEntering: B,
+            isEntrancePreparing: B,
+            isEntering: O,
         } = (function (e) {
             let {
                     guildId: t,
@@ -926,8 +926,8 @@ function ew(e) {
                     isSaving: l,
                     isDraggingWidget: i,
                     isRemovalPending: a,
-                    reduceMotion: u,
-                    scrollerRef: s,
+                    reduceMotion: s,
+                    scrollerRef: u,
                     snapshotSlotRects: c,
                     getSlotElement: d,
                 } = e,
@@ -968,14 +968,14 @@ function ew(e) {
                         m.current = null;
                         return;
                     }
-                    ((m.current = null), u)
-                        ? eS(l, s, !0, () => void 0)
+                    ((m.current = null), s)
+                        ? eS(l, u, !0, () => void 0)
                         : (g((e) => new Map(e).set(t.id, "preparing")),
-                          eS(l, s, !1, () => {
+                          eS(l, u, !1, () => {
                               l.isConnected &&
                                   g((e) => ("preparing" !== e.get(t.id) ? e : new Map(e).set(t.id, "playing")));
                           }));
-                }, [d, h, u, s, n]),
+                }, [d, h, s, u, n]),
                 {
                     clearWidgetEntrance: p,
                     handleAddWidget: x,
@@ -990,14 +990,14 @@ function ew(e) {
             isDraggingWidget: f,
             isRemovalPending: y,
             reduceMotion: h,
-            scrollerRef: u,
+            scrollerRef: s,
             snapshotSlotRects: k,
             getSlotElement: j,
         }),
-        W = r.useCallback((e) => {
+        H = r.useCallback((e) => {
             _((t) => (t?.type === "settling" && t.widgetId === e ? null : t));
         }, []),
-        H = r.useCallback(
+        W = r.useCallback(
             (e) => {
                 (_(null == e ? null : { type: "removing", widgetId: e }), a(null != e));
             },
@@ -1005,27 +1005,27 @@ function ew(e) {
         ),
         F = r.useCallback(
             (e) => {
-                v === e && (k(e), (0, A.GP)(t, e), H(null));
+                v === e && (k(e), (0, A.GP)(t, e), W(null));
             },
-            [t, v, H, k],
+            [t, v, W, k],
         ),
-        q = r.useCallback(
+        z = r.useCallback(
             (e) => {
                 if (!E && !y) {
                     if ((U(e), h)) {
                         (k(e), (0, A.GP)(t, e));
                         return;
                     }
-                    H(e);
+                    W(e);
                 }
             },
-            [U, t, y, E, h, H, k],
+            [U, t, y, E, h, W, k],
         );
     (r.useLayoutEffect(() => {
         h && null != v && F(v);
     }, [F, h, v]),
         r.useEffect(() => () => a(!1), [a]));
-    let z = r.useCallback(
+    let K = r.useCallback(
             (e, n) => {
                 let l = d[e],
                     r = d[n];
@@ -1033,18 +1033,18 @@ function ew(e) {
             },
             [t, d],
         ),
-        $ = r.useCallback(
+        q = r.useCallback(
             (e, n) => {
-                (0, A.j0)(t, e, n, s[n]?.length ?? 0);
+                (0, A.j0)(t, e, n, u[n]?.length ?? 0);
             },
-            [s, t],
+            [u, t],
         ),
         Y = r.useCallback(
             (e, n) => {
-                let l = (0, es.O6)(s[e] ?? [], c[e] ?? [], n);
+                let l = (0, eu.O6)(u[e] ?? [], c[e] ?? [], n);
                 Z(t, M, { column: e, index: l });
             },
-            [c, s, t, M],
+            [c, u, t, M],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -1060,7 +1060,7 @@ function ew(e) {
                                 column: n,
                                 isPointerDragging: p,
                                 registerColumnElement: N,
-                                onDragHover: R,
+                                onDragHover: T,
                                 children: [
                                     (function (e, n) {
                                         if (0 === e.length && !f)
@@ -1083,19 +1083,19 @@ function ew(e) {
                                             return (l.splice(Math.min(i, l.length), 0, { type: "placeholder" }), l);
                                         })(e, n, b).map((i) => {
                                             if ("placeholder" === i.type)
-                                                return (0, l.jsx)(ed, { height: L }, "drag-placeholder");
+                                                return (0, l.jsx)(ed, { height: w }, "drag-placeholder");
                                             let { widget: a } = i,
-                                                u = r.findIndex((e) => {
+                                                s = r.findIndex((e) => {
                                                     let { id: t } = e;
                                                     return t === a.id;
                                                 }),
-                                                s =
-                                                    -1 === u
+                                                u =
+                                                    -1 === s
                                                         ? e.findIndex((e) => {
                                                               let { id: t } = e;
                                                               return t === a.id;
                                                           })
-                                                        : u,
+                                                        : s,
                                                 o = d.findIndex((e) => {
                                                     let { id: t } = e;
                                                     return t === a.id;
@@ -1111,7 +1111,7 @@ function ew(e) {
                                                     className: ec.O4,
                                                     children: [
                                                         h &&
-                                                            (0, l.jsx)(eR, {
+                                                            (0, l.jsx)(eT, {
                                                                 column: n,
                                                                 index: g,
                                                                 placement: "before",
@@ -1121,32 +1121,32 @@ function ew(e) {
                                                             guildId: t,
                                                             widget: a,
                                                             column: n,
-                                                            positionNumber: s + 1,
+                                                            positionNumber: u + 1,
                                                             columnWidgetCount: r.length,
                                                             flatIndex: o,
                                                             leftColumnCount: c[0].length,
                                                             isKeyboardMode: m,
                                                             isSaving: E,
-                                                            getDropLabel: eT,
-                                                            onReorder: z,
-                                                            onDrop: w,
-                                                            onDragEnd: T,
+                                                            getDropLabel: eL,
+                                                            onReorder: K,
+                                                            onDrop: R,
+                                                            onDragEnd: L,
                                                             registerSlotElement: P,
                                                             isSettling:
                                                                 x?.type === "settling" && x.widgetId === a.id && !m,
-                                                            onMotionEnd: W,
-                                                            isEntrancePreparing: O(a.id),
-                                                            isEntering: B(a.id),
+                                                            onMotionEnd: H,
+                                                            isEntrancePreparing: B(a.id),
+                                                            isEntering: O(a.id),
                                                             onEntranceAnimationEnd: U,
                                                             isRemoving: v === a.id,
                                                             isRemovalPending: y,
                                                             onRemovalAnimationEnd: F,
-                                                            onRemove: q,
+                                                            onRemove: z,
                                                             onCommitConfig: (e) => (0, A.Vk)(t, a.id, e),
                                                         }),
                                                         h &&
                                                             g === e.length - 1 &&
-                                                            (0, l.jsx)(eR, {
+                                                            (0, l.jsx)(eT, {
                                                                 column: n,
                                                                 index: e.length,
                                                                 placement: "after",
@@ -1164,7 +1164,7 @@ function ew(e) {
                                         (0, l.jsx)(e_, {
                                             column: n,
                                             dndName: V.intl.string(1 === n ? X.default.fWef0G : X.default.KcdDyT),
-                                            onDropAtEnd: $,
+                                            onDropAtEnd: q,
                                         }),
                                     p && (0, l.jsx)("div", { className: ec.XP, "aria-hidden": !0 }),
                                 ],
@@ -1178,34 +1178,34 @@ function ew(e) {
         ],
     });
 }
-var eL = n(529609),
+var ew = n(529609),
     eN = n(191023),
     eP = n(408278),
     ek = n(241326),
     eU = n(297264),
     eM = n(22231),
-    eO = n(654107),
-    eB = n(548118),
-    eW = n(837011),
-    eH = n(649640),
+    eB = n(654107),
+    eO = n(548118),
+    eH = n(837011),
+    eW = n(649640),
     eF = n(2553),
-    eq = n(405810),
-    ez = n(498642),
-    eK = n(486020),
-    e$ = n(488428),
+    ez = n(405810),
+    eK = n(498642),
+    e$ = n(486020),
+    eq = n(488428),
     eX = n(776231),
     eV = n(986898);
 function eY(e) {
-    let { guildId: t, header: n, canEdit: u, isEditing: s, isSaving: c } = e,
+    let { guildId: t, header: n, canEdit: s, isEditing: u, isSaving: c } = e,
         d = (0, i.bG)([f.A], () => f.A.getGuild(t), [t]),
-        o = (0, i.bG)([ez.A], () => ez.A.getOnlineCount(t), [t]),
-        g = (0, i.bG)([ez.A], () => ez.A.getMemberCount(t), [t]),
+        o = (0, i.bG)([eK.A], () => eK.A.getOnlineCount(t), [t]),
+        g = (0, i.bG)([eK.A], () => eK.A.getMemberCount(t), [t]),
         m = n.custom_banner,
-        h = (0, i.bG)([eW.A], () => eW.A.getProfile(t), [t]),
-        p = (0, eH.b2)().hex(),
-        x = null == d ? null : eK.Ay.getGuildIconURL({ id: d.id, icon: d.icon, size: 64 }),
-        C = (0, eO.Ay)(x, p),
-        _ = (0, eH.n6)(h?.brandColorPrimary ?? C),
+        h = (0, i.bG)([eH.A], () => eH.A.getProfile(t), [t]),
+        p = (0, eW.b2)().hex(),
+        x = null == d ? null : e$.Ay.getGuildIconURL({ id: d.id, icon: d.icon, size: 64 }),
+        C = (0, eB.Ay)(x, p),
+        _ = (0, eW.n6)(h?.brandColorPrimary ?? C),
         v = r.useMemo(
             () =>
                 null == d
@@ -1214,14 +1214,14 @@ function eY(e) {
                       ? m
                       : void 0 === m && null != n.custom_banner_hash
                         ? (function (e, t) {
-                              let n = eK.QB ? "webp" : "jpg",
+                              let n = e$.QB ? "webp" : "jpg",
                                   { CDN_HOST: l, API_ENDPOINT: r } = window.GLOBAL_ENV,
                                   i = E.Rsh.GUILD_SPACE_BANNER(e, t, n),
                                   a = null != l ? `https://${l}${i}` : location.protocol + r + i,
-                                  u = { size: (0, eX.kr)(1200 * (0, eX.mZ)()) };
-                              return ("jpg" === n && (u.quality = "lossless"), (a += `?${e$.stringify(u)}`));
+                                  s = { size: (0, eX.kr)(1200 * (0, eX.mZ)()) };
+                              return ("jpg" === n && (s.quality = "lossless"), (a += `?${eq.stringify(s)}`));
                           })(d.id, n.custom_banner_hash)
-                        : eK.Ay.getGuildBannerURL({ id: d.id, banner: d.banner }),
+                        : e$.Ay.getGuildBannerURL({ id: d.id, banner: d.banner }),
             [d, m, n.custom_banner_hash],
         ),
         y = "string" == typeof m || (void 0 === m && null != n.custom_banner_hash);
@@ -1234,12 +1234,12 @@ function eY(e) {
                       ? (0, l.jsx)("img", { className: eV.vK, src: v, alt: "" })
                       : (0, l.jsx)("div", { className: eV.vK, style: { background: _ }, "aria-hidden": !0 }),
                   (0, l.jsx)("div", { className: eV.f5, "aria-hidden": !0 }),
-                  s
+                  u
                       ? (0, l.jsxs)("div", {
                             className: eV.j0,
                             children: [
-                                (0, l.jsx)(eq.A, {
-                                    variant: "secondary",
+                                (0, l.jsx)(ez.A, {
+                                    variant: "overlay-secondary",
                                     icon: eN.ImageIcon,
                                     size: "sm",
                                     text: V.intl.string(X.default["EN+0gW"]),
@@ -1249,11 +1249,11 @@ function eY(e) {
                                     disabled: c,
                                 }),
                                 y
-                                    ? (0, l.jsx)(O.m, {
+                                    ? (0, l.jsx)(B.m, {
                                           text: V.intl.string(X.default["CunK+J"]),
                                           ariaHidden: !0,
                                           children: (0, l.jsx)(eP.K, {
-                                              variant: "critical-secondary",
+                                              variant: "overlay-secondary",
                                               size: "sm",
                                               icon: ek.TrashIcon,
                                               "aria-label": V.intl.string(X.default["CunK+J"]),
@@ -1268,10 +1268,10 @@ function eY(e) {
                   (0, l.jsxs)("div", {
                       className: eV.D_,
                       children: [
-                          (0, l.jsx)(eB.Ay, {
+                          (0, l.jsx)(eO.Ay, {
                               className: eV.Kk,
                               guild: d,
-                              size: eB.Ay.Sizes.LARGE,
+                              size: eO.Ay.Sizes.LARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
@@ -1336,8 +1336,8 @@ function eY(e) {
                           }),
                       ],
                   }),
-                  u &&
-                      !s &&
+                  s &&
+                      !u &&
                       (0, l.jsx)(U.$, {
                           icon: eM.PencilIcon,
                           text: V.intl.string(X.default.KcOpCm),
@@ -1354,13 +1354,13 @@ var eJ = n(554146),
     e1 = n(725041),
     e2 = n(49999),
     e6 = n(312152);
-function e9(e) {
+function e3(e) {
     let t,
         { guildId: m } = e,
         h = r.useRef(null),
         E = r.useRef(null),
         [v, y] = r.useState(!1),
-        [L, N, P] = (0, i.yK)([b.A], () => [b.A.getSpace(m), b.A.getFetchStatus(m), b.A.isInBackoff(m)], [m]);
+        [w, N, P] = (0, i.yK)([b.A], () => [b.A.getSpace(m), b.A.getFetchStatus(m), b.A.isInBackoff(m)], [m]);
     (r.useEffect(() => {
         let e = h.current !== m;
         ((h.current = m), ("idle" === N || e) && (0, g.u)(m, { shouldRefetch: e }));
@@ -1368,11 +1368,11 @@ function e9(e) {
         r.useEffect(() => {
             (0, c.L4)(m, !1, { respectBackoff: !0 });
         }, [m]),
-        (t = (0, T.n)()),
+        (t = (0, L.n)()),
         r.useEffect(
             () => () => {
                 if (null == t) return;
-                let e = R.Ay.getCurrentEmbeddedActivity();
+                let e = T.Ay.getCurrentEmbeddedActivity();
                 null != e &&
                     e.location.kind === j.T.GUILD_CHANNEL &&
                     e.location.channel_id === t &&
@@ -1386,15 +1386,15 @@ function e9(e) {
     r.useEffect(() => {
         U && "idle" === M && p(m);
     }, [U, M, m]);
-    let O = k?.guildSpaceSettings?.publish_status !== S.B.PUBLISHED,
-        B = r.useCallback(() => (0, g.W)(m, { publish_status: S.B.PUBLISHED }), [m]),
-        [W, H] = (0, i.yK)([C.A], () => [C.A.getDraft(m), C.A.getSaveStatus(m)], [m]),
-        F = U && null != W;
+    let B = k?.guildSpaceSettings?.publish_status !== S.B.PUBLISHED,
+        O = r.useCallback(() => (0, g.W)(m, { publish_status: S.B.PUBLISHED }), [m]),
+        [H, W] = (0, i.yK)([C.A], () => [C.A.getDraft(m), C.A.getSaveStatus(m)], [m]),
+        F = U && null != H;
     !(function (e, t) {
-        let a = (0, z.useHasModalOpen)(e1.J),
-            u = (0, i.bG)([e0.A], () => e0.A.getGuildId()),
-            s = (0, eQ.A)(),
-            [c, d] = (0, eZ.kn)(t && u === e && !s ? [eJ.M.GUILD_SPACE_NUX_MODAL] : [], {
+        let a = (0, K.useHasModalOpen)(e1.J),
+            s = (0, i.bG)([e0.A], () => e0.A.getGuildId()),
+            u = (0, eQ.A)(),
+            [c, d] = (0, eZ.kn)(t && s === e && !u ? [eJ.M.GUILD_SPACE_NUX_MODAL] : [], {
                 groupName: e2.m.GUILD_SPACE_NUX,
                 bypassAutoDismiss: !0,
             }),
@@ -1402,13 +1402,13 @@ function e9(e) {
             f = c === eJ.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {
             o.current = !1;
-        }, [e, u]),
+        }, [e, s]),
             r.useEffect(() => {
                 !f ||
                     a ||
                     o.current ||
                     ((o.current = !0),
-                    (0, z.openModalLazy)(
+                    (0, K.openModalLazy)(
                         async () => {
                             let t = await Promise.resolve().then(n.bind(n, 725041));
                             return (n) =>
@@ -1424,30 +1424,30 @@ function e9(e) {
                         o.current = !1;
                     }));
             }, [e, a, d, f]));
-    })(m, U && !F && null != L);
-    let q = F ? W.widgets : L?.widgets,
-        K = r.useMemo(() => q?.some((e) => e.locked) ?? !1, [q]);
+    })(m, U && !F && null != w);
+    let z = F ? H.widgets : w?.widgets,
+        $ = r.useMemo(() => z?.some((e) => e.locked) ?? !1, [z]);
     r.useEffect(() => {
-        U && K && ((0, d.AK)(m), (0, d.Xd)(m));
-    }, [U, m, K]);
-    let $ = (0, i.bG)(
+        U && $ && ((0, d.AK)(m), (0, d.Xd)(m));
+    }, [U, m, $]);
+    let q = (0, i.bG)(
         [o.A, x.A],
         () =>
-            L?.widgets.some((e) => {
+            w?.widgets.some((e) => {
                 let t = x.A.getWidget(m, e.type)?.powerup_sku_id;
                 return e.locked && null != t && o.A.getStateForGuild(m)?.unlockedPowerups[t] != null;
             }) ?? !1,
-        [m, L],
+        [m, w],
     );
     (r.useEffect(() => {
-        $ && (0, g.u)(m, { shouldRefetch: !0 });
-    }, [m, $]),
+        q && (0, g.u)(m, { shouldRefetch: !0 });
+    }, [m, q]),
         r.useEffect(() => {
-            U || null == W || "saving" === H || (0, A.iX)(m);
-        }, [U, W, H, m]));
+            U || null == H || "saving" === W || (0, A.iX)(m);
+        }, [U, H, W, m]));
     let X = r.useMemo(
             () =>
-                (q ?? [])
+                (z ?? [])
                     .filter((e) => {
                         let { requires_hydration: t } = e;
                         return t;
@@ -1456,25 +1456,25 @@ function e9(e) {
                         let { id: t } = e;
                         return t;
                     }),
-            [q],
+            [z],
         ),
         Y = (0, i.yK)([_.A], () => _.A.getWidgetIdsToHydrate(m, X), [m, X]),
         J = r.useRef(null);
     return (r.useEffect(() => {
-        if (J.current !== m && null != L) {
+        if (J.current !== m && null != w) {
             ((J.current = m), I(m, X, !0));
             return;
         }
         I(m, Y);
-    }, [m, L, X, Y]),
-    null == L || null == q)
+    }, [m, w, X, Y]),
+    null == w || null == z)
         ? (0, l.jsx)("div", {
               className: e6.MY,
               children: (0, l.jsx)("div", {
                   className: e6.F,
                   children:
                       "error" !== N || P
-                          ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": V.intl.string(V.t.ZTNur7) })
+                          ? (0, l.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE, "aria-label": V.intl.string(V.t.ZTNur7) })
                           : (0, l.jsx)(a.E, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
@@ -1487,27 +1487,27 @@ function e9(e) {
               children: (0, l.jsxs)("div", {
                   className: e6.MY,
                   children: [
-                      (0, l.jsx)(s.Ch, {
+                      (0, l.jsx)(u.Ch, {
                           ref: E,
                           className: e6.XG,
                           children: (0, l.jsxs)("div", {
                               className: e6.Qs,
                               children: [
-                                  U && O ? (0, l.jsx)(w.A, { onPublish: B }) : null,
+                                  U && B ? (0, l.jsx)(R.A, { onPublish: O }) : null,
                                   (0, l.jsx)(eY, {
                                       guildId: m,
-                                      header: F ? W.header : L.header,
+                                      header: F ? H.header : w.header,
                                       isEditing: F,
                                       canEdit: U,
-                                      isSaving: "saving" === H,
+                                      isSaving: "saving" === W,
                                   }),
                                   F
                                       ? (0, l.jsx)(
-                                            ew,
-                                            { guildId: m, widgets: q, onRemovalPendingChange: y, scrollerRef: E },
+                                            eR,
+                                            { guildId: m, widgets: z, onRemovalPendingChange: y, scrollerRef: E },
                                             m,
                                         )
-                                      : (0, l.jsx)(eL.A, { canEdit: U, guildId: m, widgets: q }),
+                                      : (0, l.jsx)(ew.A, { canEdit: U, guildId: m, widgets: z }),
                               ],
                           }),
                       }),

@@ -5825,6 +5825,22 @@
     }
   },
   {
+    "name": "2026-10-gdm-duration-timer",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-gift-cards-in-app-marketing",
     "kind": "user",
     "defaultConfig": {
