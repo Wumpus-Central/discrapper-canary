@@ -914,13 +914,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "639335",
-        s = "44d90ae083311514e4b1c79fcf12578b6a4f9fa2".substring(0, 7),
+        n = "639347",
+        s = "6a46af3e68d2f7a2254e789e3fb4d841572c4383".substring(0, 7),
         r = eY.A?.app.getVersion(),
         l = eY.A?.app.getBuildNumber(),
         c = eY.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1792093627364", !1) : null,
+        u = null != o ? (0, eq.A)("1792093917446", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1003,7 +1003,7 @@ function eJ() {
     );
 }
 var e0 = n(370658);
-function e1(e) {
+function e2(e) {
     let { onClose: t } = e;
     return (0, i.jsx)(eO.W, {
         "data-menu-migrated-auto": !0,
@@ -1028,7 +1028,7 @@ function e1(e) {
         }),
     });
 }
-function e2() {
+function e1() {
     let e = s.useRef(null);
     return (0, i.jsxs)("div", {
         children: [
@@ -1064,7 +1064,7 @@ function e2() {
                         animation: eG.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(e1, { onClose: t });
+                            return (0, i.jsx)(e2, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, i.jsx)(eK.Anchor, {
@@ -1115,7 +1115,7 @@ function e3(e) {
               partialRoot: eD.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e2,
+              sidebarFooter: e1,
               onViewChange: function (e) {
                   e8.has(e) || (0, e5._)(e);
                   let t = e6.get(e);

@@ -2547,6 +2547,7 @@ class ex extends O.G {
                 T: () => ["discord_protos.users.v1.AnonymizationStatus", z, "ANONYMIZATION_STATUS_"],
             },
             { no: 2, name: "anon_user_id", kind: "message", T: () => R.ol },
+            { no: 3, name: "original_user_created_at", kind: "message", T: () => L.D },
         ]);
     }
     create(e) {
@@ -2569,6 +2570,9 @@ class ex extends O.G {
                 case 2:
                     r.anonUserId = R.ol.internalBinaryRead(e, e.uint32(), n, r.anonUserId);
                     break;
+                case 3:
+                    r.originalUserCreatedAt = L.D.internalBinaryRead(e, e.uint32(), n, r.originalUserCreatedAt);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2581,7 +2585,9 @@ class ex extends O.G {
     }
     internalBinaryWrite(e, t, n) {
         (0 !== e.status && t.tag(1, S.O0.Varint).int32(e.status),
-            e.anonUserId && R.ol.internalBinaryWrite(e.anonUserId, t.tag(2, S.O0.LengthDelimited).fork(), n).join());
+            e.anonUserId && R.ol.internalBinaryWrite(e.anonUserId, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
+            e.originalUserCreatedAt &&
+                L.D.internalBinaryWrite(e.originalUserCreatedAt, t.tag(3, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
