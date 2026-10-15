@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 639380, Version Hash: 205cd33adb012f9a0af9a7693ad3ce5a18783710`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 639393, Version Hash: cc0223e566cc5a5ba0f99f48e5164d9179b5957e`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25834,7 +25834,7 @@ let ya = "isHideDevBanner",
                     className: tE()(yr.Wz, yr.mr),
                     children: [
                         (0, M.jsx)(yi, { className: yr.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "639380" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "639393" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -25945,66 +25945,67 @@ function yD(e) {
     let {
             shouldShow: t,
             duration: n,
-            onDismiss: i,
-            dismissAriaLabel: r,
-            wrapperClassName: a,
-            renderHeader: s,
-            renderBody: l,
-            phase: o,
-            setPhase: d,
+            controlsPlacement: i = "inline",
+            onDismiss: r,
+            dismissAriaLabel: a,
+            wrapperClassName: s,
+            renderHeader: l,
+            renderBody: o,
+            phase: d,
+            setPhase: c,
         } = e,
-        [c, u] = eI.useState(!1),
-        [_, E] = eI.useState(!1),
-        A = c || _,
-        h = eI.useRef(n);
+        [u, _] = eI.useState(!1),
+        [E, A] = eI.useState(!1),
+        h = u || E,
+        f = eI.useRef(n);
     (eI.useEffect(() => {
         if (!t) {
-            h.current = n;
+            f.current = n;
             return;
         }
-        if (A || !Number.isFinite(n)) return;
+        if (h || !Number.isFinite(n)) return;
         let e = (0, yS.tB)(),
-            r = new iu.Ep();
+            i = new iu.Ep();
         return (
-            r.start(h.current, () => i?.("timeout")),
+            i.start(f.current, () => r?.("timeout")),
             () => {
-                (r.stop(), (h.current -= (0, yS.tB)() - e));
+                (i.stop(), (f.current -= (0, yS.tB)() - e));
             }
         );
-    }, [t, n, A, i]),
-        (0, _j.l0)(() => i?.("unmount")));
-    let f = (0, yC.p0)({ value: { renderHeader: s, renderBody: l }, shouldUpdate: t });
-    if (null == f) return null;
-    let I = (0, M.jsx)("div", {
+    }, [t, n, h, r]),
+        (0, _j.l0)(() => r?.("unmount")));
+    let I = (0, yC.p0)({ value: { renderHeader: l, renderBody: o }, shouldUpdate: t });
+    if (null == I) return null;
+    let p = (0, M.jsx)("div", {
         className: yR.ne,
         children:
-            null != i &&
             null != r &&
+            null != a &&
             (0, M.jsx)(yN.T, {
                 icon: AA.P,
-                "aria-label": r,
-                onClick: () => i?.("user"),
+                "aria-label": a,
+                onClick: () => r?.("user"),
                 variant: "icon-only",
                 size: "xs",
             }),
     });
     return (0, M.jsx)("div", {
-        className: tE()(yR.iE, a, { [yR.RP]: "exiting" === o }),
-        "aria-hidden": "exiting" === o,
+        className: tE()(yR.iE, s, { [yR.RP]: "exiting" === d, [yR.FG]: "overlay" === i }),
+        "aria-hidden": "exiting" === d,
         onTransitionEnd: (e) => {
-            e.target === e.currentTarget && ("entering" === o ? d("shown") : "exiting" === o && d("hidden"));
+            e.target === e.currentTarget && ("entering" === d ? c("shown") : "exiting" === d && c("hidden"));
         },
-        onMouseEnter: () => u(!0),
-        onMouseLeave: () => u(!1),
-        onFocus: () => E(!0),
-        onBlur: () => E(!1),
+        onMouseEnter: () => _(!0),
+        onMouseLeave: () => _(!1),
+        onFocus: () => A(!0),
+        onBlur: () => A(!1),
         children: (0, M.jsxs)("div", {
             className: yR.Qs,
             children: [
-                Number.isFinite(n) && (0, M.jsx)(yO.r, { className: yR.qW, durationMs: n, isPaused: A }),
-                null != f.renderHeader && (0, M.jsx)("div", { className: yR.wx, children: f.renderHeader(o) }),
-                I,
-                (0, M.jsx)("div", { className: yR.rf, children: f.renderBody(o) }),
+                Number.isFinite(n) && (0, M.jsx)(yO.r, { className: yR.qW, durationMs: n, isPaused: h }),
+                null != I.renderHeader && (0, M.jsx)("div", { className: yR.wx, children: I.renderHeader(d) }),
+                p,
+                (0, M.jsx)("div", { className: yR.rf, children: I.renderBody(d) }),
             ],
         }),
     });
@@ -26013,29 +26014,36 @@ function yv(e) {
     let {
             shouldShow: t,
             duration: n,
-            onDismiss: i,
-            dismissAriaLabel: r,
-            wrapperClassName: a,
-            renderHeader: s,
-            renderBody: l,
+            controlsPlacement: i,
+            onDismiss: r,
+            onHidden: a,
+            dismissAriaLabel: s,
+            wrapperClassName: l,
+            renderHeader: o,
+            renderBody: d,
         } = e,
-        o = (0, eE.bG)([ef.Ay], () => ef.Ay.useReducedMotion),
-        [d, c] = eI.useState("hidden");
-    return (t && ("exiting" === d || "hidden" === d)
-        ? c(o ? "shown" : "entering")
-        : t || ("entering" !== d && "shown" !== d) || c(o ? "hidden" : "exiting"),
-    "hidden" === d)
+        c = (0, eE.bG)([ef.Ay], () => ef.Ay.useReducedMotion),
+        [u, _] = eI.useState("hidden");
+    t && ("exiting" === u || "hidden" === u)
+        ? _(c ? "shown" : "entering")
+        : t || ("entering" !== u && "shown" !== u) || _(c ? "hidden" : "exiting");
+    let E = eI.useRef(u);
+    return (eI.useEffect(() => {
+        ("hidden" === u && "hidden" !== E.current && a?.(), (E.current = u));
+    }, [u, a]),
+    "hidden" === u)
         ? null
         : (0, M.jsx)(yD, {
               shouldShow: t,
               duration: n,
-              onDismiss: i,
-              dismissAriaLabel: r,
-              wrapperClassName: a,
-              phase: d,
-              setPhase: c,
-              renderHeader: s,
-              renderBody: l,
+              controlsPlacement: i,
+              onDismiss: r,
+              dismissAriaLabel: s,
+              wrapperClassName: l,
+              phase: u,
+              setPhase: _,
+              renderHeader: o,
+              renderBody: d,
           });
 }
 var yb = n(518293),
