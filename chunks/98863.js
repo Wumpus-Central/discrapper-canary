@@ -1228,19 +1228,20 @@ function tO() {
 var tB = n(416852);
 let tz = { left: 8, right: 8 };
 function tH(e) {
-    let { leading: t, labelAccessory: n, trailing: s, label: r, color: a } = e,
-        { collapsed: o } = i.useContext(I),
-        c = o ? eZ.A : i.Fragment;
+    let { leading: t, labelAccessory: n, trailing: s, label: r, color: a, ref: o } = e,
+        { collapsed: c } = i.useContext(I),
+        u = c ? eZ.A : i.Fragment;
     return (0, l.jsxs)(b.B, {
+        ref: o,
         direction: "horizontal",
-        justify: o ? "center" : "start",
+        justify: c ? "center" : "start",
         align: "center",
         padding: tz,
         fullWidth: !1,
         className: tB.UP,
         children: [
             (0, l.jsx)("div", { className: tB.R4, children: t }),
-            (0, l.jsx)(c, {
+            (0, l.jsx)(u, {
                 children: (0, l.jsx)(Q.D, {
                     variant: "text-sm/medium",
                     color: a ?? "text-muted",
@@ -1248,8 +1249,8 @@ function tH(e) {
                     children: r,
                 }),
             }),
-            null != n && !o && (0, l.jsx)("div", { className: tB.nr, children: n }),
-            null != s && !o && (0, l.jsx)("div", { className: tB.ZY, children: s }),
+            null != n && !c && (0, l.jsx)("div", { className: tB.nr, children: n }),
+            null != s && !c && (0, l.jsx)("div", { className: tB.ZY, children: s }),
         ],
     });
 }
@@ -1272,38 +1273,47 @@ function tW(e) {
 }
 function t$(e) {
     let { sectionIndex: t, isCollapsed: n, onToggleCollapsed: s } = e,
-        r = (0, A.bG)([eY.A], () => eY.A.getSections()[t]),
-        { collapsed: a } = i.useContext(I),
-        o = r.key,
-        c = i.useCallback(() => s(o), [s, o]),
-        u = t > 0 ? tZ.Ci : void 0,
-        d = tW(r) ?? r.label ?? "";
-    if (a)
+        r = i.useRef(null),
+        a = i.useRef(null),
+        o = (0, A.bG)([eY.A], () => eY.A.getSections()[t]),
+        { collapsed: u } = i.useContext(I),
+        d = o.key,
+        x = i.useCallback(() => s(d), [s, d]),
+        h = t > 0 ? tZ.Ci : void 0,
+        f = tW(o) ?? o.label ?? "";
+    if (u)
         return (0, l.jsx)(N.m, {
             position: "left",
-            text: d,
+            text: f,
             ariaHidden: !0,
             children: (0, l.jsx)(b.B, {
                 padding: tV,
                 gap: 0,
-                className: u,
-                children: (0, l.jsx)(tH, { leading: (0, l.jsx)(tY, { section: r }), label: tW(r) }),
+                className: h,
+                children: (0, l.jsx)(tH, { leading: (0, l.jsx)(tY, { section: o }), label: tW(o) }),
             }),
         });
-    let x = eI.intl.formatToPlainString(n ? eC.default.QcKHvf : eC.default.jsV9yS, { sectionName: d });
-    return (0, l.jsx)(el.s, {
-        "aria-label": x,
-        onClick: c,
-        focusProps: { offset: { right: 4 } },
-        className: tZ.wx,
-        children: (0, l.jsx)(b.B, {
-            padding: tV,
-            gap: 0,
-            className: u,
-            children: (0, l.jsx)(tH, {
-                leading: (0, l.jsx)(tY, { section: r }),
-                label: (0, l.jsx)(tQ, { section: r }),
-                labelAccessory: (0, l.jsx)(tq, { isCollapsed: n }),
+    let m = eI.intl.formatToPlainString(n ? eC.default.QcKHvf : eC.default.jsV9yS, { sectionName: f });
+    return (0, l.jsx)(c.vN, {
+        focusTarget: r,
+        ringTarget: a,
+        offset: { right: 4 },
+        children: (0, l.jsx)(el.s, {
+            "aria-label": m,
+            onClick: x,
+            buttonRef: r,
+            focusProps: { enabled: !1 },
+            className: tZ.wx,
+            children: (0, l.jsx)(b.B, {
+                padding: tV,
+                gap: 0,
+                className: h,
+                children: (0, l.jsx)(tH, {
+                    ref: a,
+                    leading: (0, l.jsx)(tY, { section: o }),
+                    label: (0, l.jsx)(tQ, { section: o }),
+                    labelAccessory: (0, l.jsx)(tq, { isCollapsed: n }),
+                }),
             }),
         }),
     });
