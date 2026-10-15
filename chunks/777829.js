@@ -12,7 +12,7 @@ function c(e) {
         { cardId: c, sessionId: I, tilePosition: f } = (0, s.uM)() ?? {},
         p = (0, l.Q)(t),
         g = (0, u.o)(),
-        A = (0, a.xM)(g);
+        v = (0, a.xM)(g);
     return r.useCallback(
         (e, r) => {
             let s = (0, o.B1)(t) ? (t.variants[r ?? p]?.skuId ?? t.skuId) : t.skuId;
@@ -24,9 +24,9 @@ function c(e) {
                 product_sku_ids: (0, o.v8)(t),
                 location_stack: n,
                 position_in_section: f,
-                discount_source: (0, a.b_)(A),
+                discount_source: (0, a.b_)(v),
             });
         },
-        [t, p, I, c, n, f, A],
+        [t, p, I, c, n, f, v],
     );
 }

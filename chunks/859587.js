@@ -14,8 +14,8 @@ function c(e, t) {
         f = r.useRef(!1),
         p = (0, i.A)(n),
         g = (0, i.A)(t),
-        A = (0, i.A)(I),
-        v = (0, i.A)(c);
+        v = (0, i.A)(I),
+        x = (0, i.A)(c);
     r.useEffect(() => {
         if (!e) {
             f.current = !1;
@@ -28,14 +28,14 @@ function c(e, t) {
                 n = (0, u.B1)(t);
             (l.default.track(d.HAw.SHOP_CARD_HOVERED, {
                 shop_session_id: e?.sessionId,
-                sku_id: n ? (t.variants[A.current]?.skuId ?? t.skuId) : t.skuId,
+                sku_id: n ? (t.variants[v.current]?.skuId ?? t.skuId) : t.skuId,
                 position_in_section: e?.tilePosition,
                 card_id: e?.cardId,
                 product_sku_ids: (0, u.v8)(t),
-                location_stack: v.current,
+                location_stack: x.current,
             }),
                 (f.current = !0));
         }, 250);
         return () => clearTimeout(t);
-    }, [e, p, g, A, v]);
+    }, [e, p, g, v, x]);
 }

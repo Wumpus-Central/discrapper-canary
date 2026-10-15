@@ -28,12 +28,12 @@ var i = n(477900),
     T = n(132500),
     k = n(104142),
     P = n(407781),
-    _ = n(287809),
-    G = n(194486),
+    G = n(287809),
+    _ = n(194486),
     R = n(178226);
 function L(e) {
     let { sound: t, containerDimensions: n, ref: l } = e,
-        r = (0, c.bG)([_.default], () => _.default.getCurrentUser()),
+        r = (0, c.bG)([G.default], () => G.default.getCurrentUser()),
         a = (0, c.bG)([E.Ay], () => E.Ay.useReducedMotion),
         [o, d] = s.useState([]),
         u = o.length < 50,
@@ -42,7 +42,7 @@ function L(e) {
             if (!a && u && m && null != r) {
                 let e = (0, k.Br)({ id: t.emojiId, name: t.emojiName ?? "", animated: !1 }),
                     n = null != t.emojiId,
-                    i = G.B.PREMIUM,
+                    i = _.B.PREMIUM,
                     s = (0, y.random)(k.Bf[i].length, !1),
                     l = { id: (0, T.A)(), animationId: s, animationType: i, shouldResize: n, url: e, userId: r.id };
                 d((e) => [...e, l]);
@@ -174,7 +174,7 @@ function ei(e) {
             interactive: T = !0,
             enableSecondaryActions: k = !1,
             suppressPlaySound: P,
-            onMouseEnter: G,
+            onMouseEnter: _,
             onSelectItem: R,
             analyticsLocations: M,
             buttonOverlay: w = J.If.PLAY,
@@ -193,7 +193,7 @@ function ei(e) {
             ...ed
         } = e,
         { name: eu, emojiId: em, emojiName: ex } = x,
-        eh = (0, c.bG)([_.default], () => _.default.getCurrentUser()),
+        eh = (0, c.bG)([G.default], () => G.default.getCurrentUser()),
         ej = (0, X.v)(x, h?.guild_id),
         {
             playSoundboardSound: eg,
@@ -234,8 +234,8 @@ function ei(e) {
             [eT, ec],
         ),
         eP = null != em || null != ex,
-        e_ = !(0, B.Ir)(eh, x, h) && !q,
-        eG = y || (k && !e_),
+        eG = !(0, B.Ir)(eh, x, h) && !q,
+        e_ = y || (k && !eG),
         eR = S.LW.useStore().bottomPosition ?? 0,
         eL = eb.current?.getBoundingClientRect().bottom ?? 0,
         [eD, eM] = s.useState(!1),
@@ -245,7 +245,7 @@ function ei(e) {
         eU = s.useCallback(() => {
             eM(!1);
         }, []),
-        ez = e_ && U;
+        ez = eG && U;
     function eJ(e) {
         (eC &&
             !eA &&
@@ -258,10 +258,10 @@ function ei(e) {
     let eB = (0, i.jsx)("div", {
         onMouseEnter: ew,
         onMouseLeave: eU,
-        children: et({ sound: x, previewSound: ep, disabled: e_ && !y }),
+        children: et({ sound: x, previewSound: ep, disabled: eG && !y }),
     });
     function eV(e) {
-        return P || e_
+        return P || eG
             ? ez
                 ? (0, i.jsx)(I.LockIcon, {
                       size: "xs",
@@ -294,7 +294,7 @@ function ei(e) {
     return (0, i.jsxs)("li", {
         ref: ek,
         className: r()($.H, j, { [$.cB]: el && ey }),
-        onMouseEnter: G,
+        onMouseEnter: _,
         children: [
             el &&
                 (0, i.jsxs)(i.Fragment, {
@@ -321,7 +321,7 @@ function ei(e) {
                             [$.ju]: P,
                             [$.wT]: T,
                             [$.$9]: !T && !y,
-                            [$.Au]: e_ && !y,
+                            [$.Au]: eG && !y,
                             [$.fx]: !T && y,
                             [$.in]: T && v,
                             [$.bo]: eo,
@@ -331,7 +331,7 @@ function ei(e) {
                     onClick: (e) => {
                         eJ?.(e);
                     },
-                    onContextMenu: k && !e_ ? ej : void 0,
+                    onContextMenu: k && !eG ? ej : void 0,
                     children: [
                         (0, i.jsxs)("div", {
                             className: r()($.KM, { [$.hn]: eP }),
@@ -373,7 +373,7 @@ function ei(e) {
                                                             }),
                                                         ],
                                                     }),
-                                                    eG && eK,
+                                                    e_ && eK,
                                                 ],
                                             }),
                                         ],
@@ -392,7 +392,7 @@ function ei(e) {
                                                       className: $.d7,
                                                       children: (0, i.jsxs)("div", {
                                                           className: $.O5,
-                                                          children: [eG && eB, eG && eK],
+                                                          children: [e_ && eB, e_ && eK],
                                                       }),
                                                   }),
                                               ],
@@ -412,7 +412,7 @@ function ei(e) {
                                                                     renderSoundButton: es,
                                                                 })
                                                               : (0, i.jsxs)(i.Fragment, {
-                                                                    children: [eG && eB, eV(), eG && eK],
+                                                                    children: [e_ && eB, eV(), e_ && eK],
                                                                 }),
                                                   }),
                                               ],

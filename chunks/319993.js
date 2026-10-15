@@ -28,8 +28,8 @@ var i,
     T = n(639245),
     k = n(188645),
     P = n(796774),
-    _ = n(807348),
-    G = n(71393),
+    G = n(807348),
+    _ = n(71393),
     R = n(725807);
 n(801541);
 var L = n(889137);
@@ -79,7 +79,7 @@ function B(e) {
         r,
         { sound: a, channel: c, closePopout: u, refreshPosition: x, renderSoundButton: h } = e,
         j = "0" === a.guildId,
-        g = (0, o.bG)([G.A], () => G.A.getGuild(a.guildId)),
+        g = (0, o.bG)([_.A], () => _.A.getGuild(a.guildId)),
         p = !j && null != g,
         [I, N] = l.useState(),
         f = (0, E.tj)({ location: "SoundmojiGuildInfo" }),
@@ -160,7 +160,7 @@ function B(e) {
                               className: z.g4,
                               children: [
                                   h({
-                                      buttonOverlay: _.If.NONE,
+                                      buttonOverlay: G.If.NONE,
                                       sound: a,
                                       channel: void 0,
                                       isSoundmoji: !0,

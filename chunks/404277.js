@@ -1,35 +1,35 @@
-s.d(r, { A: () => x });
-var t = s(477900),
-    a = s(582128),
-    n = s(574211),
-    l = s(31300),
-    i = s(646270),
-    o = s(687966),
-    d = s(924895),
-    h = s(140735),
-    c = s(773669),
-    m = s(108015),
-    u = s(468039);
+a.d(r, { A: () => x });
+var s = a(477900),
+    t = a(582128),
+    n = a(574211),
+    l = a(31300),
+    i = a(646270),
+    o = a(687966),
+    d = a(924895),
+    h = a(140735),
+    c = a(773669),
+    m = a(108015),
+    u = a(468039);
 let p = { [n.Z.DESKTOP]: l.k, [n.Z.MOBILE]: i.u, [n.Z.CONSOLE]: o.GameControllerIcon, [n.Z.ROBLOX]: d.H };
 function x(e) {
     let { platforms: r } = e,
-        s = a.useMemo(() => (0, m.RV)(r), [r]),
-        n = a.useMemo(() => new Intl.ListFormat(c.default.locale).format(s.map(m.n7)), [s]);
-    return (0, t.jsxs)(t.Fragment, {
+        a = t.useMemo(() => (0, m.RV)(r), [r]),
+        n = t.useMemo(() => new Intl.ListFormat(c.default.locale).format(a.map(m.n7)), [a]);
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, t.jsx)("span", {
+            (0, s.jsx)("span", {
                 className: u.B,
                 "aria-hidden": !0,
-                children: s.map((e) => {
+                children: a.map((e) => {
                     let r = p[e];
-                    return (0, t.jsx)(
+                    return (0, s.jsx)(
                         "span",
-                        { className: u.t, children: (0, t.jsx)(r, { size: "xs", color: "currentColor" }) },
+                        { className: u.t, children: (0, s.jsx)(r, { size: "xs", color: "currentColor" }) },
                         e,
                     );
                 }),
             }),
-            s.length > 0 && (0, t.jsx)(h.A, { children: n }),
+            a.length > 0 && (0, s.jsx)(h.A, { children: n }),
         ],
     });
 }

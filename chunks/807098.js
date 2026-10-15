@@ -1,10 +1,10 @@
-n.d(t, { T: () => T });
-var A = n(17928),
-    l = n(462887),
-    _ = n(736653),
-    r = n(775602);
-function T(e, t) {
-    let n = (0, _.Ay)(),
-        T = (0, A.bG)([r.Ay], () => r.Ay.useReducedMotion);
-    return null == e ? null : (0, l.M)(n) || t ? (T ? e.darkStaticUrl : e.darkUrl) : T ? e.lightStaticUrl : e.lightUrl;
+A.d(t, { T: () => r });
+var _ = A(17928),
+    n = A(462887),
+    l = A(736653),
+    E = A(775602);
+function r(e, t) {
+    let A = (0, l.Ay)(),
+        r = (0, _.bG)([E.Ay], () => E.Ay.useReducedMotion);
+    return null == e ? null : (0, n.M)(A) || t ? (r ? e.darkStaticUrl : e.darkUrl) : r ? e.lightStaticUrl : e.lightUrl;
 }

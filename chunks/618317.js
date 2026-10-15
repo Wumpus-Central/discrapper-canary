@@ -12,11 +12,11 @@ var r = n(477900),
     f = n(466459),
     p = n(139136),
     g = n(395744),
-    A = n(623373),
-    v = n(561769),
-    x = n(846957),
-    C = n(929283),
-    m = n(245068),
+    v = n(623373),
+    x = n(561769),
+    A = n(846957),
+    m = n(929283),
+    C = n(245068),
     _ = n(761365),
     h = n(844266);
 function E(e) {
@@ -25,7 +25,7 @@ function E(e) {
 }
 function b(e) {
     let { product: t, isCardHovered: n } = e,
-        i = (0, A.YW)(t),
+        i = (0, v.YW)(t),
         { isPurchased: a, isPartiallyOwnedBundle: o } = (0, f.h)(t),
         u = i === l.R.PROFILE_EFFECT || i === l.R.PROFILE_FRAME || i === l.R.BUNDLE;
     return (0, r.jsxs)(r.Fragment, {
@@ -42,7 +42,7 @@ function R(e) {
     let t,
         { product: n, isCardHovered: i } = e,
         s = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
-        u = (0, A.YW)(n),
+        u = (0, v.YW)(n),
         d =
             ((t = (0, I.Q)(n)),
             n?.type === l.R.VARIANTS_GROUP && null != n.variants && n.variants.length > t
@@ -54,13 +54,13 @@ function R(e) {
         case l.R.PROFILE_FRAME:
             return (0, r.jsx)("div", { className: h.pI, children: (0, r.jsx)(g.A, { frame: d, filterLayer: E }) });
         case l.R.AVATAR_DECORATION:
-            return (0, r.jsx)(C.i, { item: d, user: s, isHighlighted: i, avatarSize: o._3.SIZE_120 });
+            return (0, r.jsx)(m.i, { item: d, user: s, isHighlighted: i, avatarSize: o._3.SIZE_120 });
         case l.R.NAMEPLATE:
             return (0, r.jsx)(_.A, { nameplate: d, user: s, isHighlighted: i });
         case l.R.BUNDLE:
-            return (0, r.jsx)(m.X, { product: n, user: s, isHighlighted: i });
+            return (0, r.jsx)(C.X, { product: n, user: s, isHighlighted: i });
         case l.R.EXTERNAL_SKU:
-            return (0, r.jsx)(x.B, { product: n, animationState: i ? "on" : "off" });
+            return (0, r.jsx)(A.B, { product: n, animationState: i ? "on" : "off" });
         default:
             return null;
     }
@@ -77,9 +77,9 @@ function k(e) {
 }
 let y = function (e) {
     let { skuId: t, isCardHovered: n, overrideVariantIndex: i } = e,
-        s = (0, v.Vm)(t),
+        s = (0, x.Vm)(t),
         l = (0, I.Q)(s);
     if (null == s) return null;
-    let a = (0, A.rb)(s, i ?? l);
+    let a = (0, v.rb)(s, i ?? l);
     return (0, r.jsx)(b, { product: a, isCardHovered: n });
 };

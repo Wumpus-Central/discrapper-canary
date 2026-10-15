@@ -16,10 +16,10 @@ let o = "collectibles shop product details modal",
             returnRef: f,
             tab: p,
             giftRecipient: g,
-            giftingOrigin: A,
-            cardId: v,
-            sessionId: x,
-            tilePosition: C,
+            giftingOrigin: v,
+            cardId: x,
+            sessionId: A,
+            tilePosition: m,
         } = e;
         if (t.isCategoryReward) {
             let { isPurchased: e } = (0, a.o)(l.A, t);
@@ -449,7 +449,7 @@ let o = "collectibles shop product details modal",
                 ]).then(n.bind(n, 981360));
                 return (n) =>
                     (0, r.jsx)(s.R9, {
-                        newValue: { cardId: v, sessionId: x, tilePosition: C },
+                        newValue: { cardId: x, sessionId: A, tilePosition: m },
                         children: (0, r.jsx)(e, {
                             ...n,
                             product: t,
@@ -460,7 +460,7 @@ let o = "collectibles shop product details modal",
                             returnRef: f,
                             tab: p,
                             giftRecipient: g,
-                            giftingOrigin: A,
+                            giftingOrigin: v,
                         }),
                     });
             },

@@ -12,11 +12,11 @@ var r = n(477900),
     f = n(440938),
     p = n(238184),
     g = n(536572),
-    A = n(766172),
-    v = n(758836),
-    x = n(652215),
-    C = n(202541),
-    m = n(105292);
+    v = n(766172),
+    x = n(758836),
+    A = n(652215),
+    m = n(202541),
+    C = n(105292);
 let _ = function (e) {
     let {
             product: t,
@@ -28,17 +28,17 @@ let _ = function (e) {
             fullWidth: R = !1,
             fullWidthLabel: k,
             giftRecipient: y,
-            giftingOrigin: T = C.vQ.SHOP_PAGE,
-            onTrackClick: S,
-            tabIndex: j,
+            giftingOrigin: T = m.vQ.SHOP_PAGE,
+            onTrackClick: j,
+            tabIndex: S,
         } = e,
-        { analyticsLocations: L } = (0, d.Ay)(),
-        O = i.useRef(null),
+        { analyticsLocations: O } = (0, d.Ay)(),
+        L = i.useRef(null),
         V = (0, f.uM)(),
         P = (0, p.A)();
     function N(e) {
         (e.stopPropagation(),
-            I.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            I.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: V?.sessionId,
                 sku_id: t.skuId,
                 page_section: V?.pageSection,
@@ -48,13 +48,13 @@ let _ = function (e) {
                 cta_name: "gift button",
                 page_type: P ?? "home",
             }),
-            S?.(v.sH.SEND_AS_GIFT),
+            j?.(x.sH.SEND_AS_GIFT),
             (0, c.A)({
-                skuId: (0, A.Y)({ product: t, selectedVariantIndex: _ }),
+                skuId: (0, v.Y)({ product: t, selectedVariantIndex: _ }),
                 isGift: !0,
                 giftRecipient: y,
                 giftingOrigin: T,
-                analyticsLocations: L,
+                analyticsLocations: O,
                 discoverySessionId: V?.sessionId,
                 returnRef: h,
                 onClose:
@@ -70,22 +70,22 @@ let _ = function (e) {
             variant: n ? "primary" : "secondary",
             icon: a.GiftIcon,
             onClick: N,
-            text: k ?? m.intl.string(m.t.gmnzqM),
+            text: k ?? C.intl.string(C.t.gmnzqM),
             fullWidth: !0,
-            tabIndex: j,
+            tabIndex: S,
         });
-    let M = m.intl.string(m.t["JCFN/y"]);
+    let M = C.intl.string(C.t["JCFN/y"]);
     return (0, r.jsx)(o.m, {
         text: M,
         delay: b,
         children: (0, r.jsx)(u.K, {
-            "aria-label": m.intl.formatToPlainString(m.t["5UYoSr"], { ctaLabel: M, productLabel: (0, g.s7)(t) }),
-            buttonRef: O,
+            "aria-label": C.intl.formatToPlainString(C.t["5UYoSr"], { ctaLabel: M, productLabel: (0, g.s7)(t) }),
+            buttonRef: L,
             variant: n ? "primary" : "secondary",
             icon: a.GiftIcon,
             size: "md",
             onClick: N,
-            tabIndex: j,
+            tabIndex: S,
         }),
     });
 };

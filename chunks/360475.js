@@ -1,4 +1,4 @@
-e.d(n, { A: () => b });
+e.d(n, { A: () => I });
 var i = e(477900),
     a = e(582128),
     r = e(503698),
@@ -25,15 +25,15 @@ let o = {
 var E = e(878314),
     C = e(570465),
     T = e(105292),
-    G = e(497292);
-function I(t) {
+    b = e(497292);
+function G(t) {
     let { guildTemplate: n, onClick: e, autoFocus: r } = t,
         l = a.useCallback(() => {
             e(n);
         }, [n, e]);
     return (0, i.jsx)(E.A, { icon: o[n.id], message: n.label, onClick: l, autoFocus: r });
 }
-function b(t) {
+function I(t) {
     let { className: n, isNewUser: e, onClose: a, onChooseTemplate: r, onJoin: _ } = t,
         g = (0, C.p)();
     return (0, i.jsxs)(i.Fragment, {
@@ -41,56 +41,56 @@ function b(t) {
             (0, i.jsxs)(s.rQ, {
                 "data-migration-pending": !0,
                 direction: m.A.Direction.VERTICAL,
-                className: G.wx,
+                className: b.wx,
                 separator: !1,
                 children: [
                     (0, i.jsx)(d.D, {
-                        className: G.DD,
+                        className: b.DD,
                         variant: "heading-xl/semibold",
                         children: e ? T.intl.string(T.t["9U0b1k"]) : T.intl.string(T.t["5HZu07"]),
                     }),
                     (0, i.jsx)(c.E, {
-                        className: G.VA,
+                        className: b.VA,
                         color: "text-default",
                         variant: "text-md/normal",
                         children: T.intl.string(T.t["wti/H4"]),
                     }),
-                    null != a && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: G.b, onClick: a }),
+                    null != a && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: b.b, onClick: a }),
                 ],
             }),
             (0, i.jsxs)(s.$m, {
                 "data-migration-pending": !0,
-                className: l()(G.KA, n),
+                className: l()(b.KA, n),
                 scrollbarGutter: !1,
                 children: [
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.CREATE], onClick: r, autoFocus: !0 }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.CREATE], onClick: r, autoFocus: !0 }),
                     (0, i.jsx)(c.E, {
-                        className: G.l8,
+                        className: b.l8,
                         color: "text-default",
                         variant: "text-xs/bold",
                         children: T.intl.string(T.t.JGDkfg),
                     }),
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.GAMING], onClick: r }),
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.FRIENDS], onClick: r }),
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.STUDY], onClick: r }),
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.SCHOOL_CLUB], onClick: r }),
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.LOCAL_COMMUNITY], onClick: r }),
-                    (0, i.jsx)(I, { guildTemplate: g[C.v.CREATORS], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.GAMING], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.FRIENDS], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.STUDY], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.SCHOOL_CLUB], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.LOCAL_COMMUNITY], onClick: r }),
+                    (0, i.jsx)(G, { guildTemplate: g[C.v.CREATORS], onClick: r }),
                 ],
             }),
             null != _ &&
                 (0, i.jsxs)(s.jl, {
                     "data-migration-pending": !0,
-                    className: G.qr,
+                    className: b.qr,
                     children: [
                         (0, i.jsx)(d.D, {
                             variant: "heading-lg/semibold",
-                            className: G.K8,
+                            className: b.K8,
                             children: T.intl.string(T.t["N+Mi/U"]),
                         }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: G.wC,
+                            className: b.wC,
                             children: (0, i.jsx)(p.$, {
                                 variant: "secondary",
                                 fullWidth: !0,
