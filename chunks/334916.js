@@ -7659,11 +7659,9 @@ function oy(e) {
     });
 }
 var ok = n(530557),
-    ow = n(872162);
-function oN(e, t) {
-    return { cardId: e, status: "pending" === t ? null : t };
-}
-var oC = n(202723);
+    ow = n(872162),
+    oN = n(564963),
+    oC = n(202723);
 function oA(e) {
     let { projectId: t, cardId: l, request: r, status: s, awaiting: o } = e,
         u = i.useCallback(() => {
@@ -7673,12 +7671,7 @@ function oA(e) {
             });
         }, [t, r]),
         c = i.useMemo(() => r.fields.map((e) => ({ id: e.name, label: e.label, icon: ok.R })), [r.fields]),
-        d = (function (e, t) {
-            let [n, l] = i.useState(() => oN(e, t));
-            return n.cardId !== e || (null == n.status && "pending" !== t)
-                ? (l(oN(e, t)), !1)
-                : null != n.status && t !== n.status;
-        })(l, s),
+        d = (0, oN.bB)(l, s),
         m = X()(oC.Lo, { [oC.jY]: d });
     return "superseded" === s
         ? (0, a.jsx)(
@@ -10807,46 +10800,7 @@ let cA = i.memo(function (e) {
                   ? et.awaitingUser
                   : null) ?? void 0,
         er = (0, o.bG)([tc.A], () => tc.A.getSettings(t)?.secrets, [t]),
-        ea = i.useMemo(
-            () =>
-                (function (e, t) {
-                    let n = null != t ? new Set(t.filter((e) => e.set).map((e) => e.name)) : null,
-                        l = new Map(),
-                        r = new Set(),
-                        a = !1,
-                        i = !1;
-                    for (let t = e.length - 1; t >= 0; t--) {
-                        let s = e[t];
-                        if (null == s) continue;
-                        if ("user" === s.role) {
-                            i =
-                                i ||
-                                (function (e) {
-                                    let t = e.content.trim();
-                                    return (
-                                        t === A.intl.string(C.default.UGqnoV) || t === A.intl.string(C.default.sMQt5O)
-                                    );
-                                })(s);
-                            continue;
-                        }
-                        let o = s.secretRequest?.fields ?? [];
-                        if (0 === o.length || !(0, r0.BL)(s)) continue;
-                        let u = i;
-                        for (let e of (u && null == n
-                            ? l.set(s.render_id, "pending")
-                            : u && null != n && o.every((e) => n.has(e.name))
-                              ? l.set(s.render_id, "received")
-                              : a
-                                ? l.set(s.render_id, o.some((e) => r.has(e.name)) ? "superseded" : "inactive")
-                                : l.set(s.render_id, "open"),
-                        o))
-                            r.add(e.name);
-                        ((a = !0), (i = !1));
-                    }
-                    return l;
-                })(n, er),
-            [n, er],
-        );
+        ea = i.useMemo(() => (0, oN.Mv)(n, er), [n, er]);
     if (0 === n.length) {
         if ("loading" === l)
             return (0, a.jsx)("ol", {

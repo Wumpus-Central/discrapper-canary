@@ -168,6 +168,7 @@ let s = {
                     patch: {
                         secretRequest: {
                             request_id: e.request_id,
+                            over_mcp: e.over_mcp,
                             fields: o,
                             note: e.note,
                             copy_values: e.copy_values,
