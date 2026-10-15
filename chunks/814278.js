@@ -46,7 +46,7 @@ var r = n(827762),
     U = n(798286),
     p = n(603266),
     C = n(652215),
-    w = n(660183);
+    w = n(105292);
 function D() {
     return h.A.getArticleURL(C.MVz.END_TO_END_ENCRYPTION);
 }

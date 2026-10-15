@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => e3 }));
+(n.r(t), n.d(t, { default: () => e9 }));
 var l = n(477900),
     r = n(582128),
     i = n(17928),
@@ -70,7 +70,7 @@ var b = n(716357),
     K = n(775602),
     $ = n(855823),
     X = n(61567),
-    V = n(660183),
+    V = n(105292),
     Y = n(517228);
 function J(e) {
     let { widget: t, onClick: n } = e,
@@ -1354,7 +1354,7 @@ var eJ = n(554146),
     e1 = n(725041),
     e2 = n(49999),
     e6 = n(312152);
-function e3(e) {
+function e9(e) {
     let t,
         { guildId: m } = e,
         h = r.useRef(null),

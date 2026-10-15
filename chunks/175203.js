@@ -83,7 +83,7 @@ var t = s(477900),
     eR = s(806931),
     eV = s(31408),
     ek = s(731854),
-    eM = s(660183),
+    eM = s(105292),
     e_ = s(584841);
 let eD = [eR.lp.ACTIVITY],
     eU = i.memo((e) => {
@@ -268,16 +268,16 @@ let eD = [eR.lp.ACTIVITY],
                     popoutType: x,
                 });
         }
-        let { ref: e8, width: e6, height: e2 } = (0, U.Ay)(),
-            e7 = (0, r.bG)([em.A], () => (u.type === eR.lp.USER ? em.A.getVoiceVolume(u.id) : -1 / 0)),
-            e5 = (0, H.v)({ isSpeaking: eL, voiceDb: e7, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+        let { ref: e8, width: e2, height: e7 } = (0, U.Ay)(),
+            e6 = (0, r.bG)([em.A], () => (u.type === eR.lp.USER ? em.A.getVoiceVolume(u.id) : -1 / 0)),
+            e5 = (0, H.v)({ isSpeaking: eL, voiceDb: e6, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
             e9 = (0, eR.Ay)(u) ? p.k : eG ? m.VideoIcon : A.E,
-            e3 = u.type === eR.lp.STREAM && k;
+            e4 = u.type === eR.lp.STREAM && k;
         return (0, t.jsx)(D.A, {
             section: eO.JJy.VOICE_CHANNEL_TILE,
             children: (0, t.jsx)(J.Ay, {
                 streamKey: u.id,
-                enableZoom: e3,
+                enableZoom: e4,
                 children: (0, t.jsx)("div", {
                     className: a()(e_.iE, { [e_.DF]: eP }, g),
                     style: N,
@@ -322,7 +322,7 @@ let eD = [eR.lp.ACTIVITY],
                                                       userId: ey,
                                                       channelId: v.id,
                                                       guildId: v.getGuildId(),
-                                                      containerDimensions: { width: e6 ?? 0, height: e2 ?? 0 },
+                                                      containerDimensions: { width: e2 ?? 0, height: e7 ?? 0 },
                                                   }),
                                               })
                                             : null,

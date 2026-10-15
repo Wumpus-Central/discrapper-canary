@@ -16,7 +16,7 @@ var d = n(830382),
     m = n(834730),
     h = n(28863),
     C = n(696208),
-    f = n(660183),
+    f = n(105292),
     S = n(203949);
 function E(e) {
     let { className: t, isEmailResent: n, resendEmail: i } = e;

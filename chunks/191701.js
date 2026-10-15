@@ -39,7 +39,7 @@ var n = i(284009),
     K = i(780907),
     G = i(581730),
     F = i(672396),
-    Y = i(660183),
+    Y = i(105292),
     H = i(486020),
     J = i(652215),
     B = i(477900),
@@ -195,9 +195,9 @@ var tZ = i(554146),
     t0 = i(298990),
     t1 = i(429913),
     t2 = i(263577),
-    t3 = i(826673),
-    t8 = i(192820),
-    t9 = i(308726),
+    t9 = i(826673),
+    t3 = i(192820),
+    t8 = i(308726),
     t5 = i(46282),
     t7 = i(818023),
     t4 = i(731854),
@@ -577,7 +577,7 @@ let eC = new eS(s.h, {
         if (M.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (V.A.isNotificationDisabled(F.KS.WelcomeNudge)) return null;
-            t8.Ay.supports(t4.O5.VIDEO) ||
+            t3.Ay.supports(t4.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== F.Jr.GO_LIVE_VOICE && t.type !== F.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, G.Y9)(F.KS.WelcomeNudge, {
                     notif_type: F.KS.WelcomeNudge,
@@ -627,14 +627,14 @@ let eC = new eS(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, B.jsx)(t9.ru, {
+                                (0, B.jsx)(t8.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
                                     className: et.kL,
                                 })));
                 }
-            let r = (0, t3.k8)(tZ.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t9.k8)(tZ.M.OVERLAY_OOP_WELCOME_NUX),
                 s = Y.intl.string(Y.t.KWDIrh);
             return {
                 icon:
@@ -647,16 +647,16 @@ let eC = new eS(s.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t3.Dr)(tZ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t9.Dr)(tZ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         o.A.setInputLocked(!1, j.A.getTargetPID()),
-                        r || (0, t3.Dr)(tZ.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t9.Dr)(tZ.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t3.Dr)(tZ.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t9.Dr)(tZ.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, w.qv)(), e);

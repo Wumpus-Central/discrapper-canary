@@ -5,7 +5,7 @@ var C = n(477900),
     L = n(559106),
     c = n(834730),
     u = n(946274),
-    i = n(660183),
+    i = n(105292),
     s = n(51125);
 function a(e) {
     let { icon: r, onChange: n } = e,

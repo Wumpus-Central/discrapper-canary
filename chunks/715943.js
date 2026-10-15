@@ -2,7 +2,7 @@ n.d(t, { A: () => l });
 var i = n(636537),
     r = n(148494),
     a = n(652215),
-    s = n(660183);
+    s = n(105292);
 let l = {
     changeNickname: (e, t, n, l) =>
         i.Bo.patch({

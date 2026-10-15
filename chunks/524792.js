@@ -21,7 +21,7 @@ function m(t) {
         },
     });
 }
-var p = a(660183),
+var p = a(105292),
     j = a(501250);
 function x(t) {
     let { attachment: n, guildId: a, productId: c } = t;

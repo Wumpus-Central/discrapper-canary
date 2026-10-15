@@ -11,7 +11,7 @@ var i = n(477900),
     h = n(446243),
     p = n(538638),
     m = n(270103),
-    A = n(660183),
+    A = n(105292),
     f = n(203221);
 function x(e) {
     let { channel: t, position: n, setEditorRef: x } = e,

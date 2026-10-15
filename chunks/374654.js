@@ -22,7 +22,7 @@ function y(e) {
     let n = (0, A.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: A.CollectiblesItemAssetFormat.STATIC });
     null != n && (0, I.NN)(n).catch(() => {});
 }
-var k = l(660183),
+var k = l(105292),
     x = l(352497),
     N = l(249360);
 function j(e) {

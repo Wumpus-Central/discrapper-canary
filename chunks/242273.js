@@ -3,7 +3,7 @@ var n = i(477900),
     e = i(582128),
     s = i(189213),
     l = i(834730),
-    r = i(660183),
+    r = i(105292),
     c = i(94499);
 function o(t) {
     let { errorText: a, title: i, description: o, transitionState: u, onCancel: d, onConfirm: h, children: k } = t,

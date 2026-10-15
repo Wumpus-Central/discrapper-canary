@@ -36,7 +36,7 @@ function w(e, t) {
 }
 let G = w("/detectables/games.json", b.Rsh.GAMES_DETECTABLE),
     x = w("/detectables/non-games.json", b.Rsh.NON_GAMES_DETECTABLE);
-var k = n(660183);
+var k = n(105292);
 let F = new A.A("GamesActionCreators");
 function B(e) {
     let {

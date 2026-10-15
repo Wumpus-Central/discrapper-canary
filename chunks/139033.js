@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 var r = n(192308),
     a = n(189213),
-    s = n(660183);
+    s = n(105292);
 function l(e) {
     let { title: t, subtitle: n, confirmText: l = s.intl.string(s.t.BddRzS) } = e;
     return (0, r.openModal)((e) =>

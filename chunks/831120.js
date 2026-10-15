@@ -2,7 +2,7 @@ i.d(n, { default: () => l });
 var a = i(477900);
 i(582128);
 var e = i(732159),
-    r = i(660183);
+    r = i(105292);
 function l(t) {
     let { onConfirmUninstall: n, game: i, ...l } = t;
     return (0, a.jsx)(e.u, {

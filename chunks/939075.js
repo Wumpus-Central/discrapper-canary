@@ -14,7 +14,7 @@ var i = n(17928),
     g = n(766075),
     p = n(287809),
     m = n(301736),
-    x = n(660183);
+    x = n(105292);
 function _() {
     return (0, g.openUserSettings)(f.X.CONNECTIONS_CATEGORY);
 }

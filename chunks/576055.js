@@ -6,7 +6,7 @@ var i = l(477900),
     t = l(573435),
     d = l(145497),
     c = l(649640),
-    o = l(660183),
+    o = l(105292),
     u = l(377476);
 function m(e) {
     let { guildId: s, name: l, footer: m } = e,

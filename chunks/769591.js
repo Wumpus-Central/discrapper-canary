@@ -6,7 +6,7 @@ var e = n(665260),
     o = n(935208),
     a = n(652215),
     S = n(355097),
-    s = n(660183);
+    s = n(105292);
 function g() {
     return [
         { id: "15-minutes", label: s.intl.string(s.t["8ot6gv"]), value: S.Xx.MINUTES_15 },

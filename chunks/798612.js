@@ -8,7 +8,7 @@ var s = n(31717),
     o = n(87719),
     l = n(831318),
     p = n(652215),
-    u = n(660183),
+    u = n(105292),
     d = n(101280);
 function h(t) {
     let { channel: e, onClose: n, content: h, ...C } = t;

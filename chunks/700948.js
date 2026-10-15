@@ -26,7 +26,7 @@ var i = n(477900),
     _ = n(956480),
     S = n(739820),
     T = n(270103),
-    R = n(660183),
+    R = n(105292),
     O = n(923932);
 function L(e) {
     let { channelId: t, popoutType: n, idle: a } = e,

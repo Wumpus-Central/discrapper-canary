@@ -21,7 +21,7 @@ var r = s(477900),
     _ = s(625494),
     v = s(427262),
     N = s(652215),
-    D = s(660183),
+    D = s(105292),
     y = s(915822);
 function C(e) {
     let { channel: t, guildName: s } = e,

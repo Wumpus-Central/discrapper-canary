@@ -34,7 +34,7 @@ var r = i(477900),
     v = i(339984),
     M = i(652215),
     j = i(577718),
-    B = i(660183),
+    B = i(105292),
     k = i(43850);
 let z = { x: 0, y: 0 };
 function P(e, t) {
@@ -399,7 +399,7 @@ function K(e) {
             },
             [ev, eO, el, ed, eK],
         ),
-        e6 = a.useCallback(async () => {
+        e2 = a.useCallback(async () => {
             var e;
             let i, r;
             if (null == J.current) return;
@@ -454,7 +454,7 @@ function K(e) {
                 ep(!1),
                 await V());
         }, [Y, es, el, t, ef, ed, eL, V, j, n, K, em]),
-        e2 = a.useCallback(async () => {
+        e6 = a.useCallback(async () => {
             if (null != er.current) {
                 (er.current(), (er.current = null), ep(!1));
                 return;
@@ -492,10 +492,10 @@ function K(e) {
                 disabled: !ef,
             }),
             actions: [
-                { text: B.intl.string(B.t["9TG40l"]), onClick: e2, variant: "secondary" },
+                { text: B.intl.string(B.t["9TG40l"]), onClick: e6, variant: "secondary" },
                 {
                     text: B.intl.string(B.t.ZSHmKD),
-                    onClick: e6,
+                    onClick: e2,
                     variant: "primary",
                     autoFocus: !1,
                     loading: eA,

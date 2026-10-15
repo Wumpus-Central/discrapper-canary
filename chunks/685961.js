@@ -22,7 +22,7 @@ var n = l(477900),
     N = l(478437),
     S = l(873298),
     E = l(885386),
-    T = l(660183);
+    T = l(105292);
 let y = {
     getTitle: () => T.intl.string(T.t.vJOqMB),
     getDisabledTitle: () => T.intl.string(T.t["B5ZvY+"]),
@@ -853,32 +853,32 @@ let e3 = (e) => {
               ],
           });
 };
-var e4 = l(486020),
-    e8 = l(695451);
-let e2 = (e) => {
+var e2 = l(486020),
+    e4 = l(695451);
+let e8 = (e) => {
     let { entry: t } = e,
         l = (0, V.c)("GuildDiscoveryPreviewElement"),
         { id: i, icon: a, name: s } = t,
-        r = e4.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
+        r = e2.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
     return (0, n.jsxs)("div", {
-        className: e8.kL,
+        className: e4.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e8.wx,
+                className: e4.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.nTe4HC),
             }),
             (0, n.jsx)("div", {
-                className: e8.bo,
+                className: e4.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e8.OA,
+                    className: e4.OA,
                     children: [
                         (0, n.jsx)(B.Ay, {
                             mask: B.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: e8.$d,
-                            children: (0, n.jsx)("img", { src: r, alt: "", className: e8.$f }),
+                            className: e4.$d,
+                            children: (0, n.jsx)("img", { src: r, alt: "", className: e4.$f }),
                         }),
                         (0, n.jsx)(P.E, { color: "text-default", variant: "text-sm/normal", children: s }),
                     ],
@@ -1487,7 +1487,7 @@ function t0(e) {
 }
 var t1 = l(957565),
     t3 = l(65489);
-function t4(e) {
+function t2(e) {
     let {
             element: {
                 data: { title: t, body: l, sms: a, is_localized: s },
@@ -1535,8 +1535,8 @@ function t4(e) {
           })
         : null;
 }
-var t8 = l(778712),
-    t2 = l(730134),
+var t4 = l(778712),
+    t8 = l(730134),
     t6 = l(243899);
 let t5 = (e) => {
     let { user: t } = e,
@@ -1554,7 +1554,7 @@ let t5 = (e) => {
                 children: (0, n.jsxs)("div", {
                     className: t6.eF,
                     children: [
-                        (0, n.jsx)(t2.A, { className: t6.Hk, user: t, size: t8._3.SIZE_40 }),
+                        (0, n.jsx)(t8.A, { className: t6.Hk, user: t, size: t4._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1826,7 +1826,7 @@ let ls = (e) => {
                 "data-migration-pending": !0,
                 className: em.rf,
                 children: [
-                    null != y && (0, n.jsx)(t4, { element: y }),
+                    null != y && (0, n.jsx)(t2, { element: y }),
                     null != L && (0, n.jsx)(t0, { element: L }),
                     null != li(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
@@ -1917,7 +1917,7 @@ let ls = (e) => {
                         (0, n.jsx)(e3, { entry: l.record }),
                     null != li(t, "guild_discovery_preview") &&
                         "guild_discovery" === l.name &&
-                        (0, n.jsx)(e2, { entry: l.record }),
+                        (0, n.jsx)(e8, { entry: l.record }),
                     null != li(t, "app_preview") && "application" === l.name && (0, n.jsx)(Y, { entry: l.record }),
                     null != E && (0, n.jsx)(tE, { element: E, onChange: ei, state: K }),
                     ln.includes(l.name) && null != P && (0, n.jsx)(eM, { element: P, onChange: ea, state: q }),

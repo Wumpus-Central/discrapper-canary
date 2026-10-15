@@ -28,7 +28,7 @@ var s = i(477900),
     S = i(684407),
     G = i(652215),
     w = i(818348),
-    R = i(660183),
+    R = i(105292),
     D = i(138742);
 let L = (e) => {
         let { channelData: l, onClose: i, trackOptionClick: a } = e,

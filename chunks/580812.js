@@ -10,7 +10,7 @@ var l = a(477900),
     _ = a(615550),
     d = a(652215),
     C = a(835002),
-    h = a(660183),
+    h = a(105292),
     A = a(719908);
 function g(t) {
     let { guildId: e, messageId: a, transitionState: g, onClose: E } = t,

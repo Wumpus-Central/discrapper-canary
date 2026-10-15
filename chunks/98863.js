@@ -73,7 +73,7 @@ var F = n(858899),
     ep = n(427262),
     ej = n(652215),
     eC = n(682530),
-    eI = n(660183),
+    eI = n(105292),
     ev = n(788868);
 let eA = "Friends Sidebar Add Friend Popout";
 function eb() {

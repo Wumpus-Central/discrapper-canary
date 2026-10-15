@@ -12,7 +12,7 @@ var i,
     _ = n(38405),
     E = n(643501),
     A = n(652215),
-    h = n(660183);
+    h = n(105292);
 function f(e, t) {
     u.default.track(A.HAw.REMOTE_COMMAND_SENT, {
         command_type: e,

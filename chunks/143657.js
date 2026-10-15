@@ -52,7 +52,7 @@ async function Y(e) {
     O.A.clearAll(e, L.C.Poll);
 }
 var F = n(180662),
-    W = n(660183);
+    W = n(105292);
 function q(e, t) {
     return { mediaAttachmentState: { status: t, mediaURL: e }, emoji: void 0, stickerId: void 0 };
 }

@@ -6,7 +6,7 @@ var n = e(477900),
     s = e(573648),
     o = e(652215),
     c = e(738104),
-    u = e(660183);
+    u = e(105292);
 function d(t) {
     let { onClose: a, transitionState: e, location: d, successRedirect: g, platformType: h } = t,
         [m, p] = i.useState(""),

@@ -19,7 +19,7 @@ var f = n(211287),
     m = n(818348);
 let C = new Set([p.C.COLLECTIBLES_CHECKOUT, p.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
-    y = n(660183);
+    y = n(105292);
 let I = l.createContext({ order: null, isOrderCreationEnabled: !1 });
 function S() {
     return l.useContext(I);

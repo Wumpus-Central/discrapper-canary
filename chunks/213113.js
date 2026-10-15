@@ -47,7 +47,7 @@ var W = t(345938),
     $ = t(510022),
     J = t(317560),
     V = t(99161),
-    K = t(660183),
+    K = t(105292),
     X = t(698132);
 function Q(e) {
     let { mediaItems: l, labels: t, selectedIndex: n, onSelectIndex: i } = e;

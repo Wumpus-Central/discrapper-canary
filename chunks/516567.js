@@ -27,7 +27,7 @@ let R = function (t) {
     return (0, i.jsx)(r.$m, { "data-migration-pending": !0, className: C()(L.j, n), children: e });
 };
 var p = n(652215),
-    I = n(660183),
+    I = n(105292),
     F = n(367699);
 let U = function (t) {
     let { onClose: e, channelId: n } = t,

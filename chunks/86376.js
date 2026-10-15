@@ -17,7 +17,7 @@ var i = t(477900),
     g = t(149790),
     A = t(935208),
     N = t(107123),
-    f = t(660183),
+    f = t(105292),
     C = t(604280);
 function p(e) {
     let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,

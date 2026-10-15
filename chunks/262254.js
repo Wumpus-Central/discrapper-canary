@@ -17,7 +17,7 @@ var s = n(477900),
     h = n(815996),
     v = n(518293),
     x = n(758836),
-    g = n(660183);
+    g = n(105292);
 function k(t) {
     let { quest: e, onClaimRewardClick: n, size: l = "md" } = t,
         m = (0, d.LS)(e),

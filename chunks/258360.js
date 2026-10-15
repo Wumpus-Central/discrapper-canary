@@ -25,7 +25,7 @@ var a = n(477900),
     _ = n(186306),
     E = n(323350),
     M = n(652215),
-    N = n(660183),
+    N = n(105292),
     P = n(946190);
 function k(t) {
     let { text: e, editor: k, target: O, onHeightUpdate: R, onSelect: X, clipboardHasMixedContent: v } = t,

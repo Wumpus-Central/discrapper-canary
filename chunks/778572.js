@@ -23,7 +23,7 @@ var l = n(284009),
     C = n(576705),
     T = n(257120),
     D = n(148355),
-    O = n(660183);
+    O = n(105292);
 function _(e) {
     let {
             titleWithQuery: t,
@@ -1124,8 +1124,8 @@ let e7 = {
         return -1 === r ? null : t.length + r;
     },
 };
-var e8 = n(307731);
-let e2 = { results: { command: null, stickers: [] } };
+var e2 = n(307731);
+let e8 = { results: { command: null, stickers: [] } };
 function e6(e, t) {
     return (0, c.jsx)(D.A, { sticker: e, isInteracting: t, size: 40 });
 }
@@ -1138,7 +1138,7 @@ let e5 = {
         M.A.getOptionStates(e.id).query.hasValue,
     queryResults(e, t, n, l) {
         let i = M.A.getActiveCommand(e.id)?.untranslatedName;
-        if (null == i) return e2;
+        if (null == i) return e8;
         let r = [];
         return (
             (0, eg.YB)(),
@@ -1389,7 +1389,7 @@ let tt = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                 let { emojis: r } = U.Ay.queryEmojiResults({
                     query: n,
                     channel: e,
-                    intention: e8.EmojiIntention.REACTION,
+                    intention: e2.EmojiIntention.REACTION,
                     maxCount: 50,
                 });
                 return { results: { emojis: r.unlocked } };
@@ -1725,7 +1725,7 @@ function tu(e) {
                 }
             } else if (e === o.DB.EMOJIS_AND_STICKERS) {
                 if (
-                    (null != r && r.length > 0 && (0, a.K)(e8.EmojiInteractionPoint.AutocompleteTyped),
+                    (null != r && r.length > 0 && (0, a.K)(e2.EmojiInteractionPoint.AutocompleteTyped),
                     null != r && ts({ type: e, channel: t, guild: n, query: r, isAtStart: s, options: l }))
                 ) {
                     p = { type: e, typeInfo: y, query: r.substring(y.sentinel?.length ?? 0) };

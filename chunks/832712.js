@@ -10,7 +10,7 @@ var i = n(665260),
     u = n(652215),
     _ = n(406535),
     E = n(355097),
-    A = n(660183);
+    A = n(105292);
 let h = {
     open(e) {
         s.h.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_OPEN", guildId: e });

@@ -51,7 +51,7 @@ async function y(e, t, i, n) {
         a
     );
 }
-var b = i(660183),
+var b = i(105292),
     w = i(510920);
 let x = (0, o.k)(function (e) {
     let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: a, ...s } = e;

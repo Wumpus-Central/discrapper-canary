@@ -1,7 +1,7 @@
 l.d(i, { A: () => c });
 var n = l(47167),
     a = l(652215),
-    e = l(660183);
+    e = l(105292);
 function c(t) {
     let { channel: i, isReadonly: l = !1, isCreatingThread: c = !1 } = t,
         r = (0, n.Ay)(i, !0),

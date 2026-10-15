@@ -15,7 +15,7 @@ var a = i(477900),
     m = i(576705),
     A = i(927813),
     I = i(652215),
-    v = i(660183);
+    v = i(105292);
 function _(e, n) {
     let { savedMessage: i, isBookmark: t } = (0, l.cf)([k.A], () => ({
             savedMessage: k.A.getSavedMessage(e.channel_id, e.id),

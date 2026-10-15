@@ -60,7 +60,7 @@ var C = l(503698),
     ea = l(121806),
     ei = l(988665),
     eo = l(652215),
-    ec = l(660183);
+    ec = l(105292);
 function eu(e, t) {
     return { type: e, data: t };
 }
@@ -1023,7 +1023,7 @@ function e5(e, t) {
     }
     return !1;
 }
-let e6 = { whiteSpace: "pre", wordWrap: "normal" };
+let e2 = { whiteSpace: "pre", wordWrap: "normal" };
 function e3(e) {
     let [t, l] = e,
         r = [];
@@ -1035,7 +1035,7 @@ function e3(e) {
     }
     return r;
 }
-function e2(e) {
+function e6(e) {
     return (0, n.jsx)(eZ, { ...e });
 }
 function e9(e) {
@@ -1060,10 +1060,10 @@ let e7 = s.memo(function (e) {
         onChange: i,
         children: (0, n.jsx)(L.Fo, {
             className: eX.E,
-            style: e6,
+            style: e2,
             placeholder: r,
             decorate: e3,
-            renderLeaf: e2,
+            renderLeaf: e6,
             renderPlaceholder: e9,
             onKeyDown: o,
             onFocus: c,

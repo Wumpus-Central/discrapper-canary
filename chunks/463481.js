@@ -47,7 +47,7 @@ var i,
     z = n(827827),
     X = n(481045),
     q = n(57129),
-    Z = n(660183),
+    Z = n(105292),
     Q = n(293686);
 function J(e) {
     let { closePopout: t } = e;
@@ -494,8 +494,8 @@ var eK = n(769015),
     e1 = n(567249),
     e2 = n(507756),
     e3 = n(929921),
-    e6 = n(616356),
-    e5 = n(650338),
+    e5 = n(616356),
+    e6 = n(650338),
     e4 = n(753070),
     e7 = n(900795);
 function e8(e) {
@@ -633,7 +633,7 @@ var tX = n(338771),
     t1 = n(758836),
     t2 = n(165610),
     t3 = n(79958);
-function t6(e, t, n) {
+function t5(e, t, n) {
     return (
         null != e &&
         (null != n
@@ -644,7 +644,7 @@ function t6(e, t, n) {
               (0, tL.A)(t, F.jUm.JOIN))
     );
 }
-let t5 = a.memo(function (e) {
+let t6 = a.memo(function (e) {
     let {
             stream: t,
             canGoLive: i,
@@ -668,7 +668,7 @@ let t5 = a.memo(function (e) {
         } = e,
         { parentAnalyticsLocation: D, analyticsLocations: v } = (0, ed.Ay)(),
         b = (0, tZ.A)(m?.id),
-        M = t6(m, p, f),
+        M = t5(m, p, f),
         { enabled: P } = tj.useConfig({ location: "activity-panel" }),
         U = (0, tV.H)({ location: "activity-panel" }),
         w = (0, tW.Bp)("activity-panel"),
@@ -1590,7 +1590,7 @@ let nM = (0, N.A)(function (e) {
         T = (0, _.bG)([L.Ay], () => L.Ay.getConnectedActivityChannelId()),
         m = (0, _.bG)([tn.A], () => tn.A.getChannel(T)),
         g = (0, _.bG)([tr.A], () => tr.A.getGuild(m?.guild_id)),
-        [S, N] = (0, _.yK)([e6.A], () => [e6.A.getCurrentUserActiveStream(), e6.A.getStreamerActiveStreamMetadata()]),
+        [S, N] = (0, _.yK)([e5.A], () => [e5.A.getCurrentUserActiveStream(), e5.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
         R = m?.type === F.rbe.GUILD_SPACE ? null : O,
         b = (0, _.bG)([ew.A], () => (0, t2.ny)(ew.A.getMainFrame())),
@@ -1617,9 +1617,9 @@ let nM = (0, N.A)(function (e) {
         j = (0, _.bG)([td.default, tl.A], () => (null != m ? (0, eI.m1)(m, td.default, tl.A) : void 0)),
         W = (function () {
             let { resolution: e, fps: t } = (0, _.cf)([e3.A], () => e3.A.getState()),
-                n = (0, _.bG)([e6.A], () => e6.A.getCurrentUserActiveStream()?.guildId),
+                n = (0, _.bG)([e5.A], () => e5.A.getCurrentUserActiveStream()?.guildId),
                 i = (0, e2.A)("useStreamQualityIndicator", n, e, t);
-            if (i !== e4.on.RESOLUTION_720 || t === e4.kn.FPS_60) return `${(0, e4.zr)(i)} ${(0, e5.Bs)(t)}`;
+            if (i !== e4.on.RESOLUTION_720 || t === e4.kn.FPS_60) return `${(0, e4.zr)(i)} ${(0, e6.Bs)(t)}`;
         })(),
         [Y, K] = a.useState(!1),
         $ = (0, _.bG)([e1.A], () => e1.A.getWindowOpen(F.MLl.ACTIVITY_POPOUT)),
@@ -1686,7 +1686,7 @@ let nM = (0, N.A)(function (e) {
                     if (f || p) return [];
                     let e = [];
                     return (
-                        o && d && t6(t, n, i) && null == i && e.push(E.M.ACCOUNT_LINK_INVITE_FRIENDS),
+                        o && d && t5(t, n, i) && null == i && e.push(E.M.ACCOUNT_LINK_INVITE_FRIENDS),
                         null != c && t?.id != null && t?.name != null && e.push(E.M.JOIN_GAME_COMMUNITY_RTC_CTA),
                         e
                     );
@@ -1758,7 +1758,7 @@ let nM = (0, N.A)(function (e) {
             () =>
                 eE
                     ? em(G, A, { isGameRunning: !0 })
-                    : null != R && null != G && t6(G, V, R)
+                    : null != R && null != G && t5(G, V, R)
                       ? (0, r.jsx)(nD, {
                             application: G,
                             embeddedActivity: R,
@@ -1803,7 +1803,7 @@ let nM = (0, N.A)(function (e) {
                   className: ng.rf,
                   children: [
                       eg,
-                      (0, r.jsx)(t5, {
+                      (0, r.jsx)(t6, {
                           stream: S,
                           canGoLive: B,
                           canGoLiveActivity: k,

@@ -12,7 +12,7 @@ var l = t(477900),
     x = t(71393),
     h = t(365258),
     A = t(926418),
-    f = t(660183),
+    f = t(105292),
     j = t(286312);
 function N(e) {
     let { guildIds: s, direction: t, onClick: n } = e,

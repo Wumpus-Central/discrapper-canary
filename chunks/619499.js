@@ -8,7 +8,7 @@ var i = n(477900),
     u = n(836602),
     d = n(624826),
     c = n(858899),
-    g = n(660183);
+    g = n(105292);
 function m() {
     (0, c.P0)({ text: g.intl.string(g.t["84MExs"]), variant: "critical" });
 }

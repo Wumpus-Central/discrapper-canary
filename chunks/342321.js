@@ -7,7 +7,7 @@ var i = e(477782),
     u = e(587895),
     r = e(928658),
     d = e(652215),
-    a = e(660183);
+    a = e(105292);
 let s = "app_channel_context_menu";
 function A(n, l) {
     let e = n.type === d.rbe.GUILD_APP ? n.getApplicationId() : null;

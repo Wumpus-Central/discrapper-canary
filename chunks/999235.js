@@ -12,7 +12,7 @@ var a = n(477900),
     f = n(178186),
     _ = n(431804),
     k = n(652215),
-    p = n(660183),
+    p = n(105292),
     A = n(359289);
 function C(t) {
     let { onClose: e, source: n = _.y.KEYBIND, transitionState: C } = t,

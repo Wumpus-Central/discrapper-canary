@@ -9,7 +9,7 @@ var i = n(477900),
     c = n(294454),
     u = n(758836),
     m = n(652215),
-    h = n(660183);
+    h = n(105292);
 function g(e) {
     let { skuId: t, product: s, productName: r, tab: a, source: h = "collectibles-shop-pdp", onTrackClick: g } = e;
     return l.useCallback(() => {

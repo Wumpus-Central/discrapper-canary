@@ -76,7 +76,7 @@ var r,
     R = n(845625),
     L = n(615550),
     y = n(652215),
-    D = n(660183);
+    D = n(105292);
 function v(e) {
     return e.type === y.lAJ.AUTO_MODERATION_ACTION;
 }

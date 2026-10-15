@@ -13,7 +13,7 @@ var a = n(477900),
     p = n(375500),
     b = n(439147),
     j = n(652215),
-    k = n(660183);
+    k = n(105292);
 function u(e) {
     let { channel: i, message: n, isUnread: u, onSelect: x } = e,
         I = (0, A.b)(i),

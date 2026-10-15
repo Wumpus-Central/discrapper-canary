@@ -408,7 +408,7 @@ var et = n(821609),
     ex = n(79545),
     em = n(862611),
     eC = n(630037),
-    ep = n(660183),
+    ep = n(105292),
     ef = n(191559);
 function eE(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: r } = e,
@@ -943,8 +943,8 @@ var e$ = n(889137),
     e1 = n(607470),
     e2 = n(396813),
     e3 = n(405670),
-    e6 = n(112142),
-    e7 = n(646917),
+    e7 = n(112142),
+    e6 = n(646917),
     e8 = n(291749),
     e9 = n(576761),
     e5 = n(895253),
@@ -1334,7 +1334,7 @@ function tB(e) {
         g = (0, en.NA)({ quest: a }),
         A = r.useMemo(() => (0, e8.tW)(a, e8.fY.HERO_IMAGE), [a]),
         j = r.useMemo(() => (null == A ? {} : { backgroundImage: `url(${A.url})` }), [A]),
-        R = e6.t.useConfig({ location: P.rE.QUESTS_BAR }),
+        R = e7.t.useConfig({ location: P.rE.QUESTS_BAR }),
         T = (0, en.mU)({
             quest: a,
             location: P.rE.QUESTS_BAR,
@@ -1346,7 +1346,7 @@ function tB(e) {
             gameProfileSource: k.GameProfileSources.QuestBar,
         }),
         y = (0, ex.Pd)(a),
-        N = (0, e7.z)(),
+        N = (0, e6.z)(),
         U = (0, E.SD)(a, N),
         B = N === e9.MA.NITRO && U;
     return (0, s.jsxs)(s.Fragment, {

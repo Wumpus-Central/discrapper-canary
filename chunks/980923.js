@@ -1,5 +1,5 @@
 n.d(t, { A: () => l });
-var i = n(660183);
+var i = n(105292);
 function l(e, t, n, l) {
     return l
         ? i.intl.string(i.t["2Ne/Y1"])

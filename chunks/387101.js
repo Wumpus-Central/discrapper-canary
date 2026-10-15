@@ -16,7 +16,7 @@ var n = a(477900),
     p = a(41984),
     x = a(296027),
     b = a(652215),
-    v = a(660183),
+    v = a(105292),
     k = a(75823);
 function f(t) {
     let { onClose: e, transitionState: a, clientSettingType: f, gameId: w } = t,

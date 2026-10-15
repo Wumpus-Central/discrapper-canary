@@ -110,7 +110,7 @@ function P(e, t) {
 }
 var U = n(801344),
     w = n(979563),
-    G = n(660183);
+    G = n(105292);
 let x = {
         cs2_round_summary: G.t.oPqa86,
         cs2_highlight_reels: G.t.XdSaQW,

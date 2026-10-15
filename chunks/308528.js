@@ -18,7 +18,7 @@ var i = n(636537),
     T = n(387755),
     m = n(730852),
     g = n(652215),
-    S = n(660183);
+    S = n(105292);
 let N = {
     async openPrivateChannel(e) {
         let {

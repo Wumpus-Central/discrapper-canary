@@ -7,7 +7,7 @@ var i = n(477900),
     o = n(177953),
     d = n(367513),
     c = n(204651),
-    u = n(660183),
+    u = n(105292),
     _ = n(730393);
 function E(e) {
     let { className: t, isVertical: n } = e;

@@ -13,7 +13,7 @@ var r = n(477900),
     u = n(928658),
     h = n(208882),
     C = n(352123),
-    I = n(660183);
+    I = n(105292);
 function D(t) {
     let { entry: e, onSelect: D, closePopout: A, hideEditButton: T = !1 } = t,
         { isEntryAdmin: y, canEdit: p, canRemove: S } = (0, C.A)(e),

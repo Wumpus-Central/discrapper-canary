@@ -5,7 +5,7 @@ var n = a(713608),
     d = a(369606),
     o = a(876474),
     r = a(801344),
-    s = a(660183);
+    s = a(105292);
 let c = {
         [r.n_.ChampionKill]: n.q,
         [r.n_.DoubleKill]: n.q,

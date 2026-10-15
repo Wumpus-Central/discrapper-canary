@@ -15,7 +15,7 @@ var a = l(17928),
     A = l(977997),
     m = l(652215),
     f = l(671210),
-    v = l(660183);
+    v = l(105292);
 let x = { channelId: null, channelName: null, channel: null, guild: null, canJoin: !1, isAlreadyConnected: !1 };
 function b(e) {
     let {

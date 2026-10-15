@@ -14,7 +14,7 @@ var i = n(477900),
     E = n(287809),
     g = n(562153),
     f = n(652215),
-    p = n(660183);
+    p = n(105292);
 function C(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
         s = (0, l.bG)([A.A], () => (null != i ? A.A.getActiveStreamForStreamKey(i) : null), [i]),

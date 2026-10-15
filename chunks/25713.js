@@ -378,7 +378,7 @@ var G = l(263911),
     Y = l(403581),
     j = l(482358),
     H = l(758836),
-    q = l(660183);
+    q = l(105292);
 function K() {}
 let Q = {
     storefront: "linear-gradient(90deg, rgba(88, 101, 242, 0.4) 0%, rgba(157, 60, 178, 0.4) 100%)",

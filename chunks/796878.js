@@ -6,7 +6,7 @@ var l = n(877624),
     r = n(549996),
     i = n(807098),
     d = n(92551),
-    s = n(660183);
+    s = n(105292);
 function u(e) {
     let { children: t } = e,
         n = (0, r.c)(l.C.PREMIUM_TAB_TOOLTIP),

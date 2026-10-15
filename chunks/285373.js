@@ -8,7 +8,7 @@ var i = n(17928),
     c = n(594832),
     u = n(280450),
     d = n(202541),
-    o = n(660183);
+    o = n(105292);
 let h = {
     type: "image",
     src: "https://cdn.discordapp.com/assets/content/e6a95b370154817e3cec977345baf14c7643d3dacb99c3034005b10be99a36c7.svg",

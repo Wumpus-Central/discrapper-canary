@@ -2,7 +2,7 @@ r.d(e, { V: () => u });
 var i = r(477900);
 r(582128);
 var n = r(834730),
-    l = r(660183),
+    l = r(105292),
     a = r(302662);
 function u(t) {
     let { textColor: e = "text-muted" } = t;

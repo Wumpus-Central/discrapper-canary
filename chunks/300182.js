@@ -4,7 +4,7 @@ t(582128);
 var r = t(866665),
     a = t(408278),
     i = t(597770),
-    s = t(660183);
+    s = t(105292);
 let o = function (e) {
     let { onGift: l, tooltipDelay: t = 250, tabIndex: o } = e;
     return (0, n.jsx)(r.m, {

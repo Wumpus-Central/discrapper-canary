@@ -13,7 +13,7 @@ var d = i(885386),
     j = i(365258),
     x = i(926418),
     v = i(57129),
-    p = i(660183),
+    p = i(105292),
     C = i(599583);
 function g() {
     (0, o.openUserSettings)(u.X.ACTIVITY_PRIVACY_PANEL);

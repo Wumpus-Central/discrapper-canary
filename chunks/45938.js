@@ -35,7 +35,7 @@ var i,
     h = n(371794),
     f = n(652215),
     I = n(202541),
-    p = n(660183);
+    p = n(105292);
 let T = [
         A.A.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
         ...["discordapp.com/gifts", "discord.com/gifts"].map((e) => A.A.escape(e)),

@@ -4,7 +4,7 @@ n(582128);
 var a = n(189213),
     s = n(834730),
     l = n(974875),
-    r = n(660183);
+    r = n(105292);
 function o(t) {
     let { channelId: i, messageId: n, onClose: o, transitionState: d } = t;
     return (0, e.jsx)(a.a, {

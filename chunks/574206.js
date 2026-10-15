@@ -12,7 +12,7 @@ var i = n(77729),
     E = n(799),
     A = n(160330),
     h = n(696016),
-    f = n(660183);
+    f = n(105292);
 class I {
     gameId;
     startedAt;

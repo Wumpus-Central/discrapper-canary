@@ -24,7 +24,7 @@ let R = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
     b = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
     j = new Set(["static.klipy.com"]);
 var I = a(339984),
-    N = a(660183),
+    N = a(105292),
     S = a(721757);
 function T(e) {
     let {

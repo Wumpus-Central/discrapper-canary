@@ -21,7 +21,7 @@ var i,
     v = n(834730),
     S = n(975571),
     f = n(652215),
-    A = n(660183);
+    A = n(105292);
 function D() {
     let t = S.A.getArticleURL(f.MVz.GUILD_GETTING_STARTED);
     return (0, l.jsxs)(l.Fragment, {

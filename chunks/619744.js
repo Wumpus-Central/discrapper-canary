@@ -6,7 +6,7 @@ var a = n(477900),
     s = n(408278),
     u = n(609174),
     c = n(192308),
-    o = n(660183);
+    o = n(105292);
 function d(e) {
     let { onBeforeDelete: t, onAfterDelete: d, variant: f = "overlay-secondary" } = e,
         p = (0, u.Y_)(),

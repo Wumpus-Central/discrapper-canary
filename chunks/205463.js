@@ -10,7 +10,7 @@ var i = e(477900),
     d = e(88001),
     f = e(652215),
     m = e(148155),
-    _ = e(660183);
+    _ = e(105292);
 let p = { 1: "what_you_lose", 2: "confirmation" };
 function P(t) {
     let { onClose: n, currentUser: e, onNext: r, ...a } = t;

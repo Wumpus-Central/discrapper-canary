@@ -38,7 +38,7 @@ var s = i(477900),
     U = i(862482),
     F = i(685094),
     Y = i(821609),
-    B = i(660183),
+    B = i(105292),
     H = i(793757);
 function V(e) {
     let { index: t, title: i, selected: l } = e;

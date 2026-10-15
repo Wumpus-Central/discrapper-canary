@@ -14,7 +14,7 @@ var i = n(17928),
     g = n(513461),
     p = n(123393),
     A = n(652215),
-    f = n(660183),
+    f = n(105292),
     x = n(243226);
 function C(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,

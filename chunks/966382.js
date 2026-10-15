@@ -1,7 +1,7 @@
 n.d(t, { A: () => s });
 var i = n(885386),
     r = n(742077),
-    a = n(660183);
+    a = n(105292);
 let s = {
     MENTION_EVERYONE: () => ({ test: "everyone", text: "@everyone", description: a.intl.string(a.t.lHC4zy) }),
     MENTION_HERE: () => ({ test: "here", text: "@here", description: a.intl.string(a.t.OE6mOz) }),

@@ -9,7 +9,7 @@ var l = i(17928),
     c = i(698441),
     d = i(496092),
     u = i(988794),
-    p = i(660183);
+    p = i(105292);
 function A(t, n, A) {
     let { canManageGuildEvent: y } = (0, s.nr)(A ?? n),
         g = (0, l.bG)([c.Ay], () => c.Ay.isActive(t)),

@@ -3,7 +3,7 @@ var n = e(477900),
     s = e(582128),
     a = e(189213),
     l = e(468689),
-    r = e(660183);
+    r = e(105292);
 let c = function (t) {
     let { name: i, guildId: e, onClose: c, ...o } = t,
         u = s.useCallback(() => {

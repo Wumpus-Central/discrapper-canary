@@ -4,7 +4,7 @@ var s = n(477900),
     l = n(435558),
     r = n.n(l),
     a = n(58703),
-    h = n(660183);
+    h = n(105292);
 class d extends i.PureComponent {
     static defaultProps = { showDays: !0, showUnits: !1, stopAtOneSec: !1, intervalDuration: 1e3 };
     _interval;

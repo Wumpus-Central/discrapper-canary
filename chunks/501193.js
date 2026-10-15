@@ -1,7 +1,7 @@
 n.d(t, { A: () => s });
 var l = n(477900),
     i = n(834730),
-    r = n(660183),
+    r = n(105292),
     o = n(827587);
 function s(e) {
     let { username: t } = e;

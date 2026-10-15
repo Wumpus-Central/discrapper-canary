@@ -8,7 +8,7 @@ var i = n(503698),
     o = n(688810),
     u = n(139286),
     c = n(556427),
-    d = n(660183),
+    d = n(105292),
     p = n(70393);
 function m(e) {
     let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: h } = e,

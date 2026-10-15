@@ -13,7 +13,7 @@ var a = s(503698),
     E = s(166532),
     p = s(834730),
     _ = s(147925),
-    L = s(660183),
+    L = s(105292),
     A = s(629979);
 function h(e) {
     let { breadcrumb: t, isActiveBreadcrumb: s, isFinalBreadcrumb: a, separatorClassName: i } = e;

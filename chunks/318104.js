@@ -29,7 +29,7 @@ var C = n(935208),
     y = n(468689),
     I = n(576705),
     M = n(652215),
-    L = n(660183),
+    L = n(105292),
     P = n(426781);
 function w(e) {
     let { guildId: t, onClose: n } = e,

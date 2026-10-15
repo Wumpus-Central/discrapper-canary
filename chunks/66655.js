@@ -15,7 +15,7 @@ var r = a(477900),
     k = a(856644),
     A = a(512031),
     E = a(719366),
-    R = a(660183),
+    R = a(105292),
     h = a(698013);
 function M(e) {
     let { transitionState: t, onClose: a, roleId: M, guildId: S } = e,

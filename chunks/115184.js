@@ -12,7 +12,7 @@ var a = n(858899),
     d = n(19575),
     g = n(179581),
     u = n(652215),
-    y = n(660183);
+    y = n(105292);
 function A(t, e) {
     ((0, a.P0)({ text: t, variant: "critical" }), E.A.captureException(e));
 }

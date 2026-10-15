@@ -11,7 +11,7 @@ var l = t(17928),
     u = t(576705),
     A = t(882840),
     b = t(652215),
-    g = t(660183);
+    g = t(105292);
 function p(n, i) {
     let p = (0, l.bG)([u.A], () => u.A.can(b.xBc.MANAGE_CHANNELS, i)),
         h = (0, r.Ay)(n),

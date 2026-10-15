@@ -17,7 +17,7 @@ var i = n(477900),
     f = n(221486),
     I = n(768349),
     E = n(905322),
-    v = n(660183);
+    v = n(105292);
 function C(e) {
     let { currentUserId: t, message: n, application: l, channel: r, analyticsLocations: a, onView: C } = e,
         { staticBannerSrc: _, videoBannerSrc: j, bannerAspectRatio: N } = (0, h.f)(l),

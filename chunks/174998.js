@@ -22,7 +22,7 @@ var i = n(477900),
     f = n(477155),
     O = n(935286),
     G = n(717421),
-    p = n(660183),
+    p = n(105292),
     x = n(757412);
 function L(t) {
     let { testimonial: e, className: n } = t,

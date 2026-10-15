@@ -22,7 +22,7 @@ var n = t(477900),
     C = t(200662),
     f = t(825453),
     k = t(534148),
-    I = t(660183);
+    I = t(105292);
 function N(i) {
     let {
             applicationIcon: e,

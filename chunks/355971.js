@@ -9,7 +9,7 @@ var t = a(317097),
     i = a(478016),
     u = a(775602),
     h = a(814925),
-    A = a(660183);
+    A = a(105292);
 function d(s) {
     let r,
         { color: a, size: d, forcedIconColor: p, className: _, iconClassName: w, tooltipText: C } = s,

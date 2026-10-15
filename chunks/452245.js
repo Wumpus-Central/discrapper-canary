@@ -12,7 +12,7 @@ let l = (0, n(945810).mj)({
 });
 var o = n(979816),
     E = n(243277),
-    s = n(660183),
+    s = n(105292),
     A = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
 let S = {
     [E.uh.SPAM_LINK]: {

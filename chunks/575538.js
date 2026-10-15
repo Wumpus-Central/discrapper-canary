@@ -12,7 +12,7 @@ var s = i(17928),
     d = i(614584),
     g = i(226640),
     h = i(753070),
-    b = i(660183);
+    b = i(105292);
 function x(t) {
     let { onSelect: e } = t,
         i = (0, s.bG)([u.Ay], () => u.Ay.getSettings().clipsQuality),

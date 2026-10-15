@@ -26,7 +26,7 @@ var n,
     S = i(836602),
     N = i(814390),
     R = i(448429),
-    b = i(660183),
+    b = i(105292),
     _ = i(788991);
 let M = function (e) {
     let { user: t, profileFrame: i, guild: n } = e,

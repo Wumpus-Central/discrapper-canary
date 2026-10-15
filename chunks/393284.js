@@ -5,7 +5,7 @@ var i = n(419954),
     r = n(147248),
     a = n(141343),
     o = n(665267),
-    u = n(660183);
+    u = n(105292);
 let d = (0, i.E2)(s.X.APPEARANCE_CLIENT_THEMES, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     Component: o.sB,

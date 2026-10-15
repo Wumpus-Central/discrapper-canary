@@ -9,7 +9,7 @@ var i = n(477900),
     c = n(174459),
     u = n(19575),
     _ = n(652215),
-    E = n(660183);
+    E = n(105292);
 let A = "Activity Encourages Hardware Acceleration";
 function h(e) {
     let { applicationId: t, transitionState: n, onClose: h } = e,

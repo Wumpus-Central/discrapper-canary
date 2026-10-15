@@ -4,7 +4,7 @@ var s = i(477900),
     n = i(189213),
     r = i(834730),
     l = i(49999),
-    c = i(660183),
+    c = i(105292),
     d = i(796635);
 function o(a) {
     let { modalConfig: t, markAsDismissed: i, onClose: o, ...h } = a,

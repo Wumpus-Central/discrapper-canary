@@ -54,7 +54,7 @@ var l = n(477900),
     et = n(132500),
     en = n(280056),
     el = n(204651),
-    es = n(660183),
+    es = n(105292),
     ei = n(116108);
 function ea(e) {
     let { width: t = 24, height: n = 24, isBadged: i = !1 } = e,

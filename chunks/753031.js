@@ -23,7 +23,7 @@ var i,
     y = s(427262),
     S = s(652215),
     v = (((i = {}).MFA = "mfa"), (i.SMS = "sms"), (i.EMAIL = "email"), i),
-    w = s(660183),
+    w = s(105292),
     O = s(430918);
 let g = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.default.locale;

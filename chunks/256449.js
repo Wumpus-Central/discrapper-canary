@@ -30,7 +30,7 @@ var n = i(582128),
     y = i(194004),
     S = i(378058),
     m = i(652215),
-    I = i(660183);
+    I = i(105292);
 function A(e) {
     x();
     let t = (0, r.bG)([h.A], () => h.A.hasLoadedStickerPacks);

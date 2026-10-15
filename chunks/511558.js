@@ -484,7 +484,7 @@ var eM = n(554146),
     eP = n(43105),
     eD = n(131607),
     eU = n(49999),
-    eV = n(660183);
+    eV = n(105292);
 function eW(e) {
     let { targetElementRef: t } = e,
         { allowReordering: n } = ed.q.useConfig({ location: "SoundboardFavoritesCoachmark" }),

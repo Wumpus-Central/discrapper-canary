@@ -16,7 +16,7 @@ var l = n(477900),
     x = n(319437),
     T = n(652215),
     C = n(731854),
-    j = n(660183),
+    j = n(105292),
     m = n(221851);
 class b extends i.PureComponent {
     handleAutoThresholdChange = (e) => {

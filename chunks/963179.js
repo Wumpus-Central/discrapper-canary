@@ -13,7 +13,7 @@ var d = e(423090),
     k = e(376374),
     h = e(888781),
     g = e(652215),
-    v = e(660183);
+    v = e(105292);
 function m(t) {
     let { onClose: i, transitionState: e, skuId: m, appId: A, onHeaderTitleClick: I } = t,
         b = (0, r.bG)([o.A], () => o.A.getForSKU(m), [m]),

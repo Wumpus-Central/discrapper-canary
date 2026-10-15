@@ -15,7 +15,7 @@ var l = n(477900),
     A = n(531685),
     _ = n(993408),
     f = n(812993),
-    x = n(660183),
+    x = n(105292),
     b = n(543136);
 let N = function (e) {
     let { category: t, daysRemainingText: n = x.t.Io7ozn, className: r } = e;

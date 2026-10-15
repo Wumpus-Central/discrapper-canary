@@ -16,7 +16,7 @@ var i,
     I = n(690521),
     p = n(350593),
     T = n(652215),
-    m = n(660183),
+    m = n(105292),
     g =
         (((i = {}).MESSAGE = "Message"),
         (i.FORUM_TOOLBAR = "Forum Toolbar"),

@@ -1356,8 +1356,8 @@ class e3 {
             });
     };
 }
-var e6 = n(681813),
-    e5 = n(357758),
+var e5 = n(681813),
+    e6 = n(357758),
     e4 = n(912630),
     e7 = n(544180);
 function e8(e) {
@@ -2060,7 +2060,7 @@ class ti extends m.A {
                 }),
             0 !== a.size &&
                 0 !== s.size &&
-                ((0, e5._)(a, s) ? this.symmetricCodecUpdates++ : this.asymmetricCodecUpdates++));
+                ((0, e6._)(a, s) ? this.symmetricCodecUpdates++ : this.asymmetricCodecUpdates++));
     }
     sampleStats = (e) => {
         if (null == e) return;
@@ -2823,7 +2823,7 @@ function tu(e, t) {
 }
 var t_ = n(753070),
     tE = n(396574),
-    tA = n(660183);
+    tA = n(105292);
 let th = /^https/.test("https:") ? "wss:" : "ws:";
 function tf() {
     return new p.A(1e3, 1e4);
@@ -4129,9 +4129,9 @@ class tg extends m.A {
                 allowedPoorFpsRatio: n,
                 fpsThreshold: i,
                 backoffTimeSec: r,
-            } = e6.V.defaultConfig;
+            } = e5.V.defaultConfig;
             if (e) {
-                ((this._videoHealthManager = new e6.V(t, n, i, r)),
+                ((this._videoHealthManager = new e5.V(t, n, i, r)),
                     null != this._localMediaSinkWantsManager &&
                         (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager));
                 let e = (e, t, n) => {

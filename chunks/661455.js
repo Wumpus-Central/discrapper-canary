@@ -22,7 +22,7 @@ var r = t(950305),
     U = t(243949),
     f = t(972432),
     m = t(652215),
-    E = t(660183);
+    E = t(105292);
 function _(n) {
     let { isOwnSettings: i, userId: t, channelId: d, guildId: a, context: o } = n,
         c = (0, U.A)({ userId: t, guildId: a, channelId: d, icon: r.UserIcon, label: E.intl.string(E.t.iXAna6) }),

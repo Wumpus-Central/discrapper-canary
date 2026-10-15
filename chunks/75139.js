@@ -47,7 +47,7 @@ n(276831);
 var $ = n(806931),
     K = n(818348),
     X = n(549420),
-    q = n(660183),
+    q = n(105292),
     Z = n(645265);
 let Q = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,

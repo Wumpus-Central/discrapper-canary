@@ -5,7 +5,7 @@ var a = i(477900),
     e = i(834730),
     c = i(28863),
     l = i(818023),
-    o = i(660183);
+    o = i(105292);
 function d(t) {
     let { application: n, onCancel: i, onClose: d, onConfirm: h, ...u } = t;
     return (0, a.jsx)(r.a, {

@@ -9,7 +9,7 @@ var i = n(284009),
     c = n(120700),
     u = n(589078),
     m = n(179499),
-    h = n(660183);
+    h = n(105292);
 function g(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
         g = (0, s.bG)([o.A], () => o.A.getGuildProduct(n)),

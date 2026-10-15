@@ -10,7 +10,7 @@ var r = n(118751),
     u = n(403581),
     d = n(158045),
     m = n(202541),
-    x = n(660183);
+    x = n(105292);
 let h = [
         { Icon: i.CheckmarkLargeIcon, getText: () => x.intl.string(x.t.kpMomJ) },
         {

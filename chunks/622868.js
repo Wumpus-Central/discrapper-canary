@@ -61,7 +61,7 @@ var Y = l(702841),
     Z = l(783419),
     Q = l(652215),
     ee = l(518477),
-    en = l(660183),
+    en = l(105292),
     el = l(156934);
 function et(e) {
     let n,
@@ -579,8 +579,8 @@ let e6 = function (e) {
         }),
     });
 };
-var e7 = l(812299),
-    e2 = l(109054),
+var e2 = l(812299),
+    e7 = l(109054),
     e3 = l(318626);
 function e4(e) {
     let {
@@ -638,7 +638,7 @@ let e9 = i.memo(function (e) {
         } = e,
         b = (0, eF.Ay)(n, l),
         E = i.useMemo(
-            () => (0, e7.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
+            () => (0, e2.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
         y = i.useRef(null),
@@ -857,7 +857,7 @@ let nl = i.memo(function (e) {
                 { analyticsLocations: C } = (0, A.Ay)(x.A.AVATAR),
                 b = eH.aM.useSetting(),
                 E = n.displayCompactAvatars ?? b,
-                y = (0, e2.A)(c),
+                y = (0, e7.A)(c),
                 M = u ? 32 : 80,
                 {
                     avatarSrc: _,
@@ -971,7 +971,7 @@ let nl = i.memo(function (e) {
         R = eH.aM.useSetting(),
         T = e.displayCompactAvatars ?? R,
         w = i.useMemo(
-            () => (0, e7.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
+            () => (0, e2.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
         O = (0, c.bG)([e$.A], () => nn(a, T, j, e$.A.getGuild(e.guildId)), [a, T, j, e.guildId]),

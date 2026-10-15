@@ -22,7 +22,7 @@ var l = i(477782),
     U = i(995102),
     C = i(439191),
     p = i(652215),
-    E = i(660183);
+    E = i(105292);
 function N(e) {
     let { channel: n, onSelect: a } = e,
         c = n.isOwner(_.default.getId()),

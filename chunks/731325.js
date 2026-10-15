@@ -116,7 +116,7 @@ function eE(e, t, n, l) {
 }
 var eS = n(652215),
     ey = n(698279),
-    eC = n(660183),
+    eC = n(105292),
     eA = n(161975);
 let eb = (0, Q.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     eI = (0, Q.xI)(w.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),

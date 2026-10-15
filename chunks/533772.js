@@ -5,7 +5,7 @@ var n = t(477900),
     i = t(834730),
     s = t(318254),
     o = t(206285),
-    c = t(660183),
+    c = t(105292),
     u = t(919700);
 function d(e) {
     let { variant: l, color: t = "text-default", className: r, orbPrice: a } = e;

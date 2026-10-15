@@ -22,7 +22,7 @@ var n = l(477900),
     E = l(246338),
     S = l(506774),
     j = l(248675),
-    N = l(660183);
+    N = l(105292);
 let A = `<#${"9".repeat(20)}>`,
     P = "ConjurePatchNotesLastChannelsByApp";
 function T(e) {

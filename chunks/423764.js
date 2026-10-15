@@ -248,7 +248,7 @@ var i,
         (i.VCT = "VC"),
         (i.LCA = "LC"),
         i),
-    d = n(660183);
+    d = n(105292);
 function c(e) {
     let t = s.A.find((t) => t.alpha2 === e);
     if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };

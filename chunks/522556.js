@@ -9,7 +9,7 @@ var t = l(477900),
     u = l(306537),
     o = l(323073),
     A = l(506164),
-    g = l(660183),
+    g = l(105292),
     h = l(814316);
 function m(e) {
     let { guild: n, channelId: l } = e,

@@ -4,7 +4,7 @@ i(582128);
 var l = i(821609),
     r = i(908289),
     a = i(960076),
-    s = i(660183);
+    s = i(105292);
 function o(n) {
     let { activity: t, onAction: i, variant: o = "secondary", size: d = "sm", ...u } = n;
     return (0, a.A)(t)

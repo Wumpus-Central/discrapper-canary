@@ -38,7 +38,7 @@ var j = n(304210),
 n(321073);
 var D = n(140735),
     P = n(496431),
-    B = n(660183),
+    B = n(105292),
     H = n(302326);
 function U(e) {
     let { endDate: t, size: n = "md", className: l, showSeconds: s = !1 } = e,
@@ -953,8 +953,8 @@ let e1 = function (e) {
 };
 var e2 = n(172218),
     e5 = n(28863),
-    e6 = n(9530);
-let e3 = function (e) {
+    e9 = n(9530);
+let e4 = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
         l = (0, e2.K)(
             (e) => {
@@ -969,21 +969,21 @@ let e3 = function (e) {
         u = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, i.jsxs)("div", {
         ref: l,
-        className: e6.BX,
+        className: e9.BX,
         children: [
             (0, i.jsx)("div", {
-                className: e6.vK,
+                className: e9.vK,
                 children: null != s && (0, i.jsx)(eq.A, { bannerStatic: s, bannerAnimated: r }),
             }),
             (0, i.jsx)("div", {
-                className: e6.HQ,
+                className: e9.HQ,
                 children: (0, i.jsxs)("div", {
-                    className: e6.Yn,
+                    className: e9.Yn,
                     children: [
                         null != t.endTime ? (0, i.jsx)(U, { endDate: t.endTime, size: "lg" }) : null,
                         (0, i.jsx)(m.D, {
                             variant: "heading-xxl/bold",
-                            className: e6.DD,
+                            className: e9.DD,
                             color: "text-strong",
                             style: { ...a },
                             children: t.title,
@@ -998,7 +998,7 @@ let e3 = function (e) {
                                       u &&
                                           (0, i.jsx)(e5.Anchor, {
                                               href: t.helpCenterUrl,
-                                              className: e6.CU,
+                                              className: e9.CU,
                                               style: { ...a },
                                               children: B.intl.string(B.t.O7ADgv),
                                           }),
@@ -1011,8 +1011,8 @@ let e3 = function (e) {
         ],
     });
 };
-var e4 = n(449543),
-    e9 = n(197935),
+var e3 = n(449543),
+    e6 = n(197935),
     e8 = n(275161),
     e7 = n(554661);
 function te(e) {
@@ -1075,7 +1075,7 @@ let tn = function (e) {
                             ],
                         }),
                         f
-                            ? (0, i.jsx)(e9.A, {
+                            ? (0, i.jsx)(e6.A, {
                                   gap: "xl",
                                   edgeFade: v ? "sm" : void 0,
                                   items: E,
@@ -1094,7 +1094,7 @@ let tn = function (e) {
                                           e.skuId,
                                       ),
                               })
-                            : (0, i.jsx)(e4.A, {
+                            : (0, i.jsx)(e3.A, {
                                   gap: "xl",
                                   edgeFade: v ? "sm" : void 0,
                                   children: E.map((e, n) =>
@@ -1449,7 +1449,7 @@ let tx = function (e) {
                                     break;
                                 case u.g.IMMERSIVE_BANNER:
                                     d = (0, i.jsx)(
-                                        e3,
+                                        e4,
                                         { immersiveBannerBlock: e, onVisibilityChange: (e) => h(!e) },
                                         a,
                                     );

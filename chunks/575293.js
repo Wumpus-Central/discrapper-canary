@@ -25,7 +25,7 @@ var l = n(477900),
     N = n(473529),
     T = n(111487),
     j = n(652215),
-    _ = n(660183),
+    _ = n(105292),
     k = n(160639);
 let R = { compact: 58, cozy: 74, default: 64 };
 function O(e) {

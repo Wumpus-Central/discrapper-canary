@@ -1,5 +1,5 @@
 n.d(t, { A: () => r });
-var i = n(660183);
+var i = n(105292);
 function r(e) {
     let t = i.intl.currentLocale.toLowerCase();
     return t in e ? e[t] : e.default;

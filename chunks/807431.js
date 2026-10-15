@@ -8,7 +8,7 @@ var s = i(980707),
     l = i(468689),
     o = i(36942),
     c = i(652215),
-    u = i(660183);
+    u = i(105292);
 function h(t) {
     let { guild: n, onSelect: i } = t,
         h = (0, o.A)(n.id),

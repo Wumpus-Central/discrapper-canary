@@ -16,7 +16,7 @@ var e = l(477900),
     C = l(531648),
     j = l(10862),
     p = l(818348),
-    v = l(660183),
+    v = l(105292),
     N = l(260155);
 function _(i) {
     let { channel: t, guild: l, onAction: n, onClose: _ } = i,

@@ -6,7 +6,7 @@ var a = n(776231),
     s = n(486020),
     l = n(652215);
 let { API_ENDPOINT: o, CDN_HOST: d } = window.GLOBAL_ENV;
-var c = n(660183);
+var c = n(105292);
 let u = 0;
 function _() {
     return { id: u, name: c.intl.string(c.t.E407b7) };

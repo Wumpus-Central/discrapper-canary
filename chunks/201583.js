@@ -20,7 +20,7 @@ var i = s(477900),
     E = s(685743),
     f = s(968459),
     v = s(394107),
-    I = s(660183),
+    I = s(105292),
     C = s(364861);
 function T(t) {
     let { guildId: e, instance: s, onClose: a, transitionState: T } = t,

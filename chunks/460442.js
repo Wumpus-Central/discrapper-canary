@@ -8,7 +8,7 @@ var i = n(503698),
     o = n(834730),
     u = n(559758),
     a = n(492518),
-    d = n(660183),
+    d = n(105292),
     h = n(279646);
 function x(e) {
     let { icon: t, style: n } = e;

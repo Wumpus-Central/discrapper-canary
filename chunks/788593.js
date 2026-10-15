@@ -12,7 +12,7 @@ var i = a(477900),
     x = a(207803),
     h = a(591179),
     p = a(485745),
-    f = a(660183),
+    f = a(105292),
     j = a(365611);
 function g(e) {
     let { imageSrc: r, gameName: a } = e,

@@ -7,7 +7,7 @@ var i = n(477900),
     r = n(815996),
     e = n(149256),
     u = n(758836),
-    d = n(660183);
+    d = n(105292);
 function b(t) {
     let { orbsAmount: a, ...n } = t;
     return (0, i.jsx)(o.k, {

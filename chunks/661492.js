@@ -1,7 +1,7 @@
 n.d(e, { T: () => l, q: () => s });
 var a = n(575593),
     i = n(993408),
-    r = n(660183);
+    r = n(105292);
 function l(t) {
     var e = t.name;
     switch (t.tenantMetadata?.collectibles?.type) {

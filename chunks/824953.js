@@ -5,7 +5,7 @@ var l = r(435558),
     h = r(73153),
     i = r(157559),
     s = r(652215),
-    E = r(660183);
+    E = r(105292);
 let c = ["Spidey Bot", "Captain Hook"],
     u = {
         fetchForGuild(t) {

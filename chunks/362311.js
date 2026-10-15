@@ -15,7 +15,7 @@ var i = e(477900),
     C = e(548118),
     T = e(808728),
     G = e(71393),
-    I = e(660183),
+    I = e(105292),
     b = e(645781);
 function D(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: L, isSlideReady: u } = t,

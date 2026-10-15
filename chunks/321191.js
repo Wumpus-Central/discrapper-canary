@@ -39,7 +39,7 @@ function N(e) {
     return { collectibles: i, profileEffect: t, profileFrame: n };
 }
 var C = n(652215),
-    O = n(660183);
+    O = n(105292);
 let R = Symbol("NO GUILD ID"),
     L = new Map(),
     y = new Set(),

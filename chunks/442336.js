@@ -41,7 +41,7 @@ function P(e) {
         return 0 === e.length ? [] : (0, k.k)(e);
     }, [t?.entitlements]);
 }
-var R = l(660183),
+var R = l(105292),
     L = l(25525),
     D = l(144977),
     O = l(628049),
@@ -695,7 +695,7 @@ function e0(e) {
     return { variant: e, content: u, isReserved: d };
 }
 var e1 = l(463080);
-function e6(e) {
+function e8(e) {
     let { text: t } = e,
         l = (0, j.c)("Tier3OverrideNotice");
     return (0, n.jsx)("div", {
@@ -703,7 +703,7 @@ function e6(e) {
         children: (0, n.jsx)(I.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
-function e8(e) {
+function e6(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ep.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
             ? { shouldShow: !0, text: R.intl.string(L.default.l9n4QZ) }
@@ -755,7 +755,7 @@ function e8(e) {
                       color: d ? "text-strong" : "text-subtle",
                       children: R.intl.string(L.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, n.jsx)(e6, { text: l.text }),
+                  l.shouldShow && (0, n.jsx)(e8, { text: l.text }),
                   s.shouldShow &&
                       (0, n.jsx)(eQ, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
                   o.shouldShow &&
@@ -1467,7 +1467,7 @@ function tk(e) {
                               children: [
                                   P
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e8, { guildId: N })],
+                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e6, { guildId: N })],
                                         })
                                       : (0, n.jsx)(tT, { guildId: N }),
                                   (0, n.jsx)(tC, { guildId: N }),

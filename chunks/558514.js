@@ -72,7 +72,7 @@ var P =
     L = n(623373),
     U = n(536572),
     D = n(14702),
-    G = n(660183),
+    G = n(105292),
     F = n(728500);
 function w() {
     return (0, r.jsxs)("div", {

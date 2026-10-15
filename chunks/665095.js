@@ -26,7 +26,7 @@ var i = n(477900),
     N = n(700525),
     b = n(975571),
     j = n(652215),
-    R = n(660183),
+    R = n(105292),
     M = n(690807);
 let O = b.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
 class w extends l.PureComponent {

@@ -28,7 +28,7 @@ var u = n(409626),
     G = n(190107),
     O = n(652215),
     x = n(202541),
-    P = n(660183);
+    P = n(105292);
 function M(e, t, n) {
     return n ? P.intl.formatToPlainString(e, t) : P.intl.format(e, t);
 }

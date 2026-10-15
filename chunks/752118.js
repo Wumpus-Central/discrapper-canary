@@ -18,7 +18,7 @@ var l = n(477900),
     E = n(174459),
     C = n(427262),
     p = n(652215),
-    y = n(660183),
+    y = n(105292),
     b = n(631130);
 function f(t) {
     let { disabled: e = !1, user: n, setNickname: a, nickname: i, error: s, hasNick: x } = t,

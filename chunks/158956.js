@@ -12,7 +12,7 @@ var i = e(477900),
     g = e(994500),
     p = e(287809),
     x = e(677420),
-    f = e(660183);
+    f = e(105292);
 function C(t) {
     let { guildId: n, channel: e, onSelectChannel: l } = t,
         r = (0, a.yK)(

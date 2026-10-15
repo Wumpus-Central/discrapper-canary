@@ -2,7 +2,7 @@ n.d(t, { f: () => l, A: () => s });
 var r = n(477900);
 n(582128);
 var i = n(691885),
-    a = n(660183);
+    a = n(105292);
 function l(e) {
     let { currencies: t, className: n, children: i } = e;
     return t.length < 2 ? null : (0, r.jsx)("div", { className: n, children: i });

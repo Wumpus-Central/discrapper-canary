@@ -8,7 +8,7 @@ var a = i(980707),
     r = i(173936),
     o = i(957565),
     d = i(886393),
-    h = i(660183);
+    h = i(105292);
 function p(n) {
     let { channel: e, channelId: i, originalLink: p, messageId: u, onSelect: k } = n,
         g =

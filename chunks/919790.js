@@ -6,7 +6,7 @@ var l = n(477900),
     s = n(989145),
     o = n(922329),
     d = n(248675),
-    u = n(660183),
+    u = n(105292),
     c = n(986109);
 function f(e) {
     let { projectId: t, attachments: n } = e,

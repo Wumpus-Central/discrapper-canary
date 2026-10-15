@@ -6,7 +6,7 @@ var l = i(132500),
     s = i(612638),
     m = i(696016),
     o = i(801344),
-    h = i(660183);
+    h = i(105292);
 async function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await a.Ay.fetchRiotGamesLiveClientData(e, t);

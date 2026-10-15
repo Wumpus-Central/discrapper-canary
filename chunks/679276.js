@@ -11,7 +11,7 @@ var r = n(858899),
     u = n(282108),
     h = n(33358),
     p = n(961997),
-    g = n(660183);
+    g = n(105292);
 function m(e) {
     let { channelId: t, messageId: n, mediaItemUrl: m, embedId: v, transitionState: f, onClose: P } = e,
         b = (function (e, t, n) {

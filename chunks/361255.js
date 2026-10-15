@@ -10,7 +10,7 @@ var l = t(477900),
     u = t(317525),
     f = t(242273),
     g = t(652215),
-    h = t(660183);
+    h = t(105292);
 function p(e) {
     let { guild: i, onClose: t, canSetNewRole: p } = e,
         [v, b] = n.useState(i.verificationRoleId ?? void 0),

@@ -72,7 +72,7 @@ var eo = t(533772),
     ex = t(731738),
     ep = t(807393),
     e_ = t(995393),
-    ef = t(660183);
+    ef = t(105292);
 let eb = [
         [0, 50],
         [0, 50],
@@ -227,8 +227,8 @@ function eN(e) {
         {
             priceComponent: e1,
             extendedHeight: e3,
-            displayPrice: e8,
-            shownPriceDetails: e2,
+            displayPrice: e2,
+            shownPriceDetails: e9,
         } = (function (e) {
             let { sku: l, orbsGate: t, orbPriceAmount: n, promotion: i, reward: s, showOrbsOnly: o = !1 } = e,
                 c = (0, L.ou)({ sku: l }),
@@ -349,7 +349,7 @@ function eN(e) {
                       };
             }, [l, i, d, u, m, o, n, t, f, c, x]);
         })({ sku: eA, orbsGate: eV, orbPriceAmount: eK, promotion: eY, reward: e$, showOrbsOnly: u }),
-        e9 = 2 !== i && eU ? e2 : ev,
+        e8 = 2 !== i && eU ? e9 : ev,
         e6 = a.useCallback((e) => {
             eG(e);
         }, []),
@@ -422,7 +422,7 @@ function eN(e) {
             analyticsContext: eL,
             positionInSection: l,
             analyticsLocations: eH,
-            shownPriceDetails: e9,
+            shownPriceDetails: e8,
         }),
         { handleCardVisibilityChange: le } = (function (e) {
             let {
@@ -508,7 +508,7 @@ function eN(e) {
             analyticsContext: eL,
             positionInSection: l,
             analyticsLocations: eH,
-            shownPriceDetails: e9,
+            shownPriceDetails: e8,
         });
     a.useEffect(() => {
         le(ew);
@@ -540,14 +540,14 @@ function eN(e) {
                     is_user_guild_member: d,
                     page_has_leaderboard: m,
                     cta_type: e,
-                    price: e9.price,
-                    regular_price: e9.regularPrice,
-                    currency: e9.currency,
-                    orbs_amount: e9.orbsAmount,
+                    price: e8.price,
+                    regular_price: e8.regularPrice,
+                    currency: e8.currency,
+                    orbs_amount: e8.orbsAmount,
                     location_stack: l,
                 });
             },
-            [n, eT, eP, eL, e9],
+            [n, eT, eP, eL, e8],
         ),
         { primaryIconAsset: lt, primaryIconLabel: ln } = a.useMemo(() => (0, W.Cv)(eA, eT), [eA, eT]),
         { viewProductDetails: lr } = (0, $.H)(),
@@ -674,11 +674,11 @@ function eN(e) {
                             variant: "primary",
                             onMouseDown: lo,
                             onClick: lb,
-                            text: null != e8 ? ef.intl.format(ef.t.Xp5WTn, { price: e8 }) : ef.intl.string(ef.t.boqtTA),
+                            text: null != e2 ? ef.intl.format(ef.t.Xp5WTn, { price: e2 }) : ef.intl.string(ef.t.boqtTA),
                             fullWidth: !0,
                             tabIndex: ej,
                         }),
-            [eR, lh, eV, lf, lb, lo, eK, e8, ej],
+            [eR, lh, eV, lf, lb, lo, eK, e2, ej],
         );
     if (null == eA) return null;
     let lv = (0, W.fq)(eA),

@@ -18,7 +18,7 @@ var n = l(477900),
     f = l(562153),
     g = l(427262),
     p = l(778712),
-    S = l(660183),
+    S = l(105292),
     E = l(661248);
 function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p._3.SIZE_24;

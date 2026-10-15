@@ -84,7 +84,7 @@ let T = function (e) {
 };
 var b = r(821609),
     B = r(450481),
-    w = r(660183),
+    w = r(105292),
     P = r(634293);
 function R(e) {
     let { product: t, onUseNowClick: r, useNowButtonVariant: l = "overlay-secondary" } = e,

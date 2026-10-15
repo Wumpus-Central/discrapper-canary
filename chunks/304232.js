@@ -8,7 +8,7 @@ var d = n(980707),
     l = n(174459),
     c = n(863922),
     u = n(652215),
-    o = n(660183);
+    o = n(105292);
 function _(e) {
     let { summary: a, onSelect: n } = e;
     return (0, t.jsx)(d.W, {

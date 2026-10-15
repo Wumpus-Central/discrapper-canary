@@ -6,7 +6,7 @@ var e = n(17928),
     a = n(366605),
     c = n(816662),
     d = n(543465),
-    l = n(660183);
+    l = n(105292);
 function o(i) {
     let t = (0, e.bG)([d.Ay], () => d.Ay.isMessagesFavorite(i.id));
     if (!i.isPrivate()) return null;

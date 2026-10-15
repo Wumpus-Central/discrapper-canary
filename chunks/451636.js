@@ -4,7 +4,7 @@ n(582128);
 var i = n(503698),
     a = n.n(i),
     l = n(457287),
-    s = n(660183),
+    s = n(105292),
     u = n(640956);
 function c(e) {
     let { className: t, currencies: n, onChange: i, selectedCurrency: c, ...o } = e;

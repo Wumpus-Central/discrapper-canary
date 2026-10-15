@@ -66,7 +66,7 @@ var q = n(261958),
     J = n(885574),
     Z = n(442433),
     X = n(200662),
-    $ = n(660183),
+    $ = n(105292),
     ee = n(634968);
 function et(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
@@ -1003,11 +1003,11 @@ function e8(e) {
         ],
     });
 }
-var e6 = n(573648);
+var e5 = n(573648);
 (n(323874), n(14289), n(35956));
-var e7 = n(536637),
-    e4 = n.n(e7),
-    e5 = n(788373),
+var e6 = n(536637),
+    e7 = n.n(e6),
+    e4 = n(788373),
     e9 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1044,9 +1044,9 @@ function td(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e5.F.KICK) {
+                if (b || i.expire_behavior !== e4.F.KICK) {
                     let e =
-                        i.expire_behavior === e5.F.REMOVE_ROLE
+                        i.expire_behavior === e4.F.REMOVE_ROLE
                             ? $.intl.string($.t["6kpw4i"])
                             : $.intl.string($.t.fQUQIJ);
                     (0, eR.A)({
@@ -1075,7 +1075,7 @@ function td(e) {
             syncLabel: w,
             subscribersText: R,
         } = s.useMemo(() => {
-            let e = e6.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
+            let e = e5.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
             switch (i.type) {
                 case te.s.YOUTUBE:
                     return {
@@ -1104,13 +1104,13 @@ function td(e) {
         { roleLink: P, syncDescriptionText: D } = s.useMemo(() => {
             let e;
             e = null != _ ? (0, l.jsx)(ts.Anchor, { onClick: v, children: _.name }) : $.intl.string($.t.PoWNfe);
-            let t = e6.A.get(i.type);
+            let t = e5.A.get(i.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
                     i.revoked && null != t
                         ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e4()(i.synced_at).calendar() }),
+                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e7()(i.synced_at).calendar() }),
             };
         }, [_, v, i.revoked, i.synced_at, i.type, i.user]),
         G = (0, o.bG)([eS.A], () => eS.A.getSortedRoles(n.id)),
@@ -1290,12 +1290,12 @@ function td(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e5.F.REMOVE_ROLE.toString(),
+                                                value: e4.F.REMOVE_ROLE.toString(),
                                                 label: $.intl.string($.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e5.F.KICK.toString(),
+                                                value: e4.F.KICK.toString(),
                                                 label: $.intl.string($.t.fQUQIJ),
                                             },
                                         ],
@@ -1335,7 +1335,7 @@ function td(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e5.F.KICK &&
+                        a.expire_behavior === e4.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: to.Ce,
                             color: "text-feedback-critical",
@@ -1435,7 +1435,7 @@ function tm(e) {
             errors: d,
             canNavigate: m,
         } = e,
-        g = e6.A.get(a),
+        g = e5.A.get(a),
         h = s.useCallback(
             async (e) => {
                 m() && (await M.A.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
@@ -2065,7 +2065,7 @@ function tX(e) {
         ),
         ea &&
             ev.push(
-                ((j = e6.A.get(eU.fg2.TWITCH)),
+                ((j = e5.A.get(eU.fg2.TWITCH)),
                 en > 0
                     ? ((f = (0, l.jsx)(tD.u, { size: "xs" })),
                       (x = $.intl.formatToPlainString($.t.FFpnT8, { count: el })),
@@ -2091,7 +2091,7 @@ function tX(e) {
             ),
         er &&
             ev.push(
-                ((L = e6.A.get(eU.fg2.YOUTUBE)),
+                ((L = e5.A.get(eU.fg2.YOUTUBE)),
                 ei > 0
                     ? ((O = (0, l.jsx)(tD.u, { size: "xs" })),
                       (v = $.intl.formatToPlainString($.t.b2g5vC, { count: es })),

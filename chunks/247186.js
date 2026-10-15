@@ -16,7 +16,7 @@ var l = t(477900),
     f = t(332173),
     j = t(37632),
     y = t(534890),
-    A = t(660183),
+    A = t(105292),
     C = t(879386);
 let k = function () {
     return (0, l.jsx)(y.ChatIcon, {

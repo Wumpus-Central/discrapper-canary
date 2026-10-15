@@ -7,7 +7,7 @@ var i = n(451988),
     o = n(734057),
     d = n(977997),
     c = n(607567),
-    u = n(660183);
+    u = n(105292);
 function _() {
     let e = d.A.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;

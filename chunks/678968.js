@@ -28,7 +28,7 @@ function v(e) {
 }
 var C = n(781121),
     A = n(190107),
-    h = n(660183);
+    h = n(105292);
 function g(e) {
     let { videoRef: t, onTrackQuestContentClick: n, orientation: p } = e,
         { onClose: m, sourceQuestContent: g, quest: I, isFullscreenEnabled: D } = l.useContext(f.a),

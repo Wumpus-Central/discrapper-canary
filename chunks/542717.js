@@ -6,7 +6,7 @@ var r = e(477900),
     a = e(513461),
     o = e(242273),
     u = e(260197),
-    c = e(660183);
+    c = e(105292);
 function d(t) {
     let { type: n, title: e, description: a, field: d, onSave: p, onClose: g } = t,
         [h, y] = i.useState(d?.label ?? ""),

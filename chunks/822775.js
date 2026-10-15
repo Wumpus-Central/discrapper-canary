@@ -16,7 +16,7 @@ var e = n(477900),
     f = n(61881),
     h = n(993401),
     v = n(652215),
-    x = n(660183);
+    x = n(105292);
 function E(t) {
     let { user: i, guildId: n, fullWidth: E, appContext: F, onClose: R } = t,
         k = (0, r.bG)([b.default], () => b.default.getId() === i.id),

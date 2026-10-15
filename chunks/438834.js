@@ -56,7 +56,7 @@ function B(t) {
 let z = [];
 var I = a(155899),
     R = a(248675),
-    V = a(660183),
+    V = a(105292),
     A = a(796734);
 function L(t) {
     let { title: e, body: a, onRetry: n } = t;

@@ -18,7 +18,7 @@ var t = i(477900),
     N = i(439156),
     I = i(249286),
     A = i(867060),
-    b = i(660183),
+    b = i(105292),
     k = i(434031);
 function w(e) {
     let { canUseBoosts: s, guildId: i, powerup: a, isNewPerk: n, forceStaticImages: c } = e,

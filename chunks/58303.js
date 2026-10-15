@@ -7,7 +7,7 @@ var l = n(17928),
     a = n(786889),
     o = n(312006),
     u = n(718734),
-    c = n(660183);
+    c = n(105292);
 function d(e) {
     let { channel: t, userId: n } = e,
         d = (0, u.e)(t, "StageModeratorTileBadge"),

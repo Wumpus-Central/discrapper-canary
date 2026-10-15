@@ -11,7 +11,7 @@ var n = s(477900),
     m = s(801870),
     h = s(586035),
     x = s(190107),
-    f = s(660183),
+    f = s(105292),
     g = s(40170);
 function C(e) {
     let { quest: t, rewardName: s, location: a, sourceQuestContent: o } = e;

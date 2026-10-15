@@ -5,7 +5,7 @@ var r = n(17928),
     s = n(77729),
     l = n(723702),
     o = n(340829),
-    d = n(660183);
+    d = n(105292);
 let c = {},
     u = (0, l.isWindows)()
         ? `${s.A.process.env.LOCALAPPDATA}\\DiscordGames`

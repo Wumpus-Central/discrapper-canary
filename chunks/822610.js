@@ -23,7 +23,7 @@ var l = n(477900),
     I = n(31717),
     v = n(914905),
     N = n(650583),
-    T = n(660183),
+    T = n(105292),
     j = n(40974);
 function _(e) {
     let { channelId: t, option: n, keyboardModeEnabled: r } = e,

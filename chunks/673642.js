@@ -4,7 +4,7 @@ var r = e(636537),
     i = e(759532),
     h = e(679787),
     a = e(652215),
-    p = e(660183);
+    p = e(105292);
 let s = /^#?[0-9a-fA-F]{6}$/;
 function c(t) {
     if (!s.test(t)) throw Error("Invalid guild theme preview color.");

@@ -25,7 +25,7 @@ var s,
     b = t(448429),
     E = t(130147),
     _ = t(344346),
-    w = t(660183),
+    w = t(105292),
     P = t(255852);
 let S = function (e) {
     let { user: i, guildId: t, nameplate: s } = e,

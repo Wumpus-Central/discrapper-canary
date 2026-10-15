@@ -28,7 +28,7 @@ var o = n(207560),
 var _ = n(40449),
     E = n(204925),
     A = n(841365),
-    h = n(660183);
+    h = n(105292);
 let f = new Set([u.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, u.q1.START_STAGE_PROMPT, u.q1.STAGE_CHANNEL_RAISE_HAND]),
     I = new Set([
         E.w_.NSFW_SERVER,

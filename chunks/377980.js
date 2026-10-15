@@ -768,7 +768,7 @@ function eC(e) {
 }
 var eA = t(789645),
     eI = t(964486),
-    eO = t(660183),
+    eO = t(105292),
     eB = t(864043);
 function eR(e) {
     let { button: n } = e,
@@ -1061,7 +1061,7 @@ function e7(e) {
         children: (0, r.jsx)(t, {}),
     });
 }
-function e9(e) {
+function e2(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = l.useRef(null),
         a = i?.();
@@ -1086,7 +1086,7 @@ function e9(e) {
               }),
           });
 }
-function e2(e) {
+function e9(e) {
     let { layout: n, decoration: t, renderSetting: i } = e;
     return (0, r.jsxs)("div", {
         className: e8.LZ,
@@ -1110,11 +1110,11 @@ function e3(e) {
         { layout: l } = n;
     if ((0, i.zS)(l))
         return (0, r.jsx)(
-            e9,
+            e2,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,
-                children: (0, r.jsx)(e2, { layout: l, decoration: n.decoration, renderSetting: t }),
+                children: (0, r.jsx)(e9, { layout: l, decoration: n.decoration, renderSetting: t }),
             },
             n.key,
         );

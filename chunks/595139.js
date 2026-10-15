@@ -11,7 +11,7 @@ var s = e(17928),
     c = e(711014),
     b = e(567035),
     f = e(727479),
-    g = e(660183),
+    g = e(105292),
     m = e(652215);
 function x(l) {
     let { folderId: t, folderName: x, folderColor: h, unread: p, onSelect: A } = l,

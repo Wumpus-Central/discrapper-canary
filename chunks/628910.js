@@ -49,7 +49,7 @@ function h(t) {
 var j = i(568065),
     b = i(652215),
     g = i(25525),
-    N = i(660183),
+    N = i(105292),
     y = i(115087);
 function C(t) {
     return (0, s.jsx)(a._, { ...t, color: l.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });

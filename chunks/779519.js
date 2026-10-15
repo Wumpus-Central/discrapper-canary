@@ -28,7 +28,7 @@ var s,
     w = l(97808),
     B = l(778712),
     R = l(831544),
-    T = l(660183),
+    T = l(105292),
     U = l(639477);
 function G(e) {
     let { guild: n, speakers: l, speakerCount: s, className: c } = e,

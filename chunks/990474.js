@@ -19,7 +19,7 @@ var l = t(477900),
     A = t(652215),
     C = t(73510);
 t(827669);
-var k = t(660183);
+var k = t(105292);
 function I(e, n, t, l, a) {
     null != e &&
         ("" !== x.A.getDraft(e, x.C.ChannelMessage)

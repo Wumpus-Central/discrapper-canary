@@ -62,7 +62,7 @@ var z = t(231483),
     J = t(601047),
     $ = t(273926),
     K = t(453016),
-    Y = t(660183);
+    Y = t(105292);
 let Q = function (e) {
     let { guildId: l, formFields: t, user: s, showRequirements: i = !0 } = e;
     return null == (0, d.bG)([W.default], () => s ?? W.default.getCurrentUser())
@@ -944,9 +944,9 @@ function e4(e) {
         })
     );
 }
-var e8 = t(754744),
+var e2 = t(754744),
     e5 = t(138298);
-function e2(e) {
+function e8(e) {
     let { guildId: l } = e,
         t = (0, d.bG)([C.A], () => C.A.getGuild(l)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
@@ -961,7 +961,7 @@ function e2(e) {
               children: (0, n.jsx)("div", {
                   className: eZ.__invalid_sidebarContainer,
                   style: { width: ea.da6 },
-                  children: (0, n.jsx)(e8.default, {
+                  children: (0, n.jsx)(e2.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -970,10 +970,10 @@ function e2(e) {
           })
         : null;
 }
-var e6 = t(856768),
-    e3 = t(202091),
-    e1 = t(702841),
-    e9 = t(717421),
+var e9 = t(856768),
+    e1 = t(202091),
+    e3 = t(702841),
+    e6 = t(717421),
     le = t(144073),
     ll = t(151781),
     lt = t(189552),
@@ -983,16 +983,16 @@ var e6 = t(856768),
 function lr(e) {
     let { guild: l } = e,
         t = (0, le.Ms)(l.id),
-        s = (0, e9.z)({ height: 3 * !!t, config: e3.config.stiff });
+        s = (0, e6.z)({ height: 3 * !!t, config: e1.config.stiff });
     return (0, n.jsx)("div", {
         className: eG.NQ,
-        children: (0, n.jsx)(e3.animated.div, { className: eG.b0, style: s }),
+        children: (0, n.jsx)(e1.animated.div, { className: eG.b0, style: s }),
     });
 }
 function la(e) {
     let { guild: l, className: t, onPageChange: s, onMemberSelect: r } = e,
         d = l.id,
-        c = (0, e1.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e3.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, le.Ms)(d),
         x = (0, le.Wl)(d),
         m = i.useCallback(
@@ -1109,14 +1109,14 @@ function lu(e) {
                                             : (0, n.jsx)(eq, { guildId: c.id, currentTab: s }),
                               }),
                           }),
-                          (0, n.jsx)(e6.A, { guildId: c.id }),
+                          (0, n.jsx)(e9.A, { guildId: c.id }),
                       ],
                   }),
                   _ &&
                       (null == c
                           ? null
                           : P
-                            ? (0, n.jsx)(e2, { guildId: c.id })
+                            ? (0, n.jsx)(e8, { guildId: c.id })
                             : s === M.ALL_MEMBERS
                               ? null
                               : (0, n.jsx)(ev, { guildId: c.id })),

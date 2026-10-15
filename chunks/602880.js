@@ -66,7 +66,7 @@ function J(e) {
 var K = n(482132);
 n(322076);
 var Z = n(202541),
-    B = n(660183),
+    B = n(105292),
     Q = n(796694);
 let X = { [A.pn.GIFT_CUSTOMIZATION]: "xl", [A.pn.REVIEW]: "md", [A.pn.ADD_PAYMENT_STEPS]: "md" };
 function $(e) {
@@ -192,9 +192,9 @@ function ee(e) {
             if (null != e1) return e1.options;
         }, [e1]),
         e8 = (0, f.qv)(),
-        e6 = "sm";
-    ef ? (e6 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
-    let e4 = null != e5 ? e5.modalSizeGetter : void 0,
+        e4 = "sm";
+    ef ? (e4 = "xl") : (eA || e2 === A.pn.ADD_PAYMENT_STEPS) && (e4 = "md");
+    let e6 = null != e5 ? e5.modalSizeGetter : void 0,
         e9 = (0, b.O)(),
         e3 = null != X && !eB && (0, w.U9)(e9, X),
         [e7, te] = l.useState({
@@ -339,9 +339,9 @@ function ee(e) {
                 isGift: eB,
                 giftRecipient: eQ,
                 returnRef: eI,
-                manaModalSize: e6,
+                manaModalSize: e4,
                 modalSizeOverride: eT,
-                modalSizeGetter: e4,
+                modalSizeGetter: e6,
                 handleClose: tr,
                 children: (0, i.jsx)(K.Ay, {
                     disableDefaultSlideTransformStyling: em,

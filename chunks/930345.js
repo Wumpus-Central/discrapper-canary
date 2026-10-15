@@ -18,7 +18,7 @@ var l = n(477900),
     b = n(287809),
     k = n(569944),
     j = n(721228),
-    I = n(660183),
+    I = n(105292),
     p = n(559357);
 function L(e) {
     let { transitionState: t, onClose: n, guildId: i, welcomeMessage: L, onSave: S } = e,

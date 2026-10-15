@@ -9,7 +9,7 @@
     tZ: () => ex,
     pT: () => e2,
     UH: () => e4,
-    $P: () => e7,
+    $P: () => e9,
     YW: () => eU,
     zW: () => ez,
     NC: () => ep,
@@ -21,12 +21,12 @@
     FA: () => eJ,
     LS: () => ev,
     p5: () => e0,
-    Ns: () => e8,
+    Ns: () => e6,
     Iq: () => eO,
     Qh: () => em,
-    t9: () => e9,
+    t9: () => e3,
     RR: () => eK,
-    XD: () => e6,
+    XD: () => e7,
     ZP: () => eN,
     UX: () => eH,
     mn: () => eI,
@@ -118,7 +118,7 @@ var V = n(971649),
     er = n(190107),
     eu = n(652215),
     ei = n(202541),
-    eo = n(660183);
+    eo = n(105292);
 let el = 221552 == n.j ? -1 : null;
 function es() {
     let e =
@@ -165,8 +165,8 @@ function ea(e, t, n, r) {
         c = e.userStatus?.enrolledAt != null,
         d = t.userStatus?.enrolledAt != null,
         f = 20 * b.A.Millis.MINUTE,
-        E = e3(e, f),
-        A = e3(t, f);
+        E = e8(e, f),
+        A = e8(t, f);
     if (l) {
         var _, C, I;
         let u,
@@ -352,7 +352,7 @@ function em(e) {
         C =
             ((t = (function () {
                 let e = (0, I.bG)([S.A], () => S.A.getQuestHomeHero()),
-                    { isShelfEnabled: t } = e9(e),
+                    { isShelfEnabled: t } = e3(e),
                     n = (0, I.bG)([h.default], () => h.default.getCurrentUser()?.id ?? null),
                     { enabled: r } = F.useConfig({ location: er.rE.QUEST_HOME_MOBILE }),
                     { enabled: u } = G.NN.useConfig({ location: er.rE.QUEST_HOME_MOBILE });
@@ -822,10 +822,10 @@ function e5() {
         [e],
     );
 }
-function e6() {
+function e7() {
     return o.useMemo(() => Object.keys(er.kL).map((e) => ({ label: (0, Y.Js)(er.kL[e]), value: er.kL[e] })), []);
 }
-function e7(e) {
+function e9(e) {
     let { selectedSortMethod: t, selectedFilters: n, numQuestsVisible: r } = e,
         u = o.useRef(null),
         i = o.useRef(null);
@@ -843,14 +843,14 @@ function e7(e) {
                 (i.current = e));
         }, [n, r]));
 }
-function e8(e) {
+function e6(e) {
     return o.useMemo(() => h.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
 }
-function e3(e, t) {
+function e8(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
-function e9(e) {
+function e3(e) {
     let t = (0, I.bG)([Q.A], () => Q.A.quests),
         n = e?.questIds;
     return o.useMemo(() => {

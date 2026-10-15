@@ -20,7 +20,7 @@ async function f(e) {
         t = await (0, g.We)(await i.blob());
     return j.Pt0 + t.slice(t.indexOf(",") + 1);
 }
-var N = t(660183),
+var N = t(105292),
     y = t(347570);
 function C() {
     return [{ name: N.intl.string(N.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];

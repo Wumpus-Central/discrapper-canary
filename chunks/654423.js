@@ -17,7 +17,7 @@ var n = s(477900),
     A = s(855267),
     j = s(239093),
     m = s(652215),
-    f = s(660183),
+    f = s(105292),
     I = s(400514);
 function _() {
     return (0, i.bG)([h.A], () => h.A.getAgeCheckStatus()) === j.qN.VERIFIED

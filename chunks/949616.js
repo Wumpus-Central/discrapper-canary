@@ -2,7 +2,7 @@ n.d(t, { L: () => s, U: () => u });
 var l = n(128761),
     i = n(238490),
     r = n(248675),
-    a = n(660183);
+    a = n(105292);
 function u(e) {
     let { installScope: t, integrationStatus: n } = e,
         l = e.status ?? { state: "unpublished", surface: null, previewAppChannels: [] },

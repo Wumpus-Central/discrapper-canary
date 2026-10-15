@@ -81,7 +81,7 @@ var y = n(325499),
     M = n(334551),
     U = n(762359),
     D = n(429605),
-    w = n(660183);
+    w = n(105292);
 let B =
         "https://cdn.discordapp.com/assets/content/a95525ff6082a74538cbdc2d99c11fb59fe43718b018db01cfc02114785ad8fe.png",
     k =

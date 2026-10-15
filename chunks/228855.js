@@ -14,7 +14,7 @@ var n = e(477900),
     h = e(115063),
     S = e(510264),
     p = e(386936),
-    A = e(660183),
+    A = e(105292),
     f = e(368549);
 function v(t) {
     let { transitionState: i, guildId: e, onClose: v } = t,

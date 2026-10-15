@@ -1,6 +1,6 @@
 i.d(t, { Q7: () => u, bF: () => o, hW: () => h, oU: () => r });
 var n = i(248675),
-    a = i(660183);
+    a = i(105292);
 function o(e) {
     switch (e) {
         case "simple":

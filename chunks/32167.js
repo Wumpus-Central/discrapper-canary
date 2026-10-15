@@ -5,7 +5,7 @@ var n = i(477900),
     a = i(732159),
     c = i(365258),
     o = i(929120),
-    u = i(660183);
+    u = i(105292);
 function d(t) {
     let { direction: e, affectedGuildIds: i, settingName: d, onClose: l, transitionState: p } = t,
         h = e === c.AI.RESTRICTING,

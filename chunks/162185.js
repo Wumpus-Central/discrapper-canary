@@ -7,7 +7,7 @@ var n = t(935462),
     i = t(821609),
     c = t(235986),
     o = t(936525),
-    d = t(660183),
+    d = t(105292),
     m = t(844768);
 function x(a) {
     let { onClose: e, img: t, title: x, body: u, content: N } = a;

@@ -29,7 +29,7 @@ var l = n(477900),
     S = n(950305),
     L = n(941985),
     D = n(248675),
-    M = n(660183),
+    M = n(105292),
     z = n(749472);
 function T(e) {
     let { guilds: t, forMeGuildId: n, onNavigate: i } = e,

@@ -9,7 +9,7 @@ var n = l(477900),
     s = l(298702),
     c = l(706935),
     d = l(248675),
-    f = l(660183);
+    f = l(105292);
 function A(e) {
     let { app: t, title: l, heading: s, body: A, items: g, confirmText: m, onPlainConfirm: b, children: h, ...v } = e,
         N = null != t.rest && g.length > 0,

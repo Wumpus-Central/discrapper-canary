@@ -24,7 +24,7 @@ var t = l(477900),
     S = l(486020),
     f = l(132514),
     y = l(721228),
-    D = l(660183),
+    D = l(105292),
     E = l(559357);
 function H(e, n, l, t) {
     return { channelId: e, title: n, description: l, emoji: null, icon: t ?? null };

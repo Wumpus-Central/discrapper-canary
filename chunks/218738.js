@@ -11,7 +11,7 @@ var t = i(477900),
     m = i(174459),
     _ = i(652215),
     p = i(670455),
-    f = i(660183),
+    f = i(105292),
     b = i(175398);
 function g(e) {
     let { isStreamer: n, stream: g, streamApplication: E, onClose: A, transitionState: S, analyticsData: T } = e,

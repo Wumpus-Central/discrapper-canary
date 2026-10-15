@@ -9,7 +9,7 @@ var n = a(477900),
     d = a(450510),
     h = a(350535),
     u = a(317084),
-    k = a(660183),
+    k = a(105292),
     p = a(922518);
 function x(t) {
     let { guildId: e, channel: x, keybind: m, transitionState: y, onClose: C } = t,

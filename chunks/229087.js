@@ -5,7 +5,7 @@ var i = n(477900),
     s = n(939249),
     r = n(789645),
     d = n(753437),
-    o = n(660183),
+    o = n(105292),
     c = n(382701);
 function u(e) {
     let { tag: t, variant: n = "default", onRemove: u, className: m, ref: g } = e,

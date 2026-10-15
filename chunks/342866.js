@@ -6,7 +6,7 @@ var a = l(778712),
     i = l(101058),
     s = l(854627),
     u = l(930349),
-    o = l(660183);
+    o = l(105292);
 let d = a._3.SIZE_72;
 function c(e) {
     let { userId: n, guildId: l, avatarChange: a, shouldAnimate: u, imageInteractingClassName: o } = e,

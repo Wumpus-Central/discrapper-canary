@@ -8,7 +8,7 @@ var s = i(477900),
     h = i(580630),
     o = i(71532),
     u = i(652215),
-    p = i(660183),
+    p = i(105292),
     d = i(142374);
 class g extends n.Component {
     state = { step: 0, isAwaitingAuthentication: !1 };

@@ -22,7 +22,7 @@ var n,
     A = l(834730),
     M = l(189552),
     L = l(636670),
-    b = l(660183),
+    b = l(105292),
     D = l(602083);
 function R(e) {
     let { searchState: t } = e,
@@ -793,8 +793,8 @@ function e3(e) {
 }
 var e8 = l(589935),
     e4 = l(950072),
-    e5 = l(746080),
-    e2 = l(486974);
+    e2 = l(746080),
+    e5 = l(486974);
 let e9 = C.memo(function (e) {
         let { member: t } = e,
             l = C.useMemo(() => (0, ew.n)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
@@ -1139,7 +1139,7 @@ let tt = C.memo(function (e) {
                         e.preventDefault(),
                         null != h &&
                             (j
-                                ? (0, eU.z)(h.guildId, h.userId, e5.VV.MEMBER_SAFETY, { modViewPanel: e2.g.INFO })
+                                ? (0, eU.z)(h.guildId, h.userId, e2.VV.MEMBER_SAFETY, { modViewPanel: e5.g.INFO })
                                 : (0, M.Ko)(h, u)));
                 },
                 [h, u, j],

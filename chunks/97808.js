@@ -16,7 +16,7 @@ var i = n(477900),
     I = n(652215),
     p = n(190460),
     T = n(778712),
-    m = n(660183),
+    m = n(105292),
     g = n(185864);
 let S = { tension: 1200, friction: 70 };
 function N() {

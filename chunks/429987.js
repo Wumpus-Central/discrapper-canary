@@ -34,7 +34,7 @@ var E = n(17928),
     P = n(963179),
     M = n(168393),
     U = n(652215),
-    w = n(660183);
+    w = n(105292);
 let D = (0, E.UT)([O.A, b.A, R.A], {
     getQueryId: U.fic.APP_PREMIUM_BUTTON,
     get: (e) => {

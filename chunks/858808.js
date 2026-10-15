@@ -7,7 +7,7 @@ var l = n(765178),
     r = n(241326),
     d = n(183555),
     o = n(735321),
-    c = n(660183);
+    c = n(105292);
 function u(e) {
     let { game: t, widgetType: n, className: u, onRemove: m } = e,
         { trackUserProfileEditAction: g } = (0, d.NJ)(),

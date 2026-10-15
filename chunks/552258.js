@@ -15,7 +15,7 @@ var t = e(477900),
     E = e(90386),
     O = e(64175),
     C = e(652215),
-    f = e(660183),
+    f = e(105292),
     p = e(21238);
 function I(n) {
     let { channelId: i, userId: e, transitionState: I, onClose: T } = n,

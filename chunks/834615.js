@@ -30,7 +30,7 @@ var i = s(477900),
     y = s(630037),
     S = s(190107),
     b = s(652215),
-    Y = s(660183),
+    Y = s(105292),
     U = s(376229);
 let V = function (t) {
     let { quest: e, onQuestDismiss: s, isStaffPreview: V = !1 } = t,

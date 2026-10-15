@@ -19,7 +19,7 @@ var l = t(477900),
     C = t(468689),
     k = t(576705),
     b = t(652215),
-    j = t(660183),
+    j = t(105292),
     E = t(87617);
 function v(e) {
     let { guild: n, error: t, onClose: s } = e,

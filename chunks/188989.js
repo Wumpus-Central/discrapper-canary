@@ -14,7 +14,7 @@ var c = s(537547),
     o = s(631305),
     d = s(625633),
     m = s(652215),
-    g = s(660183),
+    g = s(105292),
     p = s(801506);
 function h(t) {
     let { guild: e, banner: s } = t;

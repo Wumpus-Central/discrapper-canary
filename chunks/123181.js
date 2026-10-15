@@ -9,7 +9,7 @@ n(321073);
 var o = n(477782),
     c = n(980707),
     u = n(753437),
-    m = n(660183),
+    m = n(105292),
     g = n(382701);
 let x = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: a } = e;

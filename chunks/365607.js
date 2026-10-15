@@ -52,7 +52,7 @@ var U = n(248284),
     W = n(315629),
     Y = n(403581),
     q = n(87719),
-    Z = n(660183),
+    Z = n(105292),
     Q = n(207711);
 function J(e) {
     let { onClose: t } = e;
@@ -656,8 +656,8 @@ var eJ = n(174459),
     e2 = n(999291),
     e7 = n(874402),
     e5 = n(652215),
-    e4 = n(758836),
-    e9 = n(854232),
+    e9 = n(758836),
+    e4 = n(854232),
     e3 = n(816645);
 function e6(e) {
     var t;
@@ -797,9 +797,9 @@ function e6(e) {
             c.map((e, t) => {
                 let n = e.id === eX.A.ORB_PROFILE_BADGE,
                     l = (0, e1.e0)(e.id),
-                    r = null != l || e.id === e9.K,
+                    r = null != l || e.id === e4.K,
                     s = "april_fools_2026" === e.id,
-                    i = void 0 !== l && e.id !== e9.K,
+                    i = void 0 !== l && e.id !== e4.K,
                     o = eE?.[e.id],
                     d = (0, a.jsx)("img", {
                         alt: " ",
@@ -840,7 +840,7 @@ function e6(e) {
                             }
                             if (n) {
                                 ((0, ep.Cz)({
-                                    tab: e4.G2.ORBS,
+                                    tab: e9.G2.ORBS,
                                     analyticsLocations: et,
                                     analyticsSource: S.A.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
                                 }),
@@ -980,10 +980,10 @@ function e6(e) {
                 let E = (0, a.jsx)(N.Anchor, { ...u, children: d }),
                     b = (function (e) {
                         let { badge: t, tieredTenureBadge: n } = e;
-                        return void 0 !== n && t.id !== e9.K
+                        return void 0 !== n && t.id !== e4.K
                             ? (0, a.jsx)(ew, { profileBadge: t, tenureBadge: n })
                             : t.description;
-                    })({ badge: e, tieredTenureBadge: r && e.id !== e9.K ? l : void 0 });
+                    })({ badge: e, tieredTenureBadge: r && e.id !== e4.K ? l : void 0 });
                 return (0, a.jsx)(
                     R.m,
                     { __unsupportedReactNodeAsText: b, forceOpen: c, delay: eM.In, ariaHidden: !0, children: E },

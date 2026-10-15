@@ -9,7 +9,7 @@ var i = s(202091),
     c = s(834730),
     o = s(297264),
     m = s(915089),
-    x = s(660183),
+    x = s(105292),
     h = s(93632);
 let u = (e) => {
         let { currentNumber: t, thresholdNumber: s, currentLabel: l, isPercent: o = !1 } = e,

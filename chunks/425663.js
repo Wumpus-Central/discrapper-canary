@@ -39,7 +39,7 @@ var a = n(477900),
     F = n(429913),
     D = n(733391),
     V = n(652215),
-    z = n(660183),
+    z = n(105292),
     G = n(348701);
 function Y(e) {
     let { shops: t, currentApplicationId: n, onClose: l, onMouseEnter: i, onMouseLeave: o } = e;

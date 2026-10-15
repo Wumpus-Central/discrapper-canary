@@ -9,7 +9,7 @@ var i,
     c = n(170148),
     u = n(818023),
     _ = n(652215),
-    E = n(660183),
+    E = n(105292),
     A =
         (((i = {})[(i.CAN_LAUNCH = 0)] = "CAN_LAUNCH"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),

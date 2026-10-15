@@ -7,7 +7,7 @@ var a = i(477900),
     d = i(331322),
     o = i(486020),
     c = i(320137),
-    m = i(660183),
+    m = i(105292),
     h = i(628363);
 function u(t) {
     let { emoji: e, onChange: i, value: n } = t,

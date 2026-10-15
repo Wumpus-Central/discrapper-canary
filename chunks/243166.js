@@ -10,7 +10,7 @@ var r = n(503698),
     u = n(183555),
     d = n(612630),
     h = n(518477),
-    p = n(660183),
+    p = n(105292),
     k = n(935922);
 function x(t) {
     let { userId: i, isVisible: n, onOpenProfile: r } = t,

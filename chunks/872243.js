@@ -9,7 +9,7 @@ var a = n(477900),
     u = n(734057),
     d = n(181079),
     h = n(16236),
-    p = n(660183),
+    p = n(105292),
     m = n(275585);
 function x(t) {
     let { channelId: e, onClose: n, transitionState: x, heading: k, formTitle: v } = t,

@@ -20,7 +20,7 @@ var i = n(477900),
     A = n(340833),
     N = n(913642),
     O = n(544231),
-    j = n(660183),
+    j = n(105292),
     C = n(472987);
 function b(e) {
     let { channelId: t, warningId: n, senderId: s, safetyWarning: l } = e,

@@ -56,7 +56,7 @@ var K = n(148494),
     ei = n(746080),
     el = n(652215),
     er = n(381941),
-    es = n(660183),
+    es = n(105292),
     ea = n(449582),
     eo = n(351952),
     eu = n(88686),
@@ -308,10 +308,10 @@ function eP(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, r, n));
     }
-    function e6() {
+    function e4() {
         M.A.preload(el.ME, t.id);
     }
-    function e4(e) {
+    function e6(e) {
         e.stopPropagation();
     }
     function e7(e) {
@@ -565,7 +565,7 @@ function eP(e) {
                 ref: eL,
                 onMouseEnter: e8,
                 onMouseLeave: e5,
-                onMouseDown: e6,
+                onMouseDown: e4,
                 onFocus: e1,
                 onBlur: e9,
                 onContextMenu: te,
@@ -695,7 +695,7 @@ function eP(e) {
                                                   ? es.intl.string(es.t["26C4oi"])
                                                   : es.intl.string(es.t.jsvgc3),
                                               onClick: ez ? tt : e3,
-                                              onMouseDown: e4,
+                                              onMouseDown: e6,
                                               nameplate: E,
                                               visibleElementRef: e0,
                                           }),

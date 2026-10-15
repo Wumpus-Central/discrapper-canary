@@ -28,7 +28,7 @@ var r = i(435558),
     _ = i(378058),
     I = i(652215),
     p = i(355097),
-    T = i(660183);
+    T = i(105292);
 async function f(t, e) {
     let { body: i } = await (0, E.aP)({ url: I.Rsh.STICKER_PACK(t), rejectWithError: (0, a.fT)() });
     return (c.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: t, pack: i, ingestStickers: e }), i);

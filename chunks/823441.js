@@ -1,7 +1,7 @@
 n.d(t, { A: () => l, K: () => s });
 var i = n(573648),
     r = n(395671),
-    a = n(660183);
+    a = n(105292);
 let s = "twitch:";
 class l extends r.Ay {
     constructor(e) {
