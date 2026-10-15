@@ -1447,8 +1447,8 @@ function tH(e) {
         children: [
             (0, i.jsx)(_.E, {
                 className: tW.z,
-                variant: "text-xs/medium",
-                color: "text-subtle",
+                variant: "text-xs/normal",
+                color: "text-muted",
                 lineClamp: 1,
                 children: N.intl.format(X.default.ED2GDQ, { memberCount: n, gameCount: a }),
             }),

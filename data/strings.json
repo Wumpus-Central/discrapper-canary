@@ -527,7 +527,7 @@
   "JDAHQV": "Turn on Activity Sharing to help unlock this panel. There need to be at least {memberCount, number} server members sharing their gaming activity.",
   "LeSGal": "There need to be at least {memberCount, number} server members sharing their gaming activity to have popular games enabled.",
   "G5PLYW": "+{count, number}",
-  "ED2GDQ": "**{memberCount, plural,one {# member}other {# members}** played **{gameCount, plural,one {# game}other {# games}** in the past week.",
+  "ED2GDQ": "**{memberCount, plural,one {# member}other {# members}** played **{gameCount, plural,one {# game}other {# games}** in the past week",
   "uQOR1j": "Turn on personalization to see your played games join the rankings.",
   "XaT+x0": "{count, plural,one {# member}other {# members} played {gameName}",
   "e7pD5m": "Enable settings to contribute to Popular Games. These can be changed at any time in Settings.",
