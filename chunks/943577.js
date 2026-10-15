@@ -303,7 +303,7 @@ let er = r().throttle(() => {
                 Y.size > 0)
             ) {
                 let e = Array.from(Y);
-                (A.Ay.fetchApplications(e), e.forEach((e) => K.add(e)), Y.clear());
+                (A.Ay.fetchApplications(e).catch(x.tEg), e.forEach((e) => K.add(e)), Y.clear());
             }
             B = !0;
         }

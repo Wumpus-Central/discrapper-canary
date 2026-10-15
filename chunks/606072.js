@@ -41,10 +41,9 @@ function _(e) {
             hasPersonalizationConsent: u.A.hasConsented(f.YAq.PERSONALIZATION),
         })),
         r = null,
-        c = !t || !l,
-        o = !a;
+        c = !t || !l;
     return (
-        c && o ? (r = "all") : c ? (r = "activity_sharing") : o && (r = "personalization"),
+        n && (c && !a ? (r = "all") : c ? (r = "activity_sharing") : a || (r = "personalization")),
         {
             isSharingActivity: t,
             isSharingActivityInGuild: l,

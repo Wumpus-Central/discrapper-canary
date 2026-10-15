@@ -139,13 +139,13 @@
 }
 
 .content__0c01b {
-    flex: 1;
-    min-height: 136px;
     position: relative
 }
 
+.content__0c01b,
 .emptyState__0c01b {
-    flex: 1
+    flex: 1;
+    min-height: 136px
 }
 
 .ambientArt__0c01b {
@@ -494,4 +494,4 @@
     padding-inline: var(--space-4)
 }
 
-/*# sourceMappingURL=ad90144c5e212558.css.map*/
+/*# sourceMappingURL=7d5bd6ee90c76728.css.map*/

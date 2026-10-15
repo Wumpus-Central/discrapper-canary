@@ -914,13 +914,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "639656",
-        s = "29a878f9ada7008dd7ab7e363aeb7fc656dc6f81".substring(0, 7),
+        n = "639707",
+        s = "af5baf745cae273667aef64b47aef1686e40f565".substring(0, 7),
         r = eY.A?.app.getVersion(),
         l = eY.A?.app.getBuildNumber(),
         c = eY.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1792101832375", !1) : null,
+        u = null != o ? (0, eq.A)("1792102833883", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1003,7 +1003,7 @@ function eJ() {
     );
 }
 var e0 = n(370658);
-function e1(e) {
+function e2(e) {
     let { onClose: t } = e;
     return (0, i.jsx)(eO.W, {
         "data-menu-migrated-auto": !0,
@@ -1028,7 +1028,7 @@ function e1(e) {
         }),
     });
 }
-function e2() {
+function e1() {
     let e = s.useRef(null);
     return (0, i.jsxs)("div", {
         children: [
@@ -1064,7 +1064,7 @@ function e2() {
                         animation: eG.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(e1, { onClose: t });
+                            return (0, i.jsx)(e2, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, i.jsx)(eK.Anchor, {
@@ -1085,8 +1085,8 @@ function e2() {
         ],
     });
 }
-var e9 = n(402651),
-    e5 = n(669067),
+var e5 = n(402651),
+    e9 = n(669067),
     e7 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
@@ -1105,7 +1105,7 @@ function e3(e) {
         return (
             eM.default.addChangeListener(e),
             () => {
-                (eM.default.removeChangeListener(e), e9.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
+                (eM.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
@@ -1115,17 +1115,17 @@ function e3(e) {
               partialRoot: eD.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e2,
+              sidebarFooter: e1,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e5._)(e);
+                  e8.has(e) || (0, e9._)(e);
                   let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e9.A.getField("source") },
+                          properties: { source: e5.A.getField("source") },
                       }),
-                      e9.A.setState({ source: void 0 }));
+                      e5.A.setState({ source: void 0 }));
               },
               target: t,
               defaultTarget: e_.X.ACCOUNT_PANEL,

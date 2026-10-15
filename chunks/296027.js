@@ -232,6 +232,7 @@ async function J(e) {
         return;
     }
     if (!(W() || b)) return void D.verbose(`Skipping track for pid ${e} - overlay is disabled`);
+    if (!A.default.isAuthenticated()) return void D.verbose(`Skipping track for pid ${e} - not authenticated`);
     let t = await Z(e);
     if (null == t) return void D.error(`Failed to track game ${e}`);
     (j(e, "game_tracking_starting", { game_name: t.gameName, fullscreen_type: t.fullscreenType }),

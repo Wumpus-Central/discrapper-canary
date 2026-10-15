@@ -29,6 +29,27 @@
     margin-inline: var(--space-8)
 }
 
+.full-motion .colon__00a81 {
+    animation: colon-tick__00a81 2s linear infinite
+}
+
+@keyframes colon-tick__00a81 {
+
+    0%,
+    42% {
+        opacity: 1
+    }
+
+    50%,
+    92% {
+        opacity: .15
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .cardContainer__5b393 {
     border-radius: 12px;
     --custom-bezier: cubic-bezier(0.36, 0.35, 0.1, 1.23)
@@ -371,4 +392,4 @@
     }
 }
 
-/*# sourceMappingURL=dcacaa5c9c72ae3d.css.map*/
+/*# sourceMappingURL=f569ae7e326c7121.css.map*/
