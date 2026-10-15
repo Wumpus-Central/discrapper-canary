@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638523, Version Hash: 51f90bc54a4e99152a6f27ee3a6fd43c67641257`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638545, Version Hash: c77f1a085570224771b4383e003a8e6135c27e1f`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -25157,13 +25157,10 @@ function Lg(e) {
     });
 }
 let LS = (0, V.mj)({
-    name: "2026-10-recurring-referral-reminder",
+    name: "2026-10-referral-refresh-notification",
     kind: "user",
-    defaultConfig: { enabled: !1, bottomSheetEnabled: !1, notificationEnabled: !1 },
-    variations: {
-        1: { enabled: !0, bottomSheetEnabled: !0, notificationEnabled: !1 },
-        2: { enabled: !0, bottomSheetEnabled: !1, notificationEnabled: !0 },
-    },
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
 });
 function LN(e) {
     let { targetElementRef: t, suppressPopover: i = !1 } = e,
@@ -25186,8 +25183,8 @@ function LN(e) {
     }
     return (0, b.jsx)(rJ.A, {
         targetElementRef: t,
-        title: tR.intl.string(d ? tR.t.riWixv : tR.t.K2DyeS),
-        body: tR.intl.string(d ? tR.t.Uhe1Ks : tR.t["JICo+3"]),
+        title: tR.intl.string(d ? tR.t.KHF45W : tR.t.K2DyeS),
+        body: tR.intl.string(d ? tR.t.WJDeur : tR.t["JICo+3"]),
         graphic: { type: "image", src: LT.A },
         size: "md",
         shouldShow: o,
@@ -25903,7 +25900,7 @@ let yr = "isHideDevBanner",
                     className: t_()(yi.Wz, yi.mr),
                     children: [
                         (0, b.jsx)(yn, { className: yi.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638523" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638545" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })

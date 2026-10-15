@@ -5927,12 +5927,10 @@
     }
   },
   {
-    "name": "2026-10-recurring-referral-reminder",
+    "name": "2026-10-referral-refresh-notification",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false,
-      "bottomSheetEnabled": false,
-      "notificationEnabled": false
+      "enabled": false
     },
     "variations": {
       "0": {
@@ -5940,14 +5938,7 @@
         "variant": 0
       },
       "1": {
-        "enabled": true,
-        "bottomSheetEnabled": true,
-        "notificationEnabled": false
-      },
-      "2": {
-        "enabled": true,
-        "bottomSheetEnabled": false,
-        "notificationEnabled": true
+        "enabled": true
       }
     }
   },
