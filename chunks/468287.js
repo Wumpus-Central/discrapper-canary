@@ -83,6 +83,12 @@ let E = [
                 })({ location: e }).enabled,
             removeWhenDefault: !0,
         },
+        {
+            settingKey: "DESKTOP_PERF_KEEP_RENDERER_LOG_FILE_OPEN",
+            defaultValue: !1,
+            readValue: (e) => (0, _.L)(e).keepRendererLogFileOpen,
+            removeWhenDefault: !0,
+        },
     ],
     A = !1,
     h = new Map();

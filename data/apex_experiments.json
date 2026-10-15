@@ -5754,7 +5754,8 @@
     "kind": "user",
     "defaultConfig": {
       "skipSilentDelayEstimatorFfts": false,
-      "processPollingPerf": false
+      "processPollingPerf": false,
+      "keepRendererLogFileOpen": false
     },
     "variations": {
       "0": {
@@ -5763,7 +5764,8 @@
       },
       "1": {
         "skipSilentDelayEstimatorFfts": true,
-        "processPollingPerf": true
+        "processPollingPerf": true,
+        "keepRendererLogFileOpen": true
       }
     }
   },
