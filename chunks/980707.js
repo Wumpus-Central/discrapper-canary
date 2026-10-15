@@ -205,7 +205,7 @@ function z(e) {
             let { status: e } = t;
             return (0, r.jsx)("div", {
                 className: D.statusAccessory,
-                children: (0, r.jsx)(K.nW, { status: e, size: 10, color: n ? "currentColor" : void 0 }),
+                children: (0, r.jsx)(K.nW, { status: e, size: 10 }),
             });
         }
         case "guildTag":

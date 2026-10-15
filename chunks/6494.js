@@ -9,6 +9,7 @@ let i = new (class {
     setMirrored(e) {}
     setPipAspectRatio(e, t) {}
     refreshPipUi() {}
+    setAutoEnterEnabled(e) {}
     updateSourceTrackingView() {}
     addOnPipModeChangedListener(e) {}
     addOnPipModeWillChangeListener(e) {}

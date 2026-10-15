@@ -269,7 +269,7 @@ function G(e) {
         }),
     });
 }
-var B = n(62015),
+var B = n(286701),
     D = n(767589);
 function k(e, t) {
     return B.m.create({ contentIdentifier: e, properties: t });

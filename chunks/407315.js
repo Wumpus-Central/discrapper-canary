@@ -332,7 +332,7 @@ let j = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
     _ = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
     k = new Map();
 for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && k.set(e, t);
-let R = { max: 1 / 0, maxAge: +h.A.Millis.MINUTE, updateAgeOnGet: !0 },
+let R = { max: 250, maxAge: +h.A.Millis.MINUTE, updateAgeOnGet: !0 },
     O = new (r())(R),
     L = new (r())(R),
     w = new (r())(R);
