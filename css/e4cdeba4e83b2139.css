@@ -232,7 +232,7 @@
     border-end-start-radius: var(--radius-lg)
 }
 
-.steamContainer__51891 {
+.reviewRow__51891 {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -242,15 +242,12 @@
     padding-top: var(--space-20)
 }
 
-.steamNameContainer__51891,
-.steamRatingContainer__51891 {
+.ratingContainer__51891,
+.reviewNameContainer__51891 {
+    align-items: center;
     display: flex;
     flex-direction: row;
     gap: var(--space-4)
-}
-
-.steamRatingContainer__51891 {
-    align-items: center
 }
 
 .opencriticContainer__51891 {
@@ -304,4 +301,4 @@
     text-decoration: var(--link-decoration)
 }
 
-/*# sourceMappingURL=ec5b0749194be81d.css.map*/
+/*# sourceMappingURL=e4cdeba4e83b2139.css.map*/

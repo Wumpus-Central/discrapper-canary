@@ -1,11 +1,14 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(155718),
     r = n(315069),
     a = n(395671),
     s = n(486020),
     l = n(403362),
     o = n(744700);
-class d extends r.A {
+function d(e) {
+    if (null != e) return { rating: e.rating, ratingCount: e.rating_count ?? e.global_rating_count };
+}
+class c extends r.A {
     id;
     name;
     description;
@@ -72,7 +75,7 @@ class d extends r.A {
             (this.communityGuildIds = e.community_guild_ids),
             (this.steamReleaseStatus = e.steam_release_status),
             (this.reviews = (function (e) {
-                if (e?.steam != null || e?.opencritic != null)
+                if (e?.steam != null || e?.app_store != null || e?.google_play != null || e?.opencritic != null)
                     return {
                         steam:
                             null != e.steam
@@ -85,6 +88,8 @@ class d extends r.A {
                                       localizedRatingCount: e.steam.localized_rating_count,
                                   }
                                 : void 0,
+                        appStore: d(e.app_store),
+                        googlePlay: d(e.google_play),
                         opencritic:
                             null != e.opencritic
                                 ? {

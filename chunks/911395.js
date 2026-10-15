@@ -332,7 +332,7 @@ var _,
         GoalIcon: () => Tw.X,
         GoogleNeutralIcon: () => TG.A,
         GooglePlayBrandIcon: () => Tx,
-        GooglePlayNeutralIcon: () => Tk,
+        GooglePlayNeutralIcon: () => Tk.O,
         GridHorizontalIcon: () => TF,
         GridSquareIcon: () => TB.d,
         GridVerticalIcon: () => TV,
@@ -1481,7 +1481,7 @@ if (null == e8 || "0.0.0" !== e8.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e9 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new e$.A().log(
-    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638827, Version Hash: 7f135eae91e540b6554cf11a75fddf4a9de8271d`,
+    `[BUILD INFO] Release Channel: ${e9}, Build Number: 638840, Version Hash: 65d7fb0275b9c9d178ef73f31b7e349e72b48108`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -17959,32 +17959,7 @@ function Tx(e) {
         ],
     });
 }
-function Tk(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = r7.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, hl.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, b.jsx)("svg", {
-        ...(0, hs.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, b.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M19.44 14.54 7.07 21.7c-.86.49-1.92.36-2.76-.1a2.77 2.77 0 0 1-1.42-2.3V4.58c0-.98.76-1.81 1.42-2.17.83-.45 1.9-.6 2.76-.1l12.41 7.2c.9.52 1.38 1.47 1.4 2.42a2.84 2.84 0 0 1-1.44 2.61Zm-7.2-4.53 1.66-1.7-7.32-4.24C6 3.73 5.4 3.69 4.9 4.16l5.88 5.9c.47.47.95.46 1.46-.05Zm-2.55 2.57a.94.94 0 0 0 0-1.08l-5-5.05v11.27l5-5.14Zm5.8 2.22 3.11-1.86c.22-.13.5-.49.5-.88 0-.38-.16-.7-.46-.93-.24-.17-3.14-1.9-3.14-1.9l-2.28 2.34c-.35.36-.05.95.24 1.23l2.02 2Zm-1.63.93-1.8-1.84a.88.88 0 0 0-1.18-.02l-5.92 6.01c.42.34.95.44 1.33.22l7.57-4.37Z",
-            className: a,
-        }),
-    });
-}
+var Tk = n(575888);
 function TF(e) {
     let {
             size: t = "md",
@@ -25901,7 +25876,7 @@ let yi = "isHideDevBanner",
                     className: t_()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638827" }),
+                        tR.intl.format(tR.t.uyrfYF, { buildNumber: "638840" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -51892,9 +51867,9 @@ let jO = [
                             n.e("842775"),
                             n.e("161573"),
                             n.e("238672"),
-                            n.e("597138"),
+                            n.e("24172"),
                             n.e("714078"),
-                        ]).then(n.bind(n, 796329));
+                        ]).then(n.bind(n, 750823));
                         return (t) => (0, b.jsx)(e, { gameId: i, source: _t.GameProfileSources.Deeplink, ...t });
                     });
                 }),
@@ -53566,9 +53541,9 @@ let j3 = (0, t$.Fe)({
             n.e("664430"),
             n.e("486672"),
             n.e("375234"),
+            n.e("192589"),
             n.e("134504"),
             n.e("33448"),
-            n.e("775627"),
             n.e("138042"),
             n.e("995813"),
             n.e("908608"),
@@ -53613,7 +53588,7 @@ let j3 = (0, t$.Fe)({
             n.e("553683"),
             n.e("398254"),
             n.e("71223"),
-            n.e("262927"),
+            n.e("985343"),
             n.e("929569"),
             n.e("682022"),
             n.e("636002"),

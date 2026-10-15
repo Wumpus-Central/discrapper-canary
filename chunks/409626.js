@@ -66,6 +66,8 @@ var i,
         (r[(r.Overview = 40)] = "Overview"),
         (r[(r.Communities = 41)] = "Communities"),
         (r[(r.CommunityClicked = 42)] = "CommunityClicked"),
+        (r[(r.AppStoreReviews = 43)] = "AppStoreReviews"),
+        (r[(r.GooglePlayReviews = 44)] = "GooglePlayReviews"),
         r),
     A =
         (((a = {}).ActivityCard = "activity_card"),

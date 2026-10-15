@@ -675,7 +675,7 @@ let _ = {
                         n.e("396325"),
                         n.e("664430"),
                         n.e("375234"),
-                        n.e("775627"),
+                        n.e("192589"),
                         n.e("484394"),
                         n.e("724637"),
                         n.e("682022"),
@@ -708,11 +708,11 @@ let _ = {
                         n.e("238672"),
                         n.e("631951"),
                         n.e("571180"),
-                        n.e("597138"),
+                        n.e("24172"),
                         n.e("86454"),
                         n.e("913954"),
-                        n.e("725584"),
-                    ]).then(n.bind(n, 796329));
+                        n.e("225883"),
+                    ]).then(n.bind(n, 750823));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
                 { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
@@ -1372,7 +1372,7 @@ let _ = {
                         n.e("396325"),
                         n.e("664430"),
                         n.e("375234"),
-                        n.e("775627"),
+                        n.e("192589"),
                         n.e("484394"),
                         n.e("724637"),
                         n.e("682022"),
@@ -1405,11 +1405,11 @@ let _ = {
                         n.e("238672"),
                         n.e("631951"),
                         n.e("571180"),
-                        n.e("597138"),
+                        n.e("24172"),
                         n.e("86454"),
                         n.e("913954"),
-                        n.e("725584"),
-                    ]).then(n.bind(n, 796329));
+                        n.e("225883"),
+                    ]).then(n.bind(n, 750823));
                     return (n) =>
                         (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, initialTab: l, ...n }, t);
                 },
