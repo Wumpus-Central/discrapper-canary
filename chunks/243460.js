@@ -1,8 +1,8 @@
-e.d(n, { A: () => I, u: () => G });
+e.d(n, { A: () => G, u: () => b });
 var i = e(477900);
 e(582128);
-var a = e(862482),
-    r = e(935462),
+var a = e(935462),
+    r = e(821609),
     l = e(297264),
     s = e(834730);
 let d = "/assets/7f384b2c31f586cd.svg",
@@ -15,27 +15,20 @@ var p = e(235986),
     E = e(105292),
     C = e(911475);
 let T = 0.5 > Math.random();
-function G(t) {
-    let { onClose: n, onBack: e, onCreationIntentChosen: G, hasFooter: I = !0 } = t,
-        b = (0, i.jsx)(a.$n, {
-            "data-migration-pending": !0,
-            className: C.Gv,
-            look: a.$n.Looks.BLANK,
-            size: a.$n.Sizes.MIN,
-            onClick: e,
-            children: E.intl.string(E.t["13/7kX"]),
-        });
+function b(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: b, hasFooter: G = !0 } = t,
+        I = (0, i.jsx)(r.$, { variant: "secondary", fullWidth: !0, text: E.intl.string(E.t["13/7kX"]), onClick: e });
     function D(t) {
         (m.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
             is_community: t === g.IR.COMMUNITY,
         }),
-            G(t));
+            b(t));
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(r.rQ, {
+                (0, i.jsxs)(a.rQ, {
                     "data-migration-pending": !0,
                     direction: p.A.Direction.VERTICAL,
                     className: C.wx,
@@ -52,10 +45,10 @@ function G(t) {
                             variant: "text-md/normal",
                             children: E.intl.string(E.t.nOzc7w),
                         }),
-                        null != n && (0, i.jsx)(r.s_, { "data-migration-pending": !0, className: C.b, onClick: n }),
+                        null != n && (0, i.jsx)(a.s_, { "data-migration-pending": !0, className: C.b, onClick: n }),
                     ],
                 }),
-                (0, i.jsxs)(r.$m, {
+                (0, i.jsxs)(a.$m, {
                     "data-migration-pending": !0,
                     scrollbarGutter: !1,
                     className: C.f9,
@@ -98,13 +91,13 @@ function G(t) {
                         }),
                     ],
                 }),
-                I && (0, i.jsx)(r.jl, { "data-migration-pending": !0, justify: p.A.Justify.BETWEEN, children: b }),
+                G && (0, i.jsx)(a.jl, { "data-migration-pending": !0, justify: p.A.Justify.BETWEEN, children: I }),
             ],
         }),
-        footer: b,
+        footer: I,
     };
 }
-function I(t) {
-    let { content: n } = G(t);
+function G(t) {
+    let { content: n } = b(t);
     return n;
 }
