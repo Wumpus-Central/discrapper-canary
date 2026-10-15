@@ -10,8 +10,8 @@ let s = (0, a.m6)() ? { [i.C8]: { "dummy-shop-home": i.uG, "dummy-orb-shelf": i.
 function d(e, t) {
     return `${e}/${t}`;
 }
-let h = s,
-    m = new Set(c),
+let m = s,
+    h = new Set(c),
     p = {},
     f = o,
     g = new Set(u),
@@ -34,10 +34,10 @@ function v(e) {
 class A extends r.Ay.Store {
     static displayName = "LayoutSystemStore";
     getLayout(e, t) {
-        return null == e || null == t ? null : (h[e]?.[t] ?? null);
+        return null == e || null == t ? null : (m[e]?.[t] ?? null);
     }
     isFetchingLayout(e, t) {
-        return null != e && null != t && m.has(d(e, t));
+        return null != e && null != t && h.has(d(e, t));
     }
     getFetchError(e, t) {
         return null == e || null == t ? null : (p[d(e, t)] ?? null);
@@ -58,15 +58,15 @@ class A extends r.Ay.Store {
 let T = new A(l.h, {
     LAYOUT_SYSTEM_FETCH: function (e) {
         let { tenantId: t, layoutId: n } = e;
-        m.add(d(t, n));
+        h.add(d(t, n));
     },
     LAYOUT_SYSTEM_FETCH_SUCCESS: function (e) {
         let { tenantId: t, layout: n } = e;
-        (((h[t] ??= {})[n.id] = n), delete p[d(t, n.id)], m.delete(d(t, n.id)));
+        (((m[t] ??= {})[n.id] = n), delete p[d(t, n.id)], h.delete(d(t, n.id)));
     },
     LAYOUT_SYSTEM_FETCH_FAILURE: function (e) {
         let { tenantId: t, layoutId: n, apiError: r } = e;
-        ((p[d(t, n)] = r), m.delete(d(t, n)));
+        ((p[d(t, n)] = r), h.delete(d(t, n)));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH: function (e) {
         let { tenantId: t, templateId: n, requestParams: r } = e;
@@ -83,6 +83,6 @@ let T = new A(l.h, {
         ((E[d(t, a)] = l), g.delete(d(t, a)));
     },
     LOGOUT: function () {
-        ((h = {}), (m = new Set()), (p = {}), (f = {}), (g = new Set()), (E = {}));
+        ((m = {}), (h = new Set()), (p = {}), (f = {}), (g = new Set()), (E = {}));
     },
 });

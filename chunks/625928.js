@@ -19,10 +19,10 @@ var l = n(477900),
     y = n(404374),
     C = n(10392),
     A = n(82498),
-    I = n(734057),
-    b = n(309010),
-    v = n(174459),
-    N = n(652215),
+    b = n(734057),
+    I = n(309010),
+    N = n(174459),
+    v = n(652215),
     T = n(105292),
     j = n(845210);
 function _() {
@@ -33,19 +33,19 @@ function _() {
 }
 function k(e) {
     let { className: t, iconOnly: n } = e,
-        r = (0, o.bG)([b.Ay, I.A], () => {
-            let e = I.A.getChannel(b.Ay.getChannelId());
-            return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
+        r = (0, o.bG)([I.Ay, b.A], () => {
+            let e = b.A.getChannel(I.Ay.getChannelId());
+            return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            (v.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
+            (N.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: r, location_section: N.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: r, location_section: v.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             }),
-                (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
+                (0, C.sq)(v.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
         }, [r, a]),
         n
             ? (0, l.jsx)(S.D, {
@@ -78,12 +78,12 @@ function L(e) {
         y = (0, p.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
-        I = n.length,
-        b = null != t.upsellLongMessages && (I ?? 0) > N.uvi && S,
-        v = null != t.upsellLongMessages && !S,
-        j = C - I,
+        b = n.length,
+        I = null != t.upsellLongMessages && (b ?? 0) > v.uvi && S,
+        N = null != t.upsellLongMessages && !S,
+        j = C - b,
         _ = j > A;
-    (0, a.$)({ currentLength: I, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
+    (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
     let L =
             0 === j
                 ? T.intl.string(T.t.tU6YQ7)
@@ -102,7 +102,7 @@ function L(e) {
                 (0, l.jsxs)("div", {
                     className: O.SW,
                     children: [
-                        b && P
+                        I && P
                             ? (0, l.jsx)(u.m, {
                                   text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: C }),
                                   position: "top",
@@ -125,7 +125,7 @@ function L(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
-                v && !_
+                N && !_
                     ? (0, l.jsx)(k, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
                     : null,
             ],

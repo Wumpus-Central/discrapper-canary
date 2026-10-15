@@ -1,37 +1,37 @@
-t.d(n, { R: () => T, _: () => I });
-var a = t(477900),
-    i = t(582128),
-    s = t(503698),
-    l = t.n(s),
-    r = t(17928),
-    d = t(844222),
-    o = t(926268),
-    c = t(559758),
-    u = t(939249),
-    f = t(683063),
-    m = t(866665),
-    b = t(661492);
-let h = (0, t(945810).mj)({
+n.d(a, { R: () => w, _: () => I });
+var i = n(477900),
+    s = n(582128),
+    t = n(503698),
+    l = n.n(t),
+    r = n(17928),
+    d = n(844222),
+    o = n(926268),
+    c = n(559758),
+    u = n(939249),
+    b = n(683063),
+    f = n(866665),
+    m = n(661492);
+let h = (0, n(945810).mj)({
     name: "2026-09-halloween-wishlisting-animation",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var g = t(280450),
-    v = t(536572),
-    p = t(113265),
-    x = t(758836),
-    k = t(105292),
-    w = t(715838);
-let y =
+var g = n(280450),
+    p = n(536572),
+    x = n(113265),
+    v = n(758836),
+    k = n(105292),
+    y = n(715838);
+let j =
         "https://cdn.discordapp.com/assets/content/7f66bcf14a6000b54874d74ee5a72fbbaec3d5944edfd7d6e9b3d597d3dbbaf2.png",
-    j = !1,
-    C = { xs: "xxs", sm: "xs", md: "refresh_sm" };
-function T(e) {
+    C = !1,
+    T = { xs: "xxs", sm: "xs", md: "refresh_sm" };
+function w(e) {
     let {
-            product: n,
-            selectedVariantIndex: t,
-            location: s,
+            product: a,
+            selectedVariantIndex: n,
+            location: t,
             onError: l,
             isCardHovered: d = !0,
             onTrackClick: o,
@@ -39,144 +39,144 @@ function T(e) {
         } = e,
         u = (0, r.bG)([g.default], () => g.default.getId()),
         {
-            isWishlisted: f,
-            isBusy: m,
+            isWishlisted: b,
+            isBusy: f,
             isFirstTimeWishlister: h,
             handleToggle: k,
-            specificProductOrVariant: w,
-            isPurchased: y,
-        } = (0, p.z)({ userId: u, product: n, selectedVariantIndex: t, location: s, onError: l }),
-        j = (0, v.s7)(w),
-        C = i.useCallback(() => {
-            (o?.(f ? x.sH.REMOVE_FROM_WISHLIST : x.sH.ADD_TO_WISHLIST), k());
-        }, [f, k, o]);
-    return y
+            specificProductOrVariant: y,
+            isPurchased: j,
+        } = (0, x.z)({ userId: u, product: a, selectedVariantIndex: n, location: t, onError: l }),
+        C = (0, p.s7)(y),
+        T = s.useCallback(() => {
+            (o?.(b ? v.sH.REMOVE_FROM_WISHLIST : v.sH.ADD_TO_WISHLIST), k());
+        }, [b, k, o]);
+    return j
         ? null
-        : (0, a.jsx)(I, {
-              skuId: w.skuId,
-              productName: j,
-              disabled: !(0, b.q)(w),
-              isWishlisted: f,
-              isBusy: m,
+        : (0, i.jsx)(I, {
+              skuId: y.skuId,
+              productName: C,
+              disabled: !(0, m.q)(y),
+              isWishlisted: b,
+              isBusy: f,
               isFirstTimeWishlister: h,
-              isVisuallyHidden: !d && !f,
-              onClick: C,
+              isVisuallyHidden: !d && !b,
+              onClick: T,
               ...c,
           });
 }
 function I(e) {
     let {
-            skuId: n,
-            productName: t,
-            className: s,
+            skuId: a,
+            productName: n,
+            className: t,
             disabled: r,
-            variant: b = "default",
+            variant: m = "default",
             size: g = "md",
-            isWishlisted: v,
-            isBusy: p,
-            isFirstTimeWishlister: x,
-            isVisuallyHidden: T,
+            isWishlisted: p,
+            isBusy: x,
+            isFirstTimeWishlister: v,
+            isVisuallyHidden: w,
             onClick: I,
-            shouldShowTooltip: E,
-            tooltipConfig: H = {},
-            tabIndex: S = 0,
+            shouldShowTooltip: H,
+            tooltipConfig: S = {},
+            tabIndex: A = 0,
         } = e,
-        A = C[g],
-        { reducedMotion: _ } = i.useContext(d.C),
+        E = T[g],
+        { reducedMotion: _ } = s.useContext(d.C),
         O = h.useConfig({ location: "WishlistButton" }).enabled,
-        R = i.useRef(null),
-        [D, N] = i.useState(!1),
-        W = O ? v || D : v && !D,
+        D = s.useRef(null),
+        [N, R] = s.useState(!1),
+        W = O ? p || N : p && !N,
         z = W ? o.HeartIcon : c.y,
-        B = l()(w.normalIconColor, W && w.wishlistedOrAnimating);
-    (i.useEffect(() => {
-        O && !_.enabled && (j || ((j = !0), (new Image().src = y)));
+        B = l()(y.normalIconColor, W && y.wishlistedOrAnimating);
+    (s.useEffect(() => {
+        O && !_.enabled && (C || ((C = !0), (new Image().src = j)));
     }, [O, _.enabled]),
-        i.useEffect(() => {
-            N(!1);
-        }, [n]),
-        i.useEffect(() => {
-            D && _.enabled && N(!1);
-        }, [D, _.enabled]),
-        i.useEffect(() => {
-            if (!O || !D || _.enabled) return;
+        s.useEffect(() => {
+            R(!1);
+        }, [a]),
+        s.useEffect(() => {
+            N && _.enabled && R(!1);
+        }, [N, _.enabled]),
+        s.useEffect(() => {
+            if (!O || !N || _.enabled) return;
             let e = window.setTimeout(() => {
-                N(!1);
+                R(!1);
             }, 2042);
             return () => window.clearTimeout(e);
-        }, [D, O, _.enabled]));
-    let F = i.useCallback(
+        }, [N, O, _.enabled]));
+    let F = s.useCallback(
             (e) => {
-                (e.stopPropagation(), r || (v || _.enabled ? v && D && N(!1) : N(!0), I()));
+                (e.stopPropagation(), r || (p || _.enabled ? p && N && R(!1) : R(!0), I()));
             },
-            [r, v, _.enabled, D, I],
+            [r, p, _.enabled, N, I],
         ),
-        L = !r && !v && !D,
-        P = i.useCallback(
+        P = !r && !p && !N,
+        M = s.useCallback(
             (e) => {
-                e.target === e.currentTarget && D && requestAnimationFrame(() => N(!1));
+                e.target === e.currentTarget && N && requestAnimationFrame(() => R(!1));
             },
-            [D],
+            [N],
         );
-    function M() {
-        let e = k.intl.formatToPlainString(k.t["7kFjeK"], { productName: t });
-        return (0, a.jsx)(u.D, {
+    function q() {
+        let e = k.intl.formatToPlainString(k.t["7kFjeK"], { productName: n });
+        return (0, i.jsx)(u.D, {
             className: l()(
-                w.wishlistButton,
-                w[g],
+                y.wishlistButton,
+                y[g],
                 {
-                    [w.variantDefault]: "default" === b,
-                    [w.variantSecondary]: "secondary" === b,
-                    [w.variantSecondaryOverlay]: "overlay-secondary" === b,
-                    [w.disabled]: r,
-                    [w.visuallyHidden]: T,
+                    [y.variantDefault]: "default" === m,
+                    [y.variantSecondary]: "secondary" === m,
+                    [y.variantSecondaryOverlay]: "overlay-secondary" === m,
+                    [y.disabled]: r,
+                    [y.visuallyHidden]: w,
                 },
-                s,
+                t,
             ),
-            innerRef: R,
+            innerRef: D,
             onClick: F,
-            tabIndex: S,
+            tabIndex: A,
             "aria-label": e,
-            "aria-pressed": v,
-            "aria-busy": p,
+            "aria-pressed": p,
+            "aria-busy": x,
             "aria-disabled": r,
             children: _.enabled
-                ? (0, a.jsx)(z, { colorClass: void 0 ?? B, size: A })
-                : (0, a.jsxs)("div", {
-                      className: l()(w.iconContainer, L && w.canAnimate),
+                ? (0, i.jsx)(z, { colorClass: void 0 ?? B, size: E })
+                : (0, i.jsxs)("div", {
+                      className: l()(y.iconContainer, P && y.canAnimate),
                       children: [
-                          (0, a.jsx)("span", {
-                              className: l()(w.iconWrapper, L && w.canHover),
-                              children: (0, a.jsx)(z, { colorClass: void 0 ?? B, size: A }),
+                          (0, i.jsx)("span", {
+                              className: l()(y.iconWrapper, P && y.canHover),
+                              children: (0, i.jsx)(z, { colorClass: void 0 ?? B, size: E }),
                           }),
                           O
-                              ? D
-                                  ? (0, a.jsx)("img", {
-                                        className: w.halloweenAnimationOverlay,
-                                        src: y,
+                              ? N
+                                  ? (0, i.jsx)("img", {
+                                        className: y.halloweenAnimationOverlay,
+                                        src: j,
                                         alt: "",
                                         "aria-hidden": !0,
                                         draggable: !1,
                                     })
                                   : null
-                              : (0, a.jsx)("span", {
-                                    className: l()(w.animationOverlay, D && w.clickAnimation),
-                                    onAnimationEnd: P,
-                                    children: (0, a.jsx)(o.HeartIcon, { size: A }),
+                              : (0, i.jsx)("span", {
+                                    className: l()(y.animationOverlay, N && y.clickAnimation),
+                                    onAnimationEnd: M,
+                                    children: (0, i.jsx)(o.HeartIcon, { size: E }),
                                 }),
                       ],
                   }),
         });
     }
-    if (x && !r) {
-        let e = H.firstTimeTitle ?? k.intl.string(k.t["47Rhc3"]),
-            n = H.firstTimeBody ?? k.intl.string(k.t.PXjA0b);
-        return (0, a.jsx)(f.u, { title: e, body: n, shouldShow: E, children: M() });
+    if (v && !r) {
+        let e = S.firstTimeTitle ?? k.intl.string(k.t["47Rhc3"]),
+            a = S.firstTimeBody ?? k.intl.string(k.t.PXjA0b);
+        return (0, i.jsx)(b.u, { title: e, body: a, shouldShow: H, children: q() });
     }
-    let q = r
-        ? (H.disabled ?? k.intl.string(k.t["50TX9k"]))
-        : v
-          ? (H.remove ?? k.intl.string(k.t.yr9TTf))
-          : (H.add ?? k.intl.string(k.t["8DkMEQ"]));
-    return (0, a.jsx)(m.m, { text: q, ariaHidden: !r, shouldShow: E, children: M() });
+    let L = r
+        ? (S.disabled ?? k.intl.string(k.t["50TX9k"]))
+        : p
+          ? (S.remove ?? k.intl.string(k.t.yr9TTf))
+          : (S.add ?? k.intl.string(k.t["8DkMEQ"]));
+    return (0, i.jsx)(f.m, { text: L, ariaHidden: !r, shouldShow: H, children: q() });
 }

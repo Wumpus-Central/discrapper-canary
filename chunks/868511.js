@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => S });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
@@ -14,18 +14,18 @@ var i = n(477900),
     E = n(479381),
     h = n(221851);
 let x = /^\d+$|^$/;
-function p(e) {
+function S(e) {
     let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: p,
-            authorizationError: S,
+            authorizedApplicationId: S,
+            authorizationError: p,
             authorizing: T,
         } = (0, l.cf)([m.A], () => ({
             authorizedApplicationId: m.A.testModeApplicationId,
             authorizationError: m.A.error,
             authorizing: m.A.isFetchingAuthorization,
         })),
-        [f, I] = s.useState(p ?? ""),
+        [f, I] = s.useState(S ?? ""),
         [_, N] = s.useState("8080"),
         [C, y] = s.useState("localhost"),
         b = x.test(f);
@@ -43,7 +43,7 @@ function p(e) {
         null != (await d.q1(f, e)) && t();
     }
     s.useEffect(() => d.SH, []);
-    let j = null != p && p === f,
+    let j = null != S && S === f,
         O = j
             ? function () {
                   (d.cL(), I(""), y(null));
@@ -68,11 +68,11 @@ function p(e) {
         onClose: t,
         transitionState: n,
         children: [
-            null == S
+            null == p
                 ? null
                 : (0, i.jsx)("div", {
                       className: h.SX,
-                      children: (0, i.jsx)(a.w, { type: "critical", message: S, role: "alert" }),
+                      children: (0, i.jsx)(a.w, { type: "critical", message: p, role: "alert" }),
                   }),
             (0, i.jsxs)(g.A, {
                 direction: g.A.Direction.VERTICAL,

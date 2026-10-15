@@ -36,8 +36,8 @@ var k = r(304210),
     b = r(521e3),
     B = r(783857),
     w = r(815280),
-    P = r(60140),
-    R = r(602051),
+    R = r(60140),
+    P = r(602051),
     D = r(758836),
     M = r(652215),
     H = r(105292),
@@ -54,7 +54,7 @@ let U = {
 function F(e) {
     let { heroBlockRecord: t, isBlockLoading: r } = e,
         l = A.useConfig({ location: "orbs_hero_block_cards" }).enabled;
-    return (0, n.jsx)(P.A, { heroBlockRecord: t, tab: D.G2.ORBS, isBlockLoading: r, layout: l ? "hscroll" : "feed" });
+    return (0, n.jsx)(R.A, { heroBlockRecord: t, tab: D.G2.ORBS, isBlockLoading: r, layout: l ? "hscroll" : "feed" });
 }
 let K = (e) => {
     let {
@@ -121,7 +121,7 @@ let K = (e) => {
         eE = null != eg && !es,
         ep = K === D.G2.ORBS,
         e_ = null != s && s.isOrbsExclusive,
-        eC = K === D.G2.COLLECTION_INDEX ? R.S.COLLECTION_INDEX : R.S.HOME,
+        eC = K === D.G2.COLLECTION_INDEX ? P.S.COLLECTION_INDEX : P.S.HOME,
         ev = ep ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T);
     function eL() {
         ep
@@ -247,7 +247,7 @@ let K = (e) => {
                         !$ &&
                             (K === D.G2.ORBS
                                 ? (0, n.jsx)(F, { heroBlockRecord: ea, isBlockLoading: t })
-                                : (0, n.jsx)(P.A, {
+                                : (0, n.jsx)(R.A, {
                                       heroBlockRecord: ea,
                                       tab: K,
                                       isBlockLoading: t,

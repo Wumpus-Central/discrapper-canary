@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, P: () => b });
+n.d(t, { A: () => N, P: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -19,43 +19,43 @@ var l = n(477900),
     y = n(339871),
     C = n(820066),
     A = n(105292),
-    I = n(9287);
-function b(e) {
+    b = n(9287);
+function I(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: r } = e;
     return null == t
         ? null
         : (0, l.jsxs)("div", {
-              className: I.Uo,
+              className: b.Uo,
               children: [
-                  (0, l.jsx)(N, {
+                  (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "bold",
-                      children: (0, l.jsx)(u.$, { size: "md", color: "currentColor", className: s()(I.Kk, i) }),
+                      children: (0, l.jsx)(u.$, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)(N, {
+                  (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "italics",
-                      children: (0, l.jsx)(c.y, { size: "md", color: "currentColor", className: s()(I.Kk, i) }),
+                      children: (0, l.jsx)(c.y, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)(N, {
+                  (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "underline",
-                      children: (0, l.jsx)(d.q, { size: "md", color: "currentColor", className: s()(I.Kk, i) }),
+                      children: (0, l.jsx)(d.q, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)(N, {
+                  (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "strikethrough",
-                      children: (0, l.jsx)(h.t, { size: "md", color: "currentColor", className: s()(I.Kk, i) }),
+                      children: (0, l.jsx)(h.t, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
-                  (0, l.jsx)("div", { className: s()(I.yF, r) }),
+                  (0, l.jsx)("div", { className: s()(b.yF, r) }),
                   !n?.disableBlockQuotes &&
                       (0, l.jsx)(T, {
                           slateEditor: t,
                           blockType: "blockQuote",
-                          children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: s()(I.Kk, i) }),
+                          children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                       }),
                   !n?.disableInlineCode &&
-                      (0, l.jsx)(N, {
+                      (0, l.jsx)(v, {
                           slateEditor: t,
                           markdownSyntax: "inlineCode",
                           children: (0, l.jsx)(f.G, {
@@ -63,18 +63,18 @@ function b(e) {
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: s()(I.Kk, i),
+                              className: s()(b.Kk, i),
                           }),
                       }),
-                  (0, l.jsx)(N, {
+                  (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "spoiler",
-                      children: (0, l.jsx)(p.EyeIcon, { size: "md", color: "currentColor", className: s()(I.Kk, i) }),
+                      children: (0, l.jsx)(p.EyeIcon, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
               ],
           });
 }
-function v(e) {
+function N(e) {
     let { getSlateEditor: t, containerRef: n, options: r, ref: s } = e,
         u = i.useRef(null),
         [c, d] = i.useState(!1),
@@ -149,13 +149,13 @@ function v(e) {
                 y: Math.max(n.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, s.y)),
             };
         }, [n, c, t]),
-        [A, v] = i.useState(0),
-        [N, T] = i.useState(0);
+        [A, N] = i.useState(0),
+        [v, T] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
             if (null == S || null == y || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            (T(e.width / 2), v(e.height + 12));
+            (T(e.width / 2), N(e.height + 12));
         }, [S, y]),
         null == S || null == y)
     )
@@ -167,19 +167,19 @@ function v(e) {
               children: (0, l.jsx)("div", {
                   id: "slate-toolbar",
                   ref: u,
-                  className: I.KE,
-                  style: { top: y - A, left: S - N },
+                  className: b.KE,
+                  style: { top: y - A, left: S - v },
                   onMouseDown: (e) => {
                       (e.preventDefault(), e.stopPropagation());
                   },
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(b, { slateEditor: j, options: r }),
+                  children: (0, l.jsx)(I, { slateEditor: j, options: r }),
               }),
           });
 }
-function N(e) {
+function v(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         r = !1;
     if (t?.selection != null) {
@@ -205,7 +205,7 @@ function N(e) {
                 }
             })(n),
             "aria-pressed": r,
-            className: I.x6,
+            className: b.x6,
             onClick: function () {
                 null != t && S.o.withSingleEntry(t, () => (0, y.Px)(t, n));
             },
@@ -223,7 +223,7 @@ function T(e) {
                 if ("blockQuote" === e) return A.intl.string(A.t.svB7eY);
             })(t),
             "aria-pressed": s,
-            className: I.x6,
+            className: b.x6,
             onClick: function () {
                 null != n && S.o.withSingleEntry(n, () => (0, y.fO)(n, t));
             },

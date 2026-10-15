@@ -1,12 +1,12 @@
-n.d(e, { J: () => i });
-var r = n(17928),
-    l = n(134861),
+n.d(t, { J: () => s });
+var l = n(17928),
+    r = n(134861),
     a = n(461213);
-function i(t) {
-    let e = t?.id;
-    return (0, r.bG)(
-        [a.A, l.A],
-        () => null != e && (null != a.A.getApplicationActivity(e, !0) || null != l.A.getApplication(e)),
-        [e],
+function s(e) {
+    let t = e?.id;
+    return (0, l.bG)(
+        [a.A, r.A],
+        () => null != t && (null != a.A.getApplicationActivity(t, !0) || null != r.A.getApplication(t)),
+        [t],
     );
 }

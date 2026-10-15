@@ -1,55 +1,55 @@
-n.d(i, { s: () => p });
-var r = n(158045),
-    e = n(930363),
-    l = n(724651),
-    u = n(732280),
-    a = n(511484),
-    s = n(202541),
-    o = n(105292);
-function p(t) {
-    var i;
-    let { subscriptionTier: n, hasActivePromotion: p = !1, useShorterCTA: T = !1, isPersistentCTA: c = !1 } = t,
-        d = (0, u.V)(),
-        v = d?.subscriptionTrial,
-        b = (0, l.O)(),
-        k = (0, a.U9)(b, s.pe.TIER_2) ? s.pe.TIER_2 : void 0,
-        f = (0, r.tS)({ intervalType: v?.interval, intervalCount: v?.intervalCount }),
-        C = n ?? d?.subscriptionTrial?.skuId ?? k,
-        I = null != v && C === v.skuId,
-        h = null != b && s.U4.includes(b.discountId);
+l.d(t, { s: () => o });
+var n = l(158045),
+    i = l(930363),
+    s = l(724651),
+    r = l(732280),
+    a = l(511484),
+    u = l(202541),
+    d = l(105292);
+function o(e) {
+    var t;
+    let { subscriptionTier: l, hasActivePromotion: o = !1, useShorterCTA: c = !1, isPersistentCTA: f = !1 } = e,
+        h = (0, r.V)(),
+        g = h?.subscriptionTrial,
+        b = (0, s.O)(),
+        m = (0, a.U9)(b, u.pe.TIER_2) ? u.pe.TIER_2 : void 0,
+        A = (0, n.tS)({ intervalType: g?.interval, intervalCount: g?.intervalCount }),
+        p = l ?? h?.subscriptionTrial?.skuId ?? m,
+        v = null != g && p === g.skuId,
+        T = null != b && u.U4.includes(b.discountId);
     return {
-        buttonText: p
-            ? o.intl.string(o.t.J61px0)
+        buttonText: o
+            ? d.intl.string(d.t.J61px0)
             : null != b
-              ? ((i = b.discount.amount),
-                T || c
-                    ? o.intl.string(o.t.fkPGat)
-                    : C === s.pe.TIER_2
-                      ? o.intl.formatToPlainString(h ? o.t.ZhPpOu : o.t.bkQ4bH, { percent: i })
+              ? ((t = b.discount.amount),
+                c || f
+                    ? d.intl.string(d.t.fkPGat)
+                    : p === u.pe.TIER_2
+                      ? d.intl.formatToPlainString(T ? d.t.ZhPpOu : d.t.bkQ4bH, { percent: t })
                       : void 0)
-              : (function (t) {
+              : (function (e) {
                     let {
-                            showTrialCTA: i,
-                            subscriptionTier: n,
-                            trialDurationCopy: l,
-                            isPersistentCTA: u,
+                            showTrialCTA: t,
+                            subscriptionTier: l,
+                            trialDurationCopy: s,
+                            isPersistentCTA: r,
                             userTrialOffer: a,
-                        } = t,
-                        p = a?.subscriptionTrial;
-                    return i && a?.isReferralTrial === !0
-                        ? ((0, e.T)(a, n) ?? o.intl.string(o.t.bXTClc))
-                        : i && (n === s.pe.TIER_2 || u)
-                          ? (0, r.FY)({ intervalType: p?.interval, intervalCount: p?.intervalCount })
-                          : i
-                            ? o.intl.formatToPlainString(o.t.nTmm2v, { freeTrialText: l })
+                        } = e,
+                        o = a?.subscriptionTrial;
+                    return t && a?.isReferralTrial === !0
+                        ? ((0, i.T)(a, l) ?? d.intl.string(d.t.bXTClc))
+                        : t && (l === u.pe.TIER_2 || r)
+                          ? (0, n.FY)({ intervalType: o?.interval, intervalCount: o?.intervalCount })
+                          : t
+                            ? d.intl.formatToPlainString(d.t.nTmm2v, { freeTrialText: s })
                             : void 0;
                 })({
-                    showTrialCTA: I,
-                    subscriptionTier: C,
-                    trialDurationCopy: f,
-                    isPersistentCTA: c,
-                    userTrialOffer: d,
+                    showTrialCTA: v,
+                    subscriptionTier: p,
+                    trialDurationCopy: A,
+                    isPersistentCTA: f,
+                    userTrialOffer: h,
                 }),
-        marketingSubscriptionTierSkuId: C,
+        marketingSubscriptionTierSkuId: p,
     };
 }

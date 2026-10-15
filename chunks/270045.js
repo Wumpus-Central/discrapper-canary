@@ -6,8 +6,8 @@ var i = n(477900),
     o = n(858899),
     r = n(477782),
     u = n(980707),
-    c = n(743368),
-    d = n(173936),
+    d = n(743368),
+    c = n(173936),
     E = n(577473),
     _ = n(922016),
     C = n(442433),
@@ -15,10 +15,10 @@ var i = n(477900),
     g = n(274670),
     p = n(144779),
     h = n(976860),
-    A = n(246356),
-    f = n(957565),
-    I = n(396813),
-    m = n(859703),
+    f = n(246356),
+    A = n(957565),
+    m = n(396813),
+    I = n(859703),
     N = n(738822),
     v = n(104886),
     S = n(77870),
@@ -36,18 +36,18 @@ var i = n(477900),
     j = n(818348),
     U = n(105292);
 function H(t) {
-    let e = (0, l.bG)([m.A], () => m.A.getQuestPreviewOverride(N.uF.QUEST_BAR_V2), []),
-        n = (0, l.bG)([m.A], () => m.A.getQuestPreviewOverride(N.uF.ACTIVITY_PANEL), []),
-        _ = (0, l.bG)([m.A], () => m.A.getQuestPreviewOverride(N.uF.QUEST_LIVE_STREAM), []),
-        A = (0, l.bG)([m.A], () => m.A.getQuestPreviewOverride(N.uF.MEMBERS_LIST), []),
+    let e = (0, l.bG)([I.A], () => I.A.getQuestPreviewOverride(N.uF.QUEST_BAR_V2), []),
+        n = (0, l.bG)([I.A], () => I.A.getQuestPreviewOverride(N.uF.ACTIVITY_PANEL), []),
+        _ = (0, l.bG)([I.A], () => I.A.getQuestPreviewOverride(N.uF.QUEST_LIVE_STREAM), []),
+        f = (0, l.bG)([I.A], () => I.A.getQuestPreviewOverride(N.uF.MEMBERS_LIST), []),
         H = (0, M.vy)(t.questContent),
         F = [N.uF.QUEST_BAR_V2, N.uF.QUEST_BAR].includes(t.questContent),
-        V = (0, R.Ut)(),
-        G = (0, L.wW)(),
+        G = (0, R.Ut)(),
+        V = (0, L.wW)(),
         k = (0, x.wr)(t.quest),
-        Q = !0 === t.showShareLink && (0, q.E0)(t.quest.config),
+        B = !0 === t.showShareLink && (0, q.E0)(t.quest.config),
         {
-            handleComplete: B,
+            handleComplete: Q,
             handleProgress: Z,
             handleResetDismissibilityClick: K,
             handleResetStatusClick: J,
@@ -60,7 +60,7 @@ function H(t) {
             sourceQuestContent: t.sourceQuestContent,
         }),
         Y = (0, P.Lk)({
-            isShareable: Q,
+            isShareable: B,
             questId: t.quest.id,
             trackingCtx: s.useMemo(
                 () => ({
@@ -76,7 +76,7 @@ function H(t) {
         return (0, o.P0)({ text: new T.A(t, t.status).message, variant: "critical" });
     }
     function $() {
-        return (0, I.CV)(t.quest.id).catch(z);
+        return (0, m.CV)(t.quest.id).catch(z);
     }
     let tt = (0, S.Ns)(t.quest),
         te = s.useMemo(
@@ -114,10 +114,10 @@ function H(t) {
                 (0, i.jsx)(r.sL, {
                     id: "members-list",
                     label: "Show in Members List",
-                    checked: A?.id === t.quest.id,
+                    checked: f?.id === t.quest.id,
                     action: () => X(N.uF.MEMBERS_LIST),
                 }),
-            [X, t.quest.id, A?.id],
+            [X, t.quest.id, f?.id],
         ),
         ta = s.useCallback(() => {
             (0, h.pX)(b.BVt.QUEST_PREVIEW_TOOL_2(t.quest.id));
@@ -141,16 +141,16 @@ function H(t) {
                             id: "play-game",
                             label: k,
                             action: W,
-                            icon: c.W,
-                            leadingAccessory: { type: "icon", icon: c.W },
+                            icon: d.W,
+                            leadingAccessory: { type: "icon", icon: d.W },
                         }),
-                        Q &&
+                        B &&
                             (0, i.jsx)(r.Dr, {
                                 id: "share-link",
                                 label: U.intl.string(U.t.RDE0Sc),
                                 action: Y,
-                                icon: d.LinkIcon,
-                                leadingAccessory: { type: "icon", icon: d.LinkIcon },
+                                icon: c.LinkIcon,
+                                leadingAccessory: { type: "icon", icon: c.LinkIcon },
                             }),
                         tt && te,
                         tt && tn,
@@ -177,10 +177,10 @@ function H(t) {
                                               questContentCTA: w.Cy.CONTEXT_MENU_LEARN_MORE,
                                               surfaceId: t.questContent,
                                               sourceQuestContent: t.sourceQuestContent,
-                                              impressionId: G(),
+                                              impressionId: V(),
                                               questContentPosition: t.questContentPosition,
                                           })
-                                        : V({
+                                        : G({
                                               questId: t.quest.id,
                                               questContent: t.questContent,
                                               questContentPosition: t.questContentPosition,
@@ -203,7 +203,7 @@ function H(t) {
                                             content: t.questContent,
                                             position: t.questContentPosition,
                                             ctaContent: w.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
-                                            impressionId: G(),
+                                            impressionId: V(),
                                             sourceQuestContent: t.sourceQuestContent,
                                         },
                                         t.returnRef,
@@ -223,10 +223,10 @@ function H(t) {
                                               questContentCTA: w.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                               surfaceId: t.questContent,
                                               sourceQuestContent: t.sourceQuestContent,
-                                              impressionId: G(),
+                                              impressionId: V(),
                                               questContentPosition: t.questContentPosition,
                                           })
-                                        : V({
+                                        : G({
                                               questId: t.quest.id,
                                               questContent: t.questContent,
                                               questContentPosition: t.questContentPosition,
@@ -234,7 +234,7 @@ function H(t) {
                                               sourceQuestContent: t.sourceQuestContent,
                                           }),
                                         (0, M.vy)(t.questContent) &&
-                                            ((0, I.g5)(t.quest.id, t.questContent), F && (0, y.z6)(t.quest)));
+                                            ((0, m.g5)(t.quest.id, t.questContent), F && (0, y.z6)(t.quest)));
                                 },
                                 subtext: U.intl.string(U.t.RK9gxo),
                             }),
@@ -263,7 +263,7 @@ function H(t) {
                                     Z(0.9 * Math.random() + 0.03);
                                 },
                             }),
-                            (0, i.jsx)(r.Dr, { id: "complete", label: U.intl.string(U.t.jQEfRT), action: B }),
+                            (0, i.jsx)(r.Dr, { id: "complete", label: U.intl.string(U.t.jQEfRT), action: Q }),
                             (0, O.g5)(t.quest) &&
                                 (0, i.jsxs)(r.Dr, {
                                     id: "console",
@@ -278,7 +278,7 @@ function H(t) {
                                             id: "start",
                                             label: "Start heartbeat (cheatmode)",
                                             action: function () {
-                                                return (0, I.vD)(t.quest.id, !0).catch(z);
+                                                return (0, m.vD)(t.quest.id, !0).catch(z);
                                             },
                                         }),
                                         (0, i.jsx)(r.Dr, { id: "stop", label: "Stop heartbeat", action: $ }),
@@ -288,7 +288,7 @@ function H(t) {
                                 id: "copy-quest-id",
                                 label: U.intl.string(U.t.oisrFi),
                                 action: () => {
-                                    (0, f.C)(t.quest.id);
+                                    (0, A.C)(t.quest.id);
                                 },
                             }),
                             (0, i.jsx)(r.Dr, { id: "preview", label: U.intl.string(U.t.tx5Ax5), action: ta }),
@@ -307,14 +307,14 @@ function F(t) {
             preventIdle: o,
             quest: r,
             questContent: u,
-            questContentPosition: c,
-            sourceQuestContent: d,
+            questContentPosition: d,
+            sourceQuestContent: c,
             ...E
         } = t,
         C = (0, R.Ut)(),
         T = (0, L.wW)(),
         h = s.useRef(null),
-        f = s.useCallback(() => {
+        A = s.useCallback(() => {
             ((0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
                 ? (0, g.r)({
                       type: p.F.CLICK_INTERNAL,
@@ -322,43 +322,43 @@ function F(t) {
                       adCreativeId: r.id,
                       questContentCTA: w.Cy.OPEN_CONTEXT_MENU,
                       surfaceId: u,
-                      sourceQuestContent: d,
+                      sourceQuestContent: c,
                       impressionId: T(),
-                      questContentPosition: c,
+                      questContentPosition: d,
                   })
                 : C({
                       questId: r.id,
                       questContent: u,
                       questContentCTA: w.Cy.OPEN_CONTEXT_MENU,
-                      questContentPosition: c,
-                      sourceQuestContent: d,
+                      questContentPosition: d,
+                      sourceQuestContent: c,
                   }),
                 null != n && n());
-        }, [n, r.id, u, c, C, d, T]);
+        }, [n, r.id, u, d, C, c, T]);
     return (0, i.jsx)(_.Y, {
         targetElementRef: h,
-        onRequestOpen: f,
+        onRequestOpen: A,
         onRequestClose: l,
         renderPopout: (t) => {
             let { closePopout: e } = t;
             return o
-                ? (0, i.jsx)(A.A, {
+                ? (0, i.jsx)(f.A, {
                       children: (0, i.jsx)(H, {
                           ...E,
                           quest: r,
                           questContent: u,
-                          questContentPosition: c,
+                          questContentPosition: d,
                           onClose: e,
-                          sourceQuestContent: d,
+                          sourceQuestContent: c,
                       }),
                   })
                 : (0, i.jsx)(H, {
                       ...E,
                       quest: r,
                       questContent: u,
-                      questContentPosition: c,
+                      questContentPosition: d,
                       onClose: e,
-                      sourceQuestContent: d,
+                      sourceQuestContent: c,
                   });
         },
         animation: _.Y.Animation.NONE,

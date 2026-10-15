@@ -21,10 +21,10 @@ function c(e) {
 let o = [],
     u = new Map(),
     d = new Map();
-function h(e, t) {
+function m(e, t) {
     if (null != e) return (0, l.isString)(e) ? e : "light" === t ? e.light : e.dark;
 }
-function m(e) {
+function h(e) {
     try {
         let t = new URL(e).pathname;
         return i[t.split(".").pop()?.toLowerCase() ?? ""];
@@ -42,11 +42,11 @@ let p = function (e) {
                   n.flatMap((e) => {
                       if (null == e) return [];
                       if ("object" == typeof e && "src" in e) {
-                          let n = h(e.src, t);
-                          return null == n ? [] : [{ src: n, alt: e.alt, mimeType: m(n) }];
+                          let n = m(e.src, t);
+                          return null == n ? [] : [{ src: n, alt: e.alt, mimeType: h(n) }];
                       }
-                      let n = h(e, t);
-                      return null != n ? [{ src: n, mimeType: m(n) }] : [];
+                      let n = m(e, t);
+                      return null != n ? [{ src: n, mimeType: h(n) }] : [];
                   }));
         }, [e, t]),
         [l, i] = r.useState({}),

@@ -85,12 +85,12 @@ let T = function (e) {
 var b = r(821609),
     B = r(450481),
     w = r(105292),
-    P = r(634293);
-function R(e) {
+    R = r(634293);
+function P(e) {
     let { product: t, onUseNowClick: r, useNowButtonVariant: l = "overlay-secondary" } = e,
         { handleUseNow: s, isApplying: a } = (0, B.p)({ product: t });
     return (0, n.jsx)("div", {
-        className: P.l,
+        className: R.l,
         children: (0, n.jsx)(b.$, {
             variant: l,
             onClick: () => {
@@ -115,10 +115,10 @@ let D = function (e) {
         onUseNowClick: o,
     } = e;
     return t === _.GM.CONSUMED && null != r
-        ? (0, n.jsx)(R, { product: r, onUseNowClick: o, useNowButtonVariant: s })
+        ? (0, n.jsx)(P, { product: r, onUseNowClick: o, useNowButtonVariant: s })
         : t === _.GM.EARNED
           ? (0, n.jsx)("div", {
-                className: P.l,
+                className: R.l,
                 children: (0, n.jsx)(b.$, {
                     text: w.intl.string(w.t.pVBlCH),
                     variant: l,
@@ -224,11 +224,11 @@ function ee(e) {
             isClaiming: b,
             onClaim: B,
         } = e,
-        P = null != j && "" !== j ? f.A.getArticleURL(j) : null,
-        { handleInlineHelpTextClick: R, handleClaim: M, handleUseNowClick: H } = J(t, r, B),
+        R = null != j && "" !== j ? f.A.getArticleURL(j) : null,
+        { handleInlineHelpTextClick: P, handleClaim: M, handleUseNowClick: H } = J(t, r, B),
         G = l.useCallback(() => {
-            null != P && ((0, x.l)(t, r, $.Z.INFO_BUTTON_CLICKED), (0, m.A)(P));
-        }, [t, r, P]);
+            null != R && ((0, x.l)(t, r, $.Z.INFO_BUTTON_CLICKED), (0, m.A)(R));
+        }, [t, r, R]);
     return (0, n.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
@@ -244,7 +244,7 @@ function ee(e) {
                 gap: 8,
                 align: "start",
                 className: z._,
-                onClick: R,
+                onClick: P,
                 children: [
                     (0, n.jsx)(u.E, { variant: "text-md/bold", color: "text-strong", children: (0, p.U)(v) }),
                     null != L &&
@@ -276,7 +276,7 @@ function ee(e) {
                         onUseNowClick: H,
                     }),
                     t.rewardStatus !== _.GM.EARNED &&
-                        null != P &&
+                        null != R &&
                         (0, n.jsx)(d.m, {
                             text: w.intl.string(w.t.FdGl5A),
                             ariaHidden: !0,

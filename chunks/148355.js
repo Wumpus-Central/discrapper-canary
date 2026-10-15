@@ -19,12 +19,12 @@ var l = n(477900),
     y = n(256449),
     C = n(194004),
     A = n(378058),
-    I = n(105292),
-    b = n(193833);
-function v(e) {
+    b = n(105292),
+    I = n(193833);
+function N(e) {
     return e.preventDefault();
 }
-let N = { tension: 1100, friction: 40 },
+let v = { tension: 1100, friction: 40 },
     T = { tension: 1600, friction: 60 };
 function j(e, t) {
     return i.cloneElement(e, {
@@ -36,37 +36,37 @@ function j(e, t) {
 }
 function _(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
-    return I.intl.formatToPlainString(I.t.rk6pOw, { stickerName: t });
+    return b.intl.formatToPlainString(b.t.rk6pOw, { stickerName: t });
 }
 function k(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: r, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
-        className: s()(b.c6, { [b.v2]: n || r }),
+        className: s()(I.c6, { [I.v2]: n || r }),
         style: { height: a, width: a },
         children: [
             n
                 ? (0, l.jsxs)("div", {
-                      className: b.z3,
+                      className: I.z3,
                       children: [
                           (0, l.jsx)(h.d, {
                               size: "custom",
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: b.ik,
+                              className: I.ik,
                           }),
                           u &&
                               (0, l.jsx)(m.E, {
-                                  className: b.kc,
+                                  className: I.kc,
                                   color: "text-default",
                                   variant: "text-sm/normal",
-                                  children: I.intl.string(I.t["tWYWJ+"]),
+                                  children: b.intl.string(b.t["tWYWJ+"]),
                               }),
                       ],
                   })
                 : t,
-            o && i && (0, l.jsx)("div", { className: b.Mz }),
+            o && i && (0, l.jsx)("div", { className: I.Mz }),
         ],
     });
 }
@@ -87,9 +87,9 @@ function R(e) {
         g = i.useRef(null),
         E = i.useRef(null),
         [S, y] = i.useState(!0),
-        [C, v] = i.useState(!1),
-        N = i.useRef(!1);
-    N.current = t && c;
+        [C, N] = i.useState(!1),
+        v = i.useRef(!1);
+    v.current = t && c;
     let T = null == a ? (0, A.zg)(s) : a;
     return (o()(null != T, `Unable to determine sticker asset URL. Sticker ID: ${s.id}`),
     i.useEffect(() => {
@@ -111,10 +111,10 @@ function R(e) {
                             t || y(!1);
                         },
                         onError: () => {
-                            t || (y(!1), v(!0), p?.());
+                            t || (y(!1), N(!0), p?.());
                         },
                     })),
-                    N.current && E.current.setState(!0));
+                    v.current && E.current.setState(!0));
             })(),
             () => {
                 (E.current?.drop(), (E.current = null), (t = !0));
@@ -130,7 +130,7 @@ function R(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": C ? I.intl.string(I.t.yEvsK9) : _(s),
+              "aria-label": C ? b.intl.string(b.t.yEvsK9) : _(s),
               ref: m,
               children: (0, l.jsx)(k, {
                   hasError: C,
@@ -138,7 +138,7 @@ function R(e) {
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: f,
-                  children: j((0, l.jsx)("canvas", { className: b.ex, ref: g }), s),
+                  children: j((0, l.jsx)("canvas", { className: I.ex, ref: g }), s),
               }),
           });
 }
@@ -159,8 +159,8 @@ let O = (e) => {
             [E, S] = i.useState(!1),
             y = i.useRef(null),
             C = i.useRef(null),
-            I = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
-            N = i.useCallback(() => {
+            b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
+            v = i.useCallback(() => {
                 x(!1);
             }, []),
             T = i.useCallback(() => {
@@ -175,7 +175,7 @@ let O = (e) => {
         i.useLayoutEffect(() => {
             C.current?.complete === !0 && x(!1);
         }, []),
-        null == I)
+        null == b)
             ? null
             : (0, l.jsx)(d.L, {
                   innerRef: c,
@@ -183,7 +183,7 @@ let O = (e) => {
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
-                      className: s()(o, b.__invalid_pngImageWrapper),
+                      className: s()(o, I.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, l.jsx)(k, {
                           hasError: E,
@@ -193,13 +193,13 @@ let O = (e) => {
                           withLoadingIndicator: h,
                           children: j(
                               (0, l.jsx)("img", {
-                                  className: b.r3,
+                                  className: I.r3,
                                   alt: _(n),
-                                  src: I,
+                                  src: b,
                                   draggable: !1,
                                   onError: T,
-                                  onLoad: N,
-                                  onContextMenu: v,
+                                  onLoad: v,
+                                  onContextMenu: N,
                                   ref: C,
                               }),
                               n,
@@ -221,7 +221,7 @@ let O = (e) => {
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
             S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: N }),
+            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: v }),
             C = i.useRef(null),
             A = (0, p.z)(
                 { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
@@ -233,20 +233,20 @@ let O = (e) => {
                 (e, i) =>
                     i &&
                     (0, l.jsx)(E.nE, {
-                        className: b.O2,
+                        className: I.O2,
                         fixed: !0,
                         align: "center",
                         position: "center",
                         targetRef: a,
                         children: () =>
                             (0, l.jsxs)("div", {
-                                className: b._7,
+                                className: I._7,
                                 children: [
                                     (0, l.jsx)(u.animated.div, {
-                                        className: b.tm,
+                                        className: I.tm,
                                         style: e,
                                         children: (0, l.jsx)(w, {
-                                            className: b.__invalid_overlaySticker,
+                                            className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
                                             isInteracting: s,
@@ -258,11 +258,11 @@ let O = (e) => {
                                     }),
                                     r &&
                                         (0, l.jsx)(u.animated.div, {
-                                            className: b.av,
+                                            className: I.av,
                                             style: A,
                                             children: (0, l.jsx)(m.E, {
                                                 variant: "text-sm/medium",
-                                                className: b.FZ,
+                                                className: I.FZ,
                                                 children: d.name,
                                             }),
                                         }),

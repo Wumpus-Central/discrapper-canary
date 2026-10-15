@@ -1,15 +1,15 @@
-n.d(e, { A: () => d });
+n.d(e, { A: () => r });
 var i = n(17928),
     l = n(309010),
     a = n(626798),
-    r = n(905322),
-    u = n(105292);
-function d(t, e) {
+    u = n(905322),
+    d = n(105292);
+function r(t, e) {
     let n = (0, i.bG)([a.A], () => a.A.isRequestOnCooldown(t)),
-        d = (0, i.bG)([l.Ay], () => l.Ay.getVoiceChannelId() === e, [e]);
+        r = (0, i.bG)([l.Ay], () => l.Ay.getVoiceChannelId() === e, [e]);
     return n
-        ? [!0, u.intl.string(r.default.mVFTUg)]
-        : d
-          ? [!1, u.intl.string(r.default.qRXats)]
-          : [!0, u.intl.string(r.default.qRXats)];
+        ? [!0, d.intl.string(u.default.mVFTUg)]
+        : r
+          ? [!1, d.intl.string(u.default.qRXats)]
+          : [!0, d.intl.string(u.default.qRXats)];
 }

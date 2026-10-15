@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => N, Q9: () => U, W: () => D }), n(321073));
+(n.d(t, { Ay: () => v, Q9: () => U, W: () => D }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -19,10 +19,10 @@ var l = n(626551),
     y = n(389437);
 let C = new o.Vy("withCodeBlocks"),
     A = new Set(["line"]),
-    I = /^[a-z0-9_+\-.#]+$/i,
-    b = null,
-    v = null;
-function N(e) {
+    b = /^[a-z0-9_+\-.#]+$/i,
+    I = null,
+    N = null;
+function v(e) {
     let { onChange: t } = e,
         l = null,
         i = !1,
@@ -56,19 +56,19 @@ function N(e) {
                             { enabled: r } = u.L.getConfig({ location: "syntaxHighlightCodeBlocks" });
                         !t ||
                             r ||
-                            null != b ||
+                            null != I ||
                             i ||
                             ((i = !0),
-                            (null == v &&
-                                (v = Promise.all([n.e("818449"), n.e("175134")])
+                            (null == N &&
+                                (N = Promise.all([n.e("818449"), n.e("175134")])
                                     .then(n.bind(n, 752238))
                                     .then((e) => {
-                                        b = e.default;
+                                        I = e.default;
                                     })
                                     .catch((e) => {
-                                        throw ((v = null), e);
+                                        throw ((N = null), e);
                                     })),
-                            v)
+                            N)
                                 .then(() => {
                                     ((l = null),
                                         f.o.withoutSaving(e, () => {
@@ -124,7 +124,7 @@ function T(e, t) {
                     c = n && 0 === r.length,
                     d = l && 0 === r.length,
                     h = (u ? r.slice(1) : r).length % 2 == 1,
-                    m = h && (null == o || "" === o || null != o.match(I)),
+                    m = h && (null == o || "" === o || null != o.match(b)),
                     f = m && null != o && "" !== o ? o.toLowerCase() : null;
                 return {
                     blockEntry: t,
@@ -256,14 +256,14 @@ function T(e, t) {
                                 if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
                             })(e, r, i, t);
-                        else if (null == r || null == b || b.hasLanguage(r)) {
-                            if (null != r && null != b && b.hasLanguage(r)) {
+                        else if (null == r || null == I || I.hasLanguage(r)) {
+                            if (null != r && null != I && I.hasLanguage(r)) {
                                 let t = (function (e, t) {
-                                    if (null == b) return null;
+                                    if (null == I) return null;
                                     let n = `${e}-${t}`,
                                         l = O.get(n);
                                     if (null != l) return l;
-                                    let i = b.highlight(t, e, !1);
+                                    let i = I.highlight(t, e, !1);
                                     if (null == i || i.illegal) return null;
                                     let r = i.value.split("\n");
                                     return (O.set(n, r), r);

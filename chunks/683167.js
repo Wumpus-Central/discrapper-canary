@@ -25,10 +25,10 @@ function C(e) {
 function A(e) {
     return null != e && "applicationCommandOption" === e.type && e.optionType === E.n4.STRING;
 }
-function I(e) {
+function b(e) {
     return A(p.VW.getCurrentInline(e)?.[0]);
 }
-function b(e, t, n) {
+function I(e, t, n) {
     let l,
         i,
         r,
@@ -41,10 +41,10 @@ function b(e, t, n) {
           ? l.length
           : i) > 0 && f.b.delete(e, { distance: r, unit: "offset", reverse: n });
 }
-function v(e) {
+function N(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: p.VW.richValue(e), selection: e.selection };
 }
-var N = n(113001),
+var v = n(113001),
     T = n(2368);
 function j(e, t, n) {
     let l = p.VW.getCurrentInline(e);
@@ -433,7 +433,7 @@ function w(e) {
             ((e.history = { index: 0, stack: [] }),
                 (e.onChange = () => {
                     let { history: t } = e;
-                    (0 === t.stack.length && ((t.stack = [v(e)]), (t.index = 0)),
+                    (0 === t.stack.length && ((t.stack = [N(e)]), (t.index = 0)),
                         null != e.selection && (m.o.currentEntry(e).selection = e.selection),
                         (d = null),
                         o());
@@ -453,7 +453,7 @@ function w(e) {
                     n(t);
                     let i = p.VW.richValue(e);
                     i !== h &&
-                        (0 === l.stack.length && ((l.stack = [v(e)]), (l.index = 0)),
+                        (0 === l.stack.length && ((l.stack = [N(e)]), (l.index = 0)),
                         m.o.isSaving(e) &&
                             ((function (e, t, n) {
                                 var l, i;
@@ -590,23 +590,23 @@ function w(e) {
                         return (
                             (e.rendersTrailingNewline = A),
                             (e.insertBreak = () => {
-                                I(e) ? i("\n") : C(e) && l();
+                                b(e) ? i("\n") : C(e) && l();
                             }),
                             (e.insertSoftBreak = () => {
                                 e.insertBreak();
                             }),
                             (e.deleteBackward = (n) => {
                                 let l = p.ZF.toPoint(e.selection);
-                                "line" === n && null != l && I(e) ? b(e, l, !0) : t(n);
+                                "line" === n && null != l && b(e) ? I(e, l, !0) : t(n);
                             }),
                             (e.deleteForward = (t) => {
                                 let l = p.ZF.toPoint(e.selection);
-                                "line" === t && null != l && I(e) ? b(e, l, !1) : n(t);
+                                "line" === t && null != l && b(e) ? I(e, l, !1) : n(t);
                             }),
                             (e.insertText = (t) => {
                                 if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void i(t);
                                 let n = t.split(/\r\n|\r|\n/);
-                                I(e)
+                                b(e)
                                     ? i(n.join("\n"))
                                     : C(e)
                                       ? m.o.withSingleEntry(e, () => {
@@ -617,7 +617,7 @@ function w(e) {
                             }),
                             e
                         );
-                    })((S = (0, N.A)(S)))),
+                    })((S = (0, v.A)(S)))),
                 )),
                 c,
                 d,

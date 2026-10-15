@@ -19,18 +19,18 @@ var l,
     y = n(688810),
     C = n(209932),
     A = n(813564),
-    I = n(73153),
-    b = n(734057),
-    v = n(927813),
-    N = n(714736);
+    b = n(73153),
+    I = n(734057),
+    N = n(927813),
+    v = n(714736);
 n(980504);
-let T = 7.5 * v.A.Millis.SECOND,
+let T = 7.5 * N.A.Millis.SECOND,
     j = new Map(),
     _ = new Map(),
     k = new Map();
 class R extends u.Ay.Store {
     initialize() {
-        this.waitFor(b.A);
+        this.waitFor(I.A);
     }
     static displayName = "SoundboardEchoStore";
     getActiveSoundboardEchoes() {
@@ -43,7 +43,7 @@ class R extends u.Ay.Store {
         return j.get(e);
     }
 }
-let O = new R(I.h, {
+let O = new R(b.h, {
     VOICE_CHANNEL_EFFECT_SEND: function (e) {
         let {
             soundId: t,
@@ -57,9 +57,9 @@ let O = new R(I.h, {
             isEcho: u,
         } = e;
         if (null == t || null == s) return !1;
-        let c = b.A.getChannel(n)?.getGuildId();
+        let c = I.A.getChannel(n)?.getGuildId();
         if (null == c) return !1;
-        let { enabled: d } = (0, N.j)(c, "handleSoundPlayStart");
+        let { enabled: d } = (0, v.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
         let h = {
             soundId: t,
@@ -106,7 +106,7 @@ let O = new R(I.h, {
             ((j = c),
                 null != (t = k.get(l)) && clearTimeout(t),
                 (n = setTimeout(() => {
-                    I.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
+                    b.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
                 }, T)),
                 k.set(l, n));
         })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
@@ -527,10 +527,10 @@ function eE(e) {
             count: c,
             disabled: d,
             playedByUserIds: g,
-            startedAt: I,
-            showDetails: b,
-            onDetailsMouseEnter: v,
-            onDetailsMouseLeave: N,
+            startedAt: b,
+            showDetails: I,
+            onDetailsMouseEnter: N,
+            onDetailsMouseLeave: v,
         } = e,
         { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([w.default, L.A], () => {
             let e = L.A.isBlockedOrIgnored(o ?? void 0);
@@ -558,11 +558,11 @@ function eE(e) {
                     is_author: s === w.default.getCurrentUser()?.id,
                     location_stack: i,
                 });
-            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: I }, analyticsLocations: k });
-    }, [k, s, T, n, d, t, l, I]);
+            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: b }, analyticsLocations: k });
+    }, [k, s, T, n, d, t, l, b]);
     let R = r.useCallback(() => {
-            v(l.soundId);
-        }, [v, l.soundId]),
+            N(l.soundId);
+        }, [N, l.soundId]),
         O = r.useCallback(() => {
             (0, A.CZ)(l, n, k);
         }, [k, n, l]),
@@ -587,19 +587,19 @@ function eE(e) {
         children: [
             (0, i.jsx)(h.Y, {
                 targetElementRef: _,
-                shouldShow: b,
+                shouldShow: I,
                 renderPopout: (e) => {
                     let { setPopoutRef: r } = e;
                     return (0, i.jsx)("div", {
                         ref: r,
                         onMouseEnter: R,
-                        onMouseLeave: N,
+                        onMouseLeave: v,
                         children: (0, i.jsx)(ec, {
                             guildId: t,
                             channelId: n,
                             sound: l,
                             playedByUserIds: g,
-                            startedAt: I,
+                            startedAt: b,
                         }),
                     });
                 },
@@ -609,7 +609,7 @@ function eE(e) {
                     (0, i.jsx)("div", {
                         ref: _,
                         onMouseEnter: R,
-                        onMouseLeave: N,
+                        onMouseLeave: v,
                         children: (0, i.jsx)(ex, { authorUser: T, mostRecentPlayedUser: j, guildId: t, channelId: n }),
                     }),
             }),
@@ -693,7 +693,7 @@ function eS(e) {
     let A = r.useCallback((e) => {
             (clearTimeout(C.current), y(e));
         }, []),
-        I = r.useCallback(() => {
+        b = r.useCallback(() => {
             (clearTimeout(C.current), (C.current = setTimeout(() => y(null), 200)));
         }, []);
     return (0, i.jsx)("div", {
@@ -713,7 +713,7 @@ function eS(e) {
                             ...l.echo,
                             disabled: l.echo.disabled ?? !1,
                             onDetailsMouseEnter: A,
-                            onDetailsMouseLeave: I,
+                            onDetailsMouseLeave: b,
                             showDetails: S === l.echo.sound.soundId,
                         }),
                     }),

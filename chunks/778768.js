@@ -1,51 +1,51 @@
-i.d(t, { w: () => Y });
-var n = i(477900),
-    l = i(582128),
-    s = i(503698),
-    a = i.n(s),
-    r = i(284009),
-    d = i.n(r),
-    u = i(562708),
-    o = i(17928),
-    c = i(192308),
-    A = i(315710),
-    m = i(939249),
-    h = i(177953),
-    g = i(834730),
-    f = i(935154),
-    p = i(652215),
-    I = i(778712),
-    v = i(97808),
-    S = i(863610),
-    x = i(283973),
-    _ = i(376728),
-    E = i(774300),
-    N = i(566903),
-    y = i(714114),
-    C = i(864436),
-    j = i(835072),
-    b = i(793574),
-    T = i(688810),
-    O = i(139286),
-    G = i(47167),
-    V = i(713517),
-    P = i(854627),
-    w = i(10862),
-    k = i(696451),
-    R = i(71393),
-    D = i(958590),
-    M = i(576705),
-    U = i(290863),
-    L = i(427262),
-    F = i(582904),
-    z = i(105292),
-    B = i(469640);
+t.d(i, { w: () => Y });
+var n = t(477900),
+    l = t(582128),
+    s = t(503698),
+    a = t.n(s),
+    r = t(284009),
+    d = t.n(r),
+    u = t(562708),
+    o = t(17928),
+    c = t(192308),
+    A = t(315710),
+    m = t(939249),
+    g = t(177953),
+    h = t(834730),
+    f = t(935154),
+    p = t(652215),
+    I = t(778712),
+    v = t(97808),
+    S = t(863610),
+    x = t(283973),
+    _ = t(376728),
+    E = t(774300),
+    N = t(566903),
+    y = t(714114),
+    C = t(864436),
+    j = t(835072),
+    b = t(793574),
+    T = t(688810),
+    O = t(139286),
+    G = t(47167),
+    V = t(713517),
+    P = t(854627),
+    w = t(10862),
+    k = t(696451),
+    R = t(71393),
+    D = t(958590),
+    M = t(576705),
+    U = t(290863),
+    L = t(427262),
+    F = t(582904),
+    z = t(105292),
+    B = t(469640);
 let K = "VoiceInviteSuggestionsPopover";
 function Y(e) {
-    let { channel: t, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: f } = e,
+    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: f } = e,
         I = l.useRef(null),
         v = (0, V.M)(I),
-        S = (0, F.kt)({ channel: t }),
+        S = (0, F.kt)({ channel: i }),
         { analyticsLocations: x } = (0, T.Ay)(b.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (l.useEffect(() => {
         s && I.current?.focus();
@@ -53,7 +53,7 @@ function Y(e) {
         (0, O.A)({
             name: u.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
             type: u.ImpressionTypes.POPOUT,
-            properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: x },
+            properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: x },
         }),
         l.useEffect(() => {
             o?.(I.current);
@@ -62,22 +62,22 @@ function Y(e) {
             r?.(v);
         }, [r, v]));
     let _ = l.useCallback(() => {
-        let e = R.A.getGuild(t.guild_id);
+        let e = R.A.getGuild(i.guild_id);
         (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, c.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    i.e("683621"),
-                    i.e("711162"),
-                    i.e("919170"),
-                    i.e("159957"),
-                    i.e("728136"),
-                    i.e("216084"),
-                    i.e("284819"),
-                ]).then(i.bind(i, 405342));
-                return (i) => (0, n.jsx)(l, { ...i, guild: e, channel: t, source: p.PE1.VOICE_INVITE_SUGGESTIONS });
+                    t.e("683621"),
+                    t.e("711162"),
+                    t.e("919170"),
+                    t.e("159957"),
+                    t.e("728136"),
+                    t.e("216084"),
+                    t.e("284819"),
+                ]).then(t.bind(t, 405342));
+                return (t) => (0, n.jsx)(l, { ...t, guild: e, channel: i, source: p.PE1.VOICE_INVITE_SUGGESTIONS });
             }),
             f());
-    }, [t, f]);
+    }, [i, f]);
     return (
         (0, A.tj)(I, { disable: !s }),
         (0, n.jsx)("div", {
@@ -91,7 +91,7 @@ function Y(e) {
                 children: (0, n.jsxs)("ul", {
                     className: B.p_,
                     children: [
-                        S.map((e) => (0, n.jsx)(q, { channel: t, user: e }, e.id)),
+                        S.map((e) => (0, n.jsx)(q, { channel: i, user: e }, e.id)),
                         (0, n.jsxs)(m.D, {
                             tag: "li",
                             onClick: _,
@@ -99,9 +99,9 @@ function Y(e) {
                             children: [
                                 (0, n.jsx)("div", {
                                     className: B.R4,
-                                    children: (0, n.jsx)(h.n, { size: "custom", className: B.Kk }),
+                                    children: (0, n.jsx)(g.n, { size: "custom", className: B.Kk }),
                                 }),
-                                (0, n.jsx)(g.E, {
+                                (0, n.jsx)(h.E, {
                                     variant: "text-sm/medium",
                                     className: B.UU,
                                     lineClamp: 1,
@@ -116,45 +116,45 @@ function Y(e) {
     );
 }
 function q(e) {
-    let { channel: t, user: i } = e,
-        s = t.guild_id,
+    let { channel: i, user: t } = e,
+        s = i.guild_id,
         r = l.useRef(null),
-        d = (0, o.bG)([k.Ay], () => k.Ay.getMember(s, i.id), [s, i.id]),
+        d = (0, o.bG)([k.Ay], () => k.Ay.getMember(s, t.id), [s, t.id]),
         { isHoveringOrFocusing: u } = (0, V.A)(r),
         [c, A] = l.useState(null),
         {
-            status: h,
+            status: g,
             isMobileOnline: b,
             activities: T,
         } = (0, o.cf)(
             [U.A],
             () => ({
-                status: U.A.getStatus(i.id, s),
-                isMobileOnline: U.A.isMobileOnline(i.id),
-                activities: U.A.getActivities(i.id, s),
+                status: U.A.getStatus(t.id, s),
+                isMobileOnline: U.A.isMobileOnline(t.id),
+                activities: U.A.getActivities(t.id, s),
             }),
-            [i.id, s],
+            [t.id, s],
         ),
         { activityStatusText: O, activityStatusIcon: R } = l.useMemo(() => {
             let e = T.find((e) => e.type !== p.$pd.CUSTOM_STATUS && e.type !== p.$pd.HANG_STATUS);
             return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
         }, [T]),
-        { voiceChannel: F } = (0, y.Ay)({ userId: i.id }),
+        { voiceChannel: F } = (0, y.Ay)({ userId: t.id }),
         Y = (0, G.Ay)(F),
         q = (0, f.S3)(p.clD.ONLINE),
         $ = "success" === c || "sending" === c,
         H = l.useCallback(async () => {
             if ($) return;
             async function e() {
-                let e = D.A.getInvite(t.id, {}) ?? null;
+                let e = D.A.getInvite(i.id, {}) ?? null;
                 if (null == e) {
-                    if (!M.A.can(p.xBc.CREATE_INSTANT_INVITE, t)) return null;
+                    if (!M.A.can(p.xBc.CREATE_INSTANT_INVITE, i)) return null;
                     try {
-                        await _.Ay.createInvite(t.id, {}, K);
+                        await _.Ay.createInvite(i.id, {}, K);
                     } catch (e) {
                         return null;
                     }
-                    e = D.A.getInvite(t.id, {}) ?? null;
+                    e = D.A.getInvite(i.id, {}) ?? null;
                 }
                 return e?.code ?? null;
             }
@@ -165,7 +165,7 @@ function q(e) {
                 : E.A.enqueue(
                       {
                           type: E.F.USER,
-                          user: i,
+                          user: t,
                           inviteKey: n,
                           location: K,
                           inviteAnalyticsMetadata: { source: p.PE1.VOICE_INVITE_SUGGESTIONS },
@@ -174,18 +174,18 @@ function q(e) {
                           A(e ? "success" : null);
                       },
                   );
-        }, [$, i, t]),
+        }, [$, t, i]),
         {
             avatarDecorationSrc: W,
             avatarSrc: Z,
             eventHandlers: J,
-        } = (0, P.A)({ userId: i.id, size: I._3.SIZE_24, animateOnHover: !u, guildId: s });
+        } = (0, P.A)({ userId: t.id, size: I._3.SIZE_24, animateOnHover: !u, guildId: s });
     if (null == d) return null;
-    let X = L.Ay.getName(i),
+    let X = L.Ay.getName(t),
         Q = z.intl.string(z.t.jYnGPG),
-        ee = h !== p.clD.OFFLINE ? h : void 0,
-        et = null != O.text,
-        ei = null != F && null != Y;
+        ee = g !== p.clD.OFFLINE ? g : void 0,
+        ei = null != O.text,
+        et = null != F && null != Y;
     return (0, n.jsxs)(m.D, {
         innerRef: r,
         tag: "li",
@@ -207,21 +207,21 @@ function q(e) {
             (0, n.jsxs)("div", {
                 className: B.VW,
                 children: [
-                    (0, n.jsx)(g.E, { variant: "text-sm/medium", className: B.UU, lineClamp: 1, children: X }),
-                    (ei || et) &&
+                    (0, n.jsx)(h.E, { variant: "text-sm/medium", className: B.UU, lineClamp: 1, children: X }),
+                    (et || ei) &&
                         (0, n.jsxs)("div", {
                             className: B.J2,
                             children: [
-                                ei
+                                et
                                     ? (0, n.jsx)(w.A, { size: "custom", color: q, channel: F, className: B.RI })
                                     : null != R
                                       ? (0, n.jsx)(C.A, { icon: R, className: B.RI })
                                       : null,
-                                (0, n.jsx)(g.E, {
+                                (0, n.jsx)(h.E, {
                                     variant: "text-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
-                                    children: ei ? Y : O.text,
+                                    children: et ? Y : O.text,
                                 }),
                             ],
                         }),
@@ -230,7 +230,7 @@ function q(e) {
             "sending" === c &&
                 (0, n.jsx)("div", { className: B.r$, children: (0, n.jsx)(S.n, { dotRadius: 2, themed: !0 }) }),
             "success" === c &&
-                (0, n.jsx)(g.E, {
+                (0, n.jsx)(h.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     className: B.h5,

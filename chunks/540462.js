@@ -30,8 +30,8 @@ var i = n(477900),
     O = n(666860),
     L = n(688810),
     P = n(139286),
-    w = n(587895),
-    M = n(235986),
+    M = n(587895),
+    w = n(235986),
     U = n(47899),
     D = n(643501),
     V = n(857253),
@@ -84,8 +84,8 @@ var i = n(477900),
     eO = n(625494),
     eL = n(723702),
     eP = n(19575),
-    ew = n(475815),
-    eM = n(218394),
+    eM = n(475815),
+    ew = n(218394),
     eU = n(198052),
     eD = n(520698),
     eV = n(43189),
@@ -113,7 +113,7 @@ function eQ(e) {
             maybeLeaveFullScreen: o,
         } = e,
         c = (0, es.Bx)(),
-        u = (0, d.bG)([w.A], () => (l?.type === eW.lp.ACTIVITY ? w.A.getApplication(l.applicationId) : void 0)),
+        u = (0, d.bG)([M.A], () => (l?.type === eW.lp.ACTIVITY ? M.A.getApplication(l.applicationId) : void 0)),
         h = t === eY.DUB.NO_CHAT ? ec.A.Directions.UP : ec.A.Directions.DOWN,
         p = [eY.DUB.FULL_SCREEN, eY.DUB.NO_CHAT].includes(t);
     return (0, i.jsxs)(i.Fragment, {
@@ -129,9 +129,9 @@ function eQ(e) {
                   })
                 : null,
             a
-                ? (0, i.jsx)(M.A, {
+                ? (0, i.jsx)(w.A, {
                       className: eK.P0,
-                      align: M.A.Align.CENTER,
+                      align: w.A.Align.CENTER,
                       grow: 0,
                       children: (0, i.jsx)(ec.A, {
                           label: p ? e$.intl.string(e$.t.kkKapG) : e$.intl.string(e$.t["5MstTl"]),
@@ -160,7 +160,7 @@ class eJ extends l.PureComponent {
     }
     componentDidMount() {
         let { channel: e, layout: t } = this.props;
-        (this.currentDocument.addEventListener(ew.Wb, this.handleFullScreenChange),
+        (this.currentDocument.addEventListener(eM.Wb, this.handleFullScreenChange),
             eT.default.track(eY.HAw.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: this.inPopout ? "popout" : t,
                 ...(0, O.QS)(e.id),
@@ -168,7 +168,7 @@ class eJ extends l.PureComponent {
     }
     componentWillUnmount() {
         (this._videoBackgroundTooltipTimeout.stop(),
-            this.currentDocument.removeEventListener(ew.Wb, this.handleFullScreenChange),
+            this.currentDocument.removeEventListener(eM.Wb, this.handleFullScreenChange),
             (this.inPopout && (0, eL.isMac)()) || this.maybeLeaveFullScreen());
     }
     componentDidUpdate(e) {
@@ -187,8 +187,8 @@ class eJ extends l.PureComponent {
         (null != c &&
             e.mode === eY._Of.VIDEO &&
             i === eY._Of.VOICE &&
-            (0, ew._U)(c, this.currentDocument) &&
-            (0, ew.sP)(c, this.currentDocument),
+            (0, eM._U)(c, this.currentDocument) &&
+            (0, eM.sP)(c, this.currentDocument),
             (e.participantsOpen !== t || l !== e.layout || e.stageAudienceSidebarOpen !== a) &&
                 this._contentRef.current?.triggerResize(),
             e.inCall && !n && this.inPopout && this.handleClosePopout());
@@ -245,7 +245,7 @@ class eJ extends l.PureComponent {
     handleFullScreenChange = () => {
         let e = this.getRootNode();
         null != e &&
-            ((0, ew._U)(e, this.currentDocument) ||
+            ((0, eM._U)(e, this.currentDocument) ||
                 this.props.layout !== eY.DUB.FULL_SCREEN ||
                 this.handleFullScreen());
     };
@@ -253,14 +253,14 @@ class eJ extends l.PureComponent {
         let e = this.getRootNode();
         null != e &&
             (this.props.layout !== eY.DUB.FULL_SCREEN
-                ? ((this._prevLayout = this.props.layout), this.handleChangeLayout(eY.DUB.FULL_SCREEN), (0, ew.tl)(e))
+                ? ((this._prevLayout = this.props.layout), this.handleChangeLayout(eY.DUB.FULL_SCREEN), (0, eM.tl)(e))
                 : this.maybeLeaveFullScreen());
     };
     maybeLeaveFullScreen = () => {
         let e = this.getRootNode();
         null == e ||
             (this.props.layout === eY.DUB.FULL_SCREEN &&
-                (this.handleChangeLayout(this._prevLayout), (0, ew.sP)(e, this.currentDocument)));
+                (this.handleChangeLayout(this._prevLayout), (0, eM.sP)(e, this.currentDocument)));
     };
     handleToggleLayout = () => {
         this.handleChangeLayout(this.props.layout === eY.DUB.NORMAL ? eY.DUB.NO_CHAT : eY.DUB.NORMAL);
@@ -858,8 +858,8 @@ let e0 = function (e) {
             filteredParticipants: T,
             participantsVersion: O,
             mode: P,
-            layout: w,
-            participantsOpen: M,
+            layout: M,
+            participantsOpen: w,
             chatOpen: G,
             stageAudienceSidebarOpen: k,
             selectedParticipant: B,
@@ -927,7 +927,7 @@ let e0 = function (e) {
             let e = F.A.getPendingNote(t.id);
             return null != e && null == e.position;
         }),
-        em = (0, eM.j)(),
+        em = (0, ew.j)(),
         ef = (0, eg.d7)(t, j),
         ex = (0, eg.kM)(t),
         eC = (0, eA.F)(g) && ex ? ef : null,
@@ -943,7 +943,7 @@ let e0 = function (e) {
                             channel: t,
                             guild: K,
                             hasConnectPermission: J,
-                            participantsOpen: M,
+                            participantsOpen: w,
                             renderExternalHeader: n,
                             appContext: g,
                             popoutWindow: q,
@@ -954,7 +954,7 @@ let e0 = function (e) {
                             participants: _,
                             filteredParticipants: T,
                             participantsVersion: O,
-                            layout: w,
+                            layout: M,
                             chatOpen: G,
                             maxSidebarWidth: o - 550,
                             currentUserId: X,

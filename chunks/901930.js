@@ -1,4 +1,4 @@
-t.d(a, { A: () => _, j: () => f });
+t.d(a, { A: () => g, j: () => f });
 var l = t(477900),
     n = t(582128),
     r = t(192308),
@@ -19,12 +19,12 @@ function f(e) {
     let { planError: a, hasSelectedPaymentElementSourceType: t } = e,
         { paymentError: s } = (0, h.o)(),
         { dropdownCurrencies: f } = (0, d.Jn)(),
-        { purchaseError: _, purchasePreviewError: g } = (0, m.t4)((e) => ({
+        { purchaseError: g, purchasePreviewError: _ } = (0, m.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
         x = null;
-    null != g ? (x = g) : null != s && (0, p.h5)(s, t) ? (x = s) : null != _ ? (x = _) : null != a && (x = a);
+    null != _ ? (x = _) : null != s && (0, p.h5)(s, t) ? (x = s) : null != g ? (x = g) : null != a && (x = a);
     let P = (0, A.vx)(),
         T = n.useCallback(() => {
             ((0, r.closeAllModals)(), u.A.openPrivateChannel({ recipientIds: P }));
@@ -54,7 +54,7 @@ function f(e) {
     }
     return { error: x, errorMessage: M };
 }
-function _(e) {
+function g(e) {
     let { planError: a, purchaseErrorBlockRef: t, hasSelectedPaymentElementSourceType: n, className: r } = e,
         { error: i, errorMessage: u } = f({ planError: a, hasSelectedPaymentElementSourceType: n });
     return null == i

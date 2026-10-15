@@ -31,14 +31,14 @@ function R(e) {
         [R, O] = (0, l.useState)(!1),
         L = (0, l.useRef)(null),
         P = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
-        w = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
-        M = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
-        U = (0, j.tx)(w, t, P),
+        M = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
+        w = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
+        U = (0, j.tx)(M, t, P),
         D = (0, v.Sb)({
             position: n.position,
             targetLabel: _.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
         });
-    return null == P || null == w
+    return null == P || null == M
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -73,7 +73,7 @@ function R(e) {
                                               children: [
                                                   (0, i.jsx)(u.eu, {
                                                       "aria-label": U,
-                                                      src: P.getAvatarURL(w, 24),
+                                                      src: P.getAvatarURL(M, 24),
                                                       size: h._3.SIZE_24,
                                                       className: T.my,
                                                   }),
@@ -85,16 +85,16 @@ function R(e) {
                                               ],
                                           }),
                                           (0, i.jsx)(m.m, {
-                                              text: M ? null : _.intl.string(S.default.qRXats),
+                                              text: w ? null : _.intl.string(S.default.qRXats),
                                               children: (0, i.jsx)(d.D, {
-                                                  onClick: M
+                                                  onClick: w
                                                       ? function () {
-                                                            null != w &&
-                                                                (0, y.yF)(w, t, n.objectId).catch((e) => (0, N.b)());
+                                                            null != M &&
+                                                                (0, y.yF)(M, t, n.objectId).catch((e) => (0, N.b)());
                                                         }
                                                       : void 0,
-                                                  "aria-disabled": !M,
-                                                  className: s()(T.Kk, { [T.Ir]: !M }),
+                                                  "aria-disabled": !w,
+                                                  className: s()(T.Kk, { [T.Ir]: !w }),
                                                   children: (0, i.jsx)(A.TrashIcon, {
                                                       size: "sm",
                                                       color: "currentColor",

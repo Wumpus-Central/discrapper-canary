@@ -19,10 +19,10 @@ var l = n(477900),
     y = n(17928),
     C = n(866665),
     A = n(778712),
-    I = n(939249),
-    b = n(545442),
-    v = n(922016),
-    N = n(565645),
+    b = n(939249),
+    I = n(545442),
+    N = n(922016),
+    v = n(565645),
     T = n(730134),
     j = n(775602),
     _ = n(47167),
@@ -55,7 +55,7 @@ function X(e) {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(N.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
+        children: (0, l.jsx)(v.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
 function Y(e) {
@@ -64,7 +64,7 @@ function Y(e) {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(N.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+        children: (0, l.jsx)(v.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
     });
 }
 function ee(e) {
@@ -92,7 +92,7 @@ function et(e) {
             position: "top",
             "aria-label": Q.Ay.getUserTag(r, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(I.D, { tag: "span", children: o }),
+            children: (0, l.jsx)(b.D, { tag: "span", children: o }),
         });
     }
     return o;
@@ -116,7 +116,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(b.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(I.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       s.name,
                   ],
@@ -124,7 +124,7 @@ function en(e) {
     }
     return null == n || null == r
         ? m()
-        : (0, l.jsx)(v.Y, {
+        : (0, l.jsx)(N.Y, {
               targetElementRef: u,
               preload: async () => {
                   await (0, L.a)(n, t);

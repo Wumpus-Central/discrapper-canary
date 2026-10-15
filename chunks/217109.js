@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, JZ: () => g, Mm: () => h, Wk: () => v, hi: () => p, oP: () => E });
+n.d(t, { Ay: () => A, JZ: () => g, Mm: () => m, Wk: () => v, hi: () => p, oP: () => E });
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -8,8 +8,8 @@ var r = n(477900),
     o = n(152858),
     u = n(498381),
     d = n(15447);
-let h = 6;
-function m(e) {
+let m = 6;
+function h(e) {
     let { index: t, active: n, setPage: l } = e;
     return (0, r.jsx)("div", {
         className: i()(d.page, { [d.active]: n }),
@@ -25,7 +25,7 @@ function m(e) {
 function p(e) {
     let { page: t, pages: n, setPage: a } = e,
         [i, o] = l.useState(0),
-        h = (0, c.w)((e) => {
+        m = (0, c.w)((e) => {
             let { contentRect: t } = e;
             o(t.width);
         }),
@@ -44,7 +44,7 @@ function p(e) {
             }
             return e.map((e, n) =>
                 "number" == typeof e
-                    ? (0, r.jsx)(m, { index: e, active: t === e, setPage: a }, e)
+                    ? (0, r.jsx)(h, { index: e, active: t === e, setPage: a }, e)
                     : (0, r.jsx)(
                           "div",
                           {
@@ -56,7 +56,7 @@ function p(e) {
             );
         }, [t, n, a, i]);
     return (0, r.jsx)("div", {
-        ref: h,
+        ref: m,
         className: d.pagination,
         children: (0, r.jsxs)(u.Ym, {
             direction: "horizontal",
@@ -108,12 +108,12 @@ function v(e, t, n) {
         } = t ?? {},
         c = r === o.oV.TRUNCATE,
         [u, d] = l.useState(0),
-        [h, m] = l.useState(a),
+        [m, h] = l.useState(a),
         [p, f] = l.useState(e),
         g = null == a || a < 1 ? 0 : Math.ceil(e / a),
         E = null != a && a > 0;
     return (
-        (h !== a || p !== e) && (m(a), f(e), d(0)),
+        (m !== a || p !== e) && (h(a), f(e), d(0)),
         {
             page: u,
             pages: g,
@@ -134,12 +134,12 @@ function v(e, t, n) {
 }
 let A = function (e) {
     let { columns: t = 3, paginationOptions: n, children: a } = e,
-        s = Math.max(1, Math.min(h, Math.floor(t))),
+        s = Math.max(1, Math.min(m, Math.floor(t))),
         c = l.Children.count(a),
         o = l.useRef(null),
         {
             page: u,
-            pages: m,
+            pages: h,
             paginate: g,
             showPagination: A,
             paginationPosition: T,
@@ -150,7 +150,7 @@ let A = function (e) {
         _ = l.useMemo(() => E(l.Children.toArray(a), g ? u : void 0, S, x), [u, S, a, g, x]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            A && "top" === T && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
+            A && "top" === T && (0, r.jsx)(p, { page: u, pages: h, setPage: y }),
             (0, r.jsx)(f.Provider, {
                 value: n,
                 children: (0, r.jsx)("div", {
@@ -159,7 +159,7 @@ let A = function (e) {
                     children: (0, r.jsx)("div", { className: i()(d.grid, d[`columns${s}`]), children: _ }),
                 }),
             }),
-            A && "bottom" === T && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
+            A && "bottom" === T && (0, r.jsx)(p, { page: u, pages: h, setPage: y }),
         ],
     });
 };

@@ -9,7 +9,7 @@ var r = n(477900),
     u = n(217651);
 let d = function (e) {
     let { backgroundImage: t, href: n, ctaText: d } = e,
-        h = (0, s.W)(d);
+        m = (0, s.W)(d);
     return (0, r.jsx)(o.A, {
         children: (0, r.jsx)(l.D, {
             className: u.v,
@@ -19,7 +19,7 @@ let d = function (e) {
                 backgroundPosition: "left",
                 children: (0, r.jsx)("div", {
                     className: u.j,
-                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "text-overlay-light", children: h }),
+                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "text-overlay-light", children: m }),
                 }),
             }),
         }),

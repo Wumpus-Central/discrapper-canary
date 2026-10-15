@@ -35,8 +35,8 @@ function _(e) {
             inCall: O,
             channel: L,
             selectedParticipant: P,
-            showParticipants: w = !0,
-            className: M,
+            showParticipants: M = !0,
+            className: w,
             width: U,
             height: D,
             layout: V,
@@ -52,7 +52,7 @@ function _(e) {
         q = (0, u.A)(X ? P.applicationId : void 0),
         Z = !X && null != P.streamId,
         Q = D <= 2 * b + 144,
-        J = w && !Q,
+        J = M && !Q,
         ee = (0, d.Ay)(J),
         et = V === y.DUB.MINIMUM || V === y.DUB.NORMAL,
         en = !Q && (!et || X),
@@ -117,7 +117,7 @@ function _(e) {
         ej = J ? [] : (0, C.Cf)(S, P, B),
         { visibleParticipants: ey, participantTileWidth: eI } = (0, j.i4)(U, T);
     return (0, i.jsxs)("div", {
-        className: s()(E.zr, N.tR, M),
+        className: s()(E.zr, N.tR, w),
         children: [
             (0, i.jsxs)("div", {
                 className: E.QX,
@@ -170,7 +170,7 @@ function _(e) {
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: L.id,
-                                          isParticipantsOpen: w,
+                                          isParticipantsOpen: M,
                                           isVertical: !0,
                                       }),
                                   })
@@ -194,7 +194,7 @@ function _(e) {
                             selectedParticipantId: P.id,
                             inCall: O,
                             popoutType: R,
-                            paused: $ || !w,
+                            paused: $ || !M,
                         }),
                     }),
                 ],

@@ -37,21 +37,21 @@ function P(e) {
     i.useEffect(() => {
         (0, p.YP)(t.id);
     }, [t.id]);
-    let C = L && null == N && !_,
-        M = i.useMemo(() => {
+    let M = L && null == N && !_,
+        C = i.useMemo(() => {
             if (null == N) return null;
             let e = (0, v.$g)(S ?? N.amount, N.currency);
             return x.intl.format(I.default["9Nb9Bz"], { amount: e });
         }, [N, S]);
     i.useEffect(() => {
-        !y && C && n && P(!1);
-    }, [y, C, n, P]);
-    let j = b || h || _ || (!y && C),
+        !y && M && n && P(!1);
+    }, [y, M, n, P]);
+    let j = b || h || _ || (!y && M),
         D = j || y,
         w = i.useCallback(() => {
             D || P(!n);
         }, [P, n, D]);
-    if (C && !y) return null;
+    if (M && !y) return null;
     let U = j && null != A && R,
         k = D && null != A,
         O = h
@@ -59,7 +59,7 @@ function P(e) {
                   className: E.tv,
                   children: (0, r.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE_SIMPLE, className: E.u1 }),
               })
-            : (0, r.jsx)(u.S, { checked: n && (y || !C), onChange: w, disabled: D, label: "" }),
+            : (0, r.jsx)(u.S, { checked: n && (y || !M), onChange: w, disabled: D, label: "" }),
         W = (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(c.E, {
@@ -68,12 +68,12 @@ function P(e) {
                     children: x.intl.string(I.default["febr+T"]),
                 }),
                 !_ &&
-                    null != M &&
+                    null != C &&
                     (0, r.jsx)(c.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         style: { marginTop: 4 },
-                        children: M,
+                        children: C,
                     }),
             ],
         }),

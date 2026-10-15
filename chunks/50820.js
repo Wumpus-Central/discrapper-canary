@@ -42,8 +42,8 @@ var n,
     $ = l(672979),
     H = l(90644),
     Y = l(61330),
-    F = l(960076),
-    B = l(855511),
+    B = l(960076),
+    F = l(855511),
     K = l(652215),
     X = l(105292),
     Q = l(432166),
@@ -107,7 +107,7 @@ class ei extends a.PureComponent {
         return (0, D.t)(q, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
-        return (0, F.A)(this.activity) && "ActivityFeed" === this.props.type;
+        return (0, B.A)(this.activity) && "ActivityFeed" === this.props.type;
     }
     renderHeader(e) {
         let t,
@@ -129,7 +129,7 @@ class ei extends a.PureComponent {
                 break;
             case K.$pd.PLAYING:
                 t = (function (e) {
-                    let t = (0, B.A)(e) ?? "";
+                    let t = (0, F.A)(e) ?? "";
                     switch (t) {
                         case K.yTV.PS4:
                         case K.yTV.PS5:
@@ -204,7 +204,7 @@ class ei extends a.PureComponent {
             { type: n } = this.props,
             { assets: a, application_id: s } = e;
         if (null == a || (null == a.large_image && null == a.small_image)) return null;
-        (0, F.A)(e) && (t = ee[n]);
+        (0, B.A)(e) && (t = ee[n]);
         let c = (0, H.A)(e),
             o =
                 null != a.large_image
@@ -344,11 +344,11 @@ class ei extends a.PureComponent {
             } else (0, k.Cy)(e) && (a = e.assets?.small_text);
         return null == a || "" === a
             ? null
-            : ((0, F.A)(e) && (a = X.intl.formatToPlainString(X.t.gmCZRY, { game: a })), null != t)
+            : ((0, B.A)(e) && (a = X.intl.formatToPlainString(X.t.gmCZRY, { game: a })), null != t)
               ? (0, i.jsx)(y.D, { onClick: t, title: s ?? void 0, className: q.clickableDetails, children: a })
               : (0, i.jsx)("div", {
                     title: s ?? void 0,
-                    className: (0, F.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details,
+                    className: (0, B.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details,
                     children: a,
                 });
     }
@@ -357,11 +357,11 @@ class ei extends a.PureComponent {
         return l && null != t
             ? null == n
                 ? (0, i.jsx)("div", {
-                      className: (0, F.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details,
+                      className: (0, B.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details,
                       children: X.intl.format(X.t["hq/Qze"], { guildName: t.name }),
                   })
                 : (0, i.jsxs)("div", {
-                      className: r()((0, F.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details, q.guildDetails),
+                      className: r()((0, B.A)(e) || (0, H.A)(e) ? q.detailsWrap : q.details, q.guildDetails),
                       children: [
                           (0, i.jsx)(_.Ay, { guild: t, size: _.Ay.Sizes.SMOL, className: q.guildIcon }),
                           (0, i.jsx)(f._, { size: "xxs", color: "currentColor" }),

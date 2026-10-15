@@ -30,8 +30,8 @@ var i = n(477900),
     O = n(974930),
     L = n(961314),
     P = n(58736),
-    w = n(742589),
-    M = n(376352),
+    M = n(742589),
+    w = n(376352),
     U = n(353428),
     D = n(46054),
     V = n(322338),
@@ -89,7 +89,7 @@ function et(e) {
             children: [
                 (0, i.jsx)(P.Ay.Divider, { className: Q.yF }),
                 (0, i.jsx)(ee, { user: e, channel: a, stream: n, color: "text-strong" }),
-                (0, i.jsx)(M.F, { user: e, stream: n, channel: a }),
+                (0, i.jsx)(w.F, { user: e, stream: n, channel: a }),
             ],
         });
     } else o && (t = (0, i.jsx)(L.A, { guildEvent: s, recurrenceId: r }));
@@ -107,8 +107,8 @@ function en(e) {
             guildRoomVisible: O,
         } = e,
         L = (0, r.bG)([W.A], () => W.A.getSelectedParticipant(t.id), [t.id]),
-        { enabled: M } = (0, T.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
-        F = M && !t.isGuildStageVoice(),
+        { enabled: w } = (0, T.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
+        F = w && !t.isGuildStageVoice(),
         ee = (0, r.bG)([S.A], () => S.A.getVideoOverlayVisibility()),
         en = (0, H.kM)(t) && (0, z.F)(o),
         ei = F && !O && !en,
@@ -174,7 +174,7 @@ function en(e) {
         className: Q.SC,
         children: [
             (0, i.jsxs)(P.Ay, {
-                onDoubleClick: w.I,
+                onDoubleClick: M.I,
                 transparent: !0,
                 className: Q.jr,
                 innerClassName: Q.gi,

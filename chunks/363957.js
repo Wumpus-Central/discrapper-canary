@@ -1,10 +1,10 @@
 (l.d(t, { A: () => g }), l(321073));
 var n = l(158390),
     i = l(17928),
-    a = l(73153),
-    s = l(927813);
-let r = s.A.Millis.SECOND,
-    d = 10 * s.A.Millis.SECOND,
+    s = l(73153),
+    a = l(927813);
+let r = a.A.Millis.SECOND,
+    d = 10 * a.A.Millis.SECOND,
     c = { status: "idle" },
     o = { status: "loading" },
     u = { status: "error" },
@@ -14,20 +14,20 @@ function x(e, t) {
     return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
 function h(e, t, l, i) {
-    let s = l.filter((t) => e.entriesByWidgetId.get(t)?.state.status !== "success");
-    if (0 === s.length) {
+    let a = l.filter((t) => e.entriesByWidgetId.get(t)?.state.status !== "success");
+    if (0 === a.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
         return;
     }
     let c = [];
-    (s.forEach((t) => {
+    (a.forEach((t) => {
         let l = x(e, t);
         i && l.attempts < 3 ? c.push(t) : (l.state = u);
     }),
         0 !== c.length &&
             ((e.backoff ??= new n.A(r, d, !0)),
             e.backoff.pending ||
-                e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
+                e.backoff.fail(() => s.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
 }
 class f extends i.Ay.Store {
     static displayName = "GuildSpaceHydrationStore";
@@ -49,15 +49,15 @@ class f extends i.Ay.Store {
                 : t.filter((e) => "idle" === (n.entriesByWidgetId.get(e)?.state ?? c).status);
     }
 }
-let g = new f(a.h, {
+let g = new f(s.h, {
     GUILD_SPACE_HYDRATE_START: function (e) {
         let t,
             { guildId: l, requestId: n, widgetIds: i } = e,
-            a = (null == (t = m[l]) && ((t = { entriesByWidgetId: new Map() }), (m[l] = t)), t);
-        ((a.activeRequestId = n),
-            (a.activeWidgetIds = i),
+            s = (null == (t = m[l]) && ((t = { entriesByWidgetId: new Map() }), (m[l] = t)), t);
+        ((s.activeRequestId = n),
+            (s.activeWidgetIds = i),
             i.forEach((e) => {
-                let t = x(a, e);
+                let t = x(s, e);
                 "success" !== t.state.status && ((t.state = o), (t.attempts += 1));
             }));
     },
@@ -65,17 +65,17 @@ let g = new f(a.h, {
         let { guildId: t, requestId: l, widgets: n } = e,
             i = m[t];
         if (i?.activeRequestId !== l) return !1;
-        let a = i.activeWidgetIds ?? [];
+        let s = i.activeWidgetIds ?? [];
         (delete i.activeRequestId, delete i.activeWidgetIds);
-        let s = new Map(
+        let a = new Map(
                 n.map((e) => {
                     let { id: t, data: l } = e;
                     return [t, l];
                 }),
             ),
             r = [];
-        (a.forEach((e) => {
-            let t = s.get(e);
+        (s.forEach((e) => {
+            let t = a.get(e);
             if (null != t) {
                 let l = x(i, e);
                 ((l.state = { status: "success", data: t }), (l.attempts = 0));
@@ -87,8 +87,8 @@ let g = new f(a.h, {
         let { guildId: t, requestId: l, retryable: n } = e,
             i = m[t];
         if (i?.activeRequestId !== l) return !1;
-        let a = i.activeWidgetIds ?? [];
-        (delete i.activeRequestId, delete i.activeWidgetIds, h(i, t, a, n));
+        let s = i.activeWidgetIds ?? [];
+        (delete i.activeRequestId, delete i.activeWidgetIds, h(i, t, s, n));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,
@@ -128,9 +128,9 @@ let g = new f(a.h, {
                     return t;
                 }),
             ),
-            a = [...n.entriesByWidgetId.keys()].filter((e) => !i.has(e));
-        if (0 === a.length) return !1;
-        a.forEach((e) => n.entriesByWidgetId.delete(e));
+            s = [...n.entriesByWidgetId.keys()].filter((e) => !i.has(e));
+        if (0 === s.length) return !1;
+        s.forEach((e) => n.entriesByWidgetId.delete(e));
     },
     GUILD_SPACE_UPDATE_SUCCESS: function (e) {
         let { guildId: t } = e,

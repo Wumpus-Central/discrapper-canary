@@ -1,4 +1,4 @@
-s.d(t, { Ay: () => y, pL: () => j });
+s.d(t, { Ay: () => M, pL: () => j });
 var l = s(477900),
     i = s(582128),
     a = s(503698),
@@ -105,7 +105,7 @@ function L(e) {
         }),
     });
 }
-function y(e) {
+function M(e) {
     let { sku: t, isFocused: s, user: i, guildId: a, eventTargetRef: r, assetClassName: n, disableHover: u } = e;
     switch (t.productLine) {
         case A.EZt.COLLECTIBLES:

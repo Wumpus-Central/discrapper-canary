@@ -14,8 +14,8 @@ var i = n(477900),
     E = n(820739),
     h = n(793574),
     x = n(688810),
-    p = n(277984),
-    S = n(531260),
+    S = n(277984),
+    p = n(531260),
     T = n(725836),
     f = n(169797),
     I = n(543767),
@@ -88,7 +88,7 @@ async function k(e, t, n, i) {
     if (null == a) throw Error("No slot to cancel");
     let o = (0, O.aE)(e, t);
     (await (0, E.HJ)(a),
-        await (0, p.nV)(
+        await (0, S.nV)(
             e,
             { items: o },
             { amount: 0, currency: e.currency },
@@ -104,9 +104,9 @@ function w(e) {
             transitionState: r,
             onBack: o,
             onNext: E,
-            onClose: p,
+            onClose: S,
         } = e,
-        [S, y] = s.useState(!1),
+        [p, y] = s.useState(!1),
         [v, j] = s.useState(null),
         [R, D] = s.useMemo(() => {
             try {
@@ -115,9 +115,9 @@ function w(e) {
                 return [[], !0];
             }
         }, [t]),
-        G = s.useRef(p);
+        G = s.useRef(S);
     (s.useEffect(() => {
-        G.current = p;
+        G.current = S;
     }),
         s.useEffect(() => {
             D && G.current();
@@ -150,7 +150,7 @@ function w(e) {
     if (null == Y || null == V || null == w || null == B)
         return (0, i.jsxs)(u.d, {
             transitionState: r,
-            onClose: p,
+            onClose: S,
             "aria-label": M.intl.string(M.t.CRwE7n),
             children: [
                 (0, i.jsx)(T.e0, { children: (0, i.jsx)(f.s3, { title: M.intl.string(M.t.CRwE7n) }) }),
@@ -187,7 +187,7 @@ function w(e) {
             (q = M.intl.format(M.t.eb0xgS, { expirationDate: l.endsAt.toDate() })),
         (0, i.jsxs)(u.d, {
             transitionState: r,
-            onClose: p,
+            onClose: S,
             "aria-label": M.intl.string(M.t.CRwE7n),
             children: [
                 (0, i.jsx)(T.e0, { children: (0, i.jsx)(f.s3, { title: M.intl.string(M.t.CRwE7n) }) }),
@@ -229,8 +229,8 @@ function w(e) {
                         {
                             variant: "critical-primary",
                             text: M.intl.string(M.t["/AS/gM"]),
-                            disabled: S,
-                            loading: S,
+                            disabled: p,
+                            loading: p,
                             onClick: Q,
                         },
                     ],
@@ -264,10 +264,10 @@ function z(e) {
     let t,
         { guildBoostSlot: n, transitionState: l, onClose: r } = e;
     s.useEffect(() => {
-        v.A.hasFetchedSubscriptions() || (0, p.hP)();
+        v.A.hasFetchedSubscriptions() || (0, S.hP)();
     }, []);
     let o = (0, a.bG)([v.A], () => v.A.getPremiumTypeSubscription()),
-        c = (0, S.A)(),
+        c = (0, p.A)(),
         [g, A] = s.useState(1),
         { analyticsLocations: E } = (0, x.Ay)(h.A.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == o)

@@ -34,7 +34,7 @@ function d(e) {
         return !1;
     }
 }
-class h extends l.Component {
+class m extends l.Component {
     state = { hasError: !1 };
     static getDerivedStateFromError() {
         return { hasError: !0 };
@@ -46,7 +46,7 @@ class h extends l.Component {
         return this.state.hasError ? null : this.props.children;
     }
 }
-function m(e) {
+function h(e) {
     let { layout: t, Components: n } = e;
     return l.useMemo(() => u(t, n), [t, n]);
 }
@@ -57,7 +57,7 @@ function p(e) {
         l.useEffect(() => {
             0 === t.children.length && i?.();
         }, [t, i]),
-        (0, r.jsx)(h, { onError: a, children: (0, r.jsx)(m, { layout: t, Components: c }) })
+        (0, r.jsx)(m, { onError: a, children: (0, r.jsx)(h, { layout: t, Components: c }) })
     );
 }
 function f(e) {

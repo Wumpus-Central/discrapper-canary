@@ -1,16 +1,16 @@
 n.d(e, {
     Ai: () => g,
-    ET: () => A,
+    ET: () => f,
     Jh: () => T,
     SX: () => E,
     ed: () => p,
     f7: () => h,
-    ft: () => d,
-    gU: () => I,
+    ft: () => c,
+    gU: () => m,
     oT: () => C,
-    pK: () => f,
+    pK: () => A,
     tR: () => _,
-    wN: () => c,
+    wN: () => d,
 });
 var i = n(582128),
     s = n(390544),
@@ -19,7 +19,7 @@ var i = n(582128),
     o = n(174459),
     r = n(475669),
     u = n(652215);
-function c(t, e, n) {
+function d(t, e, n) {
     i.useEffect(() => {
         o.default.track(u.HAw.OPEN_MODAL, {
             type: "game_servers_perk_clicked",
@@ -29,7 +29,7 @@ function c(t, e, n) {
         });
     }, [t, e, n]);
 }
-function d(t, e) {
+function c(t, e) {
     i.useEffect(() => {
         o.default.track(u.HAw.GAME_SERVER_GAME_SELECT_OPENED, { guild_id: t, type: e });
     }, [t, e]);
@@ -42,13 +42,13 @@ function E(t, e, n) {
 function _(t) {
     let e = (0, l.A)(t),
         n = (0, a.bG)([r.A], () => r.A.getStateForGuild(t)),
-        c = i.useRef(!1);
+        d = i.useRef(!1);
     i.useEffect(() => {
         if (n?.instances == null) return;
         let i = Object.values(n.instances).length,
             a = Object.values(n.instances).filter((t) => t.status === s.M.ONLINE).length;
-        c.current ||
-            ((c.current = !0),
+        d.current ||
+            ((d.current = !0),
             o.default.track(u.HAw.IMPRESSION_GAME_SERVERS_TAB_VIEWED, {
                 guild_id: t,
                 is_admin: e,
@@ -70,8 +70,8 @@ function T(t) {
         planName: a,
         planCost: l,
         previousPlanCost: r,
-        region: c,
-        type: d,
+        region: d,
+        type: c,
     } = t;
     o.default.track(u.HAw.GAME_SERVER_SKU_SELECTED, {
         guild_id: e,
@@ -81,8 +81,8 @@ function T(t) {
         plan_name: a,
         plan_cost: l,
         previous_plan_cost: r,
-        region: c,
-        type: d,
+        region: d,
+        type: c,
     });
 }
 function g(t, e, n, i) {
@@ -94,18 +94,18 @@ function p(t, e, n) {
 function h(t, e) {
     o.default.track(u.HAw.GAME_SERVER_VIEW_GAME_PANEL_CLICKED, { guild_id: t, game_server_id: e });
 }
-function A(t) {
+function f(t) {
     let { gameApplicationId: e, buttonVariant: n } = t;
     o.default.track(u.HAw.IMPRESSION_GAME_SERVER_ACTIVITY_BUTTON, {
         game_application_id: e ?? null,
         button_variant: n,
     });
 }
-function f(t) {
+function A(t) {
     let { gameApplicationId: e, buttonVariant: n } = t;
     o.default.track(u.HAw.GAME_SERVER_ACTIVITY_BUTTON_CLICKED, { game_application_id: e ?? null, button_variant: n });
 }
-function I(t) {
+function m(t) {
     let { guildId: e, gameApplicationId: n } = t;
     o.default.track(u.HAw.GAME_SERVER_ACTIVITY_BUTTON_GUILD_SELECTED, { guild_id: e, game_application_id: n ?? null });
 }

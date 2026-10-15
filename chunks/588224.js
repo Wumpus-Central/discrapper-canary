@@ -1,39 +1,39 @@
-(i.d(t, { A: () => M }), i(321073));
-var n = i(477900),
-    l = i(582128),
-    s = i(503698),
-    a = i.n(s),
-    r = i(17928),
-    d = i(451988),
-    u = i(717558),
-    o = i(933958),
-    c = i(191424),
-    A = i(627363),
-    m = i(429913),
-    h = i(202163),
-    g = i(550946),
-    f = i(220995),
-    p = i(582904),
-    I = i(551826),
-    v = i(530804),
-    S = i(955283),
-    x = i(936520),
-    _ = i(616356),
-    E = i(280450),
-    N = i(192820),
-    y = i(576705),
-    C = i(290863),
-    j = i(763827),
-    b = i(528767),
-    T = i(485296),
-    O = i(977997),
-    G = i(427262),
-    V = i(340851),
-    P = i(652215),
-    w = i(31408),
-    k = i(616352);
+(t.d(i, { A: () => M }), t(321073));
+var n = t(477900),
+    l = t(582128),
+    s = t(503698),
+    a = t.n(s),
+    r = t(17928),
+    d = t(451988),
+    u = t(717558),
+    o = t(933958),
+    c = t(191424),
+    A = t(627363),
+    m = t(429913),
+    g = t(202163),
+    h = t(550946),
+    f = t(220995),
+    p = t(582904),
+    I = t(551826),
+    v = t(530804),
+    S = t(955283),
+    x = t(936520),
+    _ = t(616356),
+    E = t(280450),
+    N = t(192820),
+    y = t(576705),
+    C = t(290863),
+    j = t(763827),
+    b = t(528767),
+    T = t(485296),
+    O = t(977997),
+    G = t(427262),
+    V = t(340851),
+    P = t(652215),
+    w = t(31408),
+    k = t(616352);
 let R = l.memo((e) => {
-    let { mute: t, deaf: i, user: l, channel: s, sessionId: a, nick: d } = e,
+    let { mute: i, deaf: t, user: l, channel: s, sessionId: a, nick: d } = e,
         f = l.id,
         p = (0, r.bG)([E.default], () => E.default.getId() === f, [f]),
         [x, y, C] = (0, r.yK)(
@@ -46,20 +46,20 @@ let R = l.memo((e) => {
         ),
         k = (0, r.bG)([T.A], () => T.A.isPrioritySpeaker(f)),
         R = (0, u.A)({ userId: f, checkSoundSharing: !0 }),
-        D = (0, g.A)(s.guild_id, f),
+        D = (0, h.A)(s.guild_id, f),
         M = (0, r.bG)(
             [o.Ay],
             () =>
                 o.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
-                    let { userIds: t } = e;
-                    return t.has(f);
+                    let { userIds: i } = e;
+                    return i.has(f);
                 }),
             [f, s.id],
         ),
         U = (0, m.A)(null != M ? [M.applicationId] : []),
         L = (0, c.A)(f, s.guild_id)[0],
         F = (0, A.YY)(L?.application_id).data ?? void 0,
-        { gameRecord: z } = (0, h.A)(L?.application_id),
+        { gameRecord: z } = (0, g.A)(L?.application_id),
         [B, K] = (0, r.yK)(
             [_.A],
             () => [_.A.getStreamForUser(f, s.getGuildId()), _.A.getActiveStreamForUser(f, s.getGuildId())],
@@ -91,8 +91,8 @@ let R = l.memo((e) => {
             voicePlatform: $,
             localMute: x && !p,
             localVideoDisabled: C,
-            mute: t || x,
-            deaf: i || y,
+            mute: i || x,
+            deaf: t || y,
             speaking: R,
             priority: k,
             embeddedApplication: U[0],
@@ -109,15 +109,15 @@ R.displayName = "ConnectedVoiceUser";
 let D = [],
     M = function (e) {
         let {
-                allowPreviews: t = !0,
-                allowDragging: i = !0,
+                allowPreviews: i = !0,
+                allowDragging: t = !0,
                 channel: s,
                 voiceStates: u,
                 collapsed: o,
                 collapsedMax: c = 6,
                 tabIndex: A,
-                numAudience: h,
-                withGuildIcon: g = !1,
+                numAudience: g,
+                withGuildIcon: h = !1,
                 className: I,
                 children: S,
                 isThread: _ = !1,
@@ -138,26 +138,26 @@ let D = [],
             ),
             U = l.useCallback(
                 (e) => {
-                    t && (M.current.cancel(), (b.current = e), w.current.delay());
+                    i && (M.current.cancel(), (b.current = e), w.current.delay());
                 },
-                [t],
+                [i],
             ),
             L = l.useCallback(
                 (e) => {
-                    t && (w.current.cancel(), (b.current = null), M.current.delay());
+                    i && (w.current.cancel(), (b.current = null), M.current.delay());
                 },
-                [t],
+                [i],
             ),
             F = (0, r.bG)([y.A], () => y.A.can(P.xBc.MOVE_MEMBERS, s)),
-            z = i && F,
+            z = t && F,
             B = (0, r.yK)([C.A], () => {
                 if (o) return [];
                 let e = new Set();
                 return (
-                    T?.forEach((t) => {
-                        let { user: i } = t;
-                        C.A.getActivities(i.id, s.guild_id).forEach((t) => {
-                            null != t.application_id && e.add(t.application_id);
+                    T?.forEach((i) => {
+                        let { user: t } = i;
+                        C.A.getActivities(t.id, s.guild_id).forEach((i) => {
+                            null != i.application_id && e.add(i.application_id);
                         });
                     }),
                     Array.from(e)
@@ -167,13 +167,13 @@ let D = [],
         let K = (function () {
             if (null == T || 0 === T.length) return null;
             let e = (o && T.length > c + 1 ? T.slice(0, c) : T).map((e) => {
-                let { user: t, nick: i, voiceState: l } = e;
+                let { user: i, nick: t, voiceState: l } = e;
                 return (0, n.jsx)(
                     R,
                     {
-                        user: t,
-                        nick: i,
-                        isSelfOnOtherClient: E.default.getId() === t.id && l.sessionId !== E.default.getSessionId(),
+                        user: i,
+                        nick: t,
+                        isSelfOnOtherClient: E.default.getId() === i.id && l.sessionId !== E.default.getSessionId(),
                         mute: l.isVoiceMuted(),
                         deaf: l.isVoiceDeafened(),
                         video: l.selfVideo,
@@ -185,15 +185,15 @@ let D = [],
                         canDrag: z,
                         showPreview: U,
                         hidePreview: L,
-                        shouldShowHoverPopout: N === t.id,
+                        shouldShowHoverPopout: N === i.id,
                         tabIndex: A,
                     },
-                    `voice-user-${t.id}`,
+                    `voice-user-${i.id}`,
                 );
             });
             return (
-                null != h && h > 0
-                    ? e.push((0, n.jsx)(V.aI, { collapsed: o, numAudience: h }, "audience"))
+                null != g && g > 0
+                    ? e.push((0, n.jsx)(V.aI, { collapsed: o, numAudience: g }, "audience"))
                     : o && T.length > c + 1 && e.push((0, n.jsx)(V.LR, { numUsers: T.length - c }, "collapsed-users")),
                 O && e.push((0, n.jsx)(f.p, { channel: s, onClose: G }, "voice-invite-suggestions-button")),
                 e
@@ -202,7 +202,7 @@ let D = [],
         return null == K && null == S
             ? null
             : (0, n.jsxs)(x.Wr, {
-                  className: a()(I, k.p_, { [k.yZ]: o, [k.lY]: g, [k.fT]: _ }),
+                  className: a()(I, k.p_, { [k.yZ]: o, [k.lY]: h, [k.fT]: _ }),
                   collapsed: o,
                   children: [K, S],
               });

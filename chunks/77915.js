@@ -1,10 +1,10 @@
 l.d(t, { B6: () => c, MX: () => u, WK: () => o, XG: () => d });
 var n = l(17928),
     i = l(30370),
-    a = l(606072),
-    s = l(652215);
+    s = l(606072),
+    a = l(652215);
 function r(e) {
-    return e.type === s.fg2.SPOTIFY && !e.revoked;
+    return e.type === a.fg2.SPOTIFY && !e.revoked;
 }
 function d() {
     return i.A.getAccounts().filter(r);
@@ -20,6 +20,6 @@ function o() {
     );
 }
 function u(e) {
-    let { isSharingActivityInGuild: t, hasFetchedConsents: l, hasPersonalizationConsent: n } = (0, a.T4)(e);
+    let { isSharingActivityInGuild: t, hasFetchedConsents: l, hasPersonalizationConsent: n } = (0, s.T4)(e);
     return { isSpotifyConnected: c(), hasFetchedConsents: l, isContributing: o() && t && n };
 }

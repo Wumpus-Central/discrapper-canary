@@ -46,12 +46,12 @@ let p = function (e) {
             emojiPacksHeader: _,
             className: N,
             listPadding: C,
-            rowCount: O,
-            getScrollOffsetForIndex: x,
+            rowCount: x,
+            getScrollOffsetForIndex: O,
             categoryHeight: S,
-            onScroll: T,
-            renderCategoryListItem: y,
-            rowCountBySection: j,
+            onScroll: j,
+            renderCategoryListItem: T,
+            rowCountBySection: y,
             renderSection: R,
             navId: b,
             itemIdPrefix: v,
@@ -119,7 +119,7 @@ let p = function (e) {
                         }),
                     [n],
                 ),
-                O = s.useCallback(
+                x = s.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = n.current?.getListDimensions().totalHeight ?? Number.MAX_SAFE_INTEGER;
@@ -130,7 +130,7 @@ let p = function (e) {
                         }),
                     [n],
                 ),
-                x = s.useCallback(() => {
+                O = s.useCallback(() => {
                     let e = E(l) ?? g.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
@@ -138,16 +138,16 @@ let p = function (e) {
                     let e = E(l) ?? g.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
-                T = (0, u.Ay)({
+                j = (0, u.Ay)({
                     id: t,
                     isEnabled: A,
                     setFocus: _,
                     scrollToStart: C,
-                    scrollToEnd: O,
-                    onNavigateNextAtEnd: x,
+                    scrollToEnd: x,
+                    onNavigateNextAtEnd: O,
                     onNavigatePreviousAtStart: S,
                 }),
-                y = T.setFocus;
+                T = j.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= r) return;
@@ -156,23 +156,23 @@ let p = function (e) {
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), y(i(a)));
+                                ((g.current = a), T(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, c, i, y, r]),
-                T
+                }, [a, n, c, i, T, r]),
+                j
             );
         })({
             navId: b ?? "expression-picker-categories-disabled",
             categoryListRef: t,
             itemIdForIndex: D,
             parseIndex: P,
-            rowCount: O,
+            rowCount: x,
             activeIndex: L,
-            getScrollOffsetForIndex: x,
+            getScrollOffsetForIndex: O,
             enabled: M,
         });
     !(function (e) {
@@ -190,7 +190,7 @@ let p = function (e) {
                     (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
         }, [t, n, i]);
-    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: x });
+    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: O });
     let U = s.useCallback(
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
@@ -198,17 +198,17 @@ let p = function (e) {
             },
             [n, d],
         ),
-        G = s.useCallback((e) => y(l[e], e, () => U(e), L === e), [L, l, U, y]),
-        k = s.useMemo(() => ("function" == typeof S ? (e) => S(l[e], e) : S), [l, S]),
+        k = s.useCallback((e) => T(l[e], e, () => U(e), L === e), [L, l, U, T]),
+        G = s.useMemo(() => ("function" == typeof S ? (e) => S(l[e], e) : S), [l, S]),
         F = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: T,
+            onScroll: j,
             ref: t,
-            renderRow: G,
-            rowCount: O,
-            rowHeight: k,
+            renderRow: k,
+            rowCount: x,
+            rowHeight: G,
             hideScrollbar: !0,
-            rowCountBySection: j,
+            rowCountBySection: y,
             renderSection: R,
             role: M ? "none presentation" : void 0,
         }),

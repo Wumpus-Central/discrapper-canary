@@ -1,13 +1,13 @@
-n.d(t, { GE: () => f, Ny: () => c, aU: () => d, ox: () => s, y0: () => o });
+n.d(t, { GE: () => f, Ny: () => c, aU: () => d, ox: () => u, y0: () => o });
 var l = n(636537),
     r = n(913122),
     i = n(593673);
 n(754674);
 let a = "draft:",
-    u = 0;
-function s(e, t, n) {
+    s = 0;
+function u(e, t, n) {
     let l = {
-        id: `${a}${u++}`,
+        id: `${a}${s++}`,
         position: { column: 0, order: 0 },
         requires_hydration: !1,
         default_title: t,
@@ -45,7 +45,7 @@ function f(e, t) {
             if ("widgets" !== e) continue;
             let i = Number(r),
                 a = Number.isInteger(i) ? t[i] : void 0,
-                u = l[0]?.message;
-            if (null != a && null != u) return { type: a.type, message: u };
+                s = l[0]?.message;
+            if (null != a && null != s) return { type: a.type, message: s };
         }
 }

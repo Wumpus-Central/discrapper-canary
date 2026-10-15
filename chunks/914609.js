@@ -30,11 +30,11 @@ var u = t(846058),
     m = t(821609),
     A = t(922016),
     b = t(939249),
-    p = t(964486),
-    E = t(421773),
+    E = t(964486),
+    p = t(421773),
     h = t(378570),
-    _ = t(309010),
-    S = t(287809),
+    S = t(309010),
+    _ = t(287809),
     y = t(174459),
     D = t(562153),
     R = t(49303),
@@ -44,9 +44,9 @@ var u = t(846058),
     N = t(518782),
     T = t(61567),
     w = t(105292),
-    L = t(32090),
-    C = t(652215),
-    G = t(746080),
+    C = t(32090),
+    G = t(652215),
+    L = t(746080),
     j = t(631949),
     I = t(318626);
 function k(e) {
@@ -68,21 +68,21 @@ function H(e) {
             title: u,
             detailText: A,
         } = e,
-        b = (0, c.bG)([_.Ay], () => _.Ay.getChannelId(n)),
-        E = (0, c.bG)([S.default], () => S.default.getUser(t)),
-        v = D.Ay.useName(n, b, E),
+        b = (0, c.bG)([S.Ay], () => S.Ay.getChannelId(n)),
+        p = (0, c.bG)([_.default], () => _.default.getUser(t)),
+        v = D.Ay.useName(n, b, p),
         M = (0, x.Uq)(n, "LeaderboardWinnerBadgePopout"),
         N = "winner" === s ? "Leaderboard Winner Badge Popout" : "Leaderboard Leader Badge Popout";
-    (0, p.Ay)(() => {
-        y.default.track(C.HAw.OPEN_POPOUT, { type: N, guild_id: n, channel_id: b });
+    (0, E.Ay)(() => {
+        y.default.track(G.HAw.OPEN_POPOUT, { type: N, guild_id: n, channel_id: b });
     });
-    let L =
+    let C =
         "winner" === s
             ? w.intl.formatToPlainString(w.t["LRh/OJ"], { username: v, statName: d })
             : w.intl.formatToPlainString(T.default.HervnJ, { username: v, statName: d });
     return (0, a.jsxs)("div", {
         role: "dialog",
-        "aria-label": L,
+        "aria-label": C,
         className: j.Nr,
         onMouseEnter: r,
         onMouseLeave: i,
@@ -113,7 +113,7 @@ function H(e) {
                           onClick: function () {
                               (l(),
                                   (0, R.jb)(n, "winner" === s ? R.Rk.WINNER_BADGE : R.Rk.LEADER_BADGE),
-                                  (0, h.vn)(n, G.VV.GUILD_SPACE, { source: N }));
+                                  (0, h.vn)(n, L.VV.GUILD_SPACE, { source: N }));
                           },
                       }),
                   })
@@ -124,7 +124,7 @@ function H(e) {
 function P(e) {
     let { guildId: n, userId: t, winnerData: r, leaderData: i } = e,
         s = l.useRef(null),
-        { isHovered: o, setIsHovered: d, onMouseEnter: u, onMouseLeave: c, cancelTimers: f } = (0, E.A)(200, 100),
+        { isHovered: o, setIsHovered: d, onMouseEnter: u, onMouseLeave: c, cancelTimers: f } = (0, p.A)(200, 100),
         g = l.useCallback(() => {
             (f(), d(!1));
         }, [f, d]),
@@ -134,7 +134,7 @@ function P(e) {
             },
             [f, o, d],
         ),
-        p = (function (e, n) {
+        E = (function (e, n) {
             if (null != e) {
                 let n = (0, v.K)(e.winningStat).name,
                     t = (e.winningStreak ?? 0) > 1;
@@ -178,9 +178,9 @@ function P(e) {
             }
             return null;
         })(r, i);
-    if (null == p) return null;
-    let { variant: h, isStreak: _, title: S, detailText: y } = p,
-        D = null != y ? `${S}. ${y}` : S;
+    if (null == E) return null;
+    let { variant: h, isStreak: S, title: _, detailText: y } = E,
+        D = null != y ? `${_}. ${y}` : _;
     return (0, a.jsx)(A.Y, {
         targetElementRef: s,
         animation: A.Y.Animation.TRANSLATE,
@@ -192,7 +192,7 @@ function P(e) {
         onRequestClose: g,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, a.jsx)(H, { guildId: n, userId: t, onClose: l, onMouseEnter: u, onMouseLeave: c, ...p });
+            return (0, a.jsx)(H, { guildId: n, userId: t, onClose: l, onMouseEnter: u, onMouseLeave: c, ...E });
         },
         children: () =>
             (0, a.jsx)(b.D, {
@@ -205,13 +205,13 @@ function P(e) {
                 onClick: m,
                 onMouseEnter: u,
                 onMouseLeave: c,
-                children: (0, a.jsx)(k, { variant: h, isStreak: _, placement: "badge" }),
+                children: (0, a.jsx)(k, { variant: h, isStreak: S, placement: "badge" }),
             }),
     });
 }
 function O(e) {
     let { guildId: n, userId: t } = e,
-        l = (0, L.Ay)(n, t),
-        r = (0, L.iW)(n, t);
+        l = (0, C.Ay)(n, t),
+        r = (0, C.iW)(n, t);
     return (0, a.jsx)(P, { guildId: n, userId: t, winnerData: l, leaderData: r });
 }

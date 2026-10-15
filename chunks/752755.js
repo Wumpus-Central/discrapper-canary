@@ -1,4 +1,4 @@
-n.d(e, { A: () => c, e: () => l });
+n.d(e, { A: () => d, e: () => l });
 var i,
     s = n(17928),
     a = n(73153),
@@ -22,7 +22,7 @@ class u extends s.Ay.Store {
         return o;
     }
 }
-let c = new u(a.h, {
+let d = new u(a.h, {
     CONNECTION_OPEN: function () {
         ((o = {}), (r = {}));
     },

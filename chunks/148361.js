@@ -35,8 +35,8 @@ let I = function (e) {
                   ? f.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
                   : f.e.EMOJI_PICKER_EMOJI_CLICKED;
     let C = null != h ? h.emoji : void 0,
-        O = null != C && C.animated,
-        x = null != C && !o.Ay.isInternalEmojiForGuildId(C, g?.getGuildId()),
+        x = null != C && C.animated,
+        O = null != C && !o.Ay.isInternalEmojiForGuildId(C, g?.getGuildId()),
         S = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
     return (0, i.jsx)(a.A, {
         title: E.intl.string(E.t["0+11FF"]),
@@ -46,12 +46,12 @@ let I = function (e) {
         onUpsellClicked: I,
         upsellViewedTrackingData: {
             type: t,
-            is_external: x,
+            is_external: O,
             location: { ...p, object: S },
             location_stack: N,
             sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
             has_search_query: null != _ && "" !== _,
-            is_animated: O,
+            is_animated: x,
         },
         isEmojiPickerOverlay: !0,
     });

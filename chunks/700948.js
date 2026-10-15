@@ -33,8 +33,8 @@ function L(e) {
         L = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
         {
             background: P,
-            backgroundBlurred: w,
-            seats: M,
+            backgroundBlurred: M,
+            seats: w,
             aspectRatio: U,
             plants: D,
             duck: V,
@@ -52,7 +52,7 @@ function L(e) {
         Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
         Q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
         J = Z.size,
-        ee = Math.max(0, Object.values(M).length - Z.size),
+        ee = Math.max(0, Object.values(w).length - Z.size),
         et = D.length + +(null != V) + +(null != G) + Q.length,
         [en, ei] = l.useState(!1),
         el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
@@ -71,7 +71,7 @@ function L(e) {
         (0, i.jsxs)("div", {
             className: O.kL,
             style: {
-                backgroundImage: `url(${$ ? w : P})`,
+                backgroundImage: `url(${$ ? M : P})`,
                 backgroundSize: W ? `auto ${100 * K}%` : `${100 * K}% auto`,
             },
             ref: H,
@@ -117,7 +117,7 @@ function L(e) {
                                                           (0, i.jsx)("div", {
                                                               role: "list",
                                                               "aria-label": es,
-                                                              children: Object.entries(M).map((e) => {
+                                                              children: Object.entries(w).map((e) => {
                                                                   let [n, l] = e;
                                                                   return (0, i.jsx)(
                                                                       I.A,

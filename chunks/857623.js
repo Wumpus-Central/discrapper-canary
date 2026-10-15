@@ -12,18 +12,18 @@ function c(e) {
             sortPurchased: o = !1,
             showSkeleton: u = !1,
             componentMap: d,
-            pagedSkuIds: h,
-            page: m,
+            pagedSkuIds: m,
+            page: h,
             perPage: p,
             truncate: f,
         } = e,
         g = (0, i.D)(t, !0),
         { purchases: E, isFetching: v } = (0, a.b5)(),
         A = (0, l.useMemo)(() => {
-            if (!o) return h;
+            if (!o) return m;
             let e = [...t].sort((e, t) => (null != E.get(e)) - (null != E.get(t)));
-            return (0, s.oP)(e, m, p, f);
-        }, [t, h, o, E, m, p, f]),
+            return (0, s.oP)(e, h, p, f);
+        }, [t, m, o, E, h, p, f]),
         T = d[n],
         x = d.Skeleton;
     return null == T
@@ -45,10 +45,10 @@ let o = function (e) {
             eagerLoad: o = !1,
             showSkeleton: u = !1,
             componentMap: d,
-            paginationOptions: h,
+            paginationOptions: m,
         } = e,
-        m = (0, s.JZ)(),
-        p = h ?? m,
+        h = (0, s.JZ)(),
+        p = m ?? h,
         f = l.useRef(null),
         {
             page: g,

@@ -19,10 +19,10 @@ var l = n(477900),
     y = n(597184),
     C = n(105330),
     A = n(265431),
-    I = n(459016),
-    b = n(861382),
-    v = n(355622),
-    N = n(820066),
+    b = n(459016),
+    I = n(861382),
+    N = n(355622),
+    v = n(820066),
     T = n(696451),
     j = n(576705),
     _ = n(351906),
@@ -54,14 +54,14 @@ function W(e) {
                     [j.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([b.A], () => ({
-                    activeCommand: b.A.getActiveCommand(l.id),
-                    activeCommandOption: b.A.getActiveOption(l.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([I.A], () => ({
+                    activeCommand: I.A.getActiveCommand(l.id),
+                    activeCommandOption: I.A.getActiveOption(l.id),
                 })),
                 p = i.useMemo(
                     () =>
@@ -118,7 +118,7 @@ function W(e) {
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
-            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
+            null != E && (S = v.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
             let C = {
                     ...e,
                     navigator: g,
@@ -128,9 +128,9 @@ function W(e) {
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: r === v.oU.RULES_INPUT,
+                    hideMentionDescription: r === N.oU.RULES_INPUT,
                     emojiIntention:
-                        r === v.oU.RULES_INPUT
+                        r === N.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
                             : p
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI
@@ -139,7 +139,7 @@ function W(e) {
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
                         null != f
-                            ? (0, I.getString)(
+                            ? (0, b.getString)(
                                   { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
                                   f.name,
                               )

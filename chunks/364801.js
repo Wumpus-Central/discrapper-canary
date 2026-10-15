@@ -14,12 +14,12 @@ let s = function (e) {
             padding: u = 16,
             children: d,
         } = e,
-        h = (0, a.A)(t),
-        m = (0, a.c)(h?.mimeType);
+        m = (0, a.A)(t),
+        h = (0, a.c)(m?.mimeType);
     return (0, r.jsxs)("div", {
         className: i.k,
         style: {
-            ...(!m && null != h ? { backgroundImage: `url(${h.src})` } : {}),
+            ...(!h && null != m ? { backgroundImage: `url(${m.src})` } : {}),
             backgroundSize: n,
             backgroundPosition: s,
             backgroundRepeat: c,
@@ -27,9 +27,9 @@ let s = function (e) {
             padding: u,
         },
         children: [
-            m &&
-                null != h &&
-                (0, r.jsx)(l.A, { className: i.O, src: h.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 }),
+            h &&
+                null != m &&
+                (0, r.jsx)(l.A, { className: i.O, src: m.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 }),
             d,
         ],
     });

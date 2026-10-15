@@ -7,14 +7,14 @@ var s = n(192308),
     o = n(625494),
     r = n(158045),
     u = n(598653),
-    c = n(202541),
-    d = n(652215);
+    d = n(202541),
+    c = n(652215);
 function E(t) {
     let { processedCode: e, channelContext: E, customGiftMessage: _, giftInfo: C } = t,
         T = !1,
         g = null,
         p = a.default.getCurrentUser(),
-        h = (0, r.CC)(p?.premiumType, c.PremiumTypes.TIER_0);
+        h = (0, r.CC)(p?.premiumType, d.PremiumTypes.TIER_0);
     (0, s.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
@@ -56,8 +56,8 @@ function E(t) {
                     null != g &&
                     !h &&
                     g.isSubscription &&
-                    g?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
-                    o._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                    g?.subscriptionPlan?.premiumSubscriptionType === d.PremiumTypes.TIER_2 &&
+                    o._.dispatch(c.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

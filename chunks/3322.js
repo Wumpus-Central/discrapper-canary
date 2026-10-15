@@ -9,8 +9,8 @@ var a = n(181079),
     c = n(49999),
     d = n(22277),
     f = n(105292),
-    A = n(988572);
-let m = new Set([u.rbe.DM, u.rbe.GROUP_DM, u.rbe.GUILD_TEXT, u.rbe.GUILD_ANNOUNCEMENT, u.rbe.GUILD_FORUM]);
+    m = n(988572);
+let A = new Set([u.rbe.DM, u.rbe.GROUP_DM, u.rbe.GUILD_TEXT, u.rbe.GUILD_ANNOUNCEMENT, u.rbe.GUILD_FORUM]);
 function g(e) {
     return (0, o.r1)() ? (0, i.jsx)(N, { ...e }) : null;
 }
@@ -20,7 +20,7 @@ function N(e) {
         p = l.useRef(null),
         h = l.useRef(null),
         j = (0, r.bG)([a.A], () => a.A.hasStoredFavorites()),
-        { shouldShowPopover: x, markPopoverAsDismissed: _ } = (0, o.zO)(u && m.has(n));
+        { shouldShowPopover: x, markPopoverAsDismissed: C } = (0, o.zO)(u && A.has(n));
     if (
         (l.useEffect(() => {
             if (x) return (g?.(!0), () => g?.(!1));
@@ -53,7 +53,7 @@ function N(e) {
         !x)
     )
         return null;
-    let E = j ? d.default.TWuDTt : d.default["25YCHl"];
+    let y = j ? d.default.TWuDTt : d.default["25YCHl"];
     return (0, i.jsx)(s.A, {
         targetElementRef: t,
         gradientColor: "nitro-pink",
@@ -63,9 +63,9 @@ function N(e) {
         caretConfig: { align: "top" === N ? "start" : "end" },
         popoverRef: p,
         badge: { type: "beta", variant: "expressive" },
-        graphic: { src: A.A, type: "image", aspectRatio: "16/9" },
-        title: f.intl.string(E),
+        graphic: { src: m.A, type: "image", aspectRatio: "16/9" },
+        title: f.intl.string(y),
         body: f.intl.string(d.default.DFjrWw),
-        onRequestClose: () => _(c.i.USER_DISMISS),
+        onRequestClose: () => C(c.i.USER_DISMISS),
     });
 }

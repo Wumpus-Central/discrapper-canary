@@ -8,13 +8,13 @@ var r = n(477900),
     o = n(891167),
     u = n(948111);
 let d = function (e) {
-    let { backgroundImage: t, logoSrc: n, supplementalImage: d, href: h, ctaText: m } = e,
-        p = null != h;
+    let { backgroundImage: t, logoSrc: n, supplementalImage: d, href: m, ctaText: h } = e,
+        p = null != m;
     return (0, r.jsxs)(l.D, {
         className: u.rJ,
         onClick: p
             ? (e) => {
-                  (e.preventDefault(), (0, a.pX)(h));
+                  (e.preventDefault(), (0, a.pX)(m));
               }
             : void 0,
         children: [
@@ -32,7 +32,7 @@ let d = function (e) {
                                 (0, r.jsx)("div", {}),
                                 null != n &&
                                     (0, r.jsx)("div", { className: u.wm, children: (0, r.jsx)(o.A, { src: n }) }),
-                                null != m && (0, r.jsx)(c.aF, { ctaText: m, variant: "overlay-primary", href: h }),
+                                null != h && (0, r.jsx)(c.aF, { ctaText: h, variant: "overlay-primary", href: m }),
                             ],
                         }),
                     }),

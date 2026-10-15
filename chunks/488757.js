@@ -13,8 +13,8 @@ let u = (e) => {
     let { children: t, paused: n = !1, slideDuration: a = 5e3 } = e,
         [i, u] = l.useState(0),
         d = l.useRef(null),
-        h = (0, s.M)(d),
-        m = l.useRef(void 0),
+        m = (0, s.M)(d),
+        h = l.useRef(void 0),
         p = l.useMemo(
             () =>
                 l.Children.map(t, (e) =>
@@ -29,24 +29,24 @@ let u = (e) => {
     l.useEffect(() => {
         Array.isArray(p) ? u(i >= p?.length ? Math.max(p?.length - 1, 0) : i) : u(0);
     }, [p, i]);
-    let f = n || h;
+    let f = n || m;
     return (l.useEffect(() => {
         if (f) {
-            null != m.current && (window.clearTimeout(m.current), (m.current = void 0));
+            null != h.current && (window.clearTimeout(h.current), (h.current = void 0));
             return;
         }
-        (window.clearTimeout(m.current),
-            (m.current = window.setTimeout(function e() {
+        (window.clearTimeout(h.current),
+            (h.current = window.setTimeout(function e() {
                 (u((e) => {
                     let t = e + 1;
                     return t >= (p?.length ?? 1) ? 0 : t;
                 }),
-                    (m.current = window.setTimeout(e, a)));
+                    (h.current = window.setTimeout(e, a)));
             }, a)));
     }, [f, a, p]),
     l.useEffect(
         () => () => {
-            window.clearTimeout(m.current);
+            window.clearTimeout(h.current);
         },
         [],
     ),

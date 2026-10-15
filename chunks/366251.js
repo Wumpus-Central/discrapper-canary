@@ -1,7 +1,7 @@
-i.d(t, { A: () => A });
-var n = i(17928),
-    l = i(73153),
-    s = i(763827);
+t.d(i, { A: () => A });
+var n = t(17928),
+    l = t(73153),
+    s = t(763827);
 let a = {},
     r = !1,
     d = null;
@@ -29,7 +29,7 @@ class c extends n.Ay.Store {
 }
 let A = new c(l.h, {
     VOICE_INVITE_SUGGESTIONS_DISMISS_POPOVER: function (e) {
-        let { channelId: t } = e;
-        return !a[t] && ((a[t] = !0), !0);
+        let { channelId: i } = e;
+        return !a[i] && ((a[i] = !0), !0);
     },
 });
