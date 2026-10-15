@@ -90,6 +90,7 @@ let r = (0, n(945810).mj)({
         i.M.FAVORITES_GUILD_SUGGESTIONS,
         i.M.EMPTY_GAME_SERVER_TAB,
         i.M.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
+        i.M.USER_PROFILE_WIDGET_SUGGESTIONS,
         i.M.FIRST_BOOSTER_UPSELL_OVERSEER,
         i.M.PRIVATE_PROFILE_INLINE_NOTICE,
         i.M.QUEST_HOME_NEW_QUEST_BADGE,
@@ -380,6 +381,7 @@ let l = {
     855: { is_server_arbitrated: !0 },
     856: { is_server_arbitrated: !1 },
     857: { is_server_arbitrated: !1 },
+    858: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
