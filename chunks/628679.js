@@ -1610,9 +1610,10 @@ function tX(e) {
     let g = s.useMemo(() => x.games.map((e) => e.application_id), [x.games]),
         j = ec(g),
         p = s.useMemo(() => g.map((e) => j.get(e)?.coverUrl).find(er.Vq) ?? null, [j, g]),
-        v = null;
+        v = s.useMemo(() => ({ "--custom-popular-games-columns": r }), [r]),
+        _ = null;
     return (
-        (v = h
+        (_ = h
             ? (0, i.jsx)(tQ, { guildId: t, requirement: c })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -1629,6 +1630,7 @@ function tX(e) {
                                   className: t$.ag,
                                   role: "list",
                                   "aria-label": n,
+                                  style: v,
                                   children: x.games
                                       .slice(0, r)
                                       .map((e) => (0, i.jsx)(tq, { entry: e, games: j }, e.application_id)),
@@ -1650,7 +1652,7 @@ function tX(e) {
                       }),
                   ],
               })),
-        (0, i.jsx)("div", { className: t$.rf, ref: a, children: v })
+        (0, i.jsx)("div", { className: t$.rf, ref: a, children: _ })
     );
 }
 function tJ(e) {

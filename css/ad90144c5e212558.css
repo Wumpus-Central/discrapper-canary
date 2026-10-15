@@ -106,7 +106,6 @@
 }
 
 .card__5df76 {
-    flex: 1 1 0;
     gap: var(--space-4)
 }
 
@@ -169,9 +168,10 @@
 }
 
 .games__0c01b {
-    align-items: flex-start;
-    display: flex;
+    align-items: start;
+    display: grid;
     gap: var(--space-12);
+    grid-template-columns: repeat(var(--custom-popular-games-columns), minmax(0, 1fr));
     padding: var(--space-16)
 }
 
@@ -494,4 +494,4 @@
     padding-inline: var(--space-4)
 }
 
-/*# sourceMappingURL=6fec6d0c58212eda.css.map*/
+/*# sourceMappingURL=ad90144c5e212558.css.map*/
