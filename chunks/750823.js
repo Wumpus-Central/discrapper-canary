@@ -1148,7 +1148,7 @@ function tB(e) {
         { game: n, closeModal: i, trackAction: a, viewId: c } = U(),
         o = (0, m.bG)([e0.A], () => e0.A.getGuild(t.id)?.joinedAt != null, [t.id]),
         d = r.useCallback(async () => {
-            (a(T.GameProfileTrackActionActions.CommunityClicked, void 0, t.id), i());
+            (a(T.GameProfileTrackActionActions.CommunityClicked, { communityGuildId: t.id }), i());
             try {
                 await e8.Z2(t.id, {}, { joinSource: ek.Q4z.GAME_PROFILE_COMMUNITIES, loadId: c }, [
                     f.A.GAME_PROFILE_COMMUNITIES,
@@ -3455,7 +3455,7 @@ function iD(e) {
             source: T.GameProfileSources.SimilarGames,
         }),
         x = r.useCallback(() => {
-            (i(T.GameProfileTrackActionActions.ClickSimilarGame, t.id),
+            (i(T.GameProfileTrackActionActions.ClickSimilarGame, { similarGameId: t.id }),
                 u && null != m && n(m, T.GameProfileSources.SimilarGames));
         }, [t.id, m, i, u, n]),
         h = r.useCallback(() => o(a), [a]);
@@ -3992,8 +3992,10 @@ function aj(e) {
             };
         })(t),
         eg = r.useCallback(
-            function (e, n, i) {
-                let a = (0, T.getGuildIdAndVerifiedFromInvite)(en.current);
+            function (e) {
+                let { similarGameId: n, communityGuildId: i } =
+                        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    a = (0, T.getGuildIdAndVerifiedFromInvite)(en.current);
                 (0, T.trackGameProfileAction)({
                     gameName: et,
                     gameId: t,
