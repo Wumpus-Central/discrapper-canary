@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => lj, fD: () => lg });
+n.d(t, { Ay: () => lC, fD: () => lj });
 var l,
     r,
     a,
@@ -2062,8 +2062,9 @@ function lo(e) {
               ],
           });
 }
-var lu = n(796951);
-function lc(e) {
+var lu = n(317097),
+    lc = n(796951);
+function ld(e) {
     let { components: t, accentColor: n, spoiler: l, renderComponents: r } = e,
         [a, o] = s.useState(l),
         [c, d] = s.useState(l);
@@ -2072,8 +2073,8 @@ function lc(e) {
             children: (l) =>
                 (0, i.jsx)("div", {
                     ref: l,
-                    className: u()(lu.kL, { [lu.dK]: e, [lu._7]: null != n }),
-                    style: { "--__accent-color": n },
+                    className: u()(lc.kL, { [lc.dK]: e, [lc._7]: null != n }),
+                    style: { "--__accent-color": null != n ? (0, lu.$k)(n, !0) : void 0 },
                     children: (0, i.jsx)(t6, { size: "reduced", children: r(t) }),
                 }),
         });
@@ -2090,9 +2091,9 @@ function lc(e) {
             })
           : m(!1);
 }
-var ld = n(244367),
-    lm = n(405388);
-function lh(e) {
+var lm = n(244367),
+    lh = n(405388);
+function lp(e) {
     let { label: t, description: n, component: l, renderComponent: r } = e,
         a = (0, h.bO)(l);
     return l.type === d.I5.CHECKBOX
@@ -2102,28 +2103,28 @@ function lh(e) {
               required: l.required,
               error: a,
               children: [
-                  null != n && (0, i.jsx)(ld.a, { type: ld.t.DESCRIPTION, className: lm.h, children: n }),
+                  null != n && (0, i.jsx)(lm.a, { type: lm.t.DESCRIPTION, className: lh.h, children: n }),
                   r(l, "label-child"),
               ],
           });
 }
-var lp = n(572891);
-function lx(e) {
+var lx = n(572891);
+function lf(e) {
     let { components: t, accessory: n, renderComponents: l } = e,
         { message: r } = (0, h.jc)(),
         [a, s] = (0, p.zn)(),
         o = (0, p.Hq)(s),
         c = n.type === d.I5.BUTTON;
     return (0, i.jsxs)("div", {
-        className: lp.uW,
+        className: lx.uW,
         ref: a,
         children: [
             (0, i.jsxs)("div", {
-                className: lp.Y_,
+                className: lx.Y_,
                 children: [
-                    (0, i.jsx)("div", { className: u()(lp.zt, { [lp.uf]: c }), children: l(t) }),
+                    (0, i.jsx)("div", { className: u()(lx.zt, { [lx.uf]: c }), children: l(t) }),
                     (0, i.jsx)("div", {
-                        className: u()(lp.LP, { [lp.HQ]: o }),
+                        className: u()(lx.LP, { [lx.HQ]: o }),
                         children: (function (e) {
                             switch (e.type) {
                                 case d.I5.BUTTON:
@@ -2139,15 +2140,15 @@ function lx(e) {
         ],
     });
 }
-var lf = n(359886);
-function lg(e) {
+var lg = n(359886);
+function lj(e) {
     return e.map((e, t) =>
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (function e(t, n) {
                     switch (t.type) {
                         case d.I5.ACTION_ROW:
-                            return (0, i.jsx)(lo, { ...t, renderComponents: lg }, n);
+                            return (0, i.jsx)(lo, { ...t, renderComponents: lj }, n);
                         case d.I5.BUTTON:
                             return (0, i.jsx)(V, { ...t }, n);
                         case d.I5.STRING_SELECT:
@@ -2161,7 +2162,7 @@ function lg(e) {
                         case d.I5.TEXT_INPUT:
                             return (0, i.jsx)(to, { ...t }, n);
                         case d.I5.SECTION:
-                            return (0, i.jsx)(lx, { ...t, renderComponents: lg }, n);
+                            return (0, i.jsx)(lf, { ...t, renderComponents: lj }, n);
                         case d.I5.TEXT_DISPLAY:
                             return (0, i.jsx)(nn, { ...t }, n);
                         case d.I5.MEDIA_GALLERY:
@@ -2175,9 +2176,9 @@ function lg(e) {
                         case d.I5.CONTENT_INVENTORY_ENTRY:
                             return (0, i.jsx)(li, { ...t }, n);
                         case d.I5.CONTAINER:
-                            return (0, i.jsx)(lc, { ...t, renderComponents: lg }, n);
+                            return (0, i.jsx)(ld, { ...t, renderComponents: lj }, n);
                         case d.I5.LABEL:
-                            return (0, i.jsx)(lh, { ...t, renderComponent: e }, n);
+                            return (0, i.jsx)(lp, { ...t, renderComponent: e }, n);
                         case d.I5.FILE_UPLOAD:
                             return (0, i.jsx)(eK, { ...t }, n);
                         case d.I5.CHECKPOINT_CARD:
@@ -2197,7 +2198,7 @@ function lg(e) {
         }),
     );
 }
-function lj(e) {
+function lC(e) {
     let { message: t, shouldDisableInteractiveComponents: n } = e,
         { components: l } = t,
         [r, a] = (0, p.zn)();
@@ -2215,8 +2216,8 @@ function lj(e) {
                           children: (e) =>
                               (0, i.jsx)("div", {
                                   ref: e,
-                                  className: u()([lf.k, { [lf.z]: (0, m._c)(t) }]),
-                                  children: lg(l),
+                                  className: u()([lg.k, { [lg.z]: (0, m._c)(t) }]),
+                                  children: lj(l),
                               }),
                       }),
                   }),

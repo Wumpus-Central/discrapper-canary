@@ -1,5 +1,5 @@
-(n.d(t, { A: () => r }), n(938796));
-var i = n(821956);
+n.d(t, { A: () => r });
+var i = n(574165);
 function r(e) {
     let {
         id: t,
@@ -9,8 +9,7 @@ function r(e) {
         avatar: s,
         avatarDecoration: l,
         bot: o,
-        flags: d,
-        premiumType: c,
+        publicFlags: d,
     } = e;
     return {
         id: t,
@@ -18,9 +17,10 @@ function r(e) {
         discriminator: r,
         global_name: a,
         avatar: s,
-        avatar_decoration_data: (0, i.Xq)(l),
+        avatar_decoration_data: (0, i.A)(l),
         bot: o,
         flags: d,
-        premium_type: c ?? 0,
+        public_flags: d,
+        premium_type: 0,
     };
 }

@@ -1,14 +1,14 @@
 n.d(t, {
-    bN: () => b,
+    bN: () => v,
     iu: () => S,
     D4: () => h,
     Ig: () => _,
-    M1: () => x,
+    M1: () => G,
     AM: () => m,
     W9: () => L,
     xW: () => C,
-    dm: () => k,
-    N7: () => y,
+    dm: () => x,
+    N7: () => c.N,
     gq: () => I,
     $W: () => A,
     eK: () => T,
@@ -16,25 +16,25 @@ n.d(t, {
     yz: () => E,
     qG: () => N,
     CS: () => R,
-    Gl: () => P,
+    Gl: () => M,
     DY: () => g,
-    aX: () => v,
+    aX: () => D,
     qA: () => f,
     NW: () => u,
-    i6: () => G,
+    i6: () => w,
     mO: () => O,
-    lk: () => U,
-    H5: () => w,
-    _J: () => D,
+    lk: () => P,
+    H5: () => U,
+    _J: () => y,
 });
 var i,
     r,
     a,
     s,
     l,
-    o,
-    d = n(155718),
-    c = n(652215);
+    o = n(155718),
+    d = n(652215),
+    c = n(917550);
 let u = "1070087967294631976",
     _ = 160,
     E = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -70,35 +70,30 @@ var R =
         (i.NOT_FUN = "NOT_FUN"),
         (i.OTHER = "OTHER"),
         i),
-    L = (((r = {})[(r.PLAY = 0)] = "PLAY"), (r[(r.SPECTATE = 1)] = "SPECTATE"), r),
-    y =
-        (((a = {})[(a.UNLOCKED = 1)] = "UNLOCKED"),
-        (a[(a.PORTRAIT = 2)] = "PORTRAIT"),
-        (a[(a.LANDSCAPE = 3)] = "LANDSCAPE"),
-        a);
-let D = new Set(["755600276941176913", "880218832743055411", "1050941315912835122", I]);
-var v =
-        (((s = {})[(s.UNHANDLED = -1)] = "UNHANDLED"),
-        (s[(s.PORTRAIT = 0)] = "PORTRAIT"),
-        (s[(s.LANDSCAPE = 1)] = "LANDSCAPE"),
-        s),
-    b = (((l = {})[(l.FOCUSED = 0)] = "FOCUSED"), (l[(l.PIP = 1)] = "PIP"), (l[(l.GRID = 2)] = "GRID"), l);
-let M = { label_type: d.Hr.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] },
-    P = {
+    L = (((r = {})[(r.PLAY = 0)] = "PLAY"), (r[(r.SPECTATE = 1)] = "SPECTATE"), r);
+let y = new Set(["755600276941176913", "880218832743055411", "1050941315912835122", I]);
+var D =
+        (((a = {})[(a.UNHANDLED = -1)] = "UNHANDLED"),
+        (a[(a.PORTRAIT = 0)] = "PORTRAIT"),
+        (a[(a.LANDSCAPE = 1)] = "LANDSCAPE"),
+        a),
+    v = (((s = {})[(s.FOCUSED = 0)] = "FOCUSED"), (s[(s.PIP = 1)] = "PIP"), (s[(s.GRID = 2)] = "GRID"), s);
+let b = { label_type: o.Hr.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] },
+    M = {
         application_id: "",
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
-        default_orientation_lock_state: 1,
-        tablet_default_orientation_lock_state: 1,
-        supported_platforms: [d.Yl.WEB],
-        client_platform_config: { [d.Yl.WEB]: M, [d.Yl.IOS]: M, [d.Yl.ANDROID]: M },
+        default_orientation_lock_state: c.N.UNLOCKED,
+        tablet_default_orientation_lock_state: c.N.UNLOCKED,
+        supported_platforms: [o.Yl.WEB],
+        client_platform_config: { [o.Yl.WEB]: b, [o.Yl.IOS]: b, [o.Yl.ANDROID]: b },
         has_csp_exception: !1,
         displays_advertisements: !1,
         blocked_locales: [],
         supported_locales: [],
     },
-    U = [c.rbe.GUILD_TEXT, c.rbe.DM, c.rbe.GROUP_DM, c.rbe.GUILD_SPACE],
-    w = [...U, c.rbe.GUILD_VOICE],
-    G = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var x = (((o = {}).NORMAL = "normal"), (o.FULL_SCREEN = "full-screen"), o);
-let k = 216e5;
+    P = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
+    U = [...P, d.rbe.GUILD_VOICE],
+    w = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+var G = (((l = {}).NORMAL = "normal"), (l.FULL_SCREEN = "full-screen"), l);
+let x = 216e5;
