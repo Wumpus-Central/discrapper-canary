@@ -6250,7 +6250,7 @@ let iK = {
         [n3.q7.BOT]: null,
         [n3.q7.APPLICATION_COMMANDS]: null,
     },
-    iV = [n3.q7.OVERLAY, n3.q7.ACTIVITY, n3.q7.APP_CHANNEL, n3.q7.VOICE_CHANNEL];
+    iV = [n3.q7.ACTIVITY, n3.q7.APP_CHANNEL, n3.q7.VOICE_CHANNEL, n3.q7.OVERLAY];
 function iH(e) {
     return iV.find((t) => iB(e, t)) ?? null;
 }
