@@ -1,4 +1,4 @@
-n.d(t, { E: () => _, M8: () => o, Mn: () => u, NI: () => l, sq: () => a, zQ: () => c });
+n.d(t, { E: () => _, M8: () => o, Mn: () => u, NI: () => l, Wu: () => A, sq: () => a, zQ: () => c });
 var i = n(945810);
 let r = (0, i.mj)({
     name: "2026-03-overlay-default-keybind",
@@ -43,4 +43,13 @@ function u(e) {
 }
 function _() {
     (l("OVERLAY_INITIALIZED"), c("OVERLAY_INITIALIZED"));
+}
+let E = (0, i.mj)({
+    name: "2026-10-overlay-native-window-rendering",
+    kind: "user",
+    defaultConfig: { enabled: !1, enableNVOverlay: !1 },
+    variations: { 1: { enabled: !0, enableNVOverlay: !1 }, 2: { enabled: !0, enableNVOverlay: !0 } },
+});
+function A(e) {
+    return E.getConfig({ location: e });
 }

@@ -1,4 +1,4 @@
-n.d(t, { b: () => A, o: () => E });
+n.d(t, { b: () => h, o: () => A });
 var i = n(477900);
 n(582128);
 var r = n(156828),
@@ -6,14 +6,20 @@ var r = n(156828),
     s = n(391973),
     l = n(574172),
     o = n(32584),
-    d = n(644434),
-    c = n(392164);
-let u = { defaultWidth: 1280, defaultHeight: 720, focusable: !0 },
-    _ = { outOfProcessOverlay: !0, focusable: !1 };
-async function E() {
-    let { windowed: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, s.Vz)(d.GJ, o.A.getDefaultLayout(d.GJ, 4), 4);
-    let t = (0, r.Fe)({
+    d = n(589051),
+    c = n(644434),
+    u = n(392164);
+let _ = { defaultWidth: 1280, defaultHeight: 720, focusable: !0 },
+    E = { outOfProcessOverlay: !0, focusable: !1 };
+async function A() {
+    let { windowed: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        t = _;
+    if (!e) {
+        let { enabled: e, enableNVOverlay: n } = (0, d.Wu)("openOverlayPopout");
+        t = { ...E, outOfProcessOverlaySharedTexture: e, outOfProcessOverlayNVOverlay: n };
+    }
+    (0, s.Vz)(c.GJ, o.A.getDefaultLayout(c.GJ, 4), 4);
+    let a = (0, r.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("978226"),
@@ -1289,9 +1295,9 @@ async function E() {
         webpackId: 692403,
         name: "AppOverlay",
     });
-    await l.open(c.f, (e) => (0, i.jsx)(t, { withTitleBar: !1, windowKey: e }), e ? u : _);
+    await l.open(u.f, (e) => (0, i.jsx)(a, { withTitleBar: !1, windowKey: e }), t);
 }
-function A(e, t) {
+function h(e, t) {
     let r = (0, a.modalContextFromAppContext)(t);
     (0, a.openModalLazy)(
         async () => {
