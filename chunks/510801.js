@@ -102,7 +102,7 @@ class d extends l.A {
             skuId: e.id,
             name: e.name,
             summary: e.description,
-            unpublishedAt: e.unpublishedAt,
+            unpublishedAt: e.willUnpublishAt,
             isOrbsExclusive: e.isOrbsExclusive,
             styles: e.styles,
             products: e.products.reduce((e, t) => {
