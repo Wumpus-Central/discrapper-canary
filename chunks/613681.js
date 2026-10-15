@@ -1926,7 +1926,13 @@ class ti extends m.A {
         let i = t.transport,
             r = (0, eh.isWeb)()
                 ? 1
-                : new Set(i.receiverReports?.filter((e) => null != this.outboundStats[e.ssrc]).map((e) => e.id)).size,
+                : i.receiverReports?.some((e) => null == e.ssrc)
+                  ? i.receiverReports.length
+                  : new Set(
+                        i.receiverReports
+                            ?.filter((e) => null != e.ssrc && null != this.outboundStats[e.ssrc])
+                            .map((e) => e.id),
+                    ).size,
             a = new Set(),
             s = new Set();
         this.updateSendState({ receivers: r });
