@@ -382,6 +382,7 @@ let l = {
     856: { is_server_arbitrated: !1 },
     857: { is_server_arbitrated: !1 },
     858: { is_server_arbitrated: !1 },
+    859: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
