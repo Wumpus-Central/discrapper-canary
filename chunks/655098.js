@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(17928),
     C = n(866665),
     A = n(778712),
-    b = n(939249),
-    I = n(545442),
+    I = n(939249),
+    b = n(545442),
     v = n(922016),
     N = n(565645),
     T = n(730134),
@@ -48,8 +48,8 @@ var B = n(734057),
     $ = n(562153),
     Q = n(427262),
     Z = n(105292),
-    X = n(307126);
-function J(e) {
+    J = n(307126);
+function X(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(C.m, {
         text: t.name,
@@ -81,18 +81,18 @@ function et(e) {
         let e = s || r.hasUniqueUsername() ? null : `#${r.discriminator}`;
         return (0, l.jsx)(C.m, {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
-                className: X.fX,
+                className: J.fX,
                 children: [
-                    (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: X.my }),
+                    (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: J.my }),
                     Q.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
-                    (0, l.jsx)("span", { className: X.D2, children: e }),
+                    (0, l.jsx)("span", { className: J.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
             "aria-label": Q.Ay.getUserTag(r, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(b.D, { tag: "span", children: o }),
+            children: (0, l.jsx)(I.D, { tag: "span", children: o }),
         });
     }
     return o;
@@ -116,7 +116,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(I.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(b.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       s.name,
                   ],
@@ -160,7 +160,7 @@ function er(e) {
 }
 function es(e) {
     let { timestamp: t } = e;
-    return (0, l.jsx)(D.A, { node: t, className: "R" === t.format ? X.gS : null });
+    return (0, l.jsx)(D.A, { node: t, className: "R" === t.format ? J.gS : null });
 }
 function ea(e) {
     let { id: t } = e,
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
+              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: J.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", Z.intl.string(Z.t["11pdXZ"])] });
 }
@@ -282,7 +282,7 @@ class ex extends i.PureComponent {
                         return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(X, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
                         return (0, l.jsxs)(ef, {

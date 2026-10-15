@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(939249),
     C = n(795816),
     A = n(211401),
-    b = n(989837),
-    I = n(500049),
+    I = n(989837),
+    b = n(500049),
     v = n(598071),
     N = n(60809),
     T = n(105292),
@@ -28,8 +28,8 @@ var l = n(477900),
 let _ = function (e) {
         let { type: t, channelId: n, ref: r } = e,
             a = (0, s.bG)(
-                [b.A],
-                () => b.A.shouldShowPopup() && b.A.activeViewType() === t && b.A.activeChannelId() === n,
+                [I.A],
+                () => I.A.shouldShowPopup() && I.A.activeViewType() === t && I.A.activeChannelId() === n,
             ),
             { Component: o, events: u, play: c } = (0, S.c)(),
             d = i.useContext(v.Ay);
@@ -45,7 +45,7 @@ let _ = function (e) {
             );
         }, [d, u]);
         let h = i.useCallback(() => {
-                (a ? A.k(I.Se.DISMISSED) : (A.R(I.s4.TEXT, t, void 0, n), C.LK()), c());
+                (a ? A.k(b.Se.DISMISSED) : (A.R(b.s4.TEXT, t, void 0, n), C.LK()), c());
             }, [a, t, n, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
@@ -145,16 +145,16 @@ let $ = i.memo(function (e) {
 });
 var Q = n(530134),
     Z = n(3203),
-    X = n(866665),
-    J = n(617617),
+    J = n(866665),
+    X = n(617617),
     Y = n(234320),
     ee = n(767089);
 let et = i.memo(function (e) {
     let { disabled: t, type: n, channel: r, ref: a } = e,
         [o, u] = i.useState(!1),
         c = (0, s.bG)(
-            [J.A],
-            () => o && Object.values(J.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
+            [X.A],
+            () => o && Object.values(X.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
         [d, h, m, f] = (0, W.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], M.x),
         g = i.useRef(0),
@@ -171,8 +171,8 @@ let et = i.memo(function (e) {
         }, [n, r.id]),
         { Component: y, events: C, play: A } = (0, Z.V)();
     if (t) return null;
-    let b = d === K.kx.GIF && h === n && f === r.id;
-    return (0, l.jsx)(X.m, {
+    let I = d === K.kx.GIF && h === n && f === r.id;
+    return (0, l.jsx)(J.m, {
         text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
         shouldShow: c,
         forceOpen: c,
@@ -186,10 +186,10 @@ let et = i.memo(function (e) {
                 onClick: () => {
                     (S(), A());
                 },
-                isActive: b,
+                isActive: I,
                 pulse: o,
                 "aria-label": T.intl.string(T.t.PtVpk2),
-                "aria-expanded": b,
+                "aria-expanded": I,
                 "aria-haspopup": "dialog",
                 "aria-controls": m,
                 children: (0, l.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
@@ -303,9 +303,9 @@ let ea = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 handleSubmit: y,
                 isEmpty: C,
                 showAllButtons: A,
-                expressionButtonsHidden: b,
+                expressionButtonsHidden: I,
             } = e,
-            I = (0, O.n)("ChannelTextAreaButtons"),
+            b = (0, O.n)("ChannelTextAreaButtons"),
             v = (0, s.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
@@ -314,10 +314,10 @@ let ea = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
             N = v.isSubmitButtonEnabled,
-            T = !I || v.isAppsButtonEnabled,
-            j = !I || v.isEmojiButtonEnabled,
-            _ = !I || v.isGifButtonEnabled,
-            M = !I || v.isStickerButtonEnabled,
+            T = !b || v.isAppsButtonEnabled,
+            j = !b || v.isEmojiButtonEnabled,
+            _ = !b || v.isGifButtonEnabled,
+            M = !b || v.isStickerButtonEnabled,
             P =
                 ((t = S.id),
                 (n = x),
@@ -374,18 +374,18 @@ let ea = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 null == D &&
                 A &&
                 _ &&
-                !b &&
+                !I &&
                 W.push((0, l.jsx)(et, { disabled: E, type: x, channel: S }, "gif")),
             x.stickers?.button != null &&
                 null == D &&
                 A &&
                 M &&
-                !b &&
+                !I &&
                 W.push((0, l.jsx)(eo, { disabled: E, type: x, channel: S }, "sticker"))),
         x.emojis?.button != null &&
-            !b &&
+            !I &&
             H &&
-            (A || b
+            (A || I
                 ? j && W.push((0, l.jsx)($, { disabled: E, type: x, channelId: S.id }, "emoji"))
                 : W.push((0, l.jsx)(Q.A, { disabled: E, type: x, channel: S }, "expression"))),
         K && T && W.push((0, l.jsx)(k, { channelId: S.id, type: x }, "appLauncher")),

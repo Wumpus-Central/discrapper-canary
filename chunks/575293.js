@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(734057),
     C = n(696451),
     A = n(71393),
-    b = n(225142),
-    I = n(374084),
+    I = n(225142),
+    b = n(374084),
     v = n(101611),
     N = n(473529),
     T = n(111487),
@@ -61,7 +61,7 @@ function w(e) {
         { channelAction: c, completed: x } = (0, v.j4)(t, n),
         E = (0, v.Lr)(t, c?.channelId),
         y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        C = c?.actionType === I.NewMemberActionTypes.VIEW,
+        C = c?.actionType === b.NewMemberActionTypes.VIEW,
         A = (0, d.r)(h.A.colors.WHITE),
         N = R[(0, S.C)()],
         [T, j] = i.useState(!1),
@@ -78,7 +78,7 @@ function w(e) {
             x && T && a.A.timing(M, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
         }, [x, M, T, y]));
     let P = i.useCallback(() => {
-        null != E && (0, b.qo)(t, E.channelId);
+        null != E && (0, I.qo)(t, E.channelId);
     }, [t, E]);
     return null == c || (C && !T)
         ? null

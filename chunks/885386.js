@@ -44,7 +44,7 @@ n.d(t, {
     cU: () => eN,
     ML: () => y,
     WY: () => el,
-    Zk: () => e5,
+    Zk: () => e6,
     vL: () => e_,
     hV: () => Z,
     tz: () => ev,
@@ -60,7 +60,7 @@ n.d(t, {
     KP: () => eb,
     jW: () => eV,
     eK: () => D,
-    m$: () => e6,
+    m$: () => e5,
     YX: () => es,
     Zr: () => ea,
     eh: () => e$,
@@ -891,13 +891,13 @@ let e2 = m({
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    e6 = I(
+    e5 = I(
         "privacy",
         "hideLegacyUsername",
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    e5 = I(
+    e6 = I(
         "privacy",
         "allowGameFriendDmsInDiscord",
         (e) => e?.value ?? !0,

@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(939249),
     C = n(780777),
     A = n(424170),
-    b = n(274652),
-    I = n(31717),
+    I = n(274652),
+    b = n(31717),
     v = n(914905),
     N = n(650583),
     T = n(105292),
@@ -29,7 +29,7 @@ function _(e) {
     let { channelId: t, option: n, keyboardModeEnabled: r } = e,
         a = i.useRef(null),
         [o, u] = i.useState(!1),
-        c = g.A.getUpload(t, n.name, I.C.SlashCommand),
+        c = g.A.getUpload(t, n.name, b.C.SlashCommand),
         m = i.useRef(null),
         f = n.type === h.n4.ATTACHMENT ? n.fileTypes : void 0,
         {
@@ -47,8 +47,8 @@ function _(e) {
         L = i.useCallback(
             (e, l) => {
                 if (p.length > 0 && !_([e.name])) return k();
-                let i = { id: n.name, file: e, platform: b.x.WEB, origin: l };
-                d.A.setFile({ channelId: t, id: n.name, file: i, draftType: I.C.SlashCommand, allowOptimization: !1 });
+                let i = { id: n.name, file: e, platform: I.x.WEB, origin: l };
+                d.A.setFile({ channelId: t, id: n.name, file: i, draftType: b.C.SlashCommand, allowOptimization: !1 });
             },
             [p.length, _, n.name, t, k],
         ),
@@ -79,7 +79,7 @@ function _(e) {
               channelId: t,
               upload: c,
               keyboardModeEnabled: r,
-              draftType: I.C.SlashCommand,
+              draftType: b.C.SlashCommand,
               label: (0, l.jsxs)(i.Fragment, {
                   children: [
                       (0, l.jsxs)(S.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
@@ -101,7 +101,7 @@ function _(e) {
                   e.key === N.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
               className: s()(j.xd, { [j.LB]: o }),
-              draftType: I.C.SlashCommand,
+              draftType: b.C.SlashCommand,
               ref: m,
               children: [
                   (0, l.jsx)("span", { className: s()(j.fS, { [j.Vg]: o }), children: n.displayName }),
@@ -146,8 +146,8 @@ function w(e) {
         C = (0, f.A)("attachments", o.Gl.HORIZONTAL),
         A = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: b,
-            commandOptions: I,
+            isApplicationCommand: I,
+            commandOptions: b,
             commandOptionStates: N,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
@@ -155,7 +155,7 @@ function w(e) {
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [I, N]),
+        T = i.useMemo(() => b?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [b, N]),
         [j, w] = i.useState([]);
     i.useEffect(() => {
         function e() {
@@ -170,7 +170,7 @@ function w(e) {
         C.focusFirstVisibleItem();
     }, [C]);
     (0, x.Vo)({ event: k.jej.FOCUS_ATTACHMENT_AREA, handler: M });
-    let P = { isApplicationCommand: b, previousUploadOptions: j, uploadOptions: T },
+    let P = { isApplicationCommand: I, previousUploadOptions: j, uploadOptions: T },
         D = i.useRef(P);
     (i.useEffect(() => {
         D.current = P;
@@ -189,7 +189,7 @@ function w(e) {
             }
         }, [t, T.length, n]));
     let U = A.filter((e) => e.id !== r);
-    return (!b && 0 === U.length) || (b && 0 === T.length)
+    return (!I && 0 === U.length) || (I && 0 === T.length)
         ? null
         : (0, l.jsx)(a.hD, {
               navigator: C,
@@ -200,7 +200,7 @@ function w(e) {
                           ref: i,
                           ...r,
                           className: s()(R.I, O.KK),
-                          children: b
+                          children: I
                               ? T.map((e) => (0, l.jsx)(_, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(

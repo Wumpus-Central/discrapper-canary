@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => S, eF: () => y, lE: () => b }), n(321073));
+(n.d(t, { Ay: () => S, eF: () => y, lE: () => I }), n(321073));
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
@@ -106,7 +106,7 @@ function C(e, t, n, l) {
                 }
                 return u;
             })(e, t, n, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
-            b(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
+            I(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
 }
 function A(e, t, n, l) {
     let [i, r] = t,
@@ -141,7 +141,7 @@ function A(e, t, n, l) {
     }
     return s;
 }
-function b(e, t, n, l) {
+function I(e, t, n, l) {
     let i = t[1],
         r = !1,
         s = [...l.entries].reverse(),
@@ -228,22 +228,22 @@ function b(e, t, n, l) {
     }
     return r;
 }
-function I(e) {
+function b(e) {
     return e.join(",");
 }
 function v(e, t) {
     let n = new Map(),
         l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
-    for (let [e, t] of l) (n.set(I(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
+    for (let [e, t] of l) (n.set(b(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
     return n;
 }
 function N(e, t, n) {
     if (null == e) return !1;
-    let l = e.get(I(t.path));
+    let l = e.get(b(t.path));
     if (null != l) l += t.offset;
     else {
-        let n = e.get(I(h.PW.parent(t.path)));
+        let n = e.get(b(h.PW.parent(t.path)));
         if (null == n) return !1;
         l = n + 1;
     }

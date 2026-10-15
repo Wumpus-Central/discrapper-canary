@@ -2809,7 +2809,7 @@ class e3 extends R.EventEmitter {
         });
     };
 }
-class e6 extends R.EventEmitter {
+class e5 extends R.EventEmitter {
     id;
     stream;
     pool;
@@ -2820,7 +2820,7 @@ class e6 extends R.EventEmitter {
             video: { ...e, frameRate: 30 },
         };
         if (navigator.mediaDevices?.getDisplayMedia != null)
-            return new e6(await navigator.mediaDevices.getDisplayMedia(i), n);
+            return new e5(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
     }
     constructor(e, t) {
@@ -2854,10 +2854,10 @@ class e6 extends R.EventEmitter {
         );
     }
 }
-class e5 {
+class e6 {
     pool = {};
     async acquire(e, t) {
-        let n = await e6.get(e, t, this);
+        let n = await e5.get(e, t, this);
         return ((this.pool[n.id] = n), n);
     }
     get(e) {
@@ -2974,7 +2974,7 @@ class tn extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e5();
+    desktopInputPool = new e6();
     enablePromise = null;
     dave = null;
     transientKeys = null;

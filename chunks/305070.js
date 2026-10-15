@@ -19,8 +19,8 @@ var l = n(477900),
     y = n(597184),
     C = n(105330),
     A = n(265431),
-    b = n(459016),
-    I = n(861382),
+    I = n(459016),
+    b = n(861382),
     v = n(355622),
     N = n(820066),
     T = n(696451),
@@ -59,9 +59,9 @@ function W(e) {
                     }),
                     [l, r, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([I.A], () => ({
-                    activeCommand: I.A.getActiveCommand(l.id),
-                    activeCommandOption: I.A.getActiveOption(l.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([b.A], () => ({
+                    activeCommand: b.A.getActiveCommand(l.id),
+                    activeCommandOption: b.A.getActiveOption(l.id),
                 })),
                 p = i.useMemo(
                     () =>
@@ -139,7 +139,7 @@ function W(e) {
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
                         null != f
-                            ? (0, b.getString)(
+                            ? (0, I.getString)(
                                   { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
                                   f.name,
                               )
@@ -179,9 +179,9 @@ function W(e) {
                 [s, U, g]
             );
         })({ ...n, guild: z }, t, q),
-        X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
-        J = (0, f.aI)($.selectedIndex);
-    (0, p.gf)(H, $.isVisible, J);
+        J = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
+        X = (0, f.aI)($.selectedIndex);
+    (0, p.gf)(H, $.isVisible, X);
     let Y = (0, C.l)({ editorHeight: F, type: W, state: $ }),
         ee = (0, o.bG)(
             [h.Ay],
@@ -251,7 +251,7 @@ function W(e) {
         }),
     });
     return null != Y
-        ? (0, l.jsx)(X, {
+        ? (0, l.jsx)(J, {
               children: (0, l.jsx)(c.Q, {
                   targetRef: n.targetRef,
                   overrideTargetRect: Y,
