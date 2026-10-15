@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"D3CWUF":["D3CWUF"],"ugfqKp":["ugfqKp"],"YEsjvt":["YEsjvt"]}');
+e.exports = JSON.parse(
+    '{"D3CWUF":["H\xe9 l\u1ED9 \u0111\u1EA7y \u0111\u1EE7 khi Call of Duty: Modern Warfare 4 ph\xe1t h\xe0nh v\xe0o ",[3,"date","::MMMd"]],"ugfqKp":["Classified: Code Blurple"],"YEsjvt":["Nh\u1EADn blueprint Call of Duty: MW4 v\xe0o ",[3,"date","::MMMd"],". \u0110\u1ED9c quy\u1EC1n cho Nitro."]}',
+);

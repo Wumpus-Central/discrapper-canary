@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"D3CWUF":["D3CWUF"],"ugfqKp":["ugfqKp"],"YEsjvt":["YEsjvt"]}');
+p.exports = JSON.parse(
+    '{"D3CWUF":["\u5B8C\u6574\u5185\u5BB9\u5C06\u4E8E\u300A\u4F7F\u547D\u53EC\u5524\uFF1A\u73B0\u4EE3\u6218\u4E89 4\u300B\u53D1\u552E\u5F53\u65E5\uFF08",[3,"date","::MMMd"],"\uFF09\u63ED\u6653"],"ugfqKp":["\u673A\u5BC6\uFF1A\u4EE3\u53F7 Blurple"],"YEsjvt":["\u4E8E ",[3,"date","::MMMd"]," \u9886\u53D6\u300A\u4F7F\u547D\u53EC\u5524\uFF1A\u73B0\u4EE3\u6218\u4E89 4\u300B\u6B66\u5668\u84DD\u56FE\uFF0CNitro \u4E13\u4EAB\u3002"]}',
+);
