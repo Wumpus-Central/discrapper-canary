@@ -42,11 +42,11 @@ var M = r(796873),
     W = r(404778),
     $ = r(603349),
     O = r(378885);
-let V = ["firCount", "nackCount"];
-class H extends a.PureComponent {
+let H = ["firCount", "nackCount"];
+class V extends a.PureComponent {
     renderValueIcon() {
         let { label: e } = this.props;
-        return V.includes(e) ? (0, n.jsx)($.A, { color: U.A.unsafe_rawColors.YELLOW_300.css, className: O.nm }) : null;
+        return H.includes(e) ? (0, n.jsx)($.A, { color: U.A.unsafe_rawColors.YELLOW_300.css, className: O.nm }) : null;
     }
     render() {
         let { children: e, className: t, valueRendered: r, section: a, label: i, renderGraph: s } = this.props;
@@ -394,7 +394,7 @@ function el(e) {
                   ? (0, n.jsx)(es, { converter: s, value: r, width: 300, height: 100 })
                   : void 0),
         o = Array.isArray(r) ? r.at(-1)?.value : r;
-    return (0, n.jsx)(H, { label: t, valueRendered: i(o), section: a, renderGraph: l, children: K[t] ?? t });
+    return (0, n.jsx)(V, { label: t, valueRendered: i(o), section: a, renderGraph: l, children: K[t] ?? t });
 }
 var eo = r(731854),
     ed = r(221851);
@@ -734,7 +734,7 @@ class eC extends a.PureComponent {
                                   null != s && void 0 !== l
                                       ? r.push(
                                             (0, n.jsx)(
-                                                H,
+                                                V,
                                                 {
                                                     label: a,
                                                     valueRendered: `${i} (${l})`,
@@ -837,7 +837,7 @@ class eI extends a.PureComponent {
                                 "rtt",
                             ),
                         ),
-                    (0, n.jsx)(H, { label: r, valueRendered: l, children: r }, t)
+                    (0, n.jsx)(V, { label: r, valueRendered: l, children: r }, t)
                 );
             });
         return (0, n.jsxs)(S.B, {
@@ -861,14 +861,13 @@ let ek = o.Ay.connectStores([v.Ay, D.A, ej.A, eS.A], (e) => {
             t === eo.x.STREAM
                 ? Object.values(eS.A.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
-                  )
-                : null,
-        i = a?.hostname ?? "";
+                  )?.hostname
+                : D.A.getHostname();
     return {
         hidePersonalInformation: ej.A.hidePersonalInformation,
         transport: null != n ? n.transport : null,
         mediaSessionId: D.A.getMediaSessionId(),
-        hostname: eN.A.getShortHostname(i),
+        hostname: eN.A.getShortHostname(a),
     };
 })(eI);
 var eB = r(652215);
