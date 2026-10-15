@@ -1,3 +1,14 @@
+.outer_ac6414 {
+    position: relative
+}
+
+.inner_ac6414 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
 .root_ea9caa {
     display: flex;
     width: clamp(var(--custom-interaction-iframe-modal-modal-min-width), calc(100vw - var(--custom-interaction-iframe-modal-modal-margin)*2), min((100vh - var(--custom-interaction-iframe-modal-modal-header-height) - var(--custom-interaction-iframe-modal-modal-margin) * 2) * 16/9, var(--custom-interaction-iframe-modal-modal-max-width)))
@@ -62,4 +73,4 @@
     flex-direction: row
 }
 
-/*# sourceMappingURL=f63b1935b02e946b.css.map*/
+/*# sourceMappingURL=55454dc6a492e42c.css.map*/

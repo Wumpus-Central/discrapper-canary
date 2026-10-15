@@ -1,4 +1,4 @@
-s.d(a, { default: () => R });
+s.d(a, { default: () => L });
 var i = s(477900),
     t = s(582128),
     n = s(319060),
@@ -11,30 +11,40 @@ var i = s(477900),
     I = s(789645),
     N = s(597396),
     h = s(709066),
-    m = s(681827),
-    x = s(477754),
-    u = s(981355),
-    _ = s(240248),
-    p = s(969508),
-    M = s(705751),
-    O = s(660183),
-    E = s(589478);
-let j = (0, _.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-    T = (0, _.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-    v = (0, _.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    D = (0, _.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
-function R(e) {
+    m = s(503698),
+    x = s.n(m),
+    u = s(178985);
+let _ = function (e) {
+    let { aspectRatio: a, style: s, className: t, children: n } = e;
+    return (0, i.jsx)("div", {
+        className: x()(u.A, t),
+        style: { paddingTop: `${(1 / a) * 100}%`, ...s },
+        children: (0, i.jsx)("div", { className: u.v, children: n }),
+    });
+};
+var p = s(477754),
+    M = s(981355),
+    O = s(240248),
+    E = s(969508),
+    j = s(705751),
+    T = s(660183),
+    v = s(589478);
+let D = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+    R = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+    C = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+    g = (0, O.xI)(n.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+function L(e) {
     let { title: a, onClose: s, id: n } = e,
-        { applicationIconURL: _, applicationName: R, queryParams: C, iframeUrl: g } = (0, p.aV)(e),
-        { width: L, height: f } = (0, u.A)(),
+        { applicationIconURL: m, applicationName: x, queryParams: u, iframeUrl: O } = (0, E.aV)(e),
+        { width: L, height: f } = (0, M.A)(),
         b = t.useMemo(() => {
-            let e = Math.min(((f - D - 2 * v) * 16) / 9, T);
-            return Math.max(j, Math.min(L - 2 * v, e));
+            let e = Math.min(((f - g - 2 * C) * 16) / 9, R);
+            return Math.max(D, Math.min(L - 2 * C, e));
         }, [L, f]);
     return (0, i.jsx)(r.EO, {
         ...e,
         size: r.rI.DYNAMIC,
-        className: E.zr,
+        className: v.zr,
         parentComponent: "InteractionIframeModal",
         "data-migration-pending": !0,
         children: (0, i.jsxs)("div", {
@@ -42,16 +52,16 @@ function R(e) {
             children: [
                 (0, i.jsxs)(r.rQ, {
                     separator: !1,
-                    className: E.Hc,
+                    className: v.Hc,
                     "data-migration-pending": !0,
                     children: [
-                        (0, i.jsx)(c.eu, { src: _, size: d._3.SIZE_32, "aria-label": R, className: E.In }),
+                        (0, i.jsx)(c.eu, { src: m, size: d._3.SIZE_32, "aria-label": x, className: v.In }),
                         (0, i.jsxs)("div", {
-                            className: E.Wh,
+                            className: v.Wh,
                             children: [
                                 (0, i.jsxs)("div", {
                                     children: [
-                                        (0, i.jsx)(o.D, { variant: "heading-sm/bold", children: R }),
+                                        (0, i.jsx)(o.D, { variant: "heading-sm/bold", children: x }),
                                         (0, i.jsx)(A.E, {
                                             variant: "text-xs/medium",
                                             color: "interactive-text-default",
@@ -60,32 +70,32 @@ function R(e) {
                                     ],
                                 }),
                                 (0, i.jsx)(h.A, {
-                                    type: M.nu.BOT,
-                                    className: E.AO,
+                                    type: j.nu.BOT,
+                                    className: v.AO,
                                     verified: e.application.bot?.verified,
                                 }),
                             ],
                         }),
                         (0, i.jsx)(l.$n, {
                             onClick: s,
-                            innerClassName: E.b,
-                            className: E.cG,
+                            innerClassName: v.b,
+                            className: v.cG,
                             look: l.$n.Looks.BLANK,
                             size: l.$n.Sizes.NONE,
-                            "aria-label": O.intl.string(O.t.WAI6xu),
+                            "aria-label": T.intl.string(T.t.WAI6xu),
                             "data-migration-pending": !0,
-                            children: (0, i.jsx)(I.P, { size: "md", color: "currentColor", className: E.ut }),
+                            children: (0, i.jsx)(I.P, { size: "md", color: "currentColor", className: v.ut }),
                         }),
                     ],
                 }),
-                (0, i.jsx)(m.A, {
+                (0, i.jsx)(_, {
                     aspectRatio: 16 / 9,
                     children: (0, i.jsx)(N.o, {
-                        url: g,
+                        url: O,
                         shouldRefocus: !0,
-                        className: E.pU,
-                        contextSource: { type: x.f.INTERACTION, interactionId: n },
-                        queryParams: C,
+                        className: v.pU,
+                        contextSource: { type: p.f.INTERACTION, interactionId: n },
+                        queryParams: u,
                     }),
                 }),
             ],
