@@ -63,8 +63,8 @@ function S(e) {
         onDoubleClick: u,
         "data-window-chrome": "true",
         children: [
-            (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: m, children: t }),
             (0, i.jsx)("div", { className: f.DD, children: n }),
+            (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: m, children: t }),
             (0, i.jsxs)("div", {
                 className: f.ZY,
                 onDoubleClick: m,
