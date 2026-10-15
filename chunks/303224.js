@@ -445,7 +445,7 @@ function eL(e) {
                                       n.e("403032"),
                                       n.e("746309"),
                                       n.e("720210"),
-                                      n.e("537596"),
+                                      n.e("813057"),
                                       n.e("132502"),
                                       n.e("230029"),
                                       n.e("891089"),
@@ -507,7 +507,7 @@ function eL(e) {
                                       n.e("32781"),
                                       n.e("488990"),
                                       n.e("332470"),
-                                      n.e("545527"),
+                                      n.e("168219"),
                                       n.e("35403"),
                                       n.e("203589"),
                                       n.e("662355"),
@@ -906,9 +906,9 @@ var e0 = n(789645),
     e7 = n(21599),
     e2 = n(279208),
     e4 = n(747007),
-    e5 = n(489673),
-    e9 = n(958590),
-    e8 = n(174459),
+    e9 = n(489673),
+    e8 = n(958590),
+    e5 = n(174459),
     e3 = n(957565),
     e6 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
@@ -919,10 +919,10 @@ function tn(e) {
         a = (0, s.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
         o = (0, s.bG)(
-            [e9.A],
+            [e8.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e9.A.getInvite(e);
+                return null == e ? null : e8.A.getInvite(e);
             },
             [d, r],
         );
@@ -942,7 +942,7 @@ function tn(e) {
                 "aria-label": eo.intl.string(eo.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e5.A, {
+            (0, i.jsx)(e9.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.CalendarIcon, {
@@ -976,7 +976,7 @@ function tn(e) {
                             if (null == n || h) return;
                             (0, e3.C)(e);
                             let t = (0, P.dy)(n.entity_type);
-                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e5.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
                                 channel: d,
                                 channel_type: t,
