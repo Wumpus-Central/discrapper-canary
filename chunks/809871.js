@@ -51,7 +51,8 @@ class I extends d.A {
             let { channels: t } = e;
             for (let e of t)
                 if (!(0, _.Gw)(e.type))
-                    for (let t of A.A.getFramesForChannel(e.id)) t.applicationId !== e.application_id && (0, h.r)(t.id);
+                    for (let t of A.A.getFramesForChannel(e.id))
+                        t.surface.type !== o.U.MAIN && t.applicationId !== e.application_id && (0, h.r)(t.id);
         },
     };
     handleVoiceChannelSelect = (e) => {
