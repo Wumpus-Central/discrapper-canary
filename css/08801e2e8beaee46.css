@@ -1,5 +1,6 @@
 .transitionJumbleContainer__014df {
-    --custom-transition-rail-height: 202px
+    --custom-transition-max-top-offset: 12px;
+    --custom-transition-rail-height: calc(198px + var(--custom-transition-max-top-offset))
 }
 
 .transitionJumbleSpacer__014df {
@@ -10,7 +11,7 @@
 
 .overlayContainer__014df {
     bottom: 0;
-    overflow: hidden;
+    overflow: clip;
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -60,4 +61,4 @@
     background: #a8a9aa
 }
 
-/*# sourceMappingURL=d7181fbe5b3ed38d.css.map*/
+/*# sourceMappingURL=08801e2e8beaee46.css.map*/
