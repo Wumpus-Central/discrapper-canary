@@ -102,6 +102,7 @@
   "EMOJI": "/emojis/:param./:param",
   "EMOJI_GUILD_DATA": "/emojis/:param/guild",
   "EMOJI_SOURCE_DATA": "/emojis/:param/source",
+  "EMOJI_PACKS": "/emoji-packs",
   "TOP_EMOJIS_FOR_GUILD": "/guilds/:param/top-emojis",
   "GUILD_SPLASH": "/guilds/:param/splashes/:param.jpg",
   "GUILD_DISCOVERY_SPLASH": "/guilds/:param/discovery-splashes/:param.jpg",
