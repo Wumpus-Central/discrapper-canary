@@ -944,15 +944,15 @@ function e4(e) {
         })
     );
 }
-var e2 = t(754744),
-    e5 = t(138298);
-function e8(e) {
+var e5 = t(754744),
+    e8 = t(138298);
+function e2(e) {
     let { guildId: l } = e,
         t = (0, d.bG)([C.A], () => C.A.getGuild(l)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([b.Ay], () => b.Ay.getGuildSidebarState(l), [l]),
         a = i.useCallback(() => {
-            e5.A.closeGuildSidebar(l);
+            e8.A.closeGuildSidebar(l);
         }, [l]),
         c = null != r;
     return null != t && c && null != r
@@ -961,7 +961,7 @@ function e8(e) {
               children: (0, n.jsx)("div", {
                   className: eZ.__invalid_sidebarContainer,
                   style: { width: ea.da6 },
-                  children: (0, n.jsx)(e2.default, {
+                  children: (0, n.jsx)(e5.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -971,8 +971,8 @@ function e8(e) {
         : null;
 }
 var e9 = t(856768),
-    e1 = t(202091),
-    e3 = t(702841),
+    e3 = t(308941),
+    e1 = t(702841),
     e6 = t(717421),
     le = t(144073),
     ll = t(151781),
@@ -983,16 +983,16 @@ var e9 = t(856768),
 function lr(e) {
     let { guild: l } = e,
         t = (0, le.Ms)(l.id),
-        s = (0, e6.z)({ height: 3 * !!t, config: e1.config.stiff });
+        s = (0, e6.z)({ height: 3 * !!t, config: e3.config.stiff });
     return (0, n.jsx)("div", {
         className: eG.NQ,
-        children: (0, n.jsx)(e1.animated.div, { className: eG.b0, style: s }),
+        children: (0, n.jsx)(e3.animated.div, { className: eG.b0, style: s }),
     });
 }
 function la(e) {
     let { guild: l, className: t, onPageChange: s, onMemberSelect: r } = e,
         d = l.id,
-        c = (0, e3.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e1.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, le.Ms)(d),
         x = (0, le.Wl)(d),
         m = i.useCallback(
@@ -1116,7 +1116,7 @@ function lu(e) {
                       (null == c
                           ? null
                           : P
-                            ? (0, n.jsx)(e8, { guildId: c.id })
+                            ? (0, n.jsx)(e2, { guildId: c.id })
                             : s === M.ALL_MEMBERS
                               ? null
                               : (0, n.jsx)(ev, { guildId: c.id })),

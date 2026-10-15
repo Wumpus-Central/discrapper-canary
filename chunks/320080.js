@@ -3,7 +3,7 @@ var s = t(477900),
     a = t(582128),
     i = t(503698),
     l = t.n(i),
-    r = t(202091),
+    r = t(308941),
     o = t(17928),
     c = t(661531),
     d = t(707554),
@@ -891,8 +891,8 @@ let e1 = (0, a.memo)(
 var e3 = t(435558),
     e2 = t.n(e3),
     e4 = t(837381),
-    e7 = t(847374),
-    e8 = t(912592),
+    e8 = t(847374),
+    e7 = t(912592),
     e6 = t(821609),
     e9 = t(475825),
     e5 = t(928039),
@@ -939,7 +939,7 @@ function nr(e) {
                     className: ni.P7,
                     children: (0, e3.capitalize)(eD.intl.string(eL.v7[n]).toLowerCase()),
                 }),
-                (0, s.jsx)(e7.a, { size: "xxs", className: ni.ai }),
+                (0, s.jsx)(e8.a, { size: "xxs", className: ni.ai }),
             ],
         }),
     });
@@ -957,7 +957,7 @@ function nc() {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, s.jsx)(e8.InboxIcon, {
+                        (0, s.jsx)(e7.InboxIcon, {
                             size: "custom",
                             height: 40,
                             width: 40,

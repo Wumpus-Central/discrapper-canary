@@ -23,7 +23,7 @@ var i,
     C = n.n(j),
     T = n(812729),
     y = n.n(T),
-    b = n(202091),
+    b = n(308941),
     w = n(866323),
     N = n(939249),
     _ = n(834730),
@@ -920,12 +920,12 @@ var e5 = n(193249),
     e3 = n(821609),
     e4 = n(706712),
     e6 = n(595528),
-    e9 = n(321090),
-    e8 = n(189953);
+    e8 = n(321090),
+    e9 = n(189953);
 function e7(e) {
     let { locked: t, pinned: n, anchorLeft: i } = e,
         r = (0, P.bG)([e6.A], () => e6.A.getSocket()),
-        s = (0, P.bG)([e9.A], () => e9.A.isGPUBoosted());
+        s = (0, P.bG)([e8.A], () => e8.A.isGPUBoosted());
     (0, e4.ZX)();
     let a = (0, P.bG)([Y.A], () => Y.A.getWindow(e0.f)),
         [o, d] = (0, e4.DQ)(r),
@@ -962,21 +962,21 @@ function e7(e) {
     return t && !n
         ? null
         : (0, l.jsxs)("div", {
-              className: C()(e8.st, !i && e8.Hk),
+              className: C()(e9.st, !i && e9.Hk),
               children: [
                   (w || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e8.PG,
+                          className: e9.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e8.On,
+                                      className: e9.On,
                                       children: (0, l.jsx)(e5.d, { checked: w, onChange: (e) => N(e) }),
                                   }),
                               (0, l.jsxs)(_.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e8.e0,
+                                  className: e9.e0,
                                   children: [
                                       "FPS:",
                                       " ",
@@ -997,17 +997,17 @@ function e7(e) {
                       }),
                   (O || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e8.PG,
+                          className: e9.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e8.On,
+                                      className: e9.On,
                                       children: (0, l.jsx)(e5.d, { checked: O, onChange: (e) => M(e) }),
                                   }),
                               (0, l.jsxs)(_.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e8.e0,
+                                  className: e9.e0,
                                   children: [
                                       "Frame Times:",
                                       " ",
@@ -1023,17 +1023,17 @@ function e7(e) {
                       }),
                   (D || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e8.PG,
+                          className: e9.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e8.On,
+                                      className: e9.On,
                                       children: (0, l.jsx)(e5.d, { checked: D, onChange: (e) => z(e) }),
                                   }),
                               (0, l.jsxs)(_.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e8.e0,
+                                  className: e9.e0,
                                   children: [
                                       "Dropped Frames:",
                                       " ",
@@ -1052,7 +1052,7 @@ function e7(e) {
                                           tag: "span",
                                           variant: "code",
                                           color: "text-subtle",
-                                          className: e8.af,
+                                          className: e9.af,
                                           children: ["(", ((g.current / p.current) * 100).toFixed(3), "%)"],
                                       }),
                                   ],
@@ -1061,17 +1061,17 @@ function e7(e) {
                       }),
                   (k || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e8.PG,
+                          className: e9.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e8.On,
+                                      className: e9.On,
                                       children: (0, l.jsx)(e5.d, { checked: k, onChange: (e) => L(e) }),
                                   }),
                               (0, l.jsxs)(_.E, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: e8.e0,
+                                  className: e9.e0,
                                   children: [
                                       "Rendered Frames:",
                                       " ",
@@ -1087,11 +1087,11 @@ function e7(e) {
                       }),
                   (V || !t) &&
                       (0, l.jsxs)("div", {
-                          className: e8.PG,
+                          className: e9.PG,
                           children: [
                               !t &&
                                   (0, l.jsx)("div", {
-                                      className: e8.On,
+                                      className: e9.On,
                                       children: (0, l.jsx)(e5.d, { checked: V, onChange: (e) => U(e) }),
                                   }),
                               (0, l.jsx)(en.m, {
@@ -1101,7 +1101,7 @@ function e7(e) {
                                       children: (0, l.jsxs)(_.E, {
                                           variant: "text-md/normal",
                                           color: "text-subtle",
-                                          className: e8.e0,
+                                          className: e9.e0,
                                           children: [
                                               "Idle Frame Delta:",
                                               " ",
@@ -1139,7 +1139,7 @@ function e7(e) {
                       }),
                   !t &&
                       (0, l.jsx)("div", {
-                          className: e8.m8,
+                          className: e9.m8,
                           children: (0, l.jsx)(R.A, {
                               children: (0, l.jsx)(e3.$, { variant: "primary", text: "Reset Frame Data", onClick: b }),
                           }),
@@ -1539,7 +1539,7 @@ function t6(e) {
         },
     });
 }
-function t9(e) {
+function t8(e) {
     let t,
         { voiceChannel: n, locked: i } = e,
         r = v.useRef(null),
@@ -1627,7 +1627,7 @@ function t9(e) {
         },
     });
 }
-function t8(e) {
+function t9(e) {
     let { voiceChannel: t, locked: i } = e,
         r = v.useRef(null),
         s = t?.getGuildId() ?? null,
@@ -1934,8 +1934,8 @@ function ns(e) {
                     (0, l.jsxs)("div", {
                         className: nr.qi,
                         children: [
-                            (0, l.jsx)(t9, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t8, { voiceChannel: s, locked: t }),
+                            (0, l.jsx)(t9, { voiceChannel: s, locked: t }),
                             i && r && (0, l.jsx)(ni, { voiceChannel: s, locked: t }),
                         ],
                     }),
@@ -2715,8 +2715,8 @@ let n6 = v.memo(function (e) {
               }),
           });
 });
-var n9 = n(148494),
-    n8 = n(688438),
+var n8 = n(148494),
+    n9 = n(688438),
     n7 = n(355622),
     ie = n(232835),
     it = n(576705),
@@ -2751,7 +2751,7 @@ function is(e) {
     (s = i?.first() ?? null),
     (a = null != d && null == s && null != i && !i.loadingMore && !i.ready && !i.hasFetched && r),
     v.useEffect(() => {
-        null == t || (!n.current.has(t) && a && (n.current.add(t), n9.A.fetchMessages({ channelId: t, limit: 50 })));
+        null == t || (!n.current.has(t) && a && (n.current.add(t), n8.A.fetchMessages({ channelId: t, limit: 50 })));
     }, [t, a]),
     v.useEffect(() => {
         if (null == o || h) return;
@@ -2765,7 +2765,7 @@ function is(e) {
               className: il.Q,
               children: (0, l.jsx)("div", {
                   className: il.T,
-                  children: (0, l.jsx)(n8.A, { channel: d, guild: c, chatInputType: n7.oU.OVERLAY }, d.id),
+                  children: (0, l.jsx)(n9.A, { channel: d, guild: c, chatInputType: n7.oU.OVERLAY }, d.id),
               }),
           })
         : null;

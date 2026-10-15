@@ -30,7 +30,7 @@ var j = n(304210),
     I = n(159439),
     A = n(998694),
     R = n(415926),
-    k = n(202091),
+    k = n(308941),
     T = n(607399),
     L = n(946015),
     O = n(717421),
@@ -953,8 +953,8 @@ let e1 = function (e) {
 };
 var e2 = n(172218),
     e5 = n(28863),
-    e9 = n(9530);
-let e4 = function (e) {
+    e4 = n(9530);
+let e9 = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
         l = (0, e2.K)(
             (e) => {
@@ -969,21 +969,21 @@ let e4 = function (e) {
         u = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, i.jsxs)("div", {
         ref: l,
-        className: e9.BX,
+        className: e4.BX,
         children: [
             (0, i.jsx)("div", {
-                className: e9.vK,
+                className: e4.vK,
                 children: null != s && (0, i.jsx)(eq.A, { bannerStatic: s, bannerAnimated: r }),
             }),
             (0, i.jsx)("div", {
-                className: e9.HQ,
+                className: e4.HQ,
                 children: (0, i.jsxs)("div", {
-                    className: e9.Yn,
+                    className: e4.Yn,
                     children: [
                         null != t.endTime ? (0, i.jsx)(U, { endDate: t.endTime, size: "lg" }) : null,
                         (0, i.jsx)(m.D, {
                             variant: "heading-xxl/bold",
-                            className: e9.DD,
+                            className: e4.DD,
                             color: "text-strong",
                             style: { ...a },
                             children: t.title,
@@ -998,7 +998,7 @@ let e4 = function (e) {
                                       u &&
                                           (0, i.jsx)(e5.Anchor, {
                                               href: t.helpCenterUrl,
-                                              className: e9.CU,
+                                              className: e4.CU,
                                               style: { ...a },
                                               children: B.intl.string(B.t.O7ADgv),
                                           }),
@@ -1449,7 +1449,7 @@ let tx = function (e) {
                                     break;
                                 case u.g.IMMERSIVE_BANNER:
                                     d = (0, i.jsx)(
-                                        e4,
+                                        e9,
                                         { immersiveBannerBlock: e, onVisibilityChange: (e) => h(!e) },
                                         a,
                                     );

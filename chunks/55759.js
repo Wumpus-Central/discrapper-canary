@@ -3,7 +3,7 @@ var r = n(477900),
     l = n(582128),
     i = n(503698),
     s = n.n(i),
-    u = n(202091),
+    u = n(308941),
     a = n(462180),
     o = n(337836),
     c = n(17928),
@@ -202,8 +202,8 @@ function es(e) {
         e0 = (0, y.Kr)((e) => e.videoProgress[eu.id] ?? y.yc, a.x),
         e1 = (0, y.Kr)((e) => e.setVideoProgress),
         e6 = (0, y.Kr)((e) => e.muted),
-        e2 = (0, y.Kr)((e) => e.setMuted),
-        e7 = (0, y.Kr)((e) => e.volume),
+        e7 = (0, y.Kr)((e) => e.setMuted),
+        e2 = (0, y.Kr)((e) => e.volume),
         e8 = (0, y.Kr)((e) => e.setVolume),
         e9 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e5 = (0, l.useRef)(null),
@@ -405,17 +405,17 @@ function es(e) {
             }
             return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
         }, []));
-    let t2 = l.useCallback(
+    let t7 = l.useCallback(
             (e) => {
                 (e8(e), tV(e));
             },
             [e8, tV],
         ),
-        t7 = l.useCallback(
+        t2 = l.useCallback(
             (e) => {
-                e2(e);
+                e7(e);
             },
-            [e2],
+            [e7],
         ),
         t8 = l.useCallback(
             (e) => {
@@ -662,7 +662,7 @@ function es(e) {
                                         (tE.info(`[QV] | handleLoadedMetadata | videoAssetId: ${tv}`),
                                         tF(null),
                                         tv !== V.fY.VIDEO_PLAYER_VIDEO_HLS && t8(t_),
-                                        e6 ? (e5.current.volume = 0) : (e5.current.volume = e7));
+                                        e6 ? (e5.current.volume = 0) : (e5.current.volume = e2));
                                 },
                                 onLoadStart: function () {
                                     ((eZ.current = performance.now()),
@@ -926,7 +926,7 @@ function es(e) {
                                             size: tf,
                                             autoFocus: $,
                                             keyDownHandlerRef: e3,
-                                            volume: e7,
+                                            volume: e2,
                                             muted: e6,
                                             transcriptEnabled: eE,
                                             captionEnabled: ef,
@@ -964,8 +964,8 @@ function es(e) {
                                             handleSeekBackBtnClick: t1,
                                             handleSeekForwardBtnClick: t6,
                                             handleControlBarPendingInteraction: eG,
-                                            onVolumeChange: t2,
-                                            onMutedChange: t7,
+                                            onVolumeChange: t7,
+                                            onMutedChange: t2,
                                             onVolumeExpandedChange: en.FXj,
                                         }),
                                     }),
