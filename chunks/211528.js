@@ -66,7 +66,7 @@ let f = n.memo(function (e) {
             () => ({ billingDetails: { ...(null != f && { email: f }), ...(null != g && { name: g }) } }),
             [f, g],
         ),
-        T = n.useMemo(
+        I = n.useMemo(
             () => ({
                 id: "stripe-payment-element",
                 options: { layout: { type: "tabs" }, wallets: x, defaultValues: P, paymentMethodOrder: a, ...d },
@@ -75,7 +75,7 @@ let f = n.memo(function (e) {
             }),
             [x, P, d, y, _, a],
         );
-    return (0, l.jsx)(r.PaymentElement, { ...T });
+    return (0, l.jsx)(r.PaymentElement, { ...I });
 });
 function g(e) {
     let { children: a } = e,

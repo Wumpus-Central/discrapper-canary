@@ -43,7 +43,7 @@ function x(e) {
 function P(e) {
     return null == e || "" === e;
 }
-function T(e) {
+function I(e) {
     let { children: a, showUpperNoticesAboveGlobalNotices: t = !1 } = e,
         { errorMessage: r, richNotices: i } = (function () {
             let { errorMessage: e } = (0, c.j)({}),
@@ -107,7 +107,7 @@ function T(e) {
         }, [r, i, a, t])
     );
 }
-function I(e) {
+function T(e) {
     return n.useMemo(
         () =>
             null == e
@@ -124,14 +124,14 @@ function I(e) {
 }
 function M(e) {
     let { upperInlineNoticeProps: a, shouldShowGlobalNotices: t, showUpperNoticesAboveGlobalNotices: r } = e,
-        i = I(a);
+        i = T(a);
     return n.useMemo(
         () =>
             null != i || t
                 ? t
                     ? null != i
-                        ? (0, l.jsx)(T, { showUpperNoticesAboveGlobalNotices: r, children: i })
-                        : (0, l.jsx)(T, {})
+                        ? (0, l.jsx)(I, { showUpperNoticesAboveGlobalNotices: r, children: i })
+                        : (0, l.jsx)(I, {})
                     : (0, l.jsx)("div", { className: f.dD, children: i })
                 : null,
         [t, i, r],
@@ -153,10 +153,10 @@ function v(e) {
             shouldShowGlobalNotices: _,
             showUpperNoticesAboveGlobalNotices: x,
             footerInlineNoticeProps: P,
-            headerBadgeConfig: T,
+            headerBadgeConfig: I,
             className: v,
         } = e,
-        N = I(P),
+        N = T(P),
         { setCheckoutFooterLineItemNode: L } = (0, o.ck)();
     return s
         ? (0, l.jsx)(g, { className: v, shouldShowUnifiedHeader: !0 })
@@ -178,7 +178,7 @@ function v(e) {
                           null != c && (0, l.jsx)("div", { className: f.ZF, children: c }),
                       ],
                   }),
-                  (0, l.jsx)(o.UY, { children: (0, l.jsx)(m.f, { headerBadgeConfig: T }) }),
+                  (0, l.jsx)(o.UY, { children: (0, l.jsx)(m.f, { headerBadgeConfig: I }) }),
                   (0, l.jsxs)(o.bx, {
                       children: [
                           (0, l.jsx)("div", { ref: L }),

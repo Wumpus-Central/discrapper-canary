@@ -26,15 +26,15 @@ function f(e) {
         x = null;
     null != _ ? (x = _) : null != s && (0, p.h5)(s, t) ? (x = s) : null != g ? (x = g) : null != a && (x = a);
     let P = (0, A.vx)(),
-        T = n.useCallback(() => {
+        I = n.useCallback(() => {
             ((0, r.closeAllModals)(), u.A.openPrivateChannel({ recipientIds: P }));
         }, [P]),
-        I = f.length > 1,
+        T = f.length > 1,
         M = null != x ? x.message : "";
     if (
         null != x &&
         x instanceof o.Ey &&
-        (x.code === c.tG.CARD_DECLINED && I && (M += ` ${y.intl.string(y.t.iWvwQS)}`),
+        (x.code === c.tG.CARD_DECLINED && T && (M += ` ${y.intl.string(y.t.iWvwQS)}`),
         x.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = y.intl.string(y.t.ypuSd8)),
         x.code === C.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = y.intl.string(y.t.mXMmWE)),
         x.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (M = y.intl.string(y.t.mC1Fjz)),
@@ -42,7 +42,7 @@ function f(e) {
             (M = y.intl.format(y.t["mv/fF2"], {
                 guardianHook: (e, a) =>
                     P.length > 0
-                        ? (0, l.jsx)(i.Anchor, { onClick: T, children: e }, a)
+                        ? (0, l.jsx)(i.Anchor, { onClick: I, children: e }, a)
                         : (0, l.jsx)(n.Fragment, { children: e }, a),
             })),
         x.code === c.tG.INVALID_BILLING_ADDRESS)
