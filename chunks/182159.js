@@ -1,78 +1,84 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(17928),
     s = n(73153);
 n(321073);
 var l = n(770335);
-let r = { packs: [], packsById: {}, packIdByEmojiId: {}, fetchState: "NOT_FETCHED" },
-    a = r;
-class o extends i.Ay.Store {
+function r(e) {
+    let t = [],
+        n = {},
+        i = {};
+    for (let s of e) if (null == n[s.id]) for (let e of (t.push(s), (n[s.id] = s), s.emojis)) i[e.id] = s.id;
+    return { packs: t, packsById: n, packIdByEmojiId: i };
+}
+let a = { packs: [], packsById: {}, packIdByEmojiId: {}, fetchState: "NOT_FETCHED" },
+    o = a;
+class c extends i.Ay.PersistedStore {
     static displayName = "EmojiPackStore";
+    static persistKey = "EmojiPackStore";
+    initialize(e) {
+        o = { ...r(Array.isArray(e?.packs) ? e.packs : []), fetchState: "NOT_FETCHED" };
+    }
+    getState() {
+        return { packs: o.packs };
+    }
     getFetchState() {
-        return a.fetchState;
+        return o.fetchState;
     }
     getPacks() {
-        return a.packs;
+        return o.packs;
     }
     getPack(e) {
-        return a.packsById[e];
+        return o.packsById[e];
     }
     getPackForEmoji(e) {
-        let t = a.packIdByEmojiId[e];
-        return null != t ? a.packsById[t] : void 0;
+        let t = o.packIdByEmojiId[e];
+        return null != t ? o.packsById[t] : void 0;
     }
     getEmoji(e) {
         return this.getPackForEmoji(e)?.emojis.find((t) => t.id === e);
     }
 }
-let c = new o(s.h, {
+let u = new c(s.h, {
     LOGOUT: function () {
-        a = r;
+        o = a;
     },
     EMOJI_PACKS_FETCH_START: function () {
-        if ("FETCHING" === a.fetchState) return !1;
-        a = { ...a, fetchState: "FETCHING" };
+        if ("FETCHING" === o.fetchState) return !1;
+        o = { ...o, fetchState: "FETCHING" };
     },
     EMOJI_PACKS_FETCH_SUCCESS: function (e) {
         let { packs: t } = e;
-        a = {
-            ...(function (e) {
-                let t = [],
-                    n = {},
-                    i = {};
-                for (let s of e) {
-                    if (null != n[s.id]) continue;
-                    let e = {
-                        id: s.id,
-                        name: s.name,
-                        description: s.description,
-                        available: s.available,
-                        representativeEmojiId: s.representative_emoji_id,
-                        emojis: s.emojis.map((e) => {
-                            var t;
-                            return (
-                                (t = s.id),
-                                {
-                                    id: e.id,
-                                    packId: t,
-                                    name: e.name,
-                                    animated: e.animated,
-                                    require_colons: e.require_colons,
-                                    available: e.available,
-                                    managed: e.managed,
-                                    roles: e.roles,
-                                    type: l.i.PACK,
-                                }
-                            );
-                        }),
-                    };
-                    for (let s of (t.push(e), (n[e.id] = e), e.emojis)) i[s.id] = e.id;
-                }
-                return { packs: t, packsById: n, packIdByEmojiId: i };
-            })(t),
+        o = {
+            ...r(
+                t.map((e) => ({
+                    id: e.id,
+                    name: e.name,
+                    description: e.description,
+                    available: e.available,
+                    representativeEmojiId: e.representative_emoji_id,
+                    emojis: e.emojis.map((t) => {
+                        var n;
+                        return (
+                            (n = e.id),
+                            {
+                                id: t.id,
+                                packId: n,
+                                name: t.name,
+                                animated: t.animated,
+                                require_colons: t.require_colons,
+                                available: t.available,
+                                managed: t.managed,
+                                roles: t.roles,
+                                type: l.i.PACK,
+                            }
+                        );
+                    }),
+                })),
+            ),
             fetchState: "FETCHED",
         };
     },
     EMOJI_PACKS_FETCH_FAIL: function () {
-        a = { ...a, fetchState: "FAILED" };
+        o = { ...o, fetchState: "FAILED" };
     },
 });

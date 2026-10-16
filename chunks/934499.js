@@ -38,14 +38,16 @@ async function E() {
         s.h.dispatch({ type: "EMOJI_PACKS_FETCH_START" });
         try {
             let e = (await i.Bo.get({ url: c.Rsh.EMOJI_PACKS, rejectWithError: !0 })).body;
-            (d.log("GET /emoji-packs response", JSON.stringify(e, null, 2)),
-                s.h.dispatch({ type: "EMOJI_PACKS_FETCH_SUCCESS", packs: e }));
+            s.h.dispatch({ type: "EMOJI_PACKS_FETCH_SUCCESS", packs: e });
         } catch (e) {
-            (e instanceof i.oh && 404 === e.status
-                ? d.log("GET /emoji-packs returned 404: emoji packs are not enabled for this user")
-                : e instanceof i.oh && e.status >= 400 && e.status < 500
-                  ? d.warn(`GET /emoji-packs failed with status ${e.status}`)
-                  : a.A.captureException(e),
+            if (e instanceof i.oh && 404 === e.status) {
+                (d.log("GET /emoji-packs returned 404: emoji packs are not enabled for this user"),
+                    s.h.dispatch({ type: "EMOJI_PACKS_FETCH_SUCCESS", packs: [] }));
+                return;
+            }
+            (e instanceof i.oh && e.status >= 400 && e.status < 500
+                ? d.warn(`GET /emoji-packs failed with status ${e.status}`)
+                : a.A.captureException(e),
                 s.h.dispatch({ type: "EMOJI_PACKS_FETCH_FAIL" }));
         }
     }
