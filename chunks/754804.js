@@ -11,8 +11,8 @@ var o = n(477900),
     c = n(92551),
     b = n(637706),
     m = n(788883),
-    A = n(635995),
-    _ = n(652215),
+    _ = n(635995),
+    A = n(652215),
     f = n(49999),
     I = n(105292);
 function T() {
@@ -28,7 +28,7 @@ function T() {
             [T],
         ),
         g = l.useCallback(() => {
-            (s.default.track(_.HAw.APP_NOTICE_CLOSED, { notice_type: _.kqX.PREMIUM_MARKETING_NAGBAR }),
+            (s.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR }),
                 N(f.i.USER_DISMISS));
         }, [N]),
         E = l.useRef(null);
@@ -65,10 +65,10 @@ function T() {
                       promotionId: T,
                       dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
                   }),
-                  (0, o.jsxs)(A.T0, {
+                  (0, o.jsxs)(_.T0, {
                       onClick: g,
                       children: [
-                          (0, o.jsxs)(A.In, {
+                          (0, o.jsxs)(_.In, {
                               children: [
                                   h.content,
                                   null != S &&
@@ -81,11 +81,11 @@ function T() {
                               ],
                           }),
                           "" !== P.content &&
-                              (0, o.jsx)(A.fY, {
+                              (0, o.jsx)(_.fY, {
                                   text: P.content,
                                   onClick: function () {
-                                      (s.default.track(_.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                                          notice_type: _.kqX.PREMIUM_MARKETING_NAGBAR,
+                                      (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                                          notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,
                                       }),
                                           y());
                                   },

@@ -77,18 +77,18 @@ function p() {
                     y = Math.min(1, Math.max(0, y + ((C ? 1 : -1) * r) / 260));
                     let k = n.getBoundingClientRect(),
                         M = k.width > 0 ? k.width / p : 1,
-                        E = a.getBoundingClientRect(),
-                        N = (E.left - k.left) / M,
-                        P = (1 - Math.min(1, Math.abs(N + E.width / M / 2 - u) / 16)) * y;
-                    if (P < 0.01) {
+                        P = a.getBoundingClientRect(),
+                        E = (P.left - k.left) / M,
+                        N = (1 - Math.min(1, Math.abs(E + P.width / M / 2 - u) / 16)) * y;
+                    if (N < 0.01) {
                         (x && l.clearRect(0, 0, p, h), (x = !1));
                         return;
                     }
                     (x || (A = t), (x = !0), l.clearRect(0, 0, p, h));
-                    let _ = N - 1 - (1 - P) * 16,
+                    let _ = E - 1 - (1 - N) * 16,
                         I = (t - j) / 1e3,
                         R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
-                        L = Math.ceil(_ / m);
+                        T = Math.ceil(_ / m);
                     l.fillStyle = i;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * f(e, 11)),
@@ -103,7 +103,7 @@ function p() {
                             u = 1 + e * m + g / 2,
                             o = g / 2 + 3,
                             p = Math.abs(u - h / 2) < o;
-                        for (let t = 0; t < L; t++) {
+                        for (let t = 0; t < T; t++) {
                             let i,
                                 d = _ - (t * m + g / 2);
                             if (d < 0) break;
@@ -123,7 +123,7 @@ function p() {
                                             let t = Math.min(1, Math.max(0, e));
                                             return t * t * (3 - 2 * t);
                                         })((1 - c) / 0.34) *
-                                        P),
+                                        N),
                                     l.fillText(i, d, u)));
                         }
                     }

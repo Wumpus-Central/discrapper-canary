@@ -107,7 +107,7 @@ async function A(e, t, n) {
             spec: n.spec,
             build: n.build,
             onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, d.bm)(e, n.id)),
-            resolveUploadUrl: () => m(e),
+            resolveUploadUrl: () => R(e),
         });
     } catch (e) {
         (console.error("[conjure] preview capture relay failed", e), (r = { status: "failed" }));
@@ -141,7 +141,7 @@ async function k(e, t, n) {
             t.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function m(e) {
+async function R(e) {
     let { ticket: t, baseUrl: n } = await (0, i.BK)(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }

@@ -3,7 +3,7 @@
     H$: () => S,
     IE: () => m,
     JQ: () => a,
-    N5: () => w,
+    N5: () => k,
     Sj: () => T,
     TK: () => d,
     TN: () => E,
@@ -110,7 +110,7 @@ function d(e) {
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...w(a),
+                    ...k(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
@@ -131,7 +131,7 @@ function d(e) {
         })([r], 0, [], 1 / 0),
         i = 0.1 * (s.end - s.start);
     return (
-        k(s, (e) => {
+        b(s, (e) => {
             e.significant = N(e) >= i;
         }),
         s
@@ -167,7 +167,7 @@ function u(e, t) {
     );
 }
 function p(e) {
-    return { collapsed: b(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
+    return { collapsed: w(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
 }
 function h(e, t, n) {
     let r = [...p(t).collapsed].filter((e) => !n.has(e));
@@ -175,13 +175,13 @@ function h(e, t, n) {
 }
 function f(e) {
     let t = new Set();
-    return (k(e, (e) => t.add(e.key)), t);
+    return (b(e, (e) => t.add(e.key)), t);
 }
 function _(e) {
-    return { collapsed: new Set(), revealed: b(e, () => !0) };
+    return { collapsed: new Set(), revealed: w(e, () => !0) };
 }
 function g(e) {
-    return { collapsed: b(e, (e) => e.depth > 0), revealed: new Set() };
+    return { collapsed: w(e, (e) => e.depth > 0), revealed: new Set() };
 }
 function E(e, t) {
     if (!e.collapsed.has(t.key)) return { ...e, collapsed: new Set(e.collapsed).add(t.key) };
@@ -195,7 +195,7 @@ function S(e, t) {
     let n = new Set(e.collapsed),
         r = new Set(e.revealed);
     return (
-        k(t, (e) => {
+        b(t, (e) => {
             (n.delete(e.key), r.add(e.key));
         }),
         { collapsed: n, revealed: r }
@@ -204,7 +204,7 @@ function S(e, t) {
 function m(e, t) {
     let n = null;
     return (
-        k(e, (e) => {
+        b(e, (e) => {
             e.key === t && (n = e);
         }),
         n
@@ -240,10 +240,10 @@ function T(e) {
 function N(e) {
     return e.count > 1 ? e.totalMs : e.end - e.start;
 }
-function k(e, t) {
-    for (let n of (t(e), e.children)) k(n, t);
+function b(e, t) {
+    for (let n of (t(e), e.children)) b(n, t);
 }
-function w(e) {
+function k(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         r = (-1 === t ? "" : e.name.slice(t + 1))
@@ -257,7 +257,7 @@ function w(e) {
         category: s[n] ?? "other",
     };
 }
-function b(e, t) {
+function w(e, t) {
     let n = new Set();
     return (
         !(function e(r) {

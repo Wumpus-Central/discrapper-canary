@@ -11,8 +11,8 @@ var o = n(477900),
     c = n(807098),
     b = n(92551),
     m = n(637706),
-    A = n(788883),
-    _ = n(49999),
+    _ = n(788883),
+    A = n(49999),
     f = n(105292);
 function I(e) {
     let { children: t, targetElementRef: n, dismissPopover: I } = e,
@@ -33,7 +33,7 @@ function I(e) {
     if (!R.ok) return t;
     let h = (0, b.n)(N.button?.copy ?? "", C);
     if (!h.ok) return t;
-    let P = (0, o.jsx)(A.A, {
+    let P = (0, o.jsx)(_.A, {
             componentType: a.C.PREMIUM_TAB_POPOVER,
             componentId: y,
             promotionId: S,
@@ -41,7 +41,7 @@ function I(e) {
         }),
         { icon: v, iconPosition: M } = (0, p.x)({ buttonAction: N.button?.buttonAction });
     function L() {
-        return I(_.i.USER_DISMISS);
+        return I(A.i.USER_DISMISS);
     }
     let x =
             null != N.button
@@ -58,13 +58,13 @@ function I(e) {
                       iconPosition: M,
                   }
                 : void 0,
-        U = (0, m.C)(N.helpArticle, N.helpArticleId),
-        G = null != U ? { text: U.linkText, link: U.url } : void 0,
+        G = (0, m.C)(N.helpArticle, N.helpArticleId),
+        U = null != G ? { text: G.linkText, link: G.url } : void 0,
         B = {
             targetElementRef: n,
             title: O.content,
             body: R.content,
-            textLink: G,
+            textLink: U,
             position: "right",
             alignmentStrategy: "edge",
             align: "top",

@@ -15,8 +15,8 @@ var i = n(477900),
     A = n(834730),
     p = n(821609),
     m = n(95477),
-    I = n(559106),
-    E = n(289873),
+    E = n(559106),
+    I = n(289873),
     S = n(320448),
     _ = n(847374),
     N = n(297264),
@@ -53,8 +53,8 @@ let b = {
         P.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE" });
     },
 };
-var V = n(49229),
-    j = n(684136),
+var j = n(49229),
+    V = n(684136),
     F = n(964486),
     G = n(793574),
     H = n(666860),
@@ -177,18 +177,18 @@ let eA = { mass: 1, tension: 320, friction: 30, clamp: !0 },
             [c, h] = l.useState(!1),
             [f, g] = l.useState(!1),
             [C, m] = l.useState(1.4),
-            I = l.useRef(1.4),
-            E = l.useRef(null),
+            E = l.useRef(1.4),
+            I = l.useRef(null),
             S = l.useRef(null),
             _ = (0, et.yh)(a) && n >= r && u,
             N = l.useCallback(() => {
-                (m(I.current),
-                    (I.current = Math.min(I.current + 2, 15)),
+                (m(E.current),
+                    (E.current = Math.min(E.current + 2, 15)),
                     h(!0),
                     g(!0),
-                    null != E.current && clearTimeout(E.current),
-                    (E.current = setTimeout(() => {
-                        (h(!1), (E.current = null));
+                    null != I.current && clearTimeout(I.current),
+                    (I.current = setTimeout(() => {
+                        (h(!1), (I.current = null));
                     }, 300)),
                     null != S.current && clearTimeout(S.current),
                     (S.current = setTimeout(() => {
@@ -197,11 +197,11 @@ let eA = { mass: 1, tension: 320, friction: 30, clamp: !0 },
             }, []);
         (l.useImperativeHandle(s, () => ({ shake: N }), [N]),
             l.useEffect(() => {
-                _ || (I.current = 1.4);
+                _ || (E.current = 1.4);
             }, [_]),
             l.useEffect(
                 () => () => {
-                    (null != E.current && clearTimeout(E.current), null != S.current && clearTimeout(S.current));
+                    (null != I.current && clearTimeout(I.current), null != S.current && clearTimeout(S.current));
                 },
                 [],
             ));
@@ -263,8 +263,8 @@ let eA = { mass: 1, tension: 320, friction: 30, clamp: !0 },
         );
     };
 var em = n(683063),
-    eI = n(84327);
-function eE(e) {
+    eE = n(84327);
+function eI(e) {
     let { memberCount: t, recipientLimit: n } = e,
         l = (0, et.qH)(),
         r = (0, o.bG)([eg.Ay], () => eg.Ay.useReducedMotion),
@@ -272,19 +272,19 @@ function eE(e) {
         a = t > en.wLU,
         u = er.intl.formatToPlainString(er.t["9EQix0"], { numMembers: t, maxMemberLimit: n }),
         d = (0, i.jsx)("span", {
-            className: ed()(eI.hJ, { [eI.VN]: r }),
+            className: ed()(eE.hJ, { [eE.VN]: r }),
             children: s
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(q.t, {
                               size: "xxs",
                               color: "currentColor",
-                              className: ed()(eI.cn, { [eI.fw]: a }),
+                              className: ed()(eE.cn, { [eE.fw]: a }),
                               "aria-hidden": !0,
                           }),
                           (0, i.jsx)(A.E, {
                               variant: "text-md/normal",
-                              className: ed()(eI.qz, { [eI.fw]: a }),
+                              className: ed()(eE.qz, { [eE.fw]: a }),
                               children: u,
                           }),
                       ],
@@ -296,7 +296,7 @@ function eE(e) {
                   }),
         });
     return (0, i.jsx)("div", {
-        className: eI.VA,
+        className: eE.VA,
         children: s
             ? (0, i.jsx)(em.u, {
                   title: er.intl.string(er.t.u1ilug),
@@ -403,8 +403,8 @@ var ev = n(279208),
     eU = n(958590),
     eP = n(584777),
     eb = n(763827),
-    eV = n(573163),
-    ej = n(994500),
+    ej = n(573163),
+    eV = n(994500),
     eF = n(351906),
     eG = n(957565),
     eH = n(625494),
@@ -543,7 +543,7 @@ let e8 = (0, W.Ld)(),
     e3 = "PrivateChannelRecipientsInvite",
     e4 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
 function e9(e) {
-    if (ej.A.isFriend(e)) return !0;
+    if (eV.A.isFriend(e)) return !0;
     let t = eN.default.getCurrentUser(),
         n = eN.default.getUser(e);
     return !!(t?.isStaff() && n?.isStaff());
@@ -566,7 +566,7 @@ function tn() {
 function ti(e) {
     let { channel: t, onClose: n } = e,
         l = (0, B.Ay)(t) ?? "",
-        r = (0, o.bG)([eV.Ay], () => eV.Ay.lastMessageId(t.id) ?? t.id);
+        r = (0, o.bG)([ej.Ay], () => ej.Ay.lastMessageId(t.id) ?? t.id);
     return (0, i.jsx)(f.D, {
         onClick: () => {
             ((0, eL.uh)(en.ME, t.id), n());
@@ -693,7 +693,7 @@ class ts extends l.PureComponent {
         if (null == e || !e.isDM()) return !1;
         let n = e.getRecipientId();
         if (null == n) throw Error("no recipient in DM");
-        return !ej.A.isFriend(n) && !t;
+        return !eV.A.isFriend(n) && !t;
     }
     allowNonFriendRecipientPicker() {
         return this.props.hasGuilds;
@@ -703,7 +703,7 @@ class ts extends l.PureComponent {
         if (!this.allowNonFriendRecipientPicker() || "" === t) return null;
         let i = [],
             l = [];
-        for (let t of e) ej.A.isFriend(t.user.id) ? i.push(t) : l.push(t);
+        for (let t of e) eV.A.isFriend(t.user.id) ? i.push(t) : l.push(t);
         let r = [];
         return (
             i.length > 0 && r.push({ type: "friends", results: i, showSpinner: !1 }),
@@ -846,7 +846,7 @@ class ts extends l.PureComponent {
             o = r.length > 0 || a,
             u = !1;
         for (let e of n) {
-            if (ej.A.isFriend(e)) continue;
+            if (eV.A.isFriend(e)) continue;
             let t = eN.default.getUser(e);
             if (null != t && !t.bot) {
                 u = !0;
@@ -905,7 +905,7 @@ class ts extends l.PureComponent {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     e &&
-                        (0, i.jsx)(eE, {
+                        (0, i.jsx)(eI, {
                             memberCount: this.getTotalSelectedMemberCount(),
                             recipientLimit: (0, J.A)({ useNitroCapExperiment: !0 }),
                         }),
@@ -917,10 +917,10 @@ class ts extends l.PureComponent {
         (0, i.jsx)("div", {
             className: e5.Lh,
             ref: this._mobileCloseRef,
-            children: (0, i.jsx)(I.xp, {
+            children: (0, i.jsx)(E.xp, {
                 containerRef: this._mobileCloseRef,
                 children: (0, i.jsx)("div", {
-                    children: (0, i.jsx)(j.A, { className: e5.RR, closeAction: this.props.onClose, keybind: "ESC" }),
+                    children: (0, i.jsx)(V.A, { className: e5.RR, closeAction: this.props.onClose, keybind: "ESC" }),
                 }),
             }),
         });
@@ -1007,7 +1007,7 @@ class ts extends l.PureComponent {
                 if (a >= o.results.length)
                     return (0, i.jsx)("div", {
                         className: e5.Q_,
-                        children: (0, i.jsx)(E.y, { type: E.t.SPINNING_CIRCLE, className: e5.u1 }),
+                        children: (0, i.jsx)(I.y, { type: I.t.SPINNING_CIRCLE, className: e5.u1 }),
                     });
                 let u = o.results[a];
                 if (null == u) return null;
@@ -1132,7 +1132,7 @@ class ts extends l.PureComponent {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
             let n = eN.default.getUser(e),
-                i = null != n && ej.A.getRelationshipType(n.id) === en.eA$.PENDING_OUTGOING;
+                i = null != n && eV.A.getRelationshipType(n.id) === en.eA$.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -1206,7 +1206,7 @@ class ts extends l.PureComponent {
     }
     handleAddFriend(e) {
         (this.props.onClose(),
-            V.A.sendRequest({
+            j.A.sendRequest({
                 discordTag: eT.Ay.getUserTag(e, { identifiable: "always" }),
                 context: { location: "Group DM" },
             }));
@@ -1277,7 +1277,7 @@ class ts extends l.PureComponent {
                 o = 0,
                 u = n;
             if (null != a) {
-                let i = ej.A.isFriend(t);
+                let i = eV.A.isFriend(t);
                 o = i ? 1 : 2;
                 let { collapsedSections: l } = e.state,
                     r = i ? "friends" : "serverMembers",
@@ -1486,7 +1486,7 @@ class ts extends l.PureComponent {
 function ta(e) {
     let { selectedUsers: t, channelName: n, previewIcon: l, onIconChange: r, onIconRemove: s, onChange: a } = e,
         { analyticsLocations: o } = (0, k.Ay)(G.A.NEW_GROUP_DM_INVITE_MODAL),
-        u = (0, B.Jo)(Array.from(t), eN.default, ej.A);
+        u = (0, B.Jo)(Array.from(t), eN.default, eV.A);
     return (0, i.jsxs)("div", {
         className: e5.zj,
         children: [
@@ -1518,13 +1518,13 @@ function ta(e) {
 }
 function to(e) {
     let { channel: t, onComplete: n, entryPointType: l, ...r } = e,
-        s = (0, o.cf)([eF.A, eP.A, eU.A, ew.A, ej.A], () => {
+        s = (0, o.cf)([eF.A, eP.A, eU.A, ew.A, eV.A], () => {
             let e;
             return (
                 null != t && null != (e = eU.A.getInvite(t.id)) && e.isExpired() && (e = null),
                 {
                     ...eP.A.getState(),
-                    hasFriends: ej.A.getFriendCount() > 0,
+                    hasFriends: eV.A.getFriendCount() > 0,
                     invite: e,
                     hideDiscriminator: eF.A.hidePersonalInformation,
                     hideInstantInvites: eF.A.hideInstantInvites,

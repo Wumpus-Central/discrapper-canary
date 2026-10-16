@@ -16,15 +16,15 @@ function C(e) {
         { embedId: n, className: C, style: A } = e,
         p = (0, r.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
         m = (0, h.A)(),
-        I = (0, r.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
-    t = null == m || (0, c.A)((0, d.H)(m.location)) || I !== f.Gd.PANEL ? (p?.window ?? window) : window;
-    let E = l.useRef(null),
+        E = (0, r.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
+    t = null == m || (0, c.A)((0, d.H)(m.location)) || E !== f.Gd.PANEL ? (p?.window ?? window) : window;
+    let I = l.useRef(null),
         S = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        ((0, s.I_)(n, E.current?.getBoundingClientRect() ?? null), (e = null));
+                        ((0, s.I_)(n, I.current?.getBoundingClientRect() ?? null), (e = null));
                     }));
             };
         }, [n, t]);
@@ -40,7 +40,7 @@ function C(e) {
             [S, t],
         ),
         l.useLayoutEffect(() => {
-            let e = E.current;
+            let e = I.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
@@ -53,6 +53,6 @@ function C(e) {
                 }
             );
         }, [n, S]),
-        (0, i.jsx)("div", { ref: E, style: A, className: C })
+        (0, i.jsx)("div", { ref: I, style: A, className: C })
     );
 }

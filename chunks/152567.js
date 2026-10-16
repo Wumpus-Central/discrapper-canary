@@ -15,8 +15,8 @@ var i,
     A = n(866665),
     p = n(827343),
     m = n(765671),
-    I = n(661531),
-    E = n(953727);
+    E = n(661531),
+    I = n(953727);
 function S(e) {
     let { width: t = 80, height: n = 28, color: i = "currentColor", foreground: s, ...a } = e,
         o = `pill-frame-pattern-${n}`,
@@ -28,7 +28,7 @@ function S(e) {
             );
         }, [n]);
     return (0, l.jsxs)("svg", {
-        ...(0, E.A)(a),
+        ...(0, I.A)(a),
         width: t,
         height: n,
         viewBox: `0 0 ${t} ${n}`,
@@ -55,8 +55,8 @@ function y(e) {
             notchBackground: t,
             progress: n,
             size: i = "md",
-            gradientStart: s = I.A.unsafe_rawColors.YELLOW_260.css,
-            gradientEnd: o = I.A.unsafe_rawColors.GREEN_360.css,
+            gradientStart: s = E.A.unsafe_rawColors.YELLOW_260.css,
+            gradientEnd: o = E.A.unsafe_rawColors.GREEN_360.css,
             className: u,
             notchClassName: d,
             children: c,
@@ -201,11 +201,11 @@ class U extends r.PureComponent {
                 measureButtonRef: h,
                 meterOnly: p = !1,
                 containerClassName: m,
-                helpText: I,
+                helpText: E,
             } = this.props,
-            { isMicTesting: E, volume: S, isDetectingInput: _ } = this.state,
-            N = e && !E ? O.intl.string(O.t["9viE2A"]) : null;
-        E && e && !d && this._micTestStop();
+            { isMicTesting: I, volume: S, isDetectingInput: _ } = this.state,
+            N = e && !I ? O.intl.string(O.t["9viE2A"]) : null;
+        I && e && !d && this._micTestStop();
         let T = s.length >= r.length ? s : r;
         return (0, l.jsxs)("div", {
             className: a()(w.kL, m),
@@ -238,7 +238,7 @@ class U extends r.PureComponent {
                                                 children: (0, l.jsx)(C.$, {
                                                     size: u,
                                                     variant: o,
-                                                    text: E ? s : r,
+                                                    text: I ? s : r,
                                                     onClick: this.handleToggleMicTest,
                                                     fullWidth: !0,
                                                 }),
@@ -247,7 +247,7 @@ class U extends r.PureComponent {
                                     ],
                                 }),
                             (0, l.jsx)(y, {
-                                progress: E || p ? S + 100 : 0,
+                                progress: I || p ? S + 100 : 0,
                                 notchBackground: i,
                                 notchClassName: this.props.notchClassName,
                                 size: u,
@@ -256,12 +256,12 @@ class U extends r.PureComponent {
                         ],
                     }),
                 }),
-                null != I &&
+                null != E &&
                     (0, l.jsx)(f.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
-                        style: { visibility: E && !_ ? "hidden" : "visible" },
-                        children: I,
+                        style: { visibility: I && !_ ? "hidden" : "visible" },
+                        children: E,
                     }),
             ],
         });

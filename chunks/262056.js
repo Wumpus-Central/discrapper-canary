@@ -1,4 +1,4 @@
-r.d(t, { A: () => E, W: () => d });
+r.d(t, { A: () => p, W: () => d });
 var n = r(477900);
 r(582128);
 var l = r(503698),
@@ -14,8 +14,8 @@ let c = 2 * Math.PI * 57,
 function m(e) {
     return `${60 + 57 * Math.cos(e)} ${60 + 57 * Math.sin(e)}`;
 }
-let E = function (e) {
-    let { current: t, target: r, progressColor: l = d, segmentGap: E = 4, children: p } = e,
+let p = function (e) {
+    let { current: t, target: r, progressColor: l = d, segmentGap: p = 4, children: E } = e,
         _ = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
         C = Math.round(r);
     if (C > 1 && C <= 12) {
@@ -23,11 +23,11 @@ let E = function (e) {
         return (0, n.jsxs)("div", {
             className: u.iE,
             children: [
-                p,
+                E,
                 (0, n.jsx)("svg", {
                     className: u.hN,
                     viewBox: "0 0 120 120",
-                    children: ((e = E / 60),
+                    children: ((e = p / 60),
                     (r = (0, a.clamp)(Math.floor(t), 0, C)),
                     (i = (2 * Math.PI) / C),
                     Array.from({ length: C }, (t, n) => {
@@ -61,7 +61,7 @@ let E = function (e) {
     return (0, n.jsxs)("div", {
         className: u.iE,
         children: [
-            p,
+            E,
             (0, n.jsxs)("svg", {
                 className: u.hN,
                 viewBox: "0 0 120 120",

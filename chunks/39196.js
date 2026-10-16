@@ -14,14 +14,14 @@ function u(e, t, r, l) {
         h = o(e, t);
     if (null == e || null == h) return t;
     let m = (0, i.Q7)(h, r),
-        E = {
+        p = {
             locale: l,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
             helpCenterId: h.shared.helpCenter?.id,
         },
-        p = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, E)) : t.title,
-        _ = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, E)) : t.summary,
+        E = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, p)) : t.title,
+        _ = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, p)) : t.summary,
         C =
             null != m
                 ? ((u = m.rewardStates),
@@ -31,7 +31,7 @@ function u(e, t, r, l) {
                 : void 0;
     return {
         ...t,
-        title: p,
+        title: E,
         summary: _,
         heroBannerUrl: C ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,

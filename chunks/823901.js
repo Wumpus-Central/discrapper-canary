@@ -1,4 +1,4 @@
-n.d(t, { y: () => A });
+n.d(t, { y: () => _ });
 var o = n(477900),
     l = n(877624),
     a = n(17928),
@@ -11,16 +11,16 @@ var o = n(477900),
     c = n(652215),
     b = n(105292),
     m = n(971656);
-function A(e) {
+function _(e) {
     let { markAsDismissed: t, className: n } = e,
-        { analyticsLocations: A } = (0, d.Ay)(),
-        _ = (0, a.bG)([u.A], () => {
+        { analyticsLocations: _ } = (0, d.Ay)(),
+        A = (0, a.bG)([u.A], () => {
             let e = u.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         });
-    return null == _
+    return null == A
         ? null
         : (0, o.jsxs)(r.$T, {
               color: r.Hv.PREMIUM_TIER_2,
@@ -37,13 +37,13 @@ function A(e) {
                       color: "currentColor",
                       className: m.ez,
                   }),
-                  _.body,
+                  A.body,
                   (0, o.jsx)(r.Z_, {
                       onClick: () => {
                           (0, s.A)({
                               isGift: !0,
                               initialPlanId: null,
-                              analyticsLocations: A,
+                              analyticsLocations: _,
                               analyticsLocation: c.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
                               analyticsObject: { page: c.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
                           });

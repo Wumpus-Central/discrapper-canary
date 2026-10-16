@@ -1,4 +1,4 @@
-r.d(t, { N0: () => _, lC: () => E, uS: () => p });
+r.d(t, { N0: () => _, lC: () => p, uS: () => E });
 var n = r(582128),
     l = r(17928),
     s = r(793574),
@@ -11,7 +11,7 @@ var n = r(582128),
     g = r(758836),
     h = r(652215),
     m = r(202541);
-function E(e) {
+function p(e) {
     let { analyticsSource: t, analyticsLocations: r } = (0, l.cf)([d.A], () => d.A.getAnalytics()),
         n = (function (e) {
             switch (e) {
@@ -46,9 +46,9 @@ function E(e) {
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...r, s.A.COLLECTIBLES_SHOP, n]);
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
-function p(e, t, r, l) {
+function E(e, t, r, l) {
     let { sourceButton: s, enabled: a = !0 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = E(t);
+        { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = p(t);
     n.useEffect(() => {
         if (!a || l !== g.Pf.VISIBLE || d !== c) return;
         let n = t === g.G2.CATALOG ? s : o;
@@ -62,7 +62,7 @@ function p(e, t, r, l) {
     }, [i, e, t, r, c, l, s, o, d, a]);
 }
 function _(e, t) {
-    let { analyticsLocations: r } = E(e);
+    let { analyticsLocations: r } = p(e);
     n.useEffect(() => {
         null == t ||
             c.Ay.canUseCollectibles(t) ||

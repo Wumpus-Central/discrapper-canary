@@ -30,8 +30,8 @@ var C = l(395856),
     I = l(561769),
     N = l(929283),
     A = l(758836),
-    R = l(652215),
-    k = l(171934);
+    k = l(652215),
+    R = l(171934);
 let T = [],
     L = [
         "1212569433839636530",
@@ -66,9 +66,9 @@ function O(e, t, l) {
 function M(e) {
     let { config: t, baseLeft: l, transitioning: s, item: i } = e;
     return (0, n.jsx)("div", {
-        className: k.LY,
+        className: R.LY,
         style: O(t, l, s),
-        children: (0, n.jsx)(N.i, { item: i, className: k.my }),
+        children: (0, n.jsx)(N.i, { item: i, className: R.my }),
     });
 }
 function D(e) {
@@ -79,7 +79,7 @@ function D(e) {
         g = (0, j.Mk)()?.tab,
         h = (0, _.uM)(),
         b = s.useCallback(() => {
-            p.default.track(R.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            p.default.track(k.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: h?.sessionId,
                 sku_id: r.skuId,
                 page_type: g,
@@ -92,12 +92,12 @@ function D(e) {
         v = (0, I.ql)(r, x.A.COLLECTIBLES_SHOP_TRANSITION_JUMBLE_ITEM, b);
     return (0, n.jsx)("div", {
         ref: u,
-        className: k.LY,
+        className: R.LY,
         style: O(t, l, i),
         children: (0, n.jsx)(d.D, {
             onClick: v,
             "aria-label": (0, y.s7)(r),
-            children: (0, n.jsx)(N.i, { item: a, className: k.my, user: o, isHighlighted: m }),
+            children: (0, n.jsx)(N.i, { item: a, className: R.my, user: o, isHighlighted: m }),
         }),
     });
 }
@@ -135,7 +135,7 @@ function P(e) {
         p = s.useMemo(() => ({ standalonePreview: d }), [d]);
     return (0, n.jsx)("div", {
         ref: i,
-        className: r()(k.rA, { [k.Kb]: t }),
+        className: r()(R.rA, { [R.Kb]: t }),
         children: (0, n.jsx)(I.v3.Provider, {
             value: p,
             children: (0, n.jsx)(m.g.Provider, {
@@ -164,7 +164,7 @@ function P(e) {
     });
 }
 function B() {
-    return (0, n.jsx)("div", { className: r()(k.I2, k.F$) });
+    return (0, n.jsx)("div", { className: r()(R.I2, R.F$) });
 }
 function H(e) {
     let { isVisible: t, transitioning: l } = e,
@@ -172,7 +172,7 @@ function H(e) {
     return (0, n.jsx)(g.xp, {
         containerRef: i,
         children: (0, n.jsx)("div", {
-            className: r()(k.I2, k.MU),
+            className: r()(R.I2, R.MU),
             ref: i,
             children: (0, n.jsx)(P, { peaking: t, transitioning: l }),
         }),

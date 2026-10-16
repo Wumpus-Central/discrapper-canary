@@ -5,15 +5,15 @@ var t = r(991690),
     u = r(754027),
     a = r(636401),
     o = r(90924),
-    c = r(216132),
-    A = r(901092),
+    A = r(216132),
+    c = r(901092),
     p = r(652215);
 function d(e) {
     if (((0, o.lG)(e.transport), (0, o.D2)(e.application), !(0, i.D)(e.application)))
         throw new a.A({ errorCode: p.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "This application cannot access this API");
-    if (!(0, A.A)(e)) throw new a.A({ errorCode: p.Lw6.INVALID_COMMAND }, "command requires an embedded app frame");
+    if (!(0, c.A)(e)) throw new a.A({ errorCode: p.Lw6.INVALID_COMMAND }, "command requires an embedded app frame");
     let n = (function (e) {
-        let n = (0, c.A)(e);
+        let n = (0, A.A)(e);
         if (null == n || n.applicationId !== e.application.id) return null;
         let r = n.applicationId === l.A.getBuilderPreviewApplicationId() || n.data.runsInBackground;
         switch (n.surface.type) {

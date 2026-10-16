@@ -15,8 +15,8 @@ var i = n(477900),
     A = n(844981),
     p = n(486487),
     m = n(110027),
-    I = n(298242),
-    E = n(192820),
+    E = n(298242),
+    I = n(192820),
     S = n(763827),
     _ = n(532624),
     N = n(152567);
@@ -63,8 +63,8 @@ function O(e) {
             renderInputProfiles: U = !1,
             renderOutputDevices: P = !1,
             renderOutputVolume: b = !1,
-            renderInputDevices: V = !1,
-            renderInputVolume: j = !1,
+            renderInputDevices: j = !1,
+            renderInputVolume: V = !1,
             maybeRenderInputMeter: F = !1,
             renderSettingsButton: G = !1,
             maybeRenderSpatialAudioCheckbox: H = !1,
@@ -78,18 +78,18 @@ function O(e) {
     let Z = (0, M.A)(t),
         B = (0, g.H)({ deviceType: L.oh.AUDIO_INPUT, analyticsLocations: k, asSubmenu: !0 }),
         W = (0, g.H)({ deviceType: L.oh.AUDIO_OUTPUT, analyticsLocations: k, asSubmenu: !0 }),
-        Y = (0, s.bG)([E.Ay], () => E.Ay.getActiveInputProfile()),
+        Y = (0, s.bG)([I.Ay], () => I.Ay.getActiveInputProfile()),
         z = (0, m.A)(k),
         J = (0, p.A)(k),
-        K = (0, I.A)(k),
+        K = (0, E.A)(k),
         $ = a.x.DEFAULT,
-        q = E.Ay.isSelfDeaf($),
+        q = I.Ay.isSelfDeaf($),
         X = (0, A.Ay)("AudioDeviceMenu"),
         Q = (0, s.bG)([C.A], () => C.A.isSpatialAudioEnabled()),
-        ee = (0, s.bG)([E.Ay], () => E.Ay.getMode()),
+        ee = (0, s.bG)([I.Ay], () => I.Ay.getMode()),
         et = ee === v.TBI.VOICE_ACTIVITY ? v.TBI.PUSH_TO_TALK : v.TBI.VOICE_ACTIVITY,
-        en = (0, s.bG)([E.Ay, _.Ay], () => {
-            let e = E.Ay.getModeOptions().shortcut?.length > 0,
+        en = (0, s.bG)([I.Ay, _.Ay], () => {
+            let e = I.Ay.getModeOptions().shortcut?.length > 0,
                 t = null != _.Ay.getKeybindForAction(v.hCu.PUSH_TO_TALK, !1, !0),
                 n = null != _.Ay.getKeybindForAction(v.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
             return e || t || n;
@@ -107,10 +107,10 @@ function O(e) {
             "aria-label": x.intl.string(x.t.ZR1Ss6),
             className: R.MK,
             children: [
-                (0, i.jsxs)(u.rX, { children: [V && B, U && z, P && W] }),
+                (0, i.jsxs)(u.rX, { children: [j && B, U && z, P && W] }),
                 (0, i.jsxs)(u.rX, {
                     children: [
-                        j && J,
+                        V && J,
                         F &&
                             ei &&
                             (0, i.jsx)(u.aK, {
