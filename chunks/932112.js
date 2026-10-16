@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640803, Version Hash: 2ac77949575849a7c358ff658d990a2ec11ad490`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640809, Version Hash: b41a35ed9fa056ee949fed53176b6297d2b29de9`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -3207,6 +3207,7 @@ let rh = (0, i8.Fe)({
                 n.e("775951"),
                 n.e("805197"),
                 n.e("307120"),
+                n.e("469770"),
                 n.e("709204"),
                 n.e("739848"),
                 n.e("866335"),
@@ -3443,6 +3444,7 @@ let rh = (0, i8.Fe)({
                 n.e("805197"),
                 n.e("307120"),
                 n.e("649351"),
+                n.e("469770"),
                 n.e("709204"),
                 n.e("777848"),
                 n.e("739848"),
@@ -23498,6 +23500,7 @@ function OV(e) {
                     n.e("805197"),
                     n.e("307120"),
                     n.e("649351"),
+                    n.e("469770"),
                     n.e("709204"),
                     n.e("777848"),
                     n.e("739848"),
@@ -25631,7 +25634,7 @@ let ye = "isHideDevBanner",
                     className: tE()(L9.Wz, L9.mr),
                     children: [
                         (0, M.jsx)(L8, { className: L9.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640803" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640809" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -35803,6 +35806,7 @@ let Mq = (0, i8.Fe)({
                 n.e("805197"),
                 n.e("307120"),
                 n.e("649351"),
+                n.e("469770"),
                 n.e("709204"),
                 n.e("777848"),
                 n.e("739848"),

@@ -247,13 +247,22 @@
 }
 
 .featuredBlockBadge__08415 {
-    background-color: var(--white);
-    color: var(--black);
     inset-inline-start: 24px;
     position: absolute;
-    top: 32px;
+    top: 32px
+}
+
+.featuredBlockTextBadge__08415 {
+    background-color: var(--white);
+    color: var(--black);
     width: -moz-fit-content;
     width: fit-content
+}
+
+.iconTextBadge__08415 {
+    align-items: center;
+    display: inline-flex;
+    gap: 4px
 }
 
 .featuredBlockButtonContainer__08415 {
@@ -831,4 +840,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=e280c09c9478512d.css.map*/
+/*# sourceMappingURL=892198ce741334a3.css.map*/

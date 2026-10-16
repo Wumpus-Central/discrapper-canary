@@ -1,4 +1,4 @@
-r.d(t, { S: () => u, T: () => o });
+r.d(t, { ST: () => u, TI: () => o, ty: () => c });
 var n = r(17928),
     l = r(918467),
     s = r(223311),
@@ -14,4 +14,8 @@ function o() {
 }
 function u() {
     return o().promotion;
+}
+function c(e) {
+    let t = u();
+    return null == t || (0, a.XF)(t)?.collectionId !== e || (null != t.endsAt && t.endsAt <= new Date()) ? null : t;
 }
