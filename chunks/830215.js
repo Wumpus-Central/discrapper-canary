@@ -401,6 +401,7 @@ let D = {
                           (d.h.dispatch({
                               type: "SET_LOCATION_METADATA",
                               countryCode: e?.body?.country_code ?? void 0,
+                              minimumAge: e?.body?.minimum_age ?? void 0,
                           }),
                           (O = null),
                           e?.body?.promotional_email_opt_in != null)

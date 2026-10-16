@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640968, Version Hash: 7b7a55b9d569e76d0d0804a53de20cca6f015a4f`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640975, Version Hash: f12a43d6704cacc0017b08c901b235a15455a2f5`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25561,7 +25561,7 @@ let L3 = "isHideDevBanner",
                     className: tE()(L2.Wz, L2.mr),
                     children: [
                         (0, M.jsx)(L1, { className: L2.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640968" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640975" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -55615,8 +55615,8 @@ let YR = (0, i8.Fe)({
                 n.e("117321"),
                 n.e("993265"),
                 n.e("786142"),
-            ]).then(n.bind(n, 818444)),
-        webpackId: 818444,
+            ]).then(n.bind(n, 56989)),
+        webpackId: 56989,
         name: "ViewsWithAuth",
     }),
     YG = (0, i8.Fe)({

@@ -1,16 +1,33 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(73153),
     a = n(423764);
-let s = null;
-function l(e) {
-    let { countryCode: t } = e;
-    null != t && (s = (0, a.XF)(t) ?? (0, a.rE)());
+let s = null,
+    l = null;
+function o(e) {
+    return null != e && ((s = (0, a.XF)(e) ?? (0, a.rE)()), !0);
 }
-class o extends i.Ay.Store {
+class d extends i.Ay.Store {
     static displayName = "LocationMetadataStore";
     getCountryCode() {
         return s;
     }
+    getMinimumAge() {
+        return l;
+    }
 }
-let d = new o(r.h, { CONNECTION_OPEN: l, SET_LOCATION_METADATA: l });
+let c = new d(r.h, {
+    CONNECTION_OPEN: function (e) {
+        let { countryCode: t } = e;
+        return o(t);
+    },
+    SET_LOCATION_METADATA: function (e) {
+        let { countryCode: t, minimumAge: n } = e,
+            i = o(t),
+            r = n ?? null;
+        return r === l ? i : ((l = r), !0);
+    },
+    LOGOUT: function () {
+        return null != l && ((l = null), !0);
+    },
+});
