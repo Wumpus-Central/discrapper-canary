@@ -1,4 +1,4 @@
-(r.d(e, { A: () => d }), r(321073), r(435558));
+(r.d(e, { A: () => h }), r(321073), r(435558));
 var i = r(17928),
     a = r(73153),
     _ = r(403362),
@@ -31,7 +31,7 @@ class D extends i.Ay.Store {
         return t === o.Iq ? s.intl.string(s.t.Ym2Ri6) : p[t];
     }
 }
-let d = new D(a.h, {
+let h = new D(a.h, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (t) {
         let e,
             { categories: r, locale: i } = t,

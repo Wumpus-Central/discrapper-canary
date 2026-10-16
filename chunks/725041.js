@@ -1,10 +1,10 @@
-n.d(t, { J: () => I, default: () => S });
+n.d(t, { J: () => S, default: () => y });
 var l = n(477900),
     r = n(582128),
     i = n(17928),
     a = n(331322),
-    s = n(834730),
-    u = n(772707),
+    u = n(834730),
+    s = n(772707),
     c = n(93675),
     d = n(902478),
     o = n(663417),
@@ -15,52 +15,52 @@ var l = n(477900),
     E = n(967198),
     p = n(202762),
     x = n(593673),
-    A = n(652215),
-    C = n(49999),
+    C = n(652215),
+    A = n(49999),
     _ = n(104129),
     v = n(105292),
-    y = n(636531);
-let I = "GUILD_SPACE_NUX_MODAL";
+    I = n(636531);
+let S = "GUILD_SPACE_NUX_MODAL";
 function b(e) {
     let { icon: t, title: n, description: r } = e;
     return (0, l.jsxs)(a.B, {
         direction: "horizontal",
         gap: 12,
         children: [
-            (0, l.jsx)("div", { className: y.z, children: t }),
+            (0, l.jsx)("div", { className: I.z, children: t }),
             (0, l.jsxs)(a.B, {
                 gap: 0,
                 children: [
-                    (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-strong", children: n }),
-                    (0, l.jsx)(s.E, { variant: "text-sm/normal", color: "text-subtle", children: r }),
+                    (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-strong", children: n }),
+                    (0, l.jsx)(u.E, { variant: "text-sm/normal", color: "text-subtle", children: r }),
                 ],
             }),
         ],
     });
 }
-function S(e) {
-    let { guildId: t, markAsDismissed: n, transitionState: s, onClose: y } = e,
-        I = (0, i.bG)([E.A], () => E.A.getGuildId()),
-        S = (0, i.bG)([h.A], () => h.A.getGuild(t)?.guildSpaceSettings?.publish_status === x.B.PUBLISHED, [t]),
-        D = r.useRef(I === t);
+function y(e) {
+    let { guildId: t, markAsDismissed: n, transitionState: u, onClose: I } = e,
+        S = (0, i.bG)([E.A], () => E.A.getGuildId()),
+        y = (0, i.bG)([h.A], () => h.A.getGuild(t)?.guildSpaceSettings?.publish_status === x.B.PUBLISHED, [t]),
+        D = r.useRef(S === t);
     ((0, g.Ay)(() => {
-        D.current && n(C.i.AUTO_DISMISS);
+        D.current && n(A.i.AUTO_DISMISS);
     }),
         r.useEffect(() => {
-            I !== t && y();
-        }, [t, y, I]));
+            S !== t && I();
+        }, [t, I, S]));
     let j = r.useCallback(async () => {
-            ((0, p.Wd)(t), await y());
-        }, [t, y]),
+            ((0, p.Wd)(t), await I());
+        }, [t, I]),
         G = r.useCallback(async () => {
-            (m.A.open(t, A.BEX.ENGAGEMENT, void 0, A.nd0.ENGAGEMENT_GUILD_SPACE), await y());
-        }, [t, y]);
-    return I !== t
+            (m.A.open(t, C.BEX.ENGAGEMENT, void 0, C.nd0.ENGAGEMENT_GUILD_SPACE), await I());
+        }, [t, I]);
+    return S !== t
         ? null
-        : (0, l.jsx)(u.k, {
+        : (0, l.jsx)(s.k, {
               size: "md",
-              transitionState: s,
-              onClose: y,
+              transitionState: u,
+              onClose: I,
               gradientColor: "blue",
               graphic: {
                   type: "rive",
@@ -71,7 +71,7 @@ function S(e) {
               title: v.intl.string(_.default.x9aorn),
               subtitle: v.intl.string(_.default.HXmZlY),
               actions: [
-                  ...(S ? [{ text: v.intl.string(v.t["154/bL"]), variant: "secondary", onClick: G }] : []),
+                  ...(y ? [{ text: v.intl.string(v.t["154/bL"]), variant: "secondary", onClick: G }] : []),
                   { text: v.intl.string(_.default["/Ld1Ju"]), variant: "secondary", onClick: j },
               ],
               children: (0, l.jsxs)(a.B, {
@@ -87,7 +87,7 @@ function S(e) {
                           title: v.intl.string(_.default.OTYC2K),
                           description: v.intl.string(_.default.aQUPiQ),
                       }),
-                      S
+                      y
                           ? (0, l.jsx)(b, {
                                 icon: (0, l.jsx)(f.M, { size: "sm", color: "currentColor" }),
                                 title: v.intl.string(_.default.GMgGSC),

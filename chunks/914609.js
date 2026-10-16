@@ -1,119 +1,119 @@
-t.d(n, { A: () => O, J: () => P });
-var a = t(477900),
-    l = t(582128),
-    r = t(793169),
-    i = t(62617);
+n.d(t, { A: () => O, J: () => k });
+var l = n(477900),
+    a = n(582128),
+    r = n(793169),
+    i = n(62617);
 let s =
         "https://cdn.discordapp.com/assets/content/b68abdf7f0b79c135850ee225775b37bc5c0dacfb9b590bc3f1ea58db9cc936d.png",
     o = `${s} 1x, https://cdn.discordapp.com/assets/content/5809f70341bbef0e0ecb3f843e543908271bdf63dfb95ef89e61d9db1c84d1e9.png 2x, https://cdn.discordapp.com/assets/content/3a44b1a9c01ae23b5f8363cd164a8ca92a10d5170d80e89f2727b2a52a8a246e.png 3x`;
-function d(e) {
-    let { alt: n, ariaLabel: t, ariaHidden: r, role: d, width: u, height: c, className: f, style: g } = e,
-        m = l.useMemo(
-            () => (0, i.H)({ width: u, height: c, intrinsicWidth: 24, intrinsicHeight: 24, style: g }),
-            [u, c, g],
+function u(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: r, role: u, width: d, height: c, className: f, style: g } = e,
+        m = a.useMemo(
+            () => (0, i.H)({ width: d, height: c, intrinsicWidth: 24, intrinsicHeight: 24, style: g }),
+            [d, c, g],
         );
-    return (0, a.jsx)("img", {
+    return (0, l.jsx)("img", {
         style: m,
         src: s,
         srcSet: o,
         className: (0, i.Z)(f),
-        alt: n,
-        "aria-label": t,
+        alt: t,
+        "aria-label": n,
         "aria-hidden": r,
-        role: d ?? "img",
+        role: u ?? "img",
     });
 }
-var u = t(846058),
-    c = t(17928),
-    f = t(297264),
-    g = t(834730),
-    m = t(821609),
-    A = t(922016),
-    b = t(939249),
-    E = t(964486),
-    p = t(421773),
-    h = t(378570),
-    S = t(309010),
-    _ = t(287809),
-    y = t(174459),
-    D = t(562153),
-    R = t(49303),
-    x = t(313627),
-    v = t(251812),
-    M = t(927813),
-    N = t(518782),
-    T = t(104129),
-    w = t(105292),
-    C = t(32090),
-    G = t(652215),
-    L = t(746080),
-    j = t(631949),
-    I = t(318626);
-function k(e) {
-    let { variant: n, isStreak: t, placement: l } = e,
-        i = "leader" === n ? r.t : t ? d : u.b,
-        s = "badge" === l ? 16 : 48;
-    return (0, a.jsx)(i, { width: s, height: s, alt: "", ariaHidden: !0 });
-}
+var d = n(846058),
+    c = n(17928),
+    f = n(297264),
+    g = n(834730),
+    m = n(821609),
+    A = n(922016),
+    p = n(939249),
+    E = n(964486),
+    h = n(421773),
+    b = n(378570),
+    _ = n(309010),
+    S = n(287809),
+    y = n(174459),
+    R = n(562153),
+    x = n(49303),
+    D = n(313627),
+    M = n(251812),
+    v = n(927813),
+    N = n(518782),
+    T = n(104129),
+    w = n(105292),
+    G = n(32090),
+    I = n(652215),
+    L = n(746080),
+    C = n(631949),
+    j = n(318626);
 function H(e) {
+    let { variant: t, isStreak: n, placement: a } = e,
+        i = "leader" === t ? r.t : n ? u : d.b,
+        s = "badge" === a ? 16 : 48;
+    return (0, l.jsx)(i, { width: s, height: s, alt: "", ariaHidden: !0 });
+}
+function P(e) {
     let {
-            guildId: n,
-            userId: t,
-            onClose: l,
+            guildId: t,
+            userId: n,
+            onClose: a,
             onMouseEnter: r,
             onMouseLeave: i,
             variant: s,
             isStreak: o,
-            statName: d,
-            title: u,
+            statName: u,
+            title: d,
             detailText: A,
         } = e,
-        b = (0, c.bG)([S.Ay], () => S.Ay.getChannelId(n)),
-        p = (0, c.bG)([_.default], () => _.default.getUser(t)),
-        v = D.Ay.useName(n, b, p),
-        M = (0, x.Uq)(n, "LeaderboardWinnerBadgePopout"),
+        p = (0, c.bG)([_.Ay], () => _.Ay.getChannelId(t)),
+        h = (0, c.bG)([S.default], () => S.default.getUser(n)),
+        M = R.Ay.useName(t, p, h),
+        v = (0, D.Uq)(t, "LeaderboardWinnerBadgePopout"),
         N = "winner" === s ? "Leaderboard Winner Badge Popout" : "Leaderboard Leader Badge Popout";
     (0, E.Ay)(() => {
-        y.default.track(G.HAw.OPEN_POPOUT, { type: N, guild_id: n, channel_id: b });
+        y.default.track(I.HAw.OPEN_POPOUT, { type: N, guild_id: t, channel_id: p });
     });
-    let C =
+    let G =
         "winner" === s
-            ? w.intl.formatToPlainString(w.t["LRh/OJ"], { username: v, statName: d })
-            : w.intl.formatToPlainString(T.default.HervnJ, { username: v, statName: d });
-    return (0, a.jsxs)("div", {
+            ? w.intl.formatToPlainString(w.t["LRh/OJ"], { username: M, statName: u })
+            : w.intl.formatToPlainString(T.default.HervnJ, { username: M, statName: u });
+    return (0, l.jsxs)("div", {
         role: "dialog",
-        "aria-label": C,
-        className: j.Nr,
+        "aria-label": G,
+        className: C.Nr,
         onMouseEnter: r,
         onMouseLeave: i,
         children: [
-            (0, a.jsxs)("div", {
-                className: j.rb,
+            (0, l.jsxs)("div", {
+                className: C.rb,
                 children: [
-                    (0, a.jsx)(k, { variant: s, isStreak: o, placement: "card" }),
-                    (0, a.jsxs)("div", {
-                        className: j.C,
+                    (0, l.jsx)(H, { variant: s, isStreak: o, placement: "card" }),
+                    (0, l.jsxs)("div", {
+                        className: C.C,
                         children: [
-                            (0, a.jsx)(f.D, { variant: "heading-md/semibold", children: u }),
+                            (0, l.jsx)(f.D, { variant: "heading-md/semibold", children: d }),
                             null != A
-                                ? (0, a.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: A })
+                                ? (0, l.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: A })
                                 : null,
                         ],
                     }),
                 ],
             }),
-            M
-                ? (0, a.jsx)("div", {
+            v
+                ? (0, l.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
-                      children: (0, a.jsx)(m.$, {
+                      children: (0, l.jsx)(m.$, {
                           variant: "secondary",
                           size: "sm",
                           text: w.intl.string(T.default.npZ6IB),
                           fullWidth: !0,
                           onClick: function () {
-                              (l(),
-                                  (0, R.jb)(n, "winner" === s ? R.Rk.WINNER_BADGE : R.Rk.LEADER_BADGE),
-                                  (0, h.vn)(n, L.VV.GUILD_SPACE, { source: N }));
+                              (a(),
+                                  (0, x.jb)(t, "winner" === s ? x.Rk.WINNER_BADGE : x.Rk.LEADER_BADGE),
+                                  (0, b.vn)(t, L.VV.GUILD_SPACE, { source: N }));
                           },
                       }),
                   })
@@ -121,53 +121,53 @@ function H(e) {
         ],
     });
 }
-function P(e) {
-    let { guildId: n, userId: t, winnerData: r, leaderData: i } = e,
-        s = l.useRef(null),
-        { isHovered: o, setIsHovered: d, onMouseEnter: u, onMouseLeave: c, cancelTimers: f } = (0, p.A)(200, 100),
-        g = l.useCallback(() => {
-            (f(), d(!1));
-        }, [f, d]),
-        m = l.useCallback(
+function k(e) {
+    let { guildId: t, userId: n, winnerData: r, leaderData: i } = e,
+        s = a.useRef(null),
+        { isHovered: o, setIsHovered: u, onMouseEnter: d, onMouseLeave: c, cancelTimers: f } = (0, h.A)(200, 100),
+        g = a.useCallback(() => {
+            (f(), u(!1));
+        }, [f, u]),
+        m = a.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), f(), d(!o));
+                (e.preventDefault(), e.stopPropagation(), f(), u(!o));
             },
-            [f, o, d],
+            [f, o, u],
         ),
-        E = (function (e, n) {
+        E = (function (e, t) {
             if (null != e) {
-                let n = (0, v.K)(e.winningStat).name,
-                    t = (e.winningStreak ?? 0) > 1;
+                let t = (0, M.K)(e.winningStat).name,
+                    n = (e.winningStreak ?? 0) > 1;
                 return {
                     variant: "winner",
-                    isStreak: t,
-                    statName: n,
-                    title: t ? w.intl.string(T.default["/Z2sDF"]) : n,
+                    isStreak: n,
+                    statName: t,
+                    title: n ? w.intl.string(T.default["/Z2sDF"]) : t,
                     detailText: (function (e) {
-                        let n = e.winningStreak ?? 0;
-                        if (n > 1) return w.intl.formatToPlainString(T.default["ZCFDN+"], { streakCount: n });
-                        let t = e.winningValue;
-                        if (null == t || !Number.isFinite(t) || t < 0) return null;
+                        let t = e.winningStreak ?? 0;
+                        if (t > 1) return w.intl.formatToPlainString(T.default["ZCFDN+"], { streakCount: t });
+                        let n = e.winningValue;
+                        if (null == n || !Number.isFinite(n) || n < 0) return null;
                         switch (e.winningStat) {
                             case N.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
-                                let e = Math.floor(t / M.A.Millis.MINUTE),
-                                    n = Math.floor(e / M.A.Minutes.HOUR),
-                                    a = e % M.A.Minutes.HOUR;
-                                if (0 === n) return w.intl.formatToPlainString(T.default["/272et"], { minutes: a });
-                                return w.intl.formatToPlainString(T.default.GC7N5H, { hours: n, minutes: a });
+                                let e = Math.floor(n / v.A.Millis.MINUTE),
+                                    t = Math.floor(e / v.A.Minutes.HOUR),
+                                    l = e % v.A.Minutes.HOUR;
+                                if (0 === t) return w.intl.formatToPlainString(T.default["/272et"], { minutes: l });
+                                return w.intl.formatToPlainString(T.default.GC7N5H, { hours: t, minutes: l });
                             }
                             case N.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
-                                return w.intl.formatToPlainString(T.default.IXdbVJ, { days: t });
+                                return w.intl.formatToPlainString(T.default.IXdbVJ, { days: n });
                             case N.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
-                                return w.intl.formatToPlainString(T.default["/VAMco"], { count: t });
+                                return w.intl.formatToPlainString(T.default["/VAMco"], { count: n });
                             default:
                                 return null;
                         }
                     })(e),
                 };
             }
-            if (null != n) {
-                let e = (0, v.K)(n.currentLeaderStat).name;
+            if (null != t) {
+                let e = (0, M.K)(t.currentLeaderStat).name;
                 return {
                     variant: "leader",
                     isStreak: !1,
@@ -179,9 +179,9 @@ function P(e) {
             return null;
         })(r, i);
     if (null == E) return null;
-    let { variant: h, isStreak: S, title: _, detailText: y } = E,
-        D = null != y ? `${_}. ${y}` : _;
-    return (0, a.jsx)(A.Y, {
+    let { variant: b, isStreak: _, title: S, detailText: y } = E,
+        R = null != y ? `${S}. ${y}` : S;
+    return (0, l.jsx)(A.Y, {
         targetElementRef: s,
         animation: A.Y.Animation.TRANSLATE,
         align: "center",
@@ -191,27 +191,27 @@ function P(e) {
         shouldShow: o,
         onRequestClose: g,
         renderPopout: (e) => {
-            let { closePopout: l } = e;
-            return (0, a.jsx)(H, { guildId: n, userId: t, onClose: l, onMouseEnter: u, onMouseLeave: c, ...E });
+            let { closePopout: a } = e;
+            return (0, l.jsx)(P, { guildId: t, userId: n, onClose: a, onMouseEnter: d, onMouseLeave: c, ...E });
         },
         children: () =>
-            (0, a.jsx)(b.D, {
+            (0, l.jsx)(p.D, {
                 tag: "span",
                 innerRef: s,
-                className: I.UT,
-                "aria-label": D,
+                className: j.UT,
+                "aria-label": R,
                 "aria-haspopup": "dialog",
                 "aria-expanded": o,
                 onClick: m,
-                onMouseEnter: u,
+                onMouseEnter: d,
                 onMouseLeave: c,
-                children: (0, a.jsx)(k, { variant: h, isStreak: S, placement: "badge" }),
+                children: (0, l.jsx)(H, { variant: b, isStreak: _, placement: "badge" }),
             }),
     });
 }
 function O(e) {
-    let { guildId: n, userId: t } = e,
-        l = (0, C.Ay)(n, t),
-        r = (0, C.iW)(n, t);
-    return (0, a.jsx)(P, { guildId: n, userId: t, winnerData: l, leaderData: r });
+    let { guildId: t, userId: n } = e,
+        a = (0, G.Ay)(t, n),
+        r = (0, G.iW)(t, n);
+    return (0, l.jsx)(k, { guildId: t, userId: n, winnerData: a, leaderData: r });
 }

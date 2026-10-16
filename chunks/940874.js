@@ -1,8 +1,8 @@
 n.d(t, { Gu: () => _, NW: () => s, OA: () => h, Un: () => u, tp: () => f });
 var r = n(73153),
     o = n(975189),
-    a = n(371169),
-    i = n(385081),
+    i = n(371169),
+    a = n(385081),
     c = n(261425),
     l = n(105292);
 let s = {
@@ -23,10 +23,10 @@ let s = {
             let { projectId: n } = t;
             r.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: n, id: e.id });
         },
-        app_removed: T,
-        bot_removed: T,
-        preview_bot_removed: T,
-        app_channel_deleted: T,
+        app_removed: y,
+        bot_removed: y,
+        preview_bot_removed: y,
+        app_channel_deleted: y,
         side_reply(e, t) {
             let { projectId: n } = t;
             r.h.dispatch({
@@ -71,14 +71,14 @@ let s = {
         },
         thinking_lifecycle(e, t) {
             let { projectId: n } = t,
-                { phase: o, session: a, seq: i, ticks: c, elapsed_ms: l, text: s } = e;
+                { phase: o, session: i, seq: a, ticks: c, elapsed_ms: l, text: s } = e;
             null != o &&
-                null != i &&
                 null != a &&
+                null != i &&
                 r.h.dispatch({
                     type: "CONJURE_CHAT_THINKING_SET",
                     projectId: n,
-                    activity: { phase: o, session: a, seq: i, ticks: c ?? 0, elapsedMs: l ?? 0, text: s ?? "" },
+                    activity: { phase: o, session: i, seq: a, ticks: c ?? 0, elapsedMs: l ?? 0, text: s ?? "" },
                 });
         },
         compaction(e, t) {
@@ -216,8 +216,8 @@ let s = {
         healthcheck_failed: C,
         error: C,
     },
-    d = { location: "connection", code: i.xf.SEND_FAILED },
-    p = { location: "agent", code: i.xf.AGENT_ERROR };
+    d = { location: "connection", code: a.xf.SEND_FAILED },
+    p = { location: "agent", code: a.xf.AGENT_ERROR };
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d;
     (r.h.dispatch({
@@ -225,7 +225,7 @@ function _(e, t) {
         projectId: e,
         step: { type: "step", kind: "terminal_error", message: t },
     }),
-        (0, i.Hy)(e, { ...n, message: t }));
+        (0, a.Hy)(e, { ...n, message: t }));
 }
 function h(e, t) {
     r.h.dispatch({ type: "CONJURE_CHAT_STEP_APPEND", projectId: e, turnId: t.turn_id, step: t });
@@ -242,21 +242,21 @@ function f(e, t, n) {
 function C(e, t) {
     let { projectId: n } = t;
     (h(n, e),
-        (0, i.Hy)(n, {
-            ...y[e.kind],
+        (0, a.Hy)(n, {
+            ...T[e.kind],
             message: e.message,
             details: "build_error" === e.kind ? e.stderr_tail : void 0,
             turnId: e.turn_id,
         }));
 }
-function T(e, t) {
+function y(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
-        "app_channel_deleted" !== e.type && (0, a.GO)(n));
+        "app_channel_deleted" !== e.type && (0, i.GO)(n));
 }
-let y = {
-        build_error: { location: "build", code: i.xf.BUILD_FAILED },
-        healthcheck_failed: { location: "healthcheck", code: i.xf.HEALTHCHECK_FAILED },
-        error: { location: "agent", code: i.xf.AGENT_ERROR },
+let T = {
+        build_error: { location: "build", code: a.xf.BUILD_FAILED },
+        healthcheck_failed: { location: "healthcheck", code: a.xf.HEALTHCHECK_FAILED },
+        error: { location: "agent", code: a.xf.AGENT_ERROR },
     },
     g = { steered: !0, queued: !0, restarting: !0, answered: !0 };

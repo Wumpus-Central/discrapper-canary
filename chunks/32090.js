@@ -1,36 +1,36 @@
-t.d(n, { Ay: () => c, gj: () => g, iW: () => f });
-var a = t(17928),
-    l = t(696451),
-    r = t(927813);
+n.d(t, { Ay: () => c, gj: () => g, iW: () => f });
+var l = n(17928),
+    a = n(696451),
+    r = n(927813);
 let i = 14 * r.A.Millis.DAY,
     s = 8 * r.A.Millis.DAY;
-function o(e, n, t) {
+function o(e, t, n) {
     if (null == e) return !1;
-    let a = Date.parse(e);
-    return !isNaN(a) && t - a <= n;
-}
-function d(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-    return null != e && o(e.winningWeek, i, n) ? e : null;
+    let l = Date.parse(e);
+    return !isNaN(l) && n - l <= t;
 }
 function u(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-    return null != e && o(e.currentLeaderWeek, s, n) ? e : null;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return null != e && o(e.winningWeek, i, t) ? e : null;
 }
-function c(e, n) {
-    return (0, a.bG)([l.Ay], () => (null != e ? d(l.Ay.getMember(e, n)?.gamingLeaderboardData) : null), [e, n]);
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return null != e && o(e.currentLeaderWeek, s, t) ? e : null;
 }
-function f(e, n) {
-    return (0, a.bG)([l.Ay], () => (null != e ? u(l.Ay.getMember(e, n)?.gamingLeaderboardData) : null), [e, n]);
+function c(e, t) {
+    return (0, l.bG)([a.Ay], () => (null != e ? u(a.Ay.getMember(e, t)?.gamingLeaderboardData) : null), [e, t]);
 }
-function g(e, n) {
-    return (0, a.bG)(
-        [l.Ay],
+function f(e, t) {
+    return (0, l.bG)([a.Ay], () => (null != e ? d(a.Ay.getMember(e, t)?.gamingLeaderboardData) : null), [e, t]);
+}
+function g(e, t) {
+    return (0, l.bG)(
+        [a.Ay],
         () => {
             if (null == e) return !1;
-            let t = l.Ay.getMember(e, n)?.gamingLeaderboardData;
-            return null != d(t) || null != u(t);
+            let n = a.Ay.getMember(e, t)?.gamingLeaderboardData;
+            return null != u(n) || null != d(n);
         },
-        [e, n],
+        [e, t],
     );
 }

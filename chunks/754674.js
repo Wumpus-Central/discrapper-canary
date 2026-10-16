@@ -1,79 +1,79 @@
-function n(e, t) {
+function l(e, t) {
     return e.position.order - t.position.order;
 }
-function i(e) {
+function a(e) {
     return [
         e
             .filter((e) => {
                 let { position: t } = e;
                 return 1 !== t.column;
             })
-            .sort(n),
+            .sort(l),
         e
             .filter((e) => {
                 let { position: t } = e;
                 return 1 === t.column;
             })
-            .sort(n),
+            .sort(l),
     ];
 }
-function s(e) {
+function r(e) {
     return e.flatMap((e, t) =>
-        e.map((e, l) =>
-            e.position.column === t && e.position.order === l ? e : { ...e, position: { column: t, order: l } },
+        e.map((e, n) =>
+            e.position.column === t && e.position.order === n ? e : { ...e, position: { column: t, order: n } },
         ),
     );
 }
-function a(e) {
-    return s(i(e));
+function i(e) {
+    return r(a(e));
 }
-function r(e, t, l) {
-    let n = i(e),
-        a = n[+(l?.column === 1)],
-        r = l?.index ?? a.length;
-    return (a.splice(Math.max(0, Math.min(r, a.length)), 0, t), s(n));
+function s(e, t, n) {
+    let l = a(e),
+        i = l[+(n?.column === 1)],
+        s = n?.index ?? i.length;
+    return (i.splice(Math.max(0, Math.min(s, i.length)), 0, t), r(l));
 }
-function d(e, t, l, n) {
-    let i =
-            null == n
+function o(e, t, n, l) {
+    let a =
+            null == l
                 ? e
                 : e.filter((e) => {
                       let { id: t } = e;
-                      return t !== n;
+                      return t !== l;
                   }),
-        s = (
-            null == n
+        r = (
+            null == l
                 ? t
                 : t.filter((e) => {
                       let { id: t } = e;
-                      return t !== n;
+                      return t !== l;
                   })
-        )[l];
-    if (null == s) return i.length;
-    let a = i.findIndex((e) => {
+        )[n];
+    if (null == r) return a.length;
+    let i = a.findIndex((e) => {
         let { id: t } = e;
-        return t === s.id;
+        return t === r.id;
     });
-    return -1 === a ? i.length : a;
+    return -1 === i ? a.length : i;
 }
-function c(e, t, l, n) {
-    let a = e.find((e) => {
-        let { id: l } = e;
-        return l === t;
+function u(e, t, n, l) {
+    let i = e.find((e) => {
+        let { id: n } = e;
+        return n === t;
     });
-    if (null == a) return null;
-    let r = i(e),
-        d = [
-            r[0].filter((e) => {
-                let { id: l } = e;
-                return l !== t;
+    if (null == i) return null;
+    let s = a(e),
+        o = [
+            s[0].filter((e) => {
+                let { id: n } = e;
+                return n !== t;
             }),
-            r[1].filter((e) => {
-                let { id: l } = e;
-                return l !== t;
+            s[1].filter((e) => {
+                let { id: n } = e;
+                return n !== t;
             }),
         ],
-        c = d[+(1 === l)];
-    return (c.splice(Math.max(0, Math.min(n, c.length)), 0, a), s(d));
+        u = o[+(1 === n)];
+    return (u.splice(Math.max(0, Math.min(l, u.length)), 0, i), r(o));
 }
-l.d(t, { Gm: () => c, O6: () => d, QD: () => r, Rl: () => i, W$: () => a });
+n.d(t, { Gm: () => u, O6: () => o, QD: () => s, Rl: () => a, W$: () => i });

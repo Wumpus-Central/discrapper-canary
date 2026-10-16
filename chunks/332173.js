@@ -26,13 +26,13 @@ let m = function (e) {
             roleStyle: "username",
             animateGradient: I,
         }),
-        A = s.useCallback(
+        E = s.useCallback(
             (e) => {
                 (N(!0), j?.(e));
             },
             [N, j],
         ),
-        E = s.useCallback(
+        A = s.useCallback(
             (e) => {
                 (N(!1), g?.(e));
             },
@@ -46,8 +46,8 @@ let m = function (e) {
             innerRef: t,
             tag: "span",
             className: r()(l, { [u.i]: !0, interactive: p.onClick }),
-            onMouseEnter: A,
-            onMouseLeave: E,
+            onMouseEnter: E,
+            onMouseLeave: A,
             style: v,
             tabIndex: null != p.onClick ? 0 : -1,
             children:

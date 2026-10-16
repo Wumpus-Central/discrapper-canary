@@ -19,8 +19,8 @@ var s = n(503698),
     N = n(781481),
     b = n(760911),
     f = n(534890),
-    A = n(855473),
-    E = n(740426),
+    E = n(855473),
+    A = n(740426),
     v = n(191023),
     C = n(87221),
     S = n(173936),
@@ -172,7 +172,7 @@ let _ = function (e) {
             break;
         case "home":
         case "guide":
-            s = (0, i.jsx)(A.Z, {
+            s = (0, i.jsx)(E.Z, {
                 size: "md",
                 color: "currentColor",
                 className: G.Kk,
@@ -181,7 +181,7 @@ let _ = function (e) {
             break;
         case "browse":
         case "customize":
-            s = (0, i.jsx)(E.k, {
+            s = (0, i.jsx)(A.k, {
                 size: "md",
                 color: "currentColor",
                 className: G.Kk,

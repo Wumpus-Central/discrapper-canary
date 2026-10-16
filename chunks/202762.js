@@ -3,19 +3,19 @@ var l = n(636537),
     r = n(73153),
     i = n(960960),
     a = n(88592),
-    s = n(716357),
-    u = n(855823),
+    u = n(716357),
+    s = n(855823),
     c = n(652215);
 let d = 0;
 function o(e) {
-    let t = s.A.getSpace(e);
+    let t = u.A.getSpace(e);
     null != t && r.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: t });
 }
 function f(e) {
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_CANCEL", guildId: e });
 }
 function g(e, t, n, l, i) {
-    let a = (0, u.ox)(t, n, l);
+    let a = (0, s.ox)(t, n, l);
     return (r.h.dispatch({ type: "GUILD_SPACE_EDIT_ADD_WIDGET", guildId: e, widget: a, insertionTarget: i }), a.id);
 }
 function m(e, t, n, l) {
@@ -35,21 +35,21 @@ async function x(e) {
     if (null == t || "saving" === a.A.getSaveStatus(e)) return;
     let n = {};
     void 0 !== t.header.custom_banner && (n.custom_banner = t.header.custom_banner);
-    let s = {
+    let u = {
             header: n,
             widgets: t.widgets.map((e) => {
                 let { id: t, type: n, position: l, config: r } = e,
-                    i = { type: n, position: l, config: (0, u.y0)(r) };
-                return ((0, u.Ny)(t) || (i.id = t), i);
+                    i = { type: n, position: l, config: (0, s.y0)(r) };
+                return ((0, s.Ny)(t) || (i.id = t), i);
             }),
         },
         o = d++;
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: o });
     try {
-        let { body: t } = await l.Bo.put({ url: c.Rsh.GUILD_SPACE(e), body: s, rejectWithError: !0 });
+        let { body: t } = await l.Bo.put({ url: c.Rsh.GUILD_SPACE(e), body: u, rejectWithError: !0 });
         r.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: e, space: t });
     } catch (a) {
-        let n = (0, u.GE)(a, t.widgets),
+        let n = (0, s.GE)(a, t.widgets),
             l = n?.message;
         if (null != n) {
             let t = i.A.getWidget(e, n.type)?.name;

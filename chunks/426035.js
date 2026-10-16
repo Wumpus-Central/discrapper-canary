@@ -1,13 +1,13 @@
-n.d(e, { AS: () => h, Du: () => _, kF: () => p, ug: () => E, wv: () => s, xI: () => C });
+n.d(e, { AS: () => h, Du: () => d, kF: () => p, ug: () => E, wv: () => s, xI: () => C });
 var r = n(587895),
     i = n(321191),
     l = n(808728),
-    u = n(71393),
-    a = n(576705),
-    c = n(246338),
-    o = n(951178),
-    d = n(652215);
-function _(t) {
+    a = n(71393),
+    o = n(576705),
+    u = n(246338),
+    c = n(951178),
+    _ = n(652215);
+function d(t) {
     return r.A.getApplication(t.application_id)?.bot?.id ?? t.application_id;
 }
 function E(t) {
@@ -16,7 +16,7 @@ function E(t) {
 }
 function h(t, e) {
     if (null == e) return null;
-    let n = i.A.getMutualGuilds(_(t));
+    let n = i.A.getMutualGuilds(d(t));
     return null == n
         ? null
         : n.some((t) => {
@@ -25,7 +25,7 @@ function h(t, e) {
           });
 }
 function s(t, e) {
-    return (null != e && a.A.canManageUser(d.xBc.KICK_MEMBERS, e, t)) || a.A.can(d.xBc.MANAGE_GUILD, t);
+    return (null != e && o.A.canManageUser(_.xBc.KICK_MEMBERS, e, t)) || o.A.can(_.xBc.MANAGE_GUILD, t);
 }
 function C(t, e) {
     return l.Ay.getChannels(t)
@@ -33,14 +33,14 @@ function C(t, e) {
             let { channel: e } = t;
             return e;
         })
-        .filter((t) => (0, c.us)(t) === e);
+        .filter((t) => (0, u.us)(t) === e);
 }
 function p(t) {
-    if ("user" === t.install_scope || null == t.guild_id || null == u.A.getGuild(t.guild_id)) return null;
+    if ("user" === t.install_scope || null == t.guild_id || null == a.A.getGuild(t.guild_id)) return null;
     let e = h(t, t.guild_id);
     return !0 === e || C(t.guild_id, t.application_id).length > 0
         ? "in_server"
-        : (t.supported_surfaces?.length ?? 0) > 0 && ((0, o.Hv)(t) || !1 === e)
+        : (t.supported_surfaces?.length ?? 0) > 0 && ((0, c.Hv)(t) || !1 === e)
           ? "not_in_server"
           : null;
 }

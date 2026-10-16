@@ -1,4 +1,4 @@
-(n.d(t, { RD: () => C }), n(321073));
+(n.d(t, { RD: () => y }), n(321073));
 var i = n(582128),
     l = n(52133),
     r = n(958538),
@@ -15,31 +15,31 @@ let h = Symbol();
 var f = n(942370),
     b = n(652215);
 let T = "AUTHORIZE_REQUEST",
-    y = [f._.RPC, f._.WEB];
-function C(e) {
+    C = [f._.RPC, f._.WEB];
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: n = !1 } = t,
-        C = (0, A.g)(e),
-        R = (0, o.bG)([p.A], () => p.A.getGloballyDisabledAuthorizationFlows()),
-        S = i.useMemo(
+        y = (0, A.g)(e),
+        E = (0, o.bG)([p.A], () => p.A.getGloballyDisabledAuthorizationFlows()),
+        I = i.useMemo(
             () => ({
                 ...t,
                 allowedFlows:
-                    null != t.allowedFlows ? t.allowedFlows.filter((e) => !R.has(e)) : y.filter((e) => !R.has(e)),
+                    null != t.allowedFlows ? t.allowedFlows.filter((e) => !E.has(e)) : C.filter((e) => !E.has(e)),
             }),
-            [t, R],
+            [t, E],
         ),
-        O = (function (e, t) {
+        R = (function (e, t) {
             var n, o, p, A;
             let _,
-                C,
-                R,
-                S,
-                O =
+                y,
+                E,
+                I,
+                R =
                     ((n = i.useMemo(() => (null != e ? [e] : []), [e])),
-                    (o = t?.allowedFlows ?? y),
+                    (o = t?.allowedFlows ?? C),
                     (_ = (0, r.A)(() => o, o, l.v)),
-                    (p = E),
+                    (p = S),
                     (A = i.useCallback(
                         () =>
                             n.map((e) => ({
@@ -48,28 +48,28 @@ function C(e) {
                             })),
                         [n],
                     )),
-                    (C = i.useRef(h)),
-                    (R = i.useRef(A)),
-                    (S = i.useSyncExternalStore(
+                    (y = i.useRef(h)),
+                    (E = i.useRef(A)),
+                    (I = i.useSyncExternalStore(
                         i.useCallback(
                             (e) =>
                                 p(() => {
-                                    ((C.current = h), e());
+                                    ((y.current = h), e());
                                 }),
                             [p],
                         ),
                         i.useCallback(
                             () => (
-                                R.current !== A && ((R.current = A), (C.current = h)),
-                                C.current === h && (C.current = A()),
-                                C.current
+                                E.current !== A && ((E.current = A), (y.current = h)),
+                                y.current === h && (y.current = A()),
+                                y.current
                             ),
                             [A],
                         ),
                     )),
                     i.useMemo(
                         () =>
-                            S.map((e) => {
+                            I.map((e) => {
                                 let t = [];
                                 if (
                                     (_.includes(f._.RPC) &&
@@ -124,31 +124,31 @@ function C(e) {
                                 }
                                 return { context: e, availableFlows: t, preferredFlow: t.length > 0 ? t[0] : null };
                             }),
-                        [S, _],
+                        [I, _],
                     ));
-            return O.length > 0 ? O[0] : null;
-        })(C, S),
-        w = O?.preferredFlow,
-        L = null != w,
-        { token: k, fetched: F } = (0, _.U)(C?.parentId ?? C?.id, { disableFetch: S.disableFetch });
+            return R.length > 0 ? R[0] : null;
+        })(y, I),
+        O = R?.preferredFlow,
+        w = null != O,
+        { token: L, fetched: k } = (0, _.U)(y?.parentId ?? y?.id, { disableFetch: I.disableFetch });
     return {
-        fetched: F,
-        hasAlreadyLinked: F && null != k,
-        canStartAuthorization: L,
-        startAuthorization: i.useCallback((e) => (null == w ? null : (w.initiate(e), w.type)), [w]),
-        connectionApp: C,
-        chosenFlow: w?.type ?? null,
-        token: k,
+        fetched: k,
+        hasAlreadyLinked: k && null != L,
+        canStartAuthorization: w,
+        startAuthorization: i.useCallback((e) => (null == O ? null : (O.initiate(e), O.type)), [O]),
+        connectionApp: y,
+        chosenFlow: O?.type ?? null,
+        token: L,
         debug: n
             ? {
-                  isSubscribedToAuthorizeRequest: O?.context?.isSubscribedToAuthorizeRequest ?? !1,
-                  oauth2Token: k,
-                  hasConnectionEntrypointUrl: C?.connectionEntrypointUrl != null,
-                  validFlows: O?.availableFlows?.map((e) => e.type) ?? [],
+                  isSubscribedToAuthorizeRequest: R?.context?.isSubscribedToAuthorizeRequest ?? !1,
+                  oauth2Token: L,
+                  hasConnectionEntrypointUrl: y?.connectionEntrypointUrl != null,
+                  validFlows: R?.availableFlows?.map((e) => e.type) ?? [],
               }
             : void 0,
     };
 }
-function E(e) {
+function S(e) {
     return c.A.listenIsSubscribed(e);
 }

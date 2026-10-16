@@ -35,8 +35,8 @@ var r = n(477900),
     B = n(920228),
     F = n(953584),
     _ = n(338659),
-    U = n(838541),
-    G = n(105292),
+    G = n(838541),
+    U = n(105292),
     $ = n(862649);
 let K = l.lazy(() =>
         Promise.all([n.e("272223"), n.e("919307")])
@@ -120,8 +120,8 @@ function Y(e) {
             hidePlaybackSpeedBtn: eB = !1,
             autoSizeControlBar: eF = !1,
             getPlaybackBlockedMessage: e_,
-            progressClassName: eU,
-            pauseOnLostVisibility: eG = !1,
+            progressClassName: eG,
+            pauseOnLostVisibility: eU = !1,
             persistTimeline: e$ = !1,
             persistPlayhead: eK = !0,
             autoFocus: eO = !1,
@@ -171,7 +171,7 @@ function Y(e) {
         [tj, tD] = l.useState(n || Z),
         [tI, tB] = l.useState(ed),
         [tF, t_] = l.useState(em),
-        [tU, tG] = l.useState(!eQ),
+        [tG, tU] = l.useState(!eQ),
         [t$, tK] = l.useState(!1),
         [tO, tQ] = l.useState(!1),
         [tH, tV] = l.useState(!1),
@@ -282,7 +282,7 @@ function Y(e) {
         [eu],
     );
     (l.useEffect(() => {
-        if (!eG) return;
+        if (!eU) return;
         let e = null != t && (t === d.ip.HIDDEN || t === d.ip.EXITING || t === d.ip.EXITED),
             n = null != t && e5 && !e3,
             r = e7 && !e9;
@@ -290,10 +290,10 @@ function Y(e) {
             let t = e || n ? c.KB.VISIBILITY : c.KB.FOCUS;
             (t0(t), nh(c.Q6.PAUSED, t));
         }
-    }, [eG, t, e9, e7, e3, e5, tt, nh]),
+    }, [eU, t, e9, e7, e3, e5, tt, nh]),
         (0, B.A)({
             videoRef: t4,
-            enabled: eG,
+            enabled: eU,
             onPipPause: () => {
                 (t0(c.KB.PICTURE_IN_PICTURE), nh(c.Q6.PAUSED, c.KB.PICTURE_IN_PICTURE));
             },
@@ -481,17 +481,17 @@ function Y(e) {
             [nS, nD, tY, tS, nj],
         ));
     let n_ = tt === c.Q6.ENDED && null != ea,
-        nU = l.useCallback(
+        nG = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.KB.USER;
                 null != tz.current && (nN(0), nh(c.Q6.PLAYING, e));
             },
             [nN, nh],
         ),
-        nG = l.useRef(null),
+        nU = l.useRef(null),
         n$ = l.useCallback(
             (e) => {
-                (ny(), nG.current?.(e.nativeEvent));
+                (ny(), nU.current?.(e.nativeEvent));
             },
             [ny],
         );
@@ -521,7 +521,7 @@ function Y(e) {
             ),
             alt: z,
             playsInline: !0,
-            mediaLayoutType: tH ? U.dG.STATIC : U.dG.RESPONSIVE,
+            mediaLayoutType: tH ? G.dG.STATIC : G.dG.RESPONSIVE,
             className: i()({ [$.R]: n_, [$.IR]: !0, [$.FP]: "cover" === eZ && !tH }),
             controls: !1,
             poster: W,
@@ -634,7 +634,7 @@ function Y(e) {
                     onMouseLeave: function () {
                         (tl(!1), nv(!1));
                     },
-                    "aria-label": tj ? void 0 : G.intl.string(G.t.RscU7I),
+                    "aria-label": tj ? void 0 : U.intl.string(U.t.RscU7I),
                     onClick: tj ? void 0 : nL,
                     onMouseMove: ny,
                     children: (0, r.jsxs)("div", {
@@ -653,7 +653,7 @@ function Y(e) {
                         },
                         children: [
                             tj && eW && !tY && (0, r.jsx)("canvas", { ref: tW, className: $.Xm }),
-                            n_ && ea?.({ replay: nU }),
+                            n_ && ea?.({ replay: nG }),
                             ei(nK),
                             tx !== c.h$.READY &&
                                 tt === c.Q6.PLAYING &&
@@ -793,7 +793,7 @@ function Y(e) {
                                                     durationSec: na > 0 ? na : +!nu,
                                                     isFullyVisible: nS && tw,
                                                     maxSeekableTime: null != en && ns > 0 ? ns : void 0,
-                                                    progressClassName: eU,
+                                                    progressClassName: eG,
                                                     persistPlayhead: eK,
                                                     onClick: nM,
                                                     onScrubBack: nA,
@@ -872,7 +872,7 @@ function Y(e) {
                                                 downloadContentType: ek,
                                                 extraButtons: eM,
                                                 autoFocus: eO,
-                                                keyDownHandlerRef: nG,
+                                                keyDownHandlerRef: nU,
                                                 volume: tI,
                                                 muted: tF,
                                                 transcriptEnabled: t$,
@@ -905,7 +905,7 @@ function Y(e) {
                                                     (t_(e), ec?.(e));
                                                 },
                                                 onVolumeExpandedChange: function (e) {
-                                                    tG(e);
+                                                    tU(e);
                                                 },
                                             }),
                                         }),
@@ -920,7 +920,7 @@ function Y(e) {
                                         controlBarAnimationSpring: nj,
                                         videoRef: tz,
                                         isActive: tj,
-                                        isVolumeExpanded: tU,
+                                        isVolumeExpanded: tG,
                                     }),
                                 }),
                             !tj &&

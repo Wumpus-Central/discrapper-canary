@@ -3,7 +3,7 @@
     H$: () => S,
     IE: () => m,
     JQ: () => a,
-    N5: () => C,
+    N5: () => w,
     Sj: () => T,
     TK: () => d,
     TN: () => E,
@@ -110,20 +110,20 @@ function d(e) {
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...C(a),
+                    ...w(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
                 },
                 f = new Map();
-            for (let e of p) n(e) && f.set(w(e), (f.get(w(e)) ?? 0) + 1);
+            for (let e of p) n(e) && f.set(C(e), (f.get(C(e)) ?? 0) + 1);
             let _ = new Set();
             for (let e of p) {
-                let t = w(e);
+                let t = C(e);
                 if (n(e) && (f.get(t) ?? 0) >= 4) {
                     if (_.has(t)) continue;
                     _.add(t);
-                    let e = p.filter((e) => n(e) && w(e) === t);
+                    let e = p.filter((e) => n(e) && C(e) === t);
                     h.children.push(r(e, o + 1, p, d));
                 } else h.children.push(r([e], o + 1, p, d));
             }
@@ -243,7 +243,7 @@ function N(e) {
 function k(e, t) {
     for (let n of (t(e), e.children)) k(n, t);
 }
-function C(e) {
+function w(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         r = (-1 === t ? "" : e.name.slice(t + 1))
@@ -266,7 +266,7 @@ function b(e, t) {
         n
     );
 }
-function w(e) {
+function C(e) {
     return `${e.name} ${T(e.attrs)}`;
 }
 function R(e) {

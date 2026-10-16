@@ -154,8 +154,8 @@ function C(e) {
             onDragStateChange: B,
             indicatorConfig: F,
             scrubPreviewCues: _,
-            onIndicatorSeek: U,
-            getCurrentTimeSec: G,
+            onIndicatorSeek: G,
+            getCurrentTimeSec: U,
             "data-testid": $,
         } = e,
         {
@@ -329,24 +329,24 @@ function C(e) {
         em = l.useRef(null),
         ef = l.useRef(null);
     l.useEffect(() => {
-        if (!a || null == G || A <= 0 || eu <= 0) return;
-        ((em.current = ed.current ?? G()), (ef.current = performance.now()));
+        if (!a || null == U || A <= 0 || eu <= 0) return;
+        ((em.current = ed.current ?? U()), (ef.current = performance.now()));
         let e = 0;
         return (
             (e = requestAnimationFrame(function t() {
-                if (null == G) return;
+                if (null == U) return;
                 let n = performance.now(),
                     r = ef.current;
                 ef.current = n;
                 let l = em.current;
                 if (null != l) {
                     l += null != r ? (n - r) / 1e3 : 0;
-                    let e = G();
+                    let e = U();
                     if (null != e && Number.isFinite(e)) {
                         let t = e - l;
                         l = Math.abs(t) > 0.5 ? e : l + 0.1 * t;
                     }
-                } else l = G() ?? null;
+                } else l = U() ?? null;
                 if (null != l && Number.isFinite(l)) {
                     ((em.current = l), (ed.current = l));
                     let e = Math.min(Math.max(0, (l / A) * eu), eu);
@@ -358,18 +358,18 @@ function C(e) {
                 (cancelAnimationFrame(e), (em.current = null), (ef.current = null));
             }
         );
-    }, [a, G, A, eu, eo]);
-    let ep = a && null != G && A > 0;
+    }, [a, U, A, eu, eo]);
+    let ep = a && null != U && A > 0;
     l.useEffect(() => {
         let e;
         if (!ep) {
-            if (null != G && A > 0 && eu > 0) {
-                let t = G();
+            if (null != U && A > 0 && eu > 0) {
+                let t = U();
                 null != t && Number.isFinite(t) && ((ed.current = t), (e = Math.min(Math.max(0, (t / A) * eu), eu)));
             }
             (null == e && (e = null == ei || Number.isNaN(ei) ? 0 : ei), es({ playbackPxSpring: e, immediate: !0 }));
         }
-    }, [ei, ep, es, G, A, eu]);
+    }, [ei, ep, es, U, A, eu]);
     let eh = A > 1,
         ex = F?.indicators,
         ev = l.useMemo(() => {
@@ -476,7 +476,7 @@ function C(e) {
                         F?.renderIndicator(
                             e,
                             null != ei && !Number.isNaN(ei) ? ei : 0,
-                            !0 === e.source.clickable && null != U ? () => U(e.source.timeSec) : void 0,
+                            !0 === e.source.clickable && null != G ? () => G(e.source.timeSec) : void 0,
                         ),
                     ),
                 (0, r.jsx)(P, {
