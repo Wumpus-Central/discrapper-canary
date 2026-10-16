@@ -11,10 +11,10 @@ var i = n(17928),
     o = n(105292);
 let h = {
     type: "image",
-    src: "https://cdn.discordapp.com/assets/content/e6a95b370154817e3cec977345baf14c7643d3dacb99c3034005b10be99a36c7.svg",
+    src: "https://cdn.discordapp.com/assets/content/fcbf9bc0369f1e5b7bdccc5f756c1bd2fa95bb2d2fc05886daaba07c1ca3bb27.svg",
 };
 function p(t) {
-    let { className: e, disabled: n, size: p, variant: A, location: f, forceDarkTheme: g, ref: m } = t,
+    let { className: e, disabled: n, size: p, variant: f, location: A, forceDarkTheme: g, ref: m } = t,
         y = d.pe.TIER_2,
         R = o.intl.string(o.t.lG6a5x),
         I = (0, i.bG)([u.default], () => u.default.getId());
@@ -24,7 +24,7 @@ function p(t) {
         isBusy: T,
         isFirstTimeWishlister: v,
         handleToggle: E,
-    } = (0, s.c)({ userId: I, location: f, skuId: y, nuxGraphic: h, onNuxShow: l.D });
+    } = (0, s.c)({ userId: I, location: A, skuId: y, nuxGraphic: h, onNuxShow: l.D });
     return (0, a.jsx)("div", {
         ref: m,
         className: g ? "theme-dark" : void 0,
@@ -34,7 +34,7 @@ function p(t) {
             className: e,
             disabled: n,
             size: p,
-            variant: A,
+            variant: f,
             isWishlisted: P,
             isBusy: T,
             isFirstTimeWishlister: v,

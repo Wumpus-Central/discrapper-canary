@@ -1257,7 +1257,7 @@ function nF(e) {
               gradientColor: "blue",
               graphic: {
                   type: "image",
-                  src: "https://cdn.discordapp.com/assets/content/06b7b29c0f2eac5ce71823e813f9989b2a53aba0998090a4fa1d0ab6241127a9.svg",
+                  src: "https://cdn.discordapp.com/assets/content/c7446f4156b0cb7fde3b34dd50bb48a7f4699c72a5b2e42ba16091f8c8a93a13.svg",
               },
               title: eO.intl.string(eO.t.HMWL9c),
               body: eO.intl.string(eO.t["9hfy3A"]),
@@ -2799,7 +2799,7 @@ function lN(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, ly.A)("1792190553008", !0);
+        let e = (0, ly.A)("1792191249413", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
