@@ -11,8 +11,8 @@ var o,
     c = n(232582),
     b = n(308588),
     m = n(821609),
-    A = n(192308),
-    _ = n(59318),
+    _ = n(192308),
+    A = n(59318),
     f = n(935208),
     I = n(331322),
     T = n(691885),
@@ -182,11 +182,11 @@ function v(e) {
 let M = "__default__";
 var L = n(105292),
     x = n(771207);
-function U(e) {
+function G(e) {
     let { label: t, value: n, disabled: o } = e;
     return { id: n, value: n, label: t, disabled: o };
 }
-function G(e) {
+function U(e) {
     let t,
         { componentType: n } = e,
         o = h.useField("selected"),
@@ -229,7 +229,7 @@ function G(e) {
         b = (l?.get(n)?.length ?? 0) > 0;
     if (null == o || !b) return null;
     let m = s.length >= 1,
-        A = [{ label: "Default", value: M }, ...s.map((e) => ({ label: e.label, value: e.id }))];
+        _ = [{ label: "Default", value: M }, ...s.map((e) => ({ label: e.label, value: e.id }))];
     return (0, u.jsx)("div", {
         className: x.k,
         children: (0, u.jsxs)(I.B, {
@@ -248,8 +248,8 @@ function G(e) {
                                 void (null == t ? o.delete(n) : o.set(n, t), h.setState({ userStateByType: o }))
                             );
                         },
-                        options: A,
-                        formatOption: U,
+                        options: _,
+                        formatOption: G,
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
@@ -261,7 +261,7 @@ function G(e) {
                         return ((t = e === M ? null : e), void h.setState({ localeOverride: t }));
                     },
                     options: c,
-                    formatOption: U,
+                    formatOption: G,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -304,7 +304,7 @@ let K = "playground-announcement-modal",
                             a,
                             r =
                                 ((t = e.heroAssetUrl),
-                                (l = (0, _.r1)(t)),
+                                (l = (0, A.r1)(t)),
                                 (a = {
                                     modalTopPill: e.modalTopPill,
                                     header: e.header,
@@ -332,7 +332,7 @@ let K = "playground-announcement-modal",
                                     oneofKind: "announcementModalVariant1",
                                     announcementModalVariant1: null != o ? { ...o, ...a } : c.ih.create(a),
                                 }));
-                        (0, A.openModalLazy)(
+                        (0, _.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("227955"),
@@ -408,7 +408,7 @@ let K = "playground-announcement-modal",
                 }),
             });
         },
-        ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.ANNOUNCEMENT_MODAL }),
+        ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.ANNOUNCEMENT_MODAL }),
         useDefaultOverrides: () => {
             let e = P(p.C.ANNOUNCEMENT_MODAL),
                 t =
@@ -525,7 +525,7 @@ let $ = "playground-billing-settings-banner",
                 );
             return (0, u.jsx)("div", { className: V.MT, children: (0, u.jsx)(z.I, { component: c, endDate: s }) });
         },
-        ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.BILLING_SETTINGS_BANNER }),
+        ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.BILLING_SETTINGS_BANNER }),
         useDefaultOverrides: () => {
             let e = P(p.C.BILLING_SETTINGS_BANNER),
                 t = e?.properties.oneofKind === "billingSettingsBanner" ? e.properties.billingSettingsBanner : null;
@@ -634,8 +634,8 @@ function ep(e) {
 var ec = n(652215);
 let eb = "playground-gift-icon",
     em = (0, eu.createChannelRecord)({ id: "1", guild_id: "1", type: ec.rbe.GUILD_TEXT, name: "playground" });
-var eA = n(720119),
-    e_ = n(40493);
+var e_ = n(720119),
+    eA = n(40493);
 function ef() {}
 let eI = (0, eu.createChannelRecord)({ id: "1", guild_id: "1", type: ec.rbe.GUILD_TEXT, name: "playground" });
 var eT = n(978656);
@@ -683,7 +683,7 @@ let eh = {
             }),
         });
     },
-    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.MARKETING_PAGE_BANNER }),
+    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.MARKETING_PAGE_BANNER }),
     useDefaultOverrides: () => {
         let e = P(p.C.MARKETING_PAGE_BANNER),
             t = e?.properties.oneofKind === "marketingPageBanner" ? e.properties.marketingPageBanner : null;
@@ -740,9 +740,9 @@ let ev = "playground-nagbar";
 var eM = n(834730),
     eL = n(709870),
     ex = n(37126);
-let eU =
+let eG =
         "https://cdn.discordapp.com/assets/content/ce3500be6abe18b64c923af6d520c74cc915387831c4cdd5e4240d175417a87a.svg",
-    eG = "playground-payment-modal-banner",
+    eU = "playground-payment-modal-banner",
     eB = "playground-plan-select-card-banner";
 var eD = n(964661),
     ek = n(503698),
@@ -822,7 +822,7 @@ let eQ = "playground-premium-tab-popover",
                     assetUrl: c,
                 } = e,
                 m = P(p.C.PREMIUM_TAB_POPOVER),
-                A = m?.properties.oneofKind === "premiumTabPopover" ? m.properties.premiumTabPopover : null;
+                _ = m?.properties.oneofKind === "premiumTabPopover" ? m.properties.premiumTabPopover : null;
             ep(
                 ((n = {
                     header: (t = {
@@ -835,35 +835,35 @@ let eQ = "playground-premium-tab-popover",
                     }).header,
                     body: t.body,
                     button: {
-                        ...A?.button,
+                        ..._?.button,
                         copy: t.buttonCopy,
                         buttonAction:
                             t.buttonAction !== b.d.UNSPECIFIED
                                 ? t.buttonAction
-                                : (A?.button?.buttonAction ?? b.d.OPEN_TIER_2_PAYMENT_MODAL),
-                        deeplinkSection: A?.button?.deeplinkSection ?? "",
+                                : (_?.button?.buttonAction ?? b.d.OPEN_TIER_2_PAYMENT_MODAL),
+                        deeplinkSection: _?.button?.deeplinkSection ?? "",
                         navigableStorefrontApplicationId:
-                            A?.button?.navigableStorefrontApplicationId ??
+                            _?.button?.navigableStorefrontApplicationId ??
                             ("" !== t.navigableStorefrontApplicationId
                                 ? { value: t.navigableStorefrontApplicationId }
                                 : void 0),
                     },
-                    asset: j(t.assetUrl, A?.asset),
+                    asset: j(t.assetUrl, _?.asset),
                 }),
                 (o = k(eQ, {
                     oneofKind: "premiumTabPopover",
-                    premiumTabPopover: null != A ? { ...A, ...n } : { helpArticleId: "", ...n },
+                    premiumTabPopover: null != _ ? { ..._, ...n } : { helpArticleId: "", ...n },
                 })),
                 F(eQ, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
             );
-            let _ = i.useRef(null);
+            let A = i.useRef(null);
             return (0, u.jsx)(eZ, {
                 selected: !0,
-                nitroRowRef: _,
-                wrapNitroRow: (e) => (0, u.jsx)(eX.A, { targetElementRef: _, dismissPopover: eJ, children: e }),
+                nitroRowRef: A,
+                wrapNitroRow: (e) => (0, u.jsx)(eX.A, { targetElementRef: A, dismissPopover: eJ, children: e }),
             });
         },
-        ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.PREMIUM_TAB_POPOVER }),
+        ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.PREMIUM_TAB_POPOVER }),
         useDefaultOverrides: () => {
             let e = P(p.C.PREMIUM_TAB_POPOVER),
                 t = e?.properties.oneofKind === "premiumTabPopover" ? e.properties.premiumTabPopover : null;
@@ -1009,7 +1009,7 @@ let ta = {
                             (0, u.jsx)("div", { className: V.MT, children: (0, u.jsx)(eP.A, {}) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.NAGBAR }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.NAGBAR }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.NAGBAR),
                             t = e?.properties.oneofKind === "nagbar" ? e.properties.nagbar : null;
@@ -1082,11 +1082,11 @@ let ta = {
                             (function (e, t) {
                                 let { body: n, assetUrl: o } = e,
                                     l = { assetUrl: o, body: n },
-                                    a = k(eG, {
+                                    a = k(eU, {
                                         oneofKind: "paymentModalBanner",
                                         paymentModalBanner: null != t ? { ...t, ...l } : { header: "", ...l },
                                     });
-                                return F(eG, p.C.PAYMENT_MODAL_BANNER, "playground-payment-modal-banner-promotion", a);
+                                return F(eU, p.C.PAYMENT_MODAL_BANNER, "playground-payment-modal-banner-promotion", a);
                             })(
                                 { body: t, assetUrl: n },
                                 o?.properties.oneofKind === "paymentModalBanner"
@@ -1105,7 +1105,7 @@ let ta = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.PAYMENT_MODAL_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.PAYMENT_MODAL_BANNER }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.PAYMENT_MODAL_BANNER),
                             t =
@@ -1120,7 +1120,7 @@ let ta = {
                             type: "text",
                             defaultValue: "Your Nitro offer is waiting - subscribe now to claim it.",
                         },
-                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eU },
+                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eG },
                     },
                 },
                 {
@@ -1160,7 +1160,7 @@ let ta = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.PLAN_SELECT_CARD_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.PLAN_SELECT_CARD_BANNER }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.PLAN_SELECT_CARD_BANNER),
                             t =
@@ -1175,7 +1175,7 @@ let ta = {
                             type: "text",
                             defaultValue: "Join Nitro today and get your second month free! Limited time offer.",
                         },
-                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eU },
+                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eG },
                     },
                 },
                 {
@@ -1196,7 +1196,7 @@ let ta = {
                             showHoverGradient: e.showHoverGradient,
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.PREMIUM_TAB }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.PREMIUM_TAB }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.PREMIUM_TAB),
                             t = e?.properties.oneofKind === "premiumTab" ? e.properties.premiumTab : null;
@@ -1244,7 +1244,7 @@ let ta = {
                             (0, u.jsx)(eZ, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(e2.A, { children: e }) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.PREMIUM_TAB_TOOLTIP),
                             t = e?.properties.oneofKind === "premiumTabTooltip" ? e.properties.premiumTabTooltip : null;
@@ -1319,7 +1319,7 @@ let ta = {
                                 }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.SHOP_NAGBAR }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.SHOP_NAGBAR }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.SHOP_NAGBAR),
                             t = e?.properties.oneofKind === "shopNagbar" ? e.properties.shopNagbar : null;
@@ -1369,7 +1369,7 @@ let ta = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
                             t =
@@ -1499,7 +1499,7 @@ let ta = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.GIFT_CUSTOMIZATION_BANNER),
                             t =
@@ -1551,9 +1551,11 @@ let ta = {
                         return (
                             ep(
                                 ((t = {
-                                    boxAnimationUrl: e.boxAnimationUrl,
-                                    trinketAnimationUrl: e.trinketAnimationUrl,
-                                    trinketGlowAnimationUrl: e.trinketGlowAnimationUrl,
+                                    boxAnimationUrl: "",
+                                    trinketAnimationUrl:
+                                        "https://cdn.discordapp.com/assets/content/2587f697fb8e499a331c465aee4b37ae2b233d4a21ce130ef9a3032c1455f1c4.lottiejson",
+                                    trinketGlowAnimationUrl:
+                                        "https://cdn.discordapp.com/assets/content/a08eb1072a1016a58c1e5e3d92a9476900d8e8370a29c33c686c39ec9d333fb7.lottiejson",
                                     gradient: {
                                         colors: [e.gradientStartColor, e.gradientEndColor],
                                         angle: e.gradientAngle,
@@ -1565,35 +1567,19 @@ let ta = {
                             (0, u.jsx)("div", { className: V.WG, children: (0, u.jsx)(es.A, { channel: em }) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.GIFT_ICON }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.GIFT_ICON }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.GIFT_ICON),
                             t = e?.properties.oneofKind === "giftIcon" ? e.properties.giftIcon : null;
                         if (null == t) return null;
                         let n = t.gradient?.colors ?? [];
                         return {
-                            boxAnimationUrl: t.boxAnimationUrl,
-                            trinketAnimationUrl: t.trinketAnimationUrl,
-                            trinketGlowAnimationUrl: t.trinketGlowAnimationUrl,
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,
                         };
                     },
                     controls: {
-                        boxAnimationUrl: { label: "Box Animation URL (Lottie)", type: "text", defaultValue: "" },
-                        trinketAnimationUrl: {
-                            label: "Trinket Animation URL (Lottie)",
-                            type: "text",
-                            defaultValue:
-                                "https://cdn.discordapp.com/assets/content/2587f697fb8e499a331c465aee4b37ae2b233d4a21ce130ef9a3032c1455f1c4.lottiejson",
-                        },
-                        trinketGlowAnimationUrl: {
-                            label: "Trinket Glow Animation URL (Lottie)",
-                            type: "text",
-                            defaultValue:
-                                "https://cdn.discordapp.com/assets/content/a08eb1072a1016a58c1e5e3d92a9476900d8e8370a29c33c686c39ec9d333fb7.lottiejson",
-                        },
                         gradientStartColor: { label: "Gradient Start", type: "color", defaultValue: "#7873F5" },
                         gradientEndColor: { label: "Gradient End", type: "color", defaultValue: "#FF6AC2" },
                         gradientAngle: {
@@ -1612,10 +1598,10 @@ let ta = {
                         let t = P(p.C.GIFT_ICON_COACHMARK),
                             n = t?.properties.oneofKind === "giftIconCoachmark" ? t.properties.giftIconCoachmark : null,
                             o = { header: e.header, body: e.body, asset: j(e.assetUrl, n?.asset) },
-                            l = null != n ? { ...n, ...o } : eA.l.create(o);
+                            l = null != n ? { ...n, ...o } : e_.l.create(o);
                         return (0, u.jsx)("div", {
                             className: V.WG,
-                            children: (0, u.jsx)(e_.A, {
+                            children: (0, u.jsx)(eA.A, {
                                 coachmarkConfig: l,
                                 onComplete: ef,
                                 onCheckItOutClick: ef,
@@ -1624,7 +1610,7 @@ let ta = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.GIFT_ICON_COACHMARK }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.GIFT_ICON_COACHMARK }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.GIFT_ICON_COACHMARK),
                             t = e?.properties.oneofKind === "giftIconCoachmark" ? e.properties.giftIconCoachmark : null;
@@ -1719,7 +1705,7 @@ let ta = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
                             t =
@@ -1787,7 +1773,7 @@ let ta = {
                             })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(G, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
+                    ControlsExtension: () => (0, u.jsx)(U, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
                     useDefaultOverrides: () => {
                         let e = P(p.C.GIFT_REMINDER_NAGBAR),
                             t =
