@@ -183,6 +183,33 @@
     animation: conjure-secret-card-check-enter__5ae7d var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
 }
 
+.fileMention__24aa8 {
+    background: var(--mention-background);
+    color: var(--mention-foreground);
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 2px;
+    text-overflow: ellipsis;
+    unicode-bidi: plaintext;
+    vertical-align: bottom;
+    white-space: nowrap
+}
+
+.fileMention__24aa8,
+.thumbnail__24aa8 {
+    border-radius: var(--radius-xs)
+}
+
+.thumbnail__24aa8 {
+    height: 1em;
+    margin-inline-end: .25em;
+    -o-object-fit: cover;
+    object-fit: cover;
+    vertical-align: -.125em;
+    width: 1em
+}
+
 .awaitingSurface__17f24 {
     border-color: var(--background-brand);
     position: relative
@@ -220,6 +247,19 @@
     box-shadow: var(--shadow-border), var(--shadow-high);
     inset-inline: 0;
     position: absolute
+}
+
+.sectionTitle_f3ac5f {
+    padding: var(--space-8) var(--space-8) var(--space-4);
+    text-transform: uppercase
+}
+
+.fileThumbnail_f3ac5f {
+    border-radius: var(--radius-xs);
+    height: var(--space-24);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--space-24)
 }
 
 .composer__86f16 {
@@ -523,45 +563,25 @@
     opacity: .5
 }
 
+.composerEditor__86f16 {
+    flex: 1;
+    min-width: 0
+}
+
 .composerInput__86f16 {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     background-color: transparent;
-    border: none;
     box-sizing: border-box;
     color: var(--text-default);
-    flex: 1;
     font-size: 16px;
     font-weight: var(--font-weight-normal);
     line-height: 22px;
     max-height: var(--custom-channel-textarea-text-area-max-height, 50vh);
     min-height: var(--custom-channel-textarea-text-area-height, 44px);
-    min-width: 0;
+    outline: none;
     overflow-y: auto;
     padding-block: calc((var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2);
     padding-inline: 0 10px;
-    resize: none;
     width: 100%
-}
-
-.composerInput__86f16::-moz-placeholder {
-    color: var(--text-muted);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -moz-user-select: none;
-    user-select: none;
-    white-space: nowrap
-}
-
-.composerInput__86f16::placeholder {
-    color: var(--text-muted);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    white-space: nowrap
 }
 
 .composerSend__86f16 {
@@ -948,4 +968,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=096195970275547e.css.map*/
+/*# sourceMappingURL=dc7f1aa4ffdbad82.css.map*/

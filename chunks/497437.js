@@ -24,6 +24,7 @@ e.exports = {
     nu: "composerPlusButton__86f16",
     Qu: "composerPlusIcon__86f16",
     Y0: "composerAttachButton__86f16",
+    sq: "composerEditor__86f16",
     jp: "composerInput__86f16",
     fF: "composerSend__86f16",
     MT: "composerSendSeparator__86f16",

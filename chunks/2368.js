@@ -22,6 +22,7 @@ let m =
         "soundboard",
         "timestamp",
         "gameMention",
+        "hostInlineVoid",
     ]),
     p = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
     g = new Set(["gameMentionInput", "timestampMentionInput"]),

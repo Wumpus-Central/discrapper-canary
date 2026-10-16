@@ -1,52 +1,50 @@
-(n.d(t, { Lj: () => h, OG: () => c, Qu: () => A, S$: () => _, gg: () => E, l$: () => u }), n(321073));
+(n.d(t, { Lj: () => f, OG: () => E, Qu: () => h, l$: () => A }), n(321073));
 var i = n(582128),
     r = n(17928),
     a = n(287809),
     s = n(427262),
-    l = n(503275);
-let o = /<@!?(\d+)>/g,
-    d = /(^|\s)@([\w.]+)/g;
-function c(e, t) {
-    let n = /(?:^|\s)@([\w.]*)$/.exec(e.slice(0, t));
+    l = n(183011),
+    o = n(932111),
+    d = n(503275),
+    c = n(248675),
+    u = n(105292);
+let _ = /<@!?(\d+)>|<file:(\d{16}-[a-z0-9]{6})>/g;
+function E(e, t) {
+    let n = /(?:^|\s)@([\w.-]*)$/.exec(e.slice(0, t));
     return null == n ? null : { start: t - n[1].length - 1, end: t, text: n[1] };
 }
-function u(e, t) {
-    let n = t.toLowerCase();
-    return e
-        .filter(
-            (e) =>
-                !!("" === n || e.username.toLowerCase().startsWith(n)) ||
-                (0, s.mG)(e)
-                    .toLowerCase()
-                    .split(/\s+/)
-                    .some((e) => e.startsWith(n)),
-        )
-        .slice(0, 8);
+function A(e, t, n) {
+    let i = n.toLowerCase();
+    return [
+        ...e
+            .filter(
+                (e) =>
+                    !!("" === i || e.username.toLowerCase().startsWith(i)) ||
+                    (0, s.mG)(e)
+                        .toLowerCase()
+                        .split(/\s+/)
+                        .some((e) => e.startsWith(i)),
+            )
+            .slice(0, 8)
+            .map((e) => ({ kind: "user", user: e })),
+        ...(0, o.dG)(t, n)
+            .slice(0, 8)
+            .map((e) => ({ kind: "file", file: e })),
+    ];
 }
-function _(e, t, n) {
-    let i = `@${n.username} `;
-    return { value: e.slice(0, t.start) + i + e.slice(t.end), caret: t.start + i.length };
-}
-function E(e, t) {
-    if (0 === t.length) return e;
-    let n = new Map(t.map((e) => [e.username.toLowerCase(), e.id]));
-    return e.replace(d, (e, t, i) => {
-        let r = i.replace(/\.+$/, ""),
-            a = n.get(r.toLowerCase());
-        return null == a ? e : `${t}<@${a}>${i.slice(r.length)}`;
-    });
-}
-function A(e) {
+function h(e) {
     let t = i.useMemo(
         () => [
             ...new Set(
                 (function (e) {
                     let t = [],
                         n = 0;
-                    for (let i of e.matchAll(o)) {
+                    for (let i of e.matchAll(_)) {
                         let r = i.index ?? 0;
                         (r > n && t.push({ kind: "text", text: e.slice(n, r) }),
-                            t.push({ kind: "mention", userId: i[1] }),
+                            t.push(
+                                null != i[1] ? { kind: "mention", userId: i[1] } : { kind: "file", attachmentId: i[2] },
+                            ),
                             (n = r + i[0].length));
                     }
                     return (n < e.length && t.push({ kind: "text", text: e.slice(n) }), t);
@@ -57,18 +55,20 @@ function A(e) {
     );
     return (
         i.useEffect(() => {
-            for (let e of t) (0, l.Y_)(e);
+            for (let e of t) (0, d.Y_)(e);
         }, [t]),
         (0, r.bG)([a.default], () => t.filter((e) => null != a.default.getUser(e)).length, [t])
     );
 }
-function h(e) {
-    var t;
+function f(e) {
+    var t, n;
     return (
         (t = (e) => a.default.getUser(e)),
-        e.replace(o, (e, n) => {
-            let i = t(n);
-            return null == i ? e : `@${(0, s.mG)(i)}`;
+        (n = (e) => l.A.getAttachment(e)),
+        e.replace(_, (e, i, r) => {
+            if (null == i) return `@${n(r ?? "")?.name ?? u.intl.string(c.default.ff9Q4C)}`;
+            let a = t(i);
+            return null == a ? e : `@${(0, s.mG)(a)}`;
         })
     );
 }

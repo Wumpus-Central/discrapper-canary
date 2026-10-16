@@ -322,11 +322,12 @@ class ep extends i.PureComponent {
 }
 class eg extends ep {
     renderContent() {
-        let { text: e, description: t, badge: n } = this.props,
-            i = (0, l.jsx)(T, { children: e });
+        let { text: e, description: t, badge: n, icon: i } = this.props,
+            r = (0, l.jsx)(T, { children: e });
         return (0, l.jsxs)(b, {
             children: [
-                (0, l.jsx)(N, { children: null != n ? (0, l.jsxs)("div", { className: I.QN, children: [i, n] }) : i }),
+                null != i ? (0, l.jsx)(v, { children: i }) : null,
+                (0, l.jsx)(N, { children: null != n ? (0, l.jsxs)("div", { className: I.QN, children: [r, n] }) : r }),
                 null != t ? (0, l.jsx)(_, { children: t }) : null,
             ],
         });

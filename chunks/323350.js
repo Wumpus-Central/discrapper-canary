@@ -139,6 +139,8 @@ function E(e, t) {
             return (0, s.tf)(e.parsed.timestamp, e.parsed.format);
         case "gameMention":
             return (0, p.KW)(e.gameId);
+        case "hostInlineVoid":
+            return e.raw;
         case "timestampMentionInput": {
             let n = x(e.children, t);
             if (null == l) return `<@time:${n}>`;
