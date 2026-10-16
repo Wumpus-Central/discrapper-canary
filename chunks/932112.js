@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640799, Version Hash: 033bb1554a0fa6cd4d38432f1f5d8051df3e60a6`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640803, Version Hash: 2ac77949575849a7c358ff658d990a2ec11ad490`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -24895,28 +24895,30 @@ function LT(e) {
     let { targetElementRef: t, suppressPopover: i = !1 } = e,
         r = (0, RG.Tp)(),
         a = (0, eE.bG)([O7.A], () => O7.A.getReminderStateId()),
-        s = (0, eE.bG)([O7.A], () => O7.A.getReferralsRemaining()),
-        l = (0, eE.bG)([eL.A], () => {
+        s = (0, eE.bG)([O7.A], () => O7.A.getRecurringReminderStateId()),
+        l = (0, eE.bG)([O7.A], () => O7.A.getReferralsRemaining()),
+        o = (0, eE.bG)([eL.A], () => {
             let e = eL.A.settings.userContent?.recurringDismissibleContentStates[rG.M.REFERRAL_PROGRAM_POPOVER_V2];
             return e?.numTimesDismissed ?? 0;
         }),
-        o = r && !i,
-        d =
-            o &&
+        d = r && !i,
+        c =
+            d &&
+            null == s &&
             (function (e) {
                 let { location: t } = e;
                 return Lp.getConfig({ location: t });
             })({ location: nA.A.HOME_PAGE_PREMIUM_TAB }).enabled;
-    function c() {
+    function u() {
         (0, RG.ne)(a);
     }
     return (0, M.jsx)(rJ.A, {
         targetElementRef: t,
-        title: tL.intl.string(d ? tL.t.KHF45W : tL.t.K2DyeS),
-        body: tL.intl.string(d ? tL.t.WJDeur : tL.t["JICo+3"]),
+        title: tL.intl.string(c ? tL.t.KHF45W : tL.t.K2DyeS),
+        body: tL.intl.string(c ? tL.t.WJDeur : tL.t["JICo+3"]),
         graphic: { type: "image", src: Lh.A },
         size: "md",
-        shouldShow: o,
+        shouldShow: d,
         alignmentStrategy: "edge",
         align: "top",
         position: "right",
@@ -24928,10 +24930,10 @@ function LT(e) {
                 onClick: function () {
                     (W.default.track(j.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                         location_stack: [nA.A.HOME_PAGE_PREMIUM_TAB],
-                        times_dismissed: null != a ? l + 1 : null,
-                        referrals_remaining: s,
+                        times_dismissed: null != a ? o + 1 : null,
+                        referrals_remaining: l,
                     }),
-                        c(),
+                        u(),
                         (0, tX.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("987828"),
@@ -24945,7 +24947,7 @@ function LT(e) {
                 },
             },
         ],
-        onRequestClose: c,
+        onRequestClose: u,
     });
 }
 var Lm = n(941143),
@@ -25629,7 +25631,7 @@ let ye = "isHideDevBanner",
                     className: tE()(L9.Wz, L9.mr),
                     children: [
                         (0, M.jsx)(L8, { className: L9.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640799" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640803" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })

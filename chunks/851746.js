@@ -89,7 +89,7 @@ class b extends r.Ay.Store {
         return u;
     }
     getReminderStateId() {
-        return C;
+        return O ?? C;
     }
     getRecurringReminderStateId() {
         return O;
