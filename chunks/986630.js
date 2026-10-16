@@ -24,6 +24,7 @@ class c extends l.A {
     isFirstParty;
     baseVariantName;
     variantLabel;
+    categoryWillUnpublishAt;
     constructor(e) {
         (super(e),
             (this.summary = e.summary),
@@ -42,7 +43,8 @@ class c extends l.A {
             (this.hideBadge = e.hideBadge),
             (this.isFirstParty = e.isFirstParty),
             (this.baseVariantName = e.baseVariantName),
-            (this.variantLabel = e.variantLabel));
+            (this.variantLabel = e.variantLabel),
+            (this.categoryWillUnpublishAt = e.categoryWillUnpublishAt));
     }
     static fromServer(e) {
         let {
@@ -110,6 +112,7 @@ class c extends l.A {
             premiumType: l.premiumType === d.oA2 ? null : l.premiumType,
             items: A ?? [h].filter((e) => null != e),
             categorySkuId: e.primaryCollectionId ?? l.categorySkuId ?? "",
+            categoryWillUnpublishAt: e.primaryCollectionWillUnpublishAt,
             isCategoryReward: o.MS.some((e) => {
                 let { rewardSkuId: t } = e;
                 return t === r.id;
@@ -140,6 +143,7 @@ class c extends l.A {
                                   premiumType: n.premiumType === d.oA2 ? null : n.premiumType,
                                   items: i ?? [a].filter((e) => null != e),
                                   categorySkuId: e.primaryCollectionId ?? n.categorySkuId ?? "",
+                                  categoryWillUnpublishAt: e.primaryCollectionWillUnpublishAt,
                                   isCategoryReward: o.MS.some((e) => {
                                       let { rewardSkuId: n } = e;
                                       return n === t.id;
