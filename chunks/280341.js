@@ -1157,20 +1157,26 @@ function tp(e) {
             });
             ("redirect-url" === e.responseType ? A(e.hasRedirectURL) : l(e.paymentSource), y || g(!1));
         } catch (e) {
-            if (e instanceof ts.Ey) {
+            if (
+                e instanceof ts.Ey &&
+                e.code !== ts.Ey.ErrorCodes.INVALID_PAYMENT_SOURCE &&
+                (Object.keys(e.fields).length > 0 || !(0, m.gr)(e))
+            ) {
                 let t = Object.keys(e.fields).sort(),
                     n = null != e.status ? { status: String(e.status) } : {},
-                    l = Error(e.message);
-                ((l.name = `BillingError[${e.code}]`),
-                    (0, m.pM)(l, {
+                    l = t.length > 0,
+                    i = Error(l ? `${e.message} (${t.join(", ")})` : e.message);
+                ((i.name = l ? `SubmitAddressStepFieldError[${t.join(",")}]` : `SubmitAddressStepError[${e.code}]`),
+                    (0, m.pM)(i, {
                         tags: {
                             ...(s ? { source: "payment_elements" } : {}),
                             error_location: "submit_address_step",
-                            has_field_error: t.length > 0 ? "true" : "false",
+                            has_field_error: l ? "true" : "false",
                             error_code: String(e.code),
                             ...n,
                         },
                         extra: {
+                            country: I.info.country,
                             loadId: S.loadId,
                             message: e.message,
                             errorCode: e.code,
