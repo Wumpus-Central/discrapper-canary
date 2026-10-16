@@ -112,7 +112,7 @@ class B extends c.Ay.PersistedStore {
     }
     getIsActiveStreamPreviewDisabled(e) {
         let t = s[e];
-        return t?.previewDisabled ?? !1;
+        return t?.previewDisabled ?? null;
     }
     getAnyStreamForUser(e) {
         if (!(0, f.A)(N.Ay)) return null;

@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640490, Version Hash: ca01e791cc5d494b5e14292fda6fc8f95ce881e9`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640496, Version Hash: d738acfd95d0990c72e446056b617e3729639ddc`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25628,7 +25628,7 @@ let L9 = "isHideDevBanner",
                     className: tE()(L8.Wz, L8.mr),
                     children: [
                         (0, M.jsx)(L7, { className: L8.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640490" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640496" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -57166,7 +57166,10 @@ let Kh = iM().debounce((e, t, n, i) => {
     Kf(e, (0, dk._z)({ streamType: null != t ? cZ.U4.GUILD : cZ.U4.CALL, guildId: t, channelId: n, ownerId: i }));
 }, 500);
 async function Kf(e, t) {
-    if (d === e && !(((0, eB.isWeb)() && eR.uh.getSetting()) || d7.A.getIsActiveStreamPreviewDisabled(t))) {
+    if (
+        d === e &&
+        !(((0, eB.isWeb)() && eR.uh.getSetting()) || (d7.A.getIsActiveStreamPreviewDisabled(t) ?? eR.uh.getSetting()))
+    ) {
         if (!Ku)
             try {
                 var n, i;
