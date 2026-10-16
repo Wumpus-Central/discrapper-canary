@@ -8,78 +8,31 @@
     width: 100%
 }
 
-.wideCard_f3ecdb[data-conjure-plan-card] {
-    max-width: 880px
-}
-
 .body_f3ecdb {
-    gap: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0;
     overflow-wrap: anywhere;
-    padding: var(--space-16);
     word-break: break-word
 }
 
-.body_f3ecdb,
-.section_f3ecdb {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    min-width: 0
+.content_f3ecdb {
+    min-width: 0;
+    padding: var(--space-16)
 }
 
 .section_f3ecdb {
-    gap: var(--space-8)
-}
-
-.list_f3ecdb {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
-.list_f3ecdb,
-.listItem_f3ecdb {
-    max-width: 100%;
-    min-width: 0
-}
-
-.listItem_f3ecdb {
-    padding-inline-start: var(--space-16);
-    position: relative
-}
-
-.listItem_f3ecdb:before {
-    color: var(--text-muted);
-    content: "\2022";
-    inset-inline-start: var(--space-4);
-    position: absolute
-}
-
-.commandRow_f3ecdb {
-    align-items: baseline;
-    display: flex;
-    flex-wrap: wrap;
     gap: var(--space-8);
     max-width: 100%;
     min-width: 0
 }
 
-.sectionLabel_f3ecdb {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4);
-    min-width: 0
-}
-
 .design_f3ecdb {
     aspect-ratio: 3/2;
-    background: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    overflow: hidden
+    background: var(--background-base-lower)
 }
 
 .design_f3ecdb,
@@ -94,23 +47,15 @@
     object-fit: cover
 }
 
-.chips_f3ecdb {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4)
-}
-
-.chip_f3ecdb {
-    background: var(--background-mod-normal);
-    border-radius: var(--radius-xs);
-    padding: var(--space-4) var(--space-8)
-}
-
-.actions_f3ecdb {
+.footer_f3ecdb {
     align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-top: 1px solid var(--border-muted);
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-8) var(--space-12)
+    gap: var(--space-8) var(--space-12);
+    padding: var(--space-12) var(--space-16)
 }
 
 .inline__0ac4f {
@@ -1003,4 +948,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=cc77f318b6ef0c74.css.map*/
+/*# sourceMappingURL=096195970275547e.css.map*/
