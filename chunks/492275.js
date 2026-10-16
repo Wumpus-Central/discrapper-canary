@@ -28,7 +28,7 @@ function m(e) {
                 (0, l.jsx)("div", {
                     className: p.zc,
                     children:
-                        null != i && (0, l.jsx)("img", { src: i, alt: "", width: 32, height: 32, className: p.Kk }),
+                        null != i && (0, l.jsx)("img", { src: i, alt: "", width: 40, height: 40, className: p.Kk }),
                 }),
                 (0, l.jsx)(s.E, {
                     variant: "text-md/medium",

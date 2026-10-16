@@ -398,7 +398,7 @@ function s(e) {
                 t.e("928662"),
                 t.e("830938"),
                 t.e("143549"),
-                t.e("534928"),
+                t.e("723244"),
                 t.e("122990"),
                 t.e("276177"),
                 t.e("154630"),
@@ -449,7 +449,7 @@ function s(e) {
         { modalKey: `gift-option-select-modal-${n.id}`, onCloseCallback: i },
     );
 }
-var c = t(859492),
+var c = t(139486),
     u = t(945810);
 let d = (0, u.mj)({
         name: "2026-02-gifting-modal-redesign",
@@ -463,8 +463,8 @@ let d = (0, u.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var C = t(990820),
-    g = t(202541);
+var g = t(990820),
+    C = t(202541);
 function m(e) {
     let {
             giftRecipient: n,
@@ -477,14 +477,14 @@ function m(e) {
             subscriptionTier: p,
             location: b,
         } = e,
-        { enabled: T } = d.useConfig({ location: b }),
-        { enabled: I } = f.useConfig({ location: b }),
+        { enabled: I } = d.useConfig({ location: b }),
+        { enabled: T } = f.useConfig({ location: b }),
         h = (0, c.F5)(b),
         N = (0, a.tA)({ isGift: !0, giftRecipient: n }),
-        j = T && null != n,
-        k = I && null == n,
-        y = j || k,
-        _ = N && null != n;
+        k = I && null != n,
+        j = T && null == n,
+        _ = k || j,
+        y = N && null != n;
     return {
         openGiftModal: i.useCallback(() => {
             null != p
@@ -498,7 +498,7 @@ function m(e) {
                       giftMessage: A,
                   })
                 : h
-                  ? _
+                  ? y
                       ? s({
                             giftRecipient: n,
                             analyticsLocations: t,
@@ -506,30 +506,30 @@ function m(e) {
                             analyticsObject: r ?? o,
                             giftMessage: A,
                         })
-                      : (0, C.A)({
+                      : (0, g.A)({
                             giftRecipient: n ?? void 0,
                             analyticsLocations: t,
                             analyticsLocation: m,
                             analyticsObject: r ?? o,
                             giftMessage: A,
                         })
-                  : j && null != n
-                    ? (0, C.A)({
+                  : k && null != n
+                    ? (0, g.A)({
                           giftRecipient: n,
                           analyticsLocations: t,
                           analyticsLocation: m,
                           analyticsObject: r ?? o,
                           giftMessage: A,
                       })
-                    : k
-                      ? (0, C.A)({
+                    : j
+                      ? (0, g.A)({
                             analyticsLocations: t,
                             analyticsLocation: m,
                             analyticsObject: r ?? o,
                             giftMessage: A,
-                            giftingOrigin: g.vQ.GUILD_CHANNEL,
+                            giftingOrigin: C.vQ.GUILD_CHANNEL,
                         })
-                      : _ && null != n
+                      : y && null != n
                         ? s({
                               giftRecipient: n,
                               analyticsLocations: t,
@@ -546,8 +546,8 @@ function m(e) {
                               analyticsObject: u ?? o,
                               giftMessage: A,
                           });
-        }, [h, j, k, _, n, t, m, o, r, u, A, p]),
-        shouldShowWishlistModal: _,
-        shouldShowGiftSelectionModal: y,
+        }, [h, k, j, y, n, t, m, o, r, u, A, p]),
+        shouldShowWishlistModal: y,
+        shouldShowGiftSelectionModal: _,
     };
 }

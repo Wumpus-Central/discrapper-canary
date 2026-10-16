@@ -32,29 +32,29 @@ function f() {
         Component: r,
     };
 }
-var C = t(604121),
-    g = t(597770),
+var g = t(604121),
+    C = t(597770),
     m = t(866665),
     A = t(942857),
     p = t(775602),
     b = t(793574),
-    T = t(688810),
-    I = t(131607),
+    I = t(688810),
+    T = t(131607),
     h = t(810498),
     N = t(547902),
-    j = t(859492),
-    k = t(5755),
-    y = t(40493),
-    _ = t(43105),
+    k = t(139486),
+    j = t(5755),
+    _ = t(40493),
+    y = t(43105),
     x = t(652215),
-    R = t(49999),
-    v = t(398948),
-    O = t(105292);
-function G(e) {
+    v = t(49999),
+    G = t(398948),
+    R = t(105292);
+function O(e) {
     let { giftRecipient: n, onComplete: t, markAsDismissed: a, children: o } = e,
         r = l.useRef(null),
-        { analyticsLocations: s } = (0, T.Ay)(b.A.GIFTED_SUBSCRIPTIONS_COACHMARK),
-        { openGiftModal: c } = (0, k.$)({
+        { analyticsLocations: s } = (0, I.Ay)(b.A.GIFTED_SUBSCRIPTIONS_COACHMARK),
+        { openGiftModal: c } = (0, j.$)({
             giftRecipient: n,
             analyticsLocations: s,
             analyticsObject: { object: x.ZSU.BUTTON_CTA, objectType: x.AnalyticsObjectTypes.GIFT },
@@ -63,25 +63,25 @@ function G(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: r, children: o }),
-            (0, i.jsx)(_.A, {
+            (0, i.jsx)(y.A, {
                 targetElementRef: r,
                 shouldShow: !0,
                 position: "top",
-                title: O.intl.string(v.default.u0brrv),
-                body: O.intl.string(v.default["5smZHx"]),
+                title: R.intl.string(G.default.u0brrv),
+                body: R.intl.string(G.default["5smZHx"]),
                 gradientColor: "nitro-pink",
                 actions: [
                     {
-                        text: O.intl.string(v.default["9XpK+g"]),
-                        icon: g.GiftIcon,
+                        text: R.intl.string(G.default["9XpK+g"]),
+                        icon: C.GiftIcon,
                         onClick: function () {
-                            (c(), t?.(), a(R.i.TAKE_ACTION));
+                            (c(), t?.(), a(v.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (t?.(), a(R.i.USER_DISMISS));
+                    (t?.(), a(v.i.USER_DISMISS));
                 },
             }),
         ],
@@ -91,38 +91,37 @@ var M = t(70283),
     S = t(982240),
     E = t(402860),
     D = t(287809),
-    P = t(427262),
-    U = t(556427);
+    U = t(427262),
+    P = t(556427);
 function F(e) {
     let { currentTier: n, giftCount: t, variant: a, onComplete: o, markAsDismissed: r, children: c } = e,
         u = l.useRef(null),
         d = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
-        f = (0, j.b9)("GiftingBadgesCoachmarkPopout"),
-        C = (0, j.Se)(n, f);
+        f = (0, k.Se)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: u, children: c }),
-            (0, i.jsx)(_.A, {
+            (0, i.jsx)(y.A, {
                 targetElementRef: u,
                 shouldShow: !0,
                 position: "top",
-                title: O.intl.format(U.default["a+jfuy"], { tierName: n.name ?? "" }),
+                title: R.intl.format(P.default["a+jfuy"], { tierName: n.name ?? "" }),
                 body:
                     "noCount" === a
-                        ? O.intl.string(U.default["0N8fCf"])
-                        : O.intl.formatToPlainString(U.default.QxRA6w, { giftCount: t ?? 0 }),
-                graphic: null != C ? { type: "image", src: C } : void 0,
+                        ? R.intl.string(P.default["0N8fCf"])
+                        : R.intl.formatToPlainString(P.default.QxRA6w, { giftCount: t ?? 0 }),
+                graphic: null != f ? { type: "image", src: f } : void 0,
                 actions: [
                     {
-                        text: O.intl.string(O.t.RzWDqY),
+                        text: R.intl.string(R.t.RzWDqY),
                         onClick: () => {
-                            (null != d && (0, E.openUserProfileModal)({ userId: d.id }), o?.(), r(R.i.TAKE_ACTION));
+                            (null != d && (0, E.openUserProfileModal)({ userId: d.id }), o?.(), r(v.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (o?.(), r(R.i.USER_DISMISS));
+                    (o?.(), r(v.i.USER_DISMISS));
                 },
             }),
         ],
@@ -131,9 +130,9 @@ function F(e) {
 function H(e) {
     let { channel: n, onComplete: t, markAsDismissed: a, children: o } = e,
         r = l.useRef(null),
-        { analyticsLocations: s } = (0, T.Ay)(b.A.GIFTING_BADGE_COACHMARK),
-        c = (0, P.R1)(n),
-        { openGiftModal: u } = (0, k.$)({
+        { analyticsLocations: s } = (0, I.Ay)(b.A.GIFTING_BADGE_COACHMARK),
+        c = (0, U.R1)(n),
+        { openGiftModal: u } = (0, j.$)({
             giftRecipient: c,
             analyticsLocations: s,
             analyticsObject: { object: x.ZSU.BUTTON_CTA, objectType: x.AnalyticsObjectTypes.GIFT },
@@ -142,34 +141,34 @@ function H(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: r, children: o }),
-            (0, i.jsx)(_.A, {
+            (0, i.jsx)(y.A, {
                 targetElementRef: r,
                 shouldShow: !0,
                 position: "top",
-                title: O.intl.string(U.default.Q2RQka),
-                body: O.intl.string(U.default["3EQnkg"]),
+                title: R.intl.string(P.default.Q2RQka),
+                body: R.intl.string(P.default["3EQnkg"]),
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/6c3ba62d914abaf06acb2e664bd0515aaf49ab966e671dcd013678208b3d7d58.png",
                 },
                 actions: [
                     {
-                        text: O.intl.string(U.default.DZnomS),
-                        icon: g.GiftIcon,
+                        text: R.intl.string(P.default.DZnomS),
+                        icon: C.GiftIcon,
                         onClick: () => {
-                            (u(), t?.(), a(R.i.TAKE_ACTION));
+                            (u(), t?.(), a(v.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (t?.(), a(R.i.USER_DISMISS));
+                    (t?.(), a(v.i.USER_DISMISS));
                 },
             }),
         ],
     });
 }
-function K(e) {
+function L(e) {
     let { channel: n, variant: t, onComplete: l, markAsDismissed: a, children: o } = e,
         { currentTier: r, giftCount: c } = (0, s.cf)([S.Ay], () => ({
             currentTier: S.Ay.getCurrentTier(M.$.GIFTING),
@@ -179,36 +178,36 @@ function K(e) {
         ? (0, i.jsx)(F, { currentTier: r, giftCount: c, variant: t, onComplete: l, markAsDismissed: a, children: o })
         : (0, i.jsx)(H, { channel: n, onComplete: l, markAsDismissed: a, children: o });
 }
-var L = t(412260),
-    B = t(927813),
-    w = t(935208),
-    $ = t(240248),
-    Z = t(767089),
-    J = t(621255),
-    z = t(495088);
-let Q = B.A.Millis.DAYS_30;
-function V(e) {
+var B = t(412260),
+    K = t(927813),
+    $ = t(935208),
+    w = t(240248),
+    J = t(767089),
+    Z = t(621255),
+    W = t(495088);
+let z = K.A.Millis.DAYS_30;
+function Q(e) {
     let { boxAnimationUrl: n, hovered: t, onClick: a } = e,
         o = l.useCallback(() => Promise.resolve({ default: n }), [n]);
-    return (0, i.jsx)(Z.A, {
-        className: z.x6,
-        "aria-label": O.intl.string(O.t.Z1RnTk),
+    return (0, i.jsx)(J.A, {
+        className: W.x6,
+        "aria-label": R.intl.string(R.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: a,
         children: (0, i.jsx)("div", {
-            className: J.zc,
-            children: t ? (0, i.jsx)(C.a, { className: J.Hl, importData: o }) : (0, i.jsx)(g.GiftIcon, {}),
+            className: Z.zc,
+            children: t ? (0, i.jsx)(g.a, { className: Z.Hl, importData: o }) : (0, i.jsx)(C.GiftIcon, {}),
         }),
     });
 }
-function W(e) {
+function V(e) {
     let { trinketAnimationUrl: n, hovered: t, onClick: l } = e,
         { Component: a, events: o, play: r } = f(),
         c = (0, s.bG)([p.Ay], () => p.Ay.useReducedMotion);
-    return (0, i.jsxs)(Z.A, {
-        className: z.x6,
-        "aria-label": O.intl.string(O.t.Z1RnTk),
+    return (0, i.jsxs)(J.A, {
+        className: W.x6,
+        "aria-label": R.intl.string(R.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: function () {
@@ -216,8 +215,8 @@ function W(e) {
         },
         ...o,
         children: [
-            (0, i.jsx)("div", { className: J.zc, children: (0, i.jsx)(a, { className: J.is, color: "currentColor" }) }),
-            t && !c && (0, i.jsx)("img", { className: J.rY, src: n, alt: "" }),
+            (0, i.jsx)("div", { className: Z.zc, children: (0, i.jsx)(a, { className: Z.is, color: "currentColor" }) }),
+            t && !c && (0, i.jsx)("img", { className: Z.rY, src: n, alt: "" }),
         ],
     });
 }
@@ -225,16 +224,16 @@ function q(e) {
     let { giftIcon: n, hovered: t, isGenericGift: l, onClick: a } = e,
         { Component: o, events: r, play: s } = f(),
         c = n?.boxAnimationUrl;
-    if (!(0, $.uJ)(c)) return (0, i.jsx)(V, { boxAnimationUrl: c, hovered: t, onClick: a });
+    if (!(0, w.uJ)(c)) return (0, i.jsx)(Q, { boxAnimationUrl: c, hovered: t, onClick: a });
     let u = n?.trinketAnimationUrl;
-    return (0, $.uJ)(u)
+    return (0, w.uJ)(u)
         ? (0, i.jsx)(m.m, {
               ariaHidden: l,
-              text: O.intl.string(l ? O.t.TW4JV0 : O.t.sWtWDX),
-              children: (0, i.jsx)(Z.A, {
-                  className: z.x6,
+              text: R.intl.string(l ? R.t.TW4JV0 : R.t.sWtWDX),
+              children: (0, i.jsx)(J.A, {
+                  className: W.x6,
                   isActive: !1,
-                  "aria-label": O.intl.string(l ? O.t.TW4JV0 : O.t.Z1RnTk),
+                  "aria-label": R.intl.string(l ? R.t.TW4JV0 : R.t.Z1RnTk),
                   "aria-haspopup": "dialog",
                   onClick: () => {
                       (a(), s());
@@ -243,61 +242,61 @@ function q(e) {
                   children: (0, i.jsx)(o, { size: "refresh_sm", color: "currentColor" }),
               }),
           })
-        : (0, i.jsx)(W, { trinketAnimationUrl: u, hovered: t, onClick: a });
+        : (0, i.jsx)(V, { trinketAnimationUrl: u, hovered: t, onClick: a });
 }
 let X = l.memo(function (e) {
     let { disabled: n, channel: t } = e,
-        { analyticsLocations: a } = (0, T.Ay)(b.A.GIFT_BUTTON),
+        { analyticsLocations: a } = (0, I.Ay)(b.A.GIFT_BUTTON),
         [u, d] = l.useState(!1),
         f = (0, A.A)(),
-        C = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
-        g = null != C ? w.default.age(C.id) : 0,
-        m = (0, P.R1)(t),
-        p = (0, s.bG)([L.A], () => {
-            let e = L.A.getMarketingComponentByType(r.C.GIFT_ICON);
+        g = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
+        C = null != g ? $.default.age(g.id) : 0,
+        m = (0, U.R1)(t),
+        p = (0, s.bG)([B.A], () => {
+            let e = B.A.getMarketingComponentByType(r.C.GIFT_ICON);
             return null == e || "giftIcon" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        _ = (0, s.bG)([L.A], () => {
-            let e = L.A.getMarketingComponentByType(r.C.GIFT_ICON_COACHMARK);
+        y = (0, s.bG)([B.A], () => {
+            let e = B.A.getMarketingComponentByType(r.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIconCoachmark;
         }),
-        v = p?.gradient,
-        O =
-            null != v && null != v.colors && v.colors.length >= 2
-                ? (0, h.K5)({ gradient: v.colors, angle: v.angle ?? void 0 }, { defaultAngle: 180 })
+        G = p?.gradient,
+        R =
+            null != G && null != G.colors && G.colors.length >= 2
+                ? (0, h.K5)({ gradient: G.colors, angle: G.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
         M = l.useMemo(() => {
-            if (O?.background != null) return { "--custom-promotion-gradient": O.background };
-        }, [O]),
-        S = !(0, $.uJ)(p?.boxAnimationUrl) || !(0, $.uJ)(p?.trinketAnimationUrl),
-        E = (0, s.bG)([L.A], () => L.A.getGiftPromotion()?.id),
-        U = null != _ && !n && !f && g >= Q && null != E,
-        [F, H] = (0, I.Cc)(U ? c.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, E ?? ""),
-        B = null != F,
-        { giftingBadgeCoachmarkVariant: Z, markGiftingBadgeCoachmarkAsDismissed: z } = (function (e) {
+            if (R?.background != null) return { "--custom-promotion-gradient": R.background };
+        }, [R]),
+        S = !(0, w.uJ)(p?.boxAnimationUrl) || !(0, w.uJ)(p?.trinketAnimationUrl),
+        E = (0, s.bG)([B.A], () => B.A.getGiftPromotion()?.id),
+        P = null != y && !n && !f && C >= z && null != E,
+        [F, H] = (0, T.Cc)(P ? c.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, E ?? ""),
+        K = null != F,
+        { giftingBadgeCoachmarkVariant: J, markGiftingBadgeCoachmarkAsDismissed: W } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, A.A)(),
-                l = (0, j.Hv)({ platform: "web", location: n, enabled: t }),
-                [a, o] = (0, I.kn)(null == l || i ? [] : [c.M.NEW_GIFTING_BADGES_COACHMARK]);
+                l = (0, k.Hv)({ platform: "web", location: n, enabled: t }),
+                [a, o] = (0, T.kn)(null == l || i ? [] : [c.M.NEW_GIFTING_BADGES_COACHMARK]);
             return { giftingBadgeCoachmarkVariant: null != a ? l : null, markGiftingBadgeCoachmarkAsDismissed: o };
-        })({ location: "ChannelPremiumGiftButton", enabled: !n && !B }),
-        { showGiftedSubscriptionsCoachmark: V, markGiftedSubscriptionsCoachmarkAsDismissed: W } = (function (e) {
+        })({ location: "ChannelPremiumGiftButton", enabled: !n && !K }),
+        { showGiftedSubscriptionsCoachmark: Q, markGiftedSubscriptionsCoachmarkAsDismissed: V } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, A.A)(),
                 l = (0, N.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
-                [a, o] = (0, I.kn)(t && l && !i ? [c.M.GIFTED_SUBSCRIPTIONS_DESKTOP_COACHMARK] : []);
+                [a, o] = (0, T.kn)(t && l && !i ? [c.M.GIFTED_SUBSCRIPTIONS_DESKTOP_COACHMARK] : []);
             return { showGiftedSubscriptionsCoachmark: null != a, markGiftedSubscriptionsCoachmarkAsDismissed: o };
-        })({ location: "ChannelPremiumGiftButton", enabled: !n && null != m && !B && null == Z }),
-        X = !V && (u || B || null != Z),
+        })({ location: "ChannelPremiumGiftButton", enabled: !n && null != m && !K && null == J }),
+        X = !Q && (u || K || null != J),
         {
             openGiftModal: Y,
             shouldShowWishlistModal: ee,
             shouldShowGiftSelectionModal: en,
-        } = (0, k.$)({
+        } = (0, j.$)({
             giftRecipient: m,
             analyticsLocations: a,
             analyticsObject: {
@@ -322,11 +321,11 @@ let X = l.memo(function (e) {
         hovered: X,
         isGenericGift: ee || en,
         onClick: function () {
-            (d(!1), H(R.i.TAKE_ACTION), z(R.i.TAKE_ACTION), V && W(R.i.TAKE_ACTION), Y());
+            (d(!1), H(v.i.TAKE_ACTION), W(v.i.TAKE_ACTION), Q && V(v.i.TAKE_ACTION), Y());
         },
     });
     return (0, i.jsx)("div", {
-        className: o()(J.kL, { [J.DM]: X }),
+        className: o()(Z.kL, { [Z.DM]: X }),
         style: M,
         onMouseEnter: () => {
             u || d(!0);
@@ -334,18 +333,18 @@ let X = l.memo(function (e) {
         onMouseLeave: () => {
             d(!1);
         },
-        children: B
-            ? (0, i.jsx)(y.A, {
+        children: K
+            ? (0, i.jsx)(_.A, {
                   onComplete: () => d(!1),
                   onCheckItOutClick: Y,
                   markAsDismissed: H,
-                  coachmarkConfig: _,
+                  coachmarkConfig: y,
                   children: et,
               })
-            : null != Z
-              ? (0, i.jsx)(K, { channel: t, variant: Z, onComplete: () => d(!1), markAsDismissed: z, children: et })
-              : V
-                ? (0, i.jsx)(G, { giftRecipient: m, onComplete: () => d(!1), markAsDismissed: W, children: et })
+            : null != J
+              ? (0, i.jsx)(L, { channel: t, variant: J, onComplete: () => d(!1), markAsDismissed: W, children: et })
+              : Q
+                ? (0, i.jsx)(O, { giftRecipient: m, onComplete: () => d(!1), markAsDismissed: V, children: et })
                 : et,
     });
 });

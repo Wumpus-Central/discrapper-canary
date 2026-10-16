@@ -34,10 +34,10 @@ var n = e(477900),
     M = e(734057),
     R = e(309010),
     W = e(174459),
-    D = e(427262),
-    P = e(110862),
+    P = e(427262),
+    D = e(110862),
     F = e(226830),
-    H = e(859492),
+    H = e(139486),
     B = e(492275),
     U = e(202541),
     Q = e(652215),
@@ -54,7 +54,7 @@ function J(i) {
         children: (0, n.jsxs)("div", {
             className: K.u6,
             children: [
-                (0, n.jsx)(P.D3, {
+                (0, n.jsx)(D.D3, {
                     onClick: () => t(U.pe.TIER_2),
                     isGift: !0,
                     priceOptions: e,
@@ -62,7 +62,7 @@ function J(i) {
                     wumpusPosition: F.Rf.GIFT_SELECTION_MODAL,
                     className: $.giftSelectionModalContext,
                 }),
-                (0, n.jsx)(P.Ls, {
+                (0, n.jsx)(D.Ls, {
                     onClick: () => t(U.pe.TIER_0),
                     isGift: !0,
                     priceOptions: e,
@@ -78,14 +78,12 @@ function z(i) {
         { nextTier: s, giftsToNextTier: l } = (0, d.cf)([j.Ay], () => ({
             nextTier: j.Ay.getNextTier(r.$.GIFTING),
             giftsToNextTier: j.Ay.getRemainingToNextTier(r.$.GIFTING),
-        })),
-        a = e && null != s,
-        c = (0, H.b9)(`GiftSelectionModal${a ? "" : "-DISABLED"}`);
-    return a
+        }));
+    return e && null != s
         ? (0, n.jsx)(B.A, {
               giftsToNextTier: l,
               nextTierName: s.name ?? "",
-              nextTierIcon: (0, H.Se)(s, c),
+              nextTierIcon: (0, H.Se)(s),
               analyticsLocations: t,
           })
         : null;
@@ -166,7 +164,7 @@ function ii(i) {
             totalUnownedWishlistItems: u,
             analyticsLocations: I,
         } = i,
-        f = (0, D.tx)(t),
+        f = (0, P.tx)(t),
         g =
             0 === u
                 ? Z.intl.string(Z.t.BCi1gT)
