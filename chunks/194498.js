@@ -4,9 +4,12 @@ var s = r(66455),
 function a(t) {
     let e = (0, s.A)(t);
     (0, n.Ay)(() => {
-        let t = requestAnimationFrame(function r() {
-            (e.current?.(), (t = requestAnimationFrame(r)));
-        });
-        return () => cancelAnimationFrame(t);
+        let t = !1,
+            r = requestAnimationFrame(function s() {
+                t || (e.current?.(), (r = requestAnimationFrame(s)));
+            });
+        return () => {
+            ((t = !0), cancelAnimationFrame(r));
+        };
     });
 }
