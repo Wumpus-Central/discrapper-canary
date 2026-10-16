@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => U }));
+(n.r(t), n.d(t, { default: () => G }));
 var i = n(477900),
     s = n(582128),
     l = n(991690),
@@ -78,24 +78,25 @@ var E = n(73153),
     m = n(334105),
     b = n(761640),
     j = n(573163),
-    I = n(246338),
-    x = n(343030),
-    C = n(150861),
-    N = n(317608),
-    S = n(378859),
-    v = n(338941),
-    y = n(130745),
-    _ = n(105292),
-    k = n(728846);
-function T(e) {
+    I = n(801914),
+    x = n(246338),
+    C = n(343030),
+    N = n(150861),
+    S = n(317608),
+    v = n(378859),
+    y = n(35367),
+    _ = n(130745),
+    k = n(105292),
+    T = n(728846);
+function U(e) {
     let { applicationId: t, channel: n, showChatToasts: a } = e,
         r = s.useMemo(() => ({ type: l.U.APP_CHANNEL, channelId: n.id, guildId: n.guild_id }), [n.id, n.guild_id]),
-        { frame: c, state: d } = (0, v.A)({ applicationId: t, surface: r });
-    switch (((0, y.A)(n.id), d)) {
-        case v.n.Launched:
+        { frame: c, state: d } = (0, y.A)({ applicationId: t, surface: r });
+    switch (((0, I.A)(t, r), (0, _.A)(n.id), d)) {
+        case y.n.Launched:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(N.A, { frameId: c.id, level: x.A.WithinAppContent, className: k.Z }),
+                    (0, i.jsx)(S.A, { frameId: c.id, level: C.A.WithinAppContent, className: T.Z }),
                     a
                         ? (0, i.jsx)(w, {
                               channelId: n.id,
@@ -106,24 +107,24 @@ function T(e) {
                         : null,
                 ],
             });
-        case v.n.RenderingElsewhere:
-            return (0, i.jsx)(S.A, { className: k.w, description: _.intl.string(_.t["2KIDX+"]) });
-        case v.n.NoApplication:
-            return (0, i.jsx)(S.A, { className: k.w, description: _.intl.string(_.t.izggZO) });
-        case v.n.DoesNotSupportSurface:
-            return (0, i.jsx)(S.A, { className: k.w, description: _.intl.string(_.t["iUWcU/"]) });
-        case v.n.Error:
-            return (0, i.jsx)(S.A, {
-                className: k.w,
-                heading: _.intl.string(_.t.VquUff),
-                error: _.intl.string(_.t["Sd9D/R"]),
+        case y.n.RenderingElsewhere:
+            return (0, i.jsx)(v.A, { className: T.w, description: k.intl.string(k.t["2KIDX+"]) });
+        case y.n.NoApplication:
+            return (0, i.jsx)(v.A, { className: T.w, description: k.intl.string(k.t.izggZO) });
+        case y.n.DoesNotSupportSurface:
+            return (0, i.jsx)(v.A, { className: T.w, description: k.intl.string(k.t["iUWcU/"]) });
+        case y.n.Error:
+            return (0, i.jsx)(v.A, {
+                className: T.w,
+                heading: k.intl.string(k.t.VquUff),
+                error: k.intl.string(k.t["Sd9D/R"]),
             });
-        case v.n.AwaitingLaunch:
-        case v.n.Loading:
-            return (0, i.jsx)(S.j, { className: k.w });
+        case y.n.AwaitingLaunch:
+        case y.n.Loading:
+            return (0, i.jsx)(v.j, { className: T.w });
     }
 }
-function U(e) {
+function G(e) {
     let t,
         n,
         l,
@@ -131,8 +132,8 @@ function U(e) {
         { channel: d } = e,
         u = (0, a.a)(d),
         h = d.application_id ?? u;
-    (0, C.A)(d);
-    let o = (0, I.w$)(d, "AppChannel"),
+    (0, N.A)(d);
+    let o = (0, x.w$)(d, "AppChannel"),
         f =
             ((t = d.id),
             (n = (0, m.cz)(t)),
@@ -155,10 +156,10 @@ function U(e) {
             }, [t]),
             n);
     return null == h
-        ? (0, i.jsx)(S.A, {
-              className: k.w,
-              heading: _.intl.string(_.t.tU5fiM),
-              description: _.intl.string(_.t.E94mJf),
+        ? (0, i.jsx)(v.A, {
+              className: T.w,
+              heading: k.intl.string(k.t.tU5fiM),
+              description: k.intl.string(k.t.E94mJf),
           })
-        : (0, i.jsx)(T, { applicationId: h, channel: d, showChatToasts: o && !f });
+        : (0, i.jsx)(U, { applicationId: h, channel: d, showChatToasts: o && !f });
 }

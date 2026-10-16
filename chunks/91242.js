@@ -89,7 +89,7 @@ let I = new f(r.h, {
                 proxyTicketRefreshing: !1,
                 orientationLock: null,
                 pipOrientationLock: null,
-                prefersPictureInPictureOnNavigateAway: !1,
+                runsInBackground: !1,
                 iframeId: null,
                 hostWindowKey: r ?? null,
                 launch: i,
@@ -132,9 +132,9 @@ let I = new f(r.h, {
             pipOrientationLock: void 0 === i ? e.pipOrientationLock : i,
         }));
     },
-    FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function (e) {
+    FRAME_SET_RUNS_IN_BACKGROUND: function (e) {
         let { frameId: t, enabled: n } = e;
-        return E(t, (e) => ({ ...e, prefersPictureInPictureOnNavigateAway: n }));
+        return E(t, (e) => ({ ...e, runsInBackground: n }));
     },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
         let { frameId: t, refreshing: n } = e;
@@ -146,18 +146,14 @@ let I = new f(r.h, {
     },
     FRAME_IFRAME_MOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;
-        return E(t, (e) => ({
-            ...e,
-            iframeId: n,
-            prefersPictureInPictureOnNavigateAway: e.iframeId === n && e.prefersPictureInPictureOnNavigateAway,
-        }));
+        return E(t, (e) => ({ ...e, iframeId: n, runsInBackground: e.iframeId === n && e.runsInBackground }));
     },
     FRAME_IFRAME_UNMOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;
         return A(
             t,
             (e) => e.iframeId === n,
-            (e) => ({ ...e, iframeId: null, prefersPictureInPictureOnNavigateAway: !1 }),
+            (e) => ({ ...e, iframeId: null, runsInBackground: !1 }),
         );
     },
     FRAME_HOST_WINDOW_MOUNT: function (e) {

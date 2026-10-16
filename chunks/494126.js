@@ -8,9 +8,9 @@
         attachFrameIframe: () => C,
         attachFrameHostWindow: () => R,
         detachFrameHostWindow: () => L,
-        setFramePrefersPictureInPictureOnNavigateAway: () => g,
-        detachFrameIframe: () => O,
         updateFrameLayoutMode: () => m,
+        detachFrameIframe: () => O,
+        setFrameRunsInBackground: () => g,
         updateFramePanelMode: () => S,
         clearMainFrameSlot: () => I,
     }));
@@ -99,7 +99,7 @@ function m(e) {
         i.h.dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: r.applicationId, frameId: t, layoutMode: n });
 }
 function g(e, t) {
-    i.h.dispatch({ type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId: e, enabled: t });
+    i.h.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: e, enabled: t });
 }
 function S(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });

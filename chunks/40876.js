@@ -48,6 +48,7 @@ let r = {
         actions: ["VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(187548).A,
     },
+    ConjureBackgroundFramesManager: { actions: ["FRAME_LAUNCH_START"], inlineRequire: () => n(154021).A },
     ConjureTurnNotificationManager: {
         actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],
         inlineRequire: () => n(464615).A,

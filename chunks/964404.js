@@ -44,6 +44,16 @@ class h extends a.Ay.DeviceSettingsStore {
         (e) => {
             delete e.disableVisualRefresh;
         },
+        (e) => {
+            if (null == e) return e;
+            let {
+                    allowConjurePictureInPictureOnNavigateAway: t,
+                    allowVibegrationsPictureInPictureOnNavigateAway: n,
+                    ...i
+                } = e,
+                r = t ?? n;
+            return (null != r && null == i.allowConjureRunInBackground && (i.allowConjureRunInBackground = r), i);
+        },
     ];
     initialize(e) {
         (A = e ?? {}).hdrDynamicRange = A.hdrDynamicRange ?? "no-limit";
@@ -117,8 +127,8 @@ class h extends a.Ay.DeviceSettingsStore {
     get disableApplicationSubscriptionCancellationSurvey() {
         return A.disableApplicationSubscriptionCancellationSurvey ?? !1;
     }
-    get allowConjurePictureInPictureOnNavigateAway() {
-        return A.allowConjurePictureInPictureOnNavigateAway ?? !0;
+    get allowConjureRunInBackground() {
+        return A.allowConjureRunInBackground ?? !0;
     }
     get darkSidebar() {
         return A.darkSidebar ?? !1;
