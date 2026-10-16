@@ -418,7 +418,6 @@ async function F(e, t) {
     }
 }
 async function B(e, t) {
-    if ("visible" !== document.visibilityState) return m("window not visible");
     let n = (0, c.B0)(e);
     if ((null == n && m("frame identity unknown"), null != g() && null != n)) {
         let i = await P(e, t, (e) => b(n, e, t.spec));
