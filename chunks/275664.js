@@ -331,31 +331,32 @@ function C(e) {
     l.useEffect(() => {
         if (!a || null == U || A <= 0 || eu <= 0) return;
         ((em.current = ed.current ?? U()), (ef.current = performance.now()));
-        let e = 0;
+        let e = 0,
+            t = !1;
         return (
-            (e = requestAnimationFrame(function t() {
-                if (null == U) return;
-                let n = performance.now(),
-                    r = ef.current;
-                ef.current = n;
-                let l = em.current;
-                if (null != l) {
-                    l += null != r ? (n - r) / 1e3 : 0;
+            (e = requestAnimationFrame(function n() {
+                if (t || null == U) return;
+                let r = performance.now(),
+                    l = ef.current;
+                ef.current = r;
+                let a = em.current;
+                if (null != a) {
+                    a += null != l ? (r - l) / 1e3 : 0;
                     let e = U();
                     if (null != e && Number.isFinite(e)) {
-                        let t = e - l;
-                        l = Math.abs(t) > 0.5 ? e : l + 0.1 * t;
+                        let t = e - a;
+                        a = Math.abs(t) > 0.5 ? e : a + 0.1 * t;
                     }
-                } else l = U() ?? null;
-                if (null != l && Number.isFinite(l)) {
-                    ((em.current = l), (ed.current = l));
-                    let e = Math.min(Math.max(0, (l / A) * eu), eu);
+                } else a = U() ?? null;
+                if (null != a && Number.isFinite(a)) {
+                    ((em.current = a), (ed.current = a));
+                    let e = Math.min(Math.max(0, (a / A) * eu), eu);
                     eo.set(e);
                 }
-                e = requestAnimationFrame(t);
+                e = requestAnimationFrame(n);
             })),
             () => {
-                (cancelAnimationFrame(e), (em.current = null), (ef.current = null));
+                ((t = !0), cancelAnimationFrame(e), (em.current = null), (ef.current = null));
             }
         );
     }, [a, U, A, eu, eo]);
