@@ -135,6 +135,16 @@ let s = {
                     patch: { restoreProposal: e.restore_proposal },
                 });
         },
+        publish_schedule_proposal(e, t) {
+            let { projectId: n } = t;
+            null != e.publish_schedule_proposal &&
+                r.h.dispatch({
+                    type: "CONJURE_CHAT_TURN_PATCH",
+                    projectId: n,
+                    turnId: e.turn_id,
+                    patch: { publishScheduleProposal: e.publish_schedule_proposal },
+                });
+        },
         clarification(e, t) {
             let { projectId: n } = t;
             null != e.clarification &&

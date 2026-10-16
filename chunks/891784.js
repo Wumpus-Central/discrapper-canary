@@ -1,21 +1,21 @@
 (n.d(t, { Bd: () => u, YF: () => o, iW: () => s, o_: () => d }), n(321073), n(134528), n(947204));
-var i = n(935208),
-    l = n(149987);
+var l = n(935208),
+    i = n(149987);
 function s(e, t) {
     let {
             ts: n,
-            id: i,
-            userId: l,
+            id: l,
+            userId: i,
             attachments: s,
             turnId: r,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        u = i ?? `m${++a}`;
+        u = l ?? `m${++a}`;
     return {
         id: u,
         render_id: u,
         role: e,
         content: t,
-        ...(null != l ? { user_id: l } : {}),
+        ...(null != i ? { user_id: i } : {}),
         ...(null != r ? { turn_id: r } : {}),
         steps: [],
         created_at: null != n ? Date.parse(n) : Date.now(),
@@ -27,7 +27,7 @@ function r(e) {
         n = (function (e) {
             let t = e?.startsWith(d) === !0 ? e.slice(d.length) : e;
             if (null == t || !/^\d+$/.test(t)) return null;
-            let n = i.default.extractTimestamp(t);
+            let n = l.default.extractTimestamp(t);
             return Number.isFinite(n) && n > 0 ? n : null;
         })(e.id);
     if (
@@ -48,11 +48,12 @@ function r(e) {
     null != e.context_switch && (t.contextSwitch = e.context_switch),
     null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
     null != e.restore_proposal && (t.restoreProposal = e.restore_proposal),
+    null != e.publish_schedule_proposal && (t.publishScheduleProposal = e.publish_schedule_proposal),
     null != e.app_build_request && (t.appBuildRequest = e.app_build_request),
     null != e.source_sha && (t.sourceSha = e.source_sha),
     null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
     null != e.steps
-        ? (t.steps = (0, l.Zu)(e.steps))
+        ? (t.steps = (0, i.Zu)(e.steps))
         : null != e.events &&
           (t.steps = e.events.flatMap((e) =>
               "todos" === e.type ? [{ type: "step", kind: "todos", items: e.items }] : [],
@@ -61,13 +62,16 @@ function r(e) {
     null != e.settings_request && (t.settingsRequest = e.settings_request),
     null != e.intake && e.intake.questions.length > 0 && (t.intake = e.intake),
     e.steps ?? []))
-        "awaiting_user" === n.kind && "secrets" === n.action && (t.awaitingUser = { action: n.action });
+        ("publish_schedule_proposal" === n.kind &&
+            null != n.publish_schedule_proposal &&
+            (t.publishScheduleProposal = n.publish_schedule_proposal),
+            "awaiting_user" === n.kind && "secrets" === n.action && (t.awaitingUser = { action: n.action }));
     return t;
 }
 function u(e) {
     let t = e.map(r),
         n = new Map(),
-        i = [];
+        l = [];
     for (let [r, u] of t.entries()) {
         var s;
         let o =
@@ -80,33 +84,33 @@ function u(e) {
                   ? (s.steered_at ?? null)
                   : null);
         if (null != o) {
-            i.push({ index: r, at: o });
+            l.push({ index: r, at: o });
             continue;
         }
         if (!u.id.startsWith(d)) continue;
         let a = u.settled_at ?? -1 / 0,
-            f = i.filter((e) => u.created_at < e.at && e.at < a);
-        i = [];
-        let c = [...f].sort((e, t) => e.at - t.at),
-            _ = c.map((e) => e.at),
+            c = l.filter((e) => u.created_at < e.at && e.at < a);
+        l = [];
+        let f = [...c].sort((e, t) => e.at - t.at),
+            _ = f.map((e) => e.at),
             p =
-                0 === c.length
+                0 === f.length
                     ? null
                     : (function (e, t) {
                           if (null == e) return null;
                           let n = [[], ...t.map(() => [])],
-                              i = 0;
-                          for (let l of e) {
-                              if (null == l.ts) return null;
-                              for (; i < t.length && t[i] <= l.ts;) i++;
-                              n[i].push(l);
+                              l = 0;
+                          for (let i of e) {
+                              if (null == i.ts) return null;
+                              for (; l < t.length && t[l] <= i.ts;) l++;
+                              n[l].push(i);
                           }
                           return n;
                       })(e[r].steps, _);
         if (null == p || p.slice(0, -1).every((e) => 0 === e.length)) continue;
         let h = u.id.slice(d.length),
             g = u.created_at;
-        for (let [e, i] of c.entries()) {
+        for (let [e, l] of f.entries()) {
             let s = `${u.id}:${e}`,
                 r = {
                     id: s,
@@ -114,14 +118,14 @@ function u(e) {
                     role: "assistant",
                     content: "",
                     turn_id: h,
-                    steps: (0, l.Zu)(p[e]),
+                    steps: (0, i.Zu)(p[e]),
                     created_at: g,
                     continued: !0,
-                    finished_at: i.at,
+                    finished_at: l.at,
                 };
-            (n.set(f[e].index, p[e].length > 0 ? [r, t[i.index]] : [t[i.index]]), (g = i.at));
+            (n.set(c[e].index, p[e].length > 0 ? [r, t[l.index]] : [t[l.index]]), (g = l.at));
         }
-        t[r] = { ...u, turn_id: h, steps: (0, l.Zu)(p[c.length]), created_at: g };
+        t[r] = { ...u, turn_id: h, steps: (0, i.Zu)(p[f.length]), created_at: g };
     }
     return 0 === n.size ? t : t.flatMap((e, t) => n.get(t) ?? [e]);
 }
@@ -131,12 +135,12 @@ function o(e) {
     if (0 === t.size) return e;
     let n = new Set();
     return e.flatMap((e) => {
-        let i = e.contextSwitch?.id;
-        if (null == i) return [e];
-        if (n.has(i)) return [];
-        n.add(i);
-        let l = t.get(i);
-        return l?.status === "undone" ? [] : [l === e.contextSwitch ? e : { ...e, contextSwitch: l }];
+        let l = e.contextSwitch?.id;
+        if (null == l) return [e];
+        if (n.has(l)) return [];
+        n.add(l);
+        let i = t.get(l);
+        return i?.status === "undone" ? [] : [i === e.contextSwitch ? e : { ...e, contextSwitch: i }];
     });
 }
 let d = "turn:",
