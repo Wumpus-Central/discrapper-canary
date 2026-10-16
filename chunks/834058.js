@@ -708,8 +708,8 @@ function eV(e) {
                             (0, i.jsxs)("div", {
                                 className: s()(ew._q, { [ew.EY]: e9 }),
                                 children: [
-                                    eZ ? (0, i.jsx)(ez, {}) : eq ? (0, i.jsx)(eB, {}) : eQ ? (0, i.jsx)(ek, {}) : null,
                                     null != e1 && (0, i.jsx)(eC, { callMessageId: e1, className: ew.R4 }),
+                                    eZ ? (0, i.jsx)(ez, {}) : eq ? (0, i.jsx)(eB, {}) : eQ ? (0, i.jsx)(ek, {}) : null,
                                     tA && null != e8
                                         ? (0, i.jsx)(eP, { channelName: e8, onClick: tg, showNameplate: e9 })
                                         : null,
