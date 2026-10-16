@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => T, Mg: () => E, Og: () => y, VY: () => _, Y1: () => f, aF: () => C, uk: () => h }),
+(n.d(t, { M$: () => T, Mg: () => g, Og: () => y, VY: () => _, Y1: () => f, aF: () => C, uk: () => h }),
     n(323874),
     n(14289),
     n(35956));
@@ -15,7 +15,7 @@ var r = n(73153),
 let _ = {
         capture_preview(e, t) {
             let { projectId: n, ws: r } = t;
-            g(n, r, e).catch(() => {});
+            E(n, r, e).catch(() => {});
         },
         control_preview(e, t) {
             let { projectId: n, ws: r } = t;
@@ -52,10 +52,17 @@ let _ = {
     h = {
         preview_ready(e, t) {
             let { projectId: n } = t;
-            ((0, o.OA)(n, e),
-                (0, l.tZ)(n, { isPreview: !0 }).catch((e) => {
-                    console.error("[conjure] post-preview-publish refresh failed", n, e);
-                }));
+            (0, o.OA)(n, e);
+            let r =
+                null != e.integration_installed && null != e.bot_permissions_changed
+                    ? {
+                          integrationInstalled: e.integration_installed,
+                          botPermissionsChanged: e.bot_permissions_changed,
+                      }
+                    : void 0;
+            (0, l.tZ)(n, { isPreview: !0, install: r }).catch((e) => {
+                console.error("[conjure] post-preview-publish refresh failed", n, e);
+            });
         },
     };
 function f(e, t) {
@@ -80,11 +87,11 @@ async function y(e) {
     let t = await (0, c.h)(e, "/agent/overlay-background", { method: "DELETE" });
     if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }
-async function E(e, t) {
+async function g(e, t) {
     let { ticket: n, baseUrl: r } = await (0, a.BK)(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }
-async function g(e, t, n) {
+async function E(e, t, n) {
     let r,
         o = Date.now();
     (console.debug("[conjure] capture request received", { id: n.id, build: n.build, probe: n.probe }),

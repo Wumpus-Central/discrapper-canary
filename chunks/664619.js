@@ -1,30 +1,31 @@
-n.d(t, { Is: () => R, R_: () => A, YI: () => h, tZ: () => C });
+n.d(t, { Is: () => h, R_: () => C, YI: () => A, tZ: () => I });
 var i = n(636537),
     l = n(73153),
     _ = n(803306),
     u = n(382483),
-    r = n(627363),
-    a = n(287809),
+    a = n(627363),
+    r = n(287809),
     s = n(517244),
     o = n(513845),
     c = n(371169),
-    p = n(385081),
-    E = n(722701),
-    d = n(652215);
-function R(e, t, n) {
-    (0, p.Hy)(e, {
+    p = n(260498),
+    E = n(385081),
+    d = n(722701),
+    R = n(652215);
+function h(e, t, n) {
+    (0, E.Hy)(e, {
         location: "publish",
-        code: p.xf.PUBLISH_FAILED,
+        code: E.xf.PUBLISH_FAILED,
         message: `publish${n ? "-preview" : ""} failed`,
         details: t,
         isPreview: n,
     });
 }
-async function h(e, t) {
+async function A(e, t) {
     let { guildId: n, alsoRemovePreviewBot: l } = t;
     try {
         return await i.Bo.post({
-            url: d.Rsh.CONJURE_PROJECT_UNPUBLISH(e),
+            url: R.Rsh.CONJURE_PROJECT_UNPUBLISH(e),
             body: { guild_id: n, also_remove_preview_bot: l },
             rejectWithError: !1,
         });
@@ -32,10 +33,10 @@ async function h(e, t) {
         (0, c.GO)(e);
     }
 }
-async function A(e) {
-    let t = await h(e, {}).catch(() => null);
+async function C(e) {
+    let t = await A(e, {}).catch(() => null);
     if (t?.ok !== !0) return !1;
-    let n = E.A.getPublishStatus(e);
+    let n = d.A.getPublishStatus(e);
     null != n &&
         l.h.dispatch({
             type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
@@ -45,16 +46,28 @@ async function A(e) {
             surface: n.surface,
             previewAppChannels: n.previewAppChannels,
         });
-    let i = a.default.getCurrentUser()?.id;
+    let i = r.default.getCurrentUser()?.id;
     return (null != i && (0, _.eO)(i).catch(() => {}), !0);
 }
-async function C(e, t) {
-    let { isPreview: n } = t,
-        { bot_permissions_changed: i, integration_installed: _, project: a } = (await (0, c.U1)(e)).body,
-        p = n ? a.preview_application_id : a.application_id;
-    null != p &&
-        (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: p }),
-        await (0, r.TA)(p),
-        await (0, u.un)(p, { force: !0 }).catch(() => {}),
-        n ? _ && !i && (0, s.k)(p) : (0, o.R2)(p));
+async function I(e, t) {
+    let { isPreview: n, install: i } = t,
+        l = p.Ay.getProject(e),
+        _ = null == l ? null : n ? l.preview_application_id : l.application_id,
+        u = !n || null != i,
+        a = null != _ ? P(_, n, u ? i : null) : null,
+        { bot_permissions_changed: r, integration_installed: s, project: o } = (await (0, c.U1)(e)).body,
+        E = n ? o.preview_application_id : o.application_id;
+    if (null != E) {
+        let e = { integrationInstalled: s, botPermissionsChanged: r };
+        E !== _ || null == a ? await P(E, n, e) : (await a, u || N(E, n, e));
+    }
+}
+async function P(e, t, n) {
+    (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: e }),
+        await (0, a.TA)(e),
+        await (0, u.un)(e, { force: !0 }).catch(() => {}),
+        null !== n && N(e, t, n));
+}
+function N(e, t, n) {
+    t ? n?.integrationInstalled !== !0 || n.botPermissionsChanged || (0, s.k)(e) : (0, o.R2)(e);
 }

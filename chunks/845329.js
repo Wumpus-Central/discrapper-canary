@@ -1,41 +1,63 @@
 (n.d(t, {
-    Df: () => a,
-    Fl: () => s,
-    S3: () => c,
-    SF: () => d,
-    Wl: () => o,
-    Wn: () => u,
-    b5: () => m,
-    h_: () => i,
-    kt: () => h,
-    n0: () => f,
+    SF: () => h,
+    b5: () => p,
+    Wn: () => m,
+    Yn: () => d,
+    h_: () => u,
+    Fl: () => c,
+    kt: () => x,
+    S3: () => f,
+    n0: () => g,
+    Df: () => o,
 }),
-    n(321073),
-    n(246338));
-var l = n(261425),
-    r = n(105292);
-function a(e, t) {
+    n(321073));
+var l = n(723312);
+n(246338);
+var r = n(688954),
+    a = n(105292);
+async function i(e, t) {
+    try {
+        let n = await (0, r.h)(e, "/agent/template-intake", { query: { template: t, locale: a.intl.currentLocale } });
+        if (!n.ok) return null;
+        let l = await n.json();
+        return Array.isArray(l.questions) && l.questions.length > 0 ? l : null;
+    } catch {
+        return null;
+    }
+}
+var s = n(261425);
+function o(e, t) {
     return 0 === t.length ? "none" : t.some((t) => t.id === e) ? "skip" : "pick";
 }
-function i(e, t) {
+function u(e, t) {
     if ("none" === t) return ["server"];
     let n = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
     return "pick" === t ? ["about", "server", ...n] : ["about", ...n];
 }
-function s(e, t) {
+function c(e, t) {
     return null != e && (!0 === e.optional || "" !== (t ?? "").trim());
 }
-function o(e) {
-    return r.intl.formatToPlainString(l.default["/qSx7+"], { templateName: e, locale: r.intl.currentLocale });
+async function d(e, t) {
+    let n = await i(e, t.id);
+    if (null != n) (0, l.prepareTemplate)(e, t.id);
+    else {
+        var r;
+        (0, l.sendUserMessage)(
+            e,
+            ((r = t.name),
+            a.intl.formatToPlainString(s.default["/qSx7+"], { templateName: r, locale: a.intl.currentLocale })),
+        );
+    }
+    return n;
 }
-function u(e) {
+function m(e) {
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
         if ("assistant" === n.role && null != n.intake) return n.intake;
     }
     return null;
 }
-function c(e) {
+function f(e) {
     return null == e
         ? null
         : {
@@ -47,16 +69,16 @@ function c(e) {
               })),
           };
 }
-function d(e) {
-    return e?.server ?? { title: r.intl.string(l.default.vcxYIA), hint: r.intl.string(l.default.auUHPZ) };
+function h(e) {
+    return e?.server ?? { title: a.intl.string(s.default.vcxYIA), hint: a.intl.string(s.default.auUHPZ) };
 }
-function m(e) {
+function p(e) {
     return e?.questions ?? [];
 }
-function f(e, t) {
+function g(e, t) {
     return e.length > 0 && e.every((e, n) => !0 === e.optional || "" !== (t[n] ?? "").trim());
 }
-function h(e, t) {
+function x(e, t) {
     let n = [];
     return (
         e.forEach((e, l) => {

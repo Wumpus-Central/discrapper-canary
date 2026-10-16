@@ -1,11 +1,12 @@
 (n.r(t),
     n.d(t, {
-        default: () => es,
-        resetHistoryPaging: () => ee,
-        closeConnection: () => et,
-        loadOlderHistory: () => Z,
+        default: () => ei,
+        prepareTemplate: () => V,
+        resetHistoryPaging: () => en,
+        closeConnection: () => er,
+        loadOlderHistory: () => et,
         stageModelSettings: () => X,
-        closeAllConnections: () => en,
+        closeAllConnections: () => es,
         ensureConnection: () => F,
         withdrawUserMessage: () => Y,
         interruptTurn: () => Q,
@@ -33,10 +34,10 @@ var r = n(158390),
     m = n(371169),
     O = n(962998),
     y = n(525530),
-    N = n(743082),
-    T = n(385081),
-    C = n(1371);
-class k {
+    T = n(743082),
+    N = n(385081),
+    k = n(1371);
+class C {
     socket = null;
     open(e) {
         let { url: t, ticket: n, onEvent: r, onClose: s, onError: o } = e;
@@ -130,6 +131,10 @@ class k {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "set_overlay_background_blur", enabled: e }));
     }
+    sendPrepareTemplate(e) {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
+        this.socket.send(JSON.stringify({ type: "prepare_template", template_id: e }));
+    }
     sendModelSettings(e) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "set_model_settings", settings: e }));
@@ -202,8 +207,8 @@ class k {
     }
 }
 var b = n(382541),
-    R = n(649121),
-    w = n(975189);
+    w = n(649121),
+    R = n(975189);
 (n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
 let U = new Map(),
     A = new Map(),
@@ -211,28 +216,28 @@ let U = new Map(),
 function J(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-function I(e) {
+function P(e) {
     return `optimistic:${e}`;
 }
-let D = new Map();
-function M(e, t) {
+let I = new Map();
+function D(e, t) {
     let { content: n, nonce: r, attachments: s } = t;
-    (D.set(r, l.default.getCurrentUser()?.id),
+    (I.set(r, l.default.getCurrentUser()?.id),
         o.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: I(r),
+            id: P(r),
             userId: l.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: s,
         }));
 }
-function P(e, t, n) {
+function M(e, t, n) {
     let r = t.pendingSends;
-    for (let s of ((t.pendingSends = []), r)) (M(e, s), (0, d.Gu)(e, n));
+    for (let s of ((t.pendingSends = []), r)) (D(e, s), (0, d.Gu)(e, n));
 }
-let L = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.ow, ...N.WO, ...u.V5 },
+let L = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.ow, ...T.WO, ...u.V5 },
     G = {
         app_build_request(e, t) {
             let { projectId: n } = t;
@@ -311,7 +316,7 @@ async function x(e, t) {
                     let s = { projectId: t, ws: n.ws };
                     switch (r.type) {
                         case "history_page":
-                            if (r.requested !== V.get(t) || (V.delete(t), !0 === r.failed)) return;
+                            if (r.requested !== ee.get(t) || (ee.delete(t), !0 === r.failed)) return;
                             o.h.dispatch({
                                 type: "CONJURE_CHAT_HISTORY_PREPEND",
                                 projectId: t,
@@ -331,7 +336,7 @@ async function x(e, t) {
                                 cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                                 degraded: !0 === r.degraded,
                             }),
-                                V.delete(t));
+                                ee.delete(t));
                             let i = n.pendingEvents;
                             for (let r of ((n.pendingEvents = []), J(t, "open"), i)) e(t, n, r);
                             (W.get(t) ?? 0) > 0 && H(t, n);
@@ -342,9 +347,11 @@ async function x(e, t) {
                                 } catch (e) {
                                     console.error("[conjure] staged model settings send failed", e);
                                 }
-                            let a = n.pendingSends;
-                            for (let e of ((n.pendingSends = []), a)) {
-                                M(t, e);
+                            let a = n.pendingTemplatePrep;
+                            ((n.pendingTemplatePrep = null), null != a && Z(n, a));
+                            let c = n.pendingSends;
+                            for (let e of ((n.pendingSends = []), c)) {
+                                D(t, e);
                                 try {
                                     n.ws.sendUserMessage(
                                         e.content,
@@ -367,16 +374,16 @@ async function x(e, t) {
                         }
                         case "user_message":
                             let i, l, a;
-                            ((l = (i = null != r.nonce && D.has(r.nonce)) && null != r.nonce ? D.get(r.nonce) : void 0),
+                            ((l = (i = null != r.nonce && I.has(r.nonce)) && null != r.nonce ? I.get(r.nonce) : void 0),
                                 (a = i && (null == l || null == r.user_id || l === r.user_id)) &&
                                     null != r.nonce &&
-                                    D.delete(r.nonce),
+                                    I.delete(r.nonce),
                                 o.h.dispatch({
                                     type: "CONJURE_CHAT_MESSAGE_APPEND",
                                     projectId: t,
                                     content: r.content,
                                     id: r.id,
-                                    ...(a && null != r.nonce ? { optimisticId: I(r.nonce) } : {}),
+                                    ...(a && null != r.nonce ? { optimisticId: P(r.nonce) } : {}),
                                     userId: r.user_id,
                                     timestamp: r.ts,
                                     attachments: r.attachments,
@@ -386,7 +393,7 @@ async function x(e, t) {
                             !(function (e, t) {
                                 let { projectId: n } = t;
                                 if ("turn_result" === e.kind) {
-                                    ((0, T.hV)(n, e),
+                                    ((0, N.hV)(n, e),
                                         "deployed" === e.result &&
                                             o.h.dispatch({
                                                 type: "CONJURE_CHAT_TURN_PATCH",
@@ -422,8 +429,9 @@ async function x(e, t) {
                     : t.helloSeen
                       ? ((t.reconnectPending = !0), J(e, "connecting"), t.backoff.fail(() => B(e)))
                       : (J(e, "closed"),
-                        P(e, t, "Connection closed before the message was sent"),
-                        (t.pendingModelSettings = null));
+                        M(e, t, "Connection closed before the message was sent"),
+                        (t.pendingModelSettings = null),
+                        (t.pendingTemplatePrep = null));
             },
             onError: (e) => {
                 console.error("[conjure] ws error", e);
@@ -432,13 +440,14 @@ async function x(e, t) {
     } catch (n) {
         if ((console.error("[conjure] ws open failed", n), t.disposed)) return;
         (J(e, "failed"),
-            P(e, t, n instanceof Error ? n.message : "ws open failed"),
+            M(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
+            (t.pendingTemplatePrep = null),
             (0, O.Mz)(e, "Connection failed before the publish result arrived"),
             (0, O.BC)(e, "Connection failed before the draft arrived"),
-            (0, T.Hy)(e, {
+            (0, N.Hy)(e, {
                 location: "connection",
-                code: T.xf.WS_OPEN_FAILED,
+                code: N.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
@@ -447,7 +456,7 @@ function B(e) {
     let t = U.get(e);
     null == t &&
         ((t = {
-            ws: new k(),
+            ws: new C(),
             backoff: new r.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -455,10 +464,11 @@ function B(e) {
             pendingSends: [],
             pendingEvents: [],
             pendingModelSettings: null,
+            pendingTemplatePrep: null,
             debugOnDemand: !1,
         }),
         U.set(e, t),
-        (0, w.Sm)(e, t.ws));
+        (0, R.Sm)(e, t.ws));
     let n = t;
     ((n.pendingEvents = []),
         (n.helloSeen = !1),
@@ -494,9 +504,9 @@ function $(e) {
         (0, O.BC)(e, "Connection closed before the draft arrived"),
         t.ws.close(),
         U.delete(e),
-        (0, w.ng)(e),
-        ee(e),
-        C.A.releasePreviewControl(e),
+        (0, R.ng)(e),
+        en(e),
+        k.A.releasePreviewControl(e),
         (0, g.RP)(e),
         J(e, "closed"),
         !0)
@@ -528,7 +538,7 @@ function z(e, t, n) {
         },
         p = U.get(e);
     if (null != p && ("connecting" === A.get(e) || p.reconnectPending)) return (p.pendingSends.push(u), !0);
-    M(e, u);
+    D(e, u);
     try {
         if (null == p) throw Error("Not connected");
         return (
@@ -550,12 +560,12 @@ function z(e, t, n) {
 function K(e, t, n) {
     let r = (0, i.m)();
     return (
-        M(e, { content: t.trim(), nonce: r, attachments: null != n && n.length > 0 ? n : void 0 }),
-        { nonce: r, messageKey: I(r) }
+        D(e, { content: t.trim(), nonce: r, attachments: null != n && n.length > 0 ? n : void 0 }),
+        { nonce: r, messageKey: P(r) }
     );
 }
 function Y(e, t) {
-    (D.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: I(t), withdrawn: !0 }));
+    (I.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: P(t), withdrawn: !0 }));
 }
 function Q(e) {
     let t = U.get(e);
@@ -573,25 +583,40 @@ function X(e, t) {
         ? console.error("[conjure] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-let V = new Map();
-function Z(e) {
+function V(e, t) {
+    let n = U.get(e);
+    null == n
+        ? console.error("[conjure] prepareTemplate with no connection \u2014 call ensureConnection first")
+        : "open" === A.get(e)
+          ? Z(n, t)
+          : (n.pendingTemplatePrep = t);
+}
+function Z(e, t) {
+    try {
+        e.ws.sendPrepareTemplate(t);
+    } catch (e) {
+        console.error("[conjure] template prepare send failed", e);
+    }
+}
+let ee = new Map();
+function et(e) {
     let t = (0, c.b)(e);
     if (null == t) return !1;
-    if (V.get(e) === t) return !0;
+    if (ee.get(e) === t) return !0;
     let n = U.get(e);
-    return null != n && "open" === A.get(e) && (V.set(e, t), n.ws.sendLoadHistory(t), !0);
+    return null != n && "open" === A.get(e) && (ee.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-function ee(e) {
-    V.delete(e);
+function en(e) {
+    ee.delete(e);
 }
-function et(e) {
+function er(e) {
     $(e);
 }
-function en() {
+function es() {
     for (let e of Array.from(U.keys())) $(e);
-    (D.clear(), (0, R.j_)());
+    (I.clear(), (0, w.j_)());
 }
-class er extends s.Ay.Store {
+class eo extends s.Ay.Store {
     initialize() {
         this.waitFor(c.A, p.A, S.Ay, l.default);
     }
@@ -599,7 +624,7 @@ class er extends s.Ay.Store {
         return A.get(e) ?? "connecting";
     }
 }
-let es = new er(o.h, {
+let ei = new eo(o.h, {
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (A.get(t) === n) return !1;
@@ -616,6 +641,6 @@ let es = new er(o.h, {
     },
     LOGOUT: function () {
         if (0 === U.size) return !1;
-        en();
+        es();
     },
 });
