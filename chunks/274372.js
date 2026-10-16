@@ -330,10 +330,8 @@ let V = new B(a.h, {
             U.newClipIds = U.newClipIds.filter((e) => e !== t);
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
-            for (let t of ((I = {}), e.clips)) {
-                if (t.isCandidate) return;
-                ((I[t.id] = t), null != t.remoteClipId && (p[t.remoteClipId] = t.id));
-            }
+            for (let t of ((I = {}), e.clips))
+                t.isCandidate || ((I[t.id] = t), null != t.remoteClipId && (p[t.remoteClipId] = t.id));
             U.hasClips = Object.keys(I).length > 0;
         },
         CLIPS_DELETE_CLIP: function (e) {
