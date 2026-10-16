@@ -43,7 +43,7 @@ function f(e) {
               spacing: 16,
               shouldShow: !0,
               onRequestClose: function (e, n) {
-                  if ("system:click_outside" === n ? j.current : g) return (C.current?.focus(), s.o);
+                  if ("system:click_outside" === n ? j.current : g) return (C.current?.focus(), s.oU);
                   (0, u.HW)(t);
               },
               renderPopout: () =>

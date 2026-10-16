@@ -76,7 +76,7 @@ class S extends s.Component {
             spacing: C = 8,
             clickTrap: O = !1,
         } = this.props;
-        return (0, a.jsx)(d.$, {
+        return (0, a.jsx)(d.$n, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
             preload: _,

@@ -150,7 +150,7 @@ function k(e) {
                 })(M?.align ?? "center", I, T, U);
         }, [L, M, I, T, U]),
         er = o.useMemo(() => ({ position: I, caretConfig: M ?? { align: "center" } }), [I, M]);
-    return (0, n.jsx)(d.$, {
+    return (0, n.jsx)(d.$n, {
         targetElementRef: r,
         shouldShow: _ && !F,
         onRequestClose: y,

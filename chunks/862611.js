@@ -34,8 +34,8 @@ var i,
     k = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
     q = n(190107),
     w = n(652215),
-    j = n(105292),
-    U = n(398889);
+    U = n(105292),
+    j = n(398889);
 function Q(e) {
     let t,
         n,
@@ -44,49 +44,49 @@ function Q(e) {
         o = (0, u.bG)([L.A], () => L.A.getState().theme),
         m = (0, a.M)(o) ? w.NJ8.DARK : w.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
-        className: U.N1,
+        className: j.N1,
         children: [
             (0, r.jsxs)("div", {
-                className: U.VW,
+                className: j.VW,
                 children: [
                     (0, r.jsx)("img", {
-                        className: U.rC,
+                        className: j.rC,
                         alt: l.config.messages.gameTitle,
                         src: (0, O.tW)(l, O.fY.GAME_TILE, m).url,
                     }),
                     (0, r.jsxs)("div", {
-                        className: U.if,
+                        className: j.if,
                         children: [
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-strong",
                                 children:
                                     ((t = {
-                                        [q.Li.PACKAGE_ACTION_ADVENTURE]: j.t.PYFVdf,
-                                        [q.Li.PACKAGE_RPG_MMO]: j.t.rFQo2F,
-                                        [q.Li.PACKAGE_RACING_SPORTS]: j.t.zDRa6g,
-                                        [q.Li.PACKAGE_SANDBOX_CREATIVE]: j.t.vz9U2Q,
-                                        [q.Li.PACKAGE_FAMILY_FRIENDLY]: j.t.IOiAE0,
-                                        [q.Li.PACKAGE_HOLIDAY_SEASON]: j.t.cJPqvD,
-                                        [q.Li.PACKAGE_NEW_YEARS]: j.t.S0w2mv,
+                                        [q.Li.PACKAGE_ACTION_ADVENTURE]: U.t.PYFVdf,
+                                        [q.Li.PACKAGE_RPG_MMO]: U.t.rFQo2F,
+                                        [q.Li.PACKAGE_RACING_SPORTS]: U.t.zDRa6g,
+                                        [q.Li.PACKAGE_SANDBOX_CREATIVE]: U.t.vz9U2Q,
+                                        [q.Li.PACKAGE_FAMILY_FRIENDLY]: U.t.IOiAE0,
+                                        [q.Li.PACKAGE_HOLIDAY_SEASON]: U.t.cJPqvD,
+                                        [q.Li.PACKAGE_NEW_YEARS]: U.t.S0w2mv,
                                     }),
                                     (i =
                                         (null != (n = l.config.features.find((e) => e in t)) ? t[n] : null) ??
-                                        j.t["D+DkEH"]),
-                                    j.intl.string(i)),
+                                        U.t["D+DkEH"]),
+                                    U.intl.string(i)),
                             }),
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: j.intl.string(j.t.VgN1Bn),
+                                children: U.intl.string(U.t.VgN1Bn),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, r.jsx)(d.D, {
-                className: U.b,
-                "aria-label": j.intl.string(j.t.cpT0Cq),
+                className: j.b,
+                "aria-label": U.intl.string(U.t.cpT0Cq),
                 onClick: s,
                 children: (0, r.jsx)(f.P, { size: "md", color: "currentColor" }),
             }),
@@ -836,16 +836,16 @@ function b(e) {
     return (0, r.jsx)(g.m, {
         text: i.name,
         children: (0, r.jsx)(d.D, {
-            className: U.zR,
+            className: j.zR,
             onClick: L,
             onMouseMove: R,
             onMouseLeave: O,
             children: (0, r.jsx)("div", {
                 ref: S,
-                className: U._M,
+                className: j._M,
                 children:
                     null != i.gameRecord
-                        ? (0, r.jsx)(N.Ay, { game: i.gameRecord, className: U.xe, size: N.wu.SMALL })
+                        ? (0, r.jsx)(N.Ay, { game: i.gameRecord, className: j.xe, size: N.wu.SMALL })
                         : null,
             }),
         }),
@@ -925,12 +925,12 @@ function X(e) {
     ) {
         let e = Math.min(i.length, 10);
         return (0, r.jsxs)("div", {
-            className: U.kL,
+            className: j.kL,
             children: [
                 (0, r.jsx)(Q, { quest: t, onClose: s }),
                 (0, r.jsx)("div", {
-                    className: U.LA,
-                    children: i.slice(0, e).map((e) => (0, r.jsx)("div", { className: U.Vj }, e)),
+                    className: j.LA,
+                    children: i.slice(0, e).map((e) => (0, r.jsx)("div", { className: j.Vj }, e)),
                 }),
             ],
         });
@@ -941,11 +941,11 @@ function X(e) {
               ref: (e) => {
                   a.current = e;
               },
-              className: U.kL,
+              className: j.kL,
               children: [
                   (0, r.jsx)(Q, { quest: t, onClose: s }),
                   (0, r.jsxs)("div", {
-                      className: U.LA,
+                      className: j.LA,
                       children: [
                           C.map((e) =>
                               (0, r.jsx)(
@@ -1024,7 +1024,7 @@ function K(e) {
                       }));
         },
         onRequestClose: function () {
-            if (g) return o.o;
+            if (g) return o.oU;
             a?.();
         },
         position: T ? "right" : "top",

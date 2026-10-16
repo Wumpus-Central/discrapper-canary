@@ -761,7 +761,7 @@ function nA(e) {
               align: "right",
               autoInvert: !1,
               onRequestClose: (e, n) => {
-                  if ("user:escape" === n && (0, nn.vq)(document.activeElement, HTMLIFrameElement)) return nt.o;
+                  if ("user:escape" === n && (0, nn.vq)(document.activeElement, HTMLIFrameElement)) return nt.oU;
                   i(!1);
               },
               renderPopout: (e) => {

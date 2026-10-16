@@ -1,4 +1,4 @@
-n.d(t, { $: () => N, o: () => g });
+n.d(t, { $n: () => O, NA: () => N, oU: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(64015),
@@ -8,35 +8,37 @@ var i = n(477900),
     d = n(621466),
     c = n(707554),
     u = n(365912),
-    _ = n(623646),
-    E = n(451988),
-    A = n(192308),
-    h = n(750506),
-    f = n(267102),
-    I = n(712687),
-    p = n(38405),
-    T = n(292036),
-    m = n(652215);
-let g = Symbol("POPOUT_PREVENT_CLOSE"),
-    S = new Set(["Spacebar", " ", "Enter"]);
-class N extends r.Component {
+    _ = n(86182),
+    E = n(623646),
+    A = n(451988),
+    h = n(192308),
+    f = n(750506),
+    I = n(267102),
+    p = n(712687),
+    T = n(38405),
+    m = n(292036),
+    g = n(652215);
+let S = Symbol("POPOUT_PREVENT_CLOSE"),
+    N = r.createContext(null),
+    C = new Set(["Spacebar", " ", "Enter"]);
+class O extends r.Component {
     static defaultProps = {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
         spacing: 0,
-        loadingComponent: (0, i.jsx)(T.s, {}),
+        loadingComponent: (0, i.jsx)(m.s, {}),
         closeOnClickOutside: !0,
     };
     domElementRef = r.createRef();
     layerRef = r.createRef();
     popoutRef = r.createRef();
     popoutId = `popout_${o()()}`;
-    loadingTimeout = new E.Ep();
-    validClickTimeout = new E.Ep();
+    loadingTimeout = new A.Ep();
+    validClickTimeout = new A.Ep();
     isValidClickStart = !1;
     modalsAtOpen = new Set();
     unsubscribeModalChanges = null;
-    static contextType = f.Ay;
+    static contextType = I.Ay;
     state = {
         renderedPosition: this.props.position,
         shouldShowPopout: !1,
@@ -75,12 +77,12 @@ class N extends r.Component {
         let e = this.props.targetElementRef?.current;
         if (!(0, d.vq)(e)) {
             let e = Error("Popout cannot find DOM node");
-            return (console.error(e), p.A.captureException(e), null);
+            return (console.error(e), T.A.captureException(e), null);
         }
         return e;
     }
     get closeAction() {
-        return this.props.ignoreModalClicks ? m.jej.POPOUT_CLOSE_AFTER_MODALS : m.jej.POPOUT_CLOSE;
+        return this.props.ignoreModalClicks ? g.jej.POPOUT_CLOSE_AFTER_MODALS : g.jej.POPOUT_CLOSE;
     }
     setupShowPopout() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -96,7 +98,7 @@ class N extends r.Component {
             this.context.windowDispatch.subscribe(this.closeAction, this.handleEscapeClose),
             (this.domElementRef.current = t),
             (this.isValidClickStart = !1),
-            e && (this.modalsAtOpen = (0, A.getOpenModalKeys)()),
+            e && (this.modalsAtOpen = (0, h.getOpenModalKeys)()),
             this.subscribeToModalStack(),
             this.forceUpdate());
     }
@@ -104,10 +106,10 @@ class N extends r.Component {
         !0 === this.props.clickTrap &&
             (this.updateModalStackedOnTop(),
             null == this.unsubscribeModalChanges &&
-                (this.unsubscribeModalChanges = (0, A.subscribeToModalChanges)(this.updateModalStackedOnTop)));
+                (this.unsubscribeModalChanges = (0, h.subscribeToModalChanges)(this.updateModalStackedOnTop)));
     }
     updateModalStackedOnTop = () => {
-        let e = (0, A.hasModalOpenedSince)(this.modalsAtOpen);
+        let e = (0, h.hasModalOpenedSince)(this.modalsAtOpen);
         this.state.isModalStackedOnTop !== e && this.setState({ isModalStackedOnTop: e });
     };
     unsubscribe() {
@@ -118,8 +120,8 @@ class N extends r.Component {
             e.ownerDocument?.removeEventListener("click", this.handleDocumentClick, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleStickyScroll, !0)),
-            this.context.windowDispatch.unsubscribe(m.jej.POPOUT_CLOSE, this.handleEscapeClose),
-            this.context.windowDispatch.unsubscribe(m.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
             this.unsubscribeModalChanges?.(),
             (this.unsubscribeModalChanges = null));
     }
@@ -162,43 +164,49 @@ class N extends r.Component {
                 autoInvert: o,
                 fixed: d,
                 positionKey: c,
-                disablePointerEvents: E,
-                layerContext: A,
-                clickTrap: f = !1,
+                disablePointerEvents: A,
+                layerContext: h,
+                clickTrap: I = !1,
             } = this.props,
-            { isLoading: I, shouldShowLoadingState: p } = this.state;
-        return I && !p
+            { isLoading: p, shouldShowLoadingState: T } = this.state;
+        return p && !T
             ? null
             : (0, i.jsx)(u.Wd, {
-                  layerContext: A ?? h.uY,
-                  children: (0, i.jsx)(_.Q, {
-                      ref: this.layerRef,
-                      onMount: this.handlePopoutShow,
-                      onUnmount: this.handlePopoutHide,
-                      id: this.popoutId,
-                      targetRef: this.domElementRef,
-                      position: e,
-                      align: t,
-                      nudgeAlignIntoViewport: n,
-                      avoidancePadding: r,
-                      useRawTargetDimensions: a,
-                      spacing: s,
-                      offset: l,
-                      autoInvert: o,
-                      fixed: d,
-                      positionKey: c,
-                      disablePointerEvents: E,
-                      onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: f && !this.state.isModalStackedOnTop,
-                      children: this.renderPopout,
+                  layerContext: h ?? f.uY,
+                  children: (0, i.jsx)(N.Consumer, {
+                      children: (u) =>
+                          (0, i.jsx)(_.w, {
+                              theme: u ?? void 0,
+                              children: (0, i.jsx)(E.Q, {
+                                  ref: this.layerRef,
+                                  onMount: this.handlePopoutShow,
+                                  onUnmount: this.handlePopoutHide,
+                                  id: this.popoutId,
+                                  targetRef: this.domElementRef,
+                                  position: e,
+                                  align: t,
+                                  nudgeAlignIntoViewport: n,
+                                  avoidancePadding: r,
+                                  useRawTargetDimensions: a,
+                                  spacing: s,
+                                  offset: l,
+                                  autoInvert: o,
+                                  fixed: d,
+                                  positionKey: c,
+                                  disablePointerEvents: A,
+                                  onPositionChange: this.handlePopoutPositionChange,
+                                  clickTrap: I && !this.state.isModalStackedOnTop,
+                                  children: this.renderPopout,
+                              }),
+                          }),
                   }),
               });
     }
     handlePopoutShow = () => {
-        this.context.windowDispatch.dispatch(m.jej.POPOUT_SHOW, this.props.popoutKey);
+        this.context.windowDispatch.dispatch(g.jej.POPOUT_SHOW, this.props.popoutKey);
     };
     handlePopoutHide = () => {
-        this.context.windowDispatch.dispatch(m.jej.POPOUT_HIDE, this.props.popoutKey);
+        this.context.windowDispatch.dispatch(g.jej.POPOUT_HIDE, this.props.popoutKey);
     };
     handleSetPopoutRef = (e) => {
         null != e && (this.popoutRef.current = e);
@@ -214,7 +222,7 @@ class N extends r.Component {
     }
     close = (e, t) => {
         let { onRequestClose: n, shouldShow: i } = this.props;
-        n?.(e, t) === g || (null == i && this.toggleShow(!1));
+        n?.(e, t) === S || (null == i && this.toggleShow(!1));
     };
     handleClick = (e) => {
         let { onShiftClick: t, shouldShow: n, onRequestOpen: i, onRequestClose: r } = this.props;
@@ -244,7 +252,7 @@ class N extends r.Component {
         }
     };
     handleKeyboardPreload = (e) => {
-        S.has(e.key) && this.handlePreload();
+        C.has(e.key) && this.handlePreload();
     };
     isDismissingEventOutside(e) {
         let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
@@ -252,9 +260,9 @@ class N extends r.Component {
         let i = this.domElementRef.current;
         return !(
             null == i ||
-            (0, _.H)(i, e.target) ||
-            I.A.isOpen() ||
-            (t && (0, A.hasModalOpenedSince)(this.modalsAtOpen))
+            (0, E.H)(i, e.target) ||
+            p.A.isOpen() ||
+            (t && (0, h.hasModalOpenedSince)(this.modalsAtOpen))
         );
     }
     handleDocumentMouseDown = (e) => {
