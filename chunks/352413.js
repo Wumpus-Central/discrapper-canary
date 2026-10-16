@@ -14,15 +14,15 @@ function A(e) {
             pendingAvatarDecoration: v,
             pendingErrors: E,
         } = (0, a.cf)([s.A], () => {
+            let e = s.A.getPendingChanges(A);
             if (t) {
-                let e = s.A.getTryItOutChanges();
+                let t = s.A.getTryItOutChanges();
                 return {
-                    pendingAvatar: e.tryItOutAvatar,
-                    pendingAvatarDecoration: e.tryItOutAvatarDecoration,
+                    pendingAvatar: t.tryItOutAvatar,
+                    pendingAvatarDecoration: t.tryItOutAvatarDecoration ?? e.pendingAvatarDecoration,
                     pendingErrors: s.A.getErrors(A).avatarDecoration,
                 };
             }
-            let e = s.A.getPendingChanges(A);
             return {
                 pendingAvatar: e.pendingAvatar,
                 pendingAvatarDecoration: e.pendingAvatarDecoration,
