@@ -19522,7 +19522,7 @@ let NJ = (0, E.Hn)(h.X.CLIPS_FRAME_RATE, {
         useDisabled: () => !(0, NW.E)(),
     }),
     N0 = (0, E.E2)(h.X.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
-        useSearchTerms: () => [U.intl.string(U.t.SIxrIF)],
+        useSearchTerms: () => [],
         usePredicate: () => (0, f.bG)([NH.Ay], () => NH.Ay.getHardwareClassification()) === NZ.k9.BELOW_MINIMUM,
         Component: () => (0, p.jsx)(ln.A, { look: ln.k.WARNING, children: U.intl.string(U.t.SIxrIF) }),
     }),
@@ -19535,7 +19535,7 @@ let NJ = (0, E.Hn)(h.X.CLIPS_FRAME_RATE, {
         useDisabled: () => !(0, NW.E)(),
     }),
     N2 = (0, E.E2)(h.X.CLIPS_QUALITY_INFOBOX, {
-        useSearchTerms: () => [U.intl.string(U.t["Z+MfqT"])],
+        useSearchTerms: () => [],
         Component: () => (0, p.jsx)(ln.A, { look: ln.k.INFO, children: U.intl.string(U.t["Z+MfqT"]) }),
     }),
     N3 = (0, E.Hn)(h.X.CLIPS_RESOLUTION, {
