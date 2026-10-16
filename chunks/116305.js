@@ -3,7 +3,7 @@ var i = n(774603),
     r = n(176522),
     a = n(64460),
     s = n(92960),
-    l = n(739008),
+    l = n(477672),
     o = n(314519),
     d = n(793322);
 let c = { binds: ["mod+k", "mod+t"], comboKeysBindGlobal: !0, action: () => ((0, d.WU)("KEYBIND", ""), !1) };

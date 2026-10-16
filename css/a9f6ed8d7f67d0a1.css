@@ -110,6 +110,7 @@
 
 .page__7d655 {
     background-color: var(--background-base-lower);
+    border-top: 1px solid var(--border-subtle);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -142,4 +143,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=8a2a4e6ecabbeb75.css.map*/
+/*# sourceMappingURL=a9f6ed8d7f67d0a1.css.map*/

@@ -365,26 +365,31 @@ function eL(e) {
             [t.id],
         ),
         p = d ? (0, r.jsx)($.E, { type: "new", variant: "primary" }) : null,
-        C = u
-            ? (0, r.jsxs)("div", {
-                  className: ey.c,
-                  children: [
-                      (0, r.jsx)("div", {
-                          className: eo.Xs,
-                          children: (0, r.jsx)(q.m, {
-                              text: er.intl.string(er.t.R9GHya),
-                              position: "top",
-                              children: (0, r.jsx)(J.D, {
-                                  onClick: f,
-                                  "aria-label": er.intl.string(er.t.R9GHya),
-                                  children: (0, r.jsx)(Z.P, { size: "xs", color: "currentColor", className: eo.gE }),
+        C =
+            u && !h
+                ? (0, r.jsxs)("div", {
+                      className: ey.c,
+                      children: [
+                          (0, r.jsx)("div", {
+                              className: eo.Xs,
+                              children: (0, r.jsx)(q.m, {
+                                  text: er.intl.string(er.t.R9GHya),
+                                  position: "top",
+                                  children: (0, r.jsx)(J.D, {
+                                      onClick: f,
+                                      "aria-label": er.intl.string(er.t.R9GHya),
+                                      children: (0, r.jsx)(Z.P, {
+                                          size: "xs",
+                                          color: "currentColor",
+                                          className: eo.gE,
+                                      }),
+                                  }),
                               }),
                           }),
-                      }),
-                      null != p ? (0, r.jsx)("div", { className: eo.yW, children: p }) : null,
-                  ],
-              })
-            : p;
+                          null != p ? (0, r.jsx)("div", { className: eo.yW, children: p }) : null,
+                      ],
+                  })
+                : p;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(et.G, {
