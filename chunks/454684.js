@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640441, Version Hash: 5df1be1940aa70c24f934a0c3a7f0418ccf5f206`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640443, Version Hash: e2e6e1f3164f1b3babd7b6c5790ac487e6db0313`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25626,7 +25626,7 @@ let L9 = "isHideDevBanner",
                     className: tE()(L8.Wz, L8.mr),
                     children: [
                         (0, M.jsx)(L7, { className: L8.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640441" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640443" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -41394,7 +41394,7 @@ let Ge = {
         [cD.e$.OPEN_INVITE_DIALOG]: { embeddedAppSDK: !0, request: void 0, response: void 0 },
         [cD.e$.OPEN_EXTERNAL_LINK]: {
             embeddedAppSDK: !0,
-            request: (e) => ({ url: e.string().required() }),
+            request: (e) => ({ url: e.string().max(8e3).required() }),
             response: (e) => e.object({ opened: e.boolean().allow(null).required() }).default({ opened: null }),
         },
         [cD.e$.GET_CHANNEL_PERMISSIONS]: {
