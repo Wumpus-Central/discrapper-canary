@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => M });
 var i = n(439372),
     r = n(626584),
     a = n(567249),
@@ -11,98 +11,102 @@ var i = n(439372),
     _ = n(392164);
 let E = new r.A("OverlayWindowRAFManager"),
     A = window.requestAnimationFrame.bind(window),
-    h = new Set([d.Ue.OutOfProcess, d.Ue.OutOfProcessLimitedInteraction]),
-    f = new Set([d.AR.OVERLAY_CRASHED, d.AR.OVERLAY_CRASHED_DISABLED]);
-function I(e) {
+    h = window.cancelAnimationFrame.bind(window),
+    f = new Set([d.Ue.OutOfProcess, d.Ue.OutOfProcessLimitedInteraction]),
+    I = new Set([d.AR.OVERLAY_CRASHED, d.AR.OVERLAY_CRASHED_DISABLED]);
+function p(e) {
     for (let t of Object.values(c.default.getTrackedGames()))
-        if (!(!h.has(t.overlayMethod) || f.has(t.state)) && (!e || t.state === d.AR.OVERLAY_RENDERING)) return !0;
+        if (!(!f.has(t.overlayMethod) || I.has(t.state)) && (!e || t.state === d.AR.OVERLAY_RENDERING)) return !0;
     return !1;
 }
-let p = null,
-    T = !1,
+let T = null,
     m = !1,
-    g = {};
-function S(e) {
+    g = !1,
+    S = -1,
+    N = new Map();
+function C(e, t) {
+    let n = N.get(e);
+    null != n && (N.delete(e), n.callback(t));
+}
+function O(e) {
+    if (null == e.overlayFrameId) return;
+    let t = e.overlayWindow.deref();
+    if (null != t)
+        try {
+            t.cancelAnimationFrame(e.overlayFrameId);
+        } catch (e) {
+            E.warn("Unable to cancel overlay RAF callback", e);
+        }
+}
+function R(e) {
+    if (null == e) return;
+    let t = N.get(e);
+    null == t ? h(e) : (N.delete(e), O(t), null != t.mainFrameId && h(t.mainFrameId));
+}
+function L(e) {
     try {
         let t = a.A.getWindow(_.f);
-        if (null == t || "function" != typeof t.requestAnimationFrame) return ((p = "OverlayNotAvailable"), A(e));
-        if (!m) return ((p = "MainWindowFocused"), A(e));
-        if (!I(!0)) return ((p = "NoOverlayRendering"), A(e));
+        if (null == t || "function" != typeof t.requestAnimationFrame) return ((T = "OverlayNotAvailable"), A(e));
+        if (!g) return ((T = "MainWindowFocused"), A(e));
+        if (!p(!0)) return ((T = "NoOverlayRendering"), A(e));
         let n = null !== u.A.getFocusedRunningGame(),
             i = s.A.isFocused((0, l.Q2)(t));
         if ((s.A.isFocused() && E.error("Main window is reported as focused when it should not be!"), n || i)) {
-            p = n ? "OverlayGameFocused" : "OverlayWindowFocused";
-            let i = t.requestAnimationFrame((t) => {
-                (delete g[i], e(t));
-            });
-            return ((g[i] = e), i);
+            T = n ? "OverlayGameFocused" : "OverlayWindowFocused";
+            let i = S--,
+                r = t.requestAnimationFrame((e) => C(i, e));
+            return (N.set(i, { callback: e, overlayWindow: new WeakRef(t), overlayFrameId: r, mainFrameId: null }), i);
         }
     } catch (e) {
         (E.error("RAF redirect failed, falling back to original. Cause:", e),
             (0, o.pj)(e, c.default.getOverlayMethod(u.A.getTargetPID())));
     }
-    return ((p = "None"), A(e));
+    return ((T = "None"), A(e));
 }
-function N() {
+function y() {
     return !s.A.isFocused() || !s.A.isVisible();
 }
-function C() {
-    let e = a.A.getWindow(_.f),
-        t = !1;
-    try {
-        t = null != e && "function" == typeof e.cancelAnimationFrame;
-    } catch (e) {
-        E.warn("Unable to access overlay window cancelAnimationFrame, falling back to main window RAF callbacks", e);
-    }
-    (Object.entries(g)
-        .map((e) => {
-            let [t, n] = e;
-            return { timeoutId: Number(t), callback: n };
-        })
-        .forEach((n) => {
-            let { timeoutId: i, callback: r } = n;
-            if (t && null != e)
-                try {
-                    e.cancelAnimationFrame(i);
-                } catch (e) {
-                    ((t = !1),
-                        E.warn("Unable to cancel overlay RAF callback, continuing with main window RAF callbacks", e));
-                }
-            A(r);
-        }),
-        (g = {}));
+function D() {
+    N.forEach((e, t) => {
+        null != e.overlayFrameId && (O(e), (e.overlayFrameId = null), (e.mainFrameId = A((e) => C(t, e))));
+    });
 }
-function O(e) {
-    if (e === m) return;
-    let t = !e && m;
-    ((m = e), t && C());
+function v(e) {
+    if (e === g) return;
+    let t = !e && g;
+    ((g = e), t && D());
 }
-class R extends i.A {
+class b extends i.A {
     _initialize() {
-        O(N());
+        v(y());
     }
     _terminate() {
-        window.requestAnimationFrame = A;
+        ((window.requestAnimationFrame = A), D());
     }
     getLastRAFCallbackReason() {
-        return p;
+        return T;
     }
     handleUpdateOverlayMethod() {
         if (!__OVERLAY__) {
-            if (!T && !I(!1)) {
-                ((window.requestAnimationFrame = A), (p = "NoOverlayRendering"), C());
+            if (!m && !p(!1)) {
+                ((window.requestAnimationFrame = A), (T = "NoOverlayRendering"), D());
                 return;
             }
-            (E.info("Patching window RAF to use overlay window"), (window.requestAnimationFrame = S));
+            (E.info("Patching window RAF to use overlay window"),
+                (window.requestAnimationFrame = L),
+                (window.cancelAnimationFrame = R));
         }
     }
     handleWindowStateChage() {
-        O(N());
+        v(y());
     }
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
         n === d.x7.OverlayRafManagerForceEnabled &&
-            ((T = t), t ? (window.requestAnimationFrame = S) : m || ((window.requestAnimationFrame = A), C()));
+            ((m = t),
+            t
+                ? ((window.requestAnimationFrame = L), (window.cancelAnimationFrame = R))
+                : g || ((window.requestAnimationFrame = A), D()));
     }
     actions = {
         OVERLAY_UPDATE_OVERLAY_METHOD: this.handleUpdateOverlayMethod,
@@ -111,4 +115,4 @@ class R extends i.A {
         OVERLAY_RENDER_DEBUG_MODE: this.handleOverlayRenderDebugMode,
     };
 }
-let L = new R();
+let M = new b();
