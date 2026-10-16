@@ -179,6 +179,7 @@ function ev(e) {
                 let { default: e } = await Promise.all([
                     t.e("926132"),
                     t.e("955557"),
+                    t.e("400744"),
                     t.e("198415"),
                     t.e("412255"),
                     t.e("63340"),
@@ -326,6 +327,7 @@ let eI = l.memo(function () {
                                           t.e("893190"),
                                           t.e("146652"),
                                           t.e("955557"),
+                                          t.e("400744"),
                                           t.e("947502"),
                                           t.e("343266"),
                                           t.e("965789"),
@@ -358,6 +360,7 @@ let eI = l.memo(function () {
                                           t.e("893190"),
                                           t.e("146652"),
                                           t.e("955557"),
+                                          t.e("400744"),
                                           t.e("947502"),
                                           t.e("343266"),
                                           t.e("965789"),
@@ -370,9 +373,9 @@ let eI = l.memo(function () {
                                           t.e("935483"),
                                           t.e("379995"),
                                           t.e("544058"),
-                                          t.e("591377"),
                                           t.e("285802"),
                                           t.e("65200"),
+                                          t.e("591377"),
                                           t.e("35723"),
                                           t.e("566378"),
                                           t.e("256372"),
@@ -614,8 +617,8 @@ var eR = t(202776),
     e9 = t(591552),
     e2 = t(961973),
     e8 = t(435558),
-    e3 = t.n(e8),
-    e7 = t(665260),
+    e7 = t.n(e8),
+    e3 = t(665260),
     ne = t(355097);
 function nn(e) {
     J.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
@@ -637,8 +640,8 @@ function ni(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => i.includes(e.id));
-                                ((l = e3().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e3().difference(t?.roleIds ?? [], n.roleIds ?? [])));
+                                ((l = e7().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e7().difference(t?.roleIds ?? [], n.roleIds ?? [])));
                             } else if (t) ((l = n.roleIds ?? []), (s = []));
                             else {
                                 let t = e.options.filter((e) => i.includes(e.id)),
@@ -651,7 +654,7 @@ function ni(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((l = []), (s = e3().difference(r, d)));
+                                ((l = []), (s = e7().difference(r, d)));
                             }
                             return { addedRoleIds: l, removedRoleIds: s };
                         })(n, t, i, l),
@@ -661,8 +664,8 @@ function ni(e) {
                                 r = [];
                             if (t.singleSelect && l) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                ((a = e3().difference(i.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e3().difference(e?.channelIds ?? [], i.channelIds ?? [])));
+                                ((a = e7().difference(i.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e7().difference(e?.channelIds ?? [], i.channelIds ?? [])));
                             } else if (l) ((a = i.channelIds ?? []), (r = []));
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -675,7 +678,7 @@ function ni(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((a = []), (r = e3().difference(l, d)));
+                                ((a = []), (r = e7().difference(l, d)));
                             }
                             return (
                                 (0, et.cE)(n) && a.push(...e9.A.getDefaultChannelIds(n)),
@@ -684,11 +687,11 @@ function ni(e) {
                         })({ guildId: e, prompt: n, option: t, selected: i, responses: l }),
                         c = r.reduce((n, t) => {
                             let i = ee.Ay.getChannelIdFlags(e, t);
-                            return ((n[t] = { flags: (0, e7.lA)(i, ne.vv.OPT_IN_ENABLED, !0) }), n);
+                            return ((n[t] = { flags: (0, e3.lA)(i, ne.vv.OPT_IN_ENABLED, !0) }), n);
                         }, {}),
                         o = d.reduce((n, t) => {
                             let i = ee.Ay.getChannelIdFlags(e, t);
-                            return ((n[t] = { flags: (0, e7.lA)(i, ne.vv.OPT_IN_ENABLED, !1) }), n);
+                            return ((n[t] = { flags: (0, e3.lA)(i, ne.vv.OPT_IN_ENABLED, !1) }), n);
                         }, {}),
                         u = { ...c, ...o };
                     (e5.A.selectOption(e, n.id, t.id, i),

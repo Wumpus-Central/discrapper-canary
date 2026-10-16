@@ -1,42 +1,15 @@
-n.d(t, { A: () => u, J: () => c });
+n.d(t, { A: () => d, J: () => o });
 var i = n(17928),
     r = n(967198),
     a = n(181079),
-    s = n(93055),
-    l = n(5180),
-    o = n(771959);
-function d(e, t, n) {
-    let { isExperimentEnabled: i, isFreemium: r, hasAccess: a, isIntroPopoverShown: s, keepWhileViewing: d } = n;
-    return (
-        !!i &&
-        (!!(d && (0, l.ai)(t.getGuildId())) ||
-            (!!a && !1 !== e.favoriteGuildVisibleSetting && (!!e.favoriteGuildEnabled || (r && (s || (0, o.zW)())))))
-    );
+    s = n(5180);
+function l(e, t, n) {
+    return !!(n && (0, s.ai)(t.getGuildId())) || e.favoriteGuildEnabled;
 }
-function c() {
-    let { isExperimentEnabled: e, isFreemium: t, hasAccess: n } = (0, s.ad)();
-    return d(a.A, r.A, {
-        isExperimentEnabled: e,
-        isFreemium: t,
-        hasAccess: n,
-        isIntroPopoverShown: (0, o.UW)(),
-        keepWhileViewing: !0,
-    });
+function o() {
+    return l(a.A, r.A, !0);
 }
-function u() {
-    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        { isExperimentEnabled: t, isFreemium: n, hasAccess: l } = (0, s.TW)(),
-        c = (0, o.DA)();
-    return (0, i.bG)(
-        [a.A, r.A],
-        () =>
-            d(a.A, r.A, {
-                isExperimentEnabled: t,
-                isFreemium: n,
-                hasAccess: l,
-                isIntroPopoverShown: c,
-                keepWhileViewing: e,
-            }),
-        [t, n, l, c, e],
-    );
+function d() {
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+    return (0, i.bG)([a.A, r.A], () => l(a.A, r.A, e), [e]);
 }

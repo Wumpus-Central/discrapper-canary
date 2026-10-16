@@ -1,41 +1,38 @@
-n.d(t, { CU: () => h, E9: () => u, Z0: () => E, aj: () => I, fj: () => A, lK: () => f });
+n.d(t, { CU: () => A, E9: () => c, Z0: () => _, aj: () => f, fj: () => E, lK: () => h });
 var i = n(582128),
     r = n(196765),
     a = n(554146),
     s = n(47899),
     l = n(131607),
-    o = n(93055),
-    d = n(652215),
-    c = n(49999);
-let u = [],
-    _ = (0, r.v)(() => ({ suggestions: u, dismiss: d.tEg }));
+    o = n(652215),
+    d = n(49999);
+let c = [],
+    u = (0, r.v)(() => ({ suggestions: c, dismiss: o.tEg }));
+function _() {
+    return u((e) => e.suggestions);
+}
 function E() {
-    return _((e) => e.suggestions);
+    return u((e) => e.suggestions.length > 0);
 }
-function A() {
-    return _((e) => e.suggestions.length > 0);
+function A(e) {
+    u.setState({ suggestions: e });
 }
-function h(e) {
-    _.setState({ suggestions: e });
-}
-function f() {
-    let { hasAccess: e, isFreemium: t } = (0, o.TW)(),
-        n = (0, s.Ay)((e) => e.postConnectionOpen),
-        r = e && t && n,
-        [E, A] = (0, l.kn)(r ? [a.M.FAVORITES_GUILD_SUGGESTIONS] : []),
-        f = E === a.M.FAVORITES_GUILD_SUGGESTIONS;
+function h() {
+    let e = (0, s.Ay)((e) => e.postConnectionOpen),
+        [t, n] = (0, l.kn)(e ? [a.M.FAVORITES_GUILD_SUGGESTIONS] : []),
+        r = t === a.M.FAVORITES_GUILD_SUGGESTIONS;
     return (
         i.useLayoutEffect(() => {
-            _.setState({
+            u.setState({
                 dismiss: () => {
-                    (A(c.i.USER_DISMISS), h(u));
+                    (n(d.i.USER_DISMISS), A(c));
                 },
             });
-        }, [A]),
-        i.useLayoutEffect(() => () => _.setState({ dismiss: d.tEg }), []),
-        { isEligible: r, isSelected: f }
+        }, [n]),
+        i.useLayoutEffect(() => () => u.setState({ dismiss: o.tEg }), []),
+        { isEligible: e, isSelected: r }
     );
 }
-function I() {
-    return _((e) => e.dismiss);
+function f() {
+    return u((e) => e.dismiss);
 }

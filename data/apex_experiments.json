@@ -653,25 +653,6 @@
     }
   },
   {
-    "name": "2026-01-favorites-server",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-01-friends-in-server",
     "kind": "user",
     "defaultConfig": {
@@ -3871,22 +3852,6 @@
       },
       "1": {
         "closeChatOnLeave": false
-      }
-    }
-  },
-  {
-    "name": "2026-08-favorites-server",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
       }
     }
   },

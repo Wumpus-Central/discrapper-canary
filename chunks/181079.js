@@ -1,88 +1,83 @@
-let i;
-n.d(t, { A: () => m });
-var r = n(435558),
-    a = n(17928),
-    s = n(873298),
-    l = n(73153),
-    o = n(617617),
-    d = n(95701),
-    c = n(349828),
-    u = n(652215);
-let _ = {},
+n.d(t, { A: () => T });
+var i = n(435558),
+    r = n(17928),
+    a = n(873298),
+    s = n(73153),
+    l = n(617617),
+    o = n(95701),
+    d = n(349828),
+    c = n(652215);
+let u = {},
+    _ = 0,
     E = 0,
-    A = 0,
+    A = !1,
     h = !1,
-    f = !1,
-    I = !1;
-function p() {
-    let e = o.A.settings.favorites,
+    f = !1;
+function I() {
+    let e = l.A.settings.favorites,
         t = e?.muted ?? !1,
         n = {},
-        a = 0,
-        l = 0,
-        d = e?.favoriteChannels;
-    if (null != d)
-        for (let e in d) {
-            let t = d[e];
-            (a++,
-                t.type !== s.Ip.CATEGORY && l++,
+        r = 0,
+        s = 0,
+        o = e?.favoriteChannels;
+    if (null != o)
+        for (let e in o) {
+            let t = o[e];
+            (r++,
+                t.type !== a.Ip.CATEGORY && s++,
                 (n[e] = {
                     id: e,
                     nickname: "" !== t.nickname ? t.nickname : null,
                     type: t.type,
                     channelType: t.channelType?.value,
                     order: t.position,
-                    parentId: t.parentId !== c.O8 ? t.parentId : null,
+                    parentId: t.parentId !== d.O8 ? t.parentId : null,
                 }));
         }
-    let u = e?.guildVisible?.value,
-        p = u ?? !(0, r.isEmpty)(n),
-        T = e?.autoAddJoinedThreads ?? !1;
+    let c = e?.guildVisible?.value ?? !(0, i.isEmpty)(n),
+        I = e?.autoAddJoinedThreads ?? !1;
     return (
-        !(h === t && f === p && i === u && I === T && (0, r.isEqual)(_, n)) &&
-        ((h = t), (f = p), (i = u), (I = T), (_ = n), (E = a), (A = l), !0)
+        !(A === t && h === c && f === I && (0, i.isEqual)(u, n)) &&
+        ((A = t), (h = c), (f = I), (u = n), (_ = r), (E = s), !0)
     );
 }
-class T extends a.Ay.Store {
+class p extends r.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        (this.waitFor(o.A), p(), this.syncWith([o.A], p));
+        (this.waitFor(l.A), I(), this.syncWith([l.A], I));
     }
     getFavoriteChannels() {
-        return _;
+        return u;
     }
     get favoriteGuildMuted() {
-        return h;
+        return A;
     }
     get favoriteGuildEnabled() {
-        return f;
-    }
-    get favoriteGuildVisibleSetting() {
-        return i;
+        return h;
     }
     get autoAddJoinedThreads() {
-        return I && f;
+        return f && h;
     }
     isFavorite(e) {
-        return null != e && null != _[e];
+        return null != e && null != u[e];
     }
     isChannelOrParentFavorited(e) {
         return this.isFavorite(e.id) || (e.isThread() && this.isFavorite(e.parent_id));
     }
     getFavorite(e) {
-        if (null != e) return _[e];
+        if (null != e) return u[e];
     }
     getCategoryRecord(e) {
-        if (e in _ && _[e].type === s.Ip.CATEGORY) {
+        if (e in u && u[e].type === a.Ip.CATEGORY) {
             var t;
             return (
-                (t = _[e]),
-                (0, d.createChannelRecord)({
+                (t = u[e]),
+                (0, o.createChannelRecord)({
                     id: t.id,
                     name: t.nickname ?? "",
-                    type: u.rbe.GUILD_CATEGORY,
+                    type: c.rbe.GUILD_CATEGORY,
                     position: t.order,
-                    guild_id: u.YYv,
+                    guild_id: c.YYv,
                 })
             );
         }
@@ -93,13 +88,13 @@ class T extends a.Ay.Store {
         return t?.nickname ?? void 0;
     }
     getFavoritesCount() {
-        return E;
+        return _;
     }
     getFavoritesCountAgainstLimit() {
-        return A;
+        return E;
     }
     hasStoredFavorites() {
-        return !(0, r.isEmpty)(this.getFavoriteChannels());
+        return !(0, i.isEmpty)(this.getFavoriteChannels());
     }
 }
-let m = new T(l.h, {});
+let T = new p(s.h, {});

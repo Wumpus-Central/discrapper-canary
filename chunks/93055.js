@@ -1,4 +1,4 @@
-(n.d(t, { DZ: () => p, TW: () => A, ad: () => h, e4: () => T, ft: () => f, m_: () => I }), n(321073), n(97378));
+(n.d(t, { DZ: () => f, e4: () => I, ft: () => A, m_: () => h, o9: () => E }), n(321073), n(97378));
 var i = n(17928),
     r = n(873298),
     a = n(967198),
@@ -6,43 +6,24 @@ var i = n(17928),
     l = n(474090);
 n(935208);
 var o = n(181079),
-    d = n(379587),
-    c = n(5180),
-    u = n(349828),
-    _ = n(202541);
-function E(e) {
-    let { isExperimentEnabled: t, isFreemium: n, isPremiumTier2: i } = e,
-        r = t && (i || n),
-        a = 0;
-    return (
-        r && (a = i ? u.lj : 3 * !!n),
-        { hasAccess: r, isExperimentEnabled: t, isFreemium: n, favoriteLimit: a, canUpsellFavoriteLimit: t && n && !i }
-    );
+    d = n(5180),
+    c = n(349828),
+    u = n(202541);
+function _(e) {
+    return { favoriteLimit: e ? c.lj : 3, canUpsellFavoriteLimit: !e };
+}
+function E() {
+    return _(l.Ay.isPremiumExactly(s.default.getCurrentUser(), u.PremiumTypes.TIER_2));
 }
 function A() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "useFavoritesAccess",
-        { enabled: t, isFreemium: n } = (0, d.m)({ location: e }),
-        r = (0, i.bG)([s.default], () => s.default.getCurrentUser());
-    return E({
-        isExperimentEnabled: t,
-        isFreemium: n,
-        isPremiumTier2: l.Ay.isPremiumExactly(r, _.PremiumTypes.TIER_2),
-    });
+    let e,
+        { canUpsellFavoriteLimit: t, favoriteLimit: n } =
+            ((e = (0, i.bG)([s.default], () => s.default.getCurrentUser())),
+            _(l.Ay.isPremiumExactly(e, u.PremiumTypes.TIER_2))),
+        r = (0, i.bG)([o.A], () => o.A.getFavoritesCountAgainstLimit());
+    return { shouldShowUpsell: t && !__OVERLAY__, favoriteCount: r, favoriteLimit: n, isAtLimit: r >= n };
 }
 function h() {
-    let { enabled: e, isFreemium: t } = (0, d.B)({ location: "getFavoritesAccess" });
-    return E({
-        isExperimentEnabled: e,
-        isFreemium: t,
-        isPremiumTier2: l.Ay.isPremiumExactly(s.default.getCurrentUser(), _.PremiumTypes.TIER_2),
-    });
-}
-function f() {
-    let { canUpsellFavoriteLimit: e, favoriteLimit: t } = A("useFavoritesLimitUpsell"),
-        n = (0, i.bG)([o.A], () => o.A.getFavoritesCountAgainstLimit());
-    return { shouldShowUpsell: e && !__OVERLAY__, favoriteCount: n, favoriteLimit: t, isAtLimit: t > 0 && n >= t };
-}
-function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A.getFavoriteChannels(),
         t = [{ id: null, name: "" }];
     for (let n in e) {
@@ -51,13 +32,12 @@ function I() {
     }
     return (t.sort((t, n) => (e[t.id]?.order ?? 0) - (e[n.id]?.order ?? 0)), t);
 }
-function p() {
+function f() {
     let e = (0, i.bG)([a.A], () => a.A.getGuildId());
-    return (0, c.ai)(e);
+    return (0, d.ai)(e);
 }
-function T(e, t) {
-    let n = p(),
-        { hasAccess: r } = A(t),
-        a = (0, i.bG)([o.A], () => null != e && o.A.isChannelOrParentFavorited(e), [e]);
-    return n && (!r || !a || e?.isCategory()) ? null : (e ?? null);
+function I(e) {
+    let t = f(),
+        n = (0, i.bG)([o.A], () => null != e && o.A.isChannelOrParentFavorited(e), [e]);
+    return t && (!n || e?.isCategory()) ? null : (e ?? null);
 }

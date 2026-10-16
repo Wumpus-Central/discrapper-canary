@@ -47,32 +47,29 @@ function v(e) {
 }
 function b() {
     let { withSuggestionsNotice: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { hasAccess: t } = (0, C.TW)("FavoritesGuildChannelList"),
-        [n, r] = i.useState(() => M(void 0, { withSuggestionsNotice: e })),
-        s = o.A.isConnected(),
-        l = i.useMemo(() => M({}), []);
+        [t, n] = i.useState(() => M(void 0, { withSuggestionsNotice: e })),
+        r = o.A.isConnected();
     (i.useEffect(() => {
         function t() {
-            r(M(void 0, { withSuggestionsNotice: e }));
+            n(M(void 0, { withSuggestionsNotice: e }));
         }
         t();
-        let n = a().throttle(t, 100);
+        let i = a().throttle(t, 100);
         return (
-            D.forEach((e) => e.addChangeListener(n)),
+            D.forEach((e) => e.addChangeListener(i)),
             () => {
-                (n.cancel(), D.forEach((e) => e.removeChangeListener(n)));
+                (i.cancel(), D.forEach((e) => e.removeChangeListener(i)));
             }
         );
     }, [e]),
         i.useEffect(() => {
-            if (t && s) {
+            if (r) {
                 let e;
                 0 === (e = v({ limit: R.lj, includeLoading: !1 })).length ? Promise.resolve() : E.A.loadThreadsBulk(e);
             }
-        }, [t, s]));
-    let d = t ? n : l,
-        u = t && v({ limit: 1, includeLoading: !0 }).length > 0,
-        _ = (function (e) {
+        }, [r]));
+    let s = v({ limit: 1, includeLoading: !0 }).length > 0,
+        l = (function (e) {
             if (e.getSections().length > c.TF) return !1;
             let t = !1;
             return (
@@ -81,8 +78,8 @@ function b() {
                 }),
                 !t
             );
-        })(d);
-    return { guildChannels: d, shouldShowEmptyState: _ && !u, hasNoChannels: _ };
+        })(t);
+    return { guildChannels: t, shouldShowEmptyState: l && !s, hasNoChannels: l };
 }
 function M(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},

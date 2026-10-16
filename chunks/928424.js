@@ -7,6 +7,6 @@ function a(e) {
         let { default: t } = await Promise.all([n.e("454048"), n.e("400744"), n.e("390797"), n.e("307476")]).then(
             n.bind(n, 777023),
         );
-        return (n) => (0, i.jsx)(t, { ...n, variant: "limit_reached", limit: e, source: "limit_reached" });
+        return (n) => (0, i.jsx)(t, { ...n, limit: e });
     });
 }
