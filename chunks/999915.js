@@ -178,17 +178,19 @@ let V = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = S.Ju.exec(e);
+            let t = S.kg.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
             let i = e[0],
                 r = e[1],
                 a = e[2],
-                s = e[3];
+                s = e[3],
+                l = e[4];
             if (null == a) return x(i);
-            let l = G(a, null);
-            return null == l ? F(r, a, s, M(n.channelId), i) : B(l, s, M(n.channelId), i);
+            let o = G(a, null),
+                d = null == o ? F(r, a, s, M(n.channelId), i) : B(o, s, M(n.channelId), i);
+            return "channelMention" === d.type ? { ...d, conversationId: l } : d;
         },
     },
     j = {

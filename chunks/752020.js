@@ -94,8 +94,8 @@ var G = t(588975),
     H = t(380610),
     B = t(235393),
     D = t(258072),
-    J = t(332173),
-    U = t(679164),
+    U = t(332173),
+    J = t(679164),
     O = t(734057),
     K = t(123917),
     R = t(376943),
@@ -165,13 +165,13 @@ let eA = { home: "home", browse: "browse", customize: "customize", guide: "guide
 var eb = t(73510),
     ey = t(105292);
 function eC(e) {
-    let { channelId: n, guildId: r, messageId: i } = e,
-        s = (0, ei.A)(n),
+    let { channelId: n, guildId: r, messageId: i, conversationId: s } = e,
+        u = (0, ei.A)(n),
         {
-            name: u,
-            iconType: a,
-            isForumPost: c,
-            hasAccess: o,
+            name: a,
+            iconType: c,
+            isForumPost: o,
+            hasAccess: h,
         } = (0, d.cf)(
             [O.A, eI.default, ep.A],
             () => {
@@ -185,28 +185,28 @@ function eC(e) {
             },
             [n],
         ),
-        h = (0, M.p)();
-    if (null == a) return;
-    let m = r === h?.guildId || null == r,
-        x =
-            o || s.isSubscriptionGated
-                ? m || null == u
+        m = (0, M.p)();
+    if (null == c) return;
+    let x = r === m?.guildId || null == r,
+        j =
+            h || u.isSubscriptionGated
+                ? x || null == a
                     ? (0, l.jsx)(eo.A, {
-                          iconType: a,
-                          children: u ?? (0, l.jsx)("em", { children: ey.intl.string(ey.t.J90oLW) }),
+                          iconType: c,
+                          children: a ?? (0, l.jsx)("em", { children: ey.intl.string(ey.t.J90oLW) }),
                       })
-                    : (0, l.jsx)(eN, { guildId: r, children: u })
+                    : (0, l.jsx)(eN, { guildId: r, children: a })
                 : (0, l.jsx)(eo.A, { iconType: "locked", children: ey.intl.string(ey.t["/YzI63"]) }),
-        j = null;
+        g = null;
     return (
         null != i &&
-            (j = (0, l.jsxs)(l.Fragment, {
-                children: [(0, l.jsx)(em.A, {}), (0, l.jsx)(eo.A, { iconType: c ? "post" : "message" })],
+            (g = (0, l.jsxs)(l.Fragment, {
+                children: [(0, l.jsx)(em.A, {}), (0, l.jsx)(eo.A, { iconType: o ? "post" : "message" })],
             })),
-        (0, l.jsxs)(J.A, {
+        (0, l.jsxs)(U.A, {
             role: "link",
             onClick: function (e) {
-                (e?.stopPropagation(), (0, es.o)(r, n, i), (0, el.closeAllModals)());
+                (e?.stopPropagation(), (0, es.o)(r, n, i, s), (0, el.closeAllModals)());
             },
             onContextMenu: function (e) {
                 let r = O.A.getChannel(n);
@@ -219,7 +219,7 @@ function eC(e) {
                 });
             },
             className: "channelMention",
-            children: [x, j],
+            children: [j, g],
         })
     );
 }
@@ -268,7 +268,7 @@ function eL(e) {
         u = (0, d.bG)([eg.A], () => (0, eu.f)(eg.A, n, t, i), [n, t, i]);
     return null == s
         ? null
-        : (0, l.jsxs)(J.A, {
+        : (0, l.jsxs)(U.A, {
               role: "link",
               onClick: function (e) {
                   (e?.stopPropagation(), (0, ea.i)(i, n, t));
@@ -293,14 +293,14 @@ function eP(e) {
 }
 var eE = t(147190);
 function eT(e) {
-    let { guildId: n, channelId: t, messageId: r, parentChannelId: i } = e,
-        s = (0, d.bG)([O.A], () => (null != i && null == O.A.getChannel(t) ? i : t), [t, i]);
-    return (0, l.jsx)(eC, { channelId: s, guildId: n, messageId: r });
+    let { guildId: n, channelId: t, messageId: r, parentChannelId: i, conversationId: s } = e,
+        u = (0, d.bG)([O.A], () => (null != i && null == O.A.getChannel(t) ? i : t), [t, i]);
+    return (0, l.jsx)(eC, { channelId: u, guildId: n, messageId: r, conversationId: s });
 }
 function ez(e) {
     let { url: n, name: i } = e,
         s = r.useCallback(async () => {
-            let e = await U.AN(n);
+            let e = await J.AN(n);
             (B.A.trackLinkClicked(e), (0, q.A)(e));
         }, [n]),
         u = r.useCallback(
@@ -312,7 +312,7 @@ function ez(e) {
             },
             [i, n],
         );
-    return (0, l.jsxs)(J.A, {
+    return (0, l.jsxs)(U.A, {
         role: "link",
         href: n,
         onClick: s,
@@ -360,14 +360,14 @@ let eD = {
                     let n = R.En.exec(e);
                     if (null != n) {
                         let [, e, t, l, r] = n;
-                        return { guildId: e, channelId: l, messageId: r, parentChannelId: t };
+                        return { guildId: e, channelId: l, messageId: r, parentChannelId: t, conversationId: void 0 };
                     }
-                    let t = R.Ju.exec(e);
+                    let t = R.kg.exec(e);
                     if (null == t) return null;
-                    let [, l, r, i] = t;
+                    let [, l, r, i, s] = t;
                     return null == r || /\D/.test(r) || (null != i && /\D/.test(i))
                         ? null
-                        : { guildId: l, channelId: r, messageId: i, parentChannelId: void 0 };
+                        : { guildId: l, channelId: r, messageId: i, parentChannelId: void 0, conversationId: s };
                 })(t);
                 if (null != e) return (0, l.jsx)(eT, { ...e });
                 let n = (0, D.h)(t);
@@ -516,11 +516,11 @@ let eD = {
             return null == r ? null : (0, l.jsx)(e$.A, { node: r });
         },
     },
-    eJ = !1,
-    eU = null;
+    eU = !1,
+    eJ = null;
 function eO() {
-    return (eU ??= (0, s.Ts)().then(() => {
-        eJ = !0;
+    return (eJ ??= (0, s.Ts)().then(() => {
+        eU = !0;
     }));
 }
 function eK(e) {
@@ -535,7 +535,7 @@ function eK(e) {
 }
 function eR(e) {
     let { content: n, allowJumboEmoji: t, hideSingleLinkContent: u } = e;
-    eJ || r.use(eO());
+    eU || r.use(eO());
     let a = (0, d.bG)([h.A], () => h.A.isDeveloper, []) ? x : m,
         c = r.useMemo(() => (0, s.qg)(n, a), [n, a]),
         o = r.useMemo(

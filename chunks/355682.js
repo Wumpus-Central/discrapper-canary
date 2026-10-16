@@ -37,8 +37,8 @@ let M = {
         }),
 };
 var D = t(646911),
-    G = t(174459),
-    T = t(858899),
+    T = t(174459),
+    G = t(858899),
     v = t(834730),
     C = t(231483),
     L = t(627794),
@@ -106,8 +106,8 @@ var ed = t(290136),
     ej = t(148494),
     eM = t(697470),
     eD = t(253925),
-    eG = t(843626),
-    eT = t(427209);
+    eT = t(843626),
+    eG = t(427209);
 t(938796);
 var ev = t(665260),
     eC = t(563119),
@@ -203,8 +203,8 @@ var nf = t(534890),
     nj = t(548118),
     nM = t(402860),
     nD = t(260509),
-    nG = t(889227),
-    nT = t(734057),
+    nT = t(889227),
+    nG = t(734057),
     nv = t(71393),
     nC = t(87221),
     nL = t(930125),
@@ -328,7 +328,7 @@ function nB(e) {
             () => () => {
                 if (null != tr.current) {
                     let e = Date.now() - tr.current;
-                    G.default.track(B.HAw.MESSAGE_MENU_TIME_TO_CLOSE, {
+                    T.default.track(B.HAw.MESSAGE_MENU_TIME_TO_CLOSE, {
                         time_to_close_ms: e,
                         channel_id: n0.id,
                         guild_id: n0.getGuildId() ?? void 0,
@@ -341,7 +341,7 @@ function nB(e) {
     let to = a.useCallback(() => {
             if (null != tr.current) {
                 let e = Date.now() - tr.current;
-                G.default.track(B.HAw.MESSAGE_MENU_TIME_TO_SELECT, {
+                T.default.track(B.HAw.MESSAGE_MENU_TIME_TO_SELECT, {
                     time_to_first_click_ms: e,
                     channel_id: n0.id,
                     guild_id: n0.getGuildId() ?? void 0,
@@ -472,12 +472,12 @@ function nB(e) {
                           (0, eu.$b)(n0, nQ, e);
                       },
                   })),
-        tp = (0, eG.m)(nQ)
+        tp = (0, eT.m)(nQ)
             ? (0, l.jsx)(r.Dr, {
                   id: "forward",
                   label: j.intl.string(j.t.I3ltXO),
-                  leadingAccessory: { type: "icon", icon: eT.A },
-                  icon: eT.A,
+                  leadingAccessory: { type: "icon", icon: eG.A },
+                  icon: eG.A,
                   action: () => {
                       (0, eu.Z4)(n0, nQ);
                   },
@@ -528,7 +528,7 @@ function nB(e) {
                                 t(!0);
                                 let r = a ?? (0, j.getAvailableLocales)().find((e) => e.value === s)?.name ?? s;
                                 (nm.has(e.id) || nm.set(e.id, e.content),
-                                    (0, T.P0)({
+                                    (0, G.P0)({
                                         text: j.intl.formatToPlainString(j.t.Znl8Z8, { targetLanguage: r }),
                                         icon: no.D,
                                     }));
@@ -543,7 +543,7 @@ function nB(e) {
                                             type: "MESSAGE_UPDATE",
                                             message: { id: e.id, channel_id: e.channel_id, content: n.body.content },
                                         }),
-                                        (0, T.P0)({
+                                        (0, G.P0)({
                                             text: j.intl.formatToPlainString(j.t.FtVUqm, { targetLanguage: r }),
                                             variant: "success",
                                         }));
@@ -665,11 +665,13 @@ function nB(e) {
                   })
                 : null,
         tD = (0, eg.A)(nQ, n0),
-        tG =
+        tT =
             ((eo = (0, nh.WU)(n0.getGuildId(), "message_context_menu")),
             (ew = (0, x.bG)([ny.A], () => ny.A.getConversationForMessage(n0.id, nQ.id) ?? null, [n0.id, nQ.id])),
             (nk = a.useCallback(() => {
-                null != n0.getGuildId() && null != ew && (np.A.openConversationsSection(), (0, nE.xI)(n0.id, ew));
+                null != n0.getGuildId() &&
+                    null != ew &&
+                    (np.A.openConversationsSection(), (0, nE.xI)(n0.id, ew, { cacheType: "channel" }));
             }, [n0, ew])),
             eo && null != ew
                 ? (0, l.jsx)(r.Dr, {
@@ -680,7 +682,7 @@ function nB(e) {
                       action: nk,
                   })
                 : null),
-        tT =
+        tG =
             ((nB = (0, x.bG)([na.A], () => na.A.isSpeakingMessage(n0.id, nQ.id), [n0, nQ])),
             "" === nQ.content
                 ? null
@@ -725,7 +727,7 @@ function nB(e) {
                 s = e.interactionMetadata?.user.id,
                 o = (0, x.bG)([e6.default], () => e6.default.getUser(t)),
                 c = (0, x.bG)([nv.A], () => nv.A.getGuild(i)),
-                d = nT.A.getChannel(e.channel_id),
+                d = nG.A.getChannel(e.channel_id),
                 u = d?.getGuildId(),
                 A = (0, x.bG)([e6.default], () => e6.default.getUser(s));
             if (
@@ -735,7 +737,7 @@ function nB(e) {
                 !(0, nb._)(e))
             )
                 return null;
-            null == A && (A = new nG.A(e.interactionMetadata?.user));
+            null == A && (A = new nT.A(e.interactionMetadata?.user));
             let m = null;
             if (null != c) {
                 let n = (0, nD.Iv)(c, 18, !0);
@@ -958,8 +960,8 @@ function nB(e) {
                 (await s(t, y),
                     p(t),
                     null != o
-                        ? (0, T.P0)({ text: j.intl.string(j.t.wH6L0r), variant: "critical" })
-                        : (0, T.P0)({ text: j.intl.string(j.t["0rdYm2"]), variant: "success" }));
+                        ? (0, G.P0)({ text: j.intl.string(j.t.wH6L0r), variant: "critical" })
+                        : (0, G.P0)({ text: j.intl.string(j.t["0rdYm2"]), variant: "success" }));
             }
             let b = (0, l.jsx)(r.Dr, { id: "automod-rules-loading", label: j.intl.string(j.t.ZTNur7) });
             return (
@@ -1167,7 +1169,7 @@ function nB(e) {
             (0, l.jsx)(r.rX, { children: tg }),
             (0, l.jsxs)(r.rX, { children: ["" === n1 ? td : null, tA, tv] }),
             (0, l.jsxs)(r.rX, { children: [tm, tf, tp, ty] }),
-            (0, l.jsxs)(r.rX, { children: [th, tE, t_, tx, tI, tS, tb, tj, tM, tD, tG, tT, tC, tL] }),
+            (0, l.jsxs)(r.rX, { children: [th, tE, t_, tx, tI, tS, tb, tj, tM, tD, tT, tG, tC, tL] }),
             (0, l.jsxs)(r.rX, { children: [tO, tN, tR, te && tw, te && tU, tP] }),
             tc
                 ? (0, l.jsxs)(l.Fragment, { children: [tV, tW, null == tJ && (0, l.jsx)(r.rX, { children: tK })] })

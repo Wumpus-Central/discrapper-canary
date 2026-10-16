@@ -1179,7 +1179,7 @@ function nQ(e) {
         r = (0, m.bG)([nW.A], () => nW.A.isHighlightingEnabled(), []),
         a = s.useCallback(
             (e) => {
-                (0, nz.xI)(n.id, e.id);
+                (0, nz.xI)(n.id, e.id, { cacheType: "channel" });
             },
             [n],
         );

@@ -110,13 +110,13 @@ let O = new C(s.h, {
     CONVERSATION_MESSAGES_FETCH_START: function (e) {
         var t;
         let n,
-            { conversationId: i, full: r, isStandalone: a } = e;
-        if (!0 !== a) return !1;
+            { conversationId: i, full: r, cacheType: a } = e;
+        if ("preview" !== a) return !1;
         ((t = r ? "full" : "preview"), null != (n = f.get(i)) ? n.add(t) : f.set(i, new Set([t])));
     },
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
-        let { conversationId: t, messages: n, messageReferences: i, fullyHydrated: r, isStandalone: a } = e;
-        if (!0 !== a) return !1;
+        let { conversationId: t, messages: n, messageReferences: i, fullyHydrated: r, cacheType: a } = e;
+        if ("preview" !== a) return !1;
         p(t, r ? "full" : "preview");
         let s = A.peek(t);
         return (
@@ -138,8 +138,8 @@ let O = new C(s.h, {
         );
     },
     CONVERSATION_MESSAGES_FETCH_FAILURE: function (e) {
-        let { conversationId: t, full: n, isStandalone: i } = e;
-        if (!0 !== i) return !1;
+        let { conversationId: t, full: n, cacheType: i } = e;
+        if ("preview" !== i) return !1;
         p(t, n ? "full" : "preview");
     },
     CHANNEL_DELETE: function (e) {

@@ -1,4 +1,14 @@
-n.d(t, { oq: () => S, qC: () => N, xI: () => m, WF: () => p, Eg: () => T, p7: () => C, P7: () => g });
+n.d(t, {
+    xI: () => g,
+    ik: () => T,
+    Rl: () => C,
+    WF: () => p,
+    Eg: () => m,
+    P7: () => N,
+    qC: () => R,
+    p7: () => L,
+    oq: () => O,
+});
 var i = n(517846),
     r = n(636537),
     a = n(73153),
@@ -81,40 +91,53 @@ async function p(e) {
             throw Error("Failed to fetch conversations");
     }
 }
-function T() {
+async function T(e, t) {
+    if (!c.A.touchConversation(t))
+        try {
+            let n = await r.Bo.get({ url: I.Rsh.CHANNEL_CONVERSATION(e, t), oldFormErrors: !0, rejectWithError: !0 });
+            a.h.dispatch({ type: "CONVERSATION_FETCH_SUCCESS", channelId: e, rawConversation: n.body });
+        } catch {}
+}
+function m() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function m(e, t) {
-    let { shouldJump: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+function g(e, t, n) {
+    let { cacheType: i, shouldJump: r = !0 } = n;
     if (
         null == t ||
-        (a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: t }),
-        N(e, t, { includeReactions: !0, includeMessageReferences: !0 }),
-        !n)
+        (a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: t, cacheType: i }),
+        S(e, t, i),
+        !r)
     )
         return;
-    let i = o.A.getConversationMetadata(e, t)?.conversation.startMessageId;
-    null != i && s.A.jumpToMessage({ channelId: e, messageId: i, flash: !1 });
+    let l = _.A.getConversation(e)?.startMessageId;
+    null != l && s.A.jumpToMessage({ channelId: e, messageId: l, flash: !1 });
 }
-function g(e, t) {
+async function S(e, t, n) {
+    ("preview" === n && (await T(e, t)), R(e, t, { includeReactions: !0, includeMessageReferences: !0, cacheType: n }));
+}
+function N(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
-function S(e, t, n) {
+function C() {
+    a.h.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
+}
+function O(e, t, n) {
     a.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
-async function N(e, t, n) {
-    let { previewLimit: i, includeMessageReferences: s, includeReactions: l, isStandalone: d = !1 } = n ?? {},
+async function R(e, t, n) {
+    let { previewLimit: i, includeMessageReferences: s, includeReactions: l, cacheType: d } = n,
         u = null == i;
     if (u) {
-        if (d ? c.A.isFullyHydrated(t) : o.A.isFullyHydrated(e, t)) return;
-    } else if (null != (d ? c.A.getHydratedMessages(t) : o.A.getHydratedMessages(e, t))) return;
-    if (!(d ? c.A.isConversationFetchPending(t, u) : o.A.isConversationFetchPending(t, u))) {
+        if ("preview" === d ? c.A.isFullyHydrated(t) : o.A.isFullyHydrated(e, t)) return;
+    } else if (null != ("preview" === d ? c.A.getHydratedMessages(t) : o.A.getHydratedMessages(e, t))) return;
+    if (!("preview" === d ? c.A.isConversationFetchPending(t, u) : o.A.isConversationFetchPending(t, u))) {
         a.h.dispatch({
             type: "CONVERSATION_MESSAGES_FETCH_START",
             channelId: e,
             conversationId: t,
             full: u,
-            isStandalone: d,
+            cacheType: d,
         });
         try {
             let n = await r.Bo.get({
@@ -130,7 +153,7 @@ async function N(e, t, n) {
                 messages: n.body.messages,
                 messageReferences: n.body.reference_messages,
                 fullyHydrated: u,
-                isStandalone: d,
+                cacheType: d,
             });
         } catch {
             a.h.dispatch({
@@ -138,12 +161,12 @@ async function N(e, t, n) {
                 channelId: e,
                 conversationId: t,
                 full: u,
-                isStandalone: d,
+                cacheType: d,
             });
         }
     }
 }
-function C(e, t) {
+function L(e, t) {
     (u.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
         f.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
         a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" }));
