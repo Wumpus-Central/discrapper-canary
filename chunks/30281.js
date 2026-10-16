@@ -8525,6 +8525,7 @@ let rZ = {
                     a.e("810262"),
                     a.e("346313"),
                     a.e("463726"),
+                    a.e("553203"),
                     a.e("115368"),
                     a.e("343233"),
                     a.e("756684"),
@@ -8586,7 +8587,6 @@ let rZ = {
                     a.e("995210"),
                     a.e("497743"),
                     a.e("784853"),
-                    a.e("553203"),
                     a.e("966016"),
                     a.e("218489"),
                     a.e("838336"),
@@ -9595,9 +9595,9 @@ let oj = {
     EnableCommunityModal: async () => {
         let { default: e } = await Promise.all([
             a.e("443159"),
+            a.e("553203"),
             a.e("82721"),
             a.e("452823"),
-            a.e("553203"),
             a.e("674832"),
         ]).then(a.bind(a, 709779));
         return (t) =>
@@ -10055,7 +10055,7 @@ let oj = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
-        let { default: e } = await Promise.all([a.e("796057"), a.e("452823"), a.e("553203"), a.e("971905")]).then(
+        let { default: e } = await Promise.all([a.e("796057"), a.e("553203"), a.e("452823"), a.e("971905")]).then(
                 a.bind(a, 868952),
             ),
             t = Object.values(ny.A.getGuilds())[0];

@@ -5617,6 +5617,22 @@
     }
   },
   {
+    "name": "2026-10-cod-relink",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-code-blurple-teaser",
     "kind": "user",
     "defaultConfig": {
