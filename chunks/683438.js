@@ -24,6 +24,7 @@ function l(e) {
         } = e,
         { i18n: m } = (0, a.G9)();
     return (0, i.jsx)(s.k, {
+        role: "searchbox",
         ...f,
         onFocus: A,
         onBlur: E,
