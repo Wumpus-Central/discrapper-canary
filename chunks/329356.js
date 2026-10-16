@@ -162,7 +162,7 @@ async function U(e, t, n) {
     }),
     null != a.disabledReason)
         ? i.showPublishBlocked(k.k.MISSING_MANAGE_SERVER, a.disabledReason)
-        : null != a.confirmReason
+        : ((0, M.dx)(e), null != a.confirmReason)
           ? i.showPublishBlocked(k.k.MISSING_MANAGE_CHANNELS, a.confirmReason, () => {
                 z(e, a, n).catch(() => {});
             })

@@ -37,31 +37,33 @@ var r = n(158390),
     T = n(743082),
     N = n(385081),
     k = n(1371);
-class C {
+(n(323874), n(14289), n(35956));
+class w {
     socket = null;
     open(e) {
-        let { url: t, ticket: n, onEvent: r, onClose: s, onError: o } = e;
+        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: i } = e;
         this.close();
-        let i = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
-            l = new WebSocket(`${i}/agent/ws?ticket=${encodeURIComponent(n)}&debug=on_demand`);
-        ((this.socket = l),
-            l.addEventListener("message", (e) => {
+        let l = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
+            a = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
+            c = new WebSocket(`${l}/agent/ws?${a}`);
+        ((this.socket = c),
+            c.addEventListener("message", (e) => {
                 let t;
-                if (this.socket === l) {
+                if (this.socket === c) {
                     try {
                         t = JSON.parse(e.data);
                     } catch (e) {
                         console.error("[conjure] ws frame parse failed", e);
                         return;
                     }
-                    r(t);
+                    s(t);
                 }
             }),
-            l.addEventListener("error", (e) => {
-                this.socket === l && o?.(e);
+            c.addEventListener("error", (e) => {
+                this.socket === c && i?.(e);
             }),
-            l.addEventListener("close", () => {
-                this.socket === l && s?.();
+            c.addEventListener("close", () => {
+                this.socket === c && o?.();
             }));
     }
     sendUserMessage(e, t, n, r) {
@@ -103,6 +105,11 @@ class C {
     sendPublish() {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "publish" }));
+    }
+    sendPreparePublish() {
+        null != this.socket &&
+            this.socket.readyState === WebSocket.OPEN &&
+            this.socket.send(JSON.stringify({ type: "prepare_publish" }));
     }
     sendDraftPatchNotes(e, t) {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
@@ -207,7 +214,7 @@ class C {
     }
 }
 var b = n(382541),
-    w = n(649121),
+    C = n(649121),
     R = n(975189);
 (n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
 let U = new Map(),
@@ -309,6 +316,7 @@ async function x(e, t) {
         t.ws.open({
             url: r,
             ticket: n,
+            templateId: t.warmTemplateId ?? void 0,
             onEvent: (n) =>
                 (function e(t, n, r) {
                     if ((console.debug("[conjure] ws event", r.type), !j.has(r.type) && "open" !== A.get(t)))
@@ -325,7 +333,10 @@ async function x(e, t) {
                             });
                             return;
                         case "hello":
-                            ((n.helloSeen = !0), (n.debugOnDemand = !0 === r.debug_on_demand), n.backoff.succeed());
+                            ((n.helloSeen = !0),
+                                (n.warmTemplateId = null),
+                                (n.debugOnDemand = !0 === r.debug_on_demand),
+                                n.backoff.succeed());
                             return;
                         case "history": {
                             let s = (r.messages ?? []).slice();
@@ -453,10 +464,11 @@ async function x(e, t) {
     }
 }
 function B(e) {
-    let t = U.get(e);
-    null == t &&
-        ((t = {
-            ws: new C(),
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        n = U.get(e);
+    null == n &&
+        ((n = {
+            ws: new w(),
             backoff: new r.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -465,18 +477,20 @@ function B(e) {
             pendingEvents: [],
             pendingModelSettings: null,
             pendingTemplatePrep: null,
+            warmTemplateId: null,
             debugOnDemand: !1,
         }),
-        U.set(e, t),
-        (0, R.Sm)(e, t.ws));
-    let n = t;
-    ((n.pendingEvents = []),
-        (n.helloSeen = !1),
-        (n.debugOnDemand = !1),
-        (n.disposed = !1),
-        (n.reconnectPending = !1),
+        U.set(e, n),
+        (0, R.Sm)(e, n.ws));
+    let s = n;
+    ((s.warmTemplateId = t ?? s.warmTemplateId),
+        (s.pendingEvents = []),
+        (s.helloSeen = !1),
+        (s.debugOnDemand = !1),
+        (s.disposed = !1),
+        (s.reconnectPending = !1),
         J(e, "connecting"),
-        x(e, n));
+        x(e, s));
 }
 let W = new Map();
 function H(e, t) {
@@ -513,10 +527,11 @@ function $(e) {
     );
 }
 function F(e) {
-    let t = U.get(e);
-    if (null == t) return void B(e);
-    let n = A.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || B(e);
+    let { templateId: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = U.get(e);
+    if (null == n) return void B(e, t ?? null);
+    let r = A.get(e);
+    ("closed" !== r && "failed" !== r) || n.reconnectPending || B(e);
 }
 function z(e, t, n) {
     let {
@@ -614,7 +629,7 @@ function er(e) {
 }
 function es() {
     for (let e of Array.from(U.keys())) $(e);
-    (I.clear(), (0, w.j_)());
+    (I.clear(), (0, C.j_)());
 }
 class eo extends s.Ay.Store {
     initialize() {

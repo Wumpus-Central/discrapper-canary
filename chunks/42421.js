@@ -17136,12 +17136,12 @@ function hs(e) {
             (0, G.dm)(n, j);
         }, [n, j]));
     let F = i.useCallback(
-            async (e, t, n) => {
-                let l = await (0, G.gA)({ guild_id: t, install_scope: n });
-                ((0, x.ensureConnection)(l),
-                    (0, x.stageModelSettings)(l, z ?? D),
-                    e(l),
-                    (0, d.pX)(eX.BVt.CHANNEL(t, eJ.VV.CONJURE, l)),
+            async (e, t, n, l) => {
+                let r = await (0, G.gA)({ guild_id: t, install_scope: n });
+                ((0, x.ensureConnection)(r, { templateId: l }),
+                    (0, x.stageModelSettings)(r, z ?? D),
+                    e(r),
+                    (0, d.pX)(eX.BVt.CHANNEL(t, eJ.VV.CONJURE, r)),
                     v(""),
                     q(null));
             },
@@ -17182,6 +17182,7 @@ function hs(e) {
                             },
                             $,
                             L,
+                            e.id,
                         );
                     } catch (e) {
                         w((0, _.mG)(e));
@@ -17196,7 +17197,7 @@ function hs(e) {
             async (e, t) => {
                 let n = await (0, G.gA)({ guild_id: t, install_scope: "guild" });
                 return (
-                    (0, x.ensureConnection)(n),
+                    (0, x.ensureConnection)(n, { templateId: e.id }),
                     (0, x.stageModelSettings)(n, z ?? D),
                     { projectId: n, intake: await (0, V.Yn)(n, e) }
                 );

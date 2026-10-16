@@ -1,4 +1,4 @@
-n.d(t, { $C: () => u, BC: () => g, BG: () => p, Mz: () => f, TV: () => d, qy: () => a, rS: () => c });
+n.d(t, { $C: () => p, BC: () => E, BG: () => h, Mz: () => _, TV: () => u, dx: () => d, qy: () => a, rS: () => c });
 var r = n(73153),
     s = n(975189),
     o = n(260498),
@@ -25,7 +25,7 @@ let a = {
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
                     turnId: e.turn_id,
-                    patch: { publishCta: { surface: S(e.publish_cta.surface) } },
+                    patch: { publishCta: { surface: m(e.publish_cta.surface) } },
                 });
         },
         publish_status(e, t) {
@@ -35,7 +35,7 @@ let a = {
                 projectId: n,
                 published: !0 === e.published,
                 hasUnpublishedChanges: !0 === e.has_unpublished_changes,
-                surface: S(e.surface),
+                surface: m(e.surface),
                 previewAppChannels: Array.isArray(e.preview_app_channels)
                     ? e.preview_app_channels.filter((e) => "string" == typeof e)
                     : [],
@@ -63,8 +63,8 @@ let a = {
         },
         publish_result(e, t) {
             let { projectId: n } = t,
-                s = h.get(n);
-            if ((h.delete(n), null != s && (clearTimeout(s.timeout), s.resolve(e)), !0 !== e.ok))
+                s = f.get(n);
+            if ((f.delete(n), null != s && (clearTimeout(s.timeout), s.resolve(e)), !0 !== e.ok))
                 (0, i.Is)(n, e.error ?? "publish_result not ok", !1);
             else {
                 let e = l.A.getPublishStatus(n);
@@ -83,26 +83,29 @@ let a = {
         },
         patch_notes_draft(e, t) {
             let { projectId: n } = t,
-                r = _.get(n);
-            null != r && r.nonce === e.nonce && (_.delete(n), clearTimeout(r.timeout), r.resolve(e));
+                r = g.get(n);
+            null != r && r.nonce === e.nonce && (g.delete(n), clearTimeout(r.timeout), r.resolve(e));
         },
     };
 function d(e) {
+    (0, s.KY)(e)?.sendPreparePublish();
+}
+function u(e) {
     let t = !1;
     return new Promise((n, o) => {
         let i = (0, s.KY)(e);
         if (null == i) return void o(Error("Not connected"));
-        if (h.has(e)) return void o(Error("Publish already in flight"));
+        if (f.has(e)) return void o(Error("Publish already in flight"));
         let l = setTimeout(() => {
-            f(e, "Publish timed out");
+            _(e, "Publish timed out");
         }, 9e5);
-        (h.set(e, { resolve: n, reject: o, timeout: l }),
+        (f.set(e, { resolve: n, reject: o, timeout: l }),
             (t = !0),
             r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
         try {
             i.sendPublish();
         } catch (t) {
-            (h.delete(e), clearTimeout(l), o(t instanceof Error ? t : Error("publish send failed")));
+            (f.delete(e), clearTimeout(l), o(t instanceof Error ? t : Error("publish send failed")));
         }
     })
         .catch((t) => {
@@ -112,24 +115,24 @@ function d(e) {
             t && r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
-function u(e) {
+function p(e) {
     return new Promise((t, n) => {
         let r = (0, s.KY)(e);
         if (null == r) return void n(Error("Not connected"));
-        g(e, "Superseded by a newer draft request");
+        E(e, "Superseded by a newer draft request");
         let i = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             l = setTimeout(() => {
-                g(e, "Draft timed out");
+                E(e, "Draft timed out");
             }, 45e3);
-        _.set(e, { resolve: t, reject: n, timeout: l, nonce: i });
+        g.set(e, { resolve: t, reject: n, timeout: l, nonce: i });
         try {
             r.sendDraftPatchNotes(i, o.Ay.getProject(e)?.name);
         } catch (t) {
-            (_.delete(e), clearTimeout(l), n(t instanceof Error ? t : Error("draft send failed")));
+            (g.delete(e), clearTimeout(l), n(t instanceof Error ? t : Error("draft send failed")));
         }
     });
 }
-function p(e, t, n) {
+function h(e, t, n) {
     r.h.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId: e, sent: t });
     try {
         let r = (0, s.KY)(e);
@@ -139,17 +142,17 @@ function p(e, t, n) {
         console.warn("[conjure] could not record sent patch notes", e, t);
     }
 }
-let h = new Map();
-function f(e, t) {
-    let n = h.get(e);
-    null != n && (h.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+let f = new Map();
+function _(e, t) {
+    let n = f.get(e);
+    null != n && (f.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let _ = new Map();
-function g(e, t) {
-    let n = _.get(e);
-    null != n && (_.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+let g = new Map();
+function E(e, t) {
+    let n = g.get(e);
+    null != n && (g.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let E = new Set(["activity", "automod", "widget", "bot"]);
-function S(e) {
-    return null != e && E.has(e) ? e : null;
+let S = new Set(["activity", "automod", "widget", "bot"]);
+function m(e) {
+    return null != e && S.has(e) ? e : null;
 }

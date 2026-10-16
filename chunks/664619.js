@@ -1,4 +1,4 @@
-n.d(t, { Is: () => h, R_: () => C, YI: () => A, tZ: () => I });
+n.d(t, { Is: () => h, R_: () => C, YI: () => A, tZ: () => P });
 var i = n(636537),
     l = n(73153),
     _ = n(803306),
@@ -49,23 +49,22 @@ async function C(e) {
     let i = r.default.getCurrentUser()?.id;
     return (null != i && (0, _.eO)(i).catch(() => {}), !0);
 }
-async function I(e, t) {
+async function P(e, t) {
     let { isPreview: n, install: i } = t,
         l = p.Ay.getProject(e),
         _ = null == l ? null : n ? l.preview_application_id : l.application_id,
         u = !n || null != i,
-        a = null != _ ? P(_, n, u ? i : null) : null,
+        a = null != _ ? I(_, n, u ? i : null) : null,
         { bot_permissions_changed: r, integration_installed: s, project: o } = (await (0, c.U1)(e)).body,
         E = n ? o.preview_application_id : o.application_id;
     if (null != E) {
         let e = { integrationInstalled: s, botPermissionsChanged: r };
-        E !== _ || null == a ? await P(E, n, e) : (await a, u || N(E, n, e));
+        E !== _ || null == a ? await I(E, n, e) : (await a, u || N(E, n, e));
     }
 }
-async function P(e, t, n) {
+async function I(e, t, n) {
     (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: e }),
-        await (0, a.TA)(e),
-        await (0, u.un)(e, { force: !0 }).catch(() => {}),
+        await Promise.all([(0, a.TA)(e), (0, u.un)(e, { force: !0 }).catch(() => {})]),
         null !== n && N(e, t, n));
 }
 function N(e, t, n) {
