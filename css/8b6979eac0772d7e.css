@@ -253,7 +253,9 @@
 }
 
 .content__79ea5 {
-    min-width: 0
+    min-width: 0;
+    position: relative;
+    z-index: 1
 }
 
 .asset__79ea5 {
@@ -2625,4 +2627,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=b726bad71a45aff3.css.map*/
+/*# sourceMappingURL=8b6979eac0772d7e.css.map*/
