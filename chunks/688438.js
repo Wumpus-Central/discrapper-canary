@@ -71,7 +71,7 @@ function er(e, t) {
 }
 var eo = n(598071),
     ec = n(101555),
-    ed = n(487897),
+    ed = n(518586),
     eu = n(703007),
     eh = n(2553),
     em = n(946274),
@@ -281,7 +281,7 @@ let ez = i.memo(function (e) {
         e2 = (0, eA.n)(x);
     (0, eO.N_)(C, eR, x.id);
     let { eventEmitter: e3, handleEditorSelectionChanged: e4 } = (0, eO.ml)(ej, c, d),
-        e7 = i.useCallback(
+        e8 = i.useCallback(
             (e) => {
                 function t(e) {
                     return (
@@ -362,7 +362,7 @@ let ez = i.memo(function (e) {
             },
             [N, Y, X, x.id, eu, ec, e2],
         ),
-        { submit: e8, handleSubmit: e5 } = (0, eO.Zx)(e7, C, ej, e_, x.id),
+        { submit: e7, handleSubmit: e5 } = (0, eO.Zx)(e8, C, ej, e_, x.id),
         { autocompleteRef: e6, handleMaybeShowAutocomplete: e9, handleHideAutocomplete: te } = (0, eO.v7)(),
         tt = i.useCallback(() => e_?.current?.hide(), []),
         { editorHeight: tn, handleResize: tl } = (0, eO.ck)(j),
@@ -388,8 +388,8 @@ let ez = i.memo(function (e) {
         { expressionPickerView: to, shouldHideExpressionPicker: tc, handleOuterClick: td } = (0, eO.MD)(C, ej, x.id),
         { handleAutocompleteVisibilityChange: tu } = (0, eO.uW)(C, x.id),
         th = (0, eO.NO)(ej),
-        tm = (0, eO.Vu)(e8, C, ej),
-        tg = (0, eO.C)({ editorRef: ej, disabled: eR, textValue: c, channelId: x.id, chatInputType: C, submit: e7 });
+        tm = (0, eO.Vu)(e7, C, ej),
+        tg = (0, eO.C)({ editorRef: ej, disabled: eR, textValue: c, channelId: x.id, chatInputType: C, submit: e8 });
     (0, ey.R)(e3, x.guild_id, x.id);
     let [tp, tA] = i.useState(!1),
         tf = i.useCallback(() => {
@@ -509,7 +509,7 @@ let ez = i.memo(function (e) {
                                                         onBlur: y,
                                                         onFocus: _,
                                                         onKeyDown: b,
-                                                        onSubmit: e8,
+                                                        onSubmit: e7,
                                                         onTab: ti,
                                                         onEnter: ts,
                                                         onSpace: ta,
@@ -579,7 +579,7 @@ let ez = i.memo(function (e) {
                                                 (0, l.jsx)(z.$, {
                                                     ...e,
                                                     onClick: () => {
-                                                        e8(c);
+                                                        e7(c);
                                                     },
                                                     disabled: 0 === c.length && 0 === Y.length,
                                                     size: "sm",
@@ -631,7 +631,7 @@ let ez = i.memo(function (e) {
                             expressionPickerView: to,
                             type: C,
                             editorRef: ej,
-                            onSendMessage: e8,
+                            onSendMessage: e7,
                             onSendSticker: () => {},
                             onVisibilityChange: tu,
                             editorHeight: tn,
@@ -829,8 +829,8 @@ let e1 = (0, n(945810).mj)({
 var e2 = n(319365),
     e3 = n(151271),
     e4 = n(407278),
-    e7 = n(81400),
-    e8 = n(353182),
+    e8 = n(81400),
+    e7 = n(353182),
     e5 = n(727875);
 function e6(e) {
     let {
@@ -874,7 +874,7 @@ function ta(e) {
         n = (0, e9.A)({ scrollPosition: ti._F.GUILD_TAG });
     return (0, l.jsx)("div", {
         children: (0, l.jsx)(e6, {
-            bannerIcon: (0, l.jsx)(e8._, { size: "lg", color: "currentColor", className: ts.q3 }),
+            bannerIcon: (0, l.jsx)(e7._, { size: "lg", color: "currentColor", className: ts.q3 }),
             bannerHeader: eB.intl.format(eB.t.GgMwjk, { guildName: t?.name ?? "" }),
             bannerSubtext: eB.intl.string(eB.t.ONjwD5),
             textStyles: ts.cI,
@@ -891,12 +891,12 @@ function ta(e) {
 function tr(e) {
     let { guild: t } = e,
         { analyticsLocations: n } = (0, ei.Ay)(el.A.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [i, s] = (0, e7.j8)({ guildId: t?.id ?? ew.dJq, analyticsLocations: n }),
+        [i, s] = (0, e8.j8)({ guildId: t?.id ?? ew.dJq, analyticsLocations: n }),
         a = s ? eB.intl.string(eB.t["9ph2v7"]) : eB.intl.string(eB.t.ldh9Cg),
         r = s ? eB.intl.string(eB.t["/PGQf0"]) : eB.intl.string(eB.t.WikgZ1);
     return (0, l.jsx)("div", {
         children: (0, l.jsx)(e6, {
-            bannerIcon: (0, l.jsx)(e8._, { size: "lg", color: "currentColor", className: ts.q3 }),
+            bannerIcon: (0, l.jsx)(e7._, { size: "lg", color: "currentColor", className: ts.q3 }),
             bannerHeader: eB.intl.format(eB.t.kcYdTq, { guildName: t?.name ?? "" }),
             bannerSubtext: a,
             textStyles: ts.cI,
@@ -1073,8 +1073,8 @@ var t1 = n(512599),
     t3 = n(559908);
 n(142703);
 var t4 = n(765671),
-    t7 = n(741961),
-    t8 = n(459793),
+    t8 = n(741961),
+    t7 = n(459793),
     t5 = n(103640);
 function t6(e, t) {
     return e === t || (e?.channelId === t?.channelId && e?.value === t?.value && e?.multiplier === t?.multiplier);
@@ -1144,11 +1144,11 @@ let ne = i.memo(function (e) {
                                 children: [
                                     (0, l.jsx)("div", {
                                         className: a()(t9.ox, t9.kb),
-                                        children: (0, l.jsx)(t8.A, { width: 24, height: 24 }),
+                                        children: (0, l.jsx)(t7.A, { width: 24, height: 24 }),
                                     }),
                                     (0, l.jsx)("div", {
                                         className: a()(t9.ox, t9.pG),
-                                        children: (0, l.jsx)(t8.A, { width: 24, height: 24 }),
+                                        children: (0, l.jsx)(t7.A, { width: 24, height: 24 }),
                                     }),
                                 ],
                             }),
@@ -1167,7 +1167,7 @@ let ne = i.memo(function (e) {
         let t,
             { channelId: n } = e,
             s = (0, h.bG)([te.default], () => te.default.getId()),
-            a = (0, h.bG)([t7.A], () => t7.A.isTyping(n, s), [n, s]),
+            a = (0, h.bG)([t8.A], () => t8.A.isTyping(n, s), [n, s]),
             r = (0, h.bG)([t2.A], () => t2.A.isEnabled()),
             o = (0, h.bG)([t3.Ay], () => t3.Ay.isComboing(s, n), [n, s]),
             { ref: c, width: d = 0 } = (0, t4.Ay)(),
@@ -1983,7 +1983,7 @@ let n1 = i.memo(function (e) {
         g = (0, tY.A)(),
         p = nr(nI.default.getCurrentUser(), r),
         [A] = (0, ty.c)(o?.id),
-        x = (0, e7.uZ)(o?.id),
+        x = (0, e8.uZ)(o?.id),
         E = (0, h.bG)([nI.default], () => nI.default.getCurrentUser()),
         S = (0, h.bG)([tt.Ay], () => null != E && (tt.Ay.getMember(o?.id ?? ew.dJq, E?.id)?.isPending ?? !1)),
         j = (0, h.bG)([t2.A], () => t2.A.isEnabled()),
@@ -1991,8 +1991,8 @@ let n1 = i.memo(function (e) {
             ((t = r.id),
             (s = (0, nl.A)(ni.uD.CHAT_INPUT)),
             (a = (0, h.bG)([t2.A], () => t2.A.isEnabled({ shakeLocation: ni.uD.CHAT_INPUT }))),
-            (0, h.bG)([t7.A, t3.Ay, te.default], () =>
-                a && t7.A.isTyping(t, te.default.getId())
+            (0, h.bG)([t8.A, t3.Ay, te.default], () =>
+                a && t8.A.isTyping(t, te.default.getId())
                     ? t3.Ay.getUserComboShakeIntensity(te.default.getId(), t, s)
                     : 0,
             )),

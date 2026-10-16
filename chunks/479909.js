@@ -161,8 +161,8 @@ var w = n(861382),
     $ = n(842209),
     Q = n(210978),
     Z = n(392054),
-    J = n(168186),
-    X = n(866665),
+    X = n(168186),
+    J = n(866665),
     Y = n(939249),
     ee = n(88218),
     et = n(664929),
@@ -209,7 +209,7 @@ function ei(e) {
                     {
                         className: en.uW,
                         children: [
-                            (0, l.jsx)(X.m, {
+                            (0, l.jsx)(J.m, {
                                 text: i.name,
                                 position: "right",
                                 asContainer: !0,
@@ -339,7 +339,7 @@ function ed(e) {
                     if (((t = n), u < (n += e.data.length))) {
                         let n = e.data[u - t],
                             l = p.find((e) => e.id === n.applicationId);
-                        k(n, l, (0, J.$S)(e.section));
+                        k(n, l, (0, X.$S)(e.section));
                         break;
                     }
                 return !0;
@@ -411,7 +411,7 @@ function ed(e) {
                         selected: u === e,
                         showImage: i.section.id !== r.applicationId,
                         section: a,
-                        onClick: () => k(r, a, (0, J.$S)(i.section)),
+                        onClick: () => k(r, a, (0, X.$S)(i.section)),
                         onHover: () => {
                             (c(null), m(!1));
                         },
@@ -473,7 +473,7 @@ var em = n(702841),
     ep = n(31498),
     eg = n(598071),
     ex = n(151271),
-    eE = n(487897),
+    eE = n(518586),
     eS = n(256265),
     ey = n(336807),
     eC = n(857071),
@@ -524,8 +524,8 @@ var eD = n(194004),
     e$ = n(234320),
     eQ = n(625494),
     eZ = n(488926),
-    eJ = n(723702),
-    eX = n(486319),
+    eX = n(723702),
+    eJ = n(486319),
     eY = n(355622),
     e0 = n(392553),
     e1 = n(834730),
@@ -696,7 +696,7 @@ function tc(e) {
                                 d &&
                                     (0, l.jsxs)(l.Fragment, {
                                         children: [
-                                            (0, l.jsx)(X.m, {
+                                            (0, l.jsx)(J.m, {
                                                 asContainer: !0,
                                                 text: c ? j.intl.string(j.t.DH2o6R) : j.intl.string(j.t.utGGIY),
                                                 children: (0, l.jsx)(Y.D, {
@@ -1002,8 +1002,8 @@ var tB = n(846558),
     t$ = n(375499),
     tQ = n(989040),
     tZ = n(307731),
-    tJ = n(9287);
-function tX(e) {
+    tX = n(9287);
+function tJ(e) {
     let { getSlateEditor: t, onInsertEmoji: n, type: r, channel: s } = e,
         a = t(),
         o = i.useRef(null);
@@ -1011,15 +1011,15 @@ function tX(e) {
         ? null
         : (0, l.jsxs)("div", {
               id: "slate-toolbar",
-              className: tJ.aL,
+              className: tX.aL,
               children: [
                   (0, l.jsx)("div", {
-                      className: tJ.Wy,
+                      className: tX.Wy,
                       children: (0, l.jsx)(tH.P, {
                           slateEditor: a,
                           options: r.markdown,
-                          iconClassName: tJ.C7,
-                          dividerClassName: tJ.us,
+                          iconClassName: tX.C7,
+                          dividerClassName: tX.us,
                       }),
                   }),
                   (0, l.jsx)(tq.Y, {
@@ -1043,7 +1043,7 @@ function tX(e) {
                       align: "left",
                       children: (e, t) => {
                           let { isShown: n } = t;
-                          return (0, l.jsx)(t$.A, { ...e, ref: o, active: n, className: tJ.Z8, tabIndex: 0 });
+                          return (0, l.jsx)(t$.A, { ...e, ref: o, active: n, className: tX.Z8, tabIndex: 0 });
                       },
                   }),
               ],
@@ -1415,8 +1415,8 @@ let nl = i.memo(function (e) {
             showRemainingCharsAfterCount: $,
             allowNewLines: Q = !0,
             characterCountClassName: Z,
-            "aria-describedby": J,
-            "aria-labelledby": X,
+            "aria-describedby": X,
+            "aria-labelledby": J,
             setEditorRef: Y,
             autoCompletePosition: ee,
             children: et,
@@ -1465,7 +1465,7 @@ let nl = i.memo(function (e) {
             canEveryoneSendMessages: e$,
         } = ne(T, j, eM, b),
         eZ = j.toolbarType === eY.O1.STATIC,
-        e1 = !eV.D_.useSetting() && !(0, eJ.isAndroidWeb)() && null != window.ResizeObserver,
+        e1 = !eV.D_.useSetting() && !(0, eX.isAndroidWeb)() && null != window.ResizeObserver,
         e2 = !e1 || !j.commands?.enabled || !_ || "/" !== r,
         e5 = (0, eA.A)(),
         { fontSize: e8 } = (0, m.cf)([S.Ay], () => ({ fontSize: S.Ay.fontSize })),
@@ -1570,7 +1570,7 @@ let nl = i.memo(function (e) {
         tM = i.useCallback(() => {
             e3.emit("submit-failure");
         }, [e3]);
-    (0, eX.R)(e3, T.guild_id, T.id);
+    (0, eJ.R)(e3, T.guild_id, T.id);
     let tP = null != P,
         tD = (eB && !((eD || eU) && e$)) || (te && j.submit?.useDisabledStylesOnSubmit),
         tU = null;
@@ -1583,7 +1583,7 @@ let nl = i.memo(function (e) {
         }),
         tQ = e1 && null != a && !eB && j.showCharacterCount && null == eM,
         tZ = e1 && !__OVERLAY__ && null != a && null == eM && j.toolbarType !== eY.O1.NONE && !eB,
-        tJ = (function (e) {
+        tX = (function (e) {
             let {
                     channel: t,
                     type: n,
@@ -1640,7 +1640,7 @@ let nl = i.memo(function (e) {
             selectedAutocompleteInputError: tk,
         }),
         t0 = 0 === r.trim().length,
-        nl = null != P ? [J, to].filter(Boolean).join(" ") : J,
+        nl = null != P ? [X, to].filter(Boolean).join(" ") : X,
         ni = j.layout === eY.wt.INLINE,
         nr = j.layout === eY.wt.FLUSH,
         ns = (0, l.jsx)("div", { ref: eS, className: tW.BW }),
@@ -1676,7 +1676,7 @@ let nl = i.memo(function (e) {
                 value: eu,
                 children: [
                     tZ && eZ
-                        ? (0, l.jsx)(tX, { getSlateEditor: eb, onInsertEmoji: ta, type: j, channel: T })
+                        ? (0, l.jsx)(tJ, { getSlateEditor: eb, onInsertEmoji: ta, type: j, channel: T })
                         : tZ
                           ? (0, l.jsx)(tH.A, { ref: eI, getSlateEditor: eb, containerRef: eC, options: j.markdown })
                           : null,
@@ -1694,11 +1694,11 @@ let nl = i.memo(function (e) {
                             [tW.z3]: null != k,
                         }),
                         children: [
-                            ni || nr ? null : (0, l.jsx)(tF, { bars: tJ }),
+                            ni || nr ? null : (0, l.jsx)(tF, { bars: tX }),
                             (0, l.jsxs)("div", {
                                 ref: eC,
                                 onScroll: th,
-                                className: s()(c, { [tW.xx]: !0, [tW.k6]: !en, [tW.Ri]: tJ.stacked.length > 0 }),
+                                className: s()(c, { [tW.xx]: !0, [tW.k6]: !en, [tW.Ri]: tX.stacked.length > 0 }),
                                 children: [
                                     (0, l.jsx)(tf, { channelId: T.id, chatInputType: j }),
                                     j.hideAttachmentArea
@@ -1764,7 +1764,7 @@ let nl = i.memo(function (e) {
                                                         },
                                                         h,
                                                     ),
-                                                    "aria-labelledby": X,
+                                                    "aria-labelledby": J,
                                                     showValueWhenDisabled: es,
                                                 }),
                                             }),
@@ -1795,7 +1795,7 @@ let nl = i.memo(function (e) {
                                 onVisibilityChange: tL,
                                 editorScrollerRef: eC,
                                 editorHeight: tm,
-                                barsHeight: 40 * tJ.floating.length,
+                                barsHeight: 40 * tX.floating.length,
                                 setValue: (e, t) => e9?.(null, e, t),
                                 position: ee,
                             }),
