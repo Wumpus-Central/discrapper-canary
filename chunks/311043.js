@@ -11,11 +11,15 @@ function u(e) {
     let t = !1;
     return (
         e.mention_games?.forEach((e) => {
-            !("game_flags" in e && "number" == typeof e.game_flags) ||
+            !("third_party_skus" in e && Array.isArray(e.third_party_skus)) ||
                 l.has(e.id) ||
                 (l.set(e.id, new s.A(e)), (t = !0), c.delete(e.id), d.delete(e.id));
         }),
         null != e.referenced_message && (t = u(e.referenced_message) || t),
+        e.message_snapshots?.forEach((e) => {
+            let { message: n } = e;
+            t = u(n) || t;
+        }),
         t
     );
 }
