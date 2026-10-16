@@ -1,12 +1,12 @@
-a.d(c, { T: () => n });
-var e = a(477900);
-a(582128);
-var i = a(512750),
-    r = a(565553),
-    t = a(168900),
-    d = a(285828),
-    p = a(195803);
-function h(s) {
-    return (c) => (0, e.jsx)("div", { className: p.E, children: (0, e.jsx)(s, { ...c }) });
+c.d(t, { T: () => p });
+var e = c(477900);
+c(582128);
+var i = c(512750),
+    a = c(565553),
+    d = c(168900),
+    h = c(285828),
+    r = c(195803);
+function n(s) {
+    return (t) => (0, e.jsx)("div", { className: r.E, children: (0, e.jsx)(s, { ...t, withReducedMotion: "halt" }) });
 }
-let n = { [i.ec]: h(r.t), [i.RV]: h(t.J), [i.YG]: h(d.z) };
+let p = { [i.ec]: n(a.t), [i.RV]: n(d.J), [i.YG]: n(h.z) };
