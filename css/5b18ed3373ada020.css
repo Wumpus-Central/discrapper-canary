@@ -89,6 +89,10 @@
     margin-inline-start: auto
 }
 
+.description__14a18 {
+    max-width: 540px
+}
+
 .scroller_b1bfc6 {
     scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4));
     z-index: 2
@@ -174,4 +178,21 @@
     width: var(--size-160)
 }
 
-/*# sourceMappingURL=fa54b372befd7e49.css.map*/
+.skeletonListItem_b1bfc6 .skeletonText_b1bfc6 {
+    gap: 0
+}
+
+.skeletonListItem_b1bfc6 .skeletonDescription_b1bfc6 {
+    margin-block: calc(var(--space-xs) + var(--space-6)/2) calc(var(--space-6)/2);
+    max-width: 540px
+}
+
+.skeletonDescriptionSecondLine_b1bfc6 {
+    border-radius: var(--radius-xs);
+    height: var(--size-12);
+    margin-block: calc(var(--space-6)/2);
+    max-width: 320px;
+    width: 60%
+}
+
+/*# sourceMappingURL=5b18ed3373ada020.css.map*/
