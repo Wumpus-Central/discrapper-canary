@@ -1,0 +1,3 @@
+o.exports = JSON.parse(
+    '{"0lYpuQ":["Nenhum membro do p\xfablico corresponde a \u201C",[1,"query"],"\u201D"],"Hn6jKn":["Ningu\xe9m foi encontrado"],"sFXd49":["Buscar p\xfablico"],"C6rvri":["P\xfablico \u2014 ",[1,"filteredSize"]," de ",[1,"totalSize"]],"eo2IxJ":["Os membros do p\xfablico aparecer\xe3o aqui."],"ZSmz+r":["Ocultar p\xfablico"],"Ds8IST":["Mostrar p\xfablico"],"IQmRBE":["Mostrar p\xfablico, ",[6,"count",{"one":[[7]," solicita\xe7\xe3o para falar pendente"],"other":[[7]," solicita\xe7\xf5es para falar pendentes"]},0,"cardinal"]],"HUcd3y":["Permitir solicita\xe7\xf5es para falar de @everyone"],"P63Z/o":["Ainda n\xe3o h\xe1 ningu\xe9m no palco"]}',
+);

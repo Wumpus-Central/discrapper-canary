@@ -1,0 +1,3 @@
+n.exports = JSON.parse(
+    '{"0lYpuQ":["Kh\xf4ng c\xf3 th\xe0nh vi\xean kh\xe1n gi\u1EA3 n\xe0o kh\u1EDBp \\"",[1,"query"],"\\""],"Hn6jKn":["Kh\xf4ng t\xecm th\u1EA5y ai"],"sFXd49":["Ti\u0300m ki\xea\u0301m kh\xe1n gi\u1EA3"],"C6rvri":["Kh\xe1n gi\u1EA3 \u2014 ",[1,"filteredSize"]," / ",[1,"totalSize"]],"eo2IxJ":["Th\xe0nh vi\xean kh\xe1n gi\u1EA3 s\u1EBD xu\u1EA5t hi\u1EC7n \u1EDF \u0111\xe2y."],"ZSmz+r":["\u1EA8n kh\xe1n gi\u1EA3"],"Ds8IST":["Hi\u1EC3n th\u1ECB kh\xe1n gi\u1EA3"],"IQmRBE":["Hi\u1EC3n th\u1ECB kh\xe1n gi\u1EA3, ",[2,"count"]," y\xeau c\u1EA7u \u0111\u01B0\u1EE3c n\xf3i \u0111ang ch\u1EDD"],"HUcd3y":["Cho ph\xe9p y\xeau c\u1EA7u \u0111\u01B0\u1EE3c n\xf3i t\u1EEB @everyone"],"P63Z/o":["Ch\u01B0a c\xf3 ai tr\xean s\xe2n kh\u1EA5u c\u1EA3"]}',
+);

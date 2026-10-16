@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"6bWeWP":["L\xe4s mer"],"j4n5/K":["L\xe4s mer"]}');
+e.exports = JSON.parse(
+    '{"qtKobx":["L\xe4gg vantarna p\xe5 ett g\xe5vokort. Bokstavligen! Finns nu hos utvalda \xe5terf\xf6rs\xe4ljare online och i butik."],"6bWeWP":["L\xe4s mer"],"w8gzZb":["Den perfekta g\xe5van till @everyone"],"xYa9Y8":["Var du kan k\xf6pa"],"sJHQqC":["Spendera det p\xe5 Nitro, butiksf\xf6rem\xe5l och annat. Finns nu hos utvalda \xe5terf\xf6rs\xe4ljare online och i butik."],"j4n5/K":["L\xe4s mer"],"tmst3F":["Den perfekta g\xe5van till @everyone"],"9xo1g9":["Finns hos utvalda \xe5terf\xf6rs\xe4ljare online och i butik"],"UwYHGm":["L\xe4s mer p\xe5 ",[8,"$link",["v\xe5r webbplats"],[[1,"websiteUrl"]]]],"ZuneBP":["L\xf6s in i ",[8,"$link",["Faktureringsinst\xe4llningar"],[[1,"onBillingSettingsClick"]]]],"I5UWh9":["Skaffa Nitro, butiksf\xf6rem\xe5l, serverboostar och annat"],"Ja5Q8Z":["Skaffa ett Discord-g\xe5vokort"]}',
+);

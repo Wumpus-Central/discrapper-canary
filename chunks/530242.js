@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"0lYpuQ":["\\"",[1,"query"],"\\" ile e\u015Fle\u015Fen izleyici \xfcye yok"],"Hn6jKn":["Kimse bulunamad\u0131"],"sFXd49":["\u0130zleyici ara"],"C6rvri":["\u0130zleyici - ",[1,"filteredSize"],"/",[1,"totalSize"]],"eo2IxJ":["\u0130zleyiciler burada g\xf6r\xfcnecek."],"ZSmz+r":["\u0130zleyicileri Gizle"],"Ds8IST":["\u0130zleyiciyi G\xf6ster"],"IQmRBE":["\u0130zleyiciyi G\xf6ster, bekleyen ",[2,"count"]," konu\u015Fma talebi bulunuyor"],"HUcd3y":["@everyone kullan\u0131c\u0131s\u0131ndan gelen konu\u015Fma taleplerine izin ver"],"P63Z/o":["Hen\xfcz kimse sahnede de\u011Fil"]}',
+);

@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"6bWeWP":["Meer informatie"],"j4n5/K":["Meer informatie"]}');
+e.exports = JSON.parse(
+    '{"qtKobx":["Grijp je kans en haal een cadeaukaart! Nu beschikbaar bij geselecteerde retailers online en in winkels."],"6bWeWP":["Meer informatie"],"w8gzZb":["Het perfecte cadeau voor @everyone"],"xYa9Y8":["Waar te koop"],"sJHQqC":["Geef het uit aan Nitro, winkelitems, en meer. Nu beschikbaar bij geselecteerde verkopers online en in de winkel."],"j4n5/K":["Meer informatie"],"tmst3F":["Het perfecte cadeau voor @everyone"],"9xo1g9":["Beschikbaar bij geselecteerde retailers online en in winkels"],"UwYHGm":["Meer informatie op ",[8,"$link",["onze website"],[[1,"websiteUrl"]]]],"ZuneBP":["Verzilveren in ",[8,"$link",["Factuurinstellingen"],[[1,"onBillingSettingsClick"]]]],"I5UWh9":["Krijg Nitro, winkelitems, serverboosts en meer"],"Ja5Q8Z":["Neem een Discord-cadeaukaart mee"]}',
+);

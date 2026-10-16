@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"0lYpuQ":["Ingen medlemmer af m\xe5lgruppe matcher \\"",[1,"query"],"\\""],"Hn6jKn":["Ingen fundet"],"sFXd49":["S\xf8g efter m\xe5lgruppe"],"C6rvri":["M\xe5lgruppe \u2013 ",[1,"filteredSize"]," af ",[1,"totalSize"]],"eo2IxJ":["Medlemmer af m\xe5lgruppe vil dukke op her."],"ZSmz+r":["Skjul m\xe5lgruppe"],"Ds8IST":["Vis m\xe5lgruppe"],"IQmRBE":["Vis m\xe5lgruppe, ",[6,"count",{"one":[[7]," anmodning"],"other":[[7]," anmodninger"]},0,"cardinal"]," om at tale afventer"],"HUcd3y":["Tillad anmodninger om at tale fra @everyone"],"P63Z/o":["Der er endnu ingen p\xe5 scenen"]}',
+);

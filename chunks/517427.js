@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"6bWeWP":["Mehr erfahren"],"j4n5/K":["Mehr erfahren"]}');
+e.exports = JSON.parse(
+    '{"qtKobx":["Schnapp dir eine Geschenkkarte. Buchst\xe4blich! Jetzt bei ausgew\xe4hlten H\xe4ndlern online und im Einzelhandel verf\xfcgbar."],"6bWeWP":["Mehr erfahren"],"w8gzZb":["Das perfekte Geschenk f\xfcr @everyone"],"xYa9Y8":["Wo erh\xe4ltlich"],"sJHQqC":["Gib sie f\xfcr Nitro, Shop-Artikel und mehr aus. Jetzt bei ausgew\xe4hlten H\xe4ndlern online und im Einzelhandel verf\xfcgbar."],"j4n5/K":["Mehr erfahren"],"tmst3F":["Das perfekte Geschenk f\xfcr @everyone"],"9xo1g9":["Bei ausgew\xe4hlten H\xe4ndlern online und im Einzelhandel verf\xfcgbar"],"UwYHGm":["Mehr erf\xe4hrst du auf ",[8,"$link",["unserer Website"],[[1,"websiteUrl"]]]],"ZuneBP":["In ",[8,"$link",["Rechnungseinstellungen"],[[1,"onBillingSettingsClick"]]]," einl\xf6sen"],"I5UWh9":["Hol dir Nitro, Shop-Artikel, Server-Boosts und mehr"],"Ja5Q8Z":["Hol dir eine Discord-Geschenkkarte"]}',
+);
