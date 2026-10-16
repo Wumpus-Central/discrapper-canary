@@ -625,6 +625,11 @@ let r = {
         inlineRequire: () => n(95844).A,
         neverLoadBeforeConnectionOpen: !0,
     },
+    GameExitPromoManager: {
+        actions: ["LOGOUT", "RUNNING_GAMES_CHANGE"],
+        inlineRequire: () => n(426515).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     ClipDecisionEngineManager: {
         actions: [
             "CLIPS_SIGNAL_CREATED",
