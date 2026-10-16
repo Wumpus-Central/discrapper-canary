@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(477900),
     l = n(582128),
     s = n(132500),
@@ -9,18 +9,18 @@ var i = n(477900),
     c = n(104142),
     d = n(407781),
     m = n(652215),
-    g = n(983156);
-function p(e) {
-    let { channelId: t, guildId: n, userId: p, containerDimensions: f } = e,
-        h = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        [x, A] = l.useState([]),
-        v = x.length < 50;
+    p = n(983156);
+function g(e) {
+    let { channelId: t, guildId: n, userId: g, containerDimensions: x } = e,
+        f = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        [h, A] = l.useState([]),
+        v = h.length < 50;
     l.useEffect(() => {
         function e(e) {
             let { channelId: i, userId: l, emoji: r, animationType: a, animationId: o } = e;
-            if (null != p && p !== l) return;
+            if (null != g && g !== l) return;
             let d = null != r && null != a && null != o;
-            if (i === t && !h && v && d) {
+            if (i === t && !f && v && d) {
                 let e = (0, c.Br)(r),
                     i = null != r.id && !r.animated,
                     d = { id: (0, s.A)(), animationType: a, animationId: o, shouldResize: i, url: e, userId: l };
@@ -34,7 +34,7 @@ function p(e) {
                 a.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, p, h, v]);
+    }, [t, n, g, f, v]);
     let E = l.useCallback((e) => {
         A((t) => {
             let n = [...t],
@@ -42,14 +42,14 @@ function p(e) {
             return (n.splice(i, 1), n);
         });
     }, []);
-    return h
+    return f
         ? null
         : (0, i.jsx)("div", {
-              className: g.Y,
-              style: { width: f.width },
+              className: p.Y,
+              style: { width: x.width },
               children: (0, i.jsx)("div", {
-                  className: g.z,
-                  children: x.map((e) => (0, i.jsx)(d.A, { containerDimensions: f, effect: e, onComplete: E }, e.id)),
+                  className: p.z,
+                  children: h.map((e) => (0, i.jsx)(d.A, { containerDimensions: x, effect: e, onComplete: E }, e.id)),
               }),
           });
 }

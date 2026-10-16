@@ -39,7 +39,7 @@ function f(e) {
         ],
     });
 }
-function C(e) {
+function g(e) {
     let { width: n = 10, height: t = 10, color: l = "currentColor", foreground: a, ...o } = e;
     return (0, i.jsx)("svg", {
         ...(0, d.A)(o),
@@ -53,7 +53,7 @@ function C(e) {
         }),
     });
 }
-var g = t(257100);
+var C = t(257100);
 let m = {
         config: { friction: 26, tension: 700, mass: 1 },
         initial: { scale: 1, opacity: 1 },
@@ -71,19 +71,19 @@ let m = {
                 icon: A,
                 children: p,
                 onClick: b,
-                onDoubleClick: T,
-                isActive: I,
+                onDoubleClick: I,
+                isActive: T,
                 onMouseEnter: h,
                 onMouseLeave: N,
-                onFocus: j,
-                onBlur: k,
-                pulse: y,
-                sparkle: _,
+                onFocus: k,
+                onBlur: j,
+                pulse: _,
+                sparkle: y,
                 notification: x,
-                "aria-label": R,
-                "aria-expanded": v,
-                "aria-haspopup": O,
-                "aria-controls": G,
+                "aria-label": v,
+                "aria-expanded": G,
+                "aria-haspopup": R,
+                "aria-controls": O,
                 noHover: M,
             } = e,
             S = (0, s.p)(null != p, { ...m, keys: (e) => (e ? "children" : "icon") });
@@ -91,35 +91,35 @@ let m = {
             let { component: n } = e;
             return null != x
                 ? (0, i.jsxs)("div", {
-                      className: g.IO,
+                      className: C.IO,
                       children: [
                           (0, i.jsx)(u.Ay, {
-                              className: g.SA,
+                              className: C.SA,
                               mask: u.hW.CHAT_INPUT_BUTTON_NOTIFICATION,
                               width: 20,
                               height: 20,
                               children: n,
                           }),
-                          (0, i.jsx)("span", { className: g.T3 }),
+                          (0, i.jsx)("span", { className: C.T3 }),
                       ],
                   })
                 : n;
         }
         return (0, i.jsxs)(c.D, {
             innerRef: n,
-            "aria-label": R,
-            "aria-expanded": v,
-            "aria-haspopup": O,
-            "aria-controls": G,
+            "aria-label": v,
+            "aria-expanded": G,
+            "aria-haspopup": R,
+            "aria-controls": O,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: o()(t, g.x6, { [g.vu]: I, [g.CK]: M, [g.s0]: y, [g.r9]: l }),
+            className: o()(t, C.x6, { [C.vu]: T, [C.CK]: M, [C.s0]: _, [C.r9]: l }),
             onClick: l ? void 0 : b,
-            onDoubleClick: l ? void 0 : T,
+            onDoubleClick: l ? void 0 : I,
             onMouseEnter: h,
             onMouseLeave: N,
-            onFocus: j,
-            onBlur: k,
+            onFocus: k,
+            onBlur: j,
             focusProps: { offset: { top: 4, bottom: 4 } },
             children: [
                 S((e, n, t) => {
@@ -127,7 +127,7 @@ let m = {
                     return n
                         ? (0, i.jsx)(
                               r.animated.div,
-                              { style: e, className: o()(g._o, a), children: E({ component: p }) },
+                              { style: e, className: o()(C._o, a), children: E({ component: p }) },
                               l,
                           )
                         : null != A
@@ -135,10 +135,10 @@ let m = {
                                 r.animated.div,
                                 {
                                     style: e,
-                                    className: o()(g._o, a),
+                                    className: o()(C._o, a),
                                     children: E({
                                         component: (0, i.jsx)(A, {
-                                            className: o()(g.Kk, d, { [g.d1]: y }),
+                                            className: o()(C.Kk, d, { [C.d1]: _ }),
                                             color: "currentColor",
                                         }),
                                     }),
@@ -147,10 +147,10 @@ let m = {
                             )
                           : void 0;
                 }),
-                _ &&
+                y &&
                     (0, i.jsxs)("div", {
-                        className: g.YX,
-                        children: [(0, i.jsx)(C, { className: g.XR }), (0, i.jsx)(f, { className: g.Hv })],
+                        className: C.YX,
+                        children: [(0, i.jsx)(g, { className: C.XR }), (0, i.jsx)(f, { className: C.Hv })],
                     }),
             ],
         });

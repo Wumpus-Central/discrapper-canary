@@ -1,5 +1,5 @@
-a.d(n, { J: () => i });
-let i = (0, a(945810).mj)({
+t.d(n, { J: () => i });
+let i = (0, t(945810).mj)({
     name: "2026-04-gifting-badge",
     kind: "user",
     defaultConfig: { enabled: !1 },

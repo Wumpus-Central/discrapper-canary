@@ -1,4 +1,4 @@
-n.d(t, { $: () => E, m: () => p });
+n.d(t, { $: () => p, m: () => E });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -11,16 +11,16 @@ var a = n(477900),
     f = n(821609),
     m = n(775602),
     g = n(485038);
-let p = "data-prevents-popout-dismiss";
-function E(e) {
+let E = "data-prevents-popout-dismiss";
+function p(e) {
     let {
             preventsPopoutDismiss: t,
             isVisible: n,
             labelId: r,
-            noticeText: E,
+            noticeText: p,
             primaryAction: h,
-            secondaryAction: b,
-            isEmphasized: x = !1,
+            secondaryAction: x,
+            isEmphasized: b = !1,
             a11yAnnounceOnShow: _,
             a11yAnnounceOnHide: A,
         } = e,
@@ -52,8 +52,8 @@ function E(e) {
                 ? (0, a.jsx)(i.animated.div, {
                       style: e,
                       children: (0, a.jsxs)("footer", {
-                          ...(!0 === t ? { [p]: "" } : null),
-                          className: s()(g.Qs, { [g.hO]: x }),
+                          ...(!0 === t ? { [E]: "" } : null),
+                          className: s()(g.Qs, { [g.hO]: b }),
                           "aria-labelledby": r,
                           children: [
                               (0, a.jsx)(u.E, {
@@ -61,12 +61,12 @@ function E(e) {
                                   color: "none",
                                   id: r,
                                   className: g.ut,
-                                  children: E,
+                                  children: p,
                               }),
                               (0, a.jsxs)("div", {
                                   className: g.o1,
                                   children: [
-                                      (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...b }),
+                                      (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...x }),
                                       (0, a.jsx)(f.$, { variant: "primary", size: "sm", ...h }),
                                   ],
                               }),

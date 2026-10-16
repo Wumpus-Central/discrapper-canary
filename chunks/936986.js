@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     wx: "header__3847f",
     b: "closeButton__3847f",
     jE: "modalContent__3847f",

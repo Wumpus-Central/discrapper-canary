@@ -1,4 +1,4 @@
-n.d(t, { A: () => b, j: () => h });
+n.d(t, { A: () => x, j: () => h });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -11,20 +11,20 @@ var a = n(477900),
     f = n(834730),
     m = n(353795),
     g = n(37537),
-    p = n(239027);
-function E(e) {
+    E = n(239027);
+function p(e) {
     let { title: t, body: n } = e,
         l = (0, g.c)("PremiumPopoverHeader");
     return (0, a.jsxs)("div", {
-        className: p.header,
+        className: E.header,
         children: [
             (0, a.jsx)(u.D, {
                 variant: l ? "nitro-sm" : "heading-md/semibold",
-                className: l ? p.titleRefresh : p.title,
+                className: l ? E.titleRefresh : E.title,
                 children: t,
             }),
             (0, a.jsx)("div", {
-                className: p.headerBody,
+                className: E.headerBody,
                 children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
@@ -39,8 +39,8 @@ function h(e) {
             actions: f,
             gradientColor: g,
             onRequestClose: h,
-            position: b,
-            caretConfig: x,
+            position: x,
+            caretConfig: b,
             scrollBehavior: _,
             showCloseButton: A = !0,
             isCaretHoverable: N = !1,
@@ -49,11 +49,11 @@ function h(e) {
             onNudgeChange: I,
             ...j
         } = e,
-        [T, y] = l.useState(b ?? "top");
+        [T, y] = l.useState(x ?? "top");
     l.useEffect(() => {
-        null != b && y(b);
-    }, [b]);
-    let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
+        null != x && y(x);
+    }, [x]);
+    let C = l.useMemo(() => ({ align: b?.align ?? "center", customOffset: b?.customOffset }), [b]),
         S = l.useCallback(() => {
             h?.();
         }, [h]),
@@ -66,8 +66,8 @@ function h(e) {
         M = l.useCallback((e) => {
             y(e);
         }, []),
-        P = N ? p.caretHoverable : void 0,
-        O = {
+        O = N ? E.caretHoverable : void 0,
+        P = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
@@ -87,24 +87,24 @@ function h(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...O,
+        ...P,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
                 A && (0, a.jsx)(c.q, { onClick: D, variant: null != g ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
-                        className: s()(p.graphic, { [p[`graphic--${u}`]]: null != u }),
+                        className: s()(E.graphic, { [E[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(m.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(E, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: p.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: P }),
+                (0, a.jsx)(p, { title: t, body: n }),
+                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: E.actionBar }) : null,
+                null != C && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });
 }
-let b = h;
+let x = h;

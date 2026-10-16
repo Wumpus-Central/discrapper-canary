@@ -1,37 +1,37 @@
-n.d(t, { SE: () => y, bc: () => G, cO: () => k, ES: () => F, Ef: () => D, VI: () => w });
+n.d(t, { SE: () => y, bc: () => G, cO: () => k, ES: () => F, Ef: () => U, VI: () => w });
 var l = n(477900),
     i = n(582128),
     r = n(283973),
-    o = n(497767),
-    s = n(565829),
+    s = n(497767),
+    o = n(565829),
     a = n(49229),
     u = n(993401),
     c = n(17928),
     d = n(922016),
     f = n(980707),
     p = n(803664),
-    R = n(509302),
-    E = n(460597),
+    E = n(509302),
+    R = n(460597),
     g = n(994500),
     A = n(403362),
     m = n(183555),
     x = n(652215),
     I = n(105292);
-function b(e) {
+function _(e) {
     let { user: t, analyticsLocation: n } = e,
         l = (0, c.bG)([g.A], () => g.A.getRelationshipType(t.id) === x.eA$.PENDING_OUTGOING),
         { trackUserProfileAction: r } = (0, m.NJ)(),
-        o = (0, p.A)({
+        s = (0, p.A)({
             user: t,
             location: n,
             onFriendRemove: () => r({ action: "REMOVE_FRIEND" }),
             onFriendRequestSent: () => r({ action: "SEND_FRIEND_REQUEST" }),
         }),
-        s = (0, R.A)({ user: t }),
-        a = (0, E.A)({ user: t });
-    return i.useMemo(() => [l ? null : o, s, a].filter(A.Vq), [s, o, l, a]);
+        o = (0, E.A)({ user: t }),
+        a = (0, R.A)({ user: t });
+    return i.useMemo(() => [l ? null : s, o, a].filter(A.Vq), [o, s, l, a]);
 }
-function _(e) {
+function b(e) {
     let { menuItems: t, children: n, targetElementRef: i } = e;
     return (0, l.jsx)(d.Y, {
         targetElementRef: i,
@@ -91,21 +91,21 @@ function C(e) {
 let P = [];
 function S(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: r } = e,
-        [o, a] = i.useState(!1),
+        [s, a] = i.useState(!1),
         u = i.useCallback(() => a(!0), []),
         c = i.useMemo(
             () =>
-                o
+                s
                     ? t.map((e) => {
                           let { applicationId: t } = e;
                           return t;
                       })
                     : P,
-            [o, t],
+            [s, t],
         ),
-        d = (0, h.A)(c, o),
+        d = (0, h.A)(c, s),
         f = i.useMemo(() => d.filter(A.Vq), [d]),
-        { tooltipText: p, ariaLabel: R } = i.useMemo(() => {
+        { tooltipText: p, ariaLabel: E } = i.useMemo(() => {
             if (t.length > 0)
                 return {
                     tooltipText: (0, l.jsx)(C, { applications: f }),
@@ -146,11 +146,11 @@ function S(e) {
         }, [f, t.length, n, r]);
     return {
         onMouseEnter: u,
-        ariaLabel: R,
+        ariaLabel: E,
         tooltipText: p,
         icon: i.useMemo(() => {
             if (t.length > 0) return O._;
-            if (n || r) return s.l;
+            if (n || r) return o.l;
             throw Error("[GameRelationshipButton] Icon should not be undefined.");
         }, [t.length, n, r]),
     };
@@ -168,49 +168,49 @@ function k(e) {
 }
 function y(e) {
     let { userId: t, analyticsLocation: n } = e,
-        [r, o] = i.useState(!1),
-        { text: s, onClick: a, ...c } = T({ userId: t, analyticsLocation: n }),
+        [r, s] = i.useState(!1),
+        { text: o, onClick: a, ...c } = T({ userId: t, analyticsLocation: n }),
         d = i.useCallback(async () => {
-            o(!0);
+            s(!0);
             try {
                 await a?.();
             } finally {
-                o(!1);
+                s(!1);
             }
         }, [a]);
-    return (0, l.jsx)(u.br, { tooltipText: s, ...c, onClick: d, loading: r });
+    return (0, l.jsx)(u.br, { tooltipText: o, ...c, onClick: d, loading: r });
 }
-let L = { [x.eA$.FRIEND]: o.V, [x.eA$.PENDING_OUTGOING]: s.l, [x.eA$.PENDING_INCOMING]: s.l },
-    U = {
+let L = { [x.eA$.FRIEND]: s.V, [x.eA$.PENDING_OUTGOING]: o.l, [x.eA$.PENDING_INCOMING]: o.l },
+    D = {
         [x.eA$.FRIEND]: () => I.intl.string(I.t.G7jMpU),
         [x.eA$.PENDING_OUTGOING]: () => I.intl.string(I.t["s/+byI"]),
         [x.eA$.PENDING_INCOMING]: () => I.intl.string(I.t["6QQCQ+"]),
     };
-function D(e) {
-    let { user: t, relationshipType: n, analyticsLocation: r, ...o } = e,
-        s = L[n],
-        a = U[n](),
-        c = b({ user: t, analyticsLocation: r }),
+function U(e) {
+    let { user: t, relationshipType: n, analyticsLocation: r, ...s } = e,
+        o = L[n],
+        a = D[n](),
+        c = _({ user: t, analyticsLocation: r }),
         d = i.useRef(null),
-        f = { icon: s, tooltipText: a, ...o };
+        f = { icon: o, tooltipText: a, ...s };
     return 0 === c.length
         ? (0, l.jsx)(u.q3, { ...f, disabled: !0 })
-        : (0, l.jsx)(_, {
+        : (0, l.jsx)(b, {
               targetElementRef: d,
               menuItems: c,
               children: (e) => (0, l.jsx)(u.q3, { buttonRef: d, ...e, ...f }),
           });
 }
 function G(e) {
-    let { user: t, relationshipType: n, analyticsLocation: r, ...o } = e,
-        s = L[n],
-        a = U[n](),
-        c = b({ user: t, analyticsLocation: r }),
+    let { user: t, relationshipType: n, analyticsLocation: r, ...s } = e,
+        o = L[n],
+        a = D[n](),
+        c = _({ user: t, analyticsLocation: r }),
         d = i.useRef(null),
-        f = { icon: s, tooltipText: a, ...o };
+        f = { icon: o, tooltipText: a, ...s };
     return 0 === c.length
         ? (0, l.jsx)(u.br, { ...f, disabled: !0, tooltipPosition: "top" })
-        : (0, l.jsx)(_, {
+        : (0, l.jsx)(b, {
               targetElementRef: d,
               menuItems: c,
               children: (e) => (0, l.jsx)(u.br, { buttonRef: d, ...e, ...f, tooltipPosition: "top" }),
@@ -221,8 +221,8 @@ function F(e) {
             user: t,
             gameFriends: n,
             hasOutgoingPendingGameFriends: r,
-            hasIncomingPendingGameFriends: o,
-            analyticsLocation: s,
+            hasIncomingPendingGameFriends: s,
+            analyticsLocation: o,
             ...a
         } = e,
         {
@@ -230,18 +230,18 @@ function F(e) {
             onMouseEnter: d,
             ariaLabel: f,
             icon: p,
-        } = S({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: o }),
-        R = b({ user: t, analyticsLocation: s }),
-        E = i.useRef(null),
+        } = S({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: s }),
+        E = _({ user: t, analyticsLocation: o }),
+        R = i.useRef(null),
         g = { icon: p, __unsupportedReactNodeAsText: c, "aria-label": f, onMouseEnter: d, ...a };
-    return 0 === R.length
+    return 0 === E.length
         ? (0, l.jsx)(u.q3, { ...g, disabled: !0 })
-        : (0, l.jsx)(_, {
-              targetElementRef: E,
-              menuItems: R,
+        : (0, l.jsx)(b, {
+              targetElementRef: R,
+              menuItems: E,
               children: (e) =>
                   (0, l.jsx)(u.q3, {
-                      buttonRef: E,
+                      buttonRef: R,
                       ...e,
                       ...g,
                       onMouseEnter: function () {
@@ -255,8 +255,8 @@ function w(e) {
             user: t,
             gameFriends: n,
             hasOutgoingPendingGameFriends: r,
-            hasIncomingPendingGameFriends: o,
-            analyticsLocation: s,
+            hasIncomingPendingGameFriends: s,
+            analyticsLocation: o,
             ...a
         } = e,
         {
@@ -264,18 +264,18 @@ function w(e) {
             onMouseEnter: d,
             ariaLabel: f,
             icon: p,
-        } = S({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: o }),
-        R = b({ user: t, analyticsLocation: s }),
-        E = i.useRef(null),
+        } = S({ gameFriends: n, hasOutgoingPendingGameFriends: r, hasIncomingPendingGameFriends: s }),
+        E = _({ user: t, analyticsLocation: o }),
+        R = i.useRef(null),
         g = { icon: p, __unsupportedReactNodeAsText: c, "aria-label": f, onMouseEnter: d, ...a };
-    return 0 === R.length
+    return 0 === E.length
         ? (0, l.jsx)(u.br, { tooltipPosition: "left", tooltipAlign: "top", ...g, disabled: !0 })
-        : (0, l.jsx)(_, {
-              targetElementRef: E,
-              menuItems: R,
+        : (0, l.jsx)(b, {
+              targetElementRef: R,
+              menuItems: E,
               children: (e) =>
                   (0, l.jsx)(u.br, {
-                      buttonRef: E,
+                      buttonRef: R,
                       tooltipPosition: "left",
                       tooltipAlign: "top",
                       ...e,

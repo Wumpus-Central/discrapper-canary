@@ -12,11 +12,11 @@ var l = n(503698),
     f = n(747556),
     m = n(255434),
     g = n(710778),
-    p = n(140735),
-    E = n(260981),
+    E = n(140735),
+    p = n(260981),
     h = n(540418),
-    b = n(907085),
-    x = n(179820),
+    x = n(907085),
+    b = n(179820),
     _ = n(105292),
     A = n(381134);
 function N(e) {
@@ -24,13 +24,13 @@ function N(e) {
         l = (function (e) {
             switch (e) {
                 case s.x.COMMON:
-                    return { Icon: E.p, className: A.e8, label: _.intl.string(_.t.L0K5ci) };
+                    return { Icon: p.p, className: A.e8, label: _.intl.string(_.t.L0K5ci) };
                 case s.x.RARE:
                     return { Icon: h.A, className: A.D3, label: _.intl.string(_.t["sTx/5z"]) };
                 case s.x.EPIC:
-                    return { Icon: b.b, className: A.mk, label: _.intl.string(_.t.RD8RiN) };
+                    return { Icon: x.b, className: A.mk, label: _.intl.string(_.t.RD8RiN) };
                 case s.x.MYTHIC:
-                    return { Icon: x.O, className: A.nM, label: _.intl.string(_.t.vqc1ol) };
+                    return { Icon: b.O, className: A.nM, label: _.intl.string(_.t.vqc1ol) };
                 default:
                     return null;
             }
@@ -52,10 +52,10 @@ function j(e) {
             children: t,
             title: n,
             eyebrow: l,
-            body: E,
+            body: p,
             variant: h = "default",
-            badgeImage: b,
-            badgeName: x,
+            badgeImage: x,
+            badgeName: b,
             progressCircle: _,
             rarity: A,
             isAnimated: j = !1,
@@ -67,8 +67,8 @@ function j(e) {
         D = j && null == _,
         {
             tooltipId: M,
-            isVisible: P,
-            targetElementRef: O,
+            isVisible: O,
+            targetElementRef: P,
             trigger: U,
         } = (0, i.D)({ children: t, targetElementRef: T, delay: v.In, onTooltipShow: y, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
@@ -81,8 +81,8 @@ function j(e) {
                     className: r()(I.fA, { [I.qJ]: D }),
                     "aria-hidden": !0,
                     children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
-                        src: b,
-                        alt: x,
+                        src: x,
+                        alt: b,
                         progressCircleText: _?.text,
                         progressCirclePercent: _?.percent,
                         progressCircleUrgency: _?.urgency,
@@ -107,26 +107,26 @@ function j(e) {
                             className: r()(I.DD, { [I.x$]: "nitro" === h }),
                             children: n,
                         }),
-                        null != E &&
+                        null != p &&
                             (0, a.jsx)(d.E, {
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
                                 className: I.rf,
-                                children: E,
+                                children: p,
                             }),
                     ],
                 }),
             ],
         }),
-        w = null != E ? `${x}. ${E}` : x,
-        k = (0, u.j)({ shouldShow: P })((e, t) =>
+        w = null != p ? `${b}. ${p}` : b,
+        k = (0, u.j)({ shouldShow: O })((e, t) =>
             t
                 ? (0, a.jsx)(f.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(m.R, {
-                          isVisible: P,
+                          isVisible: O,
                           isRendered: !0,
-                          targetElementRef: O,
+                          targetElementRef: P,
                           content: G,
                           position: C,
                           align: "center",
@@ -136,6 +136,6 @@ function j(e) {
                   })
                 : null,
         );
-    return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(p.A, { id: M, children: w }), k] });
+    return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(E.A, { id: M, children: w }), k] });
 }
 let T = j;

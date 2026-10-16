@@ -2,42 +2,42 @@ a.d(t, { A: () => c });
 var s = a(17928),
     l = a(73153);
 let i = { speechRate: 1, currentMessage: null },
-    h = i;
-class n extends s.Ay.DeviceSettingsStore {
+    n = i;
+class h extends s.Ay.DeviceSettingsStore {
     static displayName = "TTSStore";
     static persistKey = "TTSStore";
     static migrations = [];
     initialize(e) {
-        h = { ...i, ...(e ?? null) };
+        n = { ...i, ...(e ?? null) };
     }
     isSpeakingMessage(e, t) {
-        let { currentMessage: a } = h;
+        let { currentMessage: a } = n;
         return null !== a && a.channelId === e && a.messageId === t;
     }
     get currentMessage() {
-        return h.currentMessage;
+        return n.currentMessage;
     }
     get speechRate() {
-        return h.speechRate;
+        return n.speechRate;
     }
     getUserAgnosticState() {
-        return h;
+        return n;
     }
 }
-let c = new n(
+let c = new h(
     l.h,
     __OVERLAY__
         ? {}
         : {
               SPEAKING_MESSAGE: function (e) {
                   let { messageId: t, channelId: a } = e;
-                  h = { ...h, currentMessage: { messageId: t, channelId: a } };
+                  n = { ...n, currentMessage: { messageId: t, channelId: a } };
               },
               STOP_SPEAKING: function () {
-                  h = { ...h, currentMessage: null };
+                  n = { ...n, currentMessage: null };
               },
               SET_TTS_SPEECH_RATE: function (e) {
-                  h = { ...h, speechRate: e.speechRate };
+                  n = { ...n, speechRate: e.speechRate };
               },
           },
 );

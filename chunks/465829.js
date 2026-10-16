@@ -12,11 +12,11 @@ var l = n(503698),
     f = n(709066),
     m = n(609425),
     g = n(922301),
-    p = n(660184),
-    E = n(534400),
+    E = n(660184),
+    p = n(534400),
     h = n(518477),
-    b = n(105292),
-    x = n(956495);
+    x = n(105292),
+    b = n(956495);
 let _ = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
 function A(e) {
     let {
@@ -30,16 +30,16 @@ function A(e) {
             className: u,
         } = e,
         f = (0, m.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
-        E = _[i];
+        p = _[i];
     return null != f
         ? (0, a.jsx)(s.E, {
-              variant: E,
+              variant: p,
               className: u,
-              children: (0, a.jsx)(p.A, {
+              children: (0, a.jsx)(E.A, {
                   userName: l,
                   displayNameStyles: f,
                   effectDisplayType: g.G.ANIMATED,
-                  textClassName: x.QC,
+                  textClassName: b.QC,
                   shouldWrap: !0,
                   loop: !0,
                   inProfile: !0,
@@ -47,7 +47,7 @@ function A(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(s.E, { className: r()(x.QC, x.O2, u), variant: E, children: [l, " ", c] });
+        : (0, a.jsxs)(s.E, { className: r()(b.QC, b.O2, u), variant: p, children: [l, " ", c] });
 }
 function N(e) {
     let {
@@ -60,8 +60,8 @@ function N(e) {
             onClickDisplayName: c,
         } = e,
         m = (0, u.r)(t),
-        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: x.AO }) : null,
-        p = (0, a.jsx)(A, {
+        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: b.AO }) : null,
+        E = (0, a.jsx)(A, {
             user: t,
             guildId: n,
             displayName: l,
@@ -71,27 +71,27 @@ function N(e) {
             displayNameTrailing: g,
         });
     return (0, a.jsxs)("div", {
-        className: r()(x.K$, "lg" === o && x.lg),
+        className: r()(b.K$, "lg" === o && b.lg),
         children: [
-            null != c ? (0, a.jsx)(i.D, { onClick: c, className: x.vk, children: p }) : p,
-            null != s && !1 !== s && (0, a.jsx)("div", { className: x.MU, children: s }),
+            null != c ? (0, a.jsx)(i.D, { onClick: c, className: b.vk, children: E }) : E,
+            null != s && !1 !== s && (0, a.jsx)("div", { className: b.MU, children: s }),
         ],
     });
 }
 function R(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
-        className: r()(x.hI, n),
+        className: r()(b.hI, n),
         variant: "text-sm/medium",
         color: "text-strong",
         children: [
-            (0, a.jsx)(o.A, { tag: "span", children: b.intl.formatToPlainString(b.t["DRI+T7"], { pronouns: t }) }),
+            (0, a.jsx)(o.A, { tag: "span", children: x.intl.formatToPlainString(x.t["DRI+T7"], { pronouns: t }) }),
             (0, a.jsx)("span", { "aria-hidden": "true", children: t }),
         ],
     });
 }
 function v() {
-    return (0, a.jsx)("div", { "aria-hidden": "true", className: x.SC });
+    return (0, a.jsx)("div", { "aria-hidden": "true", className: b.SC });
 }
 function I(e) {
     let {
@@ -103,7 +103,7 @@ function I(e) {
             contextGuildId: f,
             trailing: m,
             onClose: g,
-            onCreateTag: p,
+            onCreateTag: E,
         } = e,
         _ = null != s && s.length > 0,
         A = (0, u.r)(t),
@@ -113,35 +113,35 @@ function I(e) {
                   user: t,
                   usernameIcon: n,
                   forceUsername: !0,
-                  className: x.a1,
-                  usernameClass: x.eb,
-                  discriminatorClass: x.sw,
+                  className: b.a1,
+                  usernameClass: b.eb,
+                  discriminatorClass: b.sw,
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: r()(x.AK, { [x.j6]: _, [x.w2]: null != A }),
+        className: r()(b.AK, { [b.j6]: _, [b.w2]: null != A }),
         children: [
-            null != N && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(x.qp, x.vk), children: N }) : N,
+            null != N && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(b.qp, b.vk), children: N }) : N,
             _ &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(v, {}),
                         (0, a.jsx)(d.m, {
-                            text: b.intl.string(b.t.GI2A8C),
+                            text: x.intl.string(x.t.GI2A8C),
                             delay: h.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: x.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: b.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
                         }),
                     ],
                 }),
-            (0, a.jsx)(E.Ay, {
+            (0, a.jsx)(p.Ay, {
                 primaryGuild: o,
                 userId: t.id,
                 contextGuildId: f,
                 onClose: g,
-                onCreateTag: p,
+                onCreateTag: E,
                 textVariant: "text-xs/normal",
-                className: x.Bb,
+                className: b.Bb,
             }),
             m,
         ],
@@ -162,8 +162,8 @@ function j(e) {
         primaryGuild: f,
         contextGuildId: m,
         trailing: g,
-        onClose: p,
-        onCreateTag: E,
+        onClose: E,
+        onCreateTag: p,
     } = e;
     return (0, a.jsxs)("div", {
         className: l,
@@ -184,8 +184,8 @@ function j(e) {
                 primaryGuild: f,
                 contextGuildId: m,
                 onClickUsername: r,
-                onClose: p,
-                onCreateTag: E,
+                onClose: E,
+                onCreateTag: p,
                 trailing: g,
             }),
         ],

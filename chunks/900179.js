@@ -11,14 +11,14 @@ var a = n(477900),
     f = n(707554),
     m = n(297264),
     g = n(834730),
-    p = n(915089),
-    E = n(94343),
+    E = n(915089),
+    p = n(94343),
     h = n(716804),
-    b = n(161185);
-let x = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e]));
+    x = n(161185);
+let b = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e]));
 function _(e) {
     let { icon: t, size: n = "xxs", tooltip: l } = e,
-        r = (0, a.jsx)(t, { size: n, color: "currentColor", className: b.yK, "aria-hidden": !0 });
+        r = (0, a.jsx)(t, { size: n, color: "currentColor", className: x.yK, "aria-hidden": !0 });
     return null == l ? r : (0, a.jsx)(c.m, { text: l, asContainer: !0, children: r });
 }
 function A(e) {
@@ -34,25 +34,25 @@ function A(e) {
             className: R,
             scrollTargetId: v,
         } = e,
-        I = (0, p.GV)(),
+        I = (0, E.GV)(),
         j = l.useRef(null),
         T = (0, h.g)(),
         y = null != v && T === v;
-    (0, E.A)(j, y);
+    (0, p.A)(j, y);
     let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
         ref: y ? j : void 0,
-        className: s()(b.uW, R),
+        className: s()(x.uW, R),
         "aria-labelledby": I,
         children: [
             A
                 ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
-                      className: b.so,
+                      className: x.so,
                       children: [
                           (0, a.jsxs)("div", {
-                              className: b.wx,
-                              style: { color: d.A.colors[x[o]]?.css },
+                              className: x.wx,
+                              style: { color: d.A.colors[b[o]]?.css },
                               children: [
                                   (0, a.jsx)(m.D, {
                                       variant: i,

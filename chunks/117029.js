@@ -9,11 +9,11 @@ var i = n(477900),
     c = n(866665),
     d = n(408278),
     m = n(92259),
-    g = n(205513),
-    p = n(218429),
-    f = n(964486),
-    h = n(461782),
-    x = n(192820),
+    p = n(205513),
+    g = n(218429),
+    x = n(964486),
+    f = n(461782),
+    h = n(192820),
     A = n(40056),
     v = n(105292),
     E = n(950183),
@@ -26,13 +26,13 @@ function I(e) {
 }
 let S = l.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: N } = l.useContext(h.k3),
+        { onActive: S, onPreventIdle: _, onAllowIdle: N } = l.useContext(f.k3),
         {
             enabled: b,
             zoomLevel: y,
-            minZoom: R,
-            maxZoom: T,
-            isDragging: L,
+            minZoom: T,
+            maxZoom: L,
+            isDragging: R,
             isWheeling: D,
             isSlidering: k,
             setIsSlidering: w,
@@ -41,13 +41,13 @@ let S = l.memo(function (e) {
             videoAspectRatio: G,
             wrapperRef: V,
             panOffset: P,
-            setPanOffset: F,
-            clampPanOffset: H,
+            setPanOffset: H,
+            clampPanOffset: F,
         } = l.useContext(A.e9),
         [U, z] = l.useState(!1),
         W = l.useRef(null),
-        B = y > R,
-        $ = l.useCallback(() => {
+        $ = y > T,
+        B = l.useCallback(() => {
             _("interact");
         }, [_]),
         Z = l.useCallback(() => {
@@ -65,9 +65,9 @@ let S = l.memo(function (e) {
                     i = V.current.clientHeight,
                     l = e.x - t.left,
                     s = e.y - t.top;
-                F(H({ x: (0.5 - l / t.width) * n * y, y: (0.5 - s / t.height) * i * y }));
+                H(F({ x: (0.5 - l / t.width) * n * y, y: (0.5 - s / t.height) * i * y }));
             },
-            [H, y, V, F],
+            [F, y, V, H],
         ),
         K = l.useCallback(
             (e) => {
@@ -87,7 +87,7 @@ let S = l.memo(function (e) {
             },
             [U],
         ),
-        J = x.Ay.getVideoComponent(),
+        J = h.Ay.getVideoComponent(),
         ee = l.useMemo(() => {
             let e = null != V.current ? V.current.clientWidth : 1,
                 t = null != V.current ? V.current.clientHeight : 1,
@@ -101,11 +101,11 @@ let S = l.memo(function (e) {
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * i}%`,
                 "--custom-zoom-indicator-transition":
-                    L || U || D || k
+                    R || U || D || k
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [L, U, D, k, P, y, V]),
+        }, [R, U, D, k, P, y, V]),
         et = l.useCallback(
             (e) => {
                 (e.preventDefault(), e.stopPropagation(), M(y - 0.25, A.qd, "button"));
@@ -131,20 +131,20 @@ let S = l.memo(function (e) {
             },
             [M, S, w],
         );
-    return ((0, f.l0)(() => {
+    return ((0, x.l0)(() => {
         ei.current?.stop();
     }),
     b && null != n)
         ? (0, i.jsxs)("div", {
-              className: r()(C.ne, { [C.Ge]: O || B }),
-              onMouseEnter: $,
+              className: r()(C.ne, { [C.Ge]: O || $ }),
+              onMouseEnter: B,
               onMouseLeave: Z,
               onClick: j,
               children: [
-                  (O || B) &&
+                  (O || $) &&
                       (0, i.jsx)(u.D, {
                           onClick: j,
-                          onMouseEnter: $,
+                          onMouseEnter: B,
                           onMouseLeave: Z,
                           children: (0, i.jsxs)("div", {
                               ref: W,
@@ -170,7 +170,7 @@ let S = l.memo(function (e) {
                   (0, i.jsxs)("div", {
                       className: C.xu,
                       children: [
-                          (O || B) &&
+                          (O || $) &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(c.m, {
@@ -179,15 +179,15 @@ let S = l.memo(function (e) {
                                           children: (0, i.jsx)(d.K, {
                                               icon: m.V,
                                               onClick: et,
-                                              disabled: y <= R,
+                                              disabled: y <= T,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
-                                      (0, i.jsx)(g.G, {
-                                          minValue: R,
-                                          maxValue: T,
+                                      (0, i.jsx)(p.G, {
+                                          minValue: T,
+                                          maxValue: L,
                                           initialValue: y,
                                           value: y,
                                           asValueChanges: el,
@@ -200,9 +200,9 @@ let S = l.memo(function (e) {
                               text: v.intl.string(v.t["9hMafy"]),
                               position: "top",
                               children: (0, i.jsx)(d.K, {
-                                  icon: p.r,
+                                  icon: g.r,
                                   onClick: en,
-                                  disabled: y >= T,
+                                  disabled: y >= L,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),

@@ -11,11 +11,11 @@ var a = n(477900),
     f = n(654107),
     m = n(450373),
     g = n(885386),
-    p = n(531685),
-    E = n(486020),
+    E = n(531685),
+    p = n(486020),
     h = n(837529),
-    b = n(686189),
-    x = n(714719),
+    x = n(686189),
+    b = n(714719),
     _ = n(859161),
     A = n(207634),
     N = n(565890);
@@ -36,15 +36,15 @@ function R(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        [P, O] = l.useState(!1),
-        U = (0, o.bG)([p.A], () => p.A.isFocused()),
+        [O, P] = l.useState(!1),
+        U = (0, o.bG)([E.A], () => E.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
-        { bannerSrc: w, status: k } = (0, b.A)({
+        { bannerSrc: w, status: k } = (0, x.A)({
             displayProfile: n,
             pendingBanner: A,
             size: y,
-            canAnimate: M || !B ? P : U,
+            canAnimate: M || !B ? O : U,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
@@ -52,16 +52,16 @@ function R(e) {
         $ = (0, i.LX)((0, f.Ay)(V, H, !1)),
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
         z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(I) };
-    return (0, a.jsx)(x.A, {
+    return (0, a.jsx)(b.A, {
         fillClassName: s()(N.v, v),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
-        showGifTag: !B && (0, E.o4)(L),
+        showGifTag: !B && (0, p.o4)(L),
         height: C,
         cutout: z,
         overlay: R,
-        onInteractionStart: () => O(!0),
-        onInteractionEnd: () => O(!1),
+        onInteractionStart: () => P(!0),
+        onInteractionEnd: () => P(!1),
     });
 }
 function v(e) {

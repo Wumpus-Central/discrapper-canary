@@ -1,4 +1,4 @@
-t.d(n, { JW: () => f, K5: () => A, MD: () => T, Mq: () => m, gc: () => p, kz: () => g, px: () => C, x: () => b });
+t.d(n, { JW: () => f, K5: () => A, MD: () => I, Mq: () => m, gc: () => p, kz: () => C, px: () => g, x: () => b });
 var i = t(582128),
     l = t(877624),
     a = t(17928),
@@ -23,12 +23,12 @@ function f() {
         e
     );
 }
-function C(e, n, t) {
+function g(e, n, t) {
     let i = m(e),
         l = null != t && t.length >= 1;
     return n && i && l;
 }
-function g(e, n, t) {
+function C(e, n, t) {
     let i = m(e);
     return null != t && 1 === t.length && i && n;
 }
@@ -68,7 +68,7 @@ function b(e, n) {
     }
     return null != e ? e : null != n ? n : {};
 }
-function T() {
+function I() {
     let { enabled: e } = u.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
     if (!e || null == c.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR)) return !1;
     let n = c.A.getGiftPromotion()?.id;

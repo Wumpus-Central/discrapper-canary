@@ -15,19 +15,19 @@ function c(e) {
             onShow: f,
             title: m,
             body: g,
-            graphic: p,
-            size: E = "md",
+            graphic: E,
+            size: p = "md",
             actions: h,
-            gradientColor: b,
+            gradientColor: x,
         } = e,
-        x = l.useContext(r.C),
+        b = l.useContext(r.C),
         [_, A] = l.useState("closed"),
         N = l.useRef(null),
         R = l.useRef(!1),
         v = "opening-mouse" === _ || "open-mouse" === _,
         I = "opening-keyboard" === _ || "open-keyboard" === _,
         j = "open-mouse" === _ || "open-keyboard" === _,
-        T = (x.keyboardModeEnabled || I) && null != h,
+        T = (b.keyboardModeEnabled || I) && null != h,
         [y, C] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
@@ -57,10 +57,10 @@ function c(e) {
             [D],
         );
     l.useEffect(() => D, [D]);
-    let P = l.useCallback(() => {
+    let O = l.useCallback(() => {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
-        O = l.useCallback(() => {
+        P = l.useCallback(() => {
             v && M(!1);
         }, [M, v]),
         U = l.useCallback(() => {
@@ -128,8 +128,8 @@ function c(e) {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: P,
-        onMouseLeave: O,
+        onMouseEnter: O,
+        onMouseLeave: P,
         onFocus: U,
         onBlur: B,
         children: [
@@ -141,10 +141,10 @@ function c(e) {
                 align: "center",
                 title: m,
                 body: g,
-                graphic: p,
-                size: E,
+                graphic: E,
+                size: p,
                 actions: G,
-                gradientColor: b,
+                gradientColor: x,
                 showCloseButton: T,
                 shouldTrapFocus: T,
                 returnRef: T ? n : void 0,

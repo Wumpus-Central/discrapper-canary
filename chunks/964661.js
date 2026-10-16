@@ -1,19 +1,19 @@
-p.d(t, { A: () => c });
-var s = p(477900);
-p(582128);
-var n = p(562708),
-    o = p(877624),
-    i = p(62010),
-    r = p(406810),
-    a = p(139286);
-function c(e) {
-    let { componentId: t, promotionId: p, badgeCopy: c, acknowledgedBadgeCopy: d, isDismissed: _ } = e;
-    return ((0, a.A)({
-        type: n.ImpressionTypes.VIEW,
-        name: n.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: o.C.PREMIUM_TAB, component_id: t, promotion_id: p },
+r.d(n, { A: () => p });
+var e = r(477900);
+r(582128);
+var o = r(562708),
+    i = r(877624),
+    a = r(62010),
+    c = r(406810),
+    s = r(139286);
+function p(t) {
+    let { componentId: n, promotionId: r, badgeCopy: p, acknowledgedBadgeCopy: u, isDismissed: m } = t;
+    return ((0, s.A)({
+        type: o.ImpressionTypes.VIEW,
+        name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: i.C.PREMIUM_TAB, component_id: n, promotion_id: r },
     }),
-    _)
-        ? (0, s.jsx)(i.E, { type: { text: d }, icon: r.ClockIcon, variant: "secondary" })
-        : (0, s.jsx)(i.E, { type: { text: c }, variant: "expressive" });
+    m)
+        ? (0, e.jsx)(a.E, { type: { text: u }, icon: c.ClockIcon, variant: "secondary" })
+        : (0, e.jsx)(a.E, { type: { text: p }, variant: "expressive" });
 }
