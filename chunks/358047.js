@@ -1,25 +1,25 @@
-n.d(t, { Ay: () => z, JU: () => F, fe: () => R });
+n.d(t, { JU: () => F, fe: () => R, Ay: () => z });
 var i = n(607399),
     r = n(17928),
     a = n(73153),
-    s = n(587895),
-    l = n(631828),
-    o = n(736056),
-    d = n(945810),
-    c = n(925166),
-    u = n(115504),
-    _ = n(517381),
-    E = n(940382),
-    A = n(95701),
-    h = n(625494),
-    f = n(935208),
-    I = n(734057),
-    p = n(71393),
-    T = n(576705),
-    m = n(309010),
-    g = n(967198),
-    S = n(287809),
-    N = n(652215),
+    s = n(631828),
+    l = n(95701),
+    o = n(734057),
+    d = n(652215),
+    c = n(587895),
+    u = n(736056),
+    _ = n(945810),
+    E = n(925166),
+    A = n(115504),
+    h = n(517381),
+    f = n(940382),
+    I = n(625494),
+    p = n(935208),
+    T = n(71393),
+    m = n(576705),
+    g = n(309010),
+    S = n(967198),
+    N = n(287809),
     C = n(746080),
     O = n(818348);
 let R = "message_requests",
@@ -37,32 +37,32 @@ let R = "message_requests",
 function k(e) {
     if (null == e) return null;
     if ((0, C.jq)(e)) {
-        let t = g.A.getGuildId();
+        let t = S.A.getGuildId();
         return null == t ? null : (0, C.Gr)(e, t);
     }
     return e;
 }
 function F(e) {
-    return [E.PE.VIEW_CHANNEL, E.PE.VIEW_MESSAGE_REQUEST, E.PE.VIEW_MOD_REPORT].includes(e.type);
+    return [f.PE.VIEW_CHANNEL, f.PE.VIEW_MESSAGE_REQUEST, f.PE.VIEW_MOD_REPORT].includes(e.type);
 }
 function B() {
-    return c.A.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled;
+    return E.A.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled;
 }
 function V() {
-    return c.A.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled;
+    return E.A.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled;
 }
 function H() {
     return V() ? M : b;
 }
 function j(e, t) {
-    (t?.trackClose === !0 && H() && !e && B() && (0, u.RQ)({ open: !1, source: u.TY.EXTERNAL, analyticsLocations: [] }),
+    (t?.trackClose === !0 && H() && !e && B() && (0, A.RQ)({ open: !1, source: A.TY.EXTERNAL, analyticsLocations: [] }),
         V() ? (M = e) : (b = e));
 }
 function W(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = !1;
     G && ((G = !1), (n = !0));
-    let i = k(m.Ay.getChannelId());
+    let i = k(g.Ay.getChannelId());
     (null != i && i in U && (delete U[i], (n = !0)), t && H() && B() && (n = !0));
     let r = n && e ? e : !e;
     return (r && t && j(!1, { trackClose: !0 }), r);
@@ -71,15 +71,15 @@ function Y() {
     let e = !1;
     for (let t in U) {
         let n = U[t];
-        if (n.type === E.PE.VIEW_CHANNEL) {
-            let i = I.A.getChannel(n.channelId);
-            (null != i && T.A.can(O.xB.VIEW_CHANNEL, i)) || (delete U[t], (e = !0));
+        if (n.type === f.PE.VIEW_CHANNEL) {
+            let i = o.A.getChannel(n.channelId);
+            (null != i && m.A.can(O.xB.VIEW_CHANNEL, i)) || (delete U[t], (e = !0));
         }
     }
     return e;
 }
 function K() {
-    let e = null != x && _.A.hasSearchState(x);
+    let e = null != x && h.A.hasSearchState(x);
     return e !== G && ((G = e), !0);
 }
 class $ extends r.Ay.PersistedStore {
@@ -105,8 +105,8 @@ class $ extends r.Ay.PersistedStore {
             (M = e.isAppBarToggleOpen ?? !1),
             (U = e.sidebars ?? {}),
             (w = e.guildSidebars ?? {})),
-            this.syncWith([T.A], Y),
-            this.waitFor(s.A, I.A, o.A, d.Bt, p.A, T.A, _.A, m.Ay, g.A, S.default));
+            this.syncWith([m.A], Y),
+            this.waitFor(c.A, o.A, u.A, _.Bt, T.A, m.A, h.A, g.Ay, S.A, N.default));
     }
     getState() {
         return {
@@ -120,21 +120,21 @@ class $ extends r.Ay.PersistedStore {
         };
     }
     getSection(e, t) {
-        if (G) return N.YvQ.SEARCH;
+        if (G) return d.YvQ.SEARCH;
         let n = k(e);
         return null != n && null != U[n]
-            ? N.YvQ.SIDEBAR_CHAT
+            ? d.YvQ.SIDEBAR_CHAT
             : H() && B()
-              ? N.YvQ.FRIENDS
+              ? d.YvQ.FRIENDS
               : t && v
-                ? N.YvQ.PROFILE
+                ? d.YvQ.PROFILE
                 : y
-                  ? N.YvQ.SUMMARIES
+                  ? d.YvQ.SUMMARIES
                   : L && !t
-                    ? N.YvQ.MEMBERS
+                    ? d.YvQ.MEMBERS
                     : D
-                      ? N.YvQ.CONVERSATIONS
-                      : N.YvQ.NONE;
+                      ? d.YvQ.CONVERSATIONS
+                      : d.YvQ.NONE;
     }
     getSidebarState(e) {
         let t = k(e);
@@ -150,7 +150,7 @@ class $ extends r.Ay.PersistedStore {
         let t = k(e);
         if (null == t || G) return null;
         let n = U[t];
-        return null == n ? null : n.type === E.PE.VIEW_CHANNEL || n.type === E.PE.VIEW_MOD_REPORT ? n.channelId : null;
+        return null == n ? null : n.type === f.PE.VIEW_CHANNEL || n.type === f.PE.VIEW_MOD_REPORT ? n.channelId : null;
     }
     getCurrentSidebarMessageId(e) {
         let t = k(e);
@@ -158,7 +158,7 @@ class $ extends r.Ay.PersistedStore {
         let n = U[t];
         return null == n
             ? null
-            : n.type === E.PE.VIEW_CHANNEL || n.type === E.PE.VIEW_MOD_REPORT
+            : n.type === f.PE.VIEW_CHANNEL || n.type === f.PE.VIEW_MOD_REPORT
               ? n.details?.initialMessageId
               : null;
     }
@@ -182,19 +182,19 @@ let z = new $(a.h, {
         return !!G && ((G = !1), !0);
     },
     CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-        (G && h._.dispatch(N.jej.SEARCH_RESULTS_CLOSE), y && (y = W(y)), D && (D = W(D)), (L = W(L, !0)));
+        (G && I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), y && (y = W(y)), D && (D = W(D)), (L = W(L, !0)));
     },
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function () {
-        (v || h._.dispatch(N.jej.SEARCH_RESULTS_CLOSE), (v = W(v, !0)));
+        (v || I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), (v = W(v, !0)));
     },
     CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
         (L && (L = W(L)), D && (D = W(D)), (y = W(y, !0)));
     },
     CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function () {
-        (G && h._.dispatch(N.jej.SEARCH_RESULTS_CLOSE), (L = !1), (y = !1), (D = W(D, !0)));
+        (G && I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), (L = !1), (y = !1), (D = W(D, !0)));
     },
     CHANNEL_OPEN_CONVERSATIONS_SECTION: function () {
-        return !D && (G && h._.dispatch(N.jej.SEARCH_RESULTS_CLOSE), (L = !1), (y = !1), (D = !0), j(!1), !0);
+        return !D && (G && I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), (L = !1), (y = !1), (D = !0), j(!1), !0);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { sidebarType: t, baseChannelId: n, channelId: i, details: r } = e;
@@ -202,7 +202,7 @@ let z = new $(a.h, {
         let a = k(n);
         if (null == a) return !1;
         let s = { type: t, channelId: i, details: r };
-        return (t === E.PE.VIEW_MOD_REPORT && (s = { ...s, baseChannelId: n }), (U[a] = s), !0);
+        return (t === f.PE.VIEW_MOD_REPORT && (s = { ...s, baseChannelId: n }), (U[a] = s), !0);
     },
     SIDEBAR_VIEW_GUILD: function (e) {
         let { sidebarType: t, guildId: n, baseChannelId: i, details: r } = e;
@@ -214,7 +214,7 @@ let z = new $(a.h, {
         let { parentChannelId: t, parentMessageId: n, location: i } = e;
         G = !1;
         let r = k(t);
-        null != r && (U[r] = { type: E.PE.CREATE_THREAD, parentChannelId: t, parentMessageId: n, location: i });
+        null != r && (U[r] = { type: f.PE.CREATE_THREAD, parentChannelId: t, parentMessageId: n, location: i });
     },
     SIDEBAR_CLOSE: function (e) {
         let { baseChannelId: t } = e,
@@ -228,8 +228,8 @@ let z = new $(a.h, {
     FRIENDS_SIDEBAR_SET_COLLAPSED: function (e) {
         let { collapsed: t } = e;
         if ((j(!t), !t)) {
-            let e = m.Ay.getChannelId();
-            (null != e && delete U[e], G && (h._.dispatch(N.jej.SEARCH_RESULTS_CLOSE), (G = !1)));
+            let e = g.Ay.getChannelId();
+            (null != e && delete U[e], G && (I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), (G = !1)));
         }
     },
     FRIENDS_SIDEBAR_SET_AVAILABLE: function (e) {
@@ -250,21 +250,28 @@ let z = new $(a.h, {
             r = !1;
         if ((i.Fr && L && ((L = !1), (y = !1), (D = !1), (r = !0)), null == t || null == n)) return r;
         let a = U[t];
-        if (a?.type === E.PE.VIEW_CHANNEL && a.channelId === t) return r;
-        let s = I.A.getChannel(t);
-        return null != s && ((0, A.ZV)(s.type) || (0, l.M)(s))
-            ? ((U[t] = { type: E.PE.VIEW_CHANNEL, channelId: t, details: { type: E.kk.CHAT, initialMessageId: n } }),
-              !0)
-            : r;
+        return (a?.type === f.PE.VIEW_CHANNEL && a.channelId === t) ||
+            !(function (e) {
+                let t = o.A.getBasicChannel(e);
+                if (null != t) {
+                    if ((0, l.ZV)(t.type)) return !0;
+                    if (t.type !== d.rbe.DM) return !1;
+                }
+                let n = o.A.getChannel(e);
+                return null != n && (0, s.M)(n);
+            })(t)
+            ? r
+            : ((U[t] = { type: f.PE.VIEW_CHANNEL, channelId: t, details: { type: f.kk.CHAT, initialMessageId: n } }),
+              !0);
     },
     THREAD_CREATE: function (e) {
         let { channel: t } = e;
-        if (t.ownerId === S.default.getCurrentUser()?.id) return !1;
+        if (t.ownerId === N.default.getCurrentUser()?.id) return !1;
         let n = U[t.parent_id];
         null != n &&
-            n.type === E.PE.CREATE_THREAD &&
-            n.parentMessageId === f.default.castChannelIdAsMessageId(t.id) &&
-            (U[t.parent_id] = { type: E.PE.VIEW_CHANNEL, channelId: t.id, details: { type: E.kk.CHAT } });
+            n.type === f.PE.CREATE_THREAD &&
+            n.parentMessageId === p.default.castChannelIdAsMessageId(t.id) &&
+            (U[t.parent_id] = { type: f.PE.VIEW_CHANNEL, channelId: t.id, details: { type: f.kk.CHAT } });
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e,

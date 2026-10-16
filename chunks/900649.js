@@ -28,7 +28,7 @@ function v(e) {
 var N = t(786180),
     I = t(742589),
     T = t(976860),
-    b = t(761640),
+    b = t(358047),
     R = t(808728),
     C = t(71393),
     M =
@@ -970,8 +970,8 @@ function e2(e) {
           })
         : null;
 }
-var e9 = t(856768),
-    e3 = t(308941),
+var e3 = t(856768),
+    e9 = t(308941),
     e1 = t(702841),
     e6 = t(717421),
     le = t(144073),
@@ -983,10 +983,10 @@ var e9 = t(856768),
 function lr(e) {
     let { guild: l } = e,
         t = (0, le.Ms)(l.id),
-        s = (0, e6.z)({ height: 3 * !!t, config: e3.config.stiff });
+        s = (0, e6.z)({ height: 3 * !!t, config: e9.config.stiff });
     return (0, n.jsx)("div", {
         className: eG.NQ,
-        children: (0, n.jsx)(e3.animated.div, { className: eG.b0, style: s }),
+        children: (0, n.jsx)(e9.animated.div, { className: eG.b0, style: s }),
     });
 }
 function la(e) {
@@ -1109,7 +1109,7 @@ function lu(e) {
                                             : (0, n.jsx)(eq, { guildId: c.id, currentTab: s }),
                               }),
                           }),
-                          (0, n.jsx)(e9.A, { guildId: c.id }),
+                          (0, n.jsx)(e3.A, { guildId: c.id }),
                       ],
                   }),
                   _ &&

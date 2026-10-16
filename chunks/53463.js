@@ -3216,7 +3216,7 @@ function si(e) {
         ],
     });
 }
-var sl = n(334105);
+var sl = n(483510);
 function ss(e) {
     let { channel: t, isSuggestedSection: n } = e;
     return (0, r.jsx)(q.m, {
@@ -3225,7 +3225,7 @@ function ss(e) {
         children: (0, r.jsx)(J.D, {
             className: eo.Xs,
             onClick: () => {
-                ((0, sl.fJ)(t.getGuildId(), t.id),
+                ((0, sl.ci)(t.getGuildId(), t.id),
                     (0, lf.iN)(t.id, n ? { source: lA.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0));
             },
             "aria-label": er.intl.string(er.t.ZXxLQg),
@@ -3588,7 +3588,7 @@ class s_ extends nB {
                     n.e("405449"),
                     n.e("248804"),
                     n.e("141049"),
-                    n.e("982921"),
+                    n.e("174489"),
                     n.e("25173"),
                 ]).then(n.bind(n, 468916));
                 return (n) => (0, r.jsx)(e, { ...n, channel: t, guild: i });

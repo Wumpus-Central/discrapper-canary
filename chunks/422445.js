@@ -9,8 +9,8 @@ var i = n(477900),
     u = n(148494),
     h = n(281969),
     o = n(672929),
-    f = n(20465),
-    p = n(249288),
+    p = n(20465),
+    f = n(249288),
     g = n(251363),
     A = n(717519);
 function w(e) {
@@ -21,7 +21,7 @@ function w(e) {
         b =
             ((t = s.useCallback((e) => h.A.subscribe(e), [])),
             s.useSyncExternalStore(t, () => null != m && h.A.isFrameVisible(m))),
-        j = (0, c.bG)([p.A], () => p.A.getToastsEnabled(n), [n]),
+        j = (0, c.bG)([f.A], () => f.A.getToastsEnabled(n), [n]),
         I = b && j,
         x = (0, d.useHasAnyModalOpen)(),
         [C, N] = s.useState(null);
@@ -68,15 +68,15 @@ function w(e) {
                   style: { top: C.top, left: C.left, width: C.width, height: C.height / 2 },
                   children: (0, i.jsx)("div", {
                       className: A.f,
-                      children: (0, i.jsx)(f.A, { channelId: n, onToastClick: S }),
+                      children: (0, i.jsx)(p.A, { channelId: n, onToastClick: S }),
                   }),
               }),
               document.body,
           );
 }
 var E = n(73153),
-    m = n(334105),
-    b = n(761640),
+    m = n(483510),
+    b = n(358047),
     j = n(573163),
     I = n(801914),
     x = n(246338),
@@ -102,7 +102,7 @@ function U(e) {
                               channelId: n.id,
                               applicationId: t,
                               surface: r,
-                              onOpenChat: () => (0, m.fJ)(n.getGuildId(), n.id),
+                              onOpenChat: () => (0, m.ci)(n.getGuildId(), n.id),
                           })
                         : null,
                 ],
@@ -134,9 +134,9 @@ function G(e) {
         h = d.application_id ?? u;
     (0, N.A)(d);
     let o = (0, x.w$)(d, "AppChannel"),
-        f =
+        p =
             ((t = d.id),
-            (n = (0, m.cz)(t)),
+            (n = (0, m.HP)(t)),
             (l = (0, c.bG)([j.Ay], () => j.Ay.hasUnread(t) || j.Ay.wasUnreadOnSelect(t), [t])),
             (r = s.useRef(!0)),
             s.useEffect(() => {
@@ -146,7 +146,7 @@ function G(e) {
                 o &&
                     l &&
                     r.current &&
-                    ((r.current = !1), null == b.Ay.getSidebarState(t) && (0, m.fJ)(d.getGuildId(), t));
+                    ((r.current = !1), null == b.Ay.getSidebarState(t) && (0, m.ci)(d.getGuildId(), t));
             }, [o, l, d, t]),
             s.useEffect(() => {
                 function e(e) {
@@ -161,5 +161,5 @@ function G(e) {
               heading: k.intl.string(k.t.tU5fiM),
               description: k.intl.string(k.t.E94mJf),
           })
-        : (0, i.jsx)(U, { applicationId: h, channel: d, showChatToasts: o && !f });
+        : (0, i.jsx)(U, { applicationId: h, channel: d, showChatToasts: o && !p });
 }

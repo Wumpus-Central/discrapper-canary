@@ -46,39 +46,41 @@ function g(e) {}
 function S(e) {}
 function N(e) {}
 function C(e) {}
-function O(e) {
-    return !1;
-}
+function O(e) {}
 function R(e) {
     return !1;
 }
-function L() {}
+function L(e) {
+    return !1;
+}
 function y() {}
 function D() {}
 function v() {}
-function b() {
+function b() {}
+function M() {
     return [];
 }
-function M(e) {}
 function P(e) {}
 function U(e) {}
+function w(e) {}
 (n.r(t),
     n.d(t, {
         coerceChannelRoute: () => T,
-        coerceGuildsRoute: () => S,
-        coerceICYMIRoute: () => N,
+        coerceChannelSecondaryViewChatRoute: () => m,
+        coerceGuildsRoute: () => N,
+        coerceICYMIRoute: () => C,
         coerceMainRoute: () => p,
-        coerceModalRoute: () => C,
-        coerceSidebarRoute: () => m,
-        coerceTabsRoute: () => g,
-        getCurrentNavigationRouteName: () => D,
-        getCurrentRouteParents: () => b,
-        getICYMIRouteIfActive: () => P,
-        getOpenModalKey: () => L,
+        coerceModalRoute: () => O,
+        coerceSidebarRoute: () => g,
+        coerceTabsRoute: () => S,
+        getCurrentNavigationRouteName: () => v,
+        getCurrentRouteParents: () => M,
+        getICYMIRouteIfActive: () => U,
+        getOpenModalKey: () => y,
         getSelectedChannelFromRoute: () => E,
         getSelectedGuildFromRoute: () => _,
-        getTabsRouteIfActive: () => M,
-        isModalOpen: () => O,
+        getTabsRouteIfActive: () => P,
+        isModalOpen: () => R,
         modalRoutesAboveMain: () => l,
         navigateToChannel: () => i,
         navigateToContextMenuCommands: () => f,
@@ -92,8 +94,8 @@ function U(e) {}
         pushModal: () => s,
         resetToAuthRoute: () => a,
         routesBelowFirstRemoved: () => o,
-        setHomeDrawerState: () => U,
-        useCurrentNavigationRouteName: () => v,
-        useIsModalOpen: () => R,
-        useOpenModalKey: () => y,
+        setHomeDrawerState: () => w,
+        useCurrentNavigationRouteName: () => b,
+        useIsModalOpen: () => L,
+        useOpenModalKey: () => D,
     }));

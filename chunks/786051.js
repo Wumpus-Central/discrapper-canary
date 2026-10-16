@@ -9,7 +9,7 @@ var l = n(477900),
     d = n(123292),
     u = n(821609),
     h = n(576470),
-    m = n(761640),
+    m = n(358047),
     g = n(473745);
 let p = function (e) {
     let {
@@ -23,26 +23,26 @@ let p = function (e) {
             imageSrc: E,
             animationSrc: S,
             secondaryButtonText: I,
-            onSecondaryButtonClick: j,
-            children: y,
+            onSecondaryButtonClick: y,
+            children: j,
             useReducedMotion: v = !1,
             buttonVariant: _,
         } = e,
         b = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
     if (s.Fr && b) return null;
-    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(y) });
-    let N = null;
+    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(j) });
+    let T = null;
     return (
         null != E
-            ? (N = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !v, className: g.lY })),
+            ? (T = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
+            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !v, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [
                 (0, l.jsxs)("div", {
                     className: g.Qs,
                     children: [
-                        N,
+                        T,
                         (0, l.jsxs)("div", {
                             className: g.Qq,
                             children: [
@@ -59,7 +59,7 @@ let p = function (e) {
                         null != I &&
                             (0, l.jsx)("div", {
                                 className: g.x6,
-                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: j }),
+                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: I, onClick: y }),
                             }),
                         null != A &&
                             (0, l.jsx)("div", {

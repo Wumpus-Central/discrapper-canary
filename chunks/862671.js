@@ -42,7 +42,7 @@ var Q = n(336590),
     w = n(977347),
     H = n(378570),
     O = n(138298),
-    V = n(761640),
+    V = n(358047),
     q = n(47167),
     D = n(688438),
     F = n(105292),
@@ -246,8 +246,8 @@ var eF = n(707539),
     e7 = n(885386),
     e9 = n(576705),
     e8 = n(652215),
-    e1 = n(838541),
-    e3 = n(282573),
+    e3 = n(838541),
+    e1 = n(282573),
     e6 = n(165648);
 let e4 = s.memo(function (e) {
     let { channel: t } = e,
@@ -272,7 +272,7 @@ let e4 = s.memo(function (e) {
         g = null;
     if (i)
         g = (0, l.jsx)(m.E, {
-            className: e3.G4,
+            className: e1.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: F.intl.string(F.t.BZHld2),
@@ -280,47 +280,47 @@ let e4 = s.memo(function (e) {
     else if (n)
         if (null != r && c)
             g = (0, l.jsx)(m.E, {
-                className: e3.G4,
+                className: e1.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t["WPe+xL"]),
             });
         else if (null != r && d)
             g = (0, l.jsx)(m.E, {
-                className: e3.G4,
+                className: e1.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e$.o)(r, A, c, d, a()(e3.BK, e6.tZ), {
-                leadingIconClass: e3.AF,
-                trailingIconClass: e3.AF,
-                iconSize: e1.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e$.o)(r, A, c, d, a()(e1.BK, e6.tZ), {
+                leadingIconClass: e1.AF,
+                trailingIconClass: e1.AF,
+                iconSize: e3.eJ,
             });
             g =
                 null != t
-                    ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", className: e3.BK, children: t })
+                    ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", className: e1.BK, children: t })
                     : (0, l.jsx)(m.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e3.G4,
+                          className: e1.G4,
                           children: e,
                       });
         } else
             g = (0, l.jsx)(m.E, {
-                className: e3.G4,
+                className: e1.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t["0KfDxM"]),
             });
     else g = null;
     let x = (0, eJ.A)(h, u);
-    return (0, l.jsx)(e0.Bs.Provider, { value: x, children: (0, l.jsx)(eX.M, { className: e3.JY, children: g }) });
+    return (0, l.jsx)(e0.Bs.Provider, { value: x, children: (0, l.jsx)(eX.M, { className: e1.JY, children: g }) });
 });
-var e2 = n(599036);
-function e5(e) {
+var e5 = n(599036);
+function e2(e) {
     let t,
         n,
         { userId: i } = e,
@@ -336,17 +336,17 @@ function e5(e) {
             n);
     return null == a || 0 === a.length
         ? (0, l.jsx)(m.E, {
-              className: e2.tE,
+              className: e5.tE,
               variant: "text-sm/normal",
               color: "text-muted",
               children: F.intl.string(F.t.jpY0X5),
           })
         : (0, l.jsxs)("div", {
-              className: e2.I9,
+              className: e5.I9,
               children: [
                   (0, l.jsx)(ek.A, { guilds: a, maxGuilds: 3, size: eW.$v.Sizes.SMOL, hideOverflowCount: !0 }),
                   (0, l.jsx)(m.E, {
-                      className: e2.tE,
+                      className: e5.tE,
                       variant: "text-sm/normal",
                       color: "text-muted",
                       children: F.intl.format(F.t.eE3oep, { count: a.length }),
@@ -383,28 +383,28 @@ function tt(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(te, {
-                className: e2.my,
+                className: e5.my,
                 src: (0, ew.Y)(s, 40, u),
                 avatarDecoration: A,
                 size: eP._3.SIZE_40,
                 "aria-label": i?.username ?? F.intl.string(F.t["30mdIx"]),
             }),
             (0, l.jsxs)("div", {
-                className: e2.yt,
+                className: e5.yt,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: e2.rU,
+                        className: e5.rU,
                         children: [
                             (0, l.jsx)(eU.A, {
                                 nick: d,
                                 user: i,
                                 showAccountIdentifier: !0,
-                                className: e2.I8,
-                                usernameClass: e2.Xh,
-                                discriminatorClass: null != eq.Ay.getGlobalName(i) ? e2.vl : e2.D2,
+                                className: e5.I8,
+                                usernameClass: e5.Xh,
+                                discriminatorClass: null != eq.Ay.getGlobalName(i) ? e5.vl : e5.D2,
                             }),
                             (0, l.jsx)(m.E, {
-                                className: e2.L7,
+                                className: e5.L7,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: h,
@@ -420,7 +420,7 @@ function tt(e) {
                               })
                             : (0, l.jsx)(e4, { channel: s }),
                         forceHover: a,
-                        children: (0, l.jsx)(e5, { userId: i.id }),
+                        children: (0, l.jsx)(e2, { userId: i.id }),
                     }),
                 ],
             }),
