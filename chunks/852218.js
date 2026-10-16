@@ -27,5 +27,5 @@ let l = { steelseries: { id: "steelseries", label: "SteelSeries" }, logitech: { 
     d = "logitech",
     c = "youtube",
     u = "best_buy",
-    _ = new Set([d, c, u]),
+    _ = new Set([d, c, u, "call_of_duty"]),
     E = [d, o];
