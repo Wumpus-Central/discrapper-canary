@@ -22,7 +22,7 @@ var l = n(477900),
     I = n(851023),
     b = n(215497),
     N = n(105292),
-    v = n(704796),
+    v = n(268378),
     T = n(429955);
 let j = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function _(e) {

@@ -16,7 +16,7 @@ var i = n(477900),
     x = n(762644),
     f = n(221486),
     I = n(768349),
-    E = n(431788),
+    E = n(905322),
     v = n(105292);
 function C(e) {
     let { currentUserId: t, message: n, application: l, channel: r, analyticsLocations: a, onView: C } = e,

@@ -54,7 +54,7 @@ var T = t(945096),
     Y = t(661531),
     G = t(48736),
     H = t(317097),
-    z = t(763052),
+    z = t(701974),
     U = t(105292);
 function K(e) {
     return l.useMemo(
@@ -773,8 +773,8 @@ var eU = t(366010),
     e5 = t(999291),
     e9 = t(686189),
     e3 = t(946356),
-    e6 = t(975571),
-    e7 = t(996988),
+    e7 = t(975571),
+    e6 = t(996988),
     e4 = t(228839);
 function se(e) {
     let {
@@ -831,7 +831,7 @@ function se(e) {
                 (0, a.jsx)(e3.A, {
                     user: s,
                     displayProfile: x,
-                    themeType: e7.d.MODAL_V2,
+                    themeType: e6.d.MODAL_V2,
                     className: e4.LX,
                     pendingThemeColors: B,
                     forceUserTheme: !0,
@@ -908,7 +908,7 @@ function se(e) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: U.intl.format(z.default.prQba8, {
-                            helpArticleLink: e6.A.getArticleURL(w.MVz.DISPLAY_NAME_STYLES),
+                            helpArticleLink: e7.A.getArticleURL(w.MVz.DISPLAY_NAME_STYLES),
                         }),
                     }),
                     (0, a.jsx)(ss, { darkPreview: h, onToggleTheme: W }),

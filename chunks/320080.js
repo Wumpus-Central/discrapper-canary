@@ -3,7 +3,7 @@ var s = t(477900),
     a = t(582128),
     i = t(503698),
     l = t.n(i),
-    r = t(308941),
+    r = t(941143),
     o = t(17928),
     c = t(661531),
     d = t(707554),
@@ -893,8 +893,8 @@ var e3 = t(435558),
     e2 = t(837381),
     e7 = t(847374),
     e8 = t(912592),
-    e6 = t(821609),
-    e9 = t(475825),
+    e9 = t(821609),
+    e6 = t(475825),
     e5 = t(928039),
     ne = t(625494);
 let nn = { [eL.Ur.UNREAD]: !0, [eL.Ur.TODAY]: !0, [eL.Ur.YESTERDAY]: !1, [eL.Ur.OLDER]: !1 },
@@ -917,7 +917,7 @@ let nn = { [eL.Ur.UNREAD]: !0, [eL.Ur.TODAY]: !0, [eL.Ur.YESTERDAY]: !1, [eL.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? nt : nn }));
         },
     }));
-var na = t(645617),
+var na = t(871423),
     ni = t(875436);
 function nl(e) {
     e.stopPropagation();
@@ -971,7 +971,7 @@ function nc() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e6.$, {
+                (0, s.jsx)(e9.$, {
                     variant: "secondary",
                     onClick: () => (0, _.tZ)(e),
                     text: eD.intl.string(na.default.klSpfs),
@@ -1163,7 +1163,7 @@ function nd(e) {
                         children: (0, s.jsx)(e2.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e9.OZ, {
+                                return (0, s.jsx)(e6.OZ, {
                                     ref: (e) => {
                                         ((p.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },

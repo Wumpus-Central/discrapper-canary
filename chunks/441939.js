@@ -15,7 +15,7 @@ var u = n(456060),
     p = n(616356),
     A = n(763827),
     x = n(762644),
-    f = n(431788),
+    f = n(905322),
     I = n(105292);
 function E(e) {
     let { currentUserId: t, message: n, channel: s, analyticsLocations: o } = e,

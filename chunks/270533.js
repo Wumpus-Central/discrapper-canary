@@ -47,8 +47,8 @@ var j = n(990208),
     R = n(828162),
     y = n(72377),
     L = n(565553),
-    M = n(168900),
-    T = n(285828);
+    T = n(168900),
+    M = n(285828);
 function U(e) {
     let { powerup: t, eventTargetRef: n, className: l } = e,
         s = { eventTargetRef: n, fit: "contain", className: l };
@@ -56,9 +56,9 @@ function U(e) {
         case a.ec:
             return (0, i.jsx)(L.t, { ...s });
         case a.RV:
-            return (0, i.jsx)(M.J, { ...s });
+            return (0, i.jsx)(T.J, { ...s });
         case a.YG:
-            return (0, i.jsx)(T.z, { ...s });
+            return (0, i.jsx)(M.z, { ...s });
         default:
             return null;
     }
@@ -70,9 +70,9 @@ var D = n(249286),
     V = n(746080),
     H = n(49999),
     k = n(628049),
-    B = n(356863),
+    B = n(25525),
     F = n(105292),
-    z = n(344045),
+    z = n(394107),
     K = n(120336);
 let W =
     "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png";

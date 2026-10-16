@@ -10,7 +10,7 @@ var n = a(877784),
     u = a(420663),
     h = a(190443),
     m = a(979563),
-    g = a(704796);
+    g = a(268378);
 let f = {
         [m.d.HatTrick]: n.q,
         [m.d.AerialGoal]: t.X,

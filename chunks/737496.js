@@ -1,7 +1,3 @@
-a.exports = {
-    Nr: "card__83361",
-    P0: "iconWrapper__83361",
-    Tc: "tag__83361",
-    yF: "divider__83361",
-    pf: "rolePills__83361",
-};
+e.exports = JSON.parse(
+    '{"au4mU4":["Vriend(in) toevoegen"],"JZCSRZ":["Vriendenlijst invouwen"],"OZj923":["Blijf op de hoogte van wat ze uitspoken en maak samen plezier."],"4fvi9I":["Je vrienden, in \xe9\xe9n oogopslag."],"Dr/+ku":["Vriendenlijst uitvouwen"],"7kJd9e":["Vrienden"],"wvbB3Z":["Vriendenlijst aanpassen"],"IzzWNM":["Vrienden met live-activiteit bovenaan"],"/lMTzd":["Nu actief"],"eVxFX3":["Alfabetisch"],"lE79Lm":["Vrienden gesorteerd op de game die ze nu spelen"],"aKZ12v":["Game"],"OvTyCX":["Sorteren op"],"/bZ+Av":["Vrienden in hetzelfde spraakkanaal worden samen in een groep gezet"],"/b1eZT":["Vrienden sorteren in spraak"],"gOIq4P":["Deelnemen aan ",[1,"channel"]],"i+986w":["Vriendenlijst-opties"],"F3+Xei":["Grootte vriendenlijst wijzigen"],"Fb6oNP":[[1,"text"]," \u2022 ",[1,"duration"]],"8ALChp":["In spraakkanaal"],"KddZZf":[[1,"duration"]," aan het spelen"],"60M8Ae":["Vrienden zoeken"],"d90MfZ":[[6,"count",{"one":[[7]," andere persoon in spraak"],"other":[[7]," anderen in spraak"]},0,"cardinal"]],"SWPwHW":["+",[1,"count"]],"Z2Ri4D":["Open dit wanneer je wilt om te zien wie er online zijn en wat ze doen."],"Z3LquY":["Vriendenactiviteit bekijken"],"eS6Nek":[[6,"count",{"one":[[7]," uitgaand verzoek"],"other":[[7]," uitgaande verzoeken"]},0,"cardinal"]],"PY1iDb":[[2,"count"]," in afwachting"],"JHcSBI":["Jouw verzoeken"],"QX4H2E":["Notitie verbergen"],"2vock0":["Machtigingen vriendschapsverzoeken"],"xZupEi":["Notitie bekijken"],"ZsAL7q":["Vriendenlijst verbergen"],"0usxBd":["Je kunt vrienden zoeken aan de hand van hun weergave- of gebruikersnamen."],"VH2HXW":["Er komen geen vrienden overeen met die zoekopdracht."],"sgse8P":["Vriendenlijst tonen"]}',
+);

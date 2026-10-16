@@ -27,7 +27,7 @@ var i = n(477900),
     y = n(792656),
     b = n(202541),
     R = n(652215),
-    v = n(259589),
+    v = n(148155),
     L = n(105292),
     M = n(237790),
     P = n(592551),
@@ -55,8 +55,8 @@ function k(e) {
             F?.());
     }, [F, U]);
     let H = (0, x.V)(),
-        X = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
-        W = (0, O.A)(b.pe.TIER_2),
+        W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
+        X = (0, O.A)(b.pe.TIER_2),
         z = (0, T.O9)();
     t = V
         ? (0, _.TM)()
@@ -88,9 +88,9 @@ function k(e) {
                                             children:
                                                 K ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        null != W && (0, i.jsx)(m.E, { type: { text: W }, variant: "primary" }),
+                                        null != X && (0, i.jsx)(m.E, { type: { text: X }, variant: "primary" }),
                                         (0, i.jsx)(f.D, {
-                                            className: r()(M.DD, { [M.GU]: null != W }),
+                                            className: r()(M.DD, { [M.GU]: null != X }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: n,
@@ -138,7 +138,7 @@ function k(e) {
                                         onClick: () => {
                                             (G(), J?.());
                                         },
-                                        defaultTextOverride: X(),
+                                        defaultTextOverride: W(),
                                         fullWidth: !0,
                                     }),
                                 ],

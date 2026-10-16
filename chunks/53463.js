@@ -169,7 +169,7 @@ var z = n(775602),
     en = n(976860),
     ei = n(746080),
     el = n(49999),
-    es = n(344045),
+    es = n(394107),
     er = n(105292),
     ea = n(275833),
     eo = n(964306);
@@ -297,7 +297,7 @@ var e_ = n(332837),
     eb = n(313627),
     ej = n(43105),
     eG = n(93675),
-    ev = n(104129);
+    ev = n(61567);
 function eR(e) {
     let t,
         n,
@@ -428,7 +428,7 @@ var eT = n(581007),
     eY = n(828162),
     eX = n(877624),
     eq = n(549996),
-    eJ = n(356863),
+    eJ = n(25525),
     eZ = n(247806);
 function e$(e) {
     let { indicator: t } = e;
@@ -540,33 +540,33 @@ let eQ = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             ],
         });
     });
-var e1 = n(308941),
+var e1 = n(941143),
     e3 = n(717421),
     e2 = n(834730),
     e9 = n(442433),
     e5 = n(230135),
     e6 = n(73153);
-let e4 = {};
-class e7 extends h.Ay.PersistedStore {
+let e7 = {};
+class e4 extends h.Ay.PersistedStore {
     static displayName = "GuildBoostingProgressBarPersistedStore";
     static persistKey = "PremiumGuildProgressBarPersistedStore";
     initialize(e) {
-        null != e && (e4 = e);
+        null != e && (e7 = e);
     }
     getState() {
-        return e4;
+        return e7;
     }
     getCountForGuild(e) {
-        return e4[e];
+        return e7[e];
     }
 }
-let e8 = new e7(e6.h, {
+let e8 = new e4(e6.h, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: function (e) {
         let { guildId: t, premiumCount: n } = e;
-        e4 = { ...e4, [t]: n };
+        e7 = { ...e7, [t]: n };
     },
     APPLIED_GUILD_BOOST_COUNT_RESET: function () {
-        e4 = {};
+        e7 = {};
     },
 });
 var te = n(147925),
@@ -747,13 +747,13 @@ var tp = n(787541),
     t1 = n(970853),
     t3 = n(93055),
     t2 = n(349828),
-    t9 = n(384539),
+    t9 = n(22277),
     t5 = n(551851),
     t6 = n(391507);
-function t4(e) {
+function t7(e) {
     e.stopPropagation();
 }
-function t7(e) {
+function t4(e) {
     let { label: t, onClick: n, tabIndex: i } = e;
     return (0, r.jsx)(q.m, {
         text: t,
@@ -834,7 +834,7 @@ let t8 = F(
                                 n.e("460773"),
                                 n.e("208018"),
                                 n.e("120379"),
-                                n.e("898377"),
+                                n.e("824547"),
                                 n.e("819193"),
                                 n.e("507775"),
                                 n.e("662068"),
@@ -917,11 +917,11 @@ let t8 = F(
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        onClick: t4,
+                                        onClick: t7,
                                         className: t6.Y_,
                                         children:
                                             null != S
-                                                ? (0, r.jsx)(t7, { label: S.label, onClick: S.perform, tabIndex: j })
+                                                ? (0, r.jsx)(t4, { label: S.label, onClick: S.perform, tabIndex: j })
                                                 : null,
                                     }),
                                 ],
@@ -1171,7 +1171,7 @@ var nf = n(152367),
     n_ = n(855793),
     nS = n(309010),
     nI = n(775946),
-    nb = n(261425);
+    nb = n(248675);
 function nj(e) {
     var t;
     let n,
@@ -1511,7 +1511,7 @@ var n3 = n(371794),
     n9 = n(998218),
     n5 = n(672812),
     n6 = n(427797);
-let n4 = a.memo(function (e) {
+let n7 = a.memo(function (e) {
     let { guild: t, selected: i } = e,
         l = a.useRef(null),
         s = a.useRef(null),
@@ -1641,7 +1641,7 @@ let n4 = a.memo(function (e) {
         );
     return (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(n1, { ref: l, children: y }), !o && !d && !c && T()] });
 });
-var n7 = n(740426),
+var n4 = n(740426),
     n8 = n(826673),
     ie = n(591552),
     it = n(202776),
@@ -1687,7 +1687,7 @@ function il(e) {
             })),
         (0, r.jsx)(et.G, {
             id: `channels-${t.id}`,
-            renderIcon: (e) => (0, r.jsx)(n7.k, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, r.jsx)(n4.k, { size: "md", color: "currentColor", className: e }),
             text: l ? er.intl.string(er.t.h9mGOP) : er.intl.string(er.t.et6wav),
             selected: i,
             onClick: h,
@@ -2337,8 +2337,8 @@ let i2 = a.memo(function (e) {
     });
 var i5 = n(922016),
     i6 = n(367513),
-    i4 = n(296216),
-    i7 = n(657043),
+    i7 = n(296216),
+    i4 = n(657043),
     i8 = n(963027),
     le = n(202384),
     lt = n(51758),
@@ -2812,7 +2812,7 @@ class lV extends nB {
         return (c && (E = a(E)), d && (E = l(s(E))), E);
     }
 }
-let lH = F((0, i4.F)(lV));
+let lH = F((0, i7.F)(lV));
 function lk(e) {
     var t;
     let n,
@@ -2867,7 +2867,7 @@ function lk(e) {
         }),
         I = e.connected && null == S,
         b = l.features.has(H.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
-        j = (0, i7.BX)("StageChannel");
+        j = (0, i4.BX)("StageChannel");
     return (0, r.jsx)(lH, {
         categoryCollapsed: A,
         connectAction: f,
@@ -2964,7 +2964,7 @@ let lF = F(
                         !0 !== i && null != e ? P.A.can(H.xBc.MANAGE_CHANNELS, e) : P.A.can(H.xBc.MANAGE_CHANNELS, n),
                 };
             }),
-            s = (0, i7.BX)("StoreChannel");
+            s = (0, i4.BX)("StoreChannel");
         return (0, r.jsx)(lF, { ...l, ...e, shouldEnlargeTargets: s });
     });
 var lK = n(811024),
@@ -3079,8 +3079,8 @@ var l3 = n(705499),
     l9 = n(763827),
     l5 = n(56059),
     l6 = n(163328),
-    l4 = n(778712),
-    l7 = n(730134),
+    l7 = n(778712),
+    l4 = n(730134),
     l8 = n(707539),
     se = n(486020),
     st = n(98098);
@@ -3198,7 +3198,7 @@ function si(e) {
                               src: se.Ay.getDefaultAvatarURL(void 0, void 0),
                               alt: "",
                           })
-                        : (0, r.jsx)(l7.A, { className: st.my, user: n, size: l4._3.SIZE_16 }),
+                        : (0, r.jsx)(l4.A, { className: st.my, user: n, size: l7._3.SIZE_16 }),
             }),
             (0, r.jsxs)("div", {
                 className: st.Pf,
@@ -3738,7 +3738,7 @@ function sI(e) {
         }),
         N = (0, lI.Ay)(t),
         _ = (0, h.bG)([l9.A, l2.Ay], () => l9.A.getChannelId() !== t.id && l2.Ay.isCurrentUserGuest(t.getGuildId())),
-        S = (0, i7.BX)("ConnectedTextChannel");
+        S = (0, i4.BX)("ConnectedTextChannel");
     return _
         ? null
         : (0, r.jsx)(sS, {
@@ -4008,7 +4008,7 @@ function sY(e) {
                 users: d.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
-                size: l4._3.SIZE_16,
+                size: l7._3.SIZE_16,
             }),
         ],
     });
@@ -4175,8 +4175,8 @@ var s3 = n(845056),
     s9 = n(271683),
     s5 = n(725613),
     s6 = n(857253),
-    s4 = n(360729),
-    s7 = n(22231),
+    s7 = n(360729),
+    s4 = n(22231),
     s8 = n(241326),
     re = n(750943),
     rt = n(743674),
@@ -4184,7 +4184,7 @@ var s3 = n(845056),
     ri = n(26741),
     rl = n(493819),
     rs = n(722884),
-    rr = n(433083),
+    rr = n(579129),
     ra = n(176431);
 function ro(e) {
     let { channel: t, imageUrl: i, animatedUrl: l, bannerHash: s, canModifyHangout: o } = e,
@@ -4227,7 +4227,7 @@ function ro(e) {
                               children: (0, r.jsx)(J.D, {
                                   className: ra.HF,
                                   onClick: h,
-                                  children: (0, r.jsx)(s7.PencilIcon, { size: "xs", color: "currentColor" }),
+                                  children: (0, r.jsx)(s4.PencilIcon, { size: "xs", color: "currentColor" }),
                               }),
                           }),
                           (0, r.jsx)(q.m, {
@@ -4337,7 +4337,7 @@ function rE(e) {
                         className: rp.qS,
                         children: er.intl.string(er.t.Mgpxiw),
                     }),
-                    (0, r.jsx)(s7.PencilIcon, { color: "currentColor", className: rp.rD, size: "xxs" }),
+                    (0, r.jsx)(s4.PencilIcon, { color: "currentColor", className: rp.rD, size: "xxs" }),
                 ],
             })
           : m
@@ -4638,7 +4638,7 @@ class rx extends nB {
         );
     }
 }
-let rN = F((0, i4.F)(rx));
+let rN = F((0, i7.F)(rx));
 function r_(e) {
     let {
             guild: t,
@@ -4667,7 +4667,7 @@ function r_(e) {
             };
         }),
         m = (0, h.bG)([iH.A], () => iH.A.hasVideo(n.id)),
-        { enabled: g } = (0, s4.mf)({ guildId: t.id, location: "VoiceChannel" }),
+        { enabled: g } = (0, s7.mf)({ guildId: t.id, location: "VoiceChannel" }),
         A = (0, lI.Ay)(n),
         f = (0, h.yK)(
             [rh.A, ru.A, lx.default],
@@ -4704,7 +4704,7 @@ function r_(e) {
             enableActivities: !0,
         }),
         T = I && null == y,
-        M = (0, i7.BX)("VoiceChannel");
+        M = (0, i4.BX)("VoiceChannel");
     return (0, r.jsx)(rN, {
         channelName: p,
         embeddedApps: A,
@@ -5119,7 +5119,7 @@ class rI extends a.PureComponent {
                 case tz.n.GUILD_SHOP:
                     return (0, r.jsx)(iM, { guild: i, selected: s === ei.VV.GUILD_SHOP }, tz.n.GUILD_SHOP);
                 case tz.n.GUILD_GAME_SHOP:
-                    return (0, r.jsx)(n4, { guild: i, selected: s === ei.VV.GAME_SHOP }, tz.n.GUILD_GAME_SHOP);
+                    return (0, r.jsx)(n7, { guild: i, selected: s === ei.VV.GAME_SHOP }, tz.n.GUILD_GAME_SHOP);
                 case tz.n.GUILD_CONJURE:
                     return (0, r.jsx)(nj, { guild: i, selected: s === ei.VV.CONJURE }, tz.n.GUILD_CONJURE);
                 case tz.n.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
