@@ -178,7 +178,7 @@ let V = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = S.kg.exec(e);
+            let t = S.BM.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
@@ -186,11 +186,12 @@ let V = {
                 r = e[1],
                 a = e[2],
                 s = e[3],
-                l = e[4];
+                l = e[4],
+                o = (0, S.te)(l);
             if (null == a) return x(i);
-            let o = G(a, null),
-                d = null == o ? F(r, a, s, M(n.channelId), i) : B(o, s, M(n.channelId), i);
-            return "channelMention" === d.type ? { ...d, conversationId: l } : d;
+            let d = G(a, null),
+                c = null == d ? F(r, a, s, M(n.channelId), i) : B(d, s, M(n.channelId), i);
+            return "channelMention" === c.type ? { ...c, conversationId: o } : c;
         },
     },
     j = {

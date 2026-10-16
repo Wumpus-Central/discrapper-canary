@@ -91,8 +91,8 @@ var G = t(588975),
     $ = t(442433),
     F = t(9578),
     q = t(975807),
-    H = t(380610),
-    B = t(235393),
+    B = t(380610),
+    H = t(235393),
     D = t(258072),
     U = t(332173),
     J = t(679164),
@@ -131,7 +131,7 @@ let Y = /^dev:\/\//i,
 function et(e) {
     let { url: n } = e,
         t =
-            (0, H.vS)(n) || (0, H.h4)(n)
+            (0, B.vS)(n) || (0, B.h4)(n)
                 ? (0, l.jsx)(Z, { url: n })
                 : (0, Q.W0)(n)
                   ? (0, l.jsx)(V, { url: n })
@@ -301,7 +301,7 @@ function ez(e) {
     let { url: n, name: i } = e,
         s = r.useCallback(async () => {
             let e = await J.AN(n);
-            (B.A.trackLinkClicked(e), (0, q.A)(e));
+            (H.A.trackLinkClicked(e), (0, q.A)(e));
         }, [n]),
         u = r.useCallback(
             (e) => {
@@ -326,10 +326,10 @@ var eG = t(302031),
     eF = t(379418);
 t(321073);
 var eq = t(448767);
-function eH(e) {
+function eB(e) {
     return "link" === e.type;
 }
-var eB = t(254221);
+var eH = t(254221);
 let eD = {
         text: function (e) {
             let { children: n } = e;
@@ -362,18 +362,24 @@ let eD = {
                         let [, e, t, l, r] = n;
                         return { guildId: e, channelId: l, messageId: r, parentChannelId: t, conversationId: void 0 };
                     }
-                    let t = R.kg.exec(e);
+                    let t = R.BM.exec(e);
                     if (null == t) return null;
                     let [, l, r, i, s] = t;
                     return null == r || /\D/.test(r) || (null != i && /\D/.test(i))
                         ? null
-                        : { guildId: l, channelId: r, messageId: i, parentChannelId: void 0, conversationId: s };
+                        : {
+                              guildId: l,
+                              channelId: r,
+                              messageId: i,
+                              parentChannelId: void 0,
+                              conversationId: (0, R.te)(s),
+                          };
                 })(t);
                 if (null != e) return (0, l.jsx)(eT, { ...e });
                 let n = (0, D.h)(t);
                 if (null != n) return (0, l.jsx)(ez, { url: t, name: n.name });
             }
-            return (0, H.vS)(t)
+            return (0, B.vS)(t)
                 ? (0, l.jsx)(et, { url: t })
                 : Y.test(t)
                   ? (0, l.jsxs)(l.Fragment, {
@@ -567,7 +573,7 @@ function eR(e) {
                     let { hideSingleLinkContent: t } = n,
                         l = (function (e) {
                             let [n] = e;
-                            return 1 !== e.length || "paragraph" !== n.type ? eq.tq : (0, eq.dn)(n.value, eH);
+                            return 1 !== e.length || "paragraph" !== n.type ? eq.tq : (0, eq.dn)(n.value, eB);
                         })(e);
                     return t && (0, eq.iz)(l)
                         ? []
@@ -580,7 +586,7 @@ function eR(e) {
                                       continue;
                                   }
                                   let e = r.value.filter((e) => {
-                                      let t = eH(e) ? e.value.url : null;
+                                      let t = eB(e) ? e.value.url : null;
                                       return null == t || !(0, eq.c_)(t, n);
                                   });
                                   if (e.length === r.value.length) {
@@ -608,7 +614,7 @@ function eX(e) {
                 (0, l.jsxs)(a.E, {
                     variant: "text-md/normal",
                     color: "text-feedback-critical",
-                    className: eB.g,
+                    className: eH.g,
                     children: [(0, l.jsx)(c.A, { width: 16, height: 16 }), ey.intl.string(ey.t.dpFK4M)],
                 }),
             ],

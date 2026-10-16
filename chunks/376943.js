@@ -1,60 +1,75 @@
-n.d(t, { En: () => m, FM: () => R, SK: () => S, kg: () => T, mi: () => N, nc: () => C, r9: () => O, vu: () => g });
+(n.d(t, {
+    BM: () => g,
+    En: () => S,
+    FM: () => y,
+    SK: () => C,
+    mi: () => O,
+    nc: () => R,
+    r9: () => L,
+    te: () => D,
+    vu: () => N,
+}),
+    n(323874),
+    n(14289),
+    n(35956));
 var i = n(734057),
     r = n(71393),
     a = n(576705),
     s = n(257120),
-    l = n(652215),
-    o = n(746080),
-    d = n(575279);
-let c = Array.from(o.qW)
+    l = n(935208),
+    o = n(652215),
+    d = n(746080),
+    c = n(575279);
+let u = Array.from(d.qW)
         .map((e) => s.A.escape(e))
         .join("|"),
-    u = RegExp(`^/channels/(\\d+|${l.ME})(?:/)?(\\d+|${c})?`),
-    _ = RegExp(`^/channels/(\\d+|${l.ME})(?:/)(\\d+|${c})(?:/)(\\d+)`),
-    E = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
-    A = RegExp(`^/channels/(\\d+|${l.ME})(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$`),
-    h = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
-    f = /^\/users\/(\d+)\/?$/,
-    I = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-    p = RegExp(
-        `^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|${l.ME})(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?`,
+    _ = RegExp(`^/channels/(\\d+|${o.ME})(?:/)?(\\d+|${u})?`),
+    E = RegExp(`^/channels/(\\d+|${o.ME})(?:/)(\\d+|${u})(?:/)(\\d+)`),
+    A = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
+    h = RegExp(`^/channels/(\\d+|${o.ME})(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$`),
+    f = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
+    I = /^\/users\/(\d+)\/?$/,
+    p = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+    T = RegExp(
+        `^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|${o.ME})(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?`,
     ),
-    T = RegExp(`${p.source}(?:\\?${d.Nl}=(\\d+)(?![\\w=&%-]))?`),
-    m = RegExp(
+    m = RegExp("[\\w%=&+-]+"),
+    g = RegExp(`${T.source}(?:\\?(${m.source}))?`),
+    S = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );
-function g(e) {
+function N(e) {
     if (null == e) return null;
-    let t = e.match(_);
+    let t = e.match(E);
     if (null != t && t.length > 3) return { guildId: t[1], channelId: t[2], messageId: t[3] };
-    let n = e.match(E);
+    let n = e.match(A);
     if (null != n && n.length > 4) return { guildId: n[1], channelId: n[2], threadId: n[3], messageId: n[4] };
-    let i = e.match(u);
+    let i = e.match(_);
     if (null != i && i.length > 1) return { guildId: i[1], channelId: i[2] ?? void 0 };
-    let r = e.match(h);
+    let r = e.match(f);
     return null != r && r.length > 1 ? { guildId: r[1] } : null;
 }
-function S(e) {
+function C(e) {
     if (null == e) return null;
-    let t = e.match(I);
+    let t = e.match(p);
     return null != t && t.length > 1 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[4] } : null;
 }
-function N(e) {
-    return null == e ? null : (e.match(f)?.[1] ?? null);
-}
-function C(e) {
-    return !!e.isPrivate() || a.A.can(l.xBc.VIEW_CHANNEL, e);
-}
 function O(e) {
-    let { guildId: t, channelId: n } = e;
-    if (null == r.A.getGuild(t) && t !== l.ME) return !1;
-    if (null == n) return !0;
-    let a = i.A.getChannel(n);
-    return null != a && C(a);
+    return null == e ? null : (e.match(I)?.[1] ?? null);
 }
 function R(e) {
+    return !!e.isPrivate() || a.A.can(o.xBc.VIEW_CHANNEL, e);
+}
+function L(e) {
+    let { guildId: t, channelId: n } = e;
+    if (null == r.A.getGuild(t) && t !== o.ME) return !1;
+    if (null == n) return !0;
+    let a = i.A.getChannel(n);
+    return null != a && R(a);
+}
+function y(e) {
     if (null == e) return null;
-    let t = e.match(A);
+    let t = e.match(h);
     return null != t && t.length > 2
         ? {
               guildId: t[1],
@@ -63,4 +78,9 @@ function R(e) {
               diceSides: 5 === t.length ? parseInt(t[4], 10) : 6,
           }
         : null;
+}
+function D(e) {
+    if (null == e) return;
+    let t = new URLSearchParams(e).get(c.Nl);
+    if (null != t && l.default.isProbablyAValidSnowflake(t)) return l.default.cast(t);
 }
