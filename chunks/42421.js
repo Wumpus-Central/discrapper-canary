@@ -6956,20 +6956,21 @@ function s3(e) {
 }
 function s5(e) {
     let { experience: t, bullets: n, preview: l, blocks: r, commandNames: i } = e,
-        s = sQ[t.kind],
-        o = S.intl.string(sJ[t.kind]);
+        s = "frame" === t.kind && !0 !== t.game,
+        o = s ? sX.k : sQ[t.kind],
+        u = S.intl.string(s ? N.default.BM4Ymz : sJ[t.kind]);
     return (0, a.jsxs)("section", {
         className: sY.s9,
-        "aria-label": o,
+        "aria-label": u,
         children: [
             (0, a.jsxs)("div", {
                 className: sY.JQ,
                 children: [
                     (0, a.jsx)("span", {
                         className: sY.Vo,
-                        children: (0, a.jsx)(s, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
+                        children: (0, a.jsx)(o, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
                     }),
-                    (0, a.jsx)(Q.E, { variant: "text-md/medium", color: "text-strong", tag: "span", children: o }),
+                    (0, a.jsx)(Q.E, { variant: "text-md/medium", color: "text-strong", tag: "span", children: u }),
                 ],
             }),
             null != l ? (0, a.jsx)("div", { className: sY.VH, children: l }) : null,
