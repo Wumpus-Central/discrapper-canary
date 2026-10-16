@@ -44,10 +44,10 @@ function M(e) {
     s.useEffect(() => {
         D !== t && E();
     }, [t, E, D]);
-    let b = s.useCallback((e) => {
+    let U = s.useCallback((e) => {
             (f(null), S(e));
         }, []),
-        U = s.useCallback(async () => {
+        b = s.useCallback(async () => {
             if ("init" === R) {
                 if (D !== t) return void (await E());
                 (L("submitting"), f(null));
@@ -90,7 +90,7 @@ function M(e) {
                 variant: x ? "secondary" : "primary",
                 loading: "submitting" === R,
                 disabled: "submitting" === R,
-                onClick: U,
+                onClick: b,
             },
         ],
         children: (0, i.jsxs)(o.B, {
@@ -102,7 +102,7 @@ function M(e) {
                     selectionMode: "single",
                     options: H,
                     value: m,
-                    onSelectionChange: b,
+                    onSelectionChange: U,
                     fullWidth: !0,
                     label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,

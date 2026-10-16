@@ -18,17 +18,17 @@ function x(e) {
     let { user: t, onAcceptSuccess: i, onRejectSuccess: x, onError: C } = e,
         E = (0, f.A)(),
         [S, I] = l.useState(!1),
-        [j, y] = l.useState(!1),
+        [y, j] = l.useState(!1),
         [v, _] = l.useState(!1),
-        [b, N] = l.useState(!1),
-        [T, M] = l.useState(!1),
-        R = S || j || v,
+        [b, T] = l.useState(!1),
+        [N, M] = l.useState(!1),
+        R = S || y || v,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
                     I(!0);
                     try {
-                        (await (0, h.RK)(e), N(!0), i?.());
+                        (await (0, h.RK)(e), T(!0), i?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         C?.(e);
@@ -42,14 +42,14 @@ function x(e) {
         k = l.useCallback(
             async (e) => {
                 if (!R) {
-                    y(!0);
+                    j(!0);
                     try {
                         (await (0, h.UK)(e), M(!0), x?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         C?.(e);
                     } finally {
-                        y(!1);
+                        j(!1);
                     }
                 }
             },
@@ -58,7 +58,7 @@ function x(e) {
         L = l.useCallback(
             async (e) => {
                 if (R) return;
-                y(!0);
+                j(!0);
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
@@ -67,7 +67,7 @@ function x(e) {
                     let e = new a.LG(t);
                     C?.(e);
                 } finally {
-                    y(!1);
+                    j(!1);
                 }
             },
             [R, x, C],
@@ -163,9 +163,9 @@ function x(e) {
         rejectAll: L,
         markAsNotSpam: O,
         isAcceptLoading: S,
-        isRejectLoading: j,
+        isRejectLoading: y,
         isUserProfileLoading: v,
         isOptimisticAccepted: b,
-        isOptimisticRejected: T,
+        isOptimisticRejected: N,
     };
 }

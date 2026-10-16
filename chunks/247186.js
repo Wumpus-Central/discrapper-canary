@@ -12,8 +12,8 @@ var l = t(477900),
     h = t(268218),
     p = t(236285),
     g = t(232042),
-    x = t(906754),
-    f = t(332173),
+    f = t(906754),
+    x = t(332173),
     j = t(37632),
     y = t(534890),
     A = t(105292),
@@ -48,8 +48,8 @@ var I = t(112107),
     K = t(990474);
 t(938796);
 var B = t(380610),
-    z = t(435954),
-    V = t(721779),
+    V = t(435954),
+    z = t(721779),
     W = t(333421),
     F = t(100392),
     X = t(950980),
@@ -64,7 +64,7 @@ let Y = a.lazy(() =>
             .then(t.bind(t, 909261))
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
-    J = RegExp("^" + V.st.source, V.st.flags);
+    J = RegExp("^" + z.st.source, z.st.flags);
 var Q = t(569926),
     ee = t(266645);
 function en(e) {
@@ -203,7 +203,7 @@ let ed = {
         react: (e, n, t) =>
             (0, L.d)(e.id)
                 ? (0, l.jsxs)(
-                      f.A,
+                      x.A,
                       {
                           role: "link",
                           onClick: function () {
@@ -251,7 +251,7 @@ let ed = {
     guild: {
         react: (e, n, t) => {
             let a = b.A.getGuild(e.guildId);
-            return (0, l.jsx)(x.A, { guild: a, children: (0, L.t)(e, n, t) }, t.key);
+            return (0, l.jsx)(f.A, { guild: a, children: (0, L.t)(e, n, t) }, t.key);
         },
     },
     channel: { react: (e, n, t) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, L.t)(e, n, t) }, t.key) },
@@ -288,7 +288,7 @@ function em(e) {
                 return (0, B.h4)(r)
                     ? (0, l.jsxs)(
                           a.Fragment,
-                          { children: [(0, l.jsx)("span", { children: r }), (0, l.jsx)(z.default, { url: r }, r)] },
+                          { children: [(0, l.jsx)("span", { children: r }), (0, l.jsx)(V.default, { url: r }, r)] },
                           t.key,
                       )
                     : (0, F.W0)(r)
@@ -399,7 +399,7 @@ function em(e) {
                               });
                           };
                 return (0, l.jsxs)(
-                    f.A,
+                    x.A,
                     {
                         role: "link",
                         href: n.attachmentUrl,

@@ -2,14 +2,14 @@
     $b: () => C,
     DT: () => S,
     Io: () => v,
-    Le: () => T,
+    Le: () => G,
     Nw: () => L,
     RC: () => j,
     S: () => b,
     Z4: () => N,
     cl: () => D,
     mF: () => O,
-    rS: () => G,
+    rS: () => T,
     u_: () => M,
     vc: () => I,
 }),
@@ -56,7 +56,7 @@ function M(e, n) {
 function D(e, n) {
     (0, h.A)(e.id, n.id);
 }
-function G(e, n, t) {
+function T(e, n, t) {
     !1 === n.pinned
         ? t.shiftKey
             ? i.A.pinMessage(e, n.id)
@@ -65,7 +65,7 @@ function G(e, n, t) {
           ? i.A.unpinMessage(e, n.id)
           : _.A.confirmUnpin(e, n);
 }
-function T(e, n) {
+function G(e, n) {
     (0, a.A)(e.id, n.id);
 }
 function v(e, n) {

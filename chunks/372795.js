@@ -44,14 +44,14 @@ function u(e) {
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
         C = null == m ? 0 : Math.round(m * Math.min(w, 2)),
         N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: C }),
-        S = (0, i.AV)(t, n),
-        A = r.useRef(S);
+        A = (0, i.AV)(t, n),
+        S = r.useRef(A);
     (r.useEffect(() => {
-        if (A.current === S) return;
-        ((A.current = S), (x.current = null), b(!1));
+        if (S.current === A) return;
+        ((S.current = A), (x.current = null), b(!1));
         let e = g.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-    }, [S]),
+    }, [A]),
         r.useEffect(() => {
             p?.(N, j);
         }, [N, j, p]),

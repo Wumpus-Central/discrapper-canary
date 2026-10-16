@@ -19,13 +19,13 @@ var l,
     E = n(267102),
     S = n(969632),
     I = n(554146),
-    j = n(131607);
-let y = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+    y = n(131607);
+let j = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 var v = n(566908),
     _ = n(43105),
     b = n(49999),
-    N = n(105292),
-    T = n(474218);
+    T = n(105292),
+    N = n(474218);
 function M(e) {
     let { targetElementRef: t, onDismiss: n } = e;
     return (0, i.jsx)(_.A, {
@@ -37,10 +37,10 @@ function M(e) {
         scrollBehavior: "close",
         caretConfig: { align: "start" },
         onRequestClose: () => n(b.i.USER_DISMISS),
-        title: N.intl.string(N.t.ZT58S4),
-        body: [N.intl.format(N.t.A2yQnt, {})],
-        actions: [{ text: N.intl.string(N.t["NX+WJN"]), onClick: () => n(b.i.USER_DISMISS) }],
-        graphic: { type: "image", src: T.A },
+        title: T.intl.string(T.t.ZT58S4),
+        body: [T.intl.format(T.t.A2yQnt, {})],
+        actions: [{ text: T.intl.string(T.t["NX+WJN"]), onClick: () => n(b.i.USER_DISMISS) }],
+        graphic: { type: "image", src: N.A },
     });
 }
 var R = n(406704),
@@ -131,7 +131,7 @@ function eI(e) {
     function I() {
         g();
     }
-    function j() {
+    function y() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e("669706"), n.e("842322")]).then(n.bind(n, 143657));
@@ -140,7 +140,7 @@ function eI(e) {
             { modalKey: eE.sm },
         );
     }
-    function y() {
+    function j() {
         let e = h,
             n = "txt",
             l = "",
@@ -159,7 +159,7 @@ function eI(e) {
             onSelect: d,
             navId: "channel-attach",
             onClose: r,
-            "aria-label": N.intl.string(N.t.Xm41aV),
+            "aria-label": T.intl.string(T.t.Xm41aV),
             children: l.map(function (e) {
                 switch (e.type) {
                     case eC.UPLOAD_A_FILE:
@@ -183,7 +183,7 @@ function eI(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: y,
+                                action: j,
                             },
                             "upload-text-as-file",
                         );
@@ -208,7 +208,7 @@ function eI(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: j,
+                                action: y,
                             },
                             "poll",
                         );
@@ -349,7 +349,7 @@ function eI(e) {
                                                   B.Dr,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: N.intl.string(N.t.eCzSdd),
+                                                      label: T.intl.string(T.t.eCzSdd),
                                                       iconLeft: H.n,
                                                       leadingAccessory: { type: "icon", icon: H.n },
                                                       action: () => Y.A.summarizeThread(t, !1),
@@ -360,7 +360,7 @@ function eI(e) {
                                                   B.Dr,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: N.intl.string(N.t["HOe+Hq"]),
+                                                      label: T.intl.string(T.t["HOe+Hq"]),
                                                       iconLeft: K.UserIcon,
                                                       leadingAccessory: { type: "icon", icon: K.UserIcon },
                                                       action: () => Y.A.summarizeThread(t),
@@ -379,8 +379,8 @@ function eI(e) {
         })
     );
 }
-var ej = n(696016),
-    ey = n(657851);
+var ey = n(696016),
+    ej = n(657851);
 let ev = s.memo(function (e) {
     let {
             className: t,
@@ -388,7 +388,7 @@ let ev = s.memo(function (e) {
             draftType: a,
             editorTextContent: I,
             setValue: _,
-            canOnlyUseTextCommands: T,
+            canOnlyUseTextCommands: N,
             chatInputType: B,
         } = e,
         H = (0, k.n)("ChannelAttachButton"),
@@ -463,7 +463,7 @@ let ev = s.memo(function (e) {
                         picker: { onPick: (e) => Y({ clips: [e] }), action: x.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
-            { modalKey: ej.nm },
+            { modalKey: ey.nm },
         ),
             ee(null));
     }
@@ -483,8 +483,8 @@ let ev = s.memo(function (e) {
         ev = (0, R.Tb)(l),
         e_ = !D.D_.useSetting() && !(0, U.isAndroidWeb)() && null != window.ResizeObserver,
         eb = (0, S.I7)(l ?? void 0),
-        eN = (0, v.vK)(l),
-        eT = (0, g.b)(),
+        eT = (0, v.vK)(l),
+        eN = (0, g.b)(),
         eM = (function (e) {
             let {
                     canAttachFiles: t,
@@ -504,8 +504,8 @@ let ev = s.memo(function (e) {
                 g = [];
             return (
                 t &&
-                    (g.push({ type: "UPLOAD_A_FILE", icon: ei.H, display: N.intl.string(N.t["d3+iYs"]) }),
-                    g.push({ type: "UPLOAD_TEXT_AS_FILE", icon: ei.H, display: N.intl.string(N.t["G9s+EM"]) })),
+                    (g.push({ type: "UPLOAD_A_FILE", icon: ei.H, display: T.intl.string(T.t["d3+iYs"]) }),
+                    g.push({ type: "UPLOAD_TEXT_AS_FILE", icon: ei.H, display: T.intl.string(T.t["G9s+EM"]) })),
                 s &&
                     t &&
                     d !== ex.BRT.POPOUT &&
@@ -513,17 +513,17 @@ let ev = s.memo(function (e) {
                     g.push({
                         type: "CLIPS",
                         icon: es.x,
-                        display: N.intl.string(N.t.o034cv),
+                        display: T.intl.string(T.t.o034cv),
                         badgeVal: o,
                         badgeColor: el.A.colors.BACKGROUND_BRAND.css,
                     }),
-                n && g.push({ type: "CREATE_THREAD", icon: ea.G, display: N.intl.string(N.t.rBIGBL) }),
-                c && g.push({ type: "POLL", icon: er.Y, display: N.intl.string(N.t.Flr51u) }),
+                n && g.push({ type: "CREATE_THREAD", icon: ea.G, display: T.intl.string(T.t.rBIGBL) }),
+                c && g.push({ type: "POLL", icon: er.Y, display: T.intl.string(T.t.Flr51u) }),
                 l &&
                     i &&
                     (m
-                        ? g.push({ type: "SLASH_COMMAND", icon: eo.k, display: N.intl.string(N.t.Bbvp6G) })
-                        : g.push({ type: "APP_LAUNCHER", icon: eo.k, display: N.intl.string(N.t.hSQgW9) })),
+                        ? g.push({ type: "SLASH_COMMAND", icon: eo.k, display: T.intl.string(T.t.Bbvp6G) })
+                        : g.push({ type: "APP_LAUNCHER", icon: eo.k, display: T.intl.string(T.t.hSQgW9) })),
                 r.forEach((e) => {
                     !(0, eg.A)(e, ex.jUm.EMBEDDED) &&
                         (e.type === ex.$pd.PLAYING &&
@@ -531,7 +531,7 @@ let ev = s.memo(function (e) {
                             g.push({
                                 type: "INVITE_TO_GAME",
                                 icon: ec.L,
-                                display: N.intl.formatToPlainString(N.t["KHLo+F"], {
+                                display: T.intl.formatToPlainString(T.t["KHLo+F"], {
                                     channel: (0, ep.m1)(a, ef.default, eA.A, !0),
                                     game: null != e ? e.name : "",
                                 }),
@@ -542,7 +542,7 @@ let ev = s.memo(function (e) {
                             g.push({
                                 type: "INVITE_TO_LISTEN",
                                 icon: ed.J,
-                                display: N.intl.formatToPlainString(N.t.I479px, {
+                                display: T.intl.formatToPlainString(T.t.I479px, {
                                     channel: (0, ep.m1)(a, ef.default, eA.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
@@ -553,17 +553,17 @@ let ev = s.memo(function (e) {
                             g.push({
                                 type: "INVITE_TO_WATCH",
                                 icon: eu.EyeIcon,
-                                display: N.intl.formatToPlainString(N.t["EvCP/g"], {
+                                display: T.intl.formatToPlainString(T.t["EvCP/g"], {
                                     channel: (0, ep.m1)(a, ef.default, eA.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }));
                 }),
-                u && g.push({ type: "SCHEDULED_MESSAGE", icon: eh.U, display: N.intl.string(N.t["3+ii4F"]) }),
+                u && g.push({ type: "SCHEDULED_MESSAGE", icon: eh.U, display: T.intl.string(T.t["3+ii4F"]) }),
                 a.isThread() &&
                     h &&
-                    g.push({ type: "SUMMARIZE_THREAD", icon: em.D, display: N.intl.string(N.t.EXfguE) }),
+                    g.push({ type: "SUMMARIZE_THREAD", icon: em.D, display: T.intl.string(T.t.EXfguE) }),
                 g
             );
         })({
@@ -571,23 +571,23 @@ let ev = s.memo(function (e) {
             canStartThreads: eS || ev,
             useSlate: e_,
             hasClips: et,
-            canUseApplicationCommands: !T,
+            canUseApplicationCommands: !N,
             channel: l,
             activities: J,
             newClipsCount: Z?.length ?? 0,
             canPostPolls: eb,
             appContext: V,
-            canSendScheduledMessages: eN,
-            canSummarizeThreads: eT,
+            canSendScheduledMessages: eT,
+            canSummarizeThreads: eN,
             isAppsButtonEnabled: !H || K,
         }),
         { isCoachmarkVisible: eR, dismissCoachmark: eD } = (function (e) {
             let { isEligible: t } = e,
-                [n, l] = (0, j.kn)(t ? [y] : []);
-            return { isCoachmarkVisible: n === y, dismissCoachmark: l };
-        })({ isEligible: eN });
+                [n, l] = (0, y.kn)(t ? [j] : []);
+            return { isCoachmarkVisible: n === j, dismissCoachmark: l };
+        })({ isEligible: eT });
     if (0 === eM.length) return null;
-    let ek = (0, i.jsx)(d.PlusLargeIcon, { size: "refresh_sm", color: "currentColor", colorClass: ey.dW }),
+    let ek = (0, i.jsx)(d.PlusLargeIcon, { size: "refresh_sm", color: "currentColor", colorClass: ej.dW }),
         eL = (0, i.jsx)(u.Y, {
             targetElementRef: W,
             shouldShow: null != Q,
@@ -620,10 +620,10 @@ let ev = s.memo(function (e) {
             children: (e) =>
                 (0, i.jsx)(F.A, {
                     ref: W,
-                    className: r()(ey.g$, t),
-                    childClassName: ey.wh,
+                    className: r()(ej.g$, t),
+                    childClassName: ej.wh,
                     isActive: !1,
-                    "aria-label": N.intl.string(N.t.d56gCa),
+                    "aria-label": T.intl.string(T.t.d56gCa),
                     onDoubleClick: eC ? () => z.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
@@ -633,7 +633,7 @@ let ev = s.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: ey.EJ,
+                className: ej.EJ,
                 children: (0, i.jsx)(h.A, {
                     ref: z,
                     onChange: function (e) {
@@ -650,7 +650,7 @@ let ev = s.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: ey.Jd, children: eL }),
+            (0, i.jsx)("div", { className: ej.Jd, children: eL }),
             eR && (0, i.jsx)(M, { targetElementRef: W, onDismiss: eD }),
         ],
     });

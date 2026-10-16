@@ -12,8 +12,8 @@ var l = t(477900),
     h = t(406704),
     p = t(885386),
     g = t(734057),
-    x = t(31717),
-    f = t(576705),
+    f = t(31717),
+    x = t(576705),
     j = t(309010),
     y = t(625494),
     A = t(652215),
@@ -22,7 +22,7 @@ t(827669);
 var k = t(105292);
 function I(e, n, t, l, a) {
     null != e &&
-        ("" !== x.A.getDraft(e, x.C.ChannelMessage)
+        ("" !== f.A.getDraft(e, f.C.ChannelMessage)
             ? (0, i.A)({
                   title: k.intl.string(k.t.pe26Cj),
                   subtitle: k.intl.string(k.t["+awCIy"]),
@@ -58,12 +58,12 @@ function I(e, n, t, l, a) {
 function E(e) {
     let { node: n, stateKey: t, children: i } = e,
         o = (0, r.bG)([g.A, j.Ay], () => g.A.getChannel(n.channelId ?? j.Ay.getChannelId()), [n.channelId]),
-        { hasSendMessagePerm: s, hasUseAppCommandsPerm: c } = (0, r.cf)([f.A], () => ({
-            hasSendMessagePerm: f.A.can(A.xBc.SEND_MESSAGES, o),
-            hasUseAppCommandsPerm: f.A.can(A.xBc.USE_APPLICATION_COMMANDS, o),
+        { hasSendMessagePerm: s, hasUseAppCommandsPerm: c } = (0, r.cf)([x.A], () => ({
+            hasSendMessagePerm: x.A.can(A.xBc.SEND_MESSAGES, o),
+            hasUseAppCommandsPerm: x.A.can(A.xBc.USE_APPLICATION_COMMANDS, o),
         })),
-        x = void 0 !== o ? { type: "channel", channel: o } : { type: "contextless" },
-        { command: y } = u.D3(x, n.commandKey ?? ""),
+        f = void 0 !== o ? { type: "channel", channel: o } : { type: "contextless" },
+        { command: y } = u.D3(f, n.commandKey ?? ""),
         k = p.D_.useSetting(),
         E = a.useMemo(() => {
             if (null == y || null == o || y.untranslatedName !== n.commandName || k) return !1;

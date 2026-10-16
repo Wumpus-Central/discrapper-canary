@@ -12,8 +12,8 @@ var l = t(477900),
     h = t(936755),
     p = t(827669);
 let g = 0,
-    x = "data-mention-game-id",
-    f = new Set([
+    f = "data-mention-game-id",
+    x = new Set([
         "DIV",
         "P",
         "LI",
@@ -38,7 +38,7 @@ function j(e) {
 }
 function y(e) {
     let n = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    return n?.closest(`[${x}]`) ?? null;
+    return n?.closest(`[${f}]`) ?? null;
 }
 function A(e) {
     let n;
@@ -52,14 +52,14 @@ function A(e) {
     }
     if (n.collapsed || j(n.startContainer) || j(n.endContainer)) return;
     let l = n.cloneContents(),
-        a = null != l.querySelector(`[${x}]`),
+        a = null != l.querySelector(`[${f}]`),
         r = y(n.startContainer),
         i = y(n.endContainer),
         o = !a && null != r && r === i;
     if (a || o) {
         let n, t;
         if (o) {
-            let n = r.getAttribute(x);
+            let n = r.getAttribute(f);
             if (null == n || "" === n) return;
             (e.preventDefault(), e.clipboardData.setData("text/plain", (0, p.KW)(n)));
             return;
@@ -75,7 +75,7 @@ function A(e) {
                             if (t > 200) return "";
                             if (n.nodeType === Node.TEXT_NODE) return n.textContent ?? "";
                             if (n.nodeType !== Node.ELEMENT_NODE) return "";
-                            let l = n.getAttribute(x);
+                            let l = n.getAttribute(f);
                             if (null != l) return (0, p.KW)(l);
                             let a = n.tagName.toUpperCase();
                             if ("IMG" === a) {
@@ -87,15 +87,15 @@ function A(e) {
                             if ("BR" === a) return "\n";
                             let r = "";
                             for (let l = 0; l < n.childNodes.length; l++) r += e(n.childNodes[l], t + 1);
-                            return (f.has(a) && "" !== r && !r.endsWith("\n") && (r += "\n"), r);
+                            return (x.has(a) && "" !== r && !r.endsWith("\n") && (r += "\n"), r);
                         })(e.childNodes[t]);
                     return n.endsWith("\n") ? n.slice(0, -1) : n;
                 })(l),
             ),
             e.clipboardData.setData(
                 "text/html",
-                ((n = l.cloneNode(!0)).querySelectorAll(`[${x}]`).forEach((e) => {
-                    let n = e.getAttribute(x);
+                ((n = l.cloneNode(!0)).querySelectorAll(`[${f}]`).forEach((e) => {
+                    let n = e.getAttribute(f);
                     if (null == n || "" === n) return;
                     let t = e.ownerDocument ?? document;
                     e.parentNode?.replaceChild(t.createTextNode((0, p.KW)(n)), e);
@@ -109,10 +109,10 @@ var C = t(105292),
     k = t(379961);
 let I = function (e) {
     let { gameId: n, authorId: p } = e,
-        x = (0, s.K)(n),
-        f = null != x,
-        j = x?.gameName ?? C.intl.string(C.t["11pdXZ"]),
-        y = x?.gameIcon;
+        f = (0, s.K)(n),
+        x = null != f,
+        j = f?.gameName ?? C.intl.string(C.t["11pdXZ"]),
+        y = f?.gameIcon;
     a.useEffect(
         () => (
             1 === (g += 1) && document.addEventListener("copy", A),
@@ -124,7 +124,7 @@ let I = function (e) {
     );
     let I = a.useCallback(
             (e) => {
-                f &&
+                x &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             t.e("926132"),
@@ -138,7 +138,7 @@ let I = function (e) {
                         return (t) => (0, l.jsx)(e, { ...t, gameId: n, gameName: j, authorId: p });
                     });
             },
-            [f, n, j, p],
+            [x, n, j, p],
         ),
         E = a.useCallback(() => {
             (0, r.openModalLazy)(async () => {
@@ -148,7 +148,7 @@ let I = function (e) {
         }, []),
         N = a.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), f)
+                (e.stopPropagation(), e.preventDefault(), x)
                     ? c.default.openGameProfileModal({
                           gameId: n,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: n },
@@ -157,9 +157,9 @@ let I = function (e) {
                       })
                     : E();
             },
-            [n, f, E, p],
+            [n, x, E, p],
         ),
-        v = f ? `@game ${j}` : void 0;
+        v = x ? `@game ${j}` : void 0;
     return (0, l.jsx)(i.m, {
         asContainer: !0,
         tag: "span",

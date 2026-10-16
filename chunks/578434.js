@@ -20,39 +20,39 @@ var l = n(477900),
 function S(e) {
     var t, S;
     let I,
-        j,
         y,
+        j,
         v,
         _,
         b,
-        N,
         T,
+        N,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
         (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
-        (j = I?.changelogId),
-        (y = (0, s.bG)([c.default], () => c.default.locale)),
-        (v = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
+        (y = I?.changelogId),
+        (j = (0, s.bG)([c.default], () => c.default.locale)),
+        (v = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", j), [y, j])),
         (_ = (0, g.A)(t)),
         (b = i.useRef(_ ? Date.now() : null)),
-        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (T = i.useRef(N)),
+        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (N = i.useRef(T)),
         i.useEffect(() => {
-            T.current = N;
+            N.current = T;
         }),
         i.useEffect(() => {
             b.current = Date.now();
         }, [_]),
         i.useEffect(() => {
-            _ && null != j && o.A.fetchChangelog(j, y, !0);
-        }, [j, y, _]),
+            _ && null != y && o.A.fetchChangelog(y, j, !0);
+        }, [y, j, _]),
         i.useEffect(() => {
             _ &&
                 null != v &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${v.date}:${v.revision}`,
-                    unread_count: T.current,
+                    unread_count: N.current,
                 });
         }, [_, v]),
         i.useEffect(() => {
@@ -64,7 +64,7 @@ function S(e) {
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${v.date}:${v.revision}`,
-                        unread_count: T.current,
+                        unread_count: N.current,
                     }),
                     (b.current = 0));
             };

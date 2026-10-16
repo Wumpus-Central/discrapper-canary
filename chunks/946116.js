@@ -1,4 +1,4 @@
-n.d(e, { Y1: () => U, fx: () => s, g2: () => T, m8: () => E, mU: () => g, ul: () => m });
+n.d(e, { Y1: () => U, fx: () => s, g2: () => u, m8: () => E, mU: () => g, ul: () => T });
 var i,
     r,
     a,
@@ -32,7 +32,7 @@ var i,
         (l[(l.STUDY_SOCIAL = 3)] = "STUDY_SOCIAL"),
         (l[(l.MISC = 5)] = "MISC"),
         l);
-function T(t) {
+function u(t) {
     return "883060064561299456" === t
         ? [
               { id: "club", value: 1, label: I.intl.string(I.t["Z+MPN/"]) },
@@ -47,7 +47,7 @@ function T(t) {
               { id: "misc", value: 5, label: I.intl.string(I.t["0Bg9La"]) },
           ];
 }
-function m() {
+function T() {
     return {
         CREATE: {
             id: "CREATE",
