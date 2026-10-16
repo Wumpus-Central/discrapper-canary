@@ -1,73 +1,74 @@
-i.d(s, { A: () => O, e: () => j });
-var l = i(477900),
-    n = i(582128),
-    o = i(503698),
-    r = i.n(o),
-    d = i(877624),
-    t = i(17928),
-    a = i(554146),
-    u = i(661531),
-    p = i(403581),
-    c = i(404374),
-    _ = i(826673),
-    M = i(501419),
-    m = i(724651),
-    I = i(732280),
-    A = i(549996),
-    E = i(964661),
-    T = i(374403),
-    b = i(105390),
-    f = i(617617),
-    g = i(49999),
-    R = i(202541),
-    h = i(134986);
-function j() {
-    let e,
-        s = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        i = (0, I.V)(),
-        o = (0, m.O)(),
-        r = i?.trialId === R.Dw,
-        u = (0, A.c)(d.C.PREMIUM_TAB),
-        p = u?.properties.properties.oneofKind === "premiumTab" ? u.properties.properties.premiumTab : null,
-        c = (0, T.Q)(),
-        h = u?.promotionId ?? "",
-        j = null != p && null != c,
-        O = (0, t.bG)([f.A], () => (0, _.u$)(a.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, h).isDismissed),
+l.d(e, { A: () => b, e: () => O });
+var n = l(477900),
+    i = l(582128),
+    d = l(503698),
+    o = l.n(d),
+    t = l(877624),
+    u = l(17928),
+    c = l(554146),
+    a = l(661531),
+    r = l(403581),
+    _ = l(404374),
+    M = l(826673),
+    p = l(501419),
+    I = l(724651),
+    A = l(732280),
+    E = l(549996),
+    T = l(614791),
+    m = l(964661),
+    f = l(374403),
+    g = l(105390),
+    R = l(617617),
+    h = l(49999),
+    j = l(202541),
+    C = l(134986);
+function O() {
+    let s,
+        e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        l = (0, A.V)(),
+        d = (0, I.O)(),
+        o = l?.trialId === j.Dw,
+        a = (0, E.c)(t.C.PREMIUM_TAB),
+        r = null != a ? (0, T.z)(a) : null,
+        _ = (0, f.Q)(),
+        C = a?.promotionId ?? "",
+        O = null != r && null != _,
+        b = (0, u.bG)([R.A], () => (0, M.u$)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, C).isDismissed),
         k =
-            j && null != u && null != p
-                ? (0, l.jsx)(E.A, {
-                      componentId: u.id,
-                      promotionId: u.promotionId,
-                      badgeCopy: p.badgeLabel,
-                      acknowledgedBadgeCopy: p.acknowledgedBadgeLabel,
-                      isDismissed: O,
+            O && null != a && null != r
+                ? (0, n.jsx)(m.A, {
+                      componentId: a.id,
+                      promotionId: a.promotionId,
+                      badgeCopy: r.badgeCopy,
+                      acknowledgedBadgeCopy: r.acknowledgedBadgeCopy,
+                      isDismissed: b,
                   })
                 : null;
     return (
-        n.useEffect(() => {
-            s &&
-                j &&
-                !O &&
-                (0, M.qr)(a.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, h, { dismissAction: g.i.AUTO_DISMISS });
-        }, [s, j, O, h]),
+        i.useEffect(() => {
+            e &&
+                O &&
+                !b &&
+                (0, p.qr)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, C, { dismissAction: h.i.AUTO_DISMISS });
+        }, [e, O, b, C]),
         null != k
-            ? (e = k)
-            : null != o
-              ? (e = (0, l.jsx)(b.fY, { isTabSelected: s, userDiscount: o, includesAmountOff: !1 }))
-              : null == i || r || (e = (0, l.jsx)(b.Ag, { isTabSelected: s, trialOffer: i })),
-        e
+            ? (s = k)
+            : null != d
+              ? (s = (0, n.jsx)(g.fY, { isTabSelected: e, userDiscount: d, includesAmountOff: !1 }))
+              : null == l || o || (s = (0, n.jsx)(g.Ag, { isTabSelected: e, trialOffer: l })),
+        s
     );
 }
-function O(e) {
-    let { decoration: s, label: i, isSelected: n } = e,
-        o =
-            j(n) ??
-            s ??
-            (0, l.jsx)(p.t, { size: "sm", color: n ? u.A.unsafe_rawColors.WHITE.css : c.k0.PREMIUM_TIER_2 });
-    return (0, l.jsxs)(l.Fragment, {
+function b(s) {
+    let { decoration: e, label: l, isSelected: i } = s,
+        d =
+            O(i) ??
+            e ??
+            (0, n.jsx)(r.t, { size: "sm", color: i ? a.A.unsafe_rawColors.WHITE.css : _.k0.PREMIUM_TIER_2 });
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, l.jsxs)("div", { className: r()(h.gj, { [h.wH]: n }), children: [i, o] }),
-            (0, l.jsx)("div", { className: r()(h.Tp, { [h._I]: n }) }),
+            (0, n.jsxs)("div", { className: o()(C.gj, { [C.wH]: i }), children: [l, d] }),
+            (0, n.jsx)("div", { className: o()(C.Tp, { [C._I]: i }) }),
         ],
     });
 }
