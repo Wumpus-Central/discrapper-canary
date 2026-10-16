@@ -2,6 +2,7 @@ e.exports = {
     XG: "scroller_b1bfc6",
     xY: "topNavSpacer_b1bfc6",
     uW: "section_b1bfc6",
+    AA: "headerControls_b1bfc6",
     p_: "list_b1bfc6",
     Vg: "grid_b1bfc6",
     Nr: "card_b1bfc6",

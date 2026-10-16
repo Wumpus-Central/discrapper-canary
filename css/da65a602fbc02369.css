@@ -32,6 +32,14 @@
     padding: var(--space-4)
 }
 
+.container_b0e7f4 {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    padding: var(--space-4)
+}
+
 .clickable__96733 {
     cursor: pointer
 }
@@ -105,6 +113,12 @@
 
 .section_b1bfc6 {
     padding: var(--space-16)
+}
+
+.headerControls_b1bfc6 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
 }
 
 .list_b1bfc6 {
@@ -195,4 +209,4 @@
     width: 60%
 }
 
-/*# sourceMappingURL=5b18ed3373ada020.css.map*/
+/*# sourceMappingURL=da65a602fbc02369.css.map*/
