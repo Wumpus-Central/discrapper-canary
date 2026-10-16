@@ -6,8 +6,8 @@ var a = n(503698),
     r = n(140735),
     s = n(775946),
     o = n(404373),
-    d = n(261425),
-    u = n(105292),
+    u = n(261425),
+    d = n(105292),
     c = n(543226);
 function f(e) {
     let { projectId: t } = e;
@@ -22,7 +22,7 @@ function m(e) {
               className: i()(c.W, n),
               children: [
                   (0, l.jsx)(s.A, { mentionsCount: a }),
-                  (0, l.jsx)(r.A, { children: u.intl.string(d.default.hfIuc7) }),
+                  (0, l.jsx)(r.A, { children: d.intl.string(u.default.hfIuc7) }),
               ],
           });
 }

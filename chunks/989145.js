@@ -1,4 +1,4 @@
-(n.d(t, { PK: () => d, Vm: () => o, c9: () => s, gm: () => r, n6: () => u, vX: () => i }),
+(n.d(t, { PK: () => u, Vm: () => o, c9: () => s, gm: () => r, n6: () => d, vX: () => i }),
     n(323874),
     n(14289),
     n(35956));
@@ -28,15 +28,15 @@ async function o(e, t) {
     let n = await (0, a.h)(e, c(t), { method: "DELETE", keepalive: !0 });
     if (!n.ok) throw Error(`attachment cleanup failed (${n.status})`);
 }
-async function d(e, t) {
+async function u(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: a, baseUrl: i } = await (0, l.BK)(e),
         r = new URLSearchParams({ ticket: a });
     return (n && r.set("download", "1"), `${i}${c(t)}?${r}`);
 }
-async function u(e, t) {
+async function d(e, t) {
     async function n() {
-        return fetch(await d(e, t), { method: "HEAD" });
+        return fetch(await u(e, t), { method: "HEAD" });
     }
     let a = await n();
     if ((401 === a.status && ((0, l.yn)(e), (a = await n())), 404 === a.status)) return !1;

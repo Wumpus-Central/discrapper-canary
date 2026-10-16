@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => h });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -11,13 +11,13 @@ var l = n(477900),
     f = n(900179),
     A = n(105292),
     S = n(975316);
-let T = i.memo(function (e) {
+let h = i.memo(function (e) {
     let {
             userId: t,
             userBio: n,
             onClose: r,
-            animateOnHoverOrFocusOnly: T = !1,
-            isHoveringOrFocusing: h = !1,
+            animateOnHoverOrFocusOnly: h = !1,
+            isHoveringOrFocusing: T = !1,
             hidePersonalInformation: m = !1,
             hideRestrictedProfile: g = !1,
             viewFullBioDisabled: x = !1,
@@ -53,8 +53,8 @@ let T = i.memo(function (e) {
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: T,
-                          isHoveringOrFocusing: h,
+                          animateOnHoverOrFocusOnly: h,
+                          isHoveringOrFocusing: T,
                       }),
                   }),
                   (p || y) &&

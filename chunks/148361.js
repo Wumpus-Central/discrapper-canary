@@ -17,27 +17,27 @@ let I = function (e) {
         {
             onClose: n,
             onUpsellClicked: I,
-            channel: g,
-            emojiDescriptor: h,
-            pickerIntention: A,
-            analyticsLocation: p,
+            channel: h,
+            emojiDescriptor: g,
+            pickerIntention: p,
+            analyticsLocation: A,
         } = e,
         _ = (0, r.RQ)((e) => e.searchQuery),
         { analyticsLocations: N } = (0, l.Ay)(s.A.EMOJI_PICKER);
     t =
-        A === m.EmojiIntention.REACTION
+        p === m.EmojiIntention.REACTION
             ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
-            : null == h
+            : null == g
               ? f.e.EMOJI_PICKER_FLOATING_UPSELL
-              : h.subCategory === u.tm.TOP_GUILD_EMOJI
+              : g.subCategory === u.tm.TOP_GUILD_EMOJI
                 ? f.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
-                : h.subCategory === u.tm.NEWLY_ADDED_EMOJI
+                : g.subCategory === u.tm.NEWLY_ADDED_EMOJI
                   ? f.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
                   : f.e.EMOJI_PICKER_EMOJI_CLICKED;
-    let C = null != h ? h.emoji : void 0,
-        x = null != C && C.animated,
-        O = null != C && !o.Ay.isInternalEmojiForGuildId(C, g?.getGuildId()),
-        S = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+    let C = null != g ? g.emoji : void 0,
+        S = null != C && C.animated,
+        x = null != C && !o.Ay.isInternalEmojiForGuildId(C, h?.getGuildId()),
+        O = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
     return (0, i.jsx)(a.A, {
         title: E.intl.string(E.t["0+11FF"]),
         description: E.intl.string(E.t.dURIzS),
@@ -46,12 +46,12 @@ let I = function (e) {
         onUpsellClicked: I,
         upsellViewedTrackingData: {
             type: t,
-            is_external: O,
-            location: { ...p, object: S },
+            is_external: x,
+            location: { ...A, object: O },
             location_stack: N,
             sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
             has_search_query: null != _ && "" !== _,
-            is_animated: x,
+            is_animated: S,
         },
         isEmojiPickerOverlay: !0,
     });

@@ -41,24 +41,24 @@ let I = (0, n(240921).Ay)({
 function b(e) {
     return I.useConfig({ location: e }).enabled;
 }
-var G = n(990208),
-    j = n(864310),
+var j = n(990208),
+    G = n(864310),
     v = n(363487),
     R = n(828162),
     y = n(72377),
-    M = n(565553),
-    T = n(168900),
-    L = n(285828);
+    L = n(565553),
+    M = n(168900),
+    T = n(285828);
 function U(e) {
     let { powerup: t, eventTargetRef: n, className: l } = e,
         s = { eventTargetRef: n, fit: "contain", className: l };
     switch (t.skuId) {
         case a.ec:
-            return (0, i.jsx)(M.t, { ...s });
+            return (0, i.jsx)(L.t, { ...s });
         case a.RV:
-            return (0, i.jsx)(T.J, { ...s });
+            return (0, i.jsx)(M.J, { ...s });
         case a.YG:
-            return (0, i.jsx)(L.z, { ...s });
+            return (0, i.jsx)(T.z, { ...s });
         default:
             return null;
     }
@@ -66,20 +66,20 @@ function U(e) {
 var D = n(249286),
     O = n(867060),
     P = n(568065),
-    V = n(652215),
-    w = n(746080),
+    w = n(652215),
+    V = n(746080),
     H = n(49999),
     k = n(628049),
     B = n(356863),
     F = n(105292),
-    K = n(344045),
-    z = n(120336);
+    z = n(344045),
+    K = n(120336);
 let W =
     "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png";
 function Y(e) {
     let { guildId: t, powerup: n, channelRowRef: l, markAsDismissed: s } = e;
     return (0, i.jsx)(el, {
-        asset: (0, i.jsx)(y.b, { className: r()(z.Sl, z.SV) }),
+        asset: (0, i.jsx)(y.b, { className: r()(K.Sl, K.SV) }),
         title: F.intl.formatToPlainString(B.default["Zg/m9K"], { perkName: n.title }),
         body: F.intl.formatToPlainString(B.default["1EGXSK"], { perkName: n.title }),
         actions: [
@@ -122,7 +122,7 @@ function q(e) {
     let { guildId: t, powerups: n, channelRowRef: l, markAsDismissed: s } = e,
         a = (0, o.bG)([N.A], () => N.A.getGuild(t)?.name),
         { onActivate: d, isLoading: c, error: u } = (0, D.A)(t, n[0]),
-        h = (0, G.A)(n[0], !0);
+        h = (0, j.A)(n[0], !0);
     if (((0, O.A)(u), 0 === n.length)) return;
     let m =
             n.length >= 3
@@ -139,8 +139,8 @@ function q(e) {
         size: 1 === n.length ? "video" : "lg",
         asset:
             n.length > 1
-                ? (0, i.jsx)(y.b, { className: r()(z.Sl, z.SV) })
-                : (0, i.jsx)("img", { alt: "", src: h, className: z.Sl }),
+                ? (0, i.jsx)(y.b, { className: r()(K.Sl, K.SV) })
+                : (0, i.jsx)("img", { alt: "", src: h, className: K.Sl }),
         title: F.intl.formatToPlainString(B.default.LmpChE, { guildName: a }),
         body: m,
         actions: [
@@ -160,7 +160,7 @@ function q(e) {
 function J(e) {
     let { guildId: t, powerups: n, channelRowRef: l, markAsDismissed: s } = e,
         r = n.find((e) => e.skuId === a.d0),
-        o = (0, G.A)(r, !0) ?? W,
+        o = (0, j.A)(r, !0) ?? W,
         d = n.find((e) => e.skuId === a.FB);
     if (null != r)
         return (0, i.jsx)(el, {
@@ -168,7 +168,7 @@ function J(e) {
             title: r.title,
             body: "string" == typeof r.description ? r.description : "",
             size: "video",
-            asset: (0, i.jsx)("img", { alt: "", src: o, className: z.Sl }),
+            asset: (0, i.jsx)("img", { alt: "", src: o, className: K.Sl }),
             actions: [
                 {
                     text: F.intl.string(F.t.RzWDqY),
@@ -207,7 +207,7 @@ function J(e) {
             asset: (0, i.jsx)("img", {
                 alt: "",
                 src: "https://cdn.discordapp.com/assets/content/196e929b196180fe33dc1fca35f40478270ff03434e24f72ca3cc64ee94222b4.png",
-                className: z.Sl,
+                className: K.Sl,
             }),
             actions: [
                 {
@@ -229,7 +229,7 @@ function J(e) {
             asset: (0, i.jsx)("img", {
                 alt: "",
                 src: "https://cdn.discordapp.com/assets/content/477c3ad9764f37e0991cbcd8a222b8270988e9dd81e5bb3a88f47944fd5e1c4d.gif",
-                className: z.Sl,
+                className: K.Sl,
             }),
             actions: [
                 {
@@ -252,7 +252,7 @@ function J(e) {
               asset: (0, i.jsx)("img", {
                   alt: "",
                   src: "https://cdn.discordapp.com/assets/content/838731e8db0e1b209bb8b20d5acefb9effe09952f60a13067ab7ad92887b39ad.png",
-                  className: z.Sl,
+                  className: K.Sl,
               }),
               actions: [
                   {
@@ -269,7 +269,7 @@ function J(e) {
 }
 function Z(e) {
     let { guildId: t, type: n, markAsDismissed: l, channelRowRef: s } = e,
-        { available: r } = (0, j.A)(t),
+        { available: r } = (0, G.A)(t),
         { gameName: a, gameName2: d } = (0, f.A)(),
         c = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
     return (0, i.jsx)(el, {
@@ -278,14 +278,14 @@ function Z(e) {
         asset: (0, i.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
-            className: z.Sl,
+            className: K.Sl,
             stateMachine: c ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(n === S.o.GAME_SERVER_HOSTING_AVAILABLE ? K.default.wXLChx : K.default["8z8RpY"]),
+        title: F.intl.string(n === S.o.GAME_SERVER_HOSTING_AVAILABLE ? z.default.wXLChx : z.default["8z8RpY"]),
         body:
             n === S.o.GAME_SERVER_HOSTING_AVAILABLE
-                ? F.intl.formatToPlainString(K.default["7KXp9J"], { gameName: a, gameName2: d })
-                : F.intl.format(K.default["IQ1E+d"], { boostCount: r }),
+                ? F.intl.formatToPlainString(z.default["7KXp9J"], { gameName: a, gameName2: d })
+                : F.intl.format(z.default["IQ1E+d"], { boostCount: r }),
         actions: [
             {
                 text: F.intl.string(F.t.RzWDqY),
@@ -305,17 +305,17 @@ function $(e) {
         asset: (0, i.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
-            className: z.Sl,
+            className: K.Sl,
             stateMachine: s ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(K.default["eX64+z"]),
-        body: F.intl.string(K.default.NpgfEB),
+        title: F.intl.string(z.default["eX64+z"]),
+        body: F.intl.string(z.default.NpgfEB),
         actions: [
             {
                 text: F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: () => {
-                    (n(H.i.TAKE_ACTION), (0, x.pX)(V.BVt.CHANNEL(t, w.VV.GAME_SERVERS)));
+                    (n(H.i.TAKE_ACTION), (0, x.pX)(w.BVt.CHANNEL(t, V.VV.GAME_SERVERS)));
                 },
             },
         ],
@@ -336,20 +336,20 @@ function Q(e) {
         asset: (0, i.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
-            className: z.Sl,
+            className: K.Sl,
             stateMachine: a ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(K.default.t3LNW1),
-        body: F.intl.formatToPlainString(K.default.V9qFAU, { gameName: s, gameName2: r }),
+        title: F.intl.string(z.default.t3LNW1),
+        body: F.intl.formatToPlainString(z.default.V9qFAU, { gameName: s, gameName2: r }),
         actions: [
             {
-                text: F.intl.string(K.default.k0Y0BE),
+                text: F.intl.string(z.default.k0Y0BE),
                 variant: "primary",
                 onClick: () => {
                     (n(H.i.TAKE_ACTION),
                         (0, C.K4)({
                             guildId: t,
-                            location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
+                            location: { section: w.JJy.GUILD_HEADER, object: w.ZSU.BUTTON_CTA },
                             scrollToPowerupCards: !0,
                         }));
                 },
@@ -361,8 +361,8 @@ function Q(e) {
 function ee(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: l } = e,
         s = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
-        r = (0, G.A)(s, !0) ?? W,
-        { available: d } = (0, j.A)(t),
+        r = (0, j.A)(s, !0) ?? W,
+        { available: d } = (0, G.A)(t),
         c = P.fe - d,
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);
     return (0, i.jsx)(el, {
@@ -372,7 +372,7 @@ function ee(e) {
         align: "center",
         alignmentStrategy: "edge",
         caretConfig: { align: "center" },
-        asset: (0, i.jsx)("img", { alt: "", src: r, className: z.Sl }),
+        asset: (0, i.jsx)("img", { alt: "", src: r, className: K.Sl }),
         title: F.intl.string(B.default.RK6NbY),
         body: F.intl.string(B.default.xlAqGk),
         actions: [
@@ -382,7 +382,7 @@ function ee(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
+                    let i = { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: c,
@@ -405,15 +405,15 @@ function et(e) {
         ...s,
         asset: (0, i.jsx)(p.default, { gameId: k.Yh.FEATURED_GAME_ID }),
         aspectRatio: "6/4",
-        title: F.intl.string(K.default["wy+j5s"]),
-        body: F.intl.formatToPlainString(K.default["7OETrT"], {
+        title: F.intl.string(z.default["wy+j5s"]),
+        body: F.intl.formatToPlainString(z.default["7OETrT"], {
             gameName: k.Yh.FEATURED_GAME_NAME,
             gameName2: k.Yh.SECOND_GAME_NAME,
             gameName3: k.Yh.THIRD_GAME_NAME,
         }),
         actions: [
             {
-                text: F.intl.string(K.default.k0Y0BE),
+                text: F.intl.string(z.default.k0Y0BE),
                 variant: "primary",
                 onClick: () => {
                     (n(H.i.TAKE_ACTION),
@@ -421,7 +421,7 @@ function et(e) {
                             ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, k.W5)
                             : (0, C.K4)({
                                   guildId: t,
-                                  location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
+                                  location: { section: w.JJy.GUILD_HEADER, object: w.ZSU.BUTTON_CTA },
                                   scrollToPowerupCards: !0,
                               }));
                 },
@@ -432,17 +432,17 @@ function et(e) {
 }
 function en(e) {
     let { guildId: t, powerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
-        { available: o } = (0, j.A)(t),
+        { available: o } = (0, G.A)(t),
         d = n.cost - o,
-        c = (0, G.A)(n, !0),
+        c = (0, j.A)(n, !0),
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
         h = (0, v.A)(t),
         m = l.useRef(null);
     return (0, i.jsx)(el, {
         asset:
             n.type === P.o9.LEVEL
-                ? (0, i.jsx)(U, { powerup: n, eventTargetRef: m, className: z.Lj })
-                : (0, i.jsx)("img", { alt: "", src: c, className: z.Sl }),
+                ? (0, i.jsx)(U, { powerup: n, eventTargetRef: m, className: K.Lj })
+                : (0, i.jsx)("img", { alt: "", src: c, className: K.Sl }),
         title: F.intl.string(B.default.n37JhA),
         body: F.intl.formatToPlainString(h || n.type === P.o9.LEVEL ? B.default.Yr1ogl : B.default["7MZ2tu"], {
             boostCount: d,
@@ -455,7 +455,7 @@ function en(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
+                    let i = { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: d,
@@ -477,7 +477,7 @@ function ei(e) {
         d = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)),
         { analyticsLocations: c } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
         u = d?.allPowerups[n.skuId],
-        f = (0, G.A)(u, !0),
+        f = (0, j.A)(u, !0),
         p = l.useRef(null),
         C = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
     if (null == u && !n.isGameServer) return null;
@@ -492,12 +492,12 @@ function ei(e) {
             ? (0, i.jsx)(h.E, {
                   withReducedMotion: "halt",
                   fit: "contain",
-                  className: z.Sl,
+                  className: K.Sl,
                   stateMachine: C ? "SM_Main_Int" : "SM_Auto",
               })
             : u?.type === P.o9.LEVEL
-              ? (0, i.jsx)(U, { powerup: u, eventTargetRef: p, className: z.Lj })
-              : (0, i.jsx)("img", { alt: "", src: f, className: z.Sl }),
+              ? (0, i.jsx)(U, { powerup: u, eventTargetRef: p, className: K.Lj })
+              : (0, i.jsx)("img", { alt: "", src: f, className: K.Sl }),
         title: x,
         body: I,
         actions: [
@@ -507,7 +507,7 @@ function ei(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
+                    let i = { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,

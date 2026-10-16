@@ -19,12 +19,12 @@ function c(e) {
         [b, w] = (0, o.rh)(N, T, !1);
     if (null != p) return p;
     if (!t?.canEditThemes && !v) return { theme: y, primaryColor: null, secondaryColor: null };
-    let O = t?.getPreviewThemeColors(c),
-        g = O?.[0] ?? (0, n.LX)(b),
-        j = O?.[1] ?? (0, n.LX)(w),
-        x = C || f ? y : ((0, a.tM)(g) ?? y);
+    let x = t?.getPreviewThemeColors(c),
+        j = x?.[0] ?? (0, n.LX)(b),
+        O = x?.[1] ?? (0, n.LX)(w),
+        P = C || f ? y : ((0, a.tM)(j) ?? y);
     return (
-        x === m.NJ8.ASH && (0, u.M)(y) ? (x = y) : x === m.NJ8.ASH && (0, u.q)(y) && (x = m.NJ8.DARK),
-        { theme: x, primaryColor: g, secondaryColor: j }
+        P === m.NJ8.ASH && (0, u.M)(y) ? (P = y) : P === m.NJ8.ASH && (0, u.q)(y) && (P = m.NJ8.DARK),
+        { theme: P, primaryColor: j, secondaryColor: O }
     );
 }

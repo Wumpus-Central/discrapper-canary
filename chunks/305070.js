@@ -179,9 +179,9 @@ function W(e) {
                 [s, U, g]
             );
         })({ ...n, guild: z }, t, q),
-        J = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
-        X = (0, f.aI)($.selectedIndex);
-    (0, p.gf)(H, $.isVisible, X);
+        X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
+        J = (0, f.aI)($.selectedIndex);
+    (0, p.gf)(H, $.isVisible, J);
     let Y = (0, C.l)({ editorHeight: F, type: W, state: $ }),
         ee = (0, o.bG)(
             [h.Ay],
@@ -251,7 +251,7 @@ function W(e) {
         }),
     });
     return null != Y
-        ? (0, l.jsx)(J, {
+        ? (0, l.jsx)(X, {
               children: (0, l.jsx)(c.Q, {
                   targetRef: n.targetRef,
                   overrideTargetRect: Y,

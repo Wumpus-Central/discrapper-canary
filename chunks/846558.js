@@ -145,16 +145,16 @@ let $ = i.memo(function (e) {
 });
 var Q = n(530134),
     Z = n(3203),
-    J = n(866665),
-    X = n(617617),
+    X = n(866665),
+    J = n(617617),
     Y = n(234320),
     ee = n(767089);
 let et = i.memo(function (e) {
     let { disabled: t, type: n, channel: r, ref: a } = e,
         [o, u] = i.useState(!1),
         c = (0, s.bG)(
-            [X.A],
-            () => o && Object.values(X.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
+            [J.A],
+            () => o && Object.values(J.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
         [d, h, m, f] = (0, W.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], M.x),
         g = i.useRef(0),
@@ -172,7 +172,7 @@ let et = i.memo(function (e) {
         { Component: y, events: C, play: A } = (0, Z.V)();
     if (t) return null;
     let I = d === K.kx.GIF && h === n && f === r.id;
-    return (0, l.jsx)(J.m, {
+    return (0, l.jsx)(X.m, {
         text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
         shouldShow: c,
         forceOpen: c,

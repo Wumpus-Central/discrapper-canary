@@ -6,8 +6,8 @@ var a = n(834730),
 let r = /^(.*?)\s*\(([^()]+)\)$/,
     s = /^([\s\S]*?)\s\((exit \d+)\)$/,
     o = /[[\]{}<>`\xab\xbb;$\\=]/,
-    d = /'[^']*'|"[^"]*"/,
-    u = {
+    u = /'[^']*'|"[^"]*"/,
+    d = {
         "text-xs/normal": "text-xs/semibold",
         "text-sm/normal": "text-sm/semibold",
         "text-md/normal": "text-md/semibold",
@@ -20,7 +20,7 @@ function c(e, t) {
           ? e
           : (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(a.E, { tag: "span", variant: u[t], color: "none", children: n[0] }),
+                    (0, l.jsx)(a.E, { tag: "span", variant: d[t], color: "none", children: n[0] }),
                     e.slice(n[0].length),
                 ],
             });
@@ -28,14 +28,14 @@ function c(e, t) {
 function f(e) {
     let { text: t, variant: n, prose: a } = e;
     if (!0 === a) return t;
-    let u = (t.startsWith("$ ") ? s : r).exec(t);
-    return null == u || o.test(u[2]) || d.test(u[2])
+    let d = (t.startsWith("$ ") ? s : r).exec(t);
+    return null == d || o.test(d[2]) || u.test(d[2])
         ? c(t, n)
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  c(u[1], n),
+                  c(d[1], n),
                   " ",
-                  u[2].split(/(\s+)/).map((e, t) => {
+                  d[2].split(/(\s+)/).map((e, t) => {
                       let n;
                       return /^\s*$/.test(e)
                           ? e

@@ -5,8 +5,8 @@ var l = n(582128),
     r = n(945810),
     s = n(321191),
     o = n(808728),
-    d = n(71393),
-    u = n(576705),
+    u = n(71393),
+    d = n(576705),
     c = n(967198),
     f = n(245179),
     m = n(793480),
@@ -58,8 +58,8 @@ function y(e) {
 }
 function w(e) {
     let [t, n] = l.useState(0),
-        { entries: u, nextExpiry: c } = (0, a.bG)(
-            [p.Ay, f.A, d.A, o.Ay, s.A, i.A, r.Bt],
+        { entries: d, nextExpiry: c } = (0, a.bG)(
+            [p.Ay, f.A, u.A, o.Ay, s.A, i.A, r.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -79,13 +79,13 @@ function w(e) {
                         if (null != s && !l(s)) return;
                         a.add(e.id);
                         let o = f.A.isThinking(e.id),
-                            u = f.A.getFinishedAt(e.id),
-                            c = (0, g.Uk)({ thinking: o, finishedAt: u, now: t });
-                        if ("done" === c && null != u) {
-                            let e = u + 6e4;
+                            d = f.A.getFinishedAt(e.id),
+                            c = (0, g.Uk)({ thinking: o, finishedAt: d, now: t });
+                        if ("done" === c && null != d) {
+                            let e = d + 6e4;
                             r = null == r ? e : Math.min(r, e);
                         }
-                        let m = (null == s ? null : d.A.getGuild(s)) ?? null;
+                        let m = (null == s ? null : u.A.getGuild(s)) ?? null;
                         i.push({
                             project: e,
                             projectId: e.id,
@@ -101,11 +101,11 @@ function w(e) {
                                 if (null == e.updated_at) return 0;
                                 let n = Date.parse(e.updated_at);
                                 return Number.isNaN(n) ? 0 : n;
-                            })(e, u),
+                            })(e, d),
                         });
                     }
                     for (let e of p.Ay.getOwnedProjects()) s(e, !0);
-                    for (let e of Object.values(d.A.getGuilds()))
+                    for (let e of Object.values(u.A.getGuilds()))
                         if (p.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
                             for (let t of p.Ay.getSharedProjects(e.id)) s(t, !1);
                     return { entries: (0, g.Ng)(i), nextExpiry: r };
@@ -119,14 +119,14 @@ function w(e) {
             let e = setTimeout(() => n((e) => e + 1), Math.max(0, c - Date.now()));
             return () => clearTimeout(e);
         }, [c, n]),
-        u
+        d
     );
 }
 function _(e) {
     return (0, a.bG)(
-        [d.A, r.Bt, u.A],
+        [u.A, r.Bt, d.A],
         () =>
-            Object.values(d.A.getGuilds())
+            Object.values(u.A.getGuilds())
                 .filter((t) => (0, h.sM)(t, e))
                 .sort((e, t) => e.name.localeCompare(t.name)),
         [e],
@@ -135,12 +135,12 @@ function _(e) {
 }
 function N(e) {
     return (0, a.bG)(
-        [d.A, c.A, r.Bt],
+        [u.A, c.A, r.Bt],
         () => {
-            let t = d.A.getGuild(c.A.getGuildId());
+            let t = u.A.getGuild(c.A.getGuildId());
             return null != t && (0, h.N)(t, e)
                 ? t.id
-                : (Object.values(d.A.getGuilds())
+                : (Object.values(u.A.getGuilds())
                       .sort((e, t) => e.name.localeCompare(t.name))
                       .find((t) => (0, h.N)(t, e))?.id ?? null);
         },

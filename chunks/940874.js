@@ -10,7 +10,7 @@ let s = {
             var n;
             let { projectId: o } = t;
             ((n = e.disposition),
-                Object.prototype.hasOwnProperty.call(E, n) &&
+                Object.prototype.hasOwnProperty.call(g, n) &&
                     r.h.dispatch({
                         type: "CONJURE_CHAT_MESSAGE_DISPOSITION",
                         projectId: o,
@@ -259,4 +259,4 @@ let y = {
         healthcheck_failed: { location: "healthcheck", code: i.xf.HEALTHCHECK_FAILED },
         error: { location: "agent", code: i.xf.AGENT_ERROR },
     },
-    E = { steered: !0, queued: !0, restarting: !0, answered: !0 };
+    g = { steered: !0, queued: !0, restarting: !0, answered: !0 };

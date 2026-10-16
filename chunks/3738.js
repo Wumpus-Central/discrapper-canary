@@ -1,4 +1,4 @@
-n.d(t, { A9: () => j, mU: () => w, Jf: () => X, tH: () => U, NA: () => b, XR: () => F, VX: () => Q });
+n.d(t, { A9: () => U, mU: () => w, Jf: () => X, tH: () => j, NA: () => b, XR: () => F, VX: () => Q });
 var i = n(582128),
     r = n(731355),
     l = n(118751),
@@ -502,7 +502,7 @@ function w(e) {
         needsToConnect: a,
     });
 }
-function j(e, t, n, i, r) {
+function U(e, t, n, i, r) {
     let l = (0, v.fc)(e),
         s = w({
             quest: e,
@@ -516,7 +516,7 @@ function j(e, t, n, i, r) {
         o = (0, v.S5)(e.userStatus?.claimedAt);
     return u ? P.intl.formatToPlainString(P.t.lOVr0O, { claimDate: o }) : s;
 }
-function U(e) {
+function j(e) {
     let {
             quest: t,
             isExpanded: n,

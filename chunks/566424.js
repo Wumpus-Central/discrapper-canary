@@ -5,8 +5,8 @@ var l = n(477900),
     r = n.n(i),
     s = n(847374),
     o = n(320448),
-    d = n(834730),
-    u = n(939249),
+    u = n(834730),
+    d = n(939249),
     c = n(344587),
     f = n(261425),
     m = n(105292),
@@ -36,7 +36,7 @@ function g(e) {
         T = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: h.hd, children: t }),
-                (0, l.jsx)(d.E, {
+                (0, l.jsx)(u.E, {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
@@ -69,7 +69,7 @@ function g(e) {
         style: null != p ? { "--custom-conjure-shimmer-tint": p } : void 0,
         children: [
             M
-                ? (0, l.jsx)(u.D, {
+                ? (0, l.jsx)(d.D, {
                       tag: "div",
                       className: r()(h.ep, h.EK),
                       "aria-expanded": j,

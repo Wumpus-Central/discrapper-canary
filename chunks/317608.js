@@ -1,26 +1,26 @@
-a.d(t, { A: () => r });
+a.d(t, { A: () => i });
 var l = a(477900),
     s = a(582128),
     n = a(333007),
-    i = a(558960);
-function r(e) {
-    let { frameId: t, level: a, className: r, overlay: o } = e,
-        d = s.useRef(null);
+    r = a(558960);
+function i(e) {
+    let { frameId: t, level: a, className: i, overlay: d } = e,
+        o = s.useRef(null);
     s.useLayoutEffect(() => {
-        let e = d.current;
+        let e = o.current;
         if (null != e)
             return (
-                i.A.registerFrameTarget(t, e, a, void 0),
+                r.A.registerFrameTarget(t, e, a, void 0),
                 () => {
-                    i.A.removeFrameTarget(t, e);
+                    r.A.removeFrameTarget(t, e);
                 }
             );
     }, [t, a]);
-    let c = s.useSyncExternalStore(i.A.subscribe, () => i.A.getFrameEntry(t)?.overlay ?? null);
+    let u = s.useSyncExternalStore(r.A.subscribe, () => r.A.getFrameEntry(t)?.overlay ?? null);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)("div", { ref: d, className: r, style: { pointerEvents: "none" } }),
-            null != o && null != c ? (0, n.createPortal)(o, c) : null,
+            (0, l.jsx)("div", { ref: o, className: i, style: { pointerEvents: "none" } }),
+            null != d && null != u ? (0, n.createPortal)(d, u) : null,
         ],
     });
 }

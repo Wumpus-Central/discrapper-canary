@@ -53,11 +53,11 @@ function m(e) {
             "aria-label": f,
             filters: E,
             setLoading: I,
-            title: g,
-            ref: h,
+            title: h,
+            ref: g,
         } = e,
-        A = s.useRef(null),
-        [p, _] = s.useState(!1);
+        p = s.useRef(null),
+        [A, _] = s.useState(!1);
     async function N(e) {
         (I?.(!0), await d(e, t), _(!0), I?.(!1));
     }
@@ -69,17 +69,17 @@ function m(e) {
         )
             return;
         let t = e.currentTarget.files;
-        A.current = await (0, l.openModalLazy)(async () => {
+        p.current = await (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("886895"), n.e("817259")]).then(n.bind(n, 897126));
             return (n) => (0, i.jsx)(e, { processFiles: () => N(t), ...n });
         });
     }
     return (
         s.useEffect(() => {
-            p && null !== A.current && ((0, l.closeModal)(A.current), (A.current = null));
-        }, [p]),
+            A && null !== p.current && ((0, l.closeModal)(p.current), (p.current = null));
+        }, [A]),
         (0, i.jsx)(r.A, {
-            ref: h,
+            ref: g,
             onChange: C,
             filters: E ?? (0, a.gA)(),
             multiple: o,
@@ -87,7 +87,7 @@ function m(e) {
             className: u,
             tabIndex: m,
             "aria-label": f,
-            title: g,
+            title: h,
         })
     );
 }

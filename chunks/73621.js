@@ -1,4 +1,4 @@
-n.d(t, { A: () => A, o: () => h });
+n.d(t, { A: () => p, o: () => g });
 var i,
     s = n(477900),
     l = n(661531),
@@ -28,8 +28,8 @@ function E(e) {
     });
 }
 var I = n(105292),
-    g = n(21693),
-    h =
+    h = n(21693),
+    g =
         (((i = {})[(i.TOO_BIG = 0)] = "TOO_BIG"),
         (i[(i.RATE_LIMIT = 1)] = "RATE_LIMIT"),
         (i[(i.TOO_MANY_EMOJI = 2)] = "TOO_MANY_EMOJI"),
@@ -37,14 +37,14 @@ var I = n(105292),
         (i[(i.WRONG_TYPE = 4)] = "WRONG_TYPE"),
         (i[(i.RESIZE_ANIMATED = 5)] = "RESIZE_ANIMATED"),
         i);
-let A = function (e) {
+let p = function (e) {
     let { error: t } = e,
         { type: n, filename: i } = t,
         {
             icon: f,
-            description: h,
-            color: A,
-            tooltip: p,
+            description: g,
+            color: p,
+            tooltip: A,
         } = {
             0: {
                 icon: r.m,
@@ -84,21 +84,21 @@ let A = function (e) {
             },
         }[n];
     return (0, s.jsxs)("div", {
-        className: g._Z,
+        className: h._Z,
         children: [
-            (0, s.jsx)(f, { className: g.Yg, color: l.A.unsafe_rawColors.PRIMARY_300.css }),
+            (0, s.jsx)(f, { className: h.Yg, color: l.A.unsafe_rawColors.PRIMARY_300.css }),
             (0, s.jsxs)("div", {
-                className: g.XE,
+                className: h.XE,
                 children: [
-                    (0, s.jsx)(u.E, { variant: "text-md/normal", className: g.Md, children: i }),
-                    (0, s.jsx)(u.E, { variant: "text-sm/normal", color: "text-subtle", children: h }),
+                    (0, s.jsx)(u.E, { variant: "text-md/normal", className: h.Md, children: i }),
+                    (0, s.jsx)(u.E, { variant: "text-sm/normal", color: "text-subtle", children: g }),
                 ],
             }),
             (0, s.jsx)(d.m, {
                 asContainer: !0,
                 position: "right",
-                text: p,
-                children: (0, s.jsx)(m.E, { size: "custom", width: 20, height: 20, color: A }),
+                text: A,
+                children: (0, s.jsx)(m.E, { size: "custom", width: 20, height: 20, color: p }),
             }),
         ],
     });

@@ -5,7 +5,7 @@ var l = n(477900),
     r = n(140735),
     s = n(615839);
 let o = { second: 1e3, minute: 6e4 };
-function d(e) {
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "second",
         [n, l] = a.useState(() => Date.now());
     return (
@@ -24,22 +24,22 @@ function d(e) {
         null == e ? void 0 : Math.max(0, n - e)
     );
 }
-var u = n(719374);
+var d = n(719374);
 function c(e) {
     let { startedAt: t, variant: n = "text-xs/medium" } = e,
-        a = d(t);
+        a = u(t);
     return (0, l.jsx)(i.E, {
         tag: "span",
         variant: n,
         color: "text-muted",
         "aria-hidden": !0,
-        className: u.$,
+        className: d.$,
         "data-conjure-turn-timer": !0,
         children: (0, s.C7)(a),
     });
 }
 function f(e) {
     let { startedAt: t } = e,
-        n = d(t, "minute");
+        n = u(t, "minute");
     return (0, l.jsx)(r.A, { role: "timer", children: (0, s.Us)(n) });
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => p, J: () => g });
+n.d(t, { A: () => A, J: () => h });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -22,7 +22,7 @@ function I(e, t, n) {
     let r = document.querySelector((0, d.Mz)((0, d.t$)(e, t)));
     null != r ? r.focus() : i > 0 && requestAnimationFrame(() => I(e, t, n, i - 1, l));
 }
-function g(e) {
+function h(e) {
     return {
         itemIdForIndex: (t) => `${e}${t}`,
         parseIndex: (t) => {
@@ -34,31 +34,31 @@ function g(e) {
         },
     };
 }
-var h = n(652215),
-    A = n(14753);
-let p = function (e) {
+var g = n(652215),
+    p = n(14753);
+let A = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
             categories: l,
             store: d,
-            children: p,
+            children: A,
             emojiPacksHeader: _,
             className: N,
             listPadding: C,
-            rowCount: x,
-            getScrollOffsetForIndex: O,
-            categoryHeight: S,
-            onScroll: j,
-            renderCategoryListItem: T,
+            rowCount: S,
+            getScrollOffsetForIndex: x,
+            categoryHeight: O,
+            onScroll: T,
+            renderCategoryListItem: j,
             rowCountBySection: y,
-            renderSection: R,
-            navId: b,
+            renderSection: b,
+            navId: R,
             itemIdPrefix: v,
         } = e,
         L = d.useStore((e) => e.activeCategoryIndex),
-        M = null != b && null != v,
-        { itemIdForIndex: D, parseIndex: P } = s.useMemo(() => g(v ?? "expression-category-"), [v]),
+        M = null != R && null != v,
+        { itemIdForIndex: P, parseIndex: D } = s.useMemo(() => h(v ?? "expression-category-"), [v]),
         w = (function (e) {
             let {
                     navId: t,
@@ -71,16 +71,16 @@ let p = function (e) {
                     enabled: c = !0,
                 } = e,
                 d = (0, m.bG)([f.Ay], () => f.Ay.keyboardModeEnabled),
-                g = s.useRef(null),
-                h = s.useRef(0),
-                A = c && d;
+                h = s.useRef(null),
+                g = s.useRef(0),
+                p = c && d;
             s.useEffect(
                 () => () => {
-                    h.current += 1;
+                    g.current += 1;
                 },
                 [],
             );
-            let p = s.useCallback(
+            let A = s.useCallback(
                     (e, t) => {
                         let i = o?.(e, t) ?? 0;
                         n.current?.scrollRowIntoView(e, { animate: !1, offset: i });
@@ -91,23 +91,23 @@ let p = function (e) {
                     (e, n) => {
                         let s = l(n);
                         if (null != s) {
-                            let e = E(l) ?? g.current;
-                            (p(s, null == e || s >= e), (g.current = s));
+                            let e = E(l) ?? h.current;
+                            (A(s, null == e || s >= e), (h.current = s));
                         }
                         let r = document.querySelector(e);
                         if (null != r) {
-                            ((h.current += 1), r.focus());
+                            ((g.current += 1), r.focus());
                             return;
                         }
-                        null != s && I(t, i(s), h);
+                        null != s && I(t, i(s), g);
                     },
-                    [i, t, l, p],
+                    [i, t, l, A],
                 ),
                 N = s.useCallback(
                     (e, n) => {
-                        (p(e, n), (g.current = e), I(t, i(e), h));
+                        (A(e, n), (h.current = e), I(t, i(e), g));
                     },
-                    [i, t, p],
+                    [i, t, A],
                 ),
                 C = s.useCallback(
                     () =>
@@ -119,7 +119,7 @@ let p = function (e) {
                         }),
                     [n],
                 ),
-                x = s.useCallback(
+                S = s.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = n.current?.getListDimensions().totalHeight ?? Number.MAX_SAFE_INTEGER;
@@ -130,24 +130,24 @@ let p = function (e) {
                         }),
                     [n],
                 ),
-                O = s.useCallback(() => {
-                    let e = E(l) ?? g.current;
+                x = s.useCallback(() => {
+                    let e = E(l) ?? h.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
-                S = s.useCallback(() => {
-                    let e = E(l) ?? g.current;
+                O = s.useCallback(() => {
+                    let e = E(l) ?? h.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
-                j = (0, u.Ay)({
+                T = (0, u.Ay)({
                     id: t,
-                    isEnabled: A,
+                    isEnabled: p,
                     setFocus: _,
                     scrollToStart: C,
-                    scrollToEnd: x,
-                    onNavigateNextAtEnd: O,
-                    onNavigatePreviousAtStart: S,
+                    scrollToEnd: S,
+                    onNavigateNextAtEnd: x,
+                    onNavigatePreviousAtStart: O,
                 }),
-                T = j.setFocus;
+                j = T.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= r) return;
@@ -156,75 +156,75 @@ let p = function (e) {
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), T(i(a)));
+                                ((h.current = a), j(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, c, i, T, r]),
-                j
+                }, [a, n, c, i, j, r]),
+                T
             );
         })({
-            navId: b ?? "expression-picker-categories-disabled",
+            navId: R ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: D,
-            parseIndex: P,
-            rowCount: x,
+            itemIdForIndex: P,
+            parseIndex: D,
+            rowCount: S,
             activeIndex: L,
-            getScrollOffsetForIndex: O,
+            getScrollOffsetForIndex: x,
             enabled: M,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
-            l = s.useRef(h.An1),
+            l = s.useRef(g.An1),
             r = s.useRef(t);
         s.useEffect(() => {
             null != t &&
                 t !== r.current &&
-                (l.current !== h.An1 && window.cancelAnimationFrame(l.current),
+                (l.current !== g.An1 && window.cancelAnimationFrame(l.current),
                 (l.current = window.requestAnimationFrame(() => {
                     if (null == n.current) return;
                     let e = t > (r.current ?? -1),
                         s = null != i ? i(t, e) : 0;
-                    (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
+                    (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = g.An1), (r.current = t));
                 })));
         }, [t, n, i]);
-    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: O });
-    let U = s.useCallback(
+    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: x });
+    let k = s.useCallback(
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
                 (d.setActiveCategoryIndex(e), "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e));
             },
             [n, d],
         ),
-        k = s.useCallback((e) => T(l[e], e, () => U(e), L === e), [L, l, U, T]),
-        G = s.useMemo(() => ("function" == typeof S ? (e) => S(l[e], e) : S), [l, S]),
+        U = s.useCallback((e) => j(l[e], e, () => k(e), L === e), [L, l, k, j]),
+        G = s.useMemo(() => ("function" == typeof O ? (e) => O(l[e], e) : O), [l, O]),
         F = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: j,
+            onScroll: T,
             ref: t,
-            renderRow: k,
-            rowCount: x,
+            renderRow: U,
+            rowCount: S,
             rowHeight: G,
             hideScrollbar: !0,
             rowCountBySection: y,
-            renderSection: R,
+            renderSection: b,
             role: M ? "none presentation" : void 0,
         }),
         J = (0, i.jsxs)("div", {
-            className: r()(A.iE, { [A.bx]: null != _ }, N),
+            className: r()(p.iE, { [p.bx]: null != _ }, N),
             children: [
                 _,
                 M
                     ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
-                              return (0, i.jsx)("div", { className: A.en, ...n, ref: t, children: F });
+                              return (0, i.jsx)("div", { className: p.en, ...n, ref: t, children: F });
                           },
                       })
                     : F,
-                p?.(U),
+                A?.(k),
             ],
         });
     return M ? (0, i.jsx)(a.hD, { navigator: w, children: J }) : J;

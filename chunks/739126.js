@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     sq: "forwardPreview__68334",
     FG: "contentWrapper__68334",
     kp: "attachmentRow__68334",

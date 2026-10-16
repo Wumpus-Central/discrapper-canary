@@ -5,11 +5,11 @@ function i(e) {
     let [t, n] = l.useState(e),
         [i, r] = l.useState("idle"),
         [s, o] = l.useState(e),
-        d = (0, a.j)();
+        u = (0, a.j)();
     return (
         s !== e
-            ? (o(e), r(d && e !== t ? "exit" : "idle"), d || n(e))
-            : d || ("idle" === i && t === s) || (n(s), r("idle")),
+            ? (o(e), r(u && e !== t ? "exit" : "idle"), u || n(e))
+            : u || ("idle" === i && t === s) || (n(s), r("idle")),
         l.useEffect(() => {
             if ("exit" !== i) return;
             let e = setTimeout(() => {

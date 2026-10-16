@@ -48,8 +48,8 @@ var B = n(734057),
     $ = n(562153),
     Q = n(427262),
     Z = n(105292),
-    J = n(307126);
-function X(e) {
+    X = n(307126);
+function J(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(C.m, {
         text: t.name,
@@ -81,11 +81,11 @@ function et(e) {
         let e = s || r.hasUniqueUsername() ? null : `#${r.discriminator}`;
         return (0, l.jsx)(C.m, {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
-                className: J.fX,
+                className: X.fX,
                 children: [
-                    (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: J.my }),
+                    (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: X.my }),
                     Q.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
-                    (0, l.jsx)("span", { className: J.D2, children: e }),
+                    (0, l.jsx)("span", { className: X.D2, children: e }),
                 ],
             }),
             delay: 750,
@@ -160,7 +160,7 @@ function er(e) {
 }
 function es(e) {
     let { timestamp: t } = e;
-    return (0, l.jsx)(D.A, { node: t, className: "R" === t.format ? J.gS : null });
+    return (0, l.jsx)(D.A, { node: t, className: "R" === t.format ? X.gS : null });
 }
 function ea(e) {
     let { id: t } = e,
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: J.Kk }), n.gameName],
+              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", Z.intl.string(Z.t["11pdXZ"])] });
 }
@@ -282,7 +282,7 @@ class ex extends i.PureComponent {
                         return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(X, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
                         return (0, l.jsxs)(ef, {

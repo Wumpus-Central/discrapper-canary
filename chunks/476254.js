@@ -302,8 +302,8 @@ function Z(e) {
         }),
         {
             getItemProps: Z,
-            getRowProps: J,
-            gridContainerProps: X,
+            getRowProps: X,
+            gridContainerProps: J,
             handleGridContainerKeyDown: Y,
             isUsingKeyboardNavigation: ee,
         } = (0, P.JZ)({
@@ -318,7 +318,7 @@ function Z(e) {
             (e, t) =>
                 p(
                     B[e],
-                    J(e),
+                    X(e),
                     {
                         isUsingKeyboardNavigation: ee.current,
                         gutterWidth: q,
@@ -329,7 +329,7 @@ function Z(e) {
                     (t) => Z(e, t),
                     (t) => s.setInspectedExpressionPosition(t, e),
                 ),
-            [B, Z, J, q, ee, p, s, G],
+            [B, Z, X, q, ee, p, s, G],
         ),
         en = i.useCallback((e) => x?.(t[e], e), [t, x]),
         el = i.useCallback((e) => E?.(t[e], e), [t, E]),
@@ -372,7 +372,7 @@ function Z(e) {
                               ref: w,
                               className: Q.AD,
                               id: k,
-                              ...X,
+                              ...J,
                               children:
                                   null != F
                                       ? (0, l.jsx)(K, {
@@ -402,8 +402,8 @@ function Z(e) {
         ],
     });
 }
-var J = n(89366),
-    X = n(319993),
+var X = n(89366),
+    J = n(319993),
     Y = n(202639),
     ee = n(414872),
     et = n(285373),
@@ -515,7 +515,7 @@ function eZ(e) {
         children: (0, l.jsx)(t, { className: eH.xi, color: "currentColor" }),
     });
 }
-function eJ(e, t, n, i, r) {
+function eX(e, t, n, i, r) {
     switch (e.categoryInfo.type) {
         case eu.Cx.FAVORITES:
             return (0, l.jsx)(eZ, { icon: y.StarIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
@@ -541,11 +541,11 @@ function eJ(e, t, n, i, r) {
             return null;
     }
 }
-function eX(e) {
+function eJ(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: r, isNitroLocked: s } = e,
         a = (0, eU.rm)(e$(n));
     return t.categoryInfo.type === eu.Cx.GUILD
-        ? (0, l.jsx)(eB.Q, { guild: t.categoryInfo.guild, children: eJ(t, i, r, a, s) })
+        ? (0, l.jsx)(eB.Q, { guild: t.categoryInfo.guild, children: eX(t, i, r, a, s) })
         : (0, l.jsx)(eV.m, {
               text: (function (e) {
                   switch (e.categoryInfo.type) {
@@ -563,7 +563,7 @@ function eX(e) {
               })(t),
               position: "right",
               align: "center",
-              children: eJ(t, i, r, a, s),
+              children: eX(t, i, r, a, s),
           });
 }
 function eY(e) {
@@ -581,7 +581,7 @@ function eY(e) {
         m = i.useCallback(
             (e, t, n, i) => {
                 let s = r && e0(e.categoryInfo, h, o);
-                return (0, l.jsx)(eX, {
+                return (0, l.jsx)(eJ, {
                     category: e,
                     categoryIndex: t,
                     onClick: function () {
@@ -1172,7 +1172,7 @@ function tA(e) {
             },
             [eq],
         ),
-        eJ = i.useCallback(
+        eX = i.useCallback(
             (e, t, n, l) => {
                 if (null != h && !m) return h(e, n);
                 let i = (0, ec.Ir)(F, e, r, !1);
@@ -1193,18 +1193,18 @@ function tA(e) {
             },
             [f, F, r, p, z, H, h, m],
         ),
-        eX = i.useCallback(
+        eJ = i.useCallback(
             (e, t) => {
                 switch (e.item.type) {
                     case eu.uq.SOUND:
                         let n = tE[e?.category] ?? null,
                             l = e?.item.index;
-                        return eJ(e.item.sound, null == n ? k : [...k, n], t?.shiftKey !== !0, l);
+                        return eX(e.item.sound, null == n ? k : [...k, n], t?.shiftKey !== !0, l);
                     case eu.uq.ADD_SOUND:
                         return (o(), td(e.item.guild.id));
                 }
             },
-            [k, eJ, o],
+            [k, eX, o],
         ),
         e1 = i.useCallback(
             (e, n, i, a, o) => {
@@ -1244,7 +1244,7 @@ function tA(e) {
                                     isUsingKeyboardNavigation: i.isUsingKeyboardNavigation,
                                     suppressPlaySound: f,
                                     getItemProps: a,
-                                    onSelectItem: eX,
+                                    onSelectItem: eJ,
                                     onItemMouseEnter: o,
                                     buttonOverlay: C,
                                     isNitroLocked: c,
@@ -1258,7 +1258,7 @@ function tA(e) {
                     `row-${n["aria-rowindex"]}`,
                 );
             },
-            [eF, p, B, t, f, eX, r, e$, eQ, G, k, C, eK, v, $, eO, Q],
+            [eF, p, B, t, f, eJ, r, e$, eQ, G, k, C, eK, v, $, eO, Q],
         ),
         e2 = i.useCallback(
             (e, t) => {
@@ -1350,8 +1350,8 @@ function tA(e) {
         tn = i.useCallback(
             () =>
                 v
-                    ? (0, l.jsx)(X.Gq, {
-                          renderPopout: () => (0, l.jsx)(X.qn, {}),
+                    ? (0, l.jsx)(J.Gq, {
+                          renderPopout: () => (0, l.jsx)(J.qn, {}),
                           tooltipText: eP.intl.string(eP.t["19lt24"]),
                           position: "top",
                           clickableClassName: s()(tg.Jm, tg.Zz),
@@ -1379,7 +1379,7 @@ function tA(e) {
             [eL, A, eK, t, v],
         ),
         ti = i.useCallback(() => {
-            let e = (0, J.qD)();
+            let e = (0, X.qD)();
             return (0, V.LE)(e, ej.pe.TIER_2) ?? eP.intl.string(eP.t.pj0XBN);
         }, []);
     i.useEffect(() => {
@@ -1457,7 +1457,7 @@ function tA(e) {
                     collapsedCategories: eq,
                     containerWidth: a,
                     store: M.LW,
-                    onSelectItem: eX,
+                    onSelectItem: eJ,
                     onSearchExpressions: te,
                     hasSearchResults: eD.length > 0,
                     defaultSearchPlaceholder: eP.intl.string(eP.t.sKt3xS),

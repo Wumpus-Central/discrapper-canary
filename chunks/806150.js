@@ -11,8 +11,8 @@ var l = n(73153),
     f = n(963307),
     A = n(576705),
     S = n(652215);
-let T = new RegExp(/@(:?everyone|here)/);
-function h(e, t) {
+let h = new RegExp(/@(:?everyone|here)/);
+function T(e, t) {
     let n = 0;
     return t.isThread()
         ? (t.memberCount ?? 0)
@@ -23,14 +23,14 @@ function h(e, t) {
 }
 let m = function (e, t) {
         let n = t.getGuildId();
-        return (c()(null != n, "isGuildChannel with null guildId"), h(e, t) > 30 && A.A.can(S.xBc.MENTION_EVERYONE, t));
+        return (c()(null != n, "isGuildChannel with null guildId"), T(e, t) > 30 && A.A.can(S.xBc.MENTION_EVERYONE, t));
     },
     g = function (e, t) {
         for (let n of d.Ay.parsePreprocessor(t, e)) {
             let e = (function e(t) {
                 if ("string" == typeof t.content) {
                     if ("inlineCode" === t.type || "codeBlock" === t.type) return null;
-                    let e = t.content?.match(T);
+                    let e = t.content?.match(h);
                     if (null != e) {
                         let [t] = e;
                         return t;
@@ -53,7 +53,7 @@ let E = [
             if (!n || null == t.getGuildId()) return !1;
             let l = g(e, t);
             if (null == l || !m(l, t)) return !1;
-            let i = h(l, t),
+            let i = T(l, t),
                 r = Math.pow(10, Math.floor(Math.log10(i))),
                 a = x.t["47E5Rz"];
             return (
@@ -82,8 +82,8 @@ function p(e) {
             restrictMentions: d = !0,
             respectCooldown: f = !0,
             hasStickers: A = !1,
-            hasAttachments: T = !1,
-            hasComponents: h = !1,
+            hasAttachments: h = !1,
+            hasComponents: T = !1,
         } = e,
         m = R.Ay.canUseIncreasedMessageLength(s.default.getCurrentUser());
     return new Promise((e) =>
@@ -97,11 +97,11 @@ function p(e) {
                 respectCooldown: d,
                 userCanUsePremiumMessageLength: f,
                 hasStickers: A,
-                hasAttachments: T,
-                hasComponents: h,
+                hasAttachments: h,
+                hasComponents: T,
                 resolve: m,
             } = e;
-            if (0 === s.length && !n.submit?.allowEmptyMessage && !A && !T && !h)
+            if (0 === s.length && !n.submit?.allowEmptyMessage && !A && !h && !T)
                 return void m({ valid: !1, failureReason: S.X8x.EMPTY_MESSAGE });
             let g = f ? S.CS1 : S.uvi;
             if (s.length > g) {
@@ -157,8 +157,8 @@ function p(e) {
             respectCooldown: f,
             userCanUsePremiumMessageLength: m,
             hasStickers: A,
-            hasAttachments: T,
-            hasComponents: h,
+            hasAttachments: h,
+            hasComponents: T,
             resolve: e,
         }),
     );

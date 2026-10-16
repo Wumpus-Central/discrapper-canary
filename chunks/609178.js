@@ -1,4 +1,4 @@
-n.d(t, { A: () => U });
+n.d(t, { A: () => k });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -12,34 +12,34 @@ var i = n(477900),
     f = n(297264),
     E = n(834730),
     I = n(821609),
-    g = n(398590),
-    h = n(523527),
-    A = n(976860),
-    p = n(174459),
+    h = n(398590),
+    g = n(523527),
+    p = n(976860),
+    A = n(174459),
     _ = n(676279),
     N = n(158045),
     C = n(10392),
-    x = n(82498),
-    O = n(732280),
-    S = n(369805),
-    j = n(989790),
-    T = n(632150),
+    S = n(82498),
+    x = n(732280),
+    O = n(369805),
+    T = n(989790),
+    j = n(632150),
     y = n(792656),
-    R = n(202541),
-    b = n(652215),
+    b = n(202541),
+    R = n(652215),
     v = n(259589),
     L = n(105292),
     M = n(237790),
-    D = n(592551),
-    P = n(644242),
+    P = n(592551),
+    D = n(644242),
     w = n(309427);
-function U(e) {
+function k(e) {
     let t,
         {
             title: n,
             description: l,
-            analyticsLocationSection: U,
-            upsellViewedTrackingData: k,
+            analyticsLocationSection: k,
+            upsellViewedTrackingData: U,
             onClose: G,
             onDisplay: F,
             onUpsellClicked: J,
@@ -48,22 +48,22 @@ function U(e) {
             useNitroGradient: B = !1,
         } = e;
     s.useEffect(() => {
-        (p.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, k),
-            (0, C.sq)(b.U7l.PREMIUM_UPSELL_VIEWED, k.location_stack, () =>
-                (0, x.uq)(k.type, k.has_premium_stream_fps, k.has_premium_stream_resolution),
+        (A.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, U),
+            (0, C.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, U.location_stack, () =>
+                (0, S.uq)(U.type, U.has_premium_stream_fps, U.has_premium_stream_resolution),
             ),
             F?.());
-    }, [F, k]);
-    let H = (0, O.V)(),
-        X = s.useCallback(() => (0, N.LE)(H, R.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
-        W = (0, S.A)(R.pe.TIER_2),
-        z = (0, j.O9)();
+    }, [F, U]);
+    let H = (0, x.V)(),
+        X = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
+        W = (0, O.A)(b.pe.TIER_2),
+        z = (0, T.O9)();
     t = V
         ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
             : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
         : (0, _.TM)()
-          ? P.A
+          ? D.A
           : w.A;
     let Z = V || B ? "nitro-pink" : "green";
     return (0, i.jsxs)(i.Fragment, {
@@ -84,7 +84,7 @@ function U(e) {
                                     className: M.hQ,
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: D.headerGraphic,
+                                            className: P.headerGraphic,
                                             children:
                                                 K ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
@@ -107,7 +107,7 @@ function U(e) {
                                     z &&
                                     (0, i.jsx)("div", {
                                         className: M.Zr,
-                                        children: (0, i.jsx)(T.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
+                                        children: (0, i.jsx)(j.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
                                     }),
                             ],
                         }),
@@ -119,22 +119,22 @@ function U(e) {
                                     (0, i.jsx)(I.$, {
                                         variant: "secondary",
                                         onClick: function () {
-                                            (p.default.track(b.HAw.PREMIUM_PROMOTION_OPENED, {
-                                                location_section: U,
-                                                location_object: b.ZSU.NAVIGATION_LINK,
+                                            (A.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
+                                                location_section: k,
+                                                location_object: R.ZSU.NAVIGATION_LINK,
                                             }),
                                                 J?.(),
-                                                (0, h.A)(),
+                                                (0, g.A)(),
                                                 G(),
-                                                (0, g.jH)(),
-                                                (0, A.pX)(b.BVt.APPLICATION_STORE));
+                                                (0, h.jH)(),
+                                                (0, p.pX)(R.BVt.APPLICATION_STORE));
                                         },
                                         text: L.intl.string(L.t.ZnqyZ2),
                                         fullWidth: !0,
                                     }),
                                     (0, i.jsx)(y.A, {
-                                        premiumModalAnalyticsLocation: { section: U, object: b.ZSU.BUTTON_CTA },
-                                        subscriptionTier: R.pe.TIER_2,
+                                        premiumModalAnalyticsLocation: { section: k, object: R.ZSU.BUTTON_CTA },
+                                        subscriptionTier: b.pe.TIER_2,
                                         onClick: () => {
                                             (G(), J?.());
                                         },

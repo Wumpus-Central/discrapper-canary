@@ -194,8 +194,8 @@ var V = n(524007),
     $ = n(652215),
     Q = n(307731),
     Z = n(202541),
-    J = n(211319);
-let X = function (e) {
+    X = n(211319);
+let J = function (e) {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, B.Ay)();
     i.useEffect(() => {
@@ -203,16 +203,16 @@ let X = function (e) {
             (0, G.sq)($.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, H.uq)(Z.e.EMOJI_AUTOCOMPLETE_INLINE)));
     }, [n]);
     let r = (0, l.jsx)("div", {
-        className: J.gm,
+        className: X.gm,
         children: t.slice(0, 3).map((e, t) => {
             if (null == e.id) return null;
             let n = (0, l.jsx)(
                 "div",
                 {
-                    className: J.rT,
+                    className: X.rT,
                     children: (0, l.jsx)("img", {
                         alt: e.name,
-                        className: J.Zg,
+                        className: X.Zg,
                         src: q.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: Q.EMOJI_URL_BASE_SIZE }),
                     }),
                 },
@@ -222,13 +222,13 @@ let X = function (e) {
                 ? n
                 : (0, l.jsx)(
                       K.Ay,
-                      { className: J.j3, mask: K.Ay.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI, children: n },
+                      { className: X.j3, mask: K.Ay.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI, children: n },
                       e.id,
                   );
         }),
     });
     return (0, l.jsxs)(b, {
-        className: J.UX,
+        className: X.UX,
         children: [
             (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: w.intl.format(w.t.uEky42, { count: t.length }) }) }),
             (0, l.jsx)(_, { children: r }),
@@ -551,7 +551,7 @@ class ej extends ep {
 }
 class e_ extends ep {
     renderContent() {
-        return (0, l.jsx)(X, { emojis: this.props.emojis });
+        return (0, l.jsx)(J, { emojis: this.props.emojis });
     }
 }
 class ek extends ep {

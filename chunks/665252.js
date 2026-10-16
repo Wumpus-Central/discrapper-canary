@@ -143,8 +143,8 @@ var L = n(994500),
     $ = n(449054),
     Q = n(158045),
     Z = n(763827),
-    J = n(174459),
-    X = n(652215),
+    X = n(174459),
+    J = n(652215),
     Y = n(202541),
     ee = (((l = {}).HOVER = "hover"), (l.SEE_MORE_DETAILS = "see_more_details"), l);
 let et = new Set();
@@ -155,9 +155,9 @@ function en(e, t) {
 }
 function el(e) {
     let { action: t, guildId: n, channelId: l, echo: i, sourceGuildState: r, analyticsLocations: s } = e;
-    if (!en(`${X.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED}:${t}`, i)) return;
+    if (!en(`${J.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED}:${t}`, i)) return;
     let { sound: a } = i;
-    J.default.track(X.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED, {
+    X.default.track(J.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED, {
         action: t,
         voice_guild_id: n,
         channel_id: l,
@@ -192,7 +192,7 @@ function ea(e) {
         (0, B.Ay)(() => {
             !(function (e) {
                 let { isExternal: t, analyticsLocations: n } = e;
-                J.default.track(X.HAw.PREMIUM_UPSELL_VIEWED, {
+                X.default.track(J.HAw.PREMIUM_UPSELL_VIEWED, {
                     type: Y.e.SOUNDBOARD_ECHO_SOUND_DETAILS_UPSELL,
                     is_external: t,
                     location_stack: n,
@@ -547,9 +547,9 @@ function eE(e) {
             d ||
             (function (e) {
                 let { guildId: t, channelId: n, echo: l, analyticsLocations: i } = e;
-                if (!en(X.HAw.SOUNDBOARD_ECHO_VIEWED, l)) return;
+                if (!en(J.HAw.SOUNDBOARD_ECHO_VIEWED, l)) return;
                 let { sound: r, authorId: s } = l;
-                J.default.track(X.HAw.SOUNDBOARD_ECHO_VIEWED, {
+                X.default.track(J.HAw.SOUNDBOARD_ECHO_VIEWED, {
                     voice_guild_id: t,
                     channel_id: n,
                     sound_id: r.soundId,

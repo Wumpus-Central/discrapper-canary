@@ -270,8 +270,8 @@ var W = n(666860),
     $ = n(702483),
     Q = n(490682),
     Z = n(683167),
-    J = n(284009),
-    X = n.n(J),
+    X = n(284009),
+    J = n.n(X),
     Y = n(235599),
     ee = n(407315),
     et = n(2368),
@@ -421,7 +421,7 @@ function eS(e) {
             onTab: M,
             onEnter: U,
             onSpace: V,
-            onSubmit: J,
+            onSubmit: X,
             onSubmitFailure: ea,
             maybeShowAutocomplete: ed,
             hideAutocomplete: eh,
@@ -540,8 +540,8 @@ function eS(e) {
                 (F._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), ea?.());
                 return;
             }
-            J?.((0, H.WO)(q.VW.richValue(eB), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
-        }, [g.id, eB, J, ea, eK, eC]);
+            X?.((0, H.WO)(q.VW.richValue(eB), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
+        }, [g.id, eB, X, ea, eK, eC]);
     (i.useImperativeHandle(
         c,
         () => ({
@@ -666,7 +666,7 @@ function eS(e) {
                 K.o.withSingleEntry(eB, () => {
                     var t, l, i;
                     let r = q.VW.getSelectedParentOfType(eB, [e]);
-                    (X()(null != r, `Cannot replace inline input of type ${e} when none is selected`),
+                    (J()(null != r, `Cannot replace inline input of type ${e} when none is selected`),
                         z.b.removeNodes(eB, { at: r[1] }),
                         (t = eB),
                         (l = n),
@@ -852,7 +852,7 @@ function eS(e) {
             }
             return (E.A.addChangeListener(e), () => E.A.removeChangeListener(e));
         }, [g, eB, eK]));
-    let eJ = i.useCallback(
+    let eX = i.useCallback(
             (e) => [
                 ...(0, Q.A)(eB, e, g.guild_id),
                 ...(0, $.A)(eB, e),
@@ -876,7 +876,7 @@ function eS(e) {
             ],
             [eB, g],
         ),
-        eX = i.useCallback(
+        eJ = i.useCallback(
             (e) => {
                 let t = (function (e, t, n) {
                     let { attributes: i, children: r, element: s } = t;
@@ -961,8 +961,8 @@ function eS(e) {
                     onPaste: eq,
                     onKeyDown: eH,
                     onKeyUp: ez,
-                    decorate: eJ,
-                    renderExtraElement: eX,
+                    decorate: eX,
+                    renderExtraElement: eJ,
                     renderExtraLeaf: eY,
                     "aria-owns": eN,
                     "aria-haspopup": eT,

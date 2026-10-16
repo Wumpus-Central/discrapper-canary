@@ -1,46 +1,46 @@
-n.d(t, { Au: () => f, d5: () => h, j7: () => m, kS: () => _, l6: () => g });
-var i = n(684013),
-    o = n(296027),
-    r = n(233741),
-    s = n(19575),
+n.d(t, { Au: () => f, d5: () => g, j7: () => A, kS: () => p, l6: () => E });
+var o = n(684013),
+    r = n(296027),
+    s = n(233741),
+    i = n(19575),
     l = n(350535),
-    a = n(636401),
-    c = n(90924),
-    u = n(613057),
-    d = n(652215);
-let p = ["207646673902501888"];
-function _(e) {
-    return null != e && !!o.default.isOverlayOOPEnabledForPid(e) && r.A.isReady(e);
+    c = n(636401),
+    a = n(90924),
+    d = n(613057),
+    u = n(652215);
+let h = ["207646673902501888"];
+function p(e) {
+    return null != e && !!r.default.isOverlayOOPEnabledForPid(e) && s.A.isReady(e);
 }
-function h(e) {
+function g(e) {
     return null == e
-        ? { lock: d.FXj, context: d.BRT.APP }
-        : _(e)
-          ? (i.A.setInputLocked(!1, e),
+        ? { lock: u.FXj, context: u.BRT.APP }
+        : p(e)
+          ? (o.A.setInputLocked(!1, e),
             {
                 lock() {
-                    i.A.setInputLocked(!0, e);
+                    o.A.setInputLocked(!0, e);
                 },
-                context: d.BRT.POPOUT,
+                context: u.BRT.POPOUT,
             })
-          : (s.Ay.focus(null, !0),
+          : (i.Ay.focus(null, !0),
             {
                 lock() {
-                    s.Ay.setForegroundProcess(e);
+                    i.Ay.setForegroundProcess(e);
                 },
-                context: d.BRT.APP,
+                context: u.BRT.APP,
             });
 }
-let m = async (e, t, n) => {
-        if (((0, c.sq)(e, t), (null == n || "" === n) && (0, c.IR)(t)))
-            return ((e.authorization.scopes = new Set([u.LQ, u.kw])), Promise.resolve());
+let A = async (e, t, n) => {
+        if (((0, a.sq)(e, t), (null == n || "" === n) && (0, a.IR)(t)))
+            return ((e.authorization.scopes = new Set([d.LQ, d.kw])), Promise.resolve());
         if (null == n || "" === n)
-            return Promise.reject(new a.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
-        let i = s.Ay.releaseChannel !== d.BIo.CANARY && !p.includes(n) && e.transport !== u.z4.POST_MESSAGE;
-        return (await (0, c.e2)(n, i, e.abortController.signal), (0, c.uM)(e, n, t));
+            return Promise.reject(new c.A({ closeCode: u.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
+        let o = i.Ay.releaseChannel !== u.BIo.CANARY && !h.includes(n) && e.transport !== d.z4.POST_MESSAGE;
+        return (await (0, a.e2)(n, o, e.abortController.signal), (0, a.uM)(e, n, t));
     },
-    g = () =>
-        (0, c.BB)((e) => {
+    E = () =>
+        (0, a.BB)((e) => {
             let t = [];
             return (
                 null != e.modeOptions.shortcut &&
@@ -54,7 +54,7 @@ let m = async (e, t, n) => {
             );
         }),
     f = (e) =>
-        (0, c.Ub)(e, (e) => {
+        (0, a.Ub)(e, (e) => {
             let t = "";
             return (
                 null != e.modeOptions.shortcut &&

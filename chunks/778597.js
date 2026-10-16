@@ -1,21 +1,21 @@
 n.d(t, { A: () => o });
 var i = n(17928),
-    l = n(73153);
+    r = n(73153);
 let a = {};
-function s(e) {
+function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return a[e] ?? t;
 }
-class r extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "VoiceChannelAppStore";
     isAppVisible(e, t) {
-        return t && s(e, t);
+        return t && l(e, t);
     }
 }
-let o = new r(l.h, {
+let o = new u(r.h, {
     VOICE_CHANNEL_APP_SURFACE_TOGGLE: function (e) {
         let { channelId: t } = e;
-        a[t] = !s(t);
+        a[t] = !l(t);
     },
     VOICE_CHANNEL_APP_CLOSE: function (e) {
         let { channelId: t } = e;

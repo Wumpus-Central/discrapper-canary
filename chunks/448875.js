@@ -1,27 +1,27 @@
-(n.d(t, { Z: () => S, d: () => w }), n(938796));
+(n.d(t, { Z: () => w, d: () => S }), n(938796));
 var i = n(155718),
     o = n(46054),
     r = n(763754),
-    s = n(889227),
+    a = n(889227),
     l = n(734057),
-    a = n(994500),
+    s = n(994500),
     c = n(287809),
     u = n(403362),
     d = n(130946),
     p = n(639621),
     _ = n(652215);
-function h(e) {
+function m(e) {
     return (
         "customEmoji" === e.type && (e.type = "emoji"),
         "emoji" === e.type && e.src && (e.src = (0, d.A)(e.src)),
-        Array.isArray(e.content) && (e.content = e.content.map(h)),
+        Array.isArray(e.content) && (e.content = e.content.map(m)),
         e
     );
 }
-function m(e) {
+function h(e) {
     if (null != e) return { id: e.id, name: e.name, animated: e.animated };
 }
-function g(e) {
+function y(e) {
     return {
         url: e.url,
         proxy_url: e.proxyUrl,
@@ -45,12 +45,12 @@ function f(e) {
         max_values: e.maxValues,
     };
 }
-function A(e) {
+function I(e) {
     return e
         ?.map(function e(t) {
             switch (t.type) {
                 case i.I5.ACTION_ROW:
-                    return { type: t.type, components: A(t.components) };
+                    return { type: t.type, components: I(t.components) };
                 case i.I5.BUTTON:
                     return {
                         type: t.type,
@@ -59,7 +59,7 @@ function A(e) {
                         style: t.style,
                         label: t.label,
                         url: t.url,
-                        emoji: m(t.emoji),
+                        emoji: h(t.emoji),
                         sku_id: t.skuId,
                     };
                 case i.I5.STRING_SELECT:
@@ -71,7 +71,7 @@ function A(e) {
                             value: e.value,
                             default: e.default,
                             description: e.description,
-                            emoji: m(e.emoji),
+                            emoji: h(e.emoji),
                         })),
                     };
                 case i.I5.USER_SELECT:
@@ -81,22 +81,22 @@ function A(e) {
                 case i.I5.CHANNEL_SELECT:
                     return { type: t.type, ...f(t), channel_types: t.channelTypes, default_values: t.defaultValues };
                 case i.I5.SECTION:
-                    return { type: t.type, components: A(t.components), accessory: e(t.accessory) };
+                    return { type: t.type, components: I(t.components), accessory: e(t.accessory) };
                 case i.I5.TEXT_DISPLAY:
                     return { type: t.type, content: t.content };
                 case i.I5.THUMBNAIL:
-                    return { type: t.type, media: g(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
+                    return { type: t.type, media: y(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
                 case i.I5.MEDIA_GALLERY:
                     return {
                         type: t.type,
                         items: t.items.map((e) => ({
-                            media: g(e.media),
+                            media: y(e.media),
                             description: e.description,
                             spoiler: e.spoiler ?? !1,
                         })),
                     };
                 case i.I5.FILE:
-                    return { type: t.type, file: g(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
+                    return { type: t.type, file: y(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
                 case i.I5.SEPARATOR:
                     return { type: t.type, divider: t.divider, spacing: t.spacing };
                 case i.I5.CONTENT_INVENTORY_ENTRY:
@@ -106,7 +106,7 @@ function A(e) {
                         type: t.type,
                         accent_color: t.accentColor,
                         spoiler: t.spoiler,
-                        components: A(t.components),
+                        components: I(t.components),
                     };
                 case i.I5.TEXT_INPUT:
                 case i.I5.LABEL:
@@ -121,7 +121,7 @@ function A(e) {
         })
         .filter(u.Vq);
 }
-function y(e) {
+function A(e) {
     if (null != e)
         return {
             url: e.url,
@@ -135,7 +135,7 @@ function y(e) {
             content_type: e.contentType,
         };
 }
-function I(e) {
+function g(e) {
     let t = (e.type === _.Auw.ARTICLE || e.type === _.Auw.IMAGE) && null == e.images,
         n = t ? e.image : e.thumbnail,
         i = t ? void 0 : e.image;
@@ -156,35 +156,35 @@ function I(e) {
             if (null != e) return { name: e.name, url: e.url, icon_url: e.iconURL, proxy_icon_url: e.iconProxyURL };
         })(e.author),
         provider: e.provider,
-        thumbnail: y(n),
-        image: y(i),
-        video: y(e.video),
+        thumbnail: A(n),
+        image: A(i),
+        video: A(e.video),
         footer: (function (e) {
             if (null != e) return { text: e.text, icon_url: e.iconURL, proxy_icon_url: e.iconProxyURL };
         })(e.footer),
         reference_id: e.referenceId,
-        components: A(e.components),
+        components: I(e.components),
     };
 }
 function v(e) {
     return e.map((e) => ({ ...e, emoji: { ...e.emoji, id: e.emoji.id ?? null } }));
 }
 function E(e, t, n) {
-    let i = null != t ? o.A.parseToAST(t, !0, { channelId: e }).map(h) : [],
-        s = null != e ? l.A.getChannel(e) : void 0,
-        a = null != n ? (0, r.FT)(n, s) : void 0;
-    return { content_parsed: i.length ? i : void 0, nick: a?.nick, author_color: a?.colorString };
+    let i = null != t ? o.A.parseToAST(t, !0, { channelId: e }).map(m) : [],
+        a = null != e ? l.A.getChannel(e) : void 0,
+        s = null != n ? (0, r.FT)(n, a) : void 0;
+    return { content_parsed: i.length ? i : void 0, nick: s?.nick, author_color: s?.colorString };
 }
 function C(e) {
     return {
         ...e,
-        user: (0, p.A)(new s.A(e.user)),
-        target_user: "target_user" in e && null != e.target_user ? (0, p.A)(new s.A(e.target_user)) : void 0,
+        user: (0, p.A)(new a.A(e.user)),
+        target_user: "target_user" in e && null != e.target_user ? (0, p.A)(new a.A(e.target_user)) : void 0,
         triggering_interaction_metadata:
             "triggering_interaction_metadata" in e ? C(e.triggering_interaction_metadata) : void 0,
     };
 }
-function S(e) {
+function w(e) {
     return {
         id: e.id,
         channel_id: e.channel_id,
@@ -204,9 +204,9 @@ function S(e) {
         attachments: e.attachments,
         embeds: e.embeds.flatMap((e) => {
             let t = (e.images ?? []).filter((t) => t !== e.image);
-            return [I(e), ...t.map((t) => I({ id: e.id, type: _.Auw.RICH, url: e.url, image: t }))];
+            return [g(e), ...t.map((t) => g({ id: e.id, type: _.Auw.RICH, url: e.url, image: t }))];
         }),
-        components: A(e.components),
+        components: I(e.components),
         reactions: v(
             e.reactions
                 .filter((e) => e.count_details?.vote == null)
@@ -251,8 +251,8 @@ function S(e) {
         ...E(e.channel_id, e.content, e.author),
     };
 }
-function w(e) {
-    let t = null != e.author ? new s.A(e.author) : void 0;
+function S(e) {
+    let t = null != e.author ? new a.A(e.author) : void 0;
     return {
         id: e.id,
         channel_id: e.channel_id,
@@ -263,7 +263,7 @@ function w(e) {
         edited_timestamp: e.edited_timestamp,
         tts: e.tts,
         mention_everyone: e.mention_everyone,
-        mentions: e.mentions?.map((e) => (0, p.A)(new s.A(e))),
+        mentions: e.mentions?.map((e) => (0, p.A)(new a.A(e))),
         mention_roles: e.mention_roles,
         mention_channels: e.mention_channels,
         attachments: e.attachments,
@@ -283,7 +283,7 @@ function w(e) {
         poll: e.poll,
         interaction_metadata: null != e.interaction_metadata ? C(e.interaction_metadata) : void 0,
         role_subscription_data: e.role_subscription_data,
-        blocked: null != t ? a.A.isBlockedForMessage(e) : void 0,
+        blocked: null != t ? s.A.isBlockedForMessage(e) : void 0,
         ...E(e.channel_id, e.content, t),
     };
 }

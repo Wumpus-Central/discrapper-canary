@@ -1,4 +1,4 @@
-n.d(t, { Bv: () => C, ar: () => g, f9: () => N, g5: () => _, k0: () => x, k5: () => h, nf: () => p });
+n.d(t, { Bv: () => C, ar: () => h, f9: () => N, g5: () => _, k0: () => S, k5: () => g, nf: () => A });
 var i = n(582128),
     s = n(536637),
     l = n.n(s),
@@ -12,20 +12,20 @@ var i = n(582128),
     f = n(724651),
     E = n(732280),
     I = n(202541);
-function g() {
+function h() {
     let e = (0, E.V)(),
         t = (0, c.QQ)(),
         n = (0, f.O)(),
         i = (0, f.p)(),
-        s = h();
+        s = g();
     return null != e || t || null != n || null != i || s;
 }
-let h = () => {
+let g = () => {
     let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
         t = e?.metadata?.active_discount_expires_at;
     return null != t && l()(Date.now()) <= l()(t);
 };
-function A(e) {
+function p(e) {
     switch (e) {
         case I.q:
         case I.lj:
@@ -58,9 +58,9 @@ function A(e) {
             return;
     }
 }
-function p() {
+function A() {
     let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription());
-    return A(e?.metadata?.active_discount_id);
+    return p(e?.metadata?.active_discount_id);
 }
 function _(e) {
     let t = (0, m.A)(I.q),
@@ -73,7 +73,7 @@ function _(e) {
         E = t ?? n ?? s ?? l ?? null;
     if (null != E) return { churnUserDiscountOffer: E, isFetchingChurnDiscountOffer: !1 };
     if (e) return { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o };
-    function g() {
+    function h() {
         (a(!0), c(!1));
     }
     return (
@@ -82,17 +82,17 @@ function _(e) {
             (c(!0),
             (0, d.qz)()
                 .then((e) => {
-                    (f(e), g());
+                    (f(e), h());
                 })
                 .catch((e) => {
-                    g();
+                    h();
                 })),
         { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o }
     );
 }
 function N() {
     let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
-        t = h(),
+        t = g(),
         n = null !== e && e.hasPremiumNitroMonthly,
         i = !!e?.hasActiveTrial;
     return n && !t && !i;
@@ -101,10 +101,10 @@ function C(e) {
     for (let t of e.invoiceItems) {
         let e = t.discounts.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN);
         if (e?.discount_id != null && I.i_.includes(e.discount_id))
-            return { duration: A(e.discount_id)?.duration, percentage: e.percentage_amount, discountId: e.discount_id };
+            return { duration: p(e.discount_id)?.duration, percentage: e.percentage_amount, discountId: e.discount_id };
     }
     return null;
 }
-function x() {
+function S() {
     return (0, u.ds)();
 }

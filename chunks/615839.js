@@ -1,4 +1,4 @@
-n.d(t, { C7: () => o, MB: () => i, Us: () => d, nY: () => r });
+n.d(t, { C7: () => o, MB: () => i, Us: () => u, nY: () => r });
 var l = n(261425),
     a = n(105292);
 function i(e) {
@@ -29,7 +29,7 @@ function o(e) {
           ? a.intl.formatToPlainString(l.default["/D79R7"], { minutes: n, seconds: i })
           : a.intl.formatToPlainString(l.default.KrqS00, { seconds: i });
 }
-function d(e) {
+function u(e) {
     let { hours: t, minutes: n } = s(e);
     return t > 0
         ? a.intl.formatToPlainString(l.default.HEBIhT, { hours: t, minutes: n })
