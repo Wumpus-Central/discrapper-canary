@@ -1,33 +1,37 @@
-n.d(t, { v: () => g });
+n.d(t, { v: () => N });
 var i = n(477900);
 n(582128);
 var r = n(646865),
     a = n(795816),
-    s = n(47294),
-    l = n(688810),
-    o = n(429913),
-    d = n(384059),
-    c = n(235986),
-    u = n(267102),
-    _ = n(447404),
-    E = n(271195),
-    A = n(128286),
-    h = n(625180),
-    f = n(262579),
-    I = n(165610),
-    p = n(652215),
-    T = n(977747),
-    m = n(967481);
-function g(e) {
-    let { frame: t, idle: g, onMouseDown: S, onMouseMove: N, onMouseLeave: C } = e,
-        O = (0, o.h)(t.applicationId),
-        R = (0, u.Us)() === p.BRT.POPOUT,
-        { parentAnalyticsLocation: L } = (0, l.Ay)();
-    function y() {
-        h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: I.y0.FOCUSED });
+    s = n(277344),
+    l = n(47294),
+    o = n(688810),
+    d = n(429913),
+    c = n(384059),
+    u = n(235986),
+    _ = n(267102),
+    E = n(447404),
+    A = n(271195),
+    h = n(128286),
+    f = n(625180),
+    I = n(262579),
+    p = n(746726),
+    T = n(165610),
+    m = n(652215),
+    g = n(977747),
+    S = n(967481);
+function N(e) {
+    let { frame: t, idle: N, onMouseDown: C, onMouseMove: O, onMouseLeave: R } = e,
+        L = (0, d.h)(t.applicationId),
+        y = (0, p.A)(t),
+        D = (0, _.Us)() === m.BRT.POPOUT,
+        { parentAnalyticsLocation: v } = (0, o.Ay)();
+    function b() {
+        (y.isShownInCall && null != y.channelId && null != y.participantId && (0, s.A)(y.channelId, y.participantId),
+            f.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: T.y0.FOCUSED }));
     }
-    async function D() {
-        if (t.intent !== I.sV.INLINE) return void y();
+    async function M() {
+        if (t.intent !== T.sV.INLINE) return void b();
         let { returnToConjureFrameSurface: e } = await Promise.all([
             n.e("644013"),
             n.e("896691"),
@@ -122,47 +126,47 @@ function g(e) {
             n.e("584605"),
             n.e("805095"),
         ]).then(n.bind(n, 801914));
-        e(t) || y();
+        e(t) || b();
     }
     return (0, i.jsxs)("div", {
-        className: m._v,
-        onMouseMove: N,
-        onMouseDown: S,
-        onMouseLeave: C,
+        className: S._v,
+        onMouseMove: O,
+        onMouseDown: C,
+        onMouseLeave: R,
         children: [
             (0, i.jsx)("div", {
-                className: m.K1,
-                children: (0, i.jsx)(E.X, {
-                    idle: g,
-                    title: O?.name ?? "",
-                    onJumpToChannel: D,
-                    preventIdleComponent: _.A,
+                className: S.K1,
+                children: (0, i.jsx)(A.X, {
+                    idle: N,
+                    title: L?.name ?? "",
+                    onJumpToChannel: M,
+                    preventIdleComponent: E.A,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: m.q6,
-                children: (0, i.jsxs)(c.A, {
+                className: S.q6,
+                children: (0, i.jsxs)(u.A, {
                     grow: 1,
                     shrink: 1,
-                    justify: c.A.Justify.END,
-                    align: c.A.Align.CENTER,
+                    justify: u.A.Justify.END,
+                    align: u.A.Align.CENTER,
                     children: [
-                        R || (0, r.f)()
+                        D || (0, r.f)()
                             ? null
-                            : (0, i.jsx)(A.A, {
-                                  className: T.BD,
+                            : (0, i.jsx)(h.A, {
+                                  className: g.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      ((0, d.X)(L, d.O.POPOUT, !0),
-                                          (0, s.A)({
+                                      ((0, c.X)(v, c.O.POPOUT, !0),
+                                          (0, l.A)({
                                               onConfirm: async () => {
-                                                  (await h.A.refreshProxyTicket(t.id), (0, a.jp)());
+                                                  (await f.A.refreshProxyTicket(t.id), (0, a.jp)());
                                               },
                                           }));
                                   },
-                                  onClosePopout: p.FXj,
+                                  onClosePopout: m.FXj,
                               }),
-                        (0, i.jsx)(f.A, { frameId: t.id, className: T.BD }),
+                        (0, i.jsx)(I.A, { frameId: t.id, className: g.BD }),
                     ],
                 }),
             }),

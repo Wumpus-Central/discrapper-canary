@@ -15,7 +15,7 @@ var i = n(17928),
     A = n(956753),
     p = n(652215);
 let m = Number.MAX_SAFE_INTEGER,
-    I = new l.J(
+    E = new l.J(
         function (e) {
             return [e.tab];
         },
@@ -23,7 +23,7 @@ let m = Number.MAX_SAFE_INTEGER,
             return e.sortKey;
         },
     ),
-    E = new Set(Object.values(C.x)),
+    I = new Set(Object.values(C.x)),
     S = new Map(),
     _ = !1;
 function N(e, t, n) {
@@ -168,10 +168,10 @@ function P(e, t) {
 }
 function b(e) {
     let { pruneInvalid: t } = e,
-        n = new Set(I.values().map((e) => e.rowId)),
+        n = new Set(E.values().map((e) => e.rowId)),
         i = D(),
         l = !1;
-    for (let e of E) {
+    for (let e of I) {
         let r = L(e);
         for (let [s, a] of r.entries()) {
             let o = y(e, s),
@@ -185,35 +185,35 @@ function b(e) {
             switch ((n.delete(o), u.kind)) {
                 case "BUILT": {
                     let e = u.row,
-                        t = I.get(e.rowId);
-                    (null == t || P(t, e)) && (l = I.set(e.rowId, e) || l);
+                        t = E.get(e.rowId);
+                    (null == t || P(t, e)) && (l = E.set(e.rowId, e) || l);
                     break;
                 }
                 case "NOT_READY_YET":
-                    l = I.delete(o) || l;
+                    l = E.delete(o) || l;
                     break;
                 case "INVALID":
-                    (r.delete(s), (l = !0), (l = I.delete(o) || l));
+                    (r.delete(s), (l = !0), (l = E.delete(o) || l));
                     break;
                 default:
                     return u;
             }
         }
     }
-    for (let e of n) l = I.delete(e) || l;
+    for (let e of n) l = E.delete(e) || l;
     return l;
 }
-function V(e, t) {
+function j(e, t) {
     let n = L(e).delete(t),
-        i = I.delete(y(e, t));
+        i = E.delete(y(e, t));
     return n || i;
 }
-function j(e) {
+function V(e) {
     let { tab: t, targetId: n, pruneInvalid: i, guildAffinityNormalizationMax: l } = e,
         r = L(t),
         s = r.get(n),
         a = y(t, n);
-    if (null == s) return I.delete(a);
+    if (null == s) return E.delete(a);
     let o = U({
         tab: t,
         targetId: n,
@@ -224,13 +224,13 @@ function j(e) {
     switch (o.kind) {
         case "BUILT": {
             let e = o.row,
-                t = I.get(e.rowId);
-            return !!(null == t || P(t, e)) && I.set(e.rowId, e);
+                t = E.get(e.rowId);
+            return !!(null == t || P(t, e)) && E.set(e.rowId, e);
         }
         case "NOT_READY_YET":
-            return I.delete(a);
+            return E.delete(a);
         case "INVALID":
-            return (i && r.delete(n), I.delete(a));
+            return (i && r.delete(n), E.delete(a));
         default:
             return o;
     }
@@ -238,13 +238,13 @@ function j(e) {
 function F(e, t) {
     let { pruneInvalid: n } = t,
         i = L(e);
-    if (0 === i.size && 0 === I.values(e).length) return !1;
+    if (0 === i.size && 0 === E.values(e).length) return !1;
     let l = D(),
         r = !1,
         s = new Set();
     for (let t of i.keys())
-        (s.add(y(e, t)), (r = j({ tab: e, targetId: t, pruneInvalid: n, guildAffinityNormalizationMax: l }) || r));
-    for (let t of I.values(e)) s.has(t.rowId) || (r = I.delete(t.rowId) || r);
+        (s.add(y(e, t)), (r = V({ tab: e, targetId: t, pruneInvalid: n, guildAffinityNormalizationMax: l }) || r));
+    for (let t of E.values(e)) s.has(t.rowId) || (r = E.delete(t.rowId) || r);
     return r;
 }
 function G(e, t) {
@@ -255,7 +255,7 @@ function G(e, t) {
         r = !1;
     for (let t of i.keys())
         o.A.getDMFromUserId(t) === e &&
-            (r = j({ tab: C.x.FRIENDS, targetId: t, pruneInvalid: n, guildAffinityNormalizationMax: l }) || r);
+            (r = V({ tab: C.x.FRIENDS, targetId: t, pruneInvalid: n, guildAffinityNormalizationMax: l }) || r);
     return r;
 }
 function H(e) {
@@ -264,7 +264,7 @@ function H(e) {
         i = !1;
     return (
         L(C.x.MESSAGES).has(e) &&
-            (i = j({ tab: C.x.MESSAGES, targetId: e, pruneInvalid: t, guildAffinityNormalizationMax: n }) || i),
+            (i = V({ tab: C.x.MESSAGES, targetId: e, pruneInvalid: t, guildAffinityNormalizationMax: n }) || i),
         (i = G(e, { pruneInvalid: t }) || i)
     );
 }
@@ -277,8 +277,8 @@ class Z extends i.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(o.A, u.A, d.A, c.A, h.Ay, f.A, s.A, g.default),
             (function (e) {
-                ((S = new Map()), I.clear());
-                for (let t of E)
+                ((S = new Map()), E.clear());
+                for (let t of I)
                     (function (e, t) {
                         let n = (function (e, t) {
                                 if (null == e) return [];
@@ -314,10 +314,10 @@ class Z extends i.Ay.PersistedStore {
         };
     }
     getFavoriteTargetIdsForTab(e) {
-        return [I.values(e).map((e) => e.targetId), I.version];
+        return [E.values(e).map((e) => e.targetId), E.version];
     }
     isFavorite(e, t) {
-        return [L(e).has(t), I.version];
+        return [L(e).has(t), E.version];
     }
 }
 function B(e) {
@@ -332,7 +332,7 @@ let W = new Z(
                   let t = y(e.tab, e.targetId);
                   if (!e.isFavorite) {
                       let n = L(e.tab).delete(e.targetId),
-                          i = I.delete(t);
+                          i = E.delete(t);
                       return n || i;
                   }
                   let n = M(e.addedTimestampMs ?? L(e.tab).get(e.targetId)?.addedTimestampMs ?? Date.now()),
@@ -349,15 +349,15 @@ let W = new Z(
                   switch (r.kind) {
                       case "BUILT": {
                           let e = r.row,
-                              t = I.get(e.rowId);
-                          (null == t || P(t, e)) && I.set(e.rowId, e);
+                              t = E.get(e.rowId);
+                          (null == t || P(t, e)) && E.set(e.rowId, e);
                           break;
                       }
                       case "NOT_READY_YET":
-                          I.delete(t);
+                          E.delete(t);
                           break;
                       case "INVALID":
-                          (i.delete(e.targetId), I.delete(t));
+                          (i.delete(e.targetId), E.delete(t));
                           break;
                       default:
                           return r;
@@ -379,7 +379,7 @@ let W = new Z(
                       null != e &&
                           t.has(e) &&
                           (i =
-                              j({ tab: C.x.FRIENDS, targetId: e, pruneInvalid: _, guildAffinityNormalizationMax: n }) ||
+                              V({ tab: C.x.FRIENDS, targetId: e, pruneInvalid: _, guildAffinityNormalizationMax: n }) ||
                               i);
                   }
                   return i;
@@ -394,7 +394,7 @@ let W = new Z(
                       null != e &&
                           t.has(e) &&
                           (i =
-                              j({ tab: C.x.FRIENDS, targetId: e, pruneInvalid: _, guildAffinityNormalizationMax: n }) ||
+                              V({ tab: C.x.FRIENDS, targetId: e, pruneInvalid: _, guildAffinityNormalizationMax: n }) ||
                               i);
                   }
                   return i;
@@ -420,7 +420,7 @@ let W = new Z(
                       null != e &&
                           (l.has(e) &&
                               (i =
-                                  j({
+                                  V({
                                       tab: C.x.MESSAGES,
                                       targetId: e,
                                       pruneInvalid: t,
@@ -428,7 +428,7 @@ let W = new Z(
                                   }) || i),
                           r.has(e) &&
                               (i =
-                                  j({
+                                  V({
                                       tab: C.x.VOICE,
                                       targetId: e,
                                       pruneInvalid: t,
@@ -443,22 +443,22 @@ let W = new Z(
                   if (null == t) return !1;
                   let n = !1;
                   return (
-                      (n = V(C.x.MESSAGES, t) || n), (n = V(C.x.VOICE, t) || n), (n = G(t, { pruneInvalid: _ }) || n)
+                      (n = j(C.x.MESSAGES, t) || n), (n = j(C.x.VOICE, t) || n), (n = G(t, { pruneInvalid: _ }) || n)
                   );
               }),
               RELATIONSHIP_ADD: B(function (e) {
                   let t = e.relationship?.id;
                   if (null == t || !L(C.x.FRIENDS).has(t)) return !1;
                   let n = D();
-                  return j({ tab: C.x.FRIENDS, targetId: t, pruneInvalid: _, guildAffinityNormalizationMax: n });
+                  return V({ tab: C.x.FRIENDS, targetId: t, pruneInvalid: _, guildAffinityNormalizationMax: n });
               }),
               RELATIONSHIP_REMOVE: B(function (e) {
                   let t = e.relationship?.id;
-                  return null != t && V(C.x.FRIENDS, t);
+                  return null != t && j(C.x.FRIENDS, t);
               }),
               LOGOUT: B(function () {
-                  let e = I.size() > 0 || S.size > 0;
-                  return (I.clear(), (S = new Map()), (_ = !1), e);
+                  let e = E.size() > 0 || S.size > 0;
+                  return (E.clear(), (S = new Map()), (_ = !1), e);
               }),
           },
 );

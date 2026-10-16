@@ -227,7 +227,7 @@ let eT = l.memo(function (e) {
         R = l.useRef(null),
         M = l.useCallback(
             () =>
-                o?.type === ep.lp.ACTIVITY && o.applicationId === a?.applicationId
+                o?.type === ep.lp.ACTIVITY && (null != o.frameId || o.applicationId === a?.applicationId)
                     ? "ACTIVITY"
                     : j || y
                       ? "STREAM"
@@ -282,7 +282,15 @@ let eT = l.memo(function (e) {
                     let c = { isTrayButton: !1, centerButton: !0, popoutOpen: e };
                     switch (D) {
                         case "ACTIVITY":
-                            if (null == o || null == n || o.type !== ep.lp.ACTIVITY || null == a) return;
+                            if (null == o || null == n || o.type !== ep.lp.ACTIVITY) return;
+                            if (null != o.frameId)
+                                return (0, i.jsx)(W.A, {
+                                    ...c,
+                                    frameId: o.frameId,
+                                    color: "disconnect",
+                                    onPopoutClick: N.length > 0 ? l : null,
+                                });
+                            if (null == a) return;
                             return (0, i.jsx)(W.A, {
                                 ...c,
                                 applicationId: o.applicationId,

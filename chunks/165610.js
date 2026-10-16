@@ -1,9 +1,10 @@
 n.d(t, {
     HD: () => h,
     VA: () => A,
+    VZ: () => p,
     Yf: () => E,
     ZN: () => u,
-    ny: () => p,
+    ny: () => T,
     sV: () => _,
     sd: () => c,
     x1: () => f,
@@ -63,5 +64,8 @@ function I(e) {
     return f(e) ? e.data.hostWindowKey : e.hostWindowKey;
 }
 function p(e) {
+    return e?.surface.type === l.U.MAIN ? e.surface.channelId : void 0;
+}
+function T(e) {
     return f(e) ? e : null;
 }
