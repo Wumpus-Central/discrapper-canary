@@ -3441,7 +3441,7 @@ class s_ extends nB {
         (this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose());
         let { channel: e } = this.props,
             t = e.getGuildId();
-        (iU.A.preload(t ?? H.ME, e.id), (0, l3.P)(e.id));
+        (iU.A.preload(t ?? H.ME, e.id), (0, l3.P9)(e.id));
     };
     renderPopout = (e) => {
         let { channel: t, sorting: n, embeddedApps: i, channelIsContentGated: l } = this.props,

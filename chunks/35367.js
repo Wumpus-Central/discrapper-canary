@@ -91,7 +91,7 @@ function F(e) {
         }, [F, n, M]),
         r.useEffect(() => {
             L &&
-                (0, A.w)(F) &&
+                (0, A.wY)(F) &&
                 f.A.launchFrame({
                     applicationId: a,
                     surface: b,
