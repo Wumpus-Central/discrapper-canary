@@ -1073,7 +1073,7 @@ function tB(e) {
                                     (0, s.jsx)(to.A, { guild: t, size: 16 }),
                                     (0, s.jsx)(tr.D, {
                                         className: tW.J5,
-                                        variant: "heading-md/semibold",
+                                        variant: "heading-sm/semibold",
                                         color: "text-default",
                                         children: t.name,
                                     }),
@@ -1081,10 +1081,9 @@ function tB(e) {
                             }),
                             !(0, td.uJ)(t.description) &&
                                 (0, s.jsx)(W.E, {
-                                    className: tW.h_,
-                                    variant: "text-sm/medium",
+                                    variant: "text-xs/normal",
                                     color: "text-muted",
-                                    lineClamp: 2,
+                                    lineClamp: 1,
                                     children: t.description,
                                 }),
                         ],
@@ -1109,11 +1108,7 @@ function tX(e) {
             (0, s.jsx)(tg, { className: tz.VR }),
             (0, s.jsxs)("div", {
                 className: tz.hG,
-                children: [
-                    (0, s.jsx)(tg, { className: tz.t_ }),
-                    (0, s.jsx)(tg, { className: tz.Aj }),
-                    (0, s.jsx)(tg, { className: tz.ax }),
-                ],
+                children: [(0, s.jsx)(tg, { className: tz.t_ }), (0, s.jsx)(tg, { className: tz.Aj })],
             }),
             (0, s.jsx)(tg, { className: tz.Ah }),
         ],

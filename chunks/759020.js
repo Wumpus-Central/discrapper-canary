@@ -5,5 +5,4 @@ e.exports = {
     YS: "guildNameContainer__14a18",
     J5: "guildName__14a18",
     Rn: "memberCounts__14a18",
-    h_: "description__14a18",
 };

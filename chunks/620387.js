@@ -12,5 +12,4 @@ e.exports = {
     t_: "skeletonName_b1bfc6",
     Aj: "skeletonDescription_b1bfc6",
     Ah: "skeletonMemberCounts_b1bfc6",
-    ax: "skeletonDescriptionSecondLine_b1bfc6",
 };
