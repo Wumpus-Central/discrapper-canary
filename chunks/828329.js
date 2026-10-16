@@ -907,7 +907,7 @@ let em = ec.kqX.PREMIUM_TIER_0,
             customText: { label: "Text color (Custom color only)", type: "color", defaultValue: void 0 },
         },
     };
-var ey = a(299163);
+var ey = a(205513);
 let eh = {
     title: "Slider",
     stories: [
@@ -928,7 +928,7 @@ let eh = {
                     } = e,
                     c = n > 0 ? Array.from({ length: n }, (e, t) => Math.floor(l + (t / (n - 1)) * (a - l))) : void 0;
                 return (0, t.jsx)(
-                    ey.A,
+                    ey.G,
                     {
                         label: d,
                         description: u,

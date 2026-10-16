@@ -3,7 +3,7 @@ var i = n(477900),
     r = n(582128),
     a = n(435558),
     s = n.n(a),
-    l = n(299163),
+    l = n(205513),
     o = n(900283),
     d = n(889553);
 function c(e) {
@@ -31,7 +31,7 @@ function u(e) {
         ),
         (0, i.jsx)("div", {
             className: d.x,
-            children: (0, i.jsx)(l.A, {
+            children: (0, i.jsx)(l.G, {
                 ref: p,
                 mini: !0,
                 handleSize: 16,

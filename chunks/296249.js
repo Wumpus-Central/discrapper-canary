@@ -1285,7 +1285,7 @@ var tI = n(371444),
     tU = n(331322),
     tV = n(144228),
     tB = n(95477),
-    tH = n(299163),
+    tH = n(205513),
     tF = n(73153),
     tz = n(534963),
     tZ = n(820284),
@@ -2476,7 +2476,7 @@ class nZ extends i.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let i = (0, nI.Jz)(t, e),
             a = this.getError("bitrate");
-        return (0, l.jsx)(tH.A, {
+        return (0, l.jsx)(tH.G, {
             label: ez.intl.string(ez.t.w2d0vU),
             errorMessage: "" !== a ? a : void 0,
             helperText: i > eF.gp3 ? ez.intl.format(ez.t.SbQJk5, { bitrate: eF.gp3 / 1e3 }) : void 0,
@@ -2528,7 +2528,7 @@ class nZ extends i.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let n = this.getError("user_limit"),
             i = e.isGuildStageVoice() ? eF.RCc : eF.cSc;
-        return (0, l.jsx)(tH.A, {
+        return (0, l.jsx)(tH.G, {
             label: ez.intl.string(ez.t["/AoSGN"]),
             errorMessage: "" !== n ? n : void 0,
             helperText: ez.intl.format(e.isGuildStageVoice() ? ez.t.OqZI8D : ez.t["8yb3JT"], {}),

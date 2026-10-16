@@ -15445,7 +15445,7 @@ function uK() {
     });
 }
 var uY = a(290136),
-    uq = a(299163),
+    uq = a(205513),
     uJ = a(629584),
     uQ = a(600239),
     uX = a(940622),
@@ -15828,7 +15828,7 @@ function mI(e) {
                                               className: mb.Me,
                                               children: "Logo size",
                                           }),
-                                          (0, r.jsx)(uq.A, {
+                                          (0, r.jsx)(uq.G, {
                                               className: mb.TQ,
                                               minValue: 90,
                                               maxValue: 200,
@@ -17540,7 +17540,7 @@ function h8() {
                     "KRISP" === R &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(uq.A, {
+                                (0, r.jsx)(uq.G, {
                                     label: "Krisp Suppression Level",
                                     initialValue: i,
                                     onValueChange: hX.default.setKrispSuppressionLevel,
@@ -17583,7 +17583,7 @@ function h8() {
                                                     hX.default.setMode(hB.TB.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                             }),
                                             _ &&
-                                                (0, r.jsx)(uq.A, {
+                                                (0, r.jsx)(uq.G, {
                                                     label: "Krisp VAD Activation Threshold",
                                                     initialValue: N,
                                                     onValueChange: (e) =>
@@ -17644,7 +17644,7 @@ function h8() {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(uq.A, {
+                    (0, r.jsx)(uq.G, {
                         label: "Volume",
                         initialValue: x,
                         asValueChanges: function (e) {
@@ -17780,7 +17780,7 @@ function xc(e) {
         value: v(j),
         overridden: u.overridden,
         onReset: u.reset,
-        children: (0, r.jsx)(uq.A, {
+        children: (0, r.jsx)(uq.G, {
             className: xt.aw,
             initialValue: u.value,
             value: j,

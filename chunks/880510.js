@@ -4,7 +4,7 @@ var l = n(477900),
     s = n(17928),
     a = n(189213),
     o = n(193249),
-    d = n(299163),
+    d = n(205513),
     r = n(452027),
     u = n(331322),
     h = n(144228),
@@ -12,9 +12,9 @@ var l = n(477900),
     p = n(635242),
     c = n(625841),
     V = n(192820),
-    A = n(824744),
-    x = n(319437),
-    T = n(652215),
+    x = n(824744),
+    T = n(319437),
+    A = n(652215),
     C = n(731854),
     j = n(105292),
     m = n(221851);
@@ -41,7 +41,7 @@ class b extends i.PureComponent {
     renderSlider() {
         let { autoThreshold: e, threshold: t } = this.props;
         if (!e)
-            return (0, l.jsx)(d.A, {
+            return (0, l.jsx)(d.G, {
                 initialValue: t + 100,
                 onValueRender: this.handleValueRender,
                 onValueChange: this.handleSensitivityChange,
@@ -66,7 +66,7 @@ function M(e) {
         {
             inputVolume: a,
             outputVolume: o,
-            inputMode: x,
+            inputMode: T,
             shortcut: m,
             vadThreshold: M,
             vadAutoThreshold: y,
@@ -81,12 +81,12 @@ function M(e) {
             delay: V.Ay.getModeOptions(n).delay,
         })),
         I = [
-            { value: T.TBI.VOICE_ACTIVITY, name: j.intl.string(j.t.cHCEOJ) },
-            { value: T.TBI.PUSH_TO_TALK, name: j.intl.string(j.t.Q8gkVL) },
+            { value: A.TBI.VOICE_ACTIVITY, name: j.intl.string(j.t.cHCEOJ) },
+            { value: A.TBI.PUSH_TO_TALK, name: j.intl.string(j.t.Q8gkVL) },
         ];
     return (
         (t =
-            x === T.TBI.PUSH_TO_TALK
+            T === A.TBI.PUSH_TO_TALK
                 ? (0, l.jsxs)(u.B, {
                       gap: 20,
                       children: [
@@ -94,24 +94,24 @@ function M(e) {
                               label: j.intl.string(j.t.YkDjVM),
                               children: (0, l.jsx)(p.A, {
                                   defaultValue: m,
-                                  onChange: (e) => g.default.setMode(x, { shortcut: e }, n),
+                                  onChange: (e) => g.default.setMode(T, { shortcut: e }, n),
                               }),
                           }),
-                          (0, l.jsx)(d.A, {
+                          (0, l.jsx)(d.G, {
                               label: j.intl.string(j.t.y0ShVt),
                               initialValue: O,
-                              onValueChange: (e) => g.default.setMode(x, { delay: e }, n),
+                              onValueChange: (e) => g.default.setMode(T, { delay: e }, n),
                               onValueRender: (e) => (e >= 1e3 ? ((e /= 1e3), `${e.toFixed(2)}s`) : `${e.toFixed(0)}ms`),
-                              maxValue: T.IjB,
+                              maxValue: A.IjB,
                           }),
                       ],
                   })
                 : (0, l.jsx)(b, {
                       speaking: i,
-                      inputMode: x,
+                      inputMode: T,
                       threshold: M,
                       autoThreshold: y,
-                      onThresholdChange: (e, t) => g.default.setMode(x, { threshold: e, autoThreshold: t }, n),
+                      onThresholdChange: (e, t) => g.default.setMode(T, { threshold: e, autoThreshold: t }, n),
                   })),
         (0, l.jsxs)(u.B, {
             gap: 20,
@@ -121,27 +121,27 @@ function M(e) {
                     deviceType: C.oh.AUDIO_INPUT,
                     location: "VoiceSettingsModal",
                 }),
-                (0, l.jsx)(d.A, {
+                (0, l.jsx)(d.G, {
                     label: j.intl.string(j.t.OX2Bnr),
-                    initialValue: (0, A.M)(a),
-                    asValueChanges: (e) => g.default.setInputVolume((0, A.w)(e)),
+                    initialValue: (0, x.M)(a),
+                    asValueChanges: (e) => g.default.setInputVolume((0, x.w)(e)),
                 }),
                 (0, l.jsx)(c.U, {
                     label: j.intl.string(j.t.dl18zb),
                     deviceType: C.oh.AUDIO_OUTPUT,
                     location: "VoiceSettingsModal",
                 }),
-                (0, l.jsx)(d.A, {
+                (0, l.jsx)(d.G, {
                     label: j.intl.string(j.t.eATD2B),
-                    initialValue: (0, A.M)(o),
+                    initialValue: (0, x.M)(o),
                     maxValue: 200,
-                    asValueChanges: (e) => g.default.setOutputVolume((0, A.w)(e)),
+                    asValueChanges: (e) => g.default.setOutputVolume((0, x.w)(e)),
                 }),
                 (0, l.jsx)(h.z, {
                     label: j.intl.string(j.t["pS+K2L"]),
                     onChange: (e) => g.default.setMode(e, {}, n),
                     options: I,
-                    value: x,
+                    value: T,
                 }),
                 t,
             ],
@@ -150,8 +150,8 @@ function M(e) {
 }
 function y(e) {
     return (
-        (0, x.A)(() => {
-            null != T.QCW && e.onClose();
+        (0, T.A)(() => {
+            null != A.QCW && e.onClose();
         }),
         (0, l.jsx)(a.a, {
             title: j.intl.string(j.t.NiTd0e),

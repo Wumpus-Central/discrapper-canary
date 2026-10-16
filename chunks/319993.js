@@ -7,7 +7,7 @@ var i,
     o = n(17928),
     c = n(939249),
     d = n(834730),
-    u = n(299163),
+    u = n(205513),
     m = n(62010),
     x = n(403581),
     h = n(7807),
@@ -18,8 +18,8 @@ var i,
     N = n(967198),
     b = n(287809),
     f = n(824744),
-    A = n(158045),
-    E = n(926972),
+    E = n(158045),
+    A = n(926972),
     v = n(885386),
     C = n(862482),
     S = n(821609),
@@ -82,7 +82,7 @@ function B(e) {
         g = (0, o.bG)([_.A], () => _.A.getGuild(a.guildId)),
         p = !j && null != g,
         [I, N] = l.useState(),
-        f = (0, E.tj)({ location: "SoundmojiGuildInfo" }),
+        f = (0, A.tj)({ location: "SoundmojiGuildInfo" }),
         v = j || p || null != I || !f,
         [C, S] = l.useState(!v);
     l.useEffect(() => {
@@ -98,8 +98,8 @@ function B(e) {
     }, [x, v, a.guildId, a.soundId]);
     let { buttonType: O, description: R } =
             ((t = "0" === a.guildId),
-            (n = (0, o.bG)([b.default], () => A.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser()))),
-            (i = (0, E.tj)({ location: "useSoundmojiGuildInfoData" })),
+            (n = (0, o.bG)([b.default], () => E.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser()))),
+            (i = (0, A.tj)({ location: "useSoundmojiGuildInfoData" })),
             (r = a.guildId !== c?.guild_id),
             {
                 buttonType: l.useMemo(() => (t || !i ? 2 : n ? (p || null == I ? 2 : 0) : 1), [t, n, i, p, I]),
@@ -217,14 +217,14 @@ function K() {
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, s.jsx)(d.E, { variant: "text-sm/normal", children: D.intl.string(D.t["2JbvKw"]) }),
-            (0, s.jsx)(u.A, { onValueChange: t, className: z.aw, initialValue: (0, f.M)(e), maxValue: 100 }),
+            (0, s.jsx)(u.G, { onValueChange: t, className: z.aw, initialValue: (0, f.M)(e), maxValue: 100 }),
         ],
     });
 }
 function H(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, E.tj)({ location: "SoundmojiBanner" }),
-        l = (0, o.bG)([b.default], () => A.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser())),
+        i = (0, A.tj)({ location: "SoundmojiBanner" }),
+        l = (0, o.bG)([b.default], () => E.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser())),
         r = (0, o.bG)([N.A], () => N.A.getGuildId());
     return n || l || "0" === t.guildId || t.guildId === r || !i
         ? (0, s.jsx)("div", {

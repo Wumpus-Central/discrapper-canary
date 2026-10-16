@@ -2407,7 +2407,7 @@ var iy = n(465532),
     iq = n(353428),
     i$ = n(95701),
     i0 = n(470710),
-    i1 = n(299163),
+    i1 = n(205513),
     i5 = n(915089);
 function i3(e) {
     switch (e) {
@@ -2438,7 +2438,7 @@ class i9 extends a.PureComponent {
             className: i2.kL,
             children: (0, l.jsx)("div", {
                 className: i2.xJ,
-                children: (0, l.jsx)(i1.A, {
+                children: (0, l.jsx)(i1.G, {
                     label: U.intl.string(U.t.OVovCb),
                     mini: !0,
                     initialValue: this.initialValue,

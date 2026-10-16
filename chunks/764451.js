@@ -99,7 +99,7 @@ var M = n(503698),
     G = n(691885),
     x = n(150934),
     k = n(95477),
-    F = n(299163),
+    F = n(205513),
     B = n(450278);
 function V(e) {
     let { controls: t, props: n, onPropsChange: r } = e;
@@ -145,7 +145,7 @@ function V(e) {
                                       label: r.label,
                                   }),
                               "slider" === r.type &&
-                                  (0, i.jsx)(F.A, {
+                                  (0, i.jsx)(F.G, {
                                       initialValue: null != s ? Number(s) : 0,
                                       value: null != s ? Number(s) : void 0,
                                       minValue: r.minValue,

@@ -9,7 +9,7 @@ var i = n(477900),
     c = n(866665),
     d = n(408278),
     m = n(92259),
-    g = n(299163),
+    g = n(205513),
     p = n(218429),
     f = n(964486),
     h = n(461782),
@@ -185,7 +185,7 @@ let S = l.memo(function (e) {
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
-                                      (0, i.jsx)(g.A, {
+                                      (0, i.jsx)(g.G, {
                                           minValue: R,
                                           maxValue: T,
                                           initialValue: y,

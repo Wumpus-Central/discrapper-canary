@@ -63,7 +63,7 @@ var X = n(100767),
     W = n.n(H),
     K = n(935399),
     Z = n(331322),
-    q = n(299163),
+    q = n(205513),
     Q = n(834730),
     $ = n(113494),
     J = n(782134),
@@ -109,7 +109,7 @@ let el = (0, E.E2)(h.X.TTS_PLAYBACK_RATE, {
             return (0, p.jsxs)(Z.B, {
                 gap: 16,
                 children: [
-                    (0, p.jsx)(q.A, {
+                    (0, p.jsx)(q.G, {
                         label: U.intl.string(U.t.lsW5Ev),
                         description: U.intl.string(U.t.Ci4wMS),
                         markers: en.P,
@@ -1582,7 +1582,7 @@ function iU(e) {
                         children: U.intl.string(U.t.vd0D81),
                     }),
                     (0, p.jsx)(iG, { children: U.intl.string(U.t.a18Sug) }),
-                    (0, p.jsx)(q.A, {
+                    (0, p.jsx)(q.G, {
                         disabled: a,
                         markers: iL,
                         stickToMarkers: !0,
@@ -1603,7 +1603,7 @@ function iU(e) {
                         children: U.intl.string(U.t.sPO3ij),
                     }),
                     (0, p.jsx)(iG, { children: U.intl.string(U.t.xoldVn) }),
-                    (0, p.jsx)(q.A, {
+                    (0, p.jsx)(q.G, {
                         disabled: a,
                         markers: iR,
                         stickToMarkers: !0,
@@ -1677,7 +1677,7 @@ function iV(e) {
                         children: U.intl.string(U.t.L0oQuh),
                     }),
                     (0, p.jsx)(iG, { children: U.intl.string(U.t["/OOFpL"]) }),
-                    (0, p.jsx)(q.A, {
+                    (0, p.jsx)(q.G, {
                         disabled: r,
                         markers: ij,
                         stickToMarkers: !0,
@@ -1718,7 +1718,7 @@ function ik(e) {
                         children: U.intl.string(U.t.UxnnC4),
                     }),
                     (0, p.jsx)(iG, { children: U.intl.string(U.t.CEOEOb) }),
-                    (0, p.jsx)(q.A, {
+                    (0, p.jsx)(q.G, {
                         disabled: a,
                         markers: iO,
                         equidistant: !0,
@@ -3701,7 +3701,7 @@ let rO = (0, E.zD)(h.X.VOICE_AUDIO_DEVICE_SUGGESTIONS_SETTING, {
 var rY = n(205693),
     rX = n(451988),
     rH = n(475883),
-    rW = n(9761);
+    rW = n(303707);
 let rK = (0, tZ.Ld)();
 function rZ(e) {
     let { isSpeaking: t, className: n, id: i, ariaDescribedBy: s, ariaLabelledBy: l, disabled: r } = e;
@@ -3730,7 +3730,7 @@ function rq(e) {
         id: n,
         "aria-describedby": i,
         "aria-labelledby": s,
-        children: (0, p.jsx)(q.A, {
+        children: (0, p.jsx)(q.G, {
             initialValue: r + 100,
             onValueRender: (e) => `${(-((100 - e) * 1)).toFixed(0)}dB`,
             onValueChange: (e) => {
