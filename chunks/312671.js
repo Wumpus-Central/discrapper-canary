@@ -3,13 +3,13 @@ var i = n(17928),
     r = n(73153),
     a = n(235079);
 let s = { soundpack: a.i.CLASSIC, lastSoundpackExperimentId: null };
-class l extends i.Ay.PersistedStore {
+class l extends i.Ay.DeviceSettingsStore {
     static displayName = "SoundpackStore";
     static persistKey = "SoundpackStore";
     initialize(e) {
         null != e && ((s = e), Object.values(a.i).includes(s.soundpack) || (s.soundpack = a.i.CLASSIC));
     }
-    getState() {
+    getUserAgnosticState() {
         return s;
     }
     getSoundpack() {
