@@ -11,39 +11,40 @@ function r(e, t, n, r) {
         }
     })(e);
     if (null == l) return Promise.reject(Error("preview frame has no resolvable origin"));
-    let o = `vibegrations-${t}`,
-        d = `${o}-result`,
-        c = `${o}-ack`,
-        u = r.sourceMatch ?? "window",
-        _ = r.id ?? `${t}-${++a}-${Date.now()}`;
-    return new Promise((a, E) => {
-        let A = 0,
-            h = s,
-            f = window.setTimeout(() => {
-                (T(), E(new i.fq(t, r.timeoutMs)));
+    let o = (0, i.UL)(t),
+        d = r.sourceMatch ?? "window",
+        c = r.id ?? `${t}-${++a}-${Date.now()}`;
+    return new Promise((a, u) => {
+        let _ = 0,
+            E = s,
+            A = window.setTimeout(() => {
+                (I(), u(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
-            I = null != r.retryMs ? window.setInterval(m, r.retryMs) : null;
+            h = null != r.retryMs ? window.setInterval(p, r.retryMs) : null;
+        function f() {
+            null != h && window.clearInterval(h);
+        }
+        function I() {
+            (window.clearTimeout(A), f(), window.removeEventListener("message", T));
+        }
         function p() {
-            null != I && window.clearInterval(I);
-        }
-        function T() {
-            (window.clearTimeout(f), p(), window.removeEventListener("message", g));
-        }
-        function m() {
-            (A += 1) > 1 &&
+            for (let i of ((_ += 1) > 1 &&
                 console.debug("[conjure] re-offering call to the preview frame", {
                     call: r.label ?? t,
-                    id: _,
-                    attempt: A,
-                });
-            let i = { type: o, id: _, ...n };
-            ((h = e.contentWindow), e.contentWindow?.postMessage(i, l));
+                    id: c,
+                    attempt: _,
+                }),
+            (E = e.contentWindow),
+            o.requests)) {
+                let t = { type: i, id: c, ...n };
+                e.contentWindow?.postMessage(t, l);
+            }
         }
-        function g(e) {
-            ("window" === u ? e.source !== h : e.origin !== l) ||
-                ((0, i.YX)(e.data, c, _) ? p() : (0, i.YX)(e.data, d, _) && (T(), a(e.data)));
+        function T(e) {
+            ("window" === d ? e.source !== E : e.origin !== l) ||
+                ((0, i.YX)(e.data, o.acks, c) ? f() : (0, i.YX)(e.data, o.results, c) && (I(), a(e.data)));
         }
-        (window.addEventListener("message", g), m());
+        (window.addEventListener("message", T), p());
     });
 }
 let a = 0;

@@ -1,141 +1,140 @@
-i.d(t, { captureConjureProfileWidget: () => T, k: () => v });
-var a = i(477900),
-    r = i(582128),
-    n = i(598748),
-    l = i(941426),
-    u = i(382483),
-    o = i(385113),
-    s = i(288610),
-    d = i(201718),
-    c = i(287809),
-    p = i(238490),
-    f = i(409478),
-    h = i(979892);
-let w = new l.Vy("ConjureWidgetCapture"),
-    g = new Map();
-function m() {
+a.d(t, { captureConjureProfileWidget: () => v, k: () => I });
+var r = a(477900),
+    i = a(582128),
+    l = a(598748),
+    n = a(941426),
+    u = a(382483),
+    s = a(385113),
+    o = a(288610),
+    d = a(201718),
+    c = a(287809),
+    p = a(238490),
+    f = a(409478),
+    h = a(420928),
+    w = a(979892);
+let g = new n.Vy("ConjureWidgetCapture"),
+    m = new Map();
+function A() {
     return new Promise((e) => requestAnimationFrame(() => e()));
 }
-function b(e) {
-    let { applicationId: t, generateImageRef: i } = e,
-        n = r.useRef(null);
+function T(e) {
+    let { applicationId: t, generateImageRef: a } = e,
+        l = i.useRef(null);
     return (
-        r.useEffect(() => {
-            let e = n.current;
+        i.useEffect(() => {
+            let e = l.current;
             if (null == e) return;
             let t = !1;
             return (
                 (async function (e) {
-                    (await m(),
-                        await m(),
+                    (await A(),
+                        await A(),
                         await Promise.all(Array.from(e.querySelectorAll("img")).map((e) => e.decode().catch(() => {}))),
-                        t || i(e));
+                        t || a(e));
                 })(e).catch(() => {}),
                 () => {
                     t = !0;
                 }
             );
-        }, [i]),
-        (0, a.jsx)("div", { ref: n, className: h.P, children: (0, a.jsx)(f.A, { applicationId: t }) })
+        }, [a]),
+        (0, r.jsx)("div", { ref: l, className: w.P, children: (0, r.jsx)(f.A, { applicationId: t }) })
     );
 }
-function v(e, t) {
-    let { generateImage: i } = (0, s.R)({
-            renderComponent: (e) => (null == t ? null : (0, a.jsx)(b, { ...e, applicationId: t })),
+function I(e, t) {
+    let { generateImage: a } = (0, o.R)({
+            renderComponent: (e) => (null == t ? null : (0, r.jsx)(T, { ...e, applicationId: t })),
             imageOptions: { scale: 2, dpr: 1 },
         }),
-        l = r.useRef(i);
-    (r.useLayoutEffect(() => {
-        l.current = i;
+        n = i.useRef(a);
+    (i.useLayoutEffect(() => {
+        n.current = a;
     }),
-        r.useEffect(() => {
+        i.useEffect(() => {
             if (null == e || null == t) return;
-            let i = async () => {
+            let a = async () => {
                 let e = c.default.getCurrentUser();
                 if (null == e) throw Error("no signed-in user to render the widget for");
-                let i = Date.now();
-                await A(
+                let a = Date.now();
+                await P(
                     Promise.all([(0, u.un)(t, { force: !0 }), d.A.fetchUserApplicationIdentitiesWithProfiles(e.id)]),
                     4e3,
                     "refreshing the widget data timed out",
-                ).catch((e) => w.warn("widget data refresh skipped", { err: e }));
-                let a = o.A.getConfig(t)?.surfaces;
+                ).catch((e) => g.warn("widget data refresh skipped", { err: e }));
+                let r = s.A.getConfig(t)?.surfaces;
                 if (
                     !(0, p.yZ)({
-                        widgetTop: a?.[n.m.WIDGET_TOP] != null,
-                        widgetBottom: a?.[n.m.WIDGET_BOTTOM] != null,
-                        miniProfile: a?.[n.m.MINI_PROFILE] != null,
+                        widgetTop: r?.[l.m.WIDGET_TOP] != null,
+                        widgetBottom: r?.[l.m.WIDGET_BOTTOM] != null,
+                        miniProfile: r?.[l.m.MINI_PROFILE] != null,
                     }).hasAny
                 )
                     throw Error("the deployed preview app has no profile widget surfaces");
-                let r = await A(
-                        l.current(),
-                        12e3 - (Date.now() - i),
+                let i = await P(
+                        n.current(),
+                        12e3 - (Date.now() - a),
                         "rendering the widget took longer than the capture allows",
                     ),
-                    s = await createImageBitmap(r),
-                    f = { width: s.width / 2, height: s.height / 2 };
-                return (s.close(), { blob: r, ...f });
+                    o = await createImageBitmap(i),
+                    f = { width: o.width / 2, height: o.height / 2 };
+                return (o.close(), { blob: i, ...f });
             };
             return (
-                g.set(e, i),
+                m.set(e, a),
                 () => {
-                    g.get(e) === i && g.delete(e);
+                    m.get(e) === a && m.delete(e);
                 }
             );
         }, [e, t]));
 }
-function A(e, t, i) {
-    return new Promise((a, r) => {
-        let n = setTimeout(() => r(Error(i)), t);
+function P(e, t, a) {
+    return new Promise((r, i) => {
+        let l = setTimeout(() => i(Error(a)), t);
         e.then(
             (e) => {
-                (clearTimeout(n), a(e));
+                (clearTimeout(l), r(e));
             },
             (e) => {
-                (clearTimeout(n), r(e));
+                (clearTimeout(l), i(e));
             },
         );
     });
 }
-async function T(e, t) {
-    let i,
-        a,
-        r = g.get(e);
-    if (null == r) return { status: "unavailable" };
+async function v(e, t) {
+    let a,
+        r,
+        i = m.get(e);
+    if (null == i) return { status: "unavailable" };
     try {
-        [i, a] = await Promise.all([r(), A(t.resolveUploadUrl(), 12e3, "resolving the upload URL timed out")]);
+        [a, r] = await Promise.all([i(), P(t.resolveUploadUrl(), 12e3, "resolving the upload URL timed out")]);
     } catch (e) {
         return (
-            w.warn("widget capture preparation failed", { err: e }),
+            g.warn("widget capture preparation failed", { err: e }),
             { status: "failed", message: e instanceof Error ? e.message : "preparing the widget capture failed" }
         );
     }
-    let n = null == t.onAccepted ? { uploadToken: void 0 } : await t.onAccepted();
-    if (null == n) return { status: "unavailable" };
-    let l = Math.round(i.width),
-        u = Math.round(i.height),
-        o = {
+    let l = null == t.onAccepted ? { uploadToken: void 0 } : await t.onAccepted();
+    if (null == l) return { status: "unavailable" };
+    let n = Math.round(a.width),
+        u = Math.round(a.height),
+        s = {
             mode: "widget",
-            bounds: { x: 0, y: 0, width: l, height: u },
-            viewport: { width: l, height: u },
+            bounds: { x: 0, y: 0, width: n, height: u },
+            viewport: { width: n, height: u },
             scale: 2,
             devicePixelRatio: window.devicePixelRatio,
             ...(null == t.build ? {} : { build: t.build }),
             source: "dom",
-        },
-        s = {
-            "content-type": i.blob.type,
-            "x-vibegrations-capture-id": t.captureId,
-            "x-vibegrations-capture-meta": encodeURIComponent(JSON.stringify(o)),
         };
-    (null != t.build && (s["x-vibegrations-build"] = t.build),
-        null != n.uploadToken && (s["x-vibegrations-capture-token"] = n.uploadToken));
     try {
-        let e = await fetch(a, { method: "POST", headers: s, body: i.blob });
+        let e = await (0, h.e)(r, a.blob, {
+            captureId: t.captureId,
+            meta: encodeURIComponent(JSON.stringify(s)),
+            build: t.build,
+            uploadToken: l.uploadToken,
+        });
         if (!e.ok) return { status: "failed", message: `the widget upload was refused (${e.status})` };
     } catch (e) {
-        return (w.warn("widget upload failed", { err: e }), { status: "failed", message: "the widget upload failed" });
+        return (g.warn("widget upload failed", { err: e }), { status: "failed", message: "the widget upload failed" });
     }
     return { status: "accepted" };
 }
