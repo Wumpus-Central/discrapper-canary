@@ -13,6 +13,7 @@ let a = Object.freeze({
         highContrast: !1,
         forcedColors: !1,
         underlineLinks: !1,
+        formFactor: "desktop",
     }),
     o = 221552 == n.j ? ["custom-theme-background", "custom-client-theme"] : null;
 function u(e) {
@@ -63,6 +64,7 @@ function m(e) {
         highContrast: i.Ay.isHighContrastModeEnabled,
         forcedColors: i.Ay.useForcedColors,
         underlineLinks: i.Ay.alwaysShowLinkDecorations,
+        formFactor: "desktop",
     };
 }
 function A() {

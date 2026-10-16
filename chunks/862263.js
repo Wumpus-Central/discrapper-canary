@@ -16240,16 +16240,25 @@ function hN(e) {
             })),
             d = nY.hH.useSetting(),
             m = (0, hp.C)(),
-            f = i.useRef(!1),
+            f = (0, o.bG)(
+                [lf.A, l_.A],
+                () =>
+                    l_.A.isBuilderPreviewMobile() &&
+                    lf.A.getFrame(t)?.applicationId === l_.A.getPhoneLensApplicationId()
+                        ? "mobile"
+                        : "desktop",
+                [t],
+            ),
             h = i.useRef(!1),
-            p = i.useRef(0),
-            g = i.useRef(null),
-            x = i.useCallback(() => {
+            p = i.useRef(!1),
+            g = i.useRef(0),
+            x = i.useRef(null),
+            v = i.useCallback(() => {
                 let l = (0, ff.n5)(e, t);
                 if (null == l) return;
-                g.current = l;
+                x.current = l;
                 let i = {
-                    revision: ++p.current,
+                    revision: ++g.current,
                     baseTheme: n,
                     customTheme: (0, hf.Lq)(),
                     uiDensity: m,
@@ -16259,6 +16268,7 @@ function hN(e) {
                     highContrast: s,
                     forcedColors: u,
                     underlineLinks: c,
+                    formFactor: f,
                 };
                 (0, m2.W)(l, "set-env", i, {
                     timeoutMs: 6e3,
@@ -16266,51 +16276,51 @@ function hN(e) {
                     sourceMatch: "origin",
                     label: "viewer environment",
                 }).catch(() => {});
-            }, [n, u, a, t, s, d, e, r, m, c]),
-            v = i.useRef(x);
+            }, [n, u, a, f, t, s, d, e, r, m, c]),
+            j = i.useRef(v);
         i.useLayoutEffect(() => {
-            v.current = x;
+            j.current = v;
         });
-        let j = i.useCallback(() => {
-            f.current ||
-                ((f.current = !0),
+        let b = i.useCallback(() => {
+            h.current ||
+                ((h.current = !0),
                 queueMicrotask(() => {
-                    ((f.current = !1), h.current || v.current());
+                    ((h.current = !1), p.current || j.current());
                 }));
         }, []);
         (i.useEffect(
             () => (
-                (h.current = !1),
+                (p.current = !1),
                 () => {
-                    h.current = !0;
+                    p.current = !0;
                 }
             ),
             [],
         ),
             i.useEffect(() => {
-                j();
-            }, [l, j]),
+                b();
+            }, [l, b]),
             i.useLayoutEffect(() => {
-                (x(), j());
-            }, [j, x]),
+                (v(), b());
+            }, [b, v]),
             i.useLayoutEffect(() => {
                 let n = (0, ff.n5)(e, t);
-                null != n && n !== g.current && j();
+                null != n && n !== x.current && b();
             }),
             i.useEffect(() => {
                 function n(n) {
-                    n.target === (0, ff.n5)(e, t) && ((g.current = null), j());
+                    n.target === (0, ff.n5)(e, t) && ((x.current = null), b());
                 }
                 return (document.addEventListener("load", n, !0), () => document.removeEventListener("load", n, !0));
-            }, [t, e, j]),
+            }, [t, e, b]),
             i.useEffect(() => {
-                let e = new MutationObserver(j);
+                let e = new MutationObserver(b);
                 return (
                     e.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "style"] }),
                     e.observe(document.head, { childList: !0, subtree: !0, characterData: !0 }),
                     () => e.disconnect()
                 );
-            }, [j]));
+            }, [b]));
     })(h, x),
         i.useEffect(() => {
             if (null != t) return (0, hi.Ng)(t, () => (0, ff.n5)(h, x));
