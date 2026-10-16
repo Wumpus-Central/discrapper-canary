@@ -14,6 +14,7 @@ let c = new a.A("DCF"),
         dismissibleContentSeenDuringSession: new Set(),
         dailyCapOverridden: !1,
         newUserMinAgeRequiredOverridden: !1,
+        upsellBackoffOverridden: !1,
         renderedAtTimestamps: new Map(),
         lastDismissed: null,
         seenForGuildId: new Map(),
@@ -31,7 +32,8 @@ class A extends i.Ay.PersistedStore {
             ((_.numberOfDCsShownToday = e.numberOfDCsShownToday ?? 0),
             (_.dailyCapPeriodStart = e.dailyCapPeriodStart),
             (_.dailyCapOverridden = e.dailyCapOverridden ?? !1),
-            (_.newUserMinAgeRequiredOverridden = e.newUserMinAgeRequiredOverridden ?? !1)),
+            (_.newUserMinAgeRequiredOverridden = e.newUserMinAgeRequiredOverridden ?? !1),
+            (_.upsellBackoffOverridden = e.upsellBackoffOverridden ?? !1)),
             (_.dismissibleContentSeenDuringSession = new Set()),
             (_.seenForGuildId = new Map()),
             (_.lastDismissed = null));
@@ -44,6 +46,9 @@ class A extends i.Ay.PersistedStore {
     }
     get newUserMinAgeRequiredOverridden() {
         return _.newUserMinAgeRequiredOverridden;
+    }
+    get upsellBackoffOverridden() {
+        return _.upsellBackoffOverridden;
     }
     get lastDismissed() {
         return _.lastDismissed;
@@ -91,6 +96,10 @@ let h = new A(r.h, {
     DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: function (e) {
         let { value: t } = e;
         _.newUserMinAgeRequiredOverridden = t;
+    },
+    DCF_UPSELL_BACKOFF_OVERRIDE: function (e) {
+        let { value: t } = e;
+        _.upsellBackoffOverridden = t;
     },
     DCF_HANDLE_DC_SHOWN: function (e) {
         let { dismissibleContent: t, guildId: n } = e,

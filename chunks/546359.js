@@ -393,4 +393,5 @@ let et = new ee(a.h, {
             !0)
         );
     },
+    FRIENDS_LIST_TEAR_DOWN: K,
 });

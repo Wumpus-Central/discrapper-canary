@@ -8369,8 +8369,8 @@ let uB = (0, nJ.Fe)({ createPromise: uH, webpackId: 507007, name: "StageChannelC
         name: "GuildMemberModViewSidebar",
     }),
     uW = (0, nJ.Fe)({
-        createPromise: () => Promise.all([t.e("386345"), t.e("269178"), t.e("715268")]).then(t.bind(t, 98863)),
-        webpackId: 98863,
+        createPromise: () => Promise.all([t.e("386345"), t.e("269178"), t.e("177718")]).then(t.bind(t, 763349)),
+        webpackId: 763349,
         name: "FriendsSidebar",
     });
 class uz extends s.PureComponent {

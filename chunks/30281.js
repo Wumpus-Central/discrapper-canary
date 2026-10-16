@@ -4771,29 +4771,31 @@ function lY() {
             dailyCapReached: e,
             dailyCapOverridden: t,
             newUserMinAgeRequiredOverridden: a,
+            upsellBackoffOverridden: n,
         } = (0, d.cf)([lP.A], () => ({
             dailyCapReached: lP.A.hasUserHitDCCap(),
             dailyCapOverridden: lP.A.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: lP.A.newUserMinAgeRequiredOverridden,
+            upsellBackoffOverridden: lP.A.upsellBackoffOverridden,
         })),
-        [n, l] = o.useState(""),
-        [i, s] = o.useState(20),
-        c = o.useMemo(
+        [l, i] = o.useState(""),
+        [s, c] = o.useState(20),
+        h = o.useMemo(
             () =>
                 Object.keys(aR.M)
-                    .filter((e) => e.toLowerCase().includes(n.toLowerCase()))
+                    .filter((e) => e.toLowerCase().includes(l.toLowerCase()))
                     .reverse(),
-            [n],
+            [l],
         ),
-        h = o.useCallback(
+        g = o.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && i < c.length && s((e) => e + 100);
+                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && s < h.length && c((e) => e + 100);
             },
-            [i, c.length],
+            [s, h.length],
         );
     return (0, r.jsx)(lw.Ch, {
-        onScroll: h,
+        onScroll: g,
         children: (0, r.jsxs)("div", {
             className: lK.KE,
             children: [
@@ -4835,6 +4837,11 @@ function lY() {
                             checked: a,
                             onChange: lM.U$,
                         }),
+                        (0, r.jsx)(m.d, {
+                            label: "Override 60-Minute Backoff Between DC Displays",
+                            checked: n,
+                            onChange: lM.M1,
+                        }),
                     ],
                 }),
                 (0, r.jsx)(lH, {}),
@@ -4842,8 +4849,8 @@ function lY() {
                 (0, r.jsxs)(u.n, {
                     label: "All Dismissible Contents",
                     children: [
-                        (0, r.jsx)(nH.I, { query: n, onChange: l, onClear: () => l("") }),
-                        (0, r.jsx)(lW, { items: c.slice(0, i) }),
+                        (0, r.jsx)(nH.I, { query: l, onChange: i, onClear: () => i("") }),
+                        (0, r.jsx)(lW, { items: h.slice(0, s) }),
                     ],
                 }),
             ],
