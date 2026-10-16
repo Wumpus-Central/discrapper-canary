@@ -1,4 +1,4 @@
-(n.d(t, { H3: () => P, H9: () => y, oe: () => U, t8: () => M, xW: () => w }), n(321073));
+(n.d(t, { H3: () => U, H9: () => D, oe: () => w, t8: () => P, xW: () => G }), n(321073));
 var i = n(621466),
     r = n(941426),
     a = n(350723);
@@ -60,6 +60,9 @@ function N(e, t) {
     (t && (e.style.position = ""), g.delete(e));
 }
 function C(e) {
+    return Math.round(e * window.devicePixelRatio) / window.devicePixelRatio;
+}
+function O(e) {
     if (((c = performance.now()), u)) for (let [e, t] of ((u = !1), [...g])) N(e, t);
     null == S &&
         e.length > 0 &&
@@ -104,23 +107,28 @@ function C(e) {
         })(e),
             (function (e, t) {
                 let n = e.getBoundingClientRect(),
-                    i = t.x - n.left - e.clientLeft,
-                    r = t.y - n.top - e.clientTop;
-                (e.style.setProperty("--native-frame-view-hole-x", `${i}px`),
-                    e.style.setProperty("--native-frame-view-hole-y", `${r}px`),
-                    e.style.setProperty("--native-frame-view-hole-width", `${t.width}px`),
-                    e.style.setProperty("--native-frame-view-hole-height", `${t.height}px`));
+                    i = C(n.left + e.clientLeft),
+                    r = C(n.top + e.clientTop),
+                    a = C(t.x),
+                    s = C(t.y),
+                    l = 1 / window.devicePixelRatio,
+                    o = C(t.x + t.width) - a + l,
+                    d = C(t.y + t.height) - s + l;
+                (e.style.setProperty("--native-frame-view-hole-x", `${a - i}px`),
+                    e.style.setProperty("--native-frame-view-hole-y", `${s - r}px`),
+                    e.style.setProperty("--native-frame-view-hole-width", `${o}px`),
+                    e.style.setProperty("--native-frame-view-hole-height", `${d}px`));
             })(e, n));
 }
-let O = ["left", "middle", "right"],
-    R = { nodrop: "no-drop", custom: "default" };
-function L() {
+let R = ["left", "middle", "right"],
+    L = { nodrop: "no-drop", custom: "default" };
+function y() {
     return window.DiscordNative?.frameView ?? null;
 }
-function y() {
-    return null != L();
+function D() {
+    return null != y();
 }
-function D(e, t) {
+function v(e, t) {
     let n = Math.max(e.x, t.left),
         i = Math.max(e.y, t.top);
     return {
@@ -130,9 +138,9 @@ function D(e, t) {
         height: Math.max(0, Math.min(e.y + e.height, t.bottom) - i),
     };
 }
-function v() {
+function b() {
     d = null;
-    let e = L();
+    let e = y();
     if (null == e) return;
     let t = [],
         n = !1;
@@ -145,10 +153,10 @@ function v() {
                 { devicePixelRatio: i } = window;
             if (!e.checkVisibility({ opacityProperty: !0, visibilityProperty: !0 }))
                 return { frame: n, clip: null, devicePixelRatio: i };
-            let r = D(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
+            let r = v(n, { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight });
             for (let t = e.parentElement; null != t && r.width > 0; t = t.parentElement) {
                 let { overflowX: e, overflowY: n } = getComputedStyle(t);
-                ("visible" !== e || "visible" !== n) && (r = D(r, t.getBoundingClientRect()));
+                ("visible" !== e || "visible" !== n) && (r = v(r, t.getBoundingClientRect()));
             }
             return { frame: n, clip: r.width > 0 && r.height > 0 ? r : null, devicePixelRatio: i };
         })(r.iframe);
@@ -157,16 +165,16 @@ function v() {
         l !== r.lastLayout &&
             ((r.lastLayout = l), (n = !0), e.setLayout(i, a).catch((e) => s.warn(`frame view ${i} layout failed`, e)));
     }
-    ((n || u || performance.now() - c >= 250) && C(t), l.size > 0 && (d = requestAnimationFrame(v)));
+    ((n || u || performance.now() - c >= 250) && O(t), l.size > 0 && (d = requestAnimationFrame(b)));
 }
-function b(e) {
+function M(e) {
     for (let [t, n] of l) if (n.iframe === e) return t;
     return null;
 }
-function M(e) {
-    return null != b(e);
-}
 function P(e) {
+    return null != M(e);
+}
+function U(e) {
     for (let t of l.values())
         if (t.source === e) {
             if (null == t.shell || t.shell.closed) return null;
@@ -183,13 +191,13 @@ function P(e) {
         }
     return null;
 }
-function U(e, t) {
-    let n = L(),
-        i = b(e);
+function w(e, t) {
+    let n = y(),
+        i = M(e);
     return null == n || null == i ? null : n.capture(i, t);
 }
-function w(e, t, n, i, r) {
-    let c = L();
+function G(e, t, n, i, r) {
+    let c = y();
     if (null == c || e.ownerDocument !== document) return null;
     (null == _ &&
         ((E = h()),
@@ -208,7 +216,7 @@ function w(e, t, n, i, r) {
                     i = l.get(e)?.inputTarget;
                 null != i &&
                     (i.style.cursor =
-                        ((n = R[t] ?? (t.endsWith("-panning") ? "all-scroll" : t)),
+                        ((n = L[t] ?? (t.endsWith("-panning") ? "all-scroll" : t)),
                         CSS.supports("cursor", n) ? n : "default"));
             }),
             c.onExit((e, t) => {
@@ -309,11 +317,11 @@ function w(e, t, n, i, r) {
                       }),
                       c("mousedown", (e) => {
                           e.preventDefault();
-                          let t = O[e.button];
+                          let t = R[e.button];
                           null != t && d({ ...u("mouseDown", e), button: t, clickCount: e.detail });
                       }),
                       c("mouseup", (e) => {
-                          let t = O[e.button];
+                          let t = R[e.button];
                           null != t && d({ ...u("mouseUp", e), button: t, clickCount: e.detail });
                       }),
                       c("mousemove", (e) => d(u("mouseMove", e))),
@@ -366,7 +374,7 @@ function w(e, t, n, i, r) {
             I === t && ((I = null), document.hasFocus() || (0, a.XC)(window, !1)),
             Reflect.deleteProperty(e, "contentWindow"),
             Reflect.deleteProperty(e, "src"),
-            0 === l.size && (C([]), _?.disconnect(), (_ = null), (u = !1)));
+            0 === l.size && (O([]), _?.disconnect(), (_ = null), (u = !1)));
     }
     return (
         e.addEventListener(
@@ -392,7 +400,7 @@ function w(e, t, n, i, r) {
                 l.get(t) === g && (s.error(`frame view ${t} was not created`, e), N(), r?.());
             },
         ),
-        (d ??= requestAnimationFrame(v)),
+        (d ??= requestAnimationFrame(b)),
         {
             destroy() {
                 l.get(t) === g && (N(), c.destroy(t).catch(() => {}));

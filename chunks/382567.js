@@ -914,13 +914,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "640432",
-        s = "7b5f35c635aae19b02f6a6eda4dc806d40942a06".substring(0, 7),
+        n = "640433",
+        s = "4da8103a6c77d280aa1ee07ed776a742b5f60df9".substring(0, 7),
         r = eY.A?.app.getVersion(),
         l = eY.A?.app.getBuildNumber(),
         c = eY.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1792172133430", !1) : null,
+        u = null != o ? (0, eq.A)("1792172145917", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1003,7 +1003,7 @@ function eJ() {
     );
 }
 var e0 = n(370658);
-function e2(e) {
+function e1(e) {
     let { onClose: t } = e;
     return (0, i.jsx)(eO.W, {
         "data-menu-migrated-auto": !0,
@@ -1028,7 +1028,7 @@ function e2(e) {
         }),
     });
 }
-function e1() {
+function e2() {
     let e = s.useRef(null);
     return (0, i.jsxs)("div", {
         children: [
@@ -1064,7 +1064,7 @@ function e1() {
                         animation: eG.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(e2, { onClose: t });
+                            return (0, i.jsx)(e1, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, i.jsx)(eK.Anchor, {
@@ -1086,8 +1086,8 @@ function e1() {
     });
 }
 var e9 = n(402651),
-    e5 = n(669067),
-    e7 = n(830543),
+    e7 = n(669067),
+    e5 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
@@ -1100,7 +1100,7 @@ function e3(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == ew.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == ew.default.getCurrentUser() && (g(!0), (0, e5.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1115,9 +1115,9 @@ function e3(e) {
               partialRoot: eD.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e1,
+              sidebarFooter: e2,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e5._)(e);
+                  e8.has(e) || (0, e7._)(e);
                   let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
