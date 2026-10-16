@@ -1405,6 +1405,7 @@ let nz = eY().memoize(
                 u
                     ? (0, l.jsx)("div", {
                           className: nX.iD,
+                          style: { width: i, height: i },
                           children: (0, l.jsx)(nB.LockIcon, { size: "xs", color: "currentColor", className: nX.fi }),
                       })
                     : null,
