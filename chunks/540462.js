@@ -65,10 +65,10 @@ var i = n(477900),
     eh = n(128286),
     ep = n(619344),
     em = n(821747),
-    eA = n(488947),
-    ef = n(291706),
-    ex = n(12830),
-    eg = n(637443),
+    eA = n(418241),
+    ef = n(708416),
+    ex = n(488947),
+    eg = n(12830),
     eC = n(125248),
     ej = n(616356),
     ey = n(280450),
@@ -515,7 +515,7 @@ class eJ extends l.PureComponent {
     };
     handleSelectVoiceChannelAppPipParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, guildRoomVisible: l } = this.props;
-        ((0, ef.s)(n.id), l && (0, B.zD)(n.id), i?.id !== e.id && this.handleSelectParticipant(e, t));
+        ((0, eA.s)(n.id), l && (0, B.zD)(n.id), i?.id !== e.id && this.handleSelectParticipant(e, t));
     };
     handleOpenPopout = () => {
         let { channel: e, connectedEmbeddedActivity: t } = this.props;
@@ -761,7 +761,7 @@ class eJ extends l.PureComponent {
         let { channel: e, currentVoiceChannelApplicationId: t } = this.props;
         return null == t
             ? null
-            : (0, i.jsx)(ex.A, {
+            : (0, i.jsx)(eg.A, {
                   applicationId: t,
                   channelId: e.id,
                   guildId: e.guild_id ?? void 0,
@@ -928,9 +928,9 @@ let e0 = function (e) {
             return null != e && null == e.position;
         }),
         em = (0, ew.j)(),
-        ef = (0, eg.d7)(t, j),
-        ex = (0, eg.kM)(t),
-        eC = (0, eA.F)(g) && ex ? ef : null,
+        eA = (0, ef.d7)(t, j),
+        eg = (0, ef.kM)(t),
+        eC = (0, ex.F)(g) && eg ? eA : null,
         { theme: eN } = (0, A.wR)();
     return (0, i.jsx)(L.f5, {
         value: ec,
