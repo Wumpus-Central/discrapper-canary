@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640945, Version Hash: 8eea95647966a2cbfee8bcc066ae0ec5c0994ba0`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640964, Version Hash: 7e3010acb827fd14c18b8407bf946955b36fab7d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25561,7 +25561,7 @@ let L3 = "isHideDevBanner",
                     className: tE()(L2.Wz, L2.mr),
                     children: [
                         (0, M.jsx)(L1, { className: L2.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640945" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640964" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -55041,8 +55041,8 @@ let Yr = (0, i8.Fe)({
                 n.e("514124"),
                 n.e("913954"),
                 n.e("425488"),
-            ]).then(n.bind(n, 466020)),
-        webpackId: 466020,
+            ]).then(n.bind(n, 321552)),
+        webpackId: 321552,
     }),
     Yo = function (e) {
         let { mobile: t } = e,
