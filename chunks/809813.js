@@ -1,9 +1,9 @@
-i.d(e, { h: () => z });
+(i.r(e), i.d(e, { TrialsSharedConfirmationModal: () => S }));
 var s = i(477900),
-    n = i(582128),
-    r = i(503698),
-    l = i.n(r),
-    a = i(17928),
+    r = i(582128),
+    n = i(503698),
+    a = i.n(n),
+    l = i(17928),
     c = i(844222),
     d = i(778712),
     o = i(97808),
@@ -24,14 +24,14 @@ var s = i(477900),
     k = i(105292),
     N = i(37576);
 function _(t) {
-    let { recipient: e, status: i, onClose: n } = t,
-        { avatarSrc: r, eventHandlers: a } = (0, x.A)({ userId: e?.id, size: d._3.SIZE_56 }),
+    let { recipient: e, status: i, onClose: r } = t,
+        { avatarSrc: n, eventHandlers: l } = (0, x.A)({ userId: e?.id, size: d._3.SIZE_56 }),
         c = E.Ay.getName(e),
         g = i === v.o.FAIL;
     return (0, s.jsxs)("div", {
         className: N.w4,
         children: [
-            (0, s.jsx)(o.eu, { imageClassName: l()({ [N.jN]: g }), src: r, "aria-label": c, size: d._3.SIZE_32, ...a }),
+            (0, s.jsx)(o.eu, { imageClassName: a()({ [N.jN]: g }), src: n, "aria-label": c, size: d._3.SIZE_32, ...l }),
             g
                 ? (0, s.jsxs)(s.Fragment, {
                       children: [
@@ -57,23 +57,23 @@ function _(t) {
                 icon: p.ChatIcon,
                 onClick: () => {
                     var t;
-                    return ((t = e.id), void ((0, f.default)(), R.A.openPrivateChannel({ recipientIds: t }), n()));
+                    return ((t = e.id), void ((0, f.default)(), R.A.openPrivateChannel({ recipientIds: t }), r()));
                 },
             }),
         ],
     });
 }
-function z(t) {
+function S(t) {
     let {
             transitionState: e,
             results: i,
-            onClose: r,
-            isReminderConfirmation: l,
+            onClose: n,
+            isReminderConfirmation: a,
             showRecipientList: d = !0,
             recipientName: o,
         } = t,
-        m = (0, a.bG)([j.A], () => j.A.getReferralsRemaining()),
-        { reducedMotion: u } = n.useContext(c.C);
+        m = (0, l.bG)([j.A], () => j.A.getReferralsRemaining()),
+        { reducedMotion: u } = r.useContext(c.C);
     return null === m
         ? (0, s.jsx)(g.y, {})
         : (0, s.jsx)(h.k, {
@@ -87,7 +87,7 @@ function z(t) {
               title:
                   0 === i.filter((t) => t.status === v.o.SUCCESS).length
                       ? k.intl.string(k.t["7VBEue"])
-                      : !0 === l
+                      : !0 === a
                         ? k.intl.string(k.t.GP5lbq)
                         : k.intl.string(k.t.tKCltd),
               subtitle:
@@ -96,16 +96,16 @@ function z(t) {
                             recipientName: o,
                             helpdeskArticle: C.A.getArticleURL(b.MVz.REFERRAL_PROGRAM),
                         })
-                      : !0 === l
+                      : !0 === a
                         ? k.intl.format(k.t["4gJJfD"], { helpdeskArticle: C.A.getArticleURL(b.MVz.REFERRAL_PROGRAM) })
                         : k.intl.format(k.t.AwGSWl, { helpdeskArticle: C.A.getArticleURL(b.MVz.REFERRAL_PROGRAM) }),
-              onClose: r,
+              onClose: n,
               transitionState: e,
               children: d
                   ? (0, s.jsx)("div", {
                         className: N.Hz,
                         children: i.map((t) =>
-                            (0, s.jsx)(_, { recipient: t.recipient, status: t.status, onClose: r }, t.recipient.id),
+                            (0, s.jsx)(_, { recipient: t.recipient, status: t.status, onClose: n }, t.recipient.id),
                         ),
                     })
                   : null,

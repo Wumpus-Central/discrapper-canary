@@ -51,7 +51,7 @@ var t = s(477900),
     Z = s(551826),
     $ = s(567249),
     ee = s(574172),
-    el = s(828133),
+    el = s(264378),
     es = s(665691),
     et = s(635885),
     ei = s(209932),
@@ -273,12 +273,12 @@ let eU = [eV.lp.ACTIVITY],
             e6 = (0, r.bG)([eA.A], () => (u.type === eV.lp.USER ? eA.A.getVoiceVolume(u.id) : -1 / 0)),
             e5 = (0, H.v)({ isSpeaking: eL, voiceDb: e6, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
             e9 = (0, eV.Ay)(u) ? p.k : eG ? m.VideoIcon : A.E,
-            e3 = u.type === eV.lp.STREAM && k;
+            e4 = u.type === eV.lp.STREAM && k;
         return (0, t.jsx)(D.A, {
             section: eR.JJy.VOICE_CHANNEL_TILE,
             children: (0, t.jsx)(J.Ay, {
                 streamKey: u.id,
-                enableZoom: e3,
+                enableZoom: e4,
                 children: (0, t.jsx)("div", {
                     className: a()(eD.iE, { [eD.DF]: eP }, g),
                     style: N,

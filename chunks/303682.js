@@ -12,14 +12,14 @@ var s,
     h = i(803306),
     p = i(718213),
     A = i(793574),
-    g = i(688810),
-    R = i(994500),
-    S = i(174459),
+    S = i(688810),
+    g = i(994500),
+    R = i(174459),
     m = i(975571),
     E = i(427262),
-    w = i(326084),
-    y = i(851746),
-    C = i(794783),
+    C = i(326084),
+    w = i(851746),
+    y = i(794783),
     M = i(972007),
     x = i(809813),
     b = i(652215),
@@ -27,18 +27,18 @@ var s,
     I = i(989174);
 function j(e) {
     let { transitionState: t, onClose: i, onShare: s } = e,
-        r = (0, u.bG)([y.A], () => y.A.getReferralsRemaining()),
-        h = (0, u.bG)([y.A], () => y.A.getHasEligibleFriends()),
-        [A, g] = n.useState(new Map()),
-        [R, S] = n.useState(""),
-        w = (0, p.A)(R, 400),
+        r = (0, u.bG)([w.A], () => w.A.getReferralsRemaining()),
+        h = (0, u.bG)([w.A], () => w.A.getHasEligibleFriends()),
+        [A, S] = n.useState(new Map()),
+        [g, R] = n.useState(""),
+        C = (0, p.A)(g, 400),
         {
             eligibleUsers: x,
             fetchUsers: j,
             hasError: z,
             isFetching: N,
             resendUsers: _,
-        } = (0, M.i)({ searchQuery: w, selectedUsers: A }),
+        } = (0, M.i)({ searchQuery: C, selectedUsers: A }),
         [D, F] = n.useState(!1),
         O = x.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map());
     return null === r
@@ -78,14 +78,14 @@ function j(e) {
                           (t.forEach((e) => {
                               null != e && i.set(e.id, e);
                           }),
-                              g(i));
+                              S(i));
                       },
                       children: (0, a.jsx)("div", {
                           className: I.c,
                           children: (0, a.jsx)(c.a3, {
                               placeholder: 0 === A.size ? v.intl.string(v.t.Kd5RaI) : "",
                               onQueryChange: (e) => {
-                                  S(e.target.value);
+                                  R(e.target.value);
                               },
                           }),
                       }),
@@ -94,7 +94,7 @@ function j(e) {
                   actionBarInput: (function (e) {
                       let t,
                           { eligibleRecipients: n } = e,
-                          r = w.length > 0 && 0 === n.size;
+                          r = C.length > 0 && 0 === n.size;
                       return (
                           (t =
                               !0 === r
@@ -119,11 +119,11 @@ function j(e) {
                   })({ eligibleRecipients: O }),
                   children: (function (e) {
                       let { eligibleRecipients: t } = e;
-                      return (0, a.jsx)(C.A, {
+                      return (0, a.jsx)(y.A, {
                           users: Array.from(t.values()),
                           isUserSelected: (e) => A.has(e.id),
                           onSelectionChange: (e, t) => {
-                              g((i) => {
+                              S((i) => {
                                   let s = new Map(i);
                                   return (t ? s.set(e.id, e) : s.delete(e.id), s);
                               });
@@ -136,7 +136,7 @@ function j(e) {
                               [...A.values()].filter((e) => !_.has(e.id)).length >= r &&
                               !A.has(e.id) &&
                               !_.has(e.id),
-                          searchQuery: w,
+                          searchQuery: C,
                           emptySearchContent: { header: v.intl.string(v.t["8+ywHD"]), body: v.intl.string(v.t.CgQmY2) },
                           className: I.p_,
                       });
@@ -146,16 +146,16 @@ function j(e) {
 function z(e) {
     let t,
         { transitionState: i, onClose: s, onShare: r } = e,
-        c = (0, u.bG)([y.A], () => y.A.getRecipientStatus()),
+        c = (0, u.bG)([w.A], () => w.A.getRecipientStatus()),
         [f, p] = n.useState(new Map()),
-        [A, g] = n.useState(new Map()),
-        [S, m] = n.useState(!1);
+        [A, S] = n.useState(new Map()),
+        [R, m] = n.useState(!1);
     return (
         n.useEffect(() => {
             !(async function () {
                 let e = new Map();
                 for (let [t, i] of c) {
-                    if (R.A.isBlockedOrIgnored(t)) continue;
+                    if (g.A.isBlockedOrIgnored(t)) continue;
                     let s = await (0, h.wz)(t);
                     ((s.referralStatus = i), e.set(s.id, s));
                 }
@@ -175,7 +175,7 @@ function z(e) {
                     className: l()(I.qr, I.h0),
                     children: (0, a.jsx)(d.$, {
                         variant: "primary",
-                        disabled: 0 === A.size || S,
+                        disabled: 0 === A.size || R,
                         text: t,
                         size: "md",
                         fullWidth: !0,
@@ -184,12 +184,12 @@ function z(e) {
                         },
                     }),
                 })),
-            children: (0, a.jsx)(C.A, {
+            children: (0, a.jsx)(y.A, {
                 users: Array.from(f.values()),
                 isUserSelected: (e) => A.has(e.id),
-                isUserDisabled: (e) => e.referralStatus === w.aK.REDEEMED,
+                isUserDisabled: (e) => e.referralStatus === C.aK.REDEEMED,
                 onSelectionChange: (e, t) => {
-                    g((i) => {
+                    S((i) => {
                         let s = new Map(i);
                         return (t ? s.set(e.id, e) : s.delete(e.id), s);
                     });
@@ -206,19 +206,24 @@ var N =
     s);
 let _ = function (e) {
     let { transitionState: t, onClose: i, startingScreen: s = 1 } = e,
-        r = (0, u.bG)([y.A], () => y.A.getReferralsRemaining()),
+        r = (0, u.bG)([w.A], () => w.A.getReferralsRemaining()),
         [l, o] = n.useState(s),
         [c, d] = n.useState([]),
-        { analyticsLocations: h } = (0, g.Ay)([A.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+        { analyticsLocations: h } = (0, S.Ay)([A.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
     async function p(e) {
-        S.default.track(b.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: h });
-        let t = await (0, w.xm)(Object.values(e).map((e) => e.id));
+        R.default.track(b.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: h });
+        let t = await (0, C.xm)(Object.values(e).map((e) => e.id));
         (d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), o(2));
     }
     if (null === r) return (0, a.jsx)(f.y, {});
     switch (l) {
         case 2:
-            return (0, a.jsx)(x.h, { transitionState: t, isReminderConfirmation: 3 === s, results: c, onClose: i });
+            return (0, a.jsx)(x.TrialsSharedConfirmationModal, {
+                transitionState: t,
+                isReminderConfirmation: 3 === s,
+                results: c,
+                onClose: i,
+            });
         case 1:
             return (0, a.jsx)(j, { transitionState: t, onClose: i, onShare: p });
         case 3:

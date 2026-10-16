@@ -1,80 +1,81 @@
-i.d(e, { default: () => M });
+i.d(e, { default: () => T });
 var n = i(477900),
     a = i(582128),
     l = i(284009),
-    s = i.n(l),
-    r = i(17928),
+    r = i.n(l),
+    s = i(17928),
     o = i(224640),
     c = i(289873),
     d = i(315629),
     u = i(20742),
-    m = i(297264),
-    x = i(834730),
-    A = i(696208),
-    R = i(793574),
-    g = i(688810),
-    h = i(174459),
+    A = i(297264),
+    R = i(834730),
+    m = i(696208),
+    x = i(793574),
+    h = i(688810),
+    g = i(174459),
+    E = i(975571),
     S = i(427262),
-    N = i(326084),
-    E = i(851746),
-    p = i(809813),
-    _ = i(232198),
+    p = i(326084),
+    N = i(851746),
+    _ = i(809813),
+    f = i(232198),
     H = i(652215),
-    f = i(105292),
+    M = i(105292),
     C = i(214634),
-    I = i(93712),
-    b = i(954457);
-function j(t) {
-    let { transitionState: e, onClose: i, recipient: l, onSendComplete: s, analyticsLocations: R, modalVariant: g } = t,
-        p = (0, r.bG)([E.A], () => E.A.getReferralsRemaining()),
-        [j, M] = a.useState(!1),
-        [T, k] = a.useState(!1),
+    b = i(93712),
+    j = i(954457);
+function I(t) {
+    let { transitionState: e, onClose: i, recipient: l, onSendComplete: r, analyticsLocations: x, modalVariant: h } = t,
+        _ = (0, s.bG)([N.A], () => N.A.getReferralsRemaining()),
+        [I, T] = a.useState(!1),
+        [k, L] = a.useState(!1),
         D = a.useRef(!1),
-        L = S.Ay.getName(l),
-        G =
-            g === _.H.HD_STREAMING
-                ? f.intl.formatToPlainString(f.t.rdh1ou, { recipientName: L })
-                : f.intl.string(f.t.K2DyeS),
+        G = S.Ay.getName(l),
+        w =
+            h === f.H.HD_STREAMING
+                ? M.intl.formatToPlainString(M.t.rdh1ou, { recipientName: G })
+                : M.intl.formatToPlainString(M.t.LVlgM4, { recipientName: G }),
         v =
-            g === _.H.HD_STREAMING
-                ? f.intl.string(f.t.NkgMIP)
-                : f.intl.formatToPlainString(f.t.JNgfIL, { recipientName: L });
-    async function w() {
-        if (D.current || null == p || p <= 0) return;
+            h === f.H.HD_STREAMING
+                ? M.intl.string(M.t.NkgMIP)
+                : M.intl.format(M.t["2nw1yD"], { helpdeskArticle: E.A.getArticleURL(H.MVz.REFERRAL_PROGRAM) });
+    async function y() {
+        if (D.current || null == _ || _ <= 0) return;
         ((D.current = !0),
-            M(!0),
-            k(!1),
-            h.default.track(H.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: R }));
-        let t = (await (0, N.xm)([l.id])).get(l.id) ?? N.o.FAIL;
-        ((D.current = !1), M(!1), g === _.H.HD_STREAMING && t === N.o.FAIL ? k(!0) : s({ recipient: l, status: t }));
+            T(!0),
+            L(!1),
+            g.default.track(H.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: x }));
+        let t = (await (0, p.xm)([l.id])).get(l.id) ?? p.o.FAIL;
+        ((D.current = !1), T(!1), h === f.H.HD_STREAMING && t === p.o.FAIL ? L(!0) : r({ recipient: l, status: t }));
     }
-    return null == p
+    return null == _
         ? (0, n.jsx)(o.d, {
               transitionState: e,
               onClose: i,
               paddingSize: "lg",
-              "aria-label": f.intl.string(f.t.c1wxcb),
+              "aria-label": M.intl.string(M.t.c1wxcb),
               children: (0, n.jsx)("div", { className: C.dc, children: (0, n.jsx)(c.y, {}) }),
           })
         : (0, n.jsxs)(o.d, {
               transitionState: e,
               onClose: i,
               paddingSize: "lg",
-              "aria-label": G,
+              "aria-label": w,
               children: [
                   (0, n.jsxs)(d.h, {
                       color: "nitro-pink",
                       className: C.wx,
                       children: [
                           (0, n.jsx)("div", { className: C.b2, children: (0, n.jsx)(u.s_, { shouldColorMix: !0 }) }),
-                          (0, n.jsx)("img", { className: C.c8, src: g === _.H.HD_STREAMING ? I.A : b.A, alt: "" }),
-                          (0, n.jsx)(m.D, {
+                          (0, n.jsx)("img", { className: C.c8, src: h === f.H.HD_STREAMING ? b.A : j.A, alt: "" }),
+                          (0, n.jsx)(A.D, {
                               variant: "heading-xl/semibold",
                               color: "text-strong",
                               className: C.DD,
-                              children: G,
+                              children: w,
                           }),
-                          (0, n.jsx)(x.E, {
+                          (0, n.jsx)(R.E, {
                               variant: "text-md/normal",
                               color: "text-subtle",
                               className: C.VA,
@@ -82,23 +83,23 @@ function j(t) {
                           }),
                       ],
                   }),
-                  T
-                      ? (0, n.jsx)(x.E, {
+                  k
+                      ? (0, n.jsx)(R.E, {
                             variant: "text-sm/normal",
                             color: "text-feedback-critical",
                             role: "alert",
-                            children: f.intl.format(f.t.RO3T4B, { userName: L }),
+                            children: M.intl.format(M.t.RO3T4B, { userName: G }),
                         })
                       : null,
-                  (0, n.jsx)(A.H, {
+                  (0, n.jsx)(m.H, {
                       actions: [
-                          { variant: "secondary", text: f.intl.string(f.t["ETE/oC"]), onClick: i, disabled: j },
+                          { variant: "secondary", text: M.intl.string(M.t["ETE/oC"]), onClick: i, disabled: I },
                           {
                               variant: "primary",
-                              text: g === _.H.HD_STREAMING ? f.intl.string(f.t.dzQxHq) : f.intl.string(f.t.ItpQxk),
-                              onClick: w,
-                              loading: j,
-                              disabled: j || 0 === p,
+                              text: h === f.H.HD_STREAMING ? M.intl.string(M.t.dzQxHq) : M.intl.string(M.t.ItpQxk),
+                              onClick: y,
+                              loading: I,
+                              disabled: I || 0 === _,
                           },
                       ],
                       actionsFullWidth: !0,
@@ -106,33 +107,33 @@ function j(t) {
               ],
           });
 }
-let M = function (t) {
-    let { transitionState: e, onClose: i, recipient: l, sourceAnalyticsLocation: r, modalVariant: o = _.H.PROFILE } = t,
+let T = function (t) {
+    let { transitionState: e, onClose: i, recipient: l, sourceAnalyticsLocation: s, modalVariant: o = f.H.PROFILE } = t,
         [c, d] = a.useState(1),
-        [u, m] = a.useState(null),
-        { analyticsLocations: x } = (0, g.Ay)([r, R.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+        [u, A] = a.useState(null),
+        { analyticsLocations: R } = (0, h.Ay)([s, x.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
     switch (c) {
         case 1:
-            return (0, n.jsx)(j, {
+            return (0, n.jsx)(I, {
                 transitionState: e,
                 onClose: i,
                 recipient: l,
-                analyticsLocations: x,
+                analyticsLocations: R,
                 modalVariant: o,
                 onSendComplete: (t) => {
-                    (m(t), d(2));
+                    (A(t), d(2));
                 },
             });
         case 2:
             return (
-                s()(null != u, "Trial creation result should be set before showing the confirmation step"),
-                (0, n.jsx)(p.h, {
+                r()(null != u, "Trial creation result should be set before showing the confirmation step"),
+                (0, n.jsx)(_.TrialsSharedConfirmationModal, {
                     transitionState: e,
                     results: [u],
                     onClose: i,
                     isReminderConfirmation: !1,
                     showRecipientList: !1,
-                    recipientName: o === _.H.HD_STREAMING ? S.Ay.getName(l) : void 0,
+                    recipientName: o === f.H.HD_STREAMING ? S.Ay.getName(l) : void 0,
                 })
             );
         default:

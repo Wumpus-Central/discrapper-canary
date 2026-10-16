@@ -29,6 +29,7 @@ function E(e) {
         case r.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA:
             return 1;
         case r.M.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER:
+        case r.M.CONTEXTUAL_REFERRAL_USER_DM_SIDEBAR_EMBED:
             return 0;
         default:
             return ((0, a.dr)(e, { andFail: !1 }), 0);
