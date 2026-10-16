@@ -3997,6 +3997,7 @@ var rC =
         (eM.LEADERBOARD_HOVER = "leaderboard_hover"),
         (eM.SERVER_HUB_TOGGLE_SETTING = "server_hub_toggle_setting"),
         (eM.SERVER_HUB_VISIT = "server_hub_visit"),
+        (eM.SERVER_HUB_WIDGET_EDIT_CLICKED = "server_hub_widget_edit_clicked"),
         (eM.SWP_NOTICE_VIEWED = "swp_notice_viewed"),
         (eM.SWP_NOTICE_ACTION = "swp_notice_action"),
         (eM.SWP_SETTINGS_VIEWED = "swp_settings_viewed"),
