@@ -37,11 +37,11 @@ async function k(e, t) {
           { ok: !0, projectId: i });
 }
 var y = i(652215),
-    b = i(746080);
+    j = i(746080);
 async function w(e, t) {
     let i = await k(e, t);
     return i.ok
-        ? ((0, p.pX)(y.BVt.CHANNEL(t, b.VV.CONJURE, i.projectId)), !0)
+        ? ((0, p.pX)(y.BVt.CHANNEL(t, j.VV.CONJURE, i.projectId)), !0)
         : ((0, g.P0)({ text: i.message, variant: "critical" }), !1);
 }
 function A(e) {
@@ -52,7 +52,7 @@ function A(e) {
             let e = [];
             for (let t of o.Ay.getFlattenedGuildIds()) {
                 let i = c.A.getGuild(t);
-                null != i && (0, u.dd)(i, "VibegrationsRemixModal") && e.push(i);
+                null != i && (0, u.dd)(i, "ConjureRemixModal") && e.push(i);
             }
             return e;
         }),
@@ -66,7 +66,7 @@ function A(e) {
                 })),
             [k],
         ),
-        b = n.useCallback(async () => {
+        j = n.useCallback(async () => {
             if (!m) {
                 if ((x(!0), await w(t, f))) return void (await p());
                 x(!1);
@@ -79,7 +79,7 @@ function A(e) {
         size: "md",
         actions: [
             { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: m },
-            { text: C.intl.string(v.default.XWgAfc), variant: "primary", onClick: b, loading: m },
+            { text: C.intl.string(v.default.XWgAfc), variant: "primary", onClick: j, loading: m },
         ],
         children: (0, a.jsx)(d.Z, {
             selectionMode: "single",

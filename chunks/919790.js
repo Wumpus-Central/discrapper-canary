@@ -5,8 +5,8 @@ var l = n(477900),
     r = n(666476),
     s = n(989145),
     o = n(922329),
-    d = n(261425),
-    u = n(105292),
+    u = n(261425),
+    d = n(105292),
     c = n(986109);
 function f(e) {
     let { projectId: t, attachments: n } = e,
@@ -41,7 +41,7 @@ function m(e) {
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? u.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
+        a = n ? d.intl.formatToPlainString(u.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(o.p, { name: a, compact: !0 });
 }
 function g(e) {
@@ -64,7 +64,7 @@ function g(e) {
         : (0, l.jsx)(o.n, {
               name: i,
               thumbSrc: null,
-              ariaLabel: u.intl.formatToPlainString(d.default["g5+7Vs"], { name: i }),
+              ariaLabel: d.intl.formatToPlainString(u.default["g5+7Vs"], { name: i }),
               onClick: f,
           });
 }
@@ -98,7 +98,7 @@ function p(e) {
                         items: e.filter((e) => null != e),
                         startingIndex: e.slice(0, r).filter((e) => null != e).length,
                         shouldHideMediaOptions: !0,
-                        location: "VibegrationsChat",
+                        location: "ConjureChat",
                     });
             },
             () => {},
@@ -109,7 +109,7 @@ function p(e) {
         : (0, l.jsx)(o.n, {
               name: g,
               thumbSrc: p,
-              ariaLabel: u.intl.formatToPlainString(d.default.GtNukg, { name: g }),
+              ariaLabel: d.intl.formatToPlainString(u.default.GtNukg, { name: g }),
               onClick: j,
               onThumbError: () => {
                   (x(null),

@@ -5,8 +5,8 @@ var l = n(477900),
     r = n.n(i),
     s = n(834730),
     o = n(847374),
-    d = n(320448),
-    u = n(939249),
+    u = n(320448),
+    d = n(939249),
     c = n(866665),
     f = n(738188),
     m = n(256905),
@@ -70,13 +70,13 @@ function M(e) {
                 children: (0, l.jsx)(A.A, { text: v, variant: P, prose: !0 }),
             }),
         });
-    let D = h ? o.a : d._;
+    let D = h ? o.a : u._;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
         "data-conjure-entrance": !0,
         className: N.Dx,
         children: [
-            (0, l.jsxs)(u.D, {
+            (0, l.jsxs)(d.D, {
                 tag: "div",
                 className: N.kG,
                 "aria-expanded": h,
@@ -170,16 +170,16 @@ function E(e) {
             }
         );
     }, [t, n]);
-    let d = _.intl.string(w.default["5kjnI/"]),
-        u = a.useCallback(() => {
+    let u = _.intl.string(w.default["5kjnI/"]),
+        d = a.useCallback(() => {
             (0, p.aF)(t, n).then((e) => {
                 (0, m.R)({
-                    items: [{ type: "IMAGE", url: e, alt: d }],
+                    items: [{ type: "IMAGE", url: e, alt: u }],
                     startingIndex: 0,
                     shouldHideMediaOptions: !0,
-                    location: "VibegrationsChat",
+                    location: "ConjureChat",
                 });
             }, T);
-        }, [t, n, d]);
-    return s ? null : (0, l.jsx)(h.n, { name: d, thumbSrc: i, ariaLabel: d, onClick: u, onThumbError: () => o(!0) });
+        }, [t, n, u]);
+    return s ? null : (0, l.jsx)(h.n, { name: u, thumbSrc: i, ariaLabel: u, onClick: d, onThumbError: () => o(!0) });
 }

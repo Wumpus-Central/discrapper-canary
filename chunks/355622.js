@@ -324,7 +324,7 @@ let c = {
             layout: 1,
         },
         CONJURE_PATCH_NOTES: {
-            analyticsName: "vibegrations_patch_notes_input",
+            analyticsName: "conjure_patch_notes_input",
             drafts: { type: s.C.ChannelMessage },
             emojis: { button: !0 },
             users: { allowMentioning: !0 },

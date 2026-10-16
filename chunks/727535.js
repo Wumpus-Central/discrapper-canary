@@ -4447,7 +4447,7 @@ function s8(e) {
         onClick: () =>
             (function (e, t) {
                 let n;
-                (null == (n = (0, sq.wu)(e) ?? (0, s$.oX)("openVibegrationsProjectInBuilder")) ||
+                (null == (n = (0, sq.wu)(e) ?? (0, s$.oX)("openConjureProjectInBuilder")) ||
                     ((0, sZ.g7)(n, e.id), 0)) &&
                     (0, sW.A)(e.id, { initialTab: "app", isPreview: e.preview_application_id === t });
             })(n, t.id),

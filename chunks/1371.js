@@ -518,7 +518,7 @@ let X = {
             n(608598),
             t,
             r,
-            { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
+            { notif_type: "CONJURE_ASSISTANT_FINISHED" },
             {
                 sound: l,
                 volume: o,

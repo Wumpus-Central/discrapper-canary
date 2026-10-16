@@ -242,7 +242,12 @@ function f(e, t, n) {
 function C(e, t) {
     let { projectId: n } = t;
     (h(n, e),
-        (0, i.Hy)(n, { ...y[e.kind], message: e.message, details: "build_error" === e.kind ? e.stderr_tail : void 0 }));
+        (0, i.Hy)(n, {
+            ...y[e.kind],
+            message: e.message,
+            details: "build_error" === e.kind ? e.stderr_tail : void 0,
+            turnId: e.turn_id,
+        }));
 }
 function T(e, t) {
     let { projectId: n } = t;

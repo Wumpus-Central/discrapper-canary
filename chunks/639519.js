@@ -18,7 +18,7 @@ function l(t) {
     if ("number" != typeof n) return "unknown";
     if (429 === n) return "rate_limited";
     let r = e?.code;
-    return 409 === n && r === u.t02.TOO_MANY_VIBEGRATIONS_PROJECTS ? "project_limit" : "unknown";
+    return 409 === n && r === u.t02.TOO_MANY_CONJURE_PROJECTS ? "project_limit" : "unknown";
 }
 function o(t) {
     let n = t?.status;

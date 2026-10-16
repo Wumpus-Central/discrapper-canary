@@ -110,7 +110,7 @@ async function N(e, t) {
         u = l.Ay.getMediaEngine();
     if (!t && u.supports(p.O5.WINDOW_PREVIEWS))
         try {
-            let e = s.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
+            let e = s.O.getConfig({ location: "conjureNativeCapture" }).enabled,
                 t = await u.getSingleWindowPreview(a, d, c, e);
             if (null != t && "" !== t.url) return t.url;
         } catch {}

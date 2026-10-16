@@ -18,10 +18,10 @@ var i = l(477900),
     A = l(246338),
     y = l(261425),
     N = l(105292),
-    b = l(491340);
-function E(e) {
+    E = l(491340);
+function b(e) {
     let { onOpen: t } = e,
-        s = (0, a.bG)([j.A], () => (0, A.Qv)(j.A.getGuildsArray(), "VibegrationsCustomWidgetAddOption").length > 0, []),
+        s = (0, a.bG)([j.A], () => (0, A.Qv)(j.A.getGuildsArray(), "ConjureCustomWidgetAddOption").length > 0, []),
         r = n.useCallback(() => {
             (t?.(),
                 (0, m.openModalLazy)(
@@ -45,7 +45,7 @@ function E(e) {
         }, [t]);
     return s
         ? (0, i.jsxs)(x.D, {
-              className: b.u,
+              className: E.u,
               onClick: r,
               "aria-label": N.intl.string(y.default.yI85oV),
               children: [
@@ -73,7 +73,7 @@ var S = l(826673),
     O = l(90165),
     D = l(788259),
     L = l(976527);
-function V(e) {
+function _(e) {
     let {
             applicationWidgets: t,
             dense: l,
@@ -184,8 +184,8 @@ function V(e) {
         ],
     });
 }
-var _ = l(96173),
-    M = l(49999),
+var M = l(96173),
+    V = l(49999),
     q = l(901366);
 function H(e) {
     let { children: t } = e;
@@ -214,7 +214,7 @@ function K(e) {
                     e.getUniqueKey(),
                 ),
             ),
-            (0, i.jsx)("li", { children: (0, i.jsx)(E, { onOpen: l }) }),
+            (0, i.jsx)("li", { children: (0, i.jsx)(b, { onOpen: l }) }),
         ],
     });
 }
@@ -223,13 +223,13 @@ function B(e) {
         { onClose: l, trackUserProfileEditAction: d, highlightedApplicationIds: m, initialCategory: x, ...p } = e;
     n.useEffect(
         () => () => {
-            (0, S.Dr)(r.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: M.i.AUTO_DISMISS });
+            (0, S.Dr)(r.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: V.i.AUTO_DISMISS });
         },
         [],
     );
     let f = (0, a.bG)([P.default], () => P.default.getCurrentUser()),
         j = (function () {
-            let e = (0, _.A)(),
+            let e = (0, M.A)(),
                 [t, l] = n.useState(e);
             return (
                 n.useEffect(() => {
@@ -248,8 +248,8 @@ function B(e) {
                 })(j),
             [j],
         ),
-        b = A.length > 0,
-        E = y.length > 0,
+        E = A.length > 0,
+        b = y.length > 0,
         [k, C] = n.useState(() =>
             (function (e) {
                 let { initialCategory: t, hasInterests: l, hasGameStats: i, highlightedApplicationIds: n } = e;
@@ -262,7 +262,7 @@ function B(e) {
                         : i
                           ? "gameStats"
                           : "interests";
-            })({ initialCategory: x, hasInterests: E, hasGameStats: b, highlightedApplicationIds: m }),
+            })({ initialCategory: x, hasInterests: b, hasGameStats: E, highlightedApplicationIds: m }),
         ),
         [w, G] = n.useState(!1),
         R = n.useCallback(() => {
@@ -285,12 +285,12 @@ function B(e) {
         D = (m?.length ?? 0) > 0;
     return (
         (t =
-            b || E
+            E || b
                 ? "gameStats" === k
-                    ? b
+                    ? E
                         ? (0, i.jsx)("div", {
                               className: q.lU,
-                              children: (0, i.jsx)(V, {
+                              children: (0, i.jsx)(_, {
                                   applicationWidgets: A,
                                   dense: A.length >= 20,
                                   handleAddWidget: R,
@@ -300,7 +300,7 @@ function B(e) {
                               }),
                           })
                         : (0, i.jsx)(H, { children: N.intl.format(N.t.mcdIFp, { tabName: N.intl.string(O) }) })
-                    : E
+                    : b
                       ? (0, i.jsx)("div", {
                             className: q.lU,
                             children: (0, i.jsx)(K, {

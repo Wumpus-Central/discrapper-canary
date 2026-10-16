@@ -1,9 +1,8 @@
-n.d(t, { Hy: () => d, hV: () => p, w2: () => E, xf: () => r, yJ: () => R });
-var i = n(587895),
-    l = n(174459),
-    _ = n(260498),
-    u = n(246338),
-    a = n(652215);
+n.d(t, { Hy: () => p, hV: () => c, xf: () => r, yJ: () => E });
+var i = n(666860),
+    l = n(260498),
+    _ = n(246338),
+    u = n(652215);
 let r = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
@@ -14,31 +13,36 @@ let r = {
     RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
     RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
-function s(e) {
+function a(e) {
     return null == e || "" === e ? null : e.slice(0, 256);
 }
-function o(e) {
-    let t = _.Ay.getProject(e);
+function s(e) {
+    let t = l.Ay.getProject(e);
     return {
         project_id: e,
-        project_name: s(t?.name),
+        project_name: a(t?.name),
         application_id: t?.application_id ?? null,
         preview_application_id: t?.preview_application_id ?? null,
+        install_scope: t?.install_scope ?? null,
     };
 }
-function c(e, t) {
-    let n = _.Ay.getProject(e),
+function o(e, t) {
+    let n = l.Ay.getProject(e),
         i = (t ? n?.preview_guild_id : n?.guild_id) ?? null,
-        l = (t ? n?.preview_application_id : n?.application_id) ?? null;
-    return { guild_id: i, channel_id: null != i && null != l ? (0, u.i8)(i, l) : null };
+        u = (t ? n?.preview_application_id : n?.application_id) ?? null;
+    return { guild_id: i, channel_id: null != i && null != u ? (0, _.i8)(i, u) : null };
 }
-function p(e, t) {
+function c(e, t) {
     var n;
-    l.default.track(a.HAw.VIBEGRATION_TURN_RESULTED, {
-        ...o(e),
+    (0, i.zV)(u.HAw.CONJURE_TURN_RESULTED, {
+        ...s(e),
+        ...o(e, !0),
+        turn_id: t.turn_id ?? null,
         turn_result: t.result ?? null,
-        turn_summary: s(t.detail ?? t.summary),
+        turn_summary: a(t.detail ?? t.summary),
         turn_cost: t.cost_usd ?? null,
+        turn_duration_ms: t.duration_ms ?? null,
+        model_tier: t.model_tier ?? null,
         ...(null == (n = t.tokens)
             ? {
                   turn_input_tokens: null,
@@ -57,41 +61,30 @@ function p(e, t) {
               }),
     });
 }
-function E(e, t) {
-    let { isPreview: n } = t,
-        _ = o(e),
-        u = n ? _.preview_application_id : _.application_id,
-        r = null != u ? i.A.getApplication(u) : null;
-    l.default.track(a.HAw.VIBEGRATION_DEPLOYED, {
-        ..._,
-        project_summary: s(r?.description),
-        is_preview: n,
-        ...c(e, n),
-    });
-}
-function d(e, t) {
-    let { location: n, code: i, message: _, details: u, isPreview: r = !0 } = t;
-    l.default.track(a.HAw.VIBEGRATION_ERRORED, {
-        ...o(e),
-        is_preview: r,
-        ...c(e, r),
+function p(e, t) {
+    let { location: n, code: l, message: _, details: r, isPreview: c = !0, turnId: p } = t;
+    (0, i.zV)(u.HAw.CONJURE_ERRORED, {
+        ...s(e),
+        is_preview: c,
+        ...o(e, c),
+        turn_id: p ?? null,
         error_location: n,
-        error_code: i,
-        error_message: s(_),
-        error_details: s(u),
+        error_code: l,
+        error_message: a(_),
+        error_details: a(r),
     });
 }
-function R(e, t) {
-    let { entryPoint: n, publishState: i, surface: u, installScope: r, action: s } = t,
-        o = _.Ay.getProject(e);
-    l.default.track(a.HAw.VIBEGRATION_PUBLISH_ACTION_CLICKED, {
+function E(e, t) {
+    let { entryPoint: n, publishState: _, surface: r, installScope: a, action: s } = t,
+        c = l.Ay.getProject(e);
+    (0, i.zV)(u.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
         project_id: e,
-        application_id: o?.application_id ?? null,
-        guild_id: "user" === r ? null : (o?.guild_id ?? null),
+        application_id: c?.application_id ?? null,
+        ...("user" === a ? { guild_id: null, channel_id: null } : o(e, !1)),
         entry_point: n,
-        publish_state: i,
-        surface: u,
-        install_scope: r,
+        publish_state: _,
+        surface: r,
+        install_scope: a,
         action: s,
     });
 }

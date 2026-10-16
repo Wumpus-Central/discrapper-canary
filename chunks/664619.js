@@ -1,10 +1,10 @@
-n.d(t, { Is: () => R, R_: () => A, YI: () => h, tZ: () => I });
+n.d(t, { Is: () => R, R_: () => A, YI: () => h, tZ: () => C });
 var i = n(636537),
     l = n(73153),
     _ = n(803306),
     u = n(382483),
-    a = n(627363),
-    r = n(287809),
+    r = n(627363),
+    a = n(287809),
     s = n(517244),
     o = n(513845),
     c = n(371169),
@@ -45,17 +45,16 @@ async function A(e) {
             surface: n.surface,
             previewAppChannels: n.previewAppChannels,
         });
-    let i = r.default.getCurrentUser()?.id;
+    let i = a.default.getCurrentUser()?.id;
     return (null != i && (0, _.eO)(i).catch(() => {}), !0);
 }
-async function I(e, t) {
+async function C(e, t) {
     let { isPreview: n } = t,
-        { bot_permissions_changed: i, integration_installed: _, project: r } = (await (0, c.U1)(e)).body,
-        E = n ? r.preview_application_id : r.application_id;
-    (null != E &&
-        (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: E }),
-        await (0, a.TA)(E),
-        await (0, u.un)(E, { force: !0 }).catch(() => {}),
-        n ? _ && !i && (0, s.k)(E) : (0, o.R2)(E)),
-        (0, p.w2)(e, { isPreview: n }));
+        { bot_permissions_changed: i, integration_installed: _, project: a } = (await (0, c.U1)(e)).body,
+        p = n ? a.preview_application_id : a.application_id;
+    null != p &&
+        (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: p }),
+        await (0, r.TA)(p),
+        await (0, u.un)(p, { force: !0 }).catch(() => {}),
+        n ? _ && !i && (0, s.k)(p) : (0, o.R2)(p));
 }

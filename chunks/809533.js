@@ -4802,7 +4802,7 @@ function aQ(e) {
                                 }),
                                 startingIndex: l,
                                 shouldHideMediaOptions: !0,
-                                location: "VibegrationsClarificationImageOptions",
+                                location: "ConjureClarificationImageOptions",
                             });
                         },
                         () => {},
@@ -7220,7 +7220,7 @@ function ot(e) {
                         items: [{ type: "IMAGE", url: e, alt: l }],
                         startingIndex: 0,
                         shouldHideMediaOptions: !0,
-                        location: "VibegrationsChat",
+                        location: "ConjureChat",
                     });
                 },
                 () => {},
@@ -17148,7 +17148,7 @@ function hi(e) {
         j = l ?? null,
         [b, y] = i.useState(!1),
         [k, w] = i.useState(null),
-        N = (0, V.z9)("VibegrationsScreen"),
+        N = (0, V.z9)("ConjureScreen"),
         [I, M] = i.useState(null),
         P = (0, c.o)().get(K.f_) === U;
     i.useEffect(() => {

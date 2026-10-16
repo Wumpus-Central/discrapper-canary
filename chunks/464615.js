@@ -68,6 +68,6 @@ function C(e, t, n, i, T) {
 }
 let O = "bit_message1",
     R = "message1",
-    L = "VibegrationsChatStore",
+    L = "ConjureChatStore",
     y = 0.4,
     D = new Map();

@@ -23,8 +23,8 @@ var l = n(477900),
     k = n(964486),
     A = n(371169),
     E = n(16619),
-    w = n(821609),
-    C = n(980707),
+    C = n(821609),
+    w = n(980707),
     G = n(477782),
     S = n(950305),
     L = n(941985),
@@ -48,7 +48,7 @@ function T(e) {
             return (0, l.jsx)("div", {
                 ref: r,
                 className: z.h,
-                children: (0, l.jsx)(w.$, { variant: "secondary", size: "sm", text: a, onClick: t }),
+                children: (0, l.jsx)(C.$, { variant: "secondary", size: "sm", text: a, onClick: t }),
             });
         },
     });
@@ -56,7 +56,7 @@ function T(e) {
 function R(e) {
     let { guilds: t, forMeGuildId: n, onNavigate: s, onClose: i } = e,
         r = M.intl.string(D.default.sFiGNz);
-    return (0, l.jsxs)(C.W, {
+    return (0, l.jsxs)(w.W, {
         "data-menu-migrated": !0,
         navId: "conjure-create",
         "aria-label": r,
@@ -115,9 +115,9 @@ var F = n(683063),
     q = n(85428),
     Q = n(886540),
     H = n(855793),
-    V = n(260498),
-    Z = n(497183),
-    K = n(217846),
+    Z = n(260498),
+    K = n(497183),
+    V = n(217846),
     ee = n(548118),
     et = n(807994);
 function en(e) {
@@ -150,7 +150,7 @@ function en(e) {
                 width: 44,
                 height: 44,
                 mask: `url(#${i})`,
-                children: (0, l.jsx)(Z.A, { project: t, size: "list", className: et.o }),
+                children: (0, l.jsx)(K.A, { project: t, size: "list", className: et.o }),
             }),
             (0, l.jsx)("foreignObject", {
                 x: 28,
@@ -190,7 +190,7 @@ function ed(e) {
         className: et.G9,
         children: [
             (0, l.jsx)(u.E, { variant: "text-md/semibold", color: "text-strong", className: et.j1, children: t.name }),
-            (0, l.jsx)(K.n, { projectId: t.projectId }),
+            (0, l.jsx)(V.n, { projectId: t.projectId }),
             n,
         ],
     });
@@ -344,7 +344,7 @@ function ef(e) {
         className: et.dc,
         children: [
             (0, l.jsx)(H.Ay, { projectId: t.projectId }),
-            (0, l.jsx)(K.a, { projectId: t.projectId }),
+            (0, l.jsx)(V.a, { projectId: t.projectId }),
             (0, l.jsxs)(x.D, {
                 className: et.nM,
                 "aria-label": d,
@@ -353,7 +353,7 @@ function ef(e) {
                 onClick: () => eg(t, n, i),
                 children: [
                     null == t.guild || t.notInServer
-                        ? (0, l.jsx)(Z.A, { project: t.project, size: "list" })
+                        ? (0, l.jsx)(K.A, { project: t.project, size: "list" })
                         : (0, l.jsx)(en, { project: t.project, guild: t.guild }),
                     (0, l.jsx)("div", { className: et.fw, children: (0, l.jsx)(em, { entry: t, conjuringUser: r }) }),
                 ],
@@ -473,7 +473,7 @@ function eb(e) {
     let t,
         n,
         { eligibleGuilds: i, forMeGuildId: r, onNavigate: c } = e,
-        d = (0, E.qh)("VibegrationsProjectList"),
+        d = (0, E.qh)("ConjureProjectList"),
         o =
             ((t = (0, g.W5)()),
             (n = (0, a.yK)(
@@ -502,7 +502,7 @@ function eb(e) {
                           : s.othersActive.length < 3 && l.has(t.projectId) && s.othersActive.push(t);
                 return s;
             }, [d, t, n])),
-        j = (0, a.bG)([V.Ay], () => V.Ay.getProjectsFetchState()),
+        j = (0, a.bG)([Z.Ay], () => Z.Ay.getProjectsFetchState()),
         x = (0, a.bG)([W.A], () => W.A.getGuildId()),
         [h, f] = s.useState(""),
         p = i.find((e) => e.id === x)?.id ?? i[0]?.id ?? null,
@@ -540,7 +540,7 @@ function eb(e) {
                             color: "text-subtle",
                             children: M.intl.string(D.default.DJAPMO),
                         }),
-                        (0, l.jsx)(w.$, {
+                        (0, l.jsx)(C.$, {
                             variant: "secondary",
                             size: "sm",
                             text: M.intl.string(D.default["WFJ/vb"]),
@@ -606,7 +606,7 @@ function eb(e) {
 }
 var ey = n(606128),
     eI = n(559962);
-let ek = "VibegrationsPopout";
+let ek = "ConjurePopout";
 function eA(e) {
     let { onNavigate: t } = e,
         n = M.intl.string(D.default.uk6jhJ),
@@ -709,8 +709,8 @@ function eE(e) {
         })
     );
 }
-var ew = n(308665),
-    eC = n(274158);
+var eC = n(308665),
+    ew = n(274158);
 function eG() {
     return (0, l.jsxs)("svg", {
         width: "100%",
@@ -720,18 +720,18 @@ function eG() {
         "aria-hidden": !0,
         focusable: !1,
         children: [
-            (0, l.jsx)("path", { fill: "currentColor", d: ew.fy }),
-            (0, l.jsx)("path", { fill: "currentColor", d: ew.tE, className: r()(eC.dQ, eC.ui) }),
-            (0, l.jsx)("path", { fill: "currentColor", d: ew.tW, className: r()(eC.dQ, eC.Mb) }),
+            (0, l.jsx)("path", { fill: "currentColor", d: eC.fy }),
+            (0, l.jsx)("path", { fill: "currentColor", d: eC.tE, className: r()(ew.dQ, ew.ui) }),
+            (0, l.jsx)("path", { fill: "currentColor", d: eC.tW, className: r()(ew.dQ, ew.Mb) }),
         ],
     });
 }
 function eS(e) {
     let { working: t } = e;
     return (0, l.jsxs)("span", {
-        className: r()(eC.RB, ey.T, { [eC.Cc]: t }),
+        className: r()(ew.RB, ey.T, { [ew.Cc]: t }),
         "aria-hidden": !0,
-        children: [(0, l.jsx)(eG, {}), (0, l.jsx)("span", { className: eC.q2, children: (0, l.jsx)(eG, {}) })],
+        children: [(0, l.jsx)(eG, {}), (0, l.jsx)("span", { className: ew.q2, children: (0, l.jsx)(eG, {}) })],
     });
 }
 n(445368);
@@ -743,7 +743,7 @@ function eD(e) {
     return (0, l.jsx)(d.hV, {
         count: n,
         renderBadgeCount: (e) => (s ? `${e}+` : e),
-        className: r()(eC.WK, { [eC.uP]: s }),
+        className: r()(ew.WK, { [ew.uP]: s }),
     });
 }
 function eM(e) {
@@ -761,7 +761,7 @@ function ez() {
             .join(", "),
         f = (0, l.jsx)(eS, { working: t });
     return (0, l.jsx)("div", {
-        className: eC.NI,
+        className: ew.NI,
         children: (0, l.jsx)(eE, {
             targetElementRef: e,
             align: "left",
@@ -772,7 +772,7 @@ function ez() {
                     text: u,
                     children: (0, l.jsxs)(x.D, {
                         innerRef: e,
-                        className: r()(eL.OV, eC.f_, { [eC.ho]: s }),
+                        className: r()(eL.OV, ew.f_, { [ew.ho]: s }),
                         "aria-label": o,
                         "aria-haspopup": "dialog",
                         "aria-expanded": s,
