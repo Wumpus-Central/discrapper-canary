@@ -704,6 +704,7 @@
   "KLIPY_ASSET_PATH": "/klipy",
   "EMAIL_SETTINGS": "/users/@me/email-settings",
   "ACCOUNT_NOTIFICATION_SETTINGS": "/users/@me/notification-settings",
+  "ACCOUNT_NOTIFICATION_DECLARATIVE_SETTINGS": "/users/@me/notification-settings/declarative",
   "VIDEO_FILTER_ASSETS": "/users/@me/video-filters/assets",
   "VIDEO_FILTER_ASSET": "/users/@me/video-filters/assets/:param",
   "VIDEO_FILTER_ASSET_LAST_USED": "/users/@me/video-filters/assets/:param/last-used",
