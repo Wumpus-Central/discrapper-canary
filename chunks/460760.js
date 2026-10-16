@@ -1,18 +1,21 @@
-r.d(e, {
+(r.d(e, {
     GX: () => p,
     MA: () => l,
     Mu: () => n,
     Oh: () => I,
-    Ok: () => h,
+    Ok: () => d,
     Tz: () => C,
     ZH: () => D,
     ax: () => E,
     mo: () => c,
     nA: () => T,
-    r8: () => d,
+    r8: () => h,
     uh: () => y,
     xN: () => A,
-});
+}),
+    r(323874),
+    r(14289),
+    r(35956));
 var i = r(636537),
     a = r(73153),
     _ = r(773669),
@@ -41,10 +44,10 @@ async function c(t) {
                 is_published: E,
                 reasons_to_join: p,
                 social_links: D,
-                about: d,
+                about: h,
             } = (await i.Bo.get({ url: s.Rsh.GUILD_DISCOVERY_METADATA(t), oldFormErrors: !0, rejectWithError: !0 }))
                 .body,
-            h = {
+            d = {
                 primaryCategoryId: e,
                 secondaryCategoryIds: r,
                 keywords: _,
@@ -54,17 +57,18 @@ async function c(t) {
                 isPublished: E,
                 reasonsToJoin: p,
                 socialLinks: D,
-                about: d,
+                about: h,
             };
-        return (a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: t, metadata: h }), h);
+        return (a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: t, metadata: d }), d);
     } catch (t) {
         a.h.dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
     }
 }
 async function E(t) {
     try {
-        let e = (await i.Bo.get({ url: s.Rsh.GUILD_DISCOVERY_SLUG(t), rejectWithError: !0 })).body.slug;
-        a.h.dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug: e });
+        let e = await i.Bo.get({ url: s.Rsh.GUILD_WEB_PAGE(t), rejectWithError: !0 }),
+            r = new URL(e.body.seo.canonical_url).pathname.slice(9);
+        a.h.dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS", slug: r });
     } catch {
         a.h.dispatch({ type: "GUILD_DISCOVERY_SLUG_FETCH_FAIL", guildId: t });
     }
@@ -75,10 +79,10 @@ function p(t, e) {
 function D(t, e) {
     a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId: t, keywords: e });
 }
-function d(t, e) {
+function h(t, e) {
     a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId: t, emojiDiscoverabilityEnabled: e });
 }
-function h(t, e) {
+function d(t, e) {
     a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId: t, isPublished: e });
 }
 function A(t, e) {
@@ -101,12 +105,12 @@ async function I(t) {
         isPublished: E,
         reasonsToJoin: p,
         socialLinks: D,
-        about: d,
+        about: h,
     } = t;
     try {
         let {
             primary_category_id: t,
-            category_ids: h,
+            category_ids: d,
             keywords: A,
             emoji_discoverability_enabled: l,
             partner_actioned_timestamp: y,
@@ -127,7 +131,7 @@ async function I(t) {
                     is_published: E,
                     reasons_to_join: p,
                     social_links: D,
-                    about: d,
+                    about: h,
                 },
                 oldFormErrors: !0,
                 rejectWithError: (0, i.fT)(),
@@ -138,7 +142,7 @@ async function I(t) {
             guildId: e,
             metadata: {
                 primaryCategoryId: t,
-                secondaryCategoryIds: h,
+                secondaryCategoryIds: d,
                 keywords: A,
                 emojiDiscoverabilityEnabled: l,
                 partnerActionedTimestamp: y,

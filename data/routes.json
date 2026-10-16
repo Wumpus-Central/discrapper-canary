@@ -568,7 +568,7 @@
   "MOBILE_GAME_COMMUNITIES": "/discoverable-guilds/mobile-game-communities",
   "GUILD_DISCOVERY_SEARCH": "/discoverable-guilds/search",
   "GUILD_DISCOVERY_CATEGORIES": "/discovery/categories",
-  "GUILD_DISCOVERY_SLUG": "/discovery/:param",
+  "GUILD_WEB_PAGE": "/index/servers/:param",
   "GUILD_DISCOVERY_METADATA": "/guilds/:param/discovery-metadata",
   "GUILD_DISCOVERY_UPDATE_CATEGORY": "/guilds/:param/discovery-categories/:param",
   "STREAM_PREVIEW": "/streams/:param/preview",

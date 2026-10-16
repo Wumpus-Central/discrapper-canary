@@ -1,4 +1,4 @@
-(n.d(t, { A: () => b }), n(321073));
+(n.d(t, { A: () => M }), n(321073));
 var i = n(448761),
     r = n(17928),
     a = n(73153),
@@ -20,29 +20,30 @@ let d = null,
     g = !1,
     S = !1,
     N = null,
-    C = null;
-function O() {
+    C = null,
+    O = null;
+function R() {
     return !0;
 }
-function R() {
+function L() {
     ((p = new Set()), (T = []), (m = []));
 }
-function L(e) {
+function y(e) {
     (p.delete(e), (T = T.filter((t) => t !== e)), (m = m.filter((t) => t !== e)));
 }
-function y(e) {
-    let { messages: t } = e;
-    t.forEach((e) => D(e));
-}
 function D(e) {
+    let { messages: t } = e;
+    t.forEach((e) => v(e));
+}
+function v(e) {
     let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
     !A.has(t) && !E.has(t) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));
 }
-class v extends r.Ay.Store {
+class b extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        (this.waitFor(s.default), this.syncWith([s.default], O));
+        (this.waitFor(s.default), this.syncWith([s.default], R));
     }
     checkAndFetchReferralsRemaining() {
         null == d && !_ && f < 6 && (null == I || I < Date.now()) && (0, l.xM)();
@@ -90,8 +91,11 @@ class v extends r.Ay.Store {
     getReminderStateId() {
         return C;
     }
+    getRecurringReminderStateId() {
+        return O;
+    }
 }
-let b = new v(a.h, {
+let M = new b(a.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
         (_ || (0, l.xM)(), !E.has(t)) && (E.add(t), (0, l.kZ)(t).catch(o.FXj));
@@ -108,6 +112,7 @@ let b = new v(a.h, {
             recipient_status: r,
             has_eligible_friends: a,
             reminder_state_id: s,
+            recurring_reminder_state_id: l,
         } = e;
         ((g = !0),
             (S = a),
@@ -117,7 +122,8 @@ let b = new v(a.h, {
             (N = i),
             (u = r),
             (C = s),
-            0 === d && R(),
+            (O = l),
+            0 === d && L(),
             (f = 0),
             (I = null));
     },
@@ -133,14 +139,14 @@ let b = new v(a.h, {
         ((0, l.xM)(),
             h.set(t.id, t),
             c.add(t.userId),
-            L(t.userId),
-            n || null == d || (0 === (d = Math.max(0, d - 1)) && R()));
+            y(t.userId),
+            n || null == d || (0 === (d = Math.max(0, d - 1)) && L()));
     },
     CREATE_REFERRALS_SUCCESS: function (e) {
         let { userTrialOffers: t } = e,
             n = new Set(t.filter((e) => !c.has(e.userId)).map((e) => e.userId));
-        for (let e of ((0, l.xM)(), t)) (h.set(e.id, e), c.add(e.userId), L(e.userId));
-        null != d && 0 === (d = Math.max(0, d - n.size)) && R();
+        for (let e of ((0, l.xM)(), t)) (h.set(e.id, e), c.add(e.userId), y(e.userId));
+        null != d && 0 === (d = Math.max(0, d - n.size)) && L();
     },
     BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
@@ -167,14 +173,14 @@ let b = new v(a.h, {
     RELATIONSHIP_REMOVE: function (e) {
         let { relationship: t } = e,
             n = t.id;
-        return (!!p.has(n) || !!T.includes(n) || !!m.includes(n)) && (L(n), !0);
+        return (!!p.has(n) || !!T.includes(n) || !!m.includes(n)) && (y(n), !0);
     },
-    LOAD_MESSAGES_SUCCESS: y,
+    LOAD_MESSAGES_SUCCESS: D,
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        D(t);
+        v(t);
     },
-    LOAD_MESSAGES_AROUND_SUCCESS: y,
+    LOAD_MESSAGES_AROUND_SUCCESS: D,
     LOGOUT: function () {
         ((d = null),
             (c = new Set()),
@@ -184,11 +190,12 @@ let b = new v(a.h, {
             (h = new Map()),
             (f = 0),
             (I = null),
-            R(),
+            L(),
             (g = !1),
             (S = !1),
             (N = null),
             (u = new Map()),
-            (C = null));
+            (C = null),
+            (O = null));
     },
 });

@@ -190,8 +190,8 @@ async function g(e) {
 }
 async function S(e) {
     try {
-        let t = await i.Bo.get({ url: a.Rsh.GUILD_DISCOVERY_SLUG(e), rejectWithError: (0, i.fT)() });
-        return t.body ?? JSON.parse(t.text);
+        let t = await i.Bo.get({ url: a.Rsh.GUILD_WEB_PAGE(e), rejectWithError: (0, i.fT)() });
+        return (t.body ?? JSON.parse(t.text)).data;
     } catch (e) {
         throw new r.LG(e);
     }

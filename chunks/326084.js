@@ -96,6 +96,7 @@ function m() {
                     recipient_status: t,
                     has_eligible_friends: e.body?.has_eligible_friends ?? !1,
                     reminder_state_id: e.body?.reminder_state_id ?? null,
+                    recurring_reminder_state_id: e.body?.recurring_reminder_state_id ?? null,
                 });
             },
             (e) => {

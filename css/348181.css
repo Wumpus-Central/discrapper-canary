@@ -1530,7 +1530,7 @@
     flex-shrink: 0;
     height: 36px;
     margin-bottom: 16px;
-    width: 112px
+    width: 130px
 }
 
 .authBox__921c5 {
@@ -1641,13 +1641,7 @@
 }
 
 .authBox__921c5[data-theme=light] .discordLogo__921c5 {
-    background: url(/assets/34120ace1e4e4d29.svg) no-repeat;
-    width: 130px
-}
-
-.authBox__921c5[data-theme=dark] .discordLogo__921c5 {
-    background: url(/assets/bbbc3d376d38e7bc.svg) no-repeat;
-    width: 130px
+    background: url(/assets/34120ace1e4e4d29.svg) no-repeat
 }
 
 .title__921c5 {
@@ -3151,4 +3145,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=348181.a3b3bc62ee2f1223.css.map*/
+/*# sourceMappingURL=348181.99d322304a4170d4.css.map*/
