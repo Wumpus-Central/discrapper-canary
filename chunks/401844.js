@@ -2818,12 +2818,13 @@ function sx(e) {
                   null != l &&
                       (0, g.openModalLazy)(async () => {
                           let { default: e } = await Promise.all([
-                              n.e("742978"),
+                              n.e("252964"),
+                              n.e("726464"),
                               n.e("483518"),
                               n.e("51194"),
                               n.e("292030"),
-                              n.e("229211"),
-                          ]).then(n.bind(n, 385430));
+                              n.e("190255"),
+                          ]).then(n.bind(n, 954098));
                           return (t) =>
                               (0, s.jsx)(e, {
                                   classificationId: l,
@@ -2884,12 +2885,13 @@ function sv(e) {
         onClick: function () {
             (0, g.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("742978"),
+                    n.e("252964"),
+                    n.e("726464"),
                     n.e("483518"),
                     n.e("51194"),
                     n.e("292030"),
-                    n.e("229211"),
-                ]).then(n.bind(n, 385430));
+                    n.e("190255"),
+                ]).then(n.bind(n, 954098));
                 return (n) =>
                     (0, s.jsx)(e, {
                         classificationId: t,

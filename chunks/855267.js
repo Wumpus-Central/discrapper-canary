@@ -252,6 +252,7 @@ function J(t) {
             onClick: function () {
                 (0, G.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
+                        s.e("252964"),
                         s.e("830560"),
                         s.e("588035"),
                         s.e("839460"),
@@ -264,7 +265,7 @@ function J(t) {
                         s.e("444038"),
                         s.e("849162"),
                         s.e("660201"),
-                        s.e("742978"),
+                        s.e("726464"),
                         s.e("774346"),
                         s.e("76428"),
                         s.e("481647"),
@@ -293,8 +294,8 @@ function J(t) {
                         s.e("431649"),
                         s.e("51194"),
                         s.e("292030"),
-                        s.e("229211"),
-                    ]).then(s.bind(s, 385430));
+                        s.e("190255"),
+                    ]).then(s.bind(s, 954098));
                     return (e) => (0, n.jsx)(t, { classificationId: r, source: H.XN.StandingTab, ...e });
                 });
             },

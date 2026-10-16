@@ -1,4 +1,4 @@
-e.d(i, { default: () => ne });
+e.d(i, { default: () => nt });
 var t = e(477900),
     l = e(582128),
     a = e(935462),
@@ -15,12 +15,12 @@ var t = e(477900),
     j = e(834730),
     E = e(28863),
     f = e(231483),
-    _ = e(320448),
-    g = e(939249),
+    g = e(320448),
+    _ = e(939249),
     A = e(17928),
     N = e(306537),
-    L = e(462924),
-    v = e(807393),
+    v = e(462924),
+    L = e(807393),
     k = e(773669),
     I = e(174459),
     T = e(67521),
@@ -29,53 +29,93 @@ var t = e(477900),
     y = e(335891),
     D = e(985481),
     G = e(259960),
-    O = e(26095),
-    S = e(607739),
-    b = e(239093),
-    w = e(652215),
-    R = e(105292),
-    F = e(876891),
-    K = e(52111);
+    O = e(239093),
+    w = e(105292),
+    S = e(52111);
+function b() {
+    return (0, t.jsx)(j.E, { variant: "text-md/normal", color: "text-muted", children: w.intl.string(w.t["I2H0/E"]) });
+}
+function R(n) {
+    return (0, t.jsx)(j.E, {
+        variant: "text-md/normal",
+        color: "text-muted",
+        children: w.intl.format(w.t.IFxUaT, {
+            letUsKnowHook: (i, e) =>
+                (0, t.jsx)(
+                    E.Anchor,
+                    { href: n.isAppealEligible ? void 0 : n.appealLink, onClick: n.letUsKnowClick, children: i },
+                    e,
+                ),
+        }),
+    });
+}
+function F() {
+    return (0, t.jsxs)("div", {
+        className: S.Jx,
+        children: [
+            (0, t.jsx)(j.E, { variant: "text-md/medium", color: "text-default", children: w.intl.string(w.t.PHriyz) }),
+            (0, t.jsx)(j.E, { variant: "text-sm/normal", color: "text-muted", children: w.intl.string(w.t.YsxY1D) }),
+        ],
+    });
+}
 function H(n) {
+    return (0, t.jsx)("div", {
+        className: S.OW,
+        children: n.hasBeenAppealed
+            ? (0, t.jsx)(b, {})
+            : n.isAppealWindowExpired
+              ? (0, t.jsx)(F, {})
+              : (0, t.jsx)(R, {
+                    appealLink: O.d$.APPEALS_LINK,
+                    letUsKnowClick: n.onLetUsKnowClick,
+                    isAppealEligible: n.isAppealEligible,
+                }),
+    });
+}
+var K = e(26095),
+    Y = e(607739),
+    M = e(652215),
+    V = e(876891);
+function $(n) {
     let { classificationTypeText: i, guildMetadata: e } = n,
         a = l.useMemo(() => {
             let n = { classification_type: i, classificationHook: (n, i) => (0, t.jsx)("strong", { children: n }, i) };
             return null == e
-                ? R.intl.format(R.t.HpvELh, n)
+                ? w.intl.format(w.t.HpvELh, n)
                 : e?.member_type === C.Z9.OWNER
-                  ? R.intl.format(R.t.X1ngSd, { ...n, guildName: e?.name })
-                  : R.intl.format(R.t.rmpEPD, { ...n, guildName: e?.name });
+                  ? w.intl.format(w.t.X1ngSd, { ...n, guildName: e?.name })
+                  : w.intl.format(w.t.rmpEPD, { ...n, guildName: e?.name });
         }, [i, e]);
     return (0, t.jsx)(h.D, { variant: "heading-xl/normal", children: a });
 }
-function M(n) {
+function P(n) {
     let { children: i, plain: e = !1 } = n;
     return e
         ? (0, t.jsx)(j.E, { variant: "text-sm/medium", color: "text-subtle", children: i })
         : (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: i });
 }
-function V(n) {
+function B(n) {
     let { actions: i, classificationExpiration: e, plainHeader: l } = n,
         a = (0, A.bG)([k.default], () => k.default.locale);
     return 0 === i.filter((n) => n.descriptions.length > 0).length && null == e
         ? null
         : (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)(M, { plain: l, children: R.intl.string(R.t["O2nYk+"]) }),
+                  (0, t.jsx)(P, { plain: l, children: w.intl.string(w.t["O2nYk+"]) }),
                   (0, t.jsxs)("ul", {
-                      className: K.nq,
+                      className: S.nq,
                       children: [
-                          i.map((n) => (0, t.jsx)($, { action: n }, n.id)),
+                          i.map((n) => (0, t.jsx)(J, { action: n }, n.id)),
                           null != e
                               ? (0, t.jsx)(
                                     "li",
                                     {
-                                        className: K.DJ,
+                                        className: S.DJ,
                                         children: (0, t.jsx)(j.E, {
                                             tag: "span",
                                             variant: "heading-md/normal",
                                             color: "text-default",
-                                            children: R.intl.format(R.t.TByIjT, {
+                                            children: w.intl.format(w.t.TByIjT, {
                                                 expirationDate: e.toLocaleDateString(a, { dateStyle: "medium" }),
                                             }),
                                         }),
@@ -88,33 +128,33 @@ function V(n) {
               ],
           });
 }
-function Y() {
+function W() {
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(M, { plain: !0, children: R.intl.string(R.t["O2nYk+"]) }),
+            (0, t.jsx)(P, { plain: !0, children: w.intl.string(w.t["O2nYk+"]) }),
             (0, t.jsx)("ul", {
-                className: K.nq,
+                className: S.nq,
                 children: (0, t.jsx)("li", {
-                    className: K.DJ,
+                    className: S.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-md/normal",
                         color: "text-default",
-                        children: R.intl.string(F.default.rn3Gto),
+                        children: w.intl.string(V.default.rn3Gto),
                     }),
                 }),
             }),
         ],
     });
 }
-function $(n) {
+function J(n) {
     let { action: i } = n;
     return (0, t.jsx)(t.Fragment, {
         children: i.descriptions.map((n, i) =>
             (0, t.jsx)(
                 "li",
                 {
-                    className: K.DJ,
+                    className: S.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-md/normal",
@@ -127,83 +167,54 @@ function $(n) {
         ),
     });
 }
-function B(n) {
+function q(n) {
     let { classificationTypeText: i, policyExplainerLink: e } = n;
     return (0, t.jsxs)(E.Anchor, {
         href: e,
-        className: K.F8,
+        className: S.F8,
         useDefaultUnderlineStyles: !1,
         children: [
             (0, t.jsx)("div", {
-                className: K.yi,
+                className: S.yi,
                 children: (0, t.jsx)(f.ShieldIcon, { size: "md", color: p.A.colors.BORDER_FOCUS }),
             }),
             (0, t.jsx)("div", {
-                className: K.wC,
+                className: S.wC,
                 children: (0, t.jsx)(j.E, {
                     variant: "text-md/normal",
-                    children: R.intl.format(R.t.zxUdpj, { classificationDescription: i }),
+                    children: w.intl.format(w.t.zxUdpj, { classificationDescription: i }),
                 }),
             }),
             (0, t.jsx)("div", {
-                className: K.g_,
-                children: (0, t.jsx)(_._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                className: S.g_,
+                children: (0, t.jsx)(g._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             }),
         ],
     });
 }
-function P() {
-    return (0, t.jsx)(j.E, { variant: "text-md/normal", color: "text-muted", children: R.intl.string(R.t["I2H0/E"]) });
-}
-function q(n) {
-    return (0, t.jsx)(j.E, {
-        variant: "text-md/normal",
-        color: "text-muted",
-        children: R.intl.format(R.t.IFxUaT, {
-            letUsKnowHook: (i, e) =>
-                (0, t.jsx)(
-                    E.Anchor,
-                    { href: n.isAppealEligible ? void 0 : n.appealLink, onClick: n.letUsKnowClick, children: i },
-                    e,
-                ),
-        }),
-    });
-}
-function J(n) {
-    return (0, t.jsx)("div", {
-        className: K.CC,
-        children: n.hasBeenAppealed
-            ? (0, t.jsx)(P, {})
-            : (0, t.jsx)(q, {
-                  appealLink: b.d$.APPEALS_LINK,
-                  letUsKnowClick: n.onLetUsKnowClick,
-                  isAppealEligible: n.isAppealEligible,
-              }),
-    });
-}
-function W(n) {
+function z(n) {
     let { tosLink: i, communityGuidelinesLink: e, onLetUsKnowClick: l } = n;
     return (0, t.jsxs)("div", {
-        className: K.vq,
+        className: S.vq,
         children: [
-            (0, t.jsx)(M, { plain: !0, children: R.intl.string(R.t.RVEiD0) }),
-            (0, t.jsxs)(g.D, {
-                className: K._m,
+            (0, t.jsx)(P, { plain: !0, children: w.intl.string(w.t.RVEiD0) }),
+            (0, t.jsxs)(_.D, {
+                className: S._m,
                 onClick: l,
                 children: [
                     (0, t.jsx)(j.E, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: R.intl.string(R.t.YQPbuc),
+                        children: w.intl.string(w.t.YQPbuc),
                     }),
-                    (0, t.jsx)(_._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                    (0, t.jsx)(g._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
                 ],
             }),
             (0, t.jsx)(j.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                className: K.$L,
-                children: R.intl.format(R.t["1Z/+aA"], { tosLink: i, communityGuidelinesLink: e }),
+                className: S.$L,
+                children: w.intl.format(w.t["1Z/+aA"], { tosLink: i, communityGuidelinesLink: e }),
             }),
         ],
     });
@@ -213,30 +224,30 @@ function Z(n) {
     return (0, t.jsx)(j.E, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: K.yC,
-        children: R.intl.format(F.default.vPOpia, { tosLink: i, communityGuidelinesLink: e }),
+        className: S.yC,
+        children: w.intl.format(V.default.vPOpia, { tosLink: i, communityGuidelinesLink: e }),
     });
 }
-function z() {
+function X() {
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(M, { plain: !0, children: R.intl.string(R.t["977iei"]) }),
+            (0, t.jsx)(P, { plain: !0, children: w.intl.string(w.t["977iei"]) }),
             (0, t.jsx)("ul", {
-                className: K.nq,
+                className: S.nq,
                 children: (0, t.jsx)("li", {
-                    className: K.DJ,
+                    className: S.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-md/normal",
                         color: "text-default",
-                        children: R.intl.string(F.default["yV/t/V"]),
+                        children: w.intl.string(V.default["yV/t/V"]),
                     }),
                 }),
             }),
         ],
     });
 }
-function X(n) {
+function Q(n) {
     let {
         tosLink: i,
         communityGuidelinesLink: e,
@@ -246,27 +257,27 @@ function X(n) {
     } = n;
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: R.intl.string(R.t["977iei"]) }),
+            (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: w.intl.string(w.t["977iei"]) }),
             (0, t.jsx)(j.E, {
-                className: K.t8,
+                className: S.t8,
                 variant: "text-sm/normal",
-                children: R.intl.format(R.t["1Z/+aA"], { tosLink: i, communityGuidelinesLink: e }),
+                children: w.intl.format(w.t["1Z/+aA"], { tosLink: i, communityGuidelinesLink: e }),
             }),
-            (0, t.jsx)(B, { classificationTypeText: l, policyExplainerLink: a }),
+            (0, t.jsx)(q, { classificationTypeText: l, policyExplainerLink: a }),
             s,
         ],
     });
 }
-function Q() {
+function nn() {
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(Y, {}),
-            (0, t.jsx)(z, {}),
-            (0, t.jsx)(Z, { tosLink: b.d$.TOS_LINK, communityGuidelinesLink: b.d$.COMMUNITY_GUIDELINES }),
+            (0, t.jsx)(W, {}),
+            (0, t.jsx)(X, {}),
+            (0, t.jsx)(Z, { tosLink: O.d$.TOS_LINK, communityGuidelinesLink: O.d$.COMMUNITY_GUIDELINES }),
         ],
     });
 }
-let nn = (n) => {
+let ni = (n) => {
     let { classificationId: i, source: e, onError: a, onClose: s } = n,
         {
             classification: r,
@@ -279,13 +290,13 @@ let nn = (n) => {
         j = (0, y.K)(),
         E = null != r && null != r.flagged_content && r.flagged_content.length > 0,
         f = (0, G.v)(),
-        _ = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_ELIGIBLE),
-        g = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
-        k = (0, L.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
-        R = g && k,
-        F = (0, A.bG)([U.A], () => U.A.getIsManualReviewDecidedUnderage()),
-        M = !!r?.is_coppa && F,
-        Y = {
+        g = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_ELIGIBLE),
+        _ = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
+        k = (0, v.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
+        w = _ && k,
+        b = (0, A.bG)([U.A], () => U.A.getIsManualReviewDecidedUnderage()),
+        R = !!r?.is_coppa && b,
+        F = {
             accountStanding: j,
             classificationId: i,
             hasFlaggedContent: E,
@@ -293,10 +304,10 @@ let nn = (n) => {
             source: e,
             violationType: p,
         },
-        $ = l.useRef(Y);
-    function B() {
-        (I.default.track(w.HAw.SAFETY_HUB_ACTION, {
-            action: b.ZU.ClickLetUsKnow,
+        V = l.useRef(F);
+    function P() {
+        (I.default.track(M.HAw.SAFETY_HUB_ACTION, {
+            action: O.ZU.ClickLetUsKnow,
             account_standing: j.state,
             classification_ids: [Number(i)],
             source: e,
@@ -304,14 +315,14 @@ let nn = (n) => {
             is_dsa_eligible: u,
             violation_type: p,
         }),
-            g
+            _
                 ? T.A.openV2(i, s)
-                : _
+                : g
                   ? T.A.open(i, s)
-                  : d && (v.A.increment({ name: x.K.APPEAL_INGESTION_VIEW }), O.A.open(i)));
+                  : d && (L.A.increment({ name: x.K.APPEAL_INGESTION_VIEW }), K.A.open(i)));
     }
     return (l.useEffect(() => {
-        $.current = Y;
+        V.current = F;
     }),
     l.useEffect(() => {
         let {
@@ -321,10 +332,10 @@ let nn = (n) => {
             isDsaEligible: t,
             source: l,
             violationType: a,
-        } = $.current;
+        } = V.current;
         f &&
-            I.default.track(w.HAw.SAFETY_HUB_ACTION, {
-                action: b.ZU.ViewViolationDetail,
+            I.default.track(M.HAw.SAFETY_HUB_ACTION, {
+                action: O.ZU.ViewViolationDetail,
                 account_standing: n.state,
                 classification_ids: [Number(i)],
                 source: l,
@@ -338,43 +349,44 @@ let nn = (n) => {
         : null == r
           ? null
           : (0, t.jsxs)("div", {
-                className: K.ch,
+                className: S.ch,
                 children: [
                     (0, t.jsx)("div", {
-                        className: K.uW,
-                        children: (0, t.jsx)(H, {
+                        className: S.uW,
+                        children: (0, t.jsx)($, {
                             classificationTypeText: r.description,
                             guildMetadata: r?.guild_metadata,
                         }),
                     }),
                     (0, t.jsxs)("div", {
-                        className: m()(K.rf, K.uW),
+                        className: m()(S.rf, S.uW),
                         children: [
-                            (0, t.jsx)(S.U, { flaggedContent: r.flagged_content ?? [] }),
-                            M
-                                ? (0, t.jsx)(Q, {})
+                            (0, t.jsx)(Y.U, { flaggedContent: r.flagged_content ?? [] }),
+                            R
+                                ? (0, t.jsx)(nn, {})
                                 : (0, t.jsxs)(t.Fragment, {
                                       children: [
-                                          (0, t.jsx)(V, {
+                                          (0, t.jsx)(B, {
                                               actions: r.actions,
                                               classificationExpiration: (0, o.$r)(r),
-                                              plainHeader: R,
+                                              plainHeader: w,
                                           }),
-                                          R
-                                              ? (0, t.jsx)(W, {
-                                                    tosLink: b.d$.TOS_LINK,
-                                                    communityGuidelinesLink: b.d$.COMMUNITY_GUIDELINES,
-                                                    onLetUsKnowClick: B,
+                                          w
+                                              ? (0, t.jsx)(z, {
+                                                    tosLink: O.d$.TOS_LINK,
+                                                    communityGuidelinesLink: O.d$.COMMUNITY_GUIDELINES,
+                                                    onLetUsKnowClick: P,
                                                 })
-                                              : (0, t.jsx)(X, {
+                                              : (0, t.jsx)(Q, {
                                                     classificationTypeText: r.description,
-                                                    tosLink: b.d$.TOS_LINK,
-                                                    communityGuidelinesLink: b.d$.COMMUNITY_GUIDELINES,
+                                                    tosLink: O.d$.TOS_LINK,
+                                                    communityGuidelinesLink: O.d$.COMMUNITY_GUIDELINES,
                                                     policyExplainerLink: r.explainer_link,
-                                                    appealComponent: (0, t.jsx)(J, {
+                                                    appealComponent: (0, t.jsx)(H, {
                                                         hasBeenAppealed: null != r.appeal_status,
-                                                        onLetUsKnowClick: B,
-                                                        isAppealEligible: d || _,
+                                                        isAppealWindowExpired: (0, o.lr)(i) && !g && !_,
+                                                        onLetUsKnowClick: P,
+                                                        isAppealEligible: d || g,
                                                     }),
                                                 }),
                                       ],
@@ -384,8 +396,8 @@ let nn = (n) => {
                 ],
             });
 };
-var ni = e(987926);
-let ne = function (n) {
+var ne = e(987926);
+let nt = function (n) {
     let { transitionState: i, onClose: e, classificationId: l, source: u } = n,
         m = (0, d.A)(),
         x = (0, o.W$)();
@@ -393,21 +405,21 @@ let ne = function (n) {
         (e(), x || (0, c.openUserSettings)(r.X.ACCOUNT_STANDING_CATEGORY));
     }
     return (0, t.jsxs)(a.EO, {
-        className: ni.CR,
+        className: ne.CR,
         transitionState: i,
         parentComponent: "ClassificationDetailModal",
         "data-migration-pending": !0,
         children: [
             (0, t.jsx)("div", {
-                className: ni.Hc,
-                children: (0, t.jsx)(a.s_, { "data-migration-pending": !0, className: ni.g8, onClick: e }),
+                className: ne.Hc,
+                children: (0, t.jsx)(a.s_, { "data-migration-pending": !0, className: ne.g8, onClick: e }),
             }),
             (0, t.jsx)(a.$m, {
                 "data-migration-pending": !0,
-                className: ni.jE,
+                className: ne.jE,
                 children: m
                     ? (0, t.jsx)(s.y, {})
-                    : (0, t.jsx)(nn, { classificationId: l, source: u, onError: p, onClose: p }),
+                    : (0, t.jsx)(ni, { classificationId: l, source: u, onError: p, onClose: p }),
             }),
         ],
     });
