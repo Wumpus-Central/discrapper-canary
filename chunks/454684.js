@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 640404, Version Hash: 312486b1f3376c82ea562f58df4057b223f10bf5`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 640413, Version Hash: 8d3dfffb8ec7960b7ee74f8e8875da78107684a0`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -23836,14 +23836,21 @@ var Rn = n(192444),
     Ra = n(683760),
     Rs = n(236056),
     Rl = n(881489),
-    Ro = n(769623),
-    Rd = n(219882),
-    Rc = n(757036),
-    Ru = n(774774),
-    R_ = n(878815);
-let RE = "premium_tier_gradient",
-    RA = "smaller_sparkle_gradient";
-function Rh(e) {
+    Ro = n(710195);
+let Rd = (0, H.mj)({
+    name: "2026-10-nitro-tab-remove-account-age-restriction",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var Rc = n(769623),
+    Ru = n(219882),
+    R_ = n(757036),
+    RE = n(774774),
+    RA = n(878815);
+let Rh = "premium_tier_gradient",
+    Rf = "smaller_sparkle_gradient";
+function RI(e) {
     let { width: t = 14, height: n = 15, color: i = "white", foreground: r, ...a } = e;
     return (0, M.jsxs)("svg", {
         ...(0, tg.A)({ ...a }),
@@ -23856,7 +23863,7 @@ function Rh(e) {
         children: [
             (0, M.jsx)("defs", {
                 children: (0, M.jsxs)("linearGradient", {
-                    id: RE,
+                    id: Rh,
                     x1: "0%",
                     y1: "0%",
                     x2: "100%",
@@ -23869,7 +23876,7 @@ function Rh(e) {
                 }),
             }),
             (0, M.jsxs)("linearGradient", {
-                id: RA,
+                id: Rf,
                 x1: "-4.95474",
                 y1: "5.44067",
                 x2: "11.2384",
@@ -23888,7 +23895,7 @@ function Rh(e) {
         ],
     });
 }
-function Rf(e) {
+function Rp(e) {
     let { className: t, startsAt: n, endsAt: i, messageStyle: r, upperCase: a, showSparkles: s } = e,
         [l] = (0, oT.Bo)(rG.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
             showAfterTimestamp: n.valueOf(),
@@ -23899,116 +23906,116 @@ function Rf(e) {
         ? null
         : (a && (o = o.toUpperCase()),
           (0, M.jsxs)("div", {
-              className: tE()(t, R_.Iv),
+              className: tE()(t, RA.Iv),
               children: [
                   s
                       ? (0, M.jsxs)(M.Fragment, {
                             children: [
-                                (0, M.jsx)(Rh, { foreground: R_.QX, color: `url(#${RA})` }),
-                                (0, M.jsx)(Rh, { foreground: R_.J0, color: `url(#${RE})` }),
+                                (0, M.jsx)(RI, { foreground: RA.QX, color: `url(#${Rf})` }),
+                                (0, M.jsx)(RI, { foreground: RA.J0, color: `url(#${Rh})` }),
                             ],
                         })
                       : null,
-                  (0, M.jsx)(Ru.e4, {
+                  (0, M.jsx)(RE.e4, {
                       text: o,
                       colorOptions:
                           l === rG.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL
-                              ? Ru.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
-                              : Ru.at.PREMIUM_TIER_2_GREY_FILL,
+                              ? RE.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                              : RE.at.PREMIUM_TIER_2_GREY_FILL,
                   }),
               ],
           }));
 }
-var RI = n(131168),
-    Rp = n(549996),
-    RT = n(88001);
-let Rm = { lastDismissedAnnouncementModalAt: null };
-class Rg extends eE.Ay.PersistedStore {
+var RT = n(131168),
+    Rm = n(549996),
+    Rg = n(88001);
+let RS = { lastDismissedAnnouncementModalAt: null };
+class RN extends eE.Ay.PersistedStore {
     static displayName = "PremiumGroupPersistedStore";
     static persistKey = "PremiumGroupPersistedStore";
     initialize(e) {
-        null != e && (Rm = e);
+        null != e && (RS = e);
     }
     getState() {
-        return Rm;
+        return RS;
     }
     getLastDismissedAnnouncementModalAt() {
-        return Rm.lastDismissedAnnouncementModalAt;
+        return RS.lastDismissedAnnouncementModalAt;
     }
     setLastDismissedAnnouncementModalAt(e) {
-        Rm = { ...Rm, lastDismissedAnnouncementModalAt: e };
+        RS = { ...RS, lastDismissedAnnouncementModalAt: e };
     }
 }
-let RS = new Rg(k.h, {
+let RC = new RN(k.h, {
     LOGOUT: function () {
-        return ((Rm = { lastDismissedAnnouncementModalAt: null }), !0);
+        return ((RS = { lastDismissedAnnouncementModalAt: null }), !0);
     },
     PREMIUM_MARKETING_ANNOUNCEMENT_MODAL_DISMISSED: function (e) {
-        return e.promotionKey === RT.Sc && ((Rm = { ...Rm, lastDismissedAnnouncementModalAt: Date.now() }), !0);
+        return e.promotionKey === Rg.Sc && ((RS = { ...RS, lastDismissedAnnouncementModalAt: Date.now() }), !0);
     },
 });
-var RN = n(989790),
-    RC = n(105390),
-    RO = n(259589);
-function RR(e) {
+var RO = n(989790),
+    RR = n(105390),
+    RL = n(259589);
+function Ry(e) {
     let { userDiscount: t, isTabSelected: n } = e,
         i = parseFloat(t.discount.amount),
-        r = tL.intl.formatToPlainString(RO.default.GEwdVw, { percent: i, discountOfferAmount: t.discount.amount }),
+        r = tL.intl.formatToPlainString(RL.default.GEwdVw, { percent: i, discountOfferAmount: t.discount.amount }),
         a = t.expiresAt?.toISOString();
-    return (0, M.jsx)(RC.MA, { isTabSelected: n, badgeCopy: r, offerExpiresAt: a, tooltipPosition: "right" });
+    return (0, M.jsx)(RR.MA, { isTabSelected: n, badgeCopy: r, offerExpiresAt: a, tooltipPosition: "right" });
 }
-var RL = n(52530);
-let Ry = (0, H.mj)({
+var RD = n(52530);
+let Rv = (0, H.mj)({
     name: "2026-10-code-blurple-teaser-marketing",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var RD = n(585669),
-    Rv = n(886205),
-    Rb = n(261995),
-    RM = n(964661),
-    RP = n(727949),
-    RU = n(85463),
-    Rw = n(557226);
-let RG = function (e) {
+var Rb = n(585669),
+    RM = n(886205),
+    RP = n(261995),
+    RU = n(964661),
+    Rw = n(727949),
+    RG = n(85463),
+    Rx = n(557226);
+let Rk = function (e) {
     let { isSelected: t, discountOffer: n } = e,
-        i = (0, RU.N)(),
+        i = (0, RG.N)(),
         [r, a] = (0, ro.kn)([rG.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], { bypassAutoDismiss: !0 });
     return (eI.useEffect(() => {
         t && r === rG.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && a(ru.i.TAKE_ACTION);
     }, [t, a, r]),
     r === rG.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
-        ? (0, M.jsx)(RC.MA, {
+        ? (0, M.jsx)(RR.MA, {
               badgeCopy: tL.intl.format(tL.t.AYcXGW, { discountOfferAmount: n.discount.amount }).toString(),
               isTabSelected: t,
               offerExpiresAt: null,
           })
         : (0, M.jsxs)("div", {
-              className: tE()(Rw.bv, Rw.Hf),
+              className: tE()(Rx.bv, Rx.Hf),
               children: [
                   (0, M.jsx)(f3.ClockIcon, {
                       size: "custom",
                       width: 12,
                       height: 12,
                       color: "currentColor",
-                      className: Rw.aW,
+                      className: Rx.aW,
                   }),
                   (0, M.jsx)(rx.E, {
                       variant: i,
                       color: "text-subtle",
-                      className: Rw.jf,
+                      className: Rx.jf,
                       children: tL.intl.format(tL.t.AYcXGW, { discountOfferAmount: n.discount.amount }),
                   }),
               ],
           });
 };
-var Rx = n(646917),
-    Rk = n(576761);
-let RF = function (e) {
+var RF = n(646917),
+    RB = n(576761);
+let RV = function (e) {
     let { children: t, multiplier: n } = e,
         i =
-            (0, Rx.z)() === Rk.MA.NITRO
+            (0, RF.z)() === RB.MA.NITRO
                 ? tL.intl.format(tL.t.NpUfej, { bonusOrbMultiplier: n })
                 : tL.intl.format(tL.t["G5k+lZ"], { bonusOrbMultiplier: n });
     return (0, M.jsx)(Aq.u, {
@@ -24026,39 +24033,39 @@ let RF = function (e) {
         children: t,
     });
 };
-var RB = n(163665),
-    RV = n(473933);
-function RH(e) {
+var RH = n(163665),
+    Rj = n(473933);
+function RW(e) {
     let { children: t } = e;
     return (0, M.jsx)(Of.A, {
-        title: tL.intl.string(RV.default.rY0e9i),
-        body: tL.intl.string(RV.default.LhfXZN),
-        asset: (0, M.jsx)(RB.I, { alt: "", ariaHidden: !0, width: 80, height: "auto" }),
+        title: tL.intl.string(Rj.default.rY0e9i),
+        body: tL.intl.string(Rj.default.LhfXZN),
+        asset: (0, M.jsx)(RH.I, { alt: "", ariaHidden: !0, width: 80, height: "auto" }),
         children: t,
     });
 }
-function Rj(e) {
+function RY(e) {
     let { children: t } = e;
     return (0, M.jsx)(Of.A, {
-        title: tL.intl.string(RV.default["Uty2/X"]),
-        body: tL.intl.string(RV.default.VAgI8Q),
-        asset: (0, M.jsx)(RB.I, { alt: "", ariaHidden: !0, width: 80, height: "auto" }),
+        title: tL.intl.string(Rj.default["Uty2/X"]),
+        body: tL.intl.string(Rj.default.VAgI8Q),
+        asset: (0, M.jsx)(RH.I, { alt: "", ariaHidden: !0, width: 80, height: "auto" }),
         children: t,
     });
 }
-var RW = n(580630),
-    RY = n(576243);
-function RK(e) {
+var RK = n(580630),
+    R$ = n(576243);
+function Rz(e) {
     let { children: t } = e,
         n = (0, oh.p)(),
         i = n?.hasAcknowledged() === !0,
         r = (0, of.PT)(i ? null : (n ?? null), lY.gD.PREMIUM_GROUP_MONTH);
     if (null == n || i || null == r) return t;
-    let a = (0, RW.$g)(Math.round(r.discountedAmount / RT.aw), r.currency);
+    let a = (0, RK.$g)(Math.round(r.discountedAmount / Rg.aw), r.currency);
     return (0, M.jsx)(Aq.u, {
-        title: tL.intl.string(RO.default.luFmt7),
-        body: tL.intl.formatToPlainString(RO.default.QnXCe6, { pricePerPerson: a }),
-        asset: (0, M.jsx)(RY.A, { size: 48, iconSize: 27, color: r7.A.colors.WHITE }),
+        title: tL.intl.string(RL.default.luFmt7),
+        body: tL.intl.formatToPlainString(RL.default.QnXCe6, { pricePerPerson: a }),
+        asset: (0, M.jsx)(R$.A, { size: 48, iconSize: 27, color: r7.A.colors.WHITE }),
         assetSize: 48,
         position: "right",
         align: "center",
@@ -24066,27 +24073,27 @@ function RK(e) {
         children: t,
     });
 }
-var R$ = n(707922),
-    Rz = n(438705);
-function RX(e) {
+var RX = n(707922),
+    Rq = n(438705);
+function RZ(e) {
     let { targetElementRef: t, dismissPopover: i, children: r } = e,
-        a = (0, Ro.Y)({ location: "nitro_tab_popover" }),
+        a = (0, Rc.Y)({ location: "nitro_tab_popover" }),
         { analyticsLocations: s } = (0, rF.Ay)(),
-        l = (0, R$.A)(),
+        l = (0, RX.A)(),
         o = (0, eE.bG)([ds.A], () => ds.A.getPremiumTypeSubscription()),
         d = null != o && (0, lV.Nc)(o);
     if (a && null == l) return r;
     let c = a
-            ? tL.intl.string(RO.default.luFmt7)
-            : tL.intl.format(RO.default["c+NBSl"], { premiumGroupProductName: (0, RT.DP)() }),
+            ? tL.intl.string(RL.default.luFmt7)
+            : tL.intl.format(RL.default["c+NBSl"], { premiumGroupProductName: (0, Rg.DP)() }),
         u = a
-            ? tL.intl.format(RO.default.QnXCe6, { pricePerPerson: l })
-            : tL.intl.format(RO.default.MuUV5u, { premiumGroupProductName: (0, RT.DP)(), totalSeats: RT.aw }),
+            ? tL.intl.format(RL.default.QnXCe6, { pricePerPerson: l })
+            : tL.intl.format(RL.default.MuUV5u, { premiumGroupProductName: (0, Rg.DP)(), totalSeats: Rg.aw }),
         _ = (0, M.jsx)(rJ.A, {
             targetElementRef: t,
             title: c,
             body: u,
-            graphic: { type: "image", src: Rz },
+            graphic: { type: "image", src: Rq },
             badge: { type: "beta", variant: "expressive" },
             gradientColor: "nitro-pink",
             size: "md",
@@ -24096,8 +24103,8 @@ function RX(e) {
             actions: [
                 {
                     text: a
-                        ? tL.intl.format(RO.default.LwdrNi, { premiumGroupProductName: (0, RT.DP)() })
-                        : tL.intl.string(RO.default["IO+nlU"]),
+                        ? tL.intl.format(RL.default.LwdrNi, { premiumGroupProductName: (0, Rg.DP)() })
+                        : tL.intl.string(RL.default["IO+nlU"]),
                     variant: a ? "expressive" : "primary",
                     onClick: function () {
                         (i(ru.i.TAKE_ACTION),
@@ -24122,26 +24129,26 @@ function RX(e) {
         });
     return (0, M.jsxs)(M.Fragment, { children: [(0, M.jsx)("div", { children: r }), _] });
 }
-var Rq = n(421438);
-function RZ(e) {
+var RQ = n(421438);
+function RJ(e) {
     let { targetElementRef: t, children: n } = e;
     return (0, M.jsx)(Aq.u, {
         targetElementRef: t,
-        asset: (0, M.jsx)("img", { src: Rq, alt: "" }),
-        title: tL.intl.string(RO.default.aFBQ3d),
-        body: tL.intl.string(RO.default.HXu14O),
+        asset: (0, M.jsx)("img", { src: RQ, alt: "" }),
+        title: tL.intl.string(RL.default.aFBQ3d),
+        body: tL.intl.string(RL.default.HXu14O),
         padding: "lg",
         caretConfig: { align: "center", position: "left" },
         position: "right",
         children: n,
     });
 }
-var RQ = n(567341),
-    RJ = n(325499),
-    R0 = n(249755);
-function R1(e) {
+var R0 = n(567341),
+    R1 = n(325499),
+    R2 = n(249755);
+function R3(e) {
     let { targetElementRef: t, dismissPopover: n, orbsRewardAmount: i, children: r } = e,
-        a = (0, RJ.b)("PremiumOrbRewardsIntroductionPopover"),
+        a = (0, R1.b)("PremiumOrbRewardsIntroductionPopover"),
         s = eI.useCallback(() => {
             (n(ru.i.TAKE_ACTION),
                 (0, l5.pX)(j.BVt.NITRO_HOME, { search: (0, t$.stringify)({ perk: lz.NITRO_ORBS_REWARDS_CARD_ID }) }));
@@ -24149,76 +24156,76 @@ function R1(e) {
         l = (0, M.jsx)(rJ.A, {
             targetElementRef: t,
             onRequestClose: () => n(ru.i.USER_DISMISS),
-            graphic: { type: "rive", rive: RQ.Z },
+            graphic: { type: "rive", rive: R0.Z },
             badge: { type: a ? "new" : "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: tL.intl.string(R0.default.hx5AFp),
-            body: tL.intl.format(R0.default.wq3CF2, { orbsCount: i }),
+            title: tL.intl.string(R2.default.hx5AFp),
+            body: tL.intl.format(R2.default.wq3CF2, { orbsCount: i }),
             actions: [{ text: tL.intl.string(tL.t.RzWDqY), icon: aP.t, onClick: s }],
             gradientColor: "nitro-pink",
         });
     return (0, M.jsxs)(M.Fragment, { children: [(0, M.jsx)("div", { children: r }), l] });
 }
-function R2(e) {
-    let { targetElementRef: t, dismissPopover: n, lastGrantedRewardAmount: i, children: r } = e,
-        a = (0, RJ.b)("PremiumOrbRewardsOrbDropPopover"),
-        s = eI.useCallback(() => {
-            (n(ru.i.TAKE_ACTION),
-                (0, l5.pX)(j.BVt.NITRO_HOME, { search: (0, t$.stringify)({ perk: lz.NITRO_ORBS_REWARDS_CARD_ID }) }));
-        }, [n]),
-        l = (0, M.jsx)(rJ.A, {
-            targetElementRef: t,
-            onRequestClose: () => n(ru.i.USER_DISMISS),
-            graphic: { type: "rive", rive: RQ.Z, props: { withReducedMotion: "halt" } },
-            badge: { type: a ? "new" : "beta", variant: "expressive" },
-            alignmentStrategy: "edge",
-            align: "top",
-            position: "right",
-            caretConfig: { align: "start" },
-            size: "md",
-            title: tL.intl.string(R0.default["78+gLr"]),
-            body: tL.intl.formatToPlainString(R0.default.Ry1TXC, { orbsCount: i }),
-            actions: [{ text: tL.intl.string(tL.t.RzWDqY), icon: aP.t, onClick: s }],
-            gradientColor: "nitro-pink",
-        });
-    return (0, M.jsxs)(M.Fragment, { children: [(0, M.jsx)("div", { children: r }), l] });
-}
-var R3 = n(549384);
 function R5(e) {
+    let { targetElementRef: t, dismissPopover: n, lastGrantedRewardAmount: i, children: r } = e,
+        a = (0, R1.b)("PremiumOrbRewardsOrbDropPopover"),
+        s = eI.useCallback(() => {
+            (n(ru.i.TAKE_ACTION),
+                (0, l5.pX)(j.BVt.NITRO_HOME, { search: (0, t$.stringify)({ perk: lz.NITRO_ORBS_REWARDS_CARD_ID }) }));
+        }, [n]),
+        l = (0, M.jsx)(rJ.A, {
+            targetElementRef: t,
+            onRequestClose: () => n(ru.i.USER_DISMISS),
+            graphic: { type: "rive", rive: R0.Z, props: { withReducedMotion: "halt" } },
+            badge: { type: a ? "new" : "beta", variant: "expressive" },
+            alignmentStrategy: "edge",
+            align: "top",
+            position: "right",
+            caretConfig: { align: "start" },
+            size: "md",
+            title: tL.intl.string(R2.default["78+gLr"]),
+            body: tL.intl.formatToPlainString(R2.default.Ry1TXC, { orbsCount: i }),
+            actions: [{ text: tL.intl.string(tL.t.RzWDqY), icon: aP.t, onClick: s }],
+            gradientColor: "nitro-pink",
+        });
+    return (0, M.jsxs)(M.Fragment, { children: [(0, M.jsx)("div", { children: r }), l] });
+}
+var R6 = n(549384);
+function R4(e) {
     let { targetElementRef: t, dismissPopover: n, children: i } = e,
-        r = (0, RJ.b)("PremiumOrbRewardsUpsellPopover"),
+        r = (0, R1.b)("PremiumOrbRewardsUpsellPopover"),
         a = eI.useCallback(() => {
-            (n(ru.i.TAKE_ACTION), (0, l5.pX)(`${j.BVt.NITRO_HOME}?section=${R3.L}`));
+            (n(ru.i.TAKE_ACTION), (0, l5.pX)(`${j.BVt.NITRO_HOME}?section=${R6.L}`));
         }, [n]),
         s = (0, M.jsx)(rJ.A, {
             targetElementRef: t,
             onRequestClose: () => n(ru.i.USER_DISMISS),
-            graphic: { type: "rive", rive: RQ.Z },
+            graphic: { type: "rive", rive: R0.Z },
             badge: { type: r ? "new" : "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: tL.intl.string(R0.default["3BI7j6"]),
-            body: tL.intl.string(R0.default.XNHr3C),
+            title: tL.intl.string(R2.default["3BI7j6"]),
+            body: tL.intl.string(R2.default.XNHr3C),
             actions: [{ text: tL.intl.string(tL.t.hvVgAZ), onClick: a }],
             gradientColor: "nitro-pink",
         });
     return (0, M.jsxs)(M.Fragment, { children: [(0, M.jsx)("div", { children: i }), s] });
 }
-function R6(e) {
+function R7(e) {
     let { targetElementRef: t, discountOffer: n, children: i } = e,
         r = (0, of.YJ)(n) ?? lY.gD.PREMIUM_YEAR_TIER_2,
         a = (0, of.PT)(n, r),
-        s = null != a ? (0, RW.$g)(a.discountedAmount, a.currency) : null,
+        s = null != a ? (0, RK.$g)(a.discountedAmount, a.currency) : null,
         l = tL.intl.format(tL.t["4FUWIL"], { percent: n.discount.amount }),
         o = tL.intl.format(tL.t.XTzCoo, { discountedPrice: s }),
-        d = (0, M.jsx)(RY.A, { size: 48, iconSize: 27, color: r7.A.colors.WHITE });
+        d = (0, M.jsx)(R$.A, { size: 48, iconSize: 27, color: r7.A.colors.WHITE });
     return (0, M.jsx)(Aq.u, {
         title: l,
         body: o,
@@ -24230,9 +24237,9 @@ function R6(e) {
         children: i,
     });
 }
-var R4 = n(473702),
-    R7 = n(398932);
-let R8 = function (e) {
+var R8 = n(473702),
+    R9 = n(398932);
+let Le = function (e) {
     let { targetElementRef: t, discountOffer: i, premiumSubscription: r, dismissCoachmark: a, children: s } = e,
         { analyticsLocations: l } = (0, rF.Ay)(nA.A.CHURN_DISCOUNT_POPOVER),
         o = (0, of.iU)(lY.gD.PREMIUM_MONTH_TIER_2, i, r),
@@ -24248,7 +24255,7 @@ let R8 = function (e) {
                 billingPeriod: (0, lV.Ke)(i.discount.intervalType),
                 numMonths: i.discount.intervalCount,
             }),
-            graphic: { type: "image", src: R7.A },
+            graphic: { type: "image", src: R9.A },
             gradientColor: "nitro-pink",
             actions: [
                 {
@@ -24317,7 +24324,7 @@ let R8 = function (e) {
                                         ...t,
                                         premiumSubscription: r,
                                         analyticsLocations: l,
-                                        initialStep: R4.g.CONFIRM_DISCOUNT,
+                                        initialStep: R8.g.CONFIRM_DISCOUNT,
                                     });
                             }));
                     },
@@ -24330,7 +24337,7 @@ let R8 = function (e) {
         });
     return (0, M.jsxs)(M.Fragment, { children: [(0, M.jsx)("div", { children: s }), d] });
 };
-function R9(e) {
+function Lt(e) {
     let { targetElementRef: t, children: n } = e;
     return (0, M.jsx)(Aq.u, {
         targetElementRef: t,
@@ -24344,9 +24351,9 @@ function R9(e) {
         children: n,
     });
 }
-var Le = n(52416),
-    Lt = n(796878);
-function Ln(e) {
+var Ln = n(52416),
+    Li = n(796878);
+function Lr(e) {
     let { alt: t, ariaLabel: n, ariaHidden: i, role: r, width: a, height: s, className: l, style: o } = e,
         d = eI.useMemo(
             () => (0, A$.H)({ width: a, height: s, intrinsicWidth: 144, intrinsicHeight: 144, style: o }),
@@ -24362,24 +24369,24 @@ function Ln(e) {
         role: r ?? "img",
     });
 }
-function Li(e) {
+function La(e) {
     let { children: t, endsAt: n, variant: i = "initial" } = e,
         r = (0, Rl.Zb)(n),
-        a = (0, RW.$g)(0, (0, lV.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+        a = (0, RK.$g)(0, (0, lV.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
         s = "followup" === i,
         l = s ? tL.intl.string(tL.t.gzhz8w) : tL.intl.string(tL.t.aopiS6),
         o = s ? tL.intl.format(tL.t["3iUE+U"], { price: a }) : tL.intl.format(tL.t.AQd9tZ, { days: r });
     return (0, M.jsx)(Aq.u, {
         title: o,
         body: l,
-        asset: (0, M.jsx)(Ln, { alt: "", width: 48, height: 48 }),
+        asset: (0, M.jsx)(Lr, { alt: "", width: 48, height: 48 }),
         assetSize: 48,
         position: "right",
         asContainer: !0,
         children: (0, M.jsx)("div", { children: t }),
     });
 }
-var Lr =
+var Ls =
     (((p = {}).NONE = "none"),
     (p.CHURN_DISCOUNT = "churn_discount"),
     (p.PREMIUM_GROUP = "premium_group"),
@@ -24399,7 +24406,7 @@ var Lr =
     (p.FILE_UPLOAD_UPSELL = "file_upload_upsell"),
     (p.CODE_BLURPLE_TEASER = "code_blurple_teaser"),
     p);
-function La(e) {
+function Ll(e) {
     let {
             children: t,
             popoverType: n,
@@ -24422,36 +24429,36 @@ function La(e) {
     if (f || I) return t;
     switch (n) {
         case "premium_group_discount":
-            return (0, M.jsx)(RK, { targetElementRef: r, children: t });
+            return (0, M.jsx)(Rz, { targetElementRef: r, children: t });
         case "premium_group_tooltip":
-            return (0, M.jsx)(RZ, { targetElementRef: r, children: t });
+            return (0, M.jsx)(RJ, { targetElementRef: r, children: t });
         case "reverse_trial": {
             let e = h?.trialId === lY.Tt,
                 n = A ?? (h?.expiresAt != null ? o_()(h.expiresAt) : null);
-            if (null != n) return (0, M.jsx)(Li, { endsAt: n, variant: e ? "followup" : "initial", children: t });
+            if (null != n) return (0, M.jsx)(La, { endsAt: n, variant: e ? "followup" : "initial", children: t });
             break;
         }
         case "tooltip":
-            return (0, M.jsx)(Lt.A, { children: t });
+            return (0, M.jsx)(Li.A, { children: t });
         case "annual_discount":
-            if (null != a) return (0, M.jsx)(R6, { targetElementRef: r, discountOffer: a, children: t });
+            if (null != a) return (0, M.jsx)(R7, { targetElementRef: r, discountOffer: a, children: t });
             break;
         case "orbs_multiplier":
-            return (0, M.jsx)(RF, { multiplier: _, children: t });
+            return (0, M.jsx)(RV, { multiplier: _, children: t });
         case "offer_tab_badge_tooltip":
-            return (0, M.jsx)(R9, { targetElementRef: r, children: t });
+            return (0, M.jsx)(Lt, { targetElementRef: r, children: t });
         case "file_upload_announcement":
-            return (0, M.jsx)(RH, { children: t });
+            return (0, M.jsx)(RW, { children: t });
         case "file_upload_upsell":
-            return (0, M.jsx)(Rj, { children: t });
+            return (0, M.jsx)(RY, { children: t });
         case "code_blurple_teaser":
-            return (0, M.jsx)(RL.q$, { children: t });
+            return (0, M.jsx)(RD.q$, { children: t });
     }
     if (i) return t;
     switch (n) {
         case "churn_discount":
             if (null != s && null != l)
-                return (0, M.jsx)(R8, {
+                return (0, M.jsx)(Le, {
                     targetElementRef: r,
                     discountOffer: s,
                     premiumSubscription: l,
@@ -24460,14 +24467,14 @@ function La(e) {
                 });
             break;
         case "premium_group":
-            return (0, M.jsx)(RX, { targetElementRef: r, dismissPopover: d, children: t });
+            return (0, M.jsx)(RZ, { targetElementRef: r, dismissPopover: d, children: t });
         case "orbs_upsell":
-            return (0, M.jsx)(R5, { targetElementRef: r, dismissPopover: d, children: t });
+            return (0, M.jsx)(R4, { targetElementRef: r, dismissPopover: d, children: t });
         case "orbs_intro":
-            return (0, M.jsx)(R1, { targetElementRef: r, dismissPopover: d, orbsRewardAmount: E, children: t });
+            return (0, M.jsx)(R3, { targetElementRef: r, dismissPopover: d, orbsRewardAmount: E, children: t });
         case "orbs_drop":
             if (null != o)
-                return (0, M.jsx)(R2, {
+                return (0, M.jsx)(R5, {
                     targetElementRef: r,
                     dismissPopover: c,
                     lastGrantedRewardAmount: o,
@@ -24475,26 +24482,32 @@ function La(e) {
                 });
             break;
         case "marketing_moment_popover":
-            return (0, M.jsx)(Le.A, { targetElementRef: r, dismissPopover: u, children: t });
+            return (0, M.jsx)(Ln.A, { targetElementRef: r, dismissPopover: u, children: t });
         case "macaron_3pp":
-            return (0, M.jsx)(Rb.ny, { targetElementRef: r, dismissPopover: d, children: t });
+            return (0, M.jsx)(RP.ny, { targetElementRef: r, dismissPopover: d, children: t });
     }
     return t;
 }
-let Ls = (e) => {
-    let { selected: t } = e,
-        n = (0, eE.bG)([eF.default], () => eF.default.getCurrentUser()),
-        i = (0, eE.bG)([ds.A], () => ds.A.getPremiumTypeSubscription()),
-        r = (0, lH.V)(),
-        a = (0, oh.O)({ includePremiumGroupDiscount: !0 }),
-        [s] = Rt(),
-        l = (0, lV.Of)(n, i),
-        o = (0, eE.bG)([Ra.A], () => Ra.A.getCreatedAtOverride()),
-        d = t || null != r || null != a || null != s || l,
-        c = null != o ? o : n?.createdAt;
-    return d || (null != n && null != c && Date.now() - c.getTime() > 12096e5);
+let Lo = (e) => {
+    var t, n;
+    let { selected: i } = e,
+        r = (0, eE.bG)([eF.default], () => eF.default.getCurrentUser()),
+        a = (0, eE.bG)([ds.A], () => ds.A.getPremiumTypeSubscription()),
+        s = (0, lH.V)(),
+        l = (0, oh.O)({ includePremiumGroupDiscount: !0 }),
+        [o] = Rt(),
+        d = (0, lV.Of)(r, a),
+        c = (0, eE.bG)([Ra.A], () => Ra.A.getCreatedAtOverride()),
+        u = i || null != s || null != l || null != o || d,
+        _ = null != c ? c : r?.createdAt,
+        E = null != r && null != _ && Date.now() - _.getTime() > 12096e5,
+        A =
+            ((t = "nitro_tab_visibility"),
+            (n = !u && !E),
+            (0, eE.bG)([Ro.A, ei.default], () => n && Rd.getConfig({ location: t }).enabled, [n, t]));
+    return u || E || A;
 };
-function Ll(e) {
+function Ld(e) {
     let t,
         n,
         i,
@@ -24521,16 +24534,16 @@ function Ll(e) {
     let T = (0, AT.rm)("nitro"),
         m = (0, lH.V)(),
         g = (0, oh.O)({ includePremiumGroupDiscount: !0 }),
-        S = (0, RI.p)(),
+        S = (0, RT.p)(),
         N = (0, Rl.ds)(),
-        { enabled: C } = (0, Rb.vc)({ location: "NitroTabButton" }),
-        { enabled: O } = Rv.A.useConfig({ location: "NitroTabButton" }),
-        R = (0, RL.k8)("NitroTabButton"),
-        { enabled: L } = Ry.useConfig({ location: "NitroTabButton" }),
-        y = ((t = (0, Rc.L)(lY.PremiumTypes.TIER_2)), (n = (0, Rd.rX)("NitroTabButton")), t && n),
-        D = ((i = (0, Rc.L)(lY.PremiumTypes.TIER_2)), (0, Rd.tb)("NitroTabButton") && !i),
-        v = (0, RP.NF)({ trialOffer: m }),
-        b = (0, RN.bf)(),
+        { enabled: C } = (0, RP.vc)({ location: "NitroTabButton" }),
+        { enabled: O } = RM.A.useConfig({ location: "NitroTabButton" }),
+        R = (0, RD.k8)("NitroTabButton"),
+        { enabled: L } = Rv.useConfig({ location: "NitroTabButton" }),
+        y = ((t = (0, R_.L)(lY.PremiumTypes.TIER_2)), (n = (0, Ru.rX)("NitroTabButton")), t && n),
+        D = ((i = (0, R_.L)(lY.PremiumTypes.TIER_2)), (0, Ru.tb)("NitroTabButton") && !i),
+        v = (0, Rw.NF)({ trialOffer: m }),
+        b = (0, RO.bf)(),
         [P, U] = Rt(),
         {
             shouldShowBonusOrbsUX: w,
@@ -24549,13 +24562,13 @@ function Ll(e) {
                 orbMultiplier: i,
             };
         })(),
-        k = (0, RP.Tp)(),
+        k = (0, Rw.Tp)(),
         F = (0, OZ.mB)(rG.M.REFERRAL_PROGRAM_POPOVER_V2),
         B = (0, OZ.mB)(rG.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER),
         V = (0, eE.bG)([O7.A], () => O7.A.getReminderStateId()),
         { programReward: H, isEligible: Y } = (0, Ri.F)(),
-        K = (0, Ro.Y)({ location: "nitro_tab_popover" }),
-        $ = (0, eE.bG)([RS], () => RS.getLastDismissedAnnouncementModalAt()),
+        K = (0, Rc.Y)({ location: "nitro_tab_popover" }),
+        $ = (0, eE.bG)([RC], () => RC.getLastDismissedAnnouncementModalAt()),
         z = null != $ && Date.now() - $ > 6048e5,
         X = null != $ && Date.now() - $ <= 6048e5,
         q = H?.reward_amount ?? 0,
@@ -24583,13 +24596,13 @@ function Ll(e) {
         en && ep.push(rG.M.PREMIUM_ORBS_UPSELL_POPOVER),
         el && ep.push(rG.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
         Q && ep.push(rG.M.MACARON_3P_POPOVER),
-        R === RD.z.COUNTDOWN && L && ep.push(rG.M.CODE_BLURPLE_TEASER_TOOLTIP),
+        R === Rb.z.COUNTDOWN && L && ep.push(rG.M.CODE_BLURPLE_TEASER_TOOLTIP),
         y && ep.push(rG.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT),
         D && ep.push(rG.M.NITRO_FILE_UPLOAD_1GB_UPSELL));
     let [eT, em] = (0, ro.kn)(et ? [] : ep, { bypassAutoDismiss: !0 }),
-        eg = (0, Rp.c)(oi.C.PREMIUM_TAB),
-        eS = (0, Rp.c)(oi.C.PREMIUM_TAB_TOOLTIP),
-        eN = (0, Rp.c)(oi.C.PREMIUM_TAB_POPOVER),
+        eg = (0, Rm.c)(oi.C.PREMIUM_TAB),
+        eS = (0, Rm.c)(oi.C.PREMIUM_TAB_TOOLTIP),
+        eN = (0, Rm.c)(oi.C.PREMIUM_TAB_POPOVER),
         [eC, eO] = (0, ro.Cc)(
             null != eg && "premiumTab" === eg.properties.properties.oneofKind
                 ? rG.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
@@ -24625,13 +24638,13 @@ function Ll(e) {
                 w && G(ru.i.AUTO_DISMISS),
                 null != P && U(ru.i.AUTO_DISMISS));
         }, [o, em, eT, eC, eO, ey, eD, eR, eL, w, G, P, U]),
-        !Ls({ selected: o }))
+        !Lo({ selected: o }))
     )
         return null;
     ed === lY.xc.NONE ||
         N ||
         ((a = 7),
-        (r = (0, M.jsx)(Rf, {
+        (r = (0, M.jsx)(Rp, {
             className: "",
             startsAt: ec,
             endsAt: eu,
@@ -24642,7 +24655,7 @@ function Ll(e) {
         eG = b && ew,
         ex = (0, op.u$)(rG.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, eg?.promotionId ?? "").isDismissed;
     if (null != eg && "premiumTab" === eg.properties.properties.oneofKind)
-        ((r = (0, M.jsx)(RM.A, {
+        ((r = (0, M.jsx)(RU.A, {
             componentId: eg.id,
             promotionId: eg.promotionId,
             badgeCopy: eg.properties.properties.premiumTab.badgeLabel,
@@ -24656,8 +24669,8 @@ function Ll(e) {
         ((r = (0, M.jsx)(OE.E, { type: { text: tL.intl.string(tL.t.RDE0Sc) }, variant: "expressive" })), (a = 6));
     else if (eG) ((r = (0, M.jsx)(OE.E, { type: "new", variant: "expressive" })), (a = 11));
     else if (v) {
-        let e = (0, RP.ZR)();
-        ((r = (0, M.jsx)(RC.MA, {
+        let e = (0, Rw.ZR)();
+        ((r = (0, M.jsx)(RR.MA, {
             isTabSelected: o,
             badgeCopy: tL.intl.string(tL.t.OS9KPu),
             offerExpiresAt: !0 === e ? (m?.expiresAt?.toISOString() ?? null) : null,
@@ -24671,9 +24684,9 @@ function Ll(e) {
               })),
               (a = 19))
             : eU
-              ? ((r = (0, M.jsx)(RL.su, {})), (a = 20))
+              ? ((r = (0, M.jsx)(RD.su, {})), (a = 20))
               : N
-                ? ((r = (0, M.jsx)(RC.MA, {
+                ? ((r = (0, M.jsx)(RR.MA, {
                       isTabSelected: o,
                       badgeCopy: tL.intl.string(tL.t.raP9dM),
                       offerExpiresAt: null,
@@ -24683,9 +24696,9 @@ function Ll(e) {
                 : null != P
                   ? ((r = (0, M.jsx)(OE.E, { type: { text: P }, variant: "expressive" })), (a = 1))
                   : null != g && g.discountId === lY.xH
-                    ? ((r = (0, M.jsx)(RR, { userDiscount: g, isTabSelected: o })), (a = 9))
+                    ? ((r = (0, M.jsx)(Ry, { userDiscount: g, isTabSelected: o })), (a = 9))
                     : null != g
-                      ? ((r = (0, M.jsx)(RC.fY, {
+                      ? ((r = (0, M.jsx)(RR.fY, {
                             userDiscount: g,
                             isTabSelected: o,
                             includesAmountOff: !1,
@@ -24695,7 +24708,7 @@ function Ll(e) {
                         (ev = !g.hasAcknowledged()))
                       : null == m || ef
                         ? eo
-                            ? ((r = (0, M.jsx)(RG, { isSelected: o, discountOffer: S })), (a = 8))
+                            ? ((r = (0, M.jsx)(Rk, { isSelected: o, discountOffer: S })), (a = 8))
                             : (en && eT === rG.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
                                 (el && eT === rG.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
                                 (es && ey === rG.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
@@ -24705,46 +24718,46 @@ function Ll(e) {
                                 : (eT === rG.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT ||
                                       eT === rG.M.NITRO_FILE_UPLOAD_1GB_UPSELL) &&
                                   ((r = (0, M.jsx)(OE.E, { type: "new", variant: "expressive" })), (a = 2))
-                        : ((r = (0, M.jsx)(RC.Ag, { trialOffer: m, isTabSelected: o, badgeStyle: Rs.v.GLOWING })),
+                        : ((r = (0, M.jsx)(RR.Ag, { trialOffer: m, isTabSelected: o, badgeStyle: Rs.v.GLOWING })),
                           (a = 4),
                           (ev = !m.hasAcknowledged));
-    let ek = Lr.NONE;
+    let ek = Ls.NONE;
     function eB() {
         (re.preload(), p && null != h && (0, Rr.A)(h.id));
     }
     eR === rG.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
-        ? (ek = Lr.MARKETING_MOMENT_POPOVER)
+        ? (ek = Ls.MARKETING_MOMENT_POPOVER)
         : eo && eT === rG.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === a
-          ? (ek = Lr.CHURN_DISCOUNT)
+          ? (ek = Ls.CHURN_DISCOUNT)
           : eG && eT === rG.M.PREMIUM_GROUP_POPOVER
-            ? (ek = Lr.PREMIUM_GROUP)
+            ? (ek = Ls.PREMIUM_GROUP)
             : 9 === a
-              ? (ek = Lr.PREMIUM_GROUP_DISCOUNT)
+              ? (ek = Ls.PREMIUM_GROUP_DISCOUNT)
               : eG && eT === rG.M.PREMIUM_GROUP_POPOVER_UPSELL_V2
-                ? ((ek = Lr.PREMIUM_GROUP_TOOLTIP), (_ = !0))
+                ? ((ek = Ls.PREMIUM_GROUP_TOOLTIP), (_ = !0))
                 : en && eT === rG.M.PREMIUM_ORBS_UPSELL_POPOVER
-                  ? (ek = Lr.ORBS_UPSELL)
+                  ? (ek = Ls.ORBS_UPSELL)
                   : el && eT === rG.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
-                    ? (ek = Lr.ORBS_INTRO)
+                    ? (ek = Ls.ORBS_INTRO)
                     : es && ey === rG.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
-                      ? (ek = Lr.ORBS_DROP)
+                      ? (ek = Ls.ORBS_DROP)
                       : eP
-                        ? (ek = Lr.MACARON_3PP)
+                        ? (ek = Ls.MACARON_3PP)
                         : eU
-                          ? ((ek = Lr.CODE_BLURPLE_TEASER), (l = RL.nj))
+                          ? ((ek = Ls.CODE_BLURPLE_TEASER), (l = RD.nj))
                           : eT === rG.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT
-                            ? ((ek = Lr.FILE_UPLOAD_ANNOUNCEMENT), (l = lz.NITRO_FILE_UPLOAD_WHATS_NEW_CARD_ID))
+                            ? ((ek = Ls.FILE_UPLOAD_ANNOUNCEMENT), (l = lz.NITRO_FILE_UPLOAD_WHATS_NEW_CARD_ID))
                             : eT === rG.M.NITRO_FILE_UPLOAD_1GB_UPSELL
-                              ? ((ek = Lr.FILE_UPLOAD_UPSELL), (l = lz.LARGE_UPLOADS_CARD_ID))
+                              ? ((ek = Ls.FILE_UPLOAD_UPSELL), (l = lz.LARGE_UPLOADS_CARD_ID))
                               : eb
-                                ? (ek = Lr.TOOLTIP)
+                                ? (ek = Ls.TOOLTIP)
                                 : eM && 3 === a
-                                  ? (ek = Lr.ANNUAL_DISCOUNT)
+                                  ? (ek = Ls.ANNUAL_DISCOUNT)
                                   : N || m?.trialId === lY.Tt
-                                    ? (ek = Lr.REVERSE_TRIAL)
+                                    ? (ek = Ls.REVERSE_TRIAL)
                                     : w
-                                      ? (ek = Lr.ORBS_MULTIPLIER)
-                                      : ev && (ek = Lr.OFFER_TAB_BADGE_TOOLTIP);
+                                      ? (ek = Ls.ORBS_MULTIPLIER)
+                                      : ev && (ek = Ls.OFFER_TAB_BADGE_TOOLTIP);
     let eV = (0, M.jsx)(AJ.z9, {
         listItemRef: d,
         selected: o,
@@ -24774,15 +24787,15 @@ function Ll(e) {
                     em(ru.i.USER_DISMISS),
                 w && G(ru.i.USER_DISMISS),
                 null != P && U(ru.i.USER_DISMISS),
-                F && (0, RP.ne)(V),
-                B && (0, RP.sZ)());
+                F && (0, Rw.ne)(V),
+                B && (0, Rw.sZ)());
         },
         onMouseEnter: eB,
         ...A,
         ...T,
         children: r,
     });
-    return (0, M.jsx)(La, {
+    return (0, M.jsx)(Ll, {
         orbsRewardAmount: q,
         popoverType: ek,
         suppressPopover: E,
@@ -24800,27 +24813,27 @@ function Ll(e) {
         children: eV,
     });
 }
-var Lo = n(879416),
-    Ld = n(197630);
+var Lc = n(879416),
+    Lu = n(197630);
 n(232198);
-var Lc = n(488116),
-    Lu = n(764014),
-    L_ = n(954457);
-function LE(e) {
+var L_ = n(488116),
+    LE = n(764014),
+    LA = n(954457);
+function Lh(e) {
     let { targetElementRef: t, suppressPopover: n = !1 } = e,
-        { referralRewardType: i, useAltReferralCardArt: r } = (0, Lo.x)({
+        { referralRewardType: i, useAltReferralCardArt: r } = (0, Lc.x)({
             location: "ReferralIncentivePopover",
             preventFetch: !1,
         });
     return null == i
         ? null
-        : (0, M.jsx)(LA, { targetElementRef: t, suppressPopover: n, referralRewardType: i, useAltReferralCardArt: r });
+        : (0, M.jsx)(Lf, { targetElementRef: t, suppressPopover: n, referralRewardType: i, useAltReferralCardArt: r });
 }
-function LA(e) {
+function Lf(e) {
     let { targetElementRef: t, suppressPopover: i, referralRewardType: r, useAltReferralCardArt: a } = e,
         { title: s, body: l } = (function (e) {
             let { referralRewardType: t } = e;
-            if (t === Ld.xb.ORBS) {
+            if (t === Lu.xb.ORBS) {
                 let e = { numOrbs: 5e3, helpdeskArticle: tG.A.getArticleURL(j.MVz.REFERRAL_PROGRAM) };
                 return { title: tL.intl.string(tL.t.kO23jV), body: tL.intl.format(tL.t.Ka9J40, e) };
             }
@@ -24829,9 +24842,9 @@ function LA(e) {
                 body: tL.intl.formatToPlainString(tL.t["/QnMxj"], { discountPercent: 30, numMonths: 3 }),
             };
         })({ referralRewardType: r }),
-        o = a ? (r === Ld.xb.ORBS ? Lu.A : Lc.A) : L_.A;
+        o = a ? (r === Lu.xb.ORBS ? LE.A : L_.A) : LA.A;
     function d() {
-        (0, RP.sZ)();
+        (0, Rw.sZ)();
     }
     return (0, M.jsx)(rJ.A, {
         targetElementRef: t,
@@ -24869,15 +24882,15 @@ function LA(e) {
         onRequestClose: d,
     });
 }
-let Lh = (0, H.mj)({
+let LI = (0, H.mj)({
     name: "2026-10-referral-refresh-notification",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function Lf(e) {
+function Lp(e) {
     let { targetElementRef: t, suppressPopover: i = !1 } = e,
-        r = (0, RP.Tp)(),
+        r = (0, Rw.Tp)(),
         a = (0, eE.bG)([O7.A], () => O7.A.getReminderStateId()),
         s = (0, eE.bG)([O7.A], () => O7.A.getReferralsRemaining()),
         l = (0, eE.bG)([eL.A], () => {
@@ -24889,16 +24902,16 @@ function Lf(e) {
             o &&
             (function (e) {
                 let { location: t } = e;
-                return Lh.getConfig({ location: t });
+                return LI.getConfig({ location: t });
             })({ location: nA.A.HOME_PAGE_PREMIUM_TAB }).enabled;
     function c() {
-        (0, RP.ne)(a);
+        (0, Rw.ne)(a);
     }
     return (0, M.jsx)(rJ.A, {
         targetElementRef: t,
         title: tL.intl.string(d ? tL.t.KHF45W : tL.t.K2DyeS),
         body: tL.intl.string(d ? tL.t.WJDeur : tL.t["JICo+3"]),
-        graphic: { type: "image", src: L_.A },
+        graphic: { type: "image", src: LA.A },
         size: "md",
         shouldShow: o,
         alignmentStrategy: "edge",
@@ -24932,13 +24945,13 @@ function Lf(e) {
         onRequestClose: c,
     });
 }
-var LI = n(308941),
-    Lp = n(717421),
-    LT = n(770178),
-    Lm = n(87549),
-    Lg = n(18437),
-    LS = n(339889),
-    LN =
+var LT = n(308941),
+    Lm = n(717421),
+    Lg = n(770178),
+    LS = n(87549),
+    LN = n(18437),
+    LC = n(339889),
+    LO =
         (((T = {})[(T.NONE = 0)] = "NONE"),
         (T[(T.BLURPLE = 1)] = "BLURPLE"),
         (T[(T.BRIGHT_BLUE = 2)] = "BRIGHT_BLUE"),
@@ -24955,81 +24968,81 @@ var LI = n(308941),
         (T[(T.LEMON_DROP = 13)] = "LEMON_DROP"),
         (T[(T.SILVER = 14)] = "SILVER"),
         T);
-let LC = {
-    [LN.NONE]: null,
-    [LN.BLURPLE]: {
+let LR = {
+    [LO.NONE]: null,
+    [LO.BLURPLE]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BLURPLE_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BLURPLE_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BLURPLE_OUTER,
     },
-    [LN.BRIGHT_BLUE]: {
+    [LO.BRIGHT_BLUE]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BRIGHT_BLUE_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BRIGHT_BLUE_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BRIGHT_BLUE_OUTER,
     },
-    [LN.COPPER]: {
+    [LO.COPPER]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_COPPER_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_COPPER_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_COPPER_OUTER,
     },
-    [LN.TEAL]: {
+    [LO.TEAL]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_TEAL_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_TEAL_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_TEAL_OUTER,
     },
-    [LN.FOREST_GREEN]: {
+    [LO.FOREST_GREEN]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_FOREST_GREEN_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_FOREST_GREEN_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_FOREST_GREEN_OUTER,
     },
-    [LN.CRIMSON]: {
+    [LO.CRIMSON]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_CRIMSON_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_CRIMSON_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_CRIMSON_OUTER,
     },
-    [LN.GOLDEN]: {
+    [LO.GOLDEN]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_GOLDEN_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_GOLDEN_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_GOLDEN_OUTER,
     },
-    [LN.MINT]: {
+    [LO.MINT]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_MINT_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_MINT_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_MINT_OUTER,
     },
-    [LN.BURNT_ORANGE]: {
+    [LO.BURNT_ORANGE]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BURNT_ORANGE_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BURNT_ORANGE_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_BURNT_ORANGE_OUTER,
     },
-    [LN.MAGENTA]: {
+    [LO.MAGENTA]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_MAGENTA_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_MAGENTA_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_MAGENTA_OUTER,
     },
-    [LN.INDIGO]: {
+    [LO.INDIGO]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_INDIGO_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_INDIGO_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_INDIGO_OUTER,
     },
-    [LN.VIOLET]: {
+    [LO.VIOLET]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_VIOLET_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_VIOLET_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_VIOLET_OUTER,
     },
-    [LN.LEMON_DROP]: {
+    [LO.LEMON_DROP]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_LEMON_DROP_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_LEMON_DROP_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_LEMON_DROP_OUTER,
     },
-    [LN.SILVER]: {
+    [LO.SILVER]: {
         start: r7.A.colors.QUEST_HOME_TAB_GRADIENT_SILVER_CENTER,
         middle: r7.A.colors.QUEST_HOME_TAB_GRADIENT_SILVER_INNER,
         end: r7.A.colors.QUEST_HOME_TAB_GRADIENT_SILVER_OUTER,
     },
 };
-var LO = n(78701);
-function LR(e) {
+var LL = n(78701);
+function Ly(e) {
     let { onNavigateToQuestHome: t, onRender: n, onRequestClose: i, targetElementRef: r } = e,
         a = eI.useCallback(() => {
             (t(), (0, l5.pX)(j.BVt.QUEST_HOME));
@@ -25045,7 +25058,7 @@ function LR(e) {
             body: tL.intl.string(tL.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
-            graphic: { type: "image", src: LO.A },
+            graphic: { type: "image", src: LL.A },
             onRequestClose: i,
             position: "right",
             size: "lg",
@@ -25054,11 +25067,11 @@ function LR(e) {
         })
     );
 }
-var LL = n(398025),
-    Ly = n(363839);
-let LD = Math.ceil(Math.sqrt(115200)),
-    Lv = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${(LD - 240) / 2}px` },
-    Lb = function (e) {
+var LD = n(398025),
+    Lv = n(363839);
+let Lb = Math.ceil(Math.sqrt(115200)),
+    LM = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${(Lb - 240) / 2}px` },
+    LP = function (e) {
         let { selected: t } = e,
             n = (0, AT.rm)("quests"),
             i = eI.useRef(null),
@@ -25081,18 +25094,18 @@ let LD = Math.ceil(Math.sqrt(115200)),
                     l = (0, op.HX)(rG.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
                 return { shouldShowPopover: s, shouldShowGradientAndBadge: t && !l, dismissOnboardingContent: a };
             })(),
-            { shouldShowQuestHomeHeroContent: l, dismissQuestHomeHeroContent: o, questHomeHero: d } = (0, LS.I)(),
-            c = (0, Lg.cR)({ questHomeHero: d, shouldShowQuestHomeHeroContent: l }),
+            { shouldShowQuestHomeHeroContent: l, dismissQuestHomeHeroContent: o, questHomeHero: d } = (0, LC.I)(),
+            c = (0, LN.cR)({ questHomeHero: d, shouldShowQuestHomeHeroContent: l }),
             u = eI.useCallback(() => {
-                (Lm.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }),
+                (LS.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }),
                     l && o(),
                     c.handleEntrypointClick());
             }, [l, o, c]),
-            [{ glowSpring: _ }, E] = (0, Lp.z)(() => ({
+            [{ glowSpring: _ }, E] = (0, Lm.z)(() => ({
                 from: { glowSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 240, friction: 12 },
             })),
-            [{ shineSpring: A }, h] = (0, Lp.z)(() => ({
+            [{ shineSpring: A }, h] = (0, Lm.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
@@ -25109,7 +25122,7 @@ let LD = Math.ceil(Math.sqrt(115200)),
             g = eI.useCallback((e) => {
                 m(e.contentRect.width);
             }, []),
-            S = (0, LT.w)(g, [], { fireOnMount: !0 }),
+            S = (0, Lg.w)(g, [], { fireOnMount: !0 }),
             N = !l && a,
             C = !l && r,
             O = l && d?.questHomeEntrypoint?.tooltipTitle != null,
@@ -25117,27 +25130,27 @@ let LD = Math.ceil(Math.sqrt(115200)),
                 () =>
                     l
                         ? (function () {
-                              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : LN.NONE;
-                              return LC[e];
+                              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : LO.NONE;
+                              return LR[e];
                           })(d?.questHomeEntrypoint?.gradientPreset)
                         : null,
                 [l, d?.questHomeEntrypoint?.gradientPreset],
             ),
             L = eI.useMemo(() => l && null != R, [l, R]),
             y = (0, M.jsx)("div", {
-                className: Ly.iE,
+                className: Lv.iE,
                 onMouseEnter: f,
                 onMouseLeave: I,
                 onFocus: f,
                 onBlur: I,
                 ref: S,
-                style: Lv,
+                style: LM,
                 children: (0, M.jsxs)(AJ.z9, {
                     showHoverGradient: L,
                     hoverGradientStart: R?.start,
                     hoverGradientMiddle: R?.middle,
                     hoverGradientEnd: R?.end,
-                    className: tE()({ [Ly.VU]: N || L, [Ly.jR]: N, [Ly.XO]: l }),
+                    className: tE()({ [Lv.VU]: N || L, [Lv.jR]: N, [Lv.XO]: l }),
                     icon: ax.r,
                     listItemRef: i,
                     onClick: u,
@@ -25150,7 +25163,7 @@ let LD = Math.ceil(Math.sqrt(115200)),
                             (0, M.jsxs)(M.Fragment, {
                                 children: [
                                     (0, M.jsx)("div", {
-                                        className: Ly.qS,
+                                        className: Lv.qS,
                                         children: (0, M.jsx)(OE.E, {
                                             type: { text: tL.intl.string(tL.t.y2b7CA) },
                                             variant: "expressive",
@@ -25159,7 +25172,7 @@ let LD = Math.ceil(Math.sqrt(115200)),
                                     d?.questHomeEntrypoint?.image != null &&
                                         (0, M.jsx)("img", {
                                             src: d?.questHomeEntrypoint?.image,
-                                            className: Ly.Nd,
+                                            className: Lv.Nd,
                                             alt: "",
                                         }),
                                 ],
@@ -25167,21 +25180,21 @@ let LD = Math.ceil(Math.sqrt(115200)),
                         N &&
                             (0, M.jsxs)(M.Fragment, {
                                 children: [
-                                    (0, M.jsx)(LI.animated.div, {
-                                        className: Ly.q2,
+                                    (0, M.jsx)(LT.animated.div, {
+                                        className: Lv.q2,
                                         style: {
                                             transform: A.to(
                                                 (e) =>
-                                                    `translateX(calc(${e * T}px + ${e * LD}px)) translateY(-50%) rotate(45deg)`,
+                                                    `translateX(calc(${e * T}px + ${e * Lb}px)) translateY(-50%) rotate(45deg)`,
                                             ),
                                         },
                                     }),
-                                    (0, M.jsx)(LI.animated.div, {
-                                        className: Ly.ys,
-                                        style: { opacity: (0, LL.a)(_.to({ range: [0, 1], output: [0, 0.5] })) },
+                                    (0, M.jsx)(LT.animated.div, {
+                                        className: Lv.ys,
+                                        style: { opacity: (0, LD.a)(_.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, M.jsx)("div", {
-                                        className: Ly.qS,
+                                        className: Lv.qS,
                                         children: (0, M.jsx)(OE.E, { type: "new", variant: "primary" }),
                                     }),
                                 ],
@@ -25202,17 +25215,17 @@ let LD = Math.ceil(Math.sqrt(115200)),
                           children: y,
                       })
                     : y,
-                C && (0, M.jsx)(LR, { targetElementRef: i, onNavigateToQuestHome: u, onRender: p, onRequestClose: s }),
+                C && (0, M.jsx)(Ly, { targetElementRef: i, onNavigateToQuestHome: u, onRender: p, onRequestClose: s }),
             ],
         });
     };
-var LM = n(793322),
-    LP = n(366811),
-    LU = n(728321),
-    Lw = n(839067),
-    LG = n(619921),
-    Lx = n(541830);
-let Lk = [
+var LU = n(793322),
+    Lw = n(366811),
+    LG = n(728321),
+    Lx = n(839067),
+    Lk = n(619921),
+    LF = n(541830);
+let LB = [
     j.BVt.FAMILY_CENTER,
     j.BVt.QUEST_HOME,
     j.BVt.COLLECTIBLES_SHOP,
@@ -25221,14 +25234,14 @@ let Lk = [
     j.BVt.APPLICATION_LIBRARY,
     j.BVt.APPLICATION_STORE,
 ];
-var LF = n(674117);
-function LB(e) {
+var LV = n(674117);
+function LH(e) {
     let { selected: t, ...n } = e,
         i = (0, OQ.c)("PrivateChannels.ICYMIButton"),
         r = (0, AT.rm)("icymi");
     return i
         ? (0, M.jsx)("div", {
-              className: LF.F2,
+              className: LV.F2,
               children: (0, M.jsx)(AJ.z9, {
                   selected: t,
                   route: j.BVt.ICYMI,
@@ -25236,7 +25249,7 @@ function LB(e) {
                   text: (0, M.jsxs)(M.Fragment, {
                       children: [
                           tL.intl.string(tL.t["jnXV/V"]),
-                          (0, M.jsx)("span", { className: LF.HH, children: tL.intl.string(tL.t.Ac2OZA) }),
+                          (0, M.jsx)("span", { className: LV.HH, children: tL.intl.string(tL.t.Ac2OZA) }),
                       ],
                   }),
                   ...n,
@@ -25245,7 +25258,7 @@ function LB(e) {
           })
         : null;
 }
-function LV(e) {
+function Lj(e) {
     let { selected: t, ...n } = e,
         i = (0, AT.rm)("friends"),
         r = (0, iB.kX)(),
@@ -25285,7 +25298,7 @@ function LV(e) {
                 });
         }, [o]),
         (0, M.jsx)("div", {
-            className: LF.F2,
+            className: LV.F2,
             children: o
                 ? (0, M.jsx)(Aq.u, {
                       title: tL.intl.string(tL.t.Thb5MO),
@@ -25298,7 +25311,7 @@ function LV(e) {
         })
     );
 }
-function LH(e) {
+function LW(e) {
     let { selected: t, hideGameUpdateProgressIndicator: n, ...i } = e,
         r = (0, AT.rm)("library");
     return (0, M.jsx)(AJ.z9, {
@@ -25308,14 +25321,14 @@ function LH(e) {
         text: tL.intl.string(tL.t.cw57ar),
         ...i,
         ...r,
-        children: (0, M.jsx)(A1.A, { className: tE()(LF.Qw, { [LF.QI]: n }) }),
+        children: (0, M.jsx)(A1.A, { className: tE()(LV.Qw, { [LV.QI]: n }) }),
     });
 }
-function Lj() {
+function LY() {
     let e = (0, O0.W)();
     return e > 0 ? (0, M.jsx)(c9.hV, { count: e }) : null;
 }
-function LW(e) {
+function LK(e) {
     let { selected: t } = e,
         n = (0, AT.rm)("messageRequests"),
         { channelId: i } = (0, OJ.N)();
@@ -25328,10 +25341,10 @@ function LW(e) {
         text: tL.intl.string(tL.t.e7GWjQ),
         onClick: r,
         ...n,
-        children: (0, M.jsx)(Lj, {}),
+        children: (0, M.jsx)(LY, {}),
     });
 }
-function LY(e) {
+function L$(e) {
     let { selected: t } = e,
         n = tL.intl.string(aK.default.Rkdixs),
         i = (0, AT.rm)("family-center");
@@ -25340,18 +25353,18 @@ function LY(e) {
         route: j.BVt.FAMILY_CENTER,
         icon: aG.n,
         text: n,
-        className: LF.Bf,
-        interactiveClassName: LF.M1,
+        className: LV.Bf,
+        interactiveClassName: LV.M1,
         ...i,
-        children: (0, M.jsx)(LK, {}),
+        children: (0, M.jsx)(Lz, {}),
     });
 }
-function LK() {
+function Lz() {
     let e = (0, O4.VT)();
     return (0, M.jsxs)("div", {
-        className: LF.lL,
+        className: LV.lL,
         children: [
-            e > 0 ? (0, M.jsx)("div", { className: LF.g4, children: (0, M.jsx)(c9.hV, { count: e }) }) : null,
+            e > 0 ? (0, M.jsx)("div", { className: LV.g4, children: (0, M.jsx)(c9.hV, { count: e }) }) : null,
             (0, M.jsx)(AJ.w_, {
                 onClick: function () {
                     (0, tX.openModalLazy)(async () => {
@@ -25365,10 +25378,10 @@ function LK() {
         ],
     });
 }
-function L$() {
-    return (0, LM.WU)("DM_SEARCH");
+function LX() {
+    return (0, LU.WU)("DM_SEARCH");
 }
-function Lz(e) {
+function Lq(e) {
     switch (e) {
         case j.BVt.APPLICATION_LIBRARY:
             return j.liQ.LIBRARY;
@@ -25385,7 +25398,7 @@ function Lz(e) {
               : j.liQ.STORE_LISTING
         : j.liQ.DM_CHANNEL;
 }
-let LX = eI.memo(function (e) {
+let LZ = eI.memo(function (e) {
     let {
             showLibrary: t,
             hasLibraryApplication: n,
@@ -25408,25 +25421,25 @@ let LX = eI.memo(function (e) {
         T = null;
     return (
         o
-            ? (T = (0, M.jsx)(LE, { targetElementRef: h, suppressPopover: f }))
-            : l && (T = (0, M.jsx)(Lf, { targetElementRef: h, suppressPopover: f })),
+            ? (T = (0, M.jsx)(Lh, { targetElementRef: h, suppressPopover: f }))
+            : l && (T = (0, M.jsx)(Lp, { targetElementRef: h, suppressPopover: f })),
         (0, M.jsxs)("nav", {
-            className: LF.AB,
+            className: LV.AB,
             "aria-label": tL.intl.string(tL.t.ZH9aP4),
             children: [
-                (0, M.jsx)(LU.A, {
+                (0, M.jsx)(LG.A, {
                     childRef: _,
                     tutorialId: "direct-messages",
                     position: "right",
                     offsetX: -52,
                     children: (0, M.jsx)("div", {
                         ref: _,
-                        className: tE()(LF.ON, { [LF.jD]: ed.Fr }),
+                        className: tE()(LV.ON, { [LV.jD]: ed.Fr }),
                         children: (0, M.jsx)(tc.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             size: "sm",
-                            onClick: L$,
+                            onClick: LX,
                             text: tL.intl.format(tL.t.fH9FBy, {
                                 tooltipHook: (e, t) => (0, M.jsx)(AX.A, { children: e }, t),
                             }),
@@ -25439,11 +25452,11 @@ let LX = eI.memo(function (e) {
                     selectedChannelId: u,
                     listScrollerRef: A,
                     children: [
-                        (0, M.jsx)(LV, { selected: r === j.BVt.FRIENDS }, "friends"),
-                        p ? (0, M.jsx)(LB, { selected: r === j.BVt.ICYMI }, "icymi") : null,
+                        (0, M.jsx)(Lj, { selected: r === j.BVt.FRIENDS }, "friends"),
+                        p ? (0, M.jsx)(LH, { selected: r === j.BVt.ICYMI }, "icymi") : null,
                         n && t
                             ? (0, M.jsx)(
-                                  LH,
+                                  LW,
                                   {
                                       selected: r.startsWith(j.BVt.APPLICATION_LIBRARY),
                                       hideGameUpdateProgressIndicator: r.startsWith(j.BVt.APPLICATION_LIBRARY),
@@ -25452,21 +25465,21 @@ let LX = eI.memo(function (e) {
                               )
                             : null,
                         d
-                            ? (0, M.jsx)(LW, { selected: r.startsWith(j.BVt.MESSAGE_REQUESTS) }, "message-requests")
+                            ? (0, M.jsx)(LK, { selected: r.startsWith(j.BVt.MESSAGE_REQUESTS) }, "message-requests")
                             : null,
                         s
                             ? (0, M.jsxs)(
                                   "div",
                                   {
                                       children: [
-                                          (0, M.jsx)(Ll, {
+                                          (0, M.jsx)(Ld, {
                                               nitroTabButtonRef: h,
                                               suppressPopover: f,
                                               selected: a,
                                               route: j.BVt.APPLICATION_STORE,
                                               locationState: {
                                                   analyticsSource: {
-                                                      page: Lz(i),
+                                                      page: Lq(i),
                                                       section: j.JJy.NAVIGATION,
                                                       object: j.ZSU.NAVIGATION_LINK,
                                                   },
@@ -25486,7 +25499,7 @@ let LX = eI.memo(function (e) {
                                 onTabTooltipVisibilityChange: I,
                                 locationState: {
                                     analyticsSource: {
-                                        page: Lz(i),
+                                        page: Lq(i),
                                         section: j.JJy.NAVIGATION,
                                         object: j.ZSU.NAVIGATION_LINK,
                                     },
@@ -25494,34 +25507,34 @@ let LX = eI.memo(function (e) {
                             },
                             "discord-shop",
                         ),
-                        c ? (0, M.jsx)(LY, { selected: r.startsWith(j.BVt.FAMILY_CENTER) }, "family-center") : null,
-                        (0, M.jsx)(Lb, { selected: r.startsWith(j.BVt.QUEST_HOME) }, "quests"),
-                        (0, M.jsx)(Lq, {}, "section-divider-top"),
+                        c ? (0, M.jsx)(L$, { selected: r.startsWith(j.BVt.FAMILY_CENTER) }, "family-center") : null,
+                        (0, M.jsx)(LP, { selected: r.startsWith(j.BVt.QUEST_HOME) }, "quests"),
+                        (0, M.jsx)(LQ, {}, "section-divider-top"),
                     ],
                 }),
             ],
         })
     );
 });
-function Lq() {
-    return (0, M.jsx)("div", { className: LF.ts });
+function LQ() {
+    return (0, M.jsx)("div", { className: LV.ts });
 }
-function LZ() {
+function LJ() {
     let e,
         t,
         { pathname: n } = (0, tV.zy)(),
-        i = (0, eE.bG)([LG.A], () => LG.A.getHomeLink()),
-        [r, a] = (0, LP.A)((e) => {
+        i = (0, eE.bG)([Lk.A], () => Lk.A.getHomeLink()),
+        [r, a] = (0, Lw.A)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, rd.x),
         s = (function (e, t, n) {
-            return null != e ? e : t === j.BVt.FRIENDS || Lk.some((e) => t.startsWith(e)) ? t : n;
+            return null != e ? e : t === j.BVt.FRIENDS || LB.some((e) => t.startsWith(e)) ? t : n;
         })(a, n, i),
         l = (0, eE.bG)(
             [dM.A],
             () => {
-                let e = (0, Lx.qt)(s);
+                let e = (0, LF.qt)(s);
                 return null != e ? (dM.A.get(e)?.premium ?? !1) : s.startsWith(j.BVt.APPLICATION_STORE);
             },
             [s],
@@ -25529,11 +25542,11 @@ function LZ() {
         o = !eR.l_.useSetting(),
         { theme: d } = (0, eE.cf)([eO.A], () => ({ theme: eO.A.theme })),
         c = (0, eE.bG)([_H.A], () => _H.A.hasLibraryApplication()),
-        u = (0, eE.bG)([Lw.A], () => Lw.A.getCurrentPath()),
-        _ = Ls({ selected: l }),
-        E = (0, RP.Tp)(),
+        u = (0, eE.bG)([Lx.A], () => Lx.A.getCurrentPath()),
+        _ = Lo({ selected: l }),
+        E = (0, Rw.Tp)(),
         A = (function () {
-            let { isEligibleForIncentive: e } = (0, Lo.x)({ location: "ReferralIncentivePopover", preventFetch: !1 }),
+            let { isEligibleForIncentive: e } = (0, Lc.x)({ location: "ReferralIncentivePopover", preventFetch: !1 }),
                 t = (0, eE.bG)([O7.A], () => O7.A.getReferralsRemaining());
             return e && null != t && t > 0;
         })(),
@@ -25549,7 +25562,7 @@ function LZ() {
         C = !N && m === rG.M.REFERRAL_PROGRAM_POPOVER_V2,
         O = O5(),
         R = ((e = eR.dm.useSetting()), (t = (0, O6.A)()), !0 === e && !0 === t);
-    return (0, M.jsx)(LX, {
+    return (0, M.jsx)(LZ, {
         theme: d,
         showLibrary: o,
         hasLibraryApplication: c,
@@ -25565,14 +25578,14 @@ function LZ() {
         selectedChannelId: r,
     });
 }
-var LQ = n(892340),
-    LJ = n(272720),
-    L0 = n(320989),
-    L1 = n(463347),
-    L2 = n(650048),
-    L3 = n(521502),
-    L5 = n(380610);
-function L6(e) {
+var L0 = n(892340),
+    L1 = n(272720),
+    L2 = n(320989),
+    L3 = n(463347),
+    L5 = n(650048),
+    L6 = n(521502),
+    L4 = n(380610);
+function L7(e) {
     let { width: t = 14, height: n = 14, color: i = "currentColor", foreground: r, ...a } = e;
     return (0, M.jsx)("svg", {
         ...(0, tg.A)(a),
@@ -25586,109 +25599,109 @@ function L6(e) {
         }),
     });
 }
-var L4 = n(535768);
-let L7 = "isHideDevBanner",
-    L8 = () => {
-        let [e, t] = (0, eI.useState)(ex.w.get(L7, "false")?.toString() === "true"),
-            n = (0, eE.bG)([L3.A], () => ((0, L5.kK)() ? L3.A.getCurrentBuildOverride().overrides?.discord_web : null));
+var L8 = n(535768);
+let L9 = "isHideDevBanner",
+    ye = () => {
+        let [e, t] = (0, eI.useState)(ex.w.get(L9, "false")?.toString() === "true"),
+            n = (0, eE.bG)([L6.A], () => ((0, L4.kK)() ? L6.A.getCurrentBuildOverride().overrides?.discord_web : null));
         if (e) return null;
         function i() {
-            (ex.w.set(L7, !0), t(!0));
+            (ex.w.set(L9, !0), t(!0));
         }
         function r() {
             return (0, M.jsx)(tA.D, {
                 onClick: i,
-                className: L4.b,
+                className: L8.b,
                 "aria-label": tL.intl.string(tL.t.WAI6xu),
-                children: (0, M.jsx)(Aa.P, { size: "md", color: "currentColor", className: L4.ut }),
+                children: (0, M.jsx)(Aa.P, { size: "md", color: "currentColor", className: L8.ut }),
             });
         }
         return null != n
             ? (0, M.jsxs)("div", {
-                  className: tE()(L4.Wz, L4.DM),
-                  children: [(0, M.jsx)(L6, { className: L4.Kk }), tL.intl.string(tL.t.Wj3LW4), (0, M.jsx)(r, {})],
+                  className: tE()(L8.Wz, L8.DM),
+                  children: [(0, M.jsx)(L7, { className: L8.Kk }), tL.intl.string(tL.t.Wj3LW4), (0, M.jsx)(r, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, M.jsxs)("div", {
-                    className: tE()(L4.Wz, L4.mr),
+                    className: tE()(L8.Wz, L8.mr),
                     children: [
-                        (0, M.jsx)(L6, { className: L4.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640404" }),
+                        (0, M.jsx)(L7, { className: L8.Kk }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "640413" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
               : null;
     };
-var L9 = n(765671),
-    ye = n(890856),
-    yt = n(905552),
-    yn = n(157257),
-    yi = n(274372),
-    yr = n(609174),
-    ya = n(930317),
-    ys = n(111994),
-    yl = n(409067),
-    yo = n(271597),
-    yd = n(227628),
-    yc = n(468550),
-    yu = n(442420);
-function y_() {
-    let e = (0, yd.MZ)((e) => e.isOpen),
-        t = (0, yc.sY)((e) => e.isOpen),
-        n = (0, eE.bG)([yi.Ay], () => yi.Ay.canShowReminders()),
-        i = (0, eE.bG)([iS.Ay, yn.A], () => (0, yt.A)(iS.Ay, yn.A)),
-        r = !(0, eE.bG)([yi.Ay], () => yi.Ay.getSettings().showPovClipsInGallery),
-        a = (0, eE.yK)([yi.Ay], () => yi.Ay.getLastClipsSession()?.clipIds ?? []),
+var yt = n(765671),
+    yn = n(890856),
+    yi = n(905552),
+    yr = n(157257),
+    ya = n(274372),
+    ys = n(609174),
+    yl = n(930317),
+    yo = n(111994),
+    yd = n(409067),
+    yc = n(271597),
+    yu = n(227628),
+    y_ = n(468550),
+    yE = n(442420);
+function yA() {
+    let e = (0, yu.MZ)((e) => e.isOpen),
+        t = (0, y_.sY)((e) => e.isOpen),
+        n = (0, eE.bG)([ya.Ay], () => ya.Ay.canShowReminders()),
+        i = (0, eE.bG)([iS.Ay, yr.A], () => (0, yi.A)(iS.Ay, yr.A)),
+        r = !(0, eE.bG)([ya.Ay], () => ya.Ay.getSettings().showPovClipsInGallery),
+        a = (0, eE.yK)([ya.Ay], () => ya.Ay.getLastClipsSession()?.clipIds ?? []),
         s = eI.useMemo(
             () =>
-                (0, yl.uu)(
+                (0, yd.uu)(
                     a
-                        .map((e) => yi.Ay.getClipById(e))
+                        .map((e) => ya.Ay.getClipById(e))
                         .filter((e) => null != e)
                         .filter((e) => e.applicationId === i?.id)
-                        .filter((e) => !r || !(0, yl.kD)(e)),
-                    ys.mu.MOST_RECENT,
+                        .filter((e) => !r || !(0, yd.kD)(e)),
+                    yo.mu.MOST_RECENT,
                 ),
             [a, i, r],
         ),
         l = s.length > 0;
     eI.useEffect(() => {
-        !e || (n && l) || (0, yd.yj)();
+        !e || (n && l) || (0, yu.yj)();
     }, [e, n, l]);
     let o = eI.useCallback((e) => {
-            (0, yo.p)({ initialEditingClipId: e.id });
+            (0, yc.p)({ initialEditingClipId: e.id });
         }, []),
         d = eI.useCallback(() => {
-            (0, yo.p)({ selectedGameId: i?.id });
+            (0, yc.p)({ selectedGameId: i?.id });
         }, [i?.id]);
     if (t || !e || !n || 0 === s.length || null == i) return null;
     let c = 4 - s.length;
     return (0, M.jsx)("div", {
-        className: yu.$j,
+        className: yE.$j,
         children: (0, M.jsx)("div", {
-            className: yu.e1,
+            className: yE.e1,
             children: s
                 .slice(0, 4)
                 .concat(...Array(c > 0 ? c : 0).fill(null))
                 .map((e, t) =>
                     (function (e, t, n) {
-                        if (null == e) return (0, M.jsx)("div", { className: yu.WK }, `no-clip-${n}`);
+                        if (null == e) return (0, M.jsx)("div", { className: yE.WK }, `no-clip-${n}`);
                         let i = "auto" === e.clipMethod,
                             r = t && s.length > 4,
                             a = s.length - 3;
                         return (0, M.jsx)(
-                            ye.s,
+                            yn.s,
                             {
-                                className: yu.WK,
+                                className: yE.WK,
                                 "aria-label": tL.intl.string(tL.t.bt75uw),
                                 onClick: r ? d : o.bind(null, e),
-                                children: (0, M.jsx)(yr.Cl, {
+                                children: (0, M.jsx)(ys.Cl, {
                                     clip: e,
-                                    children: (0, M.jsx)(ya.d, {
+                                    children: (0, M.jsx)(yl.d, {
                                         isStatic: !0,
                                         children: r
                                             ? (0, M.jsx)("div", {
-                                                  className: yu.N7,
+                                                  className: yE.N7,
                                                   children: (0, M.jsxs)(rx.E, {
                                                       variant: "text-sm/medium",
                                                       color: "text-overlay-light",
@@ -25697,7 +25710,7 @@ function y_() {
                                               })
                                             : i &&
                                               (0, M.jsx)(NA.SparklesIcon, {
-                                                  className: yu.$v,
+                                                  className: yE.$v,
                                                   size: "xs",
                                                   color: r7.A.colors.TEXT_STRONG.css,
                                                   "aria-label": tL.intl.string(tL.t["3Y2DJ8"]),
@@ -25712,15 +25725,15 @@ function y_() {
         }),
     });
 }
-var yE = n(202163),
-    yA = n(499979),
-    yh = n(219869),
-    yf = n(475743),
-    yI = n(299871),
-    yp = n(650493),
-    yT = (((m = {}).HIDDEN = "hidden"), (m.ENTERING = "entering"), (m.SHOWN = "shown"), (m.EXITING = "exiting"), m),
-    ym = (((g = {}).USER = "user"), (g.TIMEOUT = "timeout"), (g.UNMOUNT = "unmount"), g);
-function yg(e) {
+var yh = n(202163),
+    yf = n(499979),
+    yI = n(219869),
+    yp = n(475743),
+    yT = n(299871),
+    ym = n(650493),
+    yg = (((m = {}).HIDDEN = "hidden"), (m.ENTERING = "entering"), (m.SHOWN = "shown"), (m.EXITING = "exiting"), m),
+    yS = (((g = {}).USER = "user"), (g.TIMEOUT = "timeout"), (g.UNMOUNT = "unmount"), g);
+function yN(e) {
     let {
             shouldShow: t,
             duration: n,
@@ -25743,24 +25756,24 @@ function yg(e) {
             return;
         }
         if (h || !Number.isFinite(n)) return;
-        let e = (0, yA.tB)(),
+        let e = (0, yf.tB)(),
             i = new iu.Ep();
         return (
             i.start(f.current, () => r?.("timeout")),
             () => {
-                (i.stop(), (f.current -= (0, yA.tB)() - e));
+                (i.stop(), (f.current -= (0, yf.tB)() - e));
             }
         );
     }, [t, n, h, r]),
         (0, _U.l0)(() => r?.("unmount")));
-    let I = (0, yf.p0)({ value: { renderHeader: l, renderBody: o }, shouldUpdate: t });
+    let I = (0, yp.p0)({ value: { renderHeader: l, renderBody: o }, shouldUpdate: t });
     if (null == I) return null;
     let p = (0, M.jsx)("div", {
-        className: yp.ne,
+        className: ym.ne,
         children:
             null != r &&
             null != a &&
-            (0, M.jsx)(yh.T, {
+            (0, M.jsx)(yI.T, {
                 icon: Aa.P,
                 "aria-label": a,
                 onClick: () => r?.("user"),
@@ -25769,7 +25782,7 @@ function yg(e) {
             }),
     });
     return (0, M.jsx)("div", {
-        className: tE()(yp.iE, s, { [yp.RP]: "exiting" === d, [yp.FG]: "overlay" === i }),
+        className: tE()(ym.iE, s, { [ym.RP]: "exiting" === d, [ym.FG]: "overlay" === i }),
         "aria-hidden": "exiting" === d,
         onTransitionEnd: (e) => {
             e.target === e.currentTarget && ("entering" === d ? c("shown") : "exiting" === d && c("hidden"));
@@ -25779,17 +25792,17 @@ function yg(e) {
         onFocus: () => A(!0),
         onBlur: () => A(!1),
         children: (0, M.jsxs)("div", {
-            className: yp.Qs,
+            className: ym.Qs,
             children: [
-                Number.isFinite(n) && (0, M.jsx)(yI.r, { className: yp.qW, durationMs: n, isPaused: h }),
-                null != I.renderHeader && (0, M.jsx)("div", { className: yp.wx, children: I.renderHeader(d) }),
+                Number.isFinite(n) && (0, M.jsx)(yT.r, { className: ym.qW, durationMs: n, isPaused: h }),
+                null != I.renderHeader && (0, M.jsx)("div", { className: ym.wx, children: I.renderHeader(d) }),
                 p,
-                (0, M.jsx)("div", { className: yp.rf, children: I.renderBody(d) }),
+                (0, M.jsx)("div", { className: ym.rf, children: I.renderBody(d) }),
             ],
         }),
     });
 }
-function yS(e) {
+function yC(e) {
     let {
             shouldShow: t,
             duration: n,
@@ -25812,7 +25825,7 @@ function yS(e) {
     }, [u, a]),
     "hidden" === u)
         ? null
-        : (0, M.jsx)(yg, {
+        : (0, M.jsx)(yN, {
               shouldShow: t,
               duration: n,
               controlsPlacement: i,
@@ -25825,11 +25838,11 @@ function yS(e) {
               renderBody: d,
           });
 }
-var yN = n(518293),
-    yC = n(190774);
-let yO = {
+var yO = n(518293),
+    yR = n(190774);
+let yL = {
         middle: {
-            slotClass: yC.ui,
+            slotClass: yR.ui,
             x: "0px",
             y: "-10px",
             rotation: "0deg",
@@ -25839,7 +25852,7 @@ let yO = {
             zIndex: 3,
         },
         right: {
-            slotClass: yC.Hx,
+            slotClass: yR.Hx,
             x: "0px",
             y: "10px",
             rotation: "6deg",
@@ -25849,7 +25862,7 @@ let yO = {
             zIndex: 2,
         },
         left: {
-            slotClass: yC.GM,
+            slotClass: yR.GM,
             x: "0px",
             y: "10px",
             rotation: "-8deg",
@@ -25859,9 +25872,9 @@ let yO = {
             zIndex: 1,
         },
     },
-    yR = [
+    yy = [
         {
-            slotClass: yC.ui,
+            slotClass: yR.ui,
             x: "30px",
             y: "0px",
             rotation: "7deg",
@@ -25871,7 +25884,7 @@ let yO = {
             zIndex: 3,
         },
         {
-            slotClass: yC.ui,
+            slotClass: yR.ui,
             x: "-30px",
             y: "2px",
             rotation: "-9deg",
@@ -25881,9 +25894,9 @@ let yO = {
             zIndex: 2,
         },
     ],
-    yL = ["middle", "right", "left"],
-    yy = yL.length;
-function yD(e) {
+    yD = ["middle", "right", "left"],
+    yv = yD.length;
+function yb(e) {
     let {
             clips: t,
             playTopOnHover: n = !1,
@@ -25899,15 +25912,15 @@ function yD(e) {
         _ = eI.useCallback(() => c(!1), []);
     if (0 === t.length) return null;
     let E = !a && (i ?? d),
-        A = t.slice(0, yy),
+        A = t.slice(0, yv),
         h = 2 === A.length,
         f = h ? [1, 0] : [2, 1, 0].filter((e) => e < A.length);
     return (0, M.jsx)("div", {
-        className: tE()(yC.kL, o, E && yC.DM),
+        className: tE()(yR.kL, o, E && yR.DM),
         onMouseEnter: n ? u : void 0,
         onMouseLeave: n ? _ : void 0,
         children: A.map((e, t) => {
-            let i = h ? yR[t] : yO[yL[t]],
+            let i = h ? yy[t] : yL[yD[t]],
                 o = 100 + 140 * f.indexOf(t),
                 d = {
                     "--custom-stack-x": i.x,
@@ -25923,11 +25936,11 @@ function yD(e) {
             return (0, M.jsx)(
                 "div",
                 {
-                    className: tE()(yC.xn, i.slotClass, s && yC.$u, a && yC.zx, r && !a && yC.tk),
+                    className: tE()(yR.xn, i.slotClass, s && yR.$u, a && yR.zx, r && !a && yR.tk),
                     style: d,
-                    children: (0, M.jsx)(yr.Cl, {
+                    children: (0, M.jsx)(ys.Cl, {
                         clip: e,
-                        children: (0, M.jsx)(ya.d, {
+                        children: (0, M.jsx)(yl.d, {
                             isStatic: !c,
                             isPlaying: c && E,
                             children: l?.({ index: t, clip: e }),
@@ -25939,25 +25952,25 @@ function yD(e) {
         }),
     });
 }
-var yv = n(704796),
-    yb = n(62714);
-let yM = +i_.A.Millis.MINUTE,
-    yP = [],
-    yU = [];
-function yw() {
-    let e = !(0, eE.bG)([yi.Ay], () => yi.Ay.getSettings().showPovClipsInGallery),
-        { isOpen: t, applicationId: n } = (0, yc.sY)(),
-        { isQuestBarEmpty: i } = (0, yN.c9)(),
-        r = (0, eE.yK)([yi.Ay], () => yi.Ay.getLastClipsSession()?.clipIds ?? yP),
+var yM = n(704796),
+    yP = n(62714);
+let yU = +i_.A.Millis.MINUTE,
+    yw = [],
+    yG = [];
+function yx() {
+    let e = !(0, eE.bG)([ya.Ay], () => ya.Ay.getSettings().showPovClipsInGallery),
+        { isOpen: t, applicationId: n } = (0, y_.sY)(),
+        { isQuestBarEmpty: i } = (0, yO.c9)(),
+        r = (0, eE.yK)([ya.Ay], () => ya.Ay.getLastClipsSession()?.clipIds ?? yw),
         a = eI.useMemo(() => {
-            if (null == n || 0 === r.length) return yU;
+            if (null == n || 0 === r.length) return yG;
             let t = r
-                .map((e) => yi.Ay.getClipById(e))
+                .map((e) => ya.Ay.getClipById(e))
                 .filter((e) => null != e && e.applicationId === n)
-                .filter((t) => !e || !(0, yl.kD)(t));
-            return (0, yl.uu)(t, ys.mu.MOST_RECENT);
+                .filter((t) => !e || !(0, yd.kD)(t));
+            return (0, yd.uu)(t, yo.mu.MOST_RECENT);
         }, [n, r, e]),
-        { gameRecord: s } = (0, yE.A)(n),
+        { gameRecord: s } = (0, yh.A)(n),
         [l, o] = eI.useState(!1),
         d = eI.useCallback(() => o(!0), []),
         c = eI.useCallback(() => o(!1), []),
@@ -25967,15 +25980,15 @@ function yw() {
             source: u3.GameProfileSources.ClipsReminder,
         }),
         _ = eI.useCallback(() => {
-            ((0, yo.p)(), (0, yc.kF)());
+            ((0, yc.p)(), (0, y_.kF)());
         }, []),
         E = i && t && null != n && a.length > 0;
-    return (0, M.jsx)(yS, {
+    return (0, M.jsx)(yC, {
         shouldShow: E,
-        duration: yM,
-        onDismiss: yc.kF,
+        duration: yU,
+        onDismiss: y_.kF,
         dismissAriaLabel: tL.intl.string(tL.t["9CE7R5"]),
-        wrapperClassName: yb.nd,
+        wrapperClassName: yP.nd,
         renderBody: (e) => {
             let t = a.slice(0, 3),
                 n = s?.name ?? "",
@@ -25983,58 +25996,58 @@ function yw() {
                 r = t[0]?.thumbnail,
                 o = null != r ? { backgroundImage: `url(${r})` } : void 0;
             return (0, M.jsxs)("div", {
-                className: yb.rf,
+                className: yP.rf,
                 onMouseEnter: d,
                 onMouseLeave: c,
                 children: [
-                    null != o && (0, M.jsx)("div", { className: yb.tB, style: o, "aria-hidden": "true" }),
+                    null != o && (0, M.jsx)("div", { className: yP.tB, style: o, "aria-hidden": "true" }),
                     (0, M.jsx)("div", {
-                        className: yb.l$,
+                        className: yP.l$,
                         children: (0, M.jsxs)("div", {
-                            className: yb._4,
+                            className: yP._4,
                             children: [
                                 (0, M.jsx)(tA.D, {
-                                    className: yb.JS,
+                                    className: yP.JS,
                                     onClick: _,
                                     "aria-label": tL.intl.string(tL.t.Pcrpjt),
-                                    children: (0, M.jsx)(yD, {
-                                        className: yb.c3,
+                                    children: (0, M.jsx)(yb, {
+                                        className: yP.c3,
                                         clips: t,
                                         withShadow: !0,
                                         playTopOnHover: !0,
                                         hovered: l,
                                         animateIn: !0,
-                                        exiting: e === yT.EXITING,
+                                        exiting: e === yg.EXITING,
                                     }),
                                 }),
-                                (0, M.jsx)("div", { className: tE()(yb.SB, yb.eB), "aria-hidden": "true" }),
-                                (0, M.jsx)("div", { className: tE()(yb.SB, yb.BN), "aria-hidden": "true" }),
+                                (0, M.jsx)("div", { className: tE()(yP.SB, yP.eB), "aria-hidden": "true" }),
+                                (0, M.jsx)("div", { className: tE()(yP.SB, yP.BN), "aria-hidden": "true" }),
                             ],
                         }),
                     }),
                     (0, M.jsxs)("div", {
-                        className: yb.Pb,
+                        className: yP.Pb,
                         children: [
                             (0, M.jsxs)("div", {
-                                className: yb.IL,
+                                className: yP.IL,
                                 children: [
-                                    (0, M.jsx)(u2.A, { className: yb.Gt, game: s, size: u2.M.SMALL }),
+                                    (0, M.jsx)(u2.A, { className: yP.Gt, game: s, size: u2.M.SMALL }),
                                     null != u
                                         ? (0, M.jsx)(tA.D, {
                                               tag: "span",
-                                              className: yb.gH,
+                                              className: yP.gH,
                                               onClick: u,
                                               children: (0, M.jsx)(rx.E, {
                                                   variant: "text-sm/semibold",
                                                   color: "text-strong",
-                                                  className: yb.mO,
+                                                  className: yP.mO,
                                                   children: n,
                                               }),
                                           })
                                         : (0, M.jsx)(rx.E, {
                                               variant: "text-sm/semibold",
                                               color: "text-strong",
-                                              className: yb.mO,
+                                              className: yP.mO,
                                               children: n,
                                           }),
                                 ],
@@ -26042,7 +26055,7 @@ function yw() {
                             (0, M.jsx)(rx.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: tL.intl.format(yv.default["2rwMjL"], { count: i }),
+                                children: tL.intl.format(yM.default["2rwMjL"], { count: i }),
                             }),
                         ],
                     }),
@@ -26059,26 +26072,26 @@ function yw() {
     });
 }
 (n(134528), n(947204));
-var yG = n(625841),
-    yx = n(179172),
-    yk = n(240921);
-let yF = (0, yk.Ay)({
+var yk = n(625841),
+    yF = n(179172),
+    yB = n(240921);
+let yV = (0, yB.Ay)({
     kind: "user",
     name: "2026-07-unobtrusive-device-suggestions",
     defaultConfig: { showDeviceDetectedPanel: !1 },
     variations: { 1: { showDeviceDetectedPanel: !0 } },
 });
-var yB = n(286980),
-    yV = n(792205),
-    yH = n(158301),
-    yj = n(824021);
-let yW = i_.A.Millis.MINUTE,
-    yY = [];
-function yK() {
-    let e = (0, yB.Bp)(),
-        { showDeviceDetectedPanel: t } = yF.useConfig({ location: "DeviceDetectedPanel" }),
+var yH = n(286980),
+    yj = n(792205),
+    yW = n(158301),
+    yY = n(824021);
+let yK = i_.A.Millis.MINUTE,
+    y$ = [];
+function yz() {
+    let e = (0, yH.Bp)(),
+        { showDeviceDetectedPanel: t } = yV.useConfig({ location: "DeviceDetectedPanel" }),
         n = t && e.length > 0,
-        i = n ? e : yY,
+        i = n ? e : y$,
         [r, a] = eI.useState(null),
         s =
             i.find((e) => {
@@ -26100,49 +26113,49 @@ function yK() {
             W.default.track(j.HAw.DEVICE_DETECTED_PANEL_VIEWED, {
                 device_names: i.map((e) => {
                     let { device: t, certifiedDeviceMetadata: n } = e;
-                    return (0, yB.eq)(t, n);
+                    return (0, yH.eq)(t, n);
                 }),
             });
     }, [n, i]);
     let o = eI.useCallback(
             (e) => {
-                null != s && yx.TO(s.device.displayName, e, "New Audio Device Detected Banner");
+                null != s && yF.TO(s.device.displayName, e, "New Audio Device Detected Banner");
             },
             [s],
         ),
         d = eI.useCallback(() => {
-            yx.mk();
+            yF.mk();
         }, []),
         c = eI.useCallback(() => {
             null != s &&
-                (yx.BG(s.device.displayName),
+                (yF.BG(s.device.displayName),
                 W.default.track(j.HAw.DEVICE_DETECTED_PANEL_DISMISSED, {
-                    device_name: (0, yB.eq)(s.device, s.certifiedDeviceMetadata),
+                    device_name: (0, yH.eq)(s.device, s.certifiedDeviceMetadata),
                 }));
         }, [s]),
         u = eI.useCallback(() => {
-            yx.Bv(!0);
+            yF.Bv(!0);
         }, []),
         _ = eI.useRef(null);
     return t
-        ? (0, M.jsx)(yS, {
+        ? (0, M.jsx)(yC, {
               shouldShow: n,
-              duration: yW,
+              duration: yK,
               onDismiss: d,
-              dismissAriaLabel: tL.intl.string(yH.default["I9iaw+"]),
+              dismissAriaLabel: tL.intl.string(yW.default["I9iaw+"]),
               renderHeader: () => {
                   if (null == s) return null;
                   let e =
                       i.length > 1
-                          ? tL.intl.string(yH.default.okaenw)
+                          ? tL.intl.string(yW.default.okaenw)
                           : (function (e) {
                                 switch (e.type) {
-                                    case yV.E.INPUT:
-                                        return tL.intl.format(yH.default.PAYExK, { deviceName: e.displayName });
-                                    case yV.E.OUTPUT:
-                                        return tL.intl.format(yH.default.aljl4r, { deviceName: e.displayName });
-                                    case yV.E.INPUT_AND_OUTPUT:
-                                        return tL.intl.format(yH.default.EUsbHW, { deviceName: e.displayName });
+                                    case yj.E.INPUT:
+                                        return tL.intl.format(yW.default.PAYExK, { deviceName: e.displayName });
+                                    case yj.E.OUTPUT:
+                                        return tL.intl.format(yW.default.aljl4r, { deviceName: e.displayName });
+                                    case yj.E.INPUT_AND_OUTPUT:
+                                        return tL.intl.format(yW.default.EUsbHW, { deviceName: e.displayName });
                                 }
                             })(s.device);
                   return (0, M.jsxs)(M.Fragment, {
@@ -26157,25 +26170,25 @@ function yK() {
                   let { device: e, mediaEngineDevice: t } = s,
                       n = (function (e) {
                           switch (e.type) {
-                              case yV.E.INPUT:
-                                  return tL.intl.string(yH.default.VLKyL8);
-                              case yV.E.OUTPUT:
-                                  return tL.intl.string(yH.default.Jat8cd);
-                              case yV.E.INPUT_AND_OUTPUT:
-                                  return tL.intl.string(yH.default.RJttRt);
+                              case yj.E.INPUT:
+                                  return tL.intl.string(yW.default.VLKyL8);
+                              case yj.E.OUTPUT:
+                                  return tL.intl.string(yW.default.Jat8cd);
+                              case yj.E.INPUT_AND_OUTPUT:
+                                  return tL.intl.string(yW.default.RJttRt);
                           }
                       })(e);
                   return (0, M.jsxs)("section", {
                       children: [
                           i.length > 1 &&
                               (0, M.jsx)("div", {
-                                  className: yj.$E,
-                                  children: (0, M.jsx)(yG.A, {
+                                  className: yY.$E,
+                                  children: (0, M.jsx)(yk.A, {
                                       devices: l,
                                       selectedDeviceId: s.mediaEngineDevice.id,
                                       onSelectDevice: (e) => (a(e), !1),
                                       location: "Device Detected Panel",
-                                      "aria-label": tL.intl.string(yH.default["a60/Fx"]),
+                                      "aria-label": tL.intl.string(yW.default["a60/Fx"]),
                                       hideLabel: !0,
                                       size: "sm",
                                       textVariant: "text-sm/medium",
@@ -26183,16 +26196,16 @@ function yK() {
                                   }),
                               }),
                           (0, M.jsxs)("div", {
-                              className: yj.v0,
+                              className: yY.v0,
                               children: [
                                   (0, M.jsx)("div", {
-                                      className: yj.bD,
+                                      className: yY.bD,
                                       children: (0, M.jsx)(tc.$, {
                                           variant: "primary",
                                           size: "sm",
                                           fullWidth: !0,
                                           text: n,
-                                          onClick: () => o(yV.f[e.type]),
+                                          onClick: () => o(yj.f[e.type]),
                                       }),
                                   }),
                                   (0, M.jsx)(as.Y, {
@@ -26205,25 +26218,25 @@ function yK() {
                                               onClose: i,
                                               onSelect: i,
                                               children: [
-                                                  e.type === yV.E.INPUT_AND_OUTPUT &&
+                                                  e.type === yj.E.INPUT_AND_OUTPUT &&
                                                       (0, M.jsxs)(M.Fragment, {
                                                           children: [
                                                               (0, M.jsx)(ai.Dr, {
-                                                                  id: yV.f.INPUT,
+                                                                  id: yj.f.INPUT,
                                                                   label: tL.intl.string(tL.t["Kqs9+J"]),
                                                                   icon: mB.MicrophoneIcon,
                                                                   trailingIndicator: {
                                                                       type: "icon",
                                                                       icon: mB.MicrophoneIcon,
                                                                   },
-                                                                  action: () => o(yV.f.INPUT),
+                                                                  action: () => o(yj.f.INPUT),
                                                               }),
                                                               (0, M.jsx)(ai.Dr, {
-                                                                  id: yV.f.OUTPUT,
+                                                                  id: yj.f.OUTPUT,
                                                                   label: tL.intl.string(tL.t.GGlM3e),
                                                                   icon: Tq.L,
                                                                   trailingIndicator: { type: "icon", icon: Tq.L },
-                                                                  action: () => o(yV.f.OUTPUT),
+                                                                  action: () => o(yj.f.OUTPUT),
                                                               }),
                                                               (0, M.jsx)(ai.bX, {}),
                                                           ],
@@ -26253,7 +26266,7 @@ function yK() {
                                       children: (e) =>
                                           (0, M.jsx)("div", {
                                               ref: _,
-                                              className: yj.hh,
+                                              className: yY.hh,
                                               children: (0, M.jsx)(rN.m, {
                                                   text: tL.intl.string(tL.t.PdRCRg),
                                                   ariaHidden: !0,
@@ -26275,17 +26288,17 @@ function yK() {
           })
         : null;
 }
-var y$ = n(757780),
-    yz = n(964570),
-    yX = n(463481),
-    yq = n(504337),
-    yZ = n(629016),
-    yQ = n(636585),
-    yJ = n(42473),
-    y0 = n(994314),
-    y1 = n(485599),
-    y2 = n(970111);
-class y3 extends eI.PureComponent {
+var yX = n(757780),
+    yq = n(964570),
+    yZ = n(463481),
+    yQ = n(504337),
+    yJ = n(629016),
+    y0 = n(636585),
+    y1 = n(42473),
+    y2 = n(994314),
+    y3 = n(485599),
+    y5 = n(970111);
+class y6 extends eI.PureComponent {
     partyMemberAvatarRef = eI.createRef();
     partyMemberOverflowRef = eI.createRef();
     isHost() {
@@ -26295,12 +26308,12 @@ class y3 extends eI.PureComponent {
     renderTitle() {
         return (0, M.jsxs)("div", {
             children: [
-                (0, M.jsx)(y1.A, {
+                (0, M.jsx)(y3.A, {
                     children: this.isHost()
                         ? tL.intl.formatToPlainString(tL.t["6UJ7mh"], { count: this.props.party.length })
                         : tL.intl.string(tL.t.RZufbH),
                 }),
-                (0, M.jsx)(y0.A, { children: tL.intl.string(tL.t["0ZHLIi"]) }),
+                (0, M.jsx)(y2.A, { children: tL.intl.string(tL.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -26308,7 +26321,7 @@ class y3 extends eI.PureComponent {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, M.jsx)(yJ.A, { tooltipText: tL.intl.string(tL.t.LeZSpz), onClick: e, icon: Aa.P });
+            : (0, M.jsx)(y1.A, { tooltipText: tL.intl.string(tL.t.LeZSpz), onClick: e, icon: Aa.P });
     }
     renderPartyMember = (e, t) => {
         let n;
@@ -26333,7 +26346,7 @@ class y3 extends eI.PureComponent {
                                 key: e.id,
                                 src: e.getAvatarURL(void 0, 24),
                                 size: uV._3.SIZE_24,
-                                className: tE()(y2.my, t),
+                                className: tE()(y5.my, t),
                                 "aria-label": e.username,
                                 onContextMenu: (t) => {
                                     null != e && r?.(t, e);
@@ -26359,7 +26372,7 @@ class y3 extends eI.PureComponent {
                         children: (0, M.jsx)("div", {
                             ...n,
                             ref: this.partyMemberOverflowRef,
-                            className: tE()(y2.ju, t),
+                            className: tE()(y5.ju, t),
                             children: e,
                         }),
                     }),
@@ -26369,7 +26382,7 @@ class y3 extends eI.PureComponent {
     };
     renderHelpIcon() {
         return this.isHost()
-            ? (0, M.jsx)(yJ.A, {
+            ? (0, M.jsx)(y1.A, {
                   tooltipText: tL.intl.string(tL.t.U7N2Hs),
                   onClick: function () {
                       window.open(tG.A.getArticleURL(j.MVz.SPOTIFY_CONNECTION), "_blank");
@@ -26380,13 +26393,13 @@ class y3 extends eI.PureComponent {
     }
     render() {
         return (0, M.jsxs)("div", {
-            className: y2.Jh,
+            className: y5.Jh,
             children: [
                 this.renderTitle(),
                 (0, M.jsx)(lw.A, {
                     justify: lw.A.Justify.END,
-                    className: y2.Hg,
-                    children: (0, M.jsx)(yQ.A, {
+                    className: y5.Hg,
+                    children: (0, M.jsx)(y0.A, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
                         renderUser: this.renderPartyMember,
@@ -26394,15 +26407,15 @@ class y3 extends eI.PureComponent {
                     }),
                 }),
                 (0, M.jsxs)("div", {
-                    className: y2.Pt,
+                    className: y5.Pt,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
         });
     }
 }
-var y5 = n(626087);
-class y6 extends eI.PureComponent {
+var y4 = n(626087);
+class y7 extends eI.PureComponent {
     handleContextMenu(e, t) {
         (0, Ee.L3)(e, async () => {
             let { default: e } = await Promise.all([
@@ -26431,7 +26444,7 @@ class y6 extends eI.PureComponent {
             : (0, M.jsxs)(
                   lw.A,
                   {
-                      className: y5.kQ,
+                      className: y4.kQ,
                       align: lw.A.Align.CENTER,
                       onContextMenu: (t) => {
                           null != e && this.handleContextMenu(t, e);
@@ -26441,13 +26454,13 @@ class y6 extends eI.PureComponent {
                               src: e.getAvatarURL(void 0, 24),
                               "aria-label": e.username,
                               size: uV._3.SIZE_24,
-                              className: y5.my,
+                              className: y4.my,
                           }),
                           (0, M.jsx)(_q.A, {
                               user: e,
-                              className: y5.Tc,
-                              usernameClass: y5.Xh,
-                              discriminatorClass: y5.D2,
+                              className: y4.Tc,
+                              usernameClass: y4.Xh,
+                              discriminatorClass: y4.D2,
                           }),
                       ],
                   },
@@ -26458,20 +26471,20 @@ class y6 extends eI.PureComponent {
         let { party: e, header: t } = this.props,
             n = e.map((e) => this.renderUser(e));
         return (0, M.jsxs)("div", {
-            className: y5.Gh,
+            className: y4.Gh,
             children: [
-                (0, M.jsx)(rx.E, { variant: "text-sm/semibold", color: "text-default", className: y5.wx, children: t }),
-                (0, M.jsx)(ul.Ip, { className: y5.Qs, fade: !0, children: n }),
+                (0, M.jsx)(rx.E, { variant: "text-sm/semibold", color: "text-default", className: y4.wx, children: t }),
+                (0, M.jsx)(ul.Ip, { className: y4.Qs, fade: !0, children: n }),
             ],
         });
     }
 }
-class y4 extends eI.PureComponent {
+class y8 extends eI.PureComponent {
     hasParty(e) {
         return e.length > 1;
     }
     handleStopListening() {
-        (0, yq.A)();
+        (0, yQ.A)();
     }
     handleUserContextMenu = (e, t) => {
         (0, Ee.L3)(e, async () => {
@@ -26497,12 +26510,12 @@ class y4 extends eI.PureComponent {
     };
     renderOverflowPopout = () => {
         let { party: e } = this.props;
-        return (0, M.jsx)(y6, { party: e, header: tL.intl.formatToPlainString(tL.t.I9et1z, { count: e.length }) });
+        return (0, M.jsx)(y7, { party: e, header: tL.intl.formatToPlainString(tL.t.I9et1z, { count: e.length }) });
     };
     render() {
         let { currentUser: e, host: t, party: n } = this.props;
         return this.hasParty(n) && null != e
-            ? (0, M.jsx)(y3, {
+            ? (0, M.jsx)(y6, {
                   currentUser: e,
                   host: t,
                   party: n,
@@ -26513,7 +26526,7 @@ class y4 extends eI.PureComponent {
             : null;
     }
 }
-let y7 = eE.Ay.connectStores([d3.A, eF.default, ij.A, yZ.A], () => {
+let y9 = eE.Ay.connectStores([d3.A, eF.default, ij.A, yJ.A], () => {
     let e,
         t,
         n = d3.A.getSyncingWith(),
@@ -26525,73 +26538,73 @@ let y7 = eE.Ay.connectStores([d3.A, eF.default, ij.A, yZ.A], () => {
             ? ((e = eF.default.getUser(n.userId)), (t = n.partyId))
             : null != i && null != i.party && null != i.party.id && ((e = r), (t = i.party.id)),
         null != t &&
-            (a = iM()(Array.from(yZ.A.getParty(t) ?? []))
+            (a = iM()(Array.from(yJ.A.getParty(t) ?? []))
                 .map((e) => eF.default.getUser(e))
                 .filter(_a.Vq)
                 .orderBy([(t) => null == e || e.id === t.id, (e) => ij.A.isFriend(e.id)], ["desc", "desc"])
                 .value()),
         { currentUser: r, host: e, party: a }
     );
-})(y4);
-var y8 = n(697744),
-    y9 = n(416696),
-    De = n(446080),
-    Dt = n(744682);
-let Dn = {
+})(y8);
+var De = n(697744),
+    Dt = n(416696),
+    Dn = n(446080),
+    Di = n(744682);
+let Dr = {
     disable: { name: "disable", start: 0, duration: 70 },
     enable: { name: "enable", start: 100, duration: 70 },
     hover_enabled: { name: "hover_enabled", start: 200, duration: 70 },
     hover_disabled: { name: "hover_disabled", start: 300, duration: 70 },
 };
-var Di = n(315710),
-    Dr = n(193249),
-    Da = n(452027),
-    Ds = n(951001),
-    Dl = n(155718),
-    Do = n(657043),
-    Dd = n(967812),
-    Dc = n(404522),
-    Du = n(782091),
-    D_ = n(641703),
-    DE = n(521588),
-    DA = n(975412),
-    Dh = n(152567),
-    Df = n(329072),
-    DI = n(384059),
-    Dp = n(480890),
-    DT = n(643501),
-    Dm = n(857253),
-    Dg = n(528767),
-    DS = n(790381),
-    DN = n(30529),
-    DC = n(544105),
-    DO = n(954535);
-function DR(e) {
+var Da = n(315710),
+    Ds = n(193249),
+    Dl = n(452027),
+    Do = n(951001),
+    Dd = n(155718),
+    Dc = n(657043),
+    Du = n(967812),
+    D_ = n(404522),
+    DE = n(782091),
+    DA = n(641703),
+    Dh = n(521588),
+    Df = n(975412),
+    DI = n(152567),
+    Dp = n(329072),
+    DT = n(384059),
+    Dm = n(480890),
+    Dg = n(643501),
+    DS = n(857253),
+    DN = n(528767),
+    DC = n(790381),
+    DO = n(30529),
+    DR = n(544105),
+    DL = n(954535);
+function Dy(e) {
     let { platform: t } = e;
-    return t === DC.f$.XBOX
-        ? (0, M.jsx)(_r.A, { className: DO.Kk })
-        : t === DC.f$.PLAYSTATION
-          ? (0, M.jsx)(DS.A, { className: DO.Kk })
+    return t === DR.f$.XBOX
+        ? (0, M.jsx)(_r.A, { className: DL.Kk })
+        : t === DR.f$.PLAYSTATION
+          ? (0, M.jsx)(DC.A, { className: DL.Kk })
           : null;
 }
-function DL(e) {
+function DD(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
-        i = null != n ? (0, DN.X)(n.type) : null,
-        r = (0, eE.bG)([Dg.A], () => Dg.A.getSessionById(t?.sessionId ?? "")?.clientInfo.os),
+        i = null != n ? (0, DO.X)(n.type) : null,
+        r = (0, eE.bG)([DN.A], () => DN.A.getSessionById(t?.sessionId ?? "")?.clientInfo.os),
         a = i ?? r;
-    if (null == a || !DC.hv.has(a)) return null;
+    if (null == a || !DR.hv.has(a)) return null;
     let s = null != n,
         l = s
-            ? a === DC.f$.XBOX
+            ? a === DR.f$.XBOX
                 ? tL.intl.string(tL.t.UjA4HX)
                 : tL.intl.string(tL.t.QCw1oW)
-            : a === DC.f$.XBOX
+            : a === DR.f$.XBOX
               ? tL.intl.format(tL.t["ynEs/Y"], {})
               : tL.intl.format(tL.t.TZ17Bg, {});
     return (0, M.jsxs)("div", {
-        className: tE()(DO.zr, s ? DO.jI : DO.aW),
+        className: tE()(DL.zr, s ? DL.jI : DL.aW),
         children: [
-            (0, M.jsx)(DR, { platform: a }),
+            (0, M.jsx)(Dy, { platform: a }),
             (0, M.jsx)(rx.E, {
                 color: s ? "text-strong" : "text-overlay-light",
                 variant: "text-xs/medium",
@@ -26600,36 +26613,36 @@ function DL(e) {
         ],
     });
 }
-var Dy = n(880144),
-    DD = n(338771),
-    Dv = n(421838),
-    Db = n(891540),
-    DM = n(205106),
-    DP = n(999751),
-    DU = n(123973),
-    Dw = n(621956),
-    DG = n(421773),
-    Dx = n(173660),
-    Dk = n(234320),
-    DF = n(600597),
-    DB = n(813564),
-    DV = n(674168),
-    DH = n(662080),
-    Dj = n(476254);
+var Dv = n(880144),
+    Db = n(338771),
+    DM = n(421838),
+    DP = n(891540),
+    DU = n(205106),
+    Dw = n(999751),
+    DG = n(123973),
+    Dx = n(621956),
+    Dk = n(421773),
+    DF = n(173660),
+    DB = n(234320),
+    DV = n(600597),
+    DH = n(813564),
+    Dj = n(674168),
+    DW = n(662080),
+    DY = n(476254);
 n(980504);
-var DW = n(187529);
-function DY(e) {
+var DK = n(187529);
+function D$(e) {
     let { channel: t, ...i } = e,
         r = eI.useRef(null),
-        { mute: a, suppress: s } = (0, Dx.A)(t),
+        { mute: a, suppress: s } = (0, DF.A)(t),
         l = (0, rl.bG)([ek.Ay], () => ek.Ay.isDeaf()),
         o = a || s || l,
         [d, c] = eI.useState(!1),
         u = t.getGuildId(),
-        _ = (0, DB.VE)({ isSoundboardButtonDisabled: o }),
+        _ = (0, DH.VE)({ isSoundboardButtonDisabled: o }),
         [E, A] = (0, oT.DP)(_),
         { analyticsLocations: h, parentAnalyticsLocation: f } = (0, rF.Ay)(nA.A.SOUNDBOARD_BUTTON),
-        { showQuickAccess: I, showOnRTCHover: p } = (0, DF.j)("SoundboardRTCPanelButton"),
+        { showQuickAccess: I, showOnRTCHover: p } = (0, DV.j)("SoundboardRTCPanelButton"),
         [T, m] = eI.useState(I),
         g = eI.useCallback(
             (e) => {
@@ -26638,7 +26651,7 @@ function DY(e) {
             [I],
         ),
         S = eI.useCallback(() => g(!1), [g]),
-        { isHovered: N, setIsHovered: C, onMouseEnter: O, onMouseLeave: R } = (0, DG.A)(200, 300),
+        { isHovered: N, setIsHovered: C, onMouseEnter: O, onMouseLeave: R } = (0, Dk.A)(200, 300),
         L = eI.useMemo(() => !!d || (!!N && !!p), [N, p, d]);
     eI.useEffect(() => {
         L || T || g(!0);
@@ -26660,7 +26673,7 @@ function DY(e) {
                         guildId: u,
                         sourceAnalyticsLocations: h,
                         ...t,
-                        onInteraction: (0, Dp.s)("SoundboardContextMenu", nA.A.RTC_PANEL),
+                        onInteraction: (0, Dm.s)("SoundboardContextMenu", nA.A.RTC_PANEL),
                     });
             });
     }
@@ -26668,7 +26681,7 @@ function DY(e) {
         Component: b,
         play: P,
         events: { onMouseEnter: U, onMouseLeave: w },
-    } = (0, Dw.E)();
+    } = (0, Dx.E)();
     function G() {
         return a
             ? tL.intl.string(tL.t["Ox4/zU"])
@@ -26682,7 +26695,7 @@ function DY(e) {
         o || y();
     }, [o, y]);
     return (
-        (0, Dk.Vo)({ event: j.jej.TOGGLE_SOUNDBOARD, handler: x }),
+        (0, DB.Vo)({ event: j.jej.TOGGLE_SOUNDBOARD, handler: x }),
         (0, M.jsx)(rF.f5, {
             value: h,
             children: (0, M.jsx)(as.Y, {
@@ -26702,20 +26715,20 @@ function DY(e) {
                               onMouseLeave: R,
                               onMouseDown: D,
                               children: T
-                                  ? (0, M.jsx)(DH.A, {
+                                  ? (0, M.jsx)(DW.A, {
                                         channel: t,
                                         guildId: u,
                                         openFullPicker: S,
                                         onClose: n,
                                         analyticsSource: "rtc panel",
                                     })
-                                  : (0, M.jsx)(Dj.A, {
+                                  : (0, M.jsx)(DY.A, {
                                         guildId: u,
                                         channel: t,
                                         onClose: n,
                                         gridNotice:
                                             E === rG.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                            (0, M.jsx)(DV.m, { onClose: n, markAsDismissed: A }),
+                                            (0, M.jsx)(Dj.m, { onClose: n, markAsDismissed: A }),
                                         analyticsSource: "rtc panel",
                                     }),
                           });
@@ -26731,15 +26744,15 @@ function DY(e) {
                                 "data-migration-pending": !0,
                                 "aria-label": G(),
                                 ...e,
-                                className: tE()(DW.x6, DW.Sq, { [DW.W4]: d, [DW.r9]: o }),
-                                wrapperClassName: DW.x6,
-                                innerClassName: DW.bk,
+                                className: tE()(DK.x6, DK.Sq, { [DK.W4]: d, [DK.r9]: o }),
+                                wrapperClassName: DK.x6,
+                                innerClassName: DK.bk,
                                 disabled: o,
                                 onClick: () => {
                                     (null != E && E !== rG.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && A(ru.i.UNKNOWN),
                                         y(),
                                         P(),
-                                        (0, DI.X)(f, DI.O.SOUNDBOARD));
+                                        (0, DT.X)(f, DT.O.SOUNDBOARD));
                                 },
                                 onMouseEnter: () => {
                                     (U(), O());
@@ -26751,7 +26764,7 @@ function DY(e) {
                                 fullWidth: !0,
                                 size: sn.$n.Sizes.MEDIUM,
                                 ...i,
-                                children: (0, M.jsx)(b, { className: DW.iA, size: "sm", color: "currentColor" }),
+                                children: (0, M.jsx)(b, { className: DK.iA, size: "sm", color: "currentColor" }),
                             }),
                         }),
                     }),
@@ -26759,83 +26772,83 @@ function DY(e) {
         })
     );
 }
-var DK = n(63995),
-    D$ = n(518769),
-    Dz = n(96566),
-    DX = n(302884),
-    Dq = n(30108),
-    DZ = n(39938),
-    DQ = n(151476),
-    DJ = n(405018),
-    D0 = n(704877),
-    D1 = n(848362),
-    D2 = n(222692),
-    D3 = n(702904),
-    D5 = n(471993),
-    D6 = n(442353),
-    D4 = n(970636),
-    D7 = n(917592),
-    D8 = n(377802),
-    D9 = n(707592),
-    ve = n(132860),
-    vt = n(993838),
-    vn = n(106044);
-function vi(e) {
+var Dz = n(63995),
+    DX = n(518769),
+    Dq = n(96566),
+    DZ = n(302884),
+    DQ = n(30108),
+    DJ = n(39938),
+    D0 = n(151476),
+    D1 = n(405018),
+    D2 = n(704877),
+    D3 = n(848362),
+    D5 = n(222692),
+    D6 = n(702904),
+    D4 = n(471993),
+    D7 = n(442353),
+    D8 = n(970636),
+    D9 = n(917592),
+    ve = n(377802),
+    vt = n(707592),
+    vn = n(132860),
+    vi = n(993838),
+    vr = n(106044);
+function va(e) {
     let { tooltipText: t, onClick: n } = e,
         { parentAnalyticsLocation: i } = (0, rF.Ay)(),
-        { events: r, Component: a } = (0, D8.O)();
-    return (0, M.jsx)(yJ.A, {
+        { events: r, Component: a } = (0, ve.O)();
+    return (0, M.jsx)(y1.A, {
         tooltipText: t,
         onClick: () => {
-            ((0, DI.X)(i, DI.O.DISCONNECT), n());
+            ((0, DT.X)(i, DT.O.DISCONNECT), n());
         },
         ...r,
         icon: (0, M.jsx)(a, { size: "refresh_sm" }),
     });
 }
-function vr(e) {
-    let { channel: t } = e;
-    return (0, M.jsx)(vi, {
-        tooltipText: tL.intl.string(tL.t.SMKyih),
-        onClick: function () {
-            (0, vn.A)(t) ? (0, vt.j3)(t) : t0.default.disconnect();
-        },
-    });
-}
-function va(e) {
-    let { channel: t } = e;
-    return (0, M.jsx)(vi, {
-        tooltipText: tL.intl.string(tL.t["6vrfgt"]),
-        onClick: function () {
-            (0, ve.A)(t) ? (0, D9.Py)(t) : t0.default.disconnect();
-        },
-    });
-}
 function vs(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, M.jsx)(vr, { channel: t }) : (0, M.jsx)(va, { channel: t });
+    return (0, M.jsx)(va, {
+        tooltipText: tL.intl.string(tL.t.SMKyih),
+        onClick: function () {
+            (0, vr.A)(t) ? (0, vi.j3)(t) : t0.default.disconnect();
+        },
+    });
 }
-var vl = n(717558),
-    vo = n(765548),
-    vd = n(556525),
-    vc = n(551826),
-    vu = n(485296),
-    v_ = n(31408),
-    vE = n(588986);
-let vA = { offset: 2 },
-    vh = {
+function vl(e) {
+    let { channel: t } = e;
+    return (0, M.jsx)(va, {
+        tooltipText: tL.intl.string(tL.t["6vrfgt"]),
+        onClick: function () {
+            (0, vn.A)(t) ? (0, vt.Py)(t) : t0.default.disconnect();
+        },
+    });
+}
+function vo(e) {
+    let { channel: t } = e;
+    return t.isGuildStageVoice() ? (0, M.jsx)(vs, { channel: t }) : (0, M.jsx)(vl, { channel: t });
+}
+var vd = n(717558),
+    vc = n(765548),
+    vu = n(556525),
+    v_ = n(551826),
+    vE = n(485296),
+    vA = n(31408),
+    vh = n(588986);
+let vf = { offset: 2 },
+    vI = {
         serverDeaf: { icon: TX.T, colorize: !0, getStatus: () => tL.intl.string(tL.t.btxSdB) },
         serverMute: { icon: mF.O, colorize: !0, getStatus: () => tL.intl.string(tL.t.uLddbQ) },
         deaf: { icon: TZ.c, colorize: !1, getStatus: () => tL.intl.string(tL.t.NjmiOL) },
         mute: { icon: mV.z, colorize: !1, getStatus: () => tL.intl.string(tL.t.tjtv3P) },
         localMute: { icon: mF.O, colorize: !1, getStatus: () => tL.intl.string(tL.t["9F+xJU"]) },
     };
-function vf(e) {
+function vp(e) {
     let t = eI.useRef(null),
         { parentAnalyticsLocation: i } = (0, rF.Ay)(),
         { channel: r, user: a, nick: s, mute: l, deaf: o, serverMute: d, serverDeaf: c } = e,
         u = (0, eE.bG)([ek.Ay], () => ek.Ay.isLocalMute(a.id)),
-        _ = (0, vl.A)({ userId: a.id, checkSoundSharing: !0 }),
+        _ = (0, vd.A)({ userId: a.id, checkSoundSharing: !0 }),
         E = r.getGuildId() ?? void 0,
         A = a.getAvatarURL(r.guild_id, 24),
         h = s ?? ae.Ay.getName(a),
@@ -26845,11 +26858,11 @@ function vf(e) {
             getStatus: p,
         } = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: a } = e;
-            if (t) return vh.serverDeaf;
-            if (n) return vh.deaf;
-            if (i) return vh.serverMute;
-            if (a) return vh.localMute;
-            if (r) return vh.mute;
+            if (t) return vI.serverDeaf;
+            if (n) return vI.deaf;
+            if (i) return vI.serverMute;
+            if (a) return vI.localMute;
+            if (r) return vI.mute;
         })({ serverDeaf: c, deaf: o, serverMute: d, mute: l, localMute: u }) ?? {},
         T = null != p ? tL.intl.formatToPlainString(tL.t["1+MVBP"], { userName: h, status: p() }) : h;
     function m(e) {
@@ -26911,7 +26924,7 @@ function vf(e) {
                           guildId: E,
                           channel: r,
                           showMediaItems: !0,
-                          onInteraction: (0, Dp.s)("GuildChannelUserContextMenu", nA.A.RTC_PANEL, {
+                          onInteraction: (0, Dm.s)("GuildChannelUserContextMenu", nA.A.RTC_PANEL, {
                               targetUserId: a.id,
                           }),
                       });
@@ -26939,12 +26952,12 @@ function vf(e) {
                           ...t,
                           user: a,
                           showMediaItems: !0,
-                          onInteraction: (0, Dp.s)("UserGenericContextMenu", nA.A.RTC_PANEL, { targetUserId: a.id }),
+                          onInteraction: (0, Dm.s)("UserGenericContextMenu", nA.A.RTC_PANEL, { targetUserId: a.id }),
                       });
               });
     }
-    let g = (0, eE.bG)([vu.A], () => vu.A.getVoiceVolume(a.id)),
-        S = (0, vd.v)({ isSpeaking: _, voiceDb: g, spreadDirection: vd.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
+    let g = (0, eE.bG)([vE.A], () => vE.A.getVoiceVolume(a.id)),
+        S = (0, vu.v)({ isSpeaking: _, voiceDb: g, spreadDirection: vu.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
     return (0, M.jsx)(_s.A, {
         targetElementRef: t,
         user: a,
@@ -26958,21 +26971,21 @@ function vf(e) {
                 children: (0, M.jsx)(tA.D, {
                     innerRef: t,
                     onClick: (t) => {
-                        (e.onClick(t), (0, DI.X)(i, DI.O.VOICE_USER));
+                        (e.onClick(t), (0, DT.X)(i, DT.O.VOICE_USER));
                     },
-                    className: vE.H,
+                    className: vh.H,
                     onContextMenu: m,
-                    focusProps: vA,
-                    children: (0, M.jsx)(vc.A, {
-                        shakeLocation: v_.uD.VOICE_USER,
+                    focusProps: vf,
+                    children: (0, M.jsx)(v_.A, {
+                        shakeLocation: vA.uD.VOICE_USER,
                         isShaking: _,
                         children: (0, M.jsx)("div", {
-                            className: vE.my,
+                            className: vh.my,
                             style: { backgroundImage: `url(${A})`, ...S },
                             children:
                                 null != f
                                     ? (0, M.jsx)(f, {
-                                          className: tE()(vE.tr, { [vE.qE]: I }),
+                                          className: tE()(vh.tr, { [vh.qE]: I }),
                                           color: "currentColor",
                                           size: "xs",
                                       })
@@ -26983,19 +26996,19 @@ function vf(e) {
             }),
     });
 }
-function vI(e) {
+function vT(e) {
     let { voiceStates: t, channel: n, className: i } = e,
         [r, a] = eI.useState(!1),
         s = (0, eE.bG)([ei.default], () => ei.default.getId()),
         { containerRef: l, maxVisibleAvatars: o } = (function (e) {
             let [t, n] = eI.useState(7),
-                i = (0, vo.A)(() => {
+                i = (0, vc.A)(() => {
                     let t = r?.current;
                     if (null == t) return;
                     let i = Math.floor((t.offsetWidth + 4) / 28);
                     n(Math.max(1, e > i ? i - 1 : i));
                 }),
-                r = (0, LT.w)(i, [e], { fireOnMount: !0, fireOnDepsChange: !0 });
+                r = (0, Lg.w)(i, [e], { fireOnMount: !0, fireOnDepsChange: !0 });
             return { containerRef: r, maxVisibleAvatars: t };
         })(t.length - 1),
         [d, c] = (function (e, t, n) {
@@ -27024,11 +27037,11 @@ function vI(e) {
     return A.length <= 0
         ? null
         : (0, M.jsx)(ul.Ip, {
-              className: tE()(vE.XG, i),
+              className: tE()(vh.XG, i),
               fade: !0,
               children: (0, M.jsxs)("div", {
                   ref: l,
-                  className: tE()(vE.Xk, !r && vE.yZ),
+                  className: tE()(vh.Xk, !r && vh.yZ),
                   role: "group",
                   "aria-label": tL.intl.string(tL.t["/ZgaVU"]),
                   children: [
@@ -27036,7 +27049,7 @@ function vI(e) {
                           let { user: t, nick: i, voiceState: r } = e;
                           return t.id !== s
                               ? (0, M.jsx)(
-                                    vf,
+                                    vp,
                                     {
                                         channel: n,
                                         user: t,
@@ -27056,11 +27069,11 @@ function vI(e) {
               }),
           });
 }
-var vp = n(806931),
-    vT = n(897513),
-    vm = n(621380);
-let vg = { offset: { left: -1, top: -1, right: 1, bottom: 1 } };
-function vS(e) {
+var vm = n(806931),
+    vg = n(897513),
+    vS = n(621380);
+let vN = { offset: { left: -1, top: -1, right: 1, bottom: 1 } };
+function vC(e) {
     let t = e.currentTarget;
     W.default.track(j.HAw.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
@@ -27068,9 +27081,9 @@ function vS(e) {
         location: { section: j.JJy.NOISE_CANCELLATION_POPOUT },
     });
 }
-function vN() {
+function vO() {
     let e = eI.useRef(null);
-    ((0, Di.tj)(e),
+    ((0, Da.tj)(e),
         eI.useEffect(() => {
             W.default.track(j.HAw.OPEN_POPOUT, { type: j.JJy.NOISE_CANCELLATION_POPOUT });
         }, []));
@@ -27079,11 +27092,11 @@ function vN() {
             (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ek.Ay,
                     t = e.getSystemMicrophoneMode();
-                return !(0, DM.A)(!0, t);
+                return !(0, DU.A)(!0, t);
             })(ek.Ay),
         ),
         i = (0, eE.bG)([ek.Ay], () => ek.Ay.getActiveInputProfile()),
-        r = null != i && i !== vm.m.CUSTOM,
+        r = null != i && i !== vS.m.CUSTOM,
         a = tL.intl.string(tL.t.uKdWn6),
         s = tL.intl.string(tL.t.uKdWn6);
     return (
@@ -27098,14 +27111,14 @@ function vN() {
               (a = tL.intl.formatToPlainString(tL.t["/tqmfM"], { enabled: t ? "true" : "false", inputProfile: i })),
         (0, M.jsxs)("div", {
             ref: e,
-            className: DW.dD,
+            className: DK.dD,
             children: [
                 (0, M.jsx)(rN.m, {
                     text: a,
                     shouldShow: r || n,
                     align: "right",
                     children: (0, M.jsx)("div", {
-                        children: (0, M.jsx)(Dr.d, {
+                        children: (0, M.jsx)(Ds.d, {
                             label: tL.intl.string(tL.t["WGWHv/"]),
                             checked: t && !n,
                             disabled: r || n,
@@ -27115,28 +27128,28 @@ function vN() {
                     }),
                 }),
                 (0, M.jsx)(rx.E, { variant: "text-sm/normal", children: s }),
-                (0, M.jsx)(Dh.A, {
+                (0, M.jsx)(DI.A, {
                     title: tL.intl.string(tL.t.JdUas1),
-                    notchBackground: Dh.V.BLACK,
+                    notchBackground: DI.V.BLACK,
                     buttonTest: tL.intl.string(tL.t["sG+MGg"]),
                     buttonStop: tL.intl.string(tL.t.Yp3SbJ),
                     location: { section: j.JJy.NOISE_CANCELLATION_POPOUT },
                 }),
-                (0, M.jsx)(Da.D, {
+                (0, M.jsx)(Dl.D, {
                     label: tL.intl.string(tL.t.k6h1F4),
                     children: (0, M.jsxs)(lw.A, {
                         justify: lw.A.Justify.BETWEEN,
-                        className: DW.__invalid_footer,
+                        className: DK.__invalid_footer,
                         children: [
                             (0, M.jsx)(em.Anchor, {
                                 href: j.X7G.KRISP,
-                                onClick: (e) => vS(e),
-                                children: (0, M.jsx)("div", { className: DW.zQ }),
+                                onClick: (e) => vC(e),
+                                children: (0, M.jsx)("div", { className: DK.zQ }),
                             }),
                             (0, M.jsx)(em.Anchor, {
                                 href: tG.A.getArticleURL(j.MVz.NOISE_SUPPRESSION),
-                                className: DW.W,
-                                onClick: (e) => vS(e),
+                                className: DK.W,
+                                onClick: (e) => vC(e),
                                 children: tL.intl.string(tL.t.hvVgAZ),
                             }),
                         ],
@@ -27146,38 +27159,38 @@ function vN() {
         })
     );
 }
-function vC() {
+function vR() {
     let { parentAnalyticsLocation: e } = (0, rF.Ay)(),
-        t = (0, eE.bG)([DZ.A], () => DZ.A.isMuted()),
+        t = (0, eE.bG)([DJ.A], () => DJ.A.isMuted()),
         n = t ? tL.intl.string(tL.t.ScHlfl) : tL.intl.string(tL.t.zqxfrf);
-    return (0, M.jsx)(yJ.A, {
+    return (0, M.jsx)(y1.A, {
         tooltipText: n,
         icon: t ? m5.C : m3.T,
         onClick: () => {
-            ((0, DI.X)(e, DI.O.STAGE_MUSIC, t), (0, DX.k)(!t));
+            ((0, DT.X)(e, DT.O.STAGE_MUSIC, t), (0, DZ.k)(!t));
         },
     });
 }
-function vO(e) {
+function vL(e) {
     let { channel: t, enableActivities: n, disabled: i } = e,
         r = eI.useRef(null),
         { parentAnalyticsLocation: a } = (0, rF.Ay)(),
-        s = (0, DQ.A)(),
-        l = (0, D0.A)(t),
+        s = (0, D0.A)(),
+        l = (0, D2.A)(t),
         o = (0, eE.bG)(
             [nL.Ay],
             () => null != nL.Ay.getSelfEmbeddedActivityForLocation(nL.Ay.getConnectedActivityLocation()),
         ),
-        d = (0, DU.Ay)(t),
-        { reachedLimit: c, limit: u } = (0, DJ.A)(t),
+        d = (0, DG.Ay)(t),
+        { reachedLimit: c, limit: u } = (0, D1.A)(t),
         _ = eI.useCallback(() => {
-            (0, D2.A)();
+            (0, D5.A)();
         }, []),
         E = (0, tp.Us)(),
         A = !o8.k.useConfig({ location: "RTCConnection" }).videoEnabled,
         h = eI.useCallback(
             (e) => {
-                ek.Ay.isVideoEnabled() !== e && ((0, DI.X)(a, DI.O.CAMERA, e), e ? (0, D6.A)(n, E) : n());
+                ek.Ay.isVideoEnabled() !== e && ((0, DT.X)(a, DT.O.CAMERA, e), e ? (0, D7.A)(n, E) : n());
                 function n() {
                     if ((ig.default.setVideoEnabled(e), !e)) return;
                     let n = nS.Ay.getChannelId();
@@ -27188,10 +27201,10 @@ function vO(e) {
             [t, E, a],
         ),
         f = o || n || d,
-        { Component: I, play: p, events: T } = (0, De.K)(s.enabled ? "disable" : "enable");
+        { Component: I, play: p, events: T } = (0, Dn.K)(s.enabled ? "disable" : "enable");
     return (
         eI.useEffect(() => () => p(), [s.enabled, p]),
-        (0, M.jsx)(D4.r, {
+        (0, M.jsx)(D8.r, {
             onChange: h,
             onCameraUnavailable: _,
             videoBlocked: A,
@@ -27205,18 +27218,18 @@ function vO(e) {
                     d = A
                         ? (0, M.jsx)(CV.b, {
                               size: "md",
-                              className: tE()(DW.iA, { [DW.ij]: !f }),
+                              className: tE()(DK.iA, { [DK.ij]: !f }),
                               color: "currentColor",
                           })
-                        : (0, M.jsx)(I, { size: "md", className: tE()(DW.iA, { [DW.ij]: !f }), color: "currentColor" });
+                        : (0, M.jsx)(I, { size: "md", className: tE()(DK.iA, { [DK.ij]: !f }), color: "currentColor" });
                 return (0, M.jsx)(as.Y, {
                     targetElementRef: r,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, M.jsx)(Df.A, {
+                        return (0, M.jsx)(Dp.A, {
                             onClose: t,
                             minimal: !0,
-                            onInteraction: (0, Dp.s)("VideoDeviceMenu", a),
+                            onInteraction: (0, Dm.s)("VideoDeviceMenu", a),
                         });
                     },
                     position: "top",
@@ -27246,11 +27259,11 @@ function vO(e) {
                                 },
                                 size: sn.$n.Sizes.MEDIUM,
                                 "aria-pressed": n,
-                                className: tE()(DW.x6, DW.Sq, { [DW.rK]: n, [DW.tU]: t && !A, [DW.r9]: o.disabled }),
-                                innerClassName: DW.bk,
-                                wrapperClassName: DW.x6,
+                                className: tE()(DK.x6, DK.Sq, { [DK.rK]: n, [DK.tU]: t && !A, [DK.r9]: o.disabled }),
+                                innerClassName: DK.bk,
+                                wrapperClassName: DK.x6,
                                 fullWidth: !0,
-                                focusProps: vg,
+                                focusProps: vN,
                                 children: f
                                     ? d
                                     : (0, M.jsxs)(lw.A, {
@@ -27265,19 +27278,19 @@ function vO(e) {
         })
     );
 }
-function vR(e) {
+function vy(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, tp.Us)(),
         { parentAnalyticsLocation: r, newestAnalyticsLocation: a } = (0, rF.Ay)(),
         s = i === j.BRT.POPOUT,
-        l = (0, Du.et)(t.id),
-        o = (0, Du.dL)(l),
+        l = (0, DE.et)(t.id),
+        o = (0, DE.dL)(l),
         { userInActivity: d } = (0, eE.cf)([nL.Ay], () => ({
             userInActivity: null != nL.Ay.getSelfEmbeddedActivityForChannel(t.id),
         })),
-        c = (0, Dc.b)({ surface: Dl.YI.VOICE_LAUNCHER, skipFetchingShelf: !0 }),
-        u = l !== Du.xy.CAN_LAUNCH,
-        { Component: _, events: E, play: A } = (0, y8.c)();
+        c = (0, D_.b)({ surface: Dd.YI.VOICE_LAUNCHER, skipFetchingShelf: !0 }),
+        u = l !== DE.xy.CAN_LAUNCH,
+        { Component: _, events: E, play: A } = (0, De.c)();
     return n
         ? (0, M.jsx)(l9.GY, {
               contentType: rG.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
@@ -27293,12 +27306,12 @@ function vR(e) {
                           ...E,
                           onClick: () => {
                               (A(),
-                                  (0, DA.A)({
+                                  (0, Df.A)({
                                       context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
                                       openInPopout: s,
                                       analyticsLocation: a,
                                   }),
-                                  (0, DI.X)(r, DI.O.ACTIVITY),
+                                  (0, DT.X)(r, DT.O.ACTIVITY),
                                   n === rG.M.ACTIVITIES_VOICE_LAUNCHER_BADGE && i(ru.i.TAKE_ACTION));
                           },
                           onMouseEnter: () => {
@@ -27308,13 +27321,13 @@ function vR(e) {
                               E.onMouseLeave();
                           },
                           disabled: u,
-                          className: tE()(DW.x6, DW.Sq, { [DW.rK]: d, [DW.r9]: u }),
-                          innerClassName: DW.bk,
-                          wrapperClassName: DW.x6,
-                          focusProps: vg,
+                          className: tE()(DK.x6, DK.Sq, { [DK.rK]: d, [DK.r9]: u }),
+                          innerClassName: DK.bk,
+                          wrapperClassName: DK.x6,
+                          focusProps: vN,
                           children: [
-                              n === rG.M.ACTIVITIES_VOICE_LAUNCHER_BADGE && (0, M.jsx)(DE.a, { top: -1, right: -1 }),
-                              (0, M.jsx)(_, { size: "md", color: "currentColor", className: DW.iA }),
+                              n === rG.M.ACTIVITIES_VOICE_LAUNCHER_BADGE && (0, M.jsx)(Dh.a, { top: -1, right: -1 }),
+                              (0, M.jsx)(_, { size: "md", color: "currentColor", className: DK.iA }),
                           ],
                       }),
                   });
@@ -27322,44 +27335,44 @@ function vR(e) {
           })
         : null;
 }
-function vL(e) {
+function vD(e) {
     let t,
         { channel: n, canGoLive: i, enableActivities: r, disabled: a } = e,
         s = eI.useRef(null),
         { parentAnalyticsLocation: l, analyticsLocations: o } = (0, rF.Ay)(),
         d = (0, eE.bG)([eF.default], () => eF.default.getCurrentUser()),
         c = (0, eE.yK)([d7.A], () => d7.A.getAllActiveStreams()),
-        u = (0, D0.A)(n),
+        u = (0, D2.A)(n),
         _ = n.getGuildId(),
         E = (0, eE.cf)([nL.Ay], () => null != nL.Ay.getSelfEmbeddedActivityForChannel(n.id)),
-        A = (0, DU.Ay)(n),
+        A = (0, DG.Ay)(n),
         h = !o8.k.useConfig({ location: "RTCConnection" }).videoEnabled,
         f = eI.useCallback(() => {
-            (0, D5.A)(_, n.id, o);
+            (0, D4.A)(_, n.id, o);
         }, [_, n.id, o]),
         I = c.find((e) => e.ownerId === d?.id),
-        p = (0, D1.T)(n, d, c);
-    t = null == I ? (i ? f : D3.A) : () => (0, DD.A)(I);
+        p = (0, D3.T)(n, d, c);
+    t = null == I ? (i ? f : D6.A) : () => (0, Db.A)(I);
     let T = null != I || p.length > 0,
         m = h ? tL.intl.string(tL.t.GFr0GR) : u ? tL.intl.string(tL.t.fjBNo1) : tL.intl.string(tL.t.uQn9B8),
         g = E || r || A,
         S = null != I,
-        { Component: N, events: C, play: O } = (0, y9.c)(S ? "disable" : "enable");
+        { Component: N, events: C, play: O } = (0, Dt.c)(S ? "disable" : "enable");
     eI.useEffect(() => () => O(), [O, S]);
     let R = h
-        ? (0, M.jsx)(SW.i, { size: "md", color: "currentColor", className: tE()(DW.iA, { [DW.ij]: !g }) })
-        : (0, M.jsx)(N, { size: "md", color: "currentColor", className: tE()(DW.iA, { [DW.ij]: !g }) });
+        ? (0, M.jsx)(SW.i, { size: "md", color: "currentColor", className: tE()(DK.iA, { [DK.ij]: !g }) })
+        : (0, M.jsx)(N, { size: "md", color: "currentColor", className: tE()(DK.iA, { [DK.ij]: !g }) });
     return (0, M.jsx)(as.Y, {
         targetElementRef: s,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, M.jsx)(D1.A, {
+            return (0, M.jsx)(D3.A, {
                 channel: n,
                 currentUser: d,
                 activeStreams: c,
                 onClose: t,
-                handleGoLive: i ? f : D3.A,
-                onInteraction: (0, Dp.s)("ManageStreamsMenu", l, { entrypoint: vp.GK.OTHER_BUTTON }),
+                handleGoLive: i ? f : D6.A,
+                onInteraction: (0, Dm.s)("ManageStreamsMenu", l, { entrypoint: vm.GK.OTHER_BUTTON }),
             });
         },
         position: "top",
@@ -27375,10 +27388,10 @@ function vL(e) {
                     size: sn.$n.Sizes.MEDIUM,
                     "aria-pressed": null != I,
                     onClick: (e) => {
-                        ((0, DI.X)(l, DI.O.STREAM, null == I), T ? n(e) : t());
+                        ((0, DT.X)(l, DT.O.STREAM, null == I), T ? n(e) : t());
                     },
                     disabled: !u || a,
-                    className: tE()(DW.x6, DW.Sq, { [DW.rK]: null != I, [DW.r9]: !u || a }),
+                    className: tE()(DK.x6, DK.Sq, { [DK.rK]: null != I, [DK.r9]: !u || a }),
                     ...(T ? r : null),
                     onMouseEnter: () => {
                         (i?.(), C.onMouseEnter());
@@ -27386,9 +27399,9 @@ function vL(e) {
                     onMouseLeave: () => {
                         C.onMouseLeave();
                     },
-                    innerClassName: DW.bk,
-                    wrapperClassName: DW.x6,
-                    focusProps: vg,
+                    innerClassName: DK.bk,
+                    wrapperClassName: DK.x6,
+                    focusProps: vN,
                     children: g
                         ? R
                         : (0, M.jsxs)(lw.A, {
@@ -27400,7 +27413,7 @@ function vL(e) {
         },
     });
 }
-function vy(e) {
+function vv(e) {
     let { channel: t, analyticsLocations: i, hasRemoteVoiceState: r } = e,
         a = (0, uZ.Ay)(t),
         s = (0, eE.bG)([e1.A], () => {
@@ -27427,9 +27440,9 @@ function vy(e) {
         c = (0, eE.bG)([nG.A], () => nG.A.hasVideo(t.id)),
         u = null != s ? `${a} / ${s}` : a,
         _ = j.BVt.CHANNEL(t.guild_id ?? j.ME, t.id),
-        E = (0, Do.KN)("ConnectionStatus"),
-        { connectionStatus: A, connectionStatusText: h } = D7.A.getStatus(o, c);
-    return (0, M.jsx)(DP.A, {
+        E = (0, Dc.KN)("ConnectionStatus"),
+        { connectionStatus: A, connectionStatusText: h } = D9.A.getStatus(o, c);
+    return (0, M.jsx)(Dw.A, {
         channelId: t.id,
         quality: l,
         state: o,
@@ -27442,8 +27455,8 @@ function vy(e) {
                 to: _,
                 onClick: function (e) {
                     (e.stopPropagation(),
-                        Ds.A.channelListScrollTo(t.guild_id ?? j.ME, t.id),
-                        (0, DI.X)(nA.A.RTC_PANEL, DI.O.CHANNEL_LINK));
+                        Do.A.channelListScrollTo(t.guild_id ?? j.ME, t.id),
+                        (0, DT.X)(nA.A.RTC_PANEL, DT.O.CHANNEL_LINK));
                 },
                 onContextMenu: function (e) {
                     (0, Ee.L3)(e, async () => {
@@ -27461,7 +27474,7 @@ function vy(e) {
                                 children: (0, M.jsx)(e, {
                                     ...n,
                                     channel: t,
-                                    onInteraction: (0, Dp.s)("RTCConnectionMenu", nA.A.RTC_PANEL),
+                                    onInteraction: (0, Dm.s)("RTCConnectionMenu", nA.A.RTC_PANEL),
                                 }),
                             });
                     });
@@ -27472,11 +27485,11 @@ function vy(e) {
                             variant: "text-md/medium",
                             color: "none",
                             style: { paddingTop: 4, height: "auto" },
-                            className: DP.e[A],
+                            className: Dw.e[A],
                             children: h,
                         }),
-                    (0, M.jsx)(y0.A, {
-                        className: DW.Ix,
+                    (0, M.jsx)(y2.A, {
+                        className: DK.Ix,
                         children: (0, M.jsx)(rx.E, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
@@ -27489,27 +27502,27 @@ function vy(e) {
         }),
     });
 }
-function vD() {
-    Dv.sF(vT._.VOICE_PANEL_INTRODUCTION);
+function vb() {
+    DM.sF(vg._.VOICE_PANEL_INTRODUCTION);
 }
-function vv() {
+function vM() {
     return (0, M.jsxs)("div", {
-        className: tE()(DW.SC, "theme-light"),
+        className: tE()(DK.SC, "theme-light"),
         children: [
             (0, M.jsx)(sY.D, {
-                className: DW.oN,
+                className: DK.oN,
                 variant: "heading-md/semibold",
                 children: tL.intl.string(tL.t["ba/rL2"]),
             }),
-            (0, M.jsx)(rx.E, { className: DW.uf, variant: "text-sm/normal", children: tL.intl.string(tL.t.Ne1Eew) }),
-            (0, M.jsx)(tc.$, { fullWidth: !0, onClick: vD, text: tL.intl.string(tL.t.shaBeH), focusProps: vg }),
+            (0, M.jsx)(rx.E, { className: DK.uf, variant: "text-sm/normal", children: tL.intl.string(tL.t.Ne1Eew) }),
+            (0, M.jsx)(tc.$, { fullWidth: !0, onClick: vb, text: tL.intl.string(tL.t.shaBeH), focusProps: vN }),
         ],
     });
 }
-function vb() {
-    return (0, M.jsx)(vv, {});
+function vP() {
+    return (0, M.jsx)(vM, {});
 }
-function vM(e) {
+function vU(e) {
     var t;
     let i,
         r,
@@ -27544,12 +27557,12 @@ function vM(e) {
         }, [t])),
         (o = eI.useCallback(
             (e) =>
-                (0, M.jsx)(Dt.P, {
+                (0, M.jsx)(Di.P, {
                     ...e,
                     src: () => n.e("524596").then(n.t.bind(n, 941983, 19)),
                     ref: i,
                     initialAnimation: r.current,
-                    markers: Dn,
+                    markers: Dr,
                 }),
             [],
         )),
@@ -27562,11 +27575,11 @@ function vM(e) {
         });
     return (
         eI.useEffect(() => () => A(), [u, A]),
-        (0, M.jsx)(yJ.A, {
+        (0, M.jsx)(y1.A, {
             ...d,
             ref: _,
             onClick: (e) => {
-                ((0, DI.X)(E, DI.O.KRISP, !u), d.onClick(e));
+                ((0, DT.X)(E, DT.O.KRISP, !u), d.onClick(e));
             },
             onMouseEnter: () => {
                 (d.onMouseEnter?.(), f.onMouseEnter());
@@ -27579,22 +27592,22 @@ function vM(e) {
         })
     );
 }
-function vP(e) {
+function vw(e) {
     let { channel: t } = e,
         n = (0, eE.bG)([sC.A], () => sC.A.hasLayers()),
         { noiseCancellationActive: i, noiseCancellationError: r } = (0, eE.cf)([ek.Ay], () => ({
-            noiseCancellationActive: (0, DM.A)(ek.Ay.getNoiseCancellation(), ek.Ay.getSystemMicrophoneMode()),
+            noiseCancellationActive: (0, DU.A)(ek.Ay.getNoiseCancellation(), ek.Ay.getSystemMicrophoneMode()),
             noiseCancellationError: ek.Ay.isNoiseCancellationError(),
         })),
         a = eI.useRef(null),
         s = (0, eE.bG)([nG.A, ei.default], () => nG.A.getVoiceState(t.guild_id, ei.default.getId()));
-    return t?.isGuildStageVoice() && (0, d5.eY)(s) !== d5.zF.ON_STAGE && (0, Dq.Zl)(t.id)
-        ? (0, M.jsx)(vC, {})
+    return t?.isGuildStageVoice() && (0, d5.eY)(s) !== d5.zF.ON_STAGE && (0, DQ.Zl)(t.id)
+        ? (0, M.jsx)(vR, {})
         : !n && r
           ? (0, M.jsx)(rN.m, {
                 text: tL.intl.string(tL.t["i+SO/U"]),
                 forceOpen: !0,
-                children: (0, M.jsx)(yJ.A, {
+                children: (0, M.jsx)(y1.A, {
                     tooltipText: null,
                     disabled: !0,
                     icon: C5,
@@ -27607,42 +27620,42 @@ function vP(e) {
                     targetElementRef: a,
                     position: "top",
                     align: "center",
-                    renderPopout: () => (0, M.jsx)(vN, {}),
+                    renderPopout: () => (0, M.jsx)(vO, {}),
                     children: (e, t) => {
                         let { isShown: n } = t;
-                        return (0, M.jsx)(vM, { popoutProps: e, isShown: n, noiseCancellationActive: i, ref: a });
+                        return (0, M.jsx)(vU, { popoutProps: e, isShown: n, noiseCancellationActive: i, ref: a });
                     },
                 },
                 "krisp-popout",
             );
 }
-function vU(e) {
+function vG(e) {
     let { channel: t, canGoLive: n } = e,
-        { reachedLimit: i } = (0, DJ.A)(t),
-        r = (0, Dz.qT)(t.id),
-        a = (0, Dz.Kl)(t.id),
+        { reachedLimit: i } = (0, D1.A)(t),
+        r = (0, Dq.qT)(t.id),
+        a = (0, Dq.Kl)(t.id),
         s = (0, eE.bG)([d7.A], () => d7.A.getCurrentUserActiveStream()),
-        l = (0, Dd.A)(t.guild_id ?? j.dJq, t.id),
-        o = (0, D_.A)(t.id),
+        l = (0, Du.A)(t.guild_id ?? j.dJq, t.id),
+        o = (0, DA.A)(t.id),
         d = (0, eE.bG)([nG.A, ei.default], () => nG.A.getVoiceState(t.guild_id, ei.default.getId()));
-    if (t.isGuildStageVoice() && (null == d || d.suppress || !n || !(0, Dz.Bw)(t.guild_id))) return null;
+    if (t.isGuildStageVoice() && (null == d || d.suppress || !n || !(0, Dq.Bw)(t.guild_id))) return null;
     let c = (t.isGuildVoice() || o) && l;
     return (0, M.jsxs)("div", {
-        className: DW.uu,
+        className: DK.uu,
         children: [
-            (0, M.jsx)(vO, { channel: t, enableActivities: c, disabled: !r && i }),
-            (0, M.jsx)(vL, {
+            (0, M.jsx)(vL, { channel: t, enableActivities: c, disabled: !r && i }),
+            (0, M.jsx)(vD, {
                 channel: t,
                 canGoLive: n,
                 enableActivities: c,
                 disabled: t.isGuildStageVoice() && ((a && null == s) || (!r && i)),
             }),
-            c && (0, M.jsx)(vR, { channel: t, enableActivities: l }),
-            (0, DU.Ay)(t) ? (0, M.jsx)(DY, { channel: t, focusProps: vg }) : null,
+            c && (0, M.jsx)(vy, { channel: t, enableActivities: l }),
+            (0, DG.Ay)(t) ? (0, M.jsx)(D$, { channel: t, focusProps: vN }) : null,
         ],
     });
 }
-function vw(e) {
+function vx(e) {
     let { channel: t } = e,
         n = (0, eE.bG)([lr.A], () => lr.A.isViewingRoles(t.guild_id)),
         i = (0, eE.bG)([nw.A], () => n && !nw.A.can(j.xBc.VIEW_CHANNEL, t), [n, t]),
@@ -27653,11 +27666,11 @@ function vw(e) {
     null == t.guild_id || r || !n)
         ? null
         : (0, M.jsxs)("div", {
-              className: DW.BT,
+              className: DK.BT,
               children: [
                   (0, M.jsx)(rx.E, {
                       variant: "text-sm/normal",
-                      className: DW.u0,
+                      className: DK.u0,
                       children: i ? tL.intl.string(tL.t.efjuQJ) : tL.intl.string(tL.t.br8H2N),
                   }),
                   (0, M.jsx)(tc.$, {
@@ -27667,18 +27680,18 @@ function vw(e) {
                           a(!0);
                       },
                       text: tL.intl.string(tL.t.WAI6xu),
-                      focusProps: vg,
+                      focusProps: vN,
                   }),
               ],
           });
 }
-function vG(e) {
+function vk(e) {
     let { channel: t } = e,
         [n, i, r] = (0, eE.yK)(
-            [iY.Ay, DK.A],
+            [iY.Ay, Dz.A],
             () =>
                 t?.isGuildStageVoice()
-                    ? [DK.A.getMutableParticipants(t.id, D$.ip.SPEAKER), DK.A.getParticipantsVersion(t.id), null]
+                    ? [Dz.A.getMutableParticipants(t.id, DX.ip.SPEAKER), Dz.A.getParticipantsVersion(t.id), null]
                     : [null, null, null != t ? iY.Ay.getVoiceStatesForChannel(t) : null],
             [t],
         ),
@@ -27692,21 +27705,21 @@ function vG(e) {
                 [],
             [n, i, r],
         );
-    return (0, M.jsx)(vI, { voiceStates: a, channel: t, className: DW.Xk });
+    return (0, M.jsx)(vT, { voiceStates: a, channel: t, className: DK.Xk });
 }
-function vx() {
-    let e = (0, Dm.A)(),
-        t = (0, eE.bG)([DT.default], () => DT.default.getAwaitingRemoteSessionInfo()),
+function vF() {
+    let e = (0, DS.A)(),
+        t = (0, eE.bG)([Dg.default], () => Dg.default.getAwaitingRemoteSessionInfo()),
         n = (0, eE.bG)([ng.A], () => e?.channelId ?? ng.A.getChannelId()),
         i = (0, eE.bG)([nm.A], () => nm.A.getChannel(n), [n]),
         { noiseCancellationSupported: r, canGoLive: a } = (0, eE.cf)([ek.Ay], () => ({
             noiseCancellationSupported: ek.Ay.isNoiseCancellationSupported(),
-            canGoLive: (0, Dy.A)(ek.Ay),
+            canGoLive: (0, Dv.A)(ek.Ay),
         })),
         s = (0, eE.bG)(
-            [ek.Ay, Db.A, eF.default],
+            [ek.Ay, DP.A, eF.default],
             () =>
-                Db.A.hasHotspot(vT._.VOICE_PANEL_INTRODUCTION) &&
+                DP.A.hasHotspot(vg._.VOICE_PANEL_INTRODUCTION) &&
                 (0, ae.mv)(eF.default.getCurrentUser()) &&
                 !ek.Ay.isInteractionRequired() &&
                 !i?.isGuildStageVoice(),
@@ -27718,15 +27731,15 @@ function vx() {
     return (0, M.jsx)(rF.f5, {
         value: o,
         children: (0, M.jsxs)("div", {
-            className: DW.iE,
+            className: DK.iE,
             children: [
-                null != e || null != t ? (0, M.jsx)(DL, { voiceState: e, awaitingRemoteSessionInfo: t }) : null,
+                null != e || null != t ? (0, M.jsx)(DD, { voiceState: e, awaitingRemoteSessionInfo: t }) : null,
                 null != i
                     ? (0, M.jsxs)(M.Fragment, {
                           children: [
                               (0, M.jsx)(as.Y, {
                                   targetElementRef: d,
-                                  renderPopout: vb,
+                                  renderPopout: vP,
                                   position: "top",
                                   align: "center",
                                   animation: as.Y.Animation.TRANSLATE,
@@ -27736,15 +27749,15 @@ function vx() {
                                           variant: "text-sm/medium",
                                           color: "text-strong",
                                           ref: d,
-                                          className: DW.kL,
+                                          className: DK.kL,
                                           children: [
                                               (0, M.jsxs)(lw.A, {
-                                                  className: DW.FI,
+                                                  className: DK.FI,
                                                   align: lw.A.Align.CENTER,
                                                   children: [
                                                       (0, M.jsx)("div", {
-                                                          className: DW.vW,
-                                                          children: (0, M.jsx)(vy, {
+                                                          className: DK.vW,
+                                                          children: (0, M.jsx)(vv, {
                                                               channel: i,
                                                               analyticsLocations: o,
                                                               hasRemoteVoiceState: c,
@@ -27753,20 +27766,20 @@ function vx() {
                                                       (0, M.jsxs)(lw.A, {
                                                           grow: 0,
                                                           shrink: 0,
-                                                          className: DW.nL,
+                                                          className: DK.nL,
                                                           children: [
-                                                              r && !c ? (0, M.jsx)(vP, { channel: i }) : null,
-                                                              (0, M.jsx)(vs, { channel: i }),
+                                                              r && !c ? (0, M.jsx)(vw, { channel: i }) : null,
+                                                              (0, M.jsx)(vo, { channel: i }),
                                                           ],
                                                       }),
                                                   ],
                                               }),
-                                              l ? (0, M.jsx)(vG, { channel: i }) : null,
-                                              c ? null : (0, M.jsx)(vU, { channel: i, canGoLive: a }),
+                                              l ? (0, M.jsx)(vk, { channel: i }) : null,
+                                              c ? null : (0, M.jsx)(vG, { channel: i, canGoLive: a }),
                                           ],
                                       }),
                               }),
-                              (0, M.jsx)(vw, { channel: i }),
+                              (0, M.jsx)(vx, { channel: i }),
                           ],
                       })
                     : null,
@@ -27774,38 +27787,38 @@ function vx() {
         }),
     });
 }
-var vk = n(331322),
-    vF = n(456060),
-    vB = n(486350),
-    vV = n(626798),
-    vH = n(609145),
-    vj = n(762644),
-    vW = n(221486),
-    vY = n(431788),
-    vK = n(566082);
-let v$ = 30 * i_.A.Millis.SECOND;
-function vz() {
-    let e = (0, eE.bG)([vV.A], () => vV.A.getMostRecentInboundRequest()),
+var vB = n(331322),
+    vV = n(456060),
+    vH = n(486350),
+    vj = n(626798),
+    vW = n(609145),
+    vY = n(762644),
+    vK = n(221486),
+    v$ = n(431788),
+    vz = n(566082);
+let vX = 30 * i_.A.Millis.SECOND;
+function vq() {
+    let e = (0, eE.bG)([vj.A], () => vj.A.getMostRecentInboundRequest()),
         t = (0, eE.bG)([nm.A], () => (null != e ? nm.A.getChannel(e.channel_id) : null)),
-        n = (0, vj.A)(e?.id),
+        n = (0, vY.A)(e?.id),
         i = (0, nf.YY)(e?.application?.id).data,
-        r = (0, vW.i)(i),
+        r = (0, vK.i)(i),
         a = (0, eE.bG)([ei.default], () => ei.default.getId()),
         s = (0, eE.bG)([ng.A], () => null != t && ng.A.getChannelId() === t.id),
         l = (0, eE.bG)([d7.A], () => null != d7.A.getCurrentUserActiveStream()),
         { analyticsLocations: o } = (0, rF.Ay)(nA.A.REQUEST_TO_STREAM_REMINDER),
-        { isQuestBarEmpty: d } = (0, yN.c9)(),
-        c = (0, yf.p0)({ value: e?.id, shouldUpdate: null != e }),
+        { isQuestBarEmpty: d } = (0, yO.c9)(),
+        c = (0, yp.p0)({ value: e?.id, shouldUpdate: null != e }),
         u = d && null != e && !n && null != t && null != i && null != r && s && !l;
     return (0, M.jsx)(
-        yS,
+        yC,
         {
             shouldShow: u,
-            duration: v$,
+            duration: vX,
             onDismiss: (n) => {
                 null != e &&
-                    (n === ym.USER &&
-                        ((0, vH.A)(e.id, e.channel_id, {
+                    (n === yS.USER &&
+                        ((0, vW.A)(e.id, e.channel_id, {
                             section: j.JJy.ACTIVITY_PANEL,
                             object: j.ZSU.ACK_DECLINE_REQUEST_TO_STREAM,
                             objectType: j.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
@@ -27816,21 +27829,21 @@ function vz() {
                             message_id: e.id,
                             application_id: e.application?.id,
                         })),
-                    (0, vB.q)(e.id));
+                    (0, vH.q)(e.id));
             },
             dismissAriaLabel: tL.intl.string(tL.t.WAI6xu),
-            wrapperClassName: vK.n,
+            wrapperClassName: vz.n,
             renderHeader: () =>
                 (0, M.jsx)(rx.E, {
                     variant: "text-sm/medium",
                     color: "text-strong",
-                    children: tL.intl.string(vY.default.nAyuPp),
+                    children: tL.intl.string(v$.default.nAyuPp),
                 }),
             renderBody: () => {
                 if (null == e || null == t || null == i) return null;
-                let n = (0, vF.Wf)(e, t, a),
+                let n = (0, vV.Wf)(e, t, a),
                     s = (0, _o.mG)(t.guild_id, t.id, e.author);
-                return (0, M.jsxs)(vk.B, {
+                return (0, M.jsxs)(vB.B, {
                     direction: "vertical",
                     gap: 12,
                     children: [
@@ -27838,7 +27851,7 @@ function vz() {
                         (0, M.jsx)(rx.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: tL.intl.format(vY.default.EuarXc, {
+                            children: tL.intl.format(v$.default.EuarXc, {
                                 username: s,
                                 usernameHook: (e, t) =>
                                     (0, M.jsx)(
@@ -27857,16 +27870,16 @@ function vz() {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
-                            text: tL.intl.formatToPlainString(vY.default.TFn1fS, { gameName: i.name }),
+                            text: tL.intl.formatToPlainString(v$.default.TFn1fS, { gameName: i.name }),
                             onClick: () => {
                                 null != r &&
-                                    ((0, vW.X)(r, o),
-                                    (0, vH.A)(e.id, e.channel_id, {
+                                    ((0, vK.X)(r, o),
+                                    (0, vW.A)(e.id, e.channel_id, {
                                         section: j.JJy.ACTIVITY_PANEL,
                                         object: j.ZSU.ACK_ACCEPT_REQUEST_TO_STREAM,
                                         objectType: j.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                                     }),
-                                    (0, vB.q)(e.id));
+                                    (0, vH.q)(e.id));
                             },
                         }),
                     ],
@@ -27876,15 +27889,15 @@ function vz() {
         c,
     );
 }
-var vX = n(199773),
-    vq = n(590209),
-    vZ = n(713913),
-    vQ = n(437614),
-    vJ = n(13981),
-    v0 = n(44724),
-    v1 = n(343476);
-let v2 = 30 * i_.A.Millis.SECOND;
-function v3(e) {
+var vZ = n(199773),
+    vQ = n(590209),
+    vJ = n(713913),
+    v0 = n(437614),
+    v1 = n(13981),
+    v2 = n(44724),
+    v3 = n(343476);
+let v5 = 30 * i_.A.Millis.SECOND;
+function v6(e) {
     let {
             shouldShow: t,
             applicationId: n,
@@ -27896,11 +27909,11 @@ function v3(e) {
             onDismiss: o,
             onHidden: d,
         } = e,
-        { gameRecord: c } = (0, yE.A)(n),
+        { gameRecord: c } = (0, yh.A)(n),
         u = (0, M.jsxs)("div", {
-            className: v1.Pb,
+            className: v3.Pb,
             children: [
-                (0, M.jsx)(u2.A, { className: v1.Gt, game: c, size: u2.M.XXSMALL }),
+                (0, M.jsx)(u2.A, { className: v3.Gt, game: c, size: u2.M.XXSMALL }),
                 (0, M.jsx)(rx.E, {
                     variant: "text-xs/semibold",
                     color: "text-muted",
@@ -27910,29 +27923,29 @@ function v3(e) {
             ],
         });
     return (0, M.jsx)("div", {
-        className: tE()(v1.NI, { [v1.hS]: !t }),
+        className: tE()(v3.NI, { [v3.hS]: !t }),
         children: (0, M.jsx)("div", {
-            className: v1.DU,
-            children: (0, M.jsx)(yS, {
+            className: v3.DU,
+            children: (0, M.jsx)(yC, {
                 shouldShow: t,
-                duration: v2,
+                duration: v5,
                 controlsPlacement: "overlay",
                 onDismiss: o,
                 onHidden: d,
                 dismissAriaLabel: s,
-                wrapperClassName: v1.nd,
+                wrapperClassName: v3.nd,
                 renderHeader: function () {
                     return (0, M.jsx)("div", {
-                        className: v1.ah,
+                        className: v3.ah,
                         children: (0, M.jsxs)("div", {
-                            className: v1.$_,
+                            className: v3.$_,
                             children: [
                                 (0, M.jsx)("div", {
-                                    className: v1.Sl,
-                                    children: (0, M.jsx)("img", { className: v1.HU, src: i, alt: "" }),
+                                    className: v3.Sl,
+                                    children: (0, M.jsx)("img", { className: v3.HU, src: i, alt: "" }),
                                 }),
                                 (0, M.jsxs)("div", {
-                                    className: v1.Rv,
+                                    className: v3.Rv,
                                     children: [
                                         u,
                                         (0, M.jsx)(rx.E, {
@@ -27949,10 +27962,10 @@ function v3(e) {
                 },
                 renderBody: function () {
                     return (0, M.jsxs)("div", {
-                        className: v1.rf,
+                        className: v3.rf,
                         children: [
                             (0, M.jsxs)("div", {
-                                className: v1.zH,
+                                className: v3.zH,
                                 "aria-hidden": !0,
                                 children: [
                                     u,
@@ -27964,7 +27977,7 @@ function v3(e) {
                                 ],
                             }),
                             (0, M.jsx)("div", {
-                                className: v1.E1,
+                                className: v3.E1,
                                 children: (0, M.jsx)(tc.$, {
                                     variant: "primary",
                                     size: "sm",
@@ -27980,41 +27993,41 @@ function v3(e) {
         }),
     });
 }
-var v5 = n(621547);
-function v6() {
-    let e = (0, vJ.M6)((e) => e.campaignId),
-        t = (0, vJ.M6)((e) => e.status),
-        n = t === vQ.yY.PREVIEW,
-        i = t !== vQ.yY.PENDING,
-        r = null != e ? (0, vZ.KJ)(e) : null,
-        { isQuestBarEmpty: a, hasLoadedQuestBar: s } = (0, yN.c9)(),
-        l = (0, yc.sY)((e) => e.isOpen),
+var v4 = n(621547);
+function v7() {
+    let e = (0, v1.M6)((e) => e.campaignId),
+        t = (0, v1.M6)((e) => e.status),
+        n = t === v0.yY.PREVIEW,
+        i = t !== v0.yY.PENDING,
+        r = null != e ? (0, vJ.KJ)(e) : null,
+        { isQuestBarEmpty: a, hasLoadedQuestBar: s } = (0, yO.c9)(),
+        l = (0, y_.sY)((e) => e.isOpen),
         o = (0, OZ.Ay)((e) => e.shownFatigableCandidate?.content ?? null),
-        d = (0, eE.bG)([vX.A], () => null != r && vX.A.hasUserHitDCCap(r.dismissibleContent)),
-        [c, u] = (0, vq.eK)();
+        d = (0, eE.bG)([vZ.A], () => null != r && vZ.A.hasUserHitDCCap(r.dismissibleContent)),
+        [c, u] = (0, vQ.eK)();
     eI.useEffect(() => {
         if (null == r) return;
-        if (!a) return void (0, vJ.ik)({ type: "blocked", blocker: vQ.Uj.QUEST_BAR });
-        if (l) return void (0, vJ.ik)({ type: "blocked", blocker: vQ.Uj.CLIPS_REMINDER });
+        if (!a) return void (0, v1.ik)({ type: "blocked", blocker: v0.Uj.QUEST_BAR });
+        if (l) return void (0, v1.ik)({ type: "blocked", blocker: v0.Uj.CLIPS_REMINDER });
         if (n || !s) return;
         let e = (function (e, t) {
             let { currentWinner: n, hasHitDailyCap: i, overlayLocked: r, overlayFocusedPID: a } = t;
             return (0, dG.NZ)(e.dismissibleContent, r, a)
-                ? vQ.Uj.OVERLAY
+                ? v0.Uj.OVERLAY
                 : i
-                  ? vQ.Uj.DC_DAILY_CAP
+                  ? v0.Uj.DC_DAILY_CAP
                   : null != n && n !== e.dismissibleContent
-                    ? vQ.Uj.DC_BUSY
+                    ? v0.Uj.DC_BUSY
                     : (0, OZ.rM)()
-                      ? vQ.Uj.DC_COOLDOWN
+                      ? v0.Uj.DC_COOLDOWN
                       : null;
         })(r, { currentWinner: o, hasHitDailyCap: d, overlayLocked: c, overlayFocusedPID: u });
         null != e
-            ? (0, vJ.ik)({ type: "blocked", blocker: e })
+            ? (0, v1.ik)({ type: "blocked", blocker: e })
             : i ||
               (r.experiment.getConfig({ location: "GameExitPromoPanel" }).enabled
-                  ? (0, vJ.Q9)()
-                  : (0, vJ.ik)({ type: "not_in_treatment" }));
+                  ? (0, v1.Q9)()
+                  : (0, v1.ik)({ type: "not_in_treatment" }));
     }, [r, i, n, s, a, l, o, d, c, u]);
     let _ = r?.dismissibleContent ?? null,
         [E, A] = (0, ro.kn)(i && !n && null != _ ? [_] : [], { bypassAutoDismiss: !0 }),
@@ -28025,34 +28038,34 @@ function v6() {
         T = eI.useCallback(() => I(null), []),
         m = eI.useCallback(
             (e) => {
-                e !== ym.UNMOUNT &&
-                    (n || A(e === ym.USER ? ru.i.USER_DISMISS : ru.i.AUTO_DISMISS),
-                    (0, vJ.ik)({ type: e === ym.USER ? "dismissed" : "timed_out" }));
+                e !== yS.UNMOUNT &&
+                    (n || A(e === yS.USER ? ru.i.USER_DISMISS : ru.i.AUTO_DISMISS),
+                    (0, v1.ik)({ type: e === yS.USER ? "dismissed" : "timed_out" }));
             },
             [n, A],
         ),
         g = eI.useCallback(() => {
             null != p &&
                 (n || A(ru.i.TAKE_ACTION),
-                (0, vJ.ik)({ type: "cta_clicked" }),
-                (0, v0.default)({ applicationId: p.applicationId, skuId: p.ctaSkuId }));
+                (0, v1.ik)({ type: "cta_clicked" }),
+                (0, v2.default)({ applicationId: p.applicationId, skuId: p.ctaSkuId }));
         }, [p, n, A]);
     return null == p
         ? null
-        : (0, M.jsx)(v3, {
+        : (0, M.jsx)(v6, {
               shouldShow: h,
               applicationId: p.applicationId,
               imageUrl: p.imageUrl,
               body: p.getBody(),
-              ctaText: tL.intl.string(v5.default["TE+uDu"]),
-              dismissAriaLabel: tL.intl.string(v5.default.tR2B53),
+              ctaText: tL.intl.string(v4.default["TE+uDu"]),
+              dismissAriaLabel: tL.intl.string(v4.default.tR2B53),
               onCtaClick: g,
               onDismiss: m,
               onHidden: T,
           });
 }
-var v4 = n(83978);
-let v7 = (0, i8.Fe)({
+var v8 = n(83978);
+let v9 = (0, i8.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("59855"),
@@ -28090,17 +28103,17 @@ let v7 = (0, i8.Fe)({
     name: "QuestBar",
     renderLoader: () => null,
 });
-function v8(e) {
+function be(e) {
     let { analyticsLocations: t } = (0, rF.Ay)(nA.A.ACTIVITY_PANEL),
-        n = (0, LP.A)((e) => {
+        n = (0, Lw.A)((e) => {
             let { guildId: t } = e;
             return t;
         });
-    return (0, M.jsx)(rF.f5, { value: t, children: (0, M.jsx)(yX.A, { ...e, guildId: n }) });
+    return (0, M.jsx)(rF.f5, { value: t, children: (0, M.jsx)(yZ.A, { ...e, guildId: n }) });
 }
-let v9 = eI.memo(function () {
+let bt = eI.memo(function () {
     let e = eI.useRef(null);
-    (0, L9.i4)(
+    (0, yt.i4)(
         e,
         (e) => {
             let { height: t } = e;
@@ -28108,43 +28121,43 @@ let v9 = eI.memo(function () {
         },
         [],
     );
-    let t = (0, yd.MZ)((e) => e.isOpen),
-        { isSorting: n } = (0, y$.A)();
+    let t = (0, yu.MZ)((e) => e.isOpen),
+        { isSorting: n } = (0, yX.A)();
     return (0, M.jsx)("section", {
         ref: e,
-        className: tE()(v4.C3, { [v4.aB]: n }),
+        className: tE()(v8.C3, { [v8.aB]: n }),
         "aria-label": tL.intl.string(tL.t.vTl6Lk),
         children: (0, M.jsxs)(eh.xp, {
             containerRef: e,
             children: [
-                (0, M.jsx)(L8, {}),
+                (0, M.jsx)(ye, {}),
+                (0, M.jsx)(v9, {}),
                 (0, M.jsx)(v7, {}),
-                (0, M.jsx)(v6, {}),
-                (0, M.jsx)(y7, {}),
-                (0, M.jsx)(vz, {}),
+                (0, M.jsx)(y9, {}),
+                (0, M.jsx)(vq, {}),
                 (0, M.jsx)(uo.A, {
                     section: j.JJy.ACTIVITY_PANEL,
-                    children: (0, M.jsx)(v8, { className: tE()(v4.iz, { [v4.$j]: t }) }),
+                    children: (0, M.jsx)(be, { className: tE()(v8.iz, { [v8.$j]: t }) }),
                 }),
-                (0, M.jsx)(yw, {}),
-                (0, M.jsx)(y_, {}),
-                (0, M.jsx)(yK, {}),
-                (0, M.jsx)(uo.A, { section: j.JJy.RTC_CONNECTION_PANEL, children: (0, M.jsx)(vx, {}) }),
+                (0, M.jsx)(yx, {}),
+                (0, M.jsx)(yA, {}),
+                (0, M.jsx)(yz, {}),
+                (0, M.jsx)(uo.A, { section: j.JJy.RTC_CONNECTION_PANEL, children: (0, M.jsx)(vF, {}) }),
                 (0, M.jsx)(uo.A, {
                     section: j.JJy.ACCOUNT_PANEL,
-                    children: (0, M.jsx)(s8.A.Provider, { value: void 0, children: (0, M.jsx)(yz.A, {}) }),
+                    children: (0, M.jsx)(s8.A.Provider, { value: void 0, children: (0, M.jsx)(yq.A, {}) }),
                 }),
             ],
         }),
     });
 });
-var be = n(539916),
-    bt = n(613057);
-function bn() {
-    return (0, M.jsx)("div", { className: v4.wG, children: (0, M.jsx)(i6.y, {}) });
+var bn = n(539916),
+    bi = n(613057);
+function br() {
+    return (0, M.jsx)("div", { className: v8.wG, children: (0, M.jsx)(i6.y, {}) });
 }
 n(999900);
-let bi = (0, tz.Fe)({
+let ba = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("80501"),
@@ -28192,9 +28205,9 @@ let bi = (0, tz.Fe)({
             ]).then(n.bind(n, 320080)),
         webpackId: 320080,
         name: "NotificationsInboxSidebar",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    br = (0, tz.Fe)({
+    bs = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("516497"),
@@ -28625,7 +28638,7 @@ let bi = (0, tz.Fe)({
         name: "GuildShopPage",
         renderLoader: i9.uW,
     }),
-    ba = (0, tz.Fe)({
+    bl = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("199663"),
@@ -28806,9 +28819,9 @@ let bi = (0, tz.Fe)({
             ]).then(n.bind(n, 883912)),
         webpackId: 883912,
         name: "SocialLayerStorefront",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bs = (0, tz.Fe)({
+    bo = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("199663"),
@@ -28991,9 +29004,9 @@ let bi = (0, tz.Fe)({
             ]).then(n.bind(n, 425663)),
         webpackId: 425663,
         name: "SocialLayerStorefrontApplicationWrapper",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bl = (0, tz.Fe)({
+    bd = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("43748"),
@@ -29572,15 +29585,15 @@ let bi = (0, tz.Fe)({
             ]).then(n.bind(n, 42421)),
         webpackId: 42421,
         name: "ConjureScreen",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bo = (0, tz.Fe)({
+    bc = (0, tz.Fe)({
         createPromise: () => Promise.all([n.e("204744"), n.e("916373"), n.e("708497")]).then(n.bind(n, 254316)),
         webpackId: 254316,
         name: "ServerMonetizationOnboardingForwarder",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bd = (0, tz.Fe)({
+    bu = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("395267"),
@@ -30123,7 +30136,7 @@ let bi = (0, tz.Fe)({
         name: "GuildHomePage",
         renderLoader: i9.tV,
     }),
-    bc = (0, tz.Fe)({
+    b_ = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("329172"),
@@ -30163,7 +30176,7 @@ let bi = (0, tz.Fe)({
         webpackId: 869579,
         name: "GuildSpacePage",
     }),
-    bu = (0, tz.Fe)({
+    bE = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("262564"),
@@ -30181,7 +30194,7 @@ let bi = (0, tz.Fe)({
         webpackId: 827641,
         name: "GuildOfficialMessagesPage",
     }),
-    b_ = (0, tz.Fe)({
+    bA = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("251937"),
@@ -30664,7 +30677,7 @@ let bi = (0, tz.Fe)({
         name: "MemberSafetyPage",
         renderLoader: i9.NU,
     }),
-    bE = (0, tz.Fe)({
+    bh = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("189908"),
@@ -31223,7 +31236,7 @@ let bi = (0, tz.Fe)({
         name: "ChannelsAndRolesPage",
         renderLoader: i9.n,
     }),
-    bA = (0, tz.Fe)({
+    bf = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("630279"),
@@ -31250,9 +31263,9 @@ let bi = (0, tz.Fe)({
             ]).then(n.bind(n, 123071)),
         webpackId: 123071,
         name: "GuildOnboardingPage",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bh = (0, tz.Fe)({
+    bI = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("546957"),
@@ -31286,7 +31299,7 @@ let bi = (0, tz.Fe)({
         name: "GuildPowerupsPage",
         renderLoader: i9.Ru,
     }),
-    bf = (0, tz.Fe)({
+    bp = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("622936"),
@@ -31312,7 +31325,7 @@ let bi = (0, tz.Fe)({
         name: "GameServerPage",
         renderLoader: i9.Ub,
     }),
-    bI = (0, tz.Fe)({
+    bT = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("74979"),
@@ -31335,7 +31348,7 @@ let bi = (0, tz.Fe)({
         name: "ApplicationLibraryPage",
         renderLoader: i9.cL,
     }),
-    bp = (0, tz.qT)({
+    bm = (0, tz.qT)({
         createPromise: () =>
             Promise.all([
                 n.e("145006"),
@@ -31450,7 +31463,7 @@ let bi = (0, tz.Fe)({
         name: "GuildSidebar",
         renderLoader: i9.L,
     }),
-    bT = (0, tz.Fe)({
+    bg = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("102247"),
@@ -31715,7 +31728,7 @@ let bi = (0, tz.Fe)({
         name: "GlobalDiscovery",
         renderLoader: i9.Bj,
     }),
-    bm = (0, tz.Fe)({
+    bS = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("680015"),
@@ -31751,7 +31764,7 @@ let bi = (0, tz.Fe)({
         name: "FamilyCenterRouter",
         renderLoader: i9.c5,
     }),
-    bg = (0, tz.Fe)({
+    bN = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("791879"),
@@ -31826,7 +31839,7 @@ let bi = (0, tz.Fe)({
         name: "QuestHomePage",
         renderLoader: i9.g4,
     }),
-    bS = (0, tz.Fe)({
+    bC = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("839460"),
@@ -32258,7 +32271,7 @@ let bi = (0, tz.Fe)({
         name: "ICYMIPage",
         renderLoader: i9.so,
     }),
-    bN = (0, tz.Fe)({
+    bO = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("189908"),
@@ -32784,7 +32797,7 @@ let bi = (0, tz.Fe)({
         name: "MessageRequestPage",
         renderLoader: i9.rt,
     });
-async function bC() {
+async function bR() {
     let e = lo.o.getConfig({ location: "AppView" }, { autoTrackExposure: !1 }).enabled
             ? Promise.all([n.e("839460"), n.e("774346"), n.e("856437")])
                   .then(n.bind(n, 752020))
@@ -33423,35 +33436,35 @@ async function bC() {
         ]).then(n.bind(n, 284055));
     return (await e, t);
 }
-let bO = (0, tz.qT)({ createPromise: bC, webpackId: 284055, name: "Channel", renderLoader: i9.l3 }),
-    bR = (0, tz.Fe)({
+let bL = (0, tz.qT)({ createPromise: bR, webpackId: 284055, name: "Channel", renderLoader: i9.l3 }),
+    by = (0, tz.Fe)({
         createPromise: () => n.e("322270").then(n.bind(n, 816015)),
         webpackId: 816015,
         name: "ChannelStoreListing",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bL = (0, tz.Fe)({
+    bD = (0, tz.Fe)({
         createPromise: () => Promise.all([n.e("359244"), n.e("349212")]).then(n.bind(n, 575429)),
         webpackId: 575429,
         name: "DeepLinkLaunchActivityInDM",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    by = (0, tz.Fe)({
+    bv = (0, tz.Fe)({
         createPromise: () => Promise.all([n.e("514588"), n.e("641066"), n.e("797544")]).then(n.bind(n, 667429)),
         webpackId: 667429,
         name: "EmptyNotificationsPage",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bD = (0, tz.Fe)({
+    bb = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([n.e("630279"), n.e("298903"), n.e("815537"), n.e("236999"), n.e("86105")]).then(
                 n.bind(n, 995198),
             ),
         webpackId: 995198,
         name: "GuildMemberVerificationPreviewDisabled",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bv = (0, tz.Fe)({
+    bM = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("630279"),
@@ -33464,9 +33477,9 @@ let bO = (0, tz.qT)({ createPromise: bC, webpackId: 284055, name: "Channel", ren
             ]).then(n.bind(n, 140354)),
         webpackId: 140354,
         name: "GuildOnboardingBlockedPage",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bb = (0, tz.Fe)({
+    bP = (0, tz.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("97191"),
@@ -33895,9 +33908,9 @@ let bO = (0, tz.qT)({ createPromise: bC, webpackId: 284055, name: "Channel", ren
             ]).then(n.bind(n, 726561)),
         webpackId: 726561,
         name: "GuildRoleSubscriptionsOverviewPageWithContext",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    bM = (e) => {
+    bU = (e) => {
         let { match: t } = e,
             n = (0, rn.o)(),
             i = (0, eE.bG)([nm.A, nS.Ay], () => {
@@ -33929,10 +33942,10 @@ let bO = (0, tz.qT)({ createPromise: bC, webpackId: 284055, name: "Channel", ren
                             return;
                     }
             }),
-            T = (0, eE.bG)([st.A], () => (0, LQ.C$)(o) && (0, LQ.C$)(l), [o, l]);
+            T = (0, eE.bG)([st.A], () => (0, L0.C$)(o) && (0, L0.C$)(l), [o, l]);
         eI.useEffect(() => {
             T ||
-                (null != d && (0, l5.pX)(j.BVt.CHANNEL(d.id, (0, LJ.A)(d))), (0, ll.showInaccessibleReportPostModal)());
+                (null != d && (0, l5.pX)(j.BVt.CHANNEL(d.id, (0, L1.A)(d))), (0, ll.showInaccessibleReportPostModal)());
         }, [T, d]);
         let m = null != d,
             g = eI.useRef(null);
@@ -33947,81 +33960,81 @@ let bO = (0, tz.qT)({ createPromise: bC, webpackId: 284055, name: "Channel", ren
             switch (o) {
                 case ob.VV.ROLE_SUBSCRIPTIONS:
                     return S
-                        ? (0, M.jsx)(br, { guildId: r, initialTab: se.B.GUILD_ROLE_SUBSCRIPTIONS })
-                        : (0, M.jsx)(bb, { guildId: r });
+                        ? (0, M.jsx)(bs, { guildId: r, initialTab: se.B.GUILD_ROLE_SUBSCRIPTIONS })
+                        : (0, M.jsx)(bP, { guildId: r });
                 case ob.VV.SERVER_MONETIZATION_ONBOARDING:
-                    return (0, M.jsx)(bo, { guildId: r });
+                    return (0, M.jsx)(bc, { guildId: r });
                 case ob.VV.GAME_SHOP:
-                    return (0, M.jsx)(ba, { ...e });
+                    return (0, M.jsx)(bl, { ...e });
                 case ob.VV.GUILD_SHOP:
-                    return (0, M.jsx)(br, { guildId: r, productId: s, initialTab: p });
+                    return (0, M.jsx)(bs, { guildId: r, productId: s, initialTab: p });
                 case ob.VV.MEMBER_APPLICATIONS:
                     return (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(r, ob.VV.MEMBER_SAFETY) });
                 case ob.VV.GUILD_SPACE:
                     if (!u) return (0, i9.l3)();
                     if (!A) return (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(r) });
-                    return (0, M.jsx)(bc, { guildId: r });
-                case ob.VV.GUILD_HOME:
-                    return (0, M.jsx)(bd, { guildId: r });
-                case ob.VV.CHANNEL_BROWSER:
-                    return (0, M.jsx)(bE, { guildId: r, selectedSection: be.qC.BROWSE });
-                case ob.VV.GUILD_ONBOARDING:
-                    return (0, M.jsx)(bA, { guildId: r });
-                case ob.VV.CUSTOMIZE_COMMUNITY:
-                    return (0, M.jsx)(bE, { guildId: r, selectedSection: be.qC.CUSTOMIZE });
-                case ob.VV.MEMBER_SAFETY:
                     return (0, M.jsx)(b_, { guildId: r });
+                case ob.VV.GUILD_HOME:
+                    return (0, M.jsx)(bu, { guildId: r });
+                case ob.VV.CHANNEL_BROWSER:
+                    return (0, M.jsx)(bh, { guildId: r, selectedSection: bn.qC.BROWSE });
+                case ob.VV.GUILD_ONBOARDING:
+                    return (0, M.jsx)(bf, { guildId: r });
+                case ob.VV.CUSTOMIZE_COMMUNITY:
+                    return (0, M.jsx)(bh, { guildId: r, selectedSection: bn.qC.CUSTOMIZE });
+                case ob.VV.MEMBER_SAFETY:
+                    return (0, M.jsx)(bA, { guildId: r });
                 case ob.VV.CONJURE:
                     return _
-                        ? (0, M.jsx)(bl, { guildId: r, projectId: s })
+                        ? (0, M.jsx)(bd, { guildId: r, projectId: s })
                         : (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(r) });
                 case ob.VV.GUILD_BOOSTS:
-                    return (0, M.jsx)(bh, {
+                    return (0, M.jsx)(bI, {
                         guildId: r,
                         powerupListingId: n.get("powerupId") ?? n.get("powerupSkuId"),
                     });
                 case ob.VV.GAME_SERVERS:
                     if (!E || (!f && !h)) return (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(r) });
-                    return (0, M.jsx)(bf, { guildId: r });
+                    return (0, M.jsx)(bp, { guildId: r });
                 case ob.VV.REPORT_TO_MOD:
-                    return (0, M.jsx)(bO, {});
+                    return (0, M.jsx)(bL, {});
                 case ob.VV.GUILD_OFFICIAL_MESSAGES:
                     if (!I) return (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(r) });
-                    return (0, M.jsx)(bu, { guildId: r });
+                    return (0, M.jsx)(bE, { guildId: r });
                 default:
                     (0, _a.xb)(o);
             }
-        if ((0, s9.$Y)(d, c)) return (0, M.jsx)(bv, { guildId: r, channelId: o });
+        if ((0, s9.$Y)(d, c)) return (0, M.jsx)(bM, { guildId: r, channelId: o });
         if (i?.type === j.rbe.GUILD_STORE) {
             let e = cc.default.cast(t.params.messageId);
-            return (0, M.jsx)(bR, { channel: i, inputSkuId: e }, i.id);
+            return (0, M.jsx)(by, { channel: i, inputSkuId: e }, i.id);
         }
-        return (0, M.jsx)(bO, {});
+        return (0, M.jsx)(bL, {});
     },
-    bP = eI.memo(function () {
-        let { guildId: e, channelId: t } = (0, LP.A)(),
+    bw = eI.memo(function () {
+        let { guildId: e, channelId: t } = (0, Lw.A)(),
             { notificationCenterVariant: n } = (0, aX.X8)({ location: "Sidebar" }),
             i = (0, eE.bG)([nS.Ay], () => t ?? nS.Ay.getChannelId(e));
         return window.location.pathname.startsWith(j.BVt.CHANNEL(j.gNP))
-            ? ("sidebar" !== n && (0, l5.bG)(L2.A.defaultRoute), (0, M.jsx)(bi, { includePanelSpacing: !0 }))
+            ? ("sidebar" !== n && (0, l5.bG)(L5.A.defaultRoute), (0, M.jsx)(ba, { includePanelSpacing: !0 }))
             : window.location.pathname.startsWith(j.BVt.GLOBAL_DISCOVERY) ||
                 window.location.pathname.startsWith(j.BVt.GUILD_DISCOVERY) ||
                 window.location.pathname.startsWith(j.BVt.QUEST_HOME_DEPRECATED)
               ? (0, M.jsx)(s7, {})
               : null != e
-                ? (0, M.jsx)(bp, { selectedChannelId: i, guildId: e }, e)
-                : (0, M.jsx)(LZ, {});
+                ? (0, M.jsx)(bm, { selectedChannelId: i, guildId: e }, e)
+                : (0, M.jsx)(LJ, {});
     });
-function bU(e) {
-    return (0, M.jsx)(bM, { ...e });
-}
-function bw() {
-    return (0, M.jsx)(bT, {});
-}
 function bG(e) {
-    return (0, M.jsx)(bx, { ...e });
+    return (0, M.jsx)(bU, { ...e });
 }
-let bx = (e) => {
+function bx() {
+    return (0, M.jsx)(bg, {});
+}
+function bk(e) {
+    return (0, M.jsx)(bF, { ...e });
+}
+let bF = (e) => {
     let { channelId: t, messageId: n } = e.match.params;
     return (eI.useEffect(() => {
         null != t &&
@@ -34029,52 +34042,52 @@ let bx = (e) => {
             i4.A.jumpToMessage({ channelId: t, messageId: n, flash: !0, context: "notification_center_navigation" });
     }, [t, n]),
     null == t)
-        ? (0, M.jsx)(by, {})
-        : bU(e);
+        ? (0, M.jsx)(bv, {})
+        : bG(e);
 };
-function bk(e) {
+function bB(e) {
     let { match: t } = e;
-    return null != t.params.guildId ? (0, M.jsx)(bD, { guildId: t.params.guildId }) : null;
+    return null != t.params.guildId ? (0, M.jsx)(bb, { guildId: t.params.guildId }) : null;
 }
-function bF(e) {
+function bV(e) {
     let { match: t } = e;
     return ((0, l5.pX)(j.BVt.ME), (0, li.A)(t.params.inviteCode), null);
 }
-function bB() {
-    return (0, M.jsx)(bI, {});
+function bH() {
+    return (0, M.jsx)(bT, {});
 }
-function bV() {
+function bj() {
     return (0, M.jsx)(re, {});
 }
-function bH() {
+function bW() {
     return function (e) {
         let { tab: t, applicationId: n } = (0, t$.parse)(e.location.search);
         if (t === Oy.G2.GAME_SHOPS && null != n) {
             let { pageIndex: t, skuId: i } = (0, t$.parse)(e.location.search);
-            return (0, M.jsx)(bs, { applicationId: n, pageIndex: t, skuId: i });
+            return (0, M.jsx)(bo, { applicationId: n, pageIndex: t, skuId: i });
         }
         return Object.values(Oy.G2).includes(t) ? (0, M.jsx)(rf, { tab: t, ...e }) : (0, M.jsx)(rf, { ...e });
     };
 }
-function bj() {
-    return (0, M.jsx)(bg, { topLevelRoute: !0 });
-}
-function bW(e) {
-    return (0, M.jsx)(bL, { ...e });
-}
 function bY() {
-    return (0, M.jsx)(AW, {});
+    return (0, M.jsx)(bN, { topLevelRoute: !0 });
 }
-function bK() {
-    return (0, M.jsx)(bS, {});
+function bK(e) {
+    return (0, M.jsx)(bD, { ...e });
 }
 function b$() {
-    return (0, M.jsx)(bN, {});
+    return (0, M.jsx)(AW, {});
 }
 function bz() {
-    return (0, M.jsx)(bm, {});
+    return (0, M.jsx)(bC, {});
 }
 function bX() {
+    return (0, M.jsx)(bO, {});
+}
+function bq() {
+    return (0, M.jsx)(bS, {});
+}
+function bZ() {
     return (
         eI.useEffect(() => {
             (0, sB.B)(() => {
@@ -34086,10 +34099,10 @@ function bX() {
         (0, M.jsx)(tV.rd, { to: j.BVt.ME })
     );
 }
-function bq(e) {
+function bQ(e) {
     let t = e.location.pathname;
     return (0, M.jsx)(t6, {
-        deepLinkType: bt.XK.FEATURES,
+        deepLinkType: bi.XK.FEATURES,
         path: t,
         children: (function (e) {
             let { match: t } = e;
@@ -34124,7 +34137,7 @@ function bq(e) {
                         to: { pathname: (0, l4.settingsPathToRoute)(oe.od.PROFILE_CUSTOMIZATION) },
                     });
                 case "badges":
-                    return (0, M.jsx)(bX, {});
+                    return (0, M.jsx)(bZ, {});
                 case "gift":
                 case "store":
                     return (0, M.jsx)(tV.rd, { to: { pathname: j.BVt.NITRO_HOME } });
@@ -34143,41 +34156,41 @@ function bq(e) {
         })(e),
     });
 }
-function bZ(e) {
+function bJ(e) {
     (a8.setState({ width: e }), document.body.style.setProperty("--custom-guild-sidebar-width", `${e}px`));
 }
-function bQ(e) {
+function b0(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: i, hideChannelList: r, isSidebarOpen: a } = e,
         s = (0, eE.bG)([tI.A], () => tI.A.isFullscreenInContext()),
         l = a8((e) => !e.isOpen) && !1,
         o = a8((e) => e.width);
     (eI.useLayoutEffect(() => {}, [!1]),
         eI.useLayoutEffect(() => {
-            if (l) bZ(76);
+            if (l) bJ(76);
             else {
                 let e = parseInt(ex.w.get(i7.o) ?? "");
-                (Number.isNaN(e) && (e = 375), bZ(e));
+                (Number.isNaN(e) && (e = 375), bJ(e));
             }
         }, [l]));
     let d = eI.useRef(null),
         c = eI.useCallback(
             (e, t) => {
-                bZ(e);
-                (t <= 264 ? document.body.classList.add(v4._A) : document.body.classList.remove(v4._A),
-                    t >= 432 ? document.body.classList.add(v4.uN) : document.body.classList.remove(v4.uN));
+                bJ(e);
+                (t <= 264 ? document.body.classList.add(v8._A) : document.body.classList.remove(v8._A),
+                    t >= 432 ? document.body.classList.add(v8.uN) : document.body.classList.remove(v8.uN));
                 let n = t - e;
                 d.current?.style.setProperty("--custom-overdrag", `${1 + Math.min(Math.abs(n / 76), 0.25)}`);
             },
             [!1],
         ),
         u = eI.useCallback(() => {
-            document.body.classList.add(v4.cB);
+            document.body.classList.add(v8.cB);
         }, []),
         _ = eI.useCallback((e) => {
-            (document.body.classList.remove(v4.cB),
-                document.body.classList.remove(v4._A),
-                document.body.classList.remove(v4.uN),
-                document.body.classList.remove(v4.l4),
+            (document.body.classList.remove(v8.cB),
+                document.body.classList.remove(v8._A),
+                document.body.classList.remove(v8.uN),
+                document.body.classList.remove(v8.l4),
                 d.current?.style.setProperty("--custom-overdrag", "0px"),
                 ex.w.set(i7.o, e),
                 W.default.track(j.HAw.CHANNEL_SIDEBAR_RESIZED, { width: e }));
@@ -34221,31 +34234,31 @@ function bQ(e) {
                 }
                 e.preventDefault();
                 let n = Math.min(Math.max(t, 264), 432);
-                n !== o && (bZ(n), ex.w.set(i7.o, n), W.default.track(j.HAw.CHANNEL_SIDEBAR_RESIZED, { width: n }));
+                n !== o && (bJ(n), ex.w.set(i7.o, n), W.default.track(j.HAw.CHANNEL_SIDEBAR_RESIZED, { width: n }));
             },
             [l, o, A],
         );
     if (
         (eI.useLayoutEffect(() => {
-            l && bZ(76);
+            l && bJ(76);
         }, [l]),
         i)
     )
         return null;
-    let f = { className: tE()(v4.th, { [v4.Qd]: !t }) };
+    let f = { className: tE()(v8.th, { [v8.Qd]: !t }) };
     return (0, M.jsx)(th.N, {
         theme: n,
         children: (e) =>
             (0, M.jsxs)("div", {
                 ref: d,
                 "data-collapsed": l,
-                className: tE()(v4.pz, e, { [v4.Ij]: ed.Fr, [v4.R]: s, [v4.WG]: r }),
+                className: tE()(v8.pz, e, { [v8.Ij]: ed.Fr, [v8.R]: s, [v8.WG]: r }),
                 children: [
-                    a && (0, M.jsx)(ln.A, { className: v4.Pl, themeOverride: n }),
+                    a && (0, M.jsx)(ln.A, { className: v8.Pl, themeOverride: n }),
                     !r &&
                         (0, M.jsxs)(M.Fragment, {
                             children: [
-                                (0, M.jsx)("div", { ...f, children: (0, M.jsx)(bP, {}) }),
+                                (0, M.jsx)("div", { ...f, children: (0, M.jsx)(bw, {}) }),
                                 (0, M.jsx)(eh.vN, {
                                     children: (0, M.jsx)("div", {
                                         role: "separator",
@@ -34255,20 +34268,20 @@ function bQ(e) {
                                         "aria-valuenow": o,
                                         "aria-valuemin": 264,
                                         "aria-valuemax": 432,
-                                        className: v4.tq,
+                                        className: v8.tq,
                                         onClick: A,
                                         onMouseDown: E,
                                         onKeyDown: h,
                                     }),
                                 }),
-                                (0, M.jsx)(v9, {}),
+                                (0, M.jsx)(bt, {}),
                             ],
                         }),
                 ],
             }),
     });
 }
-function bJ() {
+function b1() {
     let e,
         t = (0, eE.bG)([cq], () => cq.hasNotice()),
         n = (0, eC.NC)(),
@@ -34277,7 +34290,7 @@ function bJ() {
             return (
                 eI.useEffect(
                     () =>
-                        L0.A.addRouteChangeListener((e) => {
+                        L2.A.addRouteChangeListener((e) => {
                             t(e.pathname.startsWith(j.BVt.GUILD_MEMBER_VERIFICATION("")));
                         }),
                     [],
@@ -34287,13 +34300,13 @@ function bJ() {
         })(),
         r =
             ((e = (0, tV.zy)()),
-            (0, oK.B)(e.pathname, j.BVt.GUILD_BOOSTING_MARKETING(L1.pv.guildId()))?.isExact === !0),
+            (0, oK.B)(e.pathname, j.BVt.GUILD_BOOSTING_MARKETING(L3.pv.guildId()))?.isExact === !0),
         a = (0, eE.bG)([lE], () => lE.getIsOpen()),
         { notificationCenterVariant: s } = (0, aX.X8)({ location: "Sidebar" }),
         l = (0, ls.U)("AppView"),
         o = (0, tV.W5)([
-            j.BVt.CHANNEL(j.ME, L1.pv.channelId()),
-            j.BVt.CHANNEL(L1.pv.guildId(), L1.pv.channelId({ optional: !0 }), ":messageId?"),
+            j.BVt.CHANNEL(j.ME, L3.pv.channelId()),
+            j.BVt.CHANNEL(L3.pv.guildId(), L3.pv.channelId({ optional: !0 }), ":messageId?"),
         ]),
         d = o?.params?.channelId === ob.VV.GUILD_ONBOARDING,
         c = eI.useCallback(() => lc.openSidebar(), []),
@@ -34302,24 +34315,24 @@ function bJ() {
     return (
         eI.useEffect(() => {
             (0, ra.t)(() => {
-                (bO.preload(), bp.preload());
+                (bL.preload(), bm.preload());
             });
         }, []),
         (0, M.jsx)("div", {
-            className: v4.kL,
+            className: v8.kL,
             children: (0, M.jsx)(s8.A.Provider, {
                 value: o?.params.guildId === j.ME ? void 0 : o?.params.guildId,
                 children: (0, M.jsxs)("div", {
-                    className: v4.E3,
+                    className: v8.E3,
                     "data-fullscreen": u,
                     children: [
                         !u && (0, M.jsx)(a9, {}),
                         ed.Fr ? null : (0, M.jsx)(c7, {}),
                         (0, M.jsxs)("div", {
-                            className: v4.Qs,
+                            className: v8.Qs,
                             children: [
                                 (0, M.jsx)(rA, {}),
-                                (0, M.jsx)(bQ, {
+                                (0, M.jsx)(b0, {
                                     isSidebarOpen: a,
                                     hasNotice: t,
                                     sidebarTheme: n,
@@ -34327,7 +34340,7 @@ function bJ() {
                                     hideSidebar: !a,
                                 }),
                                 (0, M.jsx)("div", {
-                                    className: v4.MY,
+                                    className: v8.MY,
                                     "data-collapsed": !1,
                                     children: (0, M.jsxs)(ri.A.Provider, {
                                         value: c,
@@ -34341,7 +34354,7 @@ function bJ() {
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.ACTIVITY_DETAILS(":applicationId"),
-                                                        render: bW,
+                                                        render: bK,
                                                         impressionName: tH.ImpressionNames.ACTIVITY_DETAILS,
                                                         impressionProperties: (e) => {
                                                             let { match: t } = e;
@@ -34350,19 +34363,19 @@ function bJ() {
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.APPLICATION_LIBRARY,
-                                                        render: bB,
+                                                        render: bH,
                                                         impressionName: tH.ImpressionNames.APPLICATION_LIBRARY,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.APPLICATION_STORE,
-                                                        render: bV,
+                                                        render: bj,
                                                         impressionName: tH.ImpressionNames.APPLICATION_STORE,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.COLLECTIBLES_SHOP_WITH_TAB(":tab"),
-                                                        render: bH(),
+                                                        render: bW(),
                                                         disableTrack: !0,
                                                     }),
                                                     l &&
@@ -34392,22 +34405,22 @@ function bJ() {
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.COLLECTIBLES_SHOP,
-                                                        render: bH(),
+                                                        render: bW(),
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-                                                        render: bH(),
+                                                        render: bW(),
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.ICYMI,
-                                                        render: bK,
+                                                        render: bz,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.MESSAGE_REQUESTS,
-                                                        render: b$,
+                                                        render: bX,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
@@ -34415,13 +34428,13 @@ function bJ() {
                                                             j.BVt.FAMILY_CENTER_MY_FAMILY(":teenId", ":linkCode"),
                                                             j.BVt.FAMILY_CENTER,
                                                         ],
-                                                        render: bz,
+                                                        render: bq,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.ME,
                                                         exact: !0,
-                                                        render: bY,
+                                                        render: b$,
                                                         impressionName: tH.ImpressionNames.FRIENDS,
                                                         disableTrack: !0,
                                                     }),
@@ -34429,53 +34442,53 @@ function bJ() {
                                                         (0, M.jsx)(rr.A, {
                                                             path: j.BVt.CHANNEL(
                                                                 j.gNP,
-                                                                L1.pv.channelId({ optional: !0 }),
+                                                                L3.pv.channelId({ optional: !0 }),
                                                                 ":messageId?",
                                                             ),
-                                                            render: bG,
+                                                            render: bk,
                                                             disableTrack: !0,
                                                         }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: [
                                                             j.BVt.CHANNEL_THREAD_VIEW(
-                                                                L1.pv.guildId(),
-                                                                L1.pv.channelId(),
+                                                                L3.pv.guildId(),
+                                                                L3.pv.channelId(),
                                                                 ":threadId",
                                                                 ":messageId?",
                                                             ),
                                                             j.BVt.CHANNELS_GAME_SHOP(
-                                                                L1.pv.guildId(),
+                                                                L3.pv.guildId(),
                                                                 ":gameShopPageIndex",
                                                                 ":gameShopSkuId?",
                                                                 ":gameShopSlug?",
                                                             ),
-                                                            j.BVt.CHANNEL(j.ME, L1.pv.channelId()),
+                                                            j.BVt.CHANNEL(j.ME, L3.pv.channelId()),
                                                             j.BVt.CHANNEL(
-                                                                L1.pv.guildId(),
-                                                                L1.pv.channelId({ optional: !0 }),
+                                                                L3.pv.guildId(),
+                                                                L3.pv.channelId({ optional: !0 }),
                                                                 ":messageId?",
                                                             ),
                                                         ],
-                                                        render: bU,
+                                                        render: bG,
                                                         impressionName: tH.ImpressionNames.GUILD_CHANNEL,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.GLOBAL_DISCOVERY,
-                                                        render: bw,
+                                                        render: bx,
                                                         impressionName: tH.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0,
                                                         exact: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.GLOBAL_DISCOVERY_SERVERS,
-                                                        render: bw,
+                                                        render: bx,
                                                         impressionName: tH.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.GLOBAL_DISCOVERY_APPS,
-                                                        render: bw,
+                                                        render: bx,
                                                         impressionName: tH.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                         disableTrack: !0,
                                                     }),
@@ -34496,39 +34509,39 @@ function bJ() {
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.QUEST_HOME,
-                                                        render: bj,
+                                                        render: bY,
                                                         impressionName: tH.ImpressionNames.QUEST_HOME,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.GUILD_DISCOVERY,
-                                                        render: bw,
+                                                        render: bx,
                                                         impressionName: tH.ImpressionNames.GUILD_DISCOVERY,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
-                                                        path: j.BVt.GUILD_MEMBER_VERIFICATION(L1.pv.guildId()),
-                                                        render: bk,
+                                                        path: j.BVt.GUILD_MEMBER_VERIFICATION(L3.pv.guildId()),
+                                                        render: bB,
                                                         impressionName: tH.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.GUILD_MEMBER_VERIFICATION_FOR_HUB(
-                                                            L1.pv.guildId(),
+                                                            L3.pv.guildId(),
                                                             ":inviteCode?",
                                                         ),
-                                                        render: bF,
+                                                        render: bV,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
-                                                        path: j.BVt.GUILD_FEATURE(":feature", L1.pv.guildId()),
+                                                        path: j.BVt.GUILD_FEATURE(":feature", L3.pv.guildId()),
                                                         exact: !0,
-                                                        render: bq,
+                                                        render: bQ,
                                                         disableTrack: !0,
                                                     }),
                                                     (0, M.jsx)(rr.A, {
                                                         path: j.BVt.FEATURE(":feature"),
                                                         exact: !0,
-                                                        render: bq,
+                                                        render: bQ,
                                                         disableTrack: !0,
                                                     }),
                                                 ],
@@ -34545,26 +34558,26 @@ function bJ() {
         })
     );
 }
-var b0 = n(466204),
-    b1 = n.n(b0),
-    b2 = n(754027),
-    b3 = n(260498),
-    b5 = n(400492),
-    b6 = n(955283);
-function b4(e, t, n, i) {
+var b2 = n(466204),
+    b3 = n.n(b2),
+    b5 = n(754027),
+    b6 = n(260498),
+    b4 = n(400492),
+    b7 = n(955283);
+function b8(e, t, n, i) {
     eI.useEffect(() => {
         let r = t(),
             a = new eE.ru(e, () => {
                 let e = t(),
                     a = n(r, e);
-                (null == a || iH.A.isSoundDisabled(a) || (0, b5.Ak)(a, i ?? 0.4), (r = e));
+                (null == a || iH.A.isSoundDisabled(a) || (0, b4.Ak)(a, i ?? 0.4), (r = e));
             });
         return (a.attach("useSound"), () => a.detach());
     });
 }
-function b7() {
+function b9() {
     return (
-        b4(
+        b8(
             [ek.Ay, nS.Ay],
             () => ({
                 inVoiceChannel: null != nS.Ay.getVoiceChannelId(),
@@ -34589,9 +34602,9 @@ function b7() {
         null
     );
 }
-function b8() {
+function Me() {
     return (
-        b4(
+        b8(
             [ek.Ay, nS.Ay],
             () => ({ videoEnabled: ek.Ay.isVideoEnabled(), inVoiceChannel: null != nS.Ay.getVoiceChannelId() }),
             (e, t) => {
@@ -34603,10 +34616,10 @@ function b8() {
         null
     );
 }
-function b9() {
+function Mt() {
     return (
-        b4(
-            [nm.A, ng.A, nS.Ay, DT.default],
+        b8(
+            [nm.A, ng.A, nS.Ay, Dg.default],
             () => {
                 let e = nm.A.getChannel(nS.Ay.getVoiceChannelId()),
                     t = e?.type,
@@ -34618,8 +34631,8 @@ function b9() {
                     guildId: n,
                     connected: r === j.S7L.RTC_CONNECTED,
                     connectHasStarted: (!i && r !== j.S7L.DISCONNECTED) || r === j.S7L.RTC_CONNECTED,
-                    awaitingRemote: null != DT.default.getAwaitingRemoteSessionInfo(),
-                    connectedRemote: null != DT.default.getRemoteSessionId(),
+                    awaitingRemote: null != Dg.default.getAwaitingRemoteSessionInfo(),
+                    connectedRemote: null != Dg.default.getRemoteSessionId(),
                 };
             },
             (e, t) => {
@@ -34634,7 +34647,7 @@ function b9() {
                 if (_ || E || u) {
                     if (null != n && nT.Do.has(n)) return;
                     if (u) return "user_join";
-                    let { rtcConnectionJoinSounds: e } = b6.A.getConfig({ location: "RTCConnect" });
+                    let { rtcConnectionJoinSounds: e } = b7.A.getConfig({ location: "RTCConnect" });
                     if (e ? E : _) return "user_join";
                 } else if (d && !i) {
                     if (a || s || (null != l && nT.Do.has(l))) return;
@@ -34645,11 +34658,11 @@ function b9() {
         null
     );
 }
-function Me() {
+function Mn() {
     return (
-        b4(
-            [vu.A],
-            () => vu.A.isCurrentUserPTTActive(),
+        b8(
+            [vE.A],
+            () => vE.A.isCurrentUserPTTActive(),
             (e, t) => {
                 if (e !== t) {
                     let e = ek.Ay.isSelfMute();
@@ -34660,9 +34673,9 @@ function Me() {
         null
     );
 }
-function Mt() {
+function Mi() {
     return (
-        b4(
+        b8(
             [ek.Ay, iH.A],
             () => ek.Ay.isSelfMutedTemporarily(),
             (e, t) => {
@@ -34678,11 +34691,11 @@ function Mt() {
         null
     );
 }
-function Mn() {
+function Mr() {
     return (
-        b4(
-            [vu.A],
-            () => vu.A.isCurrentUserPrioritySpeaker(),
+        b8(
+            [vE.A],
+            () => vE.A.isCurrentUserPrioritySpeaker(),
             (e, t) => {
                 if (e !== t) {
                     let e = ek.Ay.isSelfMute();
@@ -34693,9 +34706,9 @@ function Mn() {
         null
     );
 }
-function Mi() {
+function Ma() {
     return (
-        b4(
+        b8(
             [nG.A],
             () => nG.A.userHasBeenMovedVersion,
             (e, t) => {
@@ -34705,9 +34718,9 @@ function Mi() {
         null
     );
 }
-function Mr() {
+function Ms() {
     return (
-        b4(
+        b8(
             [nS.Ay, nG.A],
             () => {
                 let e = nS.Ay.getVoiceChannelId();
@@ -34722,10 +34735,10 @@ function Mr() {
         null
     );
 }
-function Ma() {
+function Ml() {
     let e = eI.useRef([]);
     return (
-        b4(
+        b8(
             [nS.Ay, d7.A, ei.default, nG.A, nm.A, ng.A],
             () => {
                 let e,
@@ -34781,11 +34794,11 @@ function Ma() {
                     } = n,
                     _ = e.current;
                 c ? t.rtcConnected || null == r || (_ = Object.keys(nG.A.getVoiceStatesForChannel(r))) : (_ = []);
-                let E = b1()(u, t.rtcUserIds),
-                    A = t.rtcConnected && t.rtcUserIds.length <= 25 && b1()(E, _).length > 0,
-                    h = t.rtcConnected && c && t.rtcUserIds.length <= 25 && b1()(t.rtcUserIds, u).length > 0;
+                let E = b3()(u, t.rtcUserIds),
+                    A = t.rtcConnected && t.rtcUserIds.length <= 25 && b3()(E, _).length > 0,
+                    h = t.rtcConnected && c && t.rtcUserIds.length <= 25 && b3()(t.rtcUserIds, u).length > 0;
                 if (
-                    ((e.current = b1()(_, E)),
+                    ((e.current = b3()(_, E)),
                     t.voiceChannelId !== r ||
                         null == r ||
                         (function (e) {
@@ -34809,7 +34822,7 @@ function Ma() {
                     N = g && a < m;
                 if (
                     ((S || N || A || h) &&
-                        b6.A.getConfig({ location: "VoiceChannel" }).rtcConnectionJoinSounds &&
+                        b7.A.getConfig({ location: "VoiceChannel" }).rtcConnectionJoinSounds &&
                         ((S = A), (N = h)),
                     I)
                 )
@@ -34826,10 +34839,10 @@ function Ma() {
         null
     );
 }
-function Ms() {
+function Mo() {
     return (
-        b4(
-            [nS.Ay, nL.Ay, aV.A, ei.default, nm.A, b3.Ay, ak.A, e1.A],
+        b8(
+            [nS.Ay, nL.Ay, aV.A, ei.default, nm.A, b6.Ay, ak.A, e1.A],
             () => {
                 let e = nS.Ay.getVoiceChannelId(),
                     t = nS.Ay.getChannelId(),
@@ -34843,8 +34856,8 @@ function Ms() {
                     d = aV.A.getMainFrame(),
                     c = (0, sA.A)(d?.surface),
                     u =
-                        (null == c || (null != d && (0, b2.Q5)(d.surface))) &&
-                        b3.Ay.isConjureProjectApplication(d?.applicationId),
+                        (null == c || (null != d && (0, b5.Q5)(d.surface))) &&
+                        b6.Ay.isConjureProjectApplication(d?.applicationId),
                     _ = (null != c && (0, sE.Xs)(nm.A.getChannel(c), "ActivitySounds")) || u,
                     E = null != i && nm.A.getChannel(i)?.type === j.rbe.GUILD_SPACE;
                 return {
@@ -34926,53 +34939,53 @@ function Ms() {
         null
     );
 }
-function Ml() {
+function Md() {
     return (0, M.jsxs)(M.Fragment, {
         children: [
-            (0, M.jsx)(b7, {}),
-            (0, M.jsx)(b8, {}),
             (0, M.jsx)(b9, {}),
             (0, M.jsx)(Me, {}),
             (0, M.jsx)(Mt, {}),
+            (0, M.jsx)(Mn, {}),
             (0, M.jsx)(Mi, {}),
             (0, M.jsx)(Ma, {}),
-            (0, M.jsx)(Mr, {}),
+            (0, M.jsx)(Ml, {}),
             (0, M.jsx)(Ms, {}),
-            (0, M.jsx)(Mn, {}),
+            (0, M.jsx)(Mo, {}),
+            (0, M.jsx)(Mr, {}),
         ],
     });
 }
-var Mo = n(159730),
-    Md = n(665260),
-    Mc = n(56562),
-    Mu = n(806411),
-    M_ = n(885437),
-    ME = n(973854),
-    MA = n(311964),
-    Mh = n(933024),
-    Mf = n(840364),
-    MI = n(815706),
-    Mp = n(181079),
-    MT = n(635233),
-    Mm = n(953384),
-    Mg = n(973522),
-    MS = n(863160),
-    MN = n(136722),
-    MC = n(808728),
-    MO = n(698441),
-    MR = n(960755),
-    ML = n(573163),
-    My = n(211753),
-    MD = n(41984),
-    Mv = n(296027),
-    Mb = n(515183),
-    MM = n(446600),
-    MP = n(760751),
-    MU = n(232835),
-    Mw = n(543465),
-    MG = n(532294),
-    Mx = n(705751);
-async function Mk(e) {
+var Mc = n(159730),
+    Mu = n(665260),
+    M_ = n(56562),
+    ME = n(806411),
+    MA = n(885437),
+    Mh = n(973854),
+    Mf = n(311964),
+    MI = n(933024),
+    Mp = n(840364),
+    MT = n(815706),
+    Mm = n(181079),
+    Mg = n(635233),
+    MS = n(953384),
+    MN = n(973522),
+    MC = n(863160),
+    MO = n(136722),
+    MR = n(808728),
+    ML = n(698441),
+    My = n(960755),
+    MD = n(573163),
+    Mv = n(211753),
+    Mb = n(41984),
+    MM = n(296027),
+    MP = n(515183),
+    MU = n(446600),
+    Mw = n(760751),
+    MG = n(232835),
+    Mx = n(543465),
+    Mk = n(532294),
+    MF = n(705751);
+async function MB(e) {
     let {
             runningGame: t,
             game: n,
@@ -34990,19 +35003,19 @@ async function Mk(e) {
             verified: A,
         } = e,
         [h, f] = await Promise.all([
-            (0, Mb.E1)(t.pid),
+            (0, MP.E1)(t.pid),
             iS.Ay.canCollectExecutableFingerprintsForRunningGames()
                 ? eV.Ay.getExecutableFingerprintForProcess(t.pid)
                 : Promise.resolve(null),
         ]),
-        { gameName: I, gameId: p, exe: T, distributor: m, rawExePath: g } = (0, Mg.wH)(t),
+        { gameName: I, gameId: p, exe: T, distributor: m, rawExePath: g } = (0, MN.wH)(t),
         S = r.enabledLegacy || r.enabledOOP,
-        N = My.x.legacyEnabled || My.x.oopEnabled,
+        N = Mv.x.legacyEnabled || Mv.x.oopEnabled,
         C = r.source;
     (W.default.track(j.HAw.LAUNCH_GAME, {
         game: _ ?? I,
         game_id: u ?? p,
-        verified: A ?? (null != n && (0, Mg.PQ)(g, n?.executables)),
+        verified: A ?? (null != n && (0, MN.PQ)(g, n?.executables)),
         elevated: t.elevated,
         is_launcher: t?.isLauncher ?? !1,
         game_platform: j.yTV.DESKTOP,
@@ -35011,9 +35024,9 @@ async function Mk(e) {
         is_overlay_enabled: N,
         is_overlay_game_enabled: S,
         is_overlay_game_source: C,
-        fullscreen_type: null != h ? Mc.aI[h] : Mc.aI.UNKNOWN.toString(),
+        fullscreen_type: null != h ? M_.aI[h] : M_.aI.UNKNOWN.toString(),
         hardware_display_count: (await eg.A?.hardware?.getDisplayCount?.()) ?? null,
-        overlay_method: MD.Ue[a] ?? (__OVERLAY__ ? MD.Ue[MD.Ue.Hook] : null),
+        overlay_method: Mb.Ue[a] ?? (__OVERLAY__ ? Mb.Ue[Mb.Ue.Hook] : null),
         activity_status_enabled: eR.tz.getSetting(),
         activity_status_shared_guilds: s,
         current_user_status: iW.A.getStatus(),
@@ -35025,12 +35038,12 @@ async function Mk(e) {
         voice_channel_guild_id: c,
         distributor_game_id: t.sku,
         hidden_by_distributor: t.hidden,
-        game_metadata: (0, Mg.EQ)(t, null != u, E),
+        game_metadata: (0, MN.EQ)(t, null != u, E),
         executable_fingerprint: f ?? t.executableFingerprint,
     }),
         null != T && iS.Ay.addExecutableTrackedByAnalytics(T));
 }
-async function MF(e) {
+async function MV(e) {
     let {
             runningNonGame: t,
             nonGameApplication: n,
@@ -35045,13 +35058,13 @@ async function MF(e) {
     W.default.track(j.HAw.LAUNCH_NON_GAME_APPLICATION, {
         name: n.name,
         application_id: n.id,
-        application_type: Mx.S7.NON_GAME_DETECTABLE,
+        application_type: MF.S7.NON_GAME_DETECTABLE,
         elevated: t.elevated,
         game_platform: j.yTV.DESKTOP,
         distributor: t.distributor,
         detection_method: "verified_non_game_application",
         current_user_status: iW.A.getStatus(),
-        executable_path: (0, Mg.Ic)(t.exePath),
+        executable_path: (0, MN.Ic)(t.exePath),
         voice_channel_id: i,
         voice_channel_type: r,
         voice_channel_bitrate: a,
@@ -35059,11 +35072,11 @@ async function MF(e) {
         executable_fingerprint: l ?? t.executableFingerprint,
     });
 }
-class MB extends eI.PureComponent {
+class MH extends eI.PureComponent {
     isMessageRequestsInitialized = !1;
     pendingDetectedLaunchTimeouts = new Map();
     launchIdentityKeys = new Map();
-    debouncedRobloxAnalytics = iM().debounce(Mk, 5e3);
+    debouncedRobloxAnalytics = iM().debounce(MB, 5e3);
     scheduleLaunchGameAnalytics(e) {
         let {
                 runningGame: t,
@@ -35081,7 +35094,7 @@ class MB extends eI.PureComponent {
             h = e1.A.getGuildIds(),
             f = eR.JG.getSetting(),
             I = h.filter((e) => !f.includes(e)).slice(0, 200),
-            p = Mv.default.getTrackedGameByPid(t.pid),
+            p = MM.default.getTrackedGameByPid(t.pid),
             T = (0, iS.hw)(t),
             m = {
                 enabledOOP: p?.oopEnabled ?? T.enabledOOP,
@@ -35090,11 +35103,11 @@ class MB extends eI.PureComponent {
                 source: p?.source ?? T.source,
                 reason: "ChatAutoAnalytics",
             },
-            g = Mv.default.getOverlayMethod(t.pid) ?? m.overlayMethod,
+            g = MM.default.getOverlayMethod(t.pid) ?? m.overlayMethod,
             { pid: S } = t,
             N = setTimeout(() => {
                 (this.pendingDetectedLaunchTimeouts.get(S) === N && this.pendingDetectedLaunchTimeouts.delete(S),
-                    (o && t.distributor === j.d3x.ROBLOX ? this.debouncedRobloxAnalytics : Mk)({
+                    (o && t.distributor === j.d3x.ROBLOX ? this.debouncedRobloxAnalytics : MB)({
                         runningGame: t,
                         game: n,
                         detectionMethod: i,
@@ -35135,8 +35148,8 @@ class MB extends eI.PureComponent {
         if (e.voiceChannelId !== t && null != e.voiceChannelId) {
             let t = iS.Ay.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : "",
-                i = MM.A.getStageInstanceByChannel(e.voiceChannelId),
-                r = MO.Ay.getActiveEventByChannel(e.voiceChannelId),
+                i = MU.A.getStageInstanceByChannel(e.voiceChannelId),
+                r = ML.Ay.getActiveEventByChannel(e.voiceChannelId),
                 a = ng.A.getLastRTCConnectionState();
             (a?.channelId !== e.voiceChannelId && (a = null),
                 W.default.track(j.HAw.LEAVE_VOICE_CHANNEL, {
@@ -35160,17 +35173,17 @@ class MB extends eI.PureComponent {
         if (e.voiceChannelId !== t && null != t) {
             let e = iS.Ay.getCurrentGameForAnalytics(),
                 s = null != e ? e.name : "",
-                l = MM.A.getStageInstanceByChannel(t),
-                o = MO.Ay.getActiveEventByChannel(t);
-            ((0, sc.zV)(j.HAw.CHANNEL_OPENED, { ...(0, Mu.q)(t) }), (0, ME.A)({ channelId: t }));
+                l = MU.A.getStageInstanceByChannel(t),
+                o = ML.Ay.getActiveEventByChannel(t);
+            ((0, sc.zV)(j.HAw.CHANNEL_OPENED, { ...(0, ME.q)(t) }), (0, Mh.A)({ channelId: t }));
             let d = null,
-                c = MG.default.getFocusedPID();
+                c = Mk.default.getFocusedPID();
             (null != c &&
-                Mv.default.getOverlayMethod(c) !== MD.Ue.Disabled &&
-                (MG.default.isInstanceLocked()
+                MM.default.getOverlayMethod(c) !== Mb.Ue.Disabled &&
+                (Mk.default.isInstanceLocked()
                     ? (d = j.Xmn.OVERLAY_LOCKED_ACTIVATED)
-                    : MG.default.isInstanceLocked() ||
-                      (d = MG.default.isPinned(j.uss.TEXT) ? j.Xmn.OVERLAY_UNLOCKED_PINNED : j.Xmn.OVERLAY_UNLOCKED)),
+                    : Mk.default.isInstanceLocked() ||
+                      (d = Mk.default.isPinned(j.uss.TEXT) ? j.Xmn.OVERLAY_UNLOCKED_PINNED : j.Xmn.OVERLAY_UNLOCKED)),
                 W.default.track(j.HAw.JOIN_VOICE_CHANNEL, {
                     location: d,
                     channel_id: t,
@@ -35188,8 +35201,8 @@ class MB extends eI.PureComponent {
                     ...(0, sc.JK)(n, t, a),
                 }));
         }
-        let E = null != l ? (0, MS.Un)(l) : l,
-            A = null != e.runningGame ? (0, MS.Un)(e.runningGame) : e.runningGame,
+        let E = null != l ? (0, MC.Un)(l) : l,
+            A = null != e.runningGame ? (0, MC.Un)(e.runningGame) : e.runningGame,
             h = E?.distributor === A?.distributor && E?.sku === A?.sku && E?.name === A?.name,
             f = null != A && null != E && A.isLauncher !== E.isLauncher,
             I = e.runningGame !== l && null != l && !l.isLauncher && (!h || f);
@@ -35198,12 +35211,12 @@ class MB extends eI.PureComponent {
             null != l && !l.isLauncher)
         ) {
             let t = null != l.processGame,
-                { gameId: n, gameName: i } = (0, Mg.wH)(l),
+                { gameId: n, gameName: i } = (0, MN.wH)(l),
                 r = null != n ? `id:${n}` : `name:${i ?? ""}`,
                 a = t && e.runningGame !== l && this.launchIdentityKeys.get(l.pid) !== r;
             if (I || a) {
                 let e,
-                    a = t || null == n ? null : MP.A.getDetectableGame(n),
+                    a = t || null == n ? null : Mw.A.getDetectableGame(n),
                     s = iS.Ay.getOverrideForGame(l);
                 ((e = t ? "social_sdk" : null != s ? "custom_override" : null != a ? "verified_game" : "launcher"),
                     this.scheduleLaunchGameAnalytics({
@@ -35212,7 +35225,7 @@ class MB extends eI.PureComponent {
                         detectionMethod: e,
                         reportedGameId: t ? n : void 0,
                         reportedGameName: t ? i : void 0,
-                        detectedGameId: t ? (0, Mg.wH)(E).gameId : void 0,
+                        detectedGameId: t ? (0, MN.wH)(E).gameId : void 0,
                         verified: !!t || void 0,
                         debounceRoblox: !t,
                         identityKey: r,
@@ -35220,16 +35233,16 @@ class MB extends eI.PureComponent {
                     }));
             }
         }
-        if (I && null != E && null != E.name && null != o && MP.A.shouldReport(E)) {
+        if (I && null != E && null != E.name && null != o && Mw.A.shouldReport(E)) {
             let e = E.name;
             _G.Ay.identifyGame(o, e)
                 .then((e) => _G.Ay.reportUnverifiedGame(e))
                 .catch((e) => new ez.A("AutoAnalytics").error("Cannot identify game", e));
         }
         if (e.runningNonGame !== d && d?.id != null && e.runningNonGame?.id !== d.id) {
-            let e = Mm.A.getById(d.id);
+            let e = MS.A.getById(d.id);
             null != e &&
-                MF({
+                MV({
                     runningNonGame: d,
                     nonGameApplication: e,
                     voiceChannelId: t,
@@ -35242,7 +35255,7 @@ class MB extends eI.PureComponent {
             let e = "none",
                 n = [s ? "screen" : null, a ? "camera" : null].filter(_a.Vq),
                 i = null;
-            (s ? ((e = "screen"), (i = (0, MI.p)())) : a && (e = "camera"),
+            (s ? ((e = "screen"), (i = (0, MT.p)())) : a && (e = "camera"),
                 W.default.track(j.HAw.VIDEO_INPUT_TOGGLED, {
                     video_input_type: e,
                     video_toggle_source: __OVERLAY__ ? "overlay" : "app",
@@ -35258,13 +35271,13 @@ class MB extends eI.PureComponent {
                 n = nm.A.getChannel(t),
                 i = e1.A.getGuild(n?.getGuildId());
             if (null != t && null != n && null != i && i.publicUpdatesChannelId === t) {
-                let e = MU.A.getMessages(t),
+                let e = MG.A.getMessages(t),
                     r = e
                         .toArray()
                         .reverse()
                         .find(
                             (e) =>
-                                (0, Md.Lt)(e.flags, j.pr7.IS_CROSSPOST) &&
+                                (0, Mu.Lt)(e.flags, j.pr7.IS_CROSSPOST) &&
                                 e.messageReference?.guild_id === "667560445975986187",
                         );
                 W.default.track(j.HAw.ACK_COMMUNITY_MESSAGES, {
@@ -35289,7 +35302,7 @@ class MB extends eI.PureComponent {
         return null;
     }
 }
-function MV() {
+function Mj() {
     let e,
         [t, n] = (0, eE.yK)([nS.Ay], () => [nS.Ay.getVoiceChannelId(), nS.Ay.getChannelId()], []),
         i = (0, eE.bG)([nm.A], () => nm.A.getChannel(n), [n]),
@@ -35301,7 +35314,7 @@ function MV() {
         d = (0, eE.bG)([eF.default], () => eF.default.getCurrentUser(), []),
         c = (0, eE.bG)([oG.Ay], () => null != d && null != l && (oG.Ay.getMember(l, d.id)?.isPending ?? !1), [d, l]),
         u = (0, eE.bG)([Eu.Ay], () => Eu.Ay.getState().section, []),
-        _ = (0, eE.bG)([LG.A], () => LG.A.getHomeLink(), []),
+        _ = (0, eE.bG)([Lk.A], () => Lk.A.getHomeLink(), []),
         E = (0, eE.bG)([sF.A], () => sF.A.isConnected(), []),
         [A, h] = (0, eE.yK)([ek.Ay], () => [ek.Ay.isVideoEnabled(), ek.Ay.isScreenSharing()], []),
         f = (0, eE.bG)([iW.A], () => iW.A.getPrimaryActivity(), []),
@@ -35314,11 +35327,11 @@ function MV() {
             [],
         ),
         T =
-            0 === (e = (0, eE.bG)([MC.Ay], () => MC.Ay.getChannels(l)[MC.I6] ?? [], [l])).length
+            0 === (e = (0, eE.bG)([MR.Ay], () => MR.Ay.getChannels(l)[MR.I6] ?? [], [l])).length
                 ? 0
                 : e.filter((e) => {
                       let { channel: t } = e;
-                      return nw.A.can(MN.kg(j.xBc.SEND_MESSAGES, j.xBc.VIEW_CHANNEL), t);
+                      return nw.A.can(MO.kg(j.xBc.SEND_MESSAGES, j.xBc.VIEW_CHANNEL), t);
                   }).length,
         m = (0, eE.bG)([O1.A], () => O1.A.getMessageRequestsCount(), []),
         g = {
@@ -35364,8 +35377,8 @@ function MV() {
             (eI.useEffect(() => {
                 n &&
                     null != s &&
-                    ((0, sc.zV)(j.HAw.CHANNEL_OPENED, { ...(0, M_.p)(s), ...(0, Mu.q)(s), selected_guild_id: l }),
-                    (0, ME.A)({ channelId: s }),
+                    ((0, sc.zV)(j.HAw.CHANNEL_OPENED, { ...(0, MA.p)(s), ...(0, ME.q)(s), selected_guild_id: l }),
+                    (0, Mh.A)({ channelId: s }),
                     t.current.isTextInVoice &&
                         (0, sc.zV)(j.HAw.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: t.current.isNSFWChannel }));
             }, [n, s, l]),
@@ -35375,9 +35388,9 @@ function MV() {
                         r === j.BVt.FRIENDS &&
                         (function (e) {
                             let { tab_opened: t, source: n } = e,
-                                i = (0, Mh.A)();
+                                i = (0, MI.A)();
                             (W.default.track(j.HAw.FRIENDS_LIST_VIEWED, { tab_opened: t, source: n, ...i }),
-                                (0, MA.k)(j.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM, {
+                                (0, Mf.k)(j.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM, {
                                     tab_opened: t ?? "tabless",
                                     num_friends: i.num_friends ?? 0,
                                     now_playing_visible: i.now_playing_visible ?? !1,
@@ -35390,14 +35403,14 @@ function MV() {
                         let e = a ? { is_pending: a, preview_enabled: t.current.hasPreviewEnabled } : {},
                             n = e1.A.getGuild(ir.A.getGuildId()),
                             i = (function (e) {
-                                let { guildChannels: t } = MR.A.getGuildWithoutChangingGuildActionRows(e),
+                                let { guildChannels: t } = My.A.getGuildWithoutChangingGuildActionRows(e),
                                     n = new Set(),
                                     i = [];
                                 return (
                                     t.forEachShownChannel(
                                         (e) => {
                                             (!n.has(e.id) &&
-                                                ML.Ay.hasUnread(e.id) &&
+                                                MD.Ay.hasUnread(e.id) &&
                                                 !j.kvI.GUILD_VOCAL_PRIMARY.has(e.type) &&
                                                 i.push(e.id),
                                                 n.add(e.id));
@@ -35411,8 +35424,8 @@ function MV() {
                                 ...e,
                                 postable_channels: t.current.postableChannelCount,
                                 premium_progress_bar_enabled: n?.premiumProgressBarEnabled ?? !1,
-                                viewing_all_channels: !Mw.Ay.isOptInEnabled(l),
-                                num_recent_channels: MR.A.recentsChannelCount(l),
+                                viewing_all_channels: !Mx.Ay.isOptInEnabled(l),
+                                num_recent_channels: My.A.recentsChannelCount(l),
                                 num_unread_channels: i.length,
                                 unread_channel_ids: i,
                                 ...(function (e) {
@@ -35431,14 +35444,14 @@ function MV() {
                                 })(l),
                             };
                         ((0, sc.zV)(j.HAw.GUILD_VIEWED, r),
-                            (0, Mf.A)({ guildId: l }),
+                            (0, Mp.A)({ guildId: l }),
                             (0, aB.ai)(l) &&
                                 (function () {
                                     let { isExperimentEnabled: e } = (0, aF.ad)(),
                                         t = lq.Ay.isPremiumExactly(eF.default.getCurrentUser(), lY.PremiumTypes.TIER_2);
                                     W.default.track(j.HAw.FAVORITES_GUILD_VIEWED, {
-                                        source: (0, MT.Kg)(),
-                                        total_favorites: Mp.A.getFavoritesCountAgainstLimit(),
+                                        source: (0, Mg.Kg)(),
+                                        total_favorites: Mm.A.getFavoritesCountAgainstLimit(),
                                         is_xp_enabled: e,
                                         is_premium_tier_2: t,
                                     });
@@ -35457,20 +35470,20 @@ function MV() {
                     }));
             }, [n, l, r]);
         })(g),
-        (0, M.jsx)(MB, { ...g })
+        (0, M.jsx)(MH, { ...g })
     );
 }
-var MH = n(844222),
-    Mj = n(398590),
-    MW = n(390435),
-    MY = n(361158),
-    MK = n(913420);
-let M$ = (0, i8.Fe)({
+var MW = n(844222),
+    MY = n(398590),
+    MK = n(390435),
+    M$ = n(361158),
+    Mz = n(913420);
+let MX = (0, i8.Fe)({
         createPromise: () => Promise.resolve().then(n.bind(n, 944771)),
         webpackId: 944771,
         name: "ComponentPlayground",
     }),
-    Mz = (0, i8.Fe)({
+    Mq = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("150183"),
@@ -35557,7 +35570,7 @@ let M$ = (0, i8.Fe)({
         webpackId: 296249,
         name: "ChannelSettings",
     }),
-    MX = (0, i8.Fe)({
+    MZ = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("830836"),
@@ -35803,7 +35816,7 @@ let M$ = (0, i8.Fe)({
         webpackId: 791519,
         name: "CollectiblesShop",
     }),
-    Mq = (0, i8.Fe)({
+    MQ = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("150183"),
@@ -36444,38 +36457,38 @@ let M$ = (0, i8.Fe)({
         webpackId: 422559,
         name: "GuildSettings",
     }),
-    MZ = {
-        [j.zgK.CHANNEL_SETTINGS]: () => (0, M.jsx)(Mz, {}),
-        [j.zgK.GUILD_SETTINGS]: () => (0, M.jsx)(Mq, {}),
-        [j.zgK.COLLECTIBLES_SHOP]: () => (0, M.jsx)(MX, {}),
-        [j.zgK.COMPONENT_PLAYGROUND]: () => (0, M.jsx)(M$, {}),
+    MJ = {
+        [j.zgK.CHANNEL_SETTINGS]: () => (0, M.jsx)(Mq, {}),
+        [j.zgK.GUILD_SETTINGS]: () => (0, M.jsx)(MQ, {}),
+        [j.zgK.COLLECTIBLES_SHOP]: () => (0, M.jsx)(MZ, {}),
+        [j.zgK.COMPONENT_PLAYGROUND]: () => (0, M.jsx)(MX, {}),
     },
-    MQ = "SHOWN",
-    MJ = "HIDDEN",
-    M0 = { friction: 10, tension: 100 };
-function M1() {
-    return (eI.useEffect(() => (iG.A.enable(), iG.A.enableTemp(MW.w), () => iG.A.disableTemp()), []), null);
+    M0 = "SHOWN",
+    M1 = "HIDDEN",
+    M2 = { friction: 10, tension: 100 };
+function M3() {
+    return (eI.useEffect(() => (iG.A.enable(), iG.A.enableTemp(MK.w), () => iG.A.disableTemp()), []), null);
 }
-class M2 extends eI.PureComponent {
+class M5 extends eI.PureComponent {
     containerRef = eI.createRef();
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode ? { animating: !0, mode: e.mode } : null;
     }
     static defaultProps = { baseLayer: !1 };
-    static contextType = MH.C;
+    static contextType = MW.C;
     constructor(e) {
         super(e);
         let t = 1,
             n = 1;
-        (e.mode === MJ && ((t = 0.93), (n = 0)),
+        (e.mode === M1 && ((t = 0.93), (n = 0)),
             (this.state = { animating: !1, scale: new E4.A.Value(t), opacity: new E4.A.Value(n), mode: e.mode }));
     }
     componentDidUpdate(e) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === MQ && n === MJ) return this.animateIn();
-            if (t === MJ && n === MQ) return this.animateUnder();
+            if (t === M0 && n === M1) return this.animateIn();
+            if (t === M1 && n === M0) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -36488,21 +36501,21 @@ class M2 extends eI.PureComponent {
     animateIn(e) {
         eE.Ay.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        E4.A.parallel([E4.A.spring(t, { toValue: 1, ...M0 }), E4.A.spring(n, { toValue: 1, ...M0 })]).start(() =>
+        E4.A.parallel([E4.A.spring(t, { toValue: 1, ...M2 }), E4.A.spring(n, { toValue: 1, ...M2 })]).start(() =>
             this.animateComplete(e),
         );
     }
     animateOut(e) {
         eE.Ay.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        E4.A.parallel([E4.A.spring(t, { toValue: 0, ...M0 }), E4.A.spring(n, { toValue: 1.1, ...M0 })]).start(() => {
+        E4.A.parallel([E4.A.spring(t, { toValue: 0, ...M2 }), E4.A.spring(n, { toValue: 1.1, ...M2 })]).start(() => {
             (e(), nN._.dispatch(j.jej.LAYER_POP_COMPLETE));
         });
     }
     animateUnder() {
         eE.Ay.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        E4.A.parallel([E4.A.spring(e, { toValue: 0, ...M0 }), E4.A.spring(t, { toValue: 0.93, ...M0 })]).start(() =>
+        E4.A.parallel([E4.A.spring(e, { toValue: 0, ...M2 }), E4.A.spring(t, { toValue: 0.93, ...M2 })]).start(() =>
             this.animateComplete(),
         );
     }
@@ -36512,7 +36525,7 @@ class M2 extends eI.PureComponent {
     render() {
         let { animating: e } = this.state,
             { name: t, mode: n, children: i, baseLayer: r, ...a } = this.props,
-            s = n === MJ,
+            s = n === M1,
             l = e || s ? this.getAnimatedStyle() : null,
             o = !s && !r,
             d = (0, M.jsx)(E4.A.div, {
@@ -36535,12 +36548,12 @@ class M2 extends eI.PureComponent {
                       })(t)
                     : void 0,
                 role: o ? "dialog" : void 0,
-                className: tE()(MK.qd, { [MK.n3]: r, [MK.bW]: e, "stop-animations": n === MJ }),
+                className: tE()(Mz.qd, { [Mz.n3]: r, [Mz.bW]: e, "stop-animations": n === M1 }),
                 style: l,
                 ...a,
                 children: i,
             });
-        return r ? d : (0, M.jsx)(Di.Ok, { containerRef: this.containerRef, children: d });
+        return r ? d : (0, M.jsx)(Da.Ok, { containerRef: this.containerRef, children: d });
     }
     getAnimatedStyle() {
         let { baseLayer: e } = this.props,
@@ -36549,19 +36562,19 @@ class M2 extends eI.PureComponent {
         return { opacity: t, transform: i.enabled || e ? void 0 : [{ scale: n }, { translateZ: 0 }] };
     }
 }
-class M3 extends eI.PureComponent {
+class M6 extends eI.PureComponent {
     componentDidMount() {
-        nN._.subscribe(j.jej.LAYER_POP_ESCAPE_KEY, Mj.jH);
+        nN._.subscribe(j.jej.LAYER_POP_ESCAPE_KEY, MY.jH);
     }
     componentWillUnmount() {
-        nN._.unsubscribe(j.jej.LAYER_POP_ESCAPE_KEY, Mj.jH);
+        nN._.unsubscribe(j.jej.LAYER_POP_ESCAPE_KEY, MY.jH);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
             { length: i } = t,
             r = [];
         return (
-            r.push((0, M.jsx)(M2, { mode: 0 !== i || n ? MJ : MQ, baseLayer: !0, children: e }, "layer-base")),
+            r.push((0, M.jsx)(M5, { mode: 0 !== i || n ? M1 : M0, baseLayer: !0, children: e }, "layer-base")),
             t.forEach((e, t) => r.push(this.renderComponent(e, t, i))),
             r
         );
@@ -36569,13 +36582,13 @@ class M3 extends eI.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = "string" == typeof e ? MZ[e]() : (0, M.jsx)(e, {})),
+            (i = "string" == typeof e ? MJ[e]() : (0, M.jsx)(e, {})),
             (0, M.jsxs)(
-                M2,
+                M5,
                 {
                     name: "string" == typeof e ? e : void 0,
-                    mode: t === n - 1 ? MQ : MJ,
-                    children: [(0, M.jsx)(M1, {}), i],
+                    mode: t === n - 1 ? M0 : M1,
+                    children: [(0, M.jsx)(M3, {}), i],
                 },
                 `layer-${t}`,
             )
@@ -36584,7 +36597,7 @@ class M3 extends eI.PureComponent {
     renderArtisanalHack() {
         return (0, M.jsx)(th.N, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, M.jsx)("div", { className: tE()(MK.bg, e) }),
+            children: (e) => (0, M.jsx)("div", { className: tE()(Mz.bg, e) }),
         });
     }
     render() {
@@ -36593,23 +36606,23 @@ class M3 extends eI.PureComponent {
                 this.renderArtisanalHack(),
                 (0, M.jsx)(AN.F, {
                     component: "div",
-                    className: tE()(MK.ZF, this.props.className),
+                    className: tE()(Mz.ZF, this.props.className),
                     children: this.renderLayers(),
                 }),
             ],
         });
     }
 }
-function M5(e) {
+function M4(e) {
     let t = (0, eC.NC)(),
         n = (0, eE.bG)([sC.A], () => sC.A.getLayers()),
-        i = (0, MY.xr)(
+        i = (0, M$.xr)(
             (e) => e.fullScreenLayers.length > 0 && !e.fullScreenLayers.some((e) => e.options.showAppUnderLayer),
         );
-    return (0, M.jsx)(M3, { ...e, sidebarTheme: t, layers: n, hasFullScreenLayer: i });
+    return (0, M.jsx)(M6, { ...e, sidebarTheme: t, layers: n, hasFullScreenLayer: i });
 }
-var M6 = n(678772);
-let M4 = eI.memo(function () {
+var M7 = n(678772);
+let M8 = eI.memo(function () {
     let e,
         t,
         n = (0, tf.A)(),
@@ -36654,21 +36667,21 @@ let M4 = eI.memo(function () {
         eI.useEffect(() => () => i5(0), []),
         (0, M.jsxs)(iP, {
             ref: i,
-            className: M6.y,
+            className: M7.y,
             children: [
-                (0, M.jsx)(M5, { className: M6.Z, children: (0, M.jsx)(bJ, {}) }),
-                (0, M.jsx)(Ml, {}),
-                (0, M.jsx)(MV, {}),
-                (0, M.jsx)(Mo.A, {}),
+                (0, M.jsx)(M4, { className: M7.Z, children: (0, M.jsx)(b1, {}) }),
+                (0, M.jsx)(Md, {}),
+                (0, M.jsx)(Mj, {}),
+                (0, M.jsx)(Mc.A, {}),
                 !n && (0, M.jsx)(iU.S, {}),
             ],
         })
     );
 });
-var M7 = n(148803),
-    M8 = n(154323),
-    M9 = n(536194);
-let Pe = (0, H.mj)({
+var M9 = n(148803),
+    Pe = n(154323),
+    Pt = n(536194);
+let Pn = (0, H.mj)({
         name: "2026-10-collectibles-marketing-client-cache",
         kind: "user",
         defaultConfig: { ttlMs: null },
@@ -36680,10 +36693,10 @@ let Pe = (0, H.mj)({
             4: { ttlMs: 864e5 },
         },
     }),
-    Pt = "CollectiblesMarketingManager",
-    Pn = "CollectiblesAnnouncementModal",
-    Pi = new ez.A(Pt);
-class Pr extends nE.A {
+    Pi = "CollectiblesMarketingManager",
+    Pr = "CollectiblesAnnouncementModal",
+    Pa = new ez.A(Pi);
+class Ps extends nE.A {
     didOpenAnnouncementModal = !1;
     _initialize() {
         (k.h.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen),
@@ -36697,13 +36710,13 @@ class Pr extends nE.A {
         this.didOpenAnnouncementModal = !1;
     };
     handlePostConnectionOpen = () => {
-        let e = M8.A.get("shop_include_unpublished"),
-            t = Pe.getConfig({ location: Pt }).ttlMs;
-        ((null != t && (0, Om.FH)({ ttlMs: t })) || (0, Om.LX)({ release: e ? M7.P.BETA : M7.P.PROD }),
+        let e = Pe.A.get("shop_include_unpublished"),
+            t = Pn.getConfig({ location: Pi }).ttlMs;
+        ((null != t && (0, Om.FH)({ ttlMs: t })) || (0, Om.LX)({ release: e ? M9.P.BETA : M9.P.PROD }),
             this.maybeOpenAnnouncementModal());
     };
     maybeOpenAnnouncementModal = async () => {
-        if (this.didOpenAnnouncementModal || M9.P.isDisallowPopupsSet() || (0, tX.hasModalOpen)(Pn)) return;
+        if (this.didOpenAnnouncementModal || Pt.P.isDisallowPopupsSet() || (0, tX.hasModalOpen)(Pr)) return;
         let e = eF.default.getCurrentUser();
         if (null != e && e.verified && !(0, op.k8)(rG.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT)) {
             this.didOpenAnnouncementModal = !0;
@@ -36713,21 +36726,21 @@ class Pr extends nE.A {
                         let { default: e } = await Promise.all([n.e("507621"), n.e("714877")]).then(n.bind(n, 55564));
                         return (t) => (0, M.jsx)(e, { ...t });
                     },
-                    { modalKey: Pn },
+                    { modalKey: Pr },
                 );
             } catch (e) {
-                ((this.didOpenAnnouncementModal = !1), Pi.error("Failed to open announcement modal", e));
+                ((this.didOpenAnnouncementModal = !1), Pa.error("Failed to open announcement modal", e));
             }
         }
     };
 }
-let Pa = new Pr();
-var Ps = n(868162);
-let Pl = "connected-device-modal";
-function Po() {
-    if ((0, tX.hasModalOpen)(Pl) || yF.getConfig({ location: "ConnectedDeviceManager" }).showDeviceDetectedPanel)
+let Pl = new Ps();
+var Po = n(868162);
+let Pd = "connected-device-modal";
+function Pc() {
+    if ((0, tX.hasModalOpen)(Pd) || yV.getConfig({ location: "ConnectedDeviceManager" }).showDeviceDetectedPanel)
         return;
-    let e = (0, yB.Hs)();
+    let e = (0, yH.Hs)();
     if (null == e) return;
     let { device: t, certifiedDeviceMetadata: i } = e;
     (0, tX.openModalLazy)(
@@ -36738,16 +36751,16 @@ function Po() {
                 return (0, M.jsx)(e, { device: t, certifiedDeviceMetadata: i, transitionState: r, onClose: a });
             };
         },
-        { modalKey: Pl },
+        { modalKey: Pd },
     );
 }
-let Pd = {
+let Pu = {
         init() {
-            Ps.A.addChangeListener(Po);
+            Po.A.addChangeListener(Pc);
         },
     },
-    Pc = "CONNECTIONS_GRID_MODAL_KEY";
-class Pu extends nE.A {
+    P_ = "CONNECTIONS_GRID_MODAL_KEY";
+class PE extends nE.A {
     _initialize() {
         (k.h.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow),
             k.h.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide));
@@ -36768,7 +36781,7 @@ class Pu extends nE.A {
             onCompleteIdentityApplication: d,
             stackingBehavior: c,
         } = e;
-        (0, tX.hasModalOpen)(Pc) ||
+        (0, tX.hasModalOpen)(P_) ||
             (0, tX.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -36795,13 +36808,13 @@ class Pu extends nE.A {
             );
     }
     handleHide() {
-        (0, tX.closeModal)(Pc);
+        (0, tX.closeModal)(P_);
     }
 }
-let P_ = new Pu();
-var PE = n(480900),
-    PA = n(293260);
-class Ph extends nE.A {
+let PA = new PE();
+var Ph = n(480900),
+    Pf = n(293260);
+class PI extends nE.A {
     _initialize() {
         k.h.subscribe("GUILD_ROLE_CONNECTIONS_MODAL_SHOW", this.handleShow);
     }
@@ -36811,18 +36824,18 @@ class Ph extends nE.A {
     handleShow(e) {
         let { role: t, guildId: n } = e;
         (0, tX.hasModalOpen)("GUILD_ROLE_CONNECTIONS_MODAL_KEY") ||
-            (null != t && t.tags?.guild_connections === null ? (0, PE.b)(t, n) : (0, PA.c0)(n));
+            (null != t && t.tags?.guild_connections === null ? (0, Ph.b)(t, n) : (0, Pf.c0)(n));
     }
 }
-let Pf = new Ph();
-var PI = n(475358),
-    Pp = n(552122),
-    PT = n(312671),
-    Pm = n(773669),
-    Pg = n(47891),
-    PS = n(805955);
-let PN = { "--connecting-container-fade-duration": "200ms", "--connecting-content-fade-duration": "150ms" };
-class PC extends eI.PureComponent {
+let Pp = new PI();
+var PT = n(475358),
+    Pm = n(552122),
+    Pg = n(312671),
+    PS = n(773669),
+    PN = n(47891),
+    PC = n(805955);
+let PO = { "--connecting-container-fade-duration": "200ms", "--connecting-content-fade-duration": "150ms" };
+class PR extends eI.PureComponent {
     videoRef = null;
     _noProblemsTimeout = null;
     _problemsTimeout = null;
@@ -36835,12 +36848,12 @@ class PC extends eI.PureComponent {
             tL.intl.string(tL.t.Q1PZkN),
             tL.intl.string(tL.t.x7sfVg),
             tL.intl.format(tL.t.PHuQsQ, {
-                tabHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "tab", className: PS.P }, t),
+                tabHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "tab", className: PC.P }, t),
             }),
             tL.intl.string(tL.t["il/GZt"]),
             tL.intl.format(tL.t.FVVp79, {
-                F6Hook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "f6", className: PS.P }, t),
-                tabHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "tab", className: PS.P }, t),
+                F6Hook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "f6", className: PC.P }, t),
+                tabHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "tab", className: PC.P }, t),
             }),
             tL.intl.string(tL.t["5qAKlq"]),
             tL.intl.string(tL.t.XpshBc),
@@ -36885,35 +36898,35 @@ class PC extends eI.PureComponent {
             tL.intl.string(tL.t.f8ao58),
             tL.intl.format(tL.t["1v1h8o"], { asterisks: "**" }),
             tL.intl.format(tL.t.MUlAVW, {
-                quickSwitcherHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "mod+k", className: PS.P }, t),
+                quickSwitcherHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "mod+k", className: PC.P }, t),
             }),
             tL.intl.format(tL.t.aes5VI, {
-                markUnreadHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "alt+click", className: PS.P }, t),
+                markUnreadHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "alt+click", className: PC.P }, t),
             }),
             tL.intl.format(tL.t.md9Svv, {
-                markServerUnreadHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "shift+esc", className: PS.P }, t),
+                markServerUnreadHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "shift+esc", className: PC.P }, t),
             }),
             tL.intl.format(tL.t["X0Tu+u"], {
-                navigateUnreadHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "shift+alt+up", className: PS.P }, t),
-                downHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "down", className: PS.P }, t),
+                navigateUnreadHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "shift+alt+up", className: PC.P }, t),
+                downHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "down", className: PC.P }, t),
             }),
             tL.intl.format(tL.t.AkoeIY, {
-                keyboardShortcutsHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "mod+/", className: PS.P }, t),
+                keyboardShortcutsHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "mod+/", className: PC.P }, t),
             }),
             tL.intl.format(tL.t.P9sfAH, {
-                messageNewlineHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "shift+return", className: PS.P }, t),
+                messageNewlineHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "shift+return", className: PC.P }, t),
             }),
             tL.intl.format(tL.t["3Ox33f"], {
-                shiftHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "shift", className: PS.P }, t),
+                shiftHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "shift", className: PC.P }, t),
             }),
-            tL.intl.format(tL.t.enCV6b, { upHook: (e, t) => (0, M.jsx)(PI.e, { shortcut: "up", className: PS.P }, t) }),
+            tL.intl.format(tL.t.enCV6b, { upHook: (e, t) => (0, M.jsx)(PT.e, { shortcut: "up", className: PC.P }, t) }),
         ];
         return (
-            Pm.default.locale.startsWith("en-") && e.push(tL.intl.string(tL.t.dQ9Wqk)), e[iM().random(e.length - 1)]
+            PS.default.locale.startsWith("en-") && e.push(tL.intl.string(tL.t.dQ9Wqk)), e[iM().random(e.length - 1)]
         );
     })();
     _eventLoadingText = (function () {
-        let e = Pp.A.getLoadingTips();
+        let e = Pm.A.getLoadingTips();
         if (null != e && e.length > 0) return e[iM().random(e.length - 1)];
     })();
     constructor(e) {
@@ -36923,7 +36936,7 @@ class PC extends eI.PureComponent {
     }
     createSound() {
         let { soundpack: e } = this.props,
-            t = (0, b5.aN)("discodo", e);
+            t = (0, b4.aN)("discodo", e);
         return ((t.volume = 1), t);
     }
     componentDidMount() {
@@ -36974,62 +36987,62 @@ class PC extends eI.PureComponent {
                 null != this._eventLoadingText && (i = this._eventLoadingText),
                 null != t && ((i = t.name), (r = t.incident_updates[0].body)),
                 (0, M.jsxs)("div", {
-                    className: PS.kL,
+                    className: PC.kL,
                     "data-fade": n,
-                    style: PN,
+                    style: PO,
                     children: [
                         (0, M.jsxs)("div", {
-                            className: PS.Qs,
+                            className: PC.Qs,
                             children: [
-                                (0, M.jsx)(Pg.A, {
+                                (0, M.jsx)(PN.A, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: tE()(PS.bE, this.state.ready ? PS.Gc : ""),
+                                    className: tE()(PC.bE, this.state.ready ? PC.Gc : ""),
                                 }),
                                 (0, M.jsxs)("div", {
-                                    className: PS.Qq,
+                                    className: PC.Qq,
                                     children: [
                                         null != t
                                             ? null
                                             : (0, M.jsx)(rx.E, {
                                                   variant: "text-xs/semibold",
                                                   color: "none",
-                                                  className: PS.mu,
+                                                  className: PC.mu,
                                                   children: tL.intl.string(tL.t.v0R1Lh),
                                               }),
-                                        (0, M.jsx)("div", { className: null != t ? PS.DD : PS.uN, children: i }),
-                                        (0, M.jsx)("div", { className: PS.rf, children: r }),
+                                        (0, M.jsx)("div", { className: null != t ? PC.DD : PC.uN, children: i }),
+                                        (0, M.jsx)("div", { className: PC.rf, children: r }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, M.jsxs)("div", {
-                            className: tE()(PS.Bk, { [PS.ly]: this.state.problems }),
+                            className: tE()(PC.Bk, { [PC.ly]: this.state.problems }),
                             children: [
-                                (0, M.jsx)("div", { className: PS.u1, children: tL.intl.string(tL.t.AG2zPM) }),
+                                (0, M.jsx)("div", { className: PC.u1, children: tL.intl.string(tL.t.AG2zPM) }),
                                 (0, M.jsxs)("div", {
                                     children: [
                                         (0, M.jsxs)(em.Anchor, {
-                                            className: PS.AR,
+                                            className: PC.AR,
                                             href: j.qF7.TWITTER_SUPPORT,
                                             target: "_blank",
                                             children: [
                                                 (0, M.jsx)(Oo.p, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: PS.Kk,
+                                                    className: PC.Kk,
                                                 }),
                                                 tL.intl.string(tL.t.KlyTbj),
                                             ],
                                         }),
                                         (0, M.jsxs)(em.Anchor, {
-                                            className: PS.gy,
+                                            className: PC.gy,
                                             href: j.qF7.STATUS,
                                             target: "_blank",
                                             children: [
-                                                (0, M.jsx)(L6, { className: PS.Kk }),
+                                                (0, M.jsx)(L7, { className: PC.Kk }),
                                                 tL.intl.string(tL.t.AgXXyy),
                                             ],
                                         }),
@@ -37043,25 +37056,25 @@ class PC extends eI.PureComponent {
         }
     }
 }
-let PO = eE.Ay.connectStores([sF.A, cm, PT.A, ef.Ay], () => ({
+let PL = eE.Ay.connectStores([sF.A, cm, Pg.A, ef.Ay], () => ({
     isTryingToConnect: sF.A.isTryingToConnect(),
     connected: sF.A.isConnected(),
     incident: cm.getIncident(),
-    soundpack: PT.A.getSoundpack(),
+    soundpack: Pg.A.getSoundpack(),
     reducedMotion: ef.Ay.useReducedMotion,
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: i, soundpack: r, reducedMotion: a } = e;
-    return t ? (0, M.jsx)(PC, { reducedMotion: a, soundpack: r, connected: n, incident: i }) : null;
+    return t ? (0, M.jsx)(PR, { reducedMotion: a, soundpack: r, connected: n, incident: i }) : null;
 });
-var PR = n(724066),
-    PL = n(389960),
-    Py = n(517735);
-let PD = null;
-function Pv() {
+var Py = n(724066),
+    PD = n(389960),
+    Pv = n(517735);
+let Pb = null;
+function PM() {
     (eV.Ay.setSystemTrayIcon(
         (function () {
-            if (null == PD) return (0, eB.isMac)() ? null : eG.wB.DEFAULT;
-            let { muteStates: e, deafStates: t, connected: n, speaking: i, unread: r } = PD;
+            if (null == Pb) return (0, eB.isMac)() ? null : eG.wB.DEFAULT;
+            let { muteStates: e, deafStates: t, connected: n, speaking: i, unread: r } = Pb;
             return (0, eB.isMac)() && !n
                 ? null
                 : n
@@ -37077,31 +37090,31 @@ function Pv() {
                     : eG.wB.DEFAULT;
         })(),
     ),
-        eV.Ay.setSystemTrayStates(PD));
+        eV.Ay.setSystemTrayStates(Pb));
 }
-function Pb() {
+function PP() {
     let e = eV.Ay.friendlyReleaseName,
         t = {
             appName: e,
-            openApp: tL.intl.formatToPlainString(Py.default.zjuWNH, { appName: e }),
+            openApp: tL.intl.formatToPlainString(Pv.default.zjuWNH, { appName: e }),
             mute: tL.intl.string(tL.t.w4m945),
             deafen: tL.intl.string(tL.t.wjcRFX),
             suppressed: tL.intl.string(tL.t.FJSZVM),
             serverMuted: tL.intl.string(tL.t.uLddbQ),
             serverDeafened: tL.intl.string(tL.t.btxSdB),
-            voiceSettings: tL.intl.string(Py.default.JO5lXN),
-            checkForUpdates: tL.intl.string(Py.default.PhnOeM),
+            voiceSettings: tL.intl.string(Pv.default.JO5lXN),
+            checkForUpdates: tL.intl.string(Pv.default.PhnOeM),
             acknowledgements: tL.intl.string(tL.t["0nUKy3"]),
-            quitApp: tL.intl.formatToPlainString(Py.default.VuK9sC, { appName: e }),
-            closeHint: tL.intl.string(Py.default.mpd5Bv),
+            quitApp: tL.intl.formatToPlainString(Pv.default.VuK9sC, { appName: e }),
+            closeHint: tL.intl.string(Pv.default.mpd5Bv),
         };
     eV.Ay.setSystemTrayStrings(t);
 }
-function PM() {
+function PU() {
     let e = ng.A.getChannelId(),
         t = null != e ? nm.A.getChannel(e) : null,
-        { selfMute: n, mute: i, suppress: r } = (0, Dx.k)({ channel: t }),
-        { selfDeaf: a, deaf: s } = (0, PL.N)(t),
+        { selfMute: n, mute: i, suppress: r } = (0, DF.k)({ channel: t }),
+        { selfDeaf: a, deaf: s } = (0, PD.N)(t),
         l = (0, iB.dH)([ij.A, iF.A]),
         o =
             !iH.A.getDisableUnreadBadge() &&
@@ -37110,30 +37123,30 @@ function PM() {
             muteStates: { selfMute: n, serverMute: i, suppress: r },
             deafStates: { selfDeaf: a, serverDeaf: s },
             connected: ng.A.isConnected(),
-            speaking: vu.A.isCurrentUserSpeaking(),
+            speaking: vE.A.isCurrentUserSpeaking(),
             unread: o,
         };
-    (0, ib.isEqual)(PD, d) || ((PD = d), Pv());
+    (0, ib.isEqual)(Pb, d) || ((Pb = d), PM());
 }
-let PP = new eE.ru([ng.A, ek.Ay, vu.A, iV.default, ij.A, iH.A, iF.A, nm.A, nG.A, ei.default, nw.A, lr.A], PM);
+let Pw = new eE.ru([ng.A, ek.Ay, vE.A, iV.default, ij.A, iH.A, iF.A, nm.A, nG.A, ei.default, nw.A, lr.A], PU);
 eB.isPlatformEmbedded &&
     (eV.Ay.on("SYSTEM_TRAY_TOGGLE_MUTE", () => ig.default.toggleSelfMute({ location: "System Tray" })),
     eV.Ay.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => ig.default.toggleSelfDeaf()),
     eV.Ay.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
         (0, l7.openUserSettings)(l6.X.VOICE_CATEGORY);
     }));
-let PU = null;
-class Pw extends nE.A {
+let PG = null;
+class Px extends nE.A {
     _initialize() {
-        eB.isPlatformEmbedded && (PP.attach("SystemTrayManager"), PM(), (PU = (0, PR.I)(Pb)), Pb());
+        eB.isPlatformEmbedded && (Pw.attach("SystemTrayManager"), PU(), (PG = (0, Py.I)(PP)), PP());
     }
     _terminate() {
-        eB.isPlatformEmbedded && (PP.detach(), PU?.(), (PU = null), (PD = null), Pv());
+        eB.isPlatformEmbedded && (Pw.detach(), PG?.(), (PG = null), (Pb = null), PM());
     }
 }
-let PG = new Pw();
-var Px = n(272613);
-class Pk extends nE.A {
+let Pk = new Px();
+var PF = n(272613);
+class PB extends nE.A {
     _initialize() {
         (k.h.subscribe("POST_CONNECTION_OPEN", this._maybeStartDevSession),
             k.h.subscribe("BILLING_STANDALONE_INITIALIZED", this._maybeStartDevSession),
@@ -37156,9 +37169,9 @@ class Pk extends nE.A {
         null != window.DiscordDevSession && window.DiscordDevSession.started && window.DiscordDevSession.stop();
     }
 }
-let PF = new Pk();
-var PB = n(853742);
-class PV extends nE.A {
+let PV = new PB();
+var PH = n(853742);
+class Pj extends nE.A {
     _initialize() {
         k.h.subscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
@@ -37182,7 +37195,7 @@ class PV extends nE.A {
                 r &&
                 !a &&
                 s >= 200 &&
-                ((0, PB.zd)(),
+                ((0, PH.zd)(),
                 (0, dG.Vh)(rG.M.FORUM_CHANNEL_UPSELL_MODAL),
                 (0, tX.openModalLazy)(
                     async () => {
@@ -37212,9 +37225,9 @@ class PV extends nE.A {
                 )));
     }
 }
-let PH = new PV();
-var Pj = n(599812);
-class PW extends nE.A {
+let PW = new Pj();
+var PY = n(599812);
+class PK extends nE.A {
     _initialize() {
         k.h.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
@@ -37233,77 +37246,77 @@ class PW extends nE.A {
         k.h.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
 }
-let PY = new PW(),
-    PK = {};
-function P$(e) {
+let P$ = new PK(),
+    Pz = {};
+function PX(e) {
     let { name: t, hash: n, missingData: i } = e;
-    for (let e of (MP.A.markGameReported(t), i))
+    for (let e of (Mw.A.markGameReported(t), i))
         if ("icon" === e) {
-            let e = PK[t];
+            let e = Pz[t];
             null != e && _G.Ay.uploadIcon(t, n, e);
             return;
         } else new ez.A("GameStoreIconManager").log(`Could not find missing data key: ${e}`);
 }
-function Pz(e) {
+function Pq(e) {
     let { gameName: t, icon: n } = e;
-    PK[t] = n;
+    Pz[t] = n;
 }
-let PX = {
+let PZ = {
     initialize() {
-        (k.h.subscribe("UNVERIFIED_GAME_UPDATE", P$), k.h.subscribe("GAME_ICON_UPDATE", Pz));
+        (k.h.subscribe("UNVERIFIED_GAME_UPDATE", PX), k.h.subscribe("GAME_ICON_UPDATE", Pq));
     },
 };
-var Pq = n(738533);
-let PZ = {};
-function PQ(e) {
+var PQ = n(738533);
+let PJ = {};
+function P0(e) {
     let { gameId: t } = e;
     !(function (e) {
-        if (null != PZ[e]) return;
+        if (null != PJ[e]) return;
         let t = ak.A.getApplication(e),
-            n = (null != t ? Pq.A.isLaunchable(t) : Pq.A.isGameLaunchable(e))
+            n = (null != t ? PQ.A.isLaunchable(t) : PQ.A.isGameLaunchable(e))
                 .then((t) => {
                     t !== _F.A.launchableGames[e] &&
                         k.h.dispatch({ type: "GAME_LAUNCHABLE_UPDATE", gameId: e, isLaunchable: t });
                 })
                 .finally(() => {
-                    delete PZ[e];
+                    delete PJ[e];
                 });
-        PZ[e] = n;
+        PJ[e] = n;
     })(t);
 }
-let PJ = {
+let P1 = {
         initialize() {
-            k.h.subscribe("CHECK_LAUNCHABLE_GAME", PQ);
+            k.h.subscribe("CHECK_LAUNCHABLE_GAME", P0);
         },
     },
-    P0 = {
+    P2 = {
         init() {
             _H.A.whenInitialized(() => {
                 null != lM.A.testModeApplicationId && (0, t1.q1)(lM.A.testModeApplicationId, lM.A.testModeOriginURL);
             });
         },
     };
-var P1 = n(92077);
-function P2() {
+var P3 = n(92077);
+function P5() {
     if (!(0, _K.S)()) return;
     let e = ei.default.getToken(),
         t = ei.default.getId();
     if (null == e) throw Error("missing user token");
-    P1.Ts(e, t);
+    P3.Ts(e, t);
 }
-function P3() {
-    P1.zr();
+function P6() {
+    P3.zr();
 }
-let P5 = {
+let P4 = {
     init() {
-        (k.h.subscribe("CONNECTION_OPEN", P2), k.h.subscribe("LOGOUT", P3));
+        (k.h.subscribe("CONNECTION_OPEN", P5), k.h.subscribe("LOGOUT", P6));
     },
 };
-var P6 = n(376728),
-    P4 = n(970163);
-async function P7(e) {
+var P7 = n(376728),
+    P8 = n(970163);
+async function P9(e) {
     let { inviteKey: t } = e,
-        i = (await (0, P4.A)(t)).invite;
+        i = (await (0, P8.A)(t)).invite;
     if (null == i || null == i.guild) return;
     let r = i.guild.id,
         a = oG.Ay.getMember(r, ei.default.getId()),
@@ -37314,20 +37327,20 @@ async function P7(e) {
     }
     if (null == a || s) return void k.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: i, code: t, context: j.BRT.APP });
     let { default: l } = await Promise.resolve().then(n.bind(n, 608401));
-    (await l({ guildId: r }), P6.Ay.transitionToInvite(i, { muteOnJoinVoiceChannel: !0 }));
+    (await l({ guildId: r }), P7.Ay.transitionToInvite(i, { muteOnJoinVoiceChannel: !0 }));
 }
-var P8 = n(268313);
-let P9 = {
+var Ue = n(268313);
+let Ut = {
     init() {
         k.h.subscribe("VOICE_CHANNEL_SELECT", (e) => {
             let { channelId: t } = e;
-            null == t && Dv.sF(vT._.VOICE_PANEL_INTRODUCTION);
+            null == t && DM.sF(vg._.VOICE_PANEL_INTRODUCTION);
         });
     },
 };
-var Ue = n(4106);
-let Ut = null;
-class Un extends nE.A {
+var Un = n(4106);
+let Ui = null;
+class Ur extends nE.A {
     _initialize() {
         k.h.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
@@ -37338,18 +37351,18 @@ class Un extends nE.A {
         (0, OQ.HF)("ICYMIManager") &&
             (!(function e() {
                 let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                (Ue.A.fetchDehydrated({ isInitialLoad: t }),
-                    null != Ut && clearTimeout(Ut),
-                    (Ut = setTimeout(() => e(), 15 * i_.A.Millis.MINUTE)));
+                (Un.A.fetchDehydrated({ isInitialLoad: t }),
+                    null != Ui && clearTimeout(Ui),
+                    (Ui = setTimeout(() => e(), 15 * i_.A.Millis.MINUTE)));
             })(!0),
-            Ue.A.getGuildChannelScores(),
-            Ue.A.getRecommendedGuilds());
+            Un.A.getGuildChannelScores(),
+            Un.A.getRecommendedGuilds());
     }
 }
-let Ui = new Un();
-var Ur = n(21599),
-    Ua = n(684013);
-function Us(e) {
+let Ua = new Ur();
+var Us = n(21599),
+    Ul = n(684013);
+function Uo(e) {
     if (!ng.A.isConnected()) return null;
     let t = ng.A.getChannelId();
     if (null == t) return null;
@@ -37358,42 +37371,42 @@ function Us(e) {
     let i = e ?? !tI.A.getChatOpen(t);
     return (n_.A.updateChatOpen(t, i), { channelId: t, chatOpen: i });
 }
-var Ul = n(53677),
-    Uo = n(734066),
-    Ud = n(572164),
-    Uc = n(614584),
-    Uu = n(279250),
-    U_ = n(997630),
-    UE = n(140175);
-let UA = (0, H.mj)({
+var Ud = n(53677),
+    Uc = n(734066),
+    Uu = n(572164),
+    U_ = n(614584),
+    UE = n(279250),
+    UA = n(997630),
+    Uh = n(140175);
+let Uf = (0, H.mj)({
     name: "2026-05-global-soundboard-wheel-popout",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var Uh = n(528772),
-    Uf = n(944775),
-    UI = n(773371),
-    Up = n(427603);
-let UT = new Map();
-function Um(e, t, n, i) {
+var UI = n(528772),
+    Up = n(944775),
+    UT = n(773371),
+    Um = n(427603);
+let Ug = new Map();
+function US(e, t, n, i) {
     if (!ng.A.isConnected()) return;
     let r = i.context ?? iC.x.DEFAULT,
-        a = UT.get(r);
-    (null == a && ((a = { held: new Set(), priorityHeld: new Set() }), UT.set(r, a)),
+        a = Ug.get(r);
+    (null == a && ((a = { held: new Set(), priorityHeld: new Set() }), Ug.set(r, a)),
         n || (e ? a.held.add(i.id) : a.held.delete(i.id)),
         t && (e ? a.priorityHeld.add(i.id) : a.priorityHeld.delete(i.id)));
     let s = a.held.size > 0,
         l = a.priorityHeld.size > 0;
-    (0, UE.N)(ek.Ay.getMediaEngine(), s, l);
+    (0, Uh.N)(ek.Ay.getMediaEngine(), s, l);
 }
-let Ug = {
+let UN = {
     [j.hCu.TOGGLE_PRIORITY_SPEAKER]: { onTrigger() {}, keyEvents: {} },
     [j.hCu.UNASSIGNED]: { onTrigger() {}, keyEvents: {} },
     [j.hCu.PUSH_TO_TALK]: {
         onTrigger(e, t) {
             ek.Ay.getMode(t.context) === j.TBI.PUSH_TO_TALK &&
-                ((Ug[j.hCu.PUSH_TO_TALK].isPressed = e), Um(e, !1, !1, t));
+                ((UN[j.hCu.PUSH_TO_TALK].isPressed = e), US(e, !1, !1, t));
         },
         keyEvents: { keyup: !0, keydown: !0 },
         isPressed: !1,
@@ -37401,14 +37414,14 @@ let Ug = {
     [j.hCu.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e, t) {
             ek.Ay.getMode() === j.TBI.PUSH_TO_TALK &&
-                ((Ug[j.hCu.PUSH_TO_TALK_PRIORITY].isPressed = e), Um(e, !0, !1, t));
+                ((UN[j.hCu.PUSH_TO_TALK_PRIORITY].isPressed = e), US(e, !0, !1, t));
         },
         keyEvents: { keyup: !0, keydown: !0 },
         isPressed: !1,
     },
     [j.hCu.VAD_PRIORITY]: {
         onTrigger(e, t) {
-            ek.Ay.getMode() === j.TBI.VOICE_ACTIVITY && ((Ug[j.hCu.VAD_PRIORITY].isPressed = e), Um(e, !0, !0, t));
+            ek.Ay.getMode() === j.TBI.VOICE_ACTIVITY && ((UN[j.hCu.VAD_PRIORITY].isPressed = e), US(e, !0, !0, t));
         },
         keyEvents: { keyup: !0, keydown: !0 },
         isPressed: !1,
@@ -37416,7 +37429,7 @@ let Ug = {
     [j.hCu.PUSH_TO_MUTE]: {
         onTrigger(e) {
             ek.Ay.getMode() === j.TBI.VOICE_ACTIVITY &&
-                ((Ug[j.hCu.PUSH_TO_MUTE].isPressed = e), ig.default.setTemporarySelfMute(e));
+                ((UN[j.hCu.PUSH_TO_MUTE].isPressed = e), ig.default.setTemporarySelfMute(e));
         },
         keyEvents: { keyup: !0, keydown: !0 },
         isPressed: !1,
@@ -37440,35 +37453,35 @@ let Ug = {
                     r = nm.A.getChannel(ng.A.getChannelId()),
                     a = eF.default.getCurrentUser()?.id;
                 if (null == r || null == a) return;
-                let { reachedLimit: s } = (0, DJ.M)(r);
+                let { reachedLimit: s } = (0, D1.M)(r);
                 if (!s) {
                     if (r.isGuildStageVoice()) {
-                        let e = DK.A.getMutableParticipants(r.id, D$.ip.SPEAKER),
+                        let e = Dz.A.getMutableParticipants(r.id, DX.ip.SPEAKER),
                             t = e?.find((e) => {
                                 let { user: t } = e;
                                 return t.id === a;
                             });
-                        if (!(0, Dz.Bw)(r.guild_id) || !i || null == t || t.voiceState.suppress) return;
+                        if (!(0, Dq.Bw)(r.guild_id) || !i || null == t || t.voiceState.suppress) return;
                     }
                     return (
                         e
                             ? ig.default.setVideoEnabled(!1)
                             : !1 === n
-                              ? (0, D6.A)(
+                              ? (0, D7.A)(
                                     () => {
                                         ig.default.setVideoEnabled(!0);
                                     },
                                     j.BRT.APP,
                                     !0,
                                 )
-                              : (0, D2.A)(),
+                              : (0, D5.A)(),
                         !1
                     );
                 }
             })(),
         keyEvents: { keyup: !0, keydown: !1 },
     },
-    [j.hCu.TOGGLE_VOICE_CHANNEL_CHAT]: { onTrigger: () => Us(), keyEvents: { keyup: !0, keydown: !1 } },
+    [j.hCu.TOGGLE_VOICE_CHANNEL_CHAT]: { onTrigger: () => Uo(), keyEvents: { keyup: !0, keydown: !1 } },
     [j.hCu.TOGGLE_VOICE_MODE]: {
         onTrigger() {
             let e = ek.Ay.getMode() === j.TBI.PUSH_TO_TALK ? j.TBI.VOICE_ACTIVITY : j.TBI.PUSH_TO_TALK;
@@ -37480,21 +37493,21 @@ let Ug = {
     [j.hCu.TOGGLE_OVERLAY_INPUT_LOCK]: {
         onTrigger(e, t) {
             if (!(0, cy.DV)(t.shortcut)) return;
-            let n = (0, Up.A)();
-            null != n && Ua.A.setInputLocked(!MG.default.isLocked(n), n);
+            let n = (0, Um.A)();
+            null != n && Ul.A.setInputLocked(!Mk.default.isLocked(n), n);
         },
         keyEvents: { keyup: !0, keydown: !1 },
     },
     [j.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
         onTrigger() {
-            let e = UI.default.getFocusedPID(),
+            let e = UT.default.getFocusedPID(),
                 t = null != e;
             null != e &&
                 t &&
-                MG.default.isPinned(j.uss.TEXT) &&
-                MG.default.isLocked(e) &&
-                UI.default.isReady(e) &&
-                Ua.A.activateRegion(j.ajI.TEXT_WIDGET);
+                Mk.default.isPinned(j.uss.TEXT) &&
+                Mk.default.isLocked(e) &&
+                UT.default.isReady(e) &&
+                Ul.A.activateRegion(j.ajI.TEXT_WIDGET);
         },
         keyEvents: { keyup: !0, keydown: !1 },
     },
@@ -37505,16 +37518,16 @@ let Ug = {
             !(function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                if (!(0, Dy.A)(ek.Ay) || null != d7.A.getCurrentUserActiveStream()) return;
+                if (!(0, Dv.A)(ek.Ay) || null != d7.A.getCurrentUserActiveStream()) return;
                 let n = nS.Ay.getVoiceChannelId(),
                     i = nm.A.getChannel(n);
                 if (null == i) return;
                 let r = i.getGuildId();
-                if ((0, Uu.vz)(i, e1.A, nw.A, !1))
+                if ((0, UE.vz)(i, e1.A, nw.A, !1))
                     if (ek.Ay.getUseSystemScreensharePicker())
-                        (0, eB.isMac)() && lI().satisfies(eg.A?.os.release, cZ.WZ) ? (0, U_.a)() : (0, U_.a)("window");
+                        (0, eB.isMac)() && lI().satisfies(eg.A?.os.release, cZ.WZ) ? (0, UA.a)() : (0, UA.a)("window");
                     else {
-                        let n = (0, yt.A)(iS.Ay, yn.A);
+                        let n = (0, yi.A)(iS.Ay, yr.A);
                         if (null == n || (n.isLauncher && !e)) return;
                         (0, uv.XI)(r, i.id, { pid: n.pid, analyticsLocations: t });
                     }
@@ -37538,54 +37551,54 @@ let Ug = {
     },
     [j.hCu.SOUNDBOARD]: {
         onTrigger: () => {
-            let e = (0, Up.A)();
+            let e = (0, Um.A)();
             if (null != e)
-                if (Uh.A.enabled) (0, Uf.Lk)(e);
+                if (UI.A.enabled) (0, Up.Lk)(e);
                 else {
-                    if (!(0, DU.lI)()) return;
-                    (0, Uf.hK)(!0, e);
+                    if (!(0, DG.lI)()) return;
+                    (0, Up.hK)(!0, e);
                 }
         },
         keyEvents: { keyup: !0, keydown: !1 },
     },
     [j.hCu.SOUNDBOARD_HOLD]: {
         onTrigger: (e) => {
-            let t = (0, Up.A)();
+            let t = (0, Um.A)();
             if (null != t) {
                 if (e) {
-                    if (!(0, DU.lI)()) return;
-                    (0, Uf.hK)(!1, t);
-                } else (0, Uf.Lk)(t);
+                    if (!(0, DG.lI)()) return;
+                    (0, Up.hK)(!1, t);
+                } else (0, Up.Lk)(t);
                 return;
             }
             if (e && ((0, eB.isWindows)() || tU.A.isFocused())) {
-                if (!(0, DU.lI)()) return;
-                let { enabled: e } = UA.getConfig({ location: "SOUNDBOARD_HOLD" });
+                if (!(0, DG.lI)()) return;
+                let { enabled: e } = Uf.getConfig({ location: "SOUNDBOARD_HOLD" });
                 if (!e) return;
-                (0, Uf.Ax)(!1);
+                (0, Up.Ax)(!1);
                 return;
             }
-            !e && na.A.getWindowOpen(j.MLl.SOUNDBOARD) && (0, Uf.cu)();
+            !e && na.A.getWindowOpen(j.MLl.SOUNDBOARD) && (0, Up.cu)();
         },
         keyEvents: { keyup: !0, keydown: !0, portal: (0, eB.isWindows)() },
     },
     [j.hCu.SAVE_CLIP]: {
         onTrigger: () => {
-            if (!(0, Ud.T)()) return;
+            if (!(0, Uu.T)()) return;
             let e = iS.Ay.getVisibleGame();
             (W.default.track(j.HAw.CLIP_SAVE_KEYBIND_PRESSED, {
-                ...Ul.lc(),
+                ...Ud.lc(),
                 application_name: e?.name,
                 application_id: e?.id,
             }),
-                (0, Uc.l0)());
+                (0, U_.l0)());
         },
         keyEvents: { keyup: !1, keydown: !0 },
     },
     [j.hCu.SAVE_SCREENSHOT]: {
         onTrigger: () => {
-            !(0, Ud.T)() ||
-                ((0, Uo.cx)() && (W.default.track(j.HAw.CLIP_SAVE_KEYBIND_PRESSED, { ...Ul.lc() }), (0, Uc.yT)()));
+            !(0, Uu.T)() ||
+                ((0, Uc.cx)() && (W.default.track(j.HAw.CLIP_SAVE_KEYBIND_PRESSED, { ...Ud.lc() }), (0, U_.yT)()));
         },
         keyEvents: { keyup: !1, keydown: !0 },
     },
@@ -37605,42 +37618,42 @@ let Ug = {
         keyEvents: { keyup: !0, keydown: !1, blurred: !0, focused: !0 },
     },
 };
-function US() {
-    (UT.clear(), (0, UE.N)(ek.Ay.getMediaEngine(), !1, !1));
+function UC() {
+    (Ug.clear(), (0, Uh.N)(ek.Ay.getMediaEngine(), !1, !1));
 }
-class UN extends nE.A {
+class UO extends nE.A {
     _initialize() {
-        (k.h.dispatch({ type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS", keybinds: Ug }),
-            k.h.subscribe("AUDIO_SET_MODE", US),
+        (k.h.dispatch({ type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS", keybinds: UN }),
+            k.h.subscribe("AUDIO_SET_MODE", UC),
             k.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect));
     }
     _terminate() {
-        (k.h.unsubscribe("AUDIO_SET_MODE", US), k.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect));
+        (k.h.unsubscribe("AUDIO_SET_MODE", UC), k.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect));
     }
     handleVoiceChannelSelect(e) {
         let { currentVoiceChannelId: t, channelId: n } = e;
-        t !== n && US();
+        t !== n && UC();
     }
 }
-let UC = new UN();
-var UO = n(913765),
-    UR = n(891897),
-    UL = n(942614),
-    Uy = n(14509),
-    UD = n(861807),
-    Uv = n(894778),
-    Ub = n(225315),
-    UM = n(684407),
-    UP = n(919638),
-    UU = n(426620),
-    Uw = n(771016),
-    UG = n(994277),
-    Ux = n(315290);
-let Uk = !1;
-function UF() {
-    ((Uk = !0), null != r && (0, tX.closeModal)(r), null != a && (0, tX.closeModal)(a));
+let UR = new UO();
+var UL = n(913765),
+    Uy = n(891897),
+    UD = n(942614),
+    Uv = n(14509),
+    Ub = n(861807),
+    UM = n(894778),
+    UP = n(225315),
+    UU = n(684407),
+    Uw = n(919638),
+    UG = n(426620),
+    Ux = n(771016),
+    Uk = n(994277),
+    UF = n(315290);
+let UB = !1;
+function UV() {
+    ((UB = !0), null != r && (0, tX.closeModal)(r), null != a && (0, tX.closeModal)(a));
 }
-async function UB(e) {
+async function UH(e) {
     a = await (0, tX.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e("776915"), n.e("94570")]).then(n.bind(n, 414833));
@@ -37649,46 +37662,46 @@ async function UB(e) {
         {
             onCloseRequest: j.tEg,
             onCloseCallback: () => {
-                Uk || (k.h.dispatch({ type: "GUARDIAN_CONNECT_CLEARED" }), e?.());
+                UB || (k.h.dispatch({ type: "GUARDIAN_CONNECT_CLEARED" }), e?.());
             },
             modalKey: a,
         },
     );
 }
-class UV extends nE.A {
+class Uj extends nE.A {
     _initialize() {
-        (k.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), k.h.subscribe("LOGOUT", UF));
+        (k.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), k.h.subscribe("LOGOUT", UV));
     }
     _terminate() {
-        (k.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), k.h.unsubscribe("LOGOUT", UF));
+        (k.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), k.h.unsubscribe("LOGOUT", UV));
     }
     handleConnectionOpen() {
         var e;
         let t;
-        Uk = !1;
-        let i = UU.A.getType();
+        UB = !1;
+        let i = UG.A.getType();
         if (null == i) return;
         switch (i) {
-            case Uw.zY.INVITE_UNCLAIMED:
-                Uv.A.flowStart(Ux.do.INVITE, Ux.ju.NUF_STARTED);
+            case Ux.zY.INVITE_UNCLAIMED:
+                UM.A.flowStart(UF.do.INVITE, UF.ju.NUF_STARTED);
                 break;
-            case Uw.zY.ORGANIC_REGISTERED:
-                Uv.A.flowStart(Ux.do.ORGANIC, Ux.ju.NUF_STARTED);
+            case Ux.zY.ORGANIC_REGISTERED:
+                UM.A.flowStart(UF.do.ORGANIC, UF.ju.NUF_STARTED);
                 break;
-            case Uw.zY.MARKETING_UNCLAIMED:
-                Uv.A.flowStart(Ux.do.ORGANIC_MARKETING, Ux.ju.NUF_STARTED);
+            case Ux.zY.MARKETING_UNCLAIMED:
+                UM.A.flowStart(UF.do.ORGANIC_MARKETING, UF.ju.NUF_STARTED);
         }
         let a = !1,
             s = ir.A.getGuildId();
-        if (i === Uw.zY.INVITE_UNCLAIMED) {
+        if (i === Ux.zY.INVITE_UNCLAIMED) {
             let e = e1.A.getGuild(s);
-            null != e && (0, oX.Qd)(e) && ((a = !0), (0, Ub.Fy)(e.id));
+            null != e && (0, oX.Qd)(e) && ((a = !0), (0, UP.Fy)(e.id));
         }
         ((e = [
             {
                 key: "Parental Consent Guardian Connect",
-                open: UB,
-                predicate: () => UD.A.getShouldShowGuardianConnect() && !0,
+                open: UH,
+                predicate: () => Ub.A.getShouldShowGuardianConnect() && !0,
             },
             {
                 key: "Unified NUF Modal",
@@ -37721,26 +37734,26 @@ class UV extends nE.A {
                     }
                     function i(e) {
                         switch (e) {
-                            case UG.i.AGE_GATE:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.ju.AGE_GATE);
+                            case Uk.i.AGE_GATE:
+                                UM.A.flowStep(UF.do.ANY, UF.ju.AGE_GATE);
                                 break;
-                            case UG.i.CHOOSE_TEMPLATE:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.jC.GUILD_TEMPLATES);
+                            case Uk.i.CHOOSE_TEMPLATE:
+                                UM.A.flowStep(UF.do.ANY, UF.jC.GUILD_TEMPLATES);
                                 break;
-                            case UG.i.CUSTOMIZE_GUILD:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.jC.GUILD_CREATE);
+                            case Uk.i.CUSTOMIZE_GUILD:
+                                UM.A.flowStep(UF.do.ANY, UF.jC.GUILD_CREATE);
                                 break;
-                            case UG.i.CHANNEL_PROMPT:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.jC.CHANNEL_PROMPT);
+                            case Uk.i.CHANNEL_PROMPT:
+                                UM.A.flowStep(UF.do.ANY, UF.jC.CHANNEL_PROMPT);
                                 break;
-                            case UG.i.JOIN_GUILD:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.jC.JOIN_GUILD);
+                            case Uk.i.JOIN_GUILD:
+                                UM.A.flowStep(UF.do.ANY, UF.jC.JOIN_GUILD);
                                 break;
-                            case UG.i.CREATION_INTENT:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.jC.CREATION_INTENT);
+                            case Uk.i.CREATION_INTENT:
+                                UM.A.flowStep(UF.do.ANY, UF.jC.CREATION_INTENT);
                                 break;
-                            case UG.i.COMPLETE:
-                                Uv.A.flowStep(Ux.do.ANY, Ux.jC.SUCCESS);
+                            case Uk.i.COMPLETE:
+                                UM.A.flowStep(UF.do.ANY, UF.jC.SUCCESS);
                                 break;
                             case null:
                                 break;
@@ -37769,7 +37782,7 @@ class UV extends nE.A {
                         { onCloseRequest: j.tEg, onCloseCallback: e, modalKey: r },
                     );
                 },
-                predicate: () => 0 === UP.A.totalGuilds && !eB.isPlatformEmbedded && i !== Uw.zY.INVITE_UNCLAIMED,
+                predicate: () => 0 === Uw.A.totalGuilds && !eB.isPlatformEmbedded && i !== Ux.zY.INVITE_UNCLAIMED,
             },
             { key: "New User Age Gate", open: lU.v, predicate: () => nM.xq() && !0 },
             {
@@ -37779,7 +37792,7 @@ class UV extends nE.A {
                     !a &&
                     null != eF.default.getCurrentUser() &&
                     !eF.default.getCurrentUser()?.isClaimed() &&
-                    !(0, Uy._9)(),
+                    !(0, Uv._9)(),
             },
             {
                 key: "Verification Gate with Claim Account",
@@ -37798,11 +37811,11 @@ class UV extends nE.A {
                         },
                         { onCloseCallback: e },
                     ),
-                predicate: () => null != s && null != UM.A.get(s) && UM.A.get(s) !== UM.E,
+                predicate: () => null != s && null != UU.A.get(s) && UU.A.get(s) !== UU.E,
             },
         ]),
             (t = () => {
-                (UL.D(), Uv.A.flowStep(Ux.do.ANY, Ux.ju.NUF_COMPLETE, !0));
+                (UD.D(), UM.A.flowStep(UF.do.ANY, UF.ju.NUF_COMPLETE, !0));
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;
@@ -37813,15 +37826,15 @@ class UV extends nE.A {
             t());
     }
 }
-let UH = new UV();
-var Uj = n(682492),
-    UW = n(754692),
-    UY = n(874486),
-    UK = n(927018),
-    U$ = n(3137),
-    Uz = n(559908);
-let UX = new Set();
-class Uq extends nE.A {
+let UW = new Uj();
+var UY = n(682492),
+    UK = n(754692),
+    U$ = n(874486),
+    Uz = n(927018),
+    UX = n(3137),
+    Uq = n(559908);
+let UZ = new Set();
+class UQ extends nE.A {
     _initialize() {
         (k.h.subscribe("MESSAGE_CREATE", this.handleMessageCreate),
             k.h.subscribe("POGGERMODE_SETTINGS_UPDATE", this.handleSettingsUpdate));
@@ -37832,37 +37845,37 @@ class Uq extends nE.A {
     }
     handleSettingsUpdate = (e) => {
         let { settings: t } = e;
-        (t.enabled ? (0, UW._)(UK.sn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, UW._)(UK.sn.DISABLE_POGGERMODE),
-            Object.keys(t).some((e) => e.startsWith("confetti")) && (0, UW._)(UK.sn.CUSTOMIZE_CONFETTI));
+        (t.enabled ? (0, UK._)(Uz.sn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, UK._)(Uz.sn.DISABLE_POGGERMODE),
+            Object.keys(t).some((e) => e.startsWith("confetti")) && (0, UK._)(Uz.sn.CUSTOMIZE_CONFETTI));
     };
     handleMessageCreate = (e) => {
         let {
             channelId: t,
             message: { author: n, nonce: i, mentions: r },
         } = e;
-        if (!U$.A.isEnabled()) return !1;
+        if (!UX.A.isEnabled()) return !1;
         let a = ei.default.getId();
         if (
             (r?.find((e) => e.id === a) != null
-                ? (0, UW._)(UK.sn.PING_ME)
-                : (r?.length ?? 0) > 0 && n?.id === a && (0, UW._)(UK.sn.PING_SOMEONE),
-            !(0, Uz.gN)(n?.id, a, i, UX))
+                ? (0, UK._)(Uz.sn.PING_ME)
+                : (r?.length ?? 0) > 0 && n?.id === a && (0, UK._)(Uz.sn.PING_SOMEONE),
+            !(0, Uq.gN)(n?.id, a, i, UZ))
         )
             return !1;
-        let { combo: s } = Uz.Ay.getMostRecentMessageCombo(t) ?? {};
+        let { combo: s } = Uq.Ay.getMostRecentMessageCombo(t) ?? {};
         if (null == s) return !1;
-        Object.values(UK.sn).forEach((e) => {
-            if (null != UY.A.getUnlocked(e)) return;
-            let t = (0, UK.vM)(e),
+        Object.values(Uz.sn).forEach((e) => {
+            if (null != U$.A.getUnlocked(e)) return;
+            let t = (0, Uz.vM)(e),
                 n = t?.checkUnlock;
-            null == n || (!1 !== n(s) && (0, UW._)(e));
+            null == n || (!1 !== n(s) && (0, UK._)(e));
         });
     };
 }
-let UZ = new Uq();
-var UQ = n(64585),
-    UJ = n(139033);
-class U0 extends nE.A {
+let UJ = new UQ();
+var U0 = n(64585),
+    U1 = n(139033);
+class U2 extends nE.A {
     _initialize() {
         k.h.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
@@ -37870,14 +37883,14 @@ class U0 extends nE.A {
         k.h.unsubscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
     handlePoggermodeTemporarilyDisabled() {
-        (0, UJ.A)({ title: tL.intl.string(tL.t.wDQgnX), subtitle: tL.intl.string(tL.t.OJklbS) });
+        (0, U1.A)({ title: tL.intl.string(tL.t.wDQgnX), subtitle: tL.intl.string(tL.t.OJklbS) });
     }
 }
-let U1 = new U0();
-var U2 = n(958005),
-    U3 = n(718734);
+let U3 = new U2();
+var U5 = n(958005),
+    U6 = n(718734);
 n(378885);
-let U5 = (0, i8.Fe)({
+let U4 = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("865429"),
@@ -38513,7 +38526,7 @@ let U5 = (0, i8.Fe)({
         webpackId: 140539,
         name: "PopoutWindowChannelCall",
     }),
-    U6 = (0, i8.Fe)({
+    U7 = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("368991"),
@@ -38708,7 +38721,7 @@ let U5 = (0, i8.Fe)({
         webpackId: 418838,
         name: "PopoutWindowCallTile",
     }),
-    U4 = (0, i8.Fe)({
+    U8 = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("865429"),
@@ -39302,7 +39315,7 @@ let U5 = (0, i8.Fe)({
         webpackId: 911315,
         name: "PopoutWindowStageChannelCall",
     }),
-    U7 = (0, i8.Fe)({
+    U9 = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("865429"),
@@ -39938,12 +39951,12 @@ let U5 = (0, i8.Fe)({
         webpackId: 767675,
         name: "PopoutWindowRTCDebug",
     }),
-    U8 = (0, i8.Fe)({
+    we = (0, i8.Fe)({
         createPromise: () => Promise.all([n.e("92868"), n.e("149802")]).then(n.bind(n, 296651)),
         webpackId: 296651,
         name: "PopoutWindowDiscordStats",
     }),
-    U9 = (0, i8.Fe)({
+    wt = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("529659"),
@@ -39962,7 +39975,7 @@ let U5 = (0, i8.Fe)({
         webpackId: 303640,
         name: "PopoutWindowActivity",
     });
-class we extends nE.A {
+class wn extends nE.A {
     _observer = null;
     _initialize() {
         (k.h.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
@@ -39985,16 +39998,16 @@ class we extends nE.A {
         ns.open(
             j.MLl.CHANNEL_CALL_POPOUT,
             (e) =>
-                t.isGuildStageVoice() && !(0, U3.x)(t, "popout_window_manager")
-                    ? (0, M.jsx)(U4, { windowKey: e, channelId: t.id })
-                    : (0, M.jsx)(U5, { windowKey: e, channelId: t.id }),
+                t.isGuildStageVoice() && !(0, U6.x)(t, "popout_window_manager")
+                    ? (0, M.jsx)(U8, { windowKey: e, channelId: t.id })
+                    : (0, M.jsx)(U4, { windowKey: e, channelId: t.id }),
             { defaultWidth: 854, defaultHeight: 480 },
         );
     }
     handleOpenCallTilePopout = (e) => {
         let { channelId: t, participantId: n } = e,
-            i = (0, U2.A)(t, n);
-        ns.open(i, (e) => (0, M.jsx)(U6, { windowKey: e, channelId: t, participantId: n }), {
+            i = (0, U5.A)(t, n);
+        ns.open(i, (e) => (0, M.jsx)(U7, { windowKey: e, channelId: t, participantId: n }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
@@ -40017,23 +40030,23 @@ class we extends nE.A {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        ns.open(j.MLl.RTC_DEBUG_POPOUT, (e) => (0, M.jsx)(U7, { windowKey: e }), {
+        ns.open(j.MLl.RTC_DEBUG_POPOUT, (e) => (0, M.jsx)(U9, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
     }
     handleOpenActivityPopout() {
-        ns.open(j.MLl.ACTIVITY_POPOUT, (e) => (0, M.jsx)(U9, { windowKey: e }), {
+        ns.open(j.MLl.ACTIVITY_POPOUT, (e) => (0, M.jsx)(wt, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
     }
     handleOpenDiscordStatsPopout() {
-        ns.open(j.MLl.STATS_POPOUT, (e) => (0, M.jsx)(U8, { windowKey: e }), { defaultWidth: 380, defaultHeight: 600 });
+        ns.open(j.MLl.STATS_POPOUT, (e) => (0, M.jsx)(we, { windowKey: e }), { defaultWidth: 380, defaultHeight: 600 });
     }
 }
-let wt = new we();
-class wn extends nE.A {
+let wi = new wn();
+class wr extends nE.A {
     _initialize() {
         (iN.A.addChangeListener(this.handlePopoutWindowChange),
             k.h.subscribe("WINDOW_FOCUS", this.handleMainWindowFocus));
@@ -40060,16 +40073,16 @@ class wn extends nE.A {
         function n(t) {
             return e.cancelAnimationFrame(t);
         }
-        (E4.A.inject.RequestAnimationFrame(t), E4.A.inject.CancelAnimationFrame(n), LI.Globals.frameLoop?.setRAF(t, n));
+        (E4.A.inject.RequestAnimationFrame(t), E4.A.inject.CancelAnimationFrame(n), LT.Globals.frameLoop?.setRAF(t, n));
     }
 }
-let wi = new wn();
-var wr = n(835095),
-    wa = n(822571),
-    ws = n(891786),
-    wl = n(103407);
-let wo = "PremiumServerDriveAnnouncementModal";
-class wd extends nE.A {
+let wa = new wr();
+var ws = n(835095),
+    wl = n(822571),
+    wo = n(891786),
+    wd = n(103407);
+let wc = "PremiumServerDriveAnnouncementModal";
+class wu extends nE.A {
     _initialize() {
         (k.h.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview),
             k.h.subscribe("ACTIVE_PROMOTIONS_FETCH_SUCCESS", this.handleActivePromotionsFetchSuccess),
@@ -40083,7 +40096,7 @@ class wd extends nE.A {
             k.h.unsubscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate));
     }
     maybeShowAnnouncementModalFromPromotions = (e) => {
-        if ((0, tX.hasModalOpen)(wo)) return;
+        if ((0, tX.hasModalOpen)(wc)) return;
         let t = new Date(),
             n = new Map(),
             i = [];
@@ -40100,17 +40113,17 @@ class wd extends nE.A {
         function a(e) {
             return null != r && e.isIncludedInRollout(r.id, t);
         }
-        let s = (0, ws.A)(i, t, a),
+        let s = (0, wo.A)(i, t, a),
             l = i.length;
         for (; null != s && l > 0;) {
             if ((l--, this.maybeOpenServerDriveAnnouncementModal(s, !1, n.get(s.promotionId)))) return;
-            ((i = i.filter((e) => e.id !== s?.id)), (s = (0, ws.A)(i, t, a)));
+            ((i = i.filter((e) => e.id !== s?.id)), (s = (0, wo.A)(i, t, a)));
         }
         ((0, Rl.al)(), (0, Rl.QM)());
     };
     handleActivePromotionsFetchSuccess = (e) => {
         let { promotions: t } = e;
-        this.maybeShowAnnouncementModalFromPromotions(t.map((e) => wr.A.createFromServer(e)));
+        this.maybeShowAnnouncementModalFromPromotions(t.map((e) => ws.A.createFromServer(e)));
     };
     handleUserOfferFetchSuccess = (e) => {
         let { userTrialOffer: t } = e;
@@ -40119,12 +40132,12 @@ class wd extends nE.A {
     };
     handleEntitlementCreate = (e) => {
         let { entitlement: t } = e;
-        M9.P.isDisallowPopupsSet() || t.source_type !== j.GD.REVERSE_TRIAL || (0, Rl.al)();
+        Pt.P.isDisallowPopupsSet() || t.source_type !== j.GD.REVERSE_TRIAL || (0, Rl.al)();
     };
     maybeOpenServerDriveAnnouncementModal = (e, t, i) => {
-        if ((0, tX.hasModalOpen)(wo)) return !1;
+        if ((0, tX.hasModalOpen)(wc)) return !1;
         let { id: r, promotionId: a } = e,
-            s = (0, wl.H)({ promotionId: a, properties: e.properties, isPreview: t });
+            s = (0, wd.H)({ promotionId: a, properties: e.properties, isPreview: t });
         return (
             null != s &&
             ((0, tX.openModalLazy)(
@@ -40139,25 +40152,25 @@ class wd extends nE.A {
                             properties: s,
                         });
                 },
-                { modalKey: wo },
+                { modalKey: wc },
             ),
             !0)
         );
     };
     handlePreview = (e) => {
         let { data: t } = e,
-            n = null != t.promotion ? wr.A.createFromServer(t.promotion) : void 0;
-        this.maybeOpenServerDriveAnnouncementModal(wa.A.createFromServer(t), !0, n);
+            n = null != t.promotion ? ws.A.createFromServer(t.promotion) : void 0;
+        this.maybeOpenServerDriveAnnouncementModal(wl.A.createFromServer(t), !0, n);
     };
 }
-let wc = new wd();
-var wu = n(499454),
-    w_ = n(17159),
-    wE = n(478437),
-    wA = n(116956),
-    wh = n(10392),
-    wf = n(82498);
-class wI extends nE.A {
+let w_ = new wu();
+var wE = n(499454),
+    wA = n(17159),
+    wh = n(478437),
+    wf = n(116956),
+    wI = n(10392),
+    wp = n(82498);
+class wT extends nE.A {
     _initialize() {
         (k.h.subscribe("CHANNEL_SELECT", this._handleTriggerOfferChannelSelect),
             k.h.subscribe("VOICE_CHANNEL_SELECT", this._handleTriggerOfferVoiceChannelSelect),
@@ -40173,34 +40186,34 @@ class wI extends nE.A {
             n = nm.A.getChannel(t);
         null == n ||
             null == n.type ||
-            wE.k.GUILD_VOCAL_PRIMARY.has(n.type) ||
-            (0, wh.sq)(cD.U7.CHANNEL_OPENED, null, function () {
-                return (0, wf.Yc)(t);
+            wh.k.GUILD_VOCAL_PRIMARY.has(n.type) ||
+            (0, wI.sq)(cD.U7.CHANNEL_OPENED, null, function () {
+                return (0, wp.Yc)(t);
             });
     };
     _handleTriggerOfferVoiceChannelSelect = (e) => {
         let { channelId: t, currentVoiceChannelId: n } = e;
         null != t &&
             t !== n &&
-            (0, wh.sq)(cD.U7.JOIN_VOICE_CHANNEL, null, function () {
-                return (0, wf.By)(t);
+            (0, wI.sq)(cD.U7.JOIN_VOICE_CHANNEL, null, function () {
+                return (0, wp.By)(t);
             });
     };
     _handleTriggerOfferStreamStop = (e) => {
         let { streamKey: t } = e;
-        wA.A.getRTCConnection(t)?.isOwner &&
-            (0, wh.sq)(cD.U7.VIDEO_STREAM_ENDED, null, function () {
-                return (0, wf.Gb)(t);
+        wf.A.getRTCConnection(t)?.isOwner &&
+            (0, wI.sq)(cD.U7.VIDEO_STREAM_ENDED, null, function () {
+                return (0, wp.Gb)(t);
             });
     };
 }
-let wp = new wI();
-var wT = n(688796),
-    wm = n(207803),
-    wg = n(84540),
-    wS = n(919395),
-    wN = n(339984);
-class wC extends nE.A {
+let wm = new wT();
+var wg = n(688796),
+    wS = n(207803),
+    wN = n(84540),
+    wC = n(919395),
+    wO = n(339984);
+class wR extends nE.A {
     _initialize() {
         k.h.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
@@ -40208,53 +40221,53 @@ class wC extends nE.A {
         k.h.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === wN.HL.AVATAR
+        return e.uploadType === wO.HL.AVATAR
             ? (function (e) {
                   let { pendingImage: t, file: n, guildId: i, isTryItOut: r } = e;
-                  if (r) return void (0, wm.e$)(t);
+                  if (r) return void (0, wS.e$)(t);
                   let a = eF.default.getCurrentUser();
                   if (lV.Ay.canUseAnimatedAvatar(a) || "image/gif" !== n.type) {
-                      ((0, wg.p)({ guildId: i, avatar: t }), (0, wS.WU)("set"));
+                      ((0, wN.p)({ guildId: i, avatar: t }), (0, wC.WU)("set"));
                       return;
                   }
-                  null != a && (0, wT.G)({ uploadType: wN.HL.AVATAR });
+                  null != a && (0, wg.G)({ uploadType: wO.HL.AVATAR });
               })(e)
             : (function (e) {
                   let { pendingImage: t, guildId: n, isTryItOut: i } = e;
-                  if (i) return void (0, wm.xe)(t);
+                  if (i) return void (0, wS.xe)(t);
                   let r = eF.default.getCurrentUser(),
                       a = lV.Ay.canUsePremiumProfileCustomization(r);
                   lV.Ay.canUsePremiumProfileCustomization(r)
-                      ? (0, wg.p)({ guildId: n, banner: t })
-                      : null == r || a || (0, wT.G)({ uploadType: wN.HL.BANNER });
+                      ? (0, wN.p)({ guildId: n, banner: t })
+                      : null == r || a || (0, wg.G)({ uploadType: wO.HL.BANNER });
               })(e);
     }
 }
-let wO = new wC();
-var wR = n(453314),
-    wL = n(569745),
-    wy = n(281969),
-    wD = n(636401),
-    wv = n(995802),
-    wb = n(36810),
-    wM = n(738566);
-function wP(e) {
+let wL = new wR();
+var wy = n(453314),
+    wD = n(569745),
+    wv = n(281969),
+    wb = n(636401),
+    wM = n(995802),
+    wP = n(36810),
+    wU = n(738566);
+function ww(e) {
     let { x: t, y: n, z: i } = e;
     return Math.sqrt(t * t + n * n + i * i);
 }
-function wU(e) {
-    let t = wP(e);
+function wG(e) {
+    let t = ww(e);
     return t < Number.EPSILON ? null : { x: e.x / t, y: e.y / t, z: e.z / t };
 }
-function ww(e, t) {
+function wx(e, t) {
     return { x: e.y * t.z - e.z * t.y, y: e.z * t.x - e.x * t.z, z: e.x * t.y - e.y * t.x };
 }
-function wG(e, t) {
+function wk(e, t) {
     return e.x * t.x + e.y * t.y + e.z * t.z;
 }
-let wx = { x: 0, y: 0, z: -1 },
-    wk = { isSpatial: !0, distanceAttenuation: { enabled: !0 }, airAbsorption: { enabled: !0 } };
-class wF {
+let wF = { x: 0, y: 0, z: -1 },
+    wB = { isSpatial: !0, distanceAttenuation: { enabled: !0 }, airAbsorption: { enabled: !0 } };
+class wV {
     sessions = new Map();
     spatialHolder = null;
     spatialAudioOverrides = {};
@@ -40278,7 +40291,7 @@ class wF {
         };
     }
     getSpatialCapabilities() {
-        let { enabled: e } = wM.A.getConfig({ location: "ConjureVoiceSessionCoordinator" }),
+        let { enabled: e } = wU.A.getConfig({ location: "ConjureVoiceSessionCoordinator" }),
             t = ek.Ay.supports(iC.O5.SPATIAL_AUDIO),
             n = e && t;
         return {
@@ -40323,25 +40336,25 @@ class wF {
             a = this.getConnectedRTCConnection(),
             s = a?.getMediaEngineConnectionId();
         if (null == a || null == s)
-            throw new wD.A(
+            throw new wb.A(
                 { errorCode: j.Lw6.INVALID_CHANNEL },
                 "Join a voice channel before starting a voice session",
             );
         if (r !== a.channelId) {
-            if (!(0, wv.Pc)(i))
-                throw new wD.A(
+            if (!(0, wM.Pc)(i))
+                throw new wb.A(
                     { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                     "Only an app running in your voice channel can start a voice session",
                 );
-            if (!(0, wv.OQ)(i) && !(0, wv.v8)(t, a.channelId))
-                throw new wD.A(
+            if (!(0, wM.OQ)(i) && !(0, wM.v8)(t, a.channelId))
+                throw new wb.A(
                     { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                     "This app can only start a voice session in a voice channel in the server it is installed in",
                 );
         }
         let l = this.sessions.get(n);
         null != l && this.releaseSession(l);
-        let o = l?.focusSequence ?? (wy.A.isFrameVisible(n) ? ++this.focusSequence : 0),
+        let o = l?.focusSequence ?? (wv.A.isFrameVisible(n) ? ++this.focusSequence : 0),
             d = {
                 id: (0, nc.A)(),
                 socketId: e.id,
@@ -40353,35 +40366,35 @@ class wF {
                 spatialEnabled: !1,
                 acoustics: {},
                 focusSequence: o,
-                backgrounded: !wy.A.isFrameVisible(n),
-                pooled: wy.A.isFramePooled(n),
+                backgrounded: !wv.A.isFrameVisible(n),
+                pooled: wv.A.isFramePooled(n),
                 sources: [],
                 appliedUserIds: new Set(),
                 updateTimer: null,
             };
         if (!this.hasMediaEngineConnection(d))
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The voice connection is unavailable");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The voice connection is unavailable");
         return (
             this.sessions.set(n, d),
-            (this.unsubscribeFrameLifecycle ??= wy.A.subscribe(this.handleFrameLifecycleChange)),
+            (this.unsubscribeFrameLifecycle ??= wv.A.subscribe(this.handleFrameLifecycleChange)),
             d
         );
     }
     enableSpatial(e, t) {
         let n = this.validateSession(e, t);
         if (!this.getSpatialCapabilities().available)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Spatial voice is not supported by this client");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Spatial voice is not supported by this client");
         ((n.spatialEnabled = !0), this.syncSpatialHolder(n));
         let i = this.sessions.get(n.frameId);
         if (i?.spatialEnabled !== !0 || i !== n)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The voice connection is unavailable");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The voice connection is unavailable");
     }
     setAcoustics(e, t, n) {
         let i,
             r,
             a = this.validateSession(e, t);
         if (!this.getSpatialCapabilities().available)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Spatial voice is not supported by this client");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Spatial voice is not supported by this client");
         let s =
             ((i = n.reflections?.room?.min_corner),
             (r = n.reflections?.room?.max_corner),
@@ -40392,7 +40405,7 @@ class wF {
                   : i.x >= r.x || i.y >= r.y || i.z >= r.z
                     ? "A room min_corner must be below its max_corner on every axis"
                     : null);
-        if (null != s) throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, s);
+        if (null != s) throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, s);
         ((a.acoustics = (function (e) {
             let { binaural: t, distance_attenuation: n, air_absorption: i, reflections: r } = e,
                 a = r?.room;
@@ -40462,7 +40475,7 @@ class wF {
     }
     syncSpatialAudioOverrides() {
         let e = [...this.sessions.values()].some((e) => e.spatialEnabled)
-            ? iM().merge({}, wk, this.spatialHolder?.acoustics)
+            ? iM().merge({}, wB, this.spatialHolder?.acoustics)
             : {};
         iM().isEqual(e, this.spatialAudioOverrides) ||
             ((this.spatialAudioOverrides = e), ig.default.setSpatialAudioOverrides(e));
@@ -40476,12 +40489,12 @@ class wF {
     update(e, t, n, i) {
         let r = this.validateSession(e, t);
         if (!r.spatialEnabled)
-            throw new wD.A(
+            throw new wb.A(
                 { errorCode: j.Lw6.INVALID_COMMAND },
                 "Enable spatial voice on this session before sending a spatial snapshot",
             );
         if (i.length > 50)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, "Spatial voice supports at most 50 sources");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, "Spatial voice supports at most 50 sources");
         let a = this.getParticipantIds(r.channelId),
             s = ei.default.getId(),
             l = new Set();
@@ -40494,7 +40507,7 @@ class wF {
                 c,
                 u = e.user_id;
             if (u === s || !a.has(u) || l.has(u))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, `Invalid spatial voice source ${e.user_id}`);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, `Invalid spatial voice source ${e.user_id}`);
             return (
                 l.add(u),
                 {
@@ -40502,14 +40515,14 @@ class wF {
                     position:
                         ((t = e.position),
                         (r =
-                            0.99 > Math.abs((i = wU(n.forward) ?? { x: 0, y: 0, z: -1 }).y)
+                            0.99 > Math.abs((i = wG(n.forward) ?? { x: 0, y: 0, z: -1 }).y)
                                 ? { x: 0, y: 1, z: 0 }
                                 : { x: 0, y: 0, z: 1 }),
-                        (o = wU(ww(i, r)) ?? { x: 1, y: 0, z: 0 }),
-                        (d = wU(ww(o, i)) ?? { x: 0, y: 1, z: 0 }),
-                        0.001 > wP((c = { x: t.x - n.position.x, y: t.y - n.position.y, z: t.z - n.position.z }))
+                        (o = wG(wx(i, r)) ?? { x: 1, y: 0, z: 0 }),
+                        (d = wG(wx(o, i)) ?? { x: 0, y: 1, z: 0 }),
+                        0.001 > ww((c = { x: t.x - n.position.x, y: t.y - n.position.y, z: t.z - n.position.z }))
                             ? { x: 0, y: 0, z: -0.001 }
-                            : { x: wG(c, o), y: wG(c, d), z: -wG(c, i) }),
+                            : { x: wk(c, o), y: wk(c, d), z: -wk(c, i) }),
                 }
             );
         })),
@@ -40550,11 +40563,11 @@ class wF {
     }
     handleFrameLifecycleChange = () => {
         for (let e of [...this.sessions.values()]) {
-            if (((e.pooled ||= wy.A.isFramePooled(e.frameId)), e.pooled && !wy.A.isFramePooled(e.frameId))) {
+            if (((e.pooled ||= wv.A.isFramePooled(e.frameId)), e.pooled && !wv.A.isFramePooled(e.frameId))) {
                 this.releaseSession(e);
                 continue;
             }
-            let t = !wy.A.isFrameVisible(e.frameId);
+            let t = !wv.A.isFrameVisible(e.frameId);
             e.backgrounded !== t && ((e.backgrounded = t), t || (e.focusSequence = ++this.focusSequence));
         }
         this.syncSpatialHolder();
@@ -40593,7 +40606,7 @@ class wF {
         if (0 !== i.length) {
             if (
                 !this.withMediaEngineConnection(e, (e) => {
-                    for (let t of i) e.setUserPosition(t, wx);
+                    for (let t of i) e.setUserPosition(t, wF);
                 })
             ) {
                 (this.demoteFromSpatial(e), this.syncSpatialHolder());
@@ -40632,7 +40645,7 @@ class wF {
             ),
             n = [...e.appliedUserIds].filter((e) => !t.has(e)),
             i = this.withMediaEngineConnection(e, (t) => {
-                for (let e of n) t.setUserPosition(e, wx);
+                for (let e of n) t.setUserPosition(e, wF);
                 for (let { userId: n, position: i } of e.sources) t.setUserPosition(n, i);
             });
         return (i && (e.appliedUserIds = t), i);
@@ -40640,14 +40653,14 @@ class wF {
     clearAppliedSources(e) {
         0 !== e.appliedUserIds.size &&
             (this.withMediaEngineConnection(e, (t) => {
-                for (let n of e.appliedUserIds) t.setUserPosition(n, wx);
+                for (let n of e.appliedUserIds) t.setUserPosition(n, wF);
             }),
             e.appliedUserIds.clear());
     }
     resetParticipantEffects(e) {
         let t = ei.default.getId();
         this.withMediaEngineConnection(e, (n) => {
-            for (let i of this.getParticipantIds(e.channelId)) i !== t && n.setUserPosition(i, wx);
+            for (let i of this.getParticipantIds(e.channelId)) i !== t && n.setUserPosition(i, wF);
         });
     }
     getParticipantIds(e) {
@@ -40669,14 +40682,14 @@ class wF {
         null != e.updateTimer && (clearTimeout(e.updateTimer), (e.updateTimer = null));
     }
     validateFrame(e) {
-        let { frame: t } = (0, wb.A)(e);
+        let { frame: t } = (0, wP.A)(e);
         return { frame: t, frameId: t.id, applicationId: t.applicationId, channelId: (0, sA.A)(t.surface) };
     }
     validateSession(e, t) {
         let { frameId: n, applicationId: i } = this.validateFrame(e),
             r = this.sessions.get(n);
         if (null == r || r.id !== t || r.socketId !== e.id || r.applicationId !== i)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Unknown or stale voice session");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Unknown or stale voice session");
         let a = ng.A.getRTCConnection();
         if (
             null == a ||
@@ -40686,20 +40699,20 @@ class wF {
         )
             throw (
                 this.releaseSession(r),
-                new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The voice session was invalidated")
+                new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The voice session was invalidated")
             );
         return r;
     }
 }
-let wB = new wF();
-var wV =
+let wH = new wV();
+var wj =
     (((S = {})[(S.UNHANDLED = -1)] = "UNHANDLED"),
     (S[(S.NOMINAL = 0)] = "NOMINAL"),
     (S[(S.FAIR = 1)] = "FAIR"),
     (S[(S.SERIOUS = 2)] = "SERIOUS"),
     (S[(S.CRITICAL = 3)] = "CRITICAL"),
     S);
-function wH() {
+function wW() {
     var e = nI.A.getRawThermalState();
     if (null == e) return -1;
     if ((0, eB.isIOS)()) return e;
@@ -40720,10 +40733,10 @@ function wH() {
             return -1;
     }
 }
-var wj = n(856151),
-    wW = n(90924),
-    wY = n(639621);
-function wK() {
+var wY = n(856151),
+    wK = n(90924),
+    w$ = n(639621);
+function wz() {
     let e = nL.Ay.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
     let t = (0, nj.D)(e.location),
@@ -40733,20 +40746,20 @@ function wK() {
             let i = eF.default.getUser(e);
             if (null == i) return;
             let r = (0, _o.tJ)(t, n, i);
-            return { ...(0, wY.A)(i), nickname: r ?? void 0 };
+            return { ...(0, w$.A)(i), nickname: r ?? void 0 };
         }).filter(_a.Vq),
     };
 }
-let w$ = { [bt.sm.ANY]: [bt.VH] };
-var wz = n(130946),
-    wX = n(216132),
-    wq = n(448875),
-    wZ = n(818023),
-    wQ = n(147248),
-    wJ = n(134559),
-    w0 = n(991690),
-    w1 = n(179771),
-    w2 =
+let wX = { [bi.sm.ANY]: [bi.VH] };
+var wq = n(130946),
+    wZ = n(216132),
+    wQ = n(448875),
+    wJ = n(818023),
+    w0 = n(147248),
+    w1 = n(134559),
+    w2 = n(991690),
+    w3 = n(179771),
+    w5 =
         (((N = {})[(N.DURABLE_PRIMARY = 1)] = "DURABLE_PRIMARY"),
         (N[(N.DURABLE = 2)] = "DURABLE"),
         (N[(N.CONSUMABLE = 3)] = "CONSUMABLE"),
@@ -40754,8 +40767,8 @@ var wz = n(130946),
         (N[(N.SUBSCRIPTION = 5)] = "SUBSCRIPTION"),
         (N[(N.SUBSCRIPTION_GROUP = 6)] = "SUBSCRIPTION_GROUP"),
         N),
-    w3 = n(599026);
-let w5 = [
+    w6 = n(599026);
+let w4 = [
     "add",
     "remove",
     "check",
@@ -40822,34 +40835,34 @@ let w5 = [
     "robot",
     "paint_palette",
 ];
-var w6 = n(917550);
-let w4 = {
+var w7 = n(917550);
+let w8 = {
     ActivityGamePlatforms: { values: cD.yT, from: "@discordapp/common/Constants" },
-    ActivityPlatform: { values: wJ.v, from: "@discordapp/common/constants/ActivityPlatform" },
-    ChannelTypes: { values: wE.r, from: "@discordapp/common/shared-constants/ChannelTypes" },
-    EmbeddedSurfaceType: { values: w0.U, from: "@discordapp/common/shared-constants/EmbeddedSurfaceType" },
+    ActivityPlatform: { values: w1.v, from: "@discordapp/common/constants/ActivityPlatform" },
+    ChannelTypes: { values: wh.r, from: "@discordapp/common/shared-constants/ChannelTypes" },
+    EmbeddedSurfaceType: { values: w2.U, from: "@discordapp/common/shared-constants/EmbeddedSurfaceType" },
     EntitlementTypes: { values: cD.zF, from: "@discordapp/common/Constants" },
     InviteTargetTypes: { values: cD.yV, from: "@discordapp/common/Constants" },
-    OAuth2Scopes: { values: w1.F, from: "@discordapp/common/shared-constants/OAuth2Scopes" },
-    OrientationLockState: { values: w6.N, from: "@discordapp/common/activities/Constants" },
-    SKUTypes: { values: w2, from: "@discordapp/common/shared-constants/SKUTypes" },
+    OAuth2Scopes: { values: w3.F, from: "@discordapp/common/shared-constants/OAuth2Scopes" },
+    OrientationLockState: { values: w7.N, from: "@discordapp/common/activities/Constants" },
+    SKUTypes: { values: w5, from: "@discordapp/common/shared-constants/SKUTypes" },
 };
-function w7(e, t) {
+function w9(e, t) {
     let { nullable: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        i = Object.values(w4[t].values),
+        i = Object.values(w8[t].values),
         r = i.filter((e) => "number" == typeof e),
         a = r.length > 0 ? e.number().valid(...r) : e.string().valid(...i);
     return n ? a.allow(null).meta({ className: `${t} | null` }) : a.meta({ className: t });
 }
-let w8 = {
+let Ge = {
         request: (e) => ({ session_id: e.string().required() }),
         response: (e) => ({ success: e.boolean().required() }),
     },
-    w9 = {
+    Gt = {
         request: (e) => ({ session_id: e.string().required(), fit: e.string().valid("contain", "cover").required() }),
         response: (e) => ({ success: e.boolean().required() }),
     },
-    Ge = {
+    Gn = {
         request: (e) => ({
             owner_user_id: e.string().required(),
             transport_nonce: e.string().max(128).required(),
@@ -40863,7 +40876,7 @@ let w8 = {
             viewer_url: e.string().max(1024).required(),
         }),
     },
-    Gt = {
+    Gi = {
         [cD.e$.INITIATE_IMAGE_UPLOAD]: {
             embeddedAppSDK: !0,
             request: void 0,
@@ -40889,7 +40902,7 @@ let w8 = {
                         global_name: e.string().allow(null),
                     })
                     .required(),
-                scopes: e.array().items(w7(e, "OAuth2Scopes")).required(),
+                scopes: e.array().items(w9(e, "OAuth2Scopes")).required(),
                 expires: e.string().required(),
                 application: e
                     .object({
@@ -40911,7 +40924,7 @@ let w8 = {
                     participants: e
                         .array()
                         .items(
-                            GI((t = e))
+                            GT((t = e))
                                 .keys({ nickname: t.string().description("Server nickname. Not unique.") })
                                 .meta({ className: "ActivityParticipant" })
                                 .required(),
@@ -40924,24 +40937,24 @@ let w8 = {
             request: (e) => ({ build: e.string().max(64).required() }),
             response: (e) => ({ relaunched: e.boolean().required() }),
         },
-        [cD.e$.GET_VOICE_CAPABILITIES]: { request: void 0, response: (e) => GA(e) },
+        [cD.e$.GET_VOICE_CAPABILITIES]: { request: void 0, response: (e) => Gf(e) },
         [cD.e$.GET_VOICE_SESSION_PARTICIPANTS]: {
             request: (e) => ({ session_id: e.string().required() }),
-            response: (e) => ({ participants: e.array().items(Gh(e)).required() }),
+            response: (e) => ({ participants: e.array().items(GI(e)).required() }),
         },
         [cD.e$.START_VOICE_SESSION]: {
             request: void 0,
             response: (e) => ({
                 session_id: e.string().required(),
                 channel_id: e.string().required(),
-                capabilities: GA(e).required(),
-                participants: e.array().items(Gh(e)).required(),
+                capabilities: Gf(e).required(),
+                participants: e.array().items(GI(e)).required(),
             }),
         },
         [cD.e$.UPDATE_VOICE_SPATIAL]: {
             request: (e) => ({
                 session_id: e.string().required(),
-                listener: e.object({ position: Gn(e).required(), forward: Gn(e).required() }).required(),
+                listener: e.object({ position: Gr(e).required(), forward: Gr(e).required() }).required(),
                 sources: e
                     .array()
                     .max(50)
@@ -40949,7 +40962,7 @@ let w8 = {
                         e
                             .object({
                                 user_id: e.string().required(),
-                                position: Gn(e).required(),
+                                position: Gr(e).required(),
                                 gain: e.number().min(0).max(1).optional(),
                             })
                             .required(),
@@ -40980,7 +40993,7 @@ let w8 = {
                                 })
                                 .optional(),
                             air_absorption: t
-                                .object({ enabled: t.boolean().optional(), coefficients: Gu(t, 1).optional() })
+                                .object({ enabled: t.boolean().optional(), coefficients: GE(t, 1).optional() })
                                 .optional(),
                             reflections: t
                                 .object({
@@ -40993,11 +41006,11 @@ let w8 = {
                                     mix_level: t.number().min(0).max(2).optional(),
                                     room: t
                                         .object({
-                                            min_corner: GE(t).optional(),
-                                            max_corner: GE(t).optional(),
-                                            floor: G_(t).optional(),
-                                            ceiling: G_(t).optional(),
-                                            walls: G_(t).optional(),
+                                            min_corner: Gh(t).optional(),
+                                            max_corner: Gh(t).optional(),
+                                            floor: GA(t).optional(),
+                                            ceiling: GA(t).optional(),
+                                            walls: GA(t).optional(),
                                         })
                                         .optional(),
                                 })
@@ -41008,9 +41021,9 @@ let w8 = {
             },
             response: (e) => ({ success: e.boolean().required() }),
         },
-        [cD.e$.ENABLE_VOICE_SPATIAL]: w8,
-        [cD.e$.DISABLE_VOICE_SPATIAL]: w8,
-        [cD.e$.STOP_VOICE_SESSION]: w8,
+        [cD.e$.ENABLE_VOICE_SPATIAL]: Ge,
+        [cD.e$.DISABLE_VOICE_SPATIAL]: Ge,
+        [cD.e$.STOP_VOICE_SESSION]: Ge,
         [cD.e$.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: {
             request: void 0,
             response: (e) => ({
@@ -41019,21 +41032,21 @@ let w8 = {
                 requires_existing_watch: e.boolean().required(),
             }),
         },
-        [cD.e$.START_APPLICATION_STREAMING_VIEW]: Ge,
-        [cD.e$.SUSPEND_APPLICATION_STREAMING_VIEW]: w8,
-        [cD.e$.RESUME_APPLICATION_STREAMING_VIEW]: w8,
-        [cD.e$.SET_APPLICATION_STREAMING_VIEW_FIT]: w9,
-        [cD.e$.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: w8,
-        [cD.e$.STOP_APPLICATION_STREAMING_VIEW]: w8,
+        [cD.e$.START_APPLICATION_STREAMING_VIEW]: Gn,
+        [cD.e$.SUSPEND_APPLICATION_STREAMING_VIEW]: Ge,
+        [cD.e$.RESUME_APPLICATION_STREAMING_VIEW]: Ge,
+        [cD.e$.SET_APPLICATION_STREAMING_VIEW_FIT]: Gt,
+        [cD.e$.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: Ge,
+        [cD.e$.STOP_APPLICATION_STREAMING_VIEW]: Ge,
         [cD.e$.GET_CAMERA_VIEW_CAPABILITIES]: {
             request: void 0,
             response: (e) => ({ available: e.boolean().required(), transport: e.string().valid("iframe").required() }),
         },
-        [cD.e$.START_CAMERA_VIEW]: Ge,
-        [cD.e$.SUSPEND_CAMERA_VIEW]: w8,
-        [cD.e$.RESUME_CAMERA_VIEW]: w8,
-        [cD.e$.SET_CAMERA_VIEW_FIT]: w9,
-        [cD.e$.STOP_CAMERA_VIEW]: w8,
+        [cD.e$.START_CAMERA_VIEW]: Gn,
+        [cD.e$.SUSPEND_CAMERA_VIEW]: Ge,
+        [cD.e$.RESUME_CAMERA_VIEW]: Ge,
+        [cD.e$.SET_CAMERA_VIEW_FIT]: Gt,
+        [cD.e$.STOP_CAMERA_VIEW]: Ge,
         [cD.e$.SHARE_INTERACTION]: {
             request: (e) => {
                 var t, n;
@@ -41134,7 +41147,7 @@ let w8 = {
                                 subtext: t.string().max(100),
                                 icon: t
                                     .string()
-                                    .valid(...w5)
+                                    .valid(...w4)
                                     .meta({ className: "ContextMenuIconName" }),
                                 color: t.string().valid("default", "brand", "danger", "premium", "success"),
                                 disabled: t.boolean(),
@@ -41229,8 +41242,8 @@ let w8 = {
                     .items(
                         e.object({
                             type: e.number().required(),
-                            user: GI(e).required(),
-                            presence: e.object({ status: e.string().required(), activity: Gf(e).allow(null) }),
+                            user: GT(e).required(),
+                            presence: e.object({ status: e.string().required(), activity: Gp(e).allow(null) }),
                         }),
                     ),
             }),
@@ -41252,7 +41265,7 @@ let w8 = {
                             t.object({
                                 type: t
                                     .number()
-                                    .valid(w0.U.MAIN)
+                                    .valid(w2.U.MAIN)
                                     .required()
                                     .meta({ className: "EmbeddedSurfaceType.MAIN" }),
                                 channel_id: t.string().optional().meta({ className: "ChannelId" }),
@@ -41261,7 +41274,7 @@ let w8 = {
                             t.object({
                                 type: t
                                     .number()
-                                    .valid(w0.U.APP_CHANNEL)
+                                    .valid(w2.U.APP_CHANNEL)
                                     .required()
                                     .meta({ className: "EmbeddedSurfaceType.APP_CHANNEL" }),
                                 channel_id: t.string().required().meta({ className: "ChannelId" }),
@@ -41270,7 +41283,7 @@ let w8 = {
                             t.object({
                                 type: t
                                     .number()
-                                    .valid(w0.U.VOICE_CHANNEL)
+                                    .valid(w2.U.VOICE_CHANNEL)
                                     .required()
                                     .meta({ className: "EmbeddedSurfaceType.VOICE_CHANNEL" }),
                                 channel_id: t.string().required().meta({ className: "ChannelId" }),
@@ -41279,7 +41292,7 @@ let w8 = {
                             t.object({
                                 type: t
                                     .number()
-                                    .valid(w0.U.INTERACTION_MODAL)
+                                    .valid(w2.U.INTERACTION_MODAL)
                                     .required()
                                     .meta({ className: "EmbeddedSurfaceType.INTERACTION_MODAL" }),
                                 channel_id: t.string().required().meta({ className: "ChannelId" }),
@@ -41288,7 +41301,7 @@ let w8 = {
                             t.object({
                                 type: t
                                     .number()
-                                    .valid(w0.U.OVERLAY)
+                                    .valid(w2.U.OVERLAY)
                                     .required()
                                     .meta({ className: "EmbeddedSurfaceType.OVERLAY" }),
                             }),
@@ -41302,14 +41315,14 @@ let w8 = {
                             interaction_id: e.string().optional(),
                         })
                         .required(),
-                    platform: w7(e, "ActivityPlatform").required(),
+                    platform: w9(e, "ActivityPlatform").required(),
                 };
             },
         },
         [cD.e$.GET_USER]: {
             embeddedAppSDK: !0,
             request: (e) => ({ id: e.string().max(64).required() }),
-            response: (e) => GI(e).allow(null),
+            response: (e) => GT(e).allow(null),
         },
         [cD.e$.GET_QUEST_ENROLLMENT_STATUS]: {
             embeddedAppSDK: !0,
@@ -41367,9 +41380,9 @@ let w8 = {
         [cD.e$.SET_ORIENTATION_LOCK_STATE]: {
             embeddedAppSDK: !0,
             request: (e) => ({
-                lock_state: w7(e, "OrientationLockState").required(),
-                picture_in_picture_lock_state: w7(e, "OrientationLockState", { nullable: !0 }).optional(),
-                grid_lock_state: w7(e, "OrientationLockState", { nullable: !0 }).optional(),
+                lock_state: w9(e, "OrientationLockState").required(),
+                picture_in_picture_lock_state: w9(e, "OrientationLockState", { nullable: !0 }).optional(),
+                grid_lock_state: w9(e, "OrientationLockState", { nullable: !0 }).optional(),
             }),
             response: void 0,
         },
@@ -41408,7 +41421,7 @@ let w8 = {
                                 .object({
                                     id: t.string().required(),
                                     name: t.string().required(),
-                                    type: w7(t, "SKUTypes").required(),
+                                    type: w9(t, "SKUTypes").required(),
                                     price: t
                                         .object({ amount: t.number().required(), currency: t.string().required() })
                                         .required(),
@@ -41425,17 +41438,17 @@ let w8 = {
         [cD.e$.GET_ENTITLEMENTS_EMBEDDED]: {
             embeddedAppSDK: !0,
             request: void 0,
-            response: (e) => ({ entitlements: e.array().items(Gc(e)).required() }),
+            response: (e) => ({ entitlements: e.array().items(G_(e)).required() }),
         },
         [cD.e$.START_PURCHASE]: {
             embeddedAppSDK: !0,
             request: (e) => ({ sku_id: e.string().required().meta({ className: "SkuId" }), pid: e.number().min(0) }),
-            response: (e) => e.array().items(Gc(e)).allow(null),
+            response: (e) => e.array().items(G_(e)).allow(null),
         },
         [cD.e$.GET_CHANNEL]: {
             embeddedAppSDK: !0,
             request: (e) => ({ channel_id: e.string().required().meta({ className: "ChannelId" }) }),
-            response: (e) => Gl(e),
+            response: (e) => Gd(e),
         },
         [cD.e$.GET_CHANNELS]: {
             embeddedAppSDK: !0,
@@ -41447,13 +41460,13 @@ let w8 = {
                         e.object({
                             id: e.string().required().meta({ className: "ChannelId" }),
                             name: e.string().allow("").required(),
-                            type: w7(e, "ChannelTypes").required(),
+                            type: w9(e, "ChannelTypes").required(),
                         }),
                     )
                     .required(),
             }),
         },
-        [cD.e$.GET_SELECTED_VOICE_CHANNEL]: { request: void 0, response: (e) => Gl(e).allow(null) },
+        [cD.e$.GET_SELECTED_VOICE_CHANNEL]: { request: void 0, response: (e) => Gd(e).allow(null) },
         [cD.e$.SELECT_VOICE_CHANNEL]: {
             request: (e) => ({
                 channel_id: e.string().allow(null).optional().meta({ className: "ChannelId" }),
@@ -41461,14 +41474,14 @@ let w8 = {
                 force: e.boolean().optional(),
                 navigate: e.boolean().optional(),
             }),
-            response: (e) => Gl(e).allow(null),
+            response: (e) => Gd(e).allow(null),
         },
         [cD.e$.SELECT_TEXT_CHANNEL]: {
             request: (e) => ({
                 channel_id: e.string().allow(null).optional().meta({ className: "ChannelId" }),
                 timeout: e.number().min(0).max(60).optional(),
             }),
-            response: (e) => Gl(e).allow(null),
+            response: (e) => Gd(e).allow(null),
         },
         [cD.e$.CREATE_CHANNEL_INVITE]: {
             request: (e) => ({
@@ -41477,9 +41490,9 @@ let w8 = {
                 max_uses: e.number().optional(),
                 temporary: e.boolean().optional(),
                 unique: e.boolean().optional(),
-                target_type: w7(e, "InviteTargetTypes", { nullable: !0 }).optional(),
-                target_user_id: Gi(e).meta({ className: "UserId" }),
-                target_application_id: Gi(e),
+                target_type: w9(e, "InviteTargetTypes", { nullable: !0 }).optional(),
+                target_user_id: Ga(e).meta({ className: "UserId" }),
+                target_application_id: Ga(e),
             }),
             response: (e) => ({
                 code: e.string().required(),
@@ -41498,7 +41511,7 @@ let w8 = {
                         icon: e.string().allow(null).required(),
                     })
                     .optional(),
-                expires_at: Gi(e),
+                expires_at: Ga(e),
                 max_age: e.number().optional(),
                 max_uses: e.number().optional(),
                 uses: e.number().optional(),
@@ -41515,7 +41528,7 @@ let w8 = {
                 id: e.string().required().meta({ className: "GuildId" }),
                 name: e.string().required(),
                 icon_url: e.string().allow(null).required(),
-                vanity_url_code: Gi(e),
+                vanity_url_code: Ga(e),
             }),
         },
         [cD.e$.GET_GUILDS]: {
@@ -41604,55 +41617,55 @@ let w8 = {
                             .min(1)
                             .max(2),
                         instance: e.boolean(),
-                        supported_platforms: e.array().items(w7(e, "ActivityGamePlatforms")).min(1).max(10),
+                        supported_platforms: e.array().items(w9(e, "ActivityGamePlatforms")).min(1).max(10),
                         type: e
                             .number()
                             .default(cD.$p.PLAYING)
                             .valid(cD.$p.PLAYING, cD.$p.LISTENING, cD.$p.WATCHING, cD.$p.COMPETING),
-                        status_display_type: e.number().optional().valid(w3.A.NAME, w3.A.STATE, w3.A.DETAILS),
+                        status_display_type: e.number().optional().valid(w6.A.NAME, w6.A.STATE, w6.A.DETAILS),
                     })
                     .unknown(!0)
                     .allow(null),
             }),
-            response: (e) => Gf(e).keys({ type: e.number().required() }).allow(null),
+            response: (e) => Gp(e).keys({ type: e.number().required() }).allow(null),
         },
     };
-function Gn(e) {
+function Gr(e) {
     return e.object({
         x: e.number().min(-1e5).max(1e5).required(),
         y: e.number().min(-1e5).max(1e5).required(),
         z: e.number().min(-1e5).max(1e5).required(),
     });
 }
-function Gi(e) {
+function Ga(e) {
     return e.string().allow(null).optional();
 }
-function Gr(e) {
+function Gs(e) {
     return e.number().allow(null).optional();
 }
-function Ga(e) {
+function Gl(e) {
     return e.boolean().allow(null).optional();
 }
-function Gs(e) {
-    return e.object({ url: Gi(e), proxy_url: Gi(e), height: Gr(e), width: Gr(e) });
+function Go(e) {
+    return e.object({ url: Ga(e), proxy_url: Ga(e), height: Gs(e), width: Gs(e) });
 }
-function Gl(e) {
+function Gd(e) {
     return e.object({
         id: e.string().required().meta({ className: "ChannelId" }),
-        type: w7(e, "ChannelTypes").required(),
-        guild_id: Gi(e).meta({ className: "GuildId" }),
-        name: Gi(e),
-        topic: Gi(e),
-        bitrate: Gr(e),
-        user_limit: Gr(e),
-        position: Gr(e),
+        type: w9(e, "ChannelTypes").required(),
+        guild_id: Ga(e).meta({ className: "GuildId" }),
+        name: Ga(e),
+        topic: Ga(e),
+        bitrate: Gs(e),
+        user_limit: Gs(e),
+        position: Gs(e),
         voice_states: e
             .array()
             .items(
                 e.object({
                     mute: e.boolean().required(),
                     nick: e.string().required(),
-                    user: GI(e).required(),
+                    user: GT(e).required(),
                     voice_state: e
                         .object({
                             mute: e.boolean().required(),
@@ -41674,11 +41687,11 @@ function Gl(e) {
                         .object({
                             id: e.string().required(),
                             channel_id: e.string().required(),
-                            guild_id: Gi(e),
-                            author: GI(e).allow(null).optional(),
+                            guild_id: Ga(e),
+                            author: GT(e).allow(null).optional(),
                             member: e
                                 .object({
-                                    nick: Gi(e),
+                                    nick: Ga(e),
                                     roles: e.array().items(e.string()).required(),
                                     joined_at: e.string().required(),
                                     deaf: e.boolean().required(),
@@ -41688,10 +41701,10 @@ function Gl(e) {
                                 .optional(),
                             content: e.string().allow("").required(),
                             timestamp: e.string().required(),
-                            edited_timestamp: Gi(e),
+                            edited_timestamp: Ga(e),
                             tts: e.boolean().required(),
                             mention_everyone: e.boolean().required(),
-                            mentions: e.array().items(GI(e)).required(),
+                            mentions: e.array().items(GT(e)).required(),
                             mention_roles: e.array().items(e.string()).required(),
                             mention_channels: e
                                 .array()
@@ -41713,8 +41726,8 @@ function Gl(e) {
                                         size: e.number().required(),
                                         url: e.string().required(),
                                         proxy_url: e.string().required(),
-                                        height: Gr(e),
-                                        width: Gr(e),
+                                        height: Gs(e),
+                                        width: Gs(e),
                                     }),
                                 )
                                 .required(),
@@ -41722,29 +41735,29 @@ function Gl(e) {
                                 .array()
                                 .items(
                                     e.object({
-                                        title: Gi(e),
-                                        type: Gi(e),
-                                        description: Gi(e),
-                                        url: Gi(e),
-                                        timestamp: Gi(e),
-                                        color: Gr(e),
+                                        title: Ga(e),
+                                        type: Ga(e),
+                                        description: Ga(e),
+                                        url: Ga(e),
+                                        timestamp: Ga(e),
+                                        color: Gs(e),
                                         footer: e
                                             .object({
                                                 text: e.string().required(),
-                                                icon_url: Gi(e),
-                                                proxy_icon_url: Gi(e),
+                                                icon_url: Ga(e),
+                                                proxy_icon_url: Ga(e),
                                             })
                                             .allow(null)
                                             .optional(),
-                                        image: Gs(e).allow(null).optional(),
-                                        thumbnail: Gs(e).allow(null).optional(),
-                                        video: Gs(e).allow(null).optional(),
+                                        image: Go(e).allow(null).optional(),
+                                        thumbnail: Go(e).allow(null).optional(),
+                                        video: Go(e).allow(null).optional(),
                                         provider: e
-                                            .object({ name: Gi(e), url: Gi(e) })
+                                            .object({ name: Ga(e), url: Ga(e) })
                                             .allow(null)
                                             .optional(),
                                         author: e
-                                            .object({ name: Gi(e), url: Gi(e), icon_url: Gi(e), proxy_icon_url: Gi(e) })
+                                            .object({ name: Ga(e), url: Ga(e), icon_url: Ga(e), proxy_icon_url: Ga(e) })
                                             .allow(null)
                                             .optional(),
                                         fields: e
@@ -41753,7 +41766,7 @@ function Gl(e) {
                                                 e.object({
                                                     name: e.string().required(),
                                                     value: e.string().required(),
-                                                    inline: Ga(e),
+                                                    inline: Gl(e),
                                                 }),
                                             )
                                             .allow(null)
@@ -41775,7 +41788,7 @@ function Gl(e) {
                                             .object({
                                                 id: e.string().allow(null).required(),
                                                 name: e.string().allow(null).required(),
-                                                animated: Ga(e),
+                                                animated: Gl(e),
                                             })
                                             .required(),
                                     }),
@@ -41784,27 +41797,27 @@ function Gl(e) {
                                 .optional(),
                             nonce: e.alternatives().try(e.string(), e.number(), e.valid(null)).optional(),
                             pinned: e.boolean().required(),
-                            webhook_id: Gi(e),
+                            webhook_id: Ga(e),
                             type: e.number().required(),
                             activity: e
-                                .object({ type: e.number().required(), party_id: Gi(e) })
+                                .object({ type: e.number().required(), party_id: Ga(e) })
                                 .allow(null)
                                 .optional(),
                             application: e
                                 .object({
                                     id: e.string().required(),
-                                    cover_image: Gi(e),
+                                    cover_image: Ga(e),
                                     description: e.string().required(),
-                                    icon: Gi(e),
+                                    icon: Ga(e),
                                     name: e.string().required(),
                                 })
                                 .allow(null)
                                 .optional(),
                             message_reference: e
-                                .object({ message_id: Gi(e), channel_id: Gi(e), guild_id: Gi(e) })
+                                .object({ message_id: Ga(e), channel_id: Ga(e), guild_id: Ga(e) })
                                 .allow(null)
                                 .optional(),
-                            flags: Gr(e),
+                            flags: Gs(e),
                             application_id: e.string().optional(),
                             sticker_items: e
                                 .array()
@@ -41818,13 +41831,13 @@ function Gl(e) {
                                 .optional(),
                             poll: e
                                 .object({
-                                    question: Go(e).required(),
+                                    question: Gc(e).required(),
                                     answers: e
                                         .array()
                                         .items(
                                             e.object({
                                                 answer_id: e.number().required(),
-                                                poll_media: Go(e).required(),
+                                                poll_media: Gc(e).required(),
                                             }),
                                         )
                                         .required(),
@@ -41848,8 +41861,8 @@ function Gl(e) {
                                         .optional(),
                                 })
                                 .optional(),
-                            interaction_metadata: Gd(e)
-                                .keys({ triggering_interaction_metadata: Gd(e).optional() })
+                            interaction_metadata: Gu(e)
+                                .keys({ triggering_interaction_metadata: Gu(e).optional() })
                                 .optional(),
                             role_subscription_data: e
                                 .object({
@@ -41860,8 +41873,8 @@ function Gl(e) {
                                 })
                                 .optional(),
                             blocked: e.boolean().optional(),
-                            nick: Gi(e),
-                            author_color: Gi(e),
+                            nick: Ga(e),
+                            author_color: Ga(e),
                         })
                         .meta({ className: "Message" });
                 })(e),
@@ -41869,17 +41882,17 @@ function Gl(e) {
             .required(),
     });
 }
-function Go(e) {
+function Gc(e) {
     return e.object({
         text: e.string().optional(),
-        emoji: e.object({ id: Gi(e), name: Gi(e), animated: Ga(e) }).optional(),
+        emoji: e.object({ id: Ga(e), name: Ga(e), animated: Gl(e) }).optional(),
     });
 }
-function Gd(e) {
+function Gu(e) {
     return e.object({
         id: e.string().required(),
         type: e.number().required(),
-        user: GI(e).optional(),
+        user: GT(e).optional(),
         authorizing_integration_owners: e
             .object({
                 0: e.string().optional().description("ID of the guild the app is installed to"),
@@ -41887,19 +41900,19 @@ function Gd(e) {
             })
             .required(),
         original_response_message_id: e.string().optional(),
-        target_user: GI(e).optional(),
+        target_user: GT(e).optional(),
         target_message_id: e.string().optional(),
         interacted_message_id: e.string().optional(),
     });
 }
-function Gc(e) {
+function G_(e) {
     return e.object({
         id: e.string().required(),
         sku_id: e.string().required(),
         application_id: e.string().required(),
         user_id: e.string().required(),
         gift_code_flags: e.number().required(),
-        type: w7(e, "EntitlementTypes").required(),
+        type: w9(e, "EntitlementTypes").required(),
         gifter_user_id: e.string().allow(null).optional(),
         branches: e.array().items(e.string()).allow(null).optional(),
         starts_at: e.string().allow(null).optional(),
@@ -41910,24 +41923,24 @@ function Gc(e) {
         gift_code_batch_id: e.string().allow(null).optional(),
     });
 }
-function Gu(e, t) {
+function GE(e, t) {
     return e.object({
         low: e.number().min(0).max(t).required(),
         mid: e.number().min(0).max(t).required(),
         high: e.number().min(0).max(t).required(),
     });
 }
-function G_(e) {
-    return e.object({ absorption: Gu(e, 1).required(), scattering: e.number().min(0).max(1).required() });
+function GA(e) {
+    return e.object({ absorption: GE(e, 1).required(), scattering: e.number().min(0).max(1).required() });
 }
-function GE(e) {
+function Gh(e) {
     return e.object({
         x: e.number().min(-1e3).max(1e3).required(),
         y: e.number().min(-1e3).max(1e3).required(),
         z: e.number().min(-1e3).max(1e3).required(),
     });
 }
-function GA(e) {
+function Gf(e) {
     return e.object({
         available: e.boolean().required(),
         connected: e.boolean().required(),
@@ -41949,7 +41962,7 @@ function GA(e) {
             .required(),
     });
 }
-function Gh(e) {
+function GI(e) {
     return e
         .object({
             user_id: e.string().required(),
@@ -41963,7 +41976,7 @@ function Gh(e) {
         })
         .required();
 }
-function Gf(e) {
+function Gp(e) {
     return e.object({
         session_id: e.string().optional(),
         type: e.number().optional(),
@@ -42012,7 +42025,7 @@ function Gf(e) {
         buttons: e.array().items(e.string()).optional(),
     });
 }
-function GI(e) {
+function GT(e) {
     return e
         .object({
             id: e.string().required().description("User ID").meta({ className: "UserId" }),
@@ -42039,10 +42052,10 @@ function GI(e) {
         .description("Discord User")
         .meta({ className: "User" });
 }
-function Gp(e, t) {
+function Gm(e, t) {
     let { scope: n, validateAccess: i, handler: r } = t,
         a = { scope: n, validateAccess: i, handler: r },
-        s = Gt[e]?.request,
+        s = Gi[e]?.request,
         l = null;
     return (
         null != s &&
@@ -42052,69 +42065,69 @@ function Gp(e, t) {
         a
     );
 }
-var GT = n(730602),
-    Gm = n(878014),
-    Gg = n(477754),
-    GS = n(901092);
-let GN = {
-    [j.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: Gp(j.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-        scope: w$,
+var Gg = n(730602),
+    GS = n(878014),
+    GN = n(477754),
+    GC = n(901092);
+let GO = {
+    [j.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: Gm(j.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+        scope: wX,
         handler(e) {
             let { socket: t } = e;
-            return ((0, wW.lG)(t.transport), wK());
+            return ((0, wK.lG)(t.transport), wz());
         },
     }),
-    [j.e$_.REQUEST_PROXY_TICKET_REFRESH]: Gp(j.e$_.REQUEST_PROXY_TICKET_REFRESH, {
-        scope: w$,
+    [j.e$_.REQUEST_PROXY_TICKET_REFRESH]: Gm(j.e$_.REQUEST_PROXY_TICKET_REFRESH, {
+        scope: wX,
         async handler(e) {
             let { socket: t } = e;
-            (0, wW.lG)(t.transport);
-            let n = (0, wW.D2)(t.application);
-            if (!(0, Gm.D)(t.application))
-                throw new wD.A(
+            (0, wK.lG)(t.transport);
+            let n = (0, wK.D2)(t.application);
+            if (!(0, GS.D)(t.application))
+                throw new wb.A(
                     { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                     "This application cannot access this API",
                 );
-            let i = (0, GS.A)(t) ? t.context : void 0,
+            let i = (0, GC.A)(t) ? t.context : void 0,
                 r = (0, sA.A)(i?.surface);
             try {
                 return {
                     ticket:
-                        i?.source.type === Gg.f.FRAME ? await (0, GT.D)(n, r, i.surface.type) : await (0, GT.D)(n, r),
+                        i?.source.type === GN.f.FRAME ? await (0, Gg.D)(n, r, i.surface.type) : await (0, Gg.D)(n, r),
                 };
             } catch (e) {
-                throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Failed to create proxy ticket");
+                throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Failed to create proxy ticket");
             }
         },
     }),
 };
-var GC = n(20015),
-    GO = n(977445);
-function GR(e) {
+var GR = n(20015),
+    GL = n(977445);
+function Gy(e) {
     return e.object().unknown(!0);
 }
-function GL() {
+function GD() {
     let e = nL.Ay.getConnectedActivityChannelId();
     return nm.A.getChannel(e);
 }
-let Gy = {
+let Gv = {
         [j.e$_.SEND_ANALYTICS_EVENT]: {
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
-                    .keys({ event_name: e.string().required(), event_properties: GR(e).required() }),
+                    .keys({ event_name: e.string().required(), event_properties: Gy(e).required() }),
             handler(e) {
                 let {
                     socket: t,
                     args: { event_name: n, event_properties: i },
                 } = e;
-                ((0, wW.lG)(t.transport), (0, wW.D2)(t.application));
+                ((0, wK.lG)(t.transport), (0, wK.D2)(t.application));
                 let r = t.application.id,
-                    a = GL(),
+                    a = GD(),
                     s = a?.getGuildId(),
                     l = ak.A.getApplication(r);
-                if (!(0, GC.n)(l, j.gfo.EMBEDDED_FIRST_PARTY))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                if (!(0, GR.n)(l, j.gfo.EMBEDDED_FIRST_PARTY))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
                 let o = (0, nO.DV)(r),
                     d = {
                         activity_application_id: r,
@@ -42126,14 +42139,14 @@ let Gy = {
             },
         },
         [j.e$_.GET_APPLICATION_TICKET]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t } = e,
                     n = t.application.id;
-                if (null == n) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == n) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                 return x.Bo.post({
                     url: j.Rsh.APPLICATION_TICKET(n),
-                    body: { test_mode: (0, GO.Fs)(n) },
+                    body: { test_mode: (0, GL.Fs)(n) },
                     retries: 3,
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -42144,24 +42157,24 @@ let Gy = {
             },
         },
     },
-    GD = {
+    Gb = {
         [j.e$_.SET_CERTIFIED_DEVICES]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] },
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({
                         devices: e.array().items(
-                            GR(e).keys({
+                            Gy(e).keys({
                                 type: e
                                     .string()
                                     .required()
                                     .valid([iC.oh.AUDIO_INPUT, iC.oh.AUDIO_OUTPUT, iC.oh.VIDEO_INPUT]),
                                 id: e.string().required().min(1),
-                                vendor: GR(e)
+                                vendor: Gy(e)
                                     .required()
                                     .keys({ name: e.string().min(1), url: e.string().min(1) }),
-                                model: GR(e)
+                                model: Gy(e)
                                     .required()
                                     .keys({ name: e.string().min(1), url: e.string().min(1) }),
                                 related: e.array().items(e.string().min(1)),
@@ -42178,7 +42191,7 @@ let Gy = {
                     socket: i,
                     args: { devices: r },
                 } = e;
-                if (null == i.application.id) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == i.application.id) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                 ((t = i.application.id),
                     (n = r.map((e) => ({
                         type: e.type,
@@ -42195,25 +42208,25 @@ let Gy = {
             },
         },
     };
-var Gv = n(147036),
-    Gb = n(144189);
-function GM(e, t) {
+var GM = n(147036),
+    GP = n(144189);
+function GU(e, t) {
     if ("guild" === e.kind && t !== e.guildId)
-        throw new wD.A(
+        throw new wb.A(
             { errorCode: j.Lw6.INVALID_CHANNEL },
             "This app can only select a voice channel in the server it is installed in",
         );
 }
-let GP = {
-        [j.e$_.GET_CHANNEL]: Gp(j.e$_.GET_CHANNEL, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.GUILDS, w1.F.GUILDS_CHANNELS_READ, w1.F.BOT] },
+let Gw = {
+        [j.e$_.GET_CHANNEL]: Gm(j.e$_.GET_CHANNEL, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.GUILDS, w3.F.GUILDS_CHANNELS_READ, w3.F.BOT] },
             validateAccess(e) {
                 let {
                     args: { channel_id: t },
                     socket: n,
                     botScopeOnly: i,
                 } = e;
-                if (i) return (0, Gb.h4)(n, t);
+                if (i) return (0, GP.h4)(n, t);
             },
             handler(e) {
                 let {
@@ -42222,17 +42235,17 @@ let GP = {
                         botScopeOnly: i,
                     } = e,
                     r = nm.A.getChannel(t);
-                if (null == r) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                if (null == r) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
                 if (r.isPrivate()) {
                     let e = n.authorization.scopes;
-                    if (!e.has(w1.F.RPC) && !e.has(w1.F.DM_CHANNELS_READ))
-                        throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Invalid scope");
+                    if (!e.has(w3.F.RPC) && !e.has(w3.F.DM_CHANNELS_READ))
+                        throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Invalid scope");
                 }
-                return (0, wW.SN)(r, i ? (0, Gb.Ol)(n, r) : (0, wW.B_)(r, n.application.id, n.authorization.scopes));
+                return (0, wK.SN)(r, i ? (0, GP.Ol)(n, r) : (0, wK.B_)(r, n.application.id, n.authorization.scopes));
             },
         }),
-        [j.e$_.GET_CHANNELS]: Gp(j.e$_.GET_CHANNELS, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.BOT] },
+        [j.e$_.GET_CHANNELS]: Gm(j.e$_.GET_CHANNELS, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.BOT] },
             validateAccess(e) {
                 let {
                     args: { guild_id: t },
@@ -42241,11 +42254,11 @@ let GP = {
                 } = e;
                 if (i) {
                     if (null == t || "" === t)
-                        throw new wD.A(
+                        throw new wb.A(
                             { errorCode: j.Lw6.INVALID_PERMISSIONS },
                             "Access to channel data via BotScope is only available for a guild in embedded apps",
                         );
-                    return (0, Gb.f$)(n, t);
+                    return (0, GP.f$)(n, t);
                 }
             },
             handler(e) {
@@ -42257,14 +42270,14 @@ let GP = {
                     r = iM().values(nm.A.loadAllGuildAndPrivateChannelsFromDisk());
                 if (null != t && "" !== t) {
                     let e = e1.A.getGuild(t);
-                    if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_GUILD }, `Invalid guild id: ${t}`);
+                    if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_GUILD }, `Invalid guild id: ${t}`);
                     r = r.filter((t) => {
                         let { guild_id: n } = t;
                         return n === e.id;
                     });
                 }
                 return (
-                    i && (r = r.filter((e) => (0, Gb.sR)(n, e))),
+                    i && (r = r.filter((e) => (0, GP.sR)(n, e))),
                     {
                         channels: r
                             .filter((e) => nw.A.can(j.xBc.VIEW_CHANNEL, e))
@@ -42276,48 +42289,48 @@ let GP = {
                 );
             },
         }),
-        [j.e$_.GET_CHANNEL_PERMISSIONS]: Gp(j.e$_.GET_CHANNEL_PERMISSIONS, {
-            scope: { [bt.sm.ANY]: [w1.F.GUILDS_MEMBERS_READ, w1.F.GUILDS_CHANNELS_READ, w1.F.BOT] },
+        [j.e$_.GET_CHANNEL_PERMISSIONS]: Gm(j.e$_.GET_CHANNEL_PERMISSIONS, {
+            scope: { [bi.sm.ANY]: [w3.F.GUILDS_MEMBERS_READ, w3.F.GUILDS_CHANNELS_READ, w3.F.BOT] },
             validateAccess(e) {
                 let { socket: t, botScopeOnly: n } = e;
-                if (!(0, GS.A)(t))
-                    throw new wD.A(
+                if (!(0, GC.A)(t))
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_COMMAND },
                         "Access to the current user's permissions within the embedded context's associated channel is only available for embedded apps",
                     );
                 let i = (0, sA.A)(t.context.surface);
                 if (null == i)
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_COMMAND },
                         "Current embedded context not associated to a channel",
                     );
-                n && (0, Gb.h4)(t, i);
+                n && (0, GP.h4)(t, i);
             },
             handler(e) {
                 let { socket: t } = e,
-                    n = (0, GS.A)(t) ? (0, sA.A)(t.context.surface) : void 0,
+                    n = (0, GC.A)(t) ? (0, sA.A)(t.context.surface) : void 0,
                     i = nm.A.getChannel(n);
-                if (null == i) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Invalid channel");
+                if (null == i) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Invalid channel");
                 let r = nw.A.computePermissions(i);
                 return { permissions: "bigint" == typeof r ? r : r.toString() };
             },
         }),
-        [j.e$_.SELECT_VOICE_CHANNEL]: Gp(j.e$_.SELECT_VOICE_CHANNEL, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.W_] },
+        [j.e$_.SELECT_VOICE_CHANNEL]: Gm(j.e$_.SELECT_VOICE_CHANNEL, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.W_] },
             handler(e) {
                 let {
                         server: t,
                         socket: n,
                         args: { channel_id: i, timeout: r = 0, force: a = !1, navigate: s = !1 },
                     } = e,
-                    l = n.authorization.scopes.has(w1.F.RPC)
+                    l = n.authorization.scopes.has(w3.F.RPC)
                         ? { kind: "any" }
                         : (function (e) {
-                              let { frame: t } = (0, wv.Ay)(e);
-                              if ((0, wv.OQ)(t.applicationId)) return { kind: "any" };
-                              let n = t.surface.type !== w0.U.OVERLAY ? t.surface.guildId : void 0;
+                              let { frame: t } = (0, wM.Ay)(e);
+                              if ((0, wM.OQ)(t.applicationId)) return { kind: "any" };
+                              let n = t.surface.type !== w2.U.OVERLAY ? t.surface.guildId : void 0;
                               if (null == n)
-                                  throw new wD.A(
+                                  throw new wb.A(
                                       { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                                       "This app can only select a voice channel in the server it is installed in",
                                   );
@@ -42325,12 +42338,12 @@ let GP = {
                           })(n),
                     o = nS.Ay.getVoiceChannelId();
                 function d() {
-                    null != o && GM(l, nm.A.getChannel(o)?.getGuildId());
+                    null != o && GU(l, nm.A.getChannel(o)?.getGuildId());
                 }
                 if (null == i) return (d(), t0.default.selectVoiceChannel(null), null);
                 if (null != o && o !== i) {
                     if (!1 === a)
-                        throw new wD.A(
+                        throw new wb.A(
                             { errorCode: j.Lw6.SELECT_VOICE_FORCE_REQUIRED },
                             "User is already joined to a voice channel.",
                         );
@@ -42339,30 +42352,30 @@ let GP = {
                 return t
                     .storeWait(n, () => nm.A.getChannel(i), r)
                     .catch(() => {
-                        throw new wD.A(
+                        throw new wb.A(
                             { errorCode: j.Lw6.SELECT_CHANNEL_TIMED_OUT },
                             "Request to select voice channel timed out.",
                         );
                     })
                     .then((e) => {
-                        if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${i}`);
+                        if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${i}`);
                         if (!(0, nT.gV)(e.type))
-                            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Channel is not a voice channel");
+                            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Channel is not a voice channel");
                         return (
-                            GM(l, e.getGuildId()),
+                            GU(l, e.getGuildId()),
                             Promise.all([
                                 Promise.resolve(e),
-                                (0, wW.SN)(e, (0, wW.B_)(e, n.application.id, n.authorization.scopes)),
+                                (0, wK.SN)(e, (0, wK.B_)(e, n.application.id, n.authorization.scopes)),
                             ])
                         );
                     })
                     .then((e) => {
                         let [t, n] = e;
                         if (null != n.guild_id) {
-                            if ((0, Gv.Pd)(t, nG.A, e1.A))
-                                throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Channel is full");
+                            if ((0, GM.Pd)(t, nG.A, e1.A))
+                                throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Channel is full");
                             if (!nw.A.can(j.xBc.CONNECT, t))
-                                throw new wD.A(
+                                throw new wb.A(
                                     { errorCode: j.Lw6.INVALID_PERMISSIONS },
                                     "Connect permission required to join channel",
                                 );
@@ -42373,17 +42386,17 @@ let GP = {
                     });
             },
         }),
-        [j.e$_.GET_SELECTED_VOICE_CHANNEL]: Gp(j.e$_.GET_SELECTED_VOICE_CHANNEL, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
+        [j.e$_.GET_SELECTED_VOICE_CHANNEL]: Gm(j.e$_.GET_SELECTED_VOICE_CHANNEL, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
             handler(e) {
                 let { socket: t } = e,
                     n = nS.Ay.getVoiceChannelId(),
                     i = null != n ? nm.A.getChannel(n) : null;
-                return null != i ? (0, wW.SN)(i, (0, wW.B_)(i, t.application.id, t.authorization.scopes)) : null;
+                return null != i ? (0, wK.SN)(i, (0, wK.B_)(i, t.application.id, t.authorization.scopes)) : null;
             },
         }),
-        [j.e$_.SELECT_TEXT_CHANNEL]: Gp(j.e$_.SELECT_TEXT_CHANNEL, {
-            scope: w1.F.RPC,
+        [j.e$_.SELECT_TEXT_CHANNEL]: Gm(j.e$_.SELECT_TEXT_CHANNEL, {
+            scope: w3.F.RPC,
             handler(e) {
                 let {
                     server: t,
@@ -42395,19 +42408,19 @@ let GP = {
                     : t
                           .storeWait(n, () => nm.A.getChannel(i), r)
                           .catch(() => {
-                              throw new wD.A(
+                              throw new wb.A(
                                   { errorCode: j.Lw6.SELECT_CHANNEL_TIMED_OUT },
                                   "Request to select text channel timed out.",
                               );
                           })
                           .then((e) => {
                               if (null == e)
-                                  throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${i}`);
+                                  throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${i}`);
                               if (!(0, nT.pQ)(e.type))
-                                  throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Channel is not a text channel");
+                                  throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Channel is not a text channel");
                               return Promise.all([
                                   Promise.resolve(e),
-                                  (0, wW.SN)(e, (0, wW.B_)(e, n.application.id, n.authorization.scopes)),
+                                  (0, wK.SN)(e, (0, wK.B_)(e, n.application.id, n.authorization.scopes)),
                               ]);
                           })
                           .then((e) => {
@@ -42415,7 +42428,7 @@ let GP = {
                               if (null == n.guild_id) t0.default.selectPrivateChannel(t.id);
                               else {
                                   if (!nw.A.can(j.xBc.VIEW_CHANNEL, t))
-                                      throw new wD.A(
+                                      throw new wb.A(
                                           { errorCode: j.Lw6.INVALID_CHANNEL },
                                           "No permission to see channel",
                                       );
@@ -42425,14 +42438,14 @@ let GP = {
                           });
             },
         }),
-        [j.e$_.CREATE_CHANNEL_INVITE]: Gp(j.e$_.CREATE_CHANNEL_INVITE, {
-            scope: w1.F.RPC,
+        [j.e$_.CREATE_CHANNEL_INVITE]: Gm(j.e$_.CREATE_CHANNEL_INVITE, {
+            scope: w3.F.RPC,
             handler(e) {
                 let {
                     args: { channel_id: t, ...n },
                 } = e;
-                return P6.Ay.createInvite(t, n, "RPC").catch(() => {
-                    throw new wD.A(
+                return P7.Ay.createInvite(t, n, "RPC").catch(() => {
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PERMISSIONS },
                         `Unable to generate an invite for ${t}. Does this user have permissions?`,
                     );
@@ -42440,21 +42453,21 @@ let GP = {
             },
         }),
     },
-    GU = {
-        [j.e$_.SET_CONFIG]: Gp(j.e$_.SET_CONFIG, {
-            scope: bt.VH,
+    GG = {
+        [j.e$_.SET_CONFIG]: Gm(j.e$_.SET_CONFIG, {
+            scope: bi.VH,
             handler(e) {
                 let {
                     socket: t,
                     args: { use_interactive_pip: n },
                 } = e;
-                if (t.transport !== bt.z4.POST_MESSAGE)
-                    throw new wD.A(
+                if (t.transport !== bi.z4.POST_MESSAGE)
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_COMMAND },
                         `command not available from "${t.transport} transport`,
                     );
                 if (null == t.application.id)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "invalid application");
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "invalid application");
                 return (
                     k.h.dispatch({
                         type: "EMBEDDED_ACTIVITY_SET_CONFIG",
@@ -42466,122 +42479,122 @@ let GP = {
             },
         }),
     };
-var Gw = n(517244);
-let GG = { [bt.sm.ANY]: [bt.W_, bt.VH] },
-    Gx = {
-        [j.e$_.RELAUNCH_FRAME]: Gp(j.e$_.RELAUNCH_FRAME, {
-            scope: GG,
+var Gx = n(517244);
+let Gk = { [bi.sm.ANY]: [bi.W_, bi.VH] },
+    GF = {
+        [j.e$_.RELAUNCH_FRAME]: Gm(j.e$_.RELAUNCH_FRAME, {
+            scope: Gk,
             handler(e) {
                 let {
                         socket: t,
                         args: { build: n },
                     } = e,
-                    { applicationId: i } = (0, wv.Ay)(t).frame;
-                return { relaunched: (0, Gw.p)(i, n) };
+                    { applicationId: i } = (0, wM.Ay)(t).frame;
+                return { relaunched: (0, Gx.p)(i, n) };
             },
         }),
     },
-    Gk = { [bt.sm.ANY]: [bt.W_, bt.VH] },
-    GF = {
-        [j.e$_.GET_VOICE_CAPABILITIES]: Gp(j.e$_.GET_VOICE_CAPABILITIES, {
-            scope: Gk,
+    GB = { [bi.sm.ANY]: [bi.W_, bi.VH] },
+    GV = {
+        [j.e$_.GET_VOICE_CAPABILITIES]: Gm(j.e$_.GET_VOICE_CAPABILITIES, {
+            scope: GB,
             handler(e) {
                 let { socket: t } = e;
-                return wB.getCapabilitiesForSocket(t);
+                return wH.getCapabilitiesForSocket(t);
             },
         }),
-        [j.e$_.GET_VOICE_SESSION_PARTICIPANTS]: Gp(j.e$_.GET_VOICE_SESSION_PARTICIPANTS, {
-            scope: Gk,
+        [j.e$_.GET_VOICE_SESSION_PARTICIPANTS]: Gm(j.e$_.GET_VOICE_SESSION_PARTICIPANTS, {
+            scope: GB,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return { participants: wB.getParticipantsForSession(t, n) };
+                return { participants: wH.getParticipantsForSession(t, n) };
             },
         }),
-        [j.e$_.START_VOICE_SESSION]: Gp(j.e$_.START_VOICE_SESSION, {
-            scope: Gk,
+        [j.e$_.START_VOICE_SESSION]: Gm(j.e$_.START_VOICE_SESSION, {
+            scope: GB,
             handler(e) {
                 let { socket: t } = e,
-                    n = wB.start(t);
+                    n = wH.start(t);
                 return {
                     session_id: n.id,
                     channel_id: n.channelId,
-                    capabilities: wB.getCapabilities(),
-                    participants: wB.getParticipantsForEventSubscription(t, n.id) ?? [],
+                    capabilities: wH.getCapabilities(),
+                    participants: wH.getParticipantsForEventSubscription(t, n.id) ?? [],
                 };
             },
         }),
-        [j.e$_.ENABLE_VOICE_SPATIAL]: Gp(j.e$_.ENABLE_VOICE_SPATIAL, {
-            scope: Gk,
+        [j.e$_.ENABLE_VOICE_SPATIAL]: Gm(j.e$_.ENABLE_VOICE_SPATIAL, {
+            scope: GB,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return (wB.enableSpatial(t, n), { success: !0 });
+                return (wH.enableSpatial(t, n), { success: !0 });
             },
         }),
-        [j.e$_.DISABLE_VOICE_SPATIAL]: Gp(j.e$_.DISABLE_VOICE_SPATIAL, {
-            scope: Gk,
+        [j.e$_.DISABLE_VOICE_SPATIAL]: Gm(j.e$_.DISABLE_VOICE_SPATIAL, {
+            scope: GB,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return (wB.disableSpatial(t, n), { success: !0 });
+                return (wH.disableSpatial(t, n), { success: !0 });
             },
         }),
-        [j.e$_.UPDATE_VOICE_SPATIAL]: Gp(j.e$_.UPDATE_VOICE_SPATIAL, {
-            scope: Gk,
+        [j.e$_.UPDATE_VOICE_SPATIAL]: Gm(j.e$_.UPDATE_VOICE_SPATIAL, {
+            scope: GB,
             handler(e) {
                 let {
                         socket: t,
                         args: { session_id: n, listener: i, sources: r },
                     } = e,
                     a = r.map((e) => ({ ...e, user_id: e.user_id }));
-                return (wB.update(t, n, i, a), { success: !0 });
+                return (wH.update(t, n, i, a), { success: !0 });
             },
         }),
-        [j.e$_.SET_VOICE_SPATIAL_ACOUSTICS]: Gp(j.e$_.SET_VOICE_SPATIAL_ACOUSTICS, {
-            scope: Gk,
+        [j.e$_.SET_VOICE_SPATIAL_ACOUSTICS]: Gm(j.e$_.SET_VOICE_SPATIAL_ACOUSTICS, {
+            scope: GB,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n, acoustics: i },
                 } = e;
-                return (wB.setAcoustics(t, n, i), { success: !0 });
+                return (wH.setAcoustics(t, n, i), { success: !0 });
             },
         }),
-        [j.e$_.STOP_VOICE_SESSION]: Gp(j.e$_.STOP_VOICE_SESSION, {
-            scope: Gk,
+        [j.e$_.STOP_VOICE_SESSION]: Gm(j.e$_.STOP_VOICE_SESSION, {
+            scope: GB,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return (wB.stop(t, n), { success: !0 });
+                return (wH.stop(t, n), { success: !0 });
             },
         }),
     },
-    GB = {
-        [j.e$_.GET_CONTEXT]: Gp(j.e$_.GET_CONTEXT, {
-            scope: { [bt.sm.ANY]: [bt.W_] },
+    GH = {
+        [j.e$_.GET_CONTEXT]: Gm(j.e$_.GET_CONTEXT, {
+            scope: { [bi.sm.ANY]: [bi.W_] },
             handler(e) {
                 let { socket: t } = e;
-                if (!(0, GS.A)(t))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Command only available to Embedded Apps");
+                if (!(0, GC.A)(t))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Command only available to Embedded Apps");
                 let n = t.context;
                 return {
                     surface: (function (e) {
                         switch (e.type) {
-                            case w0.U.MAIN:
-                            case w0.U.APP_CHANNEL:
-                            case w0.U.VOICE_CHANNEL:
-                            case w0.U.INTERACTION_MODAL:
+                            case w2.U.MAIN:
+                            case w2.U.APP_CHANNEL:
+                            case w2.U.VOICE_CHANNEL:
+                            case w2.U.INTERACTION_MODAL:
                                 return { type: e.type, channel_id: e.channelId, guild_id: e.guildId };
-                            case w0.U.OVERLAY:
+                            case w2.U.OVERLAY:
                                 return { type: e.type };
                             default:
                                 throw Error("Unknown embedded surface type");
@@ -42597,16 +42610,16 @@ let GG = { [bt.sm.ANY]: [bt.W_, bt.VH] },
             },
         }),
     },
-    GV = {
-        [j.e$_.GET_GUILD]: Gp(j.e$_.GET_GUILD, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.BOT] },
+    Gj = {
+        [j.e$_.GET_GUILD]: Gm(j.e$_.GET_GUILD, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.BOT] },
             validateAccess(e) {
                 let {
                     args: { guild_id: t },
                     socket: n,
                     botScopeOnly: i,
                 } = e;
-                if (i) return (0, Gb.f$)(n, t);
+                if (i) return (0, GP.f$)(n, t);
             },
             handler(e) {
                 let {
@@ -42617,10 +42630,10 @@ let GG = { [bt.sm.ANY]: [bt.W_, bt.VH] },
                 return n
                     .storeWait(t, () => e1.A.getGuild(i), r)
                     .catch(() => {
-                        throw new wD.A({ errorCode: j.Lw6.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
+                        throw new wb.A({ errorCode: j.Lw6.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
                     })
                     .then((e) => {
-                        if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_GUILD }, `Invalid guild id: ${i}`);
+                        if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_GUILD }, `Invalid guild id: ${i}`);
                         return {
                             id: e.id,
                             name: e.name,
@@ -42631,8 +42644,8 @@ let GG = { [bt.sm.ANY]: [bt.W_, bt.VH] },
                     });
             },
         }),
-        [j.e$_.GET_GUILDS]: Gp(j.e$_.GET_GUILDS, {
-            scope: w1.F.RPC,
+        [j.e$_.GET_GUILDS]: Gm(j.e$_.GET_GUILDS, {
+            scope: w3.F.RPC,
             handler: () => ({
                 guilds: e1.A.getGuildsArray().map((e) => ({
                     id: e.id,
@@ -42642,12 +42655,12 @@ let GG = { [bt.sm.ANY]: [bt.W_, bt.VH] },
             }),
         }),
     };
-var GH = n(515718);
-let Gj = {
+var GW = n(515718);
+let GY = {
     [j.e$_.GET_IMAGE]: {
-        scope: bt.hj,
+        scope: bi.hj,
         validation: (e) =>
-            GR(e)
+            Gy(e)
                 .required()
                 .keys({
                     type: e.string().required().valid(["user"]),
@@ -42666,50 +42679,50 @@ let Gj = {
                     t = aW.Ay.getUserAvatarURL(e, !1, a, r);
                     let n = window.GLOBAL_ENV.CDN_HOST;
                     null != n && -1 !== t.indexOf(n) && (t += "&_=");
-                } else throw new wD.A({ errorCode: j.Lw6.INVALID_USER }, `Invalid user id: ${i}`);
+                } else throw new wb.A({ errorCode: j.Lw6.INVALID_USER }, `Invalid user id: ${i}`);
             }
-            if (null == t) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No valid type.");
+            if (null == t) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No valid type.");
             return fetch(t)
                 .then((e) => e.blob())
-                .then((e) => (0, GH.We)(e))
+                .then((e) => (0, GW.We)(e))
                 .then((e) => ({ data_url: e }));
         },
     },
 };
-var GW = n(119966),
-    GY = n(344351),
-    GK = n(747180),
-    G$ = n(855687);
-function Gz(e) {
-    if (!(0, GS.A)(e))
-        throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, `command not available from "${e.source.type}" transport`);
+var GK = n(119966),
+    G$ = n(344351),
+    Gz = n(747180),
+    GX = n(855687);
+function Gq(e) {
+    if (!(0, GC.A)(e))
+        throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, `command not available from "${e.source.type}" transport`);
     let { source: t, surface: n } = e.context,
         i = (0, sA.A)(n);
     switch (t.type) {
-        case Gg.f.FRAME:
+        case GN.f.FRAME:
             return {
                 frameId: t.frameId,
                 channel: null != i ? nm.A.getChannel(i) : void 0,
-                guild: e1.A.getGuild((0, GK.A)(n)),
+                guild: e1.A.getGuild((0, Gz.A)(n)),
             };
-        case Gg.f.ACTIVITY: {
+        case GN.f.ACTIVITY: {
             let e = null != i ? nm.A.getChannel(i) : void 0;
-            if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Invalid channel");
+            if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Invalid channel");
             let t = e1.A.getGuild(e.getGuildId());
-            if (null == t) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid guild ${e.getGuildId()}`);
-            if (!(0, G$.K)(nw.A, t, e))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, `No invite permissions for ${e.id}`);
+            if (null == t) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid guild ${e.getGuildId()}`);
+            if (!(0, GX.K)(nw.A, t, e))
+                throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, `No invite permissions for ${e.id}`);
             return { frameId: void 0, channel: e, guild: t };
         }
-        case Gg.f.INTERACTION:
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Command not supported in interaction modals");
+        case GN.f.INTERACTION:
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Command not supported in interaction modals");
         default:
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Command not supported on this surface");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Command not supported on this surface");
     }
 }
-let GX = {
-    [cD.e$.INVITE_USER_EMBEDDED]: Gp(cD.e$.INVITE_USER_EMBEDDED, {
-        scope: { [bt.sm.ANY]: [w1.F.DM_CHANNELS_MESSAGES_WRITE, w1.F.ACTIVITIES_INVITES_WRITE] },
+let GZ = {
+    [cD.e$.INVITE_USER_EMBEDDED]: Gm(cD.e$.INVITE_USER_EMBEDDED, {
+        scope: { [bi.sm.ANY]: [w3.F.DM_CHANNELS_MESSAGES_WRITE, w3.F.ACTIVITIES_INVITES_WRITE] },
         async handler(e) {
             let t,
                 {
@@ -42717,28 +42730,28 @@ let GX = {
                     args: { user_id: i, content: r },
                 } = e,
                 a = n.application.id;
-            if (null == a) throw new GW.G({ errorCode: cD.Lw.INVALID_COMMAND }, "No application.");
+            if (null == a) throw new GK.G({ errorCode: cD.Lw.INVALID_COMMAND }, "No application.");
             let s = nL.Ay.getConnectedActivityLocation();
             if (null == s)
-                throw new GW.G(
+                throw new GK.G(
                     { errorCode: cD.Lw.NO_ELIGIBLE_ACTIVITY },
                     "No eligible activity for application. Ensure an activity was set using setActivity.",
                 );
             switch (s.kind) {
-                case GY.T.GUILD_CHANNEL:
-                case GY.T.GUILD_CHANNEL_MESSAGE:
-                    t = Gz(n).channel;
+                case G$.T.GUILD_CHANNEL:
+                case G$.T.GUILD_CHANNEL_MESSAGE:
+                    t = Gq(n).channel;
                     break;
-                case GY.T.PRIVATE_CHANNEL:
-                case GY.T.PRIVATE_CHANNEL_MESSAGE:
+                case G$.T.PRIVATE_CHANNEL:
+                case G$.T.PRIVATE_CHANNEL_MESSAGE:
                     let l = nm.A.getChannel(s.channel_id);
-                    if (null == l) throw new GW.G({ errorCode: cD.Lw.INVALID_CHANNEL }, "Invalid channel");
-                    if (l.type === wE.r.DM)
-                        throw new GW.G({ errorCode: cD.Lw.INVALID_CHANNEL }, "Cannot send invite to a DM");
+                    if (null == l) throw new GK.G({ errorCode: cD.Lw.INVALID_CHANNEL }, "Invalid channel");
+                    if (l.type === wh.r.DM)
+                        throw new GK.G({ errorCode: cD.Lw.INVALID_CHANNEL }, "Cannot send invite to a DM");
                     t = l;
                     break;
                 default:
-                    throw new GW.G({ errorCode: cD.Lw.NO_ELIGIBLE_ACTIVITY }, "Unsupported activity location");
+                    throw new GK.G({ errorCode: cD.Lw.NO_ELIGIBLE_ACTIVITY }, "Unsupported activity location");
             }
             try {
                 await (0, nd.Ue)({
@@ -42750,15 +42763,15 @@ let GX = {
                     inviteAnalyticsMetadata: { source: j.PE1.ACTIVITY_INVITE },
                 });
             } catch {
-                throw new GW.G({ errorCode: cD.Lw.UNKNOWN_ERROR }, "Failed to invite user");
+                throw new GK.G({ errorCode: cD.Lw.UNKNOWN_ERROR }, "Failed to invite user");
             }
         },
     }),
 };
-var Gq = n(231723),
-    GZ = n(851907);
-let GQ = new Map();
-async function GJ(e, t) {
+var GQ = n(231723),
+    GJ = n(851907);
+let G0 = new Map();
+async function G1(e, t) {
     try {
         let { body: n } = await x.Bo.get({
             url: j.Rsh.ACTIVITIES_TRUSTED_LINKS(e),
@@ -42771,36 +42784,36 @@ async function GJ(e, t) {
         return null;
     }
 }
-async function G0(e, t) {
+async function G2(e, t) {
     let n;
     if (void 0 === e) return !1;
     let i = z.A.toURLSafe(t)?.protocol;
     if ("http:" !== i && "https:" !== i) return !1;
     let r = `${e}:${t}`,
-        a = null == (n = GQ.get(r)) ? null : Date.now() >= n.expiresAt ? (GQ.delete(r), null) : n.check;
+        a = null == (n = G0.get(r)) ? null : Date.now() >= n.expiresAt ? (G0.delete(r), null) : n.check;
     if (null == a) {
-        var s = (a = GJ(e, t));
-        if (GQ.size >= 100) {
-            let e = GQ.keys().next();
-            e.done || GQ.delete(e.value);
+        var s = (a = G1(e, t));
+        if (G0.size >= 100) {
+            let e = G0.keys().next();
+            e.done || G0.delete(e.value);
         }
-        GQ.set(r, { check: s, expiresAt: Date.now() + 3e5 });
+        G0.set(r, { check: s, expiresAt: Date.now() + 3e5 });
     }
     let l = await a;
-    return null == l ? (GQ.get(r)?.check === a && GQ.delete(r), !1) : l;
+    return null == l ? (G0.get(r)?.check === a && G0.delete(r), !1) : l;
 }
-var G1 = n(353835),
-    G2 = n(123917);
-let G3 = new Set(["channels", "users", "events"]),
-    G5 = new Set(["", "-"]),
-    G6 = new Set([wZ.AM, wZ.eK]),
-    G4 = new WeakMap();
-async function G7(e, t) {
+var G3 = n(353835),
+    G5 = n(123917);
+let G6 = new Set(["channels", "users", "events"]),
+    G4 = new Set(["", "-"]),
+    G7 = new Set([wJ.AM, wJ.eK]),
+    G8 = new WeakMap();
+async function G9(e, t) {
     let i = ak.A.getApplication(e.application?.id),
         r = (0, nj.H)(nL.Ay.getCurrentEmbeddedActivity()?.location),
-        a = eB.isPlatformEmbedded ? (0, GZ.Ay)({ application: i, channelId: r }) : void 0,
+        a = eB.isPlatformEmbedded ? (0, GJ.Ay)({ application: i, channelId: r }) : void 0,
         s =
-            null != (0, wb.w)(e)
+            null != (0, wP.w)(e)
                 ? (function (e) {
                       let t,
                           n = z.A.toURLSafe(e);
@@ -42809,7 +42822,7 @@ async function G7(e, t) {
                       if (z.A.isDiscordProtocol(i))
                           t = (function (e) {
                               let { hostname: t, pathname: n } = e;
-                              return G5.has(t) || z.A.isDiscordHostname(t)
+                              return G4.has(t) || z.A.isDiscordHostname(t)
                                   ? n.startsWith("/")
                                       ? n
                                       : `/${n}`
@@ -42820,12 +42833,12 @@ async function G7(e, t) {
                           t = n.pathname;
                       }
                       let [, s] = t.split("/");
-                      return null != s && G3.has(s) ? `https://discord.com${t}${n.search}${n.hash}` : null;
+                      return null != s && G6.has(s) ? `https://discord.com${t}${n.search}${n.hash}` : null;
                   })(t)
                 : null;
     if (
         null != s &&
-        (null != a && G1.A.focus(null, !0),
+        (null != a && G3.A.focus(null, !0),
         (function (e) {
             let { default: t } = n(983555),
                 i = t(e);
@@ -42842,7 +42855,7 @@ async function G7(e, t) {
         );
     try {
         let n = new URL(t).toString();
-        if ((null != a && G1.A.focus(a, !0), await G0(i?.id, n)))
+        if ((null != a && G3.A.focus(a, !0), await G2(i?.id, n)))
             return (
                 (0, al.A)(n),
                 W.default.track(j.HAw.RPC_OPEN_EXTERNAL_LINK_CALLED, {
@@ -42853,7 +42866,7 @@ async function G7(e, t) {
                 Promise.resolve({ opened: !0 })
             );
         return new Promise((t) =>
-            (0, G2.h)(
+            (0, G5.h)(
                 {
                     href: n,
                     shouldConfirm: !0,
@@ -42880,42 +42893,42 @@ async function G7(e, t) {
                 void 0,
                 (function (e) {
                     let { application: t, channelId: n } = e;
-                    return null != (0, GZ.Ay)({ application: t, channelId: n }) ? Gq.KX : Gq.SY;
+                    return null != (0, GJ.Ay)({ application: t, channelId: n }) ? GQ.KX : GQ.SY;
                 })({ application: i, channelId: r }),
             ),
         );
     } catch (e) {
-        throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Invalid URL: ${t}`);
+        throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Invalid URL: ${t}`);
     }
 }
-let G8 = {
-        [j.e$_.OPEN_EXTERNAL_LINK]: Gp(j.e$_.OPEN_EXTERNAL_LINK, {
-            scope: { [bt.sm.ANY]: [bt.VH, bt.W_] },
+let xe = {
+        [j.e$_.OPEN_EXTERNAL_LINK]: Gm(j.e$_.OPEN_EXTERNAL_LINK, {
+            scope: { [bi.sm.ANY]: [bi.VH, bi.W_] },
             async handler(e) {
                 let {
                     socket: t,
                     args: { url: n },
                 } = e;
-                (0, wW.lG)(t.transport);
-                let i = G4.get(t) ?? { inFlight: !1, readyAt: 0 };
+                (0, wK.lG)(t.transport);
+                let i = G8.get(t) ?? { inFlight: !1, readyAt: 0 };
                 if (i.inFlight || Date.now() < i.readyAt) return { opened: !1 };
-                ((i.inFlight = !0), G4.set(t, i));
+                ((i.inFlight = !0), G8.set(t, i));
                 try {
-                    return await G7(t, n);
+                    return await G9(t, n);
                 } finally {
                     ((i.inFlight = !1), (i.readyAt = Date.now() + 1e3));
                 }
             },
         }),
         [j.e$_.NAVIGATE_TO_CONNECTIONS]: {
-            validation: (e) => GR(e),
-            scope: { [bt.sm.ANY]: [bt.VH] },
+            validation: (e) => Gy(e),
+            scope: { [bi.sm.ANY]: [bi.VH] },
             handler(e) {
                 let { socket: t } = e;
-                (0, wW.lG)(t.transport);
-                let i = (0, wW.D2)(t.application);
-                if (!G6.has(i))
-                    throw new wD.A(
+                (0, wK.lG)(t.transport);
+                let i = (0, wK.D2)(t.application);
+                if (!G7.has(i))
+                    throw new wb.A(
                         { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
@@ -42925,24 +42938,24 @@ let G8 = {
                 }
             },
         },
-        [j.e$_.SHARE_LINK]: Gp(j.e$_.SHARE_LINK, {
-            scope: { [bt.sm.ANY]: [bt.VH] },
+        [j.e$_.SHARE_LINK]: Gm(j.e$_.SHARE_LINK, {
+            scope: { [bi.sm.ANY]: [bi.VH] },
             handler(e) {
                 let {
                     socket: t,
                     args: { custom_id: i, message: r, link_id: a },
                 } = e;
-                (0, wW.lG)(t.transport);
-                let s = (0, wW.D2)(t.application);
-                if (null == s) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                if (!(0, Gm.D)(t.application))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                (0, wK.lG)(t.transport);
+                let s = (0, wK.D2)(t.application);
+                if (null == s) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (!(0, GS.D)(t.application))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     !(function (e) {
                         let { applicationId: t, customId: i, linkId: r, message: a, onShare: s } = e,
                             l = ak.A.getApplication(t);
                         if (null == l) return s(!1, !1);
-                        let o = null != (0, GZ.LU)({ applicationId: l.id }) ? Gq.KX : Gq.SY,
+                        let o = null != (0, GJ.LU)({ applicationId: l.id }) ? GQ.KX : GQ.SY,
                             d = !1;
                         function c(e) {
                             s(e, d);
@@ -42996,39 +43009,39 @@ let G8 = {
             },
         }),
     },
-    G9 = new ez.A(j.meB),
-    xe = {
-        [j.e$_.CAPTURE_LOG]: Gp(j.e$_.CAPTURE_LOG, {
+    xt = new ez.A(j.meB),
+    xn = {
+        [j.e$_.CAPTURE_LOG]: Gm(j.e$_.CAPTURE_LOG, {
             handler(e) {
                 let {
                     socket: t,
                     args: { level: n, message: i },
                 } = e;
-                (0, wW.lG)(t.transport);
+                (0, wK.lG)(t.transport);
                 let r = t.application.id,
                     a = `${r} - ${i}`;
                 switch (n) {
                     case "log":
-                        G9.log(a);
+                        xt.log(a);
                         break;
                     case "warn":
-                        G9.warn(a);
+                        xt.warn(a);
                         break;
                     case "debug":
-                        G9.verbose(a);
+                        xt.verbose(a);
                         break;
                     case "info":
-                        G9.info(a);
+                        xt.info(a);
                         break;
                     case "error":
-                        G9.error(a);
+                        xt.error(a);
                 }
             },
         }),
     },
-    xt = {
+    xi = {
         [j.e$_.GET_NETWORKING_CONFIG]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler: () =>
                 Promise.all([
                     x.Bo.get({
@@ -43055,58 +43068,58 @@ let G8 = {
                 }),
         },
         [j.e$_.NETWORKING_SYSTEM_METRICS]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t, args: n } = e;
                 ((n.application_id = t.application.id), W.default.track(j.HAw.NETWORKING_SYSTEM_METRICS, n));
             },
         },
         [j.e$_.NETWORKING_PEER_METRICS]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t, args: n } = e;
                 ((n.application_id = t.application.id), W.default.track(j.HAw.NETWORKING_PEER_METRICS, n));
             },
         },
         [j.e$_.NETWORKING_CREATE_TOKEN]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler: () =>
                 x.Bo.post({ url: j.Rsh.NETWORKING_TOKEN, retries: 1, oldFormErrors: !0, rejectWithError: !1 }).then(
                     (e) => e.body,
                 ),
         },
     },
-    xn = {
-        [cD.e$.GET_PLATFORM_BEHAVIORS]: Gp(cD.e$.GET_PLATFORM_BEHAVIORS, {
+    xr = {
+        [cD.e$.GET_PLATFORM_BEHAVIORS]: Gm(cD.e$.GET_PLATFORM_BEHAVIORS, {
             handler: () => ({ iosKeyboardResizesView: !0 }),
         }),
     };
-var xi = n(77468);
-let xr = new Set([wZ.AM, wZ.eK]),
-    xa = {
+var xa = n(77468);
+let xs = new Set([wJ.AM, wJ.eK]),
+    xl = {
         [cD.e$.GET_PROVIDER_ACCESS_TOKEN]: {
-            scope: { [bt.sm.ANY]: [bt.VH] },
+            scope: { [bi.sm.ANY]: [bi.VH] },
             validation: (e) =>
-                GR(e).required().keys({ provider: e.string().required(), connection_redirect: e.string() }),
+                Gy(e).required().keys({ provider: e.string().required(), connection_redirect: e.string() }),
             handler: (e) => {
                 let {
                     signal: t,
                     socket: n,
                     args: { provider: i, connection_redirect: r },
                 } = e;
-                (0, wW.lG)(n.transport);
-                let a = (0, wW.D2)(n.application),
+                (0, wK.lG)(n.transport);
+                let a = (0, wK.D2)(n.application),
                     s = ly.A.get(i);
                 if (null == s)
-                    throw new wD.A({ errorCode: cD.Lw.INVALID_PROVIDER }, `Platform not found for provider "${i}"`);
+                    throw new wb.A({ errorCode: cD.Lw.INVALID_PROVIDER }, `Platform not found for provider "${i}"`);
                 if (i === j.fg2.AMAZON_MUSIC) {
-                    if (!xr.has(a))
-                        throw new wD.A(
+                    if (!xs.has(a))
+                        throw new wb.A(
                             { errorCode: cD.Lw.UNAUTHORIZED_FOR_APPLICATION },
                             "Command not available for this application",
                         );
                 } else
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: cD.Lw.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
@@ -43119,10 +43132,10 @@ let xr = new Set([wZ.AM, wZ.eK]),
                             null != n && (e({ access_token: n.access_token }), c());
                         }
                         function o() {
-                            (n(new wD.A({ errorCode: cD.Lw.OAUTH2_ERROR }, `OAuth2 setup for "${i}" failed`)), c());
+                            (n(new wb.A({ errorCode: cD.Lw.OAUTH2_ERROR }, `OAuth2 setup for "${i}" failed`)), c());
                         }
                         function d() {
-                            (n(new wD.A({ errorCode: cD.Lw.OAUTH2_ERROR }, `OAuth2 setup for "${i}" was abandoned`)),
+                            (n(new wb.A({ errorCode: cD.Lw.OAUTH2_ERROR }, `OAuth2 setup for "${i}" was abandoned`)),
                                 c());
                         }
                         function c() {
@@ -43137,9 +43150,9 @@ let xr = new Set([wZ.AM, wZ.eK]),
                             (0, lx.A)({ platformType: s.type, location: j.ThZ.ACTIVITY_RPC, successRedirect: r }));
                     } else
                         try {
-                            let t = await xi.A.refreshAccessToken(s.type, a.id);
+                            let t = await xa.A.refreshAccessToken(s.type, a.id);
                             if (null == t)
-                                throw new wD.A(
+                                throw new wb.A(
                                     { errorCode: cD.Lw.OAUTH2_ERROR },
                                     "Refreshing access token did not return a new access token",
                                 );
@@ -43151,34 +43164,34 @@ let xr = new Set([wZ.AM, wZ.eK]),
             },
         },
         [cD.e$.MAYBE_GET_PROVIDER_ACCESS_TOKEN]: {
-            scope: { [bt.sm.ANY]: [bt.VH] },
-            validation: (e) => GR(e).required().keys({ provider: e.string().required() }),
+            scope: { [bi.sm.ANY]: [bi.VH] },
+            validation: (e) => Gy(e).required().keys({ provider: e.string().required() }),
             handler: async (e) => {
                 let {
                     socket: t,
                     args: { provider: n },
                 } = e;
-                (0, wW.lG)(t.transport);
-                let i = (0, wW.D2)(t.application),
+                (0, wK.lG)(t.transport);
+                let i = (0, wK.D2)(t.application),
                     r = ly.A.get(n);
                 if (null == r)
-                    throw new wD.A({ errorCode: cD.Lw.INVALID_PROVIDER }, `Platform not found for provider "${n}"`);
+                    throw new wb.A({ errorCode: cD.Lw.INVALID_PROVIDER }, `Platform not found for provider "${n}"`);
                 if (n === j.fg2.AMAZON_MUSIC) {
-                    if (!xr.has(i))
-                        throw new wD.A(
+                    if (!xs.has(i))
+                        throw new wb.A(
                             { errorCode: cD.Lw.UNAUTHORIZED_FOR_APPLICATION },
                             "Command not available for this application",
                         );
                 } else
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: cD.Lw.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
                 let a = d9.A.getAccount(null, n);
-                if (null == a) throw new wD.A({ errorCode: cD.Lw.NO_CONNECTION_FOUND }, "No connection found");
-                let s = await xi.A.refreshAccessToken(r.type, a.id);
+                if (null == a) throw new wb.A({ errorCode: cD.Lw.NO_CONNECTION_FOUND }, "No connection found");
+                let s = await xa.A.refreshAccessToken(r.type, a.id);
                 if (null == s)
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: cD.Lw.OAUTH2_ERROR },
                         "Refreshing access token did not return a new access token",
                     );
@@ -43186,20 +43199,20 @@ let xr = new Set([wZ.AM, wZ.eK]),
             },
         },
     },
-    xs = {
-        [j.e$_.GET_QUEST_ENROLLMENT_STATUS]: Gp(j.e$_.GET_QUEST_ENROLLMENT_STATUS, {
-            scope: w1.F.IDENTIFY,
+    xo = {
+        [j.e$_.GET_QUEST_ENROLLMENT_STATUS]: Gm(j.e$_.GET_QUEST_ENROLLMENT_STATUS, {
+            scope: w3.F.IDENTIFY,
             handler(e) {
                 let {
                     socket: t,
                     args: { quest_id: n },
                 } = e;
-                (0, wW.lG)(t.transport);
-                let i = (0, wW.D2)(t.application),
+                (0, wK.lG)(t.transport);
+                let i = (0, wK.D2)(t.application),
                     r = d1.A.getQuest(n),
                     a = (0, _M.TP)(r);
                 if (null == r || null == a || a !== i)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Quest not found: ${n}`);
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Quest not found: ${n}`);
                 return {
                     quest_id: n,
                     is_enrolled: r.userStatus?.enrolledAt != null,
@@ -43207,21 +43220,21 @@ let xr = new Set([wZ.AM, wZ.eK]),
                 };
             },
         }),
-        [j.e$_.QUEST_START_TIMER]: Gp(j.e$_.QUEST_START_TIMER, {
-            scope: w1.F.IDENTIFY,
+        [j.e$_.QUEST_START_TIMER]: Gm(j.e$_.QUEST_START_TIMER, {
+            scope: w3.F.IDENTIFY,
             handler(e) {
                 let {
                     socket: t,
                     args: { quest_id: n },
                 } = e;
-                (0, wW.lG)(t.transport);
-                let i = (0, wW.D2)(t.application),
+                (0, wK.lG)(t.transport);
+                let i = (0, wK.D2)(t.application),
                     r = d1.A.getQuest(n),
                     a = (0, _M.vS)(r);
                 if (null == r || null == a || a !== i)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Quest not found: ${n}`);
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Quest not found: ${n}`);
                 if (r.userStatus?.enrolledAt == null)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "User is not enrolled in quest");
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "User is not enrolled in quest");
                 return (
                     W.default.track(j.HAw.RPC_QUEST_START_TIMER_CALLED, { application_id: i, quest_id: n }),
                     k.h.dispatch({ type: "QUEST_APPLICATION_START_TIMER", questId: n, applicationId: i }),
@@ -43229,14 +43242,14 @@ let xr = new Set([wZ.AM, wZ.eK]),
                 );
             },
         }),
-        [j.e$_.GET_QUEST]: Gp(j.e$_.GET_QUEST, {
-            scope: w1.F.IDENTIFY,
+        [j.e$_.GET_QUEST]: Gm(j.e$_.GET_QUEST, {
+            scope: w3.F.IDENTIFY,
             handler(e) {
                 let { socket: t } = e;
-                (0, wW.lG)(t.transport);
-                let n = (0, wW.D2)(t.application),
+                (0, wK.lG)(t.transport);
+                let n = (0, wK.D2)(t.application),
                     i = (0, ug.jm)(d1.A.quests, n, !0);
-                if (0 === i.length) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No eligible quests found");
+                if (0 === i.length) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No eligible quests found");
                 return i
                     .map((e) => ({
                         quest_id: e.id,
@@ -43256,31 +43269,31 @@ let xr = new Set([wZ.AM, wZ.eK]),
             },
         }),
     },
-    xl = {
-        [j.e$_.GET_RELATIONSHIPS]: Gp(j.e$_.GET_RELATIONSHIPS, {
-            scope: { [bt.sm.ANY]: [w1.F.RELATIONSHIPS_READ] },
+    xd = {
+        [j.e$_.GET_RELATIONSHIPS]: Gm(j.e$_.GET_RELATIONSHIPS, {
+            scope: { [bi.sm.ANY]: [w3.F.RELATIONSHIPS_READ] },
             handler(e) {
-                if (MN.zy(MN.iu(e.socket.application.flags ?? 0), MN.iu(j.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
+                if (MO.zy(MO.iu(e.socket.application.flags ?? 0), MO.iu(j.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
                 let t = [];
                 for (let [n, i] of ij.A.getMutableRelationships().entries()) {
                     if (i === j.eA$.NONE) continue;
                     let r = eF.default.getUser(n);
                     if (null == r) continue;
-                    let a = (0, wW.Gc)(i, r);
-                    t.push((0, wW.LP)(a, e.socket.application.id));
+                    let a = (0, wK.Gc)(i, r);
+                    t.push((0, wK.LP)(a, e.socket.application.id));
                 }
                 return { relationships: t };
             },
         }),
     };
-var xo = n(182892),
-    xd = n(25451);
-let xc = ["1402418171662569542"],
-    xu = [bt.z4.IPC, bt.z4.WEBSOCKET, bt.z4.POST_MESSAGE],
-    x_ = {
-        [j.e$_.SET_ACTIVITY]: Gp(j.e$_.SET_ACTIVITY, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_ACTIVITIES_WRITE, bt.hj, bt.W_] },
+var xc = n(182892),
+    xu = n(25451);
+let x_ = ["1402418171662569542"],
+    xE = [bi.z4.IPC, bi.z4.WEBSOCKET, bi.z4.POST_MESSAGE],
+    xA = {
+        [j.e$_.SET_ACTIVITY]: Gm(j.e$_.SET_ACTIVITY, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_ACTIVITIES_WRITE, bi.hj, bi.W_] },
             async handler(e) {
                 let {
                         socket: t,
@@ -43288,17 +43301,17 @@ let xc = ["1402418171662569542"],
                         isSocketConnected: r,
                     } = e,
                     a =
-                        !t.authorization.scopes.has(w1.F.RPC) &&
-                        !t.authorization.scopes.has(w1.F.RPC_ACTIVITIES_WRITE) &&
-                        !t.authorization.scopes.has(bt.hj),
+                        !t.authorization.scopes.has(w3.F.RPC) &&
+                        !t.authorization.scopes.has(w3.F.RPC_ACTIVITIES_WRITE) &&
+                        !t.authorization.scopes.has(bi.hj),
                     s = null;
-                if ((a && (s = (0, wb.A)(t)), !xu.includes(t.transport)))
-                    throw new wD.A(
+                if ((a && (s = (0, wP.A)(t)), !xE.includes(t.transport)))
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_COMMAND },
                         `command not available from "${t.transport}" transport`,
                     );
-                if (null == n && bt.z4.IPC === t.transport)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "nonzero pid required");
+                if (null == n && bi.z4.IPC === t.transport)
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "nonzero pid required");
                 let l = t.application.id ?? void 0;
                 if (null == i)
                     return (
@@ -43317,28 +43330,28 @@ let xc = ["1402418171662569542"],
                 let { buttons: c, ...u } = i,
                     _ = { ...u, name: u.name ?? t.application.name, type: u.type ?? j.$pd.PLAYING };
                 _.application_id = l;
-                let E = t.transport === bt.z4.POST_MESSAGE;
+                let E = t.transport === bi.z4.POST_MESSAGE;
                 _.platform = E ? j.yTV.EMBEDDED : j.yTV.DESKTOP;
                 let A = ak.A.getApplication(l ?? void 0),
                     h = _.instance ?? !1,
                     f = _.party?.privacy;
                 (delete _.instance, delete _.party?.privacy);
-                let I = (0, xo.E)(_, h, E, null != A && (0, xd.X)(A) && E, f);
+                let I = (0, xc.E)(_, h, E, null != A && (0, xu.X)(A) && E, f);
                 I > 0 && (_.flags = I);
                 let { assets: p, party: T, secrets: m, timestamps: g } = _;
                 if (null != m) {
                     let e = iM()
                         .values(m)
                         .filter((e) => null != e && "" !== e);
-                    if (null != T && iM().intersection(e, [T.id]).length > 0 && (null == l || !xc.includes(l)))
-                        throw new wD.A(
+                    if (null != T && iM().intersection(e, [T.id]).length > 0 && (null == l || !x_.includes(l)))
+                        throw new wb.A(
                             { errorCode: j.Lw6.INVALID_ACTIVITY_SECRET },
                             "secrets cannot match the party id",
                         );
                     if (iM().uniq(e).length < e.length)
-                        throw new wD.A({ errorCode: j.Lw6.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
+                        throw new wb.A({ errorCode: j.Lw6.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
                     if (null != c)
-                        throw new wD.A(
+                        throw new wb.A(
                             { errorCode: j.Lw6.INVALID_ACTIVITY_SECRET },
                             "secrets cannot currently be sent with buttons",
                         );
@@ -43355,7 +43368,7 @@ let xc = ["1402418171662569542"],
                             (g[e] = Math.floor(t * i_.A.Millis.SECOND));
                     }
                 if (null != p) {
-                    if (null == l) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                    if (null == l) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                     let [e, t, n] = await (0, uw.RG)(l, [p.large_image, p.small_image, p.invite_cover_image]);
                     (null != e ? (p.large_image = e) : delete p.large_image,
                         null != t ? (p.small_image = t) : delete p.small_image,
@@ -43395,21 +43408,21 @@ let xc = ["1402418171662569542"],
             },
         }),
     },
-    xE = {
-        [cD.e$.SET_ORIENTATION_LOCK_STATE]: Gp(cD.e$.SET_ORIENTATION_LOCK_STATE, {
+    xh = {
+        [cD.e$.SET_ORIENTATION_LOCK_STATE]: Gm(cD.e$.SET_ORIENTATION_LOCK_STATE, {
             handler(e) {
                 let {
                     socket: t,
                     args: { lock_state: n, picture_in_picture_lock_state: i, grid_lock_state: r },
                 } = e;
-                if (!(0, GS.A)(t))
-                    throw new wD.A(
+                if (!(0, GC.A)(t))
+                    throw new wb.A(
                         { errorCode: cD.Lw.INVALID_COMMAND },
                         `command not available from "${t.source.type}" transport`,
                     );
                 let a = t.application.id;
-                if (null == a) throw new wD.A({ errorCode: cD.Lw.INVALID_COMMAND }, "No application.");
-                let s = (0, wX.A)(t);
+                if (null == a) throw new wb.A({ errorCode: cD.Lw.INVALID_COMMAND }, "No application.");
+                let s = (0, wZ.A)(t);
                 (null != s &&
                     k.h.dispatch({
                         type: "FRAME_SET_ORIENTATION_LOCK_STATE",
@@ -43427,50 +43440,50 @@ let xc = ["1402418171662569542"],
             },
         }),
     };
-var xA = n(796774),
-    xh = n(209932),
-    xf = n(807348),
-    xI = n(693806);
-let xp = {
+var xf = n(796774),
+    xI = n(209932),
+    xp = n(807348),
+    xT = n(693806);
+let xm = {
     [cD.e$.GET_SOUNDBOARD_SOUNDS]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] },
+        scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] },
         async handler() {
-            await (0, xA.E7)();
-            let e = xh.A.getSounds(),
+            await (0, xf.E7)();
+            let e = xI.A.getSounds(),
                 t = [];
-            return (e.forEach((e) => e.forEach((e) => t.push((0, xf.A2)(e)))), t);
+            return (e.forEach((e) => e.forEach((e) => t.push((0, xp.A2)(e)))), t);
         },
     },
     [cD.e$.PLAY_SOUNDBOARD_SOUND]: {
-        scope: { [bt.sm.ALL]: [w1.F.RPC, w1.F.RPC_VOICE_WRITE] },
-        validation: (e) => GR(e).required().keys({ guild_id: e.string(), sound_id: e.string() }),
+        scope: { [bi.sm.ALL]: [w3.F.RPC, w3.F.RPC_VOICE_WRITE] },
+        validation: (e) => Gy(e).required().keys({ guild_id: e.string(), sound_id: e.string() }),
         async handler(e) {
             let {
                 args: { guild_id: t, sound_id: n },
             } = e;
-            await (0, xA.E7)();
+            await (0, xf.E7)();
             let i = eF.default.getCurrentUser(),
-                r = xh.A.getSound(t, n),
-                a = (0, xI.A)(),
-                s = null != r && null != i && (0, DB.Ir)(i, r, a);
-            if (null == a) throw new wD.A({ errorCode: cD.Lw.INVALID_CHANNEL }, "Invalid Channel.");
+                r = xI.A.getSound(t, n),
+                a = (0, xT.A)(),
+                s = null != r && null != i && (0, DH.Ir)(i, r, a);
+            if (null == a) throw new wb.A({ errorCode: cD.Lw.INVALID_CHANNEL }, "Invalid Channel.");
             if (s)
-                if ((0, DU.Ay)(a)) null != r && (0, DB.Ak)(r, a.id, [nA.A.RPC]);
-                else throw new wD.A({ errorCode: cD.Lw.INVALID_PERMISSIONS }, "Invalid Permissions.");
-            else throw new wD.A({ errorCode: cD.Lw.INVALID_SOUND }, "Invalid Sound.");
+                if ((0, DG.Ay)(a)) null != r && (0, DH.Ak)(r, a.id, [nA.A.RPC]);
+                else throw new wb.A({ errorCode: cD.Lw.INVALID_PERMISSIONS }, "Invalid Permissions.");
+            else throw new wb.A({ errorCode: cD.Lw.INVALID_SOUND }, "Invalid Sound.");
         },
     },
 };
-var xT = n(800342),
-    xm = n(143582);
-function xg(e) {
-    if (bt.z4.IPC !== e && bt.z4.POST_MESSAGE !== e)
-        throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Invalid transport.");
+var xg = n(800342),
+    xS = n(143582);
+function xN(e) {
+    if (bi.z4.IPC !== e && bi.z4.POST_MESSAGE !== e)
+        throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Invalid transport.");
 }
-function xS(e) {
+function xC(e) {
     return null != e.name && null != e.price;
 }
-function xN(e) {
+function xO(e) {
     return {
         id: e.id,
         name: e.name,
@@ -43481,9 +43494,9 @@ function xN(e) {
         release_date: e.release_date ?? null,
     };
 }
-async function xC(e, t) {
+async function xR(e, t) {
     let n = t.filter((e) => e.type === j.Puh.SUBSCRIPTION_GROUP),
-        i = await Promise.all(n.map(async (t) => await (0, xm.vz)(e, t.id))),
+        i = await Promise.all(n.map(async (t) => await (0, xS.vz)(e, t.id))),
         r = [];
     return (
         i.forEach((e) => {
@@ -43509,62 +43522,62 @@ async function xC(e, t) {
         r
     );
 }
-async function xO(e) {
+async function xL(e) {
     let { socket: t } = e;
-    xg(t.transport);
+    xN(t.transport);
     let n = t.application.id;
-    if (null == n) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-    if ((0, GO.Fs)(n)) {
+    if (null == n) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+    if ((0, GL.Fs)(n)) {
         let e = await ct.O1(n, !1),
-            t = await xC(n, e);
-        return [...e.filter(xS).map(xN), ...t];
+            t = await xR(n, e);
+        return [...e.filter(xC).map(xO), ...t];
     }
-    let i = await xT.JI(n),
+    let i = await xg.JI(n),
         r = i.filter((e) => e.sku.type !== j.Puh.SUBSCRIPTION_GROUP).map((e) => e.sku),
-        a = await xC(
+        a = await xR(
             n,
             i.map((e) => e.sku),
         );
-    return [...r.filter(xS).map(xN), ...a];
+    return [...r.filter(xC).map(xO), ...a];
 }
-function xR(e) {
+function xy(e) {
     let { socket: t } = e;
-    xg(t.transport);
+    xN(t.transport);
     let n = t.application.id;
-    if (null == n) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+    if (null == n) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
     return ce.LM(n);
 }
-let xL = {
-    [j.e$_.GET_SKUS]: { scope: { [bt.sm.ANY]: [bt.VH, bt.hj] }, handler: xO },
-    [j.e$_.GET_ENTITLEMENTS]: { scope: { [bt.sm.ANY]: [bt.VH, bt.hj] }, handler: xR },
-    [j.e$_.GET_SKUS_EMBEDDED]: Gp(j.e$_.GET_SKUS_EMBEDDED, {
-        scope: { [bt.sm.ANY]: [bt.VH, bt.hj] },
-        handler: async (e) => ({ skus: await xO(e) }),
+let xD = {
+    [j.e$_.GET_SKUS]: { scope: { [bi.sm.ANY]: [bi.VH, bi.hj] }, handler: xL },
+    [j.e$_.GET_ENTITLEMENTS]: { scope: { [bi.sm.ANY]: [bi.VH, bi.hj] }, handler: xy },
+    [j.e$_.GET_SKUS_EMBEDDED]: Gm(j.e$_.GET_SKUS_EMBEDDED, {
+        scope: { [bi.sm.ANY]: [bi.VH, bi.hj] },
+        handler: async (e) => ({ skus: await xL(e) }),
     }),
-    [j.e$_.GET_ENTITLEMENTS_EMBEDDED]: Gp(j.e$_.GET_ENTITLEMENTS_EMBEDDED, {
-        scope: { [bt.sm.ANY]: [bt.VH, bt.hj] },
-        handler: async (e) => ({ entitlements: await xR(e) }),
+    [j.e$_.GET_ENTITLEMENTS_EMBEDDED]: Gm(j.e$_.GET_ENTITLEMENTS_EMBEDDED, {
+        scope: { [bi.sm.ANY]: [bi.VH, bi.hj] },
+        handler: async (e) => ({ entitlements: await xy(e) }),
     }),
 };
-var xy = n(722306),
-    xD = n(111534);
-let xv = new WeakMap();
-function xb(e, t) {
-    let n = xv.get(e);
+var xv = n(722306),
+    xb = n(111534);
+let xM = new WeakMap();
+function xP(e, t) {
+    let n = xM.get(e);
     if (null == n) return;
     let i = n.indexOf(t);
-    (-1 !== i && n.splice(i, 1), 0 === n.length && xv.delete(e));
+    (-1 !== i && n.splice(i, 1), 0 === n.length && xM.delete(e));
 }
-let xM = {
+let xU = {
         [j.e$_.SUBSCRIBE]: {
             async handler(e) {
                 let t,
                     n,
                     { server: i, socket: r, evt: a, args: s } = e,
                     l = i.events[a];
-                if (null == l) throw new wD.A({ errorCode: j.Lw6.INVALID_EVENT }, `Invalid event: ${a}`);
-                if (!(0, xy.A)(r.authorization.scopes, l.scope))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
+                if (null == l) throw new wb.A({ errorCode: j.Lw6.INVALID_EVENT }, `Invalid event: ${a}`);
+                if (!(0, xv.A)(r.authorization.scopes, l.scope))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
                 W.default.track(j.HAw.RPC_SUBSCRIPTION_REQUESTED, {
                     event: a,
                     scope: "object" == typeof l.scope ? JSON.stringify(l.scope) : l.scope,
@@ -43572,13 +43585,13 @@ let xM = {
                     socket_scope: Array.from(r.authorization.scopes).toString(),
                 });
                 let o =
-                    ((t = { evt: a, args: s, cancelled: !1 }), null == (n = xv.get(r)) ? xv.set(r, [t]) : n.push(t), t);
+                    ((t = { evt: a, args: s, cancelled: !1 }), null == (n = xM.get(r)) ? xM.set(r, [t]) : n.push(t), t);
                 try {
                     if (null != l.validation) {
                         let e = await i.getJoi(),
                             t = e.validate(s, l.validation(e), { convert: !1 });
                         if (null != t.error)
-                            throw new wD.A(
+                            throw new wb.A(
                                 { errorCode: j.Lw6.INVALID_PAYLOAD },
                                 "Invalid subscription parameters provided",
                             );
@@ -43589,7 +43602,7 @@ let xM = {
                                 case j.ZE4.ACTIVITY_PIP_MODE_UPDATE: {
                                     let t = e.application?.id,
                                         n = null != t ? nL.Ay.getLayoutModeForApp(t) : null;
-                                    return null != n ? { is_pip_mode: n !== wZ.bN.FOCUSED } : null;
+                                    return null != n ? { is_pip_mode: n !== wJ.bN.FOCUSED } : null;
                                 }
                                 case j.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE: {
                                     let t = e.application?.id,
@@ -43597,30 +43610,30 @@ let xM = {
                                     return null != n ? { layout_mode: n } : null;
                                 }
                                 case j.ZE4.FRAME_LAYOUT_MODE_UPDATE: {
-                                    let t = (0, wX.A)(e);
+                                    let t = (0, wZ.A)(e);
                                     if (null == t) return null;
                                     return { layout_mode: t.data.layoutMode };
                                 }
                                 case j.ZE4.THERMAL_STATE_UPDATE: {
-                                    let e = wH();
-                                    if (e === wV.UNHANDLED) return null;
+                                    let e = wW();
+                                    if (e === wj.UNHANDLED) return null;
                                     return { thermal_state: e };
                                 }
                                 case j.ZE4.ORIENTATION_UPDATE:
                                     if (
                                         !(
-                                            e.application?.id === xD.A.getPhoneLensApplicationId() &&
-                                            xD.A.isBuilderPreviewMobile()
+                                            e.application?.id === xb.A.getPhoneLensApplicationId() &&
+                                            xb.A.isBuilderPreviewMobile()
                                         )
                                     )
                                         return null;
                                     return {
-                                        screen_orientation: xD.A.isBuilderPreviewLandscape()
-                                            ? wZ.aX.LANDSCAPE
-                                            : wZ.aX.PORTRAIT,
+                                        screen_orientation: xb.A.isBuilderPreviewLandscape()
+                                            ? wJ.aX.LANDSCAPE
+                                            : wJ.aX.PORTRAIT,
                                     };
                                 case j.ZE4.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
-                                    return wK();
+                                    return wz();
                                 case j.ZE4.QUEST_ENROLLMENT_STATUS_UPDATE: {
                                     let { quest_id: t } = n;
                                     if (!t) return null;
@@ -43639,7 +43652,7 @@ let xM = {
                         })(r, a, s);
                     return (
                         setImmediate(() => {
-                            (xb(r, o),
+                            (xP(r, o),
                                 o.cancelled ||
                                     (i.addSubscription(r, a, s, e),
                                     null != t && i.dispatchToSubscriptions(a, (e) => e.socket.id === r.id, t)));
@@ -43647,126 +43660,126 @@ let xM = {
                         { evt: a }
                     );
                 } catch (e) {
-                    throw (xb(r, o), e);
+                    throw (xP(r, o), e);
                 }
             },
         },
         [j.e$_.UNSUBSCRIBE]: {
             handler(e) {
                 let { server: t, socket: n, evt: i, args: r } = e;
-                if (null == t.events[i]) throw new wD.A({ errorCode: j.Lw6.INVALID_EVENT }, `Invalid event: ${i}`);
-                let a = xv.get(n);
+                if (null == t.events[i]) throw new wb.A({ errorCode: j.Lw6.INVALID_EVENT }, `Invalid event: ${i}`);
+                let a = xM.get(n);
                 if (null != a) for (let e of a) e.evt === i && iM().isEqual(e.args, r) && (e.cancelled = !0);
                 return (t.removeSubscription(n, i, r), { evt: i });
             },
         },
     },
-    xP = {
-        [j.e$_.USER_SETTINGS_GET_LOCALE]: Gp(j.e$_.USER_SETTINGS_GET_LOCALE, {
-            scope: w1.F.IDENTIFY,
-            handler: () => ({ locale: Pm.default.locale }),
+    xw = {
+        [j.e$_.USER_SETTINGS_GET_LOCALE]: Gm(j.e$_.USER_SETTINGS_GET_LOCALE, {
+            scope: w3.F.IDENTIFY,
+            handler: () => ({ locale: PS.default.locale }),
         }),
     },
-    xU = {
-        [j.e$_.GET_USER]: Gp(j.e$_.GET_USER, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.hj] },
+    xG = {
+        [j.e$_.GET_USER]: Gm(j.e$_.GET_USER, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.hj] },
             handler(e) {
                 let {
                         args: { id: t },
                     } = e,
                     n = eF.default.getUser(t);
-                return null == n ? null : (0, wY.A)(n);
+                return null == n ? null : (0, w$.A)(n);
             },
         }),
     },
-    xw = {
+    xx = {
         [j.e$_.TOGGLE_VOICE_CHANNEL_CHAT]: {
-            scope: bt.hj,
-            validation: (e) => GR(e).keys({ open: e.boolean() }),
+            scope: bi.hj,
+            validation: (e) => Gy(e).keys({ open: e.boolean() }),
             handler(e) {
                 let {
                         args: { open: t },
                     } = e,
-                    n = Us(t);
+                    n = Uo(t);
                 if (null == n)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Not connected to a guild voice channel");
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Not connected to a guild voice channel");
                 return { channel_id: n.channelId, chat_open: n.chatOpen };
             },
         },
     },
-    xG = {
-        ...Gy,
-        ...GD,
-        ...GP,
-        ...GU,
-        ...GB,
-        ...GV,
+    xk = {
+        ...Gv,
+        ...Gb,
+        ...Gw,
+        ...GG,
+        ...GH,
         ...Gj,
-        ...GX,
-        ...G8,
+        ...GY,
+        ...GZ,
         ...xe,
-        ...xt,
-        ...xa,
-        ...xl,
-        ...x_,
-        ...xE,
-        ...xL,
-        ...xM,
-        ...xU,
-        ...xP,
         ...xn,
-        ...xp,
-        ...Gx,
-        ...GF,
-        ...GN,
-        ...xs,
+        ...xi,
+        ...xl,
+        ...xd,
+        ...xA,
+        ...xh,
+        ...xD,
+        ...xU,
+        ...xG,
         ...xw,
+        ...xr,
+        ...xm,
+        ...GF,
+        ...GV,
+        ...GO,
+        ...xo,
+        ...xx,
     };
-var xx = n(52133),
-    xk = n(574165);
-function xF(e) {
-    return GR(e).required().keys({ channel_id: e.string().required() });
+var xF = n(52133),
+    xB = n(574165);
+function xV(e) {
+    return Gy(e).required().keys({ channel_id: e.string().required() });
 }
-function xB(e) {
+function xH(e) {
     let {
             args: { channel_id: t },
             socket: n,
         } = e,
         i = nm.A.getChannel(t);
-    if (null == i || !(0, wW.B_)(i, n.application.id, n.authorization.scopes))
-        throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
-    if ((0, nM.$v)(i)) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid nsfw channel id: ${i.id}`);
+    if (null == i || !(0, wK.B_)(i, n.application.id, n.authorization.scopes))
+        throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+    if ((0, nM.$v)(i)) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid nsfw channel id: ${i.id}`);
 }
-function xV(e) {
-    return GR(e).keys({ channel_id: e.string().allow(null) });
+function xj(e) {
+    return Gy(e).keys({ channel_id: e.string().allow(null) });
 }
-function xH(e) {
+function xW(e) {
     let {
         args: { channel_id: t },
     } = e;
     if (null != t && null == nm.A.getChannel(t))
-        throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+        throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
 }
-let xj = { [bt.sm.ANY]: [bt.W_, bt.VH] };
-function xW(e) {
-    return GR(e).required().keys({ session_id: e.string().required() });
+let xY = { [bi.sm.ANY]: [bi.W_, bi.VH] };
+function xK(e) {
+    return Gy(e).required().keys({ session_id: e.string().required() });
 }
-function xY(e) {
+function x$(e) {
     let {
         args: { session_id: t },
         socket: n,
     } = e;
-    wB.validateEventSubscription(n, t);
+    wH.validateEventSubscription(n, t);
 }
-let xK = {
+let xz = {
     [j.ZE4.GUILD_STATUS]: {
-        scope: w1.F.RPC,
-        validation: (e) => GR(e).required().keys({ guild_id: e.string().required() }),
+        scope: w3.F.RPC,
+        validation: (e) => Gy(e).required().keys({ guild_id: e.string().required() }),
         handler(e) {
             let {
                 args: { guild_id: t },
             } = e;
-            if (null == e1.A.getGuild(t)) throw new wD.A({ errorCode: j.Lw6.INVALID_GUILD }, `Invalid guild id: ${t}`);
+            if (null == e1.A.getGuild(t)) throw new wb.A({ errorCode: j.Lw6.INVALID_GUILD }, `Invalid guild id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = e1.A.getGuild(t);
@@ -43779,14 +43792,14 @@ let xK = {
         },
     },
     [j.ZE4.VOICE_STATE_CREATE]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
-        validation: (e) => GR(e).required().keys({ channel_id: e.string().required() }),
+        scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
+        validation: (e) => Gy(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t },
             } = e;
             if (null == nm.A.getChannel(t))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = nm.A.getChannel(t);
@@ -43800,21 +43813,21 @@ let xK = {
                                 let { userId: t } = e;
                                 return t;
                             })
-                            .forEach((e) => i((0, wW.qG)(a, r.id, e))),
+                            .forEach((e) => i((0, wK.qG)(a, r.id, e))),
                     s
                 );
             };
         },
     },
     [j.ZE4.VOICE_STATE_DELETE]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
-        validation: (e) => GR(e).required().keys({ channel_id: e.string().required() }),
+        scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
+        validation: (e) => Gy(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t },
             } = e;
             if (null == nm.A.getChannel(t))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = nm.A.getChannel(t);
@@ -43827,27 +43840,27 @@ let xK = {
                             let { userId: t } = e;
                             return t;
                         })
-                        .forEach((e) => i((0, wW.qG)(a, r.id, e))),
+                        .forEach((e) => i((0, wK.qG)(a, r.id, e))),
                     s
                 );
             };
         },
     },
     [j.ZE4.VOICE_STATE_UPDATE]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
-        validation: (e) => GR(e).required().keys({ channel_id: e.string().required() }),
+        scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
+        validation: (e) => Gy(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
             let {
                 args: { channel_id: t },
             } = e;
             if (null == nm.A.getChannel(t))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = nm.A.getChannel(t);
                 if (null == r) return;
                 let a = r.getGuildId(),
-                    s = Object.values(nG.A.getVoiceStatesForChannel(r.id)).map((e) => (0, wW.qG)(a, r.id, e));
+                    s = Object.values(nG.A.getVoiceStatesForChannel(r.id)).map((e) => (0, wK.qG)(a, r.id, e));
                 return (
                     iM()
                         .differenceWith(s, n, iM().isEqual)
@@ -43858,11 +43871,11 @@ let xK = {
         },
     },
     [j.ZE4.VOICE_CONNECTION_STATUS]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
+        scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = {
-                    state: (0, wW.SK)(ng.A.getState()),
+                    state: (0, wK.SK)(ng.A.getState()),
                     hostname: ng.A.getHostname(),
                     pings: ng.A.getPings(),
                     average_ping: ng.A.getAveragePing(),
@@ -43871,32 +43884,32 @@ let xK = {
             return (iM().isEqual(i, t) || n(i), i);
         },
     },
-    [j.ZE4.MESSAGE_CREATE]: { scope: w1.F.RPC, validation: xF, handler: xB },
-    [j.ZE4.MESSAGE_UPDATE]: { scope: w1.F.RPC, validation: xF, handler: xB },
-    [j.ZE4.MESSAGE_DELETE]: { scope: w1.F.RPC, validation: xF, handler: xB },
+    [j.ZE4.MESSAGE_CREATE]: { scope: w3.F.RPC, validation: xV, handler: xH },
+    [j.ZE4.MESSAGE_UPDATE]: { scope: w3.F.RPC, validation: xV, handler: xH },
+    [j.ZE4.MESSAGE_DELETE]: { scope: w3.F.RPC, validation: xV, handler: xH },
     [j.ZE4.SPEAKING_START]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ, bt.hj] },
-        validation: xV,
-        handler: xH,
+        scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ, bi.hj] },
+        validation: xj,
+        handler: xW,
     },
     [j.ZE4.SPEAKING_STOP]: {
-        scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ, bt.hj] },
-        validation: xV,
-        handler: xH,
+        scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ, bi.hj] },
+        validation: xj,
+        handler: xW,
     },
     [j.ZE4.VOICE_SESSION_PARTICIPANTS_UPDATE]: {
-        scope: xj,
-        validation: xW,
+        scope: xY,
+        validation: xK,
         handler(e) {
             let {
                 args: { session_id: t },
                 socket: n,
             } = e;
             return (
-                wB.validateEventSubscription(n, t),
+                wH.validateEventSubscription(n, t),
                 (e) => {
                     let { prevState: i, dispatch: r } = e,
-                        a = wB.getParticipantsForEventSubscription(n, t);
+                        a = wH.getParticipantsForEventSubscription(n, t);
                     return null == a
                         ? i
                         : (null == i || iM().isEqual(a, i) || r({ session_id: t, participants: a }), a);
@@ -43904,65 +43917,65 @@ let xK = {
             );
         },
     },
-    [j.ZE4.VOICE_SESSION_SPEAKING_START]: { scope: xj, validation: xW, handler: xY },
-    [j.ZE4.VOICE_SESSION_SPEAKING_STOP]: { scope: xj, validation: xW, handler: xY },
-    [j.ZE4.GUILD_CREATE]: { scope: w1.F.RPC, handler() {} },
-    [j.ZE4.CHANNEL_CREATE]: { scope: w1.F.RPC, handler() {} },
-    [j.ZE4.GAME_JOIN]: { scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] }, handler() {} },
-    [j.ZE4.GAME_SPECTATE]: { scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] }, handler() {} },
-    [j.ZE4.ACTIVITY_JOIN]: { scope: { [bt.sm.ANY]: [w1.F.RPC, bt.VH, bt.hj, bt.W_] }, handler() {} },
-    [j.ZE4.ACTIVITY_JOIN_REQUEST]: { scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] }, handler() {} },
-    [j.ZE4.ACTIVITY_SPECTATE]: { scope: { [bt.sm.ANY]: [w1.F.RPC, bt.VH, bt.hj] }, handler() {} },
-    [j.ZE4.ACTIVITY_INVITE]: { scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] }, handler() {} },
+    [j.ZE4.VOICE_SESSION_SPEAKING_START]: { scope: xY, validation: xK, handler: x$ },
+    [j.ZE4.VOICE_SESSION_SPEAKING_STOP]: { scope: xY, validation: xK, handler: x$ },
+    [j.ZE4.GUILD_CREATE]: { scope: w3.F.RPC, handler() {} },
+    [j.ZE4.CHANNEL_CREATE]: { scope: w3.F.RPC, handler() {} },
+    [j.ZE4.GAME_JOIN]: { scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] }, handler() {} },
+    [j.ZE4.GAME_SPECTATE]: { scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] }, handler() {} },
+    [j.ZE4.ACTIVITY_JOIN]: { scope: { [bi.sm.ANY]: [w3.F.RPC, bi.VH, bi.hj, bi.W_] }, handler() {} },
+    [j.ZE4.ACTIVITY_JOIN_REQUEST]: { scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] }, handler() {} },
+    [j.ZE4.ACTIVITY_SPECTATE]: { scope: { [bi.sm.ANY]: [w3.F.RPC, bi.VH, bi.hj] }, handler() {} },
+    [j.ZE4.ACTIVITY_INVITE]: { scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] }, handler() {} },
     [j.ZE4.ACTIVITY_PIP_MODE_UPDATE]: { scope: void 0, handler() {} },
     [j.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE]: { scope: void 0, handler() {} },
     [j.ZE4.FRAME_LAYOUT_MODE_UPDATE]: { scope: void 0, handler() {} },
     [j.ZE4.FRAME_DEEP_LINK]: {
-        scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+        scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
         handler(e) {
             let { socket: t } = e;
             return (
-                (0, wv.Ay)(t),
+                (0, wM.Ay)(t),
                 (e) => {
                     let { prevState: n, dispatch: i } = e;
                     if (null != n) return n;
-                    let r = (0, wj.c5)((0, wX.A)(t)),
-                        a = null != r ? (0, wj.D3)(r) : null;
+                    let r = (0, wY.c5)((0, wZ.A)(t)),
+                        a = null != r ? (0, wY.D3)(r) : null;
                     return (null != a && i({ hash: a }), !0);
                 }
             );
         },
     },
     [j.ZE4.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: {
-        scope: w$,
+        scope: wX,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = wK();
+                i = wz();
             return (iM().isEqual(i, t) || n(i), i);
         },
     },
-    [j.ZE4.THERMAL_STATE_UPDATE]: { scope: { [bt.sm.ANY]: [bt.VH] }, handler() {} },
-    [j.ZE4.ORIENTATION_UPDATE]: { scope: { [bt.sm.ANY]: [bt.VH] }, handler() {} },
-    [j.ZE4.VOICE_CHANNEL_SELECT]: { scope: w1.F.RPC, handler() {} },
-    [j.ZE4.NOTIFICATION_CREATE]: { scope: { [bt.sm.ALL]: [w1.F.RPC, w1.F.RPC_NOTIFICATIONS_READ] }, handler() {} },
+    [j.ZE4.THERMAL_STATE_UPDATE]: { scope: { [bi.sm.ANY]: [bi.VH] }, handler() {} },
+    [j.ZE4.ORIENTATION_UPDATE]: { scope: { [bi.sm.ANY]: [bi.VH] }, handler() {} },
+    [j.ZE4.VOICE_CHANNEL_SELECT]: { scope: w3.F.RPC, handler() {} },
+    [j.ZE4.NOTIFICATION_CREATE]: { scope: { [bi.sm.ALL]: [w3.F.RPC, w3.F.RPC_NOTIFICATIONS_READ] }, handler() {} },
     [j.ZE4.RELATIONSHIP_UPDATE]: {
-        scope: w1.F.RELATIONSHIPS_READ,
+        scope: w3.F.RELATIONSHIPS_READ,
         handler(e) {
             let { socket: t } = e;
-            if (MN.zy(MN.iu(t.application.flags ?? 0), MN.iu(j.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
+            if (MO.zy(MO.iu(t.application.flags ?? 0), MO.iu(j.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
+                throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
         },
     },
     [j.ZE4.CURRENT_USER_UPDATE]: {
-        scope: { [bt.sm.ANY]: [bt.hj, w1.F.IDENTIFY] },
+        scope: { [bi.sm.ANY]: [bi.hj, w3.F.IDENTIFY] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = { currentUser: eF.default.getCurrentUser() };
-            return (null == i.currentUser || (null != t && (0, xx.A)(i, t)) || n((0, wY.A)(i.currentUser)), i);
+            return (null == i.currentUser || (null != t && (0, xF.A)(i, t)) || n((0, w$.A)(i.currentUser)), i);
         },
     },
     [j.ZE4.CURRENT_GUILD_MEMBER_UPDATE]: {
-        scope: { [bt.sm.ALL]: [w1.F.IDENTIFY, w1.F.GUILDS_MEMBERS_READ] },
+        scope: { [bi.sm.ALL]: [w3.F.IDENTIFY, w3.F.GUILDS_MEMBERS_READ] },
         handler(e) {
             let {
                 args: { guild_id: t },
@@ -43972,7 +43985,7 @@ let xK = {
                     r = { currentGuildMember: oG.Ay.getSelfMember(t) };
                 return (
                     null == r.currentGuildMember ||
-                        (null != n && (0, xx.A)(r, n)) ||
+                        (null != n && (0, xF.A)(r, n)) ||
                         i(
                             (function (e) {
                                 let {
@@ -43991,7 +44004,7 @@ let xK = {
                                     nick: n,
                                     guild_id: i,
                                     avatar: r,
-                                    avatar_decoration_data: (0, xk.A)(a),
+                                    avatar_decoration_data: (0, xB.A)(a),
                                     banner: s,
                                     bio: l,
                                     pronouns: o,
@@ -44004,10 +44017,10 @@ let xK = {
             };
         },
     },
-    [j.ZE4.ENTITLEMENT_CREATE]: { scope: { [bt.sm.ANY]: [bt.hj, bt.VH] }, handler() {} },
-    [j.ZE4.ENTITLEMENT_DELETE]: { scope: { [bt.sm.ANY]: [bt.hj, bt.VH] }, handler() {} },
+    [j.ZE4.ENTITLEMENT_CREATE]: { scope: { [bi.sm.ANY]: [bi.hj, bi.VH] }, handler() {} },
+    [j.ZE4.ENTITLEMENT_DELETE]: { scope: { [bi.sm.ANY]: [bi.hj, bi.VH] }, handler() {} },
     [j.ZE4.SCREENSHARE_STATE_UPDATE]: {
-        scope: { [bt.sm.ALL]: [bt.hj, w1.F.RPC_SCREENSHARE_READ] },
+        scope: { [bi.sm.ALL]: [bi.hj, w3.F.RPC_SCREENSHARE_READ] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = d7.A.getStreamerActiveStreamMetadata(),
@@ -44023,7 +44036,7 @@ let xK = {
         },
     },
     [j.ZE4.VIDEO_STATE_UPDATE]: {
-        scope: { [bt.sm.ALL]: [bt.hj, w1.F.RPC_VIDEO_READ] },
+        scope: { [bi.sm.ALL]: [bi.hj, w3.F.RPC_VIDEO_READ] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = { active: ek.Ay.isVideoEnabled() };
@@ -44032,18 +44045,18 @@ let xK = {
     },
     [j.ZE4.AUTHORIZE_REQUEST]: { scope: void 0, handler() {} },
 };
-var x$ = n(873727);
-let xz = (function () {
+var xX = n(873727);
+let xq = (function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     function t() {
-        let t = (0, x$.mB)(ef.Ay.useReducedMotion);
+        let t = (0, xX.mB)(ef.Ay.useReducedMotion);
         if (!e) return t;
         let { uiDensity: n, ...i } = t;
         return i;
     }
     return {
         [j.ZE4.DISCORD_ENV_UPDATE]: {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             handler() {
                 let e = !1,
                     n = null;
@@ -44068,60 +44081,60 @@ let xz = (function () {
         },
     };
 })();
-var xX = n(289919);
-function xq(e) {
-    if (!(0, GC.n)(e.application, j.gfo.SOCIAL_LAYER_INTEGRATION))
-        throw new wD.A({ errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "This application cannot access this API");
+var xZ = n(289919);
+function xQ(e) {
+    if (!(0, GR.n)(e.application, j.gfo.SOCIAL_LAYER_INTEGRATION))
+        throw new wb.A({ errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "This application cannot access this API");
 }
-var xZ = n(350535);
-function xQ() {
+var xJ = n(350535);
+function x0() {
     let e = ek.Ay.getSettings();
     return {
         self_mute: e.mute,
         self_deaf: e.deaf,
         input_mode: e.mode,
-        ptt_key: (0, xZ.rB)(e.modeOptions.shortcut).join(" + ").toUpperCase(),
+        ptt_key: (0, xJ.rB)(e.modeOptions.shortcut).join(" + ").toUpperCase(),
         input_volume: e.inputVolume,
         output_volume: e.outputVolume,
         automatic_gain_control: e.automaticGainControl,
         echo_cancellation: e.echoCancellation,
         noise_suppression: e.noiseSuppression,
-        noise_cancellation: (0, DM.A)(e.noiseCancellation, ek.Ay.getSystemMicrophoneMode()),
+        noise_cancellation: (0, DU.A)(e.noiseCancellation, ek.Ay.getSystemMicrophoneMode()),
     };
 }
-let xJ = {
+let x1 = {
         [j.ZE4.CLIENT_VOICE_SETTINGS_UPDATE]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t } = e;
                 return (
-                    xq(t),
+                    xQ(t),
                     (e) => {
                         let { prevState: t, dispatch: n } = e,
-                            i = xQ();
+                            i = x0();
                         return (iM().isEqual(i, t) || n(i), i);
                     }
                 );
             },
         },
     },
-    x0 = {
+    x2 = {
         [j.ZE4.OVERLAY_UPDATE]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let {
                     args: { pid: t },
                     socket: n,
                 } = e;
-                if ("number" != typeof t || t < 10) throw new wD.A({ errorCode: j.Lw6.INVALID_EVENT }, "Invalid pid");
+                if ("number" != typeof t || t < 10) throw new wb.A({ errorCode: j.Lw6.INVALID_EVENT }, "Invalid pid");
                 return (e) => {
                     let { prevState: i, dispatch: r } = e,
-                        a = UI.default.enabled,
+                        a = UT.default.enabled,
                         s = !0,
                         l = n.application.id;
                     if (null != l) {
                         let e = _H.A.getActiveLibraryApplication(l);
-                        (null != e && (a = a && e.isOverlayEnabled()), (s = MG.default.isLocked(t)));
+                        (null != e && (a = a && e.isOverlayEnabled()), (s = Mk.default.isLocked(t)));
                     }
                     let o = { enabled: a, locked: s };
                     return (iM().isEqual(o, i) || r(o), o);
@@ -44129,11 +44142,11 @@ let xJ = {
             },
         },
     },
-    x1 = {
+    x3 = {
         [j.ZE4.QUEST_ENROLLMENT_STATUS_UPDATE]: {
-            scope: w1.F.IDENTIFY,
+            scope: w3.F.IDENTIFY,
             validation: function (e) {
-                return GR(e).required().keys({ quest_id: e.string().required() });
+                return Gy(e).required().keys({ quest_id: e.string().required() });
             },
             handler: function (e) {
                 let {
@@ -44143,17 +44156,17 @@ let xJ = {
                     i = d1.A.getQuest(t),
                     r = (0, _M.TP)(i);
                 if (null == i || null == r || r !== n.application.id)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Quest not found: ${t}`);
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Quest not found: ${t}`);
             },
         },
     };
-var x2 = n(546983);
-let x3 =
-    ((C = x2.l6),
-    (O = x2.Au),
+var x5 = n(546983);
+let x6 =
+    ((C = x5.l6),
+    (O = x5.Au),
     {
         [j.ZE4.VOICE_SETTINGS_UPDATE]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
             handler: () => (e) => {
                 let { prevState: t, dispatch: n } = e,
                     i = C();
@@ -44161,7 +44174,7 @@ let x3 =
             },
         },
         [j.ZE4.VOICE_SETTINGS_UPDATE_2]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t } = e;
                 return (e) => {
@@ -44173,29 +44186,29 @@ let x3 =
             },
         },
     });
-var x5 = n(298990),
-    x6 = n(334738),
-    x4 = n(181658);
-function x7(e, t) {
+var x4 = n(298990),
+    x7 = n(334738),
+    x8 = n(181658);
+function x9(e, t) {
     return null != e.application_id && null == t.getApplicationActivity(e.application_id, !1);
 }
-var x8 = n(293588),
-    x9 = n(383233);
-async function ke(e, t, n, i) {
+var ke = n(293588),
+    kt = n(383233);
+async function kn(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
         a = _j.A.getApplicationActivity(t);
-    if (null == a || null == a.secrets || !(0, wW.px)(i, a.party, a.secrets))
-        throw new wD.A(
+    if (null == a || null == a.secrets || !(0, wK.px)(i, a.party, a.secrets))
+        throw new wb.A(
             { errorCode: j.Lw6.NO_ELIGIBLE_ACTIVITY },
             "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
         );
-    let s = x7(a, iW.A);
+    let s = x9(a, iW.A);
     if (s) {
-        let { lock: t } = (0, x2.d5)(e);
-        return (0, x5.qf)(a, s).then(() => {
+        let { lock: t } = (0, x5.d5)(e);
+        return (0, x4.qf)(a, s).then(() => {
             throw (
                 t(),
-                new wD.A(
+                new wb.A(
                     { errorCode: j.Lw6.NO_ELIGIBLE_ACTIVITY },
                     "No eligible activity for application. Ensure user does have have privacy enabled.",
                 )
@@ -44204,28 +44217,28 @@ async function ke(e, t, n, i) {
     }
     await _w.A.sendActivityInviteUser({ userId: n, type: i, activity: a, content: r, location: "In-Game Invite" });
 }
-let kt = {
+let ki = {
         [j.e$_.SEND_ACTIVITY_JOIN_INVITE]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] },
             handler(e) {
                 let {
                         socket: t,
                         args: { user_id: n, pid: i },
                     } = e,
                     r = t.application.id;
-                if (null == r) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                return ke(i, r, n, j.xL.JOIN);
+                if (null == r) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                return kn(i, r, n, j.xL.JOIN);
             },
         },
         [j.e$_.CLOSE_ACTIVITY_JOIN_REQUEST]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] },
             handler(e) {
                 let {
                         args: { user_id: t },
                     } = e,
                     n = nm.A.getDMFromUserId(t);
                 null != n &&
-                    (0, x6.ack)(
+                    (0, x7.ack)(
                         n,
                         {
                             section: j.JJy.CLOSE_ACTIVITY_JOIN_REQUEST_RPC_COMMAND,
@@ -44238,9 +44251,9 @@ let kt = {
             },
         },
         [j.e$_.ACTIVITY_INVITE_USER]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] },
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({
                         user_id: e.string().required(),
@@ -44254,14 +44267,14 @@ let kt = {
                         args: { type: n, user_id: i, content: r, pid: a },
                     } = e,
                     s = t.application.id;
-                if (null == s) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                return ke(a, s, i, n, r);
+                if (null == s) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                return kn(a, s, i, n, r);
             },
         },
         [j.e$_.ACCEPT_ACTIVITY_INVITE]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj] },
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({
                         type: e.number().required().valid([j.xL.JOIN]),
@@ -44276,34 +44289,34 @@ let kt = {
                         socket: t,
                         args: { type: n, user_id: i, session_id: r, channel_id: a, message_id: s, application_id: l },
                     } = e,
-                    o = t.transport === bt.z4.IPC ? (l ?? t.application.id) : t.application.id;
-                if (null == o) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                    o = t.transport === bi.z4.IPC ? (l ?? t.application.id) : t.application.id;
+                if (null == o) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                 let d = Promise.resolve(!1);
                 return (
                     n === j.xL.JOIN &&
                         (d = _G.Ay.join({ userId: i, sessionId: r, applicationId: o, channelId: a, messageId: s })),
                     d.then((e) => {
-                        if (!e) throw new wD.A({ errorCode: j.Lw6.INVALID_INVITE }, "Invite is expired or invalid.");
+                        if (!e) throw new wb.A({ errorCode: j.Lw6.INVALID_INVITE }, "Invite is expired or invalid.");
                     })
                 );
             },
         },
-        [j.e$_.OPEN_INVITE_DIALOG]: Gp(j.e$_.OPEN_INVITE_DIALOG, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj, bt.VH] },
+        [j.e$_.OPEN_INVITE_DIALOG]: Gm(j.e$_.OPEN_INVITE_DIALOG, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj, bi.VH] },
             handler(e) {
                 let { socket: t } = e,
                     i = t.application;
-                if (null == i.id) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                let { channel: r, guild: a, frameId: s } = Gz(t),
-                    l = (0, GZ.Ay)({ application: t.application, channelId: r?.id }),
+                if (null == i.id) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                let { channel: r, guild: a, frameId: s } = Gq(t),
+                    l = (0, GJ.Ay)({ application: t.application, channelId: r?.id }),
                     o = null != l ? iN.A.getWindow(l) : void 0;
                 o?.closed && (o = void 0);
                 let d = null != o ? j.BRT.POPOUT : j.BRT.APP;
                 if (((0, a0.sP)({}, o?.document), null != s)) {
                     let e = _j.A.getApplicationActivity(i.id);
-                    if (null != e) (0, x5.qf)(e, !1, d);
+                    if (null != e) (0, x4.qf)(e, !1, d);
                     else
-                        throw new wD.A(
+                        throw new wb.A(
                             { errorCode: j.Lw6.NO_ELIGIBLE_ACTIVITY },
                             "No eligible activity for application. Ensure an activity was set using setActivity.",
                         );
@@ -44330,18 +44343,18 @@ let kt = {
                                     source: j.PE1.ACTIVITY_INVITE,
                                 });
                         },
-                        { contextKey: d === j.BRT.POPOUT ? Gq.KX : Gq.SY },
+                        { contextKey: d === j.BRT.POPOUT ? GQ.KX : GQ.SY },
                     );
             },
         }),
-        [j.e$_.INITIATE_IMAGE_UPLOAD]: Gp(j.e$_.INITIATE_IMAGE_UPLOAD, {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, bt.hj, bt.VH] },
+        [j.e$_.INITIATE_IMAGE_UPLOAD]: Gm(j.e$_.INITIATE_IMAGE_UPLOAD, {
+            scope: { [bi.sm.ANY]: [w3.F.RPC, bi.hj, bi.VH] },
             handler(e) {
                 let { socket: t } = e,
                     n = t.application.id;
-                if (null == n) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                let i = (0, GS.A)(t) ? (0, sA.A)(t.context.surface) : void 0,
-                    r = i === b2.kG ? void 0 : i;
+                if (null == n) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                let i = (0, GC.A)(t) ? (0, sA.A)(t.context.surface) : void 0,
+                    r = i === b5.kG ? void 0 : i;
                 return new Promise((e, t) => {
                     !(function (e, t) {
                         let n;
@@ -44350,7 +44363,7 @@ let kt = {
                             let e = tU.A.getLastFocusedWindowId();
                             n = null == e ? null : (0, tp.Iy)(e)?.renderWindow;
                         }
-                        if (null == n) throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "No valid window found");
+                        if (null == n) throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "No valid window found");
                         let i = n.document.createElement("input");
                         function r() {
                             null != n &&
@@ -44375,34 +44388,34 @@ let kt = {
                     })(
                         async (i) => {
                             let a = await (0, nd.CS)(n, r, i);
-                            (0, _a.Vq)(a) && (0, _a.Vq)(a.url) && !(a instanceof x4.A) ? e({ image_url: a.url }) : t(a);
+                            (0, _a.Vq)(a) && (0, _a.Vq)(a.url) && !(a instanceof x8.A) ? e({ image_url: a.url }) : t(a);
                         },
                         () => t(Error("Upload canceled")),
                     );
                 }).catch((e) => {
-                    throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, e?.message ?? "Failed to upload image");
+                    throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, e?.message ?? "Failed to upload image");
                 });
             },
         }),
-        [j.e$_.OPEN_SHARE_MOMENT_DIALOG]: Gp(j.e$_.OPEN_SHARE_MOMENT_DIALOG, {
-            scope: { [bt.sm.ANY]: [bt.VH] },
+        [j.e$_.OPEN_SHARE_MOMENT_DIALOG]: Gm(j.e$_.OPEN_SHARE_MOMENT_DIALOG, {
+            scope: { [bi.sm.ANY]: [bi.VH] },
             handler(e) {
                 let {
                     socket: t,
                     args: { mediaUrl: i },
                 } = e;
-                (0, wW.lG)(t.transport);
+                (0, wK.lG)(t.transport);
                 let r = t.application.id;
-                if (null == r) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                if (!(0, Gm.D)(t.application))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
-                let a = GL();
+                if (null == r) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (!(0, GS.D)(t.application))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                let a = GD();
                 if (!z.A.isDiscordCdnUrl(i))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
                 !(function (e) {
                     let { applicationId: t, channelId: i, mediaUrl: r } = e,
                         a = ak.A.getApplication(t),
-                        s = null != (0, GZ.Ay)({ application: a, channelId: i }) ? Gq.KX : Gq.SY;
+                        s = null != (0, GJ.Ay)({ application: a, channelId: i }) ? GQ.KX : GQ.SY;
                     (0, tX.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
@@ -44425,8 +44438,8 @@ let kt = {
                 })({ applicationId: r, channelId: a?.id, mediaUrl: i });
             },
         }),
-        [j.e$_.SHARE_INTERACTION]: Gp(j.e$_.SHARE_INTERACTION, {
-            scope: { [bt.sm.ANY]: [bt.VH, bt.hj] },
+        [j.e$_.SHARE_INTERACTION]: Gm(j.e$_.SHARE_INTERACTION, {
+            scope: { [bi.sm.ANY]: [bi.VH, bi.hj] },
             handler(e) {
                 let t,
                     {
@@ -44442,13 +44455,13 @@ let kt = {
                         },
                     } = e,
                     c = n.application.id;
-                if (null == c) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                if (!wZ.mO.includes(c))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Unsupported application.");
-                if (!(0, Gm.D)(n.application))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
-                let u = GL();
-                if (null == u && s) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No channel found");
+                if (null == c) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (!wJ.mO.includes(c))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Unsupported application.");
+                if (!(0, GS.D)(n.application))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "This application cannot access this API");
+                let u = GD();
+                if (null == u && s) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No channel found");
                 if (null !== r || null !== a || null !== l) {
                     let e = [];
                     (void 0 !== r &&
@@ -44463,7 +44476,7 @@ let kt = {
                                 width: r.width,
                             },
                         ]),
-                        (t = new x9.Ay({
+                        (t = new kt.Ay({
                             id: cc.default.cast(cc.default.fromTimestamp(Date.now())),
                             applicationId: c,
                             content: l,
@@ -44473,10 +44486,10 @@ let kt = {
                 }
                 return new Promise((e) => {
                     let n = !1,
-                        r = (0, x2.d5)(d),
-                        a = Gq.SY;
-                    ((iN.A.getWindowOpen(j.MLl.ACTIVITY_POPOUT) || r.context === j.BRT.POPOUT) && (a = Gq.KX),
-                        (0, x8.m)({
+                        r = (0, x5.d5)(d),
+                        a = GQ.SY;
+                    ((iN.A.getWindowOpen(j.MLl.ACTIVITY_POPOUT) || r.context === j.BRT.POPOUT) && (a = GQ.KX),
+                        (0, ke.m)({
                             applicationId: c,
                             channel: u,
                             command: { name: i, options: o },
@@ -44491,21 +44504,21 @@ let kt = {
             },
         }),
     },
-    kn = 10 * i_.A.Millis.SECOND,
-    ki = {
+    kr = 10 * i_.A.Millis.SECOND,
+    ka = {
         [j.e$_.VALIDATE_APPLICATION]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t } = e,
                     i = t.application.id;
                 try {
                     var r;
                     let e;
-                    if (null == i) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                    if (null == i) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                     let t = ak.A.getApplication(i);
-                    if (null == t) throw new wD.A({ errorCode: j.Lw6.INVALID_ENTITLEMENT }, "SKU does not exist.");
+                    if (null == t) throw new wb.A({ errorCode: j.Lw6.INVALID_ENTITLEMENT }, "SKU does not exist.");
                     let n = t.primarySkuId;
-                    if (null == n) throw new wD.A({ errorCode: j.Lw6.INVALID_ENTITLEMENT }, "SKU does not exist.");
+                    if (null == n) throw new wb.A({ errorCode: j.Lw6.INVALID_ENTITLEMENT }, "SKU does not exist.");
                     return Promise.race([
                         ((r = t.id),
                         (e = cn.A.isEntitledToSku(eF.default.getCurrentUser(), n, r)),
@@ -44515,13 +44528,13 @@ let kt = {
                                   () => !0 === cn.A.isEntitledToSku(eF.default.getCurrentUser(), n, r),
                               )).then((e) => {
                             if (!e)
-                                throw new wD.A(
+                                throw new wb.A(
                                     { errorCode: j.Lw6.INVALID_ENTITLEMENT },
                                     "User does not have entitlement.",
                                 );
                         }),
-                        (0, iu.BK)(kn).then(() => {
-                            throw new wD.A({ errorCode: j.Lw6.INVALID_ENTITLEMENT }, "Timed out fetching entitlement.");
+                        (0, iu.BK)(kr).then(() => {
+                            throw new wb.A({ errorCode: j.Lw6.INVALID_ENTITLEMENT }, "Timed out fetching entitlement.");
                         }),
                     ]);
                 } catch (e) {
@@ -44538,14 +44551,14 @@ let kt = {
             },
         },
         [j.e$_.GET_ENTITLEMENT_TICKET]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t } = e,
                     i = t.application.id;
-                if (null == i) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == i) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                 return x.Bo.post({
                     url: j.Rsh.ENTITLEMENT_TICKET(i),
-                    body: { test_mode: (0, GO.Fs)(i) },
+                    body: { test_mode: (0, GL.Fs)(i) },
                     retries: 3,
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -44567,28 +44580,28 @@ let kt = {
             },
         },
     };
-var kr = n(941426),
-    ka = n(229209),
-    ks = n(782425),
-    kl = n(201327),
-    ko = n(429582),
-    kd = n(426179),
-    kc = n(484697),
-    ku = n(803301);
-let k_ = "/embeds/video-frame";
-function kE(e) {
+var ks = n(941426),
+    kl = n(229209),
+    ko = n(782425),
+    kd = n(201327),
+    kc = n(429582),
+    ku = n(426179),
+    k_ = n(484697),
+    kE = n(803301);
+let kA = "/embeds/video-frame";
+function kh(e) {
     return "contain" === e || "cover" === e ? e : null;
 }
-let kA = new Map(),
-    kh = new kr.Vy("ApplicationStreamingViewCoordinator"),
-    kf = { application_streaming: [d7.A, wA.A, ku.A], camera: [ng.A, nG.A, ek.Ay, ku.A] };
-function kI(e) {
+let kf = new Map(),
+    kI = new ks.Vy("ApplicationStreamingViewCoordinator"),
+    kp = { application_streaming: [d7.A, wf.A, kE.A], camera: [ng.A, nG.A, ek.Ay, kE.A] };
+function kT(e) {
     if (null == e) return "contain";
-    let t = kE(e);
-    if (null == t) throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'fit must be "contain" or "cover"');
+    let t = kh(e);
+    if (null == t) throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'fit must be "contain" or "cover"');
     return t;
 }
-class kp {
+class km {
     frames = new Map();
     subscribedSourceTypes = new Set();
     publishedDisplaySizes = new Map();
@@ -44643,12 +44656,12 @@ class kp {
     }
     async start(e, t, n, i) {
         let r,
-            a = kI(i),
+            a = kT(i),
             { context: s, frameId: l } = this.validateFrame(e),
             { channelId: o, guildId: d } = this.resolveFrameVoiceContext(s),
             c = d7.A.getStreamForUser(t, d);
         if (null == c || c.channelId !== o)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "That user is not streaming in your voice channel");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "That user is not streaming in your voice channel");
         let u = (0, dk._z)(c),
             { frameWindow: _, targetOrigin: E } = this.resolveFrameWindow(e, s);
         this.prepareApplicationStreamingStart(l);
@@ -44659,7 +44672,7 @@ class kp {
             streamKey: u,
             createdStreamWatch: !1,
             controller: new AbortController(),
-            pooled: wy.A.isFramePooled(l),
+            pooled: wv.A.isFramePooled(l),
         };
         ((this.frameState(l).pendingStart = A), this.syncFrameLifecycleSubscription());
         let h = this.waitForDecodedStream(c, u, A.controller.signal);
@@ -44670,7 +44683,7 @@ class kp {
             throw (this.isCurrentPendingStart(A) && (this.clearPendingStart(A), this.releasePendingWatch(A)), e);
         }
         if (!this.isCurrentPendingStart(A) || A.controller.signal.aborted)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Go Live view startup was cancelled");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Go Live view startup was cancelled");
         this.clearPendingStart(A);
         let { rtcConnectionId: f, videoStreamId: I } = r;
         try {
@@ -44678,7 +44691,7 @@ class kp {
                 r = this.resolveFrameVoiceContext(i.context),
                 c = d7.A.getStreamForUser(t, d);
             if (i.frameId !== l || r.channelId !== o || null == c || (0, dk._z)(c) !== u)
-                throw new wD.A(
+                throw new wb.A(
                     { errorCode: j.Lw6.INVALID_CHANNEL },
                     "The Go Live stream or your voice channel changed",
                 );
@@ -44707,16 +44720,16 @@ class kp {
         }
     }
     startCamera(e, t, n, i) {
-        let r = kI(i),
+        let r = kT(i),
             { context: a, frameId: s } = this.validateFrame(e),
             { channelId: l, guildId: o, rtcConnectionId: d } = this.resolveFrameVoiceContext(a),
             c = nG.A.getVoiceStateForChannel(l, t);
         if (c?.selfVideo !== !0)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "That user is not sharing camera video here");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "That user is not sharing camera video here");
         if (ek.Ay.isLocalVideoDisabled(t, iC.x.DEFAULT))
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "That camera is hidden in this Discord client");
-        let u = ku.A.getStreamId(t, o, iC.x.DEFAULT);
-        if (null == u) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The decoded camera video is unavailable");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "That camera is hidden in this Discord client");
+        let u = kE.A.getStreamId(t, o, iC.x.DEFAULT);
+        if (null == u) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The decoded camera video is unavailable");
         let { frameWindow: _, targetOrigin: E } = this.resolveFrameWindow(e, a);
         return (
             this.prepareCameraStart(s, t),
@@ -44738,13 +44751,13 @@ class kp {
         );
     }
     resolveFrameWindow(e, t) {
-        if (e.source.type !== bt.z4.POST_MESSAGE)
-            throw new wD.A(
+        if (e.source.type !== bi.z4.POST_MESSAGE)
+            throw new wb.A(
                 { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                 "Managed video views require a Frame transport",
             );
-        let n = (0, kc.fl)(t.iframeId)?.contentWindow;
-        if (null == n) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "The Conjure Frame is not mounted");
+        let n = (0, k_.fl)(t.iframeId)?.contentWindow;
+        if (null == n) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "The Conjure Frame is not mounted");
         return { frameWindow: n, targetOrigin: e.source.origin };
     }
     prepareApplicationStreamingStart(e) {
@@ -44758,7 +44771,7 @@ class kp {
             i = n?.get(t);
         if (null != i) this.releaseSession(i);
         else if ((n?.size ?? 0) >= 25)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "A Frame can show at most 25 managed camera views");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "A Frame can show at most 25 managed camera views");
     }
     createSession(e) {
         let t,
@@ -44777,22 +44790,22 @@ class kp {
                 fit: E,
             } = e,
             A = (function (e) {
-                if ((0, ka.au)()) return (0, ka.nz)(e);
-                let t = (0, kl.yL)(e);
+                if ((0, kl.au)()) return (0, kl.nz)(e);
+                let t = (0, kd.yL)(e);
                 if (null == t) return null;
-                (0, ks.NM)(e);
+                (0, ko.NM)(e);
                 let n = !1;
                 return {
                     stream: t,
                     release() {
-                        n || ((n = !0), (0, ks.gm)(e));
+                        n || ((n = !0), (0, ko.gm)(e));
                     },
                 };
             })(u);
         if (null == A || 0 === A.stream.getVideoTracks().length) {
             A?.release();
             let t = "camera" === e.sourceType ? "camera" : "Go Live";
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `The decoded ${t} video is unavailable`);
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `The decoded ${t} video is unavailable`);
         }
         let h = {
                 id: (0, nc.A)(),
@@ -44805,14 +44818,14 @@ class kp {
                 rtcConnectionId: c,
                 videoStreamId: u,
                 lease: A,
-                viewerUrl: `${window.location.origin}${k_}`,
+                viewerUrl: `${window.location.origin}${kA}`,
                 releaseViewer: null,
                 setViewerPresenting: null,
                 fit: E,
                 setViewerFit: null,
                 suspended: !1,
-                backgrounded: !wy.A.isFrameVisible(r),
-                pooled: wy.A.isFramePooled(r),
+                backgrounded: !wv.A.isFrameVisible(r),
+                pooled: wv.A.isFramePooled(r),
                 displayPixelWidth: 0,
                 displayPixelHeight: 0,
                 releaseNativeSurfaceExclusion: null,
@@ -44839,7 +44852,7 @@ class kp {
         );
     }
     attachFrameVideoViewer(e, t, n, i) {
-        let r = (0, ko.H3)(t)?.shell ?? t.top ?? window,
+        let r = (0, kc.H3)(t)?.shell ?? t.top ?? window,
             a = null,
             s = (n) => {
                 var r;
@@ -44849,11 +44862,11 @@ class kp {
                     null == r || "object" != typeof r || "DISCORD_FRAME_VIDEO_VIEWER" !== r.type || r.nonce !== i)
                 )
                     return;
-                let s = (0, ko.H3)(t)?.guest ?? t;
+                let s = (0, kc.H3)(t)?.guest ?? t;
                 (function (e, t) {
                     try {
                         let n = new URL(e.location.href);
-                        return n.origin === window.location.origin && n.pathname === k_ && e.parent === t;
+                        return n.origin === window.location.origin && n.pathname === kA && e.parent === t;
                     } catch {
                         return !1;
                     }
@@ -44870,7 +44883,7 @@ class kp {
                             s = !1,
                             l = !1;
                         function o(e) {
-                            let t = kE(e);
+                            let t = kh(e);
                             s || null == t || (a.style.objectFit = t);
                         }
                         function d(e) {
@@ -44920,15 +44933,15 @@ class kp {
     }
     setFit(e, t, n) {
         let i = this.validateSession(e, t);
-        ((i.fit = kI(n)), i.setViewerFit?.(i.fit));
+        ((i.fit = kT(n)), i.setViewerFit?.(i.fit));
     }
     watchOnDiscord(e, t) {
         let n = this.validateSession(e, t);
         if ("application_streaming" !== n.sourceType)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Camera views are already part of the Discord call");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Camera views are already part of the Discord call");
         let i = d7.A.getStreamForUser(n.ownerUserId, n.guildId);
         if (null == i || (0, dk._z)(i) !== n.streamKey)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The Go Live stream changed or ended");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "The Go Live stream changed or ended");
         ((n.createdStreamWatch = !1),
             this.streamWatches.delete(n.streamKey),
             (0, uv.Nl)(i),
@@ -44948,21 +44961,21 @@ class kp {
     }
     handleFrameLifecycleChange = () => {
         for (let e of this.getPendingStarts())
-            ((e.pooled ||= wy.A.isFramePooled(e.frameId)),
-                e.pooled && !wy.A.isFramePooled(e.frameId) && this.cancelPendingStart(e));
+            ((e.pooled ||= wv.A.isFramePooled(e.frameId)),
+                e.pooled && !wv.A.isFramePooled(e.frameId) && this.cancelPendingStart(e));
         for (let e of this.getLiveSessions()) {
-            if (((e.pooled ||= wy.A.isFramePooled(e.frameId)), e.pooled && !wy.A.isFramePooled(e.frameId))) {
+            if (((e.pooled ||= wv.A.isFramePooled(e.frameId)), e.pooled && !wv.A.isFramePooled(e.frameId))) {
                 this.releaseSession(e);
                 continue;
             }
-            let t = !wy.A.isFrameVisible(e.frameId);
+            let t = !wv.A.isFrameVisible(e.frameId);
             e.backgrounded !== t &&
                 ((e.backgrounded = t), this.syncViewerPresentation(e), this.syncNativeSurfaceExclusion(e));
         }
     };
     syncFrameLifecycleSubscription() {
         if (this.getLiveSessions().length > 0 || this.getPendingStarts().length > 0) {
-            this.unsubscribeFrameLifecycle ??= wy.A.subscribe(this.handleFrameLifecycleChange);
+            this.unsubscribeFrameLifecycle ??= wv.A.subscribe(this.handleFrameLifecycleChange);
             return;
         }
         (this.unsubscribeFrameLifecycle?.(), (this.unsubscribeFrameLifecycle = null));
@@ -44980,8 +44993,8 @@ class kp {
         if (t === this.subscribedSourceTypes.has(e)) return;
         let n = "application_streaming" === e ? this.handleStreamIdentityChange : this.handleCameraIdentityChange;
         t
-            ? (this.subscribedSourceTypes.add(e), kf[e].forEach((e) => e.addChangeListener(n)))
-            : (this.subscribedSourceTypes.delete(e), kf[e].forEach((e) => e.removeChangeListener(n)));
+            ? (this.subscribedSourceTypes.add(e), kp[e].forEach((e) => e.addChangeListener(n)))
+            : (this.subscribedSourceTypes.delete(e), kp[e].forEach((e) => e.removeChangeListener(n)));
     }
     releaseAll() {
         for (let e of this.getPendingStarts()) this.cancelPendingStart(e);
@@ -45018,7 +45031,7 @@ class kp {
                     ((t = e.channelId),
                     (n = "camera" === e.sourceType ? e.ownerUserId : e.streamKey),
                     (i = `${t}:${n}`),
-                    null != (r = kA.get(i))
+                    null != (r = kf.get(i))
                         ? (r.holders += 1)
                         : ((r = {
                               holders: 1,
@@ -45034,10 +45047,10 @@ class kp {
                                   );
                               })(t, n),
                           }),
-                          kA.set(i, r)),
+                          kf.set(i, r)),
                     (a = r),
                     (s = !1),
-                    () => !s && ((s = !0), (a.holders -= 1), !(a.holders > 0) && (kA.delete(i), a.release())));
+                    () => !s && ((s = !0), (a.holders -= 1), !(a.holders > 0) && (kf.delete(i), a.release())));
             }
     }
     releaseNativeSurfaceExclusion(e) {
@@ -45047,8 +45060,8 @@ class kp {
     getDecodedStreamIdentity(e, t, n) {
         let i = d7.A.getActiveStreamForStreamKey(n);
         if (i?.state !== j.XYD.ACTIVE && i?.state !== j.XYD.PAUSED) return null;
-        let r = wA.A.getRtcConnectionId(n),
-            a = ku.A.getStreamId(e, t, iC.x.STREAM);
+        let r = wf.A.getRtcConnectionId(n),
+            a = kE.A.getStreamId(e, t, iC.x.STREAM);
         return null != r && null != a ? { rtcConnectionId: r, videoStreamId: a } : null;
     }
     waitForDecodedStream(e, t, n) {
@@ -45059,12 +45072,12 @@ class kp {
                   function a() {
                       (clearTimeout(o),
                           n.removeEventListener("abort", s),
-                          kf.application_streaming.forEach((e) => e.removeChangeListener(l)));
+                          kp.application_streaming.forEach((e) => e.removeChangeListener(l)));
                   }
                   function s() {
                       var e;
                       return (
-                          (e = new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Go Live startup cancelled")),
+                          (e = new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Go Live startup cancelled")),
                           void (a(), r(e))
                       );
                   }
@@ -45073,7 +45086,7 @@ class kp {
                           let l = d7.A.getStreamForUser(e.ownerId, e.guildId);
                           if (null == l || (0, dk._z)(l) !== t) {
                               var o;
-                              return void ((o = new wD.A(
+                              return void ((o = new wb.A(
                                   { errorCode: j.Lw6.INVALID_CHANNEL },
                                   "The offered Go Live stream ended",
                               )),
@@ -45086,14 +45099,14 @@ class kp {
                       o = setTimeout(() => {
                           var e;
                           return (
-                              (e = new wD.A(
+                              (e = new wb.A(
                                   { errorCode: j.Lw6.INVALID_CHANNEL },
                                   "Discord could not start the offered Go Live stream",
                               )),
                               void (a(), r(e))
                           );
                       }, 12e3);
-                  (kf.application_streaming.forEach((e) => e.addChangeListener(l)),
+                  (kp.application_streaming.forEach((e) => e.addChangeListener(l)),
                       n.addEventListener("abort", s, { once: !0 }),
                       l());
               });
@@ -45127,9 +45140,9 @@ class kp {
         if (r > 1) return void this.streamWatches.set(e, r - 1);
         this.streamWatches.delete(e);
         let a = i || tI.A.getSelectedParticipantId(t) === e,
-            s = null != n && ((0, ka.au)() ? (0, ka.sj)(n) : (0, ks.ZE)(n)) > 0;
+            s = null != n && ((0, kl.au)() ? (0, kl.sj)(n) : (0, ko.ZE)(n)) > 0;
         a || s
-            ? kh.info("Leaving Conjure-acquired Go Live watch active for another Discord consumer")
+            ? kI.info("Leaving Conjure-acquired Go Live watch active for another Discord consumer")
             : (0, uv.vN)(e, !1, !1);
     }
     applyDisplaySize(e, t, n) {
@@ -45151,22 +45164,22 @@ class kp {
         if (t <= 0 || n <= 0) return void this.publishedDisplaySizes.delete(e);
         let i = this.publishedDisplaySizes.get(e);
         (i?.width !== t || i.height !== n) &&
-            (this.publishedDisplaySizes.set(e, { width: t, height: n }), (0, kd.c)(e, { width: t, height: n }, 1));
+            (this.publishedDisplaySizes.set(e, { width: t, height: n }), (0, ku.c)(e, { width: t, height: n }, 1));
     }
     resolveFrameVoiceContext(e) {
         let t = ng.A.getRTCConnection();
         if (null == t || "RTC_CONNECTED" !== t.state)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Join the stream channel first");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Join the stream channel first");
         let n = t.channelId,
             { frame: i } = e;
         if ((0, sA.A)(i.surface) !== n) {
-            if (!(0, wv.Pc)(i.applicationId))
-                throw new wD.A(
+            if (!(0, wM.Pc)(i.applicationId))
+                throw new wb.A(
                     { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                     "Only an app running in your voice channel can view video",
                 );
-            if (!(0, wv.OQ)(i.applicationId) && !(0, wv.v8)(i, n))
-                throw new wD.A(
+            if (!(0, wM.OQ)(i.applicationId) && !(0, wM.v8)(i, n))
+                throw new wb.A(
                     { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                     "This app can only view video in a voice channel in the server it is installed in",
                 );
@@ -45175,18 +45188,18 @@ class kp {
         return { channelId: n, guildId: r, rtcConnectionId: t.getRTCConnectionId() };
     }
     validateFrame(e) {
-        let t = (0, wb.A)(e);
+        let t = (0, wP.A)(e);
         return { context: t, frameId: t.frame.id };
     }
     validateSession(e, t) {
         let { context: n, frameId: i } = this.validateFrame(e),
             r = this.getLiveSessions().find((e) => e.id === t);
         if (null == r || r.socketId !== e.id || r.frameId !== i || r.applicationId !== n.frame.applicationId)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Unknown or stale managed video view");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Unknown or stale managed video view");
         if (!this.isSourceUnchanged(r)) {
             this.releaseSession(r);
             let e = "camera" === r.sourceType ? "The camera changed or ended" : "The Go Live stream changed or ended";
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, e);
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, e);
         }
         return r;
     }
@@ -45203,43 +45216,43 @@ class kp {
                   i.getRTCConnectionId() === t.rtcConnectionId &&
                   r?.selfVideo === !0 &&
                   !ek.Ay.isLocalVideoDisabled(t.ownerUserId, iC.x.DEFAULT) &&
-                  ku.A.getStreamId(t.ownerUserId, t.guildId, iC.x.DEFAULT) === t.videoStreamId)
+                  kE.A.getStreamId(t.ownerUserId, t.guildId, iC.x.DEFAULT) === t.videoStreamId)
             : ((n = e),
               null != (a = d7.A.getStreamForUser(n.ownerUserId, n.guildId)) &&
                   a.channelId === n.channelId &&
                   (0, dk._z)(a) === n.streamKey &&
-                  wA.A.getRtcConnectionId(n.streamKey) === n.rtcConnectionId &&
-                  ku.A.getStreamId(n.ownerUserId, n.guildId, iC.x.STREAM) === n.videoStreamId);
+                  wf.A.getRtcConnectionId(n.streamKey) === n.rtcConnectionId &&
+                  kE.A.getStreamId(n.ownerUserId, n.guildId, iC.x.STREAM) === n.videoStreamId);
     }
 }
-let kT = new kp();
+let kg = new km();
 (k.h.subscribe("RPC_APP_DISCONNECTED", (e) => {
     let { socketId: t } = e;
-    return kT.releaseSocket(t);
+    return kg.releaseSocket(t);
 }),
     k.h.subscribe("VOICE_CHANNEL_SELECT", (e) => {
         let { channelId: t } = e;
-        return kT.releaseUnlessChannel(t);
+        return kg.releaseUnlessChannel(t);
     }),
-    k.h.subscribe("LOGOUT", () => kT.releaseAll()));
-let km = { [bt.sm.ANY]: [bt.W_, bt.VH] },
-    kg = {
-        [j.e$_.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: Gp(j.e$_.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES, {
-            scope: km,
+    k.h.subscribe("LOGOUT", () => kg.releaseAll()));
+let kS = { [bi.sm.ANY]: [bi.W_, bi.VH] },
+    kN = {
+        [j.e$_.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: Gm(j.e$_.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES, {
+            scope: kS,
             handler(e) {
                 let { socket: t } = e;
-                return ((0, wv.Ay)(t), kT.getCapabilitiesForSocket(t));
+                return ((0, wM.Ay)(t), kg.getCapabilitiesForSocket(t));
             },
         }),
-        [j.e$_.START_APPLICATION_STREAMING_VIEW]: Gp(j.e$_.START_APPLICATION_STREAMING_VIEW, {
-            scope: km,
+        [j.e$_.START_APPLICATION_STREAMING_VIEW]: Gm(j.e$_.START_APPLICATION_STREAMING_VIEW, {
+            scope: kS,
             async handler(e) {
                 let {
                     socket: t,
                     args: { owner_user_id: n, transport_nonce: i, fit: r },
                 } = e;
-                (0, wv.Ay)(t);
-                let a = await kT.start(t, n, i, r);
+                (0, wM.Ay)(t);
+                let a = await kg.start(t, n, i, r);
                 return {
                     session_id: a.id,
                     owner_user_id: a.ownerUserId,
@@ -45249,70 +45262,70 @@ let km = { [bt.sm.ANY]: [bt.W_, bt.VH] },
                 };
             },
         }),
-        [j.e$_.SUSPEND_APPLICATION_STREAMING_VIEW]: Gp(j.e$_.SUSPEND_APPLICATION_STREAMING_VIEW, {
-            scope: km,
+        [j.e$_.SUSPEND_APPLICATION_STREAMING_VIEW]: Gm(j.e$_.SUSPEND_APPLICATION_STREAMING_VIEW, {
+            scope: kS,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.suspend(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.suspend(t, n), { success: !0 });
             },
         }),
-        [j.e$_.RESUME_APPLICATION_STREAMING_VIEW]: Gp(j.e$_.RESUME_APPLICATION_STREAMING_VIEW, {
-            scope: km,
+        [j.e$_.RESUME_APPLICATION_STREAMING_VIEW]: Gm(j.e$_.RESUME_APPLICATION_STREAMING_VIEW, {
+            scope: kS,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.resume(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.resume(t, n), { success: !0 });
             },
         }),
-        [j.e$_.SET_APPLICATION_STREAMING_VIEW_FIT]: Gp(j.e$_.SET_APPLICATION_STREAMING_VIEW_FIT, {
-            scope: km,
+        [j.e$_.SET_APPLICATION_STREAMING_VIEW_FIT]: Gm(j.e$_.SET_APPLICATION_STREAMING_VIEW_FIT, {
+            scope: kS,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n, fit: i },
                 } = e;
-                return ((0, wv.Ay)(t), kT.setFit(t, n, i), { success: !0 });
+                return ((0, wM.Ay)(t), kg.setFit(t, n, i), { success: !0 });
             },
         }),
-        [j.e$_.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: Gp(j.e$_.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD, {
-            scope: km,
+        [j.e$_.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: Gm(j.e$_.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD, {
+            scope: kS,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.watchOnDiscord(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.watchOnDiscord(t, n), { success: !0 });
             },
         }),
-        [j.e$_.STOP_APPLICATION_STREAMING_VIEW]: Gp(j.e$_.STOP_APPLICATION_STREAMING_VIEW, {
-            scope: km,
+        [j.e$_.STOP_APPLICATION_STREAMING_VIEW]: Gm(j.e$_.STOP_APPLICATION_STREAMING_VIEW, {
+            scope: kS,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.stop(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.stop(t, n), { success: !0 });
             },
         }),
     };
-var kS = n(887909),
-    kN = n(321987),
-    kC = n(595244),
-    kO = n(485845),
-    kR = n(898467),
-    kL = n(224750),
-    ky = n(716965),
-    kD = n(671523),
-    kv = n(337095),
-    kb = n(488926);
-let kM = "CachedTokens",
-    kP = { "1273616940451102832": new kR.A(2, +i_.A.Millis.MINUTE) };
-async function kU(e, t, n) {
+var kC = n(887909),
+    kO = n(321987),
+    kR = n(595244),
+    kL = n(485845),
+    ky = n(898467),
+    kD = n(224750),
+    kv = n(716965),
+    kb = n(671523),
+    kM = n(337095),
+    kP = n(488926);
+let kU = "CachedTokens",
+    kw = { "1273616940451102832": new ky.A(2, +i_.A.Millis.MINUTE) };
+async function kG(e, t, n) {
     let i,
         r,
         a,
@@ -45337,10 +45350,10 @@ async function kU(e, t, n) {
             signal: N,
             isSocketRpcPrivateScope: C,
         } = e;
-    if (N?.aborted) throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Request aborted");
-    if (null == o) throw new wD.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "No Client ID provided");
+    if (N?.aborted) throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Request aborted");
+    if (null == o) throw new wb.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "No Client ID provided");
     if (!C && null != c)
-        throw new wD.A(
+        throw new wb.A(
             { errorCode: j.Lw6.OAUTH2_ERROR },
             "Redirect URI cannot be used in the RPC OAuth2 Authorization flow",
         );
@@ -45349,18 +45362,18 @@ async function kU(e, t, n) {
         ("string" == typeof h ? (O = h.split(" ").filter((e) => e.length > 0)) : Array.isArray(h) && (O = h),
         null == eF.default.getCurrentUser())
     )
-        throw new wD.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "Client is not logged in");
+        throw new wb.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "Client is not logged in");
     if (null != g) r = Number(g);
     else {
         function R(e) {
-            return (0, Gm.D)(e) && e?.integrationTypesConfig?.[kO.b.USER_INSTALL] != null;
+            return (0, GS.D)(e) && e?.integrationTypesConfig?.[kL.b.USER_INSTALL] != null;
         }
         let e = ak.A.getApplication(o);
-        r = R(e) || R((e = nU.Ay.createFromServer(await (0, kv.TA)(o, N)))) ? kO.b.USER_INSTALL : kO.b.GUILD_INSTALL;
+        r = R(e) || R((e = nU.Ay.createFromServer(await (0, kM.TA)(o, N)))) ? kL.b.USER_INSTALL : kL.b.GUILD_INSTALL;
     }
     try {
         [a, { disclosures: s, allAcked: l }] = await Promise.all([
-            (0, ky.qY)({
+            (0, kv.qY)({
                 clientId: o,
                 scopes: O,
                 responseType: d,
@@ -45371,19 +45384,19 @@ async function kU(e, t, n) {
                 integrationType: r,
                 signal: N,
             }),
-            (0, kL.vG)(o),
+            (0, kD.vG)(o),
         ]);
     } catch (t) {
         let { body: e } = t;
-        throw new wD.A(
+        throw new wb.A(
             { errorCode: j.Lw6.OAUTH2_ERROR },
             `OAuth2 Authorization Error: ${e?.message || "Unknown Error"}`,
         );
     }
-    if (T === kD.l.NONE && null != a && a.authorized && l)
+    if (T === kb.l.NONE && null != a && a.authorized && l)
         try {
             return (
-                await (0, ky.Gq)({
+                await (0, kv.Gq)({
                     authorize: !0,
                     clientId: o,
                     scopes: O,
@@ -45398,23 +45411,23 @@ async function kU(e, t, n) {
             ).location;
         } catch (t) {
             let { body: e } = t;
-            throw new wD.A(
+            throw new wb.A(
                 { errorCode: j.Lw6.OAUTH2_ERROR },
                 `OAuth2 Authorize Error: ${e?.message || "Unknown Error"}`,
             );
         }
     n?.(a.application, p, S);
-    let L = kb.x3;
+    let L = kP.x3;
     try {
-        L = MN.iu(f ?? 0);
+        L = MO.iu(f ?? 0);
     } catch (e) {}
     if (
         (null != a.integration_type &&
-            Object.values(kO.b).includes(a.integration_type) &&
+            Object.values(kL.b).includes(a.integration_type) &&
             (i = new Map()).set(a.integration_type, a),
-        null != kP[a.application.id] && (await kP[a.application.id].process(), N?.aborted))
+        null != kw[a.application.id] && (await kw[a.application.id].process(), N?.aborted))
     )
-        throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Request aborted");
+        throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Request aborted");
     return t({
         clientId: o,
         authorizations: i,
@@ -45435,10 +45448,10 @@ async function kU(e, t, n) {
         signal: N,
     });
 }
-async function kw(e, t) {
+async function kx(e, t) {
     if (null != e.authorization.accessToken)
-        throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authenticated");
-    if (e.authorization.authing) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authenticating");
+        throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authenticated");
+    if (e.authorization.authing) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authenticating");
     e.authorization.authing = !0;
     try {
         let n = await x.Bo.get({
@@ -45450,26 +45463,26 @@ async function kw(e, t) {
         e.authorization.authing = !1;
         let { application: i, user: r, scopes: a, expires: s } = n.body;
         if (e.application.id !== i.id)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_CLIENTID }, "Application does not match the connection's");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_CLIENTID }, "Application does not match the connection's");
         let l = eF.default.getCurrentUser();
         if (null == l || null == r || l.id !== r.id)
-            throw new wD.A({ errorCode: j.Lw6.INVALID_TOKEN }, "Token does not match current user");
+            throw new wb.A({ errorCode: j.Lw6.INVALID_TOKEN }, "Token does not match current user");
         return (
             a.forEach((t) => e.authorization.scopes.add(t)),
-            e.authorization.scopes.add(bt.VH),
+            e.authorization.scopes.add(bi.VH),
             (e.authorization.accessToken = t),
             (e.authorization.expires = new Date(s)),
             k.h.dispatch({ type: "RPC_APP_AUTHENTICATED", socketId: e.id, application: e.application }),
             { application: i, user: r, access_token: t, expires: s, scopes: a }
         );
     } catch (e) {
-        if (e instanceof wD.A) throw e;
-        throw new wD.A({ errorCode: j.Lw6.INVALID_TOKEN }, `Invalid access token: ${t}`);
+        if (e instanceof wb.A) throw e;
+        throw new wb.A({ errorCode: j.Lw6.INVALID_TOKEN }, `Invalid access token: ${t}`);
     } finally {
         e.authorization.authing = !1;
     }
 }
-let kG =
+let kk =
         ((R = (e) => {
             let {
                     clientId: t,
@@ -45494,17 +45507,17 @@ let kG =
                 T = null != h ? n?.get(h) : void 0,
                 m = T?.application ?? ak.A.getApplication(t);
             return new Promise((e, T) => {
-                let g = (0, x2.d5)(f),
-                    S = Gq.SY;
-                null != m && null != (0, GZ.Ay)({ application: m, channelId: u })
-                    ? (S = Gq.KX)
-                    : g.context === j.BRT.POPOUT && (S = Gq.KX);
+                let g = (0, x5.d5)(f),
+                    S = GQ.SY;
+                null != m && null != (0, GJ.Ay)({ application: m, channelId: u })
+                    ? (S = GQ.KX)
+                    : g.context === j.BRT.POPOUT && (S = GQ.KX);
                 let N = !1;
                 function C(n) {
                     let { clientId: i, location: r } = n;
                     if (null == i || i === t) {
                         if (((N = !0), null == r)) {
-                            (T(new wD.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                            (T(new wb.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
                                 g.lock());
                             return;
                         }
@@ -45512,7 +45525,7 @@ let kG =
                             ? g.lock()
                             : null == new URL(r).searchParams.get("error")
                               ? (0, tX.openModal)(
-                                    (e) => (0, M.jsx)(kC.Sm, { application: m, ...e }),
+                                    (e) => (0, M.jsx)(kR.Sm, { application: m, ...e }),
                                     {
                                         onCloseCallback: () => {
                                             g.lock();
@@ -45521,7 +45534,7 @@ let kG =
                                     S,
                                 )
                               : (0, tX.openModal)(
-                                    (e) => (0, M.jsx)(kC.xb, { ...e }),
+                                    (e) => (0, M.jsx)(kR.xb, { ...e }),
                                     {
                                         onCloseCallback: () => {
                                             g.lock();
@@ -45535,7 +45548,7 @@ let kG =
                     function n() {
                         (0, tX.closeModal)(e) &&
                             (0, tX.openModal)((e) =>
-                                (0, M.jsx)(kN.f, {
+                                (0, M.jsx)(kO.f, {
                                     ...e,
                                     title: tL.intl.string(tL.t.j2d6Km),
                                     subtitle: tL.intl.string(tL.t["4LKmN5"]),
@@ -45554,7 +45567,7 @@ let kG =
                 })(p, I);
                 (0, tX.openModal)(
                     (e) =>
-                        (0, M.jsx)(kS.OAuth2AuthorizeModal, {
+                        (0, M.jsx)(kC.OAuth2AuthorizeModal, {
                             ...e,
                             authorizations: n,
                             clientId: t,
@@ -45578,7 +45591,7 @@ let kG =
                         onCloseCallback: () => {
                             (O(),
                                 N ||
-                                    (T(new wD.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
+                                    (T(new wb.A({ errorCode: j.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
                                     g.lock()));
                         },
                     },
@@ -45587,24 +45600,24 @@ let kG =
             });
         }),
         (L = function (e, t, n) {
-            if ((0, x2.kS)(n) || !eB.isPlatformEmbedded) return;
-            let i = (0, GZ.Ay)({ application: e, channelId: t });
+            if ((0, x5.kS)(n) || !eB.isPlatformEmbedded) return;
+            let i = (0, GJ.Ay)({ application: e, channelId: t });
             ((0, eB.isWindows)() ? eV.Ay.minimize(i) : eV.Ay.restore(i), eV.Ay.focus(i));
         }),
         {
-            [j.e$_.AUTHENTICATE]: Gp(j.e$_.AUTHENTICATE, {
+            [j.e$_.AUTHENTICATE]: Gm(j.e$_.AUTHENTICATE, {
                 handler(e) {
                     let {
                         socket: t,
                         signal: n,
                         args: { access_token: i },
                     } = e;
-                    if (null == i && t.transport === bt.z4.IPC) {
+                    if (null == i && t.transport === bi.z4.IPC) {
                         let e = t.application.id;
-                        if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                        let r = w1.F.IDENTIFY,
+                        if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                        let r = w3.F.IDENTIFY,
                             a = () =>
-                                kU(
+                                kG(
                                     {
                                         client_id: e,
                                         scope: r,
@@ -45618,11 +45631,11 @@ let kG =
                                     var i, r, a;
                                     let s;
                                     if (null == n)
-                                        throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
+                                        throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
                                     let l = n.split(/#|\?/),
                                         o = tB.parse(l[l.length - 1]);
                                     if (null != o.error)
-                                        throw new wD.A(
+                                        throw new wb.A(
                                             { errorCode: j.Lw6.OAUTH2_ERROR },
                                             `OAuth2 Error: ${o.error}: ${o.error_description ?? "unknown error"}`,
                                         );
@@ -45630,57 +45643,57 @@ let kG =
                                         (i = o.access_token),
                                         (r = o.scope),
                                         (a = o.expires_in),
-                                        ((s = ex.w.get(kM) ?? {})[e] = {
+                                        ((s = ex.w.get(kU) ?? {})[e] = {
                                             accessToken: i,
                                             scope: r,
                                             expires: Date.now() + a,
                                         }),
-                                        ex.w.set(kM, s),
-                                        kw(t, o.access_token)
+                                        ex.w.set(kU, s),
+                                        kx(t, o.access_token)
                                     );
                                 });
                         return null !=
                             (i = (function (e, t) {
-                                let n = ex.w.get(kM);
+                                let n = ex.w.get(kU);
                                 if (null != n && null != n[e]) {
                                     let i = n[e];
                                     if (!(i.scope !== t || i.expires <= Date.now())) return i.accessToken;
-                                    (delete n[e], ex.w.set(kM, n));
+                                    (delete n[e], ex.w.set(kU, n));
                                 }
                             })(e, r))
-                            ? kw(t, i).catch(() => {
+                            ? kx(t, i).catch(() => {
                                   let t;
-                                  return ((t = ex.w.get(kM) ?? {}), delete t[e], ex.w.set(kM, t), a());
+                                  return ((t = ex.w.get(kU) ?? {}), delete t[e], ex.w.set(kU, t), a());
                               })
                             : a();
                     }
-                    if (null == i) throw new wD.A({ errorCode: j.Lw6.INVALID_TOKEN }, "No access token provided");
-                    return kw(t, i);
+                    if (null == i) throw new wb.A({ errorCode: j.Lw6.INVALID_TOKEN }, "No access token provided");
+                    return kx(t, i);
                 },
             }),
-            [j.e$_.AUTHORIZE]: Gp(j.e$_.AUTHORIZE, {
+            [j.e$_.AUTHORIZE]: Gm(j.e$_.AUTHORIZE, {
                 handler(e) {
                     let { socket: t, signal: n, args: i } = e,
                         r = i.client_id;
                     if (null == r || "" === r)
-                        throw new wD.A({ errorCode: j.Lw6.INVALID_CLIENTID }, "No client id provided");
+                        throw new wb.A({ errorCode: j.Lw6.INVALID_CLIENTID }, "No client id provided");
                     if (null != t.authorization.accessToken)
-                        throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authenticated");
+                        throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authenticated");
                     if (t.authorization.authing)
-                        throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authing");
+                        throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Already authing");
                     if (((t.authorization.authing = !0), "token" === i.response_type))
                         throw (
                             (t.authorization.authing = !1),
-                            new wD.A(
+                            new wb.A(
                                 { errorCode: j.Lw6.INVALID_COMMAND },
                                 'Authorization response_type "token" is not supported',
                             )
                         );
-                    let a = t.authorization.scopes.has(bt.LQ);
+                    let a = t.authorization.scopes.has(bi.LQ);
                     if (!a && t.application.id !== r)
                         throw (
                             (t.authorization.authing = !1),
-                            new wD.A(
+                            new wb.A(
                                 { errorCode: j.Lw6.INVALID_CLIENTID },
                                 "Application does not match the connection's",
                             )
@@ -45688,20 +45701,20 @@ let kG =
                     let s = null != i.scopes && "" !== i.scopes ? i.scopes : i.scope;
                     return (
                         delete i.scopes,
-                        kU({ ...i, scope: s, signal: n, isSocketRpcPrivateScope: a }, R, L)
+                        kG({ ...i, scope: s, signal: n, isSocketRpcPrivateScope: a }, R, L)
                             .then((e) => {
                                 if (((t.authorization.authing = !1), null == e))
-                                    throw new wD.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
+                                    throw new wb.A({ errorCode: j.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
                                 let n = new URL(e),
                                     i = n.searchParams.get("code");
                                 if (a) return { code: i, location: e };
                                 let r = n.searchParams.get("error");
                                 if (null != r && "" !== r) {
                                     let e = n.searchParams.get("error_description") ?? "unknown error";
-                                    throw new wD.A({ errorCode: j.Lw6.OAUTH2_ERROR }, `OAuth2 Error: ${r}: ${e}`);
+                                    throw new wb.A({ errorCode: j.Lw6.OAUTH2_ERROR }, `OAuth2 Error: ${r}: ${e}`);
                                 }
                                 if (null == i)
-                                    throw new wD.A(
+                                    throw new wb.A(
                                         { errorCode: j.Lw6.OAUTH2_ERROR },
                                         "OAuth2 Error: Unable to find auth code",
                                     );
@@ -45714,24 +45727,24 @@ let kG =
                 },
             }),
         }),
-    kx = { [bt.sm.ANY]: [bt.W_, bt.VH] },
-    kk = {
-        [j.e$_.GET_CAMERA_VIEW_CAPABILITIES]: Gp(j.e$_.GET_CAMERA_VIEW_CAPABILITIES, {
-            scope: kx,
+    kF = { [bi.sm.ANY]: [bi.W_, bi.VH] },
+    kB = {
+        [j.e$_.GET_CAMERA_VIEW_CAPABILITIES]: Gm(j.e$_.GET_CAMERA_VIEW_CAPABILITIES, {
+            scope: kF,
             handler(e) {
                 let { socket: t } = e;
-                return ((0, wv.Ay)(t), kT.getCameraCapabilitiesForSocket(t));
+                return ((0, wM.Ay)(t), kg.getCameraCapabilitiesForSocket(t));
             },
         }),
-        [j.e$_.START_CAMERA_VIEW]: Gp(j.e$_.START_CAMERA_VIEW, {
-            scope: kx,
+        [j.e$_.START_CAMERA_VIEW]: Gm(j.e$_.START_CAMERA_VIEW, {
+            scope: kF,
             handler(e) {
                 let {
                     socket: t,
                     args: { owner_user_id: n, transport_nonce: i, fit: r },
                 } = e;
-                (0, wv.Ay)(t);
-                let a = kT.startCamera(t, n, i, r);
+                (0, wM.Ay)(t);
+                let a = kg.startCamera(t, n, i, r);
                 return {
                     session_id: a.id,
                     owner_user_id: a.ownerUserId,
@@ -45741,50 +45754,50 @@ let kG =
                 };
             },
         }),
-        [j.e$_.SUSPEND_CAMERA_VIEW]: Gp(j.e$_.SUSPEND_CAMERA_VIEW, {
-            scope: kx,
+        [j.e$_.SUSPEND_CAMERA_VIEW]: Gm(j.e$_.SUSPEND_CAMERA_VIEW, {
+            scope: kF,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.suspend(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.suspend(t, n), { success: !0 });
             },
         }),
-        [j.e$_.RESUME_CAMERA_VIEW]: Gp(j.e$_.RESUME_CAMERA_VIEW, {
-            scope: kx,
+        [j.e$_.RESUME_CAMERA_VIEW]: Gm(j.e$_.RESUME_CAMERA_VIEW, {
+            scope: kF,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.resume(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.resume(t, n), { success: !0 });
             },
         }),
-        [j.e$_.SET_CAMERA_VIEW_FIT]: Gp(j.e$_.SET_CAMERA_VIEW_FIT, {
-            scope: kx,
+        [j.e$_.SET_CAMERA_VIEW_FIT]: Gm(j.e$_.SET_CAMERA_VIEW_FIT, {
+            scope: kF,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n, fit: i },
                 } = e;
-                return ((0, wv.Ay)(t), kT.setFit(t, n, i), { success: !0 });
+                return ((0, wM.Ay)(t), kg.setFit(t, n, i), { success: !0 });
             },
         }),
-        [j.e$_.STOP_CAMERA_VIEW]: Gp(j.e$_.STOP_CAMERA_VIEW, {
-            scope: kx,
+        [j.e$_.STOP_CAMERA_VIEW]: Gm(j.e$_.STOP_CAMERA_VIEW, {
+            scope: kF,
             handler(e) {
                 let {
                     socket: t,
                     args: { session_id: n },
                 } = e;
-                return ((0, wv.Ay)(t), kT.stop(t, n), { success: !0 });
+                return ((0, wM.Ay)(t), kg.stop(t, n), { success: !0 });
             },
         }),
     };
-var kF = n(673953);
-let kB = new Set();
-function kV(e) {
+var kV = n(673953);
+let kH = new Set();
+function kj(e) {
     let { type: t, title: n, body: i, confirmText: r, cancelText: a, onConfirm: s, onCancel: l, ...o } = e,
         d = [
             ...("confirm" === t
@@ -45808,29 +45821,29 @@ function kV(e) {
         ];
     return (0, M.jsx)(ni.a, { ...o, title: n, subtitle: i, actions: d });
 }
-let kH = {
-    [j.e$_.SHOW_CONFIRM_MODAL]: Gp(j.e$_.SHOW_CONFIRM_MODAL, {
-        scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+let kW = {
+    [j.e$_.SHOW_CONFIRM_MODAL]: Gm(j.e$_.SHOW_CONFIRM_MODAL, {
+        scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
         handler(e) {
             let {
                     socket: t,
                     args: { type: n, title: i, body: r, confirm_text: a, cancel_text: s },
                 } = e,
-                { iframeId: l } = (0, wb.A)(t),
-                o = (0, kF.C6)(l);
-            return null == o || kB.has(l)
+                { iframeId: l } = (0, wP.A)(t),
+                o = (0, kV.C6)(l);
+            return null == o || kH.has(l)
                 ? "confirm" === n
                     ? { confirmed: !1 }
                     : { acknowledged: !1 }
-                : (kB.add(l),
+                : (kH.add(l),
                   new Promise((e) => {
                       let t = !1;
                       function d(i) {
-                          t || ((t = !0), kB.delete(l), e("confirm" === n ? { confirmed: i } : { acknowledged: i }));
+                          t || ((t = !0), kH.delete(l), e("confirm" === n ? { confirmed: i } : { acknowledged: i }));
                       }
                       (0, tX.openModal)(
                           (e) =>
-                              (0, M.jsx)(kV, {
+                              (0, M.jsx)(kj, {
                                   ...e,
                                   type: n,
                                   title: i,
@@ -45847,10 +45860,10 @@ let kH = {
         },
     }),
 };
-var kj = n(809685);
-let kW = {
-    [j.e$_.OPEN_CONTEXT_MENU]: Gp(j.e$_.OPEN_CONTEXT_MENU, {
-        scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+var kY = n(809685);
+let kK = {
+    [j.e$_.OPEN_CONTEXT_MENU]: Gm(j.e$_.OPEN_CONTEXT_MENU, {
+        scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
         async handler(e) {
             let t,
                 i,
@@ -45860,22 +45873,22 @@ let kW = {
                     socket: s,
                     args: { type: l, id: o, channel_id: d, url: c, items: u, x: _, y: E },
                 } = e,
-                { frame: A, iframeId: h } = (0, wb.A)(s),
+                { frame: A, iframeId: h } = (0, wP.A)(s),
                 f = (0, sA.A)(A.surface),
-                I = (0, kc.fl)(h);
+                I = (0, k_.fl)(h);
             if (null == I) return { opened: !1 };
             let p = null;
             if ("custom" === l) {
                 if (null == u)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'type "custom" requires an items array');
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'type "custom" requires an items array');
                 p = u;
             }
             if ("message" === l && null == d)
-                throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'type "message" requires a channel_id');
+                throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'type "message" requires a channel_id');
             if ("image" === l) {
-                if (null == c) throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'type "image" requires a url');
+                if (null == c) throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, 'type "image" requires a url');
                 if (!z.A.isDiscordDirectAssetUrl(c))
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PAYLOAD },
                         `url must be a Discord CDN url (${window.GLOBAL_ENV.CDN_HOST ?? "unknown"})`,
                     );
@@ -45883,9 +45896,9 @@ let kW = {
             let { pageX: T, pageY: m } =
                     ((i = Math.min(Math.max(_, 0), (t = I.getBoundingClientRect()).width)),
                     (r = Math.min(Math.max(E, 0), t.height)),
-                    (a = (0, kF.JH)(I)),
+                    (a = (0, kV.JH)(I)),
                     { pageX: t.left + a.scrollX + i, pageY: t.top + a.scrollY + r }),
-                g = { context: (0, kF.cH)(I), onClose: () => (0, kj.yH)(h) },
+                g = { context: (0, kV.cH)(I), onClose: () => (0, kY.yH)(h) },
                 S = {
                     pageX: T,
                     pageY: m,
@@ -45895,14 +45908,14 @@ let kW = {
                     preventDefault: () => {},
                 };
             function N(e, t) {
-                ((0, kj.n_)(h), (0, Ee.L3)(S, e, null == t ? g : { ...g, onClose: t }));
+                ((0, kY.n_)(h), (0, Ee.L3)(S, e, null == t ? g : { ...g, onClose: t }));
             }
             if (null != p) {
                 let e = p;
                 return new Promise((t) => {
                     let i = null;
                     function r() {
-                        ((0, kj.yH)(h), t({ opened: !0, selected_id: i }));
+                        ((0, kY.yH)(h), t({ opened: !0, selected_id: i }));
                     }
                     N(async () => {
                         let { default: t, loadActivityContextMenuIcons: a } = await n
@@ -45954,17 +45967,17 @@ let kW = {
                     ),
                     { opened: !0 }
                 );
-            if (null == o) throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, `type "${l}" requires an id`);
+            if (null == o) throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, `type "${l}" requires an id`);
             if ("message" === l && null != d) {
                 let e = nm.A.getChannel(d);
-                if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${d}`);
+                if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${d}`);
                 if (!nw.A.can(j.xBc.VIEW_CHANNEL, e))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Cannot view this channel");
-                let t = MU.A.getMessage(d, o) ?? (await i4.A.fetchMessage({ channelId: d, messageId: o }));
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Cannot view this channel");
+                let t = MG.A.getMessage(d, o) ?? (await i4.A.fetchMessage({ channelId: d, messageId: o }));
                 if (null == t || t.id !== o)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, `Unknown message id: ${o}`);
-                if ((0, Md.Lt)(t.flags, j.pr7.EPHEMERAL))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, "Cannot open a menu for an ephemeral message");
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, `Unknown message id: ${o}`);
+                if ((0, Mu.Lt)(t.flags, j.pr7.EPHEMERAL))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PAYLOAD }, "Cannot open a menu for an ephemeral message");
                 return (
                     N(async () => {
                         let { default: i } = await Promise.all([
@@ -46432,9 +46445,9 @@ let kW = {
             }
             if ("channel" === l) {
                 let e = nm.A.getChannel(o);
-                if (null == e) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${o}`);
+                if (null == e) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${o}`);
                 if (!nw.A.can(j.xBc.VIEW_CHANNEL, e))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Cannot view this channel");
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_PERMISSIONS }, "Cannot view this channel");
                 return (
                     N(async () => {
                         let { default: t } = await Promise.all([n.e("343266"), n.e("404391")]).then(n.bind(n, 254106));
@@ -46446,7 +46459,7 @@ let kW = {
             }
             let C = eF.default.getUser(o);
             if ((null == C && (await lG.eO(o), (C = eF.default.getUser(o))), null == C))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_USER }, `Unknown user id: ${o}`);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_USER }, `Unknown user id: ${o}`);
             let O = null == f ? void 0 : nm.A.getChannel(f);
             if (null == O)
                 return (
@@ -46586,44 +46599,44 @@ let kW = {
         },
     }),
 };
-var kY = n(60465),
-    kK = n(921138),
-    k$ = n(311043),
-    kz = n(227309),
-    kX = n(871633);
-async function kq(e) {
-    return (await u6.I.fetchMany([e]), k$.A.getGame(e) ?? null);
+var k$ = n(60465),
+    kz = n(921138),
+    kX = n(311043),
+    kq = n(227309),
+    kZ = n(871633);
+async function kQ(e) {
+    return (await u6.I.fetchMany([e]), kX.A.getGame(e) ?? null);
 }
-async function kZ(e) {
+async function kJ(e) {
     let { applicationId: t, gameId: n } = e,
         i = n ?? null;
     if (null == i && null != t) {
         ak.A.isHydrated(t) || (await (0, nf.TA)(t).catch(j.tEg));
         let e = ak.A.getApplication(t);
         if (null == e) return null;
-        i = (0, kX.bB)(e) ? kz.aX : e.getCanonicalGameId();
+        i = (0, kZ.bB)(e) ? kq.aX : e.getCanonicalGameId();
     }
     if (null == i) return null;
-    let r = await kq(i);
-    return null != r && (0, kX.Zb)(r) ? kq(kz.aX) : r;
+    let r = await kQ(i);
+    return null != r && (0, kZ.Zb)(r) ? kQ(kq.aX) : r;
 }
-let kQ = {
-    [j.e$_.OPEN_GAME_PROFILE]: Gp(j.e$_.OPEN_GAME_PROFILE, {
-        scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+let k0 = {
+    [j.e$_.OPEN_GAME_PROFILE]: Gm(j.e$_.OPEN_GAME_PROFILE, {
+        scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
         async handler(e) {
             let {
                     socket: t,
                     args: { game_id: n, application_id: i },
                 } = e,
-                { iframeId: r } = (0, wb.A)(t);
+                { iframeId: r } = (0, wP.A)(t);
             if ((null == n) == (null == i))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Pass exactly one of game_id or application_id");
-            let a = await kZ({ gameId: n, applicationId: i });
-            if (null == a || (0, kK.TC)(a)) return { opened: !1 };
-            let s = (0, kF.LV)(r);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "Pass exactly one of game_id or application_id");
+            let a = await kJ({ gameId: n, applicationId: i });
+            if (null == a || (0, kz.TC)(a)) return { opened: !1 };
+            let s = (0, kV.LV)(r);
             return null == s
                 ? { opened: !1 }
-                : (kY.default.openGameProfileModal({
+                : (k$.default.openGameProfileModal({
                       gameId: a.id,
                       gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: a.id },
                       source: u3.GameProfileSources.Frame,
@@ -46633,15 +46646,15 @@ let kQ = {
         },
     }),
 };
-var kJ = n(845187);
-let k0 = "activity-hardware-acceleration-modal",
-    k1 = {
-        [j.e$_.ENCOURAGE_HW_ACCELERATION]: Gp(j.e$_.ENCOURAGE_HW_ACCELERATION, {
+var k1 = n(845187);
+let k2 = "activity-hardware-acceleration-modal",
+    k3 = {
+        [j.e$_.ENCOURAGE_HW_ACCELERATION]: Gm(j.e$_.ENCOURAGE_HW_ACCELERATION, {
             handler(e) {
                 let { socket: t } = e;
-                (0, wW.lG)(t.transport);
+                (0, wK.lG)(t.transport);
                 let i = t.application.id;
-                if (null == i) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == i) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                 return (
                     sf.Ay.disableActivityHardwareAccelerationPrompt ||
                         !eB.isPlatformEmbedded ||
@@ -46652,9 +46665,9 @@ let k0 = "activity-hardware-acceleration-modal",
                                 return (t) => (0, M.jsx)(e, { applicationId: i, ...t });
                             },
                             {
-                                modalKey: k0,
+                                modalKey: k2,
                                 onCloseRequest: () => {
-                                    (W.default.track(j.HAw.MODAL_DISMISSED, { type: kJ.a }), (0, tX.closeModal)(k0));
+                                    (W.default.track(j.HAw.MODAL_DISMISSED, { type: k1.a }), (0, tX.closeModal)(k2));
                                 },
                             },
                         ),
@@ -46663,37 +46676,37 @@ let k0 = "activity-hardware-acceleration-modal",
             },
         }),
     };
-var k2 = n(256905);
-let k3 = {
-    [j.e$_.OPEN_MEDIA_VIEWER]: Gp(j.e$_.OPEN_MEDIA_VIEWER, {
-        scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+var k5 = n(256905);
+let k6 = {
+    [j.e$_.OPEN_MEDIA_VIEWER]: Gm(j.e$_.OPEN_MEDIA_VIEWER, {
+        scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
         handler(e) {
             let {
                     socket: t,
                     args: { items: n, starting_index: i },
                 } = e,
-                { iframeId: r } = (0, wb.A)(t);
+                { iframeId: r } = (0, wP.A)(t);
             for (let [e, t] of n.entries()) {
                 if (!z.A.isDiscordDirectAssetUrl(t.url))
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PAYLOAD },
                         `items[${e}].url must be a Discord CDN url (${window.GLOBAL_ENV.CDN_HOST ?? "unknown"})`,
                     );
                 if ("video" === t.type && (null == t.width || null == t.height))
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PAYLOAD },
                         `items[${e}] is a video and must supply width and height`,
                     );
             }
             if (null != i && i >= n.length)
-                throw new wD.A(
+                throw new wb.A(
                     { errorCode: j.Lw6.INVALID_PAYLOAD },
                     `starting_index ${i} is out of range for ${n.length} item(s)`,
                 );
-            let a = (0, kF.C6)(r);
+            let a = (0, kV.C6)(r);
             return null == a
                 ? { opened: !1 }
-                : ((0, k2.R)({
+                : ((0, k5.R)({
                       items: n.map((e) => {
                           let { url: t, type: n, width: i, height: r, alt: a } = e;
                           return {
@@ -46714,26 +46727,26 @@ let k3 = {
         },
     }),
 };
-var k5 = n(43203);
-let k6 = {
+var k4 = n(43203);
+let k7 = {
         [j.e$_.OPEN_MESSAGE]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let {
                     args: { guild_id: t, channel_id: n, message_id: i, pid: r },
                 } = e;
-                (0, x2.d5)(r).context === j.BRT.OVERLAY
+                (0, x5.d5)(r).context === j.BRT.OVERLAY
                     ? k.h.dispatch({ type: "OVERLAY_OPEN_MESSAGE", guildId: t, channelId: n, messageId: i })
                     : ((0, l5.bG)({ pathname: j.BVt.CHANNEL(t, n, i) }), eV.Ay.focus());
             },
         },
     },
-    k4 = new ez.A("RPCCommandsOverlay"),
-    k7 = {
+    k8 = new ez.A("RPCCommandsOverlay"),
+    k9 = {
         [j.e$_.SET_OVERLAY_LOCKED]: {
-            scope: bt.hj,
+            scope: bi.hj,
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({ locked: e.boolean().required(), pid: e.number().min(0).required() }),
             handler(e) {
@@ -46741,15 +46754,15 @@ let k6 = {
                     args: { locked: t, pid: n },
                     socket: { application: i },
                 } = e;
-                if ((k4.verbose("RPCCommands.SET_OVERLAY_LOCKED", { locked: t, pid: n }), null == i.id))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                Ua.A.setInputLocked(t, n);
+                if ((k8.verbose("RPCCommands.SET_OVERLAY_LOCKED", { locked: t, pid: n }), null == i.id))
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                Ul.A.setInputLocked(t, n);
             },
         },
         [j.e$_.OPEN_OVERLAY_ACTIVITY_INVITE]: {
-            scope: bt.hj,
+            scope: bi.hj,
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({ type: e.number().required().valid([j.xL.JOIN]), pid: e.number().min(0).required() }),
             handler(e) {
@@ -46758,18 +46771,18 @@ let k6 = {
                         args: { type: n, pid: i },
                     } = e,
                     r = t.application.id;
-                if (null == r) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                if (null == r) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
                 let a = _j.A.getApplicationActivity(r);
-                if (null == a || null == a.secrets || !(0, wW.px)(n, a.party, a.secrets))
-                    throw new wD.A(
+                if (null == a || null == a.secrets || !(0, wK.px)(n, a.party, a.secrets))
+                    throw new wb.A(
                         { errorCode: j.Lw6.NO_ELIGIBLE_ACTIVITY },
                         "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
                     );
-                let { lock: s, context: l } = (0, x2.d5)(i),
-                    o = x7(a, iW.A);
-                return (0, x5.qf)(a, o, l).then(() => {
+                let { lock: s, context: l } = (0, x5.d5)(i),
+                    o = x9(a, iW.A);
+                return (0, x4.qf)(a, o, l).then(() => {
                     if ((s(), o))
-                        throw new wD.A(
+                        throw new wb.A(
                             { errorCode: j.Lw6.NO_ELIGIBLE_ACTIVITY },
                             "No eligible activity for application. Ensure user does have have privacy enabled.",
                         );
@@ -46777,9 +46790,9 @@ let k6 = {
             },
         },
         [j.e$_.OPEN_OVERLAY_GUILD_INVITE]: {
-            scope: bt.hj,
+            scope: bi.hj,
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({ code: e.string().required(), pid: e.number().min(0).required() }),
             handler(e) {
@@ -46787,11 +46800,11 @@ let k6 = {
                     args: { code: t, pid: n },
                     socket: i,
                 } = e;
-                if (null == i.application.id) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                return P6.Ay.resolveInvite(t, "Game SDK").then((e) => {
+                if (null == i.application.id) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                return P7.Ay.resolveInvite(t, "Game SDK").then((e) => {
                     let { invite: t, code: i } = e;
-                    if (null == t) throw new wD.A({ errorCode: j.Lw6.INVALID_INVITE }, `Invalid invite id: ${i}`);
-                    let { context: r, lock: a } = (0, x2.d5)(n);
+                    if (null == t) throw new wb.A({ errorCode: j.Lw6.INVALID_INVITE }, `Invalid invite id: ${i}`);
+                    let { context: r, lock: a } = (0, x5.d5)(n);
                     return new Promise((e) => {
                         k.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: t, code: i, context: r, resolve: e });
                     }).then(a);
@@ -46799,9 +46812,9 @@ let k6 = {
             },
         },
         [j.e$_.OPEN_OVERLAY_VOICE_SETTINGS]: {
-            scope: bt.hj,
+            scope: bi.hj,
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({ pid: e.number().min(0).required() }),
             handler(e) {
@@ -46810,8 +46823,8 @@ let k6 = {
                         socket: i,
                     } = e,
                     r = i.application.id;
-                if (null == r) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-                let { lock: a, context: s } = (0, x2.d5)(t);
+                if (null == r) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+                let { lock: a, context: s } = (0, x5.d5)(t);
                 return new Promise((e) => {
                     (0, tX.openModalLazy)(
                         async () => {
@@ -46825,7 +46838,7 @@ let k6 = {
                                 (0, M.jsx)(e, { ...t, mediaEngineContext: r, subtitle: i.application.name ?? void 0 });
                         },
                         {
-                            contextKey: s === j.BRT.POPOUT ? Gq.KX : Gq.SY,
+                            contextKey: s === j.BRT.POPOUT ? GQ.KX : GQ.SY,
                             onCloseCallback: () => {
                                 (a(), e());
                             },
@@ -46835,15 +46848,15 @@ let k6 = {
             },
         },
     };
-var k8 = n(6981),
-    k9 = n(257269),
-    Fe = n(277984),
-    Ft = n(121623),
-    Fn = n(224640),
-    Fi = n(20742),
-    Fr = n(430993),
-    Fa = n(696208);
-function Fs(e) {
+var Fe = n(6981),
+    Ft = n(257269),
+    Fn = n(277984),
+    Fi = n(121623),
+    Fr = n(224640),
+    Fa = n(20742),
+    Fs = n(430993),
+    Fl = n(696208);
+function Fo(e) {
     let {
         title: t,
         subtitle: n,
@@ -46906,22 +46919,22 @@ function Fs(e) {
                 return {};
         }
     })(e);
-    return (0, M.jsxs)(Fn.d, {
+    return (0, M.jsxs)(Fr.d, {
         ...e,
         onClose: () => Promise.resolve(e.onClose?.()),
         size: "sm",
         "aria-label": t,
         children: [
-            (0, M.jsx)(Fi.rQ, { title: t ?? "", subtitle: n }),
-            (0, M.jsx)(Fr.c, { children: i }),
-            (0, M.jsx)(Fa.H, { actions: r ?? [], actionsFullWidth: !0 }),
+            (0, M.jsx)(Fa.rQ, { title: t ?? "", subtitle: n }),
+            (0, M.jsx)(Fs.c, { children: i }),
+            (0, M.jsx)(Fl.H, { actions: r ?? [], actionsFullWidth: !0 }),
         ],
     });
 }
-function Fl(e) {
-    (0, tX.openModalLazy)(() => Promise.resolve((t) => (0, M.jsx)(Fs, { ...t, ...e })));
+function Fd(e) {
+    (0, tX.openModalLazy)(() => Promise.resolve((t) => (0, M.jsx)(Fo, { ...t, ...e })));
 }
-function Fo(e, t) {
+function Fc(e, t) {
     let { fingerprint: n, installationId: i } = e;
     (null != n || null != i) &&
         W.default.track(j.HAw.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
@@ -46933,26 +46946,26 @@ function Fo(e, t) {
             link_type: t,
         });
 }
-let Fd = {
+let Fu = {
         [j.e$_.INVITE_BROWSER]: {
-            scope: bt.LQ,
+            scope: bi.LQ,
             async handler(e) {
                 let {
                     args: { code: t, ...n },
                 } = e;
-                return await (0, k5.$)(t, "Desktop Modal", n);
+                return await (0, k4.$)(t, "Desktop Modal", n);
             },
         },
         [j.e$_.GUILD_TEMPLATE_BROWSER]: {
-            scope: bt.LQ,
+            scope: bi.LQ,
             async handler(e) {
                 let {
                     args: { code: t },
                 } = e;
                 if (null == eF.default.getCurrentUser()) return;
-                let { guildTemplate: i } = await Ft.A.resolveGuildTemplate(t);
+                let { guildTemplate: i } = await Fi.A.resolveGuildTemplate(t);
                 if (null == i)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_GUILD_TEMPLATE }, `Invalid guild template id: ${t}`);
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_GUILD_TEMPLATE }, `Invalid guild template id: ${t}`);
                 return (
                     eV.Ay.focus(),
                     (0, tX.openModalLazy)(async () => {
@@ -46979,7 +46992,7 @@ let Fd = {
             },
         },
         [j.e$_.GIFT_CODE_BROWSER]: {
-            scope: bt.LQ,
+            scope: bi.LQ,
             handler(e) {
                 let {
                     args: { code: t },
@@ -47013,58 +47026,58 @@ let Fd = {
                                 }),
                                 e({ giftCode: r }));
                         })
-                        .catch(() => i(new wD.A({ errorCode: j.Lw6.INVALID_GIFT_CODE }, `Invalid gift code: ${t}`)));
+                        .catch(() => i(new wb.A({ errorCode: j.Lw6.INVALID_GIFT_CODE }, `Invalid gift code: ${t}`)));
                 });
             },
         },
         [j.e$_.DEEP_LINK]: {
-            scope: { [bt.sm.ANY]: [bt.LQ, bt.hj] },
+            scope: { [bi.sm.ANY]: [bi.LQ, bi.hj] },
             handler(e) {
                 let {
                     args: { type: t, params: i },
                 } = e;
                 switch ((eV.Ay.focus(), t)) {
-                    case bt.XK.USER_SETTINGS:
+                    case bi.XK.USER_SETTINGS:
                         null != i &&
                             (0, sB.B)(() => {
                                 let e = j.BVt.SETTINGS(i.section, i.subsection),
                                     n = (0, l4.parseSettingsUrl)({ path: e, search: i.search });
                                 ((0, l4.trackParseSettingsUrl)(n, "deeplink"),
                                     (0, l7.openUserSettings)(n.target, { path: n.path, searchParams: n.params }),
-                                    Fo(i, (0, bt.OE)(t)));
+                                    Fc(i, (0, bi.OE)(t)));
                             });
                         break;
-                    case bt.XK.CHANGELOG:
+                    case bi.XK.CHANGELOG:
                         null != i &&
                             ((0, l5.pX)(z.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)),
-                            Fo(i, (0, bt.OE)(t)));
+                            Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.LIBRARY:
-                        ((0, l5.pX)(j.BVt.APPLICATION_LIBRARY), null != i && Fo(i, (0, bt.OE)(t)));
+                    case bi.XK.LIBRARY:
+                        ((0, l5.pX)(j.BVt.APPLICATION_LIBRARY), null != i && Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.STORE_HOME:
-                        ((0, l5.pX)(j.BVt.APPLICATION_STORE), null != i && Fo(i, (0, bt.OE)(t)));
+                    case bi.XK.STORE_HOME:
+                        ((0, l5.pX)(j.BVt.APPLICATION_STORE), null != i && Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.STORE_LISTING:
+                    case bi.XK.STORE_LISTING:
                         null != i &&
-                            ((0, l5.pX)(j.BVt.APPLICATION_STORE_LISTING_SKU(i.skuId, i.slug)), Fo(i, (0, bt.OE)(t)));
+                            ((0, l5.pX)(j.BVt.APPLICATION_STORE_LISTING_SKU(i.skuId, i.slug)), Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.PICK_GUILD_SETTINGS:
+                    case bi.XK.PICK_GUILD_SETTINGS:
                         null != i &&
                             ((0, l5.pX)(j.BVt.PICK_GUILD_SETTINGS(i.section, i.subsection), { search: i.search }),
-                            Fo(i, (0, bt.OE)(t)));
+                            Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.CHANNEL:
+                    case bi.XK.CHANNEL:
                         null != i &&
                             ((0, l5.pX)(j.BVt.CHANNEL(i.guildId, i.channelId, i.messageId), { search: i.search }),
-                            Fo(i, (0, bt.OE)(t)));
+                            Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.GAME_SHOP:
+                    case bi.XK.GAME_SHOP:
                         null != i &&
                             ((0, l5.pX)(j.BVt.CHANNELS_GAME_SHOP(i.guildId, i.pageIndex, i.skuId, i.slug)),
-                            Fo(i, (0, bt.OE)(t)));
+                            Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.QUEST_HOME:
+                    case bi.XK.QUEST_HOME:
                         if (null != i) {
                             let e = new URLSearchParams();
                             (null != i.sort && e.set(uT.L1.SORT, i.sort),
@@ -47072,39 +47085,39 @@ let Fd = {
                                 null != i.tab && e.set(uT.L1.TAB, i.tab),
                                 null != i.adCreativeIds && e.set(uT.L1.AD_CREATIVE_IDS, i.adCreativeIds),
                                 (0, l5.pX)(j.BVt.QUEST_HOME, { hash: i.questId, search: `?${e.toString()}` }),
-                                Fo(i, (0, bt.OE)(t)));
+                                Fc(i, (0, bi.OE)(t)));
                         } else (0, l5.pX)(j.BVt.QUEST_HOME);
                         break;
-                    case bt.XK.QUEST_PREVIEW_TOOL:
+                    case bi.XK.QUEST_PREVIEW_TOOL:
                         if (null != i) {
                             let e = new URLSearchParams();
                             (e.set(uT.L1.TAB, uT.NC.PREVIEW_TOOL),
                                 null != i.questId && e.set(uT.L1.QUEST_ID, i.questId),
                                 (0, l5.pX)(j.BVt.QUEST_HOME, { search: `?${e.toString()}` }),
-                                Fo(i, (0, bt.OE)(t)));
+                                Fc(i, (0, bi.OE)(t)));
                         }
                         break;
-                    case bt.XK.DISCOVERY_GAME_RESULTS:
+                    case bi.XK.DISCOVERY_GAME_RESULTS:
                         null != i &&
                             ((0, l5.pX)(j.BVt.GLOBAL_DISCOVERY_SERVERS, { search: `?game=${i.gameId}` }),
-                            Fo(i, (0, bt.OE)(t)));
+                            Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.OAUTH2:
+                    case bi.XK.OAUTH2:
                         let r = new URL(j.BVt.OAUTH2_AUTHORIZE, window.location.origin);
                         r.search = i.search;
-                        let a = (0, kS.getOAuth2AuthorizeProps)(r.toString());
-                        if (null != a) return ((0, kS.openOAuth2ModalWithCreateGuildModal)(a), !0);
+                        let a = (0, kC.getOAuth2AuthorizeProps)(r.toString());
+                        if (null != a) return ((0, kC.openOAuth2ModalWithCreateGuildModal)(a), !0);
                         return !1;
-                    case bt.XK.ONE_TIME_LOGIN:
-                        if (null != i) return (Fl({ token: i.token }), Fo(i, (0, bt.OE)(t)), !0);
+                    case bi.XK.ONE_TIME_LOGIN:
+                        if (null != i) return (Fd({ token: i.token }), Fc(i, (0, bi.OE)(t)), !0);
                         return !1;
-                    case bt.XK.SHOP:
-                        null != i && ((0, l5.pX)(j.BVt.COLLECTIBLES_SHOP, { search: i.search }), Fo(i, (0, bt.OE)(t)));
+                    case bi.XK.SHOP:
+                        null != i && ((0, l5.pX)(j.BVt.COLLECTIBLES_SHOP, { search: i.search }), Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.FEATURES:
-                        i?.path != null && ((0, l5.pX)(i.path), Fo(i, (0, bt.OE)(t)));
+                    case bi.XK.FEATURES:
+                        i?.path != null && ((0, l5.pX)(i.path), Fc(i, (0, bi.OE)(t)));
                         break;
-                    case bt.XK.ACTIVITIES:
+                    case bi.XK.ACTIVITIES:
                         if (null != i) {
                             let e = i.attemptId || (0, nc.A)();
                             return (
@@ -47130,7 +47143,7 @@ let Fd = {
                                         let s = await _1.A.openPrivateChannel({ recipientIds: a }),
                                             l = new URL(t),
                                             o = l.searchParams.get("referrer_id") ?? void 0,
-                                            { customId: d } = await (0, k9.d9)(
+                                            { customId: d } = await (0, Ft.d9)(
                                                 e,
                                                 l.searchParams.get("link_id"),
                                                 l.searchParams.get("custom_id"),
@@ -47157,86 +47170,86 @@ let Fd = {
                                         });
                                     }
                                 })(i.applicationId, i.url, e),
-                                Fo(i, (0, bt.OE)(t)),
+                                Fc(i, (0, bi.OE)(t)),
                                 !0
                             );
                         }
                         return !1;
-                    case bt.XK.PLAYGROUND:
+                    case bi.XK.PLAYGROUND:
                         if (null != i) {
                             let { openPlayground: e } = n(965042);
-                            (e(i.collection, i.story), Fo(i, (0, bt.OE)(t)));
+                            (e(i.collection, i.story), Fc(i, (0, bi.OE)(t)));
                         }
                 }
             },
         },
         [j.e$_.BROWSER_HANDOFF]: {
-            scope: bt.kw,
+            scope: bi.kw,
             handler(e) {
                 let {
                     args: { handoffToken: t, fingerprint: n },
                 } = e;
-                (eV.Ay.focus(null, !0), (0, k8.mZ)(t, n));
+                (eV.Ay.focus(null, !0), (0, Fe.mZ)(t, n));
             },
         },
         [j.e$_.CONNECTIONS_CALLBACK]: {
-            scope: bt.LQ,
+            scope: bi.LQ,
             handler: async (e) => {
                 let {
                     args: { providerType: t, code: n, openid_params: i, iss: r, state: a },
                 } = e;
                 if (!d9.A.hasPendingAuthorizedState(a))
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_CONNECTION_CALLBACK_STATE },
                         "Provider authorization did not originate from this discord client",
                     );
                 try {
                     return (
                         d9.A.deletePendingAuthorizedState(a),
-                        await xi.A.callback(t, { code: n, openid_params: i, iss: r, state: a })
+                        await xa.A.callback(t, { code: n, openid_params: i, iss: r, state: a })
                     );
                 } catch (e) {
                     if (e?.status === 400)
-                        throw new wD.A({ errorCode: j.Lw6.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
+                        throw new wb.A({ errorCode: j.Lw6.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
                     throw (nN._.dispatch(j.jej.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             },
         },
         [j.e$_.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
-            scope: bt.LQ,
+            scope: bi.LQ,
             handler(e) {
                 let {
                     args: { state: t, path: n, query: i },
                 } = e;
-                return (0, Fe.re)({ paymentSourceType: j.hes.PAYPAL, state: t, path: n, query: i });
+                return (0, Fn.re)({ paymentSourceType: j.hes.PAYPAL, state: t, path: n, query: i });
             },
         },
         [j.e$_.BILLING_POPUP_BRIDGE_CALLBACK]: {
-            scope: bt.LQ,
+            scope: bi.LQ,
             handler(e) {
                 let {
                     args: { state: t, path: n, query: i, payment_source_type: r },
                 } = e;
-                return (0, Fe.re)({ paymentSourceType: r, state: t, path: n, query: i });
+                return (0, Fn.re)({ paymentSourceType: r, state: t, path: n, query: i });
             },
         },
     },
-    Fc = {
-        [j.e$_.SET_RUNS_IN_BACKGROUND]: Gp(j.e$_.SET_RUNS_IN_BACKGROUND, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+    F_ = {
+        [j.e$_.SET_RUNS_IN_BACKGROUND]: Gm(j.e$_.SET_RUNS_IN_BACKGROUND, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             handler(e) {
                 let {
                         socket: t,
                         args: { enabled: n },
                     } = e,
-                    { frame: i } = (0, wv.Ay)(t);
+                    { frame: i } = (0, wM.Ay)(t);
                 return (
                     np.A.setFrameRunsInBackground(i.id, n),
                     n ||
                         i.data.layoutMode !== aY.y0.PIP ||
                         aV.A.getMainFrame()?.id !== i.id ||
                         iN.A.getWindowOpen(j.MLl.ACTIVITY_POPOUT) ||
-                        (i.intent === aY.sV.MAIN && i.applicationId === xD.A.getBuilderPreviewApplicationId()
+                        (i.intent === aY.sV.MAIN && i.applicationId === xb.A.getBuilderPreviewApplicationId()
                             ? np.A.updateFrameLayoutMode({ frameId: i.id, layoutMode: aY.y0.FOCUSED })
                             : np.A.clearMainFrameSlot()),
                     { enabled: n }
@@ -47244,9 +47257,9 @@ let Fd = {
             },
         }),
     },
-    Fu = {
+    FE = {
         [j.e$_.SET_SUPPRESS_NOTIFICATIONS]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let {
                     socket: t,
@@ -47261,11 +47274,11 @@ let Fd = {
             },
         },
     };
-var F_ = n(294454);
+var FA = n(294454);
 (n(508300), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-var FE = n(409481),
-    FA = n(453771);
-let Fh = {
+var Fh = n(409481),
+    Ff = n(453771);
+let FI = {
     "image/png": "png",
     "image/jpeg": "jpg",
     "image/gif": "gif",
@@ -47273,26 +47286,26 @@ let Fh = {
     "video/mp4": "mp4",
     "video/webm": "webm",
 };
-function Ff(e, t) {
+function Fp(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
     return t.every((t, i) => e[n + i] === t);
 }
-let FI = [82, 73, 70, 70],
-    Fp = [87, 69, 66, 80],
-    FT = [102, 116, 121, 112],
-    Fm = {
-        "image/png": (e) => Ff(e, [137, 80, 78, 71, 13, 10, 26, 10]),
-        "image/jpeg": (e) => Ff(e, [255, 216, 255]),
-        "image/gif": (e) => Ff(e, [71, 73, 70, 56]) && (55 === e[4] || 57 === e[4]),
-        "image/webp": (e) => Ff(e, FI) && Ff(e, Fp, 8),
-        "video/mp4": (e) => Ff(e, FT, 4),
-        "video/webm": (e) => Ff(e, [26, 69, 223, 163]),
+let FT = [82, 73, 70, 70],
+    Fm = [87, 69, 66, 80],
+    Fg = [102, 116, 121, 112],
+    FS = {
+        "image/png": (e) => Fp(e, [137, 80, 78, 71, 13, 10, 26, 10]),
+        "image/jpeg": (e) => Fp(e, [255, 216, 255]),
+        "image/gif": (e) => Fp(e, [71, 73, 70, 56]) && (55 === e[4] || 57 === e[4]),
+        "image/webp": (e) => Fp(e, FT) && Fp(e, Fm, 8),
+        "video/mp4": (e) => Fp(e, Fg, 4),
+        "video/webm": (e) => Fp(e, [26, 69, 223, 163]),
     },
-    Fg = /^data:[^,]*;base64,/,
-    FS = /[^\w\-. ]/g,
-    FN = {
-        [j.e$_.SHARE_CONTENT]: Gp(j.e$_.SHARE_CONTENT, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+    FN = /^data:[^,]*;base64,/,
+    FC = /[^\w\-. ]/g,
+    FO = {
+        [j.e$_.SHARE_CONTENT]: Gm(j.e$_.SHARE_CONTENT, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             async handler(e) {
                 let t,
                     {
@@ -47308,15 +47321,15 @@ let FI = [82, 73, 70, 70],
                             preview_subtitle: u,
                         },
                     } = e,
-                    { frame: _, iframeId: E } = (0, wb.A)(i),
+                    { frame: _, iframeId: E } = (0, wP.A)(i),
                     { applicationId: A } = _;
                 if (null != o && null != d && d.length > 0)
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PAYLOAD },
                         "image_url and attachments are mutually exclusive",
                     );
                 if (null != o && !z.A.isDiscordDirectAssetUrl(o))
-                    throw new wD.A(
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PAYLOAD },
                         `image_url must be a Discord CDN url (${window.GLOBAL_ENV.CDN_HOST ?? "unknown"})`,
                     );
@@ -47340,37 +47353,37 @@ let FI = [82, 73, 70, 70],
                                           { data: i, filename: r, content_type: a } = e,
                                           s = i;
                                       if (s.startsWith("data:")) {
-                                          if (!Fg.test(s))
-                                              throw new wD.A(
+                                          if (!FN.test(s))
+                                              throw new wb.A(
                                                   { errorCode: j.Lw6.INVALID_PAYLOAD },
                                                   `${t}.data must be a base64 data url`,
                                               );
-                                          s = s.replace(Fg, "");
+                                          s = s.replace(FN, "");
                                       }
                                       let l = (function (e, t) {
                                           try {
                                               let t = atob(e.replace(/\s/g, ""));
                                               return Uint8Array.from(t, (e) => e.charCodeAt(0));
                                           } catch {
-                                              throw new wD.A(
+                                              throw new wb.A(
                                                   { errorCode: j.Lw6.INVALID_PAYLOAD },
                                                   `${t}.data must be valid base64`,
                                               );
                                           }
                                       })(s, t);
                                       if (0 === l.length)
-                                          throw new wD.A(
+                                          throw new wb.A(
                                               { errorCode: j.Lw6.INVALID_PAYLOAD },
                                               `${t}.data must not be empty`,
                                           );
-                                      let o = (0, FE.C)((0, FA.o2)());
+                                      let o = (0, Fh.C)((0, Ff.o2)());
                                       if (l.length > o)
-                                          throw new wD.A(
+                                          throw new wb.A(
                                               { errorCode: j.Lw6.INVALID_PAYLOAD },
                                               `${t}.data is ${l.length} bytes, over this user's ${o} byte upload limit`,
                                           );
-                                      if (!Fm[a](l))
-                                          throw new wD.A(
+                                      if (!FS[a](l))
+                                          throw new wb.A(
                                               { errorCode: j.Lw6.INVALID_PAYLOAD },
                                               `${t}.data is not ${a} \u{2014} the declared content_type must match the bytes`,
                                           );
@@ -47378,11 +47391,11 @@ let FI = [82, 73, 70, 70],
                                           [l],
                                           ((n = r
                                               .slice(0, -1 === r.lastIndexOf(".") ? void 0 : r.lastIndexOf("."))
-                                              .replace(FS, "_")
+                                              .replace(FC, "_")
                                               .replace(/^[_. ]+/, "")
                                               .trim()
                                               .slice(0, 48)),
-                                          `${"" === n ? "attachment" : n}.${Fh[a]}`),
+                                          `${"" === n ? "attachment" : n}.${FI[a]}`),
                                           { type: a },
                                       );
                                   })(e, `attachments[${n}]`),
@@ -47390,12 +47403,12 @@ let FI = [82, 73, 70, 70],
                               ),
                           ))
                         : void 0;
-                if (null != a && !(await G0(A, a)))
-                    throw new wD.A(
+                if (null != a && !(await G2(A, a)))
+                    throw new wb.A(
                         { errorCode: j.Lw6.INVALID_PAYLOAD },
                         "link must be a trusted link for this application",
                     );
-                let f = (0, kF.C6)(E);
+                let f = (0, kV.C6)(E);
                 return null == f
                     ? { success: !1, didCopyLink: !1, didSendMessage: !1 }
                     : new Promise((e) => {
@@ -47469,7 +47482,7 @@ let FI = [82, 73, 70, 70],
                                           });
                                   },
                                   {
-                                      modalKey: F_.aU,
+                                      modalKey: FA.aU,
                                       stackingBehavior: "stack",
                                       contextKey: i,
                                       onCloseCallback: () => {
@@ -47498,31 +47511,31 @@ let FI = [82, 73, 70, 70],
             },
         }),
     },
-    FC = [nA.A.RPC];
-function FO(e, t) {
-    let n = { subscriptionTier: lY.pe.TIER_2, analyticsLocations: FC, analyticsObject: t };
+    FR = [nA.A.RPC];
+function FL(e, t) {
+    let n = { subscriptionTier: lY.pe.TIER_2, analyticsLocations: FR, analyticsObject: t };
     switch (e) {
         case j.BRT.APP:
-            return w_.A.openPremiumPaymentModalInApp(n);
+            return wA.A.openPremiumPaymentModalInApp(n);
         case j.BRT.OVERLAY:
-            return w_.A.openPremiumPaymentModalInOverlay(n);
+            return wA.A.openPremiumPaymentModalInOverlay(n);
         default:
             throw Error(`Unexpected app context: ${e}`);
     }
 }
-let FR = {
-    [j.e$_.START_PURCHASE]: Gp(j.e$_.START_PURCHASE, {
-        scope: { [bt.sm.ANY]: [bt.VH, bt.hj] },
+let Fy = {
+    [j.e$_.START_PURCHASE]: Gm(j.e$_.START_PURCHASE, {
+        scope: { [bi.sm.ANY]: [bi.VH, bi.hj] },
         handler(e) {
             let {
                 socket: t,
                 args: { sku_id: i, pid: r },
             } = e;
-            xg(t.transport);
+            xN(t.transport);
             let a = t.application.id;
-            if (null == a) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-            let { lock: s, context: l } = (0, x2.d5)(t.transport !== bt.z4.POST_MESSAGE ? r : null);
-            if (null == GL()) throw new wD.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Invalid channel");
+            if (null == a) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+            let { lock: s, context: l } = (0, x5.d5)(t.transport !== bi.z4.POST_MESSAGE ? r : null);
+            if (null == GD()) throw new wb.A({ errorCode: j.Lw6.INVALID_CHANNEL }, "Invalid channel");
             let o = { page: j.liQ.IN_APP };
             return (async () => {
                 try {
@@ -47681,8 +47694,8 @@ let FR = {
                         t = await e({
                             applicationId: a,
                             skuId: i,
-                            openPremiumPaymentModal: () => FO(l, o),
-                            analyticsLocations: FC,
+                            openPremiumPaymentModal: () => FL(l, o),
+                            analyticsLocations: FR,
                             analyticsLocationObject: o,
                             context: l,
                         });
@@ -47697,58 +47710,58 @@ let FR = {
                                     : "string" == typeof e
                                       ? e
                                       : JSON.stringify(e)),
-                            new wD.A({ errorCode: j.Lw6.PURCHASE_ERROR }, t)
+                            new wb.A({ errorCode: j.Lw6.PURCHASE_ERROR }, t)
                         );
                     }
-                    throw new wD.A({ errorCode: j.Lw6.PURCHASE_CANCELED }, "Purchase was canceled by the user.");
+                    throw new wb.A({ errorCode: j.Lw6.PURCHASE_CANCELED }, "Purchase was canceled by the user.");
                 }
             })();
         },
     }),
     [j.e$_.START_PREMIUM_PURCHASE]: {
-        scope: { [bt.sm.ANY]: [bt.VH, bt.hj] },
-        validation: (e) => GR(e).keys({ pid: e.number().min(0) }),
+        scope: { [bi.sm.ANY]: [bi.VH, bi.hj] },
+        validation: (e) => Gy(e).keys({ pid: e.number().min(0) }),
         handler(e) {
             let {
                 socket: t,
                 args: { pid: n },
             } = e;
-            if ((xg(t.transport), null == t.application.id))
-                throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
-            let { lock: i, context: r } = (0, x2.d5)(t.transport !== bt.z4.POST_MESSAGE ? n : null);
-            return FO(r, { page: j.liQ.IN_APP }).then(
+            if ((xN(t.transport), null == t.application.id))
+                throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+            let { lock: i, context: r } = (0, x5.d5)(t.transport !== bi.z4.POST_MESSAGE ? n : null);
+            return FL(r, { page: j.liQ.IN_APP }).then(
                 () => {
                     i();
                 },
                 (e) => {
-                    if ((i(), null != e)) throw new wD.A({ errorCode: j.Lw6.PURCHASE_ERROR }, e);
-                    throw new wD.A({ errorCode: j.Lw6.PURCHASE_CANCELED }, "Purchase was canceled by the user.");
+                    if ((i(), null != e)) throw new wb.A({ errorCode: j.Lw6.PURCHASE_ERROR }, e);
+                    throw new wb.A({ errorCode: j.Lw6.PURCHASE_CANCELED }, "Purchase was canceled by the user.");
                 },
             );
         },
     },
 };
-var FL = n(8062);
-let Fy = { message: "default", success: "success", failure: "critical" },
-    FD = new Map(),
-    Fv = {
-        [j.e$_.SHOW_TOAST]: Gp(j.e$_.SHOW_TOAST, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+var FD = n(8062);
+let Fv = { message: "default", success: "success", failure: "critical" },
+    Fb = new Map(),
+    FM = {
+        [j.e$_.SHOW_TOAST]: Gm(j.e$_.SHOW_TOAST, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             handler(e) {
                 let {
                         socket: t,
                         args: { message: n, type: i },
                     } = e,
-                    { iframeId: r } = (0, wb.A)(t),
-                    a = (0, kF.LV)(r);
+                    { iframeId: r } = (0, wP.A)(t),
+                    a = (0, kV.LV)(r);
                 return null == a ||
                     !(function (e) {
                         let t = Date.now();
-                        for (let [e, n] of FD) t - n.refilledAt >= 6e3 && FD.delete(e);
-                        let n = FD.get(e);
+                        for (let [e, n] of Fb) t - n.refilledAt >= 6e3 && Fb.delete(e);
+                        let n = Fb.get(e);
                         if (null == n) {
-                            if (FD.size >= 1e3) return !1;
-                            ((n = { tokens: 3, refilledAt: t }), FD.set(e, n));
+                            if (Fb.size >= 1e3) return !1;
+                            ((n = { tokens: 3, refilledAt: t }), Fb.set(e, n));
                         } else {
                             let e = Math.floor((t - n.refilledAt) / 2e3);
                             e > 0 && ((n.tokens = Math.min(3, n.tokens + e)), (n.refilledAt += 2e3 * e));
@@ -47756,88 +47769,88 @@ let Fy = { message: "default", success: "success", failure: "critical" },
                         return 0 !== n.tokens && ((n.tokens -= 1), !0);
                     })(r)
                     ? { shown: !1 }
-                    : ((0, nr.P0)({ text: n, variant: Fy[i], surface: FL.a[a] }), { shown: !0 });
+                    : ((0, nr.P0)({ text: n, variant: Fv[i], surface: FD.a[a] }), { shown: !0 });
             },
         }),
     };
-var Fb = n(955418);
-let FM = {
-        [j.e$_.SHOW_TOOLTIP]: Gp(j.e$_.SHOW_TOOLTIP, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+var FP = n(955418);
+let FU = {
+        [j.e$_.SHOW_TOOLTIP]: Gm(j.e$_.SHOW_TOOLTIP, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             handler(e) {
                 let {
                         socket: t,
                         args: { text: n, shortcut: i, x: r, y: a, position: s, align: l },
                     } = e,
-                    { iframeId: o } = (0, wb.A)(t);
-                return null == (0, kc.fl)(o)
+                    { iframeId: o } = (0, wP.A)(t);
+                return null == (0, k_.fl)(o)
                     ? { shown: !1 }
-                    : ((0, Fb.EX)({ iframeId: o, text: n, shortcut: i, x: r, y: a, position: s, align: l }),
+                    : ((0, FP.EX)({ iframeId: o, text: n, shortcut: i, x: r, y: a, position: s, align: l }),
                       { shown: !0 });
             },
         }),
-        [j.e$_.HIDE_TOOLTIP]: Gp(j.e$_.HIDE_TOOLTIP, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+        [j.e$_.HIDE_TOOLTIP]: Gm(j.e$_.HIDE_TOOLTIP, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             handler(e) {
                 let { socket: t } = e;
-                return ((0, Fb.ny)((0, wb.A)(t).iframeId), { hidden: !0 });
+                return ((0, FP.ny)((0, wP.A)(t).iframeId), { hidden: !0 });
             },
         }),
     },
-    FP = {
+    Fw = {
         [j.e$_.SEND_GENERIC_EVENT]: {
             handler(e) {
-                throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Deprecated command: ${e.cmd}`);
+                throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Deprecated command: ${e.cmd}`);
             },
         },
     };
-var FU = n(777977);
-let Fw = {
-        [j.e$_.OPEN_USER_POPOUT]: Gp(j.e$_.OPEN_USER_POPOUT, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+var FG = n(777977);
+let Fx = {
+        [j.e$_.OPEN_USER_POPOUT]: Gm(j.e$_.OPEN_USER_POPOUT, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             async handler(e) {
                 let {
                         socket: t,
                         args: { user_id: n, x: i, y: r },
                     } = e,
-                    { iframeId: a } = (0, wb.A)(t);
-                if (null == (0, kc.fl)(a)) return { opened: !1 };
+                    { iframeId: a } = (0, wP.A)(t);
+                if (null == (0, k_.fl)(a)) return { opened: !1 };
                 let s = eF.default.getUser(n);
                 if ((null == s && (await lG.eO(n), (s = eF.default.getUser(n))), null == s))
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_USER }, `Unknown user id: ${n}`);
-                return ((0, FU.Ps)({ iframeId: a, userId: n, x: i, y: r }), { opened: !0 });
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_USER }, `Unknown user id: ${n}`);
+                return ((0, FG.Ps)({ iframeId: a, userId: n, x: i, y: r }), { opened: !0 });
             },
         }),
     },
-    FG = {
-        [j.e$_.OPEN_USER_PROFILE]: Gp(j.e$_.OPEN_USER_PROFILE, {
-            scope: { [bt.sm.ANY]: [bt.W_, bt.VH] },
+    Fk = {
+        [j.e$_.OPEN_USER_PROFILE]: Gm(j.e$_.OPEN_USER_PROFILE, {
+            scope: { [bi.sm.ANY]: [bi.W_, bi.VH] },
             handler(e) {
                 let {
                         socket: t,
                         args: { user_id: n },
                     } = e,
-                    { iframeId: i } = (0, wb.A)(t),
-                    r = (0, kF.LV)(i);
+                    { iframeId: i } = (0, wP.A)(t),
+                    r = (0, kV.LV)(i);
                 return null == r
                     ? { opened: !1 }
                     : ((0, _X.openUserProfileModal)({ userId: n, appContext: r }), { opened: !0 });
             },
         }),
     },
-    Fx = {
+    FF = {
         [j.e$_.TOGGLE_VIDEO]: {
-            scope: { [bt.sm.ALL]: [w1.F.RPC, w1.F.RPC_VIDEO_WRITE] },
+            scope: { [bi.sm.ALL]: [w3.F.RPC, w3.F.RPC_VIDEO_WRITE] },
             handler() {
                 let e = ek.Ay.isVideoEnabled();
-                null != (0, xI.A)() &&
-                    (e ? ig.default.setVideoEnabled(!1) : (0, D6.A)(() => ig.default.setVideoEnabled(!0), j.BRT.APP));
+                null != (0, xT.A)() &&
+                    (e ? ig.default.setVideoEnabled(!1) : (0, D7.A)(() => ig.default.setVideoEnabled(!0), j.BRT.APP));
             },
         },
         [j.e$_.TOGGLE_SCREENSHARE]: {
-            scope: { [bt.sm.ALL]: [w1.F.RPC, w1.F.RPC_SCREENSHARE_WRITE] },
+            scope: { [bi.sm.ALL]: [w3.F.RPC, w3.F.RPC_SCREENSHARE_WRITE] },
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .optional()
                     .keys({ pid: e.number().optional().min(0) }),
             handler(e) {
@@ -47846,8 +47859,8 @@ let Fw = {
                     } = e,
                     i = d7.A.getCurrentUserActiveStream(),
                     r = d7.A.getStreamerActiveStreamMetadata(),
-                    a = (0, yt.A)(iS.Ay, yn.A),
-                    s = (0, xI.A)();
+                    a = (0, yi.A)(iS.Ay, yr.A),
+                    s = (0, xT.A)();
                 null != s &&
                     (null != t && null != r && r.pid !== t && (0, eB.isWindows)()
                         ? (0, uv.XI)(s.guild_id, s.id, { pid: t })
@@ -47876,26 +47889,26 @@ let Fw = {
             },
         },
     };
-function Fk(e) {
+function FB(e) {
     let t = e.application.id;
-    if (null == t) throw new wD.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
+    if (null == t) throw new wb.A({ errorCode: j.Lw6.INVALID_COMMAND }, "No application.");
     return t;
 }
-let FF = {
+let FV = {
         [j.e$_.GET_CLIENT_VOICE_SETTINGS]: {
-            scope: bt.hj,
+            scope: bi.hj,
             handler(e) {
                 let { socket: t } = e;
-                return (xq(t), xQ());
+                return (xQ(t), x0());
             },
         },
         [j.e$_.SET_VOICE_SETTINGS_2]: {
-            scope: bt.hj,
+            scope: bi.hj,
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({
-                        input_mode: GR(e).keys({
+                        input_mode: Gy(e).keys({
                             type: e.string().valid(Object.keys(j.TBI)),
                             shortcut: e.string().required(),
                         }),
@@ -47907,16 +47920,16 @@ let FF = {
                         socket: t,
                         args: { input_mode: n, self_mute: i, self_deaf: r },
                     } = e,
-                    a = Fk(t);
-                (null != n && ig.default.setMode(n.type, { shortcut: (0, xZ.OH)(n.shortcut) }, a),
+                    a = FB(t);
+                (null != n && ig.default.setMode(n.type, { shortcut: (0, xJ.OH)(n.shortcut) }, a),
                     null != i && i !== ek.Ay.isSelfMute(a) && ig.default.toggleSelfMute({ context: a }),
                     null != r && r !== ek.Ay.isSelfDeaf(a) && ig.default.toggleSelfDeaf({ context: a }));
             },
         },
         [j.e$_.SET_USER_VOICE_SETTINGS_2]: {
-            scope: bt.hj,
+            scope: bi.hj,
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({ user_id: e.string().required(), volume: e.number().min(0).max(200), mute: e.boolean() }),
             handler(e) {
@@ -47924,31 +47937,31 @@ let FF = {
                         socket: t,
                         args: { user_id: n, mute: i, volume: r },
                     } = e,
-                    a = Fk(t);
+                    a = FB(t);
                 (null != i && i !== ek.Ay.isLocalMute(n, a) && ig.default.toggleLocalMute(n, a),
                     null != r && ig.default.setLocalVolume(n, r, a));
             },
         },
         [j.e$_.PUSH_TO_TALK]: {
-            scope: { [bt.sm.ALL]: [w1.F.RPC, w1.F.RPC_VOICE_WRITE] },
-            validation: (e) => GR(e).required().keys({ active: e.boolean() }),
+            scope: { [bi.sm.ALL]: [w3.F.RPC, w3.F.RPC_VOICE_WRITE] },
+            validation: (e) => Gy(e).required().keys({ active: e.boolean() }),
             handler(e) {
                 let {
                     args: { active: t },
                 } = e;
-                ek.Ay.getMode(iC.x.DEFAULT) === j.TBI.PUSH_TO_TALK && (0, UE.N)(ek.Ay.getMediaEngine(), t);
+                ek.Ay.getMode(iC.x.DEFAULT) === j.TBI.PUSH_TO_TALK && (0, Uh.N)(ek.Ay.getMediaEngine(), t);
             },
         },
     },
-    FB = {
+    FH = {
         [j.e$_.SET_USER_VOICE_SETTINGS]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_WRITE] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_WRITE] },
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({
                         user_id: e.string().required(),
-                        pan: GR(e).keys({
+                        pan: Gy(e).keys({
                             left: e.number().min(0).max(1).required(),
                             right: e.number().min(0).max(1).required(),
                         }),
@@ -47961,7 +47974,7 @@ let FF = {
                     } = e,
                     a = eF.default.getCurrentUser();
                 if (null == eF.default.getUser(t) || a?.id === t)
-                    throw new wD.A({ errorCode: j.Lw6.INVALID_USER }, `Invalid user id: ${t}`);
+                    throw new wb.A({ errorCode: j.Lw6.INVALID_USER }, `Invalid user id: ${t}`);
                 if (
                     (null != n && ig.default.setLocalPan(t, n.left, n.right),
                     null != i && ig.default.setLocalVolume(t, i),
@@ -47979,31 +47992,31 @@ let FF = {
             },
         },
         [j.e$_.GET_VOICE_SETTINGS]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_READ] },
-            handler: () => (0, x2.l6)(),
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_READ] },
+            handler: () => (0, x5.l6)(),
         },
         [j.e$_.SET_VOICE_SETTINGS]: {
-            scope: { [bt.sm.ANY]: [w1.F.RPC, w1.F.RPC_VOICE_WRITE] },
+            scope: { [bi.sm.ANY]: [w3.F.RPC, w3.F.RPC_VOICE_WRITE] },
             validation: (e) =>
-                GR(e)
+                Gy(e)
                     .required()
                     .keys({
-                        input: GR(e).keys({
+                        input: Gy(e).keys({
                             device_id: e.string().valid(Object.keys(ek.Ay.getInputDevices())),
                             volume: e.number().min(0).max(100),
                         }),
-                        output: GR(e).keys({
+                        output: Gy(e).keys({
                             device_id: e.string().valid(Object.keys(ek.Ay.getOutputDevices())),
                             volume: e.number().min(0).max(200),
                         }),
-                        mode: GR(e).keys({
+                        mode: Gy(e).keys({
                             type: e.string().valid(Object.keys(j.TBI)),
                             auto_threshold: e.boolean(),
                             threshold: e.number().min(-100).max(0),
                             shortcut: e
                                 .array()
                                 .items(
-                                    GR(e).keys({
+                                    Gy(e).keys({
                                         type: e.number().min(0).max(3).required(),
                                         code: e.number().required(),
                                         name: e.string(),
@@ -48067,22 +48080,22 @@ let FF = {
                     let e = ek.Ay.isSelfMute();
                     ((e && !c) || (!e && c)) && ig.default.toggleSelfMute();
                 }
-                return (0, x2.l6)();
+                return (0, x5.l6)();
             },
         },
     };
-var FV = n(111162),
-    FH = n(861621),
-    Fj = n(436283);
-let FW = wJ.v.DESKTOP;
-var FY = n(440454);
-let FK = 10 * i_.A.Millis.SECOND,
-    F$ = new Map(),
-    Fz = new Map(),
-    FX = (e, t, n) => {
-        n([FY.A.CLOSE, t], e.origin);
+var Fj = n(111162),
+    FW = n(861621),
+    FY = n(436283);
+let FK = w1.v.DESKTOP;
+var F$ = n(440454);
+let Fz = 10 * i_.A.Millis.SECOND,
+    FX = new Map(),
+    Fq = new Map(),
+    FZ = (e, t, n) => {
+        n([F$.A.CLOSE, t], e.origin);
     };
-class Fq extends ea.EventEmitter {
+class FQ extends ea.EventEmitter {
     validateSocketClient;
     logger;
     createPostMessageProxySocket;
@@ -48103,12 +48116,12 @@ class Fq extends ea.EventEmitter {
             let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             (e.emit("disconnect", t, i ? void 0 : n),
                 i || t.close(n.code, n.message ?? "Unknown"),
-                F$.delete(t.source.iframeId));
+                FX.delete(t.source.iframeId));
         };
     })();
     handleIFrameMount = (e) => {
         let { id: t, data: n } = e;
-        (Fz.set(t, n),
+        (Fq.set(t, n),
             (this.handshakeFailureTimeoutId = setTimeout(() => {
                 Array.from(nL.Ay.getSelfEmbeddedActivities().entries()).forEach((e) => {
                     let [t, n] = e;
@@ -48116,26 +48129,26 @@ class Fq extends ea.EventEmitter {
                         application_id: t,
                         channel_id: (0, nj.H)(n.location),
                         guild_id: (0, nj.D)(n.location),
-                        timeout_ms: FK,
+                        timeout_ms: Fz,
                     });
                 });
-            }, FK)));
+            }, Fz)));
     };
     handleIFrameUnmount = (e) => {
         let { id: t } = e;
-        Fz.delete(t);
-        let n = F$.get(t);
+        Fq.delete(t);
+        let n = FX.get(t);
         null != n && this.disconnectSocket(n, { code: j.YI$.CLOSE_NORMAL, message: "iFrame gone" }, !0);
     };
     handleMessage = (e, t, n) => {
-        let i = F$.get(t.iframeId);
+        let i = FX.get(t.iframeId);
         try {
             this.routeEvent(i, t, e, n);
         } catch (e) {
-            if (e instanceof wD.A && e.errorCode === j.Lw6.INVALID_PAYLOAD) throw e;
+            if (e instanceof wb.A && e.errorCode === j.Lw6.INVALID_PAYLOAD) throw e;
             null != i
                 ? this.disconnectSocket(i, { code: e.code, message: e.message }, !0)
-                : FX(t, { code: e.code, message: e.message }, n);
+                : FZ(t, { code: e.code, message: e.message }, n);
         }
     };
     routeEvent(e, t, n, i) {
@@ -48143,26 +48156,26 @@ class Fq extends ea.EventEmitter {
             return void console.warn("[PostMessageTransport] Protocol error: event data should be an Array!");
         let [r, a] = n;
         switch (r) {
-            case FY.A.HANDSHAKE:
-                if (null != e) throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Already connected");
+            case F$.A.HANDSHAKE:
+                if (null != e) throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Already connected");
                 return this.handleHandshake(t, a, i);
-            case FY.A.FRAME:
-                if (null == e) throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Not connected");
+            case F$.A.FRAME:
+                if (null == e) throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Not connected");
                 return this.handleFrame(t, e, a);
-            case FY.A.CLOSE:
-                if (null == e) throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Not connected");
+            case F$.A.CLOSE:
+                if (null == e) throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Not connected");
                 return this.handleClose(e, a);
             default:
-                throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Invalid opcode");
+                throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Invalid opcode");
         }
     }
     handleFrame = (e, t, n) => {
         let i;
-        if (e.origin !== t.source.origin) throw new wD.A({ closeCode: j.YI$.INVALID_ORIGIN }, "Origin has changed");
+        if (e.origin !== t.source.origin) throw new wb.A({ closeCode: j.YI$.INVALID_ORIGIN }, "Origin has changed");
         try {
             i = "string" == typeof n ? JSON.parse(n) : n;
         } catch (e) {
-            throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Payload not recognized encoding");
+            throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, "Payload not recognized encoding");
         }
         (this.onFrameHandled?.(i, this.logger, t), this.emit("request", t, i));
     };
@@ -48173,7 +48186,7 @@ class Fq extends ea.EventEmitter {
         try {
             a.assert(
                 t,
-                GR(a)
+                Gy(a)
                     .required()
                     .keys({
                         v: a.number().min(1).max(1).required(),
@@ -48184,44 +48197,44 @@ class Fq extends ea.EventEmitter {
                     }),
             );
         } catch (e) {
-            throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, e.message);
+            throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, e.message);
         }
         let s = t.frame_id,
-            l = Fz.get(e.iframeId);
+            l = Fq.get(e.iframeId);
         if (s !== e.iframeId || null == l)
             throw (
                 this.logger.error(`Unrecognized iframe ID: reported ${s}, expected ${e.iframeId}`),
-                new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, `Unrecognized iframe ID ${s}`)
+                new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, `Unrecognized iframe ID ${s}`)
             );
         let o = (function (e) {
             switch (e.type) {
-                case Gg.f.FRAME: {
+                case GN.f.FRAME: {
                     let t = (0, aY.ny)(aV.A.getFrame(e.frameId));
                     if (null == t) return;
-                    return { source: e, surface: t.surface, launch: t.data.launch, platform: FW };
+                    return { source: e, surface: t.surface, launch: t.data.launch, platform: FK };
                 }
-                case Gg.f.ACTIVITY: {
+                case GN.f.ACTIVITY: {
                     let t = nL.Ay.getSelfEmbeddedActivities().get(e.applicationId);
                     if (null == t) return;
                     return {
                         source: e,
-                        surface: { type: w0.U.MAIN, channelId: (0, nj.H)(t.location), guildId: (0, nj.D)(t.location) },
+                        surface: { type: w2.U.MAIN, channelId: (0, nj.H)(t.location), guildId: (0, nj.D)(t.location) },
                         launch: { customId: t.customId, referrerId: t.referrerId },
-                        platform: FW,
+                        platform: FK,
                     };
                 }
-                case Gg.f.INTERACTION: {
-                    let t = Fj.Ay.getIFrameModal();
+                case GN.f.INTERACTION: {
+                    let t = FY.Ay.getIFrameModal();
                     if (null == t || t.interactionId !== e.interactionId) return;
                     return {
                         source: e,
                         surface: {
-                            type: w0.U.INTERACTION_MODAL,
+                            type: w2.U.INTERACTION_MODAL,
                             channelId: t.channelId,
                             guildId: nm.A.getChannel(t.channelId)?.guild_id ?? void 0,
                         },
                         launch: { customId: t.customId, interactionId: t.interactionId },
-                        platform: FW,
+                        platform: FK,
                     };
                 }
             }
@@ -48229,7 +48242,7 @@ class Fq extends ea.EventEmitter {
         if (null == o)
             throw (
                 this.logger.error(`Could not resolve embedded context for iframe ID ${e.iframeId}`),
-                new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, `Failed to build embedded context for iframe ID ${s}`)
+                new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, `Failed to build embedded context for iframe ID ${s}`)
             );
         null != t.sdk_version &&
             W.default.track(j.HAw.ACTIVITY_HANDSHAKE, { application_id: t.client_id, sdk_version: t.sdk_version });
@@ -48240,7 +48253,7 @@ class Fq extends ea.EventEmitter {
                 postMessageToRPCClient: i,
                 version: Number(t.v),
                 logger: this.logger,
-                postClose: FX,
+                postClose: FZ,
                 encoding: t.encoding ?? "json",
             });
         } catch (e) {
@@ -48248,26 +48261,26 @@ class Fq extends ea.EventEmitter {
         }
         this.logger.info(`Socket Opened: ${r.id}`);
         try {
-            if ((await this.validateSocketClient(r, e.origin, t.client_id), !Fz.has(e.iframeId)))
+            if ((await this.validateSocketClient(r, e.origin, t.client_id), !Fq.has(e.iframeId)))
                 throw (
                     this.logger.error(`Iframe ID ${e.iframeId} no longer exists`),
-                    new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, `Unrecognized iframe ID ${e.iframeId}`)
+                    new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, `Unrecognized iframe ID ${e.iframeId}`)
                 );
-            (F$.set(e.iframeId, r),
-                Fz.delete(e.iframeId),
-                r.authorization.scopes.add(bt.W_),
+            (FX.set(e.iframeId, r),
+                Fq.delete(e.iframeId),
+                r.authorization.scopes.add(bi.W_),
                 (function (e) {
-                    let t = (0, GK.A)(e.context.surface),
+                    let t = (0, Gz.A)(e.context.surface),
                         n = e.application.bot?.id;
                     if (null == t || null == n) return;
                     let i = !1;
                     function r() {
                         if (null != t && null != n) {
                             if (null != oG.Ay.getMember(t, n)) {
-                                ((i = !1), e.authorization.scopes.add(w1.F.BOT));
+                                ((i = !1), e.authorization.scopes.add(w3.F.BOT));
                                 return;
                             }
-                            (e.authorization.scopes.delete(w1.F.BOT), i || ((i = !0), tJ.A.requestMembersById(t, n)));
+                            (e.authorization.scopes.delete(w3.F.BOT), i || ((i = !0), tJ.A.requestMembersById(t, n)));
                         }
                     }
                     (oG.Ay.addChangeListener(r),
@@ -48287,18 +48300,18 @@ class Fq extends ea.EventEmitter {
         try {
             i.assert(
                 t,
-                GR(i)
+                Gy(i)
                     .required()
                     .keys({ code: i.number().valid(Object.values(j.YI$)).required(), message: i.string().optional() }),
             );
         } catch (e) {
-            throw new wD.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, e.message);
+            throw new wb.A({ closeCode: j.YI$.CLOSE_UNSUPPORTED }, e.message);
         }
         this.disconnectSocket(e, t);
     };
 }
-var FZ = n(313731);
-class FQ extends FZ.A {
+var FJ = n(313731);
+class F0 extends FJ.A {
     context;
     postMessageToRPCClient;
     logger;
@@ -48316,8 +48329,8 @@ class FQ extends FZ.A {
         onSendingToRPCClient: l,
     }) {
         if ((super(e, i, r), -1 === ["etf", "json"].indexOf(r)))
-            throw new wD.A({ closeCode: j.YI$.INVALID_ENCODING }, `Invalid Encoding: ${r}`);
-        if ("etf" === r) throw new wD.A({ closeCode: j.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
+            throw new wb.A({ closeCode: j.YI$.INVALID_ENCODING }, `Invalid Encoding: ${r}`);
+        if ("etf" === r) throw new wb.A({ closeCode: j.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
         ((this.context = t),
             (this.postMessageToRPCClient = n),
             (this.logger = a),
@@ -48326,18 +48339,18 @@ class FQ extends FZ.A {
             (this.closed = !1));
     }
     send(e) {
-        (this.onSendingToRPCClient?.(e, this.id), this.postMessageToRPCClient([FY.A.FRAME, e], this.source.origin));
+        (this.onSendingToRPCClient?.(e, this.id), this.postMessageToRPCClient([F$.A.FRAME, e], this.source.origin));
     }
     close(e, t) {
         (this.closed || this.postClose(this.source, { code: e, message: t }, this.postMessageToRPCClient),
             (this.closed = !0));
     }
 }
-let FJ = new ez.A("RPCServer:PostMessage"),
-    F0 =
-        ((u = new Fq(
-            x2.j7,
-            FJ,
+let F1 = new ez.A("RPCServer:PostMessage"),
+    F2 =
+        ((u = new FQ(
+            x5.j7,
+            F1,
             (e) => {
                 let {
                     source: t,
@@ -48348,7 +48361,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     logger: s,
                     postClose: l,
                 } = e;
-                return new FQ({
+                return new F0({
                     source: t,
                     context: n,
                     postMessageToRPCClient: i,
@@ -48357,25 +48370,25 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     logger: s,
                     postClose: l,
                     onSendingToRPCClient: (e, t) => {
-                        (FV.default.isLoggingOverlayEvents || (e.cmd !== j.e$_.OVERLAY && e.evt !== j.ZE4.OVERLAY)) &&
-                            s.info(`Socket Emit: ${t}`, (0, FH.A)(e));
+                        (Fj.default.isLoggingOverlayEvents || (e.cmd !== j.e$_.OVERLAY && e.evt !== j.ZE4.OVERLAY)) &&
+                            s.info(`Socket Emit: ${t}`, (0, FW.A)(e));
                     },
                 });
             },
             (e, t, n) => {
-                (FV.default.isLoggingOverlayEvents || e.cmd !== j.e$_.OVERLAY) &&
-                    t.info(`Socket Message: ${n.id}`, (0, FH.A)(e));
+                (Fj.default.isLoggingOverlayEvents || e.cmd !== j.e$_.OVERLAY) &&
+                    t.info(`Socket Message: ${n.id}`, (0, FW.A)(e));
             },
         )),
         window.addEventListener("message", function (e) {
             if (window === e.source) return;
-            if (null == e.source || null == e.source.postMessage) return void FJ.error("Unknown event source");
+            if (null == e.source || null == e.source.postMessage) return void F1.error("Unknown event source");
             let t = e.source,
                 n = e.data,
                 i = e.origin,
-                r = (0, kc.lw)(t);
+                r = (0, k_.lw)(t);
             null != r &&
-                u.handleMessage(n, { type: bt.z4.POST_MESSAGE, origin: i, iframeId: r }, (e, n) => {
+                u.handleMessage(n, { type: bi.z4.POST_MESSAGE, origin: i, iframeId: r }, (e, n) => {
                     !(function (e) {
                         try {
                             return e.closed;
@@ -48386,49 +48399,49 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                 });
         }),
         u),
-    F1 = {
-        ...xG,
-        ...kt,
+    F3 = {
+        ...xk,
         ...ki,
-        ...kg,
-        ...kk,
-        ...kH,
+        ...ka,
+        ...kN,
+        ...kB,
         ...kW,
-        ...kQ,
-        ...k1,
+        ...kK,
+        ...k0,
         ...k3,
         ...k6,
-        ...k5.A,
         ...k7,
-        ...Fd,
-        ...Fc,
+        ...k4.A,
+        ...k9,
         ...Fu,
-        ...FN,
-        ...FR,
-        ...Fv,
+        ...F_,
+        ...FE,
+        ...FO,
+        ...Fy,
         ...FM,
-        ...Fw,
-        ...FG,
+        ...FU,
         ...Fx,
-        ...FB,
+        ...Fk,
         ...FF,
-        ...kG,
-        ...FP,
+        ...FH,
+        ...FV,
+        ...kk,
+        ...Fw,
     },
-    F2 = { ...xK, ...xz, ...x0, ...x1, ...x3, ...xJ },
-    F3 = {
-        server: xX.A,
-        commands: F1,
-        events: F2,
-        stores: [MG.default, eO.A, wQ.A, ef.Ay, eL.A],
-        transports: [F0],
+    F5 = { ...xz, ...xq, ...x2, ...x3, ...x6, ...x1 },
+    F6 = {
+        server: xZ.A,
+        commands: F3,
+        events: F5,
+        stores: [Mk.default, eO.A, w0.A, ef.Ay, eL.A],
+        transports: [F2],
         registerTransportsForEmbeddedPlatform: function () {
             eV.Ay.ensureModule("discord_rpc").then(() => {
-                for (let e of [n(33006).default, n(998921).A]) xX.A.registerTransport(e);
+                for (let e of [n(33006).default, n(998921).A]) xZ.A.registerTransport(e);
             });
         },
     },
-    F5 = new (class {
+    F4 = new (class {
         rpcServer;
         transports;
         rpcCommandHandlers;
@@ -48472,17 +48485,17 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                         }));
                 }),
                 (this.rpcServer.onDisconnect = (e, t) => {
-                    wB.releaseSocket(e.id);
+                    wH.releaseSocket(e.id);
                     let n = { type: "RPC_APP_DISCONNECTED", socketId: e.id, application: e.application, reason: t },
                         { source: i } = e;
-                    if (i.type === bt.z4.POST_MESSAGE) {
+                    if (i.type === bi.z4.POST_MESSAGE) {
                         let { context: t } = e;
                         k.h.dispatch({ ...n, source: i, context: t });
                     } else k.h.dispatch({ ...n, source: i });
                 }));
             let e = [nm.A, oG.Ay, rj.A, nG.A, ek.Ay, ng.A];
             (new eE.ru(e.concat(this.stores), () => {
-                (wB.reconcileParticipants(), this.rpcServer.updateSubscriptions());
+                (wH.reconcileParticipants(), this.rpcServer.updateSubscriptions());
             }).attach("RPCServerManager"),
                 k.h.subscribe("MESSAGE_CREATE", this.handleMessage),
                 k.h.subscribe("MESSAGE_UPDATE", this.handleMessage),
@@ -48562,7 +48575,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                 this.rpcServer.dispatchToSubscriptions(
                     t,
                     { channel_id: n },
-                    { channel_id: n, message: (0, wq.d)(i) },
+                    { channel_id: n, message: (0, wQ.d)(i) },
                     r,
                 );
         };
@@ -48581,7 +48594,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                         { channel_id: r.channelId },
                         { channel_id: r.channelId, user_id: e.userId },
                     );
-                    let a = null != r.channelId ? wB.getActiveSessionIdsForChannel(r.channelId) : [],
+                    let a = null != r.channelId ? wH.getActiveSessionIdsForChannel(r.channelId) : [],
                         s =
                             0 !== e.speakingFlags
                                 ? j.ZE4.VOICE_SESSION_SPEAKING_START
@@ -48597,7 +48610,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
         };
         handleVoiceChannelSelect = (e) => {
             let { guildId: t, channelId: n } = e;
-            (wB.releaseUnlessChannel(n),
+            (wH.releaseUnlessChannel(n),
                 0 !== this.rpcServer.subscriptions.length &&
                     this.rpcServer.dispatchToSubscriptions(
                         j.ZE4.VOICE_CHANNEL_SELECT,
@@ -48613,8 +48626,8 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     {},
                     {
                         channel_id: t,
-                        message: (0, wq.d)(n),
-                        icon_url: null != i ? (0, wz.A)(i) : null,
+                        message: (0, wQ.d)(n),
+                        icon_url: null != i ? (0, wq.A)(i) : null,
                         title: r,
                         body: a,
                     },
@@ -48626,7 +48639,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             let l = { application_id: t, applicationId: t, secret: r };
             function o(e) {
                 let { socket: t } = e;
-                return null == i || (0, wX.A)(t)?.id === i;
+                return null == i || (0, wZ.A)(t)?.id === i;
             }
             (s && (l.intent = a),
                 this.rpcServer.dispatchToSubscriptions(
@@ -48644,7 +48657,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
         handleActivityLayoutModeUpdate = (e) => {
             let { applicationId: t, layoutMode: n } = e;
             if (0 === this.rpcServer.subscriptions.length) return;
-            let i = n !== wZ.bN.FOCUSED;
+            let i = n !== wJ.bN.FOCUSED;
             this.rpcServer.dispatchToSubscriptions(
                 j.ZE4.ACTIVITY_PIP_MODE_UPDATE,
                 (e) => e.socket.application.id === t,
@@ -48667,10 +48680,10 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             if (0 === this.rpcServer.subscriptions.length) return;
             function i(e) {
                 let { socket: n } = e;
-                return (0, wX.A)(n)?.id === t;
+                return (0, wZ.A)(n)?.id === t;
             }
-            let r = n === aY.y0.PIP ? wZ.bN.PIP : wZ.bN.FOCUSED,
-                a = r !== wZ.bN.FOCUSED;
+            let r = n === aY.y0.PIP ? wJ.bN.PIP : wJ.bN.FOCUSED,
+                a = r !== wJ.bN.FOCUSED;
             this.rpcServer.dispatchToSubscriptions(j.ZE4.ACTIVITY_PIP_MODE_UPDATE, i, { is_pip_mode: a });
             let s = { layout_mode: r };
             (this.rpcServer.dispatchToSubscriptions(j.ZE4.ACTIVITY_LAYOUT_MODE_UPDATE, i, s),
@@ -48680,16 +48693,16 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             let { channelId: t } = e;
             function n(e) {
                 let { socket: n } = e;
-                return (0, wj.c5)((0, wX.A)(n)) === t;
+                return (0, wY.c5)((0, wZ.A)(n)) === t;
             }
             if (!this.rpcServer.subscriptions.some((e) => e.evt === j.ZE4.FRAME_DEEP_LINK && n(e))) return;
-            let i = (0, wj.D3)(t);
+            let i = (0, wY.D3)(t);
             null != i && this.rpcServer.dispatchToSubscriptions(j.ZE4.FRAME_DEEP_LINK, n, { hash: i });
         };
         handleThermalStateChange = (e) => {
             let { applicationId: t } = e;
             if (0 === this.rpcServer.subscriptions.length || null == t) return;
-            let n = { thermal_state: wH() };
+            let n = { thermal_state: wW() };
             this.rpcServer.dispatchToSubscriptions(j.ZE4.THERMAL_STATE_UPDATE, (e) => e.socket.application.id === t, n);
         };
         handleScreenOrientationUpdate = (e) => {
@@ -48703,7 +48716,7 @@ let FJ = new ez.A("RPCServer:PostMessage"),
         };
         handleEmbeddedActivityUpdate = () => {
             if (0 === this.rpcServer.subscriptions.length) return;
-            let e = wK();
+            let e = wz();
             this.rpcServer.dispatchToSubscriptions(j.ZE4.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e);
         };
         handleActivityMessage = (e) => {
@@ -48726,14 +48739,14 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     this.rpcServer.dispatchToSubscriptions(
                         j.ZE4.ACTIVITY_INVITE,
                         (e) => e.socket.application.id === o,
-                        { user: (0, wY.A)(a), activity: l, type: r.type, channel_id: t, message_id: n.id },
+                        { user: (0, w$.A)(a), activity: l, type: r.type, channel_id: t, message_id: n.id },
                     );
                     break;
                 case j.xL.JOIN_REQUEST:
                     this.rpcServer.dispatchToSubscriptions(
                         j.ZE4.ACTIVITY_JOIN_REQUEST,
                         (e) => e.socket.application.id === o,
-                        { user: (0, wY.A)(a), activity: l, type: r.type, channel_id: t, message_id: n.id },
+                        { user: (0, w$.A)(a), activity: l, type: r.type, channel_id: t, message_id: n.id },
                     );
             }
         };
@@ -48760,8 +48773,8 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                 this.rpcServer.dispatchToSubscriptions(j.ZE4.CHANNEL_CREATE, {}, { id: t, name: n, type: i });
         };
         handleLogout = () => {
-            (wB.release(),
-                (0, wj.iN)(),
+            (wH.release(),
+                (0, wY.iN)(),
                 this.rpcServer.sockets.forEach((e) => e.close(j.YI$.CLOSE_NORMAL, "User logout")));
         };
         handleRelationshipAdd = (e) => {
@@ -48771,9 +48784,9 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             if (0 === this.rpcServer.subscriptions.length) return;
             let i = eF.default.getUser(t);
             if (null == i) return;
-            let r = (0, wW.Gc)(n, i);
+            let r = (0, wK.Gc)(n, i);
             this.rpcServer.dispatchToSubscriptions(j.ZE4.RELATIONSHIP_UPDATE, {}, (e) =>
-                (0, wW.LP)(r, e.socket.application.id),
+                (0, wK.LP)(r, e.socket.application.id),
             );
         };
         handleRelationshipUpdate = (e) => {
@@ -48783,9 +48796,9 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             if (0 === this.rpcServer.subscriptions.length) return;
             let i = eF.default.getUser(t);
             if (null == i) return;
-            let r = (0, wW.Gc)(n, i);
+            let r = (0, wK.Gc)(n, i);
             this.rpcServer.dispatchToSubscriptions(j.ZE4.RELATIONSHIP_UPDATE, {}, (e) =>
-                (0, wW.LP)(r, e.socket.application.id),
+                (0, wK.LP)(r, e.socket.application.id),
             );
         };
         handleRelationshipRemove = (e) => {
@@ -48795,9 +48808,9 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             if (0 === this.rpcServer.subscriptions.length) return;
             let n = eF.default.getUser(t);
             if (null == n) return;
-            let i = (0, wW.Gc)(j.eA$.NONE, n);
+            let i = (0, wK.Gc)(j.eA$.NONE, n);
             this.rpcServer.dispatchToSubscriptions(j.ZE4.RELATIONSHIP_UPDATE, {}, (e) =>
-                (0, wW.LP)(i, e.socket.application.id),
+                (0, wK.LP)(i, e.socket.application.id),
             );
         };
         handlePresenceUpdates = (e) => {
@@ -48813,9 +48826,9 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     if (t === j.eA$.NONE) continue;
                     let n = eF.default.getUser(e);
                     if (null == n) continue;
-                    let i = (0, wW.Gc)(t, n);
+                    let i = (0, wK.Gc)(t, n);
                     this.rpcServer.dispatchToSubscriptions(j.ZE4.RELATIONSHIP_UPDATE, {}, (e) =>
-                        (0, wW.LP)(i, e.socket.application.id),
+                        (0, wK.LP)(i, e.socket.application.id),
                     );
                 }
         };
@@ -48825,9 +48838,9 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     if (t === j.eA$.NONE) continue;
                     let n = eF.default.getUser(e);
                     if (null == n) continue;
-                    let i = (0, wW.Gc)(t, n);
+                    let i = (0, wK.Gc)(t, n);
                     this.rpcServer.dispatchToSubscriptions(j.ZE4.RELATIONSHIP_UPDATE, {}, (e) =>
-                        (0, wW.LP)(i, e.socket.application.id),
+                        (0, wK.LP)(i, e.socket.application.id),
                     );
                 }
         };
@@ -48840,9 +48853,9 @@ let FJ = new ez.A("RPCServer:PostMessage"),
             if (n === j.eA$.NONE) return;
             let i = eF.default.getUser(t);
             if (null == i) return;
-            let r = (0, wW.Gc)(n, i);
+            let r = (0, wK.Gc)(n, i);
             this.rpcServer.dispatchToSubscriptions(j.ZE4.RELATIONSHIP_UPDATE, {}, (e) =>
-                (0, wW.LP)(r, e.socket.application.id),
+                (0, wK.LP)(r, e.socket.application.id),
             );
         };
         handleEntitlementCreate = (e) => {
@@ -48877,12 +48890,12 @@ let FJ = new ez.A("RPCServer:PostMessage"),
                     { quest_id: n, is_enrolled: null != t.enrolledAt, enrolled_at: t.enrolledAt },
                 );
         };
-    })(F3);
-var F6 = n(138298),
-    F4 = n(940382),
-    F7 = n(450510),
-    F8 = n(594061);
-class F9 extends nE.A {
+    })(F6);
+var F7 = n(138298),
+    F8 = n(940382),
+    F9 = n(450510),
+    Be = n(594061);
+class Bt extends nE.A {
     _initialize() {
         __OVERLAY__ ||
             (k.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived),
@@ -48919,24 +48932,24 @@ class F9 extends nE.A {
         this._stopAndClearSounds();
     };
 }
-var Be = n(102597),
-    Bt = n(904054),
-    Bn = n(205693),
-    Bi = n(602674),
-    Br = n(76788),
-    Ba = n(738011),
-    Bs = n(536184);
-let Bl = new Map();
-async function Bo(e) {
-    let t = Bl.get(e);
+var Bn = n(102597),
+    Bi = n(904054),
+    Br = n(205693),
+    Ba = n(602674),
+    Bs = n(76788),
+    Bl = n(738011),
+    Bo = n(536184);
+let Bd = new Map();
+async function Bc(e) {
+    let t = Bd.get(e);
     if (null != t) return t;
     let n = await (await fetch(e)).arrayBuffer(),
-        i = (0, Bi.v)(),
+        i = (0, Ba.v)(),
         r = await i?.decodeAudioData(n);
-    return (null != r && Bl.set(e, r), r);
+    return (null != r && Bd.set(e, r), r);
 }
-let Bd = new ez.A("SoundboardManager");
-class Bc extends F9 {
+let Bu = new ez.A("SoundboardManager");
+class B_ extends Bt {
     playingSoundsWeb = new Map();
     _initialize() {
         (super._initialize(),
@@ -48973,22 +48986,22 @@ class Bc extends F9 {
                 i = arguments.length > 2 ? arguments[2] : void 0,
                 r = arguments.length > 3 ? arguments[3] : void 0,
                 a = null != r && nS.Ay.getVoiceChannelId() === r;
-            if ((null == r || a) && !ek.Ay.isDeaf() && !xh.A.isLocalSoundboardMuted(i))
+            if ((null == r || a) && !ek.Ay.isDeaf() && !xI.A.isLocalSoundboardMuted(i))
                 try {
                     let r = {
                         soundKey: `${i}-${t}`,
-                        soundURL: (0, Be.A)(t),
-                        soundVolume: (0, Bt.A)(n),
-                        reportSoundStartedPlaying: () => (0, xA.dZ)(t, i),
+                        soundURL: (0, Bn.A)(t),
+                        soundVolume: (0, Bi.A)(n),
+                        reportSoundStartedPlaying: () => (0, xf.dZ)(t, i),
                     };
                     ek.Ay.supports(iC.O5.SAMPLE_PLAYBACK)
                         ? await (function (e) {
                               let { soundKey: t, soundURL: n, soundVolume: i, reportSoundStartedPlaying: r } = e;
                               return new Promise(async (e, a) => {
-                                  let s = await Bo(n);
+                                  let s = await Bc(n);
                                   (null == s && e(),
                                       ek.Ay.getMediaEngine().eachConnection((n) => {
-                                          n.context === Bn.x.DEFAULT &&
+                                          n.context === Br.x.DEFAULT &&
                                               (r(),
                                               ti()(null != s, "audioBuffer cannot be null here"),
                                               n.startSamplesLocalPlayback(t, s, i, (t, n) => {
@@ -49005,16 +49018,16 @@ class Bc extends F9 {
                                   return;
                               }
                               return new Promise(async (e) => {
-                                  let s = new (await (0, Bs.A)(i))();
+                                  let s = new (await (0, Bo.A)(i))();
                                   ((s.src = i),
-                                      (s.volume = (0, Bt.A)(r)),
+                                      (s.volume = (0, Bi.A)(r)),
                                       s.addEventListener(
-                                          s instanceof Br.A.OGVPlayer ? "loadedmetadata" : "canplaythrough",
+                                          s instanceof Bs.A.OGVPlayer ? "loadedmetadata" : "canplaythrough",
                                           () => {
                                               (a(),
                                                   t.set(n, s),
                                                   s.play()?.catch((i) => {
-                                                      if ((0, Ba.u)(i)) {
+                                                      if ((0, Bl.u)(i)) {
                                                           (G.A.captureException(i, {
                                                               tags: { errorType: "autoplay_policy", expected: "true" },
                                                           }),
@@ -49033,35 +49046,35 @@ class Bc extends F9 {
                               });
                           })(r, e.playingSoundsWeb);
                 } catch (e) {
-                    Bd.warn(`Error playing soundboard sound: ${e.message}`);
+                    Bu.warn(`Error playing soundboard sound: ${e.message}`);
                 } finally {
-                    (0, xA.g0)(t, i);
+                    (0, xf.g0)(t, i);
                 }
         };
     })();
     _handleRTCConnectionState = (e) => {
         let { state: t } = e;
-        t === j.S7L.RTC_CONNECTED && (F8.bW.loadIfNecessary(), (0, xA.E7)({ disableAnalytics: !0 }));
+        t === j.S7L.RTC_CONNECTED && (Be.bW.loadIfNecessary(), (0, xf.E7)({ disableAnalytics: !0 }));
     };
     _handleOverlaySoundboardSoundsFetchRequest = () => {
-        (0, xA.E7)();
+        (0, xf.E7)();
     };
     _handleOpenEducationModal = (e, t) => {
         if (null == e) return;
         let i = nm.A.getChannel(t),
             r = cy.Ay.getKeybindForAction(j.hCu.SOUNDBOARD_HOLD);
         null != i &&
-            (0, DU.Ay)(i) &&
+            (0, DG.Ay)(i) &&
             null != r &&
-            Db.A.hasHotspot(F7._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
+            DP.A.hasHotspot(F9._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
             (0, tX.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([n.e("445147"), n.e("451143")]).then(n.bind(n, 888762));
                 return (n) => (0, M.jsx)(t, { ...n, guildId: e, keybind: r, channel: i });
             });
     };
 }
-let Bu = new Bc();
-class B_ extends nE.A {
+let BE = new B_();
+class BA extends nE.A {
     _initialize() {
         k.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
@@ -49086,9 +49099,9 @@ class B_ extends nE.A {
         ek.Ay.isVideoEnabled() && ig.default.setVideoEnabled(!1);
     };
 }
-let BE = new B_(),
-    BA = "STAGE_INVITED_TO_SPEAK_MODAL";
-class Bh extends nE.A {
+let Bh = new BA(),
+    Bf = "STAGE_INVITED_TO_SPEAK_MODAL";
+class BI extends nE.A {
     _initialize() {
         k.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
@@ -49098,48 +49111,48 @@ class Bh extends nE.A {
     handleVoiceStateUpdates = (e) => {
         let { voiceStates: t } = e,
             i = ei.default.getId(),
-            r = Dg.A.getSession()?.sessionId,
+            r = DN.A.getSession()?.sessionId,
             a = t.find((e) => e.userId === i && e.sessionId === r);
         if (null == a) return;
         let s = a.channelId;
         if (null == s) {
-            (0, tX.hasModalOpen)(BA) && (0, tX.closeModal)(BA);
+            (0, tX.hasModalOpen)(Bf) && (0, tX.closeModal)(Bf);
             return;
         }
         let l = nm.A.getChannel(s);
         if (!l?.isGuildStageVoice()) return;
         let o = (0, d5.eY)(a) === d5.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         if (null != l && o) {
-            if ((0, tX.hasModalOpen)(BA)) return;
+            if ((0, tX.hasModalOpen)(Bf)) return;
             (0, tX.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("191533"), n.e("690037")]).then(n.bind(n, 427412));
                     return (t) => (0, M.jsx)(e, { ...t, channel: l });
                 },
-                { modalKey: BA, onCloseRequest: j.FXj },
+                { modalKey: Bf, onCloseRequest: j.FXj },
             );
         }
     };
 }
-let Bf = new Bh();
-var BI = n(863922),
-    Bp = n(353202);
+let Bp = new BI();
+var BT = n(863922),
+    Bm = n(353202);
 n(667532);
-var BT = n(100767),
-    Bm = n(379418),
-    Bg = n(9842),
-    BS = n(54570),
-    BN = n(8880);
+var Bg = n(100767),
+    BS = n(379418),
+    BN = n(9842),
+    BC = n(54570),
+    BO = n(8880);
 n(75804);
-let BC = [],
-    BO = null,
-    BR = null,
+let BR = [],
     BL = null,
-    By = /\|\|([\s\S]+?)\|\|/g;
-function BD(e, t, n, i) {
+    By = null,
+    BD = null,
+    Bv = /\|\|([\s\S]+?)\|\|/g;
+function Bb(e, t, n, i) {
     let r = e1.A.getGuild(n),
         a = e
-            .replace(By, tL.intl.string(tL.t["F+x38C"]))
+            .replace(Bv, tL.intl.string(tL.t["F+x38C"]))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 let i = eF.default.getUser(t);
                 return null == i ? tL.intl.string(tL.t.sKdZ6U) : (oG.Ay.getNick(n, i.id) ?? ae.Ay.getName(i));
@@ -49155,7 +49168,7 @@ function BD(e, t, n, i) {
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => `${tL.intl.string(tL.t.sMOuuS)} ${t}`)
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => `/${t}`)
             .replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
-                let i = Bm.kx[n],
+                let i = BS.kx[n],
                     r = 1e3 * parseInt(t, 10),
                     a = o_()(r);
                 return null != i ? i(a) : a.format();
@@ -49164,46 +49177,46 @@ function BD(e, t, n, i) {
         ? tL.intl.formatToPlainString(tL.t["uIj77/"], { username: t, body: a })
         : tL.intl.formatToPlainString(tL.t["Ix4H+j"], { username: t, body: a, replyUsername: i });
 }
-function Bv() {
-    if (!BT.$j) return !1;
-    let e = Pm.default.locale;
-    null == BL && (BL = window.speechSynthesis?.getVoices());
-    let t = BL.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
-    BR = t.length > 0 ? t[0] : null;
+function BM() {
+    if (!Bg.$j) return !1;
+    let e = PS.default.locale;
+    null == BD && (BD = window.speechSynthesis?.getVoices());
+    let t = BD.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
+    By = t.length > 0 ? t[0] : null;
 }
-async function Bb(e, t, n, i, r) {
-    let a = BT.aW(e, n);
+async function BP(e, t, n, i, r) {
+    let a = Bg.aW(e, n);
     null !== a &&
-        (null == BR && Bv(),
-        t ? await (0, BS.pr)() : BO?.removeEventListener("end", BS.pr),
-        a.addEventListener("end", BS.pr),
+        (null == By && BM(),
+        t ? await (0, BC.pr)() : BL?.removeEventListener("end", BC.pr),
+        a.addEventListener("end", BC.pr),
         null != i && a.addEventListener("start", i),
         null != r && a.addEventListener("end", r),
-        (BO = a),
-        BT.wz(a, BR));
+        (BL = a),
+        Bg.wz(a, By));
 }
-function BM(e, t, n, i, r) {
-    Bb(e, t, r, () => {
-        (0, BS.kC)(n, i);
+function BU(e, t, n, i, r) {
+    BP(e, t, r, () => {
+        (0, BC.kC)(n, i);
     });
 }
-function BP(e) {
-    let { text: t, interrupt: n, maxLength: i, onStart: r, onEnd: a } = e;
-    Bb(t, n, i, r, a);
-}
-function BU() {
-    return (null !== BO && BO.removeEventListener("end", BS.pr), BT._X(), (BO = null), !0);
-}
 function Bw(e) {
+    let { text: t, interrupt: n, maxLength: i, onStart: r, onEnd: a } = e;
+    BP(t, n, i, r, a);
+}
+function BG() {
+    return (null !== BL && BL.removeEventListener("end", BC.pr), Bg._X(), (BL = null), !0);
+}
+function Bx(e) {
     let { message: t, channel: n } = e,
-        i = t.type === j.lAJ.REPLY ? Bg.A.getMessageByReference(t.messageReference) : null,
-        r = i?.state === Bg.a.LOADED ? i?.message?.author : null,
+        i = t.type === j.lAJ.REPLY ? BN.A.getMessageByReference(t.messageReference) : null,
+        r = i?.state === BN.a.LOADED ? i?.message?.author : null,
         a = null != r ? (oG.Ay.getNick(n.guild_id, r?.id) ?? ae.Ay.getName(r)) : null,
         s = n.getGuildId(),
         l = oG.Ay.getNick(s, t.author.id) ?? ae.Ay.getName(t.author);
-    return (BM(BD(t.content, l, s, a), !0, n.id, t.id), !0);
+    return (BU(Bb(t.content, l, s, a), !0, n.id, t.id), !0);
 }
-function BG(e) {
+function Bk(e) {
     let { channelId: t, message: n, optimistic: i } = e;
     if (i || ek.Ay.isSelfDeaf()) return !1;
     let r = nm.A.getChannel(t);
@@ -49215,91 +49228,91 @@ function BG(e) {
         d = iH.A.getTTSType(),
         c = n.author?.id !== ei.default.getId() && (d === j.aVn.ALL_CHANNELS || (d === j.aVn.SELECTED_CHANNEL && l));
     if ((o || c) && !ij.A.isBlockedOrIgnoredForMessage(n)) {
-        if (BC.indexOf(n.id) >= 0) return !1;
-        BC.unshift(n.id) > 10 && BC.pop();
+        if (BR.indexOf(n.id) >= 0) return !1;
+        BR.unshift(n.id) > 10 && BR.pop();
         let e = r.getGuildId();
-        if (null != e && Mw.Ay.getMutedChannels(e).has(t)) return !1;
+        if (null != e && Mx.Ay.getMutedChannels(e).has(t)) return !1;
         let i = oG.Ay.getNick(e, n.author?.id) ?? ae.Ay.getName(n.author) ?? "",
             a = n.type === j.lAJ.REPLY ? n.referenced_message?.author : null,
             s = null != a ? (oG.Ay.getNick(e, a?.id) ?? ae.Ay.getName(a)) : null;
-        BM(BD(n.content, i, e, s), !1, r.id, n.id, 200);
+        BU(Bb(n.content, i, e, s), !1, r.id, n.id, 200);
     }
     return !1;
 }
-function Bx(e) {
-    let { id: t, channelId: n } = e,
-        i = BN.A.currentMessage;
-    return null != i && t === i.messageId && n === i.channelId && ((0, BS.pr)(), !0);
-}
-function Bk() {
-    ek.Ay.isSelfDeaf() && BT._X();
-}
 function BF(e) {
-    let { channelId: t } = e,
-        n = BN.A.currentMessage;
-    null != n && n.channelId !== t && (0, BS.pr)();
+    let { id: t, channelId: n } = e,
+        i = BO.A.currentMessage;
+    return null != i && t === i.messageId && n === i.channelId && ((0, BC.pr)(), !0);
 }
-let BB = {
+function BB() {
+    ek.Ay.isSelfDeaf() && Bg._X();
+}
+function BV(e) {
+    let { channelId: t } = e,
+        n = BO.A.currentMessage;
+    null != n && n.channelId !== t && (0, BC.pr)();
+}
+let BH = {
     init() {
-        (k.h.subscribe("SPEAK_TEXT", BP),
-            k.h.subscribe("SPEAK_MESSAGE", Bw),
-            k.h.subscribe("STOP_SPEAKING", BU),
-            k.h.subscribe("MESSAGE_CREATE", BG),
-            k.h.subscribe("MESSAGE_DELETE", Bx),
-            k.h.subscribe("AUDIO_TOGGLE_SELF_DEAF", Bk),
-            k.h.subscribe("CHANNEL_SELECT", BF),
-            k.h.subscribe("USER_SETTINGS_PROTO_UPDATE", Bv),
-            (0, PR.I)(Bv));
+        (k.h.subscribe("SPEAK_TEXT", Bw),
+            k.h.subscribe("SPEAK_MESSAGE", Bx),
+            k.h.subscribe("STOP_SPEAKING", BG),
+            k.h.subscribe("MESSAGE_CREATE", Bk),
+            k.h.subscribe("MESSAGE_DELETE", BF),
+            k.h.subscribe("AUDIO_TOGGLE_SELF_DEAF", BB),
+            k.h.subscribe("CHANNEL_SELECT", BV),
+            k.h.subscribe("USER_SETTINGS_PROTO_UPDATE", BM),
+            (0, Py.I)(BM));
     },
 };
-var BV = n(80556);
-let BH = (0, yk.Ay)({
+var Bj = n(80556);
+let BW = (0, yB.Ay)({
         name: "2026-04-safety-flows",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
     {
-        REQUIRE_CAPTCHA: Bj,
-        REQUIRE_VERIFIED_EMAIL: BW,
-        REQUIRE_VERIFIED_PHONE: BY,
-        REQUIRE_REVERIFIED_EMAIL: BK,
-        REQUIRE_REVERIFIED_PHONE: B$,
-        REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE: Bz,
-        REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE: BX,
-        REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE: Bq,
-        REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE: BZ,
+        REQUIRE_CAPTCHA: BY,
+        REQUIRE_VERIFIED_EMAIL: BK,
+        REQUIRE_VERIFIED_PHONE: B$,
+        REQUIRE_REVERIFIED_EMAIL: Bz,
+        REQUIRE_REVERIFIED_PHONE: BX,
+        REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE: Bq,
+        REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE: BZ,
+        REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE: BQ,
+        REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE: BJ,
     } = j.a3B;
-function BQ() {
+function B0() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return { requiredActions: new Set(t) };
 }
-function BJ() {
+function B1() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return { requiredActions: new Set(t.flatMap((e) => [...e.requiredActions])) };
 }
-let B0 = BQ(),
-    B1 = BQ(BW),
-    B2 = BQ(BW, BK),
-    B3 = BQ(BY),
-    B5 = BQ(BY, B$),
-    B6 = BQ(Bz, BX, Bq, BZ),
-    B4 = BQ(Bj),
-    B7 = BJ(B2, B5, B6),
-    B8 = BJ(B7, B4),
-    B9 = (0, H.mj)({
+let B2 = B0(),
+    B3 = B0(BK),
+    B5 = B0(BK, Bz),
+    B6 = B0(B$),
+    B4 = B0(B$, BX),
+    B7 = B0(Bq, BZ, BQ, BJ),
+    B8 = B0(BY),
+    B9 = B1(B5, B4, B7),
+    Ve = B1(B9, B8),
+    Vt = (0, H.mj)({
         name: "2026-09-safety-flows-legacy-required-actions",
         kind: "user",
-        defaultConfig: B0,
-        variations: { 0: B0, 1: B1, 2: B2, 3: B3, 4: B5, 5: B6, 6: B4, 7: B7, 8: B8 },
+        defaultConfig: B2,
+        variations: { 0: B2, 1: B3, 2: B5, 3: B6, 4: B4, 5: B7, 6: B8, 7: B9, 8: Ve },
     });
-var Ve = n(219503),
-    Vt = n(446868),
-    Vn = n(665095),
-    Vi = n(639719),
-    Vr = n(53516),
-    Va = n(87404);
-let Vs = {
+var Vn = n(219503),
+    Vi = n(446868),
+    Vr = n(665095),
+    Va = n(639719),
+    Vs = n(53516),
+    Vl = n(87404);
+let Vo = {
     init() {
         (k.h.subscribe("CONNECTION_OPEN", this.handleRequiredAction),
             k.h.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction),
@@ -49308,7 +49321,7 @@ let Vs = {
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !M9.P.isDisallowPopupsSet() &&
+        !Pt.P.isDisallowPopupsSet() &&
             null != eF.default.getCurrentUser() &&
             (t === j.a3B.REQUIRE_CAPTCHA ||
             t === j.a3B.REQUIRE_VERIFIED_EMAIL ||
@@ -49317,59 +49330,59 @@ let Vs = {
             t === j.a3B.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE ||
             t === j.a3B.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             t === j.a3B.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-            Vt.A.isEmailReverification(t)
+            Vi.A.isEmailReverification(t)
                 ? (function (e) {
                       let { location: t, requiredAction: n } = e;
                       return (
                           null != n &&
                           !!(function (e) {
                               let { location: t } = e;
-                              return BH.getConfig({ location: t }).enabled;
+                              return BW.getConfig({ location: t }).enabled;
                           })({ location: t }) &&
-                          B9.getConfig({ location: t }).requiredActions.has(n)
+                          Vt.getConfig({ location: t }).requiredActions.has(n)
                       );
                   })({ location: "verification-legacy", requiredAction: t })
-                    ? (0, MY.B8)(
+                    ? (0, M$.B8)(
                           (e) => {
                               let { closeLayer: t } = e;
-                              return (0, M.jsx)(Ve.A, { onClose: t });
+                              return (0, M.jsx)(Vn.A, { onClose: t });
                           },
-                          { layerKey: Va._s, Layer: BV.Ay },
+                          { layerKey: Vl._s, Layer: Bj.Ay },
                       )
-                    : (0, MY.B8)(() => (0, M.jsx)(Vn.A, {}), { layerKey: Va._s, Layer: BV.Ay })
+                    : (0, M$.B8)(() => (0, M.jsx)(Vr.A, {}), { layerKey: Vl._s, Layer: Bj.Ay })
                 : t === j.a3B.AGREEMENTS
-                  ? (0, tX.openModal)((e) => (0, M.jsx)(Vi.default, { ...e }), {
-                        modalKey: Va.i$,
+                  ? (0, tX.openModal)((e) => (0, M.jsx)(Va.default, { ...e }), {
+                        modalKey: Vl.i$,
                         onCloseRequest: cD.FX,
                         dismissable: !1,
                     })
                   : t === j.a3B.REQUIRE_SAFETY_FLOWS
-                    ? (0, MY.B8)(
+                    ? (0, M$.B8)(
                           (e) => {
                               let { closeLayer: t } = e;
-                              return (0, M.jsx)(Ve.A, { onClose: t });
+                              return (0, M.jsx)(Vn.A, { onClose: t });
                           },
-                          { layerKey: Va._s, Layer: BV.Ay },
+                          { layerKey: Vl._s, Layer: Bj.Ay },
                       )
-                    : null == t && ((0, MY.dF)(Va._s), (0, tX.hasModalOpen)(Va.i$) && (0, tX.closeModal)(Va.i$)));
+                    : null == t && ((0, M$.dF)(Vl._s), (0, tX.hasModalOpen)(Vl.i$) && (0, tX.closeModal)(Vl.i$)));
     },
     handleAuthenticationStoreChanged() {
         null == ei.default.getId() &&
-            ((0, MY.dF)(Va._s),
-            (0, tX.closeModal)(Va.i$),
-            (0, tX.closeModal)(Va.Pr),
-            (0, tX.closeModal)(Va.H1),
-            (0, tX.closeModal)(Vr.V));
+            ((0, M$.dF)(Vl._s),
+            (0, tX.closeModal)(Vl.i$),
+            (0, tX.closeModal)(Vl.Pr),
+            (0, tX.closeModal)(Vl.H1),
+            (0, tX.closeModal)(Vs.V));
     },
     handleCurrentUserUpdate(e) {
         let { user: t } = e;
-        t.verified && (0, tX.closeModal)(Va.H1);
+        t.verified && (0, tX.closeModal)(Vl.H1);
     },
 };
-var Vl = n(803805),
-    Vo = n(761821);
-let Vd = "selectedChannelGuildFrecency";
-function Vc(e) {
+var Vd = n(803805),
+    Vc = n(761821);
+let Vu = "selectedChannelGuildFrecency";
+function V_(e) {
     let { state: t } = eE.Ay.PersistedStore.migrateAndReadStoreState("GIFFavoritesStore", [
         (e) =>
             null == e
@@ -49382,16 +49395,16 @@ function Vc(e) {
     return null == t || 0 === t.favorites.length
         ? []
         : t.favorites.map((n, i) => {
-              let r = Vl.tC.create();
+              let r = Vd.tC.create();
               return (
                   (r.format = (() => {
                       switch (n.format) {
                           case "IMAGE":
-                              return Vl.TL.IMAGE;
+                              return Vd.TL.IMAGE;
                           case "VIDEO":
-                              return Vl.TL.VIDEO;
+                              return Vd.TL.VIDEO;
                           default:
-                              return (n.format, Vl.TL.NONE);
+                              return (n.format, Vd.TL.NONE);
                       }
                   })()),
                   (r.src = n.src),
@@ -49402,13 +49415,13 @@ function Vc(e) {
               );
           });
 }
-let Vu = [
+let VE = [
     {
         version: 2,
         run(e) {
-            let t = Vc(1);
+            let t = V_(1);
             if (0 === t.length) return !1;
-            for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = Vl.uz.create()),
+            for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = Vd.uz.create()),
             (e.favoriteGifs.gifs = {}),
             t))
                 e.favoriteGifs.gifs[n] = i;
@@ -49431,12 +49444,12 @@ let Vu = [
             let i = !1;
             return (
                 n.favorites.length > 0 &&
-                    ((e.favoriteStickers = Vl.tQ.create()),
+                    ((e.favoriteStickers = Vd.tQ.create()),
                     (e.favoriteStickers.stickerIds = iM().uniq(n.favorites).slice(0, 250)),
                     (i = !0)),
                 iM().size(n.usageHistory) > 0 &&
-                    ((e.stickerFrecency = Vl.Do.create()),
-                    (e.stickerFrecency.stickers = (0, Vo.Mr)(n.usageHistory, 100)),
+                    ((e.stickerFrecency = Vd.Do.create()),
+                    (e.stickerFrecency.stickers = (0, Vc.Mr)(n.usageHistory, 100)),
                     (i = !0)),
                 i
             );
@@ -49456,12 +49469,12 @@ let Vu = [
             return (
                 null != t.favorites &&
                     t.favorites.length > 0 &&
-                    ((e.favoriteEmojis = Vl.gW.create()),
+                    ((e.favoriteEmojis = Vd.gW.create()),
                     (e.favoriteEmojis.emojis = iM().uniq(t.favorites).slice(0, 250)),
                     (n = !0)),
                 iM().size(t.usageHistory) > 0 &&
-                    ((e.emojiFrecency = Vl.Q8.create()),
-                    (e.emojiFrecency.emojis = (0, Vo.Mr)(t.usageHistory, 100)),
+                    ((e.emojiFrecency = Vd.Q8.create()),
+                    (e.emojiFrecency.emojis = (0, Vc.Mr)(t.usageHistory, 100)),
                     (n = !0)),
                 n
             );
@@ -49473,28 +49486,28 @@ let Vu = [
     {
         version: 6,
         run(e) {
-            (null == e.favoriteGifs && (e.favoriteGifs = Vl.uz.create()),
+            (null == e.favoriteGifs && (e.favoriteGifs = Vd.uz.create()),
                 null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {}));
-            let t = Vc(1);
+            let t = V_(1);
             if (0 === t.length) return !1;
             iM()(e.favoriteGifs.gifs)
                 .values()
                 .sortBy("order")
                 .forEach((e, n) => (e.order = t.length + 1 + n));
-            let n = Vl.uz.toBinary(e.favoriteGifs).length,
+            let n = Vd.uz.toBinary(e.favoriteGifs).length,
                 i = 0;
             for (let { url: r, favorite: a } of t) {
                 if (((a.order = t.length - i), i++, r in e.favoriteGifs.gifs)) {
                     e.favoriteGifs.gifs[r].order = a.order;
                     continue;
                 }
-                let s = Vl.tC.toBinary(a).length + r.length + 7;
+                let s = Vd.tC.toBinary(a).length + r.length + 7;
                 n + s > 762880 || ((n += s), (e.favoriteGifs.gifs[r] = a));
             }
-            for (n = Vl.uz.toBinary(e.favoriteGifs).length; n > 762880;) {
+            for (n = Vd.uz.toBinary(e.favoriteGifs).length; n > 762880;) {
                 let t = 0;
                 for (let n in e.favoriteGifs.gifs) if ((delete e.favoriteGifs.gifs[n], ++t >= 10)) break;
-                n = Vl.uz.toBinary(e.favoriteGifs).length;
+                n = Vd.uz.toBinary(e.favoriteGifs).length;
             }
             return !0;
         },
@@ -49508,8 +49521,8 @@ let Vu = [
             let n = !1;
             return (
                 iM().size(t.usageHistory) > 0 &&
-                    ((e.applicationCommandFrecency = Vl.Zc.create()),
-                    (e.applicationCommandFrecency.applicationCommands = (0, Vo.Mr)(t.usageHistory, 500)),
+                    ((e.applicationCommandFrecency = Vd.Zc.create()),
+                    (e.applicationCommandFrecency.applicationCommands = (0, Vc.Mr)(t.usageHistory, 500)),
                     (n = !0)),
                 n
             );
@@ -49526,7 +49539,7 @@ let Vu = [
             let n = !1;
             return (
                 iM().size(t.favoriteSounds) > 0 &&
-                    ((e.favoriteSoundboardSounds = Vl.Qn.create()),
+                    ((e.favoriteSoundboardSounds = Vd.Qn.create()),
                     cc.default.keys(t.favoriteSounds).forEach((n) => {
                         new Set(t.favoriteSounds[n]).forEach((t) => {
                             e.favoriteSoundboardSounds?.soundIds.push(t);
@@ -49543,17 +49556,17 @@ let Vu = [
     {
         version: 9,
         run(e) {
-            let t = ex.w.get(Vd);
+            let t = ex.w.get(Vu);
             if (null == t) return !1;
             for (let e in t) j.Ut1.test(e) || delete t[e];
             return (
-                (e.guildAndChannelFrecency = Vl.F1.create()),
-                (e.guildAndChannelFrecency.guildAndChannels = (0, Vo.Mr)(t, 100)),
+                (e.guildAndChannelFrecency = Vd.F1.create()),
+                (e.guildAndChannelFrecency.guildAndChannels = (0, Vc.Mr)(t, 100)),
                 !0
             );
         },
         cleanup() {
-            ex.w.remove(Vd);
+            ex.w.remove(Vu);
         },
     },
     {
@@ -49563,9 +49576,9 @@ let Vu = [
             let t = e.emojiFrecency.emojis ?? {},
                 n = !1;
             if (iM().size(t) > 0) {
-                let t = Vl.Q8.create();
-                (Vl.Q8.mergePartial(t, e.emojiFrecency),
-                    null != e.emojiReactionFrecency && Vl.Q8.mergePartial(t, e.emojiReactionFrecency),
+                let t = Vd.Q8.create();
+                (Vd.Q8.mergePartial(t, e.emojiFrecency),
+                    null != e.emojiReactionFrecency && Vd.Q8.mergePartial(t, e.emojiReactionFrecency),
                     (e.emojiReactionFrecency = t),
                     (n = !0));
             }
@@ -49583,7 +49596,7 @@ let Vu = [
                 let r = e.favoriteGifs.gifs[i];
                 null != r &&
                     (r.src.startsWith("//") && ((r.src = `https:${r.src}`), (n = !0)),
-                    r.format !== Vl.TL.IMAGE && t.test(r.src) && ((r.format = Vl.TL.IMAGE), (n = !0)));
+                    r.format !== Vd.TL.IMAGE && t.test(r.src) && ((r.format = Vd.TL.IMAGE), (n = !0)));
             }
             return n;
         },
@@ -49601,23 +49614,23 @@ let Vu = [
         cleanup() {},
     },
 ];
-var V_ = n(406935),
-    VE = n(168186),
-    VA = n(460288);
-function Vh(e, t) {
+var VA = n(406935),
+    Vh = n(168186),
+    Vf = n(460288);
+function VI(e, t) {
     let n = !1;
     return (
         null == e.userContent && (e.userContent = eN.YW.create()),
         null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array()),
-        (0, VA.c0)(e.userContent.dismissedContents, t) ||
-            ((e.userContent.dismissedContents = (0, VA.Vf)(e.userContent.dismissedContents, t)), (n = !0)),
+        (0, Vf.c0)(e.userContent.dismissedContents, t) ||
+            ((e.userContent.dismissedContents = (0, Vf.Vf)(e.userContent.dismissedContents, t)), (n = !0)),
         n
     );
 }
-function Vf(e, t, n) {
-    return !!F7.HP.hasHiddenHotspot(t) && Vh(e, n);
+function Vp(e, t, n) {
+    return !!F9.HP.hasHiddenHotspot(t) && VI(e, n);
 }
-let VI = [
+let VT = [
     {
         version: 2,
         run(e) {
@@ -49633,7 +49646,7 @@ let VI = [
                 let i = nm.A.getChannel(n);
                 null != i &&
                     ((t = !0),
-                    (0, Vo.gc)(e, i.guild_id ?? "0", i.id, (e) => {
+                    (0, Vc.gc)(e, i.guild_id ?? "0", i.id, (e) => {
                         e.collapsedInInbox = !0;
                     }));
             }
@@ -49657,7 +49670,7 @@ let VI = [
                 null != t.diversitySurrogate &&
                     "" !== t.diversitySurrogate &&
                     (null == e.textAndImages && (e.textAndImages = eN.oJ.create()),
-                    null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = V_.hU.create()),
+                    null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = VA.hU.create()),
                     (e.textAndImages.diversitySurrogate.value = t.diversitySurrogate),
                     (n = !0)),
                 n
@@ -49678,47 +49691,47 @@ let VI = [
             let n = ex.w.get("UserSettingsStore") ?? {};
             return (
                 "boolean" == typeof n.useRichChatTextBox &&
-                    ((e.textAndImages.useRichChatInput = V_._t.create({ value: n.useRichChatTextBox })), (t = !0)),
+                    ((e.textAndImages.useRichChatInput = VA._t.create({ value: n.useRichChatTextBox })), (t = !0)),
                 "string" == typeof n.renderSpoilers &&
-                    ((e.textAndImages.renderSpoilers = V_.hU.create({ value: n.renderSpoilers })), (t = !0)),
+                    ((e.textAndImages.renderSpoilers = VA.hU.create({ value: n.renderSpoilers })), (t = !0)),
                 "boolean" == typeof n.useThreadSidebar &&
-                    ((e.textAndImages.useThreadSidebar = V_._t.create({ value: n.useThreadSidebar })), (t = !0)),
+                    ((e.textAndImages.useThreadSidebar = VA._t.create({ value: n.useThreadSidebar })), (t = !0)),
                 "boolean" == typeof n.showInAppNotifications &&
-                    ((e.notifications.showInAppNotifications = V_._t.create({ value: n.showInAppNotifications })),
+                    ((e.notifications.showInAppNotifications = VA._t.create({ value: n.showInAppNotifications })),
                     (t = !0)),
                 n.emojiPickerCollapsedSections instanceof Array &&
                     ((e.textAndImages.emojiPickerCollapsedSections = n.emojiPickerCollapsedSections), (t = !0)),
                 n.stickerPickerCollapsedSections instanceof Array &&
                     ((e.textAndImages.stickerPickerCollapsedSections = n.stickerPickerCollapsedSections), (t = !0)),
                 "boolean" == typeof n.viewImageDescriptions &&
-                    ((e.textAndImages.viewImageDescriptions = V_._t.create({ value: n.viewImageDescriptions })),
+                    ((e.textAndImages.viewImageDescriptions = VA._t.create({ value: n.viewImageDescriptions })),
                     (t = !0)),
                 "boolean" == typeof n.showCommandSuggestions &&
-                    ((e.textAndImages.showCommandSuggestions = V_._t.create({ value: n.showCommandSuggestions })),
+                    ((e.textAndImages.showCommandSuggestions = VA._t.create({ value: n.showCommandSuggestions })),
                     (t = !0)),
                 "boolean" == typeof n.alwaysPreviewVideo &&
-                    ((e.voiceAndVideo.alwaysPreviewVideo = V_._t.create({ value: n.alwaysPreviewVideo })), (t = !0)),
+                    ((e.voiceAndVideo.alwaysPreviewVideo = VA._t.create({ value: n.alwaysPreviewVideo })), (t = !0)),
                 "boolean" == typeof n.notifyFriendsOnGoLive &&
-                    ((e.notifications.notifyFriendsOnGoLive = V_._t.create({ value: n.notifyFriendsOnGoLive })),
+                    ((e.notifications.notifyFriendsOnGoLive = VA._t.create({ value: n.notifyFriendsOnGoLive })),
                     (t = !0)),
                 "boolean" == typeof n.installShortcutDesktop &&
-                    ((e.gameLibrary.installShortcutDesktop = V_._t.create({ value: n.installShortcutDesktop })),
+                    ((e.gameLibrary.installShortcutDesktop = VA._t.create({ value: n.installShortcutDesktop })),
                     (t = !0)),
                 "boolean" == typeof n.installShortcutStartMenu &&
-                    ((e.gameLibrary.installShortcutStartMenu = V_._t.create({ value: n.installShortcutStartMenu })),
+                    ((e.gameLibrary.installShortcutStartMenu = VA._t.create({ value: n.installShortcutStartMenu })),
                     (t = !0)),
                 "boolean" == typeof n.allowActivityPartyPrivacyFriends &&
-                    ((e.privacy.allowActivityPartyPrivacyFriends = V_._t.create({
+                    ((e.privacy.allowActivityPartyPrivacyFriends = VA._t.create({
                         value: n.allowActivityPartyPrivacyFriends,
                     })),
                     (t = !0)),
                 "boolean" == typeof n.allowActivityPartyPrivacyVoiceChannel &&
-                    ((e.privacy.allowActivityPartyPrivacyVoiceChannel = V_._t.create({
+                    ((e.privacy.allowActivityPartyPrivacyVoiceChannel = VA._t.create({
                         value: n.allowActivityPartyPrivacyVoiceChannel,
                     })),
                     (t = !0)),
                 "boolean" == typeof n.rtcPanelShowVoiceStates &&
-                    ((e.debug.rtcPanelShowVoiceStates = V_._t.create({ value: n.rtcPanelShowVoiceStates })), (t = !0)),
+                    ((e.debug.rtcPanelShowVoiceStates = VA._t.create({ value: n.rtcPanelShowVoiceStates })), (t = !0)),
                 t
             );
         },
@@ -49727,12 +49740,12 @@ let VI = [
     {
         version: 10,
         run(e) {
-            let t = Vf(e, F7._2.HUB_LINK_CHANNEL_NOTICE, rG.M.CHANNEL_NOTICE_HUBLINK),
+            let t = Vp(e, F9._2.HUB_LINK_CHANNEL_NOTICE, rG.M.CHANNEL_NOTICE_HUBLINK),
                 n = ex.w.get("channelNotices") ?? {};
             return (
-                !1 === n[j.n5X.INVITE] && Vh(e, rG.M.CHANNEL_NOTICE_INVITE) && (t = !0),
-                !1 === n[j.n5X.QUICKSWITCHER] && Vh(e, rG.M.CHANNEL_NOTICE_QUICKSWITCHER) && (t = !0),
-                !1 === n[j.n5X.GUILD_BOOSTING] && Vh(e, rG.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (t = !0),
+                !1 === n[j.n5X.INVITE] && VI(e, rG.M.CHANNEL_NOTICE_INVITE) && (t = !0),
+                !1 === n[j.n5X.QUICKSWITCHER] && VI(e, rG.M.CHANNEL_NOTICE_QUICKSWITCHER) && (t = !0),
+                !1 === n[j.n5X.GUILD_BOOSTING] && VI(e, rG.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (t = !0),
                 t
             );
         },
@@ -49745,8 +49758,8 @@ let VI = [
         run(e) {
             let t = !1;
             return (
-                ex.w.get("hideNag") && Vh(e, rG.M.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
-                ex.w.get("hideConnectSpotify") && Vh(e, rG.M.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
+                ex.w.get("hideNag") && VI(e, rG.M.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
+                ex.w.get("hideConnectSpotify") && VI(e, rG.M.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
                 t
             );
         },
@@ -49759,11 +49772,11 @@ let VI = [
         run(e) {
             let t = !1;
             return (
-                ex.w.get("hidePremiumPromo") && Vh(e, rG.M.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0),
+                ex.w.get("hidePremiumPromo") && VI(e, rG.M.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0),
                 ex.w.get("hidePremiumTier2TrialEnding") &&
-                    Vh(e, rG.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
+                    VI(e, rG.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
                     (t = !0),
-                ex.w.get("hidePremiumReactivateNotice") && Vh(e, rG.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
+                ex.w.get("hidePremiumReactivateNotice") && VI(e, rG.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
                 t
             );
         },
@@ -49773,7 +49786,7 @@ let VI = [
                 ex.w.remove("hidePremiumReactivateNotice"));
         },
     },
-    { version: 15, run: (e) => Vf(e, F7._2.NOW_PLAYING_CONSENT_CARD, rG.M.NOW_PLAYING_CONSENT_CARD), cleanup() {} },
+    { version: 15, run: (e) => Vp(e, F9._2.NOW_PLAYING_CONSENT_CARD, rG.M.NOW_PLAYING_CONSENT_CARD), cleanup() {} },
     {
         version: 16,
         run(e) {
@@ -49784,7 +49797,7 @@ let VI = [
                 null != n &&
                 (null == e.userContent && (e.userContent = eN.YW.create()),
                 null == e.userContent.lastDismissedOutboundPromotionStartDate) &&
-                ((e.userContent.lastDismissedOutboundPromotionStartDate = V_.hU.create({ value: n })), !0)
+                ((e.userContent.lastDismissedOutboundPromotionStartDate = VA.hU.create({ value: n })), !0)
             );
         },
         cleanup() {},
@@ -49802,7 +49815,7 @@ let VI = [
                 null != n &&
                 (null == e.textAndImages && (e.textAndImages = eN.oJ.create()),
                 null == e.textAndImages.expressionSuggestionsEnabled) &&
-                ((e.textAndImages.expressionSuggestionsEnabled = V_._t.create({ value: n })), !0)
+                ((e.textAndImages.expressionSuggestionsEnabled = VA._t.create({ value: n })), !0)
             );
         },
         cleanup() {
@@ -49814,7 +49827,7 @@ let VI = [
         run(e) {
             let t = ex.w.get("lastChangeLogId");
             if (null == t) return !1;
-            if (!(0, VE.hT)(t)) return (ex.w.remove("lastChangeLogId"), !1);
+            if (!(0, Vh.hT)(t)) return (ex.w.remove("lastChangeLogId"), !1);
             if (null == e.userContent) e.userContent = eN.YW.create();
             else if (
                 null != e.userContent &&
@@ -49841,61 +49854,61 @@ let VI = [
                 t?._state?.displayCompactAvatars === !0 &&
                 ((e.textAndImages ??= eN.oJ.create()),
                 null == e.textAndImages.displayCompactAvatars &&
-                    ((e.textAndImages.displayCompactAvatars = V_._t.create({ value: !0 })), !0))
+                    ((e.textAndImages.displayCompactAvatars = VA._t.create({ value: !0 })), !0))
             );
         },
         cleanup() {},
     },
 ];
-var Vp = n(405892);
-let VT = {
+var Vm = n(405892);
+let Vg = {
     init() {
-        ((Vp.A[oe.oD.PRELOADED_USER_SETTINGS] = VI),
-            (Vp.A[oe.oD.FRECENCY_AND_FAVORITES_SETTINGS] = Vu),
-            k.h.subscribe("CONNECTION_OPEN", Vg),
-            k.h.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", VS),
-            k.h.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", VN),
-            k.h.subscribe("APP_STATE_UPDATE", VC),
-            __OVERLAY__ || window.addEventListener("beforeunload", Vm));
+        ((Vm.A[oe.oD.PRELOADED_USER_SETTINGS] = VT),
+            (Vm.A[oe.oD.FRECENCY_AND_FAVORITES_SETTINGS] = VE),
+            k.h.subscribe("CONNECTION_OPEN", VN),
+            k.h.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", VC),
+            k.h.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", VO),
+            k.h.subscribe("APP_STATE_UPDATE", VR),
+            __OVERLAY__ || window.addEventListener("beforeunload", VS));
     },
 };
-function Vm() {
-    iM().forEach(F8.Df, (e, t) => {
+function VS() {
+    iM().forEach(Be.Df, (e, t) => {
         null != eL.A.getFullState()[Number(t)].editInfo.timeout && e.persistChanges();
     });
 }
-function Vg() {
+function VN() {
     let e = eL.A.getFullState(),
         t = e[oe.oD.PRELOADED_USER_SETTINGS];
-    (t.editInfo.triggeredMigrations && F8.wc.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
-        iM().forEach(F8.Df, (t, n) => {
+    (t.editInfo.triggeredMigrations && Be.wc.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
+        iM().forEach(Be.Df, (t, n) => {
             let i = e[Number(n)];
             null != i.editInfo.offlineEditDataVersion &&
                 null != i.editInfo.protoToSave &&
                 t.scheduleSaveFromOfflineEdit();
         }));
 }
-function VS(e) {
+function VC(e) {
     let {
         settings: { proto: t, type: n },
         delaySeconds: i,
         jitter: r,
     } = e;
-    F8.Df[n].markDirty(t, { delaySeconds: i, jitter: r });
+    Be.Df[n].markDirty(t, { delaySeconds: i, jitter: r });
 }
-function VN(e) {
+function VO(e) {
     let { settingsType: t } = e;
-    F8.Df[t].loadIfNecessary();
+    Be.Df[t].loadIfNecessary();
 }
-function VC(e) {
+function VR(e) {
     let { state: t } = e;
-    ("inactive" === t || "background" === t) && Vm();
+    ("inactive" === t || "background" === t) && VS();
 }
-function VO() {
+function VL() {
     if (null == s || !sO.A.isOpen(s)) return !1;
     (sg.VN(s), ng.A.getRTCConnection()?.setPipOpen(!1), (s = null));
 }
-function VR() {
+function Vy() {
     let e = ng.A.getChannelId(),
         t = s === e;
     if (
@@ -49919,59 +49932,59 @@ function VR() {
             return !(i && sC.A.getLayers().includes(j.zgK.RTC_DEBUG)) && (!!i || e === t);
         })()
     )
-        return VO();
-    if ((t || VO(), null == e)) return !1;
+        return VL();
+    if ((t || VL(), null == e)) return !1;
     let n = nm.A.getChannel(e);
     return (
         !(null == n || sO.A.isOpen(e)) &&
         (sg.ho(n.id, j.o1q.VIDEO, { channel: n }), ng.A.getRTCConnection()?.setPipOpen(!0), void (s = e))
     );
 }
-class VL extends nE.A {
+class VD extends nE.A {
     _initialize() {
-        (nS.Ay.addChangeListener(VR),
-            ir.A.addChangeListener(VR),
-            ng.A.addChangeListener(VR),
-            nG.A.addChangeListener(VR),
-            sC.A.addChangeListener(VR),
-            d7.A.addChangeListener(VR),
-            iN.A.addChangeListener(VR),
-            ek.Ay.addChangeListener(VR),
-            nL.Ay.addChangeListener(VR),
-            tI.A.addChangeListener(VR));
+        (nS.Ay.addChangeListener(Vy),
+            ir.A.addChangeListener(Vy),
+            ng.A.addChangeListener(Vy),
+            nG.A.addChangeListener(Vy),
+            sC.A.addChangeListener(Vy),
+            d7.A.addChangeListener(Vy),
+            iN.A.addChangeListener(Vy),
+            ek.Ay.addChangeListener(Vy),
+            nL.Ay.addChangeListener(Vy),
+            tI.A.addChangeListener(Vy));
     }
     _terminate() {
-        (nS.Ay.removeChangeListener(VR),
-            ir.A.removeChangeListener(VR),
-            ng.A.removeChangeListener(VR),
-            nG.A.removeChangeListener(VR),
-            sC.A.removeChangeListener(VR),
-            d7.A.removeChangeListener(VR),
-            iN.A.removeChangeListener(VR),
-            ek.Ay.removeChangeListener(VR),
-            nL.Ay.removeChangeListener(VR),
-            tI.A.removeChangeListener(VR));
+        (nS.Ay.removeChangeListener(Vy),
+            ir.A.removeChangeListener(Vy),
+            ng.A.removeChangeListener(Vy),
+            nG.A.removeChangeListener(Vy),
+            sC.A.removeChangeListener(Vy),
+            d7.A.removeChangeListener(Vy),
+            iN.A.removeChangeListener(Vy),
+            ek.Ay.removeChangeListener(Vy),
+            nL.Ay.removeChangeListener(Vy),
+            tI.A.removeChangeListener(Vy));
     }
 }
-let Vy = new VL();
-var VD = n(885576);
-let Vv = new iu.Ep(),
-    Vb = new iu.Ep();
-class VM extends nE.A {
+let Vv = new VD();
+var Vb = n(885576);
+let VM = new iu.Ep(),
+    VP = new iu.Ep();
+class VU extends nE.A {
     _initialize() {
         k.h.subscribe("IDLE", this.handleIdleUpdate);
     }
     _terminate() {
-        (Vv.stop(), Vb.stop(), k.h.unsubscribe("IDLE", this.handleIdleUpdate));
+        (VM.stop(), VP.stop(), k.h.unsubscribe("IDLE", this.handleIdleUpdate));
     }
     handleIdleUpdate() {
-        let e = VD.A.getIdleSince();
+        let e = Vb.A.getIdleSince();
         if (!eB.isPlatformEmbedded) return;
-        for (let e of (Vv.stop(), Vb.stop(), d7.A.getAllActiveStreams())) if (e.state !== j.XYD.ENDED) return;
+        for (let e of (VM.stop(), VP.stop(), d7.A.getAllActiveStreams())) if (e.state !== j.XYD.ENDED) return;
         if (null == e) return;
         let t = ng.A.getChannelId();
         if (null == t) return;
-        Vb.start(18e6, () => {
+        VP.start(18e6, () => {
             t0.default.selectVoiceChannel(null);
         });
         let n = e1.A.getGuild(ng.A.getGuildId());
@@ -49979,26 +49992,26 @@ class VM extends nE.A {
         let i = nm.A.getChannel(t);
         null == i ||
             i.isGuildStageVoice() ||
-            Vv.start(e + n.afkTimeout * i_.A.Millis.SECOND - Date.now(), () => {
+            VM.start(e + n.afkTimeout * i_.A.Millis.SECOND - Date.now(), () => {
                 null != (n = e1.A.getGuild(ng.A.getGuildId())) &&
                     null != n.afkChannelId &&
                     t0.default.selectVoiceChannel(n.afkChannelId, !1, !1, { bypassIdleUpdate: !0 });
             });
     }
 }
-let VP = new VM(),
-    VU = (0, H.mj)({
+let Vw = new VU(),
+    VG = (0, H.mj)({
         kind: "user",
         name: "2026-06-web-vitals-monitoring",
         defaultConfig: { enabled: !1, sampleRate: 0 },
         variations: { 1: { enabled: !0, sampleRate: 0.05 }, 2: { enabled: !0, sampleRate: 1 } },
     });
-var Vw = n(484789);
-let VG = new ez.A("WebVitals"),
-    Vx = !1;
-function Vk(e) {
+var Vx = n(484789);
+let Vk = new ez.A("WebVitals"),
+    VF = !1;
+function VB(e) {
     let { name: t, value: n, rating: i, delta: r, id: a, navigationType: s } = e;
-    (VG.info(`${t}: ${n.toFixed(2)} (rating: ${i}, delta: ${r.toFixed(2)}, navigationType: ${s})`),
+    (Vk.info(`${t}: ${n.toFixed(2)} (rating: ${i}, delta: ${r.toFixed(2)}, navigationType: ${s})`),
         W.default.track(j.HAw.APP_WEB_PERF_STARTUP_METRICS, {
             load_id: (0, Ec.y9)(),
             metric_name: t,
@@ -50009,38 +50022,38 @@ function Vk(e) {
             metric_navigation_type: s,
         }));
 }
-function VF() {
-    let { enabled: e, sampleRate: t } = VU.useConfig({ location: "init_web_vitals" });
+function VV() {
+    let { enabled: e, sampleRate: t } = VG.useConfig({ location: "init_web_vitals" });
     return (
         eI.useEffect(() => {
             e &&
-                (Vx ||
+                (VF ||
                     !((0, eB.isDesktop)() || (0, eB.isWeb)()) ||
-                    ((Vx = !0),
+                    ((VF = !0),
                     Math.random() >= t ||
-                        ((0, Vw.IN)(Vk, { reportAllChanges: !0 }),
-                        (0, Vw.zB)(Vk, { reportAllChanges: !0 }),
-                        (0, Vw.rH)(Vk, { reportAllChanges: !0 }),
-                        (0, Vw.fK)(Vk, { reportAllChanges: !0 }),
-                        (0, Vw.Ck)(Vk, { reportAllChanges: !0 }),
-                        VG.info(`Web-vitals monitoring started (sampleRate: ${100 * t}%)`))));
+                        ((0, Vx.IN)(VB, { reportAllChanges: !0 }),
+                        (0, Vx.zB)(VB, { reportAllChanges: !0 }),
+                        (0, Vx.rH)(VB, { reportAllChanges: !0 }),
+                        (0, Vx.fK)(VB, { reportAllChanges: !0 }),
+                        (0, Vx.Ck)(VB, { reportAllChanges: !0 }),
+                        Vk.info(`Web-vitals monitoring started (sampleRate: ${100 * t}%)`))));
         }, [e, t]),
         null
     );
 }
-var VB = n(565058);
-let VV = !1,
-    VH = null,
-    Vj = {
+var VH = n(565058);
+let Vj = !1,
+    VW = null,
+    VY = {
         init() {
             k.h.subscribe("CONNECTION_OPEN", (e) => {
                 let { pendingPayments: t } = e;
                 if (null != t && t.length > 0) {
                     var i;
-                    if (VH === t[0] || null == (VH = t[0])) return;
-                    ((i = VH),
-                        VV ||
-                            ((VV = !0),
+                    if (VW === t[0] || null == (VW = t[0])) return;
+                    ((i = VW),
+                        Vj ||
+                            ((Vj = !0),
                             (0, tX.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("157931"), n.e("209967")]).then(
                                     n.bind(n, 302810),
@@ -50050,7 +50063,7 @@ let VV = !1,
                                     return (0, M.jsx)(e, {
                                         pendingPayment: i,
                                         transitionState: n,
-                                        onClose: () => ((VV = !1), r()),
+                                        onClose: () => ((Vj = !1), r()),
                                     });
                                 };
                             })));
@@ -50058,17 +50071,17 @@ let VV = !1,
             });
         },
     };
-var VW = n(612181);
+var VK = n(612181);
 (n(115036), n(131319), n(794383), n(592329), n(712687), n(328968), n(304296));
-let VY = j.XlH.CLOSED,
-    VK = {},
-    V$ = null;
-function Vz() {
+let V$ = j.XlH.CLOSED,
+    Vz = {},
+    VX = null;
+function Vq() {
     let e = eF.default.getCurrentUser();
-    if (null == e) return VX();
-    ((VY = j.XlH.OPEN),
-        (VK = {}),
-        (V$ = {
+    if (null == e) return VZ();
+    ((V$ = j.XlH.OPEN),
+        (Vz = {}),
+        (VX = {
             ...{
                 userId: e.id,
                 username: e.username,
@@ -50081,51 +50094,51 @@ function Vz() {
             },
         }));
 }
-function VX() {
-    ((VY = j.XlH.CLOSED), (V$ = null), (VK = {}));
+function VZ() {
+    ((V$ = j.XlH.CLOSED), (VX = null), (Vz = {}));
 }
-function Vq() {
-    ((VY = j.XlH.OPEN), (VK = {}));
+function VQ() {
+    ((V$ = j.XlH.OPEN), (Vz = {}));
 }
-class VZ extends eE.Ay.Store {
+class VJ extends eE.Ay.Store {
     static displayName = "UserSettingsAccountStore";
     initialize() {
         this.waitFor(eF.default);
     }
     getErrors() {
-        return VK;
+        return Vz;
     }
     getSubmitting() {
-        return VY === j.XlH.SUBMITTING;
+        return V$ === j.XlH.SUBMITTING;
     }
     getSettings() {
-        return V$;
+        return VX;
     }
 }
-(new VZ(k.h, {
+(new VJ(k.h, {
     USER_SETTINGS_MODAL_OPEN: function () {
-        Vz();
+        Vq();
     },
-    USER_SETTINGS_MODAL_INIT: Vz,
-    USER_SETTINGS_MODAL_CLOSE: VX,
-    LOGOUT: VX,
+    USER_SETTINGS_MODAL_INIT: Vq,
+    USER_SETTINGS_MODAL_CLOSE: VZ,
+    LOGOUT: VZ,
     USER_SETTINGS_MODAL_SUBMIT: function () {
-        VY = j.XlH.SUBMITTING;
+        V$ = j.XlH.SUBMITTING;
     },
     USER_SETTINGS_MODAL_SUBMIT_FAILURE: function (e) {
-        if (VY !== j.XlH.SUBMITTING) return !1;
-        ((VY = j.XlH.OPEN), (VK = e.errors ?? {}));
+        if (V$ !== j.XlH.SUBMITTING) return !1;
+        ((V$ = j.XlH.OPEN), (Vz = e.errors ?? {}));
     },
     USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function (e) {
         let { settings: t } = e;
-        (null == V$ && (V$ = {}), (V$ = { ...V$, ...t }));
+        (null == VX && (VX = {}), (VX = { ...VX, ...t }));
     },
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: Vq,
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: VQ,
     USER_SETTINGS_MODAL_RESET: function () {
         let e = eF.default.getCurrentUser();
-        (Vq(),
+        (VQ(),
             null != e &&
-                (V$ = {
+                (VX = {
                     ...{
                         userId: e.id,
                         username: e.username,
@@ -50141,30 +50154,30 @@ class VZ extends eE.Ay.Store {
 }),
     n(836602),
     n(555337));
-let VQ = { hasAppliedPerk: !1 },
-    VJ = VQ;
-function V0() {
-    VJ = VQ;
+let V0 = { hasAppliedPerk: !1 },
+    V1 = V0;
+function V2() {
+    V1 = V0;
 }
-class V1 extends eE.Ay.PersistedStore {
+class V3 extends eE.Ay.PersistedStore {
     static displayName = "HexagonCampaignPersistedStore";
     static persistKey = "HexagonCampaignPersistedStore";
     initialize(e) {
-        null != e && (VJ = { ...VQ, ...e });
+        null != e && (V1 = { ...V0, ...e });
     }
     getState() {
-        return VJ;
+        return V1;
     }
     get hasAppliedPerk() {
-        return VJ.hasAppliedPerk;
+        return V1.hasAppliedPerk;
     }
 }
-(new V1(k.h, {
+(new V3(k.h, {
     HEXAGON_CAMPAIGN_PERK_APPLIED: function () {
-        VJ = { ...VJ, hasAppliedPerk: !0 };
+        V1 = { ...V1, hasAppliedPerk: !0 };
     },
-    HEXAGON_CAMPAIGN_APPLIED_PERKS_CLEARED: V0,
-    LOGOUT: V0,
+    HEXAGON_CAMPAIGN_APPLIED_PERKS_CLEARED: V2,
+    LOGOUT: V2,
 }),
     n(863036),
     n(291731),
@@ -50173,16 +50186,16 @@ class V1 extends eE.Ay.PersistedStore {
     n(884705),
     n(787301),
     n(632789));
-var V2 = n(453001);
+var V5 = n(453001);
 (n(753027), n(989837), n(166862), n(264322), n(861382), n(715314));
-var V3 = n(61090);
+var V6 = n(61090);
 n(237751);
-var V5 = n(154049),
-    V6 = n(937724),
-    V4 = n(799422),
-    V7 = n(723176);
-let V8 = new ez.A("GuildBasicChannels");
-function V9(e, t) {
+var V4 = n(154049),
+    V7 = n(937724),
+    V8 = n(799422),
+    V9 = n(723176);
+let He = new ez.A("GuildBasicChannels");
+function Ht(e, t) {
     return (
         null == e ||
         e.type !== t.type ||
@@ -50191,13 +50204,13 @@ function V9(e, t) {
         nw.A.computeBasicPermissions(e) !== nw.A.computeBasicPermissions(t)
     );
 }
-let He = new (class {
+let Hn = new (class {
     synced = null;
     async getAsync(e) {
         let t = performance.now(),
             [n, i] = await Promise.all([
-                V7.A.basicChannels(e).getKvEntries(),
-                V7.A.syncedBasicChannels(e).getKvEntries(),
+                V9.A.basicChannels(e).getKvEntries(),
+                V9.A.syncedBasicChannels(e).getKvEntries(),
             ]),
             r = performance.now() - t,
             [a, s] = (function (e) {
@@ -50209,7 +50222,7 @@ let He = new (class {
             l = new Set(a);
         return (
             (this.synced = l),
-            V8.verbose(`loaded in ${r}ms (guilds: ${n.length}, synced: ${l.size} unsynced: ${s.length})`),
+            He.verbose(`loaded in ${r}ms (guilds: ${n.length}, synced: ${l.size} unsynced: ${s.length})`),
             {
                 all: n,
                 stale: s,
@@ -50242,7 +50255,7 @@ let He = new (class {
     }
     handleChannelUpdates(e, t) {
         for (let n of e.channels.filter((e) => null != e.guild_id))
-            V9(nm.A.getBasicChannel(n.id), n) && this.unsync(n.guild_id, t);
+            Ht(nm.A.getBasicChannel(n.id), n) && this.unsync(n.guild_id, t);
     }
     handleBackgroundSync(e, t) {
         for (let n of e.guilds)
@@ -50267,19 +50280,19 @@ let He = new (class {
     }
     async handlePostConnectionOpen() {
         let e = sF.A.lastTimeConnectedChanged(),
-            t = V7.A.database();
-        if (null == this.synced || null == t || !(0, V6.O)()) return;
+            t = V9.A.database();
+        if (null == this.synced || null == t || !(0, V7.O)()) return;
         let n = e1.A.getGuildIds(),
             i = n.filter((e) => !this.synced.has(e));
-        for (let r of (V8.verbose(`scheduling basic_channel optimstic writes (guilds: ${i.length})`), n)) {
-            if (null == this.synced || t !== V7.A.database() || e !== sF.A.lastTimeConnectedChanged()) break;
+        for (let r of (He.verbose(`scheduling basic_channel optimstic writes (guilds: ${i.length})`), n)) {
+            if (null == this.synced || t !== V9.A.database() || e !== sF.A.lastTimeConnectedChanged()) break;
             if (!this.synced.has(r)) {
-                V8.verbose(`optimstically writing basic_channels (guild: ${r})`);
+                He.verbose(`optimstically writing basic_channels (guild: ${r})`);
                 try {
                     (await nm.D.loadGuildIds([r]),
                         await t.transaction((e) => this.syncOne(r, e), "handlePostConnectionOpen"));
                 } catch (e) {
-                    V8.warn("couldn't optimstically write basic_channel:", e);
+                    He.warn("couldn't optimstically write basic_channel:", e);
                     return;
                 }
                 await new Promise((e) => setTimeout(e, 1e3));
@@ -50308,7 +50321,7 @@ let He = new (class {
     handleGuildRoleUpdate(e, t) {
         let n = e.role,
             i = e0.A.getRole(e.guildId, n.id);
-        (null != i && MN.aI(MN.iu(n.permissions), i.permissions)) || this.unsync(e.guildId, t);
+        (null != i && MO.aI(MO.iu(n.permissions), i.permissions)) || this.unsync(e.guildId, t);
     }
     handleGuildMemberUpdate(e, t) {
         e.user.id === ei.default.getId() && this.unsync(e.guildId, t);
@@ -50320,36 +50333,36 @@ let He = new (class {
         this.synced = null;
     }
     onGuildUpdate(e, t, n, i) {
-        (n.length > 0 || t.some((e) => V9(nm.A.getBasicChannel(e.id), e))) && this.unsync(e, i);
+        (n.length > 0 || t.some((e) => Ht(nm.A.getBasicChannel(e.id), e))) && this.unsync(e, i);
     }
     onGuildSync(e, t) {
         this.unsync(e, t);
     }
     delete(e, t) {
         (this.unsync(e, t),
-            V7.A.basicChannelsTransaction(t).delete(e),
-            V7.A.syncedBasicChannelsTransaction(t).delete(e));
+            V9.A.basicChannelsTransaction(t).delete(e),
+            V9.A.syncedBasicChannelsTransaction(t).delete(e));
     }
     unsync(e, t) {
         (this.synced?.delete(e),
-            V7.A.basicChannelsTransaction(t).delete(e),
-            V7.A.syncedBasicChannelsTransaction(t).put(e, !1),
-            V2.A.invalidate(e));
+            V9.A.basicChannelsTransaction(t).delete(e),
+            V9.A.syncedBasicChannelsTransaction(t).put(e, !1),
+            V5.A.invalidate(e));
     }
     sync(e) {
-        V8.verbose("Starting to write all basic channels");
+        He.verbose("Starting to write all basic channels");
         let t = performance.now(),
             n = { written: 0, skipped: 0 };
         for (let t of e1.A.getGuildIds()) this.syncOne(t, e) ? n.written++ : n.skipped++;
         let i = performance.now() - t;
-        V8.verbose(`${n.written} basic_channel guilds submitted (took: ${i}ms, skipped: ${n.skipped} guilds)`);
+        He.verbose(`${n.written} basic_channel guilds submitted (took: ${i}ms, skipped: ${n.skipped} guilds)`);
     }
     syncOne(e, t) {
         var n;
         return (
             !(null == e1.A.getGuild(e) || this.synced?.has(e)) &&
             (this.synced?.add(e),
-            V7.A.basicChannelsTransaction(t).put(
+            V9.A.basicChannelsTransaction(t).put(
                 e,
                 ((n = e),
                 Object.values(nm.A.getMutableGuildChannelsForGuild(n)).map((e) => ({
@@ -50357,28 +50370,28 @@ let He = new (class {
                     type: e.type,
                     guild_id: e.guild_id,
                     parent_id: e.parent_id,
-                    basicPermissions: V4.A.asBasicFlag(nw.A.computePermissions(e)),
+                    basicPermissions: V8.A.asBasicFlag(nw.A.computePermissions(e)),
                     nsfw: e.nsfw || void 0,
                 }))),
             ),
-            V7.A.syncedBasicChannelsTransaction(t).put(e, !0),
+            V9.A.syncedBasicChannelsTransaction(t).put(e, !0),
             !0)
         );
     }
 })();
-var Ht = n(149790),
-    Hn = n(9865),
-    Hi = n(7864);
-let Hr = new ez.A("Guilds"),
-    Ha = new (class {
+var Hi = n(149790),
+    Hr = n(9865),
+    Ha = n(7864);
+let Hs = new ez.A("Guilds"),
+    Hl = new (class {
         async getAsync(e) {
             let t = performance.now(),
-                n = await V7.A.guilds(e).getMany(),
+                n = await V9.A.guilds(e).getMany(),
                 i = performance.now();
-            return (Hr.verbose(`loaded in ${i - t}ms (guilds: ${n.length})`), n);
+            return (Hs.verbose(`loaded in ${i - t}ms (guilds: ${n.length})`), n);
         }
         async getOneAsync(e, t) {
-            return await V7.A.guilds(e).get(t);
+            return await V9.A.guilds(e).get(t);
         }
         actions = {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
@@ -50400,23 +50413,23 @@ let Hr = new ez.A("Guilds"),
                     let i = e0.A.getUnsafeMutableRoles(n.id),
                         r =
                             "partial" === n.data_mode
-                                ? Hi.ly(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids)
-                                : Hn.hd(n.id, n.roles);
-                    this.put(Ht.Me(Ht.kI(n, e), Hn.cH(r), oG.Ay.getSelfMember(n.id)), t);
+                                ? Ha.ly(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids)
+                                : Hr.hd(n.id, n.roles);
+                    this.put(Hi.Me(Hi.kI(n, e), Hr.cH(r), oG.Ay.getSelfMember(n.id)), t);
                 }
             }
         }
         handleConnectionOpen(e, t) {
             let n = [...e.guilds.map((e) => e.id), ...e.unavailableGuilds];
-            for (let i of (V7.A.guildsTransaction(t).deleteAllExcept(n), e.guilds)) this.putOne(i, t);
+            for (let i of (V9.A.guildsTransaction(t).deleteAllExcept(n), e.guilds)) this.putOne(i, t);
         }
         handleGuildCreate(e, t) {
             this.putOne(e.guild, t);
         }
         handleGuildUpdate(e, t) {
             let n = e1.A.getGuild(e.guild.id),
-                i = Ht.Y1(e.guild, n);
-            this.put(Ht.Me(i, Hn.cH(Hn.hd(e.guild.id, e.guild.roles)), oG.Ay.getSelfMember(e.guild.id)), t);
+                i = Hi.Y1(e.guild, n);
+            this.put(Hi.Me(i, Hr.cH(Hr.hd(e.guild.id, e.guild.roles)), oG.Ay.getSelfMember(e.guild.id)), t);
         }
         handleGuildDelete(e, t) {
             this.delete(e.guild.id, t);
@@ -50426,7 +50439,7 @@ let Hr = new ez.A("Guilds"),
                 i = e0.A.getUnsafeMutableRoles(e.guildId);
             null != n &&
                 this.put(
-                    Ht.Me(n, Hn.cH({ ...i, [e.role.id]: Hn.Wj(e.guildId, e.role) }), oG.Ay.getSelfMember(e.guildId)),
+                    Hi.Me(n, Hr.cH({ ...i, [e.role.id]: Hr.Wj(e.guildId, e.role) }), oG.Ay.getSelfMember(e.guildId)),
                     t,
                 );
         }
@@ -50437,7 +50450,7 @@ let Hr = new ez.A("Guilds"),
                 delete i[e.roleId];
                 let r = oG.Ay.getSelfMember(e.guildId);
                 (null != r && (r = { ...r, roles: r.roles.filter((t) => t !== e.roleId) }),
-                    this.put(Ht.Me(n, Hn.cH(i), r), t));
+                    this.put(Hi.Me(n, Hr.cH(i), r), t));
             }
         }
         handleGuildMemberAdd(e, t) {
@@ -50445,9 +50458,9 @@ let Hr = new ez.A("Guilds"),
                 let n = e1.A.getGuild(e.guildId);
                 null != n &&
                     this.put(
-                        Ht.Me(
+                        Hi.Me(
                             (0, ii.kn)(n, e.joinedAt),
-                            Hn.cH(e0.A.getUnsafeMutableRoles(n.id)),
+                            Hr.cH(e0.A.getUnsafeMutableRoles(n.id)),
                             oG.Ay.getSelfMember(n.id),
                         ),
                         t,
@@ -50458,35 +50471,35 @@ let Hr = new ez.A("Guilds"),
             if (e.user.id !== ei.default.getId()) return;
             let n = e1.A.getGuild(e.guildId);
             null != n &&
-                this.put(Ht.Me(n, Hn.cH(e0.A.getUnsafeMutableRoles(n.id)), { roles: e.roles, userId: e.user.id }), t);
+                this.put(Hi.Me(n, Hr.cH(e0.A.getUnsafeMutableRoles(n.id)), { roles: e.roles, userId: e.user.id }), t);
         }
         resetInMemoryState() {}
         putOne(e, t) {
             let n = e.members.find((e) => e.user.id === ei.default.getId()),
                 i = e1.A.getGuild(e.id);
             if (null == e.properties && null == i) return;
-            let r = Hn.j_(e.id, e.roles, e0.A.getUnsafeMutableRoles(e.id)),
-                a = Ht.Me(Ht.Wj(e, i), Hn.cH(r), null != n ? { userId: n.user.id, roles: n.roles } : null);
+            let r = Hr.j_(e.id, e.roles, e0.A.getUnsafeMutableRoles(e.id)),
+                a = Hi.Me(Hi.Wj(e, i), Hr.cH(r), null != n ? { userId: n.user.id, roles: n.roles } : null);
             this.put(a, t);
         }
         put(e, t) {
-            V7.A.guildsTransaction(t).put(e);
+            V9.A.guildsTransaction(t).put(e);
         }
         delete(e, t) {
-            V7.A.guildsTransaction(t).delete(e);
+            V9.A.guildsTransaction(t).delete(e);
         }
     })();
-var Hs = n(314732),
-    Hl = n(586660),
-    Ho = n(214771);
-let Hd = new ez.A("ReadStates"),
-    Hc = new (class {
+var Ho = n(314732),
+    Hd = n(586660),
+    Hc = n(214771);
+let Hu = new ez.A("ReadStates"),
+    H_ = new (class {
         readStateVersion = null;
         async getAll(e) {
             let t = performance.now(),
-                n = await V7.A.readStates(e).getMany(),
+                n = await V9.A.readStates(e).getMany(),
                 i = performance.now();
-            return (Hd.log(`asynchronously loaded in ${i - t}ms (readStates: ${n.length})`), n);
+            return (Hu.log(`asynchronously loaded in ${i - t}ms (readStates: ${n.length})`), n);
         }
         actions = {
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
@@ -50507,10 +50520,10 @@ let Hd = new ez.A("ReadStates"),
             null != this.readStateVersion &&
                 (null != e.version
                     ? (this.readStateVersion = e.version)
-                    : Hd.log("Received null read states version", e));
+                    : Hu.log("Received null read states version", e));
         }
         handleWriteCaches(e, t) {
-            let n = ML.Ay.getAllReadStates(!1);
+            let n = MD.Ay.getAllReadStates(!1);
             if (t) {
                 if (null == this.readStateVersion) return;
                 let t = "0",
@@ -50521,23 +50534,23 @@ let Hd = new ez.A("ReadStates"),
                     null != e._lastMessageId &&
                         (1 === cc.default.compare(e._lastMessageId, t) && (t = e._lastMessageId),
                         a.has(e.channelId) && 1 === cc.default.compare(e._lastMessageId, i) && (i = e._lastMessageId));
-                V7.A.nonGuildVersionsTransaction(e).putAll([
+                V9.A.nonGuildVersionsTransaction(e).putAll([
                     { id: "highest_last_message_id", versionString: t },
                     { id: "private_channels_version", versionString: i },
                     { id: "read_state_version", version: this.readStateVersion },
                 ]);
             }
-            let i = V7.A.readStatesTransaction(e);
+            let i = V9.A.readStatesTransaction(e);
             (i.delete(), n.forEach((e) => i.put(`${e.type}-${e.channelId}`, e)));
         }
     })(),
-    Hu = new ez.A("ReadStates"),
-    H_ = new (class {
+    HE = new ez.A("ReadStates"),
+    HA = new (class {
         async getAll(e) {
             let t = performance.now(),
-                n = await V7.A.userGuildSettings(e).getMany(),
+                n = await V9.A.userGuildSettings(e).getMany(),
                 i = performance.now();
-            return (Hu.log(`asynchronously loaded in ${i - t}ms (userGuildSettings: ${n.length})`), n);
+            return (HE.log(`asynchronously loaded in ${i - t}ms (userGuildSettings: ${n.length})`), n);
         }
         actions = {
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
@@ -50545,7 +50558,7 @@ let Hd = new ez.A("ReadStates"),
         };
         resetInMemoryState() {}
         handleConnectionOpen(e, t) {
-            (e.userGuildSettings.partial || V7.A.userGuildSettingsTransaction(t).delete(),
+            (e.userGuildSettings.partial || V9.A.userGuildSettingsTransaction(t).delete(),
                 this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t));
         }
         handleUserGuildSettingsUpdate(e, t) {
@@ -50553,17 +50566,17 @@ let Hd = new ez.A("ReadStates"),
             null != n && this.write(e.userGuildSettings, n, t);
         }
         write(e, t, n) {
-            let i = V7.A.userGuildSettingsTransaction(n);
+            let i = V9.A.userGuildSettingsTransaction(n);
             for (let t of e) {
-                let e = { ...(0, Mw.wn)(t.guild_id), ...t, channel_overrides: (0, Mw.b5)(t.channel_overrides) };
+                let e = { ...(0, Mx.wn)(t.guild_id), ...t, channel_overrides: (0, Mx.b5)(t.channel_overrides) };
                 i.put(t.guild_id ?? "dm-sentinel", e);
             }
-            V7.A.nonGuildVersionsTransaction(n).put({ id: "user_guild_settings_version", version: t });
+            V9.A.nonGuildVersionsTransaction(n).put({ id: "user_guild_settings_version", version: t });
         }
     })();
-var HE = n(45773);
-let HA = new ez.A("UserSettingsProto");
-class Hh {
+var Hh = n(45773);
+let Hf = new ez.A("UserSettingsProto");
+class HI {
     actions = {
         CONNECTION_OPEN: () => this.throttledOnChange(),
         USER_SETTINGS_PROTO_UPDATE: () => this.throttledOnChange(),
@@ -50572,84 +50585,84 @@ class Hh {
     };
     async getAll(e) {
         let t = performance.now(),
-            n = await V7.A.userSettings(e).getMany(),
+            n = await V9.A.userSettings(e).getMany(),
             i = performance.now();
-        HA.verbose(`loaded in ${i - t}ms (settings: ${n.length})`);
+        Hf.verbose(`loaded in ${i - t}ms (settings: ${n.length})`);
         let r = {};
         for (let e of n) r[e.id] = e.value;
         return r;
     }
     handleUserSettingsProtoChange = () => {
         let e = ei.default.getId(),
-            t = HE.A.database(e);
+            t = Hh.A.database(e);
         t?.transaction((e) => {
             let t = eL.A.computeState(),
-                n = V7.A.userSettingsTransaction(e);
+                n = V9.A.userSettingsTransaction(e);
             for (let e in t) n.put({ id: Number(e), value: t[e] });
             let i = eL.A.settings.versions?.dataVersion ?? -1;
-            V7.A.nonGuildVersionsTransaction(e).put({ id: "user_settings_version", version: i });
+            V9.A.nonGuildVersionsTransaction(e).put({ id: "user_settings_version", version: i });
         }, "handleUserSettingsProtoChange");
     };
     throttledOnChange = iM().debounce(this.handleUserSettingsProtoChange, 0);
     resetInMemoryState() {}
 }
-let Hf = new Hh();
-var HI = n(531743),
-    Hp = n(917878),
-    HT = n(464578),
-    Hm = n(736400);
-let Hg = new ez.A("CacheStore"),
-    HS = !1,
-    HN = "initializing",
-    HC = 0;
-async function HO(e, t, n) {
+let Hp = new HI();
+var HT = n(531743),
+    Hm = n(917878),
+    Hg = n(464578),
+    HS = n(736400);
+let HN = new ez.A("CacheStore"),
+    HC = !1,
+    HO = "initializing",
+    HR = 0;
+async function HL(e, t, n) {
     let i = performance.now();
     if (null == e || null == n)
         return (
-            Hg.verbose(`skipped loaded messages (channel: ${n}, database: ${e}).`),
+            HN.verbose(`skipped loaded messages (channel: ${n}, database: ${e}).`),
             [performance.now() - i, { guildId: null, channelId: null, users: [], members: [], messages: [] }]
         );
     {
-        let r = await Hl.Ay.startupLoad(e, t, n, j.EMb);
-        Hg.verbose(`loaded ${r.messages.length} messages (guild: ${t}, channel: ${n}).`);
+        let r = await Hd.Ay.startupLoad(e, t, n, j.EMb);
+        HN.verbose(`loaded ${r.messages.length} messages (guild: ${t}, channel: ${n}).`);
         let a = { guildId: t, channelId: n, users: r.users, members: r.members, messages: r.messages };
-        return (Hp.A.recordChannelFetchedLocal(n, Hp.a, null, null, j.EMb, r.messages), [performance.now() - i, a]);
+        return (Hm.A.recordChannelFetchedLocal(n, Hm.a, null, null, j.EMb, r.messages), [performance.now() - i, a]);
     }
 }
-async function HR(e, t, n) {
-    Hg.verbose("loading early cache");
+async function Hy(e, t, n) {
+    HN.verbose("loading early cache");
     let i = sF.A.getSocket();
     i.connect();
     let r = ir.A.getGuildId() ?? null,
         a = nS.Ay.getChannelId() ?? null,
         s = performance.now(),
-        l = HT.A.loadCachedMessages.measureAsyncWithoutNesting(() => HO(e, r, a)),
-        o = HT.A.fetchGuildCache.measureAsync(() => Hy(e, n)),
-        d = HT.A.fetchGuildCache.measureAsync(() => HD(e, n)),
+        l = Hg.A.loadCachedMessages.measureAsyncWithoutNesting(() => HL(e, r, a)),
+        o = Hg.A.fetchGuildCache.measureAsync(() => Hv(e, n)),
+        d = Hg.A.fetchGuildCache.measureAsync(() => Hb(e, n)),
         c =
             null != e
-                ? V3.A.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => HI.A.getAsync(e, null))
+                ? V6.A.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => HT.A.getAsync(e, null))
                 : Promise.resolve([]),
         u =
             null == e
                 ? Promise.resolve({})
-                : V3.A.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => Hf.getAll(e)),
-        _ = null == e ? Promise.resolve([]) : V3.A.timeAsync("\uD83D\uDCBE", "cache: read_states", () => Hc.getAll(e)),
+                : V6.A.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => Hp.getAll(e)),
+        _ = null == e ? Promise.resolve([]) : V6.A.timeAsync("\uD83D\uDCBE", "cache: read_states", () => H_.getAll(e)),
         E =
             null == e
                 ? Promise.resolve([])
-                : V3.A.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => H_.getAll(e)),
+                : V6.A.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => HA.getAll(e)),
         [[A, h], f, I, p, T, m, g] = await Promise.all([l, o, d, c, u, _, E]),
         S = performance.now() - s;
-    if ((Hg.verbose(`cache loaded in ${S}ms (channel_history ${A}ms)`), null == h))
-        return (Hg.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0]);
+    if ((HN.verbose(`cache loaded in ${S}ms (channel_history ${A}ms)`), null == h))
+        return (HN.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0]);
     let N = Object.fromEntries(h.members.map((e) => [e.userId, e])),
         C = null != I.guildId && null != I.channels,
         O = I.guildId;
     return (
         await new Promise((e, t) =>
             eE.Ay.Emitter.batched(() => {
-                (V3.A.time("\uD83D\uDCBE", "Dispatch Mini Cache", () =>
+                (V6.A.time("\uD83D\uDCBE", "Dispatch Mini Cache", () =>
                     k.h
                         .dispatch({
                             type: "CACHE_LOADED",
@@ -50665,12 +50678,12 @@ async function HR(e, t, n) {
                         })
                         .then(e, t),
                 ),
-                    V3.A.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
+                    V6.A.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
                         i.dispatcher.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])),
                     ));
             }),
         ),
-        Hg.verbose(`early_cache_summary: (
+        HN.verbose(`early_cache_summary: (
         ok: true
         meta:
           auth_user_id: ${t}
@@ -50695,76 +50708,76 @@ async function HR(e, t, n) {
             read_states: ${m.length}
             user_guild_settings: ${g.length}
       )`),
-        HT.A.setEarlyCacheInfo({ guilds: f.length }),
-        Hg.verbose("finished dispatching CACHE_LOADED"),
+        Hg.A.setEarlyCacheInfo({ guilds: f.length }),
+        HN.verbose("finished dispatching CACHE_LOADED"),
         [!0, C ? (O ?? null) : null, p.length]
     );
 }
-let HL = !1;
-async function Hy(e, t) {
+let HD = !1;
+async function Hv(e, t) {
     if (null == e) return [];
     switch (t.page) {
         case "private-channels":
         case "guild-channels":
-            HL = !0;
+            HD = !0;
             break;
         case "other":
-            "@me" === t.guildId && (HL = !0);
+            "@me" === t.guildId && (HD = !0);
     }
-    if (HL)
-        return (await (0, V5.kk)(() => V3.A.timeAsync("\uD83D\uDCBE", "cache: guilds", () => Ha.getAsync(e)))) ?? [];
-    let n = (await Ho.A.getCommittedVersions()).initial_guild_id ?? t.guildId;
+    if (HD)
+        return (await (0, V4.kk)(() => V6.A.timeAsync("\uD83D\uDCBE", "cache: guilds", () => Hl.getAsync(e)))) ?? [];
+    let n = (await Hc.A.getCommittedVersions()).initial_guild_id ?? t.guildId;
     if (null == n || "@me" === n) return [];
-    let i = await (0, V5.kk)(() => Ha.getOneAsync(e, n));
+    let i = await (0, V4.kk)(() => Hl.getOneAsync(e, n));
     return null != i ? [i] : [];
 }
-async function HD(e, t) {
+async function Hb(e, t) {
     if (null == e) return Promise.resolve({ channels: null, guildId: null });
-    let n = (await Ho.A.getCommittedVersions()).initial_guild_id;
+    let n = (await Hc.A.getCommittedVersions()).initial_guild_id;
     if ((null == n && "guild-channels" === t.page && (n = t.guildId), null == e || null == n))
         return (
-            Hg.verbose(`skipped loading initial guild (guild: ${n}, database: ${e})`),
+            HN.verbose(`skipped loading initial guild (guild: ${n}, database: ${e})`),
             Promise.resolve({ channels: null, guildId: null })
         );
     let i = n;
-    return { channels: await (0, V5.kk)(() => HI.A.getAsync(e, i)), guildId: n };
+    return { channels: await (0, V4.kk)(() => HT.A.getAsync(e, i)), guildId: n };
 }
-async function Hv(e, t, n, i) {
-    Hg.verbose("loading late lazy cache");
-    let [r, a, s] = await HT.A.fetchLazyCache.measureAsync(() =>
+async function HM(e, t, n, i) {
+    HN.verbose("loading late lazy cache");
+    let [r, a, s] = await Hg.A.fetchLazyCache.measureAsync(() =>
             Promise.all([
-                (0, V5.kk)(() =>
+                (0, V4.kk)(() =>
                     null != e
-                        ? V3.A.timeAsync("\uD83D\uDCBE", "cache: cache_version", () => Hs.A.okAsync(e))
+                        ? V6.A.timeAsync("\uD83D\uDCBE", "cache: cache_version", () => Ho.A.okAsync(e))
                         : Promise.resolve(!0),
                 ),
-                (0, V5.kk)(() =>
-                    null == e || HL
+                (0, V4.kk)(() =>
+                    null == e || HD
                         ? Promise.resolve([])
-                        : V3.A.timeAsync("\uD83D\uDCBE", "cache: lazy guilds", () => Ha.getAsync(e)),
+                        : V6.A.timeAsync("\uD83D\uDCBE", "cache: lazy guilds", () => Hl.getAsync(e)),
                 ),
-                (0, V5.kk)(() =>
+                (0, V4.kk)(() =>
                     null != e
-                        ? V3.A.timeAsync("\uD83D\uDCBE", "cache: basic_channels", () => He.getAsync(e))
+                        ? V6.A.timeAsync("\uD83D\uDCBE", "cache: basic_channels", () => Hn.getAsync(e))
                         : Promise.resolve({ all: [], stale: [], channels: [] }),
                 ),
             ]),
         ),
-        l = await HT.A.fetchStaleChannels.measureAsync(() =>
+        l = await Hg.A.fetchStaleChannels.measureAsync(() =>
             null != e && null != s && s.stale.length > 0
-                ? (0, V5.kk)(() => {
+                ? (0, V4.kk)(() => {
                       var t;
                       return (
                           (t = s.stale),
-                          Hg.verbose(`loading stale guild channels (count: ${t.length}, ids: ${t.join(", ")})`),
-                          Promise.all(t.map((t) => HI.A.getAsync(e, t).then((e) => [t, e])))
+                          HN.verbose(`loading stale guild channels (count: ${t.length}, ids: ${t.join(", ")})`),
+                          Promise.all(t.map((t) => HT.A.getAsync(e, t).then((e) => [t, e])))
                       );
                   })
                 : Promise.resolve([]),
         );
     (e3.iQ.getCachedEnabled()
-        ? Hg.verbose("loadLateLazyCache: not yielding to react")
-        : (Hg.verbose("loadLateLazyCache: yielding to react"),
+        ? HN.verbose("loadLateLazyCache: not yielding to react")
+        : (HN.verbose("loadLateLazyCache: yielding to react"),
           await (function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 4e3;
               return new Promise((t) => {
@@ -50776,9 +50789,9 @@ async function Hv(e, t, n, i) {
                   });
               });
           })((0, eB.isIOS)() ? 0 : void 0)),
-        HT.A.loadLazyCache.recordStart());
+        Hg.A.loadLazyCache.recordStart());
     let o = sF.A.getSocket();
-    Hb(() => {
+    HP(() => {
         let d = performance.now();
         if (!1 === r) {
             (k.h.dispatch({ type: "CLEAR_CACHES", reason: "database:not_ok" }),
@@ -50786,7 +50799,7 @@ async function Hv(e, t, n, i) {
             return;
         }
         if (null == a || null == s || null == l) {
-            (Hg.log(`couldn't load database item (
+            (HN.log(`couldn't load database item (
           database: ${null != e}
           basic_channels: ${null != s}
           guild_channels: ${null != l}
@@ -50797,7 +50810,7 @@ async function Hv(e, t, n, i) {
             return;
         }
         if (null == r && (a.length > 0 || s.all.length > 0)) {
-            (Hg.log("kv_cache was not ok (null version with values)"),
+            (HN.log("kv_cache was not ok (null version with values)"),
                 k.h.dispatch({ type: "CLEAR_CACHES", reason: "database:versionless" }),
                 k.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" }));
             return;
@@ -50811,13 +50824,13 @@ async function Hv(e, t, n, i) {
             basicGuildChannels: s.channels,
             initialGuildId: n,
         };
-        (HT.A.deserializeCache.measure(() => {
-            (null != c.channels && (0, Hm.Ay)(c.channels),
-                null != c.privateChannels && (0, Hm.Ay)(c.privateChannels),
-                null != c.guildChannels && (0, Hm.X3)(c.guildChannels));
+        (Hg.A.deserializeCache.measure(() => {
+            (null != c.channels && (0, HS.Ay)(c.channels),
+                null != c.privateChannels && (0, HS.Ay)(c.privateChannels),
+                null != c.guildChannels && (0, HS.X3)(c.guildChannels));
         }),
-            HT.A.dispatchLazyCache.measure(() => k.h.dispatch(c)),
-            Hg.verbose(`late lazy cache loaded (ok: true, took: ${performance.now() - d}ms)`),
+            Hg.A.dispatchLazyCache.measure(() => k.h.dispatch(c)),
+            HN.verbose(`late lazy cache loaded (ok: true, took: ${performance.now() - d}ms)`),
             o.addAnalytics({ usedCacheAtStartup: !0 }));
         let u = l.reduce((e, t) => {
                 let [n, i] = t;
@@ -50834,7 +50847,7 @@ async function Hv(e, t, n, i) {
             }, 0),
             h = E - A,
             f = 0 === s.stale.length ? "" : ` \xb7 ${s.stale.join(", ")}`;
-        (Hg.verbose(`lazy_cache_summary: (
+        (HN.verbose(`lazy_cache_summary: (
         ok: true
         meta:
           auth_user_id: ${t}
@@ -50852,7 +50865,7 @@ async function Hv(e, t, n, i) {
             full_channels (guilds_with_stale_basic_channels):
               total: ${u} (${l.length} guilds)
       )`),
-            HT.A.setLazyCacheInfo({
+            Hg.A.setLazyCacheInfo({
                 guilds: a.length,
                 privateChannels: i,
                 basicChannels: E,
@@ -50862,30 +50875,30 @@ async function Hv(e, t, n, i) {
             }));
     });
 }
-function Hb(e) {
+function HP(e) {
     let t = sF.A.getSocket(),
         n = !1;
     (eE.Ay.Emitter.batched(() => {
         try {
             if ((e(), !t.dispatcher.hasStuffToDispatchNow())) {
-                (Hg.verbose("Unpausing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue());
+                (HN.verbose("Unpausing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue());
                 return;
             }
             ((n = !0),
-                HT.A.loadLazyCache.recordEnd(),
-                Hg.verbose("Processing First Queued Dispatch"),
+                Hg.A.loadLazyCache.recordEnd(),
+                HN.verbose("Processing First Queued Dispatch"),
                 t.dispatcher.processFirstQueuedDispatch(new Set(["READY", "INITIAL_GUILD"])),
                 setTimeout(() => {
-                    (Hg.verbose("Unpausing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue());
+                    (HN.verbose("Unpausing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue());
                 }, 100));
         } catch (e) {
-            (Hg.warn("Lazy cache has encountered error", e),
+            (HN.warn("Lazy cache has encountered error", e),
                 k.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "LazyCache" } }));
         }
     }),
-        n || HT.A.loadLazyCache.recordEnd());
+        n || Hg.A.loadLazyCache.recordEnd());
 }
-class HM extends eE.Ay.Store {
+class HU extends eE.Ay.Store {
     static displayName = "CacheStore";
     initialize() {
         (this.waitFor(ei.default, sF.A, nS.Ay, ir.A), sF.A.getSocket().dispatcher.unpauseDispatchQueue());
@@ -50897,14 +50910,14 @@ class HM extends eE.Ay.Store {
         return "no-cache";
     }
     get lastWriteTime() {
-        return HC;
+        return HR;
     }
     canWriteCaches(e) {
-        return (0, VW.wR)()
-            ? HS
-                ? (Hg.log("Not writing cache because caches cleared"), !1)
-                : !!e || (Hg.log("Not writing cache because never connected"), !1)
-            : (Hg.log("Not writing cache because not authenticated"), !1);
+        return (0, VK.wR)()
+            ? HC
+                ? (HN.log("Not writing cache because caches cleared"), !1)
+                : !!e || (HN.log("Not writing cache because never connected"), !1)
+            : (HN.log("Not writing cache because not authenticated"), !1);
     }
     async loadCacheAsync(e, t) {
         let n,
@@ -50915,57 +50928,57 @@ class HM extends eE.Ay.Store {
                     for (var e = arguments.length, r = Array(e), a = 0; a < e; a++) r[a] = arguments[a];
                     return (i || ((i = !0), (n = t(...r))), n);
                 });
-        HT.A.setInitialPage(e.page);
+        Hg.A.setInitialPage(e.page);
         let a = e.guildId;
-        if ((HT.A.setInitialGuildId(null != a && "@me" !== a ? a : null), "initializing" !== HN)) {
+        if ((Hg.A.setInitialGuildId(null != a && "@me" !== a ? a : null), "initializing" !== HO)) {
             (r(), setTimeout(() => sF.A.getSocket()?.dispatcher?.unpauseDispatchQueue(), 0));
             return;
         }
         try {
             let t = ei.default.getId(),
-                n = HE.A.carefullyOpenDatabase(t),
-                [i, a, s] = await HT.A.loadMiniCache.measureAsync(() => HR(n, t, e));
+                n = Hh.A.carefullyOpenDatabase(t),
+                [i, a, s] = await Hg.A.loadMiniCache.measureAsync(() => Hy(n, t, e));
             i
-                ? (r(), await Hv(n, t, a, s))
-                : (r(), await (Hb(() => k.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve()));
+                ? (r(), await HM(n, t, a, s))
+                : (r(), await (HP(() => k.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve()));
         } catch (e) {
-            (Hg.error("clearing cache. exception encountered while loading cache.", e, e.stack),
+            (HN.error("clearing cache. exception encountered while loading cache.", e, e.stack),
                 r(),
                 k.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync" } }));
         }
     }
 }
-new HM(k.h, {});
-let HP = Object.freeze({ online: null, total: null }),
-    HU = {},
-    Hw = {},
-    HG = null;
-class Hx extends eE.Ay.PersistedStore {
+new HU(k.h, {});
+let Hw = Object.freeze({ online: null, total: null }),
+    HG = {},
+    Hx = {},
+    Hk = null;
+class HF extends eE.Ay.PersistedStore {
     static displayName = "ChannelMemberCountStore";
     static persistKey = "channelMemberCounts";
     initialize(e) {
-        (this.waitFor(sF.A, nm.A), (Hw = e ?? HU));
+        (this.waitFor(sF.A, nm.A), (Hx = e ?? HG));
     }
     getState() {
-        return Hw;
+        return Hx;
     }
     getMemberCount(e) {
-        return Hw[e] ?? HP;
+        return Hx[e] ?? Hw;
     }
     requestCount(e, t) {
-        ((HG = { guildId: e, channelId: t }), sF.A.getSocket().requestChannelMemberCount(e, t));
+        ((Hk = { guildId: e, channelId: t }), sF.A.getSocket().requestChannelMemberCount(e, t));
     }
 }
-(new Hx(k.h, {
+(new HF(k.h, {
     CONNECTION_OPEN: function () {
-        (null != HG && sF.A.getSocket().requestChannelMemberCount(HG.guildId, HG.channelId),
-            cc.default.keys(Hw).forEach((e) => {
-                null == nm.A.getChannel(e) && delete Hw[e];
+        (null != Hk && sF.A.getSocket().requestChannelMemberCount(Hk.guildId, Hk.channelId),
+            cc.default.keys(Hx).forEach((e) => {
+                null == nm.A.getChannel(e) && delete Hx[e];
             }));
     },
     CHANNEL_MEMBER_COUNT_UPDATE: function (e) {
         let { channelId: t, online: n, total: i } = e;
-        return ((null != n || null != i) && (Hw[t] = { online: n, total: i }), !0);
+        return ((null != n || null != i) && (Hx[t] = { online: n, total: i }), !0);
     },
 }),
     n(309698),
@@ -50978,9 +50991,8 @@ class Hx extends eE.Ay.PersistedStore {
     n(99753),
     n(697627),
     n(236285),
-    n(108822));
-var Hk = n(710195);
-(n(457699),
+    n(108822),
+    n(457699),
     n(900019),
     n(207777),
     n(246943),
@@ -50993,64 +51005,64 @@ var Hk = n(710195);
     n(823448),
     n(499118),
     n(351022));
-let HF = {},
-    HB = {},
+let HB = {},
     HV = {},
-    HH = {};
-function Hj(e) {
-    let t = HB[e];
+    HH = {},
+    Hj = {};
+function HW(e) {
+    let t = HV[e];
     if (null == t) return;
     let n = cc.default.fromTimestamp(Date.now() - 9e5),
         i = iM().findIndex(t, (e) => cc.default.compare(e.id, n) > 0);
-    if (-1 === i) HB[e] = [];
+    if (-1 === i) HV[e] = [];
     else {
         let n = Math.max(i, t.length - 26);
-        HB[e] = iM().slice(t, n);
+        HV[e] = iM().slice(t, n);
     }
-    HV[e] = Date.now();
+    HH[e] = Date.now();
 }
-function HW(e, t, n, i) {
-    HF[e].add(t);
-    let r = HV[t];
-    ((null == r || r + 3e5 > Date.now()) && Hj(t), null == HB[t] && (HB[t] = []), HB[t].push({ id: n, userId: i }));
+function HY(e, t, n, i) {
+    HB[e].add(t);
+    let r = HH[t];
+    ((null == r || r + 3e5 > Date.now()) && HW(t), null == HV[t] && (HV[t] = []), HV[t].push({ id: n, userId: i }));
 }
-function HY(e) {
+function HK(e) {
     let { channel: t } = e;
-    (delete HB[t.id], delete HV[t.id]);
+    (delete HV[t.id], delete HH[t.id]);
 }
-class HK extends eE.Ay.Store {
+class H$ extends eE.Ay.Store {
     initialize() {
         this.waitFor(nm.A, ir.A);
     }
     static displayName = "ActiveChannelsStore";
     getActiveChannelsFetchStatus(e) {
-        return HH[e];
+        return Hj[e];
     }
     getActiveChannelIds(e) {
-        return HF[e];
-    }
-    getChannelMessageData(e) {
         return HB[e];
     }
+    getChannelMessageData(e) {
+        return HV[e];
+    }
     shouldFetch(e) {
-        return null == HF[e] && !HH[e]?.loading;
+        return null == HB[e] && !Hj[e]?.loading;
     }
 }
-(new HK(k.h, {
+(new H$(k.h, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e;
         if (!(0, ob.mP)(t) || null == n) return !1;
-        let i = HF[n];
+        let i = HB[n];
         if (null == i) return !1;
         i.forEach((e) => {
-            (Hj(e), HB[e]?.length === 0 && delete HB[e]);
+            (HW(e), HV[e]?.length === 0 && delete HV[e]);
         });
         let r = iM()
             .chain(Array.from(i))
-            .filter((e) => e in HB)
-            .sortBy((e) => -(HB[e]?.length ?? 0))
+            .filter((e) => e in HV)
+            .sortBy((e) => -(HV[e]?.length ?? 0))
             .value();
-        HF[n] = new Set(r);
+        HB[n] = new Set(r);
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n, optimistic: i, isPushNotification: r } = e;
@@ -51058,33 +51070,33 @@ class HK extends eE.Ay.Store {
         let a = nm.A.getChannel(t);
         if (null == a) return !1;
         let s = a.guild_id;
-        if (null == s || null == HF[s]) return !1;
-        HW(s, t, n.id, n.author?.id);
+        if (null == s || null == HB[s]) return !1;
+        HY(s, t, n.id, n.author?.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete HF[t.id];
+        delete HB[t.id];
     },
-    CHANNEL_DELETE: HY,
-    THREAD_DELETE: HY,
+    CHANNEL_DELETE: HK,
+    THREAD_DELETE: HK,
     ACTIVE_CHANNELS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        HH[t] = { loading: !0, error: null, fetchedAt: Date.now() };
+        Hj[t] = { loading: !0, error: null, fetchedAt: Date.now() };
     },
     ACTIVE_CHANNELS_FETCH_SUCCESS: function (e) {
         let { guildId: t, channels: n } = e;
-        ((HH[t] = { loading: !1, error: null, fetchedAt: Date.now() }),
-            (HF[t] = new Set()),
+        ((Hj[t] = { loading: !1, error: null, fetchedAt: Date.now() }),
+            (HB[t] = new Set()),
             n.forEach((e) => {
                 let { channel_id: n, messages: i } = e;
                 i.forEach((e) => {
-                    HW(t, n, e.message_id, e.user_id);
+                    HY(t, n, e.message_id, e.user_id);
                 });
             }));
     },
     ACTIVE_CHANNELS_FETCH_FAILURE: function (e) {
         let { guildId: t, error: n } = e;
-        HH[t] = { loading: !1, error: n, fetchedAt: null };
+        Hj[t] = { loading: !1, error: n, fetchedAt: null };
     },
     CONNECTION_OPEN: function () {},
 }),
@@ -51093,55 +51105,55 @@ class HK extends eE.Ay.Store {
     n(591552),
     n(713125),
     n(871109));
-var H$ = n(936649);
-let Hz = {};
-function HX(e, t) {
-    let n = Hz[e];
-    return !(null == n || n.has(t)) && ((Hz[e] = new Set(n.add(t))), !0);
+var Hz = n(936649);
+let HX = {};
+function Hq(e, t) {
+    let n = HX[e];
+    return !(null == n || n.has(t)) && ((HX[e] = new Set(n.add(t))), !0);
 }
-class Hq extends eE.Ay.PersistedStore {
+class HZ extends eE.Ay.PersistedStore {
     static displayName = "GuildProgressStore";
     static persistKey = "GuildProgressStore";
     initialize(e) {
         (this.waitFor(ei.default, nm.A, e1.A),
-            (Hz = {}),
+            (HX = {}),
             null != e &&
                 cc.default.keys(e).forEach((t) => {
                     let n = e[t];
-                    null != n && "function" == typeof n[Symbol.iterator] && (Hz[t] = new Set(n));
+                    null != n && "function" == typeof n[Symbol.iterator] && (HX[t] = new Set(n));
                 }));
     }
     getProgress(e) {
-        return Hz[e];
+        return HX[e];
     }
     hasProgress(e) {
-        let t = Hz[e];
-        return null != t && !t.has(H$.gj.DISMISSED);
+        let t = HX[e];
+        return null != t && !t.has(Hz.gj.DISMISSED);
     }
     getState() {
-        return Hz;
+        return HX;
     }
 }
-(new Hq(k.h, {
+(new HZ(k.h, {
     CONNECTION_OPEN: function () {
         let e = [];
-        (cc.default.keys(Hz).forEach((t) => {
-            Hz[t].has(H$.gj.COMPLETED) && e.push(t);
+        (cc.default.keys(HX).forEach((t) => {
+            HX[t].has(Hz.gj.COMPLETED) && e.push(t);
         }),
-            e.forEach((e) => HX(e, H$.gj.DISMISSED)));
+            e.forEach((e) => Hq(e, Hz.gj.DISMISSED)));
     },
     GUILD_PROGRESS_INITIALIZE: function (e) {
         let { guildId: t } = e;
-        (null == Hz[t] && (Hz[t] = new Set()), Hz[t].has(H$.gj.COMPLETED) || Hz[t].delete(H$.gj.DISMISSED));
+        (null == HX[t] && (HX[t] = new Set()), HX[t].has(Hz.gj.COMPLETED) || HX[t].delete(Hz.gj.DISMISSED));
     },
     GUILD_PROGRESS_COMPLETED_SEEN: function (e) {
         let { guildId: t } = e;
-        if (null == Hz[t]) return !1;
-        Hz[t] = new Set(Hz[t].add(H$.gj.COMPLETED));
+        if (null == HX[t]) return !1;
+        HX[t] = new Set(HX[t].add(Hz.gj.COMPLETED));
     },
     GUILD_PROGRESS_DISMISS: function (e) {
         let { guildId: t } = e;
-        return HX(t, H$.gj.DISMISSED);
+        return Hq(t, Hz.gj.DISMISSED);
     },
     GUILD_CREATE: function (e) {
         let {
@@ -51150,12 +51162,12 @@ class Hq extends eE.Ay.PersistedStore {
             i = e1.A.getGuild(t);
         if (null == i) return !1;
         i.ownerId === ei.default.getId() &&
-            null != Hz[i.id] &&
-            (null != i.icon && Hz[i.id].add(H$.gj.AVATAR), n > 1 && Hz[i.id].add(H$.gj.INVITE));
+            null != HX[i.id] &&
+            (null != i.icon && HX[i.id].add(Hz.gj.AVATAR), n > 1 && HX[i.id].add(Hz.gj.INVITE));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        return null != t && null != t.guild_id && null != Hz[t.guild_id] && HX(t.guild_id, H$.gj.CHANNEL);
+        return null != t && null != t.guild_id && null != HX[t.guild_id] && Hq(t.guild_id, Hz.gj.CHANNEL);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
@@ -51163,25 +51175,25 @@ class Hq extends eE.Ay.PersistedStore {
         for (let e of t)
             null != e &&
                 null != e.guild_id &&
-                null != Hz[e.guild_id] &&
-                !1 !== HX(e.guild_id, H$.gj.CHANNEL) &&
+                null != HX[e.guild_id] &&
+                !1 !== Hq(e.guild_id, Hz.gj.CHANNEL) &&
                 (n = !0);
         return n;
     },
     GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guild: t } = e;
-        return null != t && null != t.id && null != Hz[t.id] && null != t.icon && HX(t.id, H$.gj.AVATAR);
+        return null != t && null != t.id && null != HX[t.id] && null != t.icon && Hq(t.id, Hz.gj.AVATAR);
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e,
             i = nm.A.getChannel(t);
         return (
-            n.author?.id === ei.default.getId() && null != i && null != Hz[i.guild_id] && HX(i.guild_id, H$.gj.MESSAGE)
+            n.author?.id === ei.default.getId() && null != i && null != HX[i.guild_id] && Hq(i.guild_id, Hz.gj.MESSAGE)
         );
     },
     GUILD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, memberCount: n } = e;
-        return null != Hz[t] && n > 1 && HX(t, H$.gj.INVITE);
+        return null != HX[t] && n > 1 && Hq(t, Hz.gj.INVITE);
     },
 }),
     n(636194),
@@ -51191,9 +51203,9 @@ class Hq extends eE.Ay.PersistedStore {
     n(34162),
     n(331887),
     n(409686));
-var HZ = n(635377),
-    HQ = n.n(HZ),
-    HJ =
+var HQ = n(635377),
+    HJ = n.n(HQ),
+    H0 =
         (((y = {}).LOADING = "loading"),
         (y.LOADED = "loaded"),
         (y.EMPTY = "empty"),
@@ -51201,53 +51213,53 @@ var HZ = n(635377),
         (y.ERROR = "error"),
         y);
 (i_.A.Millis.MINUTE, i_.A.Millis.MINUTE);
-let H0 = new (HQ())({ max: 10 });
-function H1(e) {
-    let t = H0.get(e);
+let H1 = new (HJ())({ max: 10 });
+function H2(e) {
+    let t = H1.get(e);
     if (null != t) return t;
-    let n = new (HQ())({ max: 5 });
-    return (H0.set(e, n), n);
+    let n = new (HJ())({ max: 5 });
+    return (H1.set(e, n), n);
 }
-function H2(e, t) {
-    return H0.peek(e)?.peek(t) ?? null;
+function H3(e, t) {
+    return H1.peek(e)?.peek(t) ?? null;
 }
-function H3() {
-    H0.reset();
+function H5() {
+    H1.reset();
 }
-class H5 extends eE.Ay.Store {
+class H6 extends eE.Ay.Store {
     static displayName = "SmartSearchResultsStore";
     initialize() {
         this.waitFor(ij.A, eF.default);
     }
     getAnswer(e, t) {
-        return H2(e, t)?.smartSearchResult ?? null;
+        return H3(e, t)?.smartSearchResult ?? null;
     }
     getStatus(e, t) {
         return this.getAnswer(e, t)?.status ?? null;
     }
     hasAnswer(e, t) {
-        return null != H2(e, t);
+        return null != H3(e, t);
     }
     getResultFeedback(e, t) {
-        return H2(e, t)?.hasPositiveFeedback ?? null;
+        return H3(e, t)?.hasPositiveFeedback ?? null;
     }
 }
-function H6(e) {
+function H4(e) {
     return [...e].sort().join("|");
 }
-(new H5(k.h, {
+(new H6(k.h, {
     SMART_SEARCH_FETCH_START: function (e) {
         let { smartSearchQuery: t } = e,
             { requestKey: n, guildId: i, queryText: r, channelIds: a } = t;
-        H1(i).set(n, {
-            smartSearchResult: { status: HJ.LOADING, queryText: r, answerText: "", citations: [], channelIds: a },
+        H2(i).set(n, {
+            smartSearchResult: { status: H0.LOADING, queryText: r, answerText: "", citations: [], channelIds: a },
             hasPositiveFeedback: null,
         });
     },
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, smartSearchStatus: n, answerText: i, citations: r } = e,
             { requestKey: a, guildId: s, queryText: l, channelIds: o } = t;
-        H1(s).set(a, {
+        H2(s).set(a, {
             smartSearchResult: { status: n, queryText: l, answerText: i, citations: r, channelIds: o },
             hasPositiveFeedback: null,
         });
@@ -51255,7 +51267,7 @@ function H6(e) {
     SMART_SEARCH_FETCH_FAILURE: function (e) {
         let { smartSearchQuery: t, status: n } = e,
             { requestKey: i, guildId: r, queryText: a, channelIds: s } = t;
-        H1(r).set(i, {
+        H2(r).set(i, {
             smartSearchResult: { status: n, queryText: a, answerText: "", citations: [], channelIds: s },
             hasPositiveFeedback: null,
         });
@@ -51263,19 +51275,19 @@ function H6(e) {
     SMART_SEARCH_SET_RESULT_FEEDBACK: function (e) {
         let { smartSearchQuery: t, hasPositiveFeedback: n } = e,
             { requestKey: i, guildId: r } = t,
-            a = H2(r, i);
+            a = H3(r, i);
         if (null == a || a.hasPositiveFeedback === n) return !1;
         a.hasPositiveFeedback = n;
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        if (!H0.has(t.id)) return !1;
-        H0.del(t.id);
+        if (!H1.has(t.id)) return !1;
+        H1.del(t.id);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
         if (null == t.guild_id) return !1;
-        let n = H0.peek(t.guild_id);
+        let n = H1.peek(t.guild_id);
         if (null == n) return !1;
         let i = [];
         if (
@@ -51291,58 +51303,58 @@ function H6(e) {
             n.del(e);
         });
     },
-    CONNECTION_OPEN: H3,
-    LOGOUT: H3,
+    CONNECTION_OPEN: H5,
+    LOGOUT: H5,
 }),
     n(988665),
     n(822382),
     n(768570),
     j.LWr.FILTER_IN,
     j.LWr.ANSWER_IN);
-let H4 = [],
-    H7 = new (HQ())({ max: 5 }),
-    H8 = new (HQ())({ max: 5 });
-function H9(e, t, n) {
+let H7 = [],
+    H8 = new (HJ())({ max: 5 }),
+    H9 = new (HJ())({ max: 5 });
+function je(e, t, n) {
     let i = e.get(t);
     if (null != i) return i;
-    let r = { guildId: n, currentIndex: 0, suggestedSearches: H4, isLoading: !1, requestId: null };
+    let r = { guildId: n, currentIndex: 0, suggestedSearches: H7, isLoading: !1, requestId: null };
     return (e.set(t, r), r);
-}
-function je(e) {
-    let { guildId: t, channelIds: n } = e;
-    return 0 === n.length ? (H7.peek(t) ?? null) : (H8.peek(H6(n)) ?? null);
 }
 function jt(e) {
     let { guildId: t, channelIds: n } = e;
-    return 0 === n.length ? H9(H7, t, t) : H9(H8, H6(n), t);
+    return 0 === n.length ? (H8.peek(t) ?? null) : (H9.peek(H4(n)) ?? null);
 }
-function jn(e, t) {
-    if (0 === e.suggestedSearches.length) return H4;
+function jn(e) {
+    let { guildId: t, channelIds: n } = e;
+    return 0 === n.length ? je(H8, t, t) : je(H9, H4(n), t);
+}
+function ji(e, t) {
+    if (0 === e.suggestedSearches.length) return H7;
     if (e.suggestedSearches.length < t) return e.suggestedSearches;
     let n = e.suggestedSearches.slice(e.currentIndex, e.currentIndex + t),
         i = (e.currentIndex + t) % e.suggestedSearches.length;
     return (i < t && n.push(...e.suggestedSearches.slice(0, i)), n);
 }
-function ji(e, t) {
+function jr(e, t) {
     e.currentIndex = (e.currentIndex + t) % e.suggestedSearches.length;
 }
-function jr() {
-    (H7.reset(), H8.reset());
+function ja() {
+    (H8.reset(), H9.reset());
 }
-class ja extends eE.Ay.Store {
+class js extends eE.Ay.Store {
     static displayName = "SuggestedSearchStore";
     getNextSuggestions(e, t) {
-        let n = je(e);
-        return null == n ? H4 : jn(n, t);
+        let n = jt(e);
+        return null == n ? H7 : ji(n, t);
     }
     hasSuggestions(e) {
         return this.getNextSuggestions(e, 1).length > 0;
     }
     isLoadingSuggestedSearches(e) {
-        return je(e)?.isLoading ?? !1;
+        return jt(e)?.isLoading ?? !1;
     }
     willExhaustSuggestedSearches(e, t) {
-        let n = je(e);
+        let n = jt(e);
         return (
             null != n &&
             0 !== n.suggestedSearches.length &&
@@ -51351,51 +51363,51 @@ class ja extends eE.Ay.Store {
         );
     }
     getStateForScope(e) {
-        return je(e);
+        return jt(e);
     }
 }
-(new ja(k.h, {
+(new js(k.h, {
     SUGGESTED_SEARCHES_FETCH_START: function (e) {
         let { scope: t } = e;
-        jt(t).isLoading = !0;
+        jn(t).isLoading = !0;
     },
     SUGGESTED_SEARCHES_FETCH_SUCCESS: function (e) {
         let { scope: t, requestId: n, suggestedSearches: i, windowSize: r } = e,
-            a = jt(t);
+            a = jn(t);
         if (((a.isLoading = !1), (a.requestId = n), null == r || 0 === a.suggestedSearches.length)) {
             ((a.currentIndex = 0), (a.suggestedSearches = i));
             return;
         }
-        let s = jn(a, r),
+        let s = ji(a, r),
             l = i.filter((e) => !s.some((t) => t.suggestionId === e.suggestionId));
-        0 === l.length ? ji(a, r) : ((a.suggestedSearches = [...s, ...l]), (a.currentIndex = 0));
+        0 === l.length ? jr(a, r) : ((a.suggestedSearches = [...s, ...l]), (a.currentIndex = 0));
     },
     SUGGESTED_SEARCHES_FETCH_FAILURE: function (e) {
         let { scope: t, windowSize: n } = e,
-            i = je(t);
+            i = jt(t);
         if (null == i) return !1;
-        ((i.isLoading = !1), null != n && i.suggestedSearches.length > 0 && ji(i, n));
+        ((i.isLoading = !1), null != n && i.suggestedSearches.length > 0 && jr(i, n));
     },
     SUGGESTED_SEARCH_ADVANCE: function (e) {
         let { scope: t, windowSize: n } = e,
-            i = je(t);
+            i = jt(t);
         if (null == i || 0 === i.suggestedSearches.length) return !1;
-        ji(i, n);
+        jr(i, n);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e,
-            n = H8.keys().filter((e) => H8.peek(e)?.guildId === t.id);
-        if (!H7.has(t.id) && 0 === n.length) return !1;
-        (H7.del(t.id), n.forEach((e) => H8.del(e)));
+            n = H9.keys().filter((e) => H9.peek(e)?.guildId === t.id);
+        if (!H8.has(t.id) && 0 === n.length) return !1;
+        (H8.del(t.id), n.forEach((e) => H9.del(e)));
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e,
-            n = H8.keys().filter((e) => e.split("|").includes(t.id));
+            n = H9.keys().filter((e) => e.split("|").includes(t.id));
         if (0 === n.length) return !1;
-        n.forEach((e) => H8.del(e));
+        n.forEach((e) => H9.del(e));
     },
-    CONNECTION_OPEN: jr,
-    LOGOUT: jr,
+    CONNECTION_OPEN: ja,
+    LOGOUT: ja,
 }),
     n(121780),
     n(752755),
@@ -51406,40 +51418,40 @@ class ja extends eE.Ay.Store {
     n(713132),
     n(274303),
     n(252431));
-let js = [],
-    jl = !1;
-function jo() {
-    return js.length >= 4 && js.some((e) => e < Date.now() - 3 * i_.A.Millis.DAY);
+let jl = [],
+    jo = !1;
+function jd() {
+    return jl.length >= 4 && jl.some((e) => e < Date.now() - 3 * i_.A.Millis.DAY);
 }
-class jd extends eE.Ay.PersistedStore {
+class jc extends eE.Ay.PersistedStore {
     static displayName = "HabitualDNDStore";
     static persistKey = "habitualDND";
     initialize(e) {
-        (this.waitFor(iW.A), null != e && Array.isArray(e.sessionStartsWithDND) && (js = e.sessionStartsWithDND));
+        (this.waitFor(iW.A), null != e && Array.isArray(e.sessionStartsWithDND) && (jl = e.sessionStartsWithDND));
     }
     showNagBar() {
-        return jl;
+        return jo;
     }
     getState() {
-        return { sessionStartsWithDND: js };
+        return { sessionStartsWithDND: jl };
     }
     getTemp() {
         return { x: eR.CY.getSetting() };
     }
 }
-(new jd(k.h, {
+(new jc(k.h, {
     POST_CONNECTION_OPEN: function () {
         iW.A.getStatus() === j.clD.DND && "0" === eR.CY.getSetting()
-            ? (js.push(Date.now()),
-              (js = js.filter((e) => e > Date.now() - 5 * i_.A.Millis.DAY)),
-              jo() &&
+            ? (jl.push(Date.now()),
+              (jl = jl.filter((e) => e > Date.now() - 5 * i_.A.Millis.DAY)),
+              jd() &&
                   setTimeout(() => {
                       k.h.dispatch({ type: "HABITUAL_DND_CLEAR" });
                   }, 15 * i_.A.Millis.SECOND))
-            : (js = []);
+            : (jl = []);
     },
     HABITUAL_DND_CLEAR: function () {
-        ((jl = !!jo()), (js = []));
+        ((jo = !!jd()), (jl = []));
     },
 }),
     n(535586),
@@ -51453,61 +51465,61 @@ class jd extends eE.Ay.PersistedStore {
     n(406595),
     n(695515),
     n(148864));
-var jc = n(431560);
-let ju = new Set(),
-    j_ = new jc.Z(),
-    jE = 0;
-function jA() {
-    return (j_.clear(), (jE = 0), !0);
+var ju = n(431560);
+let j_ = new Set(),
+    jE = new ju.Z(),
+    jA = 0;
+function jh() {
+    return (jE.clear(), (jA = 0), !0);
 }
-class jh extends eE.Ay.Store {
+class jf extends eE.Ay.Store {
     static displayName = "ContextualReferralDismissalsStore";
     initialize() {
         this.waitFor(eL.A);
     }
     getDismissedIds() {
-        return j_.getValue()?.dismissedIds ?? ju;
+        return jE.getValue()?.dismissedIds ?? j_;
     }
     isDismissedFor(e) {
-        return j_.getValue()?.dismissedIds.has(e) ?? !1;
+        return jE.getValue()?.dismissedIds.has(e) ?? !1;
     }
     getVersion() {
-        return j_.getValue()?.version ?? "0";
+        return jE.getValue()?.version ?? "0";
     }
     hasFetched() {
-        return null != j_.getValue() && !j_.isLoading();
+        return null != jE.getValue() && !jE.isLoading();
     }
     shouldFetch() {
-        return j_.shouldFetch();
+        return jE.shouldFetch();
     }
 }
-(new jh(k.h, {
-    CONNECTION_OPEN: jA,
-    LOGOUT: jA,
+(new jf(k.h, {
+    CONNECTION_OPEN: jh,
+    LOGOUT: jh,
     CONTEXTUAL_REFERRAL_UPSELL_DISMISSALS_FETCH_START: function () {
-        return !j_.isLoading() && (j_.setLoading(), !0);
+        return !jE.isLoading() && (jE.setLoading(), !0);
     },
     CONTEXTUAL_REFERRAL_UPSELL_DISMISSALS_FETCH_SUCCESS: function (e) {
-        return (j_.setValue({ dismissedIds: new Set(e.targetIds), version: e.version }), (jE = 0), !0);
+        return (jE.setValue({ dismissedIds: new Set(e.targetIds), version: e.version }), (jA = 0), !0);
     },
     CONTEXTUAL_REFERRAL_UPSELL_DISMISSALS_FETCH_FAILURE: function () {
-        return (j_.clear(), !0);
+        return (jE.clear(), !0);
     },
     CONTEXTUAL_REFERRAL_UPSELL_DISMISS: function (e) {
         let { targetId: t } = e,
-            n = j_.getValue();
+            n = jE.getValue();
         return (
             !(null == n || n.dismissedIds.has(t)) &&
-            (j_.setValue({ dismissedIds: new Set([...n.dismissedIds, t]), version: n.version }), (jE += 1), !0)
+            (jE.setValue({ dismissedIds: new Set([...n.dismissedIds, t]), version: n.version }), (jA += 1), !0)
         );
     },
     USER_SETTINGS_PROTO_UPDATE: function () {
-        let e = j_.getValue();
+        let e = jE.getValue();
         if (null == e) return !1;
         let t = eL.A.settings.userContent?.contextualReferralUpsellDismissalsVersion ?? "0";
         return (
             t !== e.version &&
-            (jE > 0 ? ((jE -= 1), j_.setValue({ dismissedIds: e.dismissedIds, version: t }), !1) : (j_.clear(), !0))
+            (jA > 0 ? ((jA -= 1), jE.setValue({ dismissedIds: e.dismissedIds, version: t }), !1) : (jE.clear(), !0))
         );
     },
 }),
@@ -51544,25 +51556,25 @@ class jh extends eE.Ay.Store {
     n(79858),
     n(997187),
     n(921955));
-var jf = n(674378);
-let jI = "ActivityTrackingStore",
-    jp = 30 * i_.A.Millis.MINUTE,
-    jT = 5 * i_.A.Millis.MINUTE,
-    jm = ex.w.get(jI) ?? {},
-    jg = {},
-    jS = !1;
-function jN(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && jC(e, !0);
-    let n = jg[e.applicationId];
-    (null != n && (n.stop(), delete jg[e.applicationId]), delete jm[e.applicationId], ex.w.set(jI, jm));
-}
+var jI = n(674378);
+let jp = "ActivityTrackingStore",
+    jT = 30 * i_.A.Millis.MINUTE,
+    jm = 5 * i_.A.Millis.MINUTE,
+    jg = ex.w.get(jp) ?? {},
+    jS = {},
+    jN = !1;
 function jC(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    t && jO(e, !0);
+    let n = jS[e.applicationId];
+    (null != n && (n.stop(), delete jS[e.applicationId]), delete jg[e.applicationId], ex.w.set(jp, jg));
+}
+function jO(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
-    i > jp + jT && (i = 0);
-    let r = (0, jf.kv)(e.applicationId, _H.A),
+    i > jT + jm && (i = 0);
+    let r = (0, jI.kv)(e.applicationId, _H.A),
         a = nS.Ay.getVoiceChannelId(),
         s = ei.default.getSessionId(),
         l = ng.A.getMediaSessionId();
@@ -51579,64 +51591,64 @@ function jC(e) {
         mediaSessionId: l,
     }),
         (e.updatedAt = n));
-    let o = jg[e.applicationId];
-    (null == o && (o = jg[e.applicationId] = new iu.IX()).start(jp, () => jC(e)),
-        t || ((jm[e.applicationId] = e), ex.w.set(jI, jm)));
+    let o = jS[e.applicationId];
+    (null == o && (o = jS[e.applicationId] = new iu.IX()).start(jT, () => jO(e)),
+        t || ((jg[e.applicationId] = e), ex.w.set(jp, jg)));
 }
-function jO() {
+function jR() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = iS.Ay.getVisibleRunningGames(),
         n = new Set();
     for (let e of t) {
-        let t = MP.A.findGame(e);
+        let t = Mw.A.findGame(e);
         null != t &&
             (n.add(t.id),
-            t.id in jm ||
-                jC({
+            t.id in jg ||
+                jO({
                     applicationId: t.id,
                     updatedAt: Date.now(),
                     distributor: e.distributor,
-                    exePath: (0, Mg.Ic)(e.exePath ?? ""),
+                    exePath: (0, MN.Ic)(e.exePath ?? ""),
                 }));
     }
-    for (let t of Object.keys(jm)) n.has(t) || jN(jm[t], e);
+    for (let t of Object.keys(jg)) n.has(t) || jC(jg[t], e);
 }
-function jR() {
-    for (let e of Object.keys(jm)) jN(jm[e]);
-    jS = !1;
+function jL() {
+    for (let e of Object.keys(jg)) jC(jg[e]);
+    jN = !1;
 }
-class jL extends eE.Ay.Store {
+class jy extends eE.Ay.Store {
     static displayName = "ActivityTrackingStore";
     initialize() {
-        (this.waitFor(ei.default, MP.A, _H.A, ng.A, iS.Ay, nS.Ay, eL.A), this.syncWith([eL.A], jO));
+        (this.waitFor(ei.default, Mw.A, _H.A, ng.A, iS.Ay, nS.Ay, eL.A), this.syncWith([eL.A], jR));
     }
     getActivities() {
-        return jm;
+        return jg;
     }
 }
-(new jL(k.h, {
-    RUNNING_GAMES_CHANGE: () => jO(),
+(new jy(k.h, {
+    RUNNING_GAMES_CHANGE: () => jR(),
     CONNECTION_OPEN: function () {
-        if (jS) return !1;
-        for (let e of Object.keys(jm)) jC(jm[e]);
-        (jO(!1), (jS = !0));
+        if (jN) return !1;
+        for (let e of Object.keys(jg)) jO(jg[e]);
+        (jR(!1), (jN = !0));
     },
     CONNECTION_CLOSED: function (e) {
         let { code: t } = e;
-        4004 === t && jR();
+        4004 === t && jL();
     },
-    LOGOUT: jR,
+    LOGOUT: jL,
     ACTIVITY_UPDATE_SUCCESS: function (e) {
         let { applicationId: t, token: n } = e,
-            i = jm[t];
+            i = jg[t];
         if (null == i) return !1;
-        ((i.token = n), ex.w.set(jI, jm));
+        ((i.token = n), ex.w.set(jp, jg));
     },
     ACTIVITY_UPDATE_FAIL: function (e) {
         let { applicationId: t } = e,
-            n = jm[t];
+            n = jg[t];
         if (null == n) return !1;
-        ((n.token = null), (n.updatedAt = null), ex.w.set(jI, jm));
+        ((n.token = null), (n.updatedAt = null), ex.w.set(jp, jg));
     },
 }),
     n(384200),
@@ -51645,20 +51657,20 @@ class jL extends eE.Ay.Store {
     n(560010),
     n(963307),
     n(966833));
-let jy = {};
-class jD extends eE.Ay.Store {
+let jD = {};
+class jv extends eE.Ay.Store {
     static displayName = "ChannelSKUStore";
     getSkuIdForChannel(e) {
-        return jy[e];
+        return jD[e];
     }
 }
-(new jD(k.h, {
+(new jv(k.h, {
     CONNECTION_OPEN: function () {
-        jy = {};
+        jD = {};
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { channelId: t, storeListing: n } = e;
-        null != t && (jy[t] = n.sku.id);
+        null != t && (jD[t] = n.sku.id);
     },
 }),
     n(945886),
@@ -51675,14 +51687,14 @@ class jD extends eE.Ay.Store {
     n(670492),
     n(956703),
     n(783592));
-let jv = "hideSuppressWarning",
-    jb = !1,
-    jM = !0,
-    jP = !1;
-class jU extends eE.Ay.Store {
+let jb = "hideSuppressWarning",
+    jM = !1,
+    jP = !0,
+    jU = !1;
+class jw extends eE.Ay.Store {
     static displayName = "PermissionSpeakStore";
     initialize() {
-        (this.waitFor(nm.A, e1.A), (jP = ex.w.get(jv) || jP));
+        (this.waitFor(nm.A, e1.A), (jU = ex.w.get(jb) || jU));
     }
     isAFKChannel() {
         let e = nm.A.getChannel(o);
@@ -51691,15 +51703,15 @@ class jU extends eE.Ay.Store {
         return null != t && e.id === t.afkChannelId;
     }
     shouldShowWarning() {
-        return !nm.A.getChannel(o)?.isGuildStageVoice() && !jM;
+        return !nm.A.getChannel(o)?.isGuildStageVoice() && !jP;
     }
 }
-let jw = new jU(k.h, {
+let jG = new jw(k.h, {
     CONNECTION_OPEN: function (e) {
-        ((l = e.sessionId), (jb = !1));
+        ((l = e.sessionId), (jM = !1));
     },
     CONNECTION_CLOSED: function () {
-        ((l = null), (o = null), (jM = !0));
+        ((l = null), (o = null), (jP = !0));
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
@@ -51707,16 +51719,16 @@ let jw = new jU(k.h, {
             (e, t) =>
                 l !== t.sessionId
                     ? e
-                    : (jb !== t.suppress && (jM = !(jb = t.suppress)),
-                      o !== t.channelId && ((o = t.channelId), (jM = !jb)),
-                      (jP || null == t.channelId) && (jM = !0),
+                    : (jM !== t.suppress && (jP = !(jM = t.suppress)),
+                      o !== t.channelId && ((o = t.channelId), (jP = !jM)),
+                      (jU || null == t.channelId) && (jP = !0),
                       !0),
             !1,
         );
     },
     PERMISSION_CLEAR_SUPPRESS_WARNING: function (e) {
         let { forever: t } = e;
-        ((jM = !0), t && ((jP = !0), ex.w.set(jv, jP)));
+        ((jP = !0), t && ((jU = !0), ex.w.set(jb, jU)));
     },
 });
 (n(131677),
@@ -51732,19 +51744,19 @@ let jw = new jU(k.h, {
     n(645959),
     n(321191),
     n(750128));
-let jG = !1;
-((0, iT.as)(), eE.Ay.initialize(), F5.loadServer());
-let jx = (0, tz.Fe)({
+let jx = !1;
+((0, iT.as)(), eE.Ay.initialize(), F4.loadServer());
+let jk = (0, tz.Fe)({
         createPromise: () => Promise.all([n.e("359244"), n.e("211415")]).then(n.bind(n, 844358)),
         webpackId: 844358,
         name: "UnauthenticatedDeepLinkActivity",
-        renderLoader: bn,
+        renderLoader: br,
     }),
-    jk = (0, tz.Fe)({
+    jF = (0, tz.Fe)({
         createPromise: () => n.e("215243").then(n.bind(n, 190662)),
         webpackId: 190662,
         name: "ApplicationDirectoryRoutes",
-        renderLoader: bn,
+        renderLoader: br,
     });
 eB.isPlatformEmbedded &&
     (eV.Ay.on("USER_SETTINGS_OPEN", (e, t) => {
@@ -51756,7 +51768,7 @@ eB.isPlatformEmbedded &&
             analyticsParams: { location: { page: j.liQ.DIRECT, object: j.ZSU.WEB_URL } },
         });
     }));
-let jF = ne((e) => {
+let jB = ne((e) => {
         let { location: t } = e;
         return (
             (0, sB.B)(() => {
@@ -51767,7 +51779,7 @@ let jF = ne((e) => {
                     (0, l7.openUserSettings)(n.target, { path: n.path, searchParams: n.params }));
             }),
             (0, M.jsx)(t6, {
-                deepLinkType: bt.XK.USER_SETTINGS,
+                deepLinkType: bi.XK.USER_SETTINGS,
                 path: t.pathname,
                 search: t.search,
                 paramsBuilder: function (e) {
@@ -51775,34 +51787,34 @@ let jF = ne((e) => {
                         [, , a, s] = t.split("/");
                     return { path: t, section: a, subsection: s, fingerprint: n, installationId: r, search: i };
                 },
-                children: (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute }),
+                children: (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute }),
             })
         );
     }),
-    jB = ne((e) => {
+    jV = ne((e) => {
         let { location: t } = e,
-            i = (0, Uj.parsePlaygroundUrl)(t.pathname, t.search);
+            i = (0, UY.parsePlaygroundUrl)(t.pathname, t.search);
         return (
             (0, sB.B)(() => {
                 let { openPlaygroundFromParsedUrl: e } = n(965042);
                 e({ match: i });
             }),
             (0, M.jsx)(t6, {
-                deepLinkType: bt.XK.PLAYGROUND,
+                deepLinkType: bi.XK.PLAYGROUND,
                 path: t.pathname,
                 paramsBuilder: function (e) {
                     let { path: t, fingerprint: n, installationId: i } = e,
-                        { collection: r, story: a } = (0, Uj.parsePlaygroundUrl)(t);
+                        { collection: r, story: a } = (0, UY.parsePlaygroundUrl)(t);
                     return { path: t, collection: r, story: a, fingerprint: n, installationId: i };
                 },
-                children: (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute }),
+                children: (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute }),
             })
         );
     }),
-    jV = eE.Ay.connectStores([sF.A, L2.A, ei.default], () => ({
+    jH = eE.Ay.connectStores([sF.A, L5.A, ei.default], () => ({
         isConnected: sF.A.isConnected(),
-        defaultRoute: L2.A.defaultRoute,
-        defaultRouteFallback: L2.A.fallbackRoute,
+        defaultRoute: L5.A.defaultRoute,
+        defaultRouteFallback: L5.A.fallbackRoute,
         token: ei.default.getToken(),
     }))(
         class extends eI.Component {
@@ -51810,7 +51822,7 @@ let jF = ne((e) => {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: i } = this.props;
                 if (null == n) return (0, M.jsx)(tV.rd, { to: j.BVt.DEFAULT_LOGGED_OUT });
                 if (e) {
-                    let e = jz(t);
+                    let e = jX(t);
                     return null == e ||
                         ((e.params.guildId === j.ME || null != e1.A.getGuild(e.params.guildId)) &&
                             null != nm.A.getChannel(e.params.channelId))
@@ -51821,23 +51833,23 @@ let jF = ne((e) => {
             }
         },
     ),
-    jH = ne((0, im.C)(M4, null, { passProps: !1 })),
-    jj = (0, im.C)(jk, null, { passProps: !1 }),
-    jW = [
-        j.BVt.GUILD_BOOSTING_MARKETING(L1.pv.guildId()),
-        ...Array.from(ob.qW).map((e) => j.BVt.CHANNEL(L1.pv.guildId(), e)),
+    jj = ne((0, im.C)(M8, null, { passProps: !1 })),
+    jW = (0, im.C)(jF, null, { passProps: !1 }),
+    jY = [
+        j.BVt.GUILD_BOOSTING_MARKETING(L3.pv.guildId()),
+        ...Array.from(ob.qW).map((e) => j.BVt.CHANNEL(L3.pv.guildId(), e)),
     ];
-function jY(e) {
+function jK(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return { guildId: t ?? j.ME, channelId: n, messageId: i, threadId: r };
 }
-let jK = [
+let j$ = [
     {
         path: [j.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
-            return (0, VW.wR)() || ei.default.getLoginStatus() === j.aUe.LOGGING_IN || !ei.default.allowLogoutRedirect()
-                ? jH(e)
-                : (0, M.jsx)(jx, { applicationId: e.match.params.applicationId });
+            return (0, VK.wR)() || ei.default.getLoginStatus() === j.aUe.LOGGING_IN || !ei.default.allowLogoutRedirect()
+                ? jj(e)
+                : (0, M.jsx)(jk, { applicationId: e.match.params.applicationId });
         },
     },
     {
@@ -51845,12 +51857,12 @@ let jK = [
         render: function (e) {
             let { match: t, location: n } = e,
                 { inviteCode: i } = t.params,
-                r = (0, Ur.fB)(i, n.search);
+                r = (0, Us.fB)(i, n.search);
             return (
                 (0, sB.B)(() => {
-                    P7({ inviteKey: r });
+                    P9({ inviteKey: r });
                 }),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
@@ -51864,15 +51876,15 @@ let jK = [
                     (0, tQ.GM)(n, !0, !0)
                         .then((e) => {
                             let { giftCode: t } = e;
-                            null != t && (0, wu.h)({ processedCode: t.code });
+                            null != t && (0, wE.h)({ processedCode: t.code });
                         })
                         .catch(tQ.HY);
                 }),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
-    { path: [j.BVt.APP], render: () => (0, M.jsx)(jV, {}) },
+    { path: [j.BVt.APP], render: () => (0, M.jsx)(jH, {}) },
     {
         path: [j.BVt.USERS(":id")],
         render: function (e) {
@@ -51882,7 +51894,7 @@ let jK = [
                 (0, sB.B)(() =>
                     (0, _X.openUserProfileModal)({ userId: n, sourceAnalyticsLocations: [nA.A.URI_SCHEME] }),
                 ),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
@@ -51928,8 +51940,8 @@ let jK = [
         path: [j.BVt.GUILD_CREATE],
         render: function () {
             return (
-                (0, sB.B)(() => Px.A.openCreateGuildModal({ location: "External link" })),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, sB.B)(() => PF.A.openCreateGuildModal({ location: "External link" })),
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
@@ -51943,7 +51955,7 @@ let jK = [
                 (0, sB.B)(() => {
                     var e;
                     return (
-                        (e = { section: (0, P8.A)(j.BEX, i), subsection: (0, P8.A)(j.nd0, r), feature: a }),
+                        (e = { section: (0, Ue.A)(j.BEX, i), subsection: (0, Ue.A)(j.nd0, r), feature: a }),
                         void (0, tX.openModalLazy)(
                             async () => {
                                 let { default: t } = await Promise.all([
@@ -51958,7 +51970,7 @@ let jK = [
                         )
                     );
                 }),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
@@ -51977,14 +51989,14 @@ let jK = [
                                 (0, lb.nf)(lb.HP.APPLICATION_TEST_MODE_DEBUG, { shouldAutoOpenGameProfile: r });
                         });
                 }),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
-    { path: [j.BVt.SETTINGS(":section", ":subsection?")], render: jF },
-    { path: [j.BVt.PLAYGROUND(":collection?", ":story?")], render: jB },
+    { path: [j.BVt.SETTINGS(":section", ":subsection?")], render: jB },
+    { path: [j.BVt.PLAYGROUND(":collection?", ":story?")], render: jV },
     {
-        path: [j.BVt.USER_GUILD_NOTIFICATION_SETTINGS(L1.pv.guildId())],
+        path: [j.BVt.USER_GUILD_NOTIFICATION_SETTINGS(L3.pv.guildId())],
         render: function (e) {
             let { match: t } = e,
                 { guildId: i } = t.params;
@@ -52015,41 +52027,41 @@ let jK = [
         path: [j.BVt.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
             return (
-                (0, sB.B)(() => (0, l7.openUserSettings)(l6.X.GIFT_PANEL)), (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, sB.B)(() => (0, l7.openUserSettings)(l6.X.GIFT_PANEL)), (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
     {
-        path: [j.BVt.WELCOME(L1.pv.guildId({ optional: !0 }), L1.pv.channelId({ optional: !0 }))],
+        path: [j.BVt.WELCOME(L3.pv.guildId({ optional: !0 }), L3.pv.channelId({ optional: !0 }))],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, channelId: i } = t.params;
-            (0, UL.C)(Uw.zY.MARKETING_UNCLAIMED);
+            (0, UD.C)(Ux.zY.MARKETING_UNCLAIMED);
             let r = j.BVt.CHANNEL(n, i);
             return (0, M.jsx)(tV.rd, { to: r });
         },
     },
     {
-        path: [j.BVt.GUILD_EVENT_DETAILS(L1.pv.guildId({ optional: !0 }), ":guildEventId")],
+        path: [j.BVt.GUILD_EVENT_DETAILS(L3.pv.guildId({ optional: !0 }), ":guildEventId")],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, guildEventId: i } = t.params;
             return (
                 (0, sB.B)(() => {
-                    (0, D9.uR)({ eventId: i });
+                    (0, vt.uR)({ eventId: i });
                 }),
                 (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(n) })
             );
         },
     },
     {
-        path: [j.BVt.GUILD_SETTINGS(L1.pv.guildId(), ":section?", ":subsection?")],
+        path: [j.BVt.GUILD_SETTINGS(L3.pv.guildId(), ":section?", ":subsection?")],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, section: i, subsection: r } = t.params;
             return (
                 (0, sB.B)(() => {
-                    o2.A.open(n, (0, P8.A)(j.BEX, i), void 0, (0, P8.A)(j.nd0, r));
+                    o2.A.open(n, (0, Ue.A)(j.BEX, i), void 0, (0, Ue.A)(j.nd0, r));
                 }),
                 (0, M.jsx)(tV.rd, { to: j.BVt.CHANNEL(n) })
             );
@@ -52058,8 +52070,8 @@ let jK = [
     },
     {
         path: [
-            j.BVt.CHANNEL_THREAD_VIEW(L1.pv.guildId(), L1.pv.channelId(), ":threadId", ":messageId?"),
-            j.BVt.CHANNEL(L1.pv.guildId(), L1.pv.channelId({ optional: !0 }), ":messageId?"),
+            j.BVt.CHANNEL_THREAD_VIEW(L3.pv.guildId(), L3.pv.channelId(), ":threadId", ":messageId?"),
+            j.BVt.CHANNEL(L3.pv.guildId(), L3.pv.channelId({ optional: !0 }), ":messageId?"),
             j.BVt.ACTIVITY,
             j.BVt.ACTIVITIES,
             j.BVt.ACTIVITIES_HAPPENING_NOW,
@@ -52075,19 +52087,19 @@ let jK = [
             j.BVt.QUEST_HOME,
             j.BVt.ICYMI,
             j.BVt.GLOBAL_DISCOVERY,
-            j.BVt.GUILD_MEMBER_VERIFICATION(L1.pv.guildId()),
-            j.BVt.GUILD_MEMBER_VERIFICATION_FOR_HUB(L1.pv.guildId(), ":inviteCode?"),
-            j.BVt.GUILD_BOOSTING_MARKETING(L1.pv.guildId()),
-            j.BVt.GUILD_FEATURE(":feature", L1.pv.guildId()),
+            j.BVt.GUILD_MEMBER_VERIFICATION(L3.pv.guildId()),
+            j.BVt.GUILD_MEMBER_VERIFICATION_FOR_HUB(L3.pv.guildId(), ":inviteCode?"),
+            j.BVt.GUILD_BOOSTING_MARKETING(L3.pv.guildId()),
+            j.BVt.GUILD_FEATURE(":feature", L3.pv.guildId()),
             j.BVt.FEATURE(":feature"),
             j.BVt.FAMILY_CENTER,
         ],
-        render: jH,
+        render: jj,
         isChatRoute: !0,
     },
-    { path: [j.BVt.APPLICATION_DIRECTORY], render: jj },
+    { path: [j.BVt.APPLICATION_DIRECTORY], render: jW },
     {
-        path: [j.BVt.GAME_SHOP(L1.pv.guildId(), ":shopSkuId?", ":shopSlug?")],
+        path: [j.BVt.GAME_SHOP(L3.pv.guildId(), ":shopSkuId?", ":shopSlug?")],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, shopSkuId: i, shopSlug: r } = t.params;
@@ -52330,115 +52342,115 @@ let jK = [
                         return (t) => (0, M.jsx)(e, { gameId: i, source: u3.GameProfileSources.Deeplink, ...t });
                     });
                 }),
-                (0, M.jsx)(tV.rd, { to: L2.A.defaultRoute })
+                (0, M.jsx)(tV.rd, { to: L5.A.defaultRoute })
             );
         },
     },
 ];
-function j$(e, t) {
-    if (!sF.A.isConnected() || null == e || (0, L1.tZ)(e) || null == t || (0, ob.jq)(t)) return null;
+function jz(e, t) {
+    if (!sF.A.isConnected() || null == e || (0, L3.tZ)(e) || null == t || (0, ob.jq)(t)) return null;
     let n = nm.A.getChannel(t);
-    return null == n || (0, UR.A)(n) ? null : j.BVt.CHANNEL(e, MC.Ay.getDefaultChannel(e)?.id);
+    return null == n || (0, Uy.A)(n) ? null : j.BVt.CHANNEL(e, MR.Ay.getDefaultChannel(e)?.id);
 }
-function jz(e) {
-    for (let { path: t, isChatRoute: n } of jK) {
+function jX(e) {
+    for (let { path: t, isChatRoute: n } of j$) {
         if (!n) continue;
         let i = (0, oK.B)(e, { path: t });
         if (null != i) return i;
     }
     return null;
 }
-function jX(e) {
+function jq(e) {
     let { channelId: t, guildId: n, pathname: i } = e;
     if (!sF.A.isConnected()) return;
     let { location: r } = (0, l5.JK)();
     r.pathname === i && (null == nm.A.getChannel(t) ? (0, l5.bG)(j.BVt.CHANNEL(n)) : (0, l5.bG)(i));
 }
-class jq extends eI.PureComponent {
+class jZ extends eI.PureComponent {
     historyUnlisten = () => {};
     rewriterUnlisten = () => {};
     componentDidMount() {
         (eV.Ay.setZoomFactor(ef.Ay.zoom),
-            F5.init(),
+            F4.init(),
             iv.initialize(),
-            wi.initialize(),
-            PX.initialize(),
-            PG.initialize(),
-            VP.initialize(),
-            PJ.initialize(),
-            w_.A.initialize(),
-            wp.initialize(),
-            PF.initialize(),
-            UC.initialize(),
+            wa.initialize(),
+            PZ.initialize(),
+            Pk.initialize(),
+            Vw.initialize(),
+            P1.initialize(),
+            wA.A.initialize(),
+            wm.initialize(),
+            PV.initialize(),
+            UR.initialize(),
             eS.A.init(),
-            P5.init(),
-            P0.init(),
-            UH.initialize(),
+            P4.init(),
+            P2.init(),
+            UW.initialize(),
             ic.initialize(),
-            PH.initialize(),
-            wO.initialize(),
+            PW.initialize(),
+            wL.initialize(),
             n3.Ay.initialize(),
             sb.initialize(),
-            Vy.initialize(),
-            wt.initialize(),
+            Vv.initialize(),
+            wi.initialize(),
             n8.initialize(),
-            P9.init(),
-            Pd.init(),
-            Vj.init(),
+            Ut.init(),
+            Pu.init(),
+            VY.init(),
             nn.A.initialize(),
-            BB.init(),
-            VB.A.init(),
-            Vs.init(),
-            BE.initialize(),
-            Bf.initialize(),
-            VT.init(),
+            BH.init(),
+            VH.A.init(),
+            Vo.init(),
+            Bh.initialize(),
+            Bp.initialize(),
+            Vg.init(),
             nt.A.initialize(),
-            Bu.initialize(),
-            UQ.A.initialize(),
-            UZ.initialize(),
-            U1.initialize(),
-            P_.initialize(),
-            Pf.initialize(),
-            PY.initialize(),
-            Ui.initialize(),
-            UO.A.initialize(),
-            wR.A.initialize(),
-            wc.initialize(),
-            Pa.initialize(),
+            BE.initialize(),
+            U0.A.initialize(),
+            UJ.initialize(),
+            U3.initialize(),
+            PA.initialize(),
+            Pp.initialize(),
+            P$.initialize(),
+            Ua.initialize(),
+            UL.A.initialize(),
+            wy.A.initialize(),
+            w_.initialize(),
+            Pl.initialize(),
             ip.initialize(),
-            (this.rewriterUnlisten = L0.A.addRouteRewriter(this.ensureChannelMatchesGuild)),
-            (this.historyUnlisten = L0.A.addRouteChangeListener(this.handleHistoryChange)));
+            (this.rewriterUnlisten = L2.A.addRouteRewriter(this.ensureChannelMatchesGuild)),
+            (this.historyUnlisten = L2.A.addRouteChangeListener(this.handleHistoryChange)));
     }
     componentWillUnmount() {
-        (F5.terminate(),
-            VP.terminate(),
-            w_.A.terminate(),
-            wp.terminate(),
-            wi.terminate(),
+        (F4.terminate(),
+            Vw.terminate(),
+            wA.A.terminate(),
+            wm.terminate(),
+            wa.terminate(),
             iv.terminate(),
             n3.Ay.terminate(),
             sb.terminate(),
-            Vy.terminate(),
+            Vv.terminate(),
             n8.terminate(),
-            wO.terminate(),
-            wt.terminate(),
+            wL.terminate(),
+            wi.terminate(),
             nn.A.terminate(),
-            UO.A.terminate(),
+            UL.A.terminate(),
             nt.A.terminate(),
-            wR.A.terminate(),
-            Bu.terminate(),
-            UQ.A.terminate(),
-            UZ.terminate(),
-            U1.terminate(),
-            P_.terminate(),
-            Pf.terminate(),
-            wc.terminate(),
-            Pj.A.terminate(),
-            Pa.terminate(),
+            wy.A.terminate(),
+            BE.terminate(),
+            U0.A.terminate(),
+            UJ.terminate(),
+            U3.terminate(),
+            PA.terminate(),
+            Pp.terminate(),
+            w_.terminate(),
+            PY.A.terminate(),
+            Pl.terminate(),
             ip.terminate(),
-            PY.terminate(),
-            Ui.terminate(),
-            PG.terminate(),
+            P$.terminate(),
+            Ua.terminate(),
+            Pk.terminate(),
             this.historyUnlisten(),
             this.rewriterUnlisten());
     }
@@ -52447,31 +52459,31 @@ class jq extends eI.PureComponent {
         (!(function (e) {
             if (sF.A.isConnected() || sF.A.isTryingToConnect()) return;
             let t = ei.default.getToken();
-            null == t || ((0, wL.Q)(e) && tq.A.startSession(t));
+            null == t || ((0, wD.Q)(e) && tq.A.startSession(t));
         })(t),
             (function (e, t) {
-                let n = jz(e);
+                let n = jX(e);
                 if (null == n) return;
-                let { guildId: i, channelId: r, messageId: a, threadId: s } = jY(n),
-                    l = (0, L1.nn)(i),
-                    o = (0, L1.ts)(r),
-                    d = (0, L1.ts)(s),
+                let { guildId: i, channelId: r, messageId: a, threadId: s } = jK(n),
+                    l = (0, L3.nn)(i),
+                    o = (0, L3.ts)(r),
+                    d = (0, L3.ts)(s),
                     c = ir.A.getGuildId(),
                     u = c !== i;
                 if ((l && u && tJ.A.selectGuild(i), l && o)) {
-                    let n = j$(i, r);
+                    let n = jz(i, r);
                     if (null != n) return (0, l5.bG)(n);
                     let l = nS.Ay.getChannelId(c),
                         o = l !== r || nS.Ay.getCurrentlySelectedChannelId() !== r,
                         _ = null != rB.Ay.getGuildSidebarState(i);
-                    if (!jG || u || o || null != a) {
-                        ((jG = !0), t0.default.selectChannel({ guildId: i, channelId: r, messageId: a }));
+                    if (!jx || u || o || null != a) {
+                        ((jx = !0), t0.default.selectChannel({ guildId: i, channelId: r, messageId: a }));
                         let { summaryId: e } = (0, t$.parse)(t);
-                        null != e && BI.Ay.setSelectedSummary(r, e);
+                        null != e && BT.Ay.setSelectedSummary(r, e);
                     }
                     if (_ && o && null != r) {
                         let e = rB.Ay.getCurrentSidebarChannelId(r);
-                        null != e && e !== r && F6.A.closeChannelSidebar(r);
+                        null != e && e !== r && F7.A.closeChannelSidebar(r);
                     }
                     if (null != s && d) {
                         let e = rB.Ay.getCurrentSidebarChannelId(l),
@@ -52479,9 +52491,9 @@ class jq extends eI.PureComponent {
                         if (null != r && null != s && t)
                             if (_) (0, l5.bG)(j.BVt.CHANNEL(i, s, a));
                             else {
-                                let e = { type: F4.kk.CHAT };
+                                let e = { type: F8.kk.CHAT };
                                 (null != a && (e.initialMessageId = a),
-                                    F6.A.openThreadAsSidebar({
+                                    F7.A.openThreadAsSidebar({
                                         guildId: i,
                                         baseChannelId: r,
                                         channelId: s,
@@ -52493,8 +52505,8 @@ class jq extends eI.PureComponent {
                                 null != e &&
                                 null != r &&
                                 rB.Ay.getCurrentSidebarChannelId(r) !== r &&
-                                F6.A.closeChannelSidebar(r);
-                    } else null == r || o || rB.Ay.getCurrentSidebarChannelId(r) === r || F6.A.closeChannelSidebar(r);
+                                F7.A.closeChannelSidebar(r);
+                    } else null == r || o || rB.Ay.getCurrentSidebarChannelId(r) === r || F7.A.closeChannelSidebar(r);
                     let E = lE.getIsOpen();
                     if (r === ob.VV.ROLE_SUBSCRIPTIONS) lc.closeSidebar();
                     else if (u && E) {
@@ -52502,29 +52514,29 @@ class jq extends eI.PureComponent {
                             n = e === j.BVt.GUILD_DISCOVERY;
                         t || n ? lc.closeSidebar() : lc.openSidebar();
                     } else ((o && E) || (!u && !o)) && lc.closeSidebar();
-                } else jW.some((t) => (0, oK.B)(e, t)?.isExact === !0) || (0, l5.bG)(L2.A.fallbackRoute);
+                } else jY.some((t) => (0, oK.B)(e, t)?.isExact === !0) || (0, l5.bG)(L5.A.fallbackRoute);
             })(t, n),
             (0, rL.MS)());
     }
     ensureChannelMatchesGuild(e) {
         if (!sF.A.isConnected()) return null;
         let { pathname: t } = e,
-            n = jz(t);
+            n = jX(t);
         if (null == n) return null;
-        let { guildId: i, channelId: r, threadId: a } = jY(n),
-            s = (0, L1.nn)(i) && i !== j.ME && !(0, aB.ai)(i);
-        if (null != r && (0, L1.ts)(r) && !(0, ob.jq)(r) && s) {
+        let { guildId: i, channelId: r, threadId: a } = jK(n),
+            s = (0, L3.nn)(i) && i !== j.ME && !(0, aB.ai)(i);
+        if (null != r && (0, L3.ts)(r) && !(0, ob.jq)(r) && s) {
             let n = nm.A.getChannel(r);
-            if (null == n) Bp.A.loadThread(r).then(() => jX({ channelId: r, guildId: i, pathname: t }));
+            if (null == n) Bm.A.loadThread(r).then(() => jq({ channelId: r, guildId: i, pathname: t }));
             else if (n.guild_id !== i && i !== j.gNP) return { path: j.BVt.CHANNEL(i), state: e.state };
-            let s = j$(i, r);
+            let s = jz(i, r);
             if (null != s) return { path: s, state: e.state };
             if (null != a) {
-                if (!((0, L1.ts)(a) && !(0, ob.jq)(r))) return null;
+                if (!((0, L3.ts)(a) && !(0, ob.jq)(r))) return null;
                 let n = nm.A.getChannel(a);
-                if (null == n) Bp.A.loadThread(a).then(() => jX({ channelId: a, guildId: i, pathname: t }));
+                if (null == n) Bm.A.loadThread(a).then(() => jq({ channelId: a, guildId: i, pathname: t }));
                 else if (n?.parent_id !== r)
-                    return (F6.A.closeChannelSidebar(r), { path: j.BVt.CHANNEL(i, r), state: e.state });
+                    return (F7.A.closeChannelSidebar(r), { path: j.BVt.CHANNEL(i, r), state: e.state });
             }
         }
         return null;
@@ -52535,35 +52547,35 @@ class jq extends eI.PureComponent {
                 (0, M.jsxs)(tV.dO, {
                     children: [
                         (0, M.jsx)(tV.rd, { exact: !0, from: "/channels", to: "/" }),
-                        jK.map((e) => {
+                        j$.map((e) => {
                             let { path: t, render: n } = e;
                             return (0, M.jsx)(tV.qh, { path: t, render: n }, t[0]);
                         }),
                         (0, M.jsx)(tV.rd, { to: "/" }),
                     ],
                 }),
-                (0, M.jsx)(PO, {}),
-                ((0, eB.isDesktop)() || (0, eB.isWeb)()) && (0, M.jsx)(VF, {}),
+                (0, M.jsx)(PL, {}),
+                ((0, eB.isDesktop)() || (0, eB.isWeb)()) && (0, M.jsx)(VV, {}),
             ],
         });
     }
 }
-var jZ = n(337836),
-    jQ = n(59652),
-    jJ = n(557361),
-    j0 = n(638495),
-    j1 = n(345874),
-    j2 = n(197808),
-    j3 = n(318009),
-    j5 = n(638421),
-    j6 = n(983555),
-    j4 = n(697138),
-    j7 = n(989395),
-    j8 = n(750506),
-    j9 = n(686757),
-    We = n(323737);
-function Wt() {
-    let { debugTrackedData: e, impressions: t } = (0, j9.SD)(
+var jQ = n(337836),
+    jJ = n(59652),
+    j0 = n(557361),
+    j1 = n(638495),
+    j2 = n(345874),
+    j3 = n(197808),
+    j5 = n(318009),
+    j6 = n(638421),
+    j4 = n(983555),
+    j7 = n(697138),
+    j8 = n(989395),
+    j9 = n(750506),
+    We = n(686757),
+    Wt = n(323737);
+function Wn() {
+    let { debugTrackedData: e, impressions: t } = (0, We.SD)(
             (e) => ({ debugTrackedData: e.debugTrackedData, impressions: e.impressions }),
             rd.x,
         ),
@@ -52573,37 +52585,37 @@ function Wt() {
         { name: s, ...l } = e ?? {},
         o = null != s;
     return i && n
-        ? (0, M.jsx)(j8.Ay, {
+        ? (0, M.jsx)(j9.Ay, {
               children: (0, M.jsxs)("div", {
-                  className: tE()(We.kL, { [We.YV]: r, [We.cn]: !o }),
+                  className: tE()(Wt.kL, { [Wt.YV]: r, [Wt.cn]: !o }),
                   children: [
                       (0, M.jsx)(tA.D, {
-                          className: We.VI,
+                          className: Wt.VI,
                           onClick: () => {
                               a(!r);
                           },
                           children: r ? (0, M.jsx)(tC, {}) : (0, M.jsx)(tR, {}),
                       }),
                       (0, M.jsxs)("div", {
-                          className: tE()(We.Qs, { [We.Cx]: r }),
+                          className: tE()(Wt.Qs, { [Wt.Cx]: r }),
                           children: [
                               (0, M.jsxs)(rx.E, {
-                                  className: tE()(We.Pf, { [We.cn]: !o }),
+                                  className: tE()(Wt.Pf, { [Wt.cn]: !o }),
                                   variant: "text-xxs/normal",
                                   children: [
                                       o
-                                          ? (0, M.jsx)(fj.y, { size: "md", color: "currentColor", className: We.sG })
-                                          : (0, M.jsx)(fX.a, { size: "md", color: "currentColor", className: We.jZ }),
+                                          ? (0, M.jsx)(fj.y, { size: "md", color: "currentColor", className: Wt.sG })
+                                          : (0, M.jsx)(fX.a, { size: "md", color: "currentColor", className: Wt.jZ }),
                                       s ?? "(untracked)",
                                   ],
                               }),
-                              (0, M.jsx)("div", { className: We.ss, children: JSON.stringify(l, void 0, 2) }),
+                              (0, M.jsx)("div", { className: Wt.ss, children: JSON.stringify(l, void 0, 2) }),
                               (0, M.jsx)(rx.E, {
-                                  className: tE()(We.Pf, { [We.cn]: !o }),
+                                  className: tE()(Wt.Pf, { [Wt.cn]: !o }),
                                   variant: "text-xxs/normal",
                                   children: "impressions stack",
                               }),
-                              (0, M.jsx)("div", { className: We.t$, children: JSON.stringify(t, void 0, 2) }),
+                              (0, M.jsx)("div", { className: Wt.t$, children: JSON.stringify(t, void 0, 2) }),
                           ],
                       }),
                   ],
@@ -52611,10 +52623,10 @@ function Wt() {
           })
         : null;
 }
-var Wn = n(999129),
-    Wi = n(866323),
-    Wr = n(235079);
-let Wa = (0, i8.qT)({
+var Wi = n(999129),
+    Wr = n(866323),
+    Wa = n(235079);
+let Ws = (0, i8.qT)({
         createPromise: () =>
             Promise.all([
                 n.e("401425"),
@@ -52637,9 +52649,9 @@ let Wa = (0, i8.qT)({
             ]).then(n.bind(n, 417680)),
         webpackId: 417680,
     }),
-    Ws = { transform: "scale(0.7)", opacity: 0 },
-    Wl = { transform: "scale(1)", opacity: 1 },
-    Wo = eI.memo(function () {
+    Wl = { transform: "scale(0.7)", opacity: 0 },
+    Wo = { transform: "scale(1)", opacity: 1 },
+    Wd = eI.memo(function () {
         let e = (0, eE.yK)([i1, nS.Ay, nL.Ay], () =>
                 i1.getIncomingCalls().filter((e) => {
                     let { channel: t } = e,
@@ -52655,24 +52667,24 @@ let Wa = (0, i8.qT)({
             t = (0, eE.bG)([i1], () => i1.hasIncomingCalls()),
             n = (0, eE.bG)([iH.A], () => iH.A.isSoundDisabled("call_ringing")),
             i = (0, eE.bG)([cg.A], () => cg.A.disableSounds),
-            r = (0, eE.bG)([PT.A], () => PT.A.getSoundpack()),
+            r = (0, eE.bG)([Pg.A], () => Pg.A.getSoundpack()),
             a = eI.useRef(!1),
-            s = (0, Wn.A)(
+            s = (0, Wi.A)(
                 () =>
-                    r === Wr.i.CLASSIC
-                        ? (0, b5.Qh)(
+                    r === Wa.i.CLASSIC
+                        ? (0, b4.Qh)(
                               500 !== iM().random(1, 1e3)
                                   ? "call_ringing"
                                   : iM().sample(["call_ringing_beat", "call_ringing_snow_halation"]),
                               "call_ringing",
                           )
-                        : (0, b5.aN)("call_ringing", r),
+                        : (0, b4.aN)("call_ringing", r),
                 [r],
             );
         return (
             eI.useEffect(() => {
                 (0, ra.t)(() => {
-                    Wa.preload();
+                    Ws.preload();
                 });
             }, []),
             eI.useEffect(
@@ -52688,20 +52700,20 @@ let Wa = (0, i8.qT)({
                 }
                 t && !a.current ? (s.loop(), (a.current = !0)) : !t && a.current && (s.stop(), (a.current = !1));
             }, [n, i, t, s]),
-            (0, Wi.p)(e, {
+            (0, Wr.p)(e, {
                 keys: (e) => e.channel?.id,
-                enter: { from: Ws, to: Wl },
-                leave: Ws,
+                enter: { from: Wl, to: Wo },
+                leave: Wl,
                 config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
-            })((e, t) => (0, M.jsx)(Wa, { ...t, animatedStyle: e }))
+            })((e, t) => (0, M.jsx)(Ws, { ...t, animatedStyle: e }))
         );
     });
-var Wd = n(288610),
-    Wc = n(681582),
-    Wu = n(172272),
-    W_ = n(538064),
-    WE = n(265059);
-let WA = (0, tz.Fe)({
+var Wc = n(288610),
+    Wu = n(681582),
+    W_ = n(172272),
+    WE = n(538064),
+    WA = n(265059);
+let Wh = (0, tz.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("860350"),
@@ -54383,13 +54395,13 @@ let WA = (0, tz.Fe)({
         ]).then(n.bind(n, 902592)),
     webpackId: 902592,
 });
-function Wh(e) {
+function Wf(e) {
     let { mobile: t } = e,
         n = (0, eE.bG)([aJ.A], () => aJ.A.isDeveloper),
-        i = (0, eE.bG)([WE.A], () => WE.A.displayTools),
+        i = (0, eE.bG)([WA.A], () => WA.A.displayTools),
         r = (0, eE.bG)([na.A], () => na.A.getWindowOpen(j.MLl.DEVTOOLS_POPOUT)),
         a = eI.useCallback((e) => {
-            ((0, eB.isMac)() ? e.metaKey : e.ctrlKey) && e.altKey && "KeyO" === e.code && (0, W_.pf)();
+            ((0, eB.isMac)() ? e.metaKey : e.ctrlKey) && e.altKey && "KeyO" === e.code && (0, WE.pf)();
         }, []);
     return (eI.useLayoutEffect(
         () => (
@@ -54401,25 +54413,25 @@ function Wh(e) {
         [a],
     ),
     (t ? n : i) && !r)
-        ? (0, M.jsx)(WA, { mobile: t })
+        ? (0, M.jsx)(Wh, { mobile: t })
         : null;
 }
-var Wf = n(670735),
-    WI = n(333007),
-    Wp = n(536246),
-    WT = n(597396),
-    Wm = n(824613),
-    Wg = n(256693),
-    WS = n(51250);
-let WN = (0, H.mj)({
+var WI = n(670735),
+    Wp = n(333007),
+    WT = n(536246),
+    Wm = n(597396),
+    Wg = n(824613),
+    WS = n(256693),
+    WN = n(51250);
+let WC = (0, H.mj)({
     name: "2026-10-desktop-conjure-native-preview-view",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var WC = n(489719),
-    WO = n(558960);
-function WR(e) {
+var WO = n(489719),
+    WR = n(558960);
+function WL(e) {
     let [t] = eI.useState(() => {
             let t = document.createElement("div");
             return (t.setAttribute("data-frame-id", e), t);
@@ -54428,15 +54440,15 @@ function WR(e) {
         r = eI.useCallback(
             (n) => {
                 null != n
-                    ? (WO.A.registerFrameEntry(e, { container: t, overlay: n }), i(!0))
-                    : (WO.A.removeFrameEntry(e), i(!1));
+                    ? (WR.A.registerFrameEntry(e, { container: t, overlay: n }), i(!0))
+                    : (WR.A.removeFrameEntry(e), i(!1));
             },
             [t, e],
         );
     return { container: t, isRegistered: n, registerPoolEntry: r };
 }
-var WL = n(51123);
-function Wy() {
+var Wy = n(51123);
+function WD() {
     let [e, t] = eI.useState(!1),
         n = (0, eE.yK)([aV.A], () => aV.A.getAllFrames()),
         i = (0, eE.bG)([iN.A, aV.A], () =>
@@ -54454,52 +54466,52 @@ function Wy() {
             return e?.renderInFramePool === !0 ? e : null;
         }),
         s = eI.useCallback((e) => {
-            (null != e && WO.A.setPool(e), t(null != e));
+            (null != e && WR.A.setPool(e), t(null != e));
         }, []);
     return (0, M.jsxs)("div", {
         ref: s,
-        className: WL.d,
+        className: Wy.d,
         children: [
             e
                 ? n.map((e) =>
-                      !(0, aY.x1)(e) || e.id === i || r.includes(e.id) || e.surface.type === w0.U.OVERLAY
+                      !(0, aY.x1)(e) || e.id === i || r.includes(e.id) || e.surface.type === w2.U.OVERLAY
                           ? null
-                          : (0, M.jsx)(WD, { frame: e }, e.id),
+                          : (0, M.jsx)(Wv, { frame: e }, e.id),
                   )
                 : null,
-            e && null != a ? (0, M.jsx)(Wv, { embeddedActivity: a }, (0, Wg.Ri)(a)) : null,
+            e && null != a ? (0, M.jsx)(Wb, { embeddedActivity: a }, (0, WS.Ri)(a)) : null,
         ],
     });
 }
-function WD(e) {
+function Wv(e) {
     let { frame: t } = e,
-        { container: n, isRegistered: i, registerPoolEntry: r } = WR(t.id),
+        { container: n, isRegistered: i, registerPoolEntry: r } = WL(t.id),
         a = (0, su.h)(t.applicationId),
         s = (0, eE.bG)([sO.A], () => sO.A.isFrameHidden()),
         l = (0, eE.bG)([aV.A], () => aV.A.getMainFrame()?.id === t.id, [t.id]) && t.data.layoutMode === aY.y0.PIP && !s,
-        o = WN.useConfig({ location: "FramePool" }).enabled,
+        o = WC.useConfig({ location: "FramePool" }).enabled,
         d = null;
     if (null != a) {
         let { url: e, proxyTicketRefreshing: n } = t.data,
-            i = (0, WC.A)(t, wJ.v.DESKTOP);
+            i = (0, WO.A)(t, w1.v.DESKTOP);
         d = n
-            ? (0, M.jsx)("div", { className: WL.p, children: (0, M.jsx)(i6.y, {}) })
-            : (0, M.jsx)(WT.o, {
-                  allowPopups: (0, Wp.b)(a),
+            ? (0, M.jsx)("div", { className: Wy.p, children: (0, M.jsx)(i6.y, {}) })
+            : (0, M.jsx)(Wm.o, {
+                  allowPopups: (0, WT.b)(a),
                   referrerPolicy: "origin",
-                  transparentWhileLoading: t.surface.type === w0.U.APP_CHANNEL,
+                  transparentWhileLoading: t.surface.type === w2.U.APP_CHANNEL,
                   url: e,
-                  contextSource: { type: Gg.f.FRAME, frameId: t.id },
+                  contextSource: { type: GN.f.FRAME, frameId: t.id },
                   onIframeMount: (e) => np.A.attachFrameIframe(t.id, e),
                   onIframeUnmount: (e) => np.A.detachFrameIframe(t.id, e),
                   onGuestReload: () => np.A.setFrameRunsInBackground(t.id, !1),
                   queryParams: i,
-                  className: WL.p,
+                  className: Wy.p,
                   shouldRefocus: !l,
-                  nativeView: o && (0, b2.Q5)(t.surface),
+                  nativeView: o && (0, b5.Q5)(t.surface),
               });
     }
-    return (0, WI.createPortal)(
+    return (0, Wp.createPortal)(
         (0, M.jsxs)("div", {
             style: {
                 position: "relative",
@@ -54517,10 +54529,10 @@ function WD(e) {
         n,
     );
 }
-function Wv(e) {
+function Wb(e) {
     let { embeddedActivity: t } = e,
         { applicationId: n, url: i } = t,
-        { container: r, isRegistered: a, registerPoolEntry: s } = WR((0, Wg.Ri)(t)),
+        { container: r, isRegistered: a, registerPoolEntry: s } = WL((0, WS.Ri)(t)),
         l = (0, su.h)(n),
         o = (0, nj.H)(t.location),
         d = (0, eE.bG)([nm.A], () => nm.A.getChannel(o), [o]),
@@ -54529,19 +54541,19 @@ function Wv(e) {
     return (
         null != l &&
             (u = c
-                ? (0, M.jsx)("div", { className: WL.p, children: (0, M.jsx)(i6.y, {}) })
-                : (0, M.jsx)(WT.o, {
-                      allowPopups: (0, Wp.b)(l),
+                ? (0, M.jsx)("div", { className: Wy.p, children: (0, M.jsx)(i6.y, {}) })
+                : (0, M.jsx)(Wm.o, {
+                      allowPopups: (0, WT.b)(l),
                       referrerPolicy: "origin",
                       url: i,
-                      contextSource: { type: Gg.f.ACTIVITY, applicationId: n },
-                      queryParams: (0, WS.A)(t, d),
-                      className: WL.p,
+                      contextSource: { type: GN.f.ACTIVITY, applicationId: n },
+                      queryParams: (0, WN.A)(t, d),
+                      className: Wy.p,
                       shouldRefocus: !1,
-                      onIframeMount: (e) => (0, Wm.hN)(n, e),
-                      onIframeUnmount: (e) => (0, Wm.WO)(n, e),
+                      onIframeMount: (e) => (0, Wg.hN)(n, e),
+                      onIframeUnmount: (e) => (0, Wg.WO)(n, e),
                   })),
-        (0, WI.createPortal)(
+        (0, Wp.createPortal)(
             (0, M.jsxs)("div", {
                 style: { position: "relative", width: "100%", height: "100%", pointerEvents: "auto" },
                 children: [
@@ -54553,35 +54565,35 @@ function Wv(e) {
         )
     );
 }
-var Wb = n(981133),
-    WM = n(183636),
-    WP = n(469177),
-    WU = n(935154),
-    Ww = n(268547);
-function WG() {
+var WM = n(981133),
+    WP = n(183636),
+    WU = n(469177),
+    Ww = n(935154),
+    WG = n(268547);
+function Wx() {
     let e = (0, eE.bG)([eq.Ay], () => eq.Ay.get("idle_status_indicator")),
         t = (0, eE.bG)([eF.default], () => eF.default.getCurrentUser()?.isStaff() ?? !1),
-        [n, i] = (0, eE.yK)([VD.A], () => [VD.A.isIdle(), VD.A.isAFK()]),
+        [n, i] = (0, eE.yK)([Vb.A], () => [Vb.A.isIdle(), Vb.A.isAFK()]),
         r = [];
     return (
         n || i || r.push("ACTIVE"),
         n && r.push("IDLE"),
         i && r.push("AFK"),
         t && e
-            ? (0, M.jsx)(j8.Ay, {
+            ? (0, M.jsx)(j9.Ay, {
                   children: (0, M.jsxs)("div", {
-                      className: Ww.kL,
+                      className: WG.kL,
                       children: [
                           (0, M.jsxs)("div", {
-                              className: Ww.h5,
+                              className: WG.h5,
                               children: [
-                                  (0, M.jsx)(WU.nW, {
+                                  (0, M.jsx)(Ww.nW, {
                                       status: r.includes("ACTIVE") ? cD.cl.ONLINE : cD.cl.IDLE,
-                                      className: Ww.UX,
+                                      className: WG.UX,
                                   }),
                                   (0, M.jsx)(rx.E, { variant: "text-md/normal", children: "IDLE STATUS:" }),
                                   (0, M.jsx)("div", {
-                                      className: Ww.qS,
+                                      className: WG.qS,
                                       children: (0, M.jsx)(rx.E, { variant: "text-md/bold", children: r.join(" + ") }),
                                   }),
                               ],
@@ -54592,7 +54604,7 @@ function WG() {
                                   children: [
                                       "Idle since:",
                                       " ",
-                                      new Date(VD.A.getIdleSince() ?? 0).toLocaleDateString(void 0, {
+                                      new Date(Vb.A.getIdleSince() ?? 0).toLocaleDateString(void 0, {
                                           year: "numeric",
                                           day: "numeric",
                                           month: "numeric",
@@ -54608,9 +54620,9 @@ function WG() {
             : null
     );
 }
-var Wx = n(639735),
-    Wk = n(741906);
-let WF = function () {
+var Wk = n(639735),
+    WF = n(741906);
+let WB = function () {
     let e = (0, eE.bG)([ek.Ay], () => ek.Ay.isInteractionRequired(), []),
         t = eI.useRef(null);
     function n() {
@@ -54645,10 +54657,10 @@ let WF = function () {
         null
     );
 };
-var WB = n(386406);
-let WV = !0,
-    WH = !0;
-function Wj() {
+var WV = n(386406);
+let WH = !0,
+    Wj = !0;
+function WW() {
     let e,
         t = ng.A.getChannelId();
     if (null == t) e = !0;
@@ -54665,45 +54677,45 @@ function Wj() {
             !!i.suppress ||
             null != i.requestToSpeakTimestamp;
     }
-    return WV !== e && ((WH = e), (WV = e), k.h.dispatch({ type: "SET_VAD_PERMISSION", hasPermission: WV }), !0);
+    return WH !== e && ((Wj = e), (WH = e), k.h.dispatch({ type: "SET_VAD_PERMISSION", hasPermission: WH }), !0);
 }
-class WW extends eE.Ay.Store {
+class WY extends eE.Ay.Store {
     static displayName = "PermissionVADStore";
     initialize() {
         this.waitFor(ei.default, nm.A, ek.Ay, nw.A, ng.A, nG.A);
     }
     shouldShowWarning() {
-        return !WH;
+        return !Wj;
     }
     canUseVoiceActivity() {
-        return WV;
+        return WH;
     }
 }
-let WY = new WW(k.h, {
-    RTC_CONNECTION_STATE: Wj,
-    MEDIA_ENGINE_SET_AUDIO_ENABLED: Wj,
-    AUDIO_SET_MODE: Wj,
-    CHANNEL_UPDATES: Wj,
-    THREAD_UPDATE: Wj,
-    GUILD_ROLE_UPDATE: Wj,
-    GUILD_MEMBER_UPDATE: Wj,
-    IMPERSONATE_UPDATE: Wj,
-    IMPERSONATE_STOP: Wj,
+let WK = new WY(k.h, {
+    RTC_CONNECTION_STATE: WW,
+    MEDIA_ENGINE_SET_AUDIO_ENABLED: WW,
+    AUDIO_SET_MODE: WW,
+    CHANNEL_UPDATES: WW,
+    THREAD_UPDATE: WW,
+    GUILD_ROLE_UPDATE: WW,
+    GUILD_MEMBER_UPDATE: WW,
+    IMPERSONATE_UPDATE: WW,
+    IMPERSONATE_STOP: WW,
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.some((e) => {
             let { userId: t } = e;
-            return t === ei.default.getId() && Wj();
+            return t === ei.default.getId() && WW();
         });
     },
     AUDIO_TOGGLE_SELF_MUTE: function () {
-        WH = WV;
+        Wj = WH;
     },
     PERMISSION_CLEAR_VAD_WARNING: function () {
-        WH = !0;
+        Wj = !0;
     },
 });
-function WK(e) {
+function W$(e) {
     return (0, M.jsx)(ni.a, {
         size: "md",
         title: tL.intl.string(tL.t.NYklhr),
@@ -54712,14 +54724,14 @@ function WK(e) {
             {
                 text: tL.intl.string(tL.t.UYW0dz),
                 onClick: () => {
-                    (e.onClose(), WB.A.clearVADWarning());
+                    (e.onClose(), WV.A.clearVADWarning());
                 },
                 variant: "secondary",
             },
             {
                 text: tL.intl.string(tL.t.E3Y7NH),
                 onClick: () => {
-                    (ig.default.setMode(j.TBI.PUSH_TO_TALK), e.onClose(), WB.A.clearVADWarning());
+                    (ig.default.setMode(j.TBI.PUSH_TO_TALK), e.onClose(), WV.A.clearVADWarning());
                 },
                 variant: "primary",
             },
@@ -54727,8 +54739,8 @@ function WK(e) {
         ...e,
     });
 }
-function W$() {
-    let e = (0, eE.bG)([WY], () => WY.shouldShowWarning(), []),
+function Wz() {
+    let e = (0, eE.bG)([WK], () => WK.shouldShowWarning(), []),
         t = eI.useRef(null);
     function n() {
         null !== t.current && ((0, tX.closeModal)(t.current), (t.current = null));
@@ -54736,7 +54748,7 @@ function W$() {
     return (
         eI.useEffect(
             () => (
-                e ? (t.current = (0, tX.openModal)((e) => (0, M.jsx)(WK, { ...e }))) : n(),
+                e ? (t.current = (0, tX.openModal)((e) => (0, M.jsx)(W$, { ...e }))) : n(),
                 () => {
                     n();
                 }
@@ -54746,12 +54758,12 @@ function W$() {
         null
     );
 }
-function Wz(e) {
+function WX(e) {
     let { currentGame: t, ...n } = e,
         [i, r] = eI.useState(!1);
     return (
         (0, _U.l0)(() => {
-            i && WB.A.clearPTTAdminWarning();
+            i && WV.A.clearPTTAdminWarning();
         }),
         (0, M.jsx)(ni.a, {
             size: "md",
@@ -54775,7 +54787,7 @@ function Wz(e) {
         })
     );
 }
-function WX() {
+function Wq() {
     let [e, t] = (0, eE.yK)([iS.Ay], () => [iS.Ay.canShowAdminWarning, iS.Ay.getVisibleGame()], []),
         n = (0, eE.bG)([ng.A], () => ng.A.isConnected(), []),
         i = (0, eE.bG)([ek.Ay], () => ek.Ay.getMode() === j.TBI.PUSH_TO_TALK, []),
@@ -54785,7 +54797,7 @@ function WX() {
         eI.useEffect(() => {
             if (!(0, dR.yA)(iS.Ay))
                 return (
-                    r ? (a.current = (0, tX.openModal)((e) => (0, M.jsx)(Wz, { currentGame: t, ...e }))) : e(),
+                    r ? (a.current = (0, tX.openModal)((e) => (0, M.jsx)(WX, { currentGame: t, ...e }))) : e(),
                     () => {
                         e();
                     }
@@ -54797,7 +54809,7 @@ function WX() {
         null
     );
 }
-function Wq(e) {
+function WZ(e) {
     let t,
         n,
         { afk: i, ...r } = e,
@@ -54814,7 +54826,7 @@ function Wq(e) {
                 {
                     text: tL.intl.string(tL.t.BddRzS),
                     onClick: () => {
-                        (r.onClose(), WB.A.clearSuppressWarning(a));
+                        (r.onClose(), WV.A.clearSuppressWarning(a));
                     },
                     variant: "primary",
                 },
@@ -54829,14 +54841,14 @@ function Wq(e) {
         })
     );
 }
-let WZ = function () {
+let WQ = function () {
         let e = eI.useRef(null);
         function t() {
             null !== e.current && ((0, tX.closeModal)(e.current), (e.current = null));
         }
-        let [n, i] = (0, eE.yK)([jw], () => [jw.shouldShowWarning(), jw.isAFKChannel()], []),
+        let [n, i] = (0, eE.yK)([jG], () => [jG.shouldShowWarning(), jG.isAFKChannel()], []),
             r = eI.useCallback(() => {
-                e.current = (0, tX.openModal)((e) => (0, M.jsx)(Wq, { afk: i, ...e }));
+                e.current = (0, tX.openModal)((e) => (0, M.jsx)(WZ, { afk: i, ...e }));
             }, [i]);
         return (
             eI.useEffect(
@@ -54851,27 +54863,27 @@ let WZ = function () {
             null
         );
     },
-    WQ = function () {
+    WJ = function () {
         return (0, M.jsxs)(M.Fragment, {
-            children: [(0, M.jsx)(WX, {}), (0, M.jsx)(WF, {}), (0, M.jsx)(WZ, {}), (0, M.jsx)(W$, {})],
+            children: [(0, M.jsx)(Wq, {}), (0, M.jsx)(WB, {}), (0, M.jsx)(WQ, {}), (0, M.jsx)(Wz, {})],
         });
     };
-var WJ = n(663413),
-    W0 = n(82495),
-    W1 = n(725807),
-    W2 = n(450232);
-function W3() {
+var W0 = n(663413),
+    W1 = n(82495),
+    W2 = n(725807),
+    W3 = n(450232);
+function W5() {
     k.h.dispatch({ type: "APP_ICON_EDITOR_RESET" });
 }
-var W5 = n(526162),
-    W6 = n(806932),
-    W4 = n(174197),
-    W7 = n(111173);
-function W8() {
+var W6 = n(526162),
+    W4 = n(806932),
+    W7 = n(174197),
+    W8 = n(111173);
+function W9() {
     let e = (0, eE.bG)([eF.default], () => lV.Ay.isPremium(eF.default.getCurrentUser())),
         t = (0, lH.V)(),
         n = t?.subscriptionTrial?.skuId === lY.pe.TIER_2;
-    return (0, M.jsx)(W1.A, {
+    return (0, M.jsx)(W2.A, {
         size: sn.$n.Sizes.MEDIUM,
         textOptions: {
             textOverride: e
@@ -54886,38 +54898,38 @@ function W8() {
         subscriptionTier: lY.pe.TIER_2,
     });
 }
-function W9(e) {
+function Ye(e) {
     let { markAsDismissed: t } = e;
     return (0, M.jsxs)("div", {
-        className: W7.nV,
+        className: W8.nV,
         children: [
             (0, M.jsx)(tA.D, {
-                className: W7.VV,
-                onClick: () => void (t?.(ru.i.DISMISS), (0, lb.Jp)(), W3()),
-                children: (0, M.jsx)(fX.a, { size: "md", color: "currentColor", className: W7.P0 }),
+                className: W8.VV,
+                onClick: () => void (t?.(ru.i.DISMISS), (0, lb.Jp)(), W5()),
+                children: (0, M.jsx)(fX.a, { size: "md", color: "currentColor", className: W8.P0 }),
             }),
             (0, M.jsxs)("div", {
-                className: W7.DD,
+                className: W8.DD,
                 children: [
                     (0, M.jsx)(sY.D, { variant: "heading-lg/extrabold", children: tL.intl.string(tL.t["hb/wE0"]) }),
-                    (0, M.jsx)(W2.A, { color: "strong", size: "sm" }),
+                    (0, M.jsx)(W3.A, { color: "strong", size: "sm" }),
                 ],
             }),
         ],
     });
 }
-function Ye(e) {
+function Yt(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
-        i = (0, eE.bG)([W5.A], () => W5.A.isUpsellPreview);
+        i = (0, eE.bG)([W6.A], () => W6.A.isUpsellPreview);
     return (0, M.jsxs)("div", {
-        className: W7.N3,
+        className: W8.N3,
         children: [
-            i && (0, M.jsx)(W8, {}),
+            i && (0, M.jsx)(W9, {}),
             (0, M.jsx)(tc.$, {
                 onClick: function () {
                     (n?.(ru.i.DISMISS),
                         (0, lb.Jp)(),
-                        W3(),
+                        W5(),
                         t || (0, l7.openUserSettings)(l6.X.APPEARANCE_IN_APP_ICON_CATEGORY));
                 },
                 variant: "secondary",
@@ -54927,23 +54939,23 @@ function Ye(e) {
         ],
     });
 }
-function Yt(e) {
-    let { isCoachmark: t, markAsDismissed: n, iconSize: i = W4.N8.SIZE_60 } = e,
+function Yn(e) {
+    let { isCoachmark: t, markAsDismissed: n, iconSize: i = W7.N8.SIZE_60 } = e,
         { analyticsLocations: r } = (0, rF.Ay)(nA.A.APP_ICON_EDITOR),
         a = (0, eE.bG)([eF.default], () => eF.default.getCurrentUser()),
-        { isUpsellPreview: s, shouldEditorAnimate: l } = (0, eE.cf)([W5.A, ef.Ay], () => ({
-            isUpsellPreview: W5.A.isUpsellPreview,
+        { isUpsellPreview: s, shouldEditorAnimate: l } = (0, eE.cf)([W6.A, ef.Ay], () => ({
+            isUpsellPreview: W6.A.isUpsellPreview,
             shouldEditorAnimate: t && !ef.Ay.useReducedMotion,
         })),
         o = lb.fy.getState().activePanel === lb.HP.APP_ICON;
     eI.useEffect(() => {
         s &&
             (W.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, { type: lY.e.APP_ICON_UPSELL, location_stack: r }),
-            (0, wh.sq)(j.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, wf.uq)(lY.e.APP_ICON_UPSELL)));
+            (0, wI.sq)(j.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, wp.uq)(lY.e.APP_ICON_UPSELL)));
     }, [s, r]);
-    let d = (0, W0.A)(null, s ? W3 : j.tEg);
+    let d = (0, W1.A)(null, s ? W5 : j.tEg);
     eI.useEffect(() => {
-        if (s && !o) return W3;
+        if (s && !o) return W5;
     }, [s, o]);
     let c = eI.useMemo(
         () => ({
@@ -54958,30 +54970,30 @@ function Yt(e) {
               value: r,
               children: (0, M.jsx)("div", {
                   ref: d,
-                  className: tE()(W7.EN, l ? W7.hP : null),
+                  className: tE()(W8.EN, l ? W8.hP : null),
                   "data-app-right-panel": !0,
                   style: c,
                   children: (0, M.jsxs)(sW.F, {
                       children: [
-                          (0, M.jsx)(W9, { markAsDismissed: n }),
+                          (0, M.jsx)(Ye, { markAsDismissed: n }),
                           (0, M.jsx)(ul.Ip, {
-                              className: W7.sV,
-                              children: (0, M.jsx)(W6.A, { className: W7.Gg, isEditor: !0, iconSize: i }),
+                              className: W8.sV,
+                              children: (0, M.jsx)(W4.A, { className: W8.Gg, isEditor: !0, iconSize: i }),
                           }),
-                          (0, M.jsx)(Ye, { markAsDismissed: n, isCoachmark: t }),
+                          (0, M.jsx)(Yt, { markAsDismissed: n, isCoachmark: t }),
                       ],
                   }),
               }),
           });
 }
-var Yn = n(141343),
-    Yi = n(103714),
-    Yr = n(748284),
-    Ya = n(438221);
-function Ys() {
-    return (0, M.jsx)("div", { "data-app-right-panel": !0, className: Yr.kL });
+var Yi = n(141343),
+    Yr = n(103714),
+    Ya = n(748284),
+    Ys = n(438221);
+function Yl() {
+    return (0, M.jsx)("div", { "data-app-right-panel": !0, className: Ya.kL });
 }
-let Yl = (0, i8.Fe)({
+let Yo = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("329172"),
@@ -55003,9 +55015,9 @@ let Yl = (0, i8.Fe)({
                 n.e("366996"),
             ]).then(n.bind(n, 974800)),
         webpackId: 974800,
-        renderLoader: Ys,
+        renderLoader: Yl,
     }),
-    Yo = (0, i8.Fe)({
+    Yd = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("329172"),
@@ -55039,9 +55051,9 @@ let Yl = (0, i8.Fe)({
                 n.e("851200"),
             ]).then(n.bind(n, 238234)),
         webpackId: 238234,
-        renderLoader: Ys,
+        renderLoader: Yl,
     }),
-    Yd = (0, i8.Fe)({
+    Yc = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("249169"),
@@ -55076,10 +55088,10 @@ let Yl = (0, i8.Fe)({
             ]).then(n.bind(n, 214103)),
         webpackId: 214103,
         renderLoader: function () {
-            return (0, M.jsx)("div", { "data-app-right-panel": !0, className: Ya.kL });
+            return (0, M.jsx)("div", { "data-app-right-panel": !0, className: Ys.kL });
         },
     }),
-    Yc = (0, i8.Fe)({
+    Yu = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("70866"),
@@ -55111,10 +55123,10 @@ let Yl = (0, i8.Fe)({
             ]).then(n.bind(n, 466020)),
         webpackId: 466020,
     }),
-    Yu = function (e) {
+    Y_ = function (e) {
         let { mobile: t } = e,
             n = (0, eE.bG)([eF.default], () => lV.Ay.canUseClientThemes(eF.default.getCurrentUser())),
-            i = (0, eE.bG)([wQ.A], () => wQ.A.isCoachmark),
+            i = (0, eE.bG)([w0.A], () => w0.A.isCoachmark),
             r =
                 null != (0, eE.bG)([nm.A, nS.Ay], () => nm.A.getChannel(nS.Ay.getChannelId())) &&
                 !!(function () {
@@ -55124,7 +55136,7 @@ let Yl = (0, i8.Fe)({
                         return !1;
                     }
                 })(),
-            a = (0, Yn.V)(),
+            a = (0, Yi.V)(),
             { activePanel: s, metadata: l } = (0, lb.fy)(),
             o = (0, eE.bG)([sC.A], () => sC.A.hasLayers()),
             d = [];
@@ -55150,7 +55162,7 @@ let Yl = (0, i8.Fe)({
             return (0, M.jsxs)(M.Fragment, {
                 children: [
                     f &&
-                        (0, M.jsx)(Yl, {
+                        (0, M.jsx)(Yo, {
                             markAsDismissed: _
                                 ? u
                                 : () => {
@@ -55161,18 +55173,18 @@ let Yl = (0, i8.Fe)({
                                   },
                             showClientThemesCoachmark: _,
                         }),
-                    I && (0, M.jsx)(Yt, { isCoachmark: !1, markAsDismissed: u }),
-                    p && (0, M.jsx)(Yo, { metadata: l ?? {}, markAsDismissed: u, isCoachmark: E, isMobile: t }),
-                    T && (0, M.jsx)(Yd, { isMobile: t }),
-                    m && (0, M.jsx)(Yc, {}),
+                    I && (0, M.jsx)(Yn, { isCoachmark: !1, markAsDismissed: u }),
+                    p && (0, M.jsx)(Yd, { metadata: l ?? {}, markAsDismissed: u, isCoachmark: E, isMobile: t }),
+                    T && (0, M.jsx)(Yc, { isMobile: t }),
+                    m && (0, M.jsx)(Yu, {}),
                 ],
             });
         }
-        return t ? (0, M.jsx)("div", { className: Yi.A, children: g() }) : g();
+        return t ? (0, M.jsx)("div", { className: Yr.A, children: g() }) : g();
     };
-var Y_ = n(404374),
-    YE = n(573435),
-    YA = n(349805);
+var YE = n(404374),
+    YA = n(573435),
+    Yh = n(349805);
 (n(939857),
     Promise.resolve()
         .then(n.bind(n, 677134))
@@ -55181,7 +55193,7 @@ var Y_ = n(404374),
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
-    (0, jQ.h)({ getDefaultLinkInterceptor: j6.default }),
+    (0, jJ.h)({ getDefaultLinkInterceptor: j4.default }),
     (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
@@ -55201,17 +55213,17 @@ var Y_ = n(404374),
             ),
         webpackId: 461624,
     }));
-let Yh = (0, i8.Fe)({
+let Yf = (0, i8.Fe)({
         createPromise: () => Promise.all([n.e("748231"), n.e("398254"), n.e("999063")]).then(n.bind(n, 1464)),
         webpackId: 1464,
     }),
-    Yf = eI.memo(function () {
+    YI = eI.memo(function () {
         let e = (0, eE.bG)([sC.A], () => sC.A.hasLayers()),
             t = (0, tX.useModalsStore)(tX.hasAnyModalOpen),
             n = (0, eE.bG)([ei.default], () => ei.default.isAuthenticated());
         return (0, M.jsx)(a1.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
     }),
-    YI = function (e) {
+    Yp = function (e) {
         var t;
         let n,
             { children: i, skipsSettingDefaultPageTitle: r } = e,
@@ -55221,91 +55233,91 @@ let Yh = (0, i8.Fe)({
             o = eI.useRef(document.body),
             d = `${l}`;
         ((t = "AppSkeleton"),
-            (n = WM.A.useCanUIRequestGatewaySocket()),
+            (n = WP.A.useCanUIRequestGatewaySocket()),
             eI.useEffect(() => {
                 if (n)
                     return (
-                        WP.uG(t),
+                        WU.uG(t),
                         () => {
-                            WP.qr(t);
+                            WU.qr(t);
                         }
                     );
             }, [t, n]));
-        let c = (0, Wb.sK)("AppSkeleton");
+        let c = (0, WM.sK)("AppSkeleton");
         eI.useEffect(() => {
-            c ? ex.w.set(Wb.AL, !0) : ex.w.remove(Wb.AL);
+            c ? ex.w.set(WM.AL, !0) : ex.w.remove(WM.AL);
         }, [c]);
-        let u = (0, eE.bG)([Wx.A], () => Wx.A.canPlayWowMoment);
+        let u = (0, eE.bG)([Wk.A], () => Wk.A.canPlayWowMoment);
         return (0, M.jsx)(
-            Wk.e,
+            WF.e,
             {
-                children: (0, M.jsxs)(j4.A, {
+                children: (0, M.jsxs)(j7.A, {
                     children: [
-                        (0, M.jsx)(WJ.A, { skipsSettingDefaultPageTitle: r }),
-                        (0, M.jsx)(j5.N, {
-                            children: (0, M.jsx)(Wf.A, {
+                        (0, M.jsx)(W0.A, { skipsSettingDefaultPageTitle: r }),
+                        (0, M.jsx)(j6.N, {
+                            children: (0, M.jsx)(WI.A, {
                                 children: (0, M.jsxs)(eh.xp, {
                                     containerRef: o,
                                     children: [
-                                        (0, M.jsx)(YE.Al, {}),
-                                        (0, M.jsx)(Y_.Ay, {}),
-                                        (0, M.jsx)(jJ.Ut, {}),
+                                        (0, M.jsx)(YA.Al, {}),
+                                        (0, M.jsx)(YE.Ay, {}),
+                                        (0, M.jsx)(j0.Ut, {}),
                                         (0, M.jsx)(tp.Wr, {
                                             appContext: j.BRT.APP,
                                             renderWindow: window,
-                                            children: (0, M.jsxs)(j8.Yf, {
+                                            children: (0, M.jsxs)(j9.Yf, {
                                                 children: [
-                                                    null != a ? (0, M.jsx)(Yf, {}) : null,
+                                                    null != a ? (0, M.jsx)(YI, {}) : null,
                                                     (0, M.jsxs)("div", {
-                                                        className: tE()(YA.XX, s && YA.Xq),
+                                                        className: tE()(Yh.XX, s && Yh.Xq),
                                                         children: [
-                                                            (0, M.jsx)(Wu.C1, {}),
+                                                            (0, M.jsx)(W_.C1, {}),
                                                             (0, M.jsx)("div", {
-                                                                className: YA.x$,
+                                                                className: Yh.x$,
                                                                 "data-app-not-dev-tools": !0,
-                                                                children: (0, M.jsx)(Wc.l, {
-                                                                    children: (0, M.jsx)(BV.ks, {
-                                                                        children: (0, M.jsx)(j7.A.Provider, {
+                                                                children: (0, M.jsx)(Wu.l, {
+                                                                    children: (0, M.jsx)(Bj.ks, {
+                                                                        children: (0, M.jsx)(j8.A.Provider, {
                                                                             value: lB.A,
-                                                                            children: (0, M.jsxs)(Wd.p, {
+                                                                            children: (0, M.jsxs)(Wc.p, {
                                                                                 children: [
                                                                                     (0, M.jsx)("div", {
                                                                                         className: tE()(
-                                                                                            s ? YA.C$ : YA.yA,
+                                                                                            s ? Yh.C$ : Yh.yA,
                                                                                         ),
                                                                                         children: i,
                                                                                     }),
-                                                                                    (0, M.jsx)(j2.A, {}),
-                                                                                    (0, M.jsx)(Wy, {}),
                                                                                     (0, M.jsx)(j3.A, {}),
-                                                                                    (0, M.jsx)(j0.b, {}),
-                                                                                    (0, M.jsx)(WQ, {}),
-                                                                                    (0, M.jsx)(MY.up, {}),
-                                                                                    (0, M.jsx)(jZ.P, {}),
-                                                                                    (0, M.jsx)(j8.C8, {}),
-                                                                                    (0, M.jsx)(BV.ok, {}),
-                                                                                    (0, M.jsx)(j1.N, {
+                                                                                    (0, M.jsx)(WD, {}),
+                                                                                    (0, M.jsx)(j5.A, {}),
+                                                                                    (0, M.jsx)(j1.b, {}),
+                                                                                    (0, M.jsx)(WJ, {}),
+                                                                                    (0, M.jsx)(M$.up, {}),
+                                                                                    (0, M.jsx)(jQ.P, {}),
+                                                                                    (0, M.jsx)(j9.C8, {}),
+                                                                                    (0, M.jsx)(Bj.ok, {}),
+                                                                                    (0, M.jsx)(j2.N, {
                                                                                         appContext: j.BRT.APP,
                                                                                     }),
-                                                                                    (0, M.jsx)(Wt, {}),
-                                                                                    (0, M.jsx)(WG, {}),
-                                                                                    u && (0, M.jsx)(Yh, {}),
+                                                                                    (0, M.jsx)(Wn, {}),
+                                                                                    (0, M.jsx)(Wx, {}),
+                                                                                    u && (0, M.jsx)(Yf, {}),
                                                                                 ],
                                                                             }),
                                                                         }),
                                                                     }),
                                                                 }),
                                                             }),
-                                                            (0, M.jsx)(Wo, {}),
-                                                            (0, M.jsx)(Yu, { mobile: s }),
-                                                            (0, M.jsx)(Wh, { mobile: s }),
+                                                            (0, M.jsx)(Wd, {}),
+                                                            (0, M.jsx)(Y_, { mobile: s }),
+                                                            (0, M.jsx)(Wf, { mobile: s }),
                                                         ],
                                                     }),
                                                     !1,
                                                 ],
                                             }),
                                         }),
-                                        (0, M.jsx)(jJ.Ut, {}),
+                                        (0, M.jsx)(j0.Ut, {}),
                                     ],
                                 }),
                             }),
@@ -55316,34 +55328,34 @@ let Yh = (0, i8.Fe)({
             d,
         );
     };
-var Yp =
+var YT =
     (((D = {})[(D.NOT_STARTED = 0)] = "NOT_STARTED"),
     (D[(D.IN_PROGRESS = 1)] = "IN_PROGRESS"),
     (D[(D.FAILED = 2)] = "FAILED"),
     (D[(D.SKIPPED = 3)] = "SKIPPED"),
     D);
-let YT = 0;
-class Ym extends eE.Ay.Store {
+let Ym = 0;
+class Yg extends eE.Ay.Store {
     static displayName = "DomainMigrationStore";
     getMigrationStatus() {
-        return YT;
+        return Ym;
     }
 }
-let Yg = new Ym(k.h, {
+let YS = new Yg(k.h, {
     DOMAIN_MIGRATION_START: function () {
-        YT = 1;
+        Ym = 1;
     },
     DOMAIN_MIGRATION_FAILURE: function () {
-        YT = 2;
+        Ym = 2;
     },
     DOMAIN_MIGRATION_SKIP: function () {
-        YT = 3;
+        Ym = 3;
     },
 });
-function YS(e) {
+function YN(e) {
     return e?._state?.lastTestTimestamp;
 }
-function YN() {
+function YC() {
     return (
         eI.useEffect(() => {
             window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
@@ -55360,7 +55372,7 @@ function YN() {
                         n = 0 !== t.length,
                         i = null != e.token,
                         r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                        a = null == r || null == YS(r) || YS(r) <= YS(ex.w.get("RTCRegionStore"));
+                        a = null == r || null == YN(r) || YN(r) <= YN(ex.w.get("RTCRegionStore"));
                     (n &&
                         i &&
                         !a &&
@@ -55384,7 +55396,7 @@ function YN() {
         null
     );
 }
-class YC extends nE.A {
+class YO extends nE.A {
     _initialize() {
         k.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
     }
@@ -55395,9 +55407,9 @@ class YC extends nE.A {
         ((0, eB.isWindows)() || (0, eB.isMac)()) && er.encryptAndStoreTokens();
     };
 }
-let YO = new YC();
-var YR = n(53505);
-function YL(e) {
+let YR = new YO();
+var YL = n(53505);
+function Yy(e) {
     if (null == e || "" === e) return null;
     try {
         let t = new URL(e);
@@ -55406,42 +55418,42 @@ function YL(e) {
         return null;
     }
 }
-var Yy = n(396574);
+var YD = n(396574);
 n(967347);
-let YD = (0, i8.Fe)({
+let Yv = (0, i8.Fe)({
         createPromise: () => Promise.all([n.e("768613"), n.e("299681")]).then(n.bind(n, 224116)),
         webpackId: 224116,
         name: "UnsupportedBrowser",
     }),
-    Yv = (0, i8.Fe)({
+    Yb = (0, i8.Fe)({
         createPromise: () => Promise.all([n.e("569433"), n.e("944602"), n.e("825280")]).then(n.bind(n, 987482)),
         webpackId: 987482,
         name: "DownloadApps",
     }),
-    Yb = (0, i8.Fe)({
+    YM = (0, i8.Fe)({
         createPromise: () => n.e("184809").then(n.bind(n, 312625)),
         webpackId: 312625,
         name: "InviteProxy",
     }),
-    YM = (0, i8.Fe)({
+    YP = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("346391")]).then(n.bind(n, 459789)),
         webpackId: 459789,
         name: "VerifyConnectedAccount",
     }),
-    YP = (0, i8.Fe)({
+    YU = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("963832")]).then(n.bind(n, 744185)),
         webpackId: 744185,
         name: "VerifyConnectedAccountSuccess",
     }),
-    YU = (0, i8.Fe)({
+    Yw = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("750033")]).then(n.bind(n, 885338)),
         webpackId: 885338,
         name: "VerifyConnectedAccountError",
     }),
-    Yw = (0, i8.Fe)({
+    YG = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("336335"), n.e("496891"), n.e("346391"), n.e("252986")]).then(
                 n.bind(n, 97649),
@@ -55449,12 +55461,12 @@ let YD = (0, i8.Fe)({
         webpackId: 97649,
         name: "LinkConnectedAccount",
     }),
-    YG = (0, i8.Fe)({
+    Yx = (0, i8.Fe)({
         createPromise: () => Promise.all([n.e("698965"), n.e("336335"), n.e("765893")]).then(n.bind(n, 209086)),
         webpackId: 209086,
         name: "LinkAuthorize",
     }),
-    Yx = (0, i8.Fe)({
+    Yk = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("630279"),
@@ -55469,7 +55481,7 @@ let YD = (0, i8.Fe)({
         webpackId: 627318,
         name: "ActivateDevice",
     }),
-    Yk = (0, i8.Fe)({
+    YF = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("324732"),
@@ -55686,7 +55698,7 @@ let YD = (0, i8.Fe)({
         webpackId: 818444,
         name: "ViewsWithAuth",
     }),
-    YF = (0, i8.Fe)({
+    YB = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("630279"),
@@ -55700,17 +55712,17 @@ let YD = (0, i8.Fe)({
         webpackId: 234260,
         name: "ViewsWithOAuth2",
     }),
-    YB = (0, i8.Fe)({
+    YV = (0, i8.Fe)({
         createPromise: () => Promise.all([n.e("301969"), n.e("730514")]).then(n.bind(n, 146088)),
         webpackId: 146088,
         name: "BrowserHandoff",
     }),
-    YV = (0, i8.Fe)({
+    YH = (0, i8.Fe)({
         createPromise: () => n.e("574272").then(n.bind(n, 569710)),
         webpackId: 569710,
         name: "MobileWebHandoffFallback",
     }),
-    YH = (0, i8.Fe)({
+    Yj = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("82731"),
@@ -56406,7 +56418,7 @@ let YD = (0, i8.Fe)({
         webpackId: 436405,
         name: "Overlay",
     }),
-    Yj = (0, i8.Fe)({
+    YW = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("213217"), n.e("895359"), n.e("483518"), n.e("85216"), n.e("51194"), n.e("666708")]).then(
                 n.bind(n, 654423),
@@ -56414,60 +56426,60 @@ let YD = (0, i8.Fe)({
         webpackId: 654423,
         name: "SuspendedUserSafetyHubPage",
     }),
-    YW = (0, i8.Fe)({
+    YY = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("346829"), n.e("101953"), n.e("339895"), n.e("771791")]).then(n.bind(n, 125820)),
         webpackId: 125820,
         name: "QuestsLandingPage",
     }),
-    YY = (0, i8.Fe)({
+    YK = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("346829"), n.e("101953"), n.e("339895"), n.e("44900")]).then(n.bind(n, 589877)),
         webpackId: 589877,
         name: "QuestPreviewLandingPage",
     }),
-    YK = (0, i8.Fe)({
+    Y$ = (0, i8.Fe)({
         createPromise: () =>
             Promise.all([n.e("99351"), n.e("234917"), n.e("496891"), n.e("881881")]).then(n.bind(n, 519716)),
         webpackId: 519716,
         name: "ConnectionsAuthorizeContinue",
     }),
-    Y$ = (0, i8.Fe)({
+    Yz = (0, i8.Fe)({
         createPromise: () => n.e("215243").then(n.bind(n, 190662)),
         webpackId: 190662,
         name: "ApplicationDirectoryRoutes",
     }),
-    Yz = (0, i8.Fe)({
+    YX = (0, i8.Fe)({
         createPromise: () => n.e("338217").then(n.bind(n, 149755)),
         webpackId: 149755,
         name: "ApplicationDirectoryGlobalDiscoveryRoutes",
     });
-function YX() {
-    return (0, M.jsx)(jq, {});
+function Yq() {
+    return (0, M.jsx)(jZ, {});
 }
-let Yq = new Set([
+let YZ = new Set([
     j.BVt.LOGIN,
     j.BVt.LOGIN_HANDOFF,
     j.BVt.INVITE_LOGIN(":inviteCode"),
     j.BVt.GIFT_CODE_LOGIN(":giftCode"),
     j.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
 ]);
-function YZ(e, t) {
-    return t ? e.filter((e) => !Yq.has(e)) : e;
+function YQ(e, t) {
+    return t ? e.filter((e) => !YZ.has(e)) : e;
 }
-function YQ() {
+function YJ() {
     let e = (0, eE.bG)([ei.default], () => ei.default.isAuthenticated());
-    return (0, eE.bG)([Yg], () => Yg.getMigrationStatus()) === Yp.IN_PROGRESS
+    return (0, eE.bG)([YS], () => YS.getMigrationStatus()) === YT.IN_PROGRESS
         ? null
-        : Yy.VP
+        : YD.VP
           ? eB.isPlatformEmbedded
               ? (0, M.jsxs)(tV.dO, {
                     children: [
-                        e ? null : (0, M.jsx)(tV.qh, { path: j.BVt.ACCOUNT_STANDING, component: Yj }),
+                        e ? null : (0, M.jsx)(tV.qh, { path: j.BVt.ACCOUNT_STANDING, component: YW }),
                         (0, M.jsx)(tV.qh, { exact: !0, path: j.BVt.INDEX, render: () => (0, M.jsx)(tK, {}) }),
-                        (0, M.jsx)(rr.A, { exact: !0, path: j.BVt.APPS, component: Yv }),
+                        (0, M.jsx)(rr.A, { exact: !0, path: j.BVt.APPS, component: Yb }),
                         (0, M.jsx)(tV.qh, {
-                            path: YZ(
+                            path: YQ(
                                 [
                                     j.BVt.LOGIN,
                                     j.BVt.REGISTER,
@@ -56479,19 +56491,19 @@ function YQ() {
                                 ],
                                 !1,
                             ),
-                            component: Yk,
+                            component: YF,
                         }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.INVITE_PROXY(L1.pv.channelId()), component: Yb }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.INVITE_PROXY(L3.pv.channelId()), component: YM }),
                         (0, M.jsx)(tV.rd, { from: j.BVt.INVITE(""), to: j.BVt.LOGIN }),
                         (0, M.jsx)(tV.rd, { from: j.BVt.GIFT_CODE(""), to: j.BVt.LOGIN }),
-                        (0, M.jsx)(tV.qh, { render: YX }),
+                        (0, M.jsx)(tV.qh, { render: Yq }),
                     ],
                 })
               : (0, M.jsxs)(tV.dO, {
                     children: [
                         (0, M.jsx)(rr.A, { exact: !0, path: j.BVt.INDEX, render: () => (0, M.jsx)(tK, {}) }),
                         (0, M.jsx)(tV.qh, {
-                            path: YZ(
+                            path: YQ(
                                 [
                                     j.BVt.LOGIN_ONE_TIME,
                                     j.BVt.LOGIN,
@@ -56514,47 +56526,47 @@ function YQ() {
                                 ],
                                 !1,
                             ),
-                            component: Yk,
+                            component: YF,
                         }),
                         e
                             ? null
                             : (0, M.jsx)(tV.qh, {
                                   path: j.BVt.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-                                  component: Yk,
+                                  component: YF,
                               }),
                         e
                             ? null
                             : (0, M.jsx)(tV.qh, {
                                   path: j.BVt.CHANNEL(
-                                      L1.pv.guildId(),
-                                      L1.pv.channelId({ optional: !0 }),
+                                      L3.pv.guildId(),
+                                      L3.pv.channelId({ optional: !0 }),
                                       ":messageId?",
                                   ),
-                                  component: Yk,
+                                  component: YF,
                               }),
                         (0, M.jsx)(tV.rd, { from: j.BVt.INVITE(""), to: j.BVt.LOGIN }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.INVITE_PROXY(L1.pv.channelId()), component: Yb }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.INVITE_PROXY(L3.pv.channelId()), component: YM }),
                         (0, M.jsx)(tV.rd, { from: j.BVt.GIFT_CODE(""), to: j.BVt.LOGIN }),
                         (0, M.jsx)(rr.A, {
                             path: j.BVt.QUESTS(":questId"),
-                            component: YW,
+                            component: YY,
                             impressionName: tH.ImpressionNames.QUESTS_LANDING_PAGE,
                             impressionProperties: (e) => {
                                 let { match: t } = e;
                                 return { quest_id: t?.params.questId != null ? Number(t.params.questId) : void 0 };
                             },
                         }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.QUEST_PREVIEW(":questId"), component: YY }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.HANDOFF, component: YB }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.MOBILE_WEB_HANDOFF, component: YV }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTION_LINK(":type"), component: Yw }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: YG }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.ACTIVATE, component: Yx }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.ACTIVATE_HANDOFF, component: Yx }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"), component: YK }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS_SUCCESS(":type"), component: YP }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS_ERROR(":type"), component: YU }),
-                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS(":type"), component: YM }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.QUEST_PREVIEW(":questId"), component: YK }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.HANDOFF, component: YV }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.MOBILE_WEB_HANDOFF, component: YH }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTION_LINK(":type"), component: YG }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTION_LINK_AUTHORIZE(":type"), component: Yx }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.ACTIVATE, component: Yk }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.ACTIVATE_HANDOFF, component: Yk }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"), component: Y$ }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS_SUCCESS(":type"), component: YU }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS_ERROR(":type"), component: Yw }),
+                        (0, M.jsx)(rr.A, { path: j.BVt.CONNECTIONS(":type"), component: YP }),
                         (0, M.jsx)(rr.A, {
                             path: j.BVt.DOWNLOAD_QR_CODE_REDIRECT,
                             render: () => {
@@ -56571,7 +56583,7 @@ function YQ() {
                                             referring_location: n,
                                             qr_code: !0,
                                         }),
-                                    (window.location.href = (0, YR.b$)(null != n && "" !== n ? n : "qr_code", e)),
+                                    (window.location.href = (0, YL.b$)(null != n && "" !== n ? n : "qr_code", e)),
                                     null
                                 );
                             },
@@ -56585,15 +56597,15 @@ function YQ() {
                                     i =
                                         ((e = window.location.search ?? ""),
                                         {
-                                            desktop: YL((t = (0, t$.parse)(e)).desktop_link),
-                                            mobile: YL(t.mobile_link),
+                                            desktop: Yy((t = (0, t$.parse)(e)).desktop_link),
+                                            mobile: Yy(t.mobile_link),
                                         });
                                 if ("iOS" !== n && "Android" !== n)
                                     return (0, M.jsx)(tV.rd, {
                                         to: null != i.desktop ? `${i.desktop.pathname}${i.desktop.search}` : j.BVt.APP,
                                     });
                                 {
-                                    let e = (0, YR.b$)("app_open_from_email", n, i.mobile),
+                                    let e = (0, YL.b$)("app_open_from_email", n, i.mobile),
                                         t = (0, tW.X7)(e);
                                     (null != t &&
                                         W.default.track(j.HAw.DEEP_LINK_CLICKED, {
@@ -56617,24 +56629,24 @@ function YQ() {
                                 j.BVt.OAUTH2_ERROR,
                                 j.BVt.OAUTH2_WHITELIST_ACCEPT,
                             ],
-                            component: YF,
+                            component: YB,
                         }),
-                        e ? null : (0, M.jsx)(tV.qh, { path: [j.BVt.ACCOUNT_STANDING], component: Yj }),
-                        e ? null : (0, M.jsx)(tV.qh, { path: [j.BVt.APPLICATION_DIRECTORY], component: Y$ }),
-                        e ? null : (0, M.jsx)(tV.qh, { path: [j.BVt.GLOBAL_DISCOVERY_APPS], component: Yz }),
-                        (0, M.jsx)(tV.qh, { render: YX }),
+                        e ? null : (0, M.jsx)(tV.qh, { path: [j.BVt.ACCOUNT_STANDING], component: YW }),
+                        e ? null : (0, M.jsx)(tV.qh, { path: [j.BVt.APPLICATION_DIRECTORY], component: Yz }),
+                        e ? null : (0, M.jsx)(tV.qh, { path: [j.BVt.GLOBAL_DISCOVERY_APPS], component: YX }),
+                        (0, M.jsx)(tV.qh, { render: Yq }),
                         (0, M.jsx)(tV.rd, { from: j.BVt.ACCOUNT_REVERT(""), to: j.BVt.LOGIN }),
                     ],
                 })
-          : (0, M.jsx)(tV.dO, { children: (0, M.jsx)(rr.A, { component: YD }) });
-}
-function YJ() {
-    let e = (0, eE.bG)([Yg], () => Yg.getMigrationStatus());
-    return eB.isPlatformEmbedded && (e === Yp.NOT_STARTED || e === Yp.IN_PROGRESS) && !0 !== ex.w.get(tj.qx)
-        ? (0, M.jsx)(YN, {})
-        : null;
+          : (0, M.jsx)(tV.dO, { children: (0, M.jsx)(rr.A, { component: Yv }) });
 }
 function Y0() {
+    let e = (0, eE.bG)([YS], () => YS.getMigrationStatus());
+    return eB.isPlatformEmbedded && (e === YT.NOT_STARTED || e === YT.IN_PROGRESS) && !0 !== ex.w.get(tj.qx)
+        ? (0, M.jsx)(YC, {})
+        : null;
+}
+function Y1() {
     let e = (function () {
         let { pathname: e } = (0, tV.zy)();
         return null != (0, oK.B)(e, { path: j.BVt.APPLICATION_DIRECTORY });
@@ -56650,18 +56662,18 @@ function Y0() {
         eI.useEffect(
             () => (
                 eV.Ay.cleanupDisplaySleep(),
-                YO.initialize(),
-                (HT.A.wasAuthenticated = ei.default.isAuthenticated()),
+                YR.initialize(),
+                (Hg.A.wasAuthenticated = ei.default.isAuthenticated()),
                 () => {
-                    YO.terminate();
+                    YR.terminate();
                 }
             ),
             [],
         ),
-        (0, M.jsxs)(YI, { skipsSettingDefaultPageTitle: e, children: [(0, M.jsx)(YQ, {}), (0, M.jsx)(YJ, {})] })
+        (0, M.jsxs)(Yp, { skipsSettingDefaultPageTitle: e, children: [(0, M.jsx)(YJ, {}), (0, M.jsx)(Y0, {})] })
     );
 }
-class Y1 extends nE.A {
+class Y2 extends nE.A {
     _initialize() {
         eB.isPlatformEmbedded &&
             (eV.Ay.on("APP_PUSH_ANALYTICS", (e, t) => {
@@ -56695,16 +56707,16 @@ class Y1 extends nE.A {
             });
     }
 }
-let Y2 = new Y1(),
-    Y3 = "1402418696126992445";
-function Y5(e, t) {
+let Y3 = new Y2(),
+    Y5 = "1402418696126992445";
+function Y6(e, t) {
     if (null == t) return null;
-    if (t.applicationId === Y3) {
+    if (t.applicationId === Y5) {
         let n, i, r;
         return (
             (n = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0),
             void 0 !==
-            (r = (i = e.filter((e) => e.applicationId === Y3 && e.processPath.includes(n))).find(
+            (r = (i = e.filter((e) => e.applicationId === Y5 && e.processPath.includes(n))).find(
                 (e) => "league of legends.exe" === e.executableName,
             ))
                 ? r
@@ -56725,20 +56737,20 @@ function Y5(e, t) {
         .filter((e) => e.rootedPath[0] === i.processId);
     r.sort((e, t) => {
         let i = e.rootedPath.map((e) => n.get(e)).filter((e) => null != e && null != e.windowHandle),
-            r = Y6(
+            r = Y4(
                 t.rootedPath.map((e) => n.get(e)).filter((e) => null != e && null != e.windowHandle),
                 i,
             );
-        return 0 !== r ? r : Y6(t.rootedPath, e.rootedPath);
+        return 0 !== r ? r : Y4(t.rootedPath, e.rootedPath);
     });
     let a = r.find((e) => null != e.application.windowHandle) ?? r[0];
     return null == a ? null : a.application;
 }
-function Y6(e, t) {
+function Y4(e, t) {
     return e.length - t.length;
 }
-var Y4 = (((v = {}).STREAM = "stream"), (v.PAUSE = "pause"), (v.STOP = "stop"), v);
-class Y7 {
+var Y7 = (((v = {}).STREAM = "stream"), (v.PAUSE = "pause"), (v.STOP = "stop"), v);
+class Y8 {
     callback;
     active;
     application;
@@ -56749,11 +56761,11 @@ class Y7 {
             (this.active = !1),
             (this.application = null),
             (this.sound = !0),
-            (this.logger = new kr.Vy("StreamDirector")));
+            (this.logger = new ks.Vy("StreamDirector")));
     }
     onStreamBegin(e, t, n) {
         let i,
-            r = null == (i = e.find((e) => e.processId === t)) ? null : Y5(e, i);
+            r = null == (i = e.find((e) => e.processId === t)) ? null : Y6(e, i);
         ((this.sound = n), null == r || null == r.windowHandle ? this.callback({ type: "stop" }) : this._stream(r));
     }
     onStreamKilled() {
@@ -56774,7 +56786,7 @@ class Y7 {
             : this._stop();
     }
     _update(e) {
-        let t = Y5(e, this.application);
+        let t = Y6(e, this.application);
         if (null != t) return null == t.windowHandle ? this._pause() : this._stream(t);
         this._stop();
     }
@@ -56803,8 +56815,8 @@ class Y7 {
         this.active && ((this.application.windowHandle = null), this.callback({ type: "pause" }));
     }
 }
-var Y8 = n(929921);
-class Y9 {
+var Y9 = n(929921);
+class Ke {
     director;
     applications;
     streamKey;
@@ -56812,7 +56824,7 @@ class Y9 {
     constructor() {
         ((this.mode = null),
             (this.applications = []),
-            (this.director = new Y7((e) => this._onDirectorAction(e))),
+            (this.director = new Y8((e) => this._onDirectorAction(e))),
             k.h.subscribe("STREAM_START", (e) => {
                 let { streamType: t, guildId: n, channelId: i, pid: r, sourceId: a, audioSourceId: s, sound: l } = e,
                     o = ei.default.getId(),
@@ -56869,7 +56881,7 @@ class Y9 {
             (this.streamKey = e),
             (this.director.sound = i ?? !0),
             (this.director.application = null),
-            this._onDirectorAction({ type: Y4.STREAM, sourceId: t, audioSourceId: n, sound: i }));
+            this._onDirectorAction({ type: Y7.STREAM, sourceId: t, audioSourceId: n, sound: i }));
     }
     _onStreamEnd(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -56879,7 +56891,7 @@ class Y9 {
                     this.director.onStreamEnd();
                     break;
                 case "verbatim-source":
-                    this._onDirectorAction({ type: Y4.STOP, alsoClose: t });
+                    this._onDirectorAction({ type: Y7.STOP, alsoClose: t });
                     break;
                 default:
                     throw Error(`unknown streaming mode: ${this.mode ?? "(none)"}`);
@@ -56899,9 +56911,9 @@ class Y9 {
     }
     _onDirectorAction(e) {
         let t = d7.A.getCurrentUserActiveStream(),
-            n = Y8.A.getState();
+            n = Y9.A.getState();
         switch (e.type) {
-            case Y4.STREAM:
+            case Y7.STREAM:
                 if ((null != t && (0, uv.TZ)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId)) {
                     let t = e.sourceId.indexOf(":") + 1,
                         i = e.sourceId.substring(t);
@@ -56921,11 +56933,11 @@ class Y9 {
                         context: iC.x.STREAM,
                     });
                 break;
-            case Y4.PAUSE:
+            case Y7.PAUSE:
                 null != t && (0, uv.TZ)(t, !0);
                 break;
-            case Y4.STOP:
-                null != t && (0, DD.A)(t, !0, e.alsoClose ?? !0);
+            case Y7.STOP:
+                null != t && (0, Db.A)(t, !0, e.alsoClose ?? !0);
                 break;
             default:
                 throw Error(`unhandled stream action: ${e.type}`);
@@ -56949,8 +56961,8 @@ class Y9 {
         }
     }
 }
-var Ke = n(579872);
-class Kt extends nE.A {
+var Kt = n(579872);
+class Kn extends nE.A {
     _initialize() {
         k.h.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission);
     }
@@ -56962,7 +56974,7 @@ class Kt extends nE.A {
             i = "Firefox" === ts().name ? j.MVz.ENABLE_MIC_FIREFOX : j.MVz.ENABLE_MIC_CHROME;
         if (!n) {
             let e = "audio" !== t;
-            Ke.A.show({
+            Kt.A.show({
                 title: e ? tL.intl.string(tL.t.OqloH8) : tL.intl.string(tL.t["kI+OOV"]),
                 body: e ? tL.intl.string(tL.t.l3P7K0) : tL.intl.string(tL.t.l3jwOd),
                 onConfirm: () => window.open(tG.A.getArticleURL(i), "_blank"),
@@ -56971,8 +56983,8 @@ class Kt extends nE.A {
         }
     };
 }
-let Kn = new Kt();
-function Ki() {
+let Ki = new Kn();
+function Kr() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -56985,18 +56997,18 @@ function Ki() {
         background_install_ms_total: 0,
     };
 }
-function Kr(e) {
+function Ka(e) {
     return "host" === e;
 }
-class Ka {
+class Ks {
     _installingModules = {};
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = Ki();
+        this._report = Kr();
     }
     handleDownloadingModule(e) {
-        if (!Kr(e.name)) {
+        if (!Ka(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -57016,7 +57028,7 @@ class Ka {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (Kr(e.name)) return;
+        if (Ka(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -57033,7 +57045,7 @@ class Ka {
             delete this._downloadingModules[e.name]);
     }
     handleInstallingModule(e) {
-        if (!Kr(e.name)) {
+        if (!Ka(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -57045,7 +57057,7 @@ class Ka {
         }
     }
     handleInstalledModule(e) {
-        if (Kr(e.name)) return;
+        if (Ka(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -57083,7 +57095,7 @@ class Ka {
         return this._report;
     }
     reset() {
-        this._report = Ki();
+        this._report = Kr();
     }
     submissionReady() {
         return (
@@ -57098,8 +57110,8 @@ class Ka {
         );
     }
 }
-class Ks extends nE.A {
-    _tracker = new Ka();
+class Kl extends nE.A {
+    _tracker = new Ks();
     _initialize() {
         eB.isPlatformEmbedded &&
             (eV.Ay.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()),
@@ -57131,23 +57143,23 @@ class Ks extends nE.A {
                 (W.default.track(j.HAw.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset()));
     }
 }
-let Kl = new Ks();
+let Ko = new Kl();
 (n(742459), n(321034));
-var Ko = n(823598);
-let Kd = new iu.Ep(),
-    Kc = !1,
-    Ku = window.document.createElement("canvas");
-((Ku.width = 512), (Ku.height = 288));
-let K_ = Ku.getContext("2d");
-function KE() {
-    (Kd.stop(), null != d && (d = null));
+var Kd = n(823598);
+let Kc = new iu.Ep(),
+    Ku = !1,
+    K_ = window.document.createElement("canvas");
+((K_.width = 512), (K_.height = 288));
+let KE = K_.getContext("2d");
+function KA() {
+    (Kc.stop(), null != d && (d = null));
 }
-let KA = iM().debounce((e, t, n, i) => {
-    Kh(e, (0, dk._z)({ streamType: null != t ? cZ.U4.GUILD : cZ.U4.CALL, guildId: t, channelId: n, ownerId: i }));
+let Kh = iM().debounce((e, t, n, i) => {
+    Kf(e, (0, dk._z)({ streamType: null != t ? cZ.U4.GUILD : cZ.U4.CALL, guildId: t, channelId: n, ownerId: i }));
 }, 500);
-async function Kh(e, t) {
+async function Kf(e, t) {
     if (d === e && !(((0, eB.isWeb)() && eR.uh.getSetting()) || d7.A.getIsActiveStreamPreviewDisabled(t))) {
-        if (!Kc)
+        if (!Ku)
             try {
                 var n, i;
                 let r, a, s, l, o, c, u, _;
@@ -57155,7 +57167,7 @@ async function Kh(e, t) {
                 (_ = 0),
                 (eB.isPlatformEmbedded
                     ? function (e, t) {
-                          let n = (0, Ko.lE)();
+                          let n = (0, Kd.lE)();
                           return new Promise((i, r) => {
                               n.getNextVideoOutputFrame(e).then(
                                   function (e) {
@@ -57172,7 +57184,7 @@ async function Kh(e, t) {
                           });
                       }
                     : function (e, t) {
-                          let n = (0, kl.yL)(e);
+                          let n = (0, kd.yL)(e);
                           if (null == n) return Promise.resolve(new ImageData(0, 0));
                           let { width: i, height: r } = n.getVideoTracks()[0].getSettings(),
                               a = document.createElement("video"),
@@ -57204,15 +57216,15 @@ async function Kh(e, t) {
                     (a = Math.min(r, 288 / n.height)),
                     (s = n.width * a),
                     (l = n.height * a),
-                    (Ku.width = s),
-                    (Ku.height = l),
+                    (K_.width = s),
+                    (K_.height = l),
                     (c = (o = window.document.createElement("canvas")).getContext("2d")),
                     (o.width = n.width),
                     (o.height = n.height),
                     (u = new ImageData(n.data, n.width, n.height)),
                     c?.putImageData(u, 0, 0),
-                    K_?.drawImage(o, 0, 0, n.width, n.height, 0, 0, s, l));
-                let E = Ku.toDataURL("image/jpeg");
+                    KE?.drawImage(o, 0, 0, n.width, n.height, 0, 0, s, l));
+                let E = K_.toDataURL("image/jpeg");
                 if (
                     (k.h.dispatch({ type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: t, previewURL: E }),
                     eB.isPlatformEmbedded)
@@ -57233,39 +57245,39 @@ async function Kh(e, t) {
                     });
             } catch (t) {
                 (new ez.A("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t),
-                    d === e && Kd.start(6e4, r));
+                    d === e && Kc.start(6e4, r));
                 return;
             }
-        d === e && (Kc ? Kd.start(6e4, r) : Kd.start(3e5, r));
+        d === e && (Ku ? Kc.start(6e4, r) : Kc.start(3e5, r));
     }
     function r() {
-        return Kh(e, t);
+        return Kf(e, t);
     }
 }
-function Kf(e, t) {
+function KI(e, t) {
     return !(e === j.TGd.BROWSER && cy.Ay.hasKeybind(s3.zY.MOUSE_BUTTON, t));
 }
-let KI = new (class {
+let Kp = new (class {
     initialize() {
         (0, eB.isDesktop)() &&
             (eV.Ay.on("NAVIGATE_BACK", (e, t) => {
-                Kf(t, s3.RX.Back) && (0, rL.OE)("native");
+                KI(t, s3.RX.Back) && (0, rL.OE)("native");
             }),
             eV.Ay.on("NAVIGATE_FORWARD", (e, t) => {
-                Kf(t, s3.RX.Forward) && (0, rL.Qb)("native");
+                KI(t, s3.RX.Forward) && (0, rL.Qb)("native");
             }));
     }
 })();
-var Kp = n(812729),
-    KT = n.n(Kp),
-    Km = n(675991);
-class Kg extends nE.A {
+var KT = n(812729),
+    Km = n.n(KT),
+    Kg = n(675991);
+class KS extends nE.A {
     callbackActions = {
         [eG.dv.VIDEO]: () => {
             ek.Ay.supports(iC.O5.VIDEO) &&
                 (ek.Ay.isVideoEnabled()
                     ? ig.default.setVideoEnabled(!1)
-                    : (0, D6.A)(() => ig.default.setVideoEnabled(!0), j.BRT.APP));
+                    : (0, D7.A)(() => ig.default.setVideoEnabled(!0), j.BRT.APP));
         },
         [eG.dv.MUTE]: () => ig.default.toggleSelfMute({ location: "Thumbar" }),
         [eG.dv.DEAFEN]: () => ig.default.toggleSelfDeaf({ location: "Thumbar" }),
@@ -57322,9 +57334,9 @@ class Kg extends nE.A {
             r = ek.Ay.isVideoEnabled(),
             a = ek.Ay.isVideoAvailable(),
             s = nm.A.getChannel(e),
-            l = null == s || (0, D0.r)(s),
-            { reachedLimit: o, limit: d } = null != s ? (0, DJ.M)(s) : { reachedLimit: void 0, limit: void 0 },
-            c = (0, Km.Q)({
+            l = null == s || (0, D2.r)(s),
+            { reachedLimit: o, limit: d } = null != s ? (0, D1.M)(s) : { reachedLimit: void 0, limit: void 0 },
+            c = (0, Kg.Q)({
                 enabled: r,
                 join: !1,
                 channel: s,
@@ -57347,33 +57359,33 @@ class Kg extends nE.A {
             this.setThumbarButtons(u));
     }, 100);
     setThumbarButtons(e) {
-        KT()(this.prevButtons, e) || ((this.prevButtons = e), eV.Ay.setThumbarButtons(e));
+        Km()(this.prevButtons, e) || ((this.prevButtons = e), eV.Ay.setThumbarButtons(e));
     }
 }
-let KS = new Kg();
-var KN = n(350723),
-    KC = n(346142),
-    KO = n(848421);
-function KR(e) {
+let KN = new KS();
+var KC = n(350723),
+    KO = n(346142),
+    KR = n(848421);
+function KL(e) {
     let { children: t } = e;
     return (
-        eI.useEffect(() => (L0.A.initialize(), () => L0.A.cleanup()), []),
+        eI.useEffect(() => (L2.A.initialize(), () => L2.A.cleanup()), []),
         (0, M.jsx)(tl.vd, {
-            children: (0, M.jsx)(tV.Ix, { history: (0, l5.JK)(), children: (0, M.jsx)(KO.Kl, { children: t }) }),
+            children: (0, M.jsx)(tV.Ix, { history: (0, l5.JK)(), children: (0, M.jsx)(KR.Kl, { children: t }) }),
         })
     );
 }
-var KL = n(306173),
-    Ky = n(279234);
-let KD = new ez.A("libdiscore"),
-    Kv = !1;
-async function Kb() {
-    if (!Kv) {
+var Ky = n(306173),
+    KD = n(279234);
+let Kv = new ez.A("libdiscore"),
+    Kb = !1;
+async function KM() {
+    if (!Kb) {
         try {
             let e;
-            await (0, Ky.P)();
-            let t = (0, KL.t7)(6, 7);
-            (KD.info("The answer for life the universe and everything is:", t),
+            await (0, KD.P)();
+            let t = (0, Ky.t7)(6, 7);
+            (Kv.info("The answer for life the universe and everything is:", t),
                 (e = []),
                 e3.ML.forEach((t) => {
                     let n = t.getEnabledFeatureName();
@@ -57383,7 +57395,7 @@ async function Kb() {
         } catch (e) {
             !(function (e) {
                 let t, n;
-                KD.error("Failed to execute smoke test:", e);
+                Kv.error("Failed to execute smoke test:", e);
                 let i =
                     ((t = ""),
                     (n = null),
@@ -57397,50 +57409,50 @@ async function Kb() {
                 W.default.track(j.HAw.LIBDISCORE_LOADED, { success: !1, error: i });
             })(e);
         }
-        Kv = !0;
+        Kb = !0;
     }
 }
-var KM = n(300923),
-    KP = n(316501);
-let KU = !1,
-    Kw = null,
+var KP = n(300923),
+    KU = n(316501);
+let Kw = !1,
     KG = null,
-    Kx = (0, H.mj)({
+    Kx = null,
+    Kk = (0, H.mj)({
         name: "2026-06-web-translate-dom-guard",
         kind: "installation",
         defaultConfig: { enabled: !0 },
         variations: { 1: { enabled: !1 } },
     });
-function Kk() {
-    Kx.getConfig({ location: "web_app_entrypoint" }).enabled ||
-        (KU &&
-            ((KU = !1),
-            null != Kw && (Node.prototype.removeChild = Kw),
-            null != KG && (Node.prototype.insertBefore = KG)),
-        Hk.A.removeChangeListener(Kk));
+function KF() {
+    Kk.getConfig({ location: "web_app_entrypoint" }).enabled ||
+        (Kw &&
+            ((Kw = !1),
+            null != KG && (Node.prototype.removeChild = KG),
+            null != Kx && (Node.prototype.insertBefore = Kx)),
+        Ro.A.removeChangeListener(KF));
 }
-var KF = n(394072);
-(FV.default.cssDebuggingEnabled && n.e("836050").then(n.t.bind(n, 581929, 19)), (0, KP.pF)(), (0, KF.tO)());
-let KB = 5 * i_.A.Millis.MINUTE,
-    KV = document.getElementById("app-mount");
-(ti()(null != KV, "Could not find app-mount"),
-    (KV.className = __OVERLAY__ ? "" : KM.l),
-    !KU &&
+var KB = n(394072);
+(Fj.default.cssDebuggingEnabled && n.e("836050").then(n.t.bind(n, 581929, 19)), (0, KU.pF)(), (0, KB.tO)());
+let KV = 5 * i_.A.Millis.MINUTE,
+    KH = document.getElementById("app-mount");
+(ti()(null != KH, "Could not find app-mount"),
+    (KH.className = __OVERLAY__ ? "" : KP.l),
+    !Kw &&
         (0, eB.isWeb)() &&
         "function" == typeof Node &&
         null != Node.prototype &&
-        ((KU = !0),
-        (Kw = Node.prototype.removeChild),
+        ((Kw = !0),
+        (KG = Node.prototype.removeChild),
         (Node.prototype.removeChild = function (e) {
-            return e.parentNode !== this ? e : Kw.call(this, e);
+            return e.parentNode !== this ? e : KG.call(this, e);
         }),
-        (KG = Node.prototype.insertBefore),
+        (Kx = Node.prototype.insertBefore),
         (Node.prototype.insertBefore = function (e, t) {
-            return null != t && t.parentNode !== this ? e : KG.call(this, e, t);
+            return null != t && t.parentNode !== this ? e : Kx.call(this, e, t);
         })),
-    (0, eB.isWeb)() && (Hk.A.addChangeListener(Kk), Kk()));
-let KH = (0, tt.createRoot)(KV),
-    Kj = {
+    (0, eB.isWeb)() && (Ro.A.addChangeListener(KF), KF()));
+let Kj = (0, tt.createRoot)(KH),
+    KW = {
         "/oauth2/authorize": function (e) {
             let t = e?.get("client_id"),
                 n = e?.get("scope")?.split(" "),
@@ -57455,7 +57467,7 @@ let KH = (0, tt.createRoot)(KV),
                 null == n ||
                 null == r ||
                 null == a ||
-                ((0, kS.openOAuth2Modal)({
+                ((0, kC.openOAuth2Modal)({
                     clientId: t,
                     scopes: n,
                     redirectUri: r,
@@ -57470,12 +57482,12 @@ let KH = (0, tt.createRoot)(KV),
         },
         "/one-time": function (e) {
             let t = e?.get("token");
-            return null != t && (Fl({ token: t }), !0);
+            return null != t && (Fd({ token: t }), !0);
         },
     };
-function KW(e) {
-    let t = (0, M.jsx)(Wk.e, { children: (0, M.jsx)(KR, { children: (0, M.jsx)(e, {}) }) });
-    return KH.render(t);
+function KY(e) {
+    let t = (0, M.jsx)(WF.e, { children: (0, M.jsx)(KL, { children: (0, M.jsx)(e, {}) }) });
+    return Kj.render(t);
 }
 if (null != eg.A) {
     (eg.A.setUncaughtExceptionHandler?.((e, t) => {
@@ -57497,57 +57509,57 @@ if (null != eg.A) {
         eV.Ay.initializeExitHook(),
         eV.Ay.initializeWERHandler());
 }
-if (((0, KC.M)(window), __OVERLAY__)) KW(() => (0, M.jsx)(tr.W, { children: (0, M.jsx)(YH, {}) }));
-else if (null != window.require && null == window.DiscordNative) KW(tF);
+if (((0, KO.M)(window), __OVERLAY__)) KY(() => (0, M.jsx)(tr.W, { children: (0, M.jsx)(Yj, {}) }));
+else if (null != window.require && null == window.DiscordNative) KY(tF);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), eB.isPlatformEmbedded)) {
         ((window.onbeforeunload = () => eV.Ay.beforeUnload()),
             eV.Ay.on("HELP_OPEN", () => window.open(tG.A.getCommunityURL())));
-        let e = new iu.J_(KB, () => eV.Ay.purgeMemory());
+        let e = new iu.J_(KV, () => eV.Ay.purgeMemory());
         (eV.Ay.on("MAIN_WINDOW_BLUR", () => {
-            (e.delay(), eV.Ay.setFocused(!1), (0, KN.XC)(window, !1));
+            (e.delay(), eV.Ay.setFocused(!1), (0, KC.XC)(window, !1));
         }),
             eV.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                (e.cancel(), eV.Ay.setFocused(!0), (0, KN.XC)(window, !0));
+                (e.cancel(), eV.Ay.setFocused(!0), (0, KC.XC)(window, !0));
             }),
             eV.Ay.on("MAIN_WINDOW_PATH", function (e, t, n) {
                 let i = null != n ? new URLSearchParams(n) : null;
-                Kj[t]?.(i) || (0, l5.pX)(t);
+                KW[t]?.(i) || (0, l5.pX)(t);
             }),
             eV.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, KN.R)(window);
+                (0, KC.R)(window);
             }));
     }
-    (Kl.initialize(),
-        Y2.initialize(),
+    (Ko.initialize(),
+        Y3.initialize(),
         {
             instance: null,
             init() {
-                null == this.instance && (this.instance = new Y9());
+                null == this.instance && (this.instance = new Ke());
             },
         }.init(),
         {
             init() {
-                (k.h.subscribe("CONNECTION_OPEN", KE),
-                    k.h.subscribe("LOGOUT", KE),
-                    k.h.subscribe("STREAM_DELETE", KE),
+                (k.h.subscribe("CONNECTION_OPEN", KA),
+                    k.h.subscribe("LOGOUT", KA),
+                    k.h.subscribe("STREAM_DELETE", KA),
                     k.h.subscribe("RTC_CONNECTION_VIDEO", (e) => {
                         let { guildId: t, channelId: n, userId: i, streamId: r, context: a } = e;
                         null == r ||
                             a !== iC.x.STREAM ||
                             i !== ei.default.getId() ||
                             __OVERLAY__ ||
-                            (KE(), (d = r), KA(r, t, n, i));
+                            (KA(), (d = r), Kh(r, t, n, i));
                     }),
                     k.h.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", (e) => {
                         let { videoState: t } = e;
-                        Kc = t === j.uPF.PAUSED;
+                        Ku = t === j.uPF.PAUSED;
                     }));
             },
         }.init(),
-        Kn.initialize(),
-        KI.initialize(),
-        KS.initialize(),
-        Kb(),
-        KW(() => (0, M.jsx)(tr.W, { children: (0, M.jsx)(Y0, {}) })));
+        Ki.initialize(),
+        Kp.initialize(),
+        KN.initialize(),
+        KM(),
+        KY(() => (0, M.jsx)(tr.W, { children: (0, M.jsx)(Y1, {}) })));
 }
