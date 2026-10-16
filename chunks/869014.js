@@ -54,8 +54,9 @@ function L(e) {
         if ((s.A.isFocused() && E.error("Main window is reported as focused when it should not be!"), n || i)) {
             T = n ? "OverlayGameFocused" : "OverlayWindowFocused";
             let i = S--,
-                r = t.requestAnimationFrame((e) => C(i, e));
-            return (N.set(i, { callback: e, overlayWindow: new WeakRef(t), overlayFrameId: r, mainFrameId: null }), i);
+                r = t.performance.timeOrigin - performance.timeOrigin,
+                a = t.requestAnimationFrame((e) => C(i, e + r));
+            return (N.set(i, { callback: e, overlayWindow: new WeakRef(t), overlayFrameId: a, mainFrameId: null }), i);
         }
     } catch (e) {
         (E.error("RAF redirect failed, falling back to original. Cause:", e),
