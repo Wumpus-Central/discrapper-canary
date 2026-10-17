@@ -917,7 +917,7 @@ let nn = { [eL.Ur.UNREAD]: !0, [eL.Ur.TODAY]: !0, [eL.Ur.YESTERDAY]: !1, [eL.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? nt : nn }));
         },
     }));
-var na = t(871423),
+var na = t(645617),
     ni = t(875436);
 function nl(e) {
     e.stopPropagation();

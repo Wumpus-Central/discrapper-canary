@@ -103,7 +103,7 @@ var tr = i(387755),
     tO = i(609145),
     tb = i(929921),
     tx = i(753070),
-    tL = i(905322),
+    tL = i(431788),
     tD = i(941971),
     tR = i(521981),
     tk = i(976860),
@@ -187,7 +187,7 @@ function tX(t) {
     });
 }
 var tW = i(119191),
-    tq = i(671210);
+    tq = i(25448);
 function tQ(t) {
     t && (0, tU.Ak)(D.cH, D.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
@@ -196,8 +196,8 @@ var tZ = i(554146),
     t1 = i(429913),
     t2 = i(263577),
     t9 = i(826673),
-    t3 = i(192820),
-    t8 = i(308726),
+    t8 = i(192820),
+    t3 = i(308726),
     t5 = i(46282),
     t7 = i(818023),
     t4 = i(731854),
@@ -577,7 +577,7 @@ let eC = new eS(s.h, {
         if (M.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (V.A.isNotificationDisabled(F.KS.WelcomeNudge)) return null;
-            t3.Ay.supports(t4.O5.VIDEO) ||
+            t8.Ay.supports(t4.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== F.Jr.GO_LIVE_VOICE && t.type !== F.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, G.Y9)(F.KS.WelcomeNudge, {
                     notif_type: F.KS.WelcomeNudge,
@@ -627,7 +627,7 @@ let eC = new eS(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, B.jsx)(t8.ru, {
+                                (0, B.jsx)(t3.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",

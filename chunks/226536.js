@@ -3,7 +3,7 @@ var i = n(582128),
     r = n(632296),
     a = n(508270);
 function s() {
-    let e = n(855494).A;
+    let e = n(346148).A;
     return o()
         .filter((e) => {
             let { enabled: t } = e;

@@ -20,7 +20,7 @@ var l,
     C = n(429913),
     _ = n(500049),
     I = n(735991),
-    j = n(717048),
+    j = n(494667),
     y = n(503698),
     v = n.n(y),
     P = n(320448),
@@ -668,13 +668,13 @@ function eQ(e) {
                                                         n.e("861060"),
                                                         n.e("364827"),
                                                         n.e("77333"),
-                                                        n.e("56366"),
+                                                        n.e("264572"),
                                                         n.e("217229"),
                                                         n.e("477175"),
                                                         n.e("960235"),
                                                         n.e("402368"),
                                                         n.e("190779"),
-                                                        n.e("910486"),
+                                                        n.e("716460"),
                                                         n.e("221856"),
                                                         n.e("678157"),
                                                         n.e("147134"),
@@ -684,7 +684,7 @@ function eQ(e) {
                                                         n.e("40291"),
                                                         n.e("733115"),
                                                         n.e("373122"),
-                                                        n.e("217951"),
+                                                        n.e("724285"),
                                                         n.e("755936"),
                                                         n.e("147662"),
                                                         n.e("609705"),
@@ -960,13 +960,13 @@ function e1(e) {
         })
     );
 }
-var e8 = n(34188),
-    e2 = n(700623),
+var e2 = n(34188),
+    e8 = n(700623),
     e3 = n(177953),
     e7 = n(825484),
     e6 = n(683071),
-    e5 = n(900797),
-    e4 = n(847374),
+    e4 = n(900797),
+    e5 = n(847374),
     e9 = n(10716),
     te = n(702841),
     tt = n(150934),
@@ -1220,7 +1220,7 @@ function tv(e) {
                       ? (0, r.jsxs)("div", {
                             className: tI.wi,
                             children: [
-                                (0, r.jsx)(e8.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1233,7 +1233,7 @@ function tv(e) {
                       ? (0, r.jsxs)("div", {
                             className: tI.wi,
                             children: [
-                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e8.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1415,8 +1415,8 @@ function tb(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e4.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e4.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1526,13 +1526,13 @@ var tq = n(111042),
     tJ = n(403362),
     t0 = n(179771),
     t1 = n(168186),
-    t8 = n(594061),
-    t2 = n(935208),
+    t2 = n(594061),
+    t8 = n(935208),
     t3 = n(630248),
     t7 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t8.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1545,7 +1545,7 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             (i?.forEach((e) => {
-                let t = t2.default.extractTimestamp(e.id);
+                let t = t8.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute());
@@ -1563,7 +1563,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         (t?.forEach((t) => {
-            let n = t2.default.extractTimestamp(t.id);
+            let n = t8.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1574,8 +1574,8 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t5 = n(457408),
-    t4 = n(712440),
+var t4 = n(457408),
+    t5 = n(712440),
     t9 = n(733110),
     ne = n(73153);
 let nt = 10 * Y.A.Millis.MINUTE,
@@ -1968,7 +1968,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t2.default.extractTimestamp(n);
+                        return -t8.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2190,8 +2190,8 @@ var nQ = n(984516),
     nJ = n(935573),
     n0 = n(651753),
     n1 = n(485845),
-    n8 = n(994369),
-    n2 = n(240591),
+    n2 = n(994369),
+    n8 = n(240591),
     n3 = n(46477);
 function n7(e, t) {
     var n, l;
@@ -2247,12 +2247,12 @@ function n6(e, t) {
     let n = t3.A.getScoreWithoutLoadingLatest(e.id);
     return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n5(e, t) {
+function n4(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n4(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2449,7 +2449,7 @@ function lm(e) {
                             includeNonEmbeddedApps: a,
                         } = e,
                         r = "channel" === t.type ? t.channel : void 0,
-                        c = (0, n2.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
+                        c = (0, n8.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
                         d = (0, g.SD)(t, c, i),
                         u = (0, g.A4)(c, i),
                         m = o.useCallback(
@@ -2494,7 +2494,7 @@ function lm(e) {
                     return n7(c, {
                         limit: l,
                         filterPredicates: [
-                            ((m = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
+                            ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
                             (p = {}),
                             (e) => {
                                 let { context: n, userId: l, roleIds: i, isImpersonating: s } = m;
@@ -2586,7 +2586,7 @@ function lm(e) {
                                 let n = z.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return z.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n4,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2631,7 +2631,7 @@ function lm(e) {
                     return n7(u, {
                         limit: i,
                         filterPredicates: [
-                            ((d = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [
+                            ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
                                 M.kc.CHAT,
                                 M.kc.PRIMARY_ENTRY_POINT,
                             ])),
@@ -2675,7 +2675,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n6, n5],
+                        sortComparers: [n6, n4],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -2713,7 +2713,7 @@ function lm(e) {
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
                             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                            source: n8.V.APP_LAUNCHER,
+                            source: n2.V.APP_LAUNCHER,
                         }),
                         totalPages:
                             n0.A.getSearchResults({
@@ -2725,7 +2725,7 @@ function lm(e) {
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n8.V.APP_LAUNCHER,
+                                source: n2.V.APP_LAUNCHER,
                             })?.totalPages ?? 0,
                     }),
                     [n, r, c, a],
@@ -2744,7 +2744,7 @@ function lm(e) {
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
                                     excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                    source: n8.V.APP_LAUNCHER,
+                                    source: n2.V.APP_LAUNCHER,
                                 })?.results ?? [],
                         ),
                     [m, r, n, c, a],
@@ -2772,7 +2772,7 @@ function lm(e) {
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n8.V.APP_LAUNCHER,
+                                source: n2.V.APP_LAUNCHER,
                             },
                         });
                     },
@@ -3164,7 +3164,7 @@ function lv(e) {
                         } = e,
                         s = (0, A.bG)([t9.default], () => t9.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t9.FetchState.NOT_FETCHED && t4.A.fetch();
+                        i && s === t9.FetchState.NOT_FETCHED && t5.A.fetch();
                     }, [i, s]);
                     let a = (0, A.yK)([t9.default], () =>
                             i
@@ -3183,7 +3183,7 @@ function lv(e) {
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t5.A)(e.id));
+                            return !(!1 === m && (0, t4.A)(e.id));
                         }
                         return l
                             ? u
@@ -3380,7 +3380,7 @@ function lS(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t5.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t4.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

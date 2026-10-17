@@ -1,6 +1,6 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(115004),
-    a = r(167385);
+    a = r(389766);
 class i extends a.AbstractParserWithWordBoundaryChecking {
     innerPattern(e) {
         return /(cet?)?\s*(matin|soir|apr\xe8s-midi|aprem|a midi|\xe0 minuit)(?=\W|$)/i;

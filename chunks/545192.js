@@ -1,3 +1,0 @@
-e.exports = JSON.parse(
-    '{"Ocbn9P":[[8,"$link",["Mehr erfahren"],[[1,"deepLinkToNitroHome"]]]],"IyCdAU":["Uploads bis zu 1\xa0GB sind da"],"n8j5s/":["Sende Dateien mit einer Gr\xf6\xdfe von bis zu 1\xa0GB. Perfekt f\xfcr Spielclips, Kunst und mehr."],"mRy6sO":["Mit Nitro freischalten"],"Uty2/X":["Gr\xf6\xdfere Dateien erwarten dich"],"VAgI8Q":["Nitro hat gerade Uploads mit einer Gr\xf6\xdfe von bis zu 1\xa0GB freigeschaltet. Das ist eine ganze Menge Datei."],"rY0e9i":["1-GB-Uploads, jetzt live"],"LhfXZN":["Dein Datei-Uploadlimit ist gerade auf 1\xa0GB gesprungen. Das ist eine Menge Datei."],"H523FI":["Dein Uploadlimit ist gerade auf 1\xa0GB gesprungen."],"/cV3ka":["1-GB-Uploads"]}',
-);

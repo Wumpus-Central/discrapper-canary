@@ -55,7 +55,7 @@ let V = (0, x.mj)({
     F = [0.5, 0.75, 1, 1.2, 1.5, 2];
 var B = s(650583),
     H = s(105292),
-    W = s(711127),
+    W = s(871273),
     G = s(311225);
 let z = new Set([B.dh.SPACE, B.dh.ARROW_LEFT, B.dh.ARROW_RIGHT]);
 function K(e) {

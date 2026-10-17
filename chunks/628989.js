@@ -668,7 +668,7 @@ var eR = l(269115),
     eP = l(758836),
     eB = l(49999),
     eH = l(818348),
-    eU = l(394107),
+    eU = l(344045),
     eF = l(196064);
 let eV = "GAME_SERVER_HOSTING_BANNER";
 function ew(e) {
@@ -939,12 +939,12 @@ let e1 = function (e) {
               }),
           });
 };
-var e2 = l(172218),
-    e5 = l(28863),
+var e5 = l(172218),
+    e2 = l(28863),
     e4 = l(9530);
 let e9 = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: l } = e,
-        n = (0, e2.K)(
+        n = (0, e5.K)(
             (e) => {
                 l?.(e);
             },
@@ -984,7 +984,7 @@ let e9 = function (e) {
                                       o && t.body,
                                       o && u && " ",
                                       u &&
-                                          (0, i.jsx)(e5.Anchor, {
+                                          (0, i.jsx)(e2.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: e4.CU,
                                               style: { ...a },

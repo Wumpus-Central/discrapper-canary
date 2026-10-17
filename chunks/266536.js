@@ -58,7 +58,7 @@ var D = s(342952),
     el = s(403362),
     er = s(279250),
     en = s(652215),
-    ea = s(807207),
+    ea = s(341621),
     ec = s(105292),
     eo = s(675356);
 function ed(e) {
@@ -1608,7 +1608,7 @@ var e9 = s(505312),
     tl = s(270816),
     tr = s(498642),
     tn = s(309010),
-    ta = s(586760);
+    ta = s(436166);
 function tc(e) {
     switch (e) {
         case eR.jQ.PRESET_CUSTOM:

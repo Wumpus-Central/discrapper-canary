@@ -103,8 +103,8 @@ function Y(e) {
         };
     }, [t, e, n]);
 }
-var K = n(394107),
-    Z = n(583741);
+var K = n(344045),
+    Z = n(649975);
 function q(e) {
     let { fallback: t, invoicePreview: n } = e,
         { gameName: l } = m(),
@@ -3591,7 +3591,7 @@ var i_ = n(428644),
     ij = n(421108),
     iR = n(860300),
     iO = n(298305),
-    iM = n(341535),
+    iM = n(805161),
     iL = n(799636);
 function ik(e) {
     let { className: t } = e,

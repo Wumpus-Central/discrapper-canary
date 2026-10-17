@@ -342,13 +342,13 @@ var eQ = n(808380),
     e0 = n(263577),
     e1 = n(790381),
     e3 = n(266080),
-    e2 = n(70191);
-let e5 = { [eQ.Y.XBOX]: e3.A, [eQ.Y.PLAYSTATION]: e1.A };
-function e9(e) {
+    e5 = n(70191);
+let e2 = { [eQ.Y.XBOX]: e3.A, [eQ.Y.PLAYSTATION]: e1.A };
+function e4(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
-            let e = t.find(e2.A);
+            let e = t.find(e5.A);
             if (null != a) {
                 let n = a.altId ?? a.id;
                 return t.find((e) => e.application_id === n) ?? e;
@@ -361,7 +361,7 @@ function e9(e) {
         : (function (e) {
               let { gameProfileEntry: t, gameApplication: n, gameIconSize: l, platformIconSizePx: r } = e,
                   s = t?.extra?.platform,
-                  a = null != s ? e5[s] : null,
+                  a = null != s ? e2[s] : null,
                   u =
                       null != a
                           ? (0, i.jsx)(a, { width: r, height: r, color: eq.A.colors.INTERACTIVE_ICON_DEFAULT })
@@ -371,9 +371,9 @@ function e9(e) {
               return (0, i.jsx)(ea.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e4 = G._3.SIZE_32,
+let e9 = G._3.SIZE_32,
     e6 = [et.iq, et.tR, et.K7, et.sp, et.MK];
-function e7(e) {
+function e8(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -453,7 +453,7 @@ function e7(e) {
         ],
     });
 }
-function e8(e) {
+function e7(e) {
     let {
             user: t,
             activities: n,
@@ -470,7 +470,7 @@ function e8(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, eh.A)({ userId: g, size: e4, animateOnHover: !0, guildId: null }),
+        } = (0, eh.A)({ userId: g, size: e9, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -507,7 +507,7 @@ function e8(e) {
             [c, g, _],
         ),
         C = (0, F.K)(y),
-        v = r.useMemo(() => n?.find(e2.A), [n]),
+        v = r.useMemo(() => n?.find(e5.A), [n]),
         D = (0, en.A)({ activity: v, user: t }),
         b = (0, ee.zD)(D) ? D : void 0,
         j = r.useCallback(() => {
@@ -532,7 +532,7 @@ function e8(e) {
                     let { type: t } = e;
                     return t === eX.$pd.PLAYING;
                 }) == null && null != p
-                    ? (0, i.jsx)(e7, {
+                    ? (0, i.jsx)(e8, {
                           channel: p,
                           textVariant: "text-xs/medium",
                           activities: n ?? [],
@@ -608,7 +608,7 @@ let tt = r.memo((e) => {
             currentUserPlayingActivities: v,
             renderSubtext: R,
             renderUserContextMenu: D,
-        } = e8({
+        } = e7({
             user: t,
             activities: n,
             relationshipType: E,
@@ -632,11 +632,11 @@ let tt = r.memo((e) => {
             },
             [l, c, t.id],
         ),
-        F = n.some(e2.A),
+        F = n.some(e5.A),
         G = (0, d.b4)(),
         L = r.useMemo(() => {
             let e = G?.altId ?? G?.id;
-            return null != e && n.some((t) => (0, e2.A)(t) && t.application_id === e);
+            return null != e && n.some((t) => (0, e5.A)(t) && t.application_id === e);
         }, [n, G]),
         P = C !== eX.clD.ONLINE && C !== eX.clD.IDLE && C !== eX.clD.DND,
         V = (0, ex.A2)(t.id),
@@ -666,7 +666,7 @@ let tt = r.memo((e) => {
                                 "div",
                                 {
                                     className: eT.im,
-                                    children: (0, i.jsx)(e9, {
+                                    children: (0, i.jsx)(e4, {
                                         activities: n,
                                         gameProfileEntry: N,
                                         gameIconSize: ea.M.SMALL,
@@ -691,7 +691,7 @@ let tt = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(U.eu, {
             ...S,
-            size: e4,
+            size: e9,
             src: p,
             isMobile: _,
             isTyping: !1,
@@ -743,7 +743,7 @@ let tn = r.memo((e) => {
             status: x,
             renderSubtext: T,
             renderUserContextMenu: _,
-        } = e8({
+        } = e7({
             user: t,
             activities: n,
             relationshipType: l,
@@ -824,7 +824,7 @@ let tn = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(U.eu, {
             ...I,
-            size: e4,
+            size: e9,
             src: m,
             isMobile: S,
             isTyping: !1,
@@ -847,7 +847,7 @@ let tn = r.memo((e) => {
                     G
                         ? (0, i.jsx)("div", {
                               className: eT.im,
-                              children: (0, i.jsx)(e9, {
+                              children: (0, i.jsx)(e4, {
                                   activities: n,
                                   gameProfileEntry: E,
                                   gameIconSize: ea.M.XSMALL,
@@ -1077,7 +1077,7 @@ function tk(e, t) {
         i = r.useCallback(() => l(t), [t]);
     return ((0, ty.RT)(e, t, l, tM), [n, i]);
 }
-var tO = n(671210),
+var tO = n(25448),
     tw = n(690132);
 function tF(e) {
     let {
@@ -1765,7 +1765,7 @@ let t3 = r.memo(function (e) {
     return (0, tB.fU)(s);
 });
 t3.displayName = "OverlayElapsedTime";
-let t2 = r.memo(function () {
+let t5 = r.memo(function () {
     let e = (0, t0.A)(),
         [t, n] = r.useState(() => Date.now());
     r.useEffect(() => {
@@ -1775,7 +1775,7 @@ let t2 = r.memo(function () {
     let l = (0, s.bG)([tW.A], () => tW.A.getDuration() ?? 0, [t]) ?? 0;
     return (0, tB.fU)(l / 1e3);
 });
-function t5(e) {
+function t2(e) {
     var t;
     let n,
         { currentUser: l, activity: a, currentGameName: u } = e,
@@ -1919,7 +1919,7 @@ function t5(e) {
                                     className: t1.p0,
                                     variant: "code",
                                     tag: "div",
-                                    children: (0, i.jsx)(t2, {}),
+                                    children: (0, i.jsx)(t5, {}),
                                 })
                           : null,
                 ],
@@ -1927,7 +1927,7 @@ function t5(e) {
         ],
     });
 }
-function t9(e) {
+function t4(e) {
     let { currentUser: t, activity: n, currentGameName: l, activeTab: u, onTabChange: d } = e,
         {
             friendsHasUnreadFavorites: c,
@@ -1983,7 +1983,7 @@ function t9(e) {
     return (0, i.jsxs)("div", {
         className: t1.kL,
         children: [
-            (0, i.jsx)(t5, { currentUser: t, activity: n, currentGameName: l }),
+            (0, i.jsx)(t2, { currentUser: t, activity: n, currentGameName: l }),
             (0, i.jsx)("div", {
                 className: t1.vR,
                 role: "tablist",
@@ -1997,7 +1997,7 @@ function t9(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t4,
+                        t9,
                         {
                             tab: t,
                             label: eB.intl.formatToPlainString(n, {}),
@@ -2013,7 +2013,7 @@ function t9(e) {
         ],
     });
 }
-function t4(e) {
+function t9(e) {
     let {
             tab: t,
             label: n,
@@ -2035,10 +2035,10 @@ function t4(e) {
         ],
     });
 }
-t2.displayName = "OverlayVoiceCallElapsedTime";
+t5.displayName = "OverlayVoiceCallElapsedTime";
 var t6 = n(594831),
-    t7 = n(645959),
-    t8 = n(812993),
+    t8 = n(645959),
+    t7 = n(812993),
     ne = n(602853),
     nt = n(713654),
     nn = n(636537),
@@ -2665,7 +2665,7 @@ function nz(e) {
     );
 }
 function nX(e) {
-    return (0, i.jsx)(t8.hV, { count: e });
+    return (0, i.jsx)(t7.hV, { count: e });
 }
 function nB(e) {
     let { channelId: t, listItemId: n, mentionCount: l, unread: r } = e,
@@ -2954,10 +2954,10 @@ function n1() {
         c =
             ((e = (0, t6.Dz)()),
             (0, s.yK)(
-                [t7.A, eI.A],
+                [t8.A, eI.A],
                 () => {
                     let t = [];
-                    for (let e of t7.A.getPrivateChannelIds()) {
+                    for (let e of t8.A.getPrivateChannelIds()) {
                         let n = eI.A.getChannel(e);
                         null != n && t.push({ channel: n, voiceStates: [] });
                     }
@@ -3246,13 +3246,13 @@ function n1() {
     });
 }
 var n3 = n(776096),
-    n2 = n(607567),
-    n5 = n(377802),
-    n9 = n(342952),
-    n4 = n(676923),
+    n5 = n(607567),
+    n2 = n(377802),
+    n4 = n(342952),
+    n9 = n(676923),
     n6 = n(342296),
-    n7 = n(936520),
-    n8 = n(956123);
+    n8 = n(936520),
+    n7 = n(956123);
 let le = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
         d = r.useRef(null),
@@ -3269,7 +3269,7 @@ let le = r.memo(function (e) {
         })(t, l),
         I = (0, ei.A)({ userId: l, guildId: n }),
         A = (0, s.bG)([em.A], () => null != n && null != em.A.getStreamForUser(l, n), [n, l]),
-        f = (0, s.bG)([R.A], () => R.A.findActivity(l, e2.A), [l]),
+        f = (0, s.bG)([R.A], () => R.A.findActivity(l, e5.A), [l]),
         p = (0, eJ.h)(f?.application_id),
         N = (0, eS.tx)(n ?? void 0, t, g),
         x = r.useCallback(
@@ -3292,14 +3292,14 @@ let le = r.memo(function (e) {
                   (0, i.jsx)(E.D, {
                       ...e,
                       innerRef: d,
-                      className: n8.gD,
+                      className: n7.gD,
                       onDoubleClick: u,
                       onContextMenu: x,
                       onClick: (e) => {
                           (e.preventDefault(), e.stopPropagation(), h(!0));
                       },
                       children: (0, i.jsxs)("div", {
-                          className: n8.h6,
+                          className: n7.h6,
                           children: [
                               (0, i.jsx)(U.eu, {
                                   src: g.getAvatarURL(n ?? void 0, 24),
@@ -3307,7 +3307,7 @@ let le = r.memo(function (e) {
                                   "aria-label": N,
                               }),
                               (0, i.jsxs)(S.E, {
-                                  className: n8.rg,
+                                  className: n7.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
@@ -3315,21 +3315,21 @@ let le = r.memo(function (e) {
                                           userName: N,
                                           displayNameStyles: I,
                                           effectDisplayType: er.G.STATIC,
-                                          textClassName: n8.m2,
+                                          textClassName: n7.m2,
                                       }),
                                       (0, i.jsx)(ed.Ay, { userId: l, disableGuildProfile: !0 }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: n8.ZA,
+                                  className: n7.ZA,
                                   onDoubleClick: u,
-                                  children: (0, i.jsx)(n7.Kc, {
+                                  children: (0, i.jsx)(n8.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
                                       isStreaming: A,
-                                      className: n8.ZA,
-                                      iconClassName: n8.Ow,
+                                      className: n7.ZA,
+                                      iconClassName: n7.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
@@ -3340,7 +3340,7 @@ let le = r.memo(function (e) {
                                       disabled: !1,
                                   }),
                               }),
-                              null != p ? (0, i.jsx)(ea.A, { game: p, size: ea.M.XSMALL, className: n8.IV }) : null,
+                              null != p ? (0, i.jsx)(ea.A, { game: p, size: ea.M.XSMALL, className: n7.IV }) : null,
                           ],
                       }),
                   }),
@@ -3378,8 +3378,8 @@ function ll(e) {
     return 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: n8.X0,
-              children: (0, i.jsx)(n9.A, {
+              className: n7.X0,
+              children: (0, i.jsx)(n4.A, {
                   users: l,
                   guildId: n ?? void 0,
                   maxUsers: Math.min(l.length, 4),
@@ -3408,9 +3408,9 @@ function li(e) {
         f = (0, s.bG)([ef.Ay], () => ef.Ay.getVoiceChannelId() === n, [n]),
         p = (0, s.bG)([eV.A], () => null != m && (!!m.isPrivate?.() || eV.A.can(eX.xBc.READ_MESSAGE_HISTORY, m)), [m]),
         [N] = (0, s.bG)(
-            [n2.Ay],
+            [n5.Ay],
             () =>
-                null == m || null == E ? [[], 0] : [n2.Ay.getVoiceStatesForChannel(m), n2.Ay.getVoiceStateVersion(E)],
+                null == m || null == E ? [[], 0] : [n5.Ay.getVoiceStatesForChannel(m), n5.Ay.getVoiceStateVersion(E)],
             [m, E],
             j.D,
         ),
@@ -3419,7 +3419,7 @@ function li(e) {
             [eH.A, R.A],
             () => {
                 for (let e of Object.values(eH.A.getVoiceStatesForChannel(n))) {
-                    let t = R.A.findActivity(e.userId, e2.A);
+                    let t = R.A.findActivity(e.userId, e5.A);
                     if (t?.name != null) return t.name;
                 }
                 return null;
@@ -3489,14 +3489,14 @@ function li(e) {
         {
             Component: H,
             events: { onMouseEnter: Y, onMouseLeave: K },
-        } = (0, n5.O)();
+        } = (0, n2.O)();
     function z() {
         let e = f ? eB.intl.string(eB.t["6vrfgt"]) : eB.intl.string(eB.t.S0W8Z5),
             t = f ? L.hex() : G.hex(),
             n = f ? H : nx._;
         return (0, i.jsx)("div", {
             onDoubleClick: ln,
-            children: (0, i.jsx)(n4.S, {
+            children: (0, i.jsx)(n9.S, {
                 tooltipText: e,
                 onClick: f ? b : D,
                 onMouseEnter: Y,
@@ -3534,12 +3534,12 @@ function li(e) {
                 secondaryText:
                     null != T
                         ? (0, i.jsxs)("div", {
-                              className: n8.z2,
+                              className: n7.z2,
                               children: [
                                   (0, i.jsx)(tV.GameControllerIcon, {
                                       size: "xxs",
                                       color: "currentColor",
-                                      className: n8.AE,
+                                      className: n7.AE,
                                   }),
                                   (0, i.jsx)(S.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
@@ -3552,7 +3552,7 @@ function li(e) {
                         case !x:
                             return e
                                 ? (0, i.jsxs)("div", {
-                                      className: n8.YT,
+                                      className: n7.YT,
                                       onDoubleClick: ln,
                                       children: [z(), (0, i.jsx)(ey.j, { tab: o.x.VOICE, targetId: n })],
                                   })
@@ -3562,7 +3562,7 @@ function li(e) {
                                 children: [
                                     d
                                         ? (0, i.jsxs)("div", {
-                                              className: n8.YT,
+                                              className: n7.YT,
                                               onDoubleClick: ln,
                                               children: [z(), (0, i.jsx)(ey.j, { tab: o.x.VOICE, targetId: n })],
                                           })
@@ -3577,7 +3577,7 @@ function li(e) {
             }),
             d && N.length > 0
                 ? (0, i.jsx)("div", {
-                      className: n8.Nz,
+                      className: n7.Nz,
                       children: N.slice(0, 25).map((e) =>
                           (0, i.jsx)(
                               le,
@@ -3899,7 +3899,7 @@ function lo() {
                 let l = n.rows[t];
                 if (null == l || !d.has(l.channelId)) return 50;
                 let i = eI.A.getChannel(l.channelId),
-                    r = Math.min((null != i ? n2.Ay.getVoiceStatesForChannel(i) : []).length, 25);
+                    r = Math.min((null != i ? n5.Ay.getVoiceStatesForChannel(i) : []).length, 25);
                 return r <= 0 ? 50 : 50 + (32 * r + (r - 1) * 2 + 8);
             },
             [d, en],
@@ -4001,7 +4001,7 @@ function l_() {
     return (0, i.jsxs)("div", {
         className: lT.kL,
         children: [
-            (0, i.jsx)(t9, {
+            (0, i.jsx)(t4, {
                 currentUser: h,
                 activity: E,
                 currentGameName: n?.name ?? null,
