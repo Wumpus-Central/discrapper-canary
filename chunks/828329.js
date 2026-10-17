@@ -518,7 +518,7 @@ var Q = a(22231),
     ea = a(625903),
     et = a(509434),
     eo = a(241326),
-    en = a(922016),
+    en = a(265872),
     ei = a(980707),
     es = a(477782),
     er = a(630271);
@@ -1784,7 +1784,7 @@ var e2 = a(501907),
     e3 = a(353509),
     e6 = a(834730),
     e8 = a(219052);
-function e9(e) {
+function e5(e) {
     let {
             items: l,
             selectedId: a,
@@ -1821,7 +1821,7 @@ function e9(e) {
                         "aria-labelledby": c,
                         children: l.map((e) =>
                             (0, t.jsx)(
-                                e5,
+                                e9,
                                 { item: e, formattedCount: null != e.count ? b.format(e.count) : void 0 },
                                 e.id,
                             ),
@@ -1837,7 +1837,7 @@ function e9(e) {
         ],
     });
 }
-function e5(e) {
+function e9(e) {
     let { item: l, formattedCount: a } = e,
         n = o.useRef(null);
     return (0, t.jsx)(e4.oz, {
@@ -1957,7 +1957,7 @@ let ln = [
                     let { variant: l, showCounts: a, disabled: n, keyboardActivation: i, panelAnimation: s } = e,
                         [r, d] = o.useState("account"),
                         u = a ? ln : ln.map((e) => ({ ...e, count: void 0 }));
-                    return (0, t.jsx)(e9, {
+                    return (0, t.jsx)(e5, {
                         "aria-label": "User settings",
                         items: u,
                         selectedId: r,
@@ -3050,7 +3050,7 @@ let l3 = {
 };
 var l6 = a(292825),
     l8 = a(105292);
-let l9 = {
+let l5 = {
     type: {
         label: "Type",
         type: "select",
@@ -3088,7 +3088,7 @@ let l9 = {
         ],
     },
 };
-var l5 = a(935063),
+var l9 = a(935063),
     l7 = a(307301),
     ae = a(683438),
     al = a(103557),
@@ -3098,7 +3098,7 @@ var l5 = a(935063),
     an = a(661531),
     ai = a(584454);
 let as = [
-        { id: "strength", label: "Strength", icon: l5.X },
+        { id: "strength", label: "Strength", icon: l9.X },
         { id: "wisdom", label: "Wisdom", icon: { type: "role", color: an.A.unsafe_rawColors.BRAND_500.css } },
         { id: "charisma", label: "Charisma" },
         { id: "intelligence", label: "Intelligence" },
@@ -3132,7 +3132,7 @@ let as = [
                                         case "tags":
                                             return { type: "tags", label: "Tags", items: d, onRemove: c };
                                         case "icon":
-                                            return { icon: l5.X, onClick: r.tE, "aria-label": "At" };
+                                            return { icon: l9.X, onClick: r.tE, "aria-label": "At" };
                                         case "text":
                                             return "https://discord.gg/";
                                         default:
@@ -3439,15 +3439,15 @@ let as = [
                                     (0, t.jsx)(eE.k, { ...x, clearable: !0 }),
                                     (0, t.jsx)(eE.k, {
                                         ...x,
-                                        leading: { icon: l5.X, onClick: r.tE, "aria-label": "At" },
+                                        leading: { icon: l9.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eE.k, { ...x, leading: l5.X }),
+                                    (0, t.jsx)(eE.k, { ...x, leading: l9.X }),
                                     (0, t.jsx)(eE.k, { ...x, leading: "https://discord.gg/" }),
                                     (0, t.jsx)(eE.k, {
                                         ...x,
-                                        trailing: { icon: l5.X, onClick: r.tE, "aria-label": "At" },
+                                        trailing: { icon: l9.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eE.k, { ...x, trailing: l5.X }),
+                                    (0, t.jsx)(eE.k, { ...x, trailing: l9.X }),
                                     (0, t.jsx)(eE.k, {
                                         ...x,
                                         leading: { type: "tags", label: "Tags", items: as.slice(0, 3) },
@@ -5226,13 +5226,13 @@ let a3 = {
 };
 var a6 = a(11779),
     a8 = a(872162);
-let a9 = [
+let a5 = [
         { id: "strength", label: "Strength", icon: a6.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
     ],
-    a5 = [
+    a9 = [
         { id: "safety", label: "Safety Center", href: "https://discord.com/safety" },
         { id: "support", label: "Support", href: "https://support.discord.com" },
     ],
@@ -5314,7 +5314,7 @@ let a9 = [
                 id: "tag-group-links",
                 component: function (e) {
                     let { disabled: l } = e;
-                    return (0, t.jsx)(a8.C, { mode: "link", label: "Discord resources", disabled: l, items: a5 });
+                    return (0, t.jsx)(a8.C, { mode: "link", label: "Discord resources", disabled: l, items: a9 });
                 },
                 controls: { disabled: { label: "Disabled", type: "boolean", defaultValue: !1 } },
             },
@@ -5334,7 +5334,7 @@ let a9 = [
                             variant: "filter",
                             label: "Character attributes",
                             disabled: l,
-                            items: a9,
+                            items: a5,
                             selectionMode: n,
                             selectedKeys: s,
                             onSelectionChange: u,
@@ -5782,7 +5782,7 @@ let tv = {
                                       role: b,
                                   });
                         },
-                        controls: l9,
+                        controls: l5,
                     },
                     {
                         name: "Old vs New",
@@ -5861,7 +5861,7 @@ let tv = {
                                       ],
                                   });
                         },
-                        controls: l9,
+                        controls: l5,
                     },
                 ],
             },

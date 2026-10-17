@@ -588,7 +588,7 @@ function e3(e) {
                 (0, n.jsxs)("div", {
                     className: eZ.$,
                     children: [
-                        (0, n.jsxs)("div", { className: eZ.gH, children: [(0, n.jsx)(e9, {}), (0, n.jsx)(e8, {})] }),
+                        (0, n.jsxs)("div", { className: eZ.gH, children: [(0, n.jsx)(e7, {}), (0, n.jsx)(e8, {})] }),
                         t ? b : null,
                     ],
                 }),
@@ -722,7 +722,7 @@ function e8() {
         children: l ? t : e.name,
     });
 }
-function e9() {
+function e7() {
     let e = (0, eT.Y_)(),
         t = (0, u.bG)([eP.A], () => (null != e.applicationId ? eP.A.getApplication(e.applicationId) : null)),
         l = t?.getIconURL(32);
@@ -738,7 +738,7 @@ function e9() {
     });
 }
 e1.displayName = "CardThumbnail";
-var e7 = l(792852);
+var e9 = l(792852);
 function e6(e) {
     return Math.min(45 * e, 520);
 }
@@ -749,9 +749,9 @@ function tt(e) {
         [c, d] = a.useState({ width: 0, height: 0 }),
         m = (0, u.yK)([T.Ay], () => T.Ay.getNewClipIds()),
         f = (0, u.bG)([T.Ay], () => T.Ay.getExportingClipIds().size > 0),
-        g = (0, e7.P)((e) => e.activeMainLink),
-        x = (0, e7.P)((e) => e.gameFacet),
-        y = (0, e7.P)((e) => e.clippedWithFacet),
+        g = (0, e9.P)((e) => e.activeMainLink),
+        x = (0, e9.P)((e) => e.gameFacet),
+        y = (0, e9.P)((e) => e.clippedWithFacet),
         v = a.useMemo(() => {
             let e = [],
                 l = new Map(),
@@ -1083,7 +1083,7 @@ let tu = [
     "b",
     "a",
 ];
-var td = l(922016),
+var td = l(265872),
     tm = l(847374),
     tf = l(980707),
     th = l(477782),
@@ -1144,8 +1144,8 @@ function tM(e) {
 var tD = l(435021);
 function tT(e) {
     let { closePopout: t } = e,
-        l = (0, e7.P)((e) => e.dateFilter),
-        i = (0, e7.P)((e) => e.setDateFilter),
+        l = (0, e9.P)((e) => e.dateFilter),
+        i = (0, e9.P)((e) => e.setDateFilter),
         [r, o] = a.useState(l?.preset === "custom"),
         [c, u] = a.useState(() => (l?.preset === "custom" ? tL(l.after) : null)),
         [d, m] = a.useState(() => (l?.preset === "custom" ? tL(l.before) : null)),
@@ -1495,7 +1495,7 @@ function tU(e) {
 var tK = l(401756);
 let tV = { all: eo.default.lscwjQ, auto: eo.default.xrOIkz, manual: eo.default.D7HSLJ };
 function t$() {
-    let e = (0, e7.P)((e) => e.dateFilter),
+    let e = (0, e9.P)((e) => e.dateFilter),
         t = a.useRef(null),
         l = null != e ? tM(e) : ec.intl.string(eo.default.upqksT);
     return (0, n.jsx)(td.Y, {
@@ -1519,8 +1519,8 @@ function t$() {
     });
 }
 function tq() {
-    let e = (0, e7.P)((e) => e.sortOrder),
-        t = (0, e7.P)((e) => e.setSortOrder),
+    let e = (0, e9.P)((e) => e.sortOrder),
+        t = (0, e9.P)((e) => e.setSortOrder),
         l = a.useRef(null),
         i = e === U.mu.OLDEST ? ec.intl.string(ec.t["0gitSE"]) : ec.intl.string(ec.t["4LLKx3"]);
     return (0, n.jsx)(td.Y, {
@@ -1564,8 +1564,8 @@ function tq() {
     });
 }
 function tB() {
-    let e = (0, e7.P)((e) => e.clipMethodFilter),
-        t = (0, e7.P)((e) => e.setClipMethodFilter),
+    let e = (0, e9.P)((e) => e.clipMethodFilter),
+        t = (0, e9.P)((e) => e.setClipMethodFilter),
         l = a.useRef(null);
     return (0, n.jsx)(td.Y, {
         position: "bottom",
@@ -1626,27 +1626,27 @@ function tB() {
 }
 function tY(e) {
     let { allClips: t, gamesFacet: l, participantsFacet: i } = e,
-        s = (0, e7.P)((e) => e.query),
-        r = (0, e7.P)((e) => e.setQuery),
-        o = (0, e7.P)((e) => e.pendingSearchFocus),
-        c = (0, e7.P)((e) => e.setPendingSearchFocus),
+        s = (0, e9.P)((e) => e.query),
+        r = (0, e9.P)((e) => e.setQuery),
+        o = (0, e9.P)((e) => e.pendingSearchFocus),
+        c = (0, e9.P)((e) => e.setPendingSearchFocus),
         u = a.useRef(null),
-        d = (0, e7.P)((e) => e.activeMainLink),
-        m = (0, e7.P)((e) => e.clipMethodFilter),
-        f = (0, e7.P)((e) => e.setClipMethodFilter),
-        h = (0, e7.P)((e) => e.gameFacet),
-        g = (0, e7.P)((e) => e.clippedWithFacet),
-        x = (0, e7.P)((e) => e.selectedGameIds),
-        p = (0, e7.P)((e) => e.selectedUserIds),
-        y = (0, e7.P)((e) => e.selectedGuildId),
-        v = (0, e7.P)((e) => e.selectedActivity),
-        j = (0, e7.P)((e) => e.dateFilter),
-        C = (0, e7.P)((e) => e.toggleGameId),
-        b = (0, e7.P)((e) => e.toggleUserId),
-        k = (0, e7.P)((e) => e.setSelectedGuildId),
-        A = (0, e7.P)((e) => e.setSelectedActivity),
-        N = (0, e7.P)((e) => e.setDateFilter),
-        E = (0, e7.P)((e) => e.clearFilters);
+        d = (0, e9.P)((e) => e.activeMainLink),
+        m = (0, e9.P)((e) => e.clipMethodFilter),
+        f = (0, e9.P)((e) => e.setClipMethodFilter),
+        h = (0, e9.P)((e) => e.gameFacet),
+        g = (0, e9.P)((e) => e.clippedWithFacet),
+        x = (0, e9.P)((e) => e.selectedGameIds),
+        p = (0, e9.P)((e) => e.selectedUserIds),
+        y = (0, e9.P)((e) => e.selectedGuildId),
+        v = (0, e9.P)((e) => e.selectedActivity),
+        j = (0, e9.P)((e) => e.dateFilter),
+        C = (0, e9.P)((e) => e.toggleGameId),
+        b = (0, e9.P)((e) => e.toggleUserId),
+        k = (0, e9.P)((e) => e.setSelectedGuildId),
+        A = (0, e9.P)((e) => e.setSelectedActivity),
+        N = (0, e9.P)((e) => e.setDateFilter),
+        E = (0, e9.P)((e) => e.clearFilters);
     a.useEffect(() => {
         o && (u.current?.focus(), c(!1));
     }, [o, c]);
@@ -1915,7 +1915,7 @@ var t1 = l(329924);
 function t2(e) {
     let { clips: t, onEdit: l, onEdgeNavigate: i } = e,
         s = a.useMemo(() => t0(t), [t]),
-        r = (0, e7.P)((e) => e.setActiveMainLink),
+        r = (0, e9.P)((e) => e.setActiveMainLink),
         o = (0, q.GV)(),
         c = a.useMemo(() => [s.length], [s.length]),
         { getContainerProps: u, getItemProps: d, getRowProps: m } = (0, K.A)({ navId: o, columnCounts: c }),
@@ -2008,7 +2008,7 @@ function t2(e) {
 var t3 = l(770178),
     t5 = l(202163),
     t8 = l(68408);
-function t9(e) {
+function t7(e) {
     let {
             session: t,
             recentClipIds: l,
@@ -2024,8 +2024,8 @@ function t9(e) {
         x = a.useCallback(() => {
             g?.(t.clips);
         }, [g, t.clips]),
-        y = (0, e7.P)((e) => e.setGameFacet),
-        v = (0, e7.P)((e) => e.setActiveMainLink),
+        y = (0, e9.P)((e) => e.setGameFacet),
+        v = (0, e9.P)((e) => e.setActiveMainLink),
         j = t.applicationId,
         C = null != j && "" !== j,
         b = a.useCallback(() => {
@@ -2222,7 +2222,7 @@ function t9(e) {
         ],
     });
 }
-var t7 = l(799888);
+var t9 = l(799888);
 function t6(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: i, onClipClick: s, isLoading: r, onScroll: o } = e,
         { enableAutoClipsReview: c } = tW.useConfig({ location: "ClipsGalleryHome" }),
@@ -2230,7 +2230,7 @@ function t6(e) {
         m = c && d.length > 0,
         f = (0, u.yK)([T.Ay], () => T.Ay.getNewClipIds()),
         g = (0, u.bG)([T.Ay], () => T.Ay.getExportingClipIds().size > 0),
-        x = (0, e7.P)((e) => e.setActiveMainLink),
+        x = (0, e9.P)((e) => e.setActiveMainLink),
         p = a.useCallback(() => {
             x(U.oH.ALL_CLIPS);
         }, [x]),
@@ -2286,16 +2286,16 @@ function t6(e) {
         );
     return y.length > 0 || m
         ? (0, n.jsx)(tX.Ch, {
-              className: t7.iR,
+              className: t9.iR,
               fade: !0,
               onScroll: k,
               children: (0, n.jsxs)("div", {
-                  className: t7.Qs,
+                  className: t9.Qs,
                   ref: C,
                   children: [
                       m &&
                           (0, n.jsx)("div", {
-                              className: t7.Dk,
+                              className: t9.Dk,
                               children: (0, n.jsx)(t2, { clips: t, onEdit: i, onEdgeNavigate: b }),
                           }),
                       y.length > 0 &&
@@ -2308,7 +2308,7 @@ function t6(e) {
                                   }),
                                   y.map((e, t) =>
                                       (0, n.jsx)(
-                                          t9,
+                                          t7,
                                           {
                                               session: e,
                                               recentClipIds: f,
@@ -2323,7 +2323,7 @@ function t6(e) {
                                       ),
                                   ),
                                   (0, n.jsx)("div", {
-                                      className: t7.dp,
+                                      className: t9.dp,
                                       children: (0, n.jsx)(ek.$, {
                                           variant: "primary",
                                           text: ec.intl.string(eo.default.RQtkop),
@@ -2336,7 +2336,7 @@ function t6(e) {
               }),
           })
         : r
-          ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(V.y, {}) })
+          ? (0, n.jsx)("div", { className: t9.dc, children: (0, n.jsx)(V.y, {}) })
           : (0, n.jsx)(ef, { isEmptyBecauseQuery: l > 0 });
 }
 var t4 = l(837381),
@@ -2370,14 +2370,14 @@ function lc(e) {
 }
 function lu(e) {
     let { gamesFacet: t, mainLinkCounts: l, mainLinkNewCounts: i } = e,
-        r = (0, e7.P)((e) => e.activeMainLink),
-        o = (0, e7.P)((e) => e.gameFacet),
-        c = (0, e7.P)((e) => e.clippedWithFacet),
-        u = (0, e7.P)((e) => e.setActiveMainLink),
-        d = (0, e7.P)((e) => e.setGameFacet),
-        m = (0, e7.P)((e) => e.setClippedWithFacet),
-        f = (0, e7.P)((e) => e.clearFilters),
-        h = (0, e7.P)((e) => e.setPendingContentFocus),
+        r = (0, e9.P)((e) => e.activeMainLink),
+        o = (0, e9.P)((e) => e.gameFacet),
+        c = (0, e9.P)((e) => e.clippedWithFacet),
+        u = (0, e9.P)((e) => e.setActiveMainLink),
+        d = (0, e9.P)((e) => e.setGameFacet),
+        m = (0, e9.P)((e) => e.setClippedWithFacet),
+        f = (0, e9.P)((e) => e.clearFilters),
+        h = (0, e9.P)((e) => e.setPendingContentFocus),
         g = (0, tj.HN)(),
         x = null != o || null != c;
     function p(e) {
@@ -2565,12 +2565,12 @@ function lf(e) {
     let { onShareClick: ep } = (0, O.A)(q);
     (a.useEffect(
         () => () => {
-            (e7.P.getState().resetAll(), (0, _.Su)());
+            (e9.P.getState().resetAll(), (0, _.Su)());
         },
         [],
     ),
         a.useEffect(() => {
-            let e = e7.P.getState();
+            let e = e9.P.getState();
             null == e.gameFacet && null == e.clippedWithFacet && e.setActiveMainLink(W);
         }, [W]),
         (0, o.l0)(() => {
@@ -2628,10 +2628,10 @@ function lf(e) {
     ((ew.current = ev), (a.useRef(eC).current = eC));
     let [eP, eL] = a.useState(null != X ? f.ip.ENTERED : f.ip.HIDDEN),
         eI = a.useRef(null),
-        eS = (0, e7.P)((e) => e.gameFacet),
-        eM = (0, e7.P)((e) => e.clippedWithFacet),
-        eD = (0, e7.P)((e) => e.activeMainLink),
-        eT = (0, e7.P)((e) => e.currentPage),
+        eS = (0, e9.P)((e) => e.gameFacet),
+        eM = (0, e9.P)((e) => e.clippedWithFacet),
+        eD = (0, e9.P)((e) => e.activeMainLink),
+        eT = (0, e9.P)((e) => e.currentPage),
         e_ = eT === U.fB.HOME,
         { ref: eR, height: eH = 64 } = (0, b.Ay)(eT),
         eF = 68 + eH,
@@ -2639,8 +2639,8 @@ function lf(e) {
     a.useLayoutEffect(() => {
         ei(0);
     }, [eT, ei]);
-    let eO = (0, e7.P)((e) => e.pendingContentFocus),
-        eG = (0, e7.P)((e) => e.setPendingContentFocus),
+    let eO = (0, e9.P)((e) => e.pendingContentFocus),
+        eG = (0, e9.P)((e) => e.setPendingContentFocus),
         eU = a.useRef(null);
     a.useEffect(() => {
         if (!eO) return;
@@ -2662,7 +2662,7 @@ function lf(e) {
             () => cancelAnimationFrame(t)
         );
     }, [eO, eG]);
-    let eK = (0, e7.P)(
+    let eK = (0, e9.P)(
         (e) =>
             "" !== e.query.trim() ||
             e.selectedGameIds.size > 0 ||
@@ -2673,7 +2673,7 @@ function lf(e) {
             "all" !== e.clipMethodFilter,
     );
     a.useEffect(() => {
-        eD === U.oH.HOME && eK && e7.P.getState().setActiveMainLink(U.oH.ALL_CLIPS);
+        eD === U.oH.HOME && eK && e9.P.getState().setActiveMainLink(U.oH.ALL_CLIPS);
     }, [eD, eK]);
     let e$ = a.useMemo(() => (null != eS ? [eS] : []), [eS]),
         eq = (0, P.A)(e$)[0] ?? null,
@@ -2747,7 +2747,7 @@ function lf(e) {
                 )
                     return;
                 (e.preventDefault(), e.stopPropagation());
-                let t = e7.P.getState();
+                let t = e9.P.getState();
                 (t.currentPage === U.fB.HOME && t.setActiveMainLink(U.oH.ALL_CLIPS), t.setPendingSearchFocus(!0));
             }
             return (document.addEventListener("keydown", e, !0), () => document.removeEventListener("keydown", e, !0));
@@ -2793,8 +2793,8 @@ function lf(e) {
             },
             [ep, e1],
         ),
-        e9 = a.useCallback(() => {
-            let e = e7.P.getState();
+        e7 = a.useCallback(() => {
+            let e = e9.P.getState();
             (e.setGameFacet(null),
                 e.setClippedWithFacet(null),
                 e.setActiveMainLink(U.oH.ALL_CLIPS),
@@ -2937,7 +2937,7 @@ function lf(e) {
                                                               (0, n.jsx)(y.m, {
                                                                   text: ec.intl.string(ec.t["5h0QOP"]),
                                                                   children: (0, n.jsx)(v.K, {
-                                                                      onClick: e9,
+                                                                      onClick: e7,
                                                                       icon: j.MagnifyingGlassIcon,
                                                                       size: "sm",
                                                                       variant: "icon-only",

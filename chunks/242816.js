@@ -3079,7 +3079,7 @@ let iv = a.memo(function (e) {
         guildJoinRequestStatus: l,
     });
 });
-var ib = n(922016),
+var ib = n(265872),
     iP = n(297264),
     iM = n(821609),
     iU = n(339350),

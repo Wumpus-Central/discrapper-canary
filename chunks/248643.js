@@ -3,7 +3,7 @@ var n = s(477900),
     a = s(582128),
     l = s(453771),
     i = s(619517),
-    r = s(440014);
+    r = s(380629);
 s(516653);
 var o = s(105292);
 class u extends a.Component {
@@ -23,8 +23,8 @@ class u extends a.Component {
             autoPlay: f,
             autoMute: v,
             responsive: C,
-            mediaLayoutType: A,
-            mimeType: x,
+            mediaLayoutType: x,
+            mimeType: A,
             renderOverlayContent: y,
             renderLinkComponent: S,
             onClick: _,
@@ -37,24 +37,25 @@ class u extends a.Component {
             onMute: b,
             disableArrowKeySeek: w,
             disableClickToUnmute: R,
-            onFullscreenChange: D,
-            allowFullScreen: k,
-            videoRef: L,
-            mediaPlayerRef: P,
-            initialTimeSec: O,
-            alt: U = o.intl.string(o.t.FlNoSV),
-            ...V
+            onFullscreenChange: k,
+            allowFullScreen: D,
+            showPlaybackSpeedControl: L,
+            videoRef: P,
+            mediaPlayerRef: O,
+            initialTimeSec: U,
+            alt: V = o.intl.string(o.t.FlNoSV),
+            ...F
         } = this.props;
         return (0, n.jsx)(i.Ay, {
-            alt: U,
+            alt: V,
             className: s,
             src: u,
-            ...V,
+            ...F,
             minWidth: r.Ay.minWidth,
             minHeight: r.Ay.minHeight,
             shouldLink: !1,
             shouldAnimate: !1,
-            mediaLayoutType: A,
+            mediaLayoutType: x,
             responsive: C,
             children: (s) => {
                 let {
@@ -62,8 +63,8 @@ class u extends a.Component {
                     size: { width: o, height: u },
                 } = s;
                 return (0, n.jsx)(r.Ay, {
-                    ref: P,
-                    alt: U,
+                    ref: O,
+                    alt: V,
                     className: a,
                     forceExternal: !((c <= 6016 && h <= 3384) || (c <= 3384 && h <= 6016)),
                     src: e,
@@ -75,7 +76,7 @@ class u extends a.Component {
                     autoPlay: f ?? !1,
                     autoMute: v ?? !1,
                     type: r.Ay.Types.VIDEO,
-                    mediaLayoutType: A,
+                    mediaLayoutType: x,
                     fileName: d,
                     fileSize: null == t ? void 0 : (0, l.Hb)(t),
                     fileSizeBytes: null == t ? void 0 : t,
@@ -90,14 +91,15 @@ class u extends a.Component {
                     onMute: b,
                     onControlsShow: M,
                     onControlsHide: I,
-                    mimeType: x,
+                    mimeType: A,
                     downloadable: p,
                     disableArrowKeySeek: w,
                     disableClickToUnmute: R,
-                    onFullscreenChange: D,
-                    allowFullScreen: k,
-                    videoRef: L,
-                    initialTimeSec: O,
+                    onFullscreenChange: k,
+                    allowFullScreen: D,
+                    showPlaybackSpeedControl: L,
+                    videoRef: P,
+                    initialTimeSec: U,
                 });
             },
         });

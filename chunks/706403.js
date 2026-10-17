@@ -1,4 +1,4 @@
-(i.d(t, { Cr: () => y, I1: () => I, Nj: () => k, UB: () => z, SX: () => E, R6: () => w }), i(938796));
+(i.d(t, { Cr: () => y, I1: () => I, Nj: () => M, UB: () => z, SX: () => w, R6: () => E }), i(938796));
 var a = i(477900),
     n = i(582128),
     l = i(665260);
@@ -17,8 +17,8 @@ var r = i(682176),
     A = i(684519),
     S = i(447991),
     f = i(838541),
-    v = i(516653),
-    C = i(105292);
+    C = i(516653),
+    v = i(105292);
 function y(e) {
     let t = e.item.originalItem;
     return (0, A.LL)({
@@ -72,14 +72,15 @@ function I(e) {
                     e.renderAdjacentContent?.(),
                 ],
             })
-          : (0, v.T)(e.naturalWidth, e.naturalHeight)
-            ? (0, a.jsx)(M, { attachmentProps: e, posterUrl: n.toString() })
+          : (0, C.T)(e.naturalWidth, e.naturalHeight)
+            ? (0, a.jsx)(k, { attachmentProps: e, posterUrl: n.toString() })
             : x(e, n.toString());
 }
 function x(e, t) {
     let i = e.item.originalItem;
     return (0, A.$o)({
         ...e,
+        showPlaybackSpeedControl: !0,
         alt: i.description,
         poster: t,
         fileSize: i.size,
@@ -94,7 +95,7 @@ function x(e, t) {
         },
     });
 }
-function M(e) {
+function k(e) {
     let { attachmentProps: t, posterUrl: i } = e,
         n = t.item.originalItem,
         { useDiscordVideoPlayer: l } = (0, d.r)({ location: "VideoComponentForMessageAttachment" });
@@ -105,7 +106,7 @@ function M(e) {
             s,
             d,
             c = null != n.width && null != n.height && n.height > n.width ? "portrait" : "landscape",
-            u = null != n.description && "" !== n.description ? n.description : C.intl.string(C.t.FlNoSV),
+            u = null != n.description && "" !== n.description ? n.description : v.intl.string(v.t.FlNoSV),
             { width: m, height: g } =
                 ((e = t.maxWidth ?? f.k6),
                 (l = t.maxHeight ?? f.Rk),
@@ -180,11 +181,11 @@ function M(e) {
     }
     return x(t, i);
 }
-function k(e) {
+function M(e) {
     let t = e.item.originalItem;
     return (0, A.gL)({ ...e, fileSize: t.size, fileName: (0, _.A)(t), src: t.url });
 }
-function E(e) {
+function w(e) {
     let { message: t, item: i } = e,
         a = i.originalItem,
         l = (0, s.dx)(s.k0.VOICE_MESSAGE, a.id),
@@ -241,7 +242,7 @@ function E(e) {
         playbackCacheKey: l,
     });
 }
-function w(e) {
+function E(e) {
     let t = e.item.originalItem;
     return (0, A._d)({ ...e, url: t.url, fileName: (0, _.A)(t), fileSize: t.size, contentType: t.content_type });
 }

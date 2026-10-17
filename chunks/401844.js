@@ -1,4 +1,4 @@
-(n.d(t, { iV: () => cl, OC: () => cr, Ay: () => cs }), n(938796));
+(n.d(t, { iV: () => cs, OC: () => ca, Ay: () => cr }), n(938796));
 var i,
     l,
     s = n(477900),
@@ -3105,7 +3105,7 @@ var sB = n(50777),
     sV = n(288254),
     sH = n(319060),
     sF = n(812282),
-    sz = n(922016),
+    sz = n(265872),
     sY = n(684519),
     sK = n(188645),
     sW = n(240248),
@@ -7271,22 +7271,25 @@ function d4(e) {
 var d9 = n(343552),
     d6 = n(581619),
     d8 = n(803931);
-let d7 = [X.Auw.GIFV],
-    ce = 15 * nx.A.Millis.MINUTE,
-    ct = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-    cn = (e) => () => {
+function d7(e) {
+    return (0, sY.$o)({ ...e, showPlaybackSpeedControl: !0 });
+}
+let ce = [X.Auw.GIFV],
+    ct = 15 * nx.A.Millis.MINUTE,
+    cn = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
+    ci = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: l, flags: r } = e,
             a = (0, c.Lt)(r, lI.e5.IS_ANIMATED);
         return null != i && null != l && (lE.bp.test(n) || (a && (lE.P8.test(n) || lE.p4.test(n))))
             ? (0, s.jsx)(ay.A, { width: i, height: l, src: n, url: t, format: m.TL.IMAGE, className: d8.jj })
             : null;
     };
-function ci(e) {
+function cl(e) {
     let { url: t, image: n, video: i, thumbnail: l, providerName: a, children: o } = e,
         d = r.useMemo(() => (0, d9.b)(t, n, i, l, a), [t, n, i, l, a]);
     return (0, s.jsx)(i0.G.Provider, { value: d, children: o });
 }
-class cl extends r.Component {
+class cs extends r.Component {
     static defaultProps = { renderEmbeds: !0, compact: !1, hideInviteEmbedBanner: !1, hideActivityInvite: !1 };
     state = { showSuppressModal: !1, showRemoveAttachmentModal: !1, attachmentToDelete: null };
     getAcceptInviteContext = (e, t) => {
@@ -7302,7 +7305,7 @@ class cl extends r.Component {
     };
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
-        return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && ct.has(e));
+        return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && cn.has(e));
     }
     shouldComponentUpdate(e, t) {
         var n, i;
@@ -7596,7 +7599,7 @@ class cl extends r.Component {
                             duration: l,
                         });
                     },
-                    gifFavoriteButton: cn(a),
+                    gifFavoriteButton: ci(a),
                     allowFullScreen: !this.props.disableComponentInteractivity,
                 },
                 d = (0, r0.E)({ proxyURL: s.proxy_url, url: s.url });
@@ -7615,9 +7618,9 @@ class cl extends r.Component {
             } = this.props,
             u = (0, r5.sC)(e, i, o, d);
         if (e.type === X.Auw.GIFT) return null;
-        let m = d7.includes(e.type) ? e.url : (e.image?.url ?? e.video?.url);
+        let m = ce.includes(e.type) ? e.url : (e.image?.url ?? e.video?.url);
         return (0, s.jsx)(
-            ci,
+            cl,
             {
                 url: m,
                 image: e.image,
@@ -7733,7 +7736,7 @@ class cl extends r.Component {
                                       components: t.components ?? [],
                                       message: e,
                                       gifAutoPlay: n,
-                                      getGifFavButton: cn,
+                                      getGifFavButton: ci,
                                       getOnMediaItemContextMenu:
                                           null == a
                                               ? void 0
@@ -7762,7 +7765,7 @@ class cl extends r.Component {
                             )
                           : u();
                   }
-                  let r = { renderImageComponent: sY.LL, renderVideoComponent: sY.$o, renderLinkComponent: sY.bU };
+                  let r = { renderImageComponent: sY.LL, renderVideoComponent: d7, renderLinkComponent: sY.bU };
                   if (
                       t.type === X.Auw.ARTICLE &&
                       null != t.url &&
@@ -7795,7 +7798,7 @@ class cl extends r.Component {
         } = this.props;
         return (0, s.jsx)(ar.N, {
             gifAutoPlay: t,
-            getGifFavButton: cn,
+            getGifFavButton: ci,
             getOnMediaItemContextMenu:
                 null == r
                     ? void 0
@@ -7842,7 +7845,7 @@ class cl extends r.Component {
         if (
             e.hasFlag(X.pr7.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) &&
             this.props.isCurrentUser &&
-            !(Date.now() - io.default.extractTimestamp(e.id) >= ce)
+            !(Date.now() - io.default.extractTimestamp(e.id) >= ct)
         )
             return (0, s.jsx)("div", { className: d8.xM, children: Z.intl.string(Z.t.ma8Rs0) });
     }
@@ -8073,7 +8076,7 @@ class cl extends r.Component {
               });
     }
 }
-function cs(e) {
+function cr(e) {
     let t,
         {
             channel: n,
@@ -8141,7 +8144,7 @@ function cs(e) {
         D = (0, r3._f)(i.id, i.channel_id),
         U = (0, nq._R)(),
         G = (0, n7.U)();
-    return (0, s.jsx)(cl, {
+    return (0, s.jsx)(cs, {
         canSuppressEmbeds: N,
         canDeleteAttachments: y,
         ...b,
@@ -8169,7 +8172,7 @@ function cs(e) {
         restrictedPreview: G,
     });
 }
-function cr(e) {
+function ca(e) {
     let {
             message: t,
             channel: n,
@@ -8190,7 +8193,7 @@ function cr(e) {
         x = (0, nQ.P)(t),
         f = (0, r3._f)(t.id, t.channel_id),
         I = (0, lK.A)(t);
-    return (0, s.jsx)(cl, {
+    return (0, s.jsx)(cs, {
         ...d,
         message: t,
         channel: n,

@@ -8,7 +8,7 @@ var i = n(477900),
     d = n(81466),
     c = n(939538),
     u = n(305866),
-    _ = n(922016),
+    _ = n(265872),
     E = n(76254);
 function A(e) {
     let { value: t, onSelect: n, dateFormat: A = "ll", minDate: h, maxDate: f, disabled: I = !1, ...p } = e,

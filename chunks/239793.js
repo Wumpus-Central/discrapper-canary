@@ -27,7 +27,7 @@ var C = l(503698),
     j = l(719442),
     L = l(235599),
     v = l(765178),
-    _ = l(922016),
+    _ = l(265872),
     N = l(559106),
     F = l(884496),
     O = l(955572),
@@ -1038,11 +1038,11 @@ function e3(e) {
 function e6(e) {
     return (0, n.jsx)(eZ, { ...e });
 }
-function e9(e) {
+function e7(e) {
     let { children: t, attributes: l } = e;
     return (0, n.jsx)("span", { ...l, style: { ...l.style, opacity: 1 }, children: t });
 }
-let e7 = s.memo(function (e) {
+let e9 = s.memo(function (e) {
     let {
         editor: t,
         initialValue: l,
@@ -1064,7 +1064,7 @@ let e7 = s.memo(function (e) {
             placeholder: r,
             decorate: e3,
             renderLeaf: e6,
-            renderPlaceholder: e9,
+            renderPlaceholder: e7,
             onKeyDown: o,
             onFocus: c,
             onBlur: u,
@@ -1409,7 +1409,7 @@ function e8(e) {
                                 className: T()(eV.ON, eX.O),
                                 ref: H,
                                 children: [
-                                    (0, n.jsx)(e7, {
+                                    (0, n.jsx)(e9, {
                                         editor: x,
                                         initialValue: p,
                                         placeholder: eu,

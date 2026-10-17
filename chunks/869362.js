@@ -722,10 +722,10 @@ var e$ = l(619517),
     e8 = l(689175),
     e7 = l(532197),
     e2 = l(837344);
-let e9 = { CENTER: e2.Hu, LEFT: e2.Vl };
-class e3 extends s.PureComponent {
-    static Align = e9;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e9.CENTER };
+let e3 = { CENTER: e2.Hu, LEFT: e2.Vl };
+class e9 extends s.PureComponent {
+    static Align = e3;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e3.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -779,7 +779,7 @@ class e6 extends s.PureComponent {
         });
     }
 }
-class e4 extends s.PureComponent {
+class e5 extends s.PureComponent {
     handleNextClick = (e) => {
         (e.stopPropagation(), e.preventDefault());
         let { onClick: t } = this.props;
@@ -794,7 +794,7 @@ class e4 extends s.PureComponent {
         });
     }
 }
-var e5 = l(452282),
+var e4 = l(452282),
     te = l(821209),
     tt = l(811306);
 let tl = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${D.NzX}`,
@@ -900,8 +900,8 @@ class tu extends s.PureComponent {
                 props: { items: l, onIntentionalChange: i },
                 state: { currentIndex: s },
             } = this,
-            n = (0, e5.U3)(s, l.length),
-            a = (0, e5.U3)(e, l.length),
+            n = (0, e4.U3)(s, l.length),
+            a = (0, e4.U3)(e, l.length),
             r = 1 === Math.abs(e - n) || (e === l.length - 1 && 0 === n) || (0 === e && n === l.length - 1);
         (this.setState({ playingVideo: !1, currentIndex: a, animate: r, hasInteracted: t }),
             t && null != i && i(l[a], n, a));
@@ -953,7 +953,7 @@ class tu extends s.PureComponent {
               });
     renderItem = (e, t, l) => {
         let { currentIndex: s, volume: n, isMuted: r } = this.state,
-            o = t === (0, e5.U3)(s, this.props.items.length);
+            o = t === (0, e4.U3)(s, this.props.items.length);
         return (0, i.jsx)(eJ.A.div, {
             className: a()(tt.AS, { [tt.Xt]: o }),
             style: null != l ? this.getStyle(t, l) : null,
@@ -979,7 +979,7 @@ class tu extends s.PureComponent {
     renderCarousel() {
         let { items: e } = this.props,
             { currentIndex: t, animate: l, hoveringPreviousItem: s, hoveringNextItem: n } = this.state,
-            r = (0, i.jsx)(e5.Ay, {
+            r = (0, i.jsx)(e4.Ay, {
                 items: e,
                 itemSize: this.getItemSize(),
                 renderItem: this.renderItem,
@@ -994,7 +994,7 @@ class tu extends s.PureComponent {
                   children: [
                       r,
                       (0, i.jsx)(e6, { onClick: this.manualPrevious, className: a()(tt.UE, { [tt.h_]: s }) }),
-                      (0, i.jsx)(e4, { onClick: this.manualNext, className: a()(tt.UE, { [tt.h_]: n }) }),
+                      (0, i.jsx)(e5, { onClick: this.manualNext, className: a()(tt.UE, { [tt.h_]: n }) }),
                   ],
               });
     }
@@ -1044,14 +1044,14 @@ class tu extends s.PureComponent {
                 this.renderCarousel(),
                 (0, i.jsx)("div", {
                     className: tt.X$,
-                    children: (0, i.jsx)(e3, {
+                    children: (0, i.jsx)(e9, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: n,
                         onSetItem: (e) => this.setItem(e, !0),
                         paginationContainerClass: tt.XG,
-                        align: e.length < 6 ? e3.Align.LEFT : e3.Align.CENTER,
+                        align: e.length < 6 ? e9.Align.LEFT : e9.Align.CENTER,
                     }),
                 }),
             ],
@@ -1603,19 +1603,19 @@ function t8(e) {
 }
 var t7 = l(449054),
     t2 = l(900002),
-    t9 = l(950305),
-    t3 = l(573435),
+    t3 = l(950305),
+    t9 = l(573435),
     t6 = l(714991),
-    t4 = l(776231),
-    t5 = l(149790),
+    t5 = l(776231),
+    t4 = l(149790),
     le = l(882553),
     lt = l(937495),
     ll = l(517061);
 function li(e) {
     let { guild: t, className: l, onClick: s } = e,
         n = (0, tQ.Ay)(),
-        r = (0, t5.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
-        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t4.mZ)() }),
+        r = (0, t4.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
+        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t5.mZ)() }),
         c =
             null != o
                 ? o
@@ -1639,8 +1639,8 @@ function li(e) {
                     (0, i.jsx)("img", { src: c, alt: "", className: le.j0 }),
                     (0, i.jsx)("div", {
                         className: le.$f,
-                        children: (0, i.jsx)(t3.Ay, {
-                            mask: t3.Ay.Masks.AVATAR_DEFAULT,
+                        children: (0, i.jsx)(t9.Ay, {
+                            mask: t9.Ay.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)("div", {
@@ -1678,7 +1678,7 @@ function li(e) {
                         children: (0, i.jsxs)("div", {
                             className: le.FG,
                             children: [
-                                (0, i.jsx)(t9.UserIcon, { color: "currentColor", className: le.NP, size: "xs" }),
+                                (0, i.jsx)(t3.UserIcon, { color: "currentColor", className: le.NP, size: "xs" }),
                                 (0, i.jsx)(g.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
@@ -2032,7 +2032,7 @@ var lM = l(607399),
     lw = l(980707),
     lV = l(477782),
     lF = l(138134),
-    lB = l(922016),
+    lB = l(265872),
     lH = l(365199),
     lY = l(663341),
     lz = l(821609),
@@ -2049,8 +2049,8 @@ var lM = l(607399),
     l8 = l(692848),
     l7 = l(108861);
 let l2 = "start_application_install",
-    l9 = "launch_activity";
-function l3(e) {
+    l3 = "launch_activity";
+function l9(e) {
     let { renderDropdown: t, size: l } = e,
         n = s.useRef(null);
     return (0, i.jsx)(lB.Y, {
@@ -2154,7 +2154,7 @@ function l6(e) {
               disabled: !u,
           });
 }
-function l4(e) {
+function l5(e) {
     let { size: t, contentWidth: l, onClick: s, isSubmitting: n } = e;
     return "icon" === l
         ? (0, i.jsx)(eU.K, {
@@ -2167,7 +2167,7 @@ function l4(e) {
           })
         : (0, i.jsx)(lz.$, { variant: "primary", size: t, text: U.intl.string(U.t.QO7rO6), onClick: s, loading: n });
 }
-let l5 = function (e) {
+let l4 = function (e) {
     let { application: t, size: l, ref: n } = e,
         { analyticsLocations: r } = (0, lK.Ay)(),
         o = s.useCallback(() => {
@@ -2238,9 +2238,9 @@ let l5 = function (e) {
                 });
             s.useEffect(() => {
                 let e = new URL(location.href),
-                    t = "true" === e.searchParams.get(l9);
+                    t = "true" === e.searchParams.get(l3);
                 if (u && r && t && null != i && null != h) {
-                    e.searchParams.delete(l9);
+                    e.searchParams.delete(l3);
                     let t = e.pathname + e.search;
                     ((0, _.bG)(t), m());
                 }
@@ -2248,7 +2248,7 @@ let l5 = function (e) {
             let p = s.useCallback(async () => {
                 if (null != i) {
                     if ((O(D.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void G({ [l9]: "true" });
+                        return void G({ [l3]: "true" });
                     await m();
                 }
             }, [l, i, u, m]);
@@ -2262,7 +2262,7 @@ let l5 = function (e) {
             (0, i.jsxs)("div", {
                 className: a()(l7.Ik, l7.U),
                 children: [
-                    g && (0, i.jsx)(l4, { size: l, contentWidth: "normal", onClick: m, isSubmitting: p }),
+                    g && (0, i.jsx)(l5, { size: l, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(l6, { application: t, size: l, contentWidth: "normal", variant: x }),
                     l1.p5
                         ? (0, i.jsx)(eU.K, {
@@ -2273,23 +2273,23 @@ let l5 = function (e) {
                               "aria-label": U.intl.string(U.t.z4sP5J),
                           })
                         : null,
-                    (0, i.jsx)(l3, { renderDropdown: (e) => h(!1, e), size: l }),
+                    (0, i.jsx)(l9, { renderDropdown: (e) => h(!1, e), size: l }),
                 ],
             }),
             (0, i.jsxs)("div", {
                 className: a()(l7.Ik, l7.EX),
                 children: [
-                    g && (0, i.jsx)(l4, { size: l, contentWidth: "small", onClick: m, isSubmitting: p }),
+                    g && (0, i.jsx)(l5, { size: l, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(l6, { application: t, size: l, contentWidth: "small", variant: x }),
-                    (0, i.jsx)(l3, { renderDropdown: (e) => h(l1.p5, e), size: l }),
+                    (0, i.jsx)(l9, { renderDropdown: (e) => h(l1.p5, e), size: l }),
                 ],
             }),
             (0, i.jsxs)("div", {
                 className: a()(l7.Ik, l7.nU),
                 children: [
-                    g && (0, i.jsx)(l4, { size: l, contentWidth: "icon", onClick: m, isSubmitting: p }),
+                    g && (0, i.jsx)(l5, { size: l, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(l6, { application: t, size: l, contentWidth: "icon", variant: x }),
-                    (0, i.jsx)(l3, { renderDropdown: (e) => h(l1.p5, e), size: l }),
+                    (0, i.jsx)(l9, { renderDropdown: (e) => h(l1.p5, e), size: l }),
                 ],
             }),
         ],
@@ -2357,7 +2357,7 @@ let it = function (e) {
                         innerRef: n,
                         onChange: l,
                         active: !0,
-                        children: (0, i.jsx)(l5, { ref: n, application: t, size: "md" }),
+                        children: (0, i.jsx)(l4, { ref: n, application: t, size: "md" }),
                     }),
                 ],
             }),
@@ -3187,7 +3187,7 @@ function iZ(e) {
             (0, i.jsx)("div", {
                 className: a()(iK.w$, iK.xY, { [iK.RK]: !l, [iK.jD]: l && !o, [iK.R]: l && o }),
                 onTransitionEnd: m,
-                children: null != r ? (0, i.jsx)(l5, { application: r, size: "sm" }) : null,
+                children: null != r ? (0, i.jsx)(l4, { application: r, size: "sm" }) : null,
             }),
         ],
     });

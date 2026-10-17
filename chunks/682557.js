@@ -1,7 +1,7 @@
 n.d(e, { A: () => a });
 var r = n(477900);
 n(582128);
-var i = n(922016),
+var i = n(265872),
     c = n(283354);
 let a = function (t) {
     let { entry: e, hideEditButton: n, children: a, onRequestOpen: l, onRequestClose: o, targetElementRef: E } = t;

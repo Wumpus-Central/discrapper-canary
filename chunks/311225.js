@@ -26,5 +26,10 @@ d.exports = {
     kO: "playPausePop_cf09d8",
     PK: "playPausePopIcon_cf09d8",
     CY: "videoButton_cf09d8",
+    Nn: "playbackSpeedButton_cf09d8",
+    Lu: "playbackSpeedLabel_cf09d8",
+    qp: "playbackSpeedPopout_cf09d8",
+    y: "playbackSpeedMenu_cf09d8",
+    EX: "playbackSpeedLabelCustom_cf09d8",
     eM: "overlayContentHidden_cf09d8",
 };

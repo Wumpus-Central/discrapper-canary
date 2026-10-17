@@ -1,64 +1,27 @@
-n.d(t, { Q: () => N, Y: () => S });
+n.d(t, { Q: () => A, Y: () => E });
 var i,
-    r,
-    a = n(477900),
-    s = n(582128),
-    l = n(289873),
-    o = n(964486),
-    d = n(453903),
-    c = n(503698),
-    u = n.n(c),
-    _ = n(844222),
-    E = n(451988),
-    A = n(638120),
-    h = (((i = h || {})[(i.TRANSLATE = 1)] = "TRANSLATE"), (i[(i.SCALE = 2)] = "SCALE"), (i[(i.FADE = 3)] = "FADE"), i);
-let f = Object.freeze({ 1: A.Tl, 2: A.hs, 3: A.Rv }),
-    I = Object.freeze({ top: A.ZR, bottom: A.XI, left: A.Hn, right: A.sS, center: A.pm, window_center: A.pm });
-function p(e) {
-    let { position: t, type: n, children: i } = e,
-        { reducedMotion: r } = s.useContext(_.C),
-        l = r.enabled ? 3 : n,
-        [o, d] = s.useState(null != t),
-        [c] = s.useState(() => new E.Ep()),
-        [h, p] = s.useState(!0),
-        T = s.useRef(null);
-    return (
-        s.useLayoutEffect(() => {
-            (T.current?.addEventListener("transitionend", () => {
-                p(!1);
-            }),
-                setTimeout(() => {
-                    p(!1);
-                }, 200));
-        }, []),
-        s.useEffect(() => () => c.stop(), [c]),
-        s.useEffect(() => {
-            null != t && c.start(10, () => d(!0));
-        }, [t, c]),
-        (0, a.jsx)("div", {
-            "data-popout-animating": h,
-            className: u()(null != t ? I[t] : null, { [f[l]]: null != t, [A.Wr]: o }),
-            children: i,
-        })
-    );
-}
-p.Types = h;
-var T = n(38568),
-    m = (((r = m || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
-let g = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
-class S extends s.Component {
-    static Animation = m;
-    ref = s.createRef();
+    r = n(477900),
+    a = n(582128),
+    s = n(289873),
+    l = n(964486),
+    o = n(453903),
+    d = n(44808),
+    c = n(38568),
+    u = (((i = u || {}).NONE = "1"), (i.TRANSLATE = "2"), (i.SCALE = "3"), (i.FADE = "4"), i);
+let _ = Object.freeze({ 2: d.m.Types.TRANSLATE, 3: d.m.Types.SCALE, 4: d.m.Types.FADE });
+class E extends a.Component {
+    static Animation = u;
+    ref = a.createRef();
     render() {
         let {
             children: e,
             shouldShow: t,
             onRequestOpen: n,
             onRequestClose: i,
-            align: r,
+            align: a,
             fixed: s,
             useRawTargetDimensions: l,
-            onShiftClick: o,
+            onShiftClick: d,
             positionKey: c,
             popoutKey: u,
             preload: _,
@@ -76,15 +39,15 @@ class S extends s.Component {
             spacing: C = 8,
             clickTrap: O = !1,
         } = this.props;
-        return (0, a.jsx)(d.$n, {
+        return (0, r.jsx)(o.$n, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
             preload: _,
             loadingComponent: E,
             position: m,
             align:
-                null != r
-                    ? r
+                null != a
+                    ? a
                     : (function (e) {
                           switch (e) {
                               case "top":
@@ -109,7 +72,7 @@ class S extends s.Component {
             shouldShow: null != p && t,
             onRequestOpen: n,
             onRequestClose: i,
-            onShiftClick: o,
+            onShiftClick: d,
             positionKey: c,
             popoutKey: u,
             disablePointerEvents: A,
@@ -127,57 +90,57 @@ class S extends s.Component {
             case "2":
             case "3":
             case "4":
-                return (0, a.jsx)(p, { position: e.position, type: g[n], children: t(e) });
+                return (0, r.jsx)(d.m, { position: e.position, type: _[n], children: t(e) });
             case "1":
                 return t(e);
         }
         throw Error(`Unsupported animation config: ${JSON.stringify(n)}`);
     };
 }
-function N(e) {
+function A(e) {
     let { renderPopout: t, ...n } = e,
-        i = s.useRef(null),
-        [r, d] = s.useState(0);
-    function c() {
-        return (_(), (0, a.jsx)(a.Fragment, {}));
+        i = a.useRef(null),
+        [o, d] = a.useState(0);
+    function u() {
+        return (A(), (0, r.jsx)(r.Fragment, {}));
     }
-    (s.useLayoutEffect(() => {
-        r > 0 && i.current?.ref?.current?.layerRef?.current?.updatePosition();
-    }, [r]),
-        (0, o.Ay)(() => {
+    (a.useLayoutEffect(() => {
+        o > 0 && i.current?.ref?.current?.layerRef?.current?.updatePosition();
+    }, [o]),
+        (0, l.Ay)(() => {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
         }));
-    let u = s.useRef(!1);
-    async function _() {
-        if (!u.current) {
-            u.current = !0;
+    let _ = a.useRef(!1);
+    async function A() {
+        if (!_.current) {
+            _.current = !0;
             let e = setTimeout(() => {
-                    (h(() => E), d((e) => e + 1));
+                    (I(() => h), d((e) => e + 1));
                 }, 300),
                 n = await t();
-            (h(() => n), d((e) => e + 1), clearTimeout(e));
+            (I(() => n), d((e) => e + 1), clearTimeout(e));
         }
     }
-    function E() {
+    function h() {
         let e = i.current?.ref?.current?.domElementRef?.current,
             t = Math.max(100, null == e ? 100 : e.offsetWidth - 20);
-        return (0, a.jsx)("div", { className: T.w, style: { width: t }, children: (0, a.jsx)(l.y, {}) });
+        return (0, r.jsx)("div", { className: c.w, style: { width: t }, children: (0, r.jsx)(s.y, {}) });
     }
-    let [A, h] = s.useState(() => c),
-        f = s.useRef(c);
+    let [f, I] = a.useState(() => u),
+        p = a.useRef(u);
     return (
-        s.useEffect(() => {
-            f.current = c;
+        a.useEffect(() => {
+            p.current = u;
         }),
-        s.useEffect(() => {
-            u.current
+        a.useEffect(() => {
+            _.current
                 ? t().then((e) => {
-                      (h(() => e), d((e) => e + 1));
+                      (I(() => e), d((e) => e + 1));
                   })
-                : h(() => f.current);
+                : I(() => p.current);
         }, [t]),
-        (0, a.jsx)(S, { ref: i, ...n, renderPopout: A })
+        (0, r.jsx)(E, { ref: i, ...n, renderPopout: f })
     );
 }
-N.Animation = m;
+A.Animation = u;

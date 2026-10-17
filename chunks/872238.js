@@ -53,7 +53,7 @@ var E = l(811315),
     I = l(661531),
     y = l(866665),
     _ = l(658675),
-    w = l(922016),
+    w = l(265872),
     U = l(71393),
     T = l(576705),
     O = l(70738),
@@ -793,8 +793,8 @@ function e3(e) {
 }
 var e8 = l(589935),
     e4 = l(950072),
-    e2 = l(746080),
-    e5 = l(486974);
+    e5 = l(746080),
+    e2 = l(486974);
 let e9 = C.memo(function (e) {
         let { member: t } = e,
             l = C.useMemo(() => (0, ew.n)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
@@ -1139,7 +1139,7 @@ let tt = C.memo(function (e) {
                         e.preventDefault(),
                         null != h &&
                             (j
-                                ? (0, eU.z)(h.guildId, h.userId, e2.VV.MEMBER_SAFETY, { modViewPanel: e5.g.INFO })
+                                ? (0, eU.z)(h.guildId, h.userId, e5.VV.MEMBER_SAFETY, { modViewPanel: e2.g.INFO })
                                 : (0, M.Ko)(h, u)));
                 },
                 [h, u, j],
