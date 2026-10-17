@@ -17485,11 +17485,11 @@ function hz(e) {
             [z],
         ),
         Y = i.useCallback(async (e, t, n, l) => {
-            if (B.Ay.getProject(t)?.guild_id !== n) {
-                let e = await (0, G.M7)(t, { guild_id: n, preview_guild_id: n });
-                if (!e.ok) throw new _.DS((0, _.hj)(e), e.status);
-            }
-            ((0, x.sendUserMessage)(t, l, void 0, { templateId: e.id }),
+            (B.Ay.getProject(t)?.guild_id !== n &&
+                (await (0, G.M7)(t, { guild_id: n, preview_guild_id: n }).catch((e) => {
+                    throw new _.DS((0, _.hj)(e), (0, _.$k)(e));
+                })),
+                (0, x.sendUserMessage)(t, l, void 0, { templateId: e.id }),
                 (0, d.pX)(eX.BVt.CHANNEL(n, eJ.VV.CONJURE, t)),
                 F(null));
         }, []),

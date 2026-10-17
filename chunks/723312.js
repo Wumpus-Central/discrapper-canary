@@ -37,9 +37,9 @@ var r = n(158390),
     T = n(525530),
     N = n(743082),
     b = n(385081),
-    k = n(1371);
+    w = n(1371);
 (n(323874), n(14289), n(35956));
-class w {
+class k {
     socket = null;
     open(e) {
         let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: i } = e;
@@ -250,7 +250,7 @@ function L(e, t, n) {
     for (let s of ((t.pendingSends = []), r)) (D(e, s), (0, d.Gu)(e, n));
 }
 let G = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.Rd, ...T.ow, ...N.WO, ...u.V5 },
-    j = {
+    x = {
         app_build_request(e, t) {
             let { projectId: n } = t;
             null != e.app_build_request &&
@@ -280,10 +280,7 @@ let G = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.Rd, .
                     null != t && "" !== t && r.sendAppIconAck(t, e);
                 }
                 (0, m.Ru)(n, s)
-                    .then((e) => {
-                        (e.ok || console.error("[conjure] icon from agent rejected", n, e.status),
-                            o(e.ok ? "applied" : "failed"));
-                    })
+                    .then(() => o("applied"))
                     .catch((e) => {
                         (console.error("[conjure] icon from agent failed", n, e), o("failed"));
                     });
@@ -292,17 +289,13 @@ let G = { ...a.m, ...d.NW, ...h.eI, ...f.U, ..._.p, ...E.VY, ...O.qy, ...y.Rd, .
         app_cover_set(e, t) {
             let { projectId: n } = t;
             void 0 !== e.cover_image &&
-                (0, m.Vl)(n, e.cover_image)
-                    .then((e) => {
-                        e.ok || console.error("[conjure] cover from agent rejected", n, e.status);
-                    })
-                    .catch((e) => {
-                        console.error("[conjure] cover from agent failed", n, e);
-                    });
+                (0, m.Vl)(n, e.cover_image).catch((e) => {
+                    console.error("[conjure] cover from agent failed", n, e);
+                });
         },
         ...O.rS,
     },
-    x = new Set([
+    j = new Set([
         "hello",
         "history",
         "capture_preview",
@@ -324,7 +317,7 @@ async function B(e, t) {
             templateId: t.warmTemplateId ?? void 0,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    if ((console.debug("[conjure] ws event", r.type), !x.has(r.type) && "open" !== v.get(t)))
+                    if ((console.debug("[conjure] ws event", r.type), !j.has(r.type) && "open" !== v.get(t)))
                         return void n.pendingEvents.push(r);
                     let s = { projectId: t, ws: n.ws };
                     switch (r.type) {
@@ -428,7 +421,7 @@ async function B(e, t) {
                                             o.h.dispatch({ type: "CONJURE_CHAT_INTERRUPTED", projectId: n }));
                                     return;
                                 }
-                                let r = j[e.kind];
+                                let r = x[e.kind];
                                 null != r ? r(e, t) : (0, d.OA)(n, e);
                             })(r, s);
                             return;
@@ -475,7 +468,7 @@ function W(e) {
         n = A.get(e);
     null == n &&
         ((n = {
-            ws: new w(),
+            ws: new k(),
             backoff: new r.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -528,7 +521,7 @@ function $(e) {
         A.delete(e),
         (0, U.ng)(e),
         er(e),
-        k.A.releasePreviewControl(e),
+        w.A.releasePreviewControl(e),
         (0, g.RP)(e),
         J(e, "closed"),
         !0)

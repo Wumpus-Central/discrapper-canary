@@ -89,8 +89,7 @@ async function D(e, t, n) {
     )
         return !0;
     try {
-        let { ok: t } = await (0, g.CW)(e, a);
-        return t;
+        return (await (0, g.CW)(e, a), !0);
     } catch {
         return !1;
     }
