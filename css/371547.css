@@ -1,0 +1,17 @@
+.divider_cfc051 {
+    margin-inline-end: 16px
+}
+
+.eventSchedule_cfc051 {
+    flex: 1
+}
+
+.eventName_cfc051 {
+    margin: auto 8px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=371547.c9f43a3a311bf0af.css.map*/

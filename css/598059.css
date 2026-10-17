@@ -1,0 +1,23 @@
+.chat_ee72fa {
+    align-items: stretch;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 0;
+    min-width: 0;
+    position: relative
+}
+
+.chat_ee72fa:before {
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    inset-inline: 0;
+    pointer-events: none;
+    z-index: 1
+}
+
+/*# sourceMappingURL=598059.2c064db79a3161b4.css.map*/

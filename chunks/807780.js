@@ -19,7 +19,7 @@ var i = t(477900),
     f = t(821609),
     j = t(307301),
     E = t(812771),
-    v = t(274541),
+    v = t(321255),
     I = t(358047),
     b = t(769765),
     y = t(808728),
@@ -617,8 +617,8 @@ var eR = t(202776),
     e9 = t(591552),
     e8 = t(961973),
     e2 = t(435558),
-    e7 = t.n(e2),
-    e3 = t(665260),
+    e3 = t.n(e2),
+    e7 = t(665260),
     ne = t(355097);
 function nn(e) {
     J.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
@@ -640,8 +640,8 @@ function ni(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => i.includes(e.id));
-                                ((l = e7().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e7().difference(t?.roleIds ?? [], n.roleIds ?? [])));
+                                ((l = e3().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e3().difference(t?.roleIds ?? [], n.roleIds ?? [])));
                             } else if (t) ((l = n.roleIds ?? []), (s = []));
                             else {
                                 let t = e.options.filter((e) => i.includes(e.id)),
@@ -654,7 +654,7 @@ function ni(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((l = []), (s = e7().difference(r, d)));
+                                ((l = []), (s = e3().difference(r, d)));
                             }
                             return { addedRoleIds: l, removedRoleIds: s };
                         })(n, t, i, l),
@@ -664,8 +664,8 @@ function ni(e) {
                                 r = [];
                             if (t.singleSelect && l) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                ((a = e7().difference(i.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e7().difference(e?.channelIds ?? [], i.channelIds ?? [])));
+                                ((a = e3().difference(i.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e3().difference(e?.channelIds ?? [], i.channelIds ?? [])));
                             } else if (l) ((a = i.channelIds ?? []), (r = []));
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -678,7 +678,7 @@ function ni(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((a = []), (r = e7().difference(l, d)));
+                                ((a = []), (r = e3().difference(l, d)));
                             }
                             return (
                                 (0, et.cE)(n) && a.push(...e9.A.getDefaultChannelIds(n)),
@@ -687,11 +687,11 @@ function ni(e) {
                         })({ guildId: e, prompt: n, option: t, selected: i, responses: l }),
                         c = r.reduce((n, t) => {
                             let i = ee.Ay.getChannelIdFlags(e, t);
-                            return ((n[t] = { flags: (0, e3.lA)(i, ne.vv.OPT_IN_ENABLED, !0) }), n);
+                            return ((n[t] = { flags: (0, e7.lA)(i, ne.vv.OPT_IN_ENABLED, !0) }), n);
                         }, {}),
                         o = d.reduce((n, t) => {
                             let i = ee.Ay.getChannelIdFlags(e, t);
-                            return ((n[t] = { flags: (0, e3.lA)(i, ne.vv.OPT_IN_ENABLED, !1) }), n);
+                            return ((n[t] = { flags: (0, e7.lA)(i, ne.vv.OPT_IN_ENABLED, !1) }), n);
                         }, {}),
                         u = { ...c, ...o };
                     (e5.A.selectOption(e, n.id, t.id, i),

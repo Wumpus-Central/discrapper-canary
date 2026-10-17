@@ -1,4 +1,4 @@
-(n.d(t, { A: () => ee }), n(321073));
+(n.d(t, { A: () => et }), n(321073));
 var r,
     l = n(477900),
     a = n(582128),
@@ -25,62 +25,63 @@ var g = n(312138),
     T = n(148494),
     A = n(738768),
     N = n(775602),
-    _ = n(47167),
-    v = n(713654),
-    I = n(863439),
-    S = n(521981),
-    D = n(81437),
+    _ = n(964167),
+    v = n(47167),
+    I = n(713654),
+    D = n(863439),
+    P = n(521981),
+    S = n(81437),
     j = n(976860),
-    P = n(378570),
-    y = n(302031),
-    b = n(288254),
-    k = n(885386),
-    R = n(95701),
-    M = n(734057),
-    U = n(576705),
-    X = n(994500),
+    y = n(378570),
+    b = n(302031),
+    k = n(288254),
+    R = n(885386),
+    M = n(95701),
+    U = n(734057),
+    X = n(576705),
+    L = n(994500),
     O = n(309010),
-    L = n(287809),
-    w = n(822382),
-    F = n(876689),
-    G = n(621466),
-    V = n(559106),
-    $ = n(442433),
-    W = n(636922),
-    B = n(486020),
-    K = n(105292),
-    z = n(823954);
-function J(e) {
+    w = n(287809),
+    F = n(822382),
+    G = n(876689),
+    V = n(621466),
+    $ = n(559106),
+    W = n(442433),
+    B = n(636922),
+    K = n(486020),
+    z = n(105292),
+    J = n(823954);
+function H(e) {
     let { message: t } = e,
-        n = B.Ay.getUserAvatarURL({ avatar: t.author.avatar, id: t.author.id, discriminator: t.author.discriminator }),
+        n = K.Ay.getUserAvatarURL({ avatar: t.author.avatar, id: t.author.id, discriminator: t.author.discriminator }),
         r = t.author.globalName ?? t.author.username;
     return (0, l.jsxs)("div", {
-        className: z.Iy,
+        className: J.Iy,
         children: [
-            (0, l.jsx)("img", { className: z.gJ, src: n, alt: "", "aria-hidden": !0 }),
+            (0, l.jsx)("img", { className: J.gJ, src: n, alt: "", "aria-hidden": !0 }),
             (0, l.jsxs)("div", {
-                className: z.ur,
+                className: J.ur,
                 children: [
                     (0, l.jsx)(x.E, { variant: "text-sm/semibold", color: "text-default", children: r }),
                     (0, l.jsx)(x.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        className: z.SR,
-                        children: K.intl.string(K.t["5uaI/7"]),
+                        className: J.SR,
+                        children: z.intl.string(z.t["5uaI/7"]),
                     }),
                 ],
             }),
         ],
     });
 }
-class H extends a.PureComponent {
+class q extends a.PureComponent {
     containerRef = a.createRef();
     hitRef = a.createRef();
     handleContextMenu = (e, t) => {
-        let r = M.A.getChannel(t.channel_id);
+        let r = U.A.getChannel(t.channel_id);
         null != r &&
             (e.stopPropagation(),
-            (0, $.L3)(e, async () => {
+            (0, W.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("587308"),
                     n.e("292699"),
@@ -106,7 +107,7 @@ class H extends a.PureComponent {
             let n = window?.getSelection();
             if (null != n && !n.isCollapsed) return !0;
             if (null == e || null == t) return !1;
-            for (; (0, G.vq)(e) && e !== t;) {
+            for (; (0, V.vq)(e) && e !== t;) {
                 let { tagName: t } = e;
                 if ("A" === t || "BUTTON" === t || ("IMG" === t && "true" !== e.getAttribute("aria-hidden"))) return !0;
                 e = e.parentNode;
@@ -125,15 +126,15 @@ class H extends a.PureComponent {
                 totalResults: a,
                 isSpoilerHidden: s,
             } = this.props,
-            i = M.A.getChannel(e.channel_id);
+            i = U.A.getChannel(e.channel_id);
         if (null == i) return null;
         let u = `search-result-${e.id}`;
-        return (0, l.jsx)(V.vN, {
+        return (0, l.jsx)($.vN, {
             ringTarget: this.hitRef,
-            ringClassName: z.__invalid_searchResultFocusRing,
+            ringClassName: J.__invalid_searchResultFocusRing,
             offset: 4,
             children: (0, l.jsxs)("li", {
-                className: z.kL,
+                className: J.kL,
                 ...t,
                 "aria-posinset": 1 + n + r,
                 "aria-setsize": a,
@@ -144,16 +145,16 @@ class H extends a.PureComponent {
                         onClick: this.handleMessageClick,
                         ignoreKeyPress: !0,
                         innerRef: this.containerRef,
-                        className: z.mk,
+                        className: J.mk,
                         focusProps: { enabled: !1 },
                         children: (0, l.jsx)(
                             "div",
                             {
                                 ref: this.hitRef,
-                                className: z.iU,
+                                className: J.iU,
                                 children: s
-                                    ? (0, l.jsx)(J, { message: e })
-                                    : (0, l.jsx)(W.A, {
+                                    ? (0, l.jsx)(H, { message: e })
+                                    : (0, l.jsx)(B.A, {
                                           id: u,
                                           message: e,
                                           channel: i,
@@ -167,12 +168,12 @@ class H extends a.PureComponent {
                         ),
                     }),
                     (0, l.jsx)("div", {
-                        className: z.NC,
+                        className: J.NC,
                         "aria-hidden": !0,
                         children: (0, l.jsx)(E.D, {
-                            className: z.x6,
+                            className: J.x6,
                             onClick: this.jumpTo,
-                            children: K.intl.string(K.t.k5WiPf),
+                            children: z.intl.string(z.t.k5WiPf),
                         }),
                     }),
                 ],
@@ -180,19 +181,19 @@ class H extends a.PureComponent {
         });
     }
 }
-var q = n(652215),
-    Q = n(979882);
-function Y(e) {
+var Q = n(652215),
+    Y = n(979882);
+function Z(e) {
     let { parentChannel: t, onSelectChannel: n } = e,
-        r = (0, _.Ay)(t);
+        r = (0, v.Ay)(t);
     if (null == r) return null;
-    let a = null != t ? (0, v.gU)(t) : null;
+    let a = null != t ? (0, I.gU)(t) : null;
     if (null == a) return null;
     let s = (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a, { className: Q.gQ, size: "xxs", color: "currentColor" }),
+            (0, l.jsx)(a, { className: Y.gQ, size: "xxs", color: "currentColor" }),
             (0, l.jsx)(x.E, {
-                className: Q.yK,
+                className: Y.yK,
                 variant: "text-xs/medium",
                 color: "text-default",
                 lineClamp: 1,
@@ -200,17 +201,17 @@ function Y(e) {
             }),
         ],
     });
-    return null != t && (0, R.Z_)(t.type)
+    return null != t && (0, M.Z_)(t.type)
         ? (0, l.jsx)(E.D, {
-              className: i()(Q.rg, Q.fj),
+              className: i()(Y.rg, Y.fj),
               onClick: (e) => {
                   (e.stopPropagation(), n(t.id));
               },
               children: s,
           })
-        : (0, l.jsx)("div", { className: Q.rg, children: s });
+        : (0, l.jsx)("div", { className: Y.rg, children: s });
 }
-function Z(e) {
+function ee(e) {
     let {
             channel: t,
             messages: n,
@@ -224,42 +225,42 @@ function Z(e) {
             jumpToMessage: f,
             listNavigator: h,
         } = e,
-        m = k.gs.useSetting(),
-        g = (0, b.IL)(t),
+        m = R.gs.useSetting(),
+        g = (0, k.IL)(t),
         T = a.useCallback((e) => {
             if (e === O.Ay.getChannelId()) return;
-            let t = M.A.getChannel(e);
-            null == t || ((U.A.can(q.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, P.iN)(t.id));
+            let t = U.A.getChannel(e);
+            null == t || ((X.A.can(Q.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, y.iN)(t.id));
         }, []),
-        A = null != t ? (0, _.m1)(t, L.default, X.A, !1) : "???",
-        N = t?.parent_id != null ? M.A.getChannel(t.parent_id) : null,
-        D = null != N ? (0, _.m1)(N, L.default, X.A) : null,
-        j = (0, v.gU)(t) ?? p.N,
-        R = U.A.can(q.xBc.MANAGE_MESSAGES, t),
-        { content: w } = (0, S.Ay)({ content: A, embeds: [] }, { postProcessor: r }),
+        A = null != t ? (0, v.m1)(t, w.default, L.A, !1) : "???",
+        N = t?.parent_id != null ? U.A.getChannel(t.parent_id) : null,
+        _ = null != N ? (0, v.m1)(N, w.default, L.A) : null,
+        S = (0, I.gU)(t) ?? p.N,
+        j = X.A.can(Q.xBc.MANAGE_MESSAGES, t),
+        { content: M } = (0, P.Ay)({ content: A, embeds: [] }, { postProcessor: r }),
         F = a.useRef(null),
         [G, V] = a.useState(!1);
     a.useEffect(() => {
         let e = F.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && V(e.offsetWidth < e.scrollWidth);
     }, []);
-    let $ = [A, D].filter((e) => null != e).join(", "),
-        W = (0, I.A)(m, R);
-    return (0, l.jsx)(y.Bs.Provider, {
+    let $ = [A, _].filter((e) => null != e).join(", "),
+        W = (0, D.A)(m, j);
+    return (0, l.jsx)(b.Bs.Provider, {
         value: W,
         children: (0, l.jsxs)("ul", {
             role: "group",
-            className: Q.JT,
+            className: Y.JT,
             "aria-label": $,
             children: [
                 (0, l.jsx)(E.D, {
                     onClick: () => T(t.id),
                     children: (0, l.jsxs)("div", {
-                        className: Q.aT,
+                        className: Y.aT,
                         children: [
-                            (0, l.jsx)(j, { className: Q.er, size: "xs", color: "currentColor" }),
+                            (0, l.jsx)(S, { className: Y.er, size: "xs", color: "currentColor" }),
                             (0, l.jsx)("div", {
-                                className: Q.rm,
+                                className: Y.rm,
                                 children: (0, l.jsx)(C.m, {
                                     asContainer: !0,
                                     text: A,
@@ -269,19 +270,19 @@ function Z(e) {
                                         color: "text-strong",
                                         tag: "span",
                                         ref: F,
-                                        className: Q.Kw,
-                                        children: w,
+                                        className: Y.Kw,
+                                        children: M,
                                     }),
                                 }),
                             }),
-                            (0, l.jsx)(Y, { parentChannel: N, onSelectChannel: T }),
+                            (0, l.jsx)(Z, { parentChannel: N, onSelectChannel: T }),
                         ],
                     }),
                 }),
                 n.map((e, t) => {
                     let r = s + t;
                     return (0, l.jsx)(
-                        H,
+                        q,
                         {
                             ref: (e) => {
                                 i.current[r] = e;
@@ -304,7 +305,7 @@ function Z(e) {
         }),
     });
 }
-let ee = a.memo(function (e) {
+let et = a.memo(function (e) {
     let {
             search: t,
             renderEmbeds: n,
@@ -314,31 +315,32 @@ let ee = a.memo(function (e) {
             ignoreCount: x,
             onPageChange: p,
             onClick: C,
-            paginationTotalCount: _,
-            renderPageWrapper: v,
-            onBlockedResultsClick: I,
-            searchRequestAnalyticsId: S,
-            searchResultsQuery: P,
+            paginationTotalCount: v,
+            renderPageWrapper: I,
+            onBlockedResultsClick: D,
+            searchRequestAnalyticsId: P,
+            searchResultsQuery: y,
         } = e,
-        { offset: y, totalResults: b, isSearching: k, showBlockedResults: R } = t,
-        U = a.useCallback(
+        { offset: b, totalResults: k, isSearching: R, showBlockedResults: M } = t,
+        X = a.useCallback(
             (e, t) => {
                 function n() {
-                    let t = M.A.getChannel(e.channel_id),
+                    let t = U.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    (T.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: S }),
-                        (0, j.pX)(q.BVt.CHANNEL(n, e.channel_id, e.id)));
+                    T.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: P });
+                    let r = Q.BVt.CHANNEL(n, e.channel_id, e.id);
+                    (0, j.pX)(t?.type === Q.rbe.GUILD_APP ? (0, _.gu)(r) : r);
                 }
-                (C?.(e, t), (0, D.A)(e, n) && n());
+                (C?.(e, t), (0, S.A)(e, n) && n());
             },
-            [C, S],
+            [C, P],
         ),
         O = a.useMemo(() => {
             let e,
                 t = 0;
             return s.reduce((n, r) => {
-                if (!R && (X.A.isBlockedForMessage(r) || X.A.isIgnoredForMessage(r))) return n;
-                let l = M.A.getChannel(r.channel_id);
+                if (!M && (L.A.isBlockedForMessage(r) || L.A.isIgnoredForMessage(r))) return n;
+                let l = U.A.getChannel(r.channel_id);
                 return (
                     null == l ||
                         ((null == e || e !== l.id) && n.push({ channel: l, messages: [], startIndex: t }),
@@ -348,9 +350,9 @@ let ee = a.memo(function (e) {
                     n
                 );
             }, []);
-        }, [s, R]),
-        L = a.useRef([]),
-        G = (function (e) {
+        }, [s, M]),
+        w = a.useRef([]),
+        V = (function (e) {
             let {
                     navId: t,
                     itemCount: n,
@@ -427,32 +429,32 @@ let ee = a.memo(function (e) {
                     a.useEffect(() => {
                         v.current = C;
                     }, [C]);
-                    let [I, S] = a.useState(!1),
-                        [D] = a.useState(
+                    let [I, D] = a.useState(!1),
+                        [P] = a.useState(
                             () =>
                                 new o.Lp((e) => () => {
                                     let t = null != _.current && "string" == typeof e ? _.current(e) : e;
                                     "number" != typeof t || t < 0 || g({ type: c.SET_FOCUSED_INDEX, index: t });
                                 }),
                         );
-                    a.useEffect(() => () => D.clean(), [D]);
-                    let j = a.useCallback(
+                    a.useEffect(() => () => P.clean(), [P]);
+                    let S = a.useCallback(
                             (e, t) => {
                                 v.current && s(e, t);
                             },
                             [s],
                         ),
-                        [P, y] = a.useState(!0);
+                        [j, y] = a.useState(!0);
                     a.useEffect(() => {
-                        P && !p ? y(!1) : j(T(t, r), r);
+                        j && !p ? y(!1) : S(T(t, r), r);
                     }, [r]);
                     let b = a.useCallback(
                             function () {
                                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                                     n = null != i ? i(r) : r;
-                                (n !== r && g({ type: c.SET_FOCUSED_INDEX, index: n }), e && j(T(t, n), n));
+                                (n !== r && g({ type: c.SET_FOCUSED_INDEX, index: n }), e && S(T(t, n), n));
                             },
-                            [T, r, i, g, t, j],
+                            [T, r, i, g, t, S],
                         ),
                         k = a.useCallback(
                             (e) => {
@@ -498,19 +500,19 @@ let ee = a.memo(function (e) {
                             [T, t, g, r, b, l],
                         ),
                         R = a.useCallback(() => {
-                            I || S(!0);
+                            I || D(!0);
                         }, [I]),
                         M = a.useCallback(() => {
-                            I || (E ? j(T(t, r), r) : b(!0));
-                        }, [T, t, j, E, I, r, b]),
+                            I || (E ? S(T(t, r), r) : b(!0));
+                        }, [T, t, S, E, I, r, b]),
                         U = a.useCallback(
                             (e) => {
                                 e.currentTarget.contains(e.relatedTarget) ||
                                     requestAnimationFrame(() => {
-                                        null == h(f(T, t, r)) ? j(t) : S(!1);
+                                        null == h(f(T, t, r)) ? S(t) : D(!1);
                                     });
                             },
-                            [T, t, r, j],
+                            [T, t, r, S],
                         ),
                         X = a.useRef(null);
                     a.useLayoutEffect(() => {
@@ -527,11 +529,11 @@ let ee = a.memo(function (e) {
                                 }
                             );
                     }, [M, R, U]);
-                    let O = a.useCallback(
+                    let L = a.useCallback(
                             () => ({ role: "list", tabIndex: I && E ? -1 : 0, id: t, onKeyDown: k, ref: X }),
                             [t, I, k, E],
                         ),
-                        L = a.useCallback(
+                        O = a.useCallback(
                             (e) => {
                                 let { index: n } = e;
                                 return {
@@ -540,12 +542,12 @@ let ee = a.memo(function (e) {
                                     "aria-posinset": x ? n + 1 : void 0,
                                     id: T(t, n),
                                     tabIndex: E && n === r ? 0 : -1,
-                                    onFocus: D.get(null != _.current ? T(t, n) : n),
+                                    onFocus: P.get(null != _.current ? T(t, n) : n),
                                 };
                             },
-                            [T, t, r, E, D, x],
+                            [T, t, r, E, P, x],
                         );
-                    return a.useMemo(() => ({ dispatch: g, getContainerProps: O, getItemProps: L }), [g, O, L]);
+                    return a.useMemo(() => ({ dispatch: g, getContainerProps: L, getItemProps: O }), [g, L, O]);
                 })({
                     navId: t,
                     itemCount: _,
@@ -567,7 +569,7 @@ let ee = a.memo(function (e) {
             setFocus: a.useCallback(
                 (e, t) => {
                     if (!N.Ay.keyboardModeEnabled) return;
-                    let n = L.current,
+                    let n = w.current,
                         l = null != t ? n[t] : void 0;
                     if (null == l || null == l.hitRef.current) return;
                     let a = l.hitRef.current.getClientRects()[0];
@@ -578,74 +580,74 @@ let ee = a.memo(function (e) {
                 [r],
             ),
             onSelect: a.useCallback((e) => {
-                let t = L.current[e];
+                let t = w.current[e];
                 t?.jumpTo();
             }, []),
         }),
-        V = (0, A.wG)((0, w.dX)(P) ?? ""),
-        $ = O.map((e) => {
+        $ = (0, A.wG)((0, F.dX)(y) ?? ""),
+        W = O.map((e) => {
             let { channel: t, messages: a, startIndex: s } = e;
             return (0, l.jsx)(
-                Z,
+                ee,
                 {
                     channel: t,
                     messages: a,
-                    highlighter: V,
+                    highlighter: $,
                     startIndex: s,
-                    resultRefs: L,
-                    totalResults: b,
+                    resultRefs: w,
+                    totalResults: k,
                     scrollTo: r,
                     renderEmbeds: n,
-                    offset: y,
-                    jumpToMessage: U,
-                    listNavigator: G,
+                    offset: b,
+                    jumpToMessage: X,
+                    listNavigator: V,
                 },
                 `${t.id}-${s}`,
             );
         });
-    $.push();
-    let W = a.useRef(null);
+    W.push();
+    let B = a.useRef(null);
     a.useLayoutEffect(() => {
-        W.current?.focus();
+        B.current?.focus();
     }, [s]);
-    let B = (0, g.R7)();
+    let K = (0, g.R7)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)("div", { ref: W, ...G.getContainerProps(), ...B, "aria-busy": k, children: $ }),
+            (0, l.jsx)("div", { ref: B, ...V.getContainerProps(), ...K, "aria-busy": R, children: W }),
             i > 0 || x > 0
                 ? (0, l.jsxs)(E.D, {
                       tag: "div",
-                      className: Q.P,
+                      className: Y.P,
                       onClick: function () {
-                          I?.(!R);
+                          D?.(!M);
                       },
                       children: [
-                          (0, l.jsx)("div", { className: Q.y }),
+                          (0, l.jsx)("div", { className: Y.y }),
                           (0, l.jsx)("div", {
-                              className: Q.__invalid_resultsBlockedText,
-                              children: R
+                              className: Y.__invalid_resultsBlockedText,
+                              children: M
                                   ? i > 0 && x > 0
-                                      ? K.intl.formatToPlainString(K.t.OvJs9w, { count: i + x })
+                                      ? z.intl.formatToPlainString(z.t.OvJs9w, { count: i + x })
                                       : i > 0
-                                        ? K.intl.formatToPlainString(K.t["n/1QFS"], { count: i })
-                                        : K.intl.formatToPlainString(K.t.ypezTA, { count: x })
+                                        ? z.intl.formatToPlainString(z.t["n/1QFS"], { count: i })
+                                        : z.intl.formatToPlainString(z.t.ypezTA, { count: x })
                                   : i > 0 && x > 0
-                                    ? K.intl.formatToPlainString(K.t.EJHRcV, { count: i + x })
+                                    ? z.intl.formatToPlainString(z.t.EJHRcV, { count: i + x })
                                     : i > 0
-                                      ? K.intl.formatToPlainString(K.t.HTE8JP, { count: i })
-                                      : K.intl.formatToPlainString(K.t.e7f8r9, { count: x }),
+                                      ? z.intl.formatToPlainString(z.t.HTE8JP, { count: i })
+                                      : z.intl.formatToPlainString(z.t.e7f8r9, { count: x }),
                           }),
                       ],
                   })
                 : null,
             null != p &&
-                !k &&
-                (0, l.jsx)(F.A, {
-                    renderPageWrapper: v,
+                !R &&
+                (0, l.jsx)(G.A, {
+                    renderPageWrapper: I,
                     onPageChange: p,
-                    offset: y,
-                    totalCount: _ ?? b,
-                    pageSize: q.T_y,
+                    offset: b,
+                    totalCount: v ?? k,
+                    pageSize: Q.T_y,
                 }),
         ],
     });

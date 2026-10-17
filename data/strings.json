@@ -3690,6 +3690,7 @@
   "v05vEp": "The channel’s app can’t be removed from its own channel.",
   "Xq++FA": "{appName} needs some permissions to work in this channel, so they can’t be turned off.",
   "yXmgpP": "The channel’s app requires this permission.",
+  "vLgj1J": "Back to App",
   "na1rJc": "To change this channel’s app, you need the {permissions} {count, plural,one {permission}other {permissions}.",
   "VkMnR2": "Close App",
   "Sd9D/R": "Something went wrong. Try again.",
