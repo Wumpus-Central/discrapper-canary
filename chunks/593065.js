@@ -28,8 +28,8 @@ let y = new R.E([], L.$G.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" 
 var D = n(611924),
     v = n(452015),
     b = n(380335),
-    M = n(309199),
-    P = n(157550),
+    P = n(309199),
+    M = n(157550),
     U = n(922016),
     w = n(365199),
     G = n(58736),
@@ -309,10 +309,10 @@ let J = function (e) {
         { version: n, theme: a, children: s, listScrollerRef: l } = e,
         o = r.Children.count(s),
         _ = Y.A.getMutablePrivateChannels(),
-        E = (0, M.uX)(_),
-        A = (0, u.yK)([$.A, b.A, P.A], () => {
+        E = (0, P.uX)(_),
+        A = (0, u.yK)([$.A, b.A, M.A], () => {
             let e = $.A.getPrivateChannelIds();
-            return (0, M.eh)(e, [b.A, P.A]);
+            return (0, P.eh)(e, [b.A, M.A]);
         });
     (0, D.P)(y);
     let { analyticsLocations: h } = (0, g.Ay)(T.A.CONTACTS_LIST),

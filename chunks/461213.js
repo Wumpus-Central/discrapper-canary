@@ -28,8 +28,8 @@ let g = !1,
     D = Object.freeze([]),
     v = Object.freeze([]),
     b = [],
-    M = [];
-function P(e) {
+    P = [];
+function M(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
@@ -67,13 +67,13 @@ function G() {
     S === m.clD.ONLINE && C > 0 && (S = m.clD.IDLE);
     let e = !1,
         t = y || S === m.clD.INVISIBLE ? [] : I.A.getActivities().filter(w);
-    r()(O, t) || ((O = t), (R = P(t)), (e = !0));
+    r()(O, t) || ((O = t), (R = M(t)), (e = !0));
     let n = T.A.getRemoteActivities();
     D !== n && ((D = n), (e = !0));
     let i = T.A.getHiddenActivities();
     (v !== i && (v = i),
         e &&
-            (M = P(
+            (P = M(
                 (b = s()([...O, ...D.filter((e) => e.type !== m.$pd.CUSTOM_STATUS)].sort(p.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
@@ -95,7 +95,7 @@ class k extends l.Ay.Store {
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? M : R;
+        return e ? P : R;
     }
     getUnfilteredActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

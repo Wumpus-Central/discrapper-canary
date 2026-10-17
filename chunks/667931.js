@@ -3,7 +3,7 @@
     H$: () => S,
     IE: () => m,
     JQ: () => a,
-    N5: () => k,
+    N5: () => w,
     Sj: () => T,
     TK: () => d,
     TN: () => E,
@@ -110,7 +110,7 @@ function d(e) {
                         }),
                     ),
                     outlivedParent: d > l,
-                    ...k(a),
+                    ...w(a),
                     significant: !1,
                     children: [],
                     descendants: 0,
@@ -167,7 +167,7 @@ function u(e, t) {
     );
 }
 function p(e) {
-    return { collapsed: w(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
+    return { collapsed: k(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
 }
 function h(e, t, n) {
     let r = [...p(t).collapsed].filter((e) => !n.has(e));
@@ -178,10 +178,10 @@ function f(e) {
     return (b(e, (e) => t.add(e.key)), t);
 }
 function _(e) {
-    return { collapsed: new Set(), revealed: w(e, () => !0) };
+    return { collapsed: new Set(), revealed: k(e, () => !0) };
 }
 function g(e) {
-    return { collapsed: w(e, (e) => e.depth > 0), revealed: new Set() };
+    return { collapsed: k(e, (e) => e.depth > 0), revealed: new Set() };
 }
 function E(e, t) {
     if (!e.collapsed.has(t.key)) return { ...e, collapsed: new Set(e.collapsed).add(t.key) };
@@ -243,7 +243,7 @@ function N(e) {
 function b(e, t) {
     for (let n of (t(e), e.children)) b(n, t);
 }
-function k(e) {
+function w(e) {
     let t = e.name.search(/[.:]/),
         n = -1 === t ? e.name : e.name.slice(0, t),
         r = (-1 === t ? "" : e.name.slice(t + 1))
@@ -257,7 +257,7 @@ function k(e) {
         category: s[n] ?? "other",
     };
 }
-function w(e, t) {
+function k(e, t) {
     let n = new Set();
     return (
         !(function e(r) {

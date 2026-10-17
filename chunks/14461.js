@@ -596,8 +596,8 @@ class v extends l.G {
     }
 }
 let b = new v();
-var M = n(406935);
-class P extends l.G {
+var P = n(406935);
+class M extends l.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.ShopNagbar", [
             { no: 1, name: "body", kind: "scalar", T: 9 },
@@ -612,7 +612,7 @@ class P extends l.G {
             { no: 5, name: "help_article", kind: "message", T: () => p.O },
             { no: 6, name: "body_localized", kind: "message", T: () => h.X },
             { no: 7, name: "cta_label_localized", kind: "message", T: () => h.X },
-            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => M.ol },
+            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => P.ol },
         ]);
     }
     create(e) {
@@ -651,7 +651,7 @@ class P extends l.G {
                     a.ctaLabelLocalized = h.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
                     break;
                 case 8:
-                    a.navigableStorefrontApplicationId = M.ol.internalBinaryRead(
+                    a.navigableStorefrontApplicationId = P.ol.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -679,14 +679,14 @@ class P extends l.G {
             e.ctaLabelLocalized &&
                 h.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.navigableStorefrontApplicationId &&
-                M.ol
+                P.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, r.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let U = new P();
+let U = new M();
 var w = n(520361);
 class G extends l.G {
     constructor() {
@@ -759,7 +759,7 @@ class k extends l.G {
             { no: 5, name: "help_article", kind: "message", T: () => p.O },
             { no: 6, name: "body_localized", kind: "message", T: () => h.X },
             { no: 7, name: "cta_label_localized", kind: "message", T: () => h.X },
-            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => M.ol },
+            { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => P.ol },
         ]);
     }
     create(e) {
@@ -798,7 +798,7 @@ class k extends l.G {
                     a.ctaLabelLocalized = h.X.internalBinaryRead(e, e.uint32(), n, a.ctaLabelLocalized);
                     break;
                 case 8:
-                    a.navigableStorefrontApplicationId = M.ol.internalBinaryRead(
+                    a.navigableStorefrontApplicationId = P.ol.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -826,7 +826,7 @@ class k extends l.G {
             e.ctaLabelLocalized &&
                 h.X.internalBinaryWrite(e.ctaLabelLocalized, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.navigableStorefrontApplicationId &&
-                M.ol
+                P.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, r.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;

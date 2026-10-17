@@ -239,8 +239,8 @@ class v {
     }
 }
 var b = n(986630),
-    M = n(384726),
-    P = n(696444),
+    P = n(384726),
+    M = n(696444),
     U = n(474012),
     w = n(758836),
     G = n(652215);
@@ -315,9 +315,9 @@ class x {
                 let { rewardSkuId: t } = e;
                 return t === n;
             }),
-            prices: (0, M.A)(s),
+            prices: (0, P.A)(s),
             items: (0, U.Kh)(f.items),
-            bundledProducts: l?.map(P.A.fromServer),
+            bundledProducts: l?.map(M.A.fromServer),
             variants: o?.map(b.x.fromServer),
             googleSkuIds: f.google_sku_ids,
             eligibleOffers: f.eligible_offers,

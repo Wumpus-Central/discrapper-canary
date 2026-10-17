@@ -28,8 +28,8 @@ var i = n(477900),
     D = n(933958),
     v = n(851907),
     b = n(838274),
-    M = n(536246),
-    P = n(108959),
+    P = n(536246),
+    M = n(108959),
     U = n(597396),
     w = n(56129),
     G = n(824613),
@@ -72,7 +72,7 @@ function Y(e) {
             participantsOpen: null != t && I.A.getParticipantsOpen(t.id),
         })),
         en = X || null != Q,
-        ei = (0, P.A)(t?.id),
+        ei = (0, M.A)(t?.id),
         er = t?.id,
         ea = t?.getGuildId(),
         { enabled: es } = (0, g.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
@@ -105,7 +105,7 @@ function Y(e) {
                 d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: b });
             }
         }, [b, eu]),
-        null == A || null == z || ((0, P.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
+        null == A || null == z || ((0, M.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
     )
         return null;
     let eh = Array.from(A.userIds)
@@ -191,7 +191,7 @@ function Y(e) {
                     n || Y
                         ? (0, i.jsx)(o.y, { className: s()(H.pU, { [H.p0]: eu && !a, [H.ST]: eu && a }) })
                         : (0, i.jsx)(U.o, {
-                              allowPopups: (0, M.b)($),
+                              allowPopups: (0, P.b)($),
                               referrerPolicy: "origin",
                               url: A.url,
                               contextSource: { type: p.f.ACTIVITY, applicationId: A.applicationId },

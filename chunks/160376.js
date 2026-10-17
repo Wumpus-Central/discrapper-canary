@@ -1,4 +1,4 @@
-n.d(e, { A: () => p });
+n.d(e, { A: () => g });
 var l = n(788733),
     i = n(82149),
     a = n(573648),
@@ -10,8 +10,8 @@ var l = n(788733),
     d = n(287743);
 let A = new Set([o.fg2.LEAGUE_OF_LEGENDS, o.fg2.ROBLOX, o.fg2.TWITCH, o.fg2.YOUTUBE]);
 var f = n(190915),
-    g = n(105292);
-function p(t) {
+    p = n(105292);
+function g(t) {
     let e = (0, d.A)(t.session_id),
         n = (function (t) {
             let e = (0, d.A)(t.session_id);
@@ -27,46 +27,46 @@ function p(t) {
             });
             return null != n && A.has(n.type) ? n : null;
         })(t),
-        p = n?.icon,
+        g = n?.icon,
         m = n?.name ?? "";
     if (t.type === o.$pd.PLAYING && n?.type === o.fg2.XBOX)
         return {
-            text: g.intl.formatToPlainString(g.t.A17aM8, { platform: g.intl.string(g.t.Nfvo72) }),
-            platformIcon: p,
+            text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.Nfvo72) }),
+            platformIcon: g,
             platformLabel: m,
         };
     if (t.type === o.$pd.PLAYING && n?.type === o.fg2.PLAYSTATION)
         return {
-            text: g.intl.formatToPlainString(g.t.A17aM8, { platform: g.intl.string(g.t.fFl4jo) }),
-            platformIcon: p,
+            text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.fFl4jo) }),
+            platformIcon: g,
             platformLabel: m,
         };
     if (t.type === o.$pd.PLAYING && n?.type === o.fg2.META_QUEST_OR_HORIZON)
         return {
-            text: g.intl.formatToPlainString(g.t.A17aM8, {
-                platform: (0, l.A)(t) ? g.intl.string(g.t.BrHQaq) : g.intl.string(g.t.p6vL0e),
+            text: p.intl.formatToPlainString(p.t.A17aM8, {
+                platform: (0, l.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
-            platformIcon: p,
+            platformIcon: g,
             platformLabel: m,
         };
     if (t.type === o.$pd.WATCHING && n?.type === o.fg2.META_QUEST_OR_HORIZON)
         return {
-            text: g.intl.formatToPlainString(g.t.ENbTKQ, {
-                platform: (0, l.A)(t) ? g.intl.string(g.t.BrHQaq) : g.intl.string(g.t.p6vL0e),
+            text: p.intl.formatToPlainString(p.t.ENbTKQ, {
+                platform: (0, l.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
-            platformIcon: p,
+            platformIcon: g,
             platformLabel: m,
         };
     if (t.type === o.$pd.STREAMING && n?.type === o.fg2.TWITCH)
         return {
-            text: g.intl.formatToPlainString(g.t["4CQq9Q"], { name: g.intl.string(g.t.q4pBG3) }),
-            platformIcon: p,
+            text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.q4pBG3) }),
+            platformIcon: g,
             platformLabel: m,
         };
     if (t.type === o.$pd.STREAMING && n?.type === o.fg2.YOUTUBE)
         return {
-            text: g.intl.formatToPlainString(g.t["4CQq9Q"], { name: g.intl.string(g.t.aS6cK4) }),
-            platformIcon: p,
+            text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.aS6cK4) }),
+            platformIcon: g,
             platformLabel: m,
         };
     if (null != e) {
@@ -74,48 +74,48 @@ function p(t) {
             l = (0, f.A)(e, t);
         switch (t.type) {
             case o.$pd.PLAYING:
-                n = g.t.A17aM8;
+                n = p.t.A17aM8;
                 break;
             case o.$pd.WATCHING:
-                n = g.t.ENbTKQ;
+                n = p.t.ENbTKQ;
                 break;
             case o.$pd.LISTENING:
-                n = g.t.EcHzWI;
+                n = p.t.EcHzWI;
                 break;
             case o.$pd.COMPETING:
-                n = g.t.ikpHeS;
+                n = p.t.ikpHeS;
                 break;
             case o.$pd.STREAMING:
-                n = g.t.Dzgz4u;
+                n = p.t.Dzgz4u;
         }
         if (void 0 !== n)
-            return { text: g.intl.formatToPlainString(n, { platform: l }), platformIcon: p, platformLabel: m };
+            return { text: p.intl.formatToPlainString(n, { platform: l }), platformIcon: g, platformLabel: m };
     }
     return t.type === o.$pd.PLAYING
-        ? { text: g.intl.string(g.t.BMTj28), platformIcon: p, platformLabel: m }
+        ? { text: p.intl.string(p.t.BMTj28), platformIcon: g, platformLabel: m }
         : t.type === o.$pd.STREAMING
-          ? { text: g.intl.string(g.t["Jpkr/q"]), platformIcon: p, platformLabel: m }
+          ? { text: p.intl.string(p.t["Jpkr/q"]), platformIcon: g, platformLabel: m }
           : (0, i.Cy)(t)
-            ? { text: g.intl.formatToPlainString(g.t.pW3Ip3, { name: t.name }) }
+            ? { text: p.intl.formatToPlainString(p.t.pW3Ip3, { name: t.name }) }
             : t.type === o.$pd.LISTENING && null != t.details
-              ? { text: g.intl.formatToPlainString(g.t["b+lA5+"], { name: t.name }), platformIcon: p, platformLabel: m }
+              ? { text: p.intl.formatToPlainString(p.t["b+lA5+"], { name: t.name }), platformIcon: g, platformLabel: m }
               : t.type === o.$pd.LISTENING
-                ? { text: g.intl.string(g.t.dBISa6), platformIcon: p, platformLabel: m }
+                ? { text: p.intl.string(p.t.dBISa6), platformIcon: g, platformLabel: m }
                 : t.type === o.$pd.WATCHING && null != t.details
                   ? {
-                        text: g.intl.formatToPlainString(g.t.mqdfDc, { name: t.name }),
-                        platformIcon: p,
+                        text: p.intl.formatToPlainString(p.t.mqdfDc, { name: t.name }),
+                        platformIcon: g,
                         platformLabel: m,
                     }
                   : t.type === o.$pd.WATCHING
-                    ? { text: g.intl.string(g.t.GpNXjC), platformIcon: p, platformLabel: m }
+                    ? { text: p.intl.string(p.t.GpNXjC), platformIcon: g, platformLabel: m }
                     : t.type === o.$pd.COMPETING && null != t.details
                       ? {
-                            text: g.intl.formatToPlainString(g.t.oHF7Ch, { name: t.name }),
-                            platformIcon: p,
+                            text: p.intl.formatToPlainString(p.t.oHF7Ch, { name: t.name }),
+                            platformIcon: g,
                             platformLabel: m,
                         }
                       : t.type === o.$pd.COMPETING
-                        ? { text: g.intl.string(g.t.OzCsIA), platformIcon: p, platformLabel: m }
-                        : { text: void 0, platformIcon: p, platformLabel: m };
+                        ? { text: p.intl.string(p.t.OzCsIA), platformIcon: g, platformLabel: m }
+                        : { text: void 0, platformIcon: g, platformLabel: m };
 }

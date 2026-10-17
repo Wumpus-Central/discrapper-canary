@@ -1,7 +1,7 @@
 (n.d(t, {
     Bo: () => L,
     tr: () => U,
-    Cu: () => M,
+    Cu: () => P,
     $F: () => l.LG,
     TP: () => y,
     oh: () => h,
@@ -300,13 +300,13 @@ function v(e) {
     D = e;
 }
 let b = () => Promise.resolve();
-function M(e) {
+function P(e) {
     b = e;
 }
-let P = () => !0;
+let M = () => !0;
 function U(e) {
-    P = e;
+    M = e;
 }
 function w() {
-    return P();
+    return M();
 }

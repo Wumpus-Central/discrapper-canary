@@ -10,7 +10,7 @@
     GS: () => es,
     h5: () => eL,
     Ts: () => eG,
-    H1: () => eP,
+    H1: () => eM,
     l0: () => ek,
     yd: () => e_,
     ef: () => eC,
@@ -67,13 +67,13 @@ function D(e, t) {
 }
 var v = n(274372),
     b = n(458977),
-    M = n(439818);
-let P = ["filepath", "sizeBytes"];
+    P = n(439818);
+let M = ["filepath", "sizeBytes"];
 function U(e) {
     return JSON.stringify(
         (function (e) {
             let t = { ...e };
-            for (let e of P) delete t[e];
+            for (let e of M) delete t[e];
             return t;
         })(e),
     );
@@ -531,9 +531,9 @@ async function ec(e) {
         N = null != g.syncTimestamp ? g.syncTimestamp - g.createdAt : void 0,
         R = (0, H.p)(N);
     g.isCandidate = o ?? !1;
-    let D = `${(0, M.A)(g.applicationName.substring(0, 20))}_${g.id}.mp4`,
+    let D = `${(0, P.A)(g.applicationName.substring(0, 20))}_${g.id}.mp4`,
         b = a.A.fileManager.join(m, D),
-        P = I.Ay.getMediaEngine(),
+        M = I.Ay.getMediaEngine(),
         U = JSON.stringify(g),
         w = S.TX(g),
         G =
@@ -556,7 +556,7 @@ async function ec(e) {
             clipStats: i,
             thumbnail: s,
             metadata: l,
-        } = await P.saveClipEx({
+        } = await M.saveClipEx({
             filepath: b,
             metadata: U,
             thumbnailMs: F,
@@ -611,7 +611,7 @@ async function ec(e) {
                 } catch (e) {
                     O.nx.warn("Failed to generate clip thumbnail:", e);
                 }
-                ((g.thumbnail = e), await P.updateClipMetadata(b, JSON.stringify(g)));
+                ((g.thumbnail = e), await M.updateClipMetadata(b, JSON.stringify(g)));
             }
             t = g;
         }
@@ -736,7 +736,7 @@ async function eE(e) {
         s = I.Ay.getMediaEngine(),
         l = (0, Q.A)(e, O.nQ.SCREENSHOT),
         o = v.Ay.getSettings().storageLocation,
-        d = `${(0, M.A)(l.applicationName.substring(0, 20))}_${l.id}.jpeg`,
+        d = `${(0, P.A)(l.applicationName.substring(0, 20))}_${l.id}.jpeg`,
         u = a.A.fileManager.join(o, d);
     if (
         (null != l.applicationId &&
@@ -920,7 +920,7 @@ async function eb(e, t) {
     let { analyticsLocations: n, isTemporaryEdit: i = !1, skipComposition: r = !1 } = t,
         s = performance.now();
     try {
-        eP([e.id]);
+        eM([e.id]);
         let t = I.Ay.getMediaEngine();
         if (!(0, J.t_)() && (await (0, J.so)(), !(0, J.t_)())) throw Error("discord_clips module failed to load");
         let { filepath: n, ...s } = e;
@@ -950,21 +950,21 @@ async function eb(e, t) {
             if (e.type === O.nQ.SCREENSHOT || f) return n;
             return q(n);
         } finally {
-            await eM(h);
+            await eP(h);
         }
     } finally {
-        eP(null);
+        eM(null);
         let t = performance.now();
         T.default.track(d.HAw.CLIP_EXPORTED, { ...S.lc(), ...S.Zy(e), location_stack: n, export_duration: t - s });
     }
 }
-async function eM(e) {
+async function eP(e) {
     if ((0, m.isDesktop)())
         try {
             await a.A.clips.deleteClip(e);
         } catch {}
 }
-function eP(e) {
+function eM(e) {
     r.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
 }
 function eU(e) {

@@ -12,7 +12,7 @@
     CC: () => a.CC,
     iv: () => tF,
     RH: () => ez,
-    _J: () => tP,
+    _J: () => tM,
     z_: () => tW,
     FJ: () => eW,
     ee: () => tg,
@@ -53,7 +53,7 @@
     mH: () => tU,
     XN: () => tY,
     Ay: () => t$,
-    EL: () => eP,
+    EL: () => eM,
     bx: () => e2,
     Zw: () => e$,
     Om: () => tC,
@@ -135,7 +135,7 @@ let D = (0, L.mj)({
 });
 var v = n(349871);
 let b = new f.A("ProductCatalog.tsx");
-class M extends O {
+class P extends O {
     constructor(e, t) {
         super(
             e,
@@ -167,40 +167,40 @@ class M extends O {
         );
     }
 }
-let P = new M(T.w.ANIMATED_EMOJIS),
-    U = new M(T.w.EMOJIS_EVERYWHERE),
-    w = new M(T.w.STICKERS_EVERYWHERE),
-    G = new M(T.w.SOUNDBOARD_EVERYWHERE),
-    x = new M(T.w.CUSTOM_CALL_SOUNDS),
-    k = new M(T.w.PREMIUM_VOICE_FILTERS),
-    F = new M(T.w.ANIMATED_AVATAR),
-    B = new M(T.w.CUSTOM_DISCRIMINATOR),
-    V = new M(T.w.PREMIUM_GUILD_MEMBER_PROFILE),
-    H = new M("profileBadges"),
-    j = new M(T.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
-    W = new M("collectibles"),
-    Y = new M("appIcons"),
-    K = new M(T.w.CLIENT_THEMES),
-    $ = new M("boostDiscount"),
-    z = new M("freeBoosts"),
-    X = new M(T.w.STREAM_MID_QUALITY),
-    q = new M(T.w.STREAM_HIGH_QUALITY),
-    Z = new M(T.w.CUSTOM_NOTIFICATION_SOUNDS),
-    Q = new M("fancyVoiceChannelReactions"),
-    J = new M("installPremiumApplications"),
-    ee = new M("redeemPremiumPerks"),
-    et = new M(T.w.VIDEO_FILTER_ASSETS);
+let M = new P(T.w.ANIMATED_EMOJIS),
+    U = new P(T.w.EMOJIS_EVERYWHERE),
+    w = new P(T.w.STICKERS_EVERYWHERE),
+    G = new P(T.w.SOUNDBOARD_EVERYWHERE),
+    x = new P(T.w.CUSTOM_CALL_SOUNDS),
+    k = new P(T.w.PREMIUM_VOICE_FILTERS),
+    F = new P(T.w.ANIMATED_AVATAR),
+    B = new P(T.w.CUSTOM_DISCRIMINATOR),
+    V = new P(T.w.PREMIUM_GUILD_MEMBER_PROFILE),
+    H = new P("profileBadges"),
+    j = new P(T.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
+    W = new P("collectibles"),
+    Y = new P("appIcons"),
+    K = new P(T.w.CLIENT_THEMES),
+    $ = new P("boostDiscount"),
+    z = new P("freeBoosts"),
+    X = new P(T.w.STREAM_MID_QUALITY),
+    q = new P(T.w.STREAM_HIGH_QUALITY),
+    Z = new P(T.w.CUSTOM_NOTIFICATION_SOUNDS),
+    Q = new P("fancyVoiceChannelReactions"),
+    J = new P("installPremiumApplications"),
+    ee = new P("redeemPremiumPerks"),
+    et = new P(T.w.VIDEO_FILTER_ASSETS);
 new O(T.w.INCREASED_FILE_UPLOAD_SIZE, C);
-let en = new M(T.w.INCREASED_GUILD_LIMIT),
-    ei = new M(T.w.INCREASED_MESSAGE_LENGTH),
-    er = new M("increasedVideoUploadQuality"),
-    ea = new M("uploadLargeFiles"),
-    es = new M(T.w.QUEST_ORB_MULTIPLIER),
+let en = new P(T.w.INCREASED_GUILD_LIMIT),
+    ei = new P(T.w.INCREASED_MESSAGE_LENGTH),
+    er = new P("increasedVideoUploadQuality"),
+    ea = new P("uploadLargeFiles"),
+    es = new P(T.w.QUEST_ORB_MULTIPLIER),
     el = Object.freeze({
-        [N.pe.TIER_0]: new R(N.pe.TIER_0, [P, U, w, H, et, er, ea, Y]),
-        [N.pe.TIER_1]: new R(N.pe.TIER_1, [P, U, F, B, H, $, X, Q, er, ea, Y]),
+        [N.pe.TIER_0]: new R(N.pe.TIER_0, [M, U, w, H, et, er, ea, Y]),
+        [N.pe.TIER_1]: new R(N.pe.TIER_1, [M, U, F, B, H, $, X, Q, er, ea, Y]),
         [N.pe.TIER_2]: new R(N.pe.TIER_2, [
-            P,
+            M,
             U,
             w,
             G,
@@ -234,7 +234,7 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
     ed = [es],
     ec = [],
     eu = new Map([
-        [P, _.bb.ANIMATED_EMOJIS],
+        [M, _.bb.ANIMATED_EMOJIS],
         [U, _.bb.EMOJIS_EVERYWHERE],
         [w, _.bb.STICKERS_EVERYWHERE],
         [G, _.bb.SOUNDBOARD_EVERYWHERE],
@@ -304,8 +304,8 @@ let eD = {
         BILLING_HISTORY: "https://play.google.com/store/account/orderhistory",
     },
     eb = new f.A("PremiumUtils.tsx");
-var eM = (((r = {}).MID = "mid"), (r.HIGH = "high"), r);
-function eP(e) {
+var eP = (((r = {}).MID = "mid"), (r.HIGH = "high"), r);
+function eM(e) {
     return e.items.find((e) => N.JM.has(e.planId));
 }
 function eU(e) {
@@ -616,7 +616,7 @@ function eZ(e) {
             fractionalPremiumInfo: u,
         } = e,
         _ = N.hd[n],
-        A = tM(eU(_.id), _.interval),
+        A = tP(eU(_.id), _.interval),
         h = null != o && 0 === o.subtotal,
         f =
             to(t) ||
@@ -1299,7 +1299,7 @@ function tL(e) {
     return null == e ? null : e.items.find((e) => N.pW.has(e.planId));
 }
 function ty(e) {
-    let t = null != e ? eP(e) : null;
+    let t = null != e ? eM(e) : null;
     return null != t ? e1(t.planId) : null;
 }
 function tD(e) {
@@ -1311,12 +1311,12 @@ function tv(e) {
 function tb(e) {
     return e_(W, e);
 }
-function tM(e, t) {
+function tP(e, t) {
     let n = (0, eN.$g)(e.amount, e.currency),
         i = eW(t);
     return `${n}/${i}`;
 }
-function tP(e) {
+function tM(e) {
     let t = "interval_count" in e ? e.interval_count : e.intervalCount,
         n = ex(e.id);
     return (0, eN.CE)((0, eN.$g)(n.amount, n.currency), e.interval, t);
@@ -1619,15 +1619,15 @@ let t$ = Object.freeze({
     },
     getBillingReviewSubheader: tu,
     getIntervalForInvoice: t_,
-    getPremiumPlanItem: eP,
+    getPremiumPlanItem: eM,
     getGuildBoostPlanItem: tL,
     isBoostOnlySubscription: function (e) {
-        return null != e && null == eP(e) && null != tL(e);
+        return null != e && null == eM(e) && null != tL(e);
     },
     getPremiumSkuIdForSubscription: ty,
     getPremiumTypeFromSubscription: function (e) {
         if (null != e) {
-            let t = eP(e);
+            let t = eM(e);
             if (null != t) return eY(t.planId);
         }
     },
@@ -1641,7 +1641,7 @@ let t$ = Object.freeze({
         return Math.max(1, Math.ceil((0, em.c_)(new Date(e.currentPeriodEnd), new Date())));
     },
     canUseAnimatedEmojis: function (e) {
-        return e_(P, e);
+        return e_(M, e);
     },
     canUseEmojisEverywhere: function (e) {
         return e_(U, e);
@@ -1717,6 +1717,6 @@ let t$ = Object.freeze({
     canUseMoreQuestOrbs: function (e) {
         return (0, v.Nh)(e?.perks, _.bb.MORE_QUEST_ORBS) || tv(e);
     },
-    formatPriceString: tM,
-    StreamQuality: eM,
+    formatPriceString: tP,
+    StreamQuality: eP,
 });

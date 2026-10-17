@@ -29,25 +29,25 @@ var i,
     v = n(175306);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var b = n(536194),
-    M = n(19575);
-let P = null;
+    P = n(19575);
+let M = null;
 function U() {
     return (
-        null == P &&
-            (P = (function () {
+        null == M &&
+            (M = (function () {
                 if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder)
                     return !1;
                 try {
-                    let e = M.Ay.requireModule("discord_zstd");
+                    let e = P.Ay.requireModule("discord_zstd");
                     if (null == e) return !1;
                     return !0;
                 } catch (e) {
                     if (e.message.includes("Cannot find"))
-                        return (M.Ay.ensureModule("discord_zstd").catch((e) => {}), !1);
+                        return (P.Ay.ensureModule("discord_zstd").catch((e) => {}), !1);
                     throw e;
                 }
             })()),
-        P
+        M
     );
 }
 let w = {},
@@ -87,7 +87,7 @@ class x {
                     : (this._decoder = null),
                 (this._stream = (function () {
                     if (!U()) return;
-                    let { createContext: e } = M.Ay.requireModule("discord_zstd");
+                    let { createContext: e } = P.Ay.requireModule("discord_zstd");
                     return e();
                 })()));
         }
@@ -1010,10 +1010,10 @@ let ec = new (class {
         let e;
         if (y.isPlatformEmbedded) {
             try {
-                e = M.Ay.requireModule("discord_erlpack");
+                e = P.Ay.requireModule("discord_erlpack");
             } catch {
                 try {
-                    e = M.Ay.requireModule("erlpack");
+                    e = P.Ay.requireModule("erlpack");
                 } catch {
                     e = void 0;
                 }
@@ -1233,8 +1233,8 @@ class eb {
         };
     }
 }
-let eM = (1e3 / 60) * 3,
-    eP = (1e3 / 60) * 3,
+let eP = (1e3 / 60) * 3,
+    eM = (1e3 / 60) * 3,
     eU = 1e3 / 60 / 8,
     ew = (1e3 / 60) * 12;
 class eG {
@@ -1270,7 +1270,7 @@ let ex = new g.A("DispatcherWorkScheduler");
 class ek {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
-    _nextDispatchTimeout = eM;
+    _nextDispatchTimeout = eP;
     _workCallbackFn = null;
     _consecutiveFlushesBeforeQueueEmpty = 0;
     _isBackgrounded = !1;
@@ -1310,7 +1310,7 @@ class ek {
             n = this._workCallbackFn(e),
             i = performance.now();
         (this.clearWorkTimeout(),
-            i - t > eP ? (this._nextDispatchTimeout = ew) : (this._nextDispatchTimeout = eM),
+            i - t > eM ? (this._nextDispatchTimeout = ew) : (this._nextDispatchTimeout = eP),
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
@@ -1342,7 +1342,7 @@ class ek {
         (null != this._flushTimeoutHandler &&
             (clearTimeout(this._flushTimeoutHandler), (this._flushTimeoutHandler = null)),
             this._clearIdleCallback(),
-            (this._nextDispatchTimeout = eM),
+            (this._nextDispatchTimeout = eP),
             (this._workCallbackFn = null));
     }
     requestWorkTimeout(e) {
@@ -1541,7 +1541,7 @@ class eZ {
             r = this.dispatchMultiple(i, e);
         r && this.scheduler.telemetry.timeEnd(eO.TIME_TO_QUEUE_EMPTY);
         let a = performance.now() - t;
-        return (a > eP && !r && eW.log(`Dispatched ${i.length} messages in ${a}ms`), r);
+        return (a > eM && !r && eW.log(`Dispatched ${i.length} messages in ${a}ms`), r);
     };
     getDispatchTimings() {
         return eq;

@@ -16,14 +16,14 @@ n.d(t, {
     yz: () => E,
     qG: () => N,
     CS: () => R,
-    Gl: () => M,
+    Gl: () => P,
     DY: () => g,
     aX: () => D,
     qA: () => f,
     NW: () => u,
     i6: () => w,
     mO: () => O,
-    lk: () => P,
+    lk: () => M,
     H5: () => U,
     _J: () => y,
 });
@@ -79,7 +79,7 @@ var D =
         a),
     v = (((s = {})[(s.FOCUSED = 0)] = "FOCUSED"), (s[(s.PIP = 1)] = "PIP"), (s[(s.GRID = 2)] = "GRID"), s);
 let b = { label_type: o.Hr.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] },
-    M = {
+    P = {
         application_id: "",
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -92,8 +92,8 @@ let b = { label_type: o.Hr.NONE, release_phase: "", label_from: null, label_unti
         blocked_locales: [],
         supported_locales: [],
     },
-    P = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
-    U = [...P, d.rbe.GUILD_VOICE],
+    M = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM, d.rbe.GUILD_SPACE],
+    U = [...M, d.rbe.GUILD_VOICE],
     w = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 var G = (((l = {}).NORMAL = "normal"), (l.FULL_SCREEN = "full-screen"), l);
 let x = 216e5;

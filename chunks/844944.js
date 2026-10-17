@@ -1,4 +1,4 @@
-(n.d(t, { A: () => P }), n(321073));
+(n.d(t, { A: () => M }), n(321073));
 var i = n(536637),
     r = n.n(i),
     a = n(17928),
@@ -59,7 +59,7 @@ let L = {},
     D = {},
     v = {},
     b = 10 * d.A.Seconds.MINUTE;
-class M extends a.Ay.Store {
+class P extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
@@ -98,7 +98,7 @@ class M extends a.Ay.Store {
         return null == n ? null : n.map((e) => C(e)).filter((e) => null != e);
     }
 }
-let P = new M(l.h, {
+let M = new P(l.h, {
     GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function (e) {
         let { joinRequest: t } = e;
         O(t);

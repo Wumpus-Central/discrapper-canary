@@ -74,8 +74,8 @@ var v =
         (i[(i.VERY_AGGRESSIVE = 3)] = "VERY_AGGRESSIVE"),
         i),
     b = n(823598),
-    M = n(752163);
-function P(e) {
+    P = n(752163);
+function M(e) {
     let t = (e?.headerBytes ?? 0) + (e?.payloadBytes ?? 0) + (e?.paddingBytes ?? 0);
     return (
         (e?.fec?.headerBytes ?? 0) +
@@ -115,13 +115,13 @@ function w(e) {
 function G(e, t) {
     let n = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == n) return;
-    let i = e.substreams.reduce((e, t) => e + P(t.rtpStats), 0),
+    let i = e.substreams.reduce((e, t) => e + M(t.rtpStats), 0),
         r = e.substreams.reduce((e, t) => e + U(t.rtpStats), 0);
     return {
         type: "video",
         ssrc: n.ssrc,
-        sinkWant: (0, M.D)(t, n.ssrc, !0),
-        sinkWantAsInt: (0, M.q)(t, n.ssrc),
+        sinkWant: (0, P.D)(t, n.ssrc, !0),
+        sinkWantAsInt: (0, P.q)(t, n.ssrc),
         codec: { id: e.codecPayloadType, name: e.codecName },
         keyFrameInterval: e.keyFrameInterval,
         bytesSent: i,
@@ -180,15 +180,15 @@ function G(e, t) {
     };
 }
 function x(e, t, n, i) {
-    let r = P(e.rtpStats),
+    let r = M(e.rtpStats),
         a = U(e.rtpStats);
     return {
         type: "video",
         ssrc: e.ssrc,
-        sinkWant: (0, M.D)(t, e.ssrc, !0),
-        sinkWantAsInt: (0, M.q)(t, e.ssrc),
-        sinkWantLocal: (0, M.D)(n, e.ssrc, !0),
-        sinkWantLocalAsInt: (0, M.q)(n, e.ssrc),
+        sinkWant: (0, P.D)(t, e.ssrc, !0),
+        sinkWantAsInt: (0, P.q)(t, e.ssrc),
+        sinkWantLocal: (0, P.D)(n, e.ssrc, !0),
+        sinkWantLocalAsInt: (0, P.q)(n, e.ssrc),
         codec: { id: e.codecPayloadType, name: e.codecName },
         bytesReceived: r,
         packetsReceived: a,
@@ -254,8 +254,8 @@ function k(e, t, n, i) {
                 l.push({
                     type: "audio",
                     ssrc: e.ssrc,
-                    sinkWant: (0, M.D)(n, e.ssrc, !1),
-                    sinkWantAsInt: (0, M.q)(n, e.ssrc),
+                    sinkWant: (0, P.D)(n, e.ssrc, !1),
+                    sinkWantAsInt: (0, P.q)(n, e.ssrc),
                     codec: { id: e.codecPayloadType, name: e.codecName },
                     bytesSent: e.bytesSent,
                     packetsSent: e.packetsSent,
@@ -310,8 +310,8 @@ function k(e, t, n, i) {
                     o[t].push({
                         type: "audio",
                         ssrc: a.ssrc,
-                        sinkWant: (0, M.D)(n, a.ssrc, !1),
-                        sinkWantAsInt: (0, M.q)(n, a.ssrc),
+                        sinkWant: (0, P.D)(n, a.ssrc, !1),
+                        sinkWantAsInt: (0, P.q)(n, a.ssrc),
                         codec: { id: a.codecPayloadType, name: a.codecName },
                         bytesReceived: a.bytesReceived,
                         packetsReceived: a.packetsReceived,
@@ -372,14 +372,14 @@ function k(e, t, n, i) {
                 l.forEach((e) => {
                     let a = x(e, n, i, d);
                     if (null != a) {
-                        let n = P(e.rtpStats);
+                        let n = M(e.rtpStats);
                         ((r = (r ?? 0) + n), o[t].push(a));
                     }
                 });
             else if (null != s) {
                 let e = x(s, n, i, d);
                 if (null != e) {
-                    let n = P(s.rtpStats);
+                    let n = M(s.rtpStats);
                     ((r = (r ?? 0) + n), o[t].push(e));
                 }
             }

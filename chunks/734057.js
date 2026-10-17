@@ -28,8 +28,8 @@ let N = new A.A("ChannelStore"),
     D = {},
     v = {},
     b = {},
-    M = 0,
-    P = {},
+    P = 0,
+    M = {},
     U = {},
     w = new Set(),
     G = {},
@@ -127,7 +127,7 @@ function $(e) {
 }
 function z(e) {
     if (null != e.recipients.find((e) => (0, E.A)(e))) return !1;
-    ((L[e.id] = e), e.type === S.rbe.DM && (b[e.getRecipientId()] = e.id), (M += 1));
+    ((L[e.id] = e), e.type === S.rbe.DM && (b[e.getRecipientId()] = e.id), (P += 1));
 }
 function X(e) {
     let t = O[e.parent_id];
@@ -139,7 +139,7 @@ function q(e) {
     ((O[t] = e),
         (R[n] = R[n] ?? {}),
         (R[n][t] = e),
-        (P[n] = (P[n] ?? 0) + 1),
+        (M[n] = (M[n] ?? 0) + 1),
         null != e.linkedLobby ? ((v[n] = v[n] ?? {}), (v[n][t] = e)) : delete v[n]?.[t]);
 }
 function Z(e) {
@@ -179,8 +179,8 @@ function ee(e) {
         null != t &&
             (null != R[t] && e.id in R[t] && delete R[t][e.id], null != v[t] && e.id in v[t] && delete v[t][e.id]),
         null == e.guild_id || f.Le.has(e.type)
-            ? (0, f.Gw)(e.type) && (M += 1)
-            : (P[e.guild_id] = (P[e.guild_id] ?? 0) + 1));
+            ? (0, f.Gw)(e.type) && (P += 1)
+            : (M[e.guild_id] = (M[e.guild_id] ?? 0) + 1));
 }
 function et(e) {
     let { channel: t } = e,
@@ -281,10 +281,10 @@ class es extends s.Ay.Store {
         return p.default.keys(b);
     }
     getPrivateChannelsVersion() {
-        return M;
+        return P;
     }
     getGuildChannelsVersion(e) {
-        return P[e] ?? 0;
+        return M[e] ?? 0;
     }
     getAllThreadsForParent(e) {
         return r()
@@ -318,7 +318,7 @@ let eo = new es(l.h, {
             n = R;
         ((O = {}),
             (R = {}),
-            (P = {}),
+            (M = {}),
             (v = {}),
             t.forEach((e) => {
                 if ("unavailable" === e.data_mode)
@@ -382,7 +382,7 @@ let eo = new es(l.h, {
         (R = {}),
         (v = {}),
         (D = {}),
-        (P = {}),
+        (M = {}),
         (k = {}),
         (G = {}),
         (x = Date.now()),
@@ -432,7 +432,7 @@ let eo = new es(l.h, {
             (b = {}),
             (O = {}),
             (R = {}),
-            (P = {}),
+            (M = {}),
             (v = {}),
             (L = {}),
             (k = {}),

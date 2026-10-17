@@ -270,12 +270,12 @@ class b {
         clearInterval(this.updateScreenInterval);
     }
 }
-class M {
+class P {
     game;
     static gamesByPid = {};
     static gamesByName = {};
     static get debug() {
-        return { gamesByPid: M.gamesByPid, gamesByName: M.gamesByName };
+        return { gamesByPid: P.gamesByPid, gamesByName: P.gamesByName };
     }
     static desktopMainWindowHasFocus = document.hasFocus();
     uuid = (function () {
@@ -323,7 +323,7 @@ class M {
             (this.overlayStatus = (0, u.hw)(e)),
             (this.overlayMethod = this.overlayStatus?.overlayMethod ?? null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),
-            M.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(),
+            P.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(),
             z.hasConnection() && this.rtcConnectionTimer.start());
     }
     getQunsName(e) {
@@ -356,13 +356,13 @@ class M {
         return e.isLauncher ?? !1;
     }
     static create(e) {
-        let t = M.getGameName(e);
-        if (M.ignoreGame(e) || null == t) return null;
-        let n = new M({ ...e });
+        let t = P.getGameName(e);
+        if (P.ignoreGame(e) || null == t) return null;
+        let n = new P({ ...e });
         return (
-            (n.gameConcurrentGameCount = Object.values(M.gamesByPid).length),
-            (M.gamesByPid[e.pid] = n),
-            (M.gamesByName[t] = n),
+            (n.gameConcurrentGameCount = Object.values(P.gamesByPid).length),
+            (P.gamesByPid[e.pid] = n),
+            (P.gamesByName[t] = n),
             n
         );
     }
@@ -372,23 +372,23 @@ class M {
             let n = (0, u.Zh)(t);
             return n.name?.toLowerCase() === e.toLowerCase();
         })?.pid;
-        return null != t ? M.gamesByPid[t] : null;
+        return null != t ? P.gamesByPid[t] : null;
     }
     static getByPid(e) {
-        return M.gamesByPid[e];
+        return P.gamesByPid[e];
     }
     static async destroy(e) {
-        let t = M.getGameName(e);
-        if (M.ignoreGame(e) || null == t) return;
-        let n = M.gamesByPid[e.pid];
+        let t = P.getGameName(e);
+        if (P.ignoreGame(e) || null == t) return;
+        let n = P.gamesByPid[e.pid];
         if (null != n) {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
             for (let e of (p.default.track(O.HAw.OVERLAY_USAGE_STATS, t.usage), t.notifications))
                 p.default.track(O.HAw.OVERLAY_USAGE_NOTIFICATION_STATS, e);
-            (L.verbose(`OVERLAY_USAGE_STATS: ${e.name}`, t), delete M.gamesByPid[e.pid]);
+            (L.verbose(`OVERLAY_USAGE_STATS: ${e.name}`, t), delete P.gamesByPid[e.pid]);
         }
-        delete M.gamesByName[t];
+        delete P.gamesByName[t];
     }
     setOverlayMethod(e) {
         ((this.overlayMethod = e),
@@ -476,10 +476,10 @@ class M {
         e ? (this.unlockedTimer.stop(), ++this.uiLockedCount) : (this.unlockedTimer.start(), ++this.uiUnlockedCount);
     }
     static gameSetAllUnfocused() {
-        for (let e of Object.values(M.gamesByPid)) e.gameFocusedTimer.stop();
+        for (let e of Object.values(P.gamesByPid)) e.gameFocusedTimer.stop();
     }
     static incrementConcurrentGameCount() {
-        for (let e of Object.values(M.gamesByPid)) ++e.gameConcurrentGameCount;
+        for (let e of Object.values(P.gamesByPid)) ++e.gameConcurrentGameCount;
     }
     gameSetFocused(e) {
         (this.gameFocusedTimer.toggle(e), e && ++this.gameFocusChangedCount);
@@ -488,16 +488,16 @@ class M {
         (this.soundboardShownTimer.toggle(e), e && (++this.soundboardShownCount, t && ++this.soundboardKeepOpenCount));
     }
     static handleMuteToggled() {
-        for (let e of Object.values(M.gamesByPid)) ++e.muteToggledCount;
+        for (let e of Object.values(P.gamesByPid)) ++e.muteToggledCount;
     }
     static desktopSetFocused(e) {
-        if (e !== M.desktopMainWindowHasFocus) {
-            for (let t of Object.values(M.gamesByPid)) (++t.desktopFocusChangedCount, t.desktopFocusedTimer.toggle(e));
-            M.desktopMainWindowHasFocus = e;
+        if (e !== P.desktopMainWindowHasFocus) {
+            for (let t of Object.values(P.gamesByPid)) (++t.desktopFocusChangedCount, t.desktopFocusedTimer.toggle(e));
+            P.desktopMainWindowHasFocus = e;
         }
     }
     static desktopMessageEvent(e) {
-        for (let t of Object.values(M.gamesByPid))
+        for (let t of Object.values(P.gamesByPid))
             switch (e) {
                 case "ack":
                     ++t.desktopMessageAckCount;
@@ -507,10 +507,10 @@ class M {
             }
     }
     static toggleRtcConnection(e) {
-        for (let t of Object.values(M.gamesByPid)) t.rtcConnectionTimer.toggle(e);
+        for (let t of Object.values(P.gamesByPid)) t.rtcConnectionTimer.toggle(e);
     }
 }
-function P() {
+function M() {
     let e = f.default.getFocusedPID();
     if (null == e || -1 === e || !E.default.isOverlayOOPEnabledForPid(e)) return null;
     let t = E.default.getTrackedGameByPid(e);
@@ -520,34 +520,34 @@ function P() {
 }
 function U(e) {
     for (let t of (L.verbose("handleRunningGamesChange", e), e.added)) {
-        if (null != M.getByPid(t.pid)) {
+        if (null != P.getByPid(t.pid)) {
             L.verbose("handleRunningGamesChange added", t, "already tracked");
             continue;
         }
-        M.incrementConcurrentGameCount();
-        let e = M.create(t);
+        P.incrementConcurrentGameCount();
+        let e = P.create(t);
         L.verbose("handleRunningGamesChange added", t, e);
     }
-    for (let t of e.removed) (M.destroy(t), L.verbose("handleRunningGamesChange removed", t));
+    for (let t of e.removed) (P.destroy(t), L.verbose("handleRunningGamesChange removed", t));
 }
 function w(e) {
     if (e.pid === m.DEV_PID) return;
-    let t = M.getByPid(e.pid);
+    let t = P.getByPid(e.pid);
     (L.verbose("OVERLAY_SET_INPUT_LOCKED", t), null == t)
-        ? L.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, M.debug)
+        ? L.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, P.debug)
         : t.setLocked(e.locked);
 }
 function G(e) {
     if ((L.verbose("OVERLAY_NOTIFICATION_EVENT", e), null == e.gameName && null == e.gameId)) return;
-    let t = M.getByName(e.gameName ?? e.gameId);
+    let t = P.getByName(e.gameName ?? e.gameId);
     null == t
-        ? L.error("OVERLAY_NOTIFICATION_EVENT: Game not found.", e, M.debug)
+        ? L.error("OVERLAY_NOTIFICATION_EVENT: Game not found.", e, P.debug)
         : t.notificationAnalytics.increment(e.notificationType, e.action);
 }
 function x(e) {
     if ((L.verbose("OVERLAY_WIDGET_CHANGED", e), null == e.gameName && null == e.gameId)) return;
-    let t = M.getByName(e.gameName ?? e.gameId);
-    if (null == t) return void L.error("OVERLAY_WIDGET_CHANGED: Game not found", e, M.debug);
+    let t = P.getByName(e.gameName ?? e.gameId);
+    if (null == t) return void L.error("OVERLAY_WIDGET_CHANGED: Game not found", e, P.debug);
     let n = t.widgetAnalytics.getByWidget(e.widgetType);
     null != n &&
         (n.initialized || ((n.initialized = !0), (n.pinned = e.pinned)),
@@ -557,23 +557,23 @@ function x(e) {
 }
 function k(e) {
     if (
-        (L.verbose("OVERLAY_FOCUSED", e), M.gameSetAllUnfocused(), null == e.pid || e.pid === m.DEV_PID || -1 === e.pid)
+        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === m.DEV_PID || -1 === e.pid)
     )
         return;
-    let t = M.getByPid(e.pid);
-    null == t ? L.error("OVERLAY_FOCUSED: Game not found", e, M.debug) : t.gameSetFocused(!0);
+    let t = P.getByPid(e.pid);
+    null == t ? L.error("OVERLAY_FOCUSED: Game not found", e, P.debug) : t.gameSetFocused(!0);
 }
 function F(e) {
     if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === m.DEV_PID)) return;
-    let t = M.getByPid(e.pid);
+    let t = P.getByPid(e.pid);
     null == t
-        ? L.error("SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found", e, M.debug)
+        ? L.error("SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found", e, P.debug)
         : t.setSoundboardShown(e.enabled, !!e.enabled && (e.keepOpen ?? !1));
 }
 function B(e) {
     if ((L.verbose("OVERLAY_MESSAGE_EVENT_ACTION", e), null == e.gameName && null == e.gameId)) return;
-    let t = M.getByName(e.gameName ?? e.gameId);
-    if (null == t) return void L.error("OVERLAY_MESSAGE_EVENT_ACTION: Game not found", e, M.debug);
+    let t = P.getByName(e.gameName ?? e.gameId);
+    if (null == t) return void L.error("OVERLAY_MESSAGE_EVENT_ACTION: Game not found", e, P.debug);
     switch (e.eventType) {
         case "ack":
             ++t.overlayMessageAckCount;
@@ -584,9 +584,9 @@ function B(e) {
 }
 function V(e) {
     L.verbose("MESSAGE_ACKED", e);
-    let t = P();
+    let t = M();
     null == t
-        ? M.desktopMessageEvent("ack")
+        ? P.desktopMessageEvent("ack")
         : a.h.dispatch({
               type: "OVERLAY_MESSAGE_EVENT_ACTION",
               eventType: "ack",
@@ -597,9 +597,9 @@ function V(e) {
 function H(e) {
     if (e.message.state !== O.cmJ.SENDING) return;
     L.verbose("MESSAGE_CREATE", e, Error().stack);
-    let t = P();
+    let t = M();
     null == t
-        ? M.desktopMessageEvent("created")
+        ? P.desktopMessageEvent("created")
         : a.h.dispatch({
               type: "OVERLAY_MESSAGE_EVENT_ACTION",
               eventType: "create",
@@ -609,30 +609,30 @@ function H(e) {
 }
 function j(e) {
     let t = (0, S.A)();
-    null != t && t !== m.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), M.handleMuteToggled());
+    null != t && t !== m.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
 }
 function W(e) {
     L.verbose("WINDOW_FOCUS", e);
     let t = (0, g.Xg)();
     e.windowId !== t
         ? L.verbose("WINDOW_FOCUS: Not main window", { action: e, mainWindowId: t })
-        : M.desktopSetFocused(e.focused);
+        : P.desktopSetFocused(e.focused);
 }
 function Y(e) {
     if (e.pid === m.DEV_PID || -1 === e.pid) return;
-    let t = M.getByPid(e.pid);
-    null == t ? L.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, M.debug) : (t.successfullyShown = !0);
+    let t = P.getByPid(e.pid);
+    null == t ? L.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, P.debug) : (t.successfullyShown = !0);
 }
 function K(e) {
-    let t = M.getByPid(e.pid);
+    let t = P.getByPid(e.pid);
     null == t
-        ? L.error("OVERLAY_UPDATE_OVERLAY_METHOD: Game not found", e, M.debug)
+        ? L.error("OVERLAY_UPDATE_OVERLAY_METHOD: Game not found", e, P.debug)
         : e.overlayMethod !== _.Ue.Disabled &&
           (L.verbose("OVERLAY_UPDATE_OVERLAY_METHOD", e), t.setOverlayMethod(e.overlayMethod));
 }
 function $(e) {
-    let t = M.getByPid(e.pid);
-    if (null == t) return void L.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, M.debug);
+    let t = P.getByPid(e.pid);
+    if (null == t) return void L.error("OVERLAY_TRACK_STATE_CHANGED: Game not found", e, P.debug);
     if (e.newState !== _.AR.OVERLAY_TEARING_DOWN) {
         if (e.reason.includes("Unknown fullscreen type")) return void t.setOverlayState(e.newState, e.reason, !0);
         t.setOverlayState(e.newState, e.reason, !1);
@@ -654,7 +654,7 @@ class z {
                 z.connections.delete(t);
         }
         let n = z.hasConnection();
-        z.previousHasConnection !== n && (M.toggleRtcConnection(n), (z.previousHasConnection = n));
+        z.previousHasConnection !== n && (P.toggleRtcConnection(n), (z.previousHasConnection = n));
     }
 }
 class X {

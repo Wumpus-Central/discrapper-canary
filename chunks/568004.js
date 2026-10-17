@@ -37,7 +37,7 @@ function b() {
     if (0 === t.length) return !1;
     o.r(t);
 }
-function M(e, t) {
+function P(e, t) {
     if (null != g[t] && f.A.shouldBeInstalled(e, t)) {
         let n = g[t],
             i = n.manifestIds,
@@ -51,7 +51,7 @@ function M(e, t) {
             });
     }
 }
-function P() {
+function M() {
     D.stop();
 }
 class U extends a.Ay.Store {
@@ -86,7 +86,7 @@ let w = new U(l.h, {
         if (!(0, T.S)()) return !1;
         for (let e of C) {
             let { applicationId: t, branchId: n } = (0, p.r0)(e);
-            null != u.A.getApplication(t) && (C.delete(e), M(t, n));
+            null != u.A.getApplication(t) && (C.delete(e), P(t, n));
         }
     },
     APPLICATION_BUILD_FETCH_START: function (e) {
@@ -101,7 +101,7 @@ let w = new U(l.h, {
                 return t;
             }),
             s = r.id;
-        (S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), M(t, n));
+        (S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), P(t, n));
     },
     APPLICATION_BUILD_NOT_FOUND: function (e) {
         let { branchId: t } = e;
@@ -139,8 +139,8 @@ let w = new U(l.h, {
     APPLICATION_BRANCHES_FETCH_FAIL: function () {
         v(y);
     },
-    CONNECTION_CLOSED: P,
-    LOGOUT: P,
+    CONNECTION_CLOSED: M,
+    LOGOUT: M,
     SKU_PURCHASE_SUCCESS: function (e) {
         let { entitlements: t } = e;
         if (!(0, T.S)()) return !1;

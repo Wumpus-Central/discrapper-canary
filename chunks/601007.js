@@ -10,12 +10,12 @@ var l,
     d = n(847374),
     A = n(964486),
     f = n(37948),
-    g = n(174459),
-    p = n(652215),
+    p = n(174459),
+    g = n(652215),
     m = (((l = {}).PRIMARY = "primary"), (l.SECONDARY = "secondary"), l);
 function x(t) {
     let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
-    g.default.track(p.HAw.PLAY_CTA_IMPRESSION, { location_stack: e, distributor: n, game_id: l, level: i });
+    p.default.track(g.HAw.PLAY_CTA_IMPRESSION, { location_stack: e, distributor: n, game_id: l, level: i });
 }
 var _ = n(105292);
 function I(t) {
@@ -26,8 +26,8 @@ function I(t) {
             buttonVariant: I = "secondary",
             fullWidth: N = !0,
             stopPropagation: E = !1,
-            onAction: h,
-            onClose: T,
+            onAction: T,
+            onClose: h,
         } = t,
         C = (0, f.A)(),
         S = a.useRef(null),
@@ -37,7 +37,7 @@ function I(t) {
             0 !== e.length &&
                 (!(function (t) {
                     let { analyticsLocations: e, gameId: n, distributors: l } = t;
-                    g.default.track(p.HAw.PLAY_CTA_DISPLAYED, { location_stack: e, game_id: n, distributors: l });
+                    p.default.track(g.HAw.PLAY_CTA_DISPLAYED, { location_stack: e, game_id: n, distributors: l });
                 })({
                     analyticsLocations: l,
                     gameId: n,
@@ -55,10 +55,10 @@ function I(t) {
     function O(t, e, i, a) {
         (!(function (t) {
             let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
-            g.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
+            p.default.track(g.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: e, gameId: n, level: a }),
-            h?.({ action: i }),
-            T?.(),
+            T?.({ action: i }),
+            h?.(),
             C(t));
     }
     if (1 === e.length) {

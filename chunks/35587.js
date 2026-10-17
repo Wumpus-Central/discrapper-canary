@@ -1,4 +1,4 @@
-i.d(t, { IO: () => _, Sq: () => f, T1: () => h, Wi: () => S, y7: () => u });
+i.d(t, { IO: () => _, Sq: () => p, T1: () => h, Wi: () => S, y7: () => u });
 var l = i(582128),
     n = i(17928),
     a = i(287809),
@@ -40,11 +40,11 @@ function u() {
         l.useEffect(() => {
             o.Ay.fetchClaimedOutboundPromotionCodes();
         }, []));
-    let f = l.useMemo(() => (0, r.eN)(_), [_]),
-        p = h({ includeClaimedPromotions: !0 }),
+    let p = l.useMemo(() => (0, r.eN)(_), [_]),
+        f = h({ includeClaimedPromotions: !0 }),
         C = l.useMemo(() => {
             let e = new Set(
-                p.map((e) => {
+                f.map((e) => {
                     let { id: t } = e;
                     return t;
                 }),
@@ -58,12 +58,12 @@ function u() {
                     (0, r.OP)(i)
                 );
             });
-        }, [p, _]);
+        }, [f, _]);
     return {
         promotionsLoaded: S && (!u || null != e),
-        activeOutboundPromotions: p,
+        activeOutboundPromotions: f,
         claimedEndedOutboundPromotions: C,
-        claimedOutboundPromotionCodeMap: f,
+        claimedOutboundPromotionCodeMap: p,
     };
 }
 function _() {
@@ -85,7 +85,7 @@ function _() {
 function S(e) {
     return (0, n.bG)([c.A], () => c.A.hasPromotion(e));
 }
-function f() {
+function p() {
     return (
         l.useEffect(() => {
             (0, o.BE)();

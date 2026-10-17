@@ -2,12 +2,12 @@ i.d(t, {
     M_: () => S,
     P7: () => C,
     TQ: () => d,
-    Xn: () => p,
+    Xn: () => f,
     Yl: () => c,
     bN: () => h,
     c4: () => u,
     f7: () => o,
-    nd: () => f,
+    nd: () => p,
     p$: () => _,
 });
 var l,
@@ -29,8 +29,8 @@ var S =
     (a[(a.IN_SUBSCRIPTION_SERVER = 1)] = "IN_SUBSCRIPTION_SERVER"),
     (a[(a.SUBSCRIBED = 2)] = "SUBSCRIBED"),
     a);
-let f = `https://${r.U2}/creators`,
-    p = 90,
+let p = `https://${r.U2}/creators`,
+    f = 90,
     C = Object.freeze({
         MUST_READ_ARTICLES: "https://discord.com/creators/5-must-read-articles-for-beginners",
         CREATOR_TO_ADMIN_101: "https://discord.com/creators/creator-to-server-admin-101",

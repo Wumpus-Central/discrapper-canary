@@ -33,8 +33,8 @@ var h = n(838111),
     D = n(652215),
     v = n(46013),
     b = n(200700),
-    M = n(381941),
-    P = n(105292);
+    P = n(381941),
+    M = n(105292);
 let U = n(743361).A;
 function w(e, t) {
     return e.find((e) => e.name === t)?.value;
@@ -44,14 +44,14 @@ let G = {
             id: y.Ik.BUILT_IN,
             type: L.Hf.BUILT_IN,
             get name() {
-                return P.intl.string(P.t.fI5MTa);
+                return M.intl.string(M.t.fI5MTa);
             },
         },
         [y.Ik.FRECENCY]: {
             id: y.Ik.FRECENCY,
             type: L.Hf.BUILT_IN,
             get name() {
-                return P.intl.string(P.t["+cGVV6"]);
+                return M.intl.string(M.t["+cGVV6"]);
             },
         },
     },
@@ -65,10 +65,10 @@ let G = {
             inputType: L.y$.BUILT_IN_TEXT,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.j5xUSW);
+                return M.intl.string(M.t.j5xUSW);
             },
             get displayDescription() {
-                return P.intl.string(P.t.j5xUSW);
+                return M.intl.string(M.t.j5xUSW);
             },
             options: [
                 {
@@ -76,10 +76,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.JewOrS);
+                        return M.intl.string(M.t.JewOrS);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.JewOrS);
+                        return M.intl.string(M.t.JewOrS);
                     },
                 },
             ],
@@ -96,10 +96,10 @@ let G = {
             inputType: L.y$.BUILT_IN_TEXT,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.nrQRce);
+                return M.intl.string(M.t.nrQRce);
             },
             get displayDescription() {
-                return P.intl.string(P.t.nrQRce);
+                return M.intl.string(M.t.nrQRce);
             },
             options: [
                 {
@@ -107,10 +107,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.EI80tw);
+                        return M.intl.string(M.t.EI80tw);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.EI80tw);
+                        return M.intl.string(M.t.EI80tw);
                     },
                 },
             ],
@@ -127,10 +127,10 @@ let G = {
             inputType: L.y$.BUILT_IN_TEXT,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.pnnn8e);
+                return M.intl.string(M.t.pnnn8e);
             },
             get displayDescription() {
-                return P.intl.string(P.t.pnnn8e);
+                return M.intl.string(M.t.pnnn8e);
             },
             options: [
                 {
@@ -138,10 +138,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.ETs6go);
+                        return M.intl.string(M.t.ETs6go);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.ETs6go);
+                        return M.intl.string(M.t.ETs6go);
                     },
                 },
             ],
@@ -158,10 +158,10 @@ let G = {
             inputType: L.y$.BUILT_IN_TEXT,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.jZcIid);
+                return M.intl.string(M.t.jZcIid);
             },
             get displayDescription() {
-                return P.intl.string(P.t.jZcIid);
+                return M.intl.string(M.t.jZcIid);
             },
             options: [
                 {
@@ -169,10 +169,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t["k+sw9g"]);
+                        return M.intl.string(M.t["k+sw9g"]);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t["k+sw9g"]);
+                        return M.intl.string(M.t["k+sw9g"]);
                     },
                     required: !0,
                 },
@@ -191,10 +191,10 @@ let G = {
             inputType: L.y$.BUILT_IN_TEXT,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.UGO8fU);
+                return M.intl.string(M.t.UGO8fU);
             },
             get displayDescription() {
-                return P.intl.string(P.t.UGO8fU);
+                return M.intl.string(M.t.UGO8fU);
             },
             options: [
                 {
@@ -202,10 +202,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.RWTgNd);
+                        return M.intl.string(M.t.RWTgNd);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.RWTgNd);
+                        return M.intl.string(M.t.RWTgNd);
                     },
                     required: !0,
                 },
@@ -223,10 +223,10 @@ let G = {
             inputType: L.y$.BUILT_IN_TEXT,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.v0eDdV);
+                return M.intl.string(M.t.v0eDdV);
             },
             get displayDescription() {
-                return P.intl.string(P.t.v0eDdV);
+                return M.intl.string(M.t.v0eDdV);
             },
             options: [
                 {
@@ -234,10 +234,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.D13pbc);
+                        return M.intl.string(M.t.D13pbc);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.D13pbc);
+                        return M.intl.string(M.t.D13pbc);
                     },
                     required: !0,
                 },
@@ -255,10 +255,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t["jiHfS/"]);
+                return M.intl.string(M.t["jiHfS/"]);
             },
             get displayDescription() {
-                return P.intl.string(P.t["jiHfS/"]);
+                return M.intl.string(M.t["jiHfS/"]);
             },
             options: [
                 {
@@ -266,10 +266,10 @@ let G = {
                     displayName: "new_nick",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.WTSzVu);
+                        return M.intl.string(M.t.WTSzVu);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.WTSzVu);
+                        return M.intl.string(M.t.WTSzVu);
                     },
                     maxLength: D.zzC,
                 },
@@ -297,10 +297,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.t6ZAS0);
+                return M.intl.string(M.t.t6ZAS0);
             },
             get displayDescription() {
-                return P.intl.string(P.t.t6ZAS0);
+                return M.intl.string(M.t.t6ZAS0);
             },
             options: [
                 {
@@ -308,10 +308,10 @@ let G = {
                     displayName: "name",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.TffOfY);
+                        return M.intl.string(M.t.TffOfY);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.TffOfY);
+                        return M.intl.string(M.t.TffOfY);
                     },
                     required: !0,
                     maxLength: D.Ign,
@@ -321,10 +321,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.QXfSfU);
+                        return M.intl.string(M.t.QXfSfU);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.QXfSfU);
+                        return M.intl.string(M.t.QXfSfU);
                     },
                     get maxLength() {
                         return (0, I.a)();
@@ -341,7 +341,7 @@ let G = {
                     i = w(e, "name") ?? "",
                     r = w(e, "message") ?? "",
                     a = await (0, T.Nw)(n, i, l.r.PUBLIC_THREAD, (0, p.Gl)(n, null), "Slash Command");
-                u.A.sendMessage(a.id, f.Ay.parse(a, r), !0, { location: M.Hx.THREAD_CREATION });
+                u.A.sendMessage(a.id, f.Ay.parse(a, r), !0, { location: P.Hx.THREAD_CREATION });
             },
         },
         {
@@ -352,10 +352,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t["03N0UL"]);
+                return M.intl.string(M.t["03N0UL"]);
             },
             get displayDescription() {
-                return P.intl.string(P.t["03N0UL"]);
+                return M.intl.string(M.t["03N0UL"]);
             },
             options: [
                 {
@@ -363,10 +363,10 @@ let G = {
                     displayName: "user",
                     type: _.n4.USER,
                     get description() {
-                        return P.intl.string(P.t.gF8IpD);
+                        return M.intl.string(M.t.gF8IpD);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.gF8IpD);
+                        return M.intl.string(M.t.gF8IpD);
                     },
                     required: !0,
                 },
@@ -375,10 +375,10 @@ let G = {
                     displayName: "reason",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.QWldgj);
+                        return M.intl.string(M.t.QWldgj);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.QWldgj);
+                        return M.intl.string(M.t.QWldgj);
                     },
                     required: !1,
                 },
@@ -399,12 +399,12 @@ let G = {
                           (await c.A.kickUser(n.id, r, w(e, "reason") ?? ""),
                               u.A.sendBotMessage(
                                   i.id,
-                                  P.intl.formatToPlainString(P.t["9wzHDV"], { user: R.Ay.getUserTag(t) }),
+                                  M.intl.formatToPlainString(M.t["9wzHDV"], { user: R.Ay.getUserTag(t) }),
                               ));
                       })().catch(() => {
-                          u.A.sendBotMessage(i.id, P.intl.string(P.t.l0gNlp));
+                          u.A.sendBotMessage(i.id, M.intl.string(M.t.l0gNlp));
                       })
-                    : u.A.sendBotMessage(i.id, P.intl.string(P.t["6RIwPI"]));
+                    : u.A.sendBotMessage(i.id, M.intl.string(M.t["6RIwPI"]));
             },
         },
         {
@@ -415,10 +415,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.HWuskv);
+                return M.intl.string(M.t.HWuskv);
             },
             get displayDescription() {
-                return P.intl.string(P.t.HWuskv);
+                return M.intl.string(M.t.HWuskv);
             },
             options: [
                 {
@@ -426,10 +426,10 @@ let G = {
                     displayName: "user",
                     type: _.n4.USER,
                     get description() {
-                        return P.intl.string(P.t.z3XPjr);
+                        return M.intl.string(M.t.z3XPjr);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.z3XPjr);
+                        return M.intl.string(M.t.z3XPjr);
                     },
                     required: !0,
                 },
@@ -438,43 +438,43 @@ let G = {
                     displayName: "delete_messages",
                     type: _.n4.INTEGER,
                     get description() {
-                        return P.intl.string(P.t.smrvA6);
+                        return M.intl.string(M.t.smrvA6);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.smrvA6);
+                        return M.intl.string(M.t.smrvA6);
                     },
                     required: !0,
                     get choices() {
                         return [
-                            { name: P.intl.string(P.t["4obaMS"]), displayName: P.intl.string(P.t["4obaMS"]), value: 0 },
+                            { name: M.intl.string(M.t["4obaMS"]), displayName: M.intl.string(M.t["4obaMS"]), value: 0 },
                             {
-                                name: P.intl.string(P.t.RKpitY),
-                                displayName: P.intl.string(P.t.RKpitY),
+                                name: M.intl.string(M.t.RKpitY),
+                                displayName: M.intl.string(M.t.RKpitY),
                                 value: O.A.Seconds.HOUR,
                             },
                             {
-                                name: P.intl.string(P.t["8WfJZ8"]),
-                                displayName: P.intl.string(P.t["8WfJZ8"]),
+                                name: M.intl.string(M.t["8WfJZ8"]),
+                                displayName: M.intl.string(M.t["8WfJZ8"]),
                                 value: 6 * O.A.Seconds.HOUR,
                             },
                             {
-                                name: P.intl.string(P.t.p1up7u),
-                                displayName: P.intl.string(P.t.p1up7u),
+                                name: M.intl.string(M.t.p1up7u),
+                                displayName: M.intl.string(M.t.p1up7u),
                                 value: 12 * O.A.Seconds.HOUR,
                             },
                             {
-                                name: P.intl.string(P.t.XuVkkD),
-                                displayName: P.intl.string(P.t.XuVkkD),
+                                name: M.intl.string(M.t.XuVkkD),
+                                displayName: M.intl.string(M.t.XuVkkD),
                                 value: O.A.Seconds.DAY,
                             },
                             {
-                                name: P.intl.string(P.t["gMcDS+"]),
-                                displayName: P.intl.string(P.t["gMcDS+"]),
+                                name: M.intl.string(M.t["gMcDS+"]),
+                                displayName: M.intl.string(M.t["gMcDS+"]),
                                 value: 3 * O.A.Seconds.DAY,
                             },
                             {
-                                name: P.intl.string(P.t.FA7IUk),
-                                displayName: P.intl.string(P.t.FA7IUk),
+                                name: M.intl.string(M.t.FA7IUk),
+                                displayName: M.intl.string(M.t.FA7IUk),
                                 value: 7 * O.A.Seconds.DAY,
                             },
                         ];
@@ -485,10 +485,10 @@ let G = {
                     displayName: "reason",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.dG4noU);
+                        return M.intl.string(M.t.dG4noU);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.dG4noU);
+                        return M.intl.string(M.t.dG4noU);
                     },
                     required: !1,
                 },
@@ -511,12 +511,12 @@ let G = {
                           (await c.A.banUser(n.id, r, t, a),
                               u.A.sendBotMessage(
                                   i.id,
-                                  P.intl.formatToPlainString(P.t.YflWdM, { user: null != s ? R.Ay.getUserTag(s) : r }),
+                                  M.intl.formatToPlainString(M.t.YflWdM, { user: null != s ? R.Ay.getUserTag(s) : r }),
                               ));
                       })().catch(() => {
-                          u.A.sendBotMessage(i.id, P.intl.string(P.t.w2J6Qs));
+                          u.A.sendBotMessage(i.id, M.intl.string(M.t.w2J6Qs));
                       })
-                    : u.A.sendBotMessage(i.id, P.intl.string(P.t.R27LJl));
+                    : u.A.sendBotMessage(i.id, M.intl.string(M.t.R27LJl));
             },
         },
         {
@@ -527,10 +527,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.KkPcep);
+                return M.intl.string(M.t.KkPcep);
             },
             get displayDescription() {
-                return P.intl.string(P.t.KkPcep);
+                return M.intl.string(M.t.KkPcep);
             },
             options: [
                 {
@@ -538,10 +538,10 @@ let G = {
                     displayName: "user",
                     type: _.n4.USER,
                     get description() {
-                        return P.intl.string(P.t.UU3VRm);
+                        return M.intl.string(M.t.UU3VRm);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.UU3VRm);
+                        return M.intl.string(M.t.UU3VRm);
                     },
                     required: !0,
                 },
@@ -550,10 +550,10 @@ let G = {
                     displayName: "duration",
                     type: _.n4.INTEGER,
                     get description() {
-                        return P.intl.string(P.t.SNqN1e);
+                        return M.intl.string(M.t.SNqN1e);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.SNqN1e);
+                        return M.intl.string(M.t.SNqN1e);
                     },
                     required: !0,
                     get choices() {
@@ -565,10 +565,10 @@ let G = {
                     displayName: "reason",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.akHScA);
+                        return M.intl.string(M.t.akHScA);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.akHScA);
+                        return M.intl.string(M.t.akHScA);
                     },
                     required: !1,
                 },
@@ -597,12 +597,12 @@ let G = {
                           }),
                               u.A.sendBotMessage(
                                   i.id,
-                                  P.intl.formatToPlainString(P.t.BbRV6o, { user: R.Ay.getUserTag(l), duration: t }),
+                                  M.intl.formatToPlainString(M.t.BbRV6o, { user: R.Ay.getUserTag(l), duration: t }),
                               ));
                       })().catch(() => {
-                          u.A.sendBotMessage(i.id, P.intl.string(P.t["+mWyVq"]));
+                          u.A.sendBotMessage(i.id, M.intl.string(M.t["+mWyVq"]));
                       })
-                    : u.A.sendBotMessage(i.id, P.intl.string(P.t.F5pqSf));
+                    : u.A.sendBotMessage(i.id, M.intl.string(M.t.F5pqSf));
             },
         },
         {
@@ -613,10 +613,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.Dg8XZw);
+                return M.intl.string(M.t.Dg8XZw);
             },
             get displayDescription() {
-                return P.intl.string(P.t.Dg8XZw);
+                return M.intl.string(M.t.Dg8XZw);
             },
             options: [
                 {
@@ -624,10 +624,10 @@ let G = {
                     displayName: "user",
                     type: _.n4.USER,
                     get description() {
-                        return P.intl.string(P.t["KmVq/D"]);
+                        return M.intl.string(M.t["KmVq/D"]);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t["KmVq/D"]);
+                        return M.intl.string(M.t["KmVq/D"]);
                     },
                     required: !0,
                 },
@@ -636,10 +636,10 @@ let G = {
                     displayName: "message",
                     type: _.n4.STRING,
                     get description() {
-                        return P.intl.string(P.t.oGUuOJ);
+                        return M.intl.string(M.t.oGUuOJ);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.oGUuOJ);
+                        return M.intl.string(M.t.oGUuOJ);
                     },
                     required: !0,
                     get maxLength() {
@@ -656,10 +656,10 @@ let G = {
                     await d.A.openPrivateChannel({ recipientIds: i }).then((e) => {
                         let t = S.A.getChannel(e);
                         (r()(null != t, "Newly created PrivateChannel is null"),
-                            u.A.sendMessage(t.id, f.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND }));
+                            u.A.sendMessage(t.id, f.Ay.parse(t, a), !0, { location: P.Hx.PRIVATE_MESSAGE_COMMAND }));
                     });
                 })().catch(() => {
-                    u.A.sendBotMessage(n.id, P.intl.string(P.t["3XaE95"]));
+                    u.A.sendBotMessage(n.id, M.intl.string(M.t["3XaE95"]));
                 });
             },
         },
@@ -671,10 +671,10 @@ let G = {
             inputType: L.y$.BUILT_IN,
             applicationId: y.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return P.intl.string(P.t.reVgOh);
+                return M.intl.string(M.t.reVgOh);
             },
             get displayDescription() {
-                return P.intl.string(P.t.reVgOh);
+                return M.intl.string(M.t.reVgOh);
             },
             options: [
                 {
@@ -682,10 +682,10 @@ let G = {
                     displayName: "count",
                     type: _.n4.INTEGER,
                     get description() {
-                        return P.intl.formatToPlainString(P.t.iSbJTZ, { max: 10 });
+                        return M.intl.formatToPlainString(M.t.iSbJTZ, { max: 10 });
                     },
                     get displayDescription() {
-                        return P.intl.formatToPlainString(P.t.iSbJTZ, { max: 10 });
+                        return M.intl.formatToPlainString(M.t.iSbJTZ, { max: 10 });
                     },
                     minValue: 1,
                     maxValue: 10,
@@ -695,10 +695,10 @@ let G = {
                     displayName: "size",
                     type: _.n4.INTEGER,
                     get description() {
-                        return P.intl.string(P.t.pV214H);
+                        return M.intl.string(M.t.pV214H);
                     },
                     get displayDescription() {
-                        return P.intl.string(P.t.pV214H);
+                        return M.intl.string(M.t.pV214H);
                     },
                     choices: v.s.map((e) => ({ name: `D${e}`, displayName: `D${e}`, value: e })),
                 },

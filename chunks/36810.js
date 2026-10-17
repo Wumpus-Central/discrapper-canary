@@ -1,4 +1,4 @@
-r.d(n, { A: () => d, w: () => s });
+r.d(n, { A: () => s, w: () => I });
 var t = r(991690),
     i = r(878014),
     l = r(111534),
@@ -8,7 +8,7 @@ var t = r(991690),
     A = r(216132),
     c = r(901092),
     p = r(652215);
-function d(e) {
+function s(e) {
     if (((0, o.lG)(e.transport), (0, o.D2)(e.application), !(0, i.D)(e.application)))
         throw new a.A({ errorCode: p.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "This application cannot access this API");
     if (!(0, c.A)(e)) throw new a.A({ errorCode: p.Lw6.INVALID_COMMAND }, "command requires an embedded app frame");
@@ -35,9 +35,9 @@ function d(e) {
         throw new a.A({ errorCode: p.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "Command not available for this application");
     return { frame: n, iframeId: e.source.iframeId };
 }
-function s(e) {
+function I(e) {
     try {
-        return d(e);
+        return s(e);
     } catch (e) {
         if (e instanceof a.A) return null;
         throw e;

@@ -49,7 +49,7 @@ function v() {
 function b() {
     return !0;
 }
-function M() {
+function P() {
     let e = E.eh.getSetting().backgroundGradientPresetId;
     if ((_.Ay.useSystemTheme !== h.Q_.ON || null == e || f() || (0, c.k7)(h.Q_.OFF), null == e)) {
         null != i && (i = void 0);
@@ -59,7 +59,7 @@ function M() {
         n = i?.id === t?.id;
     null == t || n || (i = t);
 }
-class P extends a.Ay.PersistedStore {
+class M extends a.Ay.PersistedStore {
     static displayName = "ClientThemesBackgroundStore";
     static persistKey = "ClientThemesBackgroundStore";
     migrations = [(e) => ({ gradientPresetId: e?.gradientPreset?.id })];
@@ -96,7 +96,7 @@ class P extends a.Ay.PersistedStore {
         return r;
     }
 }
-let U = new P(l.h, {
+let U = new M(l.h, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
         let { presetId: t } = e;
         if (((R = C), null == t)) {
@@ -125,12 +125,12 @@ let U = new P(l.h, {
         null != r && (0, I.ke)(r.type) && (O = !0);
     },
     LOGOUT: L,
-    CACHE_LOADED: M,
-    CONNECTION_OPEN: M,
-    OVERLAY_INITIALIZE: M,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: M,
-    UNSYNCED_USER_SETTINGS_UPDATE: M,
-    USER_SETTINGS_PROTO_UPDATE: M,
+    CACHE_LOADED: P,
+    CONNECTION_OPEN: P,
+    OVERLAY_INITIALIZE: P,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: P,
+    UNSYNCED_USER_SETTINGS_UPDATE: P,
+    USER_SETTINGS_PROTO_UPDATE: P,
     SYSTEM_THEME_CHANGE: v,
     UPDATE_SYNCED_CLIENT_THEME: v,
     SET_SAME_AS_DEVICE_THEME_ENABLED: b,

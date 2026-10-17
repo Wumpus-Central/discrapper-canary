@@ -7,13 +7,13 @@
     ME: () => F,
     MJ: () => G,
     N3: () => R,
-    NO: () => M,
+    NO: () => P,
     Pp: () => W,
     V1: () => Y,
     X2: () => x,
     Z$: () => v,
     b7: () => b,
-    fl: () => P,
+    fl: () => M,
     hX: () => H,
     kF: () => V,
     lq: () => y,
@@ -60,10 +60,10 @@ function v(e) {
 function b(e) {
     return L(e) && (0, E.n)(e, S.gfo.PARTNER);
 }
-function M(e) {
+function P(e) {
     return L(e) && (0, E.n)(e, S.gfo.PROMOTED);
 }
-function P(e) {
+function M(e) {
     let t = w(e),
         n = t?.client_platform_config[(0, o.A)((0, T.getOS)())],
         i = Date.now();
@@ -75,7 +75,7 @@ function P(e) {
         : l.Hr.NONE;
 }
 function U(e) {
-    switch (P(e)) {
+    switch (M(e)) {
         case l.Hr.NEW:
             return "New";
         case l.Hr.UPDATED:

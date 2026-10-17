@@ -28,8 +28,8 @@ var i,
     D = n(192820),
     v = n(756042),
     b = n(379848),
-    M = n(832248),
-    P = n(518293),
+    P = n(832248),
+    M = n(518293),
     U = n(885386),
     w = n(843010),
     G = n(461213),
@@ -310,11 +310,11 @@ function eo(e) {
         } = e,
         o = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isQuestBarEmpty: n, hasLoadedQuestBar: i } = (0, P.c9)(),
+                { isQuestBarEmpty: n, hasLoadedQuestBar: i } = (0, M.c9)(),
                 r = U.tz.useSetting(),
                 a = (0, w.G)(),
                 s = (0, _.bG)([G.A], () => G.A.getStatus()),
-                { isOpen: l } = (0, M.A)();
+                { isOpen: l } = (0, P.A)();
             if (((n && i) || t) && !a && !l && !__OVERLAY__) {
                 if (!r && s === F.clD.INVISIBLE) return t ? ea.ActivityAndStatus : ea.ActivityAndStatusNux;
                 if (!r) return t ? ea.Activity : ea.ActivityNux;
@@ -366,7 +366,7 @@ var ed = n(688810),
     eD = n(268378),
     ev = n(253146);
 let eb = 2 * eO.A.Millis.WEEK;
-function eM(e) {
+function eP(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
         i = (0, _.bG)([eC.A], () => eC.A.getChannelId());
     return (0, r.jsx)(
@@ -401,7 +401,7 @@ function eM(e) {
         i ?? "disconnected",
     );
 }
-var eP = n(404374),
+var eM = n(404374),
     eU = n(197184),
     ew = n(747180),
     eG = n(625180),
@@ -540,14 +540,14 @@ var tf = n(994314),
     tD = n(55730),
     tv = n(521588),
     tb = n(702841),
-    tM = n(176781),
-    tP = n(442433),
+    tP = n(176781),
+    tM = n(442433),
     tU = n(42473),
     tw = n(200542),
     tG = n(274372),
     tx = n(414405);
 function tk(e) {
-    (0, tP.L3)(e, async () => {
+    (0, tM.L3)(e, async () => {
         let { default: e } = await Promise.all([n.e("666601"), n.e("344751")]).then(n.bind(n, 575538));
         return (t) => (0, r.jsx)(e, { ...t });
     });
@@ -567,7 +567,7 @@ let tF = function (e) {
                   ((0, eL.l0)(), (0, ep.X)(n, ep.O.CLIP));
               },
               onContextMenu: tk,
-              icon: tM.x,
+              icon: tP.x,
           })
         : null;
 };
@@ -670,15 +670,15 @@ let t7 = a.memo(function (e) {
         } = e,
         { parentAnalyticsLocation: D, analyticsLocations: v } = (0, ed.Ay)(),
         b = (0, tJ.A)(m?.id),
-        M = t4(m, p, f),
-        { enabled: P } = tY.useConfig({ location: "activity-panel" }),
+        P = t4(m, p, f),
+        { enabled: M } = tY.useConfig({ location: "activity-panel" }),
         U = (0, tj.H)({ location: "activity-panel" }),
         w = (0, tK.Bp)("activity-panel"),
         G = (0, tH.C$)(l ?? void 0, "activity-panel"),
         k = (0, _.bG)([t1.A], () => t1.A.hasConsented(F.YAq.PERSONALIZATION)),
         B = (0, tK.TF)(A?.id, { shouldFetch: w || G }),
         V = U && k && (0, tK.k0)(A?.id),
-        H = P && k && B,
+        H = M && k && B,
         j = H && w,
         W = H && G,
         Y = a.useCallback(() => {
@@ -851,7 +851,7 @@ let t7 = a.memo(function (e) {
             );
         })(),
         ec =
-            M && null == f
+            P && null == f
                 ? (0, r.jsx)(tU.A, { ref: S, tooltipText: Z.intl.string(Z.t["hC/Zey"]), onClick: Y, icon: tS.D })
                 : null,
         eu =
@@ -947,7 +947,7 @@ function t9(e) {
         u.current || ((u.current = !0), i());
     }, [i]);
     let _ = (0, tR.A)(),
-        { isQuestBarEmpty: E, hasLoadedQuestBar: A } = (0, P.c9)(),
+        { isQuestBarEmpty: E, hasLoadedQuestBar: A } = (0, M.c9)(),
         h = d && null != l && null != s && !_ && E && A,
         [f, I] = (0, eg.kn)(h && null != l ? [l] : [], { bypassAutoDismiss: !0 }),
         [p, T] = (0, eg.kn)(d ? [o] : [], { bypassAutoDismiss: !0 }),
@@ -1433,7 +1433,7 @@ function nD(e) {
                 })
             );
         case 4:
-            return (0, r.jsx)(eM, { targetElementRef: A, markAsDismissed: n });
+            return (0, r.jsx)(eP, { targetElementRef: A, markAsDismissed: n });
         default:
             return null;
     }
@@ -1503,7 +1503,7 @@ function nb(e) {
     });
     return (0, r.jsx)("div", { className: nN.cm, children: I });
 }
-function nM(e) {
+function nP(e) {
     let { frame: t, application: n, accountLinkUpsellTargetRef: i, isActivityPopoutOpen: s } = e,
         l = a.useMemo(() => ({ start: t.data.connectedSince }), [t.data.connectedSince]),
         o = (0, r.jsxs)(r.Fragment, {
@@ -1535,7 +1535,7 @@ function nM(e) {
         });
     return (0, r.jsx)("div", { className: nN.cm, children: o });
 }
-function nP(e) {
+function nM(e) {
     let { streamMetadata: t, accountLinkUpsellTargetRef: n, streamQualityIndicator: i } = e,
         { title: a, sanitizedTitle: s } = (0, eJ.A)(t);
     return (0, r.jsxs)("div", {
@@ -1551,7 +1551,7 @@ function nP(e) {
                         (0, r.jsxs)("div", {
                             className: nN.qi,
                             children: [
-                                (0, r.jsx)(I.t, { size: "xxs", color: eP.k0.PREMIUM_TIER_2 }),
+                                (0, r.jsx)(I.t, { size: "xxs", color: eM.k0.PREMIUM_TIER_2 }),
                                 (0, r.jsx)(te, { className: nN.s, variant: "text-xxs/semibold", children: i }),
                             ],
                         }),
@@ -1675,7 +1675,7 @@ let nU = (0, N.A)(function (e) {
                     canShowCurrentRunningGamePanel: u,
                     isStreamingCurrentRunningGame: _,
                 } = e,
-                { isQuestBarEmpty: A, hasLoadedQuestBar: h } = (0, P.c9)(),
+                { isQuestBarEmpty: A, hasLoadedQuestBar: h } = (0, M.c9)(),
                 f = !h || !A,
                 I = !f && !o && null == r && l && null != t,
                 { shouldShow: p, markAsDismissed: T } = (0, eX.D3)({
@@ -1701,7 +1701,7 @@ let nU = (0, N.A)(function (e) {
                     let { disabled: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         t = (0, ey.A)("AutoclippingAccountPanelCoachmark"),
                         n = (0, eR.E)(),
-                        i = (0, M.A)((e) => e.isOpen),
+                        i = (0, P.A)((e) => e.isOpen),
                         r = (0, w.G)(),
                         [a, s] = (0, eg.Wl)(
                             e || !t || n || i || r ? null : E.M.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
@@ -1782,14 +1782,14 @@ let nU = (0, N.A)(function (e) {
                               let { application: t, frame: n } = e;
                               return null != t && null != n && n.applicationId === t.id;
                           })({ application: G, frame: b })
-                        ? (0, r.jsx)(nM, {
+                        ? (0, r.jsx)(nP, {
                               application: G,
                               accountLinkUpsellTargetRef: o,
                               frame: b,
                               isActivityPopoutOpen: $,
                           })
                         : H
-                          ? (0, r.jsx)(nP, {
+                          ? (0, r.jsx)(nM, {
                                 streamMetadata: N,
                                 accountLinkUpsellTargetRef: o,
                                 streamQualityIndicator: W,

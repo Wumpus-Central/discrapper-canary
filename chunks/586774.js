@@ -1,4 +1,4 @@
-i.d(t, { A: () => p });
+i.d(t, { A: () => f });
 var l = i(435558),
     n = i.n(l),
     a = i(17928),
@@ -20,7 +20,7 @@ function S(e) {
         contactNames: t,
     };
 }
-class f extends a.Ay.Store {
+class p extends a.Ay.Store {
     static displayName = "FriendSuggestionStore";
     initialize() {
         this.waitFor(o.default);
@@ -38,7 +38,7 @@ class f extends a.Ay.Store {
         return d[e];
     }
 }
-let p = new f(s.h, {
+let f = new p(s.h, {
     CONNECTION_OPEN: function (e) {
         ((d = {}),
             (h = e.friendSuggestionCount) > 0

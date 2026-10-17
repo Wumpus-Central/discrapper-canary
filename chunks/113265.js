@@ -37,6 +37,6 @@ function c(t) {
             location: u,
             onError: d,
         }),
-        { isPurchased: A } = (0, r.h)(o);
-    return { ...p, specificProductOrVariant: o, isPurchased: A };
+        { isPurchased: f } = (0, r.h)(o);
+    return { ...p, specificProductOrVariant: o, isPurchased: f };
 }

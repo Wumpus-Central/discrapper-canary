@@ -1,4 +1,4 @@
-n.d(e, { Ay: () => g, UE: () => A, gA: () => f });
+n.d(e, { Ay: () => p, UE: () => A, gA: () => f });
 var l = n(477900);
 n(582128);
 var i = n(192308),
@@ -52,24 +52,24 @@ function f(t) {
           })
         : null;
 }
-function g(t) {
+function p(t) {
     let { user: e, activity: n, entry: i, onAction: r, isMenuOpen: s, appContext: u } = t,
-        { applicationId: f, sourceUserId: g } = A({ activity: n, entry: i, user: e }),
-        p = (0, c.A)({
+        { applicationId: f, sourceUserId: p } = A({ activity: n, entry: i, user: e }),
+        g = (0, c.A)({
             location: "UserProfileActivityContextMenu",
             source: o.GameProfileSources.UserProfileCardContextMenu,
             trackEntryPointImpression: s,
             applicationId: f,
-            sourceUserId: g,
+            sourceUserId: p,
             appContext: u,
         });
-    return null == p
+    return null == g
         ? null
         : (0, l.jsx)(a.Dr, {
               id: "game-profile",
               label: d.intl.string(d.t.ajHoOr),
               action: (t) => {
-                  (r?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), p(t));
+                  (r?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), g(t));
               },
           });
 }

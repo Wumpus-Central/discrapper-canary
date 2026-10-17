@@ -11,22 +11,22 @@ var i = n(17928),
     d = n(20805),
     A = n(474397),
     f = n(780964),
-    g = n(766075),
-    p = n(287809),
+    p = n(766075),
+    g = n(287809),
     m = n(301736),
     x = n(105292);
 function _() {
-    return (0, g.openUserSettings)(f.X.CONNECTIONS_CATEGORY);
+    return (0, p.openUserSettings)(f.X.CONNECTIONS_CATEGORY);
 }
 function I(t) {
     let { entry: e, onOpenGameSettings: n } = t;
     return (0, d.aj)(e) || (0, d.Lf)(e) || (0, d.Tq)(e) ? _ : (0, d.zD)(e) ? n : null;
 }
 function N(t) {
-    let { user: e, activity: n, entry: d, onAction: f, onClose: g, appContext: N } = t,
+    let { user: e, activity: n, entry: d, onAction: f, onClose: p, appContext: N } = t,
         E = (0, m.A)();
-    if (!(0, i.bG)([p.default], () => p.default.getCurrentUser()?.id === e.id)) return null;
-    let h = (function (t) {
+    if (!(0, i.bG)([g.default], () => g.default.getCurrentUser()?.id === e.id)) return null;
+    let T = (function (t) {
         let { activity: e, entry: n, onOpenGameSettings: l } = t;
         return null != n
             ? I({ entry: n, onOpenGameSettings: l })
@@ -37,13 +37,13 @@ function N(t) {
                 })({ activity: e, onOpenGameSettings: l })
               : null;
     })({ activity: n, entry: d, onOpenGameSettings: E });
-    return null == h
+    return null == T
         ? null
         : (0, l.jsx)(a.Dr, {
               id: "manage-privacy",
               label: x.intl.string(x.t.anfNPV),
               action: () => {
-                  (f?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), h(), (0, A.A)(N), g?.());
+                  (f?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), T(), (0, A.A)(N), p?.());
               },
           });
 }

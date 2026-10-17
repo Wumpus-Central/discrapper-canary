@@ -103,12 +103,12 @@ let m = new h.A("RTCConnectionStore"),
     D = !1,
     v = null,
     b = !1,
-    M = null,
-    P = null;
+    P = null,
+    M = null;
 function U(e, t, i) {
     if (null == r) throw Error("Creating RTCConnection without session.");
     let a = p.default.getId(),
-        s = new (n(613681).A)({ userId: a, sessionId: r, guildId: e, channelId: t, joinVoiceId: M, createdTime: i });
+        s = new (n(613681).A)({ userId: a, sessionId: r, guildId: e, channelId: t, joinVoiceId: P, createdTime: i });
     return (
         s.on(d.q.State, (e, t, n) => {
             o.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n });
@@ -204,7 +204,7 @@ function w() {
         e && (y = null));
 }
 function G() {
-    null != P && (P.timeout.stop(), (P = null));
+    null != M && (M.timeout.stop(), (M = null));
 }
 function x() {
     S = null;
@@ -301,7 +301,7 @@ class B extends a.Ay.Store {
         return i?.getUserIds();
     }
     getJoinVoiceId() {
-        return M;
+        return P;
     }
     isUserConnected(e) {
         return i?.getIsUserConnected(e);
@@ -374,7 +374,7 @@ let V = new B(
                               p.default.getId() !== t.userId)
                           )
                               return e;
-                          let a = null != P && t.channelId === P.channelId;
+                          let a = null != M && t.channelId === M.channelId;
                           if ((a && G(), null != i))
                               t.sessionId === r
                                   ? (null != t.guildId && t.guildId === i.guildId) ||
@@ -383,7 +383,7 @@ let V = new B(
                                           ? w()
                                           : (i.setNextChannelId(t.channelId),
                                             (b = !0),
-                                            (M = null),
+                                            (P = null),
                                             i.clearJoinVoiceId())
                                       : ((t.guildId !== i.guildId && null == t.channelId) || w(),
                                         null != t.channelId &&
@@ -410,7 +410,7 @@ let V = new B(
               },
               VOICE_CHANNEL_SELECT: function (e) {
                   (null != i && (null == e.channelId || i.channelId !== e.channelId) && w(),
-                      (M = e.joinVoiceId),
+                      (P = e.joinVoiceId),
                       (function (e) {
                           if ((G(), null == e.channelId)) return;
                           let t = new l.Ep();
@@ -420,9 +420,9 @@ let V = new B(
                                   channelId: e.channelId,
                                   guildId: e.guildId,
                               }),
-                                  (P = null));
+                                  (M = null));
                           }),
-                              (P = {
+                              (M = {
                                   joinVoiceId: e.joinVoiceId,
                                   channelId: e.channelId,
                                   guildId: e.guildId,

@@ -16,7 +16,7 @@ function r(e) {
     Fs: () => eg,
     GQ: () => tE,
     GZ: () => x,
-    Gu: () => tP,
+    Gu: () => tM,
     HB: () => e6,
     HS: () => ep,
     Hz: () => eS,
@@ -63,7 +63,7 @@ function r(e) {
     _h: () => tn,
     _i: () => q,
     _m: () => eq,
-    aI: () => eP,
+    aI: () => eM,
     bL: () => tD,
     c6: () => eb,
     cV: () => Y,
@@ -93,12 +93,12 @@ function r(e) {
     l0: () => tr,
     lI: () => r,
     n8: () => $,
-    nx: () => P,
+    nx: () => M,
     o: () => el,
     p8: () => e3,
     pD: () => eY,
     qN: () => tF,
-    qv: () => tM,
+    qv: () => tP,
     rf: () => m,
     rk: () => tt,
     rl: () => tR,
@@ -111,7 +111,7 @@ function r(e) {
     uY: () => tC,
     uo: () => eO,
     uw: () => e9,
-    v: () => eM,
+    v: () => eP,
     v2: () => V,
     vF: () => eC,
     vU: () => tU,
@@ -278,14 +278,14 @@ function y(e, t, n) {
 let D = ["bytes"],
     v = ["omit", "same-origin", "include"],
     b = ["same-origin", "no-cors", "cors", "navigate"],
-    M =
+    P =
         "u" < typeof FinalizationRegistry
             ? { register: () => {}, unregister: () => {} }
             : new FinalizationRegistry((e) => i.__wbg_blockeddomainsstore_free(e >>> 0, 1));
-class P {
+class M {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return ((this.__wbg_ptr = 0), M.unregister(this), e);
+        return ((this.__wbg_ptr = 0), P.unregister(this), e);
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -669,10 +669,10 @@ function eb(e, t) {
         n.a = n.b = 0;
     }
 }
-function eM() {
+function eP() {
     return {};
 }
-function eP() {
+function eM() {
     return new Map();
 }
 function eU() {
@@ -930,10 +930,10 @@ function tv(e) {
 function tb(e) {
     return null === e;
 }
-function tM(e) {
+function tP(e) {
     return "object" == typeof e && null !== e;
 }
-function tP(e) {
+function tM(e) {
     return "string" == typeof e;
 }
 function tU(e) {

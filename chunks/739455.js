@@ -1,4 +1,4 @@
-(i.d(t, { Fx: () => R, JH: () => N, SY: () => g, aV: () => T, fE: () => A, pF: () => v, zu: () => I }),
+(i.d(t, { Fx: () => R, JH: () => T, SY: () => g, aV: () => v, fE: () => A, pF: () => N, zu: () => I }),
     i(938796),
     i(321073));
 var l = i(582128),
@@ -13,14 +13,14 @@ var l = i(582128),
     u = i(636194),
     _ = i(846922),
     S = i(555325),
-    f = i(74399),
-    p = i(652215),
+    p = i(74399),
+    f = i(652215),
     C = i(746080);
 a().shim();
 let E = {};
 function A(e) {
     let t = (0, r.bG)([d.A], () => d.A.getChannel(e)),
-        i = (0, r.bG)([f.A], () => f.A.getChannel(e)),
+        i = (0, r.bG)([p.A], () => p.A.getChannel(e)),
         n = (0, r.bG)([u.A], () => u.A.getBenefitChannel(e)),
         a = (0, l.useMemo)(
             () =>
@@ -60,12 +60,12 @@ function m(e) {
         t.forEach((e) => {
             let t = i[e]?.channelBenefits;
             t?.forEach((e) => {
-                null != f.A.getChannel(e.ref_id) && l.add(e.ref_id);
+                null != p.A.getChannel(e.ref_id) && l.add(e.ref_id);
             });
         });
     let n = [];
     for (let t of l) {
-        let i = f.A.getChannel(t);
+        let i = p.A.getChannel(t);
         if (null != i) {
             let t = i.set("guild_id", e);
             n.push(t);
@@ -86,11 +86,11 @@ function R(e) {
         o.h.dispatch({ type: "CHANNEL_DELETE", channel: e });
     });
 }
-async function v(e, t) {
+async function N(e, t) {
     let i = [],
         l = [];
     (t.forEach((t) => {
-        let n = f.A.getChannel(t.ref_id);
+        let n = p.A.getChannel(t.ref_id);
         null != n && (i.push(c.A.createRoleSubscriptionTemplateChannel(e, n.name, n.type, n.topic)), l.push(n));
     }),
         0 === i.length ||
@@ -113,11 +113,11 @@ async function v(e, t) {
                 }
             }));
 }
-function N(e, t) {
+function T(e, t) {
     let i = _.y.getState().listings[e],
         l = i?.usedTemplate;
     if (null == l) return { templateCategory: null, hasChangeFromTemplate: null };
-    let n = f.A.getTemplateWithCategory(t, l);
+    let n = p.A.getTemplateWithCategory(t, l);
     if (null == n) return { templateCategory: null, hasChangeFromTemplate: null };
     let a = n.listings[0];
     if (
@@ -144,6 +144,6 @@ function N(e, t) {
     }
     return { templateCategory: n.category, hasChangeFromTemplate: !1 };
 }
-function T(e) {
-    return (0, S.X9)(e) && e.features.has(p.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, h.TG)(e.id);
+function v(e) {
+    return (0, S.X9)(e) && e.features.has(f.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, h.TG)(e.id);
 }

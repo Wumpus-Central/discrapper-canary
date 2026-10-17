@@ -45,7 +45,7 @@ let c = new o(l.h, {
             } = e,
             E = i ? (l ? "changes" : "up_to_date") : "unpublished",
             d = u.get(n),
-            R =
+            h =
                 null == p ||
                 ((t = d?.patchNotesSent ?? s),
                 t.length === p.length &&
@@ -60,7 +60,7 @@ let c = new o(l.h, {
             d.publishedRevision === r &&
             d.publishedAt === o &&
             d.publishing === c &&
-            d.patchNotesSent === R
+            d.patchNotesSent === h
         )
             return !1;
         u.set(n, {
@@ -70,7 +70,7 @@ let c = new o(l.h, {
             publishedRevision: r,
             publishedAt: o,
             publishing: c,
-            patchNotesSent: R,
+            patchNotesSent: h,
         });
     },
     CONJURE_PROJECT_PUBLISH_START: function (e) {

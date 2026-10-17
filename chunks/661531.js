@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => M });
 var i = n(310784),
     r = n.n(i),
     a = n(404144),
@@ -9726,7 +9726,7 @@ let { Themes: c } = d.zv,
         themes: d.NJ,
         modules: N,
         colors: o()(I, (e, t) => ({
-            css: M(t),
+            css: P(t),
             resolve(n) {
                 let i = n.theme,
                     r = e[i],
@@ -9750,10 +9750,10 @@ let { Themes: c } = d.zv,
         })),
         unsafe_rawColors: o()(p, (e, t) => {
             let n = L[t];
-            return { css: M(t), resolve: (e) => D(n, e?.saturation ?? 1) };
+            return { css: P(t), resolve: (e) => D(n, e?.saturation ?? 1) };
         }),
         shadows: o()(g, (e, t) => ({
-            css: M(t),
+            css: P(t),
             resolve(t) {
                 let n = t.theme;
                 return { boxShadow: e[n].boxShadow, filter: e[n].filter, nativeStyles: e[n].nativeStyles };
@@ -9807,9 +9807,9 @@ function v(e, t, n) {
 function b(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function M(e, t) {
+function P(e, t) {
     let n = null != t ? b(t) : null,
         i = b(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let P = y;
+let M = y;

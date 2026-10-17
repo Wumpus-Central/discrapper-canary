@@ -109,7 +109,7 @@ var D = n(406935),
         (r[(r.HOLDOUT = 1)] = "HOLDOUT"),
         (r[(r.ROLLOUT = 2)] = "ROLLOUT"),
         r);
-class M extends C.G {
+class P extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Rule", [
             { no: 1, name: "type", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Rule.Type", v] },
@@ -179,7 +179,7 @@ class M extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let P = new M();
+let M = new P();
 class U extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Override", [
@@ -1404,7 +1404,7 @@ class eS extends C.G {
                 { no: 3, name: "web_version", kind: "message", T: () => eO },
                 { no: 4, name: "native_version", kind: "message", T: () => eO },
                 { no: 6, name: "allow_non_native_web", kind: "scalar", T: 8 },
-                { no: 5, name: "client_required_changes", kind: "message", T: () => eP },
+                { no: 5, name: "client_required_changes", kind: "message", T: () => eM },
             ],
             { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_CLIENT" },
         );
@@ -1439,7 +1439,7 @@ class eS extends C.G {
                     r.allowNonNativeWeb = e.bool();
                     break;
                 case 5:
-                    r.clientRequiredChanges = eP.internalBinaryRead(e, e.uint32(), n, r.clientRequiredChanges);
+                    r.clientRequiredChanges = eM.internalBinaryRead(e, e.uint32(), n, r.clientRequiredChanges);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -1459,7 +1459,7 @@ class eS extends C.G {
             e.nativeVersion && eO.internalBinaryWrite(e.nativeVersion, t.tag(4, g.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.allowNonNativeWeb && t.tag(6, g.O0.Varint).bool(e.allowNonNativeWeb),
             e.clientRequiredChanges &&
-                eP.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, g.O0.LengthDelimited).fork(), n).join());
+                eM.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, g.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -1651,7 +1651,7 @@ class ev extends C.G {
     }
 }
 let eb = new ev();
-class eM extends C.G {
+class eP extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.ClientRequiredChanges", [
             { no: 1, name: "commit_hashes", kind: "scalar", repeat: 2, T: 9 },
@@ -1701,7 +1701,7 @@ class eM extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eP = new eM();
+let eM = new eP();
 class eU extends C.G {
     constructor() {
         super(
@@ -2571,7 +2571,7 @@ class tT extends C.G {
                 T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", tr],
             },
             { no: 15, name: "variations", kind: "message", repeat: 1, T: () => tN },
-            { no: 16, name: "rules", kind: "message", repeat: 1, T: () => P },
+            { no: 16, name: "rules", kind: "message", repeat: 1, T: () => M },
             { no: 18, name: "phase", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Phase", tp] },
             {
                 no: 19,
@@ -2739,7 +2739,7 @@ class tT extends C.G {
                     r.variations.push(tN.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 16:
-                    r.rules.push(P.internalBinaryRead(e, e.uint32(), n));
+                    r.rules.push(M.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 18:
                     r.phase = e.int32();
@@ -2868,7 +2868,7 @@ class tT extends C.G {
         for (let i = 0; i < e.variations.length; i++)
             tN.internalBinaryWrite(e.variations[i], t.tag(15, g.O0.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
-            P.internalBinaryWrite(e.rules[i], t.tag(16, g.O0.LengthDelimited).fork(), n).join();
+            M.internalBinaryWrite(e.rules[i], t.tag(16, g.O0.LengthDelimited).fork(), n).join();
         if ((0 !== e.phase && t.tag(18, g.O0.Varint).int32(e.phase), e.surfaces.length)) {
             t.tag(19, g.O0.LengthDelimited).fork();
             for (let n = 0; n < e.surfaces.length; n++) t.int32(e.surfaces[n]);
@@ -3263,7 +3263,7 @@ let tD = new ty();
 class tv extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan", [
-            { no: 1, name: "measurement_plan", kind: "message", T: () => tP },
+            { no: 1, name: "measurement_plan", kind: "message", T: () => tM },
             { no: 2, name: "rollout_plan", kind: "message", T: () => tw },
         ]);
     }
@@ -3282,7 +3282,7 @@ class tv extends C.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.measurementPlan = tP.internalBinaryRead(e, e.uint32(), n, r.measurementPlan);
+                    r.measurementPlan = tM.internalBinaryRead(e, e.uint32(), n, r.measurementPlan);
                     break;
                 case 2:
                     r.rolloutPlan = tw.internalBinaryRead(e, e.uint32(), n, r.rolloutPlan);
@@ -3299,14 +3299,14 @@ class tv extends C.G {
     }
     internalBinaryWrite(e, t, n) {
         (e.measurementPlan &&
-            tP.internalBinaryWrite(e.measurementPlan, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
+            tM.internalBinaryWrite(e.measurementPlan, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
             e.rolloutPlan && tw.internalBinaryWrite(e.rolloutPlan, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tb = new tv();
-class tM extends C.G {
+class tP extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan.MeasurementPlan", [
             {
@@ -3356,7 +3356,7 @@ class tM extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tP = new tM();
+let tM = new tP();
 class tU extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", [

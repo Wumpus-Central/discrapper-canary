@@ -22,8 +22,8 @@ var c = n(435558),
     D = n(746080);
 let v = "SelectedChannelStore",
     b = {},
-    M = {},
     P = {},
+    M = {},
     U = new Set();
 function w(e) {
     return String(e);
@@ -36,10 +36,10 @@ function G() {
             lastChannelFollowingDestination: s,
             lastConnectedTime: o,
             selectedChannelIds: b,
-            mostRecentSelectedTextChannelIds: P,
+            mostRecentSelectedTextChannelIds: M,
             knownThreadIds: u()(b)
                 .values()
-                .concat(u().values(P))
+                .concat(u().values(M))
                 .filter(m.Vq)
                 .uniq()
                 .filter((e) => {
@@ -56,11 +56,11 @@ function x(e) {
     }
 }
 function k(e, t) {
-    if (null == e || null == t || P[e] === t) return !1;
+    if (null == e || null == t || M[e] === t) return !1;
     let n = S.A.getChannel(t),
         i = null != n && (0, T.ke)(n.type),
         r = n?.getGuildId() === e;
-    return !!i && !!r && ((P[e] = t), !0);
+    return !!i && !!r && ((M[e] = t), !0);
 }
 function F(e) {
     let t = S.A.getMutableBasicGuildChannelsForGuild(e),
@@ -73,14 +73,14 @@ function B() {
     return (
         u().each(b, (t, n) => {
             (null != t && (S.A.hasChannel(t) || t === a || U.has(t) || (0, D.mP)(t))) ||
-                (delete b[n], delete M[n], (e = !0));
+                (delete b[n], delete P[n], (e = !0));
         }),
-        u().each(P, (t, n) => {
-            (null != t && (S.A.hasChannel(t) || U.has(t))) || (delete P[n], (e = !0));
+        u().each(M, (t, n) => {
+            (null != t && (S.A.hasChannel(t) || U.has(t))) || (delete M[n], (e = !0));
         }),
         t.forEach((e) => {
             let t = b[e.id];
-            null == P[e.id] && k(e.id, t);
+            null == M[e.id] && k(e.id, t);
         }),
         null != o && Date.now() - o >= 3e5 && ((l = null), (e = !0)),
         e
@@ -99,7 +99,7 @@ function V(e, t, n) {
         o = i && null != n ? n : x(s),
         d = b[s] === e;
     (d && ((b[s] = o), (a = !0)),
-        null != r && P[r] === e && (delete P[r], (a = !0)),
+        null != r && M[r] === e && (delete M[r], (a = !0)),
         L.A.getGuildId() === r && d && (0, p.bG)(y.BVt.CHANNEL(t, o)),
         a && G());
 }
@@ -135,13 +135,13 @@ class $ extends E.Ay.Store {
                 lastChannelFollowingDestination: s,
                 lastConnectedTime: o,
                 selectedChannelIds: b,
-                mostRecentSelectedTextChannelIds: P,
+                mostRecentSelectedTextChannelIds: M,
             };
             (null != e.knownThreadIds && (U = new Set(e.knownThreadIds)),
                 (l = e.selectedVoiceChannelId),
                 (s = e.lastChannelFollowingDestination),
                 (o = e.lastConnectedTime),
-                (P = e.mostRecentSelectedTextChannelIds ?? {}),
+                (M = e.mostRecentSelectedTextChannelIds ?? {}),
                 null != e.selectedChannelIds && (b = { ...e.selectedChannelIds, null: null }));
         }
         (this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
@@ -156,16 +156,16 @@ class $ extends E.Ay.Store {
         return O.Ay.isSupported() ? l : null;
     }
     getMostRecentSelectedTextChannelId(e) {
-        return null == e ? null : (P[e] ?? null);
+        return null == e ? null : (M[e] ?? null);
     }
     getCurrentlySelectedChannelId(e) {
         return null != e ? b[e] : a;
     }
     getLastSelectedChannelId(e) {
-        return null != e ? M[e] : r;
+        return null != e ? P[e] : r;
     }
     getLastSelectedChannels(e) {
-        return M[e];
+        return P[e];
     }
     getLastChannelFollowingDestination() {
         return s;
@@ -183,7 +183,7 @@ let z = new $(h.h, {
         ((i = e.sessionId),
             (l = e.selectedVoiceChannelId),
             (b = {}),
-            (M = {}),
+            (P = {}),
             (a = e.selectedChannelId),
             (b[e.selectedGuildId] = e.selectedChannelId),
             k(e.selectedGuildId, a),
@@ -199,7 +199,7 @@ let z = new $(h.h, {
             null != a && n !== a && (r = a),
             (a = n),
             k(t, n),
-            b[w(t)] !== n && ((M[w(t)] = b[w(t)]), (b[w(t)] = a)),
+            b[w(t)] !== n && ((P[w(t)] = b[w(t)]), (b[w(t)] = a)),
             G());
     },
     CHANNEL_CREATE: function (e) {
@@ -208,7 +208,7 @@ let z = new $(h.h, {
             case y.rbe.GUILD_ANNOUNCEMENT:
             case y.rbe.GUILD_TEXT:
                 let n = t.guild_id;
-                if ((null != n && null == P[n] && (P[n] = t.id), null != n && null == b[n])) return ((b[n] = x(n)), !0);
+                if ((null != n && null == M[n] && (M[n] = t.id), null != n && null == b[n])) return ((b[n] = x(n)), !0);
         }
         return !1;
     },
@@ -234,7 +234,7 @@ let z = new $(h.h, {
             guild: { id: t, unavailable: n },
         } = e;
         if ((l === b[t] && (l = null), n)) return !1;
-        (delete P[t], delete b[t], G());
+        (delete M[t], delete b[t], G());
     },
     GUILD_ROLE_UPDATE: K,
     GUILD_ROLE_DELETE: K,
@@ -282,6 +282,6 @@ let z = new $(h.h, {
         return null != l && null != d && ((o = Date.now()), G(), !1);
     },
     LOGOUT: function () {
-        ((b = {}), (a = null), (r = void 0), (P = {}), (s = {}), (l = null), A.w.remove(v));
+        ((b = {}), (a = null), (r = void 0), (M = {}), (s = {}), (l = null), A.w.remove(v));
     },
 });

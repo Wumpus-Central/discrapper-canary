@@ -4,8 +4,8 @@
     Rp: () => R,
     dZ: () => b,
     eS: () => y,
-    g0: () => M,
-    iy: () => P,
+    g0: () => P,
+    iy: () => M,
     lT: () => N,
     nh: () => D,
     qP: () => v,
@@ -153,9 +153,9 @@ function v(e, t) {
 function b(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_START", soundId: e, userId: t });
 }
-function M(e, t) {
+function P(e, t) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_END", soundId: e, userId: t });
 }
-function P(e, t) {
+function M(e, t) {
     s.h.dispatch({ type: "USER_SOUNDBOARD_SET_VOLUME", volume: e, location: t });
 }

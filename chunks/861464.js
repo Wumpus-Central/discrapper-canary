@@ -124,8 +124,8 @@ let v = {
             case l.lAJ.GUILD_BOOST_TIER_1:
             case l.lAJ.GUILD_BOOST_TIER_2:
             case l.lAJ.GUILD_BOOST_TIER_3:
-                let M;
-                return null == (M = m.A.getChannel(O)) || null == g.A.getGuild(M.getGuildId())
+                let P;
+                return null == (P = m.A.getChannel(O)) || null == g.A.getGuild(P.getGuildId())
                     ? y(R)
                     : (0, a.$)(o.intl.formatToParts(o.t.ihxM9x, { username: R, usernameOnClick: l.tEg }));
             case l.lAJ.GUILD_INVITE_REMINDER:
@@ -151,8 +151,8 @@ let v = {
                 );
             case l.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof p.Ay) return null;
-                let P = (0, h.p_)((0, A.rh)(e));
-                return (0, a.$)((0, f.P)({ application: e.application, username: P.nick }));
+                let M = (0, h.p_)((0, A.rh)(e));
+                return (0, a.$)((0, f.P)({ application: e.application, username: M.nick }));
             case l.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED:
                 if (e instanceof p.Ay) return null;
                 return (0, a.$)((0, I.g6)({ application: e.application, username: (0, h.p_)((0, A.rh)(e)).nick }));

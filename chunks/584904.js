@@ -11,8 +11,8 @@ var i = n(503698),
     d = n(939496),
     A = n(518477),
     f = n(996988),
-    g = n(105292),
-    p = n(260155);
+    p = n(105292),
+    g = n(260155);
 function m(t) {
     let {
             children: e,
@@ -25,30 +25,30 @@ function m(t) {
             ...N
         } = t,
         { themeType: E } = (0, d.E)(),
-        { analyticsLocations: h } = (0, s.Ay)(),
-        { context: T } = (0, o.NJ)();
-    return E === f.d.MODAL || E === f.d.MODAL_V2 || T?.userId == null
+        { analyticsLocations: T } = (0, s.Ay)(),
+        { context: h } = (0, o.NJ)();
+    return E === f.d.MODAL || E === f.d.MODAL_V2 || h?.userId == null
         ? (0, l.jsx)("article", {
               "aria-labelledby": _,
-              children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(p.Nr, n), ...N, children: e }),
+              children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(g.Nr, n), ...N, children: e }),
           })
         : (0, l.jsx)("article", {
               "aria-labelledby": _,
               children: (0, l.jsx)(r.s, {
-                  className: p.OV,
-                  "aria-label": g.intl.string(g.t.pD1L1u),
+                  className: g.OV,
+                  "aria-label": p.intl.string(p.t.pD1L1u),
                   focusProps: { ringTarget: I },
                   onClick: () => {
                       (m?.({ action: "PRESS_CARD" }),
                           (0, c.openUserProfileModal)({
                               tabSection: A.RP.ACTIVITY,
-                              sourceAnalyticsLocations: h,
+                              sourceAnalyticsLocations: T,
                               scrollTarget: i,
-                              ...T,
+                              ...h,
                           }),
                           x?.());
                   },
-                  children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(p.Nr, n), ...N, children: e }),
+                  children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(g.Nr, n), ...N, children: e }),
               }),
           });
 }

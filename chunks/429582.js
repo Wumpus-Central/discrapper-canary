@@ -1,4 +1,4 @@
-(n.d(t, { H3: () => U, H9: () => D, oe: () => w, t8: () => P, xW: () => G }), n(321073));
+(n.d(t, { H3: () => U, H9: () => D, oe: () => w, t8: () => M, xW: () => G }), n(321073));
 var i = n(621466),
     r = n(941426),
     a = n(350723);
@@ -167,12 +167,12 @@ function b() {
     }
     ((n || u || performance.now() - c >= 250) && O(t), l.size > 0 && (d = requestAnimationFrame(b)));
 }
-function M(e) {
+function P(e) {
     for (let [t, n] of l) if (n.iframe === e) return t;
     return null;
 }
-function P(e) {
-    return null != M(e);
+function M(e) {
+    return null != P(e);
 }
 function U(e) {
     for (let t of l.values())
@@ -193,7 +193,7 @@ function U(e) {
 }
 function w(e, t) {
     let n = y(),
-        i = M(e);
+        i = P(e);
     return null == n || null == i ? null : n.capture(i, t);
 }
 function G(e, t, n, i, r) {

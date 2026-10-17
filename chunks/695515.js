@@ -14,7 +14,7 @@ let c = null,
     h = w(),
     f = null,
     I = null,
-    p = P(),
+    p = M(),
     T = !1,
     m = !1,
     g = null,
@@ -28,8 +28,8 @@ let c = null,
     D = {},
     v = {},
     b = null,
-    M = {};
-function P() {
+    P = {};
+function M() {
     return window?.location?.pathname === d.he.FAMILY_CENTER_MY_FAMILY
         ? d.u9.REQUESTS
         : window?.location?.pathname === d.he.FAMILY_CENTER_SETTINGS
@@ -86,7 +86,7 @@ function k(e, t) {
     );
 }
 function F(e) {
-    M = e.reduce(
+    P = e.reduce(
         (e, t) => ({
             ...e,
             [t.id]: {
@@ -94,7 +94,7 @@ function F(e) {
                 approximateMemberCount: t.approximate_member_count ?? 0,
             },
         }),
-        M,
+        P,
     );
 }
 function B(e) {
@@ -242,10 +242,10 @@ function et() {
         (I = null),
         (A = U()),
         (h = w()),
-        (M = {}),
+        (P = {}),
         (m = !1),
         (g = null),
-        (p = P()),
+        (p = M()),
         (E = !1),
         (N = []),
         (C = []),
@@ -313,7 +313,7 @@ class en extends r.A {
                         e.push(...Array.from(t.values()));
                     }),
                     e),
-                guilds: Object.values(M),
+                guilds: Object.values(P),
             },
         };
     }
@@ -344,7 +344,7 @@ class en extends r.A {
         return I;
     }
     getGuild(e) {
-        return M[e];
+        return P[e];
     }
     getSelectedTab() {
         return p;

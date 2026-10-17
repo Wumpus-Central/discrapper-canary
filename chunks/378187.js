@@ -28,8 +28,8 @@ var i = n(412703),
     D = n(165610);
 let v = +f.A.Millis.MINUTE,
     b = +f.A.Millis.SECOND,
-    M = (0, N.L)({ location: y.rE.QUESTS_MANAGER });
-function P(e) {
+    P = (0, N.L)({ location: y.rE.QUESTS_MANAGER });
+function M(e) {
     return !(0, C.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 function U(e) {
@@ -61,7 +61,7 @@ class G extends a.A {
     };
     initiateHeartbeat = (e, t, n) => {
         let r = this.heartbeats[t];
-        if (r.has(e)) return void M.log(`~ initiateHeartbeat -> Heartbeat already initiated for questId: ${e}`);
+        if (r.has(e)) return void P.log(`~ initiateHeartbeat -> Heartbeat already initiated for questId: ${e}`);
         let a = () => {
             let s = this.getActivelyProgressingQuests(t);
             if (s.has(e)) {
@@ -72,14 +72,14 @@ class G extends a.A {
                 if (t === i.n.STREAM_ON_DESKTOP) {
                     let n = E.A.getCurrentUserActiveStream();
                     if (null == n) {
-                        (M.log(
+                        (P.log(
                             `~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: ${e}`,
                         ),
                             this.terminateHeartbeat(e, t));
                         return;
                     }
                     let i = (0, c._z)(n);
-                    (M.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
+                    (P.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
                         (0, p.R2)({
                             questId: e,
                             streamKey: i,
@@ -88,36 +88,36 @@ class G extends a.A {
                             executableFingerprint: d,
                         }));
                 } else
-                    (M.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
+                    (P.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
                         (0, p.R2)({ questId: e, applicationId: o, executablePath: u, executableFingerprint: d }));
                 let _ = this.calculateHeartbeatDurationMs(e),
                     A = window.setTimeout(a, _);
                 r.set(e, A);
             } else
-                (M.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
+                (P.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
                     this.terminateHeartbeat(e, t));
         };
-        (M.log(`~ initiateHeartbeat -> Initiating heartbeat for Quest ${e}`), a());
+        (P.log(`~ initiateHeartbeat -> Initiating heartbeat for Quest ${e}`), a());
     };
     terminateHeartbeat = (e, t) => {
         let n = this.heartbeats[t],
             i = T.A.quests,
             r = n.get(e);
         if (null != r) {
-            (M.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
+            (P.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
                 window.clearTimeout(r),
                 n.delete(e));
             let t = i.get(e);
             null != t &&
-                P(t) &&
-                (M.log(`~ terminateHeartbeat -> Sending terminal heartbeat for questId: ${e}`),
+                M(t) &&
+                (P.log(`~ terminateHeartbeat -> Sending terminal heartbeat for questId: ${e}`),
                 (0, p.R2)({ questId: e, terminal: !0 }));
         }
     };
     handleSendHeartbeatSuccess = (e) => {
         let { questId: t, userStatus: n } = e;
-        if ((M.log(`~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: ${t})`), null != n.completedAt))
-            for (let e of (M.log(
+        if ((P.log(`~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: ${t})`), null != n.completedAt))
+            for (let e of (P.log(
                 `~ handleSendHeartbeatSuccess -> Quest ${t} completed, terminating any heartbeats for it`,
             ),
             Object.keys(this.heartbeats)))
@@ -125,12 +125,12 @@ class G extends a.A {
     };
     handleSendHeartbeatFailure = (e) => {
         let { questId: t } = e;
-        M.log(`~ handleSendHeartbeatFailure -> Heartbeat failed for questId: ${t}`);
+        P.log(`~ handleSendHeartbeatFailure -> Heartbeat failed for questId: ${t}`);
     };
     syncHeartbeats(e, t, n) {
         for (let i of ("VOICE_STATE_UPDATES" !== t &&
             "PASSIVE_UPDATE_V2" !== t &&
-            M.log(`~ syncHeartbeats -> syncing heartbeats for taskTypes: ${e.join(", ")} (triggered by: ${t})`),
+            P.log(`~ syncHeartbeats -> syncing heartbeats for taskTypes: ${e.join(", ")} (triggered by: ${t})`),
         e)) {
             let e = this.heartbeats[i],
                 t = this.getActivelyProgressingQuests(i);
@@ -156,7 +156,7 @@ class G extends a.A {
             t = d.Ay.getRunningGames(),
             n = d.Ay.getRunningNonGames(),
             i = T.A.quests;
-        M.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
+        P.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
         let r = {};
         for (let e of t) {
             if (e.isLauncher) continue;
@@ -174,7 +174,7 @@ class G extends a.A {
                 a = (0, o.Ic)(n.exePath);
             for (let r of i.values()) {
                 let i = (0, R.pU)(r);
-                if (!P(r) || null == i) continue;
+                if (!M(r) || null == i) continue;
                 let s = i.find((e) => e === t);
                 if (null != s)
                     e.set(r.id, {
@@ -194,7 +194,7 @@ class G extends a.A {
             }
         }
         return (
-            M.log(
+            P.log(
                 "~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ",
                 Array.from(e.keys()),
             ),
@@ -207,15 +207,15 @@ class G extends a.A {
         if (null == t || 2 > h.Ay.countVoiceStatesForChannel(t.channelId)) return e;
         let n = E.A.getStreamerActiveStreamMetadata();
         if (null == n) return e;
-        M.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
+        P.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
         let i = n.id;
         if (null == i) return e;
         for (let t of T.A.quests.values()) {
             let n = (0, R.a2)(t);
-            P(t) && null != n && n === i && e.set(t.id, { applicationId: i });
+            M(t) && null != n && n === i && e.set(t.id, { applicationId: i });
         }
         return (
-            M.log(
+            P.log(
                 "~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ",
                 Array.from(e.keys()),
             ),
@@ -229,7 +229,7 @@ class G extends a.A {
             i = new Set(t.keys());
         if (
             ((0, D.x1)(n) && i.add(n.applicationId),
-            M.log("~ getActivelyProgressingActivityQuestIds -> Running activity applicationIds: ", Array.from(i)),
+            P.log("~ getActivelyProgressingActivityQuestIds -> Running activity applicationIds: ", Array.from(i)),
             0 === i.size)
         )
             return e;
@@ -237,11 +237,11 @@ class G extends a.A {
         for (let t of i)
             for (let n of r.values()) {
                 let i = (0, R.vS)(n);
-                P(n) && null != i && i === t && e.set(n.id, { applicationId: t });
+                M(n) && null != i && i === t && e.set(n.id, { applicationId: t });
             }
-        for (let t of r.values()) P(t) && (0, L._e)(t) && e.set(t.id, { applicationId: y.ej });
+        for (let t of r.values()) M(t) && (0, L._e)(t) && e.set(t.id, { applicationId: y.ej });
         return (
-            M.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
+            P.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e
         );
     }

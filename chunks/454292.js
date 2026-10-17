@@ -1,5 +1,5 @@
-n.d(i, { A: () => e });
-function e(t, i, n) {
+n.d(i, { A: () => r });
+function r(t, i, n) {
     return null == n
         ? null
         : (t.getApplicationActivity(n) ??

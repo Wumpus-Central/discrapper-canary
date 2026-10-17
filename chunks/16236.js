@@ -49,7 +49,7 @@ function b(e) {
     }
     return t + 1;
 }
-function M(e) {
+function P(e) {
     for (let t in e) {
         let n = e[t];
         if (null == n) {
@@ -73,7 +73,7 @@ function M(e) {
         }
     }
 }
-function P(e, t) {
+function M(e, t) {
     let n = e[t];
     if (null == n || n.parentId === y.O8) return;
     let i = null != n.parentId ? e[n.parentId] : null;
@@ -83,7 +83,7 @@ function U(e) {
     return r().filter(e, (e) => e.type !== s.Ip.CATEGORY).length;
 }
 function w(e, t) {
-    if ((M(e), r().size(e) >= y.lj)) return { limit: y.lj, canUpsell: !1 };
+    if ((P(e), r().size(e) >= y.lj)) return { limit: y.lj, canUpsell: !1 };
     let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, g.o9)();
     return t === s.Ip.CATEGORY || U(e) < n ? null : { limit: n, canUpsell: i };
 }
@@ -141,8 +141,8 @@ async function V(e, t, n) {
                     position: b(e.favoriteChannels),
                     parentId: d,
                 })),
-                    M(e.favoriteChannels),
-                    P(e.favoriteChannels, a),
+                    P(e.favoriteChannels),
+                    M(e.favoriteChannels, a),
                     (o = !0),
                     (0, N.LO)(n, c?.type ?? null, U(e.favoriteChannels)));
             }
@@ -186,7 +186,7 @@ function j(e) {
                 if ((delete i.favoriteChannels[e], n.type === s.Ip.CATEGORY))
                     for (let t in i.favoriteChannels)
                         i.favoriteChannels[t].parentId === e && (i.favoriteChannels[t].parentId = y.O8);
-                (M(i.favoriteChannels),
+                (P(i.favoriteChannels),
                     t &&
                         (0, N.TX)(
                             n.type === s.Ip.CATEGORY ? null : (A.A.getChannel(e)?.type ?? null),
@@ -274,7 +274,7 @@ function Z(e) {
                     let e = n.id;
                     (null != n.position && (t.favoriteChannels[e].position = n.position),
                         void 0 !== n.parent_id &&
-                            ((t.favoriteChannels[e].parentId = n.parent_id ?? y.O8), P(t.favoriteChannels, e)));
+                            ((t.favoriteChannels[e].parentId = n.parent_id ?? y.O8), M(t.favoriteChannels, e)));
                 }
                 (0, N.P)();
             },

@@ -10,16 +10,16 @@ var l = n(477900),
     d = n(477782),
     A = n(793574),
     f = n(688810),
-    g = n(315246),
-    p = n(92240),
+    p = n(315246),
+    g = n(92240),
     m = n(679492),
     x = n(243949),
     _ = n(939496),
     I = n(17928),
     N = n(573648),
     E = n(541806),
-    h = n(261020),
-    T = n(83971),
+    T = n(261020),
+    h = n(83971),
     C = n(780964),
     S = n(766075),
     v = n(30370),
@@ -47,9 +47,9 @@ function V(t) {
             appContext: w,
             targetElementRef: k,
         } = t,
-        [W, B] = i.useState(!1),
+        [B, W] = i.useState(!1),
         { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        z = (0, p.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
+        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
         X = (0, m.NR)(),
         $ = i.useRef(null),
         F = X?.interactionPopoutTargetRef ?? $,
@@ -68,7 +68,7 @@ function V(t) {
                     let { user: e, entry: n, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([M.default], () => M.default.getCurrentUser()?.id === e.id),
                         o = (0, I.bG)([b.A], () => b.A.hasConnectedAccount());
-                    if ("recent" !== i || !(0, T.F3)(n)) return null;
+                    if ("recent" !== i || !(0, h.F3)(n)) return null;
                     if (!o)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-spotify",
@@ -88,7 +88,7 @@ function V(t) {
                               label: O.intl.string(O.t.rRffNz),
                               action: () => {
                                   (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, h.n)(U.M0.TRACK, c.external_id));
+                                      (0, T.n)(U.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
@@ -112,7 +112,7 @@ function V(t) {
                 (function (t) {
                     let { activity: e, entry: n, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([v.A], () => null != v.A.getAccount(null, y.fg2.CRUNCHYROLL));
-                    if (!(0, E.A)(e) && !(0, T.CU)(n)) return null;
+                    if (!(0, E.A)(e) && !(0, h.CU)(n)) return null;
                     if (!s)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-crunchyroll",
@@ -125,7 +125,7 @@ function V(t) {
                                     r?.());
                             },
                         });
-                    if ("recent" !== i || !(0, T.CU)(n)) return null;
+                    if ("recent" !== i || !(0, h.CU)(n)) return null;
                     let o = n.extra.url;
                     return null == o || "" === o
                         ? null
@@ -133,13 +133,13 @@ function V(t) {
                               id: "watch-on-crunchyroll",
                               label: O.intl.string(O.t.OpxQVH),
                               action: () => {
-                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, h.C)(o));
+                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, T.C)(o));
                               },
                           });
                 })(t),
                 (0, j.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: W, appContext: w });
+        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: B, appContext: w });
     return 0 === Q.length || n.bot
         ? null
         : (0, l.jsx)(c.Y, {
@@ -148,7 +148,7 @@ function V(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  (z({ action: "OPEN_MENU" }), B(!0));
+                  (z({ action: "OPEN_MENU" }), W(!0));
               },
               renderPopout: (t) => {
                   let { closePopout: e } = t;
@@ -156,9 +156,9 @@ function V(t) {
                       onClick: (t) => t.stopPropagation(),
                       children: (0, l.jsx)(u.W, {
                           "data-menu-migrated-auto": !0,
-                          navId: g.n,
+                          navId: p.n,
                           onClose: () => {
-                              (e(), B(!1));
+                              (e(), W(!1));
                           },
                           "aria-label": O.intl.string(O.t.PlAQz1),
                           onSelect: o,

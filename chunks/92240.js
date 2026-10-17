@@ -7,14 +7,14 @@ var l = n(582128),
     o = n(47675);
 function c(t) {
     let { user: e, display: n, activity: c, entry: u, stream: d, voiceChannelId: A, analyticsLocations: f } = t,
-        { context: g, trackUserProfileAction: p } = (0, s.NJ)(),
+        { context: p, trackUserProfileAction: g } = (0, s.NJ)(),
         { analyticsLocations: m } = (0, a.Ay)(),
         x = f ?? m,
         _ = (0, i.bG)([r.A], () => r.A.getUserOutbox(e.id));
     return (0, l.useCallback)(
         (t) => {
             let { action: e } = t;
-            (p({ action: e, analyticsLocations: x }),
+            (g({ action: e, analyticsLocations: x }),
                 (0, o.Tu)({
                     action: e,
                     display: n,
@@ -24,9 +24,9 @@ function c(t) {
                     outbox: _,
                     voiceChannelId: A,
                     analyticsLocations: x,
-                    ...g,
+                    ...p,
                 }));
         },
-        [p, g, n, c, d, u, _, A, x],
+        [g, p, n, c, d, u, _, A, x],
     );
 }

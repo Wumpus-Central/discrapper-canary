@@ -29,7 +29,7 @@ let y = O.eGj,
     D = {},
     v = new Set(),
     b = 0;
-function M(e) {
+function P(e) {
     let t = D[e ?? y];
     return {
         unread: !1,
@@ -42,11 +42,11 @@ function M(e) {
         sentinel: t?.sentinel ?? 0,
     };
 }
-function P(e) {
-    return (D[e ?? y] = D[e ?? y] ?? M(e));
+function M(e) {
+    return (D[e ?? y] = D[e ?? y] ?? P(e));
 }
 function U(e) {
-    let t = P(e);
+    let t = M(e);
     (t.sentinel++, b++);
 }
 function w(e, t, n) {
@@ -84,7 +84,7 @@ function k(e, t) {
     return t !== L.P.GUILD_EVENT ? n : !(N.Ay.isMuted(e) || N.Ay.isMuteScheduledEventsEnabled(e)) && n;
 }
 function F(e, t) {
-    let n = M(e);
+    let n = P(e);
     return ((n.mentionCounts = { ...t.mentionCounts }), (n.unreadByType = { ...t.unreadByType }), n);
 }
 function B(e) {
@@ -108,7 +108,7 @@ function H(e, t, n) {
 }
 function j(e, t) {
     let n = x(e),
-        i = P(n),
+        i = M(n),
         r = F(n, i),
         a = !1;
     if (
@@ -133,13 +133,13 @@ function j(e, t) {
 }
 function W(e, t) {
     if (null == e) return;
-    let n = P(e),
+    let n = M(e),
         i = F(e, n);
     return ((i.unreadByType[L.P.GUILD_EVENT] = k(e, t)), H(e, i, n));
 }
 function Y(e, t) {
     let n = x(e),
-        i = M(n);
+        i = P(n);
     if (null == n) {
         let e = I.A.getMutablePrivateChannels();
         for (let t in e) {
@@ -201,7 +201,7 @@ function Y(e, t) {
         !i.unreadByType[L.P.GUILD_EVENT] && k(n, L.P.GUILD_EVENT) && (i.unreadByType[L.P.GUILD_EVENT] = !0);
     }
     B(i);
-    let o = P(n);
+    let o = M(n);
     return (
         (i.unread !== o.unread ||
             i.highImportanceMentionCount !== o.highImportanceMentionCount ||
@@ -270,7 +270,7 @@ function et(e) {
         n = I.A.getChannel(t);
     if (null == n) return !1;
     if (null != n.guild_id) {
-        let e = P(n.guild_id);
+        let e = M(n.guild_id);
         if (
             ((n.isThread()
                 ? !u.A.hasJoined(n.id) || u.A.isMuted(n.id)
@@ -474,11 +474,11 @@ class eS extends T.A {
         return v.has(e);
     }
     getMentionCount(e) {
-        let t = P(e);
+        let t = M(e);
         return t.highImportanceMentionCount + t.lowImportanceMentionCount;
     }
     getIsMentionLowImportance(e) {
-        return 0 === P(e).highImportanceMentionCount;
+        return 0 === M(e).highImportanceMentionCount;
     }
     getGuildHasUnreadIgnoreMuted(e) {
         let t = I.A.getMutableGuildChannelsForGuild(e);
@@ -527,7 +527,7 @@ class eS extends T.A {
         return null == n || n.isMentionLowImportance ? 0 : n.count;
     }
     getGuildChangeSentinel(e) {
-        return P(e).sentinel;
+        return M(e).sentinel;
     }
 }
 let eN = new eS();

@@ -28,8 +28,8 @@ var i = n(477900),
     D = n(806931),
     v = n(165610),
     b = n(155819);
-let M = { [L.o1q.VIDEO]: g.A, [L.o1q.ACTIVITY]: u.A, [L.o1q.FRAME]: h.A },
-    P = { minWidth: D.mn[D.R8.VIDEO], maxWidth: D.cF[D.R8.VIDEO] },
+let P = { [L.o1q.VIDEO]: g.A, [L.o1q.ACTIVITY]: u.A, [L.o1q.FRAME]: h.A },
+    M = { minWidth: D.mn[D.R8.VIDEO], maxWidth: D.cF[D.R8.VIDEO] },
     U = [];
 class w extends r.PureComponent {
     render() {
@@ -55,7 +55,7 @@ class w extends r.PureComponent {
         return (0, i.jsxs)(I.ic, {
             children: [
                 (0, i.jsx)(f.A, {
-                    pictureInPictureComponents: M,
+                    pictureInPictureComponents: P,
                     selectedPIPWindow: e,
                     pipWindows: t,
                     pipWidth: n,
@@ -66,7 +66,7 @@ class w extends r.PureComponent {
                     onWindowResize: this.handleWindowResize,
                     appContext: l,
                     roundCorners: o,
-                    resizeConfig: P,
+                    resizeConfig: M,
                     getDockedRectPositionY: d,
                 }),
                 (0, i.jsx)(I.Md, { className: !u && null != _ && E && T < 550 ? b.ah : void 0 }),
@@ -92,20 +92,20 @@ let G = a.Ay.connectStores([T.A, l.Ay, O.A, S.A, C.Ay, N.A, _.A, m.Ay, A.A], (e)
         I = h && f === y.Gd.PANEL,
         g = null != s && null != u && _.A.getSelectedParticipant(u)?.type === D.lp.ACTIVITY,
         b = (0, v.ny)(A.A.getMainFrame()),
-        M = b?.data.layoutMode === v.y0.FOCUSED,
-        P = null != n,
-        w = P ? T.A.getWindow(n) : null,
-        G = !!P && T.A.isWindowFullScreen(n),
+        P = b?.data.layoutMode === v.y0.FOCUSED,
+        M = null != n,
+        w = M ? T.A.getWindow(n) : null,
+        G = !!M && T.A.isWindowFullScreen(n),
         x = O.A.windowSize();
-    P && (x = null == w ? x : { width: w.innerWidth, height: w.innerHeight });
-    let k = P ? L.BRT.POPOUT : L.BRT.APP;
+    M && (x = null == w ? x : { width: w.innerWidth, height: w.innerHeight });
+    let k = M ? L.BRT.POPOUT : L.BRT.APP;
     t =
-        (null != s && a) || (P && h) || (P && null != b)
+        (null != s && a) || (M && h) || (M && null != b)
             ? null
-            : P || !r || h || null != b
+            : M || !r || h || null != b
               ? null != s && I
                   ? (N.A.pipActivityWindow ?? N.A.pipVideoWindow)
-                  : null != b && M
+                  : null != b && P
                     ? (N.A.pipFrameWindow ?? N.A.pipVideoWindow ?? N.A.pipActivityWindow)
                     : (N.A.pipVideoWindow ?? N.A.pipActivityWindow ?? N.A.pipFrameWindow)
               : null;
@@ -129,12 +129,12 @@ let G = a.Ay.connectStores([T.A, l.Ay, O.A, S.A, C.Ay, N.A, _.A, m.Ay, A.A], (e)
         maxY: x.height,
         dockedRect: N.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {
-            return P && (0, p.q)({ withTitleBar: i, isFullScreen: G }) ? e - (0, E.LI)({ isPopoutWindow: P }) : e;
+            return M && (0, p.q)({ withTitleBar: i, isFullScreen: G }) ? e - (0, E.LI)({ isPopoutWindow: M }) : e;
         },
         appContext: k,
         roundCorners: !X,
         windowSize: x,
-        inPopoutWindow: P,
+        inPopoutWindow: M,
         activityPIPWindow: H,
         chatOpen: $,
         callChatSidebarWidth: W,

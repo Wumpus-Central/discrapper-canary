@@ -33,8 +33,8 @@ var y = n(626584),
     D = n(444431),
     v = n(655087),
     b = n(680725),
-    M = n(487329),
-    P = n(451988),
+    P = n(487329),
+    M = n(451988),
     U =
         (((i = {}).RequestedSSRCsUpdate = "requested-ssrcs-update"),
         (i.RequestedStreamsUpdate = "requested-streams-update"),
@@ -54,7 +54,7 @@ class w extends m.A {
         (super(),
             (this.logger = new y.A("GoLiveQualityManager")),
             this.logger.enableNativeLogger(!0),
-            (this.delayedCall = new P.J_(500, () => {
+            (this.delayedCall = new M.J_(500, () => {
                 this.update();
             })));
     }
@@ -448,8 +448,8 @@ let eD = (0, x.mj)({
 });
 var ev = n(111162),
     eb = n(927813);
-function eM() {}
-var eP =
+function eP() {}
+var eM =
     (((r = {})[(r.AUTHENTICATION_FAILED = 4004)] = "AUTHENTICATION_FAILED"),
     (r[(r.INVALID_SESSION = 4006)] = "INVALID_SESSION"),
     (r[(r.SERVER_NOT_FOUND = 4011)] = "SERVER_NOT_FOUND"),
@@ -846,7 +846,7 @@ class eV extends m.A {
         (this.stopHeartbeater(), this.clearHelloTimeout());
         let t = this.webSocket;
         ((this.webSocket = null),
-            null != t && ((t.onopen = eM), (t.onmessage = eM), (t.onerror = eM), (t.onclose = eM), e?.(t)),
+            null != t && ((t.onopen = eP), (t.onmessage = eP), (t.onerror = eP), (t.onclose = eP), e?.(t)),
             this.backoff.cancel());
     }
     cleanupState() {
@@ -1086,8 +1086,8 @@ class e0 extends m.A {
             (this.isStageChannel = t),
             (this.supportsSeamless = n),
             (this.ladder = i),
-            (this.delayedCall = new P.J_(100, this.update)),
-            (this.offscreenTimeout = new P.Ep()),
+            (this.delayedCall = new M.J_(100, this.update)),
+            (this.offscreenTimeout = new M.Ep()),
             eK.X.on(eK.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
     getWantsLevel() {
@@ -1865,8 +1865,8 @@ class ti extends m.A {
                 keyframes: D,
                 passthroughCount: v,
                 cryptorSuccessCount: b,
-                cryptorFailureCount: M,
-                cryptorDuration: P,
+                cryptorFailureCount: P,
+                cryptorDuration: M,
                 cryptorAttempts: U,
                 cryptorMissingKeyCount: w,
                 cryptorInvalidNonceCount: G,
@@ -1876,7 +1876,7 @@ class ti extends m.A {
                 qualityFrameDrops: B,
                 qualitySizeMismatches: V,
             } = e.aggregatedProperties,
-            H = (M ?? 0) - (e.cryptorFailureBeforeSuccessCount ?? 0);
+            H = (P ?? 0) - (e.cryptorFailureBeforeSuccessCount ?? 0);
         return (
             e instanceof te.ET
                 ? ((u.sender_freeze_count = C),
@@ -1908,8 +1908,8 @@ class ti extends m.A {
                 num_keyframes: D,
                 cryptor_passthrough_count: v,
                 cryptor_success_count: b,
-                cryptor_failure_count: M,
-                cryptor_duration: P,
+                cryptor_failure_count: P,
+                cryptor_duration: M,
                 cryptor_attempts: U,
                 cryptor_missing_key_count: w,
                 cryptor_invalid_nonce_count: G,
@@ -3502,7 +3502,7 @@ class tg extends m.A {
         let r = "Force Close" !== i;
         if (r) {
             let e =
-                n === eP.REPEATED_MLS_INVALID_MESSAGES || n === eP.DAVE_DOWNGRADE_REFUSED
+                n === eM.REPEATED_MLS_INVALID_MESSAGES || n === eM.DAVE_DOWNGRADE_REFUSED
                     ? this._scheduleMLSFailureReconnect()
                     : this._scheduleReconnect();
             this.logger.warn(`Disconnect was not clean! reason=${i}. Reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
@@ -3989,10 +3989,10 @@ class tg extends m.A {
                     mediaSessionId: this._mediaSessionId ?? void 0,
                     streamKey: this.getMediaStreamKey(),
                 };
-                (0, M.QW)(
+                (0, P.QW)(
                     "encode" === e.mode
-                        ? { type: M.iy.VIDEO_ENCODE_ERROR, ...t, videoEncoder: e.implName }
-                        : { type: M.iy.VIDEO_DECODE_ERROR, ...t, videoDecoder: e.implName },
+                        ? { type: P.iy.VIDEO_ENCODE_ERROR, ...t, videoEncoder: e.implName }
+                        : { type: P.iy.VIDEO_DECODE_ERROR, ...t, videoDecoder: e.implName },
                 );
             }),
             u.on(g.yq.Error, (e) => {

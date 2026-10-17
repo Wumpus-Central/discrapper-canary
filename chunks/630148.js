@@ -46,10 +46,10 @@ function b() {
         document.documentElement.removeEventListener("mouseenter", D),
         document.documentElement.removeEventListener("mouseleave", v));
 }
-function M(e) {
+function P(e) {
     N !== e && ((N = e), l.A?.window?.setFrameRate?.(null, e));
 }
-function P(e) {
+function M(e) {
     let t = c.A.isWindowFullyInitialized(h.f) ? (c.A.getWindow(h.f) ?? null) : null;
     (t !== O && ((O = t), (C = 0)), null != t && C !== e && ((C = e), l.A?.window?.setFrameRate?.(h.f, e)));
 }
@@ -62,8 +62,8 @@ function U() {
               document.documentElement.addEventListener("mouseleave", v),
               y(document.documentElement.matches(":hover")))
             : (b(), y(!1))),
-        M((0, A.A)()),
-        P((0, A.j)()));
+        P((0, A.A)()),
+        M((0, A.j)()));
     let t = E.A.isThrottling,
         n = {},
         i = [];
@@ -77,7 +77,7 @@ function w() {
     r.h.isDispatching() ? S.start(0, U, !1) : U();
 }
 function G() {
-    (b(), m.stop(), S.stop(), M(0), P(0));
+    (b(), m.stop(), S.stop(), P(0), M(0));
 }
 class x extends s.A {
     actions = {

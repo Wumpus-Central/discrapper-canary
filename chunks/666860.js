@@ -1,7 +1,7 @@
 n.d(t, {
     dI: () => D,
-    JK: () => P,
-    g4: () => M,
+    JK: () => M,
+    g4: () => P,
     Ay: () => w,
     QS: () => v,
     H$: () => L,
@@ -99,7 +99,7 @@ function v(e) {
         channel_type: n.type,
         guild_id: n.getGuildId(),
         media_session_id: r,
-        ...P(n.getGuildId(), n.id, i),
+        ...M(n.getGuildId(), n.id, i),
         ...{
             game_name: null != (t = C.Ay.getCurrentGameForAnalytics()) ? t.name : null,
             game_id: null != t ? t.id : null,
@@ -122,12 +122,12 @@ function b(e) {
         };
     S.default.track(e, d, { flush: n });
 }
-function M(e) {
+function P(e) {
     let t = 0;
     for (let n of e) p.A.isFriend(n) && t++;
     return { friendCount: t, nonFriendCount: e.length - t };
 }
-function P(e, t, n) {
+function M(e, t, n) {
     let i = { voice_state_count: 0, video_stream_count: 0, video_enabled: n };
     return (
         r()(g.A.getVoiceStates(e))
@@ -150,4 +150,4 @@ function U(e, t) {
         n
     );
 }
-let w = { trackWithMetadata: b, getVoiceStateMetadata: P };
+let w = { trackWithMetadata: b, getVoiceStateMetadata: M };

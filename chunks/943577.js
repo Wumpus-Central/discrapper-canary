@@ -28,8 +28,8 @@ var i = n(435558),
     D = n(629016),
     v = n(71393),
     b = n(576705),
-    M = n(290863),
-    P = n(994500),
+    P = n(290863),
+    M = n(994500),
     U = n(287809),
     w = n(977997),
     G = n(403362),
@@ -44,7 +44,7 @@ let F = !1,
     Y = new Set(),
     K = new Set();
 function $() {
-    let e = P.A.getFriendIDs();
+    let e = M.A.getFriendIDs();
     return new Set(
         y.A.hasConsented(x.YAq.PERSONALIZATION)
             ? [
@@ -57,7 +57,7 @@ function $() {
     );
 }
 function z(e) {
-    return M.A.findActivity(e, (e) => e.type !== x.$pd.CUSTOM_STATUS);
+    return P.A.findActivity(e, (e) => e.type !== x.$pd.CUSTOM_STATUS);
 }
 function X(e) {
     let t = j.get(e);
@@ -85,7 +85,7 @@ function J(e) {
         : null;
 }
 function ee(e) {
-    return P.A.isFriend(e.id);
+    return M.A.isFriend(e.id);
 }
 function et(e, t, n) {
     var i;
@@ -97,7 +97,7 @@ function et(e, t, n) {
         A = u.filter((t) => e.has(t.id)),
         I = !1,
         y = [],
-        P = new Set(),
+        M = new Set(),
         x = !1,
         k = [];
     for (let e of u) {
@@ -144,7 +144,7 @@ function et(e, t, n) {
             )
                 continue;
         }
-        if (!T.IS(i) || null == c || P.has(c.id)) continue;
+        if (!T.IS(i) || null == c || M.has(c.id)) continue;
         let _ = null != i ? Q(i) : null;
         (null == _ || _.id !== c.id) && (i = null);
         let A = [];
@@ -160,7 +160,7 @@ function et(e, t, n) {
                       return null != n && n.id === c.id;
                   })),
             (A = r().orderBy(A, [ee], ["desc"])).length !== u.length && (I = !0),
-            P.add(c.id),
+            M.add(c.id),
             y.push({
                 application: c,
                 activity: i,
@@ -208,7 +208,7 @@ function et(e, t, n) {
         id: n,
         voiceChannels: B,
         isSpotifyActivity: x,
-        priorityMembers: A.map((e) => ({ user: e, status: M.A.getStatus(e.id) })),
+        priorityMembers: A.map((e) => ({ user: e, status: P.A.getStatus(e.id) })),
         partiedMembers: u,
         showPlayingMembers: I,
         guildContext: a,
@@ -284,7 +284,7 @@ let er = r().throttle(() => {
                     )
                     .value()
                     .filter((e) => {
-                        let t = e.partiedMembers.some((e) => P.A.isBlockedOrIgnored(e.id)),
+                        let t = e.partiedMembers.some((e) => M.A.isBlockedOrIgnored(e.id)),
                             n =
                                 0 !== e.voiceChannels.length &&
                                 e.voiceChannels.length > 0 &&
@@ -316,8 +316,8 @@ function ea() {
 class es extends a.Ay.Store {
     static displayName = "NowPlayingViewStore";
     initialize() {
-        (this.syncWith([U.default, h.A, M.A, D.A, w.A, R.A, P.A, y.A, m.A], ea),
-            this.waitFor(h.A, R.A, L.A, y.A, D.A, I.A, v.A, b.A, M.A, P.A, m.A, U.default, w.A));
+        (this.syncWith([U.default, h.A, P.A, D.A, w.A, R.A, M.A, y.A, m.A], ea),
+            this.waitFor(h.A, R.A, L.A, y.A, D.A, I.A, v.A, b.A, P.A, M.A, m.A, U.default, w.A));
     }
     get currentActivityParties() {
         return V;

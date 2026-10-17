@@ -29,7 +29,7 @@ var o = n(503698),
     D = n(625494),
     v = n(652215),
     b = n(946990);
-function M() {
+function P() {
     return (0, i.jsxs)(
         "div",
         {
@@ -39,7 +39,7 @@ function M() {
         "symbol",
     );
 }
-class P extends r.PureComponent {
+class M extends r.PureComponent {
     _renderSecondaryTimeout = null;
     _doneTimeout = null;
     state = {
@@ -145,7 +145,7 @@ class U extends r.PureComponent {
     removeExplosion = (e) => {
         let t = this.children,
             n = t.findIndex((t) => {
-                if (t.type !== P) return !1;
+                if (t.type !== M) return !1;
                 let n = t.props;
                 return null != n.componentId && n.componentId === e;
             });
@@ -159,7 +159,7 @@ class U extends r.PureComponent {
             let r = `expl-${this.state.explosions}`;
             (e.push(
                 (0, i.jsx)(
-                    P,
+                    M,
                     {
                         componentId: r,
                         top: E().random(n - 100, n + 100, !1),
@@ -174,7 +174,7 @@ class U extends r.PureComponent {
         } else this.setTimeout(this.addSymbol, 750);
     };
     addSymbol = () => {
-        ((this.children = [(0, i.jsx)(M, {}, "symbol")]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3));
+        ((this.children = [(0, i.jsx)(P, {}, "symbol")]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3));
     };
     delayedClose = () => {
         this.props.handleDemonClose();

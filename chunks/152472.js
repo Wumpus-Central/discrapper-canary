@@ -10,8 +10,8 @@ var a = n(477900),
     o = n(688810),
     h = n(321191),
     p = n(808247),
-    A = n(594832),
-    f = n(240248),
+    f = n(594832),
+    A = n(240248),
     g = n(105292),
     m = n(49999);
 function y(t) {
@@ -29,9 +29,9 @@ function y(t) {
                     onError: s,
                     skipAddAnnouncement: u,
                 } = t,
-                { analyticsLocations: m } = (0, o.Ay)((0, f.uJ)(a) ? [] : [a]),
+                { analyticsLocations: m } = (0, o.Ay)((0, A.uJ)(a) ? [] : [a]),
                 y = (0, d.bG)([h.A], () => h.A.getFirstWishlistId(e)),
-                R = (0, A.rJ)(y, n),
+                R = (0, f.rJ)(y, n),
                 [I, P] = i.useState(null),
                 [T, v] = i.useState(!1),
                 E = null !== I ? I : R;

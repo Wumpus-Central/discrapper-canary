@@ -23,10 +23,10 @@ let s = {
             let { projectId: n } = t;
             r.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: n, id: e.id });
         },
-        app_removed: y,
-        bot_removed: y,
-        preview_bot_removed: y,
-        app_channel_deleted: y,
+        app_removed: T,
+        bot_removed: T,
+        preview_bot_removed: T,
+        app_channel_deleted: T,
         side_reply(e, t) {
             let { projectId: n } = t;
             r.h.dispatch({
@@ -253,18 +253,18 @@ function C(e, t) {
     let { projectId: n } = t;
     (h(n, e),
         (0, a.Hy)(n, {
-            ...T[e.kind],
+            ...y[e.kind],
             message: e.message,
             details: "build_error" === e.kind ? e.stderr_tail : void 0,
             turnId: e.turn_id,
         }));
 }
-function y(e, t) {
+function T(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
         "app_channel_deleted" !== e.type && (0, i.GO)(n));
 }
-let T = {
+let y = {
         build_error: { location: "build", code: a.xf.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: a.xf.HEALTHCHECK_FAILED },
         error: { location: "agent", code: a.xf.AGENT_ERROR },

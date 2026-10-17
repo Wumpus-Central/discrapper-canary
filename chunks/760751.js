@@ -28,8 +28,8 @@ let T = "GameStoreReportedGames",
     D = !1,
     v = "",
     b = [],
-    M = [],
-    P = new Map(),
+    P = [],
+    M = new Map(),
     U = E.A.Millis.HOUR,
     w = new Set(),
     G = new Set(),
@@ -82,7 +82,7 @@ class Y extends r.Ay.PersistedStore {
             (null != e.detectableGamesEtag && (O = e.detectableGamesEtag),
             null != e.blocklistEtag && (v = e.blocklistEtag),
             null != e.blocklistExecutables && (b = e.blocklistExecutables),
-            null != e.blocklistPatterns && (M = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
+            null != e.blocklistPatterns && (P = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
             e.detectableGames?.forEach((e) => W(e)));
     }
     getState() {
@@ -92,7 +92,7 @@ class Y extends r.Ay.PersistedStore {
                   detectableGames: g.values(),
                   blocklistEtag: v,
                   blocklistExecutables: b,
-                  blocklistPatterns: M.map((e) => e.source),
+                  blocklistPatterns: P.map((e) => e.source),
               }
             : {
                   detectableGamesEtag: "",
@@ -214,7 +214,7 @@ class Y extends r.Ay.PersistedStore {
         }
         let n = b.find((e) => t.includes(e));
         if (null != n) return (this.maybeTrackBlock(e, "explicit_list", n), !0);
-        let i = M.find((t) => t.test(e.exePath));
+        let i = P.find((t) => t.test(e.exePath));
         return null != i && (this.maybeTrackBlock(e, "pattern_match", i.source), !0);
     }
     getBlockReason(e) {
@@ -222,7 +222,7 @@ class Y extends r.Ay.PersistedStore {
         let t = e.exePath.toLowerCase(),
             n = b.find((e) => t.includes(e));
         if (null != n) return { matchedExe: n, matchedPattern: null };
-        let i = M.find((t) => t.test(e.exePath));
+        let i = P.find((t) => t.test(e.exePath));
         return null != i ? { matchedExe: null, matchedPattern: i.source } : null;
     }
     maybeTrackApplicationLookupFallthrough(e, t, n) {
@@ -251,10 +251,10 @@ class Y extends r.Ay.PersistedStore {
     }
     maybeTrackBlock(e, t, n) {
         let i = V(e.exePath) ?? "unknown",
-            r = P.get(i),
+            r = M.get(i),
             a = Date.now();
         (null == r || a - r >= U) &&
-            (P.set(i, a),
+            (M.set(i, a),
             _.default.track(I.HAw.GAME_BLOCKLIST_TRIGGERED, {
                 block_type: t,
                 matched_entry: n,
@@ -308,7 +308,7 @@ let K = new Y(s.h, {
     },
     GAMES_BLOCKLIST_UPDATE: function (e) {
         let { executables: t, patterns: n, etag: i } = e;
-        (null != i && v !== i && ((v = i), (b = t.map((e) => e.toLowerCase())), (M = n.map((e) => RegExp(e, "i")))),
+        (null != i && v !== i && ((v = i), (b = t.map((e) => e.toLowerCase())), (P = n.map((e) => RegExp(e, "i")))),
             (D = !1),
             (y = Date.now()));
     },

@@ -1,6 +1,6 @@
-r.d(n, { A: () => l });
-var t = r(91242),
-    i = r(901092);
-function l(e) {
-    if ((0, i.A)(e)) return t.A.getFrameByEmbeddedContext(e.context, e.source.iframeId);
+n.d(t, { A: () => a });
+var i = n(91242),
+    r = n(901092);
+function a(e) {
+    if ((0, r.A)(e)) return i.A.getFrameByEmbeddedContext(e.context, e.source.iframeId);
 }

@@ -202,16 +202,16 @@ function b(e, t) {
             }
         });
 }
-function M(e) {
+function P(e) {
     (b(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
             return b(n.content, e.channel_id);
         }));
 }
-class P extends r.A {
+class M extends r.A {
     constructor() {
-        (super(), (0, p.A)(this, M));
+        (super(), (0, p.A)(this, P));
     }
 }
-let U = new P();
+let U = new M();

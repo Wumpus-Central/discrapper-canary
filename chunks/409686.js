@@ -28,8 +28,8 @@ let N = "recentMentionFilterSettings",
     D = s.w.get(N, { guildFilter: E.KE7.ALL_SERVERS, everyoneFilter: !0, roleFilter: !0 }),
     v = !1,
     b = 0,
-    M = !1;
-function P(e) {
+    P = !1;
+function M(e) {
     let { addedMessages: t, deletedMessages: n } = e;
     (null != t &&
         t.forEach((e) => {
@@ -90,7 +90,7 @@ function G(e) {
     let a = !D.everyoneFilter,
         s = !D.roleFilter;
     return (0, u.Ay)({ message: e, userId: r, suppressEveryone: a, suppressRoles: s })
-        ? (M &&
+        ? (P &&
               p.Ay.ackMessageId(i.id) !== e.id &&
               (0, u.Ay)({
                   message: e,
@@ -98,14 +98,14 @@ function G(e) {
                   suppressEveryone: g.Ay.isSuppressEveryoneEnabled(i.getGuildId()),
                   suppressRoles: g.Ay.isSuppressRolesEnabled(i.getGuildId()),
               }) &&
-              (M = !1),
+              (P = !1),
           e)
         : null;
 }
 function x(e) {
     if (null == R[e]) return !1;
     (delete R[e],
-        P({
+        M({
             deletedMessages: r().filter(C, (t) => {
                 let { id: n } = t;
                 return n === e;
@@ -141,16 +141,16 @@ function F(e) {
         0 === C.length && (v = !1));
 }
 function B() {
-    ((C = []), (R = {}), (v = !1), (M = !1), (O = {}));
+    ((C = []), (R = {}), (v = !1), (P = !1), (O = {}));
 }
 function V() {
-    (P({ deletedMessages: r().filter(C, (e) => T.A.isBlockedOrIgnoredForMessage(e)) }),
+    (M({ deletedMessages: r().filter(C, (e) => T.A.isBlockedOrIgnoredForMessage(e)) }),
         (C = C.filter((e) => !T.A.isBlockedOrIgnoredForMessage(e))));
 }
 function H(e) {
     let { channel: t } = e,
         n = [];
-    ((C = r().filter(C, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), P({ deletedMessages: n }));
+    ((C = r().filter(C, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), M({ deletedMessages: n }));
 }
 class j extends a.Ay.Store {
     static displayName = "RecentMentionsStore";
@@ -188,7 +188,7 @@ class j extends a.Ay.Store {
         return D.roleFilter;
     }
     get mentionsAreStale() {
-        return M;
+        return P;
     }
     get mentionCountByChannel() {
         return O;
@@ -205,7 +205,7 @@ let W = new j(o.h, {
     LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
         let { hasMoreAfter: t, messages: n, isAfter: i } = e,
             a = r().map(n, U);
-        (P({ addedMessages: a }),
+        (M({ addedMessages: a }),
             i ? (C = C.concat(a)) : ((C = a), (R = {})),
             r().forEach(a, (e) => {
                 R[e.id] = !0;
@@ -224,7 +224,7 @@ let W = new j(o.h, {
     },
     TRUNCATE_MENTIONS: function (e) {
         let { size: t } = e;
-        P({ deletedMessages: C.slice(t) });
+        M({ deletedMessages: C.slice(t) });
         for (let e = t; e < C.length; ++e) delete R[C[e].id];
         C.length > (C = C.slice(0, t)).length && (y = !0);
     },
@@ -240,7 +240,7 @@ let W = new j(o.h, {
             let i = f.A.getChannel(e.channel_id);
             return (null != i && i.getGuildId() !== t.id) || (delete R[e.id], n.push(e), !1);
         })),
-            P({ deletedMessages: n }));
+            M({ deletedMessages: n }));
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e,
@@ -249,7 +249,7 @@ let W = new j(o.h, {
             return !1;
         let r = G(n, t);
         if (null == r) return !1;
-        ((C = C.slice()).unshift(r), (R[r.id] = !0), P({ addedMessages: [r] }));
+        ((C = C.slice()).unshift(r), (R[r.id] = !0), M({ addedMessages: [r] }));
     },
     MESSAGE_UPDATE: function (e) {
         let t = e.message.id;
@@ -273,6 +273,6 @@ let W = new j(o.h, {
     RELATIONSHIP_REMOVE: V,
     RELATIONSHIP_UPDATE: V,
     SET_RECENT_MENTIONS_STALE: function (e) {
-        M = !0;
+        P = !0;
     },
 });

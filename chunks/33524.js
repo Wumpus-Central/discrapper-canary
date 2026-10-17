@@ -57,10 +57,10 @@ function y() {}
 function D() {}
 function v() {}
 function b() {}
-function M() {
+function P() {
     return [];
 }
-function P(e) {}
+function M(e) {}
 function U(e) {}
 function w(e) {}
 (n.r(t),
@@ -74,12 +74,12 @@ function w(e) {}
         coerceSidebarRoute: () => g,
         coerceTabsRoute: () => S,
         getCurrentNavigationRouteName: () => v,
-        getCurrentRouteParents: () => M,
+        getCurrentRouteParents: () => P,
         getICYMIRouteIfActive: () => U,
         getOpenModalKey: () => y,
         getSelectedChannelFromRoute: () => E,
         getSelectedGuildFromRoute: () => _,
-        getTabsRouteIfActive: () => P,
+        getTabsRouteIfActive: () => M,
         isModalOpen: () => R,
         modalRoutesAboveMain: () => l,
         navigateToChannel: () => i,

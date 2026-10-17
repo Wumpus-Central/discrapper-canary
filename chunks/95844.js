@@ -28,8 +28,8 @@ var i = n(858899),
     D = n(572164),
     v = n(696016),
     b = n(652215),
-    M = n(325278);
-class P extends m.A {
+    P = n(325278);
+class M extends m.A {
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
         RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -75,7 +75,7 @@ class P extends m.A {
         let { userId: t, channelId: n, guildId: i } = e;
         (this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t));
         let r = O.A.getRTCConnection(
-            u._z({ streamType: null != i ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: n, guildId: i }),
+            u._z({ streamType: null != i ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: n, guildId: i }),
         );
         null != r && this.applyStreamRecording(t, r);
     }
@@ -113,7 +113,7 @@ class P extends m.A {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
         if (n !== T.x.STREAM || !(0, p.ri)(f.Ay)) return;
         let a = O.A.getRTCConnection(
-            u._z({ streamType: null != r ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: i, guildId: r }),
+            u._z({ streamType: null != r ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
         null != a && this.applyStreamRecording(t, a);
     }
@@ -192,7 +192,7 @@ var x = n(201538),
     B = n(227628),
     V = n(468550),
     H = n(105292);
-class j extends P {
+class j extends M {
     constructor() {
         (super(),
             Object.assign(this.actions, {

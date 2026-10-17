@@ -41,8 +41,8 @@ var i = n(562708),
     D = n(625180),
     v = n(25451),
     b = n(451909),
-    M = n(195880),
-    P = n(567249),
+    P = n(195880),
+    M = n(567249),
     U = n(192552),
     w = n(280450),
     G = n(734057),
@@ -98,9 +98,9 @@ async function ed(e) {
     if (null == C && !N?.isPrivate()) return !1;
     let R = m.A.getApplication(i),
         b = null != R && (0, v.X)(R),
-        U = (0, M.m)();
+        U = (0, P.m)();
     try {
-        if (P.A.getWindowOpen(ei.MLl.ACTIVITY_POPOUT)) {
+        if (M.A.getWindowOpen(ei.MLl.ACTIVITY_POPOUT)) {
             let { close: e } = n(574172);
             e(ei.MLl.ACTIVITY_POPOUT);
         }
@@ -479,7 +479,7 @@ async function eg(e, t) {
         return (
             o.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: (0, M.m)(),
+                nonce: (0, P.m)(),
                 applicationId: e,
                 channelId: t,
                 guildId: i,
