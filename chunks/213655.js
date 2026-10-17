@@ -41,7 +41,7 @@ function T(e) {
         position: "bottom",
         renderPopout: (e) => {
             let { closePopout: s } = e;
-            return (0, l.jsx)(R, { guilds: t, forMeGuildId: n, onNavigate: i, onClose: s });
+            return (0, l.jsx)(F, { guilds: t, forMeGuildId: n, onNavigate: i, onClose: s });
         },
         children: (e) => {
             let { onClick: t } = e;
@@ -53,7 +53,7 @@ function T(e) {
         },
     });
 }
-function R(e) {
+function F(e) {
     let { guilds: t, forMeGuildId: n, onNavigate: s, onClose: i } = e,
         r = M.intl.string(D.default.sFiGNz);
     return (0, l.jsxs)(w.W, {
@@ -101,7 +101,7 @@ function R(e) {
     });
 }
 n(321073);
-var F = n(683063),
+var R = n(683063),
     U = n(864970),
     _ = n(289873),
     P = n(683438),
@@ -209,7 +209,7 @@ function eu(e) {
                       line: i,
                   } = e;
                   return (0, l.jsx)(
-                      F.u,
+                      R.u,
                       {
                           asset: (0, l.jsx)(n, { size: 32, alt: "", ariaHidden: !0 }),
                           assetSize: 32,
@@ -350,6 +350,8 @@ function ef(e) {
                 "aria-label": d,
                 "aria-disabled": (t.guildId ?? n) == null,
                 "data-project-id": t.projectId,
+                onMouseEnter: () => (0, A.tf)(t.projectId),
+                onFocus: () => (0, A.tf)(t.projectId),
                 onClick: () => eg(t, n, i),
                 children: [
                     null == t.guild || t.notInServer

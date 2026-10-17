@@ -13,7 +13,7 @@ let i = {
     },
 };
 async function l(e, t) {
-    let [n, r] = await Promise.all([e, (0, s.d)(t)]),
+    let [n, r] = await Promise.all([e, (0, s.dv)(t)]),
         o = new URLSearchParams({ ticket: n.ticket });
     for (let e = 1; ; e++) {
         let t = await fetch(`${n.baseUrl}/agent/fork?${o}`, {
@@ -36,7 +36,7 @@ function a(e) {
 }
 async function c(e, t, n) {
     try {
-        let { ticket: r } = await (0, s.g)(n);
+        let { ticket: r } = await (0, s.gA)(n);
         e.sendUpstreamTicketAck(t, r);
     } catch (r) {
         let n = r?.status;

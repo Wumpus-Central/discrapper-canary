@@ -22,7 +22,7 @@ class u {
     }
     async connect() {
         let { projectId: e, sessionId: t, mode: n, maxFps: l, width: r } = this.options,
-            { ticket: a, baseUrl: i } = await (0, s.d)(e);
+            { ticket: a, baseUrl: i } = await (0, s.dv)(e);
         if (this.stopped) return;
         let o = new URL(`/agent/browser-stream/${encodeURIComponent(t)}`, i.replace(/^http/, "ws"));
         (o.searchParams.set("ticket", a),

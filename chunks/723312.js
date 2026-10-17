@@ -29,8 +29,8 @@ var r = n(158390),
     f = n(709753),
     _ = n(788493),
     g = n(223347),
-    E = n(392739),
-    S = n(463660),
+    S = n(392739),
+    E = n(463660),
     m = n(260498),
     O = n(371169),
     y = n(962998),
@@ -254,8 +254,8 @@ function G(e, t, n) {
     let r = t.pendingSends;
     for (let s of ((t.pendingSends = []), r)) (L(e, s), (0, d.Gu)(e, n));
 }
-let x = { ...a.m, ...d.NW, ...h.eI, ...f.x9, ..._.U, ...g.p, ...S.VY, ...y.qy, ...T.Rd, ...N.ow, ...b.WO, ...u.V5 },
-    W = {
+let x = { ...a.m, ...d.NW, ...h.eI, ...f.x9, ..._.U, ...g.p, ...E.VY, ...y.qy, ...T.Rd, ...N.ow, ...b.WO, ...u.V5 },
+    j = {
         app_build_request(e, t) {
             let { projectId: n } = t;
             null != e.app_build_request &&
@@ -268,7 +268,7 @@ let x = { ...a.m, ...d.NW, ...h.eI, ...f.x9, ..._.U, ...g.p, ...S.VY, ...y.qy, .
         },
         ...d.Un,
         ...h.d5,
-        ...S.uk,
+        ...E.uk,
         project_named(e, t) {
             let { projectId: n } = t,
                 r = m.Ay.getProject(n);
@@ -300,7 +300,7 @@ let x = { ...a.m, ...d.NW, ...h.eI, ...f.x9, ..._.U, ...g.p, ...S.VY, ...y.qy, .
         },
         ...y.rS,
     },
-    j = new Set([
+    W = new Set([
         "hello",
         "history",
         "capture_preview",
@@ -313,9 +313,9 @@ let x = { ...a.m, ...d.NW, ...h.eI, ...f.x9, ..._.U, ...g.p, ...S.VY, ...y.qy, .
         "host_approvals",
     ]);
 async function B(e, t) {
-    t.ws.close();
+    (t.ws.close(), t.helloSeen && (0, R.$Y)(e));
     try {
-        let { ticket: n, baseUrl: r } = await (0, R.d)(e);
+        let { ticket: n, baseUrl: r } = await (0, R.dv)(e);
         if (t.disposed) return;
         t.ws.open({
             url: r,
@@ -323,7 +323,7 @@ async function B(e, t) {
             templateId: t.warmTemplateId ?? void 0,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    if ((console.debug("[conjure] ws event", r.type), !j.has(r.type) && "open" !== P.get(t)))
+                    if ((console.debug("[conjure] ws event", r.type), !W.has(r.type) && "open" !== P.get(t)))
                         return void n.pendingEvents.push(r);
                     let s = { projectId: t, ws: n.ws };
                     switch (r.type) {
@@ -427,7 +427,7 @@ async function B(e, t) {
                                             o.h.dispatch({ type: "CONJURE_CHAT_INTERRUPTED", projectId: n }));
                                     return;
                                 }
-                                let r = W[e.kind];
+                                let r = j[e.kind];
                                 null != r ? r(e, t) : (0, d.OA)(n, e);
                             })(r, s);
                             return;
@@ -439,7 +439,7 @@ async function B(e, t) {
                 ((0, y.Mz)(e, "Connection closed before the publish result arrived"),
                 (0, T.Fc)(e),
                 (0, y.BC)(e, "Connection closed before the draft arrived"),
-                (0, E.RP)(e),
+                (0, S.RP)(e),
                 t.disposed)
                     ? I(e, "closed")
                     : t.helloSeen
@@ -528,7 +528,7 @@ function z(e) {
         (0, U.ng)(e),
         es(e),
         w.A.releasePreviewControl(e),
-        (0, E.RP)(e),
+        (0, S.RP)(e),
         I(e, "closed"),
         !0)
     );
@@ -662,7 +662,7 @@ let ea = new el(o.h, {
         if (!t) return !1;
     },
     LOGOUT: function () {
-        if (0 === v.size) return !1;
+        if (((0, A.j_)(), 0 === v.size)) return !1;
         ei();
     },
 });

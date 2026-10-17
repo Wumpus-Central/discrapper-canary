@@ -4,8 +4,8 @@ var a = i(477900),
     l = i(17928),
     s = i(189213),
     d = i(890497),
-    r = i(548118),
-    c = i(71393),
+    c = i(548118),
+    r = i(71393),
     o = i(711014),
     u = i(246338),
     g = i(858899),
@@ -13,14 +13,14 @@ var a = i(477900),
     f = i(723312),
     h = i(382541),
     v = i(371169),
-    m = i(525530),
-    C = i(248675),
+    C = i(525530),
+    m = i(248675),
     x = i(105292);
 let k = " (Remix)";
 async function y(e, t) {
     let i,
-        a = { ok: !1, message: x.intl.string(C.default.Cn8H0Y) },
-        n = (0, h.g)(e.id);
+        a = { ok: !1, message: x.intl.string(m.default.Cn8H0Y) },
+        n = (0, h.gA)(e.id);
     n.catch(() => void 0);
     try {
         var l;
@@ -32,29 +32,28 @@ async function y(e, t) {
     } catch {
         return a;
     }
-    let s = await (0, m.Io)(n, i).catch(() => "rejected");
+    (0, f.ensureConnection)(i);
+    let s = await (0, C.Io)(n, i).catch(() => "rejected");
     return "accepted" !== s
-        ? ("rejected" === s && (await (0, v.xx)(i).catch(() => void 0)), a)
-        : ((0, f.ensureConnection)(i),
-          (0, f.sendUserMessage)(i, x.intl.string(C.default.jviD6Y), void 0, { remix: !0 }),
-          { ok: !0, projectId: i });
+        ? ((0, f.closeConnection)(i), "rejected" === s && (await (0, v.xx)(i).catch(() => void 0)), a)
+        : ((0, f.sendUserMessage)(i, x.intl.string(m.default.jviD6Y), void 0, { remix: !0 }), { ok: !0, projectId: i });
 }
-var j = i(652215),
-    w = i(746080);
-async function A(e, t) {
+var A = i(652215),
+    j = i(746080);
+async function w(e, t) {
     let i = await y(e, t);
     return i.ok
-        ? ((0, p.pX)(j.BVt.CHANNEL(t, w.VV.CONJURE, i.projectId)), !0)
+        ? ((0, p.pX)(A.BVt.CHANNEL(t, j.VV.CONJURE, i.projectId)), !0)
         : ((0, g.P0)({ text: i.message, variant: "critical" }), !1);
 }
 function b(e) {
     let { project: t, currentGuildId: i, transitionState: g, onClose: p } = e,
         [f, h] = n.useState(i),
-        [v, m] = n.useState(!1),
-        k = (0, l.bG)([o.Ay, c.A], () => {
+        [v, C] = n.useState(!1),
+        k = (0, l.bG)([o.Ay, r.A], () => {
             let e = [];
             for (let t of o.Ay.getFlattenedGuildIds()) {
-                let i = c.A.getGuild(t);
+                let i = r.A.getGuild(t);
                 null != i && (0, u.dd)(i, "ConjureRemixModal") && e.push(i);
             }
             return e;
@@ -65,28 +64,28 @@ function b(e) {
                     id: e.id,
                     label: e.name,
                     value: e.id,
-                    leading: (0, a.jsx)(r.Ay, { guild: e, size: r.Ay.Sizes.MINI, active: !0 }),
+                    leading: (0, a.jsx)(c.Ay, { guild: e, size: c.Ay.Sizes.MINI, active: !0 }),
                 })),
             [k],
         ),
-        j = n.useCallback(async () => {
+        A = n.useCallback(async () => {
             if (!v) {
-                if ((m(!0), await A(t, f))) return void (await p());
-                m(!1);
+                if ((C(!0), await w(t, f))) return void (await p());
+                C(!1);
             }
         }, [v, t, f, p]);
     return (0, a.jsx)(s.a, {
         transitionState: g,
         onClose: p,
-        title: x.intl.string(C.default["9wQTdG"]),
+        title: x.intl.string(m.default["9wQTdG"]),
         size: "md",
         actions: [
             { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: v },
-            { text: x.intl.string(C.default.XWgAfc), variant: "primary", onClick: j, loading: v },
+            { text: x.intl.string(m.default.XWgAfc), variant: "primary", onClick: A, loading: v },
         ],
         children: (0, a.jsx)(d.Z, {
             selectionMode: "single",
-            label: x.intl.string(C.default["maL0+X"]),
+            label: x.intl.string(m.default["maL0+X"]),
             options: y,
             value: f,
             onSelectionChange: h,
