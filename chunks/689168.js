@@ -1,36 +1,36 @@
-n.d(e, { A: () => o });
-var A = n(17928),
-    i = n(451988),
-    I = n(73153),
-    l = n(480595),
-    r = n(461213),
-    a = n(652215);
-let u = {},
-    c = {};
-function p(t, e, n) {
-    null != c[t] && c[t].stop();
-    let A = new i.Ep();
-    (A.start(n, () => I.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: t, activityType: e })), (c[t] = A));
+I.d(e, { A: () => _ });
+var A = I(17928),
+    n = I(451988),
+    i = I(73153),
+    l = I(480595),
+    r = I(461213),
+    a = I(652215);
+let L = {},
+    u = {};
+function c(t, e, I) {
+    null != u[t] && u[t].stop();
+    let A = new n.Ep();
+    (A.start(I, () => i.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: t, activityType: e })), (u[t] = A));
 }
-function L(t, e, n) {
-    let { applicationId: A, remotePartyId: i } = n;
+function p(t, e, I) {
+    let { applicationId: A, remotePartyId: n } = I;
     if (t === a.eAD.COMPLETE) {
-        (delete u[A]?.[e], null != c[A] && (c[A].stop(), delete c[A]));
+        (delete L[A]?.[e], null != u[A] && (u[A].stop(), delete u[A]));
         return;
     }
-    let I = u[A] ?? {};
-    ((I[e] = { state: t, remotePartyId: i }),
-        (u[A] = I),
-        __OVERLAY__ || t !== a.eAD.FAILED ? t === a.eAD.LOADING && p(A, e, null != i ? 15e3 : 12e4) : p(A, e, 12e4));
+    let i = L[A] ?? {};
+    ((i[e] = { state: t, remotePartyId: n }),
+        (L[A] = i),
+        __OVERLAY__ || t !== a.eAD.FAILED ? t === a.eAD.LOADING && c(A, e, null != n ? 15e3 : 12e4) : c(A, e, 12e4));
 }
-function s(t) {
-    return ("ACTIVITY_JOIN" !== t.type || null == t.parentApplicationId) && L(a.eAD.COMPLETE, a.xL.JOIN, t);
+function O(t) {
+    return ("ACTIVITY_JOIN" !== t.type || null == t.parentApplicationId) && p(a.eAD.COMPLETE, a.xL.JOIN, t);
 }
-function O() {
-    let t = Object.entries(u)
+function T() {
+    let t = Object.entries(L)
             .map((t) => {
-                let [e, n] = t;
-                return { applicationId: e, remotePartyId: n[a.xL.JOIN]?.remotePartyId };
+                let [e, I] = t;
+                return { applicationId: e, remotePartyId: I[a.xL.JOIN]?.remotePartyId };
             })
             .filter((t) => {
                 let { remotePartyId: e } = t;
@@ -39,41 +39,42 @@ function O() {
         e = !1;
     return (
         t.forEach((t) => {
-            let { applicationId: n, remotePartyId: A } = t,
-                i = l.A.getApplicationActivity(n),
-                I = r.A.getApplicationActivity(n);
-            (i?.party?.id === A || I?.party?.id === A) &&
-                (L(a.eAD.COMPLETE, a.xL.JOIN, { applicationId: n, remotePartyId: A }), (e = !0));
+            let { applicationId: I, remotePartyId: A } = t,
+                n = l.A.getApplicationActivity(I),
+                i = r.A.getApplicationActivity(I);
+            (n?.party?.id === A || i?.party?.id === A) &&
+                (p(a.eAD.COMPLETE, a.xL.JOIN, { applicationId: I, remotePartyId: A }), (e = !0));
         }),
         e
     );
 }
-class _ extends A.Ay.Store {
+class E extends A.Ay.Store {
     static displayName = "ActivityLauncherStore";
     initialize() {
-        this.syncWith([l.A, r.A], O);
+        this.syncWith([l.A, r.A], T);
     }
     getState(t, e) {
-        let n = u[t];
-        return n?.[e]?.state;
+        let I = L[t];
+        return I?.[e]?.state;
     }
     getStates() {
-        return u;
+        return L;
     }
 }
-let o = new _(I.h, {
+let _ = new E(i.h, {
     OVERLAY_INITIALIZE: function (t) {
         let { activityLauncherStates: e } = t;
-        u = { ...e };
+        L = { ...e };
     },
-    ACTIVITY_JOIN_LOADING: (t) => L(a.eAD.LOADING, a.xL.JOIN, t),
-    ACTIVITY_JOIN_FAILED: (t) => L(a.eAD.FAILED, a.xL.JOIN, t),
-    ACTIVITY_JOIN: s,
-    EMBEDDED_ACTIVITY_CLOSE: s,
+    ACTIVITY_JOIN_LOADING: (t) => p(a.eAD.LOADING, a.xL.JOIN, t),
+    ACTIVITY_JOIN_NAVIGATION_COMPLETE: (t) => p(a.eAD.COMPLETE, a.xL.JOIN, t),
+    ACTIVITY_JOIN_FAILED: (t) => p(a.eAD.FAILED, a.xL.JOIN, t),
+    ACTIVITY_JOIN: O,
+    EMBEDDED_ACTIVITY_CLOSE: O,
     ACTIVITY_LAUNCH_FAIL: function (t) {
-        let { applicationId: e, activityType: n } = t,
-            A = u[e];
+        let { applicationId: e, activityType: I } = t,
+            A = L[e];
         if (null == A) return !1;
-        delete A[n];
+        delete A[I];
     },
 });

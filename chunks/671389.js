@@ -64,10 +64,8 @@ async function C() {
             let [{ body: e }, { ensureConnection: t }] = await Promise.all([
                 r.Bo.get({ url: _.Rsh.CONJURE_PROJECTS, rejectWithError: !0 }),
                 Promise.all([
-                    n.e("201050"),
                     n.e("661008"),
                     n.e("356664"),
-                    n.e("399624"),
                     n.e("722440"),
                     n.e("337341"),
                     n.e("405449"),

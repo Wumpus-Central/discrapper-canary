@@ -320,11 +320,11 @@ function eF(e) {
     function e8() {
         X(!1);
     }
-    function e5(e) {
+    function e1(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, l, n));
     }
-    function e1() {
+    function e5() {
         M.A.preload(ei.ME, t.id);
     }
     function e9(e) {
@@ -359,7 +359,7 @@ function eF(e) {
                               n.e("979630"),
                               n.e("190889"),
                               n.e("61129"),
-                              n.e("983525"),
+                              n.e("205941"),
                               n.e("198415"),
                               n.e("331203"),
                               n.e("255302"),
@@ -447,8 +447,8 @@ function eF(e) {
                               n.e("242204"),
                               n.e("856753"),
                               n.e("61129"),
-                              n.e("983525"),
                               n.e("307059"),
+                              n.e("205941"),
                               n.e("309291"),
                               n.e("198415"),
                               n.e("331203"),
@@ -491,7 +491,7 @@ function eF(e) {
             (l = el.intl.format(el.t.IK1Qvs, { name: eX }))),
             (0, T.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("446215"), n.e("137803")]).then(n.bind(n, 925785));
-                return (t) => (0, i.jsx)(e, { title: s, body: l, onSubmit: e5, ...t });
+                return (t) => (0, i.jsx)(e, { title: s, body: l, onSubmit: e1, ...t });
             }));
     }
     let e7 = (0, i.jsx)(eN.A, {
@@ -583,7 +583,7 @@ function eF(e) {
                 ref: ep,
                 onMouseEnter: eq,
                 onMouseLeave: e0,
-                onMouseDown: e1,
+                onMouseDown: e5,
                 onFocus: e2,
                 onBlur: e8,
                 onContextMenu: e4,
@@ -713,7 +713,7 @@ function eF(e) {
                                               "aria-label": eE
                                                   ? el.intl.string(el.t["26C4oi"])
                                                   : el.intl.string(el.t.jsvgc3),
-                                              onClick: eE ? e6 : e5,
+                                              onClick: eE ? e6 : e1,
                                               onMouseDown: e9,
                                               nameplate: x,
                                               visibleElementRef: e$,
