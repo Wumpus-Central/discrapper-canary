@@ -237,7 +237,7 @@ var eD = n(780964),
     e6 = n(713517),
     e7 = n(609174),
     e8 = n(619744);
-function e9(e) {
+function e4(e) {
     let { onBeforeEdit: t, variant: n = "primary" } = e,
         a = (0, e7.Y_)(),
         r = l.useCallback(
@@ -255,7 +255,7 @@ function e9(e) {
         fullWidth: !0,
     });
 }
-var e4 = n(82716),
+var e9 = n(82716),
     te = n(449397),
     tt = n(930317),
     tn = n(285072),
@@ -288,12 +288,12 @@ let tl = l.memo(function (e) {
                         children: [
                             (0, i.jsxs)("div", {
                                 className: ti.mY,
-                                children: [(0, i.jsx)(e4.z, {}), (0, i.jsx)(e8.k, {})],
+                                children: [(0, i.jsx)(e9.z, {}), (0, i.jsx)(e8.k, {})],
                             }),
                             (0, i.jsxs)("div", {
                                 className: ti.E_,
                                 children: [
-                                    (0, i.jsx)(e9, { onBeforeEdit: a, variant: "overlay-secondary" }),
+                                    (0, i.jsx)(e4, { onBeforeEdit: a, variant: "overlay-secondary" }),
                                     (0, i.jsx)(te.e, {}),
                                 ],
                             }),
@@ -693,8 +693,8 @@ function t5(e) {
 var t6 = n(394816),
     t7 = n(442228),
     t8 = n(885386),
-    t9 = n(362862),
-    t4 = n(621466),
+    t4 = n(362862),
+    t9 = n(621466),
     ne = n(318254),
     nt = n(863610),
     nn = n(421773),
@@ -742,7 +742,7 @@ function nu(e) {
                 return (document.addEventListener("mouseover", e), () => document.removeEventListener("mouseover", e));
             function e(e) {
                 if ((0, v.hasAnyModalOpen)()) return;
-                let t = (0, t4.vq)(e.target, Element) ? e.target : null,
+                let t = (0, t9.vq)(e.target, Element) ? e.target : null,
                     n = t?.closest(`.${ew.j$}`);
                 null != n && n !== x.current && (A(), g(!1));
             }
@@ -814,7 +814,7 @@ function nu(e) {
         R = l.useCallback(
             (e) => {
                 let { relatedTarget: t } = e;
-                (0, t4.vq)(t, Node) && null != x.current && x.current.contains(t) && A();
+                (0, t9.vq)(t, Node) && null != x.current && x.current.contains(t) && A();
             },
             [A],
         );
@@ -1631,7 +1631,7 @@ function n0(e) {
         }, [R, K]),
         Y = (0, ee.u)("UserProfileAccountPopout"),
         $ = tV.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
-        X = (0, t9.H)({ location: "UserProfileAccountPopout" }),
+        X = (0, t4.H)({ location: "UserProfileAccountPopout" }),
         Q = (0, tI.A)((e) => e.shouldScrollToOrbsMenuItem),
         [J, et] = (0, tE.kn)(
             [
@@ -1916,8 +1916,8 @@ var n1 = n(518293),
     n6 = n(342296),
     n7 = n(852712),
     n8 = n(389960),
-    n9 = n(173660),
-    n4 = n(616356),
+    n4 = n(173660),
+    n9 = n(616356),
     ie = n(734057),
     it = n(629016),
     ii = n(186111),
@@ -2473,8 +2473,8 @@ function i8(e) {
         })
     );
 }
-var i9 = n(523875),
-    i4 = n(666654),
+var i4 = n(523875),
+    i9 = n(666654),
     le = n(993719);
 let lt = {};
 class ln extends u.Ay.Store {
@@ -2525,10 +2525,10 @@ function lu(e) {
         { enabledInputProfiles: N } = (0, n7.d)({ location: "MicrophoneButton" }),
         b = l.useRef(null),
         j = n || s || a,
-        R = (0, i9.L)(j ? "unmute" : "mute"),
+        R = (0, i4.L)(j ? "unmute" : "mute"),
         { analyticsLocations: w } = (0, O.Ay)(M.A.AUDIO_INPUT_BUTTON),
         { Component: L, events: k, play: P } = R,
-        D = a || s ? i4.O : L;
+        D = a || s ? i9.O : L;
     l.useEffect(() => () => P(), [j, P]);
     let U = (0, la.A)(n, a, s, o);
     t = g
@@ -2797,7 +2797,7 @@ function lN(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, ly.A)("1792203733819", !0);
+        let e = (0, ly.A)("1792204117274", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -4129,7 +4129,7 @@ function lD() {
                 status: nV.A.getStatus(),
             };
         }),
-        f = (0, u.bG)([n4.A], () => n4.A.getAnyStreamForUser(s)),
+        f = (0, u.bG)([n9.A], () => n9.A.getAnyStreamForUser(s)),
         p = (0, C.A)({ userId: s }),
         g = (0, u.bG)([is.A], () => is.A.getVoiceVolume(s)),
         A = t2.Ay.useUserTag(r, { decoration: "never" }),
@@ -4137,7 +4137,7 @@ function lD() {
             let e = ia.A.getChannelId();
             return null != e ? ie.A.getChannel(e) : null;
         }),
-        { mute: x, selfMute: _, suppress: T } = (0, n9.A)(E),
+        { mute: x, selfMute: _, suppress: T } = (0, n4.A)(E),
         { selfDeaf: I, deaf: S } = (0, n8.A)(E),
         y = (0, u.bG)([F.A], () => ((0, V.kK)() ? F.A.getCurrentBuildOverride().overrides?.discord_web : null)),
         N = (0, u.bG)([il.Ay], () => il.Ay.getSpeakingWhileMuted()),
@@ -4168,7 +4168,7 @@ function lD() {
             );
         }),
         et = { avatar: [], settings: [] },
-        en = (0, t9.H)({ location: "Account" }) && !R,
+        en = (0, t4.H)({ location: "Account" }) && !R,
         ei = ed.A.useIsEligible(),
         ec = eu.A.coachmarkDismissibleContent,
         em = (0, ee.u)("AccountCoachmark"),

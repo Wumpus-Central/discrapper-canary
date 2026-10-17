@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => T, Mg: () => E, Og: () => g, VY: () => h, Y1: () => C, aF: () => y, uk: () => f }),
+(n.d(t, { M$: () => g, Mg: () => A, Og: () => E, VY: () => f, Y1: () => T, aF: () => y, uk: () => C }),
     n(323874),
     n(14289),
     n(35956));
@@ -10,17 +10,18 @@ var r = n(73153),
     l = n(371169),
     s = n(664619),
     u = n(1371),
-    d = n(392739),
-    p = n(573083),
-    _ = n(855859);
-let h = {
+    d = n(513845),
+    p = n(392739),
+    _ = n(573083),
+    h = n(855859);
+let f = {
         capture_preview(e, t) {
             let { projectId: n, ws: r } = t;
-            A(n, r, e).catch(() => {});
+            (!0 !== e.probe && e.spec?.mode !== "widget" && (0, d.T5)(n), k(n, r, e).catch(() => {}));
         },
         control_preview(e, t) {
             let { projectId: n, ws: r } = t;
-            k(n, r, e).catch(() => {});
+            ((0, d.T5)(n), R(n, r, e).catch(() => {}));
         },
         control_abort(e, t) {
             let { projectId: n } = t;
@@ -28,17 +29,17 @@ let h = {
         },
         control_claim(e, t) {
             let { projectId: n } = t;
-            (0, d.n1)(n, e.id);
+            (0, p.n1)(n, e.id);
         },
         capture_claim(e, t) {
             let { projectId: n } = t;
-            (0, d.n1)(n, e.id, e.upload_token);
+            (0, p.n1)(n, e.id, e.upload_token);
         },
         preview_operation(e, t) {
             let { projectId: n } = t;
             "begin" === e.phase
-                ? ((0, p.pF)(n, "tuning" === e.mode), u.A.beginPreviewOperation(n))
-                : ((0, p.pF)(n, !1), u.A.endPreviewOperation(n));
+                ? ((0, d.T5)(n), (0, _.pF)(n, "tuning" === e.mode), u.A.beginPreviewOperation(n))
+                : ((0, _.pF)(n, !1), u.A.endPreviewOperation(n));
         },
         overlay_background(e, t) {
             let { projectId: n } = t;
@@ -50,7 +51,7 @@ let h = {
             });
         },
     },
-    f = {
+    C = {
         preview_ready(e, t) {
             let { projectId: n } = t;
             (0, o.OA)(n, e);
@@ -70,7 +71,7 @@ let h = {
                 }));
         },
     };
-function C(e, t) {
+function T(e, t) {
     let n = (0, a.KY)(e);
     if (null == n) return !1;
     try {
@@ -84,30 +85,30 @@ async function y(e, t) {
         o = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${o}`;
 }
-async function T(e, t) {
+async function g(e, t) {
     let n = await (0, c.h)(e, "/agent/overlay-background", { method: "PUT", body: t });
     if (!n.ok) throw Error(`overlay background upload failed (${n.status})`);
 }
-async function g(e) {
+async function E(e) {
     let t = await (0, c.h)(e, "/agent/overlay-background", { method: "DELETE" });
     if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }
-async function E(e, t) {
+async function A(e, t) {
     let { ticket: n, baseUrl: r } = await (0, i.BK)(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }
-async function A(e, t, n) {
+async function k(e, t, n) {
     let r,
         o = Date.now();
     (console.debug("[conjure] capture request received", { id: n.id, build: n.build, probe: n.probe }),
-        !0 !== n.probe && n.spec?.mode === "widget" && (0, _.b)(e, "widget"));
+        !0 !== n.probe && n.spec?.mode === "widget" && (0, h.b)(e, "widget"));
     try {
         r = await u.A.relayPreviewCapture(e, n.id, {
             probe: n.probe,
             spec: n.spec,
             build: n.build,
-            onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, d.bm)(e, n.id)),
-            resolveUploadUrl: () => R(e),
+            onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, p.bm)(e, n.id)),
+            resolveUploadUrl: () => m(e),
         });
     } catch (e) {
         (console.error("[conjure] preview capture relay failed", e), (r = { status: "failed" }));
@@ -120,7 +121,7 @@ async function A(e, t, n) {
     }),
         t.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
-async function k(e, t, n) {
+async function R(e, t, n) {
     let r = Date.now();
     console.debug("[conjure] control request received", { id: n.id, build: n.build, steps: n.request?.steps?.length });
     try {
@@ -128,7 +129,7 @@ async function k(e, t, n) {
             e,
             n.id,
             n.request,
-            async () => (t.sendControlAck(n.id, "accepted"), (await (0, d.bm)(e, n.id)) != null),
+            async () => (t.sendControlAck(n.id, "accepted"), (await (0, p.bm)(e, n.id)) != null),
         );
         (console.debug("[conjure] control relay answered", { id: n.id, status: o.status, ms: Date.now() - r }),
             "completed" === o.status
@@ -141,7 +142,7 @@ async function k(e, t, n) {
             t.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function R(e) {
+async function m(e) {
     let { ticket: t, baseUrl: n } = await (0, i.BK)(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }
