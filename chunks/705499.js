@@ -1,53 +1,62 @@
-l.d(t, { P9: () => A, wY: () => I });
+l.d(t, { P9: () => f, wY: () => g });
 var n = l(451988),
     u = l(956518),
-    r = l(734057),
-    a = l(576705),
-    s = l(494126),
-    i = l(91242),
-    c = l(457827),
-    d = l(165610),
-    o = l(652215);
-let p = new Map();
-function h(e) {
-    let t = p.get(e) ?? { stopTimer: new n.Ep(), launchRequestId: void 0 };
-    (p.set(e, t),
+    r = l(323073),
+    a = l(288254),
+    s = l(734057),
+    i = l(576705),
+    c = l(494126),
+    d = l(91242),
+    o = l(457827),
+    p = l(165610),
+    h = l(652215);
+let m = new Map();
+function A(e) {
+    let t = m.get(e) ?? { stopTimer: new n.Ep(), launchRequestId: void 0 };
+    (m.set(e, t),
         t.stopTimer.start(5e3, () => {
             var t;
             let l;
             return (
                 (t = e),
                 void (
-                    null != (l = p.get(t)) &&
+                    null != (l = m.get(t)) &&
                     (l.stopTimer.stop(),
-                    p.delete(t),
-                    null != l.launchRequestId && i.A.getFrame(t)?.launchRequestId === l.launchRequestId && (0, c.r)(t))
+                    m.delete(t),
+                    null != l.launchRequestId && d.A.getFrame(t)?.launchRequestId === l.launchRequestId && (0, o.r)(t))
                 )
             );
         }));
 }
-function m(e) {
-    (p.get(e)?.stopTimer.stop(), p.delete(e));
+function I(e) {
+    (m.get(e)?.stopTimer.stop(), m.delete(e));
 }
-function A(e) {
+function f(e) {
     let t,
         l,
         n,
-        c =
-            ((t = r.A.getChannel(e)),
+        o =
+            ((t = s.A.getChannel(e)),
             (l = t?.application_id),
-            (n = t?.type === o.rbe.GUILD_APP ? (0, d.HD)(t) : null),
+            (n = t?.type === h.rbe.GUILD_APP ? (0, p.HD)(t) : null),
             null == t || null == l || null == n
                 ? null
-                : { channel: t, applicationId: l, surface: n, frameId: (0, d.VA)(l, n) });
-    if (null == c) return;
-    let { channel: A, applicationId: I, surface: f, frameId: g } = c;
-    if (p.has(g)) return void h(g);
-    if (null != i.A.getFrame(g) || !a.A.can(o.xBc.VIEW_CHANNEL, A) || null == (0, u.Ay)(I)) return;
-    (h(g), (0, s.launchFrame)({ applicationId: I, surface: f, showErrorModal: !1 }).catch(() => m(g)));
-    let q = p.get(g);
-    null != q && (q.launchRequestId = i.A.getFrame(g)?.launchRequestId);
+                : { channel: t, applicationId: l, surface: n, frameId: (0, p.VA)(l, n) });
+    if (null == o) return;
+    let { channel: f, applicationId: g, surface: q, frameId: R } = o;
+    if (m.has(R)) return void A(R);
+    if (
+        null != d.A.getFrame(R) ||
+        !i.A.can(h.xBc.VIEW_CHANNEL, f) ||
+        (0, r.qR)(f) ||
+        (0, a.BV)(f) ||
+        null == (0, u.Ay)(g)
+    )
+        return;
+    (A(R), (0, c.launchFrame)({ applicationId: g, surface: q, showErrorModal: !1 }).catch(() => I(R)));
+    let w = m.get(R);
+    null != w && (w.launchRequestId = d.A.getFrame(R)?.launchRequestId);
 }
-function I(e) {
-    return !!p.has(e) && (m(e), !0);
+function g(e) {
+    return !!m.has(e) && (I(e), !0);
 }
