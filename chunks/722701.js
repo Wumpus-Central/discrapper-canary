@@ -42,35 +42,38 @@ let c = new o(l.h, {
                 publishedAt: o = null,
                 publishing: c = !1,
                 patchNotesSent: p,
+                newUiUnpublished: E = !1,
             } = e,
-            E = i ? (l ? "changes" : "up_to_date") : "unpublished",
-            d = u.get(n),
-            h =
+            d = i ? (l ? "changes" : "up_to_date") : "unpublished",
+            h = u.get(n),
+            R =
                 null == p ||
-                ((t = d?.patchNotesSent ?? s),
+                ((t = h?.patchNotesSent ?? s),
                 t.length === p.length &&
                     t.every((e, t) => e.publishedRevision === p[t].publishedRevision && e.messageId === p[t].messageId))
-                    ? (d?.patchNotesSent ?? s)
+                    ? (h?.patchNotesSent ?? s)
                     : p;
         if (
-            d?.state === E &&
-            d.surface === _ &&
-            d.previewAppChannels.length === a.length &&
-            d.previewAppChannels.every((e, t) => e === a[t]) &&
-            d.publishedRevision === r &&
-            d.publishedAt === o &&
-            d.publishing === c &&
-            d.patchNotesSent === h
+            h?.state === d &&
+            h.surface === _ &&
+            h.previewAppChannels.length === a.length &&
+            h.previewAppChannels.every((e, t) => e === a[t]) &&
+            h.publishedRevision === r &&
+            h.publishedAt === o &&
+            h.publishing === c &&
+            h.patchNotesSent === R &&
+            h.newUiUnpublished === E
         )
             return !1;
         u.set(n, {
-            state: E,
+            state: d,
             surface: _,
             previewAppChannels: a,
             publishedRevision: r,
             publishedAt: o,
             publishing: c,
-            patchNotesSent: h,
+            patchNotesSent: R,
+            newUiUnpublished: E,
         });
     },
     CONJURE_PROJECT_PUBLISH_START: function (e) {
