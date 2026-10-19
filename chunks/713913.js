@@ -16,7 +16,7 @@ let o = {
         dismissibleContent: i.M.SLAYER_STOREFRONT_GAME_EXIT_PROMO_RUST,
         experiment: r,
         startsAtMs: Date.parse("2026-10-22T00:00:00-07:00"),
-        endsAtMs: Date.parse("2026-11-06T00:00:00-08:00"),
+        endsAtMs: Date.parse("2026-11-05T18:00:00Z"),
         imageUrl:
             "https://cdn.discordapp.com/assets/content/b67b65e666d1350c52ff2abab5ac4eb205fa6545f63665aef16beeaa0efef060.webp",
         getBody: () => l.intl.string(s.default["93iWsv"]),
