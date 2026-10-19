@@ -11,7 +11,7 @@ var n = t(477900),
     f = t(834730),
     g = t(289873),
     h = t(696208),
-    p = t(723312),
+    p = t(291815),
     x = t(557744),
     m = t(223347),
     b = t(359589),
@@ -166,13 +166,13 @@ var _ = t(193249),
     B = t(904363),
     F = t(709753),
     Z = t(540338),
-    D = t(535466),
-    U = t(321032),
-    G = t(502707),
-    J = t(944142),
-    M = t(788493),
-    N = t(532247),
-    V = t(371169),
+    D = t(371169),
+    U = t(535466),
+    G = t(321032),
+    J = t(502707),
+    M = t(944142),
+    N = t(788493),
+    V = t(532247),
     z = t(951178),
     q = t(246338),
     H = t(277085),
@@ -208,8 +208,8 @@ function X(e) {
                 s = (0, i.bG)([j.Ay], () => j.Ay.getProject(e), [e]),
                 u = (0, B.A)(l),
                 d = (function (e) {
-                    let l = (0, i.bG)([J.A], () => J.A.getLiveReload(e), [e]),
-                        t = (0, G.A)(e),
+                    let l = (0, i.bG)([M.A], () => M.A.getLiveReload(e), [e]),
+                        t = (0, J.A)(e),
                         [n, r] = a.useState(null),
                         [s, u] = a.useState(null);
                     null != s && l !== s.before && u(null);
@@ -217,13 +217,13 @@ function X(e) {
                     null != n && n === d && r(null);
                     let c = null != l && null != n && n !== d,
                         o = a.useCallback(
-                            () => !c || null == n || (!!(0, M.c)(e, n) && (u({ enabled: n, before: l }), r(null), !0)),
+                            () => !c || null == n || (!!(0, N.c)(e, n) && (u({ enabled: n, before: l }), r(null), !0)),
                             [c, n, l, e],
                         );
                     return {
                         available: null != l && !t,
                         checked: n ?? d ?? !1,
-                        description: null == l ? "" : (0, N.oV)(l),
+                        description: null == l ? "" : (0, V.oV)(l),
                         changed: c,
                         setChecked: r,
                         save: o,
@@ -231,8 +231,11 @@ function X(e) {
                 })(e),
                 c = d.save,
                 g = (function (e) {
-                    let l = (0, D.Ay)(e),
-                        [t, n] = a.useState(null),
+                    let l = (0, U.Ay)(e);
+                    a.useEffect(() => {
+                        (0, D._b)(e).catch(() => {});
+                    }, [e]);
+                    let [t, n] = a.useState(null),
                         [i, r] = a.useState(null),
                         s = i ?? l.description,
                         u = s.trim(),
@@ -308,7 +311,7 @@ function X(e) {
                         en(null),
                         ei(null));
                     try {
-                        if ((ex && (await (0, V.CW)(e, n), k(es), I({ flags: R, roleIds: [...Q] }), p()), !c()))
+                        if ((ex && (await (0, D.CW)(e, n), k(es), I({ flags: R, roleIds: [...Q] }), p()), !c()))
                             return (en(P.intl.string(E.default.XzkNBw)), "project");
                         if (!m() || !v()) return (ei(P.intl.string(E.default["9JPr8h"])), "experimental");
                         return null;
@@ -322,7 +325,7 @@ function X(e) {
                 fields: (0, n.jsxs)(o.B, {
                     gap: 20,
                     children: [
-                        (0, n.jsx)(U.r, {
+                        (0, n.jsx)(G.r, {
                             iconURL: g.iconURL,
                             onIconChange: (e) => {
                                 (g.setIcon(e), en(null));

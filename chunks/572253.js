@@ -10,12 +10,12 @@ var l = n(477900),
     c = n(289873),
     f = n(890497),
     p = n(245179),
-    h = n(723312),
+    h = n(291815),
     g = n(300344),
     m = n(614733),
     b = n(904363),
-    v = n(513845),
-    x = n(442331),
+    x = n(513845),
+    v = n(442331),
     y = n(743082),
     A = n(950902),
     j = n(261425),
@@ -24,7 +24,7 @@ var l = n(477900),
 let C = { values: {}, secrets: {} };
 function k(e) {
     let { projectId: t, scopeKeys: n, note: f, notifyAgent: g = !1, isPreview: m = !1, children: b } = e,
-        A = (0, r.bG)([x.A], () => x.A.getSettings(t)),
+        A = (0, r.bG)([v.A], () => v.A.getSettings(t)),
         [k, M] = i.useState(C),
         [E, P] = i.useState({}),
         [N, I] = i.useState(!1),
@@ -101,7 +101,7 @@ function k(e) {
                         ? (0, h.sendUserMessage)(t, S.intl.string(j.default["08bsJL"]))
                         : e
                           ? (0, y.ss)(t)
-                          : (0, v.BD)(t),
+                          : (0, x.BD)(t),
                     M(C),
                     P({}),
                     !0
