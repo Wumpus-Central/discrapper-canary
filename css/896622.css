@@ -142,6 +142,27 @@
     padding: 0 12px
 }
 
+.profileEffectPreview_bab2bc,
+.profileFramePreview_bab2bc {
+    padding: 0
+}
+
+.profileEffectPreview_bab2bc .previewContainer_bab2bc,
+.profileFramePreview_bab2bc .previewContainer_bab2bc {
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute
+}
+
+.profileFrameSample_bab2bc {
+    aspect-ratio: 2/3;
+    box-sizing: border-box;
+    height: 100%;
+    max-width: 100%;
+    padding: var(--space-12) 0
+}
+
 .giftRewardShopCardsGrid_d64c23 {
     display: grid;
     gap: var(--space-12);
@@ -220,4 +241,4 @@
     top: var(--space-24)
 }
 
-/*# sourceMappingURL=896622.e957effe10ba7ad1.css.map*/
+/*# sourceMappingURL=896622.6b321905e648ee5d.css.map*/

@@ -10,4 +10,7 @@ b.exports = {
     tZ: "productName_bab2bc",
     _Q: "avatarPreview_bab2bc",
     M4: "nameplatePreview_bab2bc",
+    xC: "profileEffectPreview_bab2bc",
+    pI: "profileFramePreview_bab2bc",
+    ft: "profileFrameSample_bab2bc",
 };

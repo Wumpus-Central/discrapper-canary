@@ -64,6 +64,11 @@
     transform: scale(1)
 }
 
+.scaledSkuPreview__3e00d.profileFrame__3e00d {
+    --custom-profile-frame-preview-padding-block: var(--space-6);
+    --custom-profile-frame-preview-padding-inline: var(--space-12)
+}
+
 .nameplatePreview__3e00d {
     margin: 0
 }
@@ -73,4 +78,4 @@
     transform: scale(.42)
 }
 
-/*# sourceMappingURL=82937.b5a153a259aa4733.css.map*/
+/*# sourceMappingURL=82937.e9f346f811c77301.css.map*/

@@ -68,6 +68,11 @@
     transform: scale(1)
 }
 
+.scaledSkuPreview_bdce3e.profileFrame_bdce3e {
+    --custom-profile-frame-preview-padding-block: var(--space-6);
+    --custom-profile-frame-preview-padding-inline: var(--space-12)
+}
+
 .nameplatePreview_bdce3e {
     margin: 0
 }
@@ -215,4 +220,4 @@ screen and (max-width:485px) {
     width: 18px
 }
 
-/*# sourceMappingURL=84978.decd2487e97e5ad3.css.map*/
+/*# sourceMappingURL=84978.f2ea152b3c3acef4.css.map*/
