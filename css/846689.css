@@ -195,16 +195,40 @@
     overflow: visible
 }
 
-.control__4064a {
+.button_f1f2b1 {
     align-items: center;
-    bottom: var(--space-32);
+    border: 1px solid;
+    box-sizing: border-box;
     color: var(--custom-checkpoint-primary);
     cursor: pointer;
     display: flex;
+    justify-content: center
+}
+
+.sm_f1f2b1 {
+    height: 32px;
+    width: 32px
+}
+
+.md_f1f2b1 {
     height: 48px;
-    justify-content: center;
-    position: absolute;
     width: 48px
+}
+
+.shadow_f1f2b1 {
+    background-color: var(--black);
+    border: 2px solid var(--custom-checkpoint-dark-cyan);
+    box-shadow: var(--space-4) var(--space-4) 0 var(--custom-checkpoint-button-shadow)
+}
+
+.shadow_f1f2b1:active {
+    box-shadow: none;
+    transform: translate(var(--space-4), var(--space-4))
+}
+
+.control__4064a {
+    bottom: var(--space-32);
+    position: absolute
 }
 
 .back__4064a {
@@ -247,6 +271,14 @@
 
 .hidden__6b0e6 {
     visibility: hidden
+}
+
+.headerActions__6b0e6 {
+    display: flex;
+    gap: var(--space-10);
+    inset-inline-end: var(--space-32);
+    position: absolute;
+    top: var(--space-32)
 }
 
 .buttonsContainer__5989f {
@@ -568,4 +600,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=606803.12b19ace45356142.css.map*/
+/*# sourceMappingURL=846689.c9500ef3c9cf6bb7.css.map*/
