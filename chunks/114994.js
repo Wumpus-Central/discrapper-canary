@@ -25,10 +25,6 @@ class c extends i.Ay.Store {
     getProject(e) {
         if (null != e) return d.find((t) => t.application_id === e);
     }
-    getFetchStatus() {
-        let e = l.Ay.getOwnedProjectsFetchState();
-        return "unattempted" === e ? "idle" : e;
-    }
     hasFetchSucceeded() {
         return l.Ay.hasFetchedOwnedProjects();
     }
