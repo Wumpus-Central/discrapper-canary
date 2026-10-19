@@ -25,6 +25,14 @@ class f extends i.Ay.Store {
     getFrame(e) {
         if (null != e) return u.get(e);
     }
+    isFramePooled(e) {
+        let t = u.get(e);
+        return (0, o.x1)(t) && "unpooled" !== t.data.poolVisibility;
+    }
+    isFrameVisible(e) {
+        let t = u.get(e);
+        return !(0, o.x1)(t) || "hidden" !== t.data.poolVisibility;
+    }
     getMainFrame() {
         return null != _ ? (u.get(_) ?? null) : null;
     }
@@ -90,6 +98,7 @@ let I = new f(r.h, {
                 orientationLock: null,
                 pipOrientationLock: null,
                 runsInBackground: !1,
+                poolVisibility: "unpooled",
                 iframeId: null,
                 hostWindowKey: r ?? null,
                 launch: i,
@@ -143,6 +152,10 @@ let I = new f(r.h, {
     FRAME_UPDATE_PROXY_TICKET: function (e) {
         let { frameId: t, proxyTicket: n } = e;
         return E(t, (e) => ({ ...e, proxyTicket: n }));
+    },
+    FRAME_POOL_VISIBILITY_UPDATE: function (e) {
+        let { frameId: t, poolVisibility: n } = e;
+        return E(t, (e) => ({ ...e, poolVisibility: n }));
     },
     FRAME_IFRAME_MOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;

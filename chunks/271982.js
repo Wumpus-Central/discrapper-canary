@@ -1,6 +1,6 @@
-i.d(t, { A: () => u });
-var n = i(256693),
-    s = i(343030);
+n.d(t, { A: () => g });
+var i = n(256693),
+    s = n(343030);
 class l {
     config;
     entries = new Map();
@@ -32,19 +32,19 @@ class l {
     hasFrameEntry(e) {
         return this.entries.has(e);
     }
-    registerFrameTarget(e, t, i, n) {
+    registerFrameTarget(e, t, n, i) {
         let s = this.targets.get(e);
         (null == s && ((s = new Map()), this.targets.set(e, s)),
-            s.set(t, { target: t, level: i, seq: this.attachSeq++, state: n }),
+            s.set(t, { target: t, level: n, seq: this.attachSeq++, state: i }),
             this.reconcile(e));
     }
-    updateFrameTargetState(e, t, i) {
-        let n = this.targets.get(e)?.get(t);
-        null != n && n.state !== i && ((n.state = i), this.emitChange());
+    updateFrameTargetState(e, t, n) {
+        let i = this.targets.get(e)?.get(t);
+        null != i && i.state !== n && ((i.state = n), this.emitChange());
     }
     removeFrameTarget(e, t) {
-        let i = this.targets.get(e);
-        null != i && i.delete(t) && this.reconcile(e);
+        let n = this.targets.get(e);
+        null != n && n.delete(t) && this.reconcile(e);
     }
     getWinningTarget(e) {
         return this.hasFrameEntry(e) ? (this.pickWinner(e)?.target ?? null) : null;
@@ -66,10 +66,10 @@ class l {
     pickWinner(e) {
         let t = this.targets.get(e);
         if (null == t) return null;
-        let i = null;
+        let n = null;
         for (let e of t.values())
-            (null == i || s.p[e.level] > s.p[i.level] || (s.p[e.level] === s.p[i.level] && e.seq > i.seq)) && (i = e);
-        return i;
+            (null == n || s.p[e.level] > s.p[n.level] || (s.p[e.level] === s.p[n.level] && e.seq > n.seq)) && (n = e);
+        return n;
     }
     background(e) {
         this.backgrounded.has(e) ||
@@ -79,12 +79,12 @@ class l {
     reconcileCondemned() {
         let e = this.backgrounded.size - this.config.maxBackgrounded,
             t = 0;
-        for (let [i, n] of this.backgrounded) {
+        for (let [n, i] of this.backgrounded) {
             let s = t < e;
-            (s !== n.condemned &&
-                (clearTimeout(n.timer),
-                (n.timer = this.armEviction(i, s ? 3e3 : this.config.timeoutMs)),
-                (n.condemned = s)),
+            (s !== i.condemned &&
+                (clearTimeout(i.timer),
+                (i.timer = this.armEviction(n, s ? 3e3 : this.config.timeoutMs)),
+                (i.condemned = s)),
                 t++);
         }
     }
@@ -99,10 +99,13 @@ class l {
         (this.cancelBackground(e), this.destroyFrame(e));
     }
 }
-var r = i(281969),
-    a = i(457827);
-let o = { [s.A.Backstage]: 0, [s.A.WithinAppContent]: 1, [s.A.WithinCallContent]: 3, [s.A.AboveAppContent]: 1002 };
-class c {
+var r = n(73153);
+function a(e, t) {
+    r.h.dispatch({ type: "FRAME_POOL_VISIBILITY_UPDATE", frameId: e, poolVisibility: t });
+}
+var o = n(457827);
+let c = { [s.A.Backstage]: 0, [s.A.WithinAppContent]: 1, [s.A.WithinCallContent]: 3, [s.A.AboveAppContent]: 1002 };
+class h {
     _pool = null;
     setPool(e) {
         this._pool = e;
@@ -112,7 +115,7 @@ class c {
         return this._pool;
     }
 }
-class h extends c {
+class p extends h {
     placed = new Map();
     rafHandle = null;
     initialize(e) {
@@ -123,8 +126,8 @@ class h extends c {
             (e.style.display = "none"),
             this.pool.appendChild(e));
     }
-    place(e, t, i) {
-        (this.placed.set(e, { target: t, level: i }), this.position(e, t, i), this.ensureTicking());
+    place(e, t, n) {
+        (this.placed.set(e, { target: t, level: n }), this.position(e, t, n), this.ensureTicking());
     }
     unplace(e) {
         (this.placed.delete(e), (e.style.display = "none"));
@@ -132,20 +135,20 @@ class h extends c {
     ensureTicking() {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
-    position(e, t, i) {
-        let n = t.getBoundingClientRect();
+    position(e, t, n) {
+        let i = t.getBoundingClientRect();
         ((e.style.display = "block"),
-            (e.style.zIndex = String(o[i])),
-            (e.style.transform = `translate(${n.left}px, ${n.top}px)`),
-            (e.style.width = `${n.width}px`),
-            (e.style.height = `${n.height}px`));
+            (e.style.zIndex = String(c[n])),
+            (e.style.transform = `translate(${i.left}px, ${i.top}px)`),
+            (e.style.width = `${i.width}px`),
+            (e.style.height = `${i.height}px`));
     }
     tick = () => {
-        for (let [e, { target: t, level: i }] of this.placed) this.position(e, t, i);
+        for (let [e, { target: t, level: n }] of this.placed) this.position(e, t, n);
         this.rafHandle = this.placed.size > 0 ? requestAnimationFrame(this.tick) : null;
     };
 }
-class d extends c {
+class d extends h {
     initialize(e) {
         ((e.style.width = "100%"),
             (e.style.height = "100%"),
@@ -153,15 +156,15 @@ class d extends c {
             (e.style.display = "none"),
             this.pool.appendChild(e));
     }
-    place(e, t, i) {
+    place(e, t, n) {
         (e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block"));
     }
     unplace(e) {
         (e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none"));
     }
 }
-class p extends l {
-    strategy = "function" == typeof Element.prototype.moveBefore ? new d() : new h();
+class u extends l {
+    strategy = "function" == typeof Element.prototype.moveBefore ? new d() : new p();
     constructor() {
         super({ maxBackgrounded: 3, timeoutMs: 3e5 });
     }
@@ -173,19 +176,19 @@ class p extends l {
     }
     removeFrameEntry(e) {
         let t = this.getFrameEntry(e);
-        (super.removeFrameEntry(e), t?.container.remove(), (0, n.fS)(e) || r.A.removeFrame(e));
+        (super.removeFrameEntry(e), t?.container.remove(), (0, i.fS)(e) || a(e, "unpooled"));
     }
-    place(e, t, i) {
+    place(e, t, n) {
         let l = this.getFrameEntry(e);
         null != l &&
-            (this.strategy.place(l.container, t, i), (0, n.fS)(e) || r.A.setFrameVisible(e, i !== s.A.Backstage));
+            (this.strategy.place(l.container, t, n), (0, i.fS)(e) || a(e, n !== s.A.Backstage ? "visible" : "hidden"));
     }
     unplace(e) {
         let t = this.getFrameEntry(e);
-        null != t && (this.strategy.unplace(t.container), (0, n.fS)(e) || r.A.setFrameVisible(e, !1));
+        null != t && (this.strategy.unplace(t.container), (0, i.fS)(e) || a(e, "hidden"));
     }
     destroyFrame(e) {
-        (0, n.fS)(e) ? (0, n.aQ)(e) : (0, a.r)(e);
+        (0, i.fS)(e) ? (0, i.aQ)(e) : (0, o.r)(e);
     }
 }
-let u = new p();
+let g = new u();
