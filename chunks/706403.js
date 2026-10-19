@@ -14,14 +14,14 @@ var r = i(682176),
     p = i(587481),
     g = i(998218),
     _ = i(465856),
-    A = i(44788),
-    S = i(447991),
+    S = i(44788),
+    A = i(447991),
     f = i(838541),
     C = i(516653),
     v = i(105292);
 function y(e) {
     let t = e.item.originalItem;
-    return (0, A.LL)({
+    return (0, S.LL)({
         ...e,
         alt: t.description,
         src: (0, m.E)({ proxyURL: t.proxy_url, url: t.url }),
@@ -78,7 +78,7 @@ function I(e) {
 }
 function x(e, t) {
     let i = e.item.originalItem;
-    return (0, A.$o)({
+    return (0, S.$o)({
         ...e,
         showPlaybackSpeedControl: !0,
         alt: i.description,
@@ -106,8 +106,10 @@ function k(e) {
             s,
             d,
             c = null != n.width && null != n.height && n.height > n.width ? "portrait" : "landscape",
-            u = null != n.description && "" !== n.description ? n.description : v.intl.string(v.t.FlNoSV),
-            { width: m, height: g } =
+            u = !0 === t.isSingleMosaicItem,
+            m = "portrait" === c,
+            g = null != n.description && "" !== n.description ? n.description : v.intl.string(v.t.FlNoSV),
+            { width: _, height: C } =
                 ((e = t.maxWidth ?? f.k6),
                 (l = t.maxHeight ?? f.Rk),
                 (r = e >= 240 && l >= 180),
@@ -119,29 +121,29 @@ function k(e) {
                     minWidth: 240 * !!r,
                     minHeight: 180 * !!r,
                 })),
-            _ =
+            y =
                 ((s = t.width ?? 0),
                 (d = t.height ?? 0),
-                s <= 0 || d <= 0 || m <= 0 || g <= 0
+                s <= 0 || d <= 0 || _ <= 0 || C <= 0
                     ? i
                     : (0, o.AE)({
                           src: i,
                           width: s,
                           height: d,
-                          ratio: (0, h.U8)({ width: s, height: d, maxWidth: m, maxHeight: g }),
+                          ratio: (0, h.U8)({ width: s, height: d, maxWidth: _, maxHeight: C }),
                       }));
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsxs)("div", {
                     className: t.className ?? void 0,
-                    style: { width: m, height: g, position: "relative", display: "flex" },
+                    style: { width: _, height: C, position: "relative", display: "flex" },
                     onContextMenu: t.onContextMenu ?? void 0,
                     children: [
-                        (0, a.jsx)(S.A, {
+                        (0, a.jsx)(A.A, {
                             crossOrigin: null,
-                            alt: u,
+                            alt: g,
                             src: n.url,
-                            poster: _,
+                            poster: y,
                             fileSizeBytes: n.size,
                             posterPlaceholder: n.placeholder,
                             posterPlaceholderVersion: n.placeholder_version,
@@ -162,12 +164,14 @@ function k(e) {
                             onClick: t.onClick ?? void 0,
                             renderOverlay: t.renderOverlayContent ?? void 0,
                             hideFullScreenBtn: !(t.allowFullScreen ?? !0),
-                            hideSkipButtons: !0,
-                            compactTimeDisplay: !0,
-                            autoHideVolumeSlider: !0,
+                            hideSkipButtons: !u,
+                            compactTimeDisplay: !u || m,
+                            autoHideVolumeSlider: !u || m,
+                            floatingVolumeSlider: u && m,
+                            hidePlaybackSpeedBtn: !!u && !!m && "inline",
                             autoSizeControlBar: !0,
                         }),
-                        (0, a.jsx)(A._z, {
+                        (0, a.jsx)(S._z, {
                             alt: n.description,
                             disableAltTextDisplay: t.disableAltTextDisplay,
                             hiddenSpoilers: t.hiddenSpoilers,
@@ -183,7 +187,7 @@ function k(e) {
 }
 function M(e) {
     let t = e.item.originalItem;
-    return (0, A.gL)({ ...e, fileSize: t.size, fileName: (0, _.A)(t), src: t.url });
+    return (0, S.gL)({ ...e, fileSize: t.size, fileName: (0, _.A)(t), src: t.url });
 }
 function w(e) {
     let { message: t, item: i } = e,
@@ -229,7 +233,7 @@ function w(e) {
             },
             [t],
         );
-    return (0, A.P$)({
+    return (0, S.P$)({
         ...e,
         fileSize: a.size,
         fileName: (0, _.A)(a),
@@ -244,9 +248,9 @@ function w(e) {
 }
 function E(e) {
     let t = e.item.originalItem;
-    return (0, A._d)({ ...e, url: t.url, fileName: (0, _.A)(t), fileSize: t.size, contentType: t.content_type });
+    return (0, S._d)({ ...e, url: t.url, fileName: (0, _.A)(t), fileSize: t.size, contentType: t.content_type });
 }
 function z(e) {
     let t = e.item.originalItem;
-    return (0, A.Dk)({ ...e, url: t.url, fileName: (0, _.A)(t), fileSize: t.size });
+    return (0, S.Dk)({ ...e, url: t.url, fileName: (0, _.A)(t), fileSize: t.size });
 }
