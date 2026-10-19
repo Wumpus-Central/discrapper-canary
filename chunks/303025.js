@@ -98,8 +98,8 @@ function q(e) {
 var Z = n(649975),
     z = n(750532),
     $ = n(216641),
-    Q = n(377058);
-function J(e) {
+    J = n(377058);
+function Q(e) {
     let {
             handlePaymentSourceAdd: t,
             isTrial: n,
@@ -118,7 +118,7 @@ function J(e) {
             }),
             [s, n, d],
         );
-    return (0, l.jsx)(Q.N, {
+    return (0, l.jsx)(J.N, {
         label: o,
         disabled: a,
         onPaymentSourceAdd: t,
@@ -149,7 +149,7 @@ function en(e) {
             shouldDisallowPlanSelection: W,
             expressCheckoutSubmitting: V,
             shouldExpressCheckoutBeVisible: Y,
-            premiumPlanOptions: Q,
+            premiumPlanOptions: J,
         } = (0, h.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
             checkoutPriceOptions: e.checkoutPriceOptions,
@@ -313,7 +313,7 @@ function en(e) {
             () => null != eh && null != eh.discount && null != ev && (0, I.Ro)(ev, eh.discount.id),
             [eh, ev],
         ),
-        eT = (0, l.jsx)(J, {
+        eT = (0, l.jsx)(Q, {
             label: N.intl.string(N.t["u+Cw58"]),
             handlePaymentSourceAdd: k,
             isTrial: eo,
@@ -460,7 +460,7 @@ function en(e) {
                       disabled: em || V,
                       selectedPlanId: el,
                       priceOptions: eD,
-                      planOptions: Q,
+                      planOptions: J,
                       subscriptionPeriodEnd: ec,
                       planPricesLoading: eU,
                   })

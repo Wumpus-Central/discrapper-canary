@@ -1,12 +1,12 @@
-n.d(t, { A: () => l, H: () => r });
+n.d(t, { A: () => l, H: () => a });
 var i,
-    a = n(945810),
-    r =
+    r = n(945810),
+    a =
         (((i = {})[(i.NONE = 0)] = "NONE"),
         (i[(i.PHASE_ONE = 1)] = "PHASE_ONE"),
         (i[(i.PHASE_TWO = 2)] = "PHASE_TWO"),
         i);
-let l = (0, a.mj)({
+let l = (0, r.mj)({
     name: "2026-10-macaron",
     kind: "user",
     defaultConfig: { enabled: !1, phase: 0 },

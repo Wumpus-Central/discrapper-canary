@@ -235,13 +235,13 @@ function R(e) {
         {
             shouldExpressCheckoutBeVisible: z,
             isExpressCheckoutEnabledForPaymentSelect: $,
-            shouldDisablePaymentSelect: Q,
+            shouldDisablePaymentSelect: J,
         } = K,
-        { dropdownCurrencies: J, displayCurrency: X } = (0, x.Jn)(),
+        { dropdownCurrencies: Q, displayCurrency: X } = (0, x.Jn)(),
         ee = i.useCallback(() => {
             (k(!0), Z());
         }, [Z]),
-        et = i.useMemo(() => q || Q || (h ?? !1), [q, Q, h]),
+        et = i.useMemo(() => q || J || (h ?? !1), [q, J, h]),
         { giftCardCheckboxProps: en, disabled: el } = i.useMemo(
             () =>
                 null != T
@@ -263,11 +263,11 @@ function R(e) {
                 return {
                     label: g.intl.string(g.t["/AAR02"]),
                     selectedCurrency: V.currency ?? X,
-                    currencies: J,
+                    currencies: Q,
                     onChange: Y,
                     disabled: el,
                 };
-        }, [y, V.currency, X, J, Y, el]),
+        }, [y, V.currency, X, Q, Y, el]),
         es = i.useMemo(() => ({ ...F, ...p, onPaymentSourceAdd: E }), [F, E, p]),
         eo = null != en && en.checked,
         eu = W || U || ei,

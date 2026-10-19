@@ -491,10 +491,10 @@ function q(e) {
         Z = v === p.h.PURCHASING || v === p.h.COMPLETED,
         z = O?.isPausedAllowsResumeButNotUpdates,
         $ = r.useRef(null),
-        [Q, J] = r.useState(null),
+        [J, Q] = r.useState(null),
         [X, ee] = r.useState(void 0),
         et = r.useMemo(
-            () => ({ unifiedSubscriptionDetailsNode: $, setUnifiedPlainNoticeText: J, setOverrideRenewalDate: ee }),
+            () => ({ unifiedSubscriptionDetailsNode: $, setUnifiedPlainNoticeText: Q, setOverrideRenewalDate: ee }),
             [],
         ),
         { content: en, isInvoiceBilledImmediately: el } =
@@ -630,7 +630,7 @@ function q(e) {
         isPremiumGroupPurchase: H,
         paymentRestrictionBannerType: er,
         invoiceError: I,
-        unifiedPlainNoticeText: Q,
+        unifiedPlainNoticeText: J,
         invoicePreview: b,
         invoicePreviewComponent: en,
         shouldShowPlanSelectAndPromoBanner: ed,

@@ -244,8 +244,8 @@ var q = n(901930),
     Z = n(19311),
     z = n(626584),
     $ = n(427262),
-    Q = n(276858);
-let J = new z.A("AddPaymentMethodStepContext.tsx"),
+    J = n(276858);
+let Q = new z.A("AddPaymentMethodStepContext.tsx"),
     X = a.createContext(null);
 function ee(e) {
     let { children: t, ...n } = e,
@@ -257,17 +257,17 @@ function ee(e) {
             },
             [s],
         ),
-        d = (0, Q.wD)({
+        d = (0, J.wD)({
             step: o,
             continueSessionToInitialStep: i,
             handleStepChange: l,
-            logger: J,
+            logger: Q,
             shouldLogOnChangeEvents: u || !1,
             onBillingAddressChange: c,
         }),
         { returnToPaymentElementStep: m, remountAddressElement: p } = d,
         h = a.useCallback(() => {
-            (l(M.pn.ADDRESS), Q.Ky.includes(o) && p());
+            (l(M.pn.ADDRESS), J.Ky.includes(o) && p());
         }, [l, p, o]),
         C = a.useCallback(
             (e) => {
@@ -943,8 +943,8 @@ let eZ = function (e) {
 };
 var ez = n(31823),
     e$ = n(883645),
-    eQ = n(25149),
-    eJ = n(364840),
+    eJ = n(25149),
+    eQ = n(364840),
     eX = n(73825),
     e0 = n(558620),
     e2 = n(36167),
@@ -1047,7 +1047,7 @@ function tl(e) {
 }
 function ti(e) {
     let { onPrimaryClick: t, onBackClick: n } = e;
-    return (0, r.jsx)(eJ.j, {
+    return (0, r.jsx)(eQ.j, {
         children: (0, r.jsxs)("div", {
             className: tn.kL,
             children: [
@@ -1498,7 +1498,7 @@ function tb(e) {
             stripeAddressElementProps: E,
             addressElementKey: S,
         } = i;
-    return (0, r.jsx)(Q._i, {
+    return (0, r.jsx)(J._i, {
         step: s,
         analyticsContext: null != n ? { activitySessionId: d, contextMetadata: u, analyticsData: n } : void 0,
         paymentElementSelectedType: h,
@@ -1511,7 +1511,7 @@ function tb(e) {
             (m(), a(), l(M.pn.CREDIT_CARD_INFORMATION));
         },
         paymentElementFooter: p
-            ? (0, r.jsx)(eQ.Z4, {
+            ? (0, r.jsx)(eJ.Z4, {
                   className: tf.SO,
                   stackingBehavior: "stack",
                   onComplete: () => {
@@ -1720,15 +1720,15 @@ function tD(e) {
             },
             [Y, w, F, c, y, K],
         ),
-        { setPaymentSourceId: $, setBillingAddressState: Q } = t,
-        J = a.useCallback(
+        { setPaymentSourceId: $, setBillingAddressState: J } = t,
+        Q = a.useCallback(
             (e) => {
                 ($(e.id), z(e));
             },
             [$, z],
         ),
         X = (0, s.bG)([j.A], () => j.A.redirectedPaymentSourceId),
-        et = { completeSteps: J, setIsSubmittingCurrentStep: t.setIsSubmittingCurrentStep },
+        et = { completeSteps: Q, setIsSubmittingCurrentStep: t.setIsSubmittingCurrentStep },
         en = a.useRef(et);
     (a.useEffect(() => {
         en.current = et;
@@ -1761,18 +1761,18 @@ function tD(e) {
                 continueSessionToInitialStep: A,
                 currentStep: F,
                 paymentMethodSteps: W,
-                setBillingAddressState: Q,
+                setBillingAddressState: J,
                 redirectToCardInput: el,
                 paymentElementOnNextCallback: er,
                 setFallbackCardPaymentMethodSteps: ea,
                 onComplete: c,
                 onReturn: u,
-                completeSteps: J,
+                completeSteps: Q,
                 analyticsLocation: h,
                 analyticsData: C,
                 overwriteSubscriptionPaymentSource: E,
             }),
-            [Y, A, F, W, Q, el, er, ea, h, c, u, J, C, E],
+            [Y, A, F, W, J, el, er, ea, h, c, u, Q, C, E],
         );
     if (!(F in tN))
         throw new _.v({ message: `Unexpected Add Payment sub-step: ${F}`, extraSentryInformation: { currentStep: F } });
@@ -1886,8 +1886,8 @@ function tU(e) {
     }, []);
     let [K, q] = a.useState(!1),
         [Z, z] = a.useState(!1),
-        [$, Q] = a.useState(null),
-        J = a.useRef(null),
+        [$, J] = a.useState(null),
+        Q = a.useRef(null),
         {
             isAuthenticating: X,
             purchaseTokenAuthState: ee,
@@ -1899,7 +1899,7 @@ function tU(e) {
         }));
     return (
         a.useEffect(() => {
-            null != $ && null != J.current && J.current.scrollIntoView({ behavior: "smooth" });
+            null != $ && null != Q.current && Q.current.scrollIntoView({ behavior: "smooth" });
         }, [$]),
         {
             paymentSources: n,
@@ -1923,8 +1923,8 @@ function tU(e) {
             paymentError: null != V ? V : G,
             paymentAuthenticationState: Y ? b.oc.PENDING : null != V ? b.oc.ERROR : b.oc.NONE,
             purchaseError: $,
-            setPurchaseError: Q,
-            purchaseErrorBlockRef: J,
+            setPurchaseError: J,
+            purchaseErrorBlockRef: Q,
             isAuthenticating: X,
             purchaseTokenAuthState: ee,
             purchaseTokenHash: et,

@@ -236,18 +236,18 @@ async function z(e) {
     await Z(e, (e) => !e.get("isOrderLocked") || null);
 }
 var $ = n(26279);
-function Q(e, t) {
+function J(e, t) {
     let { order: n } = e;
     return null == n || n.id !== t.id || n.revision <= t.revision || n.status === $.Re.SIGNING_IN_PROGRESS ? null : n;
 }
-let J = [1e3, 2e3, 4e3, 8e3, 1e4];
+let Q = [1e3, 2e3, 4e3, 8e3, 1e4];
 function X(e, t) {
     let { order: n, setOrder: l } = e.getState();
     null != n && n.id === t.id && t.revision > n.revision && l(t);
 }
 async function ee(e, t, n) {
     for (let l = 0; ; l++) {
-        if ((await new Promise((e) => setTimeout(e, J[Math.min(l, J.length - 1)])), !n() || null != Q(e.getState(), t)))
+        if ((await new Promise((e) => setTimeout(e, Q[Math.min(l, Q.length - 1)])), !n() || null != J(e.getState(), t)))
             return;
         let i = await (0, m.r$)(t.id);
         null != i && n() && X(e, i);
@@ -353,7 +353,7 @@ function en(e) {
         {
             activeSubscription: W,
             selectedSkuId: K,
-            invoicePreview: J,
+            invoicePreview: Q,
             setHasAcceptedTerms: en,
             setPurchaseState: el,
             contextMetadata: ei,
@@ -447,7 +447,7 @@ function en(e) {
         (a()(null != K, "SKU must be selected for one-time purchases"),
         (e$ = ev[K] ?? null),
         a()(null != e$, "SKU must exist and be fetched."));
-    let eQ = i.useCallback(() => {
+    let eJ = i.useCallback(() => {
             (el(P.h.PURCHASING),
                 en(!0),
                 eV(!0),
@@ -455,17 +455,17 @@ function en(e) {
                 ea(null),
                 b.default.track(g.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...n,
-                    subtotal: J?.subtotal,
-                    tax: J?.tax,
-                    expected_amount: J?.total,
-                    expected_currency: J?.currency,
+                    subtotal: Q?.subtotal,
+                    tax: Q?.tax,
+                    expected_amount: Q?.total,
+                    expected_currency: Q?.currency,
                     duration_ms: Date.now() - r,
                     gift_card_balance: eF,
                     gift_card_currency: eB,
                     virtual_currency_balance: eH,
                 }));
-        }, [el, en, ea, n, r, J, eF, eB, eH]),
-        eJ = i.useCallback(
+        }, [el, en, ea, n, r, Q, eF, eB, eH]),
+        eQ = i.useCallback(
             (e) => {
                 (el(P.h.FAIL),
                     ea(e),
@@ -486,7 +486,7 @@ function en(e) {
             order: ef,
             errorSource: "checkout_sign_order",
             onError: (e) => {
-                (eJ(e), ey(e));
+                (eQ(e), ey(e));
             },
         }),
         e2 = i.useCallback(
@@ -512,7 +512,7 @@ function en(e) {
             [D, G, ep, ed, em],
         );
     async function e4() {
-        (eQ(), eg(!0));
+        (eJ(), eg(!0));
         try {
             await e5();
         } finally {
@@ -521,8 +521,8 @@ function en(e) {
     }
     async function e7(e) {
         (X(eA, e), ee(eA, e, () => eq.current));
-        let t = await Z(eA, (t) => Q(t, e));
-        return t.status !== $.Re.SIGNED ? (eJ(new o.Ay(H.intl.string(H.t.khEaRI))), null) : t;
+        let t = await Z(eA, (t) => J(t, e));
+        return t.status !== $.Re.SIGNED ? (eQ(new o.Ay(H.intl.string(H.t.khEaRI))), null) : t;
     }
     async function e5() {
         let e = await (0, j.ob)(
@@ -559,8 +559,8 @@ function en(e) {
         }
         let t = e ?? eG;
         await y({
-            onPurchaseAttempt: eQ,
-            onPurchaseError: eJ,
+            onPurchaseAttempt: eJ,
+            onPurchaseError: eQ,
             onPurchaseComplete: e2,
             onPurchaseFinalize: e1,
             hasRedirectURL: eY,
@@ -581,7 +581,7 @@ function en(e) {
             referralCode: eu,
             loadId: ei.loadId,
             giftInfoOptions: ew,
-            invoicePreview: J,
+            invoicePreview: Q,
             quantity: ec,
             applyWalletBalance: eI,
         });

@@ -9,12 +9,12 @@ var l = n(477900),
     u = n(959);
 function d(e) {
     let { user: t, text: n, channel: a, textClassName: d, onPopoutClosed: m, enableDisplayNameStyles: h = !1 } = e,
-        x = r.useMemo(() => [t], [t]),
-        p = r.useRef(null),
+        p = r.useMemo(() => [t], [t]),
+        x = r.useRef(null),
         g = (0, o.a)({ displayNameStyles: t?.displayNameStyles });
     return (0, l.jsx)(u.A, {
-        targetElementRef: p,
-        participants: x,
+        targetElementRef: x,
+        participants: p,
         channel: a,
         onPopoutClosed: m,
         children: (e) =>
@@ -22,7 +22,7 @@ function d(e) {
                 ...e,
                 tag: "span",
                 children: (0, l.jsx)(s.E, {
-                    ref: p,
+                    ref: x,
                     className: h ? i()(d, g) : d,
                     variant: "text-sm/semibold",
                     color: "text-strong",

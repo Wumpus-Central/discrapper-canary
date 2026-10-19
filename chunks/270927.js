@@ -85,8 +85,8 @@ var G = n(951305),
     Z = n(977445),
     z = n(118982),
     $ = n(566980),
-    Q = n(319820),
-    J = n(52635);
+    J = n(319820),
+    Q = n(52635);
 function X(e) {
     return e.name;
 }
@@ -125,7 +125,7 @@ function en(e) {
 }
 function el(e) {
     let { application: t, sku: n } = e,
-        { isSocialLayerGameItem: i } = (0, Q.AO)({ sku: n }),
+        { isSocialLayerGameItem: i } = (0, J.AO)({ sku: n }),
         r = i ? j.intl.string(w.default.qwSlCO) : j.intl.string(w.default.iZe9Wy),
         a = i
             ? { header: t.name, headerIconSrc: f.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
@@ -138,7 +138,7 @@ function ei(e) {
 }
 function er(e) {
     let { sku: t } = e,
-        { product: n } = (0, Q.AO)({ sku: t }),
+        { product: n } = (0, J.AO)({ sku: t }),
         i = et(n),
         r =
             null != n
@@ -204,13 +204,13 @@ function ea(e) {
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
                     return e === o.C.SLAYER_STOREFRONT_CHECKOUT
-                        ? (0, l.jsx)(J.EB, {
+                        ? (0, l.jsx)(Q.EB, {
                               paymentSourceType: i,
                               skuId: n,
                               isGift: r,
                               hasSeparateAccountLinkNotice: !0,
                           })
-                        : (0, l.jsx)(J.T3, { paymentSourceType: i });
+                        : (0, l.jsx)(Q.T3, { paymentSourceType: i });
                 })(n, { skuId: I.id, paymentSourceType: p, isGift: f }),
             [n, I.id, p, f],
         ),
@@ -266,14 +266,14 @@ function ea(e) {
             additionalPaymentSourceDropdownProps: D,
             disabled: v,
         }),
-        { product: ee } = (0, Q.AO)({ sku: I }),
+        { product: ee } = (0, J.AO)({ sku: I }),
         { unifiedInvoiceSummaryProps: et, priceText: ea } = i.useMemo(
             () =>
                 (function (e) {
                     let { sku: t, invoicePreview: n } = e,
                         l = [];
                     if (null != n) {
-                        let { discount: e, basePrice: i, showTaxes: r } = (0, Q.yh)({ invoicePreview: n });
+                        let { discount: e, basePrice: i, showTaxes: r } = (0, J.yh)({ invoicePreview: n });
                         (l.push({ id: "sku", label: X(t), amount: i }),
                             null != e &&
                                 l.push({

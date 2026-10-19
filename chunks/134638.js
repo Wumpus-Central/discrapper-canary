@@ -115,7 +115,7 @@ function R(e) {
         {
             header: z,
             headerIconSrc: $,
-            guildForIcon: Q,
+            guildForIcon: J,
         } = (function (e) {
             let { skuId: t } = e;
             return (0, r.cf)(
@@ -138,7 +138,7 @@ function R(e) {
                 [t],
             );
         })({ skuId: c.skuId }),
-        J = null != Q ? (0, l.jsx)(m.Ay, { guild: Q, size: m.Ay.Sizes.SMOL }) : void 0,
+        Q = null != J ? (0, l.jsx)(m.Ay, { guild: J, size: m.Ay.Sizes.SMOL }) : void 0,
         { premiumGroupDiscountOffer: X } = (0, o.i)(),
         ee = (0, d.t4)((e) => e.premiumDiscountInfo),
         {
@@ -228,7 +228,7 @@ function R(e) {
         omitDefaultIconBackground: er,
         header: z,
         headerIconSrc: $,
-        headerIconComponent: J,
+        headerIconComponent: Q,
         bottomSubText: D,
         onClick: Y,
     });

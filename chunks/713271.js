@@ -1,6 +1,6 @@
-n.d(t, { N: () => a });
+n.d(t, { N: () => r });
 var i,
-    a =
+    r =
         (((i = {}).REFERRAL_PROGRAM = "referralProgram"),
         (i.SERVER_PROFILES = "serverProfiles"),
         (i.SHOW_YOUR_STYLE = "showYourStyle"),

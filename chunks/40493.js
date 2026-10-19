@@ -17,13 +17,13 @@ function A(e) {
         I = (0, d.T)(p?.asset),
         { enabled: T } = g.J.useConfig({ location: "GiftPromotionPopout" }),
         h = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
-        k = (0, u.dA)(h?.endDate),
-        N = null != k,
-        j = (0, c.Ay)(N),
+        N = (0, u.dA)(h?.endDate),
+        k = null != N,
+        j = (0, c.Ay)(k),
         _ = l.useRef(null);
     l.useEffect(() => {
-        !0 !== j || N || (n(), A(C.i.AUTO_DISMISS));
-    }, [j, N, n, A]);
+        !0 !== j || k || (n(), A(C.i.AUTO_DISMISS));
+    }, [j, k, n, A]);
     let y = {
         text: m.intl.string(m.t.Ve9Ge6),
         icon: r.GiftIcon,
@@ -44,8 +44,8 @@ function A(e) {
                 body: p?.body ?? "",
                 assetUrl: I ?? "",
                 badge:
-                    T && null != k
-                        ? { type: { text: k.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
+                    T && null != N
+                        ? { type: { text: N.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
                         : void 0,
                 action: y,
                 caretConfig: { align: "center" },

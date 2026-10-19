@@ -14,18 +14,18 @@ let o = function (e) {
             required: d = !1,
             style: m,
             title: h,
-            error: x,
-            titleId: p,
+            error: p,
+            titleId: x,
             ref: g,
             ...C
         } = e,
-        j = r.useId(),
         f = r.useId(),
-        v = p ?? j,
-        A = null != x ? f : void 0,
+        j = r.useId(),
+        v = x ?? f,
+        A = null != p ? j : void 0,
         [N, I] = r.useState(void 0),
         [y, E] = r.useState(void 0),
-        S = void 0 !== y;
+        b = void 0 !== y;
     return (0, l.jsx)("div", {
         ref: g,
         className: o ?? void 0,
@@ -34,21 +34,21 @@ let o = function (e) {
             "data-migration-pending": !0,
             titleId: v,
             errorId: A,
-            error: x ?? void 0,
+            error: p ?? void 0,
             isFocused: N,
             setIsFocused: I,
             hasValue: y,
             setHasValue: E,
             children: (0, l.jsxs)("div", {
-                className: S ? s.G : void 0,
+                className: b ? s.G : void 0,
                 children: [
-                    null != h || null != x
+                    null != h || null != p
                         ? (0, l.jsx)(i.z, {
                               "data-migration-pending": !0,
                               tag: u,
                               disabled: n,
                               required: d,
-                              error: x,
+                              error: p,
                               className: c,
                               id: v,
                               errorId: A,

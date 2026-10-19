@@ -1,4 +1,4 @@
-(i.d(t, { Fx: () => R, JH: () => T, SY: () => g, aV: () => v, fE: () => A, pF: () => N, zu: () => I }),
+(i.d(t, { Fx: () => g, JH: () => T, SY: () => R, aV: () => v, fE: () => A, pF: () => N, zu: () => I }),
     i(938796),
     i(321073));
 var l = i(582128),
@@ -73,7 +73,7 @@ function m(e) {
     }
     return n;
 }
-function g(e) {
+function R(e) {
     let t = m(e);
     ((E[e] = t),
         t.forEach((e) => {
@@ -81,7 +81,7 @@ function g(e) {
             o.h.dispatch({ type: "CHANNEL_CREATE", channel: t });
         }));
 }
-function R(e) {
+function g(e) {
     (E[e] ?? m(e)).forEach((e) => {
         o.h.dispatch({ type: "CHANNEL_DELETE", channel: e });
     });

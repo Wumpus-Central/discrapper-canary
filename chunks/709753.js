@@ -1,6 +1,6 @@
-n.d(t, { PI: () => S, WT: () => E, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
-var r = n(582128),
-    s = n(17928),
+n.d(t, { PI: () => E, WT: () => S, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
+var s = n(582128),
+    r = n(17928),
     o = n(73153),
     i = n(975189),
     l = n(569319);
@@ -9,9 +9,9 @@ let a = [],
     d = new Map();
 function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : (e) => e;
-    return e.length === t.length && e.every((e, r) => n(e) === n(t[r]));
+    return e.length === t.length && e.every((e, s) => n(e) === n(t[s]));
 }
-class p extends s.Ay.Store {
+class p extends r.Ay.Store {
     getApprovals(e) {
         return c.get(e) ?? a;
     }
@@ -25,11 +25,11 @@ let h = new p(o.h, {
             return !u(c.get(t) ?? a, n, (e) => e.id) && (c.set(t, n), !0);
         },
         CONJURE_HOST_ACCESS_SET(e) {
-            let { projectId: t, requireApproval: n, allowedHosts: r } = e,
-                s = d.get(t);
+            let { projectId: t, requireApproval: n, allowedHosts: s } = e,
+                r = d.get(t);
             return (
-                !(s?.requireApproval === n && u(s.allowedHosts, r)) &&
-                (d.set(t, { requireApproval: n, allowedHosts: r }), !0)
+                !(r?.requireApproval === n && u(r.allowedHosts, s)) &&
+                (d.set(t, { requireApproval: n, allowedHosts: s }), !0)
             );
         },
     }),
@@ -57,11 +57,11 @@ function f(e, t, n) {
 function g(e, t) {
     return (0, i.b4)(e, "allowed hosts", (e) => e.sendHostAccess({ type: "set_host_access", remove_host: t }));
 }
-function E(e) {
-    return (0, s.bG)([h], () => h.getApprovals(e), [e]);
-}
 function S(e) {
-    return (0, s.bG)(
+    return (0, r.bG)([h], () => h.getApprovals(e), [e]);
+}
+function E(e) {
+    return (0, r.bG)(
         [h],
         () => {
             let t = h.getAccess(e);
@@ -71,8 +71,8 @@ function S(e) {
     );
 }
 function m(e) {
-    let t = (0, s.bG)([h], () => h.getAccess(e)?.requireApproval ?? null, [e]),
-        n = r.useCallback(
+    let t = (0, r.bG)([h], () => h.getAccess(e)?.requireApproval ?? null, [e]),
+        n = s.useCallback(
             (t) =>
                 (0, i.b4)(e, "host approval setting", (e) =>
                     e.sendHostAccess({ type: "set_host_access", require_approval: t }),

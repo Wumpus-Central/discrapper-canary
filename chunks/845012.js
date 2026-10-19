@@ -68,7 +68,7 @@ function v(e) {
             },
             [z],
         ),
-        Q = (function (e, t) {
+        J = (function (e, t) {
             let {
                     disabled: n,
                     planPricesLoading: l,
@@ -212,7 +212,7 @@ function v(e) {
                   (0, l.jsx)(d.me, {
                       headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
                       headingSubText: q,
-                      planRadioOptions: Q,
+                      planRadioOptions: J,
                       value: R?.id ?? "",
                       onChange: $,
                   }),

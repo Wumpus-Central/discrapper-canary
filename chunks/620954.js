@@ -70,15 +70,15 @@ function g(e, t, n) {
     }
 }
 var N = n(651892),
-    v = n(792620),
-    P = n(190107),
+    P = n(792620),
+    v = n(190107),
     L = n(652215),
     h = n(105292);
 function R(e) {
-    let t = (0, v.t)({ quest: e }) || (0, v.fE)({ quest: e }) || (0, v.I6)(e),
-        n = (0, v.uD)(e),
+    let t = (0, P.t)({ quest: e }) || (0, P.fE)({ quest: e }) || (0, P.I6)(e),
+        n = (0, P.uD)(e),
         r = [];
-    return (t && r.push(P.fO.DESKTOP), n && r.push(P.fO.CONSOLE), r);
+    return (t && r.push(v.fO.DESKTOP), n && r.push(v.fO.CONSOLE), r);
 }
 function b(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
@@ -94,8 +94,8 @@ function b(e) {
     return n;
 }
 function y(e) {
-    let t = (0, v.vv)(e),
-        n = (0, v.vl)(e);
+    let t = (0, P.vv)(e),
+        n = (0, P.vl)(e);
     return t || n;
 }
 var M = (((r = {}).DESKTOP = "desktop"), (r.XBOX = "xbox"), (r.PLAYSTATION = "playstation"), r);
@@ -278,7 +278,7 @@ function K(e, t) {
             C = null != A ? (0, d.vV)(i.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
             I = Q(i),
             N = null != C && null != A ? () => (0, f.FW)({ impressionId: A }) : void 0;
-        function v(e) {
+        function P(e) {
             "custom" === e
                 ? (0, a.r)({
                       type: c.F.CLICK_INTERNAL,
@@ -312,7 +312,7 @@ function K(e, t) {
                     });
         }
         if (o && null == N) {
-            ((0, s.A)(l), v(!1));
+            ((0, s.A)(l), P(!1));
             return;
         }
         q({
@@ -358,7 +358,7 @@ function K(e, t) {
                 })({ adContentId: r, adCreativeType: u, trackingCtx: t, overlaySurface: e }),
             appStoreOverlayCarouselScrollContext: { adContentId: r },
             getIosAttribution: N,
-        }).then(v);
+        }).then(P);
     })({ adContentId: n, adCreativeType: r, cta: u }, t, { preferExternalAppStore: !1 });
 }
 function H(e, t) {

@@ -13,13 +13,13 @@
     YW: () => eU,
     zW: () => ez,
     NC: () => ep,
-    Hv: () => eP,
+    Hv: () => ev,
     j$: () => eQ,
     fc: () => ew,
     SD: () => eg,
     aC: () => eY,
     FA: () => eJ,
-    LS: () => ev,
+    LS: () => eP,
     p5: () => e0,
     Ns: () => e6,
     Iq: () => eO,
@@ -70,8 +70,8 @@ var A = n(517846),
 n(674658);
 var g = n(27620),
     N = n(773669),
-    v = n(885386),
-    P = n(734057),
+    P = n(885386),
+    v = n(734057),
     L = n(30370),
     h = n(287809),
     R = n(174459),
@@ -438,7 +438,7 @@ function eO() {
     );
 }
 function eg(e, t) {
-    let n = ev(e),
+    let n = eP(e),
         r = (0, Z.ks)(e.config),
         u = (0, Z.KK)(e.config),
         i = t !== J.MA.INELIGIBLE;
@@ -454,14 +454,14 @@ function eN(e) {
         [e],
     );
 }
-function ev(e) {
+function eP(e) {
     return (0, I.bG)([Q.A], () => null != e && Q.A.isQuestExpired(e.id), [e]);
 }
-function eP() {
+function ev() {
     return (0, I.bG)([Q.A], () => Q.A.isQuestAccessSuspended, []);
 }
 function eL(e, t, n) {
-    let r = (0, I.bG)([P.A], () => P.A.getChannel(t?.channelId) ?? null),
+    let r = (0, I.bG)([v.A], () => v.A.getChannel(t?.channelId) ?? null),
         u = (0, I.bG)([Q.A], () => null != Q.A.questEnrollmentBlockedUntil, []),
         i = (0, I.bG)([h.default], () => h.default.getCurrentUser()?.id),
         o = (0, I.bG)([Q.A], () => null != e && Q.A.isQuestExpired(e.id), [e]);
@@ -544,7 +544,7 @@ function eU(e) {
             let n = (0, et.$e)(t, er.zO);
             return (0, $.BM)(n, e);
         }, [e, t, n]);
-    return ev(r) ? null : r;
+    return eP(r) ? null : r;
 }
 function eQ(e) {
     return o.useMemo(
@@ -709,7 +709,7 @@ function eY(e) {
     let t = ek(e),
         n = ew(e),
         [r] = eV(e, n),
-        u = ev(e),
+        u = eP(e),
         i = e.userStatus?.enrolledAt != null,
         o = e.userStatus?.completedAt != null,
         l = f.o.DESKTOP.has(n.taskType) && n.percentComplete > 0,
@@ -802,7 +802,7 @@ function e0() {
 }
 function e1(e) {
     let t = e?.userStatus != null && (0, W.gO)(e.userStatus, q.uF.ACTIVITY_PANEL),
-        n = ev(e ?? null),
+        n = eP(e ?? null),
         r = e?.userStatus?.claimedAt != null,
         u = (0, I.bG)([Q.A], () => null != Q.A.questEnrollmentBlockedUntil, []);
     return !t && !n && !r && !u;
@@ -863,7 +863,7 @@ function e3(e) {
     }, [t, n]);
 }
 function e4(e) {
-    let t = v.H1.useSetting(),
+    let t = P.H1.useSetting(),
         n = e.userStatus?.enrolledAt != null;
     return o.useCallback(() => {
         if (n) return;

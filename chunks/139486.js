@@ -49,17 +49,17 @@ function I(e) {
         I = (0, a.bG)([u.default], () => u.default.getCurrentUser()?.hasHadPremium() ?? !1),
         T = (0, c.HX)(o.M.NEW_GIFTING_BADGES_COACHMARK),
         h = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
-        k = p && !T && d,
-        N = k && !b && I,
-        j = k && b && null == h;
+        N = p && !T && d,
+        k = N && !b && I,
+        j = N && b && null == h;
     return (i.useEffect(() => {
-        j ? (0, r.Ay)(l.$.GIFTING) : N && (0, r.o0)(l.$.GIFTING);
-    }, [N, j]),
+        j ? (0, r.Ay)(l.$.GIFTING) : k && (0, r.o0)(l.$.GIFTING);
+    }, [k, j]),
     b)
-        ? k && null != h && !h.hidden && (I || h.owned)
+        ? N && null != h && !h.hidden && (I || h.owned)
             ? "noCount"
             : null
-        : k && I && null != h
+        : N && I && null != h
           ? "count"
           : null;
 }
