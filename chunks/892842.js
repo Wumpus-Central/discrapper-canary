@@ -147,6 +147,7 @@ let I = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
     new f("2026-10-uimanager-experiments", "UIManager Experiments", 3),
     new _("2026-10-android-ui-manager-constants-cache", "Android UIManager Constants Cache"),
     new _("2026-09-ios-callkit-connected-on-rtc", "iOS: show CallKit connected only once voice flows"),
+    new _("2026-10-ios-jank-per-screen", "iOS Per-Screen Jank Aggregation"),
     new _(
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
