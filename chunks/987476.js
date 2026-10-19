@@ -711,16 +711,16 @@ function e6(e) {
         }),
     });
 }
-var e8 = l(189043);
-function e4(e) {
+var e4 = l(189043);
+function e8(e) {
     let { guildId: t, entries: l, stat: n, games: s, currentUserEntry: a, currentUserPillarRef: r, onClick: d } = e,
         c = {
-            1: { column: e8.HC, pillar: e8.P5 },
-            2: { column: e8.th, pillar: e8.Vk },
-            3: { column: e8.Ou, pillar: e8.el },
+            1: { column: e4.HC, pillar: e4.P5 },
+            2: { column: e4.th, pillar: e4.Vk },
+            3: { column: e4.Ou, pillar: e4.el },
         };
     return (0, i.jsx)("div", {
-        className: e8.pI,
+        className: e4.pI,
         role: "list",
         "aria-label": E.intl.string(et.default.wKXLfQ),
         children: l.map((e, l) =>
@@ -765,24 +765,24 @@ function e9(e) {
         _ = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
-                    className: e8.R3,
+                    className: e4.R3,
                     children: [
                         (0, i.jsx)(U.eu, {
                             size: g,
                             src: h.user?.getAvatarURL(t, (0, G.FT)(g)) ?? void 0,
                             "aria-hidden": !0,
                         }),
-                        (0, i.jsx)(v, { className: e8.dR, alt: "", ariaHidden: !0 }),
+                        (0, i.jsx)(v, { className: e4.dR, alt: "", ariaHidden: !0 }),
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: p()(e8.DX, r),
+                    className: p()(e4.DX, r),
                     children: [
                         (0, i.jsx)(b.D, {
                             variant: "heading-sm/semibold",
                             color: "text-default",
                             lineClamp: 1,
-                            className: e8.IY,
+                            className: e4.IY,
                             children: (0, i.jsx)(P.g, {
                                 name: h.displayName,
                                 colorString: h.member?.colorString ?? null,
@@ -815,7 +815,7 @@ function e9(e) {
                       children: (e) =>
                           (0, i.jsx)(w.D, {
                               ...e,
-                              className: e8.fs,
+                              className: e4.fs,
                               innerRef: j,
                               onClick: (t) => {
                                   (m?.(), e.onClick(t));
@@ -823,7 +823,7 @@ function e9(e) {
                               children: _,
                           }),
                   })
-                : (0, i.jsx)("div", { className: e8.fs, children: _ }),
+                : (0, i.jsx)("div", { className: e4.fs, children: _ }),
     });
 }
 var e7 = l(652215),
@@ -984,7 +984,7 @@ function te(e) {
                                 ref: b,
                                 children: [
                                     _ &&
-                                        (0, i.jsx)(e4, {
+                                        (0, i.jsx)(e8, {
                                             guildId: t,
                                             entries: N,
                                             stat: d,
@@ -1719,8 +1719,8 @@ function t2(e) {
 }
 var t3 = l(831544),
     t6 = l(28863),
-    t8 = l(148166),
-    t4 = l(427209),
+    t4 = l(148166),
+    t8 = l(427209),
     t9 = l(294454),
     t7 = l(605810);
 function t5(e) {
@@ -1731,7 +1731,7 @@ function t5(e) {
             text: E.intl.string(E.t.RDE0Sc),
             ariaHidden: !0,
             children: (0, i.jsx)(x.K, {
-                icon: t4.A,
+                icon: t8.A,
                 size: "sm",
                 variant: "overlay-secondary",
                 tabIndex: n,
@@ -1766,10 +1766,7 @@ function t5(e) {
                                 l.e("650195"),
                                 l.e("67702"),
                                 l.e("662387"),
-                                l.e("85427"),
-                                l.e("247917"),
-                                l.e("89530"),
-                                l.e("296956"),
+                                l.e("31544"),
                                 l.e("629972"),
                                 l.e("334168"),
                                 l.e("582012"),
@@ -1778,9 +1775,14 @@ function t5(e) {
                                 l.e("327545"),
                                 l.e("860640"),
                                 l.e("681801"),
+                                l.e("85427"),
+                                l.e("247917"),
+                                l.e("967850"),
                                 l.e("179652"),
                                 l.e("916885"),
-                                l.e("826139"),
+                                l.e("272804"),
+                                l.e("915170"),
+                                l.e("449933"),
                                 l.e("405714"),
                                 l.e("360732"),
                                 l.e("352456"),
@@ -1982,7 +1984,7 @@ function t5(e) {
                                 l.e("509793"),
                                 l.e("577084"),
                                 l.e("332470"),
-                                l.e("168219"),
+                                l.e("696374"),
                                 l.e("710638"),
                                 l.e("193158"),
                                 l.e("318546"),
@@ -2077,7 +2079,7 @@ function lt(e) {
             }),
             [t.artist_external_id, t.artist_name, n],
         ),
-        r = (0, i.jsx)(t8.R, { src: n, isCircular: !0, FallbackIcon: t3.MicrophoneIcon });
+        r = (0, i.jsx)(t4.R, { src: n, isCircular: !0, FallbackIcon: t3.MicrophoneIcon });
     return null == t.artist_name
         ? (0, i.jsx)("div", { className: t7.Nr, children: (0, i.jsx)("div", { ...l, className: t7.MT, children: r }) })
         : (0, i.jsxs)("div", {
@@ -2833,27 +2835,27 @@ function l6(e) {
               ],
           });
 }
-var l8 = l(717683);
-function l4(e) {
+var l4 = l(717683);
+function l8(e) {
     let { isCompact: t } = e;
     return (0, i.jsxs)("div", {
-        className: l8.qV,
+        className: l4.qV,
         "aria-hidden": !0,
         children: [
             (0, i.jsx)("div", {
-                className: p()(l8.Dk, { [l8.yI]: t }),
+                className: p()(l4.Dk, { [l4.yI]: t }),
                 children: Array.from({ length: 10 }, (e, t) =>
                     (0, i.jsxs)(
                         "div",
                         {
-                            className: l8.Nr,
+                            className: l4.Nr,
                             children: [
-                                (0, i.jsx)("div", { className: p()(l8.om, l8.xX) }),
+                                (0, i.jsx)("div", { className: p()(l4.om, l4.xX) }),
                                 (0, i.jsxs)("div", {
-                                    className: l8.Qq,
+                                    className: l4.Qq,
                                     children: [
-                                        (0, i.jsx)("div", { className: p()(l8.om, l8.DD) }),
-                                        (0, i.jsx)("div", { className: p()(l8.om, l8.VA) }),
+                                        (0, i.jsx)("div", { className: p()(l4.om, l4.DD) }),
+                                        (0, i.jsx)("div", { className: p()(l4.om, l4.VA) }),
                                     ],
                                 }),
                             ],
@@ -2863,10 +2865,10 @@ function l4(e) {
                 ),
             }),
             (0, i.jsxs)("div", {
-                className: p()(l8.yp, { [l8.Fl]: t }),
+                className: p()(l4.yp, { [l4.Fl]: t }),
                 children: [
-                    (0, i.jsx)("div", { className: p()(l8.om, l8.Pl) }),
-                    (0, i.jsx)("div", { className: p()(l8.om, l8._0) }),
+                    (0, i.jsx)("div", { className: p()(l4.om, l4.Pl) }),
+                    (0, i.jsx)("div", { className: p()(l4.om, l4._0) }),
                 ],
             }),
         ],
@@ -2897,7 +2899,7 @@ function l5(e) {
                 "aria-pressed": l,
                 onClick: () => n(t.track_external_id),
                 children: [
-                    (0, i.jsx)(t8.R, {
+                    (0, i.jsx)(t4.R, {
                         src: r,
                         isCircular: !1,
                         FallbackIcon: l9.T,
@@ -3464,7 +3466,7 @@ let nF = {
                             "aria-label": A ? void 0 : lb(h),
                             "aria-labelledby": A ? lE(c.id, h) : void 0,
                             children: (function () {
-                                if (v) return (0, i.jsx)(l4, { isCompact: x });
+                                if (v) return (0, i.jsx)(l8, { isCompact: x });
                                 if (null == o || "idle" === o.status || "loading" === o.status)
                                     return (0, i.jsx)(S, {});
                                 if ("error" === o.status) return (0, i.jsx)(C, {});

@@ -430,7 +430,7 @@ let eC = {
     stores: [eA.A],
     matches: (e, t, n, l, i) => n.length > 1,
     queryResults(e, t, n, l, i) {
-        let r = l.allowSoundmoji && (0, ep.AA)({ location: "queryResults" }),
+        let r = l.allowSoundmoji && (0, ep.A)({ location: "queryResults" }),
             s = l.allowStickers || r ? 0 : 40,
             u = eN.rs7 + s,
             {

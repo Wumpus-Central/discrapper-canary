@@ -18,7 +18,7 @@ var i = n(477900),
     N = n(885386),
     b = n(174459),
     f = n(652215);
-function E(e, t) {
+function A(e, t) {
     let { isPlaying: n, playSound: i } = (0, I.A)(null != e ? (0, g.A)(e.soundId) : null);
     return {
         isPlaying: n,
@@ -37,7 +37,7 @@ function E(e, t) {
         }, [t?.guild_id, t?.id, i, e?.guildId, e?.soundId, e?.volume]),
     };
 }
-var A = n(209932),
+var E = n(209932),
     v = n(807348),
     C = n(817232),
     S = n(734057),
@@ -58,9 +58,9 @@ function T(e) {
 }
 function k(e) {
     let { soundId: t } = e,
-        n = (0, a.bG)([A.A], () => A.A.getSoundById(t)),
-        s = (0, x.tj)({ location: "SoundboardMentionInline" }),
-        { isPlaying: l, playSound: r } = E(n);
+        n = (0, a.bG)([E.A], () => E.A.getSoundById(t)),
+        s = (0, x.t)({ location: "SoundboardMentionInline" }),
+        { isPlaying: l, playSound: r } = A(n);
     return s
         ? null == n
             ? (0, i.jsx)(T, {})
@@ -87,12 +87,12 @@ function P(e) {
 let G = function (e) {
     let { channelId: t, messageId: n, soundId: l, messageSounds: r, jumbo: o = !1 } = e,
         c = N.hH.useSetting(),
-        u = (0, a.bG)([A.A], () => A.A.getSoundById(l), [l]),
+        u = (0, a.bG)([E.A], () => E.A.getSoundById(l), [l]),
         x = s.useMemo(() => (0, h.A)(t, n, l, r) ?? u, [t, n, l, r, u]),
         g = (0, a.bG)([S.A], () => S.A.getChannel(t)),
         p = (0, m.X)({ location: "SoundboardMention" }),
         I = s.useRef(null),
-        { isPlaying: b, playSound: f } = E(x, g),
+        { isPlaying: b, playSound: f } = A(x, g),
         O = s.useCallback(async () => {
             (await f()) && I.current?.addAnimation();
         }, [f]);

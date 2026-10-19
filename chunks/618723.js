@@ -13,5 +13,4 @@ e.exports = {
     Lu: "premiumUpsell_c656ac",
     pQ: "nitroBottomDivider_c656ac",
     ij: "wishlistButton_c656ac",
-    f3: "soundmojiViewMore_c656ac",
 };

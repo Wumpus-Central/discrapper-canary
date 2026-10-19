@@ -25,7 +25,6 @@ var i,
         (i.FAVORITES = "FAVORITES"),
         (i.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI"),
         (i.PREMIUM_UPSELL = "PREMIUM_UPSELL"),
-        (i.SOUNDMOJI = "SOUNDMOJI"),
         (i.SUGGESTED = "SUGGESTED"),
         i);
 let o = "emoji-picker-grid";
@@ -43,7 +42,6 @@ var d =
         (r.SYMBOLS = "symbols"),
         (r.FLAGS = "flags"),
         (r.PREMIUM_UPSELL = "premium emoji"),
-        (r.SOUNDMOJI = "soundmoji"),
         (r.SUGGESTED = "suggested"),
         r),
     c = (((a = {}).NONE = ""), (a.TOP_GUILD_EMOJI = "top_server"), (a.NEWLY_ADDED_EMOJI = "newly_added"), a),

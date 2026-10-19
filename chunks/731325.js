@@ -18,7 +18,7 @@ var l = n(477900),
     S = n(761929),
     y = n(666860),
     A = n(131607),
-    C = n(989040),
+    C = n(90295),
     b = n(490035),
     I = n(934499),
     v = n(813703),
@@ -1986,7 +1986,7 @@ let nf = 498 + nd.as.MEDIUM,
             $ = (0, k.ZO)(O),
             { renderWindow: Q, windowDispatch: Z } = i.useContext(T.Ay),
             X = (0, d.bG)([R.A], () => !R.A.hasLoadedStickerPacks),
-            J = (0, j.tj)({ location: "expression_picker" }),
+            J = (0, j.t)({ location: "expression_picker" }),
             Y = (0, b.H)("expression_picker");
         i.useEffect(() => {
             Y && (0, I.Fp)();
@@ -2073,12 +2073,11 @@ let nf = 498 + nd.as.MEDIUM,
                             }),
                             (B.current = !0)));
             }));
-        let ep = i.useCallback((e, t) => w?.(e, "emoji_picker", t), [w]),
-            eg = i.useCallback((e, t) => w?.(e, "soundboard_picker", t), [w]),
-            ex = M.soundmoji?.allowSending === !0 && null != w,
-            eE = "left" === P ? "right" : "left",
-            eS = null != D ? D : "left" === P ? nm.sj : nm.Jg,
-            eb = er
+        let ep = i.useCallback((e, t) => w?.(e, "soundboard_picker", t), [w]),
+            eg = M.soundmoji?.allowSending === !0 && null != w,
+            ex = "left" === P ? "right" : "left",
+            eE = null != D ? D : "left" === P ? nm.sj : nm.Jg,
+            eS = er
                 ? (0, l.jsx)(np, {
                       id: nd.g9,
                       "aria-controls": nd.ni,
@@ -2088,7 +2087,7 @@ let nf = 498 + nd.as.MEDIUM,
                       children: eC.intl.string(eC.t["6gUTsS"]),
                   })
                 : null,
-            eI = es
+            eb = es
                 ? (0, l.jsx)(np, {
                       id: eG.LD,
                       "aria-controls": eG.GX,
@@ -2099,7 +2098,7 @@ let nf = 498 + nd.as.MEDIUM,
                       children: (0, l.jsx)("div", { className: nm.dG, children: eC.intl.string(eC.t.nf1s3u) }),
                   })
                 : null,
-            ev = (0, l.jsx)(np, {
+            eI = (0, l.jsx)(np, {
                 id: nd.k1,
                 "aria-controls": nd.Do,
                 "aria-selected": q === eA.kx.EMOJI,
@@ -2110,7 +2109,7 @@ let nf = 498 + nd.as.MEDIUM,
         return (0, l.jsx)(E.A, {
             section: ey.JJy.EXPRESSION_PICKER,
             children: (0, l.jsx)(N.nE, {
-                className: s()(nm.T8, eS),
+                className: s()(nm.T8, eE),
                 targetRef: t,
                 position: L,
                 align: P,
@@ -2130,7 +2129,7 @@ let nf = 498 + nd.as.MEDIUM,
                                   style: { width: null == H ? void 0 : H, [P]: 0 },
                                   ref: G,
                                   children: [
-                                      (0, l.jsx)("div", { className: nm.Di, onMouseDown: z, style: { [eE]: -2 } }),
+                                      (0, l.jsx)("div", { className: nm.Di, onMouseDown: z, style: { [ex]: -2 } }),
                                       (0, l.jsxs)("div", {
                                           className: s()(nm.FG, { [nm.$D]: et }),
                                           children: [
@@ -2142,11 +2141,11 @@ let nf = 498 + nd.as.MEDIUM,
                                                             role: "tablist",
                                                             "aria-label": eC.intl.string(eC.t["2j4Vgd"]),
                                                             children: [
+                                                                eS,
                                                                 eb,
                                                                 eI,
-                                                                ev,
                                                                 J &&
-                                                                    ex &&
+                                                                    eg &&
                                                                     (0, l.jsx)(np, {
                                                                         id: nd.N6,
                                                                         "aria-controls": nd.AA,
@@ -2201,12 +2200,9 @@ let nf = 498 + nd.as.MEDIUM,
                                                         showAddEmojiButton: null == O || null != O.guild_id,
                                                         closePopout: ec,
                                                         onSelectEmoji: a,
-                                                        onSelectSoundmoji: ep,
                                                         ref: (e) => {
                                                             K.current = e;
                                                         },
-                                                        shouldShowSoundmojiInEmojiPicker:
-                                                            M.soundmoji?.allowSending === !0,
                                                         isViewingEmojiPacks: et,
                                                         onViewEmojiPacksChange: Y ? F.ke : void 0,
                                                     })
@@ -2219,7 +2215,7 @@ let nf = 498 + nd.as.MEDIUM,
                                                             channel: O,
                                                             containerWidth: H,
                                                             onClose: ec,
-                                                            onSelect: eg,
+                                                            onSelect: ep,
                                                             analyticsSource: "expression-picker",
                                                             renderHeader: (e) =>
                                                                 (0, l.jsx)("div", { className: nm.BG, children: e }),
