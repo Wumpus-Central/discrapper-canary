@@ -139,10 +139,10 @@ let p = (0, c.Fe)({
             n.e("194704"),
             n.e("684290"),
             n.e("403643"),
-            n.e("422407"),
+            n.e("378010"),
             n.e("830560"),
             n.e("526575"),
-            n.e("588035"),
+            n.e("545934"),
             n.e("165291"),
             n.e("109383"),
             n.e("818291"),
@@ -380,7 +380,7 @@ let p = (0, c.Fe)({
             n.e("474610"),
             n.e("902564"),
             n.e("428967"),
-            n.e("64904"),
+            n.e("233928"),
             n.e("67878"),
             n.e("649362"),
             n.e("773534"),
@@ -529,10 +529,10 @@ function T(e) {
                 );
             }, [])),
             { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
-        P = r.useCallback(() => {
+        M = r.useCallback(() => {
             (L(!1), R && u?.());
         }, [u, R]),
-        M = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 (L(!R), null != e && "number" == typeof e && D(e), R ? u?.() : c?.());
             },
@@ -540,12 +540,12 @@ function T(e) {
         );
     r.useEffect(
         () => (
-            f._.subscribe(I.jej.TOGGLE_INBOX, M),
+            f._.subscribe(I.jej.TOGGLE_INBOX, P),
             () => {
-                f._.unsubscribe(I.jej.TOGGLE_INBOX, M);
+                f._.unsubscribe(I.jej.TOGGLE_INBOX, P);
             }
         ),
-        [M],
+        [P],
     );
     let U = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
     r.useEffect(() => {
@@ -553,9 +553,9 @@ function T(e) {
     });
     let w = r.useCallback(
             (e) => {
-                e.shiftKey || P();
+                e.shiftKey || M();
             },
-            [P],
+            [M],
         ),
         G = (0, E.Sc)();
     return (0, i.jsx)(d.f5, {
@@ -567,14 +567,14 @@ function T(e) {
             align: g,
             autoInvert: !1,
             shouldShow: R,
-            onRequestClose: P,
+            onRequestClose: M,
             renderPopout: function () {
                 return (0, i.jsx)(p, {
                     dialogClassName: C,
                     isScheduledMessagesEnabled: G,
                     tab: y,
                     setTab: D,
-                    closePopout: P,
+                    closePopout: M,
                     handleMentionsJump: w,
                     showTutorial: v,
                     setSeenTutorial: b,
@@ -585,7 +585,7 @@ function T(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return T(M, n, e, U);
+                return T(P, n, e, U);
             },
         }),
     });

@@ -1,0 +1,15 @@
+e.exports = {
+    mG: "noDrag_d68e4d",
+    kL: "container_d68e4d",
+    Nr: "card_d68e4d",
+    qr: "footer_d68e4d",
+    DD: "title_d68e4d noDrag_d68e4d",
+    LY: "asset_d68e4d noDrag_d68e4d",
+    M1: "stats_d68e4d",
+    dJ: "stat_d68e4d",
+    iY: "statImage_d68e4d noDrag_d68e4d",
+    KA: "statText_d68e4d",
+    hC: "powerContainer_d68e4d",
+    JA: "powerText_d68e4d",
+    TO: "powerBar_d68e4d",
+};

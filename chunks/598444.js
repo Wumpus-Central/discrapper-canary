@@ -711,7 +711,7 @@ var eX = n(97808),
     e0 = n(69282),
     e1 = n(657048),
     e5 = n(290863);
-function e8(e) {
+function e2(e) {
     let t = (0, h.jc)(),
         n = t?.channelId,
         l = X.A.getChannel(n),
@@ -801,7 +801,7 @@ function e8(e) {
         defaultValues: o,
     });
 }
-var e2 = n(144228),
+var e8 = n(144228),
     e4 = n(821609),
     e3 = n(897132);
 function e7(e) {
@@ -816,7 +816,7 @@ function e7(e) {
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(e2.z, { options: m, value: u ?? "", onChange: x, required: l }),
+            (0, i.jsx)(e8.z, { options: m, value: u ?? "", onChange: x, required: l }),
             !l &&
                 (0, i.jsx)("div", {
                     className: c()(e3.H, { [e3.d]: !d }),
@@ -1001,22 +1001,327 @@ function to(e) {
     }
     return null != r ? (0, i.jsx)(ta.e, { title: r, required: u, className: ts.k, error: j, children: t }) : t;
 }
+var tc = n(564771),
+    tu = n(338717),
+    td = n(96782),
+    tm = n(302031),
+    th = n(561323);
+function tx(e) {
+    let { file: t, name: n, size: l, spoiler: r } = e,
+        a = s.useMemo(
+            () =>
+                null != t.contentType && -1 !== t.contentType.indexOf("/")
+                    ? t.contentType.split("/")
+                    : ["unknown", "unknown"],
+            [t.contentType],
+        ),
+        [o, u] = s.useState(r),
+        [d, m] = s.useState(r);
+    r !== o && (u(r), m(r));
+    let h = s.useMemo(
+        () => () => (0, i.jsx)(td.zB, { mimeType: a, downloadURL: t.url, showDownload: !0, isVisualMediaType: !1 }),
+        [t, a],
+    );
+    function x(e) {
+        return (0, i.jsx)(tc.A, {
+            className: c()({ [th.V]: e }),
+            url: t.url,
+            fileName: n ?? w.intl.string(w.t.GnuJ5u),
+            fileSize: l ?? 0,
+            renderAdjacentContent: h,
+        });
+    }
+    return (0, i.jsx)("div", {
+        className: th.O,
+        children: r
+            ? (0, i.jsx)(tm.Ay, {
+                  type: tm.Ay.Types.ATTACHMENT,
+                  reason: tu.Oc.SPOILER,
+                  obscured: d,
+                  onToggleObscurity: () => m((e) => !e),
+                  children: (e) => x(e),
+              })
+            : x(!1),
+    });
+}
+var tp = n(665260),
+    tC = n(731068),
+    tg = n(591818),
+    tj = n(492230),
+    tf = n(294520),
+    tv = n(448381),
+    tA = n(866665),
+    tN = n(144165),
+    tI = n(891694),
+    ty = n(853784);
+function tE(e) {
+    let t = s.useRef(null),
+        n = e.media;
+    if (n.loadingState === d.TD.LOADED_NOT_FOUND)
+        return (0, i.jsx)(tA.m, {
+            text: w.intl.string(w.t.UvDfMz),
+            position: "bottom",
+            align: "center",
+            targetElementRef: t,
+            children: (0, i.jsx)("div", {
+                className: c()(e.className, ty.FN, { [ty.gS]: e.hiddenSpoilers }),
+                style: { width: e.placeholderWidth, height: e.placeholderHeight },
+                role: "img",
+                children: (0, i.jsx)(tI.A, { ref: t, className: ty.i4 }),
+            }),
+        });
+    let l = n.loadingState === d.TD.LOADING ? B.Rv1.LOADING : B.Rv1.ERROR;
+    return (0, i.jsx)(tN._, {
+        className: c()(e.className, { [ty.gS]: e.hiddenSpoilers }),
+        readyState: l,
+        src: "",
+        width: e.placeholderWidth,
+        height: e.placeholderHeight,
+        maxWidth: e.maxWidth,
+        maxHeight: e.maxHeight,
+        mediaLayoutType: e.mediaLayoutType,
+        useFullWidth: e.useFullWidth,
+        zoomable: !1,
+    });
+}
+var tS = n(998218),
+    tT = n(684519);
+function tL(e) {
+    let t = e.item.originalItem.media;
+    return (0, i.jsx)(tE, {
+        media: t,
+        placeholderWidth: 350,
+        placeholderHeight: 350,
+        maxWidth: e.maxWidth,
+        maxHeight: e.maxHeight,
+        useFullWidth: e.useFullWidth,
+        mediaLayoutType: e.mediaLayoutType,
+    });
+}
+function tb(e) {
+    let t = e.item.originalItem.media;
+    return (0, tT.LL)({
+        ...e,
+        alt: e.item.originalItem.description,
+        src: t.proxyUrl,
+        original: t.url,
+        placeholder: t.placeholder,
+        placeholderVersion: t.placeholderVersion,
+        contentType: t.contentType,
+        originalContentType: t.originalContentType,
+        sourceMetadata: { message: e.message },
+        analyticsSource: "renderImageComponentForGalleryItem",
+        srcIsAnimated: e.item.srcIsAnimated,
+    });
+}
+function tR(e) {
+    let t = e.item.originalItem.media,
+        n = tS.A.toURLSafe(t.proxyUrl);
+    return null == n
+        ? null
+        : (n.searchParams.append("format", "webp"),
+          (0, tT.$o)({
+              ...e,
+              poster: n.toString(),
+              alt: e.item.originalItem.description,
+              src: t.proxyUrl,
+              placeholder: t.placeholder,
+              placeholderVersion: t.placeholderVersion,
+              sourceMetadata: { message: e.message },
+          }));
+}
+var tk = n(564107),
+    tO = n(394839),
+    t_ = n(644447);
+function tM(e) {
+    let { message: t } = (0, h.jc)(),
+        n = (0, y.bG)([X.A], () => X.A.getChannel(t?.channel_id)),
+        {
+            shouldHideMediaOptions: l,
+            enabledContentHarmTypeFlags: r,
+            gifAutoPlay: a,
+            getGifFavButton: s,
+            getOnMediaItemContextMenu: o,
+        } = (0, tk.X)();
+    if (null == t || null == n) return null;
+    let c = e.items.map((e) => (0, tg.FX)(e.media, t)).filter((e) => "INVALID" !== e.type),
+        {
+            srcToOnClickOverride: u,
+            srcToHandlePreloadImage: d,
+            srcToSeekOverride: m,
+        } = c.length > 1
+            ? (0, tj.o)(c, { shouldHideMediaOptions: l, enabledContentHarmTypeFlags: r }, "Media Mosaic")
+            : { srcToOnClickOverride: {}, srcToHandlePreloadImage: {}, srcToSeekOverride: {} };
+    function x(e, n) {
+        let l = e.originalItem;
+        return (0, tf.tt)(l.media, n, l.spoiler, t?.author.bot ?? !1);
+    }
+    let p = e.items.map((e, n) => {
+        let l = e.media,
+            r = o?.(l),
+            i = {
+                message: t,
+                item: {
+                    uniqueId: `${l.proxyUrl}--${n}`,
+                    originalItem: e,
+                    type: (0, tv.wz)(l),
+                    downloadUrl: l.url,
+                    height: l.height,
+                    width: l.width,
+                    spoiler: e.spoiler,
+                    contentType: l.contentType,
+                    srcIsAnimated: (0, tp.Lt)(l.flags, tC.e5.IS_ANIMATED),
+                },
+                onContextMenu: r,
+                autoPlayGif: a,
+                getObscureReason: x,
+                renderImageComponent: tb,
+                renderVideoComponent: tR,
+                renderVisualPlaceholderComponent: tL,
+                renderAudioComponent: B.tEg,
+                renderPlaintextFilePreview: B.tEg,
+                renderGenericFileComponent: B.tEg,
+                gifFavoriteButton: s(l),
+                onPlay: function (e, t, n) {},
+                canRemoveItem: !1,
+                canEditItem: !1,
+                onRemoveItem: B.tEg,
+                onEditItem: B.tEg,
+            },
+            c = (0, t_.E)({ proxyURL: l.proxyUrl, url: l.url });
+        return (c in u && ((i.onClick = u[c]), (i.handlePreloadImage = d[c]), (i.onSeekRequest = m[c])), i);
+    });
+    return (0, i.jsx)("div", { children: (0, i.jsx)(tO.A, { items: p, isInAppComponentsV2: !0 }) });
+}
+var tP = n(210716);
+function tB(e) {
+    let { divider: t, spacing: n } = e;
+    return (0, i.jsx)("div", { className: c()({ [tP.f]: n === d.C8.LARGE, [tP.y]: t }) });
+}
+var tw = n(46054),
+    tD = n(521981),
+    tU = n(204255);
+let tF = {
+        SIZE: { default: void 0, reduced: tU.k2 },
+        COLOR: { default: void 0, muted: tU.JF },
+        WEIGHT: { default: void 0, reduced: tU.Xj },
+    },
+    tz = s.createContext({ className: void 0, size: "default", color: "default", weight: "default" });
+function tG() {
+    return s.useContext(tz);
+}
+function tH(e) {
+    let { children: t, size: n, color: l, weight: r } = e,
+        a = tG(),
+        o = s.useMemo(() => {
+            let e = { className: void 0, size: n ?? a.size, color: l ?? a.color, weight: r ?? a.weight },
+                t = c()(tF.SIZE[e.size], tF.COLOR[e.color], tF.WEIGHT[e.weight]);
+            return ("" !== t && (e.className = c()(tU.zr, t)), e);
+        }, [n, l, r, a]);
+    return (0, i.jsx)(tz.Provider, { value: o, children: t });
+}
+let tK = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
+var tV = n(738262),
+    tY = n(165648);
+function tX(e) {
+    let t,
+        { content: n, className: l } = e,
+        r =
+            ((t = (0, h.jc)()),
+            (0, s.useMemo)(() => {
+                let e;
+                return null === t
+                    ? null
+                    : ((e =
+                          null != t.message
+                              ? (0, tD.ko)(t.message, tK)
+                              : (0, tD.Le)({ channelId: t.channelId, renderOptions: tK })),
+                      tw.A.parse(n, !0, e));
+            }, [n, t])),
+        a = tG();
+    return (0, i.jsx)("div", { className: c()(l, tY.PT, tV.T, a.className), children: r });
+}
+var tW = n(838541),
+    tq = n(292151);
+function tZ(e) {
+    let { media: t, spoiler: n, description: l } = e,
+        r = (0, tv.wz)(t),
+        a = (0, tp.Lt)(t.flags, tC.e5.IS_ANIMATED),
+        { gifAutoPlay: o } = (0, tk.X)(),
+        [u, d] = s.useState(n),
+        [m, h] = s.useState(n);
+    function x(e) {
+        return "IMAGE" !== r
+            ? (0, i.jsx)(tE, {
+                  className: tq.Dg,
+                  media: t,
+                  placeholderWidth: 85,
+                  placeholderHeight: 85,
+                  maxWidth: 85,
+                  maxHeight: 85,
+                  hiddenSpoilers: e,
+              })
+            : (0, i.jsx)(tT.LL, {
+                  containerClassName: c()(tq.Dg, { [tq.rP]: e }),
+                  imageClassName: tq._8,
+                  src: t.proxyUrl,
+                  alt: l,
+                  original: t.url,
+                  placeholder: t.placeholder,
+                  placeholderVersion: t.placeholderVersion,
+                  width: t.width ?? 0,
+                  height: t.height ?? 0,
+                  hiddenSpoilers: e,
+                  maxWidth: 170,
+                  maxHeight: 170,
+                  minWidth: 85,
+                  minHeight: 85,
+                  autoPlay: o && !e,
+                  mediaLayoutType: tW.dG.MOSAIC,
+                  reducedSizeAltTextButton: !0,
+                  srcIsAnimated: a,
+              });
+    }
+    return (
+        n !== u && (d(n), h(n)),
+        n
+            ? (0, i.jsx)(tm.Ay, {
+                  type: tm.Ay.Types.ATTACHMENT,
+                  reason: tu.Oc.SPOILER,
+                  obscured: m,
+                  onToggleObscurity: () => h((e) => !e),
+                  children: (e) => x(e),
+              })
+            : x(!1)
+    );
+}
+var tJ = n(868281);
+function t$() {
+    return (0, i.jsx)("div", {
+        className: tJ.k,
+        children: (0, i.jsx)(eI.E, {
+            variant: "text-sm/medium",
+            color: "text-subtle",
+            children: w.intl.string(w.t.zksHZO),
+        }),
+    });
+}
 n(321073);
-var tc = n(602853),
-    tu = n(534890),
-    td = n(831544),
-    tm = n(460905),
-    th = n(109112),
-    tx = n(664121),
-    tp = n(297264),
-    tC = n(606348),
-    tg = n(957806),
-    tj = n(7584),
-    tf = n(548118),
-    tv = n(486020),
-    tA = n(954874),
-    tN = n(783145);
-function tI(e) {
+var tQ = n(602853),
+    t0 = n(534890),
+    t1 = n(831544),
+    t5 = n(460905),
+    t2 = n(109112),
+    t8 = n(664121),
+    t4 = n(297264),
+    t3 = n(606348),
+    t7 = n(957806),
+    t6 = n(7584),
+    t9 = n(548118),
+    ne = n(486020),
+    nt = n(954874),
+    nn = n(239895);
+function nl(e) {
     let { checkpointData: t } = e,
         {
             cardId: n,
@@ -1039,14 +1344,14 @@ function tI(e) {
             compactDisplay: "short",
             maximumFractionDigits: 2,
         }).format(a),
-        p = (0, tg.oO)(r),
-        C = (0, tg.OW)(n),
-        g = tC.f[n],
-        j = (0, tc.r)(g.primaryColor).hex(),
-        f = (0, tc.r)(g.secondaryColor).hex({ opacity: 0.2 }),
+        p = (0, t7.oO)(r),
+        C = (0, t7.OW)(n),
+        g = t3.f[n],
+        j = (0, tQ.r)(g.primaryColor).hex(),
+        f = (0, tQ.r)(g.secondaryColor).hex({ opacity: 0.2 }),
         v = (0, y.bG)([W.A], () => W.A.getGuild(u?.guildId)),
         A = new Intl.NumberFormat(w.intl.currentLocale, { notation: "compact", compactDisplay: "short" }),
-        N = (0, tg._V)(m ?? 0),
+        N = (0, t7._V)(m ?? 0),
         E = (0, s.useMemo)(() => {
             let e = [];
             e.push("/assets/390e5e747351159f.svg");
@@ -1054,48 +1359,48 @@ function tI(e) {
             return (e.push("/assets/db1951f89e12e0e3.svg"), e);
         }, []);
     return (0, i.jsxs)("div", {
-        className: tN.kL,
+        className: nn.kL,
         style: { backgroundColor: j },
         children: [
             (0, i.jsxs)("div", {
-                className: tN.Nr,
+                className: nn.Nr,
                 children: [
-                    (0, i.jsx)("img", { src: C, alt: "", className: tN.LY, style: { backgroundColor: j } }),
+                    (0, i.jsx)("img", { src: C, alt: "", className: nn.LY, style: { backgroundColor: j } }),
                     (0, i.jsxs)("div", {
-                        className: tN.M1,
+                        className: nn.M1,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: tN.dJ,
+                                className: nn.dJ,
                                 children: [
-                                    (0, i.jsx)(tu.ChatIcon, { color: eN.A.colors.BLACK, size: "xs" }),
-                                    (0, i.jsx)(eI.E, { variant: "text-sm/medium", className: tN.KA, children: h }),
+                                    (0, i.jsx)(t0.ChatIcon, { color: eN.A.colors.BLACK, size: "xs" }),
+                                    (0, i.jsx)(eI.E, { variant: "text-sm/medium", className: nn.KA, children: h }),
                                 ],
                             }),
                             (0, i.jsxs)("div", {
-                                className: tN.dJ,
+                                className: nn.dJ,
                                 children: [
-                                    (0, i.jsx)(td.MicrophoneIcon, { color: eN.A.colors.BLACK, size: "xs" }),
-                                    (0, i.jsx)(eI.E, { variant: "text-sm/medium", className: tN.KA, children: p }),
+                                    (0, i.jsx)(t1.MicrophoneIcon, { color: eN.A.colors.BLACK, size: "xs" }),
+                                    (0, i.jsx)(eI.E, { variant: "text-sm/medium", className: nn.KA, children: p }),
                                 ],
                             }),
                             (0, i.jsxs)("div", {
-                                className: tN.dJ,
+                                className: nn.dJ,
                                 children: [
-                                    (0, i.jsx)(tm.n, { color: eN.A.colors.BLACK, size: "xs" }),
-                                    (0, i.jsx)(eI.E, { variant: "text-sm/medium", className: tN.KA, children: x }),
+                                    (0, i.jsx)(t5.n, { color: eN.A.colors.BLACK, size: "xs" }),
+                                    (0, i.jsx)(eI.E, { variant: "text-sm/medium", className: nn.KA, children: x }),
                                 ],
                             }),
                             (0, i.jsx)("div", {
-                                className: tN.dJ,
+                                className: nn.dJ,
                                 children:
                                     null == o
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)(th._, { color: eN.A.colors.BLACK, size: "xs" }),
+                                                  (0, i.jsx)(t2._, { color: eN.A.colors.BLACK, size: "xs" }),
                                                   (0, i.jsx)(eI.E, {
                                                       variant: "text-sm/medium",
-                                                      className: tN.KA,
-                                                      children: w.intl.string(tA.default["fn+gnp"]),
+                                                      className: nn.KA,
+                                                      children: w.intl.string(nt.default["fn+gnp"]),
                                                   }),
                                               ],
                                           })
@@ -1104,77 +1409,77 @@ function tI(e) {
                                                   (0, i.jsx)(I.A, {
                                                       emojiId: o.emojiId,
                                                       emojiName: o.emojiName,
-                                                      className: tN.iY,
+                                                      className: nn.iY,
                                                   }),
                                                   (0, i.jsx)(eI.E, {
                                                       variant: "text-sm/medium",
-                                                      className: tN.KA,
+                                                      className: nn.KA,
                                                       children:
                                                           null == o.emojiId
-                                                              ? tj.Ay.convertSurrogateToName(o.emojiName)
+                                                              ? t6.Ay.convertSurrogateToName(o.emojiName)
                                                               : `:${o.emojiName}:`,
                                                   }),
                                               ],
                                           }),
                             }),
                             (0, i.jsx)("div", {
-                                className: tN.dJ,
+                                className: nn.dJ,
                                 children:
                                     null == c
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)(th._, { color: eN.A.colors.BLACK, size: "xs" }),
+                                                  (0, i.jsx)(t2._, { color: eN.A.colors.BLACK, size: "xs" }),
                                                   (0, i.jsx)(eI.E, {
                                                       variant: "text-sm/medium",
-                                                      className: tN.KA,
-                                                      children: w.intl.string(tA.default["26V/4h"]),
+                                                      className: nn.KA,
+                                                      children: w.intl.string(nt.default["26V/4h"]),
                                                   }),
                                               ],
                                           })
                                         : (0, i.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, i.jsx)("img", {
-                                                      src: tv.Ay.getApplicationIconURL({
+                                                      src: ne.Ay.getApplicationIconURL({
                                                           id: c.applicationId,
                                                           icon: c.applicationImageId,
                                                       }),
                                                       alt: "",
-                                                      className: tN.iY,
+                                                      className: nn.iY,
                                                   }),
                                                   (0, i.jsx)(eI.E, {
                                                       variant: "text-sm/medium",
-                                                      className: tN.KA,
+                                                      className: nn.KA,
                                                       children: c.applicationName,
                                                   }),
                                               ],
                                           }),
                             }),
                             (0, i.jsx)("div", {
-                                className: tN.dJ,
+                                className: nn.dJ,
                                 children:
                                     null == u
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)(th._, { color: eN.A.colors.BLACK, size: "xs" }),
+                                                  (0, i.jsx)(t2._, { color: eN.A.colors.BLACK, size: "xs" }),
                                                   (0, i.jsx)(eI.E, {
                                                       variant: "text-sm/medium",
-                                                      className: tN.KA,
-                                                      children: w.intl.string(tA.default.eoLmk1),
+                                                      className: nn.KA,
+                                                      children: w.intl.string(nt.default.eoLmk1),
                                                   }),
                                               ],
                                           })
                                         : (0, i.jsxs)(i.Fragment, {
                                               children: [
                                                   null != v
-                                                      ? (0, i.jsx)(tf.Ay, {
+                                                      ? (0, i.jsx)(t9.Ay, {
                                                             guild: v,
-                                                            size: tf.Ay.Sizes.SMOL,
-                                                            className: tN.iY,
+                                                            size: t9.Ay.Sizes.SMOL,
+                                                            className: nn.iY,
                                                         })
-                                                      : (0, i.jsx)(tx.R, { color: eN.A.colors.BLACK, size: "xs" }),
+                                                      : (0, i.jsx)(t8.R, { color: eN.A.colors.BLACK, size: "xs" }),
                                                   (0, i.jsx)(eI.E, {
                                                       variant: "text-sm/medium",
-                                                      className: tN.KA,
+                                                      className: nn.KA,
                                                       children: u.guildName,
                                                   }),
                                               ],
@@ -1185,33 +1490,33 @@ function tI(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                className: tN.qr,
+                className: nn.qr,
                 style: { backgroundColor: f },
-                children: (0, i.jsx)(tp.D, {
+                children: (0, i.jsx)(t4.D, {
                     variant: "display-sm",
-                    className: tN.DD,
-                    children: w.intl.string(tA.default["CdU/PF"]),
+                    className: nn.DD,
+                    children: w.intl.string(nt.default["CdU/PF"]),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: tN.hC,
+                className: nn.hC,
                 style: { backgroundColor: j },
                 children: [
                     (0, i.jsx)("div", {
-                        className: tN.TO,
+                        className: nn.TO,
                         children: E.map((e, t) =>
                             (0, i.jsx)(
                                 "img",
-                                { className: tN.mG, src: e, width: 4, alt: "", style: { opacity: t >= N ? 0.3 : 1 } },
+                                { className: nn.mG, src: e, width: 4, alt: "", style: { opacity: t >= N ? 0.3 : 1 } },
                                 t,
                             ),
                         ),
                     }),
                     (0, i.jsxs)("div", {
-                        className: tN.JA,
+                        className: nn.JA,
                         children: [
-                            (0, i.jsx)(eI.E, { variant: "text-xs/normal", className: tN.KA, children: "LVL" }),
-                            (0, i.jsx)(eI.E, { variant: "text-xs/bold", className: tN.KA, children: A.format(d ?? 0) }),
+                            (0, i.jsx)(eI.E, { variant: "text-xs/normal", className: nn.KA, children: "LVL" }),
+                            (0, i.jsx)(eI.E, { variant: "text-xs/bold", className: nn.KA, children: A.format(d ?? 0) }),
                         ],
                     }),
                 ],
@@ -1219,119 +1524,119 @@ function tI(e) {
         ],
     });
 }
-var ty = n(687966),
-    tE = n(554830),
-    tS = n(111159),
-    tT = n(706121);
-let tL = {
+var nr = n(687966),
+    na = n(554830),
+    ni = n(111159),
+    ns = n(706121);
+let no = {
         primaryBackgroundColor: "#7D53DE",
         secondaryBackgroundColor: "#BCB1D5",
         tertiaryBackgroundColor: "#CFC3EB",
         shadowColor: "#411D96",
         backgroundGradientStartColor: "#2F156B",
     },
-    tb = {
+    nc = {
         primaryBackgroundColor: "#34E2F1",
         secondaryBackgroundColor: "#94CCD1",
         tertiaryBackgroundColor: "#A5E3E9",
         shadowColor: "#0C9BA7",
         backgroundGradientStartColor: "#12606D",
     },
-    tR = {
+    nu = {
         primaryBackgroundColor: "#FF4CD2",
         secondaryBackgroundColor: "#D5A9D6",
         tertiaryBackgroundColor: "#E9BBE9",
         shadowColor: "#B20086",
         backgroundGradientStartColor: "#80005F",
     },
-    tk = {
+    nd = {
         primaryBackgroundColor: "#35ED7E",
         secondaryBackgroundColor: "#B2C5B1",
         tertiaryBackgroundColor: "#B5DCB3",
         shadowColor: "#0FA44A",
         backgroundGradientStartColor: "#0A7535",
     },
-    tO = {
+    nm = {
         primaryBackgroundColor: "#EF3054",
         secondaryBackgroundColor: "#E5A1AE",
         tertiaryBackgroundColor: "#F6AFBC",
         shadowColor: "#A60D2A",
         backgroundGradientStartColor: "#76091E",
     },
-    t_ = {
+    nh = {
         primaryBackgroundColor: "#FFE047",
         secondaryBackgroundColor: "#E6CBA8",
         tertiaryBackgroundColor: "#FFE0B8",
         shadowColor: "#B29400",
         backgroundGradientStartColor: "#806A00",
     },
-    tM = {
-        [tT.R.GALACTIC]: tL,
-        [tT.R.IRIDESCENT]: tL,
-        [tT.R.CHROME]: tL,
-        [tT.R.ICY]: tb,
-        [tT.R.LIQUID]: tb,
-        [tT.R.GLACIER]: tb,
-        [tT.R.MIDNIGHT]: tR,
-        [tT.R.PURPLE]: tR,
-        [tT.R.COBALT]: tR,
-        [tT.R.FOREST]: tk,
-        [tT.R.X_RAY]: tk,
-        [tT.R.CRIMSON]: tO,
-        [tT.R.RED]: tO,
-        [tT.R.BUTTER]: t_,
-        [tT.R.ORANGE]: t_,
+    nx = {
+        [ns.R.GALACTIC]: no,
+        [ns.R.IRIDESCENT]: no,
+        [ns.R.CHROME]: no,
+        [ns.R.ICY]: nc,
+        [ns.R.LIQUID]: nc,
+        [ns.R.GLACIER]: nc,
+        [ns.R.MIDNIGHT]: nu,
+        [ns.R.PURPLE]: nu,
+        [ns.R.COBALT]: nu,
+        [ns.R.FOREST]: nd,
+        [ns.R.X_RAY]: nd,
+        [ns.R.CRIMSON]: nm,
+        [ns.R.RED]: nm,
+        [ns.R.BUTTER]: nh,
+        [ns.R.ORANGE]: nh,
     };
-var tP = n(142617),
-    tB = n(311956),
-    tw = n(835517),
-    tD = n(881245);
-function tU(e) {
+var np = n(142617),
+    nC = n(311956),
+    ng = n(835517),
+    nj = n(881245);
+function nf(e) {
     let { character: t, size: n, className: l } = e,
-        r = s.useMemo(() => (0, tB.vF)(t, Math.round(n * (0, tw.A)())), [t, n]);
+        r = s.useMemo(() => (0, nC.vF)(t, Math.round(n * (0, ng.A)())), [t, n]);
     return (0, i.jsx)("div", {
-        className: c()(tD.G, l),
-        children: r.map((e) => (0, i.jsx)("img", { src: e, alt: "", draggable: !1, className: tD.q }, e)),
+        className: c()(nj.G, l),
+        children: r.map((e) => (0, i.jsx)("img", { src: e, alt: "", draggable: !1, className: nj.q }, e)),
     });
 }
-var tF = n(309913),
-    tz = n(815251);
-let tG = [
+var nv = n(309913),
+    nA = n(241802);
+let nN = [
     "/assets/cee2b812c0cc2a9c.svg",
-    ...Array(tF.w0 - 2).fill("/assets/03323a9f08bfe4db.svg"),
+    ...Array(nv.w0 - 2).fill("/assets/03323a9f08bfe4db.svg"),
     "/assets/c2b958e9d50d3db3.svg",
 ];
-function tH(e) {
+function nI(e) {
     let { src: t } = e;
-    return (0, i.jsx)("img", { src: t, alt: "", className: tz.Gl });
+    return (0, i.jsx)("img", { src: t, alt: "", className: nA.Gl });
 }
-function tK() {
-    return (0, i.jsx)(th._, { color: eN.A.colors.BLACK, size: "xs" });
+function ny() {
+    return (0, i.jsx)(t2._, { color: eN.A.colors.BLACK, size: "xs" });
 }
-function tV(e) {
+function nE(e) {
     let { stats: t } = e;
     return (0, i.jsxs)("div", {
-        className: tz.TO,
+        className: nA.TO,
         "aria-hidden": !0,
         children: [
             (0, i.jsx)(eI.E, {
                 variant: "experimental/mono-md/normal",
                 color: "text-overlay-dark",
-                className: tz.JA,
+                className: nA.JA,
                 children: "LVL",
             }),
             (0, i.jsx)(eI.E, {
                 variant: "experimental/mono-md/bold",
                 color: "text-overlay-dark",
-                className: c()(tz.JA, tz.g5),
+                className: c()(nA.JA, nA.g5),
                 children: t.powerLevel,
             }),
             (0, i.jsx)("div", {
-                className: tz.bF,
-                children: tG.map((e, n) =>
+                className: nA.bF,
+                children: nN.map((e, n) =>
                     (0, i.jsx)(
                         "img",
-                        { src: e, alt: "", className: c()(tz.G, { [tz.H8]: n >= t.powerLevelUnits }) },
+                        { src: e, alt: "", className: c()(nA.G, { [nA.H8]: n >= t.powerLevelUnits }) },
                         n,
                     ),
                 ),
@@ -1339,88 +1644,88 @@ function tV(e) {
         ],
     });
 }
-function tY(e) {
+function nS(e) {
     let { icon: t, stat: n } = e;
     return (0, i.jsxs)("div", {
-        className: tz.N8,
+        className: nA.N8,
         children: [
             t,
             (0, i.jsx)(eI.E, { variant: "text-sm/medium", color: "text-overlay-dark", lineClamp: 1, children: n.text }),
         ],
     });
 }
-function tX(e) {
+function nT(e) {
     let { stats: t } = e,
         { topGuild: n, topEmoji: l, topGame: r } = t,
         a = s.useMemo(
-            () => (null != n ? tv.Ay.getGuildIconURL({ id: n.guildId, icon: n.guildIcon, size: 16 }) : void 0),
+            () => (null != n ? ne.Ay.getGuildIconURL({ id: n.guildId, icon: n.guildIcon, size: 16 }) : void 0),
             [n],
         ),
         o = s.useMemo(
             () =>
                 r?.applicationImageId != null
-                    ? tv.Ay.getApplicationIconURL({ id: r.applicationId, icon: r.applicationImageId, size: 16 })
+                    ? ne.Ay.getApplicationIconURL({ id: r.applicationId, icon: r.applicationImageId, size: 16 })
                     : void 0,
             [r],
         ),
-        c = s.useMemo(() => (null != a ? (0, i.jsx)(tH, { src: a }) : (0, i.jsx)(tK, {})), [a]);
+        c = s.useMemo(() => (null != a ? (0, i.jsx)(nI, { src: a }) : (0, i.jsx)(ny, {})), [a]);
     return (0, i.jsxs)("div", {
-        className: tz.M1,
+        className: nA.M1,
         children: [
-            (0, i.jsx)(tY, {
-                icon: (0, i.jsx)(td.MicrophoneIcon, { color: eN.A.colors.BLACK, size: "xs" }),
+            (0, i.jsx)(nS, {
+                icon: (0, i.jsx)(t1.MicrophoneIcon, { color: eN.A.colors.BLACK, size: "xs" }),
                 stat: t.voice,
             }),
-            (0, i.jsx)(tY, {
-                icon: (0, i.jsx)(tu.ChatIcon, { color: eN.A.colors.BLACK, size: "xs" }),
+            (0, i.jsx)(nS, {
+                icon: (0, i.jsx)(t0.ChatIcon, { color: eN.A.colors.BLACK, size: "xs" }),
                 stat: t.messages,
             }),
-            (0, i.jsx)(tY, {
-                icon: (0, i.jsx)(tx.R, { color: eN.A.colors.BLACK, size: "xs" }),
+            (0, i.jsx)(nS, {
+                icon: (0, i.jsx)(t8.R, { color: eN.A.colors.BLACK, size: "xs" }),
                 stat: t.topGuildDaysInteracted,
             }),
-            (0, i.jsx)(tY, { icon: c, stat: t.topGuildName }),
-            (0, i.jsx)(tY, { icon: (0, i.jsx)(tm.n, { color: eN.A.colors.BLACK, size: "xs" }), stat: t.reactions }),
-            (0, i.jsx)(tY, {
+            (0, i.jsx)(nS, { icon: c, stat: t.topGuildName }),
+            (0, i.jsx)(nS, { icon: (0, i.jsx)(t5.n, { color: eN.A.colors.BLACK, size: "xs" }), stat: t.reactions }),
+            (0, i.jsx)(nS, {
                 icon:
                     null != l
-                        ? (0, i.jsx)(I.A, { emojiId: l.emojiId, emojiName: l.emojiName, className: tz.Gl })
-                        : (0, i.jsx)(tK, {}),
+                        ? (0, i.jsx)(I.A, { emojiId: l.emojiId, emojiName: l.emojiName, className: nA.Gl })
+                        : (0, i.jsx)(ny, {}),
                 stat: t.topEmojiName,
             }),
-            (0, i.jsx)(tY, {
-                icon: (0, i.jsx)(ty.GameControllerIcon, { color: eN.A.colors.BLACK, size: "xs" }),
+            (0, i.jsx)(nS, {
+                icon: (0, i.jsx)(nr.GameControllerIcon, { color: eN.A.colors.BLACK, size: "xs" }),
                 stat: t.daysPlayed,
             }),
-            (0, i.jsx)(tY, { icon: null != o ? (0, i.jsx)(tH, { src: o }) : (0, i.jsx)(tK, {}), stat: t.topGameName }),
+            (0, i.jsx)(nS, { icon: null != o ? (0, i.jsx)(nI, { src: o }) : (0, i.jsx)(ny, {}), stat: t.topGameName }),
         ],
     });
 }
-function tW() {
+function nL() {
     return (0, i.jsxs)("div", {
-        className: tz.qr,
+        className: nA.qr,
         children: [
             (0, i.jsx)(eI.E, {
                 variant: "experimental/display-xs",
                 color: "text-overlay-dark",
-                className: tz.K8,
-                children: w.intl.string(tA.default["CdU/PF"]),
+                className: nA.K8,
+                children: w.intl.string(nt.default["CdU/PF"]),
             }),
             (0, i.jsx)("div", {
-                className: tz.wC,
+                className: nA.wC,
                 "aria-hidden": !0,
-                children: (0, i.jsx)(tE.K, { color: eN.A.colors.BLACK, size: "xxs" }),
+                children: (0, i.jsx)(na.K, { color: eN.A.colors.BLACK, size: "xxs" }),
             }),
         ],
     });
 }
-function tq(e) {
+function nb(e) {
     let { checkpointData: t } = e,
         { character: n, stats: l } = t,
         r = null != n && null != l,
-        a = (0, tP.FX)("Checkpoint2026CardDisplayComponent"),
+        a = (0, np.FX)("Checkpoint2026CardDisplayComponent"),
         o = s.useMemo(() => {
-            let e = (null != n ? tM[n.base] : void 0) ?? tb;
+            let e = (null != n ? nx[n.base] : void 0) ?? nc;
             return {
                 "--custom-checkpoint-card-primary": e.primaryBackgroundColor,
                 "--custom-checkpoint-card-secondary": e.secondaryBackgroundColor,
@@ -1429,343 +1734,38 @@ function tq(e) {
                 "--custom-checkpoint-card-footer-height": "28px",
             };
         }, [n]),
-        u = s.useMemo(() => (null != l ? (0, tB.R8)(l) : null), [l]);
+        u = s.useMemo(() => (null != l ? (0, nC.R8)(l) : null), [l]);
     return (0, i.jsxs)("div", {
-        className: c()(tz.Nr, { [tz.Q9]: r }),
+        className: c()(nA.Nr, { [nA.Q9]: r }),
         style: o,
         children: [
             (0, i.jsx)("div", {
-                className: tz.wm,
-                children: (0, i.jsx)(tS.p, { color: eN.A.colors.BLACK, size: "custom", width: 30, height: 30 }),
+                className: nA.wm,
+                children: (0, i.jsx)(ni.p, { color: eN.A.colors.BLACK, size: "custom", width: 30, height: 30 }),
             }),
-            (0, i.jsx)("div", { className: c()(tz.Ss, null != n ? tz.xG : tz.yz) }),
-            null != n && null != u ? (0, i.jsx)(tV, { stats: u }) : null,
+            (0, i.jsx)("div", { className: c()(nA.Ss, null != n ? nA.xG : nA.yz) }),
+            null != n && null != u ? (0, i.jsx)(nE, { stats: u }) : null,
             null != n
                 ? (0, i.jsx)("div", {
-                      className: tz.AM,
-                      children: (0, i.jsx)(tU, { character: n, size: 224, className: tz.GG }),
+                      className: nA.AM,
+                      children: (0, i.jsx)(nf, { character: n, size: 224, className: nA.GG }),
                   })
                 : null,
-            null != u ? (0, i.jsx)(tX, { stats: u }) : null,
-            a ? (0, i.jsx)(tW, {}) : null,
+            null != u ? (0, i.jsx)(nT, { stats: u }) : null,
+            a ? (0, i.jsx)(nL, {}) : null,
         ],
     });
 }
-var tZ = n(868281);
-function tJ() {
-    return (0, i.jsx)("div", {
-        className: tZ.k,
-        children: (0, i.jsx)(eI.E, {
-            variant: "text-sm/medium",
-            color: "text-subtle",
-            children: w.intl.string(w.t.zksHZO),
-        }),
-    });
-}
-function t$(e) {
+function nR(e) {
     let { checkpointData: t } = e;
     switch (t.version) {
-        case tF.wk.V2025:
-            return (0, i.jsx)(tI, { checkpointData: t });
-        case tF.wk.V2026:
-            return (0, i.jsx)(tq, { checkpointData: t });
+        case nv.wk.V2025:
+            return (0, i.jsx)(nl, { checkpointData: t });
+        case nv.wk.V2026:
+            return (0, i.jsx)(nb, { checkpointData: t });
         default:
-            return (0, i.jsx)(tJ, {});
+            return (0, i.jsx)(t$, {});
     }
-}
-var tQ = n(564771),
-    t0 = n(338717),
-    t1 = n(96782),
-    t5 = n(302031),
-    t8 = n(561323);
-function t2(e) {
-    let { file: t, name: n, size: l, spoiler: r } = e,
-        a = s.useMemo(
-            () =>
-                null != t.contentType && -1 !== t.contentType.indexOf("/")
-                    ? t.contentType.split("/")
-                    : ["unknown", "unknown"],
-            [t.contentType],
-        ),
-        [o, u] = s.useState(r),
-        [d, m] = s.useState(r);
-    r !== o && (u(r), m(r));
-    let h = s.useMemo(
-        () => () => (0, i.jsx)(t1.zB, { mimeType: a, downloadURL: t.url, showDownload: !0, isVisualMediaType: !1 }),
-        [t, a],
-    );
-    function x(e) {
-        return (0, i.jsx)(tQ.A, {
-            className: c()({ [t8.V]: e }),
-            url: t.url,
-            fileName: n ?? w.intl.string(w.t.GnuJ5u),
-            fileSize: l ?? 0,
-            renderAdjacentContent: h,
-        });
-    }
-    return (0, i.jsx)("div", {
-        className: t8.O,
-        children: r
-            ? (0, i.jsx)(t5.Ay, {
-                  type: t5.Ay.Types.ATTACHMENT,
-                  reason: t0.Oc.SPOILER,
-                  obscured: d,
-                  onToggleObscurity: () => m((e) => !e),
-                  children: (e) => x(e),
-              })
-            : x(!1),
-    });
-}
-var t4 = n(665260),
-    t3 = n(731068),
-    t7 = n(591818),
-    t6 = n(492230),
-    t9 = n(294520),
-    ne = n(448381),
-    nt = n(866665),
-    nn = n(144165),
-    nl = n(891694),
-    nr = n(853784);
-function na(e) {
-    let t = s.useRef(null),
-        n = e.media;
-    if (n.loadingState === d.TD.LOADED_NOT_FOUND)
-        return (0, i.jsx)(nt.m, {
-            text: w.intl.string(w.t.UvDfMz),
-            position: "bottom",
-            align: "center",
-            targetElementRef: t,
-            children: (0, i.jsx)("div", {
-                className: c()(e.className, nr.FN, { [nr.gS]: e.hiddenSpoilers }),
-                style: { width: e.placeholderWidth, height: e.placeholderHeight },
-                role: "img",
-                children: (0, i.jsx)(nl.A, { ref: t, className: nr.i4 }),
-            }),
-        });
-    let l = n.loadingState === d.TD.LOADING ? B.Rv1.LOADING : B.Rv1.ERROR;
-    return (0, i.jsx)(nn._, {
-        className: c()(e.className, { [nr.gS]: e.hiddenSpoilers }),
-        readyState: l,
-        src: "",
-        width: e.placeholderWidth,
-        height: e.placeholderHeight,
-        maxWidth: e.maxWidth,
-        maxHeight: e.maxHeight,
-        mediaLayoutType: e.mediaLayoutType,
-        useFullWidth: e.useFullWidth,
-        zoomable: !1,
-    });
-}
-var ni = n(998218),
-    ns = n(684519);
-function no(e) {
-    let t = e.item.originalItem.media;
-    return (0, i.jsx)(na, {
-        media: t,
-        placeholderWidth: 350,
-        placeholderHeight: 350,
-        maxWidth: e.maxWidth,
-        maxHeight: e.maxHeight,
-        useFullWidth: e.useFullWidth,
-        mediaLayoutType: e.mediaLayoutType,
-    });
-}
-function nc(e) {
-    let t = e.item.originalItem.media;
-    return (0, ns.LL)({
-        ...e,
-        alt: e.item.originalItem.description,
-        src: t.proxyUrl,
-        original: t.url,
-        placeholder: t.placeholder,
-        placeholderVersion: t.placeholderVersion,
-        contentType: t.contentType,
-        originalContentType: t.originalContentType,
-        sourceMetadata: { message: e.message },
-        analyticsSource: "renderImageComponentForGalleryItem",
-        srcIsAnimated: e.item.srcIsAnimated,
-    });
-}
-function nu(e) {
-    let t = e.item.originalItem.media,
-        n = ni.A.toURLSafe(t.proxyUrl);
-    return null == n
-        ? null
-        : (n.searchParams.append("format", "webp"),
-          (0, ns.$o)({
-              ...e,
-              poster: n.toString(),
-              alt: e.item.originalItem.description,
-              src: t.proxyUrl,
-              placeholder: t.placeholder,
-              placeholderVersion: t.placeholderVersion,
-              sourceMetadata: { message: e.message },
-          }));
-}
-var nd = n(564107),
-    nm = n(394839),
-    nh = n(644447);
-function nx(e) {
-    let { message: t } = (0, h.jc)(),
-        n = (0, y.bG)([X.A], () => X.A.getChannel(t?.channel_id)),
-        {
-            shouldHideMediaOptions: l,
-            enabledContentHarmTypeFlags: r,
-            gifAutoPlay: a,
-            getGifFavButton: s,
-            getOnMediaItemContextMenu: o,
-        } = (0, nd.X)();
-    if (null == t || null == n) return null;
-    let c = e.items.map((e) => (0, t7.FX)(e.media, t)).filter((e) => "INVALID" !== e.type),
-        {
-            srcToOnClickOverride: u,
-            srcToHandlePreloadImage: d,
-            srcToSeekOverride: m,
-        } = c.length > 1
-            ? (0, t6.o)(c, { shouldHideMediaOptions: l, enabledContentHarmTypeFlags: r }, "Media Mosaic")
-            : { srcToOnClickOverride: {}, srcToHandlePreloadImage: {}, srcToSeekOverride: {} };
-    function x(e, n) {
-        let l = e.originalItem;
-        return (0, t9.tt)(l.media, n, l.spoiler, t?.author.bot ?? !1);
-    }
-    let p = e.items.map((e, n) => {
-        let l = e.media,
-            r = o?.(l),
-            i = {
-                message: t,
-                item: {
-                    uniqueId: `${l.proxyUrl}--${n}`,
-                    originalItem: e,
-                    type: (0, ne.wz)(l),
-                    downloadUrl: l.url,
-                    height: l.height,
-                    width: l.width,
-                    spoiler: e.spoiler,
-                    contentType: l.contentType,
-                    srcIsAnimated: (0, t4.Lt)(l.flags, t3.e5.IS_ANIMATED),
-                },
-                onContextMenu: r,
-                autoPlayGif: a,
-                getObscureReason: x,
-                renderImageComponent: nc,
-                renderVideoComponent: nu,
-                renderVisualPlaceholderComponent: no,
-                renderAudioComponent: B.tEg,
-                renderPlaintextFilePreview: B.tEg,
-                renderGenericFileComponent: B.tEg,
-                gifFavoriteButton: s(l),
-                onPlay: function (e, t, n) {},
-                canRemoveItem: !1,
-                canEditItem: !1,
-                onRemoveItem: B.tEg,
-                onEditItem: B.tEg,
-            },
-            c = (0, nh.E)({ proxyURL: l.proxyUrl, url: l.url });
-        return (c in u && ((i.onClick = u[c]), (i.handlePreloadImage = d[c]), (i.onSeekRequest = m[c])), i);
-    });
-    return (0, i.jsx)("div", { children: (0, i.jsx)(nm.A, { items: p, isInAppComponentsV2: !0 }) });
-}
-var np = n(210716);
-function nC(e) {
-    let { divider: t, spacing: n } = e;
-    return (0, i.jsx)("div", { className: c()({ [np.f]: n === d.C8.LARGE, [np.y]: t }) });
-}
-var ng = n(46054),
-    nj = n(521981),
-    nf = n(204255);
-let nv = {
-        SIZE: { default: void 0, reduced: nf.k2 },
-        COLOR: { default: void 0, muted: nf.JF },
-        WEIGHT: { default: void 0, reduced: nf.Xj },
-    },
-    nA = s.createContext({ className: void 0, size: "default", color: "default", weight: "default" });
-function nN() {
-    return s.useContext(nA);
-}
-function nI(e) {
-    let { children: t, size: n, color: l, weight: r } = e,
-        a = nN(),
-        o = s.useMemo(() => {
-            let e = { className: void 0, size: n ?? a.size, color: l ?? a.color, weight: r ?? a.weight },
-                t = c()(nv.SIZE[e.size], nv.COLOR[e.color], nv.WEIGHT[e.weight]);
-            return ("" !== t && (e.className = c()(nf.zr, t)), e);
-        }, [n, l, r, a]);
-    return (0, i.jsx)(nA.Provider, { value: o, children: t });
-}
-let ny = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
-var nE = n(738262),
-    nS = n(165648);
-function nT(e) {
-    let t,
-        { content: n, className: l } = e,
-        r =
-            ((t = (0, h.jc)()),
-            (0, s.useMemo)(() => {
-                let e;
-                return null === t
-                    ? null
-                    : ((e =
-                          null != t.message
-                              ? (0, nj.ko)(t.message, ny)
-                              : (0, nj.Le)({ channelId: t.channelId, renderOptions: ny })),
-                      ng.A.parse(n, !0, e));
-            }, [n, t])),
-        a = nN();
-    return (0, i.jsx)("div", { className: c()(l, nS.PT, nE.T, a.className), children: r });
-}
-var nL = n(838541),
-    nb = n(292151);
-function nR(e) {
-    let { media: t, spoiler: n, description: l } = e,
-        r = (0, ne.wz)(t),
-        a = (0, t4.Lt)(t.flags, t3.e5.IS_ANIMATED),
-        { gifAutoPlay: o } = (0, nd.X)(),
-        [u, d] = s.useState(n),
-        [m, h] = s.useState(n);
-    function x(e) {
-        return "IMAGE" !== r
-            ? (0, i.jsx)(na, {
-                  className: nb.Dg,
-                  media: t,
-                  placeholderWidth: 85,
-                  placeholderHeight: 85,
-                  maxWidth: 85,
-                  maxHeight: 85,
-                  hiddenSpoilers: e,
-              })
-            : (0, i.jsx)(ns.LL, {
-                  containerClassName: c()(nb.Dg, { [nb.rP]: e }),
-                  imageClassName: nb._8,
-                  src: t.proxyUrl,
-                  alt: l,
-                  original: t.url,
-                  placeholder: t.placeholder,
-                  placeholderVersion: t.placeholderVersion,
-                  width: t.width ?? 0,
-                  height: t.height ?? 0,
-                  hiddenSpoilers: e,
-                  maxWidth: 170,
-                  maxHeight: 170,
-                  minWidth: 85,
-                  minHeight: 85,
-                  autoPlay: o && !e,
-                  mediaLayoutType: nL.dG.MOSAIC,
-                  reducedSizeAltTextButton: !0,
-                  srcIsAnimated: a,
-              });
-    }
-    return (
-        n !== u && (d(n), h(n)),
-        n
-            ? (0, i.jsx)(t5.Ay, {
-                  type: t5.Ay.Types.ATTACHMENT,
-                  reason: t0.Oc.SPOILER,
-                  obscured: m,
-                  onToggleObscurity: () => h((e) => !e),
-                  children: (e) => x(e),
-              })
-            : x(!1)
-    );
 }
 var nk = n(681154);
 class nO extends s.PureComponent {
@@ -1873,16 +1873,16 @@ function n5(e) {
         case nk.ContentInventoryEntryType.LISTENED_SESSION:
             return (0, i.jsx)(n9, { entry: t, ...l });
         case nk.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
-            return (0, i.jsx)(n2, { entry: t, ...l });
+            return (0, i.jsx)(n8, { entry: t, ...l });
         default:
             throw Error(`Unsupported content type: ${t.content_type}`);
     }
 }
-function n8(e) {
+function n2(e) {
     let { errorFallback: t, ...n } = e;
     return (0, i.jsx)(nO, { fallback: t, children: (0, i.jsx)(n5, { ...n }) });
 }
-function n2(e) {
+function n8(e) {
     let { entry: t, children: n, ...l } = e,
         r = n1(
             (function (e) {
@@ -1967,13 +1967,13 @@ function n6(e) {
                     d = { type: nV.a4.CRUNCHYROLL },
                     m = s.useMemo(() => {
                         if (null == n.extra.url) return;
-                        let e = ni.A.safeParseWithQuery(n.extra.url);
+                        let e = tS.A.safeParseWithQuery(n.extra.url);
                         if (null != e && null != e.protocol && null != e.hostname) return e;
                     }, [n.extra.url]);
                 return (
                     null != m &&
                         (t = {
-                            href: ni.A.format(m),
+                            href: tS.A.format(m),
                             ariaDescription: w.intl.formatToPlainString(w.t.aFFQ3g, { title: o }),
                         }),
                     {
@@ -2080,7 +2080,7 @@ function ld(e) {
                       ],
                   })
                 : null,
-            (0, i.jsx)(tp.D, {
+            (0, i.jsx)(t4.D, {
                 variant: "text-sm/semibold",
                 color: "text-subtle",
                 className: c()(lu.IY, lu.Io),
@@ -2216,7 +2216,7 @@ function lb(e) {
                                 (0, i.jsx)(lL, {
                                     clickable: s,
                                     className: lE.sd,
-                                    children: (0, i.jsx)(tp.D, {
+                                    children: (0, i.jsx)(t4.D, {
                                         id: h,
                                         variant: "heading-md/medium",
                                         lineClamp: 1,
@@ -2271,7 +2271,7 @@ function lk(e) {
         l = (0, y.bG)([X.A], () => X.A.getChannel(n));
     return (
         ei()(null != l, "channel must be defined"),
-        (0, i.jsx)(n8, {
+        (0, i.jsx)(n2, {
             location: nY.EMBED,
             entry: e.contentInventoryEntry,
             channel: l,
@@ -2307,16 +2307,16 @@ function lB(e) {
                     ref: l,
                     className: c()(lP.kL, { [lP.dK]: e, [lP._7]: null != n }),
                     style: { "--__accent-color": null != n ? (0, lM.$k)(n, !0) : void 0 },
-                    children: (0, i.jsx)(nI, { size: "reduced", children: r(t) }),
+                    children: (0, i.jsx)(tH, { size: "reduced", children: r(t) }),
                 }),
         });
     }
     return (l !== a && (o(l), d(l)), null == t || 0 === t.length)
         ? null
         : l
-          ? (0, i.jsx)(t5.Ay, {
-                type: t5.Ay.Types.ATTACHMENT,
-                reason: t0.Oc.SPOILER,
+          ? (0, i.jsx)(tm.Ay, {
+                type: tm.Ay.Types.ATTACHMENT,
+                reason: tu.Oc.SPOILER,
                 obscured: u,
                 onToggleObscurity: () => d((e) => !e),
                 children: (e) => m(e),
@@ -2362,7 +2362,7 @@ function lz(e) {
                                 case d.I5.BUTTON:
                                     return (0, i.jsx)(K, { ...e });
                                 case d.I5.THUMBNAIL:
-                                    return (0, i.jsx)(nR, { ...e });
+                                    return (0, i.jsx)(tZ, { ...e });
                             }
                         })(n),
                     }),
@@ -2390,21 +2390,21 @@ function lH(e) {
                         case d.I5.USER_SELECT:
                         case d.I5.ROLE_SELECT:
                         case d.I5.MENTIONABLE_SELECT:
-                            return (0, i.jsx)(e8, { ...t }, n);
+                            return (0, i.jsx)(e2, { ...t }, n);
                         case d.I5.TEXT_INPUT:
                             return (0, i.jsx)(to, { ...t }, n);
                         case d.I5.SECTION:
                             return (0, i.jsx)(lz, { ...t, renderComponents: lH }, n);
                         case d.I5.TEXT_DISPLAY:
-                            return (0, i.jsx)(nT, { ...t }, n);
+                            return (0, i.jsx)(tX, { ...t }, n);
                         case d.I5.MEDIA_GALLERY:
-                            return (0, i.jsx)(nx, { ...t }, n);
+                            return (0, i.jsx)(tM, { ...t }, n);
                         case d.I5.THUMBNAIL:
-                            return (0, i.jsx)(nR, { ...t }, n);
+                            return (0, i.jsx)(tZ, { ...t }, n);
                         case d.I5.FILE:
-                            return (0, i.jsx)(t2, { ...t }, n);
+                            return (0, i.jsx)(tx, { ...t }, n);
                         case d.I5.SEPARATOR:
-                            return (0, i.jsx)(nC, { ...t }, n);
+                            return (0, i.jsx)(tB, { ...t }, n);
                         case d.I5.CONTENT_INVENTORY_ENTRY:
                             return (0, i.jsx)(lk, { ...t }, n);
                         case d.I5.CONTAINER:
@@ -2414,7 +2414,7 @@ function lH(e) {
                         case d.I5.FILE_UPLOAD:
                             return (0, i.jsx)(eY, { ...t }, n);
                         case d.I5.CHECKPOINT_CARD:
-                            return (0, i.jsx)(t$, { ...t }, n);
+                            return (0, i.jsx)(nR, { ...t }, n);
                         case d.I5.RADIO_GROUP:
                             return (0, i.jsx)(e7, { ...t }, n);
                         case d.I5.CHECKBOX_GROUP:
@@ -2422,7 +2422,7 @@ function lH(e) {
                         case d.I5.CHECKBOX:
                             return (0, i.jsx)(ej, { ...t }, n);
                         default:
-                            return (0, i.jsx)(tJ, {}, n);
+                            return (0, i.jsx)(t$, {}, n);
                     }
                 })(e, t.toString()),
                 (0, i.jsx)(u.A, { children: "," }),
