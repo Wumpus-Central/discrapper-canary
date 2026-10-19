@@ -41,14 +41,14 @@ var g = t(604121),
     I = t(688810),
     T = t(131607),
     h = t(810498),
-    k = t(547902),
-    N = t(139486),
+    N = t(547902),
+    k = t(139486),
     j = t(5755),
     _ = t(40493),
     y = t(43105),
     x = t(652215),
-    v = t(49999),
-    G = t(103342),
+    G = t(49999),
+    v = t(805161),
     R = t(105292);
 function O(e) {
     let { giftRecipient: n, onComplete: t, markAsDismissed: a, children: o } = e,
@@ -67,21 +67,21 @@ function O(e) {
                 targetElementRef: r,
                 shouldShow: !0,
                 position: "top",
-                title: R.intl.string(G.default.u0brrv),
-                body: R.intl.string(G.default["5smZHx"]),
+                title: R.intl.string(v.default["3NxgUL"]),
+                body: R.intl.string(v.default.IMRvdN),
                 gradientColor: "nitro-pink",
                 actions: [
                     {
-                        text: R.intl.string(G.default["9XpK+g"]),
+                        text: R.intl.string(R.t.Ve9Ge6),
                         icon: C.GiftIcon,
                         onClick: function () {
-                            (c(), t?.(), a(v.i.TAKE_ACTION));
+                            (c(), t?.(), a(G.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (t?.(), a(v.i.USER_DISMISS));
+                    (t?.(), a(G.i.USER_DISMISS));
                 },
             }),
         ],
@@ -97,7 +97,7 @@ function F(e) {
     let { currentTier: n, giftCount: t, variant: a, onComplete: o, markAsDismissed: r, children: c } = e,
         u = l.useRef(null),
         d = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
-        f = (0, N.Se)(n);
+        f = (0, k.Se)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: u, children: c }),
@@ -115,13 +115,13 @@ function F(e) {
                     {
                         text: R.intl.string(R.t.RzWDqY),
                         onClick: () => {
-                            (null != d && (0, E.openUserProfileModal)({ userId: d.id }), o?.(), r(v.i.TAKE_ACTION));
+                            (null != d && (0, E.openUserProfileModal)({ userId: d.id }), o?.(), r(G.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (o?.(), r(v.i.USER_DISMISS));
+                    (o?.(), r(G.i.USER_DISMISS));
                 },
             }),
         ],
@@ -156,13 +156,13 @@ function H(e) {
                         text: R.intl.string(P.default.DZnomS),
                         icon: C.GiftIcon,
                         onClick: () => {
-                            (u(), t?.(), a(v.i.TAKE_ACTION));
+                            (u(), t?.(), a(G.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (t?.(), a(v.i.USER_DISMISS));
+                    (t?.(), a(G.i.USER_DISMISS));
                 },
             }),
         ],
@@ -179,18 +179,18 @@ function L(e) {
         : (0, i.jsx)(H, { channel: n, onComplete: l, markAsDismissed: a, children: o });
 }
 var B = t(412260),
-    K = t(927813),
-    $ = t(935208),
+    $ = t(927813),
+    K = t(935208),
     w = t(240248),
     J = t(767089),
     Z = t(621255),
-    W = t(495088);
-let z = K.A.Millis.DAYS_30;
-function Q(e) {
+    V = t(495088);
+let W = $.A.Millis.DAYS_30;
+function z(e) {
     let { boxAnimationUrl: n, hovered: t, onClick: a } = e,
         o = l.useCallback(() => Promise.resolve({ default: n }), [n]);
     return (0, i.jsx)(J.A, {
-        className: W.x6,
+        className: V.x6,
         "aria-label": R.intl.string(R.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
@@ -201,12 +201,12 @@ function Q(e) {
         }),
     });
 }
-function V(e) {
+function Q(e) {
     let { trinketAnimationUrl: n, hovered: t, onClick: l } = e,
         { Component: a, events: o, play: r } = f(),
         c = (0, s.bG)([p.Ay], () => p.Ay.useReducedMotion);
     return (0, i.jsxs)(J.A, {
-        className: W.x6,
+        className: V.x6,
         "aria-label": R.intl.string(R.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
@@ -224,14 +224,14 @@ function q(e) {
     let { giftIcon: n, hovered: t, isGenericGift: l, onClick: a } = e,
         { Component: o, events: r, play: s } = f(),
         c = n?.boxAnimationUrl;
-    if (!(0, w.uJ)(c)) return (0, i.jsx)(Q, { boxAnimationUrl: c, hovered: t, onClick: a });
+    if (!(0, w.uJ)(c)) return (0, i.jsx)(z, { boxAnimationUrl: c, hovered: t, onClick: a });
     let u = n?.trinketAnimationUrl;
     return (0, w.uJ)(u)
         ? (0, i.jsx)(m.m, {
               ariaHidden: l,
               text: R.intl.string(l ? R.t.TW4JV0 : R.t.sWtWDX),
               children: (0, i.jsx)(J.A, {
-                  className: W.x6,
+                  className: V.x6,
                   isActive: !1,
                   "aria-label": R.intl.string(l ? R.t.TW4JV0 : R.t.Z1RnTk),
                   "aria-haspopup": "dialog",
@@ -242,7 +242,7 @@ function q(e) {
                   children: (0, i.jsx)(o, { size: "refresh_sm", color: "currentColor" }),
               }),
           })
-        : (0, i.jsx)(V, { trinketAnimationUrl: u, hovered: t, onClick: a });
+        : (0, i.jsx)(Q, { trinketAnimationUrl: u, hovered: t, onClick: a });
 }
 let X = l.memo(function (e) {
     let { disabled: n, channel: t } = e,
@@ -250,7 +250,7 @@ let X = l.memo(function (e) {
         [u, d] = l.useState(!1),
         f = (0, A.A)(),
         g = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
-        C = null != g ? $.default.age(g.id) : 0,
+        C = null != g ? K.default.age(g.id) : 0,
         m = (0, U.R1)(t),
         p = (0, s.bG)([B.A], () => {
             let e = B.A.getMarketingComponentByType(r.C.GIFT_ICON);
@@ -264,34 +264,34 @@ let X = l.memo(function (e) {
                 ? null
                 : e.properties.properties.giftIconCoachmark;
         }),
-        G = p?.gradient,
+        v = p?.gradient,
         R =
-            null != G && null != G.colors && G.colors.length >= 2
-                ? (0, h.K5)({ gradient: G.colors, angle: G.angle ?? void 0 }, { defaultAngle: 180 })
+            null != v && null != v.colors && v.colors.length >= 2
+                ? (0, h.K5)({ gradient: v.colors, angle: v.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
         M = l.useMemo(() => {
             if (R?.background != null) return { "--custom-promotion-gradient": R.background };
         }, [R]),
         S = !(0, w.uJ)(p?.boxAnimationUrl) || !(0, w.uJ)(p?.trinketAnimationUrl),
         E = (0, s.bG)([B.A], () => B.A.getGiftPromotion()?.id),
-        P = null != y && !n && !f && C >= z && null != E,
+        P = null != y && !n && !f && C >= W && null != E,
         [F, H] = (0, T.Cc)(P ? c.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, E ?? ""),
-        K = null != F,
-        { giftingBadgeCoachmarkVariant: J, markGiftingBadgeCoachmarkAsDismissed: W } = (function (e) {
+        $ = null != F,
+        { giftingBadgeCoachmarkVariant: J, markGiftingBadgeCoachmarkAsDismissed: V } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, A.A)(),
-                l = (0, N.Hv)({ platform: "web", location: n, enabled: t }),
+                l = (0, k.Hv)({ platform: "web", location: n, enabled: t }),
                 [a, o] = (0, T.kn)(null == l || i ? [] : [c.M.NEW_GIFTING_BADGES_COACHMARK]);
             return { giftingBadgeCoachmarkVariant: null != a ? l : null, markGiftingBadgeCoachmarkAsDismissed: o };
-        })({ location: "ChannelPremiumGiftButton", enabled: !n && !K }),
-        { showGiftedSubscriptionsCoachmark: Q, markGiftedSubscriptionsCoachmarkAsDismissed: V } = (function (e) {
+        })({ location: "ChannelPremiumGiftButton", enabled: !n && !$ }),
+        { showGiftedSubscriptionsCoachmark: z, markGiftedSubscriptionsCoachmarkAsDismissed: Q } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, A.A)(),
-                l = (0, k.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
+                l = (0, N.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
                 [a, o] = (0, T.kn)(t && l && !i ? [c.M.GIFTED_SUBSCRIPTIONS_DESKTOP_COACHMARK] : []);
             return { showGiftedSubscriptionsCoachmark: null != a, markGiftedSubscriptionsCoachmarkAsDismissed: o };
-        })({ location: "ChannelPremiumGiftButton", enabled: !n && null != m && !K && null == J }),
-        X = !Q && (u || K || null != J),
+        })({ location: "ChannelPremiumGiftButton", enabled: !n && null != m && !$ && null == J }),
+        X = !z && (u || $ || null != J),
         {
             openGiftModal: Y,
             shouldShowWishlistModal: ee,
@@ -321,7 +321,7 @@ let X = l.memo(function (e) {
         hovered: X,
         isGenericGift: ee || en,
         onClick: function () {
-            (d(!1), H(v.i.TAKE_ACTION), W(v.i.TAKE_ACTION), Q && V(v.i.TAKE_ACTION), Y());
+            (d(!1), H(G.i.TAKE_ACTION), V(G.i.TAKE_ACTION), z && Q(G.i.TAKE_ACTION), Y());
         },
     });
     return (0, i.jsx)("div", {
@@ -333,7 +333,7 @@ let X = l.memo(function (e) {
         onMouseLeave: () => {
             d(!1);
         },
-        children: K
+        children: $
             ? (0, i.jsx)(_.A, {
                   onComplete: () => d(!1),
                   onCheckItOutClick: Y,
@@ -342,9 +342,9 @@ let X = l.memo(function (e) {
                   children: et,
               })
             : null != J
-              ? (0, i.jsx)(L, { channel: t, variant: J, onComplete: () => d(!1), markAsDismissed: W, children: et })
-              : Q
-                ? (0, i.jsx)(O, { giftRecipient: m, onComplete: () => d(!1), markAsDismissed: V, children: et })
+              ? (0, i.jsx)(L, { channel: t, variant: J, onComplete: () => d(!1), markAsDismissed: V, children: et })
+              : z
+                ? (0, i.jsx)(O, { giftRecipient: m, onComplete: () => d(!1), markAsDismissed: Q, children: et })
                 : et,
     });
 });
