@@ -373,6 +373,7 @@
 .card_fa0187 {
     background: var(--custom-checkpoint-card-secondary) url(/assets/3315ebed311fec6c.png) center /cover;
     background-blend-mode: overlay;
+    container-type: inline-size;
     display: flex;
     max-width: 100%;
     min-height: 284px;
@@ -409,11 +410,11 @@
     mask-size: 100% 100%;
     position: absolute;
     top: 0;
-    width: 44px
+    width: var(--custom-checkpoint-card-wordmark-width)
 }
 
 .characterAndStats_fa0187 .wordmark_fa0187 {
-    inset-inline-end: calc(50% + var(--space-16))
+    inset-inline-end: min(calc(50% + var(--space-16)), calc(100% - var(--custom-checkpoint-card-logo-size) - var(--space-4) - var(--custom-checkpoint-card-wordmark-width)))
 }
 
 .wordmarkFull_fa0187 {
@@ -464,12 +465,12 @@
 }
 
 .characterColumn_fa0187 {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex: 1 1 50%;
     justify-content: center;
     min-width: 0;
-    padding-top: var(--space-24)
+    padding-bottom: var(--space-12)
 }
 
 .character_fa0187 {
@@ -495,6 +496,12 @@
     padding-inline: var(--space-16) var(--space-24)
 }
 
+@container (width < 300px) {
+    .characterAndStats_fa0187 .stats_fa0187 {
+        gap: var(--space-8)
+    }
+}
+
 .statRow_fa0187 {
     align-items: center;
     background-color: var(--custom-checkpoint-card-tertiary);
@@ -502,6 +509,10 @@
     gap: var(--space-8);
     height: 16px;
     padding-inline: var(--space-4)
+}
+
+.statRow_fa0187>:first-child {
+    flex-shrink: 0
 }
 
 .statRow_fa0187 .statIcon_fa0187 {
@@ -541,4 +552,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=545934.c9f487c5968ca3a8.css.map*/
+/*# sourceMappingURL=545934.fb700255ba41bb25.css.map*/
