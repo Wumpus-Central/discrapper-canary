@@ -1,4 +1,4 @@
-n.d(t, { OW: () => o, _V: () => d, oO: () => l });
+n.d(t, { OW: () => d, GM: () => o, _V: () => c, oO: () => l });
 var i = n(499979),
     r = n(381849),
     a = n(105292);
@@ -13,6 +13,13 @@ function l(e) {
         : a.intl.formatToPlainString(l.minutes, { minutes: o });
 }
 function o(e) {
+    let { unit: t, time: n } = (0, i.$l)(e, s),
+        r = Math.round(n ?? 0);
+    return t === i.pJ.HOURS
+        ? a.intl.formatToPlainString(a.t.xCjYxK, { hours: r })
+        : a.intl.formatToPlainString(a.t.iXLF9W, { minutes: r });
+}
+function d(e) {
     switch (e) {
         case 0:
             return "https://cdn.discordapp.com/assets/content/97c629a74c9d42f45a5e3b5f38cad7c76415bafebb327ee641972ea0c346d9ed.png";
@@ -36,6 +43,6 @@ function o(e) {
             return "https://cdn.discordapp.com/assets/content/63e156d9534821fc67f772dace48c7add4186191274c63bebbd0895ee9a1d4d5.png";
     }
 }
-function d(e) {
+function c(e) {
     return Math.min(Math.max(Math.round(e / 10), 1), 9);
 }
