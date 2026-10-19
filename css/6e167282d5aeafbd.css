@@ -1,0 +1,14 @@
+.overlayPadding__58e02 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    pointer-events: auto
+}
+
+.transcriptPanel__58e02 {
+    --custom-transcript-top: 80px;
+    --custom-transcript-bottom: 36px
+}
+
+/*# sourceMappingURL=6e167282d5aeafbd.css.map*/

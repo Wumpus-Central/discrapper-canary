@@ -1,4 +1,4 @@
-.rewardIndicatorContainer_cc3943 {
+.rewardIndicatorContainer_ae9afd {
     --custom-stroke-width: 3px;
     align-items: center;
     background-color: var(--progressbar-track-background);
@@ -14,7 +14,7 @@
     will-change: transform
 }
 
-.rewardIndicatorContainerGreenFill_cc3943 {
+.rewardIndicatorContainerGreenFill_ae9afd {
     --custom-bottom-layer-color: hsla(0, 0%, 100%, .4);
     --custom-transparent-bottom-color: hsla(0, 0%, 100%, 0);
     --custom-top-layer-color: rgba(98, 196, 101, .75);
@@ -22,11 +22,11 @@
     background-image: conic-gradient(from 270deg at 50% 50%, var(--custom-top-layer-color) calc(var(--custom-indicator-fill)*1.8deg), var(--custom-transparent-top-color) calc(var(--custom-indicator-fill)*1.8deg), var(--custom-transparent-top-color) calc(1turn - var(--custom-indicator-fill)*1.8deg), var(--custom-top-layer-color) calc(1turn - var(--custom-indicator-fill)*1.8deg)), conic-gradient(from 270deg at 50% 50%, var(--custom-bottom-layer-color) calc(var(--custom-indicator-fill)*1.8deg), var(--custom-transparent-bottom-color) calc(var(--custom-indicator-fill)*1.8deg), var(--custom-transparent-bottom-color) calc(1turn - var(--custom-indicator-fill)*1.8deg), var(--custom-bottom-layer-color) calc(1turn - var(--custom-indicator-fill)*1.8deg))
 }
 
-.rewardIndicatorContainerWhiteFill_cc3943 {
+.rewardIndicatorContainerWhiteFill_ae9afd {
     background-image: conic-gradient(from 270deg at 50% 50%, var(--white) calc(var(--custom-indicator-fill)*1.8deg), transparent calc(var(--custom-indicator-fill)*1.8deg), transparent calc(1turn - var(--custom-indicator-fill)*1.8deg), var(--white) calc(1turn - var(--custom-indicator-fill)*1.8deg))
 }
 
-.rewardIndicatorContainer_cc3943:after {
+.rewardIndicatorContainer_ae9afd:after {
     background-color: var(--black);
     border-radius: 50%;
     content: "";
@@ -34,7 +34,7 @@
     position: absolute
 }
 
-.rewardIconWrapper_cc3943 {
+.rewardIconWrapper_ae9afd {
     border-radius: 50%;
     inset: var(--custom-stroke-width);
     justify-content: center;
@@ -42,14 +42,14 @@
     z-index: 2
 }
 
-.rewardIconWrapper_cc3943,
-.rewardTooltip_cc3943 {
+.rewardIconWrapper_ae9afd,
+.rewardTooltip_ae9afd {
     align-items: center;
     display: flex;
     position: absolute
 }
 
-.rewardTooltip_cc3943 {
+.rewardTooltip_ae9afd {
     background: rgba(0, 0, 0, .4);
     border-radius: 99px;
     bottom: calc(100% + 6px);
@@ -64,39 +64,15 @@
     z-index: 10
 }
 
-.rewardIndicatorContainer_cc3943:has(:focus-visible) .rewardTooltip_cc3943,
-.rewardIndicatorContainer_cc3943:hover .rewardTooltip_cc3943 {
+.rewardIndicatorContainer_ae9afd:has(:focus-visible) .rewardTooltip_ae9afd,
+.rewardIndicatorContainer_ae9afd:hover .rewardTooltip_ae9afd {
     opacity: 1
 }
 
-.rewardTooltipDivider_cc3943 {
+.rewardTooltipDivider_ae9afd {
     background: hsla(0, 0%, 100%, .12);
     height: 10px;
     width: 2px
 }
 
-.questGreen__3ea4b {
-    --custom-timeline-fill-bg: linear-gradient(90deg, #f5fef6, #d1f9d3);
-    --custom-timeline-glow-shadow: -2px 0 12px 2px rgba(18, 201, 25, .8), 0 0 33px 2px #fff
-}
-
-.questWhite__3ea4b {
-    --custom-timeline-fill-bg: var(--white);
-    --custom-timeline-glow-blend-mode: soft-light;
-    --custom-timeline-glow-shadow: -2px 0 14px 3px transparent, -5px 0 22px 0 transparent, 0 0 27.8px 1px #fff
-}
-
-.overlayPadding__58e02 {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    padding: 16px;
-    pointer-events: auto
-}
-
-.transcriptPanel__58e02 {
-    --custom-transcript-top: 80px;
-    --custom-transcript-bottom: 36px
-}
-
-/*# sourceMappingURL=2ba1119a32f5ebfc.css.map*/
+/*# sourceMappingURL=b6d2c3aefb962792.css.map*/

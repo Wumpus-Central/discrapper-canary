@@ -3,37 +3,38 @@ n.d(t, {
     Fw: () => k,
     Ko: () => O,
     ej: () => w,
-    K3: () => X,
+    K3: () => q,
     hK: () => V,
     ZV: () => C,
-    J6: () => W,
-    zO: () => z,
+    J6: () => Y,
+    zO: () => X,
     rE: () => g,
     eA: () => x,
     tZ: () => N,
-    Ls: () => $,
+    Ls: () => z,
     Li: () => h.L,
-    BQ: () => Q,
+    BQ: () => J,
     fP: () => U,
-    B3: () => K,
+    B3: () => $,
     gB: () => B,
     A6: () => L,
     fO: () => y,
-    Pc: () => Z,
+    Pc: () => Q,
     mg: () => G,
-    cY: () => Y,
+    FA: () => W,
+    cY: () => K,
     uz: () => j,
     Tz: () => S,
     aA: () => R,
     EM: () => b,
     i$: () => v,
-    WQ: () => J,
+    WQ: () => ee,
     aJ: () => F,
     CI: () => P,
-    pc: () => et,
+    pc: () => en,
     GD: () => M,
     qh: () => D,
-    kL: () => q,
+    kL: () => Z,
     TY: () => m,
 });
 var i,
@@ -158,20 +159,14 @@ let k = "1333839522189938740",
     V = "1402418703554842694",
     H = "1496993616537587813",
     j = "1496993616537587812",
-    W = new Set([
+    W = 50,
+    Y = new Set([
         T.p9.DESKTOP_ACCOUNT_PANEL_AREA,
         T.p9.MOBILE_HOME_DOCK_AREA,
         T.p9.QUEST_HOME_BANNER_DESKTOP,
         T.p9.VIDEO_MODAL_MOBILE,
     ]),
-    Y = new Set([E.p.NO_FILL]),
-    K = new Set([
-        A.n.STREAM_ON_DESKTOP,
-        A.n.PLAY_ON_DESKTOP,
-        A.n.PLAY_ON_XBOX,
-        A.n.PLAY_ON_PLAYSTATION,
-        A.n.PLAY_ACTIVITY,
-    ]),
+    K = new Set([E.p.NO_FILL]),
     $ = new Set([
         A.n.STREAM_ON_DESKTOP,
         A.n.PLAY_ON_DESKTOP,
@@ -186,28 +181,35 @@ let k = "1333839522189938740",
         A.n.PLAY_ON_PLAYSTATION,
         A.n.PLAY_ACTIVITY,
     ]),
-    X = { is_targeted: !1 };
-var q =
+    X = new Set([
+        A.n.STREAM_ON_DESKTOP,
+        A.n.PLAY_ON_DESKTOP,
+        A.n.PLAY_ON_XBOX,
+        A.n.PLAY_ON_PLAYSTATION,
+        A.n.PLAY_ACTIVITY,
+    ]),
+    q = { is_targeted: !1 };
+var Z =
         (((d = {}).SUGGESTED = "suggested"),
         (d.MOST_RECENT = "most_recent"),
         (d.EXPIRING_SOON = "expiring_soon"),
         (d.RECENTLY_ENROLLED = "recently_enrolled"),
         d),
-    Z = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
-    Q =
+    Q = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
+    J =
         (((u = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
         (u.COLLECTIBLE = "reward_collectible"),
         (u.IN_GAME = "reward_in_game"),
         u);
-function J(e) {
-    return Object.values(Z).includes(e)
+function ee(e) {
+    return Object.values(Q).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(Q).includes(e)
+        : Object.values(J).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let ee = ["reward", "task"],
-    et = Object.entries(
+let et = ["reward", "task"],
+    en = Object.entries(
         (0, _.groupBy)(
             [
                 { group: "task", filter: "task_play" },
@@ -219,7 +221,7 @@ let ee = ["reward", "task"],
             "group",
         ),
     ).sort((e, t) => {
-        let n = ee.indexOf(e[0]),
-            i = ee.indexOf(t[0]);
+        let n = et.indexOf(e[0]),
+            i = et.indexOf(t[0]);
         return n < i ? -1 : +(i < n);
     });

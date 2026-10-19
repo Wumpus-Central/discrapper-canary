@@ -1,0 +1,27 @@
+.productIcon__4c629 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px
+}
+
+.productIcon__4c629,
+.rewardIcon__4c629 {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.rewardIcon__4c629 {
+    height: 100%;
+    width: 100%
+}
+
+.videoActions__4c629 {
+    padding: var(--space-16);
+    pointer-events: auto
+}
+
+/*# sourceMappingURL=85dd7fea99012549.css.map*/
