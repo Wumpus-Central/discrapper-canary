@@ -1,6 +1,6 @@
 n.d(t, { A: () => S });
-var r = n(17928),
-    s = n(73153);
+var s = n(17928),
+    r = n(73153);
 (n(134528), n(947204));
 class o {
     seqOf;
@@ -19,10 +19,10 @@ class o {
         let t = 0,
             n = this.items.length - 1;
         for (; t <= n;) {
-            let r = (t + n) >> 1,
-                s = this.keyOf(this.items[r]);
-            if (s === e) return r;
-            s < e ? (t = r + 1) : (n = r - 1);
+            let s = (t + n) >> 1,
+                r = this.keyOf(this.items[s]);
+            if (r === e) return s;
+            r < e ? (t = s + 1) : (n = s - 1);
         }
         return -1;
     }
@@ -59,59 +59,50 @@ class o {
 let i = [],
     l = new Map(),
     a = 0,
-    c = new Map(),
-    d = { status: "idle", truncated: !1, count: 0 },
-    u = new Map();
-class p extends r.Ay.Store {
+    c = { status: "idle", truncated: !1, count: 0 },
+    d = new Map();
+class u extends s.Ay.Store {
     getLogs(e) {
         return l.get(e)?.snapshot() ?? i;
     }
-    getUnreadLogErrorCount(e) {
-        let t = l.get(e);
-        if (null == t) return 0;
-        let n = c.get(e) ?? 0,
-            r = 0;
-        for (let e of t.values()) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (r += 1);
-        return r;
-    }
     getHistoryState(e, t) {
-        return u.get(e)?.get(t) ?? d;
+        return d.get(e)?.get(t) ?? c;
     }
 }
-function h(e) {
+function p(e) {
     return e.log.seq;
 }
-function _(e, t, n) {
-    let r = u.get(e);
-    (null == r && ((r = new Map()), u.set(e, r)), r.set(t, n));
+function h(e, t, n) {
+    let s = d.get(e);
+    (null == s && ((s = new Map()), d.set(e, s)), s.set(t, n));
+}
+function _(e) {
+    let t,
+        { projectId: n, log: s } = e,
+        r = (null == (t = l.get(n)) && ((t = new o(p)), l.set(n, t)), t);
+    if (null != s.seq && -1 !== r.indexOfSeq(s.seq)) return !1;
+    (r.insert({ key: ++a, log: s }), r.trim(500));
 }
 function f(e) {
-    let t,
-        { projectId: n, log: r } = e,
-        s = (null == (t = l.get(n)) && ((t = new o(h)), l.set(n, t)), t);
-    if (null != r.seq && -1 !== s.indexOfSeq(r.seq)) return !1;
-    (s.insert({ key: ++a, log: r }), s.trim(500));
-}
-function g(e) {
-    let { projectId: t, scope: n, status: r, count: s, truncated: o } = e;
-    if ("failed" === r) {
-        let e = u.get(t)?.get(n);
-        _(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+    let { projectId: t, scope: n, status: s, count: r, truncated: o } = e;
+    if ("failed" === s) {
+        let e = d.get(t)?.get(n);
+        h(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
         return;
     }
-    _(t, n, { status: "loaded", truncated: o, count: s });
+    h(t, n, { status: "loaded", truncated: o, count: r });
 }
-let E = new p(s.h, {
+let g = new u(r.h, {
         LOGOUT: function () {
-            if (0 === l.size && 0 === c.size && 0 === u.size) return !1;
-            (l.clear(), c.clear(), u.clear());
+            if (0 === l.size && 0 === d.size) return !1;
+            (l.clear(), d.clear());
         },
-        CONJURE_HISTORY_LOAD_SETTLE: g,
+        CONJURE_HISTORY_LOAD_SETTLE: f,
         CONJURE_DEBUG_BACKLOG: function (e) {
             let { projectId: t, backlog: n } = e;
-            for (let e of n.logs) f({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
+            for (let e of n.logs) _({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
             for (let e of n.states)
-                g({
+                f({
                     type: "CONJURE_HISTORY_LOAD_SETTLE",
                     projectId: t,
                     scope: e.scope,
@@ -120,17 +111,10 @@ let E = new p(s.h, {
                     truncated: !0 === e.truncated,
                 });
         },
-        CONJURE_LOG_APPEND: f,
-        CONJURE_LOGS_SEEN: function (e) {
-            let { projectId: t } = e,
-                n = 0;
-            for (let e of l.get(t)?.values() ?? i) n = Math.max(n, e.key);
-            if ((c.get(t) ?? 0) >= n) return !1;
-            c.set(t, n);
-        },
+        CONJURE_LOG_APPEND: _,
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
-            (l.delete(t), c.delete(t), u.delete(t));
+            (l.delete(t), d.delete(t));
         },
     }),
-    S = 221552 == n.j ? E : null;
+    S = 221552 == n.j ? g : null;

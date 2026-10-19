@@ -1484,7 +1484,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 642336, Version Hash: cb2bd981504490708e7d74aa75c993a33384acb5`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 642370, Version Hash: 511f10c7eca6dd1fd2a5860b58e314dbbac9eac8`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25683,7 +25683,7 @@ let L6 = "isHideDevBanner",
                     className: tE()(L5.Wz, L5.mr),
                     children: [
                         (0, M.jsx)(L3, { className: L5.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "642336" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "642370" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -41444,6 +41444,15 @@ let Gr = {
             request: (e) => ({ enabled: e.boolean().required() }),
             response: (e) => ({ enabled: e.boolean().required() }),
         },
+        [cS.e$.SET_AUDIO_SESSION_TYPE]: {
+            request: (e) => ({
+                type: e
+                    .string()
+                    .valid("auto", "playback", "transient", "transient-solo", "ambient", "play-and-record")
+                    .required(),
+            }),
+            response: (e) => ({ success: e.boolean().required() }),
+        },
         [cS.e$.CAPTURE_LOG]: {
             embeddedAppSDK: !0,
             request: (e) => ({ level: e.string().max(10).required(), message: e.string().max(1e3).required() }),
@@ -47888,6 +47897,11 @@ let Fx = {
         [j.e$_.SEND_GENERIC_EVENT]: {
             handler(e) {
                 throw new ww.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Deprecated command: ${e.cmd}`);
+            },
+        },
+        [j.e$_.SET_AUDIO_SESSION_TYPE]: {
+            handler(e) {
+                throw new ww.A({ errorCode: j.Lw6.INVALID_COMMAND }, `Unsupported command: ${e.cmd}`);
             },
         },
     };
