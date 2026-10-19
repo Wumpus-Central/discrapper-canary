@@ -1,4 +1,4 @@
-n.d(t, { O1: () => o, oU: () => A, wt: () => u });
+n.d(t, { O1: () => o, oU: () => C, wt: () => u });
 var l,
     i,
     r = n(607399),
@@ -20,6 +20,7 @@ let c = {
         showThreadPromptOnReply: !0,
         stickers: { button: !0, allowSending: !0, autoSuggest: !0 },
         soundmoji: { allowSending: !0 },
+        voiceMessages: { button: !r.Fr },
         users: { allowMentioning: !0 },
         submit: {
             button: !0,
@@ -73,6 +74,7 @@ let c = {
         permissions: { requireSendMessages: !0 },
         stickers: { allowSending: !0, autoSuggest: !0 },
         soundmoji: { allowSending: !0 },
+        voiceMessages: { button: !r.Fr },
         users: { allowMentioning: !0 },
         submit: {
             button: !0,
@@ -187,7 +189,7 @@ let c = {
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
     },
-    C = {
+    A = {
         analyticsName: "user_profile",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -198,7 +200,7 @@ let c = {
         toolbarType: 2,
         layout: 1,
     },
-    A = {
+    C = {
         NORMAL: c,
         OVERLAY: d,
         OVERLAY_INLINE_REPLY: {
@@ -217,7 +219,7 @@ let c = {
         FORM: f,
         VOICE_CHANNEL_STATUS: p,
         THREAD_CREATION: g,
-        USER_PROFILE: C,
+        USER_PROFILE: A,
         USER_PROFILE_REPLY: {
             analyticsName: "user_profile_reply",
             drafts: { type: s.C.ChannelMessage },

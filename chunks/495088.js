@@ -18,6 +18,7 @@ _.exports = {
     fk: "sansAttachButtonCreateThread__74017",
     TZ: "sansAttachButtonCreatePost__74017",
     $i: "sansAttachButtonUserProfileReply__74017",
+    mb: "innerVoiceRecording__74017",
     g$: "attachButton__74017",
     w5: "textAreaSlate__74017",
     QI: "textAreaThreadCreation__74017",

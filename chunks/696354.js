@@ -82,6 +82,7 @@ var i = {
     "./user_leave.mp3": "99997",
     "./user_moved.mp3": "225713",
     "./vibing_wumpus.mp3": "500639",
+    "./voice_message_recording_stopped.mp3": "31344",
     "./winter_call_calling.mp3": "460899",
     "./winter_call_ringing.mp3": "236485",
     "./winter_deafen.mp3": "517939",

@@ -188,6 +188,10 @@
     padding-inline-start: 0
 }
 
+.innerVoiceRecording__74017 {
+    padding-inline-start: var(--space-12)
+}
+
 .attachButton__74017 {
     margin-inline: calc((var(--space-xs) + var(--space-6))*-1) 10px
 }
@@ -469,4 +473,4 @@
     max-height: calc(var(--custom-channel-textarea-text-area-max-height) + 80px)
 }
 
-/*# sourceMappingURL=962953.69892aacbc3b8e17.css.map*/
+/*# sourceMappingURL=962953.64344fbf982477be.css.map*/

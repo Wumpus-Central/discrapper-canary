@@ -74,8 +74,8 @@ let m = {
                 onDoubleClick: I,
                 isActive: T,
                 onMouseEnter: h,
-                onMouseLeave: N,
-                onFocus: k,
+                onMouseLeave: k,
+                onFocus: N,
                 onBlur: j,
                 pulse: _,
                 sparkle: y,
@@ -84,10 +84,11 @@ let m = {
                 "aria-expanded": G,
                 "aria-haspopup": R,
                 "aria-controls": O,
-                noHover: M,
+                "aria-keyshortcuts": M,
+                noHover: S,
             } = e,
-            S = (0, s.p)(null != p, { ...m, keys: (e) => (e ? "children" : "icon") });
-        function E(e) {
+            E = (0, s.p)(null != p, { ...m, keys: (e) => (e ? "children" : "icon") });
+        function D(e) {
             let { component: n } = e;
             return null != x
                 ? (0, i.jsxs)("div", {
@@ -111,23 +112,24 @@ let m = {
             "aria-expanded": G,
             "aria-haspopup": R,
             "aria-controls": O,
+            "aria-keyshortcuts": M,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: o()(t, C.x6, { [C.vu]: T, [C.CK]: M, [C.s0]: _, [C.r9]: l }),
+            className: o()(t, C.x6, { [C.vu]: T, [C.CK]: S, [C.s0]: _, [C.r9]: l }),
             onClick: l ? void 0 : b,
             onDoubleClick: l ? void 0 : I,
             onMouseEnter: h,
-            onMouseLeave: N,
-            onFocus: k,
+            onMouseLeave: k,
+            onFocus: N,
             onBlur: j,
             focusProps: { offset: { top: 4, bottom: 4 } },
             children: [
-                S((e, n, t) => {
+                E((e, n, t) => {
                     let { key: l } = t;
                     return n
                         ? (0, i.jsx)(
                               r.animated.div,
-                              { style: e, className: o()(C._o, a), children: E({ component: p }) },
+                              { style: e, className: o()(C._o, a), children: D({ component: p }) },
                               l,
                           )
                         : null != A
@@ -136,7 +138,7 @@ let m = {
                                 {
                                     style: e,
                                     className: o()(C._o, a),
-                                    children: E({
+                                    children: D({
                                         component: (0, i.jsx)(A, {
                                             className: o()(C.Kk, d, { [C.d1]: _ }),
                                             color: "currentColor",

@@ -119,7 +119,7 @@ var tr = i(387755),
     tY = i(480870),
     tH = i(355622),
     tJ = i(408018),
-    tB = i(479909),
+    tB = i(845207),
     t$ = i(451909),
     tz = i(135621),
     tX = i(381941),
@@ -195,8 +195,8 @@ function t0(t) {
 }
 var t1 = i(554146),
     t2 = i(298990),
-    t9 = i(429913),
-    t8 = i(263577),
+    t8 = i(429913),
+    t9 = i(263577),
     t5 = i(826673),
     t3 = i(192820),
     t7 = i(308726),
@@ -206,8 +206,8 @@ var t1 = i(554146),
     ee = i(302933);
 function ei(t) {
     let { game: e } = t,
-        i = (0, t9.h)(e.id);
-    return null == i ? null : (0, B.jsx)(t8.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
+        i = (0, t8.h)(e.id);
+    return null == i ? null : (0, B.jsx)(t9.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
 }
 let en = 5 * R.A.Millis.SECOND,
     el = 8 * R.A.Millis.SECOND,

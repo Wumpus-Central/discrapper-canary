@@ -39,7 +39,7 @@ var r = n(477900),
     U = n(105292),
     $ = n(862649);
 let K = l.lazy(() =>
-        Promise.all([n.e("272223"), n.e("919307")])
+        Promise.all([n.e("999272"), n.e("919307")])
             .then(n.bind(n, 410694))
             .then((e) => ({ default: e.VideoStatsOverlay })),
     ),
