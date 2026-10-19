@@ -5018,6 +5018,22 @@
     }
   },
   {
+    "name": "2026-09-request-to-stream-go-live-modal",
+    "kind": "user",
+    "defaultConfig": {
+      "openGoLiveModal": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "openGoLiveModal": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-09-request-to-stream-new-entry-point",
     "defaultConfig": {

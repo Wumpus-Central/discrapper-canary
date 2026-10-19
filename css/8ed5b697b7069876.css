@@ -1982,6 +1982,7 @@
 
 .root_a66361 {
     background: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-purple-for-gradients-2), var(--premium-tier-2-pink-for-gradients));
+    border-radius: var(--radius-sm);
     justify-content: space-between;
     padding: 8px 16px
 }
@@ -2038,4 +2039,4 @@
     color: transparent
 }
 
-/*# sourceMappingURL=8484e92d174b6ba7.css.map*/
+/*# sourceMappingURL=8ed5b697b7069876.css.map*/
