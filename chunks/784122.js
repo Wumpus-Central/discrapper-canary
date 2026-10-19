@@ -8745,24 +8745,24 @@ class u9 extends s.PureComponent {
             parentChannel: n,
             guild: i,
             guildId: s,
-            showCall: r,
-            showActivityPanel: o,
-            showFramePanel: c,
-            hasVideo: u,
-            showHeaderGuildBreadcrumb: h,
-            isAppChannelChatExpanded: m,
+            showActivityPanel: r,
+            showFramePanel: o,
+            hasVideo: c,
+            showHeaderGuildBreadcrumb: u,
+            isAppChannelChatExpanded: h,
         } = this.props;
         (d()(null != e, "Missing channel in Channel.renderHeaderBar"),
             d()(null != t, "Should not be null if channel is not null."));
-        let A = e.isDM() && !e.isSystemDM() ? this.openUserProfile : h ? () => (0, ii.iN)(e.id) : void 0,
-            p = n?.guild_id != null && n?.id != null ? this.handleTitleParentClick : void 0,
-            g = o || c,
-            E = r || g;
+        let m = e.isDM() && !e.isSystemDM() ? this.openUserProfile : u ? () => (0, ii.iN)(e.id) : void 0,
+            A = n?.guild_id != null && n?.id != null ? this.handleTitleParentClick : void 0,
+            p = this.shouldRenderCall(),
+            g = r || o,
+            E = p || g;
         return (0, l.jsxs)("div", {
             className: u$.SC,
             children: [
                 (0, l.jsx)(f.N, {
-                    theme: u && r ? eo.NJ8.DARK : void 0,
+                    theme: c && p ? eo.NJ8.DARK : void 0,
                     children: (r) =>
                         (0, l.jsxs)(
                             lh.A,
@@ -8775,29 +8775,29 @@ class u9 extends s.PureComponent {
                                 mobileToolbar: this.renderMobileToolbar(),
                                 className: a()(u$.DD, r, { [u$.zh]: e.type === eo.rbe.GROUP_DM }),
                                 transparent: E,
-                                hidden: c,
+                                hidden: o,
                                 keepToastsBelow: !0,
                                 "aria-label": z.intl.string(z.t.BIYAqa),
                                 children: [
-                                    h && (0, l.jsx)(nW.i$, { channel: e, guild: i, caretPosition: "right" }),
+                                    u && (0, l.jsx)(nW.i$, { channel: e, guild: i, caretPosition: "right" }),
                                     (0, nW.zF)({
                                         channel: e,
                                         channelName: t,
                                         parentChannel: n,
                                         guild: i,
-                                        hasVideo: u,
+                                        hasVideo: c,
                                         handleContextMenu: this.handleContextMenu,
                                         handleParentContextMenu: this.handleParentContextMenu,
-                                        handleClick: A,
-                                        handleParentClick: p,
+                                        handleClick: m,
+                                        handleParentClick: A,
                                         renderFollowButton: this.renderFollowButton,
                                     }),
-                                    m
+                                    h
                                         ? (0, l.jsx)("div", {
                                               className: u$.u8,
                                               children: (0, l.jsx)(ti, { channel: e }),
                                           })
-                                        : h
+                                        : u
                                           ? (0, l.jsx)("div", {
                                                 className: u$.u8,
                                                 children: (0, l.jsx)(x.$, {
@@ -9073,7 +9073,7 @@ class u9 extends s.PureComponent {
             b = (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsxs)("div", {
-                        "data-has-border": e.type !== eo.rbe.GUILD_VOICE,
+                        "data-has-border": e.type !== eo.rbe.GUILD_VOICE || !f,
                         className: a()(u$.TE, {
                             [u$.js]: (E && !I) || j,
                             [u$.Rs]: E ? !I || g : j || x,
