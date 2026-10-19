@@ -1,12 +1,12 @@
 .header__991a0 {
+    padding: 24px 16px 0;
     position: relative;
     text-align: center
 }
 
 .title__991a0 {
     font-weight: var(--font-weight-bold);
-    margin-bottom: 8px;
-    margin-top: 24px
+    margin-bottom: 8px
 }
 
 .closeButton__991a0 {
@@ -103,4 +103,4 @@
     max-height: calc(100vh - 48px)
 }
 
-/*# sourceMappingURL=2d1f7e43168351af.css.map*/
+/*# sourceMappingURL=144c9a71b25c402b.css.map*/

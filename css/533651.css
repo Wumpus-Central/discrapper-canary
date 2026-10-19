@@ -66,8 +66,7 @@
 .header_c04f35 {
     flex-grow: 0;
     overflow: hidden;
-    padding-block: var(--modal-vertical-padding) var(--space-8);
-    padding-inline: var(--modal-horizontal-padding) var(--modal-horizontal-padding)
+    padding: 24px 16px 0
 }
 
 .closeButton_c04f35 {
@@ -418,4 +417,4 @@
     display: none
 }
 
-/*# sourceMappingURL=533651.7e49b9f0ff0fd744.css.map*/
+/*# sourceMappingURL=533651.326f047e765bbc7b.css.map*/
