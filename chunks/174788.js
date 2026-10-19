@@ -1,10 +1,6 @@
-a.r(
+t.r(
     (e.exports = {
-        premiumCards: "premiumCards_a2332b",
-        premiumCardHover: "premiumCardHover_a2332b",
         tier2ApplicationHomeSubheader: "tier2ApplicationHomeSubheader_a2332b",
-        applicationHomeCard: "applicationHomeCard_a2332b",
-        narrow: "narrow_a2332b",
         card: "card_a2332b",
         withGiftBanner: "withGiftBanner_a2332b",
         giftSelectionModalContext: "giftSelectionModalContext_a2332b",
@@ -33,11 +29,6 @@ a.r(
         tierCardStack: "tierCardStack_a2332b",
         tierCardStackContent: "tierCardStackContent_a2332b",
         footer: "footer_a2332b",
-        premiumCardsContainer: "premiumCardsContainer_a2332b",
-        premiumCardsHeader: "premiumCardsHeader_a2332b",
-        tier0CardOrder: "tier0CardOrder_a2332b",
-        tier2CardOrder: "tier2CardOrder_a2332b",
-        premiumGroupCardOrder: "premiumGroupCardOrder_a2332b",
         betaPill: "betaPill_a2332b",
         cardHeader: "cardHeader_a2332b",
     }),

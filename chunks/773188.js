@@ -1,4 +1,4 @@
-a.exports = {
+_.exports = {
     kL: "container__02f2d",
     Hq: "fadeInFromTop__02f2d",
     iI: "containerBackground__02f2d",
@@ -6,8 +6,8 @@ a.exports = {
     Qr: "sectionsContainer__02f2d",
     KQ: "bestOfNitroSectionContainer__02f2d",
     qY: "heroHeadingContainer__02f2d",
+    qc: "planCardsContainer__02f2d",
     aC: "planComparisonTableContainer__02f2d",
-    s5: "premiumTierCardsContainer__02f2d",
     So: "whatsNewSectionContainer__02f2d",
     _Z: "bottomOfPageVisibilitySensor__02f2d",
     XG: "scroller__02f2d",
