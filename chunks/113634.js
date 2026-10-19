@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => tn });
+n.d(t, { A: () => ti });
 var r,
     a,
     s,
@@ -1860,6 +1860,7 @@ class ej extends p.A {
     transientKeys;
     mlsSession;
     encryptionWorker;
+    destroyed = !1;
     userId;
     currentEncryptorProtocolVersion = 0;
     recognizedUserIds = new Set();
@@ -1876,6 +1877,16 @@ class ej extends p.A {
                 this.emit(K.y.MLSFailure, e, t);
             })),
             (this.encryptionWorker = this.setupEncryptionWorker()));
+    }
+    destroy() {
+        this.destroyed ||
+            ((this.destroyed = !0),
+            (this.encryptionWorker.onmessage = null),
+            (this.encryptionWorker.onerror = null),
+            (this.encryptionWorker.onmessageerror = null),
+            this.encryptionWorker.terminate(),
+            this.mlsSession.delete(),
+            this.removeAllListeners());
     }
     createUser(e) {
         e === this.userId
@@ -1992,6 +2003,7 @@ class ej extends p.A {
             (this.latestPreparedTransitionVersion = t));
     }
     onSecureFramesStateChanged() {
+        if (this.destroyed) return;
         let e = { version: this.currentEncryptorProtocolVersion ?? this.dave.kDisabledVersion, epochAuthenticator: "" };
         if (e.version !== this.dave.kDisabledVersion) {
             let t = this.mlsSession.GetLastEpochAuthenticator();
@@ -2017,11 +2029,15 @@ let eW = new g.Vy("LibDaveManager"),
 function eX() {
     return ("Firefox" !== A().name || !(e_.It < 142)) && e_.PF && e_.zU;
 }
-let eq = A().name?.toLowerCase().includes("firefox");
-function eZ(e, t) {
+function eq() {
+    if (null == eK) throw Error("DAVE module not loaded");
+    return (null == e$ && (e$ = new eK.TransientKeys()), e$);
+}
+let eZ = A().name?.toLowerCase().includes("firefox");
+function eQ(e, t) {
     (e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly"));
 }
-class eQ extends eA {
+class eJ extends eA {
     pc;
     sdp = null;
     negotiating = !1;
@@ -2096,7 +2112,7 @@ class eQ extends eA {
     }
     destroy() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (super.destroy(e), "closed" !== this.signalingState && this.pc.close());
+        (this.daveSessionManager?.destroy(), super.destroy(e), "closed" !== this.signalingState && this.pc.close());
     }
     setCodecs(e, t, n) {
         let i;
@@ -2114,14 +2130,14 @@ class eQ extends eA {
     }
     setStream(e) {
         let t = "closed" === this.iceConnectionState;
-        if (null != e && !t && (eZ(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
+        if (null != e && !t && (eQ(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
             let t = e.getVideoTracks()[0],
                 n = this.context === D.x.STREAM;
             (n &&
                 null != t &&
                 this.experimentFlags.has(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT) &&
                 (t.contentHint = "motion"),
-                eZ(this.videoTransceiver, t),
+                eQ(this.videoTransceiver, t),
                 n && this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE)
                     ? this.setVideoDegradationPreference("maintain-framerate")
                     : n &&
@@ -2149,7 +2165,7 @@ class eQ extends eA {
                 s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + i - n;
             this.addTransceivers("audio", "recvonly", s);
         }
-        if (this.videoSupported && void 0 !== n && (!eq || void 0 === a.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === a.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
                 if (a.videoSSRC !== t) {
@@ -2602,10 +2618,10 @@ class eQ extends eA {
         }
     };
 }
-function eJ(e) {
+function e0(e) {
     return e.split("-")[0];
 }
-class e0 extends eA {
+class e1 extends eA {
     pc;
     fpc;
     codecs = [];
@@ -2628,8 +2644,8 @@ class e0 extends eA {
             (t.direction = null != this.input.stream ? eg.SENDRECV : eg.SENDONLY),
             (this.fpc = t));
         const n = new eU(this.voiceBitrate);
-        (n.on("addtrack", (e, t) => this.createOutput(eJ(e), t)),
-            n.on("removetrack", (e, t) => this.destroyOutput(eJ(e), t)),
+        (n.on("addtrack", (e, t) => this.createOutput(e0(e), t)),
+            n.on("removetrack", (e, t) => this.destroyOutput(e0(e), t)),
             n.once("connected", () => {
                 (this.input.reset(),
                     this.setConnectionState(D.$I.CONNECTED),
@@ -2712,9 +2728,9 @@ class e0 extends eA {
     }
     setVideoEncoderParameters(e) {}
 }
-let e1 = n.p + "worklet.8d84a64a97f8451a.js",
-    e2 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e3 extends R.EventEmitter {
+let e2 = n.p + "worklet.8d84a64a97f8451a.js",
+    e3 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
+class e5 extends R.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2771,7 +2787,7 @@ class e3 extends R.EventEmitter {
         null != n && (null == t || 0 === n.removeTrack(t)) && (n.destroy(), delete this.outputs[e]);
     }
     handshake() {
-        this.pc1.createOffer(e2).then((e) => {
+        this.pc1.createOffer(e3).then((e) => {
             this.pc1
                 .setLocalDescription(
                     (function (e) {
@@ -2809,7 +2825,7 @@ class e3 extends R.EventEmitter {
         });
     };
 }
-class e5 extends R.EventEmitter {
+class e6 extends R.EventEmitter {
     id;
     stream;
     pool;
@@ -2820,7 +2836,7 @@ class e5 extends R.EventEmitter {
             video: { ...e, frameRate: 30 },
         };
         if (navigator.mediaDevices?.getDisplayMedia != null)
-            return new e5(await navigator.mediaDevices.getDisplayMedia(i), n);
+            return new e6(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
     }
     constructor(e, t) {
@@ -2854,10 +2870,10 @@ class e5 extends R.EventEmitter {
         );
     }
 }
-class e6 {
+class e4 {
     pool = {};
     async acquire(e, t) {
-        let n = await e5.get(e, t, this);
+        let n = await e6.get(e, t, this);
         return ((this.pool[n.id] = n), n);
     }
     get(e) {
@@ -2869,10 +2885,10 @@ class e6 {
         this.pool[e.id] = e;
     }
 }
-var e4 = n(935399),
-    e7 = n(503698),
-    e8 = n.n(e7);
-function e9(e) {
+var e7 = n(935399),
+    e8 = n(503698),
+    e9 = n.n(e8);
+function te(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
         l = h.useRef(null),
         o = h.useRef({ width: 0, height: 0 });
@@ -2919,7 +2935,7 @@ function e9(e) {
             [n],
         );
     return (0, _.jsx)("video", {
-        className: e8()("media-engine-video", a),
+        className: e9()("media-engine-video", a),
         ref: l,
         autoPlay: !0,
         onPause: u,
@@ -2928,7 +2944,7 @@ function e9(e) {
         ...s,
     });
 }
-function te(e) {
+function tt(e) {
     let { deviceId: t = D.qe, width: n = 320, height: i = 180, disabled: r = !1, onDeviceChange: a } = e,
         [s, l] = h.useState(null),
         o = h.useMemo(() => new J(), []);
@@ -2943,7 +2959,7 @@ function te(e) {
             ),
             [o, a],
         ),
-        (0, e4.l0)(() => {
+        (0, e7.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {
@@ -2957,13 +2973,13 @@ function te(e) {
         }, [t, n, i, r, o]),
         null == s
             ? (0, _.jsx)("div", { className: "media-engine-video", style: { width: n, height: i } })
-            : (0, _.jsx)(e9, { streamId: s, style: { width: n, height: i } })
+            : (0, _.jsx)(te, { streamId: s, style: { width: n, height: i } })
     );
 }
-let tt = new g.Vy("MediaEngineWebRTC");
-class tn extends p.A {
-    Video = e9;
-    Camera = (e) => (0, _.jsx)(te, { ...e, onDeviceChange: this.handleDeviceChange });
+let tn = new g.Vy("MediaEngineWebRTC");
+class ti extends p.A {
+    Video = te;
+    Camera = (e) => (0, _.jsx)(tt, { ...e, onDeviceChange: this.handleDeviceChange });
     _audioContext = null;
     outputVolume = D.Hz;
     sourceId = D.dx;
@@ -2974,10 +2990,9 @@ class tn extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e6();
+    desktopInputPool = new e4();
     enablePromise = null;
     dave = null;
-    transientKeys = null;
     maxSupportedProtocolVersion = null;
     constructor() {
         (super(),
@@ -3002,7 +3017,7 @@ class tn extends p.A {
             !__OVERLAY__ &&
             (e_.Hz && null != window.AudioContext && null != window.RTCPeerConnection
                 ? (n(528416), !0)
-                : (tt.info("WebRTC is not supported on", A().name, A().version), !1))
+                : (tn.info("WebRTC is not supported on", A().name, A().version), !1))
         );
     }
     supported() {
@@ -3066,17 +3081,19 @@ class tn extends p.A {
                     audioContext: this.getAudioContext(),
                     streamParameters: u,
                     dave: this.dave,
-                    transientKeys: this.transientKeys,
+                    transientKeys: null != this.dave ? eq() : null,
                     experiments: _,
                 }),
                 (r = `${null != A().name && "" !== A().name ? A().name : "unknown"} ${null != A().version && "" !== A().version ? A().version : "unknown"}`),
                 (a = new g.Vy(`Connection(${i.context})`)),
-                e_.PF ? (a.info(`Using Unified Plan (${r})`), new eQ(i)) : (a.info(`Using Plan B (${r})`), new e0(i)));
+                e_.PF ? (a.info(`Using Unified Plan (${r})`), new eJ(i)) : (a.info(`Using Plan B (${r})`), new e1(i)));
         return (
             (E.streamUserId = c),
             E.setOutputVolume(this.outputVolume),
             E.setSinkId(this.sinkId),
-            E.once(S.y.Destroy, (e) => this.connections.delete(e)),
+            E.once(S.y.Destroy, (e) => {
+                (this.connections.delete(e), 0 === this.connections.size && null != e$ && (e$.delete(), (e$ = null)));
+            }),
             E.on(S.y.Silence, (e) => this.emit(N.b.Silence, e)),
             E.on(S.y.DesktopSourceEnd, this.handleDesktopSourceEnd),
             E.on(S.y.AudioPermission, this.handleAudioPermission),
@@ -3107,7 +3124,7 @@ class tn extends p.A {
     }
     async _enable() {
         if (this.enabled) return;
-        await this.getAudioContext().audioWorklet.addModule(e1);
+        await this.getAudioContext().audioWorklet.addModule(e2);
         let e = new Y(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
@@ -3243,7 +3260,7 @@ class tn extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e3(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e5(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }
@@ -3342,12 +3359,9 @@ class tn extends p.A {
                           )
                               .then((t) => {
                                   ((this.dave = t),
-                                      (this.transientKeys = (function () {
-                                          if (null == eK) throw Error("DAVE module not loaded");
-                                          return (null == e$ && (e$ = new eK.TransientKeys()), e$);
-                                      })()),
+                                      eq(),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
-                                      tt.info(
+                                      tn.info(
                                           "Successfully initialized DAVE, version:",
                                           this.maxSupportedProtocolVersion,
                                       ),
@@ -3355,7 +3369,7 @@ class tn extends p.A {
                               })
                               .catch((e) => {
                                   ((this.maxSupportedProtocolVersion = 0),
-                                      tt.error("Failed to initialize DAVE", e),
+                                      tn.error("Failed to initialize DAVE", e),
                                       t(e));
                               });
                       })
