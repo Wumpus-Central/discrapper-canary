@@ -60,4 +60,8 @@ var i,
         (i.IOS_ATTRIBUTION_CLICK = "ios_attribution_click"),
         (i.FRAME_SESSION_JOIN = "frame_session_join"),
         (i.FRAME_SESSION_JOIN_FAILED = "frame_session_join_failed"),
+        (i.WASM_ASSET_FETCH_DURATION = "wasm_asset_fetch_duration"),
+        (i.WASM_ASSET_BODY_DURATION = "wasm_asset_body_duration"),
+        (i.WASM_ASSET_ENCODED_BYTES = "wasm_asset_encoded_bytes"),
+        (i.WASM_ASSET_DECODED_BYTES = "wasm_asset_decoded_bytes"),
         i);

@@ -140,7 +140,7 @@ let t = async function () {
                       var r;
                       return ((r = "webp_wasm.wasm"), e.locateFile ? e.locateFile(r, y) : y + r);
                   }
-                  return new URL(n(14927), n.b).href;
+                  return new URL(n(249156), n.b).href;
               })()),
               r((await S(a, m, t)).instance));
     }

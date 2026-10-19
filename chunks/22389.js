@@ -61,8 +61,8 @@ let o =
             O = r.printErr || console.error.bind(console);
         (Object.assign(r, D), (D = null), r.arguments && r.arguments, r.thisProgram && (S = r.thisProgram));
         var M = r.wasmBinary,
-            W = !1;
-        function N() {
+            R = !1;
+        function W() {
             var e = i.buffer;
             ((r.HEAP8 = u = new Int8Array(e)),
                 (r.HEAP16 = d = new Int16Array(e)),
@@ -75,7 +75,7 @@ let o =
                 (r.HEAP64 = m = new BigInt64Array(e)),
                 (r.HEAPU64 = v = new BigUint64Array(e)));
         }
-        var R = [],
+        var N = [],
             B = [],
             U = [],
             z = 0,
@@ -92,7 +92,7 @@ let o =
         function H(e) {
             (r.onAbort?.(e),
                 O((e = "Aborted(" + e + ")")),
-                (W = !0),
+                (R = !0),
                 (e += ". Build with -sASSERTIONS for more info."));
             var t = new WebAssembly.RuntimeError(e);
             throw (o(t), t);
@@ -133,7 +133,7 @@ let o =
         async function Y() {
             function e(r, e) {
                 var t;
-                return ((i = (P = r.exports)._), N(), (k = P.ba), (t = P.$), B.unshift(t), L("wasm-instantiate"), P);
+                return ((i = (P = r.exports)._), W(), (k = P.ba), (t = P.$), B.unshift(t), L("wasm-instantiate"), P);
             }
             V("wasm-instantiate");
             var n = { a: e$ };
@@ -152,7 +152,7 @@ let o =
                           ? r.locateFile(e, j)
                           : j + e;
                 }
-                return new URL(t(264219), t.b).href;
+                return new URL(t(508678), t.b).href;
             })();
             try {
                 var a = await X(M, g, n);
@@ -1753,9 +1753,9 @@ let o =
                 var n = rM(r, e, t.baseClass);
                 return null === n ? null : t.downcast(n);
             },
+            rR = {},
             rW = {},
-            rN = {},
-            rR = (r, e) => (
+            rN = (r, e) => (
                 (e.ptrType && e.ptr) || rC("makeClassHandle requires ptr and ptrType"),
                 !!e.smartPtrType != !!e.smartPtr && rC("Both smartPtrType and smartPtr must be specified"),
                 (e.count = { value: 1 }),
@@ -2129,7 +2129,7 @@ let o =
             ew = (r) => {
                 var e = ((r - i.buffer.byteLength + 65535) / 65536) | 0;
                 try {
-                    return (i.grow(e), N(), 1);
+                    return (i.grow(e), W(), 1);
                 } catch (r) {}
             },
             eE = {},
@@ -2265,7 +2265,7 @@ let o =
                         t = this.getPointee(r);
                     if (!t) return (this.destructor(r), null);
                     var n =
-                        rN[
+                        rW[
                             ((r, e) => {
                                 for (void 0 === e && rT("ptr should not be undefined"); r.baseClass;)
                                     ((e = r.upcast(e)), (r = r.baseClass));
@@ -2280,28 +2280,28 @@ let o =
                         }
                     function a() {
                         return this.isSmartPointer
-                            ? rR(this.registeredClass.instancePrototype, {
+                            ? rN(this.registeredClass.instancePrototype, {
                                   ptrType: this.pointeeType,
                                   ptr: t,
                                   smartPtrType: this,
                                   smartPtr: r,
                               })
-                            : rR(this.registeredClass.instancePrototype, { ptrType: this, ptr: r });
+                            : rN(this.registeredClass.instancePrototype, { ptrType: this, ptr: r });
                     }
-                    var s = rW[this.registeredClass.getActualType(t)];
+                    var s = rR[this.registeredClass.getActualType(t)];
                     if (!s) return a.call(this);
                     e = this.isConst ? s.constPointerType : s.pointerType;
                     var i = rM(t, this.registeredClass, e.registeredClass);
                     return null === i
                         ? a.call(this)
                         : this.isSmartPointer
-                          ? rR(e.registeredClass.instancePrototype, {
+                          ? rN(e.registeredClass.instancePrototype, {
                                 ptrType: e,
                                 ptr: i,
                                 smartPtrType: this,
                                 smartPtr: r,
                             })
-                          : rR(e.registeredClass.instancePrototype, { ptrType: e, ptr: i });
+                          : rN(e.registeredClass.instancePrototype, { ptrType: e, ptr: i });
                 },
             }),
             (C = Error),
@@ -2579,7 +2579,7 @@ let o =
                         var h = new rJ(d, c, !0, !1, !1),
                             p = new rJ(d + "*", c, !1, !1, !1),
                             v = new rJ(d + " const*", c, !1, !0, !1);
-                        return ((rW[r] = { pointerType: p, constPointerType: v }), rQ(m, s), [h, p, v]);
+                        return ((rR[r] = { pointerType: p, constPointerType: v }), rQ(m, s), [h, p, v]);
                     }));
             },
             q: (r, e, t, n, o, a) => {
@@ -3103,9 +3103,9 @@ let o =
                 if (r.preRun)
                     for ("function" == typeof r.preRun && (r.preRun = [r.preRun]); r.preRun.length;) {
                         var t;
-                        ((t = r.preRun.shift()), R.unshift(t));
+                        ((t = r.preRun.shift()), N.unshift(t));
                     }
-                (K(R),
+                (K(N),
                     z > 0 ||
                         (r.setStatus
                             ? (r.setStatus("Running..."),
@@ -3115,7 +3115,7 @@ let o =
                             : n()));
             }
             function n() {
-                if (!T && ((T = !0), (r.calledRun = !0), !W)) {
+                if (!T && ((T = !0), (r.calledRun = !0), !R)) {
                     if (
                         (r.noFSInit || ry.initialized || ry.init(),
                         (ry.ignorePermissions = !1),

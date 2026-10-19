@@ -1,41 +1,42 @@
-n.d(t, { w: () => N });
+n.d(t, { w: () => C });
 var i,
     r = n(477900),
     a = n(582128),
-    s = n(895975),
-    l = n(971940),
-    o = n(941861),
-    d = n(844222),
-    c = n(460890),
-    u = n(282802),
-    _ = n.n(u);
-function E(e) {
+    s = n(679474),
+    l = n.n(s),
+    o = n(971940),
+    d = n(941861),
+    c = n(844222),
+    u = n(460890),
+    _ = n(282802),
+    E = n.n(_);
+function A(e) {
     let t = {};
-    for (let n of Object.keys(e)) t[_()(n)] = e[n];
+    for (let n of Object.keys(e)) t[E()(n)] = e[n];
     return t;
 }
-let A = E(l.Fit),
-    h = E(l.Alignment);
+let h = A(o.Fit),
+    f = A(o.Alignment);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073));
-var f = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
-let I = new Map();
-function p(e) {
+var I = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
+let p = new Map();
+function T(e) {
     e.listeners.forEach((e) => e());
 }
-function T(e, t) {
+function m(e, t) {
     (null != t.removalTimer && clearTimeout(t.removalTimer),
         (t.removalTimer = setTimeout(() => {
             var n, i;
             return (
                 (n = e),
                 void (((i = t).removalTimer = null),
-                i.consumers > 0 || I.get(n) !== i || (I.delete(n), i.riveFile.cleanup()))
+                i.consumers > 0 || p.get(n) !== i || (p.delete(n), i.riveFile.cleanup()))
             );
         }, 3e4)));
 }
-let m = { status: "disabled", riveFile: null },
-    g = { status: "loading", riveFile: null };
-function S(e) {
+let g = { status: "disabled", riveFile: null },
+    S = { status: "loading", riveFile: null };
+function N(e) {
     let { className: t, style: n } = e;
     return (0, r.jsx)("div", {
         className: t,
@@ -43,9 +44,9 @@ function S(e) {
         "aria-hidden": !0,
     });
 }
-function N(e) {
+function C(e) {
     let t = (function () {
-            let e = (0, c.G9)().experiments?.enabledExperiments,
+            let e = (0, u.G9)().experiments?.enabledExperiments,
                 [t] = a.useState(() => e?.includes("rive-web-perf") ?? !1);
             return t;
         })(),
@@ -54,18 +55,18 @@ function N(e) {
             return (a.useLayoutEffect(() => {
                 if (null == e) return;
                 let t = (function (e) {
-                    let t = I.get(e);
+                    let t = p.get(e);
                     if (null != t) return t;
-                    let n = new l.RiveFile({ buffer: e }),
+                    let n = new o.RiveFile({ buffer: e }),
                         i = { riveFile: n, status: "loading", consumers: 0, removalTimer: null, listeners: new Set() };
                     return (
-                        n.on(l.EventType.Load, () => {
-                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && T(e, i), p(i));
+                        n.on(o.EventType.Load, () => {
+                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && m(e, i), T(i));
                         }),
-                        n.on(l.EventType.LoadError, () => {
-                            ((i.status = "error"), I.get(e) === i && I.delete(e), p(i));
+                        n.on(o.EventType.LoadError, () => {
+                            ((i.status = "error"), p.get(e) === i && p.delete(e), T(i));
                         }),
-                        I.set(e, i),
+                        p.set(e, i),
                         n.init().catch(() => {}),
                         i
                     );
@@ -87,30 +88,30 @@ function N(e) {
                     () => {
                         (t.listeners.delete(i),
                             (t.consumers -= 1),
-                            0 === t.consumers && "loaded" === t.status && T(e, t));
+                            0 === t.consumers && "loaded" === t.status && m(e, t));
                     }
                 );
             }, [e]),
             null == e)
-                ? m
+                ? g
                 : null == t || t.buffer !== e
-                  ? g
+                  ? S
                   : t.value;
         })(t && null == e.assetLoader ? e.buffer : null);
-    return n.status === f.Loading
-        ? (0, r.jsx)(S, { className: e.className, style: e.style })
-        : (0, r.jsx)(C, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
+    return n.status === I.Loading
+        ? (0, r.jsx)(N, { className: e.className, style: e.style })
+        : (0, r.jsx)(O, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
 }
-function C(e) {
+function O(e) {
     let {
             isRiveWebPerfEnabled: t,
             sharedRiveFile: n,
             buffer: i,
             autoplay: s = !0,
-            className: u,
+            className: l,
             fit: _,
             alignment: E,
-            style: f,
+            style: A,
             eventTargetRef: I,
             artboard: p,
             withReducedMotion: T = "halt",
@@ -127,17 +128,17 @@ function C(e) {
             stateMachine: v,
             artboardStateMachines: b,
         } = e,
-        M = a.useContext(d.C),
-        P = (0, o.Rs)(),
-        U = (0, c.G9)().isWindowFocused?.() ?? P,
-        [w, G] = (0, o.Xb)(3e4),
+        M = a.useContext(c.C),
+        P = (0, d.Rs)(),
+        U = (0, u.G9)().isWindowFocused?.() ?? P,
+        [w, G] = (0, d.Xb)(3e4),
         [x, k] = a.useState(void 0),
         F = a.useMemo(() => {
             if (t && null != b) return b[p ?? ""];
         }, [t, b, p]),
         B = null != F,
         V = a.useRef(null),
-        { rive: H, RiveComponent: j } = (0, l.useRive)(
+        { rive: H, RiveComponent: j } = (0, o.useRive)(
             {
                 eventTarget: I?.current,
                 ...(null != n ? { riveFile: n } : { buffer: i }),
@@ -147,9 +148,9 @@ function C(e) {
                 autoBind: !!B || void 0,
                 enableAutoSleep: t,
                 useOffscreenRenderer: !0,
-                layout: new l.Layout({
-                    fit: null != _ ? A[_] : l.Fit.Cover,
-                    alignment: null != E ? h[E] : l.Alignment.Center,
+                layout: new o.Layout({
+                    fit: null != _ ? h[_] : o.Fit.Cover,
+                    alignment: null != E ? f[E] : o.Alignment.Center,
                 }),
                 isTouchScrollEnabled: C,
                 listenOnDocumentBody: R,
@@ -210,14 +211,14 @@ function C(e) {
                     artboard: i,
                     artboardProperties: r,
                     dataBinding: s,
-                    dynamicDataBinding: o,
-                    onDataBindingChange: u,
+                    dynamicDataBinding: l,
+                    onDataBindingChange: d,
                 } = e,
-                _ = o ?? s,
-                E = (0, l.useViewModel)(n);
-            (0, l.useViewModelInstance)(E);
-            let { theme: A, saturation: h } = (0, c.G9)(),
-                { highContrastModeEnabled: f } = a.useContext(d.C),
+                _ = l ?? s,
+                E = (0, o.useViewModel)(n);
+            (0, o.useViewModelInstance)(E);
+            let { theme: A, saturation: h } = (0, u.G9)(),
+                { highContrastModeEnabled: f } = a.useContext(c.C),
                 I = a.useRef({}),
                 p =
                     ((t = a.useRef({})),
@@ -231,7 +232,7 @@ function C(e) {
                             });
                             if (null == i || n?.aborted) return Promise.resolve(null);
                             let r = await i.arrayBuffer(),
-                                a = await (0, l.decodeImage)(new Uint8Array(r));
+                                a = await (0, o.decodeImage)(new Uint8Array(r));
                             return ((t.current[e] = a), a);
                         }
                     }, [])),
@@ -266,9 +267,9 @@ function C(e) {
                 rive: n,
                 artboard: i,
                 artboardProperties: r,
-                dynamicDataBinding: o,
+                dynamicDataBinding: l,
                 dataBinding: s,
-                onDataBindingChange: u,
+                onDataBindingChange: d,
             }),
                 a.useEffect(() => {
                     let e = new AbortController();
@@ -361,11 +362,11 @@ function C(e) {
                     clearTimeout(V.current);
                 }
                 return (
-                    H.on(l.EventType.Play, e),
-                    H.on(l.EventType.Pause, t),
-                    H.on(l.EventType.Stop, t),
+                    H.on(o.EventType.Play, e),
+                    H.on(o.EventType.Pause, t),
+                    H.on(o.EventType.Stop, t),
                     () => {
-                        (H.off(l.EventType.Play, e), H.off(l.EventType.Pause, t), H.off(l.EventType.Stop, t));
+                        (H.off(o.EventType.Play, e), H.off(o.EventType.Pause, t), H.off(o.EventType.Stop, t));
                     }
                 );
             }
@@ -410,13 +411,13 @@ function C(e) {
                     ((W.current = t.data),
                     t.data > 0 &&
                         ("halt" === T && M.reducedMotion.enabled && H.isPlaying && H.pause(),
-                        H.off(l.EventType.Advance, e)));
+                        H.off(o.EventType.Advance, e)));
             };
             return (
-                H.on(l.EventType.Advance, e),
+                H.on(o.EventType.Advance, e),
                 s && H.play(),
                 () => {
-                    H.off(l.EventType.Advance, e);
+                    H.off(o.EventType.Advance, e);
                 }
             );
         }, [H, M.reducedMotion.enabled, T, s]),
@@ -424,9 +425,9 @@ function C(e) {
             G();
         }, [G, p, _, E, S, O, g]),
         !(function (e) {
-            let { rive: t, autoplay: n, isRiveWebPerfEnabled: i, isFocused: r, isUserIdle: s, lastFrameRef: d } = e,
+            let { rive: t, autoplay: n, isRiveWebPerfEnabled: i, isFocused: r, isUserIdle: s, lastFrameRef: l } = e,
                 c = i ? t?.canvas : null,
-                u = (0, o.Cz)(c),
+                u = (0, d.Cz)(c),
                 _ = r && !s && (!i || u),
                 E = a.useRef(!1),
                 A = a.useRef(null);
@@ -436,23 +437,23 @@ function C(e) {
                 let e = null;
                 return (
                     !_ && E.current && t.isPlaying
-                        ? d.current > 0
+                        ? l.current > 0
                             ? t.pause()
                             : ((e = (n) => {
                                   "number" == typeof n.data &&
                                       !(n.data <= 0) &&
-                                      (null != e && t.off(l.EventType.Advance, e), t.isPlaying && t.pause());
+                                      (null != e && t.off(o.EventType.Advance, e), t.isPlaying && t.pause());
                               }),
-                              t.on(l.EventType.Advance, e))
+                              t.on(o.EventType.Advance, e))
                         : _ && !t.isPlaying && E.current && t.play(),
                     () => {
-                        (null != e && t.off(l.EventType.Advance, e),
+                        (null != e && t.off(o.EventType.Advance, e),
                             null != t && _ && (E.current = null != t.frameRequestId || !0 === t.isAutoSleeping));
                     }
                 );
-            }, [t, _, d, n, i]);
+            }, [t, _, l, n, i]);
         })({ rive: H, autoplay: s, isRiveWebPerfEnabled: t, isFocused: U, isUserIdle: w, lastFrameRef: W }),
-        (0, r.jsx)(j, { className: u, style: f, "aria-hidden": !0 })
+        (0, r.jsx)(j, { className: l, style: A, "aria-hidden": !0 })
     );
 }
-l.RuntimeLoader.setWasmUrl(s);
+o.RuntimeLoader.setWasmUrl(l());

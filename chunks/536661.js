@@ -62,7 +62,7 @@ var n = a(383930);
     n.registerLanguage("fix", a(259930)),
     n.registerLanguage("flix", a(465334)),
     n.registerLanguage("fortran", a(403743)),
-    n.registerLanguage("fsharp", a(61083)),
+    n.registerLanguage("fsharp", a(283464)),
     n.registerLanguage("gams", a(631753)),
     n.registerLanguage("gauss", a(931972)),
     n.registerLanguage("gcode", a(144061)),

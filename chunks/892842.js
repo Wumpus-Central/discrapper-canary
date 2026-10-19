@@ -1,4 +1,5 @@
-(n.d(t, { iQ: () => h, FH: () => I, P4: () => E, pd: () => A, ML: () => d, pX: () => m, hw: () => T }), n(321073));
+(n.d(t, { FH: () => I, ML: () => d, kY: () => p, iQ: () => h, P4: () => E, pX: () => g, pd: () => A, hw: () => m }),
+    n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(306173),
@@ -153,11 +154,12 @@ let I = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
     ),
     new f("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
-let p = !1;
-function T() {
-    return p;
-}
+let p = new _("2026-10-wasm-precompressed-brotli", "Web: precompressed brotli WASM assets"),
+    T = !1;
 function m() {
+    return T;
+}
+function g() {
     (0, a.xd)() &&
-        (o.info("Clearing libdiscore experiment cache and disabling sync"), (p = !0), (0, a.Ih)().clearCache());
+        (o.info("Clearing libdiscore experiment cache and disabling sync"), (T = !0), (0, a.Ih)().clearCache());
 }

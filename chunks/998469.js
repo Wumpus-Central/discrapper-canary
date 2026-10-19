@@ -13158,7 +13158,7 @@ let h1 = (0, E.AK)(h.X.ACTIVITY_PRIVACY_TO_REGISTERED_GAMES_NAVIGATOR, {
             (0, f.bG)([i3.Ay], () => i3.Ay.getGamesSeen(!1).some((e) => !(0, hW.n1)(e))) && (0, nE.xl)(),
     }),
     h2 = (0, E.gN)(h.X.ACTIVITY_SHARING_RELATED_SETTINGS, { buildLayout: () => [h1] });
-var h3 = n(311059),
+var h3 = n(533440),
     h5 = n(406535),
     h4 = n(968987);
 let h6 = (0, E.zD)(h.X.ACTIVITY_PRIVACY_NOTIFY_FRIENDS_ONLINE_SETTING, {

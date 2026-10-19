@@ -12,7 +12,7 @@ async function l() {
     if (null != i) return i;
     try {
         let e = (await r.e("437971").then(r.bind(r, 543198))).default;
-        return (i = await e({ locateFile: (e) => (e.endsWith(".wasm") ? new URL(r(14927), r.b).href : e) }));
+        return (i = await e({ locateFile: (e) => (e.endsWith(".wasm") ? new URL(r(249156), r.b).href : e) }));
     } catch (t) {
         let e = Error("WebP module failed to load. Ensure webp_wasm.js and webp_wasm.wasm are built and available.");
         throw ((e.cause = t), e);
