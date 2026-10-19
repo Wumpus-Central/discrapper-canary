@@ -4193,7 +4193,11 @@ function sM(e) {
             [t, d],
         ),
         p = tm.A.can(em.xBc.MANAGE_CHANNELS, t) || tm.A.can(em.xBc.MANAGE_ROLES, t),
-        A = r.useCallback(() => l(!1), []);
+        A = (0, u.bG)([t8.A, tm.A], () => {
+            let e = t8.A.getGuild(s);
+            return null != e && tm.A.canAccessGuildSettings(e) && tm.A.canAccessMemberSafetyPage(e);
+        }),
+        f = r.useCallback(() => l(!1), []);
     return (0, a.jsxs)(iT.Ay, {
         channelId: t.id,
         children: [
@@ -4264,14 +4268,13 @@ function sM(e) {
                     m.map((e, n) => {
                         let l = e.colorString ?? em.TpD,
                             i = e.tags?.guild_connections !== void 0;
-                        return p
+                        return A
                             ? (0, a.jsx)(
                                   sb,
                                   {
                                       className: c()(sN.JC, { [sN.HV]: n === m.length - 1 }),
                                       roleName: e.name,
                                       roleColor: l,
-                                      disabled: !p,
                                       verified: i,
                                       onClick: () => {
                                           (sS.A.open(t.guild_id, em.BEX.MEMBERS), sS.A.selectRole(e.id));
@@ -4295,7 +4298,7 @@ function sM(e) {
             n
                 ? (0, a.jsx)(sg.aF, {
                       renderModal: (e) =>
-                          (0, a.jsx)(sf.default, { ...e, onClose: () => (A(), e.onClose()), channelId: t.id }),
+                          (0, a.jsx)(sf.default, { ...e, onClose: () => (f(), e.onClose()), channelId: t.id }),
                       onCloseRequest: () => l(!1),
                   })
                 : null,
