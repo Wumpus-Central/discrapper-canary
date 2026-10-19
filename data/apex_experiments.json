@@ -745,22 +745,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-02-content-classification-presence-filter",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-02-desktop-new-user-onboarding",
     "kind": "user",
     "defaultConfig": {

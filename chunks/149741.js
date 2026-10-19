@@ -342,13 +342,13 @@ var eQ = n(808380),
     e0 = n(263577),
     e1 = n(790381),
     e3 = n(266080),
-    e5 = n(70191);
-let e2 = { [eQ.Y.XBOX]: e3.A, [eQ.Y.PLAYSTATION]: e1.A };
+    e2 = n(70191);
+let e5 = { [eQ.Y.XBOX]: e3.A, [eQ.Y.PLAYSTATION]: e1.A };
 function e4(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
-            let e = t.find(e5.A);
+            let e = t.find(e2.A);
             if (null != a) {
                 let n = a.altId ?? a.id;
                 return t.find((e) => e.application_id === n) ?? e;
@@ -361,7 +361,7 @@ function e4(e) {
         : (function (e) {
               let { gameProfileEntry: t, gameApplication: n, gameIconSize: l, platformIconSizePx: r } = e,
                   s = t?.extra?.platform,
-                  a = null != s ? e2[s] : null,
+                  a = null != s ? e5[s] : null,
                   u =
                       null != a
                           ? (0, i.jsx)(a, { width: r, height: r, color: eq.A.colors.INTERACTIVE_ICON_DEFAULT })
@@ -507,7 +507,7 @@ function e7(e) {
             [c, g, _],
         ),
         C = (0, F.K)(y),
-        v = r.useMemo(() => n?.find(e5.A), [n]),
+        v = r.useMemo(() => n?.find(e2.A), [n]),
         D = (0, en.A)({ activity: v, user: t }),
         b = (0, ee.zD)(D) ? D : void 0,
         j = r.useCallback(() => {
@@ -632,11 +632,11 @@ let tt = r.memo((e) => {
             },
             [l, c, t.id],
         ),
-        F = n.some(e5.A),
+        F = n.some(e2.A),
         G = (0, d.b4)(),
         L = r.useMemo(() => {
             let e = G?.altId ?? G?.id;
-            return null != e && n.some((t) => (0, e5.A)(t) && t.application_id === e);
+            return null != e && n.some((t) => (0, e2.A)(t) && t.application_id === e);
         }, [n, G]),
         P = C !== eX.clD.ONLINE && C !== eX.clD.IDLE && C !== eX.clD.DND,
         V = (0, ex.A2)(t.id),
@@ -1765,7 +1765,7 @@ let t3 = r.memo(function (e) {
     return (0, tB.fU)(s);
 });
 t3.displayName = "OverlayElapsedTime";
-let t5 = r.memo(function () {
+let t2 = r.memo(function () {
     let e = (0, t0.A)(),
         [t, n] = r.useState(() => Date.now());
     r.useEffect(() => {
@@ -1775,7 +1775,7 @@ let t5 = r.memo(function () {
     let l = (0, s.bG)([tW.A], () => tW.A.getDuration() ?? 0, [t]) ?? 0;
     return (0, tB.fU)(l / 1e3);
 });
-function t2(e) {
+function t5(e) {
     var t;
     let n,
         { currentUser: l, activity: a, currentGameName: u } = e,
@@ -1919,7 +1919,7 @@ function t2(e) {
                                     className: t1.p0,
                                     variant: "code",
                                     tag: "div",
-                                    children: (0, i.jsx)(t5, {}),
+                                    children: (0, i.jsx)(t2, {}),
                                 })
                           : null,
                 ],
@@ -1983,7 +1983,7 @@ function t4(e) {
     return (0, i.jsxs)("div", {
         className: t1.kL,
         children: [
-            (0, i.jsx)(t2, { currentUser: t, activity: n, currentGameName: l }),
+            (0, i.jsx)(t5, { currentUser: t, activity: n, currentGameName: l }),
             (0, i.jsx)("div", {
                 className: t1.vR,
                 role: "tablist",
@@ -2035,7 +2035,7 @@ function t9(e) {
         ],
     });
 }
-t5.displayName = "OverlayVoiceCallElapsedTime";
+t2.displayName = "OverlayVoiceCallElapsedTime";
 var t6 = n(594831),
     t8 = n(645959),
     t7 = n(812993),
@@ -2045,7 +2045,7 @@ var t6 = n(594831),
     nl = n(439372),
     ni = n(723176),
     nr = n(626584),
-    ns = n(595528);
+    ns = n(276602);
 n(95701);
 var na = n(280450),
     nu = n(973153);
@@ -3246,8 +3246,8 @@ function n1() {
     });
 }
 var n3 = n(776096),
-    n5 = n(607567),
-    n2 = n(377802),
+    n2 = n(607567),
+    n5 = n(377802),
     n4 = n(342952),
     n9 = n(676923),
     n6 = n(342296),
@@ -3269,7 +3269,7 @@ let le = r.memo(function (e) {
         })(t, l),
         I = (0, ei.A)({ userId: l, guildId: n }),
         A = (0, s.bG)([em.A], () => null != n && null != em.A.getStreamForUser(l, n), [n, l]),
-        f = (0, s.bG)([R.A], () => R.A.findActivity(l, e5.A), [l]),
+        f = (0, s.bG)([R.A], () => R.A.findActivity(l, e2.A), [l]),
         p = (0, eJ.h)(f?.application_id),
         N = (0, eS.tx)(n ?? void 0, t, g),
         x = r.useCallback(
@@ -3408,9 +3408,9 @@ function li(e) {
         f = (0, s.bG)([ef.Ay], () => ef.Ay.getVoiceChannelId() === n, [n]),
         p = (0, s.bG)([eV.A], () => null != m && (!!m.isPrivate?.() || eV.A.can(eX.xBc.READ_MESSAGE_HISTORY, m)), [m]),
         [N] = (0, s.bG)(
-            [n5.Ay],
+            [n2.Ay],
             () =>
-                null == m || null == E ? [[], 0] : [n5.Ay.getVoiceStatesForChannel(m), n5.Ay.getVoiceStateVersion(E)],
+                null == m || null == E ? [[], 0] : [n2.Ay.getVoiceStatesForChannel(m), n2.Ay.getVoiceStateVersion(E)],
             [m, E],
             j.D,
         ),
@@ -3419,7 +3419,7 @@ function li(e) {
             [eH.A, R.A],
             () => {
                 for (let e of Object.values(eH.A.getVoiceStatesForChannel(n))) {
-                    let t = R.A.findActivity(e.userId, e5.A);
+                    let t = R.A.findActivity(e.userId, e2.A);
                     if (t?.name != null) return t.name;
                 }
                 return null;
@@ -3489,7 +3489,7 @@ function li(e) {
         {
             Component: H,
             events: { onMouseEnter: Y, onMouseLeave: K },
-        } = (0, n2.O)();
+        } = (0, n5.O)();
     function z() {
         let e = f ? eB.intl.string(eB.t["6vrfgt"]) : eB.intl.string(eB.t.S0W8Z5),
             t = f ? L.hex() : G.hex(),
@@ -3899,7 +3899,7 @@ function lo() {
                 let l = n.rows[t];
                 if (null == l || !d.has(l.channelId)) return 50;
                 let i = eI.A.getChannel(l.channelId),
-                    r = Math.min((null != i ? n5.Ay.getVoiceStatesForChannel(i) : []).length, 25);
+                    r = Math.min((null != i ? n2.Ay.getVoiceStatesForChannel(i) : []).length, 25);
                 return r <= 0 ? 50 : 50 + (32 * r + (r - 1) * 2 + 8);
             },
             [d, en],
