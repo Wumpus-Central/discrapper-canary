@@ -917,17 +917,44 @@
 
 .secondary_c2b88c {
     background-color: var(--badge-secondary-background);
+    border: var(--badge-border-width) solid var(--badge-secondary-border);
     color: var(--badge-secondary-text)
 }
 
 .primary_c2b88c {
     background-color: var(--badge-primary-background);
+    border: var(--badge-border-width) solid var(--badge-primary-border);
     color: var(--badge-primary-text)
 }
 
 .expressive_c2b88c {
     background-color: var(--badge-expressive-background);
+    border: var(--badge-border-width) solid var(--badge-expressive-border);
     color: var(--badge-expressive-text)
+}
+
+.warning_c2b88c {
+    background-color: var(--badge-warning-background);
+    border: var(--badge-border-width) solid var(--badge-warning-border);
+    color: var(--badge-warning-text)
+}
+
+.critical_c2b88c {
+    background-color: var(--badge-critical-background);
+    border: var(--badge-border-width) solid var(--badge-critical-border);
+    color: var(--badge-critical-text)
+}
+
+.success_c2b88c {
+    background-color: var(--badge-success-background);
+    border: var(--badge-border-width) solid var(--badge-success-border);
+    color: var(--badge-success-text)
+}
+
+.notification_c2b88c {
+    background-color: var(--badge-notification-background);
+    border: var(--badge-border-width) solid var(--badge-notification-border);
+    color: var(--badge-notification-text)
 }
 
 .rarity-common_c2b88c {
@@ -1032,4 +1059,4 @@
     --custom-gradient-color-end: var(--expressive-gradient-nitro-green-end)
 }
 
-/*# sourceMappingURL=384209.98ed92535d1a79fb.css.map*/
+/*# sourceMappingURL=384209.7d2aa884087159cc.css.map*/
