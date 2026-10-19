@@ -7619,6 +7619,13 @@ function of(e) {
                             })
                           : null,
                       (0, a.jsx)(om, { publish: l }),
+                      "new_ui" !== n.reason
+                          ? (0, a.jsx)(Q.E, {
+                                variant: "text-xs/normal",
+                                color: "text-muted",
+                                children: A.intl.string(N.default.SifbJM),
+                            })
+                          : null,
                   ],
               }),
           })
