@@ -22,10 +22,10 @@
 .iconImage__25dca {
     display: block;
     flex-shrink: 0;
-    height: 48px;
+    height: var(--custom-contextual-referral-icon-size, 48px);
     -o-object-fit: contain;
     object-fit: contain;
-    width: 48px
+    width: var(--custom-contextual-referral-icon-size, 48px)
 }
 
 .text__25dca {
@@ -68,11 +68,10 @@
     color: var(--interactive-icon-default);
     cursor: pointer;
     display: flex;
-    inset-inline-end: 5px;
+    inset-inline-end: -4px;
     justify-content: center;
-    padding: 4px;
     position: absolute;
-    top: 3px;
+    top: 2px;
     z-index: 1
 }
 
@@ -83,8 +82,8 @@
 .cardPlacement__1a480 {
     box-sizing: border-box;
     margin-block: var(--space-sm) var(--space-md);
-    margin-inline-start: var(--space-sm);
-    max-width: calc(var(--custom-member-list-width) - 16px)
+    margin-inline: var(--space-sm) var(--space-xxs);
+    --custom-contextual-referral-icon-size: 44px
 }
 
-/*# sourceMappingURL=34a57afad533f0ff.css.map*/
+/*# sourceMappingURL=ed1799283157e9e8.css.map*/

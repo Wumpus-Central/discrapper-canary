@@ -28,8 +28,9 @@
     box-sizing: border-box;
     flex-shrink: 0;
     margin-block: var(--space-sm) var(--space-md);
-    margin-inline-start: var(--space-sm);
-    max-width: calc(var(--custom-member-list-width) - 16px)
+    margin-inline: var(--space-sm);
+    max-width: calc(var(--custom-member-list-width) - var(--space-sm)*2);
+    --custom-contextual-referral-icon-size: 44px
 }
 
 .container_a154bf {
@@ -2068,4 +2069,4 @@
     border-top: 1px solid var(--app-frame-border)
 }
 
-/*# sourceMappingURL=f1508d5a43e383d7.css.map*/
+/*# sourceMappingURL=2cfdcb57bafb7e3e.css.map*/

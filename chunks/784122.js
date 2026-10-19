@@ -2891,18 +2891,10 @@ function sp(e) {
         } = e,
         { analyticsLocations: c } = (0, P.Ay)(t);
     return (0, l.jsxs)(sc.h, {
-        color: "purple",
+        color: "nitro-pink",
         className: a()(sm.kL, i),
         "data-testid": "contextual-referral-embed-card",
         children: [
-            (0, l.jsx)(tB.D, {
-                className: sm.VN,
-                "aria-label": z.intl.string(z.t.H2NPrR),
-                onClick: function () {
-                    n(lR.i.USER_DISMISS);
-                },
-                children: (0, l.jsx)(nQ.P, { size: "xs", color: "currentColor" }),
-            }),
             (0, l.jsxs)("div", {
                 className: sm.lj,
                 children: [
@@ -2923,6 +2915,14 @@ function sp(e) {
                                 children: r,
                             }),
                         ],
+                    }),
+                    (0, l.jsx)(tB.D, {
+                        className: sm.VN,
+                        "aria-label": z.intl.string(z.t.H2NPrR),
+                        onClick: function () {
+                            n(lR.i.USER_DISMISS);
+                        },
+                        children: (0, l.jsx)(nQ.P, { size: "xs", color: "currentColor" }),
                     }),
                 ],
             }),
@@ -4349,7 +4349,7 @@ function aL(e) {
         markAsDismissed: c,
         title: z.intl.string(z.t.KXbhzo),
         body: z.intl.formatToPlainString(z.t.tJvaQ8, { recipientName: h }),
-        ctaText: z.intl.string(z.t.dzQxHq),
+        ctaText: z.intl.string(z.t.JSSBzo),
         onPrimaryAction: u,
     });
 }
