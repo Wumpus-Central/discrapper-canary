@@ -5311,6 +5311,7 @@ var rC =
         (eM.SLAYER_STOREFRONT_CARD_IMPRESSION = "slayer_storefront_card_impression"),
         (eM.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED = "slayer_storefront_card_element_clicked"),
         (eM.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED = "slayer_storefront_pdp_element_clicked"),
+        (eM.SLAYER_STOREFRONT_PDP_VIEWED = "slayer_storefront_pdp_viewed"),
         (eM.SLAYER_STOREFRONT_ORBS_PURCHASE_GATE_VIEWED = "slayer_storefront_orbs_purchase_gate_viewed"),
         (eM.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED = "slayer_storefront_page_element_clicked"),
         (eM.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED = "slayer_storefront_forward_modal_element_clicked"),
