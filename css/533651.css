@@ -10,18 +10,16 @@
 }
 
 .title_b917ac {
-    font-weight: var(--font-weight-bold);
-    text-align: center
+    font-weight: var(--font-weight-bold)
 }
 
-.footer_b917ac {
-    align-items: center;
-    justify-content: space-between
+.subtitle_b917ac,
+.title_b917ac {
+    text-align: center
 }
 
 .subtitle_b917ac {
-    margin-top: 8px;
-    text-align: center
+    margin-top: 8px
 }
 
 .createGuild_b917ac {
@@ -417,4 +415,4 @@
     display: none
 }
 
-/*# sourceMappingURL=533651.326f047e765bbc7b.css.map*/
+/*# sourceMappingURL=533651.76bef7a267c80213.css.map*/
