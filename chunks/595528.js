@@ -1584,6 +1584,9 @@ function eq(e) {
     eV(["QUESTS_USER_STATUS_UPDATE"], (e) => {
         eW({ type: "QUESTS_USER_STATUS_UPDATE", user_status: e.user_status });
     }),
+    eV(["ORBS_ARCADE_GAME_STATE_UPDATE"], (e) => {
+        eW({ type: "ORBS_ARCADE_GAME_STATE_UPDATE", game_id: e.game_id, game_state: e.game_state });
+    }),
     eV(["QUESTS_USER_COMPLETION_UPDATE"], (e) => {
         eW({ type: "QUESTS_USER_COMPLETION_UPDATE", quest_enrollment_blocked_until: e.quest_enrollment_blocked_until });
     }),

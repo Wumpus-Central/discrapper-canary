@@ -813,6 +813,7 @@
   "CHECKPOINT_COMPLETE": "/checkpoint/complete",
   "CHECKPOINT_RESET": "/checkpoint/reset",
   "QUESTS_CURRENT_QUESTS": "/quests/@me",
+  "ORBS_ARCADE_GAMES": "/orbs-arcade/games/@me",
   "QUESTS_CLAIMED_QUESTS": "/quests/@me/claimed",
   "QUEST": "/quests/:param",
   "QUEST_PREVIEW": "/quests/:param/preview",
