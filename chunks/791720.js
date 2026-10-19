@@ -711,7 +711,7 @@ var eX = n(97808),
     e0 = n(69282),
     e1 = n(657048),
     e5 = n(290863);
-function e2(e) {
+function e8(e) {
     let t = (0, h.jc)(),
         n = t?.channelId,
         l = X.A.getChannel(n),
@@ -801,7 +801,7 @@ function e2(e) {
         defaultValues: o,
     });
 }
-var e8 = n(144228),
+var e2 = n(144228),
     e4 = n(821609),
     e3 = n(897132);
 function e7(e) {
@@ -816,7 +816,7 @@ function e7(e) {
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(e8.z, { options: m, value: u ?? "", onChange: x, required: l }),
+            (0, i.jsx)(e2.z, { options: m, value: u ?? "", onChange: x, required: l }),
             !l &&
                 (0, i.jsx)("div", {
                     className: c()(e3.H, { [e3.d]: !d }),
@@ -1283,7 +1283,7 @@ let tL = {
         [tT.R.ORANGE]: t_,
     };
 var tP = n(142617),
-    tB = n(129163),
+    tB = n(311956),
     tw = n(835517),
     tD = n(881245);
 function tU(e) {
@@ -1294,7 +1294,7 @@ function tU(e) {
         children: r.map((e) => (0, i.jsx)("img", { src: e, alt: "", draggable: !1, className: tD.q }, e)),
     });
 }
-var tF = n(443155),
+var tF = n(309913),
     tz = n(815251);
 let tG = [
     "/assets/cee2b812c0cc2a9c.svg",
@@ -1477,8 +1477,8 @@ var tQ = n(564771),
     t0 = n(338717),
     t1 = n(96782),
     t5 = n(302031),
-    t2 = n(561323);
-function t8(e) {
+    t8 = n(561323);
+function t2(e) {
     let { file: t, name: n, size: l, spoiler: r } = e,
         a = s.useMemo(
             () =>
@@ -1496,7 +1496,7 @@ function t8(e) {
     );
     function x(e) {
         return (0, i.jsx)(tQ.A, {
-            className: c()({ [t2.V]: e }),
+            className: c()({ [t8.V]: e }),
             url: t.url,
             fileName: n ?? w.intl.string(w.t.GnuJ5u),
             fileSize: l ?? 0,
@@ -1504,7 +1504,7 @@ function t8(e) {
         });
     }
     return (0, i.jsx)("div", {
-        className: t2.O,
+        className: t8.O,
         children: r
             ? (0, i.jsx)(t5.Ay, {
                   type: t5.Ay.Types.ATTACHMENT,
@@ -1873,16 +1873,16 @@ function n5(e) {
         case nk.ContentInventoryEntryType.LISTENED_SESSION:
             return (0, i.jsx)(n9, { entry: t, ...l });
         case nk.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
-            return (0, i.jsx)(n8, { entry: t, ...l });
+            return (0, i.jsx)(n2, { entry: t, ...l });
         default:
             throw Error(`Unsupported content type: ${t.content_type}`);
     }
 }
-function n2(e) {
+function n8(e) {
     let { errorFallback: t, ...n } = e;
     return (0, i.jsx)(nO, { fallback: t, children: (0, i.jsx)(n5, { ...n }) });
 }
-function n8(e) {
+function n2(e) {
     let { entry: t, children: n, ...l } = e,
         r = n1(
             (function (e) {
@@ -2271,7 +2271,7 @@ function lk(e) {
         l = (0, y.bG)([X.A], () => X.A.getChannel(n));
     return (
         ei()(null != l, "channel must be defined"),
-        (0, i.jsx)(n2, {
+        (0, i.jsx)(n8, {
             location: nY.EMBED,
             entry: e.contentInventoryEntry,
             channel: l,
@@ -2390,7 +2390,7 @@ function lH(e) {
                         case d.I5.USER_SELECT:
                         case d.I5.ROLE_SELECT:
                         case d.I5.MENTIONABLE_SELECT:
-                            return (0, i.jsx)(e2, { ...t }, n);
+                            return (0, i.jsx)(e8, { ...t }, n);
                         case d.I5.TEXT_INPUT:
                             return (0, i.jsx)(to, { ...t }, n);
                         case d.I5.SECTION:
@@ -2402,7 +2402,7 @@ function lH(e) {
                         case d.I5.THUMBNAIL:
                             return (0, i.jsx)(nR, { ...t }, n);
                         case d.I5.FILE:
-                            return (0, i.jsx)(t8, { ...t }, n);
+                            return (0, i.jsx)(t2, { ...t }, n);
                         case d.I5.SEPARATOR:
                             return (0, i.jsx)(nC, { ...t }, n);
                         case d.I5.CONTENT_INVENTORY_ENTRY:
