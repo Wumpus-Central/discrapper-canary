@@ -261,12 +261,7 @@ let Y = {
                                   ? i(Error(`Error ${t} when fetching info on ${e}`))
                                   : null == r.icon || "" === r.icon || null == r.name || "" === r.name
                                     ? i(Error(`Did not find data on ${e}`))
-                                    : (d.h.dispatch({
-                                          type: "GAME_ICON_UPDATE",
-                                          gameName: r.name,
-                                          icon: `data:image/png;base64,${r.icon}`,
-                                      }),
-                                      n(r));
+                                    : n(r);
                           });
                 }),
         ),
@@ -364,49 +359,6 @@ let Y = {
                         : d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
                 },
             ));
-    },
-    reportUnverifiedGame(e) {
-        let { name: t, iconHash: n, publisher: i, distributor: r, sku: a, executableName: s } = e,
-            o = (0, E.v)(s);
-        (V.log("Reporting unverified game: ", {
-            name: t,
-            executableName: s,
-            iconHash: n,
-            publisher: i,
-            distributor: r,
-            sku: a,
-            cleanedExecutable: o,
-        }),
-        null != o) &&
-            l.Bo.post({
-                url: P.Rsh.UNVERIFIED_APPLICATIONS,
-                body: {
-                    name: t,
-                    os: (0, y.getPlatformName)(),
-                    icon: n,
-                    distributor_application: null == r || "" === r ? null : { distributor: r, sku: a },
-                    executable: o,
-                    publisher: i,
-                    report_version: 3,
-                },
-                retries: 1,
-                oldFormErrors: !0,
-                rejectWithError: !0,
-            }).then((e) => {
-                let {
-                    body: { name: t, hash: n, missing_data: i },
-                } = e;
-                d.h.dispatch({ type: "UNVERIFIED_GAME_UPDATE", name: t, hash: n, missingData: i });
-            });
-    },
-    uploadIcon(e, t, n) {
-        l.Bo.post({
-            url: P.Rsh.UNVERIFIED_APPLICATIONS_ICONS,
-            body: { application_name: e, application_hash: t, icon: n },
-            retries: 1,
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        });
     },
     deleteEntry(e) {
         d.h.dispatch({ type: "RUNNING_GAME_DELETE_ENTRY", game: e });
