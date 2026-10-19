@@ -1,15 +1,16 @@
-i.d(t, { RQ: () => S, Ri: () => p, U: () => h, bf: () => u, ed: () => V, r$: () => o, v8: () => w });
+i.d(t, { RQ: () => S, Ri: () => k, U: () => h, bf: () => w, ed: () => d, ke: () => p, r$: () => V, v8: () => u });
 var a = i(277057),
     c = i.n(a),
     n = i(537812),
     l = i(882035),
-    v = i(121894),
-    s = i(698279);
-let r = Object.freeze({
+    s = i(121894),
+    v = i(698279);
+let o = Object.freeze({
         activeView: null,
         lastActiveView: null,
         activeViewType: null,
         activeChannelId: null,
+        showEmojiPacks: !1,
         searchQuery: "",
         isSearchSuggestion: !1,
         pickerId: (function () {
@@ -19,48 +20,58 @@ let r = Object.freeze({
         isNitroLockedSectionVisible: !1,
         areOnlyNitroLockedSectionsVisible: !1,
     }),
-    d = (0, l.h)()(
-        (0, n.Zr)((e, t) => r, {
+    r = (0, l.h)()(
+        (0, n.Zr)((e, t) => o, {
             name: "expression-picker-last-active-view",
             partialize: (e) => ({ lastActiveView: e.lastActiveView }),
         }),
     );
-function u(e, t, i) {
-    (0, v.r)(() =>
-        d.setState({ activeView: e, activeViewType: t, activeChannelId: i, lastActiveView: d.getState().activeView }),
+function w(e, t, i, a) {
+    (0, s.r)(() =>
+        r.setState({
+            activeView: e,
+            activeViewType: t,
+            activeChannelId: i,
+            showEmojiPacks: a?.showEmojiPacks ?? !1,
+            lastActiveView: r.getState().activeView,
+        }),
     );
 }
-function w(e, t) {
-    let i = d.getState();
+function u(e, t) {
+    let i = r.getState();
     (void 0 !== e && e !== i.activeViewType) ||
         (void 0 !== t && t !== i.activeChannelId) ||
         (null !== i.activeView &&
-            (0, v.r)(() =>
-                d.setState({
+            (0, s.r)(() =>
+                r.setState({
                     activeView: null,
                     activeViewType: null,
                     activeChannelId: null,
+                    showEmojiPacks: !1,
                     lastActiveView: i.activeView,
                 }),
             ));
 }
-function V(e, t) {
-    let i = d.getState();
+function d(e, t) {
+    let i = r.getState();
     null == i.activeView
-        ? u(i.lastActiveView ?? s.kx.EMOJI, e, t)
+        ? w(i.lastActiveView ?? v.kx.EMOJI, e, t)
         : i.activeViewType !== e || i.activeChannelId !== t
-          ? u(i.activeView, e, t)
-          : w();
+          ? w(i.activeView, e, t)
+          : u();
 }
-function o(e, t, i) {
-    let a = d.getState();
-    a.activeView === e && a.activeViewType === t && a.activeChannelId === i ? w() : u(e, t, i);
+function V(e, t, i) {
+    let a = r.getState();
+    a.activeView === e && a.activeViewType === t && a.activeChannelId === i ? u() : w(e, t, i);
 }
 function h(e) {
-    (0, v.r)(() => d.setState({ activeView: e, lastActiveView: d.getState().activeView }));
+    (0, s.r)(() => r.setState({ activeView: e, lastActiveView: r.getState().activeView, showEmojiPacks: !1 }));
 }
 function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    (0, v.r)(() => d.setState({ searchQuery: e, isSearchSuggestion: t }));
+    (0, s.r)(() => r.setState({ showEmojiPacks: e }));
 }
-let S = d;
+function k(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    (0, s.r)(() => r.setState({ searchQuery: e, isSearchSuggestion: t }));
+}
+let S = r;

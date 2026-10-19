@@ -2351,7 +2351,13 @@ let iA = u()(eM.bo, 200),
             eZ = r.useCallback((e) => {
                 eb.iM.updateSetting(Array.from(e));
             }, []),
-            eq = (0, em.oV)({ gridWrapperRef: er, containerWidth: y, listPaddingLeft: ih, listScrollbarWidth: 8 }),
+            eq = (0, em.oV)({
+                gridWrapperRef: er,
+                containerWidth: y,
+                showingEmptyState: z,
+                listPaddingLeft: ih,
+                listScrollbarWidth: 8,
+            }),
             {
                 rowCountBySection: e$,
                 sectionDescriptors: eQ,
