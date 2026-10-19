@@ -418,7 +418,7 @@ function $(e) {
     if (U && b?.startsWith("/discovery/quests"))
         return (e) => (e?.preventDefault(), (0, O.m)({ fromContent: r.u.QUEST_BADGE }), !0);
     if (U && b?.startsWith("/quest-home"))
-        return (e) => (e?.preventDefault(), (0, R.pX)(H.BVt.QUEST_HOME + (M ?? "")), !0);
+        return (e) => (e?.preventDefault(), (0, R.pX)(H.BVt.QUEST_HOME, { search: M, hash: P }), !0);
     if (U && b?.startsWith("/quest-bar-preview")) {
         let e = new URLSearchParams(M ?? "").get("ad_creative_ids");
         if (null != e)

@@ -3055,7 +3055,7 @@ function sQ(e) {
         } = e,
         m = (0, u.zy)(),
         { showToast: E } = sO(),
-        h = i.useRef(""),
+        h = i.useRef(null),
         [f, x] = i.useState(null),
         [g, v] = i.useState(0),
         { useNewTile: C } = W.aD.useConfig({ location: tC.rE.QUEST_HOME_DESKTOP }),
@@ -3074,11 +3074,11 @@ function sQ(e) {
     return (i.useImperativeHandle(d, () => ({ scrollToQuest: j }), [j]),
     i.useLayoutEffect(() => {
         if (0 === m.hash.length) {
-            h.current = "";
+            h.current = null;
             return;
         }
-        s || !l || (m.hash !== h.current && j(m.hash.slice(1)) && (h.current = m.hash));
-    }, [m.hash, s, l, j]),
+        !s && l && m !== h.current && j(m.hash.slice(1)) && (h.current = m);
+    }, [m, s, l, j]),
     i.useLayoutEffect(() => {
         if (null == f) return;
         let e = document.getElementById(`quest-tile-${f}`);
@@ -4030,77 +4030,78 @@ let lm = {
     lE = 4 * tc.A.Millis.SECOND;
 function lh(e) {
     let { deepLinkedQuestId: t, isLoadingQuestHomeHero: n, className: s, ref: l } = e,
-        { useNewTile: a, useNewFeaturedTiles: u } = W.aD.useConfig({ location: tC.rE.QUEST_HOME_DESKTOP }),
-        { sections: c, isFetchingCurrentQuests: d, getSectionIdentifierForTargetedQuest: m } = lc(),
-        E = i.useRef(null),
-        h = i.useRef(null),
-        { showToast: f } = sO(),
-        [x, g] = i.useState(null),
+        a = (0, u.zy)(),
+        { useNewTile: c, useNewFeaturedTiles: d } = W.aD.useConfig({ location: tC.rE.QUEST_HOME_DESKTOP }),
+        { sections: m, isFetchingCurrentQuests: E, getSectionIdentifierForTargetedQuest: h } = lc(),
+        f = i.useRef(null),
+        x = i.useRef(null),
+        { showToast: g } = sO(),
         [v, C] = i.useState(null),
-        [_, S] = i.useState(0),
-        [j, N] = i.useState(null),
-        p = i.useRef(null),
-        A = i.useCallback(
+        [_, S] = i.useState(null),
+        [j, N] = i.useState(0),
+        [p, A] = i.useState(null),
+        T = i.useRef(null),
+        O = i.useCallback(
             (e) => {
-                N(e.contentRect.width);
+                A(e.contentRect.width);
             },
-            [N],
+            [A],
         );
-    (0, eU.g)(E, A, [A], { fireOnMount: !0 });
-    let [{ highlightAnimationProgress: T }, O] = (0, e6.z)(() => ({
+    (0, eU.g)(f, O, [O], { fireOnMount: !0 });
+    let [{ highlightAnimationProgress: I }, R] = (0, e6.z)(() => ({
             highlightAnimationProgress: 1,
             config: { duration: lE },
         })),
-        I = i.useCallback(
+        b = i.useCallback(
             (e, t) => {
-                if (null == e || null == j || d || n) return !1;
+                if (null == e || null == p || E || n) return !1;
                 t && (0, tP.sB)(e);
-                let s = m(e),
+                let s = h(e),
                     l = !0 === t && s !== eV.FEATURED ? eV.DISCOVERED : s;
-                if (null == s) return (f(e), !1);
+                if (null == s) return (g(e), !1);
                 let r = document.getElementById((0, nu.sT)(e, l ?? void 0));
                 return (
                     null != r &&
-                    (g(e),
-                    C(l),
-                    S((e) => e + 1),
-                    l === eV.FEATURED && a && u
-                        ? h.current?.scrollToQuest(e)
+                    (C(e),
+                    S(l),
+                    N((e) => e + 1),
+                    l === eV.FEATURED && c && d
+                        ? x.current?.scrollToQuest(e)
                         : r.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" }),
-                    O({
+                    R({
                         from: { highlightAnimationProgress: 0 },
                         to: { highlightAnimationProgress: 1 },
                         reset: !0,
                         onRest: (e) => {
-                            e.cancelled || (g(null), C(null));
+                            e.cancelled || (C(null), S(null));
                         },
                     }),
                     !0)
                 );
             },
-            [a, u, g, S, O, d, n, f, j, m],
+            [c, d, C, N, R, E, n, g, p, h],
         );
-    (i.useImperativeHandle(l, () => ({ scrollToQuest: I }), [I]),
+    (i.useImperativeHandle(l, () => ({ scrollToQuest: b }), [b]),
         i.useLayoutEffect(() => {
             if (null == t) {
-                p.current = null;
+                T.current = null;
                 return;
             }
-            p.current !== t && I(t, !0) && (p.current = t);
-        }, [t, I]));
-    let R = i.useMemo(
-        () => ({ targetQuestId: x, targetSectionIdentifier: v, highlightCount: _, highlightAnimationProgress: T }),
-        [x, v, _, T],
+            T.current !== a && b(t, !0) && (T.current = a);
+        }, [a, t, b]));
+    let M = i.useMemo(
+        () => ({ targetQuestId: v, targetSectionIdentifier: _, highlightCount: j, highlightAnimationProgress: I }),
+        [v, _, j, I],
     );
     return (0, r.jsx)(s4.Provider, {
-        value: R,
+        value: M,
         children: (0, r.jsx)("div", {
             className: o()(ld.kL, s),
-            ref: E,
-            children: d
+            ref: f,
+            children: E
                 ? (0, r.jsx)(lt, { role: "status", "aria-label": eB.intl.string(eB.t.ZTNur7) })
-                : c.length > 0
-                  ? c.map((e, t) => {
+                : m.length > 0
+                  ? m.map((e, t) => {
                         let { identifier: n, questIds: s, title: l } = e;
                         return (0, r.jsxs)(
                             "div",
@@ -4113,11 +4114,11 @@ function lh(e) {
                                         className: ld.Gf,
                                         children: eB.intl.string(l),
                                     }),
-                                    n === eV.FEATURED && a && u
+                                    n === eV.FEATURED && c && d
                                         ? (0, r.jsx)(s9, {
-                                              ref: h,
+                                              ref: x,
                                               questIds: s,
-                                              containerWidth: j,
+                                              containerWidth: p,
                                               sectionIdentifier: n,
                                           })
                                         : (0, r.jsx)(ls, {
