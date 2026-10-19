@@ -239,6 +239,7 @@ let A = {
     node: !0,
     patch_notes_draft: !0,
     plan_proposed: !0,
+    preview_app_published: !0,
     preview_ready: !0,
     project_named: !0,
     publish_cta: !0,

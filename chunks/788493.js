@@ -11,6 +11,7 @@ let o = {
             error: e.error ?? null,
             phase: e.phase ?? null,
             step: e.step ?? null,
+            background: !0 === e.background,
         });
     },
 };

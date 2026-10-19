@@ -9,7 +9,7 @@ class i extends r.Ay.Store {
 }
 let l = new i(s.h, {
     CONJURE_LIVE_RELOAD_SET: function (e) {
-        let { projectId: t, enabled: n, error: r, phase: s, step: i } = e;
-        o.set(t, { enabled: n, error: r, phase: s, step: i });
+        let { projectId: t, enabled: n, error: r, phase: s, step: i, background: l } = e;
+        o.set(t, { enabled: n, error: r, phase: s, step: i, ...(!0 === l ? { background: l } : {}) });
     },
 });
