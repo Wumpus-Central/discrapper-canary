@@ -93,23 +93,10 @@
     min-width: 0
 }
 
-.channelViewEmpty_ea14bc {
-    align-items: center;
-    gap: var(--space-8);
-    justify-content: center;
-    padding: var(--space-24);
-    text-align: center
-}
-
-.agentChatPanel_ea14bc,
-.channelViewEmpty_ea14bc {
-    display: flex;
-    flex: 1;
-    flex-direction: column
-}
-
 .agentChatPanel_ea14bc {
     box-sizing: border-box;
+    flex: 1;
+    flex-direction: column;
     isolation: isolate;
     max-width: 100%;
     overflow: hidden;
@@ -118,13 +105,13 @@
 
 .agentChat_ea14bc,
 .agentChatPanel_ea14bc {
+    display: flex;
     min-height: 0;
     min-width: 0;
     position: relative
 }
 
 .agentChat_ea14bc {
-    display: flex;
     flex: 1 1 auto;
     flex-direction: column
 }
@@ -141,4 +128,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=b1d33caa81f4e61f.css.map*/
+/*# sourceMappingURL=7e84139c63a89402.css.map*/

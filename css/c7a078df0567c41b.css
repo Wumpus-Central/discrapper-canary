@@ -717,21 +717,4 @@
     flex: none
 }
 
-.callRow__6f9eb {
-    align-items: baseline;
-    display: grid;
-    gap: var(--space-8);
-    grid-template-columns: 56px minmax(0, 1fr) auto
-}
-
-.callTime__6f9eb {
-    font-variant-numeric: tabular-nums
-}
-
-.callModel__6f9eb {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-/*# sourceMappingURL=38e3216a5252d9a5.css.map*/
+/*# sourceMappingURL=c7a078df0567c41b.css.map*/

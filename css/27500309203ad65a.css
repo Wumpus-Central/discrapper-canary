@@ -305,11 +305,6 @@
     outline-offset: var(--space-4)
 }
 
-.markerPending__71275 {
-    cursor: default;
-    pointer-events: none
-}
-
 .markerTargetBox__71275 {
     border-radius: 2px;
     outline: 2px solid var(--background-brand);
@@ -582,4 +577,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=7e24a17cf3c98f69.css.map*/
+/*# sourceMappingURL=27500309203ad65a.css.map*/

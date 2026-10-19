@@ -411,25 +411,12 @@
     animation: conjure-detail-enter__76711 .15s ease-in-out
 }
 
-.activityDetail__76711 .workstreamLane__76711 {
-    border-inline-start: none;
-    margin-inline-start: 0;
-    padding-inline-start: 0
-}
-
-.activityDetail__76711 .turnSteps__76711,
-.activityDetail__76711 .workstreamLane__76711 {
+.activityDetail__76711 .turnSteps__76711 {
     gap: var(--space-12)
 }
 
-.activityDetail__76711 .stepDetail__76711,
-.activityDetail__76711 .workstreamPanel__76711,
-.activityDetail__76711 .workstreamSteps__76711 {
-    gap: var(--space-8)
-}
-
-.activityDetail__76711 .stepDetail__76711,
-.activityDetail__76711 .workstreamPanel__76711 {
+.activityDetail__76711 .stepDetail__76711 {
+    gap: var(--space-8);
     margin-top: var(--space-12)
 }
 
@@ -439,18 +426,6 @@
 
 .activityDetail__76711 .stepDisclosureToggle__76711[aria-expanded=true] {
     color: var(--text-default)
-}
-
-.workstreamLane__76711 {
-    border-inline-start: 2px solid var(--border-subtle);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    list-style: none;
-    margin: 0;
-    margin-inline-start: var(--space-4);
-    min-width: 0;
-    padding-inline-start: var(--space-12)
 }
 
 @keyframes step-row-enter__76711 {
@@ -570,4 +545,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=504715.2bded3a8b396de83.css.map*/
+/*# sourceMappingURL=504715.6c8db235bc84c141.css.map*/
