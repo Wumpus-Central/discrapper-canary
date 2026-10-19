@@ -9043,7 +9043,8 @@ let oj = {
     },
     NUFModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("140606"),
+            a.e("188406"),
+            a.e("538288"),
             a.e("122326"),
             a.e("533651"),
             a.e("944492"),
@@ -10091,7 +10092,8 @@ let oj = {
     },
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
-            a.e("140606"),
+            a.e("188406"),
+            a.e("538288"),
             a.e("122326"),
             a.e("533651"),
             a.e("260634"),

@@ -5,4 +5,5 @@ _.exports = {
     VA: "subtitle__78f69",
     f9: "optionsList__78f69",
     iv: "skip__78f69",
+    qr: "footer__78f69",
 };

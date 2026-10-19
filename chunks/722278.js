@@ -1494,7 +1494,7 @@ if (null == ti || "0.0.0" !== ti.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tr = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eX.A().log(
-    `[BUILD INFO] Release Channel: ${tr}, Build Number: 642690, Version Hash: 320648a31c0f5a2a360ef184f9df0a8d00a6338c`,
+    `[BUILD INFO] Release Channel: ${tr}, Build Number: 642691, Version Hash: 850c99ef57bd329fb142d463ab4af258ee05b49b`,
 ),
     x.A.setTags({ appContext: W.QCW }),
     eN.A.initBasic(),
@@ -25736,7 +25736,7 @@ let L9 = "isHideDevBanner",
                     className: tI()(L8.Wz, L8.mr),
                     children: [
                         (0, M.jsx)(L7, { className: L8.Kk }),
-                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "642690" }),
+                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "642691" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -37834,7 +37834,8 @@ class Uz extends nI.A {
                         r = await (0, tJ.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("140606"),
+                                    n.e("188406"),
+                                    n.e("538288"),
                                     n.e("122326"),
                                     n.e("533651"),
                                     n.e("260634"),
@@ -37887,7 +37888,8 @@ class Uz extends nI.A {
                     r = await (0, tJ.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("140606"),
+                                n.e("188406"),
+                                n.e("538288"),
                                 n.e("122326"),
                                 n.e("533651"),
                                 n.e("944492"),
