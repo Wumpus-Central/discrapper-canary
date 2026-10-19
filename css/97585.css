@@ -1,3 +1,14 @@
+.container__9240f {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-48) 0;
+    padding-inline: var(--space-16)
+}
+
+.text__9240f {
+    font-style: italic
+}
+
 .container__4495e {
     align-items: center;
     display: flex;
@@ -4661,4 +4672,4 @@
     display: flex
 }
 
-/*# sourceMappingURL=330150.2d0cb64294a31335.css.map*/
+/*# sourceMappingURL=97585.c5d9b4ece02fa77e.css.map*/
