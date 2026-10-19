@@ -387,26 +387,6 @@
     }
   },
   {
-    "name": "2025-11-rtc-panel-entry-point-new-copy",
-    "kind": "user",
-    "defaultConfig": {
-      "altTitle": false,
-      "altBody": false,
-      "altCta": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "altTitle": true,
-        "altBody": false,
-        "altCta": true
-      }
-    }
-  },
-  {
     "name": "2025-11-shockbyte-degraded",
     "kind": "user",
     "defaultConfig": {
