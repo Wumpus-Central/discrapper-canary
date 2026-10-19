@@ -1,4 +1,4 @@
-n.d(t, { PI: () => E, WT: () => S, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
+n.d(t, { PI: () => S, WT: () => E, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
 var r = n(582128),
     s = n(17928),
     o = n(73153),
@@ -57,10 +57,10 @@ function f(e, t, n) {
 function g(e, t) {
     return (0, i.b4)(e, "allowed hosts", (e) => e.sendHostAccess({ type: "set_host_access", remove_host: t }));
 }
-function S(e) {
+function E(e) {
     return (0, s.bG)([h], () => h.getApprovals(e), [e]);
 }
-function E(e) {
+function S(e) {
     return (0, s.bG)(
         [h],
         () => {

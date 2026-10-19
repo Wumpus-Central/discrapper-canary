@@ -1,36 +1,38 @@
-r.d(t, { BR: () => A, Eb: () => l, Hc: () => C, PH: () => i, hR: () => d });
-var n = r(991690),
-    u = r(951178);
-let N = [
-    { type: n.U.APP_CHANNEL, declaredBy: u.q7.APP_CHANNEL },
-    { type: n.U.VOICE_CHANNEL, declaredBy: u.q7.VOICE_CHANNEL },
-    { type: n.U.MAIN, declaredBy: u.q7.ACTIVITY },
+n.d(t, { BR: () => l, Eb: () => s, Hc: () => d, PH: () => u, hR: () => c });
+var i = n(991690),
+    r = n(951178);
+let a = [
+    { type: i.U.APP_CHANNEL, declaredBy: r.q7.APP_CHANNEL },
+    { type: i.U.VOICE_CHANNEL, declaredBy: r.q7.VOICE_CHANNEL },
+    { type: i.U.MAIN, declaredBy: r.q7.ACTIVITY },
 ];
-N.map((e) => {
+a.map((e) => {
     let { type: t } = e;
     return t;
 });
-let l = [n.U.APP_CHANNEL, n.U.VOICE_CHANNEL];
-function A(e) {
-    return e === n.U.MAIN ? n.U.APP_CHANNEL : e;
+let s = [i.U.APP_CHANNEL, i.U.VOICE_CHANNEL];
+function l(e) {
+    return e === i.U.MAIN ? i.U.APP_CHANNEL : e;
 }
-let c = [n.U.APP_CHANNEL];
-function C(e) {
-    return N.some((t) => {
-        let { declaredBy: r } = t;
-        return e.includes(r);
-    });
-}
+let o = [i.U.APP_CHANNEL];
 function d(e) {
-    let t = N.filter((t) => {
-        let { declaredBy: r } = t;
-        return e?.includes(r) === !0;
-    }).map((e) => {
-        let { type: t } = e;
-        return t;
+    return a.some((t) => {
+        let { declaredBy: n } = t;
+        return e.includes(n);
     });
-    return t.length > 0 ? t : c;
 }
-function i(e, t) {
-    return null != e && t.includes(e) ? e : (t[0] ?? n.U.APP_CHANNEL);
+function c(e) {
+    let t = a
+        .filter((t) => {
+            let { declaredBy: n } = t;
+            return e?.includes(n) === !0;
+        })
+        .map((e) => {
+            let { type: t } = e;
+            return t;
+        });
+    return t.length > 0 ? t : o;
+}
+function u(e, t) {
+    return null != e && t.includes(e) ? e : (t[0] ?? i.U.APP_CHANNEL);
 }

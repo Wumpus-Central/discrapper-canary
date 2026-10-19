@@ -1,6 +1,6 @@
 n.d(t, { $w: () => u, uM: () => c });
-var r = n(492462),
-    l = n(806163);
+var l = n(492462),
+    r = n(806163);
 (n(809733), n(38405));
 var i = n(26279),
     s = n(652215);
@@ -11,12 +11,12 @@ function a(e, t, n) {
     }
 }
 function u() {
-    let { search: e, pathname: t } = (0, l.zy)(),
-        { deep_link_type: n, flow_type: i } = (0, r.parse)(e);
+    let { search: e, pathname: t } = (0, r.zy)(),
+        { deep_link_type: n, flow_type: i } = (0, l.parse)(e);
     return a(t, n, i);
 }
 function c() {
     let e = window.location.pathname,
-        { deep_link_type: t, flow_type: n } = (0, r.parse)(window.location.search);
+        { deep_link_type: t, flow_type: n } = (0, l.parse)(window.location.search);
     return a(e, t, n);
 }

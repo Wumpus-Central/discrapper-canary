@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     qr: "footer_f3bebf",
     zH: "details_f3bebf",
     o1: "actions_f3bebf",

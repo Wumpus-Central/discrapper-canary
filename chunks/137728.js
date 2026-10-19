@@ -19,8 +19,8 @@ var n = s(477900),
     S = s(403581),
     I = s(778712),
     T = s(315629),
-    C = s(104510),
-    f = s(289873),
+    f = s(104510),
+    C = s(289873),
     x = s(297264),
     g = s(820739),
     j = s(736653),
@@ -173,13 +173,13 @@ function eT(e) {
         ],
     });
 }
-function eC(e) {
+function ef(e) {
     let { ...t } = e,
         { theme: s } = (0, H.E)(),
         a = (0, h.r)(N.A.colors.INTERACTIVE_TEXT_ACTIVE, s).hex();
     return (0, n.jsx)(S.t, { size: "md", ...t, color: a });
 }
-function ef(e) {
+function eC(e) {
     let t,
         { currentUser: s, premiumType: a, onClose: r } = e,
         i = (0, U.Ay)(s.id),
@@ -216,7 +216,7 @@ function ef(e) {
                               className: ep.b$,
                               children: [
                                   (0, n.jsx)(F.A, { className: ep.Bj, usernameClass: ep.TE, name: s.toString() }),
-                                  (0, n.jsx)(eC, { className: ep.kC }),
+                                  (0, n.jsx)(ef, { className: ep.kC }),
                               ],
                           }),
                       ],
@@ -385,7 +385,7 @@ function ej(e) {
                                       (0, n.jsxs)("div", {
                                           className: ep.i$,
                                           children: [
-                                              (0, n.jsx)(C._, {
+                                              (0, n.jsx)(f._, {
                                                   color: N.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                   className: ep.jZ,
                                               }),
@@ -439,12 +439,12 @@ function eD(e) {
                 case em.PremiumTypes.TIER_1:
                     l
                         ? e.push(
-                              (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
+                              (0, n.jsx)(eC, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
                               (0, n.jsx)(ey, {}, "screen-share-item"),
                               (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
                           )
                         : e.push(
-                              (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
+                              (0, n.jsx)(eC, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
                               (0, n.jsx)(eg, { premiumType: s }, "emoji-stickers-item"),
                               (0, n.jsx)(ey, {}, "screen-share-item"),
                               (0, n.jsx)(eR, { premiumType: s }, "uploads-item"),
@@ -454,13 +454,13 @@ function eD(e) {
                 case em.PremiumTypes.TIER_2:
                     l
                         ? e.push(
-                              (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
+                              (0, n.jsx)(eC, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
                               (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
                               (0, n.jsx)(ey, {}, "screen-share-item"),
                           )
                         : e.push(
                               (0, n.jsx)(ex, { currentUser: t, onClose: r }, "badge-item"),
-                              (0, n.jsx)(ef, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
+                              (0, n.jsx)(eC, { currentUser: t, premiumType: s, onClose: r }, "profile-item"),
                               (0, n.jsx)(eg, { premiumType: s }, "emoji-stickers-item"),
                               (0, n.jsx)(ej, { premiumType: s, onClose: r }, "boost-item"),
                               (0, n.jsx)(ey, {}, "screen-share-item"),
@@ -516,7 +516,7 @@ let eP = function (e) {
                   (0, n.jsx)(m.c, {
                       children: (0, n.jsx)("div", {
                           className: ep.rf,
-                          children: (0, n.jsx)(f.y, { className: ep.u1 }),
+                          children: (0, n.jsx)(C.y, { className: ep.u1 }),
                       }),
                   }),
               ],

@@ -1,29 +1,29 @@
-e.d(t, { Mm: () => A, Op: () => o, Q5: () => p, Rc: () => h, jS: () => a, kG: () => d });
-var i = e(991690),
-    l = e(91242),
-    u = e(373677),
-    c = e(165610);
-let d = "0",
-    r = { type: i.U.APP_CHANNEL, channelId: d };
-function p(n) {
-    return (n.type === i.U.APP_CHANNEL || n.type === i.U.VOICE_CHANNEL) && n.channelId === d;
+n.d(t, { Mm: () => _, Op: () => u, Q5: () => d, Rc: () => E, jS: () => c, kG: () => l });
+var i = n(991690),
+    r = n(91242),
+    a = n(373677),
+    s = n(165610);
+let l = "0",
+    o = { type: i.U.APP_CHANNEL, channelId: l };
+function d(e) {
+    return (e.type === i.U.APP_CHANNEL || e.type === i.U.VOICE_CHANNEL) && e.channelId === l;
 }
-function a(n) {
-    return n?.install_scope === "guild" ? n.guild_id : void 0;
+function c(e) {
+    return e?.install_scope === "guild" ? e.guild_id : void 0;
 }
-function o(n) {
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.U.APP_CHANNEL,
-        e = (0, u.BR)(t);
-    return e === i.U.APP_CHANNEL && null == n
-        ? r
-        : null == n
-          ? { type: e, channelId: d }
-          : { type: e, channelId: d, guildId: n };
+        n = (0, a.BR)(t);
+    return n === i.U.APP_CHANNEL && null == e
+        ? o
+        : null == e
+          ? { type: n, channelId: l }
+          : { type: n, channelId: l, guildId: e };
 }
-function A(n) {
-    return u.Eb.map((t) => l.A.getFrame((0, c.VA)(n, o(void 0, t)))).filter((n) => null != n);
+function _(e) {
+    return a.Eb.map((t) => r.A.getFrame((0, s.VA)(e, u(void 0, t)))).filter((e) => null != e);
 }
-function h(n) {
-    let t = A(n);
-    return t.find(c.x1) ?? t[0];
+function E(e) {
+    let t = _(e);
+    return t.find(s.x1) ?? t[0];
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => b });
 var r = n(17928),
     s = n(73153),
     o = n(242779);
@@ -14,8 +14,8 @@ let i = { pending: !1, info: null, error: null, observedAt: null },
     _ = new Map(),
     f = new Map(),
     g = new Map(),
-    S = new Map(),
     E = new Map(),
+    S = new Map(),
     m = new Map();
 class O extends r.Ay.Store {
     getStatus(e) {
@@ -28,10 +28,10 @@ class O extends r.Ay.Store {
         return g.get(e) ?? null;
     }
     getLastTurnUsage(e) {
-        return E.get(e) ?? null;
+        return S.get(e) ?? null;
     }
     getLastCompactionDecline(e) {
-        return S.get(e) ?? null;
+        return E.get(e) ?? null;
     }
     getForceCompactionState(e) {
         return u.get(e) ?? "idle";
@@ -62,7 +62,7 @@ function y(e, t, n) {
         t !== r.instanceSince &&
         _.set(e, { phase: "restarted", instanceSince: t, observedAt: n });
 }
-let T = new O(s.h, {
+let b = new O(s.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -73,8 +73,8 @@ let T = new O(s.h, {
             0 === _.size &&
             0 === f.size &&
             0 === g.size &&
-            0 === S.size &&
             0 === E.size &&
+            0 === S.size &&
             0 === m.size
         )
             return !1;
@@ -86,8 +86,8 @@ let T = new O(s.h, {
             _.clear(),
             f.clear(),
             g.clear(),
-            S.clear(),
             E.clear(),
+            S.clear(),
             m.clear());
     },
     CONJURE_DEBUG_STATUS_REQUESTED: function (e) {
@@ -142,7 +142,7 @@ let T = new O(s.h, {
         });
     },
     CONJURE_DEBUG_COMPACTION_DECLINED: function (e) {
-        S.set(e.projectId, {
+        E.set(e.projectId, {
             promptCeiling: e.promptCeiling,
             threshold: e.threshold,
             projected: e.projected,
@@ -260,7 +260,7 @@ let T = new O(s.h, {
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, turn: n } = e;
         if (0 === (0, o.aM)(n.total)) return !1;
-        E.set(t, n);
+        S.set(t, n);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
@@ -272,8 +272,8 @@ let T = new O(s.h, {
             _.delete(t),
             f.delete(t),
             g.delete(t),
-            S.delete(t),
             E.delete(t),
+            S.delete(t),
             m.delete(t));
     },
 });

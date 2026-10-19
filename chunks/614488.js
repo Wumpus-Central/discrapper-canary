@@ -1,4 +1,4 @@
-r.exports = {
+a.exports = {
     kR: "cards_c19a92",
     BQ: "withPremiumGroup_c19a92",
     DD: "premiumGroupAvatars_c19a92",

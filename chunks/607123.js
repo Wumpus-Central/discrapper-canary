@@ -1,32 +1,32 @@
-s.d(t, { Ay: () => M, pL: () => j });
-var l = s(477900),
-    i = s(582128),
-    a = s(503698),
-    r = s.n(a),
-    n = s(575593),
-    u = s(17928),
-    c = s(661531),
-    d = s(38021),
-    o = s(844222),
-    g = s(583094),
-    f = s(775602),
-    h = s(139136),
-    m = s(665411),
-    E = s(474012),
-    S = s(929283),
-    R = s(245068),
-    p = s(761365),
-    x = s(366523),
-    v = s(403362),
-    A = s(652215),
-    I = s(778712),
-    N = s(880465);
-function j(e) {
+n.d(t, { Ay: () => T, pL: () => A });
+var l = n(477900),
+    r = n(582128),
+    i = n(503698),
+    s = n.n(i),
+    a = n(575593),
+    u = n(17928),
+    c = n(661531),
+    o = n(38021),
+    d = n(844222),
+    f = n(583094),
+    h = n(775602),
+    m = n(139136),
+    p = n(665411),
+    C = n(474012),
+    E = n(929283),
+    y = n(245068),
+    I = n(761365),
+    g = n(366523),
+    S = n(403362),
+    _ = n(652215),
+    x = n(778712),
+    P = n(880465);
+function A(e) {
     let {
         collectiblesItem: t,
-        isFocused: s = !1,
-        user: i,
-        guildId: a,
+        isFocused: n = !1,
+        user: r,
+        guildId: i,
         nameplatePreviewStyle: u,
         nameplatePreviewRescalerStyle: c,
     } = e;
@@ -34,93 +34,93 @@ function j(e) {
     if ("bundle" === t.type) {
         let e = t.previewAssets?.fgStatic != null;
         return (0, l.jsx)("div", {
-            className: e ? N.Nq : N.hT,
-            children: (0, l.jsx)(R.X, { product: t, isHighlighted: s, user: i }),
+            className: e ? P.Nq : P.hT,
+            children: (0, l.jsx)(y.X, { product: t, isHighlighted: n, user: r }),
         });
     }
     switch (t.item.type) {
-        case n.R.AVATAR_DECORATION:
-            return (0, l.jsx)(S.i, { user: i, guildId: a, avatarSize: I._3.SIZE_80, item: t.item, isHighlighted: s });
-        case n.R.PROFILE_EFFECT:
+        case a.R.AVATAR_DECORATION:
+            return (0, l.jsx)(E.i, { user: r, guildId: i, avatarSize: x._3.SIZE_80, item: t.item, isHighlighted: n });
+        case a.R.PROFILE_EFFECT:
             return (0, l.jsx)("div", {
-                className: N.xC,
-                children: (0, l.jsx)(h.A, {
+                className: P.xC,
+                children: (0, l.jsx)(m.A, {
                     skuId: t.item.skuId,
-                    isHighlighted: s,
+                    isHighlighted: n,
                     removeSetHeight: !0,
                     hideBackground: !0,
                 }),
             });
-        case n.R.NAMEPLATE:
+        case a.R.NAMEPLATE:
             return (0, l.jsx)("div", {
-                className: r()(N.M4, u),
+                className: s()(P.M4, u),
                 children: (0, l.jsx)("div", {
-                    className: r()(N.N1, c),
-                    children: (0, l.jsx)(p.A, {
-                        user: i,
-                        guildId: a,
+                    className: s()(P.N1, c),
+                    children: (0, l.jsx)(I.A, {
+                        user: r,
+                        guildId: i,
                         nameplate: t.item,
-                        isHighlighted: s,
+                        isHighlighted: n,
                         size: "small",
                     }),
                 }),
             });
-        case n.R.PROFILE_FRAME:
+        case a.R.PROFILE_FRAME:
             return (0, l.jsx)("div", {
-                className: N.pI,
-                children: (0, l.jsx)(m.A, { frame: t.item, transparentBackground: !0 }),
+                className: P.pI,
+                children: (0, l.jsx)(p.A, { frame: t.item, transparentBackground: !0 }),
             });
         default:
             return null;
     }
 }
-function P(e) {
-    let { sku: t, ...s } = e,
-        a = i.useMemo(() => (0, E.T7)(t), [t]);
-    return null == a ? null : (0, l.jsx)(j, { collectiblesItem: a, ...s });
+function v(e) {
+    let { sku: t, ...n } = e,
+        i = r.useMemo(() => (0, C.T7)(t), [t]);
+    return null == i ? null : (0, l.jsx)(A, { collectiblesItem: i, ...n });
 }
-function G(e) {
-    let { sku: t, isFocused: s } = e;
-    return (0, l.jsx)(x.e, {
+function R(e) {
+    let { sku: t, isFocused: n } = e;
+    return (0, l.jsx)(g.e, {
         shape: "custom",
-        containerClassName: r()(N.JS, s && N.P3),
-        backgroundImageClassName: N.m1,
-        foregroundImageClassName: N.aF,
+        containerClassName: s()(P.JS, n && P.P3),
+        backgroundImageClassName: P.m1,
+        foregroundImageClassName: P.aF,
         sku: t,
     });
 }
-function L(e) {
-    let { eventTargetRef: t, assetClassName: s, disableHover: a } = e,
-        n = (0, u.bG)([f.Ay], () => f.Ay.useReducedMotion),
-        { theme: h, saturation: m } = (0, d.wR)(),
-        { highContrastModeEnabled: E } = i.useContext(o.C),
-        [S, R, p, x] = c.A.colors.TEXT_DEFAULT.resolve({ theme: h, saturation: m, highContrastModeEnabled: E }).rgba();
+function M(e) {
+    let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
+        a = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        { theme: m, saturation: p } = (0, o.wR)(),
+        { highContrastModeEnabled: C } = r.useContext(d.C),
+        [E, y, I, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: m, saturation: p, highContrastModeEnabled: C }).rgba();
     return (0, l.jsx)("div", {
-        className: N.yv,
-        children: (0, l.jsx)(g.u, {
-            className: r()(N.MO, s),
-            dataBinding: { reducedMotion: a || n, logoColor: { r: S, g: R, b: p, a: x } },
+        className: P.yv,
+        children: (0, l.jsx)(f.u, {
+            className: s()(P.MO, n),
+            dataBinding: { reducedMotion: i || a, logoColor: { r: E, g: y, b: I, a: g } },
             eventTargetRef: t,
             fit: "contain",
         }),
     });
 }
-function M(e) {
-    let { sku: t, isFocused: s, user: i, guildId: a, eventTargetRef: r, assetClassName: n, disableHover: u } = e;
+function T(e) {
+    let { sku: t, isFocused: n, user: r, guildId: i, eventTargetRef: s, assetClassName: a, disableHover: u } = e;
     switch (t.productLine) {
-        case A.EZt.COLLECTIBLES:
-            return (0, l.jsx)(P, { sku: t, isFocused: s, user: i, guildId: a });
-        case A.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, l.jsx)(G, { sku: t, isFocused: s });
-        case A.EZt.APPLICATION:
-        case A.EZt.BOOST:
-        case A.EZt.GUILD_ROLE:
+        case _.EZt.COLLECTIBLES:
+            return (0, l.jsx)(v, { sku: t, isFocused: n, user: r, guildId: i });
+        case _.EZt.SOCIAL_LAYER_GAME_ITEM:
+            return (0, l.jsx)(R, { sku: t, isFocused: n });
+        case _.EZt.APPLICATION:
+        case _.EZt.BOOST:
+        case _.EZt.GUILD_ROLE:
             return null;
-        case A.EZt.PREMIUM:
-            return (0, l.jsx)(L, { eventTargetRef: r, assetClassName: n, disableHover: u });
-        case A.EZt.GUILD_PRODUCT:
+        case _.EZt.PREMIUM:
+            return (0, l.jsx)(M, { eventTargetRef: s, assetClassName: a, disableHover: u });
+        case _.EZt.GUILD_PRODUCT:
             return null;
         default:
-            (0, v.xb)(t.productLine);
+            (0, S.xb)(t.productLine);
     }
 }

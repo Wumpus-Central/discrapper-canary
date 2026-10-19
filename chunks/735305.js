@@ -1,4 +1,4 @@
-n.d(t, { x: () => g });
+n.d(t, { x: () => I });
 var l = n(284009),
     i = n.n(l),
     r = n(999129),
@@ -8,21 +8,21 @@ var l = n(284009),
     u = n(883645),
     c = n(601194),
     d = n(123816),
-    p = n(174459),
-    m = n(723702),
+    m = n(174459),
+    p = n(723702),
     h = n(951305),
     C = n(166532),
     f = n(566980),
-    S = n(280341),
-    E = n(652215),
-    I = n(202541);
-function g(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: g, continueSessionToInitialStep: y } = e,
+    E = n(280341),
+    S = n(652215),
+    g = n(202541);
+function I(e) {
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: y } = e,
         { paymentSources: A } = (0, a.j)(),
         {
             selectedSkuId: P,
-            setPurchaseState: v,
-            contextMetadata: x,
+            setPurchaseState: x,
+            contextMetadata: v,
             paymentSourceId: _,
             setPaymentSourceId: T,
             purchaseError: N,
@@ -44,7 +44,7 @@ function g(e) {
         { step: k } = (0, u.Ay)(),
         { isGift: w } = (0, h.Pv)(),
         D = {
-            ...(0, S.p)(),
+            ...(0, E.p)(),
             paymentSources: A,
             paymentSourceId: _,
             setPaymentSourceId: T,
@@ -55,7 +55,7 @@ function g(e) {
             isGift: w,
         },
         U =
-            g ??
+            I ??
             function () {
                 l(Object.values(A).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
                     trackedFromStep: C.pn.PAYMENT_ELEMENT,
@@ -64,7 +64,7 @@ function g(e) {
     i()(null != k, "Step should be set here");
     let G = (0, r.A)(() => Date.now(), [k]),
         F = C.pn.PAYMENT_ELEMENT;
-    return (0, S.Y)({
+    return (0, E.Y)({
         addPaymentMethodStepState: D,
         initialStep: F,
         prependSteps: [C.pn.PROMOTION_INFO],
@@ -74,23 +74,23 @@ function g(e) {
         onReturn: M ? void 0 : U,
         onComplete: (e) => {
             C.l_.has(e)
-                ? (v(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
+                ? (x(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
                 : l(C.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
                 i = Date.now();
-            p.default.track(E.HAw.PAYMENT_FLOW_STEP, {
+            m.default.track(S.HAw.PAYMENT_FLOW_STEP, {
                 ...t,
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - G,
-                flow_duration_ms: i - x.startTime,
+                flow_duration_ms: i - v.startTime,
             });
         },
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
-            (0, m.isDesktop)() && null != P && [I.pe.TIER_0, I.pe.TIER_2].includes(P) && !w && null == j,
+            (0, p.isDesktop)() && null != P && [g.pe.TIER_0, g.pe.TIER_2].includes(P) && !w && null == j,
         continueSessionToInitialStep: y,
     });
 }

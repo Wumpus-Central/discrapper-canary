@@ -8,20 +8,20 @@ var l = n(477900),
     u = n(883645),
     c = n(427675),
     d = n(580133),
-    p = n(123816),
-    m = n(242874),
+    m = n(123816),
+    p = n(242874),
     h = n(573359),
     C = n(163074),
     f = n(557679),
-    S = n(892349),
-    E = n(35587),
-    I = n(180522),
-    g = n(637969),
+    E = n(892349),
+    S = n(35587),
+    g = n(180522),
+    I = n(637969),
     y = n(45938),
     A = n(158045),
     P = n(951305),
-    v = n(166532),
-    x = n(652215),
+    x = n(166532),
+    v = n(652215),
     _ = n(202541),
     T = n(105292),
     N = n(805161),
@@ -32,9 +32,9 @@ function R(e) {
         {
             selectedSkuId: n,
             selectedPlanId: d,
-            purchaseState: E,
+            purchaseState: S,
             quantity: R,
-        } = (0, p.t4)((e) => ({
+        } = (0, m.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             selectedPlanId: e.selectedPlanId,
             purchaseState: e.purchaseState,
@@ -45,14 +45,14 @@ function R(e) {
         D = (0, c.S3)(),
         U = (0, u.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
-        H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
+        H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        V = D?.productLine === x.EZt.COLLECTIBLES,
-        Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
-        K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, y.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
-        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
-        z = null != U && !q.includes(U) && null != n,
+        V = D?.productLine === v.EZt.COLLECTIBLES,
+        Y = D?.productLine === v.EZt.SOCIAL_LAYER_GAME_ITEM,
+        K = U === x.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        q = G && (0, y.Ik)(B) && U === x.pn.CONFIRM && null != F && !V && !Y,
+        Z = [x.pn.SKU_SELECT, x.pn.SELECT_FREE_SKU],
+        z = null != U && !Z.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == U) return;
@@ -70,15 +70,15 @@ function R(e) {
                           skuName: null != d ? (0, A.RH)(d) : "",
                       }),
                   }))
-                : Z
+                : q
                   ? (e = (0, l.jsxs)("div", {
                         className: b.kL,
                         children: [
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(I.A, {
-                                    defaultAnimationState: m.oA.LOOP,
+                                children: (0, l.jsx)(g.A, {
+                                    defaultAnimationState: p.oA.LOOP,
                                     giftStyle: F,
                                     className: b.qq,
                                 }),
@@ -91,9 +91,9 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(g.A, {
+                              ? (0, l.jsx)(I.A, {
                                     currentStep: U ?? void 0,
-                                    purchaseState: E,
+                                    purchaseState: S,
                                     premiumType: _.WN[n],
                                     onClose: $,
                                     showTrialBadge: k,
@@ -108,16 +108,16 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, E, n, U, k, w, R, d, K, Z, H, z, G, B, M, O, L]);
+    }, [F, $, S, n, U, k, w, R, d, K, q, H, z, G, B, M, O, L]);
 }
 function O(e) {
-    let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, p.t4)((e) => ({
+    let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
             premiumDiscountPercent: e.get("premiumDiscountPercent"),
             isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
             selectedPlanId: e.selectedPlanId,
         })),
         { isPremiumGroupPurchase: l, isEligibleForTrial: r, isEligibleForDiscount: a } = (0, o.i)(),
-        s = (0, E.Sq)();
+        s = (0, S.Sq)();
     return i.useMemo(() => {
         let i, o;
         return (l
@@ -139,5 +139,5 @@ function M() {
 }
 function L(e) {
     let { isGift: t } = (0, P.Pv)();
-    return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
+    return e.step !== x.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
 }

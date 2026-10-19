@@ -14,17 +14,17 @@ var l = n(477900),
     g = n(535466),
     m = n(261425),
     b = n(105292),
-    v = n(154600);
-function x(e) {
+    x = n(154600);
+function v(e) {
     let { iconURL: t, disabled: n, onChange: r, onError: o } = e,
         d = i.useRef(null),
         c = null == t;
     return (0, l.jsxs)("div", {
-        className: v.iA,
+        className: x.iA,
         children: [
             (0, l.jsx)("button", {
                 type: "button",
-                className: a()(v.Vs, { [v.A6]: c }),
+                className: a()(x.Vs, { [x.A6]: c }),
                 "aria-label": b.intl.string(c ? b.t["MsUY/S"] : b.t["6yrpFR"]),
                 disabled: n,
                 onClick: () => d.current?.activateUploadDialogue(),
@@ -32,9 +32,9 @@ function x(e) {
                     ? (0, l.jsx)(u.X, { size: "md", color: "currentColor" })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)("img", { className: v.uP, src: t, alt: "" }),
+                              (0, l.jsx)("img", { className: x.uP, src: t, alt: "" }),
                               (0, l.jsx)("span", {
-                                  className: v.Jx,
+                                  className: x.Jx,
                                   children: (0, l.jsx)(s.PencilIcon, {
                                       size: "custom",
                                       width: 20,
@@ -47,7 +47,7 @@ function x(e) {
             }),
             (0, l.jsx)(p.Ay, {
                 ref: d,
-                className: v.Fg,
+                className: x.Fg,
                 multiple: !1,
                 filters: [{ name: b.intl.string(b.t["Sp2NF+"]), extensions: g.En }],
                 maxFileSizeBytes: g.Q0,
@@ -104,12 +104,12 @@ function A(e) {
                 children: [
                     (0, l.jsxs)("div", {
                         ref: C,
-                        className: v.S7,
+                        className: x.S7,
                         children: [
-                            (0, l.jsx)(x, { iconURL: r, disabled: j, onChange: a, onError: w }),
+                            (0, l.jsx)(v, { iconURL: r, disabled: j, onChange: a, onError: w }),
                             (0, l.jsx)("div", {
                                 ref: k,
-                                className: v.yD,
+                                className: x.yD,
                                 children: (0, l.jsx)(d.k, {
                                     label: b.intl.string(m.default.GWBCF9),
                                     value: u,

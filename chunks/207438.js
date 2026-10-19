@@ -12,8 +12,8 @@ let a = {
                     if (!0 === t.historical || "error" !== t.level) return;
                     let n = null != t.source ? g[t.source] : void 0;
                     if (null == n) return;
-                    let r = S.get(e);
-                    null == r && ((r = new Set()), S.set(e, r));
+                    let r = E.get(e);
+                    null == r && ((r = new Set()), E.set(e, r));
                     let s = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
                     r.has(s) ||
                         r.size >= 10 ||
@@ -77,8 +77,8 @@ let a = {
                 (s = e.batch.trace_id),
                 null == (o = i.A.getTimingTrace(n, s)) ||
                     !(0, l.JQ)(o) ||
-                    E.has(s) ||
-                    (E.add(s), console.log("[conjure] timing trace", JSON.stringify(o))));
+                    S.has(s) ||
+                    (S.add(s), console.log("[conjure] timing trace", JSON.stringify(o))));
         },
         debug_history_state(e, t) {
             let { projectId: n } = t;
@@ -238,5 +238,5 @@ let g = {
         web: { location: "runtime_frame", code: o.xf.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: o.xf.RUNTIME_WORKER_ERROR },
     },
-    S = new Map(),
-    E = new Set();
+    E = new Map(),
+    S = new Set();

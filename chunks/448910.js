@@ -8,40 +8,40 @@ var l = n(477900),
     u = n(482132),
     c = n(216641),
     d = n(786567),
-    p = n(834730),
-    m = n(28863),
+    m = n(834730),
+    p = n(28863),
     h = n(683071),
     C = n(891197),
     f = n(710525),
-    S = n(901930),
-    E = n(725836),
-    I = n(580133),
-    g = n(123816),
+    E = n(901930),
+    S = n(725836),
+    g = n(580133),
+    I = n(123816),
     y = n(649975),
     A = n(105292),
     P = n(663466);
-function v() {
-    let e = (0, g.t4)((e) => (0, f.qn)(e.order));
+function x() {
+    let e = (0, I.t4)((e) => (0, f.qn)(e.order));
     return null == e || null == e.redirect_url
         ? null
-        : (0, l.jsx)(p.E, {
+        : (0, l.jsx)(m.E, {
               variant: "text-md/normal",
               children: A.intl.format(y.default.fJnl1h, {
-                  reopenHook: (t, n) => (0, l.jsx)(m.Anchor, { onClick: () => (0, f.DL)(e), children: t }, n),
+                  reopenHook: (t, n) => (0, l.jsx)(p.Anchor, { onClick: () => (0, f.DL)(e), children: t }, n),
               }),
           });
 }
-function x() {
-    let { error: e, errorMessage: t } = (0, S.j)({});
+function v() {
+    let { error: e, errorMessage: t } = (0, E.j)({});
     return null != e
         ? (0, l.jsx)("div", { className: P.l, children: (0, l.jsx)(h.w, { type: "critical", children: t }) })
-        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(v, {})] });
+        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(x, {})] });
 }
 function _() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(E.UY, { children: (0, l.jsx)(I.f, {}) }),
-            (0, l.jsx)("div", { className: P.k, role: "status", children: (0, l.jsx)(x, {}) }),
+            (0, l.jsx)(S.UY, { children: (0, l.jsx)(g.f, {}) }),
+            (0, l.jsx)("div", { className: P.k, role: "status", children: (0, l.jsx)(v, {}) }),
         ],
     });
 }
@@ -53,28 +53,28 @@ function j(e) {
             customFooterProps: t,
             onFooterBackClick: n,
             isBackButtonEligible: r,
-            subscriptionMetadata: p,
-            renderStepBody: m,
+            subscriptionMetadata: m,
+            renderStepBody: p,
             resolveInternalState: h,
             resolveTenantReviewButtonProps: C,
             handleStepChange: f,
-            openInvoiceId: S,
-            analyticsData: E,
-            analyticsLocation: I,
+            openInvoiceId: E,
+            analyticsData: S,
+            analyticsLocation: g,
         } = e,
         {
             paymentSourceId: y,
             purchasePreviewError: A,
             customCheckoutFlow: P,
-            contextMetadata: v,
-            purchaseError: x,
+            contextMetadata: x,
+            purchaseError: v,
             setCheckoutCurrency: j,
             setLinkWalletEnabled: R,
             checkoutPaymentSources: O,
             hasCheckoutContextLoaded: M,
             invoicePreview: L,
             isOrderSigningInProgress: k,
-        } = (0, g.t4)((e) => ({
+        } = (0, I.t4)((e) => ({
             customCheckoutFlow: e.customCheckoutFlow,
             contextMetadata: e.contextMetadata,
             paymentSourceId: e.paymentSourceId,
@@ -115,8 +115,8 @@ function j(e) {
                 : e;
         }, [h, G, y, F, L, A, B, P]);
     i.useEffect(() => {
-        null != x && null != D.current && D.current.scrollIntoView({ behavior: "smooth" });
-    }, [x]);
+        null != v && null != D.current && D.current.scrollIntoView({ behavior: "smooth" });
+    }, [v]);
     let W = i.useCallback(() => {
             (j(void 0), n());
         }, [j, n]),
@@ -126,20 +126,20 @@ function j(e) {
             },
             [f, R],
         ),
-        Y = i.useMemo(() => m({ handlePaymentSourceAdd: V }), [m, V]),
+        Y = i.useMemo(() => p({ handlePaymentSourceAdd: V }), [p, V]),
         K = (0, l.jsx)(d.U, {
             resolveTenantReviewButtonProps: C,
             onBack: W,
-            flowStartTime: v.startTime,
+            flowStartTime: x.startTime,
             onPaymentSourceAdd: V,
             disablePurchase: H,
-            analyticsLocation: I,
-            baseAnalyticsData: E,
-            openInvoiceId: S,
+            analyticsLocation: g,
+            baseAnalyticsData: S,
+            openInvoiceId: E,
             handleStepChange: f,
             postPurchaseStep: o.pn.CONFIRM,
             backButtonEligible: r,
-            metadata: p,
+            metadata: m,
             ...t,
         });
     return (0, l.jsxs)(l.Fragment, {

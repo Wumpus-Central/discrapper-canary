@@ -13,27 +13,27 @@ function c(e) {
             subscriptionPlan: n,
             subscriptionTrial: c,
             isPrepaidPaymentSource: d,
-            isCustomGift: p,
+            isCustomGift: m,
         } = e,
-        { invoicePreview: m } = t,
+        { invoicePreview: p } = t,
         h = [];
     h =
         t.type === a.u$.PREMIUM_GIFT
-            ? (0, i.fk)(m, { isCustomGift: p, isPrepaidPaymentSource: d, subscriptionPlan: n })
-            : (0, i.IY)(m, {
+            ? (0, i.fk)(p, { isCustomGift: m, isPrepaidPaymentSource: d, subscriptionPlan: n })
+            : (0, i.IY)(p, {
                   isPrepaidPaymentSource: d,
                   invoiceSummaryType: t.type,
                   subscriptionPlan: n,
                   subscriptionTrial: c,
               }).lineItems;
-    let C = (0, r.lp)(m, { manualLineItems: h, includeTaxLineItem: !0 }),
-        f = (0, r.Dn)(m);
+    let C = (0, r.lp)(p, { manualLineItems: h, includeTaxLineItem: !0 }),
+        f = (0, r.Dn)(p);
     return (
         null != f && C.push(f),
         (0, l.jsx)(s.Vm, {
             label: u.intl.string(o.default.eoXh7B),
             lineItems: C,
-            currency: m.currency,
+            currency: p.currency,
             defaultExpanded: null != f,
         })
     );

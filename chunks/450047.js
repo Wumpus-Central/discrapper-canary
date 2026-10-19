@@ -1,6 +1,6 @@
 n.d(t, { D: () => o });
-var r = n(582128),
-    l = n(575593),
+var l = n(582128),
+    r = n(575593),
     i = n(702841),
     s = n(67480),
     a = n(815996),
@@ -12,16 +12,16 @@ function o(e, t) {
         d = (0, i.yK)([u.A], () => e.map((e) => u.A.getProductFetch(e))),
         f = (0, i.yK)([u.A], () => e.map((e) => u.A.isProductFetchBackedOff(e)));
     return (
-        (0, r.useEffect)(() => {
-            for (let [r, i] of e.entries()) {
-                let e = n[r],
-                    s = o[r],
-                    u = d[r],
-                    h = !0 === t && s?.type === l.R.BUNDLE && 0 === s.items.length;
+        (0, l.useEffect)(() => {
+            for (let [l, i] of e.entries()) {
+                let e = n[l],
+                    s = o[l],
+                    u = d[l],
+                    h = !0 === t && s?.type === r.R.BUNDLE && 0 === s.items.length;
                 (null == s || h) &&
                     (null == e || e.productLine === c.EZt.COLLECTIBLES) &&
                     u?.state !== "fetching" &&
-                    !f[r] &&
+                    !f[l] &&
                     (0, a.Jp)(i, { includeBundles: t });
             }
         }, [e, n, d, o, t, f]),

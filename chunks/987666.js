@@ -13,40 +13,40 @@ function c(e) {
             paymentSourceType: n,
             activeSubscription: c,
             discriminatedInvoicePreview: d,
-            overrideRenewalDate: p,
-            fractionalPremiumInfo: m,
+            overrideRenewalDate: m,
+            fractionalPremiumInfo: p,
             isInvoiceBilledImmediately: h = !0,
             unifiedLegalType: C,
             discountOffer: f,
-            subscriptionTrial: S,
+            subscriptionTrial: E,
         } = e,
-        { immediateDelivery: E } = (0, s.U)(),
-        { checkoutReviewButtonLabel: I } = (0, u.t4)((e) => ({
+        { immediateDelivery: S } = (0, s.U)(),
+        { checkoutReviewButtonLabel: g } = (0, u.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
     if (d.type === a.u$.LOADING) return null;
-    let { invoicePreview: g } = d,
-        y = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? g,
+    let { invoicePreview: I } = d,
+        y = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
         A = (0, r.de)({
-            overrideRenewalDate: p,
-            currentInvoice: h ? g : void 0,
+            overrideRenewalDate: m,
+            currentInvoice: h ? I : void 0,
             renewalInvoice: y,
             isSubscriptionUpdate: null != c,
-            fractionalPremiumInfo: m,
+            fractionalPremiumInfo: p,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(y, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: x } = (0, i.QM)(y, t, {
             discountOffer: f,
-            subscriptionTrial: S,
+            subscriptionTrial: E,
         }),
-        x = {
-            purchaseButtonText: I,
-            totalDue: h ? g.total : 0,
+        v = {
+            purchaseButtonText: g,
+            totalDue: h ? I.total : 0,
             renewalPrice: P,
-            multiPeriodDiscountAttributes: v,
-            currency: g.currency,
+            multiPeriodDiscountAttributes: x,
+            currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
             startDate: A,
         };
-    return (0, l.jsx)(o._P, { variant: { type: C, ...x }, paymentSourceType: n, immediateDelivery: E });
+    return (0, l.jsx)(o._P, { variant: { type: C, ...v }, paymentSourceType: n, immediateDelivery: S });
 }

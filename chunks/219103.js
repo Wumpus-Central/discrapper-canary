@@ -1,4 +1,4 @@
-n.d(t, { x: () => E });
+n.d(t, { x: () => S });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -9,24 +9,24 @@ var i = n(503698),
     u = n(140735),
     c = n(834730),
     d = n(318254),
-    p = n(580630),
-    m = n(993408),
+    m = n(580630),
+    p = n(993408),
     h = n(818348),
     C = n(105292),
     f = n(182732),
-    S = n(967957);
-function E(e) {
+    E = n(967957);
+function S(e) {
     let {
         priceAmount: t,
         priceCurrency: n,
         discountIconConfig: i,
         className: r,
-        discount: a = m.rr,
+        discount: a = p.rr,
         variant: s = "text-md/semibold",
     } = e;
     return n === h.Yr.DISCORD_ORB
         ? (0, l.jsx)(y, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(g, {
+        : (0, l.jsx)(I, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -35,12 +35,12 @@ function E(e) {
               variant: s,
           });
 }
-function I(e) {
+function g(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
-        case m.D0.NITRO: {
-            let e = (0, l.jsx)(a.t, { size: n, color: "currentColor", className: S.Kk });
+        case p.D0.NITRO: {
+            let e = (0, l.jsx)(a.t, { size: n, color: "currentColor", className: E.Kk });
             if ("tooltip" === t.displayMode)
                 return (0, l.jsx)(s.m, {
                     text: C.intl.string(C.t.MPFyJ5),
@@ -49,8 +49,8 @@ function I(e) {
                 });
             return e;
         }
-        case m.D0.THIRDPARTY: {
-            let e = (0, l.jsx)(o.TagIcon, { size: n, color: "currentColor", className: S.Kk });
+        case p.D0.THIRDPARTY: {
+            let e = (0, l.jsx)(o.TagIcon, { size: n, color: "currentColor", className: E.Kk });
             if ("tooltip" === t.displayMode)
                 return (0, l.jsx)(s.m, { text: C.intl.string(f.default.DePOcS), children: e });
             return e;
@@ -59,18 +59,18 @@ function I(e) {
             return (t.source, null);
     }
 }
-function g(e) {
+function I(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
             discountIconConfig: i,
             className: a,
-            discount: s = m.rr,
+            discount: s = p.rr,
             variant: o = "heading-md/semibold",
         } = e,
-        d = (0, p.RS)(t, n),
+        d = (0, m.RS)(t, n),
         h =
-            s !== m.rr && s.discountPercentage >= m.es
+            s !== p.rr && s.discountPercentage >= p.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
@@ -81,7 +81,7 @@ function g(e) {
                           }),
                           (0, l.jsx)("span", { "aria-hidden": !0, children: d }),
                           (0, l.jsx)("span", {
-                              className: S.id,
+                              className: E.id,
                               "aria-hidden": !0,
                               children: ` (-${s.discountPercentage}%)`,
                           }),
@@ -94,17 +94,17 @@ function g(e) {
                       ],
                   });
     return (0, l.jsxs)("div", {
-        className: r()(S.kL, a),
+        className: r()(E.kL, a),
         children: [
-            null != i ? (0, l.jsx)(I, { config: i }) : null,
+            null != i ? (0, l.jsx)(g, { config: i }) : null,
             (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: h }),
         ],
     });
 }
 function y(e) {
-    let { orbAmount: t, className: n, discount: i = m.rr, variant: a = "text-md/semibold" } = e,
+    let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "text-md/semibold" } = e,
         s =
-            i !== m.rr && i.discountPercentage >= m.es
+            i !== p.rr && i.discountPercentage >= p.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
@@ -115,7 +115,7 @@ function y(e) {
                           }),
                           (0, l.jsx)("span", { "aria-hidden": !0, children: t }),
                           (0, l.jsx)("span", {
-                              className: S.id,
+                              className: E.id,
                               "aria-hidden": !0,
                               children: ` (-${i.discountPercentage}%)`,
                           }),
@@ -128,9 +128,9 @@ function y(e) {
                       ],
                   });
     return (0, l.jsxs)("div", {
-        className: r()(S.kL, n),
+        className: r()(E.kL, n),
         children: [
-            (0, l.jsx)(d.C, { color: "currentColor", size: "sm", className: S.Kk }),
+            (0, l.jsx)(d.C, { color: "currentColor", size: "sm", className: E.Kk }),
             (0, l.jsx)(c.E, { variant: a, color: "currentColor", lineClamp: 1, children: s }),
         ],
     });

@@ -1,16 +1,16 @@
 n.d(t, { Gm: () => u, yv: () => o });
-var r = n(477900),
-    l = n(582128),
+var l = n(477900),
+    r = n(582128),
     i = n(786300),
     s = n(195269);
 let [a, u, c] = (0, i.A)();
 function o(e) {
     let { children: t } = e,
         { purchaseErrorBlockRef: n } = (0, s.L)(),
-        [i, u] = l.useState(null),
-        [c, o] = l.useState(null),
-        [d, f] = l.useState(null),
-        h = l.useMemo(
+        [i, u] = r.useState(null),
+        [c, o] = r.useState(null),
+        [d, f] = r.useState(null),
+        h = r.useMemo(
             () => ({
                 purchaseErrorBlockRef: n,
                 bodyNode: i,
@@ -22,5 +22,5 @@ function o(e) {
             }),
             [n, i, c, d],
         );
-    return (0, r.jsx)(a, { value: h, children: t });
+    return (0, l.jsx)(a, { value: h, children: t });
 }

@@ -4,11 +4,11 @@ function r(e) {
 function a(e) {
     return e.input_tokens + e.output_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function o(e) {
+function i(e) {
     return e.input_tokens + e.cache_creation_input_tokens + e.cache_read_input_tokens;
 }
-function i(e) {
-    let t = o(e);
+function o(e) {
+    let t = i(e);
     return 0 === t ? 0 : e.cache_read_input_tokens / t;
 }
 function l(e) {
@@ -22,4 +22,4 @@ function c(e, t) {
         cache_read_input_tokens: e.cache_read_input_tokens + t.cache_read_input_tokens,
     };
 }
-n.d(t, { CA: () => i, a7: () => r, aM: () => a, sj: () => o, wU: () => l, wV: () => c });
+n.d(t, { CA: () => o, a7: () => r, aM: () => a, sj: () => i, wU: () => l, wV: () => c });

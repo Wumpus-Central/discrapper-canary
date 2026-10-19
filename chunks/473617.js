@@ -49,7 +49,7 @@ function d(e) {
             extraSentryInformation: { selectedPlanId: t, purchaseState: u, priceOptions: n },
         });
     let d = l.useMemo(() => [{ planId: c.id, quantity: 1 }], [c.id]),
-        p = u === r.h.PURCHASING || u === r.h.COMPLETED,
-        m = !0 === n.loaded;
-    return { subscriptionPlan: c, purchaseState: u, purchaseDisabled: p, newItems: d, preventInvoiceFetch: p || !m };
+        m = u === r.h.PURCHASING || u === r.h.COMPLETED,
+        p = !0 === n.loaded;
+    return { subscriptionPlan: c, purchaseState: u, purchaseDisabled: m, newItems: d, preventInvoiceFetch: m || !p };
 }

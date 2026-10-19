@@ -1,59 +1,59 @@
-s.d(t, { W: () => f, v: () => h });
-var l = s(477900);
-s(582128);
-var i = s(503698),
-    a = s.n(i),
-    r = s(575593),
-    n = s(17928),
-    u = s(834730),
-    c = s(474012),
-    d = s(607123),
-    o = s(287809),
-    g = s(137504);
-function f(e) {
-    let { title: t, body: s, image: i, badge: r, className: n, textGroupClassName: u } = e;
+n.d(t, { W: () => h, v: () => m });
+var l = n(477900);
+n(582128);
+var r = n(503698),
+    i = n.n(r),
+    s = n(575593),
+    a = n(17928),
+    u = n(834730),
+    c = n(474012),
+    o = n(607123),
+    d = n(287809),
+    f = n(137504);
+function h(e) {
+    let { title: t, body: n, image: r, badge: s, className: a, textGroupClassName: u } = e;
     return (0, l.jsxs)("div", {
-        className: a()(g.kL, n),
+        className: i()(f.kL, a),
         children: [
-            null != i && (0, l.jsx)("div", { className: g.Sl, children: i }),
+            null != r && (0, l.jsx)("div", { className: f.Sl, children: r }),
             (0, l.jsxs)("div", {
-                className: g.Qs,
+                className: f.Qs,
                 children: [
-                    null != r && (0, l.jsx)("div", { className: g.oL, children: r }),
-                    (0, l.jsxs)("div", { className: a()(g.Z, u), children: [t, s] }),
+                    null != s && (0, l.jsx)("div", { className: f.oL, children: s }),
+                    (0, l.jsxs)("div", { className: i()(f.Z, u), children: [t, n] }),
                 ],
             }),
         ],
     });
 }
-function h(e) {
-    let { className: t, product: s, title: i, subtitle: h, badge: m } = e,
-        E = (0, n.bG)([o.default], () => o.default.getCurrentUser()),
-        S = (0, c.tP)(s);
-    return null == S
+function m(e) {
+    let { className: t, product: n, title: r, subtitle: m, badge: p } = e,
+        C = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        E = (0, c.tP)(n);
+    return null == E
         ? null
-        : (0, l.jsx)(f, {
+        : (0, l.jsx)(h, {
               className: t,
               image: (0, l.jsx)("div", {
-                  className: g.yn,
+                  className: f.yn,
                   children: (0, l.jsx)("div", {
-                      className: a()(g.ML, {
-                          [g.M]: s?.type === r.R.AVATAR_DECORATION,
-                          [g.Hm]: s?.type === r.R.PROFILE_EFFECT,
-                          [g.hH]: s?.type === r.R.PROFILE_FRAME,
-                          [g.qF]: s?.type === r.R.NAMEPLATE,
-                          [g.l2]: s?.type === r.R.BUNDLE,
+                      className: i()(f.ML, {
+                          [f.M]: n?.type === s.R.AVATAR_DECORATION,
+                          [f.Hm]: n?.type === s.R.PROFILE_EFFECT,
+                          [f.hH]: n?.type === s.R.PROFILE_FRAME,
+                          [f.qF]: n?.type === s.R.NAMEPLATE,
+                          [f.l2]: n?.type === s.R.BUNDLE,
                       }),
-                      children: (0, l.jsx)(d.pL, {
-                          collectiblesItem: S,
-                          user: E,
-                          nameplatePreviewStyle: g.M4,
-                          nameplatePreviewRescalerStyle: g.N1,
+                      children: (0, l.jsx)(o.pL, {
+                          collectiblesItem: E,
+                          user: C,
+                          nameplatePreviewStyle: f.M4,
+                          nameplatePreviewRescalerStyle: f.N1,
                       }),
                   }),
               }),
-              badge: m,
-              title: null != i && (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-default", children: i }),
-              body: null != h && (0, l.jsx)(u.E, { variant: "text-sm/medium", color: "text-muted", children: h }),
+              badge: p,
+              title: null != r && (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-default", children: r }),
+              body: null != m && (0, l.jsx)(u.E, { variant: "text-sm/medium", color: "text-muted", children: m }),
           });
 }

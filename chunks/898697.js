@@ -1,4 +1,4 @@
-n.d(t, { vi: () => h, uA: () => p, NQ: () => m });
+n.d(t, { vi: () => h, uA: () => m, NQ: () => p });
 var l,
     i = n(477900);
 n(582128);
@@ -9,8 +9,8 @@ var r = n(683071),
     u = n(202541),
     c = n(105292),
     d = n(684896),
-    p = (((l = {}).TRIAL = "trial"), (l.DEFAULT = "default"), (l.REVERSE_TRIAL = "reverse_trial"), l);
-function m(e) {
+    m = (((l = {}).TRIAL = "trial"), (l.DEFAULT = "default"), (l.REVERSE_TRIAL = "reverse_trial"), l);
+function p(e) {
     let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: l, trialEnd: i } = e,
         r = t.fractionalState === u.xc.FP_SUB_PAUSED,
         a = (function (e) {
@@ -64,24 +64,24 @@ function h(e) {
             trialPeriod: u,
             trialEnd: c,
         } = e,
-        p = m({ fractionalPremiumInfo: t, variant: n, trialPeriod: u, trialEnd: c });
+        m = p({ fractionalPremiumInfo: t, variant: n, trialPeriod: u, trialEnd: c });
     return "reverse_trial" === n
-        ? "" === p
+        ? "" === m
             ? null
             : (0, i.jsx)("div", {
                   className: d.OK,
-                  children: (0, i.jsx)(r.w, { type: "info", message: p, role: "none" }),
+                  children: (0, i.jsx)(r.w, { type: "info", message: m, role: "none" }),
               })
         : "trial" === n && null != u && null != c
-          ? "" === p
+          ? "" === m
               ? null
               : (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(a.E, { variant: "text-sm/normal", className: d.OK, children: p }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/normal", className: d.OK, children: m }),
                         (0, i.jsx)("hr", { className: d.oz }),
                     ],
                 })
-          : "" === p
+          : "" === m
             ? null
             : l
               ? (0, i.jsxs)("div", {
@@ -89,7 +89,7 @@ function h(e) {
                     style: o,
                     children: [
                         (0, i.jsx)("img", { src: "/assets/3a86a8f56102a71f.svg", alt: "Nitro Icon", className: d.Zb }),
-                        (0, i.jsx)(a.E, { variant: "text-sm/medium", children: p }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/medium", children: m }),
                     ],
                 })
               : (0, i.jsxs)("div", {
@@ -103,7 +103,7 @@ function h(e) {
                                 (0, i.jsx)(s.t, { size: "md", color: "currentColor", className: d.XI }),
                             ],
                         }),
-                        (0, i.jsx)(a.E, { variant: "text-sm/normal", children: p }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/normal", children: m }),
                         (0, i.jsx)("div", { className: d.WW }),
                     ],
                 });

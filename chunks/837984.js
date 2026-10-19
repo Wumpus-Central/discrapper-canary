@@ -33,8 +33,8 @@ function p() {
                 g = 8,
                 m = 9,
                 b = 0,
-                v = 0,
-                x = !1,
+                x = 0,
+                v = !1,
                 y = 0,
                 A = 0,
                 j = performance.now();
@@ -67,13 +67,13 @@ function p() {
             }
             (w(),
                 (b = requestAnimationFrame(function e(t) {
-                    if (((b = requestAnimationFrame(e)), t - v < o)) return;
-                    let r = t - v;
-                    if (((v = t), null == n || null == l || 0 === p || null == a)) return;
+                    if (((b = requestAnimationFrame(e)), t - x < o)) return;
+                    let r = t - x;
+                    if (((x = t), null == n || null == l || 0 === p || null == a)) return;
                     let S = Number(a.dataset.effortCentre),
                         w = a.hasAttribute("data-effort-live"),
                         C = Number.isFinite(S) && Math.abs(S - u) > 16;
-                    if (!x && (!w || C)) return;
+                    if (!v && (!w || C)) return;
                     y = Math.min(1, Math.max(0, y + ((w ? 1 : -1) * r) / 260));
                     let k = n.getBoundingClientRect(),
                         M = k.width > 0 ? k.width / p : 1,
@@ -81,10 +81,10 @@ function p() {
                         P = (E.left - k.left) / M,
                         N = (1 - Math.min(1, Math.abs(P + E.width / M / 2 - u) / 16)) * y;
                     if (N < 0.01) {
-                        (x && l.clearRect(0, 0, p, h), (x = !1));
+                        (v && l.clearRect(0, 0, p, h), (v = !1));
                         return;
                     }
-                    (x || (A = t), (x = !0), l.clearRect(0, 0, p, h));
+                    (v || (A = t), (v = !0), l.clearRect(0, 0, p, h));
                     let _ = P - 1 - (1 - N) * 16,
                         I = (t - j) / 1e3,
                         R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
@@ -150,8 +150,8 @@ function g(e) {
         f = i.useRef(null),
         [g, m] = i.useState(-1),
         b = i.useRef(!1),
-        v = i.useRef(t),
-        x = i.useRef({ activeIndex: t, disabled: u, onSelect: s, stopCount: n.length }),
+        x = i.useRef(t),
+        v = i.useRef({ activeIndex: t, disabled: u, onSelect: s, stopCount: n.length }),
         y = i.useRef(!1),
         A = t >= 0 ? t : g,
         j = t < 0 && g >= 0,
@@ -195,14 +195,14 @@ function g(e) {
             let e = A >= 0,
                 l = e && b.current;
             ((b.current = e),
-                (v.current = A),
-                (x.current = { activeIndex: t, disabled: u, onSelect: s, stopCount: n.length }),
+                (x.current = A),
+                (v.current = { activeIndex: t, disabled: u, onSelect: s, stopCount: n.length }),
                 y.current || w(A, l ? "animate" : "arrive"));
-        }, [A, t, u, s, n.length, x, w]),
+        }, [A, t, u, s, n.length, v, w]),
         i.useEffect(() => {
             let e = d.current;
             if (null == e || "u" < typeof ResizeObserver) return;
-            let t = new ResizeObserver(() => w(v.current, "snap"));
+            let t = new ResizeObserver(() => w(x.current, "snap"));
             return (t.observe(e), () => t.disconnect());
         }, [w]),
         i.useEffect(() => {
@@ -236,7 +236,7 @@ function g(e) {
                     n.snapped !== r.index &&
                         ((n.snapped = r.index),
                         (n.snappedAt = n.at),
-                        r.index !== x.current.activeIndex && x.current.onSelect(r.index));
+                        r.index !== v.current.activeIndex && v.current.onSelect(r.index));
                     let l = n.at - n.snappedAt < 300;
                     S(
                         r.left +
@@ -252,12 +252,12 @@ function g(e) {
                 S(t, e.handleWidth, e.rowWidth, u ? "animate" : "drag");
             }
             function a(l) {
-                if (x.current.disabled || x.current.activeIndex < 0 || null == t) return;
+                if (v.current.disabled || v.current.activeIndex < 0 || null == t) return;
                 let i = (function () {
                     if (null == e || null == t) return null;
                     let n = e.getBoundingClientRect(),
                         l = [];
-                    for (let t = 0; t < x.current.stopCount; t += 1)
+                    for (let t = 0; t < v.current.stopCount; t += 1)
                         l.push(e.querySelector(`[data-stop='${t}']`)?.offsetLeft ?? 0);
                     return { rowLeft: n.left, rowWidth: n.width, handleWidth: t.offsetWidth, stops: l };
                 })();
@@ -267,7 +267,7 @@ function g(e) {
                     (n = {
                         pointerId: l.pointerId,
                         metrics: i,
-                        snapped: x.current.activeIndex,
+                        snapped: v.current.activeIndex,
                         snappedAt: l.timeStamp,
                         releasedAt: 0,
                         x: l.clientX,
@@ -290,7 +290,7 @@ function g(e) {
                 let a = i(r.metrics, l(r.metrics, e ?? r.x));
                 null != a &&
                     (S(a.left, r.metrics.handleWidth, r.metrics.rowWidth, "animate"),
-                    a.index !== x.current.activeIndex && x.current.onSelect(a.index));
+                    a.index !== v.current.activeIndex && v.current.onSelect(a.index));
             }
             function o(e) {
                 s(e.clientX);
@@ -317,7 +317,7 @@ function g(e) {
                         window.removeEventListener("blur", f));
                 }
             );
-        }, [x, y, S]),
+        }, [v, y, S]),
         (0, l.jsx)("div", {
             className: a()(h.u4, o),
             role: "group",
