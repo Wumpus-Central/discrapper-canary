@@ -291,7 +291,7 @@ function $(e) {
                         {
                             type: "page",
                             key: R.G2.ORBS,
-                            text: y.intl.string(y.t.EBYkzk),
+                            text: y.intl.string(y.t.fG3RIg),
                             route: B.BVt.COLLECTIBLES_SHOP_WITH_TAB(R.G2.ORBS),
                             onClick: () => e(R.G2.ORBS),
                         },

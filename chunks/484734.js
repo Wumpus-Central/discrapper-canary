@@ -444,7 +444,7 @@ class Z extends l.Component {
                 ((e = x.intl.string(x.t.pWG4ze)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
             case T.t1.SHOP_ORBS_TAB:
-                ((e = x.intl.string(x.t.EBYkzk)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.fG3RIg)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
             case T.t1.QUEST_ORBS:
                 ((e = `${x.intl.string(x.t.ElYQFS)} ${x.intl.string(x.t.JALI2K)}`),

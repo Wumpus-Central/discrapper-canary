@@ -651,7 +651,7 @@ let eL = (0, z.L_)((e, t, n) => {
                     [d.t1.SHOP_ORBS_TAB]: [
                         ea.intl.string(ea.t.ElYQFS),
                         ea.intl.string(ea.t.pWG4ze),
-                        ea.intl.string(ea.t.EBYkzk),
+                        ea.intl.string(ea.t.fG3RIg),
                     ],
                     [d.t1.QUEST_ORBS]: [
                         ea.intl.string(ea.t.ElYQFS),
