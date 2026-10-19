@@ -127,7 +127,8 @@
 }
 
 .headerContainer__3f864 {
-    display: flex
+    display: flex;
+    gap: var(--space-4)
 }
 
 .container__58c46 {
@@ -168,7 +169,7 @@
 }
 
 .boostButtonIcon__58c46 {
-    margin-inline-end: 2px
+    margin-inline-end: var(--space-6)
 }
 
 .imageContainer_a1bfef {
@@ -709,4 +710,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=11ac3f4a672f7e08.css.map*/
+/*# sourceMappingURL=b8870b2972b18e26.css.map*/

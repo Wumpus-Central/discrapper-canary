@@ -19,6 +19,10 @@
     width: 14px
 }
 
+.boostButtonIcon__6c253 {
+    margin-inline-end: var(--space-6)
+}
+
 .exampleMessage__6c253 {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
@@ -130,8 +134,7 @@
 .toolbar__89463 {
     border-top: 1px solid var(--app-frame-border);
     box-shadow: none;
-    height: calc(var(--custom-channel-header-height) + 1px);
-    padding-inline-start: 20px
+    height: calc(var(--custom-channel-header-height) + 1px)
 }
 
 .contentContainer__89463 {
@@ -213,4 +216,4 @@
     transition: padding-left .2s ease
 }
 
-/*# sourceMappingURL=683426.9bf2bf577e99d4e9.css.map*/
+/*# sourceMappingURL=683426.41b4ad6bfb774876.css.map*/

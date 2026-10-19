@@ -136,7 +136,7 @@
 }
 
 .inline__5573a {
-    gap: 6px
+    gap: var(--space-6)
 }
 
 .rollbackInline__5573a {
@@ -147,10 +147,6 @@
 
 .price__5573a {
     font-size: 14px
-}
-
-.inlineBoost__5573a {
-    gap: 0
 }
 
 .buttonContainer__5573a {
@@ -229,4 +225,4 @@
     transition: opacity .2s ease
 }
 
-/*# sourceMappingURL=7a86c7252f143b27.css.map*/
+/*# sourceMappingURL=9155c965872be94e.css.map*/

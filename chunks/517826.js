@@ -15,6 +15,5 @@ a.exports = {
     mG: "inline__5573a",
     wL: "rollbackInline__5573a",
     q9: "price__5573a",
-    pT: "inlineBoost__5573a",
     Oj: "badgeHost__5573a",
 };
