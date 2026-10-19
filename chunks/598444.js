@@ -1590,7 +1590,7 @@ let no = {
 var np = n(142617),
     ng = n(819648),
     nC = n(835517),
-    nj = n(890691),
+    nj = n(711408),
     nf = n(881245);
 function nv(e) {
     let { character: t, size: n, className: l } = e,

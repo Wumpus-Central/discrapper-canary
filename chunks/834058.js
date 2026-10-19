@@ -320,11 +320,11 @@ function eF(e) {
     function e8() {
         X(!1);
     }
-    function e1(e) {
+    function e5(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, l, n));
     }
-    function e5() {
+    function e1() {
         M.A.preload(ei.ME, t.id);
     }
     function e9(e) {
@@ -387,7 +387,7 @@ function eF(e) {
                               n.e("790484"),
                               n.e("147119"),
                               n.e("403382"),
-                              n.e("819113"),
+                              n.e("606803"),
                               n.e("622936"),
                               n.e("216947"),
                               n.e("463317"),
@@ -492,7 +492,7 @@ function eF(e) {
             (l = el.intl.format(el.t.IK1Qvs, { name: eX }))),
             (0, T.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("446215"), n.e("137803")]).then(n.bind(n, 925785));
-                return (t) => (0, i.jsx)(e, { title: s, body: l, onSubmit: e1, ...t });
+                return (t) => (0, i.jsx)(e, { title: s, body: l, onSubmit: e5, ...t });
             }));
     }
     let e7 = (0, i.jsx)(eN.A, {
@@ -584,7 +584,7 @@ function eF(e) {
                 ref: ep,
                 onMouseEnter: eq,
                 onMouseLeave: e0,
-                onMouseDown: e5,
+                onMouseDown: e1,
                 onFocus: e2,
                 onBlur: e8,
                 onContextMenu: e3,
@@ -714,7 +714,7 @@ function eF(e) {
                                               "aria-label": eE
                                                   ? el.intl.string(el.t["26C4oi"])
                                                   : el.intl.string(el.t.jsvgc3),
-                                              onClick: eE ? e6 : e1,
+                                              onClick: eE ? e6 : e5,
                                               onMouseDown: e9,
                                               nameplate: x,
                                               visibleElementRef: e$,
