@@ -1416,22 +1416,6 @@
     }
   },
   {
-    "name": "2026-03-mobile-quest-home-red-dot-notification",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-muted-video-quest-new-defaults",
     "kind": "user",
     "defaultConfig": {

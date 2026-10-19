@@ -7,7 +7,7 @@ n.d(t, {
     aD: () => p,
     Se: () => E,
     uK: () => d,
-    Ay: () => v,
+    Ay: () => P,
     Ds: () => g,
     LV: () => N,
     Mk: () => O,
@@ -75,29 +75,23 @@ function I(e) {
     };
 }
 let T = (0, s.mj)({
-    name: "2026-04-composed-quest-player",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-(0, s.mj)({
-    name: "2026-03-mobile-quest-home-red-dot-notification",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-let p = (0, s.mj)({
-    name: "2026-05-quest-home-tile-redesign",
-    kind: "user",
-    defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-    variations: {
-        0: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-        1: { useNewLayoutWithSearch: !0, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-        2: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !0 },
-        3: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !1, ctaOnHover: !0 },
-        4: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !1 },
-    },
-});
+        name: "2026-04-composed-quest-player",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    p = (0, s.mj)({
+        name: "2026-05-quest-home-tile-redesign",
+        kind: "user",
+        defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+        variations: {
+            0: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+            1: { useNewLayoutWithSearch: !0, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+            2: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !0 },
+            3: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !1, ctaOnHover: !0 },
+            4: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !1 },
+        },
+    });
 (0, s.mj)({
     name: "2026-05-bounty-stale-refresh-quest-home",
     kind: "user",
@@ -156,7 +150,7 @@ let N = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let v = (0, s.mj)({
+let P = (0, s.mj)({
     name: "2026-10-clickable-hero-banner",
     kind: "user",
     defaultConfig: { enabled: !1 },
