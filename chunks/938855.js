@@ -41,7 +41,12 @@ function h(e) {
         highlightToHtml(t) {
             let l = e.createSession();
             try {
-                l.setText(t);
+                l.setText(
+                    t.endsWith("\n")
+                        ? t
+                        : `${t}
+`,
+                );
                 let { html: e, missingInjections: n } = l.highlightToHtml();
                 return { html: e, missingInjections: n.sort() };
             } finally {

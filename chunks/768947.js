@@ -164,29 +164,27 @@ function y(e, t) {
                     if (null != e) return e;
                 }
                 if (
-                    !(function (e) {
-                        for (let t of e.split("\n")) if (t.length > 1e3) return !1;
-                        return !0;
-                    })(t) ||
-                    null == l ||
-                    g.has(r)
-                )
-                    return;
-                let o = t.endsWith("\n")
-                    ? t
-                    : `${t}
-`;
-                try {
-                    n = l.highlightToHtml(o);
-                } catch (t) {
-                    (g.set(r, !0),
-                        u.A.captureException(t instanceof Error ? t : Error(String(t)), {
-                            tags: { app_context: "syntax_highlighting" },
-                            extra: { lang: e },
-                        }));
-                    return;
+                    !(
+                        !(function (e) {
+                            for (let t of e.split("\n")) if (t.length > 1e3) return !1;
+                            return !0;
+                        })(t) ||
+                        null == l ||
+                        g.has(r)
+                    )
+                ) {
+                    try {
+                        n = l.highlightToHtml(t);
+                    } catch (t) {
+                        (g.set(r, !0),
+                            u.A.captureException(t instanceof Error ? t : Error(String(t)), {
+                                tags: { app_context: "syntax_highlighting" },
+                                extra: { lang: e },
+                            }));
+                        return;
+                    }
+                    return (d.set(r, n), n);
                 }
-                return (d.set(r, n), n);
             },
             [r, t, l, e],
         ),
