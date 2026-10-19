@@ -1,9 +1,9 @@
-l.d(t, { JR: () => h, P5: () => i, Qg: () => c, Qs: () => d, Xm: () => o, yZ: () => s, yf: () => f });
-var n = l(951178),
-    u = l(696645),
-    r = l(373677);
-let a =
-    221552 == l.j
+n.d(t, { JR: () => h, P5: () => a, Qg: () => c, Qs: () => d, Xm: () => o, yZ: () => f, yf: () => s });
+var l = n(951178),
+    r = n(696645),
+    u = n(373677);
+let i =
+    221552 == n.j
         ? {
               frame: (e) => e.hasFrame,
               widget: (e) => e.hasProfileWidget,
@@ -11,42 +11,42 @@ let a =
               bot: (e) => !0 === e.hasBotDm,
           }
         : null;
-function i(e, t) {
-    let { legacy: l, widgetResolvable: u, botDmResolvable: a } = t;
+function a(e, t) {
+    let { legacy: n, widgetResolvable: r, botDmResolvable: i } = t;
     return null == e || 0 === e.length
-        ? l
+        ? n
         : {
-              hasFrame: (0, r.Hc)(e),
-              hasProfileWidget: u && e.includes(n.q7.PROFILE_WIDGET),
-              hasBotDm: a && (e.includes(n.q7.BOT) || e.includes(n.q7.APPLICATION_COMMANDS)),
+              hasFrame: (0, u.Hc)(e),
+              hasProfileWidget: r && e.includes(l.q7.PROFILE_WIDGET),
+              hasBotDm: i && (e.includes(l.q7.BOT) || e.includes(l.q7.APPLICATION_COMMANDS)),
           };
 }
 function o(e) {
-    let t = u.NK.filter((t) => a[t](e));
+    let t = r.N.filter((t) => i[t](e));
     return {
         modes: t,
         defaultMode: t[0] ?? null,
         showModeSwitch: t.length > 1,
         profileState: (function (e) {
-            let { installScope: t, ownerAuthorizationRevoked: l } = e;
-            return "user" === t && !0 === l ? "unavailable-authorization-revoked" : "available";
+            let { installScope: t, ownerAuthorizationRevoked: n } = e;
+            return "user" === t && !0 === n ? "unavailable-authorization-revoked" : "available";
         })(e),
     };
 }
 function d(e, t) {
     return null != e && t.modes.includes(e) ? e : t.defaultMode;
 }
-function f(e, t) {
+function s(e, t) {
     return ("frame" === t && e.modes.includes("frame")) || 0 === e.modes.length;
 }
-function s(e) {
+function f(e) {
     let t = e.widgetTop && e.widgetBottom,
-        l = e.miniProfile;
-    return { hasMainCard: t, hasPopoutCard: l, hasAny: t || l };
+        n = e.miniProfile;
+    return { hasMainCard: t, hasPopoutCard: n, hasAny: t || n };
 }
 function c(e) {
-    let { installScope: t, previewReady: l, integrationInstalled: n, botPermissionsChanged: u } = e;
-    return !!l && null != n && (!!u || ("user" !== t && !n));
+    let { installScope: t, previewReady: n, integrationInstalled: l, botPermissionsChanged: r } = e;
+    return !!n && null != l && (!!r || ("user" !== t && !l));
 }
 function h(e, t) {
     return t && "bot" === e;

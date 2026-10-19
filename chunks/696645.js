@@ -1,10 +1,9 @@
-l.d(t, { NK: () => a, XV: () => o });
-var n = l(991690),
-    u = l(261425),
-    r = l(105292);
-let a = 221552 == l.j ? ["frame", "widget", "overlay", "bot"] : null;
-(u.default.FKuG6X, u.default.oOAVlP, u.default.EnTNKg, u.default.uE5z15);
-let i = { [n.U.APP_CHANNEL]: u.default.xI4N6Q, [n.U.VOICE_CHANNEL]: u.default.oWMDh6, [n.U.MAIN]: u.default["0ICBnS"] };
+n.d(t, { N: () => i, X: () => o });
+var l = n(991690),
+    r = n(261425),
+    u = n(105292);
+let i = 221552 == n.j ? ["frame", "widget", "overlay", "bot"] : null,
+    a = { [l.U.APP_CHANNEL]: r.default.xI4N6Q, [l.U.VOICE_CHANNEL]: r.default.oWMDh6, [l.U.MAIN]: r.default["0ICBnS"] };
 function o(e) {
-    return r.intl.string(i[e]);
+    return u.intl.string(a[e]);
 }

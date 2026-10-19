@@ -2326,9 +2326,9 @@ function lr(e) {
     switch (e.mode) {
         case "frame":
             return null == e.appChannel
-                ? (0, ln.XV)(e.surface)
+                ? (0, ln.X)(e.surface)
                 : A.intl.formatToPlainString(N.default["6xVl+N"], {
-                      surface: (0, ln.XV)(e.surface),
+                      surface: (0, ln.X)(e.surface),
                       channel: e.appChannel,
                   });
         case "widget":

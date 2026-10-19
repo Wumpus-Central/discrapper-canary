@@ -2,15 +2,11 @@ n.d(t, { BR: () => l, Eb: () => s, Hc: () => d, PH: () => u, hR: () => c });
 var i = n(991690),
     r = n(951178);
 let a = [
-    { type: i.U.APP_CHANNEL, declaredBy: r.q7.APP_CHANNEL },
-    { type: i.U.VOICE_CHANNEL, declaredBy: r.q7.VOICE_CHANNEL },
-    { type: i.U.MAIN, declaredBy: r.q7.ACTIVITY },
-];
-a.map((e) => {
-    let { type: t } = e;
-    return t;
-});
-let s = [i.U.APP_CHANNEL, i.U.VOICE_CHANNEL];
+        { type: i.U.APP_CHANNEL, declaredBy: r.q7.APP_CHANNEL },
+        { type: i.U.VOICE_CHANNEL, declaredBy: r.q7.VOICE_CHANNEL },
+        { type: i.U.MAIN, declaredBy: r.q7.ACTIVITY },
+    ],
+    s = [i.U.APP_CHANNEL, i.U.VOICE_CHANNEL];
 function l(e) {
     return e === i.U.MAIN ? i.U.APP_CHANNEL : e;
 }
