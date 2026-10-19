@@ -118,6 +118,11 @@ let r = {
         loadRightBeforeConnectionOpen: !0,
     },
     TopEmojisDataManager: { actions: ["EMOJI_INTERACTION_INITIATED"], inlineRequire: () => n(347209).A },
+    EmbeddedAppShimManager: {
+        actions: ["EMBEDDED_APP_SHIM_PIPE_OPEN"],
+        inlineRequire: () => n(52580).A,
+        hasStoreChangeListeners: !0,
+    },
     EntityVersionsManager: {
         actions: ["GUILD_CREATE", "DELETED_ENTITY_IDS"],
         inlineRequire: () => n(40169).A,
