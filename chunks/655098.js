@@ -650,6 +650,7 @@ class ex extends i.PureComponent {
                         onCompositionEnd: this.handleCompositionEnd,
                         onPasteCapture: this.handlePasteCapture,
                         autoFocus: r && !1 !== i,
+                        autoComplete: "off",
                         autoCorrect: "off",
                         "data-can-focus": !1 !== i,
                         "aria-label": o,
