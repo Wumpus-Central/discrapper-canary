@@ -127,7 +127,7 @@ class C extends r.Component {
         let { nudgeAlignIntoViewport: i } = this.props;
         if (!i) return e;
         if (e < 0) return 0;
-        let r = e + t.getBoundingClientRect().height - n.offsetHeight + 12;
+        let r = e + Math.ceil(t.getBoundingClientRect().height) - n.offsetHeight + 12;
         return r > 0 ? Math.max(12, e - r) : e;
     }
     nudgeBottomAlignment(e, t, n) {
