@@ -1,64 +1,64 @@
-r.d(t, { N: () => d });
-var l = r(477900),
-    n = r(582128),
-    s = r(17928),
-    u = r(775602),
-    a = r(607470),
-    i = r(291749),
-    o = r(105292),
-    c = r(946747);
-function d(e) {
+s.d(e, { N: () => d });
+var t = s(477900),
+    n = s(582128),
+    u = s(17928),
+    a = s(775602),
+    r = s(607470),
+    i = s(291749),
+    o = s(105292),
+    c = s(946747);
+function d(l) {
     let {
-            showVideo: t,
-            showImage: r = !0,
+            showVideo: e,
+            showImage: s = !0,
             imageAsset: d,
-            videoAsset: m,
-            imageSize: v,
-            onLoadComplete: f,
+            videoAsset: h,
+            imageSize: p,
+            onLoadComplete: m,
             assetRef: g,
-            imageRef: E,
-        } = e,
-        L = (0, s.bG)([u.Ay], () => u.Ay.useReducedMotion),
-        h = null == d || d.asset.isAnimated ? null : d.asset.url,
-        A = null != m && m.asset.isAnimated ? m.asset.url : null,
-        p = v?.width,
-        M = v?.height,
-        q = n.useMemo(() => {
-            let e = null != p && null != M ? (0, i.Yt)(p, M) : null;
-            return null != h
-                ? (0, i.UX)(h, { format: "webp", width: e?.width, height: e?.height })
+            imageRef: b,
+        } = l,
+        w = (0, u.bG)([a.Ay], () => a.Ay.useReducedMotion),
+        y = null == d || d.asset.isAnimated ? null : d.asset.url,
+        A = null != h && h.asset.isAnimated ? h.asset.url : null,
+        f = p?.width,
+        N = p?.height,
+        j = n.useMemo(() => {
+            let l = null != f && null != N ? (0, i.Yt)(f, N) : null;
+            return null != y
+                ? (0, i.UX)(y, { format: "webp", width: l?.width, height: l?.height })
                 : null != A
-                  ? (0, i.WV)(A, e ?? void 0)
+                  ? (0, i.WV)(A, l ?? void 0)
                   : null;
-        }, [h, A, p, M]);
-    if (null == q) return null;
-    let w = !L && null != m && null != A && t;
-    return (0, l.jsxs)(l.Fragment, {
+        }, [y, A, f, N]);
+    if (null == j) return null;
+    let k = !w && null != h && null != A && e;
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (r || !w) &&
-                (0, l.jsx)("img", {
+            (s || !k) &&
+                (0, t.jsx)("img", {
                     alt: d?.alt ?? o.intl.string(o.t.P84bAD),
                     className: d?.className ?? c.S,
-                    src: q,
-                    onLoad: f,
-                    ref: (e) => {
-                        (null != E && (E.current = e), w || null == g || (g.current = e));
+                    src: j,
+                    onLoad: m,
+                    ref: (l) => {
+                        (null != b && (b.current = l), k || null == g || (g.current = l));
                     },
                 }),
-            w &&
-                (0, l.jsx)(a.A, {
+            k &&
+                (0, t.jsx)(r.A, {
                     autoPlay: !0,
                     loop: !0,
                     muted: !0,
                     preload: "auto",
-                    poster: q,
+                    poster: j,
                     playsInline: !0,
-                    className: m.className,
+                    className: h.className,
                     controls: !1,
-                    onProgress: f,
+                    onProgress: m,
                     ref: g,
-                    "aria-label": m.alt,
-                    children: (0, l.jsx)("source", { src: m.asset.url, type: m.asset.mimetype ?? void 0 }),
+                    "aria-label": h.alt,
+                    children: (0, t.jsx)("source", { src: h.asset.url, type: h.asset.mimetype ?? void 0 }),
                 }),
         ],
     });

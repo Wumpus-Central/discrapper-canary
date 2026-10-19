@@ -1,4 +1,4 @@
-(n.d(t, { A: () => eA }), n(321073), n(323874), n(14289), n(35956));
+(n.d(t, { A: () => eC }), n(321073), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -17,24 +17,24 @@ var l = n(477900),
     E = n(522602),
     S = n(234320),
     y = n(453771),
-    C = n(741394),
-    A = n(355622),
-    I = n(408018),
-    b = n(579940),
-    N = n(734057),
-    v = n(573163),
+    A = n(741394),
+    C = n(355622),
+    b = n(408018),
+    I = n(579940),
+    v = n(734057),
+    N = n(573163),
     T = n(531685),
     j = n(365971);
 function _(e) {
-    let t = v.Ay.getChannelIdsForWindowId(e)[0];
-    return null == t ? null : (N.A.getChannel(t) ?? null);
+    let t = N.Ay.getChannelIdsForWindowId(e)[0];
+    return null == t ? null : (v.A.getChannel(t) ?? null);
 }
 var k = n(826745),
     R = n(442433),
-    O = n(721768),
-    L = n(555424),
-    w = n(723702),
-    M = n(677134),
+    w = n(721768),
+    O = n(555424),
+    M = n(723702),
+    L = n(677134),
     P = n(652215),
     D = n(650583);
 let U = /(\t|\s)/;
@@ -47,7 +47,7 @@ class V extends i.PureComponent {
             this._ref?.setSelection(e.length, e.length);
         }),
             null != f.A.getActiveCommand(this.props.channel.id) &&
-                O.Gf({ channelId: this.props.channel.id, command: null, section: null }));
+                w.Gf({ channelId: this.props.channel.id, command: null, section: null }));
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -64,7 +64,7 @@ class V extends i.PureComponent {
         for (; n > 0 && !U.test(t[n - 1]);) n--;
         let i = e.selectionEnd;
         for (; i < t.length && !U.test(t[i]);) i++;
-        let r = (0, L.h3)(t.slice(n, l), t.slice(n, i));
+        let r = (0, O.h3)(t.slice(n, l), t.slice(n, i));
         return { word: r.word, fullWord: r.fullWord, isAtStart: 0 === n && !r.didTrimPrefix };
     }
     focus = () => {
@@ -107,7 +107,7 @@ class V extends i.PureComponent {
         l && (e += " ");
         let i = t + e + n,
             { onChange: r } = this.props;
-        r?.(null, i, (0, I.x7)(i));
+        r?.(null, i, (0, b.x7)(i));
         let s = t.length + e.length;
         this.setState({ nextSelection: s }, () => {
             this.props.maybeShowAutocomplete();
@@ -235,12 +235,12 @@ class V extends i.PureComponent {
         this.props.maybeShowAutocomplete();
     };
     handleContextMenu = (e) => {
-        w.isPlatformEmbedded &&
+        M.isPlatformEmbedded &&
             (0, R.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([n.e("230803"), n.e("342312")]).then(n.bind(n, 216603));
-                    return (t) => (0, l.jsx)(e, { ...t, text: (0, M.u)() });
+                    return (t) => (0, l.jsx)(e, { ...t, text: (0, L.u)() });
                 },
                 { align: "bottom", enableSpellCheck: !0 },
             );
@@ -249,7 +249,7 @@ class V extends i.PureComponent {
         let { onChange: t, allowNewLines: n } = this.props,
             l = e.currentTarget.value,
             i = n ? l : l.replace("\n", "");
-        t?.(e, i, (0, I.x7)(i));
+        t?.(e, i, (0, b.x7)(i));
     };
     insertEmoji(e) {
         let { emoji: t, addSpace: n = !1 } = e;
@@ -406,19 +406,19 @@ function eS(e) {
             channel: g,
             className: x,
             id: y,
-            disabled: C,
-            submitting: I,
-            placeholder: b,
-            required: N,
-            textAreaPaddingClassName: v,
+            disabled: A,
+            submitting: b,
+            placeholder: I,
+            required: v,
+            textAreaPaddingClassName: N,
             onChange: T,
             onPaste: j,
             onResize: _,
             onFocus: k,
             onBlur: R,
-            onKeyDown: O,
-            onKeyUp: w,
-            onTab: M,
+            onKeyDown: w,
+            onKeyUp: M,
+            onTab: L,
             onEnter: U,
             onSpace: V,
             onSubmit: X,
@@ -427,25 +427,25 @@ function eS(e) {
             hideAutocomplete: eh,
             moveSelection: eS,
             spellcheckEnabled: ey,
-            canUseCommands: eC,
-            disableAutoFocus: eA,
-            disableEnterToSubmit: eI,
-            allowNewLines: eb,
-            "aria-owns": eN,
-            "aria-expanded": ev,
+            canUseCommands: eA,
+            disableAutoFocus: eC,
+            disableEnterToSubmit: eb,
+            allowNewLines: eI,
+            "aria-owns": ev,
+            "aria-expanded": eN,
             "aria-haspopup": eT,
             "aria-activedescendant": ej,
             "aria-controls": e_,
             "aria-invalid": ek,
             "aria-describedby": eR,
-            "aria-labelledby": eO,
-            "aria-autocomplete": eL,
+            "aria-labelledby": ew,
+            "aria-autocomplete": eO,
         } = d,
-        ew = i.useRef(null),
         eM = i.useRef(null),
+        eL = i.useRef(null),
         eP = i.useRef(!0),
         eD = i.useRef(!0),
-        eU = C || I,
+        eU = A || b,
         eV = i.useCallback(
             (e, t, n) => {
                 let { value: l, selection: i } = n,
@@ -453,7 +453,7 @@ function eS(e) {
                     s = e.selection,
                     a = !1;
                 if (void 0 !== l && l !== r) {
-                    if (((e.children = l), "parent" === t && !e.previewMarkdown && e.chatInputType === A.oU.EDIT)) {
+                    if (((e.children = l), "parent" === t && !e.previewMarkdown && e.chatInputType === C.oU.EDIT)) {
                         try {
                             ((e.previewMarkdown = !0), (0, et.eF)(e, g.guild_id, g.id));
                         } finally {
@@ -511,7 +511,7 @@ function eS(e) {
             let e,
                 t = q.VW.getNodesOfType(eB, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
-                l = eC ? f.A.getActiveCommand(g.id) : null,
+                l = eA ? f.A.getActiveCommand(g.id) : null,
                 i = !1;
             if (null != l && null != l.options) {
                 let t = eK(l, !1);
@@ -541,7 +541,7 @@ function eS(e) {
                 return;
             }
             X?.((0, H.WO)(q.VW.richValue(eB), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
-        }, [g.id, eB, X, ea, eK, eC]);
+        }, [g.id, eB, X, ea, eK, eA]);
     (i.useImperativeHandle(
         c,
         () => ({
@@ -590,7 +590,7 @@ function eS(e) {
                     if (en.ug.test(e)) break;
                     ((o += e), u++);
                 }
-                let d = (0, L.h3)(s, o);
+                let d = (0, O.h3)(s, o);
                 return {
                     word: d.word,
                     fullWord: d.fullWord,
@@ -708,15 +708,15 @@ function eS(e) {
             let e = n.current;
             if (null == e) return;
             let l = e.offsetHeight;
-            t.current !== l && (null != ew.current && (ew.current.style.height = `${l}px`), (t.current = l), _?.(l));
-        }, [ew, _])),
+            t.current !== l && (null != eM.current && (eM.current.style.height = `${l}px`), (t.current = l), _?.(l));
+        }, [eM, _])),
         (0, es.g)(n, a, [a, eB, _], eo),
         i.useLayoutEffect(() => {
             let e = Y.rL.findDocumentOrShadowRoot(eB).defaultView;
             if (e?.ResizeObserver == null) return;
             let n = eu(eB);
             null != n && ((t.current = n.offsetHeight), _?.(t.current));
-        }, [ew, eB, _]));
+        }, [eM, eB, _]));
     let { handleKeyDown: eH, handleKeyUp: ez } = (function (e) {
             let {
                 editor: t,
@@ -798,13 +798,13 @@ function eS(e) {
         })({
             editor: eB,
             channel: g,
-            disableEnterToSubmit: eI,
-            onKeyDown: O,
-            onKeyUp: w,
-            onTab: M,
+            disableEnterToSubmit: eb,
+            onKeyDown: w,
+            onKeyUp: M,
+            onTab: L,
             onEnter: U,
             onSpace: V,
-            allowNewLines: eb,
+            allowNewLines: eI,
             submit: eG,
             hideAutocomplete: eh,
             moveSelection: eS,
@@ -838,12 +838,12 @@ function eS(e) {
         ),
         eZ = i.useCallback(
             (e) => {
-                e !== eM.current ? eD.current && T?.(null, (0, H.WO)(e, { mode: "raw" }), e) : eD.current && ed();
+                e !== eL.current ? eD.current && T?.(null, (0, H.WO)(e, { mode: "raw" }), e) : eD.current && ed();
             },
             [ed, T],
         );
     (i.useLayoutEffect(() => {
-        eP.current && ((eM.current = h), eV(eB, "parent", { value: h }));
+        eP.current && ((eL.current = h), eV(eB, "parent", { value: h }));
     }, [eB, h, eV]),
         i.useEffect(() => {
             function e() {
@@ -941,19 +941,19 @@ function eS(e) {
         children: [
             (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: e$ }),
             (0, l.jsx)("div", {
-                ref: ew,
+                ref: eM,
                 className: s()(x, eE.pC),
                 children: (0, l.jsx)(G.A, {
                     id: y,
                     editor: eB,
                     channelId: g.id,
                     guildId: g.guild_id,
-                    className: s()(eE.gf, v),
-                    placeholder: b,
+                    className: s()(eE.gf, N),
+                    placeholder: I,
                     readOnly: eU,
                     spellCheck: ey,
-                    autoFocus: !eA,
-                    canFocus: !C,
+                    autoFocus: !eC,
+                    canFocus: !A,
                     onChange: eZ,
                     onFocus: k,
                     onBlur: R,
@@ -964,16 +964,16 @@ function eS(e) {
                     decorate: eX,
                     renderExtraElement: eJ,
                     renderExtraLeaf: eY,
-                    "aria-owns": eN,
+                    "aria-owns": ev,
                     "aria-haspopup": eT,
-                    "aria-expanded": ev,
+                    "aria-expanded": eN,
                     "aria-activedescendant": ej,
                     "aria-controls": e_,
-                    "aria-labelledby": eO,
+                    "aria-labelledby": ew,
                     "aria-describedby": eR,
                     "aria-invalid": ek,
-                    "aria-autocomplete": eL,
-                    "aria-required": N,
+                    "aria-autocomplete": eO,
+                    "aria-required": v,
                 }),
             }),
         ],
@@ -981,24 +981,24 @@ function eS(e) {
 }
 var ey = n(495088);
 new g.A("ChannelEditor.tsx");
-let eC = function () {
+let eA = function () {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
 };
-class eA extends i.Component {
+class eC extends i.Component {
     ref = i.createRef();
     _focusBlurQueue = Promise.resolve();
     _unsubscribe;
     _initTimeoutId = null;
     _cachedEditorWindow = null;
-    _emptyRichValue = (0, I.x7)("");
+    _emptyRichValue = (0, b.x7)("");
     constructor(e) {
         (super(e),
-            (this._unsubscribe = b.Y0.subscribe((e) => {
+            (this._unsubscribe = I.Y0.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
             })),
-            (this.state = { focused: !1, submitting: !1, popup: b.Y0.getState() }));
+            (this.state = { focused: !1, submitting: !1, popup: I.Y0.getState() }));
     }
     _getEditorWindow() {
         let e = this.ref?.current?.getSlateEditor?.()?.windowContext?.renderWindow;
@@ -1020,7 +1020,7 @@ class eA extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             let e;
             ((e = this.props.useSlate ? this.props.textValue : (0, H.WO)(this.props.richValue, { mode: "plain" })),
-                this.props.onChange?.(null, e, (0, I.x7)(e)));
+                this.props.onChange?.(null, e, (0, b.x7)(e)));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -1158,11 +1158,11 @@ class eA extends i.Component {
                 className: x,
                 id: E,
                 required: y,
-                maxCharacterCount: C,
-                allowNewLines: I,
-                "aria-describedby": b,
-                "aria-labelledby": N,
-                accessibilityLabel: v,
+                maxCharacterCount: A,
+                allowNewLines: b,
+                "aria-describedby": I,
+                "aria-labelledby": v,
+                accessibilityLabel: N,
                 showValueWhenDisabled: T,
             } = this.props,
             { submitting: j, popup: _ } = this.state,
@@ -1172,10 +1172,10 @@ class eA extends i.Component {
                 id: E,
                 placeholder: this.getPlaceholder(),
                 required: y,
-                accessibilityLabel: v,
+                accessibilityLabel: N,
                 disabled: n || !1,
                 submitting: j,
-                isEdit: h === A.oU.EDIT,
+                isEdit: h === C.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -1185,16 +1185,16 @@ class eA extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: I,
+                allowNewLines: b,
                 onChange: i,
                 onResize: a,
                 onKeyDown: r,
                 onSubmit: o,
                 textAreaPaddingClassName: s()({
-                    [ey.H$]: h === A.oU.CREATE_FORUM_POST,
-                    [ey.g_]: h === A.oU.CUSTOM_GIFT,
-                    [ey.Yg]: h === A.oU.USER_PROFILE,
-                    [ey.$$]: h === A.oU.OVERLAY_INLINE_REPLY,
+                    [ey.H$]: h === C.oU.CREATE_FORUM_POST,
+                    [ey.g_]: h === C.oU.CUSTOM_GIFT,
+                    [ey.Yg]: h === C.oU.USER_PROFILE,
+                    [ey.$$]: h === C.oU.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: f,
                 useNewSlashCommands: p,
@@ -1204,9 +1204,9 @@ class eA extends i.Component {
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== _.id || void 0,
                 "aria-activedescendant": _.activeDescendant ?? void 0,
-                "aria-invalid": e.length > C,
-                "aria-describedby": b,
-                "aria-labelledby": N,
+                "aria-invalid": e.length > A,
+                "aria-describedby": I,
+                "aria-labelledby": v,
                 "aria-autocomplete": "list",
             },
             R = m
@@ -1234,7 +1234,7 @@ class eA extends i.Component {
         c.A.saveDraft(e, t, this.props.type.drafts.type, n);
     };
     handleClearText = () => {
-        this.props.onChange?.(null, "", (0, I.x7)(""));
+        this.props.onChange?.(null, "", (0, b.x7)(""));
     };
     handleInsertText = (e) => {
         let { plainText: t, rawText: n, addSpace: l = !1 } = e;
@@ -1310,7 +1310,7 @@ class eA extends i.Component {
                                     let e;
                                     try {
                                         let { pathname: n } = new URL(t.src);
-                                        null != n && n.length > 0 && (e = (0, C.kh)(n));
+                                        null != n && n.length > 0 && (e = (0, A.kh)(n));
                                     } catch {}
                                     if (null != e && e.length > 0) return `${e}.png`;
                                 }
@@ -1328,7 +1328,7 @@ class eA extends i.Component {
             }
             return { files: [], errors: s };
         })(e.clipboardData, o.uploadLongMessages ? (r ?? a) : null);
-        return (eC(
+        return (eA(
             "onPaste",
             [...e.clipboardData.items].map((e) => {
                 if ("file" !== e.kind) return { kind: e.kind, type: e.type };

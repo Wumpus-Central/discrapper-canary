@@ -28,7 +28,7 @@ var i = n(435558),
     D = n(576991),
     v = n(812729),
     b = n.n(v);
-class P {
+class M {
     alwaysUpdateState;
     dirty = !1;
     state = this.getInitialState();
@@ -64,7 +64,7 @@ class P {
     }
 }
 n(321073);
-class M extends P {
+class P extends M {
     socket;
     switchingAccounts = !1;
     constructor(e) {
@@ -109,8 +109,8 @@ var U = n(665260),
     k = n(469177);
 let F = new c.A("ConnectionStore"),
     B = new D.A(),
-    V = new M(B),
-    H = new (class extends P {
+    V = new P(B),
+    H = new (class extends M {
         socket;
         constructor(e) {
             (super(), (this.socket = e));
@@ -314,7 +314,7 @@ function ev(e) {
               stage_instances: e.stage_instances,
               stickers: { op: "full_sync", items: e.stickers },
               threads: e.threads?.map((t) => (0, ed.UE)(t, e.id)) ?? [],
-              threadMessages: eP(e.threads),
+              threadMessages: eM(e.threads),
               channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, ed.UE)(t, e.id))) },
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
@@ -354,7 +354,7 @@ function ev(e) {
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
               threads: e.threads?.map((t) => (0, ed.UE)(t, e.id)) ?? [],
-              threadMessages: eP(e.threads),
+              threadMessages: eM(e.threads),
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
@@ -374,7 +374,7 @@ function eb(e) {
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
               threads: e.threads?.map((t) => (0, ed.UE)(t, e.id)) ?? [],
-              threadMessages: eP(e.threads),
+              threadMessages: eM(e.threads),
               presences: e.presences,
               activity_instances: e.activity_instances,
               voice_states: e.voice_states,
@@ -420,18 +420,18 @@ function eb(e) {
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
               threads: e.threads?.map((t) => (0, ed.UE)(t, e.id)) ?? [],
-              threadMessages: eP(e.threads),
+              threadMessages: eM(e.threads),
               voice_states: e.voice_states,
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function eP(e) {
+function eM(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
 }
-var eM = n(877166);
+var eP = n(877166);
 let eU = new c.A("ConnectionStore");
 function ew(e) {
     return e.map((e) => {
@@ -442,7 +442,7 @@ function ew(e) {
             : e;
     });
 }
-let eG = new eM.A(
+let eG = new eP.A(
         B,
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
@@ -453,7 +453,7 @@ let eG = new eM.A(
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    ex = new eM.A(
+    ex = new eP.A(
         B,
         (e, t) => (
             (e = null == e ? { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] } : e).updates.push({
@@ -473,12 +473,12 @@ let eG = new eM.A(
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    ek = new eM.A(
+    ek = new eP.A(
         B,
         (e, t) => ((e = e ?? { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] }).chunks.push(t), e),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    eF = new eM.A(
+    eF = new eP.A(
         B,
         (e, t) => ((e = null == e ? { type: "PRESENCE_UPDATES", updates: [] } : e).updates.push(t), e),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
@@ -1135,14 +1135,14 @@ function eq(e) {
         a.Ay.Emitter.batched(() => {
             (ek.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
                 null != e.presences && ez(e.presences, e.guild_id).forEach(eq),
-                eM.A.flush("GUILD_MEMBERS_CHUNK"));
+                eP.A.flush("GUILD_MEMBERS_CHUNK"));
         });
     }),
     eV(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
         a.Ay.Emitter.batched(() => {
             (eW({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
                 null != e.presences && ez(e.presences, e.guild_id).forEach(eq),
-                eM.A.flush());
+                eP.A.flush());
         });
     }),
     eV(
@@ -1498,7 +1498,7 @@ function eq(e) {
                         t(e.item);
                 }
             }),
-                eM.A.flush(),
+                eP.A.flush(),
                 eW({
                     type: "GUILD_MEMBER_LIST_UPDATE",
                     guildId: e.guild_id,

@@ -29,8 +29,8 @@ var r = n(503698),
     D = n(646865),
     v = n(795816),
     b = n(104171),
-    P = n(47294),
-    M = n(652215),
+    M = n(47294),
+    P = n(652215),
     U = n(818348),
     w = n(105292),
     G = n(977747),
@@ -56,7 +56,7 @@ function F(e) {
             selectedParticipant: N,
             embeddedActivity: R,
         } = e,
-        b = (0, I.Us)() === M.BRT.POPOUT,
+        b = (0, I.Us)() === P.BRT.POPOUT,
         w = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
         k = (0, s.bG)([y.Ay], () => Object.values(y.Ay.getVideoDevices())[0]),
         F = !1 === (k?.disabled ?? !0),
@@ -128,7 +128,7 @@ function F(e) {
                                       onOpenPopout: function () {
                                           ((0, A.X)(j, A.O.POPOUT, !0),
                                               null != t &&
-                                                  (0, P.A)({
+                                                  (0, M.A)({
                                                       onConfirm: async () => {
                                                           (await (0, v.od)(n, t.id), p.openChannelCallPopout(t));
                                                       },

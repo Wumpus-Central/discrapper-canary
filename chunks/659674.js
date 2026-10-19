@@ -3,12 +3,12 @@
     NV: () => D,
     QY: () => y,
     V: () => b,
-    Xk: () => P,
+    Xk: () => M,
     ax: () => x,
     ds: () => w,
     fK: () => R,
     fS: () => G,
-    nL: () => M,
+    nL: () => P,
     nh: () => L,
     p6: () => v,
 }),
@@ -187,10 +187,10 @@ function v(e) {
 function b(e) {
     return e.type === c.Auw.ARTICLE && null != e.url && I.test(e.url);
 }
-function P(e) {
+function M(e) {
     return e.type === c.Auw.ARTICLE && null != e.url && S.test(e.url);
 }
-function M(e) {
+function P(e) {
     return e.type === c.Auw.ARTICLE && null != e.url && N.test(e.url);
 }
 function U(e) {

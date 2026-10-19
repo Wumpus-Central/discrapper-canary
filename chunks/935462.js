@@ -1,4 +1,4 @@
-n.d(t, { $m: () => P, Dc: () => w, EO: () => v, WM: () => D, jl: () => M, rI: () => L, rQ: () => b, s_: () => U });
+n.d(t, { $m: () => M, Dc: () => w, EO: () => v, WM: () => D, jl: () => P, rI: () => L, rQ: () => b, s_: () => U });
 var i,
     r,
     a = n(477900),
@@ -58,11 +58,11 @@ function v(e) {
             "animate-always",
         ),
         b = s.useRef(null),
-        P = null != O["aria-label"],
-        M = null != O["aria-labelledby"],
+        M = null != O["aria-label"],
+        P = null != O["aria-labelledby"],
         U = s.useId(),
         w = O["aria-labelledby"] ?? U,
-        G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: M, transitionState: t }), [w, M, t]);
+        G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: P, transitionState: t }), [w, P, t]);
     return (0, a.jsx)(N.CP.Provider, {
         value: G,
         children: (0, a.jsx)(m.l, {
@@ -70,7 +70,7 @@ function v(e) {
             role: r,
             returnRef: p,
             impressionType: c.ImpressionTypes.MODAL,
-            "aria-labelledby": P ? void 0 : G.headerId,
+            "aria-labelledby": M ? void 0 : G.headerId,
             ...O,
             children: (0, a.jsx)(d.animated.div, {
                 className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !f }),
@@ -95,7 +95,7 @@ function b(e) {
         children: e.children,
     });
 }
-function P(e) {
+function M(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: r, scrollbarGutter: s, ...l } = e,
         d = (function (e) {
             switch (e ?? "thin") {
@@ -118,7 +118,7 @@ function P(e) {
         children: (0, a.jsx)(I.F, { children: n }),
     });
 }
-function M(e) {
+function P(e) {
     return (0, a.jsx)(S.A, {
         grow: 0,
         shrink: 0,

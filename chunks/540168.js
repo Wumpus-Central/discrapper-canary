@@ -1,35 +1,35 @@
-s.d(t, { d: () => u });
-var n = s(477900);
-s(582128);
-var a = s(503698),
-    l = s.n(a),
-    i = s(268218),
-    r = s(586172),
-    o = s(969490);
-function u(e) {
-    let { text: t, language: a, className: u } = e,
-        d = l()(o.kw, "hljs", u);
-    function c() {
-        return (0, n.jsx)("code", { className: d, children: t });
+n.d(t, { d: () => o });
+var l = n(477900);
+n(582128);
+var s = n(503698),
+    a = n.n(s),
+    i = n(268218),
+    r = n(586172),
+    c = n(969490);
+function o(e) {
+    let { text: t, language: s, className: o } = e,
+        u = a()(c.kw, "hljs", o);
+    function d() {
+        return (0, l.jsx)("code", { className: u, children: t });
     }
-    return (0, n.jsx)("pre", {
-        children: (0, n.jsx)(r.l, {
+    return (0, l.jsx)("pre", {
+        children: (0, l.jsx)(r.l, {
             location: "PlaintextFilePreview",
             code: t,
-            lang: a,
-            className: d,
-            children: (0, n.jsx)(i.c2, {
-                createPromise: () => Promise.all([s.e("818449"), s.e("175134")]).then(s.bind(s, 752238)),
+            lang: s,
+            className: u,
+            children: (0, l.jsx)(i.c2, {
+                createPromise: () => Promise.all([n.e("818449"), n.e("175134")]).then(n.bind(n, 752238)),
                 webpackId: 752238,
-                renderFallback: c,
+                renderFallback: d,
                 render: (e) => {
-                    if (null == a || !e.hasLanguage(a)) return c();
-                    let s = e.highlight(a, t, !0);
-                    return null == s
-                        ? c()
-                        : (0, n.jsx)("code", {
-                              className: l()(d, s.language),
-                              dangerouslySetInnerHTML: { __html: s.value },
+                    if (null == s || !e.hasLanguage(s)) return d();
+                    let n = e.highlight(s, t, !0);
+                    return null == n
+                        ? d()
+                        : (0, l.jsx)("code", {
+                              className: a()(u, n.language),
+                              dangerouslySetInnerHTML: { __html: n.value },
                           });
                 },
             }),

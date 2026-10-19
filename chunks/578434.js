@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(652215),
     A = n(994500),
     f = n(975571),
-    x = n(786051),
-    C = n(559868),
+    C = n(786051),
+    x = n(559868),
     E = n(105292);
 function S(e) {
     var t, S;
@@ -23,10 +23,10 @@ function S(e) {
         y,
         j,
         v,
-        b,
         _,
-        T,
+        b,
         N,
+        T,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
@@ -34,41 +34,41 @@ function S(e) {
         (y = I?.changelogId),
         (j = (0, s.bG)([c.default], () => c.default.locale)),
         (v = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", j), [y, j])),
-        (b = (0, g.A)(t)),
-        (_ = i.useRef(b ? Date.now() : null)),
-        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (N = i.useRef(T)),
+        (_ = (0, g.A)(t)),
+        (b = i.useRef(_ ? Date.now() : null)),
+        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (T = i.useRef(N)),
         i.useEffect(() => {
-            N.current = T;
+            T.current = N;
         }),
         i.useEffect(() => {
-            _.current = Date.now();
-        }, [b]),
+            b.current = Date.now();
+        }, [_]),
         i.useEffect(() => {
-            b && null != y && o.A.fetchChangelog(y, j, !0);
-        }, [y, j, b]),
+            _ && null != y && o.A.fetchChangelog(y, j, !0);
+        }, [y, j, _]),
         i.useEffect(() => {
-            b &&
+            _ &&
                 null != v &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${v.date}:${v.revision}`,
-                    unread_count: N.current,
+                    unread_count: T.current,
                 });
-        }, [b, v]),
+        }, [_, v]),
         i.useEffect(() => {
-            let e = _.current;
+            let e = b.current;
             return () => {
-                b &&
+                _ &&
                     null != v &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${v.date}:${v.revision}`,
-                        unread_count: N.current,
+                        unread_count: T.current,
                     }),
-                    (_.current = 0));
+                    (b.current = 0));
             };
-        }, [b, v]));
+        }, [_, v]));
     let k = (0, g.A)(M.id),
         L = M.isSystemDM(),
         P = D && !L && !M.isMultiUserDM(),
@@ -81,8 +81,8 @@ function S(e) {
             (O.buttonIcon = k ? a.t : void 0),
             (O.onButtonClick = function () {
                 if (k) {
-                    (open(C.Do),
-                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: C.Do }));
+                    (open(x.Do),
+                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: x.Do }));
                     return;
                 }
                 open(f.A.getArticleURL(p.MVz.SYSTEM_DMS));
@@ -95,5 +95,5 @@ function S(e) {
             (O.onButtonClick = function () {
                 r.A.unblockUser(M.getRecipientId());
             }));
-    return (0, l.jsx)(x.A, { ...O, children: R });
+    return (0, l.jsx)(C.A, { ...O, children: R });
 }

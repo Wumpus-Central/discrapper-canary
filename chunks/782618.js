@@ -103,8 +103,8 @@ function L(e) {
         v = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
         {
             playSoundboardSound: b,
-            previewSound: P,
-            isPlayingSound: M,
+            previewSound: M,
+            isPlayingSound: P,
         } = (0, g.A)(t, n?.id ?? null, I.dG.getSetting()?.volume ?? 100, n?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
         U = r.useRef(null),
         w = `sound-${t.soundId}`,
@@ -131,7 +131,7 @@ function L(e) {
             children: (0, i.jsxs)(A.s, {
                 buttonProps: x,
                 "aria-label": C.intl.formatToPlainString(C.t.tuMUJ2, { emojiName: D, soundName: L }),
-                className: s()(O.aG, { [O.he]: M, [O.wT]: c, [O.fx]: !c }, d),
+                className: s()(O.aG, { [O.he]: P, [O.wT]: c, [O.fx]: !c }, d),
                 onClick: H,
                 children: [
                     (0, i.jsxs)("div", {
@@ -148,7 +148,7 @@ function L(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(R, { sound: t, disabled: F, setIsChildTooltipShowing: V, previewSound: P }),
+                    (0, i.jsx)(R, { sound: t, disabled: F, setIsChildTooltipShowing: V, previewSound: M }),
                 ],
             }),
         }),

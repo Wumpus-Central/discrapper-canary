@@ -1,9 +1,9 @@
 n.d(t, { x: () => p, A: () => N });
 var i,
     l = n(477900),
-    a = n(582128),
-    o = n(503698),
-    r = n.n(o),
+    o = n(582128),
+    a = n(503698),
+    r = n.n(a),
     s = n(73153),
     c = n(900210),
     u = n(297494);
@@ -43,13 +43,13 @@ async function A(e) {
     return ((i.assets[0].p = t.url), i);
 }
 function N(e) {
-    let { className: t, effect: i, onComplete: o, emojiSize: u = 20 } = e,
-        d = a.useRef(null),
+    let { className: t, effect: i, onComplete: a, emojiSize: u = 20 } = e,
+        d = o.useRef(null),
         m = u * f.YY,
         g = (m + u) / 2,
         p = `translateY(${g}px)`;
     return (
-        a.useEffect(() => {
+        o.useEffect(() => {
             let e;
             if (null != i)
                 return (
@@ -65,7 +65,7 @@ function N(e) {
                                     autoplay: !0,
                                     animationData: t,
                                 })).addEventListener("complete", () => {
-                                    (o?.(), e.destroy());
+                                    (a?.(), e.destroy());
                                 }),
                                 null != i.channelId &&
                                     null != i.messageId &&
@@ -84,7 +84,7 @@ function N(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [o, i, u]),
+        }, [a, i, u]),
         (0, l.jsx)("div", {
             className: h.Y,
             children: (0, l.jsx)("div", {

@@ -1,6 +1,6 @@
 (n.d(t, {
     $S: () => y,
-    Am: () => P,
+    Am: () => M,
     Ap: () => N,
     Cq: () => C,
     Ez: () => v,
@@ -10,7 +10,7 @@
     Qr: () => L,
     XM: () => S,
     bq: () => D,
-    gI: () => M,
+    gI: () => P,
     hT: () => m,
     my: () => b,
     zl: () => O,
@@ -309,11 +309,11 @@ function b(e) {
         source: o,
     });
 }
-function P(e) {
+function M(e) {
     let t = e.interactionMetadata;
     return null == t ? null : "triggering_interaction_metadata" in t ? t.triggering_interaction_metadata : t;
 }
-function M(e, t) {
+function P(e, t) {
     let n = t.result?.sections;
     return null != n && e in n;
 }

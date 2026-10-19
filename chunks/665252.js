@@ -17,20 +17,20 @@ var l,
     E = n(114166),
     S = n(793574),
     y = n(688810),
-    C = n(209932),
-    A = n(813564),
-    I = n(73153),
-    b = n(734057),
-    N = n(927813),
-    v = n(714736);
+    A = n(209932),
+    C = n(813564),
+    b = n(73153),
+    I = n(734057),
+    v = n(927813),
+    N = n(714736);
 n(980504);
-let T = 7.5 * N.A.Millis.SECOND,
+let T = 7.5 * v.A.Millis.SECOND,
     j = new Map(),
     _ = new Map(),
     k = new Map();
 class R extends u.Ay.Store {
     initialize() {
-        this.waitFor(b.A);
+        this.waitFor(I.A);
     }
     static displayName = "SoundboardEchoStore";
     getActiveSoundboardEchoes() {
@@ -43,7 +43,7 @@ class R extends u.Ay.Store {
         return j.get(e);
     }
 }
-let O = new R(I.h, {
+let w = new R(b.h, {
     VOICE_CHANNEL_EFFECT_SEND: function (e) {
         let {
             soundId: t,
@@ -57,9 +57,9 @@ let O = new R(I.h, {
             isEcho: u,
         } = e;
         if (null == t || null == s) return !1;
-        let c = b.A.getChannel(n)?.getGuildId();
+        let c = I.A.getChannel(n)?.getGuildId();
         if (null == c) return !1;
-        let { enabled: d } = (0, v.j)(c, "handleSoundPlayStart");
+        let { enabled: d } = (0, N.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
         let h = {
             soundId: t,
@@ -106,7 +106,7 @@ let O = new R(I.h, {
             ((j = c),
                 null != (t = k.get(l)) && clearTimeout(t),
                 (n = setTimeout(() => {
-                    I.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
+                    b.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
                 }, T)),
                 k.set(l, n));
         })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
@@ -125,9 +125,9 @@ let O = new R(I.h, {
         (l.delete(t), (j = l));
     },
 });
-var L = n(994500),
-    w = n(287809),
-    M = n(562153),
+var O = n(994500),
+    M = n(287809),
+    L = n(562153),
     P = n(427262),
     D = n(435558),
     U = n.n(D),
@@ -269,7 +269,7 @@ function eu(e) {
                 )
             );
         })(l),
-        o = (0, u.bG)([w.default], () => Q.Ay.canUseSoundboardEverywhere(w.default.getCurrentUser())),
+        o = (0, u.bG)([M.default], () => Q.Ay.canUseSoundboardEverywhere(M.default.getCurrentUser())),
         { analyticsLocations: c } = (0, y.Ay)();
     switch (
         (r.useEffect(() => {
@@ -338,13 +338,13 @@ function ec(e) {
         m = (function (e) {
             let { playedByUserIds: t, guildId: n, channelId: l } = e,
                 i = t.size,
-                r = (0, u.yK)([w.default, L.A], () =>
+                r = (0, u.yK)([M.default, O.A], () =>
                     U()(Array.from(t))
-                        .reject((e) => L.A.isBlockedOrIgnored(e))
+                        .reject((e) => O.A.isBlockedOrIgnored(e))
                         .take(3)
                         .map((e) => {
-                            let t = w.default.getUser(e);
-                            return M.Ay.getName(n, l, t);
+                            let t = M.default.getUser(e);
+                            return L.Ay.getName(n, l, t);
                         })
                         .value(),
                 ),
@@ -363,10 +363,10 @@ function ec(e) {
         })({ playedByUserIds: s, guildId: t, channelId: n }),
         [g, E] = r.useState(!1),
         S = r.useCallback((e) => e?.focus(), []),
-        { analyticsLocations: C } = (0, y.Ay)();
+        { analyticsLocations: A } = (0, y.Ay)();
     return (
         (0, B.Ay)(() => {
-            el({ action: ee.HOVER, guildId: t, channelId: n, echo: { sound: l, startedAt: a }, analyticsLocations: C });
+            el({ action: ee.HOVER, guildId: t, channelId: n, echo: { sound: l, startedAt: a }, analyticsLocations: A });
         }),
         (0, i.jsxs)("div", {
             className: er.kL,
@@ -496,9 +496,9 @@ var eg = n(998812);
 function ex(e) {
     let { guildId: t, channelId: n, authorUser: l, mostRecentPlayedUser: s } = e,
         o = r.useMemo(() => l?.getAvatarURL(t, (0, c.FT)(c._3.SIZE_32)), [l, t]),
-        u = r.useMemo(() => M.Ay.getNickname(t, n, l) ?? P.Ay.getName(l), [l, t, n]),
+        u = r.useMemo(() => L.Ay.getNickname(t, n, l) ?? P.Ay.getName(l), [l, t, n]),
         h = r.useMemo(() => s?.getAvatarURL(t, (0, c.FT)(c._3.SIZE_32)), [s, t]),
-        m = r.useMemo(() => (null != s ? (M.Ay.getNickname(t, n, s) ?? P.Ay.getName(s)) : null), [s, t, n]);
+        m = r.useMemo(() => (null != s ? (L.Ay.getNickname(t, n, s) ?? P.Ay.getName(s)) : null), [s, t, n]);
     return (0, i.jsxs)("div", {
         className: eg.yA,
         children: [
@@ -527,16 +527,16 @@ function eE(e) {
             count: c,
             disabled: d,
             playedByUserIds: g,
-            startedAt: I,
-            showDetails: b,
-            onDetailsMouseEnter: N,
-            onDetailsMouseLeave: v,
+            startedAt: b,
+            showDetails: I,
+            onDetailsMouseEnter: v,
+            onDetailsMouseLeave: N,
         } = e,
-        { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([w.default, L.A], () => {
-            let e = L.A.isBlockedOrIgnored(o ?? void 0);
+        { authorUser: T, mostRecentPlayedUser: j } = (0, u.cf)([M.default, O.A], () => {
+            let e = O.A.isBlockedOrIgnored(o ?? void 0);
             return {
-                authorUser: w.default.getUser(s),
-                mostRecentPlayedUser: e || s === o ? null : w.default.getUser(o),
+                authorUser: M.default.getUser(s),
+                mostRecentPlayedUser: e || s === o ? null : M.default.getUser(o),
             };
         }),
         _ = r.useRef(null),
@@ -555,18 +555,18 @@ function eE(e) {
                     sound_id: r.soundId,
                     source_guild_id: r.guildId,
                     author_id: s,
-                    is_author: s === w.default.getCurrentUser()?.id,
+                    is_author: s === M.default.getCurrentUser()?.id,
                     location_stack: i,
                 });
-            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: I }, analyticsLocations: k });
-    }, [k, s, T, n, d, t, l, I]);
+            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: b }, analyticsLocations: k });
+    }, [k, s, T, n, d, t, l, b]);
     let R = r.useCallback(() => {
-            N(l.soundId);
-        }, [N, l.soundId]),
-        O = r.useCallback(() => {
-            (0, A.CZ)(l, n, k);
+            v(l.soundId);
+        }, [v, l.soundId]),
+        w = r.useCallback(() => {
+            (0, C.CZ)(l, n, k);
         }, [k, n, l]),
-        M = (0, u.bG)([C.A], () => C.A.isPlayingSound(l.soundId), [l]),
+        L = (0, u.bG)([A.A], () => A.A.isPlayingSound(l.soundId), [l]),
         P = r.useRef(null),
         D = r.useRef(null),
         [U, V] = r.useState(0);
@@ -587,19 +587,19 @@ function eE(e) {
         children: [
             (0, i.jsx)(h.Y, {
                 targetElementRef: _,
-                shouldShow: b,
+                shouldShow: I,
                 renderPopout: (e) => {
                     let { setPopoutRef: r } = e;
                     return (0, i.jsx)("div", {
                         ref: r,
                         onMouseEnter: R,
-                        onMouseLeave: v,
+                        onMouseLeave: N,
                         children: (0, i.jsx)(ec, {
                             guildId: t,
                             channelId: n,
                             sound: l,
                             playedByUserIds: g,
-                            startedAt: I,
+                            startedAt: b,
                         }),
                     });
                 },
@@ -609,7 +609,7 @@ function eE(e) {
                     (0, i.jsx)("div", {
                         ref: _,
                         onMouseEnter: R,
-                        onMouseLeave: v,
+                        onMouseLeave: N,
                         children: (0, i.jsx)(ex, { authorUser: T, mostRecentPlayedUser: j, guildId: t, channelId: n }),
                     }),
             }),
@@ -618,8 +618,8 @@ function eE(e) {
                 children: (0, i.jsxs)(f.D, {
                     innerRef: P,
                     style: { marginInlineEnd: U },
-                    className: a()(eg.nG, { [eg.Tz]: M, [eg.Jx]: d }),
-                    onClick: d ? () => null : O,
+                    className: a()(eg.nG, { [eg.Tz]: L, [eg.Jx]: d }),
+                    onClick: d ? () => null : w,
                     "aria-label": ei.intl.formatToPlainString(ei.t.VOmeSq, { name: K }),
                     children: [
                         (null != F || null != W) &&
@@ -646,9 +646,9 @@ function eE(e) {
 }
 function eS(e) {
     let { guildId: t, channelId: n } = e,
-        { activeEchoes: l, expiredEchoes: s } = (0, u.cf)([O], () => ({
-            activeEchoes: O.getActiveSoundboardEchoes(),
-            expiredEchoes: O.getExpiredSoundboardEchoes(),
+        { activeEchoes: l, expiredEchoes: s } = (0, u.cf)([w], () => ({
+            activeEchoes: w.getActiveSoundboardEchoes(),
+            expiredEchoes: w.getExpiredSoundboardEchoes(),
         })),
         [a, c] = r.useState(new Map()),
         [d, h] = r.useState(!1),
@@ -687,14 +687,14 @@ function eS(e) {
             config: o.config.gentle,
         }),
         [S, y] = r.useState(null),
-        C = r.useRef(null);
-    (r.useEffect(() => () => clearTimeout(C.current), []),
+        A = r.useRef(null);
+    (r.useEffect(() => () => clearTimeout(A.current), []),
         null == S || p.some((e) => e.sound.soundId === S) || y(null));
-    let A = r.useCallback((e) => {
-            (clearTimeout(C.current), y(e));
+    let C = r.useCallback((e) => {
+            (clearTimeout(A.current), y(e));
         }, []),
-        I = r.useCallback(() => {
-            (clearTimeout(C.current), (C.current = setTimeout(() => y(null), 200)));
+        b = r.useCallback(() => {
+            (clearTimeout(A.current), (A.current = setTimeout(() => y(null), 200)));
         }, []);
     return (0, i.jsx)("div", {
         className: eg.ei,
@@ -712,8 +712,8 @@ function eS(e) {
                             channelId: n,
                             ...l.echo,
                             disabled: l.echo.disabled ?? !1,
-                            onDetailsMouseEnter: A,
-                            onDetailsMouseLeave: I,
+                            onDetailsMouseEnter: C,
+                            onDetailsMouseLeave: b,
                             showDetails: S === l.echo.sound.soundId,
                         }),
                     }),

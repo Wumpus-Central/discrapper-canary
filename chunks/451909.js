@@ -28,9 +28,9 @@ var i = n(435558),
     D = n(403362),
     v = n(562153),
     b = n(427262),
-    P = n(652215);
+    M = n(652215);
 n(827669);
-var M = n(307731),
+var P = n(307731),
     U = n(105292);
 function w(e, t, n, i) {
     if (t[0] !== e) return;
@@ -269,10 +269,10 @@ let k = _.Ay.RULES,
             },
         },
         spoiler: {
-            match: s().anyScopeRegex(P.VFs),
+            match: s().anyScopeRegex(M.VFs),
             parse: () => ({ content: `<${U.intl.string(U.t["F+x38C"]).toLowerCase()}>` }),
         },
-        staticRouteLink: { match: s().anyScopeRegex(P.P0V), parse: (e) => ({ content: `<id:${e[1]}>` }) },
+        staticRouteLink: { match: s().anyScopeRegex(M.P0V), parse: (e) => ({ content: `<id:${e[1]}>` }) },
         timestamp: {
             ...k.timestamp,
             parse() {
@@ -338,7 +338,7 @@ function Z(e, t) {
     let n,
         i = e?.getGuildId(),
         a = null != i ? S.A.getGuild(i) : null,
-        s = N.A.can(P.xBc.MENTION_EVERYONE, e);
+        s = N.A.can(M.xBc.MENTION_EVERYONE, e);
     if (e?.isPrivate()) {
         n = e.recipients.map((e) => ({ userId: e, nick: null }));
         let t = R.default.getCurrentUser();
@@ -377,7 +377,7 @@ function Z(e, t) {
                       .filter((e) => e !== T.I6)
                       .flatMap((e) =>
                           T.Ay.getChannels(i)[e].map((e) =>
-                              e.channel.isCategory() && !N.A.can(P.xBc.VIEW_CHANNEL, e.channel)
+                              e.channel.isCategory() && !N.A.can(M.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, R.default, C.A) },
                           ),
@@ -430,7 +430,7 @@ let ee = {
         return (
             (n = l.content),
             (i = (t, n) => {
-                y.Ay.isEmojiPremiumLocked({ emoji: t, channel: e, intention: M.EmojiIntention.CHAT })
+                y.Ay.isEmojiPremiumLocked({ emoji: t, channel: e, intention: P.EmojiIntention.CHAT })
                     ? l.invalidEmojis.push(t)
                     : n || l.validNonShortcutEmojis.push(t);
             }),

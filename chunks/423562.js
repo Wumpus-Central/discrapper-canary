@@ -1,18 +1,18 @@
-s.d(t, { A: () => h });
-var n = s(477900);
+s.d(t, { A: () => c });
+var a = s(477900);
 s(582128);
-var a = s(17928),
-    l = s(86147),
-    i = s(729475),
+var i = s(17928),
+    n = s(86147),
+    l = s(729475),
     r = s(869146),
     o = s(531685),
     u = s(475815),
-    d = s(204651),
-    c = s(105292);
-function h(e) {
-    let { node: t, guestWindow: s, ...h } = e,
-        m = (0, a.bG)([o.A, r.A], () => (0, u._U)(t, s?.document), [t, s]),
-        p = m ? c.intl.string(c.t.Z7MyNB) : c.intl.string(c.t.OIDkcp),
-        g = m ? l.z : i.T;
-    return (0, n.jsx)(d.A, { label: p, iconComponent: g, ...h });
+    h = s(204651),
+    d = s(105292);
+function c(e) {
+    let { node: t, guestWindow: s, ...c } = e,
+        p = (0, i.bG)([o.A, r.A], () => (0, u._U)(t, s?.document), [t, s]),
+        m = p ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
+        g = p ? n.z : l.T;
+    return (0, a.jsx)(h.A, { label: m, iconComponent: g, ...c });
 }

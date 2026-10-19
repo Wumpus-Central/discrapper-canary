@@ -17,7 +17,7 @@ n.d(t, {
     Vv: () => e9,
     BQ: () => v,
     HO: () => eI,
-    SY: () => P,
+    SY: () => M,
     _8: () => tn,
     j7: () => eE,
     JG: () => eQ,
@@ -66,7 +66,7 @@ n.d(t, {
     eh: () => e$,
     uB: () => ee,
     wv: () => q,
-    jP: () => eM,
+    jP: () => eP,
     tP: () => W,
     PZ: () => tr,
     H1: () => eT,
@@ -76,7 +76,7 @@ n.d(t, {
     rs: () => eB,
     uh: () => X,
     S0: () => eq,
-    Zp: () => M,
+    Zp: () => P,
     qN: () => ti,
     iM: () => j,
     Qr: () => x,
@@ -244,7 +244,7 @@ let b = I(
         (e) => e?.value ?? C.P6Q.ON_CLICK,
         (e) => l.hU.create({ value: e }),
     ),
-    P = I(
+    M = I(
         "textAndImages",
         "useThreadSidebar",
         (e) => e?.value ?? !0,
@@ -256,7 +256,7 @@ I(
     (e) => e?.value ?? !0,
     (e) => l._t.create({ value: e }),
 );
-let M = I(
+let P = I(
     "notifications",
     "reactionNotifications",
     (e) => e ?? s.Tz.NOTIFICATIONS_ENABLED,
@@ -625,11 +625,11 @@ let eb = I(
         (e) => (null == e || e === s.KP.UNSET ? s.KP.FRIENDS_AND_ALL_GUILDS : e),
         (e) => e,
     ),
-    eP = new Set(Object.values(C.clD)),
-    eM = I(
+    eM = new Set(Object.values(C.clD)),
+    eP = I(
         "status",
         "status",
-        (e) => (null != e && eP.has(e.value) ? e.value : C.clD.UNKNOWN),
+        (e) => (null != e && eM.has(e.value) ? e.value : C.clD.UNKNOWN),
         (e) => l.hU.create({ value: e }),
     ),
     eU = I(

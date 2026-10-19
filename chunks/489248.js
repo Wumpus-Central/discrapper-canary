@@ -41,8 +41,8 @@ var g = t(604121),
     I = t(688810),
     T = t(131607),
     h = t(810498),
-    N = t(547902),
-    k = t(139486),
+    k = t(547902),
+    N = t(139486),
     j = t(5755),
     _ = t(40493),
     y = t(43105),
@@ -97,7 +97,7 @@ function F(e) {
     let { currentTier: n, giftCount: t, variant: a, onComplete: o, markAsDismissed: r, children: c } = e,
         u = l.useRef(null),
         d = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
-        f = (0, k.Se)(n);
+        f = (0, N.Se)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: u, children: c }),
@@ -280,14 +280,14 @@ let X = l.memo(function (e) {
         { giftingBadgeCoachmarkVariant: J, markGiftingBadgeCoachmarkAsDismissed: W } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, A.A)(),
-                l = (0, k.Hv)({ platform: "web", location: n, enabled: t }),
+                l = (0, N.Hv)({ platform: "web", location: n, enabled: t }),
                 [a, o] = (0, T.kn)(null == l || i ? [] : [c.M.NEW_GIFTING_BADGES_COACHMARK]);
             return { giftingBadgeCoachmarkVariant: null != a ? l : null, markGiftingBadgeCoachmarkAsDismissed: o };
         })({ location: "ChannelPremiumGiftButton", enabled: !n && !K }),
         { showGiftedSubscriptionsCoachmark: Q, markGiftedSubscriptionsCoachmarkAsDismissed: V } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, A.A)(),
-                l = (0, N.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
+                l = (0, k.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
                 [a, o] = (0, T.kn)(t && l && !i ? [c.M.GIFTED_SUBSCRIPTIONS_DESKTOP_COACHMARK] : []);
             return { showGiftedSubscriptionsCoachmark: null != a, markGiftedSubscriptionsCoachmarkAsDismissed: o };
         })({ location: "ChannelPremiumGiftButton", enabled: !n && null != m && !K && null == J }),

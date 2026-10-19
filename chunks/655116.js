@@ -26,8 +26,8 @@ var s = n(435558),
     D = n(272984),
     v = n(652215);
 let b = A.A.get(v.fg2.SPOTIFY),
-    P = "hm://pusher/v1/connections/",
-    M = 30 * R.A.Millis.SECOND,
+    M = "hm://pusher/v1/connections/",
+    P = 30 * R.A.Millis.SECOND,
     U = 30 * R.A.Millis.SECOND,
     w = 5 * R.A.Millis.MINUTE,
     G = 5 * R.A.Millis.SECOND,
@@ -119,7 +119,7 @@ class et {
     handleOpen() {
         (B.info("WS Connected"),
             this.backoff.succeed(),
-            this.pingInterval.start(M, () => this.ping()),
+            this.pingInterval.start(P, () => this.ping()),
             (0, y.E$)(this.accountId, this.accessToken),
             (0, y.oG)(this.accountId, this.accessToken));
     }
@@ -128,8 +128,8 @@ class et {
         if ("string" != typeof t) return;
         let { type: n, uri: i, payloads: r } = JSON.parse(t);
         if ("message" === n) {
-            if ("string" == typeof i && i.startsWith(P))
-                ((this.connectionId = decodeURIComponent(i.split(P)[1])),
+            if ("string" == typeof i && i.startsWith(M))
+                ((this.connectionId = decodeURIComponent(i.split(M)[1])),
                     (0, y.tO)(this.accountId, this.accessToken, this.connectionId));
             else if (Array.isArray(r)) {
                 for (let { events: e } of r) if (null != e) for (let t of e) this.handleEvent(t);

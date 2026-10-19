@@ -17,21 +17,21 @@ var l = n(477900),
     E = n(820066),
     S = n(112107),
     y = n(17928),
-    C = n(866665),
-    A = n(778712),
-    I = n(939249),
-    b = n(545442),
-    N = n(265872),
-    v = n(565645),
+    A = n(866665),
+    C = n(778712),
+    b = n(939249),
+    I = n(545442),
+    v = n(265872),
+    N = n(565645),
     T = n(730134),
     j = n(775602),
     _ = n(47167),
     k = n(442247),
     R = n(569926),
-    O = n(106191),
-    L = n(545868),
-    w = n(376943),
-    M = n(465365),
+    w = n(106191),
+    O = n(545868),
+    M = n(376943),
+    L = n(465365),
     P = n(78390),
     D = n(785562),
     U = n(332173),
@@ -51,20 +51,20 @@ var B = n(734057),
     X = n(307126);
 function J(e) {
     let { emoji: t } = e;
-    return (0, l.jsx)(C.m, {
+    return (0, l.jsx)(A.m, {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(v.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
+        children: (0, l.jsx)(N.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
 function Y(e) {
     let { emoji: t } = e;
-    return (0, l.jsx)(C.m, {
+    return (0, l.jsx)(A.m, {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(v.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+        children: (0, l.jsx)(N.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
     });
 }
 function ee(e) {
@@ -79,11 +79,11 @@ function et(e) {
         o = (0, l.jsx)(U.A, { children: null == a ? `<@${t}>` : `@${a}` });
     if (null != r) {
         let e = s || r.hasUniqueUsername() ? null : `#${r.discriminator}`;
-        return (0, l.jsx)(C.m, {
+        return (0, l.jsx)(A.m, {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
                 className: X.fX,
                 children: [
-                    (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: X.my }),
+                    (0, l.jsx)(T.A, { user: r, animate: !0, size: C._3.SIZE_16, className: X.my }),
                     Q.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
                     (0, l.jsx)("span", { className: X.D2, children: e }),
                 ],
@@ -92,7 +92,7 @@ function et(e) {
             position: "top",
             "aria-label": Q.Ay.getUserTag(r, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(I.D, { tag: "span", children: o }),
+            children: (0, l.jsx)(b.D, { tag: "span", children: o }),
         });
     }
     return o;
@@ -116,7 +116,7 @@ function en(e) {
                   roleColors: h ? o : null,
                   ...e,
                   children: [
-                      d && (0, l.jsx)(b.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
+                      d && (0, l.jsx)(I.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       s.name,
                   ],
@@ -124,10 +124,10 @@ function en(e) {
     }
     return null == n || null == r
         ? m()
-        : (0, l.jsx)(N.Y, {
+        : (0, l.jsx)(v.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, L.a)(n, t);
+                  await (0, O.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(W.Y, { guildId: n, channelId: r, roleId: t, popoutProps: e }),
               position: "top",
@@ -141,9 +141,9 @@ function el(e) {
         r = "text",
         s = !0;
     return (null != n &&
-        ((i = (0, w.nc)(n) ? (0, _.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
-        (r = (0, w.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
-        (s = (0, M.Y)(n.type))),
+        ((i = (0, M.nc)(n) ? (0, _.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
+        (r = (0, M.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
+        (s = (0, L.Y)(n.type))),
     s)
         ? (0, l.jsx)(U.A, { iconType: r, children: i })
         : (0, l.jsx)("span", { children: "#" + i });
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
+              children: [(0, l.jsx)(w.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", Z.intl.string(Z.t["11pdXZ"])] });
 }

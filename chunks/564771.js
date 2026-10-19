@@ -1,102 +1,102 @@
-s.d(t, { A: () => N, e: () => E });
-var n = s(477900),
-    a = s(582128),
-    l = s(503698),
-    i = s.n(l),
-    r = s(796873),
-    o = s.n(r),
-    u = s(17928),
-    d = s(911608),
-    c = s(939249),
-    h = s(789645),
-    m = s(28863),
-    p = s(834730),
-    g = s(73153),
-    f = s(31717),
-    v = s(399263);
-let C = {
+n.d(t, { A: () => S, e: () => v });
+var l = n(477900),
+    s = n(582128),
+    a = n(503698),
+    i = n.n(a),
+    r = n(796873),
+    c = n.n(r),
+    o = n(17928),
+    u = n(911608),
+    d = n(939249),
+    m = n(789645),
+    h = n(28863),
+    f = n(834730),
+    g = n(73153),
+    p = n(31717),
+    A = n(399263);
+let x = {
     cancel(e, t) {
         g.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
-        let s = v.A.getMessageForFile(t.id);
-        null == s ||
-            ("" === f.A.getDraft(s.channel_id, f.C.ChannelMessage) &&
+        let n = A.A.getMessageForFile(t.id);
+        null == n ||
+            ("" === p.A.getDraft(n.channel_id, p.C.ChannelMessage) &&
                 g.h.dispatch({
                     type: "DRAFT_SAVE",
-                    channelId: s.channel_id,
-                    draft: s.content,
-                    draftType: f.C.ChannelMessage,
+                    channelId: n.channel_id,
+                    draft: n.content,
+                    draftType: p.C.ChannelMessage,
                 }));
     },
 };
-var x = s(46054),
-    A = s(453771),
-    y = s(105292),
-    S = s(745268);
-function _(e) {
+var C = n(46054),
+    E = n(453771),
+    _ = n(105292),
+    N = n(745268);
+function j(e) {
     let { filename: t } = e,
-        a = (0, A.GD)(t),
-        l = s(492313)(`./icon-file-${a}.svg`);
-    return (0, n.jsx)("img", {
-        className: S.Kk,
-        src: l,
-        alt: y.intl.formatToPlainString(y.t.g6KdFv, { fileType: a }),
-        title: a,
+        s = (0, E.GD)(t),
+        a = n(492313)(`./icon-file-${s}.svg`);
+    return (0, l.jsx)("img", {
+        className: N.Kk,
+        src: a,
+        alt: _.intl.formatToPlainString(_.t.g6KdFv, { fileType: s }),
+        title: s,
     });
 }
-function E(e) {
-    let { channelId: t, file: s } = e,
-        l = (0, u.bG)([v.A], () => v.A.getMessageForFile(s.id)?.content),
-        i = a.useMemo(() => {
-            let e = s.items;
+function v(e) {
+    let { channelId: t, file: n } = e,
+        a = (0, o.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
+        i = s.useMemo(() => {
+            let e = n.items;
             return null == e
-                ? y.intl.string(y.t.jfKTes)
+                ? _.intl.string(_.t.jfKTes)
                 : 1 === e.length && null != e[0].filename
                   ? e[0].filename
-                  : y.intl.formatToPlainString(y.t.D0noUt, { count: e.length });
-        }, [s.items]),
-        r = a.useCallback(() => {
-            C.cancel(t, s);
-        }, [t, s]),
-        m = 100 === s.progress,
-        p = !m && s.currentSize > 0,
-        g = a.useMemo(() => (null == l || "" === l.trim() ? null : x.A.parse(l)), [l]);
-    return (0, n.jsxs)(n.Fragment, {
+                  : _.intl.formatToPlainString(_.t.D0noUt, { count: e.length });
+        }, [n.items]),
+        r = s.useCallback(() => {
+            x.cancel(t, n);
+        }, [t, n]),
+        h = 100 === n.progress,
+        f = !h && n.currentSize > 0,
+        g = s.useMemo(() => (null == a || "" === a.trim() ? null : C.A.parse(a)), [a]);
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != g && (0, n.jsx)("div", { className: S.Qs, children: g }),
-            (0, n.jsx)("div", {
-                className: S.Ig,
-                children: (0, n.jsxs)("div", {
-                    className: S.NJ,
+            null != g && (0, l.jsx)("div", { className: N.Qs, children: g }),
+            (0, l.jsx)("div", {
+                className: N.Ig,
+                children: (0, l.jsxs)("div", {
+                    className: N.NJ,
                     children: [
-                        (0, n.jsx)(_, { filename: i }),
-                        (0, n.jsxs)("div", {
-                            className: S.Jg,
+                        (0, l.jsx)(j, { filename: i }),
+                        (0, l.jsxs)("div", {
+                            className: N.Jg,
                             children: [
-                                (0, n.jsxs)("div", {
-                                    className: S.tP,
+                                (0, l.jsxs)("div", {
+                                    className: N.tP,
                                     children: [
-                                        (0, n.jsx)("div", { className: S.iW, children: i }),
-                                        p
-                                            ? (0, n.jsx)("div", {
-                                                  className: S.Ej,
-                                                  children: `\u{2014} ${o().filesize(s.currentSize)}`,
+                                        (0, l.jsx)("div", { className: N.iW, children: i }),
+                                        f
+                                            ? (0, l.jsx)("div", {
+                                                  className: N.Ej,
+                                                  children: `\u{2014} ${c().filesize(n.currentSize)}`,
                                               })
                                             : null,
                                     ],
                                 }),
-                                (0, n.jsx)("div", {
-                                    className: S.L$,
-                                    children: m
-                                        ? y.intl.string(y.t.jfKTes)
-                                        : (0, n.jsx)(d.z, { value: s.progress, "aria-label": i }),
+                                (0, l.jsx)("div", {
+                                    className: N.L$,
+                                    children: h
+                                        ? _.intl.string(_.t.jfKTes)
+                                        : (0, l.jsx)(u.z, { value: n.progress, "aria-label": i }),
                                 }),
                             ],
                         }),
-                        m
+                        h
                             ? null
-                            : (0, n.jsx)(c.D, {
+                            : (0, l.jsx)(d.D, {
                                   onClick: r,
-                                  children: (0, n.jsx)(h.P, { size: "md", color: "currentColor", className: S.x7 }),
+                                  children: (0, l.jsx)(m.P, { size: "md", color: "currentColor", className: N.x7 }),
                               }),
                     ],
                 }),
@@ -104,38 +104,38 @@ function E(e) {
         ],
     });
 }
-let N = function (e) {
-    let { className: t, url: s, fileName: a, fileSize: l, onClick: r, onContextMenu: u, renderAdjacentContent: d } = e;
-    return (0, n.jsxs)("div", {
-        className: i()(S.Ig, t),
+let S = function (e) {
+    let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: o, renderAdjacentContent: u } = e;
+    return (0, l.jsxs)("div", {
+        className: i()(N.Ig, t),
         children: [
-            (0, n.jsxs)("div", {
-                className: S.NJ,
+            (0, l.jsxs)("div", {
+                className: N.NJ,
                 children: [
-                    (0, n.jsx)(_, { filename: a }),
-                    (0, n.jsxs)("div", {
-                        className: S.Jg,
+                    (0, l.jsx)(j, { filename: s }),
+                    (0, l.jsxs)("div", {
+                        className: N.Jg,
                         children: [
-                            (0, n.jsx)("div", {
-                                className: S.RT,
-                                children: (0, n.jsx)(m.Anchor, {
-                                    className: S.AD,
-                                    href: s,
+                            (0, l.jsx)("div", {
+                                className: N.RT,
+                                children: (0, l.jsx)(h.Anchor, {
+                                    className: N.AD,
+                                    href: n,
                                     onClick: r,
-                                    onContextMenu: u,
-                                    children: a,
+                                    onContextMenu: o,
+                                    children: s,
                                 }),
                             }),
-                            (0, n.jsx)(p.E, {
+                            (0, l.jsx)(f.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: o().filesize(l),
+                                children: c().filesize(a),
                             }),
                         ],
                     }),
                 ],
             }),
-            null != d && d(),
+            null != u && u(),
         ],
     });
 };

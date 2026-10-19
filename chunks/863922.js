@@ -1,173 +1,173 @@
-s.d(t, { $T: () => C, Ay: () => I, C6: () => x, C7: () => _, O$: () => j, Oz: () => A, sK: () => y, s_: () => S });
-var n = s(582128),
-    a = s(435558),
-    l = s.n(a),
-    i = s(702841),
-    r = s(636537),
-    o = s(73153),
-    u = s(913122),
-    d = s(432371),
-    c = s(595528),
-    h = s(734057),
-    m = s(927813),
-    p = s(822074),
-    g = s(652215);
-let f = 30 * m.A.Millis.SECOND;
-async function v(e, t) {
-    let s, n;
-    if (!p.A.shouldFetch(e, t)) return;
-    let a = Date.now();
-    o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: a });
+n.d(t, { $T: () => x, Ay: () => M, C6: () => C, C7: () => j, O$: () => I, Oz: () => E, sK: () => _, s_: () => N });
+var l = n(582128),
+    s = n(435558),
+    a = n.n(s),
+    i = n(702841),
+    r = n(636537),
+    c = n(73153),
+    o = n(913122),
+    u = n(432371),
+    d = n(595528),
+    m = n(734057),
+    h = n(927813),
+    f = n(822074),
+    g = n(652215);
+let p = 30 * h.A.Millis.SECOND;
+async function A(e, t) {
+    let n, l;
+    if (!f.A.shouldFetch(e, t)) return;
+    let s = Date.now();
+    c.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: s });
     try {
-        let s = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
-        n = s?.body;
+        let n = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
+        l = n?.body;
     } catch (e) {
-        s = new u.LG(e);
+        n = new o.LG(e);
     }
-    o.h.dispatch({
+    c.h.dispatch({
         type: "RECEIVE_CHANNEL_SUMMARY",
         channelId: e,
-        summary: n,
-        error: s,
-        requestedAt: a,
-        receivedAt: Date.now(),
-    });
-}
-async function C(e) {
-    let t, s;
-    if (!p.A.shouldFetch(e)) return;
-    let n = Date.now();
-    o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: n });
-    try {
-        s = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
-    } catch (e) {
-        t = new u.LG(e);
-    }
-    let a = s?.body?.summaries instanceof Array ? s.body.summaries : (s?.body ?? []);
-    ((a = l().takeRight(a, 75)),
-        o.h.dispatch({
-            type: "RECEIVE_CHANNEL_SUMMARIES",
-            channelId: e,
-            summaries: a,
-            error: t ?? void 0,
-            requestedAt: n,
-            receivedAt: Date.now(),
-        }));
-}
-function x(e, t) {
-    o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
-}
-function A() {
-    o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
-}
-function y(e, t) {
-    (null != e && null != t && v(e, t),
-        o.h.dispatch({ type: "SET_SELECTED_SUMMARY", channelId: e, summaryId: t ?? null }));
-}
-function S(e, t) {
-    o.h.dispatch({ type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: e ?? null, bottomVisibleMessage: t ?? null });
-}
-function _(e, t) {
-    o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
-}
-async function E() {
-    let e, t;
-    if (!p.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
-    let s = Date.now();
-    o.h.dispatch({ type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: s });
-    try {
-        t = await r.Bo.get({ url: "/users/@me/affinities/channels", rejectWithError: !1 });
-    } catch (t) {
-        e = new u.LG(t);
-    }
-    let n = t?.body?.channel_affinities;
-    o.h.dispatch({
-        type: "RECEIVE_CHANNEL_AFFINITIES",
-        affinities: n,
-        error: e ?? void 0,
+        summary: l,
+        error: n,
         requestedAt: s,
         receivedAt: Date.now(),
     });
 }
-async function N(e) {
+async function x(e) {
+    let t, n;
+    if (!f.A.shouldFetch(e)) return;
+    let l = Date.now();
+    c.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: l });
+    try {
+        n = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
+    } catch (e) {
+        t = new o.LG(e);
+    }
+    let s = n?.body?.summaries instanceof Array ? n.body.summaries : (n?.body ?? []);
+    ((s = a().takeRight(s, 75)),
+        c.h.dispatch({
+            type: "RECEIVE_CHANNEL_SUMMARIES",
+            channelId: e,
+            summaries: s,
+            error: t ?? void 0,
+            requestedAt: l,
+            receivedAt: Date.now(),
+        }));
+}
+function C(e, t) {
+    c.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
+}
+function E() {
+    c.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
+}
+function _(e, t) {
+    (null != e && null != t && A(e, t),
+        c.h.dispatch({ type: "SET_SELECTED_SUMMARY", channelId: e, summaryId: t ?? null }));
+}
+function N(e, t) {
+    c.h.dispatch({ type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: e ?? null, bottomVisibleMessage: t ?? null });
+}
+function j(e, t) {
+    c.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
+}
+async function v() {
+    let e, t;
+    if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
+    let n = Date.now();
+    c.h.dispatch({ type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: n });
+    try {
+        t = await r.Bo.get({ url: "/users/@me/affinities/channels", rejectWithError: !1 });
+    } catch (t) {
+        e = new o.LG(t);
+    }
+    let l = t?.body?.channel_affinities;
+    c.h.dispatch({
+        type: "RECEIVE_CHANNEL_AFFINITIES",
+        affinities: l,
+        error: e ?? void 0,
+        requestedAt: n,
+        receivedAt: Date.now(),
+    });
+}
+async function S(e) {
     let t,
-        s,
-        { useQuickSwitcher: n = !0, useChannelAffinities: a = !0 } =
+        n,
+        { useQuickSwitcher: l = !0, useChannelAffinities: s = !0 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     e = e ?? [];
-    let l = Date.now();
+    let a = Date.now();
     if (
         0 ===
         (e = e
-            .concat(p.A.defaultChannelIds({ withQuickSwitcher: n, withChannelAffinities: a }))
+            .concat(f.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: s }))
             .filter((e) => {
-                let t = h.A.getChannel(e);
-                return (0, d.pk)(t, !1, !0);
+                let t = m.A.getChannel(e);
+                return (0, u.pk)(t, !1, !0);
             })
             .filter((e) => {
                 let t = Date.now(),
-                    s = p.A.status(e);
-                if (s?.fetching) return !1;
-                let n = s?.lastReceivedAt;
-                return null == n || t - n > f;
+                    n = f.A.status(e);
+                if (n?.fetching) return !1;
+                let l = n?.lastReceivedAt;
+                return null == l || t - l > p;
             })
             .slice(0, 50)).length
     )
         return Promise.resolve(null);
-    o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: l });
+    c.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: a });
     try {
-        s = await r.Bo.post({ url: g.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
+        n = await r.Bo.post({ url: g.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
     } catch (e) {
-        t = new u.LG(e);
+        t = new o.LG(e);
     }
-    let i = s?.body.summaries;
-    o.h.dispatch({
+    let i = n?.body.summaries;
+    c.h.dispatch({
         type: "RECEIVE_CHANNEL_SUMMARIES_BULK",
-        requestedAt: l,
+        requestedAt: a,
         receivedAt: Date.now(),
         summaries: i,
         requestArgs: { channelIds: e },
         error: t,
     });
 }
-async function j(e) {
+async function I(e) {
     try {
         (await r.Bo.del({ url: g.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
-            o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
+            c.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
-        throw new u.LG(e);
+        throw new o.LG(e);
     }
 }
-let M =
-        221552 == s.j
+let y =
+        221552 == n.j
             ? {
-                  setSummaryFeedback: _,
-                  updateVisibleMessages: S,
-                  setSelectedSummary: y,
-                  setHighlightedSummary: x,
-                  fetchSummaries: C,
-                  fetchSummariesBulk: N,
+                  setSummaryFeedback: j,
+                  updateVisibleMessages: N,
+                  setSelectedSummary: _,
+                  setHighlightedSummary: C,
+                  fetchSummaries: x,
+                  fetchSummariesBulk: S,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
                           !(function () {
                               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                                  t = (0, i.bG)([c.A], () => c.A.isConnected()),
-                                  s = n.useMemo(() => e.join(","), [e]);
-                              n.useEffect(() => {
+                                  t = (0, i.bG)([d.A], () => d.A.isConnected()),
+                                  n = l.useMemo(() => e.join(","), [e]);
+                              l.useEffect(() => {
                                   t && e();
                                   async function e() {
                                       try {
-                                          await E();
+                                          await v();
                                       } catch (e) {}
-                                      await N(s.split(","));
+                                      await S(n.split(","));
                                   }
-                              }, [s, t]);
+                              }, [n, t]);
                           })(t),
-                          (0, i.yK)([p.A], () => p.A.topSummaries(), [])
+                          (0, i.yK)([f.A], () => f.A.topSummaries(), [])
                       );
                   },
-                  deleteSummary: j,
+                  deleteSummary: I,
               }
             : null,
-    I = 221552 == s.j ? M : null;
+    M = 221552 == n.j ? y : null;

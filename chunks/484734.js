@@ -41,14 +41,14 @@ let L = function (e) {
 };
 var m = n(769015),
     b = n(106191),
-    v = n(548118),
-    R = n(376943),
+    R = n(548118),
+    v = n(376943),
     U = n(636585),
     D = n(71393),
     y = n(994500),
     G = n(287809),
-    P = n(147036),
-    M = n(427262),
+    M = n(147036),
+    P = n(427262),
     x = n(105292),
     V = n(445388);
 class j extends l.PureComponent {
@@ -100,7 +100,7 @@ class w extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: V._C,
-            children: (0, i.jsx)(v.Ay, { tabIndex: -1, guild: e, size: v.Ay.Sizes.MINI, className: V.$f }),
+            children: (0, i.jsx)(R.Ay, { tabIndex: -1, guild: e, size: R.Ay.Sizes.MINI, className: V.$f }),
         });
     }
     renderName() {
@@ -145,7 +145,7 @@ class H extends l.Component {
         let { channel: e } = this.props,
             t = (0, N.gU)(e);
         if (null == t) return null;
-        let n = (0, P.Jg)(e) ?? "";
+        let n = (0, M.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
             className: V.zc,
             role: "img",
@@ -197,7 +197,7 @@ class H extends l.Component {
         let { channel: e } = this.props,
             t = D.A.getGuild(this.props.channel.guild_id)?.name,
             n = (0, p.m1)(e, G.default, y.A),
-            i = (0, P.Jg)(e);
+            i = (0, M.Jg)(e);
         return x.intl.formatToPlainString(x.t["Vw/da+"], { name: n, type: i, guild: t });
     }
     render() {
@@ -283,7 +283,7 @@ class B extends l.Component {
             i = y.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
-                (e = i ?? M.Ay.getName(t)),
+                (e = i ?? P.Ay.getName(t)),
             e
         );
     }
@@ -298,7 +298,7 @@ class B extends l.Component {
                 children: [
                     (0, i.jsx)("span", { className: V.YW, children: l }),
                     e,
-                    (0, i.jsx)("span", { className: V.Xh, children: M.Ay.getUserTag(t) }),
+                    (0, i.jsx)("span", { className: V.Xh, children: P.Ay.getUserTag(t) }),
                 ],
             })
         );
@@ -313,7 +313,7 @@ class B extends l.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: t } = this.props,
             n = this.getDisplayNickname(),
-            i = M.Ay.getUserTag(t);
+            i = P.Ay.getUserTag(t);
         return null != e && e > 0
             ? x.intl.formatToPlainString(x.t["6b9UrR"], { name: n, id: i, mentions: e })
             : x.intl.formatToPlainString(x.t.GWYOAY, { name: n, id: i });
@@ -403,10 +403,10 @@ class Y extends l.Component {
         if (null != n.inviteCode)
             ((e = x.intl.string(x.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
-            let l = (0, R.vu)(n.path);
+            let l = (0, v.vu)(n.path);
             null == l || void 0 === l.messageId
                 ? ((e = x.intl.string(x.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, R.r9)(l)
+                : (0, v.r9)(l)
                   ? ((e = x.intl.string(x.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
                   : ((e = x.intl.string(x.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));

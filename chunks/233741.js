@@ -131,8 +131,8 @@ let y = new L(
 var D = n(812729),
     v = n.n(D),
     b = n(941426),
-    P = n(567249),
-    M = n(96175),
+    M = n(567249),
+    P = n(96175),
     U = n(392164);
 let w = new b.Vy("OverlayV3NativeClickZoneStore"),
     G = null,
@@ -170,18 +170,18 @@ function H(e) {
     ((F = {}), (x = []), (k = []), V([], e));
 }
 function j(e, t, n, i) {
-    let r = P.A.getWindow(U.f);
+    let r = M.A.getWindow(U.f);
     if (null == r) return;
     let a = Math.ceil(n * r.innerWidth),
         s = Math.ceil(i * r.innerHeight),
-        l = new MouseEvent((0, M.Br)(t), { screenX: a, screenY: s, clientX: a, clientY: s, bubbles: !0, view: r }),
+        l = new MouseEvent((0, P.Br)(t), { screenX: a, screenY: s, clientX: a, clientY: s, bubbles: !0, view: r }),
         o = r.document.elementFromPoint(a, s);
     null != o && o.dispatchEvent(l);
 }
 class W extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
     initialize() {
-        this.waitFor(m.A, P.A);
+        this.waitFor(m.A, M.A);
     }
     getClickZones() {
         return x;
@@ -391,7 +391,7 @@ async function eS(e) {
 function eN(e) {
     let { pid: t, windowHandle: n } = e;
     return (
-        null != n && null != t && e_(t, (0, M.Oy)(n)),
+        null != n && null != t && e_(t, (0, P.Oy)(n)),
         (en !== t || ei !== n) &&
             (0, h._r)(t ?? en ?? -1, "overlay_focused", { focusedPID: t, focusedWindowHandle: ei, windowHandle: n }),
         (en = t),
@@ -451,7 +451,7 @@ class eC extends i.Ay.Store {
     }
     getIsOverlayPreShown(e) {
         let t = ed[e];
-        return null != t && M.Ms.has(t);
+        return null != t && P.Ms.has(t);
     }
     getOverlayMethod(e) {
         return ec[e] ?? null;
@@ -481,10 +481,10 @@ let eO = new eC(
                       let { pid: t, windowHandle: n } = e;
                       ((ea = t),
                           eI(),
-                          null != n && null != t && e_(t, (0, M.Oy)(n)),
+                          null != n && null != t && e_(t, (0, P.Oy)(n)),
                           null != et &&
                               (null != n || et.version?.() > 0) &&
-                              et.setRenderingWindowHandle?.((0, M.Oy)(n ?? "0"), t));
+                              et.setRenderingWindowHandle?.((0, P.Oy)(n ?? "0"), t));
                   },
                   OVERLAY_V3_PRE_CREATE_POPOUT: function () {
                       eo = null;
@@ -541,7 +541,7 @@ let eO = new eC(
                       let { pid: t, windowHandle: n, windowClass: i } = e;
                       null != i && E.has(i)
                           ? eT()
-                          : (ep(t, null != n ? (0, M.Oy)(n) : null),
+                          : (ep(t, null != n ? (0, P.Oy)(n) : null),
                             t !== en && Q.info("OverlayStore: Focused new PID", t));
                   },
                   OVERLAY_V3_NATIVE_FOCUS_LOST: function () {

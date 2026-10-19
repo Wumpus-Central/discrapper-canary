@@ -9,12 +9,12 @@
     X6: () => v,
     YI: () => H,
     Zq: () => U,
-    e7: () => M,
+    e7: () => P,
     eN: () => Y,
     e_: () => B,
     lo: () => L,
     n$: () => k,
-    pF: () => P,
+    pF: () => M,
     tB: () => R,
     u1: () => V,
     v3: () => x,
@@ -78,10 +78,10 @@ function v(e) {
 function b(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
-function P(e) {
+function M(e) {
     return e?.type === f.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === f.Auw.GIFT;
 }
-function M(e) {
+function P(e) {
     let t;
     if (null == e) return [];
     let n = new Set();

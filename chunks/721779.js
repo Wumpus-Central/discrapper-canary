@@ -46,8 +46,8 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     D = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
     v = /^(?:\/game-shop\/([0-9]+)|\/channels\/([0-9]+)\/game-shop\/(?:[0-9]+))(?:\/([0-9]+)(?:\/([^\/]+))?)?\/?$/,
     b = /^\/channels\/([0-9]+)\/shop$/,
-    P = /^\/quests\/([0-9-]+)\/?$/,
-    M = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
+    M = /^\/quests\/([0-9-]+)\/?$/,
+    P = /^\/game-servers\/share\/([A-Za-z0-9_-]+)$/,
     U = /^\/game-organizations\/invite\/([A-Za-z0-9_-]+)\/?$/,
     w = /^\/games\/([0-9]+)(?:\/[A-Za-z0-9-]*)?\/?$/,
     G = /^\/users\/([0-9]+)\/?$/,
@@ -191,9 +191,9 @@ function et(e) {
                     r(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
                 } else r(E.I.APP_DIRECTORY_STOREFRONT, e);
             }
-            let P = h?.match(y);
-            if (null != P) {
-                let e = P[1];
+            let M = h?.match(y);
+            if (null != M) {
+                let e = M[1];
                 r(E.I.ACTIVITY_BOOKMARK, e);
             }
             let F = h?.match(D);
@@ -210,7 +210,7 @@ function et(e) {
             null != H && r(E.I.QUESTS_EMBED, H);
             let j = h?.match(w);
             null != j && r(E.I.GAME_PROFILE, j[1]);
-            let W = h?.match(M);
+            let W = h?.match(P);
             null != W && r(E.I.GAME_SERVER_SHARE, W[1]);
             let Y = h?.match(U);
             null != Y && r(E.I.GAME_ORGANIZATION_INVITE, Y[1]);
@@ -241,12 +241,12 @@ function en(e, t) {
 }
 function ei(e) {
     let t = J(e),
-        n = t?.primaryHostRemainingPath?.match(P);
+        n = t?.primaryHostRemainingPath?.match(M);
     return n?.[1] ?? null;
 }
 function er(e) {
     let t = J(e),
-        n = t?.primaryHostRemainingPath?.match(M);
+        n = t?.primaryHostRemainingPath?.match(P);
     return n?.[1] ?? null;
 }
 function ea(e) {

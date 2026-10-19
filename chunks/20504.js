@@ -1,17 +1,17 @@
 s.d(t, { A: () => g });
-var n = s(477900),
-    a = s(582128),
-    l = s(503698),
-    i = s.n(l),
+var a = s(477900),
+    i = s(582128),
+    n = s(503698),
+    l = s.n(n),
     r = s(983851),
     o = s(358618),
     u = s(793920),
-    d = s(939249),
-    c = s(122641),
-    h = s(105292),
-    m = s(28680);
-class p extends a.PureComponent {
-    _mediaBar = a.createRef();
+    h = s(939249),
+    d = s(122641),
+    c = s(105292),
+    p = s(28680);
+class m extends i.PureComponent {
+    _mediaBar = i.createRef();
     _hoverTimeout;
     state = { hovered: !1, focused: !1, dragging: !1 };
     static defaultProps = { minValue: 0, maxValue: 100, handleSize: 16 };
@@ -23,8 +23,8 @@ class p extends a.PureComponent {
     }
     updateMediaBar() {
         let { muted: e, value: t, maxValue: s } = this.props,
-            n = this._mediaBar.current;
-        null != n && (e ? n.setGrabber(0) : n.setGrabber(t / s));
+            a = this._mediaBar.current;
+        null != a && (e ? a.setGrabber(0) : a.setGrabber(t / s));
     }
     handleValueChange = (e) => {
         let { maxValue: t, onValueChange: s } = this.props;
@@ -35,22 +35,22 @@ class p extends a.PureComponent {
         e?.();
     };
     handleKeyDown = (e) => {
-        let { minValue: t, value: s, maxValue: n, onValueChange: a } = this.props,
-            l = 0.05 * (n - t);
+        let { minValue: t, value: s, maxValue: a, onValueChange: i } = this.props,
+            n = 0.05 * (a - t);
         switch (e.key) {
             case "ArrowUp":
                 if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                     this.setState({ focused: !0 });
                     break;
                 }
-                a?.(Math.min(n, s + l));
+                i?.(Math.min(a, s + n));
                 break;
             case "ArrowDown":
                 if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                     this.setState({ focused: !0 });
                     break;
                 }
-                a?.(Math.max(t, s - l));
+                i?.(Math.max(t, s - n));
                 break;
             case "Escape":
                 (this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault());
@@ -70,36 +70,36 @@ class p extends a.PureComponent {
                 iconClassName: e,
                 iconColor: t,
                 className: s,
-                sliderWrapperClassName: a,
-                sliderClassName: l,
-                currentWindow: p,
+                sliderWrapperClassName: i,
+                sliderClassName: n,
+                currentWindow: m,
                 muted: g,
                 minValue: f,
                 maxValue: v,
-                value: C,
-                onVolumeShow: x,
-                onVolumeHide: A,
+                value: y,
+                onVolumeShow: S,
+                onVolumeHide: C,
             } = this.props,
-            { hovered: y, focused: S, dragging: _ } = this.state,
-            E = r.H;
+            { hovered: T, focused: b, dragging: x } = this.state,
+            M = r.H;
         return (
-            g || C === f ? (E = o._) : C < v / 2 && (E = u.S),
-            (0, n.jsxs)("div", {
-                className: i()(s, m.kL),
+            g || y === f ? (M = o._) : y < v / 2 && (M = u.S),
+            (0, a.jsxs)("div", {
+                className: l()(s, p.kL),
                 onMouseEnter: () => {
-                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), x?.());
+                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), S?.());
                 },
                 onMouseLeave: () => {
                     (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), A?.());
+                            (this.setState({ hovered: !1 }), C?.());
                         }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
-                    (0, n.jsx)("div", {
-                        className: i()(m.QS, a, { [m.OZ]: y || S || _ }),
+                    (0, a.jsx)("div", {
+                        className: l()(p.QS, i, { [p.OZ]: T || b || x }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -107,27 +107,27 @@ class p extends a.PureComponent {
                             (clearTimeout(this._hoverTimeout),
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150)));
                         },
-                        children: (0, n.jsx)(c.A, {
-                            className: m.YZ,
-                            sliderClassName: l,
-                            type: c.A.Types.VOLUME,
-                            value: C / v,
+                        children: (0, a.jsx)(d.A, {
+                            className: p.YZ,
+                            sliderClassName: n,
+                            type: d.A.Types.VOLUME,
+                            value: y / v,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: p,
+                            currentWindow: m,
                             ref: this._mediaBar,
                         }),
                     }),
-                    (0, n.jsx)(d.D, {
-                        className: m.bk,
-                        "aria-label": h.intl.string(h.t["19lt24"]),
+                    (0, a.jsx)(h.D, {
+                        className: p.bk,
+                        "aria-label": c.intl.string(c.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, n.jsx)(E, { color: t, className: e }),
+                        children: (0, a.jsx)(M, { color: t, className: e }),
                     }),
                 ],
             })
         );
     }
 }
-let g = p;
+let g = m;

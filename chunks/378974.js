@@ -252,8 +252,8 @@ function v(e) {
     });
 }
 var b = n(134035),
-    P = n(165648);
-function M(e) {
+    M = n(165648);
+function P(e) {
     let { question: t, questionId: n, responses: r, onResponseChange: a } = e,
         s = (function () {
             switch (t.QuestionType) {
@@ -270,7 +270,7 @@ function M(e) {
     return null == s
         ? null
         : (0, i.jsxs)("div", {
-              className: f()(P.PT, b.k),
+              className: f()(M.PT, b.k),
               children: [
                   (0, i.jsx)(o.E, {
                       variant: "text-lg/normal",
@@ -521,7 +521,7 @@ function G(e) {
                                     return null == t
                                         ? null
                                         : (0, i.jsx)(
-                                              M,
+                                              P,
                                               { question: t, questionId: e, responses: p, onResponseChange: R },
                                               e,
                                           );

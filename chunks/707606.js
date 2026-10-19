@@ -1,12 +1,12 @@
-s.d(t, { A: () => l });
-var n = s(477900);
-s(582128);
-var a = s(174459);
-function l(e) {
+n.d(t, { A: () => a });
+var l = n(477900);
+n(582128);
+var s = n(174459);
+function a(e) {
     let t = (t) => {
-        let { ref: s, ...l } = t;
-        return (0, n.jsx)(a.AnalyticsContext.Consumer, {
-            children: (t) => (0, n.jsx)(e, { ...l, ref: s, analyticsContext: t }),
+        let { ref: n, ...a } = t;
+        return (0, l.jsx)(s.AnalyticsContext.Consumer, {
+            children: (t) => (0, l.jsx)(e, { ...a, ref: n, analyticsContext: t }),
         });
     };
     return ((t.displayName = `withAnalyticsContext(${e.displayName ?? e.name})`), t);

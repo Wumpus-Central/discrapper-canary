@@ -76,7 +76,7 @@ n.d(t, {
     wT: () => B,
     x3: () => O,
     xT: () => W,
-    yC: () => P,
+    yC: () => M,
 });
 var i = n(435558),
     r = n.n(i),
@@ -151,7 +151,7 @@ let O = a.iu(0),
     ),
     v = a.kg(C.xBc.VIEW_CHANNEL, C.xBc.READ_MESSAGE_HISTORY),
     b = a.kg(C.xBc.VIEW_CHANNEL, C.xBc.READ_MESSAGE_HISTORY, C.xBc.CHANGE_NICKNAME),
-    P = a.kg(
+    M = a.kg(
         C.xBc.MANAGE_GUILD,
         C.xBc.MANAGE_ROLES,
         C.xBc.ADMINISTRATOR,
@@ -163,7 +163,7 @@ let O = a.iu(0),
         C.xBc.VIEW_AUDIT_LOG,
         C.xBc.VIEW_GUILD_ANALYTICS,
     );
-function M(e, t, n) {
+function P(e, t, n) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     return (
         i &&
@@ -216,7 +216,7 @@ function w(e) {
         (_ = a.zy(_, C.xBc.ADMINISTRATOR) ? R : U(i.id, n, _, r)),
         (u.A.isLurking(i.id) || n?.isPending) && (_ = a.pb(_, d)),
         p.Ay.isCurrentUserGuest(i.id) && (_ = a.pb(_, D)),
-        M(_, i, t, l)
+        P(_, i, t, l)
     );
 }
 function G(e) {
@@ -244,7 +244,7 @@ function G(e) {
         t = null != e ? m.A.getGuild(e) : null;
     } else ((r = r ?? {}), (t = i));
     if (null == t) return O;
-    if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return M(R, t, o, s);
+    if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return P(R, t, o, s);
     let u = p.Ay.getMember(t.id, o);
     return w({
         userId: o,

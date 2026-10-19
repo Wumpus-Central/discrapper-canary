@@ -1,5 +1,5 @@
 let i, r, a;
-n.d(t, { A: () => M });
+n.d(t, { A: () => P });
 var s = n(435558),
     l = n(158390),
     o = n(17928),
@@ -46,7 +46,7 @@ function b() {
         (y = {}),
         (D = 0));
 }
-class P extends o.Ay.Store {
+class M extends o.Ay.Store {
     static displayName = "CollectiblesCategoryStore";
     initialize() {
         this.syncWith([c.default], b);
@@ -107,7 +107,7 @@ class P extends o.Ay.Store {
         return this.getCategory(t?.categorySkuId);
     }
 }
-let M = new P(d.h, {
+let P = new M(d.h, {
     COLLECTIBLES_CATEGORIES_FETCH: function (e) {
         ((L = !0), (i = void 0), (a = void 0), (y = e.options));
     },

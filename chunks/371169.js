@@ -98,34 +98,34 @@ function D(e) {
 }
 let v = new i.A(3e4, 3e5),
     b = null,
-    P = new Set(),
     M = new Set(),
+    P = new Set(),
     U = !1;
 function w(e) {
     let t = c.default.getCurrentUser()?.id ?? null;
-    for (let n of (t !== b && ((b = t), P.clear(), M.clear(), v.cancel()), e)) P.has(n) || M.add(n);
+    for (let n of (t !== b && ((b = t), M.clear(), P.clear(), v.cancel()), e)) M.has(n) || P.add(n);
     U || v.pending || G();
 }
 async function G() {
     U = !0;
     let e = [];
-    for (let t of M) {
+    for (let t of P) {
         let n;
-        if ((M.delete(t), !P.has(t))) {
-            if ((P.add(t), null == f.Ay.getProject(t))) {
+        if ((P.delete(t), !M.has(t))) {
+            if ((M.add(t), null == f.Ay.getProject(t))) {
                 try {
                     (await H(t), (n = 200));
                 } catch (e) {
                     n = (0, A.$k)(e);
                 }
-                200 !== n && (403 === n || 404 === n ? D(t) : (P.delete(t), e.push(t)));
+                200 !== n && (403 === n || 404 === n ? D(t) : (M.delete(t), e.push(t)));
             }
         }
     }
     ((U = !1), 0 === e.length)
         ? v.succeed()
         : v.fail(() => {
-              for (let t of e) M.add(t);
+              for (let t of e) P.add(t);
               U || G();
           });
 }

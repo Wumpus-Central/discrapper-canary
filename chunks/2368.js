@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => S, eF: () => y, lE: () => I }), n(321073));
+(n.d(t, { Ay: () => S, eF: () => y, lE: () => b }), n(321073));
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
@@ -50,27 +50,27 @@ function S(e, t, n) {
 function y(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (x.has(i[0].type)) l ? A(e, i, !0, null) : C(e, i, t, n);
+        if (x.has(i[0].type)) l ? C(e, i, !0, null) : A(e, i, t, n);
         else {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
                 if (!h.l5.isText(a) && E.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
-                    l ? A(e, r, !0, null) : C(e, r, t, n);
+                    l ? C(e, r, !0, null) : A(e, r, t, n);
                 }
             }
         }
 }
-function C(e, t, n, l) {
+function A(e, t, n, l) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = h.cv.markdown(t[0], n);
-    (A(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
+    (C(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
         !r &&
             ((function (e, t, n, l, r) {
                 let [s, o] = t,
                     u = !1,
-                    c = N(e, o);
+                    c = v(e, o);
                 for (let f = s.children.length - 1; f >= 0; f--) {
                     let p,
                         g = s.children[f];
@@ -82,7 +82,7 @@ function C(e, t, n, l) {
                             m.lastIndex = p.index + 1;
                             continue;
                         }
-                        if (v(c, { path: x, offset: p.index }, r)) continue;
+                        if (N(c, { path: x, offset: p.index }, r)) continue;
                         let i = (0, a.p)(p[0], n, l);
                         null != i && T(e, l, t[0], i)
                             ? E.push({ index: p.index, length: p[0].length, node: i })
@@ -107,12 +107,12 @@ function C(e, t, n, l) {
                 }
                 return u;
             })(e, t, n, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
-            I(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
+            b(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
 }
-function A(e, t, n, l) {
+function C(e, t, n, l) {
     let [i, r] = t,
         s = !1,
-        a = n || null == l ? null : N(e, r);
+        a = n || null == l ? null : v(e, r);
     for (let t = i.children.length - 1; t >= 0; t--) {
         let o = i.children[t];
         if (h.l5.isText(o) && !n) {
@@ -136,13 +136,13 @@ function A(e, t, n, l) {
         } else if (h.cv.isElement(o) && e.isVoid(o)) {
             let i = h.PW.child(r, t),
                 u = { path: h.PW.child(i, 0), offset: 0 };
-            (n || (null != l && v(a, u, l))) &&
+            (n || (null != l && N(a, u, l))) &&
                 (d.b.voidToText(e, (0, c.IQ)(o, { mode: "plain", preventEmojiSurrogates: !0 }), i), (s = !0));
         }
     }
     return s;
 }
-function I(e, t, n, l) {
+function b(e, t, n, l) {
     let i = t[1],
         r = !1,
         s = [...l.entries].reverse(),
@@ -229,22 +229,22 @@ function I(e, t, n, l) {
     }
     return r;
 }
-function b(e) {
+function I(e) {
     return e.join(",");
 }
-function N(e, t) {
+function v(e, t) {
     let n = new Map(),
         l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
-    for (let [e, t] of l) (n.set(b(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
+    for (let [e, t] of l) (n.set(I(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
     return n;
 }
-function v(e, t, n) {
+function N(e, t, n) {
     if (null == e) return !1;
-    let l = e.get(b(t.path));
+    let l = e.get(I(t.path));
     if (null != l) l += t.offset;
     else {
-        let n = e.get(b(h.PW.parent(t.path)));
+        let n = e.get(I(h.PW.parent(t.path)));
         if (null == n) return !1;
         l = n + 1;
     }

@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(314307),
     A = n(681026),
     f = n(413125),
-    x = n(652215),
-    C = n(105292),
+    C = n(652215),
+    x = n(105292),
     E = n(936820);
 function S(e) {
     let t,
@@ -24,8 +24,8 @@ function S(e) {
         { channel: S } = e,
         I = (0, o.bG)([m.A], () => (null != S ? m.A.getGuild(S.getGuildId()) : null), [S]),
         y = (0, o.bG)([h.default], () => I?.ownerId === h.default.getId(), [I]),
-        { steps: j, shouldAnimate: v, isOldGuild: b } = (0, f.c)(S, I),
-        { titleAnimatedStyle: _, opacities: T } =
+        { steps: j, shouldAnimate: v, isOldGuild: _ } = (0, f.c)(S, I),
+        { titleAnimatedStyle: b, opacities: N } =
             ((t = (0, u.A)(() => new r.A.Value(0))),
             (n = (0, u.A)(() => new r.A.Value(0))),
             (s = (0, u.A)(() => [
@@ -60,12 +60,12 @@ function S(e) {
                 opacities: s,
             });
     if (null == I) return null;
-    let N = j.map((e, t) =>
+    let T = j.map((e, t) =>
             (0, l.jsx)(
                 r.A.div,
                 {
                     className: E.cW,
-                    style: v ? { opacity: T[t] } : {},
+                    style: v ? { opacity: N[t] } : {},
                     children: (0, l.jsx)(A.E, {
                         iconUrl: e.iconUrl,
                         header: e.title,
@@ -76,9 +76,9 @@ function S(e) {
                 e.key,
             ),
         ),
-        M = y ? C.intl.string(C.t["1ach9C"]) : C.intl.string(C.t["ezm+/j"]);
-    b && (M = C.intl.string(C.t["gwyU/J"]));
-    let R = `${g.A.getArticleURL(x.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
+        M = y ? x.intl.string(x.t["1ach9C"]) : x.intl.string(x.t["ezm+/j"]);
+    _ && (M = x.intl.string(x.t["gwyU/J"]));
+    let R = `${g.A.getArticleURL(C.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(p.Ay, {
         channelId: S.id,
         children: (0, l.jsx)("div", {
@@ -87,22 +87,22 @@ function S(e) {
                 className: E.vW,
                 children: [
                     (0, l.jsxs)(r.A.div, {
-                        style: _,
+                        style: b,
                         children: [
                             (0, l.jsx)(c.D, {
                                 className: E.ud,
                                 variant: "heading-xxl/medium",
-                                children: C.intl.format(C.t.rkHVKf, { guildName: I.name }),
+                                children: x.intl.format(x.t.rkHVKf, { guildName: I.name }),
                             }),
                             (0, l.jsxs)(d.E, {
                                 color: "text-default",
-                                className: a()({ [E.VA]: !0, [E.lg]: 0 === N.length }),
+                                className: a()({ [E.VA]: !0, [E.lg]: 0 === T.length }),
                                 variant: "text-sm/normal",
-                                children: [M, " ", N.length > 0 ? C.intl.format(C.t.UOtD32, { guideURL: R }) : null],
+                                children: [M, " ", T.length > 0 ? x.intl.format(x.t.UOtD32, { guideURL: R }) : null],
                             }),
                         ],
                     }),
-                    N,
+                    T,
                 ],
             }),
         }),

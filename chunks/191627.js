@@ -3,7 +3,7 @@ n.d(t, {
     Ef: () => D,
     Gg: () => S,
     H1: () => F,
-    MH: () => M,
+    MH: () => P,
     NV: () => v,
     PH: () => C,
     QM: () => y,
@@ -24,7 +24,7 @@ n.d(t, {
     tN: () => p,
     u9: () => b,
     vW: () => x,
-    zu: () => P,
+    zu: () => M,
 });
 var i,
     r,
@@ -83,7 +83,7 @@ var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (s.DATA_AND_PRIVACY = "DATA_AND_PRIVACY"),
         (s.SCREEN_TIME_CONTROLS = "SCREEN_TIME_CONTROLS"),
         s),
-    P =
+    M =
         (((l = {})[(l.ACTIVITY = 0)] = "ACTIVITY"),
         (l[(l.REQUESTS = 1)] = "REQUESTS"),
         (l[(l.SETTINGS = 2)] = "SETTINGS"),
@@ -91,7 +91,7 @@ var y = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (l[(l.DATA_AND_PRIVACY = 4)] = "DATA_AND_PRIVACY"),
         (l[(l.SCREEN_TIME_CONTROLS = 5)] = "SCREEN_TIME_CONTROLS"),
         l),
-    M = (((o = {}).SIDENAV = "SIDENAV"), (o.SETTINGS = "SETTINGS"), o),
+    P = (((o = {}).SIDENAV = "SIDENAV"), (o.SETTINGS = "SETTINGS"), o),
     U = (((d = {})[(d.SIDENAV = 0)] = "SIDENAV"), (d[(d.SETTINGS = 1)] = "SETTINGS"), d),
     w =
         (((c = {})[(c.TabChange = 0)] = "TabChange"),

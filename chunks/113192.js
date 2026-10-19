@@ -30,7 +30,7 @@ function N(e) {
         (y.isShownInCall && null != y.channelId && null != y.participantId && (0, s.A)(y.channelId, y.participantId),
             f.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: T.y0.FOCUSED }));
     }
-    async function P() {
+    async function M() {
         if (t.intent !== T.sV.INLINE) return void b();
         let { returnToConjureFrameSurface: e } = await Promise.all([
             n.e("644013"),
@@ -139,7 +139,7 @@ function N(e) {
                 children: (0, i.jsx)(A.X, {
                     idle: N,
                     title: L?.name ?? "",
-                    onJumpToChannel: P,
+                    onJumpToChannel: M,
                     preventIdleComponent: E.A,
                 }),
             }),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => M });
 var i = n(439372),
     r = n(626584),
     a = n(567249),
@@ -116,4 +116,4 @@ class b extends i.A {
         OVERLAY_RENDER_DEBUG_MODE: this.handleOverlayRenderDebugMode,
     };
 }
-let P = new b();
+let M = new b();

@@ -17,21 +17,21 @@ var l = n(477900),
     E = n(513609),
     S = n(71393),
     y = n(597184),
-    C = n(105330),
-    A = n(265431),
-    I = n(459016),
-    b = n(861382),
-    N = n(355622),
-    v = n(820066),
+    A = n(105330),
+    C = n(265431),
+    b = n(459016),
+    I = n(861382),
+    v = n(355622),
+    N = n(820066),
     T = n(696451),
     j = n(576705),
     _ = n(351906),
     k = n(287809),
     R = n(31498),
-    O = n(887129),
-    L = n(741918),
-    w = n(267102),
-    M = n(652215),
+    w = n(887129),
+    O = n(741918),
+    M = n(267102),
+    L = n(652215),
     P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
@@ -45,7 +45,7 @@ function W(e) {
         [$, Q, Z] = (function (e, t, n) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
-                u = (0, A.A)(),
+                u = (0, C.A)(),
                 c = (0, o.bG)([T.Ay, k.default], () => {
                     let e = k.default.getCurrentUser();
                     return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
@@ -54,14 +54,14 @@ function W(e) {
                     [j.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(L.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([b.A], () => ({
-                    activeCommand: b.A.getActiveCommand(l.id),
-                    activeCommandOption: b.A.getActiveOption(l.id),
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([I.A], () => ({
+                    activeCommand: I.A.getActiveCommand(l.id),
+                    activeCommandOption: I.A.getActiveOption(l.id),
                 })),
                 p = i.useMemo(
                     () =>
@@ -72,7 +72,7 @@ function W(e) {
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
-                        { renderWindow: s } = i.useContext(w.Ay);
+                        { renderWindow: s } = i.useContext(M.Ay);
                     function a(e, t, i) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,
@@ -90,10 +90,10 @@ function W(e) {
                             (u.setFocus(e.toString()), r?.(e));
                         }
                     }
-                    let u = (0, O.Ay)({
+                    let u = (0, w.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: L.Gl.VERTICAL,
+                            orientation: O.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = s.document.querySelector(e);
@@ -118,8 +118,8 @@ function W(e) {
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
-            null != E && (S = v.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
-            let C = {
+            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
+            let A = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
@@ -128,9 +128,9 @@ function W(e) {
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: r === N.oU.RULES_INPUT,
+                    hideMentionDescription: r === v.oU.RULES_INPUT,
                     emojiIntention:
-                        r === N.oU.RULES_INPUT
+                        r === v.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
                             : p
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI
@@ -139,16 +139,16 @@ function W(e) {
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
                         null != f
-                            ? (0, I.getString)(
+                            ? (0, b.getString)(
                                   { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
                                   f.name,
                               )
                             : "",
                 },
-                [U] = i.useState(() => new R.Ay(C));
+                [U] = i.useState(() => new R.Ay(A));
             return (
                 i.useEffect(() => {
-                    U.updateProps(C);
+                    U.updateProps(A);
                 }),
                 i.useImperativeHandle(t, () => U, [U]),
                 i.useEffect(() => () => U.unmount(), [U]),
@@ -182,7 +182,7 @@ function W(e) {
         X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
         J = (0, f.aI)($.selectedIndex);
     (0, p.gf)(H, $.isVisible, J);
-    let Y = (0, C.l)({ editorHeight: F, type: W, state: $ }),
+    let Y = (0, A.l)({ editorHeight: F, type: W, state: $ }),
         ee = (0, o.bG)(
             [h.Ay],
             () => {

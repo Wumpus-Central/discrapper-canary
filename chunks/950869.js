@@ -299,16 +299,16 @@ class D {
 n(672396);
 let v = new r.Vy("OverlayV3NativeModuleStore"),
     b = !1,
-    P = !1,
-    M = null,
+    M = !1,
+    P = null,
     U = !1,
     w = null,
     G = null,
     x = (() => {
         async function e() {
-            (F(), (M = D.getInstance()));
+            (F(), (P = D.getInstance()));
             try {
-                (await M.initialize(), (b = !0));
+                (await P.initialize(), (b = !0));
             } catch (e) {
                 ((0, c._r)(null, "module_initialization_failed", { error: e }),
                     (b = !1),
@@ -320,7 +320,7 @@ let v = new r.Vy("OverlayV3NativeModuleStore"),
         return () => (null == G && (G = e()), G);
     })();
 function k(e) {
-    __OVERLAY__ || !d.O || (P !== e && ((P = e), e && (0, l.setOutOfProcessSupport)(!0)));
+    __OVERLAY__ || !d.O || (M !== e && ((M = e), e && (0, l.setOutOfProcessSupport)(!0)));
 }
 function F() {
     !__OVERLAY__ && d.O && ((w = null), (U = !1), v.verbose("Maybe Enable Overlay"), k(o.x.oopEnabled));
@@ -334,7 +334,7 @@ class B extends i.Ay.Store {
         return null != G;
     }
     get isOverlayEnabled() {
-        return P;
+        return M;
     }
     get isSupported() {
         return d.O;
@@ -349,7 +349,7 @@ class B extends i.Ay.Store {
         return w;
     }
     getNativeModule() {
-        return M;
+        return P;
     }
 }
 let V = new B(

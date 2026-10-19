@@ -1,22 +1,22 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var l = n(477900),
     r = n(17928),
     a = n(364522),
     i = n(86182),
     s = n(265872),
     o = n(442433),
-    u = n(538451),
-    c = n(342296),
+    c = n(538451),
+    u = n(342296),
     d = n(363195),
     m = n(562153),
     h = n(462117);
-function p(e) {
+function x(e) {
     let { participants: t, channel: r } = e;
     return (0, l.jsx)(a.Ip, {
         className: h.S,
         children: t.map((e) =>
             (0, l.jsx)(
-                u.A,
+                c.A,
                 {
                     user: e,
                     guildId: r?.guild_id,
@@ -64,15 +64,15 @@ function p(e) {
         ),
     });
 }
-function x(e) {
-    let { children: t, participants: n, channel: a, onPopoutClosed: o, targetElementRef: u } = e,
+function p(e) {
+    let { children: t, participants: n, channel: a, onPopoutClosed: o, targetElementRef: c } = e,
         m = (0, r.bG)([d.A], () => d.A.theme),
         h = 1 === n.length ? n[0] : null;
     return null != h
         ? (0, l.jsx)(i.w, {
               theme: m,
-              children: (0, l.jsx)(c.A, {
-                  targetElementRef: u,
+              children: (0, l.jsx)(u.A, {
+                  targetElementRef: c,
                   user: h,
                   guildId: a?.guild_id,
                   channelId: a?.id,
@@ -83,9 +83,9 @@ function x(e) {
         : (0, l.jsx)(i.w, {
               theme: m,
               children: (0, l.jsx)(s.Y, {
-                  targetElementRef: u,
+                  targetElementRef: c,
                   renderPopout: () => {
-                      if (null != n) return (0, l.jsx)(p, { participants: n, channel: a });
+                      if (null != n) return (0, l.jsx)(x, { participants: n, channel: a });
                       throw Error("One of participant or participants is required");
                   },
                   children: t,

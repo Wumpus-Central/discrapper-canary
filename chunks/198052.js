@@ -33,9 +33,9 @@ let D = (0, n(240921).Ay)({
 });
 var v = n(806931),
     b = n(652215);
-let P = new E.A("ChannelRTCStore");
-P.enableNativeLogger(!0);
-let M = Object.freeze([]),
+let M = new E.A("ChannelRTCStore");
+M.enableNativeLogger(!0);
+let P = Object.freeze([]),
     U = [],
     w = new Set(),
     G = {},
@@ -223,10 +223,10 @@ class e_ extends l.Ay.PersistedStore {
         return $(e).version;
     }
     getParticipants(e) {
-        return $(e).toArray() ?? M;
+        return $(e).toArray() ?? P;
     }
     getSpeakingParticipants(e) {
-        return $(e).toArray(y.r4.SPEAKING) ?? M;
+        return $(e).toArray(y.r4.SPEAKING) ?? P;
     }
     getFilteredParticipants(e) {
         let t = $(e);
@@ -236,13 +236,13 @@ class e_ extends l.Ay.PersistedStore {
         return $(e).toArray(y.r4.STAGE_SPEAKER);
     }
     getVideoParticipants(e) {
-        return $(e).toArray(y.r4.VIDEO) ?? M;
+        return $(e).toArray(y.r4.VIDEO) ?? P;
     }
     getStreamParticipants(e) {
-        return $(e).toArray(y.r4.STREAM) ?? M;
+        return $(e).toArray(y.r4.STREAM) ?? P;
     }
     getActivityParticipants(e) {
-        return $(e).toArray(y.r4.ACTIVITY) ?? M;
+        return $(e).toArray(y.r4.ACTIVITY) ?? P;
     }
     getParticipant(e, t) {
         return $(e).getParticipant(t);
@@ -377,7 +377,7 @@ let eE = new e_(o.h, {
                 let { ownerId: e } = (0, f.Iy)(i);
                 e === T.default.getId() && X(e, [n]);
             } catch (e) {
-                P.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
+                M.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
             }
             ee(r) || (V[n] = !1);
         }

@@ -1,5 +1,5 @@
 (n.d(t, {
-    sB: () => eM,
+    sB: () => eP,
     WM: () => es,
     lx: () => ef,
     N1: () => er,
@@ -23,7 +23,7 @@
     R2: () => ea,
     g5: () => ec,
     vD: () => et,
-    qV: () => eP,
+    qV: () => eM,
     HA: () => eI,
     Yf: () => ey,
     Ov: () => ei,
@@ -80,7 +80,7 @@ function b(e) {
         is_foregrounded: (0, y.R)(),
     });
 }
-class P {
+class M {
     pendingRequests = new Map();
     recordEarnedRequestAttempt(e, t) {
         let n = {
@@ -106,7 +106,7 @@ class P {
             this.pendingRequests.delete(e));
     }
 }
-let M = new P();
+let P = new M();
 var U = n(260364),
     w = n(107195);
 function G(e, t, n) {
@@ -585,8 +585,8 @@ async function em(e, t) {
                     ((i = (0, Z.Yn)(y.creative_content)), (D = { type: a.p.QUEST, questId: i.id }));
                     break;
                 case a.p.BOUNTY:
-                    let P = (0, u.t)(y.creative_content);
-                    D = { type: a.p.BOUNTY, bounty: P };
+                    let M = (0, u.t)(y.creative_content);
+                    D = { type: a.p.BOUNTY, bounty: M };
                     break;
                 case a.p.NO_FILL:
                     b = y.creative_content?.ad_content_id ?? null;
@@ -664,7 +664,7 @@ async function eS(e, t, n) {
         });
     if (0 === r.length) return;
     let a = Date.now();
-    (M.recordEarnedRequestAttempt(t, n),
+    (P.recordEarnedRequestAttempt(t, n),
         o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: t }));
     try {
         let e = await (0, h.Ht)(),
@@ -685,13 +685,13 @@ async function eS(e, t, n) {
             fetchedAt: a,
             responseTtlSeconds: d,
         }),
-            M.recordEarnedRequestApiResponse(t, {
+            P.recordEarnedRequestApiResponse(t, {
                 wasSuccessful: !0,
                 requestId: i.body.request_id ?? null,
                 fetchedAt: a,
             }));
     } catch (e) {
-        (M.recordEarnedRequestApiResponse(t, { wasSuccessful: !1, fetchedAt: a }),
+        (P.recordEarnedRequestApiResponse(t, { wasSuccessful: !1, fetchedAt: a }),
             o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: new d.A(e), content: t }));
     }
 }
@@ -826,9 +826,9 @@ function ev(e) {
 function eb(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_SEEN", adCreativeType: e, contentIds: t });
 }
-function eP(e, t) {
+function eM(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: e, contentIds: t });
 }
-function eM(e) {
+function eP(e) {
     o.h.dispatch({ type: "QUESTS_MARK_DISCOVERED", questId: e });
 }

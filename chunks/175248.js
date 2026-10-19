@@ -1,4 +1,4 @@
-n.d(e, { E: () => g, QuestRewardModalUnverified: () => T });
+n.d(e, { E: () => g, QuestRewardModalUnverified: () => _ });
 var r = n(477900),
     i = n(582128),
     s = n(17928),
@@ -12,11 +12,11 @@ var r = n(477900),
     f = n(710969),
     A = n(105292),
     E = n(674456),
-    _ = n(661965);
-function T(t) {
+    T = n(661965);
+function _(t) {
     let { transitionState: e, onClose: n } = t,
         c = (0, s.bG)([C.default], () => C.default.getCurrentUser()?.email),
-        [T, g] = i.useState({ status: "unknown" });
+        [_, g] = i.useState({ status: "unknown" });
     i.useEffect(() => {
         (g({ status: "loading" }),
             d.A.verifyResend().then(
@@ -27,22 +27,22 @@ function T(t) {
             ));
     }, []);
     let p =
-        "error" === T.status
+        "error" === _.status
             ? A.intl.string(A.t.vjying)
-            : "success" === T.status
+            : "success" === _.status
               ? A.intl.format(A.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
     return (0, r.jsxs)(l.k, {
         transitionState: e,
         onClose: n,
-        graphic: "loading" === T.status ? void 0 : { type: "image", src: _ },
-        title: "loading" === T.status ? void 0 : A.intl.string(A.t.c8eASM),
+        graphic: "loading" === _.status ? void 0 : { type: "image", src: T },
+        title: "loading" === _.status ? void 0 : A.intl.string(A.t.c8eASM),
         subtitle: p,
         actions:
-            "loading" === T.status ? void 0 : [{ variant: "secondary", text: A.intl.string(A.t.cpT0Cq), onClick: n }],
+            "loading" === _.status ? void 0 : [{ variant: "secondary", text: A.intl.string(A.t.cpT0Cq), onClick: n }],
         children: [
-            "loading" === T.status && (0, r.jsx)(u.y, {}),
-            "success" === T.status &&
+            "loading" === _.status && (0, r.jsx)(u.y, {}),
+            "success" === _.status &&
                 (0, r.jsxs)("div", {
                     className: E.d,
                     children: [

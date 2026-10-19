@@ -1,11 +1,11 @@
 n.d(t, {
     $v: () => p.$v,
     Bc: () => O,
-    F2: () => P,
+    F2: () => M,
     Gc: () => p.Gc,
     Gn: () => D,
     Jm: () => w,
-    Tv: () => M,
+    Tv: () => P,
     UK: () => b,
     k$: () => y,
     kK: () => U,
@@ -150,11 +150,11 @@ function v() {
 function b(e) {
     return !!v() && null != e && G(u.A.getChannel(e));
 }
-function P(e) {
+function M(e) {
     return (0, T.r)() && b(e);
 }
-function M(e) {
-    return !!P(e) && ((0, I.yO)(m.w_.NSFW_VOICE_CHANNEL, e), !0);
+function P(e) {
+    return !!M(e) && ((0, I.yO)(m.w_.NSFW_VOICE_CHANNEL, e), !0);
 }
 function U(e, t, n) {
     let i;

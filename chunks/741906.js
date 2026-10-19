@@ -76,8 +76,8 @@ var y = n(750506),
     D = n(869146),
     v = n(773669),
     b = n(363195),
-    P = n(531685),
-    M = n(19575),
+    M = n(531685),
+    P = n(19575),
     U = n(418842),
     w = n(607399),
     G = n(112834),
@@ -115,12 +115,12 @@ function j(e) {
         D = O ? "" : `--custom-zoom: ${y};`,
         v = (0, B.A)("highlight_mana_buttons"),
         b = (0, B.A)("highlight_mana_components"),
-        P = (0, B.A)("highlight_mana_text"),
+        M = (0, B.A)("highlight_mana_text"),
         U = (0, B.A)("highlight_void_toggleables"),
         j = (0, B.A)("highlight_void_buttons"),
         W = (0, B.A)("highlight_mana_text_overrides");
     (a.useEffect(() => {
-        if (!P) return;
+        if (!M) return;
         let e = () => {},
             t = !1;
         return (
@@ -134,7 +134,7 @@ function j(e) {
                 ((t = !0), e());
             }
         );
-    }, [P]),
+    }, [M]),
         a.useEffect(() => {
             if (!W) return;
             let e = () => {},
@@ -186,7 +186,7 @@ function j(e) {
                 "visual-refresh-chat-input": !1,
                 "highlight-mana-buttons": v,
                 "highlight-mana-components": b,
-                "highlight-mana-text": P,
+                "highlight-mana-text": M,
                 "highlight-mana-text-overrides": W,
                 "highlight-void-toggleables": U,
                 "highlight-void-buttons": j,
@@ -198,7 +198,7 @@ function j(e) {
         X = a.useMemo(() => ({ lang: s, style: $, className: z, focused: u }), [s, $, z, u]);
     return (
         (0, x.Ay)(() => {
-            M.Ay.setTrafficLightPosition({ x: 9, y: 9 });
+            P.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
         (0, r.jsx)(H.q.Provider, { value: X, children: R })
     );
@@ -209,7 +209,7 @@ let K = { Modal: d.ImpressionTypes.MODAL };
 function $(e) {
     let { windowKey: t, themeOverride: n, children: i } = e,
         l = null != t,
-        [d] = a.useState(() => M.Ay.getEnableHardwareAcceleration()),
+        [d] = a.useState(() => P.Ay.getEnableHardwareAcceleration()),
         {
             locale: A,
             theme: h,
@@ -226,11 +226,11 @@ function $(e) {
             useReducedMotion: z,
             alwaysShowLinkDecorations: X,
             highContrastMode: q,
-        } = (0, c.cf)([v.default, I.Ay, b.A, D.A, P.A], () => ({
+        } = (0, c.cf)([v.default, I.Ay, b.A, D.A, M.A], () => ({
             locale: v.default.locale,
             theme: n ?? b.A.theme,
-            focused: l ? D.A.getWindowFocused(t) : P.A.isFocused(),
-            mainWindowVisible: P.A.isVisible(),
+            focused: l ? D.A.getWindowFocused(t) : M.A.isFocused(),
+            mainWindowVisible: M.A.isVisible(),
             currentWindow: l ? (D.A.getWindow(t) ?? window) : window,
             fontScale: I.Ay.fontScale,
             fontScaleClass: I.Ay.fontScaleClass,

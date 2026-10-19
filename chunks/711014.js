@@ -163,13 +163,13 @@ function b(e) {
     if (null == n || n.type !== d.PJ.FOLDER || n.expanded === i) return !1;
     U(n, i);
 }
-function P(e) {
+function M(e) {
     let { folderId: t, expanded: n } = e,
         i = g.getNode(t);
     if (null == i || i.type !== d.PJ.FOLDER || i.expanded === n) return !1;
     U(i, n);
 }
-function M() {
+function P() {
     for (let e of g.allNodes()) e.type === d.PJ.FOLDER && e.expanded && U(e, !1);
 }
 function U(e, t) {
@@ -212,8 +212,8 @@ class F extends p.A {
             GUILD_FOLDER_EDIT_LOCAL: y,
             GUILD_FOLDER_DELETE_LOCAL: D,
             TOGGLE_GUILD_FOLDER_EXPAND: b,
-            SET_GUILD_FOLDER_EXPANDED: P,
-            GUILD_FOLDER_COLLAPSE: M,
+            SET_GUILD_FOLDER_EXPANDED: M,
+            GUILD_FOLDER_COLLAPSE: P,
         });
     }
     initialize() {

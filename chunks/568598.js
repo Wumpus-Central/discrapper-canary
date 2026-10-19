@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => w, Gg: () => P, KU: () => M, Qt: () => b, r4: () => U }), n(321073));
+(n.d(t, { Ay: () => w, Gg: () => M, KU: () => P, Qt: () => b, r4: () => U }), n(321073));
 var i,
     r = n(435558),
     a = n(713402),
@@ -31,10 +31,10 @@ function b(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? `activity-${t}-${n}` : `activity-${t}`;
 }
-function P(e) {
+function M(e) {
     return b({ applicationId: e.applicationId, instanceId: e.id });
 }
-function M(e) {
+function P(e) {
     switch (e.type) {
         case R.lp.ACTIVITY:
             return `\x01${e.sortKey}`;
@@ -80,7 +80,7 @@ class w {
             !n && e.type !== R.lp.ACTIVITY && this.stageSpeakerIds.has(e.user.id) && t.push("STAGE_SPEAKER"),
             t
         );
-    }, M);
+    }, P);
     constructor(e) {
         this.channelId = e;
     }
@@ -210,7 +210,7 @@ class w {
                 !e.some((e) => e.applicationId === n.applicationId) &&
                 t.push({
                     type: R.lp.ACTIVITY,
-                    id: P(n),
+                    id: M(n),
                     applicationId: n.applicationId,
                     activityType: L.$pd.PLAYING,
                     activityUrl: n.data.url,

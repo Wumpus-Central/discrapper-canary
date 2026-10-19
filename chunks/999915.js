@@ -28,11 +28,11 @@ var i = n(435558),
     D = n(704726),
     v = n(652215),
     b = n(105292);
-function P(e) {
+function M(e) {
     let t = u.A.getChannel(e);
     return t?.getGuildId();
 }
-function M(e) {
+function P(e) {
     return {
         type: "guild",
         guildId: e.id,
@@ -104,7 +104,7 @@ function F(e, t, n, i, r) {
         channelId: t,
         messageId: n,
         originalLink: r,
-        inContent: null == a || s ? null : [M(a)],
+        inContent: null == a || s ? null : [P(a)],
         content: [
             U({ name: b.intl.string(b.t.zLZPmk).toLowerCase(), type: v.rbe.UNKNOWN, iconType: "text" }, "italics"),
         ],
@@ -133,7 +133,7 @@ function B(e, t, n, i) {
     return {
         ...r,
         ...(function (e, t, n, i) {
-            let r = M(e),
+            let r = P(e),
                 a = U(t),
                 s = w(t.isForumPost);
             if (n && i) {
@@ -171,7 +171,7 @@ let V = {
             let i = e[1];
             if (n.returnMentionIds) return { type: "channelMention", id: i };
             let r = G(i, n.mentionChannels);
-            return null == r ? F(null, i, null, P(n.channelId)) : B(r, null, P(n.channelId));
+            return null == r ? F(null, i, null, M(n.channelId)) : B(r, null, M(n.channelId));
         },
     },
     H = {
@@ -190,7 +190,7 @@ let V = {
                 o = (0, S.te)(l);
             if (null == a) return x(i);
             let d = G(a, null),
-                c = null == d ? F(r, a, s, P(n.channelId), i) : B(d, s, P(n.channelId), i);
+                c = null == d ? F(r, a, s, M(n.channelId), i) : B(d, s, M(n.channelId), i);
             return "channelMention" === c.type ? { ...c, conversationId: o } : c;
         },
     },
@@ -206,9 +206,9 @@ let V = {
                 l = e[4];
             if (null == a || null == s) return x(i);
             let o = G(s, null);
-            if (null != o) return B(o, l, P(n.channelId), i);
+            if (null != o) return B(o, l, M(n.channelId), i);
             let d = G(a, null);
-            return null != d ? B(d, l, P(n.channelId), i) : F(r, a, l, P(n.channelId), i);
+            return null != d ? B(d, l, M(n.channelId), i) : F(r, a, l, M(n.channelId), i);
         },
     };
 var W = n(223637),

@@ -1,8 +1,8 @@
-n.d(t, { $: () => a });
+n.d(t, { $: () => o });
 var i = n(477900);
 n(582128);
 var l = n(192308);
-function a(e, t) {
+function o(e, t) {
     (0, l.openModalLazy)(async () => {
         let { default: l } = await Promise.all([
             n.e("126301"),

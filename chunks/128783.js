@@ -21,8 +21,8 @@ function p(e) {
 }
 var A = n(832712),
     f = n(543465),
-    x = n(477427),
-    C = n(393432),
+    C = n(477427),
+    x = n(393432),
     E = n(652215),
     S = n(790782),
     I = n(355097),
@@ -51,8 +51,8 @@ function v(e) {
                         A.A.updateChannelOverrideSettings({
                             guildId: e,
                             channelId: l,
-                            settings: { flags: (0, C.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            label: x.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            settings: { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
                             location: { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         }),
                         n());
@@ -61,10 +61,10 @@ function v(e) {
         ],
     });
 }
-var b = n(228098),
-    _ = n(157259),
-    T = n(503698),
-    N = n.n(T),
+var _ = n(228098),
+    b = n(157259),
+    N = n(503698),
+    T = n.n(N),
     M = n(666860),
     R = n(174459),
     D = n(867455),
@@ -82,7 +82,7 @@ function P(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: N()(L.JD, { [L.sc]: n }),
+            className: T()(L.JD, { [L.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: L.E5,
@@ -122,7 +122,7 @@ function O(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: N()(L.JD, { [L.sc]: n }),
+            className: T()(L.JD, { [L.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: L.E5,
@@ -153,7 +153,7 @@ function O(e) {
 var G = n(626360);
 let U = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
-        d = (0, b.A)(t),
+        d = (0, _.A)(t),
         u = (0, s.A)(),
         { showUnreadsNotice: h, clearUnreadsNotice: m } = (function (e) {
             let t = (0, o.os)("useShouldRenderBanner"),
@@ -177,6 +177,6 @@ let U = i.memo(function (e) {
             : h
               ? (0, l.jsx)(v, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
-                ? (0, l.jsx)(_.A, { channel: t, narrow: n })
+                ? (0, l.jsx)(b.A, { channel: t, narrow: n })
                 : null;
 });

@@ -39,8 +39,8 @@ var m = n(612200),
     D = n(707592),
     v = n(698441),
     b = n(610101),
-    P = n(224536),
-    M = n(21599),
+    M = n(224536),
+    P = n(21599),
     U = n(970163),
     w = n(700241),
     G = n(824865),
@@ -383,7 +383,7 @@ let ef = {
             a,
             s,
             { inviteKey: d, context: c, callback: u, skipOnboarding: E } = e,
-            A = (0, M.m0)(d),
+            A = (0, P.m0)(d),
             f = B.default.getSessionId(),
             p = Y.A.getReceivedInstallationIdForInviteCode(A),
             T = K.A.getInvite(d);
@@ -393,7 +393,7 @@ let ef = {
                 (r = T.target_channel_id ?? void 0),
                 (a = T.target_message_id ?? void 0));
         else {
-            let e = (0, M.y$)(d);
+            let e = (0, P.y$)(d);
             ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
         let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
@@ -466,7 +466,7 @@ let ef = {
             null != e && e_(e, t);
             return;
         }
-        if (null != d && d.features?.includes(ei.GuildFeatures.HUB)) return void P.A.onOpenHubInvite(e);
+        if (null != d && d.features?.includes(ei.GuildFeatures.HUB)) return void M.A.onOpenHubInvite(e);
         let u = e.flags ?? 0,
             _ = (0, o.Lt)(u, l.Q.IS_GUEST_INVITE) || (0, o.Lt)(u, l.Q.IS_APPLICATION_BYPASS);
         if (null != d && !_ && e.new_member && (0, b.h)(d)) return void (0, b.W)(d.id);
@@ -479,7 +479,7 @@ let ef = {
             e_(s.id, E));
     },
     openNativeAppModal(e) {
-        let t = (0, M.y$)(e),
+        let t = (0, P.y$)(e),
             n = {
                 installationId: B.default.getInstallationForTracking(),
                 targetChannelId: t.targetChannelId,
@@ -491,17 +491,17 @@ let ef = {
     transitionToInviteOnboarding(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             { transitionTo: n = x.pX } = t,
-            i = (0, M.WU)({
+            i = (0, P.WU)({
                 baseCode: e.code,
                 targetChannelId: e.target_channel_id ?? void 0,
                 targetMessageId: e.target_message_id ?? void 0,
                 guildScheduledEventId: e.guild_scheduled_event?.id,
             });
-        n(ei.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(e.code), { search: (0, M.ys)(i) });
+        n(ei.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(e.code), { search: (0, P.ys)(i) });
     },
     openApp(e, t, n, i, a) {
         let l,
-            o = null != e ? (0, M.y$)(e) : null,
+            o = null != e ? (0, P.y$)(e) : null,
             _ = o?.baseCode,
             E = o?.targetMessageId,
             A = o?.targetChannelId;

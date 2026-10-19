@@ -18,31 +18,31 @@ let p = function (e) {
             countdown: p,
             buttonText: A,
             buttonIcon: f,
-            buttonSubmitting: x,
-            onButtonClick: C,
+            buttonSubmitting: C,
+            onButtonClick: x,
             imageSrc: E,
             animationSrc: S,
             secondaryButtonText: I,
             onSecondaryButtonClick: y,
             children: j,
             useReducedMotion: v = !1,
-            buttonVariant: b,
+            buttonVariant: _,
         } = e,
-        _ = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
-    if (s.Fr && _) return null;
+        b = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
+    if (s.Fr && b) return null;
     if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(j) });
-    let T = null;
+    let N = null;
     return (
         null != E
-            ? (T = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !v, className: g.lY })),
+            ? (N = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
+            : null != S && (N = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !v, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [
                 (0, l.jsxs)("div", {
                     className: g.Qs,
                     children: [
-                        T,
+                        N,
                         (0, l.jsxs)("div", {
                             className: g.Qq,
                             children: [
@@ -67,9 +67,9 @@ let p = function (e) {
                                 children: (0, l.jsx)(u.$, {
                                     text: A,
                                     size: "sm",
-                                    variant: b ?? "secondary",
-                                    onClick: C,
-                                    loading: x,
+                                    variant: _ ?? "secondary",
+                                    onClick: x,
+                                    loading: C,
                                     icon: f,
                                 }),
                             }),

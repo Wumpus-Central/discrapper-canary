@@ -1,4 +1,4 @@
-b.exports = {
+e.exports = {
     GU: "mediaBarInteraction_b26b79",
     h4: "mediaBarInteractionDragging_b26b79",
     HY: "mediaBarWrapper_b26b79 fakeEdges_b26b79",

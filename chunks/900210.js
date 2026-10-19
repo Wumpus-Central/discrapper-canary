@@ -1,8 +1,8 @@
-n.d(t, { A: () => m, W: () => o });
+n.d(t, { A: () => m, W: () => a });
 var i,
     l = n(17928),
-    a = n(73153),
-    o = (((i = {}).HOVER = "HOVER"), (i.EXTERNAL = "EXTERNAL"), (i.RANDOM = "RANDOM"), i);
+    o = n(73153),
+    a = (((i = {}).HOVER = "HOVER"), (i.EXTERNAL = "EXTERNAL"), (i.RANDOM = "RANDOM"), i);
 let r = {},
     s = {},
     c = {};
@@ -20,7 +20,7 @@ class d extends l.Ay.Store {
         return s[e]?.[i];
     }
 }
-let m = new d(a.h, {
+let m = new d(o.h, {
     BURST_REACTION_EFFECT_CLEAR: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e,
             l = u(n, i);
@@ -28,7 +28,7 @@ let m = new d(a.h, {
     },
     BURST_REACTION_EFFECT_PLAY: function (e) {
         let { channelId: t, messageId: n, emoji: i, key: l } = e,
-            a = u(n, i);
+            o = u(n, i);
         if (
             (function (e, t) {
                 let n;
@@ -59,20 +59,20 @@ let m = new d(a.h, {
             })(l, t) >= 5
         )
             return;
-        let o = s[t] ?? {},
-            r = (c[t] ?? {})[a],
-            d = o[a];
+        let a = s[t] ?? {},
+            r = (c[t] ?? {})[o],
+            d = a[o];
         ("HOVER" !== l || null == d) &&
             ("HOVER" === d &&
                 "EXTERNAL" === l &&
                 null != r &&
-                ("function" == typeof r.destroy && r.destroy(), delete c[t]?.[a], (d = void 0)),
-            null == d && (null != s[t] ? (s[t][a] = l) : (s[t] = { [a]: l })));
+                ("function" == typeof r.destroy && r.destroy(), delete c[t]?.[o], (d = void 0)),
+            null == d && (null != s[t] ? (s[t][o] = l) : (s[t] = { [o]: l })));
     },
     BURST_REACTION_ANIMATION_ADD: function (e) {
         let { channelId: t, messageId: n, emoji: i, animation: l } = e,
-            a = u(n, i);
-        (null == c[t] && (c[t] = {}), (c[t][a] = l));
+            o = u(n, i);
+        (null == c[t] && (c[t] = {}), (c[t][o] = l));
     },
     BURST_REACTION_PICKER_ANIMATION_ADD: function (e) {
         let { messageId: t, emojiName: n, emojiId: i, startPosition: l } = e;

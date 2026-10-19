@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => L });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -17,18 +17,18 @@ var l = n(477900),
     E = n(713654),
     S = n(418842),
     y = n(734057),
-    C = n(696451),
-    A = n(71393),
-    I = n(225142),
-    b = n(374084),
-    N = n(101611),
-    v = n(473529),
+    A = n(696451),
+    C = n(71393),
+    b = n(225142),
+    I = n(374084),
+    v = n(101611),
+    N = n(473529),
     T = n(111487),
     j = n(652215),
     _ = n(105292),
     k = n(160639);
 let R = { compact: 58, cozy: 74, default: 64 };
-function O(e) {
+function w(e) {
     let { action: t } = e,
         n = (0, o.bG)([y.A], () => y.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
@@ -44,7 +44,7 @@ function O(e) {
               children: _.intl.format(_.t.MkzlDL, { channelName: i }),
           });
 }
-function L(e) {
+function O(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
         r = (0, o.bG)([y.A], () => y.A.getChannel(t));
     if (null == r) return null;
@@ -56,43 +56,43 @@ function L(e) {
         defaultComponent: (0, l.jsx)(s, { className: k.p }),
     });
 }
-function w(e) {
+function M(e) {
     let { guildId: t, channel: n, className: r } = e,
-        { channelAction: c, completed: x } = (0, N.j4)(t, n),
-        E = (0, N.Lr)(t, c?.channelId),
+        { channelAction: c, completed: x } = (0, v.j4)(t, n),
+        E = (0, v.Lr)(t, c?.channelId),
         y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        C = c?.actionType === b.NewMemberActionTypes.VIEW,
-        A = (0, d.r)(h.A.colors.WHITE),
-        v = R[(0, S.C)()],
+        A = c?.actionType === I.NewMemberActionTypes.VIEW,
+        C = (0, d.r)(h.A.colors.WHITE),
+        N = R[(0, S.C)()],
         [T, j] = i.useState(!1),
-        [w] = i.useState(new a.A.Value(0)),
-        [M] = i.useState(new a.A.Value(0));
+        [M] = i.useState(new a.A.Value(0)),
+        [L] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
-            ? a.A.timing(w, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
+            ? a.A.timing(M, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !A }).start(() =>
                   j(!0),
               )
-            : a.A.timing(w, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, w, C, y]),
+            : a.A.timing(M, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, M, A, y]),
         i.useEffect(() => {
-            x && T && a.A.timing(M, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, M, T, y]));
+            x && T && a.A.timing(L, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, L, T, y]));
     let P = i.useCallback(() => {
-        null != E && (0, I.qo)(t, E.channelId);
+        null != E && (0, b.qo)(t, E.channelId);
     }, [t, E]);
-    return null == c || (C && !T)
+    return null == c || (A && !T)
         ? null
         : (0, l.jsx)("div", {
               className: s()(k.kL, r),
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
+                            style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: s()(k.vK, k.vk, { [k.pJ]: n.isForumChannel() }),
                                 onClick: P,
                                 children: [
-                                    (0, l.jsx)(L, {
+                                    (0, l.jsx)(O, {
                                         channelId: E.channelId,
                                         emojiId: E.emoji?.id,
                                         emojiName: E?.emoji?.name,
@@ -105,21 +105,21 @@ function w(e) {
                                                 color: "text-strong",
                                                 children: _.intl.format(_.t["/beONw"], { step: E.title }),
                                             }),
-                                            (0, l.jsx)(O, { action: E }),
+                                            (0, l.jsx)(w, { action: E }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
                                         className: k.kJ,
-                                        children: (0, l.jsx)(f.E, { size: "xs", color: A.hex(), className: k.fz }),
+                                        children: (0, l.jsx)(f.E, { size: "xs", color: C.hex(), className: k.fz }),
                                     }),
                                 ],
                             }),
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: s()(k.vK, { [k.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
+                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: [
-                                (0, l.jsx)(L, {
+                                (0, l.jsx)(O, {
                                     channelId: c.channelId,
                                     emojiId: c.emoji?.id,
                                     emojiName: c?.emoji?.name,
@@ -144,7 +144,7 @@ function w(e) {
                                           size: "custom",
                                           color: "currentColor",
                                           className: k.so,
-                                          secondaryColor: A.hex(),
+                                          secondaryColor: C.hex(),
                                           width: 20,
                                           height: 20,
                                       })
@@ -153,11 +153,11 @@ function w(e) {
                         }),
           });
 }
-function M(e) {
+function L(e) {
     let { guildId: t, channel: n, className: i } = e,
-        r = (0, v.d)(t),
-        s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, N.jY)(t),
-        u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
-    return a || s || !r || !u ? null : (0, l.jsx)(w, { guildId: t, channel: n, className: i });
+        r = (0, N.d)(t),
+        s = (0, o.bG)([A.Ay], () => A.Ay.getSelfMember(t)?.isPending === !0),
+        a = (0, v.jY)(t),
+        u = (0, o.bG)([C.A], () => C.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
+    return a || s || !r || !u ? null : (0, l.jsx)(M, { guildId: t, channel: n, className: i });
 }

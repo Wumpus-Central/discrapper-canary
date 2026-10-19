@@ -28,8 +28,8 @@ var i = n(477900),
     D = n(796774),
     v = n(209932),
     b = n(453997),
-    P = n(368309),
-    M = n(782618),
+    M = n(368309),
+    P = n(782618),
     U = n(980504),
     w = n(652215),
     G = n(202541),
@@ -39,7 +39,7 @@ function F(e) {
     let { analyticsLocations: t, voiceGuildId: n } = e,
         { analyticsLocations: a } = (0, p.Ay)(I.A.PREMIUM_UPSELL),
         s = r.useCallback(() => {
-            (0, P.p)(t);
+            (0, M.p)(t);
         }, [t]),
         l = r.useMemo(() => {
             let e = (0, y.Dd)(G.PremiumTypes.TIER_2);
@@ -95,13 +95,13 @@ function V(e) {
                     className: k.G2,
                     children: a.map((e) =>
                         (0, i.jsx)(
-                            M.A,
+                            P.A,
                             {
                                 channel: t,
                                 interactive: !_,
                                 analyticsLocations: [...r, e.analyticsLocationSection],
                                 sound: e,
-                                openUpsellForSound: () => (0, P.p)(r),
+                                openUpsellForSound: () => (0, M.p)(r),
                             },
                             e.soundId,
                         ),

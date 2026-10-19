@@ -262,13 +262,13 @@ function v(e) {
 function b(e) {
     return e.type !== L.hes.TDS_WALLET;
 }
-function P(e, t) {
+function M(e, t) {
     if (null == e) return null;
     if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-var M = n(26279),
+var P = n(26279),
     U = n(504275),
     w = n(219538);
 let G = { lastOrderUpdateRevision: 0 };
@@ -388,7 +388,7 @@ function es(e) {
                     },
                     isOrderSigningInProgress: () => {
                         let { order: e } = i();
-                        return null != e && e.status === M.Re.SIGNING_IN_PROGRESS;
+                        return null != e && e.status === P.Re.SIGNING_IN_PROGRESS;
                     },
                     isOrderAwaitingSettlement: () => i().isOrderSigning && i().get("isOrderSigningInProgress"),
                 });
@@ -707,7 +707,7 @@ function es(e) {
             quantity: en,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: P(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: M(t, i) }),
             checkoutInvoicePreview: null == l || (0, r.L)(l) ? null : s.A.createFromOrder(l),
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -719,7 +719,7 @@ function es(e) {
             invoicePreviewRefetchKey: 0,
             refetchInvoicePreviews: () => e((e) => ({ invoicePreviewRefetchKey: e.invoicePreviewRefetchKey + 1 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: P(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: M(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

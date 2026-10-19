@@ -47,7 +47,7 @@ var G = n(665260),
     W = n(702631),
     J = n(105292),
     X = n(946255),
-    Z =
+    q =
         (((i = {}).DESKTOP = "desktop"),
         (i.MOBILE = "mobile"),
         (i.ANDROID = "android"),
@@ -65,7 +65,7 @@ var G = n(665260),
     F.yTV.SAMSUNG,
     F.yTV.EMBEDDED,
     F.yTV.META_QUEST);
-let q = [];
+let Z = [];
 function $(e) {
     let { width: t, height: n, color: i } = e;
     return (0, l.jsxs)("svg", {
@@ -100,7 +100,7 @@ function en(e) {
                             l = new Set(t),
                             s = [];
                         return null == t || 0 === t.length || (null != n && l.has(n) && i)
-                            ? q
+                            ? Z
                             : (l.has(F.yTV.ANDROID) && l.has(F.yTV.IOS)
                                   ? s.push("mobile")
                                   : l.has(F.yTV.ANDROID)
@@ -120,19 +120,19 @@ function en(e) {
                 r
                     .map((e) => {
                         switch (e) {
-                            case Z.MOBILE:
+                            case q.MOBILE:
                                 return (0, l.jsx)(u.u, { size: "xxs", color: "currentColor" }, e);
-                            case Z.ANDROID:
+                            case q.ANDROID:
                                 return (0, l.jsx)($, { width: m.E.xxs, height: m.E.xxs, color: "currentColor" }, e);
-                            case Z.IOS:
+                            case q.IOS:
                                 return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" }, e);
-                            case Z.PLAYSTATION:
+                            case q.PLAYSTATION:
                                 return (0, l.jsx)(g.X, { size: "xxs", color: "currentColor" }, e);
-                            case Z.XBOX:
+                            case q.XBOX:
                                 return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" }, e);
-                            case Z.VR:
+                            case q.VR:
                                 return (0, l.jsx)(d.G, { size: "xxs", color: "currentColor" }, e);
-                            case Z.DESKTOP:
+                            case q.DESKTOP:
                                 return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" }, e);
                             default:
                                 return null;
@@ -207,8 +207,8 @@ function el(e) {
             presenceActivity: f,
             currentUserPresenceActivity: y,
             hideParty: L,
-            hideBanner: Z = !1,
-            partyStatusElement: q,
+            hideBanner: q = !1,
+            partyStatusElement: Z,
             analyticsLocations: $,
             showAuthButton: el,
             canPromptAuth: es,
@@ -248,8 +248,8 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, L || ed ? null : q] }),
-            [em, L, ed, q, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, L || ed ? null : Z] }),
+            [em, L, ed, Z, eh],
         ),
         ep = !!(0, k.au)(n.id),
         eA = (0, S.X)(n),
@@ -437,7 +437,7 @@ function el(e) {
                 header: a,
                 title: i,
                 staticBannerSrc: h,
-                hideBanner: Z,
+                hideBanner: q,
                 onClickBanner: g,
                 bannerAspectRatio: j.u.ACTIVITY,
                 iconSrc: p ?? void 0,

@@ -28,8 +28,8 @@ let R = new _.A("GuildMemberStore"),
     D = {},
     v = {},
     b = {},
-    P = !1,
-    M = 0,
+    M = !1,
+    P = 0,
     U = 0,
     w = {},
     G = {},
@@ -46,7 +46,7 @@ function F(e, t) {
     } else for (let t in b) W(t) === e && (B(t), V(t));
 }
 function B(e) {
-    ((M += 1), (w[e] = M));
+    ((P += 1), (w[e] = P));
 }
 function V(e) {
     (j(e) === g.default.getId() && (0, h.G)(W(e)), delete b[e]);
@@ -111,7 +111,7 @@ function K(e) {
             vadColors: S,
         } = e,
         { colorString: N, colorStrings: C, colorRoleId: R, iconRoleId: y, hoistRoleId: v, highestRoleId: b } = Y(l, o),
-        P = {
+        M = {
             userId: t,
             nick: n,
             guildId: i,
@@ -137,16 +137,16 @@ function K(e) {
             vadColors: S,
         };
     if (
-        ((0, a.Lt)(P.flags ?? 0, O.D.IS_GUEST) && (P.flags = (0, a.UI)(P.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
+        ((0, a.Lt)(M.flags ?? 0, O.D.IS_GUEST) && (M.flags = (0, a.UI)(M.flags ?? 0, O.D.BYPASSES_VERIFICATION)),
         null == L[i])
     )
-        return P;
+        return M;
     if (t === g.default.getId())
         if (I.A.isViewingRoles(i) || I.A.isFullServerPreview(i)) {
             let e = I.A.getViewingRoles(i);
-            D[i] = { ...P, ...I.A.getMemberOptions(i), roles: null != e ? m.default.keys(e) : [] };
+            D[i] = { ...M, ...I.A.getMemberOptions(i), roles: null != e ? m.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
-    return P;
+    return M;
 }
 function $(e) {
     for (let t of e)
@@ -485,7 +485,7 @@ class eo extends s.Ay.Store {
         return b;
     }
     getCommunicationDisabledVersion() {
-        return M;
+        return P;
     }
     getPendingRoleUpdates(e) {
         return G[e] ?? x;
@@ -501,7 +501,7 @@ class eo extends s.Ay.Store {
 }
 let ed = new eo(l.h, {
     CONNECTION_OPEN: function (e) {
-        (P ? (P = !1) : ((L = {}), (y = {})),
+        (M ? (M = !1) : ((L = {}), (y = {})),
             (b = {}),
             e.guilds.forEach((e) => {
                 J(e);
@@ -522,7 +522,7 @@ let ed = new eo(l.h, {
     },
     CACHE_LOADED: function (e) {
         let { guildMembers: t, guilds: n } = e;
-        ((P = !0), (L = { ...t }), (y = {}), (v = {}), $(n));
+        ((M = !0), (L = { ...t }), (y = {}), (v = {}), $(n));
     },
     CACHE_LOADED_LAZY: function (e) {
         let { guilds: t } = e;
@@ -675,9 +675,9 @@ let ed = new eo(l.h, {
     },
     LOCAL_MESSAGES_LOADED: function (e) {
         if (null == e.guildId || null == C.A.getGuild(e.guildId)) return !1;
-        ((P = !0), (L[e.guildId] = L[e.guildId] ?? {}));
+        ((M = !0), (L[e.guildId] = L[e.guildId] ?? {}));
         let t = !1;
-        for (let n of ((P = !0), (L[e.guildId] = L[e.guildId] ?? {}), e.members))
+        for (let n of ((M = !0), (L[e.guildId] = L[e.guildId] ?? {}), e.members))
             null == L[e.guildId][n.userId] && ((t = !0), (L[e.guildId][n.userId] = n));
         return t;
     },

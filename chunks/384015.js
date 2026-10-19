@@ -1,57 +1,57 @@
-s.d(t, { A: () => c });
-var n = s(477900),
-    a = s(582128),
-    l = s(59652),
-    i = s(28863),
+s.d(t, { A: () => d });
+var a = s(477900),
+    i = s(582128),
+    n = s(59652),
+    l = s(28863),
     r = s(32880),
     o = s(174459),
     u = s(652215),
-    d = s(105292);
-let c = function (e) {
+    h = s(105292);
+let d = function (e) {
     let {
             href: t,
             className: s,
-            iconClassName: c,
-            rel: h,
-            target: m,
-            mimeType: p,
+            iconClassName: d,
+            rel: c,
+            target: p,
+            mimeType: m,
             fileName: g,
             focusProps: f,
             onClick: v,
-            ...C
+            ...y
         } = e,
-        x = a.useMemo(() => l.V.getDefaultLinkInterceptor(t), [t]),
-        A = a.useCallback(
+        S = i.useMemo(() => n.V.getDefaultLinkInterceptor(t), [t]),
+        C = i.useCallback(
             (e) => {
                 (o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: p?.[0],
-                    attachment_subtype: p?.[1],
+                    attachment_type: m?.[0],
+                    attachment_subtype: m?.[1],
                 }),
                     v?.(),
-                    x?.(e));
+                    S?.(e));
             },
-            [x, p, v],
+            [S, m, v],
         );
     return null != g
-        ? (0, n.jsx)(i.Anchor, {
+        ? (0, a.jsx)(l.Anchor, {
               href: t,
-              onClick: A,
-              target: m,
-              rel: h,
+              onClick: C,
+              target: p,
+              rel: c,
               className: s,
               focusProps: f,
-              ...C,
+              ...y,
               children: g,
           })
-        : (0, n.jsx)(i.Anchor, {
+        : (0, a.jsx)(l.Anchor, {
               href: t,
-              onClick: A,
-              target: m,
-              rel: h,
+              onClick: C,
+              target: p,
+              rel: c,
               className: s,
-              "aria-label": d.intl.string(d.t["1WjMbC"]),
+              "aria-label": h.intl.string(h.t["1WjMbC"]),
               focusProps: f,
-              ...C,
-              children: (0, n.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: c }),
+              ...y,
+              children: (0, a.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: d }),
           });
 };

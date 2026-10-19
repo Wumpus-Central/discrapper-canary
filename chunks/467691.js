@@ -1,4 +1,4 @@
-n.d(t, { US: () => R, BD: () => D, X8: () => y, mH: () => v });
+n.d(t, { US: () => v, BD: () => D, X8: () => y, mH: () => R });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -113,7 +113,7 @@ let L = (e, t) => {
             (S.Ay.getMentionCount(t) > 0 || (f.Ay.getVoiceChannelId() === t && S.Ay.getUnreadCount(t) > 0))
         );
     },
-    v = {
+    R = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
@@ -130,7 +130,7 @@ let L = (e, t) => {
             );
         },
     },
-    R = {
+    v = {
         binds: ["alt+shift+up"],
         comboKeysBindGlobal: !0,
         action() {

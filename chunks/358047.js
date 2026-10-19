@@ -28,8 +28,8 @@ let R = "message_requests",
     D = !1,
     v = !0,
     b = !0,
-    P = !1,
     M = !1,
+    P = !1,
     U = {},
     w = {},
     G = !1,
@@ -52,11 +52,11 @@ function V() {
     return E.A.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled;
 }
 function H() {
-    return V() ? P : b;
+    return V() ? M : b;
 }
 function j(e, t) {
     (t?.trackClose === !0 && H() && !e && B() && (0, A.RQ)({ open: !1, source: A.TY.EXTERNAL, analyticsLocations: [] }),
-        V() ? (P = e) : (b = e));
+        V() ? (M = e) : (b = e));
 }
 function W(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -102,7 +102,7 @@ class $ extends r.Ay.PersistedStore {
             (y = e.isSummariesOpen ?? !1),
             (v = e.isProfileOpen ?? !0),
             (b = e.isFriendsOpen ?? !0),
-            (P = e.isAppBarToggleOpen ?? !1),
+            (M = e.isAppBarToggleOpen ?? !1),
             (U = e.sidebars ?? {}),
             (w = e.guildSidebars ?? {})),
             this.syncWith([m.A], Y),
@@ -114,7 +114,7 @@ class $ extends r.Ay.PersistedStore {
             isSummariesOpen: y,
             isProfileOpen: v,
             isFriendsOpen: b,
-            isAppBarToggleOpen: P,
+            isAppBarToggleOpen: M,
             sidebars: U,
             guildSidebars: w,
         };
@@ -144,7 +144,7 @@ class $ extends r.Ay.PersistedStore {
         return null == e ? void 0 : w[e];
     }
     isFriendsSidebarAvailable() {
-        return M;
+        return P;
     }
     getCurrentSidebarChannelId(e) {
         let t = k(e);
@@ -234,7 +234,7 @@ let z = new $(a.h, {
     },
     FRIENDS_SIDEBAR_SET_AVAILABLE: function (e) {
         let { available: t } = e;
-        return M !== t && ((M = t), !0);
+        return P !== t && ((P = t), !0);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e,

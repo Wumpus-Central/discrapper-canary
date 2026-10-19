@@ -1,4 +1,4 @@
-function n(e, t) {
+function l(e, t) {
     return (e <= 6016 && t <= 3384) || (e <= 3384 && t <= 6016);
 }
-s.d(t, { T: () => n });
+n.d(t, { T: () => l });

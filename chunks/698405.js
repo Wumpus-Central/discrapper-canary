@@ -1,8 +1,8 @@
 n.d(t, { A: () => E, w: () => j });
 var i,
     l = n(477900),
-    a = n(582128),
-    o = n(17928),
+    o = n(582128),
+    a = n(17928),
     r = n(862482),
     s = n(305866),
     c = n(297264),
@@ -19,9 +19,9 @@ var i,
 let E = function (e) {
     let { type: t, guild: i, closePopout: j, ctaRef: E } = e,
         x = (0, f.GV)(),
-        [I, T] = a.useState(!1),
-        R = (0, o.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
-    a.useEffect(() => {
+        [I, T] = o.useState(!1),
+        R = (0, a.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
+    o.useEffect(() => {
         I && !R && j();
     }, [I, R, j]);
     let b = null,

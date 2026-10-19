@@ -29,9 +29,9 @@ n.d(t, {
     i$: () => v,
     WQ: () => J,
     aJ: () => F,
-    CI: () => M,
+    CI: () => P,
     pc: () => et,
-    GD: () => P,
+    GD: () => M,
     qh: () => D,
     kL: () => q,
     TY: () => m,
@@ -131,13 +131,13 @@ var y = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
     D = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
 let v = 454,
     b = 2640 / 740,
-    P = (function (e) {
+    M = (function (e) {
         let { apiBaseUrl: t, pageHost: n, isDevelopmentBuild: i } = e,
             r = -1 !== t.indexOf("localhost") || -1 !== t.indexOf("127.0.0.1"),
             a = i && n.endsWith(".devtun.to");
         return r || a ? `${t}/_cdn_storage/` : "https://cdn.discordapp.com/";
     })({ apiBaseUrl: (0, I.TP)(), pageHost: window.location.host, isDevelopmentBuild: !1 }),
-    M = P + "quests/";
+    P = M + "quests/";
 var U =
     (((l = {}).COLLAPSED = "collapsed"),
     (l.EXPANDED = "expanded"),

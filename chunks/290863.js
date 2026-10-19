@@ -143,14 +143,14 @@ function b(e) {
         d[t] = { status: i, clientStatus: r, activities: e, hiddenActivities: n, processedAtTimestamp: l };
     }
 }
-function P(e, t) {
+function M(e, t) {
     if (t === u.default.getId()) return !1;
     let n = h[t];
     if (null == n || null == n[e]) return !1;
     (delete n[e], 0 === Object.keys(n).length && delete h[t], L(t));
 }
-function M(e) {
-    for (let t of c.default.keys(h)) P(e, t);
+function P(e) {
+    for (let t of c.default.keys(h)) M(e, t);
 }
 class U extends l.Ay.Store {
     static displayName = "PresenceStore";
@@ -332,11 +332,11 @@ let w = new U(o.h, {
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        M(t.id);
+        P(t.id);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        return P(t, n.id);
+        return M(t, n.id);
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
@@ -365,7 +365,7 @@ let w = new U(o.h, {
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;
-        (M(E.ME),
+        (P(E.ME),
             t.forEach((e) => {
                 let {
                     user: t,

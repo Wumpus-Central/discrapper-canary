@@ -73,26 +73,26 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
     y = new Set(["start", "end"]),
-    C = new Map([
+    A = new Map([
         ["inlineCode", y],
         ["spoiler", y],
         ["s", y],
         ["subtext", new Set(["start"])],
         ["u", y],
     ]),
-    A = new Set(["*", "_", "~", "|", "\\"]),
-    I = {},
-    b = {};
+    C = new Set(["*", "_", "~", "|", "\\"]),
+    b = {},
+    I = {};
 for (let e in m.Ay.RULES) {
     if (!(e in S))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = S[e];
-    ("skip" !== t.type && (I[e] = N(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (b[e] = N("text" === e ? f.Ay : m.Ay.RULES[e])));
+    ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
-function N(e) {
+function v(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -103,7 +103,7 @@ function N(e) {
         },
     };
 }
-function v(e) {
+function N(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
 let T = {
@@ -114,10 +114,10 @@ let T = {
                     : { type: "link", content: e[1], originalMatch: e },
         },
         autolink: {
-            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : v(e)),
+            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : N(e)),
         },
-        mailto: { parse: v },
-        tel: { parse: v },
+        mailto: { parse: N },
+        tel: { parse: N },
         codeBlockSyntax: {
             order: u.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
@@ -131,13 +131,13 @@ let T = {
         },
     },
     j = /(-# +)/,
-    _ = (0, p.A)([I, T]),
-    k = (0, p.A)([b, T]),
+    _ = (0, p.A)([b, T]),
+    k = (0, p.A)([I, T]),
     R = c.X(_),
-    O = c.X(k),
-    L = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    w = new (o())(L),
-    M = new (o())(L);
+    w = c.X(k),
+    O = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    M = new (o())(O),
+    L = new (o())(O);
 function P(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
@@ -286,7 +286,7 @@ function D(e) {
         : [t, ...[...l, r].map((e) => `${s}_${e}`)];
 }
 function U(e, t) {
-    return C.get(e)?.has(t) ?? !1;
+    return A.get(e)?.has(t) ?? !1;
 }
 function V(e) {
     return "text" === e.type && "string" == typeof e.content && "" === e.content.trim();
@@ -328,12 +328,12 @@ function K(e, t) {
     return t;
 }
 function G(e, t, n) {
-    if (t.split("").some((e) => A.has(e))) return (E.error(e), n);
+    if (t.split("").some((e) => C.has(e))) return (E.error(e), n);
     throw Error(e);
 }
 function H(e, t, n, l) {
     for (; n < l;)
-        if (A.has(t[n]))
+        if (C.has(t[n]))
             ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
                 (n = K(t, n)));
         else break;
@@ -374,9 +374,9 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                     x = X.isAncestor(f, d.path),
                     S = g ? c.path[p] : 0,
                     y = x ? d.path[p] : h.children.length - 1,
-                    C = o ? y : S,
-                    A = o ? S : y;
-                for (let s = C; !E && (!o ? s <= A : s >= A); s += m) {
+                    A = o ? y : S,
+                    C = o ? S : y;
+                for (let s = A; !E && (!o ? s <= C : s >= C); s += m) {
                     let m = h.children[s],
                         p = X.child(f, s);
                     if (Q.isElement(m)) {
@@ -597,7 +597,7 @@ let q = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? M : w,
+                                        i = n ? L : M,
                                         r = i.get(e);
                                     if (null != r) return r;
                                     let s =
@@ -608,7 +608,7 @@ let q = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? O : R)(s, !0, {
+                                            content: (n ? w : R)(s, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

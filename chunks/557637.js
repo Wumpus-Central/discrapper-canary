@@ -1,152 +1,152 @@
-r.d(t, { _M: () => f, y5: () => v, zT: () => g });
-var l = r(477900),
-    n = r(582128),
+r.d(t, { _M: () => f, y5: () => E, zT: () => m });
+var n = r(477900),
+    l = r(582128),
     s = r(158390),
-    u = r(621466),
-    a = r(174459),
-    i = r(38405),
-    o = r(652215);
-let c = n.createContext({ registerAsset: () => () => {}, unregisterAsset: () => {}, hasError: !1, isLoading: !0 });
+    o = r(621466),
+    i = r(174459),
+    u = r(38405),
+    a = r(652215);
+let c = l.createContext({ registerAsset: () => () => {}, unregisterAsset: () => {}, hasError: !1, isLoading: !0 });
 function d(e) {
-    return (0, u.vq)(e, HTMLImageElement)
+    return (0, o.vq)(e, HTMLImageElement)
         ? e.complete
-        : (0, u.vq)(e, HTMLVideoElement)
+        : (0, o.vq)(e, HTMLVideoElement)
           ? e.readyState >= 2
-          : !!(0, u.vq)(e, HTMLDivElement) || !0;
-}
-function m(e) {
-    return (0, u.vq)(e, HTMLImageElement)
-        ? e.getAttribute("src")
-        : (0, u.vq)(e, HTMLVideoElement)
-          ? (e.querySelectorAll("source")[0]?.getAttribute("src") ?? "video")
-          : ((0, u.vq)(e, HTMLDivElement), e.tagName);
+          : !!(0, o.vq)(e, HTMLDivElement) || !0;
 }
 function v(e) {
-    let { children: t, isPreview: r = !1, source: v, adCreativeId: f, adCreativeType: g } = e,
-        [E, L] = n.useState(!1),
-        [h, A] = n.useState(new Set()),
-        [p, M] = n.useState(!1),
-        q = n.useRef(!1);
-    n.useEffect(() => {
+    return (0, o.vq)(e, HTMLImageElement)
+        ? e.getAttribute("src")
+        : (0, o.vq)(e, HTMLVideoElement)
+          ? (e.querySelectorAll("source")[0]?.getAttribute("src") ?? "video")
+          : ((0, o.vq)(e, HTMLDivElement), e.tagName);
+}
+function E(e) {
+    let { children: t, isPreview: r = !1, source: E, adCreativeId: f, adCreativeType: m } = e,
+        [L, g] = l.useState(!1),
+        [M, q] = l.useState(new Set()),
+        [A, T] = l.useState(!1),
+        H = l.useRef(!1);
+    l.useEffect(() => {
         let e = new Set();
-        for (let t of h) d(t) || e.add(t);
-        e.size !== h.size && A(e);
-    }, [h]);
-    let w = n.useCallback(
+        for (let t of M) d(t) || e.add(t);
+        e.size !== M.size && q(e);
+    }, [M]);
+    let S = l.useCallback(
             (e) => {
-                let { assetNode: t, nodeId: l, errorPrefix: n, errorMessage: s } = e;
-                if (r || null == v) return;
-                let c = (0, u.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
-                (a.default.track(o.HAw.AD_ASSET_LOADING_FAILURE, {
-                    source: v,
+                let { assetNode: t, nodeId: n, errorPrefix: l, errorMessage: s } = e;
+                if (r || null == E) return;
+                let c = (0, o.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
+                (i.default.track(a.HAw.AD_ASSET_LOADING_FAILURE, {
+                    source: E,
                     ad_creative_id: f,
-                    ad_creative_type: g,
-                    asset_id: m(t),
+                    ad_creative_type: m,
+                    asset_id: v(t),
                     video_network_state: c,
                 }),
-                    i.A.captureException(Error(`${n}: ${null != s ? `${s}, ` : ""}${m(t)}, ${l}`), {
-                        tags: { source: v },
+                    u.A.captureException(Error(`${l}: ${null != s ? `${s}, ` : ""}${v(t)}, ${n}`), {
+                        tags: { source: E },
                     }),
-                    L(!0));
+                    g(!0));
             },
-            [r, v, f, g],
+            [r, E, f, m],
         ),
-        S = n.useCallback((e) => {
-            A((t) => {
+        _ = l.useCallback((e) => {
+            q((t) => {
                 let r = new Set(t);
                 return (r.delete(e), r);
             });
         }, []),
-        T = n.useCallback(
+        p = l.useCallback(
             (e, t) => {
-                M(!0);
-                let r = (0, u.vq)(e, HTMLImageElement)
+                T(!0);
+                let r = (0, o.vq)(e, HTMLImageElement)
                         ? "load"
-                        : (0, u.vq)(e, HTMLVideoElement)
+                        : (0, o.vq)(e, HTMLVideoElement)
                           ? "canplaythrough"
-                          : ((0, u.vq)(e, HTMLDivElement), "load"),
-                    l = new AbortController(),
-                    n = new s.A();
-                function a() {
-                    (n.succeed(), S(e), e.removeEventListener(r, a));
+                          : ((0, o.vq)(e, HTMLDivElement), "load"),
+                    n = new AbortController(),
+                    l = new s.A();
+                function i() {
+                    (l.succeed(), _(e), e.removeEventListener(r, i));
                 }
-                function i(r) {
+                function u(r) {
                     (c(),
-                        S(e),
-                        w({
+                        _(e),
+                        S({
                             assetNode: e,
                             nodeId: t,
                             errorPrefix: "Error loading asset",
                             errorMessage: "message" in r ? r.message : null,
                         }));
                 }
-                function o(t) {
-                    n.fails < 3 && (0, u.vq)(e, HTMLVideoElement)
-                        ? n.fail(() => {
+                function a(t) {
+                    l.fails < 3 && (0, o.vq)(e, HTMLVideoElement)
+                        ? l.fail(() => {
                               e.load();
                           })
-                        : i(t);
+                        : u(t);
                 }
                 if (
                     (d(e) ||
-                        (A((t) => {
+                        (q((t) => {
                             let r = new Set(t);
                             return (r.add(e), r);
                         }),
-                        e.addEventListener(r, a)),
-                    e.addEventListener("error", i, { signal: l.signal }),
-                    (0, u.vq)(e, HTMLVideoElement))
+                        e.addEventListener(r, i)),
+                    e.addEventListener("error", u, { signal: n.signal }),
+                    (0, o.vq)(e, HTMLVideoElement))
                 ) {
                     let t = e.querySelectorAll("source"),
                         r = t[t.length - 1];
-                    r?.addEventListener("error", o, { signal: l.signal });
+                    r?.addEventListener("error", a, { signal: n.signal });
                 }
                 function c() {
                     if (
-                        (n.cancel(),
-                        l.abort(),
-                        e.removeEventListener(r, a),
-                        e.removeEventListener("error", i),
-                        (0, u.vq)(e, HTMLVideoElement))
+                        (l.cancel(),
+                        n.abort(),
+                        e.removeEventListener(r, i),
+                        e.removeEventListener("error", u),
+                        (0, o.vq)(e, HTMLVideoElement))
                     ) {
                         let t = e.querySelectorAll("source"),
                             r = t[t.length - 1];
-                        r?.removeEventListener("error", o);
+                        r?.removeEventListener("error", a);
                     }
                 }
                 return c;
             },
-            [w, S],
+            [S, _],
         ),
-        H = n.useMemo(() => h.size > 0 || !p, [p, h]);
-    n.useEffect(() => {
-        H || (q.current = !0);
-    }, [H]);
-    let b = n.useMemo(
-        () => ({ registerAsset: T, unregisterAsset: S, hasError: E, isLoading: H && !q.current }),
-        [T, S, E, H],
+        h = l.useMemo(() => M.size > 0 || !A, [A, M]);
+    l.useEffect(() => {
+        h || (H.current = !0);
+    }, [h]);
+    let w = l.useMemo(
+        () => ({ registerAsset: p, unregisterAsset: _, hasError: L, isLoading: h && !H.current }),
+        [p, _, L, h],
     );
-    return (0, l.jsx)(c.Provider, { value: b, children: t });
+    return (0, n.jsx)(c.Provider, { value: w, children: t });
 }
 function f(e) {
     let { id: t, children: r } = e,
-        { registerAsset: l, unregisterAsset: s } = n.useContext(c),
-        u = n.useRef(null);
+        { registerAsset: n, unregisterAsset: s } = l.useContext(c),
+        o = l.useRef(null);
     return (
-        n.useEffect(() => {
+        l.useEffect(() => {
             let e,
-                r = u.current;
+                r = o.current;
             return (
-                null != r && (e = l(r, t)),
+                null != r && (e = n(r, t)),
                 () => {
                     (e?.(), null != r && s(r));
                 }
             );
-        }, [l, s, t]),
-        r(u)
+        }, [n, s, t]),
+        r(o)
     );
 }
-function g() {
-    let { hasError: e, isLoading: t } = n.useContext(c);
+function m() {
+    let { hasError: e, isLoading: t } = l.useContext(c);
     return { hasError: e, isLoading: t };
 }

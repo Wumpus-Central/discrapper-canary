@@ -28,16 +28,16 @@ var i = n(488428),
     D = n(499785),
     v = n(308368),
     b = n(59636),
-    P = n(912851),
-    M = n(652215),
+    M = n(912851),
+    P = n(652215),
     U = n(818023),
     w = n(165610);
 let G = (0, n(403362).iT)() ? void 0 : window.GLOBAL_ENV.CDN_HOST;
 function x(e, t) {
     return null != G ? `https://${G}${e}` : t;
 }
-let k = x("/detectables/games.json", M.Rsh.GAMES_DETECTABLE),
-    F = x("/detectables/non-games.json", M.Rsh.NON_GAMES_DETECTABLE);
+let k = x("/detectables/games.json", P.Rsh.GAMES_DETECTABLE),
+    F = x("/detectables/non-games.json", P.Rsh.NON_GAMES_DETECTABLE);
 var B = n(105292);
 let V = new A.A("GamesActionCreators");
 function H(e) {
@@ -69,7 +69,7 @@ function H(e) {
         let e = _.A.getApplication(t);
         if (e?.deepLinkUri != null) {
             let i = e.deepLinkUri.replace(/\/+$/, ""),
-                r = `${i}${M.O3O.GAME_INVITE_FRAGMENT}${n}`;
+                r = `${i}${P.O3O.GAME_INVITE_FRAGMENT}${n}`;
             try {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
@@ -94,7 +94,7 @@ function H(e) {
             return (
                 null != i &&
                     L.A.waitParentConnected(i)
-                        .then(() => L.A.waitParentSubscribed(i, M.ZE4.ACTIVITY_JOIN))
+                        .then(() => L.A.waitParentSubscribed(i, P.ZE4.ACTIVITY_JOIN))
                         .then(() => {
                             d.h.dispatch({
                                 type: "ACTIVITY_JOIN",
@@ -110,7 +110,7 @@ function H(e) {
                 L.A.waitConnected(t).then(
                     () => (
                         d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
-                        L.A.waitSubscribed(t, M.ZE4.ACTIVITY_JOIN)
+                        L.A.waitSubscribed(t, P.ZE4.ACTIVITY_JOIN)
                     ),
                 )
             );
@@ -164,7 +164,7 @@ async function j(e) {
         let s = N.A.getLibraryApplication(t, n);
         if (null == s) throw Error("Missing library application when launching");
         A = l.Bo.post({
-            url: M.Rsh.OAUTH2_AUTHORIZE,
+            url: P.Rsh.OAUTH2_AUTHORIZE,
             query: { client_id: t, response_type: "token", scope: [a.F.IDENTIFY].join(" ") },
             retries: 3,
             body: { authorize: !0 },
@@ -201,7 +201,7 @@ async function j(e) {
           A.then((e) => {
               d.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
           }).catch((e) => {
-              (P.A.show(M.kqX.LAUNCH_GAME_FAILURE, B.intl.string(B.t.YZEBdj)),
+              (M.A.show(P.kqX.LAUNCH_GAME_FAILURE, B.intl.string(B.t.YZEBdj)),
                   d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f }));
           }))
         : (d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f }), Promise.reject(f));
@@ -212,7 +212,7 @@ function W(e) {
 let Y = {
     addGame(e, t) {
         (d.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
-            R.default.track(M.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t }));
+            R.default.track(P.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t }));
     },
     toggleOverlay(e, t, n) {
         let i = (0, T.Zh)(e),
@@ -221,10 +221,10 @@ let Y = {
             let e = N.A.getActiveLibraryApplication(r.id);
             if (null != e) {
                 let i = e.getFlags(),
-                    r = s.Lt(i, M.hM6.OVERLAY_DISABLED);
-                t && r !== t && (i = s.PQ(i, M.hM6.OVERLAY_DISABLED));
-                let a = s.Lt(i, M.hM6.OVERLAY_V3_DISABLED);
-                (null != n && n !== a && (i = s.PQ(i, M.hM6.OVERLAY_V3_DISABLED)), b.V(e.id, e.branchId, i));
+                    r = s.Lt(i, P.hM6.OVERLAY_DISABLED);
+                t && r !== t && (i = s.PQ(i, P.hM6.OVERLAY_DISABLED));
+                let a = s.Lt(i, P.hM6.OVERLAY_V3_DISABLED);
+                (null != n && n !== a && (i = s.PQ(i, P.hM6.OVERLAY_V3_DISABLED)), b.V(e.id, e.branchId, i));
                 return;
             }
         }
@@ -305,7 +305,7 @@ let Y = {
         let e = S.A.blocklistEtag;
         (d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             l.Bo.get({
-                url: M.Rsh.GAMES_BLOCKLIST,
+                url: P.Rsh.GAMES_BLOCKLIST,
                 headers: { "If-None-Match": e },
                 oldFormErrors: !0,
                 rejectWithError: (0, l.fT)(),
@@ -379,7 +379,7 @@ let Y = {
         }),
         null != o) &&
             l.Bo.post({
-                url: M.Rsh.UNVERIFIED_APPLICATIONS,
+                url: P.Rsh.UNVERIFIED_APPLICATIONS,
                 body: {
                     name: t,
                     os: (0, y.getPlatformName)(),
@@ -401,7 +401,7 @@ let Y = {
     },
     uploadIcon(e, t, n) {
         l.Bo.post({
-            url: M.Rsh.UNVERIFIED_APPLICATIONS_ICONS,
+            url: P.Rsh.UNVERIFIED_APPLICATIONS_ICONS,
             body: { application_name: e, application_hash: t, icon: n },
             retries: 1,
             oldFormErrors: !0,

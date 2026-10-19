@@ -118,8 +118,8 @@ var L = n(95701),
     D = n(71393),
     v = n(763827),
     b = n(994500),
-    P = n(461213),
-    M = n(543465);
+    M = n(461213),
+    P = n(543465);
 n(870570);
 var U = n(287809),
     w = n(562153),
@@ -159,9 +159,9 @@ function K(e, t, n) {
         (null != r && f.A.isLurking(r)) ||
         (!i.ignoreSameUser && t.id === e.id) ||
         b.A.isBlockedOrIgnored(t.id) ||
-        (!i.ignoreStatus && P.A.getStatus() === j.clD.DND) ||
+        (!i.ignoreStatus && M.A.getStatus() === j.clD.DND) ||
         C.NO.getSetting() ||
-        (!i.ignoreNoMessagesSetting && M.Ay.allowNoMessages(n))
+        (!i.ignoreNoMessagesSetting && P.Ay.allowNoMessages(n))
     );
 }
 function $(e, t) {
@@ -201,9 +201,9 @@ function $(e, t) {
     }
     {
         let t = !L.OU.has(l.type) || v.A.getChannelId() === l.id;
-        if (M.Ay.allowAllMessages(l) && t) return !0;
-        let n = M.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
-            i = M.Ay.isSuppressRolesEnabled(l.getGuildId());
+        if (P.Ay.allowAllMessages(l) && t) return !0;
+        let n = P.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
+            i = P.Ay.isSuppressRolesEnabled(l.getGuildId());
         return (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
@@ -221,9 +221,9 @@ function z(e, t) {
         r.hasFlag(j.nhx.SPAMMER) ||
         b.A.isBlockedOrIgnoredForMessage(e) ||
         r.id === i.id ||
-        P.A.getStatus() === j.clD.DND ||
+        M.A.getStatus() === j.clD.DND ||
         C.NO.getSetting() ||
-        M.Ay.allowNoMessages(n)
+        P.Ay.allowNoMessages(n)
     );
 }
 function X(e, t) {
@@ -237,9 +237,9 @@ function X(e, t) {
             null == r ||
             null == a ||
             !K(r, a, t, { ignoreStatus: i, ignoreNoMessagesSetting: !0 }) ||
-            M.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
+            P.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
             (!n && _(t.id))
-        ) && M.Ay.getNewForumThreadsCreated(t)
+        ) && P.Ay.getNewForumThreadsCreated(t)
     );
 }
 function q(e) {

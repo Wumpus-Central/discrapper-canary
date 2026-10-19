@@ -72,25 +72,25 @@ function g(e, t, n, p) {
                   };
         case "#":
             let b;
-            var P = e,
-                M = t;
-            if (null == M) break;
+            var M = e,
+                P = t;
+            if (null == P) break;
             b =
-                P.length > 3 && '"' === P[1] && '"' === P[P.length - 1]
-                    ? (0, i.LG)(P.slice(2, P.length - 1))
-                    : P.slice(1);
-            let U = o.Ay.getTextChannelNameDisambiguations(M);
+                M.length > 3 && '"' === M[1] && '"' === M[M.length - 1]
+                    ? (0, i.LG)(M.slice(2, M.length - 1))
+                    : M.slice(1);
+            let U = o.Ay.getTextChannelNameDisambiguations(P);
             for (let e of I.default.keys(U))
                 if (U[e].name === b) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
             for (let e of h.L3)
                 if (e !== o.I6) {
-                    for (let { channel: t } of o.Ay.getChannels(M)[e])
+                    for (let { channel: t } of o.Ay.getChannels(P)[e])
                         if ((0, i.m1)(t, A.default, E.A) === b) {
                             if (t.isCategory() && !_.A.can(T.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
                         }
                 }
-            let w = s.A.getActiveJoinedThreadsForGuild(M);
+            let w = s.A.getActiveJoinedThreadsForGuild(P);
             for (let e of I.default.keys(w))
                 for (let t of I.default.keys(w[e])) {
                     let { channel: n } = w[e][t];

@@ -1,4 +1,4 @@
-(i.d(e, { Ay: () => tp, ru: () => tf }), i(321073));
+(i.d(e, { Ay: () => ty, ru: () => tf }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(284009),
@@ -10,12 +10,12 @@ var n = i(477900),
     d = i(534890),
     A = i(820081),
     f = i(241541),
-    y = i(559647),
-    p = i(866665),
+    p = i(559647),
+    y = i(866665),
     m = i(408278),
     g = i(297152),
-    E = i(834730),
-    I = i(821609),
+    I = i(834730),
+    E = i(821609),
     _ = i(308368),
     N = i(298990),
     S = i(308528),
@@ -25,8 +25,8 @@ var n = i(477900),
     v = i(429913),
     O = i(878014),
     b = i(402216),
-    x = i(506326),
-    L = i(428249),
+    L = i(506326),
+    x = i(428249),
     D = i(205184),
     R = i(427358),
     k = i(927813),
@@ -88,8 +88,8 @@ function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([W.default], () => W.default.getUser(i.author_id)),
-        [g, E] = l.useState("unsent"),
-        [I, N] = l.useState(!1);
+        [g, I] = l.useState("unsent"),
+        [E, N] = l.useState(!1);
     l.useEffect(() => {
         if ("sent" === g) {
             let t = setTimeout(() => N(!0), 2e3);
@@ -102,7 +102,7 @@ function ts(t) {
         if (null != u && "unsent" === g) {
             t.stopPropagation();
             try {
-                if ((E("sending"), h && null != C))
+                if ((I("sending"), h && null != C))
                     await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN,
                         userId: u.id,
@@ -116,14 +116,14 @@ function ts(t) {
                         (0, Y.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
                         (0, G.A)(tn.BRT.OVERLAY, !0),
                         !0 === i.extra.fake_inventory_item
-                            ? await (0, L.J)({
+                            ? await (0, x.J)({
                                   channel: e,
                                   content: ta.intl.formatToPlainString(ta.t.UVBA9g, { gameName: i.extra.game_name }),
                                   whenReady: !0,
                                   doNotNotifyOnError: !1,
                                   location: tl.Hx.OVERLAY,
                               })
-                            : await (0, L.d)({
+                            : await (0, x.d)({
                                   channel: e,
                                   content: ta.intl.string(ta.t.DwAcMz),
                                   entry: i,
@@ -138,9 +138,9 @@ function ts(t) {
                     target_index: s,
                 }),
                     (0, tt.YX)(tn.uss.ACTIVITY, { type: tt.Z5.INVITE, value: tt.IP.INVITE_SENT, userId: u.id }),
-                    E("sent"));
+                    I("sent"));
             } catch (t) {
-                E("unsent");
+                I("unsent");
             }
         }
     }
@@ -155,15 +155,15 @@ function ts(t) {
     }
     let O = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === g ? (I ? d.ChatIcon : A.B) : h ? f.D : y.SendMessageIcon),
-        (0, n.jsx)(p.m, {
+        (e = "sent" === g ? (E ? d.ChatIcon : A.B) : h ? f.D : p.SendMessageIcon),
+        (0, n.jsx)(y.m, {
             text: O,
             "aria-label": O,
             children: (0, n.jsx)(m.K, {
                 icon: e,
                 "aria-label": O,
                 loading: "sending" === g,
-                onClick: I ? v : T,
+                onClick: E ? v : T,
                 variant: "subtle" === o ? "icon-only" : "secondary",
                 size: "sm",
             }),
@@ -195,13 +195,13 @@ function to(t) {
             }
         }
     }
-    let y = ta.intl.string(ta.t.OKsSCR);
-    return (0, n.jsx)(p.m, {
-        text: y,
-        "aria-label": y,
+    let p = ta.intl.string(ta.t.OKsSCR);
+    return (0, n.jsx)(y.m, {
+        text: p,
+        "aria-label": p,
         children: (0, n.jsx)(m.K, {
             icon: "sent" === u ? A.B : g.E,
-            "aria-label": y,
+            "aria-label": p,
             loading: "sending" === u,
             onClick: f,
             variant: "subtle" === a ? "icon-only" : "secondary",
@@ -241,7 +241,7 @@ function tu(t) {
                           (0, n.jsxs)("div", {
                               className: tr.Yn,
                               children: [
-                                  (0, n.jsx)(E.E, {
+                                  (0, n.jsx)(I.E, {
                                       className: tr.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
@@ -250,10 +250,10 @@ function tu(t) {
                                   null != s && (0, n.jsx)(b.Ay, { className: tr.Ok }),
                               ],
                           }),
-                          (0, n.jsx)(x.mG, {
-                              location: x.N5.OVERLAY,
+                          (0, n.jsx)(L.mG, {
+                              location: L.N5.OVERLAY,
                               className: tr.cV,
-                              children: [x.iq, x.tR, x.K7, x.sp, x.MK].map((t, i) =>
+                              children: [L.iq, L.tR, L.K7, L.sp, L.MK].map((t, i) =>
                                   (0, n.jsx)(t, { entry: e }, `entry-${i}`),
                               ),
                           }),
@@ -312,7 +312,7 @@ function td(t) {
                   !r &&
                       (0, n.jsx)("div", {
                           className: tr.v4,
-                          children: (0, n.jsx)(E.E, {
+                          children: (0, n.jsx)(I.E, {
                               variant: "text-xs/medium",
                               color: "subtle" === s ? "text-subtle" : "text-default",
                               tag: "div",
@@ -410,7 +410,7 @@ function tf(t) {
     let e = tA(t);
     return (0, n.jsx)(td, { ...e, className: t.className, variant: t.variant });
 }
-function ty(t) {
+function tp(t) {
     let { activity: e, currentUser: i, showInviteButton: l = !0 } = t,
         a = (0, ti.JH)(e?.application_id),
         r = (0, v.h)(e?.application_id),
@@ -429,7 +429,7 @@ function ty(t) {
                   null != a && !s && l
                       ? (0, n.jsx)("div", {
                             className: tr.DJ,
-                            children: (0, n.jsx)(I.$, {
+                            children: (0, n.jsx)(E.$, {
                                 text: ta.intl.string(ta.t["6Qgrev"]),
                                 size: "sm",
                                 variant: "secondary",
@@ -443,7 +443,7 @@ function ty(t) {
               ],
           });
 }
-function tp(t) {
+function ty(t) {
     let { locked: e } = t,
         i = (0, ti.b4)(),
         l = i?.id,
@@ -459,7 +459,7 @@ function tp(t) {
         : (0, n.jsxs)("div", {
               className: tr.kL,
               children: [
-                  (0, n.jsx)(ty, { activity: u, currentUser: s }),
+                  (0, n.jsx)(tp, { activity: u, currentUser: s }),
                   (0, n.jsx)(td, { ...d, className: tr.l_, hideHeader: !0 }),
               ],
           });

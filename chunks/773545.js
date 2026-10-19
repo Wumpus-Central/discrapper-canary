@@ -1,4 +1,4 @@
-n.d(e, { Dp: () => _, kW: () => T, r8: () => g });
+n.d(e, { Dp: () => T, kW: () => _, r8: () => g });
 var r = n(582128),
     i = n(323889),
     s = n(17928),
@@ -20,12 +20,12 @@ function E(t, e, n) {
         l.A.isFetchingAdToDeliverByPlacement(e) || (l.A.canRefreshAd(e) && ((0, c.N1)(), (0, c.r8)(e, n)));
     }
 }
-function _(t) {
+function T(t) {
     return (0, s.bG)([l.A], () => l.A.deliveryAdDecisionByPlacement.get(t) ?? null, [t]);
 }
-function T(t) {
+function _(t) {
     let e = (0, r.useRef)(null),
-        n = _(t);
+        n = T(t);
     (0, r.useEffect)(() => {
         (null != e.current && clearInterval(e.current),
             E(n, t, "questBar-open"),
@@ -40,7 +40,7 @@ function T(t) {
 }
 function g(t, e) {
     let n = (0, s.bG)([d.A], () => d.A.getQuestPreviewOverride(e), [e]),
-        l = _(t),
+        l = T(t),
         a = (0, u.Yz)(l?.creative),
         o = (0, s.bG)([d.A], () => (null != a ? (d.A.quests.get(a) ?? null) : null), [a]),
         c = null == o || (0, f.Ic)(o) ? null : o,

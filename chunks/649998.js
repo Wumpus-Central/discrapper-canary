@@ -42,8 +42,8 @@ function C(e) {
             onSelectionChange: D,
             activeDescendantIndex: v,
             shouldFocusWrap: b = !1,
-            renderListItem: P,
-            renderEmptyState: M,
+            renderListItem: M,
+            renderEmptyState: P,
             maxVisibleItems: U = 5,
             loading: w = !1,
             onBlur: G,
@@ -200,7 +200,7 @@ function C(e) {
                 let { rowIndex: t } = e,
                     n = H[t],
                     r = I(B, t),
-                    s = null == P && N(n) ? `${r}-desc` : void 0,
+                    s = null == M && N(n) ? `${r}-desc` : void 0,
                     l = 0 !== K.length && null != K.find((e) => e.id === n.id);
                 return (0, i.jsx)(
                     O,
@@ -216,13 +216,13 @@ function C(e) {
                         onClick: () => {
                             u || n.disabled || Q(n);
                         },
-                        children: P?.(n, s) ?? J(n, s),
+                        children: M?.(n, s) ?? J(n, s),
                     },
                     n.index,
                 );
             },
         });
-    } else t = M?.() ?? (0, i.jsx)(f.o, {});
+    } else t = P?.() ?? (0, i.jsx)(f.o, {});
     return (0, i.jsx)(d.hD, {
         navigator: $,
         children: (0, i.jsx)(d.PR, {

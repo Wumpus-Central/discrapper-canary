@@ -28,8 +28,8 @@ let h = "default",
     D = new Map(),
     v = new Map(),
     b = new Map(),
-    P = [],
-    M = {
+    M = [],
+    P = {
         clipsEnabled: !1,
         storageLocation: h,
         clipsQuality: { resolution: A.on.RESOLUTION_1080, frameRate: A.kn.FPS_30, bitratePercent: _.Y2 },
@@ -43,7 +43,7 @@ let h = "default",
         showPovClipsInGallery: !1,
     },
     U = {
-        clipsSettings: M,
+        clipsSettings: P,
         hardwareClassification: null,
         hardwareClassificationForDecoupled: null,
         hardwareClassificationVersion: 0,
@@ -107,9 +107,9 @@ class B extends r.Ay.DeviceSettingsStore {
     static displayName = "ClipsStore";
     static persistKey = "ClipsStore";
     static migrations = [
-        (e) => ({ clipsSettings: null != e ? e : M, newClipsCount: 0 }),
+        (e) => ({ clipsSettings: null != e ? e : P, newClipsCount: 0 }),
         (e) => {
-            let t = { ...M, ...e.clipsSettings };
+            let t = { ...P, ...e.clipsSettings };
             return { ...e, clipsSettings: t };
         },
         (e) => ({ ...e, newClipIds: e.newClipIds ?? [] }),
@@ -119,7 +119,7 @@ class B extends r.Ay.DeviceSettingsStore {
             hardwareClassificationVersion: e.hardwareClassificationVersion ?? 0,
         }),
         (e) => ({ ...e, hasClips: e.hasClips ?? !1 }),
-        (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: M.decoupledClipsEnabled } }),
+        (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: P.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => e,
         (e) => ({ ...e, newClipIds: e.newClipIds ?? [], newClipIDs: void 0 }),
@@ -129,7 +129,7 @@ class B extends r.Ay.DeviceSettingsStore {
                 ...e.clipsSettings,
                 clipsQuality:
                     "number" == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality
-                        ? M.clipsQuality
+                        ? P.clipsQuality
                         : e.clipsSettings.clipsQuality,
             },
         }),
@@ -137,7 +137,7 @@ class B extends r.Ay.DeviceSettingsStore {
             ...e,
             clipsSettings: {
                 ...e.clipsSettings,
-                remindersEnabled: e.clipsSettings.remindersEnabled ?? M.remindersEnabled,
+                remindersEnabled: e.clipsSettings.remindersEnabled ?? P.remindersEnabled,
             },
         }),
         (e) => ({
@@ -153,8 +153,8 @@ class B extends r.Ay.DeviceSettingsStore {
             ...e,
             clipsSettings: {
                 ...e.clipsSettings,
-                maxAutoClips: e.clipsSettings.maxAutoClips ?? M.maxAutoClips,
-                clipSignals: e.clipsSettings.clipSignals ?? M.clipSignals,
+                maxAutoClips: e.clipsSettings.maxAutoClips ?? P.maxAutoClips,
+                clipSignals: e.clipsSettings.clipSignals ?? P.clipSignals,
             },
         }),
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings } }),
@@ -162,14 +162,14 @@ class B extends r.Ay.DeviceSettingsStore {
             ...e,
             clipsSettings: {
                 ...e.clipsSettings,
-                enableAutoclipping: e.clipsSettings.enableAutoclipping ?? M.enableAutoclipping,
+                enableAutoclipping: e.clipsSettings.enableAutoclipping ?? P.enableAutoclipping,
             },
         }),
         (e) => ({
             ...e,
             clipsSettings: {
                 ...e.clipsSettings,
-                showPovClipsInGallery: e.clipsSettings.showPovClipsInGallery ?? M.showPovClipsInGallery,
+                showPovClipsInGallery: e.clipsSettings.showPovClipsInGallery ?? P.showPovClipsInGallery,
             },
         }),
         (e) => ({
@@ -178,7 +178,7 @@ class B extends r.Ay.DeviceSettingsStore {
                 ...e.clipsSettings,
                 clipsQuality: {
                     ...e.clipsSettings.clipsQuality,
-                    bitratePercent: e.clipsSettings.clipsQuality.bitratePercent ?? M.clipsQuality.bitratePercent,
+                    bitratePercent: e.clipsSettings.clipsQuality.bitratePercent ?? P.clipsQuality.bitratePercent,
                 },
             },
         }),
@@ -274,7 +274,7 @@ class B extends r.Ay.DeviceSettingsStore {
         return y.has(e);
     }
     getMatchingPOVReferences(e) {
-        return D.get(e) ?? P;
+        return D.get(e) ?? M;
     }
 }
 let V = new B(a.h, {

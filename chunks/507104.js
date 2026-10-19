@@ -44,10 +44,10 @@ let C = N(),
     D = null,
     v = null,
     b = null;
-function P() {
+function M() {
     return b ?? Date.now();
 }
-function M() {
+function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         { highestAffinity: t, highAffinity: n } = (function (e, t, n) {
             let i = new Set(),
@@ -90,13 +90,13 @@ function U() {
     }
     if (0 === O.length) return;
     let { enabled: e } = A({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
-    e ? (O.sort((e, t) => d.A.compareByDmProbability(e, t)), M()) : w();
+    e ? (O.sort((e, t) => d.A.compareByDmProbability(e, t)), P()) : w();
 }
 function w() {
     ((O.length = 0), (R = new Set()), (L = new Set()), (y = {}));
 }
 function G(e) {
-    null == C.messageGiftIntentLastShownMap[e] && (C.messageGiftIntentLastShownMap[e] = P());
+    null == C.messageGiftIntentLastShownMap[e] && (C.messageGiftIntentLastShownMap[e] = M());
 }
 function x(e) {
     w();
@@ -115,7 +115,7 @@ function x(e) {
             }
         }),
         O.sort((e, t) => d.A.compareByDmProbability(e, t)),
-        M(!0));
+        P(!0));
 }
 class k extends a.Ay.PersistedStore {
     static displayName = "PremiumGiftingIntentStore";
@@ -164,7 +164,7 @@ class k extends a.Ay.PersistedStore {
                 (C.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap }),
                 (C.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
             this.syncWith([E.A, d.A, _.A, l.A, o.A, u.A], U),
-            (C.messageGiftIntentLastShownMap = T(C.messageGiftIntentLastShownMap, P(), 12096e5)));
+            (C.messageGiftIntentLastShownMap = T(C.messageGiftIntentLastShownMap, M(), 12096e5)));
     }
     getState() {
         return C;
@@ -227,7 +227,7 @@ let F = new k(s.h, {
             let t = i[e];
             i[e] = null == t ? n : Math.max(t, n);
         }
-        ((C.messageGiftIntentLastShownMap = T(i, P(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n));
+        ((C.messageGiftIntentLastShownMap = T(i, M(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n));
     },
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function () {
         C.lastShownFriendsListGiftIntents = [];

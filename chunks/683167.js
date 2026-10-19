@@ -1,4 +1,4 @@
-n.d(t, { a: () => w, A: () => L });
+n.d(t, { a: () => M, A: () => O });
 var l = n(582128),
     i = n(143236),
     r = n(719442),
@@ -17,18 +17,18 @@ let x = new Set(["line", "blockQuote"]);
 var E = n(155718);
 let S = ["applicationCommand"],
     y = ["gameMentionInput", "timestampMentionInput"];
-function C(e) {
+function A(e) {
     let t = p.VW.getCurrentBlock(e),
         n = p.VW.getCurrentInline(e);
     return null != t && !S.includes(t[0].type) && !y.includes(n?.[0]?.type);
 }
-function A(e) {
+function C(e) {
     return null != e && "applicationCommandOption" === e.type && e.optionType === E.n4.STRING;
 }
-function I(e) {
-    return A(p.VW.getCurrentInline(e)?.[0]);
+function b(e) {
+    return C(p.VW.getCurrentInline(e)?.[0]);
 }
-function b(e, t, n) {
+function I(e, t, n) {
     let l,
         i,
         r,
@@ -41,10 +41,10 @@ function b(e, t, n) {
           ? l.length
           : i) > 0 && f.b.delete(e, { distance: r, unit: "offset", reverse: n });
 }
-function N(e) {
+function v(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: p.VW.richValue(e), selection: e.selection };
 }
-var v = n(113001),
+var N = n(113001),
     T = n(2368);
 function j(e, t, n) {
     let l = p.VW.getCurrentInline(e);
@@ -93,16 +93,16 @@ function j(e, t, n) {
 var _ = n(694403),
     k = n(323350),
     R = n(235599),
-    O = n(551483);
-function L(e) {
+    w = n(551483);
+function O(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
         [i] = l.useState(() => {
             let l = (0, r.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: O.K, focus: O.K }),
-                w({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
+                (l.selection = { anchor: w.K, focus: w.K }),
+                M({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
         });
@@ -126,7 +126,7 @@ function L(e) {
         i
     );
 }
-function w(e) {
+function M(e) {
     var t;
     let {
             editor: n,
@@ -433,7 +433,7 @@ function w(e) {
             ((e.history = { index: 0, stack: [] }),
                 (e.onChange = () => {
                     let { history: t } = e;
-                    (0 === t.stack.length && ((t.stack = [N(e)]), (t.index = 0)),
+                    (0 === t.stack.length && ((t.stack = [v(e)]), (t.index = 0)),
                         null != e.selection && (m.o.currentEntry(e).selection = e.selection),
                         (d = null),
                         o());
@@ -453,7 +453,7 @@ function w(e) {
                     n(t);
                     let i = p.VW.richValue(e);
                     i !== h &&
-                        (0 === l.stack.length && ((l.stack = [N(e)]), (l.index = 0)),
+                        (0 === l.stack.length && ((l.stack = [v(e)]), (l.index = 0)),
                         m.o.isSaving(e) &&
                             ((function (e, t, n) {
                                 var l, i;
@@ -565,12 +565,12 @@ function w(e) {
                                     r = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !O.XR.includes(t[0].type);
+                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !w.XR.includes(t[0].type);
                                 )
                                     ((l = p.VW.before(e, l, { unit: "offset" })), (r = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !O.XR.includes(n[0].type);
+                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !w.XR.includes(n[0].type);
                                 )
                                     ((i = p.VW.after(e, i, { unit: "offset" })), (r = !0));
                                 r &&
@@ -588,27 +588,27 @@ function w(e) {
                     (S = (function (e) {
                         let { deleteBackward: t, deleteForward: n, insertBreak: l, insertText: i } = e;
                         return (
-                            (e.rendersTrailingNewline = A),
+                            (e.rendersTrailingNewline = C),
                             (e.insertBreak = () => {
-                                I(e) ? i("\n") : C(e) && l();
+                                b(e) ? i("\n") : A(e) && l();
                             }),
                             (e.insertSoftBreak = () => {
                                 e.insertBreak();
                             }),
                             (e.deleteBackward = (n) => {
                                 let l = p.ZF.toPoint(e.selection);
-                                "line" === n && null != l && I(e) ? b(e, l, !0) : t(n);
+                                "line" === n && null != l && b(e) ? I(e, l, !0) : t(n);
                             }),
                             (e.deleteForward = (t) => {
                                 let l = p.ZF.toPoint(e.selection);
-                                "line" === t && null != l && I(e) ? b(e, l, !1) : n(t);
+                                "line" === t && null != l && b(e) ? I(e, l, !1) : n(t);
                             }),
                             (e.insertText = (t) => {
                                 if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void i(t);
                                 let n = t.split(/\r\n|\r|\n/);
-                                I(e)
+                                b(e)
                                     ? i(n.join("\n"))
-                                    : C(e)
+                                    : A(e)
                                       ? m.o.withSingleEntry(e, () => {
                                             let t = !1;
                                             for (let l of n) (t && f.b.splitNodes(e, { always: !0 }), i(l), (t = !0));
@@ -617,7 +617,7 @@ function w(e) {
                             }),
                             e
                         );
-                    })((S = (0, v.A)(S)))),
+                    })((S = (0, N.A)(S)))),
                 )),
                 c,
                 d,

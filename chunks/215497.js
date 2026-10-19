@@ -31,12 +31,12 @@ let E = function (e) {
             handleEditModal: E,
             keyboardModeEnabled: S,
             onKeyDown: y,
-            draftType: C,
-            size: A = 1,
-            ref: I,
+            draftType: A,
+            size: C = 1,
+            ref: b,
         } = e,
-        b = r.useRef(null),
-        { onFocus: N, ...v } = (0, o.rm)(t),
+        I = r.useRef(null),
+        { onFocus: v, ...N } = (0, o.rm)(t),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
             return {
@@ -55,17 +55,17 @@ let E = function (e) {
                 ),
                 isFocused: t,
             };
-        })(N),
-        _ = 0 === A,
+        })(v),
+        _ = 0 === C,
         k = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
-            ...v,
+            ...N,
             onFocus: T,
             onBlur: j,
             onClick: function (e) {
-                if (0 === e.detail && null != b.current) {
-                    let e = b.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != I.current) {
+                    let e = I.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
@@ -73,15 +73,15 @@ let E = function (e) {
                 if (S) {
                     switch (e.which) {
                         case m.Ks6.D:
-                            (e.preventDefault(), c.A.remove(n, t, C));
+                            (e.preventDefault(), c.A.remove(n, t, A));
                             return;
                         case m.Ks6.E:
                             null != E && (e.preventDefault(), E(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
-                                ? (e.preventDefault(), c.A.clearAll(n, C))
-                                : (e.preventDefault(), c.A.remove(n, t, C));
+                                ? (e.preventDefault(), c.A.clearAll(n, A))
+                                : (e.preventDefault(), c.A.remove(n, t, A));
                             return;
                         case m.Ks6.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -91,10 +91,10 @@ let E = function (e) {
                 }
             },
             className: a()(p.Se, l),
-            ref: I,
+            ref: b,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: b,
+                ref: I,
                 children: [
                     s,
                     k

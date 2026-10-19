@@ -55,11 +55,11 @@ function N(e) {
                     return t.FEEDBACK_POSITIVE_ICON_A11Y_LABEL;
             }
         })(t, L),
-        P = [b, (0, o.O)(n), (0, o.O)(a)].filter(Boolean).join(", ");
+        M = [b, (0, o.O)(n), (0, o.O)(a)].filter(Boolean).join(", ");
     return (
         r.useEffect(() => {
-            "status" !== O || R || d.O.announce(P, "polite");
-        }, [O, R, P]),
+            "status" !== O || R || d.O.announce(M, "polite");
+        }, [O, R, M]),
         (0, i.jsx)(m, {
             hidden: R,
             children: (0, i.jsxs)("div", {

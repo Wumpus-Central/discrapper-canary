@@ -15,10 +15,10 @@ n.d(t, {
     _3: () => c,
     a2: () => f,
     fE: () => p,
-    g5: () => P,
+    g5: () => M,
     hL: () => G,
     lG: () => j,
-    no: () => M,
+    no: () => P,
     pU: () => u,
     t: () => I,
     uD: () => O,
@@ -114,10 +114,10 @@ let O = N([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
 function b(e) {
     return L(e) && !R(e);
 }
-function P(e) {
+function M(e) {
     return O(e);
 }
-function M(e) {
+function P(e) {
     return !O(e) && I({ quest: e });
 }
 function U(e, t) {

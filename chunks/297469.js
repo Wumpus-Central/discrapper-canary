@@ -140,8 +140,8 @@ new v(h.h, {
     },
 });
 var b = n(395504),
-    P = n(454058),
-    M = n(272720),
+    M = n(454058),
+    P = n(272720),
     U = n(56595),
     w = n(863005),
     G = n(152007),
@@ -290,7 +290,7 @@ class ed {
             (this.collapsedCategoryIds = k.A.getCollapsedCategories()));
         const i = m.A.getMutableGuildChannelsForGuild(this.id),
             a = B.A.getGuild(this.id);
-        ((this.moderatorReportChannelId = null != a ? (0, M.A)(a) : null),
+        ((this.moderatorReportChannelId = null != a ? (0, P.A)(a) : null),
             (this.moderatorReportChannelEnabled = null != a && (0, U.A)(a)));
         const l = {},
             o = [],
@@ -1025,7 +1025,7 @@ function eR(e, t) {
     if (H.Ay.getMentionCount(e.id) > 0) return !0;
     for (let t in i[e.id]) if (H.Ay.getMentionCount(t) > 0) return !0;
     if (null != n && (n.id === e.id || (n.isThread() && n.parent_id === e.id))) return !0;
-    let r = P.A.getNewChannelIds(e.category.guild.id);
+    let r = M.A.getNewChannelIds(e.category.guild.id);
     if (r.size > ee);
     else if (r.has(e.id)) return !0;
     return !1;
@@ -1047,7 +1047,7 @@ function eL(e, t, n) {
     for (let e in r[t.id])
         if (H.Ay.getMentionCount(e) > 0 || H.Ay.hasUnread(e) || H.Ay.hasRecentlyVisitedAndRead(e)) return !0;
     if (e.mutedChannelIds.has(t.id) || (null != t.parent_id && e.mutedChannelIds.has(t.parent_id))) return !1;
-    let a = P.A.getNewChannelIds(e.id),
+    let a = M.A.getNewChannelIds(e.id),
         l = Array.from(a).sort((e, t) => K.default.compare(t, e));
     return !!((a.has(t.id) && l.indexOf(t.id) < ee) || H.Ay.hasRecentlyVisitedAndRead(t.id));
 }

@@ -29,8 +29,8 @@ var y = n(392164);
 let D = new d.A("OverlayRenderStore"),
     v = m.V6.UNSET,
     b = !1,
-    P = !1,
-    M = (0, f.isWindows)() && f.isPlatformEmbedded && !__OVERLAY__,
+    M = !1,
+    P = (0, f.isWindows)() && f.isPlatformEmbedded && !__OVERLAY__,
     U = null,
     w = {},
     G = {},
@@ -465,7 +465,7 @@ async function ed(e, t) {
     for (let e of K()) (await ee(e), await (0, r.yy)(16));
 }
 function ec() {
-    (er(), (P = !1), (k = null), eE());
+    (er(), (M = !1), (k = null), eE());
 }
 async function eu() {
     (await e_(), await (0, r.yy)(2e3));
@@ -484,7 +484,7 @@ async function e_() {
     for (let e of K()) (await ee(e), await (0, r.yy)(16));
 }
 function eE() {
-    c.A.hasLoadedExperiments && !P && ((P = !0), ed(p.x.legacyEnabled, p.x.oopEnabled));
+    c.A.hasLoadedExperiments && !M && ((M = !0), ed(p.x.legacyEnabled, p.x.oopEnabled));
 }
 class eA extends i.Ay.Store {
     static displayName = "OverlayRenderStore";
@@ -497,7 +497,7 @@ class eA extends i.Ay.Store {
         return H;
     }
     getHasLoadedExperiments() {
-        return P;
+        return M;
     }
     getForcedRenderMode() {
         return v;
@@ -553,15 +553,15 @@ class eA extends i.Ay.Store {
 }
 let eh = new eA(
         a.h,
-        !M
+        !P
             ? {}
             : {
                   CONNECTION_OPEN: ec,
                   LOGIN: function () {
-                      ((P = !1), (k = null));
+                      ((M = !1), (k = null));
                   },
                   LOGOUT: function () {
-                      ((P = !1), (k = null), e_());
+                      ((M = !1), (k = null), e_());
                   },
                   EXPERIMENT_OVERRIDE_BUCKET: ec,
                   OVERLAY_SET_ENABLED: function (e) {

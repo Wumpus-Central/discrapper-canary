@@ -1,4 +1,4 @@
-i.d(e, { sI: () => y });
+i.d(e, { sI: () => p });
 var n = i(477900);
 i(582128);
 var l = i(17928),
@@ -11,13 +11,13 @@ var l = i(17928),
     d = i(22802),
     A = i(105292),
     f = i(414981);
-function y(t, e) {
+function p(t, e) {
     let {
         highlightAdminWarningIfElevated: i,
         useFlexboxLayout: l,
         keybindClassName: a,
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return (0, n.jsx)(p, {
+    return (0, n.jsx)(y, {
         keybind: t,
         message: e,
         highlightAdminWarningIfElevated: i,
@@ -25,24 +25,24 @@ function y(t, e) {
         keybindClassName: a,
     });
 }
-function p(t) {
+function y(t) {
     let {
             keybind: e,
             message: i,
-            highlightAdminWarningIfElevated: y = !1,
-            useFlexboxLayout: p = !1,
+            highlightAdminWarningIfElevated: p = !1,
+            useFlexboxLayout: y = !1,
             keybindClassName: m,
         } = t,
         g = (0, l.bG)([r.Ay], () => {
             let t = r.Ay.getVisibleGame();
             return null != t && t.elevated && r.Ay.canShowAdminWarning;
         }),
-        E = (0, o.NP)();
+        I = (0, o.NP)();
     return g
         ? (0, n.jsx)(a.E, {
               variant: "text-xxs/semibold",
-              color: y ? "text-feedback-warning" : "text-muted",
-              children: E
+              color: p ? "text-feedback-warning" : "text-muted",
+              children: I
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
                             (t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL));
@@ -50,7 +50,7 @@ function p(t) {
                     })
                   : A.intl.string(A.t.PIeSHF),
           })
-        : p
+        : y
           ? (0, n.jsx)("div", {
                 className: f.FH,
                 children: A.intl.format(i, {

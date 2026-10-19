@@ -56,14 +56,14 @@ function b() {
             .map((e) => e.toLowerCase()),
     );
 }
-function P() {
+function M() {
     return new Set(
         d()
             .weekdays()
             .map((e) => e.toLowerCase()),
     );
 }
-function M() {
+function P() {
     let e = new Date().getFullYear();
     return new Set(
         l()
@@ -127,9 +127,9 @@ function j(e, t) {
             ? ([n, i] = a())
             : b().has(r)
               ? ([n, i] = G(r, "MMMM", "month"))
-              : P().has(r)
+              : M().has(r)
                 ? ([n, i] = G(r, "dddd", "day"))
-                : M().has(r)
+                : P().has(r)
                   ? ([n, i] = G(r, "YYYY", "year"))
                   : ([n, i] = G(r, D.ump, "day")),
         !!(n.isValid() && i.isValid()) &&
@@ -240,7 +240,7 @@ function Q(e) {
     return $(e, K());
 }
 function J(e, t, n) {
-    return ee(e, t, [...Array.from(b()), ...Array.from(P()), ...Array.from(M()), ...Object.keys(x())]).map((e) => ({
+    return ee(e, t, [...Array.from(b()), ...Array.from(M()), ...Array.from(P()), ...Object.keys(x())]).map((e) => ({
         ...e,
         group: n,
         key: `${n}-${e.text}`,

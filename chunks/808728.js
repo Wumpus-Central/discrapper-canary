@@ -31,8 +31,8 @@ let N = "SELECTABLE",
         comparator: -1,
         channel: (0, E.createChannelRecord)({ id: S._Ee, type: S.rbe.GUILD_CATEGORY, name: "Uncategorized" }),
     },
-    P = w(S.eGj),
-    M = [],
+    M = w(S.eGj),
+    P = [],
     U = {};
 function w(e) {
     return { id: e, [N]: [], [C]: [], [S.rbe.GUILD_CATEGORY]: [b], count: 0 };
@@ -156,7 +156,7 @@ class Y extends s.Ay.Store {
     }
     getChannels(e) {
         let t;
-        return null != e ? (null == (t = R[e]) && (t = k(e)), t) : P;
+        return null != e ? (null == (t = R[e]) && (t = k(e)), t) : M;
     }
     getFirstChannelOfType(e, t, n) {
         let i = this.getChannels(e)[n].find(t);
@@ -196,7 +196,7 @@ class Y extends s.Ay.Store {
             v[e]?.map((e) => {
                 let { channel: t } = e;
                 return t.id;
-            }) ?? M
+            }) ?? P
         );
     }
     hasSelectableChannel(e, t) {

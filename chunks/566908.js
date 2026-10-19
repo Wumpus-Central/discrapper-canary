@@ -1,5 +1,5 @@
 (n.d(t, {
-    FF: () => M,
+    FF: () => P,
     Lg: () => V,
     Sc: () => v,
     UF: () => L,
@@ -9,7 +9,7 @@
     ZG: () => k,
     _O: () => G,
     dx: () => C,
-    kJ: () => P,
+    kJ: () => M,
     q8: () => D,
     vK: () => b,
     yp: () => x,
@@ -73,10 +73,10 @@ function b(e) {
         n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e)));
     return t && n;
 }
-function P(e, t) {
+function M(e, t) {
     return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e));
 }
-function M() {
+function P() {
     let e = G(),
         t = s()().startOf("day").set("hours", 9),
         n = s()().startOf("day").set("hours", 13);

@@ -12,8 +12,8 @@ n.d(t, {
     av: () => O,
     eA: () => L,
     gr: () => G,
-    kO: () => M,
-    vK: () => P,
+    kO: () => P,
+    vK: () => M,
 });
 var i = n(132500),
     r = n(323889),
@@ -294,7 +294,7 @@ async function b(e) {
         sourceQuestContent: d,
     });
 }
-async function P(e) {
+async function M(e) {
     let {
         adContentId: t,
         relatedQuestId: n,
@@ -324,7 +324,7 @@ async function P(e) {
         sourceQuestContent: c,
     });
 }
-function M(e) {
+function P(e) {
     let {
             scrollingType: t,
             scrollingDirection: n,

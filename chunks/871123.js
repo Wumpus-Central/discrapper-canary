@@ -3,7 +3,7 @@
     NE: () => C,
     OY: () => k,
     Q6: () => F,
-    S4: () => P,
+    S4: () => M,
     Ye: () => H,
     aU: () => B,
     bF: () => S,
@@ -17,7 +17,7 @@
     nY: () => X,
     pV: () => g,
     rG: () => W,
-    sq: () => M,
+    sq: () => P,
     uV: () => Y,
     wH: () => j,
     xf: () => G,
@@ -92,7 +92,7 @@ function b(e) {
     let t = new Date(e);
     return Number.isNaN(t.getTime()) ? null : t;
 }
-function P(e) {
+function M(e) {
     return {
         id: e.id,
         publishedAt: b(e.published_at),
@@ -101,7 +101,7 @@ function P(e) {
         lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null,
     };
 }
-function M(e) {
+function P(e) {
     return {
         id: e.id,
         publishedAt: b(e.published_at),

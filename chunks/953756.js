@@ -1,4 +1,4 @@
-n.d(t, { Hq: () => o, O7: () => i, zn: () => u });
+n.d(t, { Hq: () => o, O7: () => i, zn: () => c });
 var l = n(477900),
     r = n(582128);
 let a = r.createContext(null),
@@ -10,14 +10,14 @@ let a = r.createContext(null),
         },
         NestedContainer(e) {
             let { containerOuterWidth: t, containerInnerWidth: n, children: i } = e,
-                { isParentWidthLimited: o, parentContainerInnerWidth: u } = s(),
-                c = o && u === t,
-                d = r.useMemo(() => ({ isParentWidthLimited: c, parentContainerInnerWidth: n }), [c, n]);
+                { isParentWidthLimited: o, parentContainerInnerWidth: c } = s(),
+                u = o && c === t,
+                d = r.useMemo(() => ({ isParentWidthLimited: u, parentContainerInnerWidth: n }), [u, n]);
             return (0, l.jsx)(a.Provider, { value: d, children: i });
         },
         AutoMeasuredNestedContainer(e) {
             let { children: t } = e,
-                [n, r, a] = u(!0);
+                [n, r, a] = c(!0);
             return (0, l.jsx)(i.NestedContainer, { containerOuterWidth: r, containerInnerWidth: a, children: t(n) });
         },
     };
@@ -30,7 +30,7 @@ function o(e) {
     let { isParentWidthLimited: t, parentContainerInnerWidth: n } = s();
     return t && n === e;
 }
-function u() {
+function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = r.useRef(null),
         [n, l] = r.useState(0),

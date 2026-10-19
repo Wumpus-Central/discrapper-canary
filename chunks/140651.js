@@ -6,16 +6,16 @@ n(440745);
 var i = n(17928),
     s = n(317097),
     o = n(775602),
-    u = n(654107),
-    c = n(363195),
+    c = n(654107),
+    u = n(363195),
     d = n(661531);
 let m = function (e) {
     var t;
     let n = (0, i.bG)([o.Ay], () => o.Ay.saturation),
         r =
-            ((t = (0, i.bG)([c.A], () => c.A.theme)),
+            ((t = (0, i.bG)([u.A], () => u.A.theme)),
             d.A.colors.BACKGROUND_SURFACE_HIGH.resolve?.({ theme: t, saturation: n })?.hex?.() ?? "#000"),
-        [m, h] = (0, u.rh)(e, r);
+        [m, h] = (0, c.rh)(e, r);
     return l.useMemo(() => {
         let e = (0, s.LX)(m),
             t = (0, s.LX)(h);

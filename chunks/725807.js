@@ -34,8 +34,8 @@ let I = function (e) {
             iconColor: v = "currentColor",
             ...b
         } = e,
-        P = (0, l.bG)([_.A], () => _.A.isFocused()),
-        M = (0, A.A)({
+        M = (0, l.bG)([_.A], () => _.A.isFocused()),
+        P = (0, A.A)({
             subscriptionTier: t,
             buttonTextOverride: p?.textOverride,
             defaultTextOverride: p?.subscribeText,
@@ -43,7 +43,7 @@ let I = function (e) {
         U = D ?? (t === h.pe.TIER_1 ? o.$n.Colors.PRIMARY : o.$n.Colors.GREEN),
         w = (0, i.jsxs)(d.wL, {
             "data-migration-pending": !0,
-            disabled: M.disabled,
+            disabled: P.disabled,
             innerClassName: f.UO,
             color: U,
             size: a,
@@ -51,11 +51,11 @@ let I = function (e) {
             wrapperClassName: s()({ [f.PJ]: L && t === h.pe.TIER_2, [f.Up]: L && t === h.pe.TIER_1 }, I),
             buttonShineClassName:
                 "buttonShineClassName" in b ? b.buttonShineClassName : U === o.XD.BRAND_INVERTED ? f.nz : void 0,
-            pauseAnimation: !P || C,
+            pauseAnimation: !M || C,
             ...b,
             children: [
                 N && (0, i.jsx)(c.t, { size: "md", color: v, className: s()(f.PC, T) }),
-                (0, i.jsx)("span", { className: s()(f._d, p?.textClassName), children: M.buttonText }),
+                (0, i.jsx)("span", { className: s()(f._d, p?.textClassName), children: P.buttonText }),
             ],
         });
     return (0, i.jsx)(E.A, {
@@ -69,7 +69,7 @@ let I = function (e) {
         children: (e) => {
             let { onClick: t } = e,
                 n = r.cloneElement(w, { onClick: t });
-            return null != M.buttonTooltipText ? (0, i.jsx)(u.m, { text: M.buttonTooltipText, children: n }) : n;
+            return null != P.buttonTooltipText ? (0, i.jsx)(u.m, { text: P.buttonTooltipText, children: n }) : n;
         },
     });
 };
