@@ -583,7 +583,7 @@ function en(e) {
             giftInfoOptions: ew,
             invoicePreview: Q,
             quantity: ec,
-            applyWalletBalance: eI,
+            applyWalletBalance: eI ?? Q?.applyWalletBalance,
         });
     }
     let e8 = null != S || (eo === g.VVm.ONE_TIME && !e_);

@@ -158,24 +158,15 @@ var U = n(666646),
 function O(e) {
     let { location: t, currency: n } = e,
         { enabled: l } = (0, w.U)({ location: t }),
-        { giftCardCurrency: i } = (0, H.h)(),
-        {
-            applyWalletBalance: s,
-            previewApplyWalletBalance: a,
-            setApplyWalletBalance: u,
-        } = (0, d.t4)((e) => ({
+        { giftCardCurrency: r } = (0, H.h)(),
+        { applyWalletBalance: i, previewApplyWalletBalance: s } = (0, d.t4)((e) => ({
             applyWalletBalance: e.applyWalletBalance,
             previewApplyWalletBalance: e.checkoutInvoicePreview?.applyWalletBalance,
-            setApplyWalletBalance: e.setApplyWalletBalance,
         }));
-    r.useEffect(() => {
-        l && null == s && null != a && u(a);
-    }, [l, s, a, u]);
-    let c = l && !0 === s;
     return {
         splitPaymentsEnabled: l,
-        applyWalletBalance: l ? (s ?? void 0) : void 0,
-        currency: c && null != i ? i : n,
+        applyWalletBalance: l ? (i ?? void 0) : void 0,
+        currency: l && (i ?? s) === !0 && null != r ? r : n,
     };
 }
 function F() {

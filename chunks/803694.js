@@ -144,6 +144,7 @@ function f(e) {
               walletId: n,
               isWalletBalanceLoaded: null != l && !s,
               isWalletCoverageLoading: s,
+              walletBalanceAmount: d,
           }
         : {
               walletCoversSubtotal: !1,
@@ -151,6 +152,7 @@ function f(e) {
               walletId: n,
               isWalletBalanceLoaded: !1,
               isWalletCoverageLoading: !1,
+              walletBalanceAmount: null,
           };
 }
 function E(e) {
@@ -260,32 +262,36 @@ function S(e) {
             walletCoversTotal: Y,
             isWalletBalanceLoaded: K,
             isWalletCoverageLoading: q,
+            walletBalanceAmount: Z,
         } = f({ giftCardsEnabled: S }),
-        Z = null != E && null != R && E === R.id,
-        z = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
+        z = null != Z && Z > 0,
+        $ = null != Z && Z <= 0,
+        J = (P ?? x) === !0,
+        Q = null != E && null != R && E === R.id,
+        X = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
     (l.useEffect(() => {
         if (j && null != R) {
-            if (z) {
+            if (X) {
                 null == i && a(R.id);
                 return;
             }
             k && a(w);
         }
-    }, [j, R, z, k, i, w, a]),
+    }, [j, R, X, k, i, w, a]),
         l.useEffect(() => {
-            !Z && K && !V && k && a(w);
-        }, [Z, K, V, k, a, w]));
-    let $ = l.useMemo(
+            !Q && K && !V && k && a(w);
+        }, [Q, K, V, k, a, w]));
+    let ee = l.useMemo(
         () =>
             null == R
                 ? null
                 : j
                   ? {
                         giftCardWallet: R,
-                        checked: (P ?? x) === !0,
+                        checked: !$ && J,
                         onChange: W,
                         loading: !1,
-                        disabled: !1,
+                        disabled: !z,
                         disabledTooltip: void 0,
                     }
                   : {
@@ -296,7 +302,7 @@ function S(e) {
                         disabled: !q && !V,
                         disabledTooltip: q || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, j, P, x, W, k, H, V, q],
+        [R, j, J, W, k, H, V, q, $, z],
     );
     return {
         giftCardsEnabled: S,
@@ -304,10 +310,10 @@ function S(e) {
         dropdownPaymentSourceId: D,
         giftCardWallet: R,
         isGiftCardCreditsChecked: k,
-        isSubscriptionPaidByWallet: Z,
+        isSubscriptionPaidByWallet: Q,
         handleGiftCardCreditsToggle: H,
         handleDropdownPaymentSourceChange: G,
-        giftCardCheckboxProps: $,
+        giftCardCheckboxProps: ee,
         walletCoversSubtotal: V,
         walletCoversTotal: Y,
         isWalletBalanceLoaded: K,
