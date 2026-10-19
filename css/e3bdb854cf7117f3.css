@@ -229,6 +229,11 @@
     width: auto
 }
 
+.container__79ea5.active__79ea5 .trailingAsset__79ea5,
+.container__79ea5:hover .trailingAsset__79ea5 {
+    display: none
+}
+
 .row__79ea5 {
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -2627,4 +2632,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=8b6979eac0772d7e.css.map*/
+/*# sourceMappingURL=e3bdb854cf7117f3.css.map*/
