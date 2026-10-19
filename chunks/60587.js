@@ -1,8 +1,8 @@
-n.d(t, { g: () => r, t: () => l });
+n.d(t, { g: () => l, t: () => r });
 var i,
     s,
-    l =
+    r =
         (((i = {})[(i.GRID_NAVIGATOR_EVENT = 0)] = "GRID_NAVIGATOR_EVENT"),
         (i[(i.MOUSE_EVENT = 1)] = "MOUSE_EVENT"),
         i),
-    r = (((s = {}).EMOJI = "emoji"), (s.STICKER = "sticker"), (s.PACK_ICON = "pack-icon"), s);
+    l = (((s = {}).EMOJI = "emoji"), (s.STICKER = "sticker"), (s.PACK_ICON = "pack-icon"), s);

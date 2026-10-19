@@ -19,29 +19,29 @@ var i = e(477900),
     I = e(645781);
 function D(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: u, isSlideReady: L } = t,
-        [U, A] = a.useState(""),
-        [x, y] = a.useState(null),
+        [U, x] = a.useState(""),
+        [A, y] = a.useState(null),
         [O, S] = a.useState(!1),
-        N = (0, E.GV)(),
-        h = (0, r.bG)([b.A], () => b.A.getGuild(n), [n]),
+        h = (0, E.GV)(),
+        N = (0, r.bG)([b.A], () => b.A.getGuild(n), [n]),
         v = a.useRef(null);
     a.useEffect(() => {
         L && v.current?.focus();
     }, [L]);
     let R = a.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == h)) return;
+                if ((t.preventDefault(), null == N)) return;
                 (S(!0), y(null));
-                let n = T.Ay.getDefaultChannel(h.id);
+                let n = T.Ay.getDefaultChannel(N.id);
                 try {
                     let t = G.intl.formatToPlainString(G.t.V4lepJ, { topic: U });
-                    (await _.A.createTextChannel(h.id, U, n?.parent_id, t), u());
+                    (await _.A.createTextChannel(N.id, U, n?.parent_id, t), u());
                 } catch (t) {
                     y(new g.Wl(t));
                 }
                 S(!1);
             },
-            [h, U, u],
+            [N, U, u],
         ),
         j = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -71,12 +71,12 @@ function D(t) {
                     direction: o.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != h && (0, i.jsx)(C.Ay, { guild: h }),
+                        null != N && (0, i.jsx)(C.Ay, { guild: N }),
                         (0, i.jsx)(c.E, {
                             className: I.J5,
                             color: "text-strong",
                             variant: "text-sm/semibold",
-                            children: h?.name,
+                            children: N?.name,
                         }),
                         (0, i.jsx)(p.D, {
                             className: I.DD,
@@ -101,21 +101,21 @@ function D(t) {
                             onSubmit: R,
                             children: (0, i.jsx)(m.k, {
                                 label: G.intl.string(G.t.bY20tU),
-                                error: x?.getFieldMessage("name"),
+                                error: A?.getFieldMessage("name"),
                                 type: "text",
                                 value: U,
-                                id: N,
-                                onChange: A,
+                                id: h,
+                                onChange: x,
                                 placeholder: G.intl.string(G.t.xGOYA8),
                                 inputRef: v,
                             }),
                         }),
-                        null != x &&
-                            0 === Object.keys(x.fields).length &&
+                        null != A &&
+                            0 === Object.keys(A.fields).length &&
                             (0, i.jsx)(c.E, {
                                 variant: "text-xs/normal",
                                 color: "text-feedback-critical",
-                                children: x.message,
+                                children: A.message,
                             }),
                     ],
                 }),

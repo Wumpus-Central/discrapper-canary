@@ -18,8 +18,8 @@ var i = n(477900),
     N = n(307301),
     b = n(834730),
     f = n(890856),
-    E = n(565645),
-    A = n(775602),
+    A = n(565645),
+    E = n(775602),
     v = n(688810),
     C = n(21161),
     S = n(850992),
@@ -34,7 +34,7 @@ var i = n(477900),
 function L(e) {
     let { sound: t, containerDimensions: n, ref: l } = e,
         r = (0, c.bG)([G.default], () => G.default.getCurrentUser()),
-        a = (0, c.bG)([A.Ay], () => A.Ay.useReducedMotion),
+        a = (0, c.bG)([E.Ay], () => E.Ay.useReducedMotion),
         [o, d] = s.useState([]),
         u = o.length < 50,
         m = t?.emojiId != null || t?.emojiName != null,
@@ -215,8 +215,8 @@ function ei(e) {
                 let e = n.getBoundingClientRect();
                 return { x: e.left + e.width / 2, y: e.top + e.height / 2 };
             }, [n, t])),
-        eE = (0, c.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        eA = s.useRef(0.01),
+        eA = (0, c.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        eE = s.useRef(0.01),
         ev = s.useRef(new d.IX()),
         eC = "1" === x.soundId,
         eS = `sound-${x.soundId}`,
@@ -248,9 +248,9 @@ function ei(e) {
         ez = eG && U;
     function eJ(e) {
         (eC &&
-            !eE &&
-            ((eA.current = Math.min(eA.current + 0.01, 0.1)),
-            Math.random() < eA.current && eN(ef.x, ef.y, void 0, void 0, { sprite: Y.dR })),
+            !eA &&
+            ((eE.current = Math.min(eE.current + 0.01, 0.1)),
+            Math.random() < eE.current && eN(ef.x, ef.y, void 0, void 0, { sprite: Y.dR })),
         null != R)
             ? R(e)
             : P || eg(M);
@@ -281,7 +281,7 @@ function ei(e) {
         return (
             eC &&
                 e.start(1e3, () => {
-                    eA.current = Math.max(eA.current - 0.01, 0.01);
+                    eE.current = Math.max(eE.current - 0.01, 0.01);
                 }),
             () => e.stop()
         );
@@ -338,7 +338,7 @@ function ei(e) {
                             "aria-hidden": !0,
                             ref: eb,
                             children: [
-                                eP && (0, i.jsx)(E.A, { emojiId: em, emojiName: ex, className: $.Zg }),
+                                eP && (0, i.jsx)(A.A, { emojiId: em, emojiName: ex, className: $.Zg }),
                                 (0, i.jsx)(b.E, {
                                     variant: "text-xs/medium",
                                     color: T ? void 0 : "text-muted",

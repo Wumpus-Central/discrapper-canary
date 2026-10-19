@@ -1,8 +1,8 @@
-n.d(t, { Bv: () => C, ar: () => h, f9: () => N, g5: () => _, k0: () => S, k5: () => g, nf: () => A });
+n.d(t, { Bv: () => C, ar: () => g, f9: () => N, g5: () => _, k0: () => x, k5: () => h, nf: () => A });
 var i = n(582128),
     s = n(536637),
-    l = n.n(s),
-    r = n(17928),
+    r = n.n(s),
+    l = n(17928),
     a = n(155718),
     o = n(166403),
     c = n(89366),
@@ -12,18 +12,18 @@ var i = n(582128),
     f = n(724651),
     E = n(732280),
     I = n(202541);
-function h() {
+function g() {
     let e = (0, E.V)(),
         t = (0, c.QQ)(),
         n = (0, f.O)(),
         i = (0, f.p)(),
-        s = g();
+        s = h();
     return null != e || t || null != n || null != i || s;
 }
-let g = () => {
-    let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
+let h = () => {
+    let e = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
         t = e?.metadata?.active_discount_expires_at;
-    return null != t && l()(Date.now()) <= l()(t);
+    return null != t && r()(Date.now()) <= r()(t);
 };
 function p(e) {
     switch (e) {
@@ -59,40 +59,40 @@ function p(e) {
     }
 }
 function A() {
-    let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription());
+    let e = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription());
     return p(e?.metadata?.active_discount_id);
 }
 function _(e) {
     let t = (0, m.A)(I.q),
         n = (0, m.A)(I.W7),
         s = (0, m.A)(I.Qo),
-        l = (0, m.A)(I.EG),
-        [r, a] = i.useState(!1),
+        r = (0, m.A)(I.EG),
+        [l, a] = i.useState(!1),
         [o, c] = i.useState(!1),
         [u, f] = i.useState(null),
-        E = t ?? n ?? s ?? l ?? null;
+        E = t ?? n ?? s ?? r ?? null;
     if (null != E) return { churnUserDiscountOffer: E, isFetchingChurnDiscountOffer: !1 };
     if (e) return { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o };
-    function h() {
+    function g() {
         (a(!0), c(!1));
     }
     return (
         o ||
-            r ||
+            l ||
             (c(!0),
             (0, d.qz)()
                 .then((e) => {
-                    (f(e), h());
+                    (f(e), g());
                 })
                 .catch((e) => {
-                    h();
+                    g();
                 })),
         { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o }
     );
 }
 function N() {
-    let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
-        t = g(),
+    let e = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
+        t = h(),
         n = null !== e && e.hasPremiumNitroMonthly,
         i = !!e?.hasActiveTrial;
     return n && !t && !i;
@@ -105,6 +105,6 @@ function C(e) {
     }
     return null;
 }
-function S() {
+function x() {
     return (0, u.ds)();
 }

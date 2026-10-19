@@ -1,8 +1,8 @@
 var i = { "./spritesheet-emoji-40.png.js": "617057", "./spritesheet-emoji-48.png.js": "587353" };
 function s(e) {
-    return n(l(e));
+    return n(r(e));
 }
-function l(e) {
+function r(e) {
     if (!n.o(i, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -12,6 +12,6 @@ function l(e) {
 ((s.keys = function () {
     return Object.keys(i);
 }),
-    (s.resolve = l),
+    (s.resolve = r),
     (e.exports = s),
     (s.id = 145519));

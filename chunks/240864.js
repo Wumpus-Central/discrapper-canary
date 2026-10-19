@@ -4,8 +4,8 @@ function i(e) {
         searchQuery: n,
         nitroLockedSectionStates: i,
         scrollTop: s,
-        sectionHeaderHeight: l = 0,
-        sectionFooterHeight: r = 0,
+        sectionHeaderHeight: r = 0,
+        sectionFooterHeight: l = 0,
     } = e;
     if ("" !== n) return { isNitroLockedSectionVisible: !1, areOnlyNitroLockedSectionsVisible: !1 };
     let a = t?.current?.getSectionDescriptors(),
@@ -15,8 +15,8 @@ function i(e) {
     let c = s + o,
         u = !1,
         d = !1,
-        m = "function" == typeof l ? l : () => l,
-        f = "function" == typeof r ? r : () => r;
+        m = "function" == typeof r ? r : () => r,
+        f = "function" == typeof l ? l : () => l;
     return (
         i.forEach((e, t) => {
             let n = a[t],

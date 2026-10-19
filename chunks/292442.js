@@ -40,19 +40,19 @@ class s extends r.Component {
     }
     render() {
         let { children: e, fallbackRender: n, FallbackComponent: t, fallback: o } = this.props,
-            { didCatch: s, error: a } = this.state,
-            u = e;
+            { didCatch: s, error: u } = this.state,
+            a = e;
         if (s) {
-            let e = { error: a, resetErrorBoundary: this.resetErrorBoundary };
-            if ("function" == typeof n) u = n(e);
-            else if (t) u = (0, r.createElement)(t, e);
-            else if (void 0 !== o) u = o;
-            else throw a;
+            let e = { error: u, resetErrorBoundary: this.resetErrorBoundary };
+            if ("function" == typeof n) a = n(e);
+            else if (t) a = (0, r.createElement)(t, e);
+            else if (void 0 !== o) a = o;
+            else throw u;
         }
         return (0, r.createElement)(
             i.Provider,
-            { value: { didCatch: s, error: a, resetErrorBoundary: this.resetErrorBoundary } },
-            u,
+            { value: { didCatch: s, error: u, resetErrorBoundary: this.resetErrorBoundary } },
+            a,
         );
     }
 }

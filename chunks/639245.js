@@ -18,8 +18,8 @@ var i = n(477900),
     N = n(793574),
     b = n(688810),
     f = n(139286),
-    E = n(235986),
-    A = n(573435),
+    A = n(235986),
+    E = n(573435),
     v = n(836039),
     C = n(702841),
     S = n(71393),
@@ -65,13 +65,13 @@ function ee(e) {
     return (0, i.jsx)(d.l, {
         children: (0, i.jsx)(Y.Uq, {
             className: $.Os,
-            children: (0, i.jsxs)(E.A, {
+            children: (0, i.jsxs)(A.A, {
                 className: $.gH,
                 children: [
                     (0, i.jsx)(I.A, { emojiName: r.name, className: $.P$, src: r.src, animated: !1, size: "jumbo" }),
-                    (0, i.jsxs)(E.A, {
-                        direction: E.A.Direction.VERTICAL,
-                        justify: E.A.Justify.CENTER,
+                    (0, i.jsxs)(A.A, {
+                        direction: A.A.Direction.VERTICAL,
+                        justify: A.A.Justify.CENTER,
                         className: $.bM,
                         children: [
                             (0, i.jsx)(u.E, {
@@ -106,11 +106,11 @@ let et = (e) => {
         n.isDiscoverable() ? (a(), (0, H.Z2)(o, {})) : s && (a(), (0, U.pX)(k.BVt.CHANNEL(o, z.Ay.getChannelId(o))));
     }
     let I = n.isDiscoverable() && null != n.presenceCount;
-    return (0, i.jsxs)(E.A, {
-        align: E.A.Align.CENTER,
+    return (0, i.jsxs)(A.A, {
+        align: A.A.Align.CENTER,
         children: [
-            (0, i.jsx)(A.Ay, {
-                mask: A.Ay.Masks.SQUIRCLE,
+            (0, i.jsx)(E.Ay, {
+                mask: E.Ay.Masks.SQUIRCLE,
                 width: 32,
                 height: 32,
                 className: $.__invalid_guildIconContainer,
@@ -123,12 +123,12 @@ let et = (e) => {
                           })
                         : (0, i.jsx)(G.Ay, { size: G.Ay.Sizes.SMALL, className: $.oi, guild: n }),
             }),
-            (0, i.jsxs)(E.A, {
-                direction: E.A.Direction.VERTICAL,
+            (0, i.jsxs)(A.A, {
+                direction: A.A.Direction.VERTICAL,
                 className: r()($.__invalid_guildInformation, $.bM),
                 children: [
-                    (0, i.jsxs)(E.A, {
-                        align: E.A.Align.CENTER,
+                    (0, i.jsxs)(A.A, {
+                        align: A.A.Align.CENTER,
                         children: [
                             (0, i.jsx)(_.A, { guild: n, className: $.n2 }),
                             g
@@ -147,8 +147,8 @@ let et = (e) => {
                                   }),
                         ],
                     }),
-                    (0, i.jsx)(E.A, {
-                        align: E.A.Align.CENTER,
+                    (0, i.jsx)(A.A, {
+                        align: A.A.Align.CENTER,
                         children: I
                             ? ((t = !l && !s),
                               (0, i.jsxs)(i.Fragment, {
@@ -276,7 +276,7 @@ function ei(e) {
             expressionSourceApplication: d,
             expressionSourceGuild: x,
             joinedEmojiSourceGuildRecord: g,
-            closePopout: A,
+            closePopout: E,
             onToggleShowMoreEmojis: C,
             guildEmoji: S,
             demoMode: O = !1,
@@ -331,7 +331,7 @@ function ei(e) {
             isDiscoverable: H,
             shouldHideRoleSubscriptionCTA: el,
             onOpenPremiumSettings: () => {
-                (A(),
+                (E(),
                     V.default.track(k.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_page: X.page,
                         location_section: X.section,
@@ -359,7 +359,7 @@ function ei(e) {
             (function () {
                 async function e() {
                     if (O || null == x || K) return;
-                    A();
+                    E();
                     let e = x.id;
                     try {
                         (await p.A.joinGuild(e), p.A.transitionToGuildSync(e));
@@ -369,7 +369,7 @@ function ei(e) {
                 return (0, i.jsxs)("div", {
                     className: $.gH,
                     children: [
-                        (0, i.jsxs)(E.A, {
+                        (0, i.jsxs)(A.A, {
                             children: [
                                 (0, i.jsx)(I.A, {
                                     className: $.P$,
@@ -378,9 +378,9 @@ function ei(e) {
                                     animated: l.animated,
                                     size: "jumbo",
                                 }),
-                                (0, i.jsxs)(E.A, {
-                                    direction: E.A.Direction.VERTICAL,
-                                    justify: E.A.Justify.CENTER,
+                                (0, i.jsxs)(A.A, {
+                                    direction: A.A.Direction.VERTICAL,
+                                    justify: A.A.Justify.CENTER,
                                     className: $.bM,
                                     children: [
                                         (0, i.jsx)(u.E, {
@@ -407,7 +407,7 @@ function ei(e) {
                                       size: "sm",
                                       fullWidth: !0,
                                       buttonTextOverride: eo.text,
-                                      onSubscribeModalClose: (t) => (t ? e() : A()),
+                                      onSubscribeModalClose: (t) => (t ? e() : E()),
                                       postSuccessGuild: t ? (x ?? void 0) : void 0,
                                       premiumModalAnalyticsLocation: X,
                                   }),
@@ -431,7 +431,7 @@ function ei(e) {
                                 size: "sm",
                                 fullWidth: !0,
                                 onClick: function () {
-                                    (A(),
+                                    (E(),
                                         g?.id != null &&
                                             p.A.transitionToGuildSync(
                                                 g.id,
@@ -462,7 +462,7 @@ function ei(e) {
                             expressionSourceGuild: x ?? T.GO.createFromGuildRecord(g),
                             hasJoinedExpressionSourceGuild: K,
                             isDisplayingJoinGuildButtonInPopout: em,
-                            closePopout: A,
+                            closePopout: E,
                         }),
                         n &&
                             (0, i.jsxs)(i.Fragment, {
@@ -478,7 +478,7 @@ function ei(e) {
                                                 ej(!eh));
                                         },
                                         className: $.wK,
-                                        children: (0, i.jsxs)(E.A, {
+                                        children: (0, i.jsxs)(A.A, {
                                             children: [
                                                 (0, i.jsx)(u.E, {
                                                     className: $.__invalid_showMoreEmojisLabel,
@@ -501,7 +501,7 @@ function ei(e) {
                                             emojiId: l.emojiId,
                                             expressionSourceGuild: x,
                                             popoutData: eo,
-                                            onClose: A,
+                                            onClose: E,
                                             hasJoinedEmojiSourceGuild: K,
                                             isDisplayingButtonInTopSection: em || ex,
                                         }),

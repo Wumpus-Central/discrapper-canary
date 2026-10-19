@@ -1,8 +1,8 @@
-n.d(t, { O: () => s, W: () => l });
+n.d(t, { O: () => s, W: () => r });
 let i = !1;
 function s(e) {
     i = e;
 }
-function l() {
+function r() {
     return i;
 }

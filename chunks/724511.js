@@ -2,8 +2,8 @@ n.d(t, { A: () => u });
 var i = n(477900);
 n(582128);
 var s = n(503698),
-    l = n.n(s),
-    r = n(194261),
+    r = n.n(s),
+    l = n(194261),
     a = n(573435),
     o = n(260509),
     c = n(82477);
@@ -21,14 +21,14 @@ let u = function (e) {
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(a.Ay, {
-                className: l()(c.dK, t),
+                className: r()(c.dK, t),
                 mask: a.hW.SQUIRCLE,
                 width: u,
                 height: d,
                 children:
                     null == E
                         ? (0, i.jsx)("div", {
-                              className: l()(c.$f, c.Gc),
+                              className: r()(c.$f, c.Gc),
                               children: (0, i.jsx)("div", { className: c.Hj, children: (0, o.Rb)(n) }),
                           })
                         : (0, i.jsx)("img", { alt: n.name, src: E, className: c.$f }),
@@ -36,7 +36,7 @@ let u = function (e) {
             f
                 ? (0, i.jsx)("div", {
                       className: c.bg,
-                      children: (0, i.jsx)(r.LockIcon, {
+                      children: (0, i.jsx)(l.LockIcon, {
                           size: "custom",
                           color: "currentColor",
                           width: 10,

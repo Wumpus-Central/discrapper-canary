@@ -2,8 +2,8 @@ n.d(t, { A: () => u });
 var i = n(17928),
     s = n(73153);
 n(321073);
-var l = n(770335);
-function r(e) {
+var r = n(770335);
+function l(e) {
     let t = [],
         n = {},
         i = {};
@@ -16,7 +16,7 @@ class c extends i.Ay.PersistedStore {
     static displayName = "EmojiPackStore";
     static persistKey = "EmojiPackStore";
     initialize(e) {
-        o = { ...r(Array.isArray(e?.packs) ? e.packs : []), fetchState: "NOT_FETCHED" };
+        o = { ...l(Array.isArray(e?.packs) ? e.packs : []), fetchState: "NOT_FETCHED" };
     }
     getState() {
         return { packs: o.packs };
@@ -49,7 +49,7 @@ let u = new c(s.h, {
     EMOJI_PACKS_FETCH_SUCCESS: function (e) {
         let { packs: t } = e;
         o = {
-            ...r(
+            ...l(
                 t.map((e) => ({
                     id: e.id,
                     name: e.name,
@@ -69,7 +69,7 @@ let u = new c(s.h, {
                                 available: t.available,
                                 managed: t.managed,
                                 roles: t.roles,
-                                type: l.i.PACK,
+                                type: r.i.PACK,
                             }
                         );
                     }),

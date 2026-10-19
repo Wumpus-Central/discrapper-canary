@@ -48,16 +48,16 @@ let T = new d.Vy("LibDaveManager"),
             T.info("DAVE loaded");
         },
     },
-    m = new d.Vy("EncryptionWorker");
+    b = new d.Vy("EncryptionWorker");
 (0, d.$o)(d.gZ);
-let b = "uninitialized",
+let m = "uninitialized",
     h = null,
     w = new Map(),
     A = new Map(),
     g = [];
 function O(e) {
     let { data: r } = e;
-    if ("initialized" !== b && r.type !== c.INITIALIZE) return void g.push(e);
+    if ("initialized" !== m && r.type !== c.INITIALIZE) return void g.push(e);
     switch (r.type) {
         case c.INITIALIZE:
             P();
@@ -100,7 +100,7 @@ function O(e) {
                 for (let e of o) {
                     let t = w.get(e);
                     if (e > 0 && null != t && t !== r)
-                        return void m.error(`DAVE worker refusing SSRC update for ${r}, SSRC ${e} is owned by ${t}`);
+                        return void b.error(`DAVE worker refusing SSRC update for ${r}, SSRC ${e} is owned by ${t}`);
                 }
                 let a = A.get(r);
                 for (let e of (null == a && ((a = { audioSSRC: t, videoSSRCs: n, decryptor: null }), A.set(r, a)),
@@ -127,12 +127,12 @@ function O(e) {
             })(r);
             break;
         default:
-            throw (m.error("DAVE worker unknown message type"), Error("Unsupported message type"));
+            throw (b.error("DAVE worker unknown message type"), Error("Unsupported message type"));
     }
 }
 async function P() {
-    if ("uninitialized" === b)
-        for (let e of ((b = "initializing"),
+    if ("uninitialized" === m)
+        for (let e of ((m = "initializing"),
         (n = await (null != R
             ? R
             : (R = new Promise((e, r) => {
@@ -152,7 +152,7 @@ async function P() {
                           (T.error("Failed to load DAVE module", e), r(e));
                       });
               })))),
-        (b = "initialized"),
+        (m = "initialized"),
         g))
             O(e);
 }
@@ -167,7 +167,7 @@ function _(e) {
             r = k;
             break;
         default:
-            (m.error("DAVE worker transform with unknown operation", t), (r = () => {}));
+            (b.error("DAVE worker transform with unknown operation", t), (r = () => {}));
     }
     let a = new TransformStream({ transform: r });
     n.pipeThrough(a).pipeTo(o);
@@ -180,7 +180,7 @@ function D(e, r) {
         let t = h;
         if (null == t) return;
         let i = e.getMetadata().synchronizationSource;
-        if (null == i) return void m.warn("no ssrc found in frame metadata");
+        if (null == i) return void b.warn("no ssrc found in frame metadata");
         let l = (function (e, r, t) {
             if (0 === e.data.byteLength) return e;
             let i = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -204,19 +204,19 @@ function D(e, r) {
         if (null == l) return;
         r.enqueue(l);
     } catch (e) {
-        m.warn("error encrypting frame", e);
+        b.warn("error encrypting frame", e);
     }
 }
 function k(e, r) {
     try {
         let t = e.getMetadata().synchronizationSource;
-        if (null == t) return void m.warn("no ssrc found in frame metadata");
+        if (null == t) return void b.warn("no ssrc found in frame metadata");
         let o = w.get(t);
-        if (null == o) return void m.warn("no userId found for ssrc", t);
+        if (null == o) return void b.warn("no userId found for ssrc", t);
         let a = A.get(o);
-        if (null == a) return void m.warn("no user found for userId", o);
+        if (null == a) return void b.warn("no user found for userId", o);
         let i = a.decryptor;
-        if (null == i) return void m.warn("no decryptor found for userId", o);
+        if (null == i) return void b.warn("no decryptor found for userId", o);
         let l = (function (e, r) {
             if (0 === e.data.byteLength) return e;
             let t = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -237,7 +237,7 @@ function k(e, r) {
         if (null == l) return;
         r.enqueue(l);
     } catch (e) {
-        m.warn("error decrypting frame", e);
+        b.warn("error decrypting frame", e);
     }
 }
 function V(e) {

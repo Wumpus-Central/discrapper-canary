@@ -1,36 +1,36 @@
 n.d(t, { DK: () => _, Lj: () => u, R7: () => d, VW: () => f, bq: () => p, d5: () => c, eI: () => a, gX: () => h });
-var s = n(73153),
-    r = n(975189),
+var r = n(73153),
+    s = n(975189),
     o = n(385081),
-    i = n(616e3),
-    l = n(667931);
+    l = n(616e3),
+    i = n(667931);
 let a = {
         log(e, t) {
             let { projectId: n } = t;
-            (s.h.dispatch({ type: "CONJURE_LOG_APPEND", projectId: n, log: e }),
+            (r.h.dispatch({ type: "CONJURE_LOG_APPEND", projectId: n, log: e }),
                 (function (e, t) {
                     if (!0 === t.historical || "error" !== t.level) return;
                     let n = null != t.source ? g[t.source] : void 0;
                     if (null == n) return;
-                    let s = S.get(e);
-                    null == s && ((s = new Set()), S.set(e, s));
-                    let r = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
-                    s.has(r) ||
-                        s.size >= 10 ||
-                        (s.add(r),
+                    let r = S.get(e);
+                    null == r && ((r = new Set()), S.set(e, r));
+                    let s = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
+                    r.has(s) ||
+                        r.size >= 10 ||
+                        (r.add(s),
                         (0, o.Hy)(e, { location: n.location, code: n.code, message: t.message, details: t.source }));
                 })(n, e));
         },
         debug_git_info(e, t) {
             let { projectId: n } = t;
             !0 === e.lite
-                ? s.h.dispatch({
+                ? r.h.dispatch({
                       type: "CONJURE_DEBUG_INSTANCE_SEEN",
                       projectId: n,
                       instanceSince: e.instance_since,
                       observedAt: new Date().toISOString(),
                   })
-                : s.h.dispatch({
+                : r.h.dispatch({
                       type: "CONJURE_DEBUG_GIT_INFO_RESULT",
                       projectId: n,
                       info: e.info,
@@ -41,7 +41,7 @@ let a = {
         },
         restart_agent_result(e, t) {
             let { projectId: n } = t;
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_RESTART_AGENT_RESULT",
                 projectId: n,
                 outcome: "restarting" === e.outcome ? "restarting" : "failed",
@@ -52,7 +52,7 @@ let a = {
         },
         debug_status(e, t) {
             let { projectId: n } = t;
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_DEBUG_STATUS_SET",
                 projectId: n,
                 status: e.status ?? null,
@@ -61,7 +61,7 @@ let a = {
         },
         debug_backlog(e, t) {
             let { projectId: n } = t;
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_DEBUG_BACKLOG",
                 projectId: n,
                 backlog: e,
@@ -69,20 +69,20 @@ let a = {
             });
         },
         timing_trace_events(e, t) {
-            var n, r;
+            var n, s;
             let o,
                 { projectId: a } = t;
-            (s.h.dispatch({ type: "CONJURE_DEBUG_TIMING_TRACE", projectId: a, batch: e.batch, live: e.live }),
+            (r.h.dispatch({ type: "CONJURE_DEBUG_TIMING_TRACE", projectId: a, batch: e.batch, live: e.live }),
                 (n = a),
-                (r = e.batch.trace_id),
-                null == (o = i.A.getTimingTrace(n, r)) ||
-                    !(0, l.JQ)(o) ||
-                    E.has(r) ||
-                    (E.add(r), console.log("[conjure] timing trace", JSON.stringify(o))));
+                (s = e.batch.trace_id),
+                null == (o = l.A.getTimingTrace(n, s)) ||
+                    !(0, i.JQ)(o) ||
+                    E.has(s) ||
+                    (E.add(s), console.log("[conjure] timing trace", JSON.stringify(o))));
         },
         debug_history_state(e, t) {
             let { projectId: n } = t;
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_HISTORY_LOAD_SETTLE",
                 projectId: n,
                 scope: e.scope,
@@ -97,7 +97,7 @@ let a = {
             let { projectId: n } = t;
             null != e.projected &&
                 null != e.threshold &&
-                s.h.dispatch({
+                r.h.dispatch({
                     type: "CONJURE_DEBUG_COMPACTION_DECLINED",
                     projectId: n,
                     promptCeiling: e.prompt_ceiling ?? 0,
@@ -110,12 +110,12 @@ let a = {
         },
         force_compaction_result(e, t) {
             let { projectId: n } = t,
-                r = e.outcome;
-            ("compacted" === r || "declined" === r || "failed" === r || "busy" === r) &&
-                s.h.dispatch({
+                s = e.outcome;
+            ("compacted" === s || "declined" === s || "failed" === s || "busy" === s) &&
+                r.h.dispatch({
                     type: "CONJURE_DEBUG_FORCE_COMPACTION_RESULT",
                     projectId: n,
-                    outcome: r,
+                    outcome: s,
                     reason: e.reason,
                     ...(!0 === e.pending_turn ? { pendingTurn: !0 } : {}),
                     observedAt: new Date().toISOString(),
@@ -124,7 +124,7 @@ let a = {
         restart_sandbox_result(e, t) {
             let { projectId: n } = t;
             ("restarted" === e.outcome || "failed" === e.outcome) &&
-                s.h.dispatch({
+                r.h.dispatch({
                     type: "CONJURE_SANDBOX_RESTART_RESULT",
                     projectId: n,
                     outcome: e.outcome,
@@ -136,7 +136,7 @@ let a = {
             let { projectId: n } = t;
             null != e.tokens_before &&
                 null != e.tokens_after &&
-                s.h.dispatch({
+                r.h.dispatch({
                     type: "CONJURE_DEBUG_COMPACTION_REPORT",
                     projectId: n,
                     tokensBefore: e.tokens_before,
@@ -148,26 +148,26 @@ let a = {
         },
     };
 function d(e) {
-    s.h.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId: e });
-    let t = (0, r.KY)(e);
+    r.h.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId: e });
+    let t = (0, s.KY)(e);
     try {
         if (null == t) throw Error("Not connected");
         t.sendDebugStatusRequest();
     } catch (t) {
         (console.error("[conjure] debug status request failed", t),
-            s.h.dispatch({ type: "CONJURE_DEBUG_STATUS_SET", projectId: e, status: null, failed: !0 }));
+            r.h.dispatch({ type: "CONJURE_DEBUG_STATUS_SET", projectId: e, status: null, failed: !0 }));
     }
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    s.h.dispatch({ type: "CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED", projectId: e });
-    let n = (0, r.KY)(e);
+    r.h.dispatch({ type: "CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED", projectId: e });
+    let n = (0, s.KY)(e);
     try {
         if (null == n) throw Error("Not connected");
         n.sendForceCompaction(t);
     } catch (t) {
         (console.error("[conjure] force compaction request failed", t),
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_DEBUG_FORCE_COMPACTION_RESULT",
                 projectId: e,
                 outcome: "failed",
@@ -177,14 +177,14 @@ function u(e) {
     }
 }
 function p(e) {
-    s.h.dispatch({ type: "CONJURE_SANDBOX_RESTART_REQUESTED", projectId: e });
-    let t = (0, r.KY)(e);
+    r.h.dispatch({ type: "CONJURE_SANDBOX_RESTART_REQUESTED", projectId: e });
+    let t = (0, s.KY)(e);
     try {
         if (null == t) throw Error("Not connected");
         t.sendRestartSandbox();
     } catch (t) {
         (console.error("[conjure] restart sandbox request failed", t),
-            s.h.dispatch({
+            r.h.dispatch({
                 type: "CONJURE_SANDBOX_RESTART_RESULT",
                 projectId: e,
                 outcome: "failed",
@@ -194,23 +194,23 @@ function p(e) {
     }
 }
 function h(e) {
-    let t = (0, r.KY)(e);
+    let t = (0, s.KY)(e);
     if (null != t) {
         try {
             t.sendDebugGitInfoRequest(!0);
         } catch {
             return;
         }
-        s.h.dispatch({ type: "CONJURE_DEBUG_INSTANCE_POLL_REQUESTED", projectId: e, requestedAt: Date.now() });
+        r.h.dispatch({ type: "CONJURE_DEBUG_INSTANCE_POLL_REQUESTED", projectId: e, requestedAt: Date.now() });
     }
 }
 function _(e) {
-    let t = (0, r.KY)(e);
+    let t = (0, s.KY)(e);
     try {
         if (null == t) throw Error("Not connected");
-        (t.sendDebugGitInfoRequest(), s.h.dispatch({ type: "CONJURE_DEBUG_GIT_INFO_REQUESTED", projectId: e }));
+        (t.sendDebugGitInfoRequest(), r.h.dispatch({ type: "CONJURE_DEBUG_GIT_INFO_REQUESTED", projectId: e }));
     } catch {
-        s.h.dispatch({
+        r.h.dispatch({
             type: "CONJURE_DEBUG_GIT_INFO_RESULT",
             projectId: e,
             error: "Not connected",
@@ -219,13 +219,13 @@ function _(e) {
     }
 }
 function f(e, t) {
-    s.h.dispatch({ type: "CONJURE_RESTART_AGENT_REQUESTED", projectId: e });
-    let n = (0, r.KY)(e);
+    r.h.dispatch({ type: "CONJURE_RESTART_AGENT_REQUESTED", projectId: e });
+    let n = (0, s.KY)(e);
     try {
         if (null == n) throw Error("Not connected");
         n.sendRestartAgent(t);
     } catch {
-        s.h.dispatch({
+        r.h.dispatch({
             type: "CONJURE_RESTART_AGENT_RESULT",
             projectId: e,
             outcome: "failed",
