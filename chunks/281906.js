@@ -1474,7 +1474,7 @@ let si = (0, ss.mj)({
 });
 var sn = s(398523),
     sa = s(881373),
-    sl = s(721157),
+    sl = s(236233),
     sr = s(555393),
     sc = s(325652),
     so = s(852218),
@@ -1527,33 +1527,35 @@ function sv(e) {
             youtubeCard: d,
             riotCampaignCard: m,
             macaronCard: x,
-            codeBlurpleTeaserCard: g,
+            codeBlurpleCard: g,
         } = (function () {
-            let { analyticsLocations: e } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
-                t = (0, sd.fR)(),
-                s = (0, sm.U)(),
-                i = (function (e) {
+            let e,
+                t,
+                { analyticsLocations: s } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
+                i = ((e = (0, sd.eh)()), (t = (0, sd.fR)()), null != e ? e : t),
+                n = (0, sm.U)(),
+                a = (function (e) {
                     let { location: t } = e,
                         { enabled: s } = si.useConfig({ location: t });
                     return s;
                 })({ location: "useHardwarePartnerPerkCards" }),
-                n = (0, sa.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
-                a = sn.A.useConfig({ location: "PremiumWhatsNewSection" }).enabled,
-                l = (0, sp.mh)({ location: "useThirdPartyPartnerPerkCards" }),
-                r = (function (e) {
+                l = (0, sa.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
+                r = sn.A.useConfig({ location: "PremiumWhatsNewSection" }).enabled,
+                d = (0, sp.mh)({ location: "useThirdPartyPartnerPerkCards" }),
+                u = (function (e) {
                     let { location: t } = e,
                         { enabled: s } = sg.useConfig({ location: t });
                     return s;
                 })({ location: "useThirdPartyPartnerPerkCards" }),
-                d = null === (0, sr.N)(),
-                u = (0, t0.fY)({ location: "useThirdPartyPartnerPerkCards" }),
-                { currentDate: m, nDaysInMonth: x } = (0, o.useMemo)(() => {
+                m = null === (0, sr.N)(),
+                x = (0, t0.fY)({ location: "useThirdPartyPartnerPerkCards" }),
+                { currentDate: g, nDaysInMonth: p } = (0, o.useMemo)(() => {
                     let e = new Date();
                     return { currentDate: e, nDaysInMonth: new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() };
                 }, []);
             return (0, o.useMemo)(() => {
-                let o =
-                        i && null == t
+                let e =
+                        a && null == i
                             ? {
                                   id: tB.CALL_OF_DUTY_3PP_EXPIRED_CARD_ID,
                                   title: J.intl.string(sN.default["IcD/7p"]),
@@ -1572,7 +1574,7 @@ function sv(e) {
                                       "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
                               }
                             : null,
-                    g = n
+                    t = l
                         ? {
                               id: tB.LOGITECH_3PP_CARD_ID,
                               title: J.intl.string(sA.default.OlObRa),
@@ -1582,7 +1584,7 @@ function sv(e) {
                               }),
                               subscriptionRequired: !0,
                               isThirdPartyPerk: !0,
-                              progress: m.getDate() / x,
+                              progress: g.getDate() / p,
                               ctaText: J.intl.string(J.t.w7s5Qr),
                               onCtaClick: () =>
                                   (0, su.P)({
@@ -1591,7 +1593,7 @@ function sv(e) {
                                       subtitle: J.intl.format(sA.default.W8jOD0, {
                                           termsUrl: eu.A.getArticleURL(eq.MVz.LOGITECH_PROMOTION),
                                       }),
-                                      analyticsLocations: e,
+                                      analyticsLocations: s,
                                   }),
                               blurTint: "#2E213D",
                               backgroundAssetUrl:
@@ -1601,11 +1603,11 @@ function sv(e) {
                                   alt: "Logitech",
                               }),
                               analyticsOptions: { thirdPartyPartner: so.XY },
-                              ctaDisabled: d,
-                              ctaLoading: d,
+                              ctaDisabled: m,
+                              ctaLoading: m,
                           }
                         : null,
-                    p = a
+                    o = r
                         ? {
                               id: tB.RECURRING_3P_PROMOTIONS_CARD_ID,
                               title: J.intl.string(J.t.m7PucM),
@@ -1615,7 +1617,7 @@ function sv(e) {
                               caption: (0, c.jsx)("img", { src: "/assets/aae9b13becd816cf.svg", alt: "SteelSeries" }),
                               backgroundAssetUrl:
                                   "https://cdn.discordapp.com/assets/content/202c441e48d2930f99f9519c9699fb047af18c4d0ec0cb490480a9a6f9d326ec.webp",
-                              progress: m.getDate() / x,
+                              progress: g.getDate() / p,
                               ctaText: J.intl.string(J.t.w7s5Qr),
                               onCtaClick: () =>
                                   (0, su.P)({
@@ -1624,15 +1626,15 @@ function sv(e) {
                                       subtitle: J.intl.format(J.t.LOYRxB, {
                                           helpCenterLink: eu.A.getArticleURL(eq.MVz.RECURRING_PROMOTION),
                                       }),
-                                      analyticsLocations: e,
+                                      analyticsLocations: s,
                                   }),
                               blurTint: "#2E213D",
                               analyticsOptions: { thirdPartyPartner: so.KS },
-                              ctaDisabled: d,
-                              ctaLoading: d,
+                              ctaDisabled: m,
+                              ctaLoading: m,
                           }
                         : null,
-                    f = r
+                    f = u
                         ? {
                               id: tB.RUST_3PP_CARD_ID,
                               title: J.intl.string(sE.default.gQ1ctg),
@@ -1659,16 +1661,16 @@ function sv(e) {
                               ctaIconPosition: "end",
                               onCtaClick: () => (0, t4.default)({ applicationId: sh.IG }),
                               analyticsOptions: { thirdPartyPartner: "rust" },
-                              ctaDisabled: d,
-                              ctaLoading: d,
+                              ctaDisabled: m,
+                              ctaLoading: m,
                           }
                         : null;
                 return {
-                    expiredCallOfDutyCard: o,
-                    logitechCard: g,
+                    expiredCallOfDutyCard: e,
+                    logitechCard: t,
                     rustCard: f,
-                    steelseriesCard: p,
-                    youtubeCard: l
+                    steelseriesCard: o,
+                    youtubeCard: d
                         ? {
                               id: tB.YOUTUBE_3PP_CARD_ID,
                               title: J.intl.string(sT.default["BdIVB+"]),
@@ -1685,7 +1687,7 @@ function sv(e) {
                               onCtaClick: () =>
                                   (0, su.P)({
                                       partnerIds: [so.NC],
-                                      analyticsLocations: e,
+                                      analyticsLocations: s,
                                       title: J.intl.string(sT.default.TDZUui),
                                       subtitle: J.intl.format(sT.default.BTLkvw, {
                                           helpCenterUrl: eu.A.getArticleURL(eq.MVz.YOUTUBE_PROMOTION),
@@ -1704,12 +1706,12 @@ function sv(e) {
                                       },
                                   }),
                               analyticsOptions: { thirdPartyPartner: so.NC },
-                              ctaDisabled: d,
-                              ctaLoading: d,
+                              ctaDisabled: m,
+                              ctaLoading: m,
                           }
                         : null,
                     riotCampaignCard:
-                        null != s
+                        null != n
                             ? {
                                   id: tB.RIOT_CREDIT_CAMPAIGN_PERK_CARD_ID,
                                   title: J.intl.string(sj.default.zCdMTs),
@@ -1717,9 +1719,9 @@ function sv(e) {
                                       termsUrl: eu.A.getArticleURL(eq.MVz.RIOT_CREDIT_CAMPAIGN),
                                   }),
                                   pillText:
-                                      null != s.redemptionEndsAt
+                                      null != n.redemptionEndsAt
                                           ? J.intl.formatToPlainString(sN.default.g7iyvR, {
-                                                date: (0, sl.Sw)(s.redemptionEndsAt),
+                                                date: (0, sl.Sw)(n.redemptionEndsAt),
                                             })
                                           : void 0,
                                   caption: (0, c.jsx)("img", {
@@ -1732,15 +1734,15 @@ function sv(e) {
                                   blurTint: "#310A0B",
                                   isThirdPartyPerk: !0,
                                   onCtaClick: () => {
-                                      (0, sx.W)({ analyticsLocations: e });
+                                      (0, sx.W)({ analyticsLocations: s });
                                   },
                                   analyticsOptions: { thirdPartyPartner: "riot" },
                               }
                             : null,
-                    macaronCard: u,
-                    codeBlurpleTeaserCard: t,
+                    macaronCard: x,
+                    codeBlurpleCard: i,
                 };
-            }, [u, t, s, e, i, m, n, x, a, r, l, d]);
+            }, [x, i, n, s, a, g, l, p, r, u, d, m]);
         })(),
         { phase: p } = (0, t0.vc)({ location: "NitroRewardsSection" }),
         f =

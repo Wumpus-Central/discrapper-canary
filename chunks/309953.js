@@ -1484,7 +1484,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 642426, Version Hash: 40ad982e4b3b0f5661a76e6d43244f87ea0fc871`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 642429, Version Hash: 9f36af084b028ebc081d7316b7e91a413be04584`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -2926,11 +2926,10 @@ let re = (0, i8.qT)({
             n.e("262720"),
             n.e("787462"),
             n.e("170371"),
-            n.e("587598"),
             n.e("316140"),
             n.e("313052"),
             n.e("971508"),
-            n.e("647124"),
+            n.e("763216"),
             n.e("217137"),
             n.e("706687"),
             n.e("503177"),
@@ -5173,7 +5172,6 @@ let a2 = (0, i8.Fe)({
                 n.e("286712"),
                 n.e("49344"),
                 n.e("170371"),
-                n.e("587598"),
                 n.e("316140"),
                 n.e("313052"),
                 n.e("639721"),
@@ -5183,7 +5181,7 @@ let a2 = (0, i8.Fe)({
                 n.e("876892"),
                 n.e("971508"),
                 n.e("816799"),
-                n.e("647124"),
+                n.e("763216"),
                 n.e("352351"),
                 n.e("421273"),
                 n.e("229450"),
@@ -24018,15 +24016,15 @@ function RN(e) {
     return (0, M.jsx)(Rg.MA, { isTabSelected: n, badgeCopy: r, offerExpiresAt: a, tooltipPosition: "right" });
 }
 var RC = n(614791),
-    RO = n(52530);
-let RR = (0, H.mj)({
+    RO = n(52530),
+    RR = n(829617);
+let RL = (0, H.mj)({
     name: "2026-10-code-blurple-teaser-marketing",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var RL = n(585669),
-    Ry = n(886205),
+var Ry = n(886205),
     RD = n(261995),
     Rv = n(964661),
     Rb = n(727949),
@@ -24593,7 +24591,7 @@ function La(e) {
         { enabled: C } = (0, RD.vc)({ location: "NitroTabButton" }),
         { enabled: O } = Ry.A.useConfig({ location: "NitroTabButton" }),
         R = (0, RO.k8)("NitroTabButton"),
-        { enabled: L } = RR.useConfig({ location: "NitroTabButton" }),
+        { enabled: L } = RL.useConfig({ location: "NitroTabButton" }),
         y = ((t = (0, Rl.L)(lk.PremiumTypes.TIER_2)), (n = (0, Rs.rX)("NitroTabButton")), t && n),
         D = ((i = (0, Rl.L)(lk.PremiumTypes.TIER_2)), (0, Rs.tb)("NitroTabButton") && !i),
         v = (0, Rb.NF)({ trialOffer: m }),
@@ -24650,7 +24648,7 @@ function La(e) {
         en && ep.push(rG.M.PREMIUM_ORBS_UPSELL_POPOVER),
         el && ep.push(rG.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
         Q && ep.push(rG.M.MACARON_3P_POPOVER),
-        R === RL.z.COUNTDOWN && L && ep.push(rG.M.CODE_BLURPLE_TEASER_TOOLTIP),
+        R === RR.b.COUNTDOWN && L && ep.push(rG.M.CODE_BLURPLE_TEASER_TOOLTIP),
         y && ep.push(rG.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT),
         D && ep.push(rG.M.NITRO_FILE_UPLOAD_1GB_UPSELL));
     let [eT, em] = (0, ro.kn)(et ? [] : ep, { bypassAutoDismiss: !0 }),
@@ -25683,7 +25681,7 @@ let L6 = "isHideDevBanner",
                     className: tE()(L5.Wz, L5.mr),
                     children: [
                         (0, M.jsx)(L3, { className: L5.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "642426" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "642429" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -54258,7 +54256,6 @@ let Wf = (0, tz.Fe)({
             n.e("286712"),
             n.e("49344"),
             n.e("170371"),
-            n.e("587598"),
             n.e("544104"),
             n.e("316140"),
             n.e("914248"),
@@ -54277,7 +54274,7 @@ let Wf = (0, tz.Fe)({
             n.e("816799"),
             n.e("124981"),
             n.e("852694"),
-            n.e("647124"),
+            n.e("763216"),
             n.e("352351"),
             n.e("421273"),
             n.e("229450"),
@@ -54367,10 +54364,12 @@ let Wf = (0, tz.Fe)({
             n.e("734546"),
             n.e("371032"),
             n.e("676237"),
+            n.e("153606"),
             n.e("574196"),
             n.e("256769"),
             n.e("410908"),
             n.e("241425"),
+            n.e("587598"),
             n.e("353266"),
             n.e("572186"),
             n.e("904727"),
