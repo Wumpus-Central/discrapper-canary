@@ -22,8 +22,8 @@ var l = n(477900),
     y = n(409626),
     j = n(422069),
     v = n(652215),
-    _ = n(624458),
-    b = n(821124),
+    b = n(624458),
+    _ = n(821124),
     T = n(202384),
     N = n(513461),
     M = n(709977),
@@ -186,7 +186,7 @@ class eA extends i.PureComponent {
                 subtitle: w.intl.string(w.t["13tjTU"]),
                 variant: "primary",
                 confirmText: w.intl.string(w.t["cY+Oob"]),
-                onConfirm: () => _.A.removeGuildJoinRequest(e.id),
+                onConfirm: () => b.A.removeGuildJoinRequest(e.id),
             });
     };
     handleViewApplicationRejection = () => {
@@ -263,9 +263,9 @@ class eA extends i.PureComponent {
     renderMemberVerificationSuccessModal = () => {
         let { guild: e, guildJoinRequest: t } = this.props,
             n = t?.applicationStatus === N.B5.APPROVED;
-        if (null == e || null == t || !n || (0, b.NK)(t)) return null;
+        if (null == e || null == t || !n || (0, _.NK)(t)) return null;
         function i() {
-            null != e && null != t && _.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
+            null != e && null != t && b.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
         }
         return (0, l.jsx)(h.aF, {
             renderModal: (t) => (0, l.jsx)(H, { ...t, onAccept: i, guildName: e.name }),
@@ -295,8 +295,8 @@ class eA extends i.PureComponent {
                 isStaff: I,
                 guildJoinRequest: y,
                 showLinkedLobbyApplicationLoadingIndicator: j,
-                requiredLinkedLobbyApplication: _,
-                shouldRelaunchLinkedLobbyApplication: b,
+                requiredLinkedLobbyApplication: b,
+                shouldRelaunchLinkedLobbyApplication: _,
                 pendingGameProfileReturn: T,
                 guild: M,
             } = this.props,
@@ -341,7 +341,7 @@ class eA extends i.PureComponent {
                 ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${C.name}` })),
                   null === C.tags.guild_connections &&
                       ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(C, M.id))))
-                : j || null == _
+                : j || null == b
                   ? i && !I
                       ? ((k.message = w.intl.string(w.t["2dThMM"])),
                         (k.buttonText = w.intl.string(w.t["50gfOv"])),
@@ -357,14 +357,14 @@ class eA extends i.PureComponent {
                             ? ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: v.$8o.ACCOUNT_AGE })),
                               (k.countdown = c))
                             : null != T && ep(k, T)
-                  : ((k.imageSrc = _.getIconURL(eh.iu.SMALL) ?? void 0),
-                    b
-                        ? (k.message = w.intl.format(w.t["SU2mY/"], { name: _.name }))
-                        : ((k.message = w.intl.format(w.t.EvDn1D, { name: _.name })),
-                          null != _.connectionEntrypointUrl &&
+                  : ((k.imageSrc = b.getIconURL(eh.iu.SMALL) ?? void 0),
+                    _
+                        ? (k.message = w.intl.format(w.t["SU2mY/"], { name: b.name }))
+                        : ((k.message = w.intl.format(w.t.EvDn1D, { name: b.name })),
+                          null != b.connectionEntrypointUrl &&
                               ((k.buttonText = w.intl.string(w.t.S0W8Z5)),
                               (k.onButtonClick = () => {
-                                  window.open(_.connectionEntrypointUrl, "_blank");
+                                  window.open(b.connectionEntrypointUrl, "_blank");
                               }))));
         return (0, l.jsx)(m.Y, {
             targetElementRef: this.textAreaContainerRef,
@@ -419,8 +419,8 @@ function ef(e) {
         C = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
             showLinkedLobbyApplicationLoadingIndicator: E,
-            requiredLinkedLobbyApplication: _,
-            shouldRelaunchLinkedLobbyApplication: b,
+            requiredLinkedLobbyApplication: b,
+            shouldRelaunchLinkedLobbyApplication: _,
         } = (0, ed.A)(t.linkedLobby),
         T = (function (e) {
             let { channelId: t } = e,
@@ -465,8 +465,8 @@ function ef(e) {
             guildJoinRequestStatus: C?.applicationStatus ?? N.B5.STARTED,
             guildJoinRequest: C,
             showLinkedLobbyApplicationLoadingIndicator: E,
-            requiredLinkedLobbyApplication: _,
-            shouldRelaunchLinkedLobbyApplication: b,
+            requiredLinkedLobbyApplication: b,
+            shouldRelaunchLinkedLobbyApplication: _,
             useReducedMotion: x.Ay.useReducedMotion,
             isStaff: m,
             pendingGameProfileReturn: T,

@@ -1,10 +1,10 @@
-n.d(t, { b: () => i, x: () => a });
+n.d(t, { b: () => o, x: () => i });
 var r = n(582128);
-let o = new Set();
-function i(e, t) {
-    for (let n of o) n(e, t);
+let a = new Set();
+function o(e, t) {
+    for (let n of a) n(e, t);
 }
-function a(e, t) {
+function i(e, t) {
     let n = r.useRef(t);
     (r.useLayoutEffect(() => {
         n.current = t;
@@ -15,9 +15,9 @@ function a(e, t) {
                 t === e && n.current(r);
             };
             return (
-                o.add(t),
+                a.add(t),
                 () => {
-                    o.delete(t);
+                    a.delete(t);
                 }
             );
         }, [e]));

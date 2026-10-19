@@ -1,56 +1,56 @@
-i.d(t, { A: () => _ });
-var l = i(477900),
-    a = i(582128),
-    e = i(17928),
-    r = i(12470),
-    o = i(811893),
-    u = i(47294),
-    c = i(16961),
-    s = i(58736),
-    p = i(869146),
-    d = i(91242),
-    A = i(73153),
-    O = i(494126),
-    C = i(5867);
+t.d(e, { A: () => I });
+var l = t(477900),
+    r = t(582128),
+    u = t(17928),
+    i = t(12470),
+    a = t(811893),
+    c = t(47294),
+    o = t(16961),
+    s = t(58736),
+    d = t(869146),
+    m = t(91242),
+    f = t(73153),
+    p = t(494126),
+    A = t(5867);
 async function b(n) {
-    null == d.A.getFrame(n) ||
-        ((await (0, O.refreshProxyTicket)(n)) &&
-            ((0, O.promoteFrame)(n),
-            (0, O.updateFramePanelMode)(n, C.Gd.ACTIVITY_POPOUT_WINDOW),
-            A.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
+    null == m.A.getFrame(n) ||
+        ((await (0, p.refreshProxyTicket)(n)) &&
+            ((0, p.promoteFrame)(n),
+            (0, p.updateFramePanelMode)(n, A.Gd.ACTIVITY_POPOUT_WINDOW),
+            f.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
 }
-var I = i(567245),
-    T = i(165610),
-    k = i(652215),
-    P = i(105292);
-function _(n) {
-    let { frame: t } = n,
-        i = (0, c.G)(),
-        A = (0, e.bG)(
-            [p.A, d.A],
-            () => p.A.getWindowOpen(k.MLl.ACTIVITY_POPOUT) && null != t && d.A.getMainFrame()?.id === t.id,
-            [t],
+var C = t(567245),
+    O = t(165610),
+    P = t(652215),
+    k = t(105292);
+function I(n) {
+    let { frame: e } = n,
+        t = (0, o.G)(),
+        f = (0, u.bG)(
+            [d.A, m.A],
+            () => d.A.getWindowOpen(P.MLl.ACTIVITY_POPOUT) && null != e && m.A.getMainFrame()?.id === e.id,
+            [e],
         ),
-        O = a.useCallback(() => {
-            null != t && (0, u.A)({ onConfirm: () => b(t.id) });
-        }, [t]),
-        C = a.useCallback(() => {
-            (0, u.A)({ onConfirm: () => (0, I.E)() });
+        p = r.useCallback(() => {
+            null != e && (0, c.A)({ onConfirm: () => b(e.id) });
+        }, [e]),
+        A = r.useCallback(() => {
+            (0, c.A)({ onConfirm: () => (0, C.E)() });
         }, []);
-    return (0, T.x1)(t)
-        ? A
+    return (0, O.x1)(e)
+        ? f
             ? (0, l.jsx)(s.In, {
-                  icon: r._,
-                  tooltip: P.intl.string(P.t["NKV/MO"]),
-                  "aria-label": P.intl.string(P.t["NKV/MO"]),
-                  onClick: C,
+                  icon: i._,
+                  tooltip: k.intl.string(k.t["NKV/MO"]),
+                  "aria-label": k.intl.string(k.t["NKV/MO"]),
+                  onClick: A,
               })
-            : i
+            : t
               ? (0, l.jsx)(s.In, {
-                    icon: o.t,
-                    tooltip: P.intl.string(P.t["3Zypbv"]),
-                    "aria-label": P.intl.string(P.t["3Zypbv"]),
-                    onClick: O,
+                    icon: a.t,
+                    tooltip: k.intl.string(k.t["3Zypbv"]),
+                    "aria-label": k.intl.string(k.t["3Zypbv"]),
+                    onClick: p,
                 })
               : null
         : null;

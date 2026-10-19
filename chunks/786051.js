@@ -26,10 +26,10 @@ let p = function (e) {
             onSecondaryButtonClick: y,
             children: j,
             useReducedMotion: v = !1,
-            buttonVariant: _,
+            buttonVariant: b,
         } = e,
-        b = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
-    if (s.Fr && b) return null;
+        _ = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
+    if (s.Fr && _) return null;
     if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(j) });
     let T = null;
     return (
@@ -67,7 +67,7 @@ let p = function (e) {
                                 children: (0, l.jsx)(u.$, {
                                     text: A,
                                     size: "sm",
-                                    variant: _ ?? "secondary",
+                                    variant: b ?? "secondary",
                                     onClick: C,
                                     loading: x,
                                     icon: f,

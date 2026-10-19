@@ -77,8 +77,8 @@ class p extends a.PureComponent {
                 minValue: f,
                 maxValue: v,
                 value: C,
-                onVolumeShow: A,
-                onVolumeHide: x,
+                onVolumeShow: x,
+                onVolumeHide: A,
             } = this.props,
             { hovered: y, focused: S, dragging: _ } = this.state,
             E = r.H;
@@ -87,12 +87,12 @@ class p extends a.PureComponent {
             (0, n.jsxs)("div", {
                 className: i()(s, m.kL),
                 onMouseEnter: () => {
-                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), A?.());
+                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), x?.());
                 },
                 onMouseLeave: () => {
                     (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), x?.());
+                            (this.setState({ hovered: !1 }), A?.());
                         }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),

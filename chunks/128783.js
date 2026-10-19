@@ -61,8 +61,8 @@ function v(e) {
         ],
     });
 }
-var _ = n(228098),
-    b = n(157259),
+var b = n(228098),
+    _ = n(157259),
     T = n(503698),
     N = n.n(T),
     M = n(666860),
@@ -153,7 +153,7 @@ function O(e) {
 var G = n(626360);
 let U = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
-        d = (0, _.A)(t),
+        d = (0, b.A)(t),
         u = (0, s.A)(),
         { showUnreadsNotice: h, clearUnreadsNotice: m } = (function (e) {
             let t = (0, o.os)("useShouldRenderBanner"),
@@ -177,6 +177,6 @@ let U = i.memo(function (e) {
             : h
               ? (0, l.jsx)(v, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
-                ? (0, l.jsx)(b.A, { channel: t, narrow: n })
+                ? (0, l.jsx)(_.A, { channel: t, narrow: n })
                 : null;
 });

@@ -35,22 +35,22 @@ function C(e) {
             };
         }),
         v = (0, i.bG)([c.A], () => (null != y ? c.A.getMemberCount(y) : 0)),
-        _ = null != j && (v ?? 0) >= j,
-        { approveRequest: b, rejectRequest: T, submitting: N } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+        b = null != j && (v ?? 0) >= j,
+        { approveRequest: _, rejectRequest: T, submitting: N } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && I
         ? (0, l.jsxs)("div", {
               className: x.U,
               children: [
                   (0, l.jsx)(s.m, {
                       text: f.intl.string(f.t.cdPGbE),
-                      shouldShow: _,
+                      shouldShow: b,
                       children: (0, l.jsx)(a.$, {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
                           loading: N,
-                          onClick: b,
-                          disabled: _,
+                          onClick: _,
+                          disabled: b,
                       }),
                   }),
                   (0, l.jsx)(a.$, {

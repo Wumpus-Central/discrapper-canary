@@ -59,14 +59,14 @@ async function f(e, t) {
         E = n ? o.preview_application_id : o.application_id;
     if (null != E) {
         let e = { integrationInstalled: s, botPermissionsChanged: r };
-        E !== _ || null == a ? await C(E, n, e) : (await a, u || S(E, n, e));
+        E !== _ || null == a ? await C(E, n, e) : (await a, u || U(E, n, e));
     }
 }
 async function C(e, t, n) {
     (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: e }),
         await Promise.all([(0, a.TA)(e), (0, u.un)(e, { force: !0 }).catch(() => {})]),
-        null !== n && S(e, t, n));
+        null !== n && U(e, t, n));
 }
-function S(e, t, n) {
+function U(e, t, n) {
     t ? n?.integrationInstalled !== !0 || n.botPermissionsChanged || (0, s.k)(e) : (0, o.R2)(e);
 }

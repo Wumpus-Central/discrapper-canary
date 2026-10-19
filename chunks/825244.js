@@ -24,8 +24,8 @@ function S(e) {
         { channel: S } = e,
         I = (0, o.bG)([m.A], () => (null != S ? m.A.getGuild(S.getGuildId()) : null), [S]),
         y = (0, o.bG)([h.default], () => I?.ownerId === h.default.getId(), [I]),
-        { steps: j, shouldAnimate: v, isOldGuild: _ } = (0, f.c)(S, I),
-        { titleAnimatedStyle: b, opacities: T } =
+        { steps: j, shouldAnimate: v, isOldGuild: b } = (0, f.c)(S, I),
+        { titleAnimatedStyle: _, opacities: T } =
             ((t = (0, u.A)(() => new r.A.Value(0))),
             (n = (0, u.A)(() => new r.A.Value(0))),
             (s = (0, u.A)(() => [
@@ -77,7 +77,7 @@ function S(e) {
             ),
         ),
         M = y ? C.intl.string(C.t["1ach9C"]) : C.intl.string(C.t["ezm+/j"]);
-    _ && (M = C.intl.string(C.t["gwyU/J"]));
+    b && (M = C.intl.string(C.t["gwyU/J"]));
     let R = `${g.A.getArticleURL(x.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(p.Ay, {
         channelId: S.id,
@@ -87,7 +87,7 @@ function S(e) {
                 className: E.vW,
                 children: [
                     (0, l.jsxs)(r.A.div, {
-                        style: b,
+                        style: _,
                         children: [
                             (0, l.jsx)(c.D, {
                                 className: E.ud,

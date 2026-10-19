@@ -12,8 +12,8 @@ var r = s(435558),
     f = s(71393),
     v = s(573163),
     C = s(309010),
-    A = s(543465),
-    x = s(287809),
+    x = s(543465),
+    A = s(287809),
     y = s(927813),
     S = s(935208);
 function _(e, t) {
@@ -39,20 +39,20 @@ let N = {},
     b = { status: "ok", lastRequest: null, lastResponse: null },
     w = [],
     R = [];
-function D() {
+function k() {
     w = p.A.getProps()
         .results.filter((e) => e.type === h.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
-class k extends u.Ay.PersistedStore {
+class D extends u.Ay.PersistedStore {
     static persistKey = "SummaryStore";
     getState() {
         return { shouldShowTopicsBar: n };
     }
     initialize(e) {
         ((n = e?.shouldShowTopicsBar ?? !0),
-            this.waitFor(g.A, m.A, f.A, p.A, v.Ay, C.Ay, A.Ay, x.default),
-            this.syncWith([p.A], D));
+            this.waitFor(g.A, m.A, f.A, p.A, v.Ay, C.Ay, x.Ay, A.default),
+            this.syncWith([p.A], k));
     }
     allSummaries() {
         return N;
@@ -124,7 +124,7 @@ class k extends u.Ay.PersistedStore {
             n &&
                 (l = l.filter((e) => {
                     let t = g.A.getChannel(e);
-                    return null != t && !A.Ay.isChannelMuted(t.guild_id, e) && v.Ay.hasUnread(e);
+                    return null != t && !x.Ay.isChannelMuted(t.guild_id, e) && v.Ay.hasUnread(e);
                 })),
             (l = l.filter((e) => {
                 let t = g.A.getChannel(e);
@@ -136,7 +136,7 @@ class k extends u.Ay.PersistedStore {
         return l;
     }
 }
-let L = new k(d.h, {
+let L = new D(d.h, {
     CONNECTION_OPEN: () => !1,
     CHANNEL_SELECT(e) {
         let { channelId: t } = e;

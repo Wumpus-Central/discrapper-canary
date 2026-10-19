@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => E });
 var r = n(17928),
     s = n(73153);
 (n(134528), n(947204));
@@ -81,11 +81,11 @@ class p extends r.Ay.Store {
 function h(e) {
     return e.log.seq;
 }
-function f(e, t, n) {
+function _(e, t, n) {
     let r = u.get(e);
     (null == r && ((r = new Map()), u.set(e, r)), r.set(t, n));
 }
-function _(e) {
+function f(e) {
     let t,
         { projectId: n, log: r } = e,
         s = (null == (t = l.get(n)) && ((t = new o(h)), l.set(n, t)), t);
@@ -96,12 +96,12 @@ function g(e) {
     let { projectId: t, scope: n, status: r, count: s, truncated: o } = e;
     if ("failed" === r) {
         let e = u.get(t)?.get(n);
-        f(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+        _(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
         return;
     }
-    f(t, n, { status: "loaded", truncated: o, count: s });
+    _(t, n, { status: "loaded", truncated: o, count: s });
 }
-let E = new p(s.h, {
+let S = new p(s.h, {
         LOGOUT: function () {
             if (0 === l.size && 0 === c.size && 0 === u.size) return !1;
             (l.clear(), c.clear(), u.clear());
@@ -109,7 +109,7 @@ let E = new p(s.h, {
         CONJURE_HISTORY_LOAD_SETTLE: g,
         CONJURE_DEBUG_BACKLOG: function (e) {
             let { projectId: t, backlog: n } = e;
-            for (let e of n.logs) _({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
+            for (let e of n.logs) f({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
             for (let e of n.states)
                 g({
                     type: "CONJURE_HISTORY_LOAD_SETTLE",
@@ -120,7 +120,7 @@ let E = new p(s.h, {
                     truncated: !0 === e.truncated,
                 });
         },
-        CONJURE_LOG_APPEND: _,
+        CONJURE_LOG_APPEND: f,
         CONJURE_LOGS_SEEN: function (e) {
             let { projectId: t } = e,
                 n = 0;
@@ -133,4 +133,4 @@ let E = new p(s.h, {
             (l.delete(t), c.delete(t), u.delete(t));
         },
     }),
-    S = 221552 == n.j ? E : null;
+    E = 221552 == n.j ? S : null;

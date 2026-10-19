@@ -26,8 +26,8 @@ var r = n(158390),
     u = n(805330),
     p = n(616e3),
     h = n(207438),
-    f = n(709753),
-    _ = n(788493),
+    _ = n(709753),
+    f = n(788493),
     g = n(223347),
     S = n(392739),
     E = n(463660),
@@ -35,10 +35,10 @@ var r = n(158390),
     O = n(371169),
     y = n(962998),
     T = n(416473),
-    N = n(525530),
-    b = n(743082),
-    k = n(385081),
-    w = n(1371);
+    b = n(525530),
+    N = n(743082),
+    w = n(385081),
+    k = n(1371);
 (n(323874), n(14289), n(35956));
 class C {
     socket = null;
@@ -254,7 +254,7 @@ function G(e, t, n) {
     let r = t.pendingSends;
     for (let s of ((t.pendingSends = []), r)) (L(e, s), (0, d.Gu)(e, n));
 }
-let x = { ...a.m, ...d.NW, ...h.eI, ...f.x9, ..._.U, ...g.p, ...E.VY, ...y.qy, ...T.Rd, ...N.ow, ...b.WO, ...u.V5 },
+let x = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...E.VY, ...y.qy, ...T.Rd, ...b.ow, ...N.WO, ...u.V5 },
     j = {
         app_build_request(e, t) {
             let { projectId: n } = t;
@@ -408,7 +408,7 @@ async function B(e, t) {
                             !(function (e, t) {
                                 let { projectId: n } = t;
                                 if ("turn_result" === e.kind) {
-                                    ((0, k.hV)(n, e),
+                                    ((0, w.hV)(n, e),
                                         "deployed" === e.result &&
                                             o.h.dispatch({
                                                 type: "CONJURE_CHAT_TURN_PATCH",
@@ -462,9 +462,9 @@ async function B(e, t) {
             (0, y.Mz)(e, "Connection failed before the publish result arrived"),
             (0, T.Fc)(e),
             (0, y.BC)(e, "Connection failed before the draft arrived"),
-            (0, k.Hy)(e, {
+            (0, w.Hy)(e, {
                 location: "connection",
-                code: k.xf.WS_OPEN_FAILED,
+                code: w.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
@@ -527,7 +527,7 @@ function z(e) {
         v.delete(e),
         (0, U.ng)(e),
         es(e),
-        w.A.releasePreviewControl(e),
+        k.A.releasePreviewControl(e),
         (0, S.RP)(e),
         I(e, "closed"),
         !0)

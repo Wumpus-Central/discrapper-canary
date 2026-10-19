@@ -1,12 +1,12 @@
 (n.d(t, {
     BF: () => r,
-    H$: () => S,
+    H$: () => E,
     IE: () => m,
     JQ: () => a,
     N5: () => w,
     Sj: () => T,
     TK: () => d,
-    TN: () => E,
+    TN: () => S,
     W7: () => O,
     _0: () => h,
     bM: () => o,
@@ -16,9 +16,9 @@
     lp: () => c,
     nF: () => y,
     rQ: () => g,
-    vH: () => _,
+    vH: () => f,
     wu: () => u,
-    x7: () => f,
+    x7: () => _,
 }),
     n(321073));
 let r = 221552 == n.j ? ["op", "model", "tool", "setup", "worktree", "sandbox", "build", "platform", "other"] : null,
@@ -65,7 +65,7 @@ function o(e) {
     return e.spans.find((e) => null == e.parent) ?? null;
 }
 function i(e) {
-    return Math.max(1, ...e.spans.map((t) => U(e, t)));
+    return Math.max(1, ...e.spans.map((t) => A(e, t)));
 }
 function l(e) {
     return e.spans.some((e) => null != e.error) || o(e)?.attrs?.ok === !1 || c(e) ? "error" : a(e) ? "ok" : "running";
@@ -86,8 +86,8 @@ function d(e) {
     let s = (function r(s, o, i, l) {
             let a = s[0],
                 c = Math.min(...s.map((e) => e.start)),
-                d = Math.max(...s.map((t) => U(e, t))),
-                u = s.map((t) => U(e, t) - t.start),
+                d = Math.max(...s.map((t) => A(e, t))),
+                u = s.map((t) => A(e, t) - t.start),
                 p = 1 === s.length ? (t.get(a.id) ?? []) : [],
                 h = {
                     key: 1 === s.length ? `span-${a.id}` : `fold-${a.id}`,
@@ -98,14 +98,14 @@ function d(e) {
                     end: d,
                     totalMs: u.reduce((e, t) => e + t, 0),
                     maxMs: Math.max(...u),
-                    selfMs: d - c - A(e, p, c, d),
+                    selfMs: d - c - U(e, p, c, d),
                     running: null == a.end,
                     failed: null != a.error,
                     parallel: s.some((t) =>
                         i.some((n) => {
                             var r, o, i;
                             return (
-                                !s.includes(n) && ((r = e), (o = t), (i = n), o.start < U(r, i) && i.start < U(r, o))
+                                !s.includes(n) && ((r = e), (o = t), (i = n), o.start < A(r, i) && i.start < A(r, o))
                             );
                         }),
                     ),
@@ -115,14 +115,14 @@ function d(e) {
                     children: [],
                     descendants: 0,
                 },
-                f = new Map();
-            for (let e of p) n(e) && f.set(C(e), (f.get(C(e)) ?? 0) + 1);
-            let _ = new Set();
+                _ = new Map();
+            for (let e of p) n(e) && _.set(C(e), (_.get(C(e)) ?? 0) + 1);
+            let f = new Set();
             for (let e of p) {
                 let t = C(e);
-                if (n(e) && (f.get(t) ?? 0) >= 4) {
-                    if (_.has(t)) continue;
-                    _.add(t);
+                if (n(e) && (_.get(t) ?? 0) >= 4) {
+                    if (f.has(t)) continue;
+                    f.add(t);
                     let e = p.filter((e) => n(e) && C(e) === t);
                     h.children.push(r(e, o + 1, p, d));
                 } else h.children.push(r([e], o + 1, p, d));
@@ -131,8 +131,8 @@ function d(e) {
         })([r], 0, [], 1 / 0),
         i = 0.1 * (s.end - s.start);
     return (
-        b(s, (e) => {
-            e.significant = N(e) >= i;
+        N(s, (e) => {
+            e.significant = b(e) >= i;
         }),
         s
     );
@@ -156,7 +156,7 @@ function u(e, t) {
                           count: o.reduce((e, t) => e + t.count, 0),
                           start: Math.min(...o.map((e) => e.start)),
                           end: Math.max(...o.map((e) => e.end)),
-                          totalMs: o.reduce((e, t) => e + N(t), 0),
+                          totalMs: o.reduce((e, t) => e + b(t), 0),
                       }),
                     (o = []));
             }
@@ -173,17 +173,17 @@ function h(e, t, n) {
     let r = [...p(t).collapsed].filter((e) => !n.has(e));
     return 0 === r.length ? e : { ...e, collapsed: new Set([...e.collapsed, ...r]) };
 }
-function f(e) {
-    let t = new Set();
-    return (b(e, (e) => t.add(e.key)), t);
-}
 function _(e) {
+    let t = new Set();
+    return (N(e, (e) => t.add(e.key)), t);
+}
+function f(e) {
     return { collapsed: new Set(), revealed: k(e, () => !0) };
 }
 function g(e) {
     return { collapsed: k(e, (e) => e.depth > 0), revealed: new Set() };
 }
-function E(e, t) {
+function S(e, t) {
     if (!e.collapsed.has(t.key)) return { ...e, collapsed: new Set(e.collapsed).add(t.key) };
     let n = new Set(e.collapsed);
     return (
@@ -191,11 +191,11 @@ function E(e, t) {
         { collapsed: n, revealed: t.children.some((e) => e.significant) ? e.revealed : new Set(e.revealed).add(t.key) }
     );
 }
-function S(e, t) {
+function E(e, t) {
     let n = new Set(e.collapsed),
         r = new Set(e.revealed);
     return (
-        b(t, (e) => {
+        N(t, (e) => {
             (n.delete(e.key), r.add(e.key));
         }),
         { collapsed: n, revealed: r }
@@ -204,7 +204,7 @@ function S(e, t) {
 function m(e, t) {
     let n = null;
     return (
-        b(e, (e) => {
+        N(e, (e) => {
             e.key === t && (n = e);
         }),
         n
@@ -214,8 +214,8 @@ function O(e) {
     let t = R(e);
     return new Map(
         e.spans.map((n) => {
-            let r = U(e, n);
-            return [n.id, r - n.start - A(e, t.get(n.id) ?? [], n.start, r)];
+            let r = A(e, n);
+            return [n.id, r - n.start - U(e, t.get(n.id) ?? [], n.start, r)];
         }),
     );
 }
@@ -237,11 +237,11 @@ function T(e) {
               })
               .join(" ");
 }
-function N(e) {
+function b(e) {
     return e.count > 1 ? e.totalMs : e.end - e.start;
 }
-function b(e, t) {
-    for (let n of (t(e), e.children)) b(n, t);
+function N(e, t) {
+    for (let n of (t(e), e.children)) N(n, t);
 }
 function w(e) {
     let t = e.name.search(/[.:]/),
@@ -278,12 +278,12 @@ function R(e) {
     for (let e of t.values()) e.sort((e, t) => e.start - t.start);
     return t;
 }
-function U(e, t) {
+function A(e, t) {
     return t.end ?? e.as_of;
 }
-function A(e, t, n, r) {
+function U(e, t, n, r) {
     let s = t
-            .map((t) => [Math.max(t.start, n), Math.min(U(e, t), r)])
+            .map((t) => [Math.max(t.start, n), Math.min(A(e, t), r)])
             .filter((e) => {
                 let [t, n] = e;
                 return n > t;

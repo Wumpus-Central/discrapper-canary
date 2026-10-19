@@ -1,4 +1,4 @@
-n.d(t, { DK: () => f, Lj: () => u, R7: () => d, VW: () => _, bq: () => p, d5: () => c, eI: () => a, gX: () => h });
+n.d(t, { DK: () => _, Lj: () => u, R7: () => d, VW: () => f, bq: () => p, d5: () => c, eI: () => a, gX: () => h });
 var r = n(73153),
     s = n(975189),
     o = n(385081),
@@ -12,8 +12,8 @@ let a = {
                     if (!0 === t.historical || "error" !== t.level) return;
                     let n = null != t.source ? g[t.source] : void 0;
                     if (null == n) return;
-                    let r = E.get(e);
-                    null == r && ((r = new Set()), E.set(e, r));
+                    let r = S.get(e);
+                    null == r && ((r = new Set()), S.set(e, r));
                     let s = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
                     r.has(s) ||
                         r.size >= 10 ||
@@ -77,8 +77,8 @@ let a = {
                 (s = e.batch.trace_id),
                 null == (o = i.A.getTimingTrace(n, s)) ||
                     !(0, l.JQ)(o) ||
-                    S.has(s) ||
-                    (S.add(s), console.log("[conjure] timing trace", JSON.stringify(o))));
+                    E.has(s) ||
+                    (E.add(s), console.log("[conjure] timing trace", JSON.stringify(o))));
         },
         debug_history_state(e, t) {
             let { projectId: n } = t;
@@ -204,7 +204,7 @@ function h(e) {
         r.h.dispatch({ type: "CONJURE_DEBUG_INSTANCE_POLL_REQUESTED", projectId: e, requestedAt: Date.now() });
     }
 }
-function f(e) {
+function _(e) {
     let t = (0, s.KY)(e);
     try {
         if (null == t) throw Error("Not connected");
@@ -218,7 +218,7 @@ function f(e) {
         });
     }
 }
-function _(e, t) {
+function f(e, t) {
     r.h.dispatch({ type: "CONJURE_RESTART_AGENT_REQUESTED", projectId: e });
     let n = (0, s.KY)(e);
     try {
@@ -238,5 +238,5 @@ let g = {
         web: { location: "runtime_frame", code: o.xf.RUNTIME_FRAME_ERROR },
         preview: { location: "runtime_worker", code: o.xf.RUNTIME_WORKER_ERROR },
     },
-    E = new Map(),
-    S = new Set();
+    S = new Map(),
+    E = new Set();

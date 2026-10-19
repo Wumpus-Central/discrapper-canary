@@ -23,8 +23,8 @@ function S(e) {
         y,
         j,
         v,
-        _,
         b,
+        _,
         T,
         N,
         { channel: M, children: R } = e,
@@ -34,31 +34,31 @@ function S(e) {
         (y = I?.changelogId),
         (j = (0, s.bG)([c.default], () => c.default.locale)),
         (v = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", j), [y, j])),
-        (_ = (0, g.A)(t)),
-        (b = i.useRef(_ ? Date.now() : null)),
+        (b = (0, g.A)(t)),
+        (_ = i.useRef(b ? Date.now() : null)),
         (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
         (N = i.useRef(T)),
         i.useEffect(() => {
             N.current = T;
         }),
         i.useEffect(() => {
-            b.current = Date.now();
-        }, [_]),
+            _.current = Date.now();
+        }, [b]),
         i.useEffect(() => {
-            _ && null != y && o.A.fetchChangelog(y, j, !0);
-        }, [y, j, _]),
+            b && null != y && o.A.fetchChangelog(y, j, !0);
+        }, [y, j, b]),
         i.useEffect(() => {
-            _ &&
+            b &&
                 null != v &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${v.date}:${v.revision}`,
                     unread_count: N.current,
                 });
-        }, [_, v]),
+        }, [b, v]),
         i.useEffect(() => {
-            let e = b.current;
+            let e = _.current;
             return () => {
-                _ &&
+                b &&
                     null != v &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
@@ -66,9 +66,9 @@ function S(e) {
                         change_log_id: `${v.date}:${v.revision}`,
                         unread_count: N.current,
                     }),
-                    (b.current = 0));
+                    (_.current = 0));
             };
-        }, [_, v]));
+        }, [b, v]));
     let k = (0, g.A)(M.id),
         L = M.isSystemDM(),
         P = D && !L && !M.isMultiUserDM(),

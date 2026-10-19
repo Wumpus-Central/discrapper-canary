@@ -22,13 +22,13 @@ var l,
     y = n(131607);
 let j = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 var v = n(566908),
-    _ = n(43105),
-    b = n(49999),
+    b = n(43105),
+    _ = n(49999),
     T = n(105292),
     N = n(474218);
 function M(e) {
     let { targetElementRef: t, onDismiss: n } = e;
-    return (0, i.jsx)(_.A, {
+    return (0, i.jsx)(b.A, {
         targetElementRef: t,
         gradientColor: "purple",
         position: "top",
@@ -36,10 +36,10 @@ function M(e) {
         shouldShow: !0,
         scrollBehavior: "close",
         caretConfig: { align: "start" },
-        onRequestClose: () => n(b.i.USER_DISMISS),
+        onRequestClose: () => n(_.i.USER_DISMISS),
         title: T.intl.string(T.t.ZT58S4),
         body: [T.intl.format(T.t.A2yQnt, {})],
-        actions: [{ text: T.intl.string(T.t["NX+WJN"]), onClick: () => n(b.i.USER_DISMISS) }],
+        actions: [{ text: T.intl.string(T.t["NX+WJN"]), onClick: () => n(_.i.USER_DISMISS) }],
         graphic: { type: "image", src: N.A },
     });
 }
@@ -387,7 +387,7 @@ let ev = s.memo(function (e) {
             channel: l,
             draftType: a,
             editorTextContent: I,
-            setValue: _,
+            setValue: b,
             canOnlyUseTextCommands: N,
             chatInputType: B,
         } = e,
@@ -481,8 +481,8 @@ let ev = s.memo(function (e) {
     });
     let eS = (0, R.n)(l),
         ev = (0, R.Tb)(l),
-        e_ = !D.D_.useSetting() && !(0, U.isAndroidWeb)() && null != window.ResizeObserver,
-        eb = (0, S.I7)(l ?? void 0),
+        eb = !D.D_.useSetting() && !(0, U.isAndroidWeb)() && null != window.ResizeObserver,
+        e_ = (0, S.I7)(l ?? void 0),
         eT = (0, v.vK)(l),
         eN = (0, g.b)(),
         eM = (function (e) {
@@ -569,13 +569,13 @@ let ev = s.memo(function (e) {
         })({
             canAttachFiles: eC,
             canStartThreads: eS || ev,
-            useSlate: e_,
+            useSlate: eb,
             hasClips: et,
             canUseApplicationCommands: !N,
             channel: l,
             activities: J,
             newClipsCount: Z?.length ?? 0,
-            canPostPolls: eb,
+            canPostPolls: e_,
             appContext: V,
             canSendScheduledMessages: eT,
             canSummarizeThreads: eN,
@@ -596,7 +596,7 @@ let ev = s.memo(function (e) {
             position: "top",
             positionKey: Q ?? "null",
             onRequestOpen: () => {
-                (ee("attachMenu"), eR && eD(b.i.TAKE_ACTION));
+                (ee("attachMenu"), eR && eD(_.i.TAKE_ACTION));
             },
             onRequestClose: () => {
                 (0, c.hasAnyModalOpen)() || ee(null);
@@ -611,7 +611,7 @@ let ev = s.memo(function (e) {
                         onFileUpload: () => z.current?.activateUploadDialogue(),
                         draftType: a,
                         editorTextContent: I,
-                        setValue: _,
+                        setValue: b,
                         openClips: eE,
                         chatInputType: B,
                     });

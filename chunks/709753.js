@@ -1,4 +1,4 @@
-n.d(t, { PI: () => S, WT: () => E, _t: () => m, kA: () => _, t6: () => g, x9: () => f });
+n.d(t, { PI: () => E, WT: () => S, _t: () => m, kA: () => f, t6: () => g, x9: () => _ });
 var r = n(582128),
     s = n(17928),
     o = n(73153),
@@ -33,7 +33,7 @@ let h = new p(o.h, {
             );
         },
     }),
-    f = {
+    _ = {
         host_approvals(e, t) {
             let { projectId: n } = t;
             o.h.dispatch({ type: "CONJURE_HOST_APPROVALS_SET", projectId: n, asks: e.asks });
@@ -48,7 +48,7 @@ let h = new p(o.h, {
             });
         },
     };
-function _(e, t, n) {
+function f(e, t, n) {
     if ((0, i.b4)(e, "host approval", (e) => e.sendHostAccess({ type: "host_approval_answer", id: t, answer: n }))) {
         let n = h.getApprovals(e).filter((e) => e.id !== t);
         o.h.dispatch({ type: "CONJURE_HOST_APPROVALS_SET", projectId: e, asks: n });
@@ -57,10 +57,10 @@ function _(e, t, n) {
 function g(e, t) {
     return (0, i.b4)(e, "allowed hosts", (e) => e.sendHostAccess({ type: "set_host_access", remove_host: t }));
 }
-function E(e) {
+function S(e) {
     return (0, s.bG)([h], () => h.getApprovals(e), [e]);
 }
-function S(e) {
+function E(e) {
     return (0, s.bG)(
         [h],
         () => {

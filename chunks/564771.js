@@ -28,13 +28,13 @@ let C = {
                 }));
     },
 };
-var A = s(46054),
-    x = s(453771),
+var x = s(46054),
+    A = s(453771),
     y = s(105292),
     S = s(745268);
 function _(e) {
     let { filename: t } = e,
-        a = (0, x.GD)(t),
+        a = (0, A.GD)(t),
         l = s(492313)(`./icon-file-${a}.svg`);
     return (0, n.jsx)("img", {
         className: S.Kk,
@@ -59,7 +59,7 @@ function E(e) {
         }, [t, s]),
         m = 100 === s.progress,
         p = !m && s.currentSize > 0,
-        g = a.useMemo(() => (null == l || "" === l.trim() ? null : A.A.parse(l)), [l]);
+        g = a.useMemo(() => (null == l || "" === l.trim() ? null : x.A.parse(l)), [l]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             null != g && (0, n.jsx)("div", { className: S.Qs, children: g }),

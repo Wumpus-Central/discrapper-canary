@@ -1,1 +1,1 @@
-p.exports = { p: "emptyState__759cf", b: "illustration__759cf" };
+_.exports = { p: "emptyState__759cf", b: "illustration__759cf" };
