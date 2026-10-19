@@ -2420,22 +2420,6 @@
     }
   },
   {
-    "name": "2026-05-slayer-storefront-hide-leaderboard",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-spatial-audio-for-voice",
     "kind": "user",
     "defaultConfig": {
