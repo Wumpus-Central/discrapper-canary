@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => P });
 var i = n(310784),
     r = n.n(i),
     a = n(404144),
@@ -1023,20 +1023,6 @@ let { Themes: c } = d.zv,
             [c.ONYX]: { raw: "BLURPLE_91", opacity: 1 },
             [c.DARK]: { raw: "BLURPLE_91", opacity: 1 },
         },
-        CHIP_BLURPLE_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "BLURPLE_40", opacity: 1 },
-            [c.LIGHT]: { raw: "BLURPLE_40", opacity: 1 },
-            [c.ONYX]: { raw: "BLURPLE_40", opacity: 1 },
-            [c.DARK]: { raw: "BLURPLE_40", opacity: 1 },
-        },
-        CHIP_BLURPLE_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "BLURPLE_100", opacity: 1 },
-            [c.LIGHT]: { raw: "BLURPLE_100", opacity: 1 },
-            [c.ONYX]: { raw: "BLURPLE_100", opacity: 1 },
-            [c.DARK]: { raw: "BLURPLE_100", opacity: 1 },
-        },
         CHIP_GRAY_DARK_BACKGROUND: {
             category: "generic",
             [c.ASH]: { raw: "NEUTRAL_75", opacity: 1 },
@@ -1107,34 +1093,6 @@ let { Themes: c } = d.zv,
             [c.ONYX]: { raw: "GREEN_NEW_91", opacity: 1 },
             [c.DARK]: { raw: "GREEN_NEW_91", opacity: 1 },
         },
-        CHIP_GREEN_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "GREEN_NEW_45", opacity: 1 },
-            [c.LIGHT]: { raw: "GREEN_NEW_45", opacity: 1 },
-            [c.ONYX]: { raw: "GREEN_NEW_45", opacity: 1 },
-            [c.DARK]: { raw: "GREEN_NEW_45", opacity: 1 },
-        },
-        CHIP_GREEN_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "GREEN_NEW_96", opacity: 1 },
-            [c.LIGHT]: { raw: "GREEN_NEW_96", opacity: 1 },
-            [c.ONYX]: { raw: "GREEN_NEW_96", opacity: 1 },
-            [c.DARK]: { raw: "GREEN_NEW_96", opacity: 1 },
-        },
-        CHIP_ORANGE_DARK_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ORANGE_NEW_70", opacity: 1 },
-            [c.LIGHT]: { raw: "ORANGE_NEW_70", opacity: 1 },
-            [c.ONYX]: { raw: "ORANGE_NEW_70", opacity: 1 },
-            [c.DARK]: { raw: "ORANGE_NEW_70", opacity: 1 },
-        },
-        CHIP_ORANGE_DARK_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "ORANGE_NEW_1", opacity: 1 },
-            [c.LIGHT]: { raw: "ORANGE_NEW_1", opacity: 1 },
-            [c.ONYX]: { raw: "ORANGE_NEW_1", opacity: 1 },
-            [c.DARK]: { raw: "ORANGE_NEW_1", opacity: 1 },
-        },
         CHIP_ORANGE_LIGHT_BACKGROUND: {
             category: "generic",
             [c.ASH]: { raw: "ORANGE_NEW_20", opacity: 1 },
@@ -1148,104 +1106,6 @@ let { Themes: c } = d.zv,
             [c.LIGHT]: { raw: "ORANGE_NEW_93", opacity: 1 },
             [c.ONYX]: { raw: "ORANGE_NEW_93", opacity: 1 },
             [c.DARK]: { raw: "ORANGE_NEW_93", opacity: 1 },
-        },
-        CHIP_ORANGE_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ORANGE_NEW_40", opacity: 1 },
-            [c.LIGHT]: { raw: "ORANGE_NEW_40", opacity: 1 },
-            [c.ONYX]: { raw: "ORANGE_NEW_40", opacity: 1 },
-            [c.DARK]: { raw: "ORANGE_NEW_40", opacity: 1 },
-        },
-        CHIP_ORANGE_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "ORANGE_NEW_100", opacity: 1 },
-            [c.LIGHT]: { raw: "ORANGE_NEW_100", opacity: 1 },
-            [c.ONYX]: { raw: "ORANGE_NEW_100", opacity: 1 },
-            [c.DARK]: { raw: "ORANGE_NEW_100", opacity: 1 },
-        },
-        CHIP_PINK_DARK_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ILLO_PINK_60", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PINK_60", opacity: 1 },
-            [c.ONYX]: { raw: "ILLO_PINK_60", opacity: 1 },
-            [c.DARK]: { raw: "ILLO_PINK_60", opacity: 1 },
-        },
-        CHIP_PINK_DARK_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "NEUTRAL_1", opacity: 1 },
-            [c.LIGHT]: { raw: "NEUTRAL_1", opacity: 1 },
-            [c.ONYX]: { raw: "NEUTRAL_1", opacity: 1 },
-            [c.DARK]: { raw: "NEUTRAL_1", opacity: 1 },
-        },
-        CHIP_PINK_LIGHT_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ILLO_PINK_20", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PINK_20", opacity: 1 },
-            [c.ONYX]: { raw: "ILLO_PINK_20", opacity: 1 },
-            [c.DARK]: { raw: "ILLO_PINK_20", opacity: 1 },
-        },
-        CHIP_PINK_LIGHT_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "NEUTRAL_73", opacity: 1 },
-            [c.LIGHT]: { raw: "NEUTRAL_73", opacity: 1 },
-            [c.ONYX]: { raw: "NEUTRAL_73", opacity: 1 },
-            [c.DARK]: { raw: "NEUTRAL_73", opacity: 1 },
-        },
-        CHIP_PINK_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ILLO_PINK_40", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PINK_40", opacity: 1 },
-            [c.ONYX]: { raw: "ILLO_PINK_40", opacity: 1 },
-            [c.DARK]: { raw: "ILLO_PINK_40", opacity: 1 },
-        },
-        CHIP_PINK_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "NEUTRAL_100", opacity: 1 },
-            [c.LIGHT]: { raw: "NEUTRAL_100", opacity: 1 },
-            [c.ONYX]: { raw: "NEUTRAL_100", opacity: 1 },
-            [c.DARK]: { raw: "NEUTRAL_100", opacity: 1 },
-        },
-        CHIP_PURPLE_DARK_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ILLO_PURPLE_60", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PURPLE_60", opacity: 1 },
-            [c.ONYX]: { raw: "ILLO_PURPLE_60", opacity: 1 },
-            [c.DARK]: { raw: "ILLO_PURPLE_60", opacity: 1 },
-        },
-        CHIP_PURPLE_DARK_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "NEUTRAL_10", opacity: 1 },
-            [c.LIGHT]: { raw: "NEUTRAL_10", opacity: 1 },
-            [c.ONYX]: { raw: "NEUTRAL_10", opacity: 1 },
-            [c.DARK]: { raw: "NEUTRAL_10", opacity: 1 },
-        },
-        CHIP_PURPLE_LIGHT_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ILLO_PURPLE_20", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PURPLE_20", opacity: 1 },
-            [c.ONYX]: { raw: "ILLO_PURPLE_20", opacity: 1 },
-            [c.DARK]: { raw: "ILLO_PURPLE_20", opacity: 1 },
-        },
-        CHIP_PURPLE_LIGHT_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "NEUTRAL_75", opacity: 1 },
-            [c.LIGHT]: { raw: "NEUTRAL_75", opacity: 1 },
-            [c.ONYX]: { raw: "NEUTRAL_75", opacity: 1 },
-            [c.DARK]: { raw: "NEUTRAL_75", opacity: 1 },
-        },
-        CHIP_PURPLE_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "ILLO_PURPLE_40", opacity: 1 },
-            [c.LIGHT]: { raw: "ILLO_PURPLE_40", opacity: 1 },
-            [c.ONYX]: { raw: "ILLO_PURPLE_40", opacity: 1 },
-            [c.DARK]: { raw: "ILLO_PURPLE_40", opacity: 1 },
-        },
-        CHIP_PURPLE_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "NEUTRAL_100", opacity: 1 },
-            [c.LIGHT]: { raw: "NEUTRAL_100", opacity: 1 },
-            [c.ONYX]: { raw: "NEUTRAL_100", opacity: 1 },
-            [c.DARK]: { raw: "NEUTRAL_100", opacity: 1 },
         },
         CHIP_RED_DARK_BACKGROUND: {
             category: "generic",
@@ -1275,34 +1135,6 @@ let { Themes: c } = d.zv,
             [c.ONYX]: { raw: "RED_NEW_95", opacity: 1 },
             [c.DARK]: { raw: "RED_NEW_95", opacity: 1 },
         },
-        CHIP_RED_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "RED_NEW_45", opacity: 1 },
-            [c.LIGHT]: { raw: "RED_NEW_45", opacity: 1 },
-            [c.ONYX]: { raw: "RED_NEW_45", opacity: 1 },
-            [c.DARK]: { raw: "RED_NEW_45", opacity: 1 },
-        },
-        CHIP_RED_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "RED_NEW_100", opacity: 1 },
-            [c.LIGHT]: { raw: "RED_NEW_100", opacity: 1 },
-            [c.ONYX]: { raw: "RED_NEW_100", opacity: 1 },
-            [c.DARK]: { raw: "RED_NEW_100", opacity: 1 },
-        },
-        CHIP_YELLOW_DARK_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "YELLOW_NEW_70", opacity: 1 },
-            [c.LIGHT]: { raw: "YELLOW_NEW_70", opacity: 1 },
-            [c.ONYX]: { raw: "YELLOW_NEW_70", opacity: 1 },
-            [c.DARK]: { raw: "YELLOW_NEW_70", opacity: 1 },
-        },
-        CHIP_YELLOW_DARK_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "YELLOW_NEW_1", opacity: 1 },
-            [c.LIGHT]: { raw: "YELLOW_NEW_1", opacity: 1 },
-            [c.ONYX]: { raw: "YELLOW_NEW_1", opacity: 1 },
-            [c.DARK]: { raw: "YELLOW_NEW_1", opacity: 1 },
-        },
         CHIP_YELLOW_LIGHT_BACKGROUND: {
             category: "generic",
             [c.ASH]: { raw: "YELLOW_NEW_20", opacity: 1 },
@@ -1316,20 +1148,6 @@ let { Themes: c } = d.zv,
             [c.LIGHT]: { raw: "YELLOW_NEW_87", opacity: 1 },
             [c.ONYX]: { raw: "YELLOW_NEW_87", opacity: 1 },
             [c.DARK]: { raw: "YELLOW_NEW_87", opacity: 1 },
-        },
-        CHIP_YELLOW_MEDIUM_BACKGROUND: {
-            category: "generic",
-            [c.ASH]: { raw: "YELLOW_NEW_45", opacity: 1 },
-            [c.LIGHT]: { raw: "YELLOW_NEW_45", opacity: 1 },
-            [c.ONYX]: { raw: "YELLOW_NEW_45", opacity: 1 },
-            [c.DARK]: { raw: "YELLOW_NEW_45", opacity: 1 },
-        },
-        CHIP_YELLOW_MEDIUM_TEXT: {
-            category: "text",
-            [c.ASH]: { raw: "YELLOW_NEW_80", opacity: 1 },
-            [c.LIGHT]: { raw: "YELLOW_NEW_80", opacity: 1 },
-            [c.ONYX]: { raw: "YELLOW_NEW_80", opacity: 1 },
-            [c.DARK]: { raw: "YELLOW_NEW_80", opacity: 1 },
         },
         COLLECTIBLES_TAB_GRADIENT_CENTER: {
             category: "generic",
@@ -9726,7 +9544,7 @@ let { Themes: c } = d.zv,
         themes: d.NJ,
         modules: N,
         colors: o()(I, (e, t) => ({
-            css: P(t),
+            css: M(t),
             resolve(n) {
                 let i = n.theme,
                     r = e[i],
@@ -9750,10 +9568,10 @@ let { Themes: c } = d.zv,
         })),
         unsafe_rawColors: o()(p, (e, t) => {
             let n = L[t];
-            return { css: P(t), resolve: (e) => D(n, e?.saturation ?? 1) };
+            return { css: M(t), resolve: (e) => D(n, e?.saturation ?? 1) };
         }),
         shadows: o()(g, (e, t) => ({
-            css: P(t),
+            css: M(t),
             resolve(t) {
                 let n = t.theme;
                 return { boxShadow: e[n].boxShadow, filter: e[n].filter, nativeStyles: e[n].nativeStyles };
@@ -9807,9 +9625,9 @@ function v(e, t, n) {
 function b(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function P(e, t) {
+function M(e, t) {
     let n = null != t ? b(t) : null,
         i = b(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let M = y;
+let P = y;
