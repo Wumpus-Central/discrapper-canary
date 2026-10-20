@@ -15026,6 +15026,7 @@ let u$ = [
     uV = [
         uB.gr.HOME,
         uB.gr.INTRODUCTION,
+        uB.gr.VOICE_INTRO,
         uB.gr.VOICE_STATS,
         uB.gr.VOICE_FACE,
         uB.gr.MESSAGES_STATS,
@@ -15047,7 +15048,10 @@ let u$ = [
         uB.gr.SUMMARY,
         uB.gr.PROFILE_WIDGET,
     ],
-    uW = { [uB.gr.SERVERS_INTRO]: (e) => !((e?.guilds?.guilds.length ?? 0) > 0) };
+    uW = {
+        [uB.gr.VOICE_INTRO]: (e) => !(Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0),
+        [uB.gr.SERVERS_INTRO]: (e) => !((e?.guilds?.guilds.length ?? 0) > 0),
+    };
 var uH = a(920495);
 function uz(e) {
     let { src: t, className: a } = e,
