@@ -20,8 +20,8 @@ function I(e) {
     let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: y } = e,
         { paymentSources: A } = (0, a.j)(),
         {
-            selectedSkuId: P,
-            setPurchaseState: x,
+            selectedSkuId: x,
+            setPurchaseState: P,
             contextMetadata: v,
             paymentSourceId: _,
             setPaymentSourceId: T,
@@ -74,7 +74,7 @@ function I(e) {
         onReturn: M ? void 0 : U,
         onComplete: (e) => {
             C.l_.has(e)
-                ? (x(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
+                ? (P(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
                 : l(C.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -90,7 +90,7 @@ function I(e) {
         },
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
-            (0, p.isDesktop)() && null != P && [g.pe.TIER_0, g.pe.TIER_2].includes(P) && !w && null == j,
+            (0, p.isDesktop)() && null != x && [g.pe.TIER_0, g.pe.TIER_2].includes(x) && !w && null == j,
         continueSessionToInitialStep: y,
     });
 }

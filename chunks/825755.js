@@ -19,8 +19,8 @@ let a = "",
     I = null,
     y = null,
     A = null,
-    P = null;
-function x() {
+    x = null;
+function P() {
     ((a = ""),
         (s = null),
         (o = ""),
@@ -38,7 +38,7 @@ function x() {
         (I = null),
         (y = null),
         (A = null),
-        (P = null));
+        (x = null));
 }
 function v() {
     I = null;
@@ -72,10 +72,10 @@ class N extends l.Ay.Store {
         return c;
     }
     get redirectedPaymentSourceId() {
-        return P;
+        return x;
     }
     clearRedirectedPaymentSourceId() {
-        P = null;
+        x = null;
     }
     getCreditCardInfo() {
         return { name: m };
@@ -146,13 +146,13 @@ let b = new N(i.h, {
     NEW_PAYMENT_SOURCE_CLEAR_ERROR: v,
     BILLING_PAYMENT_SOURCE_CREATE_FAIL: _,
     STRIPE_TOKEN_FAILURE: _,
-    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: x,
-    LOGOUT: x,
+    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: P,
+    LOGOUT: P,
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { query: t } = e;
         t?.payment_id != null
             ? ((A = !0), (y = t.payment_id))
-            : t?.payment_source_id != null && ((A = !0), (P = t.payment_source_id));
+            : t?.payment_source_id != null && ((A = !0), (x = t.payment_source_id));
     },
     RESET_PAYMENT_ID: function () {
         ((A = !1), (y = null));

@@ -1,8 +1,8 @@
 t.d(n, { i: () => u });
 var l = t(73153),
     a = t(976860),
-    r = t(696451),
-    i = t(317525),
+    i = t(696451),
+    r = t(317525),
     o = t(71393),
     s = t(652215),
     c = t(746080);
@@ -22,9 +22,9 @@ function u(e, n, t) {
                 break;
             case "linked-roles":
                 if (null != t) {
-                    let n = r.Ay.getSelfMember(e);
+                    let n = i.Ay.getSelfMember(e);
                     if (null == n) return;
-                    let a = i.A.getRole(e, t);
+                    let a = r.A.getRole(e, t);
                     null == a || n.roles.includes(a.id)
                         ? l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e })
                         : l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e, role: a });

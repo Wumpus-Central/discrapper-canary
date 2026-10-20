@@ -1,7 +1,7 @@
 t.d(i, { $: () => o, A: () => x });
 var n = t(477900),
-    l = t(582128),
-    r = t(774926),
+    r = t(582128),
+    l = t(774926),
     s = t(263577),
     a = t(506326),
     c = t(868065),
@@ -9,15 +9,15 @@ var n = t(477900),
 let o = [a.iq, a.Zc, a.Xy, a.$X, a.fg, a.MK],
     x =
         221552 == t.j
-            ? l.memo(function (e) {
-                  let { entry: i, channel: t, selected: l, hovered: x } = e,
-                      { largeImage: m } = (0, r.nO)({
+            ? r.memo(function (e) {
+                  let { entry: i, channel: t, selected: r, hovered: x } = e,
+                      { largeImage: m } = (0, l.nO)({
                           entry: i,
                           showCoverImage: !1,
                           trackingSource: "memberlist_activity_content_row",
                       });
                   return (0, n.jsxs)(c.Zp, {
-                      selected: l,
+                      selected: r,
                       children: [
                           (0, n.jsxs)(c.UA, {
                               children: [

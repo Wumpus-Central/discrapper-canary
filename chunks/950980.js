@@ -1,8 +1,8 @@
 t.d(n, { ExperimentEmbed: () => N });
 var l = t(477900),
     a = t(582128),
-    r = t(17928),
-    i = t(858899),
+    i = t(17928),
+    r = t(858899),
     o = t(939249),
     s = t(173936),
     c = t(834730),
@@ -12,31 +12,31 @@ var l = t(477900),
     h = t(280450),
     p = t(287809),
     g = t(957565),
-    f = t(100392),
-    x = t(102609),
+    x = t(100392),
+    f = t(102609),
     j = t(271478),
-    y = t(386976),
-    A = t(257433),
+    A = t(386976),
+    y = t(257433),
     C = t(32523),
     k = t(688151),
-    I = t(263748);
-function E(e) {
+    E = t(263748);
+function I(e) {
     let { url: n } = e,
         t = a.useCallback(() => {
-            (0, g.C)(n, () => (0, i.P0)({ text: "Copied experiment link", variant: "success" }));
+            (0, g.C)(n, () => (0, r.P0)({ text: "Copied experiment link", variant: "success" }));
         }, [n]);
     return (0, l.jsx)(o.D, {
-        className: I.wp,
+        className: E.wp,
         onClick: t,
         children: (0, l.jsx)(s.LinkIcon, { size: "sm", color: "currentColor" }),
     });
 }
 function N(e) {
     let { url: n } = e,
-        t = (0, f.OL)(n),
-        i = (0, f.Kb)(n),
+        t = (0, x.OL)(n),
+        r = (0, x.Kb)(n),
         { experiments: o, overridesInfo: s } = (0, C.hI)(),
-        { experiments: g, overridesInfo: N } = (0, y.op)(),
+        { experiments: g, overridesInfo: N } = (0, A.op)(),
         v = a.useMemo(() => (null == t ? null : null != o[t] ? o[t] : g[t]), [o, g, t]),
         b = a.useMemo(() => {
             if (null == t);
@@ -44,29 +44,29 @@ function N(e) {
             else if (null != N[t]) return N[t];
         }, [s, N, t]),
         S = h.default.getId(),
-        L = (0, A.Fm)(v, S),
-        M = a.useMemo(() => (0, f.GI)(v, L), [L, v]),
-        T = (0, r.bG)([p.default], () => {
+        L = (0, y.Fm)(v, S),
+        T = a.useMemo(() => (0, x.GI)(v, L), [L, v]),
+        M = (0, i.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         });
     if (null == t || null == v) return null;
-    let _ = (0, f.hp)(v).find((e) => e.value === i),
+    let _ = (0, x.hp)(v).find((e) => e.value === r),
         P = null != _ ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
         O = null != b && null != _ && b.variantId === _.value,
-        w = (0, l.jsx)(E, { url: n }),
+        w = (0, l.jsx)(I, { url: n }),
         D = null;
     return (P === k.Ps.EXPERIMENT_TREATMENT && null != _
         ? (D = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: _.label }))
         : null != L &&
-          (D = (0, l.jsxs)(c.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", M] })),
-    T)
+          (D = (0, l.jsxs)(c.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", T] })),
+    M)
         ? (0, l.jsxs)("div", {
-              className: I.zr,
+              className: E.zr,
               children: [
                   (0, l.jsx)("div", {
                       children: (0, l.jsx)("div", {
-                          className: I.wx,
+                          className: E.wx,
                           children: (0, l.jsxs)(u.B, {
                               direction: "horizontal",
                               justify: "space-between",
@@ -99,11 +99,11 @@ function N(e) {
                             onClick: function () {
                                 null == t ||
                                     null == v ||
-                                    (null != _ && (O ? (0, x.t$)(v.system, t, null) : (0, x.t$)(v.system, t, _.value)));
+                                    (null != _ && (O ? (0, f.t$)(v.system, t, null) : (0, f.t$)(v.system, t, _.value)));
                             },
                         })
                       : (0, l.jsx)("div", {
-                            className: I.uh,
+                            className: E.uh,
                             children: (0, l.jsx)(j.g, { experiment: v, experimentId: t, overrideInfo: b }),
                         }),
               ],

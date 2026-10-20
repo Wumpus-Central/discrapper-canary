@@ -68,8 +68,8 @@ function y() {
 }
 var T = l(562073),
     k = l(189213),
-    R = l(192308),
-    D = l(987476),
+    D = l(192308),
+    R = l(987476),
     w = l(104129),
     L = l(105292),
     M = l(397462);
@@ -239,7 +239,7 @@ function O(e) {
             disabled: o = !1,
             lock: u,
         } = e,
-        m = D.m[l.type],
+        m = R.m[l.type],
         x = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&
@@ -262,7 +262,7 @@ function O(e) {
                                     },
                                 }),
                             });
-                    (0, R.openModalLazy)(() => Promise.resolve(s), { modalKey: "guild-space-widget-edit" });
+                    (0, D.openModalLazy)(() => Promise.resolve(s), { modalKey: "guild-space-widget-edit" });
                 })({ widget: l, Edit: m.Edit, onCommit: d }));
         }, [l, m, d, u, t]);
     if (null == m) return null;

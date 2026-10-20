@@ -1124,8 +1124,8 @@ let e0 = { any: 100 },
     e2 = 30 * ek.A.Millis.SECOND,
     e3 = 120 * ek.A.Millis.SECOND,
     e5 = -1 !== (0, eZ.EL)();
-var e4 = (((l = {}).UserSSRCUpdate = "user-ssrc-update"), (l.Update = "update"), l);
-function e6(e) {
+var e6 = (((l = {}).UserSSRCUpdate = "user-ssrc-update"), (l.Update = "update"), l);
+function e4(e) {
     return (0, eS.isWeb)() ? { ...e1 } : { any: e };
 }
 class e7 extends g.A {
@@ -1142,7 +1142,7 @@ class e7 extends g.A {
     offscreenUsers = {};
     offscreenDisabledUsers = {};
     streamPixelCounts = {};
-    latestWants = e6(100);
+    latestWants = e4(100);
     participants = new Set();
     selectedParticipantId = null;
     delayedCall;
@@ -1239,7 +1239,7 @@ class e7 extends g.A {
         return function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                 n = e.getWantsLevel(),
-                i = e6(n),
+                i = e4(n),
                 r = i;
             ((0, eS.isWeb)() && (e.invertWants(i, n), e5 && (r = { ...i })), e.updateOffscreenUsers());
             let a = (0, eS.isDesktop)() && e.isOneToOneCall() && !e.isStageChannel;
@@ -1343,7 +1343,7 @@ class e7 extends g.A {
             (this.framesReceived = {}),
             (this.streamIds = {}),
             (this.streamPixelCounts = {}),
-            (this.latestWants = e6(100)),
+            (this.latestWants = e4(100)),
             eJ.X.off(eJ.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
     setSelectedParticipant(e) {
@@ -3101,14 +3101,14 @@ class ty extends g.A {
             case $.x.DEFAULT: {
                 const t = e_.A.getChannel(this.channelId)?.type === eM.rbe.GUILD_STAGE_VOICE;
                 ((this._localMediaSinkWantsManager = new e7(e, t, c)),
-                    this._localMediaSinkWantsManager.on(e4.Update, (e) => {
+                    this._localMediaSinkWantsManager.on(e6.Update, (e) => {
                         this.state === eM.S7L.RTC_CONNECTED &&
                             null != this._socket &&
                             (this.logger.info(`Media sink wants: ${JSON.stringify(e)}`),
                             this._socket.mediaSinkWants(e),
                             this._connection?.setLocalVideoSinkWants(e));
                     }),
-                    this._localMediaSinkWantsManager.on(e4.UserSSRCUpdate, (e, t, n) => {
+                    this._localMediaSinkWantsManager.on(e6.UserSSRCUpdate, (e, t, n) => {
                         this._connection?.createUser(e, t, n);
                     }));
                 break;

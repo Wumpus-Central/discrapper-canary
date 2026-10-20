@@ -186,14 +186,14 @@ var w = n(866665),
     k = n(821609),
     B = n(47167),
     F = n(485947),
-    K = n(61916),
-    z = n(446244),
+    z = n(61916),
+    K = n(446244),
     W = n(994500),
     Y = n(287809),
     X = n(427262),
     q = n(16236);
 async function J(e) {
-    let t = await (0, z.pk)(e);
+    let t = await (0, K.pk)(e);
     null != t && (await (0, q.nR)({ channelIds: [t], categoryName: M.intl.string(M.t.OGiMXJ), source: "suggestions" }));
 }
 var Z = n(487470);
@@ -233,7 +233,7 @@ function $(e) {
                               role: "list",
                               children: n.map((e, t) =>
                                   (0, l.jsx)(
-                                      K.N,
+                                      z.N,
                                       {
                                           result: e,
                                           trailing: (0, l.jsx)(k.$, {
@@ -246,7 +246,7 @@ function $(e) {
                                                           ? X.Ay.getName(e.record)
                                                           : (0, B.m1)(e.record, Y.default, W.A),
                                               }),
-                                              onClick: () => J((0, z.hY)(e)),
+                                              onClick: () => J((0, K.hY)(e)),
                                           }),
                                           "aria-posinset": t + 1,
                                           "aria-setsize": n.length,

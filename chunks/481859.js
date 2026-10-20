@@ -1,10 +1,10 @@
-t.d(l, { A: () => u });
-var r = t(477900);
-t(582128);
-var n = t(503698),
-    a = t.n(n),
-    s = t(730753);
+l.d(t, { A: () => u });
+var r = l(477900);
+l(582128);
+var a = l(503698),
+    n = l.n(a),
+    s = l(730753);
 function u(e) {
-    let { children: l, tag: t, className: n } = e;
-    return ((t = null != t ? t : "h3"), (0, r.jsx)(t, { className: a()(s.D, n), children: l }));
+    let { children: t, tag: l, className: a } = e;
+    return ((l = null != l ? l : "h3"), (0, r.jsx)(l, { className: n()(s.D, a), children: t }));
 }

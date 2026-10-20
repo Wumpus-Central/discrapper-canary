@@ -2,8 +2,8 @@ t.d(n, { P: () => o });
 var l = t(477900);
 t(582128);
 var a = t(661531),
-    r = t(996682),
-    i = t(27989);
+    i = t(996682),
+    r = t(27989);
 function o(e) {
     let {
             size: n = "md",
@@ -13,11 +13,11 @@ function o(e) {
             colorClass: c = "",
             ...u
         } = e,
-        d = (0, i.J)(n),
+        d = (0, r.J)(n),
         m = d?.width ?? t,
         h = d?.height ?? o;
     return (0, l.jsx)("svg", {
-        ...(0, r.A)(u),
+        ...(0, i.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
         width: m,
         height: h,

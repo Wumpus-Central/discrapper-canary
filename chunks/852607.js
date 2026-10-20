@@ -1,4 +1,4 @@
-n.d(t, { kO: () => Z, r3: () => z, PL: () => $ });
+n.d(t, { kO: () => q, r3: () => z, PL: () => $ });
 var l = n(477900),
     i = n(582128),
     r = n(166532),
@@ -67,8 +67,8 @@ function y() {
     });
 }
 var A = n(702841),
-    P = n(339048),
-    x = n(428644),
+    x = n(339048),
+    P = n(428644),
     v = n(86379),
     _ = n(545075),
     T = n(590180),
@@ -136,7 +136,7 @@ function K(e) {
             ? (0, l.jsx)(M, {})
             : null;
 }
-function q(e) {
+function Z(e) {
     let {
             subscriptionTier: t,
             initialPlanId: n,
@@ -165,7 +165,7 @@ function q(e) {
         y = (0, D.A)({ isGift: I, skuId: d }),
         T = !E || !S || g || !c,
         b = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(Y.tv));
-    (0, x.A)(
+    (0, P.A)(
         "Payment Modal",
         T,
         5,
@@ -179,7 +179,7 @@ function q(e) {
     );
     let j = (0, W.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: y }));
     return (i.useEffect(() => {
-        (b || (0, P.LM)(Y.tv),
+        (b || (0, x.LM)(Y.tv),
             T ||
                 f ||
                 (null == s || C
@@ -202,8 +202,8 @@ function q(e) {
           ? (0, l.jsx)(_.oO, {})
           : null;
 }
-let Z = { key: null, renderStep: (e) => (0, l.jsx)(K, { ...e }), options: { modalSizeGetter: () => "md" } },
-    z = { key: null, renderStep: (e) => (0, l.jsx)(q, { ...e }) },
+let q = { key: null, renderStep: (e) => (0, l.jsx)(K, { ...e }), options: { modalSizeGetter: () => "md" } },
+    z = { key: null, renderStep: (e) => (0, l.jsx)(Z, { ...e }) },
     $ = [
         { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(y, {}) },
         { key: r.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(c, {}), options: { renderHeader: !0 } },

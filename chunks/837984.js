@@ -88,7 +88,7 @@ function p() {
                     let _ = E - 1 - (1 - N) * 16,
                         I = (t - j) / 1e3,
                         R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
-                        T = Math.ceil(_ / m);
+                        L = Math.ceil(_ / m);
                     l.fillStyle = i;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * f(e, 11)),
@@ -103,7 +103,7 @@ function p() {
                             u = 1 + e * m + g / 2,
                             o = g / 2 + 3,
                             p = Math.abs(u - h / 2) < o;
-                        for (let t = 0; t < T; t++) {
+                        for (let t = 0; t < L; t++) {
                             let i,
                                 d = _ - (t * m + g / 2);
                             if (d < 0) break;

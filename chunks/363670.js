@@ -1,7 +1,7 @@
 t.d(i, { Ay: () => _, hh: () => u, u7: () => j });
 var n = t(477900),
-    l = t(582128),
-    r = t(17928),
+    r = t(582128),
+    l = t(17928),
     s = t(287809),
     a = t(774926),
     c = t(574520),
@@ -11,18 +11,18 @@ var n = t(477900),
     m = t(804779);
 let u = [o.R_];
 function j(e) {
-    let i = (0, r.bG)([c.A], () => c.A.getMatchingActivity(e)),
-        t = (0, r.bG)([s.default], () => s.default.getUser(e.author_id));
+    let i = (0, l.bG)([c.A], () => c.A.getMatchingActivity(e)),
+        t = (0, l.bG)([s.default], () => s.default.getUser(e.author_id));
     if (null == i || null == t) return {};
     let n = e.extra.entries[0],
-        l = i.state ?? n.media.artists[0]?.name ?? n.media.title,
+        r = i.state ?? n.media.artists[0]?.name ?? n.media.title,
         a = i.details ?? n.media.title;
-    return { activity: i, artist: l, currentEntry: n, title: a, user: t };
+    return { activity: i, artist: r, currentEntry: n, title: a, user: t };
 }
 let _ =
     221552 == t.j
-        ? l.memo(function (e) {
-              let { entry: i, channel: t, selected: l, hovered: r } = e,
+        ? r.memo(function (e) {
+              let { entry: i, channel: t, selected: r, hovered: l } = e,
                   { activity: s, artist: c } = j(i),
                   { largeImage: _ } = (0, a.nO)({
                       entry: i,
@@ -31,7 +31,7 @@ let _ =
               return null == s
                   ? (0, n.jsx)(x.eG, {})
                   : (0, n.jsxs)(x.Zp, {
-                        selected: l,
+                        selected: r,
                         children: [
                             (0, n.jsxs)(x.UA, {
                                 children: [
@@ -39,7 +39,7 @@ let _ =
                                     (0, n.jsx)(x.ZB, { children: c.replace(/; /g, ", ") }),
                                     (0, n.jsx)(o.mG, {
                                         location: o.N5.CARD,
-                                        children: u.map((e, t) => (0, n.jsx)(e, { entry: i, hovered: r }, t)),
+                                        children: u.map((e, t) => (0, n.jsx)(e, { entry: i, hovered: l }, t)),
                                     }),
                                 ],
                             }),

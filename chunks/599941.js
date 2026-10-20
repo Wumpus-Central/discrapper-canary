@@ -1,11 +1,11 @@
 (n.d(t, {
     KE: () => A,
     Tq: () => y,
-    XE: () => P,
+    XE: () => x,
     Yc: () => I,
     cY: () => p,
     dB: () => h,
-    dL: () => x,
+    dL: () => P,
     eb: () => E,
     et: () => S,
     hc: () => g,
@@ -175,7 +175,7 @@ function A() {
         error: n,
     };
 }
-function P() {
+function x() {
     let [e, t] = l.useState(!1),
         [n, i] = l.useState(null);
     return {
@@ -193,6 +193,6 @@ function P() {
         error: n,
     };
 }
-function x(e) {
+function P(e) {
     return (0, i.bG)([c.A], () => (null != e ? c.A.getSubscriptionTrial(e) : null));
 }

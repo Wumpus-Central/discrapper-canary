@@ -1,6 +1,6 @@
 (l.r(t), l.d(t, { default: () => V }));
-var r = l(477900),
-    n = l(582128),
+var n = l(477900),
+    r = l(582128),
     i = l(17928),
     a = l(148810),
     s = l(521502),
@@ -10,84 +10,84 @@ var o = l(503698),
     c = l.n(o),
     u = l(284009),
     v = l.n(u),
-    C = l(939249),
-    h = l(173936),
+    h = l(939249),
+    C = l(173936),
     m = l(834730),
     g = l(821609),
     f = l(28863),
-    p = l(885574),
-    x = l(579872),
-    b = l(763827),
-    j = l(280977);
-let w = n.memo(function (e) {
+    x = l(885574),
+    p = l(579872),
+    j = l(763827),
+    b = l(280977);
+let w = r.memo(function (e) {
     let { className: t } = e;
-    return (0, r.jsxs)("svg", {
+    return (0, n.jsxs)("svg", {
         width: "57",
         height: "40",
         viewBox: "0 0 57 40",
         fill: "none",
         className: t,
         children: [
-            (0, r.jsx)("path", {
+            (0, n.jsx)("path", {
                 d: "M49.4949 36H3.9596C1.78182 36 0 34.2486 0 32.1081V3.89189C0 1.75135 1.78182 0 3.9596 0H49.4949C51.6727 0 53.4545 1.75135 53.4545 3.89189V32.1081C53.4545 34.2486 51.6727 36 49.4949 36Z",
-                className: j.wT,
+                className: b.wT,
             }),
-            (0, r.jsx)("path", {
+            (0, n.jsx)("path", {
                 d: "M44.5456 10.8889H25.7375C24.6486 10.8889 23.7577 9.99798 23.7577 8.90909C23.7577 7.8202 24.6486 6.92929 25.7375 6.92929H44.5456C45.6345 6.92929 46.5254 7.8202 46.5254 8.90909C46.5254 9.99798 45.6345 10.8889 44.5456 10.8889ZM19.7981 10.8889C18.7092 10.8889 17.8183 9.99798 17.8183 8.90909C17.8183 7.8202 18.7092 6.92929 19.7981 6.92929C20.887 6.92929 21.7779 7.8202 21.7779 8.90909C21.7779 9.99798 20.887 10.8889 19.7981 10.8889ZM44.5456 19.798H25.7375C24.6486 19.798 23.7577 18.9071 23.7577 17.8182C23.7577 16.7293 24.6486 15.8384 25.7375 15.8384H44.5456C45.6345 15.8384 46.5254 16.7293 46.5254 17.8182C46.5254 18.9071 45.6345 19.798 44.5456 19.798ZM19.7981 19.798C18.7092 19.798 17.8183 18.9071 17.8183 17.8182C17.8183 16.7293 18.7092 15.8384 19.7981 15.8384C20.887 15.8384 21.7779 16.7293 21.7779 17.8182C21.7779 18.9071 20.887 19.798 19.7981 19.798ZM31.6365 28.7071H25.7375C24.6486 28.7071 23.7577 27.8162 23.7577 26.7273C23.7577 25.6384 24.6486 24.7475 25.7375 24.7475H31.6365C32.7254 24.7475 33.6163 25.6384 33.6163 26.7273C33.6163 27.8162 32.7254 28.7071 31.6365 28.7071ZM19.7981 28.7071C18.7092 28.7071 17.8183 27.8162 17.8183 26.7273C17.8183 25.6384 18.7092 24.7475 19.7981 24.7475C20.887 24.7475 21.7779 25.6384 21.7779 26.7273C21.7779 27.8162 20.887 28.7071 19.7981 28.7071Z",
-                className: j.lk,
+                className: b.lk,
             }),
-            (0, r.jsx)("path", {
+            (0, n.jsx)("path", {
                 d: "M3.9596 36H13.8586V0H3.9596C1.78182 0 0 1.78182 0 3.9596V32.0404C0 34.2182 1.78182 36 3.9596 36Z",
-                className: j.$U,
+                className: b.$U,
             }),
-            (0, r.jsx)("path", {
+            (0, n.jsx)("path", {
                 d: "M6.9293 10.8889C5.24647 10.8889 3.9596 9.60202 3.9596 7.91919C3.9596 6.23636 5.24647 4.94949 6.9293 4.94949C8.61212 4.94949 9.89899 6.23636 9.89899 7.91919C9.89899 9.60202 8.61212 10.8889 6.9293 10.8889ZM6.9293 20.7879C5.24647 20.7879 3.9596 19.501 3.9596 17.8182C3.9596 16.1354 5.24647 14.8485 6.9293 14.8485C8.61212 14.8485 9.89899 16.1354 9.89899 17.8182C9.89899 19.501 8.61212 20.7879 6.9293 20.7879ZM6.9293 30.6869C5.24647 30.6869 3.9596 29.4 3.9596 27.7172C3.9596 26.0343 5.24647 24.7475 6.9293 24.7475C8.61212 24.7475 9.89899 26.0343 9.89899 27.7172C9.89899 29.4 8.61212 30.6869 6.9293 30.6869Z",
-                className: j.Vu,
+                className: b.Vu,
             }),
-            (0, r.jsx)("path", {
+            (0, n.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M41.4328 33L46 37.7129L43.7836 40L37 32.9999L39.2164 30.7128L39.2165 30.7129L43.7836 26L46 28.2871L41.4328 33Z",
-                className: j.r_,
+                className: b.r_,
             }),
-            (0, r.jsx)("path", {
+            (0, n.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M54.7821 35.2871L54.7841 35.2892L57 33.0021L50.2159 26L48 28.2871L52.5662 33L48 37.7129L50.2159 40L54.7821 35.2871Z",
-                className: j.r_,
+                className: b.r_,
             }),
         ],
     });
 });
 var k = l(957565),
     N = l(975571),
-    E = l(723702),
-    L = l(435558),
-    y = l.n(L),
-    A = l(280450),
-    B = l(986238),
-    O = l(652215),
-    _ = l(105292),
-    M = l(100281);
+    y = l(723702),
+    E = l(435558),
+    L = l.n(E),
+    O = l(280450),
+    M = l(986238),
+    _ = l(652215),
+    A = l(105292),
+    B = l(100281);
 function I(e) {
     let { url: t } = e,
-        [l, i] = n.useState(!1),
-        a = n.useRef(void 0),
-        s = n.useCallback(() => {
+        [l, i] = r.useState(!1),
+        a = r.useRef(void 0),
+        s = r.useCallback(() => {
             l ||
                 (0, k.C)(t, () => {
                     (i(!0), (a.current = setTimeout(() => i(!1), 2e3)));
                 });
         }, [t, l]);
     return (
-        n.useEffect(() => () => clearTimeout(a.current), []),
+        r.useEffect(() => () => clearTimeout(a.current), []),
         k.p5
-            ? (0, r.jsxs)(C.D, {
-                  className: c()(M.S, l ? M.pG : null),
+            ? (0, n.jsxs)(h.D, {
+                  className: c()(B.S, l ? B.pG : null),
                   onClick: s,
                   children: [
-                      (0, r.jsx)(h.LinkIcon, { size: "md", color: "currentColor", className: M.n7 }),
-                      l ? _.intl.string(_.t.GmrIJY) : _.intl.string(_.t.iVzBOh),
+                      (0, n.jsx)(C.LinkIcon, { size: "md", color: "currentColor", className: B.n7 }),
+                      l ? A.intl.string(A.t.GmrIJY) : A.intl.string(A.t.iVzBOh),
                   ],
               })
             : null
@@ -103,110 +103,110 @@ function T(e) {
         disabled: d = !1,
         submitting: o = !1,
     } = e;
-    return (0, r.jsxs)(n.Fragment, {
+    return (0, n.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)("div", {
-                className: M.NT,
+            (0, n.jsxs)("div", {
+                className: B.NT,
                 children: [
-                    (0, r.jsx)(m.E, { variant: "text-sm/medium", className: M.V$, children: t }),
-                    (0, r.jsx)("div", { className: M.Jb, children: l }),
+                    (0, n.jsx)(m.E, { variant: "text-sm/medium", className: B.V$, children: t }),
+                    (0, n.jsx)("div", { className: B.Jb, children: l }),
                 ],
             }),
-            (0, r.jsx)(g.$, { text: s, loading: o, variant: i, onClick: a, fullWidth: !0, disabled: d }),
+            (0, n.jsx)(g.$, { text: s, loading: o, variant: i, onClick: a, fullWidth: !0, disabled: d }),
         ],
     });
 }
-let R = function (e) {
+let H = function (e) {
     let { loading: t = !1, currentOverrides: l, linkMeta: i, url: a, applyBuildOverride: s, clearBuildOverride: d } = e,
-        [o, u] = n.useState(!1),
-        C = n.useCallback(() => {
+        [o, u] = r.useState(!1),
+        h = r.useCallback(() => {
             o || (u(!0), s().catch(() => u(!1)));
         }, [s, o]),
-        h = n.useCallback(() => {
+        C = r.useCallback(() => {
             o || (u(!0), d().catch(() => u(!1)));
         }, [d, o]);
-    return (0, r.jsxs)("div", {
-        className: M.iE,
+    return (0, n.jsxs)("div", {
+        className: B.iE,
         children: [
-            (0, r.jsxs)(m.E, {
+            (0, n.jsxs)(m.E, {
                 variant: "text-xs/normal",
-                className: M.lS,
+                className: B.lS,
                 children: [
-                    (0, r.jsx)("strong", {
-                        className: M.DD,
+                    (0, n.jsx)("strong", {
+                        className: B.DD,
                         children:
                             null != i && null != i.releaseChannel
-                                ? _.intl.formatToPlainString(_.t.bFj63b, { releaseChannel: i.releaseChannel })
-                                : _.intl.string(_.t.Wj3LW4),
+                                ? A.intl.formatToPlainString(A.t.bFj63b, { releaseChannel: i.releaseChannel })
+                                : A.intl.string(A.t.Wj3LW4),
                     }),
-                    (0, r.jsx)(f.Anchor, {
-                        className: M.Pl,
-                        href: N.A.getArticleURL(O.MVz.BUILD_OVERRIDE_EMBED),
+                    (0, n.jsx)(f.Anchor, {
+                        className: B.Pl,
+                        href: N.A.getArticleURL(_.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
-                        children: (0, r.jsx)(p.CircleInformationIcon, {
+                        children: (0, n.jsx)(x.CircleInformationIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: M.G,
+                            className: B.G,
                         }),
                     }),
-                    t ? null : (0, r.jsx)(I, { url: a }),
+                    t ? null : (0, n.jsx)(I, { url: a }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: M.Qs,
+            (0, n.jsxs)("div", {
+                className: B.Qs,
                 children: [
-                    (0, r.jsx)(w, { className: M.Kk }),
+                    (0, n.jsx)(w, { className: B.Kk }),
                     t
-                        ? (0, r.jsxs)(n.Fragment, {
+                        ? (0, n.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsxs)("div", {
-                                      className: M.NT,
+                                  (0, n.jsxs)("div", {
+                                      className: B.NT,
                                       children: [
-                                          (0, r.jsx)("div", { className: c()(M.Pz, M.w9) }),
-                                          (0, r.jsx)("div", { className: M.Pz }),
+                                          (0, n.jsx)("div", { className: c()(B.Pz, B.w9) }),
+                                          (0, n.jsx)("div", { className: B.Pz }),
                                       ],
                                   }),
-                                  (0, r.jsx)("div", { className: M.MM }),
+                                  (0, n.jsx)("div", { className: B.MM }),
                               ],
                           })
                         : (function (e) {
                               let t,
                                   l,
-                                  r,
+                                  n,
                                   {
-                                      currentOverrides: n,
+                                      currentOverrides: r,
                                       linkMeta: i,
                                       applyBuildOverride: a,
                                       clearBuildOverride: s,
                                       submitting: d,
                                   } = e,
                                   o = ["discord_web"];
-                              E.isPlatformEmbedded || o.push("discord_marketing", "discord_developers");
+                              y.isPlatformEmbedded || o.push("discord_marketing", "discord_developers");
                               let c = (function (e, t) {
-                                  if (null == e || null == t) return { valid: !1, reason: _.intl.string(_.t.d34xi4) };
+                                  if (null == e || null == t) return { valid: !1, reason: A.intl.string(A.t.d34xi4) };
                                   let {
                                           releaseChannel: l,
-                                          expiresAt: r,
-                                          validForUserIds: n,
+                                          expiresAt: n,
+                                          validForUserIds: r,
                                           allowedVersions: i,
                                           targetBuildOverride: a,
                                       } = e,
                                       s = Object.keys(a);
-                                  if (0 === y().intersection(s, t).length)
+                                  if (0 === L().intersection(s, t).length)
                                       return {
                                           valid: !1,
-                                          reason: _.intl.formatToPlainString(_.t.wySUzv, {
-                                              requestedTargets: s.map((e) => B.v_[e] ?? "unknown").join(", "),
+                                          reason: A.intl.formatToPlainString(A.t.wySUzv, {
+                                              requestedTargets: s.map((e) => M.v_[e] ?? "unknown").join(", "),
                                           }),
                                       };
                                   if (null != l && l !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
                                       let e =
-                                          l === O.BIo.PTB
+                                          l === _.BIo.PTB
                                               ? l.toUpperCase()
                                               : `${l.charAt(0).toUpperCase()}${l.slice(1)}`;
                                       return {
                                           valid: !1,
-                                          reason: _.intl.formatToPlainString(_.t.GOEF0C, { releaseChannel: e }),
+                                          reason: A.intl.formatToPlainString(A.t.GOEF0C, { releaseChannel: e }),
                                       };
                                   }
                                   if (null != i) {
@@ -214,16 +214,16 @@ let R = function (e) {
                                       ((e = !1), !0);
                                       return {
                                           valid: !1,
-                                          reason: _.intl.formatToPlainString(_.t.GOEF0C, {
+                                          reason: A.intl.formatToPlainString(A.t.GOEF0C, {
                                               releaseChannel: i.join(", "),
                                           }),
                                       };
                                   }
-                                  let d = null != r ? new Date(r).getTime() : null;
+                                  let d = null != n ? new Date(n).getTime() : null;
                                   return null != d && d < Date.now()
-                                      ? { valid: !1, reason: _.intl.string(_.t["8eRE6S"]) }
-                                      : n.length > 0 && !n.includes(A.default.getId())
-                                        ? { valid: !1, reason: _.intl.string(_.t.qZgV0a) }
+                                      ? { valid: !1, reason: A.intl.string(A.t["8eRE6S"]) }
+                                      : r.length > 0 && !r.includes(O.default.getId())
+                                        ? { valid: !1, reason: A.intl.string(A.t.qZgV0a) }
                                         : { valid: !0 };
                               })(i, o);
                               if (!c.valid) {
@@ -231,7 +231,7 @@ let R = function (e) {
                                   return (
                                       (u = c.reason),
                                       T({
-                                          subHead: _.intl.string(_.t.ODXApH),
+                                          subHead: A.intl.string(A.t.ODXApH),
                                           variant: "secondary",
                                           buttonText: "Invalid",
                                           buildDetails: u,
@@ -243,43 +243,43 @@ let R = function (e) {
                                   null != i,
                                   "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved",
                               );
-                              let { discord_web: C, discord_developers: h } = i.targetBuildOverride,
-                                  m = C ?? h;
+                              let { discord_web: h, discord_developers: C } = i.targetBuildOverride,
+                                  m = h ?? C;
                               return (
                                   (v()(
                                       null != m,
                                       "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
                                   ),
-                                  null == n || null == n.discord_web
+                                  null == r || null == r.discord_web
                                       ? 1
-                                      : m.id !== n.discord_web.id || m.type !== n.discord_web.type)
-                                      ? ((l = _.intl.string(_.t.nOunHC)), (t = a), (r = "primary"))
-                                      : ((l = _.intl.string(_.t.tX4xrt)), (t = s), (r = "critical-primary")),
+                                      : m.id !== r.discord_web.id || m.type !== r.discord_web.type)
+                                      ? ((l = A.intl.string(A.t.nOunHC)), (t = a), (n = "primary"))
+                                      : ((l = A.intl.string(A.t.tX4xrt)), (t = s), (n = "critical-primary")),
                                   T({
-                                      subHead: _.intl.string("branch" === m.type ? _.t.p9TwTG : _.t.RCYGot),
+                                      subHead: A.intl.string("branch" === m.type ? A.t.p9TwTG : A.t.RCYGot),
                                       buildDetails: m.id,
                                       buttonClick: function () {
-                                          b.A.isConnected()
-                                              ? x.A.show({
-                                                    title: _.intl.string(_.t.tiu1ly),
-                                                    body: _.intl.string(_.t["zK+lqW"]),
+                                          j.A.isConnected()
+                                              ? p.A.show({
+                                                    title: A.intl.string(A.t.tiu1ly),
+                                                    body: A.intl.string(A.t["zK+lqW"]),
                                                     onConfirm: t,
-                                                    cancelText: _.intl.string(_.t["ETE/oC"]),
-                                                    confirmText: _.intl.string(_.t["QDX/qu"]),
+                                                    cancelText: A.intl.string(A.t["ETE/oC"]),
+                                                    confirmText: A.intl.string(A.t["QDX/qu"]),
                                                     confirmVariant: "critical-primary",
                                                 })
                                               : t();
                                       },
                                       buttonText: l,
-                                      variant: r,
+                                      variant: n,
                                       submitting: d,
                                   })
                               );
                           })({
                               currentOverrides: l,
                               linkMeta: i,
-                              applyBuildOverride: C,
-                              clearBuildOverride: h,
+                              applyBuildOverride: h,
+                              clearBuildOverride: C,
                               submitting: o,
                           }),
                 ],
@@ -287,40 +287,40 @@ let R = function (e) {
         ],
     });
 };
-var D = l(390486);
-async function H(e) {
+var R = l(390486);
+async function D(e) {
     if (200 !== (await (0, a.oA)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function Z(e) {
+async function S(e) {
     if (200 !== (await (0, a.Zk)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function S() {
+async function Z() {
     (await (0, a.iD)(), window.location.reload(!0));
 }
-let V = n.memo(function (e) {
+let V = r.memo(function (e) {
     let { url: t } = e,
         l = (0, i.cf)([s.A], () => s.A.getCurrentBuildOverride()),
         a = (0, i.bG)([s.A], () => s.A.getBuildOverride(t)),
         { payload: o, validatedURL: c } = a,
         u = l.state === s.U.Resolving || a.state === s.U.Resolving,
-        v = n.useCallback(
+        v = r.useCallback(
             () =>
                 (0, d.h4)(a.url) && null != a.override
-                    ? Z(a.override?.targetBuildOverride)
+                    ? S(a.override?.targetBuildOverride)
                     : null == o
                       ? Promise.reject(Error("Invalid override payload"))
-                      : ((0, D.R)(a.override, o), H(o)),
+                      : ((0, R.R)(a.override, o), D(o)),
             [o, a],
         );
     return null != c
-        ? (0, r.jsx)(R, {
+        ? (0, n.jsx)(H, {
               loading: u,
               linkMeta: a.override,
               currentOverrides: l.overrides,
               applyBuildOverride: v,
-              clearBuildOverride: S,
+              clearBuildOverride: Z,
               url: c,
           })
         : null;

@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(123816),
     y = n(649975),
     A = n(105292),
-    P = n(663466);
-function x() {
+    x = n(663466);
+function P() {
     let e = (0, I.t4)((e) => (0, f.qn)(e.order));
     return null == e || null == e.redirect_url
         ? null
@@ -34,14 +34,14 @@ function x() {
 function v() {
     let { error: e, errorMessage: t } = (0, E.j)({});
     return null != e
-        ? (0, l.jsx)("div", { className: P.l, children: (0, l.jsx)(h.w, { type: "critical", children: t }) })
-        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(x, {})] });
+        ? (0, l.jsx)("div", { className: x.l, children: (0, l.jsx)(h.w, { type: "critical", children: t }) })
+        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(P, {})] });
 }
 function _() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(S.UY, { children: (0, l.jsx)(g.f, {}) }),
-            (0, l.jsx)("div", { className: P.k, role: "status", children: (0, l.jsx)(v, {}) }),
+            (0, l.jsx)("div", { className: x.k, role: "status", children: (0, l.jsx)(v, {}) }),
         ],
     });
 }
@@ -65,8 +65,8 @@ function j(e) {
         {
             paymentSourceId: y,
             purchasePreviewError: A,
-            customCheckoutFlow: P,
-            contextMetadata: x,
+            customCheckoutFlow: x,
+            contextMetadata: P,
             purchaseError: v,
             setCheckoutCurrency: j,
             setLinkWalletEnabled: R,
@@ -100,7 +100,7 @@ function j(e) {
         }, [O, M, y]),
         B = (0, s.iB)({ paymentSourceId: y, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: H } = i.useMemo(() => {
-            let e = { disablePurchase: B || P === b.uH.DEV_STORYBOOK_CHECKOUT };
+            let e = { disablePurchase: B || x === b.uH.DEV_STORYBOOK_CHECKOUT };
             return null != h
                 ? h(
                       { ...e },
@@ -113,7 +113,7 @@ function j(e) {
                       },
                   )
                 : e;
-        }, [h, G, y, F, L, A, B, P]);
+        }, [h, G, y, F, L, A, B, x]);
     i.useEffect(() => {
         null != v && null != D.current && D.current.scrollIntoView({ behavior: "smooth" });
     }, [v]);
@@ -130,7 +130,7 @@ function j(e) {
         K = (0, l.jsx)(d.U, {
             resolveTenantReviewButtonProps: C,
             onBack: W,
-            flowStartTime: x.startTime,
+            flowStartTime: P.startTime,
             onPaymentSourceAdd: V,
             disablePurchase: H,
             analyticsLocation: g,

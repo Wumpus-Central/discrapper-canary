@@ -1,1 +1,1 @@
-e.exports = { M: "navigatorTrailing__15430" };
+_.exports = { M: "navigatorTrailing__15430" };

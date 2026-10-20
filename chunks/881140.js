@@ -1,6 +1,6 @@
 l.d(t, { A: () => u });
-var r = l(477900),
-    n = l(582128),
+var n = l(477900),
+    r = l(582128),
     i = l(807081),
     a = l(9578),
     s = l(380610),
@@ -13,10 +13,10 @@ function u(e) {
     return {
         react(t, l, u) {
             if (e.enableBuildOverrides && (0, s.vS)(t.target))
-                return (0, r.jsx)(n.Fragment, { children: (0, r.jsx)(d.default, { url: t.target }, t.target) }, u.key);
+                return (0, n.jsx)(r.Fragment, { children: (0, n.jsx)(d.default, { url: t.target }, t.target) }, u.key);
             let v = l(t.content, u),
-                C = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
-                h = e?.mustConfirmExternalLink
+                h = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
+                C = e?.mustConfirmExternalLink
                     ? (e) => (
                           e?.stopPropagation(),
                           e?.preventDefault(),
@@ -33,20 +33,20 @@ function u(e) {
                 let e = `
 
 (${t.target})`;
-                (C.length + e.length > 1024 && ((e = "..." + e), (C = (C = C.substr(0, 1024 - e.length)).trimEnd())),
-                    (C += e));
+                (h.length + e.length > 1024 && ((e = "..." + e), (h = (h = h.substr(0, 1024 - e.length)).trimEnd())),
+                    (h += e));
             }
             return u.noStyleAndInteraction
-                ? (0, r.jsx)("span", { title: C, children: v }, u.key)
-                : (0, r.jsx)(
+                ? (0, n.jsx)("span", { title: h, children: v }, u.key)
+                : (0, n.jsx)(
                       a.A,
                       {
-                          title: C,
+                          title: h,
                           href: t.target,
                           trusted: function () {
                               return c(t);
                           },
-                          onClick: h,
+                          onClick: C,
                           messageId: u.messageId,
                           channelId: u.channelId,
                           children: v,

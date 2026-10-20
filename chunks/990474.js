@@ -1,8 +1,8 @@
-t.d(n, { Ay: () => v, Oh: () => N, gn: () => E });
+t.d(n, { Ay: () => v, Oh: () => N, gn: () => I });
 var l = t(477900),
     a = t(582128),
-    r = t(17928),
-    i = t(314116),
+    i = t(17928),
+    r = t(314116),
     o = t(866665),
     s = t(821609),
     c = t(721768),
@@ -12,34 +12,34 @@ var l = t(477900),
     h = t(406704),
     p = t(885386),
     g = t(734057),
-    f = t(31717),
-    x = t(576705),
+    x = t(31717),
+    f = t(576705),
     j = t(309010),
-    y = t(625494),
-    A = t(652215),
+    A = t(625494),
+    y = t(652215),
     C = t(73510);
 t(827669);
 var k = t(105292);
-function I(e, n, t, l, a) {
+function E(e, n, t, l, a) {
     null != e &&
-        ("" !== f.A.getDraft(e, f.C.ChannelMessage)
-            ? (0, i.A)({
+        ("" !== x.A.getDraft(e, x.C.ChannelMessage)
+            ? (0, r.A)({
                   title: k.intl.string(k.t.pe26Cj),
                   subtitle: k.intl.string(k.t["+awCIy"]),
                   confirmText: k.intl.string(k.t.VkKicb),
-                  onConfirm: () => r(),
+                  onConfirm: () => i(),
                   onCloseCallback: () => {
-                      y._.dispatch(A.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      A._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   },
               })
-            : r());
-    function r() {
+            : i());
+    function i() {
         if (null == e) return;
-        let r = g.A.getChannel(e);
-        if (null == r) return;
-        let { command: i, application: o } = u.EW({ channel: r, type: "channel" }, t, a);
-        if (null != i && i.untranslatedName === n) {
-            y._.dispatch(A.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+        let i = g.A.getChannel(e);
+        if (null == i) return;
+        let { command: r, application: o } = u.EW({ channel: i, type: "channel" }, t, a);
+        if (null != r && r.untranslatedName === n) {
+            A._.dispatch(y.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let n =
                 null != o
                     ? {
@@ -51,44 +51,44 @@ function I(e, n, t, l, a) {
                       }
                     : null;
             (c.Gf({ channelId: e, command: null, section: null }),
-                c.Gf({ channelId: e, command: i, section: n, location: l }));
+                c.Gf({ channelId: e, command: r, section: n, location: l }));
         }
     }
 }
-function E(e) {
-    let { node: n, stateKey: t, children: i } = e,
-        o = (0, r.bG)([g.A, j.Ay], () => g.A.getChannel(n.channelId ?? j.Ay.getChannelId()), [n.channelId]),
-        { hasSendMessagePerm: s, hasUseAppCommandsPerm: c } = (0, r.cf)([x.A], () => ({
-            hasSendMessagePerm: x.A.can(A.xBc.SEND_MESSAGES, o),
-            hasUseAppCommandsPerm: x.A.can(A.xBc.USE_APPLICATION_COMMANDS, o),
+function I(e) {
+    let { node: n, stateKey: t, children: r } = e,
+        o = (0, i.bG)([g.A, j.Ay], () => g.A.getChannel(n.channelId ?? j.Ay.getChannelId()), [n.channelId]),
+        { hasSendMessagePerm: s, hasUseAppCommandsPerm: c } = (0, i.cf)([f.A], () => ({
+            hasSendMessagePerm: f.A.can(y.xBc.SEND_MESSAGES, o),
+            hasUseAppCommandsPerm: f.A.can(y.xBc.USE_APPLICATION_COMMANDS, o),
         })),
-        f = void 0 !== o ? { type: "channel", channel: o } : { type: "contextless" },
-        { command: y } = u.D3(f, n.commandKey ?? ""),
+        x = void 0 !== o ? { type: "channel", channel: o } : { type: "contextless" },
+        { command: A } = u.D3(x, n.commandKey ?? ""),
         k = p.D_.useSetting(),
-        E = a.useMemo(() => {
-            if (null == y || null == o || y.untranslatedName !== n.commandName || k) return !1;
+        I = a.useMemo(() => {
+            if (null == A || null == o || A.untranslatedName !== n.commandName || k) return !1;
             let e = o.isPrivate();
             if ((0, h.UJ)(o) || (!e && !s)) return !1;
-            let t = y?.applicationId === C.Ik.BUILT_IN;
+            let t = A?.applicationId === C.Ik.BUILT_IN;
             return !!e || !!t || !!c;
-        }, [o, y, s, c, n.commandName, k]),
+        }, [o, A, s, c, n.commandName, k]),
         N = a.useCallback(
             (e) => {
                 (e?.stopPropagation(),
                     null != o &&
                         null != n.commandName &&
                         null != n.commandKey &&
-                        I(o.id, n.commandName, n.commandKey, d.Oh.MENTION));
+                        E(o.id, n.commandName, n.commandKey, d.Oh.MENTION));
             },
             [o, n.commandKey, n.commandName],
         );
-    return E
-        ? (0, l.jsxs)(m.A, { role: "link", onClick: N, children: ["/", i] }, t)
-        : (0, l.jsxs)("span", { children: ["/", i] });
+    return I
+        ? (0, l.jsxs)(m.A, { role: "link", onClick: N, children: ["/", r] }, t)
+        : (0, l.jsxs)("span", { children: ["/", r] });
 }
 function N(e) {
-    let { commandId: n, commandName: t, commandDescription: a, applicationId: i, onClick: c } = e,
-        u = (0, r.bG)([j.Ay], () => j.Ay.getChannelId());
+    let { commandId: n, commandName: t, commandDescription: a, applicationId: r, onClick: c } = e,
+        u = (0, i.bG)([j.Ay], () => j.Ay.getChannelId());
     return (0, l.jsx)(o.m, {
         text: a,
         position: "top",
@@ -96,12 +96,12 @@ function N(e) {
             size: "sm",
             variant: "secondary",
             onClick: function (e) {
-                (e?.stopPropagation(), I(u, t, n, d.Oh.POPULAR_COMMANDS, i), c?.(n));
+                (e?.stopPropagation(), E(u, t, n, d.Oh.POPULAR_COMMANDS, r), c?.(n));
             },
             text: `/${t}`,
         }),
     });
 }
 function v(e) {
-    return { react: (e, n, t) => (0, l.jsx)(E, { node: e, stateKey: t.key, children: n(e.content, t) }) };
+    return { react: (e, n, t) => (0, l.jsx)(I, { node: e, stateKey: t.key, children: n(e.content, t) }) };
 }

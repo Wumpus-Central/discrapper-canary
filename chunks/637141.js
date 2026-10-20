@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(818348),
     y = n(105292),
     A = n(649975),
-    P = n(693351),
-    x = n(632815);
+    x = n(693351),
+    P = n(632815);
 let v = "***@***.***",
     _ = new C.YS({ id: m.a, brand: h.Ay.Types.UNKNOWN, type: g.hes.CARD });
 function T(e, t, n) {
@@ -64,8 +64,8 @@ function T(e, t, n) {
             brand: h.Ay.Types.GIFT_CARD,
             label:
                 null != n
-                    ? y.intl.formatToPlainString(P.default["Jz6+Oj"], { amount: n })
-                    : y.intl.string(P.default["/FQWfA"]),
+                    ? y.intl.formatToPlainString(x.default["Jz6+Oj"], { amount: n })
+                    : y.intl.string(x.default["/FQWfA"]),
         };
     else if (e instanceof C.IE) return { brand: h.Ay.Types.PIX, label: y.intl.string(y.t.JG3WQU) };
     else if (e instanceof C.WV) return { brand: h.Ay.Types.PIX, label: y.intl.string(y.t.JkKNss) };
@@ -83,7 +83,7 @@ function b(e) {
             hidePersonalInformation: u,
             onChange: h,
             onPaymentSourceAdd: S,
-            isTrial: P = !1,
+            isTrial: x = !1,
             disabled: v = !1,
             dropdownLoading: b,
             paymentGatewayRestrictions: j,
@@ -126,7 +126,7 @@ function b(e) {
                 ),
                 g = 0 === n.length,
                 I = null != l ? [l] : [],
-                P = [...I, ...n, ...(h ? [_] : [])].map((e, t) => {
+                x = [...I, ...n, ...(h ? [_] : [])].map((e, t) => {
                     if (e instanceof p.A) {
                         let t,
                             { brand: n, label: l } = T(e.source, a, S);
@@ -150,7 +150,7 @@ function b(e) {
                     }
                     return { key: t, value: e.value, label: e.label };
                 }),
-                x = i.useMemo(() => {
+                P = i.useMemo(() => {
                     let e = t;
                     if (null == e && null != u && u.length > 0) {
                         let t = n.filter((e) => u.includes(e.paymentGateway));
@@ -170,9 +170,9 @@ function b(e) {
                     }
                 },
                 prependOptions: I,
-                paymentSourceOptions: P,
-                paymentSource: i.useMemo(() => n.find((e) => e.id === x), [n, x]),
-                selectedPaymentSourceId: x,
+                paymentSourceOptions: x,
+                paymentSource: i.useMemo(() => n.find((e) => e.id === P), [n, P]),
+                selectedPaymentSourceId: P,
             };
         })({
             selectedPaymentSourceId: t,
@@ -205,7 +205,7 @@ function b(e) {
                 }
             }
             return null;
-        })({ isTrial: P, selectedPaymentSource: G, paymentSources: n, defaultPaymentSourceId: O }),
+        })({ isTrial: x, selectedPaymentSource: G, paymentSources: n, defaultPaymentSourceId: O }),
         W = i.useMemo(() => {
             let e = F.map((e) => {
                 let { label: t, brand: n, ...l } = e;
@@ -214,7 +214,7 @@ function b(e) {
             return null != L ? L(e) : e;
         }, [F, L]),
         V = i.useMemo(() => (null != S ? S : () => {}), [S]);
-    if (b) return (0, l.jsx)("div", { className: x.h, children: (0, l.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }) });
+    if (b) return (0, l.jsx)("div", { className: P.h, children: (0, l.jsx)(s.y, { type: s.y.Type.PULSING_ELLIPSIS }) });
     if (D) return (0, l.jsx)(N, { onClick: S, disabled: v, variant: k, text: w });
     let Y = (0, l.jsx)(m.v, {
         value: B ?? null,

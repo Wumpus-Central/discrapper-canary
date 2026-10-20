@@ -1,8 +1,8 @@
 a.d(t, { A: () => y });
 var n = a(477900),
     l = a(582128),
-    s = a(503698),
-    i = a.n(s),
+    i = a(503698),
+    s = a.n(i),
     r = a(862482),
     o = a(939249),
     d = a(980707),
@@ -16,32 +16,32 @@ var n = a(477900),
     v = a(786574),
     j = a(730441);
 function f(e) {
-    let { id: t, selected: a, onClick: l, children: s, ref: r } = e;
+    let { id: t, selected: a, onClick: l, children: i, ref: r } = e;
     return (0, n.jsx)(o.D, {
-        className: i()(j.V3, { [j.wH]: a }),
+        className: s()(j.V3, { [j.wH]: a }),
         "data-tab-id": t,
         innerRef: r,
         onClick: l,
-        children: s,
+        children: i,
     });
 }
 function b(e) {
-    let { tabs: t, selectedTabId: a, onSelectTab: s } = e,
-        i = l.useRef(new Map()),
+    let { tabs: t, selectedTabId: a, onSelectTab: i } = e,
+        s = l.useRef(new Map()),
         [o, b] = l.useState(() => new Set()),
         { ref: y, width: E } = (0, m.Ay)(),
-        C = l.useRef(null),
-        S = (0, v.N)(t, s),
-        _ = (0, h.A)();
+        _ = l.useRef(null),
+        C = (0, v.N)(t, i),
+        S = (0, h.A)();
     l.useEffect(() => {
         if (null == E) return;
         let e = new Set(),
             n = E ?? 0;
-        for (let l of ((n -= i.current.get(a)?.getBoundingClientRect().width ?? 0), t))
-            l.id !== a && (n -= i.current.get(l.id)?.getBoundingClientRect().width ?? 0) < 0 && e.add(l.id);
+        for (let l of ((n -= s.current.get(a)?.getBoundingClientRect().width ?? 0), t))
+            l.id !== a && (n -= s.current.get(l.id)?.getBoundingClientRect().width ?? 0) < 0 && e.add(l.id);
         b(e);
     }, [t, E, y, a]);
-    let N = l.useCallback(
+    let A = l.useCallback(
         (e) => {
             let { closePopout: t } = e;
             return (0, n.jsxs)(d.W, {
@@ -51,10 +51,10 @@ function b(e) {
                 onClose: t,
                 "aria-label": "Overflowed DevTools Tabs",
                 onSelect: t,
-                children: [S, null != _ && (0, n.jsx)(c.rX, { "aria-label": "Playgrounds", children: _ })],
+                children: [C, null != S && (0, n.jsx)(c.rX, { "aria-label": "Playgrounds", children: S })],
             });
         },
-        [S, _],
+        [C, S],
     );
     return (0, n.jsxs)("div", {
         className: j.Mv,
@@ -69,7 +69,7 @@ function b(e) {
                             if (!o.has(t))
                                 return (0, n.jsx)(
                                     f,
-                                    { id: t, selected: a === t, onClick: a !== t ? () => s(t) : void 0, children: l },
+                                    { id: t, selected: a === t, onClick: a !== t ? () => i(t) : void 0, children: l },
                                     t,
                                 );
                         })
@@ -84,9 +84,9 @@ function b(e) {
                                     id: t,
                                     selected: a === t,
                                     ref: (e) => {
-                                        i.current.set(t, e);
+                                        s.current.set(t, e);
                                     },
-                                    onClick: a !== t ? () => s(t) : void 0,
+                                    onClick: a !== t ? () => i(t) : void 0,
                                     children: l,
                                 },
                                 t,
@@ -98,11 +98,11 @@ function b(e) {
             (0, n.jsx)("div", {
                 className: j.MK,
                 children:
-                    (o.size > 0 || null != _) &&
+                    (o.size > 0 || null != S) &&
                     (0, n.jsx)(u.Y, {
-                        targetElementRef: C,
+                        targetElementRef: _,
                         layerContext: g.He,
-                        renderPopout: N,
+                        renderPopout: A,
                         position: "bottom",
                         align: "right",
                         autoInvert: !1,
@@ -110,7 +110,7 @@ function b(e) {
                         children: (e) =>
                             (0, n.jsx)(r.$n, {
                                 ...e,
-                                buttonRef: C,
+                                buttonRef: _,
                                 className: j.Iq,
                                 size: r.$n.Sizes.ICON,
                                 look: r.$n.Looks.BLANK,
@@ -126,8 +126,8 @@ function b(e) {
     });
 }
 function y(e, t) {
-    let { tabs: a, initialSelectedTabId: s, onChangeTab: i } = e,
-        [r, o] = l.useState(s ?? a[0]?.id);
+    let { tabs: a, initialSelectedTabId: i, onChangeTab: s } = e,
+        [r, o] = l.useState(i ?? a[0]?.id);
     return {
         TabBar: l.useCallback(
             () =>
@@ -135,10 +135,10 @@ function y(e, t) {
                     tabs: a,
                     selectedTabId: r,
                     onSelectTab: (e) => {
-                        (o(e), i?.(e));
+                        (o(e), s?.(e));
                     },
                 }),
-            [r, o, i, ...t],
+            [r, o, s, ...t],
         ),
         renderSelectedTab: a.find((e) => e.id === r)?.render ?? (() => null),
         selectedTabId: r,

@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(158045),
     y = n(580630),
     A = n(166532),
-    P = n(888751),
-    x = n(652215),
+    x = n(888751),
+    P = n(652215),
     v = n(202541),
     _ = n(88001),
     T = n(105292),
@@ -71,7 +71,7 @@ function R(e) {
                     ? (0, h.Tp)(u, i)
                     : T.intl.formatToPlainString(b.default["8bPDtb"], { premiumGroupProductName: (0, _.DP)() });
             if (M(t)) {
-                let e = (0, P.iK)(i);
+                let e = (0, x.iK)(i);
                 return (
                     o > 1 && (e = T.intl.format(N.default.kyGViz, { quantity: o, label: e })),
                     s &&
@@ -93,7 +93,7 @@ function R(e) {
             isClickPurchaseItemToEdit: V,
             quantity: B,
         }),
-        q = (function (e) {
+        Z = (function (e) {
             let { guildId: t, invoiceSummaryType: n, giftRecipient: l } = e,
                 i = (0, r.bG)([f.A], () => (null != t ? f.A.getGuild(t) : null), [t]);
             return M(n) && null != l
@@ -102,7 +102,7 @@ function R(e) {
                   ? { type: "guildSubscription", guild: i }
                   : void 0;
         })({ guildId: w, invoiceSummaryType: t, giftRecipient: L }),
-        Z = (function (e) {
+        q = (function (e) {
             let { invoiceSummaryType: t, guildId: n, giftRecipient: l } = e;
             return M(t)
                 ? null != l
@@ -124,10 +124,10 @@ function R(e) {
                     let e = S.A.get(t);
                     if (null == e) return {};
                     let n = e.productLine;
-                    if (n === x.EZt.PREMIUM) return {};
+                    if (n === P.EZt.PREMIUM) return {};
                     let l = a.A.getApplication(e.applicationId);
                     if (null == l) return {};
-                    if (n === x.EZt.GUILD_ROLE) {
+                    if (n === P.EZt.GUILD_ROLE) {
                         let e = E.A.getGuildId(),
                             t = f.A.getGuild(e);
                         return null != t ? { header: t.name, guildForIcon: t } : {};
@@ -167,16 +167,16 @@ function R(e) {
                         S = (0, y.CE)(E, n.interval, n.intervalCount),
                         g = null,
                         A = null,
-                        x = !1,
+                        P = !1,
                         v = S,
                         _ = o?.discountOffer;
                     if (m)
                         ((g = (0, C.O7)(n, { amount: f, currency: l.currency })),
-                            (v = (0, P.ib)(l.currency, { includeNowSuffix: !0 })));
+                            (v = (0, x.ib)(l.currency, { includeNowSuffix: !0 })));
                     else if (d) {
-                        if (((v = E), (0, P.uH)(n))) {
+                        if (((v = E), (0, x.uH)(n))) {
                             let e = (0, I.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            ((g = null != e ? (0, y.$g)(e * u, l.currency) : null), (x = !0));
+                            ((g = null != e ? (0, y.$g)(e * u, l.currency) : null), (P = !0));
                         }
                     } else if (r) {
                         let e = (0, p.pg)(l, n.id);
@@ -202,7 +202,7 @@ function R(e) {
                                       })));
                         }
                     }
-                    return { price: v, priceStrikethroughText: A, priceSubText: g, priceSubTextHasStrikethrough: x };
+                    return { price: v, priceStrikethroughText: A, priceSubText: g, priceSubTextHasStrikethrough: P };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,
@@ -218,12 +218,12 @@ function R(e) {
         er = ((0, I.ys)(c.id) ? (0, I.m6)(c.id) : void 0) === v.PremiumTypes.TIER_2;
     return (0, l.jsx)(u.f7, {
         label: K,
-        description: Z,
+        description: q,
         price: et,
         priceStrikethroughText: en,
         priceSubText: el,
         priceSubTextHasStrikethrough: ei,
-        target: q,
+        target: Z,
         graphic: (0, l.jsx)(O, { subscriptionPlan: c, storeListing: U }),
         omitDefaultIconBackground: er,
         header: z,

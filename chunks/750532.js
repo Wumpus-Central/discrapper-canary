@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(637969),
     y = n(45938),
     A = n(158045),
-    P = n(951305),
-    x = n(166532),
+    x = n(951305),
+    P = n(166532),
     v = n(652215),
     _ = n(202541),
     T = n(105292),
@@ -44,15 +44,15 @@ function R(e) {
         { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, o.i)(),
         D = (0, c.S3)(),
         U = (0, u.s2)(),
-        { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
+        { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, x.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
         V = D?.productLine === v.EZt.COLLECTIBLES,
         Y = D?.productLine === v.EZt.SOCIAL_LAYER_GAME_ITEM,
-        K = U === x.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        q = G && (0, y.Ik)(B) && U === x.pn.CONFIRM && null != F && !V && !Y,
-        Z = [x.pn.SKU_SELECT, x.pn.SELECT_FREE_SKU],
-        z = null != U && !Z.includes(U) && null != n,
+        K = U === P.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        Z = G && (0, y.Ik)(B) && U === P.pn.CONFIRM && null != F && !V && !Y,
+        q = [P.pn.SKU_SELECT, P.pn.SELECT_FREE_SKU],
+        z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == U) return;
@@ -70,7 +70,7 @@ function R(e) {
                           skuName: null != d ? (0, A.RH)(d) : "",
                       }),
                   }))
-                : q
+                : Z
                   ? (e = (0, l.jsxs)("div", {
                         className: b.kL,
                         children: [
@@ -108,7 +108,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, S, n, U, k, w, R, d, K, q, H, z, G, B, M, O, L]);
+    }, [F, $, S, n, U, k, w, R, d, K, Z, H, z, G, B, M, O, L]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
@@ -138,6 +138,6 @@ function M() {
     return (0, l.jsx)(d.f, { headerBadgeConfig: e });
 }
 function L(e) {
-    let { isGift: t } = (0, P.Pv)();
-    return e.step !== x.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
+    let { isGift: t } = (0, x.Pv)();
+    return e.step !== P.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
 }

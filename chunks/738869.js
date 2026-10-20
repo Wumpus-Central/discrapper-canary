@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(580630),
     y = n(371710),
     A = n(529412),
-    P = n(557679),
-    x = n(202541),
+    x = n(557679),
+    P = n(202541),
     v = n(805161),
     _ = n(105292),
     T = n(144228),
@@ -39,7 +39,7 @@ function j(e) {
         } = e,
         f = (0, h.t4)((e) => e.setSelectedPlanId),
         { isRecurringGift: E, setIsRecurringGift: S } = (0, C.Pv)(),
-        g = n.interval === x.WT.YEAR ? v.default.rstMwN : v.default.Vb8FaC,
+        g = n.interval === P.WT.YEAR ? v.default.rstMwN : v.default.Vb8FaC,
         I = i.useMemo(
             () => [
                 { isRecurring: !0, label: g },
@@ -101,7 +101,7 @@ var R = n(35587),
     O = n(387278),
     M = n(268431);
 function L(e, t) {
-    let n = e.interval === x.WT.YEAR ? _.t.ECT4A5 : _.t.v9QeON;
+    let n = e.interval === P.WT.YEAR ? _.t.ECT4A5 : _.t.v9QeON;
     return _.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });
 }
 function k(e) {
@@ -119,8 +119,8 @@ function w(e, t, n) {
             isEligibleForTrial: d,
         } = n,
         m = null != e && (e.planId === s || (null != t && e.planId === t.id));
-    if (i) return a || s !== x.gD.PREMIUM_MONTH_TIER_2 ? null : k(_.intl.string(_.t.iQTfWx));
-    if (null != t && (t.interval !== x.WT.YEAR || null == e) && !(r && !m)) return null;
+    if (i) return a || s !== P.gD.PREMIUM_MONTH_TIER_2 ? null : k(_.intl.string(_.t.iQTfWx));
+    if (null != t && (t.interval !== P.WT.YEAR || null == e) && !(r && !m)) return null;
     if (
         null != t &&
         !m &&
@@ -129,7 +129,7 @@ function w(e, t, n) {
         let e = (0, O.vK)(t, a, c);
         return null != e ? k(e) : null;
     }
-    return null != t && t.interval === x.WT.YEAR && null != e
+    return null != t && t.interval === P.WT.YEAR && null != e
         ? _.intl.string(_.t["122kWB"])
         : r && !m && null != o
           ? k(_.intl.format(_.t.IAybsG, { discount: (0, u.l9)(l, o / 100) }))
@@ -161,19 +161,19 @@ function D(e) {
         })),
         { giftRecipient: H, setIsRecurringGift: W } = (0, C.Pv)(),
         V = B && (0, S.Ik)(H),
-        { discountOffer: Y, discountAmountOff: K, applicablePlan: q } = G,
-        Z = (0, c.bG)([E.A], () => E.A.get(n));
-    o()(null != Z, "Missing subscriptionPlan");
-    let z = (0, g.m6)(Z.id),
-        $ = V && z === x.PremiumTypes.TIER_2,
+        { discountOffer: Y, discountAmountOff: K, applicablePlan: Z } = G,
+        q = (0, c.bG)([E.A], () => E.A.get(n));
+    o()(null != q, "Missing subscriptionPlan");
+    let z = (0, g.m6)(q.id),
+        $ = V && z === P.PremiumTypes.TIER_2,
         J = (0, A.qi)({ location: `PremiumSwitchPlanSelectOption${$ ? "" : "-DISABLED"}` }),
         Q = V && (!$ || !J || r),
         X = (0, R.Sq)(),
-        ee = (0, g.L_)({ planId: n, isGift: B, priceOptions: s, subscriptionPlan: Z }),
+        ee = (0, g.L_)({ planId: n, isGift: B, priceOptions: s, subscriptionPlan: q }),
         et = (0, g.y8)(n, !1, B, s),
         en = null != ee && !T,
         el = i.useCallback(() => {
-            let e = w(t, Z, {
+            let e = w(t, q, {
                 userLocale: U,
                 isEligibleForBOGOPromotion: X,
                 shouldShowSavingsPercent: en,
@@ -195,26 +195,26 @@ function D(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [U, X, Z, t, en, B, n, ee, s, b]),
+        }, [U, X, q, t, en, B, n, ee, s, b]),
         ei = i.useMemo(
-            () => (0, g.D8)(Z.interval, B, u, Z.intervalCount, V, z),
-            [Z.interval, Z.intervalCount, B, u, V, z],
+            () => (0, g.D8)(q.interval, B, u, q.intervalCount, V, z),
+            [q.interval, q.intervalCount, B, u, V, z],
         ),
         er = D && V && (0, y.dI)(n),
         ea = (function (e, t, n) {
             let { isRecurringGift: l } = (0, C.Pv)(),
                 i = n && l,
-                r = e.interval === x.WT.YEAR;
+                r = e.interval === P.WT.YEAR;
             return {
                 priceSubtext: i
                     ? _.intl.string(v.default["0llBr2"])
                     : _.intl.formatToPlainString(_.t.ori2Jm, { currencyAmount: (0, I.$g)(t.amount, t.currency) }),
                 priceInterval: i ? _.intl.string(r ? v.default.mqaMxh : v.default.JUUvJw) : null,
             };
-        })(Z, et, r),
-        es = null != q && n === q;
+        })(q, et, r),
+        es = null != Z && n === Z;
     function eo() {
-        (k || r || F(n, { shouldUpdateQuantity: !(0, P.b)(n) }), er || W(!1));
+        (k || r || F(n, { shouldUpdateQuantity: !(0, x.b)(n) }), er || W(!1));
     }
     let eu = T
             ? _.intl.format(_.t.hXcaLT, {
@@ -311,22 +311,22 @@ function D(e) {
                                     savingsPercent: o,
                                 } = t;
                                 return l && null != r && s
-                                    ? e.interval === x.WT.YEAR
+                                    ? e.interval === P.WT.YEAR
                                         ? _.intl.format(_.t["EQmTl+"], {
-                                              numYears: a?.discount.intervalCount ?? x.OJ,
+                                              numYears: a?.discount.intervalCount ?? P.OJ,
                                               regularPrice: (0, I.$g)(n.amount, n.currency),
                                           })
                                         : _.intl.format(_.t["VeE/4E"], {
-                                              numMonths: a?.discount.intervalCount ?? x.OJ,
+                                              numMonths: a?.discount.intervalCount ?? P.OJ,
                                               discountedPrice: (0, I.$g)(n.amount - r, n.currency),
                                               regularPrice: (0, I.$g)(n.amount, n.currency),
                                           })
                                     : i
                                       ? L(e, n)
-                                      : e.interval === x.WT.YEAR
+                                      : e.interval === P.WT.YEAR
                                         ? _.intl.formatToPlainString(_.t.rtLTJP, { percent: o ?? "" })
                                         : null;
-                            })(Z, {
+                            })(q, {
                                 price: et,
                                 isEligibleForDiscount: N,
                                 isEligibleForTrial: b,
@@ -342,7 +342,7 @@ function D(e) {
     return er
         ? (0, l.jsx)(j, {
               planId: n,
-              subscriptionPlan: Z,
+              subscriptionPlan: q,
               planLabel: ei,
               priceSubtext: ea.priceSubtext,
               selected: r,

@@ -34,15 +34,15 @@ function c(e) {
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: x } = (0, i.QM)(y, t, {
+        { renewalPrice: x, multiPeriodDiscountAttributes: P } = (0, i.QM)(y, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
         v = {
             purchaseButtonText: g,
             totalDue: h ? I.total : 0,
-            renewalPrice: P,
-            multiPeriodDiscountAttributes: x,
+            renewalPrice: x,
+            multiPeriodDiscountAttributes: P,
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,

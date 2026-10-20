@@ -95,8 +95,8 @@ function y(e) {
             checkoutPriceOptions: g,
             isInOneStepSubscriptionCheckout: y,
             shouldDisallowPlanSelection: A,
-            verifiedTrialId: P,
-            effectivePlanGroup: x,
+            verifiedTrialId: x,
+            effectivePlanGroup: P,
         } = (0, f.t4)((n) => ({
             activeSubscription: n.activeSubscription,
             isPremium: n.get("isPremiumPurchase"),
@@ -134,11 +134,11 @@ function y(e) {
                     isGift: S,
                     selectedPlan: v,
                     premiumSubscription: m,
-                    planGroup: x,
+                    planGroup: P,
                     isPrepaidPaymentSource: M,
                     isInPastDueCheckout: L,
                 }),
-            [S, v, m, x, M, t, L],
+            [S, v, m, P, M, t, L],
         ),
         w = null != m && !S,
         D = i.useCallback(
@@ -147,23 +147,23 @@ function y(e) {
                 return w
                     ? (0, l.jsx)(c.A, {
                           handlePaymentSourceAdd: n,
-                          planGroup: x,
+                          planGroup: P,
                           hasOpenInvoice: _,
                           isInPastDueCheckout: L,
                       })
                     : (0, l.jsx)(o._, {
                           handlePaymentSourceAdd: n,
                           handleStepChange: R,
-                          planGroup: x,
-                          verifiedTrialId: P,
+                          planGroup: P,
+                          verifiedTrialId: x,
                           reviewWarningMessage: e.reviewWarningMessage,
                       });
             },
-            [w, x, P, e.reviewWarningMessage, _, L, R],
+            [w, P, x, e.reviewWarningMessage, _, L, R],
         ),
         U = null != r ? r.id : void 0,
         G = i.useMemo(() => ({ user_trial_offer_id: U }), [U]),
-        F = i.useMemo(() => ({ trialId: P, planGroup: x }), [P, x]);
+        F = i.useMemo(() => ({ trialId: x, planGroup: P }), [x, P]);
     return (0, l.jsx)(p.Y, {
         ...e,
         isBackButtonEligible: N,

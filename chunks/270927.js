@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(993408),
     y = n(1076),
     A = n(288106),
-    P = n(604913),
-    x = n(223311),
+    x = n(604913),
+    P = n(223311),
     v = n(306396),
     _ = n(151115),
     T = n(518865),
@@ -44,12 +44,12 @@ function U(e) {
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
                 } = (0, y.z)(),
-                s = (0, x.A)(b.FYj),
+                s = (0, P.A)(b.FYj),
                 o = null != n ? (0, _.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
             (0, i.useEffect)(() => {
                 switch (u?.type) {
-                    case P.hE.COLLECT_AND_CLAIM: {
+                    case x.hE.COLLECT_AND_CLAIM: {
                         let e = o?.progress;
                         if (null == n || null == e) break;
                         let t = Math.min(e.current + (0, v.oO)(n, u.collectionId), e.target);
@@ -65,7 +65,7 @@ function U(e) {
                             a(void 0));
                         return;
                     }
-                    case P.hE.TARGETED_OFFER: {
+                    case x.hE.TARGETED_OFFER: {
                         let e = u.reward,
                             n = null != e ? o?.rewardConfig?.discount?.id : null,
                             i = null != n && t?.getDiscountIdIfExists() === String(n) ? e : null;
@@ -87,8 +87,8 @@ var G = n(951305),
     V = n(10716),
     Y = n(206828),
     K = n(31823),
-    q = n(427675),
-    Z = n(977445),
+    Z = n(427675),
+    q = n(977445),
     z = n(118982),
     $ = n(566980),
     J = n(319820),
@@ -182,7 +182,7 @@ function ea(e) {
         {
             sku: I,
             application: y,
-            eligiblePaymentGateways: x,
+            eligiblePaymentGateways: P,
             disabled: v,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
@@ -190,7 +190,7 @@ function ea(e) {
                     purchaseState: e.purchaseState,
                 })),
                 { application: n } = (0, K.V)(),
-                l = (0, q.gU)();
+                l = (0, Z.gU)();
             B()(null != e, "Expected selectedSkuId");
             let i = l[e],
                 r = i?.eligiblePaymentGateways;
@@ -224,7 +224,7 @@ function ea(e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, W.bG)([V.A], () => V.A.getFetchState()),
                 { fetched: a, hasAlreadyLinked: s } = (0, Y.RD)(n),
-                o = (0, Z.uS)(n.id),
+                o = (0, q.uS)(n.id),
                 u = null != t && t.productLine === b.EZt.SOCIAL_LAYER_GAME_ITEM,
                 c = n.supportsEmbeddedSurface(H.U.MAIN) && r === V.$.ERROR,
                 d = u && a && !s && !l ? (0, z.k3)(n) : null;
@@ -264,7 +264,7 @@ function ea(e) {
                 }, [d]),
             };
         })({ sku: I, application: y, isGift: f }),
-        D = i.useMemo(() => ({ paymentGatewayRestrictions: x, shouldUseUnifiedCheckoutUI: !0 }), [x]),
+        D = i.useMemo(() => ({ paymentGatewayRestrictions: P, shouldUseUnifiedCheckoutUI: !0 }), [P]),
         F = (0, l.jsx)(c.N, {
             label: j.intl.string(j.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -335,7 +335,7 @@ function ea(e) {
                                 if (null == e) return null;
                                 let n = e.tenantMetadata?.collectibles;
                                 switch (n?.type) {
-                                    case P.hE.COLLECT_AND_CLAIM:
+                                    case x.hE.COLLECT_AND_CLAIM:
                                         return t
                                             ? null
                                             : (function (e) {
@@ -357,7 +357,7 @@ function ea(e) {
                                                             textColor: "text-overlay-light",
                                                         };
                                               })(e);
-                                    case P.hE.TARGETED_OFFER: {
+                                    case x.hE.TARGETED_OFFER: {
                                         let e = n.reward,
                                             t = e?.checkout?.offerNotice,
                                             l = t?.text;

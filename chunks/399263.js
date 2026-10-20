@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(142703));
+(n.d(t, { A: () => p }), n(142703));
 var l = n(17928),
     s = n(73153),
     a = n(232835);
@@ -37,7 +37,7 @@ class f extends l.Ay.Store {
         if (null != e) return d[e];
     }
 }
-let g = new f(s.h, {
+let p = new f(s.h, {
     CONNECTION_OPEN: function () {
         d = {};
     },

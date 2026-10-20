@@ -81,8 +81,8 @@ function g(e, t, a, l) {
         locked: !1,
     };
 }
-var b = a(81253);
-let x = [
+var v = a(81253);
+let A = [
         g("left-2", _.a.LEADERBOARD, 0, 1, { heading: "Top chatters this week" }),
         g("right-1", _.a.LEADERBOARD, 1, 0, { heading: "Top boosters" }),
         g("left-1", _.a.IMAGE_TEXT, 0, 0, {
@@ -93,16 +93,14 @@ let x = [
         }),
         g("right-2", _.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    A = x
-        .filter((e) => {
-            let { requires_hydration: t } = e;
-            return t;
-        })
-        .map((e) => {
-            let { id: t } = e;
-            return t;
-        }),
-    f = {
+    x = A.filter((e) => {
+        let { requires_hydration: t } = e;
+        return t;
+    }).map((e) => {
+        let { id: t } = e;
+        return t;
+    }),
+    b = {
         stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -133,7 +131,7 @@ let x = [
             },
         ],
     },
-    v = {
+    f = {
         title: "Server Hub Page",
         stories: [
             {
@@ -152,7 +150,7 @@ let x = [
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: A,
+                                        widgetIds: x,
                                     }),
                                     "loading" !== n)
                                 ) {
@@ -167,17 +165,17 @@ let x = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: A.map((e) => ({
+                                        widgets: x.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...f } : null,
+                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...b } : null,
                                         })),
                                     });
                                 }
                             }, [t, n]),
                             t);
                     return (0, l.jsx)("div", {
-                        className: r()(b.frame, b[a]),
-                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: i, widgets: x }),
+                        className: r()(v.frame, v[a]),
+                        children: (0, l.jsx)(m.A, { canEdit: !0, guildId: i, widgets: A }),
                     });
                 },
                 controls: {
@@ -210,17 +208,17 @@ let x = [
     };
 a(321073);
 var y = a(17928),
-    S = a(331322),
+    w = a(331322),
     E = a(994500),
-    w = a(711014),
+    S = a(711014),
     I = a(287809),
     D = a(927813),
     R = a(427262),
     k = a(914609),
-    G = a(539888),
-    j = a(282435);
-let T = [...j.sx.slice(0, 2), "1442738138211553383", ...j.sx.slice(2, 9)],
-    L = [
+    j = a(539888),
+    T = a(282435);
+let G = [...T.sx.slice(0, 2), "1442738138211553383", ...T.sx.slice(2, 9)],
+    N = [
         { days: 7, totalSeconds: 7 * D.A.Seconds.DAY - 60, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
         { days: 7, totalSeconds: 32 * D.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
         { days: 5, totalSeconds: 26 * D.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
@@ -242,19 +240,19 @@ let T = [...j.sx.slice(0, 2), "1442738138211553383", ...j.sx.slice(2, 9)],
         { days: 1, totalSeconds: 1440, gameIndexes: [6] },
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
-var N = a(546184);
-let P = g("leaderboard", _.a.LEADERBOARD, 0, 0),
-    M = {
+var L = a(546184);
+let M = g("leaderboard", _.a.LEADERBOARD, 0, 0),
+    P = {
         winningStat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         winningStreak: 1,
         winningValue: 40 * D.A.Millis.HOUR + 33 * D.A.Millis.MINUTE,
     },
-    U = { ...M, winningStreak: 3 },
-    C = { currentLeaderStat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED };
+    C = { ...P, winningStreak: 3 },
+    U = { currentLeaderStat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED };
 function O(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: r()(N.Gt, a),
+        className: r()(L.Gt, a),
         children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
@@ -266,7 +264,7 @@ let H = {
             a,
             { state: n, stat: r, currentUserPlacement: d } = e,
             o = (0, y.bG)([I.default], () => I.default.getCurrentUser()?.id),
-            u = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
+            u = (0, y.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
             c =
                 ((t = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
                 s.useMemo(
@@ -293,12 +291,12 @@ let H = {
         let _ = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = T,
+                        gameIds: a = G,
                         stat: l = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
-                        entryCount: s = L.length,
+                        entryCount: s = N.length,
                         ended: n = !1,
                     } = e,
-                    r = 0 === t.length ? [] : L.slice(0, s),
+                    r = 0 === t.length ? [] : N.slice(0, s),
                     i = Math.floor(Date.now() / 1e3);
                 return {
                     stat: l,
@@ -343,28 +341,28 @@ let H = {
                     : "error" === n
                       ? { status: "error" }
                       : { status: "success", data: g }));
-        let b = (0, l.jsx)(G.P, { guildId: u, widget: P, guildSpaceMode: "view", hydration: a });
+        let v = (0, l.jsx)(j.P, { guildId: u, widget: M, guildSpaceMode: "view", hydration: a });
         return (0, l.jsxs)("div", {
-            className: N.Zp,
+            className: L.Zp,
             children: [
-                (0, l.jsx)(O, { label: "Narrow column (380px)", className: N.sc, children: b }),
-                (0, l.jsx)(O, { label: "Wide column (685px)", className: N.U, children: b }),
+                (0, l.jsx)(O, { label: "Narrow column (380px)", className: L.sc, children: v }),
+                (0, l.jsx)(O, { label: "Wide column (685px)", className: L.U, children: v }),
                 null != o
                     ? (0, l.jsx)(O, {
                           label: "Badges",
-                          children: (0, l.jsxs)(S.B, {
+                          children: (0, l.jsxs)(w.B, {
                               gap: 16,
                               children: [
-                                  (0, l.jsxs)(S.B, {
+                                  (0, l.jsxs)(w.B, {
                                       direction: "horizontal",
                                       align: "center",
                                       gap: 8,
                                       children: [
                                           (0, l.jsx)(i.E, { variant: "text-sm/normal", children: "Winner" }),
-                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: M, leaderData: null }),
+                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: P, leaderData: null }),
                                       ],
                                   }),
-                                  (0, l.jsxs)(S.B, {
+                                  (0, l.jsxs)(w.B, {
                                       direction: "horizontal",
                                       align: "center",
                                       gap: 8,
@@ -373,16 +371,16 @@ let H = {
                                               variant: "text-sm/normal",
                                               children: "Winner on a streak",
                                           }),
-                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: U, leaderData: null }),
+                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: C, leaderData: null }),
                                       ],
                                   }),
-                                  (0, l.jsxs)(S.B, {
+                                  (0, l.jsxs)(w.B, {
                                       direction: "horizontal",
                                       align: "center",
                                       gap: 8,
                                       children: [
                                           (0, l.jsx)(i.E, { variant: "text-sm/normal", children: "Current leader" }),
-                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: null, leaderData: C }),
+                                          (0, l.jsx)(k.J, { guildId: u, userId: o, winnerData: null, leaderData: U }),
                                       ],
                                   }),
                               ],
@@ -429,7 +427,7 @@ let H = {
     },
 };
 a(347661);
-let B = j.sx.slice(0, 5),
+let B = T.sx.slice(0, 5),
     W = [8, 6, 5, 4, 3];
 function Y(e) {
     let { memberIds: t, gameIds: a = B, entryCount: l = W.length, totalUsers: s = 42, totalGames: n = 89 } = e,
@@ -441,15 +439,15 @@ function Y(e) {
         total_games: 0 === r.length ? 0 : n,
     };
 }
-let F = g("popular-games", _.a.POPULAR_GAMES, 0, 0);
-function q(e) {
+let V = g("popular-games", _.a.POPULAR_GAMES, 0, 0);
+function F(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: `${N.Gt} ${a}`,
+        className: `${L.Gt} ${a}`,
         children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
-let V = {
+let q = {
     title: "Server Hub Popular Games",
     stories: [
         {
@@ -459,7 +457,7 @@ let V = {
                 let t,
                     a,
                     { state: n } = e,
-                    r = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
+                    r = (0, y.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
                     d =
                         ((t = (0, y.yK)([E.A], () => E.A.getFriendIDs())),
                         s.useMemo(
@@ -489,9 +487,9 @@ let V = {
                         : "empty" === n
                           ? Y({ memberIds: d, entryCount: 2, totalUsers: 2 })
                           : Y({ memberIds: d, entryCount: 5 });
-                let o = (0, l.jsx)(G.P, {
+                let o = (0, l.jsx)(j.P, {
                     guildId: r,
-                    widget: F,
+                    widget: V,
                     guildSpaceMode: "view",
                     hydration:
                         "loading" === n
@@ -501,10 +499,10 @@ let V = {
                               : { status: "success", data: a },
                 });
                 return (0, l.jsxs)("div", {
-                    className: N.Zp,
+                    className: L.Zp,
                     children: [
-                        (0, l.jsx)(q, { label: "Narrow column (380px)", className: N.sc, children: o }),
-                        (0, l.jsx)(q, { label: "Wide column (685px)", className: N.U, children: o }),
+                        (0, l.jsx)(F, { label: "Narrow column (380px)", className: L.sc, children: o }),
+                        (0, l.jsx)(F, { label: "Wide column (685px)", className: L.U, children: o }),
                     ],
                 });
             },
@@ -529,8 +527,8 @@ var Z = a(343508);
 let X = [32, 21, 15, 14, 9],
     K = [3, 2, 0, 3, 1],
     z = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
-    $ = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
-    Q = {
+    J = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
+    $ = {
         ranked_songs: [
             {
                 track_external_id: "2plbrEY59IikOBgBGLjaoe",
@@ -541,7 +539,7 @@ let X = [32, 21, 15, 14, 9],
                 plays: 21,
                 unique_listeners: 8,
                 plays_change_percent: 2,
-                facepile_user_ids: $,
+                facepile_user_ids: J,
             },
             {
                 track_external_id: "4eCwFoinvpIQi1kBEoAzQO",
@@ -552,7 +550,7 @@ let X = [32, 21, 15, 14, 9],
                 plays: 17,
                 unique_listeners: 6,
                 plays_change_percent: -4,
-                facepile_user_ids: $,
+                facepile_user_ids: J,
             },
             {
                 track_external_id: "1BxfuPKGuaTgP7aM0Bbdwr",
@@ -562,7 +560,7 @@ let X = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f003",
                 plays: 14,
                 unique_listeners: 5,
-                facepile_user_ids: $,
+                facepile_user_ids: J,
             },
             {
                 track_external_id: "0V3wPSX9ygBnCm8psDIegu",
@@ -582,7 +580,7 @@ let X = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f005",
                 plays: 9,
                 unique_listeners: 4,
-                facepile_user_ids: $,
+                facepile_user_ids: J,
             },
             {
                 track_external_id: "2takcwOaAZWiXQijPHIx7B",
@@ -641,7 +639,7 @@ let X = [32, 21, 15, 14, 9],
         plays_trend_pct: 0.02,
         computed_at: null,
     },
-    J = {
+    Q = {
         plays_total: 0,
         distinct_listeners: 0,
         distinct_songs: 0,
@@ -650,7 +648,7 @@ let X = [32, 21, 15, 14, 9],
         plays_trend_pct: null,
     },
     ee = {
-        ranked_songs: Q.ranked_songs.map((e) => ({
+        ranked_songs: $.ranked_songs.map((e) => ({
             track_external_id: e.track_external_id,
             track_title: null,
             artist_external_id: null,
@@ -659,17 +657,17 @@ let X = [32, 21, 15, 14, 9],
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
-        ranked_artists: Q.ranked_artists.map((e) => ({
+        ranked_artists: $.ranked_artists.map((e) => ({
             artist_external_id: e.artist_external_id,
             artist_name: null,
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
         top_listeners: [],
-        ...J,
+        ...Q,
         computed_at: null,
     },
-    et = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...J, computed_at: null },
+    et = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...Q, computed_at: null },
     ea = [
         {
             artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6",
@@ -689,7 +687,7 @@ function el(e, t, a) {
         top_listeners: t.map((e, t) => {
             let l;
             return a
-                ? ((l = Q.ranked_songs[t % Q.ranked_songs.length]),
+                ? ((l = $.ranked_songs[t % $.ranked_songs.length]),
                   {
                       user_id: e,
                       plays: X[t] ?? 1,
@@ -722,14 +720,14 @@ function es(e) {
 function en(e) {
     let { label: t, className: a, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: `${N.Gt} ${a}`,
+        className: `${L.Gt} ${a}`,
         children: [(0, l.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), s],
     });
 }
 function er(e) {
     let { mode: t, hydration: a, type: n, initialConfig: r, successData: i } = e,
         [d, o] = s.useState(r),
-        u = (0, l.jsx)(G.P, {
+        u = (0, l.jsx)(j.P, {
             guildId: "widget-slot-story-guild",
             widget: { id: "1", type: n, config: d },
             guildSpaceMode: t,
@@ -747,10 +745,10 @@ function er(e) {
             onCommitConfig: o,
         });
     return (0, l.jsxs)("div", {
-        className: N.Zp,
+        className: L.Zp,
         children: [
-            (0, l.jsx)(en, { label: "Narrow column (380px)", className: N.sc, children: u }),
-            (0, l.jsx)(en, { label: "Wide column (685px)", className: N.U, children: u }),
+            (0, l.jsx)(en, { label: "Narrow column (380px)", className: L.sc, children: u }),
+            (0, l.jsx)(en, { label: "Wide column (685px)", className: L.U, children: u }),
         ],
     });
 }
@@ -762,7 +760,7 @@ let ei = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            v,
+            f,
             u,
             {
                 title: "Server Hub Widget Framework",
@@ -818,11 +816,11 @@ let ei = {
                             let t,
                                 a,
                                 { state: n, mode: r, viewerPlacement: i } = e,
-                                d = (0, y.bG)([w.Ay], () => w.Ay.getFlattenedGuildIds()[0]),
+                                d = (0, y.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
                                 o = (function (e, t) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: el(Q, t, !0) };
+                                            return { status: "success", data: el($, t, !0) };
                                         case "minimal":
                                             return { status: "success", data: el(ee, t, !1) };
                                         case "empty":
@@ -843,7 +841,7 @@ let ei = {
                                 );
                             function u(e) {
                                 return (0, l.jsx)(
-                                    G.P,
+                                    j.P,
                                     {
                                         guildId: d ?? "popular-music-story-guild",
                                         widget: { ...z, id: `${z.id}-${e}` },
@@ -910,7 +908,7 @@ let ei = {
                     },
                 ],
             },
-            V,
+            q,
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music", "Popular Games"],
     },

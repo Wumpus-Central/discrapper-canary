@@ -32,8 +32,8 @@ var l = n(477900),
     b = n(655116),
     M = n(287809),
     U = n(272984),
-    D = n(695311),
-    G = n(518477),
+    G = n(695311),
+    D = n(518477),
     Y = n(996988);
 function V(t) {
     let {
@@ -47,7 +47,7 @@ function V(t) {
             appContext: w,
             targetElementRef: k,
         } = t,
-        [B, W] = i.useState(!1),
+        [W, B] = i.useState(!1),
         { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
         z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
         X = (0, m.NR)(),
@@ -58,7 +58,7 @@ function V(t) {
                 { themeType: n } = (0, _.E)(),
                 i = (0, x.A)({
                     userId: t.user.id,
-                    tabSection: G.RP.ACTIVITY,
+                    tabSection: D.RP.ACTIVITY,
                     label: O.intl.string(O.t.pD1L1u),
                     onAction: () => e?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
                 });
@@ -97,7 +97,7 @@ function V(t) {
                 (function (t) {
                     let { display: e, entry: n, onAction: i, onClose: a } = t,
                         r = (0, L.yl)(n),
-                        s = (0, D.A)({ applicationId: r ? n.extra.application_id : void 0, onClose: a });
+                        s = (0, G.A)({ applicationId: r ? n.extra.application_id : void 0, onClose: a });
                     return "recent" === e && r
                         ? (0, l.jsx)(d.Dr, {
                               id: "view-activity",
@@ -139,7 +139,7 @@ function V(t) {
                 })(t),
                 (0, j.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: B, appContext: w });
+        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: W, appContext: w });
     return 0 === Q.length || n.bot
         ? null
         : (0, l.jsx)(c.Y, {
@@ -148,7 +148,7 @@ function V(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  (z({ action: "OPEN_MENU" }), W(!0));
+                  (z({ action: "OPEN_MENU" }), B(!0));
               },
               renderPopout: (t) => {
                   let { closePopout: e } = t;
@@ -158,7 +158,7 @@ function V(t) {
                           "data-menu-migrated-auto": !0,
                           navId: p.n,
                           onClose: () => {
-                              (e(), W(!1));
+                              (e(), B(!1));
                           },
                           "aria-label": O.intl.string(O.t.PlAQz1),
                           onSelect: o,

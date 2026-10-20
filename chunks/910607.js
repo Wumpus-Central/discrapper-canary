@@ -31,12 +31,12 @@ function j(t) {
         { themeType: L } = (0, T.E)(),
         b = (0, N.A)(j),
         M = (0, g.Ay)(j),
-        { canViewChannel: U, canConnect: D } = (0, i.cf)([I.A], () => ({
+        { canViewChannel: U, canConnect: G } = (0, i.cf)([I.A], () => ({
             canViewChannel: I.A.can(C.xBc.VIEW_CHANNEL, j),
             canConnect: j.isPrivate() || I.A.can(C.xBc.CONNECT, j),
         }));
     if (!U) return null;
-    let G = L !== S.d.MODAL && L !== S.d.MODAL_V2 && L !== S.d.SIDEBAR;
+    let D = L !== S.d.MODAL && L !== S.d.MODAL_V2 && L !== S.d.SIDEBAR;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(E.A, { className: y.Ph }),
@@ -66,7 +66,7 @@ function j(t) {
                                 color: d.A.colors.TEXT_SUBTLE,
                                 className: y.Ow,
                             }),
-                            D
+                            G
                                 ? (0, l.jsx)(c.D, {
                                       onClick: (t) => {
                                           (t.stopPropagation(),
@@ -104,7 +104,7 @@ function j(t) {
                             (t.stopPropagation(), P?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" }));
                         },
                         onUserClick: (t) => t.stopPropagation(),
-                        disableUserPopout: !!G || ((t) => t === e.id),
+                        disableUserPopout: !!D || ((t) => t === e.id),
                         "aria-label": v.intl.string(v.t["jNqDh/"]),
                     }),
                 ],

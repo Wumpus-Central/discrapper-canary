@@ -1,8 +1,8 @@
 (t.d(n, { o: () => g }), t(323874), t(14289), t(35956));
 var l = t(730852),
     a = t(235393),
-    r = t(376943),
-    i = t(741231),
+    i = t(376943),
+    r = t(741231),
     o = t(734057),
     s = t(696451),
     c = t(71393),
@@ -29,12 +29,12 @@ async function g(e, n, t, g) {
                 return;
             } catch {}
     }
-    let f = o.A.getChannel(n);
-    if (null != f && null == t && f.isGuildVocal() && (0, r.nc)(f)) {
+    let x = o.A.getChannel(n);
+    if (null != x && null == t && x.isGuildVocal() && (0, i.nc)(x)) {
         let { navigateOnly: e } = m.getConfig({ location: "channel_mention" });
-        if (!e) return void l.default.selectVoiceChannel(f.id);
+        if (!e) return void l.default.selectVoiceChannel(x.id);
     }
-    let x = new URLSearchParams();
-    (null != g && d.default.isProbablyAValidSnowflake(g) && x.append(p.Nl, g),
-        (0, i.A)(h.BVt.CHANNEL(e, n, t), { search: x.toString() }));
+    let f = new URLSearchParams();
+    (null != g && d.default.isProbablyAValidSnowflake(g) && f.append(p.Nl, g),
+        (0, r.A)(h.BVt.CHANNEL(e, n, t), { search: f.toString() }));
 }

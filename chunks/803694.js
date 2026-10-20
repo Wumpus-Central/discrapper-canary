@@ -171,8 +171,8 @@ function S(e) {
             pendingPaymentSourceId: I,
             hasInitialPaymentSourceSeed: y,
             hasAddedPaymentSourceThisSession: A,
-            applyWalletBalance: P,
-            previewApplyWalletBalance: x,
+            applyWalletBalance: x,
+            previewApplyWalletBalance: P,
             setApplyWalletBalance: v,
             setCheckoutCurrency: _,
             checkoutPaymentSources: T,
@@ -261,12 +261,12 @@ function S(e) {
             walletCoversSubtotal: V,
             walletCoversTotal: Y,
             isWalletBalanceLoaded: K,
-            isWalletCoverageLoading: q,
-            walletBalanceAmount: Z,
+            isWalletCoverageLoading: Z,
+            walletBalanceAmount: q,
         } = f({ giftCardsEnabled: S }),
-        z = null != Z && Z > 0,
-        $ = null != Z && Z <= 0,
-        J = (P ?? x) === !0,
+        z = null != q && q > 0,
+        $ = null != q && q <= 0,
+        J = (x ?? P) === !0,
         Q = null != E && null != R && E === R.id,
         X = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
     (l.useEffect(() => {
@@ -298,11 +298,11 @@ function S(e) {
                         giftCardWallet: R,
                         checked: k,
                         onChange: H,
-                        loading: q,
-                        disabled: !q && !V,
-                        disabledTooltip: q || V ? void 0 : h.intl.string(C.default.ccWIdu),
+                        loading: Z,
+                        disabled: !Z && !V,
+                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, j, J, W, k, H, V, q, $, z],
+        [R, j, J, W, k, H, V, Z, $, z],
     );
     return {
         giftCardsEnabled: S,
@@ -317,7 +317,7 @@ function S(e) {
         walletCoversSubtotal: V,
         walletCoversTotal: Y,
         isWalletBalanceLoaded: K,
-        isWalletCoverageLoading: q,
+        isWalletCoverageLoading: Z,
         isSplitPaymentMode: j,
     };
 }

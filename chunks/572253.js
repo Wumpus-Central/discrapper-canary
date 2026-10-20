@@ -28,12 +28,12 @@ function k(e) {
         [k, P] = i.useState(C),
         [M, E] = i.useState({}),
         [N, I] = i.useState(!1),
-        [R, T] = i.useState(!1),
-        L = i.useCallback((e, t) => {
-            (T(!1), P((n) => ({ ...n, values: { ...n.values, [e]: t } })));
+        [R, L] = i.useState(!1),
+        T = i.useCallback((e, t) => {
+            (L(!1), P((n) => ({ ...n, values: { ...n.values, [e]: t } })));
         }, []),
         D = i.useCallback((e, t) => {
-            (T(!1), P((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
+            (L(!1), P((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
         }, []),
         F = i.useMemo(() => A?.schema ?? [], [A]),
         G = i.useMemo(() => A?.values ?? {}, [A]),
@@ -47,7 +47,7 @@ function k(e) {
         O = (n ?? []).filter((e) => U.some((t) => t.key === e) || B.has(e)),
         q = O.length > 0,
         z = O.some((e) => B.has(e)),
-        V = i.useMemo(() => {
+        $ = i.useMemo(() => {
             let e = {};
             for (let [n, l] of Object.entries(k.values)) {
                 var t;
@@ -90,12 +90,12 @@ function k(e) {
                 })(F, n),
             };
         }, [k, F, G]),
-        $ = null != V.values || null != V.secrets,
+        V = null != $.values || null != $.secrets,
         Y = i.useCallback(async () => {
-            if (!$ || N) return !0;
-            (I(!0), T(!1));
+            if (!V || N) return !0;
+            (I(!0), L(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, V);
+                let { rebuildRequired: e } = await (0, y.nU)(t, $);
                 return (
                     g || p.A.hasPendingSettingsRequest(t)
                         ? (0, h.sendUserMessage)(t, w.intl.string(j.default["08bsJL"]))
@@ -107,11 +107,11 @@ function k(e) {
                     !0
                 );
             } catch {
-                return (T(!0), !1);
+                return (L(!0), !1);
             } finally {
                 I(!1);
             }
-        }, [$, g, t, N, V]);
+        }, [V, g, t, N, $]);
     function Z(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -137,7 +137,7 @@ function k(e) {
                                   label: e.label,
                                   options: i,
                                   value: Array.isArray(t) ? t : [],
-                                  onSelectionChange: (t) => L(e.key, t),
+                                  onSelectionChange: (t) => T(e.key, t),
                                   selectionMode: "multiple",
                                   disabled: N,
                                   fullWidth: !0,
@@ -146,7 +146,7 @@ function k(e) {
                                   label: e.label,
                                   options: i,
                                   value: "string" == typeof t ? t : void 0,
-                                  onSelectionChange: (t) => L(e.key, t),
+                                  onSelectionChange: (t) => T(e.key, t),
                                   selectionMode: "single",
                                   disabled: N,
                                   fullWidth: !0,
@@ -163,7 +163,7 @@ function k(e) {
             let t = k.values[e.key] ?? G[e.key];
             return (0, l.jsx)(
                 s.S,
-                { label: e.label, description: n, checked: !0 === t, onChange: (t) => L(e.key, t), disabled: N },
+                { label: e.label, description: n, checked: !0 === t, onChange: (t) => T(e.key, t), disabled: N },
                 e.key,
             );
         }
@@ -177,7 +177,7 @@ function k(e) {
                       hint: n,
                       value: k.values[e.key] ?? G[e.key],
                       disabled: N,
-                      onChange: (t) => L(e.key, t),
+                      onChange: (t) => T(e.key, t),
                       fallback: Q(e, n),
                   },
                   e.key,
@@ -195,7 +195,7 @@ function k(e) {
                 autoComplete: "off",
                 required: !0 === e.required,
                 value: Array.isArray(n) ? n.join(", ") : null == n ? "" : String(n),
-                onChange: (t) => L(e.key, t),
+                onChange: (t) => T(e.key, t),
                 disabled: N,
                 fullWidth: !0,
                 ...("number" === e.type ? { type: "number", min: e.min, max: e.max, step: e.step } : {}),
@@ -328,7 +328,7 @@ function k(e) {
             loaded: null != A,
             valueCount: U.length,
             secretCount: W.length,
-            canSave: $,
+            canSave: V,
             saving: N,
             isScoped: q,
             submit: Y,

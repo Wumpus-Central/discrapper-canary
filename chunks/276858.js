@@ -1,4 +1,4 @@
-n.d(t, { Ky: () => P, _i: () => T, eR: () => _, wD: () => b });
+n.d(t, { Ky: () => x, _i: () => T, eR: () => _, wD: () => b });
 var l = n(477900),
     i = n(582128),
     r = n(643909),
@@ -19,14 +19,14 @@ var l = n(477900),
     I = n(818348),
     y = n(400400);
 let A = [S.pn.PAYMENT_ELEMENT],
-    P = [
+    x = [
         S.pn.PAYPAL_INFORMATION,
         S.pn.VENMO_INFORMATION,
         S.pn.CASH_APP_INFORMATION,
         S.pn.EPS_INFORMATION,
         S.pn.PRZELEWY24_INFORMATION,
     ],
-    x = new Set([S.pn.PAYMENT_ELEMENT, ...P]);
+    P = new Set([S.pn.PAYMENT_ELEMENT, ...x]);
 function v(e) {
     let {
             step: t,
@@ -46,14 +46,14 @@ function v(e) {
         c.current = E;
     }, [E, c]);
     let {
-            shouldShowPaymentElement: x,
+            shouldShowPaymentElement: P,
             shouldShowAddressElement: v,
             excludeBodySpacing: _,
         } = i.useMemo(
             () => ({
                 shouldShowPaymentElement: A.includes(t),
                 shouldShowAddressElement: t === S.pn.ADDRESS,
-                excludeBodySpacing: P.includes(t),
+                excludeBodySpacing: x.includes(t),
             }),
             [t],
         ),
@@ -68,7 +68,7 @@ function v(e) {
         className: s()(y.kL, { [y.rf]: !_ }),
         children: [
             (0, l.jsxs)("div", {
-                className: s()(x ? y.RK : [y.R, y.$u], {
+                className: s()(P ? y.RK : [y.R, y.$u], {
                     [y.df]: null == d,
                     [y._m]: d === I.he.CARD,
                     [y.JD]: d === I.he.PAYPAL,
@@ -81,7 +81,7 @@ function v(e) {
                         step: t,
                         analyticsContext: C,
                     }),
-                    x && f,
+                    P && f,
                 ],
             }),
             (0, l.jsx)("div", {
@@ -133,14 +133,14 @@ function b(e) {
         c = i.useRef(null),
         C = i.useRef(null),
         [g, y] = i.useState(!1),
-        [A, P] = i.useState(!1),
+        [A, x] = i.useState(!1),
         v = o === S.pn.CREDIT_CARD_INFORMATION || o === S.pn.PAYMENT_ELEMENT,
         [_, T] = i.useState(v ? I.he.CARD : null),
         [b, j] = i.useState(!1),
         [R, O] = i.useState(void 0),
         M = (function (e) {
             let { step: t, paymentElementSelectedType: n } = e;
-            return x.has(t) || (t === S.pn.ADDRESS && null != n);
+            return P.has(t) || (t === S.pn.ADDRESS && null != n);
         })({ step: t, paymentElementSelectedType: _ }),
         L = i.useCallback(() => {
             O(Date.now().toString());
@@ -156,7 +156,7 @@ function b(e) {
                     (s && null != l && l.log("PaymentElements onChange event:", e), y(e.complete), T(t));
                 },
                 onReady: () => {
-                    P(!0);
+                    x(!0);
                 },
                 wallets: w,
             }),
