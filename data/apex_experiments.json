@@ -5637,6 +5637,22 @@
     }
   },
   {
+    "name": "2026-10-embedded-app-frame-policy",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-embedded-app-shim-v2",
     "kind": "user",
     "defaultConfig": {

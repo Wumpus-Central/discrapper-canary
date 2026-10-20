@@ -18,6 +18,7 @@ let a = {
     Event: i,
     NavigateEvent: i,
     NavigationDestination: i,
+    URL: i,
     EventTarget: i,
     MessageEvent: i,
     PageTransitionEvent: i,
