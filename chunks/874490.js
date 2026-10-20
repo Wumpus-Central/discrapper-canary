@@ -25,9 +25,7 @@ function I(e) {
     return (e) =>
         e.type === _.fg2.PLAYSTATION_STAGING
             ? i
-            : !!(void 0 !== n && A[e.type]?.includes(n.id)) ||
-              !!t ||
-              (!e.migrationData?.getMigrationExperimentEnabled("ConnectionsHooks") && e.enabled);
+            : !!(void 0 !== n && A[e.type]?.includes(n.id)) || !!t || (null == e.migrationData && e.enabled);
 }
 function p() {
     let e = (0, s.bG)([d.A], () => d.A.getAccounts()),

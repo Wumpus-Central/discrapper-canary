@@ -4,9 +4,9 @@ var n = l(477900),
     a = l(503698),
     s = l.n(a),
     r = l(284009),
-    o = l.n(r),
-    c = l(435558),
-    u = l.n(c),
+    c = l.n(r),
+    o = l(435558),
+    u = l.n(o),
     d = l(485845),
     m = l(17928),
     x = l(661531),
@@ -14,28 +14,28 @@ var n = l(477900),
     A = l(462887),
     f = l(297264),
     p = l(834730),
-    g = l(933832),
-    j = l(939249),
+    j = l(933832),
+    g = l(939249),
     v = l(602853),
     y = l(866665),
-    E = l(885574),
-    N = l(193249),
+    N = l(885574),
+    E = l(193249),
     C = l(192308),
-    b = l(231723),
-    S = l(289873),
+    S = l(231723),
+    b = l(289873),
     k = l(364522),
     _ = l(123292),
     P = l(77468),
     T = l(66834),
-    R = l(730134),
-    I = l(964486),
+    I = l(730134),
+    R = l(964486),
     w = l(736653),
     G = l(573648),
     L = l(666860),
-    M = l(206828),
-    O = l(80558),
-    V = l(709066),
-    H = l(920268),
+    O = l(206828),
+    V = l(80558),
+    H = l(709066),
+    M = l(920268),
     U = l(47167),
     D = l(713654),
     z = l(733110),
@@ -58,8 +58,8 @@ var n = l(477900),
     ea = l(967740),
     es = l(293260),
     er = l(783419),
-    eo = l(652215),
-    ec = l(105292),
+    ec = l(652215),
+    eo = l(105292),
     eu = l(219426);
 function ed(e) {
     let { platformType: t, className: l } = e,
@@ -85,34 +85,34 @@ function em(e) {
 }
 function ex(e) {
     let t,
-        { connectionType: l, connectionMetadataField: i, operator: a, value: s, result: r, description: o } = e,
-        c = null;
+        { connectionType: l, connectionMetadataField: i, operator: a, value: s, result: r, description: c } = e,
+        o = null;
     if (l === er.UX) return null;
-    if (null != o)
+    if (null != c)
         switch (a) {
             case er.so.LESS_THAN:
-                c = ec.intl.format(ec.t["2p7dA3"], { description: o, count: Math.max(0, Number(s) - 1) });
+                o = eo.intl.format(eo.t["2p7dA3"], { description: c, count: Math.max(0, Number(s) - 1) });
                 break;
             case er.so.GREATER_THAN:
-                c = ec.intl.format(ec.t["2p7dA3"], { description: o, count: Math.max(0, Number(s) + 1) });
+                o = eo.intl.format(eo.t["2p7dA3"], { description: c, count: Math.max(0, Number(s) + 1) });
                 break;
             default:
-                c = o;
+                o = c;
         }
     else {
         let e;
         switch (a) {
             case er.so.EQUAL:
-                ((e = ec.t["0BlpbA"]), l === eo.fg2.PAYPAL && i === er.pK.PAYPAL_VERIFIED && (e = ec.t.dcSDhW));
+                ((e = eo.t["0BlpbA"]), l === ec.fg2.PAYPAL && i === er.pK.PAYPAL_VERIFIED && (e = eo.t.dcSDhW));
                 break;
             case er.so.NOT_EQUAL:
-                e = ec.t.otcpTN;
+                e = eo.t.otcpTN;
                 break;
             case er.so.LESS_THAN:
-                e = ec.t.Ef35xs;
+                e = eo.t.Ef35xs;
                 break;
             case er.so.GREATER_THAN:
-                e = ec.t["8W9OXU"];
+                e = eo.t["8W9OXU"];
                 break;
             case void 0:
             case null:
@@ -120,21 +120,21 @@ function ex(e) {
         }
         if (
             null ==
-            (c = (0, el.RP)({ connectionType: l, connectionMetadataField: i, operator: a, operatorText: e, value: s }))
+            (o = (0, el.RP)({ connectionType: l, connectionMetadataField: i, operator: a, operatorText: e, value: s }))
         )
             return null;
     }
     return (
         (t = r ? "text-default" : "text-feedback-critical"),
-        (0, n.jsx)(p.E, { variant: "text-xs/normal", color: t, className: eu.E6, children: c })
+        (0, n.jsx)(p.E, { variant: "text-xs/normal", color: t, className: eu.E6, children: o })
     );
 }
 function eh(e) {
     let t,
         a,
-        { eligibilityState: r, onAttempted: o } = e,
-        c = (0, O.O)(r.application_id),
-        { canStartAuthorization: u, startAuthorization: m } = (0, M.RD)(c),
+        { eligibilityState: r, onAttempted: c } = e,
+        o = (0, V.O)(r.application_id),
+        { canStartAuthorization: u, startAuthorization: m } = (0, O.RD)(o),
         x = u,
         h = r.identity_connected_account_type,
         A = r.identity_auth_required_scopes;
@@ -145,20 +145,20 @@ function eh(e) {
     let f = r.application,
         v = i.useMemo(() => (f?.bot != null ? new B.A(f.bot) : null), [f]),
         y = r.result;
-    (null != v && (t = (0, n.jsx)(V.A, { className: eu.AO, verified: v.isVerifiedBot() })),
+    (null != v && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: v.isVerifiedBot() })),
         (a = y
-            ? (0, n.jsx)(g.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: eu.rA })
+            ? (0, n.jsx)(j.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: eu.rA })
             : x
               ? (0, n.jsx)(J.A, { direction: J.A.Directions.RIGHT, className: eu.t4 })
               : (0, n.jsx)(p.E, {
                     variant: "text-md/medium",
                     color: "text-muted",
-                    children: ec.intl.string(ec.t.cEts68),
+                    children: eo.intl.string(eo.t.cEts68),
                 })));
-    let E = i.useCallback(() => {
+    let N = i.useCallback(() => {
         y ||
             !x ||
-            (o(null != h && Z.A.getAccounts().some((e) => e.type === h) ? null : r.connection_type, f ?? null),
+            (c(null != h && Z.A.getAccounts().some((e) => e.type === h) ? null : r.connection_type, f ?? null),
             u
                 ? m({ analyticsLocations: ["Verified Roles Connect Accounts Modal"] })
                 : null != h &&
@@ -175,14 +175,14 @@ function eh(e) {
                               callback: () => !0,
                           });
                       }));
-    }, [y, x, u, m, o, f, r.connection_type, r.application_id, h, A]);
+    }, [y, x, u, m, c, f, r.connection_type, r.application_id, h, A]);
     return el.iC.includes(f?.id ?? "")
         ? null
-        : (0, n.jsxs)(j.D, {
+        : (0, n.jsxs)(g.D, {
               className: s()(eu.UY, y ? eu.o6 : null, x ? null : eu.pC),
-              onClick: !y && x ? E : void 0,
+              onClick: !y && x ? N : void 0,
               children: [
-                  null != v ? (0, n.jsx)(R.A, { user: v }) : null,
+                  null != v ? (0, n.jsx)(I.A, { user: v }) : null,
                   (0, n.jsxs)("div", {
                       className: eu.EZ,
                       children: [
@@ -203,7 +203,7 @@ function eh(e) {
                               : (0, n.jsx)(p.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: ec.intl.string(ec.t["+z5dYe"]),
+                                    children: eo.intl.string(eo.t["+z5dYe"]),
                                 }),
                       ],
                   }),
@@ -213,12 +213,12 @@ function eh(e) {
 }
 function eA(e) {
     let { eligibilityStatesGroups: t, onPlatformConnect: l, onPlatformConnected: a } = e,
-        [r, c] = i.useState({}),
+        [r, o] = i.useState({}),
         [d, m] = i.useState(0),
         [h, A] = i.useState(null),
-        [f, N] = i.useState(null),
+        [f, E] = i.useState(null),
         C = i.useMemo(() => u().flatten(t), [t]),
-        b = i.useMemo(
+        S = i.useMemo(
             () =>
                 u().groupBy(C, (e) => `${e.connection_type}${null != e.application_id ? `:${e.application_id}` : ""}`),
             [C],
@@ -226,29 +226,29 @@ function eA(e) {
     (i.useEffect(() => m(Date.now()), [C]),
         i.useEffect(() => {
             if (null == h) return;
-            let e = b[`${h}${null != f ? `:${f.id}` : ""}`];
+            let e = S[`${h}${null != f ? `:${f.id}` : ""}`];
             null == e || (e.every((e) => e.result) && a(e[0]?.identity_connected_account_type ?? h, f));
-        }, [b, h, f, a]));
-    let S = (0, v.r)(x.A.unsafe_rawColors.GREEN_330).hex();
+        }, [S, h, f, a]));
+    let b = (0, v.r)(x.A.unsafe_rawColors.GREEN_330).hex();
     return (0, n.jsx)(n.Fragment, {
-        children: Object.keys(b)
+        children: Object.keys(S)
             .sort((e, t) => {
-                let l = b[e].every((e) => e.result),
-                    n = b[t].every((e) => e.result);
+                let l = S[e].every((e) => e.result),
+                    n = S[t].every((e) => e.result);
                 return !0 === l && !1 === n ? 1 : !1 === l && !0 === n ? -1 : 0;
             })
             .map((e) => {
                 let t,
                     i,
                     a,
-                    u = b[e];
+                    u = S[e];
                 if (e.startsWith(`${er.UX}:`) && null != u[0])
                     return (0, n.jsx)(
                         eh,
                         {
                             eligibilityState: u[0],
                             onAttempted: (e, t) => {
-                                (A(e), N(t), l());
+                                (A(e), E(t), l());
                             },
                         },
                         e,
@@ -259,39 +259,37 @@ function eA(e) {
                     f = u.find((e) => null != e.application),
                     v = G.A.get(e),
                     C = null == v || v.enabled,
-                    k =
-                        null != v &&
-                        v.migrationData?.getMigrationExperimentEnabled("GuildRoleConnectionsConnectAccountsModal"),
+                    k = v?.migrationData != null,
                     _ = k || !C,
                     P = f?.application,
                     T = P?.bot != null ? new B.A(P.bot) : null;
                 el.iC.includes(P?.id ?? "")
-                    ? (t = (0, n.jsx)(ei.A, { className: eu.AO, color: S, size: 16 }))
-                    : null != T && (t = (0, n.jsx)(V.A, { className: eu.AO, verified: T.isVerifiedBot() }));
-                let I = r[v?.type ?? er.zR],
-                    w = !h && null != I && I <= d;
+                    ? (t = (0, n.jsx)(ei.A, { className: eu.AO, color: b, size: 16 }))
+                    : null != T && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: T.isVerifiedBot() }));
+                let R = r[v?.type ?? er.zR],
+                    w = !h && null != R && R <= d;
                 return (
                     (i = h
-                        ? (0, n.jsx)(g.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: eu.rA })
+                        ? (0, n.jsx)(j.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: eu.rA })
                         : w
                           ? (0, n.jsx)(p.E, {
                                 variant: "text-md/medium",
                                 color: "text-link",
                                 className: eu.dj,
-                                children: ec.intl.string(ec.t["5911Lb"]),
+                                children: eo.intl.string(eo.t["5911Lb"]),
                             })
                           : _
                             ? (0, n.jsx)(p.E, {
                                   variant: "text-md/medium",
                                   color: "text-muted",
-                                  children: ec.intl.string(ec.t.cEts68),
+                                  children: eo.intl.string(eo.t.cEts68),
                               })
                             : (0, n.jsx)(J.A, { direction: J.A.Directions.RIGHT, className: eu.t4 })),
                     k
-                        ? (a = ec.intl.format(ec.t.Rzz1Xs, { platformName: v?.name }))
-                        : v?.type === eo.fg2.STEAM && (a = ec.intl.string(ec.t.NcZh6K)),
+                        ? (a = eo.intl.format(eo.t.Rzz1Xs, { platformName: v?.name }))
+                        : v?.type === ec.fg2.STEAM && (a = eo.intl.string(eo.t.NcZh6K)),
                     (0, n.jsxs)(
-                        j.D,
+                        g.D,
                         {
                             className: s()(eu.UY, h ? eu.o6 : null, _ ? eu.pC : null),
                             onClick:
@@ -306,9 +304,9 @@ function eA(e) {
                                                   location: "Verified Roles Connect Accounts Modal",
                                                   overrideUrl: P?.role_connections_verification_url,
                                               }),
-                                              c({ ...r, [e]: Date.now() }),
+                                              o({ ...r, [e]: Date.now() }),
                                               A(e),
-                                              N(P ?? null),
+                                              E(P ?? null),
                                               l())
                                           );
                                       },
@@ -319,12 +317,12 @@ function eA(e) {
                                           children: (0, n.jsx)(p.E, {
                                               variant: "text-xs/normal",
                                               color: "text-overlay-light",
-                                              children: ec.intl.string(ec.t.UB3hKo),
+                                              children: eo.intl.string(eo.t.UB3hKo),
                                           }),
                                       })
                                     : null,
                                 null != v ? (0, n.jsx)(ed, { platformType: v.type }) : null,
-                                null != T ? (0, n.jsx)(R.A, { user: T }) : null,
+                                null != T ? (0, n.jsx)(I.A, { user: T }) : null,
                                 (0, n.jsxs)("div", {
                                     className: eu.EZ,
                                     children: [
@@ -340,7 +338,7 @@ function eA(e) {
                                                 null != a
                                                     ? (0, n.jsx)(y.m, {
                                                           text: a,
-                                                          children: (0, n.jsx)(E.CircleInformationIcon, {
+                                                          children: (0, n.jsx)(N.CircleInformationIcon, {
                                                               size: "xs",
                                                               color: "currentColor",
                                                               className: eu.$I,
@@ -359,9 +357,9 @@ function eA(e) {
                                                 description: r,
                                             } = e;
                                             return (
-                                                o()(null != l, "connectionMetadataField is null"),
-                                                o()(null != i, "operator is null"),
-                                                o()(null != a, "value is null"),
+                                                c()(null != l, "connectionMetadataField is null"),
+                                                c()(null != i, "operator is null"),
+                                                c()(null != a, "value is null"),
                                                 (0, n.jsx)(
                                                     ex,
                                                     {
@@ -391,46 +389,46 @@ function ef(e) {
     let t,
         l,
         a,
-        { account: s, setShowPreviewInvisibleIcon: r, setShowPreviewMetadata: o } = e,
-        [c, u] = i.useState(s.friendSync),
+        { account: s, setShowPreviewInvisibleIcon: r, setShowPreviewMetadata: c } = e,
+        [o, u] = i.useState(s.friendSync),
         [d, m] = i.useState(s.showActivity),
         [x, h] = i.useState(1 === s.metadataVisibility),
         [A, f] = i.useState(1 === s.visibility);
-    (0, I.Ay)(() => {
-        (r(!A), o(x));
+    (0, R.Ay)(() => {
+        (r(!A), c(x));
     });
     let p = G.A.get(s.type);
     return (
-        eo.txh.has(s.type) &&
-            (t = (0, n.jsx)(N.d, {
-                label: ec.intl.string(ec.t["+KCMSi"]),
-                checked: c,
+        ec.txh.has(s.type) &&
+            (t = (0, n.jsx)(E.d, {
+                label: eo.intl.string(eo.t["+KCMSi"]),
+                checked: o,
                 onChange: (e) => {
                     (u(e), P.A.setFriendSync(s.type, s.id, e));
                 },
             })),
-        eo.ewM.has(s.type) &&
-            (l = (0, n.jsx)(N.d, {
-                label: ec.intl.format(ec.t["6u6J0q"], { platform: p.name }),
+        ec.ewM.has(s.type) &&
+            (l = (0, n.jsx)(E.d, {
+                label: eo.intl.format(eo.t["6u6J0q"], { platform: p.name }),
                 checked: d,
                 onChange: (e) => {
                     (m(e), P.A.setShowActivity(s.type, s.id, e));
                 },
             })),
         !0 === p.hasMetadata &&
-            (a = (0, n.jsx)(N.d, {
-                label: ec.intl.string(ec.t.FYKGsL),
+            (a = (0, n.jsx)(E.d, {
+                label: eo.intl.string(eo.t.FYKGsL),
                 checked: x,
                 disabled: !A,
                 onChange: (e) => {
-                    (o(e), h(e), P.A.setMetadataVisibility(s.type, s.id, +!!e));
+                    (c(e), h(e), P.A.setMetadataVisibility(s.type, s.id, +!!e));
                 },
             })),
         (0, n.jsxs)("div", {
             className: eu.ek,
             children: [
-                (0, n.jsx)(N.d, {
-                    label: ec.intl.string(ec.t.f7yOAX),
+                (0, n.jsx)(E.d, {
+                    label: eo.intl.string(eo.t.f7yOAX),
                     checked: A,
                     onChange: (e) => {
                         (r(!e), f(e), P.A.setVisibility(s.type, s.id, +!!e));
@@ -449,13 +447,13 @@ function ep(e) {
         a,
         s,
         r,
-        { transitionState: c, onClose: u, guildId: d, role: x } = e,
+        { transitionState: o, onClose: u, guildId: d, role: x } = e,
         [A, f] = i.useState(0),
-        [g, j] = i.useState(null),
-        [v, N] = i.useState(!1),
-        [P, R] = i.useState(!0),
-        [I, M] = i.useState(!1),
-        [O, V] = i.useState(!0),
+        [j, g] = i.useState(null),
+        [v, E] = i.useState(!1),
+        [P, I] = i.useState(!0),
+        [R, O] = i.useState(!1),
+        [V, H] = i.useState(!0),
         [U, D] = i.useState(!1),
         B = (0, m.bG)([Z.A], () => Z.A.getAccounts()),
         J = (0, m.bG)([z.default], () => z.default.getNewestTokens()),
@@ -464,64 +462,64 @@ function ep(e) {
         [er, ed] = i.useState(null),
         [ex, eh] = i.useState(null),
         ep = (0, w.Ay)(),
-        eg = (0, m.bG)([F.default], () => F.default.locale),
-        ej = (0, m.bG)([K.Ay], () => K.Ay.getMember(d, el)),
+        ej = (0, m.bG)([F.default], () => F.default.locale),
+        eg = (0, m.bG)([K.Ay], () => K.Ay.getMember(d, el)),
         ev = Object.values((0, m.bG)([W.A], () => W.A.getMutableGuildChannelsForGuild(d))).filter(
-            (e) => q.A.can(eo.xBc.VIEW_CHANNEL, e) && q.A.can(eo.xBc.SEND_MESSAGES, e) && (0, H.A)(e).includes(x),
+            (e) => q.A.can(ec.xBc.VIEW_CHANNEL, e) && q.A.can(ec.xBc.SEND_MESSAGES, e) && (0, M.A)(e).includes(x),
         );
     function ey() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (u?.(), e && (0, C.closeModal)(es.CB, b.SY));
-    }
-    function eE() {
-        (ey(!0), (0, Y.openUserSettings)($.X.AUTHORIZED_APPS_CATEGORY));
+        (u?.(), e && (0, C.closeModal)(es.CB, S.SY));
     }
     function eN() {
+        (ey(!0), (0, Y.openUserSettings)($.X.AUTHORIZED_APPS_CATEGORY));
+    }
+    function eE() {
         (ey(!0), (0, Y.openUserSettings)($.X.CONNECTIONS_CATEGORY));
     }
     async function eC() {
-        (M(!0), await T.A.assignGuildRoleConnection(d, x.id));
+        (O(!0), await T.A.assignGuildRoleConnection(d, x.id));
     }
     (i.useEffect(() => {
         T.A.fetchGuildRoleConnectionsEligibility(d, x.id).then((e) => {
-            (j(e), N(e.some((e) => e.every((e) => e.result))), R(!1));
+            (g(e), E(e.some((e) => e.every((e) => e.result))), I(!1));
         });
     }, [d, x.id, B, J]),
         i.useEffect(() => {
-            ee.default.track(eo.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: x.id, ...(0, L.H$)(d) });
+            ee.default.track(ec.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: x.id, ...(0, L.H$)(d) });
         }, [d, x.id]),
         i.useEffect(() => {
-            I &&
-                null != ej &&
-                ej.roles.includes(x.id) &&
-                (M(!1),
+            R &&
+                null != eg &&
+                eg.roles.includes(x.id) &&
+                (O(!1),
                 ev.length > 0 ? f(2) : u?.(),
-                ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: x.id, ...(0, L.H$)(d) }));
-        }, [I, ev.length, ej, d, x.id, u]));
-    let eb = g?.flat().some((e) => null == e.application_id) ?? !1;
+                ee.default.track(ec.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: x.id, ...(0, L.H$)(d) }));
+        }, [R, ev.length, eg, d, x.id, u]));
+    let eS = j?.flat().some((e) => null == e.application_id) ?? !1;
     switch (A) {
         case 0: {
-            let e = null != g && g.length > 1,
-                i = null != g && 1 === g.length && 1 === g[0].length;
-            ((t = ec.intl.string(ec.t.zOZh3R)),
+            let e = null != j && j.length > 1,
+                i = null != j && 1 === j.length && 1 === j[0].length;
+            ((t = eo.intl.string(eo.t.zOZh3R)),
                 (l =
-                    P || null == g
-                        ? (0, n.jsx)(S.y, { className: eu.NL })
+                    P || null == j
+                        ? (0, n.jsx)(b.y, { className: eu.NL })
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)(p.E, {
                                       variant: "text-md/medium",
                                       color: "text-default",
-                                      children: ec.intl.format(i ? ec.t.jHfRvZ : e ? ec.t["mOQ8k+"] : ec.t.U0olLg, {
+                                      children: eo.intl.format(i ? eo.t.jHfRvZ : e ? eo.t["mOQ8k+"] : eo.t.U0olLg, {
                                           roleName: x.name,
                                       }),
                                   }),
                                   (0, n.jsx)(k.Ip, {
                                       className: eu.NL,
                                       children: (0, n.jsx)(eA, {
-                                          eligibilityStatesGroups: g,
+                                          eligibilityStatesGroups: j,
                                           onPlatformConnect: function () {
-                                              ee.default.track(eo.HAw.PASSPORT_CHALLENGE_STARTED, {
+                                              ee.default.track(ec.HAw.PASSPORT_CHALLENGE_STARTED, {
                                                   role_id: x.id,
                                                   ...(0, L.H$)(d),
                                               });
@@ -545,10 +543,10 @@ function ep(e) {
                                       variant: "text-xs/normal",
                                       className: eu.PJ,
                                       color: "text-default",
-                                      children: ec.intl.format(ec.t.gsgvxh, {
-                                          privacyPolicyUrl: eo.X7G.PRIVACY,
-                                          onAuthorizedApplicationsClick: () => eE(),
-                                          onConnectionsClick: () => eN(),
+                                      children: eo.intl.format(eo.t.gsgvxh, {
+                                          privacyPolicyUrl: ec.X7G.PRIVACY,
+                                          onAuthorizedApplicationsClick: () => eN(),
+                                          onConnectionsClick: () => eE(),
                                       }),
                                   }),
                               ],
@@ -556,45 +554,45 @@ function ep(e) {
                 (a = [
                     {
                         variant: "primary",
-                        text: ec.intl.string(ec.t["8SuVoE"]),
+                        text: eo.intl.string(eo.t["8SuVoE"]),
                         onClick: () => eC(),
-                        disabled: P || !v || I,
+                        disabled: P || !v || R,
                     },
                 ]),
-                (s = eb
-                    ? (0, n.jsx)(_.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eN })
+                (s = eS
+                    ? (0, n.jsx)(_.Q, { variant: "primary", text: eo.intl.string(eo.t.VXV55P), onClick: eE })
                     : void 0),
                 (r = () => (ey(), Promise.resolve())));
             break;
         }
         case 1: {
-            o()(null != en, "lastPlatformConnected is null");
+            c()(null != en, "lastPlatformConnected is null");
             let e = G.A.get(en)?.name ?? er?.name,
                 i = B.find((e) => {
                     let { type: t } = e;
                     return en === t;
                 }),
-                c = ex?.find((e) => {
+                o = ex?.find((e) => {
                     let { application: t } = e;
                     return t.id === er?.id;
                 });
-            ((t = ec.intl.formatToPlainString(ec.t.yQvgBO, { platformName: e })),
+            ((t = eo.intl.formatToPlainString(eo.t.yQvgBO, { platformName: e })),
                 (l = (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)(p.E, {
                             variant: "text-md/normal",
                             color: "text-default",
-                            children: ec.intl.format(ec.t.gsgvxh, {
-                                privacyPolicyUrl: eo.X7G.PRIVACY,
-                                onAuthorizedApplicationsClick: () => eE(),
-                                onConnectionsClick: () => eN(),
+                            children: eo.intl.format(eo.t.gsgvxh, {
+                                privacyPolicyUrl: ec.X7G.PRIVACY,
+                                onAuthorizedApplicationsClick: () => eN(),
+                                onConnectionsClick: () => eE(),
                             }),
                         }),
                         (0, n.jsx)("div", {
                             className: eu.m1,
                             children:
-                                null == i && null == c
-                                    ? (0, n.jsx)(S.y, { className: eu.bD })
+                                null == i && null == o
+                                    ? (0, n.jsx)(b.y, { className: eu.bD })
                                     : (0, n.jsxs)(n.Fragment, {
                                           children: [
                                               null != i
@@ -606,15 +604,15 @@ function ep(e) {
                                                                     (0, n.jsx)(p.E, {
                                                                         variant: "eyebrow",
                                                                         color: "text-default",
-                                                                        children: ec.intl.string(ec.t.TOjkEg),
+                                                                        children: eo.intl.string(eo.t.TOjkEg),
                                                                     }),
                                                                     (0, n.jsx)(X.wQ, {
                                                                         connectedAccount: i,
                                                                         userId: el,
                                                                         theme: ep,
-                                                                        locale: eg,
+                                                                        locale: ej,
                                                                         className: eu.eT,
-                                                                        showMetadata: O,
+                                                                        showMetadata: V,
                                                                         showInvisibleIcon: U,
                                                                     }),
                                                                 ],
@@ -625,19 +623,19 @@ function ep(e) {
                                                                     (0, n.jsx)(p.E, {
                                                                         variant: "eyebrow",
                                                                         color: "text-default",
-                                                                        children: ec.intl.string(ec.t.jndPhX),
+                                                                        children: eo.intl.string(eo.t.jndPhX),
                                                                     }),
                                                                     (0, n.jsx)(ef, {
                                                                         account: i,
                                                                         setShowPreviewInvisibleIcon: D,
-                                                                        setShowPreviewMetadata: V,
+                                                                        setShowPreviewMetadata: H,
                                                                     }),
                                                                 ],
                                                             }),
                                                         ],
                                                     })
                                                   : null,
-                                              null != c
+                                              null != o
                                                   ? (0, n.jsxs)("div", {
                                                         className: eu.yk,
                                                         children: [
@@ -647,11 +645,11 @@ function ep(e) {
                                                                     (0, n.jsx)(p.E, {
                                                                         variant: "eyebrow",
                                                                         color: "text-default",
-                                                                        children: ec.intl.string(ec.t.TOjkEg),
+                                                                        children: eo.intl.string(eo.t.TOjkEg),
                                                                     }),
                                                                     (0, n.jsx)(y.m, {
-                                                                        text: ec.intl.string(ec.t.x3svVc),
-                                                                        children: (0, n.jsx)(E.CircleInformationIcon, {
+                                                                        text: eo.intl.string(eo.t.x3svVc),
+                                                                        children: (0, n.jsx)(N.CircleInformationIcon, {
                                                                             size: "xs",
                                                                             color: "currentColor",
                                                                         }),
@@ -659,9 +657,9 @@ function ep(e) {
                                                                 ],
                                                             }),
                                                             (0, n.jsx)(X.Wc, {
-                                                                applicationRoleConnection: c,
+                                                                applicationRoleConnection: o,
                                                                 className: eu.eT,
-                                                                locale: eg,
+                                                                locale: ej,
                                                             }),
                                                         ],
                                                     })
@@ -671,13 +669,13 @@ function ep(e) {
                         }),
                     ],
                 })),
-                (a = [{ variant: "primary", text: ec.intl.string(ec.t.i4jeWR), onClick: () => f(0) }]),
+                (a = [{ variant: "primary", text: eo.intl.string(eo.t.i4jeWR), onClick: () => f(0) }]),
                 (s = void 0),
                 (r = () => (ey(), Promise.resolve())));
             break;
         }
         case 2:
-            ((t = ec.intl.string(ec.t.najNdz)),
+            ((t = eo.intl.string(eo.t.najNdz)),
                 (l = (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsxs)("div", {
@@ -698,11 +696,11 @@ function ep(e) {
                         }),
                     ],
                 })),
-                (a = [{ variant: "primary", text: ec.intl.string(ec.t.cpT0Cq), onClick: () => ey(!0) }]),
-                (s = eb
-                    ? (0, n.jsx)(_.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eN })
+                (a = [{ variant: "primary", text: eo.intl.string(eo.t.cpT0Cq), onClick: () => ey(!0) }]),
+                (s = eS
+                    ? (0, n.jsx)(_.Q, { variant: "primary", text: eo.intl.string(eo.t.VXV55P), onClick: eE })
                     : void 0),
                 (r = () => (ey(!0), Promise.resolve())));
     }
-    return (0, n.jsx)(h.a, { transitionState: c, onClose: r, title: t, actions: a, actionBarInput: s, children: l });
+    return (0, n.jsx)(h.a, { transitionState: o, onClose: r, title: t, actions: a, actionBarInput: s, children: l });
 }

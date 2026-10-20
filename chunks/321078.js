@@ -13,9 +13,7 @@ function s(e) {
                 (r ?? []).filter(
                     (e) =>
                         n.APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS.some(
-                            (t) =>
-                                t.applicationId === e.application_id &&
-                                t.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities"),
+                            (t) => t.applicationId === e.application_id,
                         ) &&
                         null != e.profile &&
                         null != e.profile.username &&

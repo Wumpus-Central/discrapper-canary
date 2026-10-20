@@ -17761,11 +17761,9 @@ function xv(e) {
             () =>
                 null == g
                     ? []
-                    : dz.A.filter(
-                          (e) =>
-                              null != e.migrationData &&
-                              e.migrationData.getMigrationExperimentEnabled("GuildSettingsRolesEditHeaders"),
-                      ).filter((e) => g.some((t) => t.some((t) => t.connectionType === e.type))),
+                    : dz.A.filter((e) => null != e.migrationData).filter((e) =>
+                          g.some((t) => t.some((t) => t.connectionType === e.type)),
+                      ),
             [g],
         ),
         h = (0, L.bG)([d5.default], () => d5.default.locale),

@@ -6947,11 +6947,7 @@ function uJ(e) {
                     () =>
                         n.filter((e) => {
                             let t = ed.A.get(e.type);
-                            return (
-                                !t?.migrationData?.getMigrationExperimentEnabled(
-                                    "useVisibleUserProfileConnectionsAndAppIdentities",
-                                ) || !i.has(t.migrationData.replacedBy)
-                            );
+                            return t?.migrationData == null || !i.has(t.migrationData.replacedBy);
                         }),
                     [n, i],
                 ),

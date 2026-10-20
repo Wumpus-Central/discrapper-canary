@@ -82,7 +82,7 @@ class f extends s.A {
     get connectionEntrypointUrl() {
         let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(534952),
             t = e[this.id];
-        return t?.connectionEntrypointUrlOverride != null && t.getMigrationExperimentEnabled("ApplicationRecord")
+        return t?.connectionEntrypointUrlOverride != null
             ? t.connectionEntrypointUrlOverride
             : this._connectionEntrypointUrl;
     }

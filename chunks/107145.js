@@ -13993,11 +13993,10 @@ function Ss(e) {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     className: St.Au,
-                                    children: n.migrationData?.getMigrationExperimentEnabled(
-                                        "User Settings Connections Web",
-                                    )
-                                        ? U.intl.format(Se.default.Glhokn, { platformName: n.name })
-                                        : n.name,
+                                    children:
+                                        null != n.migrationData
+                                            ? U.intl.format(Se.default.Glhokn, { platformName: n.name })
+                                            : n.name,
                                 }),
                             ],
                         }),
@@ -14277,7 +14276,7 @@ function Sl(e) {
 }
 function Sr() {
     let e = (0, xO.gn)(),
-        t = (0, i1.A)((0, x9.getMigratedApplicationIdentityConnectionsScreenApplications)("NewConnectionsList"));
+        t = (0, i1.A)((0, x9.getMigratedApplicationIdentityConnectionsScreenApplications)());
     return (0, p.jsxs)("div", {
         className: St.lA,
         children: [
@@ -14404,52 +14403,6 @@ let So = (0, E.E2)(h.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
     Sd = (0, E.zZ)(h.X.CONNECTIONS_CATEGORY, {
         useTitle: () => U.intl.string(U.t["3fe7U5"]),
         useSubtitle: () => U.intl.string(U.t.U22vw6),
-        useInlineNotice: function () {
-            let e = (0, f.bG)([xH.A], () => xH.A.getAccounts()),
-                t = T.useMemo(
-                    () =>
-                        xj.A.filter(
-                            (e) =>
-                                e.migrationData?.getMigrationExperimentEnabled("ConnectionDeprecationInlineNotice") ===
-                                !0,
-                        ).filter((t) => e.some((e) => e.type === t.type)),
-                    [e],
-                ),
-                [n, i] = T.useState(0),
-                [s, l] = T.useState(t),
-                r = t !== s;
-            r && (l(t), i(0));
-            let a = T.useMemo(() => t[n], [t, n]),
-                o = (0, i1.h)(a?.migrationData?.replacedBy),
-                { canStartAuthorization: u, hasAlreadyLinked: d, fetched: c } = (0, uT.RD)(o),
-                g =
-                    a?.type === I.fg2.RIOT_GAMES || a?.type === I.fg2.LEAGUE_OF_LEGENDS
-                        ? U.intl.string(Se.default["1S6oAo"])
-                        : o?.name,
-                m = null != a && c,
-                A = m && !d && u && o?.connectionEntrypointUrl != null;
-            return (
-                r || !m || A || i((e) => e + 1),
-                T.useMemo(
-                    () =>
-                        A
-                            ? {
-                                  type: S.lT.INLINE_NOTICE,
-                                  noticeType: "info",
-                                  role: "status",
-                                  text: U.intl.format(Se.default.wUXupS, {
-                                      connectionName: a.name,
-                                      applicationName: g,
-                                      connectionEntrypointUrl: o?.connectionEntrypointUrl,
-                                      helpCenterLink:
-                                          a.migrationData?.helpCenterLink != null ? a.migrationData.helpCenterLink : "",
-                                  }),
-                              }
-                            : null,
-                    [a, g, o, A],
-                )
-            );
-        },
         buildLayout: () => [So, Su],
     }),
     Sc = (0, E.zZ)(h.X.AUTHORIZED_APPS_CATEGORY, {

@@ -1353,12 +1353,13 @@ function ny(e) {
             isLoading: N,
         } = (function (e) {
             let { connectionApp: t } = e,
-                { data: n, isLoading: i } = (0, eh.YY)(t?.parentId ?? t?.id),
-                r = nT.APPLICATION_IDENTITY_CONNECTIONS_INCENTIVIZED_APPLICATIONS.find(
-                    (e) => e.applicationId === n?.id,
-                );
+                { data: n, isLoading: i } = (0, eh.YY)(t?.parentId ?? t?.id);
             return {
-                isEligible: null != r && r.getMigrationExperimentEnabled("ActivityPanelGameCard") && null != t,
+                isEligible:
+                    null !=
+                        nT.APPLICATION_IDENTITY_CONNECTIONS_INCENTIVIZED_APPLICATIONS.find(
+                            (e) => e.applicationId === n?.id,
+                        ) && null != t,
                 displayedApp: n,
                 isLoading: i,
             };

@@ -1,14 +1,13 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => _ });
 var i = n(435558),
     r = n.n(i),
     a = n(374994),
-    s = n(472636),
-    l = n(998218),
-    o = n(652215),
-    d = n(534952);
-let c = [
+    s = n(998218),
+    l = n(652215),
+    o = n(534952);
+let d = [
         {
-            type: o.fg2.TWITCH,
+            type: l.fg2.TWITCH,
             name: "Twitch",
             color: (0, a.dE)("PLATFORM_TWITCH"),
             icon: {
@@ -27,7 +26,7 @@ let c = [
             domains: ["twitch.tv", "twitch.com"],
         },
         {
-            type: o.fg2.YOUTUBE,
+            type: l.fg2.YOUTUBE,
             name: "YouTube",
             color: (0, a.dE)("PLATFORM_YOUTUBE"),
             icon: {
@@ -46,7 +45,7 @@ let c = [
             domains: ["youtube.com", "youtu.be"],
         },
         {
-            type: o.fg2.BATTLENET,
+            type: l.fg2.BATTLENET,
             name: "Battle.net",
             color: (0, a.dE)("PLATFORM_BATTLENET"),
             icon: {
@@ -60,14 +59,13 @@ let c = [
             },
             enabled: !0,
             migrationData: {
-                replacedBy: d.ApplicationIdentityAppIds.BATTLENET,
-                getMigrationExperimentEnabled: (e) => s.M.getConfig({ location: e }).enabled,
+                replacedBy: o.ApplicationIdentityAppIds.BATTLENET,
                 helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
                 deprecationDate: new Date("2026-09-22Z-07:00"),
             },
         },
         {
-            type: o.fg2.BLUESKY,
+            type: l.fg2.BLUESKY,
             name: "Bluesky",
             icon: {
                 lightPNG: n(419075),
@@ -86,7 +84,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.BUNGIE,
+            type: l.fg2.BUNGIE,
             name: "Bungie.net",
             color: (0, a.dE)("PLATFORM_BUNGIE"),
             icon: {
@@ -100,7 +98,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.SKYPE,
+            type: l.fg2.SKYPE,
             name: "Skype",
             color: (0, a.dE)("PLATFORM_SKYPE"),
             icon: {
@@ -118,7 +116,7 @@ let c = [
             },
         },
         {
-            type: o.fg2.LEAGUE_OF_LEGENDS,
+            type: l.fg2.LEAGUE_OF_LEGENDS,
             name: "League of Legends",
             color: (0, a.dE)("PLATFORM_LOL"),
             icon: {
@@ -131,14 +129,13 @@ let c = [
             },
             enabled: !0,
             migrationData: {
-                replacedBy: d.ApplicationIdentityAppIds.RIOT_GAMES,
-                getMigrationExperimentEnabled: () => !0,
+                replacedBy: o.ApplicationIdentityAppIds.RIOT_GAMES,
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
                 deprecationDate: new Date("2026-07-10Z-07:00"),
             },
         },
         {
-            type: o.fg2.STEAM,
+            type: l.fg2.STEAM,
             name: "Steam",
             color: (0, a.dE)("PLATFORM_STEAM"),
             icon: {
@@ -157,7 +154,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.REDDIT,
+            type: l.fg2.REDDIT,
             name: "Reddit",
             color: (0, a.dE)("PLATFORM_REDDIT"),
             icon: {
@@ -177,7 +174,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.FACEBOOK,
+            type: l.fg2.FACEBOOK,
             name: "Facebook",
             color: (0, a.dE)("PLATFORM_FACEBOOK"),
             icon: {
@@ -192,7 +189,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.TWITTER_LEGACY,
+            type: l.fg2.TWITTER_LEGACY,
             name: "Twitter",
             color: (0, a.dE)("PLATFORM_TWITTER"),
             icon: {
@@ -212,7 +209,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.TWITTER,
+            type: l.fg2.TWITTER,
             name: "X",
             color: (0, a.dE)("PLATFORM_TWITTER"),
             icon: {
@@ -232,7 +229,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.SPOTIFY,
+            type: l.fg2.SPOTIFY,
             name: "Spotify",
             color: (0, a.dE)("PLATFORM_SPOTIFY"),
             icon: {
@@ -250,7 +247,7 @@ let c = [
             },
         },
         {
-            type: o.fg2.XBOX,
+            type: l.fg2.XBOX,
             name: "Xbox",
             color: (0, a.dE)("PLATFORM_XBOX"),
             icon: {
@@ -265,7 +262,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.SAMSUNG,
+            type: l.fg2.SAMSUNG,
             name: "Samsung Galaxy",
             color: (0, a.dE)("PLATFORM_SAMSUNG"),
             icon: {
@@ -279,7 +276,7 @@ let c = [
             enabled: !1,
         },
         {
-            type: o.fg2.GITHUB,
+            type: l.fg2.GITHUB,
             name: "GitHub",
             color: (0, a.dE)("PLATFORM_GITHUB"),
             icon: {
@@ -298,7 +295,7 @@ let c = [
             domains: ["github.com"],
         },
         {
-            type: o.fg2.PLAYSTATION,
+            type: l.fg2.PLAYSTATION,
             name: "PlayStation Network",
             color: (0, a.dE)("PLATFORM_PLAYSTATION"),
             icon: {
@@ -312,7 +309,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.PLAYSTATION_STAGING,
+            type: l.fg2.PLAYSTATION_STAGING,
             name: "PlayStation Network (Staging)",
             color: (0, a.dE)("PLATFORM_PLAYSTATION"),
             icon: {
@@ -326,7 +323,7 @@ let c = [
             enabled: !1,
         },
         {
-            type: o.fg2.EPIC_GAMES,
+            type: l.fg2.EPIC_GAMES,
             name: "Epic Games",
             icon: {
                 lightPNG: n(350794),
@@ -339,7 +336,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.RIOT_GAMES,
+            type: l.fg2.RIOT_GAMES,
             name: "Riot Games",
             icon: {
                 lightPNG: n(625906),
@@ -352,14 +349,13 @@ let c = [
             },
             enabled: !0,
             migrationData: {
-                replacedBy: d.ApplicationIdentityAppIds.RIOT_GAMES,
-                getMigrationExperimentEnabled: () => !0,
+                replacedBy: o.ApplicationIdentityAppIds.RIOT_GAMES,
                 helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
                 deprecationDate: new Date("2026-07-10Z-07:00"),
             },
         },
         {
-            type: o.fg2.ROBLOX,
+            type: l.fg2.ROBLOX,
             name: "Roblox",
             icon: {
                 lightPNG: n(685701),
@@ -376,7 +372,7 @@ let c = [
             },
         },
         {
-            type: o.fg2.PAYPAL,
+            type: l.fg2.PAYPAL,
             name: "PayPal",
             icon: {
                 lightPNG: n(365083),
@@ -390,7 +386,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.EBAY,
+            type: l.fg2.EBAY,
             name: "eBay",
             icon: {
                 lightPNG: n(139673),
@@ -408,7 +404,7 @@ let c = [
             },
         },
         {
-            type: o.fg2.TIKTOK,
+            type: l.fg2.TIKTOK,
             name: "TikTok",
             icon: {
                 lightPNG: n(996319),
@@ -427,7 +423,7 @@ let c = [
             },
         },
         {
-            type: o.fg2.INSTAGRAM,
+            type: l.fg2.INSTAGRAM,
             name: "Instagram",
             icon: {
                 lightPNG: n(833070),
@@ -445,7 +441,7 @@ let c = [
             },
         },
         {
-            type: o.fg2.MASTODON,
+            type: l.fg2.MASTODON,
             name: "Mastodon",
             icon: {
                 lightPNG: n(947839),
@@ -464,7 +460,7 @@ let c = [
             hasMetadata: !0,
         },
         {
-            type: o.fg2.CRUNCHYROLL,
+            type: l.fg2.CRUNCHYROLL,
             name: "Crunchyroll",
             color: (0, a.dE)("PLATFORM_CRUNCHYROLL"),
             icon: {
@@ -478,7 +474,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.DOMAIN,
+            type: l.fg2.DOMAIN,
             name: "Domain",
             icon: {
                 lightPNG: n(647951),
@@ -495,7 +491,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.AMAZON_MUSIC,
+            type: l.fg2.AMAZON_MUSIC,
             name: "Amazon Music",
             icon: {
                 lightPNG: n(922946),
@@ -508,7 +504,7 @@ let c = [
             enabled: !0,
         },
         {
-            type: o.fg2.META_QUEST_OR_HORIZON,
+            type: l.fg2.META_QUEST_OR_HORIZON,
             name: "Meta Quest",
             icon: {
                 lightPNG: n(218003),
@@ -521,25 +517,25 @@ let c = [
             enabled: !1,
         },
     ],
-    u = r().keyBy(c, "type"),
-    _ = {};
-c.forEach((e) => {
+    c = r().keyBy(d, "type"),
+    u = {};
+d.forEach((e) => {
     e.domains?.forEach((t) => {
-        _[t] = e;
+        u[t] = e;
     });
 });
-let E = {
-    get: (e) => u[e] ?? null,
+let _ = {
+    get: (e) => c[e] ?? null,
     getByUrl(e) {
-        let t = l.A.toURLSafe(e);
+        let t = s.A.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return _[n.startsWith("www.") ? n.slice(4) : n];
+        return u[n.startsWith("www.") ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
-    map: (e) => c.map(e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
+    map: (e) => d.map(e),
     filter(e) {
-        let t = c.filter(e);
+        let t = d.filter(e);
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
@@ -549,5 +545,5 @@ let E = {
             t
         );
     },
-    find: (e) => c.find(e),
+    find: (e) => d.find(e),
 };

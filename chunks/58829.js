@@ -23,9 +23,7 @@ function N(n) {
             includedPlatformTypes: i,
             includeApplicationConnections: s = !0,
         } = n,
-        a = (0, m.A)(
-            s ? (0, j.getMigratedApplicationIdentityConnectionsScreenApplications)("ConnectionsGridModal") : [],
-        ),
+        a = (0, m.A)(s ? (0, j.getMigratedApplicationIdentityConnectionsScreenApplications)() : []),
         c = (0, h.gn)();
     return (0, t.jsxs)("div", {
         className: v.lA,
