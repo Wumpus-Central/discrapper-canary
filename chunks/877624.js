@@ -1,4 +1,4 @@
-_.d(t, { C: () => n });
+t.d(e, { C: () => n });
 var A,
     n =
         (((A = {})[(A.ANNOUNCEMENT_MODAL = 0)] = "ANNOUNCEMENT_MODAL"),
@@ -28,4 +28,5 @@ var A,
         (A[(A.MARKETING_PAGE_REWARDS_BENTO_BOX = 24)] = "MARKETING_PAGE_REWARDS_BENTO_BOX"),
         (A[(A.OUTBOUND_PROMOTION_POPOVER = 25)] = "OUTBOUND_PROMOTION_POPOVER"),
         (A[(A.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD = 26)] = "OUTBOUND_PROMOTION_CLAIM_MODAL_CARD"),
+        (A[(A.SHOP_COACHMARK = 27)] = "SHOP_COACHMARK"),
         A);

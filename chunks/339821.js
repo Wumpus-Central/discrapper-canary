@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => N });
 var i = n(582128),
     r = n(379197),
     a = n(488430),
@@ -10,56 +10,99 @@ var i = n(582128),
     u = n(131607),
     _ = n(549996),
     E = n(457421),
-    A = n(807098),
-    h = n(966971),
-    f = n(212407),
-    I = n(49999);
-let p = function () {
-    let e,
-        t = (0, _.c)(s.C.SHOP_TAB_TOOLTIP),
-        n = t?.properties.properties.oneofKind === "shopTabTooltip" ? t.properties.properties.shopTabTooltip : null,
-        p =
-            ((e = (0, A.T)(n?.asset)),
+    A = n(327019),
+    h = n(174929),
+    f = n(807098),
+    I = n(966971);
+function p(e) {
+    if ("" === e) return;
+    let t = new Date(e);
+    return Number.isNaN(t.getTime()) ? void 0 : t;
+}
+function T(e) {
+    let t = null != e && "" !== e.lightUrl ? e.lightUrl : void 0,
+        n = null != e && "" !== e.darkUrl ? e.darkUrl : void 0;
+    if (null != t || null != n) return { srcLightHovered: t, srcDarkHovered: n };
+}
+let m = {
+    [h.s.UNSPECIFIED]: void 0,
+    [h.s.SM_TILE]: A.l.SM_TILE,
+    [h.s.MD_TILE]: A.l.MD_TILE,
+    [h.s.LG_TILE]: A.l.LG_TILE,
+    [h.s.VIDEO_TILE]: A.l.VIDEO_TILE,
+};
+var g = n(212407),
+    S = n(49999);
+let N = function () {
+    var e, t;
+    let n,
+        A,
+        h = (0, _.c)(s.C.SHOP_COACHMARK),
+        N =
+            ((e =
+                h?.properties.properties.oneofKind === "shopCoachmark" ? h.properties.properties.shopCoachmark : null),
+            (n = (0, f.T)(e?.asset)),
             (0, i.useMemo)(
                 () =>
-                    null == n
+                    null == e
                         ? null
                         : {
-                              type: h.FF.TAB_TOOLTIP,
-                              title: () => n.header,
-                              body: () => n.body,
-                              asset: e ?? "",
-                              badgeIcon: "" !== n.badgeIcon ? n.badgeIcon : void 0,
-                              badgeText: "" !== n.badgeText ? n.badgeText : void 0,
-                              badgeCountdownEndsAt: (function (e) {
-                                  if ("" === e) return;
-                                  let t = new Date(e);
-                                  return Number.isNaN(t.getTime()) ? void 0 : t;
-                              })(n.badgeCountdownEndsAt),
-                              showHoverGradient: n.showHoverGradient,
-                              entryPointBackgroundAssets: (function (e) {
-                                  let t = null != e && "" !== e.lightUrl ? e.lightUrl : void 0,
-                                      n = null != e && "" !== e.darkUrl ? e.darkUrl : void 0;
-                                  if (null != t || null != n) return { srcLightHovered: t, srcDarkHovered: n };
-                              })(n.hoverBackground),
+                              type: I.FF.COACHMARK,
+                              title: () => e.header,
+                              body: () => e.body,
+                              assetDark: n ?? "",
+                              assetLight: n ?? "",
+                              buttonLabel: "" !== e.buttonLabel ? e.buttonLabel : void 0,
+                              badgeIcon: "" !== e.badgeIcon ? e.badgeIcon : void 0,
+                              badgeText: "" !== e.badgeText ? e.badgeText : void 0,
+                              badgeCountdownEndsAt: p(e.badgeCountdownEndsAt),
+                              showHoverGradient: e.showHoverGradient,
+                              displayType: m[e.displayType],
+                              entryPointBackgroundAssets: T(e.hoverBackground),
+                              version: 0,
                           },
-                [e, n],
+                [n, e],
             )),
-        T = t?.promotionId ?? "",
-        m = null != n && "" !== T,
-        [g, S] = (0, u.Cc)(m ? o.M.SHOP_TAB_TOOLTIP : null, T, void 0, !0),
-        N = m && null != g,
-        C = (0, l.bG)([E.A], () => E.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        [O, R] = (0, u.RF)(N ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, C?.version ?? 0, void 0, !0),
-        L = (0, d.useHasAnyModalOpen)(),
-        y = (0, f.bv)(C),
-        D =
-            null == O || L
+        C = (0, _.c)(s.C.SHOP_TAB_TOOLTIP),
+        O =
+            ((t =
+                C?.properties.properties.oneofKind === "shopTabTooltip"
+                    ? C.properties.properties.shopTabTooltip
+                    : null),
+            (A = (0, f.T)(t?.asset)),
+            (0, i.useMemo)(
+                () =>
+                    null == t
+                        ? null
+                        : {
+                              type: I.FF.TAB_TOOLTIP,
+                              title: () => t.header,
+                              body: () => t.body,
+                              asset: A ?? "",
+                              badgeIcon: "" !== t.badgeIcon ? t.badgeIcon : void 0,
+                              badgeText: "" !== t.badgeText ? t.badgeText : void 0,
+                              badgeCountdownEndsAt: p(t.badgeCountdownEndsAt),
+                              showHoverGradient: t.showHoverGradient,
+                              entryPointBackgroundAssets: T(t.hoverBackground),
+                          },
+                [A, t],
+            )),
+        R = N ?? O,
+        L = (null != N ? h?.promotionId : C?.promotionId) ?? "",
+        y = null != R && "" !== L,
+        [D, v] = (0, u.Cc)(y ? o.M.SHOP_TAB_TOOLTIP : null, L, void 0, !0),
+        b = y && null != D,
+        M = (0, l.bG)([E.A], () => E.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
+        [P, U] = (0, u.RF)(b ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M?.version ?? 0, void 0, !0),
+        w = (0, d.useHasAnyModalOpen)(),
+        G = (0, g.bv)(M),
+        x =
+            null == P || w
                 ? null
                 : (function (e, t) {
                       if (t?.type === a.G.BADGE)
                           return {
-                              type: h.FF.BADGE,
+                              type: I.FF.BADGE,
                               badgeIcon: t.badgeIcon,
                               badgeText: t.badgeText,
                               badgeCountdownEndsAt: t.badgeCountdownEndsAt,
@@ -76,7 +119,7 @@ let p = function () {
                       if (t?.type === a.G.COACHMARK) {
                           let e = t.refTargetBackground;
                           return {
-                              type: h.FF.COACHMARK,
+                              type: I.FF.COACHMARK,
                               title: () => t.title,
                               body: () => t.body,
                               assetDark: t.assetDark,
@@ -97,7 +140,7 @@ let p = function () {
                       }
                       return t?.type === a.G.TAB_TOOLTIP
                           ? {
-                                type: h.FF.TAB_TOOLTIP,
+                                type: I.FF.TAB_TOOLTIP,
                                 title: () => t.title,
                                 body: () => t.body,
                                 asset: t.asset,
@@ -115,23 +158,23 @@ let p = function () {
                                 version: t.version,
                             }
                           : null;
-                  })(y, C),
-        v = N && !L ? p : null;
+                  })(G, M),
+        k = b && !w ? R : null;
     return {
-        shopButtonDisplayOptions: v ?? D,
+        shopButtonDisplayOptions: k ?? x,
         dismissShopButtonDC: i.useCallback(
             (e) => {
-                if (null != v) {
-                    (S(e),
-                        null != C &&
-                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, C.version, {
-                                dismissAction: I.i.AUTO_DISMISS,
+                if (null != k) {
+                    (v(e),
+                        null != M &&
+                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, M.version, {
+                                dismissAction: S.i.AUTO_DISMISS,
                             }));
                     return;
                 }
-                null != D && R(e);
+                null != x && U(e);
             },
-            [v, D, S, R, C],
+            [k, x, v, U, M],
         ),
     };
 };
