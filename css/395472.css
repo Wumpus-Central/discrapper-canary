@@ -580,6 +580,25 @@
     justify-content: center
 }
 
+.stats_c8fdb8 {
+    -moz-column-gap: var(--space-32);
+    column-gap: var(--space-32);
+    display: flex;
+    flex-wrap: wrap
+}
+
+.stat_c8fdb8 {
+    align-items: center;
+    color: var(--custom-checkpoint-primary);
+    display: flex;
+    gap: var(--space-6)
+}
+
+.text_c8fdb8 {
+    font-size: 24px;
+    line-height: 24px
+}
+
 .container_bc3e36 {
     align-items: center;
     display: flex;
@@ -652,23 +671,61 @@
     color: var(--custom-checkpoint-white)
 }
 
-.guildStats_bc3e36 {
-    -moz-column-gap: var(--space-32);
-    column-gap: var(--space-32);
-    display: flex;
-    flex-wrap: wrap
-}
-
-.guildStat_bc3e36 {
+.container_a91285 {
     align-items: center;
-    color: var(--custom-checkpoint-primary);
     display: flex;
-    gap: var(--space-6)
+    flex-wrap: wrap;
+    gap: var(--space-80);
+    justify-content: space-between;
+    max-width: 1152px;
+    text-align: start;
+    width: 100%
 }
 
-.guildStatText_bc3e36 {
-    font-size: 24px;
-    line-height: 24px
+.header_a91285 {
+    flex: 1 1 320px;
+    gap: var(--space-12);
+    max-width: 510px
+}
+
+.header_a91285,
+.heading_a91285 {
+    display: flex;
+    flex-direction: column
+}
+
+.heading_a91285 {
+    gap: var(--space-4)
+}
+
+.spotlight_a91285 {
+    display: flex;
+    flex: 1 1 320px;
+    justify-content: center;
+    max-width: 460px
+}
+
+.card_a91285 {
+    background-color: var(--custom-checkpoint-guild-card-background);
+    border: 1px solid var(--custom-checkpoint-primary);
+    box-sizing: content-box;
+    gap: var(--space-24)
+}
+
+.card_a91285,
+.details_a91285 {
+    display: flex;
+    flex-direction: column
+}
+
+.details_a91285 {
+    gap: var(--space-16);
+    padding-inline: var(--space-24);
+    padding-bottom: var(--space-24)
+}
+
+.guildName_a91285 {
+    color: var(--custom-checkpoint-white)
 }
 
 .background__383df {
@@ -1050,4 +1107,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=990235.0500365920640474.css.map*/
+/*# sourceMappingURL=395472.a3b7aa3b6da6564b.css.map*/

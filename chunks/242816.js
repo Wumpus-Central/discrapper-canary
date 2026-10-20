@@ -400,8 +400,8 @@ var eq = n(868285),
     e2 = n(620982),
     e3 = n(571694),
     e5 = n(47167),
-    e6 = n(598104),
-    e4 = n(297334),
+    e4 = n(598104),
+    e6 = n(297334),
     e7 = n(427358),
     e8 = n(907459),
     e9 = n(994500),
@@ -484,7 +484,7 @@ function ta(e) {
                     .map((e) => ec.default.getUser(e)),
             [t],
         )),
-        (o = a.useMemo(() => (0, e4.aw)(s, n), [s, n])),
+        (o = a.useMemo(() => (0, e6.aw)(s, n), [s, n])),
         (d = a.useMemo(() => (0, e8.L)(o, i, "DirectMessageTooltip - activityUsers"), [o, i])),
         (c = (0, E.yK)(
             [B.A, ec.default],
@@ -492,11 +492,11 @@ function ta(e) {
                 let e = B.A.getAllApplicationStreamsForChannel(t)
                     .map((e) => e.ownerId)
                     .map((e) => ec.default.getUser(e));
-                return (0, e4.aw)(e, n);
+                return (0, e6.aw)(e, n);
             },
             [t, n],
         )),
-        (u = a.useMemo(() => (0, e4.aw)(c, n), [c, n])),
+        (u = a.useMemo(() => (0, e6.aw)(c, n), [c, n])),
         (_ = a.useMemo(() => (0, e8.L)(u, i, "DirectMessageTooltip - activityUsers"), [u, i])),
         (A = a.useMemo(() => _.filter((e) => !d.some((t) => t.id === e.id)), [_, d])),
         (h = (0, E.yK)(
@@ -506,11 +506,11 @@ function ta(e) {
                     let { user: t } = e;
                     return t;
                 });
-                return (0, e4.aw)(e, n);
+                return (0, e6.aw)(e, n);
             },
             [p, n],
         )),
-        (f = a.useMemo(() => (0, e4.aw)(h, n), [h, n])),
+        (f = a.useMemo(() => (0, e6.aw)(h, n), [h, n])),
         (I = a.useMemo(() => (0, e8.L)(f, i, "DirectMessageTooltip - voiceUsers"), [f, i])),
         {
             voiceUsers: a.useMemo(
@@ -635,7 +635,7 @@ class tc extends a.PureComponent {
                   let { default: e } = await Promise.all([
                       n.e("339715"),
                       n.e("790484"),
-                      n.e("990235"),
+                      n.e("395472"),
                       n.e("622936"),
                       n.e("216947"),
                       n.e("463317"),
@@ -744,7 +744,7 @@ class tc extends a.PureComponent {
                     icon: h ? void 0 : this.getChannelIcon(),
                     backgroundStyle: h ? "on-hover" : "always",
                     children: h
-                        ? (0, r.jsx)(e6.A, {
+                        ? (0, r.jsx)(e4.A, {
                               channel: e,
                               size: eJ._3.SIZE_40,
                               facepileSizeOverride: eJ._3.SIZE_32,
@@ -1179,8 +1179,8 @@ var tZ = n(696292),
     t2 = n(310419),
     t3 = n(488995),
     t5 = n(324580),
-    t6 = n(190107);
-let t4 = function (e) {
+    t4 = n(190107);
+let t6 = function (e) {
     let { selected: t, onClick: n, questId: i, className: s, ref: l } = e,
         o = a.useCallback(() => {
             (0, tJ.WL)({ source: t3.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
@@ -1189,7 +1189,7 @@ let t4 = function (e) {
                 case t3.GlobalDiscoveryTab.QUESTS:
                     return (0, t1.transitionToGlobalDiscovery)({
                         tab: t3.GlobalDiscoveryTab.QUESTS,
-                        location: t6.rE.DISCOVERY_COMPASS,
+                        location: t4.rE.DISCOVERY_COMPASS,
                         questContent: tZ.u.DISCOVERY_COMPASS,
                         questId: i,
                     });
@@ -1754,19 +1754,19 @@ let n3 = a.memo(function (e) {
     });
 });
 var n5 = n(113494),
-    n6 = n(821124),
-    n4 = n(212455);
+    n4 = n(821124),
+    n6 = n(212455);
 function n7(e) {
     let t = e?.features.has(eE.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         n = (0, E.bG)(
-            [n4.A, ec.default, ey.Ay],
+            [n6.A, ec.default, ey.Ay],
             () => {
                 if (null == e) return;
-                let t = n4.A.getRequest(e.id),
+                let t = n6.A.getRequest(e.id),
                     n = ec.default.getCurrentUser();
                 if (null == n || null == t || t.userId !== n.id) return;
                 let i = ey.Ay.getMember(e.id, t.userId);
-                if (!(null != i && !i.isPending) || (0, n6.Oe)(t)) return t.applicationStatus;
+                if (!(null != i && !i.isPending) || (0, n4.Oe)(t)) return t.applicationStatus;
             },
             [e],
         );
@@ -1961,7 +1961,7 @@ function iS(e) {
                 let { user: t } = e;
                 return t;
             });
-            return (0, e4.aw)(t, c);
+            return (0, e6.aw)(t, c);
         })),
         (_ = (0, E.yK)([eo.A], () =>
             d().flatMap(s, (e) => {
@@ -1972,7 +1972,7 @@ function iS(e) {
                         let { user: t } = e;
                         return t;
                     });
-                return (0, e4.aw)(t, c);
+                return (0, e6.aw)(t, c);
             }),
         )),
         (A = (0, E.bG)([eo.A], () => {
@@ -1986,7 +1986,7 @@ function iS(e) {
                 let e = B.A.getAllApplicationStreams()
                     .filter((e) => e.guildId === t && !Q.Ay.isChannelMuted(t, e.channelId))
                     .map((e) => e.ownerId);
-                return (0, e4.F7)(e, c);
+                return (0, e6.F7)(e, c);
             },
             [c, t],
         )),
@@ -1999,7 +1999,7 @@ function iS(e) {
                         return t?.type !== eE.rbe.GUILD_SPACE;
                     })
                     .flatMap((e) => Array.from(e.userIds));
-                return (0, e4.F7)(e, c);
+                return (0, e6.F7)(e, c);
             },
             [t, c],
         )),
@@ -2007,13 +2007,13 @@ function iS(e) {
             [ec.default],
             () => {
                 let e = f.map((e) => ec.default.getUser(e));
-                return (0, e4.aw)(e);
+                return (0, e6.aw)(e);
             },
             [f],
         )),
         (p = (0, E.yK)([ec.default], () => h.map((e) => ec.default.getUser(e)), [h])),
         (T = u.filter((e) => !h.includes(e.id) && !f.includes(e.id))),
-        (m = (0, e4.aw)(T)),
+        (m = (0, e6.aw)(T)),
         (g = p.filter((e) => null != e && !f.includes(e.id))),
         (S = (0, E.bG)([e7.A], () => e7.A.getUserAffinitiesMap(), [])),
         (N = a.useMemo(() => (0, e8.L)(m, S, "GuildTooltip - nonBlockedUsers"), [m, S])),
@@ -2172,7 +2172,7 @@ function iL(e, t) {
             n.e("816027"),
             n.e("562772"),
             n.e("8159"),
-            n.e("990235"),
+            n.e("395472"),
             n.e("361922"),
             n.e("179028"),
             n.e("403032"),
@@ -3096,8 +3096,8 @@ function iB(e, t) {
 function iV(e) {
     let { guildNode: t } = e,
         n = t.id,
-        i = (0, E.bG)([n4.A], () => n4.A.getRequest(n)),
-        a = (0, E.bG)([n4.A], () => n4.A.getJoinRequestGuild(n), [n]),
+        i = (0, E.bG)([n6.A], () => n6.A.getRequest(n)),
+        a = (0, E.bG)([n6.A], () => n6.A.getJoinRequestGuild(n), [n]),
         s = (0, E.bG)([eH.A], () => eH.A.isFocused()),
         l = (0, E.bG)([eU.A], () => eU.A.getGuildId());
     return null == a
@@ -3121,7 +3121,7 @@ var iH = n(943536);
 function ij(e) {
     let { onActivate: t, children: n } = e,
         i = a.useRef(null),
-        s = (0, E.bG)([n4.A], () => n4.A.hasJoinRequestCoackmark()),
+        s = (0, E.bG)([n6.A], () => n6.A.hasJoinRequestCoackmark()),
         l = a.useCallback(() => {
             ix.Ay.clearCoachmark();
         }, []),
@@ -3186,7 +3186,7 @@ function iW(e) {
     let { onActivate: t } = e,
         [n, i] = a.useState(!1),
         s = (0, E.bG)([eU.A], () => eU.A.getGuildId()),
-        l = (0, E.bG)([n4.A], () => n4.A.hasFetchedRequestToJoinGuilds),
+        l = (0, E.bG)([n6.A], () => n6.A.hasFetchedRequestToJoinGuilds),
         o = (0, iF.A)(),
         d = (0, iw.Ay)(s),
         c = a.useMemo(() => {
@@ -3600,7 +3600,7 @@ function iJ(e) {
             },
             [C, y, S, K.setNodeRef, d.version],
         ),
-        Q = (0, r.jsx)(t4, { selected: z, className: iK.ai }),
+        Q = (0, r.jsx)(t6, { selected: z, className: iK.ai }),
         J = W === eO.RK.SERVER_RAIL_BOTTOM;
     return (0, r.jsx)(R.f5, {
         value: $,

@@ -8,7 +8,4 @@ _.exports = {
     jj: "guildContent_bc3e36",
     gI: "guildDetails_bc3e36",
     J5: "guildName_bc3e36",
-    dX: "guildStats_bc3e36",
-    Em: "guildStat_bc3e36",
-    jt: "guildStatText_bc3e36",
 };
