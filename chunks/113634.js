@@ -1316,7 +1316,8 @@ function eR(e) {
         extensions: c,
         rtxPayload: u,
         sendingVideo: _,
-        enableAudioNack: E,
+        stereo: E,
+        enableAudioNack: h,
     } = e;
     if ("inactive" === r && !e_.PF)
         return {
@@ -1331,24 +1332,24 @@ function eR(e) {
             type: n,
         };
     let {
-        media: [h],
+        media: [f],
     } = eT.parse(a);
     if (
-        ((h.type = n),
-        (h.protocol = eS),
-        (h.payloads = l),
-        (h.setup = i),
-        (h.mid = t),
-        (h.rtcpMux = "rtcp-mux"),
-        (h.direction = r),
-        (h.ssrcs = d),
+        ((f.type = n),
+        (f.protocol = eS),
+        (f.payloads = l),
+        (f.setup = i),
+        (f.mid = t),
+        (f.rtcpMux = "rtcp-mux"),
+        (f.direction = r),
+        (f.ssrcs = d),
         d.length > 0 &&
             (null != u &&
-                ((h.ssrcGroups = ef()(d, 4).map((e) => {
+                ((f.ssrcGroups = ef()(d, 4).map((e) => {
                     let t = e[0].id;
                     return { semantics: "FID", ssrcs: `${t} ${t + 1}` };
                 })),
-                (h.ssrcs = ef()(d, 4)
+                (f.ssrcs = ef()(d, 4)
                     .map((e) => {
                         let t = e.map((e) => ((e = { ...e }), (e.id += 1), e));
                         return [...e, ...t];
@@ -1358,26 +1359,29 @@ function eR(e) {
     ) {
         let e = d.find((e) => "msid" === e.attribute);
         if (null == e) throw Error("msid missing");
-        ((h.msid = e.value), (h.ssrcs = h.ssrcs.filter((e) => "cname" === e.attribute)));
+        ((f.msid = e.value), (f.ssrcs = f.ssrcs.filter((e) => "cname" === e.attribute)));
     }
     switch (n) {
         case "audio":
             ("Firefox" === A().name
-                ? (h.ext = c.filter((e) => "urn:ietf:params:rtp-hdrext:ssrc-audio-level" === e.uri))
-                : ((h.ext = c.filter(
+                ? (f.ext = c.filter((e) => "urn:ietf:params:rtp-hdrext:ssrc-audio-level" === e.uri))
+                : ((f.ext = c.filter(
                       (e) =>
                           "urn:ietf:params:rtp-hdrext:ssrc-audio-level" === e.uri ||
                           "http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01" === e.uri,
                   )),
-                  (h.rtcpFb = [{ type: "transport-cc", payload: l }]),
-                  !0 === E && h.rtcpFb?.push({ type: "nack", payload: l })),
-                h.rtp.push({ codec: s, encoding: 2, payload: l, rate: 48e3 }),
+                  (f.rtcpFb = [{ type: "transport-cc", payload: l }]),
+                  !0 === h && f.rtcpFb?.push({ type: "nack", payload: l })),
+                f.rtp.push({ codec: s, encoding: 2, payload: l, rate: 48e3 }),
                 s === D.UK.OPUS &&
-                    h.fmtp.push({ config: `minptime=10;useinbandfec=1;usedtx=${_ ? "0" : "1"}`, payload: l }),
-                (h.maxptime = 60));
+                    f.fmtp.push({
+                        config: `minptime=10;useinbandfec=1;usedtx=${_ ? "0" : "1"}${E ? ";stereo=1;sprop-stereo=1" : ""}`,
+                        payload: l,
+                    }),
+                (f.maxptime = 60));
             break;
         case "video":
-            ((h.ext = c.filter(
+            ((f.ext = c.filter(
                 (e) =>
                     "urn:ietf:params:rtp-hdrext:toffset" === e.uri ||
                     "http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time" === e.uri ||
@@ -1385,13 +1389,13 @@ function eR(e) {
                     "http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01" === e.uri ||
                     "http://www.webrtc.org/experiments/rtp-hdrext/playout-delay" === e.uri,
             )),
-                h.rtp.push({ codec: s, payload: l, rate: 9e4 }));
-            let f = `x-google-max-bitrate=${o}`;
+                f.rtp.push({ codec: s, payload: l, rate: 9e4 }));
+            let I = `x-google-max-bitrate=${o}`;
             (s === D.UK.H264
-                ? (f += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f")
-                : s === D.UK.H265 && (f += ";level-id=180;profile-id=1;tier-flag=0;tx-mode=SRST"),
-                h.fmtp.push({ config: f, payload: l }),
-                (h.rtcpFb = [
+                ? (I += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f")
+                : s === D.UK.H265 && (I += ";level-id=180;profile-id=1;tier-flag=0;tx-mode=SRST"),
+                f.fmtp.push({ config: I, payload: l }),
+                (f.rtcpFb = [
                     { type: "ccm", subtype: "fir", payload: l },
                     { type: "nack", payload: l },
                     { type: "nack", subtype: "pli", payload: l },
@@ -1399,11 +1403,11 @@ function eR(e) {
                     { type: "transport-cc", payload: l },
                 ]),
                 null != u &&
-                    (h.rtp.push({ codec: "rtx", payload: u, rate: 9e4 }),
-                    h.fmtp.push({ config: `apt=${l}`, payload: u }),
-                    (h.payloads = `${h.payloads} ${u}`)));
+                    (f.rtp.push({ codec: "rtx", payload: u, rate: 9e4 }),
+                    f.fmtp.push({ config: `apt=${l}`, payload: u }),
+                    (f.payloads = `${f.payloads} ${u}`)));
     }
-    return h;
+    return f;
 }
 function eL(e, t, n, i, r) {
     let a = e.find((e) => e.codec === i);
@@ -2087,9 +2091,11 @@ class eJ extends eA {
             (n.onsignalingstatechange = this.handleSignalingStateChange),
             (n.onicegatheringstatechange = this.handleIceGatheringStateChange),
             (n.ontrack = this.handleTrack),
+            (e.experiments ?? []).includes("web_screen_share_audio") &&
+                this.setExperimentFlag(D.fd.WEB_SCREEN_SHARE_AUDIO, !0),
             (this.audioTransceiver = n.addTransceiver("audio", {
                 direction: "recvonly",
-                sendEncodings: [{ maxBitrate: this.voiceBitrate }],
+                sendEncodings: [{ maxBitrate: this.getAudioSendBitrate(this.voiceBitrate) }],
             })),
             this.daveSessionManager?.setupEncodedTransformsForTransceiver(this.audioTransceiver),
             this.videoSupported &&
@@ -2213,7 +2219,14 @@ class eJ extends eA {
     }
     setBitRate(e) {
         this.voiceBitrate !== e &&
-            (super.setBitRate(e), this.setAudioEncoderParameters([{ parameter: eE.AUDIO_BITRATE, value: e }]));
+            (super.setBitRate(e),
+            this.setAudioEncoderParameters([{ parameter: eE.AUDIO_BITRATE, value: this.getAudioSendBitrate(e) }]));
+    }
+    getAudioSendBitrate(e) {
+        return this.isScreenShareAudioEnabled() ? Math.max(D.kO, e) : e;
+    }
+    isScreenShareAudioEnabled() {
+        return this.context === D.x.STREAM && this.experimentFlags.has(D.fd.WEB_SCREEN_SHARE_AUDIO);
     }
     setRemoteAudioHistory(e) {
         this.enableAudioNack = e > 0;
@@ -2429,39 +2442,41 @@ class eJ extends eA {
                         videoPayloadType: l,
                         videoBitRate: o,
                         sendingVideo: d,
-                        rtxPayloadType: c,
-                        ssrcs: u,
-                        extensions: _,
-                        enableAudioNack: E,
+                        stereo: c,
+                        rtxPayloadType: u,
+                        ssrcs: _,
+                        extensions: E,
+                        enableAudioNack: A,
                     } = e,
-                    A = [],
-                    h = "answer" === t ? "passive" : "actpass";
+                    h = [],
+                    f = "answer" === t ? "passive" : "actpass";
                 return (
-                    u.forEach((e) => {
+                    _.forEach((e) => {
                         let t,
-                            { ssrc: u, cname: f, type: I, direction: p, mid: T } = e;
-                        ("" !== f
-                            ? (t = eC(f, u, "audio" === I ? "a" : "v"))
-                            : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
-                            A.push(
+                            { ssrc: _, cname: I, type: p, direction: T, mid: m } = e;
+                        ("" !== I
+                            ? (t = eC(I, _, "audio" === p ? "a" : "v"))
+                            : ((t = []), "sendonly" === T ? (T = "inactive") : "sendrecv" === T && (T = "recvonly")),
+                            h.push(
                                 eR({
-                                    mid: T,
-                                    type: I,
-                                    setup: h,
-                                    direction: p,
+                                    mid: m,
+                                    type: p,
+                                    setup: f,
+                                    direction: T,
                                     baseSDP: n,
-                                    codec: "audio" === I ? i : s,
-                                    payload: "audio" === I ? r : l,
-                                    bitrate: "audio" === I ? a : o,
+                                    codec: "audio" === p ? i : s,
+                                    payload: "audio" === p ? r : l,
+                                    bitrate: "audio" === p ? a : o,
                                     ssrcs: t,
-                                    extensions: _,
-                                    rtxPayload: "audio" === I ? null : c,
+                                    extensions: E,
+                                    rtxPayload: "audio" === p ? null : u,
                                     sendingVideo: d,
-                                    enableAudioNack: E,
+                                    stereo: c,
+                                    enableAudioNack: A,
                                 }),
                             ));
                     }),
-                    new RTCSessionDescription({ type: t, sdp: eO(A) })
+                    new RTCSessionDescription({ type: t, sdp: eO(h) })
                 );
             })({
                 type: "answer",
@@ -2473,6 +2488,7 @@ class eJ extends eA {
                 videoPayloadType: l,
                 videoBitRate: 2500,
                 sendingVideo: o,
+                stereo: this.isScreenShareAudioEnabled(),
                 rtxPayloadType: d,
                 ssrcs: u,
                 extensions: this.extensions,
@@ -2516,6 +2532,19 @@ class eJ extends eA {
         ((this.unassignedStreams.audio = []), (this.unassignedStreams.video = []));
         let r = this.pc,
             a = await r.createOffer(this.makeOfferAnswerOptions());
+        this.isScreenShareAudioEnabled() &&
+            null != a.sdp &&
+            (a.sdp = (function (e) {
+                let t = /a=rtpmap:(\d+) opus\/48000/i.exec(e);
+                if (null == t) return e;
+                let n = `a=fmtp:${t[1]} `;
+                return e
+                    .split("\r\n")
+                    .map((e) =>
+                        !e.startsWith(n) || e.slice(n.length).split(";").includes("stereo=1") ? e : `${e};stereo=1`,
+                    )
+                    .join("\r\n");
+            })(a.sdp));
         try {
             await r.setLocalDescription(a);
         } catch (e) {
