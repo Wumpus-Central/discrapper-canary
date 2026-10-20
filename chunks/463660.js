@@ -1,4 +1,4 @@
-(n.d(t, { M$: () => k, Mg: () => m, Og: () => E, VY: () => y, Y1: () => g, aF: () => A, uk: () => T }),
+(n.d(t, { M$: () => E, Mg: () => k, Og: () => m, VY: () => y, Y1: () => g, aF: () => A, uk: () => T }),
     n(323874),
     n(14289),
     n(35956));
@@ -14,8 +14,8 @@ var r = n(73153),
     p = n(513845),
     _ = n(392739),
     h = n(573083),
-    f = n(855859),
-    C = n(691344);
+    C = n(855859),
+    f = n(691344);
 let y = {
         capture_preview(e, t) {
             let { projectId: n, ws: r } = t;
@@ -23,7 +23,7 @@ let y = {
         },
         control_preview(e, t) {
             let { projectId: n, ws: r } = t;
-            ((0, p.T5)(n), R(n, r, e).catch(() => {}));
+            ((0, p.T5)(n), N(n, r, e).catch(() => {}));
         },
         control_abort(e, t) {
             let { projectId: n } = t;
@@ -57,7 +57,7 @@ let y = {
         preview_app_published(e, t) {
             let { projectId: n } = t,
                 r = s.Ay.getProject(n)?.preview_application_id;
-            null != r && ((0, u._b)(r).catch(() => void 0), !0 === e.has_activity && (0, C.K)(n, { known: !0 }));
+            null != r && ((0, u._b)(r).catch(() => void 0), !0 === e.has_activity && (0, f.K)(n, { known: !0 }));
         },
         preview_ready(e, t) {
             let { projectId: n } = t;
@@ -92,15 +92,15 @@ async function A(e, t) {
         a = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${a}`;
 }
-async function k(e, t) {
+async function E(e, t) {
     let n = await (0, l.h)(e, "/agent/overlay-background", { method: "PUT", body: t });
     if (!n.ok) throw Error(`overlay background upload failed (${n.status})`);
 }
-async function E(e) {
+async function m(e) {
     let t = await (0, l.h)(e, "/agent/overlay-background", { method: "DELETE" });
     if (!t.ok) throw Error(`overlay background reset failed (${t.status})`);
 }
-async function m(e, t) {
+async function k(e, t) {
     let { ticket: n, baseUrl: r } = await (0, i.BK)(e);
     return `${r}/agent/overlay-background?${new URLSearchParams({ ticket: n, v: t })}`;
 }
@@ -108,14 +108,14 @@ async function v(e, t, n) {
     let r,
         a = Date.now();
     (console.debug("[conjure] capture request received", { id: n.id, build: n.build, probe: n.probe }),
-        !0 !== n.probe && n.spec?.mode === "widget" && (0, f.b)(e, "widget"));
+        !0 !== n.probe && n.spec?.mode === "widget" && (0, C.b)(e, "widget"));
     try {
         r = await d.A.relayPreviewCapture(e, n.id, {
             probe: n.probe,
             spec: n.spec,
             build: n.build,
             onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, _.bm)(e, n.id)),
-            resolveUploadUrl: () => w(e),
+            resolveUploadUrl: () => R(e),
         });
     } catch (e) {
         (console.error("[conjure] preview capture relay failed", e), (r = { status: "failed" }));
@@ -128,7 +128,7 @@ async function v(e, t, n) {
     }),
         t.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
-async function R(e, t, n) {
+async function N(e, t, n) {
     let r = Date.now();
     console.debug("[conjure] control request received", { id: n.id, build: n.build, steps: n.request?.steps?.length });
     try {
@@ -149,7 +149,7 @@ async function R(e, t, n) {
             t.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function w(e) {
+async function R(e) {
     let { ticket: t, baseUrl: n } = await (0, i.BK)(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }

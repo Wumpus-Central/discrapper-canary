@@ -1,8 +1,8 @@
-n.d(t, { V5: () => l, VF: () => a, yR: () => i });
+n.d(t, { V5: () => i, VF: () => a, yR: () => l });
 var r = n(73153),
     s = n(975189),
     o = n(664619);
-let l = {
+let i = {
     context_switch(e, t) {
         let { projectId: n } = t;
         (r.h.dispatch({ type: "CONJURE_CHAT_CONTEXT_SWITCH", projectId: n, contextSwitch: e }),
@@ -16,7 +16,7 @@ let l = {
         r.h.dispatch({ type: "CONJURE_SMART_CONTEXT_SET", projectId: n, enabled: e.enabled });
     },
 };
-function i(e, t) {
+function l(e, t) {
     return (0, s.b4)(e, "undo context switch", (e) => e.sendUndoContextSwitch(t));
 }
 function a(e, t) {

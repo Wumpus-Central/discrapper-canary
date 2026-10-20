@@ -52,25 +52,25 @@ function l(e) {
             function h(e) {
                 o || (d(e), (t = requestAnimationFrame(h)));
             }
-            function x() {
+            function v() {
                 t = requestAnimationFrame(h);
             }
-            function v() {
+            function x() {
                 cancelAnimationFrame(t);
             }
             return (
-                e.addEventListener("play", x),
-                e.addEventListener("pause", v),
-                e.addEventListener("ended", v),
+                e.addEventListener("play", v),
+                e.addEventListener("pause", x),
+                e.addEventListener("ended", x),
                 e.addEventListener("seeked", c),
                 e.addEventListener("loadeddata", c),
                 e.paused ? e.readyState >= 2 && c() : (t = requestAnimationFrame(h)),
                 () => {
                     ((o = !0),
                         cancelAnimationFrame(t),
-                        e.removeEventListener("play", x),
-                        e.removeEventListener("pause", v),
-                        e.removeEventListener("ended", v),
+                        e.removeEventListener("play", v),
+                        e.removeEventListener("pause", x),
+                        e.removeEventListener("ended", x),
                         e.removeEventListener("seeked", c),
                         e.removeEventListener("loadeddata", c));
                 }

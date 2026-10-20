@@ -1,4 +1,4 @@
-t.exports = {
+_.exports = {
     S7: "nameRow__1526b",
     iA: "iconSlot__1526b",
     Vs: "tile__1526b",

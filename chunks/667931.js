@@ -10,9 +10,9 @@
     W7: () => O,
     _0: () => h,
     bM: () => o,
-    dj: () => l,
+    dj: () => i,
     hB: () => p,
-    lQ: () => i,
+    lQ: () => l,
     lp: () => c,
     nF: () => y,
     rQ: () => g,
@@ -64,10 +64,10 @@ let r = 221552 == n.j ? ["op", "model", "tool", "setup", "worktree", "sandbox", 
 function o(e) {
     return e.spans.find((e) => null == e.parent) ?? null;
 }
-function l(e) {
+function i(e) {
     return Math.max(1, ...e.spans.map((t) => A(e, t)));
 }
-function i(e) {
+function l(e) {
     return e.spans.some((e) => null != e.error) || o(e)?.attrs?.ok === !1 || c(e) ? "error" : a(e) ? "ok" : "running";
 }
 function a(e) {
@@ -83,7 +83,7 @@ function d(e) {
     }
     let r = o(e);
     if (null == r) return null;
-    let s = (function r(s, o, l, i) {
+    let s = (function r(s, o, i, l) {
             let a = s[0],
                 c = Math.min(...s.map((e) => e.start)),
                 d = Math.max(...s.map((t) => A(e, t))),
@@ -102,14 +102,14 @@ function d(e) {
                     running: null == a.end,
                     failed: null != a.error,
                     parallel: s.some((t) =>
-                        l.some((n) => {
-                            var r, o, l;
+                        i.some((n) => {
+                            var r, o, i;
                             return (
-                                !s.includes(n) && ((r = e), (o = t), (l = n), o.start < A(r, l) && l.start < A(r, o))
+                                !s.includes(n) && ((r = e), (o = t), (i = n), o.start < A(r, i) && i.start < A(r, o))
                             );
                         }),
                     ),
-                    outlivedParent: d > i,
+                    outlivedParent: d > l,
                     ...N(a),
                     significant: !1,
                     children: [],
@@ -129,10 +129,10 @@ function d(e) {
             }
             return ((h.descendants = h.children.reduce((e, t) => e + t.count + t.descendants, 0)), h);
         })([r], 0, [], 1 / 0),
-        l = 0.1 * (s.end - s.start);
+        i = 0.1 * (s.end - s.start);
     return (
         w(s, (e) => {
-            e.significant = T(e) >= l;
+            e.significant = T(e) >= i;
         }),
         s
     );
@@ -144,7 +144,7 @@ function u(e, t) {
             if ((n.push({ kind: "node", key: r.key, node: r }), t.collapsed.has(r.key))) return;
             let s = t.revealed.has(r.key),
                 o = [];
-            function l() {
+            function i() {
                 (1 === o.length
                     ? e(o[0])
                     : o.length > 1 &&
@@ -160,8 +160,8 @@ function u(e, t) {
                       }),
                     (o = []));
             }
-            for (let t of r.children) s || t.significant ? (l(), e(t)) : o.push(t);
-            l();
+            for (let t of r.children) s || t.significant ? (i(), e(t)) : o.push(t);
+            i();
         })(e),
         n
     );
@@ -290,7 +290,7 @@ function U(e, t, n, r) {
             })
             .sort((e, t) => e[0] - t[0]),
         o = 0,
-        l = -1 / 0;
-    for (let [e, t] of s) t <= l || ((o += t - Math.max(e, l)), (l = t));
+        i = -1 / 0;
+    for (let [e, t] of s) t <= i || ((o += t - Math.max(e, i)), (i = t));
     return o;
 }

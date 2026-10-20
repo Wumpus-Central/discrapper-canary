@@ -1,4 +1,4 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(17928),
     l = n(73153);
 let _ = new Set();
@@ -7,7 +7,7 @@ class u extends i.Ay.Store {
         return null != e && _.has(e);
     }
 }
-let a = new u(l.h, {
+let r = new u(l.h, {
     LOGOUT: function () {
         if (0 === _.size) return !1;
         _.clear();

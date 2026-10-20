@@ -9,9 +9,9 @@ let u = 8e5,
 function c(e, t) {
     let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: f = "anonymous" } = t,
         p = r.useRef(null),
-        [h, x] = r.useState(null),
-        v = r.useRef(c);
-    v.current = c;
+        [h, v] = r.useState(null),
+        x = r.useRef(c);
+    x.current = c;
     let E = r.useRef(d),
         g = r.useRef(m),
         b = r.useRef(f);
@@ -38,7 +38,7 @@ function c(e, t) {
                     let i = (a = new e({
                         backBufferLength: o,
                         maxBufferLength: s,
-                        startPosition: v.current,
+                        startPosition: x.current,
                         startFragPrefetch: !0,
                         startLevel: -1,
                         xhrSetup: (e) => {
@@ -57,7 +57,7 @@ function c(e, t) {
                             new Request(e.url, t)
                         ),
                     }));
-                    ((p.current = i), x(i), g.current?.(i));
+                    ((p.current = i), v(i), g.current?.(i));
                     let d = 0;
                     ((c = () => {
                         i.mainForwardBufferInfo?.len === 0 &&
@@ -92,7 +92,7 @@ function c(e, t) {
                                 n.fatal)
                             ) {
                                 if (d >= 3) {
-                                    (i.destroy(), (p.current = null), x(null), g.current?.(null));
+                                    (i.destroy(), (p.current = null), v(null), g.current?.(null));
                                     return;
                                 }
                                 switch ((d++, n.type)) {
@@ -115,7 +115,7 @@ function c(e, t) {
                     ((r = !0),
                         null != c && t.removeEventListener("seeking", c),
                         null != a &&
-                            (p.current === a && (a.destroy(), (p.current = null), x(null), g.current?.(null)),
+                            (p.current === a && (a.destroy(), (p.current = null), v(null), g.current?.(null)),
                             t.removeAttribute("src"),
                             t.load()));
                 }

@@ -1,4 +1,4 @@
-n.d(t, { WO: () => o, nU: () => l, ss: () => i });
+n.d(t, { WO: () => o, nU: () => i, ss: () => l });
 var r = n(73153),
     s = n(688954);
 let o = {
@@ -11,13 +11,13 @@ let o = {
         });
     },
 };
-async function l(e, t) {
+async function i(e, t) {
     let n = await (0, s.h)(e, "/agent/settings", { method: "PUT", json: t });
     if (!n.ok) throw Error(`settings submission failed (${n.status})`);
     let r = await n.json().catch(() => null);
     return { rebuildRequired: r?.rebuild_required === !0 };
 }
-function i(e) {
+function l(e) {
     (async function () {
         let t = await (0, s.h)(e, "/agent/rebuild", { method: "POST" });
         t.ok || console.warn("[conjure] settings rebuild request failed", e, t.status);

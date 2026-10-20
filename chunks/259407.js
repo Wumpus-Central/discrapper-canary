@@ -1,12 +1,12 @@
-t.d(l, { A: () => m, m: () => u });
+t.d(l, { A: () => m, m: () => d });
 var r,
-    s = t(477900),
-    i = t(582128),
+    i = t(477900),
+    s = t(582128),
     n = t(998218),
     a = t(652215),
     o = t(411517);
-let d = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-var u = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
+let u = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
+var d = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
 let h = {
     YouTube: {
         params: { autoplay: "1", auto_play: "1", pageType: a.NzX },
@@ -37,14 +37,14 @@ let h = {
 };
 function c(e) {
     let { allowFullScreen: l, ref: t, ...r } = e,
-        i = l ? `${d} allow-fullscreen` : d;
-    return (0, s.jsx)("iframe", {
+        s = l ? `${u} allow-fullscreen` : u;
+    return (0, i.jsx)("iframe", {
         ref: t,
         className: o.Qu,
         allow: l ? "autoplay; fullscreen" : "autoplay",
         frameBorder: 0,
         scrolling: "no",
-        sandbox: i,
+        sandbox: s,
         allowFullScreen: l,
         ...r,
     });
@@ -52,11 +52,11 @@ function c(e) {
 function m(e) {
     var l;
     let t,
-        { provider: r, src: a, autoMute: o, ...d } = e,
-        u = h[r],
-        m = i.useRef(null);
+        { provider: r, src: a, autoMute: o, ...u } = e,
+        d = h[r],
+        m = s.useRef(null);
     ((l = "TikTok" === r),
-        (t = i.useCallback(
+        (t = s.useCallback(
             (e) => {
                 e.data["x-tiktok-player"] &&
                     "https://www.tiktok.com" === e.origin &&
@@ -66,7 +66,7 @@ function m(e) {
             },
             [o, m],
         )),
-        i.useEffect(() => {
+        s.useEffect(() => {
             if (l) return (window.addEventListener("message", t), () => window.removeEventListener("message", t));
         }, [l, t]));
     let p = (function (e, l, t) {
@@ -85,6 +85,6 @@ function m(e) {
             }
         }
         return r.toString();
-    })(a, u, { autoMute: o });
-    return (0, s.jsx)(c, { ref: m, src: p, ...d });
+    })(a, d, { autoMute: o });
+    return (0, i.jsx)(c, { ref: m, src: p, ...u });
 }
