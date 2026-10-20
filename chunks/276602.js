@@ -939,6 +939,9 @@ function eX(e) {
     eB(["USER_NON_CHANNEL_ACK"], (e) => {
         ej({ type: "USER_NON_CHANNEL_ACK", ackType: e.ack_type, ackedId: e.entity_id });
     }),
+    eB(["CONJURING_PROJECT_CREATE_PROGRESS"], (e) => {
+        ej({ type: "CONJURE_PROJECT_CREATE_PROGRESS", nonce: e.nonce, projectId: e.project_id, wsTicket: e.ws_ticket });
+    }),
     eB(["CONJURING_TURN_SETTLED"], (e) => {
         ej({
             type: "CONJURE_TURN_SETTLED",

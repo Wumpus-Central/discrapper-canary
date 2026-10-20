@@ -47,7 +47,7 @@ async function f(e) {
         launchRequestId: g,
     });
     try {
-        let e = await (0, r.D)(t, (0, c.A)(n), n.type);
+        let e = await (0, r.D2)(t, (0, c.A)(n), n.type);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
@@ -125,7 +125,7 @@ async function y(e) {
     let { applicationId: n, surface: s } = t;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D)(n, (0, c.A)(s), s.type);
+        let t = await (0, r.D2)(n, (0, c.A)(s), s.type);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (t) {
         let e = await (0, a.f)(t, n);

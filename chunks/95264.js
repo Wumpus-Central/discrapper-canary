@@ -1,10 +1,12 @@
-e.d(t, { A: () => r });
-var d = e(477900);
-e(582128);
-var n = e(192308);
-function r(a, t) {
-    (0, n.openModalLazy)(async () => {
-        let { default: n } = await e.e("155793").then(e.bind(e, 500008));
-        return (e) => (0, d.jsx)(n, { ...e, project: a, currentGuildId: t });
+t.d(a, { A: () => i });
+var r = t(477900);
+t(582128);
+var d = t(192308);
+function i(e, a) {
+    (0, d.openModalLazy)(async () => {
+        let { default: d } = await Promise.all([t.e("79216"), t.e("916519"), t.e("716875"), t.e("139366")]).then(
+            t.bind(t, 931653),
+        );
+        return (t) => (0, r.jsx)(d, { ...t, project: e, currentGuildId: a });
     });
 }

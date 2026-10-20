@@ -1,26 +1,29 @@
-(n.d(t, { D: () => o, M: () => d }), n(323874), n(14289), n(35956));
+(n.d(t, { D2: () => o, M: () => d, WL: () => c }), n(323874), n(14289), n(35956));
 var i = n(636537),
     r = n(280450),
     a = n(956518),
     s = n(652215);
 let l = new Map();
 async function o(e, t, n) {
-    let i = c(e, t, n),
+    let i = u(e, t, n),
         r = l.get(i);
     if ((l.delete(i), null != r && r.expiresAt > Date.now())) {
         let e = await r.ticket.catch(() => null);
         if (null != e) return e;
     }
-    return u(e, t, n);
+    return _(e, t, n);
 }
 function d(e, t, n) {
-    let i = u(e, t, n);
-    (i.catch(() => void 0), l.set(c(e, t, n), { ticket: i, expiresAt: Date.now() + 6e4 }));
+    let i = _(e, t, n);
+    (i.catch(() => void 0), l.set(u(e, t, n), { ticket: i, expiresAt: Date.now() + 6e4 }));
 }
-function c(e, t, n) {
+function c(e, t, n, i) {
+    l.set(u(t, n, i), { ticket: Promise.resolve(e), expiresAt: Date.now() + 6e4 });
+}
+function u(e, t, n) {
     return [r.default.getId(), e, t ?? "", n ?? ""].join(":");
 }
-async function u(e, t, n) {
+async function _(e, t, n) {
     var r = e;
     let l = (0, a.Ay)(r);
     if (null != l)

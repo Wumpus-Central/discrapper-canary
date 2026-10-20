@@ -52,11 +52,17 @@ function U(e) {
                     case P.hE.COLLECT_AND_CLAIM: {
                         let e = o?.progress;
                         if (null == n || null == e) break;
-                        if (o?.rewardStatus === A.GM.IN_PROGRESS) {
-                            let t = Math.min(e.current + (0, v.oO)(n, u.collectionId), e.target);
-                            l(j.intl.formatToPlainString(j.t.G9koyR, { current: t, target: e.target }));
-                        } else l(void 0);
-                        (r(j.intl.formatToPlainString(j.t.LD7HFF, { collectibleTitle: (0, N.VG)(n) })), a(void 0));
+                        let t = Math.min(e.current + (0, v.oO)(n, u.collectionId), e.target);
+                        (o?.rewardStatus === A.GM.IN_PROGRESS
+                            ? l(j.intl.formatToPlainString(j.t.Jkxtln, { current: t, target: e.target }))
+                            : l(void 0),
+                            r(
+                                j.intl.formatToPlainString(
+                                    o?.rewardStatus === A.GM.IN_PROGRESS && t >= e.target ? j.t.OUIULI : j.t["8yvdPi"],
+                                    { collectibleTitle: (0, N.VG)(n) },
+                                ),
+                            ),
+                            a(void 0));
                         return;
                     }
                     case P.hE.TARGETED_OFFER: {

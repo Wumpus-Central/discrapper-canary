@@ -812,6 +812,8 @@
   "CHECKPOINT_RESET": "/checkpoint/reset",
   "QUESTS_CURRENT_QUESTS": "/quests/@me",
   "ORBS_ARCADE_GAMES": "/orbs-arcade/games/@me",
+  "ORBS_ARCADE_CLAIM_REWARDS": "/orbs-arcade/games/:param/rewards/claim",
+  "ORBS_ARCADE_RESET_GAME": "/orbs-arcade/games/:param/reset",
   "QUESTS_CLAIMED_QUESTS": "/quests/@me/claimed",
   "QUEST": "/quests/:param",
   "QUEST_PREVIEW": "/quests/:param/preview",

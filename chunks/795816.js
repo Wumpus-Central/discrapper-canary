@@ -131,7 +131,7 @@ async function ed(e) {
             inviterUserId: p,
             launchParams: { customId: I, referrerId: f, renderInFramePool: T },
         });
-        let e = await (0, Y.D)(i, t ?? void 0);
+        let e = await (0, Y.D2)(i, t ?? void 0);
         o.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: i,
@@ -460,7 +460,7 @@ function em() {
 async function eg(e, t) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: e, refreshing: !0 });
     try {
-        let n = await (0, Y.D)(e, t ?? void 0);
+        let n = await (0, Y.D2)(e, t ?? void 0);
         (o.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: e,
