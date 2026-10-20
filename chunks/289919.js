@@ -74,18 +74,19 @@ class m {
             }),
                 n(r));
         })
-            .then(
-                (e) =>
-                    new Promise(async (n, i) => {
-                        if (null != e.validation) {
-                            let r = await this.getJoi();
-                            (a()(null != e.validation, "command.validation must not be null"),
-                                r.validate(t.args, e.validation(r), { convert: !1 }, (t) => {
-                                    null != t ? i(new u.A({ errorCode: I.Lw6.INVALID_PAYLOAD }, t.message)) : n(e);
-                                }));
-                        } else n(e);
-                    }),
-            )
+            .then(async (e) => {
+                if (null != e.validation) {
+                    let n = await this.getJoi();
+                    a()(null != e.validation, "command.validation must not be null");
+                    let i = e.validation(n);
+                    await new Promise((e, r) => {
+                        n.validate(t.args, i, { convert: !1 }, (t) => {
+                            null != t ? r(new u.A({ errorCode: I.Lw6.INVALID_PAYLOAD }, t.message)) : e();
+                        });
+                    });
+                }
+                return e;
+            })
             .then(async (n) => {
                 let i = (0, E.mS)(e, n.scope);
                 return (

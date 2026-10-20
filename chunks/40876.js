@@ -632,7 +632,7 @@ let r = {
     },
     GameExitPromoManager: {
         actions: ["LOGOUT", "RUNNING_GAMES_CHANGE"],
-        inlineRequire: () => n(426515).A,
+        inlineRequire: () => n(261265).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     ClipDecisionEngineManager: {

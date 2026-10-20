@@ -1,23 +1,24 @@
 (n.d(t, {
-    $N: () => Q,
-    A5: () => X,
-    CG: () => Y,
-    CW: () => ee,
-    GO: () => ea,
-    K: () => er,
-    M7: () => et,
+    $N: () => et,
+    A5: () => Q,
+    CG: () => z,
+    CW: () => ei,
+    GO: () => eo,
+    K: () => el,
+    M7: () => er,
     Ni: () => R,
-    U1: () => K,
-    _b: () => J,
-    b8: () => H,
-    dm: () => es,
-    gA: () => $,
+    U1: () => X,
+    _b: () => en,
+    b8: () => Y,
+    dm: () => ed,
+    gA: () => q,
     hF: () => v,
-    iR: () => z,
-    l5: () => en,
-    tF: () => F,
-    tf: () => W,
-    xx: () => ei,
+    iR: () => Z,
+    l5: () => ea,
+    su: () => V,
+    tF: () => H,
+    tf: () => $,
+    xx: () => es,
 }),
     n(321073),
     n(134528),
@@ -93,7 +94,7 @@ async function M() {
                 }
                 if ((await (0, s.yy)(5e3 * Math.random()), null == m.Ay.getProject(e)))
                     try {
-                        await K(e);
+                        await X(e);
                     } catch (n) {
                         let t = (0, f.$k)(n);
                         (403 === t || 404 === t) && P(e);
@@ -108,65 +109,72 @@ let U = new i.A(3e4, 3e5),
     w = null,
     G = new Set(),
     x = new Set(),
-    k = !1;
-function F(e) {
-    let t = _.default.getCurrentUser()?.id ?? null;
-    for (let n of (t !== w && ((w = t), G.clear(), x.clear(), U.cancel()), e)) G.has(n) || x.add(n);
-    k || U.pending || B();
+    k = new Set(),
+    F = !1,
+    B = null;
+function V(e) {
+    return x.has(e) && null == m.Ay.getProject(e);
 }
-async function B() {
-    k = !0;
+function H(e) {
+    let t = _.default.getCurrentUser()?.id ?? null;
+    for (let n of (t !== w && ((w = t), G.clear(), x.clear(), k.clear(), U.cancel()), e))
+        (G.has(n) && !x.has(n) && B !== n && null == m.Ay.getProject(n) && G.delete(n), G.has(n) || k.add(n));
+    F || U.pending || j();
+}
+async function j() {
+    F = !0;
     let e = [];
-    for (let t of x) {
+    for (let t of k) {
         let n;
-        if ((x.delete(t), !G.has(t))) {
+        if ((k.delete(t), !G.has(t))) {
             if ((G.add(t), null == m.Ay.getProject(t))) {
+                B = t;
                 try {
-                    (await K(t), (n = 200));
+                    (await X(t), (n = 200));
                 } catch (e) {
                     n = (0, f.$k)(e);
                 }
-                200 !== n && (403 === n || 404 === n ? P(t) : (G.delete(t), e.push(t)));
+                ((B = null), 200 !== n && (403 === n || 404 === n ? (x.add(t), P(t)) : (G.delete(t), e.push(t))));
             }
         }
     }
-    ((k = !1), 0 === e.length)
+    ((F = !1), 0 === e.length)
         ? U.succeed()
         : U.fail(() => {
-              for (let t of e) x.add(t);
-              k || B();
+              for (let t of e) k.add(t);
+              F || j();
           });
 }
-let V = null;
-async function H() {
+let W = null;
+async function Y() {
     let e = _.default.getCurrentUser()?.id ?? null;
-    if (null == e || V === e || m.Ay.hasFetchedProjectLimit()) return;
-    V = e;
+    if (null == e || W === e || m.Ay.hasFetchedProjectLimit()) return;
+    W = e;
     let t = null;
     try {
         let { body: e } = await a.Bo.get({ url: N.Rsh.CONJURE_PROJECT_LIMIT, rejectWithError: !0 });
         t = e.max_projects;
     } catch {}
-    (V === e && (V = null),
+    (W === e && (W = null),
         _.default.getCurrentUser()?.id === e &&
             l.h.dispatch({ type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: t }));
 }
-let j = new Map();
-function W(e) {
+let K = new Map();
+function $(e) {
     null == (0, h.KY)(e) && (0, A.Et)(e);
     let t = _.default.getCurrentUser()?.id ?? null,
-        n = K(e, void 0, t);
-    (n.catch(() => void 0), j.set(e, { read: n, at: Date.now(), userId: t }), (0, p.K)(e));
+        n = X(e, void 0, t);
+    (n.catch(() => void 0), K.set(e, { read: n, at: Date.now(), userId: t }), (0, p.K)(e));
 }
-function Y(e) {
-    let t = j.get(e);
-    return (j.delete(e), null == t || t.userId !== (_.default.getCurrentUser()?.id ?? null))
+function z(e) {
+    let t = K.get(e);
+    return (K.delete(e), null == t || t.userId !== (_.default.getCurrentUser()?.id ?? null))
         ? null
         : Date.now() - t.at < 5e3
           ? t.read
           : null;
 }
-async function K(e, t, n) {
+async function X(e, t, n) {
     let i = await a.Bo.get({ url: N.Rsh.CONJURE_PROJECT(e), rejectWithError: !1, signal: t });
     return (
         (void 0 !== n && _.default.getCurrentUser()?.id !== n) ||
@@ -183,16 +191,16 @@ async function K(e, t, n) {
         i
     );
 }
-async function $(e) {
-    let { ws_ticket: t, remix_preview: n, ...i } = await q(e);
+async function q(e) {
+    let { ws_ticket: t, remix_preview: n, ...i } = await J(e);
     return (l.h.dispatch({ type: "CONJURE_PROJECT_CREATE_SUCCESS", project: i }), i.id);
 }
-async function z(e) {
-    let t = await q(e),
+async function Z(e) {
+    let t = await J(e),
         { ws_ticket: n, remix_preview: i, ...r } = t;
     return (l.h.dispatch({ type: "CONJURE_PROJECT_CREATE_SUCCESS", project: r }), t);
 }
-function X(e, t) {
+function Q(e, t) {
     (l.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: t.application, isHydrated: !0 }),
         null != t.proxy_ticket && (0, d.WL)(t.proxy_ticket, t.application.id, I.kG, r.U.APP_CHANNEL),
         O(e, {
@@ -212,7 +220,7 @@ function X(e, t) {
             previewAppChannels: t.preview_app_channels,
         }));
 }
-async function q(e) {
+async function J(e) {
     try {
         let { body: t } = await a.Bo.post({
             url: N.Rsh.CONJURE_PROJECTS,
@@ -224,32 +232,32 @@ async function q(e) {
         throw new f.DS((0, f.hj)(e), (0, f.$k)(e));
     }
 }
-async function Z(e, t) {
+async function ee(e, t) {
     let n = await a.Bo.patch({ url: N.Rsh.CONJURE_PROJECT(e), body: t, rejectWithError: !1 });
     return (l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
-async function Q(e) {
+async function et(e) {
     let { bot: t } = await (0, c.TA)(e);
     null != t && l.h.dispatch({ type: "USER_UPDATE", user: t });
 }
-async function J(e) {
+async function en(e) {
     let t = m.Ay.getProject(e)?.preview_application_id;
-    null != t && (await Q(t));
+    null != t && (await et(t));
 }
-async function ee(e, t) {
-    let n = await Z(e, t),
+async function ei(e, t) {
+    let n = await ee(e, t),
         i = n.body.preview_application_id;
     return (
         null != i &&
             (null != t.name || null != t.icon || null != t.description || "cover_image" in t) &&
-            Q(i).catch(() => {}),
+            et(i).catch(() => {}),
         n
     );
 }
-function et(e, t) {
-    return Z(e, t);
+function er(e, t) {
+    return ee(e, t);
 }
-async function en(e) {
+async function ea(e) {
     try {
         let { body: t } = await a.Bo.get({ url: N.Rsh.CONJURE_APPLICATION_CHANNELS(e), rejectWithError: !0 });
         return t;
@@ -257,7 +265,7 @@ async function en(e) {
         return [];
     }
 }
-async function ei(e) {
+async function es(e) {
     let t;
     l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_START", projectId: e });
     try {
@@ -267,13 +275,13 @@ async function ei(e) {
     }
     return (l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: e }), t);
 }
-function er(e, t) {
-    ei(e).then(() => void 0, t);
+function el(e, t) {
+    es(e).then(() => void 0, t);
 }
-function ea(e) {
+function eo(e) {
     let t = m.Ay.getProject(e);
-    null != t && (K(e).catch(() => {}), (0, o.eO)((0, S.Du)(t), { withMutualGuilds: !0 }).catch(() => {}));
+    null != t && (X(e).catch(() => {}), (0, o.eO)((0, S.Du)(t), { withMutualGuilds: !0 }).catch(() => {}));
 }
-function es(e, t) {
+function ed(e, t) {
     l.h.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId: e, projectId: t });
 }

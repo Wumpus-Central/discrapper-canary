@@ -42,18 +42,20 @@ class m extends I.A {
     };
 }
 let g = new m();
-function S(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return new Promise(async (r) => {
-        let a = c.A.getChannel(t);
-        if (null != a) return (N(a, n), r(a));
-        (await (0, o.A)([e]),
-            await i.A.joinGuild(e, { lurker: !0 }),
-            u.A.addConditionalChangeListener(() => {
-                let e = c.A.getChannel(t);
-                return null == e || (N(e), g.initialize(), r(e), !1);
-            }));
-    });
+async function S(e, t) {
+    var n;
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        a = c.A.getChannel(t);
+    if (null != a) return (N(a, r), a);
+    (await (0, o.A)([e]), await i.A.joinGuild(e, { lurker: !0 }));
+    let s = await ((n = t),
+    new Promise((e) => {
+        u.A.addConditionalChangeListener(() => {
+            let t = c.A.getChannel(n);
+            return null == t || (e(t), !1);
+        });
+    }));
+    return (N(s), g.initialize(), s);
 }
 function N(e) {
     var t;

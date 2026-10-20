@@ -30,14 +30,14 @@ var n = s(477900),
     T = s(688810),
     b = s(607470),
     k = s(421838),
-    P = s(891540),
-    L = s(738011),
+    L = s(891540),
+    P = s(738011),
     M = s(10392),
     B = s(82498),
     R = s(174459),
     G = s(486020),
-    w = s(935208),
-    V = s(498559),
+    V = s(935208),
+    w = s(498559),
     H = s(577718),
     W = s(652215),
     K = s(897513),
@@ -118,9 +118,9 @@ function Z(e) {
         } = e,
         A = (0, r.p)(),
         { analyticsLocations: g } = (0, T.Ay)(D.A.VIDEO_BACKGROUND_IMAGE_OPTION),
-        N = (0, i.bG)([P.A], () => null != m && P.A.hasHotspot(m)),
+        N = (0, i.bG)([L.A], () => null != m && L.A.hasHotspot(m)),
         I = l.useCallback((e) => {
-            if (!(0, L.u)(e)) throw e;
+            if (!(0, P.u)(e)) throw e;
         }, []),
         h = u
             ? (0, n.jsx)(b.A, { className: q.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: I })
@@ -169,7 +169,7 @@ function $() {
 }
 function X(e) {
     let { onClick: t, tooltipText: s, disabled: l = !1 } = e,
-        a = (0, i.bG)([P.A], () => P.A.hasHotspot(K._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        a = (0, i.bG)([L.A], () => L.A.hasHotspot(K._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function o() {
         k.sF(K._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
@@ -286,14 +286,14 @@ function es(e) {
             () =>
                 s.sort((e, t) =>
                     null == e.last_used || null == t.last_used
-                        ? w.default.compare(t.id, e.id)
+                        ? V.default.compare(t.id, e.id)
                         : new Date(t.last_used).getTime() - new Date(e.last_used).getTime(),
                 ),
             [s],
         ),
         d = c.length >= 25,
         { analyticsLocations: u } = (0, T.Ay)(D.A.VIDEO_BACKGROUND_OPTIONS),
-        m = Object.values((0, V.A)()).sort((e, t) => H.sl[e.id] - H.sl[t.id]);
+        m = Object.values((0, w.A)()).sort((e, t) => H.sl[e.id] - H.sl[t.id]);
     return (0, n.jsx)(T.f5, {
         value: u,
         children: (0, n.jsxs)("div", {
@@ -391,7 +391,16 @@ function el(e) {
         S = (0, r.p)(),
         U = { isVideoBackgroundSupported: h, onSelectBackgroundOption: E, selectedBackgroundOption: g },
         y = l.useRef(U);
-    function D(e) {
+    async function D(e, t) {
+        let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        try {
+            let n = await (0, u.F9)(e, H.yZ.BACKGROUND);
+            (T(n), (0, x.D1)(n, t.type === en.a.MP4, s), I(null));
+        } catch (e) {
+            I(e.message);
+        }
+    }
+    function T(e) {
         (E(e),
             (0, p.S1)(e, _, { location: S.location })
                 .then(() => I(null))
@@ -399,74 +408,61 @@ function el(e) {
                     (I(J.intl.string(J.t.ejrSLe)), (0, p.S1)(null, _, { location: S.location }));
                 }));
     }
-    return (
-        l.useEffect(() => {
-            y.current = U;
-        }),
-        l.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = y.current;
-            e ? (0, p.S1)(s, _, { track: !1 }).catch(() => t(null)) : null != s && t(null);
-        }, [_]),
-        h
-            ? (0, n.jsx)("div", {
-                  className: N,
-                  children: (0, n.jsx)(o.D, {
-                      label: J.intl.string(J.t.lZTUPs),
-                      errorMessage: f,
-                      children: (0, n.jsx)(es, {
-                          canUseCustomBackgrounds: O,
-                          customBackgroundOptions: C,
-                          selectedOption: g,
-                          onSelectOption: D,
-                          onUpsellClick: function () {
-                              (0, a.openModalLazy)(async () => {
-                                  let { default: e } = await Promise.all([
-                                      s.e("169727"),
-                                      s.e("392028"),
-                                      s.e("629972"),
-                                      s.e("334168"),
-                                      s.e("935205"),
-                                      s.e("454048"),
-                                      s.e("300699"),
-                                      s.e("349619"),
-                                      s.e("599666"),
-                                      s.e("398125"),
-                                      s.e("221825"),
-                                      s.e("930758"),
-                                      s.e("244560"),
-                                      s.e("901555"),
-                                      s.e("707826"),
-                                      s.e("776195"),
-                                      s.e("832817"),
-                                      s.e("561216"),
-                                      s.e("799657"),
-                                      s.e("562168"),
-                                      s.e("766901"),
-                                      s.e("840716"),
-                                  ]).then(s.bind(s, 629959));
-                                  return (s) =>
-                                      (0, n.jsx)(e, {
-                                          ...s,
-                                          onLearnMore: t,
-                                          analyticsSource: { ...S.location, object: W.ZSU.BUTTON_CTA },
-                                      });
-                              });
-                          },
-                          onAddBackgroundImage: function (e, t) {
-                              let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                              return new Promise(async (n) => {
-                                  try {
-                                      let n = await (0, u.F9)(e, H.yZ.BACKGROUND);
-                                      (D(n), (0, x.D1)(n, t.type === en.a.MP4, s), I(null));
-                                  } catch (e) {
-                                      I(e.message);
-                                  }
-                                  n();
-                              });
-                          },
-                      }),
+    return (l.useEffect(() => {
+        y.current = U;
+    }),
+    l.useEffect(() => {
+        let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = y.current;
+        e ? (0, p.S1)(s, _, { track: !1 }).catch(() => t(null)) : null != s && t(null);
+    }, [_]),
+    h)
+        ? (0, n.jsx)("div", {
+              className: N,
+              children: (0, n.jsx)(o.D, {
+                  label: J.intl.string(J.t.lZTUPs),
+                  errorMessage: f,
+                  children: (0, n.jsx)(es, {
+                      canUseCustomBackgrounds: O,
+                      customBackgroundOptions: C,
+                      selectedOption: g,
+                      onSelectOption: T,
+                      onUpsellClick: function () {
+                          (0, a.openModalLazy)(async () => {
+                              let { default: e } = await Promise.all([
+                                  s.e("169727"),
+                                  s.e("392028"),
+                                  s.e("629972"),
+                                  s.e("334168"),
+                                  s.e("935205"),
+                                  s.e("454048"),
+                                  s.e("300699"),
+                                  s.e("349619"),
+                                  s.e("599666"),
+                                  s.e("398125"),
+                                  s.e("221825"),
+                                  s.e("930758"),
+                                  s.e("244560"),
+                                  s.e("901555"),
+                                  s.e("707826"),
+                                  s.e("776195"),
+                                  s.e("832817"),
+                                  s.e("561216"),
+                                  s.e("799657"),
+                                  s.e("562168"),
+                                  s.e("766901"),
+                                  s.e("840716"),
+                              ]).then(s.bind(s, 629959));
+                              return (s) =>
+                                  (0, n.jsx)(e, {
+                                      ...s,
+                                      onLearnMore: t,
+                                      analyticsSource: { ...S.location, object: W.ZSU.BUTTON_CTA },
+                                  });
+                          });
+                      },
+                      onAddBackgroundImage: D,
                   }),
-              })
-            : null
-    );
+              }),
+          })
+        : null;
 }

@@ -1,0 +1,18 @@
+e.exports = {
+    Nr: "card_d6dae9",
+    rf: "body_d6dae9",
+    Kk: "icon_d6dae9",
+    Dp: "iconImage_d6dae9",
+    Pz: "iconPlaceholder_d6dae9",
+    zH: "details_d6dae9",
+    qr: "footer_d6dae9",
+    Pq: "trail_d6dae9",
+    ly: "trailLine_d6dae9",
+    f5: "trailTail_d6dae9",
+    Dg: "trailSparkle_d6dae9",
+    n4: "trailStar_d6dae9",
+    kK: "trailShimmer_d6dae9",
+    Iw: "trailStarPop_d6dae9",
+    OZ: "footerRow_d6dae9",
+    xL: "creator_d6dae9",
+};
