@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"0lYpuQ":["Niciun membru din public nu se potrive\u0219te cu \u201E",[1,"query"],"\u201D"],"Hn6jKn":["Nu s-a g\u0103sit nimeni"],"sFXd49":["Caut\u0103 \xeen public"],"C6rvri":["Public: ",[1,"filteredSize"]," din ",[1,"totalSize"]],"eo2IxJ":["Membrii publicului vor ap\u0103rea aici."],"ZSmz+r":["Ascunde publicul"],"Ds8IST":["Afi\u0219eaz\u0103 publicul"],"IQmRBE":["Afi\u0219eaz\u0103 publicul, ",[6,"count",{"one":[[7]," cerere"],"other":[[7]," cereri"]},0,"cardinal"]," de a vorbi \xeen a\u0219teptare"],"HUcd3y":["Permite cererile de a vorbi de la @everyone"],"P63Z/o":["Nimeni nu este \xeenc\u0103 pe podium"]}',
+);

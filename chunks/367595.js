@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"0lYpuQ":["Ei hakua \u201D",[1,"query"],"\u201D vastaavia yleis\xf6n j\xe4seni\xe4"],"Hn6jKn":["Ket\xe4\xe4n ei l\xf6ytynyt"],"sFXd49":["Etsi yleis\xf6st\xe4"],"C6rvri":["Yleis\xf6 \u2013 ",[1,"filteredSize"],"/",[1,"totalSize"]],"eo2IxJ":["Yleis\xf6n j\xe4senet n\xe4kyv\xe4t t\xe4\xe4ll\xe4."],"ZSmz+r":["Piilota yleis\xf6"],"Ds8IST":["N\xe4yt\xe4 yleis\xf6"],"IQmRBE":["N\xe4yt\xe4 yleis\xf6, ",[6,"count",{"one":[[7]," odottava puheenvuoropyynt\xf6"],"other":[[7]," odottavaa puheenvuoropyynt\xf6\xe4"]},0,"cardinal"]],"HUcd3y":["Salli puheenvuoropyynn\xf6t: @everyone"],"P63Z/o":["Kukaan ei viel\xe4 esit\xe4"]}',
+);

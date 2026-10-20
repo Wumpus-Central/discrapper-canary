@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"0lYpuQ":["Nema \u010Dlanova publike koji odgovaraju upitu \u201E",[1,"query"],"\u201C"],"Hn6jKn":["Nitko nije prona\u0111en"],"sFXd49":["Tra\u017Ei publiku"],"C6rvri":["Publika \u2013 ",[1,"filteredSize"]," od ",[1,"totalSize"]],"eo2IxJ":["\u010Clanovi publike ovdje \u0107e biti prikazani."],"ZSmz+r":["Sakrij publiku"],"Ds8IST":["Prika\u017Ei publiku"],"IQmRBE":["Prika\u017Ei publiku, na \u010Dekanju ",[6,"count",{"one":["je ",[7]," zahtjev"],"other":["je ",[7]," zahtjeva"]},0,"cardinal"]," za govorenje"],"HUcd3y":["Dopusti zahtjeve za govorenje od @everyone"],"P63Z/o":["Nitko jo\u0161 nije na pozornici"]}',
+);

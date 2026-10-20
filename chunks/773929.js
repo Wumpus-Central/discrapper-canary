@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"0lYpuQ":["A c\xe9lk\xf6z\xf6ns\xe9g egyetlen tagja sem felel meg a k\xf6vetkez\u0151nek: \u201E",[1,"query"],"\u201D"],"Hn6jKn":["Senki sem tal\xe1lhat\xf3"],"sFXd49":["C\xe9lk\xf6z\xf6ns\xe9g keres\xe9se"],"C6rvri":["C\xe9lk\xf6z\xf6ns\xe9g \u2013 ",[1,"filteredSize"]," / ",[1,"totalSize"]],"eo2IxJ":["A c\xe9lk\xf6z\xf6ns\xe9g tagjai itt fognak megjelenni."],"ZSmz+r":["C\xe9lk\xf6z\xf6ns\xe9g elrejt\xe9se"],"Ds8IST":["C\xe9lk\xf6z\xf6ns\xe9g megjelen\xedt\xe9se"],"IQmRBE":["C\xe9lk\xf6z\xf6ns\xe9g megjelen\xedt\xe9se; ",[2,"count"]," besz\xe9dk\xe9relem van f\xfcgg\u0151ben"],"HUcd3y":["Besz\xe9dk\xe9relmek enged\xe9lyez\xe9se mindenki (@everyone) r\xe9sz\xe9r\u0151l"],"P63Z/o":["M\xe9g senki nincs ezen a p\xf3diumon"]}',
+);

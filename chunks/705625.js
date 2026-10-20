@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"6bWeWP":["Finn ut mer"],"j4n5/K":["Finn ut mer"]}');
+e.exports = JSON.parse(
+    '{"qtKobx":["Sl\xe5 kloa i et gavekort. Rett i h\xe5nda p\xe5 ekte! Du finner dem i utvalgte forhandlere p\xe5 nett og i butikk."],"6bWeWP":["Mer info"],"w8gzZb":["Den perfekte gaven til @everyone"],"xYa9Y8":["Her finner du det"],"sJHQqC":["Kan brukes p\xe5 Nitro, butikkvarer og annet. Kan kj\xf8pes hos utvalgte forhandlere p\xe5 nett og i butikk."],"j4n5/K":["Mer info"],"tmst3F":["Den perfekte gaven til @everyone"],"9xo1g9":["Kan kj\xf8pes hos utvalgte forhandlere p\xe5 nett og i butikk"],"UwYHGm":["Mer info p\xe5 ",[8,"$link",["nettstedet v\xe5rt"],[[1,"websiteUrl"]]]],"ZuneBP":["L\xf8ses inn i ",[8,"$link",["faktureringsinnstillingene"],[[1,"onBillingSettingsClick"]]]],"I5UWh9":["Skaff deg Nitro, butikkvarer, serverbooster og annet"],"Ja5Q8Z":["Skaff deg et Discord-gavekort"]}',
+);

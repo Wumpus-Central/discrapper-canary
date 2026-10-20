@@ -1,1 +1,3 @@
-a.exports = JSON.parse('{"6bWeWP":["Saznaj vi\u0161e"],"j4n5/K":["Saznaj vi\u0161e"]}');
+i.exports = JSON.parse(
+    '{"qtKobx":["Zgrabi darovnu karticu. Doslovno! Sada je dostupna u odabranim online i fizi\u010Dkim trgovinama."],"6bWeWP":["Doznaj vi\u0161e"],"w8gzZb":["Savr\u0161en dar za @everyone"],"xYa9Y8":["Gdje kupiti"],"sJHQqC":["Potro\u0161i na Nitro, predmete u trgovini i jo\u0161 mnogo toga. Sada je dostupno u odabranim online i fizi\u010Dkim trgovinama."],"j4n5/K":["Doznaj vi\u0161e"],"tmst3F":["Savr\u0161en dar za @everyone"],"9xo1g9":["Dostupno u odabranim online i fizi\u010Dkim trgovinama"],"UwYHGm":["Doznaj vi\u0161e na ",[8,"$link",["na\u0161em web-mjestu"],[[1,"websiteUrl"]]]],"ZuneBP":["Iskoristi u ",[8,"$link",["postavkama naplate"],[[1,"onBillingSettingsClick"]]]],"I5UWh9":["Nabavi Nitro, predmete u trgovini, server boostove i jo\u0161 mnogo toga"],"Ja5Q8Z":["Zgrabi Discord darovnu karticu"]}',
+);
