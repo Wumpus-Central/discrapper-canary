@@ -45,6 +45,7 @@ let a = [
         i.F.ACTIVITIES_INVITES_WRITE,
         i.F.ACTIVITIES_READ,
         i.F.ACTIVITIES_WRITE,
+        i.F.ORBS_ARCADE_PLAY,
         i.F.RELATIONSHIPS_READ,
         i.F.RELATIONSHIPS_WRITE,
         i.F.VOICE,
@@ -133,6 +134,8 @@ function d(e, t) {
             return [r.intl.string(r.t["4+tSce"])];
         case i.F.ACTIVITIES_WRITE:
             return [r.intl.string(r.t["6OsWXX"])];
+        case i.F.ORBS_ARCADE_PLAY:
+            return [r.intl.string(r.t.pIam91)];
         case i.F.RELATIONSHIPS_READ:
             return [r.intl.string(r.t["521/7W"])];
         case i.F.RELATIONSHIPS_WRITE:
