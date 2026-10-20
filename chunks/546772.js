@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => w, EG: () => v, HJ: () => k, AV: () => C, KK: () => N, ZL: () => y });
+n.d(t, { gG: () => b, j_: () => w, EG: () => j, HJ: () => k, AV: () => N, KK: () => C, ZL: () => y });
 var l = n(582128),
     r = n(158390),
     a = n(73153),
@@ -157,7 +157,7 @@ function x(e) {
             if (e.socket !== i) return;
             if ((g(e), 4403 === t))
                 return void (function (e) {
-                    for (let t of (c.add(e), d.values())) t.projectId === e && (g(t), j(t), f(t, "connecting"));
+                    for (let t of (c.add(e), d.values())) t.projectId === e && (g(t), v(t), f(t, "connecting"));
                 })(e.projectId);
             let n = 4409 === t && e.control;
             (n && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
@@ -167,10 +167,10 @@ function x(e) {
     });
     ((e.socket = i), i.open());
 }
-function j(e) {
+function v(e) {
     ((e.control = !1), h(e, "off"));
 }
-function v(e, t, n) {
+function j(e, t, n) {
     let l = m(e, t),
         r = n && null != l.startedAt;
     l.control !== r && ((l.control = r), r ? h(l, "pending") : "denied" !== l.controlState && h(l, "off"), x(l));
@@ -201,7 +201,7 @@ function k(e, t) {
 function w(e, t, n) {
     return d.get(`${e}:${t}`)?.lastFrame === n;
 }
-function C(e, t) {
+function N(e, t) {
     let [n, r] = l.useState(() => d.get(`${e}:${t}`)?.restarts ?? 0);
     return (
         l.useEffect(() => {
@@ -216,7 +216,7 @@ function C(e, t) {
         n
     );
 }
-function N(e, t, n) {
+function C(e, t, n) {
     let { fps: r, onFrame: a, enabled: i = !0, width: s = 0 } = n,
         o = l.useCallback(
             (n) => {
@@ -252,7 +252,7 @@ function N(e, t, n) {
         let t = p(e.projectId, e.sessionId);
         if (t !== e.startedAt) {
             if (((e.startedAt = t), g(e), null == t)) {
-                j(e);
+                v(e);
                 continue;
             }
             for (let t of ((e.lastFrame = null), (e.restarts += 1), e.restartListeners)) t(e.restarts);

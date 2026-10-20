@@ -1,8 +1,8 @@
-n.d(t, { gk: () => l, zi: () => r });
+n.d(t, { gk: () => r, zi: () => l });
 var i = n(73153);
-function l(e, t) {
+function r(e, t) {
     i.h.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_STARTED", applicationId: e, accountLinkCallbacks: t });
 }
-function r(e) {
+function l(e) {
     i.h.dispatch({ type: "ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS", flows: e });
 }

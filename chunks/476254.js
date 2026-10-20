@@ -622,8 +622,8 @@ var e1 = n(191023),
     e2 = n(192308),
     e5 = n(28863),
     e8 = n(695366),
-    e3 = n(834730),
-    e6 = n(789645),
+    e6 = n(834730),
+    e3 = n(789645),
     e7 = n(565645),
     e4 = n(775602),
     e9 = n(826673),
@@ -678,13 +678,13 @@ function ts(e) {
               className: tr.g,
               children: [
                   (0, l.jsx)(e8.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: tr.QW }),
-                  (0, l.jsx)(e3.E, { variant: "text-sm/medium", color: "text-default", className: tr.L5, children: p }),
+                  (0, l.jsx)(e6.E, { variant: "text-sm/medium", color: "text-default", className: tr.L5, children: p }),
                   (0, l.jsx)(v.D, {
                       className: tr.b,
                       onClick: function () {
                           return (0, e9.Dr)(ew.M.SOUNDBOARD_KEYBIND_TIP);
                       },
-                      children: (0, l.jsx)(e6.P, { size: "xs", color: "currentColor" }),
+                      children: (0, l.jsx)(e3.P, { size: "xs", color: "currentColor" }),
                   }),
               ],
           });
@@ -735,7 +735,7 @@ function tf(e) {
                 onClick: () => (null != i ? i() : td(t.id)),
                 children: [
                     (0, l.jsx)(tu.j, { size: "sm", color: "currentColor" }),
-                    (0, l.jsx)(e3.E, {
+                    (0, l.jsx)(e6.E, {
                         variant: "text-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
                         children: eP.intl.string(eP.t["8Fu/S7"]),
@@ -1280,8 +1280,8 @@ function tC(e) {
             let e = (0, V.Dd)(ej.PremiumTypes.TIER_2);
             return eP.intl.format(eP.t["tw/SSq"], { nitroTierName: e, onClick: e5 });
         }, [e5]),
-        e3 = i.useCallback((e) => (e2(e, t) ? tx : 32), [t, e2]),
-        e6 = i.useCallback(
+        e6 = i.useCallback((e) => (e2(e, t) ? tx : 32), [t, e2]),
+        e3 = i.useCallback(
             (e) => {
                 let t = e === eF.length - 1;
                 return eH && t ? 70 : eK && e === eB ? 20 : 0;
@@ -1469,8 +1469,8 @@ function tC(e) {
                     renderCategoryList: tl,
                     renderHeaderAccessories: tn,
                     rowHeight: 48,
-                    sectionHeaderHeight: e3,
-                    sectionFooterHeight: e6,
+                    sectionHeaderHeight: e6,
+                    sectionFooterHeight: e3,
                     itemNodeWidth: 150,
                     gridNavigatorId: q,
                     renderEmptySearchState: ty,

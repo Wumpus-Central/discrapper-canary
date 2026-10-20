@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     qe: "frameOutline__23c32",
     Pw: "ink__23c32",
     Ji: "canvas__23c32",

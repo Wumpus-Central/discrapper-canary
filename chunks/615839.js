@@ -1,7 +1,7 @@
-n.d(t, { C7: () => o, MB: () => i, Us: () => u, nY: () => r });
+n.d(t, { C7: () => u, MB: () => r, Us: () => o, nY: () => i });
 var l = n(261425),
     a = n(105292);
-function i(e) {
+function r(e) {
     let t = Math.max(1, Math.round(e / 1e3));
     if (t < 60) return a.intl.formatToPlainString(l.default["Cn+5go"], { count: t });
     let n = Math.round(t / 60);
@@ -9,7 +9,7 @@ function i(e) {
         ? a.intl.formatToPlainString(l.default.lUCXD2, { count: n })
         : a.intl.formatToPlainString(l.default.Y1OsON, { hours: Math.floor(n / 60), minutes: n % 60 });
 }
-function r(e) {
+function i(e) {
     let t = Math.max(1, Math.round(e / 1e3));
     if (t < 60) return a.intl.formatToPlainString(l.default.yUXWd9, { count: t });
     let n = Math.round(t / 60);
@@ -21,15 +21,15 @@ function s(e) {
     let t = Number.isFinite(e) ? Math.max(0, Math.floor(e / 1e3)) : 0;
     return { hours: Math.floor(t / 3600), minutes: Math.floor(t / 60) % 60, seconds: t % 60 };
 }
-function o(e) {
-    let { hours: t, minutes: n, seconds: i } = s(e);
-    return t > 0
-        ? a.intl.formatToPlainString(l.default["rIbuN/"], { hours: t, minutes: n, seconds: i })
-        : n > 0
-          ? a.intl.formatToPlainString(l.default["/D79R7"], { minutes: n, seconds: i })
-          : a.intl.formatToPlainString(l.default.KrqS00, { seconds: i });
-}
 function u(e) {
+    let { hours: t, minutes: n, seconds: r } = s(e);
+    return t > 0
+        ? a.intl.formatToPlainString(l.default["rIbuN/"], { hours: t, minutes: n, seconds: r })
+        : n > 0
+          ? a.intl.formatToPlainString(l.default["/D79R7"], { minutes: n, seconds: r })
+          : a.intl.formatToPlainString(l.default.KrqS00, { seconds: r });
+}
+function o(e) {
     let { hours: t, minutes: n } = s(e);
     return t > 0
         ? a.intl.formatToPlainString(l.default.HEBIhT, { hours: t, minutes: n })

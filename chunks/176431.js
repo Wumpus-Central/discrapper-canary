@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     rs: "mainContainer__700c9",
     ZS: "imageContainer__700c9",
     Sl: "image__700c9",

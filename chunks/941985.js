@@ -1,11 +1,11 @@
-(n.d(e, { YN: () => d, f_: () => l, g7: () => a }), n(323874), n(14289), n(35956));
-var r = n(976860),
-    i = n(652215),
-    u = n(746080);
+(r.d(t, { YN: () => d, f_: () => l, g7: () => o }), r(323874), r(14289), r(35956));
+var n = r(976860),
+    i = r(652215),
+    u = r(746080);
 let l = "target";
-function a(t, e) {
-    (0, r.pX)(null == e ? i.BVt.CHANNEL(t, u.VV.CONJURE) : i.BVt.CHANNEL(t, u.VV.CONJURE, e));
+function o(e, t) {
+    (0, n.pX)(null == t ? i.BVt.CHANNEL(e, u.VV.CONJURE) : i.BVt.CHANNEL(e, u.VV.CONJURE, t));
 }
-function d(t) {
-    (0, r.pX)(i.BVt.CHANNEL(t, u.VV.CONJURE), { search: new URLSearchParams({ [l]: "user" }).toString() });
+function d(e) {
+    (0, n.pX)(i.BVt.CHANNEL(e, u.VV.CONJURE), { search: new URLSearchParams({ [l]: "user" }).toString() });
 }

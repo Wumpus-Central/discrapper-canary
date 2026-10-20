@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     XG: "scroller_b1bfc6",
     xY: "topNavSpacer_b1bfc6",
     uW: "section_b1bfc6",

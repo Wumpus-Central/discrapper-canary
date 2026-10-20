@@ -1,9 +1,9 @@
-n.d(t, { V: () => s });
-var r = n(582128);
-function s(e, t) {
-    let [n, s] = r.useState(null);
-    null != n && n === e && s(null);
+n.d(t, { V: () => r });
+var s = n(582128);
+function r(e, t) {
+    let [n, r] = s.useState(null);
+    null != n && n === e && r(null);
     let o = null != n && n !== (e ?? !1),
-        i = r.useCallback(() => !o || null == n || t(n), [o, n, t]);
-    return { checked: n ?? e ?? !1, changed: o, setChecked: s, save: i };
+        i = s.useCallback(() => !o || null == n || t(n), [o, n, t]);
+    return { checked: n ?? e ?? !1, changed: o, setChecked: r, save: i };
 }

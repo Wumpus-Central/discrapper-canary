@@ -83,7 +83,7 @@ function A(e) {
             onDescriptionChange: A,
             disabled: j = !1,
         } = e,
-        [S, w] = i.useState(null),
+        [w, S] = i.useState(null),
         { rowRef: C, fieldRef: k } =
             ((t = i.useRef(null)),
             (n = i.useRef(null)),
@@ -106,7 +106,7 @@ function A(e) {
                         ref: C,
                         className: x.S7,
                         children: [
-                            (0, l.jsx)(v, { iconURL: r, disabled: j, onChange: a, onError: w }),
+                            (0, l.jsx)(v, { iconURL: r, disabled: j, onChange: a, onError: S }),
                             (0, l.jsx)("div", {
                                 ref: k,
                                 className: x.yD,
@@ -122,12 +122,12 @@ function A(e) {
                             }),
                         ],
                     }),
-                    null != S
+                    null != w
                         ? (0, l.jsx)(c.E, {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               "aria-live": "polite",
-                              children: S,
+                              children: w,
                           })
                         : null,
                 ],

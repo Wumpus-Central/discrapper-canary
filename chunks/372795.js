@@ -21,8 +21,8 @@ function u(e) {
         } = e,
         g = r.useRef(null),
         x = r.useRef(null),
-        j = r.useRef(null),
-        [v, b] = r.useState(!1),
+        v = r.useRef(null),
+        [j, b] = r.useState(!1),
         y = (0, a.A)(),
         k = r.useCallback(
             async (e) => {
@@ -42,8 +42,8 @@ function u(e) {
             [t, n],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        C = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-        N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: C }),
+        N = null == m ? 0 : Math.round(m * Math.min(w, 2)),
+        C = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: N }),
         A = (0, i.AV)(t, n),
         S = r.useRef(A);
     (r.useEffect(() => {
@@ -53,8 +53,8 @@ function u(e) {
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [A]),
         r.useEffect(() => {
-            p?.(N, v);
-        }, [N, v, p]),
+            p?.(C, j);
+        }, [C, j, p]),
         r.useEffect(() => {
             c && g.current?.focus();
         }, [c]));
@@ -77,18 +77,18 @@ function u(e) {
             if (!c) return;
             if ("mouseMoved" === e) {
                 let e = I(l);
-                (null == j.current &&
+                (null == v.current &&
                     requestAnimationFrame(() => {
-                        let e = j.current;
-                        ((j.current = null),
+                        let e = v.current;
+                        ((v.current = null),
                             null != e && (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                     }),
-                    (j.current = { ...e, modifiers: o(l) }));
+                    (v.current = { ...e, modifiers: o(l) }));
                 return;
             }
             let r = s[l.button];
             if (null == r) return;
-            j.current = null;
+            v.current = null;
             let a = I(l);
             ("mousePressed" === e && l.currentTarget.focus(),
                 (0, i.ZL)(t, n, {

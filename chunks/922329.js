@@ -1,43 +1,43 @@
-n.d(t, { n: () => m, p: () => f });
+n.d(t, { n: () => f, p: () => m });
 var l = n(477900);
 n(582128);
 var a = n(503698),
-    i = n.n(a),
-    r = n(514042),
+    r = n.n(a),
+    i = n(514042),
     s = n(834730),
-    o = n(939249),
-    u = n(153171);
+    u = n(939249),
+    o = n(153171);
 function d(e) {
-    return i()(u._B, { [u.ND]: e });
+    return r()(o._B, { [o.ND]: e });
 }
 function c(e) {
-    let { name: t, thumbSrc: n = null, thumb: a, compact: i = !1, subText: o, children: d, onThumbError: c } = e;
+    let { name: t, thumbSrc: n = null, thumb: a, compact: r = !1, subText: u, children: d, onThumbError: c } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != a
                 ? a
                 : null != n
-                  ? (0, l.jsx)("img", { src: n, alt: "", className: u.gJ, onError: c })
-                  : (0, l.jsx)(r.FileIcon, { size: i ? "xs" : "sm", color: "currentColor" }),
+                  ? (0, l.jsx)("img", { src: n, alt: "", className: o.gJ, onError: c })
+                  : (0, l.jsx)(i.FileIcon, { size: r ? "xs" : "sm", color: "currentColor" }),
             (0, l.jsxs)("div", {
-                className: u.Wd,
+                className: o.Wd,
                 children: [
-                    (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: u.Rr, children: t }),
-                    o,
+                    (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: o.Rr, children: t }),
+                    u,
                 ],
             }),
             d,
         ],
     });
 }
-function f(e) {
+function m(e) {
     return (0, l.jsx)("div", { className: d(e.compact ?? !1), children: c(e) });
 }
-function m(e) {
-    let { name: t, thumbSrc: n, ariaLabel: a, onClick: r, onThumbError: s } = e;
-    return (0, l.jsx)(o.D, {
-        className: i()(d(!0), u.w8),
-        onClick: r,
+function f(e) {
+    let { name: t, thumbSrc: n, ariaLabel: a, onClick: i, onThumbError: s } = e;
+    return (0, l.jsx)(u.D, {
+        className: r()(d(!0), o.w8),
+        onClick: i,
         "aria-label": a,
         children: c({ name: t, thumbSrc: n, compact: !0, onThumbError: s }),
     });

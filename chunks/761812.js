@@ -1,1 +1,1 @@
-e.exports = { B: "smallCardItem__02912" };
+p.exports = { B: "smallCardItem__02912" };

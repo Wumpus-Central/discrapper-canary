@@ -1,44 +1,44 @@
-r.d(t, { Ay: () => f, X8: () => m });
-var n = r(477900),
-    i = r(582128),
-    l = r(17928),
-    a = r(245179),
-    o = r(260498),
-    s = r(246338),
-    u = r(659723),
-    c = r(261425),
-    h = r(105292),
-    d = r(831283);
-function f(e) {
+n.d(t, { Ay: () => d, X8: () => m });
+var r = n(477900),
+    i = n(582128),
+    l = n(17928),
+    a = n(245179),
+    o = n(260498),
+    u = n(246338),
+    s = n(659723),
+    h = n(261425),
+    c = n(105292),
+    f = n(831283);
+function d(e) {
     let { projectId: t } = e,
-        r = (0, l.bG)([a.A], () => null != t && a.A.isThinking(t), [t]),
-        [o, s] = i.useState(r ? t : null);
+        n = (0, l.bG)([a.A], () => null != t && a.A.isThinking(t), [t]),
+        [o, u] = i.useState(n ? t : null);
     return (
-        r && o !== t && s(t),
+        n && o !== t && u(t),
         i.useEffect(() => {
-            if (r || null == o) return;
-            let e = setTimeout(() => s(null), 300);
+            if (n || null == o) return;
+            let e = setTimeout(() => u(null), 300);
             return () => clearTimeout(e);
-        }, [r, o]),
-        (0, n.jsx)("span", {
-            className: d.W,
-            "data-page": r ? void 0 : "chat",
-            "data-thinking": r ? "" : void 0,
-            role: r ? "img" : void 0,
-            "aria-label": r ? h.intl.string(c.default["Y8pS+n"]) : void 0,
-            "aria-hidden": !r || void 0,
-            children: null == o ? null : (0, n.jsx)(u.A, { projectId: o, orientation: "right", state: "thinking" }),
+        }, [n, o]),
+        (0, r.jsx)("span", {
+            className: f.W,
+            "data-page": n ? void 0 : "chat",
+            "data-thinking": n ? "" : void 0,
+            role: n ? "img" : void 0,
+            "aria-label": n ? c.intl.string(h.default["Y8pS+n"]) : void 0,
+            "aria-hidden": !n || void 0,
+            children: null == o ? null : (0, r.jsx)(s.A, { projectId: o, orientation: "right", state: "thinking" }),
         })
     );
 }
 function m(e) {
     let { guildId: t } = e,
-        r = (0, l.bG)(
+        n = (0, l.bG)(
             [a.A, o.Ay],
             () =>
-                a.A.getActivityOrderedProjectIds().find((e) => (0, s.Ot)(o.Ay.getProject(e), t) && a.A.isThinking(e)) ??
+                a.A.getActivityOrderedProjectIds().find((e) => (0, u.Ot)(o.Ay.getProject(e), t) && a.A.isThinking(e)) ??
                 null,
             [t],
         );
-    return (0, n.jsx)(f, { projectId: r });
+    return (0, r.jsx)(d, { projectId: n });
 }

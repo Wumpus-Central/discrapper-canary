@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     x7: "chatLogList__0e5cb",
     q3: "chatRowContinuation__0e5cb",
     tC: "chat-row-enter__0e5cb",

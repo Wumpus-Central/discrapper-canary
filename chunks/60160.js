@@ -1,12 +1,12 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => m });
 var l = n(477900);
 n(582128);
 var a = n(834730),
-    i = n(59678);
-let r = /^(.*?)\s*\(([^()]+)\)$/,
+    r = n(59678);
+let i = /^(.*?)\s*\(([^()]+)\)$/,
     s = /^([\s\S]*?)\s\((exit \d+)\)$/,
-    o = /[[\]{}<>`\xab\xbb;$\\=]/,
-    u = /'[^']*'|"[^"]*"/,
+    u = /[[\]{}<>`\xab\xbb;$\\=]/,
+    o = /'[^']*'|"[^"]*"/,
     d = {
         "text-xs/normal": "text-xs/semibold",
         "text-sm/normal": "text-sm/semibold",
@@ -15,7 +15,7 @@ let r = /^(.*?)\s*\(([^()]+)\)$/,
 function c(e, t) {
     let n;
     return e.startsWith("$ ")
-        ? (0, l.jsxs)("span", { className: i.SS, children: [(0, l.jsx)("strong", { children: "$" }), e.slice(1)] })
+        ? (0, l.jsxs)("span", { className: r.SS, children: [(0, l.jsx)("strong", { children: "$" }), e.slice(1)] })
         : null == (n = /^\S+/.exec(e))
           ? e
           : (0, l.jsxs)(l.Fragment, {
@@ -25,11 +25,11 @@ function c(e, t) {
                 ],
             });
 }
-function f(e) {
+function m(e) {
     let { text: t, variant: n, prose: a } = e;
     if (!0 === a) return t;
-    let d = (t.startsWith("$ ") ? s : r).exec(t);
-    return null == d || o.test(d[2]) || u.test(d[2])
+    let d = (t.startsWith("$ ") ? s : i).exec(t);
+    return null == d || u.test(d[2]) || o.test(d[2])
         ? c(t, n)
         : (0, l.jsxs)(l.Fragment, {
               children: [
@@ -39,7 +39,7 @@ function f(e) {
                       let n;
                       return /^\s*$/.test(e)
                           ? e
-                          : ((n = e.startsWith("+") ? i.sI : e.startsWith("-") || e.startsWith("\u2212") ? i.eh : i.zH),
+                          : ((n = e.startsWith("+") ? r.sI : e.startsWith("-") || e.startsWith("\u2212") ? r.eh : r.zH),
                             (0, l.jsx)("span", { className: n, children: e }, t));
                   }),
               ],
