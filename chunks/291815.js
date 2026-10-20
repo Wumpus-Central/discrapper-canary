@@ -3,10 +3,10 @@
         default: () => ec,
         prepareTemplate: () => et,
         resetHistoryPaging: () => eo,
-        closeConnection: () => el,
+        closeConnection: () => ei,
         loadOlderHistory: () => es,
         stageModelSettings: () => ee,
-        closeAllConnections: () => ei,
+        closeAllConnections: () => el,
         ensureConnection: () => z,
         withdrawUserMessage: () => X,
         interruptTurn: () => Z,
@@ -18,8 +18,8 @@
 var r = n(158390),
     s = n(17928),
     o = n(73153),
-    l = n(195880),
-    i = n(287809),
+    i = n(195880),
+    l = n(287809),
     a = n(308081),
     c = n(245179),
     d = n(940874),
@@ -43,11 +43,11 @@ var r = n(158390),
 class C {
     socket = null;
     open(e) {
-        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: l } = e;
+        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: i } = e;
         this.close();
-        let i = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
+        let l = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
             a = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
-            c = new WebSocket(`${i}/agent/ws?${a}`);
+            c = new WebSocket(`${l}/agent/ws?${a}`);
         ((this.socket = c),
             c.addEventListener("message", (e) => {
                 let t;
@@ -62,7 +62,7 @@ class C {
                 }
             }),
             c.addEventListener("error", (e) => {
-                this.socket === c && l?.(e);
+                this.socket === c && i?.(e);
             }),
             c.addEventListener("close", () => {
                 this.socket === c && o?.();
@@ -248,6 +248,7 @@ let A = {
     publish_status: !0,
     reply: !0,
     restart_sandbox_result: !0,
+    reaction: !0,
     restore_proposal: !0,
     saving: !0,
     segment_settled: !0,
@@ -273,13 +274,13 @@ function D(e) {
 let L = new Map();
 function G(e, t) {
     let { content: n, nonce: r, attachments: s } = t;
-    (L.set(r, i.default.getCurrentUser()?.id),
+    (L.set(r, l.default.getCurrentUser()?.id),
         o.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
             id: D(r),
-            userId: i.default.getCurrentUser()?.id,
+            userId: l.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: s,
         }));
@@ -369,13 +370,13 @@ async function H(e, t) {
                                 degraded: !0 === r.degraded,
                             }),
                                 er.delete(t));
-                            let l = n.pendingEvents;
-                            for (let r of ((n.pendingEvents = []), I(t, "open"), l)) e(t, n, r);
+                            let i = n.pendingEvents;
+                            for (let r of ((n.pendingEvents = []), I(t, "open"), i)) e(t, n, r);
                             (F.get(t) ?? 0) > 0 && $(t, n);
-                            let i = n.pendingModelSettings;
-                            if (((n.pendingModelSettings = null), null != i))
+                            let l = n.pendingModelSettings;
+                            if (((n.pendingModelSettings = null), null != l))
                                 try {
-                                    n.ws.sendModelSettings(i);
+                                    n.ws.sendModelSettings(l);
                                 } catch (e) {
                                     console.error("[conjure] staged model settings send failed", e);
                                 }
@@ -404,9 +405,9 @@ async function H(e, t) {
                             return;
                         }
                         case "user_message":
-                            let l, i, a;
-                            ((i = (l = null != r.nonce && L.has(r.nonce)) && null != r.nonce ? L.get(r.nonce) : void 0),
-                                (a = l && (null == i || null == r.user_id || i === r.user_id)) &&
+                            let i, l, a;
+                            ((l = (i = null != r.nonce && L.has(r.nonce)) && null != r.nonce ? L.get(r.nonce) : void 0),
+                                (a = i && (null == l || null == r.user_id || l === r.user_id)) &&
                                     null != r.nonce &&
                                     L.delete(r.nonce),
                                 o.h.dispatch({
@@ -561,14 +562,14 @@ function Q(e, t, n) {
             templateId: r,
             remix: s,
             clarificationAnswers: o,
-            nonce: i,
+            nonce: l,
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         a = t.trim(),
         c = null != n && n.length > 0 ? n : void 0;
     if ("" === a && null == c) return !1;
     let u = {
             content: a,
-            nonce: i ?? (0, l.m)(),
+            nonce: l ?? (0, i.m)(),
             attachments: c,
             templateId: r,
             remix: s,
@@ -591,11 +592,11 @@ function Q(e, t, n) {
     } catch (n) {
         console.error("[conjure] send failed", n);
         let t = n instanceof Error ? n.message : "send failed";
-        return (null == i && (0, d.Gu)(e, t), !1);
+        return (null == l && (0, d.Gu)(e, t), !1);
     }
 }
 function V(e, t, n) {
-    let r = (0, l.m)();
+    let r = (0, i.m)();
     return (
         G(e, { content: t.trim(), nonce: r, attachments: null != n && n.length > 0 ? n : void 0 }),
         { nonce: r, messageKey: D(r) }
@@ -646,16 +647,16 @@ function es(e) {
 function eo(e) {
     er.delete(e);
 }
-function el(e) {
+function ei(e) {
     Y(e);
 }
-function ei() {
+function el() {
     for (let e of Array.from(P.keys())) Y(e);
     (L.clear(), (0, U.j_)());
 }
 class ea extends s.Ay.Store {
     initialize() {
-        this.waitFor(c.A, p.A, m.Ay, i.default);
+        this.waitFor(c.A, p.A, m.Ay, l.default);
     }
     getConnState(e) {
         return J.get(e) ?? "connecting";
@@ -678,6 +679,6 @@ let ec = new ea(o.h, {
     },
     LOGOUT: function () {
         if (((0, U.j_)(), 0 === P.size)) return !1;
-        ei();
+        el();
     },
 });

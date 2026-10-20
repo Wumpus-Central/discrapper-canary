@@ -1,16 +1,17 @@
-n.d(t, { Gu: () => _, NW: () => s, OA: () => h, Un: () => u, tp: () => f });
+n.d(t, { Gu: () => h, NW: () => u, OA: () => C, Un: () => d, tp: () => f });
 var r = n(73153),
     a = n(975189),
     i = n(371169),
     o = n(385081),
-    l = n(261425),
-    c = n(105292);
-let s = {
+    l = n(187308),
+    c = n(261425),
+    s = n(105292);
+let u = {
         message_disposition(e, t) {
             var n;
             let { projectId: a } = t;
             ((n = e.disposition),
-                Object.prototype.hasOwnProperty.call(g, n) &&
+                Object.prototype.hasOwnProperty.call(A, n) &&
                     r.h.dispatch({
                         type: "CONJURE_CHAT_MESSAGE_DISPOSITION",
                         projectId: a,
@@ -23,11 +24,11 @@ let s = {
             let { projectId: n } = t;
             r.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: n, id: e.id });
         },
-        app_removed: y,
-        bot_removed: y,
-        preview_bot_removed: y,
-        app_channel_deleted: y,
-        remixed: y,
+        app_removed: T,
+        bot_removed: T,
+        preview_bot_removed: T,
+        app_channel_deleted: T,
+        remixed: T,
         side_reply(e, t) {
             let { projectId: n } = t;
             r.h.dispatch({
@@ -57,7 +58,14 @@ let s = {
             r.h.dispatch({ type: "CONJURE_CHAT_PROVISIONAL_TODO", projectId: n, turnId: e.turn_id, text: e.text });
         },
     },
-    u = {
+    d = {
+        reaction(e, t) {
+            let { projectId: n } = t,
+                a = (0, l.xN)(e);
+            null != e.message_id &&
+                null != a &&
+                r.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_REACTION", projectId: n, id: e.message_id, reaction: a });
+        },
         reply(e, t) {
             let { projectId: n } = t,
                 a = e.message ?? "";
@@ -68,7 +76,7 @@ let s = {
                       turnId: e.turn_id,
                       patch: { content: a, kind: "message" },
                   })
-                : _(n, c.intl.string(l.default["913RMa"]), p);
+                : h(n, s.intl.string(c.default["913RMa"]), _);
         },
         thinking_lifecycle(e, t) {
             let { projectId: n } = t,
@@ -102,7 +110,7 @@ let s = {
                     turnId: e.turn_id,
                     patch: { todos: a },
                 }),
-                h(n, e));
+                C(n, e));
         },
         plan_proposed(e, t) {
             let { projectId: n } = t;
@@ -113,7 +121,7 @@ let s = {
                       turnId: e.turn_id,
                       patch: { proposal: e.proposal, kind: "proposal" },
                   })
-                : _(n, c.intl.string(l.default["0+RUWx"]), p);
+                : h(n, s.intl.string(c.default["0+RUWx"]), _);
         },
         ideas(e, t) {
             let { projectId: n } = t;
@@ -223,14 +231,14 @@ let s = {
                 null != e.project &&
                 r.h.dispatch({ type: "CONJURE_CHAT_USAGE_SET", projectId: n, turn: e.turn, project: e.project });
         },
-        build_error: C,
-        healthcheck_failed: C,
-        error: C,
+        build_error: y,
+        healthcheck_failed: y,
+        error: y,
     },
-    d = { location: "connection", code: o.xf.SEND_FAILED },
-    p = { location: "agent", code: o.xf.AGENT_ERROR };
-function _(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d;
+    p = { location: "connection", code: o.xf.SEND_FAILED },
+    _ = { location: "agent", code: o.xf.AGENT_ERROR };
+function h(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p;
     (r.h.dispatch({
         type: "CONJURE_CHAT_STEP_APPEND",
         projectId: e,
@@ -238,7 +246,7 @@ function _(e, t) {
     }),
         (0, o.Hy)(e, { ...n, message: t }));
 }
-function h(e, t) {
+function C(e, t) {
     r.h.dispatch({ type: "CONJURE_CHAT_STEP_APPEND", projectId: e, turnId: t.turn_id, step: t });
 }
 function f(e, t, n) {
@@ -250,24 +258,24 @@ function f(e, t, n) {
         console.error(`[conjure] ${n} queued message failed`, e);
     }
 }
-function C(e, t) {
+function y(e, t) {
     let { projectId: n } = t;
-    (h(n, e),
+    (C(n, e),
         (0, o.Hy)(n, {
-            ...T[e.kind],
+            ...g[e.kind],
             message: e.message,
             details: "build_error" === e.kind ? e.stderr_tail : void 0,
             turnId: e.turn_id,
         }));
 }
-function y(e, t) {
+function T(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
         "app_channel_deleted" !== e.type && "remixed" !== e.type && (0, i.GO)(n));
 }
-let T = {
+let g = {
         build_error: { location: "build", code: o.xf.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: o.xf.HEALTHCHECK_FAILED },
         error: { location: "agent", code: o.xf.AGENT_ERROR },
     },
-    g = { steered: !0, queued: !0, restarting: !0, answered: !0 };
+    A = { steered: !0, queued: !0, restarting: !0, answered: !0 };
