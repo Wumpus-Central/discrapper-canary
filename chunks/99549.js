@@ -42,6 +42,14 @@ let d = {
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
         subject: o(e.args.preview_title) ?? o(e.args.content),
     }),
+    [l.e$_.REQUEST_DEVICE_PERMISSIONS]: (e) => {
+        let t = Array.isArray(e.args.permissions) ? e.args.permissions.filter((e) => "string" == typeof e) : [];
+        return {
+            result: { permissions: t.map((e) => ({ permission: e, state: "denied" })) },
+            answered: "denied; an agent may not grant device access",
+            options: t,
+        };
+    },
     [l.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
     [l.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
     [l.e$_.OPEN_GAME_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),

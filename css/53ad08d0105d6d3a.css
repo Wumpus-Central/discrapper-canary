@@ -1,0 +1,90 @@
+.nameRow__1526b {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-16)
+}
+
+.iconSlot__1526b {
+    flex-shrink: 0
+}
+
+.iconSlot__1526b,
+.tile__1526b {
+    position: relative
+}
+
+.tile__1526b {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    height: var(--custom-app-icon-size, 64px);
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+    width: var(--custom-app-icon-size, 64px)
+}
+
+.tile__1526b:disabled {
+    cursor: default
+}
+
+.tileEmpty__1526b {
+    border-color: var(--border-strong);
+    border-style: dashed
+}
+
+.tileEmpty__1526b:focus-visible,
+.tileEmpty__1526b:hover:not(:disabled) {
+    background-color: var(--background-mod-normal);
+    border-color: var(--text-brand);
+    color: var(--text-strong)
+}
+
+.tileImage__1526b {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.tileOverlay__1526b {
+    align-items: center;
+    background-color: var(--opacity-black-40);
+    color: var(--white);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .15s ease
+}
+
+.tile__1526b:focus-visible .tileOverlay__1526b,
+.tile__1526b:hover:not(:disabled) .tileOverlay__1526b {
+    opacity: 1
+}
+
+.nameField__1526b {
+    flex: 1;
+    min-width: 0;
+    position: relative
+}
+
+.fileInput__1526b {
+    display: none
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .tile__1526b,
+    .tileOverlay__1526b {
+        transition: none
+    }
+}
+
+/*# sourceMappingURL=53ad08d0105d6d3a.css.map*/

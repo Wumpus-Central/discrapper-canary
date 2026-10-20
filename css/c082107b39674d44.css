@@ -1,3 +1,101 @@
+.list__1760d {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: var(--space-12)
+}
+
+.list__1760d,
+.row__1760d {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.row__1760d {
+    align-items: center;
+    color: var(--text-subtle)
+}
+
+.attachmentChip__6fe49 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--icon-muted);
+    display: flex;
+    gap: var(--space-8);
+    max-width: 100%;
+    padding: var(--space-4) var(--space-8)
+}
+
+.attachmentThumb__6fe49 {
+    border-radius: var(--radius-xs);
+    flex: 0 0 auto;
+    height: var(--space-32);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--space-32)
+}
+
+.attachmentChipBody__6fe49 {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.attachmentName__6fe49 {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.attachmentChipCompact__6fe49 {
+    gap: var(--space-4)
+}
+
+.attachmentChipButton__6fe49 {
+    cursor: pointer;
+    text-align: start;
+    transition: background-color .2s ease, border-color .2s ease
+}
+
+.attachmentChipButton__6fe49:hover {
+    background: var(--background-mod-normal);
+    border-color: var(--border-normal)
+}
+
+.attachmentChipCompact__6fe49 .attachmentThumb__6fe49 {
+    height: var(--space-20);
+    width: var(--space-20)
+}
+
+.attachmentSpinner__6fe49 {
+    flex: 0 0 auto;
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.attachmentRemoveButton__6fe49 {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-round);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--space-4)
+}
+
+.attachmentRemoveButton__6fe49:hover {
+    background: var(--interactive-background-hover);
+    color: var(--icon-default)
+}
+
 .bar_b5b15b {
     align-items: flex-start;
     background: var(--background-surface-highest);
@@ -121,4 +219,4 @@
     padding-block-end: var(--space-16)
 }
 
-/*# sourceMappingURL=d2b2f07698d2ca27.css.map*/
+/*# sourceMappingURL=c082107b39674d44.css.map*/

@@ -1,9 +1,10 @@
-n.d(t, { $C: () => u, BC: () => g, BG: () => p, Mz: () => _, TV: () => d, dx: () => c, qy: () => i, rS: () => a });
+n.d(t, { $C: () => p, BC: () => S, BG: () => h, Mz: () => f, TV: () => u, dx: () => d, qy: () => a, rS: () => c });
 var r = n(73153),
     s = n(975189),
-    o = n(664619),
+    o = n(276983),
+    i = n(664619),
     l = n(722701);
-let i = {
+let a = {
         publish_notice(e, t) {
             let { projectId: n } = t;
             r.h.dispatch({
@@ -16,7 +17,7 @@ let i = {
             });
         },
     },
-    a = {
+    c = {
         publish_cta(e, t) {
             let { projectId: n } = t;
             null != e.publish_cta &&
@@ -26,7 +27,7 @@ let i = {
                     turnId: e.turn_id,
                     patch: {
                         publishCta: {
-                            surface: E(e.publish_cta.surface),
+                            surface: m(e.publish_cta.surface),
                             reason: "new_ui" === e.publish_cta.reason ? "new_ui" : "first_publish",
                         },
                     },
@@ -39,9 +40,12 @@ let i = {
                 projectId: n,
                 published: !0 === e.published,
                 hasUnpublishedChanges: !0 === e.has_unpublished_changes,
-                surface: E(e.surface),
+                surface: m(e.surface),
                 previewAppChannels: Array.isArray(e.preview_app_channels)
                     ? e.preview_app_channels.filter((e) => "string" == typeof e)
+                    : [],
+                previewDevicePermissions: Array.isArray(e.preview_device_permissions)
+                    ? e.preview_device_permissions.filter(o.de)
                     : [],
                 publishedRevision: "number" == typeof e.published_revision ? e.published_revision : null,
                 publishedAt: "string" == typeof e.published_at ? e.published_at : null,
@@ -68,9 +72,9 @@ let i = {
         },
         publish_result(e, t) {
             let { projectId: n } = t,
-                s = h.get(n);
-            if ((h.delete(n), null != s && (clearTimeout(s.timeout), s.resolve(e)), !0 !== e.ok))
-                (0, o.Is)(n, e.error ?? "publish_result not ok", !1);
+                s = _.get(n);
+            if ((_.delete(n), null != s && (clearTimeout(s.timeout), s.resolve(e)), !0 !== e.ok))
+                (0, i.Is)(n, e.error ?? "publish_result not ok", !1);
             else {
                 let e = l.A.getPublishStatus(n);
                 null != e &&
@@ -81,6 +85,7 @@ let i = {
                         hasUnpublishedChanges: !1,
                         surface: e.surface,
                         previewAppChannels: e.previewAppChannels,
+                        previewDevicePermissions: e.previewDevicePermissions,
                         publishedRevision: e.publishedRevision,
                         publishedAt: e.publishedAt,
                     });
@@ -88,56 +93,56 @@ let i = {
         },
         patch_notes_draft(e, t) {
             let { projectId: n } = t,
-                r = f.get(n);
-            null != r && r.nonce === e.nonce && (f.delete(n), clearTimeout(r.timeout), r.resolve(e));
+                r = g.get(n);
+            null != r && r.nonce === e.nonce && (g.delete(n), clearTimeout(r.timeout), r.resolve(e));
         },
     };
-function c(e) {
+function d(e) {
     (0, s.KY)(e)?.sendPreparePublish();
 }
-function d(e) {
+function u(e) {
     let t = !1;
     return new Promise((n, o) => {
-        let l = (0, s.KY)(e);
-        if (null == l) return void o(Error("Not connected"));
-        if (h.has(e)) return void o(Error("Publish already in flight"));
-        let i = setTimeout(() => {
-            _(e, "Publish timed out");
+        let i = (0, s.KY)(e);
+        if (null == i) return void o(Error("Not connected"));
+        if (_.has(e)) return void o(Error("Publish already in flight"));
+        let l = setTimeout(() => {
+            f(e, "Publish timed out");
         }, 9e5);
-        (h.set(e, { resolve: n, reject: o, timeout: i }),
+        (_.set(e, { resolve: n, reject: o, timeout: l }),
             (t = !0),
             r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
         try {
-            l.sendPublish();
+            i.sendPublish();
         } catch (t) {
-            (h.delete(e), clearTimeout(i), o(t instanceof Error ? t : Error("publish send failed")));
+            (_.delete(e), clearTimeout(l), o(t instanceof Error ? t : Error("publish send failed")));
         }
     })
         .catch((t) => {
-            throw ((0, o.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
+            throw ((0, i.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
         })
         .finally(() => {
             t && r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
-function u(e) {
+function p(e) {
     return new Promise((t, n) => {
         let r = (0, s.KY)(e);
         if (null == r) return void n(Error("Not connected"));
-        g(e, "Superseded by a newer draft request");
+        S(e, "Superseded by a newer draft request");
         let o = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-            l = setTimeout(() => {
-                g(e, "Draft timed out");
+            i = setTimeout(() => {
+                S(e, "Draft timed out");
             }, 45e3);
-        f.set(e, { resolve: t, reject: n, timeout: l, nonce: o });
+        g.set(e, { resolve: t, reject: n, timeout: i, nonce: o });
         try {
             r.sendDraftPatchNotes(o);
         } catch (t) {
-            (f.delete(e), clearTimeout(l), n(t instanceof Error ? t : Error("draft send failed")));
+            (g.delete(e), clearTimeout(i), n(t instanceof Error ? t : Error("draft send failed")));
         }
     });
 }
-function p(e, t, n) {
+function h(e, t, n) {
     r.h.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId: e, sent: t });
     try {
         let r = (0, s.KY)(e);
@@ -147,17 +152,17 @@ function p(e, t, n) {
         console.warn("[conjure] could not record sent patch notes", e, t);
     }
 }
-let h = new Map();
-function _(e, t) {
-    let n = h.get(e);
-    null != n && (h.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+let _ = new Map();
+function f(e, t) {
+    let n = _.get(e);
+    null != n && (_.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let f = new Map();
-function g(e, t) {
-    let n = f.get(e);
-    null != n && (f.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+let g = new Map();
+function S(e, t) {
+    let n = g.get(e);
+    null != n && (g.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let S = new Set(["activity", "automod", "widget", "bot"]);
-function E(e) {
-    return null != e && S.has(e) ? e : null;
+let E = new Set(["activity", "automod", "widget", "bot"]);
+function m(e) {
+    return null != e && E.has(e) ? e : null;
 }
