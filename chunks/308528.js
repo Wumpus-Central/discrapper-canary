@@ -28,20 +28,21 @@ let N = {
                 location: a,
                 onBeforeTransition: s,
                 navigateToChannel: l = !0,
+                navigationReplace: o = !0,
             } = e,
-            o = this._getRecipients(t);
-        function d(e) {
+            d = this._getRecipients(t);
+        function c(e) {
             n && T.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
         }
-        if (1 === o.length) {
-            let [e] = o,
-                t = this._openCachedDMChannel(e, s, l);
-            if (null != t) return (d(t), Promise.resolve(t.id));
+        if (1 === d.length) {
+            let [e] = d,
+                t = this._openCachedDMChannel(e, s, l, o);
+            if (null != t) return (c(t), Promise.resolve(t.id));
         }
         try {
             let e = await i.Bo.post({
                 url: g.Rsh.USER_CHANNELS,
-                body: { recipients: o },
+                body: { recipients: d },
                 context: { location: a },
                 oldFormErrors: !0,
                 retries: 3,
@@ -49,8 +50,8 @@ let N = {
             });
             if (l) {
                 s?.();
-                let t = this._openPrivateChannel(e.body);
-                d(t);
+                let t = this._openPrivateChannel(e.body, o);
+                c(t);
             }
             return e.body.id;
         } catch (e) {
@@ -75,16 +76,17 @@ let N = {
     },
     _openCachedDMChannel(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            i = h.A.getDMFromUserId(e),
-            r = null != i ? h.A.getChannel(i) : null;
-        return null == r
+            i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+            r = h.A.getDMFromUserId(e),
+            a = null != r ? h.A.getChannel(r) : null;
+        return null == a
             ? null
             : (n &&
                   (t?.(),
                   null != (0, c.Y)()
-                      ? (0, E.iN)(r.id, { navigationReplace: !0 })
-                      : m.default.selectPrivateChannel(r.id)),
-              r);
+                      ? (0, E.iN)(a.id, { navigationReplace: i })
+                      : m.default.selectPrivateChannel(a.id)),
+              a);
     },
     async ensurePrivateChannel(e) {
         let t = this._getRecipients(e),
@@ -108,11 +110,12 @@ let N = {
     },
     _getRecipients: (e) => (null != e ? (Array.isArray(e) ? e : [e]) : []),
     _openPrivateChannel(e) {
-        let t = (0, A.UE)(e);
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            n = (0, A.UE)(e);
         return (
-            a.h.dispatch({ type: "CHANNEL_CREATE", channel: t }),
-            null != (0, c.Y)() ? (0, E.iN)(t.id, { navigationReplace: !0 }) : m.default.selectPrivateChannel(t.id),
-            t
+            a.h.dispatch({ type: "CHANNEL_CREATE", channel: n }),
+            null != (0, c.Y)() ? (0, E.iN)(n.id, { navigationReplace: t }) : m.default.selectPrivateChannel(n.id),
+            n
         );
     },
     closePrivateChannel(e) {
