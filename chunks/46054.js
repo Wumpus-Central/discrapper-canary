@@ -1,4 +1,4 @@
-r.d(n, { A: () => W });
+r.d(n, { A: () => $ });
 var t = r(435558),
     o = r.n(t),
     a = r(807081),
@@ -17,9 +17,10 @@ function A(e, n) {
     );
 }
 let d = { enableBuildOverrides: !1, enableEmojiClick: !0 },
-    y = o().once(() => A(i.Ay.RULES, [(0, l.Ay)({ enableBuildOverrides: !0 })])),
-    h = o().once(() => o().omit(A(i.Ay.RULES, [(0, l.Ay)(d)]), "paragraph", "newline"));
-function f() {
+    h = o().once(() => A(i.Ay.RULES, [(0, l.Ay)({ enableBuildOverrides: !0 })])),
+    y = o().once(() => (0, u.A)([h(), (0, l.r3)()])),
+    f = o().once(() => o().omit(A(i.Ay.RULES, [(0, l.Ay)(d)]), "paragraph", "newline"));
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, l.Ay)({
         ...d,
@@ -29,29 +30,29 @@ function f() {
         ...e,
     });
 }
-let p = o().once(() =>
-        A(i.Ay.CHANNEL_TOPIC_RULES, [f(), (0, l.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }], {
+let g = o().once(() =>
+        A(i.Ay.CHANNEL_TOPIC_RULES, [p(), (0, l.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }], {
             shouldStopPropagation: !0,
         }),
     ),
-    g = o().once(() =>
+    E = o().once(() =>
         A(
             i.Ay.CHANNEL_TOPIC_RULES,
-            [f({ emojiFocusable: !1 }), (0, l.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }],
+            [p({ emojiFocusable: !1 }), (0, l.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }],
             { shouldStopPropagation: !0 },
         ),
     ),
-    E = o().once(() => A(i.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, l.Ay)({ ...d, enableEmojiClick: !1 })])),
-    S = o().once(() => A(i.Ay.EMBED_TITLE_RULES, [(0, l.Ay)(d)])),
-    v = o().once(() => o().omit(A(i.Ay.EMBED_TITLE_RULES, [(0, l.Ay)(d)]), c)),
-    T = o().once(() => A(i.Ay.INLINE_REPLY_RULES, [(0, l.Ay)(d)])),
-    m = o().once(() => A(i.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, l.Ay)(d)])),
-    L = o().once(() => {
+    S = o().once(() => A(i.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, l.Ay)({ ...d, enableEmojiClick: !1 })])),
+    T = o().once(() => A(i.Ay.EMBED_TITLE_RULES, [(0, l.Ay)(d)])),
+    m = o().once(() => o().omit(A(i.Ay.EMBED_TITLE_RULES, [(0, l.Ay)(d)]), c)),
+    v = o().once(() => A(i.Ay.INLINE_REPLY_RULES, [(0, l.Ay)(d)])),
+    L = o().once(() => A(i.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, l.Ay)(d)])),
+    I = o().once(() => {
         let e = { ...d, shouldStopPropagation: !0 };
         return A(i.Ay.GUILD_EVENT_RULES, [(0, l.Ay)(e)], e);
     }),
-    I = o().once(() => o().omit(L(), "subtext")),
-    R = o().once(() => A(i.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, l.Ay)(d)])),
+    R = o().once(() => o().omit(I(), "subtext")),
+    b = o().once(() => A(i.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, l.Ay)(d)])),
     C = o().once(() =>
         o().omit(
             A(i.Ay.RULES, [(0, l.Ay)(d)]),
@@ -68,35 +69,36 @@ let p = o().once(() =>
         ),
     ),
     _ = { text: i.Ay.RULES.text },
-    b = o().once(() => a.aV(y())),
-    k = o().once(() => a.aV(p())),
-    U = o().once(() => a.aV(g())),
-    x = o().once(() => a.aV(E())),
-    M = o().once(() => a.aV(S())),
-    N = o().once(() => a.aV(v())),
-    P = o().once(() => a.aV(T())),
-    w = o().once(() => a.aV(m())),
-    V = o().once(() => a.aV(L())),
-    j = o().once(() => a.aV(R())),
-    G = o().once(() => a.aV(h())),
-    O = o().once(() => a.X(y())),
-    D = o().once(() => a.X(p())),
-    F = o().once(() => a.X(S())),
-    B = o().once(() => a.X(v())),
+    k = o().once(() => a.aV(h())),
+    U = o().once(() => a.aV(y())),
+    x = o().once(() => a.aV(g())),
+    M = o().once(() => a.aV(E())),
+    w = o().once(() => a.aV(S())),
+    N = o().once(() => a.aV(T())),
+    P = o().once(() => a.aV(m())),
+    V = o().once(() => a.aV(v())),
+    j = o().once(() => a.aV(L())),
+    G = o().once(() => a.aV(I())),
+    O = o().once(() => a.aV(b())),
+    D = o().once(() => a.aV(f())),
+    F = o().once(() => a.X(h())),
+    B = o().once(() => a.X(g())),
     X = o().once(() => a.X(T())),
-    H = o().once(() => a.X(R())),
-    W = {
+    H = o().once(() => a.X(m())),
+    W = o().once(() => a.X(v())),
+    Y = o().once(() => a.X(b())),
+    $ = {
         combineAndInjectMentionRule: A,
         createReactRules: l.Ay,
         defaultReactRuleOptions: d,
         get defaultRules() {
-            return y();
+            return h();
         },
         get guildEventRules() {
-            return L();
+            return I();
         },
         get guildEventLocationRules() {
-            return I();
+            return R();
         },
         get notifCenterV2MessagePreviewRules() {
             return C();
@@ -106,64 +108,65 @@ let p = o().once(() =>
         reactParserFor: a.aV,
         parse: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return b()(...n);
+            return k()(...n);
         },
-        parseTopic: (e, n, r, t) => k()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
-        parseTruncatedTopic: (e, n, r, t) => U()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
+        parseRichEmbedText: (e, n, r, t) => U()(e, n, { allowGameMentions: !0, ...r }, t),
+        parseTopic: (e, n, r, t) => x()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
+        parseTruncatedTopic: (e, n, r, t) => M()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
         parseVoiceChannelStatus: function () {
-            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return x()(...n);
-        },
-        parseEmbedTitle: function () {
-            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return M()(...n);
-        },
-        parseEmbedTitleWithoutLinks: function () {
-            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return N()(...n);
-        },
-        parseInlineReply: function () {
-            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return P()(...n);
-        },
-        parseGuildVerificationFormRule: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return w()(...n);
         },
-        parseGuildEventDescription: function () {
+        parseEmbedTitle: function () {
+            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+            return N()(...n);
+        },
+        parseEmbedTitleWithoutLinks: function () {
+            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+            return P()(...n);
+        },
+        parseInlineReply: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return V()(...n);
         },
-        parseAutoModerationSystemMessage: function () {
+        parseGuildVerificationFormRule: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return j()(...n);
         },
-        parseForumPostGuidelines: function () {
+        parseGuildEventDescription: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return G()(...n);
         },
-        parseToAST: function () {
+        parseAutoModerationSystemMessage: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return O()(...n);
         },
-        parseTopicToAST: function () {
+        parseForumPostGuidelines: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return D()(...n);
         },
-        parseEmbedTitleToAST: function () {
+        parseToAST: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return F()(...n);
         },
-        parseEmbedTitleWithoutLinksToAST: function () {
+        parseTopicToAST: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return B()(...n);
         },
-        parseInlineReplyToAST: function () {
+        parseEmbedTitleToAST: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return X()(...n);
         },
-        parseAutoModerationSystemMessageToAST: function () {
+        parseEmbedTitleWithoutLinksToAST: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
             return H()(...n);
+        },
+        parseInlineReplyToAST: function () {
+            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+            return W()(...n);
+        },
+        parseAutoModerationSystemMessageToAST: function () {
+            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+            return Y()(...n);
         },
     };
