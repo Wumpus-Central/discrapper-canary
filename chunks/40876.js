@@ -71,29 +71,9 @@ let r = {
         inlineRequire: () => n(107653).A,
         hasStoreChangeListeners: !0,
     },
-    DesktopTTIDnsTcpWarmupExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(388427).A,
-        hasStoreChangeListeners: !0,
-    },
     DesktopSettingExperimentBridgeManager: {
         actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(292199).A,
-        hasStoreChangeListeners: !0,
-    },
-    DesktopTTIEarlyUpdateCheckExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(788768).A,
-        hasStoreChangeListeners: !0,
-    },
-    DesktopTTIUpdateBackoffExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(516562).A,
-        hasStoreChangeListeners: !0,
-    },
-    DesktopTTIUpdateBackoffAlgoExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(323617).A,
+        inlineRequire: () => n(421052).A,
         hasStoreChangeListeners: !0,
     },
     DesktopTTIUpdateCheckDeadlineExperimentManager: {

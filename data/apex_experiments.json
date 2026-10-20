@@ -1595,60 +1595,6 @@
     }
   },
   {
-    "name": "2026-04-desktop-tti-dnstcp-warmup",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-04-desktop-tti-early-update-check",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-04-desktop-tti-update-backoff",
-    "kind": "user",
-    "defaultConfig": {
-      "maxBackoffMs": 30000
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "maxBackoffMs": 20000
-      },
-      "2": {
-        "maxBackoffMs": 10000
-      },
-      "3": {
-        "maxBackoffMs": 3000
-      }
-    }
-  },
-  {
     "name": "2026-04-desktop-tti-v8-cache",
     "kind": "user",
     "defaultConfig": {
@@ -2464,22 +2410,6 @@
     }
   },
   {
-    "name": "2026-06-desktop-tti-splash-asset",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "guild",
     "name": "2026-06-game-invites-channel",
     "defaultConfig": {
@@ -3052,22 +2982,6 @@
       },
       "1": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-07-desktop-tti-update-backoff-algo",
-    "kind": "user",
-    "defaultConfig": {
-      "algo": 0
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "algo": 1
       }
     }
   },
