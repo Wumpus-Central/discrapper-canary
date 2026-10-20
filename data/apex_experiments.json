@@ -2003,22 +2003,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-05-age-restricted-application-commands",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-app-store-overlay-feature-gate",
     "kind": "user",
     "defaultConfig": {
