@@ -1135,7 +1135,6 @@ function tO(e) {
             canRemix: (0, B.H_)(c),
             onRemix: p,
             onExport: x.onExport,
-            onImport: x.onImport,
         };
     return (0, a.jsxs)("div", {
         className: X()(tz.OY, { [tz.Wy]: y }),
@@ -1206,9 +1205,9 @@ function tO(e) {
                 className: tz.M2,
                 children: y
                     ? (0, a.jsx)(el.y, { type: el.t.SPINNING_CIRCLE_SIMPLE })
-                    : (0, a.jsxs)("div", {
+                    : (0, a.jsx)("div", {
                           className: tz.Pl,
-                          children: [(0, a.jsx)(tM, { ...P, trigger: "iconButton" }), x.importInput],
+                          children: (0, a.jsx)(tM, { ...P, trigger: "iconButton" }),
                       }),
             }),
         ],
