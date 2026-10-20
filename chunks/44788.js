@@ -517,15 +517,24 @@ function ej(e) {
 }
 let ev = a.memo(
     function (e) {
-        let { url: t, fileName: n, fileSize: l, contentType: i, className: c, onClick: o, onContextMenu: u } = e,
-            [d, m] = a.useState(!1),
-            [h, f] = a.useState(n.split(".").slice(-1)[0]),
-            [g, p] = a.useState(!0),
-            [A, x] = a.useState(!0),
+        let {
+                url: t,
+                fileName: n,
+                fileSize: l,
+                contentType: i,
+                defaultExpanded: c = !1,
+                className: o,
+                onClick: u,
+                onContextMenu: d,
+            } = e,
+            [m, h] = a.useState(n.split(".").slice(-1)[0]),
+            [f, g] = a.useState(c),
+            [p, A] = a.useState(!0),
+            [x, C] = a.useState(!0),
             {
-                fileContents: C,
-                bytesLeft: E,
-                hadError: _,
+                fileContents: E,
+                bytesLeft: _,
+                hadError: N,
             } = (function (e, t) {
                 let [n, l] = a.useState(!1),
                     [s, i] = a.useState(null),
@@ -559,23 +568,23 @@ let ev = a.memo(
                     { fileContents: s, bytesLeft: r, hadError: n }
                 );
             })(t, i);
-        return _
-            ? (0, s.jsx)(O.A, { url: t, fileName: n, fileSize: l, onClick: o, onContextMenu: u, className: c })
+        return N
+            ? (0, s.jsx)(O.A, { url: t, fileName: n, fileSize: l, onClick: u, onContextMenu: d, className: o })
             : (0, s.jsx)(eN, {
                   url: t,
                   fileName: n,
                   fileSize: l,
-                  fileContents: C,
-                  bytesLeft: E,
-                  expanded: d,
-                  setExpanded: m,
-                  language: h,
-                  setLanguage: f,
-                  wordWrap: g,
-                  setWordWrap: p,
-                  renderMarkdown: A,
-                  setRenderMarkdown: x,
-                  className: r()(eh.mr, c),
+                  fileContents: E,
+                  bytesLeft: _,
+                  expanded: f,
+                  setExpanded: g,
+                  language: m,
+                  setLanguage: h,
+                  wordWrap: p,
+                  setWordWrap: A,
+                  renderMarkdown: x,
+                  setRenderMarkdown: C,
+                  className: r()(eh.mr, o),
               });
     },
     (e, t) => e.url === t.url && e.className === t.className,
