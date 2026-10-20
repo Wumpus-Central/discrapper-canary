@@ -1,4 +1,4 @@
-(e.r(n), e.d(n, { default: () => t }));
-let t = JSON.parse(
-    '{"nVMqjA":["Guild"],"jKi+kc":[[1,"noun"]," Invite"],"GLe98U":["Invalid Invite"],"2/aTr2":["This invite is invalid or has expired."],"cRK6SQ":["Invite friends to your ",[1,"noun"]],"BBk7Qw":["Upon joining the ",[1,"noun"],", they will automatically get added to this linked server if not already a member."],"EnTIIr":["Invite to Linked ",[1,"noun"]],"Cz/ZUM":["Join ",[1,"noun"]],"VuENGl":[[1,"count"],"/",[1,"max"]],"sm5cz5":["Guild"]}',
+(o.r(i), o.d(i, { default: () => e }));
+let e = JSON.parse(
+    '{"nVMqjA":["Guild"],"xXXGsq":["guild"],"jKi+kc":[[1,"noun"]," Invite"],"GLe98U":["Invalid Invite"],"2/aTr2":["This invite is invalid or has expired."],"cRK6SQ":["Invite friends to your ",[1,"noun"]],"BBk7Qw":["Upon joining the ",[1,"noun"],", they will automatically get added to this linked server if not already a member."],"EnTIIr":["Invite to Linked ",[1,"noun"]],"Cz/ZUM":["Join ",[1,"noun"]],"qD9GKX":["Link Account"],"xd+PSv":["Linking your account allows you to connect your ",[1,"noun"]," and character to Discord"],"a1DdcF":["Link your ",[1,"gameName"]," account to access ",[1,"noun"]," features"],"yoPvEj":["Account linking isn\'t available for ",[1,"gameName"]," right now."],"VuENGl":[[1,"count"],"/",[1,"max"]],"sm5cz5":["Guild"],"aikK3o":["guild"]}',
 );

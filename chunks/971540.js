@@ -1,64 +1,45 @@
 (n.d(t, { A: () => U }), n(376728));
 var i,
     r = n(439372);
-(0, n(945810).mj)({
+((0, n(945810).mj)({
     kind: "user",
     name: "2026-09-linked-game-org-invites-dev",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
-});
+}),
+    n(975460),
+    n(627363),
+    n(587895),
+    n(712440),
+    n(733110));
 var a = n(17928),
-    s = n(927813),
-    l = n(636537),
-    o = n(73153),
-    d = n(181658),
-    c = n(652215);
-let u = {
-    async resolveGameOrganizationInvite(e) {
-        if (o.h.isDispatching()) return (await Promise.resolve(), u.resolveGameOrganizationInvite(e));
-        o.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE", code: e });
-        try {
-            let { body: t } = await l.Bo.get({ url: c.Rsh.GAME_ORGANIZATION_INVITE(e), rejectWithError: !0 });
-            o.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS", code: e, invite: t });
-        } catch (n) {
-            let t = new d.A(n);
-            throw (
-                o.h.dispatch({
-                    type: "GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE",
-                    code: e,
-                    error: { code: t.code, message: t.message },
-                }),
-                n
-            );
-        }
-    },
-};
-var _ = (((i = {}).RESOLVING = "RESOLVING"), (i.RESOLVED = "RESOLVED"), (i.ERROR = "ERROR"), i);
-let E = new Map();
-class A extends a.Ay.Store {
+    s = n(73153),
+    l = (((i = {}).RESOLVING = "RESOLVING"), (i.RESOLVED = "RESOLVED"), (i.ERROR = "ERROR"), i);
+let o = new Map();
+class d extends a.Ay.Store {
     static displayName = "GameOrganizationInviteStore";
     getInvite(e) {
-        return E.get(e) ?? null;
+        return o.get(e) ?? null;
     }
     getInvites() {
-        return E;
+        return o;
     }
 }
-let h = new A(o.h, {
+let c = new d(s.h, {
     GAME_ORGANIZATION_INVITE_RESOLVE: function (e) {
         let { code: t } = e;
-        if (E.get(t)?.state === _.RESOLVED) return !1;
-        (E = new Map(E)).set(t, { code: t, state: _.RESOLVING });
+        if (o.get(t)?.state === l.RESOLVED) return !1;
+        (o = new Map(o)).set(t, { code: t, state: l.RESOLVING });
     },
     GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function (e) {
         let { code: t, invite: n } = e;
-        (E = new Map(E)).set(
+        (o = new Map(o)).set(
             t,
             (function (e) {
                 let { game_organization: t, application: n, application_config: i } = e;
                 return {
                     code: e.code,
-                    state: _.RESOLVED,
+                    state: l.RESOLVED,
                     organization: {
                         id: t.game_organization_id,
                         name: t.name,
@@ -76,20 +57,44 @@ let h = new A(o.h, {
     },
     GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function (e) {
         let { code: t, error: n } = e;
-        if (E.get(t)?.state === _.RESOLVED) return !1;
-        (E = new Map(E)).set(t, { code: t, state: _.ERROR, error: n });
+        if (o.get(t)?.state === l.RESOLVED) return !1;
+        (o = new Map(o)).set(t, { code: t, state: l.ERROR, error: n });
     },
 });
-((0, a.UT)(h, {
-    getQueryId: c.fic.GAME_ORGANIZATION_INVITE,
-    staleAfter: 5 * s.A.Seconds.MINUTE,
-    failureStaleAfter: 5 * s.A.Seconds.MINUTE,
+var u = n(927813),
+    _ = n(636537),
+    E = n(181658),
+    A = n(652215);
+let h = {
+    async resolveGameOrganizationInvite(e) {
+        if (s.h.isDispatching()) return (await Promise.resolve(), h.resolveGameOrganizationInvite(e));
+        s.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE", code: e });
+        try {
+            let { body: t } = await _.Bo.get({ url: A.Rsh.GAME_ORGANIZATION_INVITE(e), rejectWithError: !0 });
+            s.h.dispatch({ type: "GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS", code: e, invite: t });
+        } catch (n) {
+            let t = new E.A(n);
+            throw (
+                s.h.dispatch({
+                    type: "GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE",
+                    code: e,
+                    error: { code: t.code, message: t.message },
+                }),
+                n
+            );
+        }
+    },
+};
+((0, a.UT)(c, {
+    getQueryId: A.fic.GAME_ORGANIZATION_INVITE,
+    staleAfter: 5 * u.A.Seconds.MINUTE,
+    failureStaleAfter: 5 * u.A.Seconds.MINUTE,
     get: (e) => {
-        let t = h.getInvite(e);
-        return t?.state === _.RESOLVED ? t : null;
+        let t = c.getInvite(e);
+        return t?.state === l.RESOLVED ? t : null;
     },
     load: async (e) => {
-        await u.resolveGameOrganizationInvite(e);
+        await h.resolveGameOrganizationInvite(e);
     },
 }),
     n(993748));
@@ -186,7 +191,7 @@ function b(e, t) {
                         null != g.A.get(r) ||
                             g.A.isFetching(r) ||
                             g.A.didFetchingSkuFail(r) ||
-                            (o.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
+                            (s.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
                             R((0, C.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
@@ -209,6 +214,7 @@ function M(e) {
             return b(n.content, e.channel_id);
         }));
 }
+n(818348);
 class P extends r.A {
     constructor() {
         (super(), (0, p.A)(this, M));
