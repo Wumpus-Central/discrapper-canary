@@ -353,6 +353,116 @@
     gap: var(--space-4)
 }
 
+.icon__44598 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center
+}
+
+.rank__336fc {
+    background-color: var(--custom-checkpoint-primary);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--space-12)), calc(100% - var(--space-12)) 100%, 0 100%);
+    color: var(--black);
+    font-size: 20px;
+    line-height: 24px;
+    padding-block: var(--space-4);
+    padding-inline: var(--space-8) var(--space-12);
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.container_bc3e36 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-80);
+    justify-content: space-between;
+    max-width: 1152px;
+    text-align: start;
+    width: 100%
+}
+
+.header_bc3e36 {
+    flex: 1 1 320px;
+    gap: var(--space-12);
+    max-width: 510px
+}
+
+.header_bc3e36,
+.heading_bc3e36 {
+    display: flex;
+    flex-direction: column
+}
+
+.heading_bc3e36 {
+    gap: var(--space-4)
+}
+
+.display_bc3e36 {
+    font-size: 84px;
+    line-height: 84px;
+    text-transform: uppercase
+}
+
+.guilds_bc3e36 {
+    display: flex;
+    flex: 1 1 320px;
+    flex-direction: column;
+    gap: var(--space-32);
+    max-width: 460px
+}
+
+.guildCard_bc3e36 {
+    align-items: center;
+    background-color: var(--custom-checkpoint-guild-card-background);
+    border: 1px solid var(--custom-checkpoint-primary)
+}
+
+.guildCard_bc3e36,
+.guildContent_bc3e36 {
+    display: flex;
+    gap: var(--space-16)
+}
+
+.guildContent_bc3e36 {
+    align-self: stretch;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.guildDetails_bc3e36 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding-inline: var(--space-16);
+    padding-bottom: var(--space-12)
+}
+
+.guildName_bc3e36 {
+    color: var(--custom-checkpoint-white)
+}
+
+.guildStats_bc3e36 {
+    -moz-column-gap: var(--space-32);
+    column-gap: var(--space-32);
+    display: flex;
+    flex-wrap: wrap
+}
+
+.guildStat_bc3e36 {
+    align-items: center;
+    color: var(--custom-checkpoint-primary);
+    display: flex;
+    gap: var(--space-6)
+}
+
+.guildStatText_bc3e36 {
+    font-size: 24px;
+    line-height: 24px
+}
+
 .background__383df {
     height: 100%;
     inset: 0;
@@ -724,4 +834,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=900818.d3e031748621a5b3.css.map*/
+/*# sourceMappingURL=52283.d0660c2e510449d4.css.map*/
