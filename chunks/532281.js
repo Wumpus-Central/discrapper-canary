@@ -1494,7 +1494,7 @@ if (null == ti || "0.0.0" !== ti.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tr = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eX.A().log(
-    `[BUILD INFO] Release Channel: ${tr}, Build Number: 644098, Version Hash: 9d4faf8a28e30090c819df1a9f590de46abd4c08`,
+    `[BUILD INFO] Release Channel: ${tr}, Build Number: 644104, Version Hash: 924e8bb928543c8161425064054d6915f530a21e`,
 ),
     x.A.setTags({ appContext: W.QCW }),
     eN.A.initBasic(),
@@ -25420,7 +25420,7 @@ let L8 = "isHideDevBanner",
                     className: tI()(L7.Wz, L7.mr),
                     children: [
                         (0, M.jsx)(L6, { className: L7.Kk }),
-                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "644098" }),
+                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "644104" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -52300,9 +52300,9 @@ let Wt = [
                             n.e("842775"),
                             n.e("21814"),
                             n.e("238672"),
-                            n.e("582417"),
+                            n.e("776533"),
                             n.e("714078"),
-                        ]).then(n.bind(n, 870952));
+                        ]).then(n.bind(n, 501748));
                         return (t) => (0, M.jsx)(e, { gameId: i, source: u0.GameProfileSources.Deeplink, ...t });
                     });
                 }),

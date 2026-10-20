@@ -68,6 +68,8 @@ var i,
         (r[(r.CommunityClicked = 42)] = "CommunityClicked"),
         (r[(r.AppStoreReviews = 43)] = "AppStoreReviews"),
         (r[(r.GooglePlayReviews = 44)] = "GooglePlayReviews"),
+        (r[(r.AppStoreLink = 45)] = "AppStoreLink"),
+        (r[(r.GooglePlayStoreLink = 46)] = "GooglePlayStoreLink"),
         r),
     A =
         (((a = {}).ActivityCard = "activity_card"),
