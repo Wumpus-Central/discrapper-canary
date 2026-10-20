@@ -353,6 +353,33 @@
     gap: var(--space-4)
 }
 
+.background__383df {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.content__383df {
+    gap: var(--space-12);
+    max-width: 620px;
+    position: relative
+}
+
+.content__383df,
+.stat__383df {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.stat__383df {
+    gap: var(--space-4);
+    width: 100%
+}
+
 .container__6b0e6 {
     background-color: var(--black);
     height: 100%;
@@ -697,4 +724,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=335883.25a8ece6e19cddd6.css.map*/
+/*# sourceMappingURL=900818.d3e031748621a5b3.css.map*/
