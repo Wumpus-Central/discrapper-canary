@@ -1,3 +1,26 @@
+.entries__19ae5 {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.entry__19ae5 {
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--space-16) 0
+}
+
+.notes__19ae5 {
+    overflow-wrap: anywhere
+}
+
+.pagination__19ae5 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
 .panel__78ae3 {
     padding-top: var(--space-16)
 }
@@ -47,4 +70,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=879b747b35797682.css.map*/
+/*# sourceMappingURL=22edaa8695e28b80.css.map*/
