@@ -1,106 +1,107 @@
-e.d(a, { A: () => k });
+e.d(a, { A: () => b });
 var l = e(477900),
     i = e(582128),
     t = e(17928),
     c = e(554146),
-    d = e(661531),
-    r = e(815021),
+    d = e(815021),
     n = e(297264),
-    o = e(834730),
-    m = e(812993),
-    x = e(821609),
-    u = e(224640),
-    h = e(501419),
-    j = e(174459),
-    N = e(832163),
-    p = e(44724),
-    v = e(652215),
-    A = e(49999),
-    b = e(489438);
-function k(s) {
+    r = e(834730),
+    m = e(62010),
+    o = e(821609),
+    x = e(224640),
+    u = e(501419),
+    h = e(174459),
+    j = e(832163),
+    v = e(44724),
+    N = e(652215),
+    p = e(49999),
+    A = e(489438);
+function b(s) {
     let {
             version: a,
             logo: e,
-            backgroundImage: k,
-            titles: D,
-            subtitle: S,
-            features: _,
-            buttonText: g,
-            applicationId: C,
-            onClose: E,
-            ...L
+            backgroundImage: b,
+            titles: k,
+            subtitle: D,
+            features: g,
+            buttonText: C,
+            applicationId: E,
+            onClose: M,
+            ..._
         } = s,
-        M = (0, t.bG)([N.A], () => N.A.getGuildIdFromApplicationId(C ?? void 0));
+        y = (0, t.bG)([j.A], () => j.A.getGuildIdFromApplicationId(E ?? void 0));
     i.useEffect(() => {
-        (j.default.track(v.HAw.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal", application_id: C }),
-            (0, h.$l)(c.M.GAME_SHOP_ANNOUNCEMENT_MODAL, a, { dismissAction: A.i.AUTO_DISMISS }));
-    }, [C, a]);
-    let T = i.useCallback(() => {
-            null != M && (0, p.X)({ guildId: M });
-        }, [M]),
-        O = i.useCallback(() => {
-            null != M && ((0, p.default)({ guildId: M }), E());
-        }, [M, E]);
-    return (0, l.jsx)(u.d, {
-        ...L,
-        onClose: E,
+        (h.default.track(N.HAw.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal", application_id: E }),
+            (0, u.$l)(c.M.GAME_SHOP_ANNOUNCEMENT_MODAL, a, { dismissAction: p.i.AUTO_DISMISS }));
+    }, [E, a]);
+    let L = i.useCallback(() => {
+            null != y && (0, v.X)({ guildId: y });
+        }, [y]),
+        f = i.useCallback(() => {
+            null != y && ((0, v.default)({ guildId: y }), M());
+        }, [y, M]);
+    return (0, l.jsx)(x.d, {
+        ..._,
+        onClose: M,
         size: "lg",
         children: (0, l.jsxs)("div", {
-            className: b.Qs,
+            className: A.Qs,
             children: [
-                (0, l.jsx)("img", { src: k, alt: "", "aria-hidden": !0, className: b.iL }),
+                (0, l.jsx)("img", { src: b, alt: "", "aria-hidden": !0, className: A.iL }),
                 (0, l.jsx)("div", {
-                    className: b.b,
-                    children: (0, l.jsx)(r.J, { onClick: E, variant: "overlay-secondary" }),
+                    className: A.b,
+                    children: (0, l.jsx)(d.J, { onClick: M, variant: "overlay-secondary" }),
                 }),
                 (0, l.jsxs)("div", {
-                    className: b.ZK,
+                    className: A.ZK,
                     children: [
-                        (0, l.jsx)("img", { src: e, alt: "", className: b.wm }),
-                        D.map((s, a) =>
+                        (0, l.jsx)("img", { src: e, alt: "", className: A.wm }),
+                        k.map((s, a) =>
                             (0, l.jsx)(
                                 n.D,
-                                { variant: "display-md", color: "text-strong", className: b.DD, children: s },
+                                { variant: "display-md", color: "text-strong", className: A.DD, children: s },
                                 a,
                             ),
                         ),
-                        (0, l.jsx)(o.E, {
+                        (0, l.jsx)(r.E, {
                             variant: "text-sm/medium",
                             color: "text-muted",
-                            className: b.VA,
-                            children: S,
+                            className: A.VA,
+                            children: D,
                         }),
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: b.qT,
-                    children: _.map((s, a) =>
+                    className: A.qT,
+                    children: g.map((s, a) =>
                         (0, l.jsxs)(
                             "div",
                             {
-                                className: b.N4,
+                                className: A.N4,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: b.Lw,
+                                        className: A.Lw,
                                         children: [
                                             (0, l.jsx)("img", { src: s.assetUrl, alt: "" }),
                                             null != s.assetLabelText &&
-                                                (0, l.jsx)(m.Lp, {
-                                                    text: s.assetLabelText,
-                                                    color: d.A.colors.STATUS_POSITIVE.css,
-                                                    className: b.pl,
+                                                (0, l.jsx)("div", {
+                                                    className: A.pl,
+                                                    children: (0, l.jsx)(m.E, {
+                                                        type: { text: s.assetLabelText },
+                                                        variant: "success",
+                                                    }),
                                                 }),
                                         ],
                                     }),
                                     (0, l.jsxs)("div", {
-                                        className: b.kh,
+                                        className: A.kh,
                                         children: [
                                             (0, l.jsx)(n.D, {
                                                 variant: "heading-md/bold",
                                                 color: "text-strong",
                                                 children: s.title,
                                             }),
-                                            (0, l.jsx)(o.E, {
+                                            (0, l.jsx)(r.E, {
                                                 variant: "text-sm/medium",
                                                 color: "text-muted",
                                                 children: s.subtitle,
@@ -114,8 +115,8 @@ function k(s) {
                     ),
                 }),
                 (0, l.jsx)("div", {
-                    className: b.UD,
-                    children: (0, l.jsx)(x.$, { variant: "primary", text: g, onClick: O, onMouseDown: T }),
+                    className: A.UD,
+                    children: (0, l.jsx)(o.$, { variant: "primary", text: C, onClick: f, onMouseDown: L }),
                 }),
             ],
         }),

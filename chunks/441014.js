@@ -9,7 +9,7 @@ var n = i(477900),
     c = i(189213),
     u = i(27192),
     m = i(834730),
-    h = i(812993),
+    h = i(62010),
     j = i(331322),
     g = i(144165),
     x = i(554375),
@@ -19,11 +19,11 @@ var n = i(477900),
     S = i(174459),
     b = i(486020),
     E = i(690521),
-    w = i(599941),
-    A = i(17928),
-    C = i(317525),
-    _ = i(384684),
-    y = i(652215),
+    y = i(599941),
+    w = i(17928),
+    A = i(317525),
+    C = i(384684),
+    _ = i(652215),
     N = i(105292),
     R = i(748641);
 function k(e) {
@@ -38,7 +38,7 @@ function k(e) {
             className: R.lN,
             children: [
                 (0, n.jsx)(m.E, { color: "interactive-text-active", variant: a, children: l }),
-                o && (0, n.jsx)(h.Lp, { text: N.intl.string(N.t.nhbtEl) }),
+                o && (0, n.jsx)(h.E, { type: { text: N.intl.string(N.t.nhbtEl) }, variant: "secondary" }),
             ],
         }),
     });
@@ -162,7 +162,7 @@ function I(e) {
         try {
             o(!0);
             let a = (0, d.A)();
-            S.default.track(y.HAw.EMOJI_UPLOAD_STARTED, { guild_id: t, upload_id: a });
+            S.default.track(_.HAw.EMOJI_UPLOAD_STARTED, { guild_id: t, upload_id: a });
             let s = await (0, v.W)({ guildId: t, uploadId: a, data: i, file: l, roles: e });
             ("object" == typeof s && "id" in s && f.X({ emojiId: s.id, userImage: { data: i, file: l } }), n());
         } catch (e) {
@@ -170,7 +170,7 @@ function I(e) {
             o(!1);
         }
     }
-    let u = (0, w.uP)(t, { includeSoftDeleted: !0, sortDeletedListingsLast: !0 }),
+    let u = (0, y.uP)(t, { includeSoftDeleted: !0, sortDeletedListingsLast: !0 }),
         m = E.Ay.sanitizeEmojiName(l.name.split(".")[0]);
     return (0, n.jsx)(D, { emojiName: m, emojiUrl: i, onSave: c, saving: r, listingChoices: u, ...s });
 }
@@ -183,11 +183,11 @@ function z(e) {
     async function u(e, t) {
         null != (await d({ guildId: s, emojiId: l.id, roles: e })) && t();
     }
-    let m = (0, w.uP)(s, { includeSoftDeleted: !0 });
+    let m = (0, y.uP)(s, { includeSoftDeleted: !0 });
     m.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
     let h =
-            ((t = (0, A.bG)([C.A], () => C.A.getSortedRoles(s))),
-            (i = (0, A.bG)([_.A], () => _.A.getSubscriptionRoles(s))),
+            ((t = (0, w.bG)([A.A], () => A.A.getSortedRoles(s))),
+            (i = (0, w.bG)([C.A], () => C.A.getSubscriptionRoles(s))),
             a.useMemo(() => t.filter((e) => i.has(e.id)), [t, i])),
         j = a.useMemo(() => {
             let e = new Set(
