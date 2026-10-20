@@ -1,38 +1,38 @@
 (r.r(t),
     r.d(t, {
-        CheckpointNumbersCenterAlignedRive: () => I.m,
-        UnlockRive: () => J.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => H.u,
-        CheckpointKnickKnacksRive: () => w.U,
+        CheckpointNumbersCenterAlignedRive: () => V.m,
+        UnlockRive: () => X.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => T.u,
+        CheckpointKnickKnacksRive: () => f.U,
         AnimatedNitroOrbRewardsRive: () => o.Z,
-        ServerHubPerkRive: () => T.f,
-        FistBumpRive: () => P.l,
-        PerfTestRive: () => x.Q,
-        NitroRewardsMouseRive: () => N.C,
+        ServerHubPerkRive: () => E.f,
+        FistBumpRive: () => I.l,
+        PerfTestRive: () => G.Q,
+        NitroRewardsMouseRive: () => R.C,
         BoostGemLevelTwoRive: () => l.J,
-        GameServerHostingRive: () => F.E,
-        CheckpointFriendsRive: () => p,
+        GameServerHostingRive: () => L.E,
+        CheckpointFriendsRive: () => h.m,
         BoostGemLevelOneRive: () => s.t,
-        TabHoverGradientRive: () => X.U,
-        WandAndSparklesRive: () => $,
+        TabHoverGradientRive: () => x.U,
+        WandAndSparklesRive: () => z,
         BoostThisServerRive: () => b.D,
-        NitroQuestOrbsMultiplierRive: () => O.E,
+        NitroQuestOrbsMultiplierRive: () => U.E,
         BoostGemLevelThreeRive: () => c.z,
         AVSurveyFacesRive: () => i.i,
-        NitroCoinRive: () => _.s,
-        CheckpointIntroRive: () => y,
+        NitroCoinRive: () => F.s,
+        CheckpointIntroRive: () => C,
         AIVisualIdentitySmallSurfaceRive: () => a.j,
-        DiceRive: () => B.m,
+        DiceRive: () => w.m,
         CheckpointCardRive: () => M,
         BadgesCoachmarkRive: () => n.U,
-        CheckpointNumbersLeftAlignedRive: () => L.w,
-        PulseGradientRive: () => j.M,
-        VibingWumpusBackgroundRive: () => Z.R,
-        JetpackWumpusWithTrinketsRive: () => R.e,
-        GlowButtonRive: () => U.s,
-        TeenScreenTimeRive: () => Q.w,
-        NitroWishlistingWumpusRive: () => E,
-        VibingWumpusRive: () => K.Z,
+        CheckpointNumbersLeftAlignedRive: () => y.w,
+        PulseGradientRive: () => D.M,
+        VibingWumpusBackgroundRive: () => H.R,
+        JetpackWumpusWithTrinketsRive: () => P.e,
+        GlowButtonRive: () => B.s,
+        TeenScreenTimeRive: () => j.w,
+        NitroWishlistingWumpusRive: () => W,
+        VibingWumpusRive: () => Q.Z,
     }));
 var a = r(402386),
     o = r(567341),
@@ -275,178 +275,10 @@ function M(e) {
           });
 }
 M.riveSrc = u;
-let h =
-        "https://cdn.discordapp.com/assets/content/944cf05122af903e5091602b52fbd726c5c4956954d3628f659f21040a431c4e.riv",
-    A = {
-        MAIN: {
-            reducedMotion: "boolean",
-            twoFriends: "boolean",
-            AnimationState: "number",
-            "Avatar01/ShadowVisibility": "number",
-            "Avatar01/StrokeVisibility": "number",
-            "Avatar01/UsernameVisibility": "number",
-            "Avatar01/Stroke": "color",
-            "Avatar01/Fill": "color",
-            "Avatar01/Username": "string",
-            "Avatar01/img": "image",
-            "Avatar02/ShadowVisibility": "number",
-            "Avatar02/StrokeVisibility": "number",
-            "Avatar02/UsernameVisibility": "number",
-            "Avatar02/Stroke": "color",
-            "Avatar02/Fill": "color",
-            "Avatar02/Username": "string",
-            "Avatar02/img": "image",
-            "Avatar03/ShadowVisibility": "number",
-            "Avatar03/StrokeVisibility": "number",
-            "Avatar03/UsernameVisibility": "number",
-            "Avatar03/Stroke": "color",
-            "Avatar03/Fill": "color",
-            "Avatar03/Username": "string",
-            "Avatar03/img": "image",
-            "Avatar04/ShadowVisibility": "number",
-            "Avatar04/StrokeVisibility": "number",
-            "Avatar04/UsernameVisibility": "number",
-            "Avatar04/Stroke": "color",
-            "Avatar04/Fill": "color",
-            "Avatar04/Username": "string",
-            "Avatar04/img": "image",
-            "Avatar05/ShadowVisibility": "number",
-            "Avatar05/StrokeVisibility": "number",
-            "Avatar05/UsernameVisibility": "number",
-            "Avatar05/Stroke": "color",
-            "Avatar05/Fill": "color",
-            "Avatar05/Username": "string",
-            "Avatar05/img": "image",
-            ConnectorColor: "color",
-        },
-        Sidekick: {
-            reducedMotion: "boolean",
-            twoFriends: "boolean",
-            AnimationState: "number",
-            "Avatar01/ShadowVisibility": "number",
-            "Avatar01/StrokeVisibility": "number",
-            "Avatar01/UsernameVisibility": "number",
-            "Avatar01/Stroke": "color",
-            "Avatar01/Fill": "color",
-            "Avatar01/Username": "string",
-            "Avatar01/img": "image",
-            "Avatar02/ShadowVisibility": "number",
-            "Avatar02/StrokeVisibility": "number",
-            "Avatar02/UsernameVisibility": "number",
-            "Avatar02/Stroke": "color",
-            "Avatar02/Fill": "color",
-            "Avatar02/Username": "string",
-            "Avatar02/img": "image",
-            "Avatar03/ShadowVisibility": "number",
-            "Avatar03/StrokeVisibility": "number",
-            "Avatar03/UsernameVisibility": "number",
-            "Avatar03/Stroke": "color",
-            "Avatar03/Fill": "color",
-            "Avatar03/Username": "string",
-            "Avatar03/img": "image",
-            "Avatar04/ShadowVisibility": "number",
-            "Avatar04/StrokeVisibility": "number",
-            "Avatar04/UsernameVisibility": "number",
-            "Avatar04/Stroke": "color",
-            "Avatar04/Fill": "color",
-            "Avatar04/Username": "string",
-            "Avatar04/img": "image",
-            "Avatar05/ShadowVisibility": "number",
-            "Avatar05/StrokeVisibility": "number",
-            "Avatar05/UsernameVisibility": "number",
-            "Avatar05/Stroke": "color",
-            "Avatar05/Fill": "color",
-            "Avatar05/Username": "string",
-            "Avatar05/img": "image",
-            ConnectorColor: "color",
-        },
-        Avatar: {
-            ShadowVisibility: "number",
-            StrokeVisibility: "number",
-            UsernameVisibility: "number",
-            Stroke: "color",
-            Fill: "color",
-            Username: "string",
-            img: "image",
-        },
-        Username: {
-            ShadowVisibility: "number",
-            StrokeVisibility: "number",
-            UsernameVisibility: "number",
-            Stroke: "color",
-            Fill: "color",
-            Username: "string",
-            img: "image",
-        },
-        "Friends 01 Rotation": {
-            reducedMotion: "boolean",
-            twoFriends: "boolean",
-            AnimationState: "number",
-            "Avatar01/ShadowVisibility": "number",
-            "Avatar01/StrokeVisibility": "number",
-            "Avatar01/UsernameVisibility": "number",
-            "Avatar01/Stroke": "color",
-            "Avatar01/Fill": "color",
-            "Avatar01/Username": "string",
-            "Avatar01/img": "image",
-            "Avatar02/ShadowVisibility": "number",
-            "Avatar02/StrokeVisibility": "number",
-            "Avatar02/UsernameVisibility": "number",
-            "Avatar02/Stroke": "color",
-            "Avatar02/Fill": "color",
-            "Avatar02/Username": "string",
-            "Avatar02/img": "image",
-            "Avatar03/ShadowVisibility": "number",
-            "Avatar03/StrokeVisibility": "number",
-            "Avatar03/UsernameVisibility": "number",
-            "Avatar03/Stroke": "color",
-            "Avatar03/Fill": "color",
-            "Avatar03/Username": "string",
-            "Avatar03/img": "image",
-            "Avatar04/ShadowVisibility": "number",
-            "Avatar04/StrokeVisibility": "number",
-            "Avatar04/UsernameVisibility": "number",
-            "Avatar04/Stroke": "color",
-            "Avatar04/Fill": "color",
-            "Avatar04/Username": "string",
-            "Avatar04/img": "image",
-            "Avatar05/ShadowVisibility": "number",
-            "Avatar05/StrokeVisibility": "number",
-            "Avatar05/UsernameVisibility": "number",
-            "Avatar05/Stroke": "color",
-            "Avatar05/Fill": "color",
-            "Avatar05/Username": "string",
-            "Avatar05/img": "image",
-            ConnectorColor: "color",
-        },
-    },
-    k = {
-        MAIN: ["State Machine 1"],
-        Sidekick: ["State Machine 1"],
-        Avatar: ["State Machine 1"],
-        Username: ["State Machine 1"],
-        "Friends 01 Rotation": ["State Machine 1"],
-    };
-function p(e) {
-    let { artboard: t = "MAIN", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(h),
-        n = (0, v.m2)(h);
-    return o === v.BW.Loading
-        ? null
-        : (0, d.jsx)(m.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: i,
-              artboard: t,
-              stateMachine: r,
-              artboardProperties: A,
-              artboardStateMachines: k,
-              ...a,
-          });
-}
-p.riveSrc = h;
-let C =
+var h = r(236177);
+let A =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
-    f = {
+    k = {
         "Checkpoint Intro Desktop": {
             reducedMotion: "boolean",
             Subtitle: "string",
@@ -475,7 +307,7 @@ let C =
             StartButton: "string",
         },
     },
-    V = {
+    p = {
         "Checkpoint Intro Desktop": ["State Machine 1"],
         Globe: ["State Machine 1"],
         "Globe Single Line": ["State Machine 1"],
@@ -484,10 +316,10 @@ let C =
         Entry: ["State Machine 1"],
         "Start Button": ["State Machine 1"],
     };
-function y(e) {
+function C(e) {
     let { artboard: t = "Checkpoint Intro Desktop", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(C),
-        n = (0, v.m2)(C);
+        { status: o, buffer: i } = (0, v.CE)(A),
+        n = (0, v.m2)(A);
     return o === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -495,31 +327,31 @@ function y(e) {
               buffer: i,
               artboard: t,
               stateMachine: r,
-              artboardProperties: f,
-              artboardStateMachines: V,
+              artboardProperties: k,
+              artboardStateMachines: p,
               ...a,
           });
 }
-y.riveSrc = C;
-var w = r(536426),
-    I = r(590642),
-    L = r(362263),
-    B = r(908803),
-    P = r(90517),
-    F = r(289704),
-    U = r(570950),
-    R = r(970002),
-    _ = r(149282),
-    O = r(122720),
-    N = r(907581);
-let W =
+C.riveSrc = A;
+var f = r(536426),
+    V = r(590642),
+    y = r(362263),
+    w = r(908803),
+    I = r(90517),
+    L = r(289704),
+    B = r(570950),
+    P = r(970002),
+    F = r(149282),
+    U = r(122720),
+    R = r(907581);
+let _ =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    G = { "Nitro Wishlist": { reducedMotion: "boolean" } },
-    D = { "Nitro Wishlist": ["State Machine 1"] };
-function E(e) {
+    O = { "Nitro Wishlist": { reducedMotion: "boolean" } },
+    N = { "Nitro Wishlist": ["State Machine 1"] };
+function W(e) {
     let { artboard: t = "Nitro Wishlist", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(W),
-        n = (0, v.m2)(W);
+        { status: o, buffer: i } = (0, v.CE)(_),
+        n = (0, v.m2)(_);
     return o === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -527,29 +359,29 @@ function E(e) {
               buffer: i,
               artboard: t,
               stateMachine: r,
-              artboardProperties: G,
-              artboardStateMachines: D,
+              artboardProperties: O,
+              artboardStateMachines: N,
               ...a,
           });
 }
-E.riveSrc = W;
-var x = r(102079),
-    j = r(440166),
-    T = r(93675),
-    X = r(549254),
-    Q = r(632679),
-    H = r(583094),
-    J = r(242644),
-    K = r(773350),
-    Z = r(615429);
-let z =
+W.riveSrc = _;
+var G = r(102079),
+    D = r(440166),
+    E = r(93675),
+    x = r(549254),
+    j = r(632679),
+    T = r(583094),
+    X = r(242644),
+    Q = r(773350),
+    H = r(615429);
+let J =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    q = { "Surprise Me": { fill: "color" } },
-    Y = { "Surprise Me": ["State Machine 1"] };
-function $(e) {
+    K = { "Surprise Me": { fill: "color" } },
+    Z = { "Surprise Me": ["State Machine 1"] };
+function z(e) {
     let { artboard: t = "Surprise Me", stateMachine: r, ...a } = e,
-        { status: o, buffer: i } = (0, v.CE)(z),
-        n = (0, v.m2)(z);
+        { status: o, buffer: i } = (0, v.CE)(J),
+        n = (0, v.m2)(J);
     return o === v.BW.Loading
         ? null
         : (0, d.jsx)(m.w, {
@@ -557,9 +389,9 @@ function $(e) {
               buffer: i,
               artboard: t,
               stateMachine: r,
-              artboardProperties: q,
-              artboardStateMachines: Y,
+              artboardProperties: K,
+              artboardStateMachines: Z,
               ...a,
           });
 }
-$.riveSrc = z;
+z.riveSrc = J;
