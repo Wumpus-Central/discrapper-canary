@@ -51,8 +51,8 @@ function C(e) {
         y = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
         C = "text-muted" === y,
         T = f && C ? "none" : h && C ? "currentColor" : y,
-        M = i()(w.iq, { [E.Hz]: f && C }),
-        P = "detail" === r ? "text-md/normal" : "text-sm/normal",
+        P = i()(w.iq, { [E.Hz]: f && C }),
+        M = "detail" === r ? "text-md/normal" : "text-sm/normal",
         D = "detail" === r ? "text-sm/normal" : "text-xs/normal",
         F = null != t ? n.screenshots : [],
         G = null != t ? n.attachments : [];
@@ -63,11 +63,11 @@ function C(e) {
             className: w.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
-                variant: P,
+                variant: M,
                 color: T,
                 selectable: !0,
-                className: M,
-                children: (0, l.jsx)(S.A, { text: v, variant: P, prose: !0 }),
+                className: P,
+                children: (0, l.jsx)(S.A, { text: v, variant: M, prose: !0 }),
             }),
         });
     let $ = h ? u.a : o._;
@@ -86,10 +86,10 @@ function C(e) {
                 children: [
                     (0, l.jsx)(s.E, {
                         tag: "span",
-                        variant: P,
+                        variant: M,
                         color: T,
-                        className: M,
-                        children: (0, l.jsx)(S.A, { text: v, variant: P, prose: !0 }),
+                        className: P,
+                        children: (0, l.jsx)(S.A, { text: v, variant: M, prose: !0 }),
                     }),
                     (0, l.jsx)($, { size: "xs", color: "currentColor", className: w.Ue }),
                 ],

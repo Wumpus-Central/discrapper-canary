@@ -5,8 +5,8 @@ var n = a(477900),
     s = a.n(i),
     r = a(862482),
     o = a(939249),
-    d = a(980707),
-    c = a(477782),
+    c = a(980707),
+    d = a(477782),
     u = a(265872),
     m = a(765671),
     h = a(949091),
@@ -30,9 +30,9 @@ function b(e) {
         s = l.useRef(new Map()),
         [o, b] = l.useState(() => new Set()),
         { ref: y, width: E } = (0, m.Ay)(),
-        _ = l.useRef(null),
+        S = l.useRef(null),
         C = (0, v.N)(t, i),
-        S = (0, h.A)();
+        _ = (0, h.A)();
     l.useEffect(() => {
         if (null == E) return;
         let e = new Set(),
@@ -44,17 +44,17 @@ function b(e) {
     let A = l.useCallback(
         (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsxs)(d.W, {
+            return (0, n.jsxs)(c.W, {
                 "data-menu-migrated": !0,
                 navId: "devtools-overflow",
                 variant: "fixed",
                 onClose: t,
                 "aria-label": "Overflowed DevTools Tabs",
                 onSelect: t,
-                children: [C, null != S && (0, n.jsx)(c.rX, { "aria-label": "Playgrounds", children: S })],
+                children: [C, null != _ && (0, n.jsx)(d.rX, { "aria-label": "Playgrounds", children: _ })],
             });
         },
-        [C, S],
+        [C, _],
     );
     return (0, n.jsxs)("div", {
         className: j.Mv,
@@ -98,9 +98,9 @@ function b(e) {
             (0, n.jsx)("div", {
                 className: j.MK,
                 children:
-                    (o.size > 0 || null != S) &&
+                    (o.size > 0 || null != _) &&
                     (0, n.jsx)(u.Y, {
-                        targetElementRef: _,
+                        targetElementRef: S,
                         layerContext: g.He,
                         renderPopout: A,
                         position: "bottom",
@@ -110,7 +110,7 @@ function b(e) {
                         children: (e) =>
                             (0, n.jsx)(r.$n, {
                                 ...e,
-                                buttonRef: _,
+                                buttonRef: S,
                                 className: j.Iq,
                                 size: r.$n.Sizes.ICON,
                                 look: r.$n.Looks.BLANK,

@@ -464,8 +464,8 @@ var e$ = n(404778),
     e1 = n(369163),
     e2 = n(123292),
     e5 = n(631305),
-    e8 = n(468689),
-    e6 = n(931991),
+    e6 = n(468689),
+    e8 = n(931991),
     e3 = n(473145),
     e7 = n(625633),
     e4 = n(136123);
@@ -474,7 +474,7 @@ let e9 = function (e) {
         { location: u } = (0, D.p)(),
         { analyticsLocations: c } = (0, V.Ay)(),
         h = (0, d.bG)([ef.A], () => ef.A.getGuild(n)),
-        { canManageAllExpressions: m } = (0, e6.nr)(h),
+        { canManageAllExpressions: m } = (0, e8.nr)(h),
         f = null != h && 0 === (0, e3.aG)(h.premiumTier) && !h.features.has(ey.GuildFeatures.MORE_STICKERS);
     return (i.useEffect(() => {
         m &&
@@ -538,7 +538,7 @@ let e9 = function (e) {
                           variant: "primary",
                           text: eC.intl.string(eC.t.bwNjug),
                           onClick: function () {
-                              ((0, F.v8)(), e8.A.open(n, ey.BEX.STICKERS, u));
+                              ((0, F.v8)(), e6.A.open(n, ey.BEX.STICKERS, u));
                           },
                       }),
                   ],
@@ -1593,8 +1593,8 @@ function t2(e) {
     });
 }
 var t5 = n(970099);
-let t8 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    t6 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+let t6 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    t8 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     t3 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     t7 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     t4 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
@@ -1625,7 +1625,7 @@ function nr(e) {
             gridWrapperRef: p,
             containerWidth: t,
             showingEmptyState: v,
-            listPaddingLeft: t6,
+            listPaddingLeft: t8,
             listScrollbarWidth: 8,
         }),
         T = q.tP.useSetting(),
@@ -1662,7 +1662,7 @@ function nr(e) {
             },
             [s, S, Z],
         ),
-        J = null != N && N > t8,
+        J = null != N && N > t6,
         {
             rowCount: Y,
             rowCountBySection: es,

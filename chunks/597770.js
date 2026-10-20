@@ -1,25 +1,25 @@
-_.d(t, { GiftIcon: () => N });
-var A = _(477900);
-_(582128);
-var n = _(661531),
-    l = _(996682),
-    T = _(27989);
-function N(e) {
+t.d(e, { GiftIcon: () => N });
+var A = t(477900);
+t(582128);
+var n = t(661531),
+    l = t(996682),
+    T = t(27989);
+function N(_) {
     let {
-            size: t = "md",
-            width: _,
+            size: e = "md",
+            width: t,
             height: N,
             color: E = n.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: r = "",
             ...O
-        } = e,
-        I = (0, T.J)(t),
-        R = I?.width ?? _,
-        i = I?.height ?? N;
+        } = _,
+        R = (0, T.J)(e),
+        I = R?.width ?? t,
+        i = R?.height ?? N;
     return (0, A.jsxs)("svg", {
         ...(0, l.A)(O),
         xmlns: "http://www.w3.org/2000/svg",
-        width: R,
+        width: I,
         height: i,
         fill: "none",
         viewBox: "0 0 24 24",

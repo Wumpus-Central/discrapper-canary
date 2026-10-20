@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => M });
 var l = n(477900),
     a = n(582128),
     r = n(17928),
@@ -125,8 +125,8 @@ let I = a.memo(function (e) {
         ],
     });
 });
-var M = n(655074);
-function P(e) {
+var P = n(655074);
+function M(e) {
     let { onSelect: t, query: n = "", guildId: m } = e,
         f = (0, c.A)(m),
         h = (0, r.bG)(
@@ -138,19 +138,19 @@ function P(e) {
         p = a.useMemo(() => ("" === g ? f : f.filter((e) => e.name.toLocaleLowerCase().includes(g))), [f, g]);
     return p.length > 0
         ? (0, l.jsx)("ul", {
-              className: M.p_,
+              className: P.p_,
               children: p.map((e) => (0, l.jsx)(I, { project: e, onSelect: t }, e.id)),
           })
         : f.length > 0
           ? (0, l.jsx)(i.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                className: M.Ie,
+                className: P.Ie,
                 children: N.intl.string(w.default.X37fkR),
             })
           : "error" === h
             ? (0, l.jsxs)("div", {
-                  className: M.E8,
+                  className: P.E8,
                   children: [
                       (0, l.jsx)(i.E, {
                           variant: "text-sm/normal",
@@ -166,11 +166,11 @@ function P(e) {
                   ],
               })
             : "success" !== h
-              ? (0, l.jsx)("div", { className: M.E8, children: (0, l.jsx)(u.y, {}) })
+              ? (0, l.jsx)("div", { className: P.E8, children: (0, l.jsx)(u.y, {}) })
               : (0, l.jsx)(i.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    className: M.Ie,
+                    className: P.Ie,
                     children: N.intl.string(w.default["9/5sLV"]),
                 });
 }

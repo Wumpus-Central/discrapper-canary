@@ -1,4 +1,4 @@
-a.d(t, { ShopAssetsPreviewInstructionModal: () => u, ShopPFXPreviewInstructionModal: () => m, g: () => c, k: () => d });
+a.d(t, { ShopAssetsPreviewInstructionModal: () => u, ShopPFXPreviewInstructionModal: () => m, g: () => d, k: () => c });
 var n = a(477900);
 a(582128);
 var l = a(189213),
@@ -6,8 +6,8 @@ var l = a(189213),
     s = a(297264),
     r = a(559474),
     o = a(505965);
-let d = "shop-assets-preview-instructions-modal",
-    c = "shop-pfx-preview-instructions-modal";
+let c = "shop-assets-preview-instructions-modal",
+    d = "shop-pfx-preview-instructions-modal";
 function u(e) {
     let { transitionState: t, onClose: a } = e;
     return (0, n.jsx)(l.a, {

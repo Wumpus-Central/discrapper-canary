@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => d });
 var i = n(17928),
     l = n(52133),
     u = n(73153),
@@ -25,8 +25,8 @@ class p extends i.Ay.Store {
         return o.has(e);
     }
 }
-let d = [],
-    E = new p(u.h, {
+let E = [],
+    d = new p(u.h, {
         LOGOUT: function () {
             if (0 === r.size && 0 === s.size && 0 === a.size && 0 === o.size) return !1;
             (r.clear(), s.clear(), a.clear(), o.clear());
@@ -45,36 +45,36 @@ let d = [],
                     hasUnpublishedChanges: u,
                     surface: _,
                     previewAppChannels: s,
-                    previewDevicePermissions: o = d,
+                    previewDevicePermissions: o = E,
                     publishedRevision: p = null,
-                    publishedAt: E = null,
+                    publishedAt: d = null,
                     publishing: R = !1,
                     patchNotesSent: h,
                     newUiUnpublished: P = !1,
                 } = e,
                 A = !R && a.delete(n),
                 f = i ? (u ? "changes" : "up_to_date") : "unpublished",
-                U = r.get(n),
-                C =
+                C = r.get(n),
+                U =
                     null == h ||
-                    ((t = U?.patchNotesSent ?? c),
+                    ((t = C?.patchNotesSent ?? c),
                     t.length === h.length &&
                         t.every(
                             (e, t) => e.publishedRevision === h[t].publishedRevision && e.messageId === h[t].messageId,
                         ))
-                        ? (U?.patchNotesSent ?? c)
+                        ? (C?.patchNotesSent ?? c)
                         : h;
             if (
                 !A &&
-                U?.state === f &&
-                U.surface === _ &&
-                (0, l.v)(U.previewAppChannels, s) &&
-                (0, l.v)(U.previewDevicePermissions ?? d, o) &&
-                U.publishedRevision === p &&
-                U.publishedAt === E &&
-                U.publishing === R &&
-                U.patchNotesSent === C &&
-                U.newUiUnpublished === P
+                C?.state === f &&
+                C.surface === _ &&
+                (0, l.v)(C.previewAppChannels, s) &&
+                (0, l.v)(C.previewDevicePermissions ?? E, o) &&
+                C.publishedRevision === p &&
+                C.publishedAt === d &&
+                C.publishing === R &&
+                C.patchNotesSent === U &&
+                C.newUiUnpublished === P
             )
                 return !1;
             r.set(n, {
@@ -83,9 +83,9 @@ let d = [],
                 previewAppChannels: s,
                 previewDevicePermissions: o,
                 publishedRevision: p,
-                publishedAt: E,
+                publishedAt: d,
                 publishing: R,
-                patchNotesSent: C,
+                patchNotesSent: U,
                 newUiUnpublished: P,
             });
         },

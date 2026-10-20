@@ -1,4 +1,4 @@
-(l.d(t, { F6: () => f, T4: () => _, UF: () => A, kG: () => v, zE: () => p }), l(321073));
+(l.d(t, { F6: () => g, T4: () => _, UF: () => b, kG: () => v, zE: () => p }), l(321073));
 var n,
     i = l(582128),
     s = l(17928),
@@ -6,12 +6,12 @@ var n,
     r = l(419954),
     d = l(885386),
     c = l(533440),
-    o = l(641216),
-    u = l(153488),
+    u = l(641216),
+    o = l(153488),
     m = l(71393),
     x = l(115063),
-    h = l(652215);
-function f(e, t) {
+    f = l(652215);
+function g(e, t) {
     let { useTitle: l, useDisabled: n } = t;
     return (0, r.zD)("guild_space_sharing_modal_guild_activity_sharing_setting", {
         useTitle: l,
@@ -24,21 +24,21 @@ function f(e, t) {
         useDisabled: n,
     });
 }
-let g = null;
+let h = null;
 function j() {
-    g = null;
+    h = null;
 }
 function p() {
-    u.A.fetchedConsents || null != g || (g = (0, a.Q)().then(j, j));
+    o.A.fetchedConsents || null != h || (h = (0, a.Q)().then(j, j));
 }
 var v = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
 function _(e) {
     i.useEffect(p, []);
     let t = d.tz.useSetting(),
         l = !d.JG.useSetting().includes(e),
-        { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
-            hasFetchedConsents: u.A.fetchedConsents,
-            hasPersonalizationConsent: u.A.hasConsented(h.YAq.PERSONALIZATION),
+        { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([o.A], () => ({
+            hasFetchedConsents: o.A.fetchedConsents,
+            hasPersonalizationConsent: o.A.hasConsented(f.YAq.PERSONALIZATION),
         })),
         r = null,
         c = !t || !l;
@@ -53,13 +53,13 @@ function _(e) {
         }
     );
 }
-function A(e) {
+function b(e) {
     let { guildId: t, useGuildSharingTitle: l, requirement: n } = e,
         i = [];
     return (
         ("activity_sharing" === n || "all" === n) &&
-            (i.push(c._), i.push(f(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
-        ("personalization" === n || "all" === n) && i.push(o._),
+            (i.push(c._), i.push(g(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
+        ("personalization" === n || "all" === n) && i.push(u._),
         i
     );
 }

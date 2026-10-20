@@ -1,4 +1,4 @@
-n.d(t, { Hy: () => p, hV: () => c, xf: () => r, yJ: () => d });
+n.d(t, { Hy: () => p, hV: () => c, xf: () => r, yJ: () => E });
 var i = n(666860),
     l = n(260498),
     u = n(246338),
@@ -74,7 +74,7 @@ function p(e, t) {
         error_details: s(r),
     });
 }
-function d(e, t) {
+function E(e, t) {
     let { entryPoint: n, publishState: u, surface: r, installScope: s, action: a } = t,
         c = l.Ay.getProject(e);
     (0, i.zV)(_.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {

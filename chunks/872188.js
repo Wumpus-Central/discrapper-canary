@@ -6,46 +6,46 @@ var n = l(477900),
     r = l(834730),
     d = l(821609),
     c = l(104129),
-    o = l(105292),
-    u = l(146108);
+    u = l(105292),
+    o = l(146108);
 function m(e) {
     let { onPublish: t } = e,
         [l, m] = i.useState(!1),
-        [x, h] = i.useState(!1),
-        f = i.useCallback(async () => {
-            (m(!0), h(!1));
+        [x, f] = i.useState(!1),
+        g = i.useCallback(async () => {
+            (m(!0), f(!1));
             try {
-                (await t(), s.O.announce(o.intl.string(c.default.pDzipI)));
+                (await t(), s.O.announce(u.intl.string(c.default.pDzipI)));
             } catch {
-                h(!0);
+                f(!0);
             } finally {
                 m(!1);
             }
         }, [t]);
     return (0, n.jsxs)("div", {
-        className: u.lm,
+        className: o.lm,
         children: [
-            (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
+            (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: o.Kk }),
             x
                 ? (0, n.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-feedback-critical",
-                      className: u.iU,
+                      className: o.iU,
                       role: "alert",
-                      children: o.intl.string(o.t.F8FvUy),
+                      children: u.intl.string(u.t.F8FvUy),
                   })
                 : (0, n.jsx)(r.E, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      className: u.iU,
-                      children: o.intl.string(c.default.Z2z85q),
+                      className: o.iU,
+                      children: u.intl.string(c.default.Z2z85q),
                   }),
             (0, n.jsx)(d.$, {
                 variant: "secondary",
                 size: "sm",
-                text: o.intl.string(c.default["yul+0g"]),
+                text: u.intl.string(c.default["yul+0g"]),
                 loading: l,
-                onClick: f,
+                onClick: g,
             }),
         ],
     });

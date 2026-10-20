@@ -1,24 +1,24 @@
-_.d(t, { C: () => I, a: () => O });
-var A = _(17928),
-    n = _(97352),
-    l = _(975571),
-    T = _(158045),
-    N = _(580630),
-    E = _(202541),
-    r = _(105292);
-function O(e) {
-    let t = "...",
-        _ = (0, A.bG)([n.A], () => n.A.isLoadedForSKU(E.pe.TIER_2));
-    if (-1 !== e.indexOf("{price}") && _)
+t.d(e, { C: () => R, a: () => O });
+var A = t(17928),
+    n = t(97352),
+    l = t(975571),
+    T = t(158045),
+    N = t(580630),
+    E = t(202541),
+    r = t(105292);
+function O(_) {
+    let e = "...",
+        t = (0, A.bG)([n.A], () => n.A.isLoadedForSKU(E.pe.TIER_2));
+    if (-1 !== _.indexOf("{price}") && t)
         try {
-            let e = T.Ay.getDefaultPrice(E.gD.PREMIUM_MONTH_TIER_2);
-            t = (0, N.$g)(e.amount, e.currency);
+            let _ = T.Ay.getDefaultPrice(E.gD.PREMIUM_MONTH_TIER_2);
+            e = (0, N.$g)(_.amount, _.currency);
         } catch {}
-    return e.replace(/\{price\}/g, t);
+    return _.replace(/\{price\}/g, e);
 }
-function I(e, t) {
-    let _ = e?.id != null && "" !== e.id ? e.id : t;
-    if ("" === _) return null;
-    let A = e?.linkText != null && "" !== e.linkText ? e.linkText : r.intl.string(r.t["sBp+u0"]);
-    return { url: l.A.getArticleURL(_), linkText: A };
+function R(_, e) {
+    let t = _?.id != null && "" !== _.id ? _.id : e;
+    if ("" === t) return null;
+    let A = _?.linkText != null && "" !== _.linkText ? _.linkText : r.intl.string(r.t["sBp+u0"]);
+    return { url: l.A.getArticleURL(t), linkText: A };
 }

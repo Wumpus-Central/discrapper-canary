@@ -41,8 +41,8 @@ let L = function (e) {
 };
 var m = n(769015),
     b = n(106191),
-    R = n(548118),
-    v = n(376943),
+    v = n(548118),
+    R = n(376943),
     U = n(636585),
     D = n(71393),
     y = n(994500),
@@ -100,7 +100,7 @@ class w extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: V._C,
-            children: (0, i.jsx)(R.Ay, { tabIndex: -1, guild: e, size: R.Ay.Sizes.MINI, className: V.$f }),
+            children: (0, i.jsx)(v.Ay, { tabIndex: -1, guild: e, size: v.Ay.Sizes.MINI, className: V.$f }),
         });
     }
     renderName() {
@@ -403,10 +403,10 @@ class Y extends l.Component {
         if (null != n.inviteCode)
             ((e = x.intl.string(x.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
-            let l = (0, v.vu)(n.path);
+            let l = (0, R.vu)(n.path);
             null == l || void 0 === l.messageId
                 ? ((e = x.intl.string(x.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, v.r9)(l)
+                : (0, R.r9)(l)
                   ? ((e = x.intl.string(x.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
                   : ((e = x.intl.string(x.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));
