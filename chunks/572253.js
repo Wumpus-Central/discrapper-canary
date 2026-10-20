@@ -348,9 +348,10 @@ function M(e) {
             matchSorterOptions: c,
         } = e,
         p = (0, A.TN)(i),
-        h = {
+        h = (0, A.Sj)(s, i, (e) => ({ id: e, value: e, label: e })),
+        g = {
             label: t.label,
-            options: (0, A.Sj)(s, i, (e) => ({ id: e, value: e, label: e })),
+            options: !0 === t.multiple ? (0, A.U5)(h, p) : h,
             placeholder: o,
             onQueryChange: d,
             matchSorterOptions: c,
@@ -362,8 +363,8 @@ function M(e) {
         className: w._6,
         children: [
             !0 === t.multiple
-                ? (0, l.jsx)(f.Z, { ...h, selectionMode: "multiple", value: p, onSelectionChange: (e) => a(e ?? []) })
-                : (0, l.jsx)(f.Z, { ...h, selectionMode: "single", value: p[0], onSelectionChange: (e) => a(e ?? "") }),
+                ? (0, l.jsx)(f.Z, { ...g, selectionMode: "multiple", value: p, onSelectionChange: (e) => a(e ?? []) })
+                : (0, l.jsx)(f.Z, { ...g, selectionMode: "single", value: p[0], onSelectionChange: (e) => a(e ?? "") }),
             null != n ? (0, l.jsx)(u.E, { variant: "text-xs/normal", color: "text-muted", children: n }) : null,
         ],
     });
