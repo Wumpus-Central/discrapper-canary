@@ -1124,8 +1124,8 @@ let e0 = { any: 100 },
     e2 = 30 * ek.A.Millis.SECOND,
     e3 = 120 * ek.A.Millis.SECOND,
     e5 = -1 !== (0, eZ.EL)();
-var e6 = (((l = {}).UserSSRCUpdate = "user-ssrc-update"), (l.Update = "update"), l);
-function e4(e) {
+var e4 = (((l = {}).UserSSRCUpdate = "user-ssrc-update"), (l.Update = "update"), l);
+function e6(e) {
     return (0, eS.isWeb)() ? { ...e1 } : { any: e };
 }
 class e7 extends g.A {
@@ -1142,7 +1142,7 @@ class e7 extends g.A {
     offscreenUsers = {};
     offscreenDisabledUsers = {};
     streamPixelCounts = {};
-    latestWants = e4(100);
+    latestWants = e6(100);
     participants = new Set();
     selectedParticipantId = null;
     delayedCall;
@@ -1239,7 +1239,7 @@ class e7 extends g.A {
         return function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                 n = e.getWantsLevel(),
-                i = e4(n),
+                i = e6(n),
                 r = i;
             ((0, eS.isWeb)() && (e.invertWants(i, n), e5 && (r = { ...i })), e.updateOffscreenUsers());
             let a = (0, eS.isDesktop)() && e.isOneToOneCall() && !e.isStageChannel;
@@ -1343,7 +1343,7 @@ class e7 extends g.A {
             (this.framesReceived = {}),
             (this.streamIds = {}),
             (this.streamPixelCounts = {}),
-            (this.latestWants = e4(100)),
+            (this.latestWants = e6(100)),
             eJ.X.off(eJ.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
     setSelectedParticipant(e) {
@@ -2995,6 +2995,7 @@ class ty extends g.A {
     _mlsFailures = [];
     _secureFramesTransitionStates = new Map();
     _secureFramesNextTransitionState;
+    _secureFramesLastExecutedTransitionId;
     _secureFramesMaxConcurrentTransitions = 0;
     _secureFramesTransitionPrepareCount = 0;
     _secureFramesTransitionExecuteCount = 0;
@@ -3100,14 +3101,14 @@ class ty extends g.A {
             case $.x.DEFAULT: {
                 const t = e_.A.getChannel(this.channelId)?.type === eM.rbe.GUILD_STAGE_VOICE;
                 ((this._localMediaSinkWantsManager = new e7(e, t, c)),
-                    this._localMediaSinkWantsManager.on(e6.Update, (e) => {
+                    this._localMediaSinkWantsManager.on(e4.Update, (e) => {
                         this.state === eM.S7L.RTC_CONNECTED &&
                             null != this._socket &&
                             (this.logger.info(`Media sink wants: ${JSON.stringify(e)}`),
                             this._socket.mediaSinkWants(e),
                             this._connection?.setLocalVideoSinkWants(e));
                     }),
-                    this._localMediaSinkWantsManager.on(e6.UserSSRCUpdate, (e, t, n) => {
+                    this._localMediaSinkWantsManager.on(e4.UserSSRCUpdate, (e, t, n) => {
                         this._connection?.createUser(e, t, n);
                     }));
                 break;
@@ -3837,6 +3838,7 @@ class ty extends g.A {
             (this._consecutiveMLSInvalidMessages = 0),
             this._secureFramesTransitionStates.clear(),
             (this._secureFramesNextTransitionState = void 0),
+            (this._secureFramesLastExecutedTransitionId = void 0),
             this._daveJoinTimer.socketLost(),
             (this._secureFramesMaxConcurrentTransitions = 0),
             (this._secureFramesTransitionPrepareCount = 0),
@@ -4676,8 +4678,10 @@ class ty extends g.A {
             this._socket?.secureFramesReadyForTransition(e),
             this._storeSecureFrameTransitionData(e, { readyTime: (0, N.tB)() }));
     }
-    _maybeTrackInitTransition(e) {
-        0 === e && this._trackSecureFrameTransition(e);
+    _maybeTrackPreparedTransition(e) {
+        e === this._secureFramesLastExecutedTransitionId
+            ? (this._daveJoinTimer.executed(e, !1), this._trackSecureFrameTransition(e))
+            : 0 === e && this._trackSecureFrameTransition(e);
     }
     _handleSecureFramesExecuteTransition(e) {
         (this.logger.info(`Executing DAVE protocol transition: ${e}`), this._secureFramesTransitionExecuteCount++);
@@ -4688,7 +4692,8 @@ class ty extends g.A {
         } catch (e) {
             ((n = !0), eC.A.captureException(e));
         }
-        (this._daveJoinTimer.executed(e, n),
+        ((this._secureFramesLastExecutedTransitionId = e),
+            this._daveJoinTimer.executed(e, n),
             this._storeSecureFrameTransitionData(e, {
                 executeReceivedTime: t,
                 executeFinishedTime: (0, N.tB)(),
@@ -4736,7 +4741,7 @@ class ty extends g.A {
                       this._handleSecureFramesRosterChange(s, e),
                       this._maybeSendSecureFramesTransitionReady(e),
                       this._daveJoinTimer.joinSucceeded(e, 0 === e),
-                      this._maybeTrackInitTransition(e))
+                      this._maybeTrackPreparedTransition(e))
                     : (this.logger.warn(`Failed to process MLS commit for transition ID ${e}`),
                       (this._mlsSessionResetStartTime = (0, N.tB)()),
                       this._flagMLSInvalidCommitWelcome(e) && this._handleSecureFramesInit(a)));
@@ -4760,7 +4765,7 @@ class ty extends g.A {
                       this._handleSecureFramesRosterChange(s, e),
                       this._maybeSendSecureFramesTransitionReady(e),
                       this._daveJoinTimer.joinSucceeded(e, 0 === e),
-                      this._maybeTrackInitTransition(e))
+                      this._maybeTrackPreparedTransition(e))
                     : ((this._mlsSessionResetStartTime = (0, N.tB)()),
                       this._flagMLSInvalidCommitWelcome(e) && this._sendMLSKeyPackage()));
         });
