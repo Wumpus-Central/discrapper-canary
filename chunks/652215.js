@@ -3606,6 +3606,7 @@ var i8 =
     (em.SAMSUNG = "samsung"),
     (em.CONTACTS = "contacts"),
     (em.INSTAGRAM = "instagram"),
+    (em.LETTERBOXD = "letterboxd"),
     (em.MASTODON = "mastodon"),
     (em.SOUNDCLOUD = "soundcloud"),
     (em.GITHUB = "github"),

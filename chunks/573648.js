@@ -441,6 +441,24 @@ let d = [
             },
         },
         {
+            type: l.fg2.LETTERBOXD,
+            name: "Letterboxd",
+            icon: {
+                lightPNG: n(106076),
+                darkPNG: n(367890),
+                whitePNG: n(600031),
+                lightSVG: n(81739),
+                darkSVG: n(124509),
+                whiteSVG: n(428304),
+            },
+            enabled: !0,
+            domains: ["letterboxd.com"],
+            getPlatformUserUrl: (e) => {
+                let { name: t } = e;
+                return `https://letterboxd.com/${encodeURIComponent(t)}/`;
+            },
+        },
+        {
             type: l.fg2.MASTODON,
             name: "Mastodon",
             icon: {
