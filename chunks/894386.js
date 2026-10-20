@@ -18,8 +18,7 @@ async function r(e) {
                         n.e("651585"),
                         n.e("216870"),
                         n.e("955628"),
-                        n.e("382040"),
-                        n.e("312287"),
+                        n.e("814306"),
                         n.e("324732"),
                         n.e("634225"),
                         n.e("60955"),
@@ -48,8 +47,8 @@ async function r(e) {
                         n.e("424265"),
                         n.e("258427"),
                         n.e("182045"),
-                        n.e("36368"),
-                    ]).then(n.bind(n, 463443));
+                        n.e("464370"),
+                    ]).then(n.bind(n, 442660));
                     return (n) => (0, o.jsx)(e, { ...n, bounty: t, sourceQuestContent: a });
                 },
                 { modalKey: "BOUNTY_VIDEO_MODAL" },

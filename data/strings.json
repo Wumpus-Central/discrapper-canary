@@ -19657,6 +19657,8 @@
   "CXlsRP": "Finish all Bounties for +{orbAmount, number} Orbs to unlock",
   "kJtgUW": "Finish all {productNamePlural} for +{orbAmount, number} Orbs to unlock",
   "uLjCfn": "We ran into an issue, refresh and retry.",
+  "45cddS": "{seconds, plural,one {# second}other {# seconds} of watch time left to earn Orbs",
+  "0F4Peo": "Orbs earned",
   "1kkbKw": "Start Earning Orbs!",
   "tG0zsk": "Swipe up",
   "eafsh4": "Swipe up to continue earning Orbs",
