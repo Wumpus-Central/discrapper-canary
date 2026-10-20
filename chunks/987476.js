@@ -92,9 +92,11 @@ function y(e) {
 }
 var T = l(441920);
 function k(e) {
-    let { graphic: t, title: l, subtitle: n } = e;
+    let { graphic: t, title: l, subtitle: n, minHeight: a } = e,
+        r = s.useMemo(() => (null != a ? { minHeight: `${a}px` } : void 0), [a]);
     return (0, i.jsxs)(N.B, {
         className: T.VH,
+        style: r,
         align: "center",
         justify: "center",
         gap: 16,
@@ -3248,6 +3250,7 @@ let nF = {
                 (t =
                     "edit" === r && null == n
                         ? (0, i.jsx)(k, {
+                              minHeight: 390,
                               graphic: (0, i.jsx)(o, { alt: "", ariaHidden: !0, width: 200 }),
                               title: E.intl.string(et.default.wqHke4),
                               subtitle: E.intl.string(et.default.n1sscC),
@@ -3377,6 +3380,7 @@ let nF = {
             let { widget: t, hydration: l, guildId: n, guildSpaceMode: s } = e;
             return "edit" === s && null == l
                 ? (0, i.jsx)(k, {
+                      minHeight: 273,
                       graphic: (0, i.jsx)(tw, { alt: "", ariaHidden: !0, width: 200 }),
                       title: E.intl.string(et.default.v59XPT),
                       subtitle: E.intl.string(et.default.Bayri1),
