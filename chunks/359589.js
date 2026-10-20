@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => b, FT: () => g, bR: () => m });
+n.d(t, { A: () => m, b: () => g });
 var l = n(477900),
     i = n(582128),
     r = n(691885),
@@ -11,23 +11,7 @@ var l = n(477900),
     f = n(261425),
     p = n(105292),
     h = n(944847);
-function g(e, t) {
-    let [n, l] = i.useState(null),
-        [r, a] = i.useState(e);
-    return (
-        e !== r && (a(e), l(null)),
-        [
-            n ?? e,
-            i.useCallback(
-                (e) => {
-                    (l(e), t(e));
-                },
-                [t],
-            ),
-        ]
-    );
-}
-function m(e) {
+function g(e) {
     let { settings: t, tiers: n, choices: u, disabled: d, onChange: c } = e,
         h = i.useMemo(
             () => u.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: o.oU[e.provider] })),
@@ -72,7 +56,7 @@ function m(e) {
         ],
     });
 }
-function b(e) {
+function m(e) {
     let { settings: t, tiers: n, choices: i, disabled: r, onChange: a } = e,
         o = d.P.indexOf(t.tier);
     return (0, l.jsxs)("div", {
@@ -127,7 +111,7 @@ function b(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(m, { settings: t, tiers: n, choices: i, disabled: r, onChange: a }),
+            (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: r, onChange: a }),
         ],
     });
 }
