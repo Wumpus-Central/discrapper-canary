@@ -1,1 +1,1 @@
-d.exports = { $: "fullBleedContent__10b71" };
+_.exports = { $: "fullBleedContent__10b71" };

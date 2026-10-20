@@ -1,7 +1,7 @@
-r.d(t, { S: () => s, Z: () => a });
-var n,
+n.d(t, { S: () => s, Z: () => a });
+var r,
     l,
-    s = (((n = {}).HOME = "home"), (n.COLLECTION_INDEX = "collection_index"), n),
+    s = (((r = {}).HOME = "home"), (r.COLLECTION_INDEX = "collection_index"), r),
     a =
         (((l = {}).INFO_BUTTON_CLICKED = "info_button_clicked"),
         (l.CLAIM_BUTTON_CLICKED = "claim_button_clicked"),

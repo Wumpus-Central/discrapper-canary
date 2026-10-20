@@ -1,39 +1,39 @@
-r.d(t, { HF: () => o, O8: () => u });
-var n = r(812095),
-    l = r(65238),
-    s = r(324157),
-    a = r(927812),
-    i = r(306396);
-function o(e, t) {
-    let r = (0, l.XF)(e);
-    if (null != r && null != t.categorySkuId && r.collectionId === t.categorySkuId) return r;
+n.d(t, { HF: () => i, O8: () => u });
+var r = n(812095),
+    l = n(65238),
+    s = n(324157),
+    a = n(927812),
+    o = n(306396);
+function i(e, t) {
+    let n = (0, l.XF)(e);
+    if (null != n && null != t.categorySkuId && n.collectionId === t.categorySkuId) return n;
 }
-function u(e, t, r, l) {
+function u(e, t, n, l) {
     var u, c, d;
-    let g,
-        h = o(e, t);
-    if (null == e || null == h) return t;
-    let m = (0, i.Q7)(h, r),
-        p = {
+    let p,
+        m = i(e, t);
+    if (null == e || null == m) return t;
+    let g = (0, o.Q7)(m, n),
+        h = {
             locale: l,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
-            helpCenterId: h.shared.helpCenter?.id,
+            helpCenterId: m.shared.helpCenter?.id,
         },
-        E = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, p)) : t.title,
-        _ = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, p)) : t.summary,
-        C =
-            null != m
-                ? ((u = m.rewardStates),
+        C = g?.title != null && "" !== g.title ? (0, r.U)((0, s.wJ)(g.title, h)) : t.title,
+        f = g?.description != null && "" !== g.description ? (0, r.U)((0, s.wJ)(g.description, h)) : t.summary,
+        E =
+            null != g
+                ? ((u = g.rewardStates),
                   (c = e.rewardStatus),
                   (d = e.progress?.current ?? 0),
-                  null != (g = (0, a.x)(u, c, d)?.heroUrl) && "" !== g ? g : void 0)
+                  null != (p = (0, a.x)(u, c, d)?.heroUrl) && "" !== p ? p : void 0)
                 : void 0;
     return {
         ...t,
-        title: E,
-        summary: _,
-        heroBannerUrl: C ?? t.heroBannerUrl,
+        title: C,
+        summary: f,
+        heroBannerUrl: E ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,
     };

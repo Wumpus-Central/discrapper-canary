@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     oE: "productsEmpty__70c55",
     ZE: "products__70c55",
     Ej: "paginationContainer__70c55",

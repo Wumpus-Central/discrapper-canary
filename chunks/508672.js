@@ -1,1 +1,1 @@
-d.exports = { f: "orbIconAligned__18bf6" };
+p.exports = { f: "orbIconAligned__18bf6" };

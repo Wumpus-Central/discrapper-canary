@@ -1,19 +1,19 @@
-r.d(t, { ST: () => u, TI: () => o, ty: () => c });
-var n = r(17928),
-    l = r(918467),
-    s = r(223311),
-    a = r(65238),
-    i = r(652215);
-function o() {
-    let e = (0, s.A)(i.FYj),
-        t = (0, n.bG)([l.A], () => l.A.getFetchState(i.FYj)),
-        r = null == t || ("loading" === t && null == e);
+n.d(t, { ST: () => u, TI: () => i, ty: () => c });
+var r = n(17928),
+    l = n(918467),
+    s = n(223311),
+    a = n(65238),
+    o = n(652215);
+function i() {
+    let e = (0, s.A)(o.FYj),
+        t = (0, r.bG)([l.A], () => l.A.getFetchState(o.FYj)),
+        n = null == t || ("loading" === t && null == e);
     return null == (0, a.XF)(e) || e?.rewardStatus == null
-        ? { promotion: null, isFetchingPromotion: r }
-        : { promotion: e, isFetchingPromotion: r };
+        ? { promotion: null, isFetchingPromotion: n }
+        : { promotion: e, isFetchingPromotion: n };
 }
 function u() {
-    return o().promotion;
+    return i().promotion;
 }
 function c(e) {
     let t = u();

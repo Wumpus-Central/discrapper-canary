@@ -1,25 +1,25 @@
-r.d(t, { A: () => o });
-var n = r(477900);
-r(582128);
-var l = r(331322),
-    s = r(297264),
-    a = r(821609),
-    i = r(105292);
-let o = function (e) {
-    let { onShopCollectionClick: t, className: r } = e;
-    return (0, n.jsxs)(l.B, {
+n.d(t, { A: () => i });
+var r = n(477900);
+n(582128);
+var l = n(331322),
+    s = n(297264),
+    a = n(821609),
+    o = n(105292);
+let i = function (e) {
+    let { onShopCollectionClick: t, className: n } = e;
+    return (0, r.jsxs)(l.B, {
         direction: "horizontal",
         justify: "space-between",
         align: "center",
-        className: r,
+        className: n,
         children: [
-            (0, n.jsx)(s.D, { variant: "heading-lg/semibold", children: i.intl.string(i.t.Pla5Vk) }),
+            (0, r.jsx)(s.D, { variant: "heading-lg/semibold", children: o.intl.string(o.t.Pla5Vk) }),
             null != t &&
-                (0, n.jsx)(a.$, {
+                (0, r.jsx)(a.$, {
                     variant: "overlay-primary",
                     size: "sm",
                     onClick: t,
-                    text: i.intl.string(i.t.xYKa1T),
+                    text: o.intl.string(o.t.xYKa1T),
                 }),
         ],
     });

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     pf: "inventory__1feb0",
     ne: "controls__1feb0",
     lQ: "controlsLeftSide__1feb0",

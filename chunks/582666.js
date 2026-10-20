@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kT: "filterBar__11877",
     KZ: "filterSection__11877",
     YG: "itemType__11877",

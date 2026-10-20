@@ -31,8 +31,8 @@ function b(e) {
         [o, b] = l.useState(() => new Set()),
         { ref: y, width: E } = (0, m.Ay)(),
         C = l.useRef(null),
-        S = (0, v.N)(t, i),
-        _ = (0, h.A)();
+        _ = (0, v.N)(t, i),
+        S = (0, h.A)();
     l.useEffect(() => {
         if (null == E) return;
         let e = new Set(),
@@ -51,10 +51,10 @@ function b(e) {
                 onClose: t,
                 "aria-label": "Overflowed DevTools Tabs",
                 onSelect: t,
-                children: [S, null != _ && (0, n.jsx)(c.rX, { "aria-label": "Playgrounds", children: _ })],
+                children: [_, null != S && (0, n.jsx)(c.rX, { "aria-label": "Playgrounds", children: S })],
             });
         },
-        [S, _],
+        [_, S],
     );
     return (0, n.jsxs)("div", {
         className: j.Mv,
@@ -98,7 +98,7 @@ function b(e) {
             (0, n.jsx)("div", {
                 className: j.MK,
                 children:
-                    (o.size > 0 || null != _) &&
+                    (o.size > 0 || null != S) &&
                     (0, n.jsx)(u.Y, {
                         targetElementRef: C,
                         layerContext: g.He,

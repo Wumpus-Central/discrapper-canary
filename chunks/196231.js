@@ -1,123 +1,123 @@
-r.d(t, { S: () => k });
-var n = r(477900),
-    l = r(582128),
-    s = r(503698),
-    a = r.n(s),
-    i = r(269115),
-    o = r(812993),
-    u = r(939249),
-    c = r(297264),
-    d = r(821609),
-    g = r(174459),
-    h = r(440938),
-    m = r(590180),
-    p = r(993408),
-    E = r(304210),
-    _ = r(597783),
-    C = r(347478),
-    v = r(325802),
-    L = r(212407),
-    f = r(758836),
-    I = r(652215),
-    S = r(105292),
-    A = r(105499);
-function x(e) {
-    let { skuId: t, unpublishedAt: r } = e,
-        l = (0, E.ty)(t),
-        s = (0, C.$)(l) ? l : null,
-        i = null;
+n.d(t, { S: () => k });
+var r = n(477900),
+    l = n(582128),
+    s = n(503698),
+    a = n.n(s),
+    o = n(269115),
+    i = n(812993),
+    u = n(939249),
+    c = n(297264),
+    d = n(821609),
+    p = n(174459),
+    m = n(440938),
+    g = n(590180),
+    h = n(993408),
+    C = n(304210),
+    f = n(597783),
+    E = n(347478),
+    v = n(325802),
+    x = n(212407),
+    y = n(758836),
+    _ = n(652215),
+    L = n(105292),
+    I = n(105499);
+function A(e) {
+    let { skuId: t, unpublishedAt: n } = e,
+        l = (0, C.ty)(t),
+        s = (0, E.$)(l) ? l : null,
+        o = null;
     return (
         null != s
-            ? (i = (0, n.jsx)(v.b, { promotion: s, className: a()(A.qr, A.Cz) }))
-            : (0, p.HF)(r) &&
-              (i = (0, n.jsx)(o.Lp, { disableColor: !0, text: S.intl.string(S.t["h/uBCR"]), className: A.qr })),
-        null != i ? (0, n.jsx)("div", { className: A.pv, children: i }) : null
+            ? (o = (0, r.jsx)(v.b, { promotion: s, className: a()(I.qr, I.Cz) }))
+            : (0, h.HF)(n) &&
+              (o = (0, r.jsx)(i.Lp, { disableColor: !0, text: L.intl.string(L.t["h/uBCR"]), className: I.qr })),
+        null != o ? (0, r.jsx)("div", { className: I.pv, children: o }) : null
     );
 }
 function k(e) {
     let {
             category: t,
-            subblock: r,
+            subblock: n,
             enablePreview: s,
-            pageType: o = f.G2.HOME,
-            className: p,
-            handleTransition: E,
-            listItemProps: C,
+            pageType: i = y.G2.HOME,
+            className: h,
+            handleTransition: C,
+            listItemProps: E,
         } = e,
-        v = r?.categorySkuId;
-    null == v && null != r && (v = m.A.getCategoryByStoreListingId(r?.categoryStoreListingId)?.skuId);
+        v = n?.categorySkuId;
+    null == v && null != n && (v = g.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
     let k = v ?? t?.skuId ?? "",
-        { handleCardVisibilityChange: y } = (0, _.Z)(k, o, "marketing featured block"),
-        O = (0, L.s4)(t, r, s),
-        N = l.useRef(null),
-        j = r?.bodyText,
-        T = r?.name ?? t?.name,
-        b = null != T ? S.intl.formatToPlainString(S.t.frSHlf, { destination: T }) : void 0,
-        B = (0, h.uM)();
-    return (0, n.jsx)(i.L, {
-        innerRef: N,
-        onChange: y,
+        { handleCardVisibilityChange: S } = (0, f.Z)(k, i, "marketing featured block"),
+        b = (0, x.s4)(t, n, s),
+        O = l.useRef(null),
+        j = n?.bodyText,
+        N = n?.name ?? t?.name,
+        w = null != N ? L.intl.formatToPlainString(L.t.frSHlf, { destination: N }) : void 0,
+        T = (0, m.uM)();
+    return (0, r.jsx)(o.L, {
+        innerRef: O,
+        onChange: S,
         threshold: 0,
-        children: (0, n.jsxs)(u.D, {
-            className: a()(A.oT, p),
-            innerRef: N,
-            style: { ...(null != O && { backgroundImage: `url(${O})` }) },
-            ...C,
+        children: (0, r.jsxs)(u.D, {
+            className: a()(I.oT, h),
+            innerRef: O,
+            style: { ...(null != b && { backgroundImage: `url(${b})` }) },
+            ...E,
             onClick: () => {
-                (E({
+                (C({
                     sourceButton: "shop marketing tile",
                     categorySkuId: k,
                     isInternalShopDeeplink: !0,
                     isOrbsExclusive: t?.isOrbsExclusive,
                 }),
-                    g.default.track(I.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: B?.sessionId,
+                    p.default.track(_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: T?.sessionId,
                         sku_id: k,
-                        page_type: o,
-                        page_section: B?.pageSection,
-                        page_category: B?.pageCategory,
+                        page_type: i,
+                        page_section: T?.pageSection,
+                        page_category: T?.pageCategory,
                         tile_type: "FEATURED_BLOCK",
-                        tile_position: String(B?.tilePosition),
+                        tile_position: String(T?.tilePosition),
                         cta_name: null,
                     }));
             },
             children: [
-                (0, n.jsx)(x, { skuId: k, unpublishedAt: r?.unpublishedAt ?? t?.unpublishedAt }),
-                (0, n.jsx)("div", {
-                    className: A.Gh,
+                (0, r.jsx)(A, { skuId: k, unpublishedAt: n?.unpublishedAt ?? t?.unpublishedAt }),
+                (0, r.jsx)("div", {
+                    className: I.Gh,
                     children:
                         null != j &&
-                        (0, n.jsx)(c.D, {
+                        (0, r.jsx)(c.D, {
                             lineClamp: 4,
-                            className: A.BN,
-                            style: { color: r?.bannerTextColor ?? "white" },
+                            className: I.BN,
+                            style: { color: n?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
                             children: j,
                         }),
                 }),
-                (0, n.jsx)("div", {
-                    className: A.b2,
-                    children: (0, n.jsx)(d.$, {
+                (0, r.jsx)("div", {
+                    className: I.b2,
+                    children: (0, r.jsx)(d.$, {
                         variant: "overlay-primary",
-                        text: S.intl.string(S.t.jVcuVY),
-                        "aria-label": b,
-                        tabIndex: C?.tabIndex,
+                        text: L.intl.string(L.t.jVcuVY),
+                        "aria-label": w,
+                        tabIndex: E?.tabIndex,
                         onClick: (e) => {
-                            (E({
+                            (C({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: k,
                                 isInternalShopDeeplink: !0,
                                 isOrbsExclusive: t?.isOrbsExclusive,
                             }),
                                 e.stopPropagation(),
-                                g.default.track(I.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                    collectibles_shop_session_id: B?.sessionId,
+                                p.default.track(_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                    collectibles_shop_session_id: T?.sessionId,
                                     sku_id: k,
-                                    page_type: o,
-                                    page_section: B?.pageSection,
-                                    page_category: B?.pageCategory,
+                                    page_type: i,
+                                    page_section: T?.pageSection,
+                                    page_category: T?.pageCategory,
                                     tile_type: "FEATURED_BLOCK",
-                                    tile_position: String(B?.tilePosition),
+                                    tile_position: String(T?.tilePosition),
                                     cta_name: "Take me there button",
                                 }));
                         },
