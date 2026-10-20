@@ -20,7 +20,7 @@ let x = {
     light: m(p.A.unsafe_rawColors.BLACK.resolve({ saturation: 1 }).hex()),
     dark: m(p.A.unsafe_rawColors.WHITE.resolve({ saturation: 1 }).hex()),
 };
-var _ = n(569926),
+var _ = n(454908),
     I = n(82149),
     N = n(174459),
     E = n(970928),

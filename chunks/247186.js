@@ -65,7 +65,7 @@ let Y = a.lazy(() =>
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
     J = RegExp("^" + z.st.source, z.st.flags);
-var Q = t(569926),
+var Q = t(454908),
     ee = t(266645);
 function en(e) {
     let { gameId: n, authorId: t } = e;

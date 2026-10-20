@@ -19,7 +19,7 @@ var n,
     E = l(590703),
     A = l(180170),
     I = l(583846),
-    N = l(569926),
+    N = l(454908),
     b = l(570962),
     S = l(38145),
     C = l(773669),
@@ -656,9 +656,9 @@ var e$ = l(435558),
     e0 = l(71393),
     e1 = l(309010),
     e8 = l(449054),
-    e2 = l(60465),
+    e4 = l(60465),
     e3 = l(311043),
-    e4 = l(636537),
+    e2 = l(636537),
     e6 = l(73153);
 let e5 = {};
 class e9 extends m.Ay.Store {
@@ -709,7 +709,7 @@ let e7 = new e9(e6.h, {
 async function tt(e) {
     e6.h.dispatch({ type: "DISCOVERABLE_GUILDS_FETCH_START", guildIds: e });
     try {
-        let t = await e4.Bo.get({
+        let t = await e2.Bo.get({
                 url: eL.Rsh.GUILD_DISCOVERY,
                 query: { guild_ids: e },
                 oldFormErrors: !0,
@@ -1240,7 +1240,7 @@ function t8(e) {
             }
             let e = e1.Ay.getCurrentlySelectedChannelId(t.id);
             null != e &&
-                e2.default.setGameProfilePendingReturn({
+                e4.default.setGameProfilePendingReturn({
                     gameId: n.id,
                     channelId: e,
                     tab: y.COMMUNITIES,
@@ -1258,7 +1258,7 @@ function t8(e) {
         onClick: u,
     });
 }
-function t2() {
+function t4() {
     var e;
     let t,
         l,
@@ -1308,7 +1308,7 @@ function t2() {
     });
 }
 var t3 = l(707554),
-    t4 = l(369606),
+    t2 = l(369606),
     t6 = l(775602),
     t5 = l(21161),
     t9 = l(400492),
@@ -1349,7 +1349,7 @@ function ls(e) {
     return (0, s.jsxs)("div", {
         className: ll.Qc,
         children: [
-            (0, s.jsx)(t4.TrophyIcon, { size: "xxs", color: "currentColor", "aria-hidden": "true" }),
+            (0, s.jsx)(t2.TrophyIcon, { size: "xxs", color: "currentColor", "aria-hidden": "true" }),
             (0, s.jsx)(W.E, {
                 variant: "text-xs/bold",
                 color: "none",
@@ -1617,13 +1617,13 @@ let lZ = /^#{1,3}\s+(.+)$/,
     l0 = /^https?:\/\/\S+$/;
 var l1 = l(158390),
     l8 = l(103348),
-    l2 = l(371794);
+    l4 = l(371794);
 let l3 = new Set(["700136079562375258", "1402418693958275202", "1402418696126992445", "1417993715611467826"]);
-async function l4(e) {
+async function l2(e) {
     e6.h.dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_START", collectionId: e });
     try {
         let t = (
-                await (0, l2.aP)({
+                await (0, l4.aP)({
                     url: eL.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(e),
                     query: { locale: C.default.locale, include_pricing: !0, with_bundled_skus: !0 },
                     rejectWithError: !1,
@@ -1638,7 +1638,7 @@ async function l4(e) {
     }
 }
 async function l6(e) {
-    let t = ((await e4.Bo.get({ url: eL.Rsh.SIMILAR_GAMES(e), rejectWithError: !0 })).body.similar_games ?? []).filter(
+    let t = ((await e2.Bo.get({ url: eL.Rsh.SIMILAR_GAMES(e), rejectWithError: !0 })).body.similar_games ?? []).filter(
         (t) => t !== e && !l3.has(t),
     );
     e6.h.dispatch({ type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: e, games: t });
@@ -1655,7 +1655,7 @@ async function l9(e, t) {
     try {
         let l = {};
         t?.limit != null && (l.limit = t.limit);
-        let n = (await e4.Bo.get({ url: eL.Rsh.GAME_ANNOUNCEMENTS(e), query: l, rejectWithError: !1 })).body;
+        let n = (await e2.Bo.get({ url: eL.Rsh.GAME_ANNOUNCEMENTS(e), query: l, rejectWithError: !1 })).body;
         e6.h.dispatch({
             type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS",
             gameId: e,
@@ -2148,7 +2148,7 @@ let nf = r.memo(function (e) {
             null != e &&
                 null != h &&
                 (o(T.GameProfileTrackActionActions.Announcements),
-                e2.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
+                e4.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
                 c(),
                 nn({ invite: i, guildId: e, channelId: h, analyticsLocationStack: l }));
         }, [o, c, t, i, x, h, l, u]),
@@ -2158,7 +2158,7 @@ let nf = r.memo(function (e) {
                 null != n &&
                     null != h &&
                     (o(T.GameProfileTrackActionActions.AnnouncementsItem),
-                    e2.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
+                    e4.default.setGameProfilePendingReturn({ gameId: u, channelId: h, initialScrollOffset: t() }),
                     c(),
                     nn({ invite: i, guildId: n, channelId: h, messageId: e, analyticsLocationStack: l }));
             },
@@ -2624,9 +2624,9 @@ var nq = l(635377),
     n0 = l(534573),
     n1 = l(248643),
     n8 = l(256905),
-    n2 = l(44788),
+    n4 = l(44788),
     n3 = l(191096),
-    n4 = l(90721),
+    n2 = l(90721),
     n6 = l(140128);
 function n5(e) {
     let { item: t, index: l } = e;
@@ -2706,7 +2706,7 @@ let n7 = new (nQ())({ max: 100 }),
             } = e,
             d = r.useRef(null);
         return (
-            (0, n4.A)({ videoRef: i, canvasRef: d, enabled: !l }),
+            (0, n2.A)({ videoRef: i, canvasRef: d, enabled: !l }),
             (0, s.jsxs)(s.Fragment, {
                 children: [
                     !l && (0, s.jsx)("canvas", { ref: d, className: n6.HW, "aria-hidden": "true" }),
@@ -2725,7 +2725,7 @@ let n7 = new (nQ())({ max: 100 }),
                             autoMute: !0,
                             useFullWidth: !0,
                             responsive: !0,
-                            renderLinkComponent: n2.bU,
+                            renderLinkComponent: n4.bU,
                             onPlay: c,
                             onPause: o,
                             onFullscreenChange: u,
@@ -2752,11 +2752,11 @@ function ii() {
     let f = r.useMemo(
             () => [
                 ...(e.trailers ?? []).map((e) => {
-                    let t = (0, l2.YE)(e.application_id, e.id, e.width, "mp4");
+                    let t = (0, l4.YE)(e.application_id, e.id, e.width, "mp4");
                     return {
                         url: t,
                         proxyUrl: t,
-                        poster: (0, l2.YE)(e.application_id, e.id, e.width, "webp"),
+                        poster: (0, l4.YE)(e.application_id, e.id, e.width, "webp"),
                         type: "VIDEO",
                         width: e.width,
                         height: e.height,
@@ -3501,7 +3501,7 @@ function iY() {
                     }));
                     return (
                         (0, r.useEffect)(() => {
-                            null == e || t || L.A.isShopCollectionFetching(e) || l4(e);
+                            null == e || t || L.A.isShopCollectionFetching(e) || l2(e);
                         }, [e, t]),
                         { skuIds: n ?? iP, hasFetched: t, isFetching: l }
                     );
@@ -3663,9 +3663,9 @@ function i1(e) {
     return (0, s.jsx)(K.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
 var i8 = l(349361),
-    i2 = l(924895),
+    i4 = l(924895),
     i3 = l(422688),
-    i4 = l(505200),
+    i2 = l(505200),
     i6 = l(695250);
 let i5 = function (e) {
     switch (e.category) {
@@ -3687,7 +3687,7 @@ let i5 = function (e) {
             };
         case nA.V.ROBLOX:
             return {
-                icon: i2.H,
+                icon: i4.H,
                 text: em.intl.string(em.t["pJ+P+h"]),
                 ariaLabel: em.intl.string(em.t.tYxpdf),
                 action: T.GameProfileTrackActionActions.RobloxStoreLink,
@@ -3703,7 +3703,7 @@ let i5 = function (e) {
             };
         case nA.V.RIOT:
             return {
-                icon: i4.A,
+                icon: i2.A,
                 text: em.intl.string(em.t.h6MapL),
                 ariaLabel: em.intl.string(em.t["528nvc"]),
                 action: T.GameProfileTrackActionActions.RiotStoreLink,
@@ -4275,7 +4275,7 @@ function aL(e) {
                                           isTwoColumn: F,
                                           analyticsLocations: K,
                                       }),
-                                  eI === y.COMMUNITIES && (0, s.jsx)(t2, {}),
+                                  eI === y.COMMUNITIES && (0, s.jsx)(t4, {}),
                                   eI === y.COMMERCE && (0, s.jsx)(aC, { applicationId: eS, selectedPageIndex: eT }),
                               ],
                           }),

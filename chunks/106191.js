@@ -3,7 +3,7 @@ var t = i(477900);
 i(582128);
 var d = i(109112),
     e = i(744700),
-    c = i(569926);
+    c = i(454908);
 function l(s) {
     let { game: a, iconClassName: i, allowFetch: l = !0 } = s,
         { id: n, icon: h } = a,
