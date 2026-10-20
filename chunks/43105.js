@@ -25,37 +25,39 @@ function p(e) {
             position: b,
             caretConfig: f,
             scrollBehavior: R,
-            ...S
+            trackTargetPosition: S,
+            ...w
         } = e,
-        w = n.useCallback(
+        y = n.useCallback(
             (e, t) => {
                 C?.(t);
             },
             [C],
         ),
-        y = n.useCallback(() => {
+        q = n.useCallback(() => {
             C?.("user:explicit");
         }, [C]),
-        q = {
-            targetElementRef: S.targetElementRef,
-            shouldShow: S.shouldShow,
-            hasVideo: S.hasVideo,
+        E = {
+            targetElementRef: w.targetElementRef,
+            shouldShow: w.shouldShow,
+            hasVideo: w.hasVideo,
             position: b,
             caretConfig: f,
-            onRequestClose: w,
+            onRequestClose: y,
             gradientColor: k,
             scrollBehavior: R,
-            ...("edge" === S.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: S.align }
+            trackTargetPosition: S,
+            ...("edge" === w.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: w.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, l.jsx)(o.x, {
-        ...q,
+        ...E,
         children: (0, l.jsxs)("div", {
             ref: v,
             "data-mana-component": "popover",
             children: [
-                (0, l.jsx)(g.q, { onClick: y, variant: null != k ? "color-mix" : void 0 }),
+                (0, l.jsx)(g.q, { onClick: q, variant: null != k ? "color-mix" : void 0 }),
                 null != p &&
                     (0, l.jsx)("div", {
                         className: s()(u.graphic, { [u[`graphic--${x}`]]: null != x }),

@@ -163,16 +163,17 @@ class O extends r.Component {
                 offset: l,
                 autoInvert: o,
                 fixed: d,
-                positionKey: c,
-                disablePointerEvents: A,
-                layerContext: h,
-                clickTrap: I = !1,
+                trackTargetPosition: c,
+                positionKey: A,
+                disablePointerEvents: h,
+                layerContext: I,
+                clickTrap: p = !1,
             } = this.props,
-            { isLoading: p, shouldShowLoadingState: T } = this.state;
-        return p && !T
+            { isLoading: T, shouldShowLoadingState: m } = this.state;
+        return T && !m
             ? null
             : (0, i.jsx)(u.Wd, {
-                  layerContext: h ?? f.uY,
+                  layerContext: I ?? f.uY,
                   children: (0, i.jsx)(N.Consumer, {
                       children: (u) =>
                           (0, i.jsx)(_.w, {
@@ -192,10 +193,11 @@ class O extends r.Component {
                                   offset: l,
                                   autoInvert: o,
                                   fixed: d,
-                                  positionKey: c,
-                                  disablePointerEvents: A,
+                                  trackTargetPosition: c,
+                                  positionKey: A,
+                                  disablePointerEvents: h,
                                   onPositionChange: this.handlePopoutPositionChange,
-                                  clickTrap: I && !this.state.isModalStackedOnTop,
+                                  clickTrap: p && !this.state.isModalStackedOnTop,
                                   children: this.renderPopout,
                               }),
                           }),
