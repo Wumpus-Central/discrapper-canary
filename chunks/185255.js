@@ -7272,10 +7272,12 @@ function ak(e) {
                                 className: aM.Hp,
                                 children: [
                                     f &&
-                                        (0, p.jsx)(ec.Lp, {
-                                            color: ea.A.unsafe_rawColors.YELLOW_300.css,
-                                            text: en.intl.string(en.t.vosPk5),
+                                        (0, p.jsx)("div", {
                                             className: aM.vW,
+                                            children: (0, p.jsx)(nY.E, {
+                                                type: { text: en.intl.string(en.t.vosPk5) },
+                                                variant: "warning",
+                                            }),
                                         }),
                                     j &&
                                         (0, p.jsx)("div", {

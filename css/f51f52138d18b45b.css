@@ -152,8 +152,7 @@
 }
 
 .paymentDueBadge__0ab43 {
-    color: var(--primary-860);
-    letter-spacing: .02em
+    display: flex
 }
 
 .pageDescription__8f372 {
@@ -166,4 +165,4 @@
     gap: 16px
 }
 
-/*# sourceMappingURL=3b15254232f0e4af.css.map*/
+/*# sourceMappingURL=f51f52138d18b45b.css.map*/

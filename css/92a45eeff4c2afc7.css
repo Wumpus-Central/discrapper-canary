@@ -199,12 +199,8 @@
     gap: 6px
 }
 
-.draftBadge_d7a3d0 {
-    color: var(--primary-860);
-    letter-spacing: .02em
-}
-
 .archivedBadge_d7a3d0,
+.draftBadge_d7a3d0,
 .unsavedBadge_d7a3d0 {
     display: flex
 }
@@ -256,4 +252,4 @@
     opacity: .5
 }
 
-/*# sourceMappingURL=36e874de972f1fad.css.map*/
+/*# sourceMappingURL=92a45eeff4c2afc7.css.map*/

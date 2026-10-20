@@ -8,8 +8,8 @@ d.exports = {
     wv: "starIcon_d7a3d0",
     me: "headerListingInfo_d7a3d0",
     Hp: "headerDescriptionContainer_d7a3d0",
-    vW: "draftBadge_d7a3d0",
     KR: "archivedBadge_d7a3d0",
+    vW: "draftBadge_d7a3d0",
     s7: "unsavedBadge_d7a3d0",
     rD: "pencilIcon_d7a3d0",
 };

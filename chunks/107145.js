@@ -10049,10 +10049,10 @@ let Ao = function (e) {
                                                     ? (0, p.jsx)(sd.m, {
                                                           text: U.intl.string(U.t.eSuJE2),
                                                           children: (0, p.jsx)("div", {
-                                                              children: (0, p.jsx)(mq.Lp, {
-                                                                  className: As.qc,
-                                                                  text: U.intl.string(U.t.NrRwIl),
-                                                                  color: n0.A.unsafe_rawColors.YELLOW_300.css,
+                                                              className: As.qc,
+                                                              children: (0, p.jsx)(mQ.E, {
+                                                                  type: { text: U.intl.string(U.t.NrRwIl) },
+                                                                  variant: "warning",
                                                               }),
                                                           }),
                                                       })
