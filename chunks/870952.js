@@ -117,10 +117,8 @@ function ek(e) {
                     (n?.(T.GameProfileTrackActionActions.Feedback),
                     (0, h.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            l.e("142753"),
                             l.e("250440"),
                             l.e("568035"),
-                            l.e("268582"),
                             l.e("733771"),
                             l.e("946039"),
                             l.e("55266"),

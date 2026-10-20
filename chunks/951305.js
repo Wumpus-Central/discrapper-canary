@@ -13,19 +13,19 @@ var r = n(477900),
     S = n(566980),
     G = n(315693),
     h = n(287809),
-    P = n(174459),
-    p = n(786300),
-    E = n(45938),
-    R = n(652215),
+    p = n(174459),
+    E = n(786300),
+    R = n(45938),
+    P = n(652215),
     M = n(202541),
     I = n(105292);
 let A = M.o2.STANDARD_BOX,
     v,
-    [C, _, k] = (0, p.A)();
+    [C, _, k] = (0, E.A)();
 function w(e) {
     let {
             isGift: t = !1,
-            giftRecipient: p,
+            giftRecipient: E,
             giftMessage: M,
             giftStyle: _,
             giftingOrigin: k,
@@ -35,10 +35,10 @@ function w(e) {
         B = (0, s.t4)((e) => e.selectedSkuId),
         [O, b] = u.useState(!1),
         [D, N] = u.useState(!1),
-        [T, L] = u.useState(p),
+        [T, L] = u.useState(E),
         [m, U] = u.useState(),
         [q, x] = u.useState(!1),
-        F = (0, E.Ik)(T),
+        F = (0, R.Ik)(T),
         J = v;
     F && (J = null != _ ? _ : A);
     let [X, Z] = u.useState(J),
@@ -46,7 +46,7 @@ function w(e) {
         $ = (0, d.JW)(),
         z = null != $ && $.length > 0,
         [V, W] = u.useState(
-            t && (0, E.lo)(T) === E.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == M ? I.intl.string(I.t.ZkOo1U) : M,
+            t && (0, R.lo)(T) === R.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == M ? I.intl.string(I.t.ZkOo1U) : M,
         ),
         [K, Q] = u.useState(void 0),
         [Y, ee] = u.useState(void 0),
@@ -88,7 +88,7 @@ function w(e) {
     u.useEffect(() => {
         t && et && (0, l.o0)(i.$.GIFTING);
     }, [t, et]);
-    let eu = (0, E.Vt)(B, t),
+    let eu = (0, R.Vt)(B, t),
         [ei, el] = u.useState(!1),
         [es, ea] = u.useState(!1),
         [ec, ed] = u.useState(),
@@ -115,7 +115,7 @@ function w(e) {
         if (0 === e.length) return;
         let t = h.default.getCurrentUser();
         for (let n of e)
-            (P.default.track(R.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: n }),
+            (p.default.track(P.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: n }),
                 ef.current.add(n));
     }, [j, z]);
     let eg = u.useMemo(
@@ -123,8 +123,8 @@ function w(e) {
             isGift: t,
             isRecurringGift: O,
             setIsRecurringGift: b,
-            hasAppliedRecurringGiftDefaultPlan: D,
-            setHasAppliedRecurringGiftDefaultPlan: N,
+            hasAppliedRecurringGiftDefaults: D,
+            setHasAppliedRecurringGiftDefaults: N,
             giftCode: eu,
             giftMessage: M,
             giftRecipient: T,
@@ -160,23 +160,23 @@ function w(e) {
 let y = {
     isGift: !1,
     isRecurringGift: !1,
-    setIsRecurringGift: R.tEg,
-    hasAppliedRecurringGiftDefaultPlan: !1,
-    setHasAppliedRecurringGiftDefaultPlan: R.tEg,
-    setGiftRecipient: R.tEg,
-    setGiftRecipientError: R.tEg,
-    setValidatingGiftRecipient: R.tEg,
+    setIsRecurringGift: P.tEg,
+    hasAppliedRecurringGiftDefaults: !1,
+    setHasAppliedRecurringGiftDefaults: P.tEg,
+    setGiftRecipient: P.tEg,
+    setGiftRecipientError: P.tEg,
+    setValidatingGiftRecipient: P.tEg,
     selectedGiftStyle: void 0,
-    setSelectedGiftStyle: R.tEg,
+    setSelectedGiftStyle: P.tEg,
     giftCode: null,
-    sendGiftMessage: R.tEg,
+    sendGiftMessage: P.tEg,
     hasSentMessage: !1,
     isSendingMessage: !1,
     giftMessageError: void 0,
     claimableRewards: void 0,
     selectedGiftingPromotionRewards: [],
-    setSelectedGiftingPromotionRewards: R.tEg,
-    openGiftingBadgePostPurchaseModal: R.tEg,
+    setSelectedGiftingPromotionRewards: P.tEg,
+    openGiftingBadgePostPurchaseModal: P.tEg,
     canShowGiftingBadgePostPurchase: !1,
 };
 function B(e) {

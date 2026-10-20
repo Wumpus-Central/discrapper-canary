@@ -11,7 +11,7 @@ var l = n(477900),
     m = n(123816),
     p = n(511484),
     h = n(387278),
-    C = n(472468),
+    C = n(173133),
     f = n(738869),
     E = n(773669),
     S = n(97352),
@@ -19,8 +19,8 @@ var l = n(477900),
     I = n(580630),
     y = n(202541),
     A = n(105292),
-    P = n(649975),
-    x = n(904541);
+    x = n(649975),
+    P = n(904541);
 function v(e) {
     let {
             selectedPlanId: t,
@@ -56,11 +56,11 @@ function v(e) {
                 premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
             };
         }, [H, B, V]),
-        q = i.useMemo(
+        Z = i.useMemo(
             () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: v, trialPeriodCopy: G }) : b),
             [N, F, U, v, G, b],
         ),
-        Z = i.useMemo(() => (r.length > 0 ? y.hd[r[0]].premiumType : void 0), [r]),
+        q = i.useMemo(() => (r.length > 0 ? y.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, m.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         $ = i.useCallback(
             (e) => {
@@ -75,7 +75,7 @@ function v(e) {
                     isEligibleForDiscount: r,
                     priceOptions: u,
                     isEligibleForTrial: d,
-                    isEligibleForBOGOPromotion: x,
+                    isEligibleForBOGOPromotion: P,
                     showPlanStatusSubText: v,
                     isInPlanSelectStep: _,
                 } = t,
@@ -104,7 +104,7 @@ function v(e) {
                             w = (0, g.y8)(e, !1, N, u),
                             D = (0, f.gS)(T, b, {
                                 userLocale: j,
-                                isEligibleForBOGOPromotion: x,
+                                isEligibleForBOGOPromotion: P,
                                 shouldShowSavingsPercent: k,
                                 isGift: N,
                                 planId: e,
@@ -136,13 +136,13 @@ function v(e) {
                                 !d &&
                                 ((0, p.p2)(R)
                                     ? b.interval === y.WT.YEAR
-                                        ? (t = A.intl.format(P.default.ODKoJd, { percent: L ?? "" }))
+                                        ? (t = A.intl.format(x.default.ODKoJd, { percent: L ?? "" }))
                                         : b.interval === y.WT.MONTH &&
                                           (null != B &&
                                               (F = A.intl.format(A.t.hXcaLT, {
                                                   price: (0, I.$g)(w.amount - B, w.currency),
                                               })),
-                                          (t = A.intl.format(P.default.JsSin7, {
+                                          (t = A.intl.format(x.default.JsSin7, {
                                               priceRate: (0, I.CE)(G, b.interval, b.intervalCount),
                                               intervalCount: R.discount.intervalCount,
                                           })))
@@ -152,7 +152,7 @@ function v(e) {
                                       ((F = A.intl.format(A.t.hXcaLT, { price: (0, I.$g)(w.amount - B, w.currency) })),
                                       (i = G),
                                       (t = A.intl.format(A.t.VZ8Tvh, { regularPrice: G })),
-                                      (o = A.intl.formatToPlainString(P.default.nsG1jw, {
+                                      (o = A.intl.formatToPlainString(x.default.nsG1jw, {
                                           savingsText: (0, s.l9)(j, parseInt(R.discount.amount) / 100),
                                       })))),
                             v &&
@@ -177,7 +177,7 @@ function v(e) {
                                 userLocale: j,
                                 discountOffer: R,
                                 savingsPercent: L,
-                                shouldHideSavingsBadge: null != T || null != R || x,
+                                shouldHideSavingsBadge: null != T || null != R || P,
                             }),
                         });
                         return {
@@ -191,7 +191,7 @@ function v(e) {
                             isDisabled: E || n,
                         };
                     }),
-                [l, e, r, u, d, x, v, _, T, O, M, R, N, j, n],
+                [l, e, r, u, d, P, v, _, T, O, M, R, N, j, n],
             );
         })(r, {
             disabled: T,
@@ -203,15 +203,15 @@ function v(e) {
             showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
-    return null == Z
+    return null == q
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   Y &&
-                      (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: x.S, children: K }),
+                      (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: P.S, children: K }),
                   (0, l.jsx)(d.me, {
-                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
-                      headingSubText: q,
+                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
+                      headingSubText: Z,
                       planRadioOptions: J,
                       value: R?.id ?? "",
                       onChange: $,
@@ -225,7 +225,7 @@ function v(e) {
                             shouldShowTrialOrDiscountLayout: D,
                             showTotal: N,
                             shouldShowTotalInSubscriptionFlow: w,
-                            previewTotalSectionClassName: x.$,
+                            previewTotalSectionClassName: P.$,
                         })
                       : null,
               ],
