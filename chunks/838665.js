@@ -313,8 +313,8 @@ function e6(e) {
 }
 var e8 = n(562708),
     e5 = n(702841),
-    e2 = n(139286),
-    e7 = n(468689),
+    e7 = n(139286),
+    e2 = n(468689),
     e4 = n(105292),
     e9 = n(330766);
 function te(e) {
@@ -325,7 +325,7 @@ function te(e) {
             return null != n && (0, eh.bM)(n, e);
         });
     return (
-        (0, e2.A)({
+        (0, e7.A)({
             type: e8.ImpressionTypes.POPOUT,
             name: e8.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -340,7 +340,7 @@ function te(e) {
                     text: e4.intl.string(e4.t.OgQQbG),
                     variant: "primary",
                     onClick: function () {
-                        e7.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
+                        e2.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
                     },
                 },
             ],
@@ -361,7 +361,7 @@ function tt(e) {
             text: e4.intl.string(e4.t.BQq86h),
             variant: "primary",
             onClick: function () {
-                e7.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                e2.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
         },
         onRequestClose: () => n(el.i.USER_DISMISS),
@@ -403,7 +403,7 @@ function ta(e) {
                 text: e4.intl.string(e4.t["9l+df7"]),
                 variant: "primary",
                 onClick: function (e) {
-                    e7.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
+                    e2.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
                 },
             },
         ],
@@ -781,8 +781,8 @@ var tY = n(503698),
     t6 = n(47167),
     t8 = n(713654),
     t5 = n(976860),
-    t2 = n(747376),
-    t7 = n(110618),
+    t7 = n(747376),
+    t2 = n(110618),
     t4 = n(280450),
     t9 = n(309010),
     ne = n(312006),
@@ -1042,7 +1042,7 @@ function nC(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t2.av)(t), (0, t5.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t5.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1122,7 +1122,7 @@ function nN(e) {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nc.c8,
-                                    children: (0, t7.c)(o, d, n?.id, i.length),
+                                    children: (0, t2.c)(o, d, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1220,7 +1220,7 @@ function nR(e) {
         type: j.n5X.COMMANDS_MIGRATION,
         image: "/assets/ab63b30e9bc8855c.svg",
         onClick: () => {
-            (n(), e7.A.open(t.id, j.BEX.INTEGRATIONS));
+            (n(), e2.A.open(t.id, j.BEX.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22,
@@ -1265,7 +1265,7 @@ function nD(e) {
               type: j.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: "/assets/eaaec668caed688e.svg",
               onClick: () => {
-                  (r(), e7.A.open(n.id, j.BEX.INTEGRATIONS));
+                  (r(), e2.A.open(n.id, j.BEX.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,
@@ -1282,7 +1282,7 @@ let nG = function (e) {
     return (0, s.jsx)(tb, {
         guild: t,
         onDismissed: n,
-        onClick: () => e7.A.open(t.id, j.BEX.COMMUNITY),
+        onClick: () => e2.A.open(t.id, j.BEX.COMMUNITY),
         message: e4.intl.string(e4.t["2klD0Z"]),
         trackingSource: j.kZU.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: j.n5X.PUBLIC_UPSELL,
@@ -1454,8 +1454,8 @@ let n0 = new nJ(m.h),
 function n5(e) {
     e.stopPropagation();
 }
-let n2 = [];
-function n7(e) {
+let n7 = [];
+function n2(e) {
     var t, n;
     let i,
         r,
@@ -1478,7 +1478,7 @@ function n7(e) {
             (c = d && u),
             l.useMemo(() => {
                 let e = [];
-                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n2);
+                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n7);
             }, [c])),
         [g, I] = (0, Z.ww)(m, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
@@ -1542,7 +1542,7 @@ let n4 = function (e) {
         case z.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, s.jsx)(nD, { guild: t });
     }
-    return nb.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n7, { guild: e.guild });
+    return nb.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n2, { guild: e.guild });
 };
 var n9 = n(883476);
 function ie(e) {
@@ -1638,7 +1638,7 @@ class ia extends l.PureComponent {
                     n.e("816027"),
                     n.e("562772"),
                     n.e("8159"),
-                    n.e("52283"),
+                    n.e("774723"),
                     n.e("361922"),
                     n.e("179028"),
                     n.e("403032"),
@@ -2665,8 +2665,8 @@ function io(e) {
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e2 = (0, eR.Dq)(G) && !e5,
-        e7 = (function (e) {
+        e7 = (0, eR.Dq)(G) && !e5,
+        e2 = (function (e) {
             let t = (0, es.c)(ei.C.GUILD_HEADER_COACHMARK),
                 n =
                     null != t && "guildHeaderCoachmark" === t.properties.properties.oneofKind
@@ -2685,34 +2685,34 @@ function io(e) {
                 coachmark: n,
                 markAsDismissed: l,
             };
-        })(e2 ? null : L),
-        [e4, e9] = (0, Z.kn)(e2 ? [] : e8, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
-        [te, tt] = (0, ex.vB)(eQ && !1 === eY && !(0, $.ai)(L) && !e2, el.m.GUILD_HEADER_TOOLTIPS),
+        })(e7 ? null : L),
+        [e4, e9] = (0, Z.kn)(e7 ? [] : e8, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [te, tt] = (0, ex.vB)(eQ && !1 === eY && !(0, $.ai)(L) && !e7, el.m.GUILD_HEADER_TOOLTIPS),
         [tn, ti] = (0, Z.D8)(
-            e1 && !e2 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e1 && !e7 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,
             { cooldownDurationMs: eL.bW, numTimesToRecur: 5 },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ts, tl] = (0, Z.D8)(
-            e6 && !e2 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e6 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             L,
             { cooldownDurationMs: eL.mD },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         tr = l.useMemo(
             () =>
-                e7.shouldShow && null != e7.coachmark
+                e2.shouldShow && null != e2.coachmark
                     ? {
                           contentType: o.M.GUILD_HEADER_COACHMARK,
                           data: {
                               marketingComponent: {
-                                  componentId: e7.componentId,
-                                  promotionId: e7.promotionId,
-                                  coachmark: e7.coachmark,
+                                  componentId: e2.componentId,
+                                  promotionId: e2.promotionId,
+                                  coachmark: e2.coachmark,
                               },
                           },
-                          markAsDismissed: e7.markAsDismissed,
+                          markAsDismissed: e2.markAsDismissed,
                       }
                     : null != e4
                       ? { contentType: e4, data: null, markAsDismissed: e9 }
@@ -2724,11 +2724,11 @@ function io(e) {
                             ? { contentType: ts, data: { featuredExpiringPowerup: e3 }, markAsDismissed: tl }
                             : null,
             [
-                e7.shouldShow,
-                e7.coachmark,
-                e7.componentId,
-                e7.promotionId,
-                e7.markAsDismissed,
+                e2.shouldShow,
+                e2.coachmark,
+                e2.componentId,
+                e2.promotionId,
+                e2.markAsDismissed,
                 e4,
                 te,
                 tn,
@@ -2757,7 +2757,7 @@ function io(e) {
         hasChannelNotice: null != V || X,
         anyLayerOpen: K || F || W,
         showGuildHeaderTutorial: z,
-        showPriorityHeaderNotice: e2,
+        showPriorityHeaderNotice: e7,
         showGuildTemplateDirtyTooltip: eg,
         showNewUnreadsBar: e_,
         isHeaderPopoutOpen: eC,
