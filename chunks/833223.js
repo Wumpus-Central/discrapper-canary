@@ -1,53 +1,54 @@
-l.d(t, { A: () => A });
+l.d(t, { A: () => j });
 var n = l(477900),
-    i = l(477782),
-    a = l(163328),
-    s = l(582128),
-    r = l(17928),
+    a = l(477782),
+    i = l(192308),
+    s = l(163328),
+    r = l(582128),
+    u = l(17928),
     c = l(287809),
-    u = l(181079),
-    o = l(16236),
-    d = l(384539),
-    b = l(105292),
-    f = l(952270),
-    g = l(72152),
-    h = l(976860),
-    p = l(967198),
-    v = l(5180),
-    x = l(652215),
-    y = l(241326),
-    k = l(885386);
-function A() {
+    o = l(181079),
+    d = l(16236),
+    b = l(384539),
+    f = l(105292),
+    g = l(952270),
+    h = l(72152),
+    p = l(976860),
+    x = l(967198),
+    y = l(5180),
+    v = l(652215),
+    k = l(241326),
+    A = l(885386);
+function j() {
     let e = (function () {
             let e,
                 t,
                 l,
                 {
-                    isAvailable: f,
+                    isAvailable: i,
                     isEnabled: g,
                     label: h,
                     subLabel: p,
-                    toggle: v,
-                } = ((e = (0, r.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1)),
-                (t = (0, r.bG)([u.A], () => u.A.autoAddJoinedThreads)),
-                (l = s.useCallback(() => {
-                    e && (0, o.Ub)(!t);
+                    toggle: x,
+                } = ((e = (0, u.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1)),
+                (t = (0, u.bG)([o.A], () => o.A.autoAddJoinedThreads)),
+                (l = r.useCallback(() => {
+                    e && (0, d.Ub)(!t);
                 }, [e, t])),
                 {
                     isAvailable: e,
                     isEnabled: t,
-                    label: b.intl.string(d.default.DIyQIF),
-                    subLabel: b.intl.string(d.default.g2vHYJ),
+                    label: f.intl.string(b.default.DIyQIF),
+                    subLabel: f.intl.string(b.default.g2vHYJ),
                     toggle: l,
                 });
-            return f
-                ? (0, n.jsx)(i.sL, {
+            return i
+                ? (0, n.jsx)(a.sL, {
                       id: "favorites-auto-added-threads",
                       label: h,
                       subtext: p,
                       checked: g,
-                      leadingAccessory: { type: "icon", icon: a.y },
-                      action: v,
+                      leadingAccessory: { type: "icon", icon: s.y },
+                      action: x,
                   })
                 : null;
         })(),
@@ -56,58 +57,80 @@ function A() {
                 {
                     label: t,
                     subLabel: l,
-                    perform: a,
-                } = ((e = s.useCallback(() => {
-                    ((0, o.tV)(!1, "server_context_menu"), (0, v.ai)(p.A.getGuildId()) && (0, h.pX)(x.BVt.ME));
+                    perform: i,
+                } = ((e = r.useCallback(() => {
+                    ((0, d.tV)(!1, "server_context_menu"), (0, y.ai)(x.A.getGuildId()) && (0, p.pX)(v.BVt.ME));
                 }, [])),
-                { label: b.intl.string(d.default["8FO0y9"]), subLabel: b.intl.string(d.default.FaHxWl), perform: e });
-            return (0, n.jsx)(i.Dr, {
+                { label: f.intl.string(b.default["8FO0y9"]), subLabel: f.intl.string(b.default.FaHxWl), perform: e });
+            return (0, n.jsx)(a.Dr, {
                 id: "hide-favorites",
                 label: t,
                 subtext: l,
                 color: "danger",
-                icon: f.EyeSlashIcon,
-                leadingAccessory: { type: "icon", icon: f.EyeSlashIcon },
+                icon: g.EyeSlashIcon,
+                leadingAccessory: { type: "icon", icon: g.EyeSlashIcon },
                 action: function () {
-                    ((0, g.Z)(!1), a());
+                    ((0, h.Z)(!1), i());
                 },
             });
         })(),
-        l = (function () {
+        j = (function () {
             let e,
                 t,
                 {
                     isAvailable: l,
-                    label: a,
-                    subLabel: r,
-                    perform: c,
-                } = ((e = k.Q_.useSetting()),
-                (t = s.useCallback(() => {
-                    ((0, v.ai)(p.A.getGuildId()) && (0, h.pX)(x.BVt.ME), (0, o.uM)());
+                    label: i,
+                    subLabel: s,
+                    perform: u,
+                } = ((e = A.Q_.useSetting()),
+                (t = r.useCallback(() => {
+                    ((0, y.ai)(x.A.getGuildId()) && (0, p.pX)(v.BVt.ME), (0, d.uM)());
                 }, [])),
                 {
                     isAvailable: e,
-                    label: b.intl.string(d.default.YkET6R),
-                    subLabel: b.intl.string(d.default.ZzcwNk),
+                    label: f.intl.string(b.default.YkET6R),
+                    subLabel: f.intl.string(b.default.ZzcwNk),
                     perform: t,
                 });
             return l
-                ? (0, n.jsx)(i.Dr, {
+                ? (0, n.jsx)(a.Dr, {
                       id: "reset-favorites",
-                      label: a,
-                      subtext: r,
+                      label: i,
+                      subtext: s,
                       color: "danger",
-                      icon: y.TrashIcon,
-                      leadingAccessory: { type: "icon", icon: y.TrashIcon },
+                      icon: k.TrashIcon,
+                      leadingAccessory: { type: "icon", icon: k.TrashIcon },
                       action: function () {
-                          ((0, g.Z)(!1), c());
+                          ((0, h.Z)(!1), u());
                       },
                   })
                 : null;
         })();
     return [
-        null != e ? (0, n.jsx)(i.rX, { children: e }, "favorites-settings") : null,
-        (0, n.jsx)(i.rX, { children: t }, "favorites-actions"),
-        null != l ? (0, n.jsx)(i.rX, { children: l }, "favorites-developer") : null,
+        null != e
+            ? (0, n.jsxs)(
+                  a.rX,
+                  {
+                      children: [
+                          e,
+                          (0, n.jsx)(a.Dr, {
+                              id: "favorites-cleanup-threads",
+                              label: f.intl.string(b.default.O2NG67),
+                              action: () => {
+                                  (0, i.openModalLazy)(async () => {
+                                      let { default: e } = await Promise.all([l.e("428235"), l.e("136147")]).then(
+                                          l.bind(l, 213086),
+                                      );
+                                      return (t) => (0, n.jsx)(e, { ...t });
+                                  });
+                              },
+                          }),
+                      ],
+                  },
+                  "favorites-settings",
+              )
+            : null,
+        (0, n.jsx)(a.rX, { children: t }, "favorites-actions"),
+        null != j ? (0, n.jsx)(a.rX, { children: j }, "favorites-developer") : null,
     ];
 }
