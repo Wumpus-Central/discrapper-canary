@@ -159,7 +159,6 @@
   "COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH": "/users/@me/valid-collectibles-gift-recipients-batch",
   "COLLECTIBLES_MARKETING": "/users/@me/collectibles-marketing",
   "COLLECTIBLES_SHOP": "/collectibles-shop",
-  "COLLECTIBLES_SHOP_TAB_LAYOUT": "/collectibles-shop-tab-layouts/:param",
   "GUILD_MEMBER_BANNER": "/guilds/:param/users/:param/banners/:param./:param",
   "SMART_SEARCH": "/guilds/:param/intelligence/search",
   "SUGGESTED_SEARCHES": "/guilds/:param/intelligence/search/suggestions",

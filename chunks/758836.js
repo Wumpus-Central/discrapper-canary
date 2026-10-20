@@ -67,7 +67,6 @@ var N =
     (s.COLLABS = "collabs"),
     (s.OFFER_ELIGIBLE = "offer-eligible"),
     (s.PROMOTION = "promotion"),
-    (s.LAYOUT = "layout"),
     (s.COLLECTION_INDEX = "collection-index"),
     (s.GAME_SHOPS = "game-shops"),
     (s.GAME_SERVERS = "game-servers"),

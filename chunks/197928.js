@@ -4,14 +4,14 @@ var S,
     O,
     R,
     N,
-    u,
     c,
+    u,
     L,
     d,
     C,
-    p,
-    g = E(214958),
-    D = E.n(g);
+    g,
+    p = E(214958),
+    D = E.n(p);
 function P() {
     let e = window;
     return (
@@ -237,7 +237,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("643557", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("643560", 10))) || (I.client_build_number = s),
     null == (a = $?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -728,27 +728,26 @@ var eI =
         (N.RELEVANCE = "relevance"),
         N),
     eT =
-        (((u = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
-        (u.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
-        (u.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
-        u),
+        (((c = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
+        (c.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
+        (c.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        c),
     eO =
-        (((c = {}).HOME = "home"),
-        (c.CATALOG = "catalog"),
-        (c.ORBS = "orbs"),
-        (c.AVATAR_DECORATIONS = "avatar-decorations"),
-        (c.PROFILE_EFFECTS = "profile-effects"),
-        (c.NAMEPLATES = "nameplates"),
-        (c.PROFILE_FRAMES = "profile-frames"),
-        (c.BUNDLES = "bundles"),
-        (c.COLLABS = "collabs"),
-        (c.OFFER_ELIGIBLE = "offer-eligible"),
-        (c.PROMOTION = "promotion"),
-        (c.LAYOUT = "layout"),
-        (c.COLLECTION_INDEX = "collection-index"),
-        (c.GAME_SHOPS = "game-shops"),
-        (c.GAME_SERVERS = "game-servers"),
-        c);
+        (((u = {}).HOME = "home"),
+        (u.CATALOG = "catalog"),
+        (u.ORBS = "orbs"),
+        (u.AVATAR_DECORATIONS = "avatar-decorations"),
+        (u.PROFILE_EFFECTS = "profile-effects"),
+        (u.NAMEPLATES = "nameplates"),
+        (u.PROFILE_FRAMES = "profile-frames"),
+        (u.BUNDLES = "bundles"),
+        (u.COLLABS = "collabs"),
+        (u.OFFER_ELIGIBLE = "offer-eligible"),
+        (u.PROMOTION = "promotion"),
+        (u.COLLECTION_INDEX = "collection-index"),
+        (u.GAME_SHOPS = "game-shops"),
+        (u.GAME_SERVERS = "game-servers"),
+        u);
 (Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",
     FRACTIONAL_PREMIUM: eT.PREMIUM_TIER_2_3_DAY,
@@ -777,8 +776,8 @@ var eR = (((L = {}).ABOUT = "about"), (L.STORE = "store"), L),
         (d.STORE = "store"),
         (d.PRIVACY = "privacy"),
         d);
-let eu = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
-    ec = Q(
+let ec = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
+    eu = Q(
         Object.freeze({
             INDEX: "/",
             APP: "/app",
@@ -950,7 +949,6 @@ let eu = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             COLLECTIBLES_SHOP_WITH_TAB: (e) => `/shop?tab=${e}`,
             COLLECTIBLES_SHOP_COLLECTION_DETAIL: (e) => `/shop/collection/${e}`,
             COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => `/shop/product/${e}`,
-            COLLECTIBLES_SHOP_LAYOUT: (e) => `/shop/layout/${e}`,
             NITRO_HOME: "/store",
             ACCOUNT_STANDING: "/account-standing",
             CHANNEL_SUMMARIES: (e) => `/channels/${e}/summaries`,
@@ -1015,18 +1013,18 @@ function ed(e, t) {
     HAS_ONLY_SYSTEM_MESSAGES: 8388608,
 }),
     Object.values(
-        (((p = {}).GUILD_HOME = "home"),
-        (p.SERVER_GUIDE = "guide"),
-        (p.CHANNEL_BROWSER = "browse"),
-        (p.CUSTOMIZE_COMMUNITY = "customize"),
-        (p.LINKED_ROLES = "linked-roles"),
-        p),
+        (((g = {}).GUILD_HOME = "home"),
+        (g.SERVER_GUIDE = "guide"),
+        (g.CHANNEL_BROWSER = "browse"),
+        (g.CUSTOMIZE_COMMUNITY = "customize"),
+        (g.LINKED_ROLES = "linked-roles"),
+        g),
     ));
 let eC = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = eu.map(es()).join("|");
+            E = ec.map(es()).join("|");
         return ed(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
@@ -1036,44 +1034,43 @@ let eC = {
         return ed(e, `${E}|\\d+`, { optional: t });
     },
 };
-var ep = E(806163);
-let eg = new Set([
-    ec.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
-    ec.APP_WITH_GIFT_CODE(":giftCode"),
-    ec.APP,
-    ec.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-    ec.SETTINGS(":section", ":subsection?"),
-    ec.USER_GUILD_NOTIFICATION_SETTINGS(eC.guildId()),
-    ec.APPLICATION_LIBRARY_INVENTORY,
-    ec.WELCOME(eC.guildId({ optional: !0 }), eC.channelId({ optional: !0 })),
-    ec.GUILD_EVENT_DETAILS(eC.guildId({ optional: !0 }), ":guildEventId"),
-    ec.GUILD_SETTINGS(eC.guildId(), ":section?", ":subsection?"),
-    ec.CHANNEL_THREAD_VIEW(eC.guildId(), eC.channelId(), ":threadId", ":messageId?"),
-    ec.CHANNEL(eC.guildId(), eC.channelId({ optional: !0 }), ":messageId?"),
-    ec.ACTIVITY,
-    ec.ACTIVITIES,
-    ec.ACTIVITIES_HAPPENING_NOW,
-    ec.ACTIVITY_DETAILS(":applicationId"),
-    ec.APPLICATION_LIBRARY,
-    ec.APPLICATION_STORE,
-    ec.MESSAGE_REQUESTS,
-    ec.COLLECTIBLES_SHOP,
-    ec.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
-    ec.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-    ec.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
-    ec.GUILD_DISCOVERY,
-    ec.QUEST_HOME_DEPRECATED,
-    ec.QUEST_HOME,
-    ec.ICYMI,
-    ec.GLOBAL_DISCOVERY,
-    ec.GUILD_MEMBER_VERIFICATION(eC.guildId()),
-    ec.GUILD_MEMBER_VERIFICATION_FOR_HUB(eC.guildId(), ":inviteCode?"),
-    ec.GUILD_BOOSTING_MARKETING(eC.guildId()),
-    ec.GUILD_FEATURE(":feature", eC.guildId()),
-    ec.FEATURE(":feature"),
-    ec.FAMILY_CENTER,
-    ec.APPLICATION_DIRECTORY,
-    ec.GAME_SHOP(eC.guildId(), ":shopSkuId?", ":shopSlug?"),
+var eg = E(806163);
+let ep = new Set([
+    eu.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
+    eu.APP_WITH_GIFT_CODE(":giftCode"),
+    eu.APP,
+    eu.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
+    eu.SETTINGS(":section", ":subsection?"),
+    eu.USER_GUILD_NOTIFICATION_SETTINGS(eC.guildId()),
+    eu.APPLICATION_LIBRARY_INVENTORY,
+    eu.WELCOME(eC.guildId({ optional: !0 }), eC.channelId({ optional: !0 })),
+    eu.GUILD_EVENT_DETAILS(eC.guildId({ optional: !0 }), ":guildEventId"),
+    eu.GUILD_SETTINGS(eC.guildId(), ":section?", ":subsection?"),
+    eu.CHANNEL_THREAD_VIEW(eC.guildId(), eC.channelId(), ":threadId", ":messageId?"),
+    eu.CHANNEL(eC.guildId(), eC.channelId({ optional: !0 }), ":messageId?"),
+    eu.ACTIVITY,
+    eu.ACTIVITIES,
+    eu.ACTIVITIES_HAPPENING_NOW,
+    eu.ACTIVITY_DETAILS(":applicationId"),
+    eu.APPLICATION_LIBRARY,
+    eu.APPLICATION_STORE,
+    eu.MESSAGE_REQUESTS,
+    eu.COLLECTIBLES_SHOP,
+    eu.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
+    eu.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
+    eu.GUILD_DISCOVERY,
+    eu.QUEST_HOME_DEPRECATED,
+    eu.QUEST_HOME,
+    eu.ICYMI,
+    eu.GLOBAL_DISCOVERY,
+    eu.GUILD_MEMBER_VERIFICATION(eC.guildId()),
+    eu.GUILD_MEMBER_VERIFICATION_FOR_HUB(eC.guildId(), ":inviteCode?"),
+    eu.GUILD_BOOSTING_MARKETING(eC.guildId()),
+    eu.GUILD_FEATURE(":feature", eC.guildId()),
+    eu.FEATURE(":feature"),
+    eu.FAMILY_CENTER,
+    eu.APPLICATION_DIRECTORY,
+    eu.GAME_SHOP(eC.guildId(), ":shopSkuId?", ":shopSlug?"),
 ]);
 !(function () {
     if (null == window.WebSocket || null == window._ws) return;
@@ -1112,7 +1109,7 @@ let eg = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of eg) if (null != (0, ep.B6)(e, { path: t })) return !0;
+                for (let t of ep) if (null != (0, eg.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )

@@ -1,55 +1,83 @@
-.carousel__38359 {
-    border-radius: var(--radius-lg);
-    flex-grow: 1;
-    position: relative;
-    width: 100%
+.section__82d84 {
+    margin-bottom: 16px
 }
 
-.children__38359 {
+.emojiInput__82d84 {
+    cursor: pointer;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr
+    flex-basis: 100%;
+    flex-grow: 1;
+    gap: var(--space-8);
+    grid-template-columns: auto 1fr auto;
+    min-height: var(--control-input-height-md);
+    min-width: 16ch;
+    padding: 0 var(--space-12)
 }
 
-.child__38359,
-.children__38359 {
-    position: relative
+.emojiText__82d84 {
+    cursor: pointer;
+    padding-inline-start: 40px
 }
 
-.child__38359 {
-    grid-column: 1;
-    grid-row: 1;
-    opacity: 0
-}
-
-.full-motion .child__38359 {
-    transition: opacity .6s ease, transform .6s ease
-}
-
-.left__38359 {
-    transform: translateX(-100%)
-}
-
-.right__38359 {
-    transform: translateX(100%)
-}
-
-.center__38359 {
-    opacity: 1;
-    transform: translateX(0)
-}
-
-.overflowable__38359 {
-    overflow: visible
-}
-
-.container_dbbcb5 {
-    border-radius: var(--radius-lg);
+.fileUpload__8b203 {
     box-sizing: border-box;
-    height: 100%;
-    min-height: inherit;
-    position: relative;
-    width: 100%
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: auto 1fr auto;
+    min-height: var(--control-input-height-md);
+    padding-block: 0;
+    padding-inline: var(--space-8) var(--space-4)
+}
+
+.fileUploadInput__8b203 {
+    cursor: default
+}
+
+.taskPresetSelect_a8dbb2 {
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.detailsList__85e60 {
+    margin-top: 16px
+}
+
+.detailsList__85e60,
+.nestedDetailsList__85e60 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.nestedDetailsList__85e60 {
+    margin-inline-start: 32px
+}
+
+.detailsRow__85e60 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.panel__85e60 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding: var(--space-16) var(--space-24)
+}
+
+.subtitle__85e60 {
+    margin-bottom: 16px
+}
+
+.statusText__85e60 {
+    margin-top: 8px
+}
+
+.inputWithButtonRow__85e60 {
+    align-items: center;
+    display: flex;
+    gap: 8px
 }
 
 .container_fec5bf {
@@ -160,4 +188,4 @@
     width: 408px
 }
 
-/*# sourceMappingURL=857e0a12e0f19b99.css.map*/
+/*# sourceMappingURL=6c77a5f595b3371a.css.map*/

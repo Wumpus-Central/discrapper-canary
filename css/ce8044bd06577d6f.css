@@ -1,16 +1,3 @@
-.skeletonsContainer__72fa0 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-40)
-}
-
-.bannerSkeleton__72fa0 {
-    background-color: var(--background-base-low);
-    border: 2px solid var(--border-subtle);
-    box-sizing: border-box;
-    grid-column: 1/-1
-}
-
 .container_c8c710 {
     width: 200px
 }
@@ -302,4 +289,4 @@
     overflow-y: auto
 }
 
-/*# sourceMappingURL=8c867cc9d84bd006.css.map*/
+/*# sourceMappingURL=ce8044bd06577d6f.css.map*/

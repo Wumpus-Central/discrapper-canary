@@ -63,27 +63,4 @@
     flex-shrink: 0
 }
 
-.productCardBadge_b8a6bd {
-    flex: 1;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    min-width: 0
-}
-
-.iconTextBadge_b8a6bd {
-    align-items: center;
-    display: inline-flex;
-    gap: 4px
-}
-
-.theme-dark .productCardBadge_b8a6bd {
-    background-color: #fff;
-    color: #000
-}
-
-.theme-light .productCardBadge_b8a6bd {
-    background-color: #000;
-    color: #fff
-}
-
-/*# sourceMappingURL=217991.6172995fe4c974c6.css.map*/
+/*# sourceMappingURL=6aa5f9593dda17bd.css.map*/

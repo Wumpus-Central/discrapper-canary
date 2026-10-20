@@ -465,8 +465,8 @@ var e$ = n(404778),
     e2 = n(123292),
     e5 = n(631305),
     e8 = n(468689),
-    e6 = n(931991),
-    e3 = n(473145),
+    e3 = n(931991),
+    e6 = n(473145),
     e7 = n(625633),
     e4 = n(136123);
 let e9 = function (e) {
@@ -474,8 +474,8 @@ let e9 = function (e) {
         { location: u } = (0, D.p)(),
         { analyticsLocations: c } = (0, V.Ay)(),
         h = (0, d.bG)([ef.A], () => ef.A.getGuild(n)),
-        { canManageAllExpressions: m } = (0, e6.nr)(h),
-        f = null != h && 0 === (0, e3.aG)(h.premiumTier) && !h.features.has(ey.GuildFeatures.MORE_STICKERS);
+        { canManageAllExpressions: m } = (0, e3.nr)(h),
+        f = null != h && 0 === (0, e6.aG)(h.premiumTier) && !h.features.has(ey.GuildFeatures.MORE_STICKERS);
     return (i.useEffect(() => {
         m &&
             f &&
@@ -500,7 +500,7 @@ let e9 = function (e) {
                           color: "interactive-text-default",
                           className: e4.rf,
                           variant: "text-sm/normal",
-                          children: eC.intl.format(eC.t.AXWla1, { count: (0, e3.aG)(ey.TVA.TIER_1) }),
+                          children: eC.intl.format(eC.t.AXWla1, { count: (0, e6.aG)(ey.TVA.TIER_1) }),
                       }),
                       (0, l.jsx)(e2.Q, {
                           variant: "primary",
@@ -710,7 +710,7 @@ let tx = i.memo(function (e) {
                                                 n.e("860350"),
                                                 n.e("142753"),
                                                 n.e("207998"),
-                                                n.e("179652"),
+                                                n.e("699733"),
                                                 n.e("689827"),
                                                 n.e("268582"),
                                                 n.e("883952"),
@@ -1594,8 +1594,8 @@ function t2(e) {
 }
 var t5 = n(970099);
 let t8 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    t6 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    t3 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    t3 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    t6 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     t7 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     t4 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     t9 = (0, Z.xI)(L.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
@@ -1625,7 +1625,7 @@ function nr(e) {
             gridWrapperRef: p,
             containerWidth: t,
             showingEmptyState: v,
-            listPaddingLeft: t6,
+            listPaddingLeft: t3,
             listScrollbarWidth: 8,
         }),
         T = q.tP.useSetting(),
@@ -1675,7 +1675,7 @@ function nr(e) {
             collapsedStickersCategories: j,
             collapsePremiumSearchSection: u && j.has(tD),
             listWidth: N,
-            listPaddingRight: t3,
+            listPaddingRight: t6,
             stickerNodeMargin: J ? t7 : t4,
             stickerNodeWidth: J ? nt : nn,
         }),
@@ -1759,7 +1759,7 @@ function nr(e) {
                                         n.e("860350"),
                                         n.e("142753"),
                                         n.e("207998"),
-                                        n.e("179652"),
+                                        n.e("699733"),
                                         n.e("689827"),
                                         n.e("268582"),
                                         n.e("883952"),
