@@ -20,7 +20,7 @@ function d(t) {
                 children: [
                     (0, l.jsxs)(s.E, {
                         className: u.TK,
-                        variant: p === c.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
+                        variant: p === c.d.SIDEBAR ? "text-sm/medium" : "text-xs/medium",
                         color: "text-strong",
                         id: n,
                         children: [

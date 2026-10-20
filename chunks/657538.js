@@ -396,6 +396,7 @@ function eo(e) {
                 children: [
                     (0, a.jsx)(w.E, {
                         variant: m ? "text-sm/medium" : "text-xs/medium",
+                        color: "text-strong",
                         children: W.intl.string(W.t.JjiwFx),
                     }),
                     (0, a.jsx)("div", {
