@@ -5524,7 +5524,8 @@
     "name": "2026-10-desktop-game-perf",
     "kind": "user",
     "defaultConfig": {
-      "nativeSystemCpuTimes": false
+      "nativeSystemCpuTimes": false,
+      "overlayOnlyAnimatesItself": false
     },
     "variations": {
       "0": {
@@ -5532,7 +5533,8 @@
         "variant": 0
       },
       "1": {
-        "nativeSystemCpuTimes": true
+        "nativeSystemCpuTimes": true,
+        "overlayOnlyAnimatesItself": true
       }
     }
   },
