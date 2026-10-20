@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(480890),
     v = n(450149),
     b = n(607407),
-    _ = n(776231),
-    S = n(267102),
+    S = n(776231),
+    _ = n(267102),
     T = n(326567),
     R = n(51082),
     O = n(616356),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(531685),
     D = n(562153),
     V = n(446243),
-    G = n(920639),
-    k = n(538638),
+    k = n(920639),
+    G = n(538638),
     B = n(558076),
     F = n(360729),
     z = n(856660),
@@ -106,7 +106,7 @@ function el(e) {
             posturesEnabled: W,
             seat: K,
         } = e,
-        en = (0, S.Us)(),
+        en = (0, _.Us)(),
         el = (0, d.bG)([M.default], () => M.default.getUser(t)),
         ea = (0, d.bG)([M.default], () => M.default.getCurrentUser()?.id === t),
         { isMenuOpen: es, setMenuOpen: er } = l.useContext(z.t),
@@ -140,7 +140,7 @@ function el(e) {
         eE = ey && eN && null != eI,
         ev = l.useCallback(() => {
             null != ec &&
-                ((0, G.EB)({ guildId: ec, channelId: n, interactionType: "clicked" }),
+                ((0, k.EB)({ guildId: ec, channelId: n, interactionType: "clicked" }),
                 eE && (eo || !ea || !W) && (g.A.selectParticipant(n, null), (0, V.UV)(!0, n)));
         }, [ec, n, eo, eE, ea, W]),
         eb = l.useCallback(
@@ -153,10 +153,10 @@ function el(e) {
             },
             [ec, el, n, en],
         ),
-        e_ = l.useCallback(() => {
-            null != ec && (0, G.EB)({ guildId: ec, channelId: n, interactionType: "hovered" });
+        eS = l.useCallback(() => {
+            null != ec && (0, k.EB)({ guildId: ec, channelId: n, interactionType: "hovered" });
         }, [ec, n]),
-        eS = (ea && W) || eE,
+        e_ = (ea && W) || eE,
         eT = W ? Y.x.find((e) => e.id === v) : null,
         eR =
             null != ex
@@ -176,9 +176,9 @@ function el(e) {
     let eM = (0, m.Kj)(F),
         ew = eM.status + 2 * eM.offset,
         eU = eT?.src,
-        eD = (0, _.kr)(Math.ceil(b * Q.Xq) * (0, _.mZ)()),
+        eD = (0, S.kr)(Math.ceil(b * Q.Xq) * (0, S.mZ)()),
         eV = null != eU ? `${eU}?width=${eD}&height=${eD}` : null,
-        eG = eE
+        ek = eE
             ? (0, i.jsx)(N.A, {
                   userId: el.id,
                   participant: eI,
@@ -232,7 +232,7 @@ function el(e) {
                                 })
                           : void 0,
               }),
-        ek = {
+        eG = {
             left: ej.x.to((e) => `calc(${e}% - ${b / 2}px)`),
             top: ej.y.to((e) => `calc(${e}% - ${b / 2}px)`),
             zIndex: eo ? 1e6 : 1e3 * Math.round(u) + Math.round(a),
@@ -241,24 +241,24 @@ function el(e) {
         let e = (0, i.jsx)(x.D, {
             "aria-label": eO,
             className: et.KI,
-            onMouseEnter: e_,
+            onMouseEnter: eS,
             onClick: ev,
             onContextMenu: eb,
             ...eL,
-            children: eG,
+            children: ek,
         });
         return (0, i.jsx)(r.animated.div, {
             role: "listitem",
-            className: s()(et.f1, { [et.hY]: eS }),
-            style: ek,
+            className: s()(et.f1, { [et.hY]: e_ }),
+            style: eG,
             children: null != eu ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eP, children: e }) : e,
         });
     }
-    let eB = (0, i.jsx)("div", { className: et.R3, children: eG }),
+    let eB = (0, i.jsx)("div", { className: et.R3, children: ek }),
         eF = (0, i.jsx)(x.D, {
             "aria-label": eO,
             className: et.KI,
-            onMouseEnter: e_,
+            onMouseEnter: eS,
             onClick: ev,
             onContextMenu: eb,
             ...eL,
@@ -267,8 +267,8 @@ function el(e) {
         ez = eg && ea ? 500 : 100;
     return (0, i.jsx)(r.animated.div, {
         role: "listitem",
-        className: s()(et.f1, { [et.hY]: eS }),
-        style: ek,
+        className: s()(et.f1, { [et.hY]: e_ }),
+        style: eG,
         children: ea
             ? (0, i.jsxs)(X.O, {
                   isOpen: eo,
@@ -283,13 +283,13 @@ function el(e) {
                                       "aria-label": eO,
                                       className: s()(et.KI, et.hZ, { [et.qS]: eo }),
                                       innerRef: t,
-                                      onMouseEnter: e_,
+                                      onMouseEnter: eS,
                                       onClick: () => {
                                           (n(), ev());
                                       },
                                       onContextMenu: eb,
                                       ...eL,
-                                      children: eG,
+                                      children: ek,
                                   });
                               return null != eu
                                   ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eo && !eP, children: a })
@@ -311,7 +311,7 @@ function el(e) {
                                           (0, V.AQ)(ec, n, {
                                               user_status_id: t ? 0 : e.id,
                                               user_status_text: t ? "" : ee.intl.string(e.label),
-                                          }).catch((e) => (0, k.b)());
+                                          }).catch((e) => (0, G.b)());
                                       },
                                       clearButtonAriaLabel: ee.intl.string(ee.t.VkKicb),
                                   },

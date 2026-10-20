@@ -20,7 +20,7 @@ function x(e) {
         [y, I] = (0, l.useState)(""),
         [N, E] = (0, l.useState)((0, c.x7)("")),
         [v, b] = (0, l.useState)(g),
-        _ = (0, l.useRef)(!1);
+        S = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
         className: f.kL,
         children: (0, i.jsx)(d.Ay, {
@@ -47,9 +47,9 @@ function x(e) {
                 let e = t.guild_id;
                 return 0 === C.trim().length || null == e
                     ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
-                    : _.current
+                    : S.current
                       ? Promise.resolve({ shouldClear: !1, shouldRefocus: !1 })
-                      : ((_.current = !0),
+                      : ((S.current = !0),
                         (0, h.zK)(e, t.id, C, n).catch((e) => (0, p.b)()),
                         Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },

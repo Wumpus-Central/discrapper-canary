@@ -28,8 +28,8 @@ let j = (0, s.A)((e) => {
         onFullscreenParticipant: E,
         channel: v,
         hasConnectPermission: b,
-        className: _,
-        inCall: S,
+        className: S,
+        inCall: _,
         showParticipants: T = !0,
         width: R,
         height: O,
@@ -48,9 +48,9 @@ let j = (0, s.A)((e) => {
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(v.id), [v.id]);
     if (w?.channelId === v.id) return (0, i.jsx)(p.A, { height: O });
-    if (v?.isGuildVocalOrThread() && !S)
+    if (v?.isGuildVocalOrThread() && !_)
         return (0, i.jsx)(h.A, { channel: v, participants: t, hasConnectPermission: b });
-    if (((n = S ? n : t), P === x._Of.VOICE))
+    if (((n = _ ? n : t), P === x._Of.VOICE))
         return (0, i.jsx)(c.A, { guildId: v.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
@@ -69,7 +69,7 @@ let j = (0, s.A)((e) => {
                 onClick: I,
                 onDoubleClick: E,
                 onContextMenu: N,
-                inCall: S,
+                inCall: _,
                 popoutType: M,
             }),
         });
@@ -82,12 +82,12 @@ let j = (0, s.A)((e) => {
         filteredParticipants: D,
         participants: t,
         popoutType: M,
-        className: _,
+        className: S,
         idle: L,
         height: O,
         width: R,
         layout: y,
-        inCall: S,
+        inCall: _,
         channel: v,
         showParticipants: T,
     });

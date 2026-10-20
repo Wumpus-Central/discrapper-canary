@@ -1,4 +1,4 @@
-n.d(t, { x: () => p, A: () => N });
+n.d(t, { x: () => p, A: () => E });
 var i,
     l = n(477900),
     o = n(582128),
@@ -42,7 +42,7 @@ async function A(e) {
         i = await (0, f.fz)(`${t.channelId}:${t.messageId}:${t.emoji.name}`, t.url, n, t.color);
     return ((i.assets[0].p = t.url), i);
 }
-function N(e) {
+function E(e) {
     let { className: t, effect: i, onComplete: a, emojiSize: u = 20 } = e,
         d = o.useRef(null),
         m = u * f.YY,

@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => _ });
 var i = n(477900),
     l = n(582128),
     a = n(621466),
@@ -23,9 +23,9 @@ var i = n(477900),
     E = n(889426),
     v = n(652215),
     b = n(806931),
-    _ = n(527133);
-let S = function (e) {
-    let { channelId: t, popoutType: n, width: S, height: T, idle: R, onClose: O } = e,
+    S = n(527133);
+let _ = function (e) {
+    let { channelId: t, popoutType: n, width: _, height: T, idle: R, onClose: O } = e,
         L = (0, m.Us)(),
         P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
         M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
@@ -34,8 +34,8 @@ let S = function (e) {
         {
             participants: D,
             filteredParticipants: V,
-            participantsVersion: G,
-            mode: k,
+            participantsVersion: k,
+            mode: G,
             layout: B,
             participantsOpen: F,
         } = (0, s.cf)([d.A], () => {
@@ -65,8 +65,8 @@ let S = function (e) {
     null == M)
         ? null
         : (0, i.jsx)(r.D, {
-              style: { width: S, height: T },
-              className: _.Lw,
+              style: { width: _, height: T },
+              className: S.Lw,
               onClick: function (e) {
                   null == M || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || O();
               },
@@ -79,11 +79,11 @@ let S = function (e) {
                   guild: w,
                   participants: D,
                   filteredParticipants: V,
-                  participantsVersion: G,
-                  selectedParticipant: U && k === v._Of.VIDEO ? P : null,
+                  participantsVersion: k,
+                  selectedParticipant: U && G === v._Of.VIDEO ? P : null,
                   layout: B,
                   idle: R,
-                  mode: k,
+                  mode: G,
                   onSelectParticipant: function (e, t) {
                       if (null != M) {
                           if (
@@ -112,7 +112,7 @@ let S = function (e) {
                   showParticipants: F,
                   popoutType: n,
                   awaitingRemoteSessionInfo: z,
-                  callContainerDimensions: { width: S, height: T },
+                  callContainerDimensions: { width: _, height: T },
               }),
           });
 };

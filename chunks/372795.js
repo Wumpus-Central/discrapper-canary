@@ -19,21 +19,21 @@ function u(e) {
             "aria-label": h,
             onStateChange: p,
         } = e,
-        x = r.useRef(null),
         g = r.useRef(null),
-        v = r.useRef(null),
-        [j, b] = r.useState(!1),
+        x = r.useRef(null),
+        j = r.useRef(null),
+        [v, b] = r.useState(!1),
         y = (0, a.A)(),
         k = r.useCallback(
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let r = x.current,
+                    let r = g.current,
                         a = r?.getContext("2d");
                     if (null == r || null == a || !(0, i.j_)(t, n, e)) return;
                     ((r.width !== l.width || r.height !== l.height) && ((r.width = l.width), (r.height = l.height)),
                         a.drawImage(l, 0, 0),
-                        (g.current = e),
+                        (x.current = e),
                         b(!0));
                 } finally {
                     l.close();
@@ -48,15 +48,15 @@ function u(e) {
         S = r.useRef(A);
     (r.useEffect(() => {
         if (S.current === A) return;
-        ((S.current = A), (g.current = null), b(!1));
-        let e = x.current;
+        ((S.current = A), (x.current = null), b(!1));
+        let e = g.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [A]),
         r.useEffect(() => {
-            p?.(N, j);
-        }, [N, j, p]),
+            p?.(N, v);
+        }, [N, v, p]),
         r.useEffect(() => {
-            c && x.current?.focus();
+            c && g.current?.focus();
         }, [c]));
     let E = r.useRef(new Map());
     function I(e) {
@@ -65,8 +65,8 @@ function u(e) {
             l = Math.min(n.width / t.width, n.height / t.height),
             r = n.left + (n.width - t.width * l) / 2,
             a = n.top + (n.height - t.height * l) / 2,
-            i = g.current?.deviceWidth ?? t.width,
-            s = g.current?.deviceHeight ?? t.height;
+            i = x.current?.deviceWidth ?? t.width,
+            s = x.current?.deviceHeight ?? t.height;
         return {
             x: Math.round(((e.clientX - r) / (t.width * l)) * i),
             y: Math.round(((e.clientY - a) / (t.height * l)) * s),
@@ -77,18 +77,18 @@ function u(e) {
             if (!c) return;
             if ("mouseMoved" === e) {
                 let e = I(l);
-                (null == v.current &&
+                (null == j.current &&
                     requestAnimationFrame(() => {
-                        let e = v.current;
-                        ((v.current = null),
+                        let e = j.current;
+                        ((j.current = null),
                             null != e && (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                     }),
-                    (v.current = { ...e, modifiers: o(l) }));
+                    (j.current = { ...e, modifiers: o(l) }));
                 return;
             }
             let r = s[l.button];
             if (null == r) return;
-            v.current = null;
+            j.current = null;
             let a = I(l);
             ("mousePressed" === e && l.currentTarget.focus(),
                 (0, i.ZL)(t, n, {
@@ -116,7 +116,7 @@ function u(e) {
         };
     }
     return (0, l.jsx)("canvas", {
-        ref: x,
+        ref: g,
         className: f,
         role: c ? "application" : "img",
         "aria-label": h,

@@ -29,24 +29,24 @@ function C(e) {
         E = l.useRef(null),
         v = null == C.getGuildId() ? 70 : 50,
         b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
-        _ = j.length,
-        S = b * _ + 8 * (_ - 1),
+        S = j.length,
+        _ = b * S + 8 * (S - 1),
         T = l.useMemo(
             () => ({
-                minWidth: A.mn[A.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
-                maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
+                minWidth: A.mn[A.R8.CAMERA_PREVIEW] * S + 8 * (S - 1),
+                maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * S + 8 * (S - 1),
             }),
-            [_],
+            [S],
         );
     l.useLayoutEffect(() => {
         E.current?.ensureIsInPosition();
     }, [j.length]);
     let R = l.useCallback(
             (e) => {
-                let t = 0 === _ ? e : (e - 8 * (_ - 1)) / _;
+                let t = 0 === S ? e : (e - 8 * (S - 1)) / S;
                 c.EB(t, A.R8.CAMERA_PREVIEW);
             },
-            [_],
+            [S],
         ),
         O = l.useCallback(
             (e, t) => {
@@ -59,7 +59,7 @@ function C(e) {
         children: (0, i.jsx)(u.S, {
             position: I,
             id: 0,
-            width: S,
+            width: _,
             ref: E,
             onMove: O,
             onResize: R,

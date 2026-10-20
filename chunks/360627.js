@@ -64,13 +64,13 @@ function v(e) {
 function b(e) {
     let { title: t, image: n, shouldShow: a = !0, forceOpen: o = !1, spacing: d, className: h, children: p } = e,
         b = l.useId(),
-        _ = l.useRef(null),
-        S = (0, r.bG)([C.A], () => C.A.theme),
+        S = l.useRef(null),
+        _ = (0, r.bG)([C.A], () => C.A.theme),
         { isHovered: T, setIsHovered: R, onMouseEnter: O, onMouseLeave: L } = (0, g.A)(100, 100);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.Y, {
-                targetElementRef: _,
+                targetElementRef: S,
                 shouldShow: a && (T || o),
                 position: "top",
                 align: "center",
@@ -83,7 +83,7 @@ function b(e) {
                         position: o ?? "top",
                         nudge: d,
                         children: (0, i.jsx)(A.N, {
-                            theme: S,
+                            theme: _,
                             children: (l) =>
                                 e.clickable
                                     ? (0, i.jsx)(f.D, {
@@ -113,7 +113,7 @@ function b(e) {
                 },
                 children: (e) =>
                     (0, i.jsx)("div", {
-                        ref: _,
+                        ref: S,
                         onMouseEnter: O,
                         onMouseLeave: L,
                         onFocus: O,

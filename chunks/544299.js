@@ -58,9 +58,9 @@ function v(e) {
         g = I(t),
         E = N(t),
         v = l.useId(),
-        [b, _] = l.useState(null),
-        S = l.useRef(null);
-    (E || null == b || _(null),
+        [b, S] = l.useState(null),
+        _ = l.useRef(null);
+    (E || null == b || S(null),
         l.useEffect(() => {
             if (g)
                 return (
@@ -76,7 +76,7 @@ function v(e) {
         l.useEffect(() => {
             if (E)
                 return () => {
-                    S.current = null;
+                    _.current = null;
                 };
         }, [E]),
         l.useEffect(() => {
@@ -88,14 +88,14 @@ function v(e) {
                 ? {
                       descriptionId: v,
                       setPreviewTarget: (e) => {
-                          let t = S.current ?? C();
-                          ((S.current = t), _(j(e, t)));
+                          let t = _.current ?? C();
+                          ((_.current = t), S(j(e, t)));
                       },
                       placeNextTo: (e) => {
                           let n = h.A.getPendingNote(t);
                           if (null == n || null != n.position) return;
-                          let i = S.current ?? C();
-                          ((S.current = i), (0, u.Dr)(t, j(e, i)));
+                          let i = _.current ?? C();
+                          ((_.current = i), (0, u.Dr)(t, j(e, i)));
                       },
                   }
                 : null,

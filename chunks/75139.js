@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(442433),
     v = n(59520),
     b = n(793574),
-    _ = n(688810),
-    S = n(139286),
+    S = n(688810),
+    _ = n(139286),
     T = n(43189),
     R = n(480890),
     O = n(812771),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(696451),
     D = n(576705),
     V = n(996439),
-    G = n(63995),
-    k = n(113783),
+    k = n(63995),
+    G = n(113783),
     B = n(518769),
     F = n(776781),
     z = n(105530),
@@ -53,11 +53,11 @@ let Z = l.memo(function (e) {
         { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
         v = l.useRef(null),
         T = (0, P.Us)(),
-        { newestAnalyticsLocation: O } = (0, _.Ay)(b.A.AUDIENCE_TILE),
+        { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
         L = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
     function V(e) {
-        ((0, S.x)({
+        ((0, _.x)({
             type: c.ImpressionTypes.MENU,
             name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
@@ -160,17 +160,17 @@ function Q(e) {
         { channel: s, guildId: r, maxWidth: c } = e,
         u = (0, F.Ni)(s.id),
         h = (0, d.bG)([D.A], () => D.A.can($.xB.MANAGE_CHANNELS, s) || D.A.can($.xB.MANAGE_ROLES, s)),
-        p = (0, k.J2)(s.id),
+        p = (0, G.J2)(s.id),
         m =
             ((t = s.id),
-            (n = (0, d.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
-            (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
+            (n = (0, d.bG)([k.A], () => [t, k.A.getParticipantsVersion(t)], [t], V.D)),
+            (a = l.useMemo(() => [...k.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
             (0, v.J)(a, (0, H.Uo)(t))),
         [f, x] = l.useState(""),
         g = l.useDeferredValue(f),
         E = u ? g.trim() : "",
         b = "" !== E,
-        _ = l.useMemo(() => {
+        S = l.useMemo(() => {
             if ("" === E) return m;
             let e = E.toLowerCase();
             return m.filter(
@@ -180,7 +180,7 @@ function Q(e) {
                     o()(e, t.userNick.toLowerCase()),
             );
         }, [m, E]),
-        S = [p.length, Math.max(1, _.length)],
+        _ = [p.length, Math.max(1, S.length)],
         R = (0, i.jsx)(L.Ay.Icon, {
             icon: C.P,
             tooltip: X.intl.string(X.t.cpT0Cq),
@@ -221,7 +221,7 @@ function Q(e) {
                     : null,
                 (0, i.jsx)(I.OZ, {
                     className: q.p_,
-                    sections: S,
+                    sections: _,
                     sectionHeight: function (e) {
                         switch (e) {
                             case 0:
@@ -236,7 +236,7 @@ function Q(e) {
                             case 0:
                                 return 40;
                             case 1:
-                                return _.length > 0 ? 40 : 88;
+                                return S.length > 0 ? 40 : 88;
                         }
                         return 0;
                     },
@@ -252,7 +252,7 @@ function Q(e) {
                                 );
                             }
                             case 1: {
-                                if (0 === _.length)
+                                if (0 === S.length)
                                     return (0, i.jsxs)(
                                         "div",
                                         {
@@ -277,7 +277,7 @@ function Q(e) {
                                         },
                                         "audience-empty",
                                     );
-                                let e = _[n];
+                                let e = S[n];
                                 return (0, i.jsx)(Z, { participant: e, channel: s, guildId: r }, `audience-${e.id}`);
                             }
                         }
@@ -307,7 +307,7 @@ function Q(e) {
                                         color: "text-muted",
                                         children: b
                                             ? X.intl.formatToPlainString(K.default.C6rvri, {
-                                                  filteredSize: _.length,
+                                                  filteredSize: S.length,
                                                   totalSize: m.length,
                                               })
                                             : X.intl.formatToPlainString(X.t.vUrsZ9, { audienceSize: m.length }),

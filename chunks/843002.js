@@ -1,8 +1,8 @@
-n.d(t, { B: () => a, e: () => l });
-var i = n(991690);
-function l(e) {
-    return { type: i.U.VOICE_CHANNEL, channelId: e };
+i.d(e, { B: () => r, e: () => p });
+var n = i(991690);
+function p(t) {
+    return { type: n.U.VOICE_CHANNEL, channelId: t };
 }
-function a(e, t) {
-    return null != t && e.some((e) => e.applicationId === t);
+function r(t, e) {
+    return null != e && t.some((t) => t.applicationId === e);
 }

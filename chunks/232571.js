@@ -62,7 +62,7 @@ function j(e) {
                 .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === j)),
         ),
         b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
-        _ = l.useCallback(async () => {
+        S = l.useCallback(async () => {
             null != b &&
                 (E
                     ? (0, u.AQ)(b, t, { user_position: { x: n, y: j }, user_seat: N }).catch((e) =>
@@ -70,7 +70,7 @@ function j(e) {
                       )
                     : ((0, u.TJ)({ x: n, y: j }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
         }, [E, b, t, n, j, N]),
-        S = (0, m.Sb)({
+        _ = (0, m.Sb)({
             position: { x: n, y: j },
             targetLabel: x.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: y }),
         });
@@ -78,14 +78,14 @@ function j(e) {
     let { numericAvatarSize: T } = (0, A.F)(I),
         R = 1.2 * Math.max(T, 24);
     return (0, i.jsx)(s.m, {
-        text: E || null != S ? null : x.intl.string(x.t["96ANUN"]),
+        text: E || null != _ ? null : x.intl.string(x.t["96ANUN"]),
         children: (0, i.jsx)(r.D, {
             role: "listitem",
             "aria-label": y,
             className: g.am,
             style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${j}% - ${R / 2}px)` },
-            onClick: _,
-            ...S,
+            onClick: S,
+            ..._,
             children: (0, i.jsx)(C, {}),
         }),
     });

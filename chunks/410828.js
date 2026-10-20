@@ -24,8 +24,8 @@ var l = n(17928),
     E = n(717965),
     v = n(895903),
     b = n(289438),
-    _ = n(105292),
-    S = n(925556),
+    S = n(105292),
+    _ = n(925556),
     T = n(853325);
 function R(e) {
     let { channel: t, inCall: n, hasConnectPermission: l, hasSpeakers: a, children: r } = e,
@@ -47,9 +47,9 @@ function R(e) {
                     children: [
                         (0, i.jsx)(A.A, {}),
                         (0, i.jsx)(s.D, {
-                            className: S.uQ,
+                            className: _.uQ,
                             variant: "heading-lg/normal",
-                            children: _.intl.string(b.default["P63Z/o"]),
+                            children: S.intl.string(b.default["P63Z/o"]),
                         }),
                     ],
                 })
@@ -69,19 +69,19 @@ function P(e) {
         n = (0, g.uy)(t.id),
         l = (0, g.zy)(t.id, C.ip.AUDIENCE);
     return (0, i.jsxs)("div", {
-        className: S.Qf,
+        className: _.Qf,
         children: [
             (0, i.jsx)(r.MicrophoneIcon, { size: "xs", color: a.A.colors.TEXT_MUTED }),
             (0, i.jsx)(o.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: _.intl.format(_.t.chmM9N, { count: n }),
+                children: S.intl.format(S.t.chmM9N, { count: n }),
             }),
             (0, i.jsx)(c.n, { size: "xs", color: a.A.colors.TEXT_MUTED }),
             (0, i.jsx)(o.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: _.intl.format(_.t["+v2pN2"], { count: l }),
+                children: S.intl.format(S.t["+v2pN2"], { count: l }),
             }),
         ],
     });
@@ -93,11 +93,11 @@ function M(e) {
         r = (0, j.Ni)(t.id),
         u = (0, g.zy)(t.id, C.ip.REQUESTED_TO_SPEAK_ONLY),
         A = r ? u : 0,
-        x = _.intl.string(b.default.Ds8IST);
+        x = S.intl.string(b.default.Ds8IST);
     return (
         s
-            ? (x = _.intl.string(b.default["ZSmz+r"]))
-            : A > 0 && (x = _.intl.formatToPlainString(b.default.IQmRBE, { count: A })),
+            ? (x = S.intl.string(b.default["ZSmz+r"]))
+            : A > 0 && (x = S.intl.formatToPlainString(b.default.IQmRBE, { count: A })),
         (0, i.jsx)(f.A, {
             className: n,
             label: x,
@@ -106,12 +106,12 @@ function M(e) {
             iconComponent: (e) => {
                 let { className: t } = e;
                 return (0, i.jsxs)("div", {
-                    className: S.Sl,
+                    className: _.Sl,
                     children: [
                         (0, i.jsx)(c.n, { className: t, color: "currentColor" }),
                         A > 0
                             ? (0, i.jsx)(o.E, {
-                                  className: S.gC,
+                                  className: _.gC,
                                   variant: "text-xs/semibold",
                                   color: "none",
                                   children: A > 99 ? "99+" : A,

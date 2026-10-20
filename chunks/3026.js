@@ -1,27 +1,27 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
-    r = n.n(l),
-    a = n(900002),
+    a = n.n(l),
+    r = n(900002),
     o = n(113278);
-function c(e) {
-    let { children: t, "aria-label": n, className: l, position: c, delay: d, lineClamp: u = 1, ...m } = e,
+function d(e) {
+    let { children: t, "aria-label": n, className: l, position: d, delay: c, lineClamp: u = 1, ...m } = e,
         x = s.useRef(null),
-        h = n ?? ("string" == typeof t && t),
-        j = {};
+        j = n ?? ("string" == typeof t && t),
+        h = {};
     return (
-        null != u && u > 1 && (j = { lineClamp: u, WebkitLineClamp: u }),
-        (0, i.jsx)(a.ST, {
+        null != u && u > 1 && (h = { lineClamp: u, WebkitLineClamp: u }),
+        (0, i.jsx)(r.ST, {
             ...m,
-            position: c ?? "top",
-            delay: d ?? 500,
+            position: d ?? "top",
+            delay: c ?? 500,
             text: t,
-            "aria-label": h,
+            "aria-label": j,
             children: (n) => {
-                let { onMouseEnter: s, onMouseLeave: a } = n;
+                let { onMouseEnter: s, onMouseLeave: r } = n;
                 return (0, i.jsx)("div", {
-                    className: r()(l, { [o.j]: 1 === u, [o.E]: u > 1 }),
+                    className: a()(l, { [o.j]: 1 === u, [o.E]: u > 1 }),
                     ref: x,
                     "aria-hidden": e["aria-hidden"],
                     onMouseEnter: () => {
@@ -31,8 +31,8 @@ function c(e) {
                             (1 === u && e.offsetWidth >= e.scrollWidth) ||
                             s?.();
                     },
-                    onMouseLeave: a,
-                    style: j,
+                    onMouseLeave: r,
+                    style: h,
                     children: t,
                 });
             },

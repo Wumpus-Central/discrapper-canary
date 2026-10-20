@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(241215),
     v = n(207274),
     b = n(70067),
-    _ = n(956480),
-    S = n(739820),
+    S = n(956480),
+    _ = n(739820),
     T = n(977241),
     R = n(105292),
     O = n(923932);
@@ -38,25 +38,25 @@ function L(e) {
             aspectRatio: U,
             plants: D,
             duck: V,
-            notePad: G,
-            screen: k,
+            notePad: k,
+            screen: G,
             getName: B,
-        } = S.iX[L],
+        } = _.iX[L],
         { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
         W = F / z > U,
         Y = W ? z * U : F,
         $ = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
-        K = $ ? (0, S.bf)(U, W) : 1,
+        K = $ ? (0, _.bf)(U, W) : 1,
         X = l.useRef(null),
         q = l.useRef(null),
         Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
         Q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
         J = Z.size,
         ee = Math.max(0, Object.values(w).length - Z.size),
-        et = D.length + +(null != V) + +(null != G) + Q.length,
+        et = D.length + +(null != V) + +(null != k) + Q.length,
         [en, ei] = l.useState(!1),
         el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
-    (0, _.A)(t, Z, Q);
+    (0, S.A)(t, Z, Q);
     let ea = (0, g.Y1)(t),
         es = R.intl.string(ea ? T.default.F9DcvR : T.default["sV/+Cu"]);
     return (
@@ -109,7 +109,7 @@ function L(e) {
                                           children: (0, i.jsxs)(h.xp, {
                                               containerRef: X,
                                               children: [
-                                                  (0, i.jsx)(y.A, { channelId: t, corners: k, roomWidth: Y }),
+                                                  (0, i.jsx)(y.A, { channelId: t, corners: G, roomWidth: Y }),
                                                   (0, i.jsxs)("div", {
                                                       ref: q,
                                                       children: [
@@ -147,12 +147,12 @@ function L(e) {
                                                                           channelId: t,
                                                                           position: V.position,
                                                                       }),
-                                                                  null != G &&
+                                                                  null != k &&
                                                                       (0, i.jsx)(b.A, {
                                                                           channelId: t,
-                                                                          asset: G.asset,
-                                                                          position: G.position,
-                                                                          width: G.width,
+                                                                          asset: k.asset,
+                                                                          position: k.position,
+                                                                          width: k.width,
                                                                       }),
                                                               ],
                                                           }),

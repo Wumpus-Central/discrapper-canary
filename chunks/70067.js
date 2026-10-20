@@ -35,7 +35,7 @@ function x(e) {
                 }
             );
     }, [b, v]);
-    let _ = l.useCallback(() => {
+    let S = l.useCallback(() => {
         (0, c.WT)(t);
     }, [t]);
     return j
@@ -45,7 +45,7 @@ function x(e) {
               position: x,
               width: g,
               disabled: !N || y || I,
-              onClick: _,
+              onClick: S,
               innerRef: E,
           })
         : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: x, width: g });

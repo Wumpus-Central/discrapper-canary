@@ -1,4 +1,4 @@
-n.d(t, { F: () => G });
+n.d(t, { F: () => k });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(692969),
     v = n(738250),
     b = n(834757),
-    _ = n(548118),
-    S = n(832163),
+    S = n(548118),
+    _ = n(832163),
     T = n(852105),
     R = n(280450),
     O = n(240248),
@@ -71,7 +71,7 @@ function V(e) {
         { gameId: l, gameRecord: a } = (0, v.A)({ applicationId: n }),
         r = (0, E.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
-    let o = a?.getIconURL(_.iu.MEDIUM),
+    let o = a?.getIconURL(S.iu.MEDIUM),
         c = (0, O.uJ)(o)
             ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
             : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
@@ -83,20 +83,20 @@ function V(e) {
         onClick: r,
     });
 }
-function G(e) {
+function k(e) {
     let t,
         { user: n, stream: a, channel: s } = e,
         [c, d] = l.useState(!1),
         u = (0, b.AO)(a),
         j = u?.id,
-        y = (0, r.bG)([S.A], () => S.A.getDetectableIdsToApplicationIds()),
+        y = (0, r.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
         I = null != j ? y[j] : null,
         E = (0, C.h)(I),
         v = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
         O = v ? (I ?? j ?? null) : I,
-        G = (0, C.h)(O),
+        k = (0, C.h)(O),
         {
-            isLoading: k,
+            isLoading: G,
             applicationWidgetConfig: B,
             profileApplicationWidget: F,
             userApplicationIdentity: z,
@@ -105,7 +105,7 @@ function G(e) {
         W = l.useRef(null),
         [Y, $] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
         [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? G : null),
+        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? k : null),
         J = H === n.id && Z && !Q,
         ee = l.useCallback(() => {
             d(!1);
@@ -131,7 +131,7 @@ function G(e) {
         } = l.useMemo(() => {
             if (!v && (null == E || null == I)) return { isAppIcon: !1 };
             if (ei && null != O) {
-                let e = el ?? G?.getIconURL(_.iu.SMALL),
+                let e = el ?? k?.getIconURL(S.iu.SMALL),
                     t = null != e && null == el,
                     l =
                         null != e
@@ -173,8 +173,8 @@ function G(e) {
                 },
                 positionKey: "feature-card-version",
             };
-        }, [v, ei, O, G, E, I, H, n.id, s, ee, K, et, el, ea]);
-    return k || J || (null == ec && !v)
+        }, [v, ei, O, k, E, I, H, n.id, s, ee, K, et, el, ea]);
+    return G || J || (null == ec && !v)
         ? null
         : (0, i.jsx)(A.N, {
               theme: P.NJ.DARK,

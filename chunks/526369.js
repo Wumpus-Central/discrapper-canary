@@ -27,48 +27,48 @@ function b(e) {
             participants: t,
             onClick: n,
             onDoubleClick: b,
-            onContextMenu: _,
-            channel: S,
+            onContextMenu: S,
+            channel: _,
             className: T,
             inCall: R,
             totalNumberOfParticipants: O,
             popoutType: L,
         } = e,
         P = (0, f.Us)() === E.BRT.POPOUT,
-        M = (0, r.bG)([C.A], () => C.A.getGuild(S.guild_id), [S.guild_id]),
+        M = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
         { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
-        U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
-        D = (0, g.vp)(S.id, t),
+        U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
+        D = (0, g.vp)(_.id, t),
         V = l.useCallback(() => {
             (0, s.r)(() => {
-                N.P.setState({ dismissedActivityEntryPointTileChannel: S.id });
+                N.P.setState({ dismissedActivityEntryPointTileChannel: _.id });
             });
-        }, [S.id]);
+        }, [_.id]);
     l.useEffect(() => {
         null != w &&
-            S.id !== w &&
+            _.id !== w &&
             (0, s.r)(() => {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [S.id, w]);
-    let G = (0, r.bG)([j.A], () => S.isPrivate() || (0, A.K)(j.A, M, S), [M, S]),
-        k = M?.afkChannelId === S.id,
-        B = S.userLimit <= 0 || S.userLimit > 1,
-        F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(S.id).length <= 0),
+    }, [_.id, w]);
+    let k = (0, r.bG)([j.A], () => _.isPrivate() || (0, A.K)(j.A, M, _), [M, _]),
+        G = M?.afkChannelId === _.id,
+        B = _.userLimit <= 0 || _.userLimit > 1,
+        F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(_.id).length <= 0),
         z = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        H = (0, d.et)(S.id) !== d.xy.CAN_LAUNCH,
-        W = null != w && w === S.id,
+        H = (0, d.et)(_.id) !== d.xy.CAN_LAUNCH,
+        W = null != w && w === _.id,
         Y = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     I.Ay,
                     {
                         participant: e,
-                        channel: S,
+                        channel: _,
                         className: v.V,
                         onClick: n,
                         onDoubleClick: b,
-                        onContextMenu: _,
+                        onContextMenu: S,
                         inCall: R,
                         width: t,
                         popoutType: L,
@@ -80,7 +80,7 @@ function b(e) {
         {
             type: a.ImpressionTypes.VIEW,
             name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
-            properties: { total_participants: O, can_invite: G, is_afk_channel: k, channel_user_limit: S.userLimit },
+            properties: { total_participants: O, can_invite: k, is_afk_channel: G, channel_user_limit: _.userLimit },
         },
         { trackOnInitialLoad: !0 },
         [],
@@ -88,14 +88,14 @@ function b(e) {
     let $ = F && !H,
         [K, X] = (0, p._)();
     null != M &&
-        !k &&
-        !S.isGuildStageVoice() &&
+        !G &&
+        !_.isGuildStageVoice() &&
         (K
             ? Y.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: X }, "clips-video-call-tile"))
             : U >= 2 && $ && !z && !W
               ? Y.push((e) =>
                     (0, i.jsx)(y.y, {
-                        channel: S,
+                        channel: _,
                         guild: M,
                         width: e,
                         inPopout: P,
@@ -105,10 +105,10 @@ function b(e) {
                 )
               : B &&
                 1 === U &&
-                G &&
+                k &&
                 Y.push((e) =>
                     (0, i.jsx)(y.y, {
-                        channel: S,
+                        channel: _,
                         guild: M,
                         width: e,
                         inPopout: P,

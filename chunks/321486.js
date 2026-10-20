@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(393371),
     v = n(360627),
     b = n(809369),
-    _ = n(652215),
-    S = n(977241),
+    S = n(652215),
+    _ = n(977241),
     T = n(105292),
     R = n(814402);
 let O = 10 * j.A.Millis.SECOND,
@@ -40,13 +40,13 @@ function U(e) {
                 t
                     .filter((e) => {
                         let t = g.A.getActiveStreamForApplicationStream(e);
-                        return null != t && t.state !== _.XYD.ENDED;
+                        return null != t && t.state !== S.XYD.ENDED;
                     })
                     .map((e) => (0, x._z)(e)),
             [t],
         ),
         [D, V] = l.useState({ streamKey: U[0] ?? null, sequence: 0 }),
-        [G, k] = l.useState(!1),
+        [k, G] = l.useState(!1),
         [B, F] = l.useState(!1),
         z = Math.max(
             0,
@@ -61,17 +61,17 @@ function U(e) {
         q = y.Ay.useName(K.guildId, K.channelId, X),
         Z = (0, I.j)(),
         Q = j / 225,
-        J = $ ? T.intl.string(S.default.zW6Hyu) : T.intl.string(T.t["7Xq/nV"]),
-        ee = T.intl.string(S.default["t+GPi4"]),
+        J = $ ? T.intl.string(_.default.zW6Hyu) : T.intl.string(T.t["7Xq/nV"]),
+        ee = T.intl.string(_.default["t+GPi4"]),
         et = l.useCallback(() => {
             let e = (0, x._z)(W);
             V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [W]);
     l.useEffect(() => {
-        if (!Y || !Z || G || $) return;
+        if (!Y || !Z || k || $) return;
         let e = setTimeout(et, O);
         return () => clearTimeout(e);
-    }, [Y, Z, G, $, et]);
+    }, [Y, Z, k, $, et]);
     let en = l.useCallback(() => {
             ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
         }, [H]),
@@ -85,10 +85,10 @@ function U(e) {
             config: L,
         });
     function ea() {
-        k(!0);
+        G(!0);
     }
     function es() {
-        (k(!1), F(!1));
+        (G(!1), F(!1));
     }
     return (0, i.jsxs)("div", {
         className: s()(R.VH, { [R.ke]: $ }),

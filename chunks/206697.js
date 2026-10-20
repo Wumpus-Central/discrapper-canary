@@ -1,4 +1,4 @@
-a.d(t, { T: () => i, t: () => o });
+a.d(t, { T: () => f, t: () => o });
 var d = a(561243),
     c = a(515718),
     n = a(84540),
@@ -12,7 +12,7 @@ function o() {
     let { tryItOutAvatar: e, tryItOutDisplayNameStyles: t } = s.A.getTryItOutChanges();
     (0, d.s)({ displayNameStyles: t, avatar: e });
 }
-async function i() {
+async function f() {
     let {
             tryItOutAvatar: e,
             tryItOutDisplayNameStyles: t,
@@ -20,11 +20,11 @@ async function i() {
             tryItOutBanner: d,
             tryItOutCustomTypingIndicatorStyle: c,
         } = s.A.getTryItOutChanges(),
-        { pendingDisplayNameStyles: o, pendingCustomTypingIndicatorStyle: i } = s.A.getPendingChanges();
+        { pendingDisplayNameStyles: o, pendingCustomTypingIndicatorStyle: f } = s.A.getPendingChanges();
     if (
         ((0, n.p)({ avatar: e, themeColors: a }),
         void 0 === o && (0, n.p)({ displayNameStyles: t }),
-        void 0 === i && (0, n.p)({ customTypingIndicatorStyle: c }),
+        void 0 === f && (0, n.p)({ customTypingIndicatorStyle: c }),
         null != d)
     )
         if (d.imageUri.startsWith("https:"))

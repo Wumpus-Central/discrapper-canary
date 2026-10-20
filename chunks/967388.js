@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(781137),
     v = n(544299),
     b = n(977241),
-    _ = n(105292),
-    S = n(431788),
+    S = n(105292),
+    _ = n(431788),
     T = n(505252);
 function R(e) {
     let { channelId: t, note: n, roomWidth: a } = e,
@@ -36,7 +36,7 @@ function R(e) {
         U = (0, j.tx)(M, t, P),
         D = (0, v.Sb)({
             position: n.position,
-            targetLabel: _.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
+            targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
         });
     return null == P || null == M
         ? null
@@ -45,7 +45,7 @@ function R(e) {
                   (0, i.jsx)(d.D, {
                       innerRef: L,
                       role: "listitem",
-                      "aria-label": _.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
+                      "aria-label": S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
                       className: T.kL,
                       onClick: () => {
                           (R || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), O(!R));
@@ -85,7 +85,7 @@ function R(e) {
                                               ],
                                           }),
                                           (0, i.jsx)(m.m, {
-                                              text: w ? null : _.intl.string(S.default.qRXats),
+                                              text: w ? null : S.intl.string(_.default.qRXats),
                                               children: (0, i.jsx)(d.D, {
                                                   onClick: w
                                                       ? function () {

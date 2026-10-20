@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(275731),
     v = n(289552),
     b = n(246356),
-    _ = n(977851),
-    S = n(204651),
+    S = n(977851),
+    _ = n(204651),
     T = n(772475),
     R = n(936520),
     O = n(708416),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(485296),
     D = n(198052),
     V = n(546871),
-    G = n(195007),
-    k = n(806931),
+    k = n(195007),
+    G = n(806931),
     B = n(105292),
     F = n(977241),
     z = n(547368);
@@ -46,7 +46,7 @@ function H(e) {
             let e = Date.now();
             return s()(U.A.getSpeakers())
                 .map((e) => D.A.getParticipant(t, e))
-                .filter((e) => null != e && e.type === k.lp.USER && e.speaking && !(0, N.Ay)(e))
+                .filter((e) => null != e && e.type === G.lp.USER && e.speaking && !(0, N.Ay)(e))
                 .sortBy((t) => -U.A.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -114,7 +114,7 @@ function W(e) {
             en &&
             eo.push(
                 (0, i.jsx)(
-                    S.A,
+                    _.A,
                     {
                         iconComponent: c.PaintPaletteIcon,
                         label: B.intl.string(B.t["ZrN+DT"]),
@@ -132,14 +132,14 @@ function W(e) {
                 ),
             ),
         U &&
-            (Z?.type === k.lp.STREAM
+            (Z?.type === G.lp.STREAM
                 ? eo.push((0, i.jsx)(V.A, { channel: t, focusedParticipant: Z }, "stream-participants"))
-                : Z?.type === k.lp.ACTIVITY &&
+                : Z?.type === G.lp.ACTIVITY &&
                   null != R &&
                   eo.push((0, i.jsx)(V.A, { channel: t, focusedParticipant: Z }, "activity-participants"))),
         q && eo.push((0, i.jsx)(H, { channelId: X, guildId: t.guild_id }, "current-speaker")),
         eo.push((0, i.jsx)(x.A, { className: z.x6, channelId: X }, "clips-enabled-indicator")),
-        Z?.type === k.lp.STREAM &&
+        Z?.type === G.lp.STREAM &&
             (eo.push((0, i.jsx)(E.A, { className: z.x6, participant: Z }, "warning")),
             eo.push(
                 (0, i.jsx)(
@@ -148,7 +148,7 @@ function W(e) {
                     "live-indicator",
                 ),
             )),
-        Z?.type === k.lp.USER && eo.push((0, i.jsx)(v.A, { className: z.x6, userId: Z.id }, "video-warning")),
+        Z?.type === G.lp.USER && eo.push((0, i.jsx)(v.A, { className: z.x6, userId: Z.id }, "video-warning")),
         q &&
             eo.push(
                 (0, i.jsx)(
@@ -156,7 +156,7 @@ function W(e) {
                     {
                         targetElementRef: $,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(b.A, { children: (0, i.jsx)(G.A, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(b.A, { children: (0, i.jsx)(k.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, l.createElement)(T.A, {
@@ -177,7 +177,7 @@ function W(e) {
         let e = W && !Y ? B.t["3jrUBj"] : F.default.f7g0DK;
         eo.push(
             (0, i.jsx)(
-                S.A,
+                _.A,
                 {
                     iconComponent: W && !Y ? h.d : p.u,
                     label: B.intl.string(e),
@@ -207,7 +207,7 @@ function W(e) {
                 (0, i.jsx)(M.A, { channel: t, returnsToRoom: et && W, className: z.x6 }, "voice-channel-app-toggle"),
             ),
         es && eo.push((0, i.jsx)(P.A, { channelId: t.id, className: z.x6 }, "voice-channel-app-close")),
-        er && eo.push((0, i.jsx)(_.V, { channelId: t.id, className: z.x6, disabled: o }, "chat-spacer")),
+        er && eo.push((0, i.jsx)(S.V, { channelId: t.id, className: z.x6, disabled: o }, "chat-spacer")),
         (0, i.jsx)(A.f5, { value: K, children: eo })
     );
 }

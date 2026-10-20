@@ -63,8 +63,8 @@ function C(e) {
         }, [n]),
         { ref: N, width: E, height: v } = (0, r.Ay)(),
         b = l.useMemo(() => (null == E || null == v ? null : (0, p.t)(I, E, v, g)), [I, E, v]),
-        _ = Math.min(48, Math.max(20, 0.025 * a)),
-        S = (0, o.yK)([d.A, u.default], () => {
+        S = Math.min(48, Math.max(20, 0.025 * a)),
+        _ = (0, o.yK)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return [];
             let e = u.default.getId();
             return d.A.getAllApplicationStreamsForChannel(t).sort(
@@ -79,9 +79,9 @@ function C(e) {
         inert: T,
         style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: j },
         children: [
-            S.length > 0 && null != b && null != E
-                ? (0, i.jsx)(f.A, { streams: S, fit: b, tooltipSpacing: R, containerWidthPx: E })
-                : (0, i.jsx)(A.A, { channelId: t, center: y, iconSize: _ }),
+            _.length > 0 && null != b && null != E
+                ? (0, i.jsx)(f.A, { streams: _, fit: b, tooltipSpacing: R, containerWidthPx: E })
+                : (0, i.jsx)(A.A, { channelId: t, center: y, iconSize: S }),
             (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],
     });

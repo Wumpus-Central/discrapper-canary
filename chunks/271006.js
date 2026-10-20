@@ -23,12 +23,12 @@ var i = n(477900),
     E = n(105292),
     v = n(96674),
     b = n(880872),
-    _ = n(849351),
-    S = n(572316),
+    S = n(849351),
+    _ = n(572316),
     T = n(192063);
 let R = {
-        0: { src: S.A, alt: N.default.IrukuA, heightPx: 723 },
-        1: { src: _.A, alt: N.default.yITFQ7, heightPx: 593 },
+        0: { src: _.A, alt: N.default.IrukuA, heightPx: 723 },
+        1: { src: S.A, alt: N.default.yITFQ7, heightPx: 593 },
         2: { src: b.A, alt: N.default.uUhyVw, heightPx: 490 },
     },
     O = 30 * m.A.Millis.MINUTE,
@@ -63,7 +63,7 @@ function M(e) {
             },
             [m],
         ),
-        _ = (0, c.p)(
+        S = (0, c.p)(
             m,
             {
                 initial: { opacity: 1 },
@@ -78,7 +78,7 @@ function M(e) {
             },
             "respect-motion-settings",
         ),
-        S = l.useCallback(() => {
+        _ = l.useCallback(() => {
             let { stage: e } = P(a);
             b(e);
         }, [a, b]);
@@ -86,11 +86,11 @@ function M(e) {
         let { stage: e, timeUntilNextStage: t } = P(a),
             n = null != a && m > e;
         if (n && null != C) return;
-        let i = setTimeout(() => S(), n || null == t ? 0 : t);
+        let i = setTimeout(() => _(), n || null == t ? 0 : t);
         return () => {
             clearTimeout(i);
         };
-    }, [a, m, S, C]);
+    }, [a, m, _, C]);
     let O = l.useCallback(() => {
             a?.objectId != null &&
                 ((0, u.Ak)("hang_status_select", 0.1),
@@ -108,7 +108,7 @@ function M(e) {
         "aria-label": E.intl.string(R[m].alt),
         ...L,
         children: [
-            _((e, t) => {
+            S((e, t) => {
                 let n,
                     { src: l, heightPx: a } = R[t],
                     o = t === m;
@@ -139,7 +139,7 @@ function w(e) {
         "aria-label": E.intl.string(N.default.IrukuA),
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
-            (0, i.jsx)("img", { className: v.zs, src: S.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: v.zs, src: _.A, alt: "", "aria-hidden": !0, draggable: !1 }),
             (0, i.jsx)("img", { className: v.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
         ],
     });

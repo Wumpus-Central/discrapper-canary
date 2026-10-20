@@ -32,9 +32,9 @@ function v() {
 }
 function b(e) {
     let { width: t, handleClose: n } = e;
-    return t < 250 ? (0, i.jsx)(_, { handleClose: n }) : (0, i.jsx)(S, { width: t, handleClose: n });
+    return t < 250 ? (0, i.jsx)(S, { handleClose: n }) : (0, i.jsx)(_, { width: t, handleClose: n });
 }
-function _(e) {
+function S(e) {
     let { handleClose: t } = e;
     return (0, i.jsxs)(A.A, {
         className: N.VP,
@@ -62,7 +62,7 @@ function _(e) {
         ],
     });
 }
-function S(e) {
+function _(e) {
     let { width: t, handleClose: n } = e,
         l = (0, x.E)();
     return (0, i.jsxs)(A.A, {

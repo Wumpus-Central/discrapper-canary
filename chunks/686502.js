@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(793574),
     v = n(688810),
     b = n(975412),
-    _ = n(392054),
-    S = n(826673),
+    S = n(392054),
+    _ = n(826673),
     T = n(757293),
     R = n(174459),
     O = n(272812),
@@ -45,7 +45,7 @@ function U(e) {
     return l < 250
         ? (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
-          ? (0, i.jsx)(G, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+          ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
           : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
 function D(e) {
@@ -159,7 +159,7 @@ function V(e) {
         }),
     });
 }
-function G(e) {
+function k(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
     (0, y.Ay)(() => {
         R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -192,7 +192,7 @@ function G(e) {
                                 activityItem: e,
                                 aspectRatio: N.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: M.KU,
-                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                commandOrigin: S.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
@@ -206,7 +206,7 @@ function G(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, S.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
+                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
                         (0, i.jsx)(T.A, {}),

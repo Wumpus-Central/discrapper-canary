@@ -23,8 +23,8 @@ var i = n(477900),
     E = n(769015),
     v = n(208971),
     b = n(446243),
-    _ = n(920639),
-    S = n(558076),
+    S = n(920639),
+    _ = n(558076),
     T = n(360729),
     R = n(508654),
     O = n(974930),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(353428),
     D = n(46054),
     V = n(322338),
-    G = n(665691),
-    k = n(410828),
+    k = n(665691),
+    G = n(410828),
     B = n(366265),
     F = n(241756),
     z = n(708416),
@@ -109,12 +109,12 @@ function en(e) {
         L = (0, r.bG)([W.A], () => W.A.getSelectedParticipant(t.id), [t.id]),
         { enabled: w } = (0, T.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
         F = w && !t.isGuildStageVoice(),
-        ee = (0, r.bG)([S.A], () => S.A.getVideoOverlayVisibility()),
+        ee = (0, r.bG)([_.A], () => _.A.getVideoOverlayVisibility()),
         en = (0, z.kM)(t) && (0, H.F)(o),
         ei = F && !O && !en,
         el = (0, j.Ay)(t),
         ea = t.isGuildStageVoice(),
-        es = (0, k.nd)(t),
+        es = (0, G.nd)(t),
         er = ei ? q.intl.string(Z.default.f7g0DK) : O ? `${el} \xb7 ${q.intl.string(Z.default.wRLmM0)}` : (es ?? el),
         eo = ei ? d.Z : (0, I.gU)(t),
         [ec] = (0, C.A)(L?.type === X.lp.ACTIVITY ? [L.applicationId] : []),
@@ -157,13 +157,13 @@ function en(e) {
                   }),
               })
             : null,
-        eA = (0, G.bG)({ channelId: t.id }),
+        eA = (0, k.bG)({ channelId: t.id }),
         ef = l.useCallback(() => {
             ei &&
                 (ee
                     ? (0, b.UV)(!1, t.id)
                     : ((0, b.zD)(t.id),
-                      (0, _.yt)({
+                      (0, S.yt)({
                           channelId: t.id,
                           guildId: t.guild_id,
                           location: g.A.CHANNEL_CALL,
@@ -224,7 +224,7 @@ function en(e) {
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(P.Ay.Divider, { className: Q.yF }),
-                                  (0, i.jsx)(k.Pb, { channel: t }),
+                                  (0, i.jsx)(G.Pb, { channel: t }),
                               ],
                           })
                         : null,
