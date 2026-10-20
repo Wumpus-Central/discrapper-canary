@@ -3811,6 +3811,7 @@ var rC =
         (eM.ANDROID_JANK_SESSION = "android_jank_session"),
         (eM.ANDROID_JANK_SCREEN = "android_jank_screen"),
         (eM.IOS_JANK_SESSION = "ios_jank_session"),
+        (eM.IOS_JANK_SCREEN = "ios_jank_screen"),
         (eM.APP_JS_STALLED = "app_js_stalled"),
         (eM.LIBDISCORE_LOADED = "libdiscore_loaded"),
         (eM.LIBDISCORE_KV_DUAL_READ_ERROR = "libdiscore_kv_dual_read_error"),
