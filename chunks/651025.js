@@ -1,5 +1,4 @@
 !(function (e) {
-    "use strict";
     function i(e, i, a) {
         var _ = " ";
         return (
