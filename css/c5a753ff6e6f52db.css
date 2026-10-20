@@ -179,6 +179,17 @@
     position: relative
 }
 
+.hiddenAvatar_ac26b9 {
+    align-items: center;
+    background-color: var(--border-subtle);
+    border-radius: var(--radius-round);
+    display: flex;
+    flex-shrink: 0;
+    height: var(--space-32);
+    justify-content: center;
+    width: var(--space-32)
+}
+
 .crown_ac26b9 {
     color: var(--icon-feedback-warning);
     display: flex;
@@ -687,4 +698,4 @@
     display: none
 }
 
-/*# sourceMappingURL=2b7170f2ee8223ed.css.map*/
+/*# sourceMappingURL=c5a753ff6e6f52db.css.map*/

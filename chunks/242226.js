@@ -4,6 +4,7 @@ a.exports = {
     lR: "rowCurrentUserDimmed_ac26b9",
     D_: "identity_ac26b9",
     R3: "avatarWrapper_ac26b9",
+    gt: "hiddenAvatar_ac26b9",
     ie: "crown_ac26b9",
     Dc: "member_ac26b9",
     Mx: "plays_ac26b9",
