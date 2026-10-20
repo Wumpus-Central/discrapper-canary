@@ -221,12 +221,13 @@ var q = l(334279),
     es = l(590180),
     ei = l(395856),
     er = l(503089),
-    ea = l(682301),
-    eo = l(258245),
-    eu = l(561769),
-    ec = l(484469),
-    ed = l(621466),
-    em =
+    ea = l(511265),
+    eo = l(682301),
+    eu = l(258245),
+    ec = l(561769),
+    ed = l(484469),
+    em = l(621466),
+    eg =
         (((s = {}).MOUNTED = "mounted"),
         (s.SORT_OUT = "sort-out"),
         (s.SORT_IN = "sort-in"),
@@ -234,19 +235,18 @@ var q = l(334279),
         (s.SHUFFLE_IN = "shuffle-in"),
         (s.FINISHED = "finished"),
         s),
-    eg = l(401864),
-    eh = l(124987),
-    ex = l(946716);
-let ef = {
-    [X.RECENT]: { sortType: eh.$.RECENCY, sortDirection: eg.A.DESC },
-    [X.PRICE_LOW_TO_HIGH]: { sortType: eh.$.PRICE, sortDirection: eg.A.ASC },
+    eh = l(401864),
+    ex = l(124987),
+    ef = l(946716);
+let eE = {
+    [X.RECENT]: { sortType: ex.$.RECENCY, sortDirection: eh.A.DESC },
+    [X.PRICE_LOW_TO_HIGH]: { sortType: ex.$.PRICE, sortDirection: eh.A.ASC },
 };
 l(667532);
-var eE = l(435558),
-    ep = l.n(eE),
-    e_ = l(153488),
-    eb = l(993408),
-    ej = l(511265),
+var ep = l(435558),
+    e_ = l.n(ep),
+    eb = l(153488),
+    ej = l(993408),
     ev = l(313276),
     eC = l(206077),
     eS = l(623373),
@@ -266,7 +266,7 @@ let eA = [],
             } = e,
             d = (0, Z.bG)([et.default], () => et.default.getCurrentUser()),
             m = en.Ay.canUseShopDiscounts(d),
-            h = (0, eu.Mk)(a),
+            h = (0, ec.Mk)(a),
             x = (0, eI.yB)("FeedBlock"),
             {
                 sortType: f,
@@ -278,21 +278,21 @@ let eA = [],
                 showRecommendationOption: S,
             } = (function (e) {
                 let { sortedSkuIds: t, hasShopDiscount: l, orbsSupportedOnly: n } = e,
-                    s = (0, Z.bG)([e_.A], () => e_.A.hasConsented(ey.YAq.PERSONALIZATION)),
+                    s = (0, Z.bG)([eb.A], () => eb.A.hasConsented(ey.YAq.PERSONALIZATION)),
                     i = r.useMemo(() => t?.[X.RECOMMENDED] ?? [], [t]),
                     a = r.useMemo(() => t?.[X.POPULAR] ?? [], [t]),
                     o = i.length > 0 && s,
                     [u, c] = r.useState(o ? X.RECOMMENDED : X.POPULAR),
                     d = (0, Z.bG)([es.A], () => es.A.productsWithVariantsAsGroup),
-                    m = r.useMemo(() => (0, eb.CE)(d), [d]),
+                    m = r.useMemo(() => (0, ej.CE)(d), [d]),
                     g = (0, ev.A)(),
-                    h = (0, ej.p)(),
+                    h = (0, ea.p)(),
                     [x, f] = r.useState([]),
                     E = r.useCallback(() => {
-                        (c(X.RANDOM), f(ep().shuffle(m)));
+                        (c(X.RANDOM), f(e_().shuffle(m)));
                     }, [m]);
                 r.useEffect(() => {
-                    f(ep().shuffle(m));
+                    f(e_().shuffle(m));
                 }, [m]);
                 let p = r.useMemo(() => {
                         let e = [];
@@ -301,7 +301,7 @@ let eA = [],
                                 e = m;
                                 break;
                             case X.PRICE_LOW_TO_HIGH:
-                                e = (0, eb.bf)([...m], l, n);
+                                e = (0, ej.bf)([...m], l, n);
                                 break;
                             case X.RECOMMENDED:
                                 e = g(i);
@@ -354,7 +354,7 @@ let eA = [],
                             (function (e, t) {
                                 if (e === X.RANDOM) return { randomize: !0 };
                                 if (t && e === X.POPULAR) return { randomize_daily: !0 };
-                                let l = ef[e];
+                                let l = eE[e];
                                 return null == l ? null : { sort_type: l.sortType, sort_direction: l.sortDirection };
                             })(t, !0 === l),
                         [t, l],
@@ -368,7 +368,7 @@ let eA = [],
                         if (null == c || null == a) return;
                         let e = !1;
                         return (
-                            (0, ex.$)({
+                            (0, ef.$)({
                                 item_types: [],
                                 colors: [],
                                 themes: [],
@@ -403,14 +403,20 @@ let eA = [],
             })({ sortType: f, orbsSupportedOnly: c, numVisibleItems: s + L, enabled: I, shuffleNonce: N }),
             U = O ?? j,
             F = r.useMemo(() => U.slice(0, s + L + (y ? 32 : 8)), [U, s, L, y]),
-            V = (0, ea.hv)(I ? F : eA, { needsCategory: !1 }),
+            V = (0, eo.hv)(I ? F : eA, { needsCategory: !1 }),
             w = (0, er.c)("feed_block"),
-            K = r.useMemo(() => {
+            K = (0, ea.p)(),
+            z = r.useMemo(() => {
                 if (!I) return F;
                 let e = new Set();
                 return F.filter((t) => {
                     let l = V[t];
-                    if (l?.state === "error" || (!w && t === q.j.PREMIUM_TIER_2_1_DAY)) return !1;
+                    if (
+                        l?.state === "error" ||
+                        (!w && t === q.j.PREMIUM_TIER_2_1_DAY) ||
+                        (l?.product != null && 0 === K([l.product]).length)
+                    )
+                        return !1;
                     let n = l?.product?.storeListingId;
                     if (null != n) {
                         if (e.has(n)) return !1;
@@ -418,8 +424,8 @@ let eA = [],
                     }
                     return !0;
                 });
-            }, [I, F, V, w]),
-            z = r.useMemo(
+            }, [I, F, V, w, K]),
+            W = r.useMemo(
                 () =>
                     !!I &&
                     !P &&
@@ -429,19 +435,19 @@ let eA = [],
                     }),
                 [I, P, F, V],
             ),
-            W = !y && H && L < 16,
-            J = s - K.length;
-        if (z && J > 0 && W) {
-            let e = Math.min(16, L + J + 8);
+            J = !y && H && L < 16,
+            eh = s - z.length;
+        if (W && eh > 0 && J) {
+            let e = Math.min(16, L + eh + 8);
             e !== L && T({ key: k, extra: e });
         }
-        let eg = (0, Z.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
-            eh = (0, Z.bG)([el.A], () => el.A.isFocused()),
-            eE = !eg && eh,
+        let ex = (0, Z.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
+            ep = (0, Z.bG)([el.A], () => el.A.isFocused()),
+            ek = !ex && ep,
             {
-                animationPhase: ek,
-                startAnimation: eR,
-                signalDataReady: eT,
+                animationPhase: eR,
+                startAnimation: eT,
+                signalDataReady: eL,
             } = (() => {
                 let [e, t] = r.useState("mounted"),
                     [l, n] = r.useState(!1),
@@ -454,11 +460,11 @@ let eA = [],
                             let e = s.current;
                             if (
                                 e.tabIndex >= 0 ||
-                                (0, ed.vq)(e, HTMLButtonElement) ||
-                                (0, ed.vq)(e, HTMLAnchorElement) ||
-                                (0, ed.vq)(e, HTMLInputElement) ||
-                                (0, ed.vq)(e, HTMLSelectElement) ||
-                                (0, ed.vq)(e, HTMLTextAreaElement)
+                                (0, em.vq)(e, HTMLButtonElement) ||
+                                (0, em.vq)(e, HTMLAnchorElement) ||
+                                (0, em.vq)(e, HTMLInputElement) ||
+                                (0, em.vq)(e, HTMLSelectElement) ||
+                                (0, em.vq)(e, HTMLTextAreaElement)
                             )
                                 e.focus();
                             else {
@@ -511,43 +517,43 @@ let eA = [],
                 };
             })();
         r.useEffect(() => {
-            z && eT();
-        }, [z, eT]);
-        let eL = (0, p.uM)(),
-            eO = eL?.sessionId ?? "",
-            { analyticsLocations: eM } = (0, $.Ay)(G.A.COLLECTIBLES_SHOP_POPULAR_PICKS),
-            eD = r.useRef(null),
+            W && eL();
+        }, [W, eL]);
+        let eO = (0, p.uM)(),
+            eM = eO?.sessionId ?? "",
+            { analyticsLocations: eD } = (0, $.Ay)(G.A.COLLECTIBLES_SHOP_POPULAR_PICKS),
             eP = r.useRef(null),
-            [eB, eH] = r.useState(!1),
-            eU = r.useCallback(
+            eB = r.useRef(null),
+            [eH, eU] = r.useState(!1),
+            eF = r.useCallback(
                 (e) => {
-                    (eH(!1),
-                        eR({ isShuffling: !1, onOutroComplete: () => _(e), returnRef: eP }),
+                    (eU(!1),
+                        eT({ isShuffling: !1, onOutroComplete: () => _(e), returnRef: eB }),
                         E.default.track(ey.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
-                            page_session_id: eO,
+                            page_session_id: eM,
                             sort_type: e,
                         }));
                 },
-                [eR, _, eO],
+                [eT, _, eM],
             );
         if (null == d) return null;
-        function eF(e, t) {
+        function eV(e, t) {
             let l;
-            return eE && ek === em.SHUFFLE_OUT
-                ? (0, i.jsx)("div", { className: Y.Z2, children: (0, i.jsx)(ec.A, {}) }, `${e}-${t}`)
-                : (eE &&
-                      (ek === em.SORT_OUT
+            return ek && eR === eg.SHUFFLE_OUT
+                ? (0, i.jsx)("div", { className: Y.Z2, children: (0, i.jsx)(ed.A, {}) }, `${e}-${t}`)
+                : (ek &&
+                      (eR === eg.SORT_OUT
                           ? (l = Y.MW)
-                          : ek === em.SHUFFLE_IN
+                          : eR === eg.SHUFFLE_IN
                             ? (l = Y.aS)
-                            : ek === em.SORT_IN && (l = Y.F7)),
+                            : eR === eg.SORT_IN && (l = Y.F7)),
                   (0, i.jsx)(
                       p.R9,
                       {
                           newValue: { tilePosition: t, pageSection: "popular picks", categoryPosition: 2 },
                           children: (0, i.jsx)("div", {
                               className: l,
-                              children: (0, i.jsx)(eo.A, {
+                              children: (0, i.jsx)(eu.A, {
                                   skuId: e,
                                   hideStaticBundleBackgroundAsset: !0,
                                   prioritizedCurrency: h,
@@ -558,7 +564,7 @@ let eA = [],
                   ));
         }
         return (0, i.jsx)($.f5, {
-            value: eM,
+            value: eD,
             children: (0, i.jsxs)("div", {
                 className: o()(Y.lD, Y.YB),
                 children: [
@@ -578,12 +584,12 @@ let eA = [],
                                             }),
                                             (0, i.jsx)("div", {
                                                 className: o()(u, Y.pI),
-                                                ref: eP,
+                                                ref: eB,
                                                 children: (0, i.jsx)(Q.l, {
                                                     label: B.intl.string(B.t.uaX705),
                                                     hideLabel: !0,
                                                     options: v,
-                                                    onSelectionChange: eU,
+                                                    onSelectionChange: eF,
                                                     formatOption: (e) => {
                                                         let { label: t, value: l } = e;
                                                         return { id: l, label: t, value: l };
@@ -600,22 +606,22 @@ let eA = [],
                                         children: (0, i.jsx)(g.$, {
                                             variant: "secondary",
                                             text: B.intl.string(B.t.X3tnc4),
-                                            buttonRef: eD,
+                                            buttonRef: eP,
                                             onClick: function () {
-                                                (eH(!0),
-                                                    eR({
+                                                (eU(!0),
+                                                    eT({
                                                         isShuffling: !0,
                                                         onOutroComplete: () => {
                                                             (C(), A((e) => e + 1));
                                                         },
-                                                        returnRef: eD,
+                                                        returnRef: eP,
                                                         holdIntroUntilReady: I,
                                                     }),
                                                     E.default.track(ey.HAw.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
-                                                        page_session_id: eO,
+                                                        page_session_id: eM,
                                                     }));
                                             },
-                                            disabled: ek !== em.MOUNTED && ek !== em.FINISHED,
+                                            disabled: eR !== eg.MOUNTED && eR !== eg.FINISHED,
                                         }),
                                     }),
                                 ],
@@ -623,7 +629,7 @@ let eA = [],
                             (0, i.jsx)(D.A, {
                                 "aria-live": "polite",
                                 role: "status",
-                                children: eB && ek === em.FINISHED ? B.intl.string(B.t["3Pml0e"]) : "",
+                                children: eH && eR === eg.FINISHED ? B.intl.string(B.t["3Pml0e"]) : "",
                             }),
                         ],
                     }),
@@ -631,28 +637,28 @@ let eA = [],
                         className: Y.hm,
                         children: t
                             ? (0, i.jsx)(i.Fragment, {
-                                  children: [...Array(12)].map((e, t) => (0, i.jsx)(ec.A, {}, t + 1)),
+                                  children: [...Array(12)].map((e, t) => (0, i.jsx)(ed.A, {}, t + 1)),
                               })
                             : I
-                              ? eE && ek === em.SHUFFLE_OUT
+                              ? ek && eR === eg.SHUFFLE_OUT
                                   ? [...Array(s)].map((e, t) =>
                                         (0, i.jsx)(
                                             "div",
-                                            { className: Y.Z2, children: (0, i.jsx)(ec.A, {}) },
+                                            { className: Y.Z2, children: (0, i.jsx)(ed.A, {}) },
                                             `shuffle-placeholder-${t}`,
                                         ),
                                     )
                                   : P && null == O
                                     ? (0, i.jsx)(i.Fragment, {
-                                          children: [...Array(12)].map((e, t) => (0, i.jsx)(ec.A, {}, t + 1)),
+                                          children: [...Array(12)].map((e, t) => (0, i.jsx)(ed.A, {}, t + 1)),
                                       })
-                                    : K.slice(0, s).map((e, t) => eF(e, t))
+                                    : z.slice(0, s).map((e, t) => eV(e, t))
                               : b
                                     .slice(0, s)
                                     .map((e, t) =>
                                         null == e || null == es.A.getCategoryForProduct(e.skuId)
                                             ? null
-                                            : eF(e.skuId, t),
+                                            : eV(e.skuId, t),
                                     ),
                     }),
                 ],
@@ -1010,13 +1016,13 @@ function tt(e) {
     let { product: t, index: l, shelfName: n, prioritizedCurrency: s, listItemProps: r } = e;
     return (0, i.jsx)(p.R9, {
         newValue: { tilePosition: l, pageSection: n, categoryPosition: 2 },
-        children: (0, i.jsx)(eo.A, { skuId: t.skuId, prioritizedCurrency: s, listItemProps: r }),
+        children: (0, i.jsx)(eu.A, { skuId: t.skuId, prioritizedCurrency: s, listItemProps: r }),
     });
 }
 let tl = function (e) {
     let { shelf: t, handleTransition: l, tab: n } = e,
         s = (0, Z.bG)([et.default], () => et.default.getCurrentUser()),
-        a = (0, eu.Mk)(n),
+        a = (0, ec.Mk)(n),
         u = (0, Z.bG)([es.A], () => (null != t.categorySkuId ? es.A.getCategory(t.categorySkuId) : void 0)),
         c = (0, ev.A)(),
         d = r.useMemo(() => c(t.rankedSkuIds), [t.rankedSkuIds, c]),
