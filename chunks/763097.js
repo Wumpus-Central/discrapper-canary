@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     Ix: "channel__972a0",
     Ij: "fullWidth__972a0",
     dM: "unreadPill__972a0",
@@ -21,6 +21,8 @@ _.exports = {
     _q: "iconsContainer__972a0",
     EY: "nameplated__972a0",
     R4: "callDuration__972a0",
+    jd: "callDurationPlated__972a0",
+    ht: "callDurationPlatedLight__972a0",
     ut: "closeIcon__972a0",
     wB: "favoriteIcon__972a0",
     W$: "subtext__972a0",
