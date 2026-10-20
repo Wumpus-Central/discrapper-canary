@@ -52,7 +52,7 @@ function I(e) {
     let L = null != a;
     return (
         r.useLayoutEffect(() => {
-            let e = new ResizeObserver(() => {
+            let e = new (N?.current?.ownerDocument?.defaultView ?? window).ResizeObserver(() => {
                     if (L) return void m(!0);
                     let e = g?.current?.getScrollerNode() ?? null;
                     if (null == e || N?.current == null) return;

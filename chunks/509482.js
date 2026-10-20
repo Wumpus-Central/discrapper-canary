@@ -386,7 +386,7 @@ function O(e) {
             if (null == H || !M.reducedMotion.enabled) return;
             let e = H.canvas;
             if (null == e) return;
-            let t = new ResizeObserver(() => {
+            let t = new (e.ownerDocument.defaultView ?? window).ResizeObserver(() => {
                 (H.resizeDrawingSurfaceToCanvas(),
                     H.isPlaying || (H.startRendering(), requestAnimationFrame(() => H.stopRendering())));
             });

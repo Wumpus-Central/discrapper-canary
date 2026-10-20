@@ -54,7 +54,7 @@ function S(e) {
         E = r.useRef(null);
     return (
         r.useLayoutEffect(() => {
-            let e = new ResizeObserver(() => {
+            let e = new ((_.current ?? E.current)?.ownerDocument?.defaultView ?? window).ResizeObserver(() => {
                 let e = 0,
                     t = 0;
                 if (null != _ && null != _.current) {

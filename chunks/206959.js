@@ -1784,7 +1784,7 @@ function ee(e) {
         return (
             X.useLayoutEffect(() => {
                 let { current: e } = d,
-                    t = new ResizeObserver((e) => {
+                    t = new (e?.ownerDocument?.defaultView ?? window).ResizeObserver((e) => {
                         if (s)
                             for (let t of e) {
                                 if (t.target !== c.current) continue;
