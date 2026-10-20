@@ -4,6 +4,7 @@ _.exports = {
     Os: "emojiPopout_d5cd2d",
     t: "emojiDescription_d5cd2d",
     tl: "guildSection_d5cd2d",
+    x1: "packEmojiPopout_d5cd2d",
     cC: "emojiName_d5cd2d",
     P$: "primaryEmoji_d5cd2d",
     lI: "ctaButton_d5cd2d",

@@ -97,33 +97,6 @@
     margin: 16px 0
 }
 
-.reactionEmojiPackHeading__5a408 {
-    justify-content: space-between;
-    margin-bottom: 12px
-}
-
-.reactionEmojiPackHeading__5a408,
-.reactionEmojiPackTitle__5a408 {
-    align-items: center;
-    display: flex;
-    gap: 8px
-}
-
-.reactionEmojiPackPreview__5a408 {
-    display: flex;
-    gap: 4px;
-    justify-content: space-between
-}
-
-.reactionEmojiPackEmoji__5a408 {
-    height: 32px;
-    width: 32px
-}
-
-.reactionEmojiPackViewSet__5a408 {
-    margin-top: 16px
-}
-
 .emojiDetailsLoader__5a408 {
     box-shadow: none
 }
@@ -289,4 +262,4 @@
     margin-bottom: var(--space-4)
 }
 
-/*# sourceMappingURL=377016.43a91b201c745387.css.map*/
+/*# sourceMappingURL=377016.ee694f35e21f879f.css.map*/
