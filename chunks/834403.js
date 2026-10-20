@@ -1494,7 +1494,7 @@ if (null == ti || "0.0.0" !== ti.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tr = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eX.A().log(
-    `[BUILD INFO] Release Channel: ${tr}, Build Number: 643715, Version Hash: 7f8e15d89bbba8cc6e8083909ee0892b4e5c140e`,
+    `[BUILD INFO] Release Channel: ${tr}, Build Number: 643722, Version Hash: 811a4e5ca0dc37ffb4041c36ef84cf2f5eb1fc71`,
 ),
     x.A.setTags({ appContext: W.QCW }),
     eN.A.initBasic(),
@@ -25508,7 +25508,7 @@ let L7 = "isHideDevBanner",
                     className: tI()(L4.Wz, L4.mr),
                     children: [
                         (0, M.jsx)(L6, { className: L4.Kk }),
-                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "643715" }),
+                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "643722" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -39960,13 +39960,15 @@ class wA extends nI.A {
         (F.h.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview),
             F.h.subscribe("ACTIVE_PROMOTIONS_FETCH_SUCCESS", this.handleActivePromotionsFetchSuccess),
             F.h.subscribe("BILLING_USER_OFFER_FETCH_SUCCESS", this.handleUserOfferFetchSuccess),
-            F.h.subscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate));
+            F.h.subscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate),
+            F.h.subscribe("ENTITLEMENT_FETCH_APPLICATION_SUCCESS", this.handleApplicationEntitlementFetchSuccess));
     }
     _terminate() {
         (F.h.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview),
             F.h.unsubscribe("ACTIVE_PROMOTIONS_FETCH_SUCCESS", this.handleActivePromotionsFetchSuccess),
             F.h.unsubscribe("BILLING_USER_OFFER_FETCH_SUCCESS", this.handleUserOfferFetchSuccess),
-            F.h.unsubscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate));
+            F.h.unsubscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate),
+            F.h.unsubscribe("ENTITLEMENT_FETCH_APPLICATION_SUCCESS", this.handleApplicationEntitlementFetchSuccess));
     }
     maybeShowAnnouncementModalFromPromotions = (e) => {
         if ((0, tJ.hasModalOpen)(wE)) return;
@@ -40006,6 +40008,10 @@ class wA extends nI.A {
     handleEntitlementCreate = (e) => {
         let { entitlement: t } = e;
         Pn.P.isDisallowPopupsSet() || t.source_type !== W.GD.REVERSE_TRIAL || (0, Rr.al)();
+    };
+    handleApplicationEntitlementFetchSuccess = (e) => {
+        let { applicationId: t, entitlements: n } = e;
+        t === lB.tv && n.some((e) => e.source_type === W.GD.REVERSE_TRIAL) && (0, Rr.al)();
     };
     maybeOpenServerDriveAnnouncementModal = (e, t, i) => {
         if ((0, tJ.hasModalOpen)(wE)) return !1;
