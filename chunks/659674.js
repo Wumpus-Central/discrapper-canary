@@ -136,6 +136,14 @@ function R(e, t, n) {
                     );
                 })(t, n.provider, n.video) &&
                 (h.video = O(n.video))),
+        null != n.audio &&
+            null != n.audio.proxy_url &&
+            (h.audio = {
+                url: n.audio.url,
+                proxyURL: n.audio.proxy_url,
+                contentType: n.audio.content_type ?? void 0,
+                description: n.audio.description,
+            }),
         u.pd.has(h.type)
             ? (h.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;

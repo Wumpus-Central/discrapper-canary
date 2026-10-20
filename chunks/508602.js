@@ -21,4 +21,5 @@ var i,
         (i.GAMING_PROFILE = "gaming_profile"),
         (i.POLL_RESULT = "poll_result"),
         (i.COMPONENTS = "components"),
+        (i.AUDIO = "audio"),
         i);
