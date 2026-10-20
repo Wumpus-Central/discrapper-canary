@@ -41,6 +41,7 @@ async function _() {
             cpu_vendor: null,
             cpu_memory: t.total_memory,
             cpu_memory_avail: null,
+            cpu_features: null,
             gpu_brand: s,
             gpu_memory: null,
             gpu_count: i.length,
