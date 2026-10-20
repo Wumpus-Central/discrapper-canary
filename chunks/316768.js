@@ -1,146 +1,146 @@
-(t.d(n, { A: () => F }), t(321073));
+(t.d(n, { A: () => k }), t(321073));
 var e = t(477900),
     i = t(582128),
-    u = t(17928),
-    c = t(477782),
-    r = t(22231),
-    o = t(625903),
+    c = t(17928),
+    u = t(477782),
+    o = t(22231),
+    r = t(625903),
     a = t(624479),
     d = t(70688),
     s = t(615606),
+    p = t(545691),
     A = t(976860),
-    p = t(291815),
-    g = t(371169),
-    y = t(260498),
+    g = t(291815),
+    y = t(371169),
+    f = t(260498),
     I = t(95264),
-    f = t(442331),
+    b = t(442331),
     h = t(616334),
-    _ = t(246338),
-    b = t(696451),
-    x = t(71393),
-    C = t(576705),
-    E = t(935208),
-    j = t(951178),
-    G = t(652215),
-    P = t(577964),
-    v = t(746080),
-    D = t(165610),
-    N = t(261425),
-    V = t(105292);
-function F(l, n, t) {
-    var F;
-    let L,
-        T,
-        B,
+    x = t(246338),
+    j = t(696451),
+    G = t(71393),
+    _ = t(576705),
+    v = t(935208),
+    D = t(951178),
+    P = t(652215),
+    C = t(746080),
+    E = t(165610),
+    w = t(261425),
+    F = t(105292);
+function k(l, n, t) {
+    var k;
+    let m,
         M,
-        w,
-        { includeSettings: S = !0 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        m = (0, _.w$)(l, t),
-        H =
-            ((F = m ? l : null),
-            (T = null != (L = (0, _.us)(F))),
-            (B = F?.guild_id ?? null),
-            (M = (0, u.bG)(
-                [x.A, C.A],
+        N,
+        S,
+        V,
+        { includeSettings: L = !0 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        U = (0, x.w$)(l, t),
+        B =
+            ((k = U ? l : null),
+            (M = null != (m = (0, x.us)(k))),
+            (N = k?.guild_id ?? null),
+            (S = (0, c.bG)(
+                [G.A, _.A],
                 () => {
-                    let l = null != B ? x.A.getGuild(B) : null;
-                    return null != l && C.A.can(G.xBc.MANAGE_GUILD, l);
+                    let l = null != N ? G.A.getGuild(N) : null;
+                    return null != l && _.A.can(P.xBc.MANAGE_GUILD, l);
                 },
-                [B],
+                [N],
             )),
-            (w = (0, u.yK)([b.Ay], () => (null != B ? (b.Ay.getSelfMember(B)?.roles ?? []) : []), [B])),
+            (V = (0, c.yK)([j.Ay], () => (null != N ? (j.Ay.getSelfMember(N)?.roles ?? []) : []), [N])),
             i.useEffect(() => {
-                T && null != L && (0, g.hF)(B ?? void 0);
-            }, [T, L, B, M, w]),
-            (0, u.bG)(
-                [y.Ay],
+                M && null != m && (0, y.hF)(N ?? void 0);
+            }, [M, m, N, S, V]),
+            (0, c.bG)(
+                [f.Ay],
                 () => {
-                    if (null == L) return null;
-                    let l = y.Ay.findProjectByApplicationId(L);
-                    if (null == l || (0, y.PV)(l)) return l;
-                    let n = null != B ? E.default.castGuildIdAsEveryoneGuildRoleId(B) : null,
-                        t = (l.collaborator_role_ids ?? []).some((l) => l === n || w.includes(l));
-                    return l.guild_id === B && (0, j.pL)(l) && (M || t) ? l : null;
+                    if (null == m) return null;
+                    let l = f.Ay.findProjectByApplicationId(m);
+                    if (null == l || (0, f.PV)(l)) return l;
+                    let n = null != N ? v.default.castGuildIdAsEveryoneGuildRoleId(N) : null,
+                        t = (l.collaborator_role_ids ?? []).some((l) => l === n || V.includes(l));
+                    return l.guild_id === N && (0, D.pL)(l) && (S || t) ? l : null;
                 },
-                [L, M, w, B],
+                [m, S, V, N],
             )),
-        O = H?.id ?? null,
-        U = l.guild_id ?? null,
-        k = (0, s.q)(l),
-        R = m && null == H ? (k?.conjureProjectId ?? null) : null;
+        H = B?.id ?? null,
+        K = l.guild_id ?? null,
+        T = (0, s.q)(l),
+        R = U && null == B ? (T?.conjureProjectId ?? null) : null;
     i.useEffect(() => {
-        null != R && (0, g.tF)([R]);
+        null != R && (0, y.tF)([R]);
     }, [R]);
-    let K = (0, u.bG)([y.Ay], () => (null != R ? y.Ay.getProject(R) : null), [R]),
-        X = H ?? K;
+    let X = (0, c.bG)([f.Ay], () => (null != R ? f.Ay.getProject(R) : null), [R]),
+        q = B ?? X;
     i.useEffect(() => {
-        null != O && (0, p.ensureConnection)(O);
-    }, [O]);
-    let W = (0, u.bG)([f.A], () => null != O && null != f.A.getSettings(O), [O]),
-        Y = n?.id,
-        q = i.useCallback(() => (0, P.A)(Y, U, l.id), [Y, U, l.id]);
-    if (!m || null == U) return [];
-    let J = [];
+        null != H && (0, g.ensureConnection)(H);
+    }, [H]);
+    let J = (0, c.bG)([b.A], () => null != H && null != b.A.getSettings(H), [H]),
+        O = n?.id,
+        Q = i.useCallback(() => (0, p.A)(O), [O]);
+    if (!U || null == K) return [];
+    let $ = [];
     return (
-        null != H &&
-            J.push(
+        null != B &&
+            $.push(
                 (0, e.jsx)(
-                    c.Dr,
+                    u.Dr,
                     {
                         id: "conjure-edit",
-                        icon: r.PencilIcon,
-                        leadingAccessory: { type: "icon", icon: r.PencilIcon },
-                        label: V.intl.string(N.default.jMMrDM),
-                        action: () => (0, A.pX)(G.BVt.CHANNEL(U, v.VV.CONJURE, H.id)),
+                        icon: o.PencilIcon,
+                        leadingAccessory: { type: "icon", icon: o.PencilIcon },
+                        label: F.intl.string(w.default.jMMrDM),
+                        action: () => (0, A.pX)(P.BVt.CHANNEL(K, C.VV.CONJURE, B.id)),
                     },
                     "edit",
                 ),
             ),
-        null != H &&
-            S &&
-            (W || (0, y.PV)(H)) &&
-            J.push(
+        null != B &&
+            L &&
+            (J || (0, f.PV)(B)) &&
+            $.push(
                 (0, e.jsx)(
-                    c.Dr,
+                    u.Dr,
                     {
                         id: "conjure-settings",
-                        icon: o.SettingsIcon,
-                        leadingAccessory: { type: "icon", icon: o.SettingsIcon },
-                        label: V.intl.string(N.default.I2XSKe),
-                        action: () => (0, h.A)(H.id, { guildId: U, initialTab: "app" }),
+                        icon: r.SettingsIcon,
+                        leadingAccessory: { type: "icon", icon: r.SettingsIcon },
+                        label: F.intl.string(w.default.I2XSKe),
+                        action: () => (0, h.A)(B.id, { guildId: K, initialTab: "app" }),
                     },
                     "settings",
                 ),
             ),
-        null != X &&
-            (0, y.H_)(X) &&
-            J.push(
+        null != q &&
+            (0, f.H_)(q) &&
+            $.push(
                 (0, e.jsx)(
-                    c.Dr,
+                    u.Dr,
                     {
                         id: "conjure-remix",
                         icon: a.CopyIcon,
                         leadingAccessory: { type: "icon", icon: a.CopyIcon },
-                        label: V.intl.string(N.default["9wQTdG"]),
-                        action: () => (0, I.A)(X, U),
+                        label: F.intl.string(w.default["9wQTdG"]),
+                        action: () => (0, I.A)(q, K),
                     },
                     "remix",
                 ),
             ),
-        (0, D.x1)(n) &&
-            J.push(
+        (0, E.x1)(n) &&
+            $.push(
                 (0, e.jsx)(
-                    c.Dr,
+                    u.Dr,
                     {
                         id: "conjure-close",
                         icon: d.DoorExitIcon,
                         leadingAccessory: { type: "icon", icon: d.DoorExitIcon },
-                        label: V.intl.string(N.default["/TlGcK"]),
-                        action: q,
+                        label: F.intl.string(w.default["/TlGcK"]),
+                        action: Q,
                     },
                     "close",
                 ),
             ),
-        J
+        $
     );
 }
