@@ -1,5 +1,7 @@
-var n;
-(t.d(e, { DaveModuleFactory: () => o }),
+(t.d(r, { DaveModuleFactory: () => n }),
+    t(323874),
+    t(14289),
+    t(35956),
     t(393431),
     t(532706),
     t(42231),
@@ -7,3166 +9,3207 @@ var n;
     t(949626),
     t(767709),
     t(65162),
-    t(667532),
-    t(323874),
-    t(14289),
-    t(35956),
     t(321073),
+    t(667532),
     t(938796));
-let o =
-    ((n = "file:///ci/build/discord/discord/discord_common/js/packages/libdave/package/wasm/libdave.js"),
-    function () {
-        let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var e,
-            o,
-            a,
-            s,
-            i,
-            u,
-            l,
-            d,
-            c,
-            f,
-            h,
-            p,
-            m,
-            v,
-            y,
-            g,
-            w,
-            E,
-            b,
-            _,
-            k,
-            $,
-            P,
-            T,
-            C,
-            A,
-            F = new Promise((r, t) => {
-                ((e = r), (o = t));
-            }),
-            D = Object.assign({}, r),
-            S = "./this.program",
-            j = "";
-        ("u" > typeof document && document.currentScript && (j = document.currentScript.src),
-            n && (j = n),
-            (j = j.startsWith("blob:") ? "" : j.substr(0, j.replace(/[?#].*/, "").lastIndexOf("/") + 1)),
-            (a = async (r) => {
-                var e = await fetch(r, { credentials: "same-origin" });
-                if (e.ok) return e.arrayBuffer();
-                throw Error(e.status + " : " + e.url);
-            }));
-        var x = r.print || console.log.bind(console),
-            O = r.printErr || console.error.bind(console);
-        (Object.assign(r, D), (D = null), r.arguments && r.arguments, r.thisProgram && (S = r.thisProgram));
-        var M = r.wasmBinary,
-            R = !1;
-        function W() {
-            var e = i.buffer;
-            ((r.HEAP8 = u = new Int8Array(e)),
-                (r.HEAP16 = d = new Int16Array(e)),
-                (r.HEAPU8 = l = new Uint8Array(e)),
-                (r.HEAPU16 = c = new Uint16Array(e)),
-                (r.HEAP32 = f = new Int32Array(e)),
-                (r.HEAPU32 = h = new Uint32Array(e)),
-                (r.HEAPF32 = p = new Float32Array(e)),
-                (r.HEAPF64 = y = new Float64Array(e)),
-                (r.HEAP64 = m = new BigInt64Array(e)),
-                (r.HEAPU64 = v = new BigUint64Array(e)));
+let n = async function () {
+    let e,
+        r,
+        n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    var o,
+        a,
+        s,
+        i,
+        l,
+        u,
+        d,
+        c,
+        h,
+        f,
+        p,
+        m,
+        v,
+        g,
+        w,
+        y,
+        E,
+        b,
+        k,
+        $,
+        _,
+        T,
+        P,
+        C,
+        S,
+        D = "./this.program",
+        F = "";
+    try {
+        F = new URL(".", "file:///ci/build/discord/discord/discord_common/js/packages/libdave/package/wasm/libdave.js")
+            .href;
+    } catch {}
+    o = async (e) => {
+        var r = await fetch(e, { credentials: "same-origin" });
+        if (r.ok) return r.arrayBuffer();
+        throw Error(r.status + " : " + r.url);
+    };
+    var A = console.log.bind(console),
+        M = console.error.bind(console),
+        x = !1;
+    function O() {
+        if (!l?.buffer?.resizable) {
+            var e = P.buffer;
+            ((l = new Int8Array(e)),
+                (f = new Int16Array(e)),
+                (n.HEAPU8 = c = new Uint8Array(e)),
+                (p = new Uint16Array(e)),
+                (d = new Int32Array(e)),
+                (u = new Uint32Array(e)),
+                (g = new Float32Array(e)),
+                (w = new Float64Array(e)),
+                (h = new BigInt64Array(e)),
+                (m = new BigUint64Array(e)));
         }
-        var N = [],
-            B = [],
-            U = [],
-            z = 0,
-            I = null;
-        function V(e) {
-            (z++, r.monitorRunDependencies?.(z));
-        }
-        function L(e) {
-            if ((z--, r.monitorRunDependencies?.(z), 0 == z && I)) {
-                var t = I;
-                ((I = null), t());
-            }
-        }
-        function H(e) {
-            (r.onAbort?.(e),
-                O((e = "Aborted(" + e + ")")),
-                (R = !0),
-                (e += ". Build with -sASSERTIONS for more info."));
-            var t = new WebAssembly.RuntimeError(e);
-            throw (o(t), t);
-        }
-        async function q(r) {
-            if (!M)
-                try {
-                    var e = await a(r);
-                    return new Uint8Array(e);
-                } catch {}
-            if (r == g && M) return new Uint8Array(M);
-            if (s) return s(r);
-            throw "both async and sync fetching of the wasm failed";
-        }
-        async function G(r, e) {
+    }
+    function R(e) {
+        throw (
+            n.onAbort?.(e),
+            (e = `Aborted(${e})`),
+            M(e),
+            (x = !0),
+            (e += ". Build with -sASSERTIONS for more info."),
+            new WebAssembly.RuntimeError(e)
+        );
+    }
+    async function N(e) {
+        if (!s)
             try {
-                var t = await q(r);
-                return await WebAssembly.instantiate(t, e);
-            } catch (r) {
-                (O(`failed to asynchronously prepare wasm: ${r}`), H(r));
-            }
+                var r = await o(e);
+                return new Uint8Array(r);
+            } catch {}
+        if (a) return a(e);
+        throw "both async and sync fetching of the wasm failed";
+    }
+    async function W(e, r) {
+        try {
+            var t = await N(e);
+            return await WebAssembly.instantiate(t, r);
+        } catch (e) {
+            (M(`failed to asynchronously prepare wasm: ${e}`), R(e));
         }
-        async function X(r, e, t) {
-            if (
-                !r &&
-                "function" == typeof WebAssembly.instantiateStreaming &&
-                !e.startsWith("data:application/octet-stream;base64,") &&
-                "function" == typeof fetch
-            )
-                try {
-                    var n = fetch(e, { credentials: "same-origin" });
-                    return await WebAssembly.instantiateStreaming(n, t);
-                } catch (r) {
-                    (O(`wasm streaming compile failed: ${r}`), O("falling back to ArrayBuffer instantiation"));
-                }
-            return G(e, t);
-        }
-        async function Y() {
-            function e(r, e) {
-                var t;
-                return ((i = (P = r.exports)._), W(), (k = P.ba), (t = P.$), B.unshift(t), L("wasm-instantiate"), P);
-            }
-            V("wasm-instantiate");
-            var n = { a: e$ };
-            if (r.instantiateWasm)
-                try {
-                    return r.instantiateWasm(n, e);
-                } catch (r) {
-                    (O(`Module.instantiateWasm callback failed with error: ${r}`), o(r));
-                }
-            g ??= (function () {
-                if (r.locateFile) {
-                    var e = "libdave.wasm";
-                    return e.startsWith("data:application/octet-stream;base64,")
-                        ? e
-                        : r.locateFile
-                          ? r.locateFile(e, j)
-                          : j + e;
-                }
-                return new URL(t(508678), t.b).href;
-            })();
+    }
+    async function j(e, r, t) {
+        if (!e)
             try {
-                var a = await X(M, g, n);
-                return (e(a.instance), a);
-            } catch (r) {
-                o(r);
-                return;
+                var n = fetch(r, { credentials: "same-origin" });
+                return await WebAssembly.instantiateStreaming(n, t);
+            } catch (e) {
+                (M(`wasm streaming compile failed: ${e}`), M("falling back to ArrayBuffer instantiation"));
             }
+        return W(r, t);
+    }
+    async function z() {
+        function e(e) {
+            var r;
+            return (
+                (y = (r = S = e.exports).fa),
+                (E = n._malloc = r.ha),
+                (b = n._free = r.ia),
+                (k = r.ja),
+                ($ = r.ka),
+                (_ = r.la),
+                (T = r.ma),
+                (P = r.da),
+                (C = r.ga),
+                O(),
+                S
+            );
         }
-        var K = (e) => {
-            for (; e.length > 0;) e.shift()(r);
-        };
-        r.noExitRuntime;
-        var Z = () => eS();
-        class J {
-            constructor(r) {
-                ((this.excPtr = r), (this.ptr = r - 24));
-            }
-            set_type(r) {
-                h[(this.ptr + 4) >> 2] = r;
-            }
-            get_type() {
-                return h[(this.ptr + 4) >> 2];
-            }
-            set_destructor(r) {
-                h[(this.ptr + 8) >> 2] = r;
-            }
-            get_destructor() {
-                return h[(this.ptr + 8) >> 2];
-            }
-            set_caught(r) {
-                ((r = +!!r), (u[this.ptr + 12] = r));
-            }
-            get_caught() {
-                return 0 != u[this.ptr + 12];
-            }
-            set_rethrown(r) {
-                ((r = +!!r), (u[this.ptr + 13] = r));
-            }
-            get_rethrown() {
-                return 0 != u[this.ptr + 13];
-            }
-            init(r, e) {
-                (this.set_adjusted_ptr(0), this.set_type(r), this.set_destructor(e));
-            }
-            set_adjusted_ptr(r) {
-                h[(this.ptr + 16) >> 2] = r;
-            }
-            get_adjusted_ptr() {
-                return h[(this.ptr + 16) >> 2];
-            }
+        var r = { a: rD },
+            o = n.instantiateWasm;
+        return o
+            ? new Promise((t) => {
+                  o(r, (r) => t(e(r)));
+              })
+            : ((i ??= (function () {
+                  if (n.locateFile) {
+                      var e;
+                      return ((e = "libdave.wasm"), n.locateFile ? n.locateFile(e, F) : F + e);
+                  }
+                  return new URL(t(508678), t.b).href;
+              })()),
+              e((await j(s, i, r)).instance));
+    }
+    var B = (e) => {
+            for (; e.length > 0;) e.shift()(n);
+        },
+        U = [],
+        I = [],
+        L = (e) => $(e),
+        V = () => T();
+    class H {
+        constructor(e) {
+            ((this.excPtr = e), (this.ptr = e - 24));
         }
-        var Q = 0,
-            rr = 0,
-            re = () => {
-                var r = f[rw.varargs >> 2];
-                return ((rw.varargs += 4), r);
-            },
-            rt = {
-                isAbs: (r) => "/" === r.charAt(0),
-                splitPath: (r) => /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/.exec(r).slice(1),
-                normalizeArray: (r, e) => {
-                    for (var t = 0, n = r.length - 1; n >= 0; n--) {
-                        var o = r[n];
-                        "." === o ? r.splice(n, 1) : ".." === o ? (r.splice(n, 1), t++) : t && (r.splice(n, 1), t--);
-                    }
-                    if (e) for (; t; t--) r.unshift("..");
-                    return r;
-                },
-                normalize: (r) => {
-                    var e = rt.isAbs(r),
-                        t = "/" === r.substr(-1);
-                    return (
-                        (r = rt
-                            .normalizeArray(
-                                r.split("/").filter((r) => !!r),
-                                !e,
-                            )
-                            .join("/")) ||
-                            e ||
-                            (r = "."),
-                        r && t && (r += "/"),
-                        (e ? "/" : "") + r
-                    );
-                },
-                dirname: (r) => {
-                    var e = rt.splitPath(r),
-                        t = e[0],
-                        n = e[1];
-                    return t || n ? (n && (n = n.substr(0, n.length - 1)), t + n) : ".";
-                },
-                basename: (r) => {
-                    if ("/" === r) return "/";
-                    var e = (r = (r = rt.normalize(r)).replace(/\/$/, "")).lastIndexOf("/");
-                    return -1 === e ? r : r.substr(e + 1);
-                },
-                join: function () {
-                    for (var r = arguments.length, e = Array(r), t = 0; t < r; t++) e[t] = arguments[t];
-                    return rt.normalize(e.join("/"));
-                },
-                join2: (r, e) => rt.normalize(r + "/" + e),
-            },
-            rn = (r) =>
-                (rn = (() => {
-                    if ("object" == typeof crypto && "function" == typeof crypto.getRandomValues)
-                        return (r) => crypto.getRandomValues(r);
-                    H("initRandomDevice");
-                })())(r),
-            ro = {
-                resolve: function () {
-                    for (var r = arguments.length, e = Array(r), t = 0; t < r; t++) e[t] = arguments[t];
-                    for (var n = "", o = !1, a = e.length - 1; a >= -1 && !o; a--) {
-                        var s = a >= 0 ? e[a] : ry.cwd();
-                        if ("string" != typeof s) throw TypeError("Arguments to path.resolve must be strings");
-                        if (!s) return "";
-                        ((n = s + "/" + n), (o = rt.isAbs(s)));
-                    }
-                    return (
-                        (n = rt
-                            .normalizeArray(
-                                n.split("/").filter((r) => !!r),
-                                !o,
-                            )
-                            .join("/")),
-                        (o ? "/" : "") + n || "."
-                    );
-                },
-                relative: (r, e) => {
-                    function t(r) {
-                        for (var e = 0; e < r.length && "" === r[e]; e++);
-                        for (var t = r.length - 1; t >= 0 && "" === r[t]; t--);
-                        return e > t ? [] : r.slice(e, t - e + 1);
-                    }
-                    ((r = ro.resolve(r).substr(1)), (e = ro.resolve(e).substr(1)));
-                    for (
-                        var n = t(r.split("/")), o = t(e.split("/")), a = Math.min(n.length, o.length), s = a, i = 0;
-                        i < a;
-                        i++
-                    )
-                        if (n[i] !== o[i]) {
-                            s = i;
-                            break;
-                        }
-                    for (var u = [], i = s; i < n.length; i++) u.push("..");
-                    return (u = u.concat(o.slice(s))).join("/");
-                },
-            },
-            ra = "u" > typeof TextDecoder ? new TextDecoder() : void 0,
-            rs = function (r) {
-                let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-                    t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : NaN;
-                for (var n = e + t, o = e; r[o] && !(o >= n);) ++o;
-                if (o - e > 16 && r.buffer && ra) return ra.decode(r.subarray(e, o));
-                for (var a = ""; e < o;) {
-                    var s = r[e++];
-                    if (!(128 & s)) {
-                        a += String.fromCharCode(s);
-                        continue;
-                    }
-                    var i = 63 & r[e++];
-                    if ((224 & s) == 192) {
-                        a += String.fromCharCode(((31 & s) << 6) | i);
-                        continue;
-                    }
-                    var u = 63 & r[e++];
-                    if (
-                        (s =
-                            (240 & s) == 224
-                                ? ((15 & s) << 12) | (i << 6) | u
-                                : ((7 & s) << 18) | (i << 12) | (u << 6) | (63 & r[e++])) < 65536
-                    )
-                        a += String.fromCharCode(s);
-                    else {
-                        var l = s - 65536;
-                        a += String.fromCharCode(55296 | (l >> 10), 56320 | (1023 & l));
-                    }
+        set_type(e) {
+            u[(this.ptr + 4) >> 2] = e;
+        }
+        get_type() {
+            return u[(this.ptr + 4) >> 2];
+        }
+        set_destructor(e) {
+            u[(this.ptr + 8) >> 2] = e;
+        }
+        get_destructor() {
+            return u[(this.ptr + 8) >> 2];
+        }
+        set_caught(e) {
+            ((e = +!!e), (l[this.ptr + 12] = e));
+        }
+        get_caught() {
+            return 0 != l[this.ptr + 12];
+        }
+        set_rethrown(e) {
+            ((e = +!!e), (l[this.ptr + 13] = e));
+        }
+        get_rethrown() {
+            return 0 != l[this.ptr + 13];
+        }
+        init(e, r) {
+            (this.set_adjusted_ptr(0), this.set_type(e), this.set_destructor(r));
+        }
+        set_adjusted_ptr(e) {
+            u[(this.ptr + 16) >> 2] = e;
+        }
+        get_adjusted_ptr() {
+            return u[(this.ptr + 16) >> 2];
+        }
+    }
+    var q = 0,
+        G = () => {
+            var e = d[eb.varargs >> 2];
+            return ((eb.varargs += 4), e);
+        },
+        X = {
+            isAbs: (e) => "/" === e.charAt(0),
+            splitPath: (e) => /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/.exec(e).slice(1),
+            normalizeArray: (e, r) => {
+                for (var t = 0, n = e.length - 1; n >= 0; n--) {
+                    var o = e[n];
+                    "." === o ? e.splice(n, 1) : ".." === o ? (e.splice(n, 1), t++) : t && (e.splice(n, 1), t--);
                 }
-                return a;
-            },
-            ri = [],
-            ru = (r) => {
-                for (var e = 0, t = 0; t < r.length; ++t) {
-                    var n = r.charCodeAt(t);
-                    n <= 127 ? e++ : n <= 2047 ? (e += 2) : n >= 55296 && n <= 57343 ? ((e += 4), ++t) : (e += 3);
-                }
+                if (r) for (; t; t--) e.unshift("..");
                 return e;
             },
-            rl = (r, e, t, n) => {
-                if (!(n > 0)) return 0;
-                for (var o = t, a = t + n - 1, s = 0; s < r.length; ++s) {
-                    var i = r.charCodeAt(s);
-                    if (
-                        (i >= 55296 && i <= 57343 && (i = (65536 + ((1023 & i) << 10)) | (1023 & r.charCodeAt(++s))),
-                        i <= 127)
-                    ) {
-                        if (t >= a) break;
-                        e[t++] = i;
-                    } else if (i <= 2047) {
-                        if (t + 1 >= a) break;
-                        ((e[t++] = 192 | (i >> 6)), (e[t++] = 128 | (63 & i)));
-                    } else if (i <= 65535) {
-                        if (t + 2 >= a) break;
-                        ((e[t++] = 224 | (i >> 12)), (e[t++] = 128 | ((i >> 6) & 63)), (e[t++] = 128 | (63 & i)));
-                    } else {
-                        if (t + 3 >= a) break;
-                        ((e[t++] = 240 | (i >> 18)),
-                            (e[t++] = 128 | ((i >> 12) & 63)),
-                            (e[t++] = 128 | ((i >> 6) & 63)),
-                            (e[t++] = 128 | (63 & i)));
-                    }
-                }
-                return ((e[t] = 0), t - o);
-            },
-            rd = {
-                ttys: [],
-                init() {},
-                shutdown() {},
-                register(r, e) {
-                    ((rd.ttys[r] = { input: [], output: [], ops: e }), ry.registerDevice(r, rd.stream_ops));
-                },
-                stream_ops: {
-                    open(r) {
-                        var e = rd.ttys[r.node.rdev];
-                        if (!e) throw new ry.ErrnoError(43);
-                        ((r.tty = e), (r.seekable = !1));
-                    },
-                    close(r) {
-                        r.tty.ops.fsync(r.tty);
-                    },
-                    fsync(r) {
-                        r.tty.ops.fsync(r.tty);
-                    },
-                    read(r, e, t, n, o) {
-                        if (!r.tty || !r.tty.ops.get_char) throw new ry.ErrnoError(60);
-                        for (var a, s = 0, i = 0; i < n; i++) {
-                            try {
-                                a = r.tty.ops.get_char(r.tty);
-                            } catch (r) {
-                                throw new ry.ErrnoError(29);
-                            }
-                            if (void 0 === a && 0 === s) throw new ry.ErrnoError(6);
-                            if (null == a) break;
-                            (s++, (e[t + i] = a));
-                        }
-                        return (s && (r.node.atime = Date.now()), s);
-                    },
-                    write(r, e, t, n, o) {
-                        if (!r.tty || !r.tty.ops.put_char) throw new ry.ErrnoError(60);
-                        try {
-                            for (var a = 0; a < n; a++) r.tty.ops.put_char(r.tty, e[t + a]);
-                        } catch (r) {
-                            throw new ry.ErrnoError(29);
-                        }
-                        return (n && (r.node.mtime = r.node.ctime = Date.now()), a);
-                    },
-                },
-                default_tty_ops: {
-                    get_char: (r) =>
-                        (() => {
-                            if (!ri.length) {
-                                var r,
-                                    e,
-                                    t,
-                                    n,
-                                    o = null;
-                                if (
-                                    ("u" > typeof window &&
-                                        "function" == typeof window.prompt &&
-                                        null !== (o = window.prompt("Input: ")) &&
-                                        (o += "\n"),
-                                    !o)
-                                )
-                                    return null;
-                                ((r = o),
-                                    (e = !0),
-                                    (t = Array(ru(r) + 1)),
-                                    (n = rl(r, t, 0, t.length)),
-                                    e && (t.length = n),
-                                    (ri = t));
-                            }
-                            return ri.shift();
-                        })(),
-                    put_char(r, e) {
-                        null === e || 10 === e ? (x(rs(r.output)), (r.output = [])) : 0 != e && r.output.push(e);
-                    },
-                    fsync(r) {
-                        r.output && r.output.length > 0 && (x(rs(r.output)), (r.output = []));
-                    },
-                    ioctl_tcgets: (r) => ({
-                        c_iflag: 25856,
-                        c_oflag: 5,
-                        c_cflag: 191,
-                        c_lflag: 35387,
-                        c_cc: [
-                            3, 28, 127, 21, 4, 0, 1, 0, 17, 19, 26, 0, 18, 15, 23, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                            0, 0, 0, 0, 0,
-                        ],
-                    }),
-                    ioctl_tcsets: (r, e, t) => 0,
-                    ioctl_tiocgwinsz: (r) => [24, 80],
-                },
-                default_tty1_ops: {
-                    put_char(r, e) {
-                        null === e || 10 === e ? (O(rs(r.output)), (r.output = [])) : 0 != e && r.output.push(e);
-                    },
-                    fsync(r) {
-                        r.output && r.output.length > 0 && (O(rs(r.output)), (r.output = []));
-                    },
-                },
-            },
-            rc = (r, e) => Math.ceil(r / e) * e,
-            rf = (r) => {
-                r = rc(r, 65536);
-                var e,
-                    t = eA(65536, r);
-                return (t && ((e = r), l.fill(0, t, t + e)), t);
-            },
-            rh = {
-                ops_table: null,
-                mount: (r) => rh.createNode(null, "/", 16895, 0),
-                createNode(r, e, t, n) {
-                    if (ry.isBlkdev(t) || ry.isFIFO(t)) throw new ry.ErrnoError(63);
-                    rh.ops_table ||= {
-                        dir: {
-                            node: {
-                                getattr: rh.node_ops.getattr,
-                                setattr: rh.node_ops.setattr,
-                                lookup: rh.node_ops.lookup,
-                                mknod: rh.node_ops.mknod,
-                                rename: rh.node_ops.rename,
-                                unlink: rh.node_ops.unlink,
-                                rmdir: rh.node_ops.rmdir,
-                                readdir: rh.node_ops.readdir,
-                                symlink: rh.node_ops.symlink,
-                            },
-                            stream: { llseek: rh.stream_ops.llseek },
-                        },
-                        file: {
-                            node: { getattr: rh.node_ops.getattr, setattr: rh.node_ops.setattr },
-                            stream: {
-                                llseek: rh.stream_ops.llseek,
-                                read: rh.stream_ops.read,
-                                write: rh.stream_ops.write,
-                                allocate: rh.stream_ops.allocate,
-                                mmap: rh.stream_ops.mmap,
-                                msync: rh.stream_ops.msync,
-                            },
-                        },
-                        link: {
-                            node: {
-                                getattr: rh.node_ops.getattr,
-                                setattr: rh.node_ops.setattr,
-                                readlink: rh.node_ops.readlink,
-                            },
-                            stream: {},
-                        },
-                        chrdev: {
-                            node: { getattr: rh.node_ops.getattr, setattr: rh.node_ops.setattr },
-                            stream: ry.chrdev_stream_ops,
-                        },
-                    };
-                    var o = ry.createNode(r, e, t, n);
-                    return (
-                        ry.isDir(o.mode)
-                            ? ((o.node_ops = rh.ops_table.dir.node),
-                              (o.stream_ops = rh.ops_table.dir.stream),
-                              (o.contents = {}))
-                            : ry.isFile(o.mode)
-                              ? ((o.node_ops = rh.ops_table.file.node),
-                                (o.stream_ops = rh.ops_table.file.stream),
-                                (o.usedBytes = 0),
-                                (o.contents = null))
-                              : ry.isLink(o.mode)
-                                ? ((o.node_ops = rh.ops_table.link.node), (o.stream_ops = rh.ops_table.link.stream))
-                                : ry.isChrdev(o.mode) &&
-                                  ((o.node_ops = rh.ops_table.chrdev.node),
-                                  (o.stream_ops = rh.ops_table.chrdev.stream)),
-                        (o.atime = o.mtime = o.ctime = Date.now()),
-                        r && ((r.contents[e] = o), (r.atime = r.mtime = r.ctime = o.atime)),
-                        o
-                    );
-                },
-                getFileDataAsTypedArray: (r) =>
-                    r.contents
-                        ? r.contents.subarray
-                            ? r.contents.subarray(0, r.usedBytes)
-                            : new Uint8Array(r.contents)
-                        : new Uint8Array(0),
-                expandFileStorage(r, e) {
-                    var t = r.contents ? r.contents.length : 0;
-                    if (!(t >= e)) {
-                        ((e = Math.max(e, (t * (t < 1048576 ? 2 : 1.125)) >>> 0)), 0 != t && (e = Math.max(e, 256)));
-                        var n = r.contents;
-                        ((r.contents = new Uint8Array(e)),
-                            r.usedBytes > 0 && r.contents.set(n.subarray(0, r.usedBytes), 0));
-                    }
-                },
-                resizeFileStorage(r, e) {
-                    if (r.usedBytes != e)
-                        if (0 == e) ((r.contents = null), (r.usedBytes = 0));
-                        else {
-                            var t = r.contents;
-                            ((r.contents = new Uint8Array(e)),
-                                t && r.contents.set(t.subarray(0, Math.min(e, r.usedBytes))),
-                                (r.usedBytes = e));
-                        }
-                },
-                node_ops: {
-                    getattr(r) {
-                        var e = {};
-                        return (
-                            (e.dev = ry.isChrdev(r.mode) ? r.id : 1),
-                            (e.ino = r.id),
-                            (e.mode = r.mode),
-                            (e.nlink = 1),
-                            (e.uid = 0),
-                            (e.gid = 0),
-                            (e.rdev = r.rdev),
-                            ry.isDir(r.mode)
-                                ? (e.size = 4096)
-                                : ry.isFile(r.mode)
-                                  ? (e.size = r.usedBytes)
-                                  : ry.isLink(r.mode)
-                                    ? (e.size = r.link.length)
-                                    : (e.size = 0),
-                            (e.atime = new Date(r.atime)),
-                            (e.mtime = new Date(r.mtime)),
-                            (e.ctime = new Date(r.ctime)),
-                            (e.blksize = 4096),
-                            (e.blocks = Math.ceil(e.size / e.blksize)),
-                            e
-                        );
-                    },
-                    setattr(r, e) {
-                        for (let t of ["mode", "atime", "mtime", "ctime"]) e[t] && (r[t] = e[t]);
-                        void 0 !== e.size && rh.resizeFileStorage(r, e.size);
-                    },
-                    lookup(r, e) {
-                        throw rh.doesNotExistError;
-                    },
-                    mknod: (r, e, t, n) => rh.createNode(r, e, t, n),
-                    rename(r, e, t) {
-                        var n;
-                        try {
-                            n = ry.lookupNode(e, t);
-                        } catch (r) {}
-                        if (n) {
-                            if (ry.isDir(r.mode)) for (var o in n.contents) throw new ry.ErrnoError(55);
-                            ry.hashRemoveNode(n);
-                        }
-                        (delete r.parent.contents[r.name],
-                            (e.contents[t] = r),
-                            (r.name = t),
-                            (e.ctime = e.mtime = r.parent.ctime = r.parent.mtime = Date.now()));
-                    },
-                    unlink(r, e) {
-                        (delete r.contents[e], (r.ctime = r.mtime = Date.now()));
-                    },
-                    rmdir(r, e) {
-                        var t = ry.lookupNode(r, e);
-                        for (var n in t.contents) throw new ry.ErrnoError(55);
-                        (delete r.contents[e], (r.ctime = r.mtime = Date.now()));
-                    },
-                    readdir: (r) => [".", "..", ...Object.keys(r.contents)],
-                    symlink(r, e, t) {
-                        var n = rh.createNode(r, e, 41471, 0);
-                        return ((n.link = t), n);
-                    },
-                    readlink(r) {
-                        if (!ry.isLink(r.mode)) throw new ry.ErrnoError(28);
-                        return r.link;
-                    },
-                },
-                stream_ops: {
-                    read(r, e, t, n, o) {
-                        var a = r.node.contents;
-                        if (o >= r.node.usedBytes) return 0;
-                        var s = Math.min(r.node.usedBytes - o, n);
-                        if (s > 8 && a.subarray) e.set(a.subarray(o, o + s), t);
-                        else for (var i = 0; i < s; i++) e[t + i] = a[o + i];
-                        return s;
-                    },
-                    write(r, e, t, n, o, a) {
-                        if ((e.buffer === u.buffer && (a = !1), !n)) return 0;
-                        var s = r.node;
-                        if (((s.mtime = s.ctime = Date.now()), e.subarray && (!s.contents || s.contents.subarray))) {
-                            if (a) return ((s.contents = e.subarray(t, t + n)), (s.usedBytes = n), n);
-                            else if (0 === s.usedBytes && 0 === o)
-                                return ((s.contents = e.slice(t, t + n)), (s.usedBytes = n), n);
-                            else if (o + n <= s.usedBytes) return (s.contents.set(e.subarray(t, t + n), o), n);
-                        }
-                        if ((rh.expandFileStorage(s, o + n), s.contents.subarray && e.subarray))
-                            s.contents.set(e.subarray(t, t + n), o);
-                        else for (var i = 0; i < n; i++) s.contents[o + i] = e[t + i];
-                        return ((s.usedBytes = Math.max(s.usedBytes, o + n)), n);
-                    },
-                    llseek(r, e, t) {
-                        var n = e;
-                        if (
-                            (1 === t ? (n += r.position) : 2 === t && ry.isFile(r.node.mode) && (n += r.node.usedBytes),
-                            n < 0)
-                        )
-                            throw new ry.ErrnoError(28);
-                        return n;
-                    },
-                    allocate(r, e, t) {
-                        (rh.expandFileStorage(r.node, e + t), (r.node.usedBytes = Math.max(r.node.usedBytes, e + t)));
-                    },
-                    mmap(r, e, t, n, o) {
-                        if (!ry.isFile(r.node.mode)) throw new ry.ErrnoError(43);
-                        var a,
-                            s,
-                            i = r.node.contents;
-                        if (!(2 & o) && i && i.buffer === u.buffer) ((s = !1), (a = i.byteOffset));
-                        else {
-                            if (((s = !0), !(a = rf(e)))) throw new ry.ErrnoError(48);
-                            i &&
-                                ((t > 0 || t + e < i.length) &&
-                                    (i = i.subarray ? i.subarray(t, t + e) : Array.prototype.slice.call(i, t, t + e)),
-                                u.set(i, a));
-                        }
-                        return { ptr: a, allocated: s };
-                    },
-                    msync: (r, e, t, n, o) => (rh.stream_ops.write(r, e, 0, n, t, !1), 0),
-                },
-            },
-            rp = async (r) => new Uint8Array(await a(r)),
-            rm = r.preloadPlugins || [],
-            rv = (r, e) => {
-                var t = 0;
-                return (r && (t |= 365), e && (t |= 146), t);
-            },
-            ry = {
-                root: null,
-                mounts: [],
-                devices: {},
-                streams: [],
-                nextInode: 1,
-                nameTable: null,
-                currentPath: "/",
-                initialized: !1,
-                ignorePermissions: !0,
-                ErrnoError: class {
-                    name = "ErrnoError";
-                    constructor(r) {
-                        this.errno = r;
-                    }
-                },
-                filesystems: null,
-                syncFSRequests: 0,
-                readFiles: {},
-                FSStream: class {
-                    shared = {};
-                    get object() {
-                        return this.node;
-                    }
-                    set object(r) {
-                        this.node = r;
-                    }
-                    get isRead() {
-                        return (2097155 & this.flags) != 1;
-                    }
-                    get isWrite() {
-                        return (2097155 & this.flags) != 0;
-                    }
-                    get isAppend() {
-                        return 1024 & this.flags;
-                    }
-                    get flags() {
-                        return this.shared.flags;
-                    }
-                    set flags(r) {
-                        this.shared.flags = r;
-                    }
-                    get position() {
-                        return this.shared.position;
-                    }
-                    set position(r) {
-                        this.shared.position = r;
-                    }
-                },
-                FSNode: class {
-                    node_ops = {};
-                    stream_ops = {};
-                    readMode = 365;
-                    writeMode = 146;
-                    mounted = null;
-                    constructor(r, e, t, n) {
-                        (r || (r = this),
-                            (this.parent = r),
-                            (this.mount = r.mount),
-                            (this.id = ry.nextInode++),
-                            (this.name = e),
-                            (this.mode = t),
-                            (this.rdev = n),
-                            (this.atime = this.mtime = this.ctime = Date.now()));
-                    }
-                    get read() {
-                        return (this.mode & this.readMode) === this.readMode;
-                    }
-                    set read(r) {
-                        r ? (this.mode |= this.readMode) : (this.mode &= ~this.readMode);
-                    }
-                    get write() {
-                        return (this.mode & this.writeMode) === this.writeMode;
-                    }
-                    set write(r) {
-                        r ? (this.mode |= this.writeMode) : (this.mode &= ~this.writeMode);
-                    }
-                    get isFolder() {
-                        return ry.isDir(this.mode);
-                    }
-                    get isDevice() {
-                        return ry.isChrdev(this.mode);
-                    }
-                },
-                lookupPath(r) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    if (!r) return { path: "", node: null };
-                    ((e.follow_mount ??= !0), rt.isAbs(r) || (r = ry.cwd() + "/" + r));
-                    r: for (var t = 0; t < 40; t++) {
-                        for (
-                            var n = r.split("/").filter((r) => !!r && "." !== r), o = ry.root, a = "/", s = 0;
-                            s < n.length;
-                            s++
-                        ) {
-                            var i = s === n.length - 1;
-                            if (i && e.parent) break;
-                            if (".." === n[s]) {
-                                ((a = rt.dirname(a)), (o = o.parent));
-                                continue;
-                            }
-                            a = rt.join2(a, n[s]);
-                            try {
-                                o = ry.lookupNode(o, n[s]);
-                            } catch (r) {
-                                if (r?.errno === 44 && i && e.noent_okay) return { path: a };
-                                throw r;
-                            }
-                            if (
-                                (ry.isMountpoint(o) && (!i || e.follow_mount) && (o = o.mounted.root),
-                                ry.isLink(o.mode) && (!i || e.follow))
-                            ) {
-                                if (!o.node_ops.readlink) throw new ry.ErrnoError(52);
-                                var u = o.node_ops.readlink(o);
-                                (rt.isAbs(u) || (u = rt.dirname(a) + "/" + u),
-                                    (r = u + "/" + n.slice(s + 1).join("/")));
-                                continue r;
-                            }
-                        }
-                        return { path: a, node: o };
-                    }
-                    throw new ry.ErrnoError(32);
-                },
-                getPath(r) {
-                    for (var e; ;) {
-                        if (ry.isRoot(r)) {
-                            var t = r.mount.mountpoint;
-                            if (!e) return t;
-                            return "/" !== t[t.length - 1] ? `${t}/${e}` : t + e;
-                        }
-                        ((e = e ? `${r.name}/${e}` : r.name), (r = r.parent));
-                    }
-                },
-                hashName(r, e) {
-                    for (var t = 0, n = 0; n < e.length; n++) t = ((t << 5) - t + e.charCodeAt(n)) | 0;
-                    return ((r + t) >>> 0) % ry.nameTable.length;
-                },
-                hashAddNode(r) {
-                    var e = ry.hashName(r.parent.id, r.name);
-                    ((r.name_next = ry.nameTable[e]), (ry.nameTable[e] = r));
-                },
-                hashRemoveNode(r) {
-                    var e = ry.hashName(r.parent.id, r.name);
-                    if (ry.nameTable[e] === r) ry.nameTable[e] = r.name_next;
-                    else
-                        for (var t = ry.nameTable[e]; t;) {
-                            if (t.name_next === r) {
-                                t.name_next = r.name_next;
-                                break;
-                            }
-                            t = t.name_next;
-                        }
-                },
-                lookupNode(r, e) {
-                    var t = ry.mayLookup(r);
-                    if (t) throw new ry.ErrnoError(t);
-                    for (var n = ry.hashName(r.id, e), o = ry.nameTable[n]; o; o = o.name_next) {
-                        var a = o.name;
-                        if (o.parent.id === r.id && a === e) return o;
-                    }
-                    return ry.lookup(r, e);
-                },
-                createNode(r, e, t, n) {
-                    var o = new ry.FSNode(r, e, t, n);
-                    return (ry.hashAddNode(o), o);
-                },
-                destroyNode(r) {
-                    ry.hashRemoveNode(r);
-                },
-                isRoot: (r) => r === r.parent,
-                isMountpoint: (r) => !!r.mounted,
-                isFile: (r) => (61440 & r) == 32768,
-                isDir: (r) => (61440 & r) == 16384,
-                isLink: (r) => (61440 & r) == 40960,
-                isChrdev: (r) => (61440 & r) == 8192,
-                isBlkdev: (r) => (61440 & r) == 24576,
-                isFIFO: (r) => (61440 & r) == 4096,
-                isSocket: (r) => (49152 & r) == 49152,
-                flagsToPermissionString(r) {
-                    var e = ["r", "w", "rw"][3 & r];
-                    return (512 & r && (e += "w"), e);
-                },
-                nodePermissions: (r, e) =>
-                    ry.ignorePermissions
-                        ? 0
-                        : (e.includes("r") && !(292 & r.mode)) ||
-                            (e.includes("w") && !(146 & r.mode)) ||
-                            (e.includes("x") && !(73 & r.mode))
-                          ? 2
-                          : 0,
-                mayLookup(r) {
-                    if (!ry.isDir(r.mode)) return 54;
-                    var e = ry.nodePermissions(r, "x");
-                    return e || 2 * !r.node_ops.lookup;
-                },
-                mayCreate(r, e) {
-                    if (!ry.isDir(r.mode)) return 54;
-                    try {
-                        return (ry.lookupNode(r, e), 20);
-                    } catch (r) {}
-                    return ry.nodePermissions(r, "wx");
-                },
-                mayDelete(r, e, t) {
-                    try {
-                        n = ry.lookupNode(r, e);
-                    } catch (r) {
-                        return r.errno;
-                    }
-                    var n,
-                        o = ry.nodePermissions(r, "wx");
-                    if (o) return o;
-                    if (t) {
-                        if (!ry.isDir(n.mode)) return 54;
-                        if (ry.isRoot(n) || ry.getPath(n) === ry.cwd()) return 10;
-                    } else if (ry.isDir(n.mode)) return 31;
-                    return 0;
-                },
-                mayOpen: (r, e) =>
-                    r
-                        ? ry.isLink(r.mode)
-                            ? 32
-                            : ry.isDir(r.mode) && ("r" !== ry.flagsToPermissionString(e) || 512 & e)
-                              ? 31
-                              : ry.nodePermissions(r, ry.flagsToPermissionString(e))
-                        : 44,
-                MAX_OPEN_FDS: 4096,
-                nextfd() {
-                    for (var r = 0; r <= ry.MAX_OPEN_FDS; r++) if (!ry.streams[r]) return r;
-                    throw new ry.ErrnoError(33);
-                },
-                getStreamChecked(r) {
-                    var e = ry.getStream(r);
-                    if (!e) throw new ry.ErrnoError(8);
-                    return e;
-                },
-                getStream: (r) => ry.streams[r],
-                createStream(r) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-                    return (
-                        (r = Object.assign(new ry.FSStream(), r)),
-                        -1 == e && (e = ry.nextfd()),
-                        (r.fd = e),
-                        (ry.streams[e] = r),
-                        r
-                    );
-                },
-                closeStream(r) {
-                    ry.streams[r] = null;
-                },
-                dupStream(r) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-                    var t = ry.createStream(r, e);
-                    return (t.stream_ops?.dup?.(t), t);
-                },
-                chrdev_stream_ops: {
-                    open(r) {
-                        var e = ry.getDevice(r.node.rdev);
-                        ((r.stream_ops = e.stream_ops), r.stream_ops.open?.(r));
-                    },
-                    llseek() {
-                        throw new ry.ErrnoError(70);
-                    },
-                },
-                major: (r) => r >> 8,
-                minor: (r) => 255 & r,
-                makedev: (r, e) => (r << 8) | e,
-                registerDevice(r, e) {
-                    ry.devices[r] = { stream_ops: e };
-                },
-                getDevice: (r) => ry.devices[r],
-                getMounts(r) {
-                    for (var e = [], t = [r]; t.length;) {
-                        var n = t.pop();
-                        (e.push(n), t.push(...n.mounts));
-                    }
-                    return e;
-                },
-                syncfs(r, e) {
-                    ("function" == typeof r && ((e = r), (r = !1)),
-                        ry.syncFSRequests++,
-                        ry.syncFSRequests > 1 &&
-                            O(
-                                `warning: ${ry.syncFSRequests} FS.syncfs operations in flight at once, probably just doing extra work`,
-                            ));
-                    var t = ry.getMounts(ry.root.mount),
-                        n = 0;
-                    function o(r) {
-                        return (ry.syncFSRequests--, e(r));
-                    }
-                    function a(r) {
-                        if (r) return a.errored ? void 0 : ((a.errored = !0), o(r));
-                        ++n >= t.length && o(null);
-                    }
-                    t.forEach((e) => {
-                        if (!e.type.syncfs) return a(null);
-                        e.type.syncfs(e, r, a);
-                    });
-                },
-                mount(r, e, t) {
-                    var n,
-                        o = "/" === t,
-                        a = !t;
-                    if (o && ry.root) throw new ry.ErrnoError(10);
-                    if (!o && !a) {
-                        var s = ry.lookupPath(t, { follow_mount: !1 });
-                        if (((t = s.path), (n = s.node), ry.isMountpoint(n))) throw new ry.ErrnoError(10);
-                        if (!ry.isDir(n.mode)) throw new ry.ErrnoError(54);
-                    }
-                    var i = { type: r, opts: e, mountpoint: t, mounts: [] },
-                        u = r.mount(i);
-                    return (
-                        (u.mount = i),
-                        (i.root = u),
-                        o ? (ry.root = u) : n && ((n.mounted = i), n.mount && n.mount.mounts.push(i)),
-                        u
-                    );
-                },
-                unmount(r) {
-                    var e = ry.lookupPath(r, { follow_mount: !1 });
-                    if (!ry.isMountpoint(e.node)) throw new ry.ErrnoError(28);
-                    var t = e.node,
-                        n = t.mounted,
-                        o = ry.getMounts(n);
-                    (Object.keys(ry.nameTable).forEach((r) => {
-                        for (var e = ry.nameTable[r]; e;) {
-                            var t = e.name_next;
-                            (o.includes(e.mount) && ry.destroyNode(e), (e = t));
-                        }
-                    }),
-                        (t.mounted = null));
-                    var a = t.mount.mounts.indexOf(n);
-                    t.mount.mounts.splice(a, 1);
-                },
-                lookup: (r, e) => r.node_ops.lookup(r, e),
-                mknod(r, e, t) {
-                    var n = ry.lookupPath(r, { parent: !0 }).node,
-                        o = rt.basename(r);
-                    if (!o || "." === o || ".." === o) throw new ry.ErrnoError(28);
-                    var a = ry.mayCreate(n, o);
-                    if (a) throw new ry.ErrnoError(a);
-                    if (!n.node_ops.mknod) throw new ry.ErrnoError(63);
-                    return n.node_ops.mknod(n, o, e, t);
-                },
-                statfs(r) {
-                    var e = {
-                            bsize: 4096,
-                            frsize: 4096,
-                            blocks: 1e6,
-                            bfree: 5e5,
-                            bavail: 5e5,
-                            files: ry.nextInode,
-                            ffree: ry.nextInode - 1,
-                            fsid: 42,
-                            flags: 2,
-                            namelen: 255,
-                        },
-                        t = ry.lookupPath(r, { follow: !0 }).node;
-                    return (t?.node_ops.statfs && Object.assign(e, t.node_ops.statfs(t.mount.opts.root)), e);
-                },
-                create(r) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 438;
-                    return ((e &= 4095), (e |= 32768), ry.mknod(r, e, 0));
-                },
-                mkdir(r) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 511;
-                    return ((e &= 1023), (e |= 16384), ry.mknod(r, e, 0));
-                },
-                mkdirTree(r, e) {
-                    for (var t = r.split("/"), n = "", o = 0; o < t.length; ++o)
-                        if (t[o]) {
-                            n += "/" + t[o];
-                            try {
-                                ry.mkdir(n, e);
-                            } catch (r) {
-                                if (20 != r.errno) throw r;
-                            }
-                        }
-                },
-                mkdev: (r, e, t) => (void 0 === t && ((t = e), (e = 438)), (e |= 8192), ry.mknod(r, e, t)),
-                symlink(r, e) {
-                    if (!ro.resolve(r)) throw new ry.ErrnoError(44);
-                    var t = ry.lookupPath(e, { parent: !0 }).node;
-                    if (!t) throw new ry.ErrnoError(44);
-                    var n = rt.basename(e),
-                        o = ry.mayCreate(t, n);
-                    if (o) throw new ry.ErrnoError(o);
-                    if (!t.node_ops.symlink) throw new ry.ErrnoError(63);
-                    return t.node_ops.symlink(t, n, r);
-                },
-                rename(r, e) {
-                    var t,
-                        n,
-                        o,
-                        a = rt.dirname(r),
-                        s = rt.dirname(e),
-                        i = rt.basename(r),
-                        u = rt.basename(e);
-                    if (
-                        ((t = ry.lookupPath(r, { parent: !0 }).node),
-                        (n = ry.lookupPath(e, { parent: !0 }).node),
-                        !t || !n)
-                    )
-                        throw new ry.ErrnoError(44);
-                    if (t.mount !== n.mount) throw new ry.ErrnoError(75);
-                    var l = ry.lookupNode(t, i),
-                        d = ro.relative(r, s);
-                    if ("." !== d.charAt(0)) throw new ry.ErrnoError(28);
-                    if ("." !== (d = ro.relative(e, a)).charAt(0)) throw new ry.ErrnoError(55);
-                    try {
-                        o = ry.lookupNode(n, u);
-                    } catch (r) {}
-                    if (l !== o) {
-                        var c = ry.isDir(l.mode),
-                            f = ry.mayDelete(t, i, c);
-                        if (f || (f = o ? ry.mayDelete(n, u, c) : ry.mayCreate(n, u))) throw new ry.ErrnoError(f);
-                        if (!t.node_ops.rename) throw new ry.ErrnoError(63);
-                        if (ry.isMountpoint(l) || (o && ry.isMountpoint(o))) throw new ry.ErrnoError(10);
-                        if (n !== t && (f = ry.nodePermissions(t, "w"))) throw new ry.ErrnoError(f);
-                        ry.hashRemoveNode(l);
-                        try {
-                            (t.node_ops.rename(l, n, u), (l.parent = n));
-                        } catch (r) {
-                            throw r;
-                        } finally {
-                            ry.hashAddNode(l);
-                        }
-                    }
-                },
-                rmdir(r) {
-                    var e = ry.lookupPath(r, { parent: !0 }).node,
-                        t = rt.basename(r),
-                        n = ry.lookupNode(e, t),
-                        o = ry.mayDelete(e, t, !0);
-                    if (o) throw new ry.ErrnoError(o);
-                    if (!e.node_ops.rmdir) throw new ry.ErrnoError(63);
-                    if (ry.isMountpoint(n)) throw new ry.ErrnoError(10);
-                    (e.node_ops.rmdir(e, t), ry.destroyNode(n));
-                },
-                readdir(r) {
-                    var e = ry.lookupPath(r, { follow: !0 }).node;
-                    if (!e.node_ops.readdir) throw new ry.ErrnoError(54);
-                    return e.node_ops.readdir(e);
-                },
-                unlink(r) {
-                    var e = ry.lookupPath(r, { parent: !0 }).node;
-                    if (!e) throw new ry.ErrnoError(44);
-                    var t = rt.basename(r),
-                        n = ry.lookupNode(e, t),
-                        o = ry.mayDelete(e, t, !1);
-                    if (o) throw new ry.ErrnoError(o);
-                    if (!e.node_ops.unlink) throw new ry.ErrnoError(63);
-                    if (ry.isMountpoint(n)) throw new ry.ErrnoError(10);
-                    (e.node_ops.unlink(e, t), ry.destroyNode(n));
-                },
-                readlink(r) {
-                    var e = ry.lookupPath(r).node;
-                    if (!e) throw new ry.ErrnoError(44);
-                    if (!e.node_ops.readlink) throw new ry.ErrnoError(28);
-                    return e.node_ops.readlink(e);
-                },
-                stat(r, e) {
-                    var t = ry.lookupPath(r, { follow: !e }).node;
-                    if (!t) throw new ry.ErrnoError(44);
-                    if (!t.node_ops.getattr) throw new ry.ErrnoError(63);
-                    return t.node_ops.getattr(t);
-                },
-                lstat: (r) => ry.stat(r, !0),
-                chmod(r, e, t) {
-                    var n;
-                    if (!(n = "string" == typeof r ? ry.lookupPath(r, { follow: !t }).node : r).node_ops.setattr)
-                        throw new ry.ErrnoError(63);
-                    n.node_ops.setattr(n, { mode: (4095 & e) | (-4096 & n.mode), ctime: Date.now() });
-                },
-                lchmod(r, e) {
-                    ry.chmod(r, e, !0);
-                },
-                fchmod(r, e) {
-                    var t = ry.getStreamChecked(r);
-                    ry.chmod(t.node, e);
-                },
-                chown(r, e, t, n) {
-                    var o;
-                    if (!(o = "string" == typeof r ? ry.lookupPath(r, { follow: !n }).node : r).node_ops.setattr)
-                        throw new ry.ErrnoError(63);
-                    o.node_ops.setattr(o, { timestamp: Date.now() });
-                },
-                lchown(r, e, t) {
-                    ry.chown(r, e, t, !0);
-                },
-                fchown(r, e, t) {
-                    var n = ry.getStreamChecked(r);
-                    ry.chown(n.node, e, t);
-                },
-                truncate(r, e) {
-                    if (e < 0) throw new ry.ErrnoError(28);
-                    if ("string" == typeof r) {
-                        var t;
-                        t = ry.lookupPath(r, { follow: !0 }).node;
-                    } else t = r;
-                    if (!t.node_ops.setattr) throw new ry.ErrnoError(63);
-                    if (ry.isDir(t.mode)) throw new ry.ErrnoError(31);
-                    if (!ry.isFile(t.mode)) throw new ry.ErrnoError(28);
-                    var n = ry.nodePermissions(t, "w");
-                    if (n) throw new ry.ErrnoError(n);
-                    t.node_ops.setattr(t, { size: e, timestamp: Date.now() });
-                },
-                ftruncate(r, e) {
-                    var t = ry.getStreamChecked(r);
-                    if ((2097155 & t.flags) == 0) throw new ry.ErrnoError(28);
-                    ry.truncate(t.node, e);
-                },
-                utime(r, e, t) {
-                    var n = ry.lookupPath(r, { follow: !0 }).node;
-                    n.node_ops.setattr(n, { atime: e, mtime: t });
-                },
-                open(e, t) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 438;
-                    if ("" === e) throw new ry.ErrnoError(44);
-                    if (
-                        ((n =
-                            64 &
-                            (t =
-                                "string" == typeof t
-                                    ? ((r) => {
-                                          var e = { r: 0, "r+": 2, w: 577, "w+": 578, a: 1089, "a+": 1090 }[r];
-                                          if (void 0 === e) throw Error(`Unknown file open mode: ${r}`);
-                                          return e;
-                                      })(t)
-                                    : t)
-                                ? (4095 & n) | 32768
-                                : 0),
-                        "object" == typeof e)
-                    )
-                        o = e;
-                    else {
-                        var o,
-                            a = ry.lookupPath(e, { follow: !(131072 & t), noent_okay: !0 });
-                        ((o = a.node), (e = a.path));
-                    }
-                    var s = !1;
-                    if (64 & t)
-                        if (o) {
-                            if (128 & t) throw new ry.ErrnoError(20);
-                        } else ((o = ry.mknod(e, n, 0)), (s = !0));
-                    if (!o) throw new ry.ErrnoError(44);
-                    if ((ry.isChrdev(o.mode) && (t &= -513), 65536 & t && !ry.isDir(o.mode)))
-                        throw new ry.ErrnoError(54);
-                    if (!s) {
-                        var i = ry.mayOpen(o, t);
-                        if (i) throw new ry.ErrnoError(i);
-                    }
-                    (512 & t && !s && ry.truncate(o, 0), (t &= -131713));
-                    var u = ry.createStream({
-                        node: o,
-                        path: ry.getPath(o),
-                        flags: t,
-                        seekable: !0,
-                        position: 0,
-                        stream_ops: o.stream_ops,
-                        ungotten: [],
-                        error: !1,
-                    });
-                    return (
-                        u.stream_ops.open && u.stream_ops.open(u),
-                        !r.logReadFiles || 1 & t || e in ry.readFiles || (ry.readFiles[e] = 1),
-                        u
-                    );
-                },
-                close(r) {
-                    if (ry.isClosed(r)) throw new ry.ErrnoError(8);
-                    r.getdents && (r.getdents = null);
-                    try {
-                        r.stream_ops.close && r.stream_ops.close(r);
-                    } catch (r) {
-                        throw r;
-                    } finally {
-                        ry.closeStream(r.fd);
-                    }
-                    r.fd = null;
-                },
-                isClosed: (r) => null === r.fd,
-                llseek(r, e, t) {
-                    if (ry.isClosed(r)) throw new ry.ErrnoError(8);
-                    if (!r.seekable || !r.stream_ops.llseek) throw new ry.ErrnoError(70);
-                    if (0 != t && 1 != t && 2 != t) throw new ry.ErrnoError(28);
-                    return ((r.position = r.stream_ops.llseek(r, e, t)), (r.ungotten = []), r.position);
-                },
-                read(r, e, t, n, o) {
-                    if (n < 0 || o < 0) throw new ry.ErrnoError(28);
-                    if (ry.isClosed(r) || (2097155 & r.flags) == 1) throw new ry.ErrnoError(8);
-                    if (ry.isDir(r.node.mode)) throw new ry.ErrnoError(31);
-                    if (!r.stream_ops.read) throw new ry.ErrnoError(28);
-                    var a = void 0 !== o;
-                    if (a) {
-                        if (!r.seekable) throw new ry.ErrnoError(70);
-                    } else o = r.position;
-                    var s = r.stream_ops.read(r, e, t, n, o);
-                    return (a || (r.position += s), s);
-                },
-                write(r, e, t, n, o, a) {
-                    if (n < 0 || o < 0) throw new ry.ErrnoError(28);
-                    if (ry.isClosed(r) || (2097155 & r.flags) == 0) throw new ry.ErrnoError(8);
-                    if (ry.isDir(r.node.mode)) throw new ry.ErrnoError(31);
-                    if (!r.stream_ops.write) throw new ry.ErrnoError(28);
-                    r.seekable && 1024 & r.flags && ry.llseek(r, 0, 2);
-                    var s = void 0 !== o;
-                    if (s) {
-                        if (!r.seekable) throw new ry.ErrnoError(70);
-                    } else o = r.position;
-                    var i = r.stream_ops.write(r, e, t, n, o, a);
-                    return (s || (r.position += i), i);
-                },
-                allocate(r, e, t) {
-                    if (ry.isClosed(r)) throw new ry.ErrnoError(8);
-                    if (e < 0 || t <= 0) throw new ry.ErrnoError(28);
-                    if ((2097155 & r.flags) == 0) throw new ry.ErrnoError(8);
-                    if (!ry.isFile(r.node.mode) && !ry.isDir(r.node.mode)) throw new ry.ErrnoError(43);
-                    if (!r.stream_ops.allocate) throw new ry.ErrnoError(138);
-                    r.stream_ops.allocate(r, e, t);
-                },
-                mmap(r, e, t, n, o) {
-                    if (((2 & n) != 0 && (2 & o) == 0 && (2097155 & r.flags) != 2) || (2097155 & r.flags) == 1)
-                        throw new ry.ErrnoError(2);
-                    if (!r.stream_ops.mmap) throw new ry.ErrnoError(43);
-                    if (!e) throw new ry.ErrnoError(28);
-                    return r.stream_ops.mmap(r, e, t, n, o);
-                },
-                msync: (r, e, t, n, o) => (r.stream_ops.msync ? r.stream_ops.msync(r, e, t, n, o) : 0),
-                ioctl(r, e, t) {
-                    if (!r.stream_ops.ioctl) throw new ry.ErrnoError(59);
-                    return r.stream_ops.ioctl(r, e, t);
-                },
-                readFile(r) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    if (
-                        ((e.flags = e.flags || 0),
-                        (e.encoding = e.encoding || "binary"),
-                        "utf8" !== e.encoding && "binary" !== e.encoding)
-                    )
-                        throw Error(`Invalid encoding type "${e.encoding}"`);
-                    var t,
-                        n = ry.open(r, e.flags),
-                        o = ry.stat(r).size,
-                        a = new Uint8Array(o);
-                    return (
-                        ry.read(n, a, 0, o, 0),
-                        "utf8" === e.encoding ? (t = rs(a)) : "binary" === e.encoding && (t = a),
-                        ry.close(n),
-                        t
-                    );
-                },
-                writeFile(r, e) {
-                    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    t.flags = t.flags || 577;
-                    var n = ry.open(r, t.flags, t.mode);
-                    if ("string" == typeof e) {
-                        var o = new Uint8Array(ru(e) + 1),
-                            a = rl(e, o, 0, o.length);
-                        ry.write(n, o, 0, a, void 0, t.canOwn);
-                    } else if (ArrayBuffer.isView(e)) ry.write(n, e, 0, e.byteLength, void 0, t.canOwn);
-                    else throw Error("Unsupported data type");
-                    ry.close(n);
-                },
-                cwd: () => ry.currentPath,
-                chdir(r) {
-                    var e = ry.lookupPath(r, { follow: !0 });
-                    if (null === e.node) throw new ry.ErrnoError(44);
-                    if (!ry.isDir(e.node.mode)) throw new ry.ErrnoError(54);
-                    var t = ry.nodePermissions(e.node, "x");
-                    if (t) throw new ry.ErrnoError(t);
-                    ry.currentPath = e.path;
-                },
-                createDefaultDirectories() {
-                    (ry.mkdir("/tmp"), ry.mkdir("/home"), ry.mkdir("/home/web_user"));
-                },
-                createDefaultDevices() {
-                    (ry.mkdir("/dev"),
-                        ry.registerDevice(ry.makedev(1, 3), {
-                            read: () => 0,
-                            write: (r, e, t, n, o) => n,
-                            llseek: () => 0,
-                        }),
-                        ry.mkdev("/dev/null", ry.makedev(1, 3)),
-                        rd.register(ry.makedev(5, 0), rd.default_tty_ops),
-                        rd.register(ry.makedev(6, 0), rd.default_tty1_ops),
-                        ry.mkdev("/dev/tty", ry.makedev(5, 0)),
-                        ry.mkdev("/dev/tty1", ry.makedev(6, 0)));
-                    var r = new Uint8Array(1024),
-                        e = 0,
-                        t = () => (0 === e && (e = rn(r).byteLength), r[--e]);
-                    (ry.createDevice("/dev", "random", t),
-                        ry.createDevice("/dev", "urandom", t),
-                        ry.mkdir("/dev/shm"),
-                        ry.mkdir("/dev/shm/tmp"));
-                },
-                createSpecialDirectories() {
-                    ry.mkdir("/proc");
-                    var r = ry.mkdir("/proc/self");
-                    (ry.mkdir("/proc/self/fd"),
-                        ry.mount(
-                            {
-                                mount() {
-                                    var e = ry.createNode(r, "fd", 16895, 73);
-                                    return (
-                                        (e.stream_ops = { llseek: rh.stream_ops.llseek }),
-                                        (e.node_ops = {
-                                            lookup(r, e) {
-                                                var t = +e,
-                                                    n = ry.getStreamChecked(t),
-                                                    o = {
-                                                        parent: null,
-                                                        mount: { mountpoint: "fake" },
-                                                        node_ops: { readlink: () => n.path },
-                                                        id: t + 1,
-                                                    };
-                                                return ((o.parent = o), o);
-                                            },
-                                            readdir: () =>
-                                                Array.from(ry.streams.entries())
-                                                    .filter((r) => {
-                                                        let [e, t] = r;
-                                                        return t;
-                                                    })
-                                                    .map((r) => {
-                                                        let [e, t] = r;
-                                                        return e.toString();
-                                                    }),
-                                        }),
-                                        e
-                                    );
-                                },
-                            },
-                            {},
-                            "/proc/self/fd",
-                        ));
-                },
-                createStandardStreams(r, e, t) {
-                    (r ? ry.createDevice("/dev", "stdin", r) : ry.symlink("/dev/tty", "/dev/stdin"),
-                        e ? ry.createDevice("/dev", "stdout", null, e) : ry.symlink("/dev/tty", "/dev/stdout"),
-                        t ? ry.createDevice("/dev", "stderr", null, t) : ry.symlink("/dev/tty1", "/dev/stderr"),
-                        ry.open("/dev/stdin", 0),
-                        ry.open("/dev/stdout", 1),
-                        ry.open("/dev/stderr", 1));
-                },
-                staticInit() {
-                    ((ry.nameTable = Array(4096)),
-                        ry.mount(rh, {}, "/"),
-                        ry.createDefaultDirectories(),
-                        ry.createDefaultDevices(),
-                        ry.createSpecialDirectories(),
-                        (ry.filesystems = { MEMFS: rh }));
-                },
-                init(e, t, n) {
-                    ((ry.initialized = !0),
-                        (e ??= r.stdin),
-                        (t ??= r.stdout),
-                        (n ??= r.stderr),
-                        ry.createStandardStreams(e, t, n));
-                },
-                quit() {
-                    ry.initialized = !1;
-                    for (var r = 0; r < ry.streams.length; r++) {
-                        var e = ry.streams[r];
-                        e && ry.close(e);
-                    }
-                },
-                findObject(r, e) {
-                    var t = ry.analyzePath(r, e);
-                    return t.exists ? t.object : null;
-                },
-                analyzePath(r, e) {
-                    try {
-                        var t = ry.lookupPath(r, { follow: !e });
-                        r = t.path;
-                    } catch (r) {}
-                    var n = {
-                        isRoot: !1,
-                        exists: !1,
-                        error: 0,
-                        name: null,
-                        path: null,
-                        object: null,
-                        parentExists: !1,
-                        parentPath: null,
-                        parentObject: null,
-                    };
-                    try {
-                        var t = ry.lookupPath(r, { parent: !0 });
-                        ((n.parentExists = !0),
-                            (n.parentPath = t.path),
-                            (n.parentObject = t.node),
-                            (n.name = rt.basename(r)),
-                            (t = ry.lookupPath(r, { follow: !e })),
-                            (n.exists = !0),
-                            (n.path = t.path),
-                            (n.object = t.node),
-                            (n.name = t.node.name),
-                            (n.isRoot = "/" === t.path));
-                    } catch (r) {
-                        n.error = r.errno;
-                    }
-                    return n;
-                },
-                createPath(r, e, t, n) {
-                    r = "string" == typeof r ? r : ry.getPath(r);
-                    for (var o = e.split("/").reverse(); o.length;) {
-                        var a = o.pop();
-                        if (a) {
-                            var s = rt.join2(r, a);
-                            try {
-                                ry.mkdir(s);
-                            } catch (r) {}
-                            r = s;
-                        }
-                    }
-                    return s;
-                },
-                createFile(r, e, t, n, o) {
-                    var a = rt.join2("string" == typeof r ? r : ry.getPath(r), e),
-                        s = rv(n, o);
-                    return ry.create(a, s);
-                },
-                createDataFile(r, e, t, n, o, a) {
-                    var s = e;
-                    r && ((r = "string" == typeof r ? r : ry.getPath(r)), (s = e ? rt.join2(r, e) : r));
-                    var i = rv(n, o),
-                        u = ry.create(s, i);
-                    if (t) {
-                        if ("string" == typeof t) {
-                            for (var l = Array(t.length), d = 0, c = t.length; d < c; ++d) l[d] = t.charCodeAt(d);
-                            t = l;
-                        }
-                        ry.chmod(u, 146 | i);
-                        var f = ry.open(u, 577);
-                        (ry.write(f, t, 0, t.length, 0, a), ry.close(f), ry.chmod(u, i));
-                    }
-                },
-                createDevice(r, e, t, n) {
-                    var o = rt.join2("string" == typeof r ? r : ry.getPath(r), e),
-                        a = rv(!!t, !!n);
-                    ry.createDevice.major ??= 64;
-                    var s = ry.makedev(ry.createDevice.major++, 0);
-                    return (
-                        ry.registerDevice(s, {
-                            open(r) {
-                                r.seekable = !1;
-                            },
-                            close(r) {
-                                n?.buffer?.length && n(10);
-                            },
-                            read(r, e, n, o, a) {
-                                for (var s, i = 0, u = 0; u < o; u++) {
-                                    try {
-                                        s = t();
-                                    } catch (r) {
-                                        throw new ry.ErrnoError(29);
-                                    }
-                                    if (void 0 === s && 0 === i) throw new ry.ErrnoError(6);
-                                    if (null == s) break;
-                                    (i++, (e[n + u] = s));
-                                }
-                                return (i && (r.node.atime = Date.now()), i);
-                            },
-                            write(r, e, t, o, a) {
-                                for (var s = 0; s < o; s++)
-                                    try {
-                                        n(e[t + s]);
-                                    } catch (r) {
-                                        throw new ry.ErrnoError(29);
-                                    }
-                                return (o && (r.node.mtime = r.node.ctime = Date.now()), s);
-                            },
-                        }),
-                        ry.mkdev(o, a, s)
-                    );
-                },
-                forceLoadFile(r) {
-                    if (r.isDevice || r.isFolder || r.link || r.contents) return !0;
-                    if ("u" > typeof XMLHttpRequest)
-                        throw Error(
-                            "Lazy loading should have been performed (contents set) in createLazyFile, but it was not. Lazy loading only works in web workers. Use --embed-file or --preload-file in emcc on the main thread.",
-                        );
-                    try {
-                        ((r.contents = s(r.url)), (r.usedBytes = r.contents.length));
-                    } catch (r) {
-                        throw new ry.ErrnoError(29);
-                    }
-                },
-                createLazyFile(r, e, t, n, o) {
-                    if ("u" > typeof XMLHttpRequest) {
-                        var a;
-                        throw "Cannot do synchronous binary XHRs outside webworkers in modern browsers. Use --embed-file or --preload-file in emcc";
-                    }
-                    var a = { isDevice: !1, url: t },
-                        s = ry.createFile(r, e, a, n, o);
-                    (a.contents ? (s.contents = a.contents) : a.url && ((s.contents = null), (s.url = a.url)),
-                        Object.defineProperties(s, {
-                            usedBytes: {
-                                get: function () {
-                                    return this.contents.length;
-                                },
-                            },
-                        }));
-                    var i = {};
-                    function l(r, e, t, n, o) {
-                        var a = r.node.contents;
-                        if (o >= a.length) return 0;
-                        var s = Math.min(a.length - o, n);
-                        if (a.slice) for (var i = 0; i < s; i++) e[t + i] = a[o + i];
-                        else for (var i = 0; i < s; i++) e[t + i] = a.get(o + i);
-                        return s;
-                    }
-                    return (
-                        Object.keys(s.stream_ops).forEach((r) => {
-                            var e = s.stream_ops[r];
-                            i[r] = function () {
-                                for (var r = arguments.length, t = Array(r), n = 0; n < r; n++) t[n] = arguments[n];
-                                return (ry.forceLoadFile(s), e(...t));
-                            };
-                        }),
-                        (i.read = (r, e, t, n, o) => (ry.forceLoadFile(s), l(r, e, t, n, o))),
-                        (i.mmap = (r, e, t, n, o) => {
-                            ry.forceLoadFile(s);
-                            var a = rf(e);
-                            if (!a) throw new ry.ErrnoError(48);
-                            return (l(r, u, a, e, t), { ptr: a, allocated: !0 });
-                        }),
-                        (s.stream_ops = i),
-                        s
-                    );
-                },
-            },
-            rg = (r, e) => (r ? rs(l, r, e) : ""),
-            rw = {
-                DEFAULT_POLLMASK: 5,
-                calculateAt(r, e, t) {
-                    if (rt.isAbs(e)) return e;
-                    if (-100 === r) n = ry.cwd();
-                    else {
-                        var n;
-                        n = rw.getStreamFromFD(r).path;
-                    }
-                    if (0 == e.length) {
-                        if (!t) throw new ry.ErrnoError(44);
-                        return n;
-                    }
-                    return n + "/" + e;
-                },
-                doStat(r, e, t) {
-                    var n = r(e);
-                    ((f[t >> 2] = n.dev),
-                        (f[(t + 4) >> 2] = n.mode),
-                        (h[(t + 8) >> 2] = n.nlink),
-                        (f[(t + 12) >> 2] = n.uid),
-                        (f[(t + 16) >> 2] = n.gid),
-                        (f[(t + 20) >> 2] = n.rdev),
-                        (m[(t + 24) >> 3] = BigInt(n.size)),
-                        (f[(t + 32) >> 2] = 4096),
-                        (f[(t + 36) >> 2] = n.blocks));
-                    var o = n.atime.getTime(),
-                        a = n.mtime.getTime(),
-                        s = n.ctime.getTime();
-                    return (
-                        (m[(t + 40) >> 3] = BigInt(Math.floor(o / 1e3))),
-                        (h[(t + 48) >> 2] = (o % 1e3) * 1e6),
-                        (m[(t + 56) >> 3] = BigInt(Math.floor(a / 1e3))),
-                        (h[(t + 64) >> 2] = (a % 1e3) * 1e6),
-                        (m[(t + 72) >> 3] = BigInt(Math.floor(s / 1e3))),
-                        (h[(t + 80) >> 2] = (s % 1e3) * 1e6),
-                        (m[(t + 88) >> 3] = BigInt(n.ino)),
-                        0
-                    );
-                },
-                doMsync(r, e, t, n, o) {
-                    if (!ry.isFile(e.node.mode)) throw new ry.ErrnoError(43);
-                    if (2 & n) return 0;
-                    var a = l.slice(r, r + t);
-                    ry.msync(e, a, o, t, n);
-                },
-                getStreamFromFD: (r) => ry.getStreamChecked(r),
-                varargs: void 0,
-                getStr: (r) => rg(r),
-            },
-            rE = (r, e, t) => rl(r, l, e, t),
-            rb = (r) => {
-                if (null === r) return "null";
-                var e = typeof r;
-                return "object" === e || "array" === e || "function" === e ? r.toString() : "" + r;
-            },
-            r_ = (r) => {
-                for (var e = "", t = r; l[t];) e += w[l[t++]];
-                return e;
-            },
-            rk = {},
-            r$ = {},
-            rP = {},
-            rT = (r) => {
-                throw new E(r);
-            },
-            rC = (r) => {
-                throw new b(r);
-            },
-            rA = (r, e, t) => {
-                function n(e) {
-                    var n = t(e);
-                    n.length !== r.length && rC("Mismatched type converter count");
-                    for (var o = 0; o < r.length; ++o) rF(r[o], n[o]);
-                }
-                r.forEach((r) => (rP[r] = e));
-                var o = Array(e.length),
-                    a = [],
-                    s = 0;
-                (e.forEach((r, e) => {
-                    r$.hasOwnProperty(r)
-                        ? (o[e] = r$[r])
-                        : (a.push(r),
-                          rk.hasOwnProperty(r) || (rk[r] = []),
-                          rk[r].push(() => {
-                              ((o[e] = r$[r]), ++s === a.length && n(o));
-                          }));
-                }),
-                    0 === a.length && n(o));
-            };
-        function rF(r, e) {
-            let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            return (function (r, e) {
-                let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                var n = e.name;
-                if ((r || rT(`type "${n}" must have a positive integer typeid pointer`), r$.hasOwnProperty(r)))
-                    if (t.ignoreDuplicateRegistrations) return;
-                    else rT(`Cannot register type '${n}' twice`);
-                if (((r$[r] = e), delete rP[r], rk.hasOwnProperty(r))) {
-                    var o = rk[r];
-                    (delete rk[r], o.forEach((r) => r()));
-                }
-            })(r, e, t);
-        }
-        var rD = (r, e, t) => {
-                switch (e) {
-                    case 1:
-                        return t ? (r) => u[r] : (r) => l[r];
-                    case 2:
-                        return t ? (r) => d[r >> 1] : (r) => c[r >> 1];
-                    case 4:
-                        return t ? (r) => f[r >> 2] : (r) => h[r >> 2];
-                    case 8:
-                        return t ? (r) => m[r >> 3] : (r) => v[r >> 3];
-                    default:
-                        throw TypeError(`invalid integer width (${e}): ${r}`);
-                }
-            },
-            rS = (r) => {
-                rT(r.$$.ptrType.registeredClass.name + " instance already deleted");
-            },
-            rj = !1,
-            rx = (r) => {},
-            rO = (r) => {
-                ((r.count.value -= 1),
-                    0 === r.count.value &&
-                        (r.smartPtr
-                            ? r.smartPtrType.rawDestructor(r.smartPtr)
-                            : r.ptrType.registeredClass.rawDestructor(r.ptr)));
-            },
-            rM = (r, e, t) => {
-                if (e === t) return r;
-                if (void 0 === t.baseClass) return null;
-                var n = rM(r, e, t.baseClass);
-                return null === n ? null : t.downcast(n);
-            },
-            rR = {},
-            rW = {},
-            rN = (r, e) => (
-                (e.ptrType && e.ptr) || rC("makeClassHandle requires ptr and ptrType"),
-                !!e.smartPtrType != !!e.smartPtr && rC("Both smartPtrType and smartPtr must be specified"),
-                (e.count = { value: 1 }),
-                rB(Object.create(r, { $$: { value: e, writable: !0 } }))
-            ),
-            rB = (r) =>
-                "u" < typeof FinalizationRegistry
-                    ? ((rB = (r) => r), r)
-                    : ((rj = new FinalizationRegistry((r) => {
-                          rO(r.$$);
-                      })),
-                      (rB = (r) => {
-                          var e = r.$$;
-                          return (e.smartPtr && rj.register(r, { $$: e }, r), r);
-                      }),
-                      (rx = (r) => rj.unregister(r)),
-                      rB(r)),
-            rU = [],
-            rz = () => {
-                for (; rU.length;) {
-                    var r = rU.pop();
-                    ((r.$$.deleteScheduled = !1), r.delete());
-                }
-            };
-        function rI() {}
-        var rV = (r, e) => Object.defineProperty(e, "name", { value: r }),
-            rL = (r, e, t) => {
-                if (void 0 === r[e].overloadTable) {
-                    var n = r[e];
-                    ((r[e] = function () {
-                        for (var n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
-                        return (
-                            r[e].overloadTable.hasOwnProperty(o.length) ||
-                                rT(
-                                    `Function '${t}' called with an invalid number of arguments (${o.length}) - expects one of (${r[e].overloadTable})!`,
-                                ),
-                            r[e].overloadTable[o.length].apply(this, o)
-                        );
-                    }),
-                        (r[e].overloadTable = []),
-                        (r[e].overloadTable[n.argCount] = n));
-                }
-            },
-            rH = (e, t, n) => {
-                r.hasOwnProperty(e)
-                    ? ((void 0 === n || (void 0 !== r[e].overloadTable && void 0 !== r[e].overloadTable[n])) &&
-                          rT(`Cannot register public name '${e}' twice`),
-                      rL(r, e, e),
-                      r[e].overloadTable.hasOwnProperty(n) &&
-                          rT(
-                              `Cannot register multiple overloads of a function with the same number of arguments (${n})!`,
-                          ),
-                      (r[e].overloadTable[n] = t))
-                    : ((r[e] = t), (r[e].argCount = n));
-            };
-        function rq(r, e, t, n, o, a, s, i) {
-            ((this.name = r),
-                (this.constructor = e),
-                (this.instancePrototype = t),
-                (this.rawDestructor = n),
-                (this.baseClass = o),
-                (this.getActualType = a),
-                (this.upcast = s),
-                (this.downcast = i),
-                (this.pureVirtualFunctions = []));
-        }
-        var rG = (r, e, t) => {
-            for (; e !== t;)
-                (e.upcast || rT(`Expected null or instance of ${t.name}, got an instance of ${e.name}`),
-                    (r = e.upcast(r)),
-                    (e = e.baseClass));
-            return r;
-        };
-        function rX(r, e) {
-            if (null === e) return (this.isReference && rT(`null is not a valid ${this.name}`), 0);
-            (e.$$ || rT(`Cannot pass "${rb(e)}" as a ${this.name}`),
-                e.$$.ptr || rT(`Cannot pass deleted object as a pointer of type ${this.name}`));
-            var t = e.$$.ptrType.registeredClass;
-            return rG(e.$$.ptr, t, this.registeredClass);
-        }
-        function rY(r, e) {
-            if (null === e)
-                return (this.isReference && rT(`null is not a valid ${this.name}`), this.isSmartPointer)
-                    ? ((t = this.rawConstructor()), null !== r && r.push(this.rawDestructor, t), t)
-                    : 0;
-            ((e && e.$$) || rT(`Cannot pass "${rb(e)}" as a ${this.name}`),
-                e.$$.ptr || rT(`Cannot pass deleted object as a pointer of type ${this.name}`),
-                !this.isConst &&
-                    e.$$.ptrType.isConst &&
-                    rT(
-                        `Cannot convert argument of type ${e.$$.smartPtrType ? e.$$.smartPtrType.name : e.$$.ptrType.name} to parameter type ${this.name}`,
-                    ));
-            var t,
-                n = e.$$.ptrType.registeredClass;
-            if (((t = rG(e.$$.ptr, n, this.registeredClass)), this.isSmartPointer))
-                switch (
-                    (void 0 === e.$$.smartPtr && rT("Passing raw pointer to smart pointer is illegal"),
-                    this.sharingPolicy)
-                ) {
-                    case 0:
-                        e.$$.smartPtrType === this
-                            ? (t = e.$$.smartPtr)
-                            : rT(
-                                  `Cannot convert argument of type ${e.$$.smartPtrType ? e.$$.smartPtrType.name : e.$$.ptrType.name} to parameter type ${this.name}`,
-                              );
-                        break;
-                    case 1:
-                        t = e.$$.smartPtr;
-                        break;
-                    case 2:
-                        if (e.$$.smartPtrType === this) t = e.$$.smartPtr;
-                        else {
-                            var o = e.clone();
-                            ((t = this.rawShare(
-                                t,
-                                en.toHandle(() => o.delete()),
-                            )),
-                                null !== r && r.push(this.rawDestructor, t));
-                        }
-                        break;
-                    default:
-                        rT("Unsupporting sharing policy");
-                }
-            return t;
-        }
-        function rK(r, e) {
-            if (null === e) return (this.isReference && rT(`null is not a valid ${this.name}`), 0);
-            (e.$$ || rT(`Cannot pass "${rb(e)}" as a ${this.name}`),
-                e.$$.ptr || rT(`Cannot pass deleted object as a pointer of type ${this.name}`),
-                e.$$.ptrType.isConst &&
-                    rT(`Cannot convert argument of type ${e.$$.ptrType.name} to parameter type ${this.name}`));
-            var t = e.$$.ptrType.registeredClass;
-            return rG(e.$$.ptr, t, this.registeredClass);
-        }
-        function rZ(r) {
-            return this.fromWireType(h[r >> 2]);
-        }
-        function rJ(r, e, t, n, o, a, s, i, u, l, d) {
-            ((this.name = r),
-                (this.registeredClass = e),
-                (this.isReference = t),
-                (this.isConst = n),
-                (this.isSmartPointer = o),
-                (this.pointeeType = a),
-                (this.sharingPolicy = s),
-                (this.rawGetPointee = i),
-                (this.rawConstructor = u),
-                (this.rawShare = l),
-                (this.rawDestructor = d),
-                o || void 0 !== e.baseClass
-                    ? (this.toWireType = rY)
-                    : (n ? (this.toWireType = rX) : (this.toWireType = rK), (this.destructorFunction = null)));
-        }
-        var rQ = (e, t, n) => {
-                (r.hasOwnProperty(e) || rC("Replacing nonexistent public symbol"),
-                    void 0 !== r[e].overloadTable && void 0 !== n
-                        ? (r[e].overloadTable[n] = t)
-                        : ((r[e] = t), (r[e].argCount = n)));
-            },
-            r0 = [],
-            r1 = (r, e) => {
-                r = r_(r);
-                var t,
-                    n = ((t = r0[e]) || (e >= r0.length && (r0.length = e + 1), (r0[e] = t = k.get(e))), t);
-                return ("function" != typeof n && rT(`unknown function pointer with signature ${r}: ${e}`), n);
-            },
-            r2 = (r) => {
-                var e = eP(r),
-                    t = r_(e);
-                return (eC(e), t);
-            },
-            r4 = (r, e) => {
-                var t = [],
-                    n = {};
-                throw (
-                    e.forEach(function r(e) {
-                        if (!n[e] && !r$[e]) {
-                            if (rP[e]) return void rP[e].forEach(r);
-                            (t.push(e), (n[e] = !0));
-                        }
-                    }),
-                    new $(`${r}: ` + t.map(r2).join([", "]))
-                );
-            },
-            r6 = (r, e) => {
-                for (var t = [], n = 0; n < r; n++) t.push(h[(e + 4 * n) >> 2]);
-                return t;
-            },
-            r5 = (r) => {
-                for (; r.length;) {
-                    var e = r.pop();
-                    r.pop()(e);
-                }
-            };
-        function r3(r) {
-            for (var e = 1; e < r.length; ++e) if (null !== r[e] && void 0 === r[e].destructorFunction) return !0;
-            return !1;
-        }
-        function r8(r, e) {
-            if (!(r instanceof Function))
-                throw TypeError(`new_ called with constructor type ${typeof r} which is not a function`);
-            var t = rV(r.name || "unknownFunctionName", function () {});
-            t.prototype = r.prototype;
-            var n = new t(),
-                o = r.apply(n, e);
-            return o instanceof Object ? o : n;
-        }
-        function r9(r, e, t, n, o, a) {
-            var s = e.length;
-            s < 2 && rT("argTypes array size mismatch! Must at least get return value and 'this' types!");
-            for (
-                var i = null !== e[1] && null !== t,
-                    u = r3(e),
-                    l = "void" !== e[0].name,
-                    d = [r, rT, n, o, r5, e[0], e[1]],
-                    c = 0;
-                c < s - 2;
-                ++c
-            )
-                d.push(e[c + 2]);
-            if (!u)
-                for (var c = i ? 1 : 2; c < e.length; ++c)
-                    null !== e[c].destructorFunction && d.push(e[c].destructorFunction);
-            let [f, h] = (function (r, e, t, n) {
-                var o = r3(r),
-                    a = r.length - 2,
-                    s = [],
-                    i = ["fn"];
-                e && i.push("thisWired");
-                for (var u = 0; u < a; ++u) (s.push(`arg${u}`), i.push(`arg${u}Wired`));
-                ((s = s.join(",")), (i = i.join(",")));
-                var l = `return function (${s}) {
-`;
-                o && (l += "var destructors = [];\n");
-                var d = o ? "destructors" : "null",
-                    c = ["humanName", "throwBindingError", "invoker", "fn", "runDestructors", "retType", "classParam"];
-                e &&
-                    (l += `var thisWired = classParam['toWireType'](${d}, this);
-`);
-                for (var u = 0; u < a; ++u)
-                    ((l += `var arg${u}Wired = argType${u}['toWireType'](${d}, arg${u});
-`),
-                        c.push(`argType${u}`));
-                if (
-                    ((l +=
-                        (t || n ? "var rv = " : "") +
-                        `invoker(${i});
-`),
-                    o)
-                )
-                    l += "runDestructors(destructors);\n";
-                else
-                    for (var u = e ? 1 : 2; u < r.length; ++u) {
-                        var f = 1 === u ? "thisWired" : "arg" + (u - 2) + "Wired";
-                        null !== r[u].destructorFunction &&
-                            ((l += `${f}_dtor(${f});
-`),
-                            c.push(`${f}_dtor`));
-                    }
-                return (t && (l += "var ret = retType['fromWireType'](rv);\nreturn ret;\n"), [c, (l += "}\n")]);
-            })(e, i, l, a);
-            return (f.push(h), rV(r, r8(Function, f)(...d)));
-        }
-        var r7 = (r) => {
-                let e = (r = r.trim()).indexOf("(");
-                return -1 !== e ? r.substr(0, e) : r;
-            },
-            er = [],
-            ee = [],
-            et = (r) => {
-                r > 9 && 0 == --ee[r + 1] && ((ee[r] = void 0), er.push(r));
-            },
-            en = {
-                toValue: (r) => (r || rT("Cannot use deleted val. handle = " + r), ee[r]),
-                toHandle: (r) => {
-                    switch (r) {
-                        case void 0:
-                            return 2;
-                        case null:
-                            return 4;
-                        case !0:
-                            return 6;
-                        case !1:
-                            return 8;
-                        default: {
-                            let e = er.pop() || ee.length;
-                            return ((ee[e] = r), (ee[e + 1] = 1), e);
-                        }
-                    }
-                },
-            },
-            eo = {
-                name: "emscripten::val",
-                fromWireType: (r) => {
-                    var e = en.toValue(r);
-                    return (et(r), e);
-                },
-                toWireType: (r, e) => en.toHandle(e),
-                argPackAdvance: 8,
-                readValueFromPointer: rZ,
-                destructorFunction: null,
-            },
-            ea = (r, e) => {
-                var t = r$[r];
-                return (void 0 === t && rT(`${e} has unknown type ${r2(r)}`), t);
-            },
-            es = "u" > typeof TextDecoder ? new TextDecoder("utf-16le") : void 0,
-            ei = (r, e) => {
-                for (var t = r, n = t >> 1, o = n + e / 2; !(n >= o) && c[n];) ++n;
-                if ((t = n << 1) - r > 32 && es) return es.decode(l.subarray(r, t));
-                for (var a = "", s = 0; !(s >= e / 2); ++s) {
-                    var i = d[(r + 2 * s) >> 1];
-                    if (0 == i) break;
-                    a += String.fromCharCode(i);
-                }
-                return a;
-            },
-            eu = (r, e, t) => {
-                if ((t ??= 0x7fffffff) < 2) return 0;
-                for (var n = e, o = (t -= 2) < 2 * r.length ? t / 2 : r.length, a = 0; a < o; ++a) {
-                    var s = r.charCodeAt(a);
-                    ((d[e >> 1] = s), (e += 2));
-                }
-                return ((d[e >> 1] = 0), e - n);
-            },
-            el = (r) => 2 * r.length,
-            ed = (r, e) => {
-                for (var t = 0, n = ""; !(t >= e / 4);) {
-                    var o = f[(r + 4 * t) >> 2];
-                    if (0 == o) break;
-                    if ((++t, o >= 65536)) {
-                        var a = o - 65536;
-                        n += String.fromCharCode(55296 | (a >> 10), 56320 | (1023 & a));
-                    } else n += String.fromCharCode(o);
-                }
-                return n;
-            },
-            ec = (r, e, t) => {
-                if ((t ??= 0x7fffffff) < 4) return 0;
-                for (var n = e, o = n + t - 4, a = 0; a < r.length; ++a) {
-                    var s = r.charCodeAt(a);
-                    if (
-                        (s >= 55296 && s <= 57343 && (s = (65536 + ((1023 & s) << 10)) | (1023 & r.charCodeAt(++a))),
-                        (f[e >> 2] = s),
-                        (e += 4) + 4 > o)
-                    )
-                        break;
-                }
-                return ((f[e >> 2] = 0), e - n);
-            },
-            ef = (r) => {
-                for (var e = 0, t = 0; t < r.length; ++t) {
-                    var n = r.charCodeAt(t);
-                    (n >= 55296 && n <= 57343 && ++t, (e += 4));
-                }
-                return e;
-            },
-            eh = (r, e, t) => {
-                var n = [],
-                    o = r.toWireType(n, t);
-                return (n.length && (h[e >> 2] = en.toHandle(n)), o);
-            },
-            ep = [],
-            em = {},
-            ev = (r) => {
-                var e = em[r];
-                return void 0 === e ? r_(r) : e;
-            },
-            ey = (r) => (r < -0x20000000000000 || r > 0x20000000000000 ? NaN : Number(r)),
-            eg = () => Date.now(),
-            ew = (r) => {
-                var e = ((r - i.buffer.byteLength + 65535) / 65536) | 0;
-                try {
-                    return (i.grow(e), W(), 1);
-                } catch (r) {}
-            },
-            eE = {},
-            eb = () => {
-                if (!eb.strings) {
-                    var r = {
-                        USER: "web_user",
-                        LOGNAME: "web_user",
-                        PATH: "/",
-                        PWD: "/",
-                        HOME: "/home/web_user",
-                        LANG:
-                            (
-                                ("object" == typeof navigator && navigator.languages && navigator.languages[0]) ||
-                                "C"
-                            ).replace("-", "_") + ".UTF-8",
-                        _: S || "./this.program",
-                    };
-                    for (var e in eE) void 0 === eE[e] ? delete r[e] : (r[e] = eE[e]);
-                    var t = [];
-                    for (var e in r) t.push(`${e}=${r[e]}`);
-                    eb.strings = t;
-                }
-                return eb.strings;
-            };
-        ((ry.createPreloadedFile = (r, e, t, n, o, a, s, i, u, l) => {
-            var d = e ? ro.resolve(rt.join2(r, e)) : r,
-                c = `cp ${d}`;
-            function f(t) {
-                var f, h;
-                function p(t) {
-                    (l?.(), i || ry.createDataFile(r, e, t, n, o, u), a?.(), L(c));
-                }
-                ((f = () => {
-                    (s?.(), L(c));
-                }),
-                    "u" > typeof Browser && Browser.init(),
-                    (h = !1),
-                    rm.forEach((r) => {
-                        !h && r.canHandle(d) && (r.handle(t, d, p, f), (h = !0));
-                    }),
-                    h || p(t));
-            }
-            (V(c), "string" == typeof t ? rp(t).then(f, s) : f(t));
-        }),
-            ry.staticInit(),
-            (rh.doesNotExistError = new ry.ErrnoError(44)),
-            (rh.doesNotExistError.stack = "<generic error, no stack>"));
-        for (var e_ = Array(256), ek = 0; ek < 256; ++ek) e_[ek] = String.fromCharCode(ek);
-        ((w = e_),
-            (E = r.BindingError =
-                class extends Error {
-                    constructor(r) {
-                        (super(r), (this.name = "BindingError"));
-                    }
-                }),
-            (b = r.InternalError =
-                class extends Error {
-                    constructor(r) {
-                        (super(r), (this.name = "InternalError"));
-                    }
-                }),
-            Object.assign(rI.prototype, {
-                isAliasOf(r) {
-                    if (!(this instanceof rI) || !(r instanceof rI)) return !1;
-                    var e = this.$$.ptrType.registeredClass,
-                        t = this.$$.ptr;
-                    r.$$ = r.$$;
-                    for (var n = r.$$.ptrType.registeredClass, o = r.$$.ptr; e.baseClass;)
-                        ((t = e.upcast(t)), (e = e.baseClass));
-                    for (; n.baseClass;) ((o = n.upcast(o)), (n = n.baseClass));
-                    return e === n && t === o;
-                },
-                clone() {
-                    if ((this.$$.ptr || rS(this), this.$$.preservePointerOnDelete))
-                        return ((this.$$.count.value += 1), this);
-                    {
-                        let e;
-                        var r = rB(
-                            Object.create(Object.getPrototypeOf(this), {
-                                $$: {
-                                    value: {
-                                        count: (e = this.$$).count,
-                                        deleteScheduled: e.deleteScheduled,
-                                        preservePointerOnDelete: e.preservePointerOnDelete,
-                                        ptr: e.ptr,
-                                        ptrType: e.ptrType,
-                                        smartPtr: e.smartPtr,
-                                        smartPtrType: e.smartPtrType,
-                                    },
-                                },
-                            }),
-                        );
-                        return ((r.$$.count.value += 1), (r.$$.deleteScheduled = !1), r);
-                    }
-                },
-                delete() {
-                    (this.$$.ptr || rS(this),
-                        this.$$.deleteScheduled &&
-                            !this.$$.preservePointerOnDelete &&
-                            rT("Object already scheduled for deletion"),
-                        rx(this),
-                        rO(this.$$),
-                        this.$$.preservePointerOnDelete || ((this.$$.smartPtr = void 0), (this.$$.ptr = void 0)));
-                },
-                isDeleted() {
-                    return !this.$$.ptr;
-                },
-                deleteLater() {
-                    return (
-                        this.$$.ptr || rS(this),
-                        this.$$.deleteScheduled &&
-                            !this.$$.preservePointerOnDelete &&
-                            rT("Object already scheduled for deletion"),
-                        rU.push(this),
-                        1 === rU.length && _ && _(rz),
-                        (this.$$.deleteScheduled = !0),
-                        this
-                    );
-                },
-            }),
-            Object.assign(rJ.prototype, {
-                getPointee(r) {
-                    return (this.rawGetPointee && (r = this.rawGetPointee(r)), r);
-                },
-                destructor(r) {
-                    this.rawDestructor?.(r);
-                },
-                argPackAdvance: 8,
-                readValueFromPointer: rZ,
-                fromWireType: function (r) {
-                    var e,
-                        t = this.getPointee(r);
-                    if (!t) return (this.destructor(r), null);
-                    var n =
-                        rW[
-                            ((r, e) => {
-                                for (void 0 === e && rT("ptr should not be undefined"); r.baseClass;)
-                                    ((e = r.upcast(e)), (r = r.baseClass));
-                                return e;
-                            })(this.registeredClass, t)
-                        ];
-                    if (void 0 !== n)
-                        if (0 === n.$$.count.value) return ((n.$$.ptr = t), (n.$$.smartPtr = r), n.clone());
-                        else {
-                            var o = n.clone();
-                            return (this.destructor(r), o);
-                        }
-                    function a() {
-                        return this.isSmartPointer
-                            ? rN(this.registeredClass.instancePrototype, {
-                                  ptrType: this.pointeeType,
-                                  ptr: t,
-                                  smartPtrType: this,
-                                  smartPtr: r,
-                              })
-                            : rN(this.registeredClass.instancePrototype, { ptrType: this, ptr: r });
-                    }
-                    var s = rR[this.registeredClass.getActualType(t)];
-                    if (!s) return a.call(this);
-                    e = this.isConst ? s.constPointerType : s.pointerType;
-                    var i = rM(t, this.registeredClass, e.registeredClass);
-                    return null === i
-                        ? a.call(this)
-                        : this.isSmartPointer
-                          ? rN(e.registeredClass.instancePrototype, {
-                                ptrType: e,
-                                ptr: i,
-                                smartPtrType: this,
-                                smartPtr: r,
-                            })
-                          : rN(e.registeredClass.instancePrototype, { ptrType: e, ptr: i });
-                },
-            }),
-            (C = Error),
-            ((A = rV("UnboundTypeError", function (r) {
-                ((this.name = "UnboundTypeError"), (this.message = r));
-                var e = Error(r).stack;
-                void 0 !== e && (this.stack = this.toString() + "\n" + e.replace(/^Error(:[^\n]*)?\n/, ""));
-            })).prototype = Object.create(C.prototype)),
-            (A.prototype.constructor = A),
-            (A.prototype.toString = function () {
-                return void 0 === this.message ? this.name : `${this.name}: ${this.message}`;
-            }),
-            ($ = r.UnboundTypeError = A),
-            ee.push(0, 1, void 0, 1, null, 1, !0, 1, !1, 1),
-            (r.count_emval_handles = () => ee.length / 2 - 5 - er.length));
-        var e$ = {
-            a: (r, e, t) => {
-                throw (new J(r).init(e, t), (Q = r), rr++, Q);
-            },
-            x: function (r, e, t) {
-                rw.varargs = t;
-                try {
-                    var n = rw.getStreamFromFD(r);
-                    switch (e) {
-                        case 0:
-                            var o = re();
-                            if (o < 0) break;
-                            for (; ry.streams[o];) o++;
-                            return ry.dupStream(n, o).fd;
-                        case 1:
-                        case 2:
-                        case 13:
-                        case 14:
-                            return 0;
-                        case 3:
-                            return n.flags;
-                        case 4:
-                            var o = re();
-                            return ((n.flags |= o), 0);
-                        case 12:
-                            var o = re();
-                            return ((d[(o + 0) >> 1] = 2), 0);
-                    }
-                    return -28;
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            P: function (r, e) {
-                try {
-                    var t = rw.getStreamFromFD(r);
-                    return rw.doStat(ry.stat, t.path, e);
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            G: function (r, e, t) {
-                try {
-                    var n = rw.getStreamFromFD(r);
-                    n.getdents ||= ry.readdir(n.path);
-                    for (
-                        var o = 0,
-                            a = ry.llseek(n, 0, 1),
-                            s = Math.floor(a / 280),
-                            i = Math.min(n.getdents.length, s + Math.floor(t / 280)),
-                            l = s;
-                        l < i;
-                        l++
-                    ) {
-                        var c,
-                            f,
-                            h,
-                            p = n.getdents[l];
-                        if ("." === p) ((c = n.node.id), (f = 4));
-                        else if (".." === p) ((c = ry.lookupPath(n.path, { parent: !0 }).node.id), (f = 4));
-                        else {
-                            try {
-                                h = ry.lookupNode(n.node, p);
-                            } catch (r) {
-                                if (r?.errno === 28) continue;
-                                throw r;
-                            }
-                            ((c = h.id),
-                                (f = ry.isChrdev(h.mode) ? 2 : ry.isDir(h.mode) ? 4 : ry.isLink(h.mode) ? 10 : 8));
-                        }
-                        ((m[(e + o) >> 3] = BigInt(c)),
-                            (m[(e + o + 8) >> 3] = BigInt((l + 1) * 280)),
-                            (d[(e + o + 16) >> 1] = 280),
-                            (u[e + o + 18] = f),
-                            rE(p, e + o + 19, 256),
-                            (o += 280));
-                    }
-                    return (ry.llseek(n, 280 * l, 0), o);
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            s: function (r, e, t) {
-                rw.varargs = t;
-                try {
-                    var n = rw.getStreamFromFD(r);
-                    switch (e) {
-                        case 21509:
-                        case 21510:
-                        case 21511:
-                        case 21512:
-                        case 21524:
-                        case 21515:
-                            if (!n.tty) return -59;
-                            return 0;
-                        case 21505:
-                            if (!n.tty) return -59;
-                            if (n.tty.ops.ioctl_tcgets) {
-                                var o = n.tty.ops.ioctl_tcgets(n),
-                                    a = re();
-                                ((f[a >> 2] = o.c_iflag || 0),
-                                    (f[(a + 4) >> 2] = o.c_oflag || 0),
-                                    (f[(a + 8) >> 2] = o.c_cflag || 0),
-                                    (f[(a + 12) >> 2] = o.c_lflag || 0));
-                                for (var s = 0; s < 32; s++) u[a + s + 17] = o.c_cc[s] || 0;
-                            }
-                            return 0;
-                        case 21506:
-                        case 21507:
-                        case 21508:
-                            if (!n.tty) return -59;
-                            if (n.tty.ops.ioctl_tcsets) {
-                                for (
-                                    var a = re(),
-                                        i = f[a >> 2],
-                                        l = f[(a + 4) >> 2],
-                                        c = f[(a + 8) >> 2],
-                                        h = f[(a + 12) >> 2],
-                                        p = [],
-                                        s = 0;
-                                    s < 32;
-                                    s++
-                                )
-                                    p.push(u[a + s + 17]);
-                                return n.tty.ops.ioctl_tcsets(n.tty, e, {
-                                    c_iflag: i,
-                                    c_oflag: l,
-                                    c_cflag: c,
-                                    c_lflag: h,
-                                    c_cc: p,
-                                });
-                            }
-                            return 0;
-                        case 21519:
-                            if (!n.tty) return -59;
-                            var a = re();
-                            return ((f[a >> 2] = 0), 0);
-                        case 21520:
-                            if (!n.tty) return -59;
-                            return -28;
-                        case 21531:
-                            var a = re();
-                            return ry.ioctl(n, e, a);
-                        case 21523:
-                            if (!n.tty) return -59;
-                            if (n.tty.ops.ioctl_tiocgwinsz) {
-                                var m = n.tty.ops.ioctl_tiocgwinsz(n.tty),
-                                    a = re();
-                                ((d[a >> 1] = m[0]), (d[(a + 2) >> 1] = m[1]));
-                            }
-                            return 0;
-                        default:
-                            return -28;
-                    }
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            M: function (r, e) {
-                try {
-                    return ((r = rw.getStr(r)), rw.doStat(ry.lstat, r, e));
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            N: function (r, e, t, n) {
-                try {
-                    e = rw.getStr(e);
-                    var o = 256 & n,
-                        a = 4096 & n;
-                    return ((n &= -6401), (e = rw.calculateAt(r, e, a)), rw.doStat(o ? ry.lstat : ry.stat, e, t));
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            y: function (r, e, t, n) {
-                rw.varargs = n;
-                try {
-                    ((e = rw.getStr(e)), (e = rw.calculateAt(r, e)));
-                    var o = n ? re() : 0;
-                    return ry.open(e, t, o).fd;
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            O: function (r, e) {
-                try {
-                    return ((r = rw.getStr(r)), rw.doStat(ry.stat, r, e));
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
-                }
-            },
-            R: () => H(""),
-            B: (r, e, t, n, o) => {
-                var a = -1 != (e = r_(e)).indexOf("u");
-                rF(r, {
-                    name: e,
-                    fromWireType: (r) => r,
-                    toWireType: function (r, e) {
-                        if ("bigint" != typeof e && "number" != typeof e)
-                            throw TypeError(`Cannot convert "${rb(e)}" to ${this.name}`);
-                        return ("number" == typeof e && (e = BigInt(e)), e);
-                    },
-                    argPackAdvance: 8,
-                    readValueFromPointer: rD(e, t, !a),
-                    destructorFunction: null,
-                });
-            },
-            V: (r, e, t, n) => {
-                rF(r, {
-                    name: (e = r_(e)),
-                    fromWireType: function (r) {
-                        return !!r;
-                    },
-                    toWireType: function (r, e) {
-                        return e ? t : n;
-                    },
-                    argPackAdvance: 8,
-                    readValueFromPointer: function (r) {
-                        return this.fromWireType(l[r]);
-                    },
-                    destructorFunction: null,
-                });
-            },
-            m: (r, e, t, n, o, a, s, i, u, l, d, c, f) => {
-                ((d = r_(d)), (a = r1(o, a)), (i &&= r1(s, i)), (l &&= r1(u, l)), (f = r1(c, f)));
-                var h,
-                    p,
-                    m = (p = (h = (h = d).replace(/[^a-zA-Z0-9_]/g, "$")).charCodeAt(0)) >= 48 && p <= 57 ? `_${h}` : h;
-                (rH(m, function () {
-                    r4(`Cannot construct ${d} due to unbound types`, [n]);
-                }),
-                    rA([r, e, t], n ? [n] : [], (e) => {
-                        e = e[0];
-                        var t,
-                            o = n ? (t = e.registeredClass).instancePrototype : rI.prototype,
-                            s = rV(d, function () {
-                                for (var r = arguments.length, e = Array(r), t = 0; t < r; t++) e[t] = arguments[t];
-                                if (Object.getPrototypeOf(this) !== u) throw new E("Use 'new' to construct " + d);
-                                if (void 0 === c.constructor_body) throw new E(d + " has no accessible constructor");
-                                var n = c.constructor_body[e.length];
-                                if (void 0 === n)
-                                    throw new E(
-                                        `Tried to invoke ctor of ${d} with invalid number of parameters (${e.length}) - expected (${Object.keys(c.constructor_body).toString()}) parameters instead!`,
-                                    );
-                                return n.apply(this, e);
-                            }),
-                            u = Object.create(o, { constructor: { value: s } });
-                        s.prototype = u;
-                        var c = new rq(d, s, u, f, t, a, i, l);
-                        c.baseClass && ((c.baseClass.__derivedClasses ??= []), c.baseClass.__derivedClasses.push(c));
-                        var h = new rJ(d, c, !0, !1, !1),
-                            p = new rJ(d + "*", c, !1, !1, !1),
-                            v = new rJ(d + " const*", c, !1, !0, !1);
-                        return ((rR[r] = { pointerType: p, constPointerType: v }), rQ(m, s), [h, p, v]);
-                    }));
-            },
-            q: (r, e, t, n, o, a) => {
-                var s = r6(e, t);
-                ((o = r1(n, o)),
-                    rA([], [r], (r) => {
-                        r = r[0];
-                        var t = `constructor ${r.name}`;
-                        if (
-                            (void 0 === r.registeredClass.constructor_body && (r.registeredClass.constructor_body = []),
-                            void 0 !== r.registeredClass.constructor_body[e - 1])
-                        )
-                            throw new E(
-                                `Cannot register multiple constructors with identical number of parameters (${e - 1}) for class '${r.name}'! Overload resolution is currently only performed using the parameter count, not actual type info!`,
-                            );
-                        return (
-                            (r.registeredClass.constructor_body[e - 1] = () => {
-                                r4(`Cannot construct ${r.name} due to unbound types`, s);
-                            }),
-                            rA(
-                                [],
-                                s,
-                                (n) => (
-                                    n.splice(1, 0, null),
-                                    (r.registeredClass.constructor_body[e - 1] = r9(t, n, null, o, a)),
-                                    []
-                                ),
-                            ),
-                            []
-                        );
-                    }));
-            },
-            c: (r, e, t, n, o, a, s, i, u, l) => {
-                var d = r6(t, n);
-                ((e = r7((e = r_(e)))),
-                    (a = r1(o, a)),
-                    rA([], [r], (r) => {
-                        r = r[0];
-                        var n = `${r.name}.${e}`;
-                        function o() {
-                            r4(`Cannot call ${n} due to unbound types`, d);
-                        }
-                        (e.startsWith("@@") && (e = Symbol[e.substring(2)]),
-                            i && r.registeredClass.pureVirtualFunctions.push(e));
-                        var l = r.registeredClass.instancePrototype,
-                            c = l[e];
-                        return (
-                            void 0 === c ||
-                            (void 0 === c.overloadTable && c.className !== r.name && c.argCount === t - 2)
-                                ? ((o.argCount = t - 2), (o.className = r.name), (l[e] = o))
-                                : (rL(l, e, n), (l[e].overloadTable[t - 2] = o)),
-                            rA([], d, (o) => {
-                                var i = r9(n, o, r, a, s, u);
-                                return (
-                                    void 0 === l[e].overloadTable
-                                        ? ((i.argCount = t - 2), (l[e] = i))
-                                        : (l[e].overloadTable[t - 2] = i),
-                                    []
-                                );
-                            }),
-                            []
-                        );
-                    }));
-            },
-            E: (e, t, n) => {
-                ((e = r_(e)), rA([], [t], (t) => ((t = t[0]), (r[e] = t.fromWireType(n)), [])));
-            },
-            T: (r) => rF(r, eo),
-            D: (r, e, t, n) => {
-                function o() {}
-                ((e = r_(e)),
-                    (o.values = {}),
-                    rF(r, {
-                        name: e,
-                        constructor: o,
-                        fromWireType: function (r) {
-                            return this.constructor.values[r];
-                        },
-                        toWireType: (r, e) => e.value,
-                        argPackAdvance: 8,
-                        readValueFromPointer: ((r, e, t) => {
-                            switch (e) {
-                                case 1:
-                                    return t
-                                        ? function (r) {
-                                              return this.fromWireType(u[r]);
-                                          }
-                                        : function (r) {
-                                              return this.fromWireType(l[r]);
-                                          };
-                                case 2:
-                                    return t
-                                        ? function (r) {
-                                              return this.fromWireType(d[r >> 1]);
-                                          }
-                                        : function (r) {
-                                              return this.fromWireType(c[r >> 1]);
-                                          };
-                                case 4:
-                                    return t
-                                        ? function (r) {
-                                              return this.fromWireType(f[r >> 2]);
-                                          }
-                                        : function (r) {
-                                              return this.fromWireType(h[r >> 2]);
-                                          };
-                                default:
-                                    throw TypeError(`invalid integer width (${e}): ${r}`);
-                            }
-                        })(e, t, n),
-                        destructorFunction: null,
-                    }),
-                    rH(e, o));
-            },
-            j: (r, e, t) => {
-                var n = ea(r, "enum");
-                e = r_(e);
-                var o = n.constructor,
-                    a = Object.create(n.constructor.prototype, {
-                        value: { value: t },
-                        constructor: { value: rV(`${n.name}_${e}`, function () {}) },
-                    });
-                ((o.values[t] = a), (o[e] = a));
-            },
-            A: (r, e, t) => {
-                rF(r, {
-                    name: (e = r_(e)),
-                    fromWireType: (r) => r,
-                    toWireType: (r, e) => e,
-                    argPackAdvance: 8,
-                    readValueFromPointer: ((r, e) => {
-                        switch (e) {
-                            case 4:
-                                return function (r) {
-                                    return this.fromWireType(p[r >> 2]);
-                                };
-                            case 8:
-                                return function (r) {
-                                    return this.fromWireType(y[r >> 3]);
-                                };
-                            default:
-                                throw TypeError(`invalid float width (${e}): ${r}`);
-                        }
-                    })(e, t),
-                    destructorFunction: null,
-                });
-            },
-            Y: (r, e, t, n, o, a, s, i) => {
-                var u = r6(e, t);
-                ((r = r7((r = r_(r)))),
-                    (o = r1(n, o)),
-                    rH(
-                        r,
-                        function () {
-                            r4(`Cannot call ${r} due to unbound types`, u);
-                        },
-                        e - 1,
-                    ),
-                    rA([], u, (t) => {
-                        var n = [t[0], null].concat(t.slice(1));
-                        return (rQ(r, r9(r, n, null, o, a, s), e - 1), []);
-                    }));
-            },
-            i: (r, e, t, n, o) => {
-                ((e = r_(e)), -1 === o && (o = 0xffffffff));
-                var a = (r) => r;
-                if (0 === n) {
-                    var s = 32 - 8 * t;
-                    a = (r) => (r << s) >>> s;
-                }
-                var i = e.includes("unsigned"),
-                    u = (r, e) => {};
-                rF(r, {
-                    name: e,
-                    fromWireType: a,
-                    toWireType: i
-                        ? function (r, e) {
-                              return (u(e, this.name), e >>> 0);
-                          }
-                        : function (r, e) {
-                              return (u(e, this.name), e);
-                          },
-                    argPackAdvance: 8,
-                    readValueFromPointer: rD(e, t, 0 !== n),
-                    destructorFunction: null,
-                });
-            },
-            d: (r, e, t) => {
-                var n = [
-                    Int8Array,
-                    Uint8Array,
-                    Int16Array,
-                    Uint16Array,
-                    Int32Array,
-                    Uint32Array,
-                    Float32Array,
-                    Float64Array,
-                    BigInt64Array,
-                    BigUint64Array,
-                ][e];
-                function o(r) {
-                    var e = h[r >> 2],
-                        t = h[(r + 4) >> 2];
-                    return new n(u.buffer, t, e);
-                }
-                rF(
-                    r,
-                    { name: (t = r_(t)), fromWireType: o, argPackAdvance: 8, readValueFromPointer: o },
-                    { ignoreDuplicateRegistrations: !0 },
-                );
-            },
-            X: (r, e, t, n, o, a, s, i, u, l, d, c) => {
-                ((t = r_(t)),
-                    (a = r1(o, a)),
-                    (i = r1(s, i)),
-                    (l = r1(u, l)),
-                    (c = r1(d, c)),
-                    rA([r], [e], (r) => ((r = r[0]), [new rJ(t, r.registeredClass, !1, !1, !0, r, n, a, i, l, c)])));
-            },
-            U: (r, e) => {
-                rF(r, {
-                    name: (e = r_(e)),
-                    fromWireType(r) {
-                        for (var e, t, n = h[r >> 2], o = r + 4, a = o, e = 0; e <= n; ++e) {
-                            var s = o + e;
-                            if (e == n || 0 == l[s]) {
-                                var i = s - a,
-                                    u = rg(a, i);
-                                (void 0 === t ? (t = u) : ((t += "\0"), (t += u)), (a = s + 1));
-                            }
-                        }
-                        return (eC(r), t);
-                    },
-                    toWireType(r, e) {
-                        e instanceof ArrayBuffer && (e = new Uint8Array(e));
-                        var t,
-                            n = "string" == typeof e;
-                        (n ||
-                            e instanceof Uint8Array ||
-                            e instanceof Uint8ClampedArray ||
-                            e instanceof Int8Array ||
-                            rT("Cannot pass non-string to std::string"),
-                            (t = n ? ru(e) : e.length));
-                        var o = eT(4 + t + 1),
-                            a = o + 4;
-                        if (((h[o >> 2] = t), n)) rE(e, a, t + 1);
-                        else if (n)
-                            for (var s = 0; s < t; ++s) {
-                                var i = e.charCodeAt(s);
-                                (i > 255 && (eC(a), rT("String has UTF-16 code units that do not fit in 8 bits")),
-                                    (l[a + s] = i));
-                            }
-                        else for (var s = 0; s < t; ++s) l[a + s] = e[s];
-                        return (null !== r && r.push(eC, o), o);
-                    },
-                    argPackAdvance: 8,
-                    readValueFromPointer: rZ,
-                    destructorFunction(r) {
-                        eC(r);
-                    },
-                });
-            },
-            t: (r, e, t) => {
-                var n, o, a, s;
-                ((t = r_(t)),
-                    2 === e
-                        ? ((n = ei), (o = eu), (s = el), (a = (r) => c[r >> 1]))
-                        : 4 === e && ((n = ed), (o = ec), (s = ef), (a = (r) => h[r >> 2])),
-                    rF(r, {
-                        name: t,
-                        fromWireType: (r) => {
-                            for (var t, o = h[r >> 2], s = r + 4, i = 0; i <= o; ++i) {
-                                var u = r + 4 + i * e;
-                                if (i == o || 0 == a(u)) {
-                                    var l = u - s,
-                                        d = n(s, l);
-                                    (void 0 === t ? (t = d) : ((t += "\0"), (t += d)), (s = u + e));
-                                }
-                            }
-                            return (eC(r), t);
-                        },
-                        toWireType: (r, n) => {
-                            "string" != typeof n && rT(`Cannot pass non-string to C++ string type ${t}`);
-                            var a = s(n),
-                                i = eT(4 + a + e);
-                            return ((h[i >> 2] = a / e), o(n, i + 4, a + e), null !== r && r.push(eC, i), i);
-                        },
-                        argPackAdvance: 8,
-                        readValueFromPointer: rZ,
-                        destructorFunction(r) {
-                            eC(r);
-                        },
-                    }));
-            },
-            W: (r, e) => {
-                rF(r, {
-                    isVoid: !0,
-                    name: (e = r_(e)),
-                    argPackAdvance: 0,
-                    fromWireType: () => void 0,
-                    toWireType: (r, e) => void 0,
-                });
-            },
-            r: (r, e, t) => ((r = en.toValue(r)), eh((e = ea(e, "emval::as")), t, r)),
-            u: (r, e, t, n) => (r = ep[r])(null, (e = en.toValue(e)), t, n),
-            C: (r, e, t, n, o) => ((r = ep[r]), r((e = en.toValue(e)), e[(t = ev(t))], n, o)),
-            b: et,
-            n: (r, e, t) => {
-                var n,
-                    o,
-                    a = ((r, e) => {
-                        for (var t = Array(r), n = 0; n < r; ++n) t[n] = ea(h[(e + 4 * n) >> 2], "parameter " + n);
-                        return t;
-                    })(r, e),
-                    s = a.shift();
-                r--;
-                var i = `return function (obj, func, destructorsRef, args) {
-`,
-                    u = 0,
-                    l = [];
-                0 === t && l.push("obj");
-                for (var d = ["retType"], c = [s], f = 0; f < r; ++f)
-                    (l.push("arg" + f),
-                        d.push("argType" + f),
-                        c.push(a[f]),
-                        (i += `  var arg${f} = argType${f}.readValueFromPointer(args${u ? "+" + u : ""});
-`),
-                        (u += a[f].argPackAdvance));
-                ((i += `  var rv = ${1 === t ? "new func" : "func.call"}(${l.join(", ")});
-`),
-                    s.isVoid ||
-                        (d.push("emval_returnValue"),
-                        c.push(eh),
-                        (i += "  return emval_returnValue(retType, destructorsRef, rv);\n")),
-                    (i += "};\n"),
-                    d.push(i));
-                var p = r8(Function, d)(...c);
+            normalize: (e) => {
+                var r = X.isAbs(e),
+                    t = "/" === e.slice(-1);
                 return (
-                    (n = rV(`methodCaller<(${a.map((r) => r.name).join(", ")}) => ${s.name}>`, p)),
-                    (o = ep.length),
-                    ep.push(n),
+                    (e = X.normalizeArray(
+                        e.split("/").filter((e) => !!e),
+                        !r,
+                    ).join("/")) ||
+                        r ||
+                        (e = "."),
+                    e && t && (e += "/"),
+                    (r ? "/" : "") + e
+                );
+            },
+            dirname: (e) => {
+                var r = X.splitPath(e),
+                    t = r[0],
+                    n = r[1];
+                return t || n ? (n && (n = n.slice(0, -1)), t + n) : ".";
+            },
+            basename: (e) => e && e.match(/([^\/]+|\/)\/*$/)[1],
+            join: function () {
+                for (var e = arguments.length, r = Array(e), t = 0; t < e; t++) r[t] = arguments[t];
+                return X.normalize(r.join("/"));
+            },
+            join2: (e, r) => X.normalize(e + "/" + r),
+        },
+        K = (e) => (K = (e) => (crypto.getRandomValues(e), 0))(e),
+        Y = {
+            resolve: function () {
+                for (var e = arguments.length, r = Array(e), t = 0; t < e; t++) r[t] = arguments[t];
+                for (var n = "", o = !1, a = r.length - 1; a >= -1 && !o; a--) {
+                    var s = a >= 0 ? r[a] : ey.cwd();
+                    if ("string" != typeof s) throw TypeError("Arguments to path.resolve must be strings");
+                    if (!s) return "";
+                    ((n = s + "/" + n), (o = X.isAbs(s)));
+                }
+                return (
+                    (n = X.normalizeArray(
+                        n.split("/").filter((e) => !!e),
+                        !o,
+                    ).join("/")),
+                    (o ? "/" : "") + n || "."
+                );
+            },
+            relative: (e, r) => {
+                function t(e) {
+                    for (var r = 0; r < e.length && "" === e[r]; r++);
+                    for (var t = e.length - 1; t >= 0 && "" === e[t]; t--);
+                    return r > t ? [] : e.slice(r, t - r + 1);
+                }
+                ((e = Y.resolve(e).slice(1)), (r = Y.resolve(r).slice(1)));
+                for (
+                    var n = t(e.split("/")), o = t(r.split("/")), a = Math.min(n.length, o.length), s = a, i = 0;
+                    i < a;
+                    i++
+                )
+                    if (n[i] !== o[i]) {
+                        s = i;
+                        break;
+                    }
+                for (var l = [], i = s; i < n.length; i++) l.push("..");
+                return (l = l.concat(o.slice(s))).join("/");
+            },
+        },
+        Z = globalThis.TextDecoder && new TextDecoder(),
+        J = (e, r, t, n) => {
+            var o = r + t;
+            if (n) return o;
+            for (; e[r] && !(r >= o);) ++r;
+            return r;
+        },
+        Q = function (e) {
+            let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+                t = arguments.length > 2 ? arguments[2] : void 0,
+                n = arguments.length > 3 ? arguments[3] : void 0;
+            var o = J(e, r, t, n);
+            if (o - r > 16 && e.buffer && Z) return Z.decode(e.subarray(r, o));
+            for (var a = ""; r < o;) {
+                var s = e[r++];
+                if (!(128 & s)) {
+                    a += String.fromCharCode(s);
+                    continue;
+                }
+                var i = 63 & e[r++];
+                if ((224 & s) == 192) {
+                    a += String.fromCharCode(((31 & s) << 6) | i);
+                    continue;
+                }
+                var l = 63 & e[r++];
+                if (
+                    (s =
+                        (240 & s) == 224
+                            ? ((15 & s) << 12) | (i << 6) | l
+                            : ((7 & s) << 18) | (i << 12) | (l << 6) | (63 & e[r++])) < 65536
+                )
+                    a += String.fromCharCode(s);
+                else {
+                    var u = s - 65536;
+                    a += String.fromCharCode(55296 | (u >> 10), 56320 | (1023 & u));
+                }
+            }
+            return a;
+        },
+        ee = [],
+        er = (e) => {
+            for (var r = 0, t = 0; t < e.length; ++t) {
+                var n = e.charCodeAt(t);
+                n <= 127 ? r++ : n <= 2047 ? (r += 2) : n >= 55296 && n <= 57343 ? ((r += 4), ++t) : (r += 3);
+            }
+            return r;
+        },
+        et = (e, r, t, n) => {
+            if (!(n > 0)) return 0;
+            for (var o = t, a = t + n - 1, s = 0; s < e.length; ++s) {
+                var i = e.codePointAt(s);
+                if (i <= 127) {
+                    if (t >= a) break;
+                    r[t++] = i;
+                } else if (i <= 2047) {
+                    if (t + 1 >= a) break;
+                    ((r[t++] = 192 | (i >> 6)), (r[t++] = 128 | (63 & i)));
+                } else if (i <= 65535) {
+                    if (t + 2 >= a) break;
+                    ((r[t++] = 224 | (i >> 12)), (r[t++] = 128 | ((i >> 6) & 63)), (r[t++] = 128 | (63 & i)));
+                } else {
+                    if (t + 3 >= a) break;
+                    ((r[t++] = 240 | (i >> 18)),
+                        (r[t++] = 128 | ((i >> 12) & 63)),
+                        (r[t++] = 128 | ((i >> 6) & 63)),
+                        (r[t++] = 128 | (63 & i)),
+                        s++);
+                }
+            }
+            return ((r[t] = 0), t - o);
+        },
+        en = (e, r, t) => {
+            var n = Array(t > 0 ? t : er(e) + 1),
+                o = et(e, n, 0, n.length);
+            return (r && (n.length = o), n);
+        },
+        eo = {
+            ttys: [],
+            init() {},
+            shutdown() {},
+            register(e, r) {
+                ((eo.ttys[e] = { input: [], output: [], ops: r }), ey.registerDevice(e, eo.stream_ops));
+            },
+            stream_ops: {
+                open(e) {
+                    var r = eo.ttys[e.node.rdev];
+                    if (!r) throw new ey.ErrnoError(43);
+                    ((e.tty = r), (e.seekable = !1));
+                },
+                close(e) {
+                    e.tty.ops.fsync(e.tty);
+                },
+                fsync(e) {
+                    e.tty.ops.fsync(e.tty);
+                },
+                read(e, r, t, n, o) {
+                    if (!e.tty || !e.tty.ops.get_char) throw new ey.ErrnoError(60);
+                    for (var a, s = 0, i = 0; i < n; i++) {
+                        try {
+                            a = e.tty.ops.get_char(e.tty);
+                        } catch (e) {
+                            throw new ey.ErrnoError(29);
+                        }
+                        if (void 0 === a && !s) throw new ey.ErrnoError(6);
+                        if (null == a || (s++, (r[t + i] = a), 10 === a)) break;
+                    }
+                    return (s && (e.node.atime = Date.now()), s);
+                },
+                write(e, r, t, n, o) {
+                    if (!e.tty || !e.tty.ops.put_char) throw new ey.ErrnoError(60);
+                    try {
+                        for (var a = 0; a < n; a++) e.tty.ops.put_char(e.tty, r[t + a]);
+                    } catch (e) {
+                        throw new ey.ErrnoError(29);
+                    }
+                    return (n && (e.node.mtime = e.node.ctime = Date.now()), a);
+                },
+            },
+            default_tty_ops: {
+                get_char: (e) =>
+                    (() => {
+                        if (!ee.length) {
+                            var e = null;
+                            if (
+                                (globalThis.window?.prompt && null !== (e = window.prompt("Input: ")) && (e += "\n"),
+                                !e)
+                            )
+                                return null;
+                            ee = en(e, !0);
+                        }
+                        return ee.shift();
+                    })(),
+                put_char(e, r) {
+                    null === r || 10 === r ? (A(Q(e.output)), (e.output = [])) : 0 != r && e.output.push(r);
+                },
+                fsync(e) {
+                    e.output?.length > 0 && (A(Q(e.output)), (e.output = []));
+                },
+                ioctl_tcgets: (e) => ({
+                    c_iflag: 25856,
+                    c_oflag: 5,
+                    c_cflag: 191,
+                    c_lflag: 35387,
+                    c_cc: [
+                        3, 28, 127, 21, 4, 0, 1, 0, 17, 19, 26, 0, 18, 15, 23, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0,
+                    ],
+                }),
+                ioctl_tcsets: (e, r, t) => 0,
+                ioctl_tiocgwinsz: (e) => [24, 80],
+            },
+            default_tty1_ops: {
+                put_char(e, r) {
+                    null === r || 10 === r ? (M(Q(e.output)), (e.output = [])) : 0 != r && e.output.push(r);
+                },
+                fsync(e) {
+                    e.output?.length > 0 && (M(Q(e.output)), (e.output = []));
+                },
+            },
+        },
+        ea = (e, r) => Math.ceil(e / r) * r,
+        es = (e) => {
+            let r;
+            e = ea(e, 65536);
+            var t = k(65536, e);
+            return (t && ((r = e), c.fill(0, t, t + r)), t);
+        },
+        ei = {
+            ops_table: null,
+            mount: (e) => ei.createNode(null, "/", 16895, 0),
+            createNode(e, r, t, n) {
+                if (ey.isBlkdev(t) || ey.isFIFO(t)) throw new ey.ErrnoError(63);
+                ei.ops_table ||= {
+                    dir: {
+                        node: {
+                            getattr: ei.node_ops.getattr,
+                            setattr: ei.node_ops.setattr,
+                            lookup: ei.node_ops.lookup,
+                            mknod: ei.node_ops.mknod,
+                            rename: ei.node_ops.rename,
+                            unlink: ei.node_ops.unlink,
+                            rmdir: ei.node_ops.rmdir,
+                            readdir: ei.node_ops.readdir,
+                            symlink: ei.node_ops.symlink,
+                        },
+                        stream: { llseek: ei.stream_ops.llseek },
+                    },
+                    file: {
+                        node: { getattr: ei.node_ops.getattr, setattr: ei.node_ops.setattr },
+                        stream: {
+                            llseek: ei.stream_ops.llseek,
+                            read: ei.stream_ops.read,
+                            write: ei.stream_ops.write,
+                            mmap: ei.stream_ops.mmap,
+                            msync: ei.stream_ops.msync,
+                        },
+                    },
+                    link: {
+                        node: {
+                            getattr: ei.node_ops.getattr,
+                            setattr: ei.node_ops.setattr,
+                            readlink: ei.node_ops.readlink,
+                        },
+                        stream: {},
+                    },
+                    chrdev: {
+                        node: { getattr: ei.node_ops.getattr, setattr: ei.node_ops.setattr },
+                        stream: ey.chrdev_stream_ops,
+                    },
+                };
+                var o = ey.createNode(e, r, t, n);
+                return (
+                    ey.isDir(o.mode)
+                        ? ((o.node_ops = ei.ops_table.dir.node),
+                          (o.stream_ops = ei.ops_table.dir.stream),
+                          (o.contents = {}))
+                        : ey.isFile(o.mode)
+                          ? ((o.node_ops = ei.ops_table.file.node),
+                            (o.stream_ops = ei.ops_table.file.stream),
+                            (o.usedBytes = 0),
+                            (o.contents = ei.emptyFileContents ??= new Uint8Array(0)))
+                          : ey.isLink(o.mode)
+                            ? ((o.node_ops = ei.ops_table.link.node), (o.stream_ops = ei.ops_table.link.stream))
+                            : ey.isChrdev(o.mode) &&
+                              ((o.node_ops = ei.ops_table.chrdev.node), (o.stream_ops = ei.ops_table.chrdev.stream)),
+                    (o.atime = o.mtime = o.ctime = Date.now()),
+                    e && ((e.contents[r] = o), (e.atime = e.mtime = e.ctime = o.atime)),
                     o
                 );
             },
-            l: (r, e) => ((r = en.toValue(r)), (e = en.toValue(e)), en.toHandle(r[e])),
-            f: (r) => {
-                r > 9 && (ee[r + 1] += 1);
-            },
-            Z: () => en.toHandle([]),
-            g: (r) => en.toHandle(ev(r)),
-            o: () => en.toHandle({}),
-            h: (r) => {
-                (r5(en.toValue(r)), et(r));
-            },
-            k: (r, e, t) => {
-                ((r = en.toValue(r)), (e = en.toValue(e)), (t = en.toValue(t)), (r[e] = t));
-            },
-            e: (r, e) => {
-                var t = (r = ea(r, "_emval_take_value")).readValueFromPointer(e);
-                return en.toHandle(t);
-            },
-            I: function (r, e) {
-                var t = new Date(1e3 * (r = ey(r)));
-                ((f[e >> 2] = t.getUTCSeconds()),
-                    (f[(e + 4) >> 2] = t.getUTCMinutes()),
-                    (f[(e + 8) >> 2] = t.getUTCHours()),
-                    (f[(e + 12) >> 2] = t.getUTCDate()),
-                    (f[(e + 16) >> 2] = t.getUTCMonth()),
-                    (f[(e + 20) >> 2] = t.getUTCFullYear() - 1900),
-                    (f[(e + 24) >> 2] = t.getUTCDay()));
-                var n = Date.UTC(t.getUTCFullYear(), 0, 1, 0, 0, 0, 0),
-                    o = ((t.getTime() - n) / 864e5) | 0;
-                f[(e + 28) >> 2] = o;
-            },
-            H: function (r, e, t, n, o, a) {
-                a = ey(a);
-                try {
-                    var s = rw.getStreamFromFD(o);
-                    2 & t && rw.doMsync(r, s, e, n, a);
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return -r.errno;
+            getFileDataAsTypedArray: (e) => e.contents.subarray(0, e.usedBytes),
+            expandFileStorage(e, r) {
+                var t = e.contents.length;
+                if (!(t >= r)) {
+                    ((r = Math.max(r, (t * (t < 1048576 ? 2 : 1.125)) >>> 0)), t && (r = Math.max(r, 256)));
+                    var n = ei.getFileDataAsTypedArray(e);
+                    ((e.contents = new Uint8Array(r)), e.contents.set(n));
                 }
             },
-            S: (r, e, t, n) => {
-                var o = new Date().getFullYear(),
-                    a = new Date(o, 0, 1),
-                    s = new Date(o, 6, 1),
-                    i = a.getTimezoneOffset(),
-                    u = s.getTimezoneOffset(),
-                    l = Math.max(i, u);
-                ((h[r >> 2] = 60 * l), (f[e >> 2] = Number(i != u)));
-                var d = (r) => {
-                        var e = Math.abs(r),
-                            t = String(Math.floor(e / 60)).padStart(2, "0"),
-                            n = String(e % 60).padStart(2, "0");
-                        return `UTC${r >= 0 ? "-" : "+"}${t}${n}`;
-                    },
-                    c = d(i),
-                    p = d(u);
-                u < i ? (rE(c, t, 17), rE(p, n, 17)) : (rE(c, n, 17), rE(p, t, 17));
+            resizeFileStorage(e, r) {
+                if (e.usedBytes != r) {
+                    var t = e.contents;
+                    ((e.contents = new Uint8Array(r)),
+                        e.contents.set(t.subarray(0, Math.min(r, e.usedBytes))),
+                        (e.usedBytes = r));
+                }
             },
-            Q: function (r, e, t) {
-                if (((e = ey(e)), !(r >= 0 && r <= 3))) return 28;
-                if (0 === r) n = eg();
-                else {
-                    0;
-                    n = performance.now();
+            node_ops: {
+                getattr(e) {
+                    var r = {};
+                    return (
+                        (r.dev = ey.isChrdev(e.mode) ? e.id : 1),
+                        (r.ino = e.id),
+                        (r.mode = e.mode),
+                        (r.nlink = 1),
+                        (r.uid = 0),
+                        (r.gid = 0),
+                        (r.rdev = e.rdev),
+                        ey.isDir(e.mode)
+                            ? (r.size = 4096)
+                            : ey.isFile(e.mode)
+                              ? (r.size = e.usedBytes)
+                              : ey.isLink(e.mode)
+                                ? (r.size = e.link.length)
+                                : (r.size = 0),
+                        (r.atime = new Date(e.atime)),
+                        (r.mtime = new Date(e.mtime)),
+                        (r.ctime = new Date(e.ctime)),
+                        (r.atimeMs = e.atime),
+                        (r.mtimeMs = e.mtime),
+                        (r.ctimeMs = e.ctime),
+                        (r.blksize = 4096),
+                        (r.blocks = Math.ceil(r.size / r.blksize)),
+                        r
+                    );
+                },
+                setattr(e, r) {
+                    for (let t of ["mode", "atime", "mtime", "ctime"]) null != r[t] && (e[t] = r[t]);
+                    void 0 !== r.size && ei.resizeFileStorage(e, r.size);
+                },
+                lookup(e, r) {
+                    throw (
+                        ei.doesNotExistError ||
+                            ((ei.doesNotExistError = new ey.ErrnoError(44)),
+                            (ei.doesNotExistError.stack = "<generic error, no stack>")),
+                        ei.doesNotExistError
+                    );
+                },
+                mknod: (e, r, t, n) => ei.createNode(e, r, t, n),
+                rename(e, r, t) {
+                    var n;
+                    try {
+                        n = ey.lookupNode(r, t);
+                    } catch (e) {}
+                    if (n && ey.isDir(e.mode)) for (var o in n.contents) throw new ey.ErrnoError(55);
+                    (delete e.parent.contents[e.name],
+                        (r.contents[t] = e),
+                        (e.name = t),
+                        (r.ctime = r.mtime = e.parent.ctime = e.parent.mtime = Date.now()));
+                },
+                unlink(e, r) {
+                    (delete e.contents[r], (e.ctime = e.mtime = Date.now()));
+                },
+                rmdir(e, r) {
+                    var t = ey.lookupNode(e, r);
+                    for (var n in t.contents) throw new ey.ErrnoError(55);
+                    (delete e.contents[r], (e.ctime = e.mtime = Date.now()));
+                },
+                readdir: (e) => [".", "..", ...Object.keys(e.contents)],
+                symlink(e, r, t) {
+                    var n = ei.createNode(e, r, 41471, 0);
+                    return ((n.link = t), n);
+                },
+                readlink(e) {
+                    if (!ey.isLink(e.mode)) throw new ey.ErrnoError(28);
+                    return e.link;
+                },
+            },
+            stream_ops: {
+                read(e, r, t, n, o) {
+                    var a = e.node.contents;
+                    if (o >= e.node.usedBytes) return 0;
+                    var s = Math.min(e.node.usedBytes - o, n);
+                    return (r.set(a.subarray(o, o + s), t), s);
+                },
+                write(e, r, t, n, o, a) {
+                    if ((r.buffer === l.buffer && (a = !1), !n)) return 0;
+                    var s = e.node;
+                    return (
+                        (s.mtime = s.ctime = Date.now()),
+                        a
+                            ? ((s.contents = r.subarray(t, t + n)), (s.usedBytes = n))
+                            : s.usedBytes || o
+                              ? (ei.expandFileStorage(s, o + n),
+                                s.contents.set(r.subarray(t, t + n), o),
+                                (s.usedBytes = Math.max(s.usedBytes, o + n)))
+                              : ((s.contents = r.slice(t, t + n)), (s.usedBytes = n)),
+                        n
+                    );
+                },
+                llseek(e, r, t) {
+                    var n = r;
+                    if (
+                        (1 === t ? (n += e.position) : 2 === t && ey.isFile(e.node.mode) && (n += e.node.usedBytes),
+                        n < 0)
+                    )
+                        throw new ey.ErrnoError(28);
+                    return n;
+                },
+                mmap(e, r, t, n, o) {
+                    if (!ey.isFile(e.node.mode)) throw new ey.ErrnoError(43);
+                    var a,
+                        s,
+                        i = e.node.contents;
+                    if (2 & o || i.buffer !== l.buffer) {
+                        if (((s = !0), !(a = es(r)))) throw new ey.ErrnoError(48);
+                        i &&
+                            ((t > 0 || t + r < i.length) &&
+                                (i = i.subarray ? i.subarray(t, t + r) : Array.prototype.slice.call(i, t, t + r)),
+                            l.set(i, a));
+                    } else ((s = !1), (a = i.byteOffset));
+                    return { ptr: a, allocated: s };
+                },
+                msync: (e, r, t, n, o) => (ei.stream_ops.write(e, r, 0, n, t, !1), 0),
+            },
+        },
+        el = (e) => ("string" == typeof e && (e = en(e, !0)), e.subarray || (e = new Uint8Array(e)), e),
+        eu = (e, r) => {
+            var t = 0;
+            return (e && (t |= 365), r && (t |= 146), t);
+        },
+        ed = async (e) => new Uint8Array(await o(e)),
+        ec = function () {
+            for (var e = arguments.length, r = Array(e), t = 0; t < e; t++) r[t] = arguments[t];
+            return ey.createDataFile(...r);
+        },
+        eh = null,
+        ef = async () => eh,
+        ep = 0,
+        em = null,
+        ev = [],
+        eg = async (e, r) => {
+            for (var t of ("u" > typeof Browser && Browser.init(), ev)) if (t.canHandle(r)) return t.handle(e, r);
+            return e;
+        },
+        ew = async (e, r, t, o, a, s, i, l) => {
+            var u = r ? Y.resolve(X.join2(e, r)) : e;
+            (ep || (eh = new Promise((e) => (em = e))), ep++, n.monitorRunDependencies?.(ep));
+            try {
+                var d = t;
+                ("string" == typeof t && (d = await ed(t)), (d = await eg(d, u)), l?.(), s || ec(e, r, d, o, a, i));
+            } finally {
+                (ep--, n.monitorRunDependencies?.(ep), ep || em());
+            }
+        },
+        ey = {
+            root: null,
+            mounts: [],
+            devices: {},
+            streams: [],
+            nextInode: 1,
+            nameTable: [],
+            currentPath: "/",
+            initialized: !1,
+            ignorePermissions: !0,
+            filesystems: null,
+            syncFSRequests: 0,
+            ErrnoError: class {
+                name = "ErrnoError";
+                constructor(e) {
+                    this.errno = e;
+                }
+            },
+            FSStream: class {
+                shared = {};
+                get object() {
+                    return this.node;
+                }
+                set object(e) {
+                    this.node = e;
+                }
+                get isRead() {
+                    return (2097155 & this.flags) != 1;
+                }
+                get isWrite() {
+                    return (2097155 & this.flags) != 0;
+                }
+                get isAppend() {
+                    return 1024 & this.flags;
+                }
+                get flags() {
+                    return this.shared.flags;
+                }
+                set flags(e) {
+                    this.shared.flags = e;
+                }
+                get position() {
+                    return this.shared.position;
+                }
+                set position(e) {
+                    this.shared.position = e;
+                }
+            },
+            FSNode: class {
+                node_ops = {};
+                stream_ops = {};
+                readMode = 365;
+                writeMode = 146;
+                mounted = null;
+                constructor(e, r, t, n) {
+                    (e || (e = this),
+                        (this.parent = e),
+                        (this.mount = e.mount),
+                        (this.id = ey.nextInode++),
+                        (this.name = r),
+                        (this.mode = t),
+                        (this.rdev = n),
+                        (this.atime = this.mtime = this.ctime = Date.now()));
+                }
+                get read() {
+                    return (this.mode & this.readMode) === this.readMode;
+                }
+                set read(e) {
+                    e ? (this.mode |= this.readMode) : (this.mode &= ~this.readMode);
+                }
+                get write() {
+                    return (this.mode & this.writeMode) === this.writeMode;
+                }
+                set write(e) {
+                    e ? (this.mode |= this.writeMode) : (this.mode &= ~this.writeMode);
+                }
+                get isFolder() {
+                    return ey.isDir(this.mode);
+                }
+                get isDevice() {
+                    return ey.isChrdev(this.mode);
+                }
+                addListener(e) {
+                    let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    var t = { cb: e, exclusive: r },
+                        n = (this.listeners ??= new Set());
+                    return (n.add(t), { listeners: n, entry: t });
+                }
+                notifyListeners(e) {
+                    if (this.listeners) {
+                        for (var r of this.listeners) r.exclusive ? (t ||= []).push(r) : r.cb(e);
+                        if (t) {
+                            var t,
+                                n = (this.exclTurn || 0) % t.length;
+                            ((this.exclTurn = n + 1), t[n].cb(e));
+                        }
+                    }
+                }
+            },
+            lookupPath(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                if (!e) throw new ey.ErrnoError(44);
+                ((r.follow_mount ??= !0), X.isAbs(e) || (e = ey.cwd() + "/" + e));
+                e: for (var t = 0; t < 40; t++) {
+                    for (var n = e.split("/").filter((e) => !!e), o = ey.root, a = "/", s = 0; s < n.length; s++) {
+                        var i = s === n.length - 1;
+                        if (i && r.parent) break;
+                        if ("." !== n[s]) {
+                            if (".." === n[s]) {
+                                if (((a = X.dirname(a)), ey.isRoot(o))) {
+                                    ((e = a + "/" + n.slice(s + 1).join("/")), t--);
+                                    continue e;
+                                }
+                                o = o.parent;
+                                continue;
+                            }
+                            a = X.join2(a, n[s]);
+                            try {
+                                o = ey.lookupNode(o, n[s]);
+                            } catch (e) {
+                                if (e?.errno === 44 && i && r.noent_okay) return { path: a };
+                                throw e;
+                            }
+                            if (
+                                (ey.isMountpoint(o) && (!i || r.follow_mount) && (o = o.mounted.root),
+                                ey.isLink(o.mode) && (!i || r.follow))
+                            ) {
+                                if (!o.node_ops.readlink) throw new ey.ErrnoError(52);
+                                var l = o.node_ops.readlink(o);
+                                (X.isAbs(l) || (l = X.dirname(a) + "/" + l), (e = l + "/" + n.slice(s + 1).join("/")));
+                                continue e;
+                            }
+                        }
+                    }
+                    return { path: a, node: o };
+                }
+                throw new ey.ErrnoError(32);
+            },
+            getPath(e) {
+                for (var r; ;) {
+                    if (ey.isRoot(e)) {
+                        var t = e.mount.mountpoint;
+                        if (!r) return t;
+                        return "/" !== t[t.length - 1] ? `${t}/${r}` : t + r;
+                    }
+                    ((r = r ? `${e.name}/${r}` : e.name), (e = e.parent));
+                }
+            },
+            hashName(e, r) {
+                for (var t = 0, n = 0; n < r.length; n++) t = ((t << 5) - t + r.charCodeAt(n)) | 0;
+                return ((e + t) >>> 0) % ey.nameTable.length;
+            },
+            hashAddNode(e) {
+                var r = ey.hashName(e.parent.id, e.name);
+                ((e.name_next = ey.nameTable[r]), (ey.nameTable[r] = e));
+            },
+            hashRemoveNode(e) {
+                var r = ey.hashName(e.parent.id, e.name);
+                if (ey.nameTable[r] === e) ey.nameTable[r] = e.name_next;
+                else
+                    for (var t = ey.nameTable[r]; t;) {
+                        if (t.name_next === e) {
+                            t.name_next = e.name_next;
+                            break;
+                        }
+                        t = t.name_next;
+                    }
+            },
+            lookupNode(e, r) {
+                var t = ey.mayLookup(e);
+                if (t) throw new ey.ErrnoError(t);
+                for (var n = ey.hashName(e.id, r), o = ey.nameTable[n]; o; o = o.name_next) {
+                    var a = o.name;
+                    if (o.parent.id === e.id && a === r) return o;
+                }
+                return ey.lookup(e, r);
+            },
+            createNode(e, r, t, n) {
+                var o = new ey.FSNode(e, r, t, n);
+                return (ey.hashAddNode(o), o);
+            },
+            destroyNode(e) {
+                ey.hashRemoveNode(e);
+            },
+            isRoot: (e) => e === e.parent,
+            isMountpoint: (e) => !!e.mounted,
+            isFile: (e) => (61440 & e) == 32768,
+            isDir: (e) => (61440 & e) == 16384,
+            isLink: (e) => (61440 & e) == 40960,
+            isChrdev: (e) => (61440 & e) == 8192,
+            isBlkdev: (e) => (61440 & e) == 24576,
+            isFIFO: (e) => (61440 & e) == 4096,
+            isSocket: (e) => (49152 & e) == 49152,
+            flagsToPermissionString(e) {
+                var r = ["r", "w", "rw"][3 & e];
+                return (512 & e && (r += "w"), r);
+            },
+            nodePermissions: (e, r) =>
+                ey.ignorePermissions
+                    ? 0
+                    : (r.includes("r") && !(292 & e.mode)) ||
+                        (r.includes("w") && !(146 & e.mode)) ||
+                        (r.includes("x") && !(73 & e.mode))
+                      ? 2
+                      : 0,
+            mayLookup(e) {
+                if (!ey.isDir(e.mode)) return 54;
+                var r = ey.nodePermissions(e, "x");
+                return r || 2 * !e.node_ops.lookup;
+            },
+            mayCreate(e, r) {
+                if (!ey.isDir(e.mode)) return 54;
+                try {
+                    return (ey.lookupNode(e, r), 20);
+                } catch (e) {}
+                return ey.nodePermissions(e, "wx");
+            },
+            mayDelete(e, r, t) {
+                try {
+                    n = ey.lookupNode(e, r);
+                } catch (e) {
+                    return e.errno;
                 }
                 var n,
-                    o = Math.round(1e3 * n * 1e3);
-                return ((m[t >> 3] = BigInt(o)), 0);
+                    o = ey.nodePermissions(e, "wx");
+                if (o) return o;
+                if (t) {
+                    if (!ey.isDir(n.mode)) return 54;
+                    if (ey.isRoot(n) || ey.getPath(n) === ey.cwd()) return 10;
+                } else if (ey.isDir(n.mode)) return 31;
+                return 0;
             },
-            z: eg,
-            F: (r) => {
-                var e = l.length;
-                if ((r >>>= 0) > 0x80000000) return !1;
-                for (var t = 1; t <= 4; t *= 2) {
-                    var n = e * (1 + 0.2 / t);
-                    if (((n = Math.min(n, r + 0x6000000)), ew(Math.min(0x80000000, rc(Math.max(r, n), 65536)))))
-                        return !0;
-                }
-                return !1;
+            mayOpen(e, r) {
+                if (!e) return 44;
+                if (ey.isLink(e.mode)) return 32;
+                var t = ey.flagsToPermissionString(r);
+                return ey.isDir(e.mode) && ("r" !== t || 576 & r) ? 31 : ey.nodePermissions(e, t);
             },
-            K: (r, e) => {
-                var t = 0;
+            checkOpExists(e, r) {
+                if (!e) throw new ey.ErrnoError(r);
+                return e;
+            },
+            MAX_OPEN_FDS: 4096,
+            nextfd() {
+                for (var e = 0; e <= ey.MAX_OPEN_FDS; e++) if (!ey.streams[e]) return e;
+                throw new ey.ErrnoError(33);
+            },
+            getStreamChecked(e) {
+                var r = ey.getStream(e);
+                if (!r) throw new ey.ErrnoError(8);
+                return r;
+            },
+            getStream: (e) => ey.streams[e],
+            createStream(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
                 return (
-                    eb().forEach((n, o) => {
-                        var a = e + t;
-                        h[(r + 4 * o) >> 2] = a;
-                        for (var s = a, i = 0; i < n.length; ++i) u[s++] = n.charCodeAt(i);
-                        ((u[s] = 0), (t += n.length + 1));
+                    (e = Object.assign(new ey.FSStream(), e)),
+                    -1 == r && (r = ey.nextfd()),
+                    (e.fd = r),
+                    (ey.streams[r] = e),
+                    e
+                );
+            },
+            closeStream(e) {
+                ey.streams[e] = null;
+            },
+            dupStream(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+                var t = ey.createStream(e, r);
+                return (t.stream_ops?.dup?.(t), t);
+            },
+            doSetAttr(e, r, t) {
+                var n = e?.stream_ops.setattr,
+                    o = n ? e : r;
+                ((n ??= r.node_ops.setattr), ey.checkOpExists(n, 63));
+                try {
+                    n(o, t);
+                } catch (e) {
+                    if (e instanceof RangeError) throw new ey.ErrnoError(22);
+                    throw e;
+                }
+            },
+            chrdev_stream_ops: {
+                open(e) {
+                    var r = ey.getDevice(e.node.rdev);
+                    ((e.stream_ops = r.stream_ops), e.stream_ops.open?.(e));
+                },
+                llseek() {
+                    throw new ey.ErrnoError(70);
+                },
+            },
+            major: (e) => e >> 8,
+            minor: (e) => 255 & e,
+            makedev: (e, r) => (e << 8) | r,
+            registerDevice(e, r) {
+                ey.devices[e] = { stream_ops: r };
+            },
+            getDevice: (e) => ey.devices[e],
+            getMounts(e) {
+                for (var r = [], t = [e]; t.length;) {
+                    var n = t.pop();
+                    (r.push(n), t.push(...n.mounts));
+                }
+                return r;
+            },
+            syncfs(e, r) {
+                ("function" == typeof e && ((r = e), (e = !1)),
+                    ey.syncFSRequests++,
+                    ey.syncFSRequests > 1 &&
+                        M(
+                            `warning: ${ey.syncFSRequests} FS.syncfs operations in flight at once, probably just doing extra work`,
+                        ));
+                var t = ey.getMounts(ey.root.mount),
+                    n = 0;
+                function o(e) {
+                    return (ey.syncFSRequests--, r(e));
+                }
+                function a(e) {
+                    if (e) return a.errored ? void 0 : ((a.errored = !0), o(e));
+                    ++n >= t.length && o(null);
+                }
+                for (var s of t) s.type.syncfs ? s.type.syncfs(s, e, a) : a(null);
+            },
+            mount(e, r, t) {
+                var n,
+                    o = "/" === t,
+                    a = !t;
+                if (o && ey.root) throw new ey.ErrnoError(10);
+                if (!o && !a) {
+                    var s = ey.lookupPath(t, { follow_mount: !1 });
+                    if (((t = s.path), (n = s.node), ey.isMountpoint(n))) throw new ey.ErrnoError(10);
+                    if (!ey.isDir(n.mode)) throw new ey.ErrnoError(54);
+                }
+                var i = { type: e, opts: r, mountpoint: t, mounts: [] },
+                    l = e.mount(i);
+                return (
+                    (l.mount = i),
+                    (i.root = l),
+                    o ? (ey.root = l) : n && ((n.mounted = i), n.mount && n.mount.mounts.push(i)),
+                    l
+                );
+            },
+            unmount(e) {
+                var r = ey.lookupPath(e, { follow_mount: !1 });
+                if (!ey.isMountpoint(r.node)) throw new ey.ErrnoError(28);
+                var t = r.node,
+                    n = t.mounted,
+                    o = ey.getMounts(n);
+                for (var [a, s] of Object.entries(ey.nameTable))
+                    for (; s;) {
+                        var i = s.name_next;
+                        (o.includes(s.mount) && ey.destroyNode(s), (s = i));
+                    }
+                t.mounted = null;
+                var l = t.mount.mounts.indexOf(n);
+                t.mount.mounts.splice(l, 1);
+            },
+            lookup: (e, r) => e.node_ops.lookup(e, r),
+            mknod(e, r, t) {
+                var n = ey.lookupPath(e, { parent: !0 }).node,
+                    o = X.basename(e);
+                if (!o) throw new ey.ErrnoError(28);
+                if ("." === o || ".." === o) throw new ey.ErrnoError(20);
+                var a = ey.mayCreate(n, o);
+                if (a) throw new ey.ErrnoError(a);
+                if (!n.node_ops.mknod) throw new ey.ErrnoError(63);
+                return n.node_ops.mknod(n, o, r, t);
+            },
+            statfs: (e) => ey.statfsNode(ey.lookupPath(e, { follow: !0 }).node),
+            statfsStream: (e) => ey.statfsNode(e.node),
+            statfsNode(e) {
+                var r = {
+                    bsize: 4096,
+                    frsize: 4096,
+                    blocks: 1e6,
+                    bfree: 5e5,
+                    bavail: 5e5,
+                    files: ey.nextInode,
+                    ffree: ey.nextInode - 1,
+                    fsid: 42,
+                    flags: 2,
+                    namelen: 255,
+                };
+                return (e.node_ops.statfs && Object.assign(r, e.node_ops.statfs(e.mount.opts.root)), r);
+            },
+            create(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 438;
+                return ((r &= 4095), (r |= 32768), ey.mknod(e, r, 0));
+            },
+            mkdir(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 511;
+                return ((r &= 1023), (r |= 16384), ey.mknod(e, r, 0));
+            },
+            mkdirTree(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 511;
+                var t = e.split("/"),
+                    n = "";
+                for (var o of t)
+                    if (o) {
+                        ((n || X.isAbs(e)) && (n += "/"), (n += o));
+                        try {
+                            ey.mkdir(n, r);
+                        } catch (e) {
+                            if (20 != e.errno) throw e;
+                        }
+                    }
+            },
+            mkdev: (e, r, t) => (void 0 === t && ((t = r), (r = 438)), (r |= 8192), ey.mknod(e, r, t)),
+            symlink(e, r) {
+                if (!Y.resolve(e)) throw new ey.ErrnoError(44);
+                var t = ey.lookupPath(r, { parent: !0 }).node;
+                if (!t) throw new ey.ErrnoError(44);
+                var n = X.basename(r),
+                    o = ey.mayCreate(t, n);
+                if (o) throw new ey.ErrnoError(o);
+                if (!t.node_ops.symlink) throw new ey.ErrnoError(63);
+                return t.node_ops.symlink(t, n, e);
+            },
+            link(e, r, t) {
+                var n = ey.lookupPath(r, { parent: !0 }).node;
+                if (!n) throw new ey.ErrnoError(44);
+                var o = X.basename(r),
+                    a = ey.mayCreate(n, o);
+                if (a) throw new ey.ErrnoError(a);
+                if (!n.node_ops.link) throw new ey.ErrnoError(34);
+                return n.node_ops.link(n, o, e, t);
+            },
+            rename(e, r) {
+                var t,
+                    n,
+                    o,
+                    a = X.dirname(e),
+                    s = X.dirname(r),
+                    i = X.basename(e),
+                    l = X.basename(r);
+                if (
+                    ((t = ey.lookupPath(e, { parent: !0 }).node), (n = ey.lookupPath(r, { parent: !0 }).node), !t || !n)
+                )
+                    throw new ey.ErrnoError(44);
+                if (t.mount !== n.mount) throw new ey.ErrnoError(75);
+                var u = ey.lookupNode(t, i),
+                    d = Y.relative(e, s);
+                if ("." !== d.charAt(0)) throw new ey.ErrnoError(28);
+                if ("." !== (d = Y.relative(r, a)).charAt(0)) throw new ey.ErrnoError(55);
+                try {
+                    o = ey.lookupNode(n, l);
+                } catch (e) {}
+                if (u !== o) {
+                    var c = ey.isDir(u.mode),
+                        h = ey.mayDelete(t, i, c);
+                    if (h || (h = o ? ey.mayDelete(n, l, c) : ey.mayCreate(n, l))) throw new ey.ErrnoError(h);
+                    if (!t.node_ops.rename) throw new ey.ErrnoError(63);
+                    if (ey.isMountpoint(u) || (o && ey.isMountpoint(o))) throw new ey.ErrnoError(10);
+                    if (n !== t && (h = ey.nodePermissions(t, "w"))) throw new ey.ErrnoError(h);
+                    ey.hashRemoveNode(u);
+                    try {
+                        (t.node_ops.rename(u, n, l), o && ey.hashRemoveNode(o), (u.parent = n));
+                    } catch (e) {
+                        throw e;
+                    } finally {
+                        ey.hashAddNode(u);
+                    }
+                }
+            },
+            rmdir(e) {
+                var r = ey.lookupPath(e, { parent: !0 }).node,
+                    t = X.basename(e),
+                    n = ey.lookupNode(r, t),
+                    o = ey.mayDelete(r, t, !0);
+                if (o) throw new ey.ErrnoError(o);
+                if (!r.node_ops.rmdir) throw new ey.ErrnoError(63);
+                if (ey.isMountpoint(n)) throw new ey.ErrnoError(10);
+                (r.node_ops.rmdir(r, t), ey.destroyNode(n));
+            },
+            readdir(e) {
+                var r = ey.lookupPath(e, { follow: !0 }).node;
+                return ey.checkOpExists(r.node_ops.readdir, 54)(r);
+            },
+            unlink(e) {
+                var r = ey.lookupPath(e, { parent: !0 }).node;
+                if (!r) throw new ey.ErrnoError(44);
+                var t = X.basename(e),
+                    n = ey.lookupNode(r, t),
+                    o = ey.mayDelete(r, t, !1);
+                if (o) throw new ey.ErrnoError(o);
+                if (!r.node_ops.unlink) throw new ey.ErrnoError(63);
+                if (ey.isMountpoint(n)) throw new ey.ErrnoError(10);
+                (r.node_ops.unlink(r, t), ey.destroyNode(n));
+            },
+            readlink(e) {
+                var r = ey.lookupPath(e).node;
+                if (!r) throw new ey.ErrnoError(44);
+                if (!r.node_ops.readlink) throw new ey.ErrnoError(28);
+                return r.node_ops.readlink(r);
+            },
+            stat(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                var t = ey.lookupPath(e, { follow: !r }).node;
+                return ey.checkOpExists(t.node_ops.getattr, 63)(t);
+            },
+            fstat(e) {
+                var r = ey.getStreamChecked(e),
+                    t = r.node,
+                    n = r.stream_ops.getattr,
+                    o = n ? r : t;
+                return ((n ??= t.node_ops.getattr), ey.checkOpExists(n, 63), n(o));
+            },
+            lstat: (e) => ey.stat(e, !0),
+            doChmod(e, r, t) {
+                let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                ey.doSetAttr(e, r, { mode: (4095 & t) | (-4096 & r.mode), ctime: Date.now(), dontFollow: n });
+            },
+            chmod(e, r) {
+                let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if ("string" == typeof e) {
+                    var n;
+                    n = ey.lookupPath(e, { follow: !t }).node;
+                } else n = e;
+                ey.doChmod(null, n, r, t);
+            },
+            lchmod(e, r) {
+                ey.chmod(e, r, !0);
+            },
+            fchmod(e, r) {
+                var t = ey.getStreamChecked(e);
+                ey.doChmod(t, t.node, r, !1);
+            },
+            doChown(e, r) {
+                let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                ey.doSetAttr(e, r, { timestamp: Date.now(), dontFollow: t });
+            },
+            chown(e, r, t) {
+                let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                if ("string" == typeof e) {
+                    var o;
+                    o = ey.lookupPath(e, { follow: !n }).node;
+                } else o = e;
+                ey.doChown(null, o, n);
+            },
+            lchown(e, r, t) {
+                ey.chown(e, r, t, !0);
+            },
+            fchown(e, r, t) {
+                var n = ey.getStreamChecked(e);
+                ey.doChown(n, n.node, !1);
+            },
+            doTruncate(e, r, t) {
+                if (ey.isDir(r.mode)) throw new ey.ErrnoError(31);
+                if (!ey.isFile(r.mode)) throw new ey.ErrnoError(28);
+                var n = ey.nodePermissions(r, "w");
+                if (n) throw new ey.ErrnoError(n);
+                ey.doSetAttr(e, r, { size: t, timestamp: Date.now() });
+            },
+            truncate(e, r) {
+                if (r < 0) throw new ey.ErrnoError(28);
+                if ("string" == typeof e) {
+                    var t;
+                    t = ey.lookupPath(e, { follow: !0 }).node;
+                } else t = e;
+                ey.doTruncate(null, t, r);
+            },
+            ftruncate(e, r) {
+                var t = ey.getStreamChecked(e);
+                if (r < 0 || (2097155 & t.flags) == 0) throw new ey.ErrnoError(28);
+                ey.doTruncate(t, t.node, r);
+            },
+            utime(e, r, t) {
+                let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                var o = ey.lookupPath(e, { follow: !n });
+                ey.doSetAttr(null, o.node, { atime: r, mtime: t, dontFollow: n });
+            },
+            open(e, r) {
+                let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 438;
+                if ("" === e) throw new ey.ErrnoError(44);
+                if (
+                    ((t =
+                        64 &
+                        (r = ((e) => {
+                            if ("string" != typeof e) return e;
+                            var r = { r: 0, "r+": 2, w: 577, "w+": 578, a: 1089, "a+": 1090 }[e];
+                            if (void 0 === r) throw Error(`Unknown file open mode: ${e}`);
+                            return r;
+                        })(r))
+                            ? (4095 & t) | 32768
+                            : 0),
+                    "object" == typeof e)
+                )
+                    n = e;
+                else {
+                    var n,
+                        o = e.endsWith("/"),
+                        a = ey.lookupPath(e, { follow: !(131072 & r), noent_okay: !0 });
+                    ((n = a.node), (e = a.path));
+                }
+                var s = !1;
+                if (64 & r)
+                    if (n) {
+                        if (128 & r) throw new ey.ErrnoError(20);
+                    } else if (o) throw new ey.ErrnoError(31);
+                    else ((n = ey.mknod(e, 511 | t, 0)), (s = !0));
+                if (!n) throw new ey.ErrnoError(44);
+                if ((ey.isChrdev(n.mode) && (r &= -513), 65536 & r && !ey.isDir(n.mode))) throw new ey.ErrnoError(54);
+                if (!s) {
+                    var i = ey.mayOpen(n, r);
+                    if (i) throw new ey.ErrnoError(i);
+                }
+                (512 & r && !s && ey.truncate(n, 0), (r &= -131713));
+                var l = ey.createStream({
+                    node: n,
+                    path: ey.getPath(n),
+                    flags: r,
+                    seekable: !0,
+                    position: 0,
+                    stream_ops: n.stream_ops,
+                    ungotten: [],
+                    error: !1,
+                });
+                return (l.stream_ops.open && l.stream_ops.open(l), s && ey.chmod(n, 511 & t), l);
+            },
+            close(e) {
+                if (ey.isClosed(e)) throw new ey.ErrnoError(8);
+                (e.getdents && (e.getdents = null), e.node?.notifyListeners(32));
+                try {
+                    e.stream_ops.close && e.stream_ops.close(e);
+                } catch (e) {
+                    throw e;
+                } finally {
+                    ey.closeStream(e.fd);
+                }
+                e.fd = null;
+            },
+            isClosed: (e) => null === e.fd,
+            llseek(e, r, t) {
+                if (ey.isClosed(e)) throw new ey.ErrnoError(8);
+                if (!e.seekable || !e.stream_ops.llseek) throw new ey.ErrnoError(70);
+                if (0 != t && 1 != t && 2 != t) throw new ey.ErrnoError(28);
+                return ((e.position = e.stream_ops.llseek(e, r, t)), (e.ungotten = []), e.position);
+            },
+            read(e, r, t, n, o) {
+                if (n < 0 || o < 0) throw new ey.ErrnoError(28);
+                if (ey.isClosed(e) || (2097155 & e.flags) == 1) throw new ey.ErrnoError(8);
+                if (ey.isDir(e.node.mode)) throw new ey.ErrnoError(31);
+                if (!e.stream_ops.read) throw new ey.ErrnoError(28);
+                var a = void 0 !== o;
+                if (a) {
+                    if (!e.seekable) throw new ey.ErrnoError(70);
+                } else o = e.position;
+                var s = e.stream_ops.read(e, r, t, n, o);
+                return (a || (e.position += s), s);
+            },
+            write(e, r, t, n, o, a) {
+                if (n < 0 || o < 0) throw new ey.ErrnoError(28);
+                if (ey.isClosed(e) || (2097155 & e.flags) == 0) throw new ey.ErrnoError(8);
+                if (ey.isDir(e.node.mode)) throw new ey.ErrnoError(31);
+                if (!e.stream_ops.write) throw new ey.ErrnoError(28);
+                e.seekable && 1024 & e.flags && ey.llseek(e, 0, 2);
+                var s = void 0 !== o;
+                if (s) {
+                    if (!e.seekable) throw new ey.ErrnoError(70);
+                } else o = e.position;
+                var i = e.stream_ops.write(e, r, t, n, o, a);
+                return (s || (e.position += i), i);
+            },
+            mmap(e, r, t, n, o) {
+                if ((2 & n && !(2 & o) && (2097155 & e.flags) != 2) || (2097155 & e.flags) == 1)
+                    throw new ey.ErrnoError(2);
+                if (!e.stream_ops.mmap) throw new ey.ErrnoError(43);
+                if (!r) throw new ey.ErrnoError(28);
+                return e.stream_ops.mmap(e, r, t, n, o);
+            },
+            msync: (e, r, t, n, o) => (e.stream_ops.msync ? e.stream_ops.msync(e, r, t, n, o) : 0),
+            ioctl(e, r, t) {
+                if (!e.stream_ops.ioctl) throw new ey.ErrnoError(59);
+                return e.stream_ops.ioctl(e, r, t);
+            },
+            readFile(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                ((r.flags ??= 0),
+                    (r.encoding ??= "binary"),
+                    "utf8" !== r.encoding && "binary" !== r.encoding && R(`Invalid encoding type "${r.encoding}"`));
+                var t = ey.open(e, r.flags),
+                    n = ey.stat(e).size,
+                    o = new Uint8Array(n);
+                return (ey.read(t, o, 0, n, 0), "utf8" === r.encoding && (o = Q(o)), ey.close(t), o);
+            },
+            writeFile(e, r) {
+                let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                t.flags ??= 577;
+                var n = ey.open(e, t.flags, t.mode);
+                ((r = el(r)), ey.write(n, r, 0, r.byteLength, void 0, t.canOwn), ey.close(n));
+            },
+            cwd: () => ey.currentPath,
+            chdir(e) {
+                var r = ey.lookupPath(e, { follow: !0 });
+                if (null === r.node) throw new ey.ErrnoError(44);
+                if (!ey.isDir(r.node.mode)) throw new ey.ErrnoError(54);
+                var t = ey.nodePermissions(r.node, "x");
+                if (t) throw new ey.ErrnoError(t);
+                ey.currentPath = r.path;
+            },
+            createDefaultDirectories() {
+                (ey.mkdir("/tmp"), ey.mkdir("/home"), ey.mkdir("/home/web_user"));
+            },
+            createDefaultDevices() {
+                (ey.mkdir("/dev"),
+                    ey.registerDevice(ey.makedev(1, 3), {
+                        read: () => 0,
+                        write: (e, r, t, n, o) => n,
+                        llseek: () => 0,
                     }),
+                    ey.mkdev("/dev/null", ey.makedev(1, 3)),
+                    eo.register(ey.makedev(5, 0), eo.default_tty_ops),
+                    eo.register(ey.makedev(6, 0), eo.default_tty1_ops),
+                    ey.mkdev("/dev/tty", ey.makedev(5, 0)),
+                    ey.mkdev("/dev/tty1", ey.makedev(6, 0)));
+                var e = new Uint8Array(1024),
+                    r = 0,
+                    t = () => (r || (K(e), (r = e.byteLength)), e[--r]);
+                (ey.createDevice("/dev", "random", t),
+                    ey.createDevice("/dev", "urandom", t),
+                    ey.mkdir("/dev/shm"),
+                    ey.mkdir("/dev/shm/tmp"));
+            },
+            createSpecialDirectories() {
+                ey.mkdir("/proc");
+                var e = ey.mkdir("/proc/self");
+                (ey.mkdir("/proc/self/fd"),
+                    ey.mount(
+                        {
+                            mount() {
+                                var r = ey.createNode(e, "fd", 16895, 73);
+                                return (
+                                    (r.stream_ops = { llseek: ei.stream_ops.llseek }),
+                                    (r.node_ops = {
+                                        lookup(e, r) {
+                                            var t = +r,
+                                                n = ey.getStreamChecked(t),
+                                                o = {
+                                                    parent: null,
+                                                    mount: { mountpoint: "fake" },
+                                                    node_ops: { readlink: () => n.path },
+                                                    id: t + 1,
+                                                };
+                                            return ((o.parent = o), o);
+                                        },
+                                        readdir: () =>
+                                            Array.from(ey.streams.entries())
+                                                .filter((e) => {
+                                                    let [r, t] = e;
+                                                    return t;
+                                                })
+                                                .map((e) => {
+                                                    let [r, t] = e;
+                                                    return r.toString();
+                                                }),
+                                    }),
+                                    r
+                                );
+                            },
+                        },
+                        {},
+                        "/proc/self/fd",
+                    ));
+            },
+            createStandardStreams(e, r, t) {
+                (e ? ey.createDevice("/dev", "stdin", e) : ey.symlink("/dev/tty", "/dev/stdin"),
+                    r ? ey.createDevice("/dev", "stdout", null, r) : ey.symlink("/dev/tty", "/dev/stdout"),
+                    t ? ey.createDevice("/dev", "stderr", null, t) : ey.symlink("/dev/tty1", "/dev/stderr"),
+                    ey.open("/dev/stdin", 0),
+                    ey.open("/dev/stdout", 1),
+                    ey.open("/dev/stderr", 1));
+            },
+            staticInit() {
+                ((ey.nameTable.length = 4096),
+                    ey.mount(ei, {}, "/"),
+                    ey.createDefaultDirectories(),
+                    ey.createDefaultDevices(),
+                    ey.createSpecialDirectories(),
+                    (ey.filesystems = { MEMFS: ei }));
+            },
+            init(e, r, t) {
+                ((ey.initialized = !0),
+                    (e ??= n.stdin),
+                    (r ??= n.stdout),
+                    (t ??= n.stderr),
+                    ey.createStandardStreams(e, r, t));
+            },
+            quit() {
+                for (var e of ((ey.initialized = !1), ey.streams)) e && ey.close(e);
+            },
+            analyzePath(e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                try {
+                    var t = ey.lookupPath(e, { follow: !r });
+                    e = t.path;
+                } catch (e) {}
+                var n = {
+                    isRoot: !1,
+                    exists: !1,
+                    error: 0,
+                    name: null,
+                    path: null,
+                    object: null,
+                    parentExists: !1,
+                    parentPath: null,
+                    parentObject: null,
+                };
+                try {
+                    var t = ey.lookupPath(e, { parent: !0 });
+                    ((n.parentExists = !0),
+                        (n.parentPath = t.path),
+                        (n.parentObject = t.node),
+                        (n.name = X.basename(e)),
+                        (t = ey.lookupPath(e, { follow: !r })),
+                        (n.exists = !0),
+                        (n.path = t.path),
+                        (n.object = t.node),
+                        (n.name = t.node.name),
+                        (n.isRoot = "/" === t.path));
+                } catch (e) {
+                    n.error = e.errno;
+                }
+                return n;
+            },
+            createPath(e, r, t, n) {
+                e = "string" == typeof e ? e : ey.getPath(e);
+                for (var o = r.split("/").reverse(); o.length;) {
+                    var a = o.pop();
+                    if (a) {
+                        var s = X.join2(e, a);
+                        try {
+                            ey.mkdir(s);
+                        } catch (e) {
+                            if (20 != e.errno) throw e;
+                        }
+                        e = s;
+                    }
+                }
+                return s;
+            },
+            createFile(e, r, t, n, o) {
+                var a = X.join2("string" == typeof e ? e : ey.getPath(e), r),
+                    s = eu(n, o);
+                return ey.create(a, s);
+            },
+            createDataFile(e, r, t, n, o, a) {
+                var s = r;
+                e && ((e = "string" == typeof e ? e : ey.getPath(e)), (s = r ? X.join2(e, r) : e));
+                var i = eu(n, o),
+                    l = ey.create(s, i);
+                if (t) {
+                    ((t = el(t)), ey.chmod(l, 146 | i));
+                    var u = ey.open(l, 577);
+                    (ey.write(u, t, 0, t.length, 0, a), ey.close(u), ey.chmod(l, i));
+                }
+            },
+            createDevice(e, r, t, n) {
+                var o = X.join2("string" == typeof e ? e : ey.getPath(e), r),
+                    a = eu(!!t, !!n);
+                ey.createDevice.major ??= 64;
+                var s = ey.makedev(ey.createDevice.major++, 0);
+                return (
+                    ey.registerDevice(s, {
+                        open(e) {
+                            e.seekable = !1;
+                        },
+                        close(e) {
+                            n?.buffer?.length && n(10);
+                        },
+                        read(e, r, n, o, a) {
+                            for (var s, i = 0, l = 0; l < o; l++) {
+                                try {
+                                    s = t();
+                                } catch (e) {
+                                    throw new ey.ErrnoError(29);
+                                }
+                                if (void 0 === s && !i) throw new ey.ErrnoError(6);
+                                if (null == s) break;
+                                (i++, (r[n + l] = s));
+                            }
+                            return (i && (e.node.atime = Date.now()), i);
+                        },
+                        write(e, r, t, o, a) {
+                            for (var s = 0; s < o; s++)
+                                try {
+                                    n(r[t + s]);
+                                } catch (e) {
+                                    throw new ey.ErrnoError(29);
+                                }
+                            return (o && (e.node.mtime = e.node.ctime = Date.now()), s);
+                        },
+                    }),
+                    ey.mkdev(o, a, s)
+                );
+            },
+            forceLoadFile(e) {
+                if (e.isDevice || e.isFolder || e.link || e.contents) return !0;
+                if (globalThis.XMLHttpRequest)
+                    R(
+                        "Lazy loading should have been performed (contents set) in createLazyFile, but it was not. Lazy loading only works in web workers. Use --embed-file or --preload-file in emcc on the main thread.",
+                    );
+                else
+                    try {
+                        e.contents = a(e.url);
+                    } catch (e) {
+                        throw new ey.ErrnoError(29);
+                    }
+            },
+            createLazyFile(e, r, t, n, o) {
+                if (globalThis.XMLHttpRequest) {
+                    R(
+                        "Cannot do synchronous binary XHRs outside webworkers in modern browsers. Use --embed-file or --preload-file in emcc",
+                    );
+                    var a = {
+                        isDevice: !1,
+                        contents: new (class {
+                            lengthKnown = !1;
+                            chunks = [];
+                            get(e) {
+                                if (!(e > this.length - 1) && !(e < 0)) {
+                                    var r = e % this.chunkSize,
+                                        t = (e / this.chunkSize) | 0;
+                                    return this.getter(t)[r];
+                                }
+                            }
+                            setDataGetter(e) {
+                                this.getter = e;
+                            }
+                            cacheLength() {
+                                var e,
+                                    r = new XMLHttpRequest();
+                                (r.open("HEAD", t, !1),
+                                    r.send(null),
+                                    (r.status >= 200 && r.status < 300) ||
+                                        304 === r.status ||
+                                        R(`Couldn't load ${t}. Status: ${r.status}`));
+                                var n = Number(r.getResponseHeader("Content-length")),
+                                    o = (e = r.getResponseHeader("Accept-Ranges")) && "bytes" === e,
+                                    a = (e = r.getResponseHeader("Content-Encoding")) && "gzip" === e,
+                                    s = 1048576;
+                                o || (s = n);
+                                var i = this;
+                                (i.setDataGetter((e) => {
+                                    var r,
+                                        o,
+                                        a = e * s,
+                                        l = (e + 1) * s - 1;
+                                    return (
+                                        (l = Math.min(l, n - 1)),
+                                        void 0 === i.chunks[e] &&
+                                            (i.chunks[e] =
+                                                (a > (r = l) && R(`invalid range (${a}, ${r}) or no bytes requested!`),
+                                                r > n - 1 && R(`only ${n} bytes available! programmer error!`),
+                                                ((o = new XMLHttpRequest()).open("GET", t, !1),
+                                                n !== s && o.setRequestHeader("Range", `bytes=${a}-${r}`),
+                                                (o.responseType = "arraybuffer"),
+                                                o.overrideMimeType &&
+                                                    o.overrideMimeType("text/plain; charset=x-user-defined"),
+                                                o.send(null),
+                                                (o.status >= 200 && o.status < 300) ||
+                                                    304 === o.status ||
+                                                    R(`Couldn't load ${t}. Status: ${o.status}`),
+                                                void 0 !== o.response)
+                                                    ? new Uint8Array(o.response || [])
+                                                    : en(o.responseText ?? "", !0))),
+                                        void 0 === i.chunks[e] && R("doXHR failed!"),
+                                        i.chunks[e]
+                                    );
+                                }),
+                                    (a || !n) &&
+                                        ((s = n = 1),
+                                        (s = n = this.getter(0).length),
+                                        A(
+                                            "LazyFiles on gzip forces download of the whole file when length is accessed",
+                                        )),
+                                    (this._length = n),
+                                    (this._chunkSize = s),
+                                    (this.lengthKnown = !0));
+                            }
+                            get length() {
+                                return (this.lengthKnown || this.cacheLength(), this._length);
+                            }
+                            get chunkSize() {
+                                return (this.lengthKnown || this.cacheLength(), this._chunkSize);
+                            }
+                        })(),
+                    };
+                } else var a = { isDevice: !1, url: t };
+                var s = ey.createFile(e, r, a, n, o);
+                (a.contents ? (s.contents = a.contents) : a.url && ((s.contents = null), (s.url = a.url)),
+                    Object.defineProperties(s, {
+                        usedBytes: {
+                            get: function () {
+                                return this.contents.length;
+                            },
+                        },
+                    }));
+                var i = {};
+                for (let [e, r] of Object.entries(s.stream_ops))
+                    i[e] = function () {
+                        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+                        return (ey.forceLoadFile(s), r(...t));
+                    };
+                function u(e, r, t, n, o) {
+                    var a = e.node.contents;
+                    if (o >= a.length) return 0;
+                    var s = Math.min(a.length - o, n);
+                    if (a.slice) for (var i = 0; i < s; i++) r[t + i] = a[o + i];
+                    else for (var i = 0; i < s; i++) r[t + i] = a.get(o + i);
+                    return s;
+                }
+                return (
+                    (i.read = (e, r, t, n, o) => (ey.forceLoadFile(s), u(e, r, t, n, o))),
+                    (i.mmap = (e, r, t, n, o) => {
+                        ey.forceLoadFile(s);
+                        var a = es(r);
+                        if (!a) throw new ey.ErrnoError(48);
+                        return (u(e, l, a, r, t), { ptr: a, allocated: !0 });
+                    }),
+                    (s.stream_ops = i),
+                    s
+                );
+            },
+        },
+        eE = (e, r, t) => (e ? Q(c, e, r, t) : ""),
+        eb = {
+            currentUmask: 18,
+            calculateAt(e, r) {
+                let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (X.isAbs(r)) return r;
+                if (-100 === e) n = ey.cwd();
+                else {
+                    var n;
+                    n = eb.getStreamFromFD(e).path;
+                }
+                if (0 == r.length) {
+                    if (!t) throw new ey.ErrnoError(44);
+                    return n;
+                }
+                return n + "/" + r;
+            },
+            writeStat(e, r) {
+                ((u[e >> 2] = r.dev),
+                    (u[(e + 4) >> 2] = r.mode),
+                    (u[(e + 8) >> 2] = r.nlink),
+                    (u[(e + 12) >> 2] = r.uid),
+                    (u[(e + 16) >> 2] = r.gid),
+                    (u[(e + 20) >> 2] = r.rdev),
+                    (h[(e + 24) >> 3] = BigInt(r.size)),
+                    (d[(e + 32) >> 2] = 4096),
+                    (d[(e + 36) >> 2] = r.blocks));
+                var t = r.atimeMs ?? r.atime.getTime(),
+                    n = r.mtimeMs ?? r.mtime.getTime(),
+                    o = r.ctimeMs ?? r.ctime.getTime();
+                return (
+                    (h[(e + 40) >> 3] = BigInt(Math.floor(t / 1e3))),
+                    (u[(e + 48) >> 2] = Math.floor((t % 1e3) * 1e6)),
+                    (h[(e + 56) >> 3] = BigInt(Math.floor(n / 1e3))),
+                    (u[(e + 64) >> 2] = Math.floor((n % 1e3) * 1e6)),
+                    (h[(e + 72) >> 3] = BigInt(Math.floor(o / 1e3))),
+                    (u[(e + 80) >> 2] = Math.floor((o % 1e3) * 1e6)),
+                    (h[(e + 88) >> 3] = BigInt(r.ino)),
                     0
                 );
             },
-            L: (r, e) => {
-                var t = eb();
-                h[r >> 2] = t.length;
-                var n = 0;
-                return (t.forEach((r) => (n += r.length + 1)), (h[e >> 2] = n), 0);
+            writeStatFs(e, r) {
+                ((u[(e + 4) >> 2] = r.bsize),
+                    (u[(e + 60) >> 2] = r.bsize),
+                    (h[(e + 8) >> 3] = BigInt(r.blocks)),
+                    (h[(e + 16) >> 3] = BigInt(r.bfree)),
+                    (h[(e + 24) >> 3] = BigInt(r.bavail)),
+                    (h[(e + 32) >> 3] = BigInt(r.files)),
+                    (h[(e + 40) >> 3] = BigInt(r.ffree)),
+                    (u[(e + 48) >> 2] = r.fsid),
+                    (u[(e + 64) >> 2] = r.flags),
+                    (u[(e + 56) >> 2] = r.namelen));
             },
-            p: function (r) {
-                try {
-                    var e = rw.getStreamFromFD(r);
-                    return (ry.close(e), 0);
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return r.errno;
-                }
+            doMsync(e, r, t, n, o) {
+                if (!ey.isFile(r.node.mode)) throw new ey.ErrnoError(43);
+                if (2 & n) return 0;
+                var a = c.subarray(e, e + t);
+                ey.msync(r, a, o, t, n);
             },
-            v: function (r, e, t, n) {
-                try {
-                    var o = rw.getStreamFromFD(r),
-                        a = ((r, e, t, n) => {
-                            for (var o = 0, a = 0; a < t; a++) {
-                                var s = h[e >> 2],
-                                    i = h[(e + 4) >> 2];
-                                e += 8;
-                                var l = ry.read(r, u, s, i, n);
-                                if (l < 0) return -1;
-                                if (((o += l), l < i)) break;
-                                void 0 !== n && (n += l);
-                            }
-                            return o;
-                        })(o, e, t);
-                    return ((h[n >> 2] = a), 0);
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return r.errno;
-                }
-            },
-            J: function (r, e, t, n) {
-                e = ey(e);
-                try {
-                    if (isNaN(e)) return 61;
-                    var o = rw.getStreamFromFD(r);
-                    return (
-                        ry.llseek(o, e, t),
-                        (m[n >> 3] = BigInt(o.position)),
-                        o.getdents && 0 === e && 0 === t && (o.getdents = null),
-                        0
-                    );
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return r.errno;
-                }
-            },
-            w: function (r, e, t, n) {
-                try {
-                    var o = rw.getStreamFromFD(r),
-                        a = ((r, e, t, n) => {
-                            for (var o = 0, a = 0; a < t; a++) {
-                                var s = h[e >> 2],
-                                    i = h[(e + 4) >> 2];
-                                e += 8;
-                                var l = ry.write(r, u, s, i, n);
-                                if (l < 0) return -1;
-                                if (((o += l), l < i)) break;
-                                void 0 !== n && (n += l);
-                            }
-                            return o;
-                        })(o, e, t);
-                    return ((h[n >> 2] = a), 0);
-                } catch (r) {
-                    if (void 0 === ry || "ErrnoError" !== r.name) throw r;
-                    return r.errno;
-                }
-            },
-        };
-        Y();
-        var eP = (r) => (eP = P.aa)(r),
-            eT = (r._malloc = (e) => (eT = r._malloc = P.ca)(e)),
-            eC = (r._free = (e) => (eC = r._free = P.da)(e)),
-            eA = (r, e) => (eA = P.ea)(r, e),
-            eF = (r) => (eF = P.fa)(r),
-            eD = (r) => (eD = P.ga)(r),
-            eS = () => (eS = P.ha)();
-        function ej() {
-            if (!(z > 0)) {
-                if (r.preRun)
-                    for ("function" == typeof r.preRun && (r.preRun = [r.preRun]); r.preRun.length;) {
-                        var t;
-                        ((t = r.preRun.shift()), N.unshift(t));
-                    }
-                (K(N),
-                    z > 0 ||
-                        (r.setStatus
-                            ? (r.setStatus("Running..."),
-                              setTimeout(() => {
-                                  (setTimeout(() => r.setStatus(""), 1), n());
-                              }, 1))
-                            : n()));
+            getStreamFromFD: (e) => ey.getStreamChecked(e),
+            varargs: void 0,
+            getStr: (e) => eE(e),
+        },
+        ek = (e, r, t) => et(e, c, r, t),
+        e$ = (e) => {
+            for (var r = ""; ;) {
+                var t = c[e++];
+                if (!t) return r;
+                r += String.fromCharCode(t);
             }
-            function n() {
-                if (!T && ((T = !0), (r.calledRun = !0), !R)) {
-                    if (
-                        (r.noFSInit || ry.initialized || ry.init(),
-                        (ry.ignorePermissions = !1),
-                        rd.init(),
-                        K(B),
-                        e(r),
-                        r.onRuntimeInitialized?.(),
-                        r.postRun)
-                    )
-                        for ("function" == typeof r.postRun && (r.postRun = [r.postRun]); r.postRun.length;) {
-                            var t;
-                            ((t = r.postRun.shift()), U.unshift(t));
-                        }
-                    K(U);
-                }
-            }
+        },
+        e_ = {},
+        eT = {},
+        eP = {};
+    class eC extends Error {
+        constructor(e) {
+            (super(e), (this.name = "BindingError"));
         }
-        if (
-            ((r.ccall = (e, t, n, o, a) => {
-                var s = {
-                        string: (r) => {
-                            var e,
-                                t,
-                                n,
-                                o = 0;
-                            return (null != r && 0 !== r && ((t = ru((e = r)) + 1), rE(e, (n = eD(t)), t), (o = n)), o);
-                        },
-                        array: (r) => {
-                            let e;
-                            var t = ((e = r.length), eD(e));
-                            return (u.set(r, t), t);
-                        },
-                    },
-                    i = r["_" + e],
-                    l = [],
-                    d = 0;
-                if (o)
-                    for (var c = 0; c < o.length; c++) {
-                        var f = s[n[c]];
-                        f ? (0 === d && (d = Z()), (l[c] = f(o[c]))) : (l[c] = o[c]);
+    }
+    var eS = (e) => {
+        throw new eC(e);
+    };
+    function eD(e, r) {
+        let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return (function (e, r) {
+            let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            var n = r.name;
+            if ((e || eS(`type "${n}" must have a positive integer typeid pointer`), eT.hasOwnProperty(e)))
+                if (t.ignoreDuplicateRegistrations) return;
+                else eS(`Cannot register type '${n}' twice`);
+            if (((eT[e] = r), delete eP[e], e_.hasOwnProperty(e))) {
+                var o = e_[e];
+                (delete e_[e], o.forEach((e) => e()));
+            }
+        })(e, r, t);
+    }
+    var eF = (e, r, t) => {
+            switch (r) {
+                case 1:
+                    return t ? (e) => l[e] : (e) => c[e];
+                case 2:
+                    return t ? (e) => f[e >> 1] : (e) => p[e >> 1];
+                case 4:
+                    return t ? (e) => d[e >> 2] : (e) => u[e >> 2];
+                case 8:
+                    return t ? (e) => h[e >> 3] : (e) => m[e >> 3];
+                default:
+                    throw TypeError(`invalid integer width (${r}): ${e}`);
+            }
+        },
+        eA = (e) => {
+            eS(e.$$.ptrType.registeredClass.name + " instance already deleted");
+        },
+        eM = !1,
+        ex = (e) => {},
+        eO = (e) => {
+            ((e.count.value -= 1),
+                0 === e.count.value &&
+                    (e.smartPtr
+                        ? e.smartPtrType.rawDestructor(e.smartPtr)
+                        : e.ptrType.registeredClass.rawDestructor(e.ptr)));
+        },
+        eR = (e) =>
+            globalThis.FinalizationRegistry
+                ? ((eM = new FinalizationRegistry((e) => {
+                      eO(e.$$);
+                  })),
+                  (eR = (e) => {
+                      var r = e.$$;
+                      return (r.smartPtr && eM.register(e, { $$: r }, e), e);
+                  }),
+                  (ex = (e) => eM.unregister(e)),
+                  eR(e))
+                : ((eR = (e) => e), e),
+        eN = [],
+        eW = () => {
+            for (; eN.length;) {
+                var e = eN.pop();
+                ((e.$$.deleteScheduled = !1), e.delete());
+            }
+        };
+    function ej() {}
+    var ez = (e, r) => Object.defineProperty(r, "name", { value: e }),
+        eB = {},
+        eU = (e, r, t) => {
+            if (void 0 === e[r].overloadTable) {
+                var n = e[r];
+                ((e[r] = function () {
+                    for (var n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
+                    return (
+                        e[r].overloadTable.hasOwnProperty(o.length) ||
+                            eS(
+                                `Function '${t}' called with an invalid number of arguments (${o.length}) - expects one of (${e[r].overloadTable})!`,
+                            ),
+                        e[r].overloadTable[o.length].apply(this, o)
+                    );
+                }),
+                    (e[r].overloadTable = []),
+                    (e[r].overloadTable[n.argCount] = n));
+            }
+        },
+        eI = (e, r, t) => {
+            n.hasOwnProperty(e)
+                ? ((void 0 === t || (void 0 !== n[e].overloadTable && void 0 !== n[e].overloadTable[t])) &&
+                      eS(`Cannot register public name '${e}' twice`),
+                  eU(n, e, e),
+                  n[e].overloadTable.hasOwnProperty(t) &&
+                      eS(`Cannot register multiple overloads of a function with the same number of arguments (${t})!`),
+                  (n[e].overloadTable[t] = r))
+                : ((n[e] = r), (n[e].argCount = t));
+        };
+    function eL(e, r, t, n, o, a, s, i) {
+        ((this.name = e),
+            (this.constructor = r),
+            (this.instancePrototype = t),
+            (this.rawDestructor = n),
+            (this.baseClass = o),
+            (this.getActualType = a),
+            (this.upcast = s),
+            (this.downcast = i),
+            (this.pureVirtualFunctions = []));
+    }
+    var eV = (e, r, t) => {
+            for (; r !== t;)
+                (r.upcast || eS(`Expected null or instance of ${t.name}, got an instance of ${r.name}`),
+                    (e = r.upcast(e)),
+                    (r = r.baseClass));
+            return e;
+        },
+        eH = (e) => {
+            if (null === e) return "null";
+            var r = typeof e;
+            return "object" === r || "array" === r || "function" === r ? e.toString() : "" + e;
+        };
+    function eq(e, r) {
+        if (null === r) return (this.isReference && eS(`null is not a valid ${this.name}`), 0);
+        (r.$$ || eS(`Cannot pass "${eH(r)}" as a ${this.name}`),
+            r.$$.ptr || eS(`Cannot pass deleted object as a pointer of type ${this.name}`));
+        var t = r.$$.ptrType.registeredClass;
+        return eV(r.$$.ptr, t, this.registeredClass);
+    }
+    function eG(e, r) {
+        if (null === r)
+            return (this.isReference && eS(`null is not a valid ${this.name}`), this.isSmartPointer)
+                ? ((t = this.rawConstructor()), null !== e && e.push(this.rawDestructor, t), t)
+                : 0;
+        ((r && r.$$) || eS(`Cannot pass "${eH(r)}" as a ${this.name}`),
+            r.$$.ptr || eS(`Cannot pass deleted object as a pointer of type ${this.name}`),
+            !this.isConst &&
+                r.$$.ptrType.isConst &&
+                eS(
+                    `Cannot convert argument of type ${r.$$.smartPtrType ? r.$$.smartPtrType.name : r.$$.ptrType.name} to parameter type ${this.name}`,
+                ));
+        var t,
+            n = r.$$.ptrType.registeredClass;
+        if (((t = eV(r.$$.ptr, n, this.registeredClass)), this.isSmartPointer))
+            switch (
+                (void 0 === r.$$.smartPtr && eS("Passing raw pointer to smart pointer is illegal"), this.sharingPolicy)
+            ) {
+                case 0:
+                    r.$$.smartPtrType === this
+                        ? (t = r.$$.smartPtr)
+                        : eS(
+                              `Cannot convert argument of type ${r.$$.smartPtrType ? r.$$.smartPtrType.name : r.$$.ptrType.name} to parameter type ${this.name}`,
+                          );
+                    break;
+                case 1:
+                    t = r.$$.smartPtr;
+                    break;
+                case 2:
+                    if (r.$$.smartPtrType === this) t = r.$$.smartPtr;
+                    else {
+                        var o = r.clone();
+                        ((t = this.rawShare(
+                            t,
+                            rl.toHandle(() => o.delete()),
+                        )),
+                            null !== e && e.push(this.rawDestructor, t));
                     }
-                var h = i(...l);
-                return (function (r) {
-                    return (0 !== d && eF(d), "string" === t ? rg(r) : "boolean" === t ? !!r : r);
-                })(h);
+                    break;
+                default:
+                    eS("Unsupported sharing policy");
+            }
+        return t;
+    }
+    function eX(e, r) {
+        if (null === r) return (this.isReference && eS(`null is not a valid ${this.name}`), 0);
+        (r.$$ || eS(`Cannot pass "${eH(r)}" as a ${this.name}`),
+            r.$$.ptr || eS(`Cannot pass deleted object as a pointer of type ${this.name}`),
+            r.$$.ptrType.isConst &&
+                eS(`Cannot convert argument of type ${r.$$.ptrType.name} to parameter type ${this.name}`));
+        var t = r.$$.ptrType.registeredClass;
+        return eV(r.$$.ptr, t, this.registeredClass);
+    }
+    function eK(e) {
+        return this.fromWireType(u[e >> 2]);
+    }
+    var eY = (e, r, t) => {
+            if (r === t) return e;
+            if (void 0 === t.baseClass) return null;
+            var n = eY(e, r, t.baseClass);
+            return null === n ? null : t.downcast(n);
+        },
+        eZ = {};
+    class eJ extends Error {
+        constructor(e) {
+            (super(e), (this.name = "InternalError"));
+        }
+    }
+    var eQ = (e) => {
+            throw new eJ(e);
+        },
+        e0 = (e, r) => (
+            (r.ptrType && r.ptr) || eQ("makeClassHandle requires ptr and ptrType"),
+            !!r.smartPtrType != !!r.smartPtr && eQ("Both smartPtrType and smartPtr must be specified"),
+            (r.count = { value: 1 }),
+            eR(Object.create(e, { $$: { value: r, writable: !0 } }))
+        );
+    function e1(e, r, t, n, o, a, s, i, l, u, d) {
+        ((this.name = e),
+            (this.registeredClass = r),
+            (this.isReference = t),
+            (this.isConst = n),
+            (this.isSmartPointer = o),
+            (this.pointeeType = a),
+            (this.sharingPolicy = s),
+            (this.rawGetPointee = i),
+            (this.rawConstructor = l),
+            (this.rawShare = u),
+            (this.rawDestructor = d),
+            o || void 0 !== r.baseClass
+                ? (this.toWireType = eG)
+                : (n ? (this.toWireType = eq) : (this.toWireType = eX), (this.destructorFunction = null)));
+    }
+    var e2 = (e, r, t) => {
+            (n.hasOwnProperty(e) || eQ("Replacing nonexistent public symbol"),
+                void 0 !== n[e].overloadTable && void 0 !== t
+                    ? (n[e].overloadTable[t] = r)
+                    : ((n[e] = r), (n[e].argCount = t)));
+        },
+        e4 = [],
+        e3 = function (e, r) {
+            (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], (e = e$(e)));
+            var t,
+                n = ((t = e4[r]) || (e4[r] = t = C.get(r)), t);
+            return ("function" != typeof n && eS(`unknown function pointer with signature ${e}: ${r}`), n);
+        };
+    class e6 extends Error {}
+    var e5 = (e) => {
+            var r = y(e),
+                t = e$(r);
+            return (b(r), t);
+        },
+        e8 = (e, r) => {
+            var t = [],
+                n = {};
+            throw (
+                r.forEach(function e(r) {
+                    if (!n[r] && !eT[r]) {
+                        if (eP[r]) return void eP[r].forEach(e);
+                        (t.push(r), (n[r] = !0));
+                    }
+                }),
+                new e6(`${e}: ` + t.map(e5).join([", "]))
+            );
+        },
+        e9 = (e, r, t) => {
+            function n(r) {
+                var n = t(r);
+                n.length !== e.length && eQ("Mismatched type converter count");
+                for (var o = 0; o < e.length; ++o) eD(e[o], n[o]);
+            }
+            e.forEach((e) => (eP[e] = r));
+            var o = Array(r.length),
+                a = [],
+                s = 0;
+            for (let [e, t] of r.entries())
+                eT.hasOwnProperty(t)
+                    ? (o[e] = eT[t])
+                    : (a.push(t),
+                      e_.hasOwnProperty(t) || (e_[t] = []),
+                      e_[t].push(() => {
+                          ((o[e] = eT[t]), ++s === a.length && n(o));
+                      }));
+            0 === a.length && n(o);
+        },
+        e7 = (e, r) => {
+            for (var t = [], n = 0; n < e; n++) t.push(u[(r + 4 * n) >> 2]);
+            return t;
+        },
+        re = (e) => {
+            for (; e.length;) {
+                var r = e.pop();
+                e.pop()(r);
+            }
+        };
+    function rr(e) {
+        for (var r = 1; r < e.length; ++r) if (null !== e[r] && void 0 === e[r].destructorFunction) return !0;
+        return !1;
+    }
+    function rt(e) {
+        for (var r = 1; r < e.length; ++r) if (null !== e[r] && e[r].argStackAlloc) return !0;
+        return !1;
+    }
+    function rn(e, r, t, n, o, a) {
+        var s = r.length;
+        s < 2 && eS("argTypes array size mismatch! Must at least get return value and receiver (this) types!");
+        var i = null !== r[1] && null !== t,
+            l = rr(r),
+            u = rt(r),
+            d = u && !a && !l;
+        u && !d && (l = !0);
+        var c = !r[0].isVoid,
+            h = r[0],
+            f = r[1],
+            p = [e, eS, n, o, re, h.fromWireType.bind(h), f?.toWireType.bind(f)];
+        d && p.push(V, L);
+        for (var m = 2; m < s; ++m) {
+            var v = r[m];
+            p.push(v.toWireType.bind(v));
+        }
+        if (!l)
+            for (var m = i ? 1 : 2; m < r.length; ++m)
+                null !== r[m].destructorFunction && p.push(r[m].destructorFunction);
+        return ez(
+            e,
+            (function (e, r, t, n) {
+                var o = rr(e),
+                    a = rt(e),
+                    s = a && !n && !o;
+                a && !s && (o = !0);
+                var i = e.length - 2,
+                    l = [],
+                    u = ["fn"];
+                r && u.push("thisWired");
+                for (var d = 0; d < i; ++d) (l.push(`arg${d}`), u.push(`arg${d}Wired`));
+                ((l = l.join()), (u = u.join()));
+                var c = `return function (${l}) {
+`;
+                (o && (c += "var destructors = [];\n"), s && (c += "var sp = stackSave();\ntry {\n"));
+                var h = o ? "destructors" : "null",
+                    f = [
+                        "humanName",
+                        "throwBindingError",
+                        "invoker",
+                        "fn",
+                        "runDestructors",
+                        "fromRetWire",
+                        "toClassParamWire",
+                    ];
+                (s && f.push("stackSave", "stackRestore"),
+                    r &&
+                        (c += `var thisWired = toClassParamWire(${h}, this);
+`));
+                for (var d = 0; d < i; ++d) {
+                    var p = `toArg${d}Wire`;
+                    ((c += `var arg${d}Wired = ${p}(${h}, arg${d});
+`),
+                        f.push(p));
+                }
+                if (
+                    ((c +=
+                        (t || n ? "var rv = " : "") +
+                        `invoker(${u});
+`),
+                    s && (c += "} finally {\nstackRestore(sp);\n}\n"),
+                    o)
+                )
+                    c += "runDestructors(destructors);\n";
+                else
+                    for (var d = r ? 1 : 2; d < e.length; ++d) {
+                        var m = 1 === d ? "thisWired" : `arg${d - 2}Wired`;
+                        null !== e[d].destructorFunction &&
+                            ((c += `${m}_dtor(${m});
+`),
+                            f.push(`${m}_dtor`));
+                    }
+                return (t && (c += "var ret = fromRetWire(rv);\nreturn ret;\n"), Function(f, (c += "}\n")));
+            })(
+                r,
+                i,
+                c,
+                a,
+            )(...p),
+        );
+    }
+    var ro = (e) => {
+            let r = (e = e.trim()).indexOf("(");
+            return -1 === r ? e : e.slice(0, r);
+        },
+        ra = [],
+        rs = [0, 1, , 1, null, 1, !0, 1, !1, 1],
+        ri = (e) => {
+            e > 9 && 0 == --rs[e + 1] && (rs[e], (rs[e] = void 0), ra.push(e));
+        },
+        rl = {
+            toValue: (e) => (e || eS(`Cannot use deleted val. handle = ${e}`), rs[e]),
+            toHandle: (e) => {
+                switch (e) {
+                    case void 0:
+                        return 2;
+                    case null:
+                        return 4;
+                    case !0:
+                        return 6;
+                    case !1:
+                        return 8;
+                    default: {
+                        let r = ra.pop() || rs.length;
+                        return ((rs[r] = e), (rs[r + 1] = 1), r);
+                    }
+                }
+            },
+        },
+        ru = {
+            name: "emscripten::val",
+            fromWireType: (e) => {
+                var r = rl.toValue(e);
+                return (ri(e), r);
+            },
+            toWireType: (e, r) => rl.toHandle(r),
+            readValueFromPointer: eK,
+            destructorFunction: null,
+        },
+        rd = (e, r, t) => {
+            switch (r) {
+                case 1:
+                    return t
+                        ? function (e) {
+                              return this.fromWireType(l[e]);
+                          }
+                        : function (e) {
+                              return this.fromWireType(c[e]);
+                          };
+                case 2:
+                    return t
+                        ? function (e) {
+                              return this.fromWireType(f[e >> 1]);
+                          }
+                        : function (e) {
+                              return this.fromWireType(p[e >> 1]);
+                          };
+                case 4:
+                    return t
+                        ? function (e) {
+                              return this.fromWireType(d[e >> 2]);
+                          }
+                        : function (e) {
+                              return this.fromWireType(u[e >> 2]);
+                          };
+                default:
+                    throw TypeError(`invalid integer width (${r}): ${e}`);
+            }
+        },
+        rc = (e, r) => {
+            var t = eT[e];
+            return (void 0 === t && eS(`${r} has unknown type ${e5(e)}`), t);
+        },
+        rh = globalThis.TextDecoder ? new TextDecoder("utf-16le") : void 0,
+        rf = (e, r, t) => {
+            var n = e >> 1,
+                o = J(p, n, r / 2, t);
+            if (o - n > 16 && rh) return rh.decode(p.subarray(n, o));
+            for (var a = "", s = n; s < o; ++s) a += String.fromCharCode(p[s]);
+            return a;
+        },
+        rp = function (e, r) {
+            let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0x7fffffff;
+            if (t < 2) return 0;
+            for (var n = r, o = (t -= 2) < 2 * e.length ? t / 2 : e.length, a = 0; a < o; ++a) {
+                var s = e.charCodeAt(a);
+                ((f[r >> 1] = s), (r += 2));
+            }
+            return ((f[r >> 1] = 0), r - n);
+        },
+        rm = (e) => 2 * e.length,
+        rv = (e, r, t) => {
+            for (var n = "", o = e >> 2, a = 0; !(a >= r / 4); a++) {
+                var s = u[o + a];
+                if (!s && !t) break;
+                n += String.fromCodePoint(s);
+            }
+            return n;
+        },
+        rg = function (e, r) {
+            let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0x7fffffff;
+            if (t < 4) return 0;
+            for (var n = r, o = n + t - 4, a = 0; a < e.length; ++a) {
+                var s = e.codePointAt(a);
+                if ((s > 65535 && a++, (d[r >> 2] = s), (r += 4) + 4 > o)) break;
+            }
+            return ((d[r >> 2] = 0), r - n);
+        },
+        rw = (e) => {
+            for (var r = 0, t = 0; t < e.length; ++t) (e.codePointAt(t) > 65535 && t++, (r += 4));
+            return r;
+        },
+        ry = [],
+        rE = (e, r, t) => {
+            var n = [],
+                o = e(n, t);
+            return (n.length && (u[r >> 2] = rl.toHandle(n)), o);
+        },
+        rb = {},
+        rk = (e) => {
+            var r = rb[e];
+            return void 0 === r ? e$(e) : r;
+        },
+        r$ = (e) => (e < -0x20000000000000 || e > 0x20000000000000 ? NaN : Number(e)),
+        r_ = () => Date.now(),
+        rT = (e) => {
+            var r = P.buffer.byteLength;
+            try {
+                return (P.grow(((e - r + 65535) / 65536) | 0), O(), 1);
+            } catch (e) {}
+        },
+        rP = {},
+        rC = () => {
+            if (!rC.strings) {
+                var e = {
+                    USER: "web_user",
+                    LOGNAME: "web_user",
+                    PATH: "/",
+                    PWD: "/",
+                    HOME: "/home/web_user",
+                    LANG: (globalThis.navigator?.language ?? "C").replace("-", "_") + ".UTF-8",
+                    _: D,
+                };
+                for (var r in rP) void 0 === rP[r] ? delete e[r] : (e[r] = rP[r]);
+                var t = [];
+                for (var r in e) t.push(`${r}=${e[r]}`);
+                rC.strings = t;
+            }
+            return rC.strings;
+        };
+    ((ey.createPreloadedFile = (e, r, t, n, o, a, s, i, l, u) => {
+        ew(e, r, t, n, o, i, l, u).then(a).catch(s);
+    }),
+        (ey.preloadFile = ew),
+        ey.staticInit(),
+        Object.assign((e = ej.prototype), {
+            isAliasOf(e) {
+                if (!(this instanceof ej) || !(e instanceof ej)) return !1;
+                var r = this.$$.ptrType.registeredClass,
+                    t = this.$$.ptr;
+                e.$$ = e.$$;
+                for (var n = e.$$.ptrType.registeredClass, o = e.$$.ptr; r.baseClass;)
+                    ((t = r.upcast(t)), (r = r.baseClass));
+                for (; n.baseClass;) ((o = n.upcast(o)), (n = n.baseClass));
+                return r === n && t === o;
+            },
+            clone() {
+                if ((this.$$.ptr || eA(this), this.$$.preservePointerOnDelete))
+                    return ((this.$$.count.value += 1), this);
+                {
+                    let r;
+                    var e = eR(
+                        Object.create(Object.getPrototypeOf(this), {
+                            $$: {
+                                value: {
+                                    count: (r = this.$$).count,
+                                    deleteScheduled: r.deleteScheduled,
+                                    preservePointerOnDelete: r.preservePointerOnDelete,
+                                    ptr: r.ptr,
+                                    ptrType: r.ptrType,
+                                    smartPtr: r.smartPtr,
+                                    smartPtrType: r.smartPtrType,
+                                },
+                            },
+                        }),
+                    );
+                    return ((e.$$.count.value += 1), (e.$$.deleteScheduled = !1), e);
+                }
+            },
+            delete() {
+                (this.$$.ptr || eA(this),
+                    this.$$.deleteScheduled &&
+                        !this.$$.preservePointerOnDelete &&
+                        eS("Object already scheduled for deletion"),
+                    ex(this),
+                    eO(this.$$),
+                    this.$$.preservePointerOnDelete || ((this.$$.smartPtr = void 0), (this.$$.ptr = void 0)));
+            },
+            isDeleted() {
+                return !this.$$.ptr;
+            },
+            deleteLater() {
+                return (
+                    this.$$.ptr || eA(this),
+                    this.$$.deleteScheduled &&
+                        !this.$$.preservePointerOnDelete &&
+                        eS("Object already scheduled for deletion"),
+                    eN.push(this),
+                    1 === eN.length && v && v(eW),
+                    (this.$$.deleteScheduled = !0),
+                    this
+                );
+            },
+        }),
+        (r = Symbol.dispose) && (e[r] = e.delete),
+        Object.assign(e1.prototype, {
+            getPointee(e) {
+                return (this.rawGetPointee && (e = this.rawGetPointee(e)), e);
+            },
+            destructor(e) {
+                this.rawDestructor?.(e);
+            },
+            readValueFromPointer: eK,
+            fromWireType: function (e) {
+                var r,
+                    t = this.getPointee(e);
+                if (!t) return (this.destructor(e), null);
+                var n =
+                    eZ[
+                        ((e, r) => {
+                            for (void 0 === r && eS("ptr should not be undefined"); e.baseClass;)
+                                ((r = e.upcast(r)), (e = e.baseClass));
+                            return r;
+                        })(this.registeredClass, t)
+                    ];
+                if (void 0 !== n)
+                    if (0 === n.$$.count.value) return ((n.$$.ptr = t), (n.$$.smartPtr = e), n.clone());
+                    else {
+                        var o = n.clone();
+                        return (this.destructor(e), o);
+                    }
+                function a() {
+                    return this.isSmartPointer
+                        ? e0(this.registeredClass.instancePrototype, {
+                              ptrType: this.pointeeType,
+                              ptr: t,
+                              smartPtrType: this,
+                              smartPtr: e,
+                          })
+                        : e0(this.registeredClass.instancePrototype, { ptrType: this, ptr: e });
+                }
+                var s = eB[this.registeredClass.getActualType(t)];
+                if (!s) return a.call(this);
+                r = this.isConst ? s.constPointerType : s.pointerType;
+                var i = eY(t, this.registeredClass, r.registeredClass);
+                return null === i
+                    ? a.call(this)
+                    : this.isSmartPointer
+                      ? e0(r.registeredClass.instancePrototype, { ptrType: r, ptr: i, smartPtrType: this, smartPtr: e })
+                      : e0(r.registeredClass.instancePrototype, { ptrType: r, ptr: i });
+            },
+        }),
+        n.noExitRuntime && n.noExitRuntime,
+        n.print && (A = n.print),
+        n.printErr && (M = n.printErr),
+        n.arguments && n.arguments,
+        n.thisProgram && (D = n.thisProgram));
+    var rS = n.preInit;
+    if (rS) for ("function" == typeof rS && (n.preInit = rS = [rS]); rS.length > 0;) rS.shift()();
+    n.ccall = (e, r, t, o, a) => {
+        var s,
+            i = {
+                string: (e) => {
+                    var r,
+                        t,
+                        n,
+                        o = 0;
+                    return (null != e && 0 !== e && ((t = er((r = e)) + 1), ek(r, (n = _(t)), t), (o = n)), o);
+                },
+                array: (e) => {
+                    let r;
+                    var t = ((r = e.length), _(r));
+                    return (l.set(e, t), t);
+                },
+            },
+            u = n["_" + e],
+            d = [],
+            c = 0;
+        if (o)
+            for (var h = 0; h < o.length; h++) {
+                var f = i[t[h]];
+                f ? (c || (c = V()), (d[h] = f(o[h]))) : (d[h] = o[h]);
+            }
+        var p = u(...d);
+        return ((s = p), c && L(c), (p = "string" === r ? eE(s) : "boolean" === r ? !!s : s));
+    };
+    var rD = {
+        a: (e, r, t) => {
+            (new H(e).init(r, t), q++, R());
+        },
+        y: function (e, r, t) {
+            eb.varargs = t;
+            try {
+                var n = eb.getStreamFromFD(e);
+                switch (r) {
+                    case 0:
+                        var o = G();
+                        if (o < 0) break;
+                        for (; ey.streams[o];) o++;
+                        return ey.dupStream(n, o).fd;
+                    case 1:
+                    case 2:
+                    case 13:
+                    case 14:
+                        return 0;
+                    case 3:
+                        return n.flags;
+                    case 4:
+                        var o = G();
+                        return ((n.flags = (-289793 & n.flags) | (289792 & o)), 0);
+                    case 12:
+                        var o = G();
+                        return ((f[(o + 0) >> 1] = 2), 0);
+                }
+                return -28;
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        S: function (e, r) {
+            try {
+                return eb.writeStat(r, ey.fstat(e));
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        F: function (e, r, t) {
+            try {
+                var n = eb.getStreamFromFD(e);
+                n.getdents ||= ey.readdir(n.path);
+                for (
+                    var o = 0,
+                        a = ey.llseek(n, 0, 1),
+                        s = Math.floor(a / 280),
+                        i = Math.min(n.getdents.length, s + Math.floor(t / 280)),
+                        u = s;
+                    u < i;
+                    u++
+                ) {
+                    var d,
+                        c,
+                        p,
+                        m = n.getdents[u];
+                    if ("." === m) ((d = n.node.id), (c = 4));
+                    else if (".." === m) ((d = ey.lookupPath(n.path, { parent: !0 }).node.id), (c = 4));
+                    else {
+                        try {
+                            p = ey.lookupNode(n.node, m);
+                        } catch (e) {
+                            if (e?.errno === 28) continue;
+                            throw e;
+                        }
+                        ((d = p.id), (c = ey.isChrdev(p.mode) ? 2 : ey.isDir(p.mode) ? 4 : ey.isLink(p.mode) ? 10 : 8));
+                    }
+                    ((h[(r + o) >> 3] = BigInt(d)),
+                        (h[(r + o + 8) >> 3] = BigInt((u + 1) * 280)),
+                        (f[(r + o + 16) >> 1] = 280),
+                        (l[r + o + 18] = c),
+                        ek(m, r + o + 19, 256),
+                        (o += 280));
+                }
+                return (ey.llseek(n, 280 * u, 0), o);
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        O: () => 0,
+        L: () => 0,
+        K: () => 0,
+        J: () => 0,
+        s: function (e, r, t) {
+            eb.varargs = t;
+            try {
+                var n = eb.getStreamFromFD(e);
+                switch (r) {
+                    case 21509:
+                    case 21510:
+                    case 21511:
+                    case 21512:
+                    case 21524:
+                    case 21515:
+                        if (!n.tty) return -59;
+                        return 0;
+                    case 21505:
+                        if (!n.tty) return -59;
+                        if (n.tty.ops.ioctl_tcgets) {
+                            var o = n.tty.ops.ioctl_tcgets(n),
+                                a = G();
+                            ((d[a >> 2] = o.c_iflag || 0),
+                                (d[(a + 4) >> 2] = o.c_oflag || 0),
+                                (d[(a + 8) >> 2] = o.c_cflag || 0),
+                                (d[(a + 12) >> 2] = o.c_lflag || 0));
+                            for (var s = 0; s < 32; s++) l[a + s + 17] = o.c_cc[s] || 0;
+                        }
+                        return 0;
+                    case 21506:
+                    case 21507:
+                    case 21508:
+                        if (!n.tty) return -59;
+                        if (n.tty.ops.ioctl_tcsets) {
+                            for (
+                                var a = G(),
+                                    i = d[a >> 2],
+                                    u = d[(a + 4) >> 2],
+                                    c = d[(a + 8) >> 2],
+                                    h = d[(a + 12) >> 2],
+                                    p = [],
+                                    s = 0;
+                                s < 32;
+                                s++
+                            )
+                                p.push(l[a + s + 17]);
+                            return n.tty.ops.ioctl_tcsets(n.tty, r, {
+                                c_iflag: i,
+                                c_oflag: u,
+                                c_cflag: c,
+                                c_lflag: h,
+                                c_cc: p,
+                            });
+                        }
+                        return 0;
+                    case 21519:
+                        if (!n.tty) return -59;
+                        var a = G();
+                        return ((d[a >> 2] = 0), 0);
+                    case 21520:
+                        if (!n.tty) return -59;
+                        return -28;
+                    case 21537:
+                    case 21531:
+                        var a = G();
+                        return ey.ioctl(n, r, a);
+                    case 21523:
+                        if (!n.tty) return -59;
+                        if (n.tty.ops.ioctl_tiocgwinsz) {
+                            var m = n.tty.ops.ioctl_tiocgwinsz(n.tty),
+                                a = G();
+                            ((f[a >> 1] = m[0]), (f[(a + 2) >> 1] = m[1]));
+                        }
+                        return 0;
+                    default:
+                        return -28;
+                }
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        P: function (e, r) {
+            try {
+                return ((e = eb.getStr(e)), eb.writeStat(r, ey.lstat(e)));
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        Q: function (e, r, t, n) {
+            try {
+                r = eb.getStr(r);
+                var o = 256 & n,
+                    a = 4096 & n;
+                return ((n &= -6401), (r = eb.calculateAt(e, r, a)), eb.writeStat(t, o ? ey.lstat(r) : ey.stat(r)));
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        z: function (e, r, t, n) {
+            eb.varargs = n;
+            try {
+                ((r = eb.getStr(r)), (r = eb.calculateAt(e, r)));
+                var o = n ? G() : 0;
+                return (64 & t && (o &= ~eb.currentUmask), ey.open(r, t, o).fd);
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        R: function (e, r) {
+            try {
+                return ((e = eb.getStr(e)), eb.writeStat(r, ey.stat(e)));
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        U: () => R(""),
+        C: (e, r, t, n, o) => {
+            r = e$(r);
+            let a = 0n === n,
+                s = (e) => e;
+            if (a) {
+                let e = 8 * t;
+                o = (s = (r) => BigInt.asUintN(e, r))(o);
+            }
+            eD(e, {
+                name: r,
+                fromWireType: s,
+                toWireType: (e, r) => ("number" == typeof r && (r = BigInt(r)), r),
+                readValueFromPointer: eF(r, t, !a),
+                destructorFunction: null,
+            });
+        },
+        Y: (e, r, t, n) => {
+            eD(e, {
+                name: (r = e$(r)),
+                fromWireType: function (e) {
+                    return !!e;
+                },
+                toWireType: function (e, r) {
+                    return r ? t : n;
+                },
+                readValueFromPointer: function (e) {
+                    return this.fromWireType(c[e]);
+                },
+                destructorFunction: null,
+            });
+        },
+        o: (e, r, t, n, o, a, s, i, l, u, d, c, h) => {
+            ((d = e$(d)), (a = e3(o, a)), (i &&= e3(s, i)), (u &&= e3(l, u)), (h = e3(c, h)));
+            var f,
+                p,
+                m = (p = (f = (f = d).replace(/[^a-zA-Z0-9_]/g, "$")).charCodeAt(0)) >= 48 && p <= 57 ? `_${f}` : f;
+            (eI(m, function () {
+                e8(`Cannot construct ${d} due to unbound types`, [n]);
             }),
-            (I = function r() {
-                (T || ej(), T || (I = r));
-            }),
-            r.preInit)
-        )
-            for ("function" == typeof r.preInit && (r.preInit = [r.preInit]); r.preInit.length > 0;) r.preInit.pop()();
-        return (ej(), F);
-    });
+                e9([e, r, t], n ? [n] : [], (r) => {
+                    r = r[0];
+                    var t,
+                        o = n ? (t = r.registeredClass).instancePrototype : ej.prototype,
+                        s = ez(d, function () {
+                            for (var e = arguments.length, r = Array(e), t = 0; t < e; t++) r[t] = arguments[t];
+                            if (Object.getPrototypeOf(this) !== l) throw new eC(`Use 'new' to construct ${d}`);
+                            if (void 0 === c.constructor_body) throw new eC(`${d} has no accessible constructor`);
+                            var n = c.constructor_body[r.length];
+                            if (void 0 === n)
+                                throw new eC(
+                                    `Tried to invoke ctor of ${d} with invalid number of parameters (${r.length}) - expected (${Object.keys(c.constructor_body).toString()}) parameters instead!`,
+                                );
+                            return n.apply(this, r);
+                        }),
+                        l = Object.create(o, { constructor: { value: s } });
+                    s.prototype = l;
+                    var c = new eL(d, s, l, h, t, a, i, u);
+                    c.baseClass && ((c.baseClass.__derivedClasses ??= []), c.baseClass.__derivedClasses.push(c));
+                    var f = new e1(d, c, !0, !1, !1),
+                        p = new e1(d + "*", c, !1, !1, !1),
+                        v = new e1(d + " const*", c, !1, !0, !1);
+                    return ((eB[e] = { pointerType: p, constPointerType: v }), e2(m, s), [f, p, v]);
+                }));
+        },
+        r: (e, r, t, n, o, a) => {
+            var s = e7(r, t);
+            ((o = e3(n, o)),
+                e9([], [e], (e) => {
+                    e = e[0];
+                    var t = `constructor ${e.name}`;
+                    if (
+                        (void 0 === e.registeredClass.constructor_body && (e.registeredClass.constructor_body = []),
+                        void 0 !== e.registeredClass.constructor_body[r - 1])
+                    )
+                        throw new eC(
+                            `Cannot register multiple constructors with identical number of parameters (${r - 1}) for class '${e.name}'! Overload resolution is currently only performed using the parameter count, not actual type info!`,
+                        );
+                    return (
+                        (e.registeredClass.constructor_body[r - 1] = () => {
+                            e8(`Cannot construct ${e.name} due to unbound types`, s);
+                        }),
+                        e9(
+                            [],
+                            s,
+                            (n) => (
+                                n.splice(1, 0, null),
+                                (e.registeredClass.constructor_body[r - 1] = rn(t, n, null, o, a)),
+                                []
+                            ),
+                        ),
+                        []
+                    );
+                }));
+        },
+        c: (e, r, t, n, o, a, s, i, l, u) => {
+            var d = e7(t, n);
+            ((r = ro((r = e$(r)))),
+                (a = e3(o, a, l)),
+                e9([], [e], (e) => {
+                    e = e[0];
+                    var n = `${e.name}.${r}`;
+                    function o() {
+                        e8(`Cannot call ${n} due to unbound types`, d);
+                    }
+                    (r.startsWith("@@") && (r = Symbol[r.substring(2)]),
+                        i && e.registeredClass.pureVirtualFunctions.push(r));
+                    var u = e.registeredClass.instancePrototype,
+                        c = u[r];
+                    return (
+                        void 0 === c || (void 0 === c.overloadTable && c.className !== e.name && c.argCount === t - 2)
+                            ? ((o.argCount = t - 2), (o.className = e.name), (u[r] = o))
+                            : (eU(u, r, n), (u[r].overloadTable[t - 2] = o)),
+                        e9([], d, (o) => {
+                            var i = rn(n, o, e, a, s, l);
+                            return (
+                                void 0 === u[r].overloadTable
+                                    ? ((i.argCount = t - 2), (u[r] = i))
+                                    : (u[r].overloadTable[t - 2] = i),
+                                []
+                            );
+                        }),
+                        []
+                    );
+                }));
+        },
+        D: (e, r, t) => {
+            ((e = e$(e)), e9([], [r], (r) => ((r = r[0]), (n[e] = r.fromWireType(t)), [])));
+        },
+        W: (e) => eD(e, ru),
+        v: (e, r, t, o, a) => {
+            r = e$(r);
+            let s = a ? (1 === a ? "number" : "string") : "object";
+            switch (s) {
+                case "object":
+                    function i() {}
+                    ((i.values = {}),
+                        eD(e, {
+                            name: r,
+                            constructor: i,
+                            valueType: s,
+                            fromWireType: function (e) {
+                                return this.constructor.values[e];
+                            },
+                            toWireType: (e, r) => r.value,
+                            readValueFromPointer: rd(r, t, o),
+                            destructorFunction: null,
+                        }),
+                        eI(r, i));
+                    break;
+                case "number":
+                    var l = {};
+                    (eD(e, {
+                        name: r,
+                        keysMap: l,
+                        valueType: s,
+                        fromWireType: (e) => e,
+                        toWireType: (e, r) => r,
+                        readValueFromPointer: rd(r, t, o),
+                        destructorFunction: null,
+                    }),
+                        eI(r, l),
+                        delete n[r].argCount);
+                    break;
+                case "string":
+                    var l = {};
+                    (eD(e, {
+                        name: r,
+                        valuesMap: {},
+                        reverseMap: {},
+                        keysMap: l,
+                        valueType: s,
+                        fromWireType: function (e) {
+                            return this.reverseMap[e];
+                        },
+                        toWireType: function (e, r) {
+                            return this.valuesMap[r];
+                        },
+                        readValueFromPointer: rd(r, t, o),
+                        destructorFunction: null,
+                    }),
+                        eI(r, l),
+                        delete n[r].argCount);
+            }
+        },
+        h: (e, r, t) => {
+            var n = rc(e, "enum");
+            switch (((r = e$(r)), n.valueType)) {
+                case "object":
+                    var o = n.constructor,
+                        a = Object.create(n.constructor.prototype, {
+                            value: { value: t },
+                            constructor: { value: ez(`${n.name}_${r}`, function () {}) },
+                        });
+                    ((o.values[t] = a), (o[r] = a));
+                    break;
+                case "number":
+                    n.keysMap[r] = t;
+                    break;
+                case "string":
+                    ((n.valuesMap[r] = t), (n.reverseMap[t] = r), (n.keysMap[r] = r));
+            }
+        },
+        B: (e, r, t) => {
+            eD(e, {
+                name: (r = e$(r)),
+                fromWireType: (e) => e,
+                toWireType: (e, r) => r,
+                readValueFromPointer: ((e, r) => {
+                    switch (r) {
+                        case 4:
+                            return function (e) {
+                                return this.fromWireType(g[e >> 2]);
+                            };
+                        case 8:
+                            return function (e) {
+                                return this.fromWireType(w[e >> 3]);
+                            };
+                        default:
+                            throw TypeError(`invalid float width (${r}): ${e}`);
+                    }
+                })(r, t),
+                destructorFunction: null,
+            });
+        },
+        u: (e, r, t, n, o, a, s, i) => {
+            var l = e7(r, t);
+            ((e = ro((e = e$(e)))),
+                (o = e3(n, o, s)),
+                eI(
+                    e,
+                    function () {
+                        e8(`Cannot call ${e} due to unbound types`, l);
+                    },
+                    r - 1,
+                ),
+                e9([], l, (t) => {
+                    var n = [t[0], null].concat(t.slice(1));
+                    return (e2(e, rn(e, n, null, o, a, s), r - 1), []);
+                }));
+        },
+        j: (e, r, t, n, o) => {
+            r = e$(r);
+            let a = (e) => e;
+            if (0 === n) {
+                var s = 32 - 8 * t;
+                o = (a = (e) => (e << s) >>> s)(o);
+            }
+            eD(e, {
+                name: r,
+                fromWireType: a,
+                toWireType: (e, r) => r,
+                readValueFromPointer: eF(r, t, 0 !== n),
+                destructorFunction: null,
+            });
+        },
+        d: (e, r, t) => {
+            var n = [
+                Int8Array,
+                Uint8Array,
+                Int16Array,
+                Uint16Array,
+                Int32Array,
+                Uint32Array,
+                Float32Array,
+                Float64Array,
+                BigInt64Array,
+                BigUint64Array,
+            ][r];
+            function o(e) {
+                var r = u[e >> 2],
+                    t = u[(e + 4) >> 2];
+                return new n(l.buffer, t, r);
+            }
+            eD(
+                e,
+                { name: (t = e$(t)), fromWireType: o, readValueFromPointer: o },
+                { ignoreDuplicateRegistrations: !0 },
+            );
+        },
+        ba: (e, r, t, n, o, a, s, i, l, u, d, c) => {
+            ((t = e$(t)),
+                (a = e3(o, a)),
+                (i = e3(s, i)),
+                (u = e3(l, u)),
+                (c = e3(d, c)),
+                e9([e], [r], (e) => ((e = e[0]), [new e1(t, e.registeredClass, !1, !1, !0, e, n, a, i, u, c)])));
+        },
+        X: (e, r) => {
+            eD(e, {
+                name: (r = e$(r)),
+                fromWireType(e) {
+                    var r,
+                        t = u[e >> 2];
+                    return ((r = eE(e + 4, t, !0)), b(e), r);
+                },
+                toWireType(e, r) {
+                    r instanceof ArrayBuffer && (r = new Uint8Array(r));
+                    var t,
+                        n = "string" == typeof r;
+                    (n ||
+                        (ArrayBuffer.isView(r) && 1 == r.BYTES_PER_ELEMENT) ||
+                        eS("Cannot pass non-string to std::string"),
+                        (t = n ? er(r) : r.length));
+                    var o = E(4 + t + 1),
+                        a = o + 4;
+                    if (((u[o >> 2] = t), n))
+                        if (0)
+                            for (var s = 0; s < t; ++s) {
+                                var i = r.charCodeAt(s);
+                                (i > 255 && (b(o), eS("String has UTF-16 code units that do not fit in 8 bits")),
+                                    (c[a + s] = i));
+                            }
+                        else ek(r, a, t + 1);
+                    else c.set(r, a);
+                    return (null !== e && e.push(b, o), o);
+                },
+                readValueFromPointer: eK,
+                destructorFunction(e) {
+                    b(e);
+                },
+            });
+        },
+        t: (e, r, t) => {
+            var n, o, a;
+            ((t = e$(t)),
+                2 === r ? ((n = rf), (o = rp), (a = rm)) : ((n = rv), (o = rg), (a = rw)),
+                eD(e, {
+                    name: t,
+                    fromWireType: (e) => {
+                        var t = u[e >> 2],
+                            o = n(e + 4, t * r, !0);
+                        return (b(e), o);
+                    },
+                    toWireType: (e, n) => {
+                        "string" != typeof n && eS(`Cannot pass non-string to C++ string type ${t}`);
+                        var s = a(n),
+                            i = E(4 + s + r);
+                        return ((u[i >> 2] = s / r), o(n, i + 4, s + r), null !== e && e.push(b, i), i);
+                    },
+                    readValueFromPointer: eK,
+                    destructorFunction(e) {
+                        b(e);
+                    },
+                }));
+        },
+        Z: (e, r) => {
+            eD(e, { isVoid: !0, name: (r = e$(r)), fromWireType: () => void 0, toWireType: (e, r) => void 0 });
+        },
+        ca: (e, r) => {
+            ((e = rl.toValue(e)), (r = rl.toValue(r)), e.set(r));
+        },
+        g: (e, r, t) => {
+            var n,
+                o,
+                a,
+                [s, ...i] = ((e, r) => {
+                    for (var t = Array(e), n = 0; n < e; ++n) t[n] = rc(u[(r + 4 * n) >> 2], `parameter ${n}`);
+                    return t;
+                })(e, r),
+                l = s.toWireType.bind(s),
+                d = i.map((e) => e.readValueFromPointer.bind(e));
+            e--;
+            var c = { toValue: rl.toValue },
+                h = d.map((e, r) => {
+                    var t = `argFromPtr${r}`;
+                    return ((c[t] = e), `${t}(args${r ? "+" + 8 * r : ""})`);
+                });
+            switch (t) {
+                case 0:
+                    n = "toValue(handle)";
+                    break;
+                case 2:
+                    n = "new (toValue(handle))";
+                    break;
+                case 3:
+                    n = "";
+                    break;
+                case 1:
+                    ((c.getStringOrSymbol = rk), (n = "toValue(handle)[getStringOrSymbol(methodName)]"));
+            }
+            ((n += `(${h})`),
+                s.isVoid ||
+                    ((c.toReturnWire = l),
+                    (c.emval_returnValue = rE),
+                    (n = `return emval_returnValue(toReturnWire, destructorsRef, ${n})`)),
+                (n = `return function (handle, methodName, destructorsRef, args) {
+${n}
+}`));
+            var f = Function(Object.keys(c), n)(...Object.values(c));
+            return (
+                (o = ez(`methodCaller<(${i.map((e) => e.name)}) => ${s.name}>`, f)), (a = ry.length), ry.push(o), a
+            );
+        },
+        b: ri,
+        m: (e, r) => ((e = rl.toValue(e)), (r = rl.toValue(r)), rl.toHandle(e[r])),
+        i: (e) => {
+            e > 9 && (rs[e + 1] += 1);
+        },
+        f: (e, r, t, n, o) => ry[e](r, t, n, o),
+        l: () => rl.toHandle([]),
+        k: (e) => rl.toHandle(rk(e)),
+        p: () => rl.toHandle({}),
+        e: (e) => {
+            (re(rl.toValue(e)), ri(e));
+        },
+        n: (e, r, t) => {
+            ((e = rl.toValue(e)), (r = rl.toValue(r)), (t = rl.toValue(t)), (e[r] = t));
+        },
+        H: function (e, r) {
+            var t = new Date(1e3 * (e = r$(e)));
+            if (isNaN(t.getTime())) return 1;
+            ((d[r >> 2] = t.getUTCSeconds()),
+                (d[(r + 4) >> 2] = t.getUTCMinutes()),
+                (d[(r + 8) >> 2] = t.getUTCHours()),
+                (d[(r + 12) >> 2] = t.getUTCDate()),
+                (d[(r + 16) >> 2] = t.getUTCMonth()),
+                (d[(r + 20) >> 2] = t.getUTCFullYear() - 1900),
+                (d[(r + 24) >> 2] = t.getUTCDay()));
+            var n = Date.UTC(t.getUTCFullYear(), 0, 1, 0, 0, 0, 0),
+                o = ((t.getTime() - n) / 864e5) | 0;
+            return ((d[(r + 28) >> 2] = o), 0);
+        },
+        G: function (e, r, t, n, o, a) {
+            a = r$(a);
+            try {
+                var s = eb.getStreamFromFD(o);
+                2 & t && eb.doMsync(e, s, r, n, a);
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return -e.errno;
+            }
+        },
+        V: (e, r, t, n) => {
+            var o = new Date().getFullYear(),
+                a = new Date(o, 0, 1),
+                s = new Date(o, 6, 1),
+                i = a.getTimezoneOffset(),
+                l = s.getTimezoneOffset(),
+                c = Math.max(i, l);
+            ((u[e >> 2] = 60 * c), (d[r >> 2] = Number(i != l)));
+            var h = (e) => {
+                    var r = Math.abs(e),
+                        t = String(Math.floor(r / 60)).padStart(2, "0"),
+                        n = String(r % 60).padStart(2, "0");
+                    return `UTC${e >= 0 ? "-" : "+"}${t}${n}`;
+                },
+                f = h(i),
+                p = h(l);
+            l < i ? (ek(f, t, 17), ek(p, n, 17)) : (ek(f, n, 17), ek(p, t, 17));
+        },
+        T: function (e, r, t) {
+            if (((r = r$(r)), !(e >= 0 && e <= 3))) return 28;
+            if (0 === e) n = r_();
+            else {
+                0;
+                n = performance.now();
+            }
+            var n,
+                o = Math.round(1e6 * n);
+            return ((h[t >> 3] = BigInt(o)), 0);
+        },
+        aa: (e) => {
+            console.error(eE(e));
+        },
+        _: (e) => {
+            console.log(eE(e));
+        },
+        $: (e) => {
+            console.warn(eE(e));
+        },
+        A: r_,
+        E: (e) => {
+            var r = c.length;
+            if ((e >>>= 0) > 0x80000000) return !1;
+            for (var t = 1; t <= 4; t *= 2) {
+                var n = r * (1 + 0.2 / t);
+                if (((n = Math.min(n, e + 0x6000000)), rT(Math.min(0x80000000, ea(Math.max(e, n), 65536))))) return !0;
+            }
+            return !1;
+        },
+        M: (e, r) => {
+            var t = 0,
+                n = 0;
+            for (var o of rC()) {
+                var a = r + t;
+                ((u[(e + n) >> 2] = a), (t += ek(o, a, 1 / 0) + 1), (n += 4));
+            }
+            return 0;
+        },
+        N: (e, r) => {
+            var t = rC();
+            u[e >> 2] = t.length;
+            var n = 0;
+            for (var o of t) n += er(o) + 1;
+            return ((u[r >> 2] = n), 0);
+        },
+        q: function (e) {
+            try {
+                var r = eb.getStreamFromFD(e);
+                return (ey.close(r), 0);
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return e.errno;
+            }
+        },
+        w: function (e, r, t, n) {
+            try {
+                var o = eb.getStreamFromFD(e),
+                    a = ((e, r, t, n) => {
+                        for (var o = 0, a = 0; a < t; a++) {
+                            var s = u[r >> 2],
+                                i = u[(r + 4) >> 2];
+                            r += 8;
+                            try {
+                                var d = ey.read(e, l, s, i, n);
+                            } catch (e) {
+                                if (o > 0 && e instanceof ey.ErrnoError && (6 == e.errno || 6 == e.errno)) break;
+                                throw e;
+                            }
+                            if (d < 0) return -1;
+                            if (((o += d), d < i)) break;
+                            void 0 !== n && (n += d);
+                        }
+                        return o;
+                    })(o, r, t);
+                return ((u[n >> 2] = a), 0);
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return e.errno;
+            }
+        },
+        I: function (e, r, t, n) {
+            r = r$(r);
+            try {
+                if (isNaN(r)) return 22;
+                var o = eb.getStreamFromFD(e);
+                return (
+                    ey.llseek(o, r, t),
+                    (h[n >> 3] = BigInt(o.position)),
+                    o.getdents && !r && 0 === t && (o.getdents = null),
+                    0
+                );
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return e.errno;
+            }
+        },
+        x: function (e, r, t, n) {
+            try {
+                var o = eb.getStreamFromFD(e),
+                    a = ((e, r, t, n) => {
+                        if (1 == t) return ey.write(e, l, u[r >> 2], u[(r + 4) >> 2], n);
+                        for (var o = 0, a = 0, s = r; a < t; a++, s += 8) o += u[(s + 4) >> 2];
+                        for (var i = new Uint8Array(o), d = 0, a = 0; a < t; a++, r += 8) {
+                            var h = u[r >> 2],
+                                f = u[(r + 4) >> 2];
+                            (i.set(c.subarray(h, h + f), d), (d += f));
+                        }
+                        return ey.write(e, i, 0, o, n);
+                    })(o, r, t);
+                return ((u[n >> 2] = a), 0);
+            } catch (e) {
+                if (void 0 === ey || "ErrnoError" !== e.name) throw e;
+                return e.errno;
+            }
+        },
+    };
+    async function rF() {
+        ((e = n.preRun) && ("function" == typeof e && (e = [e]), I.push(...e)), B(I), ep && (await ef()));
+        var e,
+            r,
+            t = n.setStatus;
+        (t && (t("Running..."), await new Promise((e) => setTimeout(e, 1)), setTimeout(t, 1, "")),
+            x ||
+                (n.noFSInit || ey.initialized || ey.init(),
+                eo.init(),
+                S.ea(),
+                (ey.ignorePermissions = !1),
+                n.onRuntimeInitialized?.(),
+                (r = n.postRun) && ("function" == typeof r && (r = [r]), U.push(...r)),
+                B(U)));
+    }
+    return ((S = await z()), await rF(), n);
+};
