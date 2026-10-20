@@ -24,16 +24,16 @@ p.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
 });
 var x = i(625180),
     A = i(457827),
-    b = i(373677),
-    j = i(754027),
-    E = i(939398),
-    R = i(165610);
-function I(e) {
+    j = i(373677),
+    E = i(754027),
+    R = i(939398),
+    b = i(165610);
+function y(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
-    let i = (0, b.PH)(null, (0, b.hR)(e.preview_supported_surfaces)),
-        n = (0, E.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
-        l = (0, j.Op)((0, j.jS)(e), i);
+    let i = (0, j.PH)(null, (0, j.hR)(e.preview_supported_surfaces)),
+        n = (0, R.h)(null, i, e.remix_preview?.preview_app_channels ?? []),
+        l = (0, E.Op)((0, E.jS)(e), i);
     return (
         x.A.launchFrame({
             applicationId: t,
@@ -41,27 +41,27 @@ function I(e) {
             launch: null == n ? void 0 : { customId: n },
             showErrorModal: !1,
         }).catch(() => void 0),
-        () => (0, A.r)((0, R.VA)(t, l))
+        () => (0, A.r)((0, b.VA)(t, l))
     );
 }
-var y = i(858899),
+var I = i(858899),
     S = i(976860),
-    G = i(652215),
-    M = i(746080);
+    M = i(652215),
+    G = i(746080);
 async function N(e, t) {
     let i = await e.open(t);
     return (
         i.ok
-            ? (0, S.pX)(G.BVt.CHANNEL(i.guildId, M.VV.CONJURE, i.projectId))
-            : (0, y.P0)({ text: i.message, variant: "critical" }),
+            ? (0, S.pX)(M.BVt.CHANNEL(i.guildId, G.VV.CONJURE, i.projectId))
+            : (0, I.P0)({ text: i.message, variant: "critical" }),
         i
     );
 }
 function O(e) {
     let { project: t, currentGuildId: i, transitionState: p, onClose: x } = e,
-        [A, b] = l.useState(i),
-        [j, E] = l.useState(!1),
-        [R, y] = l.useState(0),
+        [A, j] = l.useState(i),
+        [E, R] = l.useState(!1),
+        [b, I] = l.useState(0),
         S = l.useRef(null);
     l.useEffect(() => {
         let e = (function (e, t, i) {
@@ -130,10 +130,10 @@ function O(e) {
                         }));
                 },
             };
-        })(t, i, I);
+        })(t, i, y);
         return ((S.current = e), () => e.dismiss());
-    }, [t, i, R]);
-    let G = (0, a.bG)([s.Ay, o.A], () => {
+    }, [t, i, b]);
+    let M = (0, a.yK)([s.Ay, o.A], () => {
             let e = [];
             for (let t of s.Ay.getFlattenedGuildIds()) {
                 let i = o.A.getGuild(t);
@@ -141,38 +141,38 @@ function O(e) {
             }
             return e;
         }),
-        M = l.useMemo(
+        G = l.useMemo(
             () =>
-                G.map((e) => ({
+                M.map((e) => ({
                     id: e.id,
                     label: e.name,
                     value: e.id,
                     leading: (0, n.jsx)(u.Ay, { guild: e, size: u.Ay.Sizes.MINI, active: !0 }),
                 })),
-            [G],
+            [M],
         ),
         O = l.useCallback(async () => {
-            if (j || null == S.current) return;
-            E(!0);
+            if (E || null == S.current) return;
+            R(!0);
             let e = await N(S.current, A);
-            e.ok ? await x() : (e.kept || y((e) => e + 1), E(!1));
-        }, [j, A, x]);
+            e.ok ? await x() : (e.kept || I((e) => e + 1), R(!1));
+        }, [E, A, x]);
     return (0, n.jsx)(r.a, {
         transitionState: p,
         onClose: x,
         title: m.intl.string(C.default["9wQTdG"]),
         size: "md",
         actions: [
-            { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: j },
-            { text: m.intl.string(C.default.XWgAfc), variant: "primary", onClick: O, loading: j },
+            { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: x, disabled: E },
+            { text: m.intl.string(C.default.XWgAfc), variant: "primary", onClick: O, loading: E },
         ],
         children: (0, n.jsx)(d.Z, {
             selectionMode: "single",
             label: m.intl.string(C.default["maL0+X"]),
-            options: M,
+            options: G,
             value: A,
-            onSelectionChange: b,
-            disabled: j,
+            onSelectionChange: j,
+            disabled: E,
             fullWidth: !0,
         }),
     });

@@ -3,8 +3,8 @@ n.d(t, {
     N: () => S,
     Ot: () => I,
     Q9: () => C,
-    Qv: () => m,
     Ux: () => _,
+    XF: () => m,
     Xs: () => R,
     dd: () => T,
     i8: () => p,
@@ -55,12 +55,16 @@ function T(e, t) {
     return (0, d.L0)({ guildId: e.id, location: t });
 }
 function m(e, t) {
-    return e.filter((e) => T(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
+    return e.some((e) => T(e, t));
 }
 function g(e) {
-    let t = o.A.getGuildId(),
-        n = null == t ? null : s.A.getGuild(t);
-    return null != n && T(n, e) ? n.id : (m(s.A.getGuildsArray(), e)[0]?.id ?? null);
+    var t;
+    let n = o.A.getGuildId(),
+        i = null == n ? null : s.A.getGuild(n);
+    return null != i && T(i, e)
+        ? i.id
+        : (((t = s.A.getGuildsArray()), t.filter((t) => T(t, e)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id))))[0]
+              ?.id ?? null);
 }
 function S(e, t) {
     return T(e, t);

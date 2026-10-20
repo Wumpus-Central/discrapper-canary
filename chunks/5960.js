@@ -2,17 +2,16 @@ n.d(t, { A: () => A });
 var u = n(582128),
     r = n(158390),
     c = n(17928),
-    l = n(71393),
-    s = n(246338),
+    s = n(71393),
+    l = n(246338),
     i = n(371169),
     p = n(260498);
 let d = new r.A(3e4, 3e5);
 function A(e, t) {
-    let n = (0, c.bG)(
-            [l.A],
-            () => t && null != e && (0, s.Qv)(l.A.getGuildsArray(), "useIsOwnedConjureApplication").length > 0,
-            [t, e],
-        ),
+    let n = (0, c.bG)([s.A], () => t && null != e && (0, l.XF)(s.A.getGuildsArray(), "useIsOwnedConjureApplication"), [
+            t,
+            e,
+        ]),
         r = (0, c.bG)([p.Ay], () => p.Ay.getProjectsFetchState()?.type ?? null);
     return (
         u.useEffect(() => {
