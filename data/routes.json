@@ -901,6 +901,7 @@
   "CONJURE_PROJECT_REMIX_TICKET": "/conjure/projects/:param/remix-ticket",
   "CONJURE_PROJECT_PUBLISH": "/conjure/projects/:param/publish",
   "CONJURE_PROJECT_PUBLISH_PREVIEW": "/conjure/projects/:param/publish-preview",
+  "CONJURE_PROJECT_PREVIEW_DM": "/conjure/projects/:param/preview-dm",
   "CONJURE_APPLICATION_CHANNELS": "/conjure/applications/:param/channels",
   "GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE": "/guild-space/:param/image-text-widget/:param/:param./:param",
   "GUILD_SPACE_BANNER": "/guild-space/:param/banner/:param./:param"

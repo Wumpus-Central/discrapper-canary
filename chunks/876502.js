@@ -16306,15 +16306,11 @@ function fW() {
 function fV(e) {
     let t,
         n,
-        { previewApplicationId: l } = e,
-        { data: r, isLoading: s } = (0, n6.YY)(l),
-        u = r?.bot?.id ?? null,
-        c = (0, o.bG)([ap.A], () => {
-            if (null == u) return null;
-            let e = ap.A.getDMFromUserId(u);
-            return null != e ? ap.A.getChannel(e) : null;
-        });
-    ((t = c?.id ?? null),
+        { projectId: l, previewApplicationId: r } = e,
+        [s, u] = i.useState(null),
+        c = s?.previewApplicationId === r ? s.channelId : null,
+        d = (0, o.bG)([ap.A], () => (null != c ? ap.A.getChannel(c) : null), [c]);
+    ((t = d?.id ?? null),
         i.useEffect(() => {
             null != t && fq.A.preload(q.ME, t);
         }, [t]),
@@ -16329,30 +16325,33 @@ function fV(e) {
                 }
             );
         }, [t, n]));
-    let [d, m] = i.useState(null),
-        f = null != u && d === u;
+    let [m, f] = i.useState(null),
+        h = m === r;
     return (i.useEffect(() => {
-        if (null == u || null != c) return;
+        if (null != d || h) return;
         let e = !1;
         return (
-            fq.A.openPrivateChannel({ recipientIds: u, navigateToChannel: !1 }).catch(() => {
-                e || m(u);
-            }),
+            (0, nz.CN)(l).then(
+                (t) => {
+                    e || u({ previewApplicationId: r, channelId: t });
+                },
+                () => {
+                    e || f(r);
+                },
+            ),
             () => {
                 e = !0;
             }
         );
-    }, [u, c]),
-    s && null == r)
-        ? (0, a.jsx)(fW, {})
-        : null == u || f
-          ? (0, a.jsx)(fH, { message: E.intl.string(S.default["VP/O8s"]) })
-          : null == c
-            ? (0, a.jsx)(fW, {})
-            : (0, a.jsx)("div", {
-                  className: fK.g,
-                  children: (0, a.jsx)(fG.A, { channel: c, guild: null, chatInputType: o0.oU.SIDEBAR }, c.id),
-              });
+    }, [l, r, d, h]),
+    h)
+        ? (0, a.jsx)(fH, { message: E.intl.string(S.default["VP/O8s"]) })
+        : null == d
+          ? (0, a.jsx)(fW, {})
+          : (0, a.jsx)("div", {
+                className: fK.g,
+                children: (0, a.jsx)(fG.A, { channel: d, guild: null, chatInputType: o0.oU.SIDEBAR }, d.id),
+            });
 }
 var fX = n(887909),
     fY = n(570962),
@@ -16668,7 +16667,9 @@ function hr(e) {
                           "overlay" === c && u.modes.includes("overlay")
                               ? (0, a.jsx)(f9, { applicationId: t, projectId: f, size: m })
                               : null,
-                          "bot" === c && null != n ? (0, a.jsx)(fV, { previewApplicationId: n }) : null,
+                          "bot" === c && null != n && null != f
+                              ? (0, a.jsx)(fV, { projectId: f, previewApplicationId: n })
+                              : null,
                       ],
                   })
             : x

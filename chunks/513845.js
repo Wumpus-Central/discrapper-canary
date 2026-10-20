@@ -1,33 +1,51 @@
-n.d(t, { BD: () => c, GG: () => d, HV: () => p, Lw: () => E, R2: () => o, T5: () => P, _j: () => h, di: () => R });
-var i = n(73153),
-    l = n(457827),
-    u = n(260498),
-    _ = n(951178),
-    r = n(1371),
-    s = n(802905),
-    a = n(357858);
-function o(e) {
-    r.A.reloadAppFrames(e);
-}
-function c(e) {
-    let t = u.Ay.getProject(e);
-    null != t && (o(t.application_id), (0, _.Fl)(t) || o(t.preview_application_id ?? null));
-}
-function p(e) {
-    i.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
+n.d(t, {
+    BD: () => d,
+    CN: () => U,
+    GG: () => h,
+    HV: () => R,
+    Lw: () => P,
+    R2: () => E,
+    T5: () => C,
+    _j: () => f,
+    di: () => A,
+});
+var i = n(636537),
+    l = n(73153),
+    u = n(457827),
+    _ = n(95701),
+    r = n(260498),
+    s = n(951178),
+    a = n(1371),
+    o = n(802905),
+    c = n(357858),
+    p = n(652215);
+function E(e) {
+    a.A.reloadAppFrames(e);
 }
 function d(e) {
-    i.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
+    let t = r.Ay.getProject(e);
+    null != t && (E(t.application_id), (0, s.Fl)(t) || E(t.preview_application_id ?? null));
 }
-function E(e) {
-    i.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape: e });
-}
-function R(e, t) {
-    (i.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: e, paused: !0 }), (0, l.r)(t));
+function R(e) {
+    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
 }
 function h(e) {
-    s.A.isPaused(e) && i.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: e, paused: !1 });
+    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
 }
 function P(e) {
-    (0, a.Td)(e) && h(e);
+    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape: e });
+}
+function A(e, t) {
+    (l.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: e, paused: !0 }), (0, u.r)(t));
+}
+function f(e) {
+    o.A.isPaused(e) && l.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: e, paused: !1 });
+}
+function C(e) {
+    (0, c.Td)(e) && f(e);
+}
+async function U(e) {
+    let { body: t } = await i.Bo.post({ url: p.Rsh.CONJURE_PROJECT_PREVIEW_DM(e), rejectWithError: !0 }),
+        n = (0, _.UE)(t);
+    return (l.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n.id);
 }

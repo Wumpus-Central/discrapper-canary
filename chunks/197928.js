@@ -237,7 +237,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("644161", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("644165", 10))) || (I.client_build_number = s),
     null == (a = $?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -1011,6 +1011,7 @@ function ed(e, t) {
     IS_SPOILER_CHANNEL: 2097152,
     IS_GAME_INVITES_CHANNEL: 4194304,
     HAS_ONLY_SYSTEM_MESSAGES: 8388608,
+    UNLISTED: 0x4000000,
 }),
     Object.values(
         (((g = {}).GUILD_HOME = "home"),
