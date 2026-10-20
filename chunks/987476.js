@@ -1,4 +1,4 @@
-l.d(t, { m: () => nF });
+l.d(t, { m: () => nH });
 var n,
     i = l(477900),
     s = l(582128),
@@ -283,7 +283,9 @@ function eA(e, t, n) {
             let { default: s } = await Promise.all([
                 l.e("120239"),
                 l.e("955410"),
-                l.e("132502"),
+                l.e("518264"),
+                l.e("5257"),
+                l.e("6050"),
                 l.e("230029"),
                 l.e("488926"),
                 l.e("352456"),
@@ -294,6 +296,7 @@ function eA(e, t, n) {
                 l.e("273232"),
                 l.e("240511"),
                 l.e("463095"),
+                l.e("16954"),
                 l.e("959134"),
                 l.e("371482"),
                 l.e("610943"),
@@ -1719,7 +1722,7 @@ function t2(e) {
         }),
     });
 }
-var t3 = l(831544),
+var t3 = l(991308),
     t6 = l(28863),
     t8 = l(148166),
     t4 = l(427209),
@@ -1754,7 +1757,7 @@ function t5(e) {
                                 l.e("174554"),
                                 l.e("116815"),
                                 l.e("813057"),
-                                l.e("132502"),
+                                l.e("6050"),
                                 l.e("230029"),
                                 l.e("891089"),
                                 l.e("861973"),
@@ -2081,7 +2084,7 @@ function lt(e) {
             }),
             [t.artist_external_id, t.artist_name, n],
         ),
-        r = (0, i.jsx)(t8.R, { src: n, isCircular: !0, FallbackIcon: t3.MicrophoneIcon });
+        r = (0, i.jsx)(t8.R, { src: n, isCircular: !0, FallbackIcon: t3.I });
     return null == t.artist_name
         ? (0, i.jsx)("div", { className: t9.Nr, children: (0, i.jsx)("div", { ...l, className: t9.MT, children: r }) })
         : (0, i.jsxs)("div", {
@@ -2458,7 +2461,9 @@ function lU(e) {
                             let { default: e } = await Promise.all([
                                 l.e("120239"),
                                 l.e("955410"),
-                                l.e("132502"),
+                                l.e("518264"),
+                                l.e("5257"),
+                                l.e("6050"),
                                 l.e("230029"),
                                 l.e("488926"),
                                 l.e("352456"),
@@ -2469,6 +2474,7 @@ function lU(e) {
                                 l.e("273232"),
                                 l.e("240511"),
                                 l.e("463095"),
+                                l.e("16954"),
                                 l.e("959134"),
                                 l.e("371482"),
                                 l.e("610943"),
@@ -2741,7 +2747,7 @@ function l1(e) {
                 null == r || n
                     ? (0, i.jsx)("span", {
                           className: lV.Ql,
-                          children: (0, i.jsx)(t3.MicrophoneIcon, { size: "xxs", color: c.A.colors.ICON_SUBTLE }),
+                          children: (0, i.jsx)(t3.I, { size: "xxs", color: c.A.colors.ICON_SUBTLE }),
                       })
                     : (0, i.jsx)("img", { className: lV.v2, src: r, alt: "", loading: "lazy", onError: () => a(!0) }),
         }),
@@ -2911,7 +2917,7 @@ function l4(e) {
         ],
     });
 }
-var l7 = l(432017),
+var l7 = l(450078),
     l9 = l(362704);
 function l5(e) {
     let { song: t, isSelected: l, onSelect: n, itemProps: a } = e,
@@ -2939,7 +2945,7 @@ function l5(e) {
                     (0, i.jsx)(t8.R, {
                         src: r,
                         isCircular: !1,
-                        FallbackIcon: l7.T,
+                        FallbackIcon: l7.u,
                         children:
                             l &&
                             (0, i.jsx)("span", {
@@ -3079,65 +3085,66 @@ function nm(e) {
         }),
     });
 }
-var nx = l(871107);
-function nh(e) {
+var nx = l(432017),
+    nh = l(871107);
+function nf(e) {
     let { title: t } = e;
     return (0, i.jsxs)("div", {
-        className: nx.$,
+        className: nh.$,
         children: [
             (0, i.jsx)("span", {
-                className: nx.K,
-                children: (0, i.jsx)(l7.T, { size: "xs", color: c.A.colors.ICON_DEFAULT, "aria-hidden": !0 }),
+                className: nh.K,
+                children: (0, i.jsx)(nx.T, { size: "xs", color: c.A.colors.ICON_DEFAULT, "aria-hidden": !0 }),
             }),
             (0, i.jsx)(g.q, { size: "md", children: t }),
         ],
     });
 }
-var nf = l(77915),
-    ng = l(756936);
-function nj(e) {
+var ng = l(77915),
+    nj = l(756936);
+function np(e) {
     return e.default_title ?? E.intl.string(et.default["5xxUI2"]);
 }
-var np = l(890497),
-    nv = l(734057),
-    n_ = l(317525),
-    nA = l(576705),
-    nN = l(935208),
-    nb = l(44167);
+var nv = l(890497),
+    n_ = l(734057),
+    nA = l(317525),
+    nN = l(576705),
+    nb = l(935208),
+    nE = l(44167);
 l(321073);
-var nE = l(485845),
-    nI = l(136722),
-    nS = l(435183),
-    nC = l(155718),
-    ny = l(795816),
-    nT = l(933958),
-    nk = l(627363),
-    nD = l(712440),
-    nR = l(733110),
-    nw = l(488926),
-    nL = l(818023);
-async function nM(e) {
-    null == en.A.getApplication(nL.NW) && (await (0, nk.TA)(nL.NW));
-    let t = nT.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== nL.NW);
-    return await (0, ny.su)({ channelId: e, applicationId: nL.NW, isStart: t, renderInFramePool: !0 });
-}
+var nI = l(485845),
+    nS = l(136722),
+    nC = l(435183),
+    ny = l(155718),
+    nT = l(795816),
+    nk = l(933958),
+    nD = l(627363),
+    nR = l(712440),
+    nw = l(733110),
+    nL = l(488926),
+    nM = l(818023);
 async function nU(e) {
+    null == en.A.getApplication(nM.NW) && (await (0, nD.TA)(nM.NW));
+    let t = nk.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== nM.NW);
+    return await (0, nT.su)({ channelId: e, applicationId: nM.NW, isStart: t, renderInFramePool: !0 });
+}
+async function nG(e) {
     let { channel: t, selectedRoleIds: l } = e,
         n = [];
     if (l.length > 0)
-        for (let e of (n.push({ id: t.guild_id, type: nC.r2.ROLE, allow: nw.x3, deny: e9.xBc.USE_EMBEDDED_ACTIVITIES }),
+        for (let e of (n.push({ id: t.guild_id, type: ny.r2.ROLE, allow: nL.x3, deny: e9.xBc.USE_EMBEDDED_ACTIVITIES }),
         l))
-            n.push({ id: e, type: nC.r2.ROLE, allow: e9.xBc.USE_EMBEDDED_ACTIVITIES, deny: nw.x3 });
-    let i = await (0, nS.RT)(t.id, { permissionOverwrites: n });
+            n.push({ id: e, type: ny.r2.ROLE, allow: e9.xBc.USE_EMBEDDED_ACTIVITIES, deny: nL.x3 });
+    let i = await (0, nC.RT)(t.id, { permissionOverwrites: n });
     if (!i.ok) throw i;
 }
-let nG = [];
-var nP = l(344351),
-    nO = l(256693),
-    nB = l(343030),
-    nW = l(317608),
-    nz = l(953538);
-let nF = {
+let nP = [];
+var nO = l(344351),
+    nB = l(256693),
+    nW = l(343030),
+    nz = l(317608),
+    nF = l(953538);
+let nH = {
     [d.a.IMAGE_TEXT]: {
         View: function (e) {
             let { widget: t, guildSpaceMode: l, guildId: n } = e,
@@ -3466,14 +3473,14 @@ let nF = {
                 x = ns(c.id),
                 h = ni(c.id),
                 f = na(c.id),
-                { isContributing: g, isSpotifyConnected: j, hasFetchedConsents: p } = (0, nf.MX)(d),
-                { data: v, shouldHideCurrentUser: _ } = (0, nf.qL)(d, o?.status === "success" ? o.data : void 0),
+                { isContributing: g, isSpotifyConnected: j, hasFetchedConsents: p } = (0, ng.MX)(d),
+                { data: v, shouldHideCurrentUser: _ } = (0, ng.qL)(d, o?.status === "success" ? o.data : void 0),
                 A = "edit" === u,
                 N = o?.status === "success" && lN(o.data),
                 b = !x && !A && !N,
                 E =
                     "view" === u && p && !g
-                        ? (0, i.jsx)(lU, { guildId: d, widgetName: nj(c), isCompact: x, isSpotifyConnected: j })
+                        ? (0, i.jsx)(lU, { guildId: d, widgetName: np(c), isCompact: x, isSpotifyConnected: j })
                         : null,
                 I =
                     A || N || o?.status !== "success" || h === l_.TOP_LISTENERS
@@ -3487,20 +3494,20 @@ let nF = {
                               ? null
                               : le.RQ.IMAGE(r));
             return (0, i.jsxs)("div", {
-                className: ng.rf,
+                className: nj.rf,
                 ref: m,
                 children: [
                     null != I &&
                         (0, i.jsx)("div", {
-                            className: ng.G,
+                            className: nj.G,
                             "aria-hidden": !0,
-                            children: (0, i.jsx)("img", { className: ng.LZ, src: I, alt: "" }),
+                            children: (0, i.jsx)("img", { className: nj.LZ, src: I, alt: "" }),
                         }),
                     (0, i.jsx)("div", {
-                        className: ng.Qs,
+                        className: nj.Qs,
                         children: (0, i.jsx)("div", {
                             id: lI(c.id),
-                            className: ng.nd,
+                            className: nj.nd,
                             role: b ? "tabpanel" : "group",
                             tabIndex: 0,
                             "aria-label": b ? void 0 : lb(h),
@@ -3536,9 +3543,9 @@ let nF = {
         },
         Title: function (e) {
             let { widget: t, hydration: l, guildSpaceMode: n } = e,
-                s = nj(t),
+                s = np(t),
                 a = l?.status === "success" && lN(l.data);
-            return "edit" === n || a ? (0, i.jsx)(g.q, { size: "md", children: s }) : (0, i.jsx)(nh, { title: s });
+            return "edit" === n || a ? (0, i.jsx)(g.q, { size: "md", children: s }) : (0, i.jsx)(nf, { title: s });
         },
         ViewHeaderTrailing: function (e) {
             let { widget: t, hydration: l, title: n } = e,
@@ -3562,42 +3569,42 @@ let nF = {
         View: function (e) {
             let t,
                 l,
-                n = (0, nb.n)(),
+                n = (0, nE.n)(),
                 a = (0, D.bG)(
-                    [nv.A, nA.A],
+                    [n_.A, nN.A],
                     () => {
-                        let e = null != n ? nv.A.getChannel(n) : void 0;
-                        return null != e && nA.A.can(e9.xBc.USE_EMBEDDED_ACTIVITIES, e);
+                        let e = null != n ? n_.A.getChannel(n) : void 0;
+                        return null != e && nN.A.can(e9.xBc.USE_EMBEDDED_ACTIVITIES, e);
                     },
                     [n],
                 ),
                 d = (0, D.bG)(
-                    [nT.Ay],
+                    [nk.Ay],
                     () => {
-                        let e = nT.Ay.getCurrentEmbeddedActivity();
+                        let e = nk.Ay.getCurrentEmbeddedActivity();
                         return null == e ||
-                            e.applicationId !== nL.NW ||
-                            e.location.kind !== nP.T.GUILD_CHANNEL ||
+                            e.applicationId !== nM.NW ||
+                            e.location.kind !== nO.T.GUILD_CHANNEL ||
                             e.location.channel_id !== n
                             ? null
                             : e;
                     },
                     [n],
                 ),
-                c = (0, D.bG)([nT.Ay], () => nT.Ay.isLaunchingActivity(), []),
+                c = (0, D.bG)([nk.Ay], () => nk.Ay.isLaunchingActivity(), []),
                 { authResolved: o, isAuthorized: u } =
                     ((t = (0, D.bG)(
-                        [nR.default],
-                        () => nR.default.getFetchStateForApplication(nL.NW) === nR.FetchState.FETCHED,
+                        [nw.default],
+                        () => nw.default.getFetchStateForApplication(nM.NW) === nw.FetchState.FETCHED,
                         [],
                     )),
                     (l = (0, D.bG)(
-                        [nR.default, en.A],
+                        [nw.default, en.A],
                         () => {
-                            let e = nR.default.getNewestTokenForApplication(nL.NW);
+                            let e = nw.default.getNewestTokenForApplication(nM.NW);
                             if (null == e) return !1;
-                            let t = en.A.getApplication(nL.NW),
-                                l = t?.integrationTypesConfig?.[nE.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
+                            let t = en.A.getApplication(nM.NW),
+                                l = t?.integrationTypesConfig?.[nI.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
                             if (null == l) return !0;
                             let n = new Set(e.scopes);
                             return l.every((e) => n.has(e));
@@ -3605,40 +3612,40 @@ let nF = {
                         [],
                     )),
                     s.useEffect(() => {
-                        (nR.default.getFetchStateForApplication(nL.NW) === nR.FetchState.NOT_FETCHED &&
-                            nD.A.fetch([nL.NW]),
-                            null == en.A.getApplication(nL.NW) && (0, nk.TA)(nL.NW));
+                        (nw.default.getFetchStateForApplication(nM.NW) === nw.FetchState.NOT_FETCHED &&
+                            nR.A.fetch([nM.NW]),
+                            null == en.A.getApplication(nM.NW) && (0, nD.TA)(nM.NW));
                     }, []),
                     { authResolved: t, isAuthorized: l }),
                 m = s.useRef(!1);
             s.useEffect(() => {
-                null == d && null != n && a && o && u && !m.current && ((m.current = !0), nM(n));
+                null == d && null != n && a && o && u && !m.current && ((m.current = !0), nU(n));
             }, [a, n, d, o, u]);
             let x = s.useCallback(() => {
-                    null != n && ((m.current = !0), nM(n));
+                    null != n && ((m.current = !0), nU(n));
                 }, [n]),
                 h = null != n && o && !u;
             return null == n
                 ? (0, i.jsx)(N.B, {
-                      className: nz.kL,
+                      className: nF.kL,
                       align: "center",
                       justify: "center",
                       children: (0, i.jsx)(r, { alt: "", width: 200, height: 192 }),
                   })
                 : a
                   ? (0, i.jsxs)("div", {
-                        className: nz.kL,
+                        className: nF.kL,
                         children: [
                             null != d &&
-                                (0, i.jsx)(nW.A, {
-                                    frameId: (0, nO.Ri)(d),
-                                    level: nB.A.WithinAppContent,
-                                    className: nz.t$,
+                                (0, i.jsx)(nz.A, {
+                                    frameId: (0, nB.Ri)(d),
+                                    level: nW.A.WithinAppContent,
+                                    className: nF.t$,
                                 }),
                             null == d &&
                                 h &&
                                 (0, i.jsx)("div", {
-                                    className: nz.P5,
+                                    className: nF.P5,
                                     children: (0, i.jsx)(B.$, {
                                         variant: "secondary",
                                         text: E.intl.string(et.default.PSuly6),
@@ -3649,9 +3656,9 @@ let nF = {
                         ],
                     })
                   : (0, i.jsx)("div", {
-                        className: nz.kL,
+                        className: nF.kL,
                         children: (0, i.jsx)("div", {
-                            className: nz.m0,
+                            className: nF.m0,
                             children: (0, i.jsx)(A.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
@@ -3663,11 +3670,11 @@ let nF = {
         Edit: function (e) {
             let { cancel: t } = e,
                 l = (0, D.bG)([tc.A], () => tc.A.getGuildId()),
-                n = nN.default.castGuildIdAsEveryoneGuildRoleId(l),
-                a = (0, nb.n)(),
-                r = (0, D.bG)([nv.A], () => (null != a ? nv.A.getChannel(a) : void 0), [a]),
-                d = (0, D.bG)([nA.A], () => null != r && nA.A.can(e9.xBc.MANAGE_ROLES, r), [r]),
-                c = (0, D.bG)([n_.A], () => (null == l ? nG : n_.A.getSortedRoles(l).filter((e) => e.id !== n)), [
+                n = nb.default.castGuildIdAsEveryoneGuildRoleId(l),
+                a = (0, nE.n)(),
+                r = (0, D.bG)([n_.A], () => (null != a ? n_.A.getChannel(a) : void 0), [a]),
+                d = (0, D.bG)([nN.A], () => null != r && nN.A.can(e9.xBc.MANAGE_ROLES, r), [r]),
+                c = (0, D.bG)([nA.A], () => (null == l ? nP : nA.A.getSortedRoles(l).filter((e) => e.id !== n)), [
                     l,
                     n,
                 ]),
@@ -3675,11 +3682,11 @@ let nF = {
                     let e;
                     return null != r
                         ? null != (e = r.permissionOverwrites[r.guild_id]) &&
-                          nI.zy(e.deny, e9.xBc.USE_EMBEDDED_ACTIVITIES)
+                          nS.zy(e.deny, e9.xBc.USE_EMBEDDED_ACTIVITIES)
                             ? c
                                   .filter((e) => {
                                       let t = r.permissionOverwrites[e.id];
-                                      return null != t && nI.zy(t.allow, e9.xBc.USE_EMBEDDED_ACTIVITIES);
+                                      return null != t && nS.zy(t.allow, e9.xBc.USE_EMBEDDED_ACTIVITIES);
                                   })
                                   .map((e) => e.id)
                             : []
@@ -3694,7 +3701,7 @@ let nF = {
                 if (null != r) {
                     (g(!1), h(!0));
                     try {
-                        (await nU({ channel: r, selectedRoleIds: j }), t());
+                        (await nG({ channel: r, selectedRoleIds: j }), t());
                     } catch {
                         (h(!1), g(!0));
                     }
@@ -3705,7 +3712,7 @@ let nF = {
                 : (0, i.jsxs)(N.B, {
                       gap: 16,
                       children: [
-                          (0, i.jsx)(np.Z, {
+                          (0, i.jsx)(nv.Z, {
                               selectionMode: "multiple",
                               label: E.intl.string(et.default.XXLbfv),
                               description: E.intl.string(et.default.XrpYIG),

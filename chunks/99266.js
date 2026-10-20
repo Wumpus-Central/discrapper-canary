@@ -2,15 +2,15 @@ i.d(e, { default: () => w });
 var a = i(477900),
     l = i(582128),
     s = i(834730),
-    r = i(831544),
-    n = i(432017),
+    r = i(991308),
+    n = i(450078),
     c = i(858899),
-    o = i(173936),
-    d = i(148494),
+    d = i(173936),
+    o = i(148494),
     u = i(914718),
     m = i(451909),
-    h = i(446244),
-    x = i(734057),
+    x = i(446244),
+    h = i(734057),
     p = i(957565),
     k = i(403362),
     v = i(148166),
@@ -43,7 +43,7 @@ function j(t) {
             }),
             (0, a.jsx)("div", {
                 className: g.SZ,
-                children: (0, a.jsx)(v.R, { src: e.imageUrl, isCircular: i, FallbackIcon: i ? r.MicrophoneIcon : n.T }),
+                children: (0, a.jsx)(v.R, { src: e.imageUrl, isCircular: i, FallbackIcon: i ? r.I : n.u }),
             }),
         ],
     });
@@ -55,16 +55,16 @@ function w(t) {
                 let { withMessage: s, closeAfterSend: r } = a;
                 l(!0);
                 try {
-                    let a = (await Promise.all(t.map(h.pk))).filter(k.Vq);
+                    let a = (await Promise.all(t.map(x.pk))).filter(k.Vq);
                     if (0 === a.length) return void l(!1);
                     r && i();
                     let n = `${e.shareUrl}
 
 `;
                     for (let t of a) {
-                        let e = x.A.getChannel(t);
+                        let e = h.A.getChannel(t);
                         null != e &&
-                            (await d.A.sendMessage(e.id, m.Ay.parse(e, n + (s ?? "")), !1, {
+                            (await o.A.sendMessage(e.id, m.Ay.parse(e, n + (s ?? "")), !1, {
                                 location: f.Hx.GUILD_SPACE,
                             }));
                     }
@@ -86,7 +86,7 @@ function w(t) {
                         (0, p.C)(e.shareUrl, () =>
                             (0, c.P0)({ text: C.intl.string(C.t["L/PwZf"]), variant: "success" }),
                         ),
-                    icon: o.LinkIcon,
+                    icon: d.LinkIcon,
                 },
             ],
             [e.shareUrl],
