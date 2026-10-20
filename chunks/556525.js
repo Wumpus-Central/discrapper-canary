@@ -31,7 +31,7 @@ function E(e) {
             () => ({
                 shouldReduceMotion: s.Ay.useReducedMotion,
                 useForcedColors: s.Ay.useForcedColors,
-                isAppFocusedOrOverlayVisible: d.A.isAppFocused() || (null != f.getFocusedPID() && (I || !(0, l.z)())),
+                isAppFocusedOrOverlayVisible: d.A.isAppFocused() || (null != f.getFocusedPID() && (I || !(0, l.z1)())),
             }),
             [f, I],
         );

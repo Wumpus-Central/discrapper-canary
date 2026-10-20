@@ -2926,7 +2926,7 @@ async function lm() {
     let [n, i, s] = await Promise.all([
             t.capturePerformanceTrace({ durationMs: 3e4 }),
             nS.A.processUtils.getSystemInfo(),
-            nS.A.processUtils.getSystemMetrics((0, lc.u)()),
+            nS.A.processUtils.getSystemMetrics((0, lc.uD)()),
         ]),
         l = {
             captured_at: n.startedAtISO,

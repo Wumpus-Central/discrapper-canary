@@ -123,7 +123,7 @@ class y {
     }
     async sampleCpuAndMemory() {
         try {
-            let e = await C.A.getSystemMetrics((0, N.u)());
+            let e = await C.A.getSystemMetrics((0, N.uD)());
             if (null == e) return;
             if (e.memoryTotal > 0) {
                 let t = ((e.memoryTotal - e.memoryFree) / e.memoryTotal) * 100;

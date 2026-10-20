@@ -1,44 +1,46 @@
-n.d(t, { X: () => I, N: () => h });
+n.d(t, { X: () => p, N: () => f });
 var i,
     r = n(972347),
     a = n(451988),
     s = n(73153),
     l = n(626584),
-    o = n(6494),
-    d = n(927813),
-    c = n(869146),
-    u = n(531685),
-    _ = n(652215),
-    E = n(392164);
-function A() {
+    o = n(384077),
+    d = n(6494),
+    c = n(927813),
+    u = n(869146),
+    _ = n(531685),
+    E = n(652215),
+    A = n(392164);
+function h() {
     return (
-        u.A.isVisible() ||
-        c.A.getWindowVisible(_.MLl.CHANNEL_CALL_POPOUT) ||
-        c.A.getWindowVisible(_.MLl.ACTIVITY_POPOUT) ||
-        c.A.getWindowVisible(E.f) ||
+        _.A.isVisible() ||
+        u.A.getWindowVisible(E.MLl.CHANNEL_CALL_POPOUT) ||
+        u.A.getWindowVisible(E.MLl.ACTIVITY_POPOUT) ||
+        u.A.getWindowVisible(A.f) ||
         (function () {
-            for (let e of c.A.getWindowKeys())
-                if (e.startsWith(_.MLl.CALL_TILE_POPOUT) && c.A.getWindowVisible(e)) return !0;
+            for (let e of u.A.getWindowKeys())
+                if (e.startsWith(E.MLl.CALL_TILE_POPOUT) && u.A.getWindowVisible(e)) return !0;
             return !1;
         })()
     );
 }
-var h =
+var f =
     (((i = {}).WindowVisibilityChanged = "window-visibility-changed"),
     (i.IncomingVideoEnabledChanged = "incoming-video-enabled-changed"),
     i);
-class f extends r.A {
+class I extends r.A {
     disableVideoTimer = new a.Ep();
     discordVisible = !0;
     incomingVideoEnabled = !0;
     lastEnabledChange = performance.now();
     logger = new l.A("WindowVisibilityVideoManager");
-    HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * d.A.Millis.SECOND;
+    HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * c.A.Millis.SECOND;
     constructor() {
         (super(),
             s.h.subscribe("WINDOW_VISIBILITY_CHANGE", this.update),
+            s.h.subscribe("WINDOW_INIT", this.handleWindowInit),
             s.h.subscribe("APP_STATE_UPDATE", this.update),
-            o.A.addOnPipModeChangedListener(this.update));
+            d.A.addOnPipModeChangedListener(this.update));
     }
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
@@ -46,9 +48,12 @@ class f extends r.A {
     lastIncomingVideoEnabledChangeTime() {
         return this.lastEnabledChange;
     }
+    handleWindowInit = () => {
+        this.discordVisible !== h() && (0, o.G$)("window_visibility_video_manager") && this.update();
+    };
     update = () => {
-        this.discordVisible !== A() &&
-            ((this.discordVisible = A()),
+        this.discordVisible !== h() &&
+            ((this.discordVisible = h()),
             this.emit("window-visibility-changed", this.discordVisible),
             this.discordVisible
                 ? (this.disableVideoTimer.stop(), this.setIncomingVideoEnabled(!0))
@@ -67,4 +72,4 @@ class f extends r.A {
                 this.emit("incoming-video-enabled-changed", this.incomingVideoEnabled)));
     }
 }
-let I = new f();
+let p = new I();
