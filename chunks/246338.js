@@ -1,99 +1,90 @@
 n.d(t, {
-    Lp: () => h,
-    N: () => N,
-    Ot: () => p,
-    Q9: () => O,
-    Qv: () => g,
-    Ux: () => E,
-    Xs: () => L,
-    dd: () => m,
-    i8: () => T,
-    n5: () => f,
-    oX: () => S,
-    sM: () => C,
-    us: () => I,
-    w$: () => y,
+    Lp: () => A,
+    N: () => S,
+    Ot: () => I,
+    Q9: () => C,
+    Qv: () => m,
+    Ux: () => _,
+    Xs: () => R,
+    dd: () => T,
+    i8: () => p,
+    n5: () => h,
+    oX: () => g,
+    sM: () => N,
+    us: () => f,
+    w$: () => L,
 });
-var i = n(17928),
-    r = n(615606),
-    a = n(587895),
-    s = n(808728),
-    l = n(71393),
-    o = n(576705),
-    d = n(967198),
-    c = n(793480),
-    u = n(951178),
-    _ = n(652215);
-function E(e, t) {
+var i = n(615606),
+    r = n(587895),
+    a = n(808728),
+    s = n(71393),
+    l = n(576705),
+    o = n(967198),
+    d = n(793480),
+    c = n(951178),
+    u = n(652215);
+function _(e, t) {
     return null == e || "user" === e.install_scope ? null : ((t ? e.preview_guild_id : null) ?? e.guild_id ?? null);
 }
-let A = new Set([_.rbe.GUILD_DIRECTORY, _.rbe.GUILD_STORE]);
-function h(e, t) {
-    return [...("voice" === t ? [] : e[s.I6]), ...("text" === t ? [] : e[s.vM])]
+let E = new Set([u.rbe.GUILD_DIRECTORY, u.rbe.GUILD_STORE]);
+function A(e, t) {
+    return [...("voice" === t ? [] : e[a.I6]), ...("text" === t ? [] : e[a.vM])]
         .map((e) => {
             let { channel: t } = e;
             return t;
         })
-        .filter((e) => !A.has(e.type));
+        .filter((e) => !E.has(e.type));
+}
+function h(e) {
+    return { isPublic: (e & c.Zh.PUBLIC) != 0, isGuildCollaboration: (e & c.Zh.GUILD_COLLABORATION) != 0 };
 }
 function f(e) {
-    return { isPublic: (e & u.Zh.PUBLIC) != 0, isGuildCollaboration: (e & u.Zh.GUILD_COLLABORATION) != 0 };
+    return e?.type === u.rbe.GUILD_APP ? (e.application_id ?? null) : null;
 }
-function I(e) {
-    return e?.type === _.rbe.GUILD_APP ? (e.application_id ?? null) : null;
-}
-function p(e, t) {
+function I(e, t) {
     return (
         null != e &&
         (e.guild_id === t || e.preview_guild_id === t || (null == e.guild_id && null == e.preview_guild_id))
     );
 }
-function T(e, t) {
-    for (let { channel: n } of s.Ay.getChannels(e)[s.I6]) if (I(n) === t) return n.id;
+function p(e, t) {
+    for (let { channel: n } of a.Ay.getChannels(e)[a.I6]) if (f(n) === t) return n.id;
     return null;
 }
+function T(e, t) {
+    return (0, d.L0)({ guildId: e.id, location: t });
+}
 function m(e, t) {
-    return (0, c.L0)({ guildId: e.id, location: t }) && !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+    return e.filter((e) => T(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
 }
-function g(e, t) {
-    return e.filter((e) => m(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
+function g(e) {
+    let t = o.A.getGuildId(),
+        n = null == t ? null : s.A.getGuild(t);
+    return null != n && T(n, e) ? n.id : (m(s.A.getGuildsArray(), e)[0]?.id ?? null);
 }
-function S(e) {
-    let t = d.A.getGuildId(),
-        n = null == t ? null : l.A.getGuild(t);
-    return null != n && m(n, e) ? n.id : (g(l.A.getGuildsArray(), e)[0]?.id ?? null);
+function S(e, t) {
+    return T(e, t);
 }
 function N(e, t) {
-    return m(e, t);
-}
-function C(e, t) {
     return (
-        !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) &&
-        o.A.can(_.xBc.MANAGE_CHANNELS, e) &&
-        o.A.can(_.xBc.MANAGE_GUILD, e) &&
-        (0, c.L0)({ guildId: e.id, location: t })
+        l.A.can(u.xBc.MANAGE_CHANNELS, e) && l.A.can(u.xBc.MANAGE_GUILD, e) && (0, d.L0)({ guildId: e.id, location: t })
     );
 }
-function O(e, t) {
-    let n = (0, c.m0)({ guildId: e.id, location: t }),
-        i = e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
-    return n && !i;
+function C(e, t) {
+    return (0, d.m0)({ guildId: e.id, location: t });
 }
-function R(e, t, n) {
+function O(e, t) {
+    return e?.type === u.rbe.GUILD_APP && t?.conjureProjectId != null;
+}
+function R(e, t) {
+    let n = f(e);
     return (
-        e?.type === _.rbe.GUILD_APP &&
-        n?.conjureProjectId != null &&
-        t?.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
+        O(e, null != n && r.A.isHydrated(n) ? r.A.getApplication(n) : null) &&
+        (0, d.L0)({ guildId: e?.guild_id, location: t })
     );
 }
 function L(e, t) {
-    let n = I(e),
-        i = null != n && a.A.isHydrated(n) ? a.A.getApplication(n) : null;
-    return R(e, l.A.getGuild(e?.guild_id), i) && (0, c.L0)({ guildId: e?.guild_id, location: t });
-}
-function y(e, t) {
-    let n = (0, i.bG)([l.A], () => l.A.getGuild(e?.guild_id)),
-        a = (0, r.q)(e),
-        s = (0, c.m0)({ guildId: e?.guild_id, location: t });
-    return R(e, n, a) && s;
+    let n = (0, i.q)(e),
+        r = (0, d.m0)({ guildId: e?.guild_id, location: t });
+    return O(e, n) && r;
 }
