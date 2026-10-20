@@ -4,10 +4,9 @@ let i = new (class {
         return Promise.resolve();
     }
     setEnabled(e) {}
-    setSelectedStream(e) {}
+    setSelectedTile(e) {}
     setFocusedStream(e) {}
     setMirrored(e) {}
-    setPipAspectRatio(e, t) {}
     refreshPipUi() {}
     setAutoEnterEnabled(e) {}
     updateSourceTrackingView() {}
