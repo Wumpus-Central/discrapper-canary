@@ -1,4 +1,4 @@
-n.d(t, { A: () => A, X: () => C });
+n.d(t, { A: () => x, X: () => g });
 var a,
     r = n(477900),
     i = n(582128),
@@ -10,11 +10,12 @@ var a,
     o = n(817281),
     b = n(761929),
     h = n(925166),
-    f = n(964404),
-    S = n(743898),
-    m = n(909735),
-    p = n(53569),
-    C =
+    f = n(76268),
+    S = n(964404),
+    m = n(743898),
+    p = n(909735),
+    C = n(53569),
+    g =
         (((a = {})[(a.PostSidebar = 0)] = "PostSidebar"),
         (a[(a.ThreadSidebar = 1)] = "ThreadSidebar"),
         (a[(a.CallChatSidebar = 2)] = "CallChatSidebar"),
@@ -22,7 +23,7 @@ var a,
         (a[(a.HomeSidebar = 4)] = "HomeSidebar"),
         (a[(a.StageAudienceSidebar = 5)] = "StageAudienceSidebar"),
         a);
-function g(e) {
+function R(e) {
     let { resizableNode: t, onApply: n, onEmit: a, onEnd: i, capturePointer: s } = e,
         d = (0, b.A)({
             resizableDomNodeRef: t,
@@ -33,9 +34,9 @@ function g(e) {
             throttleDuration: 16,
             usePointerEvents: s,
         });
-    return s ? (0, r.jsx)(R, { handleResizeStart: d }) : (0, r.jsx)("div", { onMouseDown: d, className: p.Di });
+    return s ? (0, r.jsx)(A, { handleResizeStart: d }) : (0, r.jsx)("div", { onMouseDown: d, className: C.Di });
 }
-function R(e) {
+function A(e) {
     let { handleResizeStart: t } = e,
         n = i.useCallback(
             (e) => {
@@ -43,22 +44,22 @@ function R(e) {
             },
             [t],
         );
-    return (0, r.jsx)("div", { onPointerDown: n, className: p.Di });
+    return (0, r.jsx)("div", { onPointerDown: n, className: C.Di });
 }
-function A(e) {
+function x(e) {
     let {
             sidebarType: t,
             maxWidth: n,
             onWidthChange: a,
             children: s,
             floatingLayer: b,
-            capturePointer: C = !1,
-            minWidth: R = 450,
+            capturePointer: g = !1,
+            minWidth: A = 450,
         } = e,
-        A = i.useRef(null),
         x = i.useRef(null),
         E = i.useRef(null),
-        j = (function (e) {
+        j = i.useRef(null),
+        D = (function (e) {
             switch (e) {
                 case 0:
                     return "postSidebarWidth";
@@ -74,41 +75,42 @@ function A(e) {
                     return "stageAudienceSidebarWidth";
             }
         })(t),
-        D = (0, S.P)({ maxWidth: n, minWidth: R }),
-        N = (0, c.r)(u.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        k = (0, m.f4)("ChannelChatResizableSidebar") && (1 === t || 0 === t),
-        y = h.A.useConfig({ location: "ChannelChatResizableSidebar" }).sidebarEnabled && !__OVERLAY__,
-        v = i.useRef(Math.max(f.Ay[j] ?? R, R)),
-        P = i.useCallback(
+        N = (0, m.P)({ maxWidth: n, minWidth: A }),
+        k = (0, c.r)(u.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        y = (0, p.f4)("ChannelChatResizableSidebar") && (1 === t || 0 === t),
+        v = h.A.useConfig({ location: "ChannelChatResizableSidebar" }),
+        P = !((0, f.A)() && v.sidebarEnabled) || v.appBarToggleEnabled,
+        W = i.useRef(Math.max(S.Ay[D] ?? A, A)),
+        w = i.useCallback(
             (e) => {
-                let t = (0, l.clamp)(e, R, n);
-                ((v.current = t), null != A.current && (A.current.style.width = `${t}px`));
-                let a = D || k ? t : t + N;
-                (null != x.current && (x.current.style.minWidth = `${a}px`),
-                    null != E.current && (E.current.style.width = `${a}px`));
+                let t = (0, l.clamp)(e, A, n);
+                ((W.current = t), null != x.current && (x.current.style.width = `${t}px`));
+                let a = N || y ? t : t + k;
+                (null != E.current && (E.current.style.minWidth = `${a}px`),
+                    null != j.current && (j.current.style.width = `${a}px`));
             },
-            [R, n, D, k, N],
+            [A, n, N, y, k],
         ),
-        _ = i.useCallback(() => {
-            a?.(v.current, D);
-        }, [a, D]),
-        W = i.useCallback(() => {
-            o.Ay.updatedUnsyncedSettings({ [j]: v.current });
-        }, [j]);
+        z = i.useCallback(() => {
+            a?.(W.current, N);
+        }, [a, N]),
+        T = i.useCallback(() => {
+            o.Ay.updatedUnsyncedSettings({ [D]: W.current });
+        }, [D]);
     i.useLayoutEffect(() => {
-        (P(v.current), _());
-    }, [P, _]);
-    let w = b ?? i.Fragment;
+        (w(W.current), z());
+    }, [w, z]);
+    let L = b ?? i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !D && (0, r.jsx)("div", { ref: x }),
-            (0, r.jsx)(w, {
+            !N && (0, r.jsx)("div", { ref: E }),
+            (0, r.jsx)(L, {
                 children: (0, r.jsxs)("div", {
-                    className: d()(p.PA, { [p.Nc]: k, [p.cg]: !y }),
+                    className: d()(C.PA, { [C.Nc]: y, [C.cg]: P }),
                     children: [
-                        (0, r.jsx)("div", { ref: E, className: d()(p.Uc, { [p.DU]: D, [p.iK]: !D }) }),
-                        !D && (0, r.jsx)(g, { resizableNode: A, onApply: P, onEmit: _, onEnd: W, capturePointer: C }),
-                        (0, r.jsx)("div", { ref: A, className: d()(p.kL, { [p.DU]: D }), children: s }),
+                        (0, r.jsx)("div", { ref: j, className: d()(C.Uc, { [C.DU]: N, [C.iK]: !N }) }),
+                        !N && (0, r.jsx)(R, { resizableNode: x, onApply: w, onEmit: z, onEnd: T, capturePointer: g }),
+                        (0, r.jsx)("div", { ref: x, className: d()(C.kL, { [C.DU]: N }), children: s }),
                     ],
                 }),
             }),
