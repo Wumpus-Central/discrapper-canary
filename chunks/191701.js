@@ -195,10 +195,10 @@ function t0(t) {
 }
 var t1 = i(554146),
     t2 = i(298990),
-    t8 = i(429913),
-    t9 = i(263577),
-    t5 = i(826673),
-    t3 = i(192820),
+    t9 = i(429913),
+    t5 = i(263577),
+    t3 = i(826673),
+    t8 = i(360906),
     t7 = i(308726),
     t4 = i(818023),
     t6 = i(731854),
@@ -206,8 +206,8 @@ var t1 = i(554146),
     ee = i(302933);
 function ei(t) {
     let { game: e } = t,
-        i = (0, t8.h)(e.id);
-    return null == i ? null : (0, B.jsx)(t9.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
+        i = (0, t9.h)(e.id);
+    return null == i ? null : (0, B.jsx)(t5.V, { src: i.getIconURL(t4.iu.LARGE), size: 40 });
 }
 let en = 5 * R.A.Millis.SECOND,
     el = 8 * R.A.Millis.SECOND,
@@ -578,7 +578,7 @@ let eh = new eC(s.h, {
         if (M.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (V.A.isNotificationDisabled(F.KS.WelcomeNudge)) return null;
-            t3.Ay.supports(t6.O5.VIDEO) ||
+            t8.Ay.supports(t6.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== F.Jr.GO_LIVE_VOICE && t.type !== F.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, G.Y9)(F.KS.WelcomeNudge, {
                     notif_type: F.KS.WelcomeNudge,
@@ -635,7 +635,7 @@ let eh = new eC(s.h, {
                                     className: ee.kL,
                                 })));
                 }
-            let r = (0, t5.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t3.k8)(t1.M.OVERLAY_OOP_WELCOME_NUX),
                 s = Y.intl.string(Y.t.KWDIrh);
             return {
                 icon:
@@ -648,16 +648,16 @@ let eh = new eC(s.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         o.A.setInputLocked(!1, j.A.getTargetPID()),
-                        r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t5.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t3.Dr)(t1.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, w.qv)(), e);

@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => S });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -14,7 +14,7 @@ var i = n(477900),
     A = n(471993),
     f = n(734057),
     x = n(71393),
-    g = n(192820),
+    g = n(360906),
     C = n(576705),
     j = n(309010),
     y = n(920639),
@@ -23,24 +23,24 @@ var i = n(477900),
     E = n(105292),
     v = n(989952),
     b = n(550234);
-function _(e) {
+function S(e) {
     let { channelId: t, center: n, iconSize: a } = e,
-        _ = (0, r.bG)([f.A], () => f.A.getChannel(t)),
-        S = _?.guild_id,
+        S = (0, r.bG)([f.A], () => f.A.getChannel(t)),
+        _ = S?.guild_id,
         T = (0, r.bG)([j.Ay], () => j.Ay.getVoiceChannelId() === t),
         R = (0, r.bG)([g.Ay], () => (0, p.A)(g.Ay)),
-        O = (0, r.bG)([x.A, C.A], () => null != _ && (0, h.vz)(_, x.A, C.A, !0)),
+        O = (0, r.bG)([x.A, C.A], () => null != S && (0, h.vz)(S, x.A, C.A, !0)),
         { analyticsLocations: L } = (0, u.Ay)(d.A.GUILD_ROOM),
         { Component: P } = (0, o.c)("enable"),
         M = (0, r.bG)([g.Ay], () => g.Ay.supports(N.O5.VIDEO)),
         w = l.useRef(null),
         U = l.useCallback(() => {
-            if (null != S) {
+            if (null != _) {
                 if (!R) return void (0, m.A)();
-                ((0, A.A)(S, t, L), (0, y.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
+                ((0, A.A)(_, t, L), (0, y.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
             }
-        }, [S, R, t, L]);
-    return null != _ && null != S && O && T && M
+        }, [_, R, t, L]);
+    return null != S && null != _ && O && T && M
         ? (0, i.jsxs)(c.D, {
               "aria-label": E.intl.string(E.t.fjBNo1),
               className: b.XI,

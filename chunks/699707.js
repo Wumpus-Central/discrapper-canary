@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => S });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(216418),
     h = n(80051),
     p = n(280450),
-    m = n(192820),
+    m = n(360906),
     A = n(625494),
     f = n(220144),
     x = n(175203),
@@ -23,13 +23,13 @@ var i = n(477900),
     E = n(517689);
 let v = 16 / 9,
     b = 8 + j.Vp;
-function _(e) {
+function S(e) {
     let t,
         {
             onSelectParticipant: n,
             onContextMenuParticipant: a,
-            onFullscreenParticipant: _,
-            participants: S,
+            onFullscreenParticipant: S,
+            participants: _,
             filteredParticipants: T,
             popoutType: R,
             inCall: O,
@@ -40,9 +40,9 @@ function _(e) {
             width: U,
             height: D,
             layout: V,
-            idle: G,
+            idle: k,
         } = e,
-        k = m.Ay.getVideoComponent(),
+        G = m.Ay.getVideoComponent(),
         B = p.default.getId(),
         [F, z] = l.useState(null),
         H = (0, d.Ay)(F),
@@ -114,7 +114,7 @@ function _(e) {
         eC = l.useCallback((e) => {
             (z(e), Y(!1));
         }, []),
-        ej = J ? [] : (0, C.Cf)(S, P, B),
+        ej = J ? [] : (0, C.Cf)(_, P, B),
         { visibleParticipants: ey, participantTileWidth: eI } = (0, j.i4)(U, T);
     return (0, i.jsxs)("div", {
         className: s()(E.zr, N.tR, w),
@@ -146,11 +146,11 @@ function _(e) {
                                                           noBorder: eo >= U || er >= D,
                                                           channel: L,
                                                           className: N.JS,
-                                                          videoComponent: k,
+                                                          videoComponent: G,
                                                           width: U,
                                                           participant: t,
                                                           onClick: n,
-                                                          onDoubleClick: _,
+                                                          onDoubleClick: S,
                                                           onContextMenu: a,
                                                           onVideoResize: eC,
                                                           inCall: O,
@@ -166,7 +166,7 @@ function _(e) {
                             }),
                             en
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: s()(E.$l, { [E.N7]: G }),
+                                      className: s()(E.$l, { [E.N7]: k }),
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: L.id,
@@ -188,7 +188,7 @@ function _(e) {
                             channel: L,
                             onClick: n,
                             onContextMenu: a,
-                            onDoubleClick: _,
+                            onDoubleClick: S,
                             participants: ey,
                             participantTileWidth: eI,
                             selectedParticipantId: P.id,

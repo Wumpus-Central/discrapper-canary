@@ -1936,7 +1936,7 @@ function i4() {
     return { runningGame: t ?? void 0, runningGameApplication: n ?? void 0 };
 }
 var i6 = n(769015),
-    i8 = n(192820),
+    i8 = n(360906),
     i7 = n(935671),
     i9 = n(435075);
 function se(e) {

@@ -376,7 +376,7 @@ var eW = n(844222),
     eJ = n(977997),
     e0 = n(312006),
     e1 = n(175203),
-    e4 = n(192820),
+    e4 = n(360906),
     e2 = n(756872);
 function e6(e) {
     let { aspectRatio: t, className: n, children: s, width: i, ...a } = e,
