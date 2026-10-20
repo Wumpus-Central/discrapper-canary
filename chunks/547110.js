@@ -445,7 +445,9 @@ function eT(e) {
     let u = (0, k.d8)(d, n),
         m = (0, C.P)({ user: d, channelId: n.id, guildId: l, messageId: t.id })(u),
         x = a.useCallback(() => {
-            null != l && (0, eh.vn)(l, ea.VV.GUILD_SPACE, { source: "Music System Message" });
+            null != l &&
+                ((0, ef.jb)(l, ef.Rk.MUSIC_SYSTEM_MESSAGE),
+                (0, eh.vn)(l, ea.VV.GUILD_SPACE, { source: "Music System Message" }));
         }, [l]);
     if (null == r || null == l) return null;
     let g = (0, eN.O)(r, null != d ? u.nick : null);

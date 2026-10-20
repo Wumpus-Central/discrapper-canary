@@ -15,7 +15,11 @@ class d {
         ((this._guildId = e), (this._guildMemberExists = (n) => t(e, n)));
     }
     acknowledge(e) {
-        (this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e));
+        let t = this._unacknowledgedRequests.delete(e);
+        return (this._pendingRequests.delete(e), t);
+    }
+    isSettled(e) {
+        return this._sentRequests.has(e) && !this._unacknowledgedRequests.has(e) && !this._pendingRequests.has(e);
     }
     flushRequests(e) {
         if (0 === this._pendingRequests.size) return;
@@ -55,7 +59,10 @@ class c {
         !1 !== this._getGuildState(e).request(t) && this._flush.delay(!1);
     }
     acknowledge(e, t) {
-        this._getGuildState(e).acknowledge(t);
+        return this._getGuildState(e).acknowledge(t);
+    }
+    isSettled(e, t) {
+        return this._guildStates[e]?.isSettled(t) ?? !1;
     }
     flushRequests() {
         l().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
@@ -135,6 +142,9 @@ class S extends r.Ay.Store {
     requestMember(e, t) {
         I(e, t);
     }
+    isMemberRequestSettled(e, t) {
+        return h.isSettled(e, t);
+    }
     getDebugState(e) {
         return h.getDebugState(e);
     }
@@ -146,13 +156,17 @@ let N = new S(a.h, {
         return (h.requestUnacknowledged(), !1);
     },
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
-        let { chunks: t } = e;
+        let { chunks: t } = e,
+            n = !1;
         for (let e of t)
             (e.members.forEach((t) => {
-                h.acknowledge(e.guildId, t.user.id);
+                n = h.acknowledge(e.guildId, t.user.id) || n;
             }),
-                null != e.notFound && e.notFound.forEach((t) => h.acknowledge(e.guildId, t)));
-        return !1;
+                null != e.notFound &&
+                    e.notFound.forEach((t) => {
+                        n = h.acknowledge(e.guildId, t) || n;
+                    }));
+        return n;
     },
     SEARCH_MESSAGES_SUCCESS: g,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {

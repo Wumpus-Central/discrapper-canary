@@ -12,6 +12,7 @@ let i = {
         WINNER_BADGE: "winner_badge",
         LEADER_BADGE: "leader_badge",
         LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
+        MUSIC_SYSTEM_MESSAGE: "music_system_message",
     };
 function o(e, t, n) {
     l.default.track(r.HAw.SERVER_HUB_TOGGLE_SETTING, { guild_id: e, type: t, value: n });
