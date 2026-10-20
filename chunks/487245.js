@@ -34,7 +34,7 @@ var i,
     w = n(554146),
     G = n(661531),
     x = n(366010),
-    k = n(62010),
+    k = n(812993),
     F = n(736653),
     B = n(826673),
     V = n(74396),
@@ -145,7 +145,12 @@ function q(e) {
                     (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
                 ],
             }),
-            u && (0, r.jsx)("div", { className: z.Ad, children: (0, r.jsx)(k.E, { type: "new", variant: "primary" }) }),
+            u &&
+                (0, r.jsx)(k.Lp, {
+                    className: z.Ad,
+                    text: $.intl.string($.t.y2b7CA),
+                    color: G.A.unsafe_rawColors.RED_430.css,
+                }),
         ],
     });
 }
