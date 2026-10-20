@@ -52,7 +52,7 @@ let O = (0, S.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    W = [0.5, 0.75, 1, 1.2, 1.5, 2];
+    W = [0.5, 0.75, 1, 1.2, 1.5, 2, 3];
 var B = s(650583),
     F = s(105292),
     H = s(871273),
