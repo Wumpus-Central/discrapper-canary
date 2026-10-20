@@ -1494,7 +1494,7 @@ if (null == ti || "0.0.0" !== ti.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tr = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eX.A().log(
-    `[BUILD INFO] Release Channel: ${tr}, Build Number: 643412, Version Hash: ed8fed2a369f836fe7da0af546e040d83e1ad25a`,
+    `[BUILD INFO] Release Channel: ${tr}, Build Number: 643422, Version Hash: 8b8066059122cb8a026e59665e1020bd8685dc7a`,
 ),
     x.A.setTags({ appContext: W.QCW }),
     eN.A.initBasic(),
@@ -25736,7 +25736,7 @@ let L9 = "isHideDevBanner",
                     className: tI()(L8.Wz, L8.mr),
                     children: [
                         (0, M.jsx)(L7, { className: L8.Kk }),
-                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "643412" }),
+                        tb.intl.format(tb.t.uyrfYF, { buildNumber: "643422" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -54622,7 +54622,7 @@ function WL(e) {
 var Wy = n(670735),
     WD = n(333007),
     Wv = n(536246),
-    Wb = n(20407),
+    Wb = n(838265),
     WM = n(824613),
     WP = n(256693),
     WU = n(51250);

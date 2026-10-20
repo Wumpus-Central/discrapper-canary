@@ -4,6 +4,7 @@ var i,
         (((i = r || {})[(i.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = "PRIMARY_APP_COMMAND_NOT_FOUND"),
         (i[(i.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 1)] = "LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED"),
         (i[(i.INVALID_CHANNEL = 2)] = "INVALID_CHANNEL"),
+        (i[(i.CSP_UNAVAILABLE = 3)] = "CSP_UNAVAILABLE"),
         i);
 class a {
     reason;
