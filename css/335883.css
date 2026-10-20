@@ -195,6 +195,29 @@
     overflow: visible
 }
 
+.background__32296,
+.gradient__32296,
+.video__32296 {
+    inset: 0;
+    position: absolute
+}
+
+.video__32296 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.hidden__32296 {
+    visibility: hidden
+}
+
+.gradient__32296 {
+    background-image: linear-gradient(166.25deg, #3bd4f2 13.52%, #11333e 79.19%);
+    mix-blend-mode: multiply
+}
+
 .button_f1f2b1 {
     align-items: center;
     border: 1px solid;
@@ -674,4 +697,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=997701.d9788cb41c4a6915.css.map*/
+/*# sourceMappingURL=335883.25a8ece6e19cddd6.css.map*/
