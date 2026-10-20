@@ -2,8 +2,8 @@ t.d(n, { A: () => m });
 var l = t(477900);
 t(582128);
 var a = t(192308),
-    r = t(442433),
-    i = t(332173),
+    i = t(442433),
+    r = t(332173),
     o = t(37632),
     s = t(734057),
     c = t(706083),
@@ -20,11 +20,11 @@ function m(e) {
                               (0, c.o)(n.guildId, n.channelId, n.messageId, n.conversationId),
                               e.shouldCloseDefaultModals && (0, a.closeAllModals)());
                       },
-                f =
+                x =
                     h.noStyleAndInteraction || null == n.channelId || (null == p && null == n.originalLink)
                         ? d.tEg
                         : (e) => {
-                              (0, r.L3)(e, async () => {
+                              (0, i.L3)(e, async () => {
                                   let { default: e } = await Promise.all([
                                       t.e("638221"),
                                       t.e("343266"),
@@ -41,16 +41,16 @@ function m(e) {
                               });
                           };
             return (0, l.jsxs)(
-                i.A,
+                r.A,
                 {
                     role: "link",
                     onClick: g,
-                    onContextMenu: f,
+                    onContextMenu: x,
                     className: "channelMention",
                     children: [
                         null != n.inContent ? m(n.inContent, h) : null,
                         null != n.inContent ? (0, l.jsx)(o.A, {}) : null,
-                        (0, u.t)(n, m, h),
+                        (0, u.tj)(n, m, h),
                     ],
                 },
                 h.key,

@@ -1,7 +1,8 @@
-function l(e, n, t) {
-    return "string" == typeof e.content || void 0 === e.content ? e.content : n(e.content, t);
+function i(e, t, n) {
+    return "string" == typeof e.content || void 0 === e.content ? e.content : t(e.content, n);
 }
-function a(e) {
+function r(e) {
     return "home" === e || "browse" === e || "customize" === e || "guide" === e || "linked-roles" === e;
 }
-t.d(n, { d: () => a, t: () => l });
+n.d(t, { Q0: () => a, dq: () => r, tj: () => i });
+let a = /\x1B\[(\d+(?:[:;]\d+)*)m/g;

@@ -1872,7 +1872,7 @@ let l_ = /^discord.gg\/[a-zA-Z0-9-]+/,
                         onClick: (t) => {
                             (t.preventDefault(), e.onClick());
                         },
-                        children: (0, lI.t)(e, t, l),
+                        children: (0, lI.tj)(e, t, l),
                     },
                     l.key,
                 ),

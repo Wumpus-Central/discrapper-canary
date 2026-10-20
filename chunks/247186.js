@@ -1,102 +1,101 @@
-t.d(n, { r3: () => et, Ay: () => em, xS: () => ec });
+t.d(n, { r3: () => en, Ay: () => ed, xS: () => es });
 var l = t(477900),
     a = t(582128),
-    r = t(503698),
-    i = t.n(r),
+    i = t(503698),
+    r = t.n(i),
     o = t(478676),
     s = t(939249),
     c = t(933832),
     u = t(624479),
     d = t(140735),
     m = t(9578),
-    h = t(268218),
-    p = t(236285),
-    g = t(232042),
-    f = t(906754),
+    h = t(236285),
+    p = t(232042),
+    g = t(906754),
     x = t(332173),
-    j = t(37632),
-    y = t(534890),
+    f = t(37632),
+    j = t(534890),
     A = t(105292),
-    C = t(879386);
-let k = function () {
-    return (0, l.jsx)(y.ChatIcon, {
+    y = t(879386);
+let C = function () {
+    return (0, l.jsx)(j.ChatIcon, {
         size: "md",
         color: "currentColor",
-        className: C.K,
+        className: y.K,
         "aria-label": A.intl.string(A.t.BAB0yK),
     });
 };
-var I = t(112107),
+var k = t(112107),
     E = t(930101),
-    N = t(302031),
-    v = t(586172),
-    b = t(71393),
-    S = t(957565),
-    L = t(143145),
-    M = t(392605),
+    I = t(302031),
+    N = t(441136),
+    v = t(71393),
+    b = t(957565),
+    S = t(143145),
+    L = t(392605),
     T = t(785562),
-    _ = t(192308),
-    P = t(588975),
-    O = t(442433),
-    w = t(975807),
-    D = t(235393),
-    U = t(679164),
-    R = t(652215),
-    G = t(24686),
-    H = t(147190),
-    $ = t(556300),
-    K = t(990474);
+    M = t(192308),
+    _ = t(588975),
+    P = t(442433),
+    O = t(975807),
+    w = t(235393),
+    D = t(679164),
+    U = t(652215),
+    R = t(24686),
+    G = t(147190),
+    H = t(556300),
+    $ = t(990474);
 t(938796);
-var B = t(380610),
-    V = t(435954),
-    z = t(721779),
-    W = t(333421),
-    F = t(100392),
-    X = t(950980),
-    q = t(836156);
-let Y = a.lazy(() =>
+var K = t(380610),
+    B = t(435954),
+    V = t(721779),
+    z = t(333421),
+    W = t(100392),
+    F = t(950980),
+    X = t(836156);
+let q = a.lazy(() =>
         Promise.all([t.e("503634"), t.e("761764"), t.e("218126"), t.e("60800"), t.e("467696")])
             .then(t.bind(t, 881267))
             .then((e) => ({ default: e.PlaygroundEmbed })),
     ),
-    Z = a.lazy(() =>
+    Y = a.lazy(() =>
         Promise.all([t.e("378100"), t.e("886456"), t.e("278078")])
             .then(t.bind(t, 909261))
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
-    J = RegExp("^" + z.st.source, z.st.flags);
-var Q = t(454908),
-    ee = t(266645);
-function en(e) {
+    Z = RegExp("^" + V.st.source, V.st.flags);
+var J = t(454908),
+    Q = t(266645);
+function ee(e) {
     let { gameId: n, authorId: t } = e;
-    return ((0, Q.I)(n), (0, l.jsx)(ee.A, { gameId: n, authorId: t }));
+    return ((0, J.I)(n), (0, l.jsx)(Q.A, { gameId: n, authorId: t }));
 }
-function et() {
-    return { gameMention: { react: (e, n, t) => (0, l.jsx)(en, { gameId: e.gameId, authorId: t.authorId }, t.key) } };
+function en() {
+    return { gameMention: { react: (e, n, t) => (0, l.jsx)(ee, { gameId: e.gameId, authorId: t.authorId }, t.key) } };
 }
-var el = t(881140),
-    ea = t(279538),
-    er = t(165648),
+var et = t(881140),
+    el = t(279538),
+    ea = t(165648),
     ei = t(969490);
-let eo = { display: "inline" };
-function es(e) {
+let er = { display: "inline" };
+function eo(e) {
     return e.stopPropagation();
 }
-function ec(e) {
+function es(e) {
     return {
         ...e,
-        react: (n, t, a) => (0, l.jsx)("span", { style: eo, onClick: es, children: e.react(n, t, a) }, a.key),
+        react: (n, t, a) => (0, l.jsx)("span", { style: er, onClick: eo, children: e.react(n, t, a) }, a.key),
     };
 }
-function eu(e) {
+function ec(e) {
     let { text: n } = e,
-        [t, r] = a.useState(!1);
+        [t, i] = a.useState(!1);
     return (0, l.jsx)(s.D, {
         onClick: function () {
-            (0, S.C)(
+            (0, b.C)(
                 n,
-                () => r(!0),
-                () => r(!1),
+                () => i(!0),
+                () => i(!1),
             );
         },
         children: t
@@ -104,15 +103,15 @@ function eu(e) {
             : (0, l.jsx)(u.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
-let ed = {
+let eu = {
     blockQuote: {
         react: (e, n, t) =>
             (0, l.jsxs)(
                 "div",
                 {
-                    className: er.h,
+                    className: ea.h,
                     children: [
-                        (0, l.jsx)("div", { className: er.r }),
+                        (0, l.jsx)("div", { className: ea.r }),
                         (0, l.jsx)("blockquote", { children: n(e.content, t) }),
                     ],
                 },
@@ -122,52 +121,31 @@ let ed = {
     s: { react: (e, n, t) => (0, l.jsx)("s", { children: n(e.content, t) }, t.key) },
     highlight: { react: (e, n, t) => (0, l.jsx)("span", { className: "highlight", children: e.content }, t.key) },
     paragraph: { react: (e, n, t) => (0, l.jsx)("p", { children: n(e.content, t) }, t.key) },
-    inlineCode: { react: (e, n, t) => (0, l.jsx)("code", { className: "inline", children: (0, L.t)(e, n, t) }, t.key) },
+    inlineCode: {
+        react: (e, n, t) => (0, l.jsx)("code", { className: "inline", children: (0, S.tj)(e, n, t) }, t.key),
+    },
     codeBlock: {
-        react(e, n, a) {
-            function r() {
-                return (0, l.jsx)("code", { className: i()(ei.kw, "hljs"), children: (0, L.t)(e, n, a) });
-            }
-            return (0, l.jsx)(
+        react: (e, n, t) =>
+            (0, l.jsx)(
                 "pre",
                 {
                     children: (0, l.jsxs)("div", {
-                        className: er.Hy,
+                        className: ea.Hy,
                         children: [
-                            S.p5
-                                ? (0, l.jsx)("div", { className: er.lB, children: (0, l.jsx)(eu, { text: e.content }) })
+                            b.p5
+                                ? (0, l.jsx)("div", { className: ea.lB, children: (0, l.jsx)(ec, { text: e.content }) })
                                 : null,
-                            (0, l.jsx)(v.l, {
-                                location: "MarkupReactRules",
+                            (0, l.jsx)(N.E, {
                                 code: e.content,
                                 lang: e.lang,
-                                className: i()(ei.kw, "hljs"),
-                                highlightedClassName: ea.H,
-                                children: (0, l.jsx)(h.c2, {
-                                    createPromise: () =>
-                                        Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 752238)),
-                                    webpackId: 752238,
-                                    renderFallback: r,
-                                    render: (n) => {
-                                        if (!(e.lang && n.hasLanguage(e.lang))) return r();
-                                        {
-                                            let t = n.highlight(e.lang, e.content, !0);
-                                            return null == t
-                                                ? r()
-                                                : (0, l.jsx)("code", {
-                                                      className: i()(ei.kw, "hljs", t.language),
-                                                      dangerouslySetInnerHTML: { __html: t.value },
-                                                  });
-                                        }
-                                    },
-                                }),
+                                className: r()(ei.kw, "hljs"),
+                                highlightedClassName: el.H,
                             }),
                         ],
                     }),
                 },
-                a.key,
-            );
-        },
+                t.key,
+            ),
     },
     text: {
         react: (e, n, t) =>
@@ -178,9 +156,9 @@ let ed = {
     spoiler: {
         react: (e, n, t) =>
             (0, l.jsx)(
-                N.Ay,
+                I.Ay,
                 {
-                    type: N.Ay.Types.TEXT,
+                    type: I.Ay.Types.TEXT,
                     inline: t.formatInline,
                     renderTextElement: (e, n) =>
                         null == e || e.type !== m.A || n ? e : a.cloneElement(e, { tabIndex: -1 }),
@@ -191,7 +169,7 @@ let ed = {
     },
     soundboard: {
         react: (e, n, t) =>
-            (0, l.jsx)(I.Ay, {
+            (0, l.jsx)(k.Ay, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -201,19 +179,19 @@ let ed = {
     },
     staticRouteLink: {
         react: (e, n, t) =>
-            (0, L.d)(e.id)
+            (0, S.dq)(e.id)
                 ? (0, l.jsxs)(
                       x.A,
                       {
                           role: "link",
                           onClick: function () {
-                              (0, M.i)(e.guildId, e.id, e.itemId);
+                              (0, L.i)(e.guildId, e.id, e.itemId);
                           },
                           className: "channelMention",
                           iconType: e.id,
                           children: [
                               n(e.mainContent, t),
-                              null != e.itemContent ? (0, l.jsx)(j.A, {}) : null,
+                              null != e.itemContent ? (0, l.jsx)(f.A, {}) : null,
                               null != e.itemContent ? n(e.itemContent, t) : null,
                           ],
                       },
@@ -225,15 +203,15 @@ let ed = {
     list: {
         react: (e, n, t) => {
             let a = e.ordered ? "ol" : "ul",
-                r = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
+                i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, o.reactElement)(a, `${t.key}`, {
                 start: e.start,
-                className: t.formatInline ? er.tZ : null,
-                style: { "--totalCharacters": r, "--olCounterStart": null == e.start ? void 0 : e.start - 1 },
+                className: t.formatInline ? ea.tZ : null,
+                style: { "--totalCharacters": i, "--olCounterStart": null == e.start ? void 0 : e.start - 1 },
                 children: e.items.map((e, a) => {
-                    let r = (0, o.reactElement)("span", `${t.key}-${a}-innerSpan`, { children: n(e, t) });
+                    let i = (0, o.reactElement)("span", `${t.key}-${a}-innerSpan`, { children: n(e, t) });
                     return (0, o.reactElement)("li", `${t.key}-${a}` + a, {
-                        children: [r, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
+                        children: [i, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
                     });
                 }),
             });
@@ -244,24 +222,24 @@ let ed = {
             let a = (0, o.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
             return (0, o.reactElement)("h" + e.level, t?.key != null ? `${t.key}` : null, {
                 children: [a, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
-                className: t.formatInline ? er.tZ : null,
+                className: t.formatInline ? ea.tZ : null,
             });
         },
     },
     guild: {
         react: (e, n, t) => {
-            let a = b.A.getGuild(e.guildId);
-            return (0, l.jsx)(f.A, { guild: a, children: (0, L.t)(e, n, t) }, t.key);
+            let a = v.A.getGuild(e.guildId);
+            return (0, l.jsx)(g.A, { guild: a, children: (0, S.tj)(e, n, t) }, t.key);
         },
     },
-    channel: { react: (e, n, t) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, L.t)(e, n, t) }, t.key) },
-    message: { react: (e, n, t) => (0, l.jsx)(k, {}, t.key) },
+    channel: { react: (e, n, t) => (0, l.jsx)(p.A, { iconType: e.iconType, children: (0, S.tj)(e, n, t) }, t.key) },
+    message: { react: (e, n, t) => (0, l.jsx)(C, {}, t.key) },
     subtext: {
         react: (e, n, t) => {
             let l = (0, o.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
             return (0, o.reactElement)("small", t?.key != null ? `${t.key}` : null, {
                 children: l,
-                className: t.formatInline ? er.tZ : null,
+                className: t.formatInline ? ea.tZ : null,
             });
         },
     },
@@ -272,68 +250,68 @@ let ed = {
                 : (0, l.jsx)("span", { children: n(e.content, t) }, t.key),
     },
 };
-function em(e) {
+function ed(e) {
     let { shouldStopPropagation: n } = e;
-    function r(e) {
-        return !0 === n ? ec(e) : e;
+    function i(e) {
+        return !0 === n ? es(e) : e;
     }
     return {
-        ...ed,
-        link: (0, el.A)(e),
+        ...eu,
+        link: (0, et.A)(e),
         devLink: {
-            match: (e, n) => (n.allowLinks && n.allowDevLinks ? J.exec(e) : null),
+            match: (e, n) => (n.allowLinks && n.allowDevLinks ? Z.exec(e) : null),
             parse: (e, n) => ({ target: e, type: "devLink" }),
             react: (e, n, t) => {
-                let r = e.target[0];
-                return (0, B.h4)(r)
+                let i = e.target[0];
+                return (0, K.h4)(i)
                     ? (0, l.jsxs)(
                           a.Fragment,
-                          { children: [(0, l.jsx)("span", { children: r }), (0, l.jsx)(V.default, { url: r }, r)] },
+                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(B.default, { url: i }, i)] },
                           t.key,
                       )
-                    : (0, F.W0)(r)
+                    : (0, W.W0)(i)
                       ? (0, l.jsxs)(
                             a.Fragment,
                             {
                                 children: [
-                                    (0, l.jsx)("span", { children: r }),
-                                    (0, l.jsx)(X.ExperimentEmbed, { url: r }),
+                                    (0, l.jsx)("span", { children: i }),
+                                    (0, l.jsx)(F.ExperimentEmbed, { url: i }),
                                 ],
                             },
                             t.key,
                         )
-                      : (0, q.i)(r)
+                      : (0, X.i)(i)
                         ? (0, l.jsx)(
                               a.Fragment,
                               {
                                   children: (0, l.jsxs)(a.Suspense, {
                                       fallback: null,
-                                      children: [(0, l.jsx)("span", { children: r }), (0, l.jsx)(Y, { url: r })],
+                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(q, { url: i })],
                                   }),
                               },
                               t.key,
                           )
-                        : (0, W.my)(r)
+                        : (0, z.my)(i)
                           ? (0, l.jsx)(
                                 a.Fragment,
                                 {
                                     children: (0, l.jsxs)(a.Suspense, {
                                         fallback: null,
-                                        children: [(0, l.jsx)("span", { children: r }), (0, l.jsx)(Z, { url: r })],
+                                        children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(Y, { url: i })],
                                     }),
                                 },
                                 t.key,
                             )
-                          : (0, l.jsx)("span", { children: r }, t.key);
+                          : (0, l.jsx)("span", { children: i }, t.key);
             },
             order: 6,
         },
-        emoji: r(
+        emoji: i(
             (function (e) {
                 let { emojiTooltipPosition: n = "top", enableEmojiClick: t = !0, emojiFocusable: a = !0 } = e;
                 return {
-                    react(e, r, i) {
-                        let { key: o, channelId: s, messageId: c } = i;
+                    react(e, i, r) {
+                        let { key: o, channelId: s, messageId: c } = r;
                         return e.src
                             ? (0, l.jsx)(
                                   E.H,
@@ -352,13 +330,13 @@ function em(e) {
                 };
             })(e),
         ),
-        customEmoji: r(
+        customEmoji: i(
             (function (e) {
                 let { emojiTooltipPosition: n = "top", enableEmojiClick: t = !0, emojiFocusable: a = !0 } = e;
                 return {
-                    react(e, r, i) {
-                        let { key: o, guildId: s, channelId: c, messageId: u } = i,
-                            d = p.Ay.getDisambiguatedEmojiContext(s).getById(e.emojiId);
+                    react(e, i, r) {
+                        let { key: o, guildId: s, channelId: c, messageId: u } = r,
+                            d = h.Ay.getDisambiguatedEmojiContext(s).getById(e.emojiId);
                         if (null != d) {
                             let n = d.require_colons;
                             e = { ...e, name: n ? `:${d.name}:` : d.name };
@@ -372,23 +350,23 @@ function em(e) {
                 };
             })(e),
         ),
-        channelMention: (0, $.A)(e),
-        commandMention: (0, K.Ay)(e),
+        channelMention: (0, H.A)(e),
+        commandMention: (0, $.Ay)(e),
         attachmentLink: {
-            react(n, a, r) {
-                let o = r.noStyleAndInteraction
+            react(n, a, i) {
+                let o = i.noStyleAndInteraction
                         ? void 0
                         : async (t) => {
-                              let l = await U.AN(n.attachmentUrl);
+                              let l = await D.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
-                                  D.A.trackLinkClicked(l),
-                                  e.shouldCloseDefaultModals && (0, _.closeAllModals)(),
-                                  (0, w.A)(l));
+                                  w.A.trackLinkClicked(l),
+                                  e.shouldCloseDefaultModals && (0, M.closeAllModals)(),
+                                  (0, O.A)(l));
                           },
-                    s = r.noStyleAndInteraction
-                        ? R.tEg
+                    s = i.noStyleAndInteraction
+                        ? U.tEg
                         : (e) => {
-                              (0, O.L3)(e, async () => {
+                              (0, P.L3)(e, async () => {
                                   let { default: e } = await t.e("762529").then(t.bind(t, 740024));
                                   return (t) =>
                                       (0, l.jsx)(e, {
@@ -407,19 +385,19 @@ function em(e) {
                         onContextMenu: s,
                         className: "attachmentLink",
                         children: [
-                            (0, l.jsx)(P.P, { size: "xs", className: i()(H.Kk, G.K), color: "currentColor" }),
-                            (0, L.t)(n, a, r),
+                            (0, l.jsx)(_.P, { size: "xs", className: r()(G.Kk, R.K), color: "currentColor" }),
+                            (0, S.tj)(n, a, i),
                         ],
                     },
-                    r.key,
+                    i.key,
                 );
             },
         },
-        soundboard: r(ed.soundboard),
+        soundboard: i(eu.soundboard),
         gameMention: {
             react(e, n, t) {
                 let { gameId: a } = e;
-                return (0, l.jsx)(ee.A, { gameId: a, authorId: t.authorId }, t.key);
+                return (0, l.jsx)(Q.A, { gameId: a, authorId: t.authorId }, t.key);
             },
         },
     };

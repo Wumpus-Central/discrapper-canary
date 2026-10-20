@@ -1,77 +1,77 @@
-let n;
-l.d(t, { F: () => d, Q4: () => g, W9: () => m });
-var r = l(915639);
-let s = new Map(),
-    o = new Map(),
-    a = new Set(),
-    c = Promise.resolve();
-function i(e) {
-    let t = s.get(e);
+let l;
+r.d(t, { F: () => E, Q4: () => f, W9: () => v });
+var n = r(926890);
+let o = new Map(),
+    i = new Map(),
+    u = new Set(),
+    a = Promise.resolve();
+function s(e) {
+    let t = o.get(e);
     if (null != t) return t;
-    if (!(e in r.pb)) {
+    if (!(e in n.pb)) {
         let t = Promise.resolve(null);
-        return (s.set(e, t), t);
+        return (o.set(e, t), t);
     }
     return (
-        (c = (t = c
+        (a = (t = a
             .then(async () => {
-                let t = await (null == n &&
-                    (n = Promise.resolve()
-                        .then(() => (0, r.A)())
+                let t = await (null == l &&
+                    (l = Promise.resolve()
+                        .then(() => (0, n.A)())
                         .catch(() => null)
-                        .then((e) => (null == e && (n = void 0), e))),
-                n);
-                return null == t ? null : t.loadGrammar(r.pb[e]);
+                        .then((e) => (null == e && (l = void 0), e))),
+                l);
+                return null == t ? null : t.loadGrammar(n.pb[e]);
             })
             .then((t) => {
-                if (null == t) return (s.delete(e), o.delete(e), null);
-                for (let l of (o.set(e, t), a)) l(e);
+                if (null == t) return (o.delete(e), i.delete(e), null);
+                for (let r of (i.set(e, t), u)) r(e);
                 return t;
             })
-            .catch(() => (s.delete(e), o.delete(e), null))).then(
+            .catch(() => (o.delete(e), i.delete(e), null))).then(
             () => {},
             () => {},
         )),
-        s.set(e, t),
+        o.set(e, t),
         t
     );
 }
-function h(e) {
+function d(e) {
     return {
         highlightToHtml(t) {
-            let l = e.createSession();
+            let r = e.createSession();
             try {
-                l.setText(
+                r.setText(
                     t.endsWith("\n")
                         ? t
                         : `${t}
 `,
                 );
-                let { html: e, missingInjections: n } = l.highlightToHtml();
-                return { html: e, missingInjections: n.sort() };
+                let { html: e, missingInjections: l } = r.highlightToHtml();
+                return { html: e, missingInjections: l.sort() };
             } finally {
-                l.free();
+                r.free();
             }
         },
     };
 }
-let u = new Map();
-async function p(e) {
+let c = new Map();
+async function h(e) {
     try {
-        let t = await i(e);
-        return null == t ? null : h(t);
+        let t = await s(e);
+        return null == t ? null : d(t);
     } catch {
         return null;
     }
 }
-function m(e) {
-    let t = u.get(e);
-    return (null == t && ((t = p(e)), u.set(e, t)), t);
+function v(e) {
+    let t = c.get(e);
+    return (null == t && ((t = h(e)), c.set(e, t)), t);
 }
-function d(e) {
-    let t = o.has(e) ? (o.get(e) ?? null) : (i(e), null);
-    return null != t ? h(t) : null;
+function E(e) {
+    let t = i.has(e) ? (i.get(e) ?? null) : (s(e), null);
+    return null != t ? d(t) : null;
 }
-function g(e) {
-    return (a.add(e), () => a.delete(e));
+function f(e) {
+    return (u.add(e), () => u.delete(e));
 }

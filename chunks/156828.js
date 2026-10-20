@@ -1,4 +1,4 @@
-n.d(t, { Cu: () => a.Cu, Fe: () => l, c2: () => d, qT: () => o, sq: () => a.sq });
+n.d(t, { Cu: () => a.Cu, Fe: () => l, qT: () => o, sq: () => a.sq });
 var i = n(477900),
     r = n(582128),
     a = n(841117);
@@ -35,18 +35,5 @@ function o(e) {
             _();
         }),
         h
-    );
-}
-function d(e) {
-    let { createPromise: t, webpackId: n, render: s, renderFallback: l } = e,
-        [o, d] = r.useState(null);
-    return (
-        r.useEffect(() => {
-            (0, a.sq)({ createPromise: t, webpackId: n }).then((e) => {
-                let { default: t } = e;
-                return d(t);
-            });
-        }, []),
-        (0, i.jsx)(i.Fragment, { children: null == o ? l() : s(o) })
     );
 }

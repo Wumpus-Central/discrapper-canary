@@ -1,34 +1,33 @@
-t.d(l, { A: () => N });
-var r = t(477900),
-    n = t(582128),
-    a = t(503698),
-    s = t.n(a),
-    u = t(478676),
-    c = t.n(u),
-    d = t(268218),
-    o = t(481859),
-    i = t(586172),
-    h = t(694403),
-    g = t(999915),
-    p = t(881140),
-    f = t(816969),
-    m = t(969490);
-let k = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
-function j(e) {
+l.d(t, { A: () => A });
+var r = l(477900),
+    a = l(582128),
+    n = l(503698),
+    s = l.n(n),
+    u = l(478676),
+    c = l.n(u),
+    d = l(481859),
+    o = l(441136),
+    i = l(694403),
+    h = l(999915),
+    p = l(881140),
+    f = l(816969),
+    g = l(969490);
+let m = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
+function k(e) {
     return "string" == typeof e.content ? e.content : y(e.content);
 }
-let x = {
+let R = {
         ...c().defaultRules,
         heading: {
             ...c().defaultRules.heading,
-            react(e, l, t) {
-                let n = `h${e.level}`;
-                return (0, r.jsx)(o.A, { tag: n, children: l(e.content, t) }, t.key);
+            react(e, t, l) {
+                let a = `h${e.level}`;
+                return (0, r.jsx)(d.A, { tag: a, children: t(e.content, l) }, l.key);
             },
         },
         paragraph: {
             ...c().defaultRules.paragraph,
-            react: (e, l, t) => (0, r.jsx)("div", { className: f.FY, children: l(e.content, t) }, t.key),
+            react: (e, t, l) => (0, r.jsx)("div", { className: f.FY, children: t(e.content, l) }, l.key),
         },
         strong: { ...c().defaultRules.strong, order: 6 },
         em: { ...c().defaultRules.em, order: 6 },
@@ -38,85 +37,56 @@ let x = {
             order: 6,
             match: c().inlineRegex(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~\\]|\s(?!~~))+?)~~/),
         },
-        link: { ...h.Ay, ...(0, p.A)({ enableBuildOverrides: !1 }), order: 6 },
+        link: { ...i.Ay, ...(0, p.A)({ enableBuildOverrides: !1 }), order: 6 },
         blockQuote: {
             ...c().defaultRules.blockQuote,
-            react: (e, l, t) => (0, r.jsx)("blockquote", { className: f.aV, children: j(e) }, t.key),
+            react: (e, t, l) => (0, r.jsx)("blockquote", { className: f.aV, children: k(e) }, l.key),
         },
         image: {
             ...c().defaultRules.image,
             order: 6,
-            match(e, l, t) {
+            match(e, t, l) {
                 let r = c().defaultRules.image;
                 if (null == r || null == r.match) return !1;
-                let n = r.match(e, l, t);
-                if (null != n && Array.isArray(n) && n.length >= 3) {
-                    let e = n[2];
-                    if ("string" == typeof e) return null != e.match(k) ? n : null;
+                let a = r.match(e, t, l);
+                if (null != a && Array.isArray(a) && a.length >= 3) {
+                    let e = a[2];
+                    if ("string" == typeof e) return null != e.match(m) ? a : null;
                 }
                 return !1;
             },
         },
         inlineCode: {
-            ...g.Ay.RULES.inlineCode,
+            ...h.Ay.RULES.inlineCode,
             order: 6,
-            react: (e, l, t) => (0, r.jsx)("code", { className: f.hQ, children: j(e) }, t.key),
+            react: (e, t, l) => (0, r.jsx)("code", { className: f.hQ, children: k(e) }, l.key),
         },
         codeBlock: {
             ...c().defaultRules.codeBlock,
-            react(e, l, n) {
-                function a() {
-                    return (0, r.jsx)("code", { className: s()(m.kw, "hljs"), children: j(e) });
-                }
-                return (0, r.jsx)(
+            react: (e, t, l) =>
+                (0, r.jsx)(
                     "pre",
-                    {
-                        children: (0, r.jsx)(i.l, {
-                            location: "Markdown",
-                            lang: e.lang,
-                            code: e.content,
-                            className: s()(m.kw, "hljs"),
-                            children: (0, r.jsx)(d.c2, {
-                                createPromise: () =>
-                                    Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 752238)),
-                                webpackId: 752238,
-                                renderFallback: a,
-                                render: (l) => {
-                                    if (!(e.lang && l.hasLanguage(e.lang)) || "string" != typeof e.content) return a();
-                                    {
-                                        let t = l.highlight(e.lang, e.content, !0);
-                                        return null == t
-                                            ? a()
-                                            : (0, r.jsx)("code", {
-                                                  className: s()(m.kw, "hljs", t.language),
-                                                  dangerouslySetInnerHTML: { __html: t.value },
-                                              });
-                                    }
-                                },
-                            }),
-                        }),
-                    },
-                    n.key,
-                );
-            },
+                    { children: (0, r.jsx)(o.E, { lang: e.lang, code: e.content, className: s()(g.kw, "hljs") }) },
+                    l.key,
+                ),
         },
     },
-    R = c().parserFor(x),
-    y = c().reactFor(c().ruleOutput(x, "react"));
-class w extends n.PureComponent {
-    static rules = x;
-    static defaultProps = { parser: R, output: y };
+    x = c().parserFor(R),
+    y = c().reactFor(c().ruleOutput(R, "react"));
+class j extends a.PureComponent {
+    static rules = R;
+    static defaultProps = { parser: x, output: y };
     render() {
-        let { className: e, children: l, state: t, parser: n, output: a } = this.props,
-            u = a(
-                n(
-                    `${l}
+        let { className: e, children: t, state: l, parser: a, output: n } = this.props,
+            u = n(
+                a(
+                    `${t}
 
 `,
-                    { inline: !1, ...t },
+                    { inline: !1, ...l },
                 ),
             );
         return (0, r.jsx)("div", { className: s()(f.wD, e), children: u });
     }
 }
-let N = w;
+let A = j;

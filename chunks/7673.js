@@ -236,10 +236,10 @@ let M = {
         mov: "video/quicktime",
     },
     F = new Set(["video/mp4", "video/webm", "video/quicktime"]);
-function N(e) {
+function B(e) {
     return null != e && F.has(e);
 }
-let B = [],
+let N = [],
     H = new Map(),
     R = new Map();
 function D(e, t) {
@@ -258,7 +258,7 @@ let G = function (e) {
         n = a.useMemo(() => {
             var n;
             return null == e
-                ? B
+                ? N
                 : ((n = Array.isArray(e) ? e : [e]),
                   n.flatMap((e) => {
                       if (null == e) return [];
@@ -336,7 +336,7 @@ let $ = function (e) {
             children: o,
         } = e,
         c = G(t),
-        d = N(c?.mimeType);
+        d = B(c?.mimeType);
     return (0, l.jsxs)("div", {
         className: Y.k,
         style: {
@@ -370,7 +370,7 @@ let J = function (e) {
         n = G(t);
     return null == n
         ? null
-        : N(n.mimeType)
+        : B(n.mimeType)
           ? (0, l.jsx)(_.A, { className: q.S, src: n.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 })
           : (0, l.jsx)("img", { className: q.S, src: n.src, alt: n.alt ?? "" });
 };
@@ -1436,27 +1436,27 @@ let eF = function (e) {
         }),
     });
 };
-function eN() {
+function eB() {
     return (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } });
 }
-var eB = n(362373);
+var eN = n(362373);
 let eH = function (e) {
     let { bannerSrc: t, logoSrc: n, backgroundColor: a, href: r, children: s } = e;
     return (0, l.jsxs)("div", {
-        className: eB.ZK,
+        className: eN.ZK,
         children: [
             (0, l.jsx)("div", {
-                className: eB.vK,
+                className: eN.vK,
                 style: null != a ? { background: a } : void 0,
                 children: (0, l.jsx)(J, { src: t }),
             }),
             (0, l.jsxs)("div", {
-                className: eB.Qs,
+                className: eN.Qs,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: eB.wx,
+                        className: eN.wx,
                         children: [
-                            null != n && (0, l.jsx)("div", { className: eB.wm, children: (0, l.jsx)(J, { src: n }) }),
+                            null != n && (0, l.jsx)("div", { className: eN.wm, children: (0, l.jsx)(J, { src: n }) }),
                             null != r &&
                                 (0, l.jsx)(h, {
                                     variant: "overlay-primary",
@@ -1465,7 +1465,7 @@ let eH = function (e) {
                                 }),
                         ],
                     }),
-                    null != s && (0, l.jsx)("div", { className: eB.Y_, children: s }),
+                    null != s && (0, l.jsx)("div", { className: eN.Y_, children: s }),
                 ],
             }),
         ],
@@ -1494,16 +1494,16 @@ let eD = {
                         return n
                             ? (0, l.jsxs)(ep.A, {
                                   children: [
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
-                                      (0, l.jsx)(eN, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
+                                      (0, l.jsx)(eB, {}),
                                   ],
                               })
                             : null;
@@ -1773,105 +1773,70 @@ let eD = {
             },
         ],
     };
-var ez = n(586172),
+var ez = n(441136),
     eW = n(160862);
 function eK(e) {
-    let { value: t, onChange: r } = e,
-        s = "json",
-        i = a.useRef(null),
-        [o, c] = a.useState("");
-    return (
-        a.useEffect(() => {
-            let e = !1,
-                l = (t ?? "") + "\n";
-            return (
-                Promise.all([n.e("818449"), n.e("175134")])
-                    .then(n.bind(n, 752238))
-                    .then((n) => {
-                        if (e) return;
-                        let a = n.default;
-                        if (null != t && a.hasLanguage(s)) {
-                            let e = a.highlight(s, t, !0);
-                            if (null != e) return void c(e.value + "\n");
-                        }
-                        c(l);
-                    })
-                    .catch(() => {
-                        e || c(l);
-                    }),
-                () => {
-                    e = !0;
-                }
-            );
-        }, [t, s]),
-        (0, l.jsxs)("div", {
-            className: eW.t,
-            children: [
-                (0, l.jsx)("pre", {
-                    className: eW.c5,
-                    "aria-hidden": "true",
-                    children: (0, l.jsx)(ez.l, {
-                        location: "LayoutEditor",
-                        code: t,
-                        lang: "json",
-                        className: "hljs",
-                        children: (0, l.jsx)("code", {
-                            className: v()("hljs", s),
-                            dangerouslySetInnerHTML: { __html: o ?? "" },
-                        }),
-                    }),
-                }),
-                (0, l.jsx)("textarea", {
-                    ref: i,
-                    className: eW.mW,
-                    value: t,
-                    onChange: function (e) {
-                        r(e.target.value);
-                    },
-                    onScroll: function (e) {
-                        let t = e.target,
-                            n = t.previousElementSibling;
-                        null != n && ((n.scrollTop = t.scrollTop), (n.scrollLeft = t.scrollLeft));
-                    },
-                    onKeyDown: function (e) {
-                        if ("Tab" === e.key) {
-                            e.preventDefault();
-                            let n = e.target,
-                                l = n.selectionStart,
-                                a = n.selectionEnd;
-                            if (e.shiftKey) {
-                                let e = t.lastIndexOf("\n", l - 1) + 1,
-                                    n = t.indexOf("\n", l),
-                                    a = t.substring(e, -1 === n ? t.length : n),
-                                    s = 0;
-                                for (let e = 0; e < Math.min(2, a.length); e++)
-                                    if (" " === a[e]) s++;
-                                    else break;
-                                s > 0 &&
-                                    (r(t.substring(0, e) + t.substring(e + s)),
-                                    setTimeout(() => {
-                                        if (null != i.current) {
-                                            let t = Math.max(e, l - s);
-                                            i.current.selectionStart = i.current.selectionEnd = t;
-                                        }
-                                    }, 0));
-                            } else
-                                (r(t.substring(0, l) + "  " + t.substring(a)),
-                                    setTimeout(() => {
-                                        null != i.current &&
-                                            (i.current.selectionStart = i.current.selectionEnd = l + 2);
-                                    }, 0));
-                        }
-                    },
-                    spellCheck: !1,
-                    autoCapitalize: "off",
-                    autoComplete: "off",
-                    autoCorrect: "off",
-                    rows: 30,
-                }),
-            ],
-        })
-    );
+    let { value: t, onChange: n } = e,
+        r = a.useRef(null),
+        s = t.match(/\n*$/)?.[0] ?? "",
+        i = t.slice(0, t.length - s.length);
+    return (0, l.jsxs)("div", {
+        className: eW.t,
+        children: [
+            (0, l.jsxs)("pre", {
+                className: eW.c5,
+                "aria-hidden": "true",
+                children: [(0, l.jsx)(ez.E, { code: i, lang: "json", className: "hljs" }), s],
+            }),
+            (0, l.jsx)("textarea", {
+                ref: r,
+                className: eW.mW,
+                value: t,
+                onChange: function (e) {
+                    n(e.target.value);
+                },
+                onScroll: function (e) {
+                    let t = e.target,
+                        n = t.previousElementSibling;
+                    null != n && ((n.scrollTop = t.scrollTop), (n.scrollLeft = t.scrollLeft));
+                },
+                onKeyDown: function (e) {
+                    if ("Tab" === e.key) {
+                        e.preventDefault();
+                        let l = e.target,
+                            a = l.selectionStart,
+                            s = l.selectionEnd;
+                        if (e.shiftKey) {
+                            let e = t.lastIndexOf("\n", a - 1) + 1,
+                                l = t.indexOf("\n", a),
+                                s = t.substring(e, -1 === l ? t.length : l),
+                                i = 0;
+                            for (let e = 0; e < Math.min(2, s.length); e++)
+                                if (" " === s[e]) i++;
+                                else break;
+                            i > 0 &&
+                                (n(t.substring(0, e) + t.substring(e + i)),
+                                setTimeout(() => {
+                                    if (null != r.current) {
+                                        let t = Math.max(e, a - i);
+                                        r.current.selectionStart = r.current.selectionEnd = t;
+                                    }
+                                }, 0));
+                        } else
+                            (n(t.substring(0, a) + "  " + t.substring(s)),
+                                setTimeout(() => {
+                                    null != r.current && (r.current.selectionStart = r.current.selectionEnd = a + 2);
+                                }, 0));
+                    }
+                },
+                spellCheck: !1,
+                autoCapitalize: "off",
+                autoComplete: "off",
+                autoCorrect: "off",
+                rows: 30,
+            }),
+        ],
+    });
 }
 var eQ = n(132500),
     eq = n(841702),
@@ -1984,8 +1949,8 @@ let eZ = function (e) {
 };
 var e0 = n(17928),
     e1 = n(736056),
-    e8 = n(636537),
-    e4 = n(73153),
+    e4 = n(636537),
+    e8 = n(73153),
     e7 = n(913122),
     e5 = n(403362);
 let e2 = (0, e5.m6)()
@@ -2070,7 +2035,7 @@ class to extends e0.Ay.Store {
         return null == e || null == t ? null : (ts[te(e, ti(t ?? "", n))] ?? null);
     }
 }
-let tc = new to(e4.h, {
+let tc = new to(e8.h, {
     LAYOUT_SYSTEM_FETCH: function (e) {
         let { tenantId: t, layoutId: n } = e;
         tn.add(te(t, n));
@@ -2121,26 +2086,26 @@ async function tm(e) {
     let { tenantId: t, layoutId: n, abortSignal: l } = e;
     if (!tc.isFetchingLayout(t, n))
         try {
-            e4.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH", tenantId: t, layoutId: n });
-            let e = await e8.Bo.get({ url: td.Rsh.LAYOUT_SYSTEM(t, n), rejectWithError: !0, signal: l });
-            e4.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_SUCCESS", tenantId: t, layout: th(e.body) });
+            e8.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH", tenantId: t, layoutId: n });
+            let e = await e4.Bo.get({ url: td.Rsh.LAYOUT_SYSTEM(t, n), rejectWithError: !0, signal: l });
+            e8.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_SUCCESS", tenantId: t, layout: th(e.body) });
         } catch (l) {
             let e = new e7.LG(l);
-            throw (e4.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_FAILURE", tenantId: t, layoutId: n, apiError: e }), e);
+            throw (e8.h.dispatch({ type: "LAYOUT_SYSTEM_FETCH_FAILURE", tenantId: t, layoutId: n, apiError: e }), e);
         }
 }
 async function tx(e) {
     let { tenantId: t, templateId: n, abortSignal: l, requestParams: a } = e;
     if (!tc.isFetchingTemplate(t, n, a))
         try {
-            e4.h.dispatch({ type: "LAYOUT_SYSTEM_TEMPLATE_FETCH", tenantId: t, templateId: n, requestParams: a });
-            let e = await e8.Bo.get({
+            e8.h.dispatch({ type: "LAYOUT_SYSTEM_TEMPLATE_FETCH", tenantId: t, templateId: n, requestParams: a });
+            let e = await e4.Bo.get({
                 url: td.Rsh.LAYOUT_SYSTEM_TEMPLATE(t, n),
                 rejectWithError: !0,
                 signal: l,
                 query: a,
             });
-            e4.h.dispatch({
+            e8.h.dispatch({
                 type: "LAYOUT_SYSTEM_TEMPLATE_FETCH_SUCCESS",
                 tenantId: t,
                 templateId: n,
@@ -2150,7 +2115,7 @@ async function tx(e) {
         } catch (l) {
             let e = new e7.LG(l);
             throw (
-                e4.h.dispatch({
+                e8.h.dispatch({
                     type: "LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE",
                     tenantId: t,
                     templateId: n,
@@ -2868,15 +2833,15 @@ let tP = {
     };
 var tM = n(88686),
     tF = n(780898),
-    tN = n(214881),
-    tB = n(486020);
+    tB = n(214881),
+    tN = n(486020);
 let tH = function (e) {
         let { skuId: t, size: n = 128, animated: a = !1 } = e,
             { product: r } = (0, ej.q)(t, !0),
             s = r?.items[0];
         if (null == s) return null;
         if (s.type === tg.R.AVATAR_DECORATION) {
-            let e = tB.Ay.getAvatarDecorationURL({ avatarDecoration: s, size: n, canAnimate: a });
+            let e = tN.Ay.getAvatarDecorationURL({ avatarDecoration: s, size: n, canAnimate: a });
             return null != e ? (0, l.jsx)("img", { src: e, alt: s.label }) : null;
         }
         if (s.type === tg.R.PROFILE_EFFECT) {
@@ -2885,7 +2850,7 @@ let tH = function (e) {
         }
         if (s.type === tg.R.NAMEPLATE) {
             let e = (0, tF.WK)(s);
-            return (0, l.jsx)(tN.A, { nameplate: e, placement: tM.u.PREVIEW });
+            return (0, l.jsx)(tB.A, { nameplate: e, placement: tM.u.PREVIEW });
         }
         return null;
     },

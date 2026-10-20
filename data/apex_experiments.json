@@ -1096,22 +1096,6 @@
     }
   },
   {
-    "name": "2026-03-arborium-highlight",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-audio-effects-probe",
     "kind": "user",
     "defaultConfig": null,
