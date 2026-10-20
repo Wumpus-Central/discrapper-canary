@@ -1,0 +1,303 @@
+.attachmentChip__6fe49 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--icon-muted);
+    display: flex;
+    gap: var(--space-8);
+    max-width: 100%;
+    padding: var(--space-4) var(--space-8)
+}
+
+.attachmentThumb__6fe49 {
+    border-radius: var(--radius-xs);
+    flex: 0 0 auto;
+    height: var(--space-32);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--space-32)
+}
+
+.attachmentChipBody__6fe49 {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.attachmentName__6fe49 {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.attachmentChipCompact__6fe49 {
+    gap: var(--space-4)
+}
+
+.attachmentChipButton__6fe49 {
+    cursor: pointer;
+    text-align: start;
+    transition: background-color .2s ease, border-color .2s ease
+}
+
+.attachmentChipButton__6fe49:hover {
+    background: var(--background-mod-normal);
+    border-color: var(--border-normal)
+}
+
+.attachmentChipCompact__6fe49 .attachmentThumb__6fe49 {
+    height: var(--space-20);
+    width: var(--space-20)
+}
+
+.attachmentSpinner__6fe49 {
+    flex: 0 0 auto;
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.attachmentRemoveButton__6fe49 {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-round);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--space-4)
+}
+
+.attachmentRemoveButton__6fe49:hover {
+    background: var(--interactive-background-hover);
+    color: var(--icon-default)
+}
+
+.chatLogList__0e5cb {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 0;
+    padding: var(--space-24) 0 0;
+    width: 100%
+}
+
+.chatLogList__0e5cb>li {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%
+}
+
+.chatLogList__0e5cb>li+li:not(.chatRowContinuation__0e5cb) {
+    margin-top: var(--space-12)
+}
+
+@keyframes chat-row-enter__0e5cb {
+    0% {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+}
+
+.full-motion .chatRow__0e5cb {
+    animation: chat-row-enter__0e5cb .2s ease-out;
+    transition: background-color .6s ease-out
+}
+
+.full-motion .chatRow__0e5cb.chatRowSkipEntrance__0e5cb {
+    animation: none
+}
+
+.chatLogListLoading__0e5cb {
+    justify-content: center;
+    padding-block-start: 0
+}
+
+.historySpinner__0e5cb {
+    align-items: center
+}
+
+.chatRowHighlighted__0e5cb {
+    background: var(--message-highlight-background-default);
+    border-radius: var(--radius-xs);
+    transition: none
+}
+
+.messageAttachments__0e5cb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+    max-width: 100%;
+    min-width: 0
+}
+
+.messageAttachments__0e5cb:first-child {
+    margin-top: 0
+}
+
+.textShimmer__9d7ed {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, var(--text-subtle) 0, var(--text-subtle) 40%, var(--text-default) 50%, var(--text-subtle) 60%, var(--text-subtle) 100%);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 400% 100%;
+    color: transparent
+}
+
+.full-motion .textShimmer__9d7ed {
+    animation: conjure-text-shimmer__9d7ed 2s linear infinite
+}
+
+@keyframes conjure-text-shimmer__9d7ed {
+    0% {
+        background-position: 100% 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+.chatMessageSurface__9d7ed {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md)
+}
+
+.rowHost__8d39c {
+    --custom-conjure-glow-radius: var(--radius-md);
+    --custom-conjure-glow-mask-stop: 7.5%;
+    border-radius: var(--radius-md);
+    position: relative
+}
+
+.keyboard-mode .rowHostInteractive__8d39c:focus-within,
+.mouse-mode .rowHostInteractive__8d39c:hover {
+    background: var(--interactive-background-hover)
+}
+
+.rowHostInteractive__8d39c .row__8d39c {
+    cursor: pointer
+}
+
+.row__8d39c {
+    align-items: center;
+    box-sizing: border-box;
+    gap: var(--space-12);
+    padding: var(--space-8);
+    position: relative;
+    text-align: start;
+    width: 100%;
+    z-index: 0
+}
+
+.body__8d39c,
+.row__8d39c {
+    display: flex
+}
+
+.body__8d39c {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.caption__8d39c,
+.name__8d39c {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.captionRow__8d39c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-6);
+    min-width: 0
+}
+
+.separator__8d39c {
+    background: var(--text-muted);
+    height: var(--space-4);
+    width: var(--space-4)
+}
+
+.separator__8d39c,
+.unreadDot__8d39c {
+    border-radius: 50%;
+    flex: 0 0 auto
+}
+
+.unreadDot__8d39c {
+    background: var(--background-brand);
+    height: var(--space-8);
+    width: var(--space-8)
+}
+
+.list_cba4db {
+    gap: var(--space-4)
+}
+
+.list_cba4db,
+.listState_cba4db {
+    display: flex;
+    flex-direction: column
+}
+
+.listState_cba4db {
+    align-items: center;
+    gap: var(--space-8);
+    padding: var(--space-16);
+    text-align: center
+}
+
+.empty_cba4db {
+    padding: 0 var(--space-8)
+}
+
+.sidebar__9bf82 {
+    background: var(--background-base-lower);
+    border-inline-start: 1px solid var(--border-subtle);
+    flex: 0 0 auto;
+    flex-direction: column;
+    min-height: 0;
+    width: clamp(280px, 28%, 360px)
+}
+
+.header__9bf82,
+.sidebar__9bf82 {
+    box-sizing: border-box;
+    display: flex
+}
+
+.header__9bf82 {
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    flex: 0 0 auto;
+    gap: var(--space-8);
+    height: var(--custom-channel-header-height);
+    justify-content: space-between;
+    padding-inline: var(--space-16) var(--space-xs)
+}
+
+.scroller__9bf82 {
+    flex: 1;
+    min-height: 0;
+    padding: var(--space-8)
+}
+
+/*# sourceMappingURL=997a762e067befe1.css.map*/

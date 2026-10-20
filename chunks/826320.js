@@ -2,7 +2,7 @@ n.d(t, { A: () => ee });
 var l = n(477900),
     i = n(582128),
     s = n(38021),
-    r = n(62150),
+    r = n(126485),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -117,8 +117,8 @@ var I = n(834730),
     R = n(331322),
     y = n(297264),
     L = n(17839),
-    M = n(384539),
-    T = n(105292),
+    T = n(384539),
+    M = n(105292),
     U = n(27948);
 function D() {
     let e = i.useCallback(() => {
@@ -127,7 +127,7 @@ function D() {
     return (0, l.jsx)(I.E, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: T.intl.format(M.default.LyZZLX, { onClick: e }),
+        children: M.intl.format(T.default.LyZZLX, { onClick: e }),
     });
 }
 function P() {
@@ -170,7 +170,7 @@ function O() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, l.jsx)(y.D, { variant: "heading-md/semibold", children: T.intl.string(M.default["1n0TGE"]) }),
+                    (0, l.jsx)(y.D, { variant: "heading-md/semibold", children: M.intl.string(T.default["1n0TGE"]) }),
                     (0, l.jsx)(D, {}),
                 ],
             }),
@@ -186,15 +186,15 @@ var w = n(866665),
     k = n(821609),
     B = n(47167),
     F = n(485947),
-    z = n(61916),
-    K = n(446244),
+    K = n(61916),
+    z = n(446244),
     W = n(994500),
     Y = n(287809),
     X = n(427262),
     q = n(16236);
 async function J(e) {
-    let t = await (0, K.pk)(e);
-    null != t && (await (0, q.nR)({ channelIds: [t], categoryName: T.intl.string(T.t.OGiMXJ), source: "suggestions" }));
+    let t = await (0, z.pk)(e);
+    null != t && (await (0, q.nR)({ channelIds: [t], categoryName: M.intl.string(M.t.OGiMXJ), source: "suggestions" }));
 }
 var Z = n(487470);
 function $(e) {
@@ -211,14 +211,14 @@ function $(e) {
                           (0, l.jsxs)("div", {
                               className: Z.wx,
                               children: [
-                                  (0, l.jsx)(F.A, { className: Z.TK, children: T.intl.string(M.default.oHWnLy) }),
+                                  (0, l.jsx)(F.A, { className: Z.TK, children: M.intl.string(T.default.oHWnLy) }),
                                   (0, l.jsx)(w.m, {
-                                      text: T.intl.string(T.t.WAI6xu),
+                                      text: M.intl.string(M.t.WAI6xu),
                                       children: (0, l.jsx)(V.D, {
                                           className: Z.r,
                                           onClick: i,
                                           role: "button",
-                                          "aria-label": T.intl.string(M.default.F3dWTe),
+                                          "aria-label": M.intl.string(T.default.F3dWTe),
                                           children: (0, l.jsx)(H.P, {
                                               size: "xs",
                                               color: "currentColor",
@@ -233,20 +233,20 @@ function $(e) {
                               role: "list",
                               children: n.map((e, t) =>
                                   (0, l.jsx)(
-                                      z.N,
+                                      K.N,
                                       {
                                           result: e,
                                           trailing: (0, l.jsx)(k.$, {
                                               variant: "secondary",
                                               size: "sm",
-                                              text: T.intl.string(T.t.OYkgVk),
-                                              "aria-label": T.intl.formatToPlainString(M.default.Hevebj, {
+                                              text: M.intl.string(M.t.OYkgVk),
+                                              "aria-label": M.intl.formatToPlainString(T.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? X.Ay.getName(e.record)
                                                           : (0, B.m1)(e.record, Y.default, W.A),
                                               }),
-                                              onClick: () => J((0, K.hY)(e)),
+                                              onClick: () => J((0, z.hY)(e)),
                                           }),
                                           "aria-posinset": t + 1,
                                           "aria-setsize": n.length,

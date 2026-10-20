@@ -1,0 +1,58 @@
+.host_d56f1c {
+    display: inline-block;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    height: 1lh;
+    line-height: inherit;
+    position: relative;
+    white-space: pre
+}
+
+.textLayer_d56f1c {
+    display: block;
+    white-space: pre
+}
+
+.textLayer_d56f1c.hidden_d56f1c {
+    opacity: 0
+}
+
+.char_d56f1c {
+    display: inline-block;
+    text-align: start;
+    transition: opacity 90ms linear
+}
+
+.char_d56f1c.shifted_d56f1c {
+    opacity: .55
+}
+
+.char_d56f1c.scrambled_d56f1c {
+    opacity: 0
+}
+
+.glyphLayer_d56f1c {
+    color: var(--custom-ai-shimmer-glyph-color);
+    display: block;
+    font-family: AI Visual Identity Glyphs, monospace;
+    font-size: .76em;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    line-height: 1;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-50%);
+    white-space: pre
+}
+
+.glyphCell_d56f1c {
+    display: inline-block;
+    text-align: center;
+    width: 1em
+}
+
+.reduce-motion .char_d56f1c {
+    transition: none
+}
+
+/*# sourceMappingURL=16f539b7f6a29dcb.css.map*/

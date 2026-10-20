@@ -1,0 +1,16 @@
+_.exports = {
+    Dk: "carousel__3ebc0",
+    vV: "carouselManual__3ebc0",
+    AS: "item__3ebc0",
+    u4: "track__3ebc0",
+    rl: "promptRow__3ebc0",
+    my: "avatar__3ebc0",
+    Tq: "bubble__3ebc0",
+    Nr: "card__3ebc0",
+    xn: "thumbnail__3ebc0",
+    q_: "thumbnailImage__3ebc0",
+    o1: "actions__3ebc0",
+    qr: "footer__3ebc0",
+    Yl: "categoryIcon__3ebc0",
+    PJ: "footerText__3ebc0",
+};

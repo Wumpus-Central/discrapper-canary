@@ -1,0 +1,31 @@
+.smallCardItem__02912 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 246px
+}
+
+.row_a54042 {
+    display: flex;
+    gap: var(--space-md);
+    overflow: hidden;
+    width: 100%
+}
+
+.row_a54042>:nth-child(2) {
+    --custom-game-profile-skeleton-animation-delay: 150ms
+}
+
+.row_a54042>:nth-child(3) {
+    --custom-game-profile-skeleton-animation-delay: 300ms
+}
+
+.row_a54042>:nth-child(4) {
+    --custom-game-profile-skeleton-animation-delay: 450ms
+}
+
+.gap16_a54042 {
+    gap: var(--space-16)
+}
+
+/*# sourceMappingURL=e962f4ca28551e62.css.map*/

@@ -1,0 +1,28 @@
+.showcase_ba957b {
+    gap: var(--space-24)
+}
+
+.section_ba957b,
+.showcase_ba957b {
+    display: flex;
+    flex-direction: column
+}
+
+.section_ba957b {
+    gap: var(--space-8)
+}
+
+.stage_ba957b {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    min-height: 48px;
+    padding: var(--space-12) var(--space-16)
+}
+
+.log_ba957b {
+    font-variant-numeric: tabular-nums
+}
+
+/*# sourceMappingURL=22700eb55ced062c.css.map*/

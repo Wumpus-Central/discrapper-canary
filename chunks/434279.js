@@ -1,21 +1,18 @@
-function r(t) {
-    let { thinking: e, finishedAt: n, now: r } = t;
-    return e ? "building" : null != n && r - n < 6e4 ? "done" : "idle";
+function n(e) {
+    let { thinking: t, finishedAt: r, now: n } = e;
+    return t ? "building" : null != r && n - r < 6e4 ? "done" : "idle";
 }
-n.d(e, { Ds: () => l, Ng: () => u, Uk: () => r, wu: () => a });
-let i = 221552 == n.j ? { building: 0, done: 1, idle: 2 } : null;
-function u(t) {
-    return [...t].sort((t, e) => {
-        let n = i[t.activity] - i[e.activity];
-        if (0 !== n) return n;
-        if (t.sortTime !== e.sortTime) return e.sortTime - t.sortTime;
-        let r = t.name.localeCompare(e.name);
-        return 0 !== r ? r : t.projectId.localeCompare(e.projectId);
+r.d(t, { Ng: () => u, Uk: () => n, wu: () => l });
+let i = 221552 == r.j ? { building: 0, done: 1, idle: 2 } : null;
+function u(e) {
+    return [...e].sort((e, t) => {
+        let r = i[e.activity] - i[t.activity];
+        if (0 !== r) return r;
+        if (e.sortTime !== t.sortTime) return t.sortTime - e.sortTime;
+        let n = e.name.localeCompare(t.name);
+        return 0 !== n ? n : e.projectId.localeCompare(t.projectId);
     });
 }
-function l(t, e) {
-    return null == t.updated_at ? 1 : null == e.updated_at ? -1 : e.updated_at.localeCompare(t.updated_at);
-}
-function a(t) {
-    return t.guild_id ?? t.preview_guild_id ?? null;
+function l(e) {
+    return e.guild_id ?? e.preview_guild_id ?? null;
 }

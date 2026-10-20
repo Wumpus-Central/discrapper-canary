@@ -6,4 +6,6 @@ _.exports = {
     wx: "header__845c6",
     DD: "title__845c6",
     $s: "headerActions__845c6",
+    $P: "search__845c6",
+    XG: "scroller__845c6",
 };

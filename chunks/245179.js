@@ -26,12 +26,12 @@ function N(e, t, n) {
         r = n(null == t || null != s.turn_id || (0, o.s3)(s, t) ? s : { ...s, turn_id: t });
     r !== s && f.set(e, (0, o._D)(l, i, r));
 }
-function k(e) {
+function R(e) {
     return (0, o.q2)(f.get(e));
 }
-function R(e) {
+function m(e) {
     let t = p.get(e) ?? !1,
-        n = k(e);
+        n = R(e);
     if (t === n) return;
     p.set(e, n);
     let l = h.indexOf(e);
@@ -79,7 +79,7 @@ function A(e) {
         a = h.indexOf(e);
     return (-1 !== a && h.splice(a, 1), t || n || l || i || s || r || u || o || d || -1 !== a);
 }
-class m extends l.Ay.Store {
+class k extends l.Ay.Store {
     initialize() {
         this.waitFor(s.Ay);
     }
@@ -92,7 +92,7 @@ class m extends l.Ay.Store {
         return null != n && "assistant" === n.role && null != n.settingsRequest;
     }
     isThinking(e) {
-        return k(e);
+        return R(e);
     }
     hasLoadedHistory(e) {
         return O.has(e);
@@ -101,7 +101,7 @@ class m extends l.Ay.Store {
         return w.has(e);
     }
     getFinishedAt(e) {
-        return k(e) ? null : (_.get(e) ?? null);
+        return R(e) ? null : (_.get(e) ?? null);
     }
     getProjectUsage(e) {
         return g.get(e) ?? null;
@@ -117,10 +117,6 @@ class m extends l.Ay.Store {
     }
     getActivityOrderedProjectIds() {
         return h.slice();
-    }
-    isAnyThinking() {
-        for (let e of f.keys()) if (this.isThinking(e)) return !0;
-        return !1;
     }
 }
 let O = new Map(),
@@ -144,7 +140,7 @@ function v(e) {
               return null == n || (0, r.tH)(e.agentReaction, n) ? e : { ...e, agentReaction: n };
           });
 }
-let I = new m(i.h, {
+let I = new k(i.h, {
     LOGOUT: function () {
         if (
             0 === f.size &&
@@ -182,7 +178,7 @@ let I = new m(i.h, {
             _ = -1 === c ? -1 : r.findIndex((e) => e.id === a[c].id);
         (-1 !== _ && O.set(t, s ?? null),
             f.set(t, v((0, u.YF)(-1 === _ ? a : [...r.slice(0, _), ...a.slice(c)]))),
-            R(t));
+            m(t));
     },
     CONJURE_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: l } = e;
@@ -200,11 +196,11 @@ let I = new m(i.h, {
         let c = (0, u.iW)("user", n, { ts: r, id: l, userId: s, attachments: d }),
             _ = null == i ? -1 : a.findIndex((e) => e.id === i);
         if (-1 !== _) {
-            ((c.render_id = a[_].render_id), f.set(t, [...a.slice(0, _), c, ...a.slice(_ + 1)]), R(t));
+            ((c.render_id = a[_].render_id), f.set(t, [...a.slice(0, _), c, ...a.slice(_ + 1)]), m(t));
             return;
         }
         let p = [...a, c];
-        ((0, o.q2)(p) || p.push((0, u.iW)("assistant", "")), f.set(t, p), R(t));
+        ((0, o.q2)(p) || p.push((0, u.iW)("assistant", "")), f.set(t, p), m(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: l, disposition: i } = e,
@@ -220,7 +216,7 @@ let I = new m(i.h, {
             if (-1 !== e && e < r) {
                 let n = { ...a[e], turn_id: l };
                 if (0 === n.steps.length) {
-                    (f.set(t, [...a.slice(0, e), ...a.slice(e + 1, r + 1), n, ...a.slice(r + 1)]), R(t));
+                    (f.set(t, [...a.slice(0, e), ...a.slice(e + 1, r + 1), n, ...a.slice(r + 1)]), m(t));
                     return;
                 }
                 ((a = [...a.slice(0, e), n, ...a.slice(e + 1)]), (c = e));
@@ -234,7 +230,7 @@ let I = new m(i.h, {
             (0, u.iW)("assistant", "", { turnId: l }),
             ...a.slice(r + 1),
         ]),
-            R(t));
+            m(t));
     },
     CONJURE_CHAT_MESSAGE_REACTION: function (e) {
         let { projectId: t, id: n, reaction: l } = e,
@@ -255,7 +251,7 @@ let I = new m(i.h, {
                     : null,
             u = i.filter((e) => e.id !== n && e.in_reply_to !== n && e.id !== r);
         if (u.length === i.length) return !1;
-        (f.set(t, u), null != r && R(t));
+        (f.set(t, u), null != r && m(t));
     },
     CONJURE_CHAT_SIDE_REPLY: function (e) {
         let { projectId: t, id: n, inReplyTo: l, content: i, timestamp: s } = e,
@@ -310,7 +306,7 @@ let I = new m(i.h, {
     },
     CONJURE_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: l } = e;
-        if ("preview_ready" === n.kind && null == l && !k(t)) return !1;
+        if ("preview_ready" === n.kind && null == l && !R(t)) return !1;
         let i = f.get(t);
         if (
             (N(t, l, (e) => {
@@ -320,7 +316,7 @@ let I = new m(i.h, {
             f.get(t) === i)
         )
             return !1;
-        R(t);
+        m(t);
     },
     CONJURE_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n, turnId: l } = e,
@@ -342,9 +338,9 @@ let I = new m(i.h, {
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
-            k(t) || (C.delete(t), E.delete(t)),
+            R(t) || (C.delete(t), E.delete(t)),
             S.delete(t),
-            R(t));
+            m(t));
     },
     CONJURE_CHAT_INTERRUPTED: function (e) {
         let { projectId: t } = e,
@@ -411,7 +407,7 @@ let I = new m(i.h, {
             let t = { ...e, ...n };
             return ("todos" in n && (t.provisionalTodo = void 0), t);
         }),
-            R(t));
+            m(t));
     },
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
@@ -440,7 +436,7 @@ let I = new m(i.h, {
                       };
             }),
         ),
-            R(t));
+            m(t));
     },
     CONJURE_PROJECT_CREATE_SUCCESS: function (e) {
         let { project: t } = e;
