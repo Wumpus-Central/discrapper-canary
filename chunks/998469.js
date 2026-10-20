@@ -14530,6 +14530,7 @@ function Sy(e) {
             (0, p.jsxs)(hj.s, {
                 "aria-label": u,
                 onClick: o,
+                focusProps: { offset: 4 },
                 children: [
                     null != t && (0, p.jsx)("div", { className: S_.x_, children: t }),
                     (0, p.jsxs)("div", {
