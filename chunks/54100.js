@@ -1,0 +1,18 @@
+_.exports = {
+    nM: "row__65116",
+    uf: "stars__65116",
+    uK: "option__65116",
+    hF: "input__65116",
+    d4: "star__65116",
+    cO: "lit__65116",
+    Ng: "picked__65116",
+    OI: "starPop__65116",
+    WD: "labels__65116",
+    Pf: "label__65116",
+    KH: "labelShown__65116",
+    o2: "labelIn__65116",
+    mo: "thanks__65116",
+    jw: "thanksIn__65116",
+    dQ: "sparkle__65116",
+    t1: "twinkle__65116",
+};

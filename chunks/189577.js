@@ -1493,7 +1493,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 644750, Version Hash: 54b0a7d9bce06384b1e0da2578aa4a3dd2d24927`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 644758, Version Hash: 7dcc064dd133f9daaa51b63ce2b664b51a77db19`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25418,7 +25418,7 @@ let ye = "isHideDevBanner",
                     className: tf()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "644750" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "644758" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29026,7 +29026,7 @@ let bo = (0, tZ.Fe)({
                 n.e("377016"),
                 n.e("167410"),
                 n.e("422037"),
-                n.e("862280"),
+                n.e("857339"),
                 n.e("498604"),
                 n.e("998140"),
                 n.e("116960"),
@@ -29394,8 +29394,8 @@ let bo = (0, tZ.Fe)({
                 n.e("716875"),
                 n.e("1910"),
                 n.e("526274"),
-            ]).then(n.bind(n, 806847)),
-        webpackId: 806847,
+            ]).then(n.bind(n, 683850)),
+        webpackId: 683850,
         name: "ConjureScreen",
         renderLoader: bl,
     }),

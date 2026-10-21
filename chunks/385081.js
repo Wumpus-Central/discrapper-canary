@@ -1,8 +1,8 @@
-n.d(t, { Hy: () => p, hV: () => c, xf: () => r, yJ: () => E });
+n.d(t, { Fz: () => h, Hy: () => p, gw: () => R, hV: () => c, xf: () => r, yJ: () => E });
 var i = n(666860),
     l = n(260498),
-    u = n(246338),
-    _ = n(652215);
+    _ = n(246338),
+    u = n(652215);
 let r = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
@@ -29,12 +29,12 @@ function a(e) {
 function o(e, t) {
     let n = l.Ay.getProject(e),
         i = (t ? n?.preview_guild_id : n?.guild_id) ?? null,
-        _ = (t ? n?.preview_application_id : n?.application_id) ?? null;
-    return { guild_id: i, channel_id: null != i && null != _ ? (0, u.i8)(i, _) : null };
+        u = (t ? n?.preview_application_id : n?.application_id) ?? null;
+    return { guild_id: i, channel_id: null != i && null != u ? (0, _.i8)(i, u) : null };
 }
 function c(e, t) {
     var n;
-    (0, i.zV)(_.HAw.CONJURE_TURN_RESULTED, {
+    (0, i.zV)(u.HAw.CONJURE_TURN_RESULTED, {
         ...a(e),
         ...o(e, !0),
         turn_id: t.turn_id ?? null,
@@ -62,29 +62,39 @@ function c(e, t) {
     });
 }
 function p(e, t) {
-    let { location: n, code: l, message: u, details: r, isPreview: c = !0, turnId: p } = t;
-    (0, i.zV)(_.HAw.CONJURE_ERRORED, {
+    let { location: n, code: l, message: _, details: r, isPreview: c = !0, turnId: p } = t;
+    (0, i.zV)(u.HAw.CONJURE_ERRORED, {
         ...a(e),
         is_preview: c,
         ...o(e, c),
         turn_id: p ?? null,
         error_location: n,
         error_code: l,
-        error_message: s(u),
+        error_message: s(_),
         error_details: s(r),
     });
 }
 function E(e, t) {
-    let { entryPoint: n, publishState: u, surface: r, installScope: s, action: a } = t,
+    let { entryPoint: n, publishState: _, surface: r, installScope: s, action: a } = t,
         c = l.Ay.getProject(e);
-    (0, i.zV)(_.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
+    (0, i.zV)(u.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
         project_id: e,
         application_id: c?.application_id ?? null,
         ...("user" === s ? { guild_id: null, channel_id: null } : o(e, !1)),
         entry_point: n,
-        publish_state: u,
+        publish_state: _,
         surface: r,
         install_scope: s,
         action: a,
     });
+}
+function d(e) {
+    let { projectId: t, turnId: n, rating: i, publishReason: l, surface: _ } = e;
+    return { ...a(t), ...o(t, !0), turn_id: n, rating: i, publish_reason: l, surface: _ };
+}
+function R(e) {
+    (0, i.zV)(u.HAw.CONJURE_RATING_SUBMITTED, d(e));
+}
+function h(e, t) {
+    (0, i.zV)(u.HAw.CONJURE_RATING_FEEDBACK_SUBMITTED, { ...d(e), feedback_text: t });
 }

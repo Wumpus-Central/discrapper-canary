@@ -1,12 +1,13 @@
 n.d(t, {
     B0: () => o,
-    B5: () => _,
+    B5: () => p,
     BL: () => s,
     Ji: () => r,
-    Si: () => c,
-    _D: () => f,
-    gi: () => a,
-    pZ: () => p,
+    Si: () => f,
+    _D: () => _,
+    gi: () => c,
+    lb: () => a,
+    pZ: () => h,
     q2: () => u,
     s3: () => d,
 });
@@ -28,7 +29,7 @@ function r(e) {
     let t = !1;
     for (let n = e.length - 1; n >= 0; n--) {
         let l = e[n];
-        if (!("assistant" !== l.role || _(l)) && ((!t && ((t = !0), !s(l))) || (null != l.turn_id && !s(l)))) return l;
+        if (!("assistant" !== l.role || p(l)) && ((!t && ((t = !0), !s(l))) || (null != l.turn_id && !s(l)))) return l;
     }
     return null;
 }
@@ -49,13 +50,16 @@ function o(e, t) {
 function d(e, t) {
     return e.turn_id === t || e.id === `${l.o_}${t}`;
 }
-function a(e, t) {
+function a(e) {
+    return null != e.turn_id ? e.turn_id : e.id.startsWith(l.o_) ? e.id.slice(l.o_.length) : null;
+}
+function c(e, t) {
     if (null == t) return -1;
     for (let n = e.length - 1; n >= 0; n--) if (d(e[n], t)) return n;
     return -1;
 }
-function c(e, t) {
-    let n = a(e, t);
+function f(e, t) {
+    let n = c(e, t);
     if (-1 !== n) return n;
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
@@ -63,11 +67,11 @@ function c(e, t) {
     }
     return -1;
 }
-function f(e, t, n) {
+function _(e, t, n) {
     let l = e.slice();
     return ((l[t] = n), l);
 }
-function _(e) {
+function p(e) {
     return (
         "side_reply" === e.kind ||
         "publish_notice" === e.kind ||
@@ -75,6 +79,6 @@ function _(e) {
         "context_boundary" === e.kind
     );
 }
-function p(e) {
-    return "assistant" === e.role && !_(e) && !s(e) && !0 !== e.stopRequested;
+function h(e) {
+    return "assistant" === e.role && !p(e) && !s(e) && !0 !== e.stopRequested;
 }
