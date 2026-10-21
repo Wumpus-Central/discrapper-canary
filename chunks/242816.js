@@ -3623,8 +3623,9 @@ function iJ(e) {
                             "aria-multiselectable": !1,
                             className: iK.B2,
                             children: [
-                                (0, r.jsxs)(g.zC, {
+                                (0, r.jsxs)(g.Ch, {
                                     className: l()({ [iK.XG]: !0, [iK.qw]: x }),
+                                    fade: !0,
                                     experimental_useStack: !0,
                                     gap: "xs",
                                     ref: K.scrollerRef,
