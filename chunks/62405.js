@@ -1,192 +1,181 @@
-s.d(t, { A: () => b });
-var r = s(477900),
-    n = s(582128),
-    i = s(503698),
-    l = s.n(i),
-    a = s(323889),
-    u = s(621466),
-    o = s(17928),
-    c = s(939249),
-    d = s(834730),
-    m = s(885574),
-    f = s(661531),
-    _ = s(775602),
-    A = s(274670),
-    C = s(144779),
-    T = s(607470),
-    R = s(287809),
-    I = s(104886),
-    E = s(192444),
-    x = s(291749),
-    N = s(426110),
-    g = s(18437),
-    p = s(590202),
-    h = s(971649),
-    v = s(801365),
-    L = s(557637),
-    j = s(415441),
-    y = s(734736),
-    w = s(617986),
-    S = s(139384),
-    q = s(105292),
-    M = s(632036);
-let b = function (e) {
+r.d(t, { A: () => M });
+var s = r(477900),
+    n = r(582128),
+    i = r(503698),
+    l = r.n(i),
+    a = r(323889),
+    u = r(621466),
+    o = r(17928),
+    c = r(939249),
+    d = r(834730),
+    m = r(885574),
+    f = r(661531),
+    T = r(775602),
+    A = r(274670),
+    _ = r(144779),
+    R = r(607470),
+    I = r(287809),
+    C = r(192444),
+    E = r(291749),
+    x = r(426110),
+    g = r(590202),
+    p = r(971649),
+    h = r(801365),
+    v = r(557637),
+    N = r(415441),
+    j = r(734736),
+    y = r(617986),
+    L = r(139384),
+    w = r(105292),
+    S = r(632036);
+let M = function (e) {
     let t,
         {
-            className: s,
+            className: r,
             quest: i,
-            autoplay: b = !0,
-            learnMoreStyle: D = null,
+            autoplay: M = !0,
+            learnMoreStyle: b = null,
             learnMoreFontSize: Q,
-            sourceQuestContent: W,
+            sourceQuestContent: D,
             lazyLoad: V = !1,
-            fullWidth: k = !1,
-            style: U,
-            location: P,
+            fullWidth: W = !1,
+            style: q,
+            location: k,
         } = e,
-        Y = (0, g.Ut)(),
-        G = (0, h.wW)(),
-        z = (0, o.bG)([_.Ay], () => _.Ay.useReducedMotion),
-        B = (0, o.bG)([R.default], () => R.default.getCurrentUser()),
-        H = (function (e, t) {
-            let { useNewTile: s } = E.aD.useConfig({ location: t }),
-                { variant: r } = E.LV.useConfig({ location: t }),
-                n = (0, o.bG)([R.default], () => (0, N.Q)(e, R.default.getCurrentUser()));
-            return s || r === E.Ds.ALL_TIERS
+        U = (0, p.wW)(),
+        Y = (0, o.bG)([T.Ay], () => T.Ay.useReducedMotion),
+        G = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
+        P = (function (e, t) {
+            let { useNewTile: r } = C.aD.useConfig({ location: t }),
+                { variant: s } = C.LV.useConfig({ location: t }),
+                n = (0, o.bG)([I.default], () => (0, x.Q)(e, I.default.getCurrentUser()));
+            return r || s === C.Ds.ALL_TIERS
                 ? n
-                : r === E.Ds.TIER_1_VISUALS
-                  ? x.i2.TIER_1
-                  : r === E.Ds.TIER_2_VISUALS
-                    ? x.i2.TIER_2
-                    : r === E.Ds.TIER_3_VISUALS
-                      ? x.i2.TIER_3
+                : s === C.Ds.TIER_1_VISUALS
+                  ? E.i2.TIER_1
+                  : s === C.Ds.TIER_2_VISUALS
+                    ? E.i2.TIER_2
+                    : s === C.Ds.TIER_3_VISUALS
+                      ? E.i2.TIER_3
                       : void 0;
-        })(i.config, P),
-        K = n.useMemo(
+        })(i.config, k),
+        z = n.useMemo(
             () =>
-                (0, v.ks)(i.config) && i.userStatus?.claimedAt != null
-                    ? q.intl.formatToPlainString(q.t["nLXlh+"], {
-                          orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, v._Z)(i.config) ?? 0,
+                (0, h.ks)(i.config) && i.userStatus?.claimedAt != null
+                    ? w.intl.formatToPlainString(w.t["nLXlh+"], {
+                          orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, h._Z)(i.config) ?? 0,
                       })
-                    : (0, v.mq)(i.config, B),
-            [i.config, i.userStatus?.claimedAt, i.userStatus?.orbQuantityClaimed, B],
+                    : (0, h.mq)(i.config, G),
+            [i.config, i.userStatus?.claimedAt, i.userStatus?.orbQuantityClaimed, G],
         ),
-        X = n.useMemo(() => (0, x.tW)(i, x.fY.REWARD, void 0, void 0, H), [i, H]),
-        F = n.useMemo(() => (0, x.tW)(i, x.fY.REWARD_IMAGE), [i]),
-        O = n.useCallback(
+        B = n.useMemo(() => (0, E.tW)(i, E.fY.REWARD, void 0, void 0, P), [i, P]),
+        H = n.useMemo(() => (0, E.tW)(i, E.fY.REWARD_IMAGE), [i]),
+        X = n.useCallback(
             (t) => {
                 ((0, u.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_tile")
-                        ? (0, A.r)({
-                              type: C.F.CLICK_INTERNAL,
-                              adCreativeType: a.p.QUEST,
-                              adCreativeId: i.id,
-                              questContentCTA: p.Cy.REWARD_LEARN_MORE,
-                              surfaceId: e.questContent,
-                              sourceQuestContent: W,
-                              impressionId: G(),
-                              questContentPosition: e.questContentPosition,
-                          })
-                        : Y({
-                              questId: i.id,
-                              questContent: e.questContent,
-                              questContentPosition: e.questContentPosition,
-                              questContentCTA: p.Cy.REWARD_LEARN_MORE,
-                              sourceQuestContent: W,
-                          }),
-                    (0, w.mA)({ fromContent: e.questContent, questId: i.id }),
+                    (0, A.r)({
+                        type: _.F.CLICK_INTERNAL,
+                        adCreativeType: a.p.QUEST,
+                        adCreativeId: i.id,
+                        questContentCTA: g.Cy.REWARD_LEARN_MORE,
+                        surfaceId: e.questContent,
+                        sourceQuestContent: D,
+                        impressionId: U(),
+                        questContentPosition: e.questContentPosition,
+                    }),
+                    (0, y.mA)({ fromContent: e.questContent, questId: i.id }),
                     e.onClick?.(t));
             },
-            [Y, i.id, e, W, G],
+            [i.id, e, D, U],
         ),
-        Z = n.useRef(null),
-        $ = n.useRef(b),
-        J = (0, v.K9)(i.config);
+        F = n.useRef(null),
+        K = n.useRef(M),
+        O = (0, h.K9)(i.config);
     if (
         (n.useEffect(() => {
-            if (null != Z.current) {
-                if (!X.isAnimated || z) {
-                    ((Z.current.currentTime = 0), Z.current.pause());
+            if (null != F.current) {
+                if (!B.isAnimated || Y) {
+                    ((F.current.currentTime = 0), F.current.pause());
                     return;
                 }
-                (b && !$.current
-                    ? Z.current.play()
-                    : !b && $.current && ((Z.current.currentTime = 0), Z.current.pause()),
-                    ($.current = b));
+                (M && !K.current
+                    ? F.current.play()
+                    : !M && K.current && ((F.current.currentTime = 0), F.current.pause()),
+                    (K.current = M));
             }
-        }, [b, X, z]),
-        (0, S.A)(Z),
-        J)
+        }, [M, B, Y]),
+        (0, L.A)(F),
+        O)
     )
-        t = (0, r.jsx)(L._M, {
+        t = (0, s.jsx)(v._M, {
             id: "QuestRewardTile_rewardTileNitro",
-            children: (e) => (0, r.jsx)(y.A, { ref: e, className: M.eB }),
+            children: (e) => (0, s.jsx)(j.A, { ref: e, className: S.eB }),
         });
     else if (V)
-        t = (0, r.jsx)(j.N, {
-            showVideo: b,
+        t = (0, s.jsx)(N.N, {
+            showVideo: M,
             imageAsset:
-                null != F
+                null != H
                     ? {
-                          asset: F,
+                          asset: H,
                           assetId: "QuestRewardTile_rewardTileStatic",
-                          className: M.XM,
-                          alt: q.intl.string(q.t.UMclVN),
+                          className: S.XM,
+                          alt: w.intl.string(w.t.UMclVN),
                       }
                     : void 0,
-            videoAsset: { asset: X, assetId: "QuestRewardTile_rewardTileAnimated", className: l()(M.eB, M.WY) },
+            videoAsset: { asset: B, assetId: "QuestRewardTile_rewardTileAnimated", className: l()(S.eB, S.WY) },
             onLoadComplete: e.onLoadComplete,
         });
-    else if (X.isAnimated) {
-        let s = (0, x.WV)(X.url);
-        t = (0, r.jsx)(L._M, {
+    else if (B.isAnimated) {
+        let r = (0, E.WV)(B.url);
+        t = (0, s.jsx)(v._M, {
             id: "QuestRewardTile_rewardTileAnimated",
             children: (t) =>
-                (0, r.jsxs)(r.Fragment, {
+                (0, s.jsxs)(s.Fragment, {
                     children: [
-                        null != s && (0, r.jsx)("img", { alt: q.intl.string(q.t.UMclVN), className: M.XM, src: s }),
-                        (0, r.jsx)(T.A, {
+                        null != r && (0, s.jsx)("img", { alt: w.intl.string(w.t.UMclVN), className: S.XM, src: r }),
+                        (0, s.jsx)(R.A, {
                             ref: (e) => {
-                                ((t.current = e), (Z.current = e));
+                                ((t.current = e), (F.current = e));
                             },
-                            autoPlay: !z && b,
+                            autoPlay: !Y && M,
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
-                            className: l()(M.eB, M.WY),
+                            className: l()(S.eB, S.WY),
                             controls: !1,
                             onProgress: e.onLoadComplete,
-                            children: (0, r.jsx)("source", { src: X.url, type: X.mimetype ?? void 0 }),
+                            children: (0, s.jsx)("source", { src: B.url, type: B.mimetype ?? void 0 }),
                         }),
                     ],
                 }),
         });
     } else
-        t = (0, r.jsx)(L._M, {
+        t = (0, s.jsx)(v._M, {
             id: "QuestRewardTile_rewardTileStatic",
             children: (t) =>
-                (0, r.jsx)("img", { ref: t, alt: K, className: l()(M.eB, M.Qz), src: X.url, onLoad: e.onLoadComplete }),
+                (0, s.jsx)("img", { ref: t, alt: z, className: l()(S.eB, S.Qz), src: B.url, onLoad: e.onLoadComplete }),
         });
-    return null == D
-        ? (0, r.jsx)("div", { className: l()(M.al, s, { [M.Ij]: k }), style: U, children: t })
-        : (0, r.jsxs)(c.D, {
-              className: l()(M.a$, M.al, M.Yi, s, { [M.Ij]: k }),
-              onClick: O,
-              style: U,
+    return null == b
+        ? (0, s.jsx)("div", { className: l()(S.al, r, { [S.Ij]: W }), style: q, children: t })
+        : (0, s.jsxs)(c.D, {
+              className: l()(S.a$, S.al, S.Yi, r, { [S.Ij]: W }),
+              onClick: X,
+              style: q,
               children: [
                   t,
-                  "text" === D &&
-                      (0, r.jsx)(d.E, {
+                  "text" === b &&
+                      (0, s.jsx)(d.E, {
                           color: "text-overlay-light",
                           variant: "text-xs/normal",
-                          className: M.n_,
+                          className: S.n_,
                           style: { fontSize: Q },
-                          children: q.intl.format(q.t.DYAleT, {}),
+                          children: w.intl.format(w.t.DYAleT, {}),
                       }),
-                  "icon" === D &&
-                      (0, r.jsx)("div", {
-                          className: M.n_,
-                          children: (0, r.jsx)(m.CircleInformationIcon, { size: "xxs", color: f.A.colors.WHITE.css }),
+                  "icon" === b &&
+                      (0, s.jsx)("div", {
+                          className: S.n_,
+                          children: (0, s.jsx)(m.CircleInformationIcon, { size: "xxs", color: f.A.colors.WHITE.css }),
                       }),
               ],
           });
