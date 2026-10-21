@@ -1,7 +1,7 @@
 _.exports = {
-    $O: "clarification_d4831f " + a(29073).nd,
+    $O: "clarification_d4831f " + f(29073).nd,
     rf: "body_d4831f",
-    wx: "header_d4831f " + a(29073).wx,
+    wx: "header_d4831f " + f(29073).wx,
     uK: "option_d4831f",
     qO: "optionBody_d4831f",
     h4: "optionSelected_d4831f",
@@ -18,6 +18,8 @@ _.exports = {
     x1: "rowsGhost_d4831f",
     es: "otherGhost_d4831f",
     Xy: "otherRow_d4831f",
+    X_: "linkConfigure_d4831f",
+    $y: "linkBuild_d4831f",
     Pu: "otherInput_d4831f",
     fI: "clarificationOpen_d4831f",
     Oh: "clarificationClosing_d4831f",
