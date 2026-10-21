@@ -1493,7 +1493,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 645219, Version Hash: fabd67fd9b7585390133a558c0799be10dc8aee6`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 645248, Version Hash: 08b9e7e2b6eababc0ebb8de085ad0489ac3e5c14`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25418,7 +25418,7 @@ let ye = "isHideDevBanner",
                     className: tf()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "645219" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "645248" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -27850,8 +27850,11 @@ function bt() {
     }, [r, i, n, s, a, l, o, d, c, u]);
     let _ = r?.dismissibleContent ?? null,
         [E, A] = (0, rA.kn)(i && !n && null != _ ? [_] : [], { bypassAutoDismiss: !0 }),
-        h = i && (n || (null != _ && E === _)),
-        [f, I] = eI.useState(null);
+        h = i && (n || (null != _ && E === _));
+    eI.useEffect(() => {
+        h && (0, v6.Cp)();
+    }, [h]);
+    let [f, I] = eI.useState(null);
     h && r !== f && I(r);
     let p = r ?? f,
         T = eI.useCallback(() => I(null), []),

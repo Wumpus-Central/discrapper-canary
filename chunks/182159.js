@@ -1,55 +1,81 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => T });
 var i = n(17928),
-    s = n(73153);
+    r = n(73153),
+    a = n(710195),
+    s = n(490035);
 n(321073);
-var r = n(770335);
-function l(e) {
+var l = n(770335);
+function o(e) {
     let t = [],
         n = {},
         i = {};
-    for (let s of e) if (null == n[s.id]) for (let e of (t.push(s), (n[s.id] = s), s.emojis)) i[e.id] = s.id;
+    for (let r of e) if (null == n[r.id]) for (let e of (t.push(r), (n[r.id] = r), r.emojis)) i[e.id] = r.id;
     return { packs: t, packsById: n, packIdByEmojiId: i };
 }
-let a = { packs: [], packsById: {}, packIdByEmojiId: {}, fetchState: "NOT_FETCHED" },
-    o = a;
-class c extends i.Ay.PersistedStore {
+let d = { packs: [], packsById: {}, packIdByEmojiId: {}, fetchState: "NOT_FETCHED" },
+    c = d,
+    u = [],
+    _ = !1,
+    E = u,
+    A = new Set();
+function h() {
+    return s.G.getConfig({ location: "emoji_pack_store" }, { autoTrackExposure: !1 }).enabled;
+}
+function f() {
+    let e = _ ? c.packs.flatMap((e) => (e.available ? e.emojis.filter((e) => e.available) : [])) : u;
+    A = new Set((E = e.length > 0 ? e : u).map((e) => e.id));
+}
+function I() {
+    let e = h();
+    return e !== _ && ((_ = e), f(), !0);
+}
+class p extends i.Ay.PersistedStore {
     static displayName = "EmojiPackStore";
     static persistKey = "EmojiPackStore";
     initialize(e) {
-        o = { ...l(Array.isArray(e?.packs) ? e.packs : []), fetchState: "NOT_FETCHED" };
+        ((c = { ...o(Array.isArray(e?.packs) ? e.packs : []), fetchState: "NOT_FETCHED" }),
+            (_ = h()),
+            f(),
+            this.syncWith([a.A], I));
     }
     getState() {
-        return { packs: o.packs };
+        return { packs: c.packs };
     }
     getFetchState() {
-        return o.fetchState;
+        return c.fetchState;
     }
     getPacks() {
-        return o.packs;
+        return c.packs;
+    }
+    getIndexablePackEmojis() {
+        return E;
+    }
+    isPackEmojiUsable(e) {
+        return A.has(e.id);
     }
     getPack(e) {
-        return o.packsById[e];
+        return c.packsById[e];
     }
     getPackForEmoji(e) {
-        let t = o.packIdByEmojiId[e];
-        return null != t ? o.packsById[t] : void 0;
+        let t = c.packIdByEmojiId[e];
+        return null != t ? c.packsById[t] : void 0;
     }
     getEmoji(e) {
         return this.getPackForEmoji(e)?.emojis.find((t) => t.id === e);
     }
 }
-let u = new c(s.h, {
+let T = new p(r.h, {
     LOGOUT: function () {
-        o = a;
+        ((c = d), f());
     },
     EMOJI_PACKS_FETCH_START: function () {
-        if ("FETCHING" === o.fetchState) return !1;
-        o = { ...o, fetchState: "FETCHING" };
+        if ("FETCHING" === c.fetchState) return !1;
+        c = { ...c, fetchState: "FETCHING" };
     },
     EMOJI_PACKS_FETCH_SUCCESS: function (e) {
         let { packs: t } = e;
-        o = {
-            ...l(
+        ((c = {
+            ...o(
                 t.map((e) => ({
                     id: e.id,
                     name: e.name,
@@ -69,16 +95,17 @@ let u = new c(s.h, {
                                 available: t.available,
                                 managed: t.managed,
                                 roles: t.roles,
-                                type: r.i.PACK,
+                                type: l.i.PACK,
                             }
                         );
                     }),
                 })),
             ),
             fetchState: "FETCHED",
-        };
+        }),
+            f());
     },
     EMOJI_PACKS_FETCH_FAIL: function () {
-        o = { ...o, fetchState: "FAILED" };
+        c = { ...c, fetchState: "FAILED" };
     },
 });

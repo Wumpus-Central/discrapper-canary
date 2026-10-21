@@ -14,7 +14,7 @@ var l = n(477900),
 function g(e) {
     let { settings: t, tiers: n, choices: u, disabled: d, onChange: c } = e,
         h = i.useMemo(
-            () => u.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: o.oU[e.provider] })),
+            () => u.main.map((e) => ({ id: String(e.id), label: e.label, value: e.id, description: e.provider_label })),
             [u.main],
         ),
         g = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: o.hW[e] ?? e, value: e })), [u.thinking]);
@@ -24,7 +24,7 @@ function g(e) {
     let b = (0, s.Id)(t, n, t.tier);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != b
+            (0, s.hl)(u) && null != b
                 ? (0, l.jsx)(r.l, {
                       label: p.intl.string(f.default["59TDiR"]),
                       options: h,
