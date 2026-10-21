@@ -26,8 +26,8 @@ async function d(e) {
         return (a.A.captureException(e, { tags: { app_context: "ios_attribution" } }), null);
     }
 }
-let f = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
-    E = new i.A("IosAttribution"),
+let E = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KIT } } },
+    f = new i.A("IosAttribution"),
     A = new Map();
 function _(e, t) {
     return A.get(e) === t;
@@ -48,9 +48,9 @@ function T(e) {
 }
 async function p(e) {
     let { impressionId: t, metadataSealed: n, framework: r, impression: u } = e,
-        i = f[r]?.viewThroughSpec;
+        i = E[r]?.viewThroughSpec;
     if (null == i) {
-        (E.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, o.$8)(o.vI.NO_FRAMEWORK, r), C(t, u));
+        (f.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, o.$8)(o.vI.NO_FRAMEWORK, r), C(t, u));
         return;
     }
     let s = await d({ metadataSealed: n, impressionId: t, specs: [i], signal: u.signAbort.signal });
@@ -71,19 +71,19 @@ async function p(e) {
 async function S(e) {
     let t = A.get(e);
     return null == t
-        ? (E.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
+        ? (f.warn(`No tracked impression for ${e} at click time; store sheet will be unattributed`),
           (0, o.y9)(o.s5.NO_IMPRESSION, (0, l.BU)(), e),
           null)
         : (null == t.token && (await t.registration), _(e, t) && null != t.token)
           ? ((0, o.y9)(o.s5.ATTRIBUTED, t.framework, e), t.token)
-          : (E.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
+          : (f.warn(`Impression ${e} not registered natively in time; store sheet will be unattributed`),
             (0, o.y9)(o.s5.NOT_READY, t.framework, e),
             null);
 }
 async function m(e) {
     let { impressionId: t } = e,
         n = (0, l.BU)();
-    if (null == n || null == f[n]) return;
+    if (null == n || null == E[n]) return;
     let r = await S(t);
     return null != r ? { impressionToken: r } : void 0;
 }

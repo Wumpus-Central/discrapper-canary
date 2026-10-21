@@ -15,8 +15,8 @@ function C(e) {
     let { location: t, countGiftCardWallet: n, canFetchPaymentSources: C = !0 } = e,
         { enabled: _ } = (0, c.K)({ location: t }),
         g = (0, l.bG)([s.default], () => s.default.getId()),
-        T = (0, u.P)(),
-        I = (0, l.bG)([a.A], () => a.A.ipCountryCode),
+        I = (0, u.P)(),
+        T = (0, l.bG)([a.A], () => a.A.ipCountryCode),
         { hasFetchedPaymentSources: p, hasValidPaymentMethod: N } = (0, l.cf)(
             [o.A],
             () => ({
@@ -30,7 +30,7 @@ function C(e) {
             }),
             [n],
         ),
-        S = _ && T && null != I && A.ob.has(I),
+        S = _ && I && null != T && A.ob.has(T),
         f = S && C;
     return (
         i.useEffect(() => {

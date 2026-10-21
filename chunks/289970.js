@@ -14,8 +14,8 @@ var l = n(477900),
     g = n(614733),
     m = n(904363),
     b = n(442331),
-    x = n(743082),
-    v = n(245179),
+    v = n(743082),
+    x = n(245179),
     y = n(319481),
     A = n(248675),
     j = n(105292),
@@ -27,31 +27,31 @@ function C(e) {
         w = (0, r.bG)([b.A], () => b.A.getSettings(t)),
         [C, P] = i.useState(S),
         [M, E] = i.useState({}),
-        [N, I] = i.useState(!1),
-        [T, R] = i.useState(!1),
-        L = i.useCallback((e, t) => {
-            (R(!1), P((n) => ({ ...n, values: { ...n.values, [e]: t } })));
+        [_, I] = i.useState(!1),
+        [T, L] = i.useState(!1),
+        R = i.useCallback((e, t) => {
+            (L(!1), P((n) => ({ ...n, values: { ...n.values, [e]: t } })));
         }, []),
         D = i.useCallback((e, t) => {
-            (R(!1), P((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
+            (L(!1), P((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
         }, []),
-        F = i.useMemo(() => w?.schema ?? [], [w]),
-        G = i.useMemo(() => w?.values ?? {}, [w]),
-        U = i.useMemo(
+        G = i.useMemo(() => w?.schema ?? [], [w]),
+        q = i.useMemo(() => w?.values ?? {}, [w]),
+        W = i.useMemo(
             () =>
-                (w?.secrets ?? []).map((e) => ({ ...e, def: F.find((t) => t.key === e.name && "secret" === t.type) })),
-            [F, w],
+                (w?.secrets ?? []).map((e) => ({ ...e, def: G.find((t) => t.key === e.name && "secret" === t.type) })),
+            [G, w],
         ),
-        W = F.filter((e) => "secret" !== e.type),
-        q = new Map(U.map((e) => [e.name, e])),
-        O = (n ?? []).filter((e) => W.some((t) => t.key === e) || q.has(e)),
+        U = G.filter((e) => "secret" !== e.type),
+        F = new Map(W.map((e) => [e.name, e])),
+        O = (n ?? []).filter((e) => U.some((t) => t.key === e) || F.has(e)),
         B = O.length > 0,
-        z = O.some((e) => q.has(e)),
-        $ = i.useMemo(() => {
+        $ = O.some((e) => F.has(e)),
+        V = i.useMemo(() => {
             let e = {};
             for (let [n, l] of Object.entries(C.values)) {
                 var t;
-                let i = F.find((e) => e.key === n);
+                let i = G.find((e) => e.key === n);
                 if (null == i) continue;
                 let r = (function (e, t) {
                     if ("number" === e.type) {
@@ -72,7 +72,7 @@ function C(e) {
                     return "string" == typeof t && "" === t.trim() ? null : t;
                 })(i, l);
                 void 0 === r ||
-                    ((t = G[n] ?? ("checkbox" !== i.type && null)), JSON.stringify(r) === JSON.stringify(t)) ||
+                    ((t = q[n] ?? ("checkbox" !== i.type && null)), JSON.stringify(r) === JSON.stringify(t)) ||
                     (e[n] = r);
             }
             let n = {};
@@ -87,32 +87,32 @@ function C(e) {
                         null != t && t.length > 0 && (n[l] = t);
                     }
                     return { secrets: t, ...(Object.keys(n).length > 0 ? { hosts: n } : {}) };
-                })(F, n),
+                })(G, n),
             };
-        }, [C, F, G]),
-        V = null != $.values || null != $.secrets,
+        }, [C, G, q]),
+        z = null != V.values || null != V.secrets,
         Y = i.useCallback(async () => {
-            if (!V || N) return !0;
-            (I(!0), R(!1));
+            if (!z || _) return !0;
+            (I(!0), L(!1));
             try {
-                let { rebuildRequired: e } = await (0, x.nU)(t, $);
+                let { rebuildRequired: e } = await (0, v.nU)(t, V);
                 return (
                     !(function (e, t) {
                         let { rebuildRequired: n, notifyAgent: l } = t;
-                        l || v.A.hasPendingSettingsRequest(e)
+                        l || x.A.hasPendingSettingsRequest(e)
                             ? (0, y.sendUserMessage)(e, j.intl.string(A.default["08bsJL"]))
-                            : n && (0, x.ss)(e);
+                            : n && (0, v.ss)(e);
                     })(t, { rebuildRequired: e, notifyAgent: h }),
                     P(S),
                     E({}),
                     !0
                 );
             } catch {
-                return (R(!0), !1);
+                return (L(!0), !1);
             } finally {
                 I(!1);
             }
-        }, [V, h, t, N, $]);
+        }, [z, h, t, _, V]);
     function Z(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -123,10 +123,10 @@ function C(e) {
         ].filter((e) => null != e);
         return 0 === t.length ? void 0 : t.join(" ");
     }
-    function H(e) {
+    function X(e) {
         let n = Z(e);
         if ("select" === e.type) {
-            let t = C.values[e.key] ?? G[e.key],
+            let t = C.values[e.key] ?? q[e.key],
                 i = (e.options ?? []).map((e) => ({ id: e.value, label: e.label, value: e.value }));
             return (0, l.jsxs)(
                 "div",
@@ -138,18 +138,18 @@ function C(e) {
                                   label: e.label,
                                   options: i,
                                   value: Array.isArray(t) ? t : [],
-                                  onSelectionChange: (t) => L(e.key, t),
+                                  onSelectionChange: (t) => R(e.key, t),
                                   selectionMode: "multiple",
-                                  disabled: N,
+                                  disabled: _,
                                   fullWidth: !0,
                               })
                             : (0, l.jsx)(a.l, {
                                   label: e.label,
                                   options: i,
                                   value: "string" == typeof t ? t : void 0,
-                                  onSelectionChange: (t) => L(e.key, t),
+                                  onSelectionChange: (t) => R(e.key, t),
                                   selectionMode: "single",
-                                  disabled: N,
+                                  disabled: _,
                                   fullWidth: !0,
                               }),
                         null != n
@@ -161,32 +161,32 @@ function C(e) {
             );
         }
         if ("checkbox" === e.type) {
-            let t = C.values[e.key] ?? G[e.key];
+            let t = C.values[e.key] ?? q[e.key];
             return (0, l.jsx)(
                 s.S,
-                { label: e.label, description: n, checked: !0 === t, onChange: (t) => L(e.key, t), disabled: N },
+                { label: e.label, description: n, checked: !0 === t, onChange: (t) => R(e.key, t), disabled: _ },
                 e.key,
             );
         }
         return "channel" === e.type || "role" === e.type || "user" === e.type
             ? (0, l.jsx)(
-                  _,
+                  N,
                   {
                       projectId: t,
                       isPreview: g,
                       def: e,
                       hint: n,
-                      value: C.values[e.key] ?? G[e.key],
-                      disabled: N,
-                      onChange: (t) => L(e.key, t),
-                      fallback: X(e, n),
+                      value: C.values[e.key] ?? q[e.key],
+                      disabled: _,
+                      onChange: (t) => R(e.key, t),
+                      fallback: H(e, n),
                   },
                   e.key,
               )
-            : X(e, n);
+            : H(e, n);
     }
-    function X(e, t) {
-        let n = C.values[e.key] ?? G[e.key];
+    function H(e, t) {
+        let n = C.values[e.key] ?? q[e.key];
         return !0 === e.multiline
             ? (0, l.jsx)(
                   o.f,
@@ -195,8 +195,8 @@ function C(e) {
                       helperText: t,
                       required: !0 === e.required,
                       value: "string" == typeof n ? n : "",
-                      onChange: (t) => L(e.key, t),
-                      disabled: N,
+                      onChange: (t) => R(e.key, t),
+                      disabled: _,
                       rows: 6,
                       maxRows: 15,
                       autosize: !0,
@@ -212,8 +212,8 @@ function C(e) {
                       autoComplete: "off",
                       required: !0 === e.required,
                       value: Array.isArray(n) ? n.join(", ") : null == n ? "" : String(n),
-                      onChange: (t) => L(e.key, t),
-                      disabled: N,
+                      onChange: (t) => R(e.key, t),
+                      disabled: _,
                       fullWidth: !0,
                       ...("number" === e.type ? { type: "number", min: e.min, max: e.max, step: e.step } : {}),
                   },
@@ -250,7 +250,7 @@ function C(e) {
                               size: "sm",
                               text: j.intl.string(A.default.RsvBGf),
                               "aria-label": j.intl.formatToPlainString(A.default.WjoM7z, { label: t }),
-                              disabled: N,
+                              disabled: _,
                               onClick: () => E((t) => ({ ...t, [e.name]: !0 })),
                           }),
                       ],
@@ -271,7 +271,7 @@ function C(e) {
                       required: e.def?.required === !0 && !e.set,
                       value: C.secrets[e.name] ?? "",
                       onChange: (t) => D(e.name, t),
-                      disabled: N,
+                      disabled: _,
                       fullWidth: !0,
                   },
                   e.name,
@@ -293,7 +293,7 @@ function C(e) {
                     : null,
                 null == w
                     ? (0, l.jsx)("div", { className: k.kZ, children: (0, l.jsx)(f.y, {}) })
-                    : 0 === W.length && 0 === U.length
+                    : 0 === U.length && 0 === W.length
                       ? (0, l.jsx)(u.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
@@ -305,7 +305,7 @@ function C(e) {
                     : B
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
-                                z
+                                $
                                     ? (0, l.jsx)(u.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
@@ -314,14 +314,14 @@ function C(e) {
                                       })
                                     : null,
                                 O.map(function (e) {
-                                    let t = q.get(e);
+                                    let t = F.get(e);
                                     if (null != t) return Q(t);
-                                    let n = W.find((t) => t.key === e);
-                                    return null == n ? null : H(n);
+                                    let n = U.find((t) => t.key === e);
+                                    return null == n ? null : X(n);
                                 }),
                             ],
                         })
-                      : W.map(H),
+                      : U.map(X),
                 J,
             ],
         }),
@@ -334,7 +334,7 @@ function C(e) {
                     selectable: !0,
                     children: j.intl.string(A.default.dsHRPK),
                 }),
-                U.map(Q),
+                W.map(Q),
                 J,
             ],
         });
@@ -343,10 +343,10 @@ function C(e) {
             fields: K,
             secretFields: ee,
             loaded: null != w,
-            valueCount: W.length,
-            secretCount: U.length,
-            canSave: V,
-            saving: N,
+            valueCount: U.length,
+            secretCount: W.length,
+            canSave: z,
+            saving: _,
             isScoped: B,
             submit: Y,
         }),
@@ -395,12 +395,12 @@ function E(e) {
     let { guildId: t, ...n } = e;
     return (0, l.jsx)(P, { ...n, options: (0, m.A)(t) });
 }
-function N(e) {
+function _(e) {
     let { guildId: t, ...n } = e,
         { options: i, onQueryChange: r, matchSorterOptions: a } = (0, g.A)(t, (0, w.TN)(n.value));
     return (0, l.jsx)(P, { ...n, options: i, onQueryChange: r, matchSorterOptions: a });
 }
-function _(e) {
+function N(e) {
     let { projectId: t, isPreview: n, fallback: i, ...r } = e,
         a = (0, w.Tj)(t, n);
     if (null == a) return i;
@@ -410,6 +410,6 @@ function _(e) {
         case "role":
             return (0, l.jsx)(E, { ...r, guildId: a });
         default:
-            return (0, l.jsx)(N, { ...r, guildId: a });
+            return (0, l.jsx)(_, { ...r, guildId: a });
     }
 }

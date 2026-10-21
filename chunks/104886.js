@@ -1,14 +1,14 @@
-n.d(t, { E5: () => l, kI: () => a });
-var i,
-    r = n(945810),
-    a =
-        (((i = {})[(i.STEP_1_LOADED = 0)] = "STEP_1_LOADED"),
-        (i[(i.STEP_2_CLICKED_INTERNAL = 1)] = "STEP_2_CLICKED_INTERNAL"),
-        (i[(i.STEP_3_CLICKED_EXTERNAL = 2)] = "STEP_3_CLICKED_EXTERNAL"),
-        (i[(i.STEP_4_VIEWED_NON_IMPRESSION = 3)] = "STEP_4_VIEWED_NON_IMPRESSION"),
-        (i[(i.STEP_5_VIEWED_IMPRESSION = 4)] = "STEP_5_VIEWED_IMPRESSION"),
-        i);
-let s = (0, r.mj)({
+n.d(t, { E5: () => l, kI: () => i });
+var r,
+    u = n(945810),
+    i =
+        (((r = {})[(r.STEP_1_LOADED = 0)] = "STEP_1_LOADED"),
+        (r[(r.STEP_2_CLICKED_INTERNAL = 1)] = "STEP_2_CLICKED_INTERNAL"),
+        (r[(r.STEP_3_CLICKED_EXTERNAL = 2)] = "STEP_3_CLICKED_EXTERNAL"),
+        (r[(r.STEP_4_VIEWED_NON_IMPRESSION = 3)] = "STEP_4_VIEWED_NON_IMPRESSION"),
+        (r[(r.STEP_5_VIEWED_IMPRESSION = 4)] = "STEP_5_VIEWED_IMPRESSION"),
+        r);
+let o = (0, u.mj)({
     name: "2026-05-use-ad-analytics-interface",
     kind: "user",
     defaultConfig: { enabled: !1, maxStep: -1 },
@@ -22,6 +22,6 @@ let s = (0, r.mj)({
     },
 });
 function l(e, t) {
-    let n = s.getConfig({ location: t });
+    let n = o.getConfig({ location: t });
     return n.enabled && e <= n.maxStep;
 }

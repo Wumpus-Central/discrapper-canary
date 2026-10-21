@@ -1,15 +1,15 @@
 (i.d(a, {
     GF: () => w,
-    KE: () => v,
+    KE: () => O,
     Kx: () => b,
     Li: () => d,
     Lv: () => C,
     Ni: () => F,
-    RN: () => f,
+    RN: () => u,
     aL: () => m,
     ds: () => G,
     eg: () => $,
-    pd: () => A,
+    pd: () => R,
 }),
     i(321073),
     i(323874),
@@ -24,8 +24,8 @@ var o = i(626584),
     _ = i(597404),
     p = i(561509),
     c = i(940622);
-let u = new o.A("ShopAssetsPreviewUtils");
-var f =
+let f = new o.A("ShopAssetsPreviewUtils");
+var u =
     (((n = {}).CATALOG_BANNER_STATIC = "catalog_banner"),
     (n.CATALOG_BANNER_ANIMATED = "catalog_banner_animated"),
     (n.CATALOG_BANNER_RIVE = "catalog_banner_rive"),
@@ -73,7 +73,7 @@ let m = {
         mobile_bg: ["jpg"],
         mobile_hero: ["jpg"],
     },
-    g = new Map(Object.values(f).flatMap((e) => m[e].map((a) => [`${e}.${a}`, e]))),
+    g = new Map(Object.values(u).flatMap((e) => m[e].map((a) => [`${e}.${a}`, e]))),
     d = new Set(g.keys()),
     h = ".DS_Store";
 var b =
@@ -100,20 +100,20 @@ function E(e, a) {
     }),
         i.readAsDataURL(e));
 }
-function v(e, a, i) {
+function O(e, a, i) {
     if (0 === e.length) return void i?.("No files found!");
     for (let i of e) E(i, a);
 }
-function O(e, a) {
+function v(e, a) {
     return `${e}/${a}`;
 }
 function T(e) {
     return (0, s.tT)(e.type) || (0, s.XB)(e.type) || (0, s.XA)(e.name);
 }
-function A(e) {
+function R(e) {
     return g.get(e.name) ?? null;
 }
-async function R(e) {
+async function A(e) {
     let a = e.createReader();
     return (await new Promise((e) => a.readEntries(e))).filter((e) => !(e.isDirectory && e.name.startsWith("_")));
 }
@@ -123,7 +123,7 @@ async function N(e) {
         let i = await new Promise((a) => e.file(a));
         i.name !== h && a.push(i);
     } else if (e.isDirectory) {
-        let i = await R(e),
+        let i = await A(e),
             n = await Promise.all(i.map((e) => N(e)));
         a.push(...n.flat());
     }
@@ -131,15 +131,15 @@ async function N(e) {
 }
 function y(e, a, i, n) {
     if (a.name === h) return;
-    let t = O(e, a.name);
+    let t = v(e, a.name);
     if ("profile_effects" === i)
         T(a) || a.name.endsWith(".txt")
             ? (e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(a))
-            : n.ignoredFilenames.push(O(e, a.name));
+            : n.ignoredFilenames.push(v(e, a.name));
     else
         T(a)
             ? "collection" === i || null === i
-                ? null != A(a)
+                ? null != R(a)
                     ? n.collectionFiles.push(a)
                     : n.ignoredFilenames.push(t)
                 : "avatar_decorations" === i
@@ -148,19 +148,19 @@ function y(e, a, i, n) {
             : n.ignoredFilenames.push(t);
 }
 async function D(e, a, i) {
-    for (let n of await R(e))
+    for (let n of await A(e))
         if (n.isFile) {
             let t = n,
                 r = await new Promise((e) => t.file(e));
             y(e.name, r, a, i);
         } else {
             let e = await N(n);
-            i.ignoredFilenames.push(...e.map((e) => O(n.name, e.name)));
+            i.ignoredFilenames.push(...e.map((e) => v(n.name, e.name)));
         }
 }
 async function B(e, a) {
     let i = e.name,
-        n = await R(e),
+        n = await A(e),
         t = { previewFile: null, layerFiles: [], unrecognizedSubdirs: [] };
     for (let e of n) {
         if (e.isFile) {
@@ -173,7 +173,7 @@ async function B(e, a) {
         if (e.isDirectory) {
             let n = e.name;
             if ("foreground" === n || "background" === n) {
-                for (let r of await R(e))
+                for (let r of await A(e))
                     if (r.isFile && r.name !== h) {
                         let e = r,
                             a = await new Promise((a) => e.file(a));
@@ -192,17 +192,17 @@ async function B(e, a) {
     (null != t.previewFile || 0 !== t.layerFiles.length) && (a.profileFrameDirsMap[i] = t);
 }
 async function L(e, a) {
-    for (let i of await R(e))
+    for (let i of await A(e))
         i.isDirectory ? await B(i, a) : i.isFile && i.name !== h && a.ignoredFilenames.push(`frames/${i.name}`);
 }
 async function P(e, a) {
-    for (let i of await R(e))
+    for (let i of await A(e))
         i.isDirectory
             ? await D(i, "profile_effects", a)
-            : i.isFile && i.name !== h && a.ignoredFilenames.push(O(e.name, i.name));
+            : i.isFile && i.name !== h && a.ignoredFilenames.push(v(e.name, i.name));
 }
 async function S(e, a) {
-    for (let i of await R(e))
+    for (let i of await A(e))
         if (i.isDirectory) {
             let e = i;
             if ("collection" === e.name) await D(e, "collection", a);
@@ -211,7 +211,7 @@ async function S(e, a) {
             else if ("frames" === e.name) await L(e, a);
             else {
                 let i = await N(e);
-                a.ignoredFilenames.push(...i.map((a) => O(e.name, a.name)));
+                a.ignoredFilenames.push(...i.map((a) => v(e.name, a.name)));
             }
         }
 }
@@ -287,7 +287,7 @@ async function M(e, a, i) {
                 try {
                     return { layer: a, dims: await C(r[a.id]) };
                 } catch (e) {
-                    return (u.error(`Failed to measure preview layer ${a.id}:`, e), null);
+                    return (f.error(`Failed to measure preview layer ${a.id}:`, e), null);
                 }
             }),
         )
@@ -308,7 +308,7 @@ function G() {
                 let r = await $(e);
                 (r.collectionFiles.forEach((e) => {
                     E(e, (e) => {
-                        let a = A(e);
+                        let a = R(e);
                         null != a && i(a, e);
                     });
                 }),

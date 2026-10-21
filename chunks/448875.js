@@ -45,12 +45,12 @@ function f(e) {
         max_values: e.maxValues,
     };
 }
-function I(e) {
+function g(e) {
     return e
         ?.map(function e(t) {
             switch (t.type) {
                 case i.I5.ACTION_ROW:
-                    return { type: t.type, components: I(t.components) };
+                    return { type: t.type, components: g(t.components) };
                 case i.I5.BUTTON:
                     return {
                         type: t.type,
@@ -81,7 +81,7 @@ function I(e) {
                 case i.I5.CHANNEL_SELECT:
                     return { type: t.type, ...f(t), channel_types: t.channelTypes, default_values: t.defaultValues };
                 case i.I5.SECTION:
-                    return { type: t.type, components: I(t.components), accessory: e(t.accessory) };
+                    return { type: t.type, components: g(t.components), accessory: e(t.accessory) };
                 case i.I5.TEXT_DISPLAY:
                     return { type: t.type, content: t.content };
                 case i.I5.THUMBNAIL:
@@ -106,7 +106,7 @@ function I(e) {
                         type: t.type,
                         accent_color: t.accentColor,
                         spoiler: t.spoiler,
-                        components: I(t.components),
+                        components: g(t.components),
                     };
                 case i.I5.TEXT_INPUT:
                 case i.I5.LABEL:
@@ -121,7 +121,7 @@ function I(e) {
         })
         .filter(u.Vq);
 }
-function A(e) {
+function I(e) {
     if (null != e)
         return {
             url: e.url,
@@ -135,7 +135,7 @@ function A(e) {
             content_type: e.contentType,
         };
 }
-function g(e) {
+function A(e) {
     let t = (e.type === _.Auw.ARTICLE || e.type === _.Auw.IMAGE) && null == e.images,
         n = t ? e.image : e.thumbnail,
         i = t ? void 0 : e.image;
@@ -156,14 +156,14 @@ function g(e) {
             if (null != e) return { name: e.name, url: e.url, icon_url: e.iconURL, proxy_icon_url: e.iconProxyURL };
         })(e.author),
         provider: e.provider,
-        thumbnail: A(n),
-        image: A(i),
-        video: A(e.video),
+        thumbnail: I(n),
+        image: I(i),
+        video: I(e.video),
         footer: (function (e) {
             if (null != e) return { text: e.text, icon_url: e.iconURL, proxy_icon_url: e.iconProxyURL };
         })(e.footer),
         reference_id: e.referenceId,
-        components: I(e.components),
+        components: g(e.components),
     };
 }
 function v(e) {
@@ -204,9 +204,9 @@ function w(e) {
         attachments: e.attachments,
         embeds: e.embeds.flatMap((e) => {
             let t = (e.images ?? []).filter((t) => t !== e.image);
-            return [g(e), ...t.map((t) => g({ id: e.id, type: _.Auw.RICH, url: e.url, image: t }))];
+            return [A(e), ...t.map((t) => A({ id: e.id, type: _.Auw.RICH, url: e.url, image: t }))];
         }),
-        components: I(e.components),
+        components: g(e.components),
         reactions: v(
             e.reactions
                 .filter((e) => e.count_details?.vote == null)

@@ -1,4 +1,4 @@
-n.d(t, { $: () => p, m: () => E });
+n.d(t, { $: () => E, m: () => p });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -11,18 +11,18 @@ var a = n(477900),
     f = n(821609),
     m = n(775602),
     g = n(485038);
-let E = "data-prevents-popout-dismiss";
-function p(e) {
+let p = "data-prevents-popout-dismiss";
+function E(e) {
     let {
             preventsPopoutDismiss: t,
             isVisible: n,
             labelId: r,
-            noticeText: p,
+            noticeText: E,
             primaryAction: h,
             secondaryAction: x,
             isEmphasized: b = !1,
-            a11yAnnounceOnShow: _,
-            a11yAnnounceOnHide: A,
+            a11yAnnounceOnShow: A,
+            a11yAnnounceOnHide: _,
         } = e,
         N = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
         R = l.useRef(null);
@@ -39,7 +39,7 @@ function p(e) {
             leave: { opacity: 0, y: 80 * !N },
             onRest: (e, t) => {
                 if (!e.finished) return;
-                let n = t.item ? _ : A;
+                let n = t.item ? A : _;
                 (null != R.current && clearTimeout(R.current),
                     null != n
                         ? (R.current = setTimeout(() => {
@@ -52,7 +52,7 @@ function p(e) {
                 ? (0, a.jsx)(i.animated.div, {
                       style: e,
                       children: (0, a.jsxs)("footer", {
-                          ...(!0 === t ? { [E]: "" } : null),
+                          ...(!0 === t ? { [p]: "" } : null),
                           className: s()(g.Qs, { [g.hO]: b }),
                           "aria-labelledby": r,
                           children: [
@@ -61,7 +61,7 @@ function p(e) {
                                   color: "none",
                                   id: r,
                                   className: g.ut,
-                                  children: p,
+                                  children: E,
                               }),
                               (0, a.jsxs)("div", {
                                   className: g.o1,

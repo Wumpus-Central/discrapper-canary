@@ -1,7 +1,7 @@
-n.d(t, { Gu: () => h, NW: () => u, OA: () => C, Un: () => d, tp: () => f });
+n.d(t, { Gu: () => h, NW: () => u, OA: () => f, Un: () => d, tp: () => C });
 var r = n(73153),
-    a = n(975189),
-    i = n(371169),
+    i = n(975189),
+    a = n(371169),
     o = n(385081),
     l = n(187308),
     c = n(248675),
@@ -9,12 +9,12 @@ var r = n(73153),
 let u = {
         message_disposition(e, t) {
             var n;
-            let { projectId: a } = t;
+            let { projectId: i } = t;
             ((n = e.disposition),
                 Object.prototype.hasOwnProperty.call(A, n) &&
                     r.h.dispatch({
                         type: "CONJURE_CHAT_MESSAGE_DISPOSITION",
-                        projectId: a,
+                        projectId: i,
                         id: e.id,
                         activeTurnId: e.active_turn_id,
                         disposition: e.disposition,
@@ -61,33 +61,33 @@ let u = {
     d = {
         reaction(e, t) {
             let { projectId: n } = t,
-                a = (0, l.xN)(e);
+                i = (0, l.xN)(e);
             null != e.message_id &&
-                null != a &&
-                r.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_REACTION", projectId: n, id: e.message_id, reaction: a });
+                null != i &&
+                r.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_REACTION", projectId: n, id: e.message_id, reaction: i });
         },
         reply(e, t) {
             let { projectId: n } = t,
-                a = e.message ?? "";
-            "" !== a
+                i = e.message ?? "";
+            "" !== i
                 ? r.h.dispatch({
                       type: "CONJURE_CHAT_TURN_PATCH",
                       projectId: n,
                       turnId: e.turn_id,
-                      patch: { content: a, kind: "message" },
+                      patch: { content: i, kind: "message" },
                   })
                 : h(n, s.intl.string(c.default["913RMa"]), _);
         },
         thinking_lifecycle(e, t) {
             let { projectId: n } = t,
-                { phase: a, session: i, seq: o, ticks: l, elapsed_ms: c, text: s } = e;
-            null != a &&
+                { phase: i, session: a, seq: o, ticks: l, elapsed_ms: c, text: s } = e;
+            null != i &&
                 null != o &&
-                null != i &&
+                null != a &&
                 r.h.dispatch({
                     type: "CONJURE_CHAT_THINKING_SET",
                     projectId: n,
-                    activity: { phase: a, session: i, seq: o, ticks: l ?? 0, elapsedMs: c ?? 0, text: s ?? "" },
+                    activity: { phase: i, session: a, seq: o, ticks: l ?? 0, elapsedMs: c ?? 0, text: s ?? "" },
                 });
         },
         compaction(e, t) {
@@ -102,15 +102,15 @@ let u = {
         },
         todos(e, t) {
             let { projectId: n } = t,
-                a = e.items ?? [];
-            a.length > 0 &&
+                i = e.items ?? [];
+            i.length > 0 &&
                 (r.h.dispatch({
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
                     turnId: e.turn_id,
-                    patch: { todos: a },
+                    patch: { todos: i },
                 }),
-                C(n, e));
+                f(n, e));
         },
         plan_proposed(e, t) {
             let { projectId: n } = t;
@@ -178,8 +178,8 @@ let u = {
         },
         collect_secrets(e, t) {
             let { projectId: n } = t,
-                a = e.fields ?? [];
-            a.length > 0 &&
+                i = e.fields ?? [];
+            i.length > 0 &&
                 r.h.dispatch({
                     type: "CONJURE_CHAT_TURN_PATCH",
                     projectId: n,
@@ -188,7 +188,7 @@ let u = {
                         secretRequest: {
                             request_id: e.request_id,
                             over_mcp: e.over_mcp,
-                            fields: a,
+                            fields: i,
                             note: e.note,
                             copy_values: e.copy_values,
                         },
@@ -246,12 +246,12 @@ function h(e, t) {
     }),
         (0, o.Hy)(e, { ...n, message: t }));
 }
-function C(e, t) {
+function f(e, t) {
     r.h.dispatch({ type: "CONJURE_CHAT_STEP_APPEND", projectId: e, turnId: t.turn_id, step: t });
 }
-function f(e, t, n) {
+function C(e, t, n) {
     try {
-        let r = (0, a.KY)(e);
+        let r = (0, i.KY)(e);
         if (null == r) throw Error("Not connected");
         r.sendQueuedMessageAction(n, t);
     } catch (e) {
@@ -260,7 +260,7 @@ function f(e, t, n) {
 }
 function y(e, t) {
     let { projectId: n } = t;
-    (C(n, e),
+    (f(n, e),
         (0, o.Hy)(n, {
             ...g[e.kind],
             message: e.message,
@@ -271,7 +271,7 @@ function y(e, t) {
 function T(e, t) {
     let { projectId: n } = t;
     (r.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: n, event: e }),
-        "app_channel_deleted" !== e.type && "remixed" !== e.type && (0, i.GO)(n));
+        "app_channel_deleted" !== e.type && "remixed" !== e.type && (0, a.GO)(n));
 }
 let g = {
         build_error: { location: "build", code: o.xf.BUILD_FAILED },

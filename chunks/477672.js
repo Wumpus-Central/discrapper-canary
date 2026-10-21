@@ -1,4 +1,4 @@
-n.d(t, { P: () => T });
+n.d(t, { P: () => I });
 var i = n(148494),
     l = n(5180),
     r = n(873298),
@@ -14,7 +14,7 @@ var i = n(148494),
     C = n(967198),
     _ = n(625494),
     g = n(652215);
-let T = {
+let I = {
     binds: ["shift+esc"],
     comboKeysBindGlobal: !0,
     action() {

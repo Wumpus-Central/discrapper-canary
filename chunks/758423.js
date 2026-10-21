@@ -17,20 +17,20 @@ function _(e, t, n, c) {
         S = r.useRef(null),
         [v, C] = r.useState(null),
         [A, h] = r.useState(!1),
-        I = p.taskConfigV2.tasks[l.n.WATCH_VIDEO]?.assets,
-        g = r.useMemo(() => p.features.includes(u.L.FULL_EPISODE_VIDEO_QUEST), [p.features]),
+        g = p.taskConfigV2.tasks[l.n.WATCH_VIDEO]?.assets,
+        I = r.useMemo(() => p.features.includes(u.L.FULL_EPISODE_VIDEO_QUEST), [p.features]),
         D = r.useMemo(
             () =>
-                null != I
-                    ? !A && (0, i.Ap)() && null != I.videoHls
+                null != g
+                    ? !A && (0, i.Ap)() && null != g.videoHls
                         ? a.fY.VIDEO_PLAYER_VIDEO_HLS
-                        : g
+                        : I
                           ? null
-                          : E.has(t) || null == I.videoLowRes
+                          : E.has(t) || null == g.videoLowRes
                             ? a.fY.VIDEO_PLAYER_VIDEO
                             : a.fY.VIDEO_PLAYER_VIDEO_LOW_RES
                     : null,
-            [I, t, g, A],
+            [g, t, I, A],
         ),
         T = r.useMemo(
             () =>
@@ -44,7 +44,7 @@ function _(e, t, n, c) {
     function R() {
         null != S.current && S.current.config.minAutoBitrate !== s.XY && (S.current.config.minAutoBitrate = s.XY);
     }
-    let L = r.useCallback(() => {
+    let O = r.useCallback(() => {
         null != S.current && (S.current.config.minAutoBitrate = s.XY);
     }, []);
     return (
@@ -77,6 +77,6 @@ function _(e, t, n, c) {
                 }
             );
         }, [_, T, D, e, n]),
-        { videoAssetType: D, videoAsset: T, hlsRef: S, hls: v, onFirstChunkLoaded: _ ? L : d }
+        { videoAssetType: D, videoAsset: T, hlsRef: S, hls: v, onFirstChunkLoaded: _ ? O : d }
     );
 }

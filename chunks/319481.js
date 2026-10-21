@@ -92,11 +92,11 @@ var U = n(649121),
 (n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
 let P = new Map(),
     J = new Map(),
-    I = new Set();
-function M(e, t) {
+    D = new Set();
+function I(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-function D(e) {
+function M(e) {
     return `optimistic:${e}`;
 }
 let L = new Map();
@@ -107,7 +107,7 @@ function G(e, t) {
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: D(s),
+            id: M(s),
             userId: l.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: r,
@@ -199,7 +199,7 @@ async function H(e, t) {
                             }),
                                 es.delete(t));
                             let i = n.pendingEvents;
-                            for (let s of ((n.pendingEvents = []), M(t, "open"), i)) e(t, n, s);
+                            for (let s of ((n.pendingEvents = []), I(t, "open"), i)) e(t, n, s);
                             ($.get(t) ?? 0) > 0 && F(t, n);
                             let l = n.pendingModelSettings;
                             if (((n.pendingModelSettings = null), null != l))
@@ -243,7 +243,7 @@ async function H(e, t) {
                                     projectId: t,
                                     content: s.content,
                                     id: s.id,
-                                    ...(a && null != s.nonce ? { optimisticId: D(s.nonce) } : {}),
+                                    ...(a && null != s.nonce ? { optimisticId: M(s.nonce) } : {}),
                                     userId: s.user_id,
                                     timestamp: s.ts,
                                     attachments: s.attachments,
@@ -267,7 +267,7 @@ async function H(e, t) {
                                             turnId: e.turn_id,
                                             summary: e.summary,
                                         }),
-                                        I.delete(n) &&
+                                        D.delete(n) &&
                                             "cancelled" === e.result &&
                                             o.h.dispatch({ type: "CONJURE_CHAT_INTERRUPTED", projectId: n }));
                                     return;
@@ -286,10 +286,10 @@ async function H(e, t) {
                 (0, b.BC)(e, "Connection closed before the draft arrived"),
                 (0, E.RP)(e),
                 t.disposed)
-                    ? M(e, "closed")
+                    ? I(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), M(e, "connecting"), t.backoff.fail(() => q(e)))
-                      : (M(e, "closed"),
+                      ? ((t.reconnectPending = !0), I(e, "connecting"), t.backoff.fail(() => q(e)))
+                      : (I(e, "closed"),
                         x(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null),
                         (t.pendingTemplatePrep = null));
@@ -300,7 +300,7 @@ async function H(e, t) {
         });
     } catch (n) {
         if ((console.error("[conjure] ws open failed", n), t.disposed)) return;
-        (M(e, "failed"),
+        (I(e, "failed"),
             x(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             (t.pendingTemplatePrep = null),
@@ -340,7 +340,7 @@ function q(e) {
         (r.debugOnDemand = !1),
         (r.disposed = !1),
         (r.reconnectPending = !1),
-        M(e, "connecting"),
+        I(e, "connecting"),
         H(e, r));
 }
 let $ = new Map();
@@ -374,7 +374,7 @@ function Y(e) {
         eo(e),
         k.A.releasePreviewControl(e),
         (0, E.RP)(e),
-        M(e, "closed"),
+        I(e, "closed"),
         !0)
     );
 }
@@ -427,18 +427,18 @@ function V(e, t, n) {
     let s = (0, i.m)();
     return (
         G(e, { content: t.trim(), nonce: s, attachments: null != n && n.length > 0 ? n : void 0 }),
-        { nonce: s, messageKey: D(s) }
+        { nonce: s, messageKey: M(s) }
     );
 }
 function X(e, t) {
-    (L.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: D(t), withdrawn: !0 }));
+    (L.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: M(t), withdrawn: !0 }));
 }
 function Z(e) {
     let t = P.get(e);
     try {
         if (null == t) throw Error("Not connected");
         (t.ws.sendInterrupt(),
-            c.A.isThinking(e) && (I.add(e), o.h.dispatch({ type: "CONJURE_CHAT_STOP_REQUESTED", projectId: e })));
+            c.A.isThinking(e) && (D.add(e), o.h.dispatch({ type: "CONJURE_CHAT_STOP_REQUESTED", projectId: e })));
     } catch (e) {
         console.error("[conjure] interrupt send failed", e);
     }
@@ -494,7 +494,7 @@ let ec = new ea(o.h, {
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if (J.get(t) === n) return !1;
-        (J.set(t, n), ("closed" === n || "failed" === n) && I.delete(t));
+        (J.set(t, n), ("closed" === n || "failed" === n) && D.delete(t));
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;

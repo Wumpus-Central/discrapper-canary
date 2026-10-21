@@ -1,4 +1,4 @@
-n.d(t, { J$: () => T, WM: () => s.WM, cZ: () => C, eG: () => E, vd: () => I, vm: () => _, zh: () => A, zv: () => f });
+n.d(t, { J$: () => T, WM: () => s.WM, cZ: () => C, eG: () => f, vd: () => I, vm: () => _, zh: () => A, zv: () => E });
 var r = n(544180),
     u = n(396813),
     i = n(859703),
@@ -8,11 +8,11 @@ var r = n(544180),
     a = n(977416),
     c = n(792620),
     d = n(652215);
-function f(e, t) {
+function E(e, t) {
     (0, a.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, u.uI)(e.id, t);
 }
 n(105292);
-function E(e) {
+function f(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height || t.width > t.height ? "landscape" : "portrait";
 }
@@ -25,7 +25,7 @@ function _(e) {
     let s = o.Ay.getState().getVideoProgress(t);
     if (null == s) return;
     let a = i.A.getQuest(t);
-    null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && f(a, s.maxTimestampSec);
+    null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && E(a, s.maxTimestampSec);
     let c = A(s.maxTimestampSec, s.duration);
     ((0, l.av)({
         questId: t,

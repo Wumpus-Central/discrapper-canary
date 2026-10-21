@@ -11,20 +11,20 @@ var a = n(477900),
     f = n(834730),
     m = n(353795),
     g = n(37537),
-    E = n(239027);
-function p(e) {
+    p = n(239027);
+function E(e) {
     let { title: t, body: n } = e,
         l = (0, g.c)("PremiumPopoverHeader");
     return (0, a.jsxs)("div", {
-        className: E.header,
+        className: p.header,
         children: [
             (0, a.jsx)(u.D, {
                 variant: l ? "nitro-sm" : "heading-md/semibold",
-                className: l ? E.titleRefresh : E.title,
+                className: l ? p.titleRefresh : p.title,
                 children: t,
             }),
             (0, a.jsx)("div", {
-                className: E.headerBody,
+                className: p.headerBody,
                 children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
@@ -41,13 +41,13 @@ function h(e) {
             onRequestClose: h,
             position: x,
             caretConfig: b,
-            scrollBehavior: _,
-            showCloseButton: A = !0,
+            scrollBehavior: A,
+            showCloseButton: _ = !0,
             isCaretHoverable: N = !1,
             shouldTrapFocus: R = !1,
             returnRef: v,
-            onNudgeChange: I,
-            ...j
+            onNudgeChange: j,
+            ...I
         } = e,
         [T, y] = l.useState(x ?? "top");
     l.useEffect(() => {
@@ -66,24 +66,24 @@ function h(e) {
         M = l.useCallback((e) => {
             y(e);
         }, []),
-        O = N ? E.caretHoverable : void 0,
+        O = N ? p.caretHoverable : void 0,
         P = {
-            targetElementRef: j.targetElementRef,
-            shouldShow: j.shouldShow,
-            hasVideo: j.hasVideo,
+            targetElementRef: I.targetElementRef,
+            shouldShow: I.shouldShow,
+            hasVideo: I.hasVideo,
             position: T,
             caretConfig: C,
             onRequestClose: S,
             gradientColor: g,
             onPositionChange: M,
-            onNudgeChange: I,
-            scrollBehavior: _,
+            onNudgeChange: j,
+            scrollBehavior: A,
             modal: R,
             returnRef: v,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
-            ...("edge" === j.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: j.align }
+            ...("edge" === I.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: I.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
@@ -91,17 +91,17 @@ function h(e) {
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                A && (0, a.jsx)(c.q, { onClick: D, variant: null != g ? "color-mix" : void 0 }),
+                _ && (0, a.jsx)(c.q, { onClick: D, variant: null != g ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
-                        className: s()(E.graphic, { [E[`graphic--${u}`]]: null != u }),
+                        className: s()(p.graphic, { [p[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(m.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(p, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: E.actionBar }) : null,
+                (0, a.jsx)(E, { title: t, body: n }),
+                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: p.actionBar }) : null,
                 null != C && (0, a.jsx)(d.F, { className: O }),
             ],
         }),

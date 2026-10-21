@@ -18,13 +18,13 @@ var r = n(477900),
     C = n(755372),
     A = n(236850),
     h = n(795068),
-    I = n(678968),
-    g = n(576199),
+    g = n(678968),
+    I = n(576199),
     D = n(758423),
     T = n(103515),
     R = n(854356),
-    L = n(721092),
-    O = n(190107),
+    O = n(721092),
+    L = n(190107),
     N = n(105292),
     k = n(879371),
     P = n(215805);
@@ -51,7 +51,7 @@ function b(e) {
         G = (0, m.Yh)(B),
         K = B.userStatus?.completedAt != null,
         $ = !K,
-        W = l.useMemo(() => B.config.features.includes(O.Li.FULL_EPISODE_VIDEO_QUEST), [B.config.features]),
+        W = l.useMemo(() => B.config.features.includes(L.Li.FULL_EPISODE_VIDEO_QUEST), [B.config.features]),
         q = (0, _.Kr)((e) => e.videoProgress[B.id] ?? _.yc, u.x),
         z = (0, _.Kr)((e) => e.setVideoProgress),
         { volume: X, muted: Z, setVolume: J, setMuted: ee } = (0, A.A)(),
@@ -76,7 +76,7 @@ function b(e) {
         ed = l.useCallback((e) => {
             ((ea.current = e), ec(e));
         }, []),
-        eE = l.useMemo(() => (0, p.L)({ quest: B, location: O.rE.VIDEO_MODAL }), [B]),
+        eE = l.useMemo(() => (0, p.L)({ quest: B, location: L.rE.VIDEO_MODAL }), [B]),
         e_ = (0, l.useRef)(0),
         ef = (0, l.useRef)(!1),
         {
@@ -87,13 +87,13 @@ function b(e) {
             trackQuestVideoFocusChange: eC,
             trackQuestVideoBufferingStarted: eA,
             trackQuestVideoBufferingEnded: eh,
-            trackQuestVideoTimeToFirstFrame: eI,
-            trackQuestVideoFullscreenChanged: eg,
+            trackQuestVideoTimeToFirstFrame: eg,
+            trackQuestVideoFullscreenChanged: eI,
             trackQuestVideoError: eD,
             trackQuestVideoVolumeChanged: eT,
             trackQuestContentClick: eR,
-            trackQuestVideoProgressed: eL,
-            trackQuestVideoSegmentWatched: eO,
+            trackQuestVideoProgressed: eO,
+            trackQuestVideoSegmentWatched: eL,
             handleEngagedViewProgress: eN,
         } = (0, T.A)({
             questId: B.id,
@@ -121,14 +121,14 @@ function b(e) {
             t?.questId === B.id && t?.fetchStatus === _.Lx.SUCCESS)
                 ? (t.text ?? null)
                 : null),
-        eP = (0, L.A)({ targetSec: n, quest: B, sourceQuestContent: w, questConfig: B.config, clickable: K }),
+        eP = (0, O.A)({ targetSec: n, quest: B, sourceQuestContent: w, questConfig: B.config, clickable: K }),
         eb = l.useCallback(() => H.current?.currentTime ?? null, []),
         {
             handlePlayerStateChange: ex,
             handleLoadEnd: ey,
             handleFirstFrame: eV,
             handleSeek: eU,
-        } = (0, a.Yr)({ getCurrentVideoTime: eb, onAnalytics: eO, emitIntervalMs: a.KI, minSegmentDurationMs: a._4 }),
+        } = (0, a.Yr)({ getCurrentVideoTime: eb, onAnalytics: eL, emitIntervalMs: a.KI, minSegmentDurationMs: a._4 }),
         eQ = (0, l.useRef)(null),
         eM = l.useCallback(
             (e, t) => {
@@ -176,15 +176,15 @@ function b(e) {
         eF = l.useCallback(
             (e) => {
                 let t = e - U;
-                (eV(t), eI(t));
+                (eV(t), eg(t));
             },
-            [eV, eI, U],
+            [eV, eg, U],
         ),
         eY = l.useCallback(
             (e) => {
-                (Y(e), eg(e));
+                (Y(e), eI(e));
             },
-            [Y, eg],
+            [Y, eI],
         ),
         ej = l.useCallback(
             (e) => {
@@ -201,11 +201,11 @@ function b(e) {
                 let r = W && e >= n && !ef.current;
                 (e >= e_.current || r) &&
                     (r && (ef.current = !0),
-                    (e_.current = e + O.aA + Math.random() * O.A6),
+                    (e_.current = e + L.aA + Math.random() * L.A6),
                     K || B.userStatus?.enrolledAt == null || (0, S.zv)(B, e),
-                    eL());
+                    eO());
             },
-            [B, G.taskType, n, K, W, eL, z, b, eN],
+            [B, G.taskType, n, K, W, eO, z, b, eN],
         ),
         eG = l.useCallback(
             (e, t) => {
@@ -219,9 +219,9 @@ function b(e) {
         eK = l.useCallback(() => {
             if (null != H.current) {
                 let e = H.current.duration;
-                (K || B.userStatus?.enrolledAt == null || (0, S.zv)(B, e + 1), z(B.id, e, e), eL());
+                (K || B.userStatus?.enrolledAt == null || (0, S.zv)(B, e + 1), z(B.id, e, e), eO());
             }
-        }, [B, K, z, eL]),
+        }, [B, K, z, eO]),
         e$ = l.useCallback(
             (e, t) => {
                 eD(e, t);
@@ -233,12 +233,12 @@ function b(e) {
             () =>
                 (0, r.jsxs)("div", {
                     className: P.A,
-                    children: [(0, r.jsx)(g.A, {}), (0, r.jsx)(v.A, { onClose: j })],
+                    children: [(0, r.jsx)(I.A, {}), (0, r.jsx)(v.A, { onClose: j })],
                 }),
             [j],
         ),
         ez = l.useCallback(
-            () => (0, r.jsx)(I.A, { videoRef: H, onTrackQuestContentClick: eR, orientation: Q }),
+            () => (0, r.jsx)(g.A, { videoRef: H, onTrackQuestContentClick: eR, orientation: Q }),
             [eR, Q],
         );
     return (0, r.jsx)(a.Ft, {

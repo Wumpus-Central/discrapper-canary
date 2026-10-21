@@ -1,30 +1,30 @@
-e.d(l, { m: () => n });
-var s = e(477900);
-e(582128);
-var i = e(661531),
-    a = e(996682),
-    h = e(27989);
-function n(t) {
+l.d(e, { m: () => h });
+var s = l(477900);
+l(582128);
+var i = l(661531),
+    a = l(996682),
+    n = l(27989);
+function h(t) {
     let {
-            size: l = "md",
-            width: e,
-            height: n,
+            size: e = "md",
+            width: l,
+            height: h,
             color: c = i.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: r = "",
             secondaryColor: o = "#000",
             secondaryColorClass: v = "",
             tertiaryColor: A = "#fff",
             tertiaryColorClass: d = "",
-            ...g
+            ...p
         } = t,
-        E = (0, h.J)(l),
-        m = E?.width ?? e,
-        p = E?.height ?? n;
+        g = (0, n.J)(e),
+        E = g?.width ?? l,
+        m = g?.height ?? h;
     return (0, s.jsxs)("svg", {
-        ...(0, a.A)(g),
+        ...(0, a.A)(p),
         xmlns: "http://www.w3.org/2000/svg",
-        width: m,
-        height: p,
+        width: E,
+        height: m,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

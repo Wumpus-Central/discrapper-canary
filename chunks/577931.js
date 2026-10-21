@@ -16,7 +16,7 @@ function u() {
             [t, n, u],
         ),
         m = (0, d.A)((e) => e.hiddenOrder),
-        { hiddenBadges: g, nextHiddenOrder: E } = a.useMemo(() => {
+        { hiddenBadges: g, nextHiddenOrder: p } = a.useMemo(() => {
             let e = new Map(f.hiddenBadges.map((e) => [e.badge_id, e])),
                 t = m.flatMap((t) => {
                     let n = e.get(t);
@@ -28,8 +28,8 @@ function u() {
         }, [f.hiddenBadges, m]);
     return (
         a.useEffect(() => {
-            (E.length === m.length && E.every((e, t) => e === m[t])) || d.A.setState({ hiddenOrder: E });
-        }, [E, m]),
+            (p.length === m.length && p.every((e, t) => e === m[t])) || d.A.setState({ hiddenOrder: p });
+        }, [p, m]),
         { ...f, hiddenBadges: g }
     );
 }

@@ -17,9 +17,9 @@ function o(e) {
             onInteractionEnd: f,
             className: m,
             fillClassName: g,
-            overlay: E,
+            overlay: p,
         } = e,
-        p = {
+        E = {
             "--custom-cutout-radius": `${c.radius}px`,
             "--custom-cutout-x": "center" === c.align ? "50%" : `${c.insetStart + c.radius}px`,
             "--custom-cutout-y": `calc(100% - ${c.insetBottom}px)`,
@@ -29,10 +29,10 @@ function o(e) {
         style: { height: o, width: d ?? "100%" },
         children: (0, a.jsxs)("div", {
             className: r()(i.GS, g),
-            style: { ...p, backgroundImage: null != t && "" !== t ? `url(${t})` : void 0, backgroundColor: n },
+            style: { ...E, backgroundImage: null != t && "" !== t ? `url(${t})` : void 0, backgroundColor: n },
             onMouseMove: u,
             onMouseLeave: f,
-            children: [l && (0, a.jsx)(s.A, { className: i.pH }), E],
+            children: [l && (0, a.jsx)(s.A, { className: i.pH }), p],
         }),
     });
 }

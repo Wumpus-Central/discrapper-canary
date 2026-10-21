@@ -1,16 +1,16 @@
 (n.d(t, {
-    v0: () => k,
+    v0: () => w,
     bg: () => b,
     WU: () => M,
-    IG: () => D,
+    IG: () => k,
     _Q: () => K,
-    Ps: () => B,
-    UR: () => R,
+    Ps: () => F,
+    UR: () => h,
     W1: () => y,
-    $J: () => w,
+    $J: () => D,
     b6: () => H,
     pu: () => G,
-    se: () => F,
+    se: () => x,
 }),
     n(321073),
     n(323874),
@@ -27,8 +27,8 @@ var r,
     a = n(274670),
     c = n(144779),
     d = n(7588),
-    f = n(657375),
-    E = n(968309),
+    E = n(657375),
+    f = n(968309),
     A = n(780964),
     _ = n(625494),
     C = n(723702),
@@ -71,14 +71,14 @@ function g(e, t, n) {
 }
 var N = n(651892),
     P = n(792620),
-    v = n(190107),
-    L = n(652215),
-    h = n(105292);
-function R(e) {
+    L = n(190107),
+    v = n(652215),
+    R = n(105292);
+function h(e) {
     let t = (0, P.t)({ quest: e }) || (0, P.fE)({ quest: e }) || (0, P.I6)(e),
         n = (0, P.uD)(e),
         r = [];
-    return (t && r.push(v.fO.DESKTOP), n && r.push(v.fO.CONSOLE), r);
+    return (t && r.push(L.fO.DESKTOP), n && r.push(L.fO.CONSOLE), r);
 }
 function b(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
@@ -86,10 +86,10 @@ function b(e) {
     for (let e of t)
         switch (e) {
             case o.n.PLAY_ON_XBOX:
-                n.push(L.fg2.XBOX);
+                n.push(v.fg2.XBOX);
                 break;
             case o.n.PLAY_ON_PLAYSTATION:
-                n.push(L.fg2.PLAYSTATION);
+                n.push(v.fg2.PLAYSTATION);
         }
     return n;
 }
@@ -99,10 +99,10 @@ function y(e) {
     return t || n;
 }
 var M = (((r = {}).DESKTOP = "desktop"), (r.XBOX = "xbox"), (r.PLAYSTATION = "playstation"), r);
-function w(e) {
-    return "xbox" === e.connected_account_type ? L.fg2.XBOX : L.fg2.PLAYSTATION;
+function D(e) {
+    return "xbox" === e.connected_account_type ? v.fg2.XBOX : v.fg2.PLAYSTATION;
 }
-function k(e, t) {
+function w(e, t) {
     let { platformType: n, quest: r } = e;
     ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, a.r)({
@@ -121,10 +121,10 @@ function k(e, t) {
               questContentCTA: t.ctaContent,
               impressionId: t.impressionId,
           }),
-        (0, E.A)({ platformType: n, location: t.ctaContent }));
+        (0, f.A)({ platformType: n, location: t.ctaContent }));
 }
-function D(e) {
-    return w(e) === L.fg2.XBOX ? h.t["mytEv+"] : h.t.iDiwby;
+function k(e) {
+    return D(e) === v.fg2.XBOX ? R.t["mytEv+"] : R.t.iDiwby;
 }
 function U(e) {
     if (((0, C.isIOS)() || "ios" === (0, C.getOS)()) && e.ios?.iosAppId != null) {
@@ -184,9 +184,9 @@ function G(e, t) {
                     return e;
                 }
             })(l, (o = (0, u.A)()))));
-    let { impressionId: E } = t,
-        A = null != E ? (0, d.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
-    (_._.dispatch(L.jej.QUEST_GAME_LINK_OPENED),
+    let { impressionId: f } = t,
+        A = null != f ? (0, d.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
+    (_._.dispatch(v.jej.QUEST_GAME_LINK_OPENED),
         q({
             link: l,
             directLink: s,
@@ -229,7 +229,7 @@ function G(e, t) {
                           });
                 })({ questId: e.id, trackingCtx: t, overlaySurface: n }),
             appStoreOverlayCarouselScrollContext: { questId: e.id },
-            getIosAttribution: null != A && null != E ? () => (0, f.FW)({ impressionId: E }) : void 0,
+            getIosAttribution: null != A && null != f ? () => (0, E.FW)({ impressionId: f }) : void 0,
         }).then((n) => {
             "custom" === n
                 ? (0, a.r)({
@@ -272,12 +272,12 @@ function K(e, t) {
         let { adContentId: r, adCreativeType: u, cta: i } = e,
             { preferExternalAppStore: o } = n,
             l = i.url,
-            E = U(i);
-        (null != E && (l = E), _._.dispatch(L.jej.QUEST_GAME_LINK_OPENED));
+            f = U(i);
+        (null != f && (l = f), _._.dispatch(v.jej.QUEST_GAME_LINK_OPENED));
         let { impressionId: A } = t,
             C = null != A ? (0, d.vV)(i.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
             I = Q(i),
-            N = null != C && null != A ? () => (0, f.FW)({ impressionId: A }) : void 0;
+            N = null != C && null != A ? () => (0, E.FW)({ impressionId: A }) : void 0;
         function P(e) {
             "custom" === e
                 ? (0, a.r)({
@@ -317,7 +317,7 @@ function K(e, t) {
         }
         q({
             link: l,
-            directLink: E,
+            directLink: f,
             inlineStoreParams: I,
             trackOverlayEvent: (e, n, i, o, l) =>
                 (0, p.YE)({
@@ -389,7 +389,7 @@ function H(e, t) {
             }
         })());
 }
-function F(e, t) {
+function x(e, t) {
     let { quest: n } = e;
     (0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
         ? (0, a.r)({
@@ -413,15 +413,15 @@ function F(e, t) {
               sourceQuestContent: t.sourceQuestContent,
           });
     let r = b(n);
-    if (1 === r.length) return (0, E.A)({ platformType: r.at(0) });
+    if (1 === r.length) return (0, f.A)({ platformType: r.at(0) });
     l.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
-        onComplete: (e) => (0, E.A)({ platformType: e }),
+        onComplete: (e) => (0, f.A)({ platformType: e }),
         includedPlatformTypes: new Set(r),
         includeApplicationConnections: !1,
     });
 }
-function B(e, t, n) {
+function F(e, t, n) {
     let { quest: r } = e;
     return (
         (0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
@@ -445,6 +445,6 @@ function B(e, t, n) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
               }),
-        (0, E.A)({ platformType: n })
+        (0, f.A)({ platformType: n })
     );
 }
