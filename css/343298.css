@@ -11,4 +11,15 @@
     text-decoration: line-through
 }
 
-/*# sourceMappingURL=343298.e831bc9f9160356a.css.map*/
+.wrap__8677f {
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.wrap__8677f>svg {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=343298.cc698e06a6feb773.css.map*/

@@ -4,6 +4,27 @@
     width: 100%
 }
 
+@media (max-width:485px) {
+    .notice__9408e {
+        min-width: 0;
+        overflow-wrap: anywhere
+    }
+
+    .notice__9408e>svg {
+        flex-shrink: 0
+    }
+
+    .notice__9408e>div {
+        flex-wrap: wrap;
+        min-width: 0
+    }
+
+    .notice__9408e>div>div {
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
 .modalRoot__38ccf {
     background-color: var(--control-secondary-background-default);
     height: 560px;
@@ -295,4 +316,151 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=8b44abd34fb1a9f8.css.map*/
+@media (max-width:485px) {
+    .modalRoot__38ccf.modalRoot__38ccf {
+        height: 100dvh;
+        max-height: 100dvh;
+        overflow: hidden;
+        overflow-wrap: anywhere
+    }
+
+    .mobileHeader__38ccf {
+        align-items: center;
+        background-color: var(--background-surface-high);
+        border-bottom: 1px solid var(--border-subtle);
+        display: flex;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        gap: var(--space-8);
+        justify-content: flex-end;
+        padding-bottom: var(--space-12);
+        padding-inline-end: max(var(--space-16), env(safe-area-inset-right));
+        padding-top: max(var(--space-12), env(safe-area-inset-top));
+        padding-inline-start: max(var(--space-16), env(safe-area-inset-left))
+    }
+
+    .modalHeaderButtonsContainer__38ccf {
+        flex-wrap: wrap;
+        gap: var(--space-8);
+        margin-inline-start: auto;
+        max-width: 100%;
+        position: static
+    }
+
+    .mobileLogo__38ccf {
+        flex: 1;
+        min-width: 0
+    }
+
+    .goToShopButton__38ccf {
+        box-sizing: border-box;
+        height: auto;
+        margin-inline-end: auto;
+        max-width: 100%;
+        min-height: var(--space-40);
+        min-width: 0;
+        padding-block: var(--space-8);
+        position: static;
+        white-space: normal
+    }
+
+    .goToShopButton__38ccf,
+    .modalHeaderButton__38ccf {
+        background-color: var(--control-secondary-background-default);
+        border-color: var(--control-secondary-border-default);
+        color: var(--text-default);
+        flex-shrink: 0
+    }
+
+    .goToShopButton__38ccf:hover,
+    .modalHeaderButton__38ccf:hover {
+        background-color: var(--control-secondary-background-hover)
+    }
+
+    .modalContent__38ccf {
+        flex: 1;
+        min-height: 0
+    }
+
+    .panelsContainer__38ccf {
+        flex: 1 0 auto;
+        flex-direction: column;
+        min-height: auto
+    }
+
+    .mediaContainer__38ccf {
+        aspect-ratio: 4/3;
+        flex: none;
+        width: 100%
+    }
+
+    .infoContainer__38ccf {
+        flex: none;
+        min-width: 0;
+        overflow: visible;
+        padding-bottom: var(--space-16);
+        width: 100%
+    }
+
+    .infoContentSection__38ccf {
+        flex: none;
+        min-height: auto;
+        overflow: visible;
+        padding-top: var(--space-16)
+    }
+
+    .infoContentSection__38ccf:after,
+    .infoContentSection__38ccf:before {
+        display: none
+    }
+
+    .logo__38ccf {
+        max-width: 100%;
+        -o-object-fit: contain;
+        object-fit: contain
+    }
+
+    .bundleContentsSection__38ccf,
+    .itemDetailsSection__38ccf,
+    .statusBadge__38ccf,
+    .titleDescriptionContainer__38ccf,
+    .titleSection__38ccf {
+        padding-inline: var(--space-16)
+    }
+
+    .labelIcon__38ccf {
+        flex-shrink: 0
+    }
+
+    .infoBottomSection__38ccf {
+        background-color: var(--background-surface-high);
+        border-top: 1px solid var(--border-subtle);
+        bottom: 0;
+        flex-shrink: 0;
+        padding-bottom: max(var(--space-16), env(safe-area-inset-bottom));
+        padding-inline-end: max(var(--space-16), env(safe-area-inset-right));
+        padding-top: var(--space-12);
+        padding-inline-start: max(var(--space-16), env(safe-area-inset-left));
+        position: sticky;
+        z-index: 2
+    }
+
+    .primaryButtonsRow__38ccf {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) var(--space-40)
+    }
+
+    .giftButton__38ccf {
+        box-sizing: border-box
+    }
+
+    .fiatPriceDisplay__38ccf,
+    .orbsPriceDisplay__38ccf,
+    .salePriceRow__38ccf {
+        flex-wrap: wrap;
+        max-width: 100%;
+        min-width: 0
+    }
+}
+
+/*# sourceMappingURL=3698922424826bce.css.map*/

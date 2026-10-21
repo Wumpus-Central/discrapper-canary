@@ -6,7 +6,7 @@ c.exports = {
     uk: "infoContainerExclusive__38ccf",
     Td: "infoBottomSection__38ccf",
     t7: "infoBottomSectionBorder__38ccf",
-    Od: "statusBadge__38ccf",
+    vS: "statusBadge__38ccf",
     r$: "logoContainer__38ccf",
     wm: "logo__38ccf",
     zD: "infoContentSection__38ccf",
@@ -33,4 +33,6 @@ c.exports = {
     Fi: "discountBadge__38ccf",
     aX: "orbsPriceDisplay__38ccf",
     dQ: "orbsPriceDisplayMuted__38ccf",
+    Od: "mobileHeader__38ccf",
+    mA: "mobileLogo__38ccf",
 };
