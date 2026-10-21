@@ -1,6 +1,7 @@
-_.exports = {
+e.exports = {
     LG: "addButtonContainer__4a011",
     PH: "addButtonContent__4a011",
+    oE: "compact__4a011",
     PG: "sizeSmall__4a011",
     Qs: "placeholderGrid__4a011",
     l4: "placeholderContainer__4a011",

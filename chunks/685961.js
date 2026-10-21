@@ -887,25 +887,25 @@ let e8 = (e) => {
         ],
     });
 };
-var e6 = l(120337);
-let e5 = (e) => {
+var e5 = l(120337);
+let e6 = (e) => {
     let { guild: t } = e,
         l = (0, V.c)("GuildPreviewElement");
     return (0, n.jsxs)("div", {
-        className: e6.kL,
+        className: e5.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e6.wx,
+                className: e5.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t["0ox7Hq"]),
             }),
             (0, n.jsx)("div", {
-                className: e6.bo,
+                className: e5.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e6.OA,
+                    className: e5.OA,
                     children: [
                         (0, n.jsx)("div", {
-                            className: e6.$f,
+                            className: e5.$f,
                             children: (0, n.jsx)(eX.Ay, { guild: t, size: eX.Ay.Sizes.LARGE }),
                         }),
                         (0, n.jsx)("div", {
@@ -1537,24 +1537,24 @@ function t2(e) {
 }
 var t4 = l(778712),
     t8 = l(730134),
-    t6 = l(243899);
-let t5 = (e) => {
+    t5 = l(243899);
+let t6 = (e) => {
     let { user: t } = e,
         l = (0, V.c)("UserPreviewElement");
     return (0, n.jsxs)("div", {
-        className: t6.kL,
+        className: t5.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: t6.wx,
+                className: t5.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.Rsth7z),
             }),
             (0, n.jsx)("div", {
-                className: t6.f1,
+                className: t5.f1,
                 children: (0, n.jsxs)("div", {
-                    className: t6.eF,
+                    className: t5.eF,
                     children: [
-                        (0, n.jsx)(t8.A, { className: t6.Hk, user: t, size: t4._3.SIZE_40 }),
+                        (0, n.jsx)(t8.A, { className: t5.Hk, user: t, size: t4._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1576,7 +1576,7 @@ let t5 = (e) => {
         ],
     });
 };
-var t9 = l(182636),
+var t9 = l(95077),
     t7 = l(287809),
     le = l(818972);
 let lt = (e) => {
@@ -1831,11 +1831,11 @@ let ls = (e) => {
                     null != li(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
                         (0, n.jsx)(tA, { message: l.record }),
-                    null != li(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t5, { user: l.record }) : null,
+                    null != li(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t6, { user: l.record }) : null,
                     null != li(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(lt, { widget: l.widget, userId: l.user_id })
                         : null,
-                    null != li(t, "guild_preview") && "guild" === l.name ? (0, n.jsx)(e5, { guild: l.record }) : null,
+                    null != li(t, "guild_preview") && "guild" === l.name ? (0, n.jsx)(e6, { guild: l.record }) : null,
                     null != li(t, "breadcrumbs") && (0, n.jsx)(es, { isModeratorReport: U, history: r }),
                     (function (e) {
                         let { elements: t } = e;
