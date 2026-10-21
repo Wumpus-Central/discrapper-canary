@@ -2531,6 +2531,8 @@
   "r50t/S": "Status updated to \"{statusLabel}\" until {timeString}",
   "cU0t1F": "user added to the group",
   "8GEdej": "failed to add user to the group",
+  "Gdj/qt": "You have left the group",
+  "AKajgt": "Failed to leave the group",
   "7iPyVW": "You have left the server",
   "8rmtbd": "{firstUsername} and {secondUsername} reacted {emojiNames}.",
   "/okjv0": "{firstUsername}, {secondUsername} and {count, plural,one {# other}other {# others} reacted {emojiNames}.",

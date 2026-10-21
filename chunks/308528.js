@@ -121,12 +121,13 @@ let N = {
     closePrivateChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        (0, l.A)(e) &&
+            I.default.track(g.HAw.CHANGE_LOG_DM_REMOVED, {
+                last_changelog_id: s.A.latestChangelogId(),
+                unread_count: f.Ay.getUnreadCount(e),
+            });
+        let o = h.A.getChannel(e)?.isMultiUserDM() ?? !1;
         return (
-            (0, l.A)(e) &&
-                I.default.track(g.HAw.CHANGE_LOG_DM_REMOVED, {
-                    last_changelog_id: s.A.latestChangelogId(),
-                    unread_count: f.Ay.getUnreadCount(e),
-                }),
             a.h.dispatch({
                 type: "CHANNEL_DELETE",
                 channel: { id: e, guild_id: void 0, parent_id: void 0 },
@@ -135,10 +136,10 @@ let N = {
             t && !__OVERLAY__ && (0, _.pX)(g.BVt.FRIENDS),
             i.Bo.del({ url: g.Rsh.CHANNEL(e), query: { silent: n }, oldFormErrors: !0, rejectWithError: (0, i.fT)() })
                 .then(() => {
-                    r.O.announce(S.intl.string(S.t.nRbucl));
+                    r.O.announce(S.intl.string(o ? S.t["Gdj/qt"] : S.t.nRbucl));
                 })
                 .catch(() => {
-                    r.O.announce(S.intl.string(S.t.ndXVI5));
+                    r.O.announce(S.intl.string(o ? S.t.AKajgt : S.t.ndXVI5));
                 })
         );
     },
