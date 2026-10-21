@@ -179,10 +179,18 @@
 .rowHost__8d39c {
     --custom-conjure-glow-radius: var(--radius-md);
     --custom-conjure-glow-mask-stop: 7.5%;
+    align-items: center;
     border-radius: var(--radius-md);
+    display: flex;
     position: relative
 }
 
+.rowHostDeleting__8d39c {
+    opacity: .5;
+    pointer-events: none
+}
+
+.rowHostInteractive__8d39c:has(.action__8d39c [aria-expanded=true]),
 .keyboard-mode .rowHostInteractive__8d39c:focus-within,
 .mouse-mode .rowHostInteractive__8d39c:hover {
     background: var(--interactive-background-hover)
@@ -199,20 +207,19 @@
     padding: var(--space-8);
     position: relative;
     text-align: start;
-    width: 100%;
     z-index: 0
 }
 
 .body__8d39c,
 .row__8d39c {
-    display: flex
+    display: flex;
+    flex: 1;
+    min-width: 0
 }
 
 .body__8d39c {
-    flex: 1;
     flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0
+    gap: var(--space-4)
 }
 
 .caption__8d39c,
@@ -248,6 +255,36 @@
     width: var(--space-8)
 }
 
+.action__8d39c {
+    display: flex;
+    flex: 0 0 auto;
+    opacity: 0;
+    padding-inline-end: var(--space-4);
+    pointer-events: none;
+    position: relative;
+    transition: opacity .15s ease-out;
+    z-index: 0
+}
+
+.action__8d39c:has([aria-expanded=true]),
+.actionVisible__8d39c,
+.keyboard-mode .rowHost__8d39c:focus-within .action__8d39c,
+.mouse-mode .rowHost__8d39c:hover .action__8d39c {
+    opacity: 1;
+    pointer-events: auto
+}
+
+@media (hover:none) {
+    .action__8d39c {
+        opacity: 1;
+        pointer-events: auto
+    }
+}
+
+.reduce-motion .action__8d39c {
+    transition: none
+}
+
 .list_cba4db {
     gap: var(--space-4)
 }
@@ -269,35 +306,4 @@
     padding: 0 var(--space-8)
 }
 
-.sidebar__9bf82 {
-    background: var(--background-base-lower);
-    border-inline-start: 1px solid var(--border-subtle);
-    flex: 0 0 auto;
-    flex-direction: column;
-    min-height: 0;
-    width: clamp(280px, 28%, 360px)
-}
-
-.header__9bf82,
-.sidebar__9bf82 {
-    box-sizing: border-box;
-    display: flex
-}
-
-.header__9bf82 {
-    align-items: center;
-    border-bottom: 1px solid var(--border-subtle);
-    flex: 0 0 auto;
-    gap: var(--space-8);
-    height: var(--custom-channel-header-height);
-    justify-content: space-between;
-    padding-inline: var(--space-16) var(--space-xs)
-}
-
-.scroller__9bf82 {
-    flex: 1;
-    min-height: 0;
-    padding: var(--space-8)
-}
-
-/*# sourceMappingURL=997a762e067befe1.css.map*/
+/*# sourceMappingURL=bcfc2b19e5dd2a21.css.map*/

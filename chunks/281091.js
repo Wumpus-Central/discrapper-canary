@@ -16,12 +16,13 @@ function i(e) {
                     let t;
                     return {
                         project: e,
-                        time: a.A.isThinking(e.id)
-                            ? 1 / 0
-                            : Math.max(
-                                  a.A.getFinishedAt(e.id) ?? 0,
-                                  Number.isNaN((t = null == e.updated_at ? 0 : Date.parse(e.updated_at))) ? 0 : t,
-                              ),
+                        time:
+                            a.A.isThinking(e.id) && !r.Ay.isProjectDeleting(e.id)
+                                ? 1 / 0
+                                : Math.max(
+                                      a.A.getFinishedAt(e.id) ?? 0,
+                                      Number.isNaN((t = null == e.updated_at ? 0 : Date.parse(e.updated_at))) ? 0 : t,
+                                  ),
                     };
                 })
                 .sort((e, t) =>

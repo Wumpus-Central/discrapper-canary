@@ -1493,7 +1493,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 644416, Version Hash: f5059e5145e5171b1b2f0fa4ede7523c7b3ced57`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 644442, Version Hash: 6f06f605576ccc545a59bff6e391f7a16f42a613`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4121,7 +4121,7 @@ let a8 = (0, rr.Fe)({
             Promise.all([
                 n.e("773320"),
                 n.e("931510"),
-                n.e("985483"),
+                n.e("58193"),
                 n.e("318025"),
                 n.e("646720"),
                 n.e("738991"),
@@ -25419,7 +25419,7 @@ let ye = "isHideDevBanner",
                     className: tf()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "644416" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "644442" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -28829,12 +28829,13 @@ let bo = (0, tZ.Fe)({
                 n.e("931510"),
                 n.e("47886"),
                 n.e("773320"),
-                n.e("985483"),
-                n.e("119803"),
+                n.e("58193"),
+                n.e("304350"),
+                n.e("7545"),
                 n.e("318025"),
                 n.e("429982"),
-                n.e("304350"),
-                n.e("818934"),
+                n.e("799761"),
+                n.e("371219"),
                 n.e("896215"),
                 n.e("740826"),
                 n.e("904389"),
@@ -29395,8 +29396,8 @@ let bo = (0, tZ.Fe)({
                 n.e("716875"),
                 n.e("1910"),
                 n.e("526274"),
-            ]).then(n.bind(n, 876502)),
-        webpackId: 876502,
+            ]).then(n.bind(n, 806847)),
+        webpackId: 806847,
         name: "ConjureScreen",
         renderLoader: bl,
     }),
@@ -42368,7 +42369,7 @@ let GQ = {
                               (0, tQ.openModalLazy)(
                                   async () => {
                                       let { default: e } = await Promise.all([
-                                          n.e("818934"),
+                                          n.e("371219"),
                                           n.e("1910"),
                                           n.e("657691"),
                                       ]).then(n.bind(n, 152854));

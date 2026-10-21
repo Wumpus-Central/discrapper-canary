@@ -1,28 +1,30 @@
-n.d(t, { A2: () => f, ZA: () => h, eN: () => m, s9: () => c });
+n.d(t, { A2: () => h, ZA: () => g, eN: () => f, s9: () => m });
 var l = n(17928),
     a = n(617617),
     r = n(573163),
     i = n(245179),
     s = n(404373),
-    u = n(189714),
-    o = n(722701);
-function d(e) {
+    u = n(260498),
+    o = n(189714),
+    d = n(722701);
+function c(e) {
     return "changes" === e || "unpublished" === e;
 }
-function c(e, t) {
-    return "in_progress" !== e && d(t);
+function m(e, t) {
+    return "in_progress" !== e && "deleting" !== e && c(t);
 }
-let m = [i.A, r.Ay, a.A, o.A];
-function f(e) {
+let f = [u.Ay, i.A, r.Ay, a.A, d.A];
+function h(e) {
     return (function (e) {
-        let { thinking: t, unread: n, publishState: l } = e;
-        return t ? "in_progress" : n ? "unread" : d(l) ? "draft" : "default";
+        let { deleting: t = !1, thinking: n, unread: l, publishState: a } = e;
+        return t ? "deleting" : n ? "in_progress" : l ? "unread" : c(a) ? "draft" : "default";
     })({
+        deleting: u.Ay.isProjectDeleting(e),
         thinking: i.A.isThinking(e),
-        unread: (0, s.tz)(e) && !(0, u.j)(a.A.settings, e),
-        publishState: o.A.getPublishStatus(e)?.state ?? null,
+        unread: (0, s.tz)(e) && !(0, o.j)(a.A.settings, e),
+        publishState: d.A.getPublishStatus(e)?.state ?? null,
     });
 }
-function h(e) {
-    return (0, l.bG)(m, () => f(e), [e]);
+function g(e) {
+    return (0, l.bG)(f, () => h(e), [e]);
 }

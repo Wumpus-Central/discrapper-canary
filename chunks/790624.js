@@ -1,6 +1,8 @@
 t.exports = {
     dc: "rowHost__8d39c",
+    BI: "rowHostDeleting__8d39c",
     V7: "rowHostInteractive__8d39c",
+    XI: "action__8d39c",
     nM: "row__8d39c",
     rf: "body__8d39c",
     pG: "caption__8d39c",
@@ -8,4 +10,5 @@ t.exports = {
     VJ: "captionRow__8d39c",
     me: "separator__8d39c",
     Zm: "unreadDot__8d39c",
+    Rn: "actionVisible__8d39c",
 };
