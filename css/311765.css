@@ -482,92 +482,10 @@
 }
 
 .display_fe740a {
+    font-size: min(90px, 14vw);
+    letter-spacing: -.04em;
+    line-height: 1.11;
     text-transform: uppercase
-}
-
-.sidekick_fe740a {
-    gap: calc(var(--space-48) + var(--space-8))
-}
-
-.sidekickDetails_fe740a {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-24)
-}
-
-.stats_fe740a {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-40);
-    justify-content: center
-}
-
-.stat_fe740a {
-    align-items: flex-end;
-    color: var(--custom-checkpoint-primary);
-    display: flex;
-    gap: var(--space-8)
-}
-
-.statNumber_fe740a {
-    font-family: Munro, sans-serif;
-    font-size: 40px;
-    line-height: 32px
-}
-
-.messageInput_fe740a {
-    background-color: var(--black);
-    border: 2px solid var(--custom-checkpoint-primary);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    max-width: 420px;
-    min-height: 96px;
-    padding: var(--space-12);
-    width: 100%
-}
-
-.messageTextArea_fe740a {
-    flex: 1;
-    field-sizing: content;
-    background-color: transparent;
-    border: none;
-    color: var(--custom-checkpoint-primary);
-    font-family: var(--font-primary);
-    font-size: 16px;
-    line-height: 1.2;
-    max-height: 200px;
-    padding: 0;
-    resize: none;
-    scrollbar-color: var(--custom-checkpoint-primary) transparent;
-    scrollbar-width: thin
-}
-
-.messageTextArea_fe740a::-moz-placeholder {
-    color: var(--custom-checkpoint-white)
-}
-
-.messageTextArea_fe740a::placeholder {
-    color: var(--custom-checkpoint-white)
-}
-
-.messageActions_fe740a {
-    display: flex;
-    gap: var(--space-12);
-    justify-content: flex-end
-}
-
-.messageAction_fe740a {
-    color: var(--custom-checkpoint-primary);
-    cursor: pointer;
-    display: flex
-}
-
-.disabled_fe740a {
-    cursor: default;
-    opacity: .5
 }
 
 .container__2a1aa {
@@ -1302,4 +1220,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=311765.1caa018bee28ca50.css.map*/
+/*# sourceMappingURL=311765.3f3c61927d8ce5c0.css.map*/
