@@ -10774,13 +10774,15 @@ function ck(e) {
         color: "text-default",
         children: [
             E.intl.format(
-                !0 === n.channel_skipped
-                    ? S.default.ev23Cw
-                    : n.update
-                      ? S.default.gQzuLC
-                      : null == r
-                        ? S.default.MOrR29
-                        : S.default["/npn7F"],
+                !0 === n.commands_failed
+                    ? S.default["PrQg+B"]
+                    : !0 === n.channel_skipped
+                      ? S.default.ev23Cw
+                      : n.update
+                        ? S.default.gQzuLC
+                        : null == r
+                          ? S.default.MOrR29
+                          : S.default["/npn7F"],
                 { name: l, server: r ?? "" },
             ),
             n.update && null != n.published_revision ? (0, a.jsx)(cw, { projectId: t, notice: n }) : null,
