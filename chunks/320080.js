@@ -19,8 +19,8 @@ var s = t(477900),
     f = t(688810),
     j = t(420344),
     E = t(85109),
-    S = t(756377),
-    O = t(741097),
+    O = t(756377),
+    S = t(741097),
     y = t(734057),
     T = t(71393),
     M = t(232835),
@@ -131,8 +131,8 @@ let ef = (0, w.v)((e, n) => ({
 }));
 var ej = t(265872),
     eE = t(305866),
-    eS = t(933832),
-    eO = t(606096),
+    eO = t(933832),
+    eS = t(606096),
     ey = t(997146),
     eT = t(980707),
     eM = t(477782),
@@ -223,7 +223,7 @@ function eG(e) {
 let ez = {
     [eL.kR.ACK]: {
         type: "standard",
-        Icon: eS.CheckmarkLargeIcon,
+        Icon: eO.CheckmarkLargeIcon,
         label: eD.intl.string(eD.t.e6RscS),
         onClick: (e) => {
             (A.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
@@ -242,7 +242,7 @@ let ez = {
         label: eD.intl.string(eD.t["9p3D9p"]),
         Icon: (e) =>
             E.A.isMessageBookmarked(e.message.channel_id, e.message.id)
-                ? (0, s.jsx)(eO.BookmarkIcon, { ...e })
+                ? (0, s.jsx)(eS.BookmarkIcon, { ...e })
                 : (0, s.jsx)(ey.c, { ...e }),
         interactionType: R.X8.BOOKMARK,
         Menu: (e) => {
@@ -269,8 +269,8 @@ let ez = {
                                       ? (0, s.jsx)(eM.Dr, {
                                             id: "remove-from-for-later",
                                             label: eD.intl.string(eD.t.SvXS1Z),
-                                            icon: eO.BookmarkIcon,
-                                            leadingAccessory: { type: "icon", icon: eO.BookmarkIcon },
+                                            icon: eS.BookmarkIcon,
+                                            leadingAccessory: { type: "icon", icon: eS.BookmarkIcon },
                                             action: () =>
                                                 (0, eC.x)({
                                                     channelId: n.channel_id,
@@ -367,20 +367,20 @@ function eF(e) {
         } = e,
         j = { width: (0, V.FT)(t), height: (0, V.FT)(t) },
         E = (0, a.useId)(),
-        S = A.size * eH.Xq,
-        O =
+        O = A.size * eH.Xq,
+        S =
             null != x &&
             (0, s.jsxs)("svg", {
-                width: S,
-                height: S,
-                viewBox: `0 0 ${S} ${S}`,
+                width: O,
+                height: O,
+                viewBox: `0 0 ${O} ${O}`,
                 className: e$.DX,
                 "aria-hidden": !0,
                 children: [
                     (0, s.jsxs)("mask", {
                         id: E,
                         children: [
-                            (0, s.jsx)("rect", { x: 0, y: 0, width: S, height: S, fill: "white" }),
+                            (0, s.jsx)("rect", { x: 0, y: 0, width: O, height: O, fill: "white" }),
                             null != p &&
                                 (function (e, n) {
                                     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
@@ -404,14 +404,14 @@ function eF(e) {
                                         rx: e.stroke,
                                         fill: "black",
                                     });
-                                })(A, S, I, N),
+                                })(A, O, I, N),
                         ],
                     }),
                     (0, s.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: S,
-                        height: S,
+                        width: O,
+                        height: O,
                         mask: `url(#${E})`,
                         children: (0, s.jsx)("img", { className: e$.M, src: x, alt: " ", "aria-hidden": !0 }),
                     }),
@@ -429,7 +429,7 @@ function eF(e) {
               onMouseLeave: u ?? void 0,
               "aria-label": f ?? void 0,
               "aria-hidden": g,
-              children: [n, O],
+              children: [n, S],
           })
         : (0, s.jsxs)("div", {
               className: l()(e$.iE, h),
@@ -440,7 +440,7 @@ function eF(e) {
               role: "img",
               "aria-label": f ?? void 0,
               "aria-hidden": g,
-              children: [n, O],
+              children: [n, S],
           });
 }
 function eW(e) {
@@ -493,7 +493,7 @@ function eW(e) {
                     width: h.size,
                     height: h.size,
                     mask: `url(#${m})`,
-                    children: (0, s.jsx)(eP.d9, { src: n, className: o, isSpeaking: !1 }),
+                    children: (0, s.jsx)(eP.d9, { src: n, className: o }),
                 }),
                 null != c &&
                     (0, s.jsx)("foreignObject", {
@@ -617,7 +617,7 @@ function eq(e) {
         f = t.isPrivate() ? d : +!!n.mentioned,
         j = c && f > 0,
         E = (0, eh.y)({ channel: t, message: n, user: n.author, compact: !0, isRepliedMessage: !0 }),
-        S = (0, s.jsx)("div", {
+        O = (0, s.jsx)("div", {
             className: ew.Ys,
             inert: !0,
             children: (0, s.jsx)(eg.A, {
@@ -677,7 +677,7 @@ function eq(e) {
                                                   (0, s.jsx)("div", {
                                                       className: ew.Xh,
                                                       style: { color: A ?? void 0 },
-                                                      children: (0, s.jsx)($.A, { children: S }),
+                                                      children: (0, s.jsx)($.A, { children: O }),
                                                   }),
                                                   E,
                                               ],
@@ -1001,8 +1001,8 @@ function nd(e) {
         { entrypoint: f, notificationCenterVariant: j } = (0, v.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: E,
-            isLoadingComplete: S,
-            hasLoadedEver: O,
+            isLoadingComplete: O,
+            hasLoadedEver: S,
         } = (0, o.cf)([L.A], () => ({
             isLoading: L.A.isLoading,
             isLoadingComplete: L.A.isLoadingComplete,
@@ -1074,8 +1074,8 @@ function nd(e) {
             );
         }, [t, i]),
         w = 0 === t.length && 0 === i.length,
-        K = w && S,
-        G = !O || (r && w),
+        K = w && O,
+        G = !S || (r && w),
         z = a.useMemo(() => no.filter((e) => D[e].length > 0), [D]),
         X = a.useMemo(() => {
             if (x)
@@ -1215,11 +1215,11 @@ function nm(e) {
                     : (U.default.compare(a.id, n) >= 0 || a.kind === eL.yL.MENTION) && t.push(a);
             return { readMessages: t, unreadMessages: s };
         }),
-        { fetchState: u, loadMore: h } = (0, O.A)(i === eL.Io.BOOKMARKS),
+        { fetchState: u, loadMore: h } = (0, S.A)(i === eL.Io.BOOKMARKS),
         g = a.useCallback(
             (e) => {
                 if (i === eL.Io.BOOKMARKS) {
-                    e !== eL.VA.ON_OPEN && E.A.getBookmarksFetchState() === S.Z7.LOADED_HAS_MORE && h();
+                    e !== eL.VA.ON_OPEN && E.A.getBookmarksFetchState() === O.Z7.LOADED_HAS_MORE && h();
                     return;
                 }
                 i !== eL.Io.MENTIONS && C.A.loadMoreInbox({ viewId: t, loadingTrigger: e });
@@ -1324,7 +1324,7 @@ function nm(e) {
                     renderMessageGroup: nI,
                     messages: i === eL.Io.BOOKMARKS ? f : w,
                     unreadMessages: i === eL.Io.BOOKMARKS ? [] : B,
-                    isLoadingMessages: i === eL.Io.BOOKMARKS && (u === S.Z7.LOADING || u === S.Z7.LOADED_HAS_MORE),
+                    isLoadingMessages: i === eL.Io.BOOKMARKS && (u === O.Z7.LOADING || u === O.Z7.LOADED_HAS_MORE),
                     listName: "notifications-inbox",
                     renderLoadingState: np,
                     ignoreGrouping: i === eL.Io.BOOKMARKS,

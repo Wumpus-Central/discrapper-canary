@@ -21,15 +21,15 @@ function L(s) {
     let {
             userId: t,
             size: e,
-            speaking: A = !1,
+            voiceStatus: A,
             muted: a = !1,
             deafen: I = !1,
             avatarDecoration: L = null,
             disabled: g = !1,
             ringing: m,
             ringingType: R = 0,
-            renderIcon: S,
-            style: f,
+            renderIcon: f,
+            style: S,
             onClick: j,
             onContextMenu: x,
             className: y,
@@ -37,10 +37,10 @@ function L(s) {
         } = s,
         v = (0, i.bG)([N.Ay], () => null != t && N.Ay.isLocalMute(t)),
         V = (0, C.A)(t),
-        p = (0, O.v)({ isSpeaking: A, voiceDb: V }),
-        E = (0, h.Kj)(e),
-        W = !a && !I && !v,
-        k = n()(
+        E = (0, O.v)({ voiceStatus: A, voiceDb: V }),
+        W = (0, h.Kj)(e),
+        p = !a && !I && !v,
+        G = n()(
             o.iE,
             {
                 [o.vk]: null != j,
@@ -50,17 +50,17 @@ function L(s) {
             },
             y,
         ),
-        G = (0, h.FT)(e),
-        w = { height: G, width: G, ...f };
+        k = (0, h.FT)(e),
+        w = { height: k, width: k, ...S };
     return (0, l.jsx)("div", {
         style: w,
         onContextMenu: x,
-        className: k,
+        className: G,
         children: (function () {
             let s,
                 t = (0, h.FT)(e);
             if (g) return b;
-            let A = null != S,
+            let A = null != f,
                 i = a || I || v,
                 N = (function (s, t) {
                     let { hasIcon: e = !1, hasStatus: A = !1 } = t;
@@ -87,7 +87,7 @@ function L(s) {
                 className: o.lN,
                 children: [
                     (0, l.jsx)(d.Ay, { className: o.KQ, width: t, height: t, mask: N, children: b }),
-                    W && (0, l.jsx)("div", { className: o.PQ, style: p }),
+                    p && (0, l.jsx)("div", { className: o.PQ, style: E }),
                     null != L &&
                         (0, l.jsx)(d.Ay, {
                             className: o.DX,
@@ -102,15 +102,15 @@ function L(s) {
                                 draggable: !1,
                             }),
                         }),
-                    S?.(),
+                    f?.(),
                     ((s = v ? u.O : I ? _.c : c.z),
                     a || I || v
                         ? (0, l.jsx)("div", {
                               className: o.II,
-                              style: { width: E.status + 2 * E.offset, height: E.status + 2 * E.offset },
+                              style: { width: W.status + 2 * W.offset, height: W.status + 2 * W.offset },
                               children: (0, l.jsx)(
                                   s,
-                                  { color: r.A.colors.WHITE.css, style: { width: E.status, height: E.status } },
+                                  { color: r.A.colors.WHITE.css, style: { width: W.status, height: W.status } },
                                   "status",
                               ),
                           })

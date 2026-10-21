@@ -476,6 +476,7 @@ function ep(e) {
         serverDeaf: !1,
         suppress: !1,
         speaking: !1,
+        playingSoundboard: !1,
         streaming: !1,
         status: em.clD.ONLINE,
         currentUser: a,

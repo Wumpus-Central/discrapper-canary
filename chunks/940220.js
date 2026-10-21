@@ -12,6 +12,7 @@ a.exports = {
     bG: "interactive_adebba",
     zY: "speaking_adebba",
     yS: "avatarSpeakingOutline_adebba",
+    QF: "playingSoundboard_adebba",
     cU: "justConnected_adebba",
     rH: "connectedAnimationContainer_adebba",
     pG: "right_adebba",

@@ -1,8 +1,9 @@
-n.d(t, { FT: () => u, F_: () => l, Iq: () => o, Kj: () => c, _3: () => s, vC: () => d });
+n.d(t, { FT: () => E, F_: () => d, Iq: () => c, Kj: () => _, T2: () => o, _3: () => l, n$: () => A, vC: () => u });
 var i,
     r,
     a,
-    s =
+    s,
+    l =
         (((i = {}).SIZE_16 = "SIZE_16"),
         (i.SIZE_20 = "SIZE_20"),
         (i.SIZE_24 = "SIZE_24"),
@@ -20,9 +21,10 @@ var i,
         (i.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60"),
         (i.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100"),
         i),
-    l = (((r = {}).BLACK = "black"), (r.WHITE = "white"), r),
-    o = (((a = {})[(a.HIGH = 0.7)] = "HIGH"), (a[(a.LOW = 0.45)] = "LOW"), a);
-let d = Object.freeze({
+    o = (((r = {}).SPEAKING = "speaking"), (r.PLAYING_SOUNDBOARD = "soundboard"), r),
+    d = (((a = {}).BLACK = "black"), (a.WHITE = "white"), a),
+    c = (((s = {})[(s.HIGH = 0.7)] = "HIGH"), (s[(s.LOW = 0.45)] = "LOW"), s);
+let u = Object.freeze({
     SIZE_16: Object.freeze({ size: 16, status: 6, stroke: 2, offset: 0 }),
     SIZE_20: Object.freeze({ size: 20, status: 6, stroke: 2, offset: 0 }),
     SIZE_24: Object.freeze({ size: 24, status: 8, stroke: 3, offset: 0 }),
@@ -40,9 +42,12 @@ let d = Object.freeze({
     DEPRECATED_SIZE_60: Object.freeze({ size: 60, status: 0, stroke: 0, offset: 0 }),
     DEPRECATED_SIZE_100: Object.freeze({ size: 100, status: 0, stroke: 0, offset: 0 }),
 });
-function c(e) {
-    return d[e];
+function _(e) {
+    return u[e];
 }
-function u(e) {
-    return "number" != typeof e ? d[e].size : e;
+function E(e) {
+    return "number" != typeof e ? u[e].size : e;
+}
+function A(e, t) {
+    return t ? "soundboard" : e ? "speaking" : null;
 }

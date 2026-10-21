@@ -28,6 +28,7 @@ function I(e, t, n) {
         voiceState: i,
         voicePlatform: null,
         speaking: !1,
+        playingSoundboard: !1,
         lastSpoke: 0,
         soundsharing: !1,
         ringing: !1,

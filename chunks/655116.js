@@ -241,7 +241,7 @@ function eo() {
 function ed(e) {
     if (e === p.default.getId()) {
         let t = N.A.isCurrentClientInVoiceChannel(),
-            n = (0, E.R)({ userId: e, checkSoundSharing: !0, checkSoundboardSounds: !1 });
+            n = (0, E.R)({ userId: e, checkSoundSharing: !0 });
         t && n && null != i ? (V.start(U, eo, !1), H.stop()) : H.start(100, () => V.stop(), !1);
     }
     return !1;

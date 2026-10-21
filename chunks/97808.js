@@ -272,8 +272,8 @@ function y(e) {
           });
 }
 function D(e) {
-    let { src: t, isSpeaking: n, className: r, voiceDb: a = -1 / 0, speakingStylesConfig: l, ref: o } = e,
-        d = (0, E.v)({ isSpeaking: n, voiceDb: a, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...l });
+    let { src: t, voiceStatus: n, className: r, voiceDb: a = -1 / 0, speakingStylesConfig: l, ref: o } = e,
+        d = (0, E.v)({ voiceStatus: n, voiceDb: a, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...l });
     return (0, i.jsxs)(
         "div",
         {
@@ -281,7 +281,7 @@ function D(e) {
             className: s()(g.yA, r),
             children: [
                 (0, i.jsx)("img", { src: t ?? void 0, alt: " ", className: g.my, "aria-hidden": !0 }),
-                n && (0, i.jsx)("div", { className: g.uh, style: d }),
+                null != n && (0, i.jsx)("div", { className: g.uh, style: d }),
             ],
         },
         t,
@@ -298,7 +298,7 @@ function v(e) {
             isTyping: c = !1,
             typingIndicatorRef: E,
             avatarContentRef: p,
-            isSpeaking: m = !1,
+            voiceStatus: m,
             voiceDb: S,
             speakingStylesConfig: N,
             statusTooltip: C = !1,
@@ -454,7 +454,7 @@ function v(e) {
                         children: (0, i.jsx)(D, {
                             ref: p,
                             src: t,
-                            isSpeaking: m,
+                            voiceStatus: m,
                             voiceDb: S,
                             speakingStylesConfig: N,
                             className: P,
@@ -502,7 +502,7 @@ function b(e) {
             isMobile: o = !1,
             isTyping: E = !1,
             typingIndicatorRef: A,
-            isSpeaking: h = !1,
+            voiceStatus: h,
             voiceDb: I,
             speakingStylesConfig: p,
             size: m,
@@ -577,7 +577,7 @@ function b(e) {
                     mask: `url(#${B})`,
                     children: (0, i.jsx)(D, {
                         src: O,
-                        isSpeaking: h,
+                        voiceStatus: h,
                         voiceDb: I,
                         className: x,
                         speakingStylesConfig: p,

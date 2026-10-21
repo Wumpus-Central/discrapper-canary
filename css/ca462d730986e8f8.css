@@ -181,6 +181,15 @@
     outline-offset: 2px
 }
 
+.playingSoundboard_adebba {
+    opacity: .9
+}
+
+.playingSoundboard_adebba .avatarSpeakingOutline_adebba {
+    outline: 1px solid var(--brand-500);
+    outline-offset: 2px
+}
+
 .justConnected_adebba {
     opacity: .6
 }
@@ -276,4 +285,4 @@
     padding: var(--space-4) var(--space-8)
 }
 
-/*# sourceMappingURL=99959809d6cb6634.css.map*/
+/*# sourceMappingURL=ca462d730986e8f8.css.map*/
