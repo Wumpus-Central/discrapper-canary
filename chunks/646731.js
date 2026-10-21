@@ -28,8 +28,8 @@ var a = l(477900),
     S = l(661531),
     y = l(403581),
     j = l(834730),
-    U = l(140735),
-    I = l(683071),
+    I = l(140735),
+    U = l(683071),
     M = l(577473),
     F = l(34188),
     B = l(369606),
@@ -57,7 +57,7 @@ function J(e) {
     return n
         ? (0, a.jsxs)("div", {
               className: q.Zs,
-              children: [(0, a.jsx)(U.A, { children: X.intl.string(K.default.k6h2J3) }), s],
+              children: [(0, a.jsx)(I.A, { children: X.intl.string(K.default.k6h2J3) }), s],
           })
         : s;
 }
@@ -166,7 +166,7 @@ function ei(e) {
             (0, a.jsxs)("div", {
                 className: et.ZX,
                 children: [
-                    (0, a.jsx)(U.A, {
+                    (0, a.jsx)(I.A, {
                         children:
                             null == t
                                 ? X.intl.string(X.t.cKwv4k)
@@ -195,7 +195,7 @@ function er(e) {
         s = null != l,
         r = (0, a.jsxs)(a.Fragment, {
             children: [
-                s && (0, a.jsx)(U.A, { children: l }),
+                s && (0, a.jsx)(I.A, { children: l }),
                 (0, a.jsx)(y.t, { size: "xxs", color: "white", "aria-hidden": !0 }),
                 (0, a.jsx)(j.E, {
                     variant: "text-xs/semibold",
@@ -305,7 +305,7 @@ function eo(e) {
             [s, h, t, r, c, o, l, u, i],
         ),
         m = n.useMemo(
-            () => (null == u ? null : (0, a.jsx)("div", { className: et.re, children: (0, a.jsx)(I.w, { ...u }) })),
+            () => (null == u ? null : (0, a.jsx)("div", { className: et.re, children: (0, a.jsx)(U.w, { ...u }) })),
             [u],
         );
     return (0, a.jsxs)("div", { className: et.E6, "aria-busy": s, children: [m, d] });
@@ -320,7 +320,7 @@ function eu(e) {
                 children: [
                     null != t &&
                         (0, a.jsx)(N.$, {
-                            text: "Quests",
+                            text: X.intl.string(X.t.JALI2K),
                             variant: "secondary",
                             size: "md",
                             icon: { asset: M.r, type: "icon" },
@@ -329,7 +329,7 @@ function eu(e) {
                         }),
                     null != l &&
                         (0, a.jsx)(N.$, {
-                            text: "Shop",
+                            text: X.intl.string(X.t.pWG4ze),
                             variant: "secondary",
                             size: "md",
                             icon: { asset: F.U, type: "icon" },
@@ -509,7 +509,7 @@ function ej(e, t) {
         }, [r, h, c]);
     return { onCtaClick: d, shouldHideCard: null == u && !r, onClose: C };
 }
-function eU(e) {
+function eI(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = m.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, C.Ay)(m.A.ORB_WALLET_PRIMARY_CARD),
         {
@@ -539,7 +539,7 @@ function eU(e) {
               onClose: h,
           });
 }
-let eI = { asset: y.t, type: "icon" };
+let eU = { asset: y.t, type: "icon" };
 function eM(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = m.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, C.Ay)(m.A.ORB_WALLET_PRIMARY_CARD),
@@ -569,7 +569,7 @@ function eM(e) {
               imageAlt: X.intl.string(K.default.FkfrRH),
               subTextDescription: _,
               buttonText: X.intl.string(K.default.U9UQJE),
-              buttonIcon: eI,
+              buttonIcon: eU,
               buttonVariant: "expressive",
               onCtaClick: h,
               onClose: d,
@@ -623,7 +623,7 @@ function eW(e) {
         } = e,
         c = eD(t, n);
     return "shop_orbs" === c
-        ? (0, a.jsx)(eU, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
+        ? (0, a.jsx)(eI, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
         : "nitro_upsell" === c
           ? (0, a.jsx)(eM, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
           : null;
@@ -827,13 +827,13 @@ function eK(e) {
         }),
             (j.current = !0));
     }, [y, S, N, A, s]);
-    let { pathname: U } = (0, c.zy)(),
-        I = U.startsWith(ee.BVt.COLLECTIBLES_SHOP),
+    let { pathname: I } = (0, c.zy)(),
+        U = I.startsWith(ee.BVt.COLLECTIBLES_SHOP),
         M = (0, _.p)(),
         F = n.useMemo(
             () =>
-                r ? { onQuestsClick: O, onShopClick: f } : { onQuestsClick: M ? null : O, onShopClick: I ? null : f },
-            [M, I, O, f, r],
+                r ? { onQuestsClick: O, onShopClick: f } : { onQuestsClick: M ? null : O, onShopClick: U ? null : f },
+            [M, U, O, f, r],
         );
     return h
         ? (0, a.jsx)(eh, {
