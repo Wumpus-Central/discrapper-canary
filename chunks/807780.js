@@ -378,18 +378,19 @@ let eI = l.memo(function () {
                                           t.e("591377"),
                                           t.e("35723"),
                                           t.e("566378"),
+                                          t.e("537832"),
                                           t.e("256372"),
                                           t.e("337341"),
                                           t.e("29542"),
                                           t.e("333730"),
                                           t.e("722440"),
                                           t.e("248804"),
-                                          t.e("964602"),
                                           t.e("141049"),
                                           t.e("174489"),
-                                          t.e("603432"),
-                                          t.e("25173"),
-                                      ]).then(t.bind(t, 468916));
+                                          t.e("560955"),
+                                          t.e("730504"),
+                                          t.e("335517"),
+                                      ]).then(t.bind(t, 317804));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: d, guild: o });
                                   });
                         },
@@ -617,9 +618,9 @@ var eR = t(202776),
     e5 = t(669953),
     e6 = t(817818),
     e9 = t(591552),
-    e2 = t(961973),
-    e3 = t(435558),
-    e8 = t.n(e3),
+    e3 = t(961973),
+    e8 = t(435558),
+    e2 = t.n(e8),
     e7 = t(665260),
     ne = t(355097);
 function nn(e) {
@@ -642,8 +643,8 @@ function ni(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => i.includes(e.id));
-                                ((l = e8().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e8().difference(t?.roleIds ?? [], n.roleIds ?? [])));
+                                ((l = e2().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e2().difference(t?.roleIds ?? [], n.roleIds ?? [])));
                             } else if (t) ((l = n.roleIds ?? []), (s = []));
                             else {
                                 let t = e.options.filter((e) => i.includes(e.id)),
@@ -656,7 +657,7 @@ function ni(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((l = []), (s = e8().difference(r, d)));
+                                ((l = []), (s = e2().difference(r, d)));
                             }
                             return { addedRoleIds: l, removedRoleIds: s };
                         })(n, t, i, l),
@@ -666,8 +667,8 @@ function ni(e) {
                                 r = [];
                             if (t.singleSelect && l) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                ((a = e8().difference(i.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e8().difference(e?.channelIds ?? [], i.channelIds ?? [])));
+                                ((a = e2().difference(i.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e2().difference(e?.channelIds ?? [], i.channelIds ?? [])));
                             } else if (l) ((a = i.channelIds ?? []), (r = []));
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
@@ -680,7 +681,7 @@ function ni(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                ((a = []), (r = e8().difference(l, d)));
+                                ((a = []), (r = e2().difference(l, d)));
                             }
                             return (
                                 (0, et.cE)(n) && a.push(...e9.A.getDefaultChannelIds(n)),
@@ -851,8 +852,8 @@ function np(e) {
         [s, d] = l.useState(null),
         [c, o] = l.useState(new Set()),
         h = n?.options?.filter((e) => c.has(e.id)),
-        m = (0, e2.a)(h),
-        x = (0, e2.vV)(h),
+        m = (0, e3.a)(h),
+        x = (0, e3.vV)(h),
         C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nl.W)({
             guild: t,
@@ -942,8 +943,8 @@ function nf(e) {
         [s, d] = l.useState(null),
         [c, o] = l.useState(new Set()),
         h = n?.options?.filter((e) => c.has(e.id)),
-        m = (0, e2.a)(h),
-        x = (0, e2.vV)(h),
+        m = (0, e3.a)(h),
+        x = (0, e3.vV)(h),
         C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nl.W)({
             guild: t,

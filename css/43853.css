@@ -39,6 +39,10 @@
     max-width: 360px
 }
 
+.action__402a1 {
+    margin-top: var(--space-12)
+}
+
 .frameTarget_e92794 {
     flex: 1;
     min-height: 0;
@@ -49,4 +53,10 @@
     background: var(--background-gradient-chat, var(--background-base-lower))
 }
 
-/*# sourceMappingURL=43853.8588eb1b11476d70.css.map*/
+.appIcon_e92794 {
+    border-radius: var(--radius-lg);
+    height: 64px;
+    width: 64px
+}
+
+/*# sourceMappingURL=43853.13a700338941bad3.css.map*/

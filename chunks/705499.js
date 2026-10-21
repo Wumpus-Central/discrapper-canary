@@ -1,68 +1,66 @@
-l.d(t, { P9: () => g, wY: () => E });
-var n = l(451988),
-    u = l(73153),
-    r = l(956518),
-    a = l(323073),
-    s = l(288254),
-    i = l(734057),
-    c = l(576705),
-    d = l(494126),
-    o = l(91242),
-    p = l(457827),
-    h = l(165610),
-    A = l(652215);
-let I = new Map();
-function f(e, t) {
+n.d(t, { N3: () => w, P9: () => _, wY: () => q });
+var l = n(451988),
+    u = n(73153),
+    r = n(956518),
+    a = n(323073),
+    c = n(288254),
+    i = n(734057),
+    s = n(576705),
+    o = n(494126),
+    d = n(91242),
+    p = n(457827),
+    h = n(165610),
+    f = n(652215);
+let A = new Map();
+function I(e, t) {
     u.h.dispatch({ type: "FRAME_SET_UNCLAIMED_PRELOAD", frameId: e, unclaimed: t });
 }
 function m(e) {
-    let t = I.get(e);
-    (null == t && ((t = { stopTimer: new n.Ep(), launchRequestId: void 0 }), I.set(e, t), f(e, !0)),
-        t.stopTimer.start(5e3, () => {
-            var t;
-            let l;
-            return (
-                (t = e),
-                void (
-                    null != (l = I.get(t)) &&
-                    (l.stopTimer.stop(),
-                    I.delete(t),
-                    f(t, !1),
-                    null != l.launchRequestId && o.A.getFrame(t)?.launchRequestId === l.launchRequestId && (0, p.r)(t))
-                )
-            );
-        }));
+    let t = A.get(e);
+    (null == t && ((t = { stopTimer: new l.Ep(), launchRequestId: void 0 }), A.set(e, t), I(e, !0)),
+        t.stopTimer.start(5e3, () => R(e)));
 }
 function R(e) {
-    let t = I.get(e);
-    null != t && (t.stopTimer.stop(), I.delete(e), f(e, !1));
+    let t = A.get(e);
+    null != t &&
+        (t.stopTimer.stop(),
+        A.delete(e),
+        I(e, !1),
+        null != t.launchRequestId && d.A.getFrame(e)?.launchRequestId === t.launchRequestId && (0, p.r)(e));
 }
 function g(e) {
-    let t,
-        l,
-        n,
-        u =
-            ((t = i.A.getChannel(e)),
-            (l = t?.application_id),
-            (n = t?.type === A.rbe.GUILD_APP ? (0, h.HD)(t) : null),
-            null == t || null == l || null == n
-                ? null
-                : { channel: t, applicationId: l, surface: n, frameId: (0, h.VA)(l, n) });
-    if (null == u) return;
-    let { channel: p, applicationId: f, surface: g, frameId: E } = u;
-    if (I.has(E)) return void m(E);
-    if (
-        null != o.A.getFrame(E) ||
-        !c.A.can(A.xBc.VIEW_CHANNEL, p) ||
-        (0, a.qR)(p) ||
-        (0, s.BV)(p) ||
-        null == (0, r.Ay)(f)
-    )
-        return;
-    (m(E), (0, d.launchFrame)({ applicationId: f, surface: g, showErrorModal: !1 }).catch(() => R(E)));
-    let _ = I.get(E);
-    null != _ && (_.launchRequestId = o.A.getFrame(E)?.launchRequestId);
+    let t = A.get(e);
+    null != t && (t.stopTimer.stop(), A.delete(e), I(e, !1));
 }
 function E(e) {
-    return !!I.has(e) && (R(e), !0);
+    let t = i.A.getChannel(e),
+        n = t?.application_id,
+        l = t?.type === f.rbe.GUILD_APP ? (0, h.HD)(t) : null;
+    return null == t || null == n || null == l
+        ? null
+        : { channel: t, applicationId: n, surface: l, frameId: (0, h.VA)(n, l) };
+}
+function _(e) {
+    let t = E(e);
+    if (null == t) return;
+    let { channel: n, applicationId: l, surface: u, frameId: i } = t;
+    if (A.has(i)) return void m(i);
+    if (
+        null != d.A.getFrame(i) ||
+        !s.A.can(f.xBc.VIEW_CHANNEL, n) ||
+        (0, a.qR)(n) ||
+        (0, c.BV)(n) ||
+        null == (0, r.Ay)(l)
+    )
+        return;
+    (m(i), (0, o.launchFrame)({ applicationId: l, surface: u, showErrorModal: !1 }).catch(() => g(i)));
+    let p = A.get(i);
+    null != p && (p.launchRequestId = d.A.getFrame(i)?.launchRequestId);
+}
+function q(e) {
+    return !!A.has(e) && (g(e), !0);
+}
+function w(e) {
+    let t = E(e);
+    null != t && R(t.frameId);
 }

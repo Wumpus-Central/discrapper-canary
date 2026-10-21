@@ -940,18 +940,19 @@ class en extends r.PureComponent {
                                 n.e("356675"),
                                 n.e("35723"),
                                 n.e("566378"),
+                                n.e("537832"),
                                 n.e("256372"),
                                 n.e("337341"),
                                 n.e("29542"),
                                 n.e("333730"),
                                 n.e("722440"),
                                 n.e("248804"),
-                                n.e("964602"),
                                 n.e("141049"),
                                 n.e("174489"),
-                                n.e("603432"),
-                                n.e("25173"),
-                            ]).then(n.bind(n, 468916));
+                                n.e("560955"),
+                                n.e("730504"),
+                                n.e("335517"),
+                            ]).then(n.bind(n, 317804));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, guild: a, onSelect: o.jD });
                         });
                     case H.rbe.GUILD_VOICE:

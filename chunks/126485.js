@@ -3431,7 +3431,7 @@ function sN(e) {
         }),
     });
 }
-var s_ = n(483510);
+var s_ = n(664699);
 function sS(e) {
     let { channel: t, isSuggestedSection: n } = e;
     return (0, r.jsx)(q.m, {
@@ -3439,10 +3439,7 @@ function sS(e) {
         text: er.intl.string(er.t.ZXxLQg),
         children: (0, r.jsx)(J.D, {
             className: eo.Xs,
-            onClick: () => {
-                ((0, s_.ci)(t.getGuildId(), t.id),
-                    (0, ip.iN)(t.id, n ? { source: iA.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0));
-            },
+            onClick: () => (0, s_.A)(t, n ? iA.A.CHANNEL_LIST_SUGGESTED_SECTION : void 0),
             "aria-label": er.intl.string(er.t.ZXxLQg),
             children: (0, r.jsx)(lU.ChatIcon, { size: "xs", color: "currentColor", className: eo.gE }),
         }),
@@ -3802,8 +3799,8 @@ class sV extends nF {
                     n.e("333730"),
                     n.e("248804"),
                     n.e("174489"),
-                    n.e("25173"),
-                ]).then(n.bind(n, 468916));
+                    n.e("335517"),
+                ]).then(n.bind(n, 317804));
                 return (n) => (0, r.jsx)(e, { ...n, channel: t, guild: l });
             });
     };
