@@ -1,0 +1,21 @@
+.list__1760d {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: var(--space-12)
+}
+
+.list__1760d,
+.row__1760d {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.row__1760d {
+    align-items: center;
+    color: var(--text-subtle)
+}
+
+/*# sourceMappingURL=ba8818b388593f9e.css.map*/
