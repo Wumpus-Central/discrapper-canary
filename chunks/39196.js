@@ -1,39 +1,41 @@
-n.d(t, { HF: () => i, O8: () => u });
+n.d(t, { HF: () => u, O8: () => c });
 var r = n(812095),
-    l = n(65238),
-    s = n(324157),
-    a = n(927812),
-    o = n(306396);
-function i(e, t) {
-    let n = (0, l.XF)(e);
+    l = n(604913),
+    s = n(65238),
+    a = n(324157),
+    o = n(927812),
+    i = n(306396);
+function u(e, t) {
+    let n = (0, s.XF)(e);
     if (null != n && null != t.categorySkuId && n.collectionId === t.categorySkuId) return n;
 }
-function u(e, t, n, l) {
-    var u, c, d;
-    let p,
-        m = i(e, t);
-    if (null == e || null == m) return t;
-    let g = (0, o.Q7)(m, n),
-        h = {
-            locale: l,
+function c(e, t, n, s) {
+    var c, d, p;
+    let m,
+        g = u(e, t);
+    if (null == e || null == g) return t;
+    let h = (0, i.Q7)(g, n),
+        C = {
+            locale: s,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
-            helpCenterId: m.shared.helpCenter?.id,
+            helpCenterId: g.shared.helpCenter?.id,
         },
-        C = g?.title != null && "" !== g.title ? (0, r.U)((0, s.wJ)(g.title, h)) : t.title,
-        f = g?.description != null && "" !== g.description ? (0, r.U)((0, s.wJ)(g.description, h)) : t.summary,
-        E =
-            null != g
-                ? ((u = g.rewardStates),
-                  (c = e.rewardStatus),
-                  (d = e.progress?.current ?? 0),
-                  null != (p = (0, a.x)(u, c, d)?.heroUrl) && "" !== p ? p : void 0)
-                : void 0;
+        f = h?.title != null && "" !== h.title ? (0, r.U)((0, a.wJ)(h.title, C)) : t.title,
+        E = h?.description != null && "" !== h.description ? (0, r.U)((0, a.wJ)(h.description, C)) : t.summary;
+    if (g.subtype === l.h5.BASIC) return { ...t, title: f, summary: E };
+    let v =
+        h?.rewardStates != null
+            ? ((c = h.rewardStates),
+              (d = e.rewardStatus),
+              (p = e.progress?.current ?? 0),
+              null != (m = (0, o.x)(c, d, p)?.heroUrl) && "" !== m ? m : void 0)
+            : void 0;
     return {
         ...t,
-        title: C,
-        summary: f,
-        heroBannerUrl: E ?? t.heroBannerUrl,
+        title: f,
+        summary: E,
+        heroBannerUrl: v ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,
     };

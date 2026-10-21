@@ -70,158 +70,122 @@ class a extends i.A {
                           collectibles:
                               null != (i = e.tenant_metadata).collectibles
                                   ? (function (e) {
-                                        var t, n;
+                                        var t, n, i;
                                         switch (e.type) {
                                             case r.hE.COLLECT_AND_CLAIM:
-                                                if (e.subtype === r.h5.TAKEOVER) {
-                                                    return (
-                                                        (t = e),
-                                                        {
-                                                            type: r.hE.COLLECT_AND_CLAIM,
-                                                            subtype: r.h5.TAKEOVER,
-                                                            collectionId: t.collection_id,
-                                                            shopHome: {
-                                                                title: t.shop_home.title,
-                                                                description: t.shop_home.description,
-                                                                rewardStates: o(t.shop_home.reward_states),
-                                                                style:
-                                                                    null != t.shop_home.style
-                                                                        ? {
-                                                                              contentTheme:
-                                                                                  t.shop_home.style.content_theme,
-                                                                          }
-                                                                        : void 0,
-                                                            },
-                                                            indexPage: {
-                                                                description: t.index_page.description,
-                                                                rewardStates: o(t.index_page.reward_states),
-                                                                style:
-                                                                    null != t.index_page.style
-                                                                        ? {
-                                                                              contentTheme:
-                                                                                  t.index_page.style.content_theme,
-                                                                          }
-                                                                        : void 0,
-                                                            },
-                                                            shared: (function (e) {
-                                                                var t;
-                                                                let {
-                                                                    progress_indicator: n,
-                                                                    navigation: i,
-                                                                    help_center: r,
-                                                                } = e;
-                                                                return {
-                                                                    progressIndicator: {
-                                                                        title: n.title,
-                                                                        description: n.description,
-                                                                        rewardStates:
-                                                                            null != n.indicator_reward_states
-                                                                                ? {
-                                                                                      inProgress:
-                                                                                          null !=
-                                                                                          (t =
-                                                                                              n.indicator_reward_states)
-                                                                                              .in_progress
-                                                                                              ? {
-                                                                                                    progressSteps:
-                                                                                                        t.in_progress.progress_steps.map(
-                                                                                                            d,
-                                                                                                        ),
-                                                                                                }
-                                                                                              : void 0,
-                                                                                      earned:
-                                                                                          null != t.earned
-                                                                                              ? d(t.earned)
-                                                                                              : void 0,
-                                                                                      consumed:
-                                                                                          null != t.consumed
-                                                                                              ? d(t.consumed)
-                                                                                              : void 0,
-                                                                                  }
-                                                                                : void 0,
-                                                                        assets: {
-                                                                            backgroundUrl: n.assets.background_url,
-                                                                            rewardPreview: {
-                                                                                hiddenUrl:
-                                                                                    n.assets.reward_preview.hidden_url,
-                                                                                revealedUrl:
-                                                                                    n.assets.reward_preview
-                                                                                        .revealed_url,
-                                                                            },
-                                                                        },
-                                                                        style:
-                                                                            null != n.style
-                                                                                ? {
-                                                                                      contentTheme:
-                                                                                          n.style.content_theme,
-                                                                                      progressColor:
-                                                                                          n.style.progress_color,
-                                                                                  }
-                                                                                : void 0,
-                                                                    },
-                                                                    navigation:
-                                                                        i?.tab != null
+                                                switch (e.subtype) {
+                                                    case r.h5.TAKEOVER:
+                                                        return (
+                                                            (t = e),
+                                                            {
+                                                                type: r.hE.COLLECT_AND_CLAIM,
+                                                                subtype: r.h5.TAKEOVER,
+                                                                collectionId: t.collection_id,
+                                                                shopHome: {
+                                                                    title: t.shop_home.title,
+                                                                    description: t.shop_home.description,
+                                                                    rewardStates: o(t.shop_home.reward_states),
+                                                                    style:
+                                                                        null != t.shop_home.style
                                                                             ? {
-                                                                                  tab: {
-                                                                                      title: i.tab.title,
-                                                                                      icon: i.tab.icon,
-                                                                                  },
+                                                                                  contentTheme:
+                                                                                      t.shop_home.style.content_theme,
                                                                               }
                                                                             : void 0,
-                                                                    helpCenter:
-                                                                        null != r ? { text: r.text, id: r.id } : void 0,
-                                                                };
-                                                            })(t.shared),
-                                                        }
-                                                    );
+                                                                },
+                                                                indexPage: {
+                                                                    description: t.index_page.description,
+                                                                    rewardStates: o(t.index_page.reward_states),
+                                                                    style:
+                                                                        null != t.index_page.style
+                                                                            ? {
+                                                                                  contentTheme:
+                                                                                      t.index_page.style.content_theme,
+                                                                              }
+                                                                            : void 0,
+                                                                },
+                                                                shared: d(t.shared),
+                                                            }
+                                                        );
+                                                    case r.h5.BASIC:
+                                                        return (
+                                                            (n = e),
+                                                            {
+                                                                type: r.hE.COLLECT_AND_CLAIM,
+                                                                subtype: r.h5.BASIC,
+                                                                collectionId: n.collection_id,
+                                                                shopHome: {
+                                                                    title: n.shop_home.title,
+                                                                    description: n.shop_home.description,
+                                                                    style:
+                                                                        null != n.shop_home.style
+                                                                            ? {
+                                                                                  contentTheme:
+                                                                                      n.shop_home.style.content_theme,
+                                                                              }
+                                                                            : void 0,
+                                                                },
+                                                                indexPage: {
+                                                                    description: n.index_page.description,
+                                                                    style:
+                                                                        null != n.index_page.style
+                                                                            ? {
+                                                                                  contentTheme:
+                                                                                      n.index_page.style.content_theme,
+                                                                              }
+                                                                            : void 0,
+                                                                },
+                                                                shared: d(n.shared),
+                                                            }
+                                                        );
                                                 }
                                                 break;
                                             case r.hE.TARGETED_OFFER:
-                                                let i, a, s, l, c;
+                                                let a, s, l, c, u;
                                                 return (
-                                                    (n = e.reward),
-                                                    (i = n?.storefront?.nagbar),
-                                                    (a = n?.checkout?.offer_notice),
-                                                    (l =
-                                                        null == (s = n?.collected?.override_title) || "" === s
+                                                    (i = e.reward),
+                                                    (a = i?.storefront?.nagbar),
+                                                    (s = i?.checkout?.offer_notice),
+                                                    (c =
+                                                        null == (l = i?.collected?.override_title) || "" === l
                                                             ? void 0
-                                                            : s),
-                                                    (c = n?.flavor),
-                                                    null == i && null == a && null == l && null == c
+                                                            : l),
+                                                    (u = i?.flavor),
+                                                    null == a && null == s && null == c && null == u
                                                         ? { type: r.hE.TARGETED_OFFER }
                                                         : {
                                                               type: r.hE.TARGETED_OFFER,
                                                               reward: {
                                                                   storefront:
-                                                                      null != i
+                                                                      null != a
                                                                           ? {
                                                                                 nagbar: {
-                                                                                    headerText: i.header_text ?? void 0,
+                                                                                    headerText: a.header_text ?? void 0,
                                                                                     cta:
-                                                                                        null != i.cta
+                                                                                        null != a.cta
                                                                                             ? {
                                                                                                   text:
-                                                                                                      i.cta.text ??
+                                                                                                      a.cta.text ??
                                                                                                       void 0,
                                                                                               }
                                                                                             : void 0,
                                                                                     helpCenterId:
-                                                                                        i.help_center_id ?? void 0,
-                                                                                    icon: i.icon ?? void 0,
+                                                                                        a.help_center_id ?? void 0,
+                                                                                    icon: a.icon ?? void 0,
                                                                                 },
                                                                             }
                                                                           : void 0,
                                                                   checkout:
-                                                                      null != a
+                                                                      null != s
                                                                           ? {
                                                                                 offerNotice: {
-                                                                                    icon: a.icon ?? void 0,
-                                                                                    text: a.text ?? void 0,
+                                                                                    icon: s.icon ?? void 0,
+                                                                                    text: s.text ?? void 0,
                                                                                 },
                                                                             }
                                                                           : void 0,
-                                                                  collected: null != l ? { overrideTitle: l } : void 0,
-                                                                  flavor: c ?? void 0,
+                                                                  collected: null != c ? { overrideTitle: c } : void 0,
+                                                                  flavor: u ?? void 0,
                                                               },
                                                           }
                                                 );
@@ -267,5 +231,39 @@ function o(e) {
     };
 }
 function d(e) {
+    var t;
+    let { progress_indicator: n, navigation: i, help_center: r } = e;
+    return {
+        progressIndicator: {
+            title: n.title,
+            description: n.description,
+            rewardStates:
+                null != n.indicator_reward_states
+                    ? {
+                          inProgress:
+                              null != (t = n.indicator_reward_states).in_progress
+                                  ? { progressSteps: t.in_progress.progress_steps.map(c) }
+                                  : void 0,
+                          earned: null != t.earned ? c(t.earned) : void 0,
+                          consumed: null != t.consumed ? c(t.consumed) : void 0,
+                      }
+                    : void 0,
+            assets: {
+                backgroundUrl: n.assets.background_url,
+                rewardPreview: {
+                    hiddenUrl: n.assets.reward_preview.hidden_url,
+                    revealedUrl: n.assets.reward_preview.revealed_url,
+                },
+            },
+            style:
+                null != n.style
+                    ? { contentTheme: n.style.content_theme, progressColor: n.style.progress_color }
+                    : void 0,
+        },
+        navigation: i?.tab != null ? { tab: { title: i.tab.title, icon: i.tab.icon } } : void 0,
+        helpCenter: null != r ? { text: r.text, id: r.id } : void 0,
+    };
+}
+function c(e) {
     return { title: e.title, description: e.description };
 }
