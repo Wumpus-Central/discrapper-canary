@@ -1,211 +1,215 @@
-l.d(t, { A: () => z });
-var n,
-    i = l(477900),
-    a = l(582128),
+l.d(t, { A: () => W });
+var a,
+    n = l(477900),
+    i = l(582128),
     s = l(503698),
     r = l.n(s),
     c = l(17928),
     o = l(939249),
     A = l(366010),
     E = l(858899),
-    I = l(834730),
-    d = l(926268),
-    u = l(346411),
-    T = l(271866),
-    C = l(736653),
-    O = l(793574),
-    _ = l(688810),
-    L = l(885386),
-    p = l(636537),
-    S = l(73153),
-    N = l(652215);
+    p = l(834730),
+    u = l(926268),
+    I = l(346411),
+    C = l(271866),
+    L = l(736653),
+    d = l(793574),
+    T = l(688810),
+    _ = l(885386),
+    O = l(636537),
+    N = l(73153),
+    S = l(652215);
 async function h() {
-    S.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_START" });
+    N.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_START" });
     try {
-        let e = await p.Bo.get({
-            url: N.Rsh.APPLICATIONS,
+        let e = await O.Bo.get({
+            url: S.Rsh.APPLICATIONS,
             query: { with_team_applications: !0 },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
-        S.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_SUCCESS", applicationIds: e.body.map((e) => e.id) });
+        N.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_SUCCESS", applicationIds: e.body.map((e) => e.id) });
     } catch (e) {
-        S.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_FAIL" });
+        N.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_FAIL" });
     }
 }
 var R =
-    (((n = {}).INITIALIZED = "INITIALIZED"), (n.LOADING = "LOADING"), (n.LOADED = "LOADED"), (n.ERROR = "ERROR"), n);
-let m = R.INITIALIZED,
-    g = new Set();
+    (((a = {}).INITIALIZED = "INITIALIZED"), (a.LOADING = "LOADING"), (a.LOADED = "LOADED"), (a.ERROR = "ERROR"), a);
+let g = R.INITIALIZED,
+    m = new Set();
 class D extends c.Ay.Store {
     static displayName = "DeveloperApplicationsStore";
     getFetchState() {
-        return m;
+        return g;
     }
     isDeveloperOfApplication(e) {
-        return null != e && g.has(e);
+        return null != e && m.has(e);
     }
 }
-let x = new D(S.h, {
+let P = new D(N.h, {
     LOGOUT: function () {
-        ((m = R.INITIALIZED), (g = new Set()));
+        ((g = R.INITIALIZED), (m = new Set()));
     },
     DEVELOPER_APPLICATIONS_FETCH_START() {
-        m = R.LOADING;
+        g = R.LOADING;
     },
     DEVELOPER_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { applicationIds: t } = e;
-        ((m = R.LOADED), (g = new Set(t)));
+        ((g = R.LOADED), (m = new Set(t)));
     },
     DEVELOPER_APPLICATIONS_FETCH_FAIL() {
-        m = R.ERROR;
+        g = R.ERROR;
     },
 });
-var P = l(793943),
-    b = l(742589),
-    j = l(402860),
+var x = l(793943),
+    j = l(742589),
+    b = l(402860),
     f = l(71393),
     k = l(576705),
     v = l(287809),
-    y = l(147964),
-    F = l(174459),
-    G = l(975571),
-    w = l(371794),
-    M = l(871123),
+    w = l(147964),
+    y = l(174459),
+    F = l(975571),
+    M = l(371794),
+    G = l(871123),
     U = l(439303),
-    H = l(353281),
-    V = l(676924),
-    Z = l(995393),
-    B = l(616633),
-    Y = l(518477),
-    J = l(105292),
-    Q = l(859425);
-function q(e) {
-    let { content: t, onClick: l, ariaLabel: n, className: a } = e;
-    return (0, i.jsx)(o.D, { className: r()(Q.gb, a), onClick: l, "aria-label": n, children: t });
-}
+    V = l(353281),
+    H = l(225647),
+    Z = l(676924),
+    B = l(995393),
+    Y = l(616633),
+    J = l(518477),
+    Q = l(105292),
+    q = l(859425);
 function z(e) {
+    let { content: t, onClick: l, ariaLabel: a, className: i } = e;
+    return (0, n.jsx)(o.D, { className: r()(q.gb, i), onClick: l, "aria-label": a, children: t });
+}
+function W(e) {
     let t,
         l,
-        n,
+        a,
         s,
-        { storefront: p, selectedPageIndex: S } = e,
-        m = (0, A.M)((0, C.Ay)()),
-        g = (0, c.bG)([v.default], () => v.default.getCurrentUser()),
+        { storefront: O, selectedPageIndex: N } = e,
+        g = (0, A.M)((0, L.Ay)()),
+        m = (0, c.bG)([v.default], () => v.default.getCurrentUser()),
         D = (0, U.jM)(),
-        { analyticsLocations: z } = (0, _.Ay)(),
-        { navigateToStorefrontPage: W } = (0, H.H)(),
-        K = p?.applicationId,
-        { guildId: $ } = (0, M.nG)(K),
-        X = (0, c.bG)([k.A, f.A], () => k.A.can(N.xBc.MANAGE_GUILD, f.A.getGuild($))),
-        ee =
-            ((t = L.Q_.useSetting()),
-            (l = (0, c.bG)([x], () => x.getFetchState())),
-            (n = (0, c.bG)([x], () => x.isDeveloperOfApplication(K))),
-            (s = t || (X ?? !1)),
-            a.useEffect(() => {
-                null != K && s && l === R.INITIALIZED && h();
-            }, [K, s, l]),
-            n),
-        et = (0, c.bG)([y.A], () => null != K && y.A.inTestModeForApplication(K)),
-        el = a.useCallback(() => {
-            g?.id != null &&
-                (0, j.openUserProfileModal)({
-                    userId: g.id,
-                    tabSection: Y.RP.WISHLIST,
-                    sourceAnalyticsLocations: [O.A.SOCIAL_LAYER_STOREFRONT],
+        { analyticsLocations: W } = (0, T.Ay)(),
+        { navigateToStorefrontPage: K } = (0, V.H)(),
+        $ = O?.applicationId,
+        { guildId: X } = (0, G.nG)($),
+        ee = (0, c.bG)([k.A, f.A], () => k.A.can(S.xBc.MANAGE_GUILD, f.A.getGuild(X))),
+        et =
+            ((t = _.Q_.useSetting()),
+            (l = (0, c.bG)([P], () => P.getFetchState())),
+            (a = (0, c.bG)([P], () => P.isDeveloperOfApplication($))),
+            (s = t || (ee ?? !1)),
+            i.useEffect(() => {
+                null != $ && s && l === R.INITIALIZED && h();
+            }, [$, s, l]),
+            a),
+        el = (0, c.bG)([w.A], () => null != $ && w.A.inTestModeForApplication($)),
+        ea = i.useCallback(() => {
+            m?.id != null &&
+                (0, b.openUserProfileModal)({
+                    userId: m.id,
+                    tabSection: J.RP.WISHLIST,
+                    sourceAnalyticsLocations: [d.A.SOCIAL_LAYER_STOREFRONT],
                 });
-        }, [g]),
-        en = a.useCallback(() => {
-            (F.default.track(N.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+        }, [m]),
+        en = i.useCallback(() => {
+            (y.default.track(S.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: D?.sessionId,
-                cta_type: Z.ST.LEARN_MORE,
-                location_stack: z,
+                cta_type: B.ST.LEARN_MORE,
+                location_stack: W,
             }),
-                window.open(G.A.getArticleURL(N.MVz.SOCIAL_LAYER_STOREFRONT)));
-        }, [D, z]),
-        ei = a.useCallback(() => {
-            null != K &&
-                (0, T.q1)(K).then((e) => {
+                window.open(F.A.getArticleURL(S.MVz.SOCIAL_LAYER_STOREFRONT)));
+        }, [D, W]),
+        ei = i.useCallback(() => {
+            null != $ &&
+                (0, C.q1)($).then((e) => {
                     null == e
-                        ? (0, E.P0)({ text: y.A.error ?? J.intl.string(J.t.SDP0vo), variant: "critical" })
-                        : (0, P.nf)(P.HP.APPLICATION_TEST_MODE_DEBUG, {
+                        ? (0, E.P0)({ text: w.A.error ?? Q.intl.string(Q.t.SDP0vo), variant: "critical" })
+                        : (0, x.nf)(x.HP.APPLICATION_TEST_MODE_DEBUG, {
                               shouldAutoOpenGameProfile: !1,
-                              initialTabId: B.t.STOREFRONT,
+                              initialTabId: Y.t.STOREFRONT,
                           });
                 });
-        }, [K]),
-        ea = a.useCallback(() => {
-            W?.(0);
-        }, [W]);
-    if (null == p) return null;
-    let es = null != p.logoAssetId ? (0, w.YE)(p.applicationId, p.logoAssetId, 128) : null,
-        er = null != p.lightThemeLogoAssetId ? (0, w.YE)(p.applicationId, p.lightThemeLogoAssetId, 128) : null,
-        ec = null;
+        }, [$]),
+        es = i.useCallback(() => {
+            K?.(0);
+        }, [K]);
+    if (null == O) return null;
+    let er = null != O.logoAssetId ? (0, M.YE)(O.applicationId, O.logoAssetId, 128) : null,
+        ec = null != O.lightThemeLogoAssetId ? (0, M.YE)(O.applicationId, O.lightThemeLogoAssetId, 128) : null,
+        eo = null;
     return (
-        (ec = m ? (es ?? er) : (er ?? es)),
-        (0, i.jsxs)(b.A, {
+        (eo = g ? (er ?? ec) : (ec ?? er)),
+        (0, n.jsxs)(j.A, {
             disableDoubleClick: !0,
-            className: Q.N1,
+            className: q.N1,
             children: [
-                (0, i.jsxs)(o.D, {
-                    onClick: ea,
-                    className: Q.gn,
+                (0, n.jsxs)(o.D, {
+                    onClick: es,
+                    className: q.gn,
                     children: [
-                        null != ec && (0, i.jsx)("img", { className: Q.wm, src: ec, alt: p.title }),
-                        (0, i.jsx)(b.A.Title, { children: p.title }),
+                        null != eo && (0, n.jsx)("img", { className: q.wm, src: eo, alt: O.title }),
+                        (0, n.jsx)(j.A.Title, { children: O.title }),
                     ],
                 }),
-                p.pages.length > 1 &&
-                    (0, i.jsx)("div", {
-                        className: Q.YC,
-                        children: p.pages.map((e, t) =>
-                            (0, i.jsx)(
-                                b.A.Title,
+                O.pages.length > 1 &&
+                    (0, n.jsx)("div", {
+                        className: q.YC,
+                        children: O.pages.map((e, t) =>
+                            (0, n.jsx)(
+                                j.A.Title,
                                 {
-                                    onClick: () => W?.(t),
-                                    wrapperClassName: Q.oB,
-                                    className: r()(Q.xT, { [Q.ys]: S === t }),
-                                    children: (0, i.jsx)(I.E, { variant: "text-sm/medium", children: e.title }),
+                                    onClick: () => K?.(t),
+                                    wrapperClassName: q.oB,
+                                    className: r()(q.xT, { [q.ys]: N === t }),
+                                    children: (0, n.jsx)(p.E, {
+                                        variant: "text-sm/medium",
+                                        children: (0, H.A)(e.title),
+                                    }),
                                 },
                                 `${e.title}-${t}`,
                             ),
                         ),
                     }),
-                (0, i.jsxs)("div", {
-                    className: Q.sZ,
+                (0, n.jsxs)("div", {
+                    className: q.sZ,
                     children: [
-                        (0, i.jsx)(q, {
-                            content: (0, i.jsx)(d.HeartIcon, { size: "xs", color: "currentColor" }),
-                            onClick: el,
-                            ariaLabel: J.intl.string(J.t["7lZ31J"]),
-                            className: Q.ij,
+                        (0, n.jsx)(z, {
+                            content: (0, n.jsx)(u.HeartIcon, { size: "xs", color: "currentColor" }),
+                            onClick: ea,
+                            ariaLabel: Q.intl.string(Q.t["7lZ31J"]),
+                            className: q.ij,
                         }),
-                        (0, i.jsx)(V.A, { location: O.A.SOCIAL_LAYER_STOREFRONT }),
-                        (0, i.jsx)(q, {
+                        (0, n.jsx)(Z.A, { location: d.A.SOCIAL_LAYER_STOREFRONT }),
+                        (0, n.jsx)(z, {
                             onClick: en,
-                            ariaLabel: J.intl.string(J.t.hvVgAZ),
-                            content: (0, i.jsx)(I.E, {
+                            ariaLabel: Q.intl.string(Q.t.hvVgAZ),
+                            content: (0, n.jsx)(p.E, {
                                 variant: "text-sm/medium",
-                                children: J.intl.string(J.t.hvVgAZ),
+                                children: Q.intl.string(Q.t.hvVgAZ),
                             }),
-                            className: Q.AJ,
+                            className: q.AJ,
                         }),
-                        ee &&
-                            !et &&
-                            (0, i.jsx)(q, {
+                        et &&
+                            !el &&
+                            (0, n.jsx)(z, {
                                 onClick: ei,
-                                ariaLabel: J.intl.string(J.t.QexSCe),
-                                content: (0, i.jsxs)(i.Fragment, {
+                                ariaLabel: Q.intl.string(Q.t.QexSCe),
+                                content: (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, i.jsx)(u.WrenchIcon, { size: "xs", color: "currentColor" }),
-                                        (0, i.jsx)(I.E, {
+                                        (0, n.jsx)(I.WrenchIcon, { size: "xs", color: "currentColor" }),
+                                        (0, n.jsx)(p.E, {
                                             variant: "text-sm/medium",
-                                            children: J.intl.string(J.t.QexSCe),
+                                            children: Q.intl.string(Q.t.QexSCe),
                                         }),
                                     ],
                                 }),
-                                className: Q.pL,
+                                className: q.pL,
                             }),
                     ],
                 }),
