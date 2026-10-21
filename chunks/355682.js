@@ -247,7 +247,7 @@ function nk(e) {
                         h.hasAttribute("data-safe-src") &&
                             "" !== h.getAttribute("data-safe-src") &&
                             (i = h.getAttribute("data-safe-src")))),
-                (h = h.parentNode));
+                (h = h.parentElement));
     let I = document.getSelection()?.toString() ?? "";
     return (0, l.jsx)(g.f5, {
         value: y,
