@@ -15,7 +15,7 @@
 
 .iconFallback_b789ab {
     align-items: center;
-    background-color: var(--background-base-low);
+    background-color: var(--game-cover-art-icon-background, var(--background-base-low));
     box-sizing: border-box;
     display: flex;
     height: 100%;
@@ -31,4 +31,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=102075.298351c96130ba2e.css.map*/
+/*# sourceMappingURL=102075.af492ff9c1d48b58.css.map*/

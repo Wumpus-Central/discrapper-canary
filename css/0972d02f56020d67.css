@@ -17,9 +17,14 @@
 }
 
 .card__38ddd {
+    --game-cover-art-icon-background: transparent;
     cursor: pointer;
     overflow: hidden;
     position: relative
+}
+
+.card__38ddd:has(.coverArt__38ddd>img) {
+    box-shadow: none
 }
 
 .cardWrapper__38ddd {
@@ -209,4 +214,4 @@
     padding-inline: calc(var(--custom-spacing) + var(--custom-spacing))
 }
 
-/*# sourceMappingURL=74029d22d79a046d.css.map*/
+/*# sourceMappingURL=0972d02f56020d67.css.map*/

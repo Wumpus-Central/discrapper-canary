@@ -1,65 +1,49 @@
-t.d(l, { Ay: () => x, cO: () => d, wu: () => m });
-var a,
-    n = t(477900),
-    s = t(582128),
-    r = t(503698),
-    i = t.n(r),
-    c = t(834730),
-    o = t(105292),
-    u = t(899830),
-    m = (((a = {})[(a.SMALL = 0)] = "SMALL"), (a[(a.LARGE = 1)] = "LARGE"), a);
-function d(e, l) {
-    return null == e.getCoverURL(l) && null != e.getIconURL(l ?? 256);
+a.d(e, { Ay: () => x, cO: () => m, wu: () => d });
+var n,
+    t = a(477900);
+a(582128);
+var r = a(503698),
+    i = a.n(r),
+    s = a(834730),
+    u = a(5399),
+    c = a(105292),
+    o = a(899830),
+    d = (((n = {})[(n.SMALL = 0)] = "SMALL"), (n[(n.LARGE = 1)] = "LARGE"), n);
+function m(l) {
+    return "icon" === (0, u.My)(l);
 }
-function x(e) {
-    let { game: l, size: t, className: a, imageSize: r, onLoad: m, onError: d } = e,
-        [x, g] = s.useState(null),
-        [v, h] = s.useState(null),
-        L = l.name,
-        j = null != l.firstReleaseDate ? new Date(l.firstReleaseDate) : null,
-        p = o.intl.formatToPlainString(o.t["3ev90U"], { game: L }),
-        R = l.getCoverURL(r),
-        f = l.getIconURL(r ?? 256);
-    return null == R || R === x
-        ? null != f && f !== v
-            ? (0, n.jsx)("div", {
-                  className: i()(u.EU, a),
-                  children: (0, n.jsx)("img", {
-                      className: u.Kk,
-                      src: f,
-                      alt: p,
-                      onError: function () {
-                          h(f);
-                      },
-                      draggable: !1,
-                  }),
-              })
-            : (0, n.jsxs)("div", {
-                  className: i()(u.Np, a),
-                  children: [
-                      (0, n.jsx)("div", { className: u.jH }),
-                      (0, n.jsx)(c.E, {
-                          variant: 1 === t ? "text-md/medium" : "text-xs/medium",
-                          color: "text-overlay-light",
-                          lineClamp: 1 === t ? 4 : 3,
-                          children: L,
-                      }),
-                      (0, n.jsx)("div", { className: u.jH }),
-                      (0, n.jsx)(c.E, {
-                          variant: 1 === t ? "text-sm/normal" : "text-xxs/normal",
-                          color: "text-overlay-light",
-                          children: null != j ? `(${j?.getFullYear()})` : null,
-                      }),
-                  ],
-              })
-        : (0, n.jsx)("img", {
-              className: a,
-              src: R,
-              alt: p,
-              onError: function (e) {
-                  (g(R), d?.(e));
-              },
-              onLoad: m,
-              draggable: !1,
+function x(l) {
+    let { game: e, size: a, className: n, imageSize: r, loadingPlaceholder: d } = l,
+        m = e.name,
+        x = null != e.firstReleaseDate ? new Date(e.firstReleaseDate) : null,
+        v = c.intl.formatToPlainString(c.t["3ev90U"], { game: m }),
+        h = e.getCoverURL(r),
+        g = e.getIconURL(r ?? 256),
+        { imageUrl: f, isCover: j, isLoading: L, handleLoad: p, handleError: k } = (0, u.Ay)(h, g);
+    if (null == f)
+        return (0, t.jsxs)("div", {
+            className: i()(o.Np, n),
+            children: [
+                (0, t.jsx)("div", { className: o.jH }),
+                (0, t.jsx)(s.E, {
+                    variant: 1 === a ? "text-md/medium" : "text-xs/medium",
+                    color: "text-overlay-light",
+                    lineClamp: 1 === a ? 4 : 3,
+                    children: m,
+                }),
+                (0, t.jsx)("div", { className: o.jH }),
+                (0, t.jsx)(s.E, {
+                    variant: 1 === a ? "text-sm/normal" : "text-xxs/normal",
+                    color: "text-overlay-light",
+                    children: null != x ? `(${x?.getFullYear()})` : null,
+                }),
+            ],
+        });
+    let C = { src: f, onError: k, onLoad: p, draggable: !1 };
+    return j
+        ? (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("img", { ...C, className: n, alt: v }, f), L && d] })
+        : (0, t.jsxs)("div", {
+              className: i()(o.EU, n),
+              children: [(0, t.jsx)("img", { ...C, className: o.Kk, alt: v }, f), L && d],
           });
 }
