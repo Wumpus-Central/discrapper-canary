@@ -1493,7 +1493,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 644821, Version Hash: ecc55167e5a92062f14813cb223edc7ed1789c95`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 644837, Version Hash: 7700333b9faa98a2cedda35c4d074e481e695e01`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25418,7 +25418,7 @@ let ye = "isHideDevBanner",
                     className: tf()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "644821" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "644837" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -32607,8 +32607,8 @@ let bo = (0, tZ.Fe)({
                 n.e("725344"),
                 n.e("380469"),
                 n.e("11015"),
-            ]).then(n.bind(n, 862671)),
-        webpackId: 862671,
+            ]).then(n.bind(n, 171133)),
+        webpackId: 171133,
         name: "MessageRequestPage",
         renderLoader: ra.rt,
     });
