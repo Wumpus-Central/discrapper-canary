@@ -926,6 +926,7 @@ let es = new ea(
                                   if (e.startsWith("web-contents-media-stream:")) return "tab";
                                   else if (e.startsWith("window:")) return "window";
                                   else if (e.startsWith("screen:")) return "screen";
+                                  else if (e.startsWith("activity:")) return "activity";
                               } else if (platform?.name === "Firefox")
                                   if ("" !== e) return "window";
                                   else return "screen";
