@@ -248,4 +248,21 @@
     color: var(--status-danger)
 }
 
-/*# sourceMappingURL=0ad1f61cd7be8c4a.css.map*/
+.innerPanel_f4d9c8 {
+    padding: var(--space-16)
+}
+
+.snapshot_f4d9c8 {
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    height: auto;
+    max-width: 100%
+}
+
+.log_f4d9c8 {
+    max-height: 240px;
+    overflow-y: auto;
+    white-space: pre
+}
+
+/*# sourceMappingURL=031b50c094d851f5.css.map*/

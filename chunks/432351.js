@@ -61,6 +61,12 @@ class o extends i.A {
     }
     setGoLiveSource(e, t) {}
     setClipsSource(e) {}
+    startSnapshotCapture(e, t) {}
+    stopSnapshotCapture() {}
+    setSnapshotSource(e) {}
+    getSnapshotStats() {
+        return Promise.resolve(null);
+    }
     setClipsQualitySettings(e, t, n, i) {
         return !1;
     }

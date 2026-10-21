@@ -462,6 +462,7 @@ var B =
         (r.CLIPS_THUMBNAIL = "clips_thumbnail"),
         (r.CLIPS_RECORDING_READY_EVENTS = "clips_recording_ready_events"),
         (r.UNIFIED_CAPTURE_BROKER = "unified_capture_broker"),
+        (r.CONJURE_SNAPSHOT = "conjure_snapshot"),
         (r.GO_LIVE_HARDWARE = "go_live_hardware"),
         (r.IMAGE_QUALITY_MEASUREMENT = "image_quality_measurement"),
         (r.SCREEN_CAPTURE_KIT = "screen_capture_kit"),
@@ -1980,6 +1981,8 @@ class ea extends d.A {
                 return (0, b.$b)(B.CLIPS_RECORDING_READY_EVENTS);
             case O.O5.UNIFIED_CAPTURE_BROKER:
                 return (0, b.$b)(B.UNIFIED_CAPTURE_BROKER);
+            case O.O5.CONJURE_SNAPSHOT:
+                return (0, b.$b)(B.CONJURE_SNAPSHOT);
             case O.O5.WINDOW_PREVIEWS:
                 return (0, b.$b)(B.WINDOW_PREVIEWS);
             case O.O5.AUDIO_DEBUG_STATE:
@@ -2212,6 +2215,43 @@ class ea extends d.A {
             }));
         let [h, f] = null != r ? r.split(":") : ["", ""];
         t.setClipsSource({ id: f, soundshareId: null != a ? a : 0 });
+    }
+    startSnapshotCapture(e, t) {
+        let n = (0, b.lE)();
+        null != n.startSnapshotCapture &&
+            null != n.signalSnapshotProcessed &&
+            n.startSnapshotCapture(
+                { width: e.width ?? 0, height: e.height ?? 0, intervalMs: e.intervalMs },
+                async (e, i, r, a, s) => {
+                    try {
+                        (await Promise.resolve(),
+                            await t({ image: i, mimeType: "image/png", width: r, height: a, encodeMs: s }));
+                    } catch (e) {
+                        this.logger.error("Snapshot consumer failed:", e);
+                    } finally {
+                        n.signalSnapshotProcessed?.(e);
+                    }
+                },
+            );
+    }
+    stopSnapshotCapture() {
+        (0, b.lE)().stopSnapshotCapture?.();
+    }
+    setSnapshotSource(e) {
+        let t = (0, b.lE)();
+        if (null == t.setSnapshotSource) return;
+        if (null == e) return void t.setSnapshotSource({ id: "" });
+        let { id: n, useGraphicsCapture: i, useGraphicsCaptureApiLevel: r, ...a } = e;
+        if (!/^window:\d+$/.test(n)) {
+            (this.logger.warn(`setSnapshotSource: rejected ${n}; only game windows can be snapshotted`),
+                t.setSnapshotSource({ id: "" }));
+            return;
+        }
+        t.setSnapshotSource({ ...a, id: n, graphicsCaptureApiLevel: r ?? +!!i });
+    }
+    getSnapshotStats() {
+        let e = (0, b.lE)();
+        return e.getSnapshotStats?.() ?? Promise.resolve(null);
     }
     setClipsQualitySettings(e, t, n, i) {
         let r = (0, b.lE)();
