@@ -360,13 +360,18 @@ var eA = n(424743),
     eI = n(306537),
     eE = n(36149);
 function ev(e) {
-    let { channelId: t } = e,
-        n = (0, eE.i2)(),
-        i = r.useCallback(() => {
+    let { channelId: t, messageId: n } = e,
+        i = (0, eE.i2)(),
+        l = r.useCallback(() => {
             (ef.A.showAgeVerificationGetStartedModal({ entryPoint: eI.q1.SYSTEM_DM_RETRY_BUTTON }),
                 (0, eI.UT)(eI.Im.RETRY, t));
         }, [t]);
-    return (0, s.jsx)(ex.$, { variant: "primary", text: q.intl.string(q.t["/nicWo"]), onClick: i, disabled: !n });
+    return (0, s.jsx)(ex.$, {
+        variant: "primary",
+        text: q.intl.string((0, eA.FQ)(t, n) ? q.t.DVywUB : q.t["/nicWo"]),
+        onClick: l,
+        disabled: !i,
+    });
 }
 var eC = n(107766),
     e_ = n(780964),
@@ -7343,7 +7348,7 @@ class cr extends r.Component {
             case r3.xC.AGE_VERIFICATION_RETRY:
                 i = (0, s.jsxs)(s.Fragment, {
                     children: [
-                        (0, s.jsx)(ev, { channelId: t.id }),
+                        (0, s.jsx)(ev, { channelId: t.id, messageId: e.id }),
                         (0, eA.cc)(t.id, e.id) ? (0, s.jsx)(eS, { channelId: t.id }) : null,
                     ],
                 });
