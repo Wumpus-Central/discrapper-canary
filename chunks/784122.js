@@ -3478,7 +3478,7 @@ function ro(e) {
                     threadSettings: i,
                     privateThreadMode: l,
                     location: a,
-                    onThreadCreated: ij.JA,
+                    onThreadCreated: ij.GS,
                     useDefaultThreadName: !0,
                 });
             return {

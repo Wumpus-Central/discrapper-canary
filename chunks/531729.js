@@ -168,7 +168,7 @@ function V(e) {
             appliedTagIds: P,
             upload: j.Se,
             onThreadCreated: (e) => {
-                ((0, f.JA)(e), a());
+                ((0, f.GS)(e), a());
             },
         }),
         el = i.useCallback((e, t, n) => {

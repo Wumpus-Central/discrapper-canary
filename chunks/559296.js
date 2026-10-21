@@ -2869,7 +2869,7 @@ function ig(e) {
                         if (!t) return { shouldClear: !1, shouldRefocus: !0 };
                         let n = await l(p, A, C);
                         return (
-                            (0, to.JA)(n),
+                            (0, to.GS)(n),
                             tg.A.resort(e.id),
                             (0, lQ.x5)(e.id, ix.drafts.type),
                             m(),
