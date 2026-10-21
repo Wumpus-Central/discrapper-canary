@@ -27097,7 +27097,11 @@ function Ij(e) {
                 r.map((e) => ({
                     ...e,
                     leading: u
-                        ? (0, p.jsx)(Ii.A, { game: { id: e.value, icon: d.get(e.value)?.icon }, iconClassName: IE.Gt })
+                        ? (0, p.jsx)(Ii.A, {
+                              game: { id: e.value, icon: d.get(e.value)?.icon },
+                              iconClassName: IE.Gt,
+                              withBackground: !0,
+                          })
                         : void 0,
                     trailing: u ? (0, p.jsx)(Il.A, { platforms: d.get(e.value)?.platformAvailability }) : void 0,
                 })),

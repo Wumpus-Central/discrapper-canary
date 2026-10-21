@@ -1681,7 +1681,12 @@ function tY(e) {
                 return (0, i.jsxs)("div", {
                     className: tX.mN,
                     children: [
-                        null != t && (0, i.jsx)(tU.A, { game: { id: t, icon: n?.icon }, iconClassName: tX.DG }),
+                        null != t &&
+                            (0, i.jsx)(tU.A, {
+                                game: { id: t, icon: n?.icon },
+                                iconClassName: tX.DG,
+                                withBackground: !0,
+                            }),
                         (0, i.jsx)(g.E, {
                             variant: "text-md/medium",
                             color: "currentColor",

@@ -1,40 +1,80 @@
-.containerCompact__6c253 {
-    align-items: center;
-    background: var(--background-gradient-lower, var(--background-base-lower));
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-low);
+.skeleton__9897f {
+    padding-inline-end: 8px
+}
+
+.skeletonItem__9897f {
+    align-items: flex-start;
+    display: flex;
+    gap: 12px;
+    padding: 4px
+}
+
+.lineContainer__9897f {
     display: flex;
     flex-direction: column;
-    gap: var(--space-16);
-    padding: var(--space-16)
+    gap: 4px;
+    width: 100%
 }
 
-.content__6c253 {
-    color: var(--text-strong)
+.avatar__9897f {
+    background-color: var(--background-mod-muted);
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px
 }
 
-.boostIcon__6c253 {
-    height: 14px;
-    width: 14px
+.wrapper__9897f {
+    position: relative;
+    z-index: 0
 }
 
-.boostButtonIcon__6c253 {
-    margin-inline-end: var(--space-6)
+.loadingAnimation__9897f {
+    background: var(--background-mod-muted);
+    -webkit-mask: linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0)
 }
 
-.exampleMessage__6c253 {
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    display: flex;
-    padding: var(--space-12)
+.loadingAnimation__9897f:before {
+    animation: shimmer__9897f 2s cubic-bezier(.4, 0, .2, 1) infinite;
+    background: linear-gradient(-65deg, transparent 45%, var(--background-mod-muted) 50%, transparent 55%) 100%/300% 100%;
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: -1
 }
 
-.textContainer__6c253 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    text-align: center
+.noAnimation__9897f .loadingAnimation__9897f:before {
+    display: none
+}
+
+.line__9897f {
+    background-color: var(--background-mod-muted);
+    border-radius: 8px;
+    height: 16px
+}
+
+.lineShort__9897f {
+    width: 35%
+}
+
+.lineMedium__9897f {
+    width: 60%
+}
+
+.lineLong__9897f {
+    width: 95%
+}
+
+@keyframes shimmer__9897f {
+    to {
+        background-position: 0
+    }
+}
+
+.timestamp_eece5a {
+    cursor: pointer;
+    margin-inline-end: var(--space-4)
 }
 
 @use postcss-pxtorem;
@@ -216,4 +256,4 @@
     transition: padding-left .2s ease
 }
 
-/*# sourceMappingURL=683426.41b4ad6bfb774876.css.map*/
+/*# sourceMappingURL=592000.e584f4e97d83d94e.css.map*/

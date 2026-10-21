@@ -1,5 +1,6 @@
 e.exports = {
     Gt: "gameIcon_b52e4f",
+    VA: "withBackground_b52e4f",
     Xc: "intersectionContainer_b52e4f",
     Pr: "intersectionRef_b52e4f",
     as: "large_b52e4f",

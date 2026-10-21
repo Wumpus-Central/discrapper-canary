@@ -16,8 +16,7 @@ function d(e) {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("267732"),
-                            n.e("649500"),
-                            n.e("683426"),
+                            n.e("592000"),
                             n.e("524434"),
                             n.e("933947"),
                             n.e("866475"),
