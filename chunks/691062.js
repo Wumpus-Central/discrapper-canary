@@ -121,7 +121,7 @@ var x = l(278416),
     z = l(832163),
     Y = l(44724),
     q = l(486020),
-    W = l(344045);
+    W = l(394107);
 let X = [
     { tab: h.G2.OFFER_ELIGIBLE, labelKey: m.t.hY8Ft1 },
     { tab: h.G2.AVATAR_DECORATIONS, labelKey: m.t.dRZYNE },

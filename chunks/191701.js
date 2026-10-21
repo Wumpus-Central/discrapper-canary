@@ -102,7 +102,7 @@ var ts = i(387755),
     tv = i(485045),
     tO = i(609145),
     tb = i(46282),
-    tL = i(431788);
+    tL = i(905322);
 function tx(t, e, i, n, l) {
     if (j.A.isNotificationDisabled(Y.KS.RequestToStream) || null != g.A.getCurrentUserActiveStream()) return null;
     let a = i.username,
@@ -240,7 +240,7 @@ function tX(t) {
     });
 }
 var tW = i(119191),
-    tq = i(25448);
+    tq = i(671210);
 function tZ(t) {
     t && (0, tU.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
@@ -248,12 +248,12 @@ var tQ = i(554146),
     t0 = i(298990),
     t1 = i(429913),
     t2 = i(263577),
-    t8 = i(826673),
-    t3 = i(360906),
+    t3 = i(826673),
+    t8 = i(360906),
     t9 = i(308726),
     t5 = i(818023),
-    t4 = i(731854),
-    t7 = i(709946),
+    t7 = i(731854),
+    t4 = i(709946),
     t6 = i(302933);
 function et(t) {
     let { game: e } = t,
@@ -643,7 +643,7 @@ let eC = new eN(s.h, {
         if (V.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (j.A.isNotificationDisabled(Y.KS.WelcomeNudge)) return null;
-            t3.Ay.supports(t4.O5.VIDEO) ||
+            t8.Ay.supports(t7.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== Y.Jr.GO_LIVE_VOICE && t.type !== Y.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, F.Y9)(Y.KS.WelcomeNudge, {
                     notif_type: Y.KS.WelcomeNudge,
@@ -700,29 +700,29 @@ let eC = new eN(s.h, {
                                     className: t6.kL,
                                 })));
                 }
-            let r = (0, t8.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
+            let r = (0, t3.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
                 s = H.intl.string(H.t.KWDIrh);
             return {
                 icon:
                     null != t
                         ? (0, $.jsx)(et, { game: t })
-                        : (0, $.jsx)("img", { src: i(513653), className: t7.Kk, alt: "" }),
+                        : (0, $.jsx)("img", { src: i(513653), className: t4.Kk, alt: "" }),
                 title: s,
                 hint: function () {
                     return (0, tW.sI)((0, F.Jn)(), H.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    (n(), r || (0, t8.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
+                    (n(), r || (0, t3.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
                     (l("unlock"),
                         o.A.setInputLocked(!1, P.A.getTargetPID()),
-                        r || (0, t8.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
+                        r || (0, t3.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
                         a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    (l("dismiss"), r || (0, t8.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
+                    (l("dismiss"), r || (0, t3.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, K.qv)(), e);

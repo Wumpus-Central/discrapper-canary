@@ -169,7 +169,7 @@ var z = n(775602),
     en = n(976860),
     el = n(746080),
     ei = n(49999),
-    es = n(344045),
+    es = n(394107),
     er = n(105292),
     ea = n(275833),
     eo = n(964306);
@@ -297,7 +297,7 @@ var e_ = n(332837),
     eb = n(313627),
     ej = n(43105),
     ev = n(93675),
-    eG = n(104129);
+    eG = n(61567);
 function eR(e) {
     let t,
         n,
@@ -433,7 +433,7 @@ var eT = n(581007),
     eY = n(828162),
     eX = n(877624),
     eq = n(549996),
-    eJ = n(356863),
+    eJ = n(25525),
     eZ = n(247806);
 function e$(e) {
     let { indicator: t } = e;
@@ -548,27 +548,27 @@ var e1 = n(941143),
     e9 = n(442433),
     e5 = n(230135),
     e6 = n(73153);
-let e4 = {};
-class e7 extends h.Ay.PersistedStore {
+let e7 = {};
+class e4 extends h.Ay.PersistedStore {
     static displayName = "GuildBoostingProgressBarPersistedStore";
     static persistKey = "PremiumGuildProgressBarPersistedStore";
     initialize(e) {
-        null != e && (e4 = e);
+        null != e && (e7 = e);
     }
     getState() {
-        return e4;
+        return e7;
     }
     getCountForGuild(e) {
-        return e4[e];
+        return e7[e];
     }
 }
-let e8 = new e7(e6.h, {
+let e8 = new e4(e6.h, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: function (e) {
         let { guildId: t, premiumCount: n } = e;
-        e4 = { ...e4, [t]: n };
+        e7 = { ...e7, [t]: n };
     },
     APPLIED_GUILD_BOOST_COUNT_RESET: function () {
-        e4 = {};
+        e7 = {};
     },
 });
 var te = n(147925),
@@ -749,13 +749,13 @@ var tp = n(787541),
     t1 = n(970853),
     t3 = n(93055),
     t2 = n(349828),
-    t9 = n(384539),
+    t9 = n(22277),
     t5 = n(551851),
     t6 = n(391507);
-function t4(e) {
+function t7(e) {
     e.stopPropagation();
 }
-function t7(e) {
+function t4(e) {
     let { label: t, onClick: n, tabIndex: l } = e;
     return (0, r.jsx)(q.m, {
         text: t,
@@ -836,7 +836,7 @@ let t8 = F(
                                 n.e("460773"),
                                 n.e("208018"),
                                 n.e("120379"),
-                                n.e("898377"),
+                                n.e("824547"),
                                 n.e("819193"),
                                 n.e("507775"),
                                 n.e("662068"),
@@ -919,11 +919,11 @@ let t8 = F(
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        onClick: t4,
+                                        onClick: t7,
                                         className: t6.Y_,
                                         children:
                                             null != S
-                                                ? (0, r.jsx)(t7, { label: S.label, onClick: S.perform, tabIndex: j })
+                                                ? (0, r.jsx)(t4, { label: S.label, onClick: S.perform, tabIndex: j })
                                                 : null,
                                     }),
                                 ],
@@ -1184,7 +1184,7 @@ function nb(e) {
         }),
     });
 }
-var nj = n(261425);
+var nj = n(248675);
 function nv(e) {
     var t;
     let n,
@@ -1523,8 +1523,8 @@ var n2 = n(371794),
     n9 = n(240248),
     n5 = n(998218),
     n6 = n(672812),
-    n4 = n(427797);
-let n7 = a.memo(function (e) {
+    n7 = n(427797);
+let n4 = a.memo(function (e) {
     let { guild: t, selected: l } = e,
         i = a.useRef(null),
         s = a.useRef(null),
@@ -1575,8 +1575,8 @@ let n7 = a.memo(function (e) {
         R = a.useCallback(
             (e) =>
                 (0, r.jsx)(et.G, {
-                    background: (0, r.jsx)("div", { className: n4.D }),
-                    innerClassName: n4.Z,
+                    background: (0, r.jsx)("div", { className: n7.D }),
+                    innerClassName: n7.Z,
                     ref: s,
                     id: `game-shop-${t.id}`,
                     renderIcon: (e) =>
@@ -2342,8 +2342,8 @@ let l3 = a.memo(function (e) {
 var l9 = n(265872),
     l5 = n(367513),
     l6 = n(296216),
-    l4 = n(657043),
-    l7 = n(963027),
+    l7 = n(657043),
+    l4 = n(963027),
     l8 = n(202384),
     ie = n(51758),
     it = n(139033),
@@ -2791,7 +2791,7 @@ class iH extends nF {
                                     connectDragPreview: o,
                                     subtitle: this.renderSubtitle(),
                                     isFavoriteSuggestion: p,
-                                    "aria-label": (0, l7.Ay)({
+                                    "aria-label": (0, l4.Ay)({
                                         channel: e,
                                         unread: g,
                                         mentionCount: f,
@@ -2870,7 +2870,7 @@ function iB(e) {
         }),
         I = e.connected && null == S,
         b = i.features.has(H.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
-        j = (0, l4.BX)("StageChannel");
+        j = (0, l7.BX)("StageChannel");
     return (0, r.jsx)(ik, {
         categoryCollapsed: A,
         connectAction: f,
@@ -2948,7 +2948,7 @@ let iz = F(
                             onMouseDown: iF,
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: s ? i : null,
-                            "aria-label": (0, l7.Ay)({ channel: e }),
+                            "aria-label": (0, l4.Ay)({ channel: e }),
                             resolvedUnreadSetting: nN.e.ONLY_MENTIONS,
                             children: [this.renderInviteButton(), this.renderEditButton()],
                         }),
@@ -2967,7 +2967,7 @@ let iz = F(
                         !0 !== l && null != e ? O.A.can(H.xBc.MANAGE_CHANNELS, e) : O.A.can(H.xBc.MANAGE_CHANNELS, n),
                 };
             }),
-            s = (0, l4.BX)("StoreChannel");
+            s = (0, l7.BX)("StoreChannel");
         return (0, r.jsx)(iz, { ...i, ...e, shouldEnlargeTargets: s });
     });
 var iW = n(811024),
@@ -2995,8 +2995,8 @@ var iQ = n(621466),
     i9 = n(11044),
     i5 = n(503275),
     i6 = n(793480),
-    i4 = n(97808),
-    i7 = n(778712),
+    i7 = n(97808),
+    i4 = n(778712),
     i8 = n(402860),
     se = n(427262),
     st = n(95264),
@@ -3034,7 +3034,7 @@ function sl(e) {
                                 }));
                         },
                         children: [
-                            (0, r.jsx)(i4.eu, { src: t.getAvatarURL(l, 32), size: i7._3.SIZE_16, "aria-hidden": !0 }),
+                            (0, r.jsx)(i7.eu, { src: t.getAvatarURL(l, 32), size: i4._3.SIZE_16, "aria-hidden": !0 }),
                             (0, r.jsx)(e2.E, {
                                 variant: "text-sm/normal",
                                 color: "none",
@@ -3402,7 +3402,7 @@ function s_(e) {
                               src: sE.Ay.getDefaultAvatarURL(void 0, void 0),
                               alt: "",
                           })
-                        : (0, r.jsx)(sp.A, { className: sx.my, user: n, size: i7._3.SIZE_16 }),
+                        : (0, r.jsx)(sp.A, { className: sx.my, user: n, size: i4._3.SIZE_16 }),
             }),
             (0, r.jsxs)("div", {
                 className: sx.Pf,
@@ -3859,7 +3859,7 @@ class sF extends nF {
             j = E && null != p && p.length > 0,
             v = i$(A),
             G = x ? { source: iA.A.CHANNEL_LIST_SUGGESTED_SECTION } : void 0,
-            R = (0, l7.Ay)({
+            R = (0, l4.Ay)({
                 channel: e,
                 unread: i,
                 mentionCount: o,
@@ -3981,7 +3981,7 @@ function sK(e) {
         }),
         S = (0, ib.Ay)(l),
         I = (0, h.bG)([sg.A, sm.Ay], () => sg.A.getChannelId() !== l.id && sm.Ay.isCurrentUserGuest(l.getGuildId())),
-        b = (0, l4.BX)("ConnectedTextChannel"),
+        b = (0, l7.BX)("ConnectedTextChannel"),
         { frameId: j, runningLabel: v } =
             ((t = (0, h.bG)(
                 [iX.A],
@@ -4129,14 +4129,14 @@ function s6(e) {
     let l = P.A.getGuild(n.guild_id);
     return null != l && !!l.features.has(H.GuildFeatures.COMMUNITY) && s9(n.guild_id);
 }
-function s4(e) {
+function s7(e) {
     let { channel: t } = e,
         n = U.A.getChannel(t.id);
     if (null == n) return !1;
     let l = P.A.getGuild(t.guild_id);
     return null != l && !!l.features.has(H.GuildFeatures.COMMUNITY) && s9(n.guild_id);
 }
-function s7(e) {
+function s4(e) {
     let { channelId: t } = e,
         n = U.A.getChannel(t);
     if (null == n) return !1;
@@ -4188,24 +4188,24 @@ let rt = new re(e6.h, {
             n
         );
     },
-    CHANNEL_ACK: s7,
-    CHANNEL_DELETE: s4,
-    CHANNEL_LOCAL_ACK: s7,
-    MESSAGE_ACK: s7,
-    MESSAGE_CREATE: s7,
-    MESSAGE_DELETE_BULK: s7,
-    MESSAGE_DELETE: s7,
+    CHANNEL_ACK: s4,
+    CHANNEL_DELETE: s7,
+    CHANNEL_LOCAL_ACK: s4,
+    MESSAGE_ACK: s4,
+    MESSAGE_CREATE: s4,
+    MESSAGE_DELETE_BULK: s4,
+    MESSAGE_DELETE: s4,
     PASSIVE_UPDATE_V2: function (e) {
         let t = P.A.getGuild(e.guildId);
         return !!(e.channels.length > 0 && null != t && t.features.has(H.GuildFeatures.COMMUNITY)) && s9(e.guildId);
     },
-    RESORT_THREADS: s7,
-    THREAD_CREATE: s4,
-    THREAD_DELETE: s4,
+    RESORT_THREADS: s4,
+    THREAD_CREATE: s7,
+    THREAD_DELETE: s7,
     THREAD_LIST_SYNC: s5,
     THREAD_MEMBER_UPDATE: s6,
     THREAD_MEMBERS_UPDATE: s6,
-    THREAD_UPDATE: s4,
+    THREAD_UPDATE: s7,
     BULK_CLEAR_RECENTS: s5,
     CATEGORY_COLLAPSE_ALL: s5,
     CATEGORY_EXPAND_ALL: s5,
@@ -4264,7 +4264,7 @@ function ri(e) {
                 users: d.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
-                size: i7._3.SIZE_16,
+                size: i4._3.SIZE_16,
             }),
         ],
     });
@@ -4440,7 +4440,7 @@ var rm = n(845056),
     rI = n(26741),
     rb = n(493819),
     rj = n(722884),
-    rv = n(433083),
+    rv = n(579129),
     rG = n(176431);
 function rR(e) {
     let { channel: t, imageUrl: l, animatedUrl: i, bannerHash: s, canModifyHangout: o } = e,
@@ -4838,7 +4838,7 @@ class rk extends nF {
                                         },
                                         connectDragPreview: u,
                                         isFavoriteSuggestion: C,
-                                        "aria-label": (0, l7.Ay)({
+                                        "aria-label": (0, l4.Ay)({
                                             channel: e,
                                             unread: l,
                                             mentionCount: s,
@@ -4960,7 +4960,7 @@ function rF(e) {
             enableActivities: !0,
         }),
         T = I && null == y,
-        M = (0, l4.BX)("VoiceChannel");
+        M = (0, l7.BX)("VoiceChannel");
     return (0, r.jsx)(rB, {
         channelName: p,
         embeddedApps: A,
@@ -5375,7 +5375,7 @@ class rK extends a.PureComponent {
                 case tz.n.GUILD_SHOP:
                     return (0, r.jsx)(lT, { guild: l, selected: s === el.VV.GUILD_SHOP }, tz.n.GUILD_SHOP);
                 case tz.n.GUILD_GAME_SHOP:
-                    return (0, r.jsx)(n7, { guild: l, selected: s === el.VV.GAME_SHOP }, tz.n.GUILD_GAME_SHOP);
+                    return (0, r.jsx)(n4, { guild: l, selected: s === el.VV.GAME_SHOP }, tz.n.GUILD_GAME_SHOP);
                 case tz.n.GUILD_CONJURE:
                     return (0, r.jsx)(nv, { guild: l, selected: s === el.VV.CONJURE }, tz.n.GUILD_CONJURE);
                 case tz.n.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:

@@ -326,10 +326,10 @@ function eF(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, l, n));
     }
-    function e4() {
+    function e3() {
         M.A.preload(es.ME, t.id);
     }
-    function e3(e) {
+    function e4(e) {
         e.stopPropagation();
     }
     function e6(e) {
@@ -354,7 +354,7 @@ function eF(e) {
                               n.e("955557"),
                               n.e("638221"),
                               n.e("482861"),
-                              n.e("400744"),
+                              n.e("368358"),
                               n.e("130674"),
                               n.e("947502"),
                               n.e("965789"),
@@ -424,7 +424,7 @@ function eF(e) {
                               n.e("482861"),
                               n.e("311802"),
                               n.e("698965"),
-                              n.e("400744"),
+                              n.e("368358"),
                               n.e("96588"),
                               n.e("454625"),
                               n.e("235313"),
@@ -585,7 +585,7 @@ function eF(e) {
                 ref: eh,
                 onMouseEnter: e2,
                 onMouseLeave: e8,
-                onMouseDown: e4,
+                onMouseDown: e3,
                 onFocus: e5,
                 onBlur: e1,
                 onContextMenu: e7,
@@ -720,7 +720,7 @@ function eF(e) {
                                                   ? ea.intl.string(ea.t["26C4oi"])
                                                   : ea.intl.string(ea.t.jsvgc3),
                                               onClick: eR ? te : e9,
-                                              onMouseDown: e3,
+                                              onMouseDown: e4,
                                               nameplate: x,
                                               visibleElementRef: eZ,
                                           }),

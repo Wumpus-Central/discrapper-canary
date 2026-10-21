@@ -20,7 +20,7 @@ var l,
     C = n(429913),
     _ = n(500049),
     I = n(735991),
-    j = n(494667),
+    j = n(717048),
     y = n(503698),
     v = n.n(y),
     P = n(320448),
@@ -669,11 +669,11 @@ function eQ(e) {
                                                         n.e("861060"),
                                                         n.e("364827"),
                                                         n.e("77333"),
-                                                        n.e("264572"),
+                                                        n.e("56366"),
                                                         n.e("217229"),
                                                         n.e("477175"),
                                                         n.e("960235"),
-                                                        n.e("716460"),
+                                                        n.e("910486"),
                                                         n.e("198329"),
                                                         n.e("678157"),
                                                         n.e("942374"),
@@ -685,7 +685,7 @@ function eQ(e) {
                                                         n.e("733115"),
                                                         n.e("190779"),
                                                         n.e("373122"),
-                                                        n.e("724285"),
+                                                        n.e("217951"),
                                                         n.e("221856"),
                                                         n.e("755936"),
                                                         n.e("147662"),
@@ -704,7 +704,7 @@ function eQ(e) {
                                                         n.e("958038"),
                                                         n.e("532039"),
                                                         n.e("719466"),
-                                                        n.e("811939"),
+                                                        n.e("178565"),
                                                         n.e("630267"),
                                                         n.e("576909"),
                                                         n.e("27355"),
@@ -968,8 +968,8 @@ var e2 = n(34188),
     e3 = n(177953),
     e7 = n(825484),
     e6 = n(683071),
-    e4 = n(900797),
-    e5 = n(847374),
+    e5 = n(900797),
+    e4 = n(847374),
     e9 = n(10716),
     te = n(702841),
     tt = n(150934),
@@ -1418,8 +1418,8 @@ function tb(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e4.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e4.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1577,8 +1577,8 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t4 = n(785728),
-    t5 = n(712440),
+var t5 = n(785728),
+    t4 = n(712440),
     t9 = n(733110),
     ne = n(73153);
 let nt = 10 * Y.A.Millis.MINUTE,
@@ -2250,12 +2250,12 @@ function n6(e, t) {
     let n = t3.A.getScoreWithoutLoadingLatest(e.id);
     return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n4(e, t) {
+function n5(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n5(e, t) {
+function n4(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2589,7 +2589,7 @@ function lm(e) {
                                 let n = z.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return z.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n5,
+                            n4,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2678,7 +2678,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n6, n4],
+                        sortComparers: [n6, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3167,7 +3167,7 @@ function lv(e) {
                         } = e,
                         s = (0, A.bG)([t9.default], () => t9.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t9.FetchState.NOT_FETCHED && t5.A.fetch();
+                        i && s === t9.FetchState.NOT_FETCHED && t4.A.fetch();
                     }, [i, s]);
                     let a = (0, A.yK)([t9.default], () =>
                             i
@@ -3186,7 +3186,7 @@ function lv(e) {
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t4.A)(e.id));
+                            return !(!1 === m && (0, t5.A)(e.id));
                         }
                         return l
                             ? u
@@ -3383,7 +3383,7 @@ function lS(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t4.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t5.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

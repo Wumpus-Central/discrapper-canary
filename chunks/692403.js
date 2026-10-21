@@ -181,7 +181,7 @@ var eh = n(232554),
     ew = n(481484),
     eE = n(545807),
     eC = n(652215),
-    eb = n(25448),
+    eb = n(671210),
     eN = n(645280);
 let eO = [],
     e_ = i.memo(function (e) {
@@ -378,8 +378,8 @@ var eq = n(793480),
     e3 = n(897720),
     e2 = n(856988),
     e5 = n(155037),
-    e4 = n(331322),
-    e8 = n(255324);
+    e8 = n(331322),
+    e4 = n(255324);
 let e7 = Array.from(new Set(Object.values(eD.A).flatMap((e) => e?.containerRenderGate?.stores ?? []))),
     e6 = [h.A, ef.A, ...e7];
 function e9(e) {
@@ -391,14 +391,14 @@ function e9(e) {
         }),
     )
         ? (0, r.jsx)(eK.A, {
-              className: e8.p$,
-              children: (0, r.jsxs)(e4.B, {
+              className: e4.p$,
+              children: (0, r.jsxs)(e8.B, {
                   align: "center",
                   gap: 12,
                   "data-testid": "overlay-widgets-empty-state",
                   children: [
                       (0, r.jsx)(I.f, { size: "lg", color: "currentColor" }),
-                      (0, r.jsxs)(e4.B, {
+                      (0, r.jsxs)(e8.B, {
                           align: "center",
                           gap: 4,
                           children: [

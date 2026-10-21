@@ -412,7 +412,7 @@ let L = {
     ICON_ARROW_DOWN: t(616327),
     ASSET_LOGO_DISCORD_SVG: t(511749),
 };
-var j = t(331531);
+var j = t(553912);
 class V extends i.PureComponent {
     state = { languages: O.A.getLanguages().filter((e) => e.enabled), current: O.A.getLocaleInfo(), isOpen: !1 };
     componentDidMount() {

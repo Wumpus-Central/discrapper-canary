@@ -4,7 +4,7 @@ n(582128);
 var r = n(189213),
     s = n(276983),
     e = n(17813),
-    l = n(261425),
+    l = n(248675),
     o = n(105292);
 function c(t) {
     let { appName: i, permissions: n, onDecide: c, ...d } = t;

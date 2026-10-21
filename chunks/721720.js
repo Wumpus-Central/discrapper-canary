@@ -700,7 +700,7 @@ var eP = l(269115),
     ew = l(758836),
     eG = l(49999),
     e$ = l(818348),
-    eK = l(344045),
+    eK = l(394107),
     eY = l(196064);
 let ez = "GAME_SERVER_HOSTING_BANNER";
 function eW(e) {
@@ -851,7 +851,7 @@ var eJ = l(946052),
     e5 = l(60140),
     e4 = l(602051),
     e3 = l(268270);
-function e6(e) {
+function e9(e) {
     let { promotion: t, heroBlockRecord: l, heroLogo: n, logoDisplayConfig: s, collectionId: r, isLoading: a } = e;
     return a
         ? (0, i.jsx)("div", { className: e3.Hw })
@@ -882,7 +882,7 @@ function e6(e) {
               ],
           });
 }
-let e9 = function (e) {
+let e6 = function (e) {
     let { promotion: t, heroBlock: l, isLoading: n, handleTransition: s, tab: a } = e,
         u = (0, Z.bG)([et.default], () => et.default.getCurrentUser()),
         c = (0, Z.bG)([eX.default], () => eX.default.locale),
@@ -944,7 +944,7 @@ let e9 = function (e) {
                                                   children: [
                                                       (0, i.jsx)("div", {
                                                           className: e3.bC,
-                                                          children: (0, i.jsx)(e6, {
+                                                          children: (0, i.jsx)(e9, {
                                                               promotion: t,
                                                               heroBlockRecord: h,
                                                               heroLogo: _,
@@ -971,12 +971,12 @@ let e9 = function (e) {
               }),
           });
 };
-var e8 = l(172218),
-    e7 = l(28863),
+var e7 = l(172218),
+    e8 = l(28863),
     te = l(9530);
 let tt = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: l } = e,
-        n = (0, e8.K)(
+        n = (0, e7.K)(
             (e) => {
                 l?.(e);
             },
@@ -1016,7 +1016,7 @@ let tt = function (e) {
                                       o && t.body,
                                       o && u && " ",
                                       u &&
-                                          (0, i.jsx)(e7.Anchor, {
+                                          (0, i.jsx)(e8.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: te.CU,
                                               style: { ...a },
@@ -1575,7 +1575,7 @@ let tH = function (e) {
                                         (null == A.endsAt || null != (0, y.X)(A.endsAt))
                                     ) {
                                         d = (0, i.jsx)(
-                                            e9,
+                                            e6,
                                             { promotion: A, isLoading: R, handleTransition: t, heroBlock: e, tab: s },
                                             a,
                                         );

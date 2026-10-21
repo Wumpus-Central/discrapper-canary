@@ -38,7 +38,7 @@ var i = n(477900),
     k = n(195007),
     G = n(806931),
     B = n(105292),
-    F = n(977241),
+    F = n(270103),
     z = n(547368);
 function H(e) {
     let { channelId: t, guildId: n } = e,
