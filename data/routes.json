@@ -594,7 +594,6 @@
   "ACTIVITY_JOIN_INSTANCE": "/activities/applications/:param/activity-instances/:param/join",
   "ACTIVITY_TEST_MODE": "/activities/:param/test-mode",
   "ACTIVITY_LEAVE": "/applications/:param/activities/:param/instances/:param/leave",
-  "ACTIVITIES_DISCORD_CONFIG": "/activities/discord-config/:param",
   "ACTIVITIES_TRUSTED_LINKS": "/applications/:param/trusted-links/check",
   "APPLICATION_UPLOAD_ATTACHMENT": "/applications/:param/attachment",
   "APPLICATION_PROXY_TICKET": "/applications/:param/proxy-tickets",
