@@ -15037,6 +15037,7 @@ let uW = [
         uV.gr.VOICE_INTRO,
         uV.gr.VOICE_STATS,
         uV.gr.VOICE_FACE,
+        uV.gr.MESSAGES_INTRO,
         uV.gr.MESSAGES_STATS,
         uV.gr.MESSAGES_OUTFIT,
         uV.gr.SERVERS_INTRO,
@@ -15059,6 +15060,7 @@ let uW = [
     ],
     uz = {
         [uV.gr.VOICE_INTRO]: (e) => !(Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0),
+        [uV.gr.MESSAGES_INTRO]: (e) => !(Math.round(e?.messages?.numMessagesSent ?? 0) > 0),
         [uV.gr.SERVERS_INTRO]: (e) => !((e?.guilds?.guilds.length ?? 0) > 0),
     };
 var uK = a(920495);
