@@ -334,17 +334,20 @@
     text-transform: uppercase
 }
 
-.emphasis__31e81 {
+.tag__0ba61 {
     background-color: var(--custom-checkpoint-primary);
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 7px, 100% 100%, 0 100%);
     color: var(--black);
     display: inline-block;
+    text-transform: uppercase
+}
+
+.emphasis__31e81 {
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 7px, 100% 100%, 0 100%);
     font-size: 20px;
     line-height: 20px;
     margin-inline: var(--space-6);
     padding-block: var(--space-4);
     padding-inline: var(--space-8);
-    text-transform: uppercase;
     vertical-align: var(--space-4)
 }
 
@@ -604,9 +607,7 @@
 }
 
 .rank__336fc {
-    background-color: var(--custom-checkpoint-primary);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--space-12)), calc(100% - var(--space-12)) 100%, 0 100%);
-    color: var(--black);
     font-size: 20px;
     line-height: 24px;
     padding-block: var(--space-4);
@@ -1302,4 +1303,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=311765.1caa018bee28ca50.css.map*/
+/*# sourceMappingURL=116093.8a9d9a30e1d5ca33.css.map*/
