@@ -83,8 +83,8 @@ function A(e) {
             onDescriptionChange: A,
             disabled: j = !1,
         } = e,
-        [w, S] = i.useState(null),
-        { rowRef: C, fieldRef: k } =
+        [w, k] = i.useState(null),
+        { rowRef: S, fieldRef: C } =
             ((t = i.useRef(null)),
             (n = i.useRef(null)),
             i.useLayoutEffect(() => {
@@ -103,12 +103,12 @@ function A(e) {
                 gap: 8,
                 children: [
                     (0, l.jsxs)("div", {
-                        ref: C,
+                        ref: S,
                         className: x.S7,
                         children: [
-                            (0, l.jsx)(v, { iconURL: r, disabled: j, onChange: a, onError: S }),
+                            (0, l.jsx)(v, { iconURL: r, disabled: j, onChange: a, onError: k }),
                             (0, l.jsx)("div", {
-                                ref: k,
+                                ref: C,
                                 className: x.yD,
                                 children: (0, l.jsx)(d.k, {
                                     label: b.intl.string(m.default.GWBCF9),

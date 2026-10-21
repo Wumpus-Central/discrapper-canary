@@ -17,11 +17,11 @@ let o = function (e) {
             error: p,
             titleId: x,
             ref: g,
-            ...C
+            ...f
         } = e,
-        f = r.useId(),
+        C = r.useId(),
         j = r.useId(),
-        v = x ?? f,
+        v = x ?? C,
         A = null != p ? j : void 0,
         [N, I] = r.useState(void 0),
         [E, y] = r.useState(void 0),
@@ -52,7 +52,7 @@ let o = function (e) {
                               className: c,
                               id: v,
                               errorId: A,
-                              ...C,
+                              ...f,
                               children: h,
                           })
                         : null,

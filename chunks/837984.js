@@ -51,7 +51,7 @@ function p() {
                 let t = e > 0 ? Math.max(4, (g * g) / e) : g;
                 l.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
-            function S() {
+            function k() {
                 if (null == n || null == l) return;
                 let e = n.clientWidth,
                     t = n.clientHeight;
@@ -65,20 +65,20 @@ function p() {
                     d = Number.isFinite(o) && o > 0 ? o : 1;
                 ((n.width = Math.round(p * d)), (n.height = Math.round(h * d)), l.setTransform(d, 0, 0, d, 0, 0), w());
             }
-            (S(),
+            (k(),
                 (b = requestAnimationFrame(function e(t) {
                     if (((b = requestAnimationFrame(e)), t - x < o)) return;
                     let r = t - x;
                     if (((x = t), null == n || null == l || 0 === p || null == a)) return;
                     let w = Number(a.dataset.effortCentre),
-                        S = a.hasAttribute("data-effort-live"),
-                        C = Number.isFinite(w) && Math.abs(w - u) > 16;
-                    if (!v && (!S || C)) return;
-                    y = Math.min(1, Math.max(0, y + ((S ? 1 : -1) * r) / 260));
-                    let k = n.getBoundingClientRect(),
-                        P = k.width > 0 ? k.width / p : 1,
+                        k = a.hasAttribute("data-effort-live"),
+                        S = Number.isFinite(w) && Math.abs(w - u) > 16;
+                    if (!v && (!k || S)) return;
+                    y = Math.min(1, Math.max(0, y + ((k ? 1 : -1) * r) / 260));
+                    let C = n.getBoundingClientRect(),
+                        P = C.width > 0 ? C.width / p : 1,
                         M = a.getBoundingClientRect(),
-                        E = (M.left - k.left) / P,
+                        E = (M.left - C.left) / P,
                         N = (1 - Math.min(1, Math.abs(E + M.width / P / 2 - u) / 16)) * y;
                     if (N < 0.01) {
                         (v && l.clearRect(0, 0, p, h), (v = !1));
@@ -87,12 +87,12 @@ function p() {
                     (v || (A = t), (v = !0), l.clearRect(0, 0, p, h));
                     let _ = E - 1 - (1 - N) * 16,
                         I = (t - j) / 1e3,
-                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
+                        T = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
                         L = Math.ceil(_ / m);
                     l.fillStyle = i;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * f(e, 11)),
-                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(I * c * 0.13 + f(e, 29) * c))) * R,
+                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(I * c * 0.13 + f(e, 29) * c))) * T,
                             i = 0;
                         for (let t of d) {
                             let n = (e * t.stagger + 0.07 * f(e, t.salt)) * c;
@@ -129,13 +129,13 @@ function p() {
                     }
                     l.globalAlpha = 1;
                 })));
-            let C = document.fonts;
-            null != C && C.load(`${g}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(w, () => void 0);
-            let k = "u" < typeof ResizeObserver ? null : new ResizeObserver(S);
+            let S = document.fonts;
+            null != S && S.load(`${g}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(w, () => void 0);
+            let C = "u" < typeof ResizeObserver ? null : new ResizeObserver(k);
             return (
-                k?.observe(n),
+                C?.observe(n),
                 () => {
-                    (cancelAnimationFrame(b), k?.disconnect());
+                    (cancelAnimationFrame(b), C?.disconnect());
                 }
             );
         }, [t]),
@@ -173,7 +173,7 @@ function g(e) {
                 ("arrive" === l || "snap" === l) &&
                     (i.getBoundingClientRect(), (i.style.transitionProperty = ""), (r.style.transitionProperty = "")));
         }, []),
-        S = i.useCallback(
+        k = i.useCallback(
             (e, t) => {
                 let n = d.current,
                     l = e >= 0 ? n?.querySelector(`[data-stop='${e}']`) : null;
@@ -181,7 +181,7 @@ function g(e) {
             },
             [w],
         );
-    function C(e) {
+    function S(e) {
         if (u) return;
         let l = "ArrowRight" === e.key ? 1 : "ArrowLeft" === e.key ? -1 : 0;
         if (0 === l) return;
@@ -197,14 +197,14 @@ function g(e) {
             ((b.current = e),
                 (x.current = A),
                 (v.current = { activeIndex: t, disabled: u, onSelect: s, stopCount: n.length }),
-                y.current || S(A, l ? "animate" : "arrive"));
-        }, [A, t, u, s, n.length, v, S]),
+                y.current || k(A, l ? "animate" : "arrive"));
+        }, [A, t, u, s, n.length, v, k]),
         i.useEffect(() => {
             let e = d.current;
             if (null == e || "u" < typeof ResizeObserver) return;
-            let t = new ResizeObserver(() => S(x.current, "snap"));
+            let t = new ResizeObserver(() => k(x.current, "snap"));
             return (t.observe(e), () => t.disconnect());
-        }, [S]),
+        }, [k]),
         i.useEffect(() => {
             let e = d.current,
                 t = c.current;
@@ -348,7 +348,7 @@ function g(e) {
                                 "aria-label": e,
                                 disabled: u,
                                 className: h.ds,
-                                onKeyDown: C,
+                                onKeyDown: S,
                                 onPointerEnter: () => m(n),
                                 onPointerLeave: () => m((e) => (e === n ? -1 : e)),
                                 onFocus: () => m(n),

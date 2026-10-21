@@ -12,10 +12,10 @@ var i = n(477900),
 function f(e) {
     let { user: t, guildId: n, channelId: f, displayProfile: m, onClose: p } = e,
         { analyticsLocations: h, sourceAnalyticsLocations: x } = (0, r.Ay)(),
-        { context: A, trackUserProfileAction: v } = (0, a.NJ)(),
-        I = (0, d.Ay)(t.id, n),
+        { context: A, trackUserProfileAction: I } = (0, a.NJ)(),
+        v = (0, d.Ay)(t.id, n),
         j = (0, o.X)("useViewUserProfileModalItem");
-    return ((0, c.A)(t.id) && j) || I?.guildId == null
+    return ((0, c.A)(t.id) && j) || v?.guildId == null
         ? null
         : m?.guildId != null
           ? (0, i.jsx)(l.Dr, {
@@ -31,7 +31,7 @@ function f(e) {
                             originGuildId: n,
                             sourceAnalyticsLocations: x,
                         }),
-                        v({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: h, ...A }));
+                        I({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: h, ...A }));
                 },
             })
           : m?.guildId != null
@@ -43,7 +43,7 @@ function f(e) {
                   action: () => {
                       (p?.(),
                           (0, u.openUserProfileModal)({ userId: t.id, ...A, guildId: n, sourceAnalyticsLocations: x }),
-                          v({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: h, ...A }));
+                          I({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: h, ...A }));
                   },
               });
 }

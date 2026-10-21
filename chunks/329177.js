@@ -1,26 +1,26 @@
-n.d(t, { CrownIcon: () => s });
-var l = n(477900);
-n(582128);
-var a = n(661531),
-    r = n(996682),
-    i = n(27989);
+t.d(n, { CrownIcon: () => s });
+var l = t(477900);
+t(582128);
+var a = t(661531),
+    r = t(996682),
+    i = t(27989);
 function s(e) {
     let {
-            size: t = "md",
-            width: n,
+            size: n = "md",
+            width: t,
             height: s,
             color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: u = "",
             ...d
         } = e,
-        c = (0, i.J)(t),
-        f = c?.width ?? n,
-        g = c?.height ?? s;
+        c = (0, i.J)(n),
+        f = c?.width ?? t,
+        m = c?.height ?? s;
     return (0, l.jsx)("svg", {
         ...(0, r.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
         width: f,
-        height: g,
+        height: m,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, l.jsx)("path", {

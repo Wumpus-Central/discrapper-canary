@@ -1,40 +1,40 @@
-n.d(t, { A: () => m });
-var l = n(477900);
-n(582128);
-var a = n(503698),
-    r = n.n(a),
-    i = n(323384),
-    s = n(661531),
-    u = n(627363),
-    o = n(486020),
-    d = n(470613);
-let c = {
+a.d(e, { A: () => h });
+var l = a(477900);
+a(582128);
+var t = a(503698),
+    s = a.n(t),
+    n = a(323384),
+    c = a(661531),
+    r = a(627363),
+    u = a(486020),
+    d = a(470613);
+let o = {
     header: { pixels: 20, className: d.wx },
     card: { pixels: 40, className: d.Nr },
     list: { pixels: 44, className: d.p_ },
 };
-function m(e) {
-    let { project: t, size: n, className: a } = e,
-        { pixels: m, className: f } = c[n],
-        { url: h, glyphSize: g } = (function (e, t) {
-            let n = e.preview_application_id ?? e.application_id,
-                { data: l } = (0, u.YY)(n);
+function h(i) {
+    let { project: e, size: a, className: t } = i,
+        { pixels: h, className: p } = o[a],
+        { url: m, glyphSize: x } = (function (i, e) {
+            let a = i.preview_application_id ?? i.application_id,
+                { data: l } = (0, r.YY)(a);
             return {
-                url: l?.icon != null ? o.Ay.getApplicationIconURL({ id: n, icon: l.icon, size: t }) : void 0,
-                glyphSize: Math.round(0.6 * t),
-                radius: t / 4,
+                url: l?.icon != null ? u.Ay.getApplicationIconURL({ id: a, icon: l.icon, size: e }) : void 0,
+                glyphSize: Math.round(0.6 * e),
+                radius: e / 4,
             };
-        })(t, m);
-    return null == h
+        })(e, h);
+    return null == m
         ? (0, l.jsx)("div", {
-              className: r()(d.Gt, d.qf, f, a),
+              className: s()(d.Gt, d.qf, p, t),
               "aria-hidden": !0,
-              children: (0, l.jsx)(i.k, {
+              children: (0, l.jsx)(n.k, {
                   size: "custom",
-                  width: g,
-                  height: g,
-                  color: s.A.colors.INTERACTIVE_ICON_DEFAULT,
+                  width: x,
+                  height: x,
+                  color: c.A.colors.INTERACTIVE_ICON_DEFAULT,
               }),
           })
-        : (0, l.jsx)("img", { alt: "", src: h, className: r()(d.Gt, d.Sl, f, a) });
+        : (0, l.jsx)("img", { alt: "", src: m, className: s()(d.Gt, d.Sl, p, t) });
 }

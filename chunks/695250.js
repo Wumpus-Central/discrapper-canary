@@ -13,8 +13,8 @@ function n(t) {
             colorClass: r = "",
             secondaryColor: o = "#000",
             secondaryColorClass: v = "",
-            tertiaryColor: d = "#fff",
-            tertiaryColorClass: A = "",
+            tertiaryColor: A = "#fff",
+            tertiaryColorClass: d = "",
             ...g
         } = t,
         E = (0, h.J)(l),
@@ -44,9 +44,9 @@ function n(t) {
                 className: v,
             }),
             (0, s.jsx)("path", {
-                fill: "string" == typeof d ? d : d.css,
+                fill: "string" == typeof A ? A : A.css,
                 d: "M18 10h-4v.33h4V10ZM14 16h-4v.33h4V16ZM16 18h-2v.33h2V18ZM10 18H8v.33h2V18ZM10 10H6v.33h4V10Z",
-                className: A,
+                className: d,
             }),
         ],
     });

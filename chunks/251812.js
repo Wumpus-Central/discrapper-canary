@@ -1,7 +1,7 @@
-n.d(t, { K: () => i });
-var l = n(518782),
-    a = n(61567),
-    r = n(105292);
+t.d(n, { K: () => i });
+var l = t(518782),
+    a = t(61567),
+    r = t(105292);
 function i(e) {
     switch (e) {
         case l.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED:

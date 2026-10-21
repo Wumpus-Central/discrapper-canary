@@ -29,8 +29,8 @@ function g(e) {
         r && A.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [r]);
     let _ = a.useId(),
-        N = a.useCallback(() => y((e) => !e), []),
-        { text: S, phase: w } = (0, c.Q)(n),
+        S = a.useCallback(() => y((e) => !e), []),
+        { text: w, phase: N } = (0, c.Q)(n),
         E = b ? s.a : u._,
         C = null != p,
         I = (0, l.jsxs)(l.Fragment, {
@@ -40,13 +40,13 @@ function g(e) {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
-                    className: i()(h.qo, { [h._q]: "exit" === w, [h.GD]: "enter" === w }),
-                    children: S,
+                    className: i()(h.qo, { [h._q]: "exit" === N, [h.GD]: "enter" === N }),
+                    children: w,
                 }),
                 C ? (0, l.jsx)(E, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
         }),
-        T = (0, l.jsxs)(l.Fragment, {
+        P = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: h.$m, children: I }),
                 r
@@ -74,11 +74,11 @@ function g(e) {
                       className: i()(h.ep, h.EK),
                       "aria-expanded": b,
                       "aria-controls": _,
-                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: S }),
-                      onClick: N,
-                      children: T,
+                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: w }),
+                      onClick: S,
+                      children: P,
                   })
-                : (0, l.jsx)("div", { className: h.ep, children: T }),
+                : (0, l.jsx)("div", { className: h.ep, children: P }),
             (0, l.jsx)("div", { id: _, hidden: !b, "data-conjure-entrance": !0, className: h.BA, children: p }),
         ],
     });

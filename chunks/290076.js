@@ -21,9 +21,9 @@ var l = n(477900),
     y = n(104317),
     A = n(245179),
     _ = n(886540),
-    N = n(248675),
-    S = n(105292),
-    w = n(162052),
+    S = n(248675),
+    w = n(105292),
+    N = n(162052),
     E = n(790624);
 function C() {
     return (0, l.jsx)("span", { className: E.me, "aria-hidden": !0 });
@@ -48,11 +48,11 @@ function I(e) {
     return (0, l.jsx)(i.E, {
         variant: "text-sm/normal",
         color: "none",
-        className: f()(E.pG, w.Hz),
-        children: n ?? S.intl.string(N.default["Y8pS+n"]),
+        className: f()(E.pG, N.Hz),
+        children: n ?? w.intl.string(S.default["Y8pS+n"]),
     });
 }
-let T = a.memo(function (e) {
+let P = a.memo(function (e) {
     let { project: t, onSelect: n, renderActions: a, onContextMenu: s } = e,
         d = (0, v.ZA)(t.id),
         c = "deleting" === d,
@@ -95,7 +95,7 @@ let T = a.memo(function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: E.pG,
-                                      children: S.intl.string(N.default.Yh5pAc),
+                                      children: w.intl.string(S.default.Yh5pAc),
                                   })
                                 : "in_progress" === d
                                   ? (0, l.jsx)(I, { projectId: t.id })
@@ -117,7 +117,7 @@ let T = a.memo(function (e) {
                                                           (0, l.jsx)(i.E, {
                                                               variant: "text-sm/medium",
                                                               color: "text-brand",
-                                                              children: S.intl.string(N.default.CSAaT0),
+                                                              children: w.intl.string(S.default.CSAaT0),
                                                           }),
                                                       ],
                                                   })
@@ -130,7 +130,7 @@ let T = a.memo(function (e) {
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)("span", { className: E.Zm, "aria-hidden": !0 }),
-                                  (0, l.jsx)(g.A, { children: S.intl.string(N.default["N+3Pzk"]) }),
+                                  (0, l.jsx)(g.A, { children: w.intl.string(S.default["N+3Pzk"]) }),
                               ],
                           })
                         : null,
@@ -145,7 +145,7 @@ let T = a.memo(function (e) {
         ],
     });
 });
-var P = n(655074);
+var T = n(655074);
 function M(e) {
     let { onSelect: t, query: n = "", guildId: m, renderProjectActions: f, onProjectContextMenu: h } = e,
         g = (0, c.A)(m),
@@ -158,41 +158,41 @@ function M(e) {
         j = a.useMemo(() => ("" === p ? g : g.filter((e) => e.name.toLocaleLowerCase().includes(p))), [g, p]);
     return j.length > 0
         ? (0, l.jsx)("ul", {
-              className: P.p_,
+              className: T.p_,
               children: j.map((e) =>
-                  (0, l.jsx)(T, { project: e, onSelect: t, renderActions: f, onContextMenu: h }, e.id),
+                  (0, l.jsx)(P, { project: e, onSelect: t, renderActions: f, onContextMenu: h }, e.id),
               ),
           })
         : g.length > 0
           ? (0, l.jsx)(i.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                className: P.Ie,
-                children: S.intl.string(N.default.X37fkR),
+                className: T.Ie,
+                children: w.intl.string(S.default.X37fkR),
             })
           : "error" === x
             ? (0, l.jsxs)("div", {
-                  className: P.E8,
+                  className: T.E8,
                   children: [
                       (0, l.jsx)(i.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: S.intl.string(N.default.DJAPMO),
+                          children: w.intl.string(S.default.DJAPMO),
                       }),
                       (0, l.jsx)(s.$, {
                           variant: "secondary",
                           size: "sm",
-                          text: S.intl.string(N.default["WFJ/vb"]),
+                          text: w.intl.string(S.default["WFJ/vb"]),
                           onClick: () => (0, o.hF)(m),
                       }),
                   ],
               })
             : "success" !== x
-              ? (0, l.jsx)("div", { className: P.E8, children: (0, l.jsx)(u.y, {}) })
+              ? (0, l.jsx)("div", { className: T.E8, children: (0, l.jsx)(u.y, {}) })
               : (0, l.jsx)(i.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    className: P.Ie,
-                    children: S.intl.string(N.default["9/5sLV"]),
+                    className: T.Ie,
+                    children: w.intl.string(S.default["9/5sLV"]),
                 });
 }
