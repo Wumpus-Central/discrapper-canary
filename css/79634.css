@@ -867,6 +867,33 @@
     color: var(--custom-checkpoint-white)
 }
 
+.summary_a29799 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--space-128) + var(--space-8));
+    justify-content: center
+}
+
+.details_a29799 {
+    gap: var(--space-32);
+    text-align: start
+}
+
+.details_a29799,
+.heading_a29799 {
+    display: flex;
+    flex-direction: column
+}
+
+.heading_a29799 {
+    gap: var(--space-4)
+}
+
+.display_a29799 {
+    text-transform: uppercase
+}
+
 .container_a91285 {
     align-items: center;
     display: flex;
@@ -1303,4 +1330,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=116093.8a9d9a30e1d5ca33.css.map*/
+/*# sourceMappingURL=79634.fa65af07b4b903fb.css.map*/

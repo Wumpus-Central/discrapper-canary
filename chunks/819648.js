@@ -1,4 +1,4 @@
-(n.d(t, { R8: () => T, _S: () => m, b5: () => g, q6: () => h, vF: () => I }), n(321073));
+(n.d(t, { Le: () => p, R8: () => g, _S: () => S, b5: () => N, q6: () => h, sX: () => T, vF: () => I }), n(321073));
 var i = n(127639),
     r = n(377529),
     a = n(155718),
@@ -92,22 +92,25 @@ function I(e, t) {
     );
 }
 function p(e) {
-    return { text: e, accessibilityLabel: e };
+    return new Intl.NumberFormat(A.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
 }
 function T(e) {
-    var t;
-    let n;
+    return Math.min(Math.max(Math.round((e / 100) * u.w0), u.Qq), u.sh);
+}
+function m(e) {
+    return { text: e, accessibilityLabel: e };
+}
+function g(e) {
+    let t;
     return {
-        powerLevel:
-            ((t = e.powerLevel),
-            new Intl.NumberFormat(A.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(t)),
-        powerLevelUnits: Math.min(Math.max(Math.round((e.powerLevelPercentile / 100) * u.w0), u.Qq), u.sh),
+        powerLevel: p(e.powerLevel),
+        powerLevelUnits: T(e.powerLevelPercentile),
         voice: {
             text:
-                (n = Math.round(e.totalVoiceMinutes)) > 0
-                    ? (0, o.oO)(n)
-                    : A.intl.formatToPlainString(A.t.iXLF9W, { minutes: n }),
-            accessibilityLabel: A.intl.formatToPlainString(E.default.lw35aH, { duration: (0, o.GM)(n) }),
+                (t = Math.round(e.totalVoiceMinutes)) > 0
+                    ? (0, o.oO)(t)
+                    : A.intl.formatToPlainString(A.t.iXLF9W, { minutes: t }),
+            accessibilityLabel: A.intl.formatToPlainString(E.default.lw35aH, { duration: (0, o.GM)(t) }),
         },
         messages: {
             text:
@@ -118,7 +121,7 @@ function T(e) {
         },
         topGuildDaysInteracted:
             null == e.topGuild
-                ? p(A.intl.string(E.default.GultYJ))
+                ? m(A.intl.string(E.default.GultYJ))
                 : {
                       text: A.intl.formatToPlainString(A.t.GBLpQ8, { days: e.topGuildNumDaysInteracted }),
                       accessibilityLabel: A.intl.formatToPlainString(E.default.MpSH8v, {
@@ -127,7 +130,7 @@ function T(e) {
                   },
         topGuildName:
             null == e.topGuild
-                ? p(A.intl.string(A.t["52UOf9"]))
+                ? m(A.intl.string(A.t["52UOf9"]))
                 : {
                       text: e.topGuild.guildName,
                       accessibilityLabel: A.intl.formatToPlainString(E.default["9UTJ+t"], {
@@ -143,7 +146,7 @@ function T(e) {
         },
         topEmojiName:
             null == e.topEmoji
-                ? p(A.intl.string(A.t.lxsmBd))
+                ? m(A.intl.string(A.t.lxsmBd))
                 : {
                       text:
                           null == e.topEmoji.emojiId
@@ -162,7 +165,7 @@ function T(e) {
         },
         topGameName:
             null == e.topGame
-                ? p(A.intl.string(A.t["5eYZiW"]))
+                ? m(A.intl.string(A.t["5eYZiW"]))
                 : {
                       text: e.topGame.applicationName,
                       accessibilityLabel: A.intl.formatToPlainString(E.default.kLqpNC, {
@@ -174,11 +177,11 @@ function T(e) {
         topGame: e.topGame,
     };
 }
-function m(e) {
+function S(e) {
     let t = e.components[0];
     return null == t || t.type !== a.I5.CHECKPOINT_CARD ? null : t.checkpointData;
 }
-function g(e) {
+function N(e) {
     switch (e.version) {
         case u.wk.V2025:
             return A.intl.string(_.default.goiR2u);
