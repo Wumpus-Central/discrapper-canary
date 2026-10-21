@@ -1,4 +1,4 @@
-n.d(t, { Np: () => l, UG: () => _, gr: () => o, oI: () => c, s9: () => d });
+n.d(t, { Np: () => l, Rq: () => c, UG: () => A, gr: () => o, oI: () => _, s9: () => u });
 var i,
     r,
     a,
@@ -20,6 +20,7 @@ var i,
         (r.SERVERS_GENERAL = "servers_general"),
         (r.TOP_SERVER_STATS = "top_server_stats"),
         (r.SERVERS_HEADWEAR = "servers_headwear"),
+        (r.EMOJI_INTRO = "emoji_intro"),
         (r.EMOJI_STATS = "emoji_stats"),
         (r.EMOJI_GENERAL = "emoji_general"),
         (r.EMOJI_SHOES = "emoji_shoes"),
@@ -36,8 +37,20 @@ var i,
         (r.FINALIZE_CHARACTER = "finalize_character"),
         (r.SUMMARY = "summary"),
         (r.PROFILE_WIDGET = "profile_widget"),
-        r),
-    d =
+        r);
+let d = new Set([
+    "voice_face",
+    "messages_outfit",
+    "servers_headwear",
+    "emoji_shoes",
+    "games_wearable",
+    "game_time_aura",
+    "finalize_character",
+]);
+function c(e) {
+    return d.has(e);
+}
+var u =
         (((a = {}).IDLE = "idle"),
         (a.INTRODUCTION = "introduction"),
         (a.FACE = "face"),
@@ -51,7 +64,7 @@ var i,
         (a.SUMMARY = "summary"),
         (a.PROFILE_WIDGET = "profile_widget"),
         a),
-    c =
+    _ =
         (((s = {}).VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
@@ -59,6 +72,7 @@ var i,
         (s.SERVERS_INTRO = "servers_intro"),
         (s.SERVERS = "servers"),
         (s.TOP_SERVER = "top_server"),
+        (s.EMOJI_INTRO = "emoji_intro"),
         (s.EMOJI = "emoji"),
         (s.GAMES = "games"),
         (s.GAME_TIME = "game_time"),
@@ -66,7 +80,7 @@ var i,
         (s.SIDEKICK = "sidekick"),
         (s.SUMMARY = "summary"),
         s);
-let u = {
+let E = {
     home: { characterStage: "idle" },
     introduction: { characterStage: "introduction" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
@@ -82,6 +96,7 @@ let u = {
     servers_general: { characterStage: "headwear", statsScreen: "servers" },
     top_server_stats: { characterStage: "headwear", statsScreen: "top_server" },
     servers_headwear: { characterStage: "headwear" },
+    emoji_intro: { characterStage: "shoes", statsScreen: "emoji_intro" },
     emoji_stats: { characterStage: "shoes", statsScreen: "emoji" },
     emoji_general: { characterStage: "shoes", statsScreen: "emoji" },
     emoji_shoes: { characterStage: "shoes" },
@@ -99,6 +114,6 @@ let u = {
     summary: { characterStage: "summary", statsScreen: "summary" },
     profile_widget: { characterStage: "profile_widget" },
 };
-function _(e) {
-    return u[e];
+function A(e) {
+    return E[e];
 }
