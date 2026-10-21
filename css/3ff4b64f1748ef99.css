@@ -40,13 +40,14 @@
 }
 
 .toggleButton_a1e8da {
-    pointer-events: none;
-    visibility: hidden
+    opacity: 0;
+    pointer-events: none
 }
 
+.perkCard_a1e8da:focus-within .toggleButton_a1e8da,
 .perkCard_a1e8da:hover .toggleButton_a1e8da {
-    pointer-events: auto;
-    visibility: visible
+    opacity: 1;
+    pointer-events: auto
 }
 
 .perkCard_a1e8da:hover:not(.disabled_a1e8da) .perkCardImage_a1e8da:not(.active_a1e8da) {
@@ -107,4 +108,4 @@
     max-width: 220px
 }
 
-/*# sourceMappingURL=3c6231c70ea02d0c.css.map*/
+/*# sourceMappingURL=3ff4b64f1748ef99.css.map*/
