@@ -3,6 +3,7 @@ e.exports = {
     JS: "reactionTooltipEmoji_bbcccb",
     Of: "reactionTooltipText_bbcccb",
     xR: "reactionTooltipInner_bbcccb",
+    Fs: "reactionTooltipInnerReadOnly_bbcccb",
     fu: "burstReactionTooltipInner_bbcccb",
     Ok: "burstReactionTooltipMessage_bbcccb",
     j9: "burstReactionTooltipSpacer_bbcccb",

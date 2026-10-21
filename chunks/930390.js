@@ -119,14 +119,15 @@ class T extends l.PureComponent {
                 remainingReactions: I,
                 combinedReactions: E,
                 visibleReactionsCount: _,
+                showTooltipWhenReadOnly: y,
             } = this.props,
-            { disableTransitionAppear: y } = this.state,
-            T = x ? C : v;
+            { disableTransitionAppear: T } = this.state,
+            S = x ? C : v;
         return _ > 0
             ? (0, i.jsxs)(a.F, {
                   component: "div",
-                  className: r()(T.reactions, p),
-                  transitionAppear: !y,
+                  className: r()(S.reactions, p),
+                  transitionAppear: !T,
                   role: "group",
                   transitionLeave: !1,
                   id: (0, h.JH)(e),
@@ -140,23 +141,24 @@ class T extends l.PureComponent {
                           isForumToolbar: u,
                           useChatFontScaling: x,
                           className: A,
+                          showTooltipWhenReadOnly: y,
                       }),
                       I > 0 &&
                           (0, i.jsx)(o.D, {
                               onClick: (t) => {
                                   (t.stopPropagation(), (0, c.$)(e));
                               },
-                              className: r()(T.reaction, A, T.remainingReactions),
+                              className: r()(S.reaction, A, S.remainingReactions),
                               "aria-label": N.intl.string(N.t.lfIHs4),
                               children: (0, i.jsxs)(d.E, {
-                                  className: T.reactionInner,
+                                  className: S.reactionInner,
                                   variant: "text-sm/normal",
                                   children: ["+", I],
                               }),
                           }),
                       !t &&
                           !f &&
-                          (0, i.jsx)(m.t, { message: e, channel: g, useChatFontScaling: x, className: T.forceShow }),
+                          (0, i.jsx)(m.t, { message: e, channel: g, useChatFontScaling: x, className: S.forceShow }),
                   ],
               })
             : null;

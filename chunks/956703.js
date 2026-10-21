@@ -53,4 +53,8 @@ let A = new E(r.h, {
             a = u.ensure(t, i, r);
         n.forEach((e) => a.users.set(e.id, new l.A(e)));
     },
+    MESSAGE_REACTION_SET_FETCHED: function (e) {
+        let { messageId: t, emoji: n, reactionType: i } = e;
+        u.ensure(t, n, i).fetched = !0;
+    },
 });

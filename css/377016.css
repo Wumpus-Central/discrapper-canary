@@ -138,6 +138,10 @@
     text-decoration: underline
 }
 
+.reactionTooltipInnerReadOnly_bbcccb:hover {
+    cursor: default
+}
+
 .burstReactionTooltipInner_bbcccb {
     pointer-events: all
 }
@@ -262,4 +266,4 @@
     margin-bottom: var(--space-4)
 }
 
-/*# sourceMappingURL=377016.ee694f35e21f879f.css.map*/
+/*# sourceMappingURL=377016.699b492cd6af8c8a.css.map*/
