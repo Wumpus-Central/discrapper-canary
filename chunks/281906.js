@@ -2324,61 +2324,73 @@ let iS =
 function iO() {
     let e,
         t,
-        { analyticsLocations: s } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
-        i = (0, s6.X)("useWhatsNewPerkCards"),
-        n = (0, s7.A)({ analyticsLocations: s }),
-        a = (0, o.useCallback)(() => {
-            (0, eo.openUserSettings)(ec.X.PROFILE_PANEL, { analyticsLocations: s }, () =>
-                (0, s2.L)({ analyticsLocations: s }),
+        s,
+        i,
+        n,
+        a,
+        l,
+        r,
+        d,
+        m,
+        g,
+        p,
+        f,
+        h,
+        { analyticsLocations: j } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
+        E = (0, s6.X)("useWhatsNewPerkCards"),
+        T = (0, s7.A)({ analyticsLocations: j }),
+        b = (0, o.useCallback)(() => {
+            (0, eo.openUserSettings)(ec.X.PROFILE_PANEL, { analyticsLocations: j }, () =>
+                (0, s2.L)({ analyticsLocations: j }),
             );
-        }, [s]),
-        l = (0, o.useCallback)(() => {
-            (0, eo.openUserSettings)(ec.X.PROFILE_PANEL, { analyticsLocations: s }, () =>
-                (0, ij.L)({ analyticsLocations: s }),
+        }, [j]),
+        C = (0, o.useCallback)(() => {
+            (0, eo.openUserSettings)(ec.X.PROFILE_PANEL, { analyticsLocations: j }, () =>
+                (0, ij.L)({ analyticsLocations: j }),
             );
-        }, [s]),
-        r = (0, o.useCallback)(() => {
+        }, [j]),
+        R = (0, o.useCallback)(() => {
             (0, eo.openUserSettings)(ec.X.APPEARANCE_IN_APP_ICON_CATEGORY);
         }, []),
-        d = (function (e) {
-            let { fractionalState: t } = (0, er.A)(),
-                s = t === tA.xc.FP_ONLY,
-                i = (0, s5.$F)(),
-                n = (0, s5.Xb)(),
-                a = i?.status === s5.Wo.UPCOMING || s,
-                l = i?.status === s5.Wo.WITHHELD,
-                r = a || l,
-                c = (0, s9.N)(i?.id),
-                d = (function () {
-                    let e = (0, s5.$F)(),
-                        t = (0, iC.P)(),
-                        s = (0, s5.Xb)(),
-                        i = (function (e) {
-                            let { measureFromStreakStart: t } = iR.useConfig({ location: e });
-                            return t;
-                        })("tenure_badge_progress_bar");
-                    if (null == e || null == t || null == s || e.status === s5.Wo.WITHHELD) return null;
-                    let n = eI()(),
-                        a = eI()(s),
-                        l = i || e.status === s5.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
-                        r = t.tenureReqNumMonths,
-                        c = a.clone().add(l, "months"),
-                        o = a.clone().add(r, "months").diff(c);
-                    return Math.max(0, Math.min(1, (n.diff(c) - 864e5) / o));
-                })(),
-                m = (0, x.bG)([ea.Ay], () => ea.Ay.useReducedMotion) && !r,
-                g = (0, i_.t)(),
-                p = (0, iC.P)();
-            return (0, o.useMemo)(() => {
-                let t,
-                    a = null != p ? J.intl.string(p.nameUnformattedNitro) : void 0;
-                null == i
-                    ? s && (t = (0, iI.T)(tA.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
-                    : (t =
-                          i.status === s5.Wo.UPCOMING
+        I =
+            ((e = (0, x.bG)([S.default], () => S.default.getCurrentUser())),
+            (t = e?.isFractionalPremiumWithNoStandardSub() ?? !1),
+            (s = (0, s5.$F)()),
+            (i = (0, s5.Xb)()),
+            (n = s?.status === s5.Wo.UPCOMING || t),
+            (a = s?.status === s5.Wo.WITHHELD),
+            (l = n || a),
+            (r = (0, s9.N)(s?.id)),
+            (d = (function () {
+                let e = (0, s5.$F)(),
+                    t = (0, iC.P)(),
+                    s = (0, s5.Xb)(),
+                    i = (function (e) {
+                        let { measureFromStreakStart: t } = iR.useConfig({ location: e });
+                        return t;
+                    })("tenure_badge_progress_bar");
+                if (null == e || null == t || null == s || e.status === s5.Wo.WITHHELD) return null;
+                let n = eI()(),
+                    a = eI()(s),
+                    l = i || e.status === s5.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
+                    r = t.tenureReqNumMonths,
+                    c = a.clone().add(l, "months"),
+                    o = a.clone().add(r, "months").diff(c);
+                return Math.max(0, Math.min(1, (n.diff(c) - 864e5) / o));
+            })()),
+            (m = (0, x.bG)([ea.Ay], () => ea.Ay.useReducedMotion) && !l),
+            (g = (0, i_.t)()),
+            (p = (0, iC.P)()),
+            (0, o.useMemo)(() => {
+                let e,
+                    n = null != p ? J.intl.string(p.nameUnformattedNitro) : void 0;
+                null == s
+                    ? t && (e = (0, iI.T)(tA.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
+                    : (e =
+                          s.status === s5.Wo.UPCOMING
                               ? J.intl.formatToPlainString(J.t.a1eKDi, { days: g?.days ?? 0 })
-                              : i.status === s5.Wo.WITHHELD
-                                ? ((0, iI.T)(i.id, i.tenureReqNumMonths) ?? void 0)
+                              : s.status === s5.Wo.WITHHELD
+                                ? ((0, iI.T)(s.id, s.tenureReqNumMonths) ?? void 0)
                                 : ((function (e, t) {
                                       if (null != e && null != t) {
                                           if (e.days <= 30)
@@ -2392,35 +2404,34 @@ function iO() {
                                                   nextBadgeName: t,
                                               });
                                       }
-                                  })(g, a) ??
-                                  (0, iI.T)(i.id, i.tenureReqNumMonths) ??
+                                  })(g, n) ??
+                                  (0, iI.T)(s.id, s.tenureReqNumMonths) ??
                                   void 0));
-                let l = null;
+                let a = null;
                 return (
-                    null != c ? (l = r || m ? c.standard : c.ambientLarge) : s && (l = iy),
+                    null != r ? (a = l || m ? r.standard : r.ambientLarge) : t && (a = iy),
                     {
                         id: tB.TENURE_BADGE_CARD_ID,
-                        title: null != i ? J.intl.string(i.nameUnformattedNitro) : s ? J.intl.string(J.t.tx9Fvw) : "",
+                        title: null != s ? J.intl.string(s.nameUnformattedNitro) : t ? J.intl.string(J.t.tx9Fvw) : "",
                         pillText: J.intl.string(J.t["jyYgZ+"]),
-                        primaryAsset: l,
-                        primaryAssetClassName: u()(iP.pq, { [iP.rX]: r, [iP.kE]: m }),
-                        caption: null != n ? J.intl.formatToPlainString(J.t.Hu4jfi, { date: new Date(n) }) : void 0,
-                        description: t,
+                        primaryAsset: a,
+                        primaryAssetClassName: u()(iP.pq, { [iP.rX]: l, [iP.kE]: m }),
+                        caption: null != i ? J.intl.formatToPlainString(J.t.Hu4jfi, { date: new Date(i) }) : void 0,
+                        description: e,
                         subscriptionRequired: !0,
                         progress: d ?? void 0,
                         ctaText: J.intl.string(J.t.jVcuVY),
-                        onCtaClick: () => (0, iv.D)({ analyticsLocations: e }),
+                        onCtaClick: () => (0, iv.D)({ analyticsLocations: j }),
                     }
                 );
-            }, [i, c, r, m, n, d, s, g, p, e]);
-        })(s),
-        { nitroOrbsRewardsCard: m, questOrbMultiplierCard: g } = id(),
-        p =
-            ((e = (0, iT.L)(tA.PremiumTypes.TIER_2)),
-            (t = (0, s8.rX)()),
+            }, [s, r, l, m, i, d, t, g, p, j])),
+        { nitroOrbsRewardsCard: _, questOrbMultiplierCard: v } = id(),
+        P =
+            ((f = (0, iT.L)(tA.PremiumTypes.TIER_2)),
+            (h = (0, s8.rX)()),
             (0, o.useMemo)(
                 () =>
-                    e && t
+                    f && h
                         ? {
                               id: tB.NITRO_FILE_UPLOAD_WHATS_NEW_CARD_ID,
                               title: J.intl.string(ib.default["/cV3ka"]),
@@ -2428,19 +2439,19 @@ function iO() {
                               primaryAsset: (0, c.jsx)(sW.I, { alt: "", ariaHidden: !0 }),
                           }
                         : null,
-                [e, t],
+                [f, h],
             )),
-        f = iA(s);
+        y = iA(j);
     return (0, o.useMemo)(() => {
         let e = [
-                m,
-                g,
-                f,
+                _,
+                v,
+                y,
                 {
                     id: tB.DISPLAY_NAME_STYLES_CARD_ID,
                     title: J.intl.string(J.t.OLtTrt),
                     description: J.intl.string(J.t["di/pXR"]),
-                    onCtaClick: i ? n : a,
+                    onCtaClick: E ? T : b,
                     ctaText: J.intl.string(J.t.jVcuVY),
                     primaryAsset: iS,
                 },
@@ -2460,7 +2471,7 @@ function iO() {
                     description: J.intl.string(J.t.eCZkAI),
                     primaryAsset: (0, c.jsx)(s$, { alt: "", ariaHidden: !0 }),
                     ctaText: J.intl.string(J.t.jVcuVY),
-                    onCtaClick: i ? n : l,
+                    onCtaClick: E ? T : C,
                 },
                 {
                     id: tB.CUSTOM_APP_ICONS_CARD_ID,
@@ -2468,13 +2479,13 @@ function iO() {
                     description: J.intl.string(J.t["1uPk1Z"]),
                     primaryAsset: iD,
                     ctaText: J.intl.string(J.t.y9TxXV),
-                    onCtaClick: r,
+                    onCtaClick: R,
                 },
             ],
             t = (e = e.filter((e) => null != e))[0].featured,
             s = t ? 5 : 6;
-        return (e.splice(+!!t, 0, d), null != p && e.splice(2, 0, p), e.length > s && e.splice(s, e.length - s), e);
-    }, [d, m, g, p, f, a, r, l, n, i]);
+        return (e.splice(+!!t, 0, I), null != P && e.splice(2, 0, P), e.length > s && e.splice(s, e.length - s), e);
+    }, [I, _, v, P, y, b, R, C, T, E]);
 }
 var iU = s(355097);
 let iL = "/assets/1eb1b74667b4c0f0.svg",
