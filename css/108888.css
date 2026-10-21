@@ -214,7 +214,7 @@
 }
 
 .gradient__32296 {
-    background-image: linear-gradient(166.25deg, #3bd4f2 13.52%, #11333e 79.19%);
+    background-image: linear-gradient(166.25deg, var(--custom-checkpoint-background-gradient-start) 13.52%, #11333e 79.19%);
     mix-blend-mode: multiply
 }
 
@@ -240,7 +240,7 @@
 
 .shadow_f1f2b1 {
     background-color: var(--black);
-    border: 2px solid var(--custom-checkpoint-dark-cyan);
+    border: 2px solid var(--custom-checkpoint-button-border);
     box-shadow: var(--space-4) var(--space-4) 0 var(--custom-checkpoint-button-shadow)
 }
 
@@ -1439,4 +1439,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=108888.dc0404cdd4ce408f.css.map*/
+/*# sourceMappingURL=108888.ba649cfefbf87606.css.map*/
