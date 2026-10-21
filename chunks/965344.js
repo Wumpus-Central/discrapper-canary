@@ -10,13 +10,30 @@ var l = n(477900),
 function d(e) {
     let { character: t, size: n, className: r } = e,
         d = i.useMemo(() => (0, c.vF)(t, Math.round(n * (0, s.A)())), [t, n]),
-        m = i.useMemo(() => (0, o.O)(t), [t]);
-    return (0, l.jsx)("div", {
-        role: "img",
-        "aria-label": m,
-        className: a()(u.G, r),
-        children: d.map((e) => (0, l.jsx)("img", { src: e, alt: "", draggable: !1, className: u.q }, e)),
-    });
+        m = i.useMemo(() => (0, o.O)(t), [t]),
+        h = i.useRef(new Set()),
+        [p, x] = i.useState(!1);
+    function g(e) {
+        (h.current.add(e), d.every((e) => h.current.has(e)) && x(!0));
+    }
+    return (
+        i.useLayoutEffect(() => {
+            let e = d.filter((e) => h.current.has(e));
+            ((h.current = new Set(e)), x(e.length === d.length));
+        }, [d]),
+        (0, l.jsx)("div", {
+            role: "img",
+            "aria-label": m,
+            className: a()(u.GG, { [u.Kc]: p }, r),
+            children: d.map((e) =>
+                (0, l.jsx)(
+                    "img",
+                    { src: e, alt: "", draggable: !1, className: u.qd, onLoad: () => g(e), onError: () => g(e) },
+                    e,
+                ),
+            ),
+        })
+    );
 }
 var m = n(343053),
     h = n(48763),

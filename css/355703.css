@@ -360,7 +360,13 @@
 
 .character_f8824c {
     aspect-ratio: 1;
+    opacity: 0;
     position: relative
+}
+
+.loaded_f8824c {
+    opacity: 1;
+    transition: opacity .15s ease-out
 }
 
 .layer_f8824c {
@@ -634,4 +640,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=355703.ad819a6fec4c31c4.css.map*/
+/*# sourceMappingURL=355703.3d291ec1b82e7bf6.css.map*/
