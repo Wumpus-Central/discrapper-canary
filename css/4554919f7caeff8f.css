@@ -2123,8 +2123,8 @@
 }
 
 .pageSizeInput_e8f197 {
-    padding-block: 2px;
-    padding-inline: 6px 2px
+    flex-shrink: 0;
+    min-width: var(--space-96)
 }
 
 .pageSizeSelection_e8f197 {
@@ -2229,4 +2229,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=1108d881e9e2cf28.css.map*/
+/*# sourceMappingURL=4554919f7caeff8f.css.map*/

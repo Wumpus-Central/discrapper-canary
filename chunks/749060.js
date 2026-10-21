@@ -36,17 +36,21 @@ function h(e) {
                                   color: "text-muted",
                                   children: H.intl.string(H.t.jNwLu2),
                               }),
-                              (0, n.jsx)(a.l, {
-                                  selectionMode: "single",
-                                  label: A,
-                                  hideLabel: !0,
-                                  options: v,
-                                  value: j.pageSize,
-                                  onSelectionChange: function (e) {
-                                      g(() => {
-                                          (0, m.Cw)(t, { ...j, pageSize: e });
-                                      });
-                                  },
+                              (0, n.jsx)("div", {
+                                  className: x.H9,
+                                  children: (0, n.jsx)(a.l, {
+                                      selectionMode: "single",
+                                      label: A,
+                                      hideLabel: !0,
+                                      fullWidth: !0,
+                                      options: v,
+                                      value: j.pageSize,
+                                      onSelectionChange: function (e) {
+                                          g(() => {
+                                              (0, m.Cw)(t, { ...j, pageSize: e });
+                                          });
+                                      },
+                                  }),
                               }),
                               (0, n.jsx)(r.m, {
                                   text: H.intl.string(H.t.ZTNur7),
