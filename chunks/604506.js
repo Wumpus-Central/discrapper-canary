@@ -5,6 +5,7 @@ e.exports = {
     o1: "actions__79ea5",
     P0: "trailingAsset__79ea5",
     Qs: "content__79ea5",
+    WK: "offline__79ea5",
     LY: "asset__79ea5",
     rf: "body__79ea5",
     o4: "subtitleText__79ea5",

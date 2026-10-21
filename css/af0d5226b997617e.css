@@ -263,6 +263,10 @@
     z-index: 1
 }
 
+.content__79ea5.offline__79ea5 {
+    opacity: .3
+}
+
 .asset__79ea5 {
     flex: 0 0 auto
 }
@@ -2632,4 +2636,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=e3bdb854cf7117f3.css.map*/
+/*# sourceMappingURL=af0d5226b997617e.css.map*/
