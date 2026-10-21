@@ -1,4 +1,4 @@
-(n.d(t, { A: () => U, b: () => q }), n(667532), n(321073), n(30146));
+(n.d(t, { A: () => I, b: () => v }), n(667532), n(321073), n(30146));
 var l = n(17928),
     i = n(73153),
     s = n(260498),
@@ -66,9 +66,9 @@ function k(e) {
             })(e));
     }
 }
-function A(e) {
+function w(e) {
     let t = f.delete(e),
-        n = w.delete(e),
+        n = O.delete(e),
         l = m.delete(e),
         i = _.delete(e),
         s = p.delete(e),
@@ -79,7 +79,7 @@ function A(e) {
         a = h.indexOf(e);
     return (-1 !== a && h.splice(a, 1), t || n || l || i || s || r || u || o || d || -1 !== a);
 }
-class O extends l.Ay.Store {
+class A extends l.Ay.Store {
     initialize() {
         this.waitFor(s.Ay);
     }
@@ -95,7 +95,7 @@ class O extends l.Ay.Store {
         return R(e);
     }
     hasLoadedHistory(e) {
-        return w.has(e);
+        return O.has(e);
     }
     isHistoryUnavailable(e) {
         return m.has(e);
@@ -119,12 +119,12 @@ class O extends l.Ay.Store {
         return h.slice();
     }
 }
-let w = new Map(),
+let O = new Map(),
     m = new Set();
-function q(e) {
-    return w.get(e) ?? null;
-}
 function v(e) {
+    return O.get(e) ?? null;
+}
+function q(e) {
     let t = new Map();
     for (let n of e)
         if ("assistant" === n.role)
@@ -140,7 +140,17 @@ function v(e) {
               return null == n || (0, r.tH)(e.agentReaction, n) ? e : { ...e, agentReaction: n };
           });
 }
-let U = new O(i.h, {
+function U(e) {
+    return (
+        null != e &&
+        "assistant" === e.role &&
+        null == e.turn_id &&
+        e.steps.every((e) => "preview_ready" === e.kind) &&
+        !(0, o.B5)(e) &&
+        !(0, o.BL)(e)
+    );
+}
+let I = new A(i.h, {
     LOGOUT: function () {
         if (
             0 === f.size &&
@@ -150,7 +160,7 @@ let U = new O(i.h, {
             0 === C.size &&
             0 === E.size &&
             0 === S.size &&
-            0 === w.size &&
+            0 === O.size &&
             0 === m.size &&
             0 === h.length
         )
@@ -162,32 +172,32 @@ let U = new O(i.h, {
             C.clear(),
             E.clear(),
             S.clear(),
-            w.clear(),
+            O.clear(),
             m.clear(),
             (h.length = 0));
     },
     CONJURE_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: l, degraded: i } = e,
-            s = w.get(t),
-            r = w.has(t) ? (f.get(t) ?? []) : [];
-        (w.set(t, l ?? null), !0 === i ? m.add(t) : m.delete(t), C.delete(t), E.delete(t), S.delete(t));
+            s = O.get(t),
+            r = O.has(t) ? (f.get(t) ?? []) : [];
+        (O.set(t, l ?? null), !0 === i ? m.add(t) : m.delete(t), C.delete(t), E.delete(t), S.delete(t));
         let o = new Set(),
             d = n.filter((e) => null == e.id || (!o.has(e.id) && (o.add(e.id), !0))),
             a = (0, u.Bd)(d),
             c = null != l && !0 !== i ? a.findIndex((e) => null != e.id) : -1,
             _ = -1 === c ? -1 : r.findIndex((e) => e.id === a[c].id);
-        (-1 !== _ && w.set(t, s ?? null),
-            f.set(t, v((0, u.YF)(-1 === _ ? a : [...r.slice(0, _), ...a.slice(c)]))),
+        (-1 !== _ && O.set(t, s ?? null),
+            f.set(t, q((0, u.YF)(-1 === _ ? a : [...r.slice(0, _), ...a.slice(c)]))),
             k(t));
     },
     CONJURE_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: l } = e;
-        if ((w.set(t, l), 0 === n.length)) return;
+        if ((O.set(t, l), 0 === n.length)) return;
         let i = f.get(t) ?? [],
             s = (0, u.Bd)(n),
             r = new Set(i.flatMap((e) => (null == e.id ? [] : [e.id]))),
             o = s.filter((e) => null == e.id || !r.has(e.id));
-        f.set(t, v((0, u.YF)([...o, ...i])));
+        f.set(t, q((0, u.YF)([...o, ...i])));
     },
     CONJURE_CHAT_MESSAGE_APPEND: function (e) {
         let { projectId: t, content: n, id: l, optimisticId: i, userId: s, timestamp: r, attachments: d } = e,
@@ -223,12 +233,13 @@ let U = new O(i.h, {
             }
         }
         if (-1 === c || c > r) return a !== s && void f.set(t, a);
+        let _ = U(a[r + 1]) ? r + 2 : r + 1;
         (f.set(t, [
             ...a.slice(0, c),
             { ...a[c], continued: !0, finished_at: a[c].finished_at ?? Date.now() },
             ...a.slice(c + 1, r + 1),
             (0, u.iW)("assistant", "", { turnId: l }),
-            ...a.slice(r + 1),
+            ...a.slice(_),
         ]),
             k(t));
     },
@@ -262,7 +273,9 @@ let U = new O(i.h, {
         let d = r.findIndex((e) => e.id === l);
         if (-1 === d) return void f.set(t, [...r, o]);
         let { disposition: a } = r[d];
-        (null != a && (o.acknowledges = a), f.set(t, [...r.slice(0, d + 1), o, ...r.slice(d + 1)]));
+        null != a && (o.acknowledges = a);
+        let c = "answered" === a && U(r[d + 1]);
+        (f.set(t, [...r.slice(0, d + 1), o, ...r.slice(c ? d + 2 : d + 1)]), c && k(t));
     },
     CONJURE_CHAT_PUBLISH_NOTICE: function (e) {
         let { projectId: t, id: n, content: l, timestamp: i, publishNotice: s } = e,
@@ -305,18 +318,16 @@ let U = new O(i.h, {
         -1 === r ? f.set(t, [...l, s]) : f.set(t, [...l.slice(0, r), s, ...l.slice(r)]);
     },
     CONJURE_CHAT_STEP_APPEND: function (e) {
-        let { projectId: t, step: n, turnId: l } = e;
-        if ("preview_ready" === n.kind && null == l && !R(t)) return !1;
-        let i = f.get(t);
-        if (
+        let { projectId: t, step: n, turnId: l } = e,
+            i = f.get(t);
+        return (
+            ("preview_ready" !== n.kind || null != l || (null != i && -1 !== (0, o.Si)(i, void 0))) &&
             (N(t, l, (e) => {
                 let t = (0, d.IC)(e.steps, n);
                 return t === e.steps ? e : { ...e, steps: t };
             }),
-            f.get(t) === i)
-        )
-            return !1;
-        k(t);
+            f.get(t) !== i && void k(t))
+        );
     },
     CONJURE_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n, turnId: l } = e,
@@ -440,17 +451,17 @@ let U = new O(i.h, {
     },
     CONJURE_PROJECT_CREATE_SUCCESS: function (e) {
         let { project: t } = e;
-        if (w.has(t.id)) return !1;
-        w.set(t.id, null);
+        if (O.has(t.id)) return !1;
+        O.set(t.id, null);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!A(t)) return !1;
+        if (!w(t)) return !1;
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
-        let t = new Set([...f.keys(), ...w.keys(), ..._.keys(), ...p.keys(), ...g.keys()]),
+        let t = new Set([...f.keys(), ...O.keys(), ..._.keys(), ...p.keys(), ...g.keys()]),
             n = !1;
-        for (let e of t) null == s.Ay.getProject(e) && A(e) && (n = !0);
+        for (let e of t) null == s.Ay.getProject(e) && w(e) && (n = !0);
         if (!n) return !1;
     },
 });
