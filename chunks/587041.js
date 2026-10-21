@@ -1,1 +1,1 @@
-e.exports = { P: "fileMention__24aa8", x: "thumbnail__24aa8" };
+_.exports = { P: "fileMention__24aa8", x: "thumbnail__24aa8" };

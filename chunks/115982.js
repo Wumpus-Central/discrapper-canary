@@ -1,4 +1,4 @@
-(n.d(t, { B4: () => d, C6: () => g, CT: () => p, Jf: () => h, Lf: () => x, SY: () => u, WQ: () => s, lt: () => j }),
+(n.d(t, { B4: () => d, C6: () => g, CT: () => x, Jf: () => h, Lf: () => p, SY: () => u, WQ: () => s, lt: () => j }),
     n(321073),
     n(134528),
     n(947204));
@@ -242,14 +242,14 @@ function g(e) {
     }
     return d;
 }
-function p(e, t) {
+function x(e, t) {
     let { turnActive: n } = t,
         l = e.filter((e) => e.hasWork || e.hasTodos).at(-1)?.index,
         a = e.at(-1)?.index,
         r = n && null != l && l === a ? l : void 0;
     return { ...(null != l ? { lastWork: l } : {}), ...(null != r ? { open: r } : {}) };
 }
-function x(e) {
+function p(e) {
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
         if (null != n) {

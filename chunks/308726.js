@@ -16,9 +16,9 @@ var n = i(477900),
     g = i(297152),
     I = i(834730),
     E = i(821609),
-    _ = i(308368),
-    N = i(298990),
-    S = i(308528),
+    S = i(308368),
+    _ = i(298990),
+    N = i(308528),
     C = i(730134),
     h = i(964486),
     T = i(55730),
@@ -75,8 +75,8 @@ var G = i(474397),
     X = i(994500),
     W = i(287809),
     q = i(943577),
-    Q = i(532294),
-    Z = i(562153),
+    Z = i(532294),
+    Q = i(562153),
     tt = i(810412),
     te = i(870373),
     ti = i(243612),
@@ -89,10 +89,10 @@ function ts(t) {
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([W.default], () => W.default.getUser(i.author_id)),
         [g, I] = l.useState("unsent"),
-        [E, N] = l.useState(!1);
+        [E, _] = l.useState(!1);
     l.useEffect(() => {
         if ("sent" === g) {
-            let t = setTimeout(() => N(!0), 2e3);
+            let t = setTimeout(() => _(!0), 2e3);
             return () => clearTimeout(t);
         }
     }, [g]);
@@ -103,14 +103,14 @@ function ts(t) {
             t.stopPropagation();
             try {
                 if ((I("sending"), h && null != C))
-                    await _.A.sendActivityInviteUser({
+                    await S.A.sendActivityInviteUser({
                         type: tn.xL.JOIN,
                         userId: u.id,
                         activity: C,
                         location: tn.ThZ.UNLOCKED_OVERLAY,
                     });
                 else {
-                    let t = await S.A.getOrEnsurePrivateChannel(u.id),
+                    let t = await N.A.getOrEnsurePrivateChannel(u.id),
                         e = $.A.getChannel(t) ?? null;
                     (r()(null != e, "Send channel must be defined"),
                         (0, Y.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
@@ -146,7 +146,7 @@ function ts(t) {
     }
     async function v() {
         if (null == u) return;
-        let t = await S.A.getOrEnsurePrivateChannel(u.id),
+        let t = await N.A.getOrEnsurePrivateChannel(u.id),
             e = $.A.getChannel(t) ?? null;
         (r()(null != e, "Send channel must be defined"),
             (0, Y.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
@@ -182,7 +182,7 @@ function to(t) {
             t.stopPropagation();
             try {
                 (d("sending"),
-                    await _.A.sendActivityInviteUser({
+                    await S.A.sendActivityInviteUser({
                         type: tn.xL.JOIN_REQUEST,
                         userId: r.id,
                         activity: o,
@@ -245,7 +245,7 @@ function tu(t) {
                                       className: tr.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
-                                      children: Z.Ay.getName(void 0, void 0, r),
+                                      children: Q.Ay.getName(void 0, void 0, r),
                                   }),
                                   null != s && (0, n.jsx)(b.Ay, { className: tr.Ok }),
                               ],
@@ -298,7 +298,7 @@ function td(t) {
         d = (0, tt.Dk)(() => new Set(e.map((t) => t.id)), [e]);
     return (l.useEffect(() => {
         (0, tt.Y)(tn.uss.ACTIVITY, {
-            locked: Q.default.isInstanceLocked(),
+            locked: Z.default.isInstanceLocked(),
             shownUserIds: Array.from(o),
             liveUserIds: Array.from(c),
             contentInventoryIds: Array.from(d),
@@ -434,7 +434,7 @@ function tp(t) {
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    ((0, N.qf)(a, !1, tn.BRT.POPOUT),
+                                    ((0, _.qf)(a, !1, tn.BRT.POPOUT),
                                         (0, tt.YX)(tn.uss.ACTIVITY, { type: tt.Z5.INVITE, value: tt.IP.PANEL_OPENED }));
                                 },
                             }),

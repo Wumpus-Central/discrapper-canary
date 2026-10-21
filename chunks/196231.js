@@ -19,8 +19,8 @@ var r = n(477900),
     x = n(212407),
     y = n(758836),
     _ = n(652215),
-    L = n(105292),
-    I = n(105499);
+    I = n(105292),
+    L = n(105499);
 function A(e) {
     let { skuId: t, unpublishedAt: n } = e,
         l = (0, C.ty)(t),
@@ -28,10 +28,10 @@ function A(e) {
         o = null;
     return (
         null != s
-            ? (o = (0, r.jsx)(v.b, { promotion: s, className: a()(I.qr, I.Cz) }))
+            ? (o = (0, r.jsx)(v.b, { promotion: s, className: a()(L.qr, L.Cz) }))
             : (0, h.HF)(n) &&
-              (o = (0, r.jsx)(i.Lp, { disableColor: !0, text: L.intl.string(L.t["h/uBCR"]), className: I.qr })),
-        null != o ? (0, r.jsx)("div", { className: I.pv, children: o }) : null
+              (o = (0, r.jsx)(i.Lp, { disableColor: !0, text: I.intl.string(I.t["h/uBCR"]), className: L.qr })),
+        null != o ? (0, r.jsx)("div", { className: L.pv, children: o }) : null
     );
 }
 function k(e) {
@@ -52,14 +52,14 @@ function k(e) {
         O = l.useRef(null),
         j = n?.bodyText,
         N = n?.name ?? t?.name,
-        w = null != N ? L.intl.formatToPlainString(L.t.frSHlf, { destination: N }) : void 0,
+        w = null != N ? I.intl.formatToPlainString(I.t.frSHlf, { destination: N }) : void 0,
         T = (0, m.uM)();
     return (0, r.jsx)(o.L, {
         innerRef: O,
         onChange: S,
         threshold: 0,
         children: (0, r.jsxs)(u.D, {
-            className: a()(I.oT, h),
+            className: a()(L.oT, h),
             innerRef: O,
             style: { ...(null != b && { backgroundImage: `url(${b})` }) },
             ...E,
@@ -84,22 +84,22 @@ function k(e) {
             children: [
                 (0, r.jsx)(A, { skuId: k, unpublishedAt: n?.unpublishedAt ?? t?.unpublishedAt }),
                 (0, r.jsx)("div", {
-                    className: I.Gh,
+                    className: L.Gh,
                     children:
                         null != j &&
                         (0, r.jsx)(c.D, {
                             lineClamp: 4,
-                            className: I.BN,
+                            className: L.BN,
                             style: { color: n?.bannerTextColor ?? "white" },
                             variant: "heading-md/medium",
                             children: j,
                         }),
                 }),
                 (0, r.jsx)("div", {
-                    className: I.b2,
+                    className: L.b2,
                     children: (0, r.jsx)(d.$, {
                         variant: "overlay-primary",
-                        text: L.intl.string(L.t.jVcuVY),
+                        text: I.intl.string(I.t.jVcuVY),
                         "aria-label": w,
                         tabIndex: E?.tabIndex,
                         onClick: (e) => {

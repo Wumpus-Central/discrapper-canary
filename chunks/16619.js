@@ -12,8 +12,8 @@ var l = n(582128),
     f = n(793480),
     h = n(246338),
     g = n(434279),
-    p = n(260498),
-    x = n(426035);
+    x = n(260498),
+    p = n(426035);
 function j(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
@@ -41,7 +41,7 @@ function k(e, t) {
 function v(e) {
     let [t, n] = l.useState(0),
         { entries: d, nextExpiry: c } = (0, a.bG)(
-            [p.Ay, m.A, o.A, u.Ay, s.A, r.A, i.Bt],
+            [x.Ay, m.A, o.A, u.Ay, s.A, r.A, i.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -75,7 +75,7 @@ function v(e) {
                             guildId: s,
                             guild: f,
                             guildName: f?.name ?? null,
-                            notInServer: "not_in_server" === (0, x.kF)(e),
+                            notInServer: "not_in_server" === (0, p.kF)(e),
                             owned: n,
                             activity: c,
                             sortTime: (function (e, t) {
@@ -86,10 +86,10 @@ function v(e) {
                             })(e, d),
                         });
                     }
-                    for (let e of p.Ay.getOwnedProjects()) s(e, !0);
+                    for (let e of x.Ay.getOwnedProjects()) s(e, !0);
                     for (let e of Object.values(o.A.getGuilds()))
-                        if (p.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
-                            for (let t of p.Ay.getSharedProjects(e.id)) s(t, !1);
+                        if (x.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
+                            for (let t of x.Ay.getSharedProjects(e.id)) s(t, !1);
                     return { entries: (0, g.Ng)(r), nextExpiry: i };
                 })(e),
             [e, t],

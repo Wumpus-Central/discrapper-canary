@@ -1,8 +1,8 @@
-n.d(t, { Is: () => R, R_: () => P, YI: () => h, _b: () => f, tZ: () => A });
+n.d(t, { Is: () => R, R_: () => A, YI: () => h, _b: () => f, tZ: () => P });
 var i = n(636537),
     l = n(73153),
-    u = n(803306),
-    _ = n(382483),
+    _ = n(803306),
+    u = n(382483),
     r = n(287809),
     s = n(517244),
     a = n(513845),
@@ -32,7 +32,7 @@ async function h(e, t) {
         (0, o.GO)(e);
     }
 }
-async function P(e) {
+async function A(e) {
     let t = await h(e, {}).catch(() => null);
     if (t?.ok !== !0) return !1;
     let n = E.A.getPublishStatus(e);
@@ -47,19 +47,19 @@ async function P(e) {
             previewDevicePermissions: n.previewDevicePermissions,
         });
     let i = r.default.getCurrentUser()?.id;
-    return (null != i && (0, u.eO)(i).catch(() => {}), !0);
+    return (null != i && (0, _.eO)(i).catch(() => {}), !0);
 }
-async function A(e, t) {
+async function P(e, t) {
     let { isPreview: n, install: i } = t,
         l = c.Ay.getProject(e),
-        u = null == l ? null : n ? l.preview_application_id : l.application_id,
-        _ = !n || null != i,
-        r = null != u ? C(u, n, _ ? i : null) : null,
+        _ = null == l ? null : n ? l.preview_application_id : l.application_id,
+        u = !n || null != i,
+        r = null != _ ? C(_, n, u ? i : null) : null,
         { bot_permissions_changed: s, integration_installed: a, project: p } = (await (0, o.U1)(e)).body,
         E = n ? p.preview_application_id : p.application_id;
     if (null != E) {
         let e = { integrationInstalled: a, botPermissionsChanged: s };
-        E !== u || null == r ? await C(E, n, e) : (await r, _ || U(E, n, e));
+        E !== _ || null == r ? await C(E, n, e) : (await r, u || U(E, n, e));
     }
 }
 function f(e) {
@@ -67,7 +67,7 @@ function f(e) {
 }
 async function C(e, t, n) {
     (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: e }),
-        await Promise.all([(0, o.$N)(e), (0, _.un)(e, { force: !0 }).catch(() => {})]),
+        await Promise.all([(0, o.$N)(e), (0, u.un)(e, { force: !0 }).catch(() => {})]),
         null !== n && U(e, t, n));
 }
 function U(e, t, n) {

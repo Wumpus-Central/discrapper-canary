@@ -2,27 +2,27 @@ t.d(n, { A: () => y, _: () => g });
 var e = t(477900);
 t(582128);
 var i = t(477782),
-    c = t(138134),
-    u = t(627363),
-    o = t(587895),
-    r = t(928658),
+    u = t(138134),
+    c = t(627363),
+    r = t(587895),
+    o = t(928658),
     a = t(858899),
     d = t(105292);
 async function s(l) {
-    let n = o.A.getApplication(l);
-    if (null != n && o.A.isHydrated(l)) return n;
+    let n = r.A.getApplication(l);
+    if (null != n && r.A.isHydrated(l)) return n;
     try {
-        await u.Ay.fetchApplication(l);
+        await c.Ay.fetchApplication(l);
     } catch {
         return null;
     }
-    return o.A.getApplication(l);
+    return r.A.getApplication(l);
 }
 async function p(l, n, t) {
     let e = await s(l);
     null == e
         ? (0, a.P0)({ text: d.intl.string(d.t.F8FvUy), variant: "critical" })
-        : (0, r.r3)({
+        : (0, o.r3)({
               application: e,
               entrypoint: t,
               contextualGuildId: n.getGuildId() ?? void 0,
@@ -39,8 +39,8 @@ function y(l, n) {
               id: "report-app",
               label: d.intl.string(d.t.NgA5vp),
               action: () => p(t, l, n),
-              icon: c.FlagIcon,
-              leadingAccessory: { type: "icon", icon: c.FlagIcon },
+              icon: u.FlagIcon,
+              leadingAccessory: { type: "icon", icon: u.FlagIcon },
               color: "danger",
           });
 }

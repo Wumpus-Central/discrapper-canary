@@ -19,8 +19,8 @@ var r = n(477900),
     x = n(773669),
     y = n(975571),
     _ = n(304210),
-    L = n(324157),
-    I = n(480750),
+    I = n(324157),
+    L = n(480750),
     A = n(727142);
 let k = function (e) {
     let { text: t, icon: n, indicatorColor: l } = e;
@@ -145,14 +145,14 @@ let q = { [E.RB.LIGHT]: "theme-light", [E.RB.DARK]: "theme-dark" },
     Y = { [E.RB.LIGHT]: "overlay-secondary", [E.RB.DARK]: "overlay-primary" },
     Z = E.RB.DARK;
 function J(e, t, n) {
-    let r = l.useCallback((n) => (0, I.h)(n, e, t), [e, t]);
+    let r = l.useCallback((n) => (0, L.h)(n, e, t), [e, t]);
     return {
         handleInlineHelpTextClick: r,
         handleClaim: l.useCallback(() => {
-            ((0, I.l)(e, t, X.Z.CLAIM_BUTTON_CLICKED), n());
+            ((0, L.l)(e, t, X.Z.CLAIM_BUTTON_CLICKED), n());
         }, [e, t, n]),
         handleUseNowClick: l.useCallback(() => {
-            (0, I.l)(e, t, X.Z.USE_NOW_BUTTON_CLICKED);
+            (0, L.l)(e, t, X.Z.USE_NOW_BUTTON_CLICKED);
         }, [e, t]),
     };
 }
@@ -216,7 +216,7 @@ function ee(e) {
             title: v,
             description: x,
             progressText: _,
-            timeLeftText: L,
+            timeLeftText: I,
             contentThemeClassName: A,
             rewardProduct: b,
             claimRewardButtonVariant: O,
@@ -227,7 +227,7 @@ function ee(e) {
         R = null != j && "" !== j ? y.A.getArticleURL(j) : null,
         { handleInlineHelpTextClick: P, handleClaim: M, handleUseNowClick: H } = J(t, n, T),
         $ = l.useCallback(() => {
-            null != R && ((0, I.l)(t, n, X.Z.INFO_BUTTON_CLICKED), (0, g.A)(R));
+            null != R && ((0, L.l)(t, n, X.Z.INFO_BUTTON_CLICKED), (0, g.A)(R));
         }, [t, n, R]);
     return (0, r.jsxs)(i.B, {
         direction: "horizontal",
@@ -256,7 +256,7 @@ function ee(e) {
                         wrap: !0,
                         children: [
                             null != _ && (0, r.jsx)(k, { text: _, indicatorColor: h ?? S.W }),
-                            null != L && (0, r.jsx)(k, { icon: c.ClockIcon, text: L }),
+                            null != I && (0, r.jsx)(k, { icon: c.ClockIcon, text: I }),
                         ],
                     }),
                 ],
@@ -297,7 +297,7 @@ function et(e) {
     let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: i, isClaiming: u, onClaim: c } = e,
         d = (0, o.bG)([x.default], () => x.default.locale);
     l.useEffect(() => {
-        (0, I.l)(s, n, X.Z.PROMO_VIEWED);
+        (0, L.l)(s, n, X.Z.PROMO_VIEWED);
     }, [s.id, n]);
     let { shared: p } = a,
         { assets: m, style: g } = p.progressIndicator,
@@ -332,7 +332,7 @@ function et(e) {
             description: k,
             progressText: S,
             timeLeftText: b,
-        } = (0, L.MZ)({
+        } = (0, I.MZ)({
             promotion: s,
             promotionProgress: y,
             progressIndicator: p.progressIndicator,
