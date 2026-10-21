@@ -1,21 +1,20 @@
-t.d(a, { n: () => E, A: () => F });
+t.d(a, { n: () => w, A: () => E });
 var n,
     r = t(582128),
     u = t(17928),
     l = t(956518),
     o = t(950803),
     s = t(85982),
-    c = t(627363),
-    i = t(878014),
+    i = t(627363),
+    c = t(878014),
     d = t(869146),
     f = t(625180),
     h = t(91242),
     p = t(457827),
-    A = t(705499),
     g = t(409397),
-    m = t(165610),
-    w = t(652215),
-    E =
+    A = t(165610),
+    m = t(652215),
+    w =
         (((n = {}).Loading = "loading"),
         (n.AwaitingLaunch = "awaiting-launch"),
         (n.Launched = "launched"),
@@ -24,48 +23,48 @@ var n,
         (n.DoesNotSupportSurface = "does-not-support-surface"),
         (n.Error = "error"),
         n);
-function F(e) {
-    let { applicationId: a, surface: t, hostWindowKey: n, launch: E } = e,
+function E(e) {
+    let { applicationId: a, surface: t, hostWindowKey: n, launch: w } = e,
         {
-            frameId: F,
-            frameExists: L,
-            frameLaunched: M,
+            frameId: E,
+            frameExists: F,
+            frameLaunched: L,
             surface: b,
             launchFailure: k,
             setFailed: I,
-            lifecycle: y,
+            lifecycle: M,
         } = (function (e) {
             let { applicationId: a, surface: t, hostWindowKey: n, launch: o } = e,
-                s = r.useMemo(() => (0, m.VA)(a, t), [a, t]),
+                s = r.useMemo(() => (0, A.VA)(a, t), [a, t]),
                 f = r.useMemo(() => t, [s]),
                 p = (0, u.bG)([h.A], () => h.A.getFrame(s), [s]),
-                A = (0, u.bG)(
+                w = (0, u.bG)(
                     [d.A, h.A],
                     () => {
-                        if (d.A.getWindowOpen(w.MLl.ACTIVITY_POPOUT) && h.A.getMainFrame()?.id === s) return !0;
+                        if (d.A.getWindowOpen(m.MLl.ACTIVITY_POPOUT) && h.A.getMainFrame()?.id === s) return !0;
                         let e = (0, g.A)(h.A.getFrame(s));
                         return null != e && e !== n;
                     },
                     [s, n],
                 ),
-                { data: E, isLoading: F } = (0, c.YY)(a),
-                L = (0, i.D)(E),
-                M = null != (0, l.Ay)(a),
-                b = o?.customId,
-                [k, I] = r.useState(null),
-                y = k?.frameId === s && k.customId === b ? k : null,
-                C = r.useCallback((e) => I({ frameId: s, customId: b, error: e }), [s, b]);
+                { data: E, isLoading: F } = (0, i.YY)(a),
+                L = (0, c.D)(E),
+                b = null != (0, l.Ay)(a),
+                k = o?.customId,
+                [I, M] = r.useState(null),
+                y = I?.frameId === s && I.customId === k ? I : null,
+                C = r.useCallback((e) => M({ frameId: s, customId: k, error: e }), [s, k]);
             return {
                 frameId: s,
                 frameExists: null != p,
-                frameLaunched: (0, m.x1)(p),
+                frameLaunched: (0, A.x1)(p),
                 surface: f,
                 launchFailure: y,
                 setFailed: C,
                 lifecycle:
                     null == E || L
-                        ? (0, m.x1)(p)
-                            ? A
+                        ? (0, A.x1)(p)
+                            ? w
                                 ? { state: "rendering-elsewhere" }
                                 : null != E
                                   ? { state: "launched", frame: p, application: E }
@@ -78,55 +77,44 @@ function F(e) {
                                   : { state: "error" }
                               : p?.state === "loading"
                                 ? { state: "loading", frame: p }
-                                : M
+                                : b
                                   ? { state: "awaiting-launch" }
                                   : { state: "no-application" }
                         : { state: "does-not-support-surface" },
             };
-        })({ applicationId: a, surface: t, hostWindowKey: n, launch: E }),
-        { state: C } = y;
+        })({ applicationId: a, surface: t, hostWindowKey: n, launch: w }),
+        { state: y } = M;
     return (
         r.useEffect(() => {
-            if (null != n && M) return (f.A.attachFrameHostWindow(F, n), () => f.A.detachFrameHostWindow(F, n));
-        }, [F, n, M]),
+            if (null != n && L) return (f.A.attachFrameHostWindow(E, n), () => f.A.detachFrameHostWindow(E, n));
+        }, [E, n, L]),
         r.useEffect(() => {
-            L &&
-                (0, A.wY)(F) &&
-                f.A.launchFrame({
-                    applicationId: a,
-                    surface: b,
-                    hostWindowKey: n,
-                    launch: E,
-                    showErrorModal: !1,
-                }).catch(I);
-        }, [F, L, a, b, n, E, I]),
-        r.useEffect(() => {
-            "awaiting-launch" === C && e();
+            "awaiting-launch" === y && e();
             async function e() {
                 try {
                     await f.A.launchFrame({
                         applicationId: a,
                         surface: b,
                         hostWindowKey: n,
-                        launch: E,
+                        launch: w,
                         showErrorModal: !1,
                     });
                 } catch (e) {
                     I(e);
                 }
             }
-        }, [C, a, b, n, E, I]),
+        }, [y, a, b, n, w, I]),
         r.useEffect(() => {
-            "error" === C &&
+            "error" === y &&
                 null != k &&
                 (0, o.f)(k.error, a).then((e) => {
                     let { message: a } = e;
                     return (0, s.A)(a);
                 });
-        }, [C, k, a]),
+        }, [y, k, a]),
         r.useEffect(() => {
-            "does-not-support-surface" === C && L && (0, p.r)(F);
-        }, [C, L, F]),
-        y
+            "does-not-support-surface" === y && F && (0, p.r)(E);
+        }, [y, F, E]),
+        M
     );
 }

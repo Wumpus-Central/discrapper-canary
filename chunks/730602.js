@@ -14,8 +14,15 @@ async function o(e, t, n) {
     return _(e, t, n);
 }
 function d(e, t, n) {
-    let i = _(e, t, n);
-    (i.catch(() => void 0), l.set(u(e, t, n), { ticket: i, expiresAt: Date.now() + 6e4 }));
+    let i = u(e, t, n),
+        r = l.get(i);
+    if (null != r && r.expiresAt > Date.now()) return;
+    let a = _(e, t, n),
+        s = { ticket: a, expiresAt: Date.now() + 6e4 };
+    (l.set(i, s),
+        a.catch(() => {
+            l.get(i) === s && l.delete(i);
+        }));
 }
 function c(e, t, n, i) {
     l.set(u(t, n, i), { ticket: Promise.resolve(e), expiresAt: Date.now() + 6e4 });
