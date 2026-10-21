@@ -131,7 +131,7 @@ function L(e) {
             children: (0, i.jsxs)(A.s, {
                 buttonProps: x,
                 "aria-label": C.intl.formatToPlainString(C.t.tuMUJ2, { emojiName: D, soundName: L }),
-                className: s()(O.aG, { [O.he]: P, [O.wT]: c, [O.fx]: !c }, d),
+                className: s()(O.aG, O.CS, { [O.he]: P, [O.wT]: c, [O.fx]: !c }, d),
                 onClick: H,
                 children: [
                     (0, i.jsxs)("div", {
