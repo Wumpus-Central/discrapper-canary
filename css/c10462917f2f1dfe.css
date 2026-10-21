@@ -322,7 +322,9 @@
 
 .composerEditor__86f16 {
     flex: 1;
-    min-width: 0
+    max-height: var(--custom-channel-textarea-text-area-max-height, 50vh);
+    min-width: 0;
+    overflow-y: auto
 }
 
 .composerInput__86f16 {
@@ -332,10 +334,8 @@
     font-size: 16px;
     font-weight: var(--font-weight-normal);
     line-height: 22px;
-    max-height: var(--custom-channel-textarea-text-area-max-height, 50vh);
     min-height: var(--custom-channel-textarea-text-area-height, 44px);
     outline: none;
-    overflow-y: auto;
     padding-block: calc((var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2);
     padding-inline: 0 10px;
     width: 100%
@@ -738,4 +738,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=fda92017b2beedf1.css.map*/
+/*# sourceMappingURL=c10462917f2f1dfe.css.map*/
