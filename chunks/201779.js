@@ -1,4 +1,4 @@
-n.d(t, { Np: () => l, Rq: () => c, UG: () => A, gr: () => o, oI: () => _, s9: () => u });
+n.d(t, { Np: () => l, UG: () => _, gr: () => o, oI: () => c, s9: () => d });
 var i,
     r,
     a,
@@ -37,20 +37,8 @@ var i,
         (r.FINALIZE_CHARACTER = "finalize_character"),
         (r.SUMMARY = "summary"),
         (r.PROFILE_WIDGET = "profile_widget"),
-        r);
-let d = new Set([
-    "voice_face",
-    "messages_outfit",
-    "servers_headwear",
-    "emoji_shoes",
-    "games_wearable",
-    "game_time_aura",
-    "finalize_character",
-]);
-function c(e) {
-    return d.has(e);
-}
-var u =
+        r),
+    d =
         (((a = {}).IDLE = "idle"),
         (a.INTRODUCTION = "introduction"),
         (a.FACE = "face"),
@@ -64,7 +52,7 @@ var u =
         (a.SUMMARY = "summary"),
         (a.PROFILE_WIDGET = "profile_widget"),
         a),
-    _ =
+    c =
         (((s = {}).VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
@@ -80,7 +68,7 @@ var u =
         (s.SIDEKICK = "sidekick"),
         (s.SUMMARY = "summary"),
         s);
-let E = {
+let u = {
     home: { characterStage: "idle" },
     introduction: { characterStage: "introduction" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
@@ -114,6 +102,6 @@ let E = {
     summary: { characterStage: "summary", statsScreen: "summary" },
     profile_widget: { characterStage: "profile_widget" },
 };
-function A(e) {
-    return E[e];
+function _(e) {
+    return u[e];
 }
