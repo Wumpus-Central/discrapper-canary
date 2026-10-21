@@ -3479,6 +3479,9 @@
     --badge-expressive-background: #fff;
     --badge-expressive-border: #fff;
     --badge-expressive-text: #2e3036;
+    --badge-inverted-background: #fff;
+    --badge-inverted-border: #fff;
+    --badge-inverted-text: #000;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
@@ -3486,6 +3489,10 @@
     --badge-notification-background: #d12e38;
     --badge-notification-border: hsla(0, 0%, 100%, .08);
     --badge-notification-text: #fff;
+    --badge-premium-background-gradient-end: #ab5c8a;
+    --badge-premium-background-gradient-mid: #b845c2;
+    --badge-premium-background-gradient-start: #8547c7;
+    --badge-premium-text: #fff;
     --badge-primary-background: #5966f2;
     --badge-primary-border: #5966f2;
     --badge-primary-text: #fff;
@@ -4214,6 +4221,9 @@
     --badge-expressive-background: #5966f2;
     --badge-expressive-border: #5966f2;
     --badge-expressive-text: #fff;
+    --badge-inverted-background: #000;
+    --badge-inverted-border: #000;
+    --badge-inverted-text: #fff;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
@@ -4221,6 +4231,10 @@
     --badge-notification-background: #d12e38;
     --badge-notification-border: hsla(0, 0%, 100%, .08);
     --badge-notification-text: #fff;
+    --badge-premium-background-gradient-end: #ab5c8a;
+    --badge-premium-background-gradient-mid: #b845c2;
+    --badge-premium-background-gradient-start: #8547c7;
+    --badge-premium-text: #fff;
     --badge-primary-background: #5966f2;
     --badge-primary-border: #5966f2;
     --badge-primary-text: #fff;
@@ -4949,6 +4963,9 @@
     --badge-expressive-background: #fff;
     --badge-expressive-border: #fff;
     --badge-expressive-text: #2e3036;
+    --badge-inverted-background: #fff;
+    --badge-inverted-border: #fff;
+    --badge-inverted-text: #000;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
@@ -4956,6 +4973,10 @@
     --badge-notification-background: #d12e38;
     --badge-notification-border: hsla(0, 0%, 100%, .08);
     --badge-notification-text: #fff;
+    --badge-premium-background-gradient-end: #ab5c8a;
+    --badge-premium-background-gradient-mid: #b845c2;
+    --badge-premium-background-gradient-start: #8547c7;
+    --badge-premium-text: #fff;
     --badge-primary-background: #5966f2;
     --badge-primary-border: #5966f2;
     --badge-primary-text: #fff;
@@ -5684,6 +5705,9 @@
     --badge-expressive-background: #fff;
     --badge-expressive-border: #fff;
     --badge-expressive-text: #2e3036;
+    --badge-inverted-background: #fff;
+    --badge-inverted-border: #fff;
+    --badge-inverted-text: #000;
     --badge-mythic-background: rgba(255, 110, 13, .24);
     --badge-mythic-border-gradient-end: #ff6e0d;
     --badge-mythic-border-gradient-start: #ffe047;
@@ -5691,6 +5715,10 @@
     --badge-notification-background: #d12e38;
     --badge-notification-border: hsla(0, 0%, 100%, .08);
     --badge-notification-text: #fff;
+    --badge-premium-background-gradient-end: #ab5c8a;
+    --badge-premium-background-gradient-mid: #b845c2;
+    --badge-premium-background-gradient-start: #8547c7;
+    --badge-premium-text: #fff;
     --badge-primary-background: #5966f2;
     --badge-primary-border: #5966f2;
     --badge-primary-text: #fff;
@@ -6355,4 +6383,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=7ee6474d24dc825c.css.map*/
+/*# sourceMappingURL=425230970d182f1a.css.map*/

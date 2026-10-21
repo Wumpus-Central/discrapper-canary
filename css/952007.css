@@ -646,6 +646,9 @@
     --badge-expressive-background: var(--neutral-1);
     --badge-expressive-border: var(--neutral-1);
     --badge-expressive-text: var(--neutral-71);
+    --badge-inverted-background: var(--neutral-1);
+    --badge-inverted-border: var(--neutral-1);
+    --badge-inverted-text: var(--neutral-100);
     --badge-mythic-background: hsl(var(--illo-orange-40-hsl)/0.24);
     --badge-mythic-border-gradient-end: var(--illo-orange-40);
     --badge-mythic-border-gradient-start: var(--illo-yellow-40);
@@ -653,6 +656,10 @@
     --badge-notification-background: var(--red-new-50);
     --badge-notification-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --badge-notification-text: var(--neutral-1);
+    --badge-premium-background-gradient-end: var(--premium-tier-2-pink-for-gradients);
+    --badge-premium-background-gradient-mid: var(--premium-tier-2-purple-for-gradients-2);
+    --badge-premium-background-gradient-start: var(--premium-tier-2-purple-for-gradients);
+    --badge-premium-text: var(--neutral-1);
     --badge-primary-background: var(--blurple-50);
     --badge-primary-border: var(--blurple-50);
     --badge-primary-text: var(--neutral-1);
@@ -1617,6 +1624,9 @@
     --badge-expressive-background: var(--blurple-50);
     --badge-expressive-border: var(--blurple-50);
     --badge-expressive-text: var(--neutral-1);
+    --badge-inverted-background: var(--neutral-100);
+    --badge-inverted-border: var(--neutral-100);
+    --badge-inverted-text: var(--neutral-1);
     --badge-mythic-background: hsl(var(--illo-orange-40-hsl)/0.24);
     --badge-mythic-border-gradient-end: var(--illo-orange-40);
     --badge-mythic-border-gradient-start: var(--illo-yellow-40);
@@ -1624,6 +1634,10 @@
     --badge-notification-background: var(--red-new-50);
     --badge-notification-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --badge-notification-text: var(--neutral-1);
+    --badge-premium-background-gradient-end: var(--premium-tier-2-pink-for-gradients);
+    --badge-premium-background-gradient-mid: var(--premium-tier-2-purple-for-gradients-2);
+    --badge-premium-background-gradient-start: var(--premium-tier-2-purple-for-gradients);
+    --badge-premium-text: var(--neutral-1);
     --badge-primary-background: var(--blurple-50);
     --badge-primary-border: var(--blurple-50);
     --badge-primary-text: var(--neutral-1);
@@ -2588,6 +2602,9 @@
     --badge-expressive-background: var(--neutral-1);
     --badge-expressive-border: var(--neutral-1);
     --badge-expressive-text: var(--neutral-71);
+    --badge-inverted-background: var(--neutral-1);
+    --badge-inverted-border: var(--neutral-1);
+    --badge-inverted-text: var(--neutral-100);
     --badge-mythic-background: hsl(var(--illo-orange-40-hsl)/0.24);
     --badge-mythic-border-gradient-end: var(--illo-orange-40);
     --badge-mythic-border-gradient-start: var(--illo-yellow-40);
@@ -2595,6 +2612,10 @@
     --badge-notification-background: var(--red-new-50);
     --badge-notification-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --badge-notification-text: var(--neutral-1);
+    --badge-premium-background-gradient-end: var(--premium-tier-2-pink-for-gradients);
+    --badge-premium-background-gradient-mid: var(--premium-tier-2-purple-for-gradients-2);
+    --badge-premium-background-gradient-start: var(--premium-tier-2-purple-for-gradients);
+    --badge-premium-text: var(--neutral-1);
     --badge-primary-background: var(--blurple-50);
     --badge-primary-border: var(--blurple-50);
     --badge-primary-text: var(--neutral-1);
@@ -3559,6 +3580,9 @@
     --badge-expressive-background: var(--neutral-1);
     --badge-expressive-border: var(--neutral-1);
     --badge-expressive-text: var(--neutral-71);
+    --badge-inverted-background: var(--neutral-1);
+    --badge-inverted-border: var(--neutral-1);
+    --badge-inverted-text: var(--neutral-100);
     --badge-mythic-background: hsl(var(--illo-orange-40-hsl)/0.24);
     --badge-mythic-border-gradient-end: var(--illo-orange-40);
     --badge-mythic-border-gradient-start: var(--illo-yellow-40);
@@ -3566,6 +3590,10 @@
     --badge-notification-background: var(--red-new-50);
     --badge-notification-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --badge-notification-text: var(--neutral-1);
+    --badge-premium-background-gradient-end: var(--premium-tier-2-pink-for-gradients);
+    --badge-premium-background-gradient-mid: var(--premium-tier-2-purple-for-gradients-2);
+    --badge-premium-background-gradient-start: var(--premium-tier-2-purple-for-gradients);
+    --badge-premium-text: var(--neutral-1);
     --badge-primary-background: var(--blurple-50);
     --badge-primary-border: var(--blurple-50);
     --badge-primary-text: var(--neutral-1);
@@ -9238,14 +9266,27 @@
 }
 
 .mana-badge-refresh .theme-dark,
-.mana-badge-refresh .theme-darker,
+.mana-badge-refresh.theme-dark {
+    --badge-expressive-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --badge-inverted-border: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
+    --badge-primary-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --badge-secondary-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196)
+}
+
 .mana-badge-refresh .theme-light,
+.mana-badge-refresh.theme-light {
+    --badge-expressive-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --badge-inverted-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --badge-primary-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --badge-secondary-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196)
+}
+
+.mana-badge-refresh .theme-darker,
 .mana-badge-refresh .theme-midnight,
-.mana-badge-refresh.theme-dark,
 .mana-badge-refresh.theme-darker,
-.mana-badge-refresh.theme-light,
 .mana-badge-refresh.theme-midnight {
     --badge-expressive-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --badge-inverted-border: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --badge-primary-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --badge-secondary-border: hsl(var(--opacity-white-8-hsl)/0.0784313725490196)
 }
@@ -10321,4 +10362,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.6d59dba479285278.css.map*/
+/*# sourceMappingURL=952007.1486d9a8a5b1fa6c.css.map*/
