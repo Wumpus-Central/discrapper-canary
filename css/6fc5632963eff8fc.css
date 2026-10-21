@@ -88,21 +88,26 @@
     padding: 0 var(--space-8) var(--space-8)
 }
 
-.entry__8306d,
 .slot__8306d {
     align-items: center;
     display: flex
 }
 
+.slot__8306d:first-child {
+    padding-inline-start: calc(var(--custom-guild-list-width) + var(--space-12))
+}
+
 .entry__8306d {
+    align-items: center;
     border-radius: var(--custom-app-top-bar-item-radius);
     box-sizing: border-box;
     color: var(--icon-muted);
     cursor: pointer;
+    display: flex;
     height: var(--space-24);
     min-width: var(--space-24);
     overflow: hidden;
-    padding-inline: calc(var(--space-4)/2);
+    padding-inline: calc(var(--space-4) + 1px) calc(var(--space-4) - 1px);
     position: relative;
     --custom-conjure-glow-radius: var(--custom-app-top-bar-item-radius)
 }
@@ -245,4 +250,4 @@
     color: Highlight
 }
 
-/*# sourceMappingURL=82a89849d906e5cb.css.map*/
+/*# sourceMappingURL=6fc5632963eff8fc.css.map*/

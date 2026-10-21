@@ -1,6 +1,6 @@
 _.exports = {
-    f_: "entry__8306d",
     NI: "slot__8306d",
+    f_: "entry__8306d",
     h5: "status__8306d",
     ho: "open__8306d",
     oT: "entryContent__8306d",
