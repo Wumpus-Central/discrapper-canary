@@ -26,4 +26,11 @@
     color: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=635098.d91dceab98acf98b.css.map*/
+.badgeWrapper_a7acae {
+    display: flex;
+    flex: 0 0 auto;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+/*# sourceMappingURL=635098.de5f390efcb9dcba.css.map*/

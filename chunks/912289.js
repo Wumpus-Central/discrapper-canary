@@ -2555,16 +2555,16 @@ function iw(e) {
             needSubscriptionToAccess: d,
             isNewChannel: c,
             muted: u,
-            resolvedUnreadSetting: g,
+            resolvedUnreadSetting: m,
         } = e,
-        A = (0, h.bG)([np.Ay], () => np.Ay.getMentionCount(t.id)),
-        f = (0, h.bG)([np.Ay], () => np.Ay.getIsMentionLowImportance(t.id)),
-        p = (0, ib.Ay)(t),
-        C = (0, h.bG)([O.A], () => !O.A.can(H.xBc.CONNECT, t)),
-        E = (0, ij.H)(t),
-        x = (0, h.bG)([lV.A], () => lV.A.hasVideo(t.id)),
-        N = (0, ix.qT)(t.id) && t.isGuildStageVoice(),
-        _ = (function (e) {
+        g = (0, h.bG)([np.Ay], () => np.Ay.getMentionCount(t.id)),
+        A = (0, h.bG)([np.Ay], () => np.Ay.getIsMentionLowImportance(t.id)),
+        f = (0, ib.Ay)(t),
+        p = (0, h.bG)([O.A], () => !O.A.can(H.xBc.CONNECT, t)),
+        C = (0, ij.H)(t),
+        E = (0, h.bG)([lV.A], () => lV.A.hasVideo(t.id)),
+        x = (0, ix.qT)(t.id) && t.isGuildStageVoice(),
+        N = (function (e) {
             let { channel: t, locked: n, video: l, selected: i } = e;
             return (
                 (function (e) {
@@ -2580,31 +2580,31 @@ function iw(e) {
                 !n &&
                 !i
             );
-        })({ channel: t, locked: C, video: (x || N) && null == E, selected: n }),
-        S = (0, h.bG)([iT.A], () => iT.A.getNewThreadCount(t.guild_id, t.id)),
-        I = (0, iG.ed)(t.guild_id, t.id),
-        b = (0, h.bG)([P.A], () => P.A.getGuild(t.guild_id)?.features.has(H.GuildFeatures.COMMUNITY) ?? !1);
-    if (lW(A)) return (0, r.jsx)(nb, { mentionsCount: A, isMentionLowImportance: f });
+        })({ channel: t, locked: p, video: (E || x) && null == C, selected: n }),
+        _ = (0, h.bG)([iT.A], () => iT.A.getNewThreadCount(t.guild_id, t.id)),
+        S = (0, iG.ed)(t.guild_id, t.id),
+        I = (0, h.bG)([P.A], () => P.A.getGuild(t.guild_id)?.features.has(H.GuildFeatures.COMMUNITY) ?? !1);
+    if (lW(g)) return (0, r.jsx)(nb, { mentionsCount: g, isMentionLowImportance: A });
     if (o) return (0, r.jsx)(iL, { locked: d });
     if (c) return (0, r.jsx)($.E, { type: "new", variant: "primary" });
-    if (!u && g === nN.e.ALL_MESSAGES && t.isForumLikeChannel() && null != S && S > 0)
+    if (!u && m === nN.e.ALL_MESSAGES && t.isForumLikeChannel() && null != _ && _ > 0)
         return (0, r.jsx)(e2.E, {
             variant: "text-xs/semibold",
             color: "text-brand",
             className: iO.O,
-            children: er.intl.format(er.t.GkAbqY, { count: (0, eA.Gu)(S) }),
+            children: er.intl.format(er.t.GkAbqY, { count: (0, eA.Gu)(_) }),
         });
-    if (!u && t.isForumLikeChannel() && null != I && I > 0)
-        return (0, r.jsx)(e2.E, { variant: "text-xs/semibold", color: "text-muted", children: (0, eA.Gu)(I) });
-    let j = i?.length ?? 0;
-    return null != s && s && _
-        ? (0, r.jsx)(lZ, { userCount: j, video: x || N, channel: t })
-        : l && (0, iM.t)(i) && b
-          ? (0, r.jsx)(eA.Lp, { text: er.intl.string(er.t.dI3q4h), color: m.A.unsafe_rawColors.RED_400.css })
-          : null != E
-            ? (0, r.jsx)(iv.z, { textColor: "text-feedback-positive", entry: { start: E } })
-            : null != a && a && p.length > 0
-              ? (0, r.jsx)(iP, { embeddedApps: p, muted: u })
+    if (!u && t.isForumLikeChannel() && null != S && S > 0)
+        return (0, r.jsx)(e2.E, { variant: "text-xs/semibold", color: "text-muted", children: (0, eA.Gu)(S) });
+    let b = i?.length ?? 0;
+    return null != s && s && N
+        ? (0, r.jsx)(lZ, { userCount: b, video: E || x, channel: t })
+        : l && (0, iM.t)(i) && I
+          ? (0, r.jsx)($.E, { type: { text: er.intl.string(er.t.dI3q4h) }, variant: "notification" })
+          : null != C
+            ? (0, r.jsx)(iv.z, { textColor: "text-feedback-positive", entry: { start: C } })
+            : null != a && a && f.length > 0
+              ? (0, r.jsx)(iP, { embeddedApps: f, muted: u })
               : null;
 }
 var iV = n(714619);
