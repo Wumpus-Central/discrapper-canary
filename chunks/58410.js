@@ -1,1 +1,15 @@
-_.exports = { z: "summary_a29799", zH: "details_a29799", R_: "heading_a29799", Vy: "display_a29799" };
+_.exports = {
+    z: "summary_a29799",
+    zH: "details_a29799",
+    R_: "heading_a29799",
+    Vy: "display_a29799",
+    M1: "stats_a29799",
+    dJ: "stat_a29799",
+    u4: "itemStat_a29799",
+    wk: "statNumber_a29799",
+    AS: "item_a29799",
+    TJ: "itemName_a29799",
+    Kk: "icon_a29799",
+    Gc: "unknownIcon_a29799",
+    Gt: "gameIcon_a29799",
+};
