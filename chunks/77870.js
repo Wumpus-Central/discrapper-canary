@@ -8,8 +8,8 @@
     Nb: () => e5,
     tZ: () => ex,
     pT: () => e2,
-    UH: () => e4,
-    $P: () => e9,
+    UH: () => e3,
+    $P: () => e8,
     YW: () => eU,
     zW: () => ez,
     NC: () => ep,
@@ -21,10 +21,10 @@
     FA: () => eJ,
     LS: () => eP,
     p5: () => e0,
-    Ns: () => e6,
+    Ns: () => e9,
     Iq: () => eO,
     Qh: () => em,
-    t9: () => e3,
+    t9: () => e4,
     RR: () => eK,
     XD: () => e7,
     ZP: () => eN,
@@ -80,7 +80,7 @@ var g = n(27620),
     M = n(975571),
     w = n(723702),
     k = n(158045);
-(n(695323), n(265704));
+(n(845890), n(265704));
 var D = n(178540),
     U = n(396813),
     Q = n(859703),
@@ -165,8 +165,8 @@ function ea(e, t, n, r) {
         c = e.userStatus?.enrolledAt != null,
         d = t.userStatus?.enrolledAt != null,
         f = 20 * b.A.Millis.MINUTE,
-        E = e8(e, f),
-        A = e8(t, f);
+        E = e6(e, f),
+        A = e6(t, f);
     if (l) {
         var _, C, I;
         let u,
@@ -352,7 +352,7 @@ function em(e) {
         C =
             ((t = (function () {
                 let e = (0, I.bG)([S.A], () => S.A.getQuestHomeHero()),
-                    { isShelfEnabled: t } = e3(e),
+                    { isShelfEnabled: t } = e4(e),
                     n = (0, I.bG)([h.default], () => h.default.getCurrentUser()?.id ?? null),
                     { enabled: r } = F.useConfig({ location: er.rE.QUEST_HOME_MOBILE }),
                     { enabled: u } = G.NN.useConfig({ location: er.rE.QUEST_HOME_MOBILE });
@@ -825,7 +825,7 @@ function e5() {
 function e7() {
     return o.useMemo(() => Object.keys(er.kL).map((e) => ({ label: (0, Y.Js)(er.kL[e]), value: er.kL[e] })), []);
 }
-function e9(e) {
+function e8(e) {
     let { selectedSortMethod: t, selectedFilters: n, numQuestsVisible: r } = e,
         u = o.useRef(null),
         i = o.useRef(null);
@@ -843,14 +843,14 @@ function e9(e) {
                 (i.current = e));
         }, [n, r]));
 }
-function e6(e) {
+function e9(e) {
     return o.useMemo(() => h.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
 }
-function e8(e, t) {
+function e6(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
-function e3(e) {
+function e4(e) {
     let t = (0, I.bG)([Q.A], () => Q.A.quests),
         n = e?.questIds;
     return o.useMemo(() => {
@@ -862,7 +862,7 @@ function e3(e) {
         return e.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: e, isShelfEnabled: !0 };
     }, [t, n]);
 }
-function e4(e) {
+function e3(e) {
     let t = P.H1.useSetting(),
         n = e.userStatus?.enrolledAt != null;
     return o.useCallback(() => {
