@@ -370,112 +370,194 @@
     width: 100%
 }
 
-.card_fa0187 {
+.characterColumn__1ab4e {
+    align-items: center;
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: center;
+    min-width: 0
+}
+
+.character__1ab4e {
+    flex-shrink: 0
+}
+
+.sm__1ab4e {
+    padding-bottom: var(--space-12)
+}
+
+.sm__1ab4e .character__1ab4e {
+    width: min(224px, 100% + 40px)
+}
+
+.lg__1ab4e {
+    padding-bottom: var(--space-24)
+}
+
+.lg__1ab4e .character__1ab4e {
+    width: min(448px, 100% + 80px)
+}
+
+.container__9aae4 {
     background: var(--custom-checkpoint-card-secondary) url(/assets/3315ebed311fec6c.png) center /cover;
     background-blend-mode: overlay;
     container-type: inline-size;
     display: flex;
     max-width: 100%;
-    min-height: 284px;
     overflow: hidden;
-    position: relative;
+    position: relative
+}
+
+.sm__9aae4 {
+    min-height: 284px;
     width: 200px
 }
 
-.characterAndStats_fa0187 {
-    width: 432px
+.lg__9aae4 {
+    min-height: 568px;
+    width: 400px
 }
 
-.logo_fa0187 {
+.logo__2f3bb {
+    background-color: var(--custom-checkpoint-card-primary);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
     display: grid;
-    height: var(--custom-checkpoint-card-logo-size);
     inset-inline-start: 0;
     place-items: center;
     position: absolute;
-    top: 0;
-    width: var(--custom-checkpoint-card-logo-size)
+    top: 0
 }
 
-.logo_fa0187,
-.wordmark_fa0187 {
-    background-color: var(--custom-checkpoint-card-primary)
+.sm__2f3bb {
+    height: 44px;
+    width: 44px
 }
 
-.wordmark_fa0187 {
+.sm__2f3bb .icon__2f3bb {
+    height: 30px;
+    width: 30px
+}
+
+.lg__2f3bb {
+    height: 88px;
+    width: 88px
+}
+
+.lg__2f3bb .icon__2f3bb {
+    height: 60px;
+    width: 60px
+}
+
+.powerBar__3de8a {
+    align-items: center;
+    background-color: var(--custom-checkpoint-card-tertiary);
+    inset-inline-start: 0;
+    position: absolute;
+    transform-origin: 0 0
+}
+
+.powerBar__3de8a,
+.units__3de8a {
+    display: flex
+}
+
+.unitUnfilled__3de8a {
+    opacity: .3
+}
+
+.sm__3de8a {
+    height: 18px;
+    padding-inline: var(--space-8);
+    top: 120px;
+    transform: translateX(18px) rotate(90deg)
+}
+
+.sm__3de8a .text__3de8a {
+    font-size: 10px;
+    line-height: 10px
+}
+
+.sm__3de8a .level__3de8a {
+    margin-inline-start: calc(var(--space-4)/2)
+}
+
+.sm__3de8a .units__3de8a {
+    margin-inline-start: var(--space-8)
+}
+
+.sm__3de8a .unit__3de8a {
+    height: 8px
+}
+
+.sm__3de8a .unit__3de8a+.unit__3de8a {
+    margin-inline-start: calc(var(--space-4)*-1)
+}
+
+.lg__3de8a {
+    height: 36px;
+    padding-inline: var(--space-16);
+    top: 240px;
+    transform: translateX(36px) rotate(90deg)
+}
+
+.lg__3de8a .text__3de8a {
+    font-size: 20px;
+    line-height: 20px
+}
+
+.lg__3de8a .level__3de8a {
+    margin-inline-start: var(--space-4)
+}
+
+.lg__3de8a .units__3de8a {
+    margin-inline-start: var(--space-16)
+}
+
+.lg__3de8a .unit__3de8a {
+    height: 16px
+}
+
+.lg__3de8a .unit__3de8a+.unit__3de8a {
+    margin-inline-start: calc(var(--space-8)*-1)
+}
+
+.wordmark__497ee {
+    background-color: var(--custom-checkpoint-card-primary);
     inset-inline-end: 0;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     position: absolute;
-    top: 0;
-    width: var(--custom-checkpoint-card-wordmark-width)
+    top: 0
 }
 
-.characterAndStats_fa0187 .wordmark_fa0187 {
-    inset-inline-end: min(calc(50% + var(--space-16)), calc(100% - var(--custom-checkpoint-card-logo-size) - var(--space-4) - var(--custom-checkpoint-card-wordmark-width)))
+.sm__497ee {
+    width: 44px
 }
 
-.wordmarkFull_fa0187 {
-    height: 103px;
+.lg__497ee {
+    width: 88px
+}
+
+.full__497ee {
+    aspect-ratio: 44/103;
     -webkit-mask-image: url(/assets/0bf5537ed55246e9.svg);
     mask-image: url(/assets/0bf5537ed55246e9.svg)
 }
 
-.wordmarkShort_fa0187 {
-    height: 49px;
+.short__497ee {
+    aspect-ratio: 44/49;
     -webkit-mask-image: url(/assets/f93f1b48604a8834.svg);
     mask-image: url(/assets/f93f1b48604a8834.svg)
 }
 
-.powerBar_fa0187 {
-    align-items: center;
-    background-color: var(--custom-checkpoint-card-tertiary);
-    display: flex;
-    height: 18px;
-    inset-inline-start: 0;
-    padding-inline: var(--space-8);
-    position: absolute;
-    top: 120px;
-    transform: translateX(18px) rotate(90deg);
-    transform-origin: 0 0
+.card_fa0187.characterAndStats_fa0187 {
+    width: 432px
 }
 
-.powerText_fa0187 {
-    font-size: 10px;
-    line-height: 10px
-}
-
-.powerLevel_fa0187 {
-    margin-inline-start: calc(var(--space-4)/2)
-}
-
-.powerUnits_fa0187 {
-    display: flex;
-    margin-inline-start: var(--space-8)
-}
-
-.powerUnit_fa0187+.powerUnit_fa0187 {
-    margin-inline-start: calc(var(--space-4)*-1)
-}
-
-.powerUnitUnfilled_fa0187 {
-    opacity: .3
-}
-
-.characterColumn_fa0187 {
-    align-items: center;
-    display: flex;
-    flex: 1 1 50%;
-    justify-content: center;
-    min-width: 0;
-    padding-bottom: var(--space-12)
-}
-
-.character_fa0187 {
-    flex-shrink: 0;
-    width: min(224px, 100% + 40px)
+.characterAndStats_fa0187 .wordmark_fa0187 {
+    inset-inline-end: min(calc(50% + var(--space-16)), calc(100% - var(--custom-checkpoint-card-logo-size) - var(--space-4) - var(--custom-checkpoint-card-wordmark-width)))
 }
 
 .stats_fa0187 {
@@ -552,4 +634,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=545934.fb700255ba41bb25.css.map*/
+/*# sourceMappingURL=355703.0a31e6ac00688905.css.map*/

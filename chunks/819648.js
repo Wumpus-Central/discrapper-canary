@@ -95,19 +95,19 @@ function p(e) {
     return { text: e, accessibilityLabel: e };
 }
 function T(e) {
-    let t;
+    var t;
+    let n;
     return {
-        powerLevel: new Intl.NumberFormat(A.intl.currentLocale, {
-            notation: "compact",
-            compactDisplay: "short",
-        }).format(e.powerLevel),
+        powerLevel:
+            ((t = e.powerLevel),
+            new Intl.NumberFormat(A.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(t)),
         powerLevelUnits: Math.min(Math.max(Math.round((e.powerLevelPercentile / 100) * u.w0), u.Qq), u.sh),
         voice: {
             text:
-                (t = Math.round(e.totalVoiceMinutes)) > 0
-                    ? (0, o.oO)(t)
-                    : A.intl.formatToPlainString(A.t.iXLF9W, { minutes: t }),
-            accessibilityLabel: A.intl.formatToPlainString(E.default.lw35aH, { duration: (0, o.GM)(t) }),
+                (n = Math.round(e.totalVoiceMinutes)) > 0
+                    ? (0, o.oO)(n)
+                    : A.intl.formatToPlainString(A.t.iXLF9W, { minutes: n }),
+            accessibilityLabel: A.intl.formatToPlainString(E.default.lw35aH, { duration: (0, o.GM)(n) }),
         },
         messages: {
             text:
