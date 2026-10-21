@@ -30,9 +30,13 @@ class d extends i.Ay.Store {
 }
 let o = new d(a.h, {
     GUILD_SPACE_EDIT_START: function (e) {
-        let { guildId: t, space: n } = e,
-            l = { header: n.header, widgets: (0, s.W$)(n.widgets) };
-        u[t] = { initialDraft: l, draft: l, saveStatus: "idle" };
+        let { guildId: t, space: n, seedWidgets: l = [] } = e,
+            r = { header: n.header, widgets: (0, s.W$)(n.widgets) };
+        u[t] = {
+            initialDraft: r,
+            draft: l.length > 0 ? { ...r, widgets: (0, s.W$)([...n.widgets, ...l]) } : r,
+            saveStatus: "idle",
+        };
     },
     GUILD_SPACE_EDIT_ADD_WIDGET: function (e) {
         let { guildId: t, widget: n, insertionTarget: l } = e,

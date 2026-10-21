@@ -353,10 +353,9 @@ function eL(e) {
                 (e.stopPropagation(),
                     (0, I.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("8422"),
                             n.e("37786"),
                             n.e("303807"),
-                            n.e("842987"),
+                            n.e("952831"),
                             n.e("421410"),
                         ]).then(n.bind(n, 643065));
                         return (n) => (0, r.jsx)(e, { ...n, guildId: t.id });

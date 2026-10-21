@@ -8,8 +8,16 @@ var l = n(636537),
     c = n(652215);
 let d = 0;
 function o(e) {
-    let t = s.A.getSpace(e);
-    null != t && r.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: t });
+    let t,
+        n = s.A.getSpace(e);
+    if (!(null == n || a.A.isEditing(e))) {
+        if (s.A.isSpaceMissing(e)) {
+            let n = i.A.getWidgets(e);
+            if (null == n && "error" !== i.A.getFetchStatus(e)) return;
+            t = (0, u.Ac)(n ?? []);
+        }
+        r.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: n, seedWidgets: t });
+    }
 }
 function f(e) {
     r.h.dispatch({ type: "GUILD_SPACE_EDIT_CANCEL", guildId: e });

@@ -18,6 +18,8 @@ async function p(t) {
         });
         i.h.dispatch({ type: "GUILD_SPACE_FETCH_SUCCESS", guildId: t, requestId: a, space: e });
     } catch (e) {
+        if (e instanceof r.oh && 404 === e.status)
+            return void i.h.dispatch({ type: "GUILD_SPACE_FETCH_NOT_FOUND", guildId: t, requestId: a });
         i.h.dispatch({ type: "GUILD_SPACE_FETCH_FAILURE", guildId: t, requestId: a, retryable: (0, n.a)(e) });
     }
 }
