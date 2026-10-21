@@ -2151,18 +2151,19 @@ function tJ(e) {
             activitySource: a,
             analyticsLocations: D = [],
             selectSource: P = !0,
+            onStreamStart: F,
         } = e,
-        F = (0, u.bG)([_.Ay], () => (null != r ? (_.Ay.getGameForPID(r) ?? void 0) : void 0)),
-        k = l.useRef(performance.now()),
-        H = (0, u.bG)(
+        k = (0, u.bG)([_.Ay], () => (null != r ? (_.Ay.getGameForPID(r) ?? void 0) : void 0)),
+        H = l.useRef(performance.now()),
+        Z = (0, u.bG)(
             [I.Ay],
             () =>
                 (I.Ay.getUseSystemScreensharePicker() || I.Ay.getUseGamescopeCapture()) &&
                 ((0, M.isLinux)() || ((0, M.isMac)() && c().satisfies(C.A?.os.release, eQ.WZ))),
         ),
-        { analyticsLocations: Z } = (0, E.Ay)(D, y.A.GO_LIVE_MODAL_V2),
-        B = (0, u.bG)([O.default], () => O.default.getCurrentUser()),
-        { state: V, dispatch: Q } = (function (e, t, s) {
+        { analyticsLocations: B } = (0, E.Ay)(D, y.A.GO_LIVE_MODAL_V2),
+        V = (0, u.bG)([O.default], () => O.default.getCurrentUser()),
+        { state: Q, dispatch: W } = (function (e, t, s) {
             let { defaultAutoQuality: i, allowAutoQuality: r } = (0, eN.X5)({ location: "useCreateGoLiveModalState" }),
                 { preset: n, resolution: a, fps: c, soundshareEnabled: o } = (0, u.cf)([eI.A], () => eI.A.getState());
             i && (n = eR.jQ.PRESET_AUTO);
@@ -2194,8 +2195,8 @@ function tJ(e) {
                 }, []),
                 { state: x, dispatch: p }
             );
-        })(a ?? F, B, td()),
-        W = (0, S.A)(P && (null != a || ((0, M.isWindows)() && null != F)) ? "confirm" : "source_select");
+        })(a ?? k, V, td()),
+        z = (0, S.A)(P && (null != a || ((0, M.isWindows)() && null != k)) ? "confirm" : "source_select");
     !(function (e, t) {
         let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = (0, u.bG)([_.Ay], () => _.Ay.getRunningGames().length > 0),
@@ -2220,56 +2221,56 @@ function tJ(e) {
                 }
             );
         }, [t, n, e, s]);
-    })(H, Q, "confirm" === W);
-    let z = !T.Ay.canStreamQuality(T.Ay.StreamQuality.HIGH, B),
-        q = !(0, M.isLinux)(),
-        X = "confirm" === W,
-        Y = !P && (null != F || null != a) && !X,
-        K = X || V.sourceType === d.fS.CAMERA,
-        $ = H && !X && V.sourceType !== d.fS.CAMERA,
-        J = l.useMemo(() => {
+    })(Z, W, "confirm" === z);
+    let q = !T.Ay.canStreamQuality(T.Ay.StreamQuality.HIGH, V),
+        X = !(0, M.isLinux)(),
+        Y = "confirm" === z,
+        K = !P && (null != k || null != a) && !Y,
+        $ = Y || Q.sourceType === d.fS.CAMERA,
+        J = Z && !Y && Q.sourceType !== d.fS.CAMERA,
+        ee = l.useMemo(() => {
             let e = [
                 { name: ec.intl.string(ec.t.tHoi7u), value: d.fS.WINDOW, icon: h.W },
                 { name: ec.intl.string(ec.t.MhJ43A), value: d.fS.CAMERA, icon: x.VideoIcon },
             ];
-            return (H || e.splice(1, 0, { name: ec.intl.string(ec.t.slM8rG), value: d.fS.SCREEN, icon: p.k }), e);
-        }, [H]),
-        { sourceType: ee } = V,
-        et = l.useCallback(
+            return (Z || e.splice(1, 0, { name: ec.intl.string(ec.t.slM8rG), value: d.fS.SCREEN, icon: p.k }), e);
+        }, [Z]),
+        { sourceType: et } = Q,
+        es = l.useCallback(
             async (e) => {
-                (w.wv.updateSetting(V.notifyFriends), w.uh.updateSetting(V.hidePreview));
+                (w.wv.updateSetting(Q.notifyFriends), w.uh.updateSetting(Q.hidePreview));
                 let [s, i] = await (0, b.A)(e.hasOwnProperty("pid") ? e.pid : e, {
-                    preset: V.preset,
-                    fps: V.fps,
-                    resolution: V.resolution,
-                    soundshareEnabled: !V.muteStreamAudio,
-                    previewDisabled: V.hidePreview,
-                    goLiveModalDurationMs: performance.now() - k.current,
-                    audioSourceId: V.audioSourceId,
-                    analyticsLocations: Z,
+                    preset: Q.preset,
+                    fps: Q.fps,
+                    resolution: Q.resolution,
+                    soundshareEnabled: !Q.muteStreamAudio,
+                    previewDisabled: Q.hidePreview,
+                    goLiveModalDurationMs: performance.now() - H.current,
+                    audioSourceId: Q.audioSourceId,
+                    analyticsLocations: B,
                 });
-                if (s) return t();
+                if (s) return (F?.(), t());
                 ("no permission" === i &&
                     v.A.show({ title: ec.intl.string(ec.t["X+mXeq"]), body: ec.intl.string(ec.t.MIJCzr) }),
                     t());
             },
-            [t, V, Z],
+            [t, F, Q, B],
         );
-    async function es(e) {
+    async function ei(e) {
         let t = await (0, A.A)({ channelId: e }),
-            s = a ?? F;
-        t && null != s && et(s);
+            s = a ?? k;
+        t && null != s && es(s);
     }
-    let ei = l.useCallback(() => {
-        et({
-            id: ("gamescope" === V.nativeSourceType ? "screen:" : "prepicked:") + V.nativeSourceType,
+    let el = l.useCallback(() => {
+        es({
+            id: ("gamescope" === Q.nativeSourceType ? "screen:" : "prepicked:") + Q.nativeSourceType,
             name: U.Ay.getLastPickedContentTitle() ?? ec.intl.string(ec.t.KKcy95),
             url: "",
         });
-    }, [et, V.nativeSourceType]);
+    }, [es, Q.nativeSourceType]);
     return (0, i.jsx)(eb, {
-        state: V,
-        dispatch: Q,
+        state: Q,
+        dispatch: W,
         children: (0, i.jsx)(m.d, {
             transitionState: s,
             onClose: t,
@@ -2278,18 +2279,18 @@ function tJ(e) {
                 impression: {
                     impressionName: o.ImpressionNames.GO_LIVE_MODAL,
                     impressionProperties: {
-                        location_stack: Z,
+                        location_stack: B,
                         application_id: (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A)?.id : void 0,
                         parent_media_session_id: N.A.getMediaSessionId(),
                     },
                 },
             },
             children: (0, i.jsxs)("div", {
-                className: n()(t$.zr, { [t$._g]: H && null == F && null == a, [t$.Tb]: Y, [t$.Fe]: X }),
+                className: n()(t$.zr, { [t$._g]: Z && null == k && null == a, [t$.Tb]: K, [t$.Fe]: Y }),
                 children: [
-                    Y
-                        ? (0, i.jsx)(eu, { className: n()(t$.or, t$.Ym), onSelectChannel: es })
-                        : X
+                    K
+                        ? (0, i.jsx)(eu, { className: n()(t$.or, t$.Ym), onSelectChannel: ei })
+                        : Y
                           ? (0, i.jsx)(eF, {})
                           : (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -2298,26 +2299,26 @@ function tJ(e) {
                                         children: (0, i.jsx)(j.I, {
                                             role: "tablist",
                                             className: t$.q0,
-                                            value: ee,
+                                            value: et,
                                             look: "pill",
                                             optionClassName: t$.LD,
                                             onChange: (e) => {
                                                 let { value: t } = e;
-                                                return Q({ type: "set_source_type", sourceType: t });
+                                                return W({ type: "set_source_type", sourceType: t });
                                             },
-                                            options: J,
+                                            options: ee,
                                         }),
                                     }),
                                     (0, i.jsx)(f.Ar, {
                                         className: t$.Qs,
                                         children:
-                                            H && ee !== d.fS.CAMERA
-                                                ? (0, i.jsx)(eX, { onSourceSelect: ei })
+                                            Z && et !== d.fS.CAMERA
+                                                ? (0, i.jsx)(eX, { onSourceSelect: el })
                                                 : (0, i.jsx)(e7, {
                                                       onClick: function (e) {
                                                           e.id?.startsWith(d.fS.CAMERA)
-                                                              ? Q({ type: "set_selected_source", source: e })
-                                                              : et(e);
+                                                              ? W({ type: "set_selected_source", source: e })
+                                                              : es(e);
                                                       },
                                                   }),
                                     }),
@@ -2333,35 +2334,35 @@ function tJ(e) {
                                     (0, i.jsxs)("div", {
                                         className: t$.gt,
                                         children: [
-                                            z && (0, i.jsx)(tw, { onClose: t }),
-                                            ($ || K) &&
+                                            q && (0, i.jsx)(tw, { onClose: t }),
+                                            (J || $) &&
                                                 (0, i.jsx)(g.$, {
                                                     variant: "primary",
                                                     size: "md",
                                                     text: ec.intl.string(
-                                                        $ && "gamescope" !== V.nativeSourceType
+                                                        J && "gamescope" !== Q.nativeSourceType
                                                             ? ec.t.FiBjwU
                                                             : ea.default["5AyH/p"],
                                                     ),
                                                     onClick: () => {
-                                                        $
-                                                            ? "gamescope" === V.nativeSourceType
-                                                                ? ei()
-                                                                : ((0, L.E)(), (0, L.a)(V.nativeSourceType))
-                                                            : null != V.selectedChannel
-                                                              ? es(V.selectedChannel)
-                                                              : null != V.selectedSource && et(V.selectedSource);
+                                                        J
+                                                            ? "gamescope" === Q.nativeSourceType
+                                                                ? el()
+                                                                : ((0, L.E)(), (0, L.a)(Q.nativeSourceType))
+                                                            : null != Q.selectedChannel
+                                                              ? ei(Q.selectedChannel)
+                                                              : null != Q.selectedSource && es(Q.selectedSource);
                                                     },
                                                     disabled:
-                                                        ($ && !q && "" === V.nativeSourceType) ||
-                                                        (K && null == V.selectedSource),
+                                                        (J && !X && "" === Q.nativeSourceType) ||
+                                                        ($ && null == Q.selectedSource),
                                                 }),
                                             (0, i.jsx)(tE, { align: "right" }),
                                         ],
                                     }),
                                 ],
                             }),
-                            z && (0, i.jsx)("div", { className: t$.rO, children: (0, i.jsx)(tD, { onClose: t }) }),
+                            q && (0, i.jsx)("div", { className: t$.rO, children: (0, i.jsx)(tD, { onClose: t }) }),
                         ],
                     }),
                 ],

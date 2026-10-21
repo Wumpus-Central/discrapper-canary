@@ -1,4 +1,4 @@
-i.d(e, { H: () => S, y: () => N });
+i.d(e, { H: () => N, y: () => _ });
 var n = i(477900),
     l = i(582128),
     a = i(17928),
@@ -16,8 +16,8 @@ var n = i(477900),
     g = i(309010),
     I = i(287809),
     E = i(753070),
-    _ = i(105292);
-function N(t) {
+    S = i(105292);
+function _(t) {
     let {
             pid: e,
             analyticsLocation: i,
@@ -29,50 +29,52 @@ function N(t) {
         d = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
         A = (0, a.bG)([f.A], () => f.A.getChannel(d), [d]),
         E = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
-        _ = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
-        N = (0, a.bG)([p.A, m.A], () => null != A && (0, u.vz)(A, p.A, m.A));
+        S = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
+        _ = (0, a.bG)([p.A, m.A], () => null != A && (0, u.vz)(A, p.A, m.A));
     return l.useCallback(async () => {
         await C({
             pid: e,
             voiceChannelId: d,
             user: E,
-            canGoLive: _,
-            canStream: N,
+            canGoLive: S,
+            canStream: _,
             analyticsLocation: i,
             allowOneClickGoLive: n,
             onBeforeShowModal: r,
             onOneClickGoLive: s,
             appContext: o,
         });
-    }, [e, d, E, _, N, i, n, r, s, o]);
+    }, [e, d, E, S, _, i, n, r, s, o]);
 }
-async function S(t) {
+async function N(t) {
     let {
             pid: e,
             analyticsLocation: i,
             allowOneClickGoLive: n = !1,
             onBeforeShowModal: l,
-            onOneClickGoLive: a,
-            appContext: r,
-            selectSource: s = !1,
+            onModalStreamStart: a,
+            onOneClickGoLive: r,
+            appContext: s,
+            selectSource: o = !1,
         } = t,
-        o = g.Ay.getVoiceChannelId(),
-        d = f.A.getChannel(o),
-        A = I.default.getCurrentUser(),
-        E = null != d && (0, u.vz)(d, p.A, m.A),
+        d = g.Ay.getVoiceChannelId(),
+        A = f.A.getChannel(d),
+        E = I.default.getCurrentUser(),
+        S = null != A && (0, u.vz)(A, p.A, m.A),
         _ = (0, c.A)(y.Ay);
     await C({
         pid: e,
-        voiceChannelId: o,
-        user: A,
+        voiceChannelId: d,
+        user: E,
         canGoLive: _,
-        canStream: E,
+        canStream: S,
         analyticsLocation: i,
         allowOneClickGoLive: n,
         onBeforeShowModal: l,
-        onOneClickGoLive: a,
-        appContext: r,
-        selectSource: s,
+        onModalStreamStart: a,
+        onOneClickGoLive: r,
+        appContext: s,
+        selectSource: o,
     });
 }
 async function C(t) {
@@ -84,9 +86,10 @@ async function C(t) {
         canStream: c,
         allowOneClickGoLive: f,
         onBeforeShowModal: p,
-        onOneClickGoLive: y,
-        appContext: m,
-        selectSource: g = !1,
+        onModalStreamStart: y,
+        onOneClickGoLive: m,
+        appContext: g,
+        selectSource: I = !1,
     } = t;
     if (u && c) {
         if (f && null !== l) {
@@ -96,10 +99,10 @@ async function C(t) {
                 t = e ? E.jQ.PRESET_AUTO : E.jQ.PRESET_VIDEO;
             }
             let [i] = await (0, d.A)(e, { preset: t });
-            if (i) return void y?.();
+            if (i) return void m?.();
         }
         if (null == a)
-            return void (0, r.P0)({ text: _.intl.string(_.t.OKnWyb), variant: "critical", surface: "overlay" });
+            return void (0, r.P0)({ text: S.intl.string(S.t.OKnWyb), variant: "critical", surface: "overlay" });
         (p?.(),
             (0, s.openModalLazy)(
                 async () => {
@@ -123,9 +126,9 @@ async function C(t) {
                         i.e("191782"),
                         i.e("190088"),
                     ]).then(i.bind(i, 266536));
-                    return (i) => (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: g });
+                    return (i) => (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: I, onStreamStart: y });
                 },
-                { contextKey: null != m ? (0, s.modalContextFromAppContext)(m) : void 0 },
+                { contextKey: null != g ? (0, s.modalContextFromAppContext)(g) : void 0 },
             ));
     }
 }

@@ -17,18 +17,11 @@ class _ extends r.A {
             let t = o.A.getPendingRequestForUser(e.userId);
             if (null == t) continue;
             let n = s.A.getMessage(e.channelId, t);
-            if (
-                n?.activity?.type !== u.xL.STREAM_REQUEST ||
-                n.application?.id == null ||
-                l.default.extractTimestamp(t) < Date.now() - c.M ||
-                null ==
-                    (0, d.nn)(e.userId, e.guildId).find(
-                        (e) => n.application?.id != null && e.application_id === n.application.id,
-                    )
-            )
-                continue;
-            let r = a.A.getStreamForUser(e.userId, e.guildId);
-            null != r && i.A9(r, { forceMultiple: !0, noFocus: !0 });
+            if (n?.activity?.type !== u.xL.STREAM_REQUEST || l.default.extractTimestamp(t) < Date.now() - c.M) continue;
+            let r = n.application?.id;
+            if (null != r && null == (0, d.nn)(e.userId, e.guildId).find((e) => e.application_id === r)) continue;
+            let _ = a.A.getStreamForUser(e.userId, e.guildId);
+            null != _ && i.A9(_, { forceMultiple: !0, noFocus: !0 });
         }
     }
 }
