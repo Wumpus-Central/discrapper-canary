@@ -2984,7 +2984,10 @@ class it {
         return e >= t - n - 2 && !this.props.messages.hasMoreAfter;
     }
     mergePropsAndUpdate(e) {
-        (this.mergePropsAndUpdate_(e), this.props.messages.ready && this.enableAutomaticAck());
+        let t = this.props.windowId;
+        (this.mergePropsAndUpdate_(e),
+            this.acking && t !== this.props.windowId && ((this.acking = !1), (0, l3.Z5)(this.props.channel.id, t)),
+            this.props.messages.ready && this.enableAutomaticAck());
     }
     mergePropsAndUpdate_(e) {
         let t = this.props.messages,

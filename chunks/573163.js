@@ -1490,7 +1490,8 @@ let e6 = new e5(_.h, {
                     if (null == n) return !1;
                     for (let e of n) if (t(e)) return !0;
                     return !1;
-                })(r, (e) => ei.A.isFocused(e));
+                })(r, (e) => ei.A.isFocused(e)) ||
+                eg.isAnyWindowFocused(r);
             if (E && eU(l) && !s) {
                 let e = eM(!0, l.channelId) ? er.JJy.OVERLAY : er.JJy.CHANNEL;
                 return l.ack({
