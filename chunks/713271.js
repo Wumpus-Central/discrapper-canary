@@ -1,6 +1,6 @@
-n.d(t, { N: () => r });
+n.d(t, { N: () => a });
 var i,
-    r =
+    a =
         (((i = {}).REFERRAL_PROGRAM = "referralProgram"),
         (i.SERVER_PROFILES = "serverProfiles"),
         (i.SHOW_YOUR_STYLE = "showYourStyle"),
@@ -17,4 +17,5 @@ var i,
         (i.YOUTUBE = "youtube"),
         (i.XBOX_PARTNER_PASS = "xboxPartnerPass"),
         (i.MACARON = "macaron"),
+        (i.CODE_BLURPLE = "codeBlurple"),
         i);

@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["Megszerezheted a Call of Duty: Modern Warfare 4-hez kapcsol\xf3d\xf3 exkluz\xedv tervrajzot, amely kifejezetten Nitro-tagoknak k\xe9sz\xfclt."],"yTYUJw":["Megszerezheted az exkluz\xedv MW4-tervrajzodat \u2013 kiz\xe1r\xf3lag a Nitr\xf3val."],"E1sPHw":["A Nitr\xf3val feldobhatod a felszerel\xe9sedet"],"6AbN1y":["Az els\u0151 m\xe9rk\u0151z\xe9st\u0151l kezdve kit\u0171nhetsz a t\xf6megb\u0151l. Ig\xe9nyeld az exkluz\xedv Blurple k\xf3d tervrajzot."],"xDMrVa":["Blurple k\xf3d"],"LUOF3v":["Kiz\xe1r\xf3lag Nitr\xf3val el\xe9rhet\u0151 Call of Duty: Modern Warfare 4-tervrajzot ig\xe9nyelhetsz. Bev\xe1lt\xe1si hat\xe1rid\u0151: ",[3,"date","short"],"."],"tm4caj":["Kiz\xe1r\xf3lag Nitr\xf3val el\xe9rhet\u0151 Call of Duty: Modern Warfare 4-tervrajzot ig\xe9nyelhetsz. Lej\xe1rati id\u0151: ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4 jutalom"]}',
 );

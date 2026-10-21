@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+i.exports = JSON.parse(
+    '{"py5vQi":["Gauk i\u0161skirtin\u012F Call of Duty: Modern Warfare 4 br\u0117\u017Ein\u012F, parengt\u0105 tik Nitro nariams."],"yTYUJw":["Gauk i\u0161skirtin\u012F MW4 br\u0117\u017Ein\u012F \u2013 tik su Nitro."],"E1sPHw":["\u012Etrauk Nitro \u012F savo arsenal\u0105"],"6AbN1y":["I\u0161siskirk i\u0161 minios nuo pat pirmos kovos. Gauk i\u0161skirtin\u012F br\u0117\u017Ein\u012F Code Blurple."],"xDMrVa":["Code Blurple"],"LUOF3v":["Gauk tik su Nitro pasiekiam\u0105 Call of Duty: Modern Warfare 4 br\u0117\u017Ein\u012F. Atsiimk iki ",[3,"date","short"],"."],"tm4caj":["Gauk tik su Nitro pasiekiam\u0105 Call of Duty: Modern Warfare 4 br\u0117\u017Ein\u012F. Galioja iki ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4 apdovanojimas"]}',
 );

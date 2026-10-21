@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["F\xe5 tak i en eksklusiv tegning til Call of Duty: Modern Warfare 4, som er laget spesielt for Nitro-medlemmer."],"yTYUJw":["F\xe5 en eksklusiv MW4-tegning. Bare med Nitro."],"E1sPHw":["Ta med Nitro p\xe5 oppdrag"],"6AbN1y":["Skill deg ut fra mengden allerede fra f\xf8rste trefning. Skaff deg den eksklusive Code Blurple-tegningen."],"xDMrVa":["Code Blurple"],"LUOF3v":["F\xe5 tak i en Call of Duty: Modern Warfare 4-tegning som bare er tilgjengelig med Nitro. M\xe5 hentes innen ",[3,"date","short"],"."],"tm4caj":["F\xe5 tak i en Call of Duty: Modern Warfare 4-tegning som bare er tilgjengelig med Nitro. Varer til ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4-premie"]}',
 );

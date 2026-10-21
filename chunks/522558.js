@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+t.exports = JSON.parse(
+    '{"py5vQi":["Nh\u1EADn blueprint cho Call of Duty: Modern Warfare 4 \u0111\u01B0\u1EE3c t\u1EA1o ri\xeang cho th\xe0nh vi\xean Nitro."],"yTYUJw":["Nh\u1EADn blueprint MW4 \u0111\u1ED9c quy\u1EC1n c\u1EE7a b\u1EA1n, ch\u1EC9 c\xf3 khi \u0111\u0103ng k\xfd Nitro."],"E1sPHw":["Th\xeam Nitro v\xe0o trang b\u1ECB c\u1EE7a b\u1EA1n"],"6AbN1y":["N\u1ED5i b\u1EADt gi\u1EEFa \u0111\xe1m \u0111\xf4ng ngay t\u1EEB tr\u1EADn \u0111\u1EA5u \u0111\u1EA7u ti\xean. Nh\u1EADn blueprint Code Blurple \u0111\u1ED9c quy\u1EC1n."],"xDMrVa":["Code Blurple"],"LUOF3v":["Nh\u1EADn m\u1ED9t blueprint Call of Duty: Modern Warfare 4 \u0111\u1ED9c quy\u1EC1n cho Nitro. \u0110\u1ED5i tr\u01B0\u1EDBc ",[3,"date","short"],"."],"tm4caj":["Nh\u1EADn m\u1ED9t blueprint Call of Duty: Modern Warfare 4 \u0111\u1ED9c quy\u1EC1n cho Nitro. H\u1EBFt h\u1EA1n ",[3,"expirationDate","short"],"."],"PFtZV6":["Ph\u1EA7n th\u01B0\u1EDFng Call of Duty: MW4"]}',
 );

@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+i.exports = JSON.parse(
+    '{"py5vQi":["Hanki ainutlaatuinen Call of Duty: Modern Warfare 4 -piirustus, joka on tehty vain Nitro-j\xe4senille."],"yTYUJw":["Saat ainutlaatuisen MW4-piirustuksen vain Nitrolla."],"E1sPHw":["Lis\xe4\xe4 Nitro varusteisiisi"],"6AbN1y":["Erotu joukosta ensimm\xe4isest\xe4 ottelustasi alkaen. Lunasta eksklusiivinen Koodi sinipurppura -piirustus."],"xDMrVa":["Koodi sinipurppura"],"LUOF3v":["Lunasta vain Nitro-tilaajille tarkoitettu Call of Duty: Modern Warfare 4 \u2011piirustus. Lunasta viimeist\xe4\xe4n ",[3,"date","short"],"."],"tm4caj":["Lunasta vain Nitro-tilaajille tarkoitettu Call of Duty: Modern Warfare 4 \u2011piirustus. Vanhenee ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4 \u2011palkinto"]}',
 );

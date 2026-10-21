@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["Ob\u021Bine schi\u021Ba exclusiv\u0103 pentru Call of Duty: Modern Warfare 4 creat\u0103 special pentru membrii Nitro."],"yTYUJw":["Ob\u021Bine schi\u021Ba exclusiv\u0103 MW4, numai cu Nitro."],"E1sPHw":["Adaug\u0103 Nitro la echipamentul t\u0103u"],"6AbN1y":["Ie\u0219i \xeen eviden\u021B\u0103 \xeenc\u0103 din primul meci. Revendic\u0103 schi\u021Ba exclusiv\u0103 Cod albastrolet."],"xDMrVa":["Cod albastrolet"],"LUOF3v":["Revendic\u0103 o schi\u021B\u0103 exclusiv\u0103 Nitro pentru Call of Duty: Modern Warfare 4. Ai timp p\xe2n\u0103 pe ",[3,"date","short"],"."],"tm4caj":["Revendic\u0103 o schi\u021B\u0103 exclusiv\u0103 Nitro pentru Call of Duty: Modern Warfare 4. Expir\u0103 pe ",[3,"expirationDate","short"],"."],"PFtZV6":["Recompens\u0103 Call of Duty: MW4"]}',
 );

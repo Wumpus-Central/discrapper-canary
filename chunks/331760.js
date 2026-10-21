@@ -1,4 +1,4 @@
-(s.r(p), s.d(p, { default: () => t }));
-let t = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+(t.r(r), t.d(r, { default: () => a }));
+let a = JSON.parse(
+    '{"py5vQi":["Get the exclusive blueprint for Call of Duty: Modern Warfare 4 made just for Nitro members."],"yTYUJw":["Get your exclusive MW4 blueprint, only with Nitro."],"E1sPHw":["Bring Nitro to your loadout"],"6AbN1y":["Stand out from the crowd starting from your first match. Claim the exclusive Code Blurple blueprint."],"xDMrVa":["Code Blurple"],"LUOF3v":["Claim a Nitro-exclusive Call of Duty: Modern Warfare 4 blueprint. Redeem by ",[3,"date","short"],"."],"tm4caj":["Claim a Nitro-exclusive Call of Duty: Modern Warfare 4 blueprint. Expires ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4 Reward"]}',
 );

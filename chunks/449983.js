@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+o.exports = JSON.parse(
+    '{"py5vQi":["Zdob\u0105d\u017A ekskluzywny schemat do Call of Duty: Modern Warfare 4 stworzony specjalnie dla cz\u0142onk\xf3w Nitro."],"yTYUJw":["Zdob\u0105d\u017A ekskluzywny schemat do MW4 \u2013 tylko z Nitro."],"E1sPHw":["Dodaj Nitro do swojego zestawu"],"6AbN1y":["Wyr\xf3\u017Cnij si\u0119 z t\u0142umu ju\u017C od pierwszego meczu. Odbierz ekskluzywny schemat Code Blurple."],"xDMrVa":["Code Blurple"],"LUOF3v":["Odbierz ekskluzywny schemat do Call of Duty: Modern Warfare 4 dost\u0119pny tylko z Nitro. Zrealizuj do ",[3,"date","short"],"."],"tm4caj":["Odbierz ekskluzywny schemat do Call of Duty: Modern Warfare 4 dost\u0119pny tylko z Nitro. Wygasa ",[3,"expirationDate","short"],"."],"PFtZV6":["Nagroda Call of Duty: MW4"]}',
 );

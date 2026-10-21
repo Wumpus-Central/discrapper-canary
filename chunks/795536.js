@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["Hol dir den exklusiven Bauplan f\xfcr Call of Duty: Modern Warfare\xa04, der speziell f\xfcr Nitro-Mitglieder erstellt wurde."],"yTYUJw":["Hol dir deinen exklusiven MW4-Bauplan, nur mit Nitro."],"E1sPHw":["F\xfcge Nitro deiner Ausr\xfcstung hinzu"],"6AbN1y":["Hebe dich schon ab deinem ersten Match von der Masse ab. Beanspruche den exklusiven Bauplan \u201ECode Blauolett\u201C."],"xDMrVa":["Code Blauolett"],"LUOF3v":["Beanspruche einen exklusiven Nitro-Bauplan f\xfcr Call of Duty: Modern Warfare\xa04. Einl\xf6sbar bis ",[3,"date","short"],"."],"tm4caj":["Beanspruche einen exklusiven Nitro-Bauplan f\xfcr Call of Duty: Modern Warfare\xa04. L\xe4uft ab: ",[3,"expirationDate","short"],"."],"PFtZV6":["Belohnung f\xfcr Call of Duty: MW4"]}',
 );

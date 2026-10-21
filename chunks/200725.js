@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["De exclusieve blauwdruk van Call of Duty: Modern Warfare 4 is beschikbaar, speciaal gemaakt voor Nitro-leden."],"yTYUJw":["Een exclusieve MW4-blauwdruk, alleen met Nitro."],"E1sPHw":["Geef je outfit een Nitro-injectie"],"6AbN1y":["Val op tussen de menigte vanaf jouw eerste wedstrijd. Claim de exclusieve Code-Blurple-blauwdruk."],"xDMrVa":["Code Blurple"],"LUOF3v":["Claim een exclusieve Nitro-blauwdruk voor Call of Duty: Modern Warfare 4. Verzilveren voor ",[3,"date","short"],"."],"tm4caj":["Claim een exclusieve Nitro-blauwdruk voor Call of Duty: Modern Warfare 4. Verloopt op ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4-beloning"]}',
 );

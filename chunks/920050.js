@@ -62,4 +62,4 @@ let l = "badge",
     L = "nitroFileUpload1gb",
     y = "riotCreditCampaign",
     U = "rust3PP",
-    M = "codeBlurple";
+    M = "callOfDutyBlueprint";

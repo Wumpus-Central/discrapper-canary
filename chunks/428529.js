@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+o.exports = JSON.parse(
+    '{"py5vQi":["Z\xedskej exkluzivn\xed pl\xe1n do Call of Duty: Modern Warfare 4 vytvo\u0159en\xfd jen pro \u010Dleny Nitra."],"yTYUJw":["Z\xedskej sv\u016Fj exkluzivn\xed pl\xe1n do MW4, pouze s\xa0Nitrem."],"E1sPHw":["P\u0159idej si do v\xfdbavy Discord Nitro"],"6AbN1y":["Vy\u010Dn\xedvej z\xa0davu u\u017E od prvn\xed bitvy. Vyzvedni si exkluzivn\xed pl\xe1n K\xf3d Modrofialov\xe1."],"xDMrVa":["K\xf3d Modrofialov\xe1"],"LUOF3v":["Vyzvedni si exkluzivn\xed pl\xe1n pro Call of Duty: Modern Warfare 4 d\xedky Nitru. M\xe1\u0161 \u010Das do ",[3,"date","short"],"."],"tm4caj":["Vyzvedni si exkluzivn\xed pl\xe1n pro Call of Duty: Modern Warfare 4 d\xedky Nitru. Nab\xeddka plat\xed do ",[3,"expirationDate","short"],"."],"PFtZV6":["Odm\u011Bna Call of Duty: MW4"]}',
 );

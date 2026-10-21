@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["F\xe5 det eksklusive blueprint til Call of Duty: Modern Warfare 4, der er lavet s\xe6rligt til Nitro-medlemmer."],"yTYUJw":["F\xe5 dit eksklusive MW4-blueprint, kun med Nitro."],"E1sPHw":["Bring Nitro til dit udstyr"],"6AbN1y":["Skil dig ud fra m\xe6ngden fra din f\xf8rste kamp. Hent det eksklusive Kode bl\xe5violet-blueprint."],"xDMrVa":["Kode bl\xe5violet"],"LUOF3v":["Hent et Call of Duty: Modern Warfare 4-blueprint, kun med Nitro. Indl\xf8s senest ",[3,"date","short"],"."],"tm4caj":["Hent et Call of Duty: Modern Warfare 4-blueprintt, kun med Nitro. Udl\xf8ber den ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4-bel\xf8nning"]}',
 );

@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["Consigue el plano exclusivo de Call of Duty: Modern Warfare 4 creado especialmente para miembros de Nitro."],"yTYUJw":["Consigue tu plano exclusivo de MW4, solo con Nitro."],"E1sPHw":["Lleva Nitro a tu equipamiento"],"6AbN1y":["Destaca entre la multitud desde tu primera partida. Obt\xe9n el exclusivo plano C\xf3digo Azul Viol\xe1ceo."],"xDMrVa":["C\xf3digo Azul Viol\xe1ceo"],"LUOF3v":["Obt\xe9n un plano exclusivo de Nitro para Call of Duty: Modern Warfare 4. Canj\xe9alo antes del ",[3,"date","short"],"."],"tm4caj":["Obt\xe9n un plano exclusivo de Nitro para Call of Duty: Modern Warfare 4. Caduca el ",[3,"expirationDate","short"],"."],"PFtZV6":["Recompensa de Call of Duty: MW4"]}',
 );

@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+a.exports = JSON.parse(
+    '{"py5vQi":["Skaffa den exklusiva ritningen f\xf6r Call of Duty: Modern Warfare 4, skapad s\xe4rskilt f\xf6r Nitro-medlemmar."],"yTYUJw":["Skaffa din exklusiva MW4-ritning, endast med Nitro."],"E1sPHw":["L\xe4gg till Nitro i din arsenal"],"6AbN1y":["Stick ut fr\xe5n m\xe4ngden redan fr\xe5n din f\xf6rsta match. H\xe4mta den exklusiva ritningen \u201DKod bl\xe5lila\u201D."],"xDMrVa":["Kod bl\xe5lila"],"LUOF3v":["H\xe4mta en Nitro-exklusiv ritning f\xf6r Call of Duty: Modern Warfare 4. L\xf6s in senast ",[3,"date","short"],"."],"tm4caj":["H\xe4mta en Nitro-exklusiv ritning f\xf6r Call of Duty: Modern Warfare 4. G\xe5r ut ",[3,"expirationDate","short"],"."],"PFtZV6":["Call of Duty: MW4-bel\xf6ning"]}',
 );

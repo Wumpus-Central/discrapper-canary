@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+a.exports = JSON.parse(
+    '{"py5vQi":["Yaln\u0131zca Nitro \xfcyelerine \xf6zel Call of Duty: Modern Warfare 4 plan\u0131n\u0131 al."],"yTYUJw":["\xd6zel MW4 plan\u0131n\u0131 yaln\u0131zca Nitro ile al."],"E1sPHw":["Nitro\'yu ekipman\u0131na ekle"],"6AbN1y":["\u0130lk ma\xe7\u0131ndan itibaren kalabal\u0131\u011F\u0131n aras\u0131ndan s\u0131yr\u0131l. \xd6zel Kod Mavimor plan\u0131n\u0131 al."],"xDMrVa":["Kod Mavimor"],"LUOF3v":["Nitro\'ya \xf6zel bir Call of Duty: Modern Warfare 4 plan\u0131n\u0131 al. ",[3,"date","short"]," tarihine kadar kullan."],"tm4caj":["Nitro\'ya \xf6zel bir Call of Duty: Modern Warfare 4 plan\u0131n\u0131 al. ",[3,"expirationDate","short"]," tarihinde sona erecek."],"PFtZV6":["Call of Duty: MW4 \xd6d\xfcl\xfc"]}',
 );

@@ -6229,6 +6229,7 @@ var rQ =
         (eQ.CUSTOM_TYPING_INDICATOR = "42962943077271"),
         (eQ.BUY_GIFT_CARDS = "41159846304279"),
         (eQ.BEST_BUY_PROMOTION = "39188406147479"),
+        (eQ.CODE_BLURPLE_PROMOTION = "39188406147479-Nitro-Rewards#h_01M4Y7XV7016H1S3QY1S2JA1NC"),
         eQ),
     rJ = (((eJ = {}).INVALID_BILLING_ADDRESS = "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618"), eJ);
 let r0 = "cdn.discordapp.com",

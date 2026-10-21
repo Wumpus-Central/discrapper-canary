@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"py5vQi":["py5vQi"],"yTYUJw":["yTYUJw"],"E1sPHw":["E1sPHw"],"6AbN1y":["6AbN1y"],"xDMrVa":["xDMrVa"],"LUOF3v":["LUOF3v"],"tm4caj":["tm4caj"],"PFtZV6":["PFtZV6"]}',
+e.exports = JSON.parse(
+    '{"py5vQi":["Obtenha um projeto no Call of Duty: Modern Warfare 4, exclusivo para assinantes do Nitro."],"yTYUJw":["Obtenha um projeto exclusivo no MW4, apenas com Nitro."],"E1sPHw":["Carregue Nitro junto com o seu equipamento"],"6AbN1y":["Destaque-se desde a sua primeira partida. Resgate o exclusivo projeto C\xf3digo Azoxo."],"xDMrVa":["C\xf3digo Azoxo"],"LUOF3v":["Resgate um projeto exclusivo do Nitro para Call of Duty: Modern Warfare 4. Resgate at\xe9 ",[3,"date","short"],"."],"tm4caj":["Resgate um projeto exclusivo do Nitro para Call of Duty: Modern Warfare 4. Expira em ",[3,"expirationDate","short"],"."],"PFtZV6":["Recompensa de Call of Duty: MW4"]}',
 );

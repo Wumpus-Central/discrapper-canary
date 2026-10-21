@@ -1,3 +1,4 @@
-n.d(t, { k: () => i, n: () => l });
+n.d(t, { AQ: () => r, kX: () => i, nj: () => a });
 let i = new Date(2026, 9, 23),
-    l = "codeBlurpleTeaser";
+    a = "codeBlurpleTeaser",
+    r = new Date(2027, 7, 6);
