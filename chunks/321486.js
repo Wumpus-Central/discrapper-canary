@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(562153),
     I = n(218394),
     N = n(920639),
-    E = n(393371),
-    v = n(360627),
+    v = n(393371),
+    E = n(360627),
     b = n(809369),
     S = n(652215),
     _ = n(270103),
@@ -46,7 +46,7 @@ function U(e) {
             [t],
         ),
         [D, V] = l.useState({ streamKey: U[0] ?? null, sequence: 0 }),
-        [k, G] = l.useState(!1),
+        [G, k] = l.useState(!1),
         [B, F] = l.useState(!1),
         z = Math.max(
             0,
@@ -68,10 +68,10 @@ function U(e) {
             V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [W]);
     l.useEffect(() => {
-        if (!Y || !Z || k || $) return;
+        if (!Y || !Z || G || $) return;
         let e = setTimeout(et, O);
         return () => clearTimeout(e);
-    }, [Y, Z, k, $, et]);
+    }, [Y, Z, G, $, et]);
     let en = l.useCallback(() => {
             ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
         }, [H]),
@@ -85,10 +85,10 @@ function U(e) {
             config: L,
         });
     function ea() {
-        G(!0);
+        k(!0);
     }
     function es() {
-        (G(!1), F(!1));
+        (k(!1), F(!1));
     }
     return (0, i.jsxs)("div", {
         className: s()(R.VH, { [R.ke]: $ }),
@@ -98,7 +98,7 @@ function U(e) {
         onFocus: ea,
         onBlur: es,
         children: [
-            (0, i.jsx)(v.A, {
+            (0, i.jsx)(E.A, {
                 title: q,
                 image: (0, i.jsx)(d.eu, { src: X?.getAvatarURL(K.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: B,
@@ -115,7 +115,7 @@ function U(e) {
                                 (0, i.jsx)(r.animated.div, {
                                     className: R.G8,
                                     style: e,
-                                    children: (0, i.jsx)(E.A, { stream: t, previewClassName: R.oz }),
+                                    children: (0, i.jsx)(v.A, { stream: t, previewClassName: R.oz }),
                                 }),
                             ),
                         }),

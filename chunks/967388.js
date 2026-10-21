@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(446243),
     I = n(920639),
     N = n(538638),
-    E = n(781137),
-    v = n(544299),
+    v = n(781137),
+    E = n(544299),
     b = n(270103),
     S = n(105292),
     _ = n(905322),
@@ -34,7 +34,7 @@ function R(e) {
         M = (0, r.bG)([x.A], () => x.A.getChannel(t)?.guild_id),
         w = (0, r.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t, [t]),
         U = (0, j.tx)(M, t, P),
-        D = (0, v.Sb)({
+        D = (0, E.Sb)({
             position: n.position,
             targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
         });
@@ -52,7 +52,7 @@ function R(e) {
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
                       ...D,
-                      children: (0, i.jsx)(E.A, { roomWidth: a }),
+                      children: (0, i.jsx)(v.A, { roomWidth: a }),
                   }),
                   (0, i.jsxs)(o.x, {
                       shouldShow: R,

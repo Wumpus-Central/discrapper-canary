@@ -42,11 +42,11 @@ function k(e) {
                 (A?.secrets ?? []).map((e) => ({ ...e, def: F.find((t) => t.key === e.name && "secret" === t.type) })),
             [F, A],
         ),
-        U = F.filter((e) => "secret" !== e.type),
-        B = new Map(W.map((e) => [e.name, e])),
-        O = (n ?? []).filter((e) => U.some((t) => t.key === e) || B.has(e)),
-        q = O.length > 0,
-        z = O.some((e) => B.has(e)),
+        q = F.filter((e) => "secret" !== e.type),
+        U = new Map(W.map((e) => [e.name, e])),
+        B = (n ?? []).filter((e) => q.some((t) => t.key === e) || U.has(e)),
+        O = B.length > 0,
+        z = B.some((e) => U.has(e)),
         $ = i.useMemo(() => {
             let e = {};
             for (let [n, l] of Object.entries(k.values)) {
@@ -276,7 +276,7 @@ function k(e) {
                     : null,
                 null == A
                     ? (0, l.jsx)("div", { className: S.kZ, children: (0, l.jsx)(c.y, {}) })
-                    : 0 === U.length && 0 === W.length
+                    : 0 === q.length && 0 === W.length
                       ? (0, l.jsx)(u.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
@@ -285,7 +285,7 @@ function k(e) {
                       : null,
                 null == A
                     ? null
-                    : q
+                    : O
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
                                 z
@@ -296,15 +296,15 @@ function k(e) {
                                           children: w.intl.string(j.default.dsHRPK),
                                       })
                                     : null,
-                                O.map(function (e) {
-                                    let t = B.get(e);
+                                B.map(function (e) {
+                                    let t = U.get(e);
                                     if (null != t) return X(t);
-                                    let n = U.find((t) => t.key === e);
+                                    let n = q.find((t) => t.key === e);
                                     return null == n ? null : H(n);
                                 }),
                             ],
                         })
-                      : U.map(H),
+                      : q.map(H),
                 J,
             ],
         }),
@@ -326,11 +326,11 @@ function k(e) {
             fields: K,
             secretFields: ee,
             loaded: null != A,
-            valueCount: U.length,
+            valueCount: q.length,
             secretCount: W.length,
             canSave: V,
             saving: N,
-            isScoped: q,
+            isScoped: O,
             submit: Y,
         }),
     });

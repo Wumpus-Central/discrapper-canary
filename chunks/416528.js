@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(360729),
     I = n(410828),
     N = n(51082),
-    E = n(275731),
-    v = n(289552),
+    v = n(275731),
+    E = n(289552),
     b = n(246356),
     S = n(977851),
     _ = n(204651),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(485296),
     D = n(198052),
     V = n(546871),
-    k = n(195007),
-    G = n(806931),
+    G = n(195007),
+    k = n(806931),
     B = n(105292),
     F = n(270103),
     z = n(547368);
@@ -46,7 +46,7 @@ function H(e) {
             let e = Date.now();
             return s()(U.A.getSpeakers())
                 .map((e) => D.A.getParticipant(t, e))
-                .filter((e) => null != e && e.type === G.lp.USER && e.speaking && !(0, N.Ay)(e))
+                .filter((e) => null != e && e.type === k.lp.USER && e.speaking && !(0, N.Ay)(e))
                 .sortBy((t) => -U.A.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -132,15 +132,15 @@ function W(e) {
                 ),
             ),
         U &&
-            (Z?.type === G.lp.STREAM
+            (Z?.type === k.lp.STREAM
                 ? eo.push((0, i.jsx)(V.A, { channel: t, focusedParticipant: Z }, "stream-participants"))
-                : Z?.type === G.lp.ACTIVITY &&
+                : Z?.type === k.lp.ACTIVITY &&
                   null != R &&
                   eo.push((0, i.jsx)(V.A, { channel: t, focusedParticipant: Z }, "activity-participants"))),
         q && eo.push((0, i.jsx)(H, { channelId: X, guildId: t.guild_id }, "current-speaker")),
         eo.push((0, i.jsx)(x.A, { className: z.x6, channelId: X }, "clips-enabled-indicator")),
-        Z?.type === G.lp.STREAM &&
-            (eo.push((0, i.jsx)(E.A, { className: z.x6, participant: Z }, "warning")),
+        Z?.type === k.lp.STREAM &&
+            (eo.push((0, i.jsx)(v.A, { className: z.x6, participant: Z }, "warning")),
             eo.push(
                 (0, i.jsx)(
                     g.A,
@@ -148,7 +148,7 @@ function W(e) {
                     "live-indicator",
                 ),
             )),
-        Z?.type === G.lp.USER && eo.push((0, i.jsx)(v.A, { className: z.x6, userId: Z.id }, "video-warning")),
+        Z?.type === k.lp.USER && eo.push((0, i.jsx)(E.A, { className: z.x6, userId: Z.id }, "video-warning")),
         q &&
             eo.push(
                 (0, i.jsx)(
@@ -156,7 +156,7 @@ function W(e) {
                     {
                         targetElementRef: $,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(b.A, { children: (0, i.jsx)(k.A, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(b.A, { children: (0, i.jsx)(G.A, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, l.createElement)(T.A, {

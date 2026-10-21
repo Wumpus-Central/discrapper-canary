@@ -48,17 +48,17 @@ let A = function (e) {
             listPadding: C,
             rowCount: x,
             getScrollOffsetForIndex: T,
-            categoryHeight: j,
-            onScroll: y,
-            renderCategoryListItem: O,
+            categoryHeight: y,
+            onScroll: O,
+            renderCategoryListItem: j,
             rowCountBySection: S,
             renderSection: b,
             navId: R,
             itemIdPrefix: v,
         } = e,
         L = d.useStore((e) => e.activeCategoryIndex),
-        P = null != R && null != v,
-        { itemIdForIndex: M, parseIndex: D } = s.useMemo(() => g(v ?? "expression-category-"), [v]),
+        M = null != R && null != v,
+        { itemIdForIndex: P, parseIndex: D } = s.useMemo(() => g(v ?? "expression-category-"), [v]),
         w = (function (e) {
             let {
                     navId: t,
@@ -134,20 +134,20 @@ let A = function (e) {
                     let e = E(r) ?? g.current;
                     null == e || e >= l - 1 || N(e + 1, !0);
                 }, [N, r, l]),
-                j = s.useCallback(() => {
+                y = s.useCallback(() => {
                     let e = E(r) ?? g.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, r]),
-                y = (0, u.Ay)({
+                O = (0, u.Ay)({
                     id: t,
                     isEnabled: p,
                     setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: x,
                     onNavigateNextAtEnd: T,
-                    onNavigatePreviousAtStart: j,
+                    onNavigatePreviousAtStart: y,
                 }),
-                O = y.setFocus;
+                j = O.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= l) return;
@@ -156,24 +156,24 @@ let A = function (e) {
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), O(i(a)));
+                                ((g.current = a), j(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, c, i, O, l]),
-                y
+                }, [a, n, c, i, j, l]),
+                O
             );
         })({
             navId: R ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: M,
+            itemIdForIndex: P,
             parseIndex: D,
             rowCount: x,
             activeIndex: L,
             getScrollOffsetForIndex: T,
-            enabled: P,
+            enabled: M,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
@@ -198,11 +198,11 @@ let A = function (e) {
             },
             [n, d],
         ),
-        U = s.useCallback((e) => O(r[e], e, () => k(e), L === e), [L, r, k, O]),
-        G = s.useMemo(() => ("function" == typeof j ? (e) => j(r[e], e) : j), [r, j]),
+        U = s.useCallback((e) => j(r[e], e, () => k(e), L === e), [L, r, k, j]),
+        G = s.useMemo(() => ("function" == typeof y ? (e) => y(r[e], e) : y), [r, y]),
         F = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: y,
+            onScroll: O,
             ref: t,
             renderRow: U,
             rowCount: x,
@@ -210,13 +210,13 @@ let A = function (e) {
             hideScrollbar: !0,
             rowCountBySection: S,
             renderSection: b,
-            role: P ? "none presentation" : void 0,
+            role: M ? "none presentation" : void 0,
         }),
         J = (0, i.jsxs)("div", {
             className: l()(p.iE, { [p.bx]: null != _ }, N),
             children: [
                 _,
-                P
+                M
                     ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
@@ -227,5 +227,5 @@ let A = function (e) {
                 A?.(k),
             ],
         });
-    return P ? (0, i.jsx)(a.hD, { navigator: w, children: J }) : J;
+    return M ? (0, i.jsx)(a.hD, { navigator: w, children: J }) : J;
 };

@@ -1,23 +1,23 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
     a = n.n(l),
     r = n(900002),
     o = n(113278);
-function d(e) {
-    let { children: t, "aria-label": n, className: l, position: d, delay: c, lineClamp: u = 1, ...m } = e,
+function c(e) {
+    let { children: t, "aria-label": n, className: l, position: c, delay: d, lineClamp: u = 1, ...m } = e,
         x = s.useRef(null),
-        j = n ?? ("string" == typeof t && t),
-        h = {};
+        h = n ?? ("string" == typeof t && t),
+        j = {};
     return (
-        null != u && u > 1 && (h = { lineClamp: u, WebkitLineClamp: u }),
+        null != u && u > 1 && (j = { lineClamp: u, WebkitLineClamp: u }),
         (0, i.jsx)(r.ST, {
             ...m,
-            position: d ?? "top",
-            delay: c ?? 500,
+            position: c ?? "top",
+            delay: d ?? 500,
             text: t,
-            "aria-label": j,
+            "aria-label": h,
             children: (n) => {
                 let { onMouseEnter: s, onMouseLeave: r } = n;
                 return (0, i.jsx)("div", {
@@ -32,7 +32,7 @@ function d(e) {
                             s?.();
                     },
                     onMouseLeave: r,
-                    style: h,
+                    style: j,
                     children: t,
                 });
             },

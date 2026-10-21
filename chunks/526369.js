@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(686502),
     I = n(175203),
     N = n(263854),
-    E = n(652215),
-    v = n(886179);
+    v = n(652215),
+    E = n(886179);
 function b(e) {
     let {
             participants: t,
@@ -34,7 +34,7 @@ function b(e) {
             totalNumberOfParticipants: O,
             popoutType: L,
         } = e,
-        P = (0, f.Us)() === E.BRT.POPOUT,
+        P = (0, f.Us)() === v.BRT.POPOUT,
         M = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
         { dismissedActivityEntryPointTileChannel: w } = (0, N.P)(),
         U = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
@@ -51,8 +51,8 @@ function b(e) {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [_.id, w]);
-    let k = (0, r.bG)([j.A], () => _.isPrivate() || (0, A.K)(j.A, M, _), [M, _]),
-        G = M?.afkChannelId === _.id,
+    let G = (0, r.bG)([j.A], () => _.isPrivate() || (0, A.K)(j.A, M, _), [M, _]),
+        k = M?.afkChannelId === _.id,
         B = _.userLimit <= 0 || _.userLimit > 1,
         F = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(_.id).length <= 0),
         z = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
@@ -65,7 +65,7 @@ function b(e) {
                     {
                         participant: e,
                         channel: _,
-                        className: v.V,
+                        className: E.V,
                         onClick: n,
                         onDoubleClick: b,
                         onContextMenu: S,
@@ -80,7 +80,7 @@ function b(e) {
         {
             type: a.ImpressionTypes.VIEW,
             name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
-            properties: { total_participants: O, can_invite: k, is_afk_channel: G, channel_user_limit: _.userLimit },
+            properties: { total_participants: O, can_invite: G, is_afk_channel: k, channel_user_limit: _.userLimit },
         },
         { trackOnInitialLoad: !0 },
         [],
@@ -88,7 +88,7 @@ function b(e) {
     let $ = F && !H,
         [K, X] = (0, p._)();
     null != M &&
-        !G &&
+        !k &&
         !_.isGuildStageVoice() &&
         (K
             ? Y.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: X }, "clips-video-call-tile"))
@@ -105,7 +105,7 @@ function b(e) {
                 )
               : B &&
                 1 === U &&
-                k &&
+                G &&
                 Y.push((e) =>
                     (0, i.jsx)(y.y, {
                         channel: _,

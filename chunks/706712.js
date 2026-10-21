@@ -1,8 +1,8 @@
 n.d(t, { Ay: () => O, DQ: () => T, Dj: () => C, F5: () => j, Jc: () => E, L6: () => x, ZX: () => _, km: () => v });
 var i = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
     a = n(17928);
 if (588245 != n.j) var o = n(834730);
 if (588245 != n.j) var d = n(866665);
@@ -20,93 +20,93 @@ let x = 1e3 / 60,
     I = Math.ceil(3e3 / (1e3 / 60));
 function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-        i = r.useRef(null),
-        l = r.useRef(null),
-        s = r.useRef(null),
-        a = r.useRef(n ?? window);
-    r.useEffect(() => {
+        i = l.useRef(null),
+        r = l.useRef(null),
+        s = l.useRef(null),
+        a = l.useRef(n ?? window);
+    l.useEffect(() => {
         a.current = n ?? window;
     }, [n]);
-    let o = r.useCallback(() => {
+    let o = l.useCallback(() => {
             (null != i.current && a.current.clearInterval(i.current),
-                null != l.current && a.current.cancelIdleCallback(l.current),
+                null != r.current && a.current.cancelIdleCallback(r.current),
                 null != s.current && a.current.cancelAnimationFrame(s.current));
         }, []),
-        d = r.useCallback(() => {
+        d = l.useCallback(() => {
             i.current = a.current.setTimeout(() => {
-                ((l.current = a.current.requestIdleCallback(e)),
+                ((r.current = a.current.requestIdleCallback(e)),
                     (s.current = a.current.requestAnimationFrame(() => {
                         (t(), d());
                     })));
             }, 12);
         }, [e, t]);
     return [
-        r.useCallback(() => {
+        l.useCallback(() => {
             (o(), d());
         }, [o, d]),
         o,
     ];
 }
 function j(e) {
-    let t = r.useRef(Array(I).fill(0)),
-        n = r.useRef(performance.now()),
-        i = r.useRef(0),
-        l = r.useRef(0),
-        s = r.useRef(0),
+    let t = l.useRef(Array(I).fill(0)),
+        n = l.useRef(performance.now()),
+        i = l.useRef(0),
+        r = l.useRef(0),
+        s = l.useRef(0),
         a = e.dispatcher.getIsSchedulerBackgrounded(),
-        o = r.useRef(a);
+        o = l.useRef(a);
     o.current = a;
-    let d = r.useRef(a ? performance.now() : 0);
+    let d = l.useRef(a ? performance.now() : 0);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             e.dispatcher.getIsSchedulerBackgrounded() && (d.current = performance.now());
         }),
         [
-            r.useCallback(function () {
+            l.useCallback(function () {
                 let e = performance.now(),
-                    r = e - n.current;
+                    l = e - n.current;
                 ((n.current = e),
                     o.current ||
                         ((i.current -= t.current[s.current]),
-                        (t.current[s.current] = r),
-                        (i.current += r),
-                        l.current < I && (l.current += 1),
+                        (t.current[s.current] = l),
+                        (i.current += l),
+                        r.current < I && (r.current += 1),
                         (s.current = (s.current + 1) % I)));
             }, []),
             function (e, t) {
-                let n = l.current ?? 1;
+                let n = r.current ?? 1;
                 return Math.abs(e * t - (i.current / n) * n) / t;
             },
             function () {
-                ((i.current = 0), (l.current = 0), t.current.fill(0), (n.current = performance.now()), (s.current = 0));
+                ((i.current = 0), (r.current = 0), t.current.fill(0), (n.current = performance.now()), (s.current = 0));
             },
         ]
     );
 }
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = r.useRef(Array(I).fill(0)),
-        l = r.useRef(performance.now()),
-        s = r.useRef(0),
-        a = r.useRef(0),
-        o = r.useRef(0),
-        d = r.useRef(0),
-        u = r.useRef(0),
-        c = r.useRef(0),
-        h = r.useCallback(() => {
+        i = l.useRef(Array(I).fill(0)),
+        r = l.useRef(performance.now()),
+        s = l.useRef(0),
+        a = l.useRef(0),
+        o = l.useRef(0),
+        d = l.useRef(0),
+        u = l.useRef(0),
+        c = l.useRef(0),
+        h = l.useCallback(() => {
             (i.current.fill(0),
                 (s.current = 0),
                 (a.current = 0),
                 (d.current = 0),
                 (u.current = 0),
-                (l.current = performance.now()),
+                (r.current = performance.now()),
                 (o.current = 0));
         }, []),
-        m = r.useCallback(
+        m = l.useCallback(
             function () {
-                let r = performance.now(),
-                    h = r - l.current;
-                if (((l.current = r), t.current && !n)) return;
+                let l = performance.now(),
+                    h = l - r.current;
+                if (((r.current = l), t.current && !n)) return;
                 if (
                     ((a.current -= i.current[u.current]),
                     (i.current[u.current] = h),
@@ -139,11 +139,11 @@ function C(e, t) {
 }
 function T(e) {
     let t = e.dispatcher.getIsSchedulerBackgrounded(),
-        n = r.useRef(t);
+        n = l.useRef(t);
     n.current = t;
-    let i = r.useRef(t ? performance.now() : 0);
+    let i = l.useRef(t ? performance.now() : 0);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             e.dispatcher.getIsSchedulerBackgrounded() && (i.current = performance.now());
         }),
         [n, i]
@@ -151,7 +151,7 @@ function T(e) {
 }
 function y(e) {
     let { socket: t, isAverageFrameTime: n } = e,
-        [l, s] = T(t),
+        [r, s] = T(t),
         {
             currentFPS: a,
             averageFrameTime: c,
@@ -161,7 +161,7 @@ function y(e) {
             renderedFrameCount: A,
             bufferFramecountRef: S,
             frameCheckerEffect: I,
-        } = C(n, l),
+        } = C(n, r),
         [y, b, w] = j(t),
         [N, _] = v(y, I),
         O = performance.now() - s.current < E,
@@ -174,7 +174,7 @@ function y(e) {
             }
         ),
     );
-    let M = r.useCallback(() => {
+    let M = l.useCallback(() => {
         (g(), w(), N());
     }, [g, w, N]);
     return (0, i.jsxs)("div", {
@@ -296,11 +296,11 @@ function y(e) {
     });
 }
 function b(e) {
-    let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
-        [s, a] = r.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
-        o = r.useRef(null);
+    let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: r } = e,
+        [s, a] = l.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
+        o = l.useRef(null);
     return (
-        r.useEffect(
+        l.useEffect(
             () => (
                 (o.current = setInterval(() => {
                     a(t.dispatcher.getIsRequestIdleCallbackEnabled());
@@ -318,7 +318,7 @@ function b(e) {
                     position: "left",
                     text: "Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.",
                     asContainer: !0,
-                    children: (0, i.jsx)(c.S, { label: "Use Average Frame Time", checked: n, onChange: () => l(!n) }),
+                    children: (0, i.jsx)(c.S, { label: "Use Average Frame Time", checked: n, onChange: () => r(!n) }),
                 }),
                 (0, i.jsx)(c.S, {
                     label: "Enable New Dispatch Scheduler (requestIdleCallback)",
@@ -335,15 +335,15 @@ function b(e) {
 function w(e) {
     let { socket: t } = e,
         n = t.dispatcher.getDispatchTimings(),
-        [l, a] = r.useState(!1);
+        [r, a] = l.useState(!1);
     return (0, i.jsxs)("div", {
         className: p.st,
         children: [
             (0, i.jsx)("div", {
-                className: s()(l && p.Mq),
-                children: (0, i.jsx)(c.S, { label: "Show Dispatch Timings", checked: l, onChange: () => a((e) => !e) }),
+                className: s()(r && p.Mq),
+                children: (0, i.jsx)(c.S, { label: "Show Dispatch Timings", checked: r, onChange: () => a((e) => !e) }),
             }),
-            l
+            r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(o.E, {
@@ -354,7 +354,7 @@ function w(e) {
                           (0, i.jsx)("table", {
                               cellPadding: 4,
                               children: Object.entries(n).map((e) => {
-                                  let [t, [n, r]] = e;
+                                  let [t, [n, l]] = e;
                                   return (0, i.jsxs)(
                                       "tr",
                                       {
@@ -379,7 +379,7 @@ function w(e) {
                                                       tag: "span",
                                                       variant: "text-xs/normal",
                                                       color: "text-muted",
-                                                      children: ["(count: ", r, ")"],
+                                                      children: ["(count: ", l, ")"],
                                                   }),
                                               }),
                                           ],
@@ -397,8 +397,8 @@ function w(e) {
 function N(e) {
     let { socket: t } = e,
         n = t.dispatcher.getSchedulerTelemetry(),
-        [l, a] = r.useState(n.isTelemetryEnabled),
-        [d, h] = r.useState(n.isTelemetryEnabled);
+        [r, a] = l.useState(n.isTelemetryEnabled),
+        [d, h] = l.useState(n.isTelemetryEnabled);
     function m(e) {
         (h(e), n.toggleTelemetry(e));
     }
@@ -407,10 +407,10 @@ function N(e) {
         children: [
             (0, i.jsx)(c.S, { label: "Enable Dispatch Telemetry", checked: d, onChange: () => m(!d) }),
             (0, i.jsx)("div", {
-                className: s()(l && p.Mq),
+                className: s()(r && p.Mq),
                 children: (0, i.jsx)(c.S, {
                     label: "Show Dispatch Scheduler Telemetry",
-                    checked: l,
+                    checked: r,
                     onChange: function () {
                         a((e) => {
                             let t = !e;
@@ -419,7 +419,7 @@ function N(e) {
                     },
                 }),
             }),
-            l
+            r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(o.E, {
@@ -474,8 +474,8 @@ function N(e) {
     });
 }
 function _() {
-    let [, e] = r.useState({});
-    r.useEffect(() => {
+    let [, e] = l.useState({});
+    l.useEffect(() => {
         let t = setInterval(() => {
             e({});
         }, A);
@@ -486,7 +486,7 @@ function _() {
 }
 function O() {
     let e = (0, a.bG)([g.A], () => g.A.getSocket()),
-        [t, n] = r.useState(!1);
+        [t, n] = l.useState(!1);
     return (
         _(),
         (0, i.jsx)("div", {

@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(360729),
     I = n(544299),
     N = n(270103),
-    E = n(105292),
-    v = n(96674),
+    v = n(105292),
+    E = n(96674),
     b = n(880872),
     S = n(849351),
     _ = n(572316),
@@ -98,14 +98,14 @@ function M(e) {
                 (0, f.Xh)(t, n, a.objectId, { object_type: j.N.PLANT }).catch((e) => (0, g.b)()),
                 (0, x.Ql)({ guildId: t, channelId: n, interactionType: "plant_watered" }));
         }, [a, t, n, m]),
-        L = (0, I.Sb)({ position: { x: o.x, y: 100 - o.y }, targetLabel: E.intl.string(R[m].alt) });
+        L = (0, I.Sb)({ position: { x: o.x, y: 100 - o.y }, targetLabel: v.intl.string(R[m].alt) });
     return (0, i.jsxs)(d.D, {
-        className: s()(v.CV, v.AA, h && v.r9),
+        className: s()(E.CV, E.AA, h && E.r9),
         style: { left: `${o.x}%`, bottom: `${o.y}%`, width: `${p}px` },
         onClick: h ? void 0 : O,
         "aria-disabled": h && null == L,
         role: "listitem",
-        "aria-label": E.intl.string(R[m].alt),
+        "aria-label": v.intl.string(R[m].alt),
         ...L,
         children: [
             S((e, t) => {
@@ -113,7 +113,7 @@ function M(e) {
                     { src: l, heightPx: a } = R[t],
                     o = t === m;
                 return (0, i.jsx)(r.animated.img, {
-                    className: s()(v.zs, { [v.tB]: !o, [v.eA]: t === C }),
+                    className: s()(E.zs, { [E.tB]: !o, [E.eA]: t === C }),
                     style: {
                         opacity: e.opacity,
                         ...(t === C
@@ -127,20 +127,20 @@ function M(e) {
                     draggable: !1,
                 });
             }),
-            (0, i.jsx)("img", { className: v.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: E.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
         ],
     });
 }
 function w(e) {
     let { plantPosition: t, plantWidth: n } = e;
     return (0, i.jsxs)("div", {
-        className: v.CV,
+        className: E.CV,
         role: "listitem",
-        "aria-label": E.intl.string(N.default.IrukuA),
+        "aria-label": v.intl.string(N.default.IrukuA),
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
-            (0, i.jsx)("img", { className: v.zs, src: _.A, alt: "", "aria-hidden": !0, draggable: !1 }),
-            (0, i.jsx)("img", { className: v.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: E.zs, src: _.A, alt: "", "aria-hidden": !0, draggable: !1 }),
+            (0, i.jsx)("img", { className: E.tB, src: T.A, alt: "", "aria-hidden": !0, draggable: !1 }),
         ],
     });
 }

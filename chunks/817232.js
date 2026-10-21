@@ -5,21 +5,21 @@ var i = n(477900),
     a = n.n(l),
     r = n(739822),
     o = n(837381),
-    d = n(17928),
-    c = n(451988),
+    c = n(17928),
+    d = n(451988),
     u = n(661531),
     m = n(866665),
     x = n(939249),
-    j = n(983851),
-    h = n(27232),
+    h = n(983851),
+    j = n(27232),
     g = n(505930),
     p = n(782134),
     I = n(194261),
     N = n(307301),
     b = n(834730),
     f = n(890856),
-    v = n(565645),
-    A = n(775602),
+    A = n(565645),
+    v = n(775602),
     E = n(688810),
     C = n(21161),
     S = n(850992),
@@ -33,9 +33,9 @@ var i = n(477900),
     R = n(178226);
 function L(e) {
     let { sound: t, containerDimensions: n, ref: l } = e,
-        a = (0, d.bG)([_.default], () => _.default.getCurrentUser()),
-        r = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        [o, c] = s.useState([]),
+        a = (0, c.bG)([_.default], () => _.default.getCurrentUser()),
+        r = (0, c.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        [o, d] = s.useState([]),
         u = o.length < 50,
         m = t?.emojiId != null || t?.emojiName != null,
         x = s.useCallback(() => {
@@ -45,12 +45,12 @@ function L(e) {
                     i = G.B.PREMIUM,
                     s = (0, T.random)(k.Bf[i].length, !1),
                     l = { id: (0, y.A)(), animationId: s, animationType: i, shouldResize: n, url: e, userId: a.id };
-                c((e) => [...e, l]);
+                d((e) => [...e, l]);
             }
         }, [r, u, m, a, t]);
     s.useImperativeHandle(l, () => ({ addAnimation: x }));
-    let j = s.useCallback((e) => {
-        c((t) => {
+    let h = s.useCallback((e) => {
+        d((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
             return (n.splice(i, 1), n);
@@ -61,7 +61,7 @@ function L(e) {
         : (0, i.jsx)("div", {
               className: R.z,
               style: { width: n.width, height: n.height },
-              children: o.map((e) => (0, i.jsx)(P.A, { containerDimensions: n, effect: e, onComplete: j }, e.id)),
+              children: o.map((e) => (0, i.jsx)(P.A, { containerDimensions: n, effect: e, onComplete: h }, e.id)),
           });
 }
 var D = n(885386),
@@ -114,7 +114,7 @@ function ee(e) {
 }
 function et(e) {
     let { sound: t, previewSound: n, disabled: s = !1, tooltipPosition: l = "top" } = e,
-        a = (0, d.bG)([M.A], () => M.A.getGuildId());
+        a = (0, c.bG)([M.A], () => M.A.getGuildId());
     return (0, i.jsx)(ee, {
         tooltipPosition: l,
         disabled: s,
@@ -130,13 +130,13 @@ function et(e) {
                 n());
         },
         text: $.intl.formatToPlainString($.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
-        children: (0, i.jsx)(j.H, { size: "md", color: "currentColor", className: Q.Wo }),
+        children: (0, i.jsx)(h.H, { size: "md", color: "currentColor", className: Q.Wo }),
     });
 }
 function en(e) {
     let { sound: t, disabled: n = !1 } = e,
         { analyticsLocations: l } = (0, E.Ay)(),
-        r = (0, d.bG)([z.A], () => z.A.isFavoriteSound(t.soundId), [t.soundId]),
+        r = (0, c.bG)([z.A], () => z.A.isFavoriteSound(t.soundId), [t.soundId]),
         o = s.useCallback(
             (e) => {
                 (e.stopPropagation(),
@@ -153,7 +153,7 @@ function en(e) {
         onClick: o,
         text: $.intl.formatToPlainString(r ? $.t.lQLsjc : $.t.Y5DOs4, { emojiName: t.emojiName, soundName: t.name }),
         children: r
-            ? (0, i.jsx)(h.StarIcon, {
+            ? (0, i.jsx)(j.StarIcon, {
                   size: "xs",
                   className: a()(Q.Wo, Q.gj),
                   color: u.A.unsafe_rawColors.PLATFORM_GOLD.css,
@@ -166,8 +166,8 @@ function ei(e) {
     let u,
         {
             sound: x,
-            channel: j,
-            containerClassName: h,
+            channel: h,
+            containerClassName: j,
             className: g,
             focused: E,
             forceSecondaryActions: T = !1,
@@ -189,21 +189,21 @@ function ei(e) {
             isLastFavoriteSound: ea = !1,
             onFavoriteSoundDrop: er,
             disableActiveStyles: eo = !1,
-            ref: ed,
-            ...ec
+            ref: ec,
+            ...ed
         } = e,
         { name: eu, emojiId: em, emojiName: ex } = x,
-        ej = (0, d.bG)([_.default], () => _.default.getCurrentUser()),
-        eh = (0, X.v)(x, j?.guild_id),
+        eh = (0, c.bG)([_.default], () => _.default.getCurrentUser()),
+        ej = (0, X.v)(x, h?.guild_id),
         {
             playSoundboardSound: eg,
             previewSound: ep,
             isPlayingSound: eI,
         } = (0, V.A)(
             x,
-            j?.id ?? null,
+            h?.id ?? null,
             (q ? D.HO.getSetting() : D.dG.getSetting()?.volume) ?? 100,
-            !q && j?.isVocal() ? Z.a.VOICE : Z.a.DEFAULT,
+            !q && h?.isVocal() ? Z.a.VOICE : Z.a.DEFAULT,
         ),
         { createMultipleConfettiAt: eN } = s.useContext(C.x),
         eb = s.useRef(null),
@@ -215,9 +215,9 @@ function ei(e) {
                 let e = n.getBoundingClientRect();
                 return { x: e.left + e.width / 2, y: e.top + e.height / 2 };
             }, [n, t])),
-        ev = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        eA = s.useRef(0.01),
-        eE = s.useRef(new c.IX()),
+        eA = (0, c.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        ev = s.useRef(0.01),
+        eE = s.useRef(new d.IX()),
         eC = "1" === x.soundId,
         eS = `sound-${x.soundId}`,
         eO = (0, o.rm)(eS),
@@ -229,12 +229,12 @@ function ei(e) {
         }),
         ek = s.useCallback(
             (e) => {
-                (ey(e), "function" == typeof ed ? ed(e) : null != ed && (ed.current = e));
+                (ey(e), "function" == typeof ec ? ec(e) : null != ec && (ec.current = e));
             },
-            [ey, ed],
+            [ey, ec],
         ),
         eP = null != em || null != ex,
-        e_ = !(0, B.Ir)(ej, x, j) && !q,
+        e_ = !(0, B.Ir)(eh, x, h) && !q,
         eG = T || (k && !e_),
         eR = S.LW.useStore().bottomPosition ?? 0,
         eL = eb.current?.getBoundingClientRect().bottom ?? 0,
@@ -248,9 +248,9 @@ function ei(e) {
         ez = e_ && U;
     function eJ(e) {
         (eC &&
-            !ev &&
-            ((eA.current = Math.min(eA.current + 0.01, 0.1)),
-            Math.random() < eA.current && eN(ef.x, ef.y, void 0, void 0, { sprite: Y.dR })),
+            !eA &&
+            ((ev.current = Math.min(ev.current + 0.01, 0.1)),
+            Math.random() < ev.current && eN(ef.x, ef.y, void 0, void 0, { sprite: Y.dR })),
         null != R)
             ? R(e)
             : P || eg(M);
@@ -281,7 +281,7 @@ function ei(e) {
         return (
             eC &&
                 e.start(1e3, () => {
-                    eA.current = Math.max(eA.current - 0.01, 0.01);
+                    ev.current = Math.max(ev.current - 0.01, 0.01);
                 }),
             () => e.stop()
         );
@@ -293,7 +293,7 @@ function ei(e) {
             : { width: u.width, height: u.height });
     return (0, i.jsxs)("li", {
         ref: ek,
-        className: a()(Q.H, h, { [Q.cB]: el && eT }),
+        className: a()(Q.H, j, { [Q.cB]: el && eT }),
         onMouseEnter: G,
         children: [
             el &&
@@ -310,7 +310,7 @@ function ei(e) {
                 shouldShow: !eD,
                 delay: 500,
                 children: (0, i.jsxs)(f.s, {
-                    ...ec,
+                    ...ed,
                     buttonProps: { ...eO, id: eS, role: "button" },
                     "aria-label": $.intl.formatToPlainString($.t.tuMUJ2, { emojiName: x.emojiName, soundName: x.name }),
                     className: a()(
@@ -331,14 +331,14 @@ function ei(e) {
                     onClick: (e) => {
                         eJ?.(e);
                     },
-                    onContextMenu: k && !e_ ? eh : void 0,
+                    onContextMenu: k && !e_ ? ej : void 0,
                     children: [
                         (0, i.jsxs)("div", {
                             className: a()(Q.KM, { [Q.hn]: eP }),
                             "aria-hidden": !0,
                             ref: eb,
                             children: [
-                                eP && (0, i.jsx)(v.A, { emojiId: em, emojiName: ex, className: Q.Zg }),
+                                eP && (0, i.jsx)(A.A, { emojiId: em, emojiName: ex, className: Q.Zg }),
                                 (0, i.jsx)(b.E, {
                                     variant: "text-xs/medium",
                                     color: y ? void 0 : "text-muted",
@@ -407,7 +407,7 @@ function ei(e) {
                                                           w === J.If.SOUNDMOJI
                                                               ? (0, i.jsx)(O.Ay, {
                                                                     sound: x,
-                                                                    channel: j,
+                                                                    channel: h,
                                                                     setTooltipShowing: eM,
                                                                     renderSoundButton: es,
                                                                 })

@@ -21,20 +21,20 @@ function x(e) {
         y = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
         I = (0, a.bG)([d.A], () => d.A.getNotes(t).length >= 20),
         N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
-        E = l.useRef(null),
-        v = l.useCallback(() => {
-            E.current?.focus();
+        v = l.useRef(null),
+        E = l.useCallback(() => {
+            v.current?.focus();
         }, []),
         b = (0, h.Y1)(t);
     l.useEffect(() => {
         if (b)
             return (
-                o._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, v),
+                o._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E),
                 () => {
-                    o._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, v);
+                    o._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E);
                 }
             );
-    }, [b, v]);
+    }, [b, E]);
     let S = l.useCallback(() => {
         (0, c.WT)(t);
     }, [t]);
@@ -46,7 +46,7 @@ function x(e) {
               width: g,
               disabled: !N || y || I,
               onClick: S,
-              innerRef: E,
+              innerRef: v,
           })
         : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: x, width: g });
 }

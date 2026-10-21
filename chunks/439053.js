@@ -1,22 +1,22 @@
-n.d(e, { A: () => g });
-var i = n(477900);
-n(582128);
-var l = n(503698),
-    s = n.n(l),
-    r = n(941143),
-    a = n(17928),
-    d = n(866323),
-    u = n(252392),
-    o = n(775602),
-    c = n(679492),
-    A = n(518477),
-    f = n(105292),
-    m = n(988199);
+i.d(e, { A: () => g });
+var n = i(477900);
+i(582128);
+var l = i(503698),
+    s = i.n(l),
+    r = i(941143),
+    a = i(17928),
+    d = i(866323),
+    o = i(252392),
+    u = i(775602),
+    c = i(679492),
+    A = i(518477),
+    f = i(105292),
+    m = i(988199);
 let g = (t) => {
     let { className: e } = t,
-        { interactionTypeSent: n, showInteractionToast: l } = (0, c.Pq)(),
-        g = n === A.AQ.REPLY ? f.intl.string(f.t.BPaiaa) : f.intl.string(f.t.Ry2EtG),
-        E = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        { interactionTypeSent: i, showInteractionToast: l } = (0, c.Pq)(),
+        g = i === A.AQ.REPLY ? f.intl.string(f.t.BPaiaa) : f.intl.string(f.t.Ry2EtG),
+        E = (0, a.bG)([u.Ay], () => u.Ay.useReducedMotion),
         h = (0, d.p)(
             l,
             {
@@ -28,17 +28,17 @@ let g = (t) => {
             },
             "animate-always",
         );
-    return (0, i.jsx)(i.Fragment, {
+    return (0, n.jsx)(n.Fragment, {
         children: h(
             (t, l) =>
                 l &&
-                (0, i.jsx)(r.animated.div, {
+                (0, n.jsx)(r.animated.div, {
                     className: s()(m.J, e),
                     style: t,
                     children:
-                        null != n
-                            ? (0, i.jsx)(u.y, { text: g, variant: "success" })
-                            : (0, i.jsx)(u.y, { text: f.intl.string(f.t.tcARX0) }),
+                        null != i
+                            ? (0, n.jsx)(o.y, { text: g, variant: "success" })
+                            : (0, n.jsx)(o.y, { text: f.intl.string(f.t.tcARX0) }),
                 }),
         ),
     });

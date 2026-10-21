@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => v });
 var i = n(477900),
     l = n(582128),
     a = n(991690),
@@ -20,7 +20,7 @@ var i = n(477900),
     y = n(389036),
     I = n(105292),
     N = n(649914);
-function E(e) {
+function v(e) {
     var t, n;
     let l,
         a,
@@ -42,11 +42,11 @@ function E(e) {
         children: (0, i.jsx)("div", {
             ref: m,
             className: N.dw,
-            children: (0, i.jsx)(v, { applicationId: c, channelId: d, guildId: u, overlay: C }),
+            children: (0, i.jsx)(E, { applicationId: c, channelId: d, guildId: u, overlay: C }),
         }),
     });
 }
-function v(e) {
+function E(e) {
     let { applicationId: t, channelId: n, guildId: s, overlay: r } = e,
         o = l.useMemo(() => ({ type: a.U.VOICE_CHANNEL, channelId: n, guildId: s }), [n, s]),
         x = (0, C.w)((0, f.Us)()),

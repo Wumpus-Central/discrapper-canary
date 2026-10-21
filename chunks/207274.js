@@ -31,7 +31,7 @@ function N(e) {
     }, [p]);
     let m = (0, s.bG)([o.A], () => o.A.getSound("0", "1"));
     return p && null != m
-        ? (0, i.jsx)(E, { channelId: t, asset: d.asset, position: n, width: d.width, sound: m })
+        ? (0, i.jsx)(v, { channelId: t, asset: d.asset, position: n, width: d.width, sound: m })
         : (0, i.jsx)(g.c, {
               asset: d.asset,
               label: y.intl.string(j.default["93KE7U"]),
@@ -40,25 +40,25 @@ function N(e) {
               className: I.L,
           });
 }
-function E(e) {
+function v(e) {
     let { channelId: t, asset: n, position: a, width: r, sound: o } = e,
         f = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
         x = (0, s.bG)([u.A], () => u.A.getChannel(t)),
         C = (0, s.bG)([h.Ay], () => h.Ay.isDeaf()),
         N = (0, s.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
-        { playSoundboardSound: E } = (0, d.A)(o, t),
-        v = N && (0, c.Ir)(f, o, x) && (0, c.Au)(x) && !C,
+        { playSoundboardSound: v } = (0, d.A)(o, t),
+        E = N && (0, c.Ir)(f, o, x) && (0, c.Au)(x) && !C,
         b = l.useCallback(() => {
-            E();
+            v();
             let e = x?.id;
             null != e && (0, A.n0)({ interactionType: "duck_quacked", channelId: e });
-        }, [E, x?.id]);
+        }, [v, x?.id]);
     return (0, i.jsx)(g.A, {
         asset: n,
         label: y.intl.string(j.default["93KE7U"]),
         position: a,
         width: r,
-        disabled: !v,
+        disabled: !E,
         onClick: b,
         className: I.L,
     });

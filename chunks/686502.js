@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(964486),
     I = n(648027),
     N = n(855446),
-    E = n(793574),
-    v = n(688810),
+    v = n(793574),
+    E = n(688810),
     b = n(975412),
     S = n(392054),
     _ = n(826673),
@@ -45,13 +45,13 @@ function U(e) {
     return l < 250
         ? (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
-          ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+          ? (0, i.jsx)(G, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
           : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
 function D(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(v.f5, {
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(E.f5, {
         value: a,
         children: (0, i.jsxs)(O.A, {
             className: M.zr,
@@ -100,7 +100,7 @@ function V(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.openModalLazy)(
             async () => {
@@ -125,7 +125,7 @@ function V(e) {
             analyticsLocation: d,
         });
     }
-    return (0, i.jsx)(v.f5, {
+    return (0, i.jsx)(E.f5, {
         value: c,
         children: (0, i.jsx)(h.N, {
             disableAdaptiveTheme: !0,
@@ -159,7 +159,7 @@ function V(e) {
         }),
     });
 }
-function k(e) {
+function G(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
     (0, y.Ay)(() => {
         R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -168,9 +168,9 @@ function k(e) {
         });
     });
     let u = (0, I.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: h } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(v.f5, {
+    return (0, i.jsx)(E.f5, {
         value: h,
         children: (0, i.jsxs)(O.A, {
             className: M.zr,

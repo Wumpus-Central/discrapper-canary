@@ -1,7 +1,7 @@
 (n.d(t, { P$: () => c, c3: () => u }), n(321073));
 var i = n(132500),
-    r = n(5463),
-    l = n(897720),
+    l = n(5463),
+    r = n(897720),
     s = n(644434),
     a = n(652215);
 function o(e, t) {
@@ -22,7 +22,7 @@ function u(e) {
     }
     let p = new Set();
     for (let e of s) {
-        if (!(0, l.Du)(e)) {
+        if (!(0, r.Du)(e)) {
             m.deleteWidgetIds.push(e.id);
             continue;
         }
@@ -33,19 +33,19 @@ function u(e) {
             continue;
         }
         (p.add(t), n !== i.id && m.metaUpdates.push({ widgetId: e.id, meta: { applicationId: t, projectId: i.id } }));
-        let r = d(i, c);
-        (e.minSize.width !== r.width || e.minSize.height !== r.height) &&
-            m.minSizeUpdates.push({ widgetId: e.id, minSize: r });
+        let l = d(i, c);
+        (e.minSize.width !== l.width || e.minSize.height !== l.height) &&
+            m.minSizeUpdates.push({ widgetId: e.id, minSize: l });
     }
     let f = p.size;
     for (let [e, n] of g) {
         if (p.has(e)) continue;
         let {
             anchor: i,
-            size: l,
+            size: r,
             minSize: s,
         } = (function (e, t, n, i) {
-            let l = d(e, i),
+            let r = d(e, i),
                 s = o(
                     e.overlay_widget?.default_size,
                     (function (e) {
@@ -56,14 +56,14 @@ function u(e) {
                         };
                     })(i),
                 ),
-                a = Math.max(s.width, l.width),
-                u = Math.max(s.height, l.height);
-            if (n.width <= 0 || n.height <= 0) return { anchor: i.anchor, size: { width: a, height: u }, minSize: l };
+                a = Math.max(s.width, r.width),
+                u = Math.max(s.height, r.height);
+            if (n.width <= 0 || n.height <= 0) return { anchor: i.anchor, size: { width: a, height: u }, minSize: r };
             ((a = Math.min(a, n.width)), (u = Math.min(u, n.height)));
             let c = 24 * t,
                 h = Math.max(0, Math.min((n.width - a) / 2 + c, n.width - a)),
                 m = Math.max(0, Math.min(0.15 * n.height + c, n.height - u));
-            return { anchor: (0, r.NO)({ top: m, left: h }, n), size: { width: a, height: u }, minSize: l };
+            return { anchor: (0, l.NO)({ top: m, left: h }, n), size: { width: a, height: u }, minSize: r };
         })(n, f, u, c);
         (f++,
             m.create.push({
@@ -71,7 +71,7 @@ function u(e) {
                 layoutId: t,
                 type: a.uss.CONJURE,
                 anchor: i,
-                size: (0, r.R9)({ fixed: !0, ...l }, u),
+                size: (0, l.R9)({ fixed: !0, ...r }, u),
                 minSize: s,
                 pinned: c.pinned,
                 meta: { applicationId: e, projectId: n.id },

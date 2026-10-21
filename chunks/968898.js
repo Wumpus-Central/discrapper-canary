@@ -1,8 +1,8 @@
 n.d(t, { CS: () => D, GQ: () => k, O0: () => P, Pl: () => w, RE: () => _, X1: () => N, hM: () => z, we: () => M });
 var i = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
     a = n(17928),
     o = n(661531),
     d = n(834730),
@@ -39,18 +39,18 @@ function _(e, t) {
     );
 }
 function O(e, t) {
-    let n = r.useRef(e?.showExtrasHintTimestamp),
-        [i, l] = r.useState(!1),
+    let n = l.useRef(e?.showExtrasHintTimestamp),
+        [i, r] = l.useState(!1),
         s = (0, T.A)(),
-        a = r.useRef(void 0);
+        a = l.useRef(void 0);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             let i = e?.showExtrasHintTimestamp;
             i !== n.current &&
                 ((n.current = i),
-                l(!0),
+                r(!0),
                 (a.current = setTimeout(() => {
-                    l(!1);
+                    r(!1);
                 }, t)));
         }, [t, e?.showExtrasHintTimestamp]),
         (0, A.Ay)(() => {
@@ -58,9 +58,9 @@ function O(e, t) {
             return (
                 null != n &&
                     Date.now() - n < t &&
-                    (l(!0),
+                    (r(!0),
                     (a.current = setTimeout(() => {
-                        l(!1);
+                        r(!1);
                     }, t))),
                 () => {
                     null != a.current && clearTimeout(a.current);
@@ -73,8 +73,8 @@ function O(e, t) {
 let R = 8e3;
 function M(e) {
     let { children: t, widgetId: n } = e,
-        r = (0, a.bG)([E.A], () => E.A.getWidget(n), [n]);
-    return O(r, R)
+        l = (0, a.bG)([E.A], () => E.A.getWidget(n), [n]);
+    return O(l, R)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(I.A, {
@@ -82,9 +82,9 @@ function M(e) {
                       children: (0, i.jsx)(u.D, {
                           className: b.SM,
                           onClick: () => {
-                              null != r &&
+                              null != l &&
                                   (x.A.setInputLocked(!1, v.A.getTargetPID()),
-                                  (0, S.YX)(r.type, { type: S.Z5.KEYBIND_HINT, value: S.IP.OVERLAY_UNLOCKED }));
+                                  (0, S.YX)(l.type, { type: S.Z5.KEYBIND_HINT, value: S.IP.OVERLAY_UNLOCKED }));
                           },
                           children: (0, i.jsx)(d.E, {
                               variant: "text-xs/semibold",
@@ -135,12 +135,12 @@ function z(e) {
 }
 function k(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        r = n ? y.intl.string(y.t.q2B3rh) : y.intl.string(y.t.JKGi6o);
+        l = n ? y.intl.string(y.t.q2B3rh) : y.intl.string(y.t.JKGi6o);
     return (0, T.A)()
         ? null
         : (0, i.jsx)(c.m, {
-              text: r,
-              "aria-label": r,
+              text: l,
+              "aria-label": l,
               children: (0, i.jsx)(u.D, {
                   className: s()(b.x6, n && b.vu),
                   onClick: function () {
@@ -155,16 +155,16 @@ function k(e) {
 }
 function P(e) {
     let { id: t, pinned: n } = e,
-        r = n ? y.intl.string(y.t.cSu80j) : y.intl.string(y.t.cM8Vnm),
-        l = (0, T.A)();
+        l = n ? y.intl.string(y.t.cSu80j) : y.intl.string(y.t.cM8Vnm),
+        r = (0, T.A)();
     return (0, i.jsx)(c.m, {
-        text: r,
-        "aria-label": r,
+        text: l,
+        "aria-label": l,
         asContainer: !0,
         children: (0, i.jsx)(u.D, {
             className: s()(b.x6, n && b.vu),
             onClick: () => {
-                l || (0, f.v0)(t);
+                r || (0, f.v0)(t);
             },
             children: (0, i.jsx)(p.q, {
                 size: "xxs",

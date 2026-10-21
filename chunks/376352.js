@@ -1,4 +1,4 @@
-n.d(t, { F: () => k });
+n.d(t, { F: () => G });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(131607),
     I = n(409626),
     N = n(613902),
-    E = n(692969),
-    v = n(738250),
+    v = n(692969),
+    E = n(738250),
     b = n(834757),
     S = n(548118),
     _ = n(832163),
@@ -68,8 +68,8 @@ function D(e) {
 }
 function V(e) {
     let { className: t, applicationId: n } = e,
-        { gameId: l, gameRecord: a } = (0, v.A)({ applicationId: n }),
-        r = (0, E.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
+        { gameId: l, gameRecord: a } = (0, E.A)({ applicationId: n }),
+        r = (0, v.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
     let o = a?.getIconURL(S.iu.MEDIUM),
         c = (0, O.uJ)(o)
@@ -83,7 +83,7 @@ function V(e) {
         onClick: r,
     });
 }
-function k(e) {
+function G(e) {
     let t,
         { user: n, stream: a, channel: s } = e,
         [c, d] = l.useState(!1),
@@ -91,12 +91,12 @@ function k(e) {
         j = u?.id,
         y = (0, r.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
         I = null != j ? y[j] : null,
-        E = (0, C.h)(I),
-        v = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
-        O = v ? (I ?? j ?? null) : I,
-        k = (0, C.h)(O),
+        v = (0, C.h)(I),
+        E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
+        O = E ? (I ?? j ?? null) : I,
+        G = (0, C.h)(O),
         {
-            isLoading: G,
+            isLoading: k,
             applicationWidgetConfig: B,
             profileApplicationWidget: F,
             userApplicationIdentity: z,
@@ -105,7 +105,7 @@ function k(e) {
         W = l.useRef(null),
         [Y, $] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
         [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? k : null),
+        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? G : null),
         J = H === n.id && Z && !Q,
         ee = l.useCallback(() => {
             d(!1);
@@ -129,9 +129,9 @@ function k(e) {
             renderPopout: ec,
             positionKey: ed,
         } = l.useMemo(() => {
-            if (!v && (null == E || null == I)) return { isAppIcon: !1 };
+            if (!E && (null == v || null == I)) return { isAppIcon: !1 };
             if (ei && null != O) {
-                let e = el ?? k?.getIconURL(S.iu.SMALL),
+                let e = el ?? G?.getIconURL(S.iu.SMALL),
                     t = null != e && null == el,
                     l =
                         null != e
@@ -157,7 +157,7 @@ function k(e) {
                     positionKey: "widget-version",
                 };
             }
-            if (null == E || null == I) return { isAppIcon: !1 };
+            if (null == v || null == I) return { isAppIcon: !1 };
             let { icon: e, text: t } =
                 H === n.id
                     ? { icon: (0, i.jsx)(p.U, { className: w.Kk }), text: M.intl.string(M.t.e6S76Q) }
@@ -173,8 +173,8 @@ function k(e) {
                 },
                 positionKey: "feature-card-version",
             };
-        }, [v, ei, O, k, E, I, H, n.id, s, ee, K, et, el, ea]);
-    return G || J || (null == ec && !v)
+        }, [E, ei, O, G, v, I, H, n.id, s, ee, K, et, el, ea]);
+    return k || J || (null == ec && !E)
         ? null
         : (0, i.jsx)(A.N, {
               theme: P.NJ.DARK,

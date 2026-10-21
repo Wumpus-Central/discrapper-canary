@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(683438),
     I = n(475825),
     N = n(367513),
-    E = n(442433),
-    v = n(59520),
+    v = n(442433),
+    E = n(59520),
     b = n(793574),
     S = n(688810),
     _ = n(139286),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(696451),
     D = n(576705),
     V = n(996439),
-    k = n(63995),
-    G = n(113783),
+    G = n(63995),
+    k = n(113783),
     B = n(518769),
     F = n(776781),
     z = n(105530),
@@ -51,7 +51,7 @@ var Y = n(806931),
 let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
         { user: C, userNick: j, blocked: y, ignored: I, rtsState: N } = t,
-        v = l.useRef(null),
+        E = l.useRef(null),
         T = (0, P.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
         L = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
@@ -66,7 +66,7 @@ let Z = l.memo(function (e) {
                 tile_type: Y.qs.USER,
             },
         }),
-            (0, E.L3)(
+            (0, v.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
@@ -114,7 +114,7 @@ let Z = l.memo(function (e) {
             ));
     }
     return (0, i.jsx)(M.A, {
-        targetElementRef: v,
+        targetElementRef: E,
         user: C,
         guildId: r,
         channelId: a.id,
@@ -126,7 +126,7 @@ let Z = l.memo(function (e) {
                 className: q.Z8,
                 children: [
                     (0, i.jsxs)(h.D, {
-                        innerRef: v,
+                        innerRef: E,
                         className: q.VU,
                         onContextMenu: V,
                         ...e,
@@ -160,26 +160,26 @@ function Q(e) {
         { channel: s, guildId: r, maxWidth: c } = e,
         u = (0, F.Ni)(s.id),
         h = (0, d.bG)([D.A], () => D.A.can($.xB.MANAGE_CHANNELS, s) || D.A.can($.xB.MANAGE_ROLES, s)),
-        p = (0, G.J2)(s.id),
+        p = (0, k.J2)(s.id),
         m =
             ((t = s.id),
-            (n = (0, d.bG)([k.A], () => [t, k.A.getParticipantsVersion(t)], [t], V.D)),
-            (a = l.useMemo(() => [...k.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
-            (0, v.J)(a, (0, H.Uo)(t))),
+            (n = (0, d.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
+            (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
+            (0, E.J)(a, (0, H.Uo)(t))),
         [f, x] = l.useState(""),
         g = l.useDeferredValue(f),
-        E = u ? g.trim() : "",
-        b = "" !== E,
+        v = u ? g.trim() : "",
+        b = "" !== v,
         S = l.useMemo(() => {
-            if ("" === E) return m;
-            let e = E.toLowerCase();
+            if ("" === v) return m;
+            let e = v.toLowerCase();
             return m.filter(
                 (t) =>
                     o()(e, t.user.username.toLowerCase()) ||
                     (null != t.user.globalName && o()(e, t.user.globalName.toLowerCase())) ||
                     o()(e, t.userNick.toLowerCase()),
             );
-        }, [m, E]),
+        }, [m, v]),
         _ = [p.length, Math.max(1, S.length)],
         R = (0, i.jsx)(L.Ay.Icon, {
             icon: C.P,
@@ -270,7 +270,7 @@ function Q(e) {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
                                                     children: b
-                                                        ? X.intl.format(K.default["0lYpuQ"], { query: E })
+                                                        ? X.intl.format(K.default["0lYpuQ"], { query: v })
                                                         : X.intl.string(K.default.eo2IxJ),
                                                 }),
                                             ],

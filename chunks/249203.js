@@ -1,6 +1,6 @@
-n.d(e, { A: () => d });
-var i = n(17928),
-    l = n(73153);
+i.d(e, { A: () => d });
+var n = i(17928),
+    l = i(73153);
 let s = {};
 function r(t) {
     (null == s[t] &&
@@ -8,13 +8,13 @@ function r(t) {
             let t = Object.keys(s);
             if (t.length < 500) return;
             let e = t.sort((t, e) => s[t].lastViewedAt - s[e].lastViewedAt).slice(t.length - 499),
-                n = {};
-            for (let t of e) n[t] = s[t];
-            s = n;
+                i = {};
+            for (let t of e) i[t] = s[t];
+            s = i;
         })(),
         (s = { ...s, [t]: { lastViewedAt: Date.now() } }));
 }
-class a extends i.Ay.PersistedStore {
+class a extends n.Ay.PersistedStore {
     static displayName = "ProfileReadStateStore";
     static persistKey = "ProfileReadStateStore";
     initialize(t) {

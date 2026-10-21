@@ -1,4 +1,4 @@
-n.d(t, { Sb: () => E, Y1: () => N, bE: () => v });
+n.d(t, { Sb: () => v, Y1: () => N, bE: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -36,7 +36,7 @@ function N(e) {
         n = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
     return t && n;
 }
-function E(e) {
+function v(e) {
     let { position: t, targetLabel: n } = e,
         i = l.useContext(y),
         { x: a, y: s } = t;
@@ -53,14 +53,14 @@ function E(e) {
         [i, n, a, s],
     );
 }
-function v(e) {
+function E(e) {
     let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
         g = I(t),
-        E = N(t),
-        v = l.useId(),
+        v = N(t),
+        E = l.useId(),
         [b, S] = l.useState(null),
         _ = l.useRef(null);
-    (E || null == b || S(null),
+    (v || null == b || S(null),
         l.useEffect(() => {
             if (g)
                 return (
@@ -74,19 +74,19 @@ function v(e) {
             }
         }, [g, t]),
         l.useEffect(() => {
-            if (E)
+            if (v)
                 return () => {
                     _.current = null;
                 };
-        }, [E]),
+        }, [v]),
         l.useEffect(() => {
-            E && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
-        }, [E, n]));
+            v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
+        }, [v, n]));
     let T = l.useMemo(
         () =>
-            E
+            v
                 ? {
-                      descriptionId: v,
+                      descriptionId: E,
                       setPreviewTarget: (e) => {
                           let t = _.current ?? C();
                           ((_.current = t), S(j(e, t)));
@@ -99,12 +99,12 @@ function v(e) {
                       },
                   }
                 : null,
-        [E, v, t],
+        [v, E, t],
     );
     return (0, i.jsxs)(y.Provider, {
         value: T,
         children: [
-            E &&
+            v &&
                 (0, i.jsx)(r.Ok, {
                     containerRef: n,
                     disableReturn: !0,
@@ -112,7 +112,7 @@ function v(e) {
                         className: x.a,
                         children: (0, i.jsx)("div", {
                             className: x.G,
-                            id: v,
+                            id: E,
                             children: (0, i.jsx)(o.E, {
                                 variant: "text-sm/medium",
                                 children: f.intl.string(A.default.xyO7AD),

@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(487048),
     I = n(232571),
     N = n(519342),
-    E = n(241215),
-    v = n(207274),
+    v = n(241215),
+    E = n(207274),
     b = n(70067),
     S = n(956480),
     _ = n(739820),
@@ -38,8 +38,8 @@ function L(e) {
             aspectRatio: U,
             plants: D,
             duck: V,
-            notePad: k,
-            screen: G,
+            notePad: G,
+            screen: k,
             getName: B,
         } = _.iX[L],
         { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
@@ -53,7 +53,7 @@ function L(e) {
         Q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
         J = Z.size,
         ee = Math.max(0, Object.values(w).length - Z.size),
-        et = D.length + +(null != V) + +(null != k) + Q.length,
+        et = D.length + +(null != V) + +(null != G) + Q.length,
         [en, ei] = l.useState(!1),
         el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
     (0, S.A)(t, Z, Q);
@@ -79,7 +79,7 @@ function L(e) {
             "aria-label": B(),
             children: [
                 $
-                    ? (0, i.jsx)(E.A, {
+                    ? (0, i.jsx)(v.A, {
                           channelId: t,
                           popoutType: n,
                           width: F,
@@ -109,7 +109,7 @@ function L(e) {
                                           children: (0, i.jsxs)(h.xp, {
                                               containerRef: X,
                                               children: [
-                                                  (0, i.jsx)(y.A, { channelId: t, corners: G, roomWidth: Y }),
+                                                  (0, i.jsx)(y.A, { channelId: t, corners: k, roomWidth: Y }),
                                                   (0, i.jsxs)("div", {
                                                       ref: q,
                                                       children: [
@@ -143,16 +143,16 @@ function L(e) {
                                                                       roomWidth: Y,
                                                                   }),
                                                                   null != V &&
-                                                                      (0, i.jsx)(v.A, {
+                                                                      (0, i.jsx)(E.A, {
                                                                           channelId: t,
                                                                           position: V.position,
                                                                       }),
-                                                                  null != k &&
+                                                                  null != G &&
                                                                       (0, i.jsx)(b.A, {
                                                                           channelId: t,
-                                                                          asset: k.asset,
-                                                                          position: k.position,
-                                                                          width: k.width,
+                                                                          asset: G.asset,
+                                                                          position: G.position,
+                                                                          width: G.width,
                                                                       }),
                                                               ],
                                                           }),

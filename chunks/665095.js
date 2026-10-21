@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => k });
 var i = n(477900),
     l = n(582128),
     a = n(562708),
@@ -133,8 +133,8 @@ class w extends l.PureComponent {
     };
 }
 var L = n(87404),
-    k = n(53516);
-function P() {
+    P = n(53516);
+function k() {
     let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
         x = E.A.getVerificationTypes(e),
         [C, _] = l.useState(0),
@@ -218,7 +218,7 @@ function P() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: k.V, Layer: p.Ay },
+                          { modalKey: P.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {

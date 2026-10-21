@@ -1,4 +1,4 @@
-(n.d(t, { Cp: () => y, Gf: () => T, Sw: () => R, V4: () => b, ak: () => j, dK: () => C, dZ: () => x }), n(321073));
+(n.d(t, { Cp: () => O, Gf: () => T, Sw: () => R, V4: () => b, ak: () => y, dK: () => C, dZ: () => x }), n(321073));
 var i = n(435558),
     s = n.n(i),
     r = n(636537),
@@ -51,7 +51,7 @@ function T(e) {
         )
     );
 }
-function j(e, t, n) {
+function y(e, t, n) {
     return (
         o.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         r.Bo.del({
@@ -64,7 +64,7 @@ function j(e, t, n) {
         })
     );
 }
-async function y(e) {
+async function O(e) {
     let { guildId: t, emojiId: n, name: i, roles: s } = e;
     try {
         return await r.Bo.patch({
@@ -77,7 +77,7 @@ async function y(e) {
         throw new c.A(e);
     }
 }
-function O(e) {
+function j(e) {
     if (g.A.totalUnavailableGuilds > 0 || !E.A.isConnected()) return e;
     let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? m.Ay.getByName(e)).filter(h.Vq);
     return [...(0, f.A)(t).keys()];
@@ -91,7 +91,7 @@ function b(e) {
         I.bW.updateAsync(
             "favoriteEmojis",
             (e) =>
-                ((e.emojis = O(e.emojis)), s().size(e.emojis) >= 250)
+                ((e.emojis = j(e.emojis)), s().size(e.emojis) >= 250)
                     ? (p.A.show({
                           title: N.intl.string(N.t["+XYXtZ"]),
                           body: N.intl.formatToPlainString(N.t.JaIyFi, { count: 250 }),
@@ -107,7 +107,7 @@ function R(e) {
         I.bW.updateAsync(
             "favoriteEmojis",
             (e) => {
-                if (((e.emojis = O(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = j(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             _.Sb.INFREQUENT_USER_ACTION,

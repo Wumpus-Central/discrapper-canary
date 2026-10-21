@@ -70,8 +70,8 @@ var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"),
     O = n(627575),
     w = n(17928),
     L = n(155718),
-    k = n(379257),
-    P = n(287809),
+    P = n(379257),
+    k = n(287809),
     D = n(430993),
     U = n(503698),
     G = n.n(U),
@@ -132,7 +132,7 @@ function ea() {
         className: el.Q,
         children: S.intl.format(I.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                k.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
+                P.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -166,7 +166,7 @@ function eA(e) {
             onAccept: d,
             onDecline: m,
         } = e,
-        h = (0, w.bG)([P.default], () => P.default.getUser(n.parent_id)),
+        h = (0, w.bG)([k.default], () => k.default.getUser(n.parent_id)),
         f = h?.globalName ?? h?.username ?? n.parent_username,
         p = h?.username ?? n.parent_username,
         g = p !== f,
@@ -398,7 +398,7 @@ let eT = {
         },
         age_verification: function (e) {
             let { onSubmit: t } = e,
-                n = (0, w.bG)([P.default], () => P.default.getCurrentUser());
+                n = (0, w.bG)([k.default], () => k.default.getCurrentUser());
             return (0, a.jsx)(Z, {
                 title: "Lorem ipsum dolor",
                 actions: [
@@ -407,7 +407,7 @@ let eT = {
                         variant: "primary",
                         onClick: function () {
                             n?.ageVerificationStatus === L.Tk.UNVERIFIED
-                                ? k.A.showAgeVerificationGetStartedModal({
+                                ? P.A.showAgeVerificationGetStartedModal({
                                       entryPoint: f.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -455,14 +455,14 @@ let eT = {
                 C =
                     ((t = g.pending_requests),
                     (n = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers())),
-                    (i = (0, w.bG)([P.default], () => P.default.getCurrentUser()?.id)),
+                    (i = (0, w.bG)([k.default], () => k.default.getCurrentUser()?.id)),
                     r.useMemo(() => {
                         if (!x) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             l = [];
                         for (let t of Object.values(n)) {
                             if (null == t || t.link_status !== er.Ef.PENDING || t.requestor_id === i) continue;
-                            let n = P.default.getUser(t.user_id),
+                            let n = k.default.getUser(t.user_id),
                                 a = e.get(t.user_id);
                             l.push({
                                 parent_id: t.user_id,
@@ -486,8 +486,8 @@ let eT = {
                         (0, K.P0)({ text: S.intl.string(I.default["+QRSxc"]), variant: "critical" });
                     }
                 }, [o]),
-                [L, k] = r.useState(_);
-            _ && !L && k(!0);
+                [L, P] = r.useState(_);
+            _ && !L && P(!0);
             let [U, G] = r.useState(!1),
                 F = r.useCallback(() => {
                     (G(!1), p());
@@ -749,13 +749,13 @@ let eO = function (e) {
     (0, h.Ay)(() => {
         w();
     });
-    let k = r.useMemo(() => i?.task_type === y.AGE_VERIFICATION, [i]),
-        P = null != i && null === E && j.has(i.task_type);
+    let P = r.useMemo(() => i?.task_type === y.AGE_VERIFICATION, [i]),
+        k = null != i && null === E && j.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: ej.Tp,
         children: [
             (0, a.jsx)("img", { className: ej.xX, src: eR, alt: "" }),
-            k
+            P
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? s.ip.ENTERED,
                       entryPoint: f.q1.SAFETY_FLOWS,
@@ -765,7 +765,7 @@ let eO = function (e) {
                       },
                       dismissable: !1,
                   })
-                : P && null != i
+                : k && null != i
                   ? (0, a.jsx)(eM, { task: i, handleSubmit: L, disabled: T, transitionState: t ?? s.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: ej.nA,

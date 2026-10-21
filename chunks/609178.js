@@ -21,16 +21,16 @@ var i = n(477900),
     C = n(10392),
     x = n(82498),
     T = n(732280),
-    j = n(369805),
-    y = n(989790),
-    O = n(632150),
+    y = n(369805),
+    O = n(989790),
+    j = n(632150),
     S = n(792656),
     b = n(202541),
     R = n(652215),
     v = n(148155),
     L = n(105292),
-    P = n(237790),
-    M = n(592551),
+    M = n(237790),
+    P = n(592551),
     D = n(644242),
     w = n(309427);
 function k(e) {
@@ -56,8 +56,8 @@ function k(e) {
     }, [F, U]);
     let H = (0, T.V)(),
         W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
-        X = (0, j.A)(b.pe.TIER_2),
-        z = (0, y.O9)();
+        X = (0, y.A)(b.pe.TIER_2),
+        z = (0, O.O9)();
     t = V
         ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
@@ -71,26 +71,26 @@ function k(e) {
             (0, i.jsx)(o.p, { onClick: G, isVisible: !0 }),
             (0, i.jsx)(c.h, {
                 color: Z,
-                className: P.kL,
+                className: M.kL,
                 children: (0, i.jsxs)(u.l, {
                     "aria-label": n,
-                    className: P.r3,
+                    className: M.r3,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: P.Qs,
+                            className: M.Qs,
                             children: [
-                                (0, i.jsx)(a.s_, { "data-migration-pending": !0, onClick: G, className: P.b }),
+                                (0, i.jsx)(a.s_, { "data-migration-pending": !0, onClick: G, className: M.b }),
                                 (0, i.jsxs)("div", {
-                                    className: P.hQ,
+                                    className: M.hQ,
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: M.headerGraphic,
+                                            className: P.headerGraphic,
                                             children:
                                                 K ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
                                         null != X && (0, i.jsx)(m.E, { type: { text: X }, variant: "primary" }),
                                         (0, i.jsx)(f.D, {
-                                            className: l()(P.DD, { [P.GU]: null != X }),
+                                            className: l()(M.DD, { [M.GU]: null != X }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: n,
@@ -98,7 +98,7 @@ function k(e) {
                                         (0, i.jsx)(E.E, {
                                             variant: "text-md/medium",
                                             color: "text-subtle",
-                                            className: P.rf,
+                                            className: M.rf,
                                             children: r,
                                         }),
                                     ],
@@ -106,15 +106,15 @@ function k(e) {
                                 V &&
                                     z &&
                                     (0, i.jsx)("div", {
-                                        className: P.Zr,
-                                        children: (0, i.jsx)(O.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
+                                        className: M.Zr,
+                                        children: (0, i.jsx)(j.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
                                     }),
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: P.qr,
+                            className: M.qr,
                             children: (0, i.jsxs)("div", {
-                                className: P.UD,
+                                className: M.UD,
                                 children: [
                                     (0, i.jsx)(I.$, {
                                         variant: "secondary",

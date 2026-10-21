@@ -6,21 +6,21 @@ var s = n(503698),
     a = n(983851),
     r = n(194261),
     o = n(512474),
-    d = n(445567),
-    c = n(451394),
+    c = n(445567),
+    d = n(451394),
     u = n(163328),
     m = n(276293),
     x = n(11779),
-    j = n(446057),
-    h = n(778492),
+    h = n(446057),
+    j = n(778492),
     g = n(922288),
     p = n(986226),
     I = n(56059),
     N = n(781481),
     b = n(760911),
     f = n(534890),
-    v = n(855473),
-    A = n(740426),
+    A = n(855473),
+    v = n(740426),
     E = n(191023),
     C = n(87221),
     S = n(173936),
@@ -59,7 +59,7 @@ let G = function (e) {
             });
             break;
         case "voice-spoiler":
-            s = (0, i.jsx)(d.P, {
+            s = (0, i.jsx)(c.P, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -67,7 +67,7 @@ let G = function (e) {
             });
             break;
         case "stage":
-            s = (0, i.jsx)(c.q, {
+            s = (0, i.jsx)(d.q, {
                 size: "lg",
                 color: "currentColor",
                 className: _.Kk,
@@ -107,7 +107,7 @@ let G = function (e) {
             });
             break;
         case "text-spoiler":
-            s = (0, i.jsx)(j.n, {
+            s = (0, i.jsx)(h.n, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -115,7 +115,7 @@ let G = function (e) {
             });
             break;
         case "announcement":
-            s = (0, i.jsx)(h.k, {
+            s = (0, i.jsx)(j.k, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -172,7 +172,7 @@ let G = function (e) {
             break;
         case "home":
         case "guide":
-            s = (0, i.jsx)(v.Z, {
+            s = (0, i.jsx)(A.Z, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,
@@ -181,7 +181,7 @@ let G = function (e) {
             break;
         case "browse":
         case "customize":
-            s = (0, i.jsx)(A.k, {
+            s = (0, i.jsx)(v.k, {
                 size: "md",
                 color: "currentColor",
                 className: _.Kk,

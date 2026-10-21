@@ -1,28 +1,28 @@
-s.d(t, { A: () => o });
-var l = s(17928),
-    a = s(427358),
+s.d(e, { A: () => o });
+var a = s(17928),
+    l = s(427358),
     i = s(153488),
     r = s(287809),
-    A = s(607567),
-    n = s(652215);
-function o(e) {
-    let t = (0, l.yK)(
-            [A.Ay],
+    n = s(607567),
+    A = s(652215);
+function o(t) {
+    let e = (0, a.yK)(
+            [n.Ay],
             () =>
-                A.Ay.getVoiceStatesForChannelAlt(e.id, e.guild_id).map((e) => {
-                    let { user: t } = e;
-                    return t.id;
+                n.Ay.getVoiceStatesForChannelAlt(t.id, t.guild_id).map((t) => {
+                    let { user: e } = t;
+                    return e.id;
                 }),
-            [e.id, e.guild_id],
+            [t.id, t.guild_id],
         ),
-        s = (0, l.bG)([a.A], () => a.A.getUserAffinitiesMap()),
-        o = (0, l.bG)([i.A], () => i.A.hasConsented(n.YAq.PERSONALIZATION));
-    return (0, l.yK)(
+        s = (0, a.bG)([l.A], () => l.A.getUserAffinitiesMap()),
+        o = (0, a.bG)([i.A], () => i.A.hasConsented(A.YAq.PERSONALIZATION));
+    return (0, a.yK)(
         [r.default],
         () =>
-            (o ? t.sort((e, t) => (s.get(t)?.vcProbability ?? 0) - (s.get(e)?.vcProbability ?? 0)) : t)
-                .map((e) => r.default.getUser(e))
-                .filter((e) => null != e),
-        [o, s, t],
+            (o ? e.sort((t, e) => (s.get(e)?.vcProbability ?? 0) - (s.get(t)?.vcProbability ?? 0)) : e)
+                .map((t) => r.default.getUser(t))
+                .filter((t) => null != t),
+        [o, s, e],
     );
 }

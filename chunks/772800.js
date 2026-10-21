@@ -12,8 +12,8 @@ var n = t(477900),
     m = t(685399),
     g = t(960076),
     h = t(323073),
-    f = t(597306),
-    p = t(693879),
+    p = t(597306),
+    f = t(693879),
     I = t(268218),
     v = t(834757),
     S = t(727353),
@@ -28,14 +28,14 @@ var n = t(477900),
     T = t(696451),
     O = t(290863),
     G = t(977997),
-    V = t(174459),
-    P = t(927813),
+    P = t(174459),
+    V = t(927813),
     w = t(427262),
     k = t(329554),
     R = t(402313),
     D = t(699976),
-    M = t(8936);
-let U = (0, I.Fe)({
+    U = t(8936);
+let M = (0, I.Fe)({
     createPromise: () =>
         Promise.all([
             t.e("419121"),
@@ -204,8 +204,8 @@ function L(e) {
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   d,
-                  (0, n.jsx)(U, {
-                      className: M.L,
+                  (0, n.jsx)(M, {
+                      className: U.L,
                       applicationId: s,
                       userIds: [i.id],
                       location: "voice_channel",
@@ -225,7 +225,7 @@ function F(e) {
         A = o?.nick ?? c,
         { avatarDecorationSrc: m, avatarSrc: h } = (0, j.A)({ userId: i.id, size: a._3.SIZE_32, guildId: t }),
         {
-            status: f,
+            status: p,
             isMobileOnline: I,
             activities: v,
         } = (0, s.cf)([O.A], () => ({
@@ -234,24 +234,24 @@ function F(e) {
             activities: O.A.getActivities(i.id, t),
         })),
         S = (0, s.bG)([G.A], () => G.A.getVoiceStateForChannel(l, i.id)?.connectedAt),
-        x = null != S ? new Date(S * P.A.Millis.SECOND).getTime() : null;
+        x = null != S ? new Date(S * V.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
-        className: M.aq,
+        className: U.aq,
         children: [
             (0, n.jsx)(r.eu, {
                 src: h,
                 size: a._3.SIZE_32,
                 "aria-label": A,
                 avatarDecoration: m,
-                status: (0, g.A)(v) ? d.clD.STREAMING : f === d.clD.OFFLINE ? void 0 : f,
+                status: (0, g.A)(v) ? d.clD.STREAMING : p === d.clD.OFFLINE ? void 0 : p,
                 isMobile: I,
-                className: M.my,
+                className: U.my,
             }),
             (0, n.jsxs)("div", {
-                className: M.Qq,
+                className: U.Qq,
                 children: [
                     (0, n.jsx)(u.E, { variant: "text-sm/medium", lineClamp: 1, children: A }),
-                    null != x && (0, n.jsx)(p.z, { textColor: "text-feedback-positive", entry: { start: x } }),
+                    null != x && (0, n.jsx)(f.z, { textColor: "text-feedback-positive", entry: { start: x } }),
                 ],
             }),
         ],
@@ -260,32 +260,32 @@ function F(e) {
 function z(e) {
     let i,
         t,
-        { channel: a, user: r, onAction: u, excludeActivity: g, onWatchStream: p, setPopoutRef: I } = e,
+        { channel: a, user: r, onAction: u, excludeActivity: g, onWatchStream: f, setPopoutRef: I } = e,
         j = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
     (0, c.Eq)(j, "VoiceUserActivities");
     let { enabled: T } = R.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
         G = (0, s.bG)([b.A], () => b.A.getStreamForUser(r.id, a.getGuildId()), [a, r.id]),
-        P = (0, s.bG)([O.A], () => (0, v.nr)(G, O.A), [G]),
-        w = (0, f.r)() && (0, h.UK)(a.id),
+        V = (0, s.bG)([O.A], () => (0, v.nr)(G, O.A), [G]),
+        w = (0, p.r)() && (0, h.UK)(a.id),
         D =
             ((i = (0, m.Ay)(a)),
             (t = l.useMemo(() => i.filter((e) => e.embeddedActivity.userIds.has(r.id)), [i, r.id])),
             [...(0, m.Rz)(t).values()]),
-        U = (0, C.W)(),
+        M = (0, C.W)(),
         z = (0, s.bG)([y.A], () => y.A.getDetectableIdsToApplicationIds()),
-        B = g ?? P,
+        B = g ?? V,
         K = (0, A.m)(r, B),
         { enabled: Y } = x.A.useConfig({ guildId: a.guild_id, location: "VoiceUserPopout" }),
         q = (0, N.u)(r.id, a),
         $ = (0, _.Ay)(r.id, a.guild_id),
         H = Y && null != q && 0 === $.length,
-        W = null != G && null != p && !w,
+        W = null != G && null != f && !w,
         Z = W || K.length > 0 || D.length > 0 || null != q,
         J = Z || T;
     if (
         (l.useEffect(() => {
             J &&
-                V.default.track(d.HAw.OPEN_POPOUT, {
+                P.default.track(d.HAw.OPEN_POPOUT, {
                     type: "Voice User Activities",
                     channel_id: a.id,
                     other_user_id: r.id,
@@ -299,9 +299,9 @@ function z(e) {
             W &&
                 (0, n.jsx)(S.P, {
                     stream: G,
-                    streamActivity: P,
+                    streamActivity: V,
                     user: r,
-                    onWatchStream: p,
+                    onWatchStream: f,
                     onAction: u,
                     showHeader: !0,
                 }),
@@ -319,7 +319,7 @@ function z(e) {
                 ),
             ),
             K.map((e) => {
-                let i = U ?? e.application_id;
+                let i = M ?? e.application_id;
                 return (0, n.jsx)(
                     L,
                     {
@@ -338,12 +338,12 @@ function z(e) {
     });
     return T || H
         ? (0, n.jsxs)("div", {
-              className: M.Db,
+              className: U.Db,
               ref: I,
               children: [
                   (0, n.jsx)(F, { user: r, guildId: a.guild_id, channelId: a.id }),
-                  Z && (0, n.jsx)(o.Ip, { className: M.XG, children: X }),
+                  Z && (0, n.jsx)(o.Ip, { className: U.XG, children: X }),
               ],
           })
-        : (0, n.jsx)(o.Ip, { className: M.kL, ref: I, children: X });
+        : (0, n.jsx)(o.Ip, { className: U.kL, ref: I, children: X });
 }

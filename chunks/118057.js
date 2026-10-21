@@ -33,8 +33,8 @@ function u(e) {
             [h],
         ),
         [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
-        { columnCounts: x, focusedX: T, focusedY: j } = N,
-        [y] = i.useState(() => (0, l.nF)(C, 16));
+        { columnCounts: x, focusedX: T, focusedY: y } = N,
+        [O] = i.useState(() => (0, l.nF)(C, 16));
     return (
         i.useEffect(() => {
             C({ type: s.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
@@ -57,8 +57,8 @@ function u(e) {
                 _ = i.useRef(h),
                 N = c(o(t, u, d)),
                 [C, x] = i.useState(!1),
-                [T, j] = i.useState(!1),
-                [y, O] = i.useState(!1),
+                [T, y] = i.useState(!1),
+                [O, j] = i.useState(!1),
                 [S] = i.useState(
                     () =>
                         new l.Lp((e) => {
@@ -81,7 +81,7 @@ function u(e) {
                         let i = o(t, e, n);
                         (null != f ? f(e, n, i) : Promise.resolve()).then(() => {
                             let e = c(i);
-                            null != e ? (b(e), j(!1)) : requestAnimationFrame(() => j(!0));
+                            null != e ? (b(e), y(!1)) : requestAnimationFrame(() => y(!0));
                         });
                     },
                     [t, f, b],
@@ -91,30 +91,30 @@ function u(e) {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, i] = null != E ? E(u, d) : [u, d];
                         if ((n !== u || i !== d) && (I({ type: s.n.SET_FOCUSED_POSITION, x: n, y: i }), !e))
-                            return void O(!0);
+                            return void j(!0);
                         let r = c(o(t, n, i));
-                        null != r && (O(!0), b(r));
+                        null != r && (j(!0), b(r));
                     },
                     [I, u, d, E, t, b],
                 ),
-                [L, P] = i.useState(!1);
+                [L, M] = i.useState(!1);
             i.useEffect(() => {
                 if (!L || !C) return;
-                P(!1);
+                M(!1);
                 let e = c(o(t, u, d));
                 if (null != e) return void b(e);
                 x(!1);
                 let n = c(o(t));
                 null != n && b(n);
             }, [t, L, C, b, u, d]);
-            let M = i.useCallback((e) => {
-                _.current && null == e && P(!0);
+            let P = i.useCallback((e) => {
+                _.current && null == e && M(!0);
             }, []);
             (i.useEffect(() => {
-                C && T && null != N && (b(N), j(!1));
+                C && T && null != N && (b(N), y(!1));
             }, [T, N]),
                 i.useEffect(() => {
-                    C && (y || R(u, d), O(!1));
+                    C && (O || R(u, d), j(!1));
                 }, [u, d]));
             let D = i.useCallback(
                     (e) => {
@@ -175,7 +175,7 @@ function u(e) {
                 w = i.useCallback(
                     (e) =>
                         e.currentTarget !== e.target
-                            ? (C || (x(!0), O(!0)), !1)
+                            ? (C || (x(!0), j(!0)), !1)
                             : C
                               ? (v(!1), !1)
                               : void (g && null != N ? R(u, d) : v(!0)),
@@ -211,9 +211,9 @@ function u(e) {
                             tabIndex: g && e === u && n === d ? 0 : -1,
                             onFocus: S.get(`${e},${n}`),
                         };
-                        return (e === u && n === d && (i.ref = M), i);
+                        return (e === u && n === d && (i.ref = P), i);
                     },
-                    [t, g, u, d, S, M],
+                    [t, g, u, d, S, P],
                 ),
                 J = i.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
             return i.useMemo(
@@ -224,8 +224,8 @@ function u(e) {
             navId: t,
             columnCounts: x,
             focusedX: T,
-            focusedY: j,
-            dispatch: y,
+            focusedY: y,
+            dispatch: O,
             onSelect: m,
             prepareFocus: f,
             getNewFocusPosition: E,

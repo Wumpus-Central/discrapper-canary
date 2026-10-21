@@ -1,7 +1,7 @@
 n.d(t, { $5: () => p, ht: () => f });
 var i = n(391973),
-    r = n(114994),
-    l = n(32584),
+    l = n(114994),
+    r = n(32584),
     s = n(531685),
     a = n(365971),
     o = n(897720),
@@ -11,12 +11,12 @@ var i = n(391973),
     h = n(644434),
     m = n(652215);
 function g(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A;
     for (let n of t.getWidgetsByTypeAndLayout(m.uss.CONJURE, h.GJ))
         if ((0, o.Du)(n) && n.meta.applicationId === e) return n;
 }
 function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A;
     return g(e, t)?.hidden === !0;
 }
 function f(e, t) {
@@ -26,8 +26,8 @@ function f(e, t) {
         return;
     }
     if (!t) return;
-    let o = r.A.getProject(e),
-        p = l.A.getWidgetDefaultSettings(m.uss.CONJURE);
+    let o = l.A.getProject(e),
+        p = r.A.getWidgetDefaultSettings(m.uss.CONJURE);
     if (null == o || null == p) return;
     (0, d.j$)();
     let { create: f } = (0, c.c3)({

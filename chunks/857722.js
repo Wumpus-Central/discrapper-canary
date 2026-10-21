@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     qS: "badge__52929",
     as: "large__52929",
     LI: "round__52929",

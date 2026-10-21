@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(652215),
     I = n(806931),
     N = n(804273),
-    E = n(517689);
-let v = 16 / 9,
+    v = n(517689);
+let E = 16 / 9,
     b = 8 + j.Vp;
 function S(e) {
     let t,
@@ -40,9 +40,9 @@ function S(e) {
             width: U,
             height: D,
             layout: V,
-            idle: k,
+            idle: G,
         } = e,
-        G = m.Ay.getVideoComponent(),
+        k = m.Ay.getVideoComponent(),
         B = p.default.getId(),
         [F, z] = l.useState(null),
         H = (0, d.Ay)(F),
@@ -61,7 +61,7 @@ function S(e) {
         ea = 0;
     ((X || J) && (ea += 72), X && !J && (en ? (ea += 48) : (ea += 8)), J && (ea += 0.5 * b + 8));
     let es = l.useMemo(
-            () => (X && q ? U / (D - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v),
+            () => (X && q ? U / (D - 2 * ea) : Z && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : E),
             [Z, F, X, U, D, ea, q],
         ),
         er = D - 2 * ea,
@@ -117,19 +117,19 @@ function S(e) {
         ej = J ? [] : (0, C.Cf)(_, P, B),
         { visibleParticipants: ey, participantTileWidth: eI } = (0, j.i4)(U, T);
     return (0, i.jsxs)("div", {
-        className: s()(E.zr, N.tR, w),
+        className: s()(v.zr, N.tR, w),
         children: [
             (0, i.jsxs)("div", {
-                className: E.QX,
+                className: v.QX,
                 style: { opacity: Z && W ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: E.pc,
+                        className: v.pc,
                         style: { top: eA.value.to((e) => (-e * b) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: ef.value },
-                                className: E.tN,
+                                className: v.tN,
                                 children: (0, i.jsx)("div", {
                                     className: N.xS,
                                     style: { aspectRatio: es },
@@ -146,7 +146,7 @@ function S(e) {
                                                           noBorder: eo >= U || er >= D,
                                                           channel: L,
                                                           className: N.JS,
-                                                          videoComponent: G,
+                                                          videoComponent: k,
                                                           width: U,
                                                           participant: t,
                                                           onClick: n,
@@ -166,7 +166,7 @@ function S(e) {
                             }),
                             en
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: s()(E.$l, { [E.N7]: k }),
+                                      className: s()(v.$l, { [v.N7]: G }),
                                       style: { bottom: ex.value },
                                       children: (0, i.jsx)(h.A, {
                                           channelId: L.id,
@@ -178,7 +178,7 @@ function S(e) {
                         ],
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: E.Vx,
+                        className: v.Vx,
                         style: {
                             translateY: em.value.to((e) => (e * b) / 2),
                             opacity: em.value,

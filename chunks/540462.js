@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(817281),
     I = n(820284),
     N = n(765671),
-    E = n(475743),
-    v = n(646865),
+    v = n(475743),
+    E = n(646865),
     b = n(10716),
     S = n(795816),
     _ = n(933958),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(47899),
     D = n(643501),
     V = n(857253),
-    k = n(652896),
-    G = n(279250),
+    G = n(652896),
+    k = n(279250),
     B = n(446243),
     F = n(558076),
     z = n(360729),
@@ -74,8 +74,8 @@ var i = n(477900),
     ey = n(280450),
     eI = n(249288),
     eN = n(696451),
-    eE = n(71393),
-    ev = n(576705),
+    ev = n(71393),
+    eE = n(576705),
     eb = n(309010),
     eS = n(287809),
     e_ = n(977997),
@@ -89,8 +89,8 @@ var i = n(477900),
     eU = n(198052),
     eD = n(520698),
     eV = n(43189),
-    ek = n(518530),
-    eG = n(681281),
+    eG = n(518530),
+    ek = n(681281),
     eB = n(587837),
     eF = n(675853),
     ez = n(384059),
@@ -121,7 +121,7 @@ function eQ(e) {
             s && c < es.vs.NO_INVITE
                 ? (0, i.jsx)(eu.A, {
                       channel: n,
-                      stream: l?.type === eW.lp.STREAM ? (0, k.Iy)(l.id) : void 0,
+                      stream: l?.type === eW.lp.STREAM ? (0, G.Iy)(l.id) : void 0,
                       className: eK.jZ,
                       exitFullScreen: o,
                       analyticsLocation: n.type === eY.rbe.GUILD_VOICE ? eY.liQ.GUILD_CHANNEL : eY.liQ.DM_CHANNEL,
@@ -505,10 +505,10 @@ class eJ extends l.PureComponent {
     handleSelectParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, allActiveStreams: l, inCall: a, mode: s } = this.props;
         ((0, eW.Ay)(e) &&
-            (0, G.eo)(n, e_.A, eE.A, ev.A, D.default)[0] &&
+            (0, k.eo)(n, e_.A, ev.A, eE.A, D.default)[0] &&
             (C.default.selectVoiceChannel(n.id),
-            0 === l.filter((t) => (0, k._z)(t) === e.id && t.state !== eY.XYD.ENDED).length &&
-                (0, j.A9)((0, k.Iy)(e.id), { forceMultiple: t.shiftKey })),
+            0 === l.filter((t) => (0, G._z)(t) === e.id && t.state !== eY.XYD.ENDED).length &&
+                (0, j.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eY._Of.VIDEO &&
                 (i?.id === e.id ? f.A.selectParticipant(n.id, null) : f.A.selectParticipant(n.id, e.id)));
@@ -524,7 +524,7 @@ class eJ extends l.PureComponent {
             let n = e.getGuildId();
             (null == n || eN.Ay.isCurrentUserGuest(n) || (0, K.pX)((0, eR.vJ)(n)), Y.openChannelCallPopout(e));
         }
-        null == t || (0, v.f)() ? n() : (0, T.A)({ onConfirm: n });
+        null == t || (0, E.f)() ? n() : (0, T.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
         ((0, ez.X)(R.A.VOICE_CONTROL_TRAY, ez.O.STAY_ON_TOP, e), Y.setAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT, e));
@@ -666,7 +666,7 @@ class eJ extends l.PureComponent {
                       className: eK.dL,
                       children: c
                           ? e?.()
-                          : (0, i.jsx)(eG.A, {
+                          : (0, i.jsx)(ek.A, {
                                 channel: t,
                                 guild: n,
                                 appContext: l,
@@ -705,9 +705,9 @@ class eJ extends l.PureComponent {
             y = p === eY.DUB.MINIMUM,
             I = y || p === eY.DUB.NORMAL,
             N = l && s === eY._Of.VIDEO,
-            E = (f?.length ?? 0) > 0 && u.isPrivate();
+            v = (f?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
-        let v = !l || !(this.popoutOpen && !this.inPopout),
+        let E = !l || !(this.popoutOpen && !this.inPopout),
             b = !m && l && !y && e.idle,
             S = (0, i.jsx)(ei.A, {
                 ref: this._contentRef,
@@ -724,7 +724,7 @@ class eJ extends l.PureComponent {
                 mode: s,
                 onSelectParticipant: this.handleSelectParticipant,
                 onContextMenuParticipant: this.handleContextMenu,
-                showParticipants: r && (!I || E),
+                showParticipants: r && (!I || v),
                 popoutType: t,
                 awaitingRemoteSessionInfo: A,
                 callContainerDimensions: x,
@@ -753,7 +753,7 @@ class eJ extends l.PureComponent {
                 disableGradients: !l || y,
                 hideControls: C,
                 idle: b,
-                children: v && (this.renderVoiceChannelAppSurface() ?? _),
+                children: E && (this.renderVoiceChannelAppSurface() ?? _),
             })
         );
     }
@@ -836,7 +836,7 @@ class eJ extends l.PureComponent {
                     },
                     children: [
                         C && (0, i.jsx)(q.A, { channel: t, guildId: g, maxWidth: o }),
-                        x && a && (0, i.jsx)(ek.A, { channel: t, guild: n, maxWidth: o }),
+                        x && a && (0, i.jsx)(eG.A, { channel: t, guild: n, maxWidth: o }),
                     ],
                 }),
             ],
@@ -851,8 +851,8 @@ let e0 = function (e) {
         g = (0, W.Us)(),
         C = (0, V.A)(),
         j = (0, d.bG)([eb.Ay], () => (C?.channelId ?? eb.Ay.getVoiceChannelId()) === t.id),
-        v = t.isGuildStageVoice();
-    (0, Q.A)(v);
+        E = t.isGuildStageVoice();
+    (0, Q.A)(E);
     let {
             participants: S,
             filteredParticipants: T,
@@ -860,8 +860,8 @@ let e0 = function (e) {
             mode: P,
             layout: M,
             participantsOpen: w,
-            chatOpen: k,
-            stageAudienceSidebarOpen: G,
+            chatOpen: G,
+            stageAudienceSidebarOpen: k,
             selectedParticipant: B,
         } = (0, d.cf)(
             [eU.A],
@@ -872,7 +872,7 @@ let e0 = function (e) {
                 e && (n = eY._Of.VIDEO);
                 let l = n === eY._Of.VIDEO ? i : eY.DUB.MINIMUM;
                 e && l !== eY.DUB.FULL_SCREEN && (l = eY.DUB.NO_CHAT);
-                let a = v ? eU.A.getStageSpeakerParticipants(t.id) : null,
+                let a = E ? eU.A.getStageSpeakerParticipants(t.id) : null,
                     s = n !== eY._Of.VOICE ? eU.A.getSelectedParticipant(t.id) : null;
                 return (
                     null == s || null == a || a.includes(s) || (s = null),
@@ -884,12 +884,12 @@ let e0 = function (e) {
                         filteredParticipants: a ?? eU.A.getFilteredParticipants(t.id),
                         participantsOpen: eU.A.getParticipantsOpen(t.id),
                         chatOpen: eU.A.getChatOpen(t.id),
-                        stageAudienceSidebarOpen: v && eU.A.getStageAudienceSidebarOpen(t.id),
+                        stageAudienceSidebarOpen: E && eU.A.getStageAudienceSidebarOpen(t.id),
                         participantsVersion: eU.A.getParticipantsVersion(t.id),
                     }
                 );
             },
-            [g, t.id, v],
+            [g, t.id, E],
         ),
         H = (0, d.yK)([ej.A], () => ej.A.getAllActiveStreams()),
         { selectedStream: Y } = (0, d.cf)(
@@ -897,13 +897,13 @@ let e0 = function (e) {
             () => ({ selectedStream: null != B ? ej.A.getActiveStreamForStreamKey(B.id) : null }),
             [B],
         ),
-        K = (0, d.bG)([eE.A], () => eE.A.getGuild(t.getGuildId())),
+        K = (0, d.bG)([ev.A], () => ev.A.getGuild(t.getGuildId())),
         X = (0, d.bG)([ey.default], () => ey.default.getId()),
         { popoutWindow: q, popoutWindowAlwaysOnTop: Z } = (0, d.cf)([$.A], () => ({
             popoutWindow: $.A.getWindow(eY.MLl.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: $.A.getIsAlwaysOnTop(eY.MLl.CHANNEL_CALL_POPOUT),
         })),
-        J = (0, d.bG)([ev.A], () => ev.A.can(eY.xBc.CONNECT, t)),
+        J = (0, d.bG)([eE.A], () => eE.A.can(eY.xBc.CONNECT, t)),
         et = (0, d.bG)([eI.A], () => eI.A.getToastsEnabled(t.id)),
         en = (0, d.bG)([D.default], () => D.default.getAwaitingRemoteSessionInfo()),
         ei = (0, d.bG)([ee.Ay], () => ee.Ay.callHeaderHeight),
@@ -911,7 +911,7 @@ let e0 = function (e) {
             y.Ay.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
         ea = (0, d.bG)([b.A], () => b.A.getFetchState(), []),
-        es = (0, E.Ay)(ea);
+        es = (0, v.Ay)(ea);
     l.useEffect(() => {
         ea === b.$.ERROR &&
             es !== b.$.ERROR &&
@@ -955,7 +955,7 @@ let e0 = function (e) {
                             filteredParticipants: T,
                             participantsVersion: O,
                             layout: M,
-                            chatOpen: k,
+                            chatOpen: G,
                             maxSidebarWidth: o - 550,
                             currentUserId: X,
                             selectedParticipant: B,
@@ -976,11 +976,11 @@ let e0 = function (e) {
                             theme: eN,
                             canPopout: s,
                             popoutType: r,
-                            guildRoomVisible: eu && eh && !v,
+                            guildRoomVisible: eu && eh && !E,
                             isPlacingNote: ep,
                             isWindowFocused: em,
                             currentVoiceChannelApplicationId: eC,
-                            stageAudienceSidebarOpen: G,
+                            stageAudienceSidebarOpen: k,
                         }),
                         !t.isPrivate() && (0, i.jsx)(eF.wQ, {}),
                         (0, i.jsx)(eV.WD, {}),

@@ -20,7 +20,7 @@ var i = n(477900),
     y = n(270103),
     I = n(105292),
     N = n(531281);
-function E(e) {
+function v(e) {
     let { title: t, image: n } = e;
     return (0, i.jsxs)(d.B, {
         direction: "horizontal",
@@ -56,7 +56,7 @@ function E(e) {
         ],
     });
 }
-function v(e) {
+function E(e) {
     let { position: t, nudge: n, children: a } = e,
         s = l.useMemo(() => ({ position: t, caretConfig: { align: "custom", customOffset: n } }), [t, n]);
     return (0, i.jsx)(o.e.Provider, { value: s, children: a });
@@ -79,7 +79,7 @@ function b(e) {
                 onRequestClose: () => R(!1),
                 renderPopout: (l) => {
                     let { closePopout: a, setPopoutRef: r, position: o, nudge: d } = l;
-                    return (0, i.jsx)(v, {
+                    return (0, i.jsx)(E, {
                         position: o ?? "top",
                         nudge: d,
                         children: (0, i.jsx)(A.N, {
@@ -100,13 +100,13 @@ function b(e) {
                                           children: (0, i.jsxs)("div", {
                                               ref: r,
                                               className: s()(N.hB, l),
-                                              children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(E, { title: t, image: n })],
+                                              children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(v, { title: t, image: n })],
                                           }),
                                       })
                                     : (0, i.jsxs)("div", {
                                           ref: r,
                                           className: s()(N.hB, N.Kc, h, l),
-                                          children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(E, { title: t, image: n })],
+                                          children: [(0, i.jsx)(c.F, {}), (0, i.jsx)(v, { title: t, image: n })],
                                       }),
                         }),
                     });

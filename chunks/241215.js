@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(977997),
     I = n(625494),
     N = n(446243),
-    E = n(889426),
-    v = n(652215),
+    v = n(889426),
+    E = n(652215),
     b = n(806931),
     S = n(527133);
 let _ = function (e) {
@@ -34,18 +34,18 @@ let _ = function (e) {
         {
             participants: D,
             filteredParticipants: V,
-            participantsVersion: k,
-            mode: G,
+            participantsVersion: G,
+            mode: k,
             layout: B,
             participantsOpen: F,
         } = (0, s.cf)([d.A], () => {
-            let e = null != M ? d.A.getLayout(M.id, L) : v.DUB.NORMAL;
+            let e = null != M ? d.A.getLayout(M.id, L) : E.DUB.NORMAL;
             return {
                 participants: d.A.getParticipants(t),
                 filteredParticipants: d.A.getFilteredParticipants(t),
                 participantsVersion: d.A.getParticipantsVersion(t),
                 mode: d.A.getMode(t),
-                layout: L === v.BRT.POPOUT && e !== v.DUB.FULL_SCREEN ? v.DUB.NO_CHAT : e,
+                layout: L === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
                 participantsOpen: d.A.getParticipantsOpen(t),
             };
         }),
@@ -53,9 +53,9 @@ let _ = function (e) {
     return ((0, l.useEffect)(() => {
         if (null != M)
             return (
-                I._.subscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
+                I._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
-                    I._.unsubscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
+                    I._.unsubscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
                 }
             );
         function e() {
@@ -79,11 +79,11 @@ let _ = function (e) {
                   guild: w,
                   participants: D,
                   filteredParticipants: V,
-                  participantsVersion: k,
-                  selectedParticipant: U && G === v._Of.VIDEO ? P : null,
+                  participantsVersion: G,
+                  selectedParticipant: U && k === E._Of.VIDEO ? P : null,
                   layout: B,
                   idle: R,
-                  mode: G,
+                  mode: k,
                   onSelectParticipant: function (e, t) {
                       if (null != M) {
                           if (
@@ -91,7 +91,7 @@ let _ = function (e) {
                               (0, p.eo)(M, y.A, g.A, C.A, u.default)[0] &&
                               0 ===
                                   f.A.getAllActiveStreams().filter(
-                                      (t) => (0, h._z)(t) === e.id && t.state !== v.XYD.ENDED,
+                                      (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,
                                   ).length
                           )
                               return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
@@ -99,7 +99,7 @@ let _ = function (e) {
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {
-                      (0, E.A)({
+                      (0, v.A)({
                           participant: e,
                           event: n,
                           minimalContextMenu: i,

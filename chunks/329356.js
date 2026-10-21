@@ -1,4 +1,4 @@
-n.d(t, { bI: () => _, $l: () => D, Ay: () => $, KL: () => I, qF: () => R, FZ: () => q });
+n.d(t, { bI: () => _, $l: () => D, Ay: () => $, KL: () => I, qF: () => R, FZ: () => O });
 var l = n(582128),
     i = n(17928),
     r = n(73153),
@@ -104,7 +104,7 @@ async function G(e, t, n) {
         { project: i } = e,
         { platform: r, guildId: a } = n,
         u = i.id;
-    O.add(u);
+    B.add(u);
     try {
         let e = await (0, P.xQ)(u);
         l = 1 === e.destinations.length ? e.selected_destination_id : await r.promptPublishDestination(e);
@@ -112,7 +112,7 @@ async function G(e, t, n) {
         r.showError(e instanceof Error ? e.message : E.intl.string(M.default.gMWZeG));
         return;
     } finally {
-        O.delete(u);
+        B.delete(u);
     }
     if (null == l) return;
     if (S.A.isProjectPublishing(u) || S.A.getPublishStatus(u)?.publishing === !0)
@@ -130,12 +130,12 @@ async function G(e, t, n) {
             .then(
                 (t) => {
                     (r.showConfirmation(E.intl.string(M.default.S6Px3n)),
-                        null != e.guildId && B(i),
+                        null != e.guildId && U(i),
                         (0, w.tZ)(u, { isPreview: !1 })
                             .catch((e) => {
                                 console.error("[conjure] post-publish refresh failed", u, e);
                             })
-                            .then(() => (s && !0 !== t.channel_skipped ? U(u, a) : void 0))
+                            .then(() => (s && !0 !== t.channel_skipped ? q(u, a) : void 0))
                             .finally(() => W(u, !1))
                             .catch(() => {}));
                 },
@@ -147,17 +147,17 @@ async function G(e, t, n) {
 function W(e, t) {
     r.h.dispatch({ type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: e, pending: t });
 }
-async function U(e, t) {
+async function q(e, t) {
     let n = Date.now() + 5e3;
     for (; L(e, t)?.appChannelId == null && Date.now() < n;) await new Promise((e) => setTimeout(e, 250));
 }
-function B(e) {
+function U(e) {
     (0, a.eO)((0, x.Du)(e), { withMutualGuilds: !0 }).catch(() => {});
 }
-let O = new Set();
-async function q(e, t, l) {
+let B = new Set();
+async function O(e, t, l) {
     let { guildId: i, platform: r } = l;
-    if (!0 === l.busy || O.has(e)) return;
+    if (!0 === l.busy || B.has(e)) return;
     let a = L(e, i);
     if (null == a) return;
     let u = S.A.getPublishApprovalUrl(e);
@@ -189,21 +189,21 @@ async function z(e, t, n) {
     if (!(null == r || S.A.isProjectPublishing(e))) {
         if (null != i.promptFirstPublish && r.input.status?.state === "unpublished" && (0, m.PV)(r.project)) {
             let t;
-            O.add(e);
+            B.add(e);
             try {
                 t = await i.promptFirstPublish({ projectId: e, name: r.project.name, description: await F(r.project) });
             } finally {
-                O.delete(e);
+                B.delete(e);
             }
             if (!t || S.A.isProjectPublishing(e)) return;
             r = L(e, l) ?? r;
         }
         if ("consent_then_publish" === t.intent) {
-            O.add(e);
+            B.add(e);
             try {
                 await (i.requestConsent ?? ((e) => T(e, l)))(e);
             } finally {
-                O.delete(e);
+                B.delete(e);
             }
             if (S.A.isProjectPublishing(e)) return;
             let r = L(e, l),
@@ -295,25 +295,25 @@ function $(e, t) {
             [x, A, j, w, k, P, N, I, R, T, D, F],
         ),
         W = G?.status?.state ?? null,
-        U = G?.installScope === "guild" && G.status?.surface === "bot";
+        q = G?.installScope === "guild" && G.status?.surface === "bot";
     l.useEffect(() => {
-        null != x && null != v && U && null != W && "unpublished" !== W && B(x);
-    }, [x?.id, v, U, W]);
-    let O = x?.application_id ?? null,
+        null != x && null != v && q && null != W && "unpublished" !== W && U(x);
+    }, [x?.id, v, q, W]);
+    let B = x?.application_id ?? null,
         z = null != W && "unpublished" !== W;
     l.useEffect(() => {
-        null != O &&
+        null != B &&
             z &&
-            null == s.A.getApplication(O) &&
-            !s.A.isFetchingApplication(O) &&
-            (0, u.TA)(O).catch(() => {});
-    }, [O, z]);
+            null == s.A.getApplication(B) &&
+            !s.A.isFetchingApplication(B) &&
+            (0, u.TA)(B).catch(() => {});
+    }, [B, z]);
     let $ = l.useMemo(() => (null == G ? null : (0, C.U)(G)), [G]),
         V = l.useCallback(
             (t) => {
                 null != e &&
                     null != r &&
-                    q(e, t, r).catch((t) => {
+                    O(e, t, r).catch((t) => {
                         console.error("[conjure] publish action failed", e, t);
                     });
             },

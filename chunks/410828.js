@@ -21,8 +21,8 @@ var l = n(17928),
     y = n(446600),
     I = n(571909),
     N = n(623413),
-    E = n(717965),
-    v = n(895903),
+    v = n(717965),
+    E = n(895903),
     b = n(549420),
     S = n(105292),
     _ = n(925556),
@@ -33,7 +33,7 @@ function R(e) {
     (0, I.vI)(t);
     let c = (0, g.E5)(t.id, C.ip.SPEAKER);
     return o
-        ? (0, i.jsx)(v.A, {
+        ? (0, i.jsx)(E.A, {
               channel: t,
               onContinueClick: () => {
                   ((0, I.ek)(!1), n || (0, x.cy)(t));
@@ -59,7 +59,7 @@ function O(e) {
     let { channel: t } = e,
         { analyticsLocations: n } = (0, h.Ay)(u.A.VOICE_CONTROL_TRAY),
         { isOnStartStageScreen: l } = (0, I.Ay)();
-    return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(E.A, { channel: t, isOnStartStageScreen: l }) });
+    return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(v.A, { channel: t, isOnStartStageScreen: l }) });
 }
 function L(e) {
     return (0, l.bG)([y.A], () => (e.isGuildStageVoice() ? y.A.getStageInstanceByChannel(e.id)?.topic : void 0), [e]);

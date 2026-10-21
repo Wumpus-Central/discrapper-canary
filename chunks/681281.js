@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(882840),
     I = n(713654),
     N = n(611371),
-    E = n(769015),
-    v = n(208971),
+    v = n(769015),
+    E = n(208971),
     b = n(446243),
     S = n(920639),
     _ = n(558076),
@@ -35,8 +35,8 @@ var i = n(477900),
     U = n(353428),
     D = n(46054),
     V = n(322338),
-    k = n(665691),
-    G = n(410828),
+    G = n(665691),
+    k = n(410828),
     B = n(366265),
     F = n(241756),
     z = n(708416),
@@ -73,7 +73,7 @@ function et(e) {
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(P.Ay.Divider, { className: Q.yF }),
-                    (0, i.jsx)(E.A, { game: n, className: Q.RI }),
+                    (0, i.jsx)(v.A, { game: n, className: Q.RI }),
                     (0, i.jsx)(c.E, {
                         className: Q.W$,
                         variant: "text-md/normal",
@@ -102,7 +102,7 @@ function en(e) {
             appContext: o,
             inCall: f,
             isChatOpen: x,
-            isStageAudienceSidebarOpen: E,
+            isStageAudienceSidebarOpen: v,
             exitFullScreen: R,
             guildRoomVisible: O,
         } = e,
@@ -114,7 +114,7 @@ function en(e) {
         ei = F && !O && !en,
         el = (0, j.Ay)(t),
         ea = t.isGuildStageVoice(),
-        es = (0, G.nd)(t),
+        es = (0, k.nd)(t),
         er = ei ? q.intl.string(Z.default.f7g0DK) : O ? `${el} \xb7 ${q.intl.string(Z.default.wRLmM0)}` : (es ?? el),
         eo = ei ? d.Z : (0, I.gU)(t),
         [ec] = (0, C.A)(L?.type === X.lp.ACTIVITY ? [L.applicationId] : []),
@@ -124,7 +124,7 @@ function en(e) {
         : t.isDM()
           ? (ed = q.intl.string(q.t.jN2DfZ))
           : t.isGroupDM() && (ed = q.intl.string(q.t["e5y+gm"]));
-    let eu = (0, v.G)((0, y.l)(t)),
+    let eu = (0, E.G)((0, y.l)(t)),
         eh = t.isGuildVoice() && f && null != eu && eu.length > 0,
         ep = (0, Y.Ay)(t),
         em = eh
@@ -157,7 +157,7 @@ function en(e) {
                   }),
               })
             : null,
-        eA = (0, k.bG)({ channelId: t.id }),
+        eA = (0, G.bG)({ channelId: t.id }),
         ef = l.useCallback(() => {
             ei &&
                 (ee
@@ -185,7 +185,7 @@ function en(e) {
                     appContext: o,
                     inCall: f,
                     isChatOpen: x,
-                    isStageAudienceSidebarOpen: E,
+                    isStageAudienceSidebarOpen: v,
                     exitFullScreen: R,
                     focusedApplication: ec,
                     shouldShowHeaderParticipants: !0,
@@ -224,7 +224,7 @@ function en(e) {
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(P.Ay.Divider, { className: Q.yF }),
-                                  (0, i.jsx)(G.Pb, { channel: t }),
+                                  (0, i.jsx)(k.Pb, { channel: t }),
                               ],
                           })
                         : null,

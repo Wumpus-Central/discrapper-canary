@@ -1,4 +1,4 @@
-t.d(i, { p: () => P });
+t.d(i, { p: () => V });
 var n = t(477900),
     l = t(582128),
     s = t(503698),
@@ -12,8 +12,8 @@ var n = t(477900),
     m = t(939249),
     g = t(283973),
     h = t(866665),
-    f = t(834730),
-    p = t(789645),
+    p = t(834730),
+    f = t(789645),
     I = t(320448),
     v = t(775602),
     S = t(793574),
@@ -29,27 +29,27 @@ t(281405);
 var T = t(105292),
     O = t(811041),
     G = t(254849);
-function V(e) {
+function P(e) {
     return 1 - Math.pow(1 - e, 4);
 }
-function P(e) {
+function V(e) {
     let { channel: i, onClose: s } = e,
-        P = l.useRef(null),
+        V = l.useRef(null),
         w = l.useRef(null),
         [k, R] = l.useState(!1),
-        [D, M] = l.useState(0),
-        { analyticsLocations: U } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
+        [D, U] = l.useState(0),
+        { analyticsLocations: M } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
     (0, _.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: d.ImpressionTypes.VIEW,
-        properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: U },
+        properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: M },
     });
     let L = (0, u.bG)([y.A], () => y.A.can(b.xBc.CREATE_INSTANT_INVITE, i), [i]),
         F = (0, u.bG)([N.A], () => N.A.getGuild(i.guild_id)),
         z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [B, K] = l.useState(!1),
         Y = l.useRef(null),
-        q = (0, E.M)(L ? P : Y),
+        q = (0, E.M)(L ? V : Y),
         [$, H] = l.useState(!1),
         { isFocusing: W } = (0, E.A)(w),
         [Z, J] = l.useState(!1),
@@ -61,12 +61,12 @@ function P(e) {
                     reason: e,
                     channel_id: i.id,
                     guild_id: i.guild_id,
-                    location_stack: U,
+                    location_stack: M,
                 }),
                     R(!1),
                     s?.());
             },
-            [i.id, i.guild_id, s, U],
+            [i.id, i.guild_id, s, M],
         ),
         ee = l.useCallback(() => {
             null != F &&
@@ -86,7 +86,7 @@ function P(e) {
         [ei, et] = (0, c.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
-            config: { duration: 200, easing: V, clamp: !0 },
+            config: { duration: 200, easing: P, clamp: !0 },
         })),
         en = l.useCallback(
             (e) => {
@@ -114,7 +114,7 @@ function P(e) {
             null != el.current ? Math.max(1e4 - (Date.now() - el.current), 0) : 1e4,
         );
         return (
-            null == el.current && (M((e) => e + 1), (el.current = Date.now())),
+            null == el.current && (U((e) => e + 1), (el.current = Date.now())),
             () => {
                 clearTimeout(e);
             }
@@ -124,11 +124,11 @@ function P(e) {
             R(!0);
         }, []),
         ea = l.useCallback(() => {
-            (R(!1), H(!1), Z && (J(!1), P.current?.focus()));
+            (R(!1), H(!1), Z && (J(!1), V.current?.focus()));
         }, [Z]);
     return L
         ? (0, n.jsx)(A.Y, {
-              targetElementRef: P,
+              targetElementRef: V,
               shouldShow: k,
               position: "right",
               align: "top",
@@ -143,7 +143,7 @@ function P(e) {
                       className: O.lY,
                       style: ei,
                       children: (0, n.jsx)(m.D, {
-                          innerRef: P,
+                          innerRef: V,
                           className: a()({ [O.vk]: !B }, G.q7, G.L9, G.vk),
                           focusProps: { offset: { right: 4 } },
                           "aria-disabled": B,
@@ -187,7 +187,7 @@ function P(e) {
                                   (0, n.jsx)(h.m, {
                                       text: T.intl.string(T.t["EE+P0H"]),
                                       overflowOnly: !0,
-                                      children: (0, n.jsx)(f.E, {
+                                      children: (0, n.jsx)(p.E, {
                                           variant: "text-sm/medium",
                                           className: O.Pf,
                                           lineClamp: 1,
@@ -203,7 +203,7 @@ function P(e) {
                                                     (e.stopPropagation(), en("user_explicit"));
                                                 },
                                                 "aria-label": T.intl.string(T.t.cpT0Cq),
-                                                children: (0, n.jsx)(p.P, {
+                                                children: (0, n.jsx)(f.P, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                     className: O.Kk,

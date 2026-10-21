@@ -1,4 +1,4 @@
-n.d(t, { V: () => b, _: () => v });
+n.d(t, { V: () => b, _: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(866665),
@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(268378),
     I = n(105292),
     N = n(771124),
-    E = n(253146);
-function v() {
+    v = n(253146);
+function E() {
     let [e, t] = (0, u.V)("clips-video-call-tile-dismissed", !1),
         n = l.useCallback(() => {
             t(!0);
@@ -75,7 +75,7 @@ function _(e) {
                 "aria-label": "Close",
                 children: (0, i.jsx)(o.P, { size: "sm", color: "currentColor" }),
             }),
-            (0, i.jsx)("img", { className: N.Qw, src: E, alt: "" }),
+            (0, i.jsx)("img", { className: N.Qw, src: v, alt: "" }),
             (0, i.jsx)(c.E, {
                 className: N.pG,
                 variant: t >= 300 ? "text-md/medium" : "text-sm/medium",
