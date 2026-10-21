@@ -350,11 +350,11 @@ function ey(e) {
                       };
             }, [l, i, d, u, m, s, n, t, f, c, x]);
         })({ sku: eI, orbsGate: eQ, orbPriceAmount: eY, promotion: e$, reward: ez, showOrbsOnly: u }),
-        e7 = 2 !== i && eW ? e8 : ej,
-        e5 = a.useCallback((e) => {
+        e5 = 2 !== i && eW ? e8 : ej,
+        e6 = a.useCallback((e) => {
             eF(e);
         }, []),
-        e6 = a.useMemo(() => c()(ei.Nr, { [ei.ax]: 0 === i, [ei.GW]: 1 === i, [ei.jz]: 2 === i }), [i]),
+        e7 = a.useMemo(() => c()(ei.Nr, { [ei.ax]: 0 === i, [ei.GW]: 1 === i, [ei.jz]: 2 === i }), [i]),
         { handleCardHover: e4, handleCardUnhover: le } = (function (e) {
             let {
                     skuId: l,
@@ -423,7 +423,7 @@ function ey(e) {
             analyticsContext: eH,
             positionInSection: l,
             analyticsLocations: eB,
-            shownPriceDetails: e7,
+            shownPriceDetails: e5,
         }),
         { handleCardVisibilityChange: ll } = (function (e) {
             let {
@@ -510,7 +510,7 @@ function ey(e) {
             analyticsContext: eH,
             positionInSection: l,
             analyticsLocations: eB,
-            shownPriceDetails: e7,
+            shownPriceDetails: e5,
         });
     a.useEffect(() => {
         ll(eG);
@@ -543,14 +543,14 @@ function ey(e) {
                     is_user_guild_member: d,
                     page_has_leaderboard: m,
                     cta_type: e,
-                    price: e7.price,
-                    regular_price: e7.regularPrice,
-                    currency: e7.currency,
-                    orbs_amount: e7.orbsAmount,
+                    price: e5.price,
+                    regular_price: e5.regularPrice,
+                    currency: e5.currency,
+                    orbs_amount: e5.orbsAmount,
                     location_stack: l,
                 });
             },
-            [n, eS, eT, eH, e7],
+            [n, eS, eT, eH, e5],
         ),
         { primaryIconAsset: ln, primaryIconLabel: lr } = a.useMemo(() => (0, W.Cv)(eI, eS), [eI, eS]),
         { viewProductDetails: la } = (0, $.H)(),
@@ -696,14 +696,14 @@ function ey(e) {
     let lN = lg ? (0, r.jsx)("div", { className: ei.mN, "aria-hidden": !0 }) : null,
         ly = (0, r.jsx)(x.L, {
             innerRef: ey,
-            onChange: e5,
+            onChange: e6,
             threshold: 0,
             children: (0, r.jsxs)(j.s, {
                 onClick: lp,
                 onContextMenu: l_,
                 onMouseEnter: lu,
                 onMouseLeave: ld,
-                className: c()(e6, { [ei.Zl]: !eD && 2 !== i, [ei.BN]: eM, [eM ? ei.Mn : ei.YF]: eL, [ei.Rc]: !eW }, s),
+                className: c()(e7, { [ei.Zl]: !eD && 2 !== i, [ei.BN]: eM, [eM ? ei.Mn : ei.YF]: eL, [ei.Rc]: !eW }, s),
                 ref: ey,
                 buttonProps: { ...ed, role: "button" },
                 onFocus: () => ed?.onFocus?.(),
