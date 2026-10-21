@@ -233,45 +233,45 @@ function eJ(e) {
             name: d,
             guildId: h,
             onBack: u,
-            canSubmit: p,
-            onMembersChange: m,
-            pendingPermissionOverwrites: C,
+            canSubmit: g,
+            onMembersChange: p,
+            pendingPermissionOverwrites: m,
         } = e,
-        [I, A] = l.useState(""),
-        [E, b] = l.useState({}),
-        N = l.useRef(null),
-        S = (0, c.bG)([eT.A], () => eT.A.getGuild(h)),
-        f = a === eB.rbe.GUILD_STAGE_VOICE,
-        { roles: O, members: _, getRichTag: G } = (0, eh.K)(S, null, f ? ef.QY : (0, eG.TA)(a), I, f),
-        v = ed.A.useSections({ roles: O, members: _ });
+        [C, I] = l.useState(""),
+        [A, E] = l.useState({}),
+        b = l.useRef(null),
+        N = (0, c.bG)([eT.A], () => eT.A.getGuild(h)),
+        S = a === eB.rbe.GUILD_STAGE_VOICE,
+        { roles: f, members: O, getRichTag: _ } = (0, eh.K)(N, null, S ? ef.QY : (0, eG.TA)(a), C, S),
+        G = ed.A.useSections({ roles: f, members: O });
     return (l.useEffect(() => {
-        m(E);
-    }, [E, m]),
-    null == S)
+        p(A);
+    }, [A, p]),
+    null == N)
         ? null
         : ((t =
-              0 === Object.keys(C).length
+              0 === Object.keys(m).length
                   ? Q.intl.string(Q.t["5Wxrcd"])
                   : a === eB.rbe.GUILD_CATEGORY
                     ? Q.intl.string(Q.t["ISN+NM"])
                     : Q.intl.string(Q.t["fUYU+j"])),
           (0, i.jsx)(ed.A.Provider, {
-              listRef: N,
-              query: I,
-              setQuery: A,
-              pendingAdditions: E,
-              setPendingAdditions: b,
-              roles: O,
-              members: _,
-              getRichTag: G,
-              children: (0, i.jsx)(g.a, {
+              listRef: b,
+              query: C,
+              setQuery: I,
+              pendingAdditions: A,
+              setPendingAdditions: E,
+              roles: f,
+              members: O,
+              getRichTag: _,
+              children: (0, i.jsx)(ed.A.Modal, {
                   transitionState: n,
                   onClose: s,
-                  title: f ? Q.intl.string(Q.t["S/6zHM"]) : Q.intl.string(Q.t.dMJ3Y6),
+                  title: S ? Q.intl.string(Q.t["S/6zHM"]) : Q.intl.string(Q.t.dMJ3Y6),
                   subtitle: { text: d, leadingIcon: r },
                   input: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          f
+                          S
                               ? (0, i.jsx)(T.E, {
                                     color: "text-default",
                                     className: ez.h_,
@@ -293,13 +293,13 @@ function eJ(e) {
                       renderSection: ed.A.renderSection,
                       rowHeight: ed.A.ROW_HEIGHT,
                       renderRow: ed.A.renderRow,
-                      sections: v,
+                      sections: G,
                       innerAriaOrientation: "vertical",
                       innerRole: "listbox",
                   },
                   actions: [
                       { variant: "secondary", text: Q.intl.string(Q.t["13/7kX"]), onClick: u },
-                      { variant: "primary", text: t, type: "submit", disabled: !p },
+                      { variant: "primary", text: t, type: "submit", disabled: !g },
                   ],
               }),
           }));
