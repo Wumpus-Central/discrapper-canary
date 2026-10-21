@@ -1493,7 +1493,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 645752, Version Hash: ab4b6280f72f12c55d572f491dbca613d7355b7d`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 645779, Version Hash: 7464e491102bfae7cfe69e4a112c4501feb1f315`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25423,7 +25423,7 @@ let ye = "isHideDevBanner",
                     className: tf()(L9.Wz, L9.mr),
                     children: [
                         (0, b.jsx)(L8, { className: L9.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "645752" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "645779" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -41127,6 +41127,7 @@ let Gs = {
             request: (e) => ({ id: e.string().max(64).required() }),
             response: (e) => GL(e).allow(null),
         },
+        [cL.e$.GET_CURRENT_USER]: { embeddedAppSDK: !0, request: void 0, response: (e) => GL(e).allow(null) },
         [cL.e$.GET_QUEST_ENROLLMENT_STATUS]: {
             embeddedAppSDK: !0,
             request: (e) => ({ quest_id: e.string().required().meta({ className: "QuestId" }) }),
@@ -43592,6 +43593,13 @@ let xZ = {
                     } = e,
                     n = eF.default.getUser(t);
                 return null == n ? null : (0, wJ.A)(n);
+            },
+        }),
+        [j.e$_.GET_CURRENT_USER]: Gy(j.e$_.GET_CURRENT_USER, {
+            scope: { [bl.sm.ANY]: [bl.W_, bl.hj] },
+            handler() {
+                let e = eF.default.getCurrentUser();
+                return null == e ? null : (0, wJ.A)(e);
             },
         }),
     },

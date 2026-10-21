@@ -44,7 +44,7 @@ class m {
                 environment: "production",
             },
         };
-        if (e.transport === f.z4.IPC) {
+        if (e.transport === f.z4.IPC || e.transport === f.z4.POST_MESSAGE) {
             let n = this.getCurrentUser();
             if (null == n) return void e.close(I.YI$.CLOSE_NORMAL, "User logged out");
             t.user = (0, A.A)(n);
