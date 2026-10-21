@@ -1287,14 +1287,15 @@ function tK(e) {
         h = t > 0 ? t$.Ci : void 0,
         f = tq(o) ?? o.label ?? "";
     if (u)
-        return (0, l.jsx)(R.m, {
-            position: "left",
-            text: f,
-            ariaHidden: !0,
-            children: (0, l.jsx)(E.B, {
-                padding: tW,
-                gap: 0,
-                className: h,
+        return (0, l.jsx)(E.B, {
+            padding: tW,
+            gap: 0,
+            className: h,
+            children: (0, l.jsx)(R.m, {
+                position: "left",
+                text: f,
+                ariaHidden: !0,
+                asContainer: !0,
                 children: (0, l.jsx)(tV, { leading: (0, l.jsx)(tX, { section: o }), label: tq(o) }),
             }),
         });
