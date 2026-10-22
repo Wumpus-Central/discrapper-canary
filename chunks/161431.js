@@ -1,17 +1,17 @@
-n.d(t, { IP: () => c, Od: () => m, rU: () => d });
+n.d(t, { IP: () => d, Od: () => f, rU: () => c });
 var l = n(582128),
-    r = n(17928),
-    a = n(73153),
-    i = n(183011),
-    s = n(989145);
-let o = [],
-    u = new Set();
-function c(e) {
-    u.has(e) ||
-        (u.add(e),
-        (0, s.Y7)(e)
+    i = n(17928),
+    r = n(73153),
+    a = n(183011),
+    u = n(989145);
+let s = 221552 == n.j ? [] : null,
+    o = new Set();
+function d(e) {
+    o.has(e) ||
+        (o.add(e),
+        (0, u.Y7)(e)
             .then((t) => {
-                a.h.dispatch({
+                r.h.dispatch({
                     type: "CONJURE_STORED_ATTACHMENTS_FETCHED",
                     projectId: e,
                     attachments: [...t].reverse(),
@@ -20,21 +20,21 @@ function c(e) {
             .catch((e) => {
                 console.error("[conjure] stored attachment list failed", e);
             })
-            .finally(() => u.delete(e)));
+            .finally(() => o.delete(e)));
 }
-function d(e) {
-    return (0, r.bG)([i.A], () => i.A.getAttachments(e) ?? o, [e]);
+function c(e) {
+    return (0, i.bG)([a.A], () => a.A.getAttachments(e) ?? s, [e]);
 }
-function m(e, t) {
-    let n = (0, r.bG)([i.A], () => i.A.getAttachment(t), [t]),
-        s = null == n;
+function f(e, t) {
+    let n = (0, i.bG)([a.A], () => a.A.getAttachment(t), [t]),
+        u = null == n;
     return (
         l.useEffect(() => {
-            !s ||
+            !u ||
                 null == e ||
-                i.A.wasLookedUp(t) ||
-                (a.h.dispatch({ type: "CONJURE_STORED_ATTACHMENT_LOOKUP", attachmentId: t }), c(e));
-        }, [s, e, t]),
+                a.A.wasLookedUp(t) ||
+                (r.h.dispatch({ type: "CONJURE_STORED_ATTACHMENT_LOOKUP", attachmentId: t }), d(e));
+        }, [u, e, t]),
         n
     );
 }

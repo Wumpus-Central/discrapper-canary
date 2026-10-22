@@ -1,1 +1,7 @@
-_.exports = { Mk: "settingsCard__0d5af", p0: "settingsCardActions__0d5af", DQ: "dockedBody__0d5af" };
+_.exports = {
+    Mk: "settingsCard__0d5af",
+    p0: "settingsCardActions__0d5af",
+    DQ: "dockedBody__0d5af",
+    xE: "dockedFooterHint__0d5af",
+    Ol: "savedStatus__0d5af",
+};

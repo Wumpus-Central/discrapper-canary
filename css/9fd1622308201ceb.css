@@ -32,6 +32,16 @@
     scrollbar-width: thin
 }
 
+.dockedFooterHint__0d5af {
+    min-width: 0
+}
+
+.savedStatus__0d5af {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
 .cards__75c55 {
     display: grid;
     gap: var(--space-8);
@@ -232,4 +242,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=1b621c7c50d6d40c.css.map*/
+/*# sourceMappingURL=9fd1622308201ceb.css.map*/
