@@ -1,11 +1,11 @@
 n.d(t, {
     Ei: () => h,
+    FG: () => S,
     Kr: () => l,
     LM: () => _,
     Qq: () => p,
     VG: () => f,
     Ve: () => o,
-    WA: () => S,
     bI: () => E,
     bo: () => g,
     e6: () => m,
@@ -49,5 +49,6 @@ let l = "#34E2F1",
         [r.K.EPIC]: a.default.hAmdLZ,
         [r.K.ULTRA]: a.default.Tv4xyf,
         [r.K.NITRO]: a.default["0ModIv"],
-    },
-    S = [r.K.ULTRA, r.K.EPIC, r.K.RARE, r.K.COMMON, r.K.DEFAULT, r.K.NITRO];
+    };
+(r.K.ULTRA, r.K.EPIC, r.K.RARE, r.K.COMMON, r.K.DEFAULT, r.K.NITRO);
+let S = [r.K.DEFAULT, r.K.COMMON, r.K.RARE, r.K.EPIC, r.K.ULTRA, r.K.NITRO];
