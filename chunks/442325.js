@@ -165,19 +165,25 @@ let g = new m(a.h, {
     },
     CHANNEL_TABS_NAVIGATE_ROUTE: function (e) {
         let { routePath: t, routeLabel: n } = e;
-        if (!A() || 0 === c.length || null == u) return !1;
-        let i = c.find((e) => e.id === u);
-        if (null == i || ("route" === i.kind && i.routePath === t)) return !1;
-        let r = { kind: "route", routePath: t, routeLabel: n };
-        if (i.pinned) {
+        if (!A()) return !1;
+        let i = { kind: "route", routePath: t, routeLabel: n };
+        if (0 === c.length) {
+            let e = h(i);
+            ((c = [e]), (u = e.id));
+            return;
+        }
+        if (null == u) return !1;
+        let r = c.find((e) => e.id === u);
+        if (null == r || ("route" === r.kind && r.routePath === t)) return !1;
+        if (r.pinned) {
             if (c.length >= 25) return !1;
-            let e = h(r);
+            let e = h(i);
             return ((c = [...c, e]), void (u = e.id));
         }
         c = c.map((e) => {
             if (e.id !== u) return e;
-            let t = [...e.entries.slice(0, e.index + 1), r];
-            return f(e, r, t, t.length - 1);
+            let t = [...e.entries.slice(0, e.index + 1), i];
+            return f(e, i, t, t.length - 1);
         });
     },
     CHANNEL_SELECT: function (e) {

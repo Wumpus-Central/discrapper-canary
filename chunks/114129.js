@@ -63,7 +63,7 @@ function p() {
     null == t || I(t, e?.guildId ?? c.A.getGuildId() ?? null);
 }
 function T(e, t) {
-    0 !== u.A.getTabs().length && r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
+    r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
 }
 var m = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
 function g(e) {
