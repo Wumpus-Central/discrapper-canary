@@ -2,7 +2,7 @@ n.d(t, { A: () => ee });
 var i = n(477900),
     l = n(582128),
     s = n(38021),
-    r = n(343081),
+    r = n(263857),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -111,14 +111,14 @@ let S = l.memo(function () {
 });
 var I = n(834730),
     b = n(276293),
-    G = n(661531),
-    j = n(983851),
+    j = n(661531),
+    G = n(983851),
     v = n(534890),
     R = n(331322),
     y = n(297264),
     T = n(17839),
-    L = n(22277),
-    M = n(105292),
+    M = n(22277),
+    L = n(105292),
     U = n(27948);
 function D() {
     let e = l.useCallback(() => {
@@ -127,7 +127,7 @@ function D() {
     return (0, i.jsx)(I.E, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: M.intl.format(L.default.LyZZLX, { onClick: e }),
+        children: L.intl.format(M.default.LyZZLX, { onClick: e }),
     });
 }
 function O() {
@@ -138,21 +138,21 @@ function O() {
             (0, i.jsxs)("div", {
                 className: U._f,
                 children: [
-                    (0, i.jsx)(b.N, { size: "xs", color: G.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(b.N, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: U.D_ }),
                 ],
             }),
             (0, i.jsxs)("div", {
                 className: U._f,
                 children: [
-                    (0, i.jsx)(j.H, { size: "xs", color: G.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(G.H, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: U.VG }),
                 ],
             }),
             (0, i.jsxs)("div", {
                 className: U._f,
                 children: [
-                    (0, i.jsx)(v.ChatIcon, { size: "xs", color: G.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(v.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: U.D_ }),
                 ],
             }),
@@ -170,7 +170,7 @@ function P() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: M.intl.string(L.default["1n0TGE"]) }),
+                    (0, i.jsx)(y.D, { variant: "heading-md/semibold", children: L.intl.string(M.default["1n0TGE"]) }),
                     (0, i.jsx)(D, {}),
                 ],
             }),
@@ -194,7 +194,7 @@ var V = n(866665),
     q = n(16236);
 async function J(e) {
     let t = await (0, K.pk)(e);
-    null != t && (await (0, q.nR)({ channelIds: [t], categoryName: M.intl.string(M.t.OGiMXJ), source: "suggestions" }));
+    null != t && (await (0, q.nR)({ channelIds: [t], categoryName: L.intl.string(L.t.OGiMXJ), source: "suggestions" }));
 }
 var Z = n(487470);
 function $(e) {
@@ -211,14 +211,14 @@ function $(e) {
                           (0, i.jsxs)("div", {
                               className: Z.wx,
                               children: [
-                                  (0, i.jsx)(F.A, { className: Z.TK, children: M.intl.string(L.default.oHWnLy) }),
+                                  (0, i.jsx)(F.A, { className: Z.TK, children: L.intl.string(M.default.oHWnLy) }),
                                   (0, i.jsx)(V.m, {
-                                      text: M.intl.string(M.t.WAI6xu),
+                                      text: L.intl.string(L.t.WAI6xu),
                                       children: (0, i.jsx)(w.D, {
                                           className: Z.r,
                                           onClick: l,
                                           role: "button",
-                                          "aria-label": M.intl.string(L.default.F3dWTe),
+                                          "aria-label": L.intl.string(M.default.F3dWTe),
                                           children: (0, i.jsx)(H.P, {
                                               size: "xs",
                                               color: "currentColor",
@@ -239,8 +239,8 @@ function $(e) {
                                           trailing: (0, i.jsx)(k.$, {
                                               variant: "secondary",
                                               size: "sm",
-                                              text: M.intl.string(M.t.OYkgVk),
-                                              "aria-label": M.intl.formatToPlainString(L.default.Hevebj, {
+                                              text: L.intl.string(L.t.OYkgVk),
+                                              "aria-label": L.intl.formatToPlainString(M.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? X.Ay.getName(e.record)

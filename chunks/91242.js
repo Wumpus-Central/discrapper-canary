@@ -111,6 +111,7 @@ let m = new T(r.h, {
                 runsInBackground: !1,
                 poolVisibility: "unpooled",
                 muted: !1,
+                userMuted: !1,
                 ..._,
                 iframeId: null,
                 hostWindowKey: r ?? null,
@@ -168,7 +169,15 @@ let m = new T(r.h, {
     },
     FRAME_POOL_VISIBILITY_UPDATE: function (e) {
         let { frameId: t, poolVisibility: n } = e;
-        return A(t, (e) => ({ ...e, poolVisibility: n, muted: "hidden" === n }));
+        return A(t, (e) => ({ ...e, poolVisibility: n, muted: "hidden" === n || e.userMuted }));
+    },
+    FRAME_SET_USER_MUTED: function (e) {
+        let { frameId: t, muted: n } = e;
+        return h(
+            t,
+            (e) => e.userMuted !== n,
+            (e) => ({ ...e, userMuted: n, muted: "hidden" === e.poolVisibility || n }),
+        );
     },
     EMBEDDED_APP_SHIM_STATE_UPDATE: function (e) {
         let { iframeId: t, state: n } = e;

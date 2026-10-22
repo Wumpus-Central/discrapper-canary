@@ -7,7 +7,7 @@ var i = n(477900),
     o = n(506774),
     c = n(31728),
     d = n(164617),
-    u = n(205297),
+    u = n(956790),
     h = n(334463),
     p = n(175203),
     m = n(652215),
@@ -56,7 +56,7 @@ function C(e) {
         );
     return (0, i.jsx)("div", {
         className: f.kL,
-        children: (0, i.jsx)(u.S, {
+        children: (0, i.jsx)(u.S8, {
             position: I,
             id: 0,
             width: _,
