@@ -45,7 +45,7 @@ function A(e) {
     null != n && (u.delete(t), n.close());
 }
 function h() {
-    for (let [e, t] of u) t.setParentState(_(e));
+    for (let [e, t] of u) null != r.A.getFrameByIframeId(e) && t.setParentState(_(e));
 }
 class f extends i.A {
     actions = { EMBEDDED_APP_SHIM_PIPE_OPEN: E };
