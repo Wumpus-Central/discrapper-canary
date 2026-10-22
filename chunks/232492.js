@@ -1,29 +1,29 @@
-t.d(a, { A: () => h });
-var l = t(17928),
-    n = t(963027),
-    r = t(262763),
-    i = t(976860),
-    s = t(734057),
-    u = t(977997),
-    o = t(499211),
-    c = t(652215);
-function h(e, a) {
-    let t = (0, l.bG)([s.A], () => s.A.getChannel(a)),
-        { needSubscriptionToAccess: h } = (0, o.A)(t?.id);
-    if (null == t || h || t.isObfuscated()) return null;
-    let d = t.isGuildVocal();
+n.d(t, { A: () => d });
+var l = n(17928),
+    o = n(963027),
+    r = n(262763),
+    i = n(976860),
+    a = n(734057),
+    u = n(977997),
+    s = n(499211),
+    c = n(652215);
+function d(e, t) {
+    let n = (0, l.bG)([a.A], () => a.A.getChannel(t)),
+        { needSubscriptionToAccess: d } = (0, s.A)(n?.id);
+    if (null == n || d || n.isObfuscated()) return null;
+    let C = n.isGuildVocal();
     return {
         navigateToChannel: function () {
-            null != t &&
-                (d
+            null != n &&
+                (C
                     ? r.A.handleVoiceConnect({
-                          channel: t,
-                          connected: u.A.isInChannel(t.id),
+                          channel: n,
+                          connected: u.A.isInChannel(n.id),
                           needSubscriptionToAccess: !1,
                           routeDirectlyToChannel: !0,
                       })
-                    : (0, i.pX)(c.BVt.CHANNEL(e, t.id)));
+                    : (0, i.pX)(c.BVt.CHANNEL(e, n.id)));
         },
-        ariaLabel: (0, n.Ay)({ channel: t }),
+        ariaLabel: (0, o.Ay)({ channel: n }),
     };
 }

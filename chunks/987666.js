@@ -26,15 +26,15 @@ function c(e) {
         }));
     if (d.type === a.u$.LOADING) return null;
     let { invoicePreview: I } = d,
-        y = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
-        A = (0, r.de)({
+        A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+        y = (0, r.de)({
             overrideRenewalDate: m,
             currentInvoice: h ? I : void 0,
-            renewalInvoice: y,
+            renewalInvoice: A,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: x, multiPeriodDiscountAttributes: P } = (0, i.QM)(y, t, {
+        { renewalPrice: x, multiPeriodDiscountAttributes: P } = (0, i.QM)(A, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
@@ -46,7 +46,7 @@ function c(e) {
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
-            startDate: A,
+            startDate: y,
         };
     return (0, l.jsx)(o._P, { variant: { type: C, ...v }, paymentSourceType: n, immediateDelivery: S });
 }

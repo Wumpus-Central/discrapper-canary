@@ -1,7 +1,7 @@
 n.d(t, {
     CM: () => p,
     D0: () => a,
-    FC: () => m,
+    FC: () => g,
     Id: () => o,
     Tc: () => s,
     gz: () => f,
@@ -42,6 +42,6 @@ function p(e) {
 function h(e) {
     return e.main.length > 0;
 }
-function m(e) {
+function g(e) {
     return h(e) ? i.default.eGqPbV : i.default.qSViP4;
 }

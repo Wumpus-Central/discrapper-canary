@@ -12,8 +12,8 @@ function f(e, t) {
     let { id: n, status: u, error: s } = t,
         f = (0, i.bG)([a.default], () => "open" === a.default.getConnState(e), [e]),
         p = (0, i.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
-        [h, m] = l.useState(null),
-        g = l.useCallback(() => m({ frame: t, ok: (0, o.yR)(e, n) }), [t, e, n]),
+        [h, g] = l.useState(null),
+        m = l.useCallback(() => g({ frame: t, ok: (0, o.yR)(e, n) }), [t, e, n]),
         b = h?.frame === t ? h : null,
         v = b?.ok === !0 && f;
     if ("undone" === u) return null;
@@ -36,7 +36,7 @@ function f(e, t) {
                       text: c.intl.string("active" === u ? d.default["7q2YyD"] : d.default.FzX9h8),
                       confirm: "committed" === u,
                       disabled: !f || v || ("committed" === u && !p),
-                      onPress: g,
+                      onPress: m,
                   },
     };
 }

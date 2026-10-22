@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(67480),
     g = n(486020),
     I = n(158045),
-    y = n(580630),
-    A = n(166532),
+    A = n(580630),
+    y = n(166532),
     x = n(888751),
     P = n(652215),
     v = n(202541),
@@ -53,7 +53,7 @@ function R(e) {
         })),
         V = F && W,
         Y = i.useMemo(() => {
-            if (V && null != G) return () => G(A.pn.PLAN_SELECT);
+            if (V && null != G) return () => G(y.pn.PLAN_SELECT);
         }, [V, G]),
         K = (function (e) {
             let {
@@ -115,7 +115,7 @@ function R(e) {
         {
             header: z,
             headerIconSrc: $,
-            guildForIcon: J,
+            guildForIcon: Q,
         } = (function (e) {
             let { skuId: t } = e;
             return (0, r.cf)(
@@ -138,7 +138,7 @@ function R(e) {
                 [t],
             );
         })({ skuId: c.skuId }),
-        Q = null != J ? (0, l.jsx)(m.Ay, { guild: J, size: m.Ay.Sizes.SMOL }) : void 0,
+        J = null != Q ? (0, l.jsx)(m.Ay, { guild: Q, size: m.Ay.Sizes.SMOL }) : void 0,
         { premiumGroupDiscountOffer: X } = (0, o.i)(),
         ee = (0, d.t4)((e) => e.premiumDiscountInfo),
         {
@@ -163,10 +163,10 @@ function R(e) {
                         d = M(t),
                         m = t === s.u$.PREMIUM_WITH_TRIAL,
                         f = (d ? c?.amount : c?.subscriptionPlanPrice) ?? 0,
-                        E = (0, y.$g)(f, l.currency),
-                        S = (0, y.CE)(E, n.interval, n.intervalCount),
+                        E = (0, A.$g)(f, l.currency),
+                        S = (0, A.CE)(E, n.interval, n.intervalCount),
                         g = null,
-                        A = null,
+                        y = null,
                         P = !1,
                         v = S,
                         _ = o?.discountOffer;
@@ -176,24 +176,24 @@ function R(e) {
                     else if (d) {
                         if (((v = E), (0, x.uH)(n))) {
                             let e = (0, I.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            ((g = null != e ? (0, y.$g)(e * u, l.currency) : null), (P = !0));
+                            ((g = null != e ? (0, A.$g)(e * u, l.currency) : null), (P = !0));
                         }
                     } else if (r) {
                         let e = (0, p.pg)(l, n.id);
                         if (null != a && a.discount.applicableSubscriptionInterval === n.interval && null != e) {
-                            let t = (0, y.$g)(f - e, l.currency);
+                            let t = (0, A.$g)(f - e, l.currency);
                             ((v = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
                                 (g = T.intl.format(N.default.JsSin7, {
-                                    priceRate: (0, y.CE)(E, n.interval, n.intervalCount),
+                                    priceRate: (0, A.CE)(E, n.interval, n.intervalCount),
                                     intervalCount: a.discount.intervalCount,
                                 })));
                         }
                     } else if ((0, I.xq)(n.id) && null != _) {
                         let e = (0, p.pg)(l, n.id);
                         if ((0, h.Ro)(l, _.discount.id) && null != e) {
-                            let t = (0, y.$g)(f - e, l.currency);
+                            let t = (0, A.$g)(f - e, l.currency);
                             ((v = T.intl.format(T.t.hXcaLT, { price: t })),
-                                (A = E),
+                                (y = E),
                                 (g = (0, p.hm)(_)
                                     ? T.intl.format(T.t.VZ8Tvh, { regularPrice: E })
                                     : T.intl.format(N.default.JsSin7, {
@@ -202,7 +202,7 @@ function R(e) {
                                       })));
                         }
                     }
-                    return { price: v, priceStrikethroughText: A, priceSubText: g, priceSubTextHasStrikethrough: P };
+                    return { price: v, priceStrikethroughText: y, priceSubText: g, priceSubTextHasStrikethrough: P };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,
@@ -228,7 +228,7 @@ function R(e) {
         omitDefaultIconBackground: er,
         header: z,
         headerIconSrc: $,
-        headerIconComponent: Q,
+        headerIconComponent: J,
         bottomSubText: D,
         onClick: Y,
     });

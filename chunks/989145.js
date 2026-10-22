@@ -1,51 +1,51 @@
-(e.d(a, { PK: () => c, Vm: () => s, Y7: () => l, c9: () => u, gm: () => o, n6: () => h, vX: () => r }),
-    e(323874),
-    e(14289),
-    e(35956));
-var n = e(649121),
-    i = e(688954);
-function r(t, a) {
-    return u(t, a, a.name, a.type);
+(a.d(n, { PK: () => c, Vm: () => s, Y7: () => l, c9: () => u, gm: () => o, n6: () => f, vX: () => i }),
+    a(323874),
+    a(14289),
+    a(35956));
+var e = a(649121),
+    r = a(688954);
+function i(t, n) {
+    return u(t, n, n.name, n.type);
 }
 async function l(t) {
-    let a = await (0, i.h)(t, d());
-    if (!a.ok) throw Error(`attachment list failed (${a.status})`);
-    return (await a.json()).attachments;
+    let n = await (0, r.h)(t, d());
+    if (!n.ok) throw Error(`attachment list failed (${n.status})`);
+    return (await n.json()).attachments;
 }
-async function o(t, a) {
-    let e = await (0, i.h)(t, d("from-url"), { method: "POST", json: { url: a } }),
-        n = await e.json().catch(() => null);
-    if (!e.ok || null == n || !("id" in n))
-        throw Error(null != n && "error" in n && "string" == typeof n.error ? n.error : "");
-    return n;
+async function o(t, n) {
+    let a = await (0, r.h)(t, d("from-url"), { method: "POST", json: { url: n } }),
+        e = await a.json().catch(() => null);
+    if (!a.ok || null == e || !("id" in e))
+        throw Error(null != e && "error" in e && "string" == typeof e.error ? e.error : "");
+    return e;
 }
-async function u(t, a, e, n) {
-    let r = await (0, i.h)(t, d(), {
+async function u(t, n, a, e) {
+    let i = await (0, r.h)(t, d(), {
         method: "POST",
-        query: { name: e },
-        headers: { "content-type": "" !== n ? n : "application/octet-stream" },
-        body: a,
+        query: { name: a },
+        headers: { "content-type": "" !== e ? e : "application/octet-stream" },
+        body: n,
     });
-    if (!r.ok) throw Error(`attachment upload failed (${r.status})`);
-    return await r.json();
+    if (!i.ok) throw Error(`attachment upload failed (${i.status})`);
+    return await i.json();
 }
-async function s(t, a) {
-    let e = await (0, i.h)(t, d(a), { method: "DELETE", keepalive: !0 });
-    if (!e.ok) throw Error(`attachment cleanup failed (${e.status})`);
+async function s(t, n) {
+    let a = await (0, r.h)(t, d(n), { method: "DELETE", keepalive: !0 });
+    if (!a.ok) throw Error(`attachment cleanup failed (${a.status})`);
 }
-async function c(t, a) {
-    let { download: e = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { ticket: i, baseUrl: r } = await (0, n.BK)(t),
-        l = new URLSearchParams({ ticket: i });
-    return (e && l.set("download", "1"), `${r}${d(a)}?${l}`);
+async function c(t, n) {
+    let { download: a = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { ticket: r, baseUrl: i } = await (0, e.BK)(t),
+        l = new URLSearchParams({ ticket: r });
+    return (a && l.set("download", "1"), `${i}${d(n)}?${l}`);
 }
-async function h(t, a) {
-    async function e() {
-        return fetch(await c(t, a), { method: "HEAD" });
+async function f(t, n) {
+    async function a() {
+        return fetch(await c(t, n), { method: "HEAD" });
     }
-    let i = await e();
-    if ((401 === i.status && ((0, n.yn)(t), (i = await e())), 404 === i.status)) return !1;
-    if (!i.ok) throw Error(`attachment availability check failed (${i.status})`);
+    let r = await a();
+    if ((401 === r.status && ((0, e.yn)(t), (r = await a())), 404 === r.status)) return !1;
+    if (!r.ok) throw Error(`attachment availability check failed (${r.status})`);
     return !0;
 }
 function d(t) {

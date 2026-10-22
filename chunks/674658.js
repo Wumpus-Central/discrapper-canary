@@ -11,11 +11,11 @@ function c(e, t) {
         c = null != n && n.productLine !== a.EZt.COLLECTIBLES,
         [d, E] = (0, i.yK)([s.A], () => [s.A.getProduct(e), s.A.getProductFetch(e)]),
         f = (0, i.bG)([s.A], () => s.A.isProductFetchBackedOff(e)),
-        A = !0 === t && d?.type === u.R.BUNDLE && 0 === d.items.length;
+        _ = !0 === t && d?.type === u.R.BUNDLE && 0 === d.items.length;
     return (
         (0, r.useEffect)(() => {
-            null == e || (null != d && !A) || c || E?.state === "fetching" || f || (0, l.Jp)(e, { includeBundles: t });
-        }, [e, d, c, E, t, A, f]),
+            null == e || (null != d && !_) || c || E?.state === "fetching" || f || (0, l.Jp)(e, { includeBundles: t });
+        }, [e, d, c, E, t, _, f]),
         { product: d, isFetching: E?.state === "fetching" }
     );
 }

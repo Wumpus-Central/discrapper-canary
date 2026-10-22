@@ -11,8 +11,8 @@ var l = n(582128),
     m = n(245179),
     f = n(793480),
     h = n(246338),
-    g = n(434279),
-    x = n(260498),
+    x = n(434279),
+    g = n(260498),
     p = n(426035);
 function j(e, t) {
     return (
@@ -41,7 +41,7 @@ function k(e, t) {
 function v(e) {
     let [t, n] = l.useState(0),
         { entries: o, nextExpiry: c } = (0, a.bG)(
-            [x.Ay, m.A, d.A, u.Ay, s.A, r.A, i.Bt],
+            [g.Ay, m.A, d.A, u.Ay, s.A, r.A, i.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -57,12 +57,12 @@ function v(e) {
                         i = null;
                     function s(e, n) {
                         if (a.has(e.id)) return;
-                        let s = (0, g.wu)(e);
+                        let s = (0, x.wu)(e);
                         if (null != s && !l(s)) return;
                         a.add(e.id);
                         let u = m.A.isThinking(e.id),
                             o = m.A.getFinishedAt(e.id),
-                            c = (0, g.Uk)({ thinking: u, finishedAt: o, now: t });
+                            c = (0, x.Uk)({ thinking: u, finishedAt: o, now: t });
                         if ("done" === c && null != o) {
                             let e = o + 6e4;
                             i = null == i ? e : Math.min(i, e);
@@ -86,11 +86,11 @@ function v(e) {
                             })(e, o),
                         });
                     }
-                    for (let e of x.Ay.getOwnedProjects()) s(e, !0);
+                    for (let e of g.Ay.getOwnedProjects()) s(e, !0);
                     for (let e of Object.values(d.A.getGuilds()))
-                        if (x.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
-                            for (let t of x.Ay.getSharedProjects(e.id)) s(t, !1);
-                    return { entries: (0, g.Ng)(r), nextExpiry: i };
+                        if (g.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
+                            for (let t of g.Ay.getSharedProjects(e.id)) s(t, !1);
+                    return { entries: (0, x.Ng)(r), nextExpiry: i };
                 })(e),
             [e, t],
             j,

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => D });
 var l = n(477900),
     a = n(582128),
     r = n(17928),
@@ -11,8 +11,8 @@ var l = n(477900),
     m = n(503698),
     f = n.n(m),
     h = n(939249),
-    g = n(140735),
-    x = n(995273),
+    x = n(140735),
+    g = n(995273),
     p = n(855793),
     j = n(497183),
     k = n(722701),
@@ -21,8 +21,8 @@ var l = n(477900),
     _ = n(104317),
     A = n(245179),
     y = n(886540),
-    S = n(248675),
-    N = n(105292),
+    N = n(248675),
+    S = n(105292),
     w = n(162052),
     E = n(790624);
 function C() {
@@ -49,10 +49,10 @@ function I(e) {
         variant: "text-sm/normal",
         color: "none",
         className: f()(E.pG, w.Hz),
-        children: n ?? N.intl.string(S.default["Y8pS+n"]),
+        children: n ?? S.intl.string(N.default["Y8pS+n"]),
     });
 }
-let M = a.memo(function (e) {
+let P = a.memo(function (e) {
     let { project: t, onSelect: n, renderActions: a, onContextMenu: s } = e,
         o = (0, v.ZA)(t.id),
         c = "deleting" === o,
@@ -95,7 +95,7 @@ let M = a.memo(function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: E.pG,
-                                      children: N.intl.string(S.default.Yh5pAc),
+                                      children: S.intl.string(N.default.Yh5pAc),
                                   })
                                 : "in_progress" === o
                                   ? (0, l.jsx)(I, { projectId: t.id })
@@ -107,7 +107,7 @@ let M = a.memo(function (e) {
                                                       variant: "text-sm/normal",
                                                       color: "text-subtle",
                                                       className: E.pG,
-                                                      children: (0, x.jb)(_, !1),
+                                                      children: (0, g.jb)(_, !1),
                                                   })
                                                 : null,
                                             b
@@ -117,7 +117,7 @@ let M = a.memo(function (e) {
                                                           (0, l.jsx)(i.E, {
                                                               variant: "text-sm/medium",
                                                               color: "text-brand",
-                                                              children: N.intl.string(S.default.CSAaT0),
+                                                              children: S.intl.string(N.default.CSAaT0),
                                                           }),
                                                       ],
                                                   })
@@ -130,7 +130,7 @@ let M = a.memo(function (e) {
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)("span", { className: E.Zm, "aria-hidden": !0 }),
-                                  (0, l.jsx)(g.A, { children: N.intl.string(S.default["N+3Pzk"]) }),
+                                  (0, l.jsx)(x.A, { children: S.intl.string(N.default["N+3Pzk"]) }),
                               ],
                           })
                         : null,
@@ -145,54 +145,54 @@ let M = a.memo(function (e) {
         ],
     });
 });
-var P = n(655074);
-function T(e) {
+var T = n(655074);
+function D(e) {
     let { onSelect: t, query: n = "", guildId: m, renderProjectActions: f, onProjectContextMenu: h } = e,
-        g = (0, c.A)(m),
-        x = (0, r.bG)(
+        x = (0, c.A)(m),
+        g = (0, r.bG)(
             [o.Ay],
             () => (null != m ? o.Ay.getGuildProjectsFetchState(m) : o.Ay.getOwnedProjectsFetchState()),
             [m],
         ),
         p = n.trim().toLocaleLowerCase(),
-        j = a.useMemo(() => ("" === p ? g : g.filter((e) => e.name.toLocaleLowerCase().includes(p))), [g, p]);
+        j = a.useMemo(() => ("" === p ? x : x.filter((e) => e.name.toLocaleLowerCase().includes(p))), [x, p]);
     return j.length > 0
         ? (0, l.jsx)("ul", {
-              className: P.p_,
+              className: T.p_,
               children: j.map((e) =>
-                  (0, l.jsx)(M, { project: e, onSelect: t, renderActions: f, onContextMenu: h }, e.id),
+                  (0, l.jsx)(P, { project: e, onSelect: t, renderActions: f, onContextMenu: h }, e.id),
               ),
           })
-        : g.length > 0
+        : x.length > 0
           ? (0, l.jsx)(i.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                className: P.Ie,
-                children: N.intl.string(S.default.X37fkR),
+                className: T.Ie,
+                children: S.intl.string(N.default.X37fkR),
             })
-          : "error" === x
+          : "error" === g
             ? (0, l.jsxs)("div", {
-                  className: P.E8,
+                  className: T.E8,
                   children: [
                       (0, l.jsx)(i.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: N.intl.string(S.default.DJAPMO),
+                          children: S.intl.string(N.default.DJAPMO),
                       }),
                       (0, l.jsx)(s.$, {
                           variant: "secondary",
                           size: "sm",
-                          text: N.intl.string(S.default["WFJ/vb"]),
+                          text: S.intl.string(N.default["WFJ/vb"]),
                           onClick: () => (0, d.hF)(m),
                       }),
                   ],
               })
-            : "success" !== x
-              ? (0, l.jsx)("div", { className: P.E8, children: (0, l.jsx)(u.y, {}) })
+            : "success" !== g
+              ? (0, l.jsx)("div", { className: T.E8, children: (0, l.jsx)(u.y, {}) })
               : (0, l.jsx)(i.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    className: P.Ie,
-                    children: N.intl.string(S.default["9/5sLV"]),
+                    className: T.Ie,
+                    children: S.intl.string(N.default["9/5sLV"]),
                 });
 }

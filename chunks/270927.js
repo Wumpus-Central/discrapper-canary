@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(403581),
     g = n(278416),
     I = n(993408),
-    y = n(1076),
-    A = n(288106),
+    A = n(1076),
+    y = n(288106),
     x = n(604913),
     P = n(223311),
     v = n(306396),
@@ -43,7 +43,7 @@ function U(e) {
                     setCollectedModalOverrideTitle: l,
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
-                } = (0, y.z)(),
+                } = (0, A.z)(),
                 s = (0, P.A)(b.FYj),
                 o = null != n ? (0, _.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
@@ -53,12 +53,12 @@ function U(e) {
                         let e = o?.progress;
                         if (null == n || null == e) break;
                         let t = Math.min(e.current + (0, v.oO)(n, u.collectionId), e.target);
-                        (o?.rewardStatus === A.GM.IN_PROGRESS
+                        (o?.rewardStatus === y.GM.IN_PROGRESS
                             ? l(j.intl.formatToPlainString(j.t.Jkxtln, { current: t, target: e.target }))
                             : l(void 0),
                             r(
                                 j.intl.formatToPlainString(
-                                    o?.rewardStatus === A.GM.IN_PROGRESS && t >= e.target ? j.t.OUIULI : j.t["8yvdPi"],
+                                    o?.rewardStatus === y.GM.IN_PROGRESS && t >= e.target ? j.t.OUIULI : j.t["8yvdPi"],
                                     { collectibleTitle: (0, N.VG)(n) },
                                 ),
                             ),
@@ -91,8 +91,8 @@ var G = n(951305),
     q = n(977445),
     z = n(118982),
     $ = n(566980),
-    J = n(319820),
-    Q = n(52635);
+    Q = n(319820),
+    J = n(52635);
 function X(e) {
     return e.name;
 }
@@ -131,7 +131,7 @@ function en(e) {
 }
 function el(e) {
     let { application: t, sku: n } = e,
-        { isSocialLayerGameItem: i } = (0, J.AO)({ sku: n }),
+        { isSocialLayerGameItem: i } = (0, Q.AO)({ sku: n }),
         r = i ? j.intl.string(w.default.qwSlCO) : j.intl.string(w.default.iZe9Wy),
         a = i
             ? { header: t.name, headerIconSrc: f.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
@@ -144,7 +144,7 @@ function ei(e) {
 }
 function er(e) {
     let { sku: t } = e,
-        { product: n } = (0, J.AO)({ sku: t }),
+        { product: n } = (0, Q.AO)({ sku: t }),
         i = et(n),
         r =
             null != n
@@ -181,7 +181,7 @@ function ea(e) {
         { isGift: f, giftRecipient: S } = (0, G.Pv)(),
         {
             sku: I,
-            application: y,
+            application: A,
             eligiblePaymentGateways: P,
             disabled: v,
         } = (function () {
@@ -210,13 +210,13 @@ function ea(e) {
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
                     return e === o.C.SLAYER_STOREFRONT_CHECKOUT
-                        ? (0, l.jsx)(Q.EB, {
+                        ? (0, l.jsx)(J.EB, {
                               paymentSourceType: i,
                               skuId: n,
                               isGift: r,
                               hasSeparateAccountLinkNotice: !0,
                           })
-                        : (0, l.jsx)(Q.T3, { paymentSourceType: i });
+                        : (0, l.jsx)(J.T3, { paymentSourceType: i });
                 })(n, { skuId: I.id, paymentSourceType: p, isGift: f }),
             [n, I.id, p, f],
         ),
@@ -263,7 +263,7 @@ function ea(e) {
                     );
                 }, [d]),
             };
-        })({ sku: I, application: y, isGift: f }),
+        })({ sku: I, application: A, isGift: f }),
         D = i.useMemo(() => ({ paymentGatewayRestrictions: P, shouldUseUnifiedCheckoutUI: !0 }), [P]),
         F = (0, l.jsx)(c.N, {
             label: j.intl.string(j.t["u+Cw58"]),
@@ -272,14 +272,14 @@ function ea(e) {
             additionalPaymentSourceDropdownProps: D,
             disabled: v,
         }),
-        { product: ee } = (0, J.AO)({ sku: I }),
+        { product: ee } = (0, Q.AO)({ sku: I }),
         { unifiedInvoiceSummaryProps: et, priceText: ea } = i.useMemo(
             () =>
                 (function (e) {
                     let { sku: t, invoicePreview: n } = e,
                         l = [];
                     if (null != n) {
-                        let { discount: e, basePrice: i, showTaxes: r } = (0, J.yh)({ invoicePreview: n });
+                        let { discount: e, basePrice: i, showTaxes: r } = (0, Q.yh)({ invoicePreview: n });
                         (l.push({ id: "sku", label: X(t), amount: i }),
                             null != e &&
                                 l.push({
@@ -312,7 +312,7 @@ function ea(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: ea, sku: I, application: y, giftRecipient: S }),
+                (t = { priceText: ea, sku: I, application: A, giftRecipient: S }),
                 e === o.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(el, { ...t })
                     : e === o.C.GUILD_PRODUCT_CHECKOUT
@@ -321,7 +321,7 @@ function ea(e) {
                         ? (0, l.jsx)(er, { ...t })
                         : (0, l.jsx)(en, { ...t })
             );
-        }, [n, I, y, S, ea]),
+        }, [n, I, A, S, ea]),
         eu = i.useMemo(() => (null != r ? (0, E.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         ec = (0, C.g)(ee ?? null),
         ed = i.useMemo(
@@ -339,7 +339,7 @@ function ea(e) {
                                         return t
                                             ? null
                                             : (function (e) {
-                                                  if (e.rewardStatus !== A.GM.IN_PROGRESS) return null;
+                                                  if (e.rewardStatus !== y.GM.IN_PROGRESS) return null;
                                                   let t = e.progress;
                                                   if (null == t || null == e.endsAt) return null;
                                                   let n = (0, M.X)(e.endsAt);

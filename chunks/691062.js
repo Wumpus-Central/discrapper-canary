@@ -79,12 +79,12 @@ function N(e) {
             i && "" === p && L(!1);
         }, [i, p]),
         k = i && !S,
-        H = (0, n.jsx)(c.D, {
+        v = (0, n.jsx)(c.D, {
             className: y.qc,
             onClick: x,
             children: (0, n.jsx)(G.MagnifyingGlassIcon, { size: "sm", color: d.A.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        v = (0, n.jsx)(T.I, {
+        H = (0, n.jsx)(T.I, {
             size: "sm",
             ref: O,
             onKeyDown: N,
@@ -96,11 +96,11 @@ function N(e) {
         }),
         j = { "--custom-search-bar-width": `${h.rr}px`, "--custom-search-bar-icon-width": `${h.Dy}px` };
     return k
-        ? (0, n.jsx)("div", { style: j, children: H })
+        ? (0, n.jsx)("div", { style: j, children: v })
         : (0, n.jsx)("div", {
               className: r()(y.ON, { [y.Nz]: S }),
               style: j,
-              children: (0, n.jsx)(c.D, { ignoreKeyPress: !0, onClick: M, children: v }),
+              children: (0, n.jsx)(c.D, { ignoreKeyPress: !0, onClick: M, children: H }),
           });
 }
 var B = l(173127);
@@ -110,8 +110,8 @@ var x = l(278416),
     F = l(976860),
     P = l(288106),
     k = l(223311),
-    H = l(65238),
-    v = l(758461),
+    v = l(65238),
+    H = l(758461),
     j = l(151115),
     D = l(812729),
     w = l.n(D),
@@ -134,8 +134,8 @@ let X = [
 ];
 var J = l(783857);
 l(801416);
-var $ = l(518477),
-    Z = l(835018);
+var Z = l(518477),
+    $ = l(835018);
 function Q(e) {
     let { selectedTab: t, selectedCollectionId: l, handleTransition: i } = e,
         G = (0, o.bG)([L.default], () => L.default.getCurrentUser()),
@@ -155,7 +155,7 @@ function Q(e) {
                 (0, _.mA)({ fromContent: s.u.ORBS_BALANCE_MENU }));
         }, [ee]),
         el = a.useCallback(() => {
-            G?.id != null && (0, C.openUserProfileModal)({ userId: G.id, tabSection: $.RP.WISHLIST });
+            G?.id != null && (0, C.openUserProfileModal)({ userId: G.id, tabSection: Z.RP.WISHLIST });
         }, [G?.id]),
         en = (function (e) {
             let t,
@@ -237,10 +237,10 @@ function Q(e) {
                         ),
                         hasGameShops: l.length > 0,
                     }),
-                O = null != (0, v.HH)(),
+                O = null != (0, H.HH)(),
                 S =
                     ((r = (0, k.A)(R.FYj)),
-                    (s = (0, H.XF)(r)),
+                    (s = (0, v.XF)(r)),
                     (c = s?.shared.navigation?.tab),
                     (u = c?.title),
                     (E = c?.icon),
@@ -352,12 +352,12 @@ function Q(e) {
             disableDoubleClick: !0,
             disableFocusRingScope: !0,
             keepToastsBelow: !0,
-            className: r()(Z.jr, { [J.jP]: T }),
+            className: r()($.jr, { [J.jP]: T }),
             toolbar: (0, n.jsxs)(n.Fragment, {
                 children: [
                     (0, n.jsx)(N, { handleTransition: i, selectedTab: t, isNarrow: D, hasText: "" !== I }),
                     (0, n.jsx)(c.D, {
-                        className: Z.ij,
+                        className: $.ij,
                         onClick: el,
                         "aria-label": m.intl.string(m.t["7lZ31J"]),
                         children: (0, n.jsx)(u.HeartIcon, { size: "xs", color: "currentColor" }),
@@ -373,14 +373,14 @@ function Q(e) {
             hideSearch: !0,
             children: [
                 (0, n.jsx)(c.D, {
-                    className: Z.sU,
+                    className: $.sU,
                     onClick: () => i(h.G2.HOME),
                     "aria-label": m.intl.string(m.t["5upuqx"]),
                     children: (0, n.jsx)(E.U, { size: "md", color: d.A.colors.TEXT_DEFAULT }),
                 }),
                 (0, n.jsx)(B.A, {
                     "aria-label": m.intl.string(m.t["5upuqx"]),
-                    className: Z.IV,
+                    className: $.IV,
                     options: en,
                     selectedKey: ea,
                     overflowLabel: m.intl.string(m.t["UKOtz+"]),

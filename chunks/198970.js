@@ -166,8 +166,8 @@ let g = [
     I = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    y = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
-    A = (0, h.Ld)(),
+    A = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    y = (0, h.Ld)(),
     x = (0, h.Ld)(),
     P = (0, h.Ld)(),
     v = (0, h.Ld)(),
@@ -191,7 +191,7 @@ let R = { US: c, CA: s },
     O = { US: d, CA: o },
     M = (e, t) => ({
         name: "name",
-        id: A,
+        id: y,
         title: () => E.intl.string(E.t.vyuULb),
         autoComplete: "name",
         getClassNameForLayout: (e) =>
@@ -242,7 +242,7 @@ let R = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in y && n(y[i], e.name);
+                        i in A && n(A[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);

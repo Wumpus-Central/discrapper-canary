@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(725836),
     g = n(580133),
     I = n(123816),
-    y = n(583741),
-    A = n(105292),
+    A = n(583741),
+    y = n(105292),
     x = n(663466);
 function P() {
     let e = (0, I.t4)((e) => (0, f.qn)(e.order));
@@ -26,7 +26,7 @@ function P() {
         ? null
         : (0, l.jsx)(m.E, {
               variant: "text-md/normal",
-              children: A.intl.format(y.default.fJnl1h, {
+              children: y.intl.format(A.default.fJnl1h, {
                   reopenHook: (t, n) => (0, l.jsx)(p.Anchor, { onClick: () => (0, f.DL)(e), children: t }, n),
               }),
           });
@@ -63,8 +63,8 @@ function j(e) {
             analyticsLocation: g,
         } = e,
         {
-            paymentSourceId: y,
-            purchasePreviewError: A,
+            paymentSourceId: A,
+            purchasePreviewError: y,
             customCheckoutFlow: x,
             contextMetadata: P,
             purchaseError: v,
@@ -91,14 +91,14 @@ function j(e) {
     a()(null != w, "Step should be set");
     let D = i.useRef(null),
         { paymentSources: U } = (0, T.j)(),
-        G = (0, c.W)(U, y),
+        G = (0, c.W)(U, A),
         F = i.useMemo(() => {
-            if (null == y) return !1;
+            if (null == A) return !1;
             if (!M) return !0;
-            let e = O.find((e) => e.id === y);
+            let e = O.find((e) => e.id === A);
             return null != e && !e.enabled;
-        }, [O, M, y]),
-        B = (0, s.iB)({ paymentSourceId: y, location: "CheckoutBaseReviewStep" }),
+        }, [O, M, A]),
+        B = (0, s.iB)({ paymentSourceId: A, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: H } = i.useMemo(() => {
             let e = { disablePurchase: B || x === b.uH.DEV_STORYBOOK_CHECKOUT };
             return null != h
@@ -106,14 +106,14 @@ function j(e) {
                       { ...e },
                       {
                           paymentSource: G,
-                          paymentSourceId: y,
+                          paymentSourceId: A,
                           isSelectedPaymentSourceDisabled: F,
                           invoicePreview: L,
-                          purchasePreviewError: A,
+                          purchasePreviewError: y,
                       },
                   )
                 : e;
-        }, [h, G, y, F, L, A, B, x]);
+        }, [h, G, A, F, L, y, B, x]);
     i.useEffect(() => {
         null != v && null != D.current && D.current.scrollIntoView({ behavior: "smooth" });
     }, [v]);

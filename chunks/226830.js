@@ -17,8 +17,8 @@ var l,
     S = n(580630),
     g = n(526292),
     I = n(529412),
-    y = n(877624),
-    A = n(62010),
+    A = n(877624),
+    y = n(62010),
     x = n(406810),
     P = n(951305),
     v = n(421108),
@@ -33,7 +33,7 @@ function M() {
     let { claimableRewards: e } = (0, P.Pv)(),
         { enabled: t } = b.J.useConfig({ location: "PremiumBrandRefreshGiftPromotionElement" }),
         n = (0, o.bG)([N.A], () => {
-            let e = N.A.getMarketingComponentByType(y.C.GIFT_PLAN_SELECTION_CARD_BANNER);
+            let e = N.A.getMarketingComponentByType(A.C.GIFT_PLAN_SELECTION_CARD_BANNER);
             return null == e || "giftPlanSelectionCardBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftPlanSelectionCardBanner;
@@ -61,7 +61,7 @@ function L(e) {
             image: null != t ? (0, i.jsx)("img", { className: O.L8, alt: "", src: t }) : void 0,
             badge:
                 null != n
-                    ? (0, i.jsx)(A.E, { type: { text: n.toUpperCase() }, variant: "primary", icon: x.ClockIcon })
+                    ? (0, i.jsx)(y.E, { type: { text: n.toUpperCase() }, variant: "primary", icon: x.ClockIcon })
                     : void 0,
             textGroupClassName: O.RI,
             title: (0, i.jsx)(d.E, { variant: "text-md/medium", color: "text-default", children: l }),
@@ -169,8 +169,8 @@ let q = new B.A("PremiumGroupPrice.tsx"),
             ],
         });
     };
-var J = n(543213),
-    Q = n(824069),
+var Q = n(543213),
+    J = n(824069),
     X = n(222719),
     ee = n(341535),
     et = n(174788),
@@ -219,15 +219,15 @@ function eo(e) {
         S = (0, w.V)(),
         g = S?.subscriptionTrial?.skuId,
         I = p?.hasActiveTrial ? E?.premiumType : null,
-        y = (0, G.Lj)(I, g),
-        A = null != y,
+        A = (0, G.Lj)(I, g),
+        y = null != A,
         x = (0, c.q)((0, h.Ay)()),
         P = ea(r),
         v = d ? R.intl.string(R.t.tUbSDK) : R.intl.string(R.t["t9uG/o"]),
         _ = (0, i.jsxs)(er, {
             footer: t,
             children: [
-                A && (0, i.jsx)(W.R, { text: y, className: et.pill }),
+                y && (0, i.jsx)(W.R, { text: A, className: et.pill }),
                 (0, i.jsx)(m.D, {
                     variant: "nitro-md",
                     color: x ? "text-strong" : "text-overlay-light",
@@ -248,10 +248,10 @@ function eo(e) {
                     headerClassName: et.priceHeader,
                 }),
                 (0, i.jsx)("hr", { className: et.divider }),
-                (0, i.jsx)(J.nH, { enablePremiumBrandRefresh: !0, isApplicationHome: u }),
+                (0, i.jsx)(Q.nH, { enablePremiumBrandRefresh: !0, isApplicationHome: u }),
             ],
         }),
-        T = s()(et.card, et.tier0, l, { [et.pillMargin]: !u && A });
+        T = s()(et.card, et.tier0, l, { [et.pillMargin]: !u && y });
     return (0, i.jsx)("div", { className: T, children: _ });
 }
 var eu =
@@ -298,7 +298,7 @@ function ed(e) {
     let {
             ctaButton: t,
             showYearlyPrice: n,
-            featureSet: l = J.Nz.DEFAULT,
+            featureSet: l = Q.Nz.DEFAULT,
             className: r,
             isGift: a = !1,
             isModal: u = !1,
@@ -306,8 +306,8 @@ function ed(e) {
             showPromotionalGiftBanner: E = !1,
             wumpusPosition: S = "inCard",
             isApplicationHome: I = !1,
-            showWumpus: y = !0,
-            showPill: A = !0,
+            showWumpus: A = !0,
+            showPill: y = !0,
             narrowLayout: x = !1,
         } = e,
         P = (0, o.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
@@ -332,7 +332,7 @@ function ed(e) {
         eo = (0, i.jsxs)(er, {
             footer: $,
             children: [
-                y &&
+                A &&
                     !Y &&
                     !Z &&
                     (0, i.jsx)(function () {
@@ -358,7 +358,7 @@ function ed(e) {
                             ],
                         });
                     }, {}),
-                A &&
+                y &&
                     !K &&
                     (0, i.jsx)(W.R, {
                         text:
@@ -390,7 +390,7 @@ function ed(e) {
                 K
                     ? (0, i.jsx)(ec, { discountOffer: j, priceOptions: d, isGift: a, narrowLayout: x })
                     : (0, i.jsx)("hr", { className: et.divider }),
-                (0, i.jsx)(J.ZP, {
+                (0, i.jsx)(Q.ZP, {
                     featureSet: l,
                     isModal: u,
                     isGift: a,
@@ -399,7 +399,7 @@ function ed(e) {
                     firstFeatureItemClassName:
                         K || ("inCard" !== S && "giftSelectionModal" !== S) ? void 0 : et.firstFeatureItemContainer,
                 }),
-                ee && (0, i.jsx)(Q.K, {}),
+                ee && (0, i.jsx)(J.K, {}),
             ],
         }),
         eu = s()(et.card, r, { [et.withGiftBanner]: E });
@@ -431,7 +431,7 @@ function em(e) {
                     ],
                 }),
                 (0, i.jsx)($, { discountOffer: o, priceOptions: r, isApplicationHome: l }),
-                (0, i.jsx)(J.Lg, { isApplicationHome: l }),
+                (0, i.jsx)(Q.Lg, { isApplicationHome: l }),
             ],
         });
     return null != o

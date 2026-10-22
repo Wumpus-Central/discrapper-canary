@@ -1,12 +1,12 @@
 n.d(t, {
     Db: () => f,
-    Dy: () => g,
+    Dy: () => x,
     E4: () => o,
     E8: () => m,
     FZ: () => s,
     Ov: () => c,
     kx: () => u,
-    uc: () => x,
+    uc: () => g,
     vg: () => i,
     xu: () => h,
 });
@@ -71,10 +71,10 @@ function h(e) {
                         ? a.default.izrt52
                         : a.default.L9EDub;
 }
-function g(e) {
+function x(e) {
     return r.intl.string(h(e));
 }
-function x(e) {
+function g(e) {
     let t = (0, l.a7)(e.cost_usd);
     return {
         text: r.intl.formatToPlainString(a.default.gMuw5d, { runes: t.toLocaleString() }),

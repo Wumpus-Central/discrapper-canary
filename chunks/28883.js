@@ -1,5 +1,5 @@
-n.d(t, { d: () => r });
-function r(e, t) {
+n.d(t, { d: () => s });
+function s(e, t) {
     return (
         ("enroll" === t || "publish" === t) &&
         "string" == typeof e &&

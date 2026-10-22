@@ -21,8 +21,8 @@ var C =
     S = n(216641),
     g = n(615396),
     I = n(333007),
-    y = n(289873),
-    A = n(793574),
+    A = n(289873),
+    y = n(793574),
     x = n(688810),
     P = n(482419),
     v = n(666646),
@@ -39,7 +39,7 @@ function L(e) {
     return null == n ? null : I.createPortal(t, n);
 }
 function k() {
-    return (0, i.jsx)(y.y, { type: y.y.Type.PULSING_ELLIPSIS });
+    return (0, i.jsx)(A.y, { type: A.y.Type.PULSING_ELLIPSIS });
 }
 function w(e, t) {
     let { noticeCopy: n } = t;
@@ -123,7 +123,7 @@ function U(e) {
                         currency: l.currency,
                         preventFetch: i,
                         analyticsLocations: a,
-                        analyticsLocation: A.A.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW,
+                        analyticsLocation: y.A.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW,
                     }),
                     [t.id, n, l.paymentSourceId, l.currency, i, a],
                 ),
@@ -177,8 +177,8 @@ function U(e) {
                 : { overrideRenewalDate: e, planSwitchNoticeCopy: null };
         }, [f, E, s]);
     if ((w(d, { noticeCopy: g }), null != S)) return null;
-    let y = (0, N.U)(f, n);
-    if (null == f || null == E || y) return (0, i.jsx)(k, {});
+    let A = (0, N.U)(f, n);
+    if (null == f || null == E || A) return (0, i.jsx)(k, {});
     let v = (0, j.J$)(a.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -256,14 +256,14 @@ function G(e) {
     if ((w(u, { noticeCopy: g }), null != f)) return null;
     if (null == C) return (0, i.jsx)(k, {});
     let I = (0, j.J$)(s.paymentSourceId),
-        { lineItems: y } = (0, b.Ig)(C, {
+        { lineItems: A } = (0, b.Ig)(C, {
             includeTaxLineItem: !0,
             isPrepaidPaymentSource: I,
             excludeDiscountsAndAdjustments: !0,
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(T.Vm, { label: h.intl.string(M.default.eoXh7B), lineItems: y, currency: C.currency }),
+            (0, i.jsx)(T.Vm, { label: h.intl.string(M.default.eoXh7B), lineItems: A, currency: C.currency }),
             (0, i.jsx)(L, {
                 containerNode: d.current,
                 children: (0, i.jsx)(R.Hc, {
@@ -300,7 +300,7 @@ function F(e) {
                         currency: n.currency,
                         preventFetch: l,
                         analyticsLocations: u,
-                        analyticsLocation: A.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW,
+                        analyticsLocation: y.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW,
                     },
                 },
                 fetchRenewalInvoicePreviewRequest: {
@@ -312,7 +312,7 @@ function F(e) {
                         currency: n.currency,
                         preventFetch: l,
                         analyticsLocations: u,
-                        analyticsLocation: A.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW,
+                        analyticsLocation: y.A.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW,
                     },
                 },
             }),
@@ -362,8 +362,8 @@ function Y(e) {
             newPlan: S,
             planId: g,
             priceOptions: I,
-            premiumPlanOptions: y,
-            subscriptionDetailsContent: A,
+            premiumPlanOptions: A,
+            subscriptionDetailsContent: y,
             isInvoiceBilledImmediately: x,
             paymentMethodContent: P,
             legalContent: v,
@@ -417,7 +417,7 @@ function Y(e) {
             ? (U = (0, i.jsx)(W.X, {
                   disabled: n,
                   headingSubText: G,
-                  planOptions: y,
+                  planOptions: A,
                   selectedPlanId: g,
                   showPlanStatusSubText: !0,
                   priceOptions: N,
@@ -438,7 +438,7 @@ function Y(e) {
             showUpperNoticesAboveGlobalNotices: _,
             upperInlineNoticeProps: T,
             paymentMethodContent: P,
-            subscriptionDetailsContent: A,
+            subscriptionDetailsContent: y,
             purchaseItemContent: D,
             planSelectContent: U,
             invoiceSummaryContent: p,
@@ -453,7 +453,7 @@ var K = n(942537);
 function Z(e) {
     let { handlePaymentSourceAdd: t, planGroup: n, hasOpenInvoice: l, isInPastDueCheckout: a } = e,
         { invoiceError: I } = (0, m.t4)((e) => ({ invoiceError: e.get("primaryInvoicesError") })),
-        { paymentSources: y, hasPaymentSources: A } = (0, u.j)(),
+        { paymentSources: A, hasPaymentSources: y } = (0, u.j)(),
         { selectedPlanFromFluxStore: x, selectedPlanId: P } = (0, d.D)(),
         {
             purchaseState: v,
@@ -481,7 +481,7 @@ function Z(e) {
             shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
         })),
         { isPremiumPurchase: B, isPremiumGroupPurchase: H } = (0, m.t4)((e) => e.get("selectedPlanAttributes")),
-        W = (0, S.g)(y, _),
+        W = (0, S.g)(A, _),
         { showFractionalPremiumBanner: V, fractionalPremiumInfo: Z } = (0, f._V)({
             premiumSubscription: O,
             selectedPlanId: P,
@@ -491,10 +491,10 @@ function Z(e) {
         q = v === p.h.PURCHASING || v === p.h.COMPLETED,
         z = O?.isPausedAllowsResumeButNotUpdates,
         $ = r.useRef(null),
-        [J, Q] = r.useState(null),
+        [Q, J] = r.useState(null),
         [X, ee] = r.useState(void 0),
         et = r.useMemo(
-            () => ({ unifiedSubscriptionDetailsNode: $, setUnifiedPlainNoticeText: Q, setOverrideRenewalDate: ee }),
+            () => ({ unifiedSubscriptionDetailsNode: $, setUnifiedPlainNoticeText: J, setOverrideRenewalDate: ee }),
             [],
         ),
         { content: en, isInvoiceBilledImmediately: el } =
@@ -570,7 +570,7 @@ function Z(e) {
                   )
                 : { content: null, isInvoiceBilledImmediately: !0 },
         ei = O?.eligiblePaymentGateways,
-        er = null != ei && ei.length > 0 && (null == _ || null === W) && A ? C.SELECT_PAYMENT_METHOD : void 0,
+        er = null != ei && ei.length > 0 && (null == _ || null === W) && y ? C.SELECT_PAYMENT_METHOD : void 0,
         ea = null != O ? O.paymentSourceId : null,
         es = r.useMemo(
             () => ({
@@ -630,7 +630,7 @@ function Z(e) {
         isPremiumGroupPurchase: H,
         paymentRestrictionBannerType: er,
         invoiceError: I,
-        unifiedPlainNoticeText: J,
+        unifiedPlainNoticeText: Q,
         invoicePreview: b,
         invoicePreviewComponent: en,
         shouldShowPlanSelectAndPromoBanner: ed,

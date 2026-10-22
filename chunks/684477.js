@@ -22,7 +22,7 @@ function m(e) {
         { hasPaymentSources: S } = (0, u.j)(),
         g = S ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
         I = i.useCallback(() => t(g), [t, g]),
-        y = i.useMemo(
+        A = i.useMemo(
             () =>
                 n === s.X.CUSTOM_STEP_BODY
                     ? m()
@@ -31,11 +31,11 @@ function m(e) {
                       }),
             [n, m, p, h, C],
         ),
-        A = i.useMemo(() => ({ ...f, onClick: I, text: c.intl.string(c.t.XiOHRX) }), [f, I]);
+        y = i.useMemo(() => ({ ...f, onClick: I, text: c.intl.string(c.t.XiOHRX) }), [f, I]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.dZ, { children: y }),
-            (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: E, primaryCTAButtonProps: A }) }),
+            (0, l.jsx)(a.dZ, { children: A }),
+            (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: E, primaryCTAButtonProps: y }) }),
         ],
     });
 }

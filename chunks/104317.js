@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => x, b9: () => g, w: () => h });
+n.d(t, { Ay: () => g, b9: () => x, w: () => h });
 var l = n(477900);
 n(582128);
 var a = n(683063),
@@ -16,23 +16,23 @@ function h(e) {
         n = (0, s.SY)(t.steps);
     return null != n ? (0, s.WQ)(n) : (t.tasks.find((e) => null != e.task.groupLabel)?.task.groupLabel ?? null);
 }
-function g(e) {
+function x(e) {
     return h(e) ?? m.intl.string(c.default.t8skVB);
 }
-function x(e) {
+function g(e) {
     let {
             projectId: t,
             steps: n,
             fallbackLabel: h,
-            live: g,
-            durationMs: x,
+            live: x,
+            durationMs: g,
             connectsDown: p = !1,
             closed: j = !1,
             tier: k,
         } = e,
         v = (0, s.SY)(n),
         b = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
-        _ = g ? void 0 : x,
+        _ = x ? void 0 : g,
         A = null != _ ? (0, i.nY)(_) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
         y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
@@ -46,14 +46,14 @@ function x(e) {
         }),
         line: A,
         anchor: !0,
-        live: g,
-        settled: null != _ || (!g && j),
+        live: x,
+        settled: null != _ || (!x && j),
         connectsDown: p,
         detail: y
             ? (0, l.jsx)("ol", {
                   className: f.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(d.A, { projectId: t, node: e, presentation: "detail", active: g && e === v }, e.id),
+                      (0, l.jsx)(d.A, { projectId: t, node: e, presentation: "detail", active: x && e === v }, e.id),
                   ),
               })
             : void 0,

@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(45938),
     g = n(158045),
     I = n(580630),
-    y = n(371710),
-    A = n(529412),
+    A = n(371710),
+    y = n(529412),
     x = n(557679),
     P = n(202541),
     v = n(341535),
@@ -47,7 +47,7 @@ function j(e) {
             ],
             [g],
         ),
-        y = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 (f(t), S(e));
             },
@@ -74,7 +74,7 @@ function j(e) {
                                   }),
                                   tabIndex: i ? 0 : -1,
                                   className: b.Mg,
-                                  onClick: () => y(t),
+                                  onClick: () => A(t),
                                   children: [
                                       (0, l.jsx)(T.T, { disabled: u, checked: i }),
                                       (0, l.jsx)(d.E, { variant: "text-sm/medium", children: _.intl.string(n) }),
@@ -166,8 +166,8 @@ function D(e) {
     o()(null != q, "Missing subscriptionPlan");
     let z = (0, g.m6)(q.id),
         $ = V && z === P.PremiumTypes.TIER_2,
-        J = (0, A.qi)({ location: `PremiumSwitchPlanSelectOption${$ ? "" : "-DISABLED"}` }),
-        Q = V && (!$ || !J || r),
+        Q = (0, y.qi)({ location: `PremiumSwitchPlanSelectOption${$ ? "" : "-DISABLED"}` }),
+        J = V && (!$ || !Q || r),
         X = (0, R.Sq)(),
         ee = (0, g.L_)({ planId: n, isGift: B, priceOptions: s, subscriptionPlan: q }),
         et = (0, g.y8)(n, !1, B, s),
@@ -200,7 +200,7 @@ function D(e) {
             () => (0, g.D8)(q.interval, B, u, q.intervalCount, V, z),
             [q.interval, q.intervalCount, B, u, V, z],
         ),
-        er = D && V && (0, y.dI)(n),
+        er = D && V && (0, A.dI)(n),
         ea = (function (e, t, n) {
             let { isRecurringGift: l } = (0, C.Pv)(),
                 i = n && l,
@@ -251,7 +251,7 @@ function D(e) {
                                             className: a()(M.Gl, { [M.h4]: r || V, [M.ox]: T && (r || V) }),
                                             children: [ei, V && el()],
                                         }),
-                                        Q &&
+                                        J &&
                                             (0, l.jsx)("div", {
                                                 className: M._R,
                                                 children: er

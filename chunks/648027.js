@@ -1,153 +1,155 @@
-(i.d(t, { A: () => _ }), i(321073));
-var l = i(582128),
-    n = i(17928),
-    a = i(10716),
-    r = i(991690),
-    s = i(429913),
-    o = i(785728),
-    d = i(287809),
-    p = i(147964),
-    c = i(403362),
-    u = i(723702),
-    f = i(933958),
-    A = i(847381),
-    m = i(155718),
-    b = i(594061),
-    g = i(818023);
-function _(e) {
-    var t;
-    let i,
-        _,
-        h,
-        y,
+(t.d(i, { A: () => g }), t(321073));
+var l = t(582128),
+    n = t(17928),
+    a = t(10716),
+    r = t(991690),
+    s = t(429913),
+    o = t(785728),
+    p = t(287809),
+    d = t(147964),
+    c = t(403362),
+    u = t(723702),
+    f = t(933958),
+    m = t(847381),
+    A = t(155718),
+    b = t(594061),
+    _ = t(818023);
+function g(e) {
+    var i;
+    let t,
+        g,
         v,
+        y,
+        h,
         E,
-        C,
         w,
+        C,
         I,
-        { guildId: N, enableFilter: k = !1 } = e,
+        { guildId: N, enableFilter: x = !1 } = e,
         { filter: M } = (0, n.cf)([a.A], () => ({ filter: a.A.getFilter() })),
-        x =
-            ((i = (0, n.bG)([d.default], d.default.getCurrentUser)),
-            (_ = (0, n.yK)([f.Ay], () => f.Ay.getShelfActivities(N))),
-            (h = (0, n.bG)([p.A], () => p.A.testModeEmbeddedApplicationId)),
-            (y = _.map((e) => e.application_id)),
-            (v = null != h ? [h, ...y] : y),
-            (E = (0, s.A)(v)),
-            (C = l.useMemo(() => E.filter(c.Vq), [E])),
-            (w = l.useMemo(
+        k =
+            ((t = (0, n.bG)([p.default], p.default.getCurrentUser)),
+            (g = (0, n.yK)([f.Ay], () => f.Ay.getShelfActivities(N))),
+            (v = (0, n.bG)([d.A], () => d.A.testModeEmbeddedApplicationId)),
+            (y = g.map((e) => e.application_id)),
+            (h = null != v ? [v, ...y] : y),
+            (E = (0, s.A)(h)),
+            (w = l.useMemo(() => E.filter(c.Vq), [E])),
+            (C = l.useMemo(
                 () =>
-                    null != h &&
-                    C.length > 0 &&
-                    C[0].id === h &&
-                    C[0].supportsEmbeddedSurface(r.U.MAIN) &&
-                    null != C[0].embeddedActivityConfig
-                        ? [{ activity: C[0].embeddedActivityConfig, application: C[0] }]
+                    null != v &&
+                    w.length > 0 &&
+                    w[0].id === v &&
+                    w[0].supportsEmbeddedSurface(r.U.MAIN) &&
+                    null != w[0].embeddedActivityConfig
+                        ? [{ activity: w[0].embeddedActivityConfig, application: w[0] }]
                         : [],
-                [C, h],
+                [w, v],
             )),
             (I = l.useMemo(
                 () =>
-                    _.map((e) => {
-                        let t = C.find((t) => t.id === e.application_id);
-                        return null == t ? null : { activity: e, application: t };
-                    }).filter(c.Vq),
-                [_, C],
+                    g
+                        .map((e) => {
+                            let i = w.find((i) => i.id === e.application_id);
+                            return null == i ? null : { activity: e, application: i };
+                        })
+                        .filter(c.Vq),
+                [g, w],
             )),
-            (t = l.useMemo(
+            (i = l.useMemo(
                 () =>
-                    [...w, ...I]
+                    [...C, ...I]
                         .filter((e) => {
-                            let { activity: t } = e;
-                            return (t.supported_platforms ?? []).includes((0, A.A)((0, u.getOS)()));
+                            let { activity: i } = e;
+                            return (i.supported_platforms ?? []).includes((0, m.A)((0, u.getOS)()));
                         })
                         .filter((e) => {
-                            let { activity: t } = e;
-                            return !t.requires_age_gate || i?.nsfwAllowed === !0 || i?.nsfwAllowed == null;
+                            let { activity: i } = e;
+                            return !i.requires_age_gate || t?.nsfwAllowed === !0 || t?.nsfwAllowed == null;
                         })
                         .filter((e) => {
-                            let { application: t } = e;
-                            return !(i?.nsfwAllowed === !1 && (0, o.A)(t.id));
+                            let { application: i } = e;
+                            return !(t?.nsfwAllowed === !1 && (0, o.A)(i.id));
                         }),
-                [i?.nsfwAllowed, I, w],
+                [t?.nsfwAllowed, I, C],
             )),
             b.bW.loadIfNecessary(),
             l.useMemo(() => {
-                var e, i;
+                var e, t;
                 let l,
                     n,
                     a = [];
-                t.forEach((e) => a.push(e.application.id));
+                i.forEach((e) => a.push(e.application.id));
                 let r = [...a];
                 return (
-                    r.sort((e, t) => (a.findIndex((t) => t === e) < a.findIndex((e) => e === t) ? -1 : 1)),
-                    (e = t),
-                    (i = r),
+                    r.sort((e, i) => (a.findIndex((i) => i === e) < a.findIndex((e) => e === i) ? -1 : 1)),
+                    (e = i),
+                    (t = r),
                     (l = [...e]),
                     (n = 0),
-                    i.forEach((e) => {
-                        let t = l.findIndex((t) => t.application.id === e);
-                        if (-1 !== t) {
-                            let e = l[t];
-                            (l.splice(t, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]), ++n);
+                    t.forEach((e) => {
+                        let i = l.findIndex((i) => i.application.id === e);
+                        if (-1 !== i) {
+                            let e = l[i];
+                            (l.splice(i, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]), ++n);
                         }
                     }),
                     l
-                        .map((e, t) => [e, t])
+                        .map((e, i) => [e, i])
                         .filter((e) => {
-                            let [t] = e,
-                                i =
-                                    t.application.embeddedActivityConfig?.client_platform_config[
-                                        (0, A.A)((0, u.getOS)())
+                            let [i] = e,
+                                t =
+                                    i.application.embeddedActivityConfig?.client_platform_config[
+                                        (0, m.A)((0, u.getOS)())
                                     ]?.label_type;
-                            return null != i && (i === m.Hr.NEW || i === m.Hr.UPDATED);
+                            return null != t && (t === A.Hr.NEW || t === A.Hr.UPDATED);
                         })
                         .forEach((e) => {
-                            let [t, i] = e,
+                            let [i, t] = e,
                                 n =
-                                    null != t.application.embeddedActivityConfig &&
-                                    null != t.application.embeddedActivityConfig.shelf_rank
-                                        ? t.application.embeddedActivityConfig.shelf_rank - 1
-                                        : i;
-                            if (n < i) {
-                                let e = l[i];
-                                (l.splice(i, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]));
+                                    null != i.application.embeddedActivityConfig &&
+                                    null != i.application.embeddedActivityConfig.shelf_rank
+                                        ? i.application.embeddedActivityConfig.shelf_rank - 1
+                                        : t;
+                            if (n < t) {
+                                let e = l[t];
+                                (l.splice(t, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]));
                             }
                         }),
                     l
                 );
-            }, [t])),
-        H = (function () {
-            let { isEnabled: e, lastUsedObject: t } = (0, n.cf)(
+            }, [i])),
+        j = (function () {
+            let { isEnabled: e, lastUsedObject: i } = (0, n.cf)(
                     [a.A],
                     () => ({ isEnabled: a.A.getIsEnabled(), lastUsedObject: a.A.getLastUsedObject() }),
                     [],
                 ),
-                i = (0, n.yK)([a.A], () => a.A.getDeveloperShelfItems(), []);
+                t = (0, n.yK)([a.A], () => a.A.getDeveloperShelfItems(), []);
             return l.useMemo(
                 () =>
                     e
-                        ? i
+                        ? t
                               .map((e) => ({
                                   application: e,
-                                  activity: { ...g.Gl, ...e.embeddedActivityConfig, application_id: e.id },
+                                  activity: { ..._.Gl, ...e.embeddedActivityConfig, application_id: e.id },
                               }))
-                              .sort((e, i) => {
-                                  let l = t[e.application.id],
-                                      n = t[i.application.id];
+                              .sort((e, t) => {
+                                  let l = i[e.application.id],
+                                      n = i[t.application.id];
                                   return null == l ? 1 : null == n ? -1 : n - l;
                               })
                         : [],
-                [i, e, t],
+                [t, e, i],
             );
         })();
     return l.useMemo(() => {
         function e(e) {
-            return !!(!k || "" === M || e.application.name.toLowerCase().includes(M.toLowerCase()));
+            return !!(!x || "" === M || e.application.name.toLowerCase().includes(M.toLowerCase()));
         }
-        let t = [...H].filter(e),
-            i = new Set(t.map((e) => e.application.id));
-        for (let l of x) !i.has(l.application.id) && e(l) && t.push(l);
-        return t;
-    }, [H, k, M, x]);
+        let i = [...j].filter(e),
+            t = new Set(i.map((e) => e.application.id));
+        for (let l of k) !t.has(l.application.id) && e(l) && i.push(l);
+        return i;
+    }, [j, x, M, k]);
 }

@@ -1,4 +1,4 @@
-(n.d(t, { B4: () => o, C6: () => g, CT: () => x, Jf: () => h, Lf: () => p, SY: () => u, WQ: () => s, lt: () => j }),
+(n.d(t, { B4: () => o, C6: () => x, CT: () => g, Jf: () => h, Lf: () => p, SY: () => u, WQ: () => s, lt: () => j }),
     n(321073),
     n(134528),
     n(947204));
@@ -198,12 +198,12 @@ function h(e, t) {
                     null != n.message && "" !== n.message && (l.detail = [n.message]));
             }
         }
-        let g = [...a.values()];
-        for (let e of g) n || "running" !== e.task.status || (e.task.status = "incomplete");
-        return { steps: l, tasks: g, ...(null != t ? { turn: t } : {}) };
+        let x = [...a.values()];
+        for (let e of x) n || "running" !== e.task.status || (e.task.status = "incomplete");
+        return { steps: l, tasks: x, ...(null != t ? { turn: t } : {}) };
     })(e, { turnActive: t }));
 }
-function g(e) {
+function x(e) {
     let t,
         { turnActive: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { items: l } = (null == (t = m.get(e)) && ((t = c(e)), m.set(e, t)), t),
@@ -242,7 +242,7 @@ function g(e) {
     }
     return o;
 }
-function x(e, t) {
+function g(e, t) {
     let { turnActive: n } = t,
         l = e.filter((e) => e.hasWork || e.hasTodos).at(-1)?.index,
         a = e.at(-1)?.index,

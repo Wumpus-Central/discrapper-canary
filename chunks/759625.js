@@ -1,26 +1,26 @@
-t.d(a, { A: () => h });
-var l = t(477900);
-t(582128);
-var n = t(939249),
-    r = t(834730),
-    i = t(147925),
-    s = t(807973),
-    u = t(898612),
-    o = t(232492),
-    c = t(80595);
-function h(e) {
-    let { benefit: a, guildId: t, onClick: h } = e,
-        d = (0, o.A)(t, a.ref_id),
-        m = (0, l.jsx)(s.A, { guildId: t, emojiId: a.emoji_id, emojiName: a.emoji_name });
-    return (0, l.jsxs)(n.D, {
+n.d(t, { A: () => d });
+var l = n(477900);
+n(582128);
+var o = n(939249),
+    r = n(834730),
+    i = n(147925),
+    a = n(807973),
+    u = n(898612),
+    s = n(232492),
+    c = n(80595);
+function d(e) {
+    let { benefit: t, guildId: n, onClick: d } = e,
+        C = (0, s.A)(n, t.ref_id),
+        h = (0, l.jsx)(a.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
+    return (0, l.jsxs)(o.D, {
         className: c.kL,
         onClick: function () {
-            (d?.navigateToChannel(), h());
+            (C?.navigateToChannel(), d());
         },
-        "aria-label": d?.ariaLabel,
+        "aria-label": C?.ariaLabel,
         role: "link",
         children: [
-            (0, l.jsx)("div", { className: c.qq, children: m }),
+            (0, l.jsx)("div", { className: c.qq, children: h }),
             (0, l.jsxs)("div", {
                 className: c.op,
                 children: [
@@ -28,12 +28,12 @@ function h(e) {
                         variant: "text-md/medium",
                         color: "text-strong",
                         className: c.UU,
-                        children: (0, u.A)(a),
+                        children: (0, u.A)(t),
                     }),
                     (0, l.jsx)(r.E, {
                         color: "interactive-text-default",
                         variant: "text-sm/normal",
-                        children: a.description,
+                        children: t.description,
                     }),
                 ],
             }),

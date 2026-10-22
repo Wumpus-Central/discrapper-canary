@@ -3,7 +3,7 @@ n.d(t, {
     NN: () => S,
     n6: () => T,
     OO: () => E,
-    Ig: () => _,
+    Ig: () => A,
     aD: () => p,
     Se: () => f,
     uK: () => d,
@@ -11,7 +11,7 @@ n.d(t, {
     Ds: () => g,
     LV: () => N,
     Mk: () => O,
-    sy: () => A,
+    sy: () => _,
     d: () => m,
 });
 var r,
@@ -49,12 +49,12 @@ let f = (0, s.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var A =
+var _ =
     (((u = {})[(u.DEFAULT = 0)] = "DEFAULT"),
     (u[(u.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
     (u[(u.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
     u);
-let _ = (0, s.mj)({
+let A = (0, s.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },

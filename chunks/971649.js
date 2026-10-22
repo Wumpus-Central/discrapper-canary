@@ -1,4 +1,4 @@
-n.d(t, { QK: () => C, RC: () => c, go: () => A, iY: () => d, vU: () => f, wW: () => _ });
+n.d(t, { QK: () => C, RC: () => c, go: () => _, iY: () => d, vU: () => f, wW: () => A });
 var r = n(582128),
     u = n(323889),
     i = n(17928),
@@ -37,10 +37,10 @@ function E() {
 function f() {
     return E()?.current;
 }
-function A() {
+function _() {
     return f()?.getId();
 }
-function _() {
+function A() {
     let e = E();
     return r.useCallback(() => e?.current?.getId(), [e]);
 }

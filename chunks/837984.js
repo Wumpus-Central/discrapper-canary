@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(321073), n(134528), n(947204));
+(n.d(t, { A: () => g }), n(321073), n(134528), n(947204));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -30,8 +30,8 @@ function p() {
                 s = [],
                 p = 0,
                 h = 0,
-                m = 8,
-                g = 9,
+                g = 8,
+                m = 9,
                 b = 0,
                 v = 0,
                 x = !1,
@@ -42,13 +42,13 @@ function p() {
                 if (null == l) return;
                 ((l.textAlign = "center"),
                     (l.textBaseline = "middle"),
-                    (l.font = `${m}px 'AI Visual Identity Glyphs', monospace`));
+                    (l.font = `${g}px 'AI Visual Identity Glyphs', monospace`));
                 let e = 0;
                 for (let t of "123456789ABC") {
                     let n = l.measureText(t);
                     e = Math.max(e, n.actualBoundingBoxAscent + n.actualBoundingBoxDescent);
                 }
-                let t = e > 0 ? Math.max(4, (m * m) / e) : m;
+                let t = e > 0 ? Math.max(4, (g * g) / e) : g;
                 l.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
             function S() {
@@ -56,7 +56,7 @@ function p() {
                 let e = n.clientWidth,
                     t = n.clientHeight;
                 if (e === p && t === h) return;
-                ((p = e), (g = (m = ((h = t) - 2 - 2) / 3) + 1));
+                ((p = e), (m = (g = ((h = t) - 2 - 2) / 3) + 1));
                 let i = r?.querySelectorAll("[data-stop]"),
                     a = i?.[i.length - 1];
                 (null != a && (u = a.offsetLeft + a.offsetWidth / 2),
@@ -88,7 +88,7 @@ function p() {
                     let N = M - 1 - (1 - _) * 16,
                         I = (t - j) / 1e3,
                         T = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
-                        R = Math.ceil(N / g);
+                        L = Math.ceil(N / m);
                     l.fillStyle = i;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * f(e, 11)),
@@ -99,13 +99,13 @@ function p() {
                             i += t.weight * Math.sin(I * c * t.hz + n);
                         }
                         let r = 0.30000000000000004 + 0.7 * (1 + i),
-                            a = Math.floor((I * t) / g),
-                            u = 1 + e * g + m / 2,
-                            o = m / 2 + 3,
+                            a = Math.floor((I * t) / m),
+                            u = 1 + e * m + g / 2,
+                            o = g / 2 + 3,
                             p = Math.abs(u - h / 2) < o;
-                        for (let t = 0; t < R; t++) {
+                        for (let t = 0; t < L; t++) {
                             let i,
-                                d = N - (t * g + m / 2);
+                                d = N - (t * m + g / 2);
                             if (d < 0) break;
                             let c = (N - d) / n;
                             if (c >= 1) break;
@@ -130,7 +130,7 @@ function p() {
                     l.globalAlpha = 1;
                 })));
             let k = document.fonts;
-            null != k && k.load(`${m}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(w, () => void 0);
+            null != k && k.load(`${g}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(w, () => void 0);
             let C = "u" < typeof ResizeObserver ? null : new ResizeObserver(S);
             return (
                 C?.observe(n),
@@ -143,18 +143,18 @@ function p() {
     );
 }
 var h = n(841479);
-function m(e) {
+function g(e) {
     let { activeIndex: t, stops: n, ariaLabel: r, disabled: u, onSelect: s, className: o } = e,
         d = i.useRef(null),
         c = i.useRef(null),
         f = i.useRef(null),
-        [m, g] = i.useState(-1),
+        [g, m] = i.useState(-1),
         b = i.useRef(!1),
         v = i.useRef(t),
         x = i.useRef({ activeIndex: t, disabled: u, onSelect: s, stopCount: n.length }),
         y = i.useRef(!1),
-        A = t >= 0 ? t : m,
-        j = t < 0 && m >= 0,
+        A = t >= 0 ? t : g,
+        j = t < 0 && g >= 0,
         w = i.useCallback((e, t, n, l) => {
             let i = c.current,
                 r = f.current;
@@ -349,10 +349,10 @@ function m(e) {
                                 disabled: u,
                                 className: h.ds,
                                 onKeyDown: k,
-                                onPointerEnter: () => g(n),
-                                onPointerLeave: () => g((e) => (e === n ? -1 : e)),
-                                onFocus: () => g(n),
-                                onBlur: () => g((e) => (e === n ? -1 : e)),
+                                onPointerEnter: () => m(n),
+                                onPointerLeave: () => m((e) => (e === n ? -1 : e)),
+                                onFocus: () => m(n),
+                                onBlur: () => m((e) => (e === n ? -1 : e)),
                                 onClick: () => s(n),
                                 children: (0, l.jsx)("span", { className: h.Om, "aria-hidden": "true" }),
                             },

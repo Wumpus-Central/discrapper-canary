@@ -17,8 +17,8 @@ var l = n(477900),
     S = n(35587),
     g = n(180522),
     I = n(637969),
-    y = n(45938),
-    A = n(158045),
+    A = n(45938),
+    y = n(158045),
     x = n(951305),
     P = n(166532),
     v = n(652215),
@@ -50,7 +50,7 @@ function R(e) {
         V = D?.productLine === v.EZt.COLLECTIBLES,
         Y = D?.productLine === v.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === P.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, y.Ik)(B) && U === P.pn.CONFIRM && null != F && !V && !Y,
+        Z = G && (0, A.Ik)(B) && U === P.pn.CONFIRM && null != F && !V && !Y,
         q = [P.pn.SKU_SELECT, P.pn.SELECT_FREE_SKU],
         z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
@@ -67,7 +67,7 @@ function R(e) {
                       titleTextVariant: "heading-xl/semibold",
                       subtitle: T.intl.format(N.default.geFoof, {
                           giftCount: R,
-                          skuName: null != d ? (0, A.RH)(d) : "",
+                          skuName: null != d ? (0, y.RH)(d) : "",
                       }),
                   }))
                 : Z

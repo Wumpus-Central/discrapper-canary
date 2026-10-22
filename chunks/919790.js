@@ -22,7 +22,7 @@ function m(e) {
                 ? (0, l.jsx)(h, { name: e.name }, n)
                 : f(e)
                   ? (0, l.jsx)(
-                        x,
+                        g,
                         {
                             projectId: t,
                             viewableImages: r,
@@ -32,7 +32,7 @@ function m(e) {
                         },
                         n,
                     )
-                  : (0, l.jsx)(g, { projectId: t, id: e.id, name: e.name }, n),
+                  : (0, l.jsx)(x, { projectId: t, id: e.id, name: e.name }, n),
         ),
     });
 }
@@ -44,7 +44,7 @@ function h(e) {
         a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
-function g(e) {
+function x(e) {
     let { projectId: t, id: n, name: r } = e,
         [i, c] = a.useState(!1),
         m = a.useCallback(() => {
@@ -68,10 +68,10 @@ function g(e) {
               onClick: m,
           });
 }
-function x(e) {
+function g(e) {
     let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: m } = e,
-        { id: f, name: g } = n[i],
-        [x, p] = a.useState(null),
+        { id: f, name: x } = n[i],
+        [g, p] = a.useState(null),
         j = c.has(f),
         [k, v] = a.useState(0);
     a.useEffect(() => {
@@ -105,11 +105,11 @@ function x(e) {
         );
     }, [t, n, i, c]);
     return j
-        ? (0, l.jsx)(h, { name: g, unavailable: !0 })
+        ? (0, l.jsx)(h, { name: x, unavailable: !0 })
         : (0, l.jsx)(u.n, {
-              name: g,
-              thumbSrc: x,
-              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: g }),
+              name: x,
+              thumbSrc: g,
+              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: x }),
               onClick: b,
               onThumbError: () => {
                   (p(null),

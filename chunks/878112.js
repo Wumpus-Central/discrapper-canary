@@ -1,88 +1,88 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var r = n(477900),
     i = n(582128),
     s = n(575593),
-    l = n(821609),
-    a = n(597770),
-    o = n(866665),
-    u = n(408278),
+    a = n(821609),
+    l = n(597770),
+    u = n(866665),
+    o = n(408278),
     d = n(688810),
     c = n(44120),
     I = n(174459),
     f = n(440938),
-    p = n(238184),
-    g = n(536572),
-    v = n(766172),
+    v = n(238184),
+    p = n(536572),
+    g = n(766172),
     x = n(758836),
     A = n(652215),
     m = n(202541),
-    C = n(105292);
-let _ = function (e) {
+    _ = n(105292);
+let h = function (e) {
     let {
             product: t,
             primary: n,
-            selectedVariantIndex: _,
-            returnRef: h,
-            onSuccess: E,
+            selectedVariantIndex: h,
+            returnRef: E,
+            onSuccess: C,
             tooltipDelay: b,
             fullWidth: R = !1,
             fullWidthLabel: k,
             giftRecipient: y,
-            giftingOrigin: T = m.vQ.SHOP_PAGE,
-            onTrackClick: j,
+            giftingOrigin: j = m.vQ.SHOP_PAGE,
+            onTrackClick: T,
             tabIndex: S,
         } = e,
         { analyticsLocations: O } = (0, d.Ay)(),
-        L = i.useRef(null),
-        V = (0, f.uM)(),
-        P = (0, p.A)();
+        V = i.useRef(null),
+        L = (0, f.uM)(),
+        P = (0, v.A)();
     function N(e) {
         (e.stopPropagation(),
             I.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: V?.sessionId,
+                collectibles_shop_session_id: L?.sessionId,
                 sku_id: t.skuId,
-                page_section: V?.pageSection,
-                page_category: V?.pageCategory,
+                page_section: L?.pageSection,
+                page_category: L?.pageCategory,
                 tile_type: s.R[t.type],
-                tile_position: String(V?.tilePosition),
+                tile_position: String(L?.tilePosition),
                 cta_name: "gift button",
                 page_type: P ?? "home",
             }),
-            j?.(x.sH.SEND_AS_GIFT),
+            T?.(x.sH.SEND_AS_GIFT),
             (0, c.A)({
-                skuId: (0, v.Y)({ product: t, selectedVariantIndex: _ }),
+                skuId: (0, g.Y)({ product: t, selectedVariantIndex: h }),
                 isGift: !0,
                 giftRecipient: y,
-                giftingOrigin: T,
+                giftingOrigin: j,
                 analyticsLocations: O,
-                discoverySessionId: V?.sessionId,
-                returnRef: h,
+                discoverySessionId: L?.sessionId,
+                returnRef: E,
                 onClose:
-                    null != E
+                    null != C
                         ? (e) => {
-                              e && E();
+                              e && C();
                           }
                         : void 0,
             }));
     }
     if (R)
-        return (0, r.jsx)(l.$, {
+        return (0, r.jsx)(a.$, {
             variant: n ? "primary" : "secondary",
-            icon: a.GiftIcon,
+            icon: l.GiftIcon,
             onClick: N,
-            text: k ?? C.intl.string(C.t.gmnzqM),
+            text: k ?? _.intl.string(_.t.gmnzqM),
             fullWidth: !0,
             tabIndex: S,
         });
-    let M = C.intl.string(C.t["JCFN/y"]);
-    return (0, r.jsx)(o.m, {
+    let M = _.intl.string(_.t["JCFN/y"]);
+    return (0, r.jsx)(u.m, {
         text: M,
         delay: b,
-        children: (0, r.jsx)(u.K, {
-            "aria-label": C.intl.formatToPlainString(C.t["5UYoSr"], { ctaLabel: M, productLabel: (0, g.s7)(t) }),
-            buttonRef: L,
+        children: (0, r.jsx)(o.K, {
+            "aria-label": _.intl.formatToPlainString(_.t["5UYoSr"], { ctaLabel: M, productLabel: (0, p.s7)(t) }),
+            buttonRef: V,
             variant: n ? "primary" : "secondary",
-            icon: a.GiftIcon,
+            icon: l.GiftIcon,
             size: "md",
             onClick: N,
             tabIndex: S,

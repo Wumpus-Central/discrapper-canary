@@ -59,7 +59,7 @@ function L(t) {
         ],
     });
 }
-function g(t) {
+function p(t) {
     let { canUsePremiumCollectibles: e, hasLostAccess: n, nitroChurnCTA: r, nitroJoinCTA: i } = t;
     return e
         ? (0, l.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: E.intl.string(E.t.hmyYK8) })
@@ -67,7 +67,7 @@ function g(t) {
           ? (0, l.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: r })
           : (0, l.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: i });
 }
-function p() {
+function g() {
     return (0, l.jsx)(c.E, { variant: "text-sm/medium", color: "text-default", children: E.intl.string(E.t.fEGjVQ) });
 }
 let j = function (t) {
@@ -76,33 +76,33 @@ let j = function (t) {
         { product: E, purchase: j } = (0, A.A)(n),
         _ = m.Ay.canUseCollectibles(e),
         y = (0, x.G0)(E),
-        C = (0, x.gA)(j),
-        P = !_ && C,
-        T = null != j && !P,
-        k = (0, h.Sw)(j),
-        v = (0, h.VG)(E);
+        v = (0, x.gA)(j),
+        C = !_ && v,
+        P = null != j && !C,
+        T = (0, h.Sw)(j),
+        k = (0, h.VG)(E);
     return null == E && null == j
         ? null
         : (0, l.jsx)("div", {
-              className: i()(f.kL, !T && f.D7),
+              className: i()(f.kL, !P && f.D7),
               children: (0, l.jsxs)("div", {
                   className: f.WH,
                   children: [
                       (0, l.jsx)(o.D, {
                           color: "text-strong",
                           variant: "text-sm/semibold",
-                          children: (0, s.isEmpty)(k) ? v : k,
+                          children: (0, s.isEmpty)(T) ? k : T,
                       }),
-                      T
-                          ? (0, l.jsx)(L, { purchase: j, isPremiumPurchase: C, locale: d })
-                          : y || C
-                            ? (0, l.jsx)(g, {
+                      P
+                          ? (0, l.jsx)(L, { purchase: j, isPremiumPurchase: v, locale: d })
+                          : y || v
+                            ? (0, l.jsx)(p, {
                                   canUsePremiumCollectibles: _,
-                                  hasLostAccess: P,
+                                  hasLostAccess: C,
                                   nitroChurnCTA: r,
                                   nitroJoinCTA: c,
                               })
-                            : (0, l.jsx)(p, {}),
+                            : (0, l.jsx)(g, {}),
                   ],
               }),
           });

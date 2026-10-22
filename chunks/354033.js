@@ -18,15 +18,15 @@ var i = n(503698),
     S = n(599941),
     g = n(320137),
     I = n(417360),
-    y = n(759625),
-    A = n(2242),
+    A = n(759625),
+    y = n(2242),
     x = n(105292),
     P = n(631907),
     v = n(200791);
 function _(e) {
     let { onClose: t, listing: n, step: i, guildId: a } = e,
         s = (0, S.Tq)(a),
-        c = (0, p.A)(A.TQ),
+        c = (0, p.A)(y.TQ),
         d = (function () {
             if (c) return null;
             let e =
@@ -93,7 +93,7 @@ function T(e) {
                         (0, l.jsx)("div", {
                             className: P.M3,
                             children: p.map((e) =>
-                                (0, l.jsx)(y.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, E.nh)(e)),
+                                (0, l.jsx)(A.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, E.nh)(e)),
                             ),
                         }),
                     ],

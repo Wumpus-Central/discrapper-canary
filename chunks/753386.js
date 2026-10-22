@@ -1,4 +1,4 @@
-n.d(t, { J$: () => T, WM: () => s.WM, cZ: () => C, eG: () => f, vd: () => I, vm: () => _, zh: () => A, zv: () => E });
+n.d(t, { J$: () => T, WM: () => s.WM, cZ: () => C, eG: () => f, vd: () => I, vm: () => A, zh: () => _, zv: () => E });
 var r = n(544180),
     u = n(396813),
     i = n(859703),
@@ -16,17 +16,17 @@ function f(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height || t.width > t.height ? "landscape" : "portrait";
 }
-function A(e, t) {
+function _(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function _(e) {
+function A(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
     o.Ay.getState().setTranscriptEnabled(!1);
     let s = o.Ay.getState().getVideoProgress(t);
     if (null == s) return;
     let a = i.A.getQuest(t);
     null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && E(a, s.maxTimestampSec);
-    let c = A(s.maxTimestampSec, s.duration);
+    let c = _(s.maxTimestampSec, s.duration);
     ((0, l.av)({
         questId: t,
         event: d.HAw.QUEST_VIDEO_PROGRESSED,

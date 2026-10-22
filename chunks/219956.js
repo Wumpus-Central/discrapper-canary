@@ -1,4 +1,4 @@
-n.d(t, { A2: () => h, ZA: () => g, eN: () => f, s9: () => m });
+n.d(t, { A2: () => h, ZA: () => x, eN: () => f, s9: () => m });
 var l = n(17928),
     a = n(617617),
     r = n(573163),
@@ -25,6 +25,6 @@ function h(e) {
         publishState: o.A.getPublishStatus(e)?.publishState ?? null,
     });
 }
-function g(e) {
+function x(e) {
     return (0, l.bG)(f, () => h(e), [e]);
 }

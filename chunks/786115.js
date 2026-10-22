@@ -1,36 +1,36 @@
-i.d(t, { A: () => d });
-var l = i(582128),
-    n = i(562708),
-    a = i(17928),
-    r = i(139286),
-    s = i(989837),
-    o = i(520117);
-function d(e) {
+t.d(i, { A: () => p });
+var l = t(582128),
+    n = t(562708),
+    a = t(17928),
+    r = t(139286),
+    s = t(989837),
+    o = t(520117);
+function p(e) {
     let {
-            applicationId: t,
-            applicationFlags: i,
-            sectionName: d,
-            sectionPosition: p,
+            applicationId: i,
+            applicationFlags: t,
+            sectionName: p,
+            sectionPosition: d,
             sectionOverallPosition: c,
             promotionalLabel: u,
             numFriendsWhoPlay: f,
         } = e,
-        A = (0, a.bG)([s.A], () => s.A.entrypoint()),
-        m = l.useCallback(() => {
+        m = (0, a.bG)([s.A], () => s.A.entrypoint()),
+        A = l.useCallback(() => {
             (0, r.x)({
                 type: n.ImpressionTypes.VIEW,
                 name: n.ImpressionNames.APP_LAUNCHER_ITEM,
                 properties: {
-                    application_id: t,
-                    application_flags: i,
-                    section_name: d,
-                    section_position: p,
+                    application_id: i,
+                    application_flags: t,
+                    section_name: p,
+                    section_position: d,
                     section_overall_position: c,
-                    source: A,
+                    source: m,
                     promotional_label: u,
                     num_friends_who_play: f,
                 },
             });
         }, [f]);
-    return { trackItemImpressionRef: (0, o.A)({ onVisible: m, threshold: 0.5, minTimeVisibleMs: 1e3 }) };
+    return { trackItemImpressionRef: (0, o.A)({ onVisible: A, threshold: 0.5, minTimeVisibleMs: 1e3 }) };
 }

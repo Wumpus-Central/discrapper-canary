@@ -1,20 +1,20 @@
-e.d(a, { Q7: () => l, bF: () => r, hW: () => o });
-var n = e(248675),
-    i = e(105292);
-function r(t) {
+a.d(n, { Q7: () => l, bF: () => i, hW: () => o });
+var e = a(248675),
+    r = a(105292);
+function i(t) {
     switch (t) {
         case "simple":
-            return n.default["/tlOR5"];
+            return e.default["/tlOR5"];
         case "balanced":
-            return n.default.wNhuGQ;
+            return e.default.wNhuGQ;
         case "complex":
-            return n.default.FxoUwB;
+            return e.default.FxoUwB;
         default:
             return null;
     }
 }
-function l(t, a) {
-    let e = r(a);
-    return null != e ? { title: t, body: i.intl.string(e) } : { body: t };
+function l(t, n) {
+    let a = i(n);
+    return null != a ? { title: t, body: r.intl.string(a) } : { body: t };
 }
 let o = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };

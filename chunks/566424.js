@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => x });
 var l = n(477900),
     a = n(582128),
     r = n(503698),
@@ -11,13 +11,13 @@ var l = n(477900),
     m = n(248675),
     f = n(105292),
     h = n(59678);
-function g(e) {
+function x(e) {
     let {
             glyph: t,
             line: n,
             live: r,
-            settled: g,
-            tint: x,
+            settled: x,
+            tint: g,
             detail: p,
             connected: j = !1,
             connectsDown: k = !1,
@@ -29,8 +29,8 @@ function g(e) {
         r && A.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [r]);
     let y = a.useId(),
-        S = a.useCallback(() => _((e) => !e), []),
-        { text: N, phase: w } = (0, c.Q)(n),
+        N = a.useCallback(() => _((e) => !e), []),
+        { text: S, phase: w } = (0, c.Q)(n),
         E = b ? s.a : u._,
         C = null != p,
         I = (0, l.jsxs)(l.Fragment, {
@@ -41,12 +41,12 @@ function g(e) {
                     variant: "text-md/normal",
                     color: "currentColor",
                     className: i()(h.qo, { [h._q]: "exit" === w, [h.GD]: "enter" === w }),
-                    children: N,
+                    children: S,
                 }),
                 C ? (0, l.jsx)(E, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
         }),
-        M = (0, l.jsxs)(l.Fragment, {
+        P = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: h.$m, children: I }),
                 r
@@ -62,11 +62,11 @@ function g(e) {
         ref: A,
         className: h.K1,
         "data-live": r,
-        "data-settled": g,
+        "data-settled": x,
         "data-connected": j,
         "data-connects-down": k,
         "data-conjure-turn-status": v ? "true" : void 0,
-        style: null != x ? { "--custom-conjure-shimmer-tint": x } : void 0,
+        style: null != g ? { "--custom-conjure-shimmer-tint": g } : void 0,
         children: [
             C
                 ? (0, l.jsx)(o.D, {
@@ -74,11 +74,11 @@ function g(e) {
                       className: i()(h.ep, h.EK),
                       "aria-expanded": b,
                       "aria-controls": y,
-                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: N }),
-                      onClick: S,
-                      children: M,
+                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: S }),
+                      onClick: N,
+                      children: P,
                   })
-                : (0, l.jsx)("div", { className: h.ep, children: M }),
+                : (0, l.jsx)("div", { className: h.ep, children: P }),
             (0, l.jsx)("div", { id: y, hidden: !b, "data-conjure-entrance": !0, className: h.BA, children: p }),
         ],
     });

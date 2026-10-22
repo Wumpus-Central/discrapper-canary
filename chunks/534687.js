@@ -1,4 +1,4 @@
-c.exports = {
+a.exports = {
     aL: "rowIcon_cb32c7",
     Ne: "appDetailsRowContainer_cb32c7",
     ek: "rowDivider_cb32c7",

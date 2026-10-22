@@ -11,8 +11,8 @@ var l = n(477900),
     f = n(289873),
     p = n(890497),
     h = n(300344),
-    m = n(614733),
-    g = n(904363),
+    g = n(614733),
+    m = n(904363),
     b = n(1665),
     v = n(442331),
     x = n(743082);
@@ -28,31 +28,31 @@ var A = n(245179),
     C = n(183265);
 let E = { values: {}, secrets: {} };
 function P(e) {
-    let { projectId: t, scopeKeys: n, note: p, notifyAgent: h = !1, isPreview: m = !1, onSaved: g, children: k } = e,
+    let { projectId: t, scopeKeys: n, note: p, notifyAgent: h = !1, isPreview: g = !1, onSaved: m, children: k } = e,
         P = (0, r.bG)([v.A], () => v.A.getSettings(t)),
         [M, _] = i.useState(E),
         [N, I] = i.useState({}),
-        [R, L] = i.useState(!1),
-        [D, U] = i.useState(!1),
-        O = i.useCallback((e, t) => {
-            (U(!1), _((n) => ({ ...n, values: { ...n.values, [e]: t } })));
+        [L, R] = i.useState(!1),
+        [D, G] = i.useState(!1),
+        U = i.useCallback((e, t) => {
+            (G(!1), _((n) => ({ ...n, values: { ...n.values, [e]: t } })));
         }, []),
-        G = i.useCallback((e, t) => {
-            (U(!1), _((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
+        O = i.useCallback((e, t) => {
+            (G(!1), _((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
         }, []),
         F = i.useMemo(() => P?.schema ?? [], [P]),
-        W = i.useMemo(() => P?.values ?? {}, [P]),
-        q = i.useMemo(
+        q = i.useMemo(() => P?.values ?? {}, [P]),
+        W = i.useMemo(
             () =>
                 (P?.secrets ?? []).map((e) => ({ ...e, def: F.find((t) => t.key === e.name && "secret" === t.type) })),
             [F, P],
         ),
         $ = F.filter((e) => "secret" !== e.type),
-        z = new Map(q.map((e) => [e.name, e])),
+        z = new Map(W.map((e) => [e.name, e])),
         B = (n ?? []).filter((e) => $.some((t) => t.key === e) || z.has(e)),
         V = B.length > 0,
         H = B.some((e) => z.has(e)),
-        Y = i.useMemo(() => {
+        Z = i.useMemo(() => {
             let e = {};
             for (let [n, l] of Object.entries(M.values)) {
                 var t;
@@ -77,7 +77,7 @@ function P(e) {
                     return "string" == typeof t && "" === t.trim() ? null : t;
                 })(i, l);
                 void 0 === r ||
-                    ((t = W[n] ?? ("checkbox" !== i.type && null)), JSON.stringify(r) === JSON.stringify(t)) ||
+                    ((t = q[n] ?? ("checkbox" !== i.type && null)), JSON.stringify(r) === JSON.stringify(t)) ||
                     (e[n] = r);
             }
             let n = {};
@@ -94,13 +94,13 @@ function P(e) {
                     return { secrets: t, ...(Object.keys(n).length > 0 ? { hosts: n } : {}) };
                 })(F, n),
             };
-        }, [M, F, W]),
-        X = null != Y.values || null != Y.secrets,
-        Z = i.useCallback(async () => {
-            if (!X || R) return !0;
-            (L(!0), U(!1));
+        }, [M, F, q]),
+        Q = null != Z.values || null != Z.secrets,
+        Y = i.useCallback(async () => {
+            if (!Q || L) return !0;
+            (R(!0), G(!1));
             try {
-                let { rebuildRequired: e } = await (0, x.nU)(t, Y);
+                let { rebuildRequired: e } = await (0, x.nU)(t, Z);
                 return (
                     !(function (e, t) {
                         let { rebuildRequired: n, notifyAgent: l } = t;
@@ -110,16 +110,16 @@ function P(e) {
                     })(t, { rebuildRequired: e, notifyAgent: h }),
                     _(E),
                     I({}),
-                    g?.(),
+                    m?.(),
                     !0
                 );
             } catch {
-                return (U(!0), !1);
+                return (G(!0), !1);
             } finally {
-                L(!1);
+                R(!1);
             }
-        }, [X, h, g, t, R, Y]);
-    function J(e) {
+        }, [Q, h, m, t, L, Z]);
+    function X(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
             e?.requires_rebuild === !0 ? S.intl.string(w.default["4kCM6H"]) : void 0,
@@ -129,10 +129,10 @@ function P(e) {
         ].filter((e) => null != e);
         return 0 === t.length ? void 0 : t.join(" ");
     }
-    function Q(e) {
-        let n = J(e);
+    function J(e) {
+        let n = X(e);
         if ("select" === e.type) {
-            let t = M.values[e.key] ?? W[e.key],
+            let t = M.values[e.key] ?? q[e.key],
                 i = (e.options ?? []).map((e) => ({ id: e.value, label: e.label, value: e.value }));
             return (0, l.jsxs)(
                 "div",
@@ -144,18 +144,18 @@ function P(e) {
                                   label: e.label,
                                   options: i,
                                   value: Array.isArray(t) ? t : [],
-                                  onSelectionChange: (t) => O(e.key, t),
+                                  onSelectionChange: (t) => U(e.key, t),
                                   selectionMode: "multiple",
-                                  disabled: R,
+                                  disabled: L,
                                   fullWidth: !0,
                               })
                             : (0, l.jsx)(a.l, {
                                   label: e.label,
                                   options: i,
                                   value: "string" == typeof t ? t : void 0,
-                                  onSelectionChange: (t) => O(e.key, t),
+                                  onSelectionChange: (t) => U(e.key, t),
                                   selectionMode: "single",
-                                  disabled: R,
+                                  disabled: L,
                                   fullWidth: !0,
                               }),
                         null != n ? (0, l.jsx)(b.A, { text: n, variant: "text-xs/normal", color: "text-muted" }) : null,
@@ -165,7 +165,7 @@ function P(e) {
             );
         }
         if ("checkbox" === e.type) {
-            let t = M.values[e.key] ?? W[e.key];
+            let t = M.values[e.key] ?? q[e.key];
             return (0, l.jsxs)(
                 "div",
                 {
@@ -174,8 +174,8 @@ function P(e) {
                         (0, l.jsx)(u.S, {
                             label: e.label,
                             checked: !0 === t,
-                            onChange: (t) => O(e.key, t),
-                            disabled: R,
+                            onChange: (t) => U(e.key, t),
+                            disabled: L,
                         }),
                         null != n ? (0, l.jsx)(b.A, { text: n, variant: "text-xs/normal", color: "text-muted" }) : null,
                     ],
@@ -188,12 +188,12 @@ function P(e) {
                   T,
                   {
                       projectId: t,
-                      isPreview: m,
+                      isPreview: g,
                       def: e,
                       hint: n,
-                      value: M.values[e.key] ?? W[e.key],
-                      disabled: R,
-                      onChange: (t) => O(e.key, t),
+                      value: M.values[e.key] ?? q[e.key],
+                      disabled: L,
+                      onChange: (t) => U(e.key, t),
                       fallback: K(e, n),
                   },
                   e.key,
@@ -201,7 +201,7 @@ function P(e) {
             : K(e, n);
     }
     function K(e, t) {
-        let n = M.values[e.key] ?? W[e.key];
+        let n = M.values[e.key] ?? q[e.key];
         return !0 === e.multiline
             ? (0, l.jsx)(
                   s.f,
@@ -210,8 +210,8 @@ function P(e) {
                       helperText: t,
                       required: y(e),
                       value: "string" == typeof n ? n : "",
-                      onChange: (t) => O(e.key, t),
-                      disabled: R,
+                      onChange: (t) => U(e.key, t),
+                      disabled: L,
                       rows: 6,
                       maxRows: 15,
                       autosize: !0,
@@ -229,8 +229,8 @@ function P(e) {
                               autoComplete: "off",
                               required: y(e),
                               value: Array.isArray(n) ? n.join(", ") : null == n ? "" : String(n),
-                              onChange: (t) => O(e.key, t),
-                              disabled: R,
+                              onChange: (t) => U(e.key, t),
+                              disabled: L,
                               fullWidth: !0,
                               ...("number" === e.type ? { type: "number", min: e.min, max: e.max, step: e.step } : {}),
                           }),
@@ -244,7 +244,7 @@ function P(e) {
     }
     function ee(e) {
         let t = e.def?.label ?? e.name,
-            n = J(e.def);
+            n = X(e.def);
         return e.set && !0 !== N[e.name]
             ? (0, l.jsxs)(
                   "div",
@@ -272,7 +272,7 @@ function P(e) {
                               size: "sm",
                               text: S.intl.string(w.default.RsvBGf),
                               "aria-label": S.intl.formatToPlainString(w.default.WjoM7z, { label: t }),
-                              disabled: R,
+                              disabled: L,
                               onClick: () => I((t) => ({ ...t, [e.name]: !0 })),
                           }),
                       ],
@@ -294,8 +294,8 @@ function P(e) {
                                   : void 0,
                               required: y(e.def, e.set),
                               value: M.secrets[e.name] ?? "",
-                              onChange: (t) => G(e.name, t),
-                              disabled: R,
+                              onChange: (t) => O(e.name, t),
+                              disabled: L,
                               fullWidth: !0,
                           }),
                           null != n
@@ -322,7 +322,7 @@ function P(e) {
                     : null,
                 null == P
                     ? (0, l.jsx)("div", { className: C.kZ, children: (0, l.jsx)(f.y, {}) })
-                    : 0 === $.length && 0 === q.length
+                    : 0 === $.length && 0 === W.length
                       ? (0, l.jsx)(d.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
@@ -346,11 +346,11 @@ function P(e) {
                                     let t = z.get(e);
                                     if (null != t) return ee(t);
                                     let n = $.find((t) => t.key === e);
-                                    return null == n ? null : Q(n);
+                                    return null == n ? null : J(n);
                                 }),
                             ],
                         })
-                      : $.map(Q),
+                      : $.map(J),
                 et,
             ],
         }),
@@ -363,7 +363,7 @@ function P(e) {
                     selectable: !0,
                     children: S.intl.string(w.default.dsHRPK),
                 }),
-                q.map(ee),
+                W.map(ee),
                 et,
             ],
         });
@@ -373,11 +373,11 @@ function P(e) {
             secretFields: el,
             loaded: null != P,
             valueCount: $.length,
-            secretCount: q.length,
-            canSave: X,
-            saving: R,
+            secretCount: W.length,
+            canSave: Q,
+            saving: L,
             isScoped: V,
-            submit: Z,
+            submit: Y,
         }),
     });
 }
@@ -422,11 +422,11 @@ function _(e) {
 }
 function N(e) {
     let { guildId: t, ...n } = e;
-    return (0, l.jsx)(M, { ...n, options: (0, g.A)(t) });
+    return (0, l.jsx)(M, { ...n, options: (0, m.A)(t) });
 }
 function I(e) {
     let { guildId: t, ...n } = e,
-        { options: i, onQueryChange: r, matchSorterOptions: a } = (0, m.A)(t, (0, k.TN)(n.value));
+        { options: i, onQueryChange: r, matchSorterOptions: a } = (0, g.A)(t, (0, k.TN)(n.value));
     return (0, l.jsx)(M, { ...n, options: i, onQueryChange: r, matchSorterOptions: a });
 }
 function T(e) {

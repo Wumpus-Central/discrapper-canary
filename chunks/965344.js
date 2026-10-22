@@ -1,34 +1,34 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => f });
 var l = n(477900),
     r = n(503698),
     a = n.n(r),
-    i = n(582128),
-    s = n(835517),
+    s = n(582128),
+    i = n(835517),
     o = n(399667),
     c = n(819648),
-    u = n(881245);
-function d(e) {
+    d = n(881245);
+function u(e) {
     let { character: t, size: n, className: r } = e,
-        d = i.useMemo(() => (0, c.vF)(t, Math.round(n * (0, s.A)())), [t, n]),
-        m = i.useMemo(() => (0, o.O)(t), [t]),
-        h = i.useRef(new Set()),
-        [p, x] = i.useState(!1);
-    function g(e) {
-        (h.current.add(e), d.every((e) => h.current.has(e)) && x(!0));
+        u = s.useMemo(() => (0, c.vF)(t, Math.round(n * (0, i.A)())), [t, n]),
+        m = s.useMemo(() => (0, o.O)(t), [t]),
+        p = s.useRef(new Set()),
+        [h, x] = s.useState(!1);
+    function f(e) {
+        (p.current.add(e), u.every((e) => p.current.has(e)) && x(!0));
     }
     return (
-        i.useLayoutEffect(() => {
-            let e = d.filter((e) => h.current.has(e));
-            ((h.current = new Set(e)), x(e.length === d.length));
-        }, [d]),
+        s.useLayoutEffect(() => {
+            let e = u.filter((e) => p.current.has(e));
+            ((p.current = new Set(e)), x(e.length === u.length));
+        }, [u]),
         (0, l.jsx)("div", {
             role: "img",
             "aria-label": m,
-            className: a()(u.GG, { [u.Kc]: p }, r),
-            children: d.map((e) =>
+            className: a()(d.GG, { [d.Kc]: h }, r),
+            children: u.map((e) =>
                 (0, l.jsx)(
                     "img",
-                    { src: e, alt: "", draggable: !1, className: u.qd, onLoad: () => g(e), onError: () => g(e) },
+                    { src: e, alt: "", draggable: !1, className: d.qd, onLoad: () => f(e), onError: () => f(e) },
                     e,
                 ),
             ),
@@ -36,14 +36,14 @@ function d(e) {
     );
 }
 var m = n(343053),
-    h = n(48763),
-    p = n(955671);
-let x = { [h.W.SM]: 224, [h.W.LG]: 448 };
-function g(e) {
+    p = n(48763),
+    h = n(955671);
+let x = { [p.W.SM]: 224, [p.W.LG]: 448 };
+function f(e) {
     let { character: t } = e,
         { size: n } = (0, m.Z)();
     return (0, l.jsx)("div", {
-        className: a()(p.characterColumn, p[n]),
-        children: (0, l.jsx)(d, { character: t, size: x[n], className: p.character }),
+        className: a()(h.characterColumn, h[n]),
+        children: (0, l.jsx)(u, { character: t, size: x[n], className: h.character }),
     });
 }

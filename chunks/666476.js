@@ -1,16 +1,16 @@
-e.d(a, { Ju: () => s, Oq: () => c, XB: () => i, aI: () => r, km: () => l, lN: () => o, o2: () => u, sM: () => h });
-var n = e(255438);
-let i = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    r = 221552 == e.j ? 5242880 : null,
-    l = 221552 == e.j ? 0x3200000 : null,
+a.d(n, { Ju: () => s, Oq: () => c, XB: () => r, aI: () => i, km: () => l, lN: () => o, o2: () => u, sM: () => f });
+var e = a(255438);
+let r = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
+    i = 221552 == a.j ? 5242880 : null,
+    l = 221552 == a.j ? 0x3200000 : null,
     o = 10,
-    u = 221552 == e.j ? 36e5 : null;
+    u = 221552 == a.j ? 36e5 : null;
 function s(t) {
-    return i.has(t) ? r : l;
+    return r.has(t) ? i : l;
 }
-function c(t, a) {
-    return t <= s(a);
+function c(t, n) {
+    return t <= s(n);
 }
-function h(t) {
-    return (0, n.up)(t, { useKibibytes: !0, useSpace: !0 });
+function f(t) {
+    return (0, e.up)(t, { useKibibytes: !0, useSpace: !0 });
 }
