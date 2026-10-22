@@ -1,4 +1,4 @@
-n.d(t, { FA: () => S, If: () => I, Nc: () => p, Q8: () => f, kb: () => T, mf: () => A, ps: () => m });
+n.d(t, { FA: () => N, If: () => I, Nc: () => p, Q8: () => f, kb: () => T, mf: () => A, ps: () => m, wD: () => C });
 var i = n(468311),
     r = n(706121),
     a = n(329605),
@@ -164,11 +164,15 @@ let f = {
         [l.r.MAGICAL_AMETHYST]: l.r.MAGICAL_DEFAULT,
         [l.r.MAGICAL_FROST]: l.r.MAGICAL_DEFAULT,
         [l.r.MAGICAL_CITRINE]: l.r.MAGICAL_DEFAULT,
-    };
-function S(e) {
+    },
+    S = Object.entries(g).reduce((e, t) => {
+        let [n, i] = t;
+        return { ...e, [i]: [...(e[i] ?? []), Number(n)] };
+    }, {});
+function N(e) {
     return g[e];
 }
-Object.entries(g).reduce((e, t) => {
-    let [n, i] = t;
-    return { ...e, [i]: [...(e[i] ?? []), Number(n)] };
-}, {});
+function C(e) {
+    let t = g[e];
+    return null != t ? S[t] : [];
+}

@@ -1,4 +1,14 @@
-(n.d(t, { C5: () => g, Gh: () => f, cq: () => h, hC: () => S, nb: () => m, p8: () => I, v2: () => N, v7: () => E }),
+(n.d(t, {
+    C5: () => S,
+    Gh: () => f,
+    Ux: () => I,
+    cq: () => h,
+    hC: () => N,
+    nb: () => g,
+    p8: () => p,
+    v2: () => C,
+    v7: () => E,
+}),
     n(321073));
 var i,
     r = n(127639),
@@ -44,6 +54,15 @@ let f = {
     base: r.V.BASE,
 };
 function I(e) {
+    switch (e) {
+        case "base":
+        case "outfit_color":
+            return !1;
+        default:
+            return !0;
+    }
+}
+function p(e) {
     let t = new Map(e.map((e, t) => [e, t]));
     function n(n) {
         let { rarity: i } = n;
@@ -52,14 +71,14 @@ function I(e) {
     return (e, t) => n(e) - n(t);
 }
 (d.s9.FACE, d.s9.OUTFIT, d.s9.HEADWEAR, d.s9.SHOES, d.s9.WEARABLE, d.s9.AURA);
-let p = {
+let T = {
         [r.V.OUTFIT]: u.default.kcAWvo,
         [r.V.HAT]: u.default.RYvRmE,
         [r.V.WEARABLE]: u.default.lbzScK,
         [r.V.AURA]: u.default.mRPtBV,
         [r.V.SHOES]: u.default.KHsJlD,
     },
-    T = {
+    m = {
         [r.V.FACE]: { commonMessage: u.default.mmlFSp, topMessage: u.default.PNMVaH },
         [r.V.OUTFIT]: { commonMessage: u.default["7ycqkx"], topMessage: u.default["stpl+C"] },
         [r.V.HAT]: { commonMessage: u.default.TTkbUY, topMessage: u.default["2UDofx"] },
@@ -67,29 +86,29 @@ let p = {
         [r.V.WEARABLE]: { commonMessage: u.default.ZHs2bR, topMessage: u.default.yoZxcn },
         [r.V.AURA]: { commonMessage: u.default.m9gYwn, topMessage: u.default.mCmdPk },
     };
-function m(e, t) {
+function g(e, t) {
     return o.kb[e] === t;
 }
-function g(e) {
-    return m(e.trait, e.optionId);
-}
 function S(e) {
+    return g(e.trait, e.optionId);
+}
+function N(e) {
     let { trait: t, rarity: n } = e;
-    if (null == n) return g(e) ? _.intl.string(p[t]) : void 0;
+    if (null == n) return S(e) ? _.intl.string(T[t]) : void 0;
     if (n === s.K.DEFAULT) return _.intl.string(u.default["4aaADG"]);
     if (n === s.K.NITRO)
         return e.status === l.eP.NITRO_LOCKED
             ? _.intl.formatToPlainString(u.default["3Wq/bk"], { subscribeHook: (e) => e })
             : _.intl.string(u.default.sQ1bDT);
     if (t === r.V.BASE) return;
-    let { commonMessage: i, topMessage: o } = T[t];
+    let { commonMessage: i, topMessage: o } = m[t];
     return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.og[n] });
 }
-function N(e, t) {
+function C(e, t) {
     let n = [e.getName()];
     if (!t) {
         null != e.rarity && n.push(_.intl.string(c.bo[e.rarity]));
-        let t = S(e);
+        let t = N(e);
         null != t && n.push(t);
     }
     return n.join(", ");
