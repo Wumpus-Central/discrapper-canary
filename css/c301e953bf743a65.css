@@ -98,21 +98,24 @@
     background-color: rgba(0, 0, 0, .4);
     border-radius: 50%;
     color: var(--white);
-    display: flex;
     height: 16px;
     inset-inline-end: 4px;
     justify-content: center;
-    position: absolute;
     top: 4px;
     width: 16px
 }
 
-.newTextBadge__53965 {
-    border: 3px solid var(--background-base-low);
-    border-radius: 10px;
-    box-sizing: content-box;
+.newBadgeCutout__53965,
+.playIcon__53965 {
+    display: flex;
+    position: absolute
+}
+
+.newBadgeCutout__53965 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-round);
     inset-inline-start: -6px;
-    position: absolute;
+    padding: 3px;
     top: -3px
 }
 
@@ -208,4 +211,4 @@
     opacity: .5
 }
 
-/*# sourceMappingURL=c157ca76eee4bbbd.css.map*/
+/*# sourceMappingURL=c301e953bf743a65.css.map*/

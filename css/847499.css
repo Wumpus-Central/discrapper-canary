@@ -1,6 +1,12 @@
 .clipsEnabledIndicator__8c88a {
+    align-items: center;
     display: flex;
+    gap: var(--space-4);
     margin: 0 8px
+}
+
+.clipBadgeText__8c88a {
+    display: flex
 }
 
 .clipBadgeIcon__8c88a {
@@ -20,4 +26,4 @@
     }
 }
 
-/*# sourceMappingURL=847499.47a17b72ad1932ad.css.map*/
+/*# sourceMappingURL=847499.a9fe79e4ccad7d63.css.map*/

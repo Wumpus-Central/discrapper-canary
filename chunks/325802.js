@@ -1,38 +1,35 @@
-e.d(r, { A: () => d, b: () => u });
-var n = e(477900);
-e(582128);
-var a = e(866665),
-    i = e(812993),
-    o = e(278416),
-    s = e(62010),
-    c = e(105292);
-function l(t) {
-    let { promotion: r, children: e } = t;
-    return (0, n.jsx)(a.m, {
+r.d(e, { A: () => u, b: () => l });
+var n = r(477900);
+r(582128);
+var i = r(866665),
+    a = r(62010),
+    o = r(278416),
+    c = r(105292);
+function s(t) {
+    let { promotion: e, children: r } = t;
+    return (0, n.jsx)(i.m, {
         position: "top",
         asContainer: !0,
-        text: c.intl.formatToPlainString(c.t.cNtuKF, { offerName: r.displayName }),
-        children: e,
+        text: c.intl.formatToPlainString(c.t.cNtuKF, { offerName: e.displayName }),
+        children: r,
     });
 }
-function u(t) {
-    let { promotion: r, className: e } = t;
-    return (0, n.jsx)(l, {
-        promotion: r,
-        children: (0, n.jsx)(i.Lp, {
-            disableColor: !0,
-            className: e,
-            text: (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(o.TagIcon, { size: "xxs", color: "currentColor" }), c.intl.string(c.t["nb5PC/"])],
-            }),
+function l(t) {
+    let { promotion: e } = t;
+    return (0, n.jsx)(s, {
+        promotion: e,
+        children: (0, n.jsx)(a.E, {
+            type: { text: c.intl.string(c.t["nb5PC/"]) },
+            variant: "inverted",
+            icon: o.TagIcon,
         }),
     });
 }
-let d = (t) => {
-    let { promotion: r } = t;
-    return (0, n.jsx)(l, {
-        promotion: r,
-        children: (0, n.jsx)(s.E, {
+let u = (t) => {
+    let { promotion: e } = t;
+    return (0, n.jsx)(s, {
+        promotion: e,
+        children: (0, n.jsx)(a.E, {
             type: { text: c.intl.string(c.t["nb5PC/"]) },
             variant: "expressive",
             icon: o.TagIcon,

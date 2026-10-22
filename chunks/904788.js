@@ -1,10 +1,10 @@
-n.d(e, { A: () => x, p: () => m });
+n.d(e, { A: () => d, p: () => m });
 var r = n(477900);
 n(582128);
-var i = n(503698),
-    l = n.n(i),
-    s = n(812993),
-    a = n(953727),
+var i = n(62010),
+    s = n(953727),
+    a = n(503698),
+    l = n.n(a),
     o = n(771104),
     c = n(63517);
 function g(t) {
@@ -25,11 +25,10 @@ function g(t) {
         ],
     });
 }
-var u = n(105292),
-    d = n(975117);
+var u = n(975117);
 function m(t) {
     return (0, r.jsx)("svg", {
-        ...(0, a.A)({ ...t }),
+        ...(0, s.A)({ ...t }),
         width: "25",
         height: "48",
         viewBox: "0 0 25 48",
@@ -41,20 +40,14 @@ function m(t) {
         }),
     });
 }
-function x(t) {
-    let {
-        className: e,
-        forceUseColorForSparkles: n = !1,
-        shouldInheritTextColor: i = !1,
-        shouldInheritBackgroundColor: a = !1,
-    } = t;
+function d(t) {
+    let { className: e, forceUseColorForSparkles: n = !1 } = t;
     return (0, r.jsx)(g, {
         className: e,
         forceUseColor: n,
-        children: (0, r.jsx)(s.Lp, {
-            disableColor: !0,
-            className: l()(d.Tc, { [d.YO]: i, [d.ju]: a }),
-            text: u.intl.string(u.t.y2b7CA),
+        children: (0, r.jsx)("span", {
+            className: u.Z,
+            children: (0, r.jsx)(i.E, { type: "new", variant: "premium" }),
         }),
     });
 }

@@ -279,8 +279,7 @@
 }
 
 .badge_abfd90 {
-    background-color: var(--white);
-    color: var(--black);
+    display: flex;
     inset-inline-start: 16px;
     position: absolute;
     top: 16px;
@@ -415,4 +414,4 @@
     vertical-align: middle
 }
 
-/*# sourceMappingURL=84993.ece77deb63fe7b03.css.map*/
+/*# sourceMappingURL=84993.f1ec2f981381362b.css.map*/

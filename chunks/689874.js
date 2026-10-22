@@ -1,46 +1,47 @@
-t.d(e, { A: () => _ });
-var r = t(477900),
-    l = t(17928),
-    n = t(661531),
+t.d(s, { A: () => y });
+var n = t(477900),
+    r = t(17928),
+    l = t(661531),
     a = t(866665),
     i = t(812993),
     c = t(176781),
-    u = t(198052),
-    o = t(952818),
-    A = t(286134),
-    d = t(616356),
-    p = t(274372),
-    h = t(572164),
-    m = t(806931),
-    x = t(105292),
-    R = t(874566);
-let _ = function (s) {
-    let { channelId: e } = s;
-    return (0, l.bG)([d.A, u.A, p.Ay, o.Ay], () => {
-        if (null == e) return !1;
-        let s = d.A.getCurrentUserActiveStream(),
-            t = o.Ay.getVisibleGame()?.windowHandle;
+    u = t(62010),
+    d = t(198052),
+    p = t(952818),
+    o = t(616356),
+    A = t(274372),
+    x = t(572164),
+    h = t(806931),
+    m = t(105292),
+    v = t(874566);
+let y = function (e) {
+    let { channelId: s } = e;
+    return (0, r.bG)([o.A, d.A, A.Ay, p.Ay], () => {
+        if (null == s) return !1;
+        let e = o.A.getCurrentUserActiveStream(),
+            t = p.Ay.getVisibleGame()?.windowHandle;
         return (
-            (!!(0, h.T)() && (null != s || null != t)) ||
-            u.A.getParticipants(e).some((s) => s.type === m.lp.USER && p.Ay.isClipsEnabledForUser(s.user.id))
+            (!!(0, x.T)() && (null != e || null != t)) ||
+            d.A.getParticipants(s).some((e) => e.type === h.lp.USER && A.Ay.isClipsEnabledForUser(e.user.id))
         );
     })
-        ? (0, r.jsx)(a.m, {
-              text: x.intl.string(x.t.DJXW3G),
-              children: (0, r.jsxs)("div", {
-                  className: R.g0,
+        ? (0, n.jsx)(a.m, {
+              text: m.intl.string(m.t.DJXW3G),
+              children: (0, n.jsxs)("div", {
+                  className: v.g0,
                   children: [
-                      (0, r.jsx)(i.fk, {
+                      (0, n.jsx)(i.fk, {
                           icon: c.x,
-                          shape: i.EG.ROUND_LEFT,
-                          color: n.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: R.Z7,
+                          shape: i.EG.ROUND,
+                          color: l.A.unsafe_rawColors.PRIMARY_500.css,
+                          className: v.Z7,
                       }),
-                      (0, r.jsx)(A.Ay, {
-                          text: x.intl.string(x.t.pCMkDb),
-                          shape: i.EG.ROUND_RIGHT,
-                          color: n.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: R.lm,
+                      (0, n.jsx)("span", {
+                          className: v.lm,
+                          children: (0, n.jsx)(u.E, {
+                              type: { text: m.intl.string(m.t.pCMkDb) },
+                              variant: "secondary",
+                          }),
                       }),
                   ],
               }),

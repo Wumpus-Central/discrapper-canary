@@ -13,15 +13,16 @@ var i = s(503698),
 let R = o.oY;
 function p(t) {
     let { className: e, style: s, shape: a, look: i = "RED", size: u = R.LARGE, count: p } = t,
-        y = null != p && p > 1 ? d.intl.formatToPlainString(d.t.hOnBrr, { count: p }) : d.intl.string(d.t.dI3q4h);
-    return "GRAY" === i
-        ? (0, l.jsx)(o.Ay, { text: y, className: r()(e, c.O), disableColor: !0, shape: a, size: u, style: s })
-        : null == a && u === R.SMALL
-          ? (0, l.jsx)("span", {
-                className: r()(c.Z, e),
-                style: s,
-                children: (0, l.jsx)(A.E, { type: { text: y }, variant: "notification" }),
-            })
+        y = null != p && p > 1 ? d.intl.formatToPlainString(d.t.hOnBrr, { count: p }) : d.intl.string(d.t.dI3q4h),
+        h = "GRAY" === i;
+    return null == a
+        ? (0, l.jsx)("span", {
+              className: r()(c.Z, e),
+              style: s,
+              children: (0, l.jsx)(A.E, { type: { text: y }, variant: h ? "secondary" : "notification" }),
+          })
+        : h
+          ? (0, l.jsx)(o.Ay, { text: y, className: r()(e, c.O), disableColor: !0, shape: a, size: u, style: s })
           : (0, l.jsx)(o.Ay, {
                 text: y,
                 className: e,

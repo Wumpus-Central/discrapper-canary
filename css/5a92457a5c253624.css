@@ -247,22 +247,10 @@
 }
 
 .featuredBlockBadge__08415 {
+    display: flex;
     inset-inline-start: 24px;
     position: absolute;
     top: 32px
-}
-
-.featuredBlockTextBadge__08415 {
-    background-color: var(--white);
-    color: var(--black);
-    width: -moz-fit-content;
-    width: fit-content
-}
-
-.iconTextBadge__08415 {
-    align-items: center;
-    display: inline-flex;
-    gap: 4px
 }
 
 .featuredBlockButtonContainer__08415 {
@@ -465,10 +453,8 @@
 }
 
 .limitedTimeBadge__08415 {
-    background-color: var(--white);
-    color: var(--black);
-    width: -moz-fit-content;
-    width: fit-content
+    align-self: flex-start;
+    display: flex
 }
 
 .feed__08415 {
@@ -840,4 +826,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=892198ce741334a3.css.map*/
+/*# sourceMappingURL=5a92457a5c253624.css.map*/

@@ -7,21 +7,21 @@ var r = n(477900),
     i = n(696292),
     u = n(651162),
     c = n(17928),
-    d = n(812993),
+    d = n(62010),
     p = n(297264),
     m = n(331322),
     g = n(834730),
     h = n(821609),
-    C = n(793574),
-    f = n(688810),
+    f = n(793574),
+    C = n(688810),
     E = n(617986),
     v = n(604913),
     x = n(773669),
     y = n(318346),
     _ = n(287809),
     I = n(174459),
-    L = n(440938),
-    A = n(993408);
+    A = n(440938),
+    L = n(993408);
 let k = (0, n(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
     kind: "user",
@@ -80,8 +80,8 @@ let K = (e) => {
         Z = (0, B.yB)("HeroBlock"),
         J = (0, c.bG)([_.default], () => _.default.getCurrentUser()),
         Q = (0, c.bG)([x.default], () => x.default.locale),
-        ee = (0, L.uM)(),
-        { analyticsLocations: et } = (0, f.Ay)(C.A.COLLECTIBLES_SHOP_HERO),
+        ee = (0, A.uM)(),
+        { analyticsLocations: et } = (0, C.Ay)(f.A.COLLECTIBLES_SHOP_HERO),
         en = (0, S.ST)(),
         er = l.useMemo(
             () =>
@@ -119,8 +119,8 @@ let K = (e) => {
             heroBannerAnimated: eg,
             heroBannerRive: eh,
         } = (0, w.Kk)(eu),
-        eC = ec?.responsive ?? !1,
-        ef = ec?.backgroundStyle,
+        ef = ec?.responsive ?? !1,
+        eC = ec?.backgroundStyle,
         eE = null != eh && !ei,
         ev = K === M.G2.ORBS,
         ex = null != s && s.isOrbsExclusive,
@@ -150,10 +150,10 @@ let K = (e) => {
               }));
     }
     if (null == J || (!t && eu === U)) return null;
-    function eL() {
+    function eA() {
         return t || X ? null : (0, r.jsx)(h.$, { variant: "overlay-primary", onClick: eI, text: e_ });
     }
-    return (0, r.jsx)(f.f5, {
+    return (0, r.jsx)(C.f5, {
         value: et,
         children: (0, r.jsxs)("div", {
             ref: q,
@@ -161,15 +161,15 @@ let K = (e) => {
             children: [
                 eE ? (0, T.VA)({ isCustomCursorEnabled: Z, className: G.Xt, riveEventTargetRef: Y }) : null,
                 (0, r.jsx)("div", {
-                    className: a()(G.vK, { [G.cN]: eE, [G.no]: eC }),
-                    style: null != ef ? { background: ef } : void 0,
+                    className: a()(G.vK, { [G.cN]: eE, [G.no]: ef }),
+                    style: null != eC ? { background: eC } : void 0,
                     children:
                         null != em &&
                         (0, r.jsx)(R.A, {
                             bannerStatic: em,
                             bannerAnimated: eg,
                             bannerRive: eE ? eh : void 0,
-                            isResponsive: eC,
+                            isResponsive: ef,
                             eventTargetRef: Y,
                         }),
                 }),
@@ -177,20 +177,22 @@ let K = (e) => {
                     className: a()(G.xX, { [G.ub]: ei && K === M.G2.COLLECTION_INDEX }),
                     children: [
                         eE
-                            ? (0, r.jsx)("div", { className: G.fy, children: eL() })
+                            ? (0, r.jsx)("div", { className: G.fy, children: eA() })
                             : (0, r.jsxs)("div", {
-                                  className: a()(G.bC, { [G.no]: eC, [G.RD]: ei && K === M.G2.COLLECTION_INDEX }),
+                                  className: a()(G.bC, { [G.no]: ef, [G.RD]: ei && K === M.G2.COLLECTION_INDEX }),
                                   children: [
                                       t
                                           ? (0, r.jsx)("div", { className: G.Hw })
                                           : (0, r.jsxs)("div", {
                                                 className: G.Hw,
                                                 children: [
-                                                    (0, A.HF)(eu.unpublishedAt) &&
-                                                        (0, r.jsx)(d.Lp, {
-                                                            disableColor: !0,
-                                                            text: $.intl.string($.t["h/uBCR"]),
+                                                    (0, L.HF)(eu.unpublishedAt) &&
+                                                        (0, r.jsx)("div", {
                                                             className: G.v0,
+                                                            children: (0, r.jsx)(d.E, {
+                                                                type: { text: $.intl.string($.t["h/uBCR"]) },
+                                                                variant: "inverted",
+                                                            }),
                                                         }),
                                                     (0, r.jsxs)("div", {
                                                         className: G.Wq,
@@ -244,7 +246,7 @@ let K = (e) => {
                                                         }),
                                                 ],
                                             }),
-                                      !X && !t && (0, r.jsx)("div", { className: G.IS, children: eL() }),
+                                      !X && !t && (0, r.jsx)("div", { className: G.IS, children: eA() }),
                                   ],
                               }),
                         !z &&

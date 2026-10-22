@@ -160,9 +160,6 @@
 }
 
 .perkCardNewBadge_e6430c {
-    background: var(--custom-premium-colors-premium-gradient-tier-2);
-    border-radius: 8px;
-    color: #fff;
     inset-inline-start: -4px;
     position: absolute;
     top: -4px
@@ -1174,4 +1171,4 @@ html:not(.mana-type-consolidation) .wordmark__3f0b7 {
     color: #776bff
 }
 
-/*# sourceMappingURL=2fc11b98d92a0888.css.map*/
+/*# sourceMappingURL=e85faad142a2de1b.css.map*/

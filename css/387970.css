@@ -49,19 +49,8 @@
     color: var(--yellow-260)
 }
 
-.tag_fe5e5d {
-    background-color: var(--brand-500);
-    font-size: 12px;
-    line-height: 16px;
-    padding: 0 6px
+.badgeWrapper_fe5e5d {
+    display: flex
 }
 
-.tag_fe5e5d.inheritBackgroundColor_fe5e5d {
-    background: inherit
-}
-
-.tag_fe5e5d.inheritTextColor_fe5e5d {
-    color: inherit
-}
-
-/*# sourceMappingURL=387970.e14e52143f8ba52f.css.map*/
+/*# sourceMappingURL=387970.b83be6cfa0ce5407.css.map*/

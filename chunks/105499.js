@@ -18,8 +18,6 @@ e.exports = {
     Gh: "featuredBlockTextContainer__08415",
     BN: "featuredBlockBodyText__08415",
     pv: "featuredBlockBadge__08415",
-    qr: "featuredBlockTextBadge__08415",
-    Cz: "iconTextBadge__08415",
     b2: "featuredBlockButtonContainer__08415",
     os: "heroBlock__08415",
     xX: "heroBlockContent__08415",

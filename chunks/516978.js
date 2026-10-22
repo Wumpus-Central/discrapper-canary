@@ -9,7 +9,7 @@ o.exports = {
     JI: "backgroundOptionSelected__53965",
     kV: "backgroundOptionInner__53965",
     uZ: "playIcon__53965",
-    $5: "newTextBadge__53965",
+    sL: "newBadgeCutout__53965",
     SH: "backgroundOptionRing__53965",
     G5: "backgroundCustomInlineUpsellBackgroundDarkener__53965",
     fP: "backgroundOptionContent__53965",
