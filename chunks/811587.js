@@ -4,4 +4,5 @@ function n(t) {
 function u(t) {
     return "nothing_built" !== t && "live_auto_synced" !== t;
 }
-i.d(e, { U: () => u, l: () => n });
+e.d(i, { Uh: () => u, lE: () => n, n: () => d });
+let d = ["preparing", "approval", "setup", "build", "deploy", "discord", "activating"];

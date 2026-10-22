@@ -129,7 +129,7 @@ function G(e) {
             let l = null == e ? null : x.Ay.getProject(e);
             return (
                 null != l &&
-                ((n = A.A.getPublishStatus(l.id)), "user" === l.install_scope && null != n && (0, j.l)(n.publishState))
+                ((n = A.A.getPublishStatus(l.id)), "user" === l.install_scope && null != n && (0, j.lE)(n.publishState))
             );
         },
         [e],
