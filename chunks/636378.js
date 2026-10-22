@@ -30,7 +30,7 @@ function T(e) {
 
 ${N.intl.formatToPlainString(j.default["2ECgBx"], { channel: e })}`;
 }
-var I = l(373708),
+var I = l(962998),
     _ = l(951465),
     w = l(381941),
     G = l(906559);

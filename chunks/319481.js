@@ -33,13 +33,13 @@ var s = n(158390),
     S = n(463660),
     m = n(260498),
     O = n(371169),
-    y = n(373708),
-    b = n(416473),
+    b = n(962998),
+    y = n(416473),
     T = n(525530),
     w = n(743082),
     N = n(385081),
-    C = n(1371),
-    k = n(736553),
+    k = n(1371),
+    C = n(736553),
     R = n(642785);
 n(205816);
 let A = {
@@ -117,7 +117,7 @@ function x(e, t, n) {
     let s = t.pendingSends;
     for (let r of ((t.pendingSends = []), s)) (G(e, r), (0, d.Gu)(e, n));
 }
-let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...S.VY, ...y.qy, ...b.Rd, ...T.ow, ...w.WO, ...u.V5 },
+let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...S.VY, ...b.qy, ...y.Rd, ...T.ow, ...w.WO, ...u.V5 },
     j = {
         app_build_request(e, t) {
             let { projectId: n } = t;
@@ -144,7 +144,7 @@ let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...S.VY, ...y.qy, .
             let { projectId: n } = t;
             (0, O._b)(n).catch(() => {});
         },
-        ...y.rS,
+        ...b.rS,
     },
     W = new Set([
         "hello",
@@ -281,9 +281,9 @@ async function H(e, t) {
                     }
                 })(e, t, n),
             onClose: () => {
-                ((0, y.Mz)(e, "Connection closed before the publish result arrived"),
-                (0, b.Fc)(e),
-                (0, y.BC)(e, "Connection closed before the draft arrived"),
+                ((0, b.Mz)(e, "Connection closed before the publish result arrived"),
+                (0, y.Fc)(e),
+                (0, b.BC)(e, "Connection closed before the draft arrived"),
                 (0, E.RP)(e),
                 t.disposed)
                     ? I(e, "closed")
@@ -304,9 +304,9 @@ async function H(e, t) {
             x(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             (t.pendingTemplatePrep = null),
-            (0, y.Mz)(e, "Connection failed before the publish result arrived"),
-            (0, b.Fc)(e),
-            (0, y.BC)(e, "Connection failed before the draft arrived"),
+            (0, b.Mz)(e, "Connection failed before the publish result arrived"),
+            (0, y.Fc)(e),
+            (0, b.BC)(e, "Connection failed before the draft arrived"),
             (0, N.Hy)(e, {
                 location: "connection",
                 code: N.xf.WS_OPEN_FAILED,
@@ -319,7 +319,7 @@ function q(e) {
         n = P.get(e);
     null == n &&
         ((n = {
-            ws: new k.u(),
+            ws: new C.u(),
             backoff: new s.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -365,14 +365,14 @@ function Y(e) {
         null != t &&
         ((t.disposed = !0),
         t.backoff.cancel(),
-        (0, y.Mz)(e, "Connection closed before the publish result arrived"),
-        (0, b.Fc)(e),
-        (0, y.BC)(e, "Connection closed before the draft arrived"),
+        (0, b.Mz)(e, "Connection closed before the publish result arrived"),
+        (0, y.Fc)(e),
+        (0, b.BC)(e, "Connection closed before the draft arrived"),
         t.ws.close(),
         P.delete(e),
         (0, v.ng)(e),
         eo(e),
-        C.A.releasePreviewControl(e),
+        k.A.releasePreviewControl(e),
         (0, E.RP)(e),
         I(e, "closed"),
         !0)

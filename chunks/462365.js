@@ -1,49 +1,55 @@
-e.d(r, { default: () => x });
-var i = e(477900);
-e(582128);
-var n = e(189213),
-    s = e(276983),
-    a = e(31300),
-    l = e(834730),
-    c = e(733767);
-function o(t) {
-    let { permission: r } = t;
-    if ("screen_capture" === r) return (0, i.jsx)(a.k, { size: "md", color: "currentColor", "aria-hidden": !0 });
+t.d(e, { default: () => h });
+var n = t(477900);
+t(582128);
+var i = t(189213),
+    s = t(276983),
+    a = t(31300),
+    c = t(983851),
+    o = t(834730),
+    l = t(733767);
+function d(r) {
+    let { permission: e } = r;
+    switch (e) {
+        case "screen_capture":
+            return (0, n.jsx)(a.k, { size: "md", color: "currentColor", "aria-hidden": !0 });
+        case "connect_user_to_voice":
+            return (0, n.jsx)(c.H, { size: "md", color: "currentColor", "aria-hidden": !0 });
+    }
 }
-function d(t) {
-    let { permissions: r } = t;
-    return (0, i.jsx)("ul", {
-        className: c.p,
-        children: r.map((t) =>
-            (0, i.jsxs)(
+function u(r) {
+    let { permissions: e } = r;
+    return (0, n.jsx)("ul", {
+        className: l.p,
+        children: e.map((r) =>
+            (0, n.jsxs)(
                 "li",
                 {
-                    className: c.n,
+                    className: l.n,
                     children: [
-                        (0, i.jsx)(o, { permission: t }),
-                        (0, i.jsx)(l.E, { variant: "text-md/medium", color: "text-strong", children: (0, s.Us)(t) }),
+                        (0, n.jsx)(d, { permission: r }),
+                        (0, n.jsx)(o.E, { variant: "text-md/medium", color: "text-strong", children: (0, s.Us)(r) }),
                     ],
                 },
-                t,
+                r,
             ),
         ),
     });
 }
-var u = e(248675),
-    p = e(105292);
-function x(t) {
-    let { appName: r, permissions: e, onDecide: a, ...l } = t;
-    function c(t) {
-        (a(t), l.onClose());
+var p = t(248675),
+    x = t(105292);
+function h(r) {
+    let { appName: e, permissions: t, onDecide: a, ...c } = r;
+    function o(r) {
+        (a(r), c.onClose());
     }
-    return (0, i.jsx)(n.a, {
-        ...l,
+    return (0, n.jsx)(i.a, {
+        ...c,
         role: "alertdialog",
-        title: (0, s.Et)(r),
+        title: (0, s.Et)(e),
         actions: [
-            { text: p.intl.string(u.default.rDyl56), variant: "secondary", onClick: () => c(!1) },
-            { text: p.intl.string(u.default.xbsXd9), variant: "primary", onClick: () => c(!0) },
+            { text: x.intl.string(p.default.rDyl56), variant: "secondary", onClick: () => o(!1) },
+            { text: x.intl.string(p.default.xbsXd9), variant: "primary", onClick: () => o(!0) },
         ],
-        children: (0, i.jsx)(d, { permissions: e }),
+        children: (0, n.jsx)(u, { permissions: t }),
     });
 }

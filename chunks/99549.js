@@ -54,6 +54,11 @@ let d = {
         result: { status: "permission_denied" },
         answered: "denied; an agent may not capture the screen",
     }),
+    [l.e$_.SELECT_VOICE_CHANNEL]: (e) => ({
+        result: null,
+        answered: "not joined; an agent may not move the user in or out of voice",
+        subject: o(e.args.channel_id),
+    }),
     [l.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
     [l.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
     [l.e$_.OPEN_GAME_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
