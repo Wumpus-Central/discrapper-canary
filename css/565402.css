@@ -359,6 +359,11 @@
 }
 
 .locked_f8179a {
+    cursor: default
+}
+
+.locked_f8179a,
+.nitroLocked_f8179a {
     opacity: .4
 }
 
@@ -373,6 +378,10 @@
 }
 
 .locked_f8179a .image_f8179a {
+    filter: saturate(.3)
+}
+
+.nitroLocked_f8179a .image_f8179a {
     filter: grayscale(1)
 }
 
@@ -1558,4 +1567,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=565402.89dcb1c3d27ec516.css.map*/
+/*# sourceMappingURL=565402.76ef907c3f08a6be.css.map*/
