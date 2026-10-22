@@ -5476,7 +5476,8 @@
     "defaultConfig": {
       "skipSilentDelayEstimatorFfts": false,
       "processPollingPerf": false,
-      "keepRendererLogFileOpen": false
+      "keepRendererLogFileOpen": false,
+      "questRingVisibleSteps": false
     },
     "variations": {
       "0": {
@@ -5486,7 +5487,8 @@
       "1": {
         "skipSilentDelayEstimatorFfts": true,
         "processPollingPerf": true,
-        "keepRendererLogFileOpen": true
+        "keepRendererLogFileOpen": true,
+        "questRingVisibleSteps": true
       }
     }
   },
