@@ -1,5 +1,6 @@
 n.d(t, {
-    DZ: () => F,
+    DX: () => F,
+    DZ: () => B,
     Dq: () => R,
     LW: () => v,
     OQ: () => U,
@@ -401,6 +402,16 @@ function k(e) {
         sourceQuestContent: r,
     });
 }
-function F(e, t) {
+function F(e) {
+    let { questId: t, questContent: n, sourceQuestContent: i, reason: r, impressionId: a } = e,
+        s = (0, p.fF)(n);
+    O({
+        questId: t,
+        event: m.HAw.QUEST_CONTENT_RENDERING_FAILURE,
+        properties: { content_id: s.content_id, content_name: s.content_name, reason: r, impression_id: a },
+        sourceQuestContent: i,
+    });
+}
+function B(e, t) {
     o.Ay.trackWithMetadata(m.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
 }
