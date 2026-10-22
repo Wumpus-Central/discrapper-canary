@@ -1,4 +1,4 @@
-n.d(t, { Np: () => l, Rq: () => c, UG: () => A, gr: () => o, oI: () => _, s9: () => u });
+n.d(t, { Np: () => l, Rq: () => c, UG: () => h, cy: () => u, gr: () => o, oI: () => E, s9: () => _ });
 var i,
     r,
     a,
@@ -50,7 +50,8 @@ let d = new Set([
 function c(e) {
     return d.has(e);
 }
-var u =
+let u = new Set(["sidekick_leave"]);
+var _ =
         (((a = {}).IDLE = "idle"),
         (a.INTRODUCTION = "introduction"),
         (a.FACE = "face"),
@@ -64,7 +65,7 @@ var u =
         (a.SUMMARY = "summary"),
         (a.PROFILE_WIDGET = "profile_widget"),
         a),
-    _ =
+    E =
         (((s = {}).VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
@@ -80,7 +81,7 @@ var u =
         (s.SIDEKICK = "sidekick"),
         (s.SUMMARY = "summary"),
         s);
-let E = {
+let A = {
     home: { characterStage: "idle" },
     introduction: { characterStage: "introduction" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
@@ -114,6 +115,6 @@ let E = {
     summary: { characterStage: "summary", statsScreen: "summary" },
     profile_widget: { characterStage: "profile_widget" },
 };
-function A(e) {
-    return E[e];
+function h(e) {
+    return A[e];
 }

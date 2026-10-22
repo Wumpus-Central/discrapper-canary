@@ -16837,36 +16837,39 @@ let xf = {
     "--custom-checkpoint-background-gradient-start": mv.bI,
 };
 function xb(e) {
-    let t,
-        a,
-        { didPlayerShareDataWithDiscord: n, onClose: l } = e;
+    var t;
+    let a,
+        n,
+        l,
+        i,
+        { didPlayerShareDataWithDiscord: s, onClose: r } = e;
     ((0, d.bG)([uV], () => uV.fetchState),
-        (t = (0, d.bG)([uV], () => uV.stats?.games?.games)),
-        (a = (0, c.useMemo)(
+        (a = (0, d.bG)([uV], () => uV.stats?.games?.games)),
+        (n = (0, c.useMemo)(
             () =>
-                t?.map((e) => {
+                a?.map((e) => {
                     let { game: t } = e;
                     return t.id;
                 }) ?? [],
-            [t],
+            [a],
         )),
         (0, c.useEffect)(() => {
             let { fetchState: e } = uV;
             (e === uO.INIT || e === uO.ERROR) && uz();
         }, []),
         (0, c.useEffect)(() => {
-            (0, u0.E)(a);
-        }, [a]),
+            (0, u0.E)(n);
+        }, [n]),
         c.useEffect(() => {
             tw.h.dispatch({ type: "CHECKPOINT_RESET_EDITED_CHARACTER" });
         }, []));
-    let i = n ? uq.Np.SHARED_DATA : uq.Np.NO_SHARED_DATA,
-        [s, r] = c.useState(uq.gr.HOME),
-        { characterStage: u, statsScreen: m } = (0, uq.UG)(s),
-        h = s === uq.gr.HOME || null != m,
-        x = (0, d.bG)([uV], () => uV.isMuted),
-        p = (0, d.bG)([uV], () => uV.character),
-        g = c.useMemo(
+    let u = s ? uq.Np.SHARED_DATA : uq.Np.NO_SHARED_DATA,
+        [m, h] = c.useState(uq.gr.HOME),
+        { characterStage: x, statsScreen: p } = (0, uq.UG)(m),
+        g = m === uq.gr.HOME || null != p,
+        v = (0, d.bG)([uV], () => uV.isMuted),
+        j = (0, d.bG)([uV], () => uV.character),
+        f = c.useMemo(
             () =>
                 (function (e, t) {
                     if (e !== uq.gr.SUMMARY) return xf;
@@ -16880,64 +16883,77 @@ function xb(e) {
                             "--custom-checkpoint-background-gradient-start": e,
                         };
                     }
-                })(s, p),
-            [s, p],
+                })(m, j),
+            [m, j],
         ),
-        v = x ? ub._ : uy.H,
-        j = c.useCallback(
+        b = v ? ub._ : uy.H,
+        y =
+            ((t =
+                "https://cdn.discordapp.com/assets/content/ca0ec81d050b27537618a0563ff926476bc53f331bae7af46595969995dea5fb.mp3"),
+            (l = (0, d.bG)([uV], () => uV.isMuted)),
+            (i = c.useRef(null)),
+            c.useEffect(() => {
+                let e = new Audio(t);
+                return ((i.current = e), () => e.pause());
+            }, [t]),
+            c.useCallback(() => {
+                let e = i.current;
+                l || null == e || ((e.currentTime = 0), e.play());
+            }, [l])),
+        E = c.useCallback(
             (e) => {
                 var t;
                 let a,
                     n,
-                    o =
+                    l =
                         ((t = void 0),
                         -1 ===
-                        (n = (a = (i === uq.Np.SHARED_DATA ? uQ : uJ).filter((e) => {
+                        (n = (a = (u === uq.Np.SHARED_DATA ? uQ : uJ).filter((e) => {
                             let a = uX[e];
                             if (null != a) return null != t && a(t);
                             let n = uZ[e];
                             return null == n || void 0 === t || n(t);
-                        })).indexOf(s))
+                        })).indexOf(m))
                             ? uq.gr.INTRODUCTION
                             : (a[n + e] ?? null));
-                if (null == o) {
-                    1 === e && l();
+                if (null == l) {
+                    1 === e && r();
                     return;
                 }
-                r(o);
+                (uq.cy.has(m) || y(), h(l));
             },
-            [s, i, l],
+            [m, u, r, y],
         ),
-        f = c.useCallback(() => j(-1), [j]),
-        b = c.useCallback(() => j(1), [j]);
+        S = c.useCallback(() => E(-1), [E]),
+        C = c.useCallback(() => E(1), [E]);
     return (
         c.useEffect(() => {
             function e(e) {
                 (0, uf.vq)(e.target, HTMLTextAreaElement) ||
                     (0, uf.vq)(e.target, HTMLInputElement) ||
-                    ("ArrowRight" === e.key ? b() : "ArrowLeft" === e.key && f());
+                    ("ArrowRight" === e.key ? C() : "ArrowLeft" === e.key && S());
             }
             return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
-        }, [f, b]),
+        }, [S, C]),
         (0, o.jsx)(eY.N, {
             theme: u3.NJ.DARK,
             children: (e) =>
                 (0, o.jsxs)("div", {
                     className: J()(e, xj.kL),
-                    style: g,
+                    style: f,
                     "aria-label": nA.intl.string(mw.default["CdU/PF"]),
                     children: [
-                        (0, o.jsx)(u4, { isVisible: h }),
+                        (0, o.jsx)(u4, { isVisible: g }),
                         (0, o.jsx)("div", {
-                            className: J()(xj.qd, { [xj.R]: h }),
-                            children: (0, o.jsx)(xv, { stage: u }),
+                            className: J()(xj.qd, { [xj.R]: g }),
+                            children: (0, o.jsx)(xv, { stage: x }),
                         }),
-                        (0, uq.Rq)(s) &&
-                            (0, o.jsx)("div", { className: xj.qd, children: (0, o.jsx)(mz, { route: s }) }),
-                        h &&
+                        (0, uq.Rq)(m) &&
+                            (0, o.jsx)("div", { className: xj.qd, children: (0, o.jsx)(mz, { route: m }) }),
+                        g &&
                             (0, o.jsx)("div", {
                                 className: xj.qd,
-                                children: (0, o.jsx)(xg, { route: s, onNextStep: b, onPreviousStep: f }),
+                                children: (0, o.jsx)(xg, { route: m, onNextStep: C, onPreviousStep: S }),
                             }),
                         (0, o.jsx)(u2, {
                             src: "https://cdn.discordapp.com/assets/content/d981393fc0ea81218a7fb08e9df4c3330f39054472faab4aa46cbcbe450bac04.png",
@@ -16948,19 +16964,19 @@ function xb(e) {
                             children: [
                                 (0, o.jsx)(u7, {
                                     size: "sm",
-                                    "aria-label": nA.intl.string(x ? nA.t.YqAjXy : nA.t.w4m945),
+                                    "aria-label": nA.intl.string(v ? nA.t.YqAjXy : nA.t.w4m945),
                                     onClick: uW,
-                                    children: (0, o.jsx)(v, { size: "xs", color: "currentColor" }),
+                                    children: (0, o.jsx)(b, { size: "xs", color: "currentColor" }),
                                 }),
                                 (0, o.jsx)(u7, {
                                     size: "sm",
                                     "aria-label": nA.intl.string(nA.t.cpT0Cq),
-                                    onClick: l,
+                                    onClick: r,
                                     children: (0, o.jsx)(en.P, { size: "xs", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        (0, o.jsx)(mJ, { activeRoute: s, onBack: f, onNext: b }),
+                        (0, o.jsx)(mJ, { activeRoute: m, onBack: S, onNext: C }),
                     ],
                 }),
         })
