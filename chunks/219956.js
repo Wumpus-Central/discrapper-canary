@@ -8,7 +8,7 @@ var l = n(17928),
     d = n(189714),
     o = n(722701);
 function c(e) {
-    return "changes" === e || "unpublished" === e;
+    return "nothing_built" === e || "not_live" === e || "live_outdated" === e;
 }
 function m(e, t) {
     return "in_progress" !== e && "deleting" !== e && c(t);
@@ -22,7 +22,7 @@ function h(e) {
         deleting: u.Ay.isProjectDeleting(e),
         thinking: i.A.isThinking(e),
         unread: (0, s.tz)(e) && !(0, d.j)(a.A.settings, e),
-        publishState: o.A.getPublishStatus(e)?.state ?? null,
+        publishState: o.A.getPublishStatus(e)?.publishState ?? null,
     });
 }
 function g(e) {

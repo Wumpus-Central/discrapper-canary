@@ -214,8 +214,7 @@ function Q(e, t) {
         l.h.dispatch({
             type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
             projectId: e,
-            published: !1,
-            hasUnpublishedChanges: !0,
+            publishState: "not_live",
             surface: t.has_activity ? "activity" : null,
             previewAppChannels: t.preview_app_channels,
         }));

@@ -83,7 +83,14 @@ function d(e, t) {
         application_id: o?.application_id ?? null,
         ...("user" === s ? { guild_id: null, channel_id: null } : c(e, !1)),
         entry_point: n,
-        publish_state: l,
+        publish_state:
+            null == l
+                ? null
+                : "nothing_built" === l || "not_live" === l
+                  ? "unpublished"
+                  : "live_outdated" === l
+                    ? "changes"
+                    : "up_to_date",
         surface: u,
         install_scope: s,
         action: a,

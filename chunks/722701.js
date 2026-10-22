@@ -41,52 +41,50 @@ let E = [],
             var t;
             let {
                     projectId: n,
-                    published: i,
-                    hasUnpublishedChanges: _,
-                    surface: u,
-                    previewAppChannels: s,
-                    previewDevicePermissions: o = E,
-                    publishedRevision: p = null,
-                    publishedAt: d = null,
-                    publishing: R = !1,
-                    patchNotesSent: h,
-                    newUiUnpublished: A = !1,
+                    publishState: i,
+                    surface: _,
+                    previewAppChannels: u,
+                    previewDevicePermissions: s = E,
+                    publishedRevision: o = null,
+                    publishedAt: p = null,
+                    publishing: d = !1,
+                    patchNotesSent: R,
+                    newUiUnpublished: h = !1,
                 } = e,
-                P = !R && a.delete(n),
-                f = i ? (_ ? "changes" : "up_to_date") : "unpublished",
-                C = r.get(n),
-                U =
-                    null == h ||
-                    ((t = C?.patchNotesSent ?? c),
-                    t.length === h.length &&
+                A = !d && a.delete(n),
+                P = r.get(n),
+                f =
+                    null == R ||
+                    ((t = P?.patchNotesSent ?? c),
+                    t.length === R.length &&
                         t.every(
-                            (e, t) => e.publishedRevision === h[t].publishedRevision && e.messageId === h[t].messageId,
+                            (e, t) => e.publishedRevision === R[t].publishedRevision && e.messageId === R[t].messageId,
                         ))
-                        ? (C?.patchNotesSent ?? c)
-                        : h;
+                        ? (P?.patchNotesSent ?? c)
+                        : R;
             if (
-                !P &&
-                C?.state === f &&
-                C.surface === u &&
-                (0, l.v)(C.previewAppChannels, s) &&
-                (0, l.v)(C.previewDevicePermissions ?? E, o) &&
-                C.publishedRevision === p &&
-                C.publishedAt === d &&
-                C.publishing === R &&
-                C.patchNotesSent === U &&
-                C.newUiUnpublished === A
+                !A &&
+                P?.publishState === i &&
+                P.surface === _ &&
+                (0, l.v)(P.previewAppChannels, u) &&
+                (0, l.v)(P.previewDevicePermissions ?? E, s) &&
+                P.publishedRevision === o &&
+                P.publishedAt === p &&
+                P.publishing === d &&
+                P.patchNotesSent === f &&
+                P.newUiUnpublished === h
             )
                 return !1;
             r.set(n, {
-                state: f,
-                surface: u,
-                previewAppChannels: s,
-                previewDevicePermissions: o,
-                publishedRevision: p,
-                publishedAt: d,
-                publishing: R,
-                patchNotesSent: U,
-                newUiUnpublished: A,
+                publishState: i,
+                surface: _,
+                previewAppChannels: u,
+                previewDevicePermissions: s,
+                publishedRevision: o,
+                publishedAt: p,
+                publishing: d,
+                patchNotesSent: f,
+                newUiUnpublished: h,
             });
         },
         CONJURE_PROJECT_PUBLISH_START: function (e) {

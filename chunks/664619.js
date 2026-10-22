@@ -40,8 +40,7 @@ async function A(e) {
         l.h.dispatch({
             type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
             projectId: e,
-            published: !1,
-            hasUnpublishedChanges: !1,
+            publishState: "not_live",
             surface: n.surface,
             previewAppChannels: n.previewAppChannels,
             previewDevicePermissions: n.previewDevicePermissions,
