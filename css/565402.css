@@ -350,6 +350,14 @@
     border-image-source: url(/assets/5ae87f837776a575.svg)
 }
 
+.none_f8179a {
+    border-image-source: url(/assets/bdb489a0792be1c9.svg)
+}
+
+.none_f8179a.selected_f8179a {
+    border-image-source: url(/assets/915d784282ccae64.svg)
+}
+
 .locked_f8179a {
     opacity: .4
 }
@@ -1550,4 +1558,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=565402.bf48a5259972c475.css.map*/
+/*# sourceMappingURL=565402.89dcb1c3d27ec516.css.map*/

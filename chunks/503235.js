@@ -1,4 +1,14 @@
-(n.d(t, { Gh: () => f, cq: () => h, fZ: () => I, hC: () => S, nb: () => g, p8: () => p, v2: () => N, v7: () => E }),
+(n.d(t, {
+    C5: () => S,
+    Gh: () => f,
+    cq: () => h,
+    fZ: () => I,
+    hC: () => N,
+    nb: () => g,
+    p8: () => p,
+    v2: () => C,
+    v7: () => E,
+}),
     n(321073));
 var i,
     r = n(127639),
@@ -87,8 +97,11 @@ function g(e, t) {
     return l.kb[e] === t;
 }
 function S(e) {
+    return g(e.trait, e.optionId);
+}
+function N(e) {
     let { trait: t, rarity: n } = e;
-    if (null == n) return g(e.trait, e.optionId) ? _.intl.string(T[t]) : void 0;
+    if (null == n) return S(e) ? _.intl.string(T[t]) : void 0;
     if (n === s.K.DEFAULT) return _.intl.string(u.default["4aaADG"]);
     if (n === s.K.NITRO)
         return e.locked
@@ -98,11 +111,11 @@ function S(e) {
     let { commonMessage: i, topMessage: l } = m[t];
     return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(l, { percent: 100 - a.og[n] });
 }
-function N(e, t) {
+function C(e, t) {
     let n = [e.getName()];
     if (!t) {
         null != e.rarity && n.push(_.intl.string(c.bo[e.rarity]));
-        let t = S(e);
+        let t = N(e);
         null != t && n.push(t);
     }
     return n.join(", ");
