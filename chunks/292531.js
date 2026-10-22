@@ -84,11 +84,25 @@ let h = {
             );
         }
     },
+    async fetchInvitableGameOrganizations(e) {
+        let { body: t } = await _.Bo.get({
+            url: A.Rsh.GAME_ORGANIZATIONS_INVITABLE,
+            query: { guild_ids: e },
+            rejectWithError: !0,
+        });
+        s.h.dispatch({ type: "INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS", guildIds: e, gameOrganizations: t });
+    },
 };
 ((0, a.UT)(c, {
     getQueryId: A.fic.GAME_ORGANIZATION_INVITE,
     staleAfter: 5 * u.A.Seconds.MINUTE,
     failureStaleAfter: 5 * u.A.Seconds.MINUTE,
+    retryConfig: {
+        retryableErrors: function (e) {
+            let t = e.status;
+            return null != t && (429 === t || (t >= 500 && 503 !== t));
+        },
+    },
     get: (e) => {
         let t = c.getInvite(e);
         return t?.state === l.RESOLVED ? t : null;
