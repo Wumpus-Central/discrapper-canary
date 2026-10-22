@@ -1499,7 +1499,7 @@ var j =
         (_[(_.OS_SIGNAL = 7)] = "OS_SIGNAL"),
         (_[(_.ML_AGE_INFERENCE = 8)] = "ML_AGE_INFERENCE"),
         (_[(_.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
-        (_[(_.NEW_METHOD = 10)] = "NEW_METHOD"),
+        (_[(_.AGE_KEY = 10)] = "AGE_KEY"),
         (_[(_.MANUAL_REVIEW = 11)] = "MANUAL_REVIEW"),
         (_[(_.OS_SIGNAL_CONFIRMED = 12)] = "OS_SIGNAL_CONFIRMED"),
         (_[(_.TNS_DETERMINATION = 13)] = "TNS_DETERMINATION"),

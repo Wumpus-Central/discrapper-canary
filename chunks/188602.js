@@ -21,8 +21,8 @@ var s = a(477900),
     w = a(975571),
     j = a(379257),
     S = a(306537),
-    M = a(462714),
-    C = a(36149),
+    C = a(462714),
+    M = a(36149),
     R = a(17928),
     I = a(945810),
     N = a(207913),
@@ -36,8 +36,8 @@ let T = (0, I.mj)({
 var b = a(73153),
     y = a(482876),
     B = a(787301),
-    O = a(750481);
-let k = function (e) {
+    k = a(750481);
+let L = function (e) {
     let { icon: t, size: a = 24 } = e;
     return (0, s.jsx)("svg", {
         width: a,
@@ -48,10 +48,10 @@ let k = function (e) {
         children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var L = a(40449),
+var O = a(40449),
     Z = a(652215),
-    D = a(841365),
-    G = a(105292),
+    G = a(841365),
+    D = a(105292),
     U = a(126106);
 let H = function (e) {
     let t,
@@ -63,8 +63,8 @@ let H = function (e) {
             error: J,
             methods: X,
             footerMessage: q,
-            outageBannerMessage: $,
-            refetch: Y,
+            outageBannerMessage: Y,
+            refetch: $,
         } = (function () {
             let [e, t] = l.useState(() => B.A.methodsV2 ?? []),
                 [a, s] = l.useState(() => B.A.methodsV2FooterMessage),
@@ -117,12 +117,12 @@ let H = function (e) {
                 }
             );
         })(),
-        K = (0, M.Z)(X),
+        K = (0, C.Z)(X),
         Q = K.length > 0,
         ee = l.useCallback(() => {
             (P?.(), F());
         }, [P, F]),
-        { initiateAgeVerificationV2: et } = (0, O.N)({ onComplete: ee, entryPoint: H, onMethodUnavailable: Y }),
+        { initiateAgeVerificationV2: et } = (0, k.N)({ onComplete: ee, entryPoint: H, onMethodUnavailable: $ }),
         ea = l.useRef(!1),
         [es, el] = l.useState(null),
         er = null != es,
@@ -158,8 +158,8 @@ let H = function (e) {
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
             aspectRatio: "21/9",
         },
-        title: (0, C.ST)(H, !0),
-        subtitle: (0, C.mK)(
+        title: (0, M.ST)(H, !0),
+        subtitle: (0, M.mK)(
             H,
             () => {
                 (j.A.openUrl(w.A.getArticleURL(Z.MVz.TIGGER_PAWTECT_LEARN_MORE)),
@@ -168,7 +168,7 @@ let H = function (e) {
             void 0,
             en
                 ? () => {
-                      (j.A.openUrl(L.zS), (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.TRUSTED_PROVIDERS));
+                      (j.A.openUrl(O.zS), (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.TRUSTED_PROVIDERS));
                   }
                 : void 0,
             !0,
@@ -178,18 +178,18 @@ let H = function (e) {
             z && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(x.y, {}) }),
             !z &&
                 Q &&
-                null != $ &&
+                null != Y &&
                 (0, s.jsx)("div", {
                     className: U.Ih,
-                    children: (0, s.jsx)(E.w, { type: "warning", message: $, role: "status" }),
+                    children: (0, s.jsx)(E.w, { type: "warning", message: Y, role: "status" }),
                 }),
             !z &&
                 !Q &&
                 (0, s.jsx)(E.w, {
                     type: "critical",
-                    message: G.intl.string(J ? D.default.Bkmk4Y : D.default.cR6336),
+                    message: D.intl.string(J ? G.default.Bkmk4Y : G.default.cR6336),
                     role: "alert",
-                    action: { text: G.intl.string(D.default.hDvmYP), onClick: Y },
+                    action: { text: D.intl.string(G.default.hDvmYP), onClick: $ },
                 }),
             Q &&
                 (0, s.jsx)(g.B, {
@@ -207,7 +207,7 @@ let H = function (e) {
                                         return h.A;
                                     case c.mG.CREDIT_CARD:
                                         return u.B;
-                                    case c.mG.NEW_METHOD:
+                                    case c.mG.AGE_KEY:
                                         return m.R;
                                     default:
                                         return;
@@ -217,7 +217,7 @@ let H = function (e) {
                             null != a
                                 ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, s.jsx)(k, { icon: e.icon })
+                                  ? (0, s.jsx)(L, { icon: e.icon })
                                   : (0, s.jsx)(f._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
                             r = es === l;
