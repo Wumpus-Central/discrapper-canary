@@ -6,4 +6,5 @@ var i,
         (i[(i.QUEST_HOME_HERO = 2)] = "QUEST_HOME_HERO"),
         (i[(i.BOUNTY = 3)] = "BOUNTY"),
         (i[(i.NO_FILL = 4)] = "NO_FILL"),
+        (i[(i.PLAYABLE = 5)] = "PLAYABLE"),
         i);

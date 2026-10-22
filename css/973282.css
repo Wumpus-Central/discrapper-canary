@@ -249,6 +249,14 @@
     transform: translate(var(--space-4), var(--space-4))
 }
 
+.logo__0749a {
+    height: 46px;
+    inset-inline-start: calc(var(--space-32) - 3px);
+    position: absolute;
+    top: calc(var(--space-32) - 3px);
+    width: 46px
+}
+
 .text_eca5eb {
     color: var(--custom-checkpoint-primary)
 }
@@ -1232,14 +1240,6 @@
     visibility: hidden
 }
 
-.logo__6b0e6 {
-    height: 46px;
-    inset-inline-start: calc(var(--space-32) - 3px);
-    position: absolute;
-    top: calc(var(--space-32) - 3px);
-    width: 46px
-}
-
 .headerActions__6b0e6 {
     display: flex;
     gap: var(--space-10);
@@ -1567,4 +1567,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=565402.76ef907c3f08a6be.css.map*/
+/*# sourceMappingURL=973282.b2f7a5903a957cfd.css.map*/
