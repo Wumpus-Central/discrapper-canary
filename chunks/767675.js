@@ -17,10 +17,10 @@ var s = r(435558),
     F = r(97469),
     g = r(363195),
     A = r(734057),
-    b = r(696451),
-    D = r(763827),
-    v = r(412780),
-    E = r(994500),
+    D = r(696451),
+    b = r(763827),
+    E = r(412780),
+    v = r(994500),
     x = r(287809),
     C = r(427262),
     R = r(289873),
@@ -28,8 +28,8 @@ var s = r(435558),
     j = r(503698),
     P = r.n(j),
     N = r(23339),
-    I = r(691885),
-    k = r(761508),
+    k = r(691885),
+    I = r(761508),
     B = r(684339),
     w = r(51092),
     T = r(360906);
@@ -39,27 +39,27 @@ var M = r(796873),
     L = r(229659),
     U = r(661531),
     q = r(707554),
-    W = r(404778),
-    $ = r(603349),
-    O = r(378885);
+    O = r(404778),
+    W = r(603349),
+    $ = r(378885);
 let H = ["firCount", "nackCount"];
 class V extends a.PureComponent {
     renderValueIcon() {
         let { label: e } = this.props;
-        return H.includes(e) ? (0, n.jsx)($.A, { color: U.A.unsafe_rawColors.YELLOW_300.css, className: O.nm }) : null;
+        return H.includes(e) ? (0, n.jsx)(W.A, { color: U.A.unsafe_rawColors.YELLOW_300.css, className: $.nm }) : null;
     }
     render() {
         let { children: e, className: t, valueRendered: r, section: a, label: i, renderGraph: s } = this.props;
         return (0, n.jsxs)(f.A, {
-            className: P()(O.AS, t),
+            className: P()($.AS, t),
             direction: f.A.Direction.VERTICAL,
             basis: "50%",
             children: [
                 (0, n.jsxs)(f.A, {
-                    className: O.l5,
+                    className: $.l5,
                     align: f.A.Align.START,
                     children: [
-                        (0, n.jsx)(f.A.Child, { children: (0, n.jsx)(q.H, { className: O.DD, children: e }) }),
+                        (0, n.jsx)(f.A.Child, { children: (0, n.jsx)(q.H, { className: $.DD, children: e }) }),
                         Array.isArray(r)
                             ? (0, n.jsx)(f.A.Child, { grow: 1, wrap: !0, children: r })
                             : (0, n.jsxs)(f.A.Child, {
@@ -67,13 +67,13 @@ class V extends a.PureComponent {
                                   shrink: 0,
                                   children: [
                                       this.renderValueIcon(),
-                                      (0, n.jsx)("span", { className: O.R$, title: r, children: r }),
+                                      (0, n.jsx)("span", { className: $.R$, title: r, children: r }),
                                   ],
                               }),
                     ],
                 }),
-                null !== s && (0, n.jsx)(f.A.Child, { className: O.JB, children: s }, null != a ? `${a}-${i}` : i),
-                (0, n.jsx)(W.c, { className: O.yF }),
+                null !== s && (0, n.jsx)(f.A.Child, { className: $.JB, children: s }, null != a ? `${a}-${i}` : i),
+                (0, n.jsx)(O.c, { className: $.yF }),
             ],
         });
     }
@@ -266,6 +266,12 @@ let er = {
         encryptMissingKeyCount: !0,
         fractionLost: !0,
         framesCaptured: !0,
+        framesDecodeErrorsFallback: !0,
+        framesDecodeErrorsGeneric: !0,
+        framesDecodeErrorsNoOutput: !0,
+        framesDecodeErrorsOther: !0,
+        framesDecodeErrorsParameter: !0,
+        framesDecodeErrorsTimeout: !0,
         framesRendered: !0,
         hqSimulcastStreamEncoded: !0,
         lqSimulcastStreamEncoded: !0,
@@ -387,7 +393,7 @@ function el(e) {
         i = en[t] ?? ei,
         s = ea[t],
         l =
-            v.iA[t] &&
+            E.iA[t] &&
             (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
                 ? (0, n.jsx)(L.A, { converter: s, dataPoints: r, width: 300, height: 100 })
                 : "number" == typeof r
@@ -419,16 +425,16 @@ function ep(e) {
             showSimulcastOverride: p = !1,
         } = e,
         [h, y] = a.useState("0"),
-        F = (0, o.bG)([D.A], () => (u ? D.A.getGuildId() : null)),
+        F = (0, o.bG)([b.A], () => (u ? b.A.getGuildId() : null)),
         g = (0, o.bG)([x.default], () => (u && null != s ? x.default.getUser(s) : null)),
-        A = (0, o.bG)([b.Ay], () => (u && null != F && null != s ? b.Ay.getNick(F, s) : null));
+        A = (0, o.bG)([D.Ay], () => (u && null != F && null != s ? D.Ay.getNick(F, s) : null));
     if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
-    let E = d;
-    u && null != g && (E = `${d} \u{2014} ${A ?? C.Ay.getName(g)}`);
+    let v = d;
+    u && null != g && (v = `${d} \u{2014} ${A ?? C.Ay.getName(g)}`);
     let j = t.map((e, t) => {
             let r, a;
             return (0, n.jsx)(
-                k.V.Item,
+                I.V.Item,
                 {
                     id: t.toString(),
                     children:
@@ -458,8 +464,8 @@ function ep(e) {
                         : void 0 === n
                           ? -1
                           : r - n
-                    : v.iA[e] !== v.iA[t]
-                      ? v.iA[e]
+                    : E.iA[e] !== E.iA[t]
+                      ? E.iA[e]
                           ? 1
                           : -1
                       : e > t
@@ -480,7 +486,7 @@ function ep(e) {
                             null != a &&
                             (null != (i = a.get(t, r, e.ssrc))
                                 ? (0, n.jsx)("div", {
-                                      className: P()(O.tN, ed.C2),
+                                      className: P()($.tN, ed.C2),
                                       children: (0, n.jsx)(w.A, {
                                           streamId: i,
                                           videoComponent: T.Ay.getMediaEngine().Video,
@@ -507,9 +513,9 @@ function ep(e) {
                 className: ed.SX,
                 children: (0, n.jsx)(f.A.Child, {
                     basis: "100%",
-                    children: (0, n.jsx)(I.l, {
+                    children: (0, n.jsx)(k.l, {
                         label: "Simulcast Override",
-                        value: v.Ay.getSimulcastDebugOverride(s, r),
+                        value: E.Ay.getSimulcastDebugOverride(s, r),
                         onSelectionChange: (e) => {
                             m.z0(s, r, e);
                         },
@@ -522,13 +528,13 @@ function ep(e) {
     return (0, n.jsxs)(S.B, {
         gap: 16,
         children: [
-            (0, n.jsx)(c.D, { variant: "heading-md/medium", children: E }),
-            (0, n.jsx)(k.V, {
+            (0, n.jsx)(c.D, { variant: "heading-md/medium", children: v }),
+            (0, n.jsx)(I.V, {
                 type: "top",
                 look: "brand",
                 selectedItem: h,
                 onItemSelect: y,
-                className: O.$H,
+                className: $.$H,
                 children: j,
             }),
             L,
@@ -642,10 +648,10 @@ function eA(e) {
         })
     );
 }
-let eb = o.Ay.connectStores([v.Ay], (e) => {
+let eD = o.Ay.connectStores([E.Ay], (e) => {
         let { context: t, index: r, videoStreams: n } = e,
-            a = v.Ay.getAllStats(t)[r],
-            { section: i } = (0, v.Bz)(v.Ay.getSection());
+            a = E.Ay.getAllStats(t)[r],
+            { section: i } = (0, E.Bz)(E.Ay.getSection());
         if (null == i) throw Error("Unrecognized section format");
         let s = null;
         return (
@@ -665,9 +671,9 @@ let eb = o.Ay.connectStores([v.Ay], (e) => {
             showUserInfo: !0,
         });
     }),
-    eD = o.Ay.connectStores([v.Ay], (e) => {
+    eb = o.Ay.connectStores([E.Ay], (e) => {
         let { context: t, index: r } = e,
-            n = v.Ay.getAllStats(t)[r];
+            n = E.Ay.getAllStats(t)[r];
         return { outbound: null != n ? n.rtp.outbound : null };
     })(function (e) {
         let { outbound: t, context: r, index: a } = e;
@@ -680,7 +686,7 @@ let eb = o.Ay.connectStores([v.Ay], (e) => {
             showSimulcastOverride: !1,
         });
     }),
-    ev = {
+    eE = {
         activityFrames: { key: "activityFramesConsumed", suffix: "Consumed" },
         hdrFrames: { key: "hdrFramesCapable", suffix: "Capable" },
         hybridDxgiFrames: { key: "hybridDxgiFramesUnique", suffix: "Unique" },
@@ -690,7 +696,7 @@ let eb = o.Ay.connectStores([v.Ay], (e) => {
         hybridGraphicsCaptureFrames: { key: "hybridGraphicsCaptureFramesUnique", suffix: "Unique" },
         hybridVideohookFrames: { key: "hybridVideohookFramesUnique", suffix: "Unique" },
     },
-    eE = [
+    ev = [
         "activityFrames",
         "activityFramesDropped",
         "hdrFrames",
@@ -712,7 +718,7 @@ let eb = o.Ay.connectStores([v.Ay], (e) => {
         "x11Frames",
         "pipewireFrames",
     ],
-    ex = new Set([...eE, ...Object.values(ev).map((e) => e.key)]);
+    ex = new Set([...ev, ...Object.values(eE).map((e) => e.key)]);
 class eC extends a.PureComponent {
     render() {
         let { screenshare: e } = this.props;
@@ -725,11 +731,11 @@ class eC extends a.PureComponent {
                           (function (e) {
                               let t = null != e.hybridGdiBitBltFrames && null != e.hybridGdiPrintWindowFrames,
                                   r = [];
-                              for (let a of eE) {
+                              for (let a of ev) {
                                   if ("hybridGdiFrames" === a && t) continue;
                                   let i = e[a];
                                   if (void 0 === i) continue;
-                                  let s = ev[a],
+                                  let s = eE[a],
                                       l = null != s ? e[s.key] : void 0;
                                   null != s && void 0 !== l
                                       ? r.push(
@@ -763,7 +769,7 @@ var eR = r(967198),
     ej = r(351906),
     eP = r(562153),
     eN = r(917592);
-class eI extends a.PureComponent {
+class ek extends a.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: a } = this.props;
         if (null == e) return (0, n.jsx)(R.y, { type: R.y.Type.SPINNING_CIRCLE });
@@ -797,7 +803,7 @@ class eI extends a.PureComponent {
                             (0, n.jsxs)(
                                 f.A,
                                 {
-                                    className: O.A0,
+                                    className: $.A0,
                                     justify: f.A.Justify.BETWEEN,
                                     children: [
                                         (0, n.jsx)("span", { children: "Bitrate:" }),
@@ -812,7 +818,7 @@ class eI extends a.PureComponent {
                             (0, n.jsxs)(
                                 f.A,
                                 {
-                                    className: O.A0,
+                                    className: $.A0,
                                     justify: f.A.Justify.BETWEEN,
                                     children: [
                                         (0, n.jsx)("span", { children: "Packet Loss:" }),
@@ -827,7 +833,7 @@ class eI extends a.PureComponent {
                             (0, n.jsxs)(
                                 f.A,
                                 {
-                                    className: O.A0,
+                                    className: $.A0,
                                     justify: f.A.Justify.BETWEEN,
                                     children: [
                                         (0, n.jsx)("span", { children: "RTT:" }),
@@ -841,35 +847,35 @@ class eI extends a.PureComponent {
                 );
             });
         return (0, n.jsxs)(S.B, {
-            className: O._8,
+            className: $._8,
             children: [
                 (0, n.jsx)(c.D, {
                     variant: "heading-md/medium",
                     children: eh.intl.string(eh.t.wU9IN2) + (null != t ? " - " + t : ""),
                 }),
                 ec(s),
-                0 === m.length ? null : (0, n.jsx)(W.c, { className: ed.SX }),
+                0 === m.length ? null : (0, n.jsx)(O.c, { className: ed.SX }),
                 ec(m),
             ],
         });
     }
 }
-let ek = o.Ay.connectStores([v.Ay, D.A, ej.A, eS.A], (e) => {
+let eI = o.Ay.connectStores([E.Ay, b.A, ej.A, eS.A], (e) => {
     let { context: t, index: r } = e,
-        n = v.Ay.getAllStats(t)[r],
+        n = E.Ay.getAllStats(t)[r],
         a =
             t === eo.x.STREAM
                 ? Object.values(eS.A.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
                   )?.hostname
-                : D.A.getHostname();
+                : b.A.getHostname();
     return {
         hidePersonalInformation: ej.A.hidePersonalInformation,
         transport: null != n ? n.transport : null,
-        mediaSessionId: D.A.getMediaSessionId(),
+        mediaSessionId: b.A.getMediaSessionId(),
         hostname: eN.A.getShortHostname(a),
     };
-})(eI);
+})(ek);
 var eB = r(652215);
 function ew(e, t, r, a, i) {
     let s = [];
@@ -883,22 +889,22 @@ function ew(e, t, r, a, i) {
         (s.push({ section: h.Fq.HEADER, label: eh.intl.formatToPlainString(eh.t.PK5fOC, { context: e }) }),
         null != o &&
             s.push({
-                section: (0, v.Xi)(e, eB.zWA.TRANSPORT, r),
+                section: (0, E.Xi)(e, eB.zWA.TRANSPORT, r),
                 label: eh.intl.string(eh.t.wU9IN2),
-                element: ek,
+                element: eI,
                 elementProps: { context: e, index: r },
             }),
         null == p ||
             l().isEmpty(p) ||
             s.push({
-                section: (0, v.Xi)(e, eB.zWA.OUTBOUND, r),
+                section: (0, E.Xi)(e, eB.zWA.OUTBOUND, r),
                 label: eh.intl.string(eh.t["3u0gII"]),
-                element: eD,
+                element: eb,
                 elementProps: { context: e, index: r },
             }),
         null != y &&
             s.push({
-                section: (0, v.Xi)(e, eB.zWA.CAMERA, r),
+                section: (0, E.Xi)(e, eB.zWA.CAMERA, r),
                 label: eh.intl.string(eh.t["2AGBWH"]),
                 element: ey,
                 elementProps: { context: e, index: r, camera: y },
@@ -909,8 +915,8 @@ function ew(e, t, r, a, i) {
         (Object.keys(c).forEach((s) => {
             var l;
             let o = x.default.getUser(s),
-                p = b.Ay.getNick(i, s),
-                h = (0, v.Xi)(e, s, r);
+                p = D.Ay.getNick(i, s),
+                h = (0, E.Xi)(e, s, r);
             null != c[s] &&
                 c[s].length > 0 &&
                 t.push({
@@ -927,9 +933,9 @@ function ew(e, t, r, a, i) {
                                                   size: u._3.SIZE_24,
                                                   src: o.getAvatarURL(i, 24),
                                                   "aria-label": o.username,
-                                                  className: O.my,
+                                                  className: $.my,
                                               }),
-                                              (0, n.jsx)("span", { className: O.Xh, children: p ?? C.Ay.getName(o) }),
+                                              (0, n.jsx)("span", { className: $.Xh, children: p ?? C.Ay.getName(o) }),
                                           ],
                                       }),
                                   }),
@@ -940,7 +946,7 @@ function ew(e, t, r, a, i) {
                                   children: (0, n.jsx)(f.A.Child, {
                                       children: (0, n.jsx)(f.A, {
                                           align: f.A.Align.CENTER,
-                                          children: (0, n.jsx)("span", { className: O.Xh, children: l }),
+                                          children: (0, n.jsx)("span", { className: $.Xh, children: l }),
                                       }),
                                   }),
                               })),
@@ -948,7 +954,7 @@ function ew(e, t, r, a, i) {
                     onClick: () => {
                         m.c4(h);
                     },
-                    element: eb,
+                    element: eD,
                     elementProps: { context: e, index: r, videoStreams: a },
                 });
         }),
@@ -958,17 +964,17 @@ function ew(e, t, r, a, i) {
 }
 function eT() {
     let { defaultStats: e, streamStats: t } = (0, o.bG)(
-            [v.Ay],
-            () => ({ defaultStats: v.Ay.getAllStats(eo.x.DEFAULT), streamStats: v.Ay.getAllStats(eo.x.STREAM) }),
+            [E.Ay],
+            () => ({ defaultStats: E.Ay.getAllStats(eo.x.DEFAULT), streamStats: E.Ay.getAllStats(eo.x.STREAM) }),
             [],
             o.My,
         ),
-        r = (0, o.bG)([D.A, A.A], () => A.A.getChannel(D.A.getChannelId())),
+        r = (0, o.bG)([b.A, A.A], () => A.A.getChannel(b.A.getChannelId())),
         i = e.concat(t).find((e) => null != e.screenshare)?.screenshare,
         s = t.find((e) => null != e.clips)?.clips,
         l = (0, o.bG)([g.A], () => g.A.theme),
         d = (0, F.NC)(),
-        u = (0, o.bG)([v.Ay], () => v.Ay.getSection()),
+        u = (0, o.bG)([E.Ay], () => E.Ay.getSection()),
         f = (function (e) {
             let {
                     defaultStats: t,
@@ -1010,9 +1016,9 @@ function eT() {
                                   label: "Channel Name",
                                   element: () =>
                                       (0, n.jsx)(c.D, {
-                                          className: O.HA,
+                                          className: $.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, y.m1)(l, x.default, E.A),
+                                          children: (0, y.m1)(l, x.default, v.A),
                                       }),
                               },
                           ]
@@ -1022,7 +1028,7 @@ function eT() {
                         label: "Connection State",
                         element: () =>
                             (0, n.jsx)(c.D, {
-                                className: O.HA,
+                                className: $.HA,
                                 variant: "heading-md/normal",
                                 children: o === eB.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
                             }),
@@ -1036,11 +1042,11 @@ function eT() {
         })({
             defaultStats: e,
             streamStats: t,
-            videoStreams: (0, o.bG)([v.Ay], () => v.Ay.getVideoStreams()),
+            videoStreams: (0, o.bG)([E.Ay], () => E.Ay.getVideoStreams()),
             screenshare: i,
             clips: s,
             channel: r,
-            connectionState: (0, o.bG)([D.A], () => D.A.getState()),
+            connectionState: (0, o.bG)([b.A], () => b.A.getState()),
         });
     return (
         a.useEffect(
@@ -1050,7 +1056,7 @@ function eT() {
             [],
         ),
         a.useEffect(() => {
-            f.some((e) => e.section === u) || u === v.EM || m.c4(v.EM);
+            f.some((e) => e.section === u) || u === E.EM || m.c4(E.EM);
         }, [f, u]),
         (0, n.jsx)(p.A, { theme: l, sidebarTheme: d, section: u, onSetSection: m.c4, sections: f })
     );

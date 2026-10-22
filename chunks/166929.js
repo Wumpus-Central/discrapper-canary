@@ -29,6 +29,12 @@ let c = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         "framesDropped",
         "networkFramesDropped",
         "framesCodecError",
+        "framesCodecErrorNoOutput",
+        "framesCodecErrorTimeout",
+        "framesCodecErrorGeneric",
+        "framesCodecErrorFallback",
+        "framesCodecErrorParameter",
+        "framesCodecErrorOther",
         "bytes",
         "nackCount",
         "pliCount",
@@ -183,6 +189,12 @@ class O {
     bytes = 0;
     framesCodec = 0;
     framesCodecError = null;
+    framesCodecErrorNoOutput = null;
+    framesCodecErrorTimeout = null;
+    framesCodecErrorGeneric = null;
+    framesCodecErrorFallback = null;
+    framesCodecErrorParameter = null;
+    framesCodecErrorOther = null;
     framesNetwork = 0;
     resolution = 0;
     minorResolution = 0;
@@ -235,6 +247,12 @@ class O {
                 ((n.bytes = e.bytesReceived),
                 (n.framesCodec = e.framesDecoded),
                 (n.framesCodecError = e.framesDecodeErrors ?? null),
+                (n.framesCodecErrorNoOutput = e.framesDecodeErrorsNoOutput ?? null),
+                (n.framesCodecErrorTimeout = e.framesDecodeErrorsTimeout ?? null),
+                (n.framesCodecErrorGeneric = e.framesDecodeErrorsGeneric ?? null),
+                (n.framesCodecErrorFallback = e.framesDecodeErrorsFallback ?? null),
+                (n.framesCodecErrorParameter = e.framesDecodeErrorsParameter ?? null),
+                (n.framesCodecErrorOther = e.framesDecodeErrorsOther ?? null),
                 (n.framesNetwork = e.framesReceived),
                 (n.packets = e.packetsReceived),
                 (n.packetsLost = e.packetsLost),
@@ -275,6 +293,12 @@ class O {
                   bytes: e.bytesSent,
                   framesCodec: e.framesEncoded,
                   framesCodecError: null,
+                  framesCodecErrorNoOutput: null,
+                  framesCodecErrorTimeout: null,
+                  framesCodecErrorGeneric: null,
+                  framesCodecErrorFallback: null,
+                  framesCodecErrorParameter: null,
+                  framesCodecErrorOther: null,
                   framesNetwork: e.framesSent ?? 0,
                   packets: e.packetsSent,
                   packetsLost: e.packetsLost ?? 0,
@@ -345,6 +369,12 @@ class R {
         framesDropped: 0,
         networkFramesDropped: 0,
         framesCodecError: 0,
+        framesCodecErrorNoOutput: 0,
+        framesCodecErrorTimeout: 0,
+        framesCodecErrorGeneric: 0,
+        framesCodecErrorFallback: 0,
+        framesCodecErrorParameter: 0,
+        framesCodecErrorOther: 0,
         bytes: 0,
         nackCount: 0,
         pliCount: 0,
