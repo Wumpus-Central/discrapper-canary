@@ -1,21 +1,21 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var l = n(477900),
-    r = n(582128),
-    a = n(932111),
-    i = n(161431),
-    s = n(407653),
-    o = n(248675),
-    u = n(105292),
-    c = n(587041);
-function d(e) {
+    i = n(582128),
+    r = n(932111),
+    a = n(161431),
+    u = n(407653),
+    s = n(248675),
+    o = n(105292),
+    d = n(587041);
+function c(e) {
     let { attachmentId: t } = e,
-        n = r.useContext(a.Fu),
-        d = (0, i.Od)(n, t);
+        n = i.useContext(r.Fu),
+        c = (0, a.Od)(n, t);
     return (0, l.jsxs)("span", {
-        className: c.P,
+        className: d.P,
         children: [
-            (0, l.jsx)(s.A, { projectId: n, file: d, className: c.x }),
-            d?.name ?? u.intl.string(o.default.ff9Q4C),
+            (0, l.jsx)(u.A, { projectId: n, file: c, className: d.x }),
+            c?.name ?? o.intl.string(s.default.ff9Q4C),
         ],
     });
 }

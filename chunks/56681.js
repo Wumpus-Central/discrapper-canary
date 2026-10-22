@@ -1,20 +1,20 @@
-a.d(e, { Q7: () => n, bF: () => s, hW: () => c });
-var l = a(248675),
-    t = a(105292);
-function s(i) {
-    switch (i) {
+e.d(a, { Q7: () => l, bF: () => r, hW: () => o });
+var n = e(248675),
+    i = e(105292);
+function r(t) {
+    switch (t) {
         case "simple":
-            return l.default["/tlOR5"];
+            return n.default["/tlOR5"];
         case "balanced":
-            return l.default.wNhuGQ;
+            return n.default.wNhuGQ;
         case "complex":
-            return l.default.FxoUwB;
+            return n.default.FxoUwB;
         default:
             return null;
     }
 }
-function n(i, e) {
-    let a = s(e);
-    return null != a ? { title: i, body: t.intl.string(a) } : { body: i };
+function l(t, a) {
+    let e = r(a);
+    return null != e ? { title: t, body: i.intl.string(e) } : { body: t };
 }
-let c = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };
+let o = { low: "Low", medium: "Medium", high: "High", xhigh: "Extra high", max: "Max" };

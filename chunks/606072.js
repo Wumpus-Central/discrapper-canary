@@ -1,4 +1,4 @@
-(l.d(t, { F6: () => g, T4: () => _, UF: () => b, kG: () => v, zE: () => p }), l(321073));
+(l.d(t, { F6: () => g, T4: () => _, UF: () => A, kG: () => v, zE: () => j }), l(321073));
 var n,
     i = l(582128),
     s = l(17928),
@@ -25,15 +25,15 @@ function g(e, t) {
     });
 }
 let h = null;
-function j() {
+function p() {
     h = null;
 }
-function p() {
-    o.A.fetchedConsents || null != h || (h = (0, a.Q)().then(j, j));
+function j() {
+    o.A.fetchedConsents || null != h || (h = (0, a.Q)().then(p, p));
 }
 var v = (((n = {}).ACTIVITY_SHARING = "activity_sharing"), (n.PERSONALIZATION = "personalization"), (n.ALL = "all"), n);
 function _(e) {
-    i.useEffect(p, []);
+    i.useEffect(j, []);
     let t = d.tz.useSetting(),
         l = !d.JG.useSetting().includes(e),
         { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([o.A], () => ({
@@ -53,7 +53,7 @@ function _(e) {
         }
     );
 }
-function b(e) {
+function A(e) {
     let { guildId: t, useGuildSharingTitle: l, requirement: n } = e,
         i = [];
     return (

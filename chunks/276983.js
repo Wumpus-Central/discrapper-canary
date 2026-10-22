@@ -1,18 +1,18 @@
-(n.d(e, { Et: () => d, Us: () => o, de: () => a, jQ: () => p, yG: () => c }), n(205816));
-var r = n(723702),
-    i = n(248675),
-    s = n(105292);
-let u = { screen_capture: { isSupported: r.isDesktop, getLabel: () => s.intl.string(i.default["2KIefJ"]) } },
-    p = Object.keys(u);
-function a(t) {
-    return "string" == typeof t && Object.hasOwn(u, t);
+(n.d(t, { Et: () => c, Us: () => d, de: () => a, jQ: () => u, yG: () => o }), n(205816));
+var l = n(723702),
+    s = n(248675),
+    r = n(105292);
+let i = { screen_capture: { isSupported: l.isDesktop, getLabel: () => r.intl.string(s.default["2KIefJ"]) } },
+    u = Object.keys(i);
+function a(e) {
+    return "string" == typeof e && Object.hasOwn(i, e);
 }
-function c(t) {
-    return u[t].isSupported();
+function o(e) {
+    return i[e].isSupported();
 }
-function o(t) {
-    return u[t].getLabel();
+function d(e) {
+    return i[e].getLabel();
 }
-function d(t) {
-    return s.intl.formatToPlainString(i.default.vBSfKU, { app: t });
+function c(e) {
+    return r.intl.formatToPlainString(s.default.vBSfKU, { app: e });
 }

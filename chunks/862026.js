@@ -15,7 +15,7 @@ function f(e, t) {
         [h, g] = l.useState(null),
         m = l.useCallback(() => g({ frame: t, ok: (0, o.yR)(e, n) }), [t, e, n]),
         b = h?.frame === t ? h : null,
-        v = b?.ok === !0 && f;
+        x = b?.ok === !0 && f;
     if ("undone" === u) return null;
     if ("reverted" === u)
         return {
@@ -24,18 +24,18 @@ function f(e, t) {
             note: null,
             action: null,
         };
-    let x = "failed" === s || b?.ok === !1;
+    let v = "failed" === s || b?.ok === !1;
     return {
         label: c.intl.string(d.default.iBrh0c),
         body: c.intl.string(d.default.sRY8wn),
-        note: "busy" === s ? c.intl.string(d.default.QoixaY) : x ? c.intl.string(d.default["9fvHNe"]) : null,
+        note: "busy" === s ? c.intl.string(d.default.QoixaY) : v ? c.intl.string(d.default["9fvHNe"]) : null,
         action:
             "expired" === u
                 ? null
                 : {
                       text: c.intl.string("active" === u ? d.default["7q2YyD"] : d.default.FzX9h8),
                       confirm: "committed" === u,
-                      disabled: !f || v || ("committed" === u && !p),
+                      disabled: !f || x || ("committed" === u && !p),
                       onPress: m,
                   },
     };

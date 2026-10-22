@@ -14,9 +14,9 @@ var a = l(477900),
     h = l(688810),
     x = l(95337),
     f = l(412314),
-    g = l(456459),
-    y = l(916974),
-    v = l(347378),
+    y = l(456459),
+    v = l(916974),
+    g = l(347378),
     E = l(606423),
     S = l(652215);
 function j(e) {
@@ -35,9 +35,9 @@ function j(e) {
             activeStep: x,
         } = e,
         { analyticsLocations: f } = (0, h.Ay)(b.A.USER_SETTINGS),
-        [g, v] = n.useState(C(x));
+        [y, g] = n.useState(C(x));
     (0, n.useEffect)(() => {
-        v(C(x));
+        g(C(x));
     }, [x]);
     let E = n.useMemo(
         () => ({
@@ -74,18 +74,18 @@ function j(e) {
         }),
         [m, r, l, t, i, f, o, s, u, d, c, p],
     );
-    return (0, a.jsx)(y.CancellationContext.Provider, { value: E, children: g });
+    return (0, a.jsx)(v.CancellationContext.Provider, { value: E, children: y });
 }
 function C(e) {
     switch (e) {
         case d.g.DISCOUNT_APPLIED:
-            return (0, a.jsx)(g.V, {});
+            return (0, a.jsx)(y.V, {});
         case d.g.CONFIRM_DISCOUNT:
             return (0, a.jsx)(f.M, {});
         case d.g.CONFIRM:
             return (0, a.jsx)(x.r, {});
         case d.g.PREVIEW:
-            return (0, a.jsx)(v.E, {});
+            return (0, a.jsx)(g.E, {});
         case d.g.WHAT_YOU_LOSE:
         default:
             return (0, a.jsx)(E.Z, {});
@@ -99,15 +99,15 @@ let _ = () => {
         [l, p] = n.useState(d.g.WHAT_YOU_LOSE),
         [b, h] = n.useState(null),
         [x, f] = n.useState(A.gD.PREMIUM_MONTH_TIER_0),
-        [g, y] = n.useState([]),
-        [v, E] = n.useState(() => {
+        [y, v] = n.useState([]),
+        [g, E] = n.useState(() => {
             let e = new Date();
             return (e.setMonth(e.getMonth() + 1), e);
         }),
         [C, _] = n.useState(null),
         [k, R] = n.useState(!1),
         [M, N] = n.useState(!1),
-        [D, O] = n.useState(!1);
+        [D, L] = n.useState(!1);
     ((0, n.useEffect)(() => {
         (0, u.zS)();
     }, []),
@@ -129,21 +129,21 @@ let _ = () => {
         (0, n.useEffect)(() => {
             switch (e) {
                 case A.PremiumTypes.TIER_0:
-                    (y([
+                    (v([
                         { label: "Nitro Basic Monthly", value: A.gD.PREMIUM_MONTH_TIER_0 },
                         { label: "Nitro Basic Yearly", value: A.gD.PREMIUM_YEAR_TIER_0 },
                     ]),
                         f(A.gD.PREMIUM_MONTH_TIER_0));
                     break;
                 case A.PremiumTypes.TIER_1:
-                    (y([
+                    (v([
                         { label: "Nitro Classic Monthly", value: A.gD.PREMIUM_MONTH_TIER_1 },
                         { label: "Nitro Classic Yearly", value: A.gD.PREMIUM_YEAR_TIER_1 },
                     ]),
                         f(A.gD.PREMIUM_MONTH_TIER_1));
                     break;
                 case A.PremiumTypes.TIER_2:
-                    (y([
+                    (v([
                         { label: "Nitro Monthly", value: A.gD.PREMIUM_MONTH_TIER_2 },
                         { label: "Nitro Yearly", value: A.gD.PREMIUM_YEAR_TIER_2 },
                     ]),
@@ -180,20 +180,20 @@ let _ = () => {
                             tax: 0,
                             taxInclusive: !0,
                             subscriptionPeriodStart: new Date(),
-                            subscriptionPeriodEnd: v,
+                            subscriptionPeriodEnd: g,
                             status: S.lT7.PAID,
                         }),
                     ),
                 l !== d.g.PREVIEW && null !== C && _(null));
-        }, [l, b, v, x, C]));
-    let V = n.useCallback(async () => {
-        (O(!0),
+        }, [l, b, g, x, C]));
+    let O = n.useCallback(async () => {
+        (L(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
                     (0, a.jsx)(j, {
                         ...t,
                         onClose: () => {
-                            (t.onClose(), O(!1));
+                            (t.onClose(), L(!1));
                         },
                         premiumType: e,
                         churnDiscount: b,
@@ -214,7 +214,7 @@ let _ = () => {
                             createdAt: new Date(),
                             canceledAt: null,
                             currentPeriodStart: new Date(),
-                            currentPeriodEnd: v,
+                            currentPeriodEnd: g,
                             status: S.Dmq.ACTIVE,
                             paymentSourceId: null,
                             paymentGateway: null,
@@ -230,11 +230,11 @@ let _ = () => {
                         },
                     }),
             ));
-    }, [e, b, x, C, k, M, l, v]);
+    }, [e, b, x, C, k, M, l, g]);
     return (
         (0, n.useEffect)(() => {
-            D && V();
-        }, [l, D, V]),
+            D && O();
+        }, [l, D, O]),
         (0, a.jsxs)(c.LB, {
             children: [
                 (0, a.jsx)(c.MG, {
@@ -252,7 +252,7 @@ let _ = () => {
                         fullWidth: !0,
                     }),
                 }),
-                g.length > 0 &&
+                y.length > 0 &&
                     (0, a.jsx)(c.MG, {
                         children: (0, a.jsx)(r.l, {
                             label: "Subscription Interval",
@@ -263,7 +263,7 @@ let _ = () => {
                                 return { id: l, label: t, value: l };
                             },
                             value: x,
-                            options: g,
+                            options: y,
                             selectionMode: "single",
                             fullWidth: !0,
                         }),
@@ -315,7 +315,7 @@ let _ = () => {
                 (0, a.jsx)(c.nB, {}),
                 (0, a.jsx)(s.$, {
                     onClick: () => {
-                        O(!0);
+                        L(!0);
                     },
                     variant: "primary",
                     size: "md",

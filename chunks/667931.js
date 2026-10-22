@@ -4,7 +4,7 @@
     IE: () => m,
     JQ: () => a,
     N5: () => N,
-    Sj: () => y,
+    Sj: () => b,
     TK: () => d,
     TN: () => E,
     W7: () => O,
@@ -14,7 +14,7 @@
     hB: () => p,
     lQ: () => l,
     lp: () => c,
-    nF: () => b,
+    nF: () => y,
     rQ: () => g,
     vH: () => f,
     wu: () => u,
@@ -116,14 +116,14 @@ function d(e) {
                     descendants: 0,
                 },
                 _ = new Map();
-            for (let e of p) n(e) && _.set(C(e), (_.get(C(e)) ?? 0) + 1);
+            for (let e of p) n(e) && _.set(k(e), (_.get(k(e)) ?? 0) + 1);
             let f = new Set();
             for (let e of p) {
-                let t = C(e);
+                let t = k(e);
                 if (n(e) && (_.get(t) ?? 0) >= 4) {
                     if (f.has(t)) continue;
                     f.add(t);
-                    let e = p.filter((e) => n(e) && C(e) === t);
+                    let e = p.filter((e) => n(e) && k(e) === t);
                     h.children.push(s(e, o + 1, p, d));
                 } else h.children.push(s([e], o + 1, p, d));
             }
@@ -167,7 +167,7 @@ function u(e, t) {
     );
 }
 function p(e) {
-    return { collapsed: k(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
+    return { collapsed: C(e, (e) => e.depth > 0 && !e.children.some((e) => e.significant)), revealed: new Set() };
 }
 function h(e, t, n) {
     let s = [...p(t).collapsed].filter((e) => !n.has(e));
@@ -178,10 +178,10 @@ function _(e) {
     return (w(e, (e) => t.add(e.key)), t);
 }
 function f(e) {
-    return { collapsed: new Set(), revealed: k(e, () => !0) };
+    return { collapsed: new Set(), revealed: C(e, () => !0) };
 }
 function g(e) {
-    return { collapsed: k(e, (e) => e.depth > 0), revealed: new Set() };
+    return { collapsed: C(e, (e) => e.depth > 0), revealed: new Set() };
 }
 function E(e, t) {
     if (!e.collapsed.has(t.key)) return { ...e, collapsed: new Set(e.collapsed).add(t.key) };
@@ -219,7 +219,7 @@ function O(e) {
         }),
     );
 }
-function b(e) {
+function y(e) {
     let t = e / 6,
         n = 10 ** Math.floor(Math.log10(t)),
         s = [1, 2, 5, 10].map((e) => e * n).find((e) => e >= t) ?? t,
@@ -227,7 +227,7 @@ function b(e) {
     for (let t = 0; t <= e; t += s) r.push(t);
     return r;
 }
-function y(e) {
+function b(e) {
     return null == e
         ? ""
         : Object.entries(e)
@@ -257,7 +257,7 @@ function N(e) {
         category: r[n] ?? "other",
     };
 }
-function k(e, t) {
+function C(e, t) {
     let n = new Set();
     return (
         !(function e(s) {
@@ -266,8 +266,8 @@ function k(e, t) {
         n
     );
 }
-function C(e) {
-    return `${e.name} ${y(e.attrs)}`;
+function k(e) {
+    return `${e.name} ${b(e.attrs)}`;
 }
 function R(e) {
     let t = new Map();

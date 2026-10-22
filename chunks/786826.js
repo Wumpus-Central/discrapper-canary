@@ -17,28 +17,28 @@ var t = l(477900),
     m = l(186306),
     A = l(655098),
     I = l(323350),
-    C = l(135261),
-    y = l(35277),
+    y = l(135261),
+    C = l(35277),
     k = l(820066),
     x = l(702483),
     N = l(490682),
     j = l(683167),
     P = l(375499),
     E = l(90295),
-    R = l(267102),
-    w = l(363195),
+    w = l(267102),
+    R = l(363195),
     S = l(885386),
     D = l(95701),
-    M = l(652215),
-    T = l(551483),
-    G = l(307731),
-    L = l(569622),
+    L = l(652215),
+    M = l(551483),
+    T = l(307731),
+    G = l(569622),
     O = l(465410),
-    V = l(736541);
-let z = (0, D.createChannelRecord)({ id: "1", type: M.rbe.DM });
-function B(e) {
+    B = l(736541);
+let V = (0, D.createChannelRecord)({ id: "1", type: L.rbe.DM });
+function z(e) {
     let { editor: n, pickerIntention: l } = e,
-        r = (0, o.bG)([w.A], () => w.A.theme),
+        r = (0, o.bG)([R.A], () => R.A.theme),
         i = a.useRef(null),
         s = a.useCallback(
             (e, l) => {
@@ -52,7 +52,7 @@ function B(e) {
                             i = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
                             s = k.VW.areStylesDisabled(e) || null == i ? r : i;
                         m.o.withSingleEntry(e, () => {
-                            y.b.insertText(e, s + (l ? " " : ""));
+                            C.b.insertText(e, s + (l ? " " : ""));
                         });
                     })(n, t, a),
                     k.VW.focus(n)),
@@ -83,7 +83,7 @@ function B(e) {
             [s, l, r],
         );
     return (0, t.jsx)("div", {
-        className: L.S0,
+        className: G.S0,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, t.jsx)(c.Y, {
             targetElementRef: i,
@@ -93,7 +93,7 @@ function B(e) {
             align: "right",
             children: (e, n) => {
                 let { isShown: l } = n;
-                return (0, t.jsx)(P.A, { ...e, ref: i, active: l, tabIndex: 0, className: L.Z8 });
+                return (0, t.jsx)(P.A, { ...e, ref: i, active: l, tabIndex: 0, className: G.Z8 });
             },
         }),
     });
@@ -132,25 +132,25 @@ function F(e) {
         }, []),
         (0, t.jsxs)(t.Fragment, {
             children: [
-                (0, t.jsx)(C.A, { ref: k, getSlateEditor: P, containerRef: j }),
+                (0, t.jsx)(y.A, { ref: k, getSlateEditor: P, containerRef: j }),
                 (0, t.jsx)(v.vN, {
                     children: (0, t.jsxs)("div", {
-                        className: i()(L.I6, V["text-sm/normal"]),
+                        className: i()(G.I6, B["text-sm/normal"]),
                         "data-error": I || void 0,
                         "data-disabled": r || void 0,
                         children: [
                             (0, t.jsx)("div", {
                                 ref: j,
-                                className: i()(L.XG, O.yL),
+                                className: i()(G.XG, O.yL),
                                 onMouseDown: (e) => {
                                     e.target === e.currentTarget &&
-                                        (e.preventDefault(), y.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
+                                        (e.preventDefault(), C.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
                                 },
                                 onScroll: () => k.current?.hide(),
                                 children: (0, t.jsx)(A.A, {
                                     id: m?.controlId,
-                                    containerClassName: L.RZ,
-                                    className: L.EN,
+                                    containerClassName: G.RZ,
+                                    className: G.EN,
                                     editor: n,
                                     placeholder: l,
                                     readOnly: r,
@@ -168,7 +168,7 @@ function F(e) {
                                     "aria-required": o || void 0,
                                 }),
                             }),
-                            !r && (0, t.jsx)(B, { editor: n, pickerIntention: d }),
+                            !r && (0, t.jsx)(z, { editor: n, pickerIntention: d }),
                         ],
                     }),
                 }),
@@ -184,27 +184,27 @@ function H(e) {
             maxLength: i,
             autoFocus: o = !1,
             error: d,
-            emojiPickerIntention: c = G.EmojiIntention.CHAT,
+            emojiPickerIntention: c = T.EmojiIntention.CHAT,
             editorRef: g,
             onChange: v,
             onKeyDown: m,
             onFocus: A,
-            onBlur: C,
+            onBlur: y,
             "aria-labelledby": k,
             ...x
         } = e,
         N = (function (e) {
-            let n = a.useContext(R.Ay),
+            let n = a.useContext(w.Ay),
                 l = S.SI.useSetting(),
                 [t] = a.useState(() => {
                     let t = (0, s.ie)();
                     return (
                         (t.children = (0, b.x7)(e)),
-                        (t.selection = { anchor: T.K, focus: T.K }),
+                        (t.selection = { anchor: M.K, focus: M.K }),
                         (0, j.a)({
                             editor: t,
                             chatInputType: p.oU.GENERIC_RICH_TEXTAREA,
-                            channel: z,
+                            channel: V,
                             windowContext: n,
                             previewMarkdown: l,
                             updateState: (e, n, l) => {
@@ -230,7 +230,7 @@ function H(e) {
         g,
         () => ({
             focus(e) {
-                (y.b.resetSelectionToEditorEnd(N), u.rL.toDOMNode(N, N).focus(e));
+                (C.b.resetSelectionToEditorEnd(N), u.rL.toDOMNode(N, N).focus(e));
             },
             blur() {
                 u.rL.toDOMNode(N, N).blur();
@@ -238,41 +238,41 @@ function H(e) {
         }),
         [N],
     );
-    let { fieldProps: w } = (0, f.n)(x),
-        { disabled: D, required: M } = w,
+    let { fieldProps: R } = (0, f.n)(x),
+        { disabled: D, required: L } = R,
         {
-            setShouldValidate: L,
+            setShouldValidate: G,
             errorMessage: O,
-            hasError: V,
+            hasError: B,
         } = (0, h.Y)({ validateOn: "change", error: d, value: P, minLength: r, maxLength: i }),
-        B = a.useRef(P);
-    B.current = P;
+        z = a.useRef(P);
+    z.current = P;
     let H = a.useCallback(
         (e) => {
             let n = (0, I.WO)(e, { mode: "raw" });
-            n !== B.current && (E(n), L(!0), v?.(n));
+            n !== z.current && (E(n), G(!0), v?.(n));
         },
-        [v, L],
+        [v, G],
     );
     return (
         a.useEffect(() => {
-            n !== B.current &&
-                ((N.children = (0, b.x7)(n)), (N.selection = { anchor: T.K, focus: T.K }), N.onChange(), E(n));
+            n !== z.current &&
+                ((N.children = (0, b.x7)(n)), (N.selection = { anchor: M.K, focus: M.K }), N.onChange(), E(n));
         }, [n, N]),
         (0, t.jsx)(f.D, {
-            ...w,
-            errorMessage: V ? O : void 0,
+            ...R,
+            errorMessage: B ? O : void 0,
             children: (0, t.jsx)(F, {
                 editor: N,
                 placeholder: l,
                 readOnly: D,
                 autoFocus: o,
-                required: M,
+                required: L,
                 pickerIntention: c,
                 onChangeValue: H,
                 onKeyDown: m,
                 onFocus: A,
-                onBlur: C,
+                onBlur: y,
                 ariaLabelledByProp: k,
             }),
         })

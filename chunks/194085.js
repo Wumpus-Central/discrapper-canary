@@ -20,8 +20,8 @@ function c(e) {
         dangerous: p,
         separator: A,
         buttonClassName: f,
-        children: C,
-        ref: x,
+        children: x,
+        ref: C,
         ...E
     } = e;
     return (0, l.jsx)(a.m, {
@@ -33,7 +33,7 @@ function c(e) {
         children: (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)(r.$n, {
-                    ref: x,
+                    ref: C,
                     className: s()(o.W1, f),
                     onClick: (e) => {
                         u(e);
@@ -44,7 +44,7 @@ function c(e) {
                     ...E,
                     children: [
                         null != c ? (0, l.jsx)(c, { className: o.Kk, color: "currentColor", ...d }) : null,
-                        null != C ? (0, l.jsx)("div", { className: s()(o.Kk, o.IO), children: C }) : null,
+                        null != x ? (0, l.jsx)("div", { className: s()(o.Kk, o.IO), children: x }) : null,
                     ],
                 }),
                 A && (0, l.jsx)(r.wv, {}),

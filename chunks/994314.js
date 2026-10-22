@@ -1,11 +1,11 @@
 n.d(t, { A: () => o });
-var l = n(477900);
+var i = n(477900);
 n(582128);
-var i = n(503698),
-    a = n.n(i),
+var l = n(503698),
+    a = n.n(l),
     r = n(834730),
     s = n(98950);
 function o(e) {
     let { children: t, className: n } = e;
-    return (0, l.jsx)(r.E, { color: "none", className: a()(s.W, n), variant: "text-xs/medium", children: t });
+    return (0, i.jsx)(r.E, { color: "none", className: a()(s.W, n), variant: "text-xs/medium", children: t });
 }

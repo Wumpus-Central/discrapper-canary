@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(830215),
     A = n(857182),
     f = n(66834),
-    C = n(775602),
-    x = n(315982),
+    x = n(775602),
+    C = n(315982),
     E = n(480900),
     S = n(311043),
     I = n(60465),
@@ -37,7 +37,7 @@ var l = n(477900),
     U = n(915089),
     w = n(105292),
     F = n(788228);
-function B() {
+function H() {
     return n
         .e("244678")
         .then(n.t.bind(n, 144759, 19))
@@ -46,13 +46,13 @@ function B() {
             return t;
         });
 }
-let H = function (e) {
+let B = function (e) {
     let t = (0, U.GV)();
     return (0, l.jsxs)(D.d, {
         ...e,
         size: "sm",
         children: [
-            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(k.a, { importData: B, className: F.WG }) }),
+            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(k.a, { importData: H, className: F.WG }) }),
             (0, l.jsx)(L.c, {
                 children: (0, l.jsxs)("div", {
                     className: F.lq,
@@ -202,7 +202,7 @@ class eA extends i.PureComponent {
         null != e && (0, N.Ze)(e.id);
     };
     handleClaimAccount = () => {
-        x.R();
+        C.R();
     };
     handleVerifyPhone = () => {
         (0, u.openModalLazy)(
@@ -268,7 +268,7 @@ class eA extends i.PureComponent {
             null != e && null != t && _.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
         }
         return (0, l.jsx)(h.aF, {
-            renderModal: (t) => (0, l.jsx)(H, { ...t, onAccept: i, guildName: e.name }),
+            renderModal: (t) => (0, l.jsx)(B, { ...t, onAccept: i, guildName: e.name }),
             onCloseRequest: i,
         });
     };
@@ -289,8 +289,8 @@ class eA extends i.PureComponent {
                 channelFollowingUsersSeen: p,
                 showLurkerModeUpsellPopout: A,
                 showMemberVerificationModal: f,
-                missingVerificationRole: C,
-                verificationRole: x,
+                missingVerificationRole: x,
+                verificationRole: C,
                 useReducedMotion: S,
                 isStaff: I,
                 guildJoinRequest: y,
@@ -337,10 +337,10 @@ class eA extends i.PureComponent {
                         (k.onButtonClick = this.handleShowMemberVerification));
             }
         else
-            null != M && null != x && C
-                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${x.name}` })),
-                  null === x.tags.guild_connections &&
-                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(x, M.id))))
+            null != M && null != C && x
+                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${C.name}` })),
+                  null === C.tags.guild_connections &&
+                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(C, M.id))))
                 : j || null == _
                   ? i && !I
                       ? ((k.message = w.intl.string(w.t["2dThMM"])),
@@ -416,7 +416,7 @@ function ef(e) {
         p = !!(0, M.Qd)(a),
         A = (0, r.bG)([Z], () => Z.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(v.xBc.SEND_MESSAGES, t)),
-        x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
+        C = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: _,
@@ -462,12 +462,12 @@ function ef(e) {
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,
             showMemberVerificationModal: g && p,
-            guildJoinRequestStatus: x?.applicationStatus ?? T.B5.STARTED,
-            guildJoinRequest: x,
+            guildJoinRequestStatus: C?.applicationStatus ?? T.B5.STARTED,
+            guildJoinRequest: C,
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: _,
             shouldRelaunchLinkedLobbyApplication: b,
-            useReducedMotion: C.Ay.useReducedMotion,
+            useReducedMotion: x.Ay.useReducedMotion,
             isStaff: m,
             pendingGameProfileReturn: N,
         };

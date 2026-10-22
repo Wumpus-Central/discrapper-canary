@@ -6,8 +6,8 @@ var a = n(683063),
     i = n(615839),
     s = n(115982),
     u = n(566424),
-    o = n(16634),
-    d = n(308665),
+    d = n(16634),
+    o = n(308665),
     c = n(248675),
     m = n(105292),
     f = n(59678);
@@ -32,28 +32,28 @@ function x(e) {
         } = e,
         v = (0, s.SY)(n),
         b = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
-        y = g ? void 0 : x,
-        A = null != y ? (0, i.nY)(y) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
-        _ = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+        A = g ? void 0 : x,
+        _ = null != A ? (0, i.nY)(A) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
+        y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
-            asset: (0, l.jsx)(d.Ay, { size: 32 }),
+            asset: (0, l.jsx)(o.Ay, { size: 32 }),
             assetSize: 32,
             title: b.title,
             body: b.body,
             position: "left",
-            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(d.Ay, {}) }),
+            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.Ay, {}) }),
         }),
-        line: A,
+        line: _,
         anchor: !0,
         live: g,
-        settled: null != y || (!g && j),
+        settled: null != A || (!g && j),
         connectsDown: p,
-        detail: _
+        detail: y
             ? (0, l.jsx)("ol", {
                   className: f.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(o.A, { projectId: t, node: e, presentation: "detail", active: g && e === v }, e.id),
+                      (0, l.jsx)(d.A, { projectId: t, node: e, presentation: "detail", active: g && e === v }, e.id),
                   ),
               })
             : void 0,
