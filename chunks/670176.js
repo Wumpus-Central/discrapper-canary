@@ -11795,13 +11795,7 @@ function dI(e) {
                 disableInteraction: !0,
             }),
             d,
-            u
-                ? (0, a.jsx)("span", {
-                      className: df.st,
-                      "aria-hidden": "true",
-                      children: (0, a.jsx)(Y.k, { size: "custom", color: "currentColor", width: 20, height: 20 }),
-                  })
-                : null,
+            u ? (0, a.jsx)("img", { className: df.st, src: "/assets/c07664a29f3ee5ed.svg", alt: "" }) : null,
         ],
     });
 }

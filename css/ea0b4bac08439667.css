@@ -649,15 +649,9 @@
 }
 
 .conjurBotAvatar_a9077e {
-    align-items: center;
-    background: var(--background-code);
-    border: 1px solid var(--border-muted);
-    border-radius: 8px;
-    color: var(--text-brand);
-    display: flex;
+    border-radius: 50%;
     height: var(--chat-avatar-size);
     inset-inline-start: var(--custom-message-margin-horizontal);
-    justify-content: center;
     pointer-events: none;
     position: absolute;
     top: 4px;
@@ -729,4 +723,4 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=96f86c2ed1e7a167.css.map*/
+/*# sourceMappingURL=ea0b4bac08439667.css.map*/
