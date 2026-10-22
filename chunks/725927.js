@@ -8,4 +8,6 @@ e.exports = {
     L$: "ditherRight_ab7e6e",
     TN: "conjureDitherMaskRippleRight_ab7e6e",
     l4: "ditherCanvasRight_ab7e6e",
+    f1: "ditherIntro_ab7e6e",
+    gV: "conjureDitherIntroSlide_ab7e6e",
 };

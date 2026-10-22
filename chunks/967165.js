@@ -1,176 +1,171 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => A });
 var l = n(477900),
     r = n(582128),
-    s = n(503698),
-    a = n.n(s),
-    o = n(621466),
+    o = n(503698),
+    a = n.n(o),
+    s = n(621466),
     u = n(265872),
     i = n(323384),
     d = n(661531),
     c = n(331322),
-    m = n(834730),
-    v = n(627363),
-    f = n(421773),
-    p = n(416733),
-    x = n(827656),
-    g = n(41799);
-function j(e) {
-    let { applicationId: t, guildId: n, targetElementRef: s, disabled: a = !1, openOnFocus: u = !1, ...i } = e,
-        { isHovered: d, setIsHovered: c, onMouseEnter: m, onMouseLeave: v, cancelTimers: p } = (0, f.A)(500, 150),
-        [x, g] = r.useState(!1),
-        [j, E] = r.useState(!1),
-        C = r.useRef(null),
-        A = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
-        L = r.useCallback(() => {
-            ((A.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), p(), c(!1), E(!1));
-        }, [p, c]),
-        N = r.useCallback(
+    v = n(834730),
+    f = n(627363),
+    m = n(421773),
+    g = n(793480),
+    p = n(756419),
+    x = n(456709),
+    h = n(827656),
+    j = n(41799);
+function A(e) {
+    let { applicationId: t, guildId: n, targetElementRef: o, disabled: a = !1, openOnFocus: u = !1, ...i } = e,
+        { isHovered: d, setIsHovered: c, onMouseEnter: v, onMouseLeave: f, cancelTimers: x } = (0, m.A)(500, 150),
+        [h, j] = r.useState(!1),
+        [A, C] = r.useState(!1),
+        H = r.useRef(null),
+        L = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
+        I = (0, g.m0)({ guildId: n ?? void 0, location: "ConjureAppHoverCard" });
+    r.useEffect(() => {
+        I && (0, p.A)(t);
+    }, [I, t]);
+    let P = r.useCallback(() => {
+            ((L.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), x(), c(!1), C(!1));
+        }, [x, c]),
+        k = r.useCallback(
             (e, t) => {
-                let n = A.current;
+                let n = L.current;
                 ((n[e] = t),
-                    E(n.targetHovered || n.targetFocused || n.cardHovered),
-                    t ? m() : n.targetHovered || n.targetFocused || n.cardHovered || v());
+                    C(n.targetHovered || n.targetFocused || n.cardHovered),
+                    t ? v() : n.targetHovered || n.targetFocused || n.cardHovered || f());
             },
-            [m, v],
+            [v, f],
         );
     r.useEffect(() => {
-        let e = s.current;
+        let e = o.current;
         if (!a && null != e)
             return (
                 e.addEventListener("mouseenter", t),
                 e.addEventListener("mouseleave", n),
-                e.addEventListener("mousedown", L),
+                e.addEventListener("mousedown", P),
                 u && (e.addEventListener("focus", l), e.addEventListener("blur", r)),
                 () => {
                     (e.removeEventListener("mouseenter", t),
                         e.removeEventListener("mouseleave", n),
-                        e.removeEventListener("mousedown", L),
+                        e.removeEventListener("mousedown", P),
                         e.removeEventListener("focus", l),
                         e.removeEventListener("blur", r),
-                        L());
+                        P());
                 }
             );
         function t() {
-            (g(!0), N("targetHovered", !0));
+            (j(!0), k("targetHovered", !0));
         }
         function n(e) {
-            if ((0, o.vq)(e.relatedTarget, Node) && C.current?.contains(e.relatedTarget) === !0) {
-                A.current.targetHovered = !1;
+            if ((0, s.vq)(e.relatedTarget, Node) && H.current?.contains(e.relatedTarget) === !0) {
+                L.current.targetHovered = !1;
                 return;
             }
-            N("targetHovered", !1);
+            k("targetHovered", !1);
         }
         function l() {
-            e?.matches(":focus-visible") === !0 && (g(!0), N("targetFocused", !0));
+            e?.matches(":focus-visible") === !0 && (j(!0), k("targetFocused", !0));
         }
         function r() {
-            N("targetFocused", !1);
+            k("targetFocused", !1);
         }
-    }, [a, u, s, N, L]);
-    let H = r.useCallback(() => N("cardHovered", !0), [N]),
-        P = r.useCallback(() => N("cardHovered", !1), [N]);
-    return x
-        ? (0, l.jsx)(h, {
+    }, [a, u, o, k, P]);
+    let N = r.useCallback(() => k("cardHovered", !0), [k]),
+        b = r.useCallback(() => k("cardHovered", !1), [k]);
+    return h
+        ? (0, l.jsx)(E, {
               ...i,
               applicationId: t,
               guildId: n ?? null,
-              targetElementRef: s,
+              targetElementRef: o,
               isHovered: d,
-              isPointerOver: j,
-              cardRef: C,
-              onCardEnter: H,
-              onCardLeave: P,
-              onClose: L,
+              isPointerOver: A,
+              cardRef: H,
+              onCardEnter: N,
+              onCardLeave: b,
+              onClose: P,
           })
         : null;
 }
-function h(e) {
+function E(e) {
     let {
             applicationId: t,
             guildId: n,
-            targetElementRef: s,
-            isHovered: a,
-            isPointerOver: o,
-            cardRef: i,
-            onCardEnter: d,
-            onCardLeave: c,
-            onClose: m,
-            position: f,
-            animationPosition: x,
+            targetElementRef: r,
+            isHovered: o,
+            isPointerOver: a,
+            cardRef: s,
+            onCardEnter: i,
+            onCardLeave: d,
+            onClose: c,
+            position: v,
+            animationPosition: m,
             spacing: g,
         } = e,
-        j = (0, v.YY)(t).data,
-        h = j?.conjureProjectId != null ? j : null,
-        E = null != h,
-        { creator: A, remixProject: L, isSettled: N } = (0, p.A)(h, n, o || a),
-        [H, P] = r.useState(null);
-    (r.useEffect(() => {
-        if (!a || !E || N || null == t) return;
-        let e = setTimeout(() => P(t), 300);
-        return () => clearTimeout(e);
-    }, [a, E, N, t]),
-        a || null == H || P(null));
-    let [I, k] = r.useState(null),
-        b = I?.isOpen === !0 && I.applicationId === t,
-        R = a && E && (N || H === t || b);
-    (R && !b && k({ applicationId: t, creator: A, remixProject: L, isOpen: !0 }),
-        R || I?.isOpen !== !0 || k({ ...I, isOpen: !1 }));
-    let M = R && !b ? { creator: A, remixProject: L } : I;
+        p = (0, f.YY)(t).data,
+        h = p?.conjureProjectId != null ? p : null,
+        { creator: j, remixProject: A, isSettled: E } = (0, x.A)(h, n, a || o),
+        C = o && null != h;
     return (0, l.jsx)(u.Y, {
-        targetElementRef: s,
-        position: f,
-        animationPosition: x,
+        targetElementRef: r,
+        position: v,
+        animationPosition: m,
         spacing: g,
-        shouldShow: R,
-        onRequestClose: m,
+        shouldShow: C,
+        onRequestClose: c,
         renderPopout: () =>
             null != h
-                ? (0, l.jsx)(C, {
+                ? (0, l.jsx)(H, {
                       application: h,
-                      creator: M?.creator ?? null,
-                      remixProject: M?.remixProject ?? null,
+                      creator: j,
+                      remixProject: A,
+                      showFooter: !(E && null == j),
                       guildId: n,
-                      cardRef: i,
-                      onMouseEnter: d,
-                      onMouseLeave: c,
-                      onClose: m,
+                      cardRef: s,
+                      onMouseEnter: i,
+                      onMouseLeave: d,
+                      onClose: c,
                   })
                 : null,
         children: () => null,
     });
 }
-function E(e) {
+function C(e) {
     e.stopPropagation();
 }
-function C(e) {
+function H(e) {
     let {
             application: t,
             creator: n,
             remixProject: r,
+            showFooter: o,
             guildId: s,
-            cardRef: o,
-            onMouseEnter: u,
-            onMouseLeave: v,
-            onClose: f,
+            cardRef: u,
+            onMouseEnter: f,
+            onMouseLeave: m,
+            onClose: g,
         } = e,
         p = t.getIconURL(96),
-        j = t.description?.trim();
+        x = t.description?.trim();
     return (0, l.jsxs)("div", {
-        ref: o,
-        className: g.Nr,
-        onMouseEnter: u,
-        onMouseLeave: v,
-        onClick: E,
-        onMouseDown: E,
-        onContextMenu: E,
+        ref: u,
+        className: j.Nr,
+        onMouseEnter: f,
+        onMouseLeave: m,
+        onClick: C,
+        onMouseDown: C,
+        onContextMenu: C,
         children: [
             (0, l.jsxs)("div", {
-                className: g.rf,
+                className: j.rf,
                 children: [
                     null != p
-                        ? (0, l.jsx)("img", { alt: "", src: p, className: a()(g.Kk, g.Dp) })
+                        ? (0, l.jsx)("img", { alt: "", src: p, className: a()(j.Kk, j.Dp) })
                         : (0, l.jsx)("div", {
-                              className: a()(g.Kk, g.Pz),
+                              className: a()(j.Kk, j.Pz),
                               "aria-hidden": !0,
                               children: (0, l.jsx)(i.k, {
                                   size: "custom",
@@ -181,27 +176,27 @@ function C(e) {
                           }),
                     (0, l.jsxs)(c.B, {
                         gap: 4,
-                        className: g.zH,
+                        className: j.zH,
                         children: [
-                            (0, l.jsx)(m.E, {
+                            (0, l.jsx)(v.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 lineClamp: 1,
                                 children: t.name,
                             }),
-                            null != j && j.length > 0
-                                ? (0, l.jsx)(m.E, {
+                            null != x && x.length > 0
+                                ? (0, l.jsx)(v.E, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
                                       lineClamp: 3,
-                                      children: j,
+                                      children: x,
                                   })
                                 : null,
                         ],
                     }),
                 ],
             }),
-            null != n ? (0, l.jsx)(x.A, { creator: n, remixProject: r, guildId: s, onClose: f }) : null,
+            o ? (0, l.jsx)(h.A, { creator: n, remixProject: r, guildId: s, onClose: g }) : null,
         ],
     });
 }

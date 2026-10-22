@@ -1,3 +1,13 @@
+.iconBase__933a1 {
+    cursor: pointer;
+    line-height: 0;
+    position: relative
+}
+
+.mentionsBadge__933a1 {
+    pointer-events: none
+}
+
 .dynamicGraphicContainer__47887 {
     border-radius: var(--radius-sm);
     height: 100%
@@ -5,6 +15,40 @@
 
 .dynamicGraphicForegroundImage__47887 {
     height: 100%
+}
+
+.wrapper_fce7ca {
+    isolation: isolate;
+    overflow: hidden;
+    position: relative
+}
+
+.shine_fce7ca {
+    background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 25%, hsla(0, 0%, 100%, .7) 50%, hsla(0, 0%, 100%, 0) 75%);
+    height: var(--custom-shine-dimensions);
+    inset-inline-end: calc(100% + var(--custom-shine-rotated-dimensions-delta));
+    opacity: .2;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50%;
+    width: var(--custom-shine-dimensions);
+    z-index: 3
+}
+
+.overflowHidden__5d64c {
+    overflow: hidden
+}
+
+.gradient__5d64c {
+    background-image: linear-gradient(90deg, #394aff, #e901d9);
+    border-radius: var(--radius-sm);
+    bottom: 1px;
+    inset-inline: 0;
+    opacity: .16;
+    pointer-events: none;
+    position: absolute;
+    top: 1px
 }
 
 .sticky__2fc34 {
@@ -2399,4 +2443,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=c1c85cecf1b9b99d.css.map*/
+/*# sourceMappingURL=3ce4942d5a99798f.css.map*/

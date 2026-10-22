@@ -1,4 +1,4 @@
-t.d(i, { A: () => N, S: () => x });
+t.d(i, { A: () => g, S: () => x });
 var s = t(477900),
     n = t(582128),
     r = t(17928),
@@ -6,7 +6,7 @@ var s = t(477900),
     a = t(265872),
     c = t(335180),
     d = t(287809),
-    o = t(454719),
+    o = t(549831),
     h = t(589022),
     u = t(518477),
     j = t(818348);
@@ -24,12 +24,12 @@ function f(e) {
             roleId: v,
             disableUserProfileLink: m,
             newAnalyticsLocations: f,
-            appContext: N,
-            avatarUrl: g,
+            appContext: g,
+            avatarUrl: N,
             preload: A,
             renderPopout: p,
-            onRequestOpen: S,
-            onRequestClose: w,
+            onRequestOpen: w,
+            onRequestClose: S,
             onClosePopout: y,
             shouldShow: b,
             shouldPreload: C = !0,
@@ -41,14 +41,14 @@ function f(e) {
             () =>
                 null != A
                     ? A()
-                    : (0, o.A)(t.id, g ?? t.getAvatarURL(l, x), {
+                    : (0, o.A)(t.id, N ?? t.getAvatarURL(l, x), {
                           type: "popout",
                           withMutualGuilds: t.id !== r.id,
                           withMutualFriends: !t.bot && t.id !== r.id,
                           guildId: l,
                           channelId: d,
                       }),
-            [A, r, t, g, l, d],
+            [A, r, t, N, l, d],
         ),
         L = n.useCallback(
             (e) =>
@@ -64,13 +64,13 @@ function f(e) {
                           messageId: j,
                           disableUserProfileLink: m,
                           newAnalyticsLocations: f,
-                          appContext: N,
+                          appContext: g,
                           openedAt: M.current,
                           closePopout: () => {
                               (e.closePopout(), y?.());
                           },
                       }),
-            [t, r, p, l, d, v, j, m, f, N, y],
+            [t, r, p, l, d, v, j, m, f, g, y],
         );
     return (0, s.jsx)(a.Y, {
         popoutKey: u.KM,
@@ -78,14 +78,14 @@ function f(e) {
         preload: C ? U : void 0,
         loadingComponent: (0, c.Zm)(),
         renderPopout: L,
-        onRequestOpen: S,
-        onRequestClose: w,
+        onRequestOpen: w,
+        onRequestClose: S,
         ignoreModalClicks: I,
         ...P,
         children: i,
     });
 }
-let N = n.memo(function (e) {
+let g = n.memo(function (e) {
     let { children: i, userId: t, user: n, ...l } = e,
         a = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
         c = (0, r.bG)([d.default], () => n ?? d.default.getUser(t));

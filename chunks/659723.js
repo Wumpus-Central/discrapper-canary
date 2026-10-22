@@ -1,11 +1,11 @@
-n.d(t, { A: () => p });
-var r = n(477900),
-    i = n(582128),
-    l = n(17928),
-    a = n(245179);
-n(321073);
-var o = n(218394),
-    u = n(725927);
+r.d(t, { Al: () => v, Ay: () => b });
+var n = r(477900),
+    l = r(582128),
+    i = r(17928),
+    a = r(245179);
+r(321073);
+var o = r(218394),
+    u = r(725927);
 let s = [6, 8, 10, 12],
     h = 0,
     c = -1 / 0,
@@ -14,44 +14,48 @@ let s = [6, 8, 10, 12],
         conversation: { blob: 1, twink: 1, alpha: 0.7 },
         thinking: { blob: 3, twink: 2.4, alpha: 0.7 },
     };
-function d(e, t, n) {
-    let r = (0x165667b1 * e) ^ (0x27d4eb2f * t) ^ (0x7fffffff * n);
-    return ((r = Math.imul(r ^ (r >>> 13), 0x4bf19f61)), (((r ^= r >>> 16) >>> 0) % 1e6) / 1e6);
+function m(e, t, r) {
+    let n = (0x165667b1 * e) ^ (0x27d4eb2f * t) ^ (0x7fffffff * r);
+    return ((n = Math.imul(n ^ (n >>> 13), 0x4bf19f61)), (((n ^= n >>> 16) >>> 0) % 1e6) / 1e6);
 }
-let m = i.memo(function (e) {
-    let { state: t, orientation: n = "bottom" } = e,
-        l = i.useRef(null),
-        a = i.useRef(null),
-        m = i.useRef(t);
-    i.useEffect(() => {
-        m.current = t;
+let d = l.memo(function (e) {
+    let { state: t, orientation: r = "bottom", introMs: i } = e,
+        a = l.useRef(null),
+        d = l.useRef(null),
+        g = l.useRef(t);
+    l.useEffect(() => {
+        g.current = t;
     }, [t]);
-    let g = i.useRef(n);
-    i.useEffect(() => {
-        g.current = n;
-    }, [n]);
-    let p = (0, o.j)(),
-        v = i.useRef(p),
-        b = i.useRef(null);
-    (i.useEffect(() => {
-        ((v.current = p), p && b.current?.());
-    }, [p]),
-        i.useEffect(() => {
-            let e = a.current,
-                t = l.current;
-            if (null == e || null == t || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-            let n = e.getContext("2d", { alpha: !0 });
-            if (null == n) return;
-            let r =
+    let p = l.useRef(r);
+    l.useEffect(() => {
+        p.current = r;
+    }, [r]);
+    let b = l.useRef(i),
+        v = (0, o.j)(),
+        x = l.useRef(v),
+        w = l.useRef(null);
+    (l.useEffect(() => {
+        ((x.current = v), v && w.current?.());
+    }, [v]),
+        l.useEffect(() => {
+            let e = d.current,
+                t = a.current;
+            if (null == e || null == t) return;
+            let r = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+                n = b.current;
+            if (r && null == n) return;
+            let l = e.getContext("2d", { alpha: !0 });
+            if (null == l) return;
+            let i =
                     Number.isFinite(window.devicePixelRatio) && window.devicePixelRatio > 0
                         ? window.devicePixelRatio
                         : 1,
-                i = 0,
                 o = 0,
-                u = [],
-                p = 0,
-                x = 0,
-                M = (function () {
+                u = 0,
+                v = [],
+                M = 0,
+                y = 0,
+                $ = (function () {
                     let e = [];
                     for (let t = 0; t < 3; t++)
                         e.push({
@@ -64,242 +68,260 @@ let m = i.memo(function (e) {
                         });
                     return e;
                 })(),
-                w = f.home.blob,
-                y = f.home.twink,
-                j = f.home.alpha,
-                A = s[h],
-                $ = [],
-                k = 0,
-                R = Array(8).fill(""),
-                F = !1;
-            function N() {
+                j = f.home.blob,
+                R = f.home.twink,
+                k = f.home.alpha,
+                F = s[h],
+                A = [],
+                N = 0,
+                E = Array(8).fill(""),
+                P = !1;
+            function C() {
                 (!(function () {
                     let {
                             r: e,
-                            g: n,
-                            b: r,
+                            g: r,
+                            b: n,
                         } = (function () {
                             let e = getComputedStyle(t).getPropertyValue("--custom-conjure-dither-fill").trim();
                             if ("" === e) return { r: 225, g: 240, b: 255 };
-                            let n = e.split(",").map((e) => parseInt(e.trim(), 10));
-                            return 3 !== n.length || n.some((e) => !Number.isFinite(e))
+                            let r = e.split(",").map((e) => parseInt(e.trim(), 10));
+                            return 3 !== r.length || r.some((e) => !Number.isFinite(e))
                                 ? { r: 225, g: 240, b: 255 }
-                                : { r: n[0], g: n[1], b: n[2] };
+                                : { r: r[0], g: r[1], b: r[2] };
                         })(),
-                        i = (function () {
+                        l = (function () {
                             let e = getComputedStyle(t).getPropertyValue("--custom-conjure-dither-opacity").trim();
                             if ("" === e) return 0.1;
-                            let n = parseFloat(e);
-                            return Number.isFinite(n) ? n : 0.1;
+                            let r = parseFloat(e);
+                            return Number.isFinite(r) ? r : 0.1;
                         })();
                     for (let t = 0; t < 8; t++) {
-                        let l = ((t + 0.5) / 8) * i;
-                        R[t] = `rgba(${e}, ${n}, ${r}, ${l})`;
+                        let i = ((t + 0.5) / 8) * l;
+                        E[t] = `rgba(${e}, ${r}, ${n}, ${i})`;
                     }
                 })(),
-                    (F = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
+                    (P = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
             }
-            N();
-            let P = [];
-            for (let e = 0; e < 8; e++) P.push([]);
-            let T = new MutationObserver(N);
-            T.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
-            let E = -1;
-            function C() {
-                let e = Math.max(i, p),
-                    t = Math.max(o, x);
-                (e === p && t === x && E === A && u.length > 0) ||
-                    ((p = e),
-                    (x = t),
-                    (E = A),
-                    (u = (function (e, t, n) {
-                        let r = [],
-                            { cols: i, rows: l } = {
-                                cols: Math.ceil(Math.max(0, e) / n) + 1,
-                                rows: Math.ceil(Math.min(600, Math.max(0, t)) / n) + 1,
+            C();
+            let T = [];
+            for (let e = 0; e < 8; e++) T.push([]);
+            let q = new MutationObserver(C);
+            q.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
+            let S = -1;
+            function D() {
+                let e = Math.max(o, M),
+                    t = Math.max(u, y);
+                (e === M && t === y && S === F && v.length > 0) ||
+                    ((M = e),
+                    (y = t),
+                    (S = F),
+                    (v = (function (e, t, r) {
+                        let n = [],
+                            { cols: l, rows: i } = {
+                                cols: Math.ceil(Math.max(0, e) / r) + 1,
+                                rows: Math.ceil(Math.min(600, Math.max(0, t)) / r) + 1,
                             };
-                        for (let e = 0; e < l; e++)
-                            for (let t = 0; t < i; t++)
-                                r.push({
+                        for (let e = 0; e < i; e++)
+                            for (let t = 0; t < l; t++)
+                                n.push({
                                     i: t,
                                     j: e,
-                                    threshold: 0.05 + 0.95 * d(t, e, 1),
-                                    phase: d(t, e, 2) * Math.PI * 2,
-                                    freq: 0.25 + 1.5 * d(t, e, 3),
+                                    threshold: 0.05 + 0.95 * m(t, e, 1),
+                                    phase: m(t, e, 2) * Math.PI * 2,
+                                    freq: 0.25 + 1.5 * m(t, e, 3),
                                 });
-                        return r;
-                    })(e, t, A)));
+                        return n;
+                    })(e, t, F)));
             }
-            function S() {
+            function z() {
                 let t = e.getBoundingClientRect(),
-                    l = t.width,
-                    a = t.height;
-                (0.5 > Math.abs(l - i) && 0.5 > Math.abs(a - o)) ||
-                    ((i = l),
-                    (o = a),
-                    (e.width = Math.max(1, Math.floor(i * r))),
-                    (e.height = Math.max(1, Math.floor(o * r))),
-                    null != n && (n.setTransform(r, 0, 0, r, 0, 0), (n.imageSmoothingEnabled = !1)),
-                    C(),
-                    z(0.001 * performance.now()));
+                    r = t.width,
+                    n = t.height;
+                (0.5 > Math.abs(r - o) && 0.5 > Math.abs(n - u)) ||
+                    ((o = r),
+                    (u = n),
+                    (e.width = Math.max(1, Math.floor(o * i))),
+                    (e.height = Math.max(1, Math.floor(u * i))),
+                    null != l && (l.setTransform(i, 0, 0, i, 0, 0), (l.imageSmoothingEnabled = !1)),
+                    D(),
+                    O(0.001 * performance.now()));
             }
-            S();
-            let q = new ResizeObserver(S);
-            (q.observe(t), window.addEventListener("resize", S));
-            let I = performance.now(),
-                O = 0;
-            function z(e) {
-                var t, r, l;
-                if (i <= 0 || o <= 0) return;
-                (n.clearRect(0, 0, i, o), (n.globalAlpha = j));
-                let a = A,
-                    s = "right" === g.current,
-                    h = s ? o : i,
-                    c = h <= 1e3 ? 1.2 : (1e3 / h) * 1.2;
-                for (let e = 0; e < 8; e++) P[e].length = 0;
-                for (let n = 0; n < u.length; n++) {
-                    let r,
-                        l = u[n],
-                        h = (l.i * a) / i,
-                        f = (l.j * a) / o,
-                        { u: d, v: m } = ((t = F), s ? { u: f, v: t ? 1 - h : h } : { u: h, v: f }),
-                        g =
+            z();
+            let L = new ResizeObserver(z);
+            (L.observe(t), window.addEventListener("resize", z));
+            let V = performance.now(),
+                B = 0,
+                I = null != n ? V + n : null;
+            function O(e) {
+                var t, r, n;
+                if (o <= 0 || u <= 0) return;
+                (l.clearRect(0, 0, o, u), (l.globalAlpha = k));
+                let i = F,
+                    a = "right" === p.current,
+                    s = a ? u : o,
+                    h = s <= 1e3 ? 1.2 : (1e3 / s) * 1.2;
+                for (let e = 0; e < 8; e++) T[e].length = 0;
+                for (let r = 0; r < v.length; r++) {
+                    let n,
+                        l = v[r],
+                        s = (l.i * i) / o,
+                        c = (l.j * i) / u,
+                        { u: f, v: m } = ((t = P), a ? { u: c, v: t ? 1 - s : s } : { u: s, v: c }),
+                        d =
                             0.55 *
-                            (function (e, t, n) {
-                                let r = (e - 0.5) * n,
-                                    i = 1 - t,
-                                    l = 1 - Math.sqrt(r * r + i * i * 1.8);
-                                return l < 0 ? 0 : l * l;
-                            })(d, m, c);
-                    for (let e = 0; e < M.length; e++) {
-                        let t = M[e],
-                            n = d - t.x,
-                            r = m - t.y,
-                            i = (n * n + r * r) / (t.radius * t.radius);
-                        g += t.strength * Math.exp(-i) * 0.7;
+                            (function (e, t, r) {
+                                let n = (e - 0.5) * r,
+                                    l = 1 - t,
+                                    i = 1 - Math.sqrt(n * n + l * l * 1.8);
+                                return i < 0 ? 0 : i * i;
+                            })(f, m, h);
+                    for (let e = 0; e < $.length; e++) {
+                        let t = $[e],
+                            r = f - t.x,
+                            n = m - t.y,
+                            l = (r * r + n * n) / (t.radius * t.radius);
+                        d += t.strength * Math.exp(-l) * 0.7;
                     }
-                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * y + l.phase),
-                        v = g - (l.threshold + p);
+                    let g = 0.1 * Math.sin(e * l.freq * 1.85 * R + l.phase),
+                        p = d - (l.threshold + g);
                     1;
-                    if (!(v <= -0.1)) {
-                        if (v >= 0.1) r = 7;
+                    if (!(p <= -0.1)) {
+                        if (p >= 0.1) n = 7;
                         else {
-                            let e = (v + 0.1) / 0.2;
-                            r = Math.min(7, Math.floor(e * e * (3 - 2 * e) * 8));
+                            let e = (p + 0.1) / 0.2;
+                            n = Math.min(7, Math.floor(e * e * (3 - 2 * e) * 8));
                         }
-                        Number.isFinite(r) && P[r].push(l);
+                        Number.isFinite(n) && T[n].push(l);
                     }
                 }
                 for (let e = 0; e < 8; e++) {
-                    let t = P[e];
+                    let t = T[e];
                     if (0 !== t.length) {
-                        ((n.fillStyle = R[e]), n.beginPath());
+                        ((l.fillStyle = E[e]), l.beginPath());
                         for (let e = 0; e < t.length; e++) {
-                            let i = t[e];
-                            ((r = i.i * a),
-                                (l = i.j * a),
-                                "function" == typeof n.roundRect
-                                    ? n.roundRect(r, l, 4, 4, 1)
-                                    : (n.moveTo(r + 1, l),
-                                      n.arcTo(r + 4, l, r + 4, l + 4, 1),
-                                      n.arcTo(r + 4, l + 4, r, l + 4, 1),
-                                      n.arcTo(r, l + 4, r, l, 1),
-                                      n.arcTo(r, l, r + 4, l, 1)));
+                            let a = t[e];
+                            ((r = a.i * i),
+                                (n = a.j * i),
+                                "function" == typeof l.roundRect
+                                    ? l.roundRect(r, n, 4, 4, 1)
+                                    : (l.moveTo(r + 1, n),
+                                      l.arcTo(r + 4, n, r + 4, n + 4, 1),
+                                      l.arcTo(r + 4, n + 4, r, n + 4, 1),
+                                      l.arcTo(r, n + 4, r, n, 1),
+                                      l.arcTo(r, n, r + 4, n, 1)));
                         }
-                        n.fill();
+                        l.fill();
                     }
                 }
             }
-            function D(e) {
-                if (!v.current) {
-                    O = 0;
+            function W(e) {
+                if (!x.current) {
+                    B = 0;
                     return;
                 }
-                A = s[h];
-                let t = e - I,
-                    n = Math.min(64, t);
-                ((I = e),
+                F = s[h];
+                let t = e - V,
+                    r = Math.min(64, t);
+                ((V = e),
                     !(function (e, t) {
                         if (
-                            ++k < 30 ||
+                            ++N < 30 ||
                             e > 100 ||
-                            ($.push(e), $.length > 60 && $.shift(), $.length < 60 || t - c < 3e3 || h >= s.length - 1)
+                            (A.push(e), A.length > 60 && A.shift(), A.length < 60 || t - c < 3e3 || h >= s.length - 1)
                         )
                             return;
-                        let n = 0;
-                        for (let e = 0; e < $.length; e++) n += $[e];
-                        let r = n / $.length;
-                        r <= 22 ||
-                            ((A = s[++h]),
+                        let r = 0;
+                        for (let e = 0; e < A.length; e++) r += A[e];
+                        let n = r / A.length;
+                        n <= 22 ||
+                            ((F = s[++h]),
                             (c = t),
-                            (E = -1),
-                            C(),
+                            (S = -1),
+                            D(),
                             console.log(
                                 "[Conjure/glow-dither] perf degrade \u2192 spacing",
-                                A,
+                                F,
                                 "avg",
-                                r.toFixed(2),
+                                n.toFixed(2),
                                 "ms",
                             ));
                     })(t, e));
-                let r = f[m.current] ?? f.home,
-                    i = 1 - Math.exp(-n / 80);
-                ((w += (r.blob - w) * i), (y += (r.twink - y) * i), (j += (r.alpha - j) * i));
-                let l = 1.5 * w;
-                for (let e = 0; e < M.length; e++) {
-                    let t = M[e];
-                    ((t.x += t.vx * n * l),
-                        (t.y += t.vy * n * l),
+                let n = f[g.current] ?? f.home,
+                    l = 1 - Math.exp(-r / 80);
+                ((j += (n.blob - j) * l), (R += (n.twink - R) * l), (k += (n.alpha - k) * l));
+                let i = 1.5 * j;
+                for (let e = 0; e < $.length; e++) {
+                    let t = $[e];
+                    ((t.x += t.vx * r * i),
+                        (t.y += t.vy * r * i),
                         (t.x < -0.1 || t.x > 1.1) && (t.vx *= -1),
                         (t.y < 0.1 || t.y > 1.1) && (t.vy *= -1),
-                        (t.vx += (Math.random() - 0.5) * 2e-7 * n),
-                        (t.vy += (Math.random() - 0.5) * 2e-7 * n));
+                        (t.vx += (Math.random() - 0.5) * 2e-7 * r),
+                        (t.vy += (Math.random() - 0.5) * 2e-7 * r));
                 }
-                (z(0.001 * e), (O = requestAnimationFrame(D)));
+                if ((O(0.001 * e), null != I && e >= I)) {
+                    ((B = 0), (w.current = null));
+                    return;
+                }
+                B = requestAnimationFrame(W);
             }
             return (
-                (b.current = () => {
-                    0 === O && ((I = performance.now()), (O = requestAnimationFrame(D)));
+                (w.current = () => {
+                    0 === B && ((V = performance.now()), (B = requestAnimationFrame(W)));
                 }),
-                (O = requestAnimationFrame(D)),
+                r
+                    ? ((j = f[g.current].blob),
+                      (R = f[g.current].twink),
+                      (k = f[g.current].alpha),
+                      O(0.001 * performance.now()),
+                      (w.current = null))
+                    : (B = requestAnimationFrame(W)),
                 () => {
-                    ((b.current = null),
-                        cancelAnimationFrame(O),
+                    ((w.current = null),
+                        cancelAnimationFrame(B),
+                        L.disconnect(),
                         q.disconnect(),
-                        T.disconnect(),
-                        window.removeEventListener("resize", S));
+                        window.removeEventListener("resize", z));
                 }
             );
         }, []));
-    let x = u.P5;
+    let M = u.P5;
     return (
-        (x = "conversation" === t ? `${x} ${u.wY}` : "home" === t ? `${x} ${u.Qy}` : `${x} ${u.fR}`),
-        "right" === n && (x = `${x} ${u.L$}`),
-        (0, r.jsx)("div", {
-            ref: l,
-            className: x,
+        (M = "conversation" === t ? `${M} ${u.wY}` : "home" === t ? `${M} ${u.Qy}` : `${M} ${u.fR}`),
+        "right" === r && (M = `${M} ${u.L$}`),
+        null != i && (M = `${M} ${u.f1}`),
+        (0, n.jsx)("div", {
+            ref: a,
+            className: M,
             "aria-hidden": "true",
-            children: (0, r.jsx)("canvas", { ref: a, className: "right" === n ? `${u.DX} ${u.l4}` : u.DX }),
+            children: (0, n.jsx)("canvas", { ref: d, className: "right" === r ? `${u.DX} ${u.l4}` : u.DX }),
         })
     );
 });
-var g = n(839806);
+var g = r(839806);
 function p(e) {
-    let { projectId: t, orientation: n = "bottom", state: i } = e,
-        o = (0, l.bG)([a.A], () => (a.A.isThinking(t) ? "thinking" : "conversation"), [t]),
-        u = i ?? o,
-        s = "right" === n ? `${g.ys} ${g.WR}` : g.ys;
-    return (0, r.jsxs)("div", {
-        className: g.D1,
+    let { state: t, orientation: r, intro: l = !1 } = e,
+        i = "right" === r ? `${g.ys} ${g.WR}` : g.ys;
+    return (0, n.jsxs)("div", {
+        className: l ? `${g.D1} ${g.BE}` : g.D1,
         "data-conjure-glow": !0,
         "aria-hidden": !0,
         children: [
-            (0, r.jsxs)("div", {
-                className: s,
-                "data-state": u,
-                children: [(0, r.jsx)("div", { className: g.Fc }), (0, r.jsx)("div", { className: g.dW })],
+            (0, n.jsxs)("div", {
+                className: i,
+                "data-state": t,
+                children: [(0, n.jsx)("div", { className: g.Fc }), (0, n.jsx)("div", { className: g.dW })],
             }),
-            (0, r.jsx)(m, { state: u, orientation: n }),
+            (0, n.jsx)(d, { state: t, orientation: r, introMs: l ? 1e3 : void 0 }),
         ],
     });
+}
+function b(e) {
+    let { projectId: t, orientation: r = "bottom", state: l } = e,
+        o = (0, i.bG)([a.A], () => (a.A.isThinking(t) ? "thinking" : "conversation"), [t]);
+    return (0, n.jsx)(p, { state: l ?? o, orientation: r });
+}
+function v() {
+    return (0, n.jsx)(p, { state: "thinking", orientation: "bottom", intro: !0 });
 }

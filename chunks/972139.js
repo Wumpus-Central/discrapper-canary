@@ -12048,7 +12048,9 @@ function dB(e) {
         { projectId: n, event: l } = e,
         r = (function (e, t, n) {
             let l = t.actor_user_id;
-            i.useEffect(() => (0, uH.Y_)(l), [l]);
+            i.useEffect(() => {
+                (0, uH.Y_)(l);
+            }, [l]);
             let r = (0, o.bG)([a3.default], () => (null == l ? null : a3.default.getUser(l)), [l]),
                 a = (0, s5.tx)(r),
                 s = cQ(e),
@@ -18428,7 +18430,7 @@ function gR(e) {
                                   ? (0, a.jsx)(f2, { projectId: t, onClose: v ?? (() => {}) }, t)
                                   : (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            (0, a.jsx)(hh.A, { projectId: t }),
+                                            (0, a.jsx)(hh.Ay, { projectId: t }),
                                             (0, a.jsx)(rM.Ay, {
                                                 "aria-label": E.intl.string(E.t["/VQax8"]),
                                                 toolbar: (0, a.jsxs)(a.Fragment, {

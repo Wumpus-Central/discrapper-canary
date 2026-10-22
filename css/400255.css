@@ -127,8 +127,13 @@
     box-sizing: border-box;
     flex-direction: column;
     gap: var(--space-12);
+    isolation: isolate;
+    overflow: hidden;
     padding: var(--space-16);
-    width: 360px
+    position: relative;
+    width: 360px;
+    --custom-conjure-footer-bleed-inline: var(--space-16);
+    --custom-conjure-footer-bleed-bottom: var(--space-16)
 }
 
 .body_d6dae9,
@@ -168,150 +173,30 @@
 }
 
 .footer_d6dae9 {
+    border-top: 1px solid var(--border-subtle);
     display: flex;
     flex-direction: column;
-    gap: var(--space-8)
-}
-
-.trail_d6dae9 {
-    align-items: center;
-    display: flex;
-    height: var(--space-12)
-}
-
-.trailLine_d6dae9 {
-    background: linear-gradient(90deg, transparent, var(--illo-purple-40) 45%, var(--illo-purple-30));
-    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 calc(50% + .5px));
-    flex: 1 1 auto;
-    height: 2px
-}
-
-.trailTail_d6dae9 {
-    align-self: stretch;
-    flex: 0 0 30%;
+    margin-inline: calc(var(--custom-conjure-footer-bleed-inline, 0px)*-1);
+    margin-bottom: calc(var(--custom-conjure-footer-bleed-bottom, 0px)*-1);
+    padding: var(--space-8);
+    padding-inline-start: var(--space-16);
     position: relative
 }
 
-.trailSparkle_d6dae9,
-.trailStar_d6dae9 {
-    background: var(--illo-purple-30);
-    filter: drop-shadow(0 0 2px var(--illo-purple-40));
-    position: absolute
-}
-
-.trailSparkle_d6dae9 {
-    border-radius: var(--radius-round);
-    height: 2px;
-    width: 2px
-}
-
-.trailSparkle_d6dae9:first-child {
-    border-radius: 0;
-    height: 1px;
-    inset-block-start: calc(50% - 1px);
-    inset-inline-start: 4%;
-    width: var(--space-6)
-}
-
-.trailSparkle_d6dae9:nth-child(2) {
-    inset-block-start: calc(50% - 1px);
-    inset-inline-start: 18%
-}
-
-.trailSparkle_d6dae9:nth-child(3) {
-    inset-block-start: calc(50% + 1px);
-    inset-inline-start: 32%
-}
-
-.trailSparkle_d6dae9:nth-child(4) {
-    height: 3px;
-    inset-block-start: calc(50% - 2px);
-    inset-inline-start: 50%;
-    width: 3px
-}
-
-.trailSparkle_d6dae9:nth-child(5) {
-    inset-block-start: 0;
-    inset-inline-start: 64%
-}
-
-.trailSparkle_d6dae9:nth-child(6) {
-    inset-block-start: calc(50% + 2px);
-    inset-inline-start: 96%
-}
-
-.trailStar_d6dae9 {
-    clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
-    height: var(--space-10);
-    inset-block-start: calc(50% - var(--space-10)/2);
-    inset-inline-start: calc(80% - var(--space-10)/2);
-    width: var(--space-10)
-}
-
-.full-motion .trailSparkle_d6dae9 {
-    animation: trailShimmer_d6dae9 .9s ease-out both
-}
-
-.full-motion .trailSparkle_d6dae9:nth-child(2) {
-    animation-delay: 60ms
-}
-
-.full-motion .trailSparkle_d6dae9:nth-child(3) {
-    animation-delay: .12s
-}
-
-.full-motion .trailSparkle_d6dae9:nth-child(4) {
-    animation-delay: .18s
-}
-
-.full-motion .trailSparkle_d6dae9:nth-child(5) {
-    animation-delay: .24s
-}
-
-.full-motion .trailSparkle_d6dae9:nth-child(6) {
-    animation-delay: .36s
-}
-
-.full-motion .trailStar_d6dae9 {
-    animation: trailStarPop_d6dae9 .7s ease-out .26s both
-}
-
-@keyframes trailShimmer_d6dae9 {
-    0% {
-        opacity: 0;
-        transform: translateX(-4px)
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateX(1px) scale(1.4)
-    }
-
-    to {
-        opacity: 1;
-        transform: none
-    }
-}
-
-@keyframes trailStarPop_d6dae9 {
-    0% {
-        opacity: 0;
-        transform: scale(.2) rotate(-45deg)
-    }
-
-    60% {
-        opacity: 1;
-        transform: scale(1.35) rotate(10deg)
-    }
-
-    to {
-        opacity: 1;
-        transform: none
-    }
+.footerGlow_d6dae9 {
+    inset-inline: 0;
+    bottom: 0;
+    pointer-events: none;
+    position: absolute;
+    top: calc(var(--space-80)*-1);
+    z-index: -1
 }
 
 .footerRow_d6dae9 {
-    justify-content: space-between
+    justify-content: space-between;
+    min-height: var(--space-32);
+    position: relative;
+    z-index: 1
 }
 
 .creator_d6dae9,
@@ -326,6 +211,10 @@
     color: var(--text-subtle);
     cursor: pointer;
     min-width: 0
+}
+
+.creator_d6dae9>:first-child {
+    flex-shrink: 0
 }
 
 .creator_d6dae9:hover {
@@ -836,4 +725,4 @@
     width: 139px
 }
 
-/*# sourceMappingURL=400255.271a5b92279ba9e8.css.map*/
+/*# sourceMappingURL=400255.f101bb2ef39abe07.css.map*/

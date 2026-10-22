@@ -2,66 +2,61 @@ n.d(t, { A: () => x });
 var l = n(477900);
 n(582128);
 var r = n(939249),
-    s = n(97808),
+    o = n(97808),
     a = n(778712),
-    o = n(834730),
-    u = n(123292),
+    s = n(834730),
+    u = n(821609),
     i = n(402860),
     d = n(427262),
-    c = n(95264),
-    m = n(652215),
-    v = n(248675),
-    f = n(105292),
+    c = n(659723),
+    v = n(95264),
+    f = n(652215),
+    m = n(248675),
+    g = n(105292),
     p = n(41799);
 function x(e) {
-    let { creator: t, remixProject: n, guildId: x, onClose: g } = e;
+    let { creator: t, remixProject: n, guildId: x, onClose: h } = e;
     return (0, l.jsxs)("div", {
         className: p.qr,
         children: [
-            (0, l.jsxs)("div", {
-                className: p.Pq,
-                "aria-hidden": !0,
-                children: [
-                    (0, l.jsx)("span", { className: p.ly }),
-                    (0, l.jsxs)("span", {
-                        className: p.f5,
-                        children: [
-                            Array.from({ length: 6 }, (e, t) => (0, l.jsx)("span", { className: p.Dg }, t)),
-                            (0, l.jsx)("span", { className: p.n4 }),
-                        ],
-                    }),
-                ],
-            }),
+            (0, l.jsx)("div", { className: p.xX, children: (0, l.jsx)(c.Al, {}) }),
             (0, l.jsxs)("div", {
                 className: p.OZ,
                 children: [
-                    (0, l.jsxs)(r.D, {
-                        className: p.xL,
-                        onClick: function () {
-                            (g(),
-                                (0, i.openUserProfileModal)({
-                                    userId: t.id,
-                                    guildId: x ?? void 0,
-                                    appContext: m.BRT.APP,
-                                }));
-                        },
-                        children: [
-                            (0, l.jsx)(s.eu, { src: t.getAvatarURL(x, 32), size: a._3.SIZE_16, "aria-hidden": !0 }),
-                            (0, l.jsx)(o.E, {
-                                variant: "text-sm/normal",
-                                color: "none",
-                                lineClamp: 1,
-                                children: f.intl.formatToPlainString(v.default["6/x9LD"], { name: (0, d.mG)(t) }),
-                            }),
-                        ],
-                    }),
-                    null != n
-                        ? (0, l.jsx)(u.Q, {
-                              variant: "primary",
-                              textVariant: "text-sm/medium",
-                              text: f.intl.string(v.default.KMwCb7),
+                    null != t
+                        ? (0, l.jsxs)(r.D, {
+                              className: p.xL,
                               onClick: function () {
-                                  null != n && null != x && (g(), (0, c.A)(n, x));
+                                  null != t &&
+                                      (h(),
+                                      (0, i.openUserProfileModal)({
+                                          userId: t.id,
+                                          guildId: x ?? void 0,
+                                          appContext: f.BRT.APP,
+                                      }));
+                              },
+                              children: [
+                                  (0, l.jsx)(o.eu, {
+                                      src: t.getAvatarURL(x, 40),
+                                      size: a._3.SIZE_20,
+                                      "aria-hidden": !0,
+                                  }),
+                                  (0, l.jsx)(s.E, {
+                                      variant: "text-sm/normal",
+                                      color: "none",
+                                      lineClamp: 1,
+                                      children: g.intl.formatToPlainString(m.default["6/x9LD"], { name: (0, d.mG)(t) }),
+                                  }),
+                              ],
+                          })
+                        : (0, l.jsx)("span", {}),
+                    null != n
+                        ? (0, l.jsx)(u.$, {
+                              variant: "secondary",
+                              size: "sm",
+                              text: g.intl.string(m.default.XWgAfc),
+                              onClick: function () {
+                                  null != n && null != x && (h(), (0, v.A)(n, x));
                               },
                           })
                         : null,

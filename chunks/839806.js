@@ -8,4 +8,7 @@ e.exports = {
     Wm: "conjureGlowThinkingMaskRipple__8e816",
     WR: "glowRight__8e816",
     DO: "conjureGlowThinkingPulseRight__8e816",
+    BE: "glowLayerIntro__8e816",
+    b_: "conjureGlowIntroGrow__8e816",
+    Ac: "conjureGlowIntroFade__8e816",
 };
