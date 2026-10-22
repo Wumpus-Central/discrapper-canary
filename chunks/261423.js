@@ -5066,7 +5066,7 @@ function l3() {
 }
 var l6 = a(858899),
     l4 = a(123292),
-    l8 = a(780907),
+    l8 = a(313960),
     l7 = a(56562);
 let l9 = [
     { label: "Wuthering Waves", value: "1247227126416146462" },
