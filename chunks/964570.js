@@ -544,7 +544,7 @@ function tM() {
     for (let t = tR.sp.length - 1; t >= 0; t--) {
         let i = tR.VD[tR.sp[t]],
             l = new Date(e);
-        if ((l.setMonth(e.getMonth() + i.tenureReqNumMonths), l.setHours(l.getHours() + 30), n > l.getTime()))
+        if ((l.setMonth(l.getMonth() + i.tenureReqNumMonths), l.setHours(l.getHours() + 30), n > l.getTime()))
             if (n - l.getTime() < 6048e5) return i.id;
             else break;
     }
@@ -2798,7 +2798,7 @@ function lb(e) {
         }, [r]),
         g = eu.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lN.A)("1792691422931", !0);
+        let e = (0, lN.A)("1792691645139", !0);
         t =
             null != e
                 ? eO.intl.formatToPlainString(eO.t.wve4kg, { webBuildOverride: a.id, builtAt: e })

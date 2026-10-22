@@ -1,87 +1,95 @@
-t.d(u, { rG: () => p, Lh: () => m, Wo: () => h, p3: () => G, bu: () => b, $F: () => A, Xb: () => g });
+u.d(t, { rG: () => b, Lh: () => g, Wo: () => h, p3: () => S, bu: () => A, $F: () => G, Xb: () => T });
 var n,
-    r = t(17928),
-    l = t(439174),
-    i = t(321191),
-    a = t(287809),
-    d = t(166403),
-    s = t(474090);
-let f = (0, t(945810).mj)({
+    r = u(582128),
+    l = u(17928),
+    i = u(439174),
+    a = u(321191),
+    s = u(287809),
+    d = u(166403),
+    o = u(474090);
+let f = (0, u(945810).mj)({
     kind: "user",
     name: "2026-08-nitro-tenure-badge-withheld-state",
     defaultConfig: { showWithheldBadge: !1 },
     variations: { 0: { showWithheldBadge: !1 }, 1: { showWithheldBadge: !0 } },
 });
-function o(e) {
-    return (0, r.bG)([i.A, a.default], () => {
-        let u,
-            t = null != e ? i.A.getUserProfile(e) : null,
-            n = t?.premiumSince;
-        if (null == t || null == n) return null;
+function c(e) {
+    return (0, l.bG)([a.A, s.default], () => {
+        let t,
+            u = null != e ? a.A.getUserProfile(e) : null,
+            n = u?.premiumSince;
+        if (null == u || null == n) return null;
         if (
-            (t?.badges?.forEach((e) => {
-                let t = (0, l.cZ)(e.id);
-                null != t && (u = t);
+            (u?.badges?.forEach((e) => {
+                let u = (0, i.cZ)(e.id);
+                null != u && (t = u);
             }),
-            null != u)
+            null != t)
         )
-            return u;
-        let r = a.default.getCurrentUser();
-        return e === r?.id && r?.hasPaidTier2Subscription() ? (0, l.UO)(n) : null;
+            return t;
+        let r = s.default.getCurrentUser();
+        return e === r?.id && r?.hasPaidTier2Subscription() ? (0, i.UO)(n) : null;
     });
 }
-var c = t(202541),
+var m = u(202541),
     h = (((n = {}).UPCOMING = "upcoming"), (n.WITHHELD = "withheld"), (n.EARNED = "earned"), n);
-function m() {
-    let e = (0, r.bG)([a.default], () => a.default.getCurrentUser());
-    return o(e?.id) ?? null;
-}
 function p(e) {
-    return (0, r.bG)([i.A], () => {
-        if (null == e) return null;
-        let u = i.A.getUserProfile(e);
-        return u?.premiumSince;
-    });
+    if (null == e) return e;
+    let t = e instanceof Date ? e : new Date(e);
+    return Number.isNaN(t.getTime()) ? null : t;
 }
 function g() {
-    let e = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        u = (0, s.YE)(e, c.PremiumTypes.TIER_2),
-        t = (0, r.bG)(
+    let e = (0, l.bG)([s.default], () => s.default.getCurrentUser());
+    return c(e?.id) ?? null;
+}
+function b(e) {
+    let t = (0, l.bG)([a.A], () => {
+        if (null == e) return null;
+        let t = a.A.getUserProfile(e);
+        return t?.premiumSince;
+    });
+    return (0, r.useMemo)(() => p(t), [t]);
+}
+function T() {
+    let e = (0, l.bG)([s.default], () => s.default.getCurrentUser()),
+        t = (0, o.YE)(e, m.PremiumTypes.TIER_2),
+        u = (0, l.bG)(
             [d.A],
             () => {
                 let e = d.A.getPremiumSubscription();
-                return null != e && u ? e.premiumSince : null;
+                return null != e && t ? e.premiumSince : null;
             },
-            [u],
+            [t],
         ),
-        n = p(e?.id);
-    return t ?? n;
-}
-function b() {
-    let e = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        u = (0, r.bG)([d.A], () => d.A.getPremiumTypeSubscription());
-    return (0, s.YE)(e, c.PremiumTypes.TIER_2) ? (0, l.UO)(u?.premiumSince) : null;
+        n = b(e?.id),
+        i = u ?? n;
+    return (0, r.useMemo)(() => p(i), [i]);
 }
 function A() {
-    let e,
-        u,
-        t = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        n = G(t?.id),
-        i =
-            ((e = m()),
-            (u = (0, r.bG)([d.A], () => d.A.getPremiumTypeSubscription())),
-            null == e || null == u || null == u.premiumSince ? null : (0, l.Xr)(e, u.premiumSince)),
-        s = g();
-    if (null != n) return { ...n, earnedOnDate: i, status: "earned" };
-    if (null == s) return null;
-    if (!t?.hasPaidTier2Subscription()) {
-        let e = (0, l.UO)(s);
-        if (null != e && f.getConfig({ location: "useTieredTenureBadgeData" }).showWithheldBadge)
-            return { ...c.VD[e], earnedOnDate: (0, l.Xr)(e, s), status: "withheld" };
-    }
-    return { ...Object.values(c.VD)[0], status: "upcoming" };
+    let e = (0, l.bG)([s.default], () => s.default.getCurrentUser()),
+        t = (0, l.bG)([d.A], () => d.A.getPremiumTypeSubscription());
+    return (0, o.YE)(e, m.PremiumTypes.TIER_2) ? (0, i.UO)(t?.premiumSince) : null;
 }
-function G(e) {
-    let u = o(e);
-    return null == u ? null : c.VD[u];
+function G() {
+    let e,
+        t,
+        u = (0, l.bG)([s.default], () => s.default.getCurrentUser()),
+        n = S(u?.id),
+        r =
+            ((e = g()),
+            (t = (0, l.bG)([d.A], () => d.A.getPremiumTypeSubscription())),
+            null == e || null == t || null == t.premiumSince ? null : (0, i.Xr)(e, t.premiumSince)),
+        a = T();
+    if (null != n) return { ...n, earnedOnDate: r, status: "earned" };
+    if (null == a) return null;
+    if (!u?.hasPaidTier2Subscription()) {
+        let e = (0, i.UO)(a);
+        if (null != e && f.getConfig({ location: "useTieredTenureBadgeData" }).showWithheldBadge)
+            return { ...m.VD[e], earnedOnDate: (0, i.Xr)(e, a), status: "withheld" };
+    }
+    return { ...Object.values(m.VD)[0], status: "upcoming" };
+}
+function S(e) {
+    let t = c(e);
+    return null == t ? null : m.VD[t];
 }
