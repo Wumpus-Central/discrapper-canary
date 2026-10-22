@@ -1227,6 +1227,7 @@ class eA extends S.A {
     setVideoEncoderExperiments(e) {}
     setVideoEncoderLatencyProfile(e) {}
     setSingleCpuCopy(e) {}
+    setAvx512EntropyHistogram(e) {}
     setAudioLatencyMeasurement(e) {}
     setAudioVideoOverridesTransport(e) {}
     setBandwidthEstimationExperiments(e) {}

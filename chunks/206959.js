@@ -1107,6 +1107,9 @@ class W extends N.A {
     setSingleCpuCopy(e) {
         ((this.singleCpuCopy = e), this.conn.setTransportOptions({ singleCpuCopy: this.singleCpuCopy }));
     }
+    setAvx512EntropyHistogram(e) {
+        (0, b.lE)().setAvx512EntropyHistogram?.(e);
+    }
     setAudioLatencyMeasurement(e) {
         this.conn.setTransportOptions({ audioLatencyMeasurement: e });
     }
