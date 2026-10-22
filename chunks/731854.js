@@ -255,7 +255,6 @@ var ed =
         (I.WMF_GPU_ENCODE = "wmf_gpu_encode"),
         (I.USE_LIBOPENH264_DECODER = "use_libopenh264_decoder"),
         (I.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS = "swallow_volume_only_speaking_events"),
-        (I.BROWSER_TRANSCEIVER_PADDING_REMOVAL = "browser_transceiver_padding_removal"),
         (I.INTEL_GPU_DISABLE = "intel_gpu_disable"),
         (I.WEB_STREAMING_MAINTAIN_FRAMERATE = "web_streaming_maintain_framerate"),
         (I.WEB_STREAMING_BALANCED = "web_streaming_balanced"),

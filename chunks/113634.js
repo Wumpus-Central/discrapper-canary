@@ -2102,17 +2102,12 @@ class eJ extends eA {
             this.videoSupported &&
                 (this.addTransceivers("video", "recvonly", 1, this.input.getVideoStream()),
                 (this.videoTransceiver = n.getTransceivers()[1])),
-            (e.experiments ?? []).includes("browser_transceiver_padding_removal") &&
-                this.setExperimentFlag(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL, !0),
             (e.experiments ?? []).includes("web_streaming_maintain_framerate") &&
                 this.setExperimentFlag(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE, !0),
             (e.experiments ?? []).includes("web_streaming_balanced") &&
                 this.setExperimentFlag(D.fd.WEB_STREAMING_BALANCED, !0),
             (e.experiments ?? []).includes("web_streaming_motion_content_hint") &&
                 this.setExperimentFlag(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT, !0),
-            !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) &&
-                (this.addTransceivers("audio", "recvonly", 10),
-                this.videoSupported && this.addTransceivers("video", "recvonly", 10)),
             this.setStream(this.input.stream),
             this.logger.info(`Renegotiating: Initial negotiation, user id: ${e.userId}`),
             this.handleNegotiationNeeded(!0));
@@ -2162,30 +2157,23 @@ class eJ extends eA {
         if (null != i) return void this.logger.error(`Refusing to create user ${e}, SSRC ${i} is already in use`);
         let r = !1,
             a = this.users.get(e);
-        if ((null == a && (a = {}), a.audioSSRC !== t)) {
-            (this.releaseSSRC(a.audioSSRC, e),
+        if (
+            (null == a && (a = {}),
+            a.audioSSRC !== t &&
+                (this.releaseSSRC(a.audioSSRC, e),
                 (a.audioSSRC = t),
                 (r = !0),
-                this.unassignedStreams.audio.push({ cname: e, ssrc: t }));
-            let n = this.inactiveTransceivers.audio.length,
-                i = this.unassignedStreams.audio.length,
-                s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + i - n;
-            this.addTransceivers("audio", "recvonly", s);
-        }
-        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === a.videoSSRC)) {
+                this.unassignedStreams.audio.push({ cname: e, ssrc: t })),
+            this.videoSupported && void 0 !== n && (!eZ || void 0 === a.videoSSRC))
+        ) {
             let t = null != n && n.length > 0 ? n[0] : 0;
-            if (t > 0) {
-                if (a.videoSSRC !== t) {
-                    (this.releaseSSRC(a.videoSSRC, e),
-                        (a.videoSSRC = t),
-                        (r = !0),
-                        this.unassignedStreams.video.push({ cname: e, ssrc: t }));
-                    let n = this.inactiveTransceivers.video.length,
-                        i = this.unassignedStreams.video.length,
-                        s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + i - n;
-                    this.addTransceivers("video", "recvonly", s);
-                }
-            } else null != a.videoSSRC && (this.releaseSSRC(a.videoSSRC, e), (a.videoSSRC = void 0), (r = !0));
+            t > 0
+                ? a.videoSSRC !== t &&
+                  (this.releaseSSRC(a.videoSSRC, e),
+                  (a.videoSSRC = t),
+                  (r = !0),
+                  this.unassignedStreams.video.push({ cname: e, ssrc: t }))
+                : null != a.videoSSRC && (this.releaseSSRC(a.videoSSRC, e), (a.videoSSRC = void 0), (r = !0));
         }
         if (r) {
             this.users.set(e, a);
@@ -2530,7 +2518,10 @@ class eJ extends eA {
         let t = eG()(this.unassignedStreams.audio),
             n = eG()(this.unassignedStreams.video),
             i = ek()(this.users);
-        ((this.unassignedStreams.audio = []), (this.unassignedStreams.video = []));
+        ((this.unassignedStreams.audio = []),
+            (this.unassignedStreams.video = []),
+            this.addTransceivers("audio", "recvonly", t.length - this.inactiveTransceivers.audio.length),
+            this.addTransceivers("video", "recvonly", n.length - this.inactiveTransceivers.video.length));
         let r = this.pc,
             a = await r.createOffer(this.makeOfferAnswerOptions());
         this.isScreenShareAudioEnabled() &&
