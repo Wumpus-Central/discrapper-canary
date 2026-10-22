@@ -322,9 +322,12 @@
 
 .composerEditor__86f16 {
     flex: 1;
+    -webkit-mask-image: linear-gradient(transparent, #000 calc((var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2), #000 calc(100% - (var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2), transparent);
+    mask-image: linear-gradient(transparent, #000 calc((var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2), #000 calc(100% - (var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2), transparent);
     max-height: var(--custom-channel-textarea-text-area-max-height, 50vh);
     min-width: 0;
-    overflow-y: auto
+    overflow-y: auto;
+    scroll-padding-block: calc((var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2)
 }
 
 .composerInput__86f16 {
@@ -723,4 +726,4 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=ea0b4bac08439667.css.map*/
+/*# sourceMappingURL=e62980b0345d6bbc.css.map*/
