@@ -1,4 +1,4 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(73153);
 let u = {};
@@ -12,7 +12,7 @@ class l extends i.Ay.Store {
         return t && a(e, t);
     }
 }
-let o = new l(r.h, {
+let c = new l(r.h, {
     VOICE_CHANNEL_APP_SURFACE_TOGGLE: function (e) {
         let { channelId: t } = e;
         u[t] = !a(t);

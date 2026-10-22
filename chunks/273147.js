@@ -70,8 +70,8 @@ var z = n(280450),
     W = n(587168),
     J = n(193738),
     X = n(413737),
-    q = n(996988);
-function Z(e) {
+    Z = n(996988);
+function q(e) {
     let { user: t, guildId: n } = e;
     return t.isNonUserBot()
         ? (0, i.jsx)(K.A, { user: t })
@@ -85,8 +85,8 @@ function $(e) {
         ? null
         : (0, i.jsxs)(W.A, {
               children: [
-                  !t.isNonUserBot() && (0, i.jsx)(J.A, { user: t, themeType: q.d.EMBED }),
-                  (0, i.jsx)(Z, { user: t, guildId: n ?? void 0 }),
+                  !t.isNonUserBot() && (0, i.jsx)(J.A, { user: t, themeType: Z.d.EMBED }),
+                  (0, i.jsx)(q, { user: t, guildId: n ?? void 0 }),
               ],
           });
 }
@@ -202,7 +202,7 @@ function ed(e) {
                         user: t,
                         guildId: L ?? void 0,
                         channelId: a ?? void 0,
-                        themeType: q.d.EMBED,
+                        themeType: Z.d.EMBED,
                         className: el.WO,
                         referenceClassName: el.RQ,
                         disableToolbar: !0,
@@ -216,7 +216,7 @@ function ed(e) {
                         onClickName: J,
                         pronouns: y?.pronouns,
                         className: el.eF,
-                        trailing: (0, i.jsx)(j.A, { displayProfile: y, themeType: q.d.EMBED }),
+                        trailing: (0, i.jsx)(j.A, { displayProfile: y, themeType: Z.d.EMBED }),
                     }),
                     (0, i.jsx)(eo, { user: t, guildId: n, channelId: a }),
                     U && (0, i.jsx)(b.A.Overlay, { className: el.In, children: (0, i.jsx)(S.A, { username: M }) }),

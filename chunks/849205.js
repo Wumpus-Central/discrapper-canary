@@ -1,55 +1,55 @@
 l.d(n, { A: () => D });
 var t = l(477900),
-    s = l(582128),
-    i = l(702841),
+    i = l(582128),
+    s = l(702841),
     r = l(273875),
     a = l(798618),
     c = l(97808),
     o = l(778712),
-    u = l(140735),
-    d = l(939249),
-    h = l(834730),
-    x = l(866665),
+    d = l(140735),
+    u = l(939249),
+    x = l(834730),
+    h = l(866665),
     m = l(254138),
     A = l(661531),
-    g = l(926418),
-    j = l(73392),
-    E = l(665691),
-    b = l(696451),
-    N = l(290863),
-    C = l(994500),
-    f = l(287809),
-    p = l(427262),
-    I = l(742589),
+    j = l(926418),
+    g = l(73392),
+    p = l(665691),
+    E = l(696451),
+    f = l(290863),
+    b = l(994500),
+    N = l(287809),
+    I = l(427262),
+    C = l(742589),
     T = l(105292),
     _ = l(999900);
 function D(e) {
     let n = e.channel.getRecipientId(),
         l = e.channel.isSystemDM(),
-        D = (0, i.bG)([f.default], () => f.default.getUser(n)),
-        v = (0, i.bG)([N.A], () => N.A.getStatus(n)),
-        U = (0, i.bG)([N.A], () => N.A.isMobileOnline(n)),
-        M = (0, i.bG)([N.A], () => N.A.isVROnline(n)),
-        L = (0, i.bG)([C.A], () => C.A.getNickname(n)),
-        S = p.Ay.useUserTag(D),
-        R = (0, j.a)({ displayNameStyles: D?.displayNameStyles }),
-        G = (0, E.bG)({ channelId: e.channel.id }),
-        O = s.useRef(null),
-        [y, k] = s.useState(!1),
-        P = s.useRef(void 0),
-        F = s.useCallback(() => {
+        D = (0, s.bG)([N.default], () => N.default.getUser(n)),
+        v = (0, s.bG)([f.A], () => f.A.getStatus(n)),
+        U = (0, s.bG)([f.A], () => f.A.isMobileOnline(n)),
+        M = (0, s.bG)([f.A], () => f.A.isVROnline(n)),
+        L = (0, s.bG)([b.A], () => b.A.getNickname(n)),
+        R = I.Ay.useUserTag(D),
+        S = (0, g.a)({ displayNameStyles: D?.displayNameStyles }),
+        G = (0, p.bG)({ channelId: e.channel.id }),
+        O = i.useRef(null),
+        [y, k] = i.useState(!1),
+        P = i.useRef(void 0),
+        F = i.useCallback(() => {
             (clearTimeout(P.current), k(!0));
         }, []),
-        V = s.useCallback(() => {
+        V = i.useCallback(() => {
             P.current = setTimeout(() => {
                 k(!1);
             }, 250);
         }, []);
-    s.useEffect(() => () => clearTimeout(P.current), []);
-    let B = (0, i.cf)([b.Ay], () => b.Ay.getNicknameGuildsMapping(n), [n]),
-        H = s.useMemo(
+    i.useEffect(() => () => clearTimeout(P.current), []);
+    let H = (0, s.cf)([E.Ay], () => E.Ay.getNicknameGuildsMapping(n), [n]),
+        z = i.useMemo(
             () =>
-                Object.entries(B)
+                Object.entries(H)
                     .filter((e) => {
                         let [n] = e;
                         return n !== D?.globalName;
@@ -58,24 +58,24 @@ function D(e) {
                         let [n, l] = e;
                         return { nickname: n, guildIds: l };
                     }),
-            [B, D?.globalName],
+            [H, D?.globalName],
         ),
-        z = H.length > 0,
-        w = z && null != D && !l,
-        X = L ?? p.Ay.getName(D),
-        Q =
+        B = z.length > 0,
+        w = B && null != D && !l,
+        X = L ?? I.Ay.getName(D),
+        Y =
             null != D &&
             (0, t.jsx)(c.eu, {
                 status: v,
                 isMobile: U,
                 isVR: M,
                 size: o._3.SIZE_20,
-                "aria-label": p.Ay.getName(D),
+                "aria-label": I.Ay.getName(D),
                 src: D.getAvatarURL(void 0, 20),
             });
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(u.A, { children: T.intl.string(T.t.EJRzg7) }),
+            (0, t.jsx)(d.A, { children: T.intl.string(T.t.EJRzg7) }),
             null != D &&
                 !l &&
                 (0, t.jsxs)("div", {
@@ -85,7 +85,7 @@ function D(e) {
                             ref: O,
                             children:
                                 null != e.handleClick
-                                    ? (0, t.jsx)(d.D, {
+                                    ? (0, t.jsx)(u.D, {
                                           tag: "div",
                                           onClick: e.handleClick,
                                           onContextMenu: e.handleContextMenu,
@@ -94,9 +94,9 @@ function D(e) {
                                           className: _.or,
                                           "aria-hidden": !0,
                                           tabIndex: -1,
-                                          children: Q,
+                                          children: Y,
                                       })
-                                    : Q,
+                                    : Y,
                         }),
                         w &&
                             (0, t.jsxs)(r.x, {
@@ -114,13 +114,13 @@ function D(e) {
                                             (0, t.jsxs)("div", {
                                                 className: _.qc,
                                                 children: [
-                                                    (0, t.jsx)(h.E, {
+                                                    (0, t.jsx)(x.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
                                                         className: _.rX,
-                                                        children: S,
+                                                        children: R,
                                                     }),
-                                                    (0, t.jsx)(h.E, {
+                                                    (0, t.jsx)(x.E, {
                                                         variant: "text-xs/semibold",
                                                         color: "text-muted",
                                                         className: _.FQ,
@@ -131,21 +131,21 @@ function D(e) {
                                             (0, t.jsx)("div", { className: _.sA }),
                                             (0, t.jsx)("div", {
                                                 className: _.cC,
-                                                children: H.map((e) => {
+                                                children: z.map((e) => {
                                                     let { nickname: n, guildIds: l } = e;
                                                     return (0, t.jsxs)(
                                                         "div",
                                                         {
                                                             className: _.BZ,
                                                             children: [
-                                                                (0, t.jsx)(h.E, {
+                                                                (0, t.jsx)(x.E, {
                                                                     variant: "text-sm/medium",
                                                                     className: _.Vk,
                                                                     children: n,
                                                                 }),
                                                                 (0, t.jsx)("div", {
                                                                     className: _.Js,
-                                                                    children: (0, t.jsx)(g.l, { guildIds: l }),
+                                                                    children: (0, t.jsx)(j.l, { guildIds: l }),
                                                                 }),
                                                             ],
                                                         },
@@ -160,7 +160,7 @@ function D(e) {
                             }),
                     ],
                 }),
-            (0, t.jsx)(I.A.Title, {
+            (0, t.jsx)(C.A.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
@@ -171,15 +171,15 @@ function D(e) {
                 className: null != e.handleClick ? _.or : null,
                 children: (0, t.jsxs)(t.Fragment, {
                     children: [
-                        z
-                            ? (0, t.jsx)("span", { className: R, children: X })
-                            : (0, t.jsx)(x.m, {
-                                  text: S,
+                        B
+                            ? (0, t.jsx)("span", { className: S, children: X })
+                            : (0, t.jsx)(h.m, {
+                                  text: R,
                                   position: "bottom",
-                                  children: (0, t.jsx)("span", { className: R, children: X }),
+                                  children: (0, t.jsx)("span", { className: S, children: X }),
                               }),
                         G &&
-                            (0, t.jsx)(x.m, {
+                            (0, t.jsx)(h.m, {
                                 text: T.intl.string(T.t.QyZ4Td),
                                 children: (0, t.jsx)(m.m, {
                                     size: "xs",

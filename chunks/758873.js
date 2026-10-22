@@ -14,11 +14,11 @@ var s = t(582128),
     v = t(977997),
     m = t(321191),
     f = t(343129),
-    N = t(489379),
-    g = t(818348),
+    g = t(489379),
+    N = t(818348),
     A = t(731854);
 let p = Object.freeze([]),
-    S = {
+    w = {
         ApplicationStreamingStore: a.A,
         MediaEngineStore: o.Ay,
         PresenceStore: u.A,
@@ -26,25 +26,25 @@ let p = Object.freeze([]),
         SelfPresenceStore: x.A,
         UserProfileStore: m.A,
     },
-    w = { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
-    y = { ...S, ...w },
+    S = { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
+    y = { ...w, ...S },
     b = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
 function C(e) {
     let { userId: i, currentUserId: t, guildId: s } = e,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S,
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w,
         r = null != i ? n.PresenceStore.getActivities(i) : p,
         a = (function (e) {
             let { userId: i, currentUserId: t, guildId: s } = e,
-                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w;
             return null == i
-                ? g.cl.OFFLINE
+                ? N.cl.OFFLINE
                 : i === t
                   ? n.SelfPresenceStore.getStatus()
                   : n.PresenceStore.getStatus(i, s);
         })({ userId: i, currentUserId: t, guildId: s }, n);
     return {
         activities: r,
-        isOffline: a === g.cl.OFFLINE || a === g.cl.INVISIBLE,
+        isOffline: a === N.cl.OFFLINE || a === N.cl.INVISIBLE,
         isPrivate: null != i && n.UserProfileStore.getUserProfile(i)?.private === !0,
         stream: n.MediaEngineStore.supports(A.O5.VIDEO)
             ? (0, l.M)(i, [n.ApplicationStreamingStore, n.RelationshipStore])
@@ -53,18 +53,18 @@ function C(e) {
 }
 function I(e) {
     let { userId: i, guildId: t } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w,
+        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S,
         n = (0, r.t$)({ userId: i, guildId: t }, s);
     return null == n.voiceChannel
         ? b
         : {
               ...n,
               voiceActivity: (function (e, i) {
-                  let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w;
+                  let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S;
                   if (null != e && null != i)
                       return (
                           t.PresenceStore.findActivity(e, (s) =>
-                              (0, N.c)({
+                              (0, g.c)({
                                   activity: s,
                                   voiceChannelId: i,
                                   voiceStateForSession: t.VoiceStateStore.getVoiceStateForSession(e, s.session_id),
@@ -113,7 +113,7 @@ function U(e) {
                 ),
             [l, r, i],
         ),
-        N = (0, n.cf)(
+        g = (0, n.cf)(
             [d.A, h.A, u.A, v.A],
             () =>
                 I(
@@ -122,5 +122,5 @@ function U(e) {
                 ),
             [r, i],
         );
-    return s.useMemo(() => P(f, N), [f, N]);
+    return s.useMemo(() => P(f, g), [f, g]);
 }

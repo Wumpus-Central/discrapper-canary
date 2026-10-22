@@ -1,19 +1,19 @@
-l.d(n, { A: () => b });
+l.d(n, { A: () => E });
 var t = l(477900),
-    s = l(582128),
-    i = l(503698),
-    r = l.n(i),
+    i = l(582128),
+    s = l(503698),
+    r = l.n(s),
     a = l(621466),
     c = l(192308),
     o = l(939249),
-    u = l(834730),
-    d = l(442433),
-    h = l(46054),
-    x = l(742589),
+    d = l(834730),
+    u = l(442433),
+    x = l(46054),
+    h = l(742589),
     m = l(105292),
     A = l(267283),
-    g = l(165648);
-function j(e) {
+    j = l(165648);
+function g(e) {
     return (
         e.matches("a") ||
         "highlight" === e.className ||
@@ -22,13 +22,13 @@ function j(e) {
         e.className.includes("emojiContainer")
     );
 }
-class E extends s.Component {
+class p extends i.Component {
     handleOpenTopic = (e) => {
         let n = e.target;
         if ((0, a.vq)(n)) {
-            if (j(n)) return;
+            if (g(n)) return;
             let l = n.parentNode;
-            if (((0, a.vq)(l) && j(l)) || !e.currentTarget.contains(n)) return;
+            if (((0, a.vq)(l) && g(l)) || !e.currentTarget.contains(n)) return;
         }
         (0, c.openModalLazy)(async () => {
             let { default: e } = await Promise.all([l.e("921903"), l.e("608939")]).then(l.bind(l, 181094));
@@ -36,8 +36,8 @@ class E extends s.Component {
         });
     };
     handleContextMenu = (e) => {
-        let { channel: n, guild: s } = this.props;
-        (0, d.L3)(e, async () => {
+        let { channel: n, guild: i } = this.props;
+        (0, u.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 l.e("926132"),
                 l.e("391763"),
@@ -58,7 +58,7 @@ class E extends s.Component {
                 l.e("29542"),
                 l.e("359545"),
             ]).then(l.bind(l, 22496));
-            return (l) => (0, t.jsx)(e, { ...l, channel: n, guild: s, includeTopic: !0 });
+            return (l) => (0, t.jsx)(e, { ...l, channel: n, guild: i, includeTopic: !0 });
         });
     };
     render() {
@@ -66,11 +66,11 @@ class E extends s.Component {
         if (e.isMultiUserDM()) return null;
         let n = null != e.topic && e.topic.length > 0;
         return null != e.linkedLobby || n
-            ? (0, t.jsxs)(s.Fragment, {
+            ? (0, t.jsxs)(i.Fragment, {
                   children: [
-                      (0, t.jsx)(x.A.Divider, {}),
+                      (0, t.jsx)(h.A.Divider, {}),
                       (0, t.jsxs)("div", {
-                          className: r()(A.At, A.lu, g.PT),
+                          className: r()(A.At, A.lu, j.PT),
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleOpenTopic,
                           children: [
@@ -80,11 +80,11 @@ class E extends s.Component {
                                   className: A.h8,
                               }),
                               null == e.linkedLobby || n
-                                  ? (0, t.jsx)(u.E, {
+                                  ? (0, t.jsx)(d.E, {
                                         tag: "span",
                                         color: "none",
                                         variant: "text-sm/medium",
-                                        children: h.A.parseTruncatedTopic(e.topic, !0, { channelId: e.id }),
+                                        children: x.A.parseTruncatedTopic(e.topic, !0, { channelId: e.id }),
                                     })
                                   : m.intl.string(m.t["XJVlf/"]),
                           ],
@@ -94,4 +94,4 @@ class E extends s.Component {
             : null;
     }
 }
-let b = E;
+let E = p;

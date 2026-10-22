@@ -1,4 +1,4 @@
-n.d(t, { bI: () => _, Ay: () => $, KL: () => I, qF: () => T, FZ: () => F });
+n.d(t, { bI: () => _, Ay: () => $, KL: () => I, qF: () => T, FZ: () => W });
 var l = n(582128),
     i = n(17928),
     r = n(73153),
@@ -125,7 +125,7 @@ async function D(e, t, n) {
         { project: i } = e,
         { platform: r, guildId: a } = n,
         u = i.id;
-    q.add(u);
+    F.add(u);
     try {
         let e = await (0, M.xQ)(u);
         l = 1 === e.destinations.length ? e.selected_destination_id : await r.promptPublishDestination(e);
@@ -133,7 +133,7 @@ async function D(e, t, n) {
         r.showError(e instanceof Error ? e.message : C.intl.string(S.default.gMWZeG));
         return;
     } finally {
-        q.delete(u);
+        F.delete(u);
     }
     if (null == l) return;
     if (k.A.isProjectPublishing(u) || k.A.getPublishStatus(u)?.publishing === !0)
@@ -175,10 +175,10 @@ async function G(e, t) {
 function O(e) {
     (0, a.eO)((0, x.Du)(e), { withMutualGuilds: !0 }).catch(() => {});
 }
-let q = new Set();
-async function F(e, t, l) {
+let F = new Set();
+async function W(e, t, l) {
     let { guildId: i, platform: r } = l;
-    if (!0 === l.busy || q.has(e)) return;
+    if (!0 === l.busy || F.has(e)) return;
     let a = R(e, i);
     if (null == a) return;
     let u = k.A.getPublishApprovalUrl(e);
@@ -200,20 +200,20 @@ async function F(e, t, l) {
         ? r.showPublishBlocked(P.k.MISSING_MANAGE_SERVER, s.disabledReason)
         : ((0, M.dx)(e), null != s.confirmReason)
           ? r.showPublishBlocked(P.k.MISSING_MANAGE_CHANNELS, s.confirmReason, () => {
-                W(e, s, l).catch(() => {});
+                q(e, s, l).catch(() => {});
             })
-          : await W(e, s, l);
+          : await q(e, s, l);
 }
-async function W(e, t, n) {
+async function q(e, t, n) {
     let { guildId: l, platform: i } = n,
         r = R(e, l);
     if (!(null == r || k.A.isProjectPublishing(e))) {
         if ("consent_then_publish" === t.intent) {
-            q.add(e);
+            F.add(e);
             try {
                 await (i.requestConsent ?? ((e) => L(e, l)))(e);
             } finally {
-                q.delete(e);
+                F.delete(e);
             }
             if (k.A.isProjectPublishing(e)) return;
             let r = R(e, l),
@@ -304,13 +304,13 @@ function $(e, t) {
                       },
             [x, A, j, w, P, M, N, I, T, L, D, U],
         ),
-        q = G?.status?.state ?? null,
-        W = G?.installScope === "guild" && G.status?.surface === "bot";
+        F = G?.status?.state ?? null,
+        q = G?.installScope === "guild" && G.status?.surface === "bot";
     l.useEffect(() => {
-        null != x && null != v && W && null != q && "unpublished" !== q && O(x);
-    }, [x?.id, v, W, q]);
+        null != x && null != v && q && null != F && "unpublished" !== F && O(x);
+    }, [x?.id, v, q, F]);
     let $ = x?.application_id ?? null,
-        z = null != q && "unpublished" !== q;
+        z = null != F && "unpublished" !== F;
     l.useEffect(() => {
         null != $ &&
             z &&
@@ -323,7 +323,7 @@ function $(e, t) {
             (t) => {
                 null != e &&
                     null != r &&
-                    F(e, t, r).catch((t) => {
+                    W(e, t, r).catch((t) => {
                         console.error("[conjure] publish action failed", e, t);
                     });
             },

@@ -378,8 +378,8 @@ var eq = n(793480),
     e3 = n(897720),
     e2 = n(856988),
     e5 = n(155037),
-    e8 = n(331322),
-    e4 = n(255324);
+    e4 = n(331322),
+    e8 = n(255324);
 let e7 = Array.from(new Set(Object.values(eD.A).flatMap((e) => e?.containerRenderGate?.stores ?? []))),
     e6 = [h.A, ef.A, ...e7];
 function e9(e) {
@@ -391,14 +391,14 @@ function e9(e) {
         }),
     )
         ? (0, r.jsx)(eK.A, {
-              className: e4.p$,
-              children: (0, r.jsxs)(e8.B, {
+              className: e8.p$,
+              children: (0, r.jsxs)(e4.B, {
                   align: "center",
                   gap: 12,
                   "data-testid": "overlay-widgets-empty-state",
                   children: [
                       (0, r.jsx)(I.f, { size: "lg", color: "currentColor" }),
-                      (0, r.jsxs)(e8.B, {
+                      (0, r.jsxs)(e4.B, {
                           align: "center",
                           gap: 4,
                           children: [

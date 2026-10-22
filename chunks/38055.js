@@ -1,28 +1,28 @@
-n.d(t, { A: () => I, MemberListContentSettingsMenu: () => E });
-var i = n(477900),
-    l = n(582128),
-    s = n(17928),
-    r = n(980707),
-    a = n(477782),
-    o = n(885574),
-    d = n(192308),
-    c = n(952270),
-    u = n(265872),
-    h = n(939249),
-    m = n(625903),
-    A = n(180170),
-    p = n(435738),
-    g = n(652215),
-    x = n(105292),
-    f = n(569709);
+t.d(n, { A: () => I, MemberListContentSettingsMenu: () => E });
+var i = t(477900),
+    l = t(582128),
+    s = t(17928),
+    r = t(980707),
+    a = t(477782),
+    o = t(885574),
+    d = t(192308),
+    c = t(952270),
+    u = t(265872),
+    h = t(939249),
+    m = t(625903),
+    A = t(180170),
+    p = t(435738),
+    g = t(652215),
+    x = t(105292),
+    f = t(569709);
 function E(e) {
-    let { closePopout: t } = e,
+    let { closePopout: n } = e,
         l = (0, s.bG)([p.A], () => p.A.hidden);
     return (0, i.jsx)(r.W, {
         "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "member-list-settings-menu",
-        onClose: null != t ? t : g.tEg,
+        onClose: null != n ? n : g.tEg,
         "aria-label": x.intl.string(x.t.w2jvOf),
         children: (0, i.jsxs)(a.rX, {
             children: [
@@ -33,12 +33,12 @@ function E(e) {
                     icon: o.CircleInformationIcon,
                     action: () => {
                         ((0, d.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("742445"), n.e("190309")]).then(
-                                n.bind(n, 643460),
+                            let { default: e } = await Promise.all([t.e("742445"), t.e("190309")]).then(
+                                t.bind(t, 643460),
                             );
-                            return (t) => (0, i.jsx)(e, { ...t });
+                            return (n) => (0, i.jsx)(e, { ...n });
                         }),
-                            t?.());
+                            n?.());
                     },
                 }),
                 (0, i.jsx)(a.sL, {
@@ -47,7 +47,7 @@ function E(e) {
                     checked: l,
                     leadingAccessory: { type: "icon", icon: c.EyeSlashIcon },
                     action: () => {
-                        ((0, A.Il)(), t?.());
+                        ((0, A.Il)(), n?.());
                     },
                 }),
             ],
@@ -55,25 +55,25 @@ function E(e) {
     });
 }
 let I = function (e) {
-    let t = l.useRef(null);
+    let n = l.useRef(null);
     return (0, i.jsx)(u.Y, {
-        targetElementRef: t,
+        targetElementRef: n,
         animation: u.Y.Animation.NONE,
         position: "bottom",
         align: "right",
         renderPopout: (e) => {
-            let { closePopout: t } = e;
-            return (0, i.jsx)(E, { closePopout: t });
+            let { closePopout: n } = e;
+            return (0, i.jsx)(E, { closePopout: n });
         },
-        children: (n) =>
+        children: (t) =>
             (0, i.jsx)(h.D, {
-                ...n,
+                ...t,
                 ...e,
-                innerRef: t,
+                innerRef: n,
                 "aria-label": x.intl.string(x.t.w2jvOf),
                 "aria-haspopup": !0,
                 onClick: (e) => {
-                    (e.stopPropagation(), n.onClick(e));
+                    (e.stopPropagation(), t.onClick(e));
                 },
                 className: f.Se,
                 focusProps: { offset: 4 },

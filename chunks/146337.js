@@ -18,7 +18,7 @@ async function s(l) {
     }
     return r.A.getApplication(l);
 }
-async function p(l, n, t) {
+async function A(l, n, t) {
     let e = await s(l);
     null == e
         ? (0, a.P0)({ text: d.intl.string(d.t.F8FvUy), variant: "critical" })
@@ -29,16 +29,16 @@ async function p(l, n, t) {
               contextualChannelId: n.id,
           });
 }
-var A = t(652215);
+var p = t(652215);
 let g = "app_channel_context_menu";
 function y(l, n) {
-    let t = l.type === A.rbe.GUILD_APP ? l.getApplicationId() : null;
+    let t = l.type === p.rbe.GUILD_APP ? l.getApplicationId() : null;
     return null == t
         ? null
         : (0, e.jsx)(i.Dr, {
               id: "report-app",
               label: d.intl.string(d.t.NgA5vp),
-              action: () => p(t, l, n),
+              action: () => A(t, l, n),
               icon: u.FlagIcon,
               leadingAccessory: { type: "icon", icon: u.FlagIcon },
               color: "danger",

@@ -1,14 +1,14 @@
-a.d(e, { HP: () => u, ci: () => s, m: () => c });
-var i = a(17928),
-    t = a(138298),
-    d = a(940382),
-    r = a(358047);
-function s(n, e) {
-    t.A.openChannelAsSidebar({ guildId: n, channelId: e, baseChannelId: e, details: { type: d.kk.CHAT } });
+r.d(e, { HP: () => d, ci: () => l, m: () => A });
+var t = r(17928),
+    u = r(138298),
+    a = r(940382),
+    i = r(358047);
+function l(n, e) {
+    u.A.openChannelAsSidebar({ guildId: n, channelId: e, baseChannelId: e, details: { type: a.kk.CHAT } });
 }
-function c(n) {
-    t.A.closeChannelSidebar(n);
+function A(n) {
+    u.A.closeChannelSidebar(n);
 }
-function u(n) {
-    return (0, i.bG)([r.Ay], () => null != n && r.Ay.getCurrentSidebarChannelId(n) === n, [n]);
+function d(n) {
+    return (0, t.bG)([i.Ay], () => null != n && i.Ay.getCurrentSidebarChannelId(n) === n, [n]);
 }

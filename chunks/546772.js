@@ -100,7 +100,7 @@ function m(e, t) {
             stateListeners: new Set(),
             backoff: new r.A(500, 8e3),
             retry: () => {
-                ((a.socketKey = null), p(a));
+                ((a.socketKey = null), x(a));
             },
         };
         ((l = a), d.set(n, l));
@@ -116,16 +116,16 @@ function h(e, t) {
 function g(e, t) {
     return i.A.getSessions(e).find((e) => e.id === t)?.started_at ?? null;
 }
-function x(e) {
+function p(e) {
     (e.backoff.cancel(),
         e.socket?.close(),
         (e.socket = null),
         (e.socketKey = null),
         "granted" === e.controlState && h(e, e.control ? "pending" : "off"));
 }
-function p(e) {
+function x(e) {
     if (0 === e.subscribers.size || null == e.startedAt || c.has(e.projectId)) {
-        (x(e), f(e, "connecting"));
+        (p(e), f(e, "connecting"));
         return;
     }
     let t = [...e.subscribers],
@@ -134,7 +134,7 @@ function p(e) {
         r = e.control ? "control" : "view",
         a = `${r}:${n}:${l}`;
     if (e.socketKey === a && (null != e.socket || e.backoff.pending)) return;
-    (x(e), (e.socketKey = a));
+    (p(e), (e.socketKey = a));
     let i = new u({
         projectId: e.projectId,
         sessionId: e.sessionId,
@@ -151,13 +151,13 @@ function p(e) {
         onMode: (t) => {
             e.socket === i &&
                 e.control &&
-                ("control" === t ? h(e, "granted") : ((e.control = !1), h(e, "denied"), p(e)));
+                ("control" === t ? h(e, "granted") : ((e.control = !1), h(e, "denied"), x(e)));
         },
         onClosed: (t) => {
             if (e.socket !== i) return;
-            if ((x(e), 4403 === t))
+            if ((p(e), 4403 === t))
                 return void (function (e) {
-                    for (let t of (c.add(e), d.values())) t.projectId === e && (x(t), v(t), f(t, "connecting"));
+                    for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), f(t, "connecting"));
                 })(e.projectId);
             let n = 4409 === t && e.control;
             (n && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
@@ -173,7 +173,7 @@ function v(e) {
 function j(e, t, n) {
     let l = m(e, t),
         r = n && null != l.startedAt;
-    l.control !== r && ((l.control = r), r ? h(l, "pending") : "denied" !== l.controlState && h(l, "off"), p(l));
+    l.control !== r && ((l.control = r), r ? h(l, "pending") : "denied" !== l.controlState && h(l, "off"), x(l));
 }
 function b(e, t) {
     let n = d.get(`${e}:${t}`);
@@ -238,9 +238,9 @@ function C(e, t, n) {
             let l = { fps: r, width: s, onFrame: a };
             return (
                 n.subscribers.add(l),
-                p(n),
+                x(n),
                 () => {
-                    (n.subscribers.delete(l), p(n));
+                    (n.subscribers.delete(l), x(n));
                 }
             );
         }, [e, t, r, a, i, s]),
@@ -251,16 +251,16 @@ function C(e, t, n) {
     for (let e of d.values()) {
         let t = g(e.projectId, e.sessionId);
         if (t !== e.startedAt) {
-            if (((e.startedAt = t), x(e), null == t)) {
+            if (((e.startedAt = t), p(e), null == t)) {
                 v(e);
                 continue;
             }
             for (let t of ((e.lastFrame = null), (e.restarts += 1), e.restartListeners)) t(e.restarts);
-            (e.backoff.succeed(), h(e, e.control ? "pending" : "off"), f(e, "connecting"), p(e));
+            (e.backoff.succeed(), h(e, e.control ? "pending" : "off"), f(e, "connecting"), x(e));
         }
     }
 }),
     a.h.subscribe("CONJURE_BROWSER_SESSIONS_SET", function (e) {
         let { projectId: t } = e;
-        if (c.delete(t)) for (let e of d.values()) e.projectId === t && (e.backoff.succeed(), p(e));
+        if (c.delete(t)) for (let e of d.values()) e.projectId === t && (e.backoff.succeed(), x(e));
     }));

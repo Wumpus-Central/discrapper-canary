@@ -1,12 +1,12 @@
-t.d(e, { A: () => u });
-var l = t(17928),
-    r = t(91242);
-function u(n, e) {
-    return (0, l.bG)(
+l.d(t, { A: () => u });
+var e = l(17928),
+    r = l(91242);
+function u(n, t) {
+    return (0, e.bG)(
         [r.A],
         () => {
-            if (null != n) return r.A.getFrameBySurface(n, e);
+            if (null != n) return r.A.getFrameBySurface(n, t);
         },
-        [n, e],
+        [n, t],
     );
 }

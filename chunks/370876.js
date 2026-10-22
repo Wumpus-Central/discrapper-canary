@@ -1,4 +1,4 @@
-n.d(e, { A3: () => s, DN: () => p, _t: () => E, mR: () => _, zP: () => I });
+n.d(e, { A3: () => s, DN: () => I, _t: () => E, mR: () => _, zP: () => p });
 var i = n(284009),
     r = n.n(i),
     a = n(435558),
@@ -24,14 +24,14 @@ function _(t) {
         };
     (t.type, r()(!1, "Directory entries must be connected to a guild!"));
 }
-let I = 5;
-function p(t) {
+let p = 5;
+function I(t) {
     return l().orderBy(t, [(t) => t.approximateMemberCount], ["desc"]);
 }
 function s(t) {
     var e;
-    return ((e = t.filter((t) => t.featurableInDirectory)), l().orderBy(e, [(t) => t.createdAt], ["desc"])).slice(0, I);
+    return ((e = t.filter((t) => t.featurableInDirectory)), l().orderBy(e, [(t) => t.createdAt], ["desc"])).slice(0, p);
 }
 function E(t) {
-    return p(t);
+    return I(t);
 }
