@@ -22,19 +22,16 @@
     --custom-tile-height: 100
 }
 
-.tileButton__4e9aa {
+.tileInner__4e9aa {
     background-color: var(--background-mod-subtle);
-    border: none;
     border-radius: inherit;
-    cursor: pointer;
     inset: 0;
     overflow: hidden;
-    padding: 0;
     position: absolute;
     transition: background-color 50ms ease-in
 }
 
-.tileButton__4e9aa:after {
+.tileInner__4e9aa:after {
     border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--border-muted);
     content: "";
@@ -43,30 +40,36 @@
     position: absolute
 }
 
-.tileButton__4e9aa:focus-visible,
-.tileButton__4e9aa:hover {
+.tileInner__4e9aa:has(.tileButton__4e9aa:focus-visible),
+.tileInner__4e9aa:has(.tileButton__4e9aa:hover) {
     background-color: var(--background-mod-normal);
     transition: background-color .15s ease-out
 }
 
-.full-motion .tileButton__4e9aa {
+.full-motion .tileInner__4e9aa {
     transition: transform .1s ease, background-color 50ms ease-in;
     will-change: transform
 }
 
-.full-motion .tileButton__4e9aa:focus-visible,
-.full-motion .tileButton__4e9aa:hover {
+.full-motion .tileInner__4e9aa:has(.tileButton__4e9aa:focus-visible),
+.full-motion .tileInner__4e9aa:has(.tileButton__4e9aa:hover) {
     transform: scale(calc(1 + 4/var(--custom-tile-width)));
     transition: transform .1s ease, background-color .15s ease-out
 }
 
-.full-motion .tileButton__4e9aa:active {
+.full-motion .tileInner__4e9aa:has(.tileButton__4e9aa:active) {
     transform: scale(calc(1 - 4/var(--custom-tile-width)))
 }
 
-.enable-forced-colors .tileButton__4e9aa:after {
+.enable-forced-colors .tileInner__4e9aa:after {
     border: 1px solid ButtonText;
     box-shadow: none
+}
+
+.tileButton__4e9aa {
+    cursor: pointer;
+    inset: 0;
+    position: absolute
 }
 
 .disabled__4e9aa {
@@ -78,7 +81,7 @@
     opacity: .6
 }
 
-.hasError__4e9aa .tileButton__4e9aa:before {
+.hasError__4e9aa .tileInner__4e9aa:before {
     background-color: var(--input-background-error-default);
     border-radius: inherit;
     content: "";
@@ -87,7 +90,7 @@
     position: absolute
 }
 
-.hasError__4e9aa .tileButton__4e9aa:after {
+.hasError__4e9aa .tileInner__4e9aa:after {
     box-shadow: inset 0 0 0 1px var(--input-border-error-default)
 }
 
@@ -170,4 +173,4 @@
     fill: ButtonFace
 }
 
-/*# sourceMappingURL=6e0308d22b09623e.css.map*/
+/*# sourceMappingURL=dbc2a10dbdd194e2.css.map*/

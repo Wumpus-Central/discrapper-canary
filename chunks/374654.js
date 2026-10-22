@@ -17,8 +17,8 @@ var t = l(477900),
     m = l(841702),
     A = l(746002),
     I = l(515718),
-    C = l(195292);
-function y(e) {
+    y = l(195292);
+function C(e) {
     let n = (0, A.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: A.CollectiblesItemAssetFormat.STATIC });
     null != n && (0, I.NN)(n).catch(() => {});
 }
@@ -44,24 +44,29 @@ function j(e) {
             let { enabled: n, isInteracting: l } = e,
                 { categories: t, purchases: r } = (0, m.Ay)({ stalePurchasesOK: !0 }),
                 i = a.useMemo(() => (0, b.zd)(r, t), [r, t]),
-                s = (0, C.A)({ enabled: n, isInteracting: l, items: i, preload: y });
+                s = (0, y.A)({ enabled: n, isInteracting: l, items: i, preload: C });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
         })({ enabled: u && !o && !g, isInteracting: c }),
-        j = null != k;
+        j = null != k,
+        P = j ? void 0 : r?.label;
     return (0, t.jsx)("div", {
         className: i()(x.M, { [N.O]: j }),
-        "aria-hidden": !0,
-        children: (0, t.jsx)(d.A, {
-            user: n,
-            guildId: l ?? void 0,
-            nameplate: j ? k : r,
-            showPlaceholderUser: (u && !o) || !c,
-            isHighlighted: c,
-            pendingGlobalName: v,
-            pendingNickname: f,
-            pendingDisplayNameStyles: p,
-            pendingPrimaryGuildId: A,
-            pendingAvatar: I,
+        role: null != P ? "img" : void 0,
+        "aria-label": P,
+        children: (0, t.jsx)("div", {
+            "aria-hidden": !0,
+            children: (0, t.jsx)(d.A, {
+                user: n,
+                guildId: l ?? void 0,
+                nameplate: j ? k : r,
+                showPlaceholderUser: (u && !o) || !c,
+                isHighlighted: c,
+                pendingGlobalName: v,
+                pendingNickname: f,
+                pendingDisplayNameStyles: p,
+                pendingPrimaryGuildId: A,
+                pendingAvatar: I,
+            }),
         }),
     });
 }
@@ -73,13 +78,13 @@ function P(e) {
         { guildNameplate: b, pendingNameplate: m } = (0, v.rv)(n, l ?? void 0),
         A = n.collectibles?.nameplate,
         I = h ? b : A,
-        C = void 0 !== m,
-        y = null === m || (!C && null == I),
+        y = void 0 !== m,
+        C = null === m || (!y && null == I),
         x = h && null != A,
         N = (0, v.lw)({ pendingValue: m, userValue: A, guildValue: b, guildId: l ?? void 0 }),
         { product: P } = (0, o.q)(N?.skuId),
-        E = C ? null != m : null != I,
-        R =
+        E = y ? null != m : null != I,
+        w =
             null != N && E
                 ? {
                       onClick: () => (0, f.p)({ guildId: l ?? void 0, nameplate: null }),
@@ -87,16 +92,17 @@ function P(e) {
                       accessibleLabel: k.intl.string(x ? k.t.neYqhR : k.t["9zwziY"]),
                   }
                 : void 0,
-        w = a.useCallback(() => {
+        R = a.useCallback(() => {
             (0, c.p)({ analyticsLocations: d, guildId: l ?? void 0, stackingBehavior: "stack", returnRef: s });
         }, [d, l]);
     return (0, t.jsx)(p.A, {
         buttonRef: s,
-        affordance: y && !x ? "add" : R,
+        affordance: C && !x ? "add" : w,
         variant: "bar",
-        onClick: w,
-        accessibleLabel: k.intl.string(k.t.x5CoXR),
-        accessibleValue: (function (e) {
+        onClick: R,
+        fieldA11yLabel: k.intl.string(k.t.x5CoXR),
+        editButtonA11yLabel: k.intl.string(k.t.BwdeM1),
+        currentValueA11yLabel: (function (e) {
             let { nameplatePreview: n, productName: l, hasPendingSelection: t } = e;
             return null == n
                 ? k.intl.string(k.t["3Xph0/"])
@@ -112,7 +118,7 @@ function P(e) {
                 user: n,
                 guildId: l,
                 nameplatePreview: N,
-                isEmpty: y,
+                isEmpty: C,
                 hasMainProfileFallback: x,
                 isInteracting: e,
                 disabled: r,

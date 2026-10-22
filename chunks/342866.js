@@ -20,11 +20,19 @@ function c(e) {
     return (0, t.jsx)(r.eu, { src: c, size: d, className: u ? o : void 0, "aria-hidden": !0 });
 }
 function g(e) {
-    let { userId: n, guildId: l, avatarChange: a, imageInteractingClassName: r, ...i } = e;
+    let {
+        userId: n,
+        guildId: l,
+        avatarChange: a,
+        fieldA11yLabel: r = o.intl.string(o.t.lqaIxI),
+        imageInteractingClassName: i,
+        ...s
+    } = e;
     return (0, t.jsx)(u.A, {
-        ...i,
-        accessibleLabel: o.intl.string(o.t.lqaIxI),
+        ...s,
+        fieldA11yLabel: r,
+        editButtonA11yLabel: o.intl.string(o.t["4OynCD"]),
         renderPreview: (e) =>
-            (0, t.jsx)(c, { userId: n, guildId: l, avatarChange: a, shouldAnimate: e, imageInteractingClassName: r }),
+            (0, t.jsx)(c, { userId: n, guildId: l, avatarChange: a, shouldAnimate: e, imageInteractingClassName: i }),
     });
 }

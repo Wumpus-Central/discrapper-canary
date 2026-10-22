@@ -16,9 +16,9 @@ function h(e) {
         b = a.useRef(null),
         {
             pendingAvatar: m,
-            accessibleValue: A,
+            currentValueA11yLabel: A,
             currentProfileAvatarHash: I,
-            hasMainProfileFallback: C,
+            hasMainProfileFallback: y,
         } = (function (e, n) {
             let { pendingAvatar: l, currentProfileAvatarHash: t } = (0, r.cf)(
                     [c.A, u.Ay],
@@ -32,19 +32,19 @@ function h(e) {
                 i = null != e.avatar;
             return {
                 pendingAvatar: l,
-                accessibleValue: (0, o.Fk)(l, t),
+                currentValueA11yLabel: (0, o.Fk)(l, t),
                 currentProfileAvatarHash: t,
                 hasMainProfileFallback: a && i,
             };
         })(n, l),
-        y = (0, i.z5)(m, I)
+        C = (0, i.z5)(m, I)
             ? {
                   onClick: () => {
                       ((0, s.rM)(null, I, (e) => (0, d.p)({ guildId: l ?? void 0, avatar: e })),
-                          (0, i.WU)(C ? "reset" : "remove"));
+                          (0, i.WU)(y ? "reset" : "remove"));
                   },
-                  type: C ? "reset" : "remove",
-                  accessibleLabel: f.intl.string(C ? f.t.Y0mxy1 : f.t.twB3fz),
+                  type: y ? "reset" : "remove",
+                  accessibleLabel: f.intl.string(y ? f.t.Y0mxy1 : f.t.twB3fz),
               }
             : void 0,
         k = (0, v._)({ guildId: l, returnRef: b });
@@ -53,9 +53,9 @@ function h(e) {
         userId: n.id,
         guildId: l,
         avatarChange: m,
-        accessibleValue: A,
+        currentValueA11yLabel: A,
         variant: "square",
-        affordance: y,
+        affordance: C,
         onClick: k,
         "aria-haspopup": "dialog",
         disabled: h,
