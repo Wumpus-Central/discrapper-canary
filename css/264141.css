@@ -252,21 +252,40 @@
     width: 100%
 }
 
-.linkedLobbyTooltip_f75fb0 {
+.headerApplicationContainer_f75fb0 {
+    align-items: center;
+    display: flex;
     margin-inline-end: 8px
 }
 
-.linkedLobby_f75fb0,
-.linkedLobbyTooltip_f75fb0 {
+.headerApplication_f75fb0 {
     align-items: center;
-    display: flex
+    display: flex;
+    gap: 4px;
+    max-width: 200px;
+    min-width: 0;
+    white-space: nowrap
 }
 
-.linkedLobbyApplicationIcon_f75fb0 {
-    border-radius: var(--radius-sm);
+.headerApplicationSeparator_f75fb0 {
+    display: flex;
+    padding-inline-end: 8px
+}
+
+.headerApplicationIcon_f75fb0 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
     height: 14px;
-    margin-inline: 8px 4px;
     width: 14px
+}
+
+.headerApplicationName_f75fb0 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.appChannelApplication_f75fb0 {
+    cursor: pointer
 }
 
 .linkedLobbyEducationTooltipWrapper_f75fb0 {
@@ -385,4 +404,4 @@
     background-color: var(--background-mod-normal)
 }
 
-/*# sourceMappingURL=264141.cd679c7af40cd14a.css.map*/
+/*# sourceMappingURL=264141.c0aa19657f87ac3b.css.map*/

@@ -681,9 +681,13 @@
     width: 4px
 }
 
+.caret__9293f,
+.dot__9293f {
+    flex-shrink: 0
+}
+
 .caret__9293f {
     color: var(--icon-muted);
-    flex-shrink: 0;
     margin-inline: 0 8px;
     width: 10px
 }
@@ -758,4 +762,4 @@
     background-color: Highlight
 }
 
-/*# sourceMappingURL=996499.1208474fb8b48816.css.map*/
+/*# sourceMappingURL=996499.630a381945f9716f.css.map*/
