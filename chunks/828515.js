@@ -14,7 +14,7 @@ var n = l(477900),
     _ = l(607470),
     C = l(531685),
     O = l(993408),
-    S = l(812993),
+    S = l(62010),
     L = l(105292),
     g = l(543136);
 let G = function (e) {
@@ -22,7 +22,10 @@ let G = function (e) {
     if (!(0, O.HF)(t.unpublishedAt)) return null;
     let i = (0, O.WU)(t.unpublishedAt),
         s = i > 1 ? L.intl.formatToPlainString(l, { days: i }) : L.intl.string(L.t.Bc13HF);
-    return (0, n.jsx)(S.Lp, { disableColor: !0, text: s, className: r()(g.q, a) });
+    return (0, n.jsx)("div", {
+        className: r()(g.Z, a),
+        children: (0, n.jsx)(S.E, { type: { text: s }, variant: "inverted" }),
+    });
 };
 var T = l(212407),
     I = l(761977);

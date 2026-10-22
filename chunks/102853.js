@@ -2,7 +2,7 @@ n.d(e, { l: () => V });
 var l = n(582128),
     i = n(17928),
     a = n(308368),
-    r = n(313960),
+    r = n(452295),
     s = n(730852),
     o = n(212245),
     c = n(933958),
@@ -128,7 +128,7 @@ function V(t) {
         let n = (0, x.A)(e, G.jUm.EMBEDDED),
             l = P.Ay.getVoiceChannelId(),
             i = f.A.getChannel(l);
-        (await r.Ay.join({
+        (await r.A.join({
             userId: t.id,
             sessionId: tg,
             applicationId: F,

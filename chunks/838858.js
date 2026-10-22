@@ -5066,7 +5066,7 @@ function l3() {
 }
 var l6 = a(858899),
     l4 = a(123292),
-    l8 = a(313960),
+    l8 = a(452295),
     l7 = a(56562);
 let l9 = [
     { label: "Wuthering Waves", value: "1247227126416146462" },
@@ -5107,12 +5107,12 @@ function it() {
             [],
         );
     function i(e) {
-        if (null == e || "" === e) return void (0, l8.xt)(null);
+        if (null == e || "" === e) return void (0, l8.x)(null);
         let t = t5.A.getDetectableGame(e),
             a = t?.executables[0],
             n = t?.thirdPartySkus[0]?.distributor;
         if (null == t || null == a) return (0, l6.P0)({ text: "Invalid Game ID", variant: "critical" });
-        (0, l8.xt)({
+        (0, l8.x)({
             id: t.id,
             name: t.name,
             exeName: a.name,

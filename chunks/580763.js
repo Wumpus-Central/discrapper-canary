@@ -149,7 +149,7 @@ var tc = n(323384),
     tu = n(866665),
     td = n(808666),
     tA = n(687966),
-    tf = n(313960),
+    tf = n(452295),
     tp = n(429913),
     tg = n(966563),
     tm = n(25451),
@@ -175,7 +175,7 @@ function tN(t) {
                           a?.(),
                           (0, tg.A)({ application: u, userId: e.id, activity: n }))
                         : null != c
-                          ? tf.Ay.launch({ applicationId: c })
+                          ? tf.A.launchGame({ applicationId: c })
                           : (i?.({ action: "PRESS_PLAY_BUTTON" }), s()));
             },
         });

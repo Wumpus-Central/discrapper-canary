@@ -1,4 +1,4 @@
-i.d(e, { R: () => B, Z: () => x });
+i.d(e, { R: () => $, Z: () => L });
 var n = i(477900),
     s = i(582128),
     a = i(172218),
@@ -26,8 +26,8 @@ var n = i(477900),
     q = i(977416),
     f = i(851936),
     k = i(561844),
-    N = i(590202),
-    P = i(910463),
+    P = i(590202),
+    N = i(910463),
     R = i(971649),
     b = i(823784),
     V = i(653819);
@@ -120,7 +120,7 @@ class M {
                 : (0, I.$8)(I.vI.NOT_SKAN_ENABLED, i, this.id);
     };
     onMinViewTimeReached = async () => {
-        let t = await (0, E.N)((0, N.jO)(this.questContent)),
+        let t = await (0, E.N)((0, P.jO)(this.questContent)),
             e = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
@@ -132,7 +132,7 @@ class M {
                 apple_advertising_id: null != t && (0, v.isIOS)() ? t.advertisingId : null,
                 android_advertising_id: null != t && (0, v.isAndroid)() ? t.advertisingId : null,
                 ...(0, g.A)(),
-                ...(0, P.X)(this.questContent),
+                ...(0, N.X)(this.questContent),
             };
         (this.entity.adContentIds.forEach((n, s) => {
             let a = (0, S.L4)(this.sourceQuestContent, n),
@@ -160,7 +160,7 @@ class M {
                     questContentRowIndex: this.questContentRowIndex,
                     trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 };
-                (this.entity.adCreativeType === o.p.QUEST
+                (this.entity.adCreativeType === o.p.QUEST || this.entity.adCreativeType === o.p.PLAYABLE
                     ? (0, c.r)({
                           ...e,
                           adCreativeType: this.entity.adCreativeType,
@@ -182,7 +182,7 @@ class M {
                                 : {}),
                         }),
                     (0, f.L)().info(
-                        `${n} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, N.jO)(this.questContent)}`,
+                        `${n} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, P.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ));
                 return;
@@ -192,7 +192,7 @@ class M {
                     n = A.A.getQuest(t);
                 (null == n || (0, q.Ic)(n) || (0, Q.zh)(o.p.QUEST, [t]),
                     (0, f.L)().info(
-                        `${n?.config.messages.questName ?? t} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, N.jO)(this.questContent)}`,
+                        `${n?.config.messages.questName ?? t} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, P.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ),
                     (0, k.av)({
@@ -211,7 +211,7 @@ class M {
             } else {
                 let t = this.entity.adContentIds[s];
                 ((0, f.L)().info(
-                    `${t} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, N.jO)(this.questContent)}`,
+                    `${t} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, P.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
                     (0, k.Qg)({
@@ -281,7 +281,7 @@ class M {
     commonProperties = () => ({
         impression_id: this.id,
         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
-        ...(0, N.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
+        ...(0, P.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
     });
     clone = (t) => {
         let { triggeredByStatusChange: e } = t;
@@ -345,7 +345,7 @@ class M {
                 let i = this.entity.adContentIds[n],
                     a = A.A.getQuest(i);
                 ((0, f.L)().info(
-                    `${a?.config.messages.questName ?? i} Quest became visible at ${(0, N.jO)(this.questContent)}`,
+                    `${a?.config.messages.questName ?? i} Quest became visible at ${(0, P.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
                     (0, k.av)({
@@ -361,7 +361,7 @@ class M {
                     }));
             } else {
                 let i = this.entity.adContentIds[n];
-                ((0, f.L)().info(`${i} ad content became visible at ${(0, N.jO)(this.questContent)}`, {
+                ((0, f.L)().info(`${i} ad content became visible at ${(0, P.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
                     (0, k.Qg)({
@@ -377,7 +377,7 @@ class M {
         }),
             _.A.increment({
                 name: h.K.QUEST_CONTENT_IMPRESSION,
-                tags: [`quest_content:${(0, N.jO)(this.questContent)}`],
+                tags: [`quest_content:${(0, P.jO)(this.questContent)}`],
             }),
             (this.isRunning = !0));
     };
@@ -454,7 +454,7 @@ function U(t) {
         (0, n.jsx)(V.n.Provider, { value: p, children: t.children(r, p) })
     );
 }
-let $ = s.memo(function (t) {
+let B = s.memo(function (t) {
     let e,
         i,
         n,
@@ -479,9 +479,9 @@ let $ = s.memo(function (t) {
         ? (0, s.createElement)(U, { ...I, key: p, adContentIds: T, adCreativeType: o.p.QUEST })
         : (0, s.createElement)(U, { ...I, key: p, adContentIds: T, adCreativeType: t.adCreativeType });
 });
-function B(t) {
-    return (0, n.jsx)($, { ...t });
+function $(t) {
+    return (0, n.jsx)(B, { ...t });
 }
-function x(t) {
-    return (0, n.jsx)($, { ...t });
+function L(t) {
+    return (0, n.jsx)(B, { ...t });
 }

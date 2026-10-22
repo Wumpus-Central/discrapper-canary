@@ -18,7 +18,7 @@ var i = n(92077),
     _ = n(297264),
     E = n(192308),
     A = n(54827),
-    h = n(313960),
+    h = n(452295),
     f = n(587895),
     I = n(235986),
     p = n(465797),
@@ -195,7 +195,7 @@ async function R(e, t, n) {
             distributor: null != t ? t.getDistributor() : null,
             ...l,
         }),
-        h.Ay.launch({ applicationId: i.id, branchId: t?.branchId })
+        h.A.launchGame({ applicationId: i.id, branchId: t?.branchId })
     );
 }
 var L = n(568004),

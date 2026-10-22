@@ -1119,28 +1119,28 @@ function tg(e) {
         }),
     });
 }
-var tC = n(522305);
+var tC = n(452295);
 function t_(e) {
-    let { botUserId: t, applicationId: n, analyticsLocations: l } = e,
-        [i, s] = o.useState(!1),
-        a = o.useRef(null),
-        c = o.useCallback(async () => {
+    let { applicationId: t, analyticsLocations: n } = e,
+        [l, i] = o.useState(!1),
+        s = o.useRef(null),
+        a = o.useCallback(async () => {
             (eF.default.track(es.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
-                application_id: n,
+                application_id: t,
                 button_action: _.F5.OPEN_APP_DM,
             }),
-                s(!0));
+                i(!0));
             try {
-                await (0, tC.Q)({ appId: n, botId: t, analyticsLocations: l });
+                await tC.A.launch({ applicationId: t, analyticsLocations: n });
             } catch (e) {}
-            (clearTimeout(a.current), s(!1));
-        }, [t, n, l]);
+            (clearTimeout(s.current), i(!1));
+        }, [t, n]);
     return (0, r.jsx)(R.$, {
         type: "submit",
         size: "md",
         variant: "secondary",
-        loading: i,
-        onClick: c,
+        loading: l,
+        onClick: a,
         "aria-label": et.intl.string(et.t.AUM8hY),
         text: et.intl.string(et.t.AUM8hY),
     });
@@ -1344,9 +1344,7 @@ function tL(e) {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
-                      u && null != d
-                          ? (0, r.jsx)(t_, { botUserId: d, applicationId: n.id, analyticsLocations: p })
-                          : null,
+                      u && null != d ? (0, r.jsx)(t_, { applicationId: n.id, analyticsLocations: p }) : null,
                   ],
               })
             : s && !i && (0, I.Z$)(n)

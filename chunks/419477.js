@@ -140,7 +140,7 @@ let $ = new q(J.h, {
     },
 });
 var Q = n(939249),
-    ee = n(313960),
+    ee = n(452295),
     et = n(140651),
     en = n(232835),
     ei = n(652215),
@@ -194,18 +194,17 @@ function ea(e) {
             header: c,
             currentUserId: u,
             launchableAppId: g,
-            isEmbeddedApplication: p,
-            tryWithGdnAction: A,
-            staticBannerSrc: x,
-            hideBanner: f = !1,
-            onClickContent: I,
-            iconSrc: E,
-            onView: v,
-            presenceActivity: _,
-            analyticsLocations: N,
+            tryWithGdnAction: p,
+            staticBannerSrc: A,
+            hideBanner: x = !1,
+            onClickContent: f,
+            iconSrc: I,
+            onView: E,
+            presenceActivity: v,
+            analyticsLocations: _,
         } = e,
-        y = (0, s.bG)([en.A], () => en.A.getMessages(o.id)),
-        T = l.useMemo(() => {
+        N = (0, s.bG)([en.A], () => en.A.getMessages(o.id)),
+        y = l.useMemo(() => {
             var e, i;
             let l = [];
             return (null != g
@@ -215,44 +214,44 @@ function ea(e) {
                           trackingArea: h.kY.PLAY,
                           isDeadEnd: !0,
                           onClick: () => {
-                              ee.Ay.launch({ applicationId: g, embedded: p });
+                              ee.A.launch({ applicationId: g });
                           },
                       },
                   ])
-                : null != A && (l = [A]),
+                : null != p && (l = [p]),
             l.length > 0 &&
                 ((e = t.id),
                 (i = n.id),
-                y.hasAnyAfter(
+                N.hasAnyAfter(
                     e,
                     (e) =>
                         null != e.activity &&
                         e.application?.id === i &&
                         e.activity.type === ei.xL.JOIN &&
-                        !(0, Y.A)(_, e, i),
+                        !(0, Y.A)(v, e, i),
                     25,
                 )))
                 ? []
                 : l;
-        }, [p, g, A, y, _, n.id, t.id]),
-        S = T.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
-    (0, el.A)(S, N);
-    let b = T.length > 0,
-        k = l.useMemo(
+        }, [g, p, N, v, n.id, t.id]),
+        T = y.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
+    (0, el.A)(T, _);
+    let S = y.length > 0,
+        b = l.useMemo(
             () =>
                 (0, i.jsx)(r.E, {
                     variant: "text-xs/medium",
                     className: es.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, d.BE)(t, a, o, u, b),
+                    children: (0, d.BE)(t, a, o, u, S),
                 }),
-            [t, a, o, u, b],
+            [t, a, o, u, S],
         ),
-        R = {
+        k = {
             id: n.id,
             linkType: C.J.RICH_PRESENCE_INVITE,
-            onView: v,
+            onView: E,
             referrerId: t.author.id,
             guildId: o.guild_id,
             channelId: t.channel_id,
@@ -260,21 +259,21 @@ function ea(e) {
             isDeadEnd: !0,
             appEmbedState: C.f.DEAD,
         };
-    return 0 === T.length
-        ? (0, i.jsx)(er, { applicationName: a, iconSrc: E, viewAction: I, trackingConfig: R })
+    return 0 === y.length
+        ? (0, i.jsx)(er, { applicationName: a, iconSrc: I, viewAction: f, trackingConfig: k })
         : (0, i.jsx)(m.h, {
               header: c,
               title: a,
-              staticBannerSrc: x,
-              hideBanner: f,
-              onClickBanner: I,
+              staticBannerSrc: A,
+              hideBanner: x,
+              onClickBanner: f,
               bannerAspectRatio: m.u.ACTIVITY,
-              iconSrc: E ?? void 0,
-              info: k,
-              actions: T,
+              iconSrc: I ?? void 0,
+              info: b,
+              actions: y,
               primaryActionFirst: !0,
-              onClickContent: I,
-              trackingConfig: R,
+              onClickContent: f,
+              trackingConfig: k,
           });
 }
 var eo = n(453003);
@@ -375,7 +374,6 @@ function ed(e) {
               header: X,
               currentUserId: u,
               launchableAppId: T,
-              isEmbeddedApplication: v,
               tryWithGdnAction: b,
               staticBannerSrc: N,
               hideBanner: p,

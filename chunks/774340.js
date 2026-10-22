@@ -7,7 +7,7 @@ var t = a(477900),
     d = a(834730),
     r = a(289873),
     o = a(364522),
-    m = a(313960),
+    m = a(452295),
     u = a(58736),
     x = a(363487),
     h = a(546385),
@@ -323,7 +323,7 @@ function el(e) {
             };
         }, [s, a]),
         l.useEffect(() => {
-            S && ((0, v.cq)(b), m.Ay.getDetectableGames());
+            S && ((0, v.cq)(b), m.A.getDetectableGames());
         }, [b, S]));
     let G = (0, x.A)(b),
         I = (0, E.N)("GameServerPage"),

@@ -1,42 +1,37 @@
-n.d(e, { A: () => A });
+n.d(e, { A: () => h });
 var l = n(477900),
     r = n(17928),
     i = n(661531),
-    s = n(812993),
+    s = n(62010),
     a = n(194261),
-    o = n(403581),
-    c = n(590180),
-    u = n(4227),
-    d = n(993408),
-    m = n(105292),
-    x = n(623672);
-let A = function (t) {
-    let { skuId: e, canUsePremiumCollectibles: n, isPurchaseSection: A, isPremiumSection: h } = t,
-        E = (0, d.aT)(e),
-        f = (0, r.bG)([c.A, u.A], () => {
-            let t = c.A.getProduct(e),
-                n = u.A.getPurchase(e);
-            return null != n ? (0, d.gA)(n) : (0, d.G0)(t);
+    o = n(812993),
+    c = n(403581),
+    u = n(590180),
+    d = n(4227),
+    m = n(993408),
+    x = n(105292),
+    A = n(623672);
+let h = function (t) {
+    let { skuId: e, canUsePremiumCollectibles: n, isPurchaseSection: h, isPremiumSection: E } = t,
+        f = (0, m.aT)(e),
+        L = (0, r.bG)([u.A, d.A], () => {
+            let t = u.A.getProduct(e),
+                n = d.A.getPurchase(e);
+            return null != n ? (0, m.gA)(n) : (0, m.G0)(t);
         });
-    return A || (h && n)
+    return h || (E && n)
         ? null
-        : E
-          ? (0, l.jsx)(s.JI, {
-                className: x.Ad,
-                text: (0, l.jsxs)("div", {
-                    className: x.rm,
-                    children: [
-                        (0, l.jsx)(a.LockIcon, { size: "xxs", color: "currentColor" }),
-                        m.intl.string(m.t.y2b7CA),
-                    ],
-                }),
+        : f
+          ? (0, l.jsx)("div", {
+                className: A.A,
+                children: (0, l.jsx)(s.E, { type: "new", variant: "premium", icon: a.LockIcon }),
             })
-          : (0, l.jsx)(s.fk, {
-                icon: f
-                    ? () => (0, l.jsx)(o.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
+          : (0, l.jsx)(o.fk, {
+                icon: L
+                    ? () => (0, l.jsx)(c.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
                     : () => (0, l.jsx)(a.LockIcon, { size: "xxs", color: "currentColor" }),
                 color: i.A.colors.ICON_OVERLAY_DARK.css,
-                className: x.bG,
-                "aria-label": f ? m.intl.string(m.t.X3Ekj8) : m.intl.string(m.t.Ac5fm1),
+                className: A.b,
+                "aria-label": L ? x.intl.string(x.t.X3Ekj8) : x.intl.string(x.t.Ac5fm1),
             });
 };

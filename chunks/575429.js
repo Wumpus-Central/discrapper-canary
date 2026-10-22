@@ -1,61 +1,62 @@
 (r.r(e), r.d(e, { default: () => w }));
 var a = r(477900),
     i = r(582128),
-    s = r(132500),
-    n = r(607399),
+    n = r(132500),
+    s = r(607399),
     l = r(821609),
     c = r(297264),
-    d = r(834730),
-    u = r(289873),
+    u = r(834730),
+    d = r(289873),
     o = r(174459),
     h = r(723702);
 (r(323874), r(14289), r(35956));
-var p = r(17928),
-    _ = r(157559),
-    f = r(308528),
-    m = r(793574),
-    A = r(688810),
+var _ = r(17928),
+    f = r(157559),
+    m = r(308528),
+    p = r(452295),
+    A = r(793574),
+    E = r(688810),
     I = r(429913),
-    E = r(976860),
-    T = r(287809),
-    x = r(956549),
-    g = r(257269),
-    v = r(105292);
-function P(t) {
+    T = r(976860),
+    x = r(287809),
+    v = r(257269),
+    P = r(105292);
+function g(t) {
     let { match: e } = t,
-        r = (0, E.UC)() ?? [],
-        { analyticsLocations: a } = (0, A.Ay)([...r, m.A.ACTIVITY_DETAIL_PAGE]),
-        { applicationId: s } = e.params,
-        [n] = (0, I.A)([s]),
-        l = n?.bot?.id,
-        c = (0, p.bG)([T.default], () => T.default.getCurrentUser());
+        r = (0, T.UC)() ?? [],
+        { analyticsLocations: a } = (0, E.Ay)([...r, A.A.ACTIVITY_DETAIL_PAGE]),
+        { applicationId: n } = e.params,
+        [s] = (0, I.A)([n]),
+        l = s?.bot?.id,
+        c = (0, _.bG)([x.default], () => x.default.getCurrentUser());
     return (
         i.useEffect(() => {
-            null != l &&
+            null != n &&
+                null != l &&
                 null != c &&
                 (async () => {
                     try {
+                        await m.A.openPrivateChannel({ recipientIds: l });
                         let t = new URL(location.href),
-                            e = await f.A.openPrivateChannel({ recipientIds: l }),
-                            r = t.searchParams.get("referrer_id") ?? void 0,
-                            { customId: i } = await (0, g.d9)(
-                                s,
+                            e = t.searchParams.get("referrer_id") ?? void 0,
+                            { customId: r } = await (0, v.d9)(
+                                n,
                                 t.searchParams.get("link_id"),
                                 t.searchParams.get("custom_id"),
                             );
-                        await (0, x.A)({
-                            targetApplicationId: s,
-                            channelId: e,
+                        await p.A.launch({
+                            applicationId: n,
+                            fromLink: !0,
+                            customId: r,
+                            referrerId: e,
                             analyticsLocations: a,
-                            customId: i,
-                            referrerId: r,
                         });
                     } catch (t) {}
                 })();
-        }, [a, s, l, c]),
+        }, [a, n, l, c]),
         i.useEffect(() => {
             let t = setTimeout(() => {
-                null == l && _.A.show({ title: v.intl.string(v.t.PtobXW), body: v.intl.string(v.t["IOy+I5"]) });
+                null == l && f.A.show({ title: P.intl.string(P.t.PtobXW), body: P.intl.string(P.t["IOy+I5"]) });
             }, 5e3);
             return () => {
                 clearTimeout(t);
@@ -65,25 +66,25 @@ function P(t) {
     );
 }
 var b = r(652215),
-    C = r(613057),
-    k = r(168071);
+    k = r(613057),
+    C = r(168071);
 function w(t) {
     let { applicationId: e } = t.match.params,
-        [p, _] = i.useState(!1),
-        f = i.useRef(!1),
-        [m, A] = i.useState(null),
-        I = !h.isPlatformEmbedded && !n.Fr && !p,
-        E = i.useMemo(() => (0, s.A)(), []);
+        [_, f] = i.useState(!1),
+        m = i.useRef(!1),
+        [p, A] = i.useState(null),
+        E = !h.isPlatformEmbedded && !s.Fr && !_,
+        I = i.useMemo(() => (0, n.A)(), []);
     return (i.useEffect(() => {
-        I &&
-            !0 !== f.current &&
+        E &&
+            !0 !== m.current &&
             (Promise.resolve()
                 .then(r.bind(r, 129014))
                 .then((t) => {
                     let { default: r } = t;
                     r.request(b.e$_.DEEP_LINK, {
-                        type: C.XK.ACTIVITIES,
-                        params: { applicationId: e, url: location.href, attemptId: E },
+                        type: k.XK.ACTIVITIES,
+                        params: { applicationId: e, url: location.href, attemptId: I },
                     })
                         .then((t) => {
                             let r = t ?? !1;
@@ -91,7 +92,7 @@ function w(t) {
                                 o.default.track(b.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: e,
                                     source_url: location.href,
-                                    attempt_id: E,
+                                    attempt_id: I,
                                     rpc_success: r,
                                 }));
                         })
@@ -100,30 +101,30 @@ function w(t) {
                                 o.default.track(b.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: e,
                                     source_url: location.href,
-                                    attempt_id: E,
+                                    attempt_id: I,
                                     rpc_success: !1,
                                 }));
                         })
                         .then(() => r.disconnect());
                 }),
-            (f.current = !0));
-    }, [e, I, E]),
-    I && !1 !== m)
-        ? !0 === m
+            (m.current = !0));
+    }, [e, E, I]),
+    E && !1 !== p)
+        ? !0 === p
             ? (0, a.jsxs)("div", {
-                  className: k.k,
+                  className: C.k,
                   children: [
-                      (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: v.intl.string(v.t.csrAMJ) }),
-                      (0, a.jsx)(d.E, { variant: "text-xs/semibold", children: v.intl.string(v.t["m1+IBn"]) }),
-                      (0, a.jsx)(l.$, { variant: "primary", text: v.intl.string(v.t.fIv16B), onClick: () => _(!0) }),
+                      (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: P.intl.string(P.t.csrAMJ) }),
+                      (0, a.jsx)(u.E, { variant: "text-xs/semibold", children: P.intl.string(P.t["m1+IBn"]) }),
+                      (0, a.jsx)(l.$, { variant: "primary", text: P.intl.string(P.t.fIv16B), onClick: () => f(!0) }),
                   ],
               })
             : (0, a.jsxs)("div", {
-                  className: k.k,
+                  className: C.k,
                   children: [
-                      (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: v.intl.string(v.t["Z+hCVU"]) }),
-                      (0, a.jsx)(u.y, {}),
+                      (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: P.intl.string(P.t["Z+hCVU"]) }),
+                      (0, a.jsx)(d.y, {}),
                   ],
               })
-        : (0, a.jsx)(P, { ...t });
+        : (0, a.jsx)(g, { ...t });
 }

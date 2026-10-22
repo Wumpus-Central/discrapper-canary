@@ -5,7 +5,7 @@ var l = t(17928),
     a = t(192308),
     d = t(477782),
     o = t(308368),
-    s = t(313960),
+    s = t(452295),
     A = t(212245),
     p = t(323073),
     c = t(688810),
@@ -147,7 +147,7 @@ function B(i, e) {
         let t = (0, R.A)(i, X.jUm.EMBEDDED),
             n = O.Ay.getVoiceChannelId(),
             l = C.A.getChannel(n);
-        (await s.Ay.join({
+        (await s.A.join({
             userId: e.id,
             sessionId: i.session_id,
             applicationId: i.application_id,

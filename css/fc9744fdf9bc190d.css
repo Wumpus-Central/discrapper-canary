@@ -1,11 +1,8 @@
-.theme-dark .badge_dd79c2 {
-    background-color: var(--white);
-    color: var(--black)
-}
-
-.theme-light .badge_dd79c2 {
-    background-color: var(--black);
-    color: var(--white)
+.badgeWrapper_dd79c2 {
+    display: flex;
+    flex: 0 0 auto;
+    height: -moz-fit-content;
+    height: fit-content
 }
 
 .catalogBanner__3f82e {
@@ -81,4 +78,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=f260d04bd102720e.css.map*/
+/*# sourceMappingURL=fc9744fdf9bc190d.css.map*/

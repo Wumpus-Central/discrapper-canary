@@ -1,6 +1,6 @@
 n.d(t, { A: () => u });
 var i = n(387755),
-    r = n(313960),
+    r = n(452295),
     a = n(684013),
     s = n(730852),
     l = n(439372),
@@ -25,7 +25,7 @@ class c extends l.A {
     }
     handleJoinGame(e) {
         let { userId: t, sessionId: n, applicationId: i, channelId: s, messageId: l } = e;
-        r.Ay.join({ userId: t, sessionId: n, applicationId: i, channelId: s, messageId: l });
+        r.A.join({ userId: t, sessionId: n, applicationId: i, channelId: s, messageId: l });
         let d = o.default.getLegacyFocusedPID();
         null != d && a.A.setInputLocked(!0, d);
     }

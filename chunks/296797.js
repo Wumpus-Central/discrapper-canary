@@ -2,7 +2,7 @@ n.d(t, { A: () => S });
 var i = n(435558),
     r = n.n(i),
     a = n(73153),
-    s = n(313960),
+    s = n(452295),
     l = n(110782),
     o = n(439372),
     d = n(627363),
@@ -65,17 +65,17 @@ class g extends o.A {
     }
     handlePostConnectionOpen() {
         ((0, f.isDesktop)() && !E.A.fetched && (0, l.Yq)(),
-            s.Ay.getDetectableGames(),
-            s.Ay.getDetectableBlocklist(),
+            s.A.getDetectableGames(),
+            s.A.getDetectableBlocklist(),
             (this.intervalId = setInterval(
                 () => {
-                    (s.Ay.getDetectableGames(), s.Ay.getDetectableBlocklist());
+                    (s.A.getDetectableGames(), s.A.getDetectableBlocklist());
                 },
                 _.A.detectableGamesTtl + Math.random() * A.A.Millis.HOUR,
             )),
-            s.Ay.getDetectableNonGames(),
+            s.A.getDetectableNonGames(),
             (this.nonGameIntervalId = setInterval(
-                s.Ay.getDetectableNonGames,
+                s.A.getDetectableNonGames,
                 I.A.ttl + Math.random() * A.A.Millis.HOUR,
             )));
     }

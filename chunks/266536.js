@@ -199,7 +199,7 @@ var eh = s(289873),
 (s(667532), s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300));
 var ej = s(344390),
     eg = s(742459),
-    ev = s(313960);
+    ev = s(452295);
 async function eS() {
     let e = _.Ay.getRunningGames();
     return (
@@ -208,7 +208,7 @@ async function eS() {
                 let t;
                 if (null == e.name) return null;
                 try {
-                    t = await ev.Ay.identifyGame(e.pid, e.name);
+                    t = await ev.A.identifyGame(e.pid, e.name);
                 } catch (e) {
                     return null;
                 }

@@ -37,7 +37,7 @@ var n = i(284009),
     P = i(233741),
     w = i(897720),
     K = i(243612),
-    G = i(313960),
+    G = i(452295),
     F = i(581730),
     Y = i(672396),
     H = i(105292),
@@ -817,7 +817,7 @@ let eC = new eN(s.h, {
                                 },
                                 confirmText: H.intl.string(H.t.VJlc0S),
                                 onConfirmClick: (n, a) => {
-                                    (G.Ay.join({
+                                    (G.A.join({
                                         userId: i.id,
                                         sessionId: r,
                                         applicationId: l,

@@ -1,52 +1,51 @@
-a.d(n, { default: () => m });
-var o = a(477900);
+a.d(n, { default: () => h });
+var e = a(477900);
 a(582128);
-var s = a(661531),
-    e = a(939249),
-    r = a(812993),
-    c = a(688810),
-    d = a(87719),
-    i = a(84960),
-    l = a(202541),
-    p = a(652215),
-    f = a(105292),
-    u = a(6287),
-    A = a(777133);
-function C(t, n) {
-    return (0, o.jsx)(r.Lp, { text: t, className: A.Ad, color: s.A.unsafe_rawColors.BRAND_500.css }, n);
+var r = a(939249),
+    s = a(62010),
+    i = a(688810),
+    o = a(87719),
+    d = a(84960),
+    c = a(202541),
+    l = a(652215),
+    p = a(105292),
+    f = a(6287),
+    u = a(777133);
+function m(t, n) {
+    return (0, e.jsx)("span", { className: u.Ad, children: (0, e.jsx)(s.E, { type: "new", variant: "primary" }) }, n);
 }
-function m(t) {
-    let { guildCount: n, onClose: a, analyticsLocations: s, ...r } = t,
-        A = function (t, n) {
-            return (0, o.jsx)(
-                e.D,
+function h(t) {
+    let { guildCount: n, onClose: a, analyticsLocations: s, ...u } = t,
+        h = function (t, n) {
+            return (0, e.jsx)(
+                r.D,
                 {
-                    className: u.C,
+                    className: f.C,
                     tag: "span",
                     onClick: () => {
-                        (a(), (0, d.e)());
+                        (a(), (0, o.e)());
                     },
                     children: t,
                 },
                 n,
             );
         },
-        { analyticsLocations: m } = (0, c.Ay)(s);
-    return (0, o.jsx)(c.f5, {
-        value: m,
-        children: (0, o.jsx)(i.A, {
+        { analyticsLocations: C } = (0, i.Ay)(s);
+    return (0, e.jsx)(i.f5, {
+        value: C,
+        children: (0, e.jsx)(d.A, {
             artURL: "https://cdn.discordapp.com/assets/content/e79d4cfdd618a7a39abcd4d48afd7b216dab54ca862f39d293270af910e517e7.png",
             onClose: a,
-            type: l.e.GUILD_CAP_MODAL_UPSELL,
-            title: f.intl.string(f.t["CoNXB+"]),
+            type: c.e.GUILD_CAP_MODAL_UPSELL,
+            title: p.intl.string(p.t["CoNXB+"]),
             body:
-                n < p.qlD
-                    ? f.intl.format(f.t["5qLH7B"], { guildCount: n, onAndMore: A, newBadgeHook: C })
-                    : f.intl.format(f.t.mk9CS6, { onAndMore: A, newBadgeHook: C }),
+                n < l.qlD
+                    ? p.intl.format(p.t["5qLH7B"], { guildCount: n, onAndMore: h, newBadgeHook: m })
+                    : p.intl.format(p.t.mk9CS6, { onAndMore: h, newBadgeHook: m }),
             context:
-                n < p.qlD ? f.intl.formatToPlainString(f.t["C+Hqzs"], { guildCount: n }) : f.intl.string(f.t.m0xavd),
-            glowUp: f.intl.format(f.t["6Dl5X1"], { onAndMore: A }),
-            ...r,
+                n < l.qlD ? p.intl.formatToPlainString(p.t["C+Hqzs"], { guildCount: n }) : p.intl.string(p.t.m0xavd),
+            glowUp: p.intl.format(p.t["6Dl5X1"], { onAndMore: h }),
+            ...u,
         }),
     });
 }

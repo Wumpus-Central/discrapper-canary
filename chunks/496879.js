@@ -11,7 +11,7 @@ var a = t(477900),
     I = t(308368),
     E = t(308528),
     h = t(442433),
-    N = t(313960),
+    N = t(452295),
     _ = t(49229),
     C = t(730852),
     T = t(428249),
@@ -92,7 +92,7 @@ function O(e) {
                             break;
                         case f.c.JOIN:
                             if (null == e.userId || null == e.activity) return;
-                            N.Ay.join({
+                            N.A.join({
                                 userId: e.userId,
                                 sessionId: e.activity.session_id,
                                 applicationId: e.activity.application_id,

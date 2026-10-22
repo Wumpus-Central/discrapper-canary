@@ -1,7 +1,7 @@
 n.d(t, { Y: () => f });
 var l = n(582128),
     i = n(17928),
-    r = n(313960),
+    r = n(452295),
     a = n(350172),
     s = n(730202);
 n(321073);
@@ -25,7 +25,7 @@ let h = n(568065).Wb,
 function f() {
     let [e, t] = l.useState(0);
     l.useEffect(() => {
-        ((0, a.d2)({ applicationId: h, skuTypes: C, includePricing: !0 }), r.Ay.getDetectableGames());
+        ((0, a.d2)({ applicationId: h, skuTypes: C, includePricing: !0 }), r.A.getDetectableGames());
     }, [e]);
     let n = (0, i.bG)([s.A], () => s.A.getCollectionsForApplication(h)),
         c = (0, i.bG)([s.A], () => s.A.getFetchStateForApplication(h)),

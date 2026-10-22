@@ -17,7 +17,7 @@ var i,
     f = n(687966),
     I = n(825860),
     E = n(308368),
-    v = n(313960),
+    v = n(452295),
     C = n(729937),
     _ = n(572211),
     j = n(354287),
@@ -334,7 +334,7 @@ function ei(e) {
                           trackingArea: j.kY.JOIN,
                           submitting: eI,
                           onClick: () => {
-                              (v.Ay.join({
+                              (v.A.join({
                                   userId: t.author.id,
                                   sessionId: f.session_id,
                                   applicationId: f.application_id,

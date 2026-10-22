@@ -14541,7 +14541,7 @@ let Sy = (0, E.E2)(h.X.OVERLAY_BUG_REPORTER_SETTING, {
     },
     useSearchTerms: () => [U.intl.string(U.t["z4/l+V"])],
 });
-var Sb = n(313960),
+var Sb = n(452295),
     Sv = n(684013),
     Sj = n(56562),
     SO = n(311043),
@@ -14678,10 +14678,10 @@ let SH = (0, E.E2)(h.X.OVERLAY_CURRENT_GAME, {
                 s = !1;
             switch (n) {
                 case SD.OverlayToggledClientSettingType.LEGACY_GAME:
-                    (c(t), Sb.Ay.toggleOverlay(e, t, o), (i = !t && d));
+                    (c(t), Sb.A.toggleOverlay(e, t, o), (i = !t && d));
                     break;
                 case SD.OverlayToggledClientSettingType.OOP_GAME:
-                    (u(t), Sb.Ay.toggleOverlay(e, d, t), (s = !t && o));
+                    (u(t), Sb.A.toggleOverlay(e, d, t), (s = !t && o));
                     break;
                 case SD.OverlayToggledClientSettingType.LEGACY:
                     (Sv.A.setEnabled(t, x), (0, SD.Q)(t, SD.OverlayToggledClientSettingType.LEGACY, e.id ?? null));
@@ -14803,7 +14803,7 @@ let SH = (0, E.E2)(h.X.OVERLAY_CURRENT_GAME, {
                 }
             })();
         (0, eI.Ay)(() => {
-            Sb.Ay.getDetectableGames();
+            Sb.A.getDetectableGames();
         });
         let [M, V] = T.useMemo(
             () =>
@@ -14870,14 +14870,14 @@ let SH = (0, E.E2)(h.X.OVERLAY_CURRENT_GAME, {
                                       s = !1;
                                   switch (n) {
                                       case "game":
-                                          (Sb.Ay.toggleOverlay(e, t, t), c(t), u(t), (i = !t && d), (s = !t && o));
+                                          (Sb.A.toggleOverlay(e, t, t), c(t), u(t), (i = !t && d), (s = !t && o));
                                           break;
                                       case "global":
                                           (Sv.A.setEnabled(t, t), (i = !t && h), (s = !t && x));
                                           break;
                                       case "both":
                                           (Sv.A.setEnabled(t, t),
-                                              Sb.Ay.toggleOverlay(e, t, t),
+                                              Sb.A.toggleOverlay(e, t, t),
                                               c(t),
                                               u(t),
                                               (i = (!t && h) || (!t && d)),
@@ -15030,7 +15030,7 @@ let Sq = (0, E.E2)(h.X.OVERLAY_LEGACY_SETTING, {
             }
             function o(e, t, n) {
                 let { enabledOOP: i } = n;
-                Sb.Ay.toggleOverlay(t, e, i);
+                Sb.A.toggleOverlay(t, e, i);
             }
             let u = T.useMemo(
                 () =>
@@ -15116,7 +15116,7 @@ let Sq = (0, E.E2)(h.X.OVERLAY_LEGACY_SETTING, {
             }
             function o(e, t, n) {
                 let { enabledLegacy: i } = n;
-                Sb.Ay.toggleOverlay(t, e, i);
+                Sb.A.toggleOverlay(t, e, i);
             }
             let u = T.useMemo(
                 () => (SW.O ? (s ? U.intl.string(U.t.C7bLTQ) : U.intl.string(U.t.ndgADE)) : U.intl.string(U.t.m7X4az)),
@@ -15764,9 +15764,9 @@ function pw(e) {
             [pV.fG]: null != l && l.length > 0,
         });
     function b() {
-        (Sb.Ay.deleteEntry(o),
+        (Sb.A.deleteEntry(o),
             l?.forEach((e) => {
-                Sb.Ay.deleteEntry(e);
+                Sb.A.deleteEntry(e);
             }));
     }
     function v() {
@@ -15821,7 +15821,7 @@ function pw(e) {
                                       maxLength: 128,
                                       value: N,
                                       onBlur: function () {
-                                          o.name !== N && Sb.Ay.editName(o, N);
+                                          o.name !== N && Sb.A.editName(o, N);
                                       },
                                       onKeyDown: function (e) {
                                           e.key === sU.dh.ENTER && (e.currentTarget.blur(), e.preventDefault());
@@ -15931,14 +15931,14 @@ function pw(e) {
                                                       {
                                                           text: U.intl.string(U.t.Fmjztz),
                                                           onClick: () => {
-                                                              (Sb.Ay.toggleDetection(o), t.onClose());
+                                                              (Sb.A.toggleDetection(o), t.onClose());
                                                           },
                                                           variant: "primary",
                                                       },
                                                   ],
                                               });
                                       })
-                                    : Sb.Ay.toggleDetection(o);
+                                    : Sb.A.toggleDetection(o);
                             },
                             "aria-label": U.intl.string(U.t.QmitzM),
                         }),
@@ -16028,7 +16028,7 @@ function pK(e) {
                         text: U.intl.string(U.t.GTCx0p),
                         disabled: null == i,
                         onClick: function () {
-                            null != i && (Sb.Ay.addGame(i.pid, i.name), t());
+                            null != i && (Sb.A.addGame(i.pid, i.name), t());
                         },
                     }),
                 ],

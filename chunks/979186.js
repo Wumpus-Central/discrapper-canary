@@ -42,7 +42,7 @@ var r = n(477900),
     W = n(622242),
     H = n(731738),
     V = n(834730),
-    Y = n(313960),
+    Y = n(452295),
     z = n(684013),
     J = n(964486),
     $ = n(807393),
@@ -202,7 +202,7 @@ class ef extends i.PureComponent {
                           },
                           onDisable: () => {
                               let e = ei.A.getFocusedRunningGame();
-                              null != e && Y.Ay.toggleOverlay(e, !1, !1);
+                              null != e && Y.A.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               let e = this.pid ?? ei.A.getTargetPID();
