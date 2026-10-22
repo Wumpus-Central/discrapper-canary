@@ -5527,7 +5527,6 @@ var rC =
         (eM.GAME_COMMUNITY_UPSELL_VIEWED = "game_community_upsell_viewed"),
         (eM.GAME_COMMUNITY_UPSELL_DISMISSED = "game_community_upsell_dismissed"),
         (eM.GAME_COMMUNITY_UPSELL_ACCEPTED = "game_community_upsell_accepted"),
-        (eM.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_JOINED = "game_community_multi_guild_upsell_card_joined"),
         (eM.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED = "game_community_multi_guild_upsell_card_dismissed"),
         (eM.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED = "on_platform_account_link_flow_started"),
         (eM.CONNECTION_INDICATOR_SHOWN = "connection_indicator_shown"),
