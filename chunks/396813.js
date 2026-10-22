@@ -618,16 +618,16 @@ async function eT(e, t) {
                 currentFetchedAt: n,
             }));
         let U = (0, A.K2)(v);
-        if (null == v || null == U) return;
-        (e === H.p9.DESKTOP_ACCOUNT_PANEL_AREA && w.A.startTracking(U, v.type),
-            O.default.track(b.HAw.QUEST_DECISION_RECEIVED, {
-                ...(0, I.A)(),
-                quest_id: v.type === a.p.QUEST ? U : null,
-                ad_content_id: U,
-                creative_type: v.type,
-                caller_source: t,
-                ad_request_id: String(L.request_id),
-            }));
+        if (
+            (null != v && null != U && e === H.p9.DESKTOP_ACCOUNT_PANEL_AREA && w.A.startTracking(U, v.type), null == i)
+        )
+            return;
+        O.default.track(b.HAw.QUEST_DECISION_RECEIVED, {
+            ...(0, I.A)(),
+            quest_id: i.id,
+            caller_source: t,
+            ad_request_id: String(L.request_id),
+        });
     } catch (i) {
         (k.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1, currentFetchedAt: n }),
             O.default.track(b.HAw.QUEST_DECISION_ROUNDTRIP_ERROR, {
