@@ -379,13 +379,12 @@ let eI = l.memo(function () {
                                           t.e("35723"),
                                           t.e("566378"),
                                           t.e("256372"),
+                                          t.e("722440"),
                                           t.e("337341"),
                                           t.e("29542"),
                                           t.e("333730"),
-                                          t.e("722440"),
                                           t.e("248804"),
-                                          t.e("141049"),
-                                          t.e("174489"),
+                                          t.e("529005"),
                                           t.e("560955"),
                                           t.e("730504"),
                                           t.e("335517"),
@@ -613,8 +612,8 @@ var eR = t(202776),
     e$ = t(287809),
     e0 = t(403362),
     e1 = t(427262),
-    e4 = t(19575),
-    e5 = t(669953),
+    e5 = t(19575),
+    e4 = t(669953),
     e6 = t(817818),
     e9 = t(591552),
     e3 = t(961973),
@@ -631,7 +630,7 @@ function ni(e) {
     return (
         l.useEffect(() => (nn(e), () => nn(e)), [e]),
         l.useEffect(() => {
-            null != n && 0 !== Object.keys(n).length && e5.A.updateOnboardingResponses(e);
+            null != n && 0 !== Object.keys(n).length && e4.A.updateOnboardingResponses(e);
         }, [e, n]),
         {
             handleSelectOption: l.useCallback(
@@ -696,9 +695,9 @@ function ni(e) {
                             return ((n[t] = { flags: (0, e7.lA)(i, ne.vv.OPT_IN_ENABLED, !1) }), n);
                         }, {}),
                         u = { ...c, ...o };
-                    (e5.A.selectOption(e, n.id, t.id, i),
+                    (e4.A.selectOption(e, n.id, t.id, i),
                         J.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId: e, overrides: u }),
-                        e5.A.updateRolesLocal(e, s, a));
+                        e4.A.updateRolesLocal(e, s, a));
                 },
                 [e],
             ),
@@ -771,7 +770,7 @@ function nA(e) {
         (0, eK.A)(t.id, t.getAvatarURL(n.id, (0, eL.FT)(nC)), { guildId: n.id });
     });
     let g = (0, eW.parseBioReact)(C?.bio),
-        A = e4.Ay.getEnableHardwareAcceleration() ? eG.Js : eG.eu;
+        A = e5.Ay.getEnableHardwareAcceleration() ? eG.Js : eG.eu;
     return (0, i.jsxs)("div", {
         className: nm.ME,
         children: [
@@ -1054,7 +1053,7 @@ function nj(e) {
             if (c?.id != null && !eq.A.isFullServerPreview(c.id))
                 return () => {
                     ((0, ek.hK)(c.id, nh.P.GUILD_ONBOARDING_QUESTION, e9.A.ackIdForGuild(c.id)),
-                        e5.A.updateOnboardingResponses(c.id));
+                        e4.A.updateOnboardingResponses(c.id));
                 };
         }, [c?.id]));
     let f = l.useCallback(

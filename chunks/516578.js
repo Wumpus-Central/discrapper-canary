@@ -2566,7 +2566,7 @@ var nC = n(478016),
     nI = n(646270),
     nM = n(31300),
     n_ = n(831453),
-    nR = n(270593);
+    nR = n(71048);
 let nP = Object.freeze({ x: 0.5, y: 0.5 });
 function nT(e) {
     return "" !== e.trim();

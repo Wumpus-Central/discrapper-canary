@@ -288,6 +288,26 @@
     cursor: pointer
 }
 
+.conjuredAppChannelApplication_f75fb0 {
+    isolation: isolate;
+    position: relative
+}
+
+.conjuredAppChannelApplication_f75fb0:before {
+    background-color: transparent;
+    border-radius: var(--radius-sm);
+    content: "";
+    inset: calc(var(--space-4)*-1) calc(var(--space-6)*-1);
+    pointer-events: none;
+    position: absolute;
+    z-index: -1
+}
+
+.conjuredAppChannelApplication_f75fb0:focus-visible:before,
+.conjuredAppChannelApplication_f75fb0:hover:before {
+    background-color: var(--interactive-background-hover)
+}
+
 .linkedLobbyEducationTooltipWrapper_f75fb0 {
     max-width: 288px;
     pointer-events: all
@@ -404,4 +424,4 @@
     background-color: var(--background-mod-normal)
 }
 
-/*# sourceMappingURL=264141.c0aa19657f87ac3b.css.map*/
+/*# sourceMappingURL=264141.3588135516004335.css.map*/

@@ -31,6 +31,7 @@ f.exports = {
     Hq: "headerApplicationIcon_f75fb0",
     Hz: "headerApplicationName_f75fb0",
     pj: "appChannelApplication_f75fb0",
+    To: "conjuredAppChannelApplication_f75fb0",
     lE: "linkedLobbyEducationTooltip_f75fb0",
     y$: "akaPopoverContent_f75fb0",
     qc: "akaPopoverHeader_f75fb0",
