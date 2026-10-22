@@ -371,9 +371,9 @@ function e4(e) {
               return (0, i.jsx)(ea.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e6 = G._3.SIZE_32,
-    e9 = [et.iq, et.tR, et.K7, et.sp, et.MK];
-function e8(e) {
+let e9 = G._3.SIZE_32,
+    e6 = [et.iq, et.tR, et.K7, et.sp, et.MK];
+function e7(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -453,7 +453,7 @@ function e8(e) {
         ],
     });
 }
-function e7(e) {
+function e8(e) {
     let {
             user: t,
             activities: n,
@@ -470,7 +470,7 @@ function e7(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, eh.A)({ userId: g, size: e6, animateOnHover: !0, guildId: null }),
+        } = (0, eh.A)({ userId: g, size: e9, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -517,7 +517,7 @@ function e7(e) {
                 return (0, i.jsx)(et.mG, {
                     location: et.N5.FRIENDS_POPOUT,
                     className: eT.cV,
-                    children: e9.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
+                    children: e6.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
                 });
             }
             if ((0, B.A)({ activities: n, status: S, applicationStream: N, voiceChannel: p })) {
@@ -532,7 +532,7 @@ function e7(e) {
                     let { type: t } = e;
                     return t === eX.$pd.PLAYING;
                 }) == null && null != p
-                    ? (0, i.jsx)(e8, {
+                    ? (0, i.jsx)(e7, {
                           channel: p,
                           textVariant: "text-xs/medium",
                           activities: n ?? [],
@@ -608,7 +608,7 @@ let tt = r.memo((e) => {
             currentUserPlayingActivities: v,
             renderSubtext: R,
             renderUserContextMenu: D,
-        } = e7({
+        } = e8({
             user: t,
             activities: n,
             relationshipType: E,
@@ -691,7 +691,7 @@ let tt = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(U.eu, {
             ...S,
-            size: e6,
+            size: e9,
             src: p,
             isMobile: _,
             isTyping: !1,
@@ -743,7 +743,7 @@ let tn = r.memo((e) => {
             status: x,
             renderSubtext: T,
             renderUserContextMenu: _,
-        } = e7({
+        } = e8({
             user: t,
             activities: n,
             relationshipType: l,
@@ -824,7 +824,7 @@ let tn = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(U.eu, {
             ...I,
-            size: e6,
+            size: e9,
             src: m,
             isMobile: S,
             isTyping: !1,
@@ -1997,7 +1997,7 @@ function t4(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t6,
+                        t9,
                         {
                             tab: t,
                             label: eB.intl.formatToPlainString(n, {}),
@@ -2013,7 +2013,7 @@ function t4(e) {
         ],
     });
 }
-function t6(e) {
+function t9(e) {
     let {
             tab: t,
             label: n,
@@ -2036,9 +2036,9 @@ function t6(e) {
     });
 }
 t2.displayName = "OverlayVoiceCallElapsedTime";
-var t9 = n(594831),
-    t8 = n(645959),
-    t7 = n(812993),
+var t6 = n(594831),
+    t7 = n(645959),
+    t8 = n(812993),
     ne = n(602853),
     nt = n(713654),
     nn = n(636537),
@@ -2665,7 +2665,7 @@ function nz(e) {
     );
 }
 function nX(e) {
-    return (0, i.jsx)(t7.hV, { count: e });
+    return (0, i.jsx)(t8.hV, { count: e });
 }
 function nB(e) {
     let { channelId: t, listItemId: n, mentionCount: l, unread: r } = e,
@@ -2952,12 +2952,12 @@ function n1() {
         [l, a] = r.useState(""),
         d = l.trim().toLowerCase(),
         c =
-            ((e = (0, t9.Dz)()),
+            ((e = (0, t6.Dz)()),
             (0, s.yK)(
-                [t8.A, eI.A],
+                [t7.A, eI.A],
                 () => {
                     let t = [];
-                    for (let e of t8.A.getPrivateChannelIds()) {
+                    for (let e of t7.A.getPrivateChannelIds()) {
                         let n = eI.A.getChannel(e);
                         null != n && t.push({ channel: n, voiceStates: [] });
                     }
@@ -3249,10 +3249,10 @@ var n3 = n(776096),
     n2 = n(607567),
     n5 = n(377802),
     n4 = n(342952),
-    n6 = n(676923),
-    n9 = n(342296),
-    n8 = n(936520),
-    n7 = n(956123);
+    n9 = n(676923),
+    n6 = n(342296),
+    n7 = n(936520),
+    n8 = n(956123);
 let le = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
         d = r.useRef(null),
@@ -3279,7 +3279,7 @@ let le = r.memo(function (e) {
             [t, o, g, m],
         );
     return (0, tC.Vq)(g) && null != m
-        ? (0, i.jsx)(n9.A, {
+        ? (0, i.jsx)(n6.A, {
               targetElementRef: d,
               user: g,
               guildId: n ?? void 0,
@@ -3292,14 +3292,14 @@ let le = r.memo(function (e) {
                   (0, i.jsx)(E.D, {
                       ...e,
                       innerRef: d,
-                      className: n7.gD,
+                      className: n8.gD,
                       onDoubleClick: u,
                       onContextMenu: x,
                       onClick: (e) => {
                           (e.preventDefault(), e.stopPropagation(), h(!0));
                       },
                       children: (0, i.jsxs)("div", {
-                          className: n7.h6,
+                          className: n8.h6,
                           children: [
                               (0, i.jsx)(U.eu, {
                                   src: g.getAvatarURL(n ?? void 0, 24),
@@ -3307,7 +3307,7 @@ let le = r.memo(function (e) {
                                   "aria-label": N,
                               }),
                               (0, i.jsxs)(S.E, {
-                                  className: n7.rg,
+                                  className: n8.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
@@ -3315,21 +3315,21 @@ let le = r.memo(function (e) {
                                           userName: N,
                                           displayNameStyles: I,
                                           effectDisplayType: er.G.STATIC,
-                                          textClassName: n7.m2,
+                                          textClassName: n8.m2,
                                       }),
                                       (0, i.jsx)(ed.Ay, { userId: l, disableGuildProfile: !0 }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: n7.ZA,
+                                  className: n8.ZA,
                                   onDoubleClick: u,
-                                  children: (0, i.jsx)(n8.Kc, {
+                                  children: (0, i.jsx)(n7.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
                                       isStreaming: A,
-                                      className: n7.ZA,
-                                      iconClassName: n7.Ow,
+                                      className: n8.ZA,
+                                      iconClassName: n8.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
@@ -3340,7 +3340,7 @@ let le = r.memo(function (e) {
                                       disabled: !1,
                                   }),
                               }),
-                              null != p ? (0, i.jsx)(ea.A, { game: p, size: ea.M.XSMALL, className: n7.IV }) : null,
+                              null != p ? (0, i.jsx)(ea.A, { game: p, size: ea.M.XSMALL, className: n8.IV }) : null,
                           ],
                       }),
                   }),
@@ -3378,7 +3378,7 @@ function ll(e) {
     return 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: n7.X0,
+              className: n8.X0,
               children: (0, i.jsx)(n4.A, {
                   users: l,
                   guildId: n ?? void 0,
@@ -3496,7 +3496,7 @@ function li(e) {
             n = f ? H : nx._;
         return (0, i.jsx)("div", {
             onDoubleClick: ln,
-            children: (0, i.jsx)(n6.S, {
+            children: (0, i.jsx)(n9.S, {
                 tooltipText: e,
                 onClick: f ? b : D,
                 onMouseEnter: Y,
@@ -3534,12 +3534,12 @@ function li(e) {
                 secondaryText:
                     null != T
                         ? (0, i.jsxs)("div", {
-                              className: n7.z2,
+                              className: n8.z2,
                               children: [
                                   (0, i.jsx)(tV.GameControllerIcon, {
                                       size: "xxs",
                                       color: "currentColor",
-                                      className: n7.AE,
+                                      className: n8.AE,
                                   }),
                                   (0, i.jsx)(S.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
@@ -3552,7 +3552,7 @@ function li(e) {
                         case !x:
                             return e
                                 ? (0, i.jsxs)("div", {
-                                      className: n7.YT,
+                                      className: n8.YT,
                                       onDoubleClick: ln,
                                       children: [z(), (0, i.jsx)(ey.j, { tab: o.x.VOICE, targetId: n })],
                                   })
@@ -3562,7 +3562,7 @@ function li(e) {
                                 children: [
                                     d
                                         ? (0, i.jsxs)("div", {
-                                              className: n7.YT,
+                                              className: n8.YT,
                                               onDoubleClick: ln,
                                               children: [z(), (0, i.jsx)(ey.j, { tab: o.x.VOICE, targetId: n })],
                                           })
@@ -3577,7 +3577,7 @@ function li(e) {
             }),
             d && N.length > 0
                 ? (0, i.jsx)("div", {
-                      className: n7.Nz,
+                      className: n8.Nz,
                       children: N.slice(0, 25).map((e) =>
                           (0, i.jsx)(
                               le,
@@ -3617,7 +3617,7 @@ function lo() {
         a = n.trim().toLowerCase(),
         [d, c] = r.useState(() => new Set()),
         h = (0, s.bG)([tf], () => tf.getCollapsedSectionOverridesForTab(o.x.VOICE), []),
-        g = (0, t9.qZ)(),
+        g = (0, t6.qZ)(),
         m = r.useMemo(() => {
             let e = new Map();
             for (let t of g) e.set(t.channel.id, t.voiceStates);
@@ -3634,12 +3634,12 @@ function lo() {
         }, []),
         p = r.useMemo(() => new Set(g.map((e) => e.channel.id)), [g]),
         [S, _] = r.useState([]);
-    (0, ty.RT)(n, g, _, t9.MV);
+    (0, ty.RT)(n, g, _, t6.MV);
     let C = r.useRef(null),
         v = (0, y.A)("friends-widget-voice", C),
         [R, b] = (0, s.bG)([tS.A], () => tS.A.getFavoriteTargetIdsForTab(o.x.VOICE), [], j.D),
         k = r.useMemo(() => R.filter((e) => p.has(e)), [R, p]),
-        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t9.S4)(),
+        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t6.S4)(),
         F = r.useMemo(() => O.filter((e) => p.has(e)), [O, p]),
         G = r.useMemo(() => w.filter((e) => p.has(e)), [w, p]),
         L = (0, s.bG)([ef.Ay], () => ef.Ay.getVoiceChannelId(), []),
@@ -4336,7 +4336,7 @@ let ly = r.memo(function (e) {
                             (0, lh.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("790484"),
-                                    n.e("108888"),
+                                    n.e("451829"),
                                     n.e("622936"),
                                     n.e("216947"),
                                     n.e("463317"),

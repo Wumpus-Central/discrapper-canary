@@ -1,14 +1,15 @@
 n.d(t, {
     $P: () => l,
     He: () => o,
-    IG: () => c,
+    IG: () => u,
     O5: () => r,
     Vb: () => a,
-    Vi: () => _,
+    Vi: () => E,
     dW: () => i,
     fx: () => s,
+    og: () => c,
     r6: () => d,
-    u4: () => u,
+    u4: () => _,
 });
 let i = {
         1: "default",
@@ -180,6 +181,7 @@ let i = {
         13: "nitro",
         14: "nitro",
     },
-    c = new Set([1, 6, 9, 11, 13]),
-    u = ["base", "outfit", "shoes", "wearable", "face", "hat", "aura"],
-    _ = ["wearable", "base", "outfit", "shoes", "face", "hat", "aura"];
+    c = { common: 0, rare: 70, epic: 80, ultra: 95 },
+    u = new Set([1, 6, 9, 11, 13]),
+    _ = ["base", "outfit", "shoes", "wearable", "face", "hat", "aura"],
+    E = ["wearable", "base", "outfit", "shoes", "face", "hat", "aura"];
