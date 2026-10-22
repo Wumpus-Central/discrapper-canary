@@ -10,66 +10,71 @@ var l = n(582128),
     d = n(206285),
     m = n(105292);
 function p(e) {
-    let { surface: t, applicationId: n, skuId: o } = e,
-        p = (0, u.m)(n),
-        h = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(o), [o]),
-        C = l.useMemo(() => {
-            if (null == p || null == h) return null;
-            for (let e of h) {
-                let t = p[e];
+    let { surface: t, applicationId: n, skuId: p } = e,
+        h = (0, u.m)(n),
+        C = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(p), [p]),
+        f = (0, o.x)({ surface: t, skuId: p }),
+        E = l.useMemo(() => {
+            if (null == h) return null;
+            for (let e of C ?? []) {
+                let t = h[e];
+                if (null != t) return t;
+            }
+            for (let e of f) {
+                let t = h[e.promotionId];
                 if (null != t) return t;
             }
             return null;
-        }, [p, h]),
-        f = (0, c.n)({ surface: t, skuId: o });
+        }, [h, C, f]),
+        S = (0, c.n)({ surface: t, skuId: p });
     return l.useMemo(() => {
-        if (null == C) return null;
-        let e = (0, s.RD)(C.endsAt);
+        if (null == E) return null;
+        let e = (0, s.RD)(E.endsAt);
         switch (t) {
             case "gift_customization": {
-                if (null == f) return null;
-                let t = (0, s.Ew)(C.checkout?.label ?? null, f.amount);
+                if (null == S) return null;
+                let t = (0, s.Ew)(E.checkout?.label ?? null, S.amount);
                 if ((0, a.uJ)(t)) return null;
                 return {
-                    Icon: (0, s.LZ)(C.checkout?.icon ?? null),
+                    Icon: (0, s.LZ)(E.checkout?.icon ?? null),
                     text: t,
-                    tooltip: (0, s.Ew)(C.checkout?.tooltip ?? null, f.amount),
+                    tooltip: (0, s.Ew)(E.checkout?.tooltip ?? null, S.amount),
                     endsAt: e,
-                    flavor: C.flavor,
-                    rewardRequirements: C.rewardRequirements,
+                    flavor: E.flavor,
+                    rewardRequirements: E.rewardRequirements,
                 };
             }
             case "pdp":
             case "card": {
-                let t = C.pdp,
-                    n = (0, s.Ew)(t?.label ?? null, f?.amount ?? null);
+                let t = E.pdp,
+                    n = (0, s.Ew)(t?.label ?? null, S?.amount ?? null);
                 if ((0, a.uJ)(n)) return null;
                 return {
                     Icon: (0, s.LZ)(t?.icon ?? null),
                     text: n,
-                    tooltip: (0, s.Ew)(t?.tooltip ?? null, f?.amount ?? null),
+                    tooltip: (0, s.Ew)(t?.tooltip ?? null, S?.amount ?? null),
                     endsAt: e,
-                    flavor: C.flavor,
-                    rewardRequirements: C.rewardRequirements,
+                    flavor: E.flavor,
+                    rewardRequirements: E.rewardRequirements,
                 };
             }
             case "sku_purchase_badge":
             case "sku_gift_badge": {
-                if (null == f) return null;
-                let n = "sku_gift_badge" === t ? C.checkout : C.pdp,
-                    l = (0, s.Ew)(n?.label ?? null, f.amount);
+                if (null == S) return null;
+                let n = "sku_gift_badge" === t ? E.checkout : E.pdp,
+                    l = (0, s.Ew)(n?.label ?? null, S.amount);
                 if ((0, a.uJ)(l)) return null;
                 return {
                     Icon: (0, s.LZ)("TAG"),
                     text: m.intl.string(d.default.hriMCc),
-                    tooltip: (0, s.Ew)(n?.tooltip ?? null, f.amount),
+                    tooltip: (0, s.Ew)(n?.tooltip ?? null, S.amount),
                     endsAt: e,
-                    flavor: C.flavor,
-                    rewardRequirements: C.rewardRequirements,
+                    flavor: E.flavor,
+                    rewardRequirements: E.rewardRequirements,
                 };
             }
         }
-    }, [t, C, f]);
+    }, [t, E, S]);
 }
 function h(e) {
     let { surface: t, applicationId: n, skuId: i } = e,
