@@ -565,6 +565,12 @@
     padding-inline: calc(var(--space-48) + var(--space-8))
 }
 
+.attribution__94b2c {
+    bottom: var(--space-32);
+    inset-inline-end: var(--space-32);
+    position: absolute
+}
+
 .startText__94b2c {
     font-size: 18px;
     line-height: 24px;
@@ -1605,4 +1611,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=480748.34c2e7c33ae5d61f.css.map*/
+/*# sourceMappingURL=480748.bb98ae689e9d254a.css.map*/
