@@ -173,6 +173,21 @@
     z-index: 2
 }
 
+.hiddenAvatar_c6c010 {
+    align-items: center;
+    background-color: var(--border-subtle);
+    border-radius: var(--radius-round);
+    display: flex;
+    height: var(--space-40);
+    justify-content: center;
+    width: var(--space-40)
+}
+
+.hiddenAvatarFirst_c6c010 {
+    height: var(--space-48);
+    width: var(--space-48)
+}
+
 .medalBadge_c6c010 {
     height: var(--space-24);
     inset-block-end: calc(var(--space-10)*-1);
@@ -402,4 +417,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=c64a3e78e52ad531.css.map*/
+/*# sourceMappingURL=1272b3d77cf4e82b.css.map*/

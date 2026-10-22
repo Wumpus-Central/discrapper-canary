@@ -5,6 +5,8 @@ _.exports = {
     th: "columnSecond_c6c010",
     Ou: "columnThird_c6c010",
     R3: "avatarWrapper_c6c010",
+    gt: "hiddenAvatar_c6c010",
+    o2: "hiddenAvatarFirst_c6c010",
     dR: "medalBadge_c6c010",
     DX: "pillar_c6c010",
     P5: "pillarFirst_c6c010",
