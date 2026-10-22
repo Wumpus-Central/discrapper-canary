@@ -13,17 +13,17 @@ var n = l(477900),
     f = l(104510),
     g = l(661531),
     h = l(821609),
-    j = l(645619),
-    p = l(915667),
+    p = l(645619),
+    j = l(915667),
     v = l(451395),
     _ = l(49303),
-    b = l(328006),
-    A = l(857909),
+    A = l(328006),
+    b = l(857909),
     E = l(334840),
     N = l(393750);
 let I = [
-    { avatar: b.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
-    { avatar: A.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
+    { avatar: A.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
+    { avatar: b.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
     { avatar: E.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
 function C(e) {
@@ -69,7 +69,7 @@ function y() {
 var k = l(562073),
     T = l(189213),
     w = l(192308),
-    R = l(7954),
+    R = l(153904),
     D = l(61567),
     L = l(105292),
     M = l(397462);
@@ -166,7 +166,7 @@ function G(e) {
 }
 function P(e) {
     let { title: t, boostPrice: l, powerupSkuId: i, LockedPreview: s, guildId: a } = e,
-        d = (0, r.bG)([j.A], () => (null != i ? j.A.getStateForGuild(a)?.allPowerups[i] : void 0), [a, i]);
+        d = (0, r.bG)([p.A], () => (null != i ? p.A.getStateForGuild(a)?.allPowerups[i] : void 0), [a, i]);
     return (0, n.jsxs)(m.B, {
         className: M.xt,
         align: "center",
@@ -221,7 +221,7 @@ function P(e) {
                 disabled: null == d,
                 loading: null != i && null == d,
                 onClick: function () {
-                    null != d && (0, p.A)(a, d);
+                    null != d && (0, j.A)(a, d);
                 },
             }),
         ],
@@ -266,22 +266,22 @@ function O(e) {
                 })({ widget: l, Edit: m.Edit, onCommit: d }));
         }, [l, m, d, o, t]);
     if (null == m) return null;
-    let { View: f, Edit: g, HeaderAccessory: h, HeaderActions: j, Title: p, TitleIcon: v, ViewHeaderTrailing: b } = m,
-        A = "edit" === s,
+    let { View: f, Edit: g, HeaderAccessory: h, HeaderActions: p, Title: j, TitleIcon: v, ViewHeaderTrailing: A } = m,
+        b = "edit" === s,
         E = null != g && null != d && null == o,
         N = null != h ? (0, n.jsx)(h, { hydration: a, guildId: t }) : null,
         I = null != v ? (0, n.jsx)(v, { hydration: a }) : null,
-        C = null == o && null != j ? (0, n.jsx)(j, { hydration: a, guildId: t, column: l.position.column }) : null,
+        C = null == o && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
         S = l.default_title ?? "",
         y =
-            null != p && null == o
-                ? (0, n.jsx)(p, { widget: l, hydration: a, guildSpaceMode: s, guildId: t })
+            null != j && null == o
+                ? (0, n.jsx)(j, { widget: l, hydration: a, guildSpaceMode: s, guildId: t })
                 : (0, n.jsx)(k.q, { children: S });
     return (0, n.jsxs)("div", {
         className: M.kL,
         "data-guild-space-widget": "",
         children: [
-            A
+            b
                 ? (0, n.jsx)(U, {
                       title: y,
                       widgetName: S,
@@ -298,8 +298,8 @@ function O(e) {
                       titleIcon: I,
                       accessory: N,
                       trailing:
-                          null != b && null == o
-                              ? (0, n.jsx)(b, { widget: l, hydration: a, title: S, guildId: t })
+                          null != A && null == o
+                              ? (0, n.jsx)(A, { widget: l, hydration: a, title: S, guildId: t })
                               : null,
                       actions: C,
                   }),
