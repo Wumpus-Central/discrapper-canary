@@ -4,17 +4,15 @@ var n = r(407815),
     o = r(961082),
     a = r(184093),
     s = r(66464),
-    l = r(501907);
-function u(e, t = -1 / 0, r = 1 / 0) {
-    return Math.min(Math.max(e, t), r);
-}
-var c = r(582128);
+    l = r(501907),
+    u = r(753154),
+    c = r(582128);
 let f = (0, c.createContext)(null),
     p = (0, c.forwardRef)(function (e, t) {
         let r;
         [e, t] = (0, n.JT)(e, t, f);
         let { value: p = 0, minValue: d = 0, maxValue: h = 100, isIndeterminate: m = !1 } = e;
-        p = u(p, d, h);
+        p = (0, u.qE)(p, d, h);
         let [v, y] = (0, n._E)(!e["aria-label"] && !e["aria-labelledby"]),
             { progressBarProps: g, labelProps: b } = (function (e) {
                 let {
@@ -27,7 +25,7 @@ let f = (0, c.createContext)(null),
                     } = e,
                     p = (0, o.$)(e, { labelable: !0 }),
                     { labelProps: d, fieldProps: h } = (0, s.M)({ ...e, labelElementType: "span" });
-                t = u(t, r, n);
+                t = (0, u.qE)(t, r, n);
                 let m = n - r,
                     v = 0 === m ? 0 : (t - r) / m,
                     y = (0, l.J)(f);

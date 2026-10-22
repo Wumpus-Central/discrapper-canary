@@ -1,0 +1,29 @@
+.group__8a9ed,
+.toolbar__8a9ed {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.toolbar__8a9ed {
+    max-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.separator__8a9ed {
+    align-self: stretch;
+    background-color: var(--border-subtle);
+    flex: none;
+    width: 1px
+}
+
+.layer__95d7b {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    padding: var(--space-16)
+}
+
+/*# sourceMappingURL=9d72236b9ab0c370.css.map*/
