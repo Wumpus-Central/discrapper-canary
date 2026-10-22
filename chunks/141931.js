@@ -19,6 +19,7 @@ var r,
         (r[(r.VideoMediaSessionId = 5)] = "VideoMediaSessionId"),
         (r[(r.StreamMediaSessionId = 6)] = "StreamMediaSessionId"),
         (r[(r.IntentionalCrashReason = 7)] = "IntentionalCrashReason"),
+        (r[(r.BuildNumber = 8)] = "BuildNumber"),
         r),
     c =
         (((a = {})[(a.RendererProcessDelayed = 0)] = "RendererProcessDelayed"),

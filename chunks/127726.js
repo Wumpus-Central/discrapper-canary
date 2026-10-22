@@ -1151,40 +1151,49 @@ function eY(e, t) {
 }
 async function eK() {
     var e, t;
-    let n, i;
+    let n,
+        i,
+        r,
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "646328";
     if (__OVERLAY__) return;
-    let r = ej?.processUtils?.getLastCrash;
-    if (((0, eB.isDesktop)() && eV.Ay.on("CRASH_REPORTER_NEW_CRASH", eY), null == r))
+    isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
+    let s = ej?.processUtils?.getLastCrash;
+    if (((0, eB.isDesktop)() && eV.Ay.on("CRASH_REPORTER_NEW_CRASH", eY), null == s))
         return void console.log("AppCrashedFatalReport: getLastCrash not supported.");
-    let a = await r(),
-        { didCrashReporterSeeCrash: s, didCrashOrUncleanExit: l } =
+    let l = await s(),
+        { didCrashReporterSeeCrash: o, didCrashOrUncleanExit: d } =
             ((e = ex.w.get(eW, {})),
-            (t = a),
+            (t = l),
             (n = e?.lastId !== t?.id && t?.id != null),
             (i = t?.rendererCrashExitCode ?? null),
             { didCrashReporterSeeCrash: n, didCrashOrUncleanExit: n || (null != i && 0 !== i) }),
-        o = (function (e, t, n) {
-            function i(e) {
+        c = (function (e, t, n) {
+            var i;
+            let r;
+            function a(e) {
                 return n?.storedInformation != null && 1 === n.storedInformation[e];
             }
-            function r(e) {
+            function s(e) {
                 return n?.storedInformation == null || null == n.storedInformation[e] ? null : n.storedInformation[e];
             }
-            let a = {
+            let l = {
                     did_crash: t,
                     renderer_crash_reason: n?.rendererCrashReason ?? null,
                     renderer_crash_exit_code: n?.rendererCrashExitCode ?? null,
                     child_process_crash_type: null,
                     child_process_crash_reason: null,
                     child_process_crash_exit_code: null,
-                    had_rtc_connection: i(eG.du.HasRTCConnection),
-                    was_sending_video: i(eG.du.IsSendingVideo),
-                    was_sending_stream: i(eG.du.IsSendingStream),
-                    was_receiving_video: i(eG.du.IsReceivingVideo),
-                    was_receiving_stream: i(eG.du.IsReceivingStream),
-                    video_media_session_id: r(eG.du.VideoMediaSessionId),
-                    stream_media_session_id: r(eG.du.StreamMediaSessionId),
-                    intentional_crash_reason: r(eG.du.IntentionalCrashReason),
+                    had_rtc_connection: a(eG.du.HasRTCConnection),
+                    was_sending_video: a(eG.du.IsSendingVideo),
+                    was_sending_stream: a(eG.du.IsSendingStream),
+                    was_receiving_video: a(eG.du.IsReceivingVideo),
+                    was_receiving_stream: a(eG.du.IsReceivingStream),
+                    video_media_session_id: s(eG.du.VideoMediaSessionId),
+                    stream_media_session_id: s(eG.du.StreamMediaSessionId),
+                    intentional_crash_reason: s(eG.du.IntentionalCrashReason),
+                    crashed_build_number: t
+                        ? ((i = eG.du.BuildNumber), "number" == typeof (r = n?.storedInformation?.[i]) ? r : null)
+                        : null,
                     last_memory_usage_kb: n?.lastMemoryInformation?.memoryUsageKB ?? null,
                     last_used_js_heap_size_kb: n?.lastMemoryInformation?.usedJSHeapSizeKB ?? null,
                     last_memory_usage_uptime: n?.lastMemoryInformation?.uptimeSeconds ?? null,
@@ -1192,28 +1201,28 @@ async function eK() {
                     highest_used_js_heap_size_kb: n?.highestMemoryInformation?.usedJSHeapSizeKB ?? null,
                     highest_memory_usage_uptime: n?.highestMemoryInformation?.uptimeSeconds ?? null,
                 },
-                s = n?.minidumpInformation;
+                o = n?.minidumpInformation;
             return {
                 electron_crash_reporter_did_crash: e,
-                minidump_exception_type: s?.exceptionString ?? null,
-                minidump_exception_module_name: s?.exceptionModuleName ?? null,
-                minidump_relative_crash_address: s?.relativeCrashAddress ?? null,
-                minidump_exception_module_version: s?.exceptionModuleVersion ?? null,
-                minidump_exception_module_code_id: s?.exceptionModuleCodeId ?? null,
-                minidump_exception_thread_name: s?.exceptionThreadName ?? null,
-                minidump_exception_stacktrace: s?.exceptionStacktrace ?? null,
-                minidump_code_integrity_bytes_different: s?.codeIntegrity?.bytesDifferent ?? null,
-                minidump_code_integrity_bytes_compared: s?.codeIntegrity?.bytesCompared ?? null,
-                minidump_code_integrity_flags: s?.codeIntegrity?.flags ?? null,
-                minidump_code_integrity_reloc_bytes_different: s?.codeIntegrity?.relocBytesDifferent ?? null,
+                minidump_exception_type: o?.exceptionString ?? null,
+                minidump_exception_module_name: o?.exceptionModuleName ?? null,
+                minidump_relative_crash_address: o?.relativeCrashAddress ?? null,
+                minidump_exception_module_version: o?.exceptionModuleVersion ?? null,
+                minidump_exception_module_code_id: o?.exceptionModuleCodeId ?? null,
+                minidump_exception_thread_name: o?.exceptionThreadName ?? null,
+                minidump_exception_stacktrace: o?.exceptionStacktrace ?? null,
+                minidump_code_integrity_bytes_different: o?.codeIntegrity?.bytesDifferent ?? null,
+                minidump_code_integrity_bytes_compared: o?.codeIntegrity?.bytesCompared ?? null,
+                minidump_code_integrity_flags: o?.codeIntegrity?.flags ?? null,
+                minidump_code_integrity_reloc_bytes_different: o?.codeIntegrity?.relocBytesDifferent ?? null,
                 minidump_code_integrity_nearest_difference_from_instruction_pointer:
-                    s?.codeIntegrity?.nearestDifferenceFromInstructionPointer ?? null,
-                ...a,
+                    o?.codeIntegrity?.nearestDifferenceFromInstructionPointer ?? null,
+                ...l,
             };
-        })(s, l, a);
-    (W.default.track(j.HAw.APP_NATIVE_CRASH, o),
-        ex.w.set(eW, { lastId: a?.id }),
-        l && setTimeout(async () => await e$(), 1e4));
+        })(o, d, l);
+    (W.default.track(j.HAw.APP_NATIVE_CRASH, c),
+        ex.w.set(eW, { lastId: l?.id }),
+        d && setTimeout(async () => await e$(), 1e4));
 }
 async function e$() {
     if (eF.default.getCurrentUser()?.isStaff())
@@ -1493,7 +1502,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 646323, Version Hash: 464db2bb3f3c3bd3341638d928ab1ac82d1b219e`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 646328, Version Hash: 1a31a0639f176841ef442218411b966dba3280e2`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25396,7 +25405,7 @@ let yt = "isHideDevBanner",
                     className: tf()(ye.Wz, ye.mr),
                     children: [
                         (0, b.jsx)(L9, { className: ye.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "646323" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "646328" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
