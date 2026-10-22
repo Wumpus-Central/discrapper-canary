@@ -8,6 +8,7 @@ let i = new (class {
     setFocusedStream(e) {}
     setMirrored(e) {}
     refreshPipUi() {}
+    setPipContentReady() {}
     setAutoEnterEnabled(e) {}
     updateSourceTrackingView() {}
     addOnPipModeChangedListener(e) {}
