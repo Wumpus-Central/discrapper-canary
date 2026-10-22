@@ -1668,9 +1668,6 @@ function eX(e) {
     eB(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (e) => {
         ej({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE", eventException: e });
     }),
-    eB(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (e) => {
-        ej({ type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE", eventId: e.event_id });
-    }),
     eB(["GUILD_SCHEDULED_EVENT_USER_ADD"], (e) => {
         ej({
             type: "GUILD_SCHEDULED_EVENT_USER_ADD",

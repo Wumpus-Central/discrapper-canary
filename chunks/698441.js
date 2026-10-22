@@ -274,11 +274,6 @@ let M = new b(l.h, {
         let i = n.guild_scheduled_event_exceptions.filter((e) => e.event_exception_id !== t.event_exception_id);
         return (T({ ...n, guild_scheduled_event_exceptions: i }), !0);
     },
-    GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: function (e) {
-        let { eventId: t } = e,
-            n = E.get(t);
-        return null != n && (T({ ...n, guild_scheduled_event_exceptions: [] }), !0);
-    },
     LOGOUT: function () {
         return (E.clear(), !0);
     },
