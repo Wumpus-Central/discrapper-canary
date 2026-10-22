@@ -49,7 +49,7 @@ function U(e, t, n) {
     (null != n && i.push(`delivery:${n}`), _.A.increment({ name: l.K.DESKTOP_NOTIFICATION_DISPLAY, tags: i }));
 }
 let w =
-    (D && b) ||
+    v ||
     ("Chrome" === s().name && 47 > parseFloat(s().version ?? "")) ||
     ("Firefox" === s().name && 52 > parseFloat(s().version ?? ""));
 async function G() {
