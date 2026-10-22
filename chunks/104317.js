@@ -32,8 +32,8 @@ function x(e) {
         } = e,
         v = (0, s.SY)(n),
         b = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
-        A = g ? void 0 : x,
-        _ = null != A ? (0, i.nY)(A) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
+        _ = g ? void 0 : x,
+        A = null != _ ? (0, i.nY)(_) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
         y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
@@ -44,10 +44,10 @@ function x(e) {
             position: "left",
             children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.Ay, {}) }),
         }),
-        line: _,
+        line: A,
         anchor: !0,
         live: g,
-        settled: null != A || (!g && j),
+        settled: null != _ || (!g && j),
         connectsDown: p,
         detail: y
             ? (0, l.jsx)("ol", {

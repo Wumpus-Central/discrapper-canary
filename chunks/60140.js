@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => A });
 var r = n(477900),
     l = n(582128),
     s = n(449543),
@@ -12,8 +12,8 @@ var r = n(477900),
     m = n(258245),
     g = n(561769),
     h = n(484469),
-    C = n(105292),
-    f = n(105499);
+    f = n(105292),
+    C = n(105499);
 let E = { flattenProductVariants: !1 };
 function v(e) {
     return String(e);
@@ -26,11 +26,11 @@ function y(e) {
         s = (0, g.Mk)(l);
     return t
         ? (0, r.jsx)("div", {
-              className: f.hm,
+              className: C.hm,
               children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(h.A, {}, t)),
           })
         : (0, r.jsx)("div", {
-              className: f.hm,
+              className: C.hm,
               children: (0, r.jsx)(g.v3.Provider, {
                   value: E,
                   children: n.map((e, t) => (0, r.jsx)(I, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
@@ -40,7 +40,7 @@ function y(e) {
 function _(e) {
     let { isLoading: t, products: n, tab: l } = e,
         o = (0, g.Mk)(l),
-        i = C.intl.string(C.t.HP8LNG);
+        i = f.intl.string(f.t.HP8LNG);
     if ((0, u.Y)("hero_block_cards")) {
         if (t) {
             let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
@@ -85,7 +85,7 @@ function I(e) {
         children: (0, r.jsx)(m.A, { skuId: t.skuId, prioritizedCurrency: l, listItemProps: s }),
     });
 }
-let L = function (e) {
+let A = function (e) {
     let t,
         n,
         s,
@@ -103,12 +103,12 @@ let L = function (e) {
                 a.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
             [m, a.rankedSkuIds, g.length],
         ),
-        C = m || h,
-        f = l.useMemo(() => g.filter((e) => null != i.A.getCategoryForProduct(e.skuId)), [g]);
+        f = m || h,
+        C = l.useMemo(() => g.filter((e) => null != i.A.getCategoryForProduct(e.skuId)), [g]);
     switch (o) {
         case "feed":
-            return (0, r.jsx)(y, { isLoading: C, products: f, tab: u });
+            return (0, r.jsx)(y, { isLoading: f, products: C, tab: u });
         case "hscroll":
-            return (0, r.jsx)(_, { isLoading: C, products: f, tab: u });
+            return (0, r.jsx)(_, { isLoading: f, products: C, tab: u });
     }
 };

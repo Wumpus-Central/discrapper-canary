@@ -1,48 +1,48 @@
-n.d(e, { K: () => m });
+n.d(e, { K: () => d });
 var r = n(477900),
     i = n(17928),
-    l = n(834730),
-    s = n(778712),
-    a = n(775602),
+    s = n(834730),
+    a = n(778712),
+    l = n(775602),
     o = n(951305),
     c = n(552736),
     g = n(810498),
     u = n(298305),
-    d = n(420754);
-function m() {
-    let t = (0, i.bG)([a.Ay], () => a.Ay.useReducedMotion),
+    m = n(420754);
+function d() {
+    let t = (0, i.bG)([l.Ay], () => l.Ay.useReducedMotion),
         { claimableRewards: e } = (0, o.Pv)(),
         n = (0, c.A)(),
-        m = n?.planSelection;
-    if (null == m || null == e || 0 === e.length) return null;
-    let x = (0, g.gc)(m.getBannerImageUrl?.()),
-        h = (0, g.K5)(m.gradientConfig, { defaultAngle: 180 });
+        d = n?.planSelection;
+    if (null == d || null == e || 0 === e.length) return null;
+    let x = (0, g.gc)(d.getBannerImageUrl?.()),
+        h = (0, g.K5)(d.gradientConfig, { defaultAngle: 180 });
     return (0, r.jsxs)("div", {
-        className: d.us,
+        className: m.us,
         style: x ?? h,
         children: [
             (0, r.jsxs)("div", {
-                className: d.ZR,
+                className: m.ZR,
                 children: [
-                    (0, r.jsx)(l.E, {
+                    (0, r.jsx)(s.E, {
                         variant: "text-sm/semibold",
                         color: "text-overlay-light",
-                        children: m.heading(),
+                        children: d.heading(),
                     }),
-                    null != m.subheading &&
-                        (0, r.jsx)(l.E, {
+                    null != d.subheading &&
+                        (0, r.jsx)(s.E, {
                             variant: "text-sm/normal",
                             color: "text-overlay-light",
-                            children: m.subheading(e.length),
+                            children: d.subheading(e.length),
                         }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: d.my,
+                className: m.my,
                 children: (0, r.jsx)(u.A, {
-                    maxRewardImageSrc: m.getImageUrl(!0, t),
+                    maxRewardImageSrc: d.getImageUrl(!0, t),
                     claimableRewards: e,
-                    size: s._3.SIZE_80,
+                    size: a._3.SIZE_80,
                 }),
             }),
         ],

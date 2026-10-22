@@ -1,4 +1,4 @@
-n.d(t, { A: () => m, b: () => g });
+n.d(t, { A: () => g, b: () => m });
 var l = n(477900),
     i = n(582128),
     r = n(691885),
@@ -11,14 +11,14 @@ var l = n(477900),
     f = n(248675),
     p = n(105292),
     h = n(944847);
-function g(e) {
+function m(e) {
     let { settings: t, tiers: n, choices: u, disabled: d, onChange: c } = e,
         h = i.useMemo(
             () => u.main.map((e) => ({ id: String(e.id), label: e.label, value: e.id, description: e.provider_label })),
             [u.main],
         ),
-        g = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: o.hW[e] ?? e, value: e })), [u.thinking]);
-    function m(e) {
+        m = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: o.hW[e] ?? e, value: e })), [u.thinking]);
+    function g(e) {
         c((0, s.CM)(e));
     }
     let b = (0, s.Id)(t, n, t.tier);
@@ -29,7 +29,7 @@ function g(e) {
                       label: p.intl.string(f.default["59TDiR"]),
                       options: h,
                       value: b,
-                      onSelectionChange: (e) => m((0, s.t7)(t, t.tier, e)),
+                      onSelectionChange: (e) => g((0, s.t7)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: d,
                       fullWidth: !0,
@@ -37,9 +37,9 @@ function g(e) {
                 : null,
             (0, l.jsx)(r.l, {
                 label: p.intl.string(f.default.fpdVCO),
-                options: g,
+                options: m,
                 value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
-                onSelectionChange: (e) => m({ ...t, thinking: e }),
+                onSelectionChange: (e) => g({ ...t, thinking: e }),
                 selectionMode: "single",
                 disabled: d,
                 fullWidth: !0,
@@ -50,13 +50,13 @@ function g(e) {
                       description: p.intl.string(f.default.QnUV8M),
                       checked: !0 === t.fast,
                       disabled: d,
-                      onChange: (e) => m({ ...t, fast: e }),
+                      onChange: (e) => g({ ...t, fast: e }),
                   })
                 : null,
         ],
     });
 }
-function m(e) {
+function g(e) {
     let { settings: t, tiers: n, choices: i, disabled: r, onChange: a } = e,
         o = d.P.indexOf(t.tier);
     return (0, l.jsxs)("div", {
@@ -111,7 +111,7 @@ function m(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: r, onChange: a }),
+            (0, l.jsx)(m, { settings: t, tiers: n, choices: i, disabled: r, onChange: a }),
         ],
     });
 }

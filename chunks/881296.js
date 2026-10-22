@@ -19,8 +19,8 @@ var o = s(116011),
     A = s(412260),
     j = s(202541),
     E = s(652215),
-    T = s(280761),
-    b = s(310235),
+    b = s(280761),
+    T = s(310235),
     C = s(287388),
     R = s(105292);
 function I(e) {
@@ -28,7 +28,7 @@ function I(e) {
         s,
         l,
         { transitionState: I, onClose: _, analyticsLocations: v } = e,
-        P = (0, T.U)(),
+        P = (0, b.U)(),
         {
             code: y,
             redemptionUrl: S,
@@ -61,7 +61,7 @@ function I(e) {
                         : { isClaimedCodesLoaded: i, code: s.code, redemptionUrl: (0, N.kc)(s.code, s.promotion) };
                 })({ shouldFetch: t && !s }),
                 [c, o] = d.useState(!1),
-                T = null != e ? e.id : null;
+                b = null != e ? e.id : null;
             return {
                 code: n,
                 redemptionUrl: a,
@@ -70,10 +70,10 @@ function I(e) {
                 isClaiming: s,
                 isOutOfCodes: c,
                 handleClaim: d.useCallback(async () => {
-                    if (null == T) throw Error("Riot credit storefront promotion is not available");
+                    if (null == b) throw Error("Riot credit storefront promotion is not available");
                     i(!0);
                     try {
-                        let e = await (0, m.cF)(T, j.tv),
+                        let e = await (0, m.cF)(b, j.tv),
                             t = (0, g.OF)(e);
                         if (null == t) throw Error("Riot credit storefront claim response contained no promo code");
                         if (
@@ -90,7 +90,7 @@ function I(e) {
                     } finally {
                         i(!1);
                     }
-                }, [T]),
+                }, [b]),
                 handleClaimError: d.useCallback(
                     (e) =>
                         e instanceof u.A &&
@@ -129,7 +129,7 @@ function I(e) {
         ? null
         : (0, i.jsx)(n.a, {
               title: R.intl.string(C.default.r97mLn),
-              subtitle: R.intl.format(b.default.ieA3V0, { termsUrl: c.A.getArticleURL(E.MVz.RIOT_CREDIT_CAMPAIGN) }),
+              subtitle: R.intl.format(T.default.ieA3V0, { termsUrl: c.A.getArticleURL(E.MVz.RIOT_CREDIT_CAMPAIGN) }),
               actions: [],
               transitionState: I,
               onClose: _,

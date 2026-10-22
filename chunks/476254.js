@@ -621,8 +621,8 @@ function e0(e, t, n) {
 var e1 = n(191023),
     e2 = n(192308),
     e5 = n(28863),
-    e8 = n(695366),
-    e6 = n(834730),
+    e6 = n(695366),
+    e8 = n(834730),
     e3 = n(789645),
     e7 = n(565645),
     e4 = n(775602),
@@ -677,8 +677,8 @@ function ts(e) {
         : (0, l.jsxs)("div", {
               className: tr.g,
               children: [
-                  (0, l.jsx)(e8.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: tr.QW }),
-                  (0, l.jsx)(e6.E, { variant: "text-sm/medium", color: "text-default", className: tr.L5, children: p }),
+                  (0, l.jsx)(e6.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: tr.QW }),
+                  (0, l.jsx)(e8.E, { variant: "text-sm/medium", color: "text-default", className: tr.L5, children: p }),
                   (0, l.jsx)(v.D, {
                       className: tr.b,
                       onClick: function () {
@@ -735,7 +735,7 @@ function tf(e) {
                 onClick: () => (null != i ? i() : td(t.id)),
                 children: [
                     (0, l.jsx)(tu.j, { size: "sm", color: "currentColor" }),
-                    (0, l.jsx)(e6.E, {
+                    (0, l.jsx)(e8.E, {
                         variant: "text-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
                         children: eP.intl.string(eP.t["8Fu/S7"]),
@@ -1276,11 +1276,11 @@ function tC(e) {
             let e = g.A.getSoundById("3");
             null != e && W(e);
         }, []),
-        e8 = i.useCallback(() => {
+        e6 = i.useCallback(() => {
             let e = (0, V.Dd)(ej.PremiumTypes.TIER_2);
             return eP.intl.format(eP.t["tw/SSq"], { nitroTierName: e, onClick: e5 });
         }, [e5]),
-        e6 = i.useCallback((e) => (e2(e, t) ? tx : 32), [t, e2]),
+        e8 = i.useCallback((e) => (e2(e, t) ? tx : 32), [t, e2]),
         e3 = i.useCallback(
             (e) => {
                 let t = e === eF.length - 1;
@@ -1399,7 +1399,7 @@ function tC(e) {
                 eH
                     ? (0, l.jsx)(Y.d, {
                           showUpsell: eW,
-                          text: e8(),
+                          text: e6(),
                           button: ti(),
                           buttonAnalyticsObject: { section: eI.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(et.l, {
@@ -1410,7 +1410,7 @@ function tC(e) {
                           }),
                       })
                     : null,
-            [e8, ti, eH, eW],
+            [e6, ti, eH, eW],
         ),
         ta = i.useCallback(
             (e) =>
@@ -1469,7 +1469,7 @@ function tC(e) {
                     renderCategoryList: tl,
                     renderHeaderAccessories: tn,
                     rowHeight: 48,
-                    sectionHeaderHeight: e6,
+                    sectionHeaderHeight: e8,
                     sectionFooterHeight: e3,
                     itemNodeWidth: 150,
                     gridNavigatorId: q,

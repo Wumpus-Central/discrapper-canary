@@ -1,9 +1,9 @@
-t.d(l, { E9: () => d, Ye: () => s, jM: () => u });
+l.d(t, { E9: () => d, Ye: () => s, jM: () => u });
 var n,
-    r = t(477900),
-    a = t(582128),
-    i = t(812729),
-    o = t.n(i),
+    r = l(477900),
+    a = l(582128),
+    i = l(812729),
+    o = l.n(i),
     s =
         (((n = {}).COLLECTIBLES_SHOP = "collectibles_shop"),
         (n.COLLECTIBLES_SHOP_BANNER = "collectibles_shop_banner"),
@@ -18,11 +18,11 @@ function u() {
     return a.useContext(c);
 }
 function d(e) {
-    let { newValue: l, children: t } = e,
+    let { newValue: t, children: l } = e,
         n = u(),
         i = a.useMemo(() => {
-            let e = { ...n, ...l };
+            let e = { ...n, ...t };
             return o()(n, e) ? (n ?? e) : e;
-        }, [n, l]);
-    return (0, r.jsx)(c.Provider, { value: i, children: t });
+        }, [n, t]);
+    return (0, r.jsx)(c.Provider, { value: i, children: l });
 }

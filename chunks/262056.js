@@ -15,15 +15,15 @@ function g(e) {
     return `${60 + 57 * Math.cos(e)} ${60 + 57 * Math.sin(e)}`;
 }
 let h = function (e) {
-    let { current: t, target: n, progressColor: l = d, segmentGap: h = 4, children: C } = e,
-        f = (0, o.bG)([i.Ay], () => i.Ay.useReducedMotion),
+    let { current: t, target: n, progressColor: l = d, segmentGap: h = 4, children: f } = e,
+        C = (0, o.bG)([i.Ay], () => i.Ay.useReducedMotion),
         E = Math.round(n);
     if (E > 1 && E <= 12) {
         let e, n, o;
         return (0, r.jsxs)("div", {
             className: u.iE,
             children: [
-                C,
+                f,
                 (0, r.jsx)("svg", {
                     className: u.hN,
                     viewBox: "0 0 120 120",
@@ -40,7 +40,7 @@ let h = function (e) {
                                 children: [
                                     (0, r.jsx)("path", { className: u.u4, d: e.d, strokeWidth: 6, stroke: p }),
                                     (0, r.jsx)("path", {
-                                        className: s()(u.mX, { [u.Vr]: !f }),
+                                        className: s()(u.mX, { [u.Vr]: !C }),
                                         d: e.d,
                                         strokeWidth: 6,
                                         stroke: l,
@@ -61,14 +61,14 @@ let h = function (e) {
     return (0, r.jsxs)("div", {
         className: u.iE,
         children: [
-            C,
+            f,
             (0, r.jsxs)("svg", {
                 className: u.hN,
                 viewBox: "0 0 120 120",
                 children: [
                     (0, r.jsx)("circle", { className: u.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: p }),
                     (0, r.jsx)("circle", {
-                        className: s()(u.M0, { [u.Vr]: !f }),
+                        className: s()(u.M0, { [u.Vr]: !C }),
                         cx: 60,
                         cy: 60,
                         r: 57,

@@ -1,4 +1,4 @@
-e.exports = {
+b.exports = {
     kL: "container_bb1234",
     dQ: "sparkle_bb1234",
     yv: "sparkleStarTopRight_bb1234 sparkle_bb1234",

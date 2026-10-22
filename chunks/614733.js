@@ -13,7 +13,7 @@ function p(e, t) {
     let n = (0, r.bG)([o.A], () => o.A.hidePersonalInformation),
         p = (0, c.B5)(e),
         h = (0, r.cf)([s.A], () => Object.fromEntries(p.map((e) => [e.id, s.A.getStatus(e.id)])), [p]),
-        g = i.useMemo(
+        m = i.useMemo(
             () =>
                 p.map((t) => ({
                     id: t.id,
@@ -29,6 +29,6 @@ function p(e, t) {
                 })),
             [e, n, h, p],
         ),
-        m = (0, c.S6)(e, t);
-    return { options: g, onQueryChange: i.useCallback((e) => m(e.currentTarget.value), [m]), matchSorterOptions: f };
+        g = (0, c.S6)(e, t);
+    return { options: m, onQueryChange: i.useCallback((e) => g(e.currentTarget.value), [g]), matchSorterOptions: f };
 }

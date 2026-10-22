@@ -1,10 +1,10 @@
 n.d(t, { U: () => o, c: () => i });
-var s = n(73153),
-    r = n(975189);
+var r = n(73153),
+    s = n(975189);
 let o = {
     live_reload(e, t) {
         let { projectId: n } = t;
-        s.h.dispatch({
+        r.h.dispatch({
             type: "CONJURE_LIVE_RELOAD_SET",
             projectId: n,
             enabled: e.enabled,
@@ -16,7 +16,7 @@ let o = {
     },
 };
 function i(e, t) {
-    let n = (0, r.KY)(e);
+    let n = (0, s.KY)(e);
     try {
         if (null == n) throw Error("Not connected");
         return (n.sendLiveReload(t), !0);

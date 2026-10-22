@@ -1,11 +1,11 @@
-e.d(r, { $: () => i });
-var n = e(288106),
-    a = e(604913);
-function i(t) {
+r.d(e, { $: () => a });
+var n = r(288106),
+    i = r(604913);
+function a(t) {
     switch (t?.tenantMetadata?.collectibles?.type) {
-        case a.hE.COLLECT_AND_CLAIM:
+        case i.hE.COLLECT_AND_CLAIM:
             return t.rewardStatus === n.GM.IN_PROGRESS;
-        case a.hE.TARGETED_OFFER:
+        case i.hE.TARGETED_OFFER:
             return !0;
         default:
             return !1;

@@ -6,8 +6,8 @@ var l = t(877624),
     a = t(28863),
     s = t(549996),
     c = t(807098),
-    o = t(637706),
-    u = t(788883),
+    u = t(637706),
+    o = t(788883),
     d = t(592455);
 function m() {
     let e = (0, s.c)(l.C.PLAN_SELECT_CARD_BANNER),
@@ -17,11 +17,11 @@ function m() {
                 : null,
         t = (0, c.T)(r?.asset);
     if (null == e || null == r || "" === r.body) return null;
-    let m = (0, o.C)(r.helpArticle, "");
+    let m = (0, u.C)(r.helpArticle, "");
     return (0, n.jsxs)("div", {
         className: d.kL,
         children: [
-            (0, n.jsx)(u.A, {
+            (0, n.jsx)(o.A, {
                 componentType: l.C.PLAN_SELECT_CARD_BANNER,
                 componentId: e.id,
                 promotionId: e.promotionId,

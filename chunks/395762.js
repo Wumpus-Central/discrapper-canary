@@ -1,5 +1,5 @@
-_.r(
-    (a.exports = {
+a.r(
+    (t.exports = {
         wrapper: "wrapper__518a0",
         critical: "critical__518a0",
         success: "success__518a0",

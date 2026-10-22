@@ -23,14 +23,14 @@ function g(e) {
             connectsDown: k = !1,
             anchor: v = !1,
         } = e,
-        [b, A] = a.useState(!1),
-        _ = a.useRef(null);
+        [b, _] = a.useState(!1),
+        A = a.useRef(null);
     a.useLayoutEffect(() => {
-        r && _.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
+        r && A.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [r]);
     let y = a.useId(),
-        N = a.useCallback(() => A((e) => !e), []),
-        { text: S, phase: w } = (0, c.Q)(n),
+        S = a.useCallback(() => _((e) => !e), []),
+        { text: N, phase: w } = (0, c.Q)(n),
         E = b ? s.a : u._,
         C = null != p,
         I = (0, l.jsxs)(l.Fragment, {
@@ -41,7 +41,7 @@ function g(e) {
                     variant: "text-md/normal",
                     color: "currentColor",
                     className: i()(h.qo, { [h._q]: "exit" === w, [h.GD]: "enter" === w }),
-                    children: S,
+                    children: N,
                 }),
                 C ? (0, l.jsx)(E, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
@@ -59,7 +59,7 @@ function g(e) {
             ],
         });
     return (0, l.jsxs)("li", {
-        ref: _,
+        ref: A,
         className: h.K1,
         "data-live": r,
         "data-settled": g,
@@ -74,8 +74,8 @@ function g(e) {
                       className: i()(h.ep, h.EK),
                       "aria-expanded": b,
                       "aria-controls": y,
-                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: S }),
-                      onClick: N,
+                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: N }),
+                      onClick: S,
                       children: M,
                   })
                 : (0, l.jsx)("div", { className: h.ep, children: M }),
