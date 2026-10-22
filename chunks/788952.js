@@ -15063,6 +15063,7 @@ let uJ = [
         uq.gr.EMOJI_INTRO,
         uq.gr.EMOJI_STATS,
         uq.gr.EMOJI_SHOES,
+        uq.gr.GAMES_INTRO,
         uq.gr.GAMES_STATS,
         uq.gr.GAMES_WEARABLE,
         uq.gr.GAME_TIME_STATS,
@@ -15081,6 +15082,8 @@ let uJ = [
         [uq.gr.SERVERS_INTRO]: (e) => !uD(e),
         [uq.gr.EMOJI_INTRO]: (e) =>
             !(Math.round(e?.emojis?.numEmojisSent ?? 0) > 0 && (e?.emojis?.emojis.length ?? 0) > 0),
+        [uq.gr.GAMES_INTRO]: (e) =>
+            !(Math.round(e?.games?.totalGamesPlayed ?? 0) > 0 && (e?.games?.games.length ?? 0) > 0),
     },
     uZ = {
         [uq.gr.TOP_SERVER_STATS]: uD,
