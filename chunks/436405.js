@@ -606,8 +606,8 @@ n(607470);
 var e$ = n(952818),
     e0 = n(880144),
     e1 = n(905552),
-    e2 = n(913765),
-    e5 = n(453314),
+    e5 = n(913765),
+    e2 = n(453314),
     e3 = n(616356),
     e8 = n(734057),
     e6 = n(71393),
@@ -714,11 +714,11 @@ function t1(e) {
     let i = t$[n];
     (clearTimeout(i.timerId), (t$ = [...t$]), t === ey.yFH.DISMISSED ? t$.splice(n, 1) : (t$[n] = { ...i, status: t }));
 }
-function t2(e) {
+function t5(e) {
     let t = t$.length;
     return (t$ = t$.filter((t) => 1 !== t.type || t.channelId !== e)).length !== t;
 }
-function t5(e) {
+function t2(e) {
     let t = t$.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
@@ -732,7 +732,7 @@ function t3(e, t) {
 }
 function t8(e) {
     let { channelId: t, ongoingRings: n } = e,
-        i = t5(t);
+        i = t2(t);
     if (!Object.keys(n).includes(tW.default.getId())) return t1(i);
     if (null != i) return !1;
     let s = e8.A.getChannel(t);
@@ -1197,17 +1197,17 @@ let t9 = new t6(
               },
               CHANNEL_SELECT: function (e) {
                   let { channelId: t } = e;
-                  return null != t && t2(t);
+                  return null != t && t5(t);
               },
               MESSAGE_ACK: function (e) {
                   let { channelId: t } = e;
-                  return t2(t);
+                  return t5(t);
               },
               CALL_CREATE: t8,
               CALL_UPDATE: t8,
               CALL_DELETE: function (e) {
                   let { channelId: t } = e;
-                  t1(t5(t));
+                  t1(t2(t));
               },
               ACTIVITY_USER_ACTION: function (e) {
                   let t,
@@ -1774,7 +1774,7 @@ var ng = n(242816),
     nI = n(912289),
     n_ = n(420344),
     nN = n(846930),
-    nT = n(474707),
+    nT = n(365180),
     nO = n(366811),
     nj = n(924985),
     nD = n(945886),
@@ -1803,8 +1803,8 @@ var ng = n(242816),
     n$ = n(428678),
     n0 = n(834730),
     n1 = n(220540);
-let n2 = 0;
-function n5(e) {
+let n5 = 0;
+function n2(e) {
     switch (e) {
         case ey.G6Q.TOP_LEFT:
             return U.intl.string(U.t.xlchpU);
@@ -1821,11 +1821,11 @@ function n5(e) {
 let n3 = [ey.G6Q.DISABLED, ey.G6Q.TOP_LEFT, ey.G6Q.TOP_RIGHT, ey.G6Q.BOTTOM_LEFT, ey.G6Q.BOTTOM_RIGHT];
 function n8(e) {
     let { position: t, onChange: n } = e,
-        [i] = a.useState(() => `notification-position-selector-${n2++}`),
+        [i] = a.useState(() => `notification-position-selector-${n5++}`),
         s =
             t === ey.G6Q.DISABLED
                 ? U.intl.string(U.t.R6LxVf)
-                : U.intl.formatToPlainString(U.t["XXHDM/"], { position: n5(t) });
+                : U.intl.formatToPlainString(U.t["XXHDM/"], { position: n2(t) });
     return (0, l.jsxs)("div", {
         children: [
             (0, l.jsx)(nq.vN, {
@@ -1846,7 +1846,7 @@ function n8(e) {
                                     [n1.RV]: e === ey.G6Q.BOTTOM_LEFT,
                                 }),
                                 children: [
-                                    n5(e),
+                                    n2(e),
                                     e === ey.G6Q.DISABLED
                                         ? (0, l.jsx)(n$.K, { size: "md", color: "currentColor", className: n1.WO })
                                         : null,
@@ -2408,8 +2408,8 @@ var iy = n(465532),
     i$ = n(95701),
     i0 = n(470710),
     i1 = n(205513),
-    i2 = n(915089);
-function i5(e) {
+    i5 = n(915089);
+function i2(e) {
     switch (e) {
         case eD.Li.BOTTOM:
             return eD.Li.BOTTOM;
@@ -2423,15 +2423,15 @@ function i5(e) {
 }
 var i3 = n(620505);
 let i8 = Object.values(eD.Li).map((e) => 100 * e),
-    i6 = (0, i2.Ld)();
+    i6 = (0, i5.Ld)();
 class i9 extends a.PureComponent {
     initialValue = 100 * this.props.opacity;
     handleUpdateBackgroundOpacity(e) {
-        (ei.A.setTextWidgetOpacity(i5(e / 100)),
+        (ei.A.setTextWidgetOpacity(i2(e / 100)),
             (0, ej.g)(ey.HAw.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e }));
     }
     handlePreviewBackgroundOpacity(e) {
-        ei.A.setTextWidgetOpacity(i5(e / 100));
+        ei.A.setTextWidgetOpacity(i2(e / 100));
     }
     render() {
         return (0, l.jsx)("div", {
@@ -3535,7 +3535,7 @@ function s1(e) {
         streamApplication: d.streamApplication ?? { id: null, name: s?.sourceName },
     });
 }
-let s2 = {
+let s5 = {
     [ey.uss.TEXT](e) {
         let { dragging: t, locked: n, pinned: i, dragStart: s, className: a } = e;
         return (0, l.jsx)(sd, { dragStart: s, locked: n, pinned: i, dragging: t, className: a });
@@ -3553,7 +3553,7 @@ let s2 = {
         return (0, l.jsx)(su, { dragStart: i, dragging: t, locked: n, pinned: !1, className: s });
     },
 };
-class s5 extends a.PureComponent {
+class s2 extends a.PureComponent {
     state = { lastLayoutUpdate: null, dragging: !1 };
     componentDidUpdate(e) {
         this.props.locked &&
@@ -3604,7 +3604,7 @@ class s5 extends a.PureComponent {
                 props: { locked: i, isPreviewingInGame: s },
                 state: { dragging: l },
             } = this,
-            a = s2[e.type];
+            a = s5[e.type];
         return null == a
             ? null
             : (o) =>
@@ -3669,7 +3669,7 @@ let s3 = r.Ay.connectStores([e9.A, ts.default], (e) => {
         isPreviewingInGame: ts.default.isPreviewingInGame(),
         isActiveRegion: null != n && n.type === ey.uss.TEXT && i.has(ey.ajI.TEXT_WIDGET),
     };
-})(s5);
+})(s2);
 function s8(e, t) {
     return (0, l.jsx)(s3, { widgetId: e, layoutSize: t }, e);
 }
@@ -3802,7 +3802,7 @@ class lm extends a.Component {
         es.default.isFocusedPidOutOfProcess() ? this.forceUpdate() : this.debouncedForceUpdate();
     };
     componentDidMount() {
-        (ei.A.startSession(), e2.A.initialize(), eX.A.initialize(), e5.A.initialize());
+        (ei.A.startSession(), e5.A.initialize(), eX.A.initialize(), e2.A.initialize());
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -3889,9 +3889,9 @@ class lm extends a.Component {
             window.removeEventListener("keydown", this.onKeyDownGlobal, !0),
             window.removeEventListener("keyup", this.onKeyUpGlobal, !0),
             this.props.locked && window.removeEventListener("contextmenu", lh, !1),
-            e2.A.terminate(),
+            e5.A.terminate(),
             eX.A.terminate(),
-            e5.A.terminate());
+            e2.A.terminate());
     }
     activeKeyEventShapes = [];
     lockEventShape = (0, tr.pi)(this.props.keybindKeyCodes);

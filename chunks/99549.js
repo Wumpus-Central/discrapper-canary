@@ -50,6 +50,10 @@ let d = {
             options: t,
         };
     },
+    [l.e$_.CAPTURE_SCREEN]: () => ({
+        result: { status: "permission_denied" },
+        answered: "denied; an agent may not capture the screen",
+    }),
     [l.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
     [l.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
     [l.e$_.OPEN_GAME_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),

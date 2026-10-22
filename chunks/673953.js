@@ -1,17 +1,18 @@
-if ((n.d(t, { C6: () => a, JH: () => o, LV: () => i, cH: () => s }), 221552 == n.j)) var r = n(231723);
-var u = n(484697),
-    l = n(652215);
-function o(e) {
-    return e.ownerDocument.defaultView ?? window;
+t.d(u, { C6: () => d, JH: () => l, LV: () => o, cH: () => c });
+var e = t(231723),
+    r = t(484697),
+    i = t(652215);
+function l(n) {
+    return n.ownerDocument.defaultView ?? window;
 }
-function s(e) {
-    return o(e) === window ? l.BRT.APP : l.BRT.POPOUT;
+function c(n) {
+    return l(n) === window ? i.BRT.APP : i.BRT.POPOUT;
 }
-function i(e) {
-    let t = (0, u.fl)(e);
-    return null == t ? null : s(t);
+function o(n) {
+    let u = (0, r.fl)(n);
+    return null == u ? null : c(u);
 }
-function a(e) {
-    let t = i(e);
-    return null == t ? null : t === l.BRT.POPOUT ? r.KX : r.SY;
+function d(n) {
+    let u = o(n);
+    return null == u ? null : u === i.BRT.POPOUT ? e.KX : e.SY;
 }
