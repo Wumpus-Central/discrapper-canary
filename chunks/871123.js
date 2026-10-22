@@ -62,7 +62,20 @@ function O(e) {
     return null == e ? null : { label: e.label, tooltip: e.tooltip, icon: e.icon };
 }
 function R(e) {
-    return e.type === I.X.SUBSCRIPTION ? { type: e.type, planIds: e.plan_ids, progress: e.progress ?? null } : null;
+    switch (e.type) {
+        case I.X.SUBSCRIPTION:
+            return { type: e.type, planIds: e.plan_ids, progress: e.progress ?? null };
+        case I.X.OWNS_MIN_SKUS:
+            return {
+                type: e.type,
+                applicationId: e.application_id,
+                skuIds: e.sku_ids,
+                minCount: e.min_count,
+                progress: e.progress ?? null,
+            };
+        default:
+            return null;
+    }
 }
 function L(e) {
     return {
