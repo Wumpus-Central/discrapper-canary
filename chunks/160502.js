@@ -9025,9 +9025,13 @@ let ob = {
         let { default: e } = await Promise.all([a.e("469663"), a.e("518467")]).then(a.bind(a, 297102));
         return (t) => (0, o.jsx)(e, { ...t, entryPoint: nU.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL });
     },
-    ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([a.e("533651"), a.e("682758"), a.e("280022"), a.e("810136")]).then(
-            a.bind(a, 776971),
+    AgeAssuranceGatePrompt: async () => {
+        let { default: e } = await a.e("922337").then(a.bind(a, 361016));
+        return (t) => (0, o.jsx)(e, { ...t, source: oj.w_.NSFW_SERVER });
+    },
+    DateOfBirthGatePrompt: async () => {
+        let { default: e } = await Promise.all([a.e("533651"), a.e("682758"), a.e("280022"), a.e("991007")]).then(
+            a.bind(a, 189282),
         );
         return (t) => (0, o.jsx)(e, { ...t, source: oj.w_.NSFW_SERVER });
     },

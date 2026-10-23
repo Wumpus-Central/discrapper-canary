@@ -1,10 +1,11 @@
-n.d(t, { AM: () => d, Uy: () => a, bm: () => i, jc: () => r, w_: () => o });
+n.d(t, { AM: () => u, Uy: () => a, bm: () => i, jc: () => r, ln: () => c, w_: () => d });
 let i = 2 * n(927813).A.Millis.HOUR,
     r = "new-user-age-gate-modal",
     a = "existing-user-age-gate-modal";
 var s,
     l,
-    o =
+    o,
+    d =
         (((s = {}).AUTH = "Register Age Gate"),
         (s.NEW_USER_FLOW = "NUF"),
         (s.CLAIM_ACCOUNT = "Claim Age Gate"),
@@ -21,13 +22,14 @@ var s,
         (s.DEEP_LINK_PROMPT = "Deep Link Prompt"),
         (s.UNSPECIFIED = "Unspecified"),
         s),
-    d =
-        (((l = {}).AGE_GATE_OPEN = "AGE_GATE_OPEN"),
-        (l.AGE_GATE_CLOSE = "AGE_GATE_CLOSE"),
-        (l.AGE_GATE_SUBMITTED = "AGE_GATE_SUBMITTED"),
-        (l.AGE_GATE_SUCCESS = "AGE_GATE_SUCCESS"),
-        (l.AGE_GATE_FAILURE = "AGE_GATE_FAILURE"),
-        (l.AGE_GATE_UNDERAGE = "AGE_GATE_UNDERAGE"),
-        (l.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION = "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION"),
-        (l.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER = "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"),
-        l);
+    c = (((l = {}).AGE_ASSURANCE = "AGE_ASSURANCE"), (l.DATE_OF_BIRTH = "DATE_OF_BIRTH"), l),
+    u =
+        (((o = {}).AGE_GATE_OPEN = "AGE_GATE_OPEN"),
+        (o.AGE_GATE_CLOSE = "AGE_GATE_CLOSE"),
+        (o.AGE_GATE_SUBMITTED = "AGE_GATE_SUBMITTED"),
+        (o.AGE_GATE_SUCCESS = "AGE_GATE_SUCCESS"),
+        (o.AGE_GATE_FAILURE = "AGE_GATE_FAILURE"),
+        (o.AGE_GATE_UNDERAGE = "AGE_GATE_UNDERAGE"),
+        (o.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION = "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION"),
+        (o.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER = "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"),
+        o);

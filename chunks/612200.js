@@ -13,7 +13,7 @@ function o(e) {
         void 0 !== e && r.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: a.AM.AGE_GATE_CLOSE }));
 }
 function d(e) {
-    (i.h.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" }),
+    (i.h.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN", source: e }),
         r.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: a.AM.AGE_GATE_SUCCESS }));
 }
 function c(e, t) {
