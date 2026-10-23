@@ -316,7 +316,7 @@ let H = {
                             }
                         })(e, l),
                         rank: s + 1,
-                        application_ids: e.gameIndexes.flatMap((e) => a[e % a.length] ?? []).slice(0, 2),
+                        application_ids: e.gameIndexes.flatMap((e) => a[e % a.length] ?? []).slice(0, 3),
                         application_count: e.gameIndexes.length,
                         time_played_seconds: e.totalSeconds,
                     })),

@@ -470,6 +470,7 @@
   "bxcrSz": "Played {firstGame}, {secondGame} and {otherCount, plural,one {# other game}other {# other games}",
   "7CrlYb": "No games played yet",
   "dbNpK0": "Played {firstGame}",
+  "7h8GUv": "Played {firstGame}, {secondGame} and {thirdGame}",
   "tqVg4M": "Played {firstGame} and {secondGame}",
   "JiMMEd": "+{count}",
   "CfMzwe": "Ignored User",
