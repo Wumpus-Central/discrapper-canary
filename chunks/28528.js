@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(778712),
     m = n(939249),
     A = n(717421),
-    g = n(684013),
-    E = n(789645),
+    E = n(684013),
+    g = n(789645),
     f = n(616566);
 let p = (e) => {
     let { className: t, onDismiss: n, "aria-label": r } = e;
@@ -21,7 +21,7 @@ let p = (e) => {
         onClick: n,
         className: s()(f.r, t),
         "aria-label": r,
-        children: (0, i.jsx)(E.P, { size: "xs", color: "currentColor", colorClass: f.M }),
+        children: (0, i.jsx)(g.P, { size: "xs", color: "currentColor", colorClass: f.M }),
     });
 };
 p.displayName = "DismissButton";
@@ -41,8 +41,8 @@ let y = r.memo(function (e) {
         {
             maxBodyLines: l,
             expand: A = !1,
-            onNotificationShow: g,
-            onDismissClick: E,
+            onNotificationShow: E,
+            onDismissClick: g,
             onConfirmClick: f,
             onCancelClick: C,
             onNotificationClick: S,
@@ -64,13 +64,13 @@ let y = r.memo(function (e) {
         F = A || z || L === T.yFH.FOCUSED,
         W = (0, o.bG)([b.A, _.A], () => b.A.isInputLocked(_.A.getTargetPID()));
     r.useEffect(() => {
-        g?.();
-    }, [g]);
+        E?.();
+    }, [E]);
     let H = r.useCallback(
             (e) => {
-                (e.stopPropagation(), E?.(e));
+                (e.stopPropagation(), g?.(e));
             },
-            [E],
+            [g],
         ),
         B = r.useCallback(
             (e) => {
@@ -236,7 +236,7 @@ function M(e) {
                 onDismissClick: d,
                 onNotificationClick: h,
                 onConfirmClick: m,
-                onCancelClick: E,
+                onCancelClick: g,
                 renderFooter: f,
                 animationWrapperClassName: p,
             },
@@ -246,7 +246,7 @@ function M(e) {
         }, [c, u]),
         _ = r.useCallback(
             (e) => {
-                (g.A.updateNotificationStatus(u), d?.(e, u));
+                (E.A.updateNotificationStatus(u), d?.(e, u));
             },
             [u, d],
         ),
@@ -284,9 +284,9 @@ function M(e) {
         ),
         O = r.useCallback(
             (e) => {
-                E?.(e, u);
+                g?.(e, u);
             },
-            [E, u],
+            [g, u],
         ),
         M = r.useCallback((e, t) => f?.(e, u, t), [f, u]),
         {
@@ -325,7 +325,7 @@ function M(e) {
                 onDismissClick: _,
                 onNotificationClick: I,
                 onConfirmClick: null != m ? v : void 0,
-                onCancelClick: null != E ? O : void 0,
+                onCancelClick: null != g ? O : void 0,
                 renderFooter: M,
                 expand: !1,
                 index: n,

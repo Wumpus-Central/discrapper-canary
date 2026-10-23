@@ -1,4 +1,4 @@
-t.exports = {
+a.exports = {
     EG: "entity__67232",
     Sl: "image__67232",
     M2: "imageContain__67232",

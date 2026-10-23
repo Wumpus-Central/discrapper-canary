@@ -128,11 +128,11 @@ var u = (function () {
             I = a ? e.offsetWidth - M - e.clientWidth : 0,
             O = n ? n.width : b(r.width) - (i ? k + M : 0) - I,
             R = n ? n.height : b(r.height) - (i ? T + P : 0) - A,
-            L = O + k + I + M,
-            D = R + T + A + P,
+            D = O + k + I + M,
+            L = R + T + A + P,
             F = Object.freeze({
                 devicePixelContentBoxSize: w(Math.round(O * devicePixelRatio), Math.round(R * devicePixelRatio), o),
-                borderBoxSize: w(L, D, o),
+                borderBoxSize: w(D, L, o),
                 contentBoxSize: w(O, R, o),
                 contentRect: new u(h, l, O, R),
             });
@@ -233,7 +233,7 @@ var u = (function () {
     },
     O = 0,
     R = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    L = [
+    D = [
         "resize",
         "load",
         "transitionend",
@@ -249,7 +249,7 @@ var u = (function () {
         "blur",
         "focus",
     ],
-    D = function (e) {
+    L = function (e) {
         return (void 0 === e && (e = 0), Date.now() + e);
     },
     F = !1,
@@ -266,13 +266,13 @@ var u = (function () {
                 var t = this;
                 if ((void 0 === e && (e = 250), !F)) {
                     F = !0;
-                    var r = D(e);
+                    var r = L(e);
                     I(function () {
                         var n = !1;
                         try {
                             n = M();
                         } finally {
-                            if (((F = !1), (e = r - D()), !O)) return;
+                            if (((F = !1), (e = r - L()), !O)) return;
                             n ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -294,7 +294,7 @@ var u = (function () {
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    L.forEach(function (t) {
+                    D.forEach(function (t) {
                         return h.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -302,7 +302,7 @@ var u = (function () {
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    L.forEach(function (t) {
+                    D.forEach(function (t) {
                         return h.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -341,8 +341,8 @@ var u = (function () {
             (this.observer = e),
             (this.callback = t));
     },
-    U = new WeakMap(),
-    V = function (e, t) {
+    V = new WeakMap(),
+    U = function (e, t) {
         for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
         return -1;
     },
@@ -351,23 +351,23 @@ var u = (function () {
         return (
             (e.connect = function (e, t) {
                 var r = new K(e, t);
-                U.set(e, r);
+                V.set(e, r);
             }),
             (e.observe = function (e, t, r) {
-                var n = U.get(e),
+                var n = V.get(e),
                     i = 0 === n.observationTargets.length;
-                0 > V(n.observationTargets, t) &&
+                0 > U(n.observationTargets, t) &&
                     (i && a.push(n), n.observationTargets.push(new B(t, r && r.box)), j(1), N.schedule());
             }),
             (e.unobserve = function (e, t) {
-                var r = U.get(e),
-                    n = V(r.observationTargets, t),
+                var r = V.get(e),
+                    n = U(r.observationTargets, t),
                     i = 1 === r.observationTargets.length;
                 n >= 0 && (i && a.splice(a.indexOf(r), 1), r.observationTargets.splice(n, 1), j(-1));
             }),
             (e.disconnect = function (e) {
                 var t = this,
-                    r = U.get(e);
+                    r = V.get(e);
                 (r.observationTargets.slice().forEach(function (r) {
                     return t.unobserve(e, r.target);
                 }),

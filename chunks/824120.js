@@ -1,5 +1,6 @@
 e = r.nmd(e);
 var n = (function () {
+    "use strict";
     var e = u(0x20000000000000),
         t = "0123456789abcdefghijklmnopqrstuvwxyz",
         r = "function" == typeof BigInt;
@@ -780,7 +781,7 @@ var n = (function () {
             });
         }),
         (s.prototype.xor = a.prototype.xor = o.prototype.xor));
-    function L(e) {
+    function D(e) {
         var t = e.value,
             r =
                 "number" == typeof t
@@ -790,7 +791,7 @@ var n = (function () {
                       : (t[0] + 1e7 * t[1]) | 0x40004000;
         return r & -r;
     }
-    function D(e, t) {
+    function L(e, t) {
         return ((e = $(e)), (t = $(t)), e.greater(t) ? e : t);
     }
     function F(e, t) {
@@ -801,10 +802,10 @@ var n = (function () {
         if (e.isZero()) return t;
         if (t.isZero()) return e;
         for (var r, n, o = i[1]; e.isEven() && t.isEven();)
-            ((r = F(L(e), L(t))), (e = e.divide(r)), (t = t.divide(r)), (o = o.multiply(r)));
-        for (; e.isEven();) e = e.divide(L(e));
+            ((r = F(D(e), D(t))), (e = e.divide(r)), (t = t.divide(r)), (o = o.multiply(r)));
+        for (; e.isEven();) e = e.divide(D(e));
         do {
-            for (; t.isEven();) t = t.divide(L(t));
+            for (; t.isEven();) t = t.divide(D(t));
             (e.greater(t) && ((n = t), (t = e), (e = n)), (t = t.subtract(e)));
         } while (!t.isZero());
         return o.isUnit() ? e : e.multiply(o);
@@ -893,7 +894,7 @@ var n = (function () {
         }
         return (a.push(s.toJSNumber()), { value: a.reverse(), isNegative: i });
     }
-    function U(e, r, n) {
+    function V(e, r, n) {
         var i = K(e, r);
         return (
             (i.isNegative ? "-" : "") +
@@ -905,7 +906,7 @@ var n = (function () {
                 .join("")
         );
     }
-    function V(e) {
+    function U(e) {
         if (l(+e)) {
             var t = +e;
             if (t === d(t)) return r ? new s(BigInt(t)) : new a(t);
@@ -937,9 +938,9 @@ var n = (function () {
                 if (e !== d(e)) throw Error(e + " is not an integer.");
                 return new a(e);
             }
-            return V(e.toString());
+            return U(e.toString());
         }
-        return "string" == typeof e ? V(e) : "bigint" == typeof e ? new s(e) : e;
+        return "string" == typeof e ? U(e) : "bigint" == typeof e ? new s(e) : e;
     }
     ((o.prototype.toArray = function (e) {
         return K(this, e);
@@ -951,13 +952,13 @@ var n = (function () {
             return K(this, e);
         }),
         (o.prototype.toString = function (e, t) {
-            if ((void 0 === e && (e = 10), 10 !== e)) return U(this, e, t);
+            if ((void 0 === e && (e = 10), 10 !== e)) return V(this, e, t);
             for (var r, n = this.value, i = n.length, o = String(n[--i]); --i >= 0;)
                 ((r = String(n[i])), (o += "0000000".slice(r.length) + r));
             return (this.sign ? "-" : "") + o;
         }),
         (a.prototype.toString = function (e, t) {
-            return (void 0 === e && (e = 10), 10 != e) ? U(this, e, t) : String(this.value);
+            return (void 0 === e && (e = 10), 10 != e) ? V(this, e, t) : String(this.value);
         }),
         (s.prototype.toString = a.prototype.toString),
         (s.prototype.toJSON =
@@ -983,7 +984,7 @@ var n = (function () {
         (i.one = i[1]),
         (i.zero = i[0]),
         (i.minusOne = i[-1]),
-        (i.max = D),
+        (i.max = L),
         (i.min = F),
         (i.gcd = N),
         (i.lcm = function (e, t) {
@@ -996,7 +997,7 @@ var n = (function () {
             e = $(e);
             var n = r || Math.random,
                 o = F(e, (t = $(t))),
-                a = D(e, t).subtract(o).add(1);
+                a = L(e, t).subtract(o).add(1);
             if (a.isSmall) return o.add(Math.floor(n() * a));
             for (var s = K(a, 1e7).value, l = [], u = !0, c = 0; c < s.length; c++) {
                 var f = u ? s[c] : 1e7,

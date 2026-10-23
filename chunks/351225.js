@@ -1,7 +1,7 @@
-n.d(t, { S: () => r, h: () => i });
-let r = new WeakMap();
+r.d(t, { S: () => n, h: () => i });
+let n = new WeakMap();
 function i(e, t) {
-    let n = r.get(e);
-    if (!n) throw Error("Unknown slider state");
-    return `${n.id}-${t}`;
+    let r = n.get(e);
+    if (!r) throw Error("Unknown slider state");
+    return `${r.id}-${t}`;
 }

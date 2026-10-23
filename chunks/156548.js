@@ -1,35 +1,35 @@
-l.d(t, { BL: () => o, U8: () => c, cR: () => d, fl: () => i });
-var e = l(582128),
-    r = l(621466),
-    u = l(475815);
-function i(n) {
-    return null == n ? null : document.querySelector(`[data-frame-id="${CSS.escape(n)}"]`);
+t.d(n, { BL: () => o, U8: () => a, cR: () => f, fl: () => c });
+var l = t(582128),
+    u = t(621466),
+    r = t(475815);
+function c(e) {
+    return null == e ? null : document.querySelector(`[data-frame-id="${CSS.escape(e)}"]`);
 }
-function a(n) {
-    let t, l;
+function i(e) {
+    let n, t;
     return (
-        null != n &&
-        ((l =
-            (t = document).fullscreenElement ??
-            t.webkitFullscreenElement ??
-            t.mozFullScreenElement ??
-            t.msFullscreenElement ??
+        null != e &&
+        ((t =
+            (n = document).fullscreenElement ??
+            n.webkitFullscreenElement ??
+            n.mozFullScreenElement ??
+            n.msFullscreenElement ??
             null),
-        ((0, r.vq)(l, Element) ? l.getAttribute("data-frame-id") : null) === n)
+        ((0, u.vq)(t, Element) ? t.getAttribute("data-frame-id") : null) === e)
     );
 }
-function c(n) {
-    let t = i(n);
-    null != t && (0, u.Ub)(t) && (a(n) ? (0, u.sP)(t) : (0, u.tl)(t));
+function a(e) {
+    let n = c(e);
+    null != n && (0, r.Ub)(n) && (i(e) ? (0, r.sP)(n) : (0, r.tl)(n));
 }
-function o(n) {
-    if (!a(n)) return;
-    let t = i(n);
-    null != t && (0, u.sP)(t);
+function o(e) {
+    if (!i(e)) return;
+    let n = c(e);
+    null != n && (0, r.sP)(n);
 }
-function s(n) {
-    return (0, u.a3)(document, n);
+function d(e) {
+    return (0, r.a3)(document, e);
 }
-function d(n) {
-    return e.useSyncExternalStore(s, () => a(n));
+function f(e) {
+    return l.useSyncExternalStore(d, () => i(e));
 }

@@ -93,14 +93,14 @@ function y(e, t, r) {
             for (var P = this.hostname.split(/\./), k = 0, A = P.length; k < A; k++) {
                 var I = P[k];
                 if (I && !I.match(f)) {
-                    for (var O = "", R = 0, L = I.length; R < L; R++) I.charCodeAt(R) > 127 ? (O += "x") : (O += I[R]);
+                    for (var O = "", R = 0, D = I.length; R < D; R++) I.charCodeAt(R) > 127 ? (O += "x") : (O += I[R]);
                     if (!O.match(f)) {
-                        var D = P.slice(0, k),
+                        var L = P.slice(0, k),
                             F = P.slice(k + 1),
                             N = I.match(p);
-                        (N && (D.push(N[1]), F.unshift(N[2])),
+                        (N && (L.push(N[1]), F.unshift(N[2])),
                             F.length && (g = "/" + F.join(".") + g),
-                            (this.hostname = D.join(".")));
+                            (this.hostname = L.join(".")));
                         break;
                     }
                 }
@@ -117,12 +117,12 @@ function y(e, t, r) {
         for (var k = 0, A = l.length; k < A; k++) {
             var K = l[k];
             if (-1 !== g.indexOf(K)) {
-                var U = encodeURIComponent(K);
-                (U === K && (U = escape(K)), (g = g.split(K).join(U)));
+                var V = encodeURIComponent(K);
+                (V === K && (V = escape(K)), (g = g.split(K).join(V)));
             }
         }
-    var V = g.indexOf("#");
-    -1 !== V && ((this.hash = g.substr(V)), (g = g.slice(0, V)));
+    var U = g.indexOf("#");
+    -1 !== U && ((this.hash = g.substr(U)), (g = g.slice(0, U)));
     var $ = g.indexOf("?");
     if (
         (-1 !== $

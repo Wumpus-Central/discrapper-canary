@@ -37,18 +37,18 @@ function a(e, t, r = {}) {
         I = u.top - b,
         O = u.bottom + w,
         R = u.left - _,
-        L = u.right + S,
-        D = e === d ? 0 : P + A,
+        D = u.right + S,
+        L = e === d ? 0 : P + A,
         F = e === d ? 0 : T + M,
-        N = e === d ? 0 : e.offsetWidth - e.clientWidth - D,
+        N = e === d ? 0 : e.offsetWidth - e.clientWidth - L,
         j = e === d ? 0 : e.offsetHeight - e.clientHeight - F,
         B = m + (h ? 0 : T) + E,
         K = v - (h ? 0 : M) - x - j,
-        U = y + (h ? 0 : P) + C,
-        V = g - (h ? 0 : A) - k;
-    ((0, o.un)() && (0, o.Tc)()) || "ltr" === p.direction ? (V -= N) : "rtl" === p.direction && (U += N);
+        V = y + (h ? 0 : P) + C,
+        U = g - (h ? 0 : A) - k;
+    ((0, o.un)() && (0, o.Tc)()) || "ltr" === p.direction ? (U -= N) : "rtl" === p.direction && (V += N);
     let $ = I < B || O > K,
-        H = R < U || L > V;
+        H = R < V || D > U;
     if ($ && "start" === n) s += I - B;
     else if ($ && "center" === n) s += (I + O) / 2 - (B + K) / 2;
     else if ($ && "end" === n) s += O - K;
@@ -57,12 +57,12 @@ function a(e, t, r = {}) {
             t = O - K;
         s += Math.abs(e) <= Math.abs(t) ? e : t;
     }
-    if (H && "start" === i) l += R - U;
-    else if (H && "center" === i) l += (R + L) / 2 - (U + V) / 2;
-    else if (H && "end" === i) l += L - V;
+    if (H && "start" === i) l += R - V;
+    else if (H && "center" === i) l += (R + D) / 2 - (V + U) / 2;
+    else if (H && "end" === i) l += D - U;
     else if (H && "nearest" === i) {
-        let e = R - U,
-            t = L - V;
+        let e = R - V,
+            t = D - U;
         l += Math.abs(e) <= Math.abs(t) ? e : t;
     }
     e.scrollTo({ left: l, top: s });

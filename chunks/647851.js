@@ -67,8 +67,8 @@ function x(e) {
             onClick: I,
             isDisabled: O,
             isPressed: R,
-            preventFocusOnPress: L,
-            shouldCancelOnPointerExit: D,
+            preventFocusOnPress: D,
+            shouldCancelOnPointerExit: L,
             allowTextSelectionOnPress: F,
             ref: N,
             ...j
@@ -81,7 +81,7 @@ function x(e) {
             return ((0, b.w)(t, e.ref), e);
         })(e),
         [B, K] = (0, m.useState)(!1),
-        U = (0, m.useRef)({
+        V = (0, m.useRef)({
             isPressed: !1,
             ignoreEmulatedMouseEvents: !1,
             didFirePressStart: !1,
@@ -92,10 +92,10 @@ function x(e) {
             pointerType: null,
             disposables: [],
         }),
-        { addGlobalListener: V, removeAllGlobalListeners: $ } = (0, g.A)(),
+        { addGlobalListener: U, removeAllGlobalListeners: $ } = (0, g.A)(),
         H = (0, m.useCallback)(
             (e, t) => {
-                let n = U.current;
+                let n = V.current;
                 if (O || n.didFirePressStart) return !1;
                 let i = !0;
                 if (((n.isTriggeringEvent = !0), x)) {
@@ -108,7 +108,7 @@ function x(e) {
         ),
         z = (0, m.useCallback)(
             (e, n, i = !0) => {
-                let o = U.current;
+                let o = V.current;
                 if (!o.didFirePressStart) return !1;
                 ((o.didFirePressStart = !1), (o.isTriggeringEvent = !0));
                 let a = !0;
@@ -127,7 +127,7 @@ function x(e) {
         G = (0, y.J)(z),
         W = (0, m.useCallback)(
             (e, t) => {
-                let r = U.current;
+                let r = V.current;
                 if (O) return !1;
                 if (A) {
                     r.isTriggeringEvent = !0;
@@ -141,7 +141,7 @@ function x(e) {
         q = (0, y.J)(W),
         Y = (0, m.useCallback)(
             (e) => {
-                let t = U.current;
+                let t = V.current;
                 if (t.isPressed && t.target) {
                     for (let r of (t.didFirePressStart && null != t.pointerType && z(T(t.target, e), t.pointerType, !1),
                     (t.isPressed = !1),
@@ -160,14 +160,14 @@ function x(e) {
         X = (0, y.J)(Y);
     (0, m.useEffect)(() => {
         O &&
-            U.current.isPressed &&
-            X({ currentTarget: U.current.target, shiftKey: !1, ctrlKey: !1, metaKey: !1, altKey: !1 });
+            V.current.isPressed &&
+            X({ currentTarget: V.current.target, shiftKey: !1, ctrlKey: !1, metaKey: !1, altKey: !1 });
     }, [O]);
     let J = (0, m.useCallback)(
             (e) => {
-                D && Y(e);
+                L && Y(e);
             },
-            [D, Y],
+            [L, Y],
         ),
         Z = (0, m.useCallback)(
             (e) => {
@@ -185,7 +185,7 @@ function x(e) {
             [O, I],
         ),
         ee = (0, m.useMemo)(() => {
-            let e = U.current,
+            let e = V.current,
                 t = {
                     onKeyDown(t) {
                         if (k(t.nativeEvent, t.currentTarget) && (0, s.sD)(t.currentTarget, (0, s.wt)(t))) {
@@ -198,7 +198,7 @@ function x(e) {
                                 (e.pointerType = "keyboard"),
                                 (i = H(t, "keyboard")));
                             let o = t.currentTarget;
-                            (V(
+                            (U(
                                 (0, l.TW)(t.currentTarget),
                                 "keyup",
                                 (0, n.c)((t) => {
@@ -285,14 +285,14 @@ function x(e) {
                             ("hasPointerCapture" in a
                                 ? a.hasPointerCapture(t.pointerId) && a.releasePointerCapture(t.pointerId)
                                 : a.releasePointerCapture(t.pointerId)),
-                            V((0, l.TW)(t.currentTarget), "pointerup", r, !1),
-                            V((0, l.TW)(t.currentTarget), "pointercancel", n, !1));
+                            U((0, l.TW)(t.currentTarget), "pointerup", r, !1),
+                            U((0, l.TW)(t.currentTarget), "pointercancel", n, !1));
                     }
                     i && t.stopPropagation();
                 }),
                     (t.onMouseDown = (t) => {
                         if ((0, s.sD)(t.currentTarget, (0, s.wt)(t)) && 0 === t.button) {
-                            if (L) {
+                            if (D) {
                                 let r = (0, i.LE)(t.target);
                                 r && e.disposables.push(r);
                             }
@@ -327,7 +327,7 @@ function x(e) {
                                             e.target instanceof HTMLElement &&
                                             (r ? X(t) : ((0, a.e)(e.target), e.target.click()));
                                     }, 80);
-                                (V(t.currentTarget, "click", () => (r = !0), !0),
+                                (U(t.currentTarget, "click", () => (r = !0), !0),
                                     e.disposables.push(() => clearTimeout(n)));
                             } else X(t);
                             e.isOverTarget = !1;
@@ -341,7 +341,7 @@ function x(e) {
                 };
             }
             return t;
-        }, [V, O, L, $, F, J, H, Z, Q]);
+        }, [U, O, D, $, F, J, H, Z, Q]);
     return (
         (0, m.useEffect)(() => {
             if (!N) return;
@@ -368,7 +368,7 @@ function x(e) {
                 e.head.prepend(t));
         }, [N]),
         (0, m.useEffect)(() => {
-            let e = U.current;
+            let e = V.current;
             return () => {
                 for (let t of (F || (0, o.E)(e.target ?? void 0), e.disposables)) t();
                 e.disposables = [];

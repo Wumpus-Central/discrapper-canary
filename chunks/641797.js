@@ -88,19 +88,19 @@ var n = r(788409),
             var R = Object.keys(T);
             k = y ? R.sort(y) : R;
         }
-        var L = p ? String(r).replace(/\./g, "%2E") : String(r),
-            D = a && l(T) && 1 === T.length ? L + "[]" : L;
-        if (s && l(T) && 0 === T.length) return D + "[]";
+        var D = p ? String(r).replace(/\./g, "%2E") : String(r),
+            L = a && l(T) && 1 === T.length ? D + "[]" : D;
+        if (s && l(T) && 0 === T.length) return L + "[]";
         for (var F = 0; F < k.length; ++F) {
             var N = k[F],
                 j = "object" == typeof N && N && void 0 !== N.value ? N.value : T[N];
             if (!f || null !== j) {
                 var B = g && p ? String(N).replace(/\./g, "%2E") : String(N),
-                    K = l(T) ? ("function" == typeof o ? o(D, B) : D) : D + (g ? "." + B : "[" + B + "]");
+                    K = l(T) ? ("function" == typeof o ? o(L, B) : L) : L + (g ? "." + B : "[" + B + "]");
                 x.set(t, P);
-                var U = n();
-                (U.set(h, x),
-                    c(O, e(j, K, o, a, s, u, f, p, "comma" === o && S && l(T) ? null : m, v, y, g, b, w, _, S, E, U)));
+                var V = n();
+                (V.set(h, x),
+                    c(O, e(j, K, o, a, s, u, f, p, "comma" === o && S && l(T) ? null : m, v, y, g, b, w, _, S, E, V)));
             }
         }
         return O;

@@ -1,19 +1,19 @@
-n.d(t, { L: () => f, Q: () => p });
-var l = n(582128),
-    i = n(17928),
-    a = n(245179),
-    r = n(319481),
-    u = n(569319),
-    s = n(285411),
-    o = n(805330),
-    d = n(248675),
-    c = n(105292);
+l.d(t, { L: () => f, Q: () => p });
+var n = l(582128),
+    a = l(17928),
+    i = l(245179),
+    r = l(319481),
+    u = l(569319),
+    s = l(285411),
+    o = l(805330),
+    d = l(248675),
+    c = l(105292);
 function f(e, t) {
-    let { id: n, status: u, error: s } = t,
-        f = (0, i.bG)([r.default], () => "open" === r.default.getConnState(e), [e]),
-        p = (0, i.bG)([a.A], () => !a.A.isThinking(e) && !a.A.isCompacting(e), [e]),
-        [h, g] = l.useState(null),
-        m = l.useCallback(() => g({ frame: t, ok: (0, o.yR)(e, n) }), [t, e, n]),
+    let { id: l, status: u, error: s } = t,
+        f = (0, a.bG)([r.default], () => "open" === r.default.getConnState(e), [e]),
+        p = (0, a.bG)([i.A], () => !i.A.isThinking(e) && !i.A.isCompacting(e), [e]),
+        [h, g] = n.useState(null),
+        m = n.useCallback(() => g({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
         v = h?.frame === t ? h : null,
         b = v?.ok === !0 && f;
     if ("undone" === u) return null;
@@ -41,7 +41,7 @@ function f(e, t) {
     };
 }
 function p(e) {
-    let t = (0, i.bG)([s.A], () => s.A.getSmartContext(e), [e]),
-        n = l.useCallback((t) => (0, o.VF)(e, t), [e]);
-    return (0, u.V)(t, n);
+    let t = (0, a.bG)([s.A], () => s.A.getSmartContext(e), [e]),
+        l = n.useCallback((t) => (0, o.VF)(e, t), [e]);
+    return (0, u.V)(t, l);
 }

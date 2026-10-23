@@ -140,12 +140,12 @@ let d = p.createContext(null),
 function v(e) {
     var t, r, i, o, a, c, v, M, P, A;
     let R,
-        L,
         D,
+        L,
         F,
         { children: N, contain: j, restoreFocus: B, autoFocus: K } = e,
-        U = (0, p.useRef)(null),
         V = (0, p.useRef)(null),
+        U = (0, p.useRef)(null),
         $ = (0, p.useRef)([]),
         { parentNode: H } = (0, p.useContext)(d) || {},
         z = (0, p.useMemo)(() => new I({ scopeRef: $ }), [$]);
@@ -162,10 +162,10 @@ function v(e) {
             e && (e.contain = !!j);
         }, [j]),
         (0, f.N)(() => {
-            let e = U.current?.nextSibling,
+            let e = V.current?.nextSibling,
                 t = [],
                 r = (e) => e.stopPropagation();
-            for (; e && e !== V.current;) (t.push(e), e.addEventListener(h, r), (e = e.nextSibling));
+            for (; e && e !== U.current;) (t.push(e), e.addEventListener(h, r), (e = e.nextSibling));
             return (
                 ($.current = t),
                 () => {
@@ -196,11 +196,11 @@ function v(e) {
         (o = $),
         (a = j),
         (R = (0, p.useRef)(void 0)),
-        (L = (0, p.useRef)(void 0)),
+        (D = (0, p.useRef)(void 0)),
         (0, f.N)(() => {
             let e = o.current;
             if (!a) {
-                L.current && (cancelAnimationFrame(L.current), (L.current = void 0));
+                D.current && (cancelAnimationFrame(D.current), (D.current = void 0));
                 return;
             }
             let t = (0, l.TW)(e ? e[0] : void 0),
@@ -231,8 +231,8 @@ function v(e) {
                           : g(o) && (R.current = (0, n.wt)(e));
                 },
                 c = (e) => {
-                    (L.current && cancelAnimationFrame(L.current),
-                        (L.current = requestAnimationFrame(() => {
+                    (D.current && cancelAnimationFrame(D.current),
+                        (D.current = requestAnimationFrame(() => {
                             let r = (0, s.ME)(),
                                 i = ("virtual" === r || null === r) && (0, u.m0)() && (0, u.H8)(),
                                 a = (0, n.bq)(t);
@@ -258,14 +258,14 @@ function v(e) {
         }, [o, a]),
         (0, f.N)(
             () => () => {
-                L.current && cancelAnimationFrame(L.current);
+                D.current && cancelAnimationFrame(D.current);
             },
-            [L],
+            [D],
         ),
         (c = $),
         (v = B),
         (M = j),
-        (D = (0, p.useRef)("u" > typeof document ? (0, n.bq)((0, l.TW)(c.current ? c.current[0] : void 0)) : null)),
+        (L = (0, p.useRef)("u" > typeof document ? (0, n.bq)((0, l.TW)(c.current ? c.current[0] : void 0)) : null)),
         (0, f.N)(() => {
             let e = c.current,
                 t = (0, l.TW)(e ? e[0] : void 0);
@@ -318,7 +318,7 @@ function v(e) {
             let t = O.getTreeNode(c);
             if (t)
                 return (
-                    (t.nodeToRestore = D.current ?? void 0),
+                    (t.nodeToRestore = L.current ?? void 0),
                     () => {
                         let t = O.getTreeNode(c);
                         if (!t) return;
@@ -419,9 +419,9 @@ function v(e) {
     return p.createElement(
         d.Provider,
         { value: W },
-        p.createElement("span", { "data-focus-scope-start": !0, hidden: !0, ref: U }),
+        p.createElement("span", { "data-focus-scope-start": !0, hidden: !0, ref: V }),
         N,
-        p.createElement("span", { "data-focus-scope-end": !0, hidden: !0, ref: V }),
+        p.createElement("span", { "data-focus-scope-end": !0, hidden: !0, ref: U }),
     );
 }
 function y(e) {

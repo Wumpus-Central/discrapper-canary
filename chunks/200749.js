@@ -20,8 +20,8 @@ function d(e) {
         size: h,
         className: m,
         artURL: A,
-        noArt: g = !1,
-        selected: E = !1,
+        noArt: E = !1,
+        selected: g = !1,
     } = e;
     return (0, i.jsxs)(o.A, {
         className: m,
@@ -30,7 +30,7 @@ function d(e) {
         direction: o.A.Direction.VERTICAL,
         style: { padding: 4 },
         children: [
-            !g &&
+            !E &&
                 null != A &&
                 (0, i.jsx)("div", { className: l()(u.art, u[h]), style: { backgroundImage: `url(${A})` } }),
             null != r
@@ -48,7 +48,7 @@ function d(e) {
             null != c && (null == d || "small" !== h)
                 ? (0, i.jsx)(s.E, { color: "none", className: u.description, variant: "text-sm/medium", children: c })
                 : null,
-            E || null == n
+            g || null == n
                 ? null
                 : (0, i.jsx)("div", {
                       className: u.outerButton,

@@ -12,8 +12,8 @@ var r = n(503698),
     h = n(652896),
     m = n(734057),
     A = n(818348),
-    g = n(105292),
-    E = n(2753);
+    E = n(105292),
+    g = n(2753);
 function f(e) {
     let { stream: t, width: n } = e,
         r = (0, s.bG)([m.A], () => m.A.getChannel(t.channelId));
@@ -26,22 +26,22 @@ function f(e) {
         theme: A.NJ.ONYX,
         children: (e) =>
             (0, i.jsx)("div", {
-                className: l()(E.container, e),
+                className: l()(g.container, e),
                 children: (0, i.jsxs)("div", {
-                    className: E.content,
+                    className: g.content,
                     children: [
                         (0, i.jsx)("div", {
-                            className: l()(E.artContainer, E[f]),
-                            children: (0, i.jsx)("div", { className: l()(E.art, E[f]) }),
+                            className: l()(g.artContainer, g[f]),
+                            children: (0, i.jsx)("div", { className: l()(g.art, g[f]) }),
                         }),
                         (0, i.jsxs)("div", {
-                            className: E.cta,
+                            className: g.cta,
                             children: [
                                 (0, i.jsx)(o.D, {
                                     color: "none",
                                     variant: "small" === f ? "heading-md/normal" : "heading-lg/normal",
-                                    className: E.header,
-                                    children: g.intl.formatToMarkdownString(g.t.Kb4Ukp, {}),
+                                    className: g.header,
+                                    children: E.intl.formatToMarkdownString(E.t.Kb4Ukp, {}),
                                 }),
                                 (0, i.jsx)(u.$, {
                                     variant: "secondary",
@@ -49,7 +49,7 @@ function f(e) {
                                     onClick: (e) => {
                                         (e.stopPropagation(), (0, c.Xi)((0, h._z)(t)));
                                     },
-                                    text: g.intl.string(g.t["4EGMWL"]),
+                                    text: E.intl.string(E.t["4EGMWL"]),
                                 }),
                             ],
                         }),

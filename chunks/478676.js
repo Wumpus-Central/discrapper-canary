@@ -1,4 +1,5 @@
 e.exports = (function () {
+    "use strict";
     var e,
         t,
         r,
@@ -177,8 +178,8 @@ e.exports = (function () {
         I = "( *)(" + A + ") +",
         O = RegExp("^" + I),
         R = RegExp(I + "[^\\n]*(?:\\n(?!\\1" + A + " )[^\\n]*)*(\n|$)", "gm"),
-        L = /\n{2,}$/,
-        D = /^ (?= *`)|(` *) $/g,
+        D = /\n{2,}$/,
+        L = /^ (?= *`)|(` *) $/g,
         F = / *\n+$/,
         N = RegExp("^( *)(" + A + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + A + " )\\n*|\\s*\n*$)"),
         j = /(?:^|\n)( *)$/,
@@ -233,8 +234,8 @@ e.exports = (function () {
                 NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
             }),
         K = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
-        U = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
-        V = /mailto:/i,
+        V = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
+        U = /mailto:/i,
         $ = function (e, t, r) {
             var n = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
             if (t._defs && t._defs[n]) {
@@ -364,7 +365,7 @@ e.exports = (function () {
                     var n = e[2],
                         i = n.length > 1,
                         o = i ? +n : void 0,
-                        a = e[0].replace(L, "\n").match(R),
+                        a = e[0].replace(D, "\n").match(R),
                         s = !1;
                     return {
                         ordered: i,
@@ -544,7 +545,7 @@ e.exports = (function () {
                     var n = e[1],
                         i = e[1];
                     return (
-                        V.test(i) || (i = "mailto:" + i),
+                        U.test(i) || (i = "mailto:" + i),
                         { type: "link", content: [{ type: "text", content: n }], target: i }
                     );
                 },
@@ -564,7 +565,7 @@ e.exports = (function () {
             link: {
                 order: z++,
                 requiredFirstCharacters: ["["],
-                match: h(RegExp("^\\[(" + K + ")\\]\\(" + U + "\\)")),
+                match: h(RegExp("^\\[(" + K + ")\\]\\(" + V + "\\)")),
                 parse: function (e, t, r) {
                     return { content: t(e[1], r), target: k(e[2]), title: e[3] };
                 },
@@ -578,7 +579,7 @@ e.exports = (function () {
             },
             image: {
                 order: z++,
-                match: h(RegExp("^!\\[(" + K + ")\\]\\(" + U + "\\)")),
+                match: h(RegExp("^!\\[(" + K + ")\\]\\(" + V + "\\)")),
                 parse: function (e, t, r) {
                     return { alt: e[1], target: k(e[2]), title: e[3] };
                 },
@@ -677,7 +678,7 @@ e.exports = (function () {
                 requiredFirstCharacters: ["`"],
                 match: h(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                 parse: function (e, t, r) {
-                    return { content: e[2].replace(D, "$1") };
+                    return { content: e[2].replace(L, "$1") };
                 },
                 react: function (e, t, r) {
                     return g("code", r.key, { children: e.content });
@@ -737,7 +738,7 @@ e.exports = (function () {
             return (((t = t || {}).inline = !1), q(e, t));
         },
         X = function (e, t) {
-            var r = L.test(e);
+            var r = D.test(e);
             return (((t = t || {}).inline = !r), q(e, t));
         },
         J = W(G, "react"),

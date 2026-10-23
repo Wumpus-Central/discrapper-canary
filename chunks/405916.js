@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(338771),
     m = n(929921),
     A = n(360906),
-    g = n(723702),
-    E = n(74329),
+    E = n(723702),
+    g = n(74329),
     f = n(192308),
     p = n(231723),
     C = n(212245),
@@ -49,8 +49,8 @@ function j(e) {
         W = (function (e, t) {
             let { preset: a, resolution: o, fps: c, soundshareEnabled: d } = (0, l.cf)([m.A], () => m.A.getState()),
                 h = (0, l.bG)([A.Ay], () => A.Ay.getGoLiveSource()),
-                g = (0, l.bG)([O.default], () => O.default.getCurrentUser()),
-                E = (0, l.bG)([I.A], () => I.A.getGuild(e?.guildId)?.premiumTier),
+                E = (0, l.bG)([O.default], () => O.default.getCurrentUser()),
+                g = (0, l.bG)([I.A], () => I.A.getGuild(e?.guildId)?.premiumTier),
                 { location: M } = (0, C.p)(),
                 j = (0, l.bG)([v.Ay, T.A], () => T.A.getChannel(v.Ay.getVoiceChannelId())),
                 D = r.useCallback(
@@ -105,16 +105,16 @@ function j(e) {
                 );
             if (null == e) return null;
             let P = a === R.jQ.PRESET_DOCUMENTS ? R.kn.FPS_30 : c,
-                L = (0, b.A)("useStreamSettingsItems", g, e.guildId),
+                L = (0, b.A)("useStreamSettingsItems", E, e.guildId),
                 k = o === L?.maxResolution && c === L?.maxFPS;
             function U(e) {
-                return k ? ((0, S.A)(e, g, E, j) ?? o) : o;
+                return k ? ((0, S.A)(e, E, g, j) ?? o) : o;
             }
             let w = U(c),
                 V = R.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
                         l = U(t),
-                        a = (0, _.A)(R.jQ.PRESET_CUSTOM, l, t, g, E, j);
+                        a = (0, _.A)(R.jQ.PRESET_CUSTOM, l, t, E, g, j);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -132,7 +132,7 @@ function j(e) {
                 }),
                 z = R.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, _.A)(R.jQ.PRESET_CUSTOM, t, P, g, E, j);
+                        l = (0, _.A)(R.jQ.PRESET_CUSTOM, t, P, E, g, j);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -155,9 +155,9 @@ function j(e) {
                 ],
             });
         })(t, k),
-        H = (0, E.A)(t, k, M.FX),
+        H = (0, g.A)(t, k, M.FX),
         B = null != U && G && (!U.startsWith("screen") || F),
-        K = (0, l.bG)([A.Ay], () => A.Ay.getUseSystemScreensharePicker() && (0, g.isLinux)()),
+        K = (0, l.bG)([A.Ay], () => A.Ay.getUseSystemScreensharePicker() && (0, E.isLinux)()),
         q = r.useCallback(() => {
             U?.startsWith("prepicked:")
                 ? A.Ay.getMediaEngine().eachConnection((e) => {
@@ -166,8 +166,8 @@ function j(e) {
                 : j();
         }, [U, j]),
         Y = U?.startsWith("prepicked:") ?? !1,
-        J = (0, g.isMac)() && g.isPlatformEmbedded && Y && (w?.windows.length ?? 0) > 0,
-        X = (0, g.isMac)() && g.isPlatformEmbedded && Y && (w?.applications.length ?? 0) > 0,
+        J = (0, E.isMac)() && E.isPlatformEmbedded && Y && (w?.windows.length ?? 0) > 0,
+        X = (0, E.isMac)() && E.isPlatformEmbedded && Y && (w?.applications.length ?? 0) > 0,
         Z = J
             ? N.intl.string(N.t.qDK8gQ)
             : X
@@ -190,7 +190,7 @@ function j(e) {
             leadingAccessory: { type: "icon", icon: a.F },
             action: j,
         });
-    let $ = g.isPlatformEmbedded
+    let $ = E.isPlatformEmbedded
             ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: N.intl.string(N.t.ytAD9d), children: W })
             : null,
         ee = B

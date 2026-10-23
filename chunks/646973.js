@@ -1,28 +1,28 @@
-l.d(t, { A: () => f });
-var e = l(582128),
-    r = l(17928),
-    u = l(47294),
-    i = l(16961),
-    a = l(869146),
-    c = l(91242),
-    o = l(241696),
-    s = l(567245),
-    d = l(652215);
-function f(n) {
-    let t = (0, i.G)(),
-        l = (0, r.bG)(
-            [a.A, c.A],
-            () => a.A.getWindowOpen(d.MLl.ACTIVITY_POPOUT) && null != n && c.A.getMainFrame()?.id === n.id,
-            [n],
+t.d(n, { A: () => s });
+var l = t(582128),
+    u = t(17928),
+    r = t(47294),
+    c = t(16961),
+    i = t(869146),
+    a = t(91242),
+    o = t(241696),
+    d = t(567245),
+    f = t(652215);
+function s(e) {
+    let n = (0, c.G)(),
+        t = (0, u.bG)(
+            [i.A, a.A],
+            () => i.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT) && null != e && a.A.getMainFrame()?.id === e.id,
+            [e],
         );
     return {
-        canPopout: t,
-        isPoppedOut: l,
-        popOut: e.useCallback(() => {
-            null != n && (0, u.A)({ onConfirm: () => (0, o.A)(n.id) });
-        }, [n]),
-        popIn: e.useCallback(() => {
-            (0, u.A)({ onConfirm: () => (0, s.E)() });
+        canPopout: n,
+        isPoppedOut: t,
+        popOut: l.useCallback(() => {
+            null != e && (0, r.A)({ onConfirm: () => (0, o.A)(e.id) });
+        }, [e]),
+        popIn: l.useCallback(() => {
+            (0, r.A)({ onConfirm: () => (0, d.E)() });
         }, []),
     };
 }

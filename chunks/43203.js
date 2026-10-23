@@ -1,6 +1,6 @@
 n.d(t, { $: () => f, A: () => p });
-var l = n(73153),
-    i = n(376728),
+var i = n(73153),
+    l = n(376728),
     a = n(21599),
     r = n(976860),
     s = n(280450),
@@ -16,7 +16,7 @@ async function f(e, t) {
         f = (0, a.LO)(n?.targetMessageId),
         p = (0, a.LO)(n?.guildScheduledEventId),
         g = (0, a.WU)({ baseCode: e, targetChannelId: m, targetMessageId: f, guildScheduledEventId: p }),
-        { invite: A } = await i.Ay.resolveInvite(g, t);
+        { invite: A } = await l.Ay.resolveInvite(g, t);
     if (null == A) throw new c.A({ errorCode: h.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
     return (
         n?.installationId != null &&
@@ -25,7 +25,7 @@ async function f(e, t) {
                 location: "openInviteFromRPC",
             }),
         s.default.isAuthenticated()
-            ? l.h.dispatch({
+            ? i.h.dispatch({
                   type: "INVITE_MODAL_OPEN",
                   invite: A,
                   code: g,
@@ -33,7 +33,7 @@ async function f(e, t) {
                   received_installation_id: null != n.installationId ? String(n.installationId) : void 0,
               })
             : (n?.installationId != null &&
-                  i.Ay.setReceivedInstallationIdForInviteCode(A.code, String(n.installationId)),
+                  l.Ay.setReceivedInstallationIdForInviteCode(A.code, String(n.installationId)),
               (0, r.bG)(h.BVt.INVITE(g))),
         u.isPlatformEmbedded && d.Ay.focus(),
         { invite: A, code: e }
@@ -44,8 +44,8 @@ let p = {
         scope: m.hj,
         async handler(e) {
             let { args: t } = e,
-                { code: n, ...l } = t;
-            await f(n, "RPC OPEN_INVITE Handler", l);
+                { code: n, ...i } = t;
+            await f(n, "RPC OPEN_INVITE Handler", i);
         },
     },
 };

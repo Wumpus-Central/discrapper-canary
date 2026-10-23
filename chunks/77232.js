@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     aw: "slider_d061ce",
     r9: "disabled_d061ce",
     Ub: "grabber_d061ce",

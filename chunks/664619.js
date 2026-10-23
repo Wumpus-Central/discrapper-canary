@@ -1,8 +1,8 @@
-n.d(t, { Is: () => R, R_: () => A, YI: () => h, _b: () => C, tZ: () => P });
+n.d(t, { Is: () => R, R_: () => A, YI: () => h, _b: () => f, tZ: () => P });
 var l = n(636537),
     i = n(73153),
-    _ = n(803306),
-    u = n(382483),
+    u = n(803306),
+    _ = n(382483),
     r = n(287809),
     s = n(517244),
     o = n(513845),
@@ -46,27 +46,27 @@ async function A(e) {
             previewDevicePermissions: n.previewDevicePermissions,
         });
     let l = r.default.getCurrentUser()?.id;
-    return (null != l && (0, _.eO)(l).catch(() => {}), !0);
+    return (null != l && (0, u.eO)(l).catch(() => {}), !0);
 }
 async function P(e, t) {
     let { isPreview: n, install: l } = t,
         i = c.Ay.getProject(e),
-        _ = null == i ? null : n ? i.preview_application_id : i.application_id,
-        u = !n || null != l,
-        r = null != _ ? f(_, n, u ? l : null) : null,
+        u = null == i ? null : n ? i.preview_application_id : i.application_id,
+        _ = !n || null != l,
+        r = null != u ? C(u, n, _ ? l : null) : null,
         { bot_permissions_changed: s, integration_installed: o, project: p } = (await (0, a.U1)(e)).body,
         d = n ? p.preview_application_id : p.application_id;
     if (null != d) {
         let e = { integrationInstalled: o, botPermissionsChanged: s };
-        d !== _ || null == r ? await f(d, n, e) : (await r, u || O(d, n, e));
+        d !== u || null == r ? await C(d, n, e) : (await r, _ || O(d, n, e));
     }
 }
-function C(e) {
-    return f(e, !0, null);
+function f(e) {
+    return C(e, !0, null);
 }
-async function f(e, t, n) {
+async function C(e, t, n) {
     (i.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: e }),
-        await Promise.all([(0, a.$N)(e), (0, u.un)(e, { force: !0 }).catch(() => {})]),
+        await Promise.all([(0, a.$N)(e), (0, _.un)(e, { force: !0 }).catch(() => {})]),
         null !== n && O(e, t, n));
 }
 function O(e, t, n) {

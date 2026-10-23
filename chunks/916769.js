@@ -51,14 +51,14 @@ function E(e) {
             shouldUseVirtualFocus: I,
             allowsTabNavigation: O = !1,
             scrollRef: R = E,
-            linkBehavior: L = "action",
-            UNSTABLE_focusOnEntry: D,
+            linkBehavior: D = "action",
+            UNSTABLE_focusOnEntry: L,
         } = e,
         { direction: F } = (0, y.Y)(),
         N = (0, g.rd)(),
         j = (e, t, n) => {
             if (null != t) {
-                if (r.isLink(t) && "selection" === L && P && !(0, u.N9)(e)) {
+                if (r.isLink(t) && "selection" === D && P && !(0, u.N9)(e)) {
                     (0, S.flushSync)(() => {
                         r.setFocusedKey(t, n);
                     });
@@ -66,7 +66,7 @@ function E(e) {
                         o = r.getItemProps(t);
                     return !!i && void N.open(i, e, o.href, o.routerOptions);
                 }
-                if ((r.setFocusedKey(t, n), r.isLink(t) && "override" === L)) return !1;
+                if ((r.setFocusedKey(t, n), r.isLink(t) && "override" === D)) return !1;
                 if (e.shiftKey && "multiple" === r.selectionMode) return void r.extendSelection(t);
                 if (P && !(0, u.N9)(e)) return void r.replaceSelection(t);
             }
@@ -137,7 +137,7 @@ function E(e) {
             },
             allowRepeats: !0,
         }),
-        { keyboardProps: U } = (0, v.d)({
+        { keyboardProps: V } = (0, v.d)({
             shortcuts: {
                 ...B("Home", (e) => {
                     if (w.getFirstKey) {
@@ -183,9 +183,9 @@ function E(e) {
                 ),
             },
         }),
-        V = (0, b.useRef)({ top: 0, left: 0 });
+        U = (0, b.useRef)({ top: 0, left: 0 });
     (0, m._)(R, "scroll", () => {
-        V.current = { top: R.current?.scrollTop ?? 0, left: R.current?.scrollLeft ?? 0 };
+        U.current = { top: R.current?.scrollTop ?? 0, left: R.current?.scrollLeft ?? 0 };
     });
     let $ = (0, b.useRef)(!1);
     (0, m._)(
@@ -272,7 +272,7 @@ function E(e) {
             (e.preventDefault(), r.setFocused(!0));
         }));
     let Y = {
-            ...(0, d.v)(U, K),
+            ...(0, d.v)(V, K),
             onFocus: (e) => {
                 if (r.isFocused) {
                     (0, a.sD)(e.currentTarget, (0, a.wt)(e)) || r.setFocused(!1);
@@ -284,18 +284,18 @@ function E(e) {
                 let n = (e) => {
                     null != e && (r.setFocusedKey(e), P && !r.isSelected(e) && r.replaceSelection(e));
                 };
-                if (D && ("keyboard" === t || "virtual" === t)) n("first" === D ? w.getFirstKey?.() : w.getLastKey?.());
+                if (L && ("keyboard" === t || "virtual" === t)) n("first" === L ? w.getFirstKey?.() : w.getLastKey?.());
                 else if (null == r.focusedKey) {
                     let t = e.relatedTarget;
                     t && e.currentTarget.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING
                         ? n(r.lastSelectedKey ?? w.getLastKey?.())
                         : n(r.firstSelectedKey ?? w.getFirstKey?.());
-                } else R.current && ((R.current.scrollTop = V.current.top), (R.current.scrollLeft = V.current.left));
+                } else R.current && ((R.current.scrollTop = U.current.top), (R.current.scrollLeft = U.current.left));
                 if (null != r.focusedKey && R.current) {
                     let e = (0, u.au)(E, r.focusedKey);
                     e instanceof HTMLElement &&
                         ((0, a.ae)(e) || I || (0, o.e)(e),
-                        ("keyboard" === t || (D && "virtual" === t)) && (0, h.o)(e, { containingElement: E.current }));
+                        ("keyboard" === t || (L && "virtual" === t)) && (0, h.o)(e, { containingElement: E.current }));
                 }
             },
             onBlur: (e) => {

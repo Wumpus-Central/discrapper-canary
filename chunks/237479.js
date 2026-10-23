@@ -59,15 +59,15 @@ t.default = (function () {
                     I = { type: "literal", value: "offset:", description: '"offset:"' },
                     O = { type: "other", description: "whitespace" },
                     R = /^[ \t\n\r]/,
-                    L = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" },
-                    D = { type: "other", description: "optionalWhitespace" },
+                    D = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" },
+                    L = { type: "other", description: "optionalWhitespace" },
                     F = /^[0-9]/,
                     N = { type: "class", value: "[0-9]", description: "[0-9]" },
                     j = /^[0-9a-f]/i,
                     B = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" },
                     K = { type: "literal", value: "0", description: '"0"' },
-                    U = /^[1-9]/,
-                    V = { type: "class", value: "[1-9]", description: "[1-9]" },
+                    V = /^[1-9]/,
+                    U = { type: "class", value: "[1-9]", description: "[1-9]" },
                     $ = /^[^{}\\\0-\x1F \t\n\r]/,
                     H = {
                         type: "class",
@@ -129,7 +129,7 @@ t.default = (function () {
                         })()) !== l && (r = { type: "messageTextElement", value: r }),
                         (e = r) === l &&
                             (e = (function () {
-                                var e, r, n, i, o, a, s, u, c, f, P, A, I, O, R, L;
+                                var e, r, n, i, o, a, s, u, c, f, P, A, I, O, R, D;
                                 if (
                                     ((e = X),
                                     123 === t.charCodeAt(X) ? ((r = "{"), X++) : ((r = l), 0 === et && er(h)),
@@ -190,7 +190,7 @@ t.default = (function () {
                                                             : ((X = A), (A = l)),
                                                         A === l && (A = null),
                                                         A !== l))
-                                                        ? (f = P = { type: P + "Format", style: (L = A) && L[2] })
+                                                        ? (f = P = { type: P + "Format", style: (D = A) && D[2] })
                                                         : ((X = f), (f = l)),
                                                     (c = f) === l &&
                                                         (c = (function () {
@@ -353,11 +353,11 @@ t.default = (function () {
                     if (
                         (et++,
                         (e = []),
-                        R.test(t.charAt(X)) ? ((r = t.charAt(X)), X++) : ((r = l), 0 === et && er(L)),
+                        R.test(t.charAt(X)) ? ((r = t.charAt(X)), X++) : ((r = l), 0 === et && er(D)),
                         r !== l)
                     )
                         for (; r !== l;)
-                            (e.push(r), R.test(t.charAt(X)) ? ((r = t.charAt(X)), X++) : ((r = l), 0 === et && er(L)));
+                            (e.push(r), R.test(t.charAt(X)) ? ((r = t.charAt(X)), X++) : ((r = l), 0 === et && er(D)));
                     else e = l;
                     return (et--, e === l && ((r = l), 0 === et && er(O)), e);
                 }
@@ -365,7 +365,7 @@ t.default = (function () {
                     var e, r, n;
                     for (et++, e = X, r = [], n = el(); n !== l;) (r.push(n), (n = el()));
                     return (
-                        r !== l && (r = t.substring(e, X)), (e = r), et--, e === l && ((r = l), 0 === et && er(D)), e
+                        r !== l && (r = t.substring(e, X)), (e = r), et--, e === l && ((r = l), 0 === et && er(L)), e
                     );
                 }
                 function ec() {
@@ -382,7 +382,7 @@ t.default = (function () {
                         if (
                             ((e = X),
                             (r = X),
-                            U.test(t.charAt(X)) ? ((n = t.charAt(X)), X++) : ((n = l), 0 === et && er(V)),
+                            V.test(t.charAt(X)) ? ((n = t.charAt(X)), X++) : ((n = l), 0 === et && er(U)),
                             n !== l)
                         ) {
                             for (i = [], o = ec(); o !== l;) (i.push(o), (o = ec()));

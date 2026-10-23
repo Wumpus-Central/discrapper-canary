@@ -82,8 +82,8 @@ function m(e) {
         I = T[1],
         O = i.useState(!0),
         R = O[0],
-        L = O[1],
-        D = _.fitCanvasToArtboardHeight,
+        D = O[1],
+        L = _.fitCanvasToArtboardHeight,
         F = _.shouldResizeCanvasToContainer,
         N = _.useDevicePixelRatio,
         j = _.customDevicePixelRatio,
@@ -136,9 +136,9 @@ function m(e) {
             ),
             n),
         K = s(j),
-        U = null != w ? w : {},
-        V = U.maxX,
-        $ = U.maxY,
+        V = null != w ? w : {},
+        U = V.maxX,
+        $ = V.maxY,
         H = i.useCallback(
             function () {
                 var e,
@@ -147,9 +147,9 @@ function m(e) {
                     n,
                     i = null != (e = null == (r = y.current) ? void 0 : r.clientWidth) ? e : 0,
                     o = null != (t = null == (n = y.current) ? void 0 : n.clientHeight) ? t : 0;
-                return D && w ? { width: i, height: (w.maxY / w.maxX) * i } : { width: i, height: o };
+                return L && w ? { width: i, height: (w.maxY / w.maxX) * i } : { width: i, height: o };
             },
-            [y, D, V, $],
+            [y, L, U, $],
         );
     (i.useEffect(
         function () {
@@ -178,10 +178,10 @@ function m(e) {
                     } else i && ((v.width = t), (v.height = r), I({ width: t, height: r }), (n = !0));
                     k({ width: t, height: r });
                 }
-                (b && (R || n) && b && b(), R && L(!1));
+                (b && (R || n) && b && b(), R && D(!1));
             }
         },
-        [v, y, B, K, H, R, L, P, A, x, C, b, F, D, N, m],
+        [v, y, B, K, H, R, D, P, A, x, C, b, F, L, N, m],
     ),
         i.useEffect(
             function () {

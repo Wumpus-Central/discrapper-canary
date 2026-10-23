@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(684013),
     m = n(869146),
     A = n(532294),
-    g = n(723702),
-    E = n(41984),
+    E = n(723702),
+    g = n(41984),
     f = n(127242),
     p = n(545807),
     C = n(392164),
@@ -76,7 +76,7 @@ class S {
         { trailing: !0, maxWait: 1e3 },
     );
     updateZones() {
-        if (!g.isPlatformEmbedded) return;
+        if (!E.isPlatformEmbedded) return;
         let e = m.A.getWindow(C.f);
         null != e &&
             h.A.setClickZones(
@@ -105,7 +105,7 @@ let T = r.createContext(new S((0, p.b)()));
 function I(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
         o = r.useContext(T),
-        u = (0, c.bG)([f.A], () => f.A.hasRenderDebugMode(E.x7.ClickZones)),
+        u = (0, c.bG)([f.A], () => f.A.hasRenderDebugMode(g.x7.ClickZones)),
         d = (0, c.bG)([A.default], () => A.default.disableClickableRegions),
         [{ refHandler: h, setObserve: m }] = r.useState(() => {
             let e = null;

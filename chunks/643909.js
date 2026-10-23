@@ -1,4 +1,5 @@
 !(function (e, t) {
+    "use strict";
     function r(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -393,9 +394,9 @@
                 );
             return e;
         },
-        L = t.createContext(null);
-    L.displayName = "CheckoutContext";
-    var D = function (e, t) {
+        D = t.createContext(null);
+    D.displayName = "CheckoutContext";
+    var L = function (e, t) {
             if (!e) return null;
             (e.on, e.session);
             var r = a(e, I);
@@ -494,12 +495,12 @@
                 ));
             var b = t.useMemo(
                 function () {
-                    return D(f.checkoutSdk, l);
+                    return L(f.checkoutSdk, l);
                 },
                 [f.checkoutSdk, l],
             );
             return f.checkoutSdk
-                ? t.createElement(O.Provider, { value: f }, t.createElement(L.Provider, { value: b }, i))
+                ? t.createElement(O.Provider, { value: f }, t.createElement(D.Provider, { value: b }, i))
                 : null;
         };
     F.propTypes = {
@@ -554,7 +555,7 @@
                               I = A[0],
                               O = A[1],
                               R = t.useRef(null),
-                              L = t.useRef(null);
+                              D = t.useRef(null);
                           (v(I, "blur", f),
                               v(I, "focus", p),
                               v(I, "escape", m),
@@ -577,7 +578,7 @@
                               v(I, "ready", i),
                               t.useLayoutEffect(
                                   function () {
-                                      if (null === R.current && null !== L.current && (M || P)) {
+                                      if (null === R.current && null !== D.current && (M || P)) {
                                           var t = null;
                                           if (P)
                                               switch (e) {
@@ -615,21 +616,21 @@
                                                       );
                                               }
                                           else M && (t = M.create(e, c));
-                                          ((R.current = t), O(t), t && t.mount(L.current));
+                                          ((R.current = t), O(t), t && t.mount(D.current));
                                       }
                                   },
                                   [M, P, c],
                               ));
-                          var D = y(c);
+                          var L = y(c);
                           return (
                               t.useEffect(
                                   function () {
                                       if (R.current) {
-                                          var e = _(c, D, ["paymentRequest"]);
+                                          var e = _(c, L, ["paymentRequest"]);
                                           e && "update" in R.current && R.current.update(e);
                                       }
                                   },
-                                  [c, D],
+                                  [c, L],
                               ),
                               t.useLayoutEffect(function () {
                                   return function () {
@@ -639,7 +640,7 @@
                                           } catch (e) {}
                                   };
                               }, []),
-                              t.createElement("div", { id: o, className: l, ref: L })
+                              t.createElement("div", { id: o, className: l, ref: D })
                           );
                       };
             return (
@@ -667,10 +668,10 @@
             );
         },
         K = "u" < typeof window,
-        U = t.createContext(null);
-    U.displayName = "EmbeddedCheckoutProviderContext";
-    var V = function () {
-            var e = t.useContext(U);
+        V = t.createContext(null);
+    V.displayName = "EmbeddedCheckoutProviderContext";
+    var U = function () {
+            var e = t.useContext(V);
             if (!e) throw Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
             return e;
         },
@@ -678,12 +679,12 @@
             ? function (e) {
                   var r = e.id,
                       n = e.className;
-                  return (V(), t.createElement("div", { id: r, className: n }));
+                  return (U(), t.createElement("div", { id: r, className: n }));
               }
             : function (e) {
                   var r = e.id,
                       n = e.className,
-                      i = V().embeddedCheckout,
+                      i = U().embeddedCheckout,
                       o = t.useRef(!1),
                       a = t.useRef(null);
                   return (
@@ -848,7 +849,7 @@
                     },
                     [d, n],
                 ),
-                t.createElement(U.Provider, { value: c }, i)
+                t.createElement(V.Provider, { value: c }, i)
             );
         }),
         (e.EpsBankElement = Q),
@@ -864,7 +865,7 @@
         (e.ShippingAddressElement = ea),
         (e.useCheckout = function () {
             R(t.useContext(O), "calls useCheckout()");
-            var e = t.useContext(L);
+            var e = t.useContext(D);
             if (!e)
                 throw Error(
                     "Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.",

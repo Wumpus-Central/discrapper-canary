@@ -78,15 +78,15 @@ function b(e) {
     let I = r.isLink(b) && "override" === T,
         O = C && "action" === e.UNSTABLE_itemBehavior,
         R = r.isLink(b) && "selection" !== T && "none" !== T,
-        L = !x && r.canSelectItem(b) && !I && !O,
-        D = (C || R) && !x,
-        F = D && ("replace" === r.selectionBehavior ? !L : !L || r.isEmpty),
-        N = D && L && "replace" === r.selectionBehavior,
+        D = !x && r.canSelectItem(b) && !I && !O,
+        L = (C || R) && !x,
+        F = L && ("replace" === r.selectionBehavior ? !D : !D || r.isEmpty),
+        N = L && D && "replace" === r.selectionBehavior,
         j = F || N,
         B = (0, g.useRef)(null),
-        K = j && L,
-        U = (0, g.useRef)(!1),
+        K = j && D,
         V = (0, g.useRef)(!1),
+        U = (0, g.useRef)(!1),
         $ = r.getItemProps(b),
         H = (e) => {
             (C && (C(), w.current?.dispatchEvent(new CustomEvent("react-aria-item-action", { bubbles: !0 }))),
@@ -96,31 +96,31 @@ function b(e) {
     _
         ? ((z.onPressStart = (e) => {
               ((B.current = e.pointerType),
-                  (U.current = K),
+                  (V.current = K),
                   "keyboard" !== e.pointerType || (j && " " !== e.key) || P(e));
           }),
           k
               ? ((z.onPressUp = F
                     ? void 0
                     : (e) => {
-                          "mouse" === e.pointerType && L && P(e);
+                          "mouse" === e.pointerType && D && P(e);
                       }),
                 (z.onPress = F
                     ? H
                     : (e) => {
-                          "keyboard" !== e.pointerType && "mouse" !== e.pointerType && L && P(e);
+                          "keyboard" !== e.pointerType && "mouse" !== e.pointerType && D && P(e);
                       }))
               : (z.onPress = (e) => {
                     F || (N && "mouse" !== e.pointerType)
                         ? ("keyboard" !== e.pointerType || "Enter" === e.key) && H(e)
-                        : "keyboard" !== e.pointerType && L && P(e);
+                        : "keyboard" !== e.pointerType && D && P(e);
                 }))
         : ((z.onPressStart = (e) => {
               ((B.current = e.pointerType),
-                  (U.current = K),
-                  (V.current = F),
-                  !L ||
-                      (("mouse" !== e.pointerType || F) && ("keyboard" !== e.pointerType || (D && " " !== e.key))) ||
+                  (V.current = K),
+                  (U.current = F),
+                  !D ||
+                      (("mouse" !== e.pointerType || F) && ("keyboard" !== e.pointerType || (L && " " !== e.key))) ||
                       P(e));
           }),
           (z.onPress = (e) => {
@@ -128,8 +128,8 @@ function b(e) {
                   "pen" === e.pointerType ||
                   "virtual" === e.pointerType ||
                   ("keyboard" === e.pointerType && j && "Enter" === e.key) ||
-                  ("mouse" === e.pointerType && V.current)) &&
-                  (j ? H(e) : L && P(e));
+                  ("mouse" === e.pointerType && U.current)) &&
+                  (j ? H(e) : D && P(e));
           }));
     let G = (0, a.EG)(r.collection);
     if (
@@ -214,12 +214,12 @@ function b(e) {
                 : void 0,
         Z = (0, u.v)(
             A,
-            L || F || (S && !x) ? W : {},
+            D || F || (S && !x) ? W : {},
             K ? X : {},
             {
                 onDoubleClick: Y,
                 onDragStartCapture: (e) => {
-                    "touch" === B.current && U.current && e.preventDefault();
+                    "touch" === B.current && V.current && e.preventDefault();
                 },
                 onClick: J,
                 id: t,
@@ -252,7 +252,7 @@ function b(e) {
             isSelected: r.isSelected(b),
             isFocused: r.isFocused && r.focusedKey === b,
             isDisabled: x,
-            allowsSelection: L,
+            allowsSelection: D,
             hasAction: j,
         }
     );

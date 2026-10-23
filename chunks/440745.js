@@ -61,26 +61,26 @@
                                       ? { h: t[1], s: t[2], v: t[3], a: t[4] }
                                       : (t = B.hex8.exec(e))
                                         ? {
-                                              r: D(t[1]),
-                                              g: D(t[2]),
-                                              b: D(t[3]),
-                                              a: D(t[4]) / 255,
+                                              r: L(t[1]),
+                                              g: L(t[2]),
+                                              b: L(t[3]),
+                                              a: L(t[4]) / 255,
                                               format: r ? "name" : "hex8",
                                           }
                                         : (t = B.hex6.exec(e))
-                                          ? { r: D(t[1]), g: D(t[2]), b: D(t[3]), format: r ? "name" : "hex" }
+                                          ? { r: L(t[1]), g: L(t[2]), b: L(t[3]), format: r ? "name" : "hex" }
                                           : (t = B.hex4.exec(e))
                                             ? {
-                                                  r: D(t[1] + "" + t[1]),
-                                                  g: D(t[2] + "" + t[2]),
-                                                  b: D(t[3] + "" + t[3]),
-                                                  a: D(t[4] + "" + t[4]) / 255,
+                                                  r: L(t[1] + "" + t[1]),
+                                                  g: L(t[2] + "" + t[2]),
+                                                  b: L(t[3] + "" + t[3]),
+                                                  a: L(t[4] + "" + t[4]) / 255,
                                                   format: r ? "name" : "hex8",
                                               }
                                             : !!(t = B.hex3.exec(e)) && {
-                                                  r: D(t[1] + "" + t[1]),
-                                                  g: D(t[2] + "" + t[2]),
-                                                  b: D(t[3] + "" + t[3]),
+                                                  r: L(t[1] + "" + t[1]),
+                                                  g: L(t[2] + "" + t[2]),
+                                                  b: L(t[3] + "" + t[3]),
                                                   format: r ? "name" : "hex",
                                               };
                     })(n)),
@@ -224,12 +224,12 @@
     function y(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = p(e).toHsl();
-        return ((r.s -= t / 100), (r.s = L(r.s)), p(r));
+        return ((r.s -= t / 100), (r.s = D(r.s)), p(r));
     }
     function g(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = p(e).toHsl();
-        return ((r.s += t / 100), (r.s = L(r.s)), p(r));
+        return ((r.s += t / 100), (r.s = D(r.s)), p(r));
     }
     function b(e) {
         return p(e).desaturate(100);
@@ -237,7 +237,7 @@
     function w(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = p(e).toHsl();
-        return ((r.l += t / 100), (r.l = L(r.l)), p(r));
+        return ((r.l += t / 100), (r.l = D(r.l)), p(r));
     }
     function _(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -252,7 +252,7 @@
     function S(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = p(e).toHsl();
-        return ((r.l -= t / 100), (r.l = L(r.l)), p(r));
+        return ((r.l -= t / 100), (r.l = D(r.l)), p(r));
     }
     function E(e, t) {
         var r = p(e).toHsl(),
@@ -753,10 +753,10 @@
             ? 1
             : (e % r) / parseFloat(r);
     }
-    function L(e) {
+    function D(e) {
         return u(1, c(0, e));
     }
-    function D(e) {
+    function L(e) {
         return parseInt(e, 16);
     }
     function F(e) {

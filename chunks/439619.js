@@ -133,10 +133,10 @@ if (k)
     try {
         null.error;
     } catch (e) {
-        var L = k(k(e));
-        R["%Error.prototype%"] = L;
+        var D = k(k(e));
+        R["%Error.prototype%"] = D;
     }
-var D = function e(t) {
+var L = function e(t) {
         var r;
         if ("%AsyncFunction%" === t) r = w("async function () {}");
         else if ("%GeneratorFunction%" === t) r = w("function* () {}");
@@ -208,20 +208,20 @@ var D = function e(t) {
     j = r(353841),
     B = N.call(A, Array.prototype.concat),
     K = N.call(P, Array.prototype.splice),
-    U = N.call(A, String.prototype.replace),
-    V = N.call(A, String.prototype.slice),
+    V = N.call(A, String.prototype.replace),
+    U = N.call(A, String.prototype.slice),
     $ = N.call(A, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     z = /\\(\\)?/g,
     G = function (e) {
-        var t = V(e, 0, 1),
-            r = V(e, -1);
+        var t = U(e, 0, 1),
+            r = U(e, -1);
         if ("%" === t && "%" !== r) throw new u("invalid intrinsic syntax, expected closing `%`");
         if ("%" === r && "%" !== t) throw new u("invalid intrinsic syntax, expected opening `%`");
         var n = [];
         return (
-            U(e, H, function (e, t, r, i) {
-                n[n.length] = r ? U(i, z, "$1") : t || e;
+            V(e, H, function (e, t, r, i) {
+                n[n.length] = r ? V(i, z, "$1") : t || e;
             }),
             n
         );
@@ -231,7 +231,7 @@ var D = function e(t) {
             n = e;
         if ((j(F, n) && (n = "%" + (r = F[n])[0] + "%"), j(R, n))) {
             var i = R[n];
-            if ((i === I && (i = D(n)), void 0 === i && !t))
+            if ((i === I && (i = L(n)), void 0 === i && !t))
                 throw new c("intrinsic " + e + " exists, but is not available. Please file an issue!");
             return { alias: r, name: n, value: i };
         }
@@ -252,8 +252,8 @@ e.exports = function (e, t) {
     l && ((n = l[0]), K(r, B([0, 1], l)));
     for (var f = 1, p = !0; f < r.length; f += 1) {
         var d = r[f],
-            h = V(d, 0, 1),
-            m = V(d, -1);
+            h = U(d, 0, 1),
+            m = U(d, -1);
         if (('"' === h || "'" === h || "`" === h || '"' === m || "'" === m || "`" === m) && h !== m)
             throw new u("property names with quotes must have matching quotes");
         if ((("constructor" !== d && p) || (s = !0), (n += "." + d), j(R, (o = "%" + n + "%")))) a = R[o];

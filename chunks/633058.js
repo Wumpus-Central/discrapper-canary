@@ -1,62 +1,62 @@
-n.d(t, { S: () => a });
-var r = n(753154),
-    i = n(526739),
-    l = n(582128);
+r.d(t, { S: () => a });
+var n = r(753154),
+    i = r(526739),
+    o = r(582128);
 function a(e) {
     let {
             isDisabled: t = !1,
-            minValue: n = 0,
+            minValue: r = 0,
             maxValue: a = 100,
             numberFormatter: c,
-            step: d = 1,
-            orientation: h = "horizontal",
+            step: f = 1,
+            orientation: p = "horizontal",
         } = e,
-        b = (0, l.useMemo)(() => {
-            let e = (a - n) / 10;
-            return Math.max((e = (0, r.BU)(e, 0, e + d, d)), d);
-        }, [d, a, n]),
-        p = (0, l.useCallback)(
+        d = (0, o.useMemo)(() => {
+            let e = (a - r) / 10;
+            return Math.max((e = (0, n.BU)(e, 0, e + f, f)), f);
+        }, [f, a, r]),
+        h = (0, o.useCallback)(
             (e) =>
                 e?.map((t, i) => {
-                    let l = 0 === i ? n : e[i - 1],
-                        o = i === e.length - 1 ? a : e[i + 1];
-                    return (0, r.BU)(t, l, o, d);
+                    let o = 0 === i ? r : e[i - 1],
+                        s = i === e.length - 1 ? a : e[i + 1];
+                    return (0, n.BU)(t, o, s, f);
                 }),
-            [n, a, d],
+            [r, a, f],
         ),
-        g = (0, l.useMemo)(() => p(s(e.value)), [e.value, p]),
-        f = (0, l.useMemo)(() => p(s(e.defaultValue) ?? [n]), [e.defaultValue, n, p]),
-        m = u(e.value, e.defaultValue, e.onChange),
-        y = u(e.value, e.defaultValue, e.onChangeEnd),
-        [v, K] = (0, i.P)(g, f, m),
-        [P] = (0, l.useState)(v),
-        [T, w] = (0, l.useState)(Array(v.length).fill(!1)),
-        D = (0, l.useRef)(Array(v.length).fill(!0)),
-        [S, M] = (0, l.useState)(void 0),
-        C = (0, l.useRef)(v),
-        x = (0, l.useRef)(T);
-    function E(e) {
-        return (e - n) / (a - n);
+        m = (0, o.useMemo)(() => h(l(e.value)), [e.value, h]),
+        v = (0, o.useMemo)(() => h(l(e.defaultValue) ?? [r]), [e.defaultValue, r, h]),
+        y = u(e.value, e.defaultValue, e.onChange),
+        g = u(e.value, e.defaultValue, e.onChangeEnd),
+        [b, w] = (0, i.P)(m, v, y),
+        [_] = (0, o.useState)(b),
+        [S, E] = (0, o.useState)(Array(b.length).fill(!1)),
+        x = (0, o.useRef)(Array(b.length).fill(!0)),
+        [C, k] = (0, o.useState)(void 0),
+        T = (0, o.useRef)(b),
+        M = (0, o.useRef)(S);
+    function P(e) {
+        return (e - r) / (a - r);
     }
-    function k(e) {
-        return 0 === e ? n : v[e - 1];
+    function A(e) {
+        return 0 === e ? r : b[e - 1];
     }
-    function R(e) {
-        return e === v.length - 1 ? a : v[e + 1];
+    function I(e) {
+        return e === b.length - 1 ? a : b[e + 1];
     }
-    function F(e) {
-        return D.current[e];
+    function O(e) {
+        return x.current[e];
     }
-    function V(e, n) {
-        if (t || !F(e)) return;
-        let i = k(e),
-            l = R(e);
-        n = (0, r.BU)(n, i, l, d);
-        let a = o(C.current, e, n);
-        ((C.current = a), K(a));
+    function R(e, r) {
+        if (t || !O(e)) return;
+        let i = A(e),
+            o = I(e);
+        r = (0, n.BU)(r, i, o, f);
+        let a = s(T.current, e, r);
+        ((T.current = a), w(a));
     }
-    let I = (0, l.useRef)(null);
-    function A(e = v) {
+    let D = (0, o.useRef)(null);
+    function L(e = b) {
         switch (("number" == typeof e && (e = [e]), e.length)) {
             case 0:
                 return "";
@@ -66,74 +66,74 @@ function a(e) {
                 return c.formatRange(e[0], e[1]);
             default: {
                 let t = e.map((e) => c.format(e)),
-                    n = I.current;
+                    r = D.current;
                 return (
-                    (n && n.resolvedOptions().locale === c.resolvedOptions().locale) ||
-                        (n = I.current = new Intl.ListFormat(c.resolvedOptions().locale, { type: "unit" })),
-                    n.format(t)
+                    (r && r.resolvedOptions().locale === c.resolvedOptions().locale) ||
+                        (r = D.current = new Intl.ListFormat(c.resolvedOptions().locale, { type: "unit" })),
+                    r.format(t)
                 );
             }
         }
     }
-    function L(e) {
-        let t = e * (a - n) + n;
-        return (0, r.qE)(Math.round((t - n) / d) * d + n, n, a);
+    function F(e) {
+        let t = e * (a - r) + r;
+        return (0, n.qE)(Math.round((t - r) / f) * f + r, r, a);
     }
     return {
-        values: v,
-        defaultValues: void 0 !== e.defaultValue ? f : P,
-        getThumbValue: (e) => v[e],
-        setThumbValue: V,
+        values: b,
+        defaultValues: void 0 !== e.defaultValue ? v : _,
+        getThumbValue: (e) => b[e],
+        setThumbValue: R,
         setThumbPercent: function (e, t) {
-            V(e, L(t));
+            R(e, F(t));
         },
-        isThumbDragging: (e) => T[e],
-        setThumbDragging: function (e, n) {
-            var r;
-            if (t || !F(e)) return;
-            n && (C.current = v);
-            let i = x.current[e];
-            ((x.current = o(x.current, e, n)),
-                (r = x.current),
-                (x.current = r),
-                w(r),
-                y && i && !x.current.some(Boolean) && y(C.current));
+        isThumbDragging: (e) => S[e],
+        setThumbDragging: function (e, r) {
+            var n;
+            if (t || !O(e)) return;
+            r && (T.current = b);
+            let i = M.current[e];
+            ((M.current = s(M.current, e, r)),
+                (n = M.current),
+                (M.current = n),
+                E(n),
+                g && i && !M.current.some(Boolean) && g(T.current));
         },
-        focusedThumb: S,
-        setFocusedThumb: M,
-        getThumbPercent: (e) => E(v[e]),
-        getValuePercent: E,
-        getThumbValueLabel: (e) => A(v[e]),
-        getFormattedValue: A,
-        getThumbMinValue: k,
-        getThumbMaxValue: R,
-        getPercentValue: L,
-        isThumbEditable: F,
+        focusedThumb: C,
+        setFocusedThumb: k,
+        getThumbPercent: (e) => P(b[e]),
+        getValuePercent: P,
+        getThumbValueLabel: (e) => L(b[e]),
+        getFormattedValue: L,
+        getThumbMinValue: A,
+        getThumbMaxValue: I,
+        getPercentValue: F,
+        isThumbEditable: O,
         setThumbEditable: function (e, t) {
-            D.current[e] = t;
+            x.current[e] = t;
         },
         incrementThumb: function (e, t = 1) {
-            let i = Math.max(t, d);
-            V(e, (0, r.BU)(v[e] + i, n, a, d));
+            let i = Math.max(t, f);
+            R(e, (0, n.BU)(b[e] + i, r, a, f));
         },
         decrementThumb: function (e, t = 1) {
-            let i = Math.max(t, d);
-            V(e, (0, r.BU)(v[e] - i, n, a, d));
+            let i = Math.max(t, f);
+            R(e, (0, n.BU)(b[e] - i, r, a, f));
         },
-        step: d,
-        pageSize: b,
-        orientation: h,
+        step: f,
+        pageSize: d,
+        orientation: p,
         isDisabled: t,
     };
 }
-function o(e, t, n) {
-    return e[t] === n ? e : [...e.slice(0, t), n, ...e.slice(t + 1)];
+function s(e, t, r) {
+    return e[t] === r ? e : [...e.slice(0, t), r, ...e.slice(t + 1)];
 }
-function s(e) {
+function l(e) {
     if (null != e) return Array.isArray(e) ? e : [e];
 }
-function u(e, t, n) {
-    return (r) => {
-        "number" == typeof e || "number" == typeof t ? n?.(r[0]) : n?.(r);
+function u(e, t, r) {
+    return (n) => {
+        "number" == typeof e || "number" == typeof t ? r?.(n[0]) : r?.(n);
     };
 }

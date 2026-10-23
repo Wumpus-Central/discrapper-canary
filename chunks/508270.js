@@ -401,14 +401,14 @@ try {
 } catch (e) {
     R = !1;
 }
-var L = k
+var D = k
         ? function (e, t, r) {
               return e.startsWith(t, r);
           }
         : function (e, t, r) {
               return e.slice(r, r + t.length) === t;
           },
-    D = T
+    L = T
         ? String.fromCodePoint
         : function () {
               for (var e, t = [], r = 0; r < arguments.length; r++) t[r] = arguments[r];
@@ -464,10 +464,10 @@ function K(e, t) {
     return new RegExp(e, t);
 }
 if (R) {
-    var U = K("([^\\p{White_Space}\\p{Pattern_Syntax}]*)", "yu");
+    var V = K("([^\\p{White_Space}\\p{Pattern_Syntax}]*)", "yu");
     c = function (e, t) {
         var r;
-        return ((U.lastIndex = t), null != (r = U.exec(e)[1]) ? r : "");
+        return ((V.lastIndex = t), null != (r = V.exec(e)[1]) ? r : "");
     };
 } else
     c = function (e, t) {
@@ -729,9 +729,9 @@ if (R) {
                 break;
             (r.push(i), (t += i >= 65536 ? 2 : 1));
         }
-        return D.apply(void 0, r);
+        return L.apply(void 0, r);
     };
-var V = (function () {
+var U = (function () {
     function e(e, t) {
         (void 0 === t && (t = {}),
             (this.message = e),
@@ -881,7 +881,7 @@ var V = (function () {
                 else t.push(r);
                 this.bump();
             }
-            return D.apply(void 0, t);
+            return L.apply(void 0, t);
         }),
         (e.prototype.tryParseUnquoted = function (e, t) {
             if (this.isEOF()) return null;
@@ -891,7 +891,7 @@ var V = (function () {
                 (35 === r && ("plural" === t || "selectordinal" === t)) ||
                 (125 === r && e > 0)
                 ? null
-                : (this.bump(), D(r));
+                : (this.bump(), L(r));
         }),
         (e.prototype.parseArgument = function (e, t) {
             var r = this.clonePosition();
@@ -949,7 +949,7 @@ var V = (function () {
                     var y = this.tryParseArgumentClose(n);
                     if (y.err) return y;
                     var g = C(n, this.clonePosition());
-                    if (p && L(null == p ? void 0 : p.style, "::", 0)) {
+                    if (p && D(null == p ? void 0 : p.style, "::", 0)) {
                         var b = j(p.style.slice(2));
                         if ("number" === u) {
                             var m = this.parseNumberSkeletonFromString(b, p.styleLocation);
@@ -1481,7 +1481,7 @@ var V = (function () {
             }
         }),
         (e.prototype.bumpIf = function (e) {
-            if (L(this.message, e, this.offset())) {
+            if (D(this.message, e, this.offset())) {
                 for (var t = 0; t < e.length; t++) this.bump();
                 return !0;
             }
@@ -1527,7 +1527,7 @@ function H(e) {
 }
 function z(e, t) {
     void 0 === t && (t = {});
-    var r = new V(e, (t = (0, f.Cl)({ shouldParseSkeletons: !0, requiresOtherClause: !0 }, t))).parse();
+    var r = new U(e, (t = (0, f.Cl)({ shouldParseSkeletons: !0, requiresOtherClause: !0 }, t))).parse();
     if (r.err) {
         var n = SyntaxError(a[r.err.kind]);
         throw ((n.location = r.err.location), (n.originalMessage = r.err.message), n);

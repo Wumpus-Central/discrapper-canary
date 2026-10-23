@@ -463,7 +463,7 @@ function R(e, t) {
     } else l["[[locale]]"] = n;
     return l;
 }
-function L(e, t, r, n, i) {
+function D(e, t, r, n, i) {
     if (0 === e.length) throw ReferenceError("No locale data has been provided for this object yet.");
     if ("lookup" === r["[[localeMatcher]]"]) var o = R(e, t);
     else var o = R(e, t);
@@ -507,7 +507,7 @@ function L(e, t, r, n, i) {
             a = k + m + T;
     return ((h["[[locale]]"] = a), h);
 }
-function D(e, t) {
+function L(e, t) {
     for (var r = t.length, n = new ee(), i = 0; i < r;) {
         var o = t[i];
         (void 0 !== O(e, String(o).replace(C, "")) && m.call(n, o), i++);
@@ -555,7 +555,7 @@ function B(e, t, r) {
         u = F(r, "localeMatcher", "string", new ee("lookup", "best fit"), "best fit");
     s["[[localeMatcher]]"] = u;
     var f = b.NumberFormat["[[localeData]]"],
-        p = L(b.NumberFormat["[[availableLocales]]"], a, s, b.NumberFormat["[[relevantExtensionKeys]]"], f);
+        p = D(b.NumberFormat["[[availableLocales]]"], a, s, b.NumberFormat["[[relevantExtensionKeys]]"], f);
     ((i["[[locale]]"] = p["[[locale]]"]),
         (i["[[numberingSystem]]"] = p["[[nu]]"]),
         (i["[[dataLocale]]"] = p["[[dataLocale]]"]));
@@ -606,13 +606,13 @@ function K() {
         throw TypeError("`this` value for format() is not an initialized Intl.NumberFormat object.");
     if (void 0 === e["[[boundFormat]]"]) {
         var t = g.call(function (e) {
-            return U(this, Number(e));
+            return V(this, Number(e));
         }, this);
         e["[[boundFormat]]"] = t;
     }
     return e["[[boundFormat]]"];
 }
-function U(e, t) {
+function V(e, t) {
     var r,
         n = et(),
         i = ei(e),
@@ -676,9 +676,9 @@ function U(e, t) {
                           i["[[minimumFractionDigits]]"],
                           i["[[maximumFractionDigits]]"],
                       )),
-            V[a])
+            U[a])
         ) {
-            var f = V[i["[[numberingSystem]]"]];
+            var f = U[i["[[numberingSystem]]"]];
             r = String(r).replace(/\d/g, function (e) {
                 return f[e];
             });
@@ -713,7 +713,7 @@ function U(e, t) {
     (b.NumberFormat = { "[[availableLocales]]": [], "[[relevantExtensionKeys]]": ["nu"], "[[localeData]]": {} }),
     c(a.NumberFormat, "supportedLocalesOf", { configurable: !0, writable: !0, value: g.call(J, b.NumberFormat) }),
     c(a.NumberFormat.prototype, "format", { configurable: !0, get: K }));
-var V = {
+var U = {
     arab: ["\u0660", "\u0661", "\u0662", "\u0663", "\u0664", "\u0665", "\u0666", "\u0667", "\u0668", "\u0669"],
     arabext: ["\u06F0", "\u06F1", "\u06F2", "\u06F3", "\u06F4", "\u06F5", "\u06F6", "\u06F7", "\u06F8", "\u06F9"],
     bali: ["\u1B50", "\u1B51", "\u1B52", "\u1B53", "\u1B54", "\u1B55", "\u1B56", "\u1B57", "\u1B58", "\u1B59"],
@@ -759,7 +759,7 @@ function H(e, t, r) {
     ((x = F(r, "localeMatcher", "string", new ee("lookup", "best fit"), "best fit")), (s["[[localeMatcher]]"] = x));
     var f = b.DateTimeFormat,
         p = f["[[localeData]]"],
-        d = L(f["[[availableLocales]]"], a, s, f["[[relevantExtensionKeys]]"], p);
+        d = D(f["[[availableLocales]]"], a, s, f["[[relevantExtensionKeys]]"], p);
     ((n["[[locale]]"] = d["[[locale]]"]),
         (n["[[calendar]]"] = d["[[ca]]"]),
         (n["[[numberingSystem]]"] = d["[[nu]]"]),
@@ -944,8 +944,8 @@ function Y(e, t) {
                         ((k %= 12), (E = k !== l["[[" + h + "]]"]), 0 === k && !0 === r["[[hourNo0]]"] && (k = 12)),
                 "numeric" === C)
             )
-                x = U(o, k);
-            else if ("2-digit" === C) (x = U(s, k)).length > 2 && (x = x.slice(-2));
+                x = V(o, k);
+            else if ("2-digit" === C) (x = V(s, k)).length > 2 && (x = x.slice(-2));
             else if (C in _)
                 switch (h) {
                     case "month":
@@ -1021,8 +1021,8 @@ function J(e) {
         if (void 0 !== a && "lookup" !== (a = String(a)) && "best fit" !== a)
             throw RangeError('matcher should be "lookup" or "best fit"');
     }
-    if (void 0 === a || "best fit" === a) var s = D(n, i);
-    else var s = D(n, i);
+    if (void 0 === a || "best fit" === a) var s = L(n, i);
+    else var s = L(n, i);
     for (var l in s) u.call(s, l) && c(s, l, { writable: !1, configurable: !1, value: s[l] });
     return (c(s, "length", { writable: !1 }), s);
 }
@@ -1079,7 +1079,7 @@ function ei(e) {
 ((X.Number.toLocaleString = function () {
     if ("[object Number]" !== Object.prototype.toString.call(this))
         throw TypeError("`this` value must be a number for Number.prototype.toLocaleString()");
-    return U(new j(arguments[0], arguments[1]), this);
+    return V(new j(arguments[0], arguments[1]), this);
 }),
     (X.Date.toLocaleString = function () {
         if ("[object Date]" !== Object.prototype.toString.call(this))
