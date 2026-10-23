@@ -321,7 +321,7 @@
     font-size: 14px;
     line-height: 14px;
     padding-block: calc(var(--space-4)/2);
-    padding-inline: var(--space-4) calc(var(--space-4) - 1px)
+    padding-inline: var(--space-4)
 }
 
 .details__014df {
@@ -1765,4 +1765,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=780348.e0961963d31a032a.css.map*/
+/*# sourceMappingURL=780348.61c82d46707d7782.css.map*/
