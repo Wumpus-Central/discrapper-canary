@@ -1,12 +1,12 @@
-t.d(i, { Ay: () => U, LR: () => R, aI: () => D });
+t.d(i, { Ay: () => U, LR: () => R, aI: () => M });
 var n = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(834730),
     d = t(597601),
-    u = t(866665),
-    o = t(265872),
+    o = t(866665),
+    u = t(265872),
     c = t(367513),
     A = t(442433),
     m = t(730852),
@@ -23,14 +23,14 @@ var n = t(477900),
     N = t(342296),
     y = t(936520),
     C = t(280450),
-    j = t(71393),
-    b = t(576705),
+    b = t(71393),
+    j = t(576705),
     T = t(287809),
     O = t(977997),
     G = t(772800);
 t(281405);
-var P = t(544105),
-    V = t(325278),
+var V = t(544105),
+    P = t(325278),
     w = t(105292),
     k = t(321313);
 function R(e) {
@@ -40,7 +40,7 @@ function R(e) {
         children: (0, n.jsxs)(r.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
     });
 }
-function D(e) {
+function M(e) {
     let { numAudience: i, collapsed: t } = e,
         l = t ? i : w.intl.formatToPlainString(w.t["+v2pN2"], { count: i });
     return (0, n.jsxs)("div", {
@@ -62,9 +62,9 @@ let U = (0, h.J)(function (e) {
             mute: d,
             localMute: h,
             localVideoDisabled: R,
-            deaf: D,
+            deaf: M,
             video: U,
-            embeddedApplication: M,
+            embeddedApplication: D,
             serverMute: L,
             serverDeaf: F,
             nick: z,
@@ -88,22 +88,23 @@ let U = (0, h.J)(function (e) {
             tabIndex: ea,
             isSelf: er,
             application: ed,
-            game: eu,
+            game: eo,
+            soundboardMuted: eu,
         } = e,
-        eo = (0, I.Ay)(r),
-        ec = l.useRef(null),
-        [eA, em] = l.useState(!1),
-        eg = l.useRef(null);
-    function eh() {
-        em(!eA);
+        ec = (0, I.Ay)(r),
+        eA = l.useRef(null),
+        [em, eg] = l.useState(!1),
+        eh = l.useRef(null);
+    function ep() {
+        eg(!em);
     }
-    function ep(e) {
-        ef();
+    function ef(e) {
+        eI();
     }
-    function ef() {
-        (clearTimeout(eg.current), ei?.(s.id));
+    function eI() {
+        (clearTimeout(eh.current), ei?.(s.id));
     }
-    let eI = W
+    let ev = W
         ? null
         : {
               draggable: !0,
@@ -111,14 +112,14 @@ let U = (0, h.J)(function (e) {
                   (e.preventDefault(), e.stopPropagation());
               },
           };
-    function ev() {
-        if (!Z || !(0, _.eo)(r, O.A, j.A, b.A, v.default)[0]) return;
-        let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
+    function eS() {
+        if (!Z || !(0, _.eo)(r, O.A, b.A, j.A, v.default)[0]) return;
+        let e = { streamType: P.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
         (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
             J ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, g.Nl)(e),
             ei?.(s.id));
     }
-    function eS(e) {
+    function ex(e) {
         (0, A.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 t.e("339715"),
@@ -184,33 +185,33 @@ let U = (0, h.J)(function (e) {
     }
     l.useEffect(
         () => () => {
-            clearTimeout(eg.current);
+            clearTimeout(eh.current);
         },
         [],
     );
-    let ex = (0, n.jsx)("div", {
+    let e_ = (0, n.jsx)("div", {
         className: k.kZ,
-        "data-dnd-name": eo,
-        ...eI,
+        "data-dnd-name": ec,
+        ...ev,
         onMouseEnter: es
             ? void 0
             : function () {
-                  eA || (eg.current = setTimeout(() => ee?.(s.id), 100));
+                  em || (eh.current = setTimeout(() => ee?.(s.id), 100));
               },
-        onMouseLeave: es ? void 0 : ef,
+        onMouseLeave: es ? void 0 : eI,
         children: (0, n.jsx)(N.A, {
-            clickTrap: s?.id === T.default.getCurrentUser()?.id && eA,
-            targetElementRef: ec,
+            clickTrap: s?.id === T.default.getCurrentUser()?.id && em,
+            targetElementRef: eA,
             user: s,
             guildId: r.guild_id,
             channelId: r.id,
             newAnalyticsLocations: [p.A.VOICE_USER],
-            shouldShow: eA,
-            onRequestClose: () => em(!1),
+            shouldShow: em,
+            onRequestClose: () => eg(!1),
             children: (e) => {
                 let t, l;
                 return (
-                    (t = P.hv.has(en ?? "")),
+                    (t = V.hv.has(en ?? "")),
                     (l = {
                         user: s,
                         speaking: K,
@@ -225,7 +226,7 @@ let U = (0, h.J)(function (e) {
                         video: U,
                         priority: Q,
                         ringing: B,
-                        deaf: D,
+                        deaf: M,
                         nick: z,
                         collapsed: i,
                         overlap: i,
@@ -234,44 +235,45 @@ let U = (0, h.J)(function (e) {
                         tabIndex: ea,
                         otherClientSessionType: en,
                         voicePlatform: el,
-                        embeddedApplication: M,
+                        embeddedApplication: D,
                         avatarContainerClass: a()({ [k.dj]: !0 }),
                         disabled: es && !t,
-                        selected: eA,
-                        onClick: t ? void 0 : eh,
-                        onDoubleClick: ev,
-                        onContextMenu: eS,
+                        selected: em,
+                        onClick: t ? void 0 : ep,
+                        onDoubleClick: eS,
+                        onContextMenu: ex,
                         guildId: r.guild_id,
                         isSelf: er,
                         application: ed,
-                        game: eu,
+                        game: eo,
                         channelId: r.id,
+                        soundboardMuted: eu,
                     }),
                     es
-                        ? (0, n.jsx)(u.m, {
+                        ? (0, n.jsx)(o.m, {
                               text: (0, S.A)(en) ?? w.intl.string(w.t.IyYqqY),
-                              children: (0, n.jsx)(y.Ay, { ref: ec, ...l }),
+                              children: (0, n.jsx)(y.Ay, { ref: eA, ...l }),
                           })
-                        : (0, n.jsx)(o.Y, {
-                              targetElementRef: ec,
+                        : (0, n.jsx)(u.Y, {
+                              targetElementRef: eA,
                               position: "right",
                               renderPopout: (e) => {
                                   let { setPopoutRef: i } = e;
                                   return (0, n.jsx)(G.A, {
                                       channel: r,
                                       user: s,
-                                      onAction: ef,
-                                      onWatchStream: Z ? ev : void 0,
+                                      onAction: eI,
+                                      onWatchStream: Z ? eS : void 0,
                                       setPopoutRef: i,
                                   });
                               },
-                              shouldShow: et && !eA,
-                              onRequestClose: ep,
+                              shouldShow: et && !em,
+                              onRequestClose: ef,
                               spacing: 17,
                               children: () =>
                                   (0, n.jsx)(y.Ay, {
                                       ...l,
-                                      ref: ec,
+                                      ref: eA,
                                       onMouseDown: e.onMouseDown,
                                       onKeyDown: e.onKeyDown,
                                   }),
@@ -280,5 +282,5 @@ let U = (0, h.J)(function (e) {
             },
         }),
     });
-    return W ? H(ex) : ex;
+    return W ? H(e_) : e_;
 });

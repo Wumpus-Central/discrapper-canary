@@ -16007,7 +16007,7 @@ function iR(t, e, r, n, o, i, a) {
         throw new ev("Crop rectangle does not fit within image data.");
     return s;
 }
-(((function () {}).prototype.encode = function (t, e, r, n, o) {
+((function () {}.prototype.encode = function (t, e, r, n, o) {
     var i;
     if (e === e6.QR_CODE) i = new ib();
     else throw new ev("No encoder available for format " + e);
