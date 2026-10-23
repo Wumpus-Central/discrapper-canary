@@ -357,16 +357,6 @@
     color: var(--icon-default)
 }
 
-.leading__8e9e2 {
-    align-items: center;
-    display: flex;
-    flex: 0 0 auto
-}
-
-.label__8e9e2 {
-    min-width: 0
-}
-
 .container__66346 {
     gap: var(--space-8)
 }
@@ -509,15 +499,6 @@
     height: var(--chat-input-icon-size);
     width: var(--chat-input-icon-size);
     fill: currentColor !important
-}
-
-.targetButton__66346 {
-    flex: 0 1 auto;
-    gap: var(--space-6);
-    max-width: 240px;
-    min-width: 0;
-    padding-inline: var(--space-8) var(--space-6);
-    width: auto
 }
 
 .toolbarEnd__66346 {
@@ -1087,4 +1068,4 @@
     opacity: .6
 }
 
-/*# sourceMappingURL=f6b4f500b325ae02.css.map*/
+/*# sourceMappingURL=ae96828b723f0af8.css.map*/

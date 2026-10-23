@@ -12,7 +12,6 @@ _.exports = {
     KE: "toolbar__66346",
     gb: "iconButton__66346",
     Xv: "addIcon__66346",
-    qU: "targetButton__66346",
     Rc: "toolbarEnd__66346",
     ZO: "attachments__66346",
     Fg: "fileInput__66346",

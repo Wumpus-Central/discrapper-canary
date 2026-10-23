@@ -1,12 +1,12 @@
-(n.d(t, { u: () => s }), n(323874), n(14289), n(35956));
-class s {
+(n.d(t, { u: () => r }), n(323874), n(14289), n(35956));
+class r {
     socket = null;
     supportsPublishOptions = !1;
     open(e) {
-        let { url: t, ticket: n, templateId: s, onEvent: r, onClose: o, onError: i } = e;
+        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: i } = e;
         this.close();
         let l = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
-            a = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != s ? { template: s } : {}) }),
+            a = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
             c = new WebSocket(`${l}/agent/ws?${a}`);
         ((this.socket = c),
             c.addEventListener("message", (e) => {
@@ -18,7 +18,7 @@ class s {
                         console.error("[conjure] ws frame parse failed", e);
                         return;
                     }
-                    ("hello" === t.type && (this.supportsPublishOptions = !0 === t.publish_options), r(t));
+                    ("hello" === t.type && (this.supportsPublishOptions = !0 === t.publish_options), s(t));
                 }
             }),
             c.addEventListener("error", (e) => {
@@ -34,8 +34,8 @@ class s {
     }
     sendUserMessage(e, t, n) {
         let {
-            templateId: s,
-            remix: r,
+            templateId: r,
+            remix: s,
             clarificationAnswers: o,
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
@@ -45,8 +45,8 @@ class s {
                 content: e,
                 nonce: t,
                 attachment_ids: n,
-                template_id: s,
-                remix: r,
+                template_id: r,
+                remix: s,
                 clarification_answers: o,
             }),
         );
@@ -58,6 +58,10 @@ class s {
     sendRetryRemix() {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "retry_remix" }));
+    }
+    sendKeepInstallScope() {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
+        this.socket.send(JSON.stringify({ type: "keep_install_scope" }));
     }
     sendInterrupt() {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
@@ -162,16 +166,16 @@ class s {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "restart_agent", clear_alarm: e }));
     }
-    sendCaptureAck(e, t, n, s) {
+    sendCaptureAck(e, t, n, r) {
         if (null != this.socket && this.socket.readyState === WebSocket.OPEN)
             try {
-                this.socket.send(JSON.stringify({ type: "capture_ack", id: e, status: t, code: n, message: s }));
+                this.socket.send(JSON.stringify({ type: "capture_ack", id: e, status: t, code: n, message: r }));
             } catch {}
     }
-    sendControlAck(e, t, n, s) {
+    sendControlAck(e, t, n, r) {
         if (null != this.socket && this.socket.readyState === WebSocket.OPEN)
             try {
-                this.socket.send(JSON.stringify({ type: "control_ack", id: e, status: t, response: n, message: s }));
+                this.socket.send(JSON.stringify({ type: "control_ack", id: e, status: t, response: n, message: r }));
             } catch {}
     }
     close() {

@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648524";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648531";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648524, Version Hash: 8ab769625c04ef6d76ef3d9b90243b9e45709490`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648531, Version Hash: ca014e104a19e64c459e13e0e573b8a5f16e575e`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25504,7 +25504,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648524" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648531" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -28927,7 +28927,7 @@ let bu = (0, tZ.Fe)({
                 n.e("58193"),
                 n.e("304350"),
                 n.e("759306"),
-                n.e("126859"),
+                n.e("966507"),
                 n.e("318025"),
                 n.e("419571"),
                 n.e("896215"),
@@ -29493,8 +29493,8 @@ let bu = (0, tZ.Fe)({
                 n.e("815341"),
                 n.e("716875"),
                 n.e("526274"),
-            ]).then(n.bind(n, 972139)),
-        webpackId: 972139,
+            ]).then(n.bind(n, 856327)),
+        webpackId: 856327,
         name: "ConjureScreen",
         renderLoader: bc,
     }),

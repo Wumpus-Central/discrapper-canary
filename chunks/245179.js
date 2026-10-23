@@ -1,4 +1,4 @@
-(n.d(t, { A: () => I, b: () => v }), n(667532), n(321073), n(30146));
+(n.d(t, { A: () => H, b: () => q }), n(667532), n(321073), n(30146));
 var l = n(17928),
     i = n(73153),
     s = n(260498),
@@ -69,7 +69,7 @@ function k(e) {
 function w(e) {
     let t = f.delete(e),
         n = O.delete(e),
-        l = m.delete(e),
+        l = v.delete(e),
         i = _.delete(e),
         s = p.delete(e),
         r = g.delete(e),
@@ -97,8 +97,11 @@ class A extends l.Ay.Store {
     hasLoadedHistory(e) {
         return O.has(e);
     }
+    getHistoryLoads(e) {
+        return m.get(e) ?? 0;
+    }
     isHistoryUnavailable(e) {
-        return m.has(e);
+        return v.has(e);
     }
     getFinishedAt(e) {
         return R(e) ? null : (_.get(e) ?? null);
@@ -120,11 +123,12 @@ class A extends l.Ay.Store {
     }
 }
 let O = new Map(),
-    m = new Set();
-function v(e) {
+    v = new Set(),
+    m = new Map();
+function q(e) {
     return O.get(e) ?? null;
 }
-function q(e) {
+function I(e) {
     let t = new Map();
     for (let n of e)
         if ("assistant" === n.role)
@@ -150,7 +154,7 @@ function U(e) {
         !(0, o.BL)(e)
     );
 }
-let I = new A(i.h, {
+let H = new A(i.h, {
     LOGOUT: function () {
         if (
             0 === f.size &&
@@ -161,7 +165,7 @@ let I = new A(i.h, {
             0 === E.size &&
             0 === S.size &&
             0 === O.size &&
-            0 === m.size &&
+            0 === v.size &&
             0 === h.length
         )
             return !1;
@@ -173,21 +177,22 @@ let I = new A(i.h, {
             E.clear(),
             S.clear(),
             O.clear(),
-            m.clear(),
+            v.clear(),
             (h.length = 0));
     },
     CONJURE_CHAT_HISTORY_SET: function (e) {
-        let { projectId: t, entries: n, cursor: l, degraded: i } = e,
-            s = O.get(t),
+        let { projectId: t, entries: n, cursor: l, degraded: i } = e;
+        m.set(t, (m.get(t) ?? 0) + 1);
+        let s = O.get(t),
             r = O.has(t) ? (f.get(t) ?? []) : [];
-        (O.set(t, l ?? null), !0 === i ? m.add(t) : m.delete(t), C.delete(t), E.delete(t), S.delete(t));
+        (O.set(t, l ?? null), !0 === i ? v.add(t) : v.delete(t), C.delete(t), E.delete(t), S.delete(t));
         let o = new Set(),
             d = n.filter((e) => null == e.id || (!o.has(e.id) && (o.add(e.id), !0))),
             a = (0, u.Bd)(d),
             c = null != l && !0 !== i ? a.findIndex((e) => null != e.id) : -1,
             _ = -1 === c ? -1 : r.findIndex((e) => e.id === a[c].id);
         (-1 !== _ && O.set(t, s ?? null),
-            f.set(t, q((0, u.YF)(-1 === _ ? a : [...r.slice(0, _), ...a.slice(c)]))),
+            f.set(t, I((0, u.YF)(-1 === _ ? a : [...r.slice(0, _), ...a.slice(c)]))),
             k(t));
     },
     CONJURE_CHAT_HISTORY_PREPEND: function (e) {
@@ -197,20 +202,26 @@ let I = new A(i.h, {
             s = (0, u.Bd)(n),
             r = new Set(i.flatMap((e) => (null == e.id ? [] : [e.id]))),
             o = s.filter((e) => null == e.id || !r.has(e.id));
-        f.set(t, q((0, u.YF)([...o, ...i])));
+        f.set(t, I((0, u.YF)([...o, ...i])));
     },
     CONJURE_CHAT_MESSAGE_APPEND: function (e) {
-        let { projectId: t, content: n, id: l, optimisticId: i, userId: s, timestamp: r, attachments: d } = e,
-            a = f.get(t) ?? [];
-        if (a.some((e) => e.id === l)) return !1;
-        let c = (0, u.iW)("user", n, { ts: r, id: l, userId: s, attachments: d }),
-            _ = null == i ? -1 : a.findIndex((e) => e.id === i);
+        let { projectId: t, content: n, id: l, optimisticId: i, userId: s, timestamp: r, attachments: d, held: a } = e,
+            c = f.get(t) ?? [],
+            _ = c.findIndex((e) => e.id === l);
         if (-1 !== _) {
-            ((c.render_id = a[_].render_id), f.set(t, [...a.slice(0, _), c, ...a.slice(_ + 1)]), k(t));
+            if (!0 !== c[_].held || !0 === a) return !1;
+            let e = c.map((e, t) => (t === _ ? { ...e, held: void 0 } : e));
+            return ((0, o.q2)(e) || e.push((0, u.iW)("assistant", "")), f.set(t, e), void k(t));
+        }
+        let p = (0, u.iW)("user", n, { ts: r, id: l, userId: s, attachments: d });
+        !0 === a && (p.held = !0);
+        let h = null == i ? -1 : c.findIndex((e) => e.id === i);
+        if (-1 !== h) {
+            ((p.render_id = c[h].render_id), f.set(t, [...c.slice(0, h), p, ...c.slice(h + 1)]), k(t));
             return;
         }
-        let p = [...a, c];
-        ((0, o.q2)(p) || p.push((0, u.iW)("assistant", "")), f.set(t, p), k(t));
+        let g = [...c, p];
+        (!0 === a || (0, o.q2)(g) || g.push((0, u.iW)("assistant", "")), f.set(t, g), k(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: l, disposition: i } = e,
