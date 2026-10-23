@@ -128,8 +128,7 @@
 }
 
 .widget__438f2 {
-    border-radius: var(--radius-md);
-    box-shadow: 0 0 0 1px var(--border-normal), var(--shadow-high);
+    border-radius: var(--radius-sm);
     display: flex;
     flex: none;
     height: var(--custom-conjure-overlay-widget-height);
@@ -389,4 +388,4 @@
     }
 }
 
-/*# sourceMappingURL=529659.6b66e5e4de621ada.css.map*/
+/*# sourceMappingURL=529659.447b912759fb45af.css.map*/
