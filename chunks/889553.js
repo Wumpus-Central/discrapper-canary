@@ -1,1 +1,1 @@
-s.exports = { x: "sliderContainer__65039", a: "slider__65039" };
+_.exports = { x: "sliderContainer__65039" };

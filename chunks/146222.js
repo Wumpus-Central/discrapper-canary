@@ -1,4 +1,4 @@
-(a.r(l), a.d(l, { manaCollection: () => tN, playgroundConfig: () => tA }));
+(a.r(l), a.d(l, { manaCollection: () => tV, playgroundConfig: () => tj }));
 var t = a(477900),
     o = a(582128),
     n = a(17928),
@@ -110,12 +110,12 @@ let C = {
         },
     },
     T = [1, 42, 999, 1500];
-var M = a(237528),
-    I = a(289049);
+var I = a(237528),
+    M = a(289049);
 let D = {
         name: "Chip",
         id: "chip",
-        component: M.v,
+        component: I.v,
         controls: {
             text: { label: "Text", type: "text", defaultValue: "New" },
             variant: {
@@ -147,9 +147,9 @@ let D = {
         { lightness: "Dark", variants: ["blurpleDark", "greenDark", "redDark", "grayDark"] },
     ];
 var L = a(993077),
-    N = a(821609),
-    A = a(503698),
-    R = a.n(A),
+    A = a(821609),
+    N = a(503698),
+    R = a.n(N),
     B = a(235986),
     O = a(244367),
     P = a(742158),
@@ -222,7 +222,7 @@ let $ = {
             name: "FormNotice",
             component: function (e) {
                 let { type: l, title: a, body: o, hasButton: n } = e,
-                    i = n ? (0, t.jsx)(N.$, { text: "Action" }) : void 0;
+                    i = n ? (0, t.jsx)(A.$, { text: "Action" }) : void 0;
                 return (0, t.jsx)(G, { "data-migration-pending": !0, type: l, title: a, body: o, button: i });
             },
             controls: {
@@ -294,8 +294,8 @@ let $ = {
 var F = a(231483),
     _ = a(175841),
     H = a(346411),
-    U = a(452027);
-let q = [
+    q = a(452027);
+let U = [
     "heading-sm/normal",
     "heading-sm/medium",
     "heading-sm/semibold",
@@ -414,7 +414,7 @@ let X = {
     Wrench: H.WrenchIcon,
 };
 function Z(e, l) {
-    return e ? (0, t.jsx)(N.$, { text: l, variant: "secondary", size: "sm" }) : void 0;
+    return e ? (0, t.jsx)(A.$, { text: l, variant: "secondary", size: "sm" }) : void 0;
 }
 let K = {
     name: "HelpMessage",
@@ -489,7 +489,7 @@ let K = {
             label: "Text Variant",
             type: "select",
             defaultValue: "text-sm/medium",
-            options: Object.values(q).map((e) => ({ label: e, value: e })),
+            options: Object.values(U).map((e) => ({ label: e, value: e })),
         },
         action: { label: "Action Button", type: "boolean", defaultValue: !1 },
         actionText: { label: "Action Text", type: "text", defaultValue: "Learn more" },
@@ -535,11 +535,11 @@ let es = {
                     [j, C] = o.useState("text"),
                     [S, k] = o.useState("cozy"),
                     [w, T] = o.useState(!0),
-                    M = o.useRef(null);
+                    I = o.useRef(null);
                 return (0, t.jsxs)("div", {
                     className: ei.k,
                     children: [
-                        !w && (0, t.jsx)(N.$, { text: "Open Menu", onClick: () => T(!0) }),
+                        !w && (0, t.jsx)(A.$, { text: "Open Menu", onClick: () => T(!0) }),
                         (0, t.jsx)(et.Y, {
                             renderPopout: (e) => {
                                 let { closePopout: o } = e;
@@ -763,11 +763,11 @@ let es = {
                             position: "bottom",
                             align: "center",
                             shouldShow: !0,
-                            targetElementRef: M,
+                            targetElementRef: I,
                             onRequestClose: () => T(!1),
                             children: () =>
                                 (0, t.jsx)("div", {
-                                    ref: M,
+                                    ref: I,
                                     style: { width: 1, height: 1, opacity: 0, pointerEvents: "none" },
                                 }),
                         }),
@@ -1135,7 +1135,7 @@ let ew = [
             },
         },
     },
-    eM = {
+    eI = {
         id: "searchable-select",
         name: "Searchable Select",
         component: function (e) {
@@ -1194,7 +1194,7 @@ let ew = [
             filter: { type: "boolean", label: "Filter", defaultValue: !0 },
         },
     };
-var eI = a(95477),
+var eM = a(95477),
     eD = a(582306),
     eE = a(666944);
 let eL = [
@@ -1207,7 +1207,7 @@ let eL = [
         { value: "pink", label: "Pink" },
         { value: "brown", label: "Brown" },
     ],
-    eN = {
+    eA = {
         id: "void",
         name: "Void",
         deprecationNotice: "Void is deprecated. Use Mana instead.",
@@ -1225,7 +1225,7 @@ let eL = [
                                 gap: 16,
                                 children: [!1, !0].map((e) =>
                                     (0, t.jsx)(
-                                        U.D,
+                                        q.D,
                                         {
                                             label: e ? "With action" : "No action",
                                             children: (0, t.jsx)(h.B, {
@@ -1251,7 +1251,7 @@ let eL = [
                     },
                 ],
             },
-            { title: "Select", stories: [eT, eM] },
+            { title: "Select", stories: [eT, eI] },
             ex,
             eC,
             { title: "Avatar", stories: [u] },
@@ -1309,19 +1309,19 @@ let eL = [
                         id: "chip-all-variants",
                         component: function () {
                             return (0, t.jsx)("div", {
-                                className: I.lx,
+                                className: M.lx,
                                 children: E.map((e) => {
                                     let { lightness: l, variants: a } = e;
                                     return (0, t.jsxs)(
                                         "div",
                                         {
-                                            className: I.uW,
+                                            className: M.uW,
                                             children: [
-                                                (0, t.jsx)("h3", { className: I.Gf, children: l }),
+                                                (0, t.jsx)("h3", { className: M.Gf, children: l }),
                                                 (0, t.jsx)("div", {
-                                                    className: I.f2,
+                                                    className: M.f2,
                                                     children: a.map((e) =>
-                                                        (0, t.jsx)(M.v, { text: e.replace(l, ""), variant: e }, e),
+                                                        (0, t.jsx)(I.v, { text: e.replace(l, ""), variant: e }, e),
                                                     ),
                                                 }),
                                             ],
@@ -1377,7 +1377,7 @@ let eL = [
                                         placeholder: a,
                                         isDisabled: l,
                                     }),
-                                    (0, t.jsx)(eI.k, { placeholder: a, disabled: l }),
+                                    (0, t.jsx)(eM.k, { placeholder: a, disabled: l }),
                                     (0, t.jsx)(eS.p, {
                                         value: n,
                                         onChange: i,
@@ -1403,7 +1403,7 @@ let eL = [
             { title: "Stacked Guild Icons", stories: [eV] },
         ],
     };
-var eA = a(825860),
+var eN = a(825860),
     eR = a(406810),
     eB = a(278416),
     eO = a(260981),
@@ -1415,14 +1415,14 @@ let eF = {
         none: void 0,
         CircleCheckIcon: a(628284).y,
         StarIcon: p.StarIcon,
-        FireIcon: eA.FireIcon,
+        FireIcon: eN.FireIcon,
         SparklesIcon: _.SparklesIcon,
         ClockIcon: eR.ClockIcon,
     },
     e_ = {
         none: void 0,
         StarIcon: p.StarIcon,
-        FireIcon: eA.FireIcon,
+        FireIcon: eN.FireIcon,
         SparklesIcon: _.SparklesIcon,
         ClockIcon: eR.ClockIcon,
         LockIcon: x.LockIcon,
@@ -1508,7 +1508,7 @@ let eF = {
                 component: function (e) {
                     let { text: l, variant: a, iconName: o } = e,
                         n = "" !== o && "none" !== o ? eF[o] : void 0;
-                    return (0, t.jsx)(M.v, { text: l, variant: a, icon: n });
+                    return (0, t.jsx)(I.v, { text: l, variant: a, icon: n });
                 },
                 docs: "https://design.discord.tools/components/web/chip",
                 controls: {
@@ -1548,8 +1548,8 @@ let eF = {
             },
         ],
     };
-var eU = a(408278),
-    eq = a(111159),
+var eq = a(408278),
+    eU = a(111159),
     eW = a(876798),
     eX = a(831544),
     eZ = a(83107),
@@ -1572,7 +1572,7 @@ let e0 = {
         {
             name: "Button",
             id: "button",
-            component: N.$,
+            component: A.$,
             docs: "https://design.discord.tools/components/web/buttons/button",
             controls: {
                 text: { label: "Text", type: "text", defaultValue: "Click me" },
@@ -1611,7 +1611,7 @@ let e0 = {
             id: "icon-button",
             docs: "https://design.discord.tools/components/web/buttons/icon-button",
             component: function (e) {
-                return (0, t.jsx)(eU.K, { ...e, icon: eq.p, "aria-label": "Clyde" });
+                return (0, t.jsx)(eq.K, { ...e, icon: eU.p, "aria-label": "Clyde" });
             },
             controls: {
                 variant: {
@@ -1730,8 +1730,8 @@ let e0 = {
                 return (0, t.jsxs)(eY.e, {
                     ...e,
                     children: [
-                        (0, t.jsx)(N.$, { variant: "secondary", text: "Cancel" }),
-                        (0, t.jsx)(N.$, { variant: "primary", text: "Submit" }),
+                        (0, t.jsx)(A.$, { variant: "secondary", text: "Cancel" }),
+                        (0, t.jsx)(A.$, { variant: "primary", text: "Submit" }),
                     ],
                 });
             },
@@ -1874,11 +1874,11 @@ function ll() {
         gap: 16,
         padding: { top: 16 },
         children: [
-            (0, t.jsx)(eI.k, { label: "Display Name", placeholder: "Jane Doe" }),
-            (0, t.jsx)(eI.k, { label: "Email", type: "email", placeholder: "jane@example.com" }),
+            (0, t.jsx)(eM.k, { label: "Display Name", placeholder: "Jane Doe" }),
+            (0, t.jsx)(eM.k, { label: "Email", type: "email", placeholder: "jane@example.com" }),
             (0, t.jsx)(h.B, {
                 direction: "horizontal",
-                children: (0, t.jsx)(N.$, { text: "Save Changes", variant: "secondary", size: "sm" }),
+                children: (0, t.jsx)(A.$, { text: "Save Changes", variant: "secondary", size: "sm" }),
             }),
         ],
     });
@@ -1923,7 +1923,7 @@ function lt() {
     });
 }
 let lo = [
-        { id: "account", label: "Account", icon: eq.p, panel: () => (0, t.jsx)(ll, {}) },
+        { id: "account", label: "Account", icon: eU.p, panel: () => (0, t.jsx)(ll, {}) },
         { id: "notifications", label: "Notifications", count: 10, panel: () => (0, t.jsx)(la, {}) },
         { id: "privacy", label: "Privacy", panel: () => (0, t.jsx)(lt, {}) },
     ],
@@ -2042,21 +2042,21 @@ let lp = {
                                   direction: "horizontal",
                                   gap: "sm",
                                   children: [
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Clear",
                                           onClick: d,
                                           disabled: l || a,
                                       }),
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Set Today",
                                           onClick: u,
                                           disabled: l || a,
                                       }),
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Set Dec 25",
@@ -2124,21 +2124,21 @@ let ly = {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, t.jsx)(N.$, {
+                                (0, t.jsx)(A.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
                                     onClick: u,
                                     disabled: n,
                                 }),
-                                (0, t.jsx)(N.$, {
+                                (0, t.jsx)(A.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
                                     onClick: c,
                                     disabled: n,
                                 }),
-                                (0, t.jsx)(N.$, {
+                                (0, t.jsx)(A.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
@@ -2252,21 +2252,21 @@ let lv = {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, t.jsx)(N.$, {
+                                (0, t.jsx)(A.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select All",
                                     onClick: m,
                                     disabled: l || 0 === b.length,
                                 }),
-                                (0, t.jsx)(N.$, {
+                                (0, t.jsx)(A.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select First",
                                     onClick: y,
                                     disabled: l || 0 === b.length,
                                 }),
-                                (0, t.jsx)(N.$, {
+                                (0, t.jsx)(A.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Clear All",
@@ -2344,21 +2344,21 @@ let lf = {
                                   direction: "horizontal",
                                   gap: "sm",
                                   children: [
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Clear",
                                           onClick: b,
                                           disabled: i,
                                       }),
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Set Today",
                                           onClick: p,
                                           disabled: i,
                                       }),
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Set Dec 25",
@@ -2394,13 +2394,13 @@ var lV = a(117530),
     lk = a(160844),
     lw = a(576967),
     lT = a(561392),
-    lM = a(499957),
-    lI = a(81466),
+    lI = a(499957),
+    lM = a(81466),
     lD = a(862301),
     lE = a(460890),
     lL = a(514180),
-    lN = a(376887),
-    lA = a(668953),
+    lA = a(376887),
+    lN = a(668953),
     lR = a(881636),
     lB = a(859962);
 function lO(e) {
@@ -2441,10 +2441,10 @@ function lO(e) {
                         (0, t.jsxs)("header", {
                             className: lB.I4,
                             children: [
-                                (0, t.jsx)(eU.K, {
+                                (0, t.jsx)(eq.K, {
                                     variant: "icon-only",
                                     size: "sm",
-                                    icon: lA.f,
+                                    icon: lN.f,
                                     "aria-label": b.CALENDAR_PREVIOUS_MONTH_LABEL,
                                     onClick: () => e.state.focusPreviousPage(),
                                     slot: "previous",
@@ -2464,7 +2464,7 @@ function lO(e) {
                                         );
                                     }),
                                 }),
-                                (0, t.jsx)(eU.K, {
+                                (0, t.jsx)(eq.K, {
                                     variant: "icon-only",
                                     size: "sm",
                                     icon: lR.u,
@@ -2477,7 +2477,7 @@ function lO(e) {
                         (0, t.jsx)("div", {
                             className: lB.US,
                             children: Array.from({ length: d }, (e, l) =>
-                                (0, t.jsx)(lN.N, { offset: { months: l }, isRangeSelection: !0 }, l),
+                                (0, t.jsx)(lA.N, { offset: { months: l }, isRangeSelection: !0 }, l),
                             ),
                         }),
                     ],
@@ -2500,7 +2500,7 @@ function lz(e) {
             ...c
         } = e,
         { i18n: b } = (0, lE.G9)(),
-        { fieldProps: p } = (0, U.n)(c),
+        { fieldProps: p } = (0, q.n)(c),
         { disabled: m, errorMessage: x, required: y = !1 } = p,
         h = { hasError: null != x && "" !== x },
         {
@@ -2512,7 +2512,7 @@ function lz(e) {
             getFloatingProps: C,
             getReferenceProps: S,
         } = (0, lT.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: k, styles: w } = (0, lM.DL)(j, {
+        { isMounted: k, styles: w } = (0, lI.DL)(j, {
             common: (e) => {
                 let { side: l } = e;
                 return { transformOrigin: `${"top" === l ? "bottom" : "top"} center` };
@@ -2523,7 +2523,7 @@ function lz(e) {
         T = (e) => {
             (a(e), e?.start != null && e?.end != null && V(!1));
         };
-    return (0, t.jsx)(U.D, {
+    return (0, t.jsx)(q.D, {
         ...p,
         children: (e) =>
             (0, t.jsx)(lD.F, {
@@ -2574,7 +2574,7 @@ function lz(e) {
                                     className: lP.B7,
                                     onClick: () => V(!f),
                                     "aria-label": b.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                    children: (0, t.jsx)(lI.CalendarIcon, { size: "sm", color: "currentColor" }),
+                                    children: (0, t.jsx)(lM.CalendarIcon, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
@@ -2659,14 +2659,14 @@ let lG = {
                                   direction: "horizontal",
                                   gap: "sm",
                                   children: [
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Clear",
                                           onClick: b,
                                           disabled: i,
                                       }),
-                                      (0, t.jsx)(N.$, {
+                                      (0, t.jsx)(A.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "This Week",
@@ -2699,8 +2699,8 @@ var l$ = a(270003),
     lF = a(691885),
     l_ = a(508274),
     lH = a(109802),
-    lU = a(885105);
-let lq = [
+    lq = a(885105);
+let lU = [
         { label: "Aardvark", value: "aardvark", id: "aardvark" },
         { label: "Cat", value: "cat", id: "cat" },
         { label: "Dog", value: "dog", id: "dog" },
@@ -2708,7 +2708,7 @@ let lq = [
     lW = [1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c];
 function lX(e) {
     let { title: l, children: a, auxiliaryContentPosition: o } = e;
-    return (0, t.jsx)(U.D, {
+    return (0, t.jsx)(q.D, {
         disabled: !0,
         label: l,
         description: "This row is disabled at the Field level and at the control level.",
@@ -2728,7 +2728,7 @@ function lZ(e) {
                 title: "Button",
                 auxiliaryContentPosition: l,
                 children: (0, t.jsx)("div", {
-                    children: (0, t.jsx)(N.$, { text: "Remove", variant: "critical-primary", disabled: !0 }),
+                    children: (0, t.jsx)(A.$, { text: "Remove", variant: "critical-primary", disabled: !0 }),
                 }),
             }),
             (0, t.jsx)(lX, {
@@ -2777,7 +2777,7 @@ function lZ(e) {
                 children: (0, t.jsx)(lF.l, {
                     label: "Animal",
                     hideLabel: !0,
-                    options: lq,
+                    options: lU,
                     selectionMode: "single",
                     onSelectionChange: () => {},
                     disabled: !0,
@@ -2810,7 +2810,7 @@ function lZ(e) {
             (0, t.jsx)(lX, {
                 title: "TextInput",
                 auxiliaryContentPosition: l,
-                children: (0, t.jsx)(eI.k, {
+                children: (0, t.jsx)(eM.k, {
                     label: "Username",
                     hideLabel: !0,
                     value: "disabled-user",
@@ -2833,9 +2833,9 @@ let lK = {
                     children: (0, t.jsxs)(l$.n, {
                         label: "" === l ? void 0 : l,
                         children: [
-                            (0, t.jsx)(eI.k, { label: "First Name" }),
-                            (0, t.jsx)(eI.k, { label: "Last Name" }),
-                            (0, t.jsx)(eI.k, { label: "Address" }),
+                            (0, t.jsx)(eM.k, { label: "First Name" }),
+                            (0, t.jsx)(eM.k, { label: "Last Name" }),
+                            (0, t.jsx)(eM.k, { label: "Address" }),
                         ],
                     }),
                 });
@@ -2848,12 +2848,12 @@ let lK = {
             component: function (e) {
                 let { description: l, ...a } = e;
                 return (0, t.jsx)("div", {
-                    children: (0, t.jsx)(U.D, {
+                    children: (0, t.jsx)(q.D, {
                         ...a,
                         description: "" === l ? void 0 : l,
                         icon: a.showIcon ? x.LockIcon : void 0,
                         children: (0, t.jsx)("div", {
-                            className: lU.q,
+                            className: lq.q,
                             children: (0, t.jsx)(e3.E, {
                                 color: "text-subtle",
                                 variant: "text-md/medium",
@@ -3104,7 +3104,7 @@ let ai = [
                     return (0, t.jsxs)(h.B, {
                         gap: 16,
                         children: [
-                            (0, t.jsx)(eI.k, {
+                            (0, t.jsx)(eM.k, {
                                 ...n,
                                 value: i,
                                 onChange: s,
@@ -3124,7 +3124,7 @@ let ai = [
                                 maxLength: 500,
                             }),
                             "tags" === l
-                                ? (0, t.jsx)(N.$, {
+                                ? (0, t.jsx)(A.$, {
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",
@@ -3266,25 +3266,25 @@ let ai = [
                                 wrap: !0,
                                 gap: 8,
                                 children: [
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         text: "Short text",
                                         size: "sm",
                                         variant: "secondary",
                                         onClick: () => c("Name"),
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         text: "Long text",
                                         size: "sm",
                                         variant: "secondary",
                                         onClick: () => c("W".repeat(32)),
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         text: "Empty text",
                                         size: "sm",
                                         variant: "secondary",
                                         onClick: () => c(""),
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         text: "Multiple lines",
                                         size: "sm",
                                         variant: "secondary",
@@ -3416,20 +3416,20 @@ let ai = [
                             (0, t.jsxs)(l$.n, {
                                 label: "Text Input",
                                 children: [
-                                    (0, t.jsx)(eI.k, { ...x }),
-                                    (0, t.jsx)(eI.k, { ...x, clearable: !0 }),
-                                    (0, t.jsx)(eI.k, {
+                                    (0, t.jsx)(eM.k, { ...x }),
+                                    (0, t.jsx)(eM.k, { ...x, clearable: !0 }),
+                                    (0, t.jsx)(eM.k, {
                                         ...x,
                                         leading: { icon: l5.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eI.k, { ...x, leading: l5.X }),
-                                    (0, t.jsx)(eI.k, { ...x, leading: "https://discord.gg/" }),
-                                    (0, t.jsx)(eI.k, {
+                                    (0, t.jsx)(eM.k, { ...x, leading: l5.X }),
+                                    (0, t.jsx)(eM.k, { ...x, leading: "https://discord.gg/" }),
+                                    (0, t.jsx)(eM.k, {
                                         ...x,
                                         trailing: { icon: l5.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eI.k, { ...x, trailing: l5.X }),
-                                    (0, t.jsx)(eI.k, {
+                                    (0, t.jsx)(eM.k, { ...x, trailing: l5.X }),
+                                    (0, t.jsx)(eM.k, {
                                         ...x,
                                         leading: { type: "tags", label: "Tags", items: ai.slice(0, 3) },
                                     }),
@@ -3510,7 +3510,7 @@ function aj(e) {
 function aC(e) {
     let { setIsPasscodeValid: l } = e,
         [a, n] = o.useState("");
-    return (0, t.jsx)(eI.k, {
+    return (0, t.jsx)(eM.k, {
         placeholder: "Enter your passcode...",
         value: a,
         onChange: function (e) {
@@ -3627,7 +3627,7 @@ let ak = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the modal",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
@@ -3685,7 +3685,7 @@ let ak = {
                                                         ],
                                                         onSelectionChange: () => {},
                                                     }),
-                                                    (0, t.jsx)(eI.k, {
+                                                    (0, t.jsx)(eM.k, {
                                                         label: "Example Input",
                                                         placeholder: "Enter some text...",
                                                     }),
@@ -3752,7 +3752,7 @@ let ak = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the confirm modal",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open Confirm Modal",
                             onClick: () =>
@@ -3845,7 +3845,7 @@ let ak = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the expressive modal",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
@@ -3936,7 +3936,7 @@ let ak = {
                             children:
                                 "This example demonstrates the DynamicGraphic component rendering a React component inside the modal header.",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open Dynamic Graphic Modal",
                             onClick: () =>
@@ -4015,7 +4015,7 @@ let ak = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the layer modal",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open Layer Modal",
                             onClick: () =>
@@ -4058,7 +4058,7 @@ let ak = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the multi-step modal",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open MultiStepModal",
                             onClick: () =>
@@ -4111,7 +4111,7 @@ let ak = {
                             variant: "text-md/normal",
                             children: "Click the button below to open the base modal",
                         }),
-                        (0, t.jsx)(N.$, {
+                        (0, t.jsx)(A.$, {
                             variant: "primary",
                             text: "Open BaseModal",
                             onClick: () =>
@@ -4218,13 +4218,13 @@ let ak = {
 };
 var aw = a(249686),
     aT = a.n(aw),
-    aM = a(43105),
-    aI = a(206248),
+    aI = a(43105),
+    aM = a(206248),
     aD = a(353795),
     aE = a(273875),
     aL = a(798618),
-    aN = a(916845),
-    aA = a(627330),
+    aA = a(916845),
+    aN = a(627330),
     aR = a(489387);
 function aB(e) {
     let {
@@ -4281,7 +4281,7 @@ function aB(e) {
         children: (0, t.jsxs)("div", {
             ref: r,
             children: [
-                (0, t.jsx)(aN.q, { onClick: v, variant: null != m.gradientColor ? "color-mix" : void 0 }),
+                (0, t.jsx)(aA.q, { onClick: v, variant: null != m.gradientColor ? "color-mix" : void 0 }),
                 null != m.graphic &&
                     (0, t.jsx)("div", {
                         className: R()(aR.graphic, { [aR[`graphic--${n}`]]: null != n }),
@@ -4290,7 +4290,7 @@ function aB(e) {
                             aspectRatio: m.graphic.aspectRatio ?? ("sm" === n ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, t.jsx)(aA.D, { title: m.title, body: m.body, badge: m.badge, textLink: m.textLink }),
+                (0, t.jsx)(aN.D, { title: m.title, body: m.body, badge: m.badge, textLink: m.textLink }),
                 (0, t.jsx)("div", {
                     className: aR.actionBar,
                     children: (0, t.jsxs)("div", {
@@ -4304,7 +4304,7 @@ function aB(e) {
                                     totalSteps: l.length,
                                 }),
                             }),
-                            (0, t.jsx)(N.$, { size: "sm", ...g }),
+                            (0, t.jsx)(A.$, { size: "sm", ...g }),
                         ],
                     }),
                 }),
@@ -4340,7 +4340,7 @@ let aO =
                         style: { display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" },
                         children: [
                             (0, t.jsx)(
-                                aM.A,
+                                aI.A,
                                 {
                                     ...c,
                                     position: u,
@@ -4367,7 +4367,7 @@ let aO =
                                 },
                                 u,
                             ),
-                            (0, t.jsx)(N.$, {
+                            (0, t.jsx)(A.$, {
                                 variant: "primary",
                                 text: "Toggle Popover",
                                 buttonRef: m,
@@ -4473,7 +4473,7 @@ let aO =
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                aI.H,
+                                aM.H,
                                 {
                                     ...i,
                                     targetElementRef: d,
@@ -4488,7 +4488,7 @@ let aO =
                                 },
                                 i.position,
                             ),
-                            (0, t.jsx)(N.$, {
+                            (0, t.jsx)(A.$, {
                                 variant: "primary",
                                 text: "Show Video Popover",
                                 buttonRef: d,
@@ -4558,7 +4558,7 @@ let aO =
                                 },
                                 a.position,
                             ),
-                            (0, t.jsx)(N.$, {
+                            (0, t.jsx)(A.$, {
                                 variant: "primary",
                                 text: "Show Multi-Step",
                                 buttonRef: s,
@@ -4701,21 +4701,21 @@ let aG = {
                                 direction: "horizontal",
                                 gap: "sm",
                                 children: [
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "Select First",
                                         onClick: m,
                                         disabled: l || 0 === b.length,
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "Select Last",
                                         onClick: x,
                                         disabled: l || 0 === b.length,
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         variant: "primary",
                                         size: "sm",
                                         text: "Clear",
@@ -4809,21 +4809,21 @@ let aG = {
                                 direction: "horizontal",
                                 gap: "sm",
                                 children: [
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "Clear",
                                         onClick: d,
                                         disabled: l || a,
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "This Week",
                                         onClick: u,
                                         disabled: l || a,
                                     }),
-                                    (0, t.jsx)(N.$, {
+                                    (0, t.jsx)(A.$, {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "December",
@@ -4845,8 +4845,8 @@ let aG = {
     };
 var a_ = a(121476),
     aH = a(844222),
-    aU = a(272318);
-let aq = Object.entries(a_)
+    aq = a(272318);
+let aU = Object.entries(a_)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -5169,212 +5169,12 @@ function a2(e, l, a, t) {
             : o;
     }, [e, l, a, t]);
 }
-var a4 = a(810400),
-    a3 = a(766048),
-    a6 = a(184093),
-    a8 = a(467324),
-    a5 = a(366632),
-    a9 = a(941143),
-    a7 = a(633058),
-    te = a(717421),
-    tl = a(559106),
-    ta = a(866665),
-    tt = a(77232);
-function to(e, l) {
-    let a = 0;
-    for (let t = 1; t < e.length; t++) Math.abs(e[t] - l) < Math.abs(e[a] - l) && (a = t);
-    return a;
+var a4 = a(310592);
+function a3(e) {
+    return (0, t.jsx)(a4.j, { ...e });
 }
-function tn(e) {
-    let { fieldProps: l, props: a } = (0, U.n)(e);
-    return (0, t.jsx)(U.D, {
-        ...l,
-        children: (e) =>
-            (0, t.jsx)(ti, {
-                ...a,
-                id: e.controlId,
-                disabled: l.disabled ?? !1,
-                labelledBy: a["aria-labelledby"] ?? e.labelId,
-                describedBy: e.describedById,
-                errorMessageId: e.errorMessageId,
-            }),
-    });
-}
-function ti(e) {
-    var l;
-    let {
-            id: a,
-            disabled: n,
-            labelledBy: i,
-            describedBy: s,
-            errorMessageId: r,
-            value: d,
-            defaultValue: u,
-            minValue: c = 0,
-            maxValue: b = 100,
-            step: p = 1,
-            onChange: m,
-            onChangeEnd: x,
-            formatValue: y,
-            marks: h,
-            snapToMarks: v = !1,
-            defaultMark: g,
-            "aria-label": f,
-            className: V,
-        } = e,
-        j = o.useRef(null),
-        C = o.useRef(null),
-        S = o.useRef(null),
-        k = o.useRef(null),
-        [w, T] = o.useState(!1),
-        { keyboardModeEnabled: M } = o.useContext(aH.C),
-        I = o.useMemo(() => (null != h ? [...h].sort((e, l) => e - l) : []), [h]),
-        D = v && I.length > 1;
-    function E(e) {
-        return null != e && D ? to(I, e) : e;
-    }
-    function L(e) {
-        return Math.min(Math.max(((e - c) / (b - c)) * 100, 0), 100);
-    }
-    let N = (0, e1.J)();
-    function A(e) {
-        return null != y ? y(e) : N.format(e);
-    }
-    let B = (0, a7.S)({
-            value: E(d),
-            defaultValue: E(u),
-            minValue: D ? 0 : c,
-            maxValue: D ? I.length - 1 : b,
-            step: D ? 1 : p,
-            isDisabled: n,
-            numberFormatter: N,
-            onChange: (e) => m?.(D ? I[e] : e),
-            onChangeEnd: (e) => x?.(D ? I[e] : e),
-        }),
-        { groupProps: O, trackProps: P } = (0, a4.P)({ "aria-label": f, "aria-labelledby": i, isDisabled: n }, B, C),
-        {
-            thumbProps: z,
-            inputProps: G,
-            isDragging: $,
-            isFocused: F,
-        } = (0, a3.x)({ index: 0, trackRef: C, inputRef: k, isDisabled: n, "aria-label": f }, B),
-        _ = (function (e) {
-            let { state: l, trackRef: a, inputRef: t, sortedMarks: o, minValue: n, maxValue: i, disabled: s } = e,
-                { direction: r } = (0, a5.Y)();
-            function d(e) {
-                let t = a.current;
-                if (null == t) return;
-                let { left: s, width: d } = t.getBoundingClientRect();
-                if (d <= 0) return;
-                let u = Math.min(Math.max((e - s) / d, 0), 1);
-                ("rtl" === r && (u = 1 - u), l.setThumbValue(0, to(o, n + u * (i - n))));
-            }
-            return {
-                onPointerDown(e) {
-                    s ||
-                        0 !== e.button ||
-                        (e.preventDefault(),
-                        e.currentTarget.setPointerCapture?.(e.pointerId),
-                        t.current?.focus({ preventScroll: !0 }),
-                        l.setThumbDragging(0, !0),
-                        d(e.clientX));
-                },
-                onPointerMove(e) {
-                    l.isThumbDragging(0) && d(e.clientX);
-                },
-                onPointerUp(e) {
-                    l.isThumbDragging(0) &&
-                        (e.currentTarget.releasePointerCapture?.(e.pointerId), l.setThumbDragging(0, !1));
-                },
-                onPointerCancel() {
-                    l.isThumbDragging(0) && l.setThumbDragging(0, !1);
-                },
-            };
-        })({ state: B, trackRef: C, inputRef: k, sortedMarks: I, minValue: c, maxValue: b, disabled: n }),
-        H = ((l = B.getThumbValue(0)), D ? I[l] : l),
-        U = A(H),
-        q = `${L(H)}%`,
-        W = F && M,
-        X = !n && (W || $ || w),
-        Z = (0, te.z)({
-            "--grabber-size": X ? "20px" : "16px",
-            "--bar-size": X ? "6px" : "4px",
-            config: { ...a9.config.stiff, duration: 100 },
-        });
-    return (0, t.jsx)(tl.vN, {
-        focusTarget: k,
-        ringTarget: S,
-        children: (0, t.jsxs)(a9.animated.div, {
-            ...(0, a6.v)(O, D ? _ : P),
-            ref: j,
-            className: R()(tt.aw, V, { [tt.ZF]: I.length > 0, [tt.r9]: n }),
-            style: { ...Z, touchAction: "none" },
-            onMouseEnter: () => T(!0),
-            onMouseLeave: () => T(!1),
-            children: [
-                (0, t.jsx)("div", {
-                    className: tt.u4,
-                    children: I.map((e) =>
-                        (0, t.jsxs)(
-                            "div",
-                            {
-                                "aria-hidden": !0,
-                                className: R()(tt.Gy, tt.zt, { [tt.Jh]: e === g }),
-                                style: { insetInlineStart: `${L(e)}%` },
-                                children: [
-                                    (0, t.jsx)("div", { className: tt.nj, children: A(e) }),
-                                    (0, t.jsx)("div", { className: tt.gf }),
-                                ],
-                            },
-                            e,
-                        ),
-                    ),
-                }),
-                (0, t.jsx)("div", {
-                    className: tt.M0,
-                    children: (0, t.jsx)("div", { className: tt.pP, style: { width: q } }),
-                }),
-                (0, t.jsx)("div", {
-                    className: tt.u4,
-                    ref: C,
-                    children: (0, t.jsx)(ta.m, {
-                        text: D ? null : U,
-                        forceOpen: $ || W,
-                        positionKey: q,
-                        ariaHidden: !0,
-                        children: (0, t.jsx)("div", {
-                            ...z,
-                            ...(D ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
-                            ref: S,
-                            className: tt.Ub,
-                            style: { insetInlineStart: q, touchAction: "none" },
-                            children: (0, t.jsx)(a8.s, {
-                                children: (0, t.jsx)("input", {
-                                    ref: k,
-                                    ...G,
-                                    id: a,
-                                    "aria-labelledby": i,
-                                    "aria-describedby": s,
-                                    "aria-errormessage": r,
-                                    "aria-invalid": null != r,
-                                    "aria-valuetext": U,
-                                    "aria-valuemin": D ? I[0] : c,
-                                    "aria-valuemax": D ? I[I.length - 1] : b,
-                                    "aria-valuenow": H,
-                                }),
-                            }),
-                        }),
-                    }),
-                }),
-            ],
-        }),
-    });
-}
-function ts(e) {
-    return (0, t.jsx)(tn, { ...e });
-}
-let tr = [0.5, 0.75, 1, 1.25, 1.5, 2],
-    td = {
+let a6 = [0.5, 0.75, 1, 1.25, 1.5, 2],
+    a8 = {
         title: "Slider",
         stories: [
             {
@@ -5387,7 +5187,7 @@ let tr = [0.5, 0.75, 1, 1.25, 1.5, 2],
                     return (0, t.jsxs)(h.B, {
                         gap: 8,
                         children: [
-                            (0, t.jsx)(ts, {
+                            (0, t.jsx)(a3, {
                                 label: l,
                                 description: a,
                                 disabled: n,
@@ -5418,10 +5218,10 @@ let tr = [0.5, 0.75, 1, 1.25, 1.5, 2],
                 component: function (e) {
                     let { label: l, disabled: a, snapToMarks: n } = e,
                         [i, s] = o.useState(1);
-                    return (0, t.jsx)(ts, {
+                    return (0, t.jsx)(a3, {
                         label: l,
                         disabled: a,
-                        marks: tr,
+                        marks: a6,
                         snapToMarks: n,
                         defaultMark: 1,
                         minValue: 0.5,
@@ -5440,7 +5240,7 @@ let tr = [0.5, 0.75, 1, 1.25, 1.5, 2],
             },
         ],
     },
-    tu = {
+    a5 = {
         title: "Switch",
         stories: [
             {
@@ -5476,19 +5276,19 @@ let tr = [0.5, 0.75, 1, 1.25, 1.5, 2],
             },
         ],
     };
-var tc = a(11779),
-    tb = a(872162);
-let tp = [
-        { id: "strength", label: "Strength", icon: tc.r },
+var a9 = a(11779),
+    a7 = a(872162);
+let te = [
+        { id: "strength", label: "Strength", icon: a9.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
     ],
-    tm = [
+    tl = [
         { id: "safety", label: "Safety Center", href: "https://discord.com/safety" },
         { id: "support", label: "Support", href: "https://support.discord.com" },
     ],
-    tx = {
+    ta = {
         title: "TagGroup",
         stories: [
             {
@@ -5499,7 +5299,7 @@ let tp = [
                         d = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
                         u = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: tc.r },
+                                { id: "strength", label: "Strength", icon: a9.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -5520,7 +5320,7 @@ let tp = [
                         m = o.useCallback(() => {
                             b(u);
                         }, [u]),
-                        x = (0, t.jsx)(tb.C, {
+                        x = (0, t.jsx)(a7.C, {
                             label: "Character attributes",
                             disabled: l,
                             layout: s,
@@ -5528,7 +5328,7 @@ let tp = [
                             items: c,
                             onRemove: a ? p : void 0,
                         }),
-                        y = a && (0, t.jsx)(N.$, { disabled: c.length === u.length, text: "Reset", onClick: m });
+                        y = a && (0, t.jsx)(A.$, { disabled: c.length === u.length, text: "Reset", onClick: m });
                     return "inline" === s
                         ? (0, t.jsxs)(h.B, {
                               gap: 24,
@@ -5566,7 +5366,7 @@ let tp = [
                 id: "tag-group-links",
                 component: function (e) {
                     let { disabled: l } = e;
-                    return (0, t.jsx)(tb.C, { mode: "link", label: "Discord resources", disabled: l, items: tm });
+                    return (0, t.jsx)(a7.C, { mode: "link", label: "Discord resources", disabled: l, items: tl });
                 },
                 controls: { disabled: { label: "Disabled", type: "boolean", defaultValue: !1 } },
             },
@@ -5582,11 +5382,11 @@ let tp = [
                         }, []);
                     return (0, t.jsx)(h.B, {
                         gap: 24,
-                        children: (0, t.jsx)(tb.C, {
+                        children: (0, t.jsx)(a7.C, {
                             variant: "filter",
                             label: "Character attributes",
                             disabled: l,
-                            items: tp,
+                            items: te,
                             selectionMode: n,
                             selectedKeys: s,
                             onSelectionChange: u,
@@ -5623,9 +5423,9 @@ let tp = [
             },
         ],
     };
-var ty = a(364522),
-    th = a(404544);
-let tv = {
+var tt = a(364522),
+    to = a(404544);
+let tn = {
     name: "Text",
     id: "text",
     component: e3.E,
@@ -5634,7 +5434,7 @@ let tv = {
             label: "Variant",
             type: "select",
             defaultValue: "text-sm/normal",
-            options: Object.values(q).map((e) => ({ label: e, value: e })),
+            options: Object.values(U).map((e) => ({ label: e, value: e })),
         },
         color: {
             label: "Color",
@@ -5657,22 +5457,22 @@ let tv = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var tg = a(252392),
-    tf = a(260509),
-    tV = a(711014),
-    tj = a(690521);
-let tC = ["Wumpus", "Discord Staff", "Design Systems Team"],
-    tS = { label: "Text", type: "text", defaultValue: "This is a toast message" };
-var tk = a(782641),
-    tw = a(381275);
-let tT = Object.assign(
+var ti = a(252392),
+    ts = a(260509),
+    tr = a(711014),
+    td = a(690521);
+let tu = ["Wumpus", "Discord Staff", "Design Systems Team"],
+    tc = { label: "Text", type: "text", defaultValue: "This is a toast message" };
+var tb = a(782641),
+    tp = a(381275);
+let tm = Object.assign(
     function (e) {
         let { children: l, "aria-label": a, "aria-labelledby": o } = e;
-        return (0, t.jsx)(tk.M, {
+        return (0, t.jsx)(tb.M, {
             "data-mana-component": "toolbar",
             "aria-label": a,
             "aria-labelledby": o,
-            className: tw.KE,
+            className: tp.KE,
             children: l,
         });
     },
@@ -5684,7 +5484,7 @@ let tT = Object.assign(
                 "data-mana-component": "toolbar-group",
                 "aria-label": a,
                 "aria-labelledby": o,
-                className: tw.Os,
+                className: tp.Os,
                 children: l,
             });
         },
@@ -5693,14 +5493,15 @@ let tT = Object.assign(
                 role: "separator",
                 "aria-orientation": "vertical",
                 "data-mana-component": "toolbar-separator",
-                className: tw.me,
+                className: tp.me,
             });
         },
     },
 );
-var tM = a(683063),
-    tI = a(557464);
-let tD = {
+var tx = a(866665),
+    ty = a(683063),
+    th = a(557464);
+let tv = {
     title: "Tooltip",
     stories: [
         {
@@ -5723,7 +5524,7 @@ let tD = {
                         if ("center" !== i && null != i)
                             return "custom" === i ? { align: i, customOffset: s } : { align: i };
                     }, [i, s]);
-                return (0, t.jsx)(ta.m, {
+                return (0, t.jsx)(tx.m, {
                     text: l,
                     position: a,
                     align: n,
@@ -5732,7 +5533,7 @@ let tD = {
                     caretConfig: b,
                     ariaHidden: u,
                     ...c,
-                    children: (0, t.jsx)(N.$, { variant: "primary", text: "Hover me" }),
+                    children: (0, t.jsx)(A.$, { variant: "primary", text: "Hover me" }),
                 });
             },
             controls: {
@@ -5802,8 +5603,8 @@ let tD = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    h = o.useMemo(() => (n ? { type: "image", src: tI.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(tM.u, {
+                    h = o.useMemo(() => (n ? { type: "image", src: th.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(ty.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5816,7 +5617,7 @@ let tD = {
                     assetSize: i,
                     forceOpen: m,
                     ...x,
-                    children: (0, t.jsx)(N.$, { variant: "primary", text: "Hover me (rich)" }),
+                    children: (0, t.jsx)(A.$, { variant: "primary", text: "Hover me (rich)" }),
                 });
             },
             controls: {
@@ -5887,27 +5688,27 @@ let tD = {
         },
     ],
 };
-var tE = a(508382),
-    tL = a(393743);
-let tN = {
+var tg = a(508382),
+    tf = a(393743);
+let tV = {
         id: "mana",
         name: "Mana",
         groups: [
             {
                 title: "Text",
                 stories: [
-                    tv,
+                    tn,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(ty.Ar, {
-                                className: th.H,
-                                children: Object.values(q).map((l) =>
+                            return (0, t.jsx)(tt.Ar, {
+                                className: to.H,
+                                children: Object.values(U).map((l) =>
                                     (0, t.jsxs)(
                                         L.Z,
                                         {
-                                            className: th.N,
+                                            className: to.N,
                                             children: [
                                                 (0, t.jsx)(e3.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(e3.E, {
@@ -5939,28 +5740,28 @@ let tN = {
                             let [e, l] = o.useState(!1),
                                 [a, n] = o.useState(!1),
                                 i = e ? "Unmute microphone" : "Mute microphone";
-                            return (0, t.jsxs)(tT, {
+                            return (0, t.jsxs)(tm, {
                                 "aria-label": "Message actions",
                                 children: [
-                                    (0, t.jsxs)(tT.Group, {
+                                    (0, t.jsxs)(tm.Group, {
                                         "aria-label": "Response actions",
                                         children: [
-                                            (0, t.jsx)(N.$, { variant: "secondary", text: "Reply" }),
-                                            (0, t.jsx)(ta.m, {
+                                            (0, t.jsx)(A.$, { variant: "secondary", text: "Reply" }),
+                                            (0, t.jsx)(tx.m, {
                                                 text: "More options",
-                                                children: (0, t.jsx)(eU.K, {
+                                                children: (0, t.jsx)(eq.K, {
                                                     variant: "secondary",
-                                                    icon: eq.p,
+                                                    icon: eU.p,
                                                     "aria-label": "More options",
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, t.jsx)(tT.Separator, {}),
-                                    (0, t.jsxs)(tT.Group, {
+                                    (0, t.jsx)(tm.Separator, {}),
+                                    (0, t.jsxs)(tm.Group, {
                                         "aria-label": "Message options",
                                         children: [
-                                            (0, t.jsx)(ta.m, {
+                                            (0, t.jsx)(tx.m, {
                                                 text: i,
                                                 children: (0, t.jsx)(eW.k, {
                                                     icon: eX.MicrophoneIcon,
@@ -5987,7 +5788,7 @@ let tN = {
             lG,
             a$,
             aF,
-            tu,
+            a5,
             ak,
             {
                 title: "InlineNotice",
@@ -6015,7 +5816,7 @@ let tN = {
                             return p
                                 ? (0, t.jsx)(h.B, {
                                       direction: "horizontal",
-                                      children: (0, t.jsx)(N.$, {
+                                      children: (0, t.jsx)(A.$, {
                                           text: "Reset dismissed notice",
                                           variant: "secondary",
                                           size: "sm",
@@ -6074,7 +5875,7 @@ let tN = {
                             return m
                                 ? (0, t.jsx)(h.B, {
                                       direction: "horizontal",
-                                      children: (0, t.jsx)(N.$, {
+                                      children: (0, t.jsx)(A.$, {
                                           text: "Reset dismissed notice",
                                           variant: "secondary",
                                           size: "sm",
@@ -6118,7 +5919,7 @@ let tN = {
             },
             as,
             a0,
-            td,
+            a8,
             aP,
             aG,
             {
@@ -6132,58 +5933,58 @@ let tN = {
                             return (0, t.jsxs)(h.B, {
                                 gap: 12,
                                 children: [
-                                    (0, t.jsx)(tg.y, { text: l, variant: "default" }),
-                                    (0, t.jsx)(tg.y, { text: l, variant: "default", icon: lm.CircleInformationIcon }),
-                                    (0, t.jsx)(tg.y, {
+                                    (0, t.jsx)(ti.y, { text: l, variant: "default" }),
+                                    (0, t.jsx)(ti.y, { text: l, variant: "default", icon: lm.CircleInformationIcon }),
+                                    (0, t.jsx)(ti.y, {
                                         text: l,
                                         variant: "default",
                                         icon: lm.CircleInformationIcon,
                                         iconColor: ao.A.colors.ICON_BRAND,
                                         secondaryIconColor: ao.A.colors.ICON_DEFAULT,
                                     }),
-                                    (0, t.jsx)(tg.y, {
+                                    (0, t.jsx)(ti.y, {
                                         text: l,
                                         variant: "default",
                                         icon: p.StarIcon,
                                         iconColor: ao.A.colors.ICON_BRAND,
                                     }),
-                                    (0, t.jsx)(tg.y, { text: l, variant: "success" }),
-                                    (0, t.jsx)(tg.y, { text: l, variant: "critical" }),
+                                    (0, t.jsx)(ti.y, { text: l, variant: "success" }),
+                                    (0, t.jsx)(ti.y, { text: l, variant: "critical" }),
                                 ],
                             });
                         },
-                        controls: { text: tS },
+                        controls: { text: tc },
                     },
                     {
                         name: "Toasts with entities",
                         id: "toast-entities",
                         component: function (e) {
                             let { text: l } = e,
-                                a = (0, n.bG)([tV.Ay, eh.A], () =>
-                                    tV.Ay.getFlattenedGuildIds()
+                                a = (0, n.bG)([tr.Ay, eh.A], () =>
+                                    tr.Ay.getFlattenedGuildIds()
                                         .map((e) => eh.A.getGuild(e))
                                         .find((e) => e?.icon != null),
                                 ),
-                                o = tj.Ay.getURL("\uD83D\uDC4B"),
-                                i = tj.Ay.getURL("\uD83D\uDD25");
+                                o = td.Ay.getURL("\uD83D\uDC4B"),
+                                i = td.Ay.getURL("\uD83D\uDD25");
                             return (0, t.jsxs)(h.B, {
                                 gap: 12,
                                 children: [
-                                    (0, t.jsx)(tg.y, {
+                                    (0, t.jsx)(ti.y, {
                                         text: l,
                                         icon:
                                             "" !== o
                                                 ? { type: "emoji", src: o, alt: "\uD83D\uDC4B" }
                                                 : { type: "emoji", unicode: "\uD83D\uDC4B" },
                                     }),
-                                    (0, t.jsx)(tg.y, {
+                                    (0, t.jsx)(ti.y, {
                                         text: l,
                                         icon:
                                             "" !== i
                                                 ? { type: "emoji", src: i, alt: "\uD83D\uDD25" }
                                                 : { type: "emoji", unicode: "\uD83D\uDD25" },
                                     }),
-                                    (0, t.jsx)(tg.y, {
+                                    (0, t.jsx)(ti.y, {
                                         text: l,
                                         icon: {
                                             type: "avatar",
@@ -6192,23 +5993,23 @@ let tN = {
                                         },
                                     }),
                                     null != a &&
-                                        (0, t.jsx)(tg.y, {
+                                        (0, t.jsx)(ti.y, {
                                             text: a.name,
-                                            icon: { type: "guild", src: (0, tf.Iv)(a, 48), name: a.name },
+                                            icon: { type: "guild", src: (0, ts.Iv)(a, 48), name: a.name },
                                         }),
-                                    tC.map((e) =>
-                                        (0, t.jsx)(tg.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
+                                    tu.map((e) =>
+                                        (0, t.jsx)(ti.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
                                     ),
                                 ],
                             });
                         },
-                        controls: { text: tS },
+                        controls: { text: tc },
                     },
                 ],
             },
-            tD,
+            tv,
             ln,
-            tx,
+            ta,
             lK,
             {
                 title: "FloatingLayer",
@@ -6227,7 +6028,7 @@ let tN = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(tE.Ow, {
+                            return (0, t.jsx)(tg.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -6239,7 +6040,7 @@ let tN = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: tL.q,
+                                        className: tf.q,
                                         children: (0, t.jsx)(e3.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -6247,7 +6048,7 @@ let tN = {
                                     }),
                                 children: (e) => {
                                     let { ref: l, props: a } = e;
-                                    return (0, t.jsx)(N.$, {
+                                    return (0, t.jsx)(A.$, {
                                         variant: "primary",
                                         text: "Target Element",
                                         onClick: () => c(!u),
@@ -6313,7 +6114,7 @@ let tN = {
                                 value: s,
                                 children: [
                                     (0, t.jsx)("div", {
-                                        className: aU.QT,
+                                        className: aq.QT,
                                         children: (0, t.jsxs)(h.B, {
                                             gap: 8,
                                             children: [
@@ -6322,7 +6123,7 @@ let tN = {
                                                     label: "Force reduced motion",
                                                     checked: e,
                                                 }),
-                                                (0, t.jsx)(N.$, {
+                                                (0, t.jsx)(A.$, {
                                                     onClick: () => i((e) => e + 1),
                                                     text: "Reset animations",
                                                 }),
@@ -6332,16 +6133,16 @@ let tN = {
                                     (0, t.jsx)(
                                         "div",
                                         {
-                                            className: aU.Vg,
-                                            children: aq.map((e) => {
+                                            className: aq.Vg,
+                                            children: aU.map((e) => {
                                                 let { name: l, Component: a } = e;
                                                 return (0, t.jsxs)(
                                                     "div",
                                                     {
-                                                        className: aU.Hn,
+                                                        className: aq.Hn,
                                                         children: [
                                                             (0, t.jsx)("div", {
-                                                                className: aU.k$,
+                                                                className: aq.k$,
                                                                 children: (0, t.jsx)(a, {
                                                                     style: { width: "100%", height: "100%" },
                                                                 }),
@@ -6349,7 +6150,7 @@ let tN = {
                                                             (0, t.jsx)(e3.E, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-subtle",
-                                                                className: aU.Pf,
+                                                                className: aq.Pf,
                                                                 children: l,
                                                             }),
                                                         ],
@@ -6368,4 +6169,4 @@ let tN = {
             },
         ],
     },
-    tA = { collections: [tN, eN] };
+    tj = { collections: [tV, eA] };

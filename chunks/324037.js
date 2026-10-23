@@ -10060,7 +10060,7 @@ let ob = {
         return (t) => (0, o.jsx)(e, { ...t });
     },
     UserAgreementsModal: async () => {
-        let { default: e } = await Promise.all([a.e("14083"), a.e("482911"), a.e("922220")]).then(a.bind(a, 639719));
+        let { default: e } = await Promise.all([a.e("50726"), a.e("482911"), a.e("922220")]).then(a.bind(a, 639719));
         return (t) => (0, o.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
