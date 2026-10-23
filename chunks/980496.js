@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649008";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649013";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649008, Version Hash: a7dfd2d744740990a7ec4e8eb3e04659704ee45b`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649013, Version Hash: b1611ff4e9b4fa39d01ae793312537bdab6e99d7`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -11301,7 +11301,7 @@ let Ea =
                             n.e("303807"),
                             n.e("995210"),
                             n.e("630313"),
-                            n.e("497743"),
+                            n.e("30814"),
                             n.e("784853"),
                             n.e("317699"),
                             n.e("257032"),
@@ -25477,7 +25477,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649008" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649013" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -36338,7 +36338,7 @@ let M2 = (0, ra.Fe)({
                 n.e("303807"),
                 n.e("995210"),
                 n.e("630313"),
-                n.e("497743"),
+                n.e("30814"),
                 n.e("784853"),
                 n.e("952831"),
                 n.e("677602"),

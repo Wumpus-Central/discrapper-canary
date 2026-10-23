@@ -302,7 +302,9 @@
 .ctaContainer_d6d601 {}
 
 .heroBanner_d6d601 {
-    width: 100%
+    display: flex;
+    justify-content: center;
+    padding-top: 24px
 }
 
 .ctaContent_d6d601 {
@@ -373,12 +375,6 @@
     position: relative
 }
 
-.roundAvatar__02e4c {
-    border-radius: 50%;
-    height: 42px;
-    width: 42px
-}
-
 .verticalConnector__02e4c {
     bottom: 100%;
     inset-inline-start: 50%;
@@ -397,17 +393,10 @@
     max-width: 200px
 }
 
-.roleSubscriptionSocial__02e4c {
-    bottom: 0;
-    max-width: 30%;
+.starKeyIllustration__02e4c {
+    bottom: 24px;
+    inset-inline-end: 24px;
     position: absolute
-}
-
-.roleSubscriptionLanyardIllo__02e4c {
-    inset-inline-end: 0;
-    max-width: 50%;
-    position: absolute;
-    top: 30%
 }
 
 .revenueSharePercentageDark__02e4c {
@@ -418,9 +407,8 @@
     color: var(--green-400)
 }
 
-.roleSubscriptionEarningIllo__02e4c {
-    align-self: flex-end;
-    max-width: 92px
+.starCoinsIllustration__02e4c {
+    align-self: flex-end
 }
 
 .animator__52de8 {
@@ -599,11 +587,7 @@
     background-color: var(--background-base-low);
     display: flex;
     justify-content: center;
-    padding: 24px 48px
-}
-
-.howItWorksImage_dd30dc {
-    max-height: 52px
+    padding: 16px 0
 }
 
 .howItWorksDescription_dd30dc {
@@ -791,4 +775,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=4045d3c40077f303.css.map*/
+/*# sourceMappingURL=1756903559fcd106.css.map*/
