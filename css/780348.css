@@ -545,6 +545,27 @@
     inset-inline-end: var(--space-32)
 }
 
+.save__4064a {
+    gap: var(--space-8);
+    height: 48px;
+    padding-inline: var(--space-16)
+}
+
+.saveText__4064a {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase
+}
+
+.spinner__4064a {
+    height: 20px;
+    width: 20px
+}
+
+.spinnerItem__4064a {
+    stroke: currentColor
+}
+
 .screen__212ba {
     align-items: center;
     box-sizing: border-box;
@@ -1744,4 +1765,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=780348.6682bad669b550cc.css.map*/
+/*# sourceMappingURL=780348.e0961963d31a032a.css.map*/

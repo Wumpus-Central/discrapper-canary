@@ -1,4 +1,14 @@
-n.d(t, { FA: () => N, If: () => I, Nc: () => p, Q8: () => f, kb: () => T, mf: () => A, ps: () => m, wD: () => C });
+n.d(t, {
+    FA: () => N,
+    If: () => I,
+    Nc: () => p,
+    Q8: () => f,
+    XI: () => O,
+    kb: () => T,
+    mf: () => A,
+    ps: () => m,
+    wD: () => C,
+});
 var i = n(468311),
     r = n(706121),
     a = n(329605),
@@ -175,4 +185,15 @@ function N(e) {
 function C(e) {
     let t = g[e];
     return null != t ? S[t] : [];
+}
+function O(e) {
+    return {
+        base: e[c.V.BASE] ?? r.R.ICY,
+        shoes: e[c.V.SHOES] ?? o._.NONE,
+        outfit: e[c.V.OUTFIT] ?? l.r.NONE,
+        face: e[c.V.FACE] ?? a.D.CHILL,
+        hat: e[c.V.HAT] ?? s.N.NONE,
+        wearable: e[c.V.WEARABLE] ?? d.Z.NONE,
+        aura: e[c.V.AURA] ?? i.X.NONE,
+    };
 }
