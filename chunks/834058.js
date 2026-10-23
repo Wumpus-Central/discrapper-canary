@@ -329,10 +329,10 @@ function eF(e) {
     function e3() {
         M.A.preload(es.ME, t.id);
     }
-    function e6(e) {
+    function e4(e) {
         e.stopPropagation();
     }
-    function e4(e) {
+    function e6(e) {
         e.target === e.currentTarget && ed.current?.click();
     }
     function e7(e) {
@@ -388,7 +388,7 @@ function eF(e) {
                               n.e("790484"),
                               n.e("147119"),
                               n.e("403382"),
-                              n.e("605363"),
+                              n.e("780348"),
                               n.e("622936"),
                               n.e("216947"),
                               n.e("463317"),
@@ -595,7 +595,7 @@ function eF(e) {
                     (0, i.jsxs)(C.H, {
                         className: a()(eG.bG, { [eG.Q2]: l || er }),
                         as: "div",
-                        onClick: e4,
+                        onClick: e6,
                         muted: eK,
                         selected: l,
                         children: [
@@ -719,7 +719,7 @@ function eF(e) {
                                                   ? ea.intl.string(ea.t["26C4oi"])
                                                   : ea.intl.string(ea.t.jsvgc3),
                                               onClick: eR ? te : e9,
-                                              onMouseDown: e6,
+                                              onMouseDown: e4,
                                               nameplate: x,
                                               visibleElementRef: eZ,
                                           }),
