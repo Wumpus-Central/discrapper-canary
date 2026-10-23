@@ -65,14 +65,18 @@ async function C() {
                 r.Bo.get({ url: _.Rsh.CONJURE_PROJECTS, rejectWithError: !0 }),
                 Promise.all([
                     n.e("661008"),
+                    n.e("916758"),
                     n.e("356664"),
                     n.e("929792"),
+                    n.e("295175"),
+                    n.e("741111"),
                     n.e("722440"),
+                    n.e("967874"),
                     n.e("337341"),
                     n.e("333730"),
                     n.e("736621"),
+                    n.e("534485"),
                     n.e("667034"),
-                    n.e("387281"),
                 ]).then(n.bind(n, 319481)),
             ]);
             e.filter((e) => !0 === e.running)

@@ -1,7 +1,7 @@
-n.d(t, { Ay: () => _, i2: () => N, t3: () => y });
+n.d(t, { Ay: () => N, i2: () => w, t3: () => y });
 var i = n(477900),
-    l = n(582128),
-    r = n(17928),
+    r = n(582128),
+    l = n(17928),
     s = n(193249),
     a = n(323384),
     o = n(331322),
@@ -16,7 +16,7 @@ var i = n(477900),
     x = n(486020),
     A = n(302614),
     E = n(667419),
-    S = n(85395),
+    S = n(81684),
     I = n(661943),
     v = n(652215),
     j = n(671210),
@@ -32,52 +32,52 @@ let y = [
     v.uss.VIDEO,
     v.uss.GO_LIVE,
 ];
-function b(e) {
-    let { icon: t, label: n, description: l, checked: r, onChange: a } = e;
+function _(e) {
+    let { icon: t, label: n, description: r, checked: l, onChange: a } = e;
     return (0, i.jsxs)("div", {
         className: T.nM,
         children: [
             (0, i.jsx)("div", { className: T.aL, children: t }),
             (0, i.jsx)("div", {
                 className: T.L6,
-                children: (0, i.jsx)(s.d, { label: n, description: l, checked: r, onChange: a }),
+                children: (0, i.jsx)(s.d, { label: n, description: r, checked: l, onChange: a }),
             }),
         ],
     });
 }
-function w(e) {
-    let { type: t, Icon: n, label: l, description: s } = e,
-        a = (0, r.bG)([f.A], () => (0, E.$e)(t, f.A), [t]);
-    return (0, i.jsx)(b, {
+function b(e) {
+    let { type: t, Icon: n, label: r, description: s } = e,
+        a = (0, l.bG)([f.A], () => (0, E.$e)(t, f.A), [t]);
+    return (0, i.jsx)(_, {
         icon: (0, i.jsx)(n, { size: "md", color: "currentColor" }),
-        label: l,
+        label: r,
         description: s,
         checked: a,
         onChange: (e) => (0, E.JA)(t, !e),
     });
 }
-function N(e) {
+function w(e) {
     let { project: t } = e,
         n = t.application_id,
-        l = (0, r.bG)([f.A], () => (0, I.$5)(n, f.A), [n]),
+        r = (0, l.bG)([f.A], () => (0, I.$5)(n, f.A), [n]),
         { data: s } = (0, g.YY)(n),
         o = null != s ? x.Ay.getApplicationIconURL({ id: n, icon: s.icon, size: 32 }) : null;
-    return (0, i.jsx)(b, {
+    return (0, i.jsx)(_, {
         icon:
             null != o
                 ? (0, i.jsx)("img", { src: o, alt: "", className: T.Z2 })
                 : (0, i.jsx)(a.k, { size: "md", color: "currentColor" }),
         label: t.name,
         description: C.intl.string(j.default["P7TOO/"]),
-        checked: !l,
+        checked: !r,
         onChange: (e) => (0, I.ht)(n, !e),
     });
 }
-function _(e) {
+function N(e) {
     let t,
         n,
         { onClose: s } = e,
-        a = l.useMemo(
+        a = r.useMemo(
             () =>
                 y.flatMap((e) => {
                     let t = S.A[e];
@@ -91,8 +91,8 @@ function _(e) {
             [],
         ),
         g =
-            ((t = l.useMemo(() => S.A[v.uss.CONJURE]?.predicate?.() ?? !1, [])),
-            (n = (0, r.bG)([p.A], () => p.A.getProjects())),
+            ((t = r.useMemo(() => S.A[v.uss.CONJURE]?.predicate?.() ?? !1, [])),
+            (n = (0, l.bG)([p.A], () => p.A.getProjects())),
             t ? n : []),
         f = C.intl.string(C.t.cpT0Cq);
     return (0, i.jsx)(A.A, {
@@ -145,8 +145,8 @@ function _(e) {
                             children: C.intl.string(C.t["/7xJCF"]),
                         }),
                         a.map((e) => {
-                            let { type: t, Icon: n, label: l, description: r } = e;
-                            return (0, i.jsx)(w, { type: t, Icon: n, label: l, description: r }, t);
+                            let { type: t, Icon: n, label: r, description: l } = e;
+                            return (0, i.jsx)(b, { type: t, Icon: n, label: r, description: l }, t);
                         }),
                     ],
                 }),
@@ -159,7 +159,7 @@ function _(e) {
                                   color: "text-muted",
                                   children: C.intl.string(j.default["pbu+Yx"]),
                               }),
-                              g.map((e) => (0, i.jsx)(N, { project: e }, e.id)),
+                              g.map((e) => (0, i.jsx)(w, { project: e }, e.id)),
                           ],
                       })
                     : null,

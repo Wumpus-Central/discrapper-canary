@@ -6785,7 +6785,7 @@ function iH(e, t, n) {
     return l.length > 0 && !iO({ keys: l }, t);
 }
 var iW = n(1665),
-    iV = n(360236),
+    iV = n(11120),
     iX = n(411236);
 function iZ(e) {
     let { projectId: t, request: n, askId: l, onDismiss: r, notifyAgent: s = !0 } = e,
@@ -6851,6 +6851,7 @@ function iZ(e) {
                                                               .join(", ");
                                                       case "role":
                                                       case "user":
+                                                      case "game":
                                                           return E.intl.string(S.default.Fw9G9A);
                                                       default:
                                                           return l.join(", ");

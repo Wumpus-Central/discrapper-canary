@@ -19973,7 +19973,7 @@ function vp() {
     });
 }
 var vg = a(395771),
-    vv = a(84273),
+    vv = a(207228),
     vj = a(533841);
 let vf = { appId: "0", appName: "DevTools" },
     vb = { width: 0, height: 0, intervalMs: 1e3 },

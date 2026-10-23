@@ -1,10 +1,10 @@
-(n.d(t, { k: () => N, s: () => m }), n(321073));
+(n.d(t, { k: () => C, s: () => g }), n(321073));
 var i = n(941426),
     r = n(91242),
     a = n(515718),
     s = n(998979),
     l = n(395771),
-    o = n(84273);
+    o = n(207228);
 let d = new i.Vy("ConjureFrameScreenCapture"),
     c = null,
     u = null,
@@ -51,34 +51,38 @@ function I(e) {
               : null);
     return null != i
         ? { ...i, reason: "permission revoked" }
-        : l.A.isCapturing()
-          ? null
-          : { status: "capture_failed", reason: "snapshots stopped" };
+        : e.gate?.isAllowed() === !1
+          ? { status: "no_game", reason: "game not targeted" }
+          : l.A.isCapturing()
+            ? null
+            : { status: "capture_failed", reason: "snapshots stopped" };
 }
 function p() {
     let e = null != c ? I(c) : null;
-    null != e && T(e);
+    null != e && m(e);
 }
-function T(e) {
+function T(e, t) {
+    for (let n of new Set([r.A, s.A, l.A, ...(e.gate?.stores ?? [])]))
+        t ? n.addChangeListener(p) : n.removeChangeListener(p);
+}
+function m(e) {
     null != c &&
         (d.info(`capture stopped: ${e.reason}`, { applicationId: c.applicationId }),
+        T(c, !1),
         (c = null),
         (u = null),
         null != A && clearTimeout(A),
         (A = null),
-        r.A.removeChangeListener(p),
-        s.A.removeChangeListener(p),
-        l.A.removeChangeListener(p),
         (0, o.ik)(),
         h(e));
 }
-function m() {
-    null != c && T(I(c) ?? { status: "capture_failed", reason: "stopped" });
+function g() {
+    null != c && m(I(c) ?? { status: "capture_failed", reason: "stopped" });
 }
-function g(e) {
+function S(e) {
     return null != e && Number.isFinite(e) ? Math.min(Math.max(Math.floor(e), 1), 1920) : 1280;
 }
-function S(e, t) {
+function N(e, t) {
     let { status: n, reason: i } = t,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
     return (
@@ -89,40 +93,45 @@ function S(e, t) {
         { status: n }
     );
 }
-async function N(e) {
+async function C(e) {
     let { applicationId: t } = e;
-    if (!(0, o.y8)()) return S(t, { status: "unsupported", reason: "media engine" });
-    if (!(0, o.aG)()) return S(t, { status: "no_game", reason: "no visible game" });
+    if (!(0, o.y8)()) return N(t, { status: "unsupported", reason: "media engine" });
+    if (e.gate?.isAllowed() === !1) {
+        let n = { status: "no_game", reason: "game not targeted" };
+        return (c?.frameId === e.frameId && m(n), N(t, n));
+    }
+    if (!(0, o.aG)()) return N(t, { status: "no_game", reason: "no visible game" });
     if (!1 === e.gameFocused)
-        return ((_ = !0), (u = null), S(t, { status: "game_not_focused", reason: "game window not focused" }));
+        return ((_ = !0), (u = null), N(t, { status: "game_not_focused", reason: "game window not focused" }));
     _ = !1;
-    let n = g(e.maxWidth),
-        i = g(e.maxHeight);
+    let n = S(e.maxWidth),
+        i = S(e.maxHeight);
     if (null == c || c.frameId !== e.frameId || c.maxWidth !== n || c.maxHeight !== i) {
-        let a = null != c;
         if (
-            ((c = {
+            (null != c && T(c, !1),
+            (c = {
                 frameId: e.frameId,
                 applicationId: t,
                 maxWidth: n,
                 maxHeight: i,
                 startedAt: Date.now(),
                 hasFrame: !1,
+                gate: e.gate,
             }),
             (u = null),
             h({ status: "busy", reason: "another request took over the capture" }),
             !(0, o.it)({ appId: t, appName: e.appName }, { width: n, height: i, intervalMs: 2e3 }, f))
         )
             return (
-                T({ status: "unsupported", reason: "snapshots did not start" }),
-                S(t, { status: "unsupported", reason: "snapshots did not start" })
+                m({ status: "unsupported", reason: "snapshots did not start" }),
+                N(t, { status: "unsupported", reason: "snapshots did not start" })
             );
-        a || (r.A.addChangeListener(p), s.A.addChangeListener(p), l.A.addChangeListener(p));
+        T(c, !0);
     }
-    (null != A && clearTimeout(A), (A = setTimeout(() => T({ status: "capture_failed", reason: "idle" }), 3e4)));
-    let a = Date.now(),
-        d =
-            null != u && a - u.capturedAt <= 4e3
+    (null != A && clearTimeout(A), (A = setTimeout(() => m({ status: "capture_failed", reason: "idle" }), 3e4)));
+    let r = Date.now(),
+        a =
+            null != u && r - u.capturedAt <= 4e3
                 ? u
                 : await new Promise((e) => {
                       let t = setTimeout(() => {
@@ -138,5 +147,7 @@ async function N(e) {
                       }
                       E.push(n);
                   });
-    return "status" in d ? S(t, d, Date.now() - a) : { status: "ok", image: d.image, width: d.width, height: d.height };
+    return "status" in a
+        ? ("timeout" === a.status && c?.frameId === e.frameId && (0, o.DD)(t, "timeout"), N(t, a, Date.now() - r))
+        : ((0, o.DD)(t, null), { status: "ok", image: a.image, width: a.width, height: a.height });
 }
