@@ -40,15 +40,10 @@ function S(e, t) {
     return t ? e : ((0, l.Vc)()?.uuid ?? null);
 }
 function N(e, t, n, i) {
-    let r = (0, s.sN)(i).uuid,
-        a = (0, h.Kc)(e, t);
-    return {
-        client_ad_session_id: r,
-        billing_session_id: S(r, (0, h.xn)(t, n)),
-        ad_content_id: e,
-        ...a,
-        creative_type: a.creative_type ?? n,
-    };
+    let r,
+        a = { client_ad_session_id: (r = (0, s.sN)(i).uuid), billing_session_id: S(r, (0, h.xn)(t, n)) },
+        l = (0, h.Kc)(e, t);
+    return { ...a, ad_content_id: e, ...l, creative_type: l.creative_type ?? n };
 }
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

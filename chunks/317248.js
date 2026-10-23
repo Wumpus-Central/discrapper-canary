@@ -13,8 +13,8 @@ var i = n(477900),
     p = n(297264),
     v = n(95477),
     g = n(103557),
-    x = n(890497),
-    f = n(150934),
+    f = n(890497),
+    x = n(150934),
     b = n(691885),
     j = n(821609),
     y = n(452027),
@@ -126,7 +126,7 @@ function Z(e) {
             })((0, T.getOS)()),
         ),
         [ev, eg] = a.useState(""),
-        [ex, ef] = a.useState(""),
+        [ef, ex] = a.useState(""),
         [eb, ej] = a.useState(""),
         [ey, eS] = a.useState(""),
         [ek, ew] = a.useState(!1),
@@ -140,8 +140,8 @@ function Z(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "ab4006a3a1173bf353f9c11e811c72641bc9e295" !== e.body.hash) {
-                let e = new Date("1792790073976"),
+            if (null != e.body && "1f08dd9a2b791e1f2b121fe399b5fb4cfced67b5" !== e.body.hash) {
+                let e = new Date("1792790495997"),
                     t = new Date(),
                     n = (0, M.Tf)(t, e);
                 n.hours > 6 && eL(n.hours);
@@ -185,7 +185,7 @@ function Z(e) {
                           device: ec,
                           operatingSystem: eh,
                           operatingSystemVersion: ev,
-                          clientVersion: ex,
+                          clientVersion: ef,
                           clientBuildNumber: eb,
                           locale: ey,
                       }
@@ -384,7 +384,7 @@ function Z(e) {
                                 "data-migration-pending": !0,
                             }),
                             eN &&
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(f.Z, {
                                     selectionMode: "single",
                                     label: q.intl.string(q.t["77VVd8"]),
                                     value: es,
@@ -425,7 +425,7 @@ function Z(e) {
                                 maxLength: 5e3,
                                 onChange: en,
                             }),
-                            (0, i.jsx)(f.S, { checked: eu, onChange: (e) => ed(e), label: q.intl.string(q.t.ayhqiH) }),
+                            (0, i.jsx)(x.S, { checked: eu, onChange: (e) => ed(e), label: q.intl.string(q.t.ayhqiH) }),
                             eu
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
@@ -452,8 +452,8 @@ function Z(e) {
                                           (0, i.jsx)(v.k, {
                                               label: q.intl.string(q.t["wy1M/t"]),
                                               placeholder: "Client Version",
-                                              value: ex,
-                                              onChange: (e) => ef(e),
+                                              value: ef,
+                                              onChange: (e) => ex(e),
                                           }),
                                           (0, i.jsx)(v.k, {
                                               label: q.intl.string(q.t.f7kbVu),

@@ -23,6 +23,7 @@ var u = (((i = {}).LEFT = "LEFT"), (i.RIGHT = "RIGHT"), i),
     _ = (((r = {}).ARROW = "ARROW"), (r.AUTO = "AUTO"), (r.MANUAL = "MANUAL"), r),
     E =
         (((a = {}).LEARN_MORE = "LEARN_MORE"),
+        (a.OPEN_AD_PERK_MODAL = "OPEN_AD_PERK_MODAL"),
         (a.SHOW_REWARD = "SHOW_REWARD"),
         (a.CLAIM_REWARD = "CLAIM_REWARD"),
         (a.GET_REWARD_CODE = "GET_REWARD_CODE"),

@@ -25,6 +25,7 @@ var _ =
         (i.APP_ICON = "app_icon"),
         i),
     E = (((r = {}).HIDDEN = "hidden"), (r.LOCKED = "locked"), (r.SELECTABLE = "selectable"), r);
+Object.freeze({ client_theme: "client_theme", display_name_style: "display_name_font", app_icon: "app_icon" });
 let A = Object.freeze({
         display_name_style: o.bb.DISPLAY_NAME_STYLES,
         client_theme: o.bb.CLIENT_THEMES,

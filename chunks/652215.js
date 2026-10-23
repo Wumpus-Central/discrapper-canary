@@ -4268,6 +4268,7 @@ var rC =
         (eM.QUEST_CONTENT_VIEWED = "quest_content_viewed"),
         (eM.QUEST_CONTENT_ENGAGED_VIEWED = "quest_content_engaged_viewed"),
         (eM.QUEST_CONTENT_VIEW_TIME = "quest_content_view_time"),
+        (eM.QUEST_PROMOTIONAL_EVENT_USER_ACTION = "quest_promotional_event_user_action"),
         (eM.IOS_ATTRIBUTION_VIEW_RESOLVED = "ios_attribution_view_resolved"),
         (eM.IOS_ATTRIBUTION_CLICK_RESOLVED = "ios_attribution_click_resolved"),
         (eM.QUEST_DECISION_ROUNDTRIP = "quest_decision_roundtrip"),
