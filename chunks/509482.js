@@ -137,15 +137,16 @@ function O(e) {
             if (t && null != b) return b[p ?? ""];
         }, [t, b, p]),
         B = null != F,
-        V = a.useRef(null),
-        { rive: H, RiveComponent: j } = (0, o.useRive)(
+        V = null != S || null != O,
+        H = a.useRef(null),
+        { rive: j, RiveComponent: W } = (0, o.useRive)(
             {
                 eventTarget: I?.current,
                 ...(null != n ? { riveFile: n } : { buffer: i }),
                 autoplay: s,
                 stateMachines: null != v ? [v] : B ? F : x,
                 artboard: p,
-                autoBind: !!B || void 0,
+                autoBind: !!B || !!V || void 0,
                 enableAutoSleep: t,
                 useOffscreenRenderer: !0,
                 layout: new o.Layout({
@@ -163,21 +164,21 @@ function O(e) {
     (a.useImperativeHandle(
         m,
         () => ({
-            play: () => H?.play(),
-            pause: () => H?.pause(),
-            stop: () => H?.stop(),
+            play: () => j?.play(),
+            pause: () => j?.pause(),
+            stop: () => j?.stop(),
             getPlaybackState: () =>
-                null == H
+                null == j
                     ? null
                     : {
-                          isPlaying: H.isPlaying,
-                          isPaused: H.isPaused,
-                          isAutoSleeping: H.isAutoSleeping ?? !1,
-                          isRenderScheduled: null != H.frameRequestId,
-                          fps: H.fps,
+                          isPlaying: j.isPlaying,
+                          isPaused: j.isPaused,
+                          isAutoSleeping: j.isAutoSleeping ?? !1,
+                          isRenderScheduled: null != j.frameRequestId,
+                          fps: j.fps,
                       },
             getProperties: () => {
-                let e = H?.viewModelInstance,
+                let e = j?.viewModelInstance,
                     t = (t, n) => {
                         let i = "enumType" === n ? "enum" : n;
                         return {
@@ -202,9 +203,9 @@ function O(e) {
                 );
             },
             getArtboards: () => {
-                if (null == H) return [];
+                if (null == j) return [];
                 let e = new Set(),
-                    t = H.riveFile.getInstance();
+                    t = j.riveFile.getInstance();
                 for (let n = 0; n < t.artboardCount(); n++) {
                     let i = t.artboardByIndex(n);
                     e.add(i.name);
@@ -212,7 +213,7 @@ function O(e) {
                 return Array.from(e);
             },
         }),
-        [H],
+        [j],
     ),
         (function (e) {
             let t,
@@ -356,7 +357,7 @@ function O(e) {
                     );
                 }, [T, _, n, i, r, A, n?.viewModelInstance, h, f, p]));
         })({
-            rive: H,
+            rive: j,
             artboard: p,
             artboardProperties: g,
             dataBinding: S,
@@ -364,77 +365,77 @@ function O(e) {
             onDataBindingChange: N,
         }),
         a.useEffect(() => {
-            if (null != H && "short-loop" === T && M.reducedMotion.enabled) {
+            if (null != j && "short-loop" === T && M.reducedMotion.enabled) {
                 function e() {
-                    null != H &&
-                        H.isPlaying &&
-                        (V.current = setTimeout(() => {
-                            H.pause();
+                    null != j &&
+                        j.isPlaying &&
+                        (H.current = setTimeout(() => {
+                            j.pause();
                         }, 5e3));
                 }
                 function t() {
-                    clearTimeout(V.current);
+                    clearTimeout(H.current);
                 }
                 return (
-                    H.on(o.EventType.Play, e),
-                    H.on(o.EventType.Pause, t),
-                    H.on(o.EventType.Stop, t),
+                    j.on(o.EventType.Play, e),
+                    j.on(o.EventType.Pause, t),
+                    j.on(o.EventType.Stop, t),
                     () => {
-                        (H.off(o.EventType.Play, e), H.off(o.EventType.Pause, t), H.off(o.EventType.Stop, t));
+                        (j.off(o.EventType.Play, e), j.off(o.EventType.Pause, t), j.off(o.EventType.Stop, t));
                     }
                 );
             }
-        }, [H, T, M.reducedMotion.enabled]),
+        }, [j, T, M.reducedMotion.enabled]),
         a.useLayoutEffect(() => {
-            if (null != H) {
-                "layout" === _ && H.resizeDrawingSurfaceToCanvas();
+            if (null != j) {
+                "layout" === _ && j.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != H.canvas &&
-                        (H.resizeDrawingSurfaceToCanvas(),
-                        H.isPlaying || (H.startRendering(), requestAnimationFrame(() => H.stopRendering())));
+                    null != j.canvas &&
+                        (j.resizeDrawingSurfaceToCanvas(),
+                        j.isPlaying || (j.startRendering(), requestAnimationFrame(() => j.stopRendering())));
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [H, _]),
+        }, [j, _]),
         a.useEffect(() => {
-            if (null == H || !M.reducedMotion.enabled) return;
-            let e = H.canvas;
+            if (null == j || !M.reducedMotion.enabled) return;
+            let e = j.canvas;
             if (null == e) return;
             let t = new (e.ownerDocument.defaultView ?? window).ResizeObserver(() => {
-                (H.resizeDrawingSurfaceToCanvas(),
-                    H.isPlaying || (H.startRendering(), requestAnimationFrame(() => H.stopRendering())));
+                (j.resizeDrawingSurfaceToCanvas(),
+                    j.isPlaying || (j.startRendering(), requestAnimationFrame(() => j.stopRendering())));
             });
             return (t.observe(e), () => t.disconnect());
-        }, [H, M.reducedMotion.enabled]),
+        }, [j, M.reducedMotion.enabled]),
         a.useEffect(() => {
             B ||
-                (null != H &&
+                (null != j &&
                     null == x &&
                     null == v &&
-                    (k(H.stateMachineNames),
-                    H.reset({ stateMachines: H.stateMachineNames, autoplay: s, artboard: p, autoBind: !0 }),
-                    H.setupRiveListeners()));
-        }, [H, s, x, p, v, B]));
-    let W = a.useRef(0);
+                    (k(j.stateMachineNames),
+                    j.reset({ stateMachines: j.stateMachineNames, autoplay: s, artboard: p, autoBind: !0 }),
+                    j.setupRiveListeners()));
+        }, [j, s, x, p, v, B]));
+    let Y = a.useRef(0);
     return (
         a.useEffect(() => {
-            if (null == H) return;
+            if (null == j) return;
             let e = (t) => {
                 null != t.data &&
                     "number" == typeof t.data &&
-                    ((W.current = t.data),
+                    ((Y.current = t.data),
                     t.data > 0 &&
-                        ("halt" === T && M.reducedMotion.enabled && H.isPlaying && H.pause(),
-                        H.off(o.EventType.Advance, e)));
+                        ("halt" === T && M.reducedMotion.enabled && j.isPlaying && j.pause(),
+                        j.off(o.EventType.Advance, e)));
             };
             return (
-                H.on(o.EventType.Advance, e),
-                s && H.play(),
+                j.on(o.EventType.Advance, e),
+                s && j.play(),
                 () => {
-                    H.off(o.EventType.Advance, e);
+                    j.off(o.EventType.Advance, e);
                 }
             );
-        }, [H, M.reducedMotion.enabled, T, s]),
+        }, [j, M.reducedMotion.enabled, T, s]),
         a.useEffect(() => {
             G();
         }, [G, p, _, E, S, O, g]),
@@ -466,8 +467,8 @@ function O(e) {
                     }
                 );
             }, [t, _, l, n, i]);
-        })({ rive: H, autoplay: s, isRiveWebPerfEnabled: t, isFocused: U, isUserIdle: w, lastFrameRef: W }),
-        (0, r.jsx)(j, { className: l, style: A, "aria-hidden": !0 })
+        })({ rive: j, autoplay: s, isRiveWebPerfEnabled: t, isFocused: U, isUserIdle: w, lastFrameRef: Y }),
+        (0, r.jsx)(W, { className: l, style: A, "aria-hidden": !0 })
     );
 }
 o.RuntimeLoader.setWasmUrl(l());
