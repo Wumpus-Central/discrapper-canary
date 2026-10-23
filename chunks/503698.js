@@ -1,5 +1,4 @@
 !(function () {
-    "use strict";
     var t = {}.hasOwnProperty;
     function r() {
         for (var e = "", i = 0; i < arguments.length; i++) {
