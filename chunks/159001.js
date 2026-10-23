@@ -1,4 +1,4 @@
-i.d(t, { GL: () => s, IM: () => S, JJ: () => o, RE: () => u, V2: () => a, go: () => r, x8: () => c });
+i.d(t, { GL: () => s, IM: () => S, JJ: () => o, RE: () => u, V2: () => a, go: () => r, x8: () => I });
 var E = i(636537),
     _ = i(73153),
     l = i(268429),
@@ -13,12 +13,11 @@ async function s(e, t) {
         avatarDecoration: r,
         nameplate: u,
         displayNameStyles: S,
-        vadColors: c,
         avatarOriginalMd5: I,
     } = t;
     if (null == e) throw Error("Need guildId");
     _.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: e });
-    let R = {
+    let c = {
         nick: i,
         avatar: s,
         avatar_description: o,
@@ -28,12 +27,11 @@ async function s(e, t) {
         display_name_font_id: void 0 !== S ? (null !== S ? S.fontId : null) : void 0,
         display_name_effect_id: void 0 !== S ? (null !== S ? S.effectId : null) : void 0,
         display_name_colors: void 0 !== S ? (null !== S ? S.colors : null) : void 0,
-        vad_colors: c,
     };
     try {
         let t = await E.Bo.patch({
                 url: n.Rsh.SET_GUILD_MEMBER(e),
-                body: R,
+                body: c,
                 headers: l.A.buildHeadersForMd5({ [d.f.USER_GUILD_PROFILE_AVATAR]: I }),
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -69,6 +67,6 @@ function u() {
 function S() {
     _.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
-function c() {
+function I() {
     _.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 }

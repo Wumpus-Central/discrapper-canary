@@ -14,26 +14,26 @@ E.d(t, {
 });
 var e = E(636537),
     i = E(506774),
-    d = E(73153),
-    n = E(268429),
-    o = E(61310),
-    a = E(870600),
-    r = E(976860);
+    n = E(73153),
+    d = E(268429),
+    a = E(61310),
+    r = E(870600),
+    o = E(976860);
 E(624826);
 var S = E(830215);
 E(252452);
 var l = E(652215),
     s = E(516780);
 function p() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
 }
 function T() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
 }
 function h(_, t) {
     let E = t ? l.Rsh.DELETE_ACCOUNT : l.Rsh.DISABLE_ACCOUNT;
     return e.Bo.post({ url: E, body: { password: _ }, oldFormErrors: !0, rejectWithError: (0, e.fT)() }).then(() => {
-        (S.A.logoutInternal(), (0, r.pX)(l.BVt.DEFAULT_LOGGED_OUT));
+        (S.A.logoutInternal(), (0, o.pX)(l.BVt.DEFAULT_LOGGED_OUT));
     });
 }
 async function u(_) {
@@ -49,17 +49,17 @@ async function u(_) {
     if (i.token) {
         let t = i.token;
         (delete i.token,
-            d.h.dispatch({ type: "UPDATE_TOKEN", token: t, userId: i.id }),
-            _?.password != null && _?.new_password != null && d.h.dispatch({ type: "PASSWORD_UPDATED", userId: i.id }));
+            n.h.dispatch({ type: "UPDATE_TOKEN", token: t, userId: i.id }),
+            _?.password != null && _?.new_password != null && n.h.dispatch({ type: "PASSWORD_UPDATED", userId: i.id }));
     }
-    return (d.h.dispatch({ type: "CURRENT_USER_UPDATE", user: i }), E);
+    return (n.h.dispatch({ type: "CURRENT_USER_UPDATE", user: i }), E);
 }
 function R(_) {
     let {
         username: t,
         discriminator: E,
         email: e,
-        emailToken: r,
+        emailToken: o,
         password: S,
         avatar: p,
         avatarDescription: T,
@@ -71,15 +71,14 @@ function R(_) {
         nameplate: U,
         primaryGuildId: N,
         displayNameStyles: y,
-        vadColors: f,
-        typingIndicatorStyle: D,
-        avatarOriginalMd5: L,
+        typingIndicatorStyle: f,
+        avatarOriginalMd5: D,
     } = _;
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
-    let O = {
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
+    let L = {
         username: t,
         email: e,
-        email_token: r,
+        email_token: o,
         password: S,
         avatar: p,
         avatar_description: T,
@@ -89,30 +88,29 @@ function R(_) {
         legacy_username: A,
         new_password: c,
     };
-    (void 0 !== R && (O.avatar_decoration_sku_id = R?.skuId ?? null),
-        void 0 !== U && (O.nameplate_sku_id = U?.skuId ?? null),
-        void 0 !== N && (O.primary_guild_id = N),
+    (void 0 !== R && (L.avatar_decoration_sku_id = R?.skuId ?? null),
+        void 0 !== U && (L.nameplate_sku_id = U?.skuId ?? null),
+        void 0 !== N && (L.primary_guild_id = N),
         null != y
-            ? ((O.display_name_font_id = y.fontId),
-              (O.display_name_effect_id = y.effectId),
-              (O.display_name_colors = y.colors))
+            ? ((L.display_name_font_id = y.fontId),
+              (L.display_name_effect_id = y.effectId),
+              (L.display_name_colors = y.colors))
             : null === y &&
-              ((O.display_name_font_id = null), (O.display_name_effect_id = null), (O.display_name_colors = null)),
-        void 0 !== f && (O.vad_colors = f),
-        void 0 !== D && (O.typing_indicator_style = null != D ? (0, a.El)(D) : null));
-    let v = i.w.get(l.Xlh),
+              ((L.display_name_font_id = null), (L.display_name_effect_id = null), (L.display_name_colors = null)),
+        void 0 !== f && (L.typing_indicator_style = null != f ? (0, r.El)(f) : null));
+    let O = i.w.get(l.Xlh),
         C = (0, s.oH)();
-    null != C && null != v && ((O.push_provider = C), (O.push_token = v));
+    null != C && null != O && ((L.push_provider = C), (L.push_token = O));
     let G = i.w.get(l.Ahp);
     return (
-        null != s.vz && null != G && ((O.push_voip_provider = s.vz), (O.push_voip_token = G)),
-        u(O, { headers: n.A.buildHeadersForMd5({ [o.f.USER_DEFAULT_PROFILE_AVATAR]: L }) }).then(
+        null != s.vz && null != G && ((L.push_voip_provider = s.vz), (L.push_voip_token = G)),
+        u(L, { headers: d.A.buildHeadersForMd5({ [a.f.USER_DEFAULT_PROFILE_AVATAR]: D }) }).then(
             (_) => (
-                d.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" }),
-                (null != p || null != h) && d.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+                n.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" }),
+                (null != p || null != h) && n.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
                 _
             ),
-            (_) => (d.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: _.body }), _),
+            (_) => (n.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: _.body }), _),
         )
     );
 }
@@ -125,20 +123,20 @@ function c(_) {
     });
 }
 function I() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 }
 function A() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function U() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
 function N() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
 }
 function y() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
 function f() {
-    d.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
+    n.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

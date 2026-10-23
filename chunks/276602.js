@@ -528,27 +528,25 @@ function eW(e, t, n) {
             collectibles: A,
             display_name_styles: h,
             member_gaming_leaderboard_data: f,
-            vad_colors: I,
         } = n,
-        p = eu.Ay.getMember(e, t.id),
-        T = (0, $.t)(A),
-        m = (0, X.mT)(h),
-        g = (0, Z.Rt)(f);
-    (null != p &&
-        p.nick === a &&
-        p.avatar === s &&
-        r().isEqual(p.roles, i) &&
-        (0, K.kn)(p.avatarDecoration ?? null, l ?? null) &&
-        p.premiumSince === d &&
-        p.isPending === c &&
-        p.joinedAt === u &&
-        p.communicationDisabledUntil === _ &&
-        p.flags === o &&
-        (p.unusualDMActivityUntil ?? null) === (E ?? null) &&
-        r().isEqual(p.collectibles ?? null, T ?? null) &&
-        r().isEqual(p.displayNameStyles ?? null, m ?? null) &&
-        r().isEqual(p.gamingLeaderboardData ?? null, g ?? null) &&
-        r().isEqual(p.vadColors ?? null, I ?? null)) ||
+        I = eu.Ay.getMember(e, t.id),
+        p = (0, $.t)(A),
+        T = (0, X.mT)(h),
+        m = (0, Z.Rt)(f);
+    (null != I &&
+        I.nick === a &&
+        I.avatar === s &&
+        r().isEqual(I.roles, i) &&
+        (0, K.kn)(I.avatarDecoration ?? null, l ?? null) &&
+        I.premiumSince === d &&
+        I.isPending === c &&
+        I.joinedAt === u &&
+        I.communicationDisabledUntil === _ &&
+        I.flags === o &&
+        (I.unusualDMActivityUntil ?? null) === (E ?? null) &&
+        r().isEqual(I.collectibles ?? null, p ?? null) &&
+        r().isEqual(I.displayNameStyles ?? null, T ?? null) &&
+        r().isEqual(I.gamingLeaderboardData ?? null, m ?? null)) ||
         ej({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -563,10 +561,9 @@ function eW(e, t, n) {
             communicationDisabledUntil: _,
             unusualDMActivityUntil: E,
             flags: o,
-            collectibles: T,
-            displayNameStyles: m,
-            gamingLeaderboardData: g,
-            vadColors: I,
+            collectibles: p,
+            displayNameStyles: T,
+            gamingLeaderboardData: m,
         });
 }
 function eY(e) {
@@ -1160,7 +1157,6 @@ function eX(e) {
                 collectibles: (0, $.t)(e.collectibles),
                 displayNameStyles: (0, X.mT)(e.display_name_styles),
                 gamingLeaderboardData: (0, Z.Rt)(e.member_gaming_leaderboard_data),
-                vadColors: e.vad_colors ?? null,
             });
         },
     ),
