@@ -15,7 +15,7 @@ let c = new a.A("DCF"),
         dailyCapOverridden: !1,
         newUserMinAgeRequiredOverridden: !1,
         upsellBackoffOverridden: !1,
-        renderedAtTimestamps: new Map(),
+        shownContent: new Map(),
         lastDismissed: null,
         seenForGuildId: new Map(),
     };
@@ -54,7 +54,10 @@ class A extends i.Ay.PersistedStore {
         return _.lastDismissed;
     }
     getRenderedAtTimestamp(e) {
-        return _.renderedAtTimestamps.get(e);
+        return _.shownContent.get(e)?.renderedAt;
+    }
+    hasTrackedActionedEvent(e) {
+        return _.shownContent.get(e)?.actionTracked ?? !1;
     }
     hasUserHitDCCap(e, t) {
         if (null != e && ((0, l.a9)(e) || _.dailyCapOverridden)) return !1;
@@ -85,7 +88,7 @@ let h = new A(r.h, {
             (_ = {
                 ..._,
                 dismissibleContentSeenDuringSession: new Set(),
-                renderedAtTimestamps: new Map(),
+                shownContent: new Map(),
                 seenForGuildId: new Map(),
             }));
     },
@@ -102,13 +105,15 @@ let h = new A(r.h, {
         _.upsellBackoffOverridden = t;
     },
     DCF_HANDLE_DC_SHOWN: function (e) {
-        let { dismissibleContent: t, guildId: n } = e,
-            i = new Date();
-        if ((_.renderedAtTimestamps.set(t, i.getTime()), (0, l.a9)(t) || _.dailyCapOverridden)) return;
-        let r = (0, o.vf)(t) && null != n;
-        if (!(!r && _.dismissibleContentSeenDuringSession.has(t))) {
-            if (!(r && E(t, n))) {
-                if (r) {
+        let { dismissibleContent: t, guildId: n } = e;
+        if (
+            (_.shownContent.set(t, { renderedAt: Date.now(), actionTracked: !1 }), (0, l.a9)(t) || _.dailyCapOverridden)
+        )
+            return;
+        let i = (0, o.vf)(t) && null != n;
+        if (!(!i && _.dismissibleContentSeenDuringSession.has(t))) {
+            if (!(i && E(t, n))) {
+                if (i) {
                     let e = _.seenForGuildId.get(n) ?? new Set();
                     (e.add(t), _.seenForGuildId.set(n, e));
                 } else _.dismissibleContentSeenDuringSession.add(t);
@@ -130,7 +135,13 @@ let h = new A(r.h, {
     },
     DCF_HANDLE_DC_DISMISSED: function (e) {
         let { dismissibleContent: t, guildId: n } = e;
-        ((_.lastDismissed = { content: t, guildId: n }), _.renderedAtTimestamps.delete(t));
+        ((_.lastDismissed = { content: t, guildId: n }), _.shownContent.delete(t));
+    },
+    DCF_HANDLE_DC_ACTIONED: function (e) {
+        let { dismissibleContent: t } = e,
+            n = _.shownContent.get(t);
+        if (null == n || n.actionTracked) return !1;
+        n.actionTracked = !0;
     },
     DCF_OVERRIDE_LAST_DC_DISMISSED: function (e) {
         let { dismissibleContent: t, guildId: n } = e;

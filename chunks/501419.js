@@ -209,8 +209,10 @@ function V(e, t) {
         (function (e, t) {
             t?.dismissAction === T.i.TAKE_ACTION &&
                 (function (e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                        [n] = (0, A.oF)(),
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                    if (E.A.hasTrackedActionedEvent(e)) return;
+                    (0, _.F_)(e);
+                    let [n] = (0, A.oF)(),
                         i = E.A.getRenderedAtTimestamp(e);
                     o.default.track(p.HAw.DISMISSIBLE_CONTENT_ACTIONED, {
                         type: r.M[e],
