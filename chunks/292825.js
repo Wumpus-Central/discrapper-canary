@@ -1,4 +1,4 @@
-n.d(t, { a: () => N });
+n.d(t, { a: () => O, g: () => g });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -14,23 +14,32 @@ var i = n(477900),
     h = n(885574),
     f = n(738188),
     I = n(460890),
-    p = n(834730),
-    T = n(271235);
-function m(e) {
+    p = n(331322),
+    T = n(834730),
+    m = n(271235);
+function g(e) {
+    let { intro: t, items: n } = e,
+        r = (0, i.jsx)("ul", {
+            className: m.messageList,
+            children: n.map((e, t) => (0, i.jsx)("li", { children: e }, t)),
+        });
+    return null == t ? r : (0, i.jsxs)(p.B, { gap: 4, children: [(0, i.jsx)("div", { children: t }), r] });
+}
+function S(e) {
     let { hidden: t = !1, children: n } = e;
     return (0, i.jsx)("div", {
-        className: s()(T.enterExit, { [T.enterExitHidden]: t }),
-        children: (0, i.jsx)("div", { className: T.enterExitClip, children: n }),
+        className: s()(m.enterExit, { [m.enterExitHidden]: t }),
+        children: (0, i.jsx)("div", { className: m.enterExitClip, children: n }),
     });
 }
-let g = "experimental/body-sm/semibold",
-    S = "experimental/body-sm/normal";
-function N(e) {
-    let { type: t, title: n, message: a, onDismiss: N, action: C, role: O, hidden: R } = e,
-        { i18n: L } = (0, I.G9)(),
-        y = r.useId(),
-        D = r.useId(),
-        v = (function (e) {
+let N = "experimental/body-sm/semibold",
+    C = "experimental/body-sm/normal";
+function O(e) {
+    let { type: t, title: n, message: a, messageList: p, onDismiss: O, action: R, role: L, hidden: y } = e,
+        { i18n: D } = (0, I.G9)(),
+        v = r.useId(),
+        b = r.useId(),
+        M = (function (e) {
             let t = { size: "xs", ariaHidden: !0 };
             switch (e) {
                 case "positive":
@@ -43,7 +52,7 @@ function N(e) {
                     return (0, i.jsx)(f.WarningIcon, { color: l.A.colors.ICON_FEEDBACK_WARNING, ...t });
             }
         })(t),
-        b = (function (e, t) {
+        P = (function (e, t) {
             switch (e) {
                 case "critical":
                     return t.FEEDBACK_CRITICAL_ICON_A11Y_LABEL;
@@ -54,73 +63,73 @@ function N(e) {
                 case "positive":
                     return t.FEEDBACK_POSITIVE_ICON_A11Y_LABEL;
             }
-        })(t, L),
-        M = [b, (0, o.O)(n), (0, o.O)(a)].filter(Boolean).join(", ");
+        })(t, D),
+        U = [P, (0, o.O)(n), (0, o.O)(a), ...(p ?? []).map(o.O)].filter(Boolean).join(", ");
     return (
         r.useEffect(() => {
-            "status" !== O || R || d.O.announce(M, "polite");
-        }, [O, R, M]),
-        (0, i.jsx)(m, {
-            hidden: R,
+            "status" !== L || y || d.O.announce(U, "polite");
+        }, [L, y, U]),
+        (0, i.jsx)(S, {
+            hidden: y,
             children: (0, i.jsxs)("div", {
-                role: "alert" === O ? "alert" : void 0,
-                className: s()(T.container, T[t]),
+                role: "alert" === L ? "alert" : void 0,
+                className: s()(m.container, m[t]),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: T.iconAndTextContainer,
+                        className: m.iconAndTextContainer,
                         children: [
-                            (0, i.jsx)(p.E, {
-                                variant: null != n ? g : S,
+                            (0, i.jsx)(T.E, {
+                                variant: null != n ? N : C,
                                 color: "none",
-                                className: T.iconContainer,
-                                children: v,
+                                className: m.iconContainer,
+                                children: M,
                             }),
                             (0, i.jsxs)("div", {
-                                className: s()(T.contentsContainer, { [T.vertical]: null != N }),
+                                className: s()(m.contentsContainer, { [m.vertical]: null != O }),
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: T.copyContainer,
+                                        className: m.copyContainer,
                                         children: [
-                                            (0, i.jsxs)(_.A, { id: y, children: [b, ":"] }),
+                                            (0, i.jsxs)(_.A, { id: v, children: [P, ":"] }),
                                             null == n
                                                 ? null
-                                                : (0, i.jsx)(p.E, {
-                                                      id: D,
-                                                      variant: g,
+                                                : (0, i.jsx)(T.E, {
+                                                      id: b,
+                                                      variant: N,
                                                       color: "text-strong",
                                                       children: n,
                                                   }),
-                                            (0, i.jsx)(p.E, {
-                                                id: null == n ? D : void 0,
-                                                variant: S,
+                                            (0, i.jsx)(T.E, {
+                                                id: null == n ? b : void 0,
+                                                variant: C,
                                                 color: "text-strong",
-                                                children: a,
+                                                children: null != p ? (0, i.jsx)(g, { intro: a, items: p }) : a,
                                             }),
                                         ],
                                     }),
-                                    null == C
+                                    null == R
                                         ? null
                                         : (0, i.jsx)(c.$, {
                                               variant: "secondary",
                                               size: "sm",
-                                              text: C.text,
-                                              onClick: C.onClick,
-                                              loading: C.loading,
+                                              text: R.text,
+                                              onClick: R.onClick,
+                                              loading: R.loading,
                                           }),
                                 ],
                             }),
                         ],
                     }),
-                    null != N
-                        ? (0, i.jsx)(p.E, {
-                              variant: null != n ? g : S,
+                    null != O
+                        ? (0, i.jsx)(T.E, {
+                              variant: null != n ? N : C,
                               color: "none",
-                              className: T.iconContainer,
+                              className: m.iconContainer,
                               children: (0, i.jsx)(u.J, {
-                                  "aria-label": L.DISMISS_BUTTON_LABEL,
-                                  "aria-describedby": `${y} ${D}`,
+                                  "aria-label": D.DISMISS_BUTTON_LABEL,
+                                  "aria-describedby": `${v} ${b}`,
                                   size: "sm",
-                                  onClick: N,
+                                  onClick: O,
                               }),
                           })
                         : null,

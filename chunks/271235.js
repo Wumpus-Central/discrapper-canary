@@ -9,6 +9,7 @@ e.r(
         contentsContainer: "contentsContainer__03a26",
         copyContainer: "copyContainer__03a26",
         vertical: "vertical__03a26",
+        messageList: "messageList__03a26",
         positive: "positive__03a26",
         icon: "icon__03a26",
         warning: "warning__03a26",
