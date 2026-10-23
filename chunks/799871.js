@@ -1272,7 +1272,22 @@ function nD(e) {
               cta: e9.intl.string(e9.t.Rr3MAe),
           }));
 }
-var nO = n(628287);
+function nO(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: i, role: r, width: a, height: o, className: d, style: u } = e,
+        c = l.useMemo(
+            () => (0, nS.H)({ width: a, height: o, intrinsicWidth: 288, intrinsicHeight: 123, style: u }),
+            [a, o, u],
+        );
+    return (0, s.jsx)("img", {
+        style: c,
+        src: "https://cdn.discordapp.com/assets/content/5eaa226d911a51611c1b456eb404180953cb0c515bc70e9b09fa5f10d8383a94.svg",
+        className: (0, nS.Z)(d),
+        alt: t,
+        "aria-label": n,
+        "aria-hidden": i,
+        role: r ?? "img",
+    });
+}
 let nG = function (e) {
     let { guild: t } = e,
         n = l.useCallback(() => {
@@ -1286,7 +1301,7 @@ let nG = function (e) {
         message: e9.intl.string(e9.t["2klD0Z"]),
         trackingSource: j.kZU.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: j.n5X.PUBLIC_UPSELL,
-        image: nO,
+        image: (0, s.jsx)(nO, { alt: "", ariaHidden: !0, width: "100%" }),
         cta: e9.intl.string(e9.t.hvVgAZ),
     });
 };

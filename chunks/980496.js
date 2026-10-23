@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649028";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649033";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649028, Version Hash: 1f7fdca3a845023ce9bd79f967f8b6c4ff4f7fe4`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649033, Version Hash: f0679e8ff71e3c32696041995b162b3eb752354d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -11302,7 +11302,7 @@ let Ea =
                             n.e("995210"),
                             n.e("630313"),
                             n.e("30814"),
-                            n.e("784853"),
+                            n.e("301415"),
                             n.e("317699"),
                             n.e("257032"),
                             n.e("952831"),
@@ -25477,7 +25477,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649028" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649033" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -31332,11 +31332,11 @@ let bu = (0, tZ.Fe)({
                 n.e("955861"),
                 n.e("732100"),
                 n.e("630313"),
-                n.e("784853"),
                 n.e("811531"),
                 n.e("161283"),
                 n.e("192218"),
                 n.e("286712"),
+                n.e("301415"),
                 n.e("726223"),
                 n.e("802529"),
                 n.e("236999"),
@@ -31366,8 +31366,8 @@ let bu = (0, tZ.Fe)({
                 n.e("209114"),
                 n.e("192910"),
                 n.e("983373"),
-            ]).then(n.bind(n, 838665)),
-        webpackId: 838665,
+            ]).then(n.bind(n, 799871)),
+        webpackId: 799871,
         name: "GuildSidebar",
         renderLoader: rs.L,
     }),
@@ -36339,7 +36339,7 @@ let M2 = (0, ra.Fe)({
                 n.e("995210"),
                 n.e("630313"),
                 n.e("30814"),
-                n.e("784853"),
+                n.e("301415"),
                 n.e("952831"),
                 n.e("677602"),
                 n.e("588860"),
