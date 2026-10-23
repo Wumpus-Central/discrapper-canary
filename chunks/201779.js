@@ -38,7 +38,6 @@ var i,
         (r.FINALIZE_CHARACTER = "finalize_character"),
         (r.SUMMARY = "summary"),
         (r.SHARE = "share"),
-        (r.PROFILE_WIDGET = "profile_widget"),
         r);
 let d = new Set([
     "voice_face",
@@ -65,7 +64,6 @@ var _ =
         (a.ASSEMBLED = "assembled"),
         (a.FINALIZE = "finalize"),
         (a.SUMMARY = "summary"),
-        (a.PROFILE_WIDGET = "profile_widget"),
         a),
     E =
         (((s = {}).VOICE_INTRO = "voice_intro"),
@@ -119,7 +117,6 @@ let A = {
     finalize_character: { characterStage: "finalize" },
     summary: { characterStage: "summary", statsScreen: "summary" },
     share: { characterStage: "summary", statsScreen: "share" },
-    profile_widget: { characterStage: "profile_widget" },
 };
 function h(e) {
     return A[e];

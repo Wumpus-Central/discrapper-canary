@@ -15053,7 +15053,6 @@ let uq = [
         uY.gr.FINALIZE_CHARACTER,
         uY.gr.SUMMARY,
         uY.gr.SHARE,
-        uY.gr.PROFILE_WIDGET,
     ],
     uJ = [
         uY.gr.HOME,
@@ -15083,7 +15082,6 @@ let uq = [
         uY.gr.FINALIZE_CHARACTER,
         uY.gr.SUMMARY,
         uY.gr.SHARE,
-        uY.gr.PROFILE_WIDGET,
     ],
     uQ = {
         [uY.gr.VOICE_INTRO]: (e) => !(Math.round(e?.voice?.totalVoiceMinutes ?? 0) > 0),
@@ -15814,26 +15812,26 @@ var hi = a(477155),
     hr = a(753875);
 function ho(e) {
     let { activeRoute: t, onBack: a, onNext: n } = e;
-    if (t === uY.gr.HOME) return null;
-    let l = t === uY.gr.PROFILE_WIDGET ? nA.t.i4jeWR : nA.t.PDTjLN;
-    return (0, o.jsxs)(o.Fragment, {
-        children: [
-            (0, o.jsx)(u6, {
-                size: "md",
-                className: J()(hr.A4, hr.aX),
-                onClick: a,
-                "aria-label": nA.intl.string(nA.t["13/7kX"]),
-                children: (0, o.jsx)(hi.r, { color: "currentColor" }),
-            }),
-            (0, o.jsx)(u8, {
-                size: "md",
-                className: J()(hr.A4, hr.K2),
-                onClick: n,
-                "aria-label": nA.intl.string(l),
-                children: (0, o.jsx)(hs.E, { color: "currentColor" }),
-            }),
-        ],
-    });
+    return t === uY.gr.HOME
+        ? null
+        : (0, o.jsxs)(o.Fragment, {
+              children: [
+                  (0, o.jsx)(u6, {
+                      size: "md",
+                      className: J()(hr.A4, hr.aX),
+                      onClick: a,
+                      "aria-label": nA.intl.string(nA.t["13/7kX"]),
+                      children: (0, o.jsx)(hi.r, { color: "currentColor" }),
+                  }),
+                  (0, o.jsx)(u8, {
+                      size: "md",
+                      className: J()(hr.A4, hr.K2),
+                      onClick: n,
+                      "aria-label": nA.intl.string(nA.t.PDTjLN),
+                      children: (0, o.jsx)(hs.E, { color: "currentColor" }),
+                  }),
+              ],
+          });
 }
 (a(134528), a(947204));
 var hc = a(675970),
