@@ -59,7 +59,7 @@ function V(e) {
                 color: o || c ? "currentColor" : "text-overlay-light",
                 children: t,
             }),
-            n ? (0, l.jsx)(A.A, { className: k.OC, forceUseColorForSparkles: !0 }) : null,
+            n ? (0, l.jsx)(A.A, { className: k.OC, forceUseColorForSparkles: !0, variant: "inverted" }) : null,
         ],
     });
 }

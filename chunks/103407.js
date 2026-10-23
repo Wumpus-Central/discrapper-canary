@@ -16,8 +16,8 @@ var r = n(477900),
     N = n(501419),
     A = n(174459),
     M = n(637706),
-    T = n(498470),
-    f = n(652215),
+    f = n(498470),
+    T = n(652215),
     g = n(49999),
     O = n(105292),
     x = n(696918);
@@ -26,10 +26,10 @@ var b = n(503698),
     I = n.n(b),
     L = n(562708),
     y = n(877624),
-    R = n(17928),
-    v = n(815021),
+    v = n(17928),
+    R = n(815021),
     C = n(935462),
-    D = n(812993),
+    D = n(62010),
     k = n(297264),
     P = n(834730),
     j = n(315629),
@@ -47,7 +47,10 @@ var b = n(503698),
 let B = [];
 function q(e) {
     let { tagText: t, className: n } = e;
-    return (0, r.jsx)(D.Lp, { className: I()(z.Tc, n), text: t });
+    return (0, r.jsx)("div", {
+        className: I()(z.Gr, n),
+        children: (0, r.jsx)(D.E, { type: { text: t }, variant: "premium" }),
+    });
 }
 function Q(e) {
     let { header: t, subHeader: n, subHeaderExtra: a, imageSrc: o, tagText: i, wideStyle: l } = e;
@@ -81,7 +84,7 @@ function W(e) {
             subHeader: E,
             subHeaderExtra: h,
             featureCards: M,
-            changeLogId: T,
+            changeLogId: f,
             button: x,
             body: b,
             disclaimer: D,
@@ -90,7 +93,7 @@ function W(e) {
         { onClose: W, transitionState: Z } = s,
         J = (0, H.GV)(),
         X = M.length % 2 == 0,
-        ee = (0, R.bG)([w.Ay], () => w.Ay.useReducedMotion),
+        ee = (0, v.bG)([w.Ay], () => w.Ay.useReducedMotion),
         [et, en] = a.useState(Date.now()),
         [er, ea] = a.useState(0),
         [eo, ei] = a.useState(0),
@@ -109,8 +112,8 @@ function W(e) {
         name: L.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_id: t, component_type: y.C.ANNOUNCEMENT_MODAL, promotion_id: n },
     });
-    let eT = a.useRef(null),
-        ef = a.useRef(!1);
+    let ef = a.useRef(null),
+        eT = a.useRef(!1);
     function eg() {
         let e = Date.now(),
             t = e - eu.current,
@@ -120,16 +123,16 @@ function W(e) {
     }
     return (
         a.useEffect(() => {
-            let e = eT.current?.getScrollerNode();
+            let e = ef.current?.getScrollerNode();
             if (null == e) return;
             function r() {
-                ef.current ||
-                    eT.current?.isScrolledToBottom() !== !0 ||
-                    ((ef.current = !0),
-                    A.default.track(f.HAw.PREMIUM_MARKETING_COMPONENT_BOTTOM_VIEWED, {
+                eT.current ||
+                    ef.current?.isScrolledToBottom() !== !0 ||
+                    ((eT.current = !0),
+                    A.default.track(T.HAw.PREMIUM_MARKETING_COMPONENT_BOTTOM_VIEWED, {
                         component_id: t,
                         component_type: y.C.ANNOUNCEMENT_MODAL,
-                        visible_on_mount: eT.current?.isScrolledToTop() ?? !1,
+                        visible_on_mount: ef.current?.isScrolledToTop() ?? !1,
                         promotion_id: n,
                     }));
             }
@@ -178,27 +181,27 @@ function W(e) {
             () => () => {
                 if ("video" === c.type || "embed" === c.type) {
                     let [e, t] = eg();
-                    (A.default.track(f.HAw.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: T,
+                    (A.default.track(T.HAw.CHANGE_LOG_VIDEO_PLAYED, {
+                        change_log_id: f,
                         seconds_played: Math.round(e / 1e3),
                     }),
-                        A.default.track(f.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: T,
+                        A.default.track(T.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
+                            change_log_id: f,
                             seconds_unmuted: Math.round(t / 1e3),
                         }));
                 }
             },
-            [T, c.type],
+            [f, c.type],
         ),
         a.useEffect(() => {
-            if ($.A.getLayers().includes(f.zgK.COMPONENT_PLAYGROUND)) return;
+            if ($.A.getLayers().includes(T.zgK.COMPONENT_PLAYGROUND)) return;
             (0, N.Vh)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, { snowflakeId: n });
             let e = Date.now();
             return (
-                A.default.track(f.HAw.CHANGE_LOG_OPENED, { change_log_id: T }),
+                A.default.track(T.HAw.CHANGE_LOG_OPENED, { change_log_id: f }),
                 () => {
-                    (A.default.track(f.HAw.CHANGE_LOG_CLOSED, {
-                        change_log_id: T,
+                    (A.default.track(T.HAw.CHANGE_LOG_CLOSED, {
+                        change_log_id: f,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
                         (0, N.qr)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, n, {
@@ -211,7 +214,7 @@ function W(e) {
                         }));
                 }
             );
-        }, [T, n, eM]),
+        }, [f, n, eM]),
         (0, r.jsx)(C.EO, {
             "data-migration-pending": !0,
             className: I()(z.zr, z.kv, l),
@@ -224,14 +227,14 @@ function W(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: z.cG,
-                        children: (0, r.jsx)(v.J, { "data-migration-pending": !0, onClick: async () => await W() }),
+                        children: (0, r.jsx)(R.J, { "data-migration-pending": !0, onClick: async () => await W() }),
                     }),
                     (0, r.jsxs)(C.$m, {
                         "data-migration-pending": !0,
                         className: z.Qs,
                         scrollbarType: "auto",
                         overflow: "auto",
-                        scrollerRef: eT,
+                        scrollerRef: ef,
                         children: [
                             (function () {
                                 switch (c.type) {
@@ -246,8 +249,8 @@ function W(e) {
                                             src: c.src,
                                             poster: c.poster,
                                             onPlay: (e) => {
-                                                (A.default.track(f.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: T,
+                                                (A.default.track(T.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                    change_log_id: f,
                                                 }),
                                                     en(Date.now()),
                                                     es(!0),
@@ -294,8 +297,8 @@ function W(e) {
                                             renderImageComponent: F.LL,
                                             renderLinkComponent: F.bU,
                                             onPlay: () => {
-                                                A.default.track(f.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: T,
+                                                A.default.track(T.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                    change_log_id: f,
                                                 });
                                             },
                                         });
@@ -392,7 +395,7 @@ function J(e) {
                         : I === p.d.OPEN_SOCIAL_LAYER_STOREFRONT
                           ? "jump_to_slayer_storefront_button"
                           : "get_nitro_button",
-                y = (0, T.h)({
+                y = (0, f.h)({
                     buttonAction: i.button?.buttonAction,
                     deeplinkSection: i.button?.deeplinkSection,
                     applicationId: i.button?.navigableStorefrontApplicationId?.value,
@@ -400,14 +403,14 @@ function J(e) {
                     analyticsLocation: c,
                     onClose: m,
                 }),
-                R = (0, M.C)(i.helpArticle, i.helpArticleId),
-                v =
-                    null != R
+                v = (0, M.C)(i.helpArticle, i.helpArticleId),
+                R =
+                    null != v
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: R.url, children: R.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: v.url, children: v.linkText }),
                                   ],
                               })
                         : void 0,
@@ -440,7 +443,7 @@ function J(e) {
                     header: i.header,
                     modalTopPill: i.modalTopPill,
                     subHeader: i.subheader,
-                    subHeaderExtra: v,
+                    subHeaderExtra: R,
                     body: i.body,
                     heroArt: k,
                     featureCards: i.featureCards.map((e) => {
@@ -471,7 +474,7 @@ function J(e) {
                     button: function () {
                         let e = Date.now();
                         async function t() {
-                            A.default.track(f.HAw.CHANGE_LOG_CTA_CLICKED, {
+                            A.default.track(T.HAw.CHANGE_LOG_CTA_CLICKED, {
                                 change_log_id: u,
                                 cta_type: L,
                                 seconds_open: Math.round((Date.now() - e) / 1e3),
@@ -488,7 +491,7 @@ function J(e) {
                                 y();
                             }
                         }
-                        let { icon: a, iconPosition: l } = (0, T.x)({ buttonAction: i.button?.buttonAction });
+                        let { icon: a, iconPosition: l } = (0, f.x)({ buttonAction: i.button?.buttonAction });
                         return (0, r.jsx)(E.$, {
                             variant: "expressive",
                             size: "md",

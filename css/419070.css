@@ -560,11 +560,6 @@ code {
 }
 
 :root {
-    --custom-clips-enabled-indicator-medium-break-point: 920px;
-    --custom-clips-enabled-indicator-badge-icon-dimension-override: 20px
-}
-
-:root {
     --custom-channel-attachment-upload-spoiler-blur-radius: 44px;
     --custom-channel-attachment-upload-mini-attachment-size: 78px;
     --custom-channel-textarea-text-area-height: 44px;
@@ -947,4 +942,4 @@ html.enable-forced-colors:not(.platform-web).theme-light.app-focused body:before
     --shadow-border: 0 0 0 1px var(--border-strong) !important
 }
 
-/*# sourceMappingURL=419070.573a47afd8bdcf20.css.map*/
+/*# sourceMappingURL=419070.cd025d491c05554a.css.map*/

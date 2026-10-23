@@ -41,13 +41,10 @@ function m(t) {
     });
 }
 function d(t) {
-    let { className: e, forceUseColorForSparkles: n = !1 } = t;
+    let { className: e, forceUseColorForSparkles: n = !1, variant: s = "premium" } = t;
     return (0, r.jsx)(g, {
         className: e,
         forceUseColor: n,
-        children: (0, r.jsx)("span", {
-            className: u.Z,
-            children: (0, r.jsx)(i.E, { type: "new", variant: "premium" }),
-        }),
+        children: (0, r.jsx)("span", { className: u.Z, children: (0, r.jsx)(i.E, { type: "new", variant: s }) }),
     });
 }
