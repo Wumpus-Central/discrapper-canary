@@ -1,13 +1,13 @@
 n.d(t, { f: () => c });
 var i = n(477900),
     s = n(192308),
-    r = n(174459),
-    l = n(80569),
+    l = n(174459),
+    r = n(80569),
     a = n(308295),
     o = n(652215);
 async function c(e) {
     let { analyticsLocation: t = null, ...c } = e;
-    (r.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
+    (l.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
         await (0, s.openModalLazy)(
             async () => {
                 let { EmojiStudioModal: e } = await Promise.all([
@@ -24,7 +24,7 @@ async function c(e) {
                 return (t) => (0, i.jsx)(e, { ...t, ...c });
             },
             {
-                modalKey: l.y,
+                modalKey: r.y,
                 onCloseRequest: () => {
                     (0, a.p)();
                 },

@@ -147,10 +147,10 @@ function H(e) {
             },
             [u],
         );
-    function Q() {
+    function Z() {
         (w(!1), H(!1));
     }
-    function Z(e, t, n) {
+    function Q(e, t, n) {
         (n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e)));
     }
     l.useEffect(() => {
@@ -167,7 +167,7 @@ function H(e) {
                 (k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
                     J(t),
                     R(""),
-                    Q(),
+                    Z(),
                     setTimeout(() => {
                         let e = Y.current?.containerRef.current,
                             t = e?.firstChild;
@@ -218,7 +218,7 @@ function H(e) {
                         onRemoveTag: (e) => {
                             let t = v[e],
                                 { [t]: n, ...i } = _;
-                            (J(i), R(""), Q());
+                            (J(i), R(""), Z());
                         },
                         onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());
@@ -229,8 +229,8 @@ function H(e) {
                             "aria-controls": D,
                             "aria-describedby": null != p ? S : void 0,
                             "aria-expanded": V,
-                            onFocus: (e) => Z(!0, 2, e),
-                            onBlur: (e) => Z(!1, 2, e),
+                            onFocus: (e) => Q(!0, 2, e),
+                            onBlur: (e) => Q(!1, 2, e),
                         },
                     }),
                     V &&
@@ -238,8 +238,8 @@ function H(e) {
                             ref: W.setFloating,
                             style: K,
                             className: G.Dr,
-                            onFocus: (e) => Z(!0, 1, e),
-                            onBlur: (e) => Z(!1, 1, e),
+                            onFocus: (e) => Q(!0, 1, e),
+                            onBlur: (e) => Q(!1, 1, e),
                             tabIndex: -1,
                             children: (0, i.jsx)(f.Ei, {
                                 className: G.ac,

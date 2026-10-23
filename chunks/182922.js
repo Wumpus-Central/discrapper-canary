@@ -2,18 +2,18 @@ n.d(t, { A: () => I });
 var i = n(477900);
 n(582128);
 var s = n(503698),
-    r = n.n(s),
-    l = n(834730),
+    l = n.n(s),
+    r = n(834730),
     a = n(27232),
     o = n(953727);
 function c(e) {
-    let { width: t = 10, height: n = 13, color: s = "currentColor", foreground: r, ...l } = e;
+    let { width: t = 10, height: n = 13, color: s = "currentColor", foreground: l, ...r } = e;
     return (0, i.jsx)("svg", {
-        ...(0, o.A)({ ...l }),
+        ...(0, o.A)({ ...r }),
         width: t,
         height: n,
         viewBox: `0 0 ${t} ${n}`,
-        className: r,
+        className: l,
         fill: s,
         xmlns: "http://www.w3.org/2000/svg",
         children: (0, i.jsx)("path", {
@@ -29,10 +29,10 @@ var u = n(771104),
 function E(e) {
     let { emojiSubCategory: t } = e;
     return (0, i.jsxs)("div", {
-        className: r()(f.KT, t === d.tm.TOP_GUILD_EMOJI ? f.S7 : f.lD),
+        className: l()(f.KT, t === d.tm.TOP_GUILD_EMOJI ? f.S7 : f.lD),
         children: [
             t === d.tm.TOP_GUILD_EMOJI ? (0, i.jsx)(c, { foreground: f.Gb }) : (0, i.jsx)(u.A, { foreground: f.Gb }),
-            (0, i.jsx)(l.E, {
+            (0, i.jsx)(r.E, {
                 variant: "text-sm/semibold",
                 color: "text-overlay-light",
                 children: t === d.tm.TOP_GUILD_EMOJI ? m.intl.string(m.t.TR2B4T) : m.intl.string(m.t["1aZ4V6"]),
@@ -51,13 +51,13 @@ let I = function (e) {
         emojiSubCategory: I = d.tm.NONE,
     } = e;
     return (0, i.jsxs)("div", {
-        className: r()(f.qV, t),
+        className: l()(f.qV, t),
         children: [
             (0, i.jsx)("div", { className: f.FZ, "aria-hidden": !0, children: n }),
             (0, i.jsxs)("div", {
                 className: f.tC,
                 children: [
-                    (0, i.jsxs)(l.E, {
+                    (0, i.jsxs)(r.E, {
                         className: f.jn,
                         variant: "text-md/semibold",
                         children: [
@@ -74,7 +74,7 @@ let I = function (e) {
                             o,
                         ],
                     }),
-                    null != c && (0, i.jsx)(l.E, { className: f.Fm, variant: "text-xs/normal", children: c }),
+                    null != c && (0, i.jsx)(r.E, { className: f.Fm, variant: "text-xs/normal", children: c }),
                 ],
             }),
             I === d.tm.NONE

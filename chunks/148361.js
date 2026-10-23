@@ -2,8 +2,8 @@
 var i = n(477900);
 n(582128);
 var s = n(793574),
-    r = n(688810),
-    l = n(151271),
+    l = n(688810),
+    r = n(151271),
     a = n(609178),
     o = n(690521),
     c = n(927578),
@@ -22,8 +22,8 @@ let I = function (e) {
             pickerIntention: p,
             analyticsLocation: A,
         } = e,
-        _ = (0, l.RQ)((e) => e.searchQuery),
-        { analyticsLocations: N } = (0, r.Ay)(s.A.EMOJI_PICKER);
+        _ = (0, r.RQ)((e) => e.searchQuery),
+        { analyticsLocations: N } = (0, l.Ay)(s.A.EMOJI_PICKER);
     t =
         p === m.EmojiIntention.REACTION
             ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED

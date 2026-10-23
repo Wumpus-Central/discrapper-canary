@@ -1,8 +1,8 @@
 n.d(t, { A: () => u });
 var i = n(724651),
     s = n(732280),
-    r = n(511484),
-    l = n(202541),
+    l = n(511484),
+    r = n(202541),
     a = n(88001),
     o = n(148155),
     c = n(105292);
@@ -13,8 +13,8 @@ let u = function (e, t) {
         m = (0, i.p)();
     if (null != u && (null == e || u.subscriptionTrial?.skuId === e))
         return u.isReferralTrial ? c.intl.string(c.t.gtNqJQ) : c.intl.string(c.t.IBYG5U);
-    if (null != d && (null == e || (0, r.U9)(d, e))) {
-        let e = l.U4.includes(d.discountId);
+    if (null != d && (null == e || (0, l.U9)(d, e))) {
+        let e = r.U4.includes(d.discountId);
         return c.intl.formatToPlainString(e ? c.t.mYNXed : c.t.iiLbvu, { percent: d.discount.amount });
     }
     return n && null != m && null != m.discount

@@ -2,8 +2,8 @@ n.d(t, { u: () => a });
 var i = n(477900);
 n(582128);
 var s = n(661531),
-    r = n(996682),
-    l = n(27989);
+    l = n(996682),
+    r = n(27989);
 function a(e) {
     let {
             size: t = "md",
@@ -13,11 +13,11 @@ function a(e) {
             colorClass: c = "",
             ...u
         } = e,
-        d = (0, l.J)(t),
+        d = (0, r.J)(t),
         m = d?.width ?? n,
         f = d?.height ?? a;
     return (0, i.jsxs)("svg", {
-        ...(0, r.A)(u),
+        ...(0, l.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
         width: m,
         height: f,

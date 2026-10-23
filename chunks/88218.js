@@ -1,8 +1,8 @@
 n.d(t, { A: () => A, J: () => g });
 var i = n(477900),
     s = n(582128),
-    r = n(503698),
-    l = n.n(r),
+    l = n(503698),
+    r = n.n(l),
     a = n(837381),
     o = n(962125),
     c = n(151271),
@@ -17,10 +17,10 @@ function E(e) {
 function I(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 8,
         s = arguments.length > 4 ? arguments[4] : void 0,
-        r = s ?? ++n.current;
-    if (r !== n.current) return;
-    let l = document.querySelector((0, d.Mz)((0, d.t$)(e, t)));
-    null != l ? l.focus() : i > 0 && requestAnimationFrame(() => I(e, t, n, i - 1, r));
+        l = s ?? ++n.current;
+    if (l !== n.current) return;
+    let r = document.querySelector((0, d.Mz)((0, d.t$)(e, t)));
+    null != r ? r.focus() : i > 0 && requestAnimationFrame(() => I(e, t, n, i - 1, l));
 }
 function g(e) {
     return {
@@ -40,7 +40,7 @@ let A = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
-            categories: r,
+            categories: l,
             store: d,
             children: A,
             emojiPacksHeader: _,
@@ -49,8 +49,8 @@ let A = function (e) {
             rowCount: x,
             getScrollOffsetForIndex: T,
             categoryHeight: y,
-            onScroll: O,
-            renderCategoryListItem: j,
+            onScroll: j,
+            renderCategoryListItem: O,
             rowCountBySection: S,
             renderSection: b,
             navId: R,
@@ -64,8 +64,8 @@ let A = function (e) {
                     navId: t,
                     categoryListRef: n,
                     itemIdForIndex: i,
-                    parseIndex: r,
-                    rowCount: l,
+                    parseIndex: l,
+                    rowCount: r,
                     activeIndex: a,
                     getScrollOffsetForIndex: o,
                     enabled: c = !0,
@@ -89,19 +89,19 @@ let A = function (e) {
                 ),
                 _ = s.useCallback(
                     (e, n) => {
-                        let s = r(n);
+                        let s = l(n);
                         if (null != s) {
-                            let e = E(r) ?? g.current;
+                            let e = E(l) ?? g.current;
                             (A(s, null == e || s >= e), (g.current = s));
                         }
-                        let l = document.querySelector(e);
-                        if (null != l) {
-                            ((h.current += 1), l.focus());
+                        let r = document.querySelector(e);
+                        if (null != r) {
+                            ((h.current += 1), r.focus());
                             return;
                         }
                         null != s && I(t, i(s), h);
                     },
-                    [i, t, r, A],
+                    [i, t, l, A],
                 ),
                 N = s.useCallback(
                     (e, n) => {
@@ -131,14 +131,14 @@ let A = function (e) {
                     [n],
                 ),
                 T = s.useCallback(() => {
-                    let e = E(r) ?? g.current;
-                    null == e || e >= l - 1 || N(e + 1, !0);
-                }, [N, r, l]),
+                    let e = E(l) ?? g.current;
+                    null == e || e >= r - 1 || N(e + 1, !0);
+                }, [N, l, r]),
                 y = s.useCallback(() => {
-                    let e = E(r) ?? g.current;
+                    let e = E(l) ?? g.current;
                     null == e || e <= 0 || N(e - 1, !1);
-                }, [N, r]),
-                O = (0, u.Ay)({
+                }, [N, l]),
+                j = (0, u.Ay)({
                     id: t,
                     isEnabled: p,
                     setFocus: _,
@@ -147,23 +147,23 @@ let A = function (e) {
                     onNavigateNextAtEnd: T,
                     onNavigatePreviousAtStart: y,
                 }),
-                j = O.setFocus;
+                O = j.setFocus;
             return (
                 s.useEffect(() => {
-                    if (!c || a < 0 || a >= l) return;
+                    if (!c || a < 0 || a >= r) return;
                     let e = n.current?.getScrollerNode();
                     if (null != e && e.contains(document.activeElement)) return;
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), j(i(a)));
+                                ((g.current = a), O(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, c, i, j, l]),
-                O
+                }, [a, n, c, i, O, r]),
+                j
             );
         })({
             navId: R ?? "expression-picker-categories-disabled",
@@ -177,17 +177,17 @@ let A = function (e) {
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
-            r = s.useRef(h.An1),
-            l = s.useRef(t);
+            l = s.useRef(h.An1),
+            r = s.useRef(t);
         s.useEffect(() => {
             null != t &&
-                t !== l.current &&
-                (r.current !== h.An1 && window.cancelAnimationFrame(r.current),
-                (r.current = window.requestAnimationFrame(() => {
+                t !== r.current &&
+                (l.current !== h.An1 && window.cancelAnimationFrame(l.current),
+                (l.current = window.requestAnimationFrame(() => {
                     if (null == n.current) return;
-                    let e = t > (l.current ?? -1),
+                    let e = t > (r.current ?? -1),
                         s = null != i ? i(t, e) : 0;
-                    (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (r.current = h.An1), (l.current = t));
+                    (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
         }, [t, n, i]);
     })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: T });
@@ -198,11 +198,11 @@ let A = function (e) {
             },
             [n, d],
         ),
-        U = s.useCallback((e) => j(r[e], e, () => k(e), L === e), [L, r, k, j]),
-        G = s.useMemo(() => ("function" == typeof y ? (e) => y(r[e], e) : y), [r, y]),
+        U = s.useCallback((e) => O(l[e], e, () => k(e), L === e), [L, l, k, O]),
+        G = s.useMemo(() => ("function" == typeof y ? (e) => y(l[e], e) : y), [l, y]),
         F = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: O,
+            onScroll: j,
             ref: t,
             renderRow: U,
             rowCount: x,
@@ -213,7 +213,7 @@ let A = function (e) {
             role: M ? "none presentation" : void 0,
         }),
         J = (0, i.jsxs)("div", {
-            className: l()(p.iE, { [p.bx]: null != _ }, N),
+            className: r()(p.iE, { [p.bx]: null != _ }, N),
             children: [
                 _,
                 M

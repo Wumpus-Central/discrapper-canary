@@ -1,8 +1,8 @@
 (n.d(t, { FV: () => I, Ff: () => h, Fk: () => g, JZ: () => A, oV: () => E, se: () => p }), n(321073));
 var i = n(582128),
     s = n(435558),
-    r = n.n(s),
-    l = n(741918),
+    l = n.n(s),
+    r = n(741918),
     a = n(118057),
     o = n(788413),
     c = n(23339),
@@ -15,20 +15,20 @@ function E(e) {
             gridWrapperRef: t,
             containerWidth: n,
             showingEmptyState: s,
-            listPaddingLeft: l = f,
+            listPaddingLeft: r = f,
             listScrollbarWidth: a = 8,
         } = e,
         [o, c] = i.useState(void 0),
         u = i.useCallback(() => {
             if (null == t.current) return null;
-            c(t.current.offsetWidth - l - a);
-        }, [t, l, a]);
+            c(t.current.offsetWidth - r - a);
+        }, [t, r, a]);
     return (
         i.useLayoutEffect(() => {
             u();
         }, [n, u, s]),
         i.useEffect(() => {
-            let e = r().debounce(u, 250);
+            let e = l().debounce(u, 250);
             return (window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
         }, [u]),
         o
@@ -36,16 +36,16 @@ function E(e) {
 }
 function I(e) {
     let { activeCategoryIndex: t, listRef: n, searchQuery: s } = e,
-        r = i.useRef(s),
-        l = i.useRef(!0);
+        l = i.useRef(s),
+        r = i.useRef(!0);
     (i.useLayoutEffect(() => {
-        ("" === s && "" !== r.current && n.current?.scrollToSectionTop(t), (r.current = s));
+        ("" === s && "" !== l.current && n.current?.scrollToSectionTop(t), (l.current = s));
     }, [s, t, n]),
         i.useLayoutEffect(() => {
-            l.current && (n.current?.scrollToSectionTop(t), (l.current = !1));
+            r.current && (n.current?.scrollToSectionTop(t), (r.current = !1));
         }, [t, n]),
         i.useEffect(() => {
-            r.current = s;
+            l.current = s;
         }, [s]));
 }
 let g = (e) => {
@@ -53,7 +53,7 @@ let g = (e) => {
             activeCategoryIndex: t,
             listRef: n,
             isScrolling: s,
-            searchQuery: l,
+            searchQuery: r,
             scrollOffset: a = 0,
             onActiveCategoryIndexChange: o,
             disableForSearch: c = !0,
@@ -63,30 +63,30 @@ let g = (e) => {
     d.current = t;
     let f = i.useMemo(
             () =>
-                r().debounce(() => {
+                l().debounce(() => {
                     s.current = !1;
                 }, 250),
             [s],
         ),
         E = i.useMemo(
             () =>
-                r().debounce((e) => {
-                    ("" !== l && c) ||
+                l().debounce((e) => {
+                    ("" !== r && c) ||
                         (window.cancelAnimationFrame(u.current),
                         (u.current = window.requestAnimationFrame(() => {
                             let t = n.current?.getSectionDescriptors();
                             if (null == t) return;
                             let i = t.findIndex((n, i) => {
                                     let s = t[i + 1],
-                                        r = e + a >= n.offset.top,
-                                        l = null != s && e + a < s.offset.top;
-                                    return (null != s && !r && !l) || (r && l) || (r && null == s);
+                                        l = e + a >= n.offset.top,
+                                        r = null != s && e + a < s.offset.top;
+                                    return (null != s && !l && !r) || (l && r) || (l && null == s);
                                 }),
                                 s = -1 === i ? 0 : i;
                             d.current !== s && o(s);
                         })));
                 }, 0),
-            [l, n, a, o, c],
+            [r, n, a, o, c],
         );
     return i.useCallback(
         (e) => {
@@ -100,7 +100,7 @@ function h(e) {
             columnCounts: t,
             gridNavigatorId: n,
             itemGrid: s,
-            itemList: r,
+            itemList: l,
             onGridNavigatorItemSelect: o,
             onGridNavigatorPositionChange: c,
         } = e,
@@ -118,24 +118,24 @@ function h(e) {
                 u.current = !0;
                 let i = d(t, n);
                 if (null == i) return;
-                let { visibleRowIndex: s, columnIndex: l } = i;
-                (c(l, s), null != r.current && r.current.scrollRowIntoView(n));
+                let { visibleRowIndex: s, columnIndex: r } = i;
+                (c(r, s), null != l.current && l.current.scrollRowIntoView(n));
             },
-            [d, r, c],
+            [d, l, c],
         ),
         f = i.useCallback(
             (e, t, n) => {
                 switch (n.type) {
-                    case l.X2.NAVIGATE_UP:
-                    case l.X2.NAVIGATE_DOWN:
-                    case l.X2.NAVIGATE_RIGHT:
-                    case l.X2.NAVIGATE_LEFT:
-                    case l.X2.NAVIGATE_INLINE_START:
-                    case l.X2.NAVIGATE_INLINE_END:
-                    case l.X2.NAVIGATE_START:
-                    case l.X2.NAVIGATE_END:
-                    case l.X2.NAVIGATE_CROSSLINE_START:
-                    case l.X2.NAVIGATE_CROSSLINE_END:
+                    case r.X2.NAVIGATE_UP:
+                    case r.X2.NAVIGATE_DOWN:
+                    case r.X2.NAVIGATE_RIGHT:
+                    case r.X2.NAVIGATE_LEFT:
+                    case r.X2.NAVIGATE_INLINE_START:
+                    case r.X2.NAVIGATE_INLINE_END:
+                    case r.X2.NAVIGATE_START:
+                    case r.X2.NAVIGATE_END:
+                    case r.X2.NAVIGATE_CROSSLINE_START:
+                    case r.X2.NAVIGATE_CROSSLINE_END:
                         m(t);
                 }
             },
@@ -187,13 +187,13 @@ function p(e) {
         categories: t,
         collapsedCategories: n,
         gridWidth: s = 0,
-        listPaddingRight: r = 0,
-        itemNodeWidth: l,
+        listPaddingRight: l = 0,
+        itemNodeWidth: r,
         itemNodeMargin: a = 0,
     } = e;
     return i.useMemo(() => {
-        let e = Math.max(1, Math.floor((s - r + a) / (l + a))),
-            i = Math.floor(Math.max(a, (s - r - l * e) / (e - 1))),
+        let e = Math.max(1, Math.floor((s - l + a) / (r + a))),
+            i = Math.floor(Math.max(a, (s - l - r * e) / (e - 1))),
             o = [],
             c = [],
             u = [],
@@ -207,11 +207,11 @@ function p(e) {
                         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             s = Math.ceil(t.length / e);
                         c[m] = i ? 0 : s;
-                        for (let r = 0; r < s; r++) {
-                            let s = r * e,
-                                l = s + e,
+                        for (let l = 0; l < s; l++) {
+                            let s = l * e,
+                                r = s + e,
                                 a = t
-                                    .slice(s, l)
+                                    .slice(s, r)
                                     .map((e, t) => ({
                                         item: e,
                                         gridSectionIndex: m,
@@ -225,15 +225,15 @@ function p(e) {
                         m++;
                     })(i.items, i.categoryInfo.type, n?.has(`${i.key}`) ?? !1);
         return { expressionsGrid: u, rowCount: d, rowCountBySection: c, columnCounts: o, gutterWidth: i };
-    }, [t, n, s, a, l, r]);
+    }, [t, n, s, a, r, l]);
 }
 function A(e) {
     let {
             columnCounts: t,
             expressionsGrid: n,
             expressionsListRef: s,
-            store: r,
-            gridNavigatorId: l,
+            store: l,
+            gridNavigatorId: r,
             onSelectItem: a,
         } = e,
         {
@@ -245,16 +245,16 @@ function A(e) {
             isUsingKeyboardNavigation: I,
         } = h({
             columnCounts: t,
-            gridNavigatorId: l,
+            gridNavigatorId: r,
             itemGrid: n,
             itemList: s,
             onGridNavigatorItemSelect: a,
-            onGridNavigatorPositionChange: r.setInspectedExpressionPosition,
+            onGridNavigatorPositionChange: l.setInspectedExpressionPosition,
         });
     return (
         i.useEffect(
             () =>
-                r.subscribe(
+                l.subscribe(
                     (e) => e.inspectedExpressionPosition,
                     (e) => {
                         if (null == e) return;
@@ -262,7 +262,7 @@ function A(e) {
                         i !== d.t.GRID_NAVIGATOR_EVENT && c({ type: o.n.SET_FOCUSED_POSITION, x: t, y: n });
                     },
                 ),
-            [c, r],
+            [c, l],
         ),
         {
             getItemProps: u,

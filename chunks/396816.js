@@ -165,7 +165,7 @@ function J(e) {
         return n === e;
     });
 }
-function Q(e) {
+function Z(e) {
     let { guildId: t } = e;
     if (null == (i = I.A.getProps().guild) || t !== i.id || y === C.XlH.SUBMITTING) return !1;
     let n = [...f.A.getSortedRoles(i.id)];
@@ -193,7 +193,7 @@ function Q(e) {
         (L = !1),
         (G = [...n]));
 }
-class Z extends u.Ay.Store {
+class Q extends u.Ay.Store {
     static displayName = "GuildSettingsRolesStore";
     initialize() {
         this.waitFor(I.A, x.A, f.A);
@@ -249,7 +249,7 @@ class Z extends u.Ay.Store {
         return U;
     }
 }
-let $ = new Z(
+let $ = new Q(
         m.h,
         __OVERLAY__
             ? {}
@@ -410,10 +410,10 @@ let $ = new Z(
                           (O = !1),
                           (y = C.XlH.CLOSED));
                   },
-                  GUILD_ROLE_CREATE: Q,
-                  GUILD_ROLE_UPDATE: Q,
+                  GUILD_ROLE_CREATE: Z,
+                  GUILD_ROLE_UPDATE: Z,
                   GUILD_ROLE_DELETE: function (e) {
-                      return (M.has(e.roleId) && (k.delete(e.roleId), U.delete(e.roleId), F(e.roleId)), Q(e));
+                      return (M.has(e.roleId) && (k.delete(e.roleId), U.delete(e.roleId), F(e.roleId)), Z(e));
                   },
                   GUILD_SETTINGS_ROLES_SUBMITTING: function () {
                       y = C.XlH.SUBMITTING;

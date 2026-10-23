@@ -1,12 +1,12 @@
-t.d(i, { p: () => V });
+t.d(i, { p: () => P });
 var n = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
     r = t(941143),
     d = t(562708),
-    u = t(17928),
-    o = t(192308),
+    o = t(17928),
+    u = t(192308),
     c = t(717421),
     A = t(265872),
     m = t(939249),
@@ -23,33 +23,33 @@ var n = t(477900),
     N = t(71393),
     y = t(576705),
     C = t(174459),
-    j = t(778768),
-    b = t(652215);
+    b = t(778768),
+    j = t(652215);
 t(281405);
 var T = t(105292),
     O = t(811041),
     G = t(254849);
-function P(e) {
+function V(e) {
     return 1 - Math.pow(1 - e, 4);
 }
-function V(e) {
+function P(e) {
     let { channel: i, onClose: s } = e,
-        V = l.useRef(null),
+        P = l.useRef(null),
         w = l.useRef(null),
         [k, R] = l.useState(!1),
-        [D, U] = l.useState(0),
-        { analyticsLocations: M } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
+        [M, U] = l.useState(0),
+        { analyticsLocations: D } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
     (0, _.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: d.ImpressionTypes.VIEW,
-        properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: M },
+        properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: D },
     });
-    let L = (0, u.bG)([y.A], () => y.A.can(b.xBc.CREATE_INSTANT_INVITE, i), [i]),
-        F = (0, u.bG)([N.A], () => N.A.getGuild(i.guild_id)),
-        z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
+    let L = (0, o.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
+        F = (0, o.bG)([N.A], () => N.A.getGuild(i.guild_id)),
+        z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [B, K] = l.useState(!1),
         Y = l.useRef(null),
-        q = (0, E.M)(L ? V : Y),
+        q = (0, E.M)(L ? P : Y),
         [$, H] = l.useState(!1),
         { isFocusing: W } = (0, E.A)(w),
         [Z, J] = l.useState(!1),
@@ -57,20 +57,20 @@ function V(e) {
         Q = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                (C.default.track(b.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                (C.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: i.id,
                     guild_id: i.guild_id,
-                    location_stack: M,
+                    location_stack: D,
                 }),
                     R(!1),
                     s?.());
             },
-            [i.id, i.guild_id, s, M],
+            [i.id, i.guild_id, s, D],
         ),
         ee = l.useCallback(() => {
             null != F &&
-                (0, o.openModalLazy)(async () => {
+                (0, u.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         t.e("683621"),
                         t.e("711162"),
@@ -80,13 +80,13 @@ function V(e) {
                         t.e("216084"),
                         t.e("284819"),
                     ]).then(t.bind(t, 405342));
-                    return (t) => (0, n.jsx)(e, { ...t, guild: F, channel: i, source: b.PE1.VOICE_INVITE_SUGGESTIONS });
+                    return (t) => (0, n.jsx)(e, { ...t, guild: F, channel: i, source: j.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [F, i]),
         [ei, et] = (0, c.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
-            config: { duration: 200, easing: P, clamp: !0 },
+            config: { duration: 200, easing: V, clamp: !0 },
         })),
         en = l.useCallback(
             (e) => {
@@ -124,17 +124,17 @@ function V(e) {
             R(!0);
         }, []),
         ea = l.useCallback(() => {
-            (R(!1), H(!1), Z && (J(!1), V.current?.focus()));
+            (R(!1), H(!1), Z && (J(!1), P.current?.focus()));
         }, [Z]);
     return L
         ? (0, n.jsx)(A.Y, {
-              targetElementRef: V,
+              targetElementRef: P,
               shouldShow: k,
               position: "right",
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, n.jsx)(j.w, { channel: i, onHover: H, forceOpen: Z, ...e }),
+              renderPopout: (e) => (0, n.jsx)(b.w, { channel: i, onHover: H, forceOpen: Z, ...e }),
               onRequestOpen: es,
               onRequestClose: ea,
               children: (e) => {
@@ -143,7 +143,7 @@ function V(e) {
                       className: O.lY,
                       style: ei,
                       children: (0, n.jsx)(m.D, {
-                          innerRef: V,
+                          innerRef: P,
                           className: a()({ [O.vk]: !B }, G.q7, G.L9, G.vk),
                           focusProps: { offset: { right: 4 } },
                           "aria-disabled": B,
@@ -173,7 +173,7 @@ function V(e) {
                                                             (0, n.jsx)("circle", { className: O.hN }),
                                                         ],
                                                     },
-                                                    `voice-invite-suggestions-timer-${D}`,
+                                                    `voice-invite-suggestions-timer-${M}`,
                                                 ),
                                           (0, n.jsx)(g.R, {
                                               size: "custom",

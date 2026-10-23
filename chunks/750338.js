@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => I });
 var a = n(477900),
     s = n(582128),
     i = n(503698),
@@ -14,29 +14,29 @@ var a = n(477900),
     f = n(825484),
     h = n(315629),
     g = n(241524),
-    x = n(303136),
+    N = n(303136),
     R = n(607470),
-    N = n(174459),
+    x = n(174459),
     E = n(676279),
     _ = n(406860),
     A = n(610557),
     v = n(652215),
     O = n(693591),
-    I = n(505051);
-let P = (e) => {
+    P = n(505051);
+let I = (e) => {
     let {
             name: t,
             title: n,
             caption: i,
-            description: P,
+            description: I,
             descriptionCta: C,
             previewImage: U,
-            videoUrl: M,
-            shouldLoadVideo: T,
-            index: j,
-            customVideoStyle: S,
-            isReducedMotion: y,
-            onClick: L,
+            videoUrl: T,
+            shouldLoadVideo: M,
+            index: S,
+            customVideoStyle: j,
+            isReducedMotion: L,
+            onClick: y,
             badgeText: B,
             badgeVariant: w = "gradient",
             size: k,
@@ -59,31 +59,31 @@ let P = (e) => {
         et = s.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    N.default.track(v.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                    x.default.track(v.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                 }, 800),
             [t],
         ),
         en = (0, a.jsx)("div", {
-            className: r()(I.captionWrapper, I[`${k}`]),
+            className: r()(P.captionWrapper, P[`${k}`]),
             children:
                 "string" == typeof i
                     ? (0, a.jsx)(b.E, { variant: "text-sm/normal", color: "text-muted", children: i })
                     : i,
         });
     function ea() {
-        (null == F.current || y || ((F.current.currentTime = K.current), F.current.play()), y || G?.current?.play());
+        (null == F.current || L || ((F.current.currentTime = K.current), F.current.play()), L || G?.current?.play());
     }
     function es() {
-        (null == F.current || y || ((K.current = F.current.currentTime), F.current.pause()), y || G?.current?.pause());
+        (null == F.current || L || ((K.current = F.current.currentTime), F.current.pause()), L || G?.current?.pause());
     }
     let ei = k === A.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold";
     function er() {
-        let e = null != C && null != L,
+        let e = null != C && null != y,
             t = null != V && V.length > 0;
         if (!e && !t) return null;
-        let n = e ? [{ variant: "secondary", onClick: L, text: C }] : V;
+        let n = e ? [{ variant: "secondary", onClick: y, text: C }] : V;
         return (0, a.jsx)("div", {
-            className: I.bentoBoxButton,
+            className: P.bentoBoxButton,
             children: (0, a.jsx)(f.e, {
                 children: n?.map((e, t) => {
                     let { onClick: n, ...s } = e;
@@ -103,7 +103,7 @@ let P = (e) => {
     }
     function el() {
         return (0, a.jsxs)("div", {
-            className: r()(I.textBox, I[`${k}`], Q && I.overlayTextBox),
+            className: r()(P.textBox, P[`${k}`], Q && P.overlayTextBox),
             children: [
                 (0, a.jsxs)("div", {
                     children: [
@@ -111,9 +111,9 @@ let P = (e) => {
                             ? null
                             : "gradient" === w
                               ? (0, a.jsx)("div", {
-                                    className: I.badgeContainer,
+                                    className: P.badgeContainer,
                                     children: (0, a.jsx)("div", {
-                                        className: I.badge,
+                                        className: P.badge,
                                         children: (0, a.jsx)(p.D, {
                                             variant: W,
                                             color: "text-overlay-light",
@@ -122,18 +122,18 @@ let P = (e) => {
                                     }),
                                 })
                               : (0, a.jsx)("div", {
-                                    className: I.badgeContainer,
+                                    className: P.badgeContainer,
                                     children: (0, a.jsx)(c.E, { type: { text: B }, variant: w }),
                                 }),
                         null != i && k === A.A0.LARGE && en,
-                        (0, a.jsx)(p.D, { variant: ei, color: "text-strong", className: I.header, children: n }),
+                        (0, a.jsx)(p.D, { variant: ei, color: "text-strong", className: P.header, children: n }),
                     ],
                 }),
                 (0, a.jsx)(b.E, {
                     variant: "text-md/medium",
                     color: "text-strong",
-                    className: I.description,
-                    children: P,
+                    className: P.description,
+                    children: I,
                 }),
                 (0, a.jsx)(er, {}),
             ],
@@ -141,33 +141,33 @@ let P = (e) => {
     }
     function ed() {
         return (0, a.jsxs)("div", {
-            className: r()(I.boxArtContainer, I[`${k}`], H),
+            className: r()(P.boxArtContainer, P[`${k}`], H),
             children: [
-                null == M && (0, u.O)(U) && "string" != typeof U
+                null == T && (0, u.O)(U) && "string" != typeof U
                     ? U
                     : (0, a.jsx)(
                           R.A,
                           {
                               playsInline: !0,
-                              preload: T ? "auto" : "none",
+                              preload: M ? "auto" : "none",
                               muted: !0,
                               poster: U,
                               loop: !0,
-                              className: r()(Q ? I.overlayImage : I.boxVideo, { [S]: null != S }),
+                              className: r()(Q ? P.overlayImage : P.boxVideo, { [j]: null != j }),
                               ref: F,
-                              children: (0, a.jsx)("source", { src: M, type: z ? O.a.MP4 : O.a.WEBM }),
+                              children: (0, a.jsx)("source", { src: T, type: z ? O.a.MP4 : O.a.WEBM }),
                           },
-                          M,
+                          T,
                       ),
                 null != i &&
                     k !== A.A0.LARGE &&
                     (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)("div", { className: I.captionGradient, "aria-hidden": !0 }), en],
+                        children: [(0, a.jsx)("div", { className: P.captionGradient, "aria-hidden": !0 }), en],
                     }),
             ],
         });
     }
-    let ec = j % 2 != 0;
+    let ec = S % 2 != 0;
     return (0, a.jsx)(d.L, {
         innerRef: q,
         onChange: $,
@@ -176,13 +176,13 @@ let P = (e) => {
             ref: q,
             id: t,
             className: r()(
-                I.backgroundColor,
-                I.boxContainer,
-                I[`${k}`],
-                I.gradientBackground,
+                P.backgroundColor,
+                P.boxContainer,
+                P[`${k}`],
+                P.gradientBackground,
                 X,
-                Z && I.overlayImageMode,
-                Q && I.overlayMode,
+                Z && P.overlayImageMode,
+                Q && P.overlayMode,
             ),
             onMouseEnter: ea,
             onFocus: ea,
@@ -192,10 +192,10 @@ let P = (e) => {
             children: [
                 ee &&
                     (0, a.jsx)("div", {
-                        className: I.backgroundVideoContainer,
-                        children: (0, a.jsx)(x.A, {
-                            preload: T ? "auto" : "none",
-                            className: I.backgroundVideo,
+                        className: P.backgroundVideoContainer,
+                        children: (0, a.jsx)(N.A, {
+                            preload: M ? "auto" : "none",
+                            className: P.backgroundVideo,
                             src: Y,
                         }),
                     }),

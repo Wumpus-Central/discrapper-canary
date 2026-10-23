@@ -1,8 +1,8 @@
 n.d(t, { A: () => p, o: () => h });
 var i,
     s = n(477900),
-    r = n(661531),
-    l = n(860430),
+    l = n(661531),
+    r = n(860430),
     a = n(519396),
     o = n(268791),
     c = n(885574),
@@ -12,9 +12,9 @@ var i,
 n(582128);
 var f = n(953727);
 function E(e) {
-    let { width: t = 18, height: n = 22, color: i = "currentColor", ...r } = e;
+    let { width: t = 18, height: n = 22, color: i = "currentColor", ...l } = e;
     return (0, s.jsx)("svg", {
-        ...(0, f.A)(r),
+        ...(0, f.A)(l),
         width: t,
         height: n,
         viewBox: "0 0 18 22",
@@ -47,46 +47,46 @@ let p = function (e) {
             tooltip: A,
         } = {
             0: {
-                icon: l.m,
+                icon: r.m,
                 description: I.intl.string(I.t.YbdEFK),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
             },
             4: {
                 icon: a.u,
                 description: I.intl.string(I.t["01Papm"]),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
             },
             5: {
                 icon: E,
                 description: I.intl.string(I.t["6WN/qk"]),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
             },
             1: {
                 icon: o.$,
                 description: I.intl.string(I.t["4rjikl"]),
-                color: r.A.unsafe_rawColors.ORANGE_345.css,
+                color: l.A.unsafe_rawColors.ORANGE_345.css,
                 tooltip: I.intl.string(I.t.dq9aTi),
             },
             2: {
                 icon: c.CircleInformationIcon,
                 description: I.intl.string(I.t["5VmbbF"]),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
             },
             3: {
                 icon: c.CircleInformationIcon,
                 description: I.intl.string(I.t.rjFOZ2),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
             },
         }[n];
     return (0, s.jsxs)("div", {
         className: g._Z,
         children: [
-            (0, s.jsx)(f, { className: g.Yg, color: r.A.unsafe_rawColors.PRIMARY_300.css }),
+            (0, s.jsx)(f, { className: g.Yg, color: l.A.unsafe_rawColors.PRIMARY_300.css }),
             (0, s.jsxs)("div", {
                 className: g.XE,
                 children: [

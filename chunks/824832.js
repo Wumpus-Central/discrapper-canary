@@ -1,8 +1,8 @@
 (n.d(t, { Ay: () => f, UD: () => d }), n(321073));
 var i = n(477900),
     s = n(582128),
-    r = n(192308),
-    l = n(780777),
+    l = n(192308),
+    r = n(780777),
     a = n(946274),
     o = n(73621),
     c = n(693591);
@@ -25,20 +25,20 @@ async function u(e) {
 }
 async function d(e, t) {
     var s;
-    let l = [];
+    let r = [];
     for (let n = 0; n < e.length; n++) {
         let i = e[n];
         try {
             let { image: e, dataURI: n } = await u(i),
                 s = i.type === c.a.MP4 ? await t(n, i) : await t(n, i, e);
-            null != s && l.push({ type: s, filename: i.name });
+            null != s && r.push({ type: s, filename: i.name });
         } catch (e) {
-            l.push({ type: e, filename: i.name });
+            r.push({ type: e, filename: i.name });
         }
     }
-    l.length > 0 &&
-        ((s = l),
-        (0, r.openModalLazy)(async () => {
+    r.length > 0 &&
+        ((s = r),
+        (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("223685"), n.e("484981")]).then(n.bind(n, 940372));
             return (t) => (0, i.jsx)(e, { errors: s, ...t });
         }));
@@ -69,16 +69,16 @@ function m(e) {
         )
             return;
         let t = e.currentTarget.files;
-        p.current = await (0, r.openModalLazy)(async () => {
+        p.current = await (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("886895"), n.e("817259")]).then(n.bind(n, 897126));
             return (n) => (0, i.jsx)(e, { processFiles: () => N(t), ...n });
         });
     }
     return (
         s.useEffect(() => {
-            A && null !== p.current && ((0, r.closeModal)(p.current), (p.current = null));
+            A && null !== p.current && ((0, l.closeModal)(p.current), (p.current = null));
         }, [A]),
-        (0, i.jsx)(l.A, {
+        (0, i.jsx)(r.A, {
             ref: h,
             onChange: C,
             filters: E ?? (0, a.gA)(),

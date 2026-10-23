@@ -1,8 +1,8 @@
 n.d(t, { A: () => k });
 var i = n(477900),
     s = n(582128),
-    r = n(503698),
-    l = n.n(r),
+    l = n(503698),
+    r = n.n(l),
     a = n(935462),
     o = n(462824),
     c = n(315629),
@@ -22,8 +22,8 @@ var i = n(477900),
     x = n(82498),
     T = n(732280),
     y = n(369805),
-    O = n(989790),
-    j = n(632150),
+    j = n(989790),
+    O = n(632150),
     S = n(792656),
     b = n(202541),
     R = n(652215),
@@ -37,7 +37,7 @@ function k(e) {
     let t,
         {
             title: n,
-            description: r,
+            description: l,
             analyticsLocationSection: k,
             upsellViewedTrackingData: U,
             onClose: G,
@@ -57,7 +57,7 @@ function k(e) {
     let H = (0, T.V)(),
         W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
         X = (0, y.A)(b.pe.TIER_2),
-        z = (0, O.O9)();
+        z = (0, j.O9)();
     t = V
         ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
@@ -90,7 +90,7 @@ function k(e) {
                                         }),
                                         null != X && (0, i.jsx)(m.E, { type: { text: X }, variant: "primary" }),
                                         (0, i.jsx)(f.D, {
-                                            className: l()(M.DD, { [M.GU]: null != X }),
+                                            className: r()(M.DD, { [M.GU]: null != X }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: n,
@@ -99,7 +99,7 @@ function k(e) {
                                             variant: "text-md/medium",
                                             color: "text-subtle",
                                             className: M.rf,
-                                            children: r,
+                                            children: l,
                                         }),
                                     ],
                                 }),
@@ -107,7 +107,7 @@ function k(e) {
                                     z &&
                                     (0, i.jsx)("div", {
                                         className: M.Zr,
-                                        children: (0, i.jsx)(j.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
+                                        children: (0, i.jsx)(O.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
                                     }),
                             ],
                         }),

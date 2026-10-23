@@ -1,16 +1,16 @@
 n.d(t, { Fp: () => E, Ls: () => m, M5: () => f });
 var i = n(636537),
     s = n(73153),
-    r = n(626584),
-    l = n(594061),
+    l = n(626584),
+    r = n(594061),
     a = n(38405),
     o = n(182159),
     c = n(652215),
     u = n(355097);
-let d = new r.A("EmojiPackActionCreators");
+let d = new l.A("EmojiPackActionCreators");
 async function m(e) {
     o.A.getPack(e)?.available === !0 &&
-        (await l.bW.updateAsync(
+        (await r.bW.updateAsync(
             "pinnedEmojiPacks",
             (t) => {
                 if (t.packIds.includes(e)) return !1;
@@ -23,7 +23,7 @@ async function m(e) {
         ));
 }
 async function f(e) {
-    await l.bW.updateAsync(
+    await r.bW.updateAsync(
         "pinnedEmojiPacks",
         (t) => {
             if (!t.packIds.includes(e)) return !1;

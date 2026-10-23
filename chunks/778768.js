@@ -5,8 +5,8 @@ var n = t(477900),
     a = t.n(s),
     r = t(284009),
     d = t.n(r),
-    u = t(562708),
-    o = t(17928),
+    o = t(562708),
+    u = t(17928),
     c = t(192308),
     A = t(315710),
     m = t(939249),
@@ -23,41 +23,41 @@ var n = t(477900),
     N = t(566903),
     y = t(714114),
     C = t(864436),
-    j = t(835072),
-    b = t(793574),
+    b = t(835072),
+    j = t(793574),
     T = t(688810),
     O = t(139286),
     G = t(47167),
-    P = t(713517),
-    V = t(854627),
+    V = t(713517),
+    P = t(854627),
     w = t(10862),
     k = t(696451),
     R = t(71393),
-    D = t(958590),
+    M = t(958590),
     U = t(576705),
-    M = t(290863),
+    D = t(290863),
     L = t(427262),
     F = t(582904),
     z = t(105292),
     B = t(469640);
 let K = "VoiceInviteSuggestionsPopover";
 function Y(e) {
-    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: p } = e,
+    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: p } = e,
         I = l.useRef(null),
-        v = (0, P.M)(I),
+        v = (0, V.M)(I),
         S = (0, F.kt)({ channel: i }),
-        { analyticsLocations: x } = (0, T.Ay)(b.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+        { analyticsLocations: x } = (0, T.Ay)(j.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (l.useEffect(() => {
         s && I.current?.focus();
     }, [s]),
         (0, O.A)({
-            name: u.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
-            type: u.ImpressionTypes.POPOUT,
+            name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
+            type: o.ImpressionTypes.POPOUT,
             properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: x },
         }),
         l.useEffect(() => {
-            o?.(I.current);
-        }, [o]),
+            u?.(I.current);
+        }, [u]),
         l.useEffect(() => {
             r?.(v);
         }, [r, v]));
@@ -119,25 +119,25 @@ function q(e) {
     let { channel: i, user: t } = e,
         s = i.guild_id,
         r = l.useRef(null),
-        d = (0, o.bG)([k.Ay], () => k.Ay.getMember(s, t.id), [s, t.id]),
-        { isHoveringOrFocusing: u } = (0, P.A)(r),
+        d = (0, u.bG)([k.Ay], () => k.Ay.getMember(s, t.id), [s, t.id]),
+        { isHoveringOrFocusing: o } = (0, V.A)(r),
         [c, A] = l.useState(null),
         {
             status: g,
-            isMobileOnline: b,
+            isMobileOnline: j,
             activities: T,
-        } = (0, o.cf)(
-            [M.A],
+        } = (0, u.cf)(
+            [D.A],
             () => ({
-                status: M.A.getStatus(t.id, s),
-                isMobileOnline: M.A.isMobileOnline(t.id),
-                activities: M.A.getActivities(t.id, s),
+                status: D.A.getStatus(t.id, s),
+                isMobileOnline: D.A.isMobileOnline(t.id),
+                activities: D.A.getActivities(t.id, s),
             }),
             [t.id, s],
         ),
         { activityStatusText: O, activityStatusIcon: R } = l.useMemo(() => {
             let e = T.find((e) => e.type !== f.$pd.CUSTOM_STATUS && e.type !== f.$pd.HANG_STATUS);
-            return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
+            return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, b.f)(e) };
         }, [T]),
         { voiceChannel: F } = (0, y.Ay)({ userId: t.id }),
         Y = (0, G.Ay)(F),
@@ -146,7 +146,7 @@ function q(e) {
         H = l.useCallback(async () => {
             if ($) return;
             async function e() {
-                let e = D.A.getInvite(i.id, {}) ?? null;
+                let e = M.A.getInvite(i.id, {}) ?? null;
                 if (null == e) {
                     if (!U.A.can(f.xBc.CREATE_INSTANT_INVITE, i)) return null;
                     try {
@@ -154,7 +154,7 @@ function q(e) {
                     } catch (e) {
                         return null;
                     }
-                    e = D.A.getInvite(i.id, {}) ?? null;
+                    e = M.A.getInvite(i.id, {}) ?? null;
                 }
                 return e?.code ?? null;
             }
@@ -179,7 +179,7 @@ function q(e) {
             avatarDecorationSrc: W,
             avatarSrc: Z,
             eventHandlers: J,
-        } = (0, V.A)({ userId: t.id, size: I._3.SIZE_24, animateOnHover: !u, guildId: s });
+        } = (0, P.A)({ userId: t.id, size: I._3.SIZE_24, animateOnHover: !o, guildId: s });
     if (null == d) return null;
     let X = L.Ay.getName(t),
         Q = z.intl.string(z.t.jYnGPG),
@@ -201,7 +201,7 @@ function q(e) {
                 src: Z,
                 avatarDecoration: W,
                 status: ee,
-                isMobile: b,
+                isMobile: j,
                 ...J,
             }),
             (0, n.jsxs)("div", {

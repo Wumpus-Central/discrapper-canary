@@ -1,18 +1,18 @@
-t.d(i, { N: () => u, m: () => o });
+t.d(i, { N: () => o, m: () => u });
 var n = t(17928),
     l = t(280450),
     s = t(290863),
     a = t(461213),
     r = t(765379),
     d = t(652215);
-function u(e) {
+function o(e) {
     return (
         ([d.$pd.PLAYING, d.$pd.WATCHING].includes(e.type) &&
             [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
         e.type === d.$pd.LISTENING
     );
 }
-function o(e, i) {
+function u(e, i) {
     return (0, n.yK)(
         [a.A, s.A, l.default],
         () => {
@@ -20,7 +20,7 @@ function o(e, i) {
                 n = new Map();
             for (let e of t) {
                 if (
-                    !u(e) ||
+                    !o(e) ||
                     (0, r.A)(e) ||
                     (null != i &&
                         ((null != i.application_id && e.application_id === i.application_id) ||

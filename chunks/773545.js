@@ -1,4 +1,4 @@
-n.d(e, { Dp: () => E, kW: () => g, r8: () => _ });
+n.d(e, { Dp: () => E, kW: () => p, r8: () => g });
 var r = n(582128),
     i = n(323889),
     s = n(17928),
@@ -23,7 +23,7 @@ function T(t, e, n) {
 function E(t) {
     return (0, s.bG)([l.A], () => l.A.deliveryAdDecisionByPlacement.get(t) ?? null, [t]);
 }
-function g(t) {
+function p(t) {
     let e = (0, r.useRef)(null),
         n = E(t);
     (0, r.useEffect)(() => {
@@ -38,7 +38,7 @@ function g(t) {
         };
     }, [n, t]);
 }
-function _(t, e) {
+function g(t, e) {
     let n = (0, s.bG)([d.A], () => d.A.getQuestPreviewOverride(e), [e]),
         l = E(t),
         a = (0, u.Yz)(l?.creative),

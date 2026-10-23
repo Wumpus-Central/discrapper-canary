@@ -1,8 +1,8 @@
 n.d(t, { Bv: () => C, ar: () => g, f9: () => N, g5: () => _, k0: () => x, k5: () => h, nf: () => A });
 var i = n(582128),
     s = n(536637),
-    r = n.n(s),
-    l = n(17928),
+    l = n.n(s),
+    r = n(17928),
     a = n(155718),
     o = n(166403),
     c = n(89366),
@@ -21,9 +21,9 @@ function g() {
     return null != e || t || null != n || null != i || s;
 }
 let h = () => {
-    let e = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
+    let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
         t = e?.metadata?.active_discount_expires_at;
-    return null != t && r()(Date.now()) <= r()(t);
+    return null != t && l()(Date.now()) <= l()(t);
 };
 function p(e) {
     switch (e) {
@@ -59,18 +59,18 @@ function p(e) {
     }
 }
 function A() {
-    let e = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription());
+    let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription());
     return p(e?.metadata?.active_discount_id);
 }
 function _(e) {
     let t = (0, m.A)(I.q),
         n = (0, m.A)(I.W7),
         s = (0, m.A)(I.Qo),
-        r = (0, m.A)(I.EG),
-        [l, a] = i.useState(!1),
+        l = (0, m.A)(I.EG),
+        [r, a] = i.useState(!1),
         [o, c] = i.useState(!1),
         [u, f] = i.useState(null),
-        E = t ?? n ?? s ?? r ?? null;
+        E = t ?? n ?? s ?? l ?? null;
     if (null != E) return { churnUserDiscountOffer: E, isFetchingChurnDiscountOffer: !1 };
     if (e) return { churnUserDiscountOffer: u, isFetchingChurnDiscountOffer: o };
     function g() {
@@ -78,7 +78,7 @@ function _(e) {
     }
     return (
         o ||
-            l ||
+            r ||
             (c(!0),
             (0, d.qz)()
                 .then((e) => {
@@ -91,7 +91,7 @@ function _(e) {
     );
 }
 function N() {
-    let e = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
+    let e = (0, r.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
         t = h(),
         n = null !== e && e.hasPremiumNitroMonthly,
         i = !!e?.hasActiveTrial;

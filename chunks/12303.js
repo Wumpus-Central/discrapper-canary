@@ -16,9 +16,9 @@ var i = {
     "./spritesheet-picker-22.png.js": "302969",
 };
 function s(e) {
-    return n(r(e));
+    return n(l(e));
 }
-function r(e) {
+function l(e) {
     if (!n.o(i, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -28,6 +28,6 @@ function r(e) {
 ((s.keys = function () {
     return Object.keys(i);
 }),
-    (s.resolve = r),
+    (s.resolve = l),
     (e.exports = s),
     (s.id = 12303));

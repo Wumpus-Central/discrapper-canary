@@ -1,8 +1,8 @@
 n.d(t, { Q: () => f });
 var i = n(477900),
     s = n(582128),
-    r = n(866665),
-    l = n(683063),
+    l = n(866665),
+    r = n(683063),
     a = n(426983),
     o = n(176128),
     c = n(454938),
@@ -24,7 +24,7 @@ function f(e) {
             t.features.has(m.GuildFeatures.PARTNERED)
         );
     }, [t, f])
-        ? (0, i.jsx)(l.u, {
+        ? (0, i.jsx)(r.u, {
               asset: f
                   ? (0, i.jsx)(d.A, { disableBoostClick: !0, guild: t, size: 20 })
                   : (0, i.jsx)(u.A, { guild: t, size: 20 }),
@@ -34,5 +34,5 @@ function f(e) {
               body: t.name,
               children: n,
           })
-        : (0, i.jsx)(r.m, { position: "right", align: "center", text: t.name, children: n });
+        : (0, i.jsx)(l.m, { position: "right", align: "center", text: t.name, children: n });
 }
