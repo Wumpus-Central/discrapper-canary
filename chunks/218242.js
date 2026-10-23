@@ -9129,6 +9129,14 @@ function uj(e) {
                   align: "start",
                   children: [
                       (0, a.jsx)(uv, { projectId: t, publish: r }),
+                      null != r.failure
+                          ? (0, a.jsx)(v.E, {
+                                variant: "text-sm/normal",
+                                color: "text-feedback-critical",
+                                role: "alert",
+                                children: r.failure,
+                            })
+                          : null,
                       null != n ? (0, a.jsx)(ux, { projectId: t, turnId: n, cta: l, status: r.status }) : null,
                   ],
               }),
