@@ -895,7 +895,7 @@ ${a}`),
                     attachmentsToUpload: x,
                     onAttachmentUploadError: k,
                     announcementSendOptions: F,
-                    withCheckpoint: B,
+                    checkpointCardType: B,
                     mediaMention: V,
                     scheduledTimestamp: W,
                 } = n,
@@ -916,7 +916,7 @@ ${a}`),
                 null == b &&
                 !Q &&
                 (null == G || 0 === G.length) &&
-                !B &&
+                null == B &&
                 (null == t.components || 0 === t.components.length)
             )
                 if (null == x || !(x.length > 0)) return Promise.resolve();
@@ -997,7 +997,7 @@ ${a}`),
                 null != L && (ec.message.shared_client_theme = L),
                 null != S && (ec.message.sticker_ids = S),
                 el.A.isEnabled() && (ec.message.has_poggermode_enabled = !0),
-                B && (ec.message.with_checkpoint = !0),
+                null != B && (ec.message.checkpoint_card_type = B),
                 null != b && (ec.message.content_inventory_entry = b),
                 null != V && (ec.message.media_mention = V),
                 null != G && G.length > 0 && (ec.message.attachments = G),
