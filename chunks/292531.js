@@ -36,7 +36,7 @@ let c = new d(s.h, {
         (o = new Map(o)).set(
             t,
             (function (e) {
-                let { game_organization: t, application: n, application_config: i } = e;
+                let { game_organization: t, application: n, application_config: i, guild: r } = e;
                 return {
                     code: e.code,
                     state: l.RESOLVED,
@@ -51,6 +51,13 @@ let c = new d(s.h, {
                     },
                     application: { id: n.id, name: n.name, iconUrl: n.icon_url },
                     displayNoun: i?.display_noun ?? null,
+                    linkedGuild: {
+                        id: r.id,
+                        name: r.name,
+                        icon: r.icon,
+                        memberCount: r.approximate_member_count,
+                        presenceCount: r.approximate_presence_count,
+                    },
                 };
             })(n),
         );
