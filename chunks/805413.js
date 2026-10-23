@@ -19,7 +19,7 @@ function p(e) {
 }
 let T = function (e) {
     let { markAsDismissed: t, recurringDismiss: n, noticeType: a } = e,
-        l = E.T.ACTIVISION_APPLICATION_ID,
+        l = E.T.CALL_OF_DUTY_APPLICATION_ID,
         T = (0, u.h)(l),
         m = T?.name,
         { startAuthorization: g, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(T),
