@@ -1,4 +1,4 @@
-s.d(i, { FireIcon: () => d });
+(s.r(i), s.d(i, { FireIcon: () => d }));
 var l = s(477900);
 s(582128);
 var t = s(661531),
@@ -11,13 +11,13 @@ function d(e) {
             height: d,
             color: h = t.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: n = "",
-            ...o
+            ...r
         } = e,
-        r = (0, c.J)(i),
-        p = r?.width ?? s,
-        w = r?.height ?? d;
+        o = (0, c.J)(i),
+        p = o?.width ?? s,
+        w = o?.height ?? d;
     return (0, l.jsx)("svg", {
-        ...(0, a.A)(o),
+        ...(0, a.A)(r),
         xmlns: "http://www.w3.org/2000/svg",
         width: p,
         height: w,

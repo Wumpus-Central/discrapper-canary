@@ -7,10 +7,11 @@ let l = new Map();
 async function o(e, t, n) {
     let i = u(e, t, n),
         r = l.get(i);
-    if ((l.delete(i), null != r && r.expiresAt > Date.now())) {
-        let e = await r.ticket.catch(() => null);
-        if (null != e) return e;
-    }
+    if ((l.delete(i), null != r && r.expiresAt > Date.now()))
+        try {
+            let e = await r.ticket;
+            if (null != e) return e;
+        } catch {}
     return _(e, t, n);
 }
 function d(e, t, n) {

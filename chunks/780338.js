@@ -1,4 +1,4 @@
-n.d(t, { BellSlashIcon: () => a });
+(n.r(t), n.d(t, { BellSlashIcon: () => a }));
 var i = n(477900);
 n(582128);
 var l = n(661531),

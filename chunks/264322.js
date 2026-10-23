@@ -109,8 +109,12 @@ async function X(e) {
 async function q(e) {
     let t = new AbortController(),
         n = new o.K();
-    (K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
-        await (0, L.E)(e, t).then(n.resolve).catch(n.reject));
+    K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0);
+    try {
+        n.resolve(await (0, L.E)(e, t));
+    } catch (e) {
+        n.reject(e);
+    }
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

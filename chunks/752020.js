@@ -5,8 +5,8 @@ var l = t(477900),
     s = t(847873),
     u = t(292442),
     a = t(834730),
-    o = t(791606),
-    c = t(38405),
+    c = t(791606),
+    o = t(38405),
     d = t(17928),
     h = t(540999);
 let m = [
@@ -53,19 +53,19 @@ function b(e) {
     });
 }
 var C = t(236285),
-    N = t(7584),
-    S = t(930101),
-    M = t(78377),
-    w = t(690521),
+    w = t(7584),
+    N = t(930101),
+    S = t(78377),
+    M = t(690521),
     E = t(487417),
     _ = t(307731);
 let L = r.createContext(!1);
 function z(e) {
     let { value: n, jumboable: t } = e,
-        r = w.Ay.getURL(n),
-        i = N.Ay.convertSurrogateToName(n),
-        s = (0, M.p)();
-    return (0, l.jsx)(S.H, {
+        r = M.Ay.getURL(n),
+        i = w.Ay.convertSurrogateToName(n),
+        s = (0, S.p)();
+    return (0, l.jsx)(N.H, {
         node: { name: i, src: r, jumboable: t },
         channelId: s?.channelId,
         messageId: s?.messageId,
@@ -73,13 +73,13 @@ function z(e) {
 }
 function P(e) {
     let { value: n, jumboable: t } = e,
-        r = (0, M.p)(),
+        r = (0, S.p)(),
         i = r?.guildId,
         s = (0, d.bG)([C.Ay], () => C.Ay.getDisambiguatedEmojiContext(i).getById(String(n.id)), [i, n.id]),
         u = s?.name ?? n.name;
     return (
         null != s && s.require_colons && (u = `:${s.name}:`),
-        (0, l.jsx)(S.X, {
+        (0, l.jsx)(N.X, {
             node: { name: u, animated: n.animated, emojiId: String(n.id), jumboable: t },
             channelId: r?.channelId,
             messageId: r?.messageId,
@@ -103,30 +103,26 @@ var T = t(588975),
     Q = t(836156);
 let W = /^dev:\/\//i,
     Y = r.lazy(() => Promise.resolve().then(t.bind(t, 435954))),
-    Z = r.lazy(() =>
-        Promise.resolve()
-            .then(t.bind(t, 950980))
-            .then((e) => {
-                let { ExperimentEmbed: n } = e;
-                return { default: n };
-            }),
-    ),
-    V = r.lazy(() =>
-        Promise.all([t.e("503634"), t.e("761764"), t.e("218126"), t.e("60800"), t.e("467696")])
-            .then(t.bind(t, 881267))
-            .then((e) => {
-                let { PlaygroundEmbed: n } = e;
-                return { default: n };
-            }),
-    ),
-    ee = r.lazy(() =>
-        Promise.all([t.e("378100"), t.e("886456"), t.e("278078")])
-            .then(t.bind(t, 909261))
-            .then((e) => {
-                let { DevToolsLinkEmbed: n } = e;
-                return { default: n };
-            }),
-    );
+    Z = r.lazy(async () => {
+        let { ExperimentEmbed: e } = await Promise.resolve().then(t.bind(t, 950980));
+        return { default: e };
+    }),
+    V = r.lazy(async () => {
+        let { PlaygroundEmbed: e } = await Promise.all([
+            t.e("503634"),
+            t.e("761764"),
+            t.e("218126"),
+            t.e("60800"),
+            t.e("467696"),
+        ]).then(t.bind(t, 881267));
+        return { default: e };
+    }),
+    ee = r.lazy(async () => {
+        let { DevToolsLinkEmbed: e } = await Promise.all([t.e("378100"), t.e("886456"), t.e("278078")]).then(
+            t.bind(t, 909261),
+        );
+        return { default: e };
+    });
 function en(e) {
     let { url: n } = e,
         t =
@@ -148,8 +144,8 @@ var et = t(192308),
     es = t(78390),
     eu = t(392605),
     ea = t(990474),
-    eo = t(232042),
-    ec = t(266645),
+    ec = t(232042),
+    eo = t(266645),
     ed = t(906754),
     eh = t(37632),
     em = t(593284),
@@ -168,8 +164,8 @@ function eb(e) {
         u = (0, er.A)(n),
         {
             name: a,
-            iconType: o,
-            isForumPost: c,
+            iconType: c,
+            isForumPost: o,
             hasAccess: h,
         } = (0, d.cf)(
             [J.A, ep.default, ef.A],
@@ -184,23 +180,23 @@ function eb(e) {
             },
             [n],
         ),
-        m = (0, M.p)();
-    if (null == o) return;
+        m = (0, S.p)();
+    if (null == c) return;
     let x = r === m?.guildId || null == r,
         j =
             h || u.isSubscriptionGated
                 ? x || null == a
-                    ? (0, l.jsx)(eo.A, {
-                          iconType: o,
+                    ? (0, l.jsx)(ec.A, {
+                          iconType: c,
                           children: a ?? (0, l.jsx)("em", { children: ey.intl.string(ey.t.J90oLW) }),
                       })
                     : (0, l.jsx)(eC, { guildId: r, children: a })
-                : (0, l.jsx)(eo.A, { iconType: "locked", children: ey.intl.string(ey.t["/YzI63"]) }),
+                : (0, l.jsx)(ec.A, { iconType: "locked", children: ey.intl.string(ey.t["/YzI63"]) }),
         g = null;
     return (
         null != i &&
             (g = (0, l.jsxs)(l.Fragment, {
-                children: [(0, l.jsx)(eh.A, {}), (0, l.jsx)(eo.A, { iconType: c ? "post" : "message" })],
+                children: [(0, l.jsx)(eh.A, {}), (0, l.jsx)(ec.A, { iconType: o ? "post" : "message" })],
             })),
         (0, l.jsxs)(H.A, {
             role: "link",
@@ -227,9 +223,9 @@ function eC(e) {
         r = (0, d.bG)([eg.A], () => eg.A.getGuild(n), [n]);
     return (0, l.jsxs)(ed.A, { guild: r, children: [r?.name, null != r ? (0, l.jsx)(eh.A, {}) : null, t] });
 }
-function eN(e) {
+function ew(e) {
     let { id: n } = e,
-        t = (0, M.p)();
+        t = (0, S.p)();
     return (0, l.jsx)(ex.A, {
         className: "mention",
         userId: n,
@@ -239,9 +235,9 @@ function eN(e) {
         content: `<@${n}>`,
     });
 }
-function eS(e) {
+function eN(e) {
     let { id: n } = e,
-        t = (0, M.p)(),
+        t = (0, S.p)(),
         r = t?.guildId,
         i = (0, d.bG)([ej.A], () => (null != r ? ej.A.getRole(r, n)?.name : null) ?? ey.intl.string(ey.t.sKdZ6U), [
             r,
@@ -249,19 +245,19 @@ function eS(e) {
         ]);
     return (0, l.jsx)(em.A, { roleId: n, channelId: t?.channelId, guildId: t?.guildId, children: `@${i}` });
 }
-function eM(e) {
+function eS(e) {
     let { id: n } = e,
-        t = (0, M.p)();
-    return (0, l.jsx)(ec.A, { gameId: n, authorId: t?.authorId });
+        t = (0, S.p)();
+    return (0, l.jsx)(eo.A, { gameId: n, authorId: t?.authorId });
 }
-function ew(e) {
+function eM(e) {
     let { roleName: n } = e,
-        t = (0, M.p)();
+        t = (0, S.p)();
     return (0, l.jsx)(em.A, { roleName: n, channelId: t?.channelId, guildId: t?.guildId, children: n });
 }
 function eE(e) {
     let { route: n, itemId: t } = e,
-        r = (0, M.p)(),
+        r = (0, S.p)(),
         i = r?.guildId,
         s = (0, es.Q)(n),
         u = (0, d.bG)([ej.A], () => (0, es.f)(ej.A, n, t, i), [n, t, i]);
@@ -279,7 +275,7 @@ function eE(e) {
 }
 function e_(e) {
     let { id: n, name: t } = e,
-        i = (0, M.p)(),
+        i = (0, S.p)(),
         s = r.useMemo(() => {
             let [, ...e] = t.split(" ");
             return `${n}${[...e].map((e) => `${ek.v4}${e}`).join("")}`;
@@ -450,15 +446,15 @@ let eD = {
                 case "channel":
                     return (0, l.jsx)(eb, { channelId: String(t) });
                 case "user":
-                    return (0, l.jsx)(eN, { id: String(t) });
+                    return (0, l.jsx)(ew, { id: String(t) });
                 case "role":
-                    return (0, l.jsx)(eS, { id: String(t) });
+                    return (0, l.jsx)(eN, { id: String(t) });
                 case "everyone":
-                    return (0, l.jsx)(ew, { roleName: "@everyone" });
+                    return (0, l.jsx)(eM, { roleName: "@everyone" });
                 case "here":
-                    return (0, l.jsx)(ew, { roleName: "@here" });
+                    return (0, l.jsx)(eM, { roleName: "@here" });
                 case "game":
-                    return (0, l.jsx)(eM, { id: String(t) });
+                    return (0, l.jsx)(eS, { id: String(t) });
                 case "command":
                     return (0, l.jsx)(e_, { id: String(t.id), name: t.name });
                 case "static":
@@ -481,7 +477,7 @@ let eD = {
         spoiler: function (e) {
             let { children: n, node: t } = e,
                 i = r.useMemo(() => Array.from((0, E.t)([t])).some((e) => "link" === e.type), [t]),
-                s = (0, M.p)();
+                s = (0, S.p)();
             return (
                 r.useEffect(() => {
                     s?.setHasSpoilerEmbeds?.(i);
@@ -516,8 +512,8 @@ function eK(e) {
     let { content: n, allowJumboEmoji: t, hideSingleLinkContent: u } = e;
     eH || r.use(eJ());
     let a = (0, d.bG)([h.A], () => h.A.isDeveloper, []) ? x : m,
-        o = r.useMemo(() => (0, s.qg)(n, a), [n, a]),
-        c = r.useMemo(
+        c = r.useMemo(() => (0, s.qg)(n, a), [n, a]),
+        o = r.useMemo(
             () =>
                 t &&
                 (function (e) {
@@ -537,8 +533,8 @@ function eK(e) {
                                 return !1;
                         }
                     return n <= _.MAX_EMOJI_TO_BE_JUMBO;
-                })(o),
-            [t, o],
+                })(c),
+            [t, c],
         ),
         j = r.useMemo(
             () =>
@@ -570,16 +566,16 @@ function eK(e) {
                               }
                               return l ? t : e;
                           })(e, { onlyLinkContent: l.onlyLinks, stripGameServerShareLinks: !0 });
-                })(o, { hideSingleLinkContent: u }),
-            [o, u],
+                })(c, { hideSingleLinkContent: u }),
+            [c, u],
         );
-    return (0, l.jsx)(L.Provider, { value: c, children: (0, l.jsx)(i.$, { nodes: j, renderers: eD }) });
+    return (0, l.jsx)(L.Provider, { value: o, children: (0, l.jsx)(i.$, { nodes: j, renderers: eD }) });
 }
 function eR(e) {
     let { content: n, error: t } = e;
     return (
         r.useEffect(() => {
-            c.A.captureException(t);
+            o.A.captureException(t);
         }, [t]),
         (0, l.jsxs)(l.Fragment, {
             children: [
@@ -588,7 +584,7 @@ function eR(e) {
                     variant: "text-md/normal",
                     color: "text-feedback-critical",
                     className: eB.g,
-                    children: [(0, l.jsx)(o.A, { width: 16, height: 16 }), ey.intl.string(ey.t.dpFK4M)],
+                    children: [(0, l.jsx)(c.A, { width: 16, height: 16 }), ey.intl.string(ey.t.dpFK4M)],
                 }),
             ],
         })

@@ -1,4 +1,4 @@
-c.d(h, { UserIcon: () => a });
+(c.r(h), c.d(h, { UserIcon: () => a }));
 var t = c(477900);
 c(582128);
 var i = c(661531),

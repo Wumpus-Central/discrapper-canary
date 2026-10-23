@@ -1,10 +1,10 @@
-t.d(n, { r3: () => en, Ay: () => ed, xS: () => es });
+t.d(n, { r3: () => en, Ay: () => ed, xS: () => eo });
 var l = t(477900),
     a = t(582128),
     i = t(503698),
     r = t.n(i),
-    o = t(478676),
-    s = t(939249),
+    s = t(478676),
+    o = t(939249),
     c = t(933832),
     u = t(624479),
     d = t(140735),
@@ -15,14 +15,14 @@ var l = t(477900),
     x = t(332173),
     f = t(37632),
     j = t(534890),
-    A = t(105292),
-    y = t(879386);
+    y = t(105292),
+    A = t(879386);
 let C = function () {
     return (0, l.jsx)(j.ChatIcon, {
         size: "md",
         color: "currentColor",
-        className: y.K,
-        "aria-label": A.intl.string(A.t.BAB0yK),
+        className: A.K,
+        "aria-label": y.intl.string(y.t.BAB0yK),
     });
 };
 var k = t(112107),
@@ -53,16 +53,17 @@ var K = t(380610),
     W = t(100392),
     F = t(950980),
     X = t(836156);
-let q = a.lazy(() =>
-        Promise.all([t.e("503634"), t.e("761764"), t.e("218126"), t.e("60800"), t.e("467696")])
-            .then(t.bind(t, 881267))
-            .then((e) => ({ default: e.PlaygroundEmbed })),
-    ),
-    Y = a.lazy(() =>
-        Promise.all([t.e("378100"), t.e("886456"), t.e("278078")])
-            .then(t.bind(t, 909261))
-            .then((e) => ({ default: e.DevToolsLinkEmbed })),
-    ),
+let q = a.lazy(async () => ({
+        default: (
+            await Promise.all([t.e("503634"), t.e("761764"), t.e("218126"), t.e("60800"), t.e("467696")]).then(
+                t.bind(t, 881267),
+            )
+        ).PlaygroundEmbed,
+    })),
+    Y = a.lazy(async () => ({
+        default: (await Promise.all([t.e("378100"), t.e("886456"), t.e("278078")]).then(t.bind(t, 909261)))
+            .DevToolsLinkEmbed,
+    })),
     Z = RegExp("^" + V.st.source, V.st.flags);
 var J = t(454908),
     Q = t(266645);
@@ -78,19 +79,19 @@ var et = t(881140),
     ea = t(165648),
     ei = t(969490);
 let er = { display: "inline" };
-function eo(e) {
+function es(e) {
     return e.stopPropagation();
 }
-function es(e) {
+function eo(e) {
     return {
         ...e,
-        react: (n, t, a) => (0, l.jsx)("span", { style: er, onClick: eo, children: e.react(n, t, a) }, a.key),
+        react: (n, t, a) => (0, l.jsx)("span", { style: er, onClick: es, children: e.react(n, t, a) }, a.key),
     };
 }
 function ec(e) {
     let { text: n } = e,
         [t, i] = a.useState(!1);
-    return (0, l.jsx)(s.D, {
+    return (0, l.jsx)(o.D, {
         onClick: function () {
             (0, b.C)(
                 n,
@@ -204,13 +205,13 @@ let eu = {
         react: (e, n, t) => {
             let a = e.ordered ? "ol" : "ul",
                 i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
-            return (0, o.reactElement)(a, `${t.key}`, {
+            return (0, s.reactElement)(a, `${t.key}`, {
                 start: e.start,
                 className: t.formatInline ? ea.tZ : null,
                 style: { "--totalCharacters": i, "--olCounterStart": null == e.start ? void 0 : e.start - 1 },
                 children: e.items.map((e, a) => {
-                    let i = (0, o.reactElement)("span", `${t.key}-${a}-innerSpan`, { children: n(e, t) });
-                    return (0, o.reactElement)("li", `${t.key}-${a}` + a, {
+                    let i = (0, s.reactElement)("span", `${t.key}-${a}-innerSpan`, { children: n(e, t) });
+                    return (0, s.reactElement)("li", `${t.key}-${a}` + a, {
                         children: [i, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
                     });
                 }),
@@ -219,8 +220,8 @@ let eu = {
     },
     heading: {
         react: (e, n, t) => {
-            let a = (0, o.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
-            return (0, o.reactElement)("h" + e.level, t?.key != null ? `${t.key}` : null, {
+            let a = (0, s.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
+            return (0, s.reactElement)("h" + e.level, t?.key != null ? `${t.key}` : null, {
                 children: [a, (0, l.jsx)(d.A, { children: "," }, "screen-reader-pause")],
                 className: t.formatInline ? ea.tZ : null,
             });
@@ -236,8 +237,8 @@ let eu = {
     message: { react: (e, n, t) => (0, l.jsx)(C, {}, t.key) },
     subtext: {
         react: (e, n, t) => {
-            let l = (0, o.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
-            return (0, o.reactElement)("small", t?.key != null ? `${t.key}` : null, {
+            let l = (0, s.reactElement)("span", `${t.key}-innerSpan`, { children: n(e.content, t) });
+            return (0, s.reactElement)("small", t?.key != null ? `${t.key}` : null, {
                 children: l,
                 className: t.formatInline ? ea.tZ : null,
             });
@@ -253,7 +254,7 @@ let eu = {
 function ed(e) {
     let { shouldStopPropagation: n } = e;
     function i(e) {
-        return !0 === n ? es(e) : e;
+        return !0 === n ? eo(e) : e;
     }
     return {
         ...eu,
@@ -311,7 +312,7 @@ function ed(e) {
                 let { emojiTooltipPosition: n = "top", enableEmojiClick: t = !0, emojiFocusable: a = !0 } = e;
                 return {
                     react(e, i, r) {
-                        let { key: o, channelId: s, messageId: c } = r;
+                        let { key: s, channelId: o, messageId: c } = r;
                         return e.src
                             ? (0, l.jsx)(
                                   E.H,
@@ -320,12 +321,12 @@ function ed(e) {
                                       tooltipPosition: n,
                                       enableClick: t,
                                       focusable: a,
-                                      channelId: s,
+                                      channelId: o,
                                       messageId: c,
                                   },
-                                  o,
+                                  s,
                               )
-                            : (0, l.jsx)("span", { children: e.surrogate }, o);
+                            : (0, l.jsx)("span", { children: e.surrogate }, s);
                     },
                 };
             })(e),
@@ -335,8 +336,8 @@ function ed(e) {
                 let { emojiTooltipPosition: n = "top", enableEmojiClick: t = !0, emojiFocusable: a = !0 } = e;
                 return {
                     react(e, i, r) {
-                        let { key: o, guildId: s, channelId: c, messageId: u } = r,
-                            d = h.Ay.getDisambiguatedEmojiContext(s).getById(e.emojiId);
+                        let { key: s, guildId: o, channelId: c, messageId: u } = r,
+                            d = h.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
                         if (null != d) {
                             let n = d.require_colons;
                             e = { ...e, name: n ? `:${d.name}:` : d.name };
@@ -344,7 +345,7 @@ function ed(e) {
                         return (0, l.jsx)(
                             E.X,
                             { node: e, tooltipPosition: n, enableClick: t, focusable: a, channelId: c, messageId: u },
-                            o,
+                            s,
                         );
                     },
                 };
@@ -354,7 +355,7 @@ function ed(e) {
         commandMention: (0, $.Ay)(e),
         attachmentLink: {
             react(n, a, i) {
-                let o = i.noStyleAndInteraction
+                let s = i.noStyleAndInteraction
                         ? void 0
                         : async (t) => {
                               let l = await D.AN(n.attachmentUrl);
@@ -363,7 +364,7 @@ function ed(e) {
                                   e.shouldCloseDefaultModals && (0, M.closeAllModals)(),
                                   (0, O.A)(l));
                           },
-                    s = i.noStyleAndInteraction
+                    o = i.noStyleAndInteraction
                         ? U.tEg
                         : (e) => {
                               (0, P.L3)(e, async () => {
@@ -381,8 +382,8 @@ function ed(e) {
                     {
                         role: "link",
                         href: n.attachmentUrl,
-                        onClick: o,
-                        onContextMenu: s,
+                        onClick: s,
+                        onContextMenu: o,
                         className: "attachmentLink",
                         children: [
                             (0, l.jsx)(_.P, { size: "xs", className: r()(G.Kk, R.K), color: "currentColor" }),

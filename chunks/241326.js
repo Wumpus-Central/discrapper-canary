@@ -1,4 +1,4 @@
-n.d(t, { TrashIcon: () => l });
+(n.r(t), n.d(t, { TrashIcon: () => l }));
 var i = n(477900);
 n(582128);
 var r = n(661531),

@@ -1,4 +1,4 @@
-t.d(e, { GiftIcon: () => N });
+(t.r(e), t.d(e, { GiftIcon: () => N }));
 var A = t(477900);
 t(582128);
 var n = t(661531),

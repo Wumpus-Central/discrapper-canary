@@ -1,4 +1,4 @@
-n.d(t, { ClipboardListIcon: () => s });
+(n.r(t), n.d(t, { ClipboardListIcon: () => s }));
 var i = n(477900);
 n(582128);
 var l = n(661531),

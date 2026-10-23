@@ -11,28 +11,29 @@ let o = new r.OC(d, {
     onCancelled: (e) => a.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds: e }),
 });
 async function d(e) {
-    await i.Bo.get({
-        url: l.Rsh.OAUTH2_TOKENS,
-        oldFormErrors: !0,
-        rejectWithError: !0,
-        query: { application_ids: e },
-    }).then(
-        (t) =>
-            a.h.dispatch({
-                type: "USER_AUTHORIZED_APPS_UPDATE",
-                isFullFetch: null == e,
-                tokens: (function (e, t) {
-                    let n = Object.fromEntries(t?.map((e) => [e, null]) ?? []);
-                    for (let t of e) n[t.application.id] = t;
-                    return n;
-                })(t.body, e),
-            }),
-        () =>
-            a.h.dispatch({
-                type: "USER_AUTHORIZED_APPS_REQUEST_FAILED",
-                request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
-            }),
-    );
+    let t;
+    try {
+        t = await i.Bo.get({
+            url: l.Rsh.OAUTH2_TOKENS,
+            oldFormErrors: !0,
+            rejectWithError: !0,
+            query: { application_ids: e },
+        });
+    } catch {
+        return a.h.dispatch({
+            type: "USER_AUTHORIZED_APPS_REQUEST_FAILED",
+            request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
+        });
+    }
+    return a.h.dispatch({
+        type: "USER_AUTHORIZED_APPS_UPDATE",
+        isFullFetch: null == e,
+        tokens: (function (e, t) {
+            let n = Object.fromEntries(t?.map((e) => [e, null]) ?? []);
+            for (let t of e) n[t.application.id] = t;
+            return n;
+        })(t.body, e),
+    });
 }
 let c = {
     fetch(e) {

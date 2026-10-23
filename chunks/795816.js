@@ -428,14 +428,13 @@ async function eh(e) {
     null != x.A.getChannel(n) && E.A.sendInvite(n, s.code, r, a);
 }
 async function ef(e) {
-    let { channelId: t, applicationId: n, userId: i, location: r, inviteAnalyticsMetadata: a, prefixedContent: s } = e,
-        l = await _.Ay.createInvite(t, { target_type: el.yV.EMBEDDED_APPLICATION, target_application_id: n }, r);
-    await c.A.ensurePrivateChannel(i).then((e) => {
-        let t,
-            n = x.A.getChannel(e);
-        if (null == n) throw Error("Private channel not found");
-        (null != s && (t = M.Ay.parse(n, s).content), E.A.sendInvite(e, l.code, r, a, t));
-    });
+    let t,
+        { channelId: n, applicationId: i, userId: r, location: a, inviteAnalyticsMetadata: s, prefixedContent: l } = e,
+        o = await _.Ay.createInvite(n, { target_type: el.yV.EMBEDDED_APPLICATION, target_application_id: i }, a),
+        d = await c.A.ensurePrivateChannel(r),
+        u = x.A.getChannel(d);
+    if (null == u) throw Error("Private channel not found");
+    (null != l && (t = M.Ay.parse(u, l).content), E.A.sendInvite(d, o.code, a, s, t));
 }
 function eI() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : es.i.INDIRECT_ACTION;

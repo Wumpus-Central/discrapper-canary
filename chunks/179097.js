@@ -1,4 +1,4 @@
-n.d(t, { MedalIcon: () => l });
+(n.r(t), n.d(t, { MedalIcon: () => l }));
 var i = n(477900);
 n(582128);
 var r = n(661531),

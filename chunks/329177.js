@@ -1,4 +1,4 @@
-t.d(n, { CrownIcon: () => s });
+(t.r(n), t.d(n, { CrownIcon: () => s }));
 var l = t(477900);
 t(582128);
 var a = t(661531),

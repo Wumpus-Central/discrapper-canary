@@ -1,4 +1,4 @@
-s.d(l, { SparklesIcon: () => r });
+(s.r(l), s.d(l, { SparklesIcon: () => r }));
 var t = s(477900);
 s(582128);
 var i = s(661531),

@@ -653,11 +653,10 @@ let G = {
                 let i = w(e, "user"),
                     a = w(e, "message") ?? "";
                 (async function () {
-                    await d.A.openPrivateChannel({ recipientIds: i }).then((e) => {
-                        let t = S.A.getChannel(e);
-                        (r()(null != t, "Newly created PrivateChannel is null"),
-                            u.A.sendMessage(t.id, f.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND }));
-                    });
+                    let e = await d.A.openPrivateChannel({ recipientIds: i }),
+                        t = S.A.getChannel(e);
+                    (r()(null != t, "Newly created PrivateChannel is null"),
+                        u.A.sendMessage(t.id, f.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND }));
                 })().catch(() => {
                     u.A.sendBotMessage(n.id, P.intl.string(P.t["3XaE95"]));
                 });

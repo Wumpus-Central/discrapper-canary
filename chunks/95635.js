@@ -1,4 +1,4 @@
-l.d(s, { UploadIcon: () => c });
+(l.r(s), l.d(s, { UploadIcon: () => c }));
 var t = l(477900);
 l(582128);
 var e = l(661531),

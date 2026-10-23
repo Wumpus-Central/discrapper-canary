@@ -1,4 +1,4 @@
-t.d(h, { FolderIcon: () => c });
+(t.r(h), t.d(h, { FolderIcon: () => c }));
 var i = t(477900);
 t(582128);
 var a = t(661531),

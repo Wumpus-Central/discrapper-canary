@@ -1,4 +1,4 @@
-n.d(t, { PaintPaletteIcon: () => l });
+(n.r(t), n.d(t, { PaintPaletteIcon: () => l }));
 var i = n(477900);
 n(582128);
 var r = n(661531),

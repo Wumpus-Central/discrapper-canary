@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, Hq: () => L, l$: () => T, o6: () => b, wK: () => S });
+n.d(t, { Ay: () => g, Hq: () => L, l$: () => T, o6: () => b, wK: () => w });
 var i,
     a = n(452295),
     l = n(155718),
@@ -45,8 +45,8 @@ function g(e) {
             let { embeddedActivity: t } = e;
             return s.id === t.applicationId;
         }),
-        w = L({ context: n, applicationId: s.id }),
-        C = S({
+        S = L({ context: n, applicationId: s.id }),
+        C = w({
             application: t.application,
             context: n,
             locationObject: i,
@@ -60,7 +60,7 @@ function g(e) {
         imageBackground: I,
         videoUrl: b,
         joinableEmbeddedApp: g,
-        activityAction: w,
+        activityAction: S,
         onActivityItemSelected: C,
         labelType: v ? f.label_type : l.Hr.NONE,
         staffReleasePhase: N,
@@ -86,7 +86,7 @@ function L(e) {
     let d = (0, _.H)(o?.location);
     return (null != l && d === l.id && r?.id === p.id ? (a = 2) : null != u && (a = 1), a);
 }
-function S(e) {
+function w(e) {
     let {
             application: t,
             context: n,
@@ -129,7 +129,7 @@ function S(e) {
         case 1:
             return async () => {
                 u.Ay.isLaunchingActivity() ||
-                    (await (0, d.A)({
+                    ((await (0, d.A)({
                         applicationId: h,
                         activityChannelId: "channel" === n.type ? n.channel.id : void 0,
                         locationObject: i,
@@ -139,7 +139,8 @@ function S(e) {
                         source: A,
                         customId: E,
                         referrerId: m,
-                    }).then((e) => e && l?.({ applicationId: h })));
+                    })) &&
+                        (await l?.({ applicationId: h })));
             };
         case 2:
             return () => {

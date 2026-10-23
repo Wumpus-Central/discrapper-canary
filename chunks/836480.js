@@ -1,4 +1,4 @@
-l.d(e, { CompassIcon: () => h });
+(l.r(e), l.d(e, { CompassIcon: () => h }));
 var i = l(477900);
 l(582128);
 var t = l(661531),

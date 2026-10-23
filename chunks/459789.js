@@ -180,11 +180,18 @@ async function w(e) {
     let { platformType: t, code: r, state: n, openidParams: l, iss: i, handleCallbackResponse: a } = e;
     if (c.Fr || _) return !1;
     try {
-        let e = await C.default
-            .request(R.e$_.CONNECTIONS_CALLBACK, { code: r, openid_params: l, iss: i, state: n, providerType: t })
-            .finally(() => {
-                C.default.disconnect();
+        let e;
+        try {
+            e = await C.default.request(R.e$_.CONNECTIONS_CALLBACK, {
+                code: r,
+                openid_params: l,
+                iss: i,
+                state: n,
+                providerType: t,
             });
+        } finally {
+            C.default.disconnect();
+        }
         return (a(e), !0);
     } catch (e) {
         return !1;

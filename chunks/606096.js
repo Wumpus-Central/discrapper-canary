@@ -1,4 +1,4 @@
-a.d(t, { BookmarkIcon: () => h });
+(a.r(t), a.d(t, { BookmarkIcon: () => h }));
 var s = a(477900);
 a(582128);
 var l = a(661531),

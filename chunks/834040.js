@@ -1,4 +1,4 @@
-i.d(e, { MinusIcon: () => n });
+(i.r(e), i.d(e, { MinusIcon: () => n }));
 var t = i(477900);
 i(582128);
 var h = i(661531),
@@ -13,13 +13,13 @@ function n(s) {
             colorClass: c = "",
             ...o
         } = s,
-        p = (0, l.J)(e),
-        r = p?.width ?? i,
-        u = p?.height ?? n;
+        r = (0, l.J)(e),
+        p = r?.width ?? i,
+        u = r?.height ?? n;
     return (0, t.jsx)("svg", {
         ...(0, d.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: r,
+        width: p,
         height: u,
         fill: "none",
         viewBox: "0 0 24 24",

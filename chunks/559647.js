@@ -1,4 +1,4 @@
-i.d(s, { SendMessageIcon: () => c });
+(i.r(s), i.d(s, { SendMessageIcon: () => c }));
 var t = i(477900);
 i(582128);
 var l = i(661531),

@@ -1,4 +1,4 @@
-i.d(t, { HeartIcon: () => a });
+(i.r(t), i.d(t, { HeartIcon: () => a }));
 var h = i(477900);
 i(582128);
 var c = i(661531),

@@ -1,9 +1,9 @@
-e.d(o, { XC: () => _, os: () => r, qK: () => p });
+e.d(o, { XC: () => _, os: () => p, qK: () => r });
 var n = e(636537),
     a = e(73153),
     i = e(545868),
     c = e(652215);
-function r(t, o) {
+function p(t, o) {
     n.Bo.get({ url: c.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(t, o), rejectWithError: !0 })
         .then((t) => {
             let e = [];
@@ -25,8 +25,8 @@ function r(t, o) {
         })
         .catch(() => {});
 }
-async function p(t, o, e) {
-    let r = e.map((t) =>
+async function r(t, o, e) {
+    let p = e.map((t) =>
             t.map((t) => ({
                 connection_type: t.connectionType,
                 connection_metadata_field: t.connectionMetadataField,
@@ -35,33 +35,29 @@ async function p(t, o, e) {
                 value: t.value,
             })),
         ),
-        p = await n.Bo.put({
+        r = await n.Bo.put({
             url: c.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(t, o),
-            body: 0 === r.length ? [] : r,
+            body: 0 === p.length ? [] : p,
             oldFormErrors: !0,
             rejectWithError: !1,
-        }).then((t) => {
-            let o = [];
-            return (
-                t.body.length > 0 &&
-                    (o = t.body.map((t) =>
-                        t.map((t) => ({
-                            connectionType: t.connection_type,
-                            connectionMetadataField: t.connection_metadata_field,
-                            applicationId: t.application_id,
-                            operator: t.operator,
-                            value: t.value,
-                        })),
-                    )),
-                o
-            );
         }),
-        _ = await (0, i.a)(t, o, !1);
-    (null != _ && a.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: t, roleId: o, count: _ }),
+        _ = [];
+    r.body.length > 0 &&
+        (_ = r.body.map((t) =>
+            t.map((t) => ({
+                connectionType: t.connection_type,
+                connectionMetadataField: t.connection_metadata_field,
+                applicationId: t.application_id,
+                operator: t.operator,
+                value: t.value,
+            })),
+        ));
+    let d = await (0, i.a)(t, o, !1);
+    (null != d && a.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: t, roleId: o, count: d }),
         a.h.dispatch({
             type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
             roleId: o,
-            roleConnectionConfigurations: p,
+            roleConnectionConfigurations: _,
         }));
 }
 async function _() {

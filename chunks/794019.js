@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648317";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648318";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648317, Version Hash: 888373e04c03e8211117e3e0083c95b936b5d912`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648318, Version Hash: b1675512ca09540552243fb9ec57736b2caeaa82`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -2488,14 +2488,15 @@ let n9 = !1,
         }
         showErrorModal(e) {
             let { code: t, message: n } = e;
-            (0, tQ.openModalLazy)(
-                async () => (e) =>
+            (0, tQ.openModalLazy)(() =>
+                Promise.resolve((e) =>
                     (0, b.jsx)(ns.a, {
                         title: tv.intl.formatToPlainString(tv.t.hbiAO6, { code: t }),
                         subtitle: n,
                         actions: [{ text: tv.intl.string(tv.t.BddRzS), onClick: e.onClose, variant: "primary" }],
                         ...e,
                     }),
+                ),
             );
         }
         showDevShelfOverrideEnabled() {
@@ -25494,7 +25495,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648317" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648318" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })

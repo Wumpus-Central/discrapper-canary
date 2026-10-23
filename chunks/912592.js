@@ -1,4 +1,4 @@
-t.d(i, { InboxIcon: () => a });
+(t.r(i), t.d(i, { InboxIcon: () => a }));
 var s = t(477900);
 t(582128);
 var n = t(661531);

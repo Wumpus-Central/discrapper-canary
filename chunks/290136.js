@@ -1,23 +1,23 @@
-c.d(e, { CircleQuestionIcon: () => n });
+(c.r(e), c.d(e, { CircleQuestionIcon: () => a }));
 var i = c(477900);
 c(582128);
 var l = c(661531),
     t = c(996682),
-    a = c(27989);
-function n(s) {
+    r = c(27989);
+function a(s) {
     let {
             size: e = "md",
             width: c,
-            height: n,
-            secondaryColor: r = "transparent",
+            height: a,
+            secondaryColor: n = "transparent",
             secondaryColorClass: d = "",
             color: h = l.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: o = "",
             ...p
         } = s,
-        u = (0, a.J)(e),
+        u = (0, r.J)(e),
         w = u?.width ?? c,
-        f = u?.height ?? n;
+        f = u?.height ?? a;
     return (0, i.jsxs)("svg", {
         ...(0, t.A)(p),
         xmlns: "http://www.w3.org/2000/svg",
@@ -26,7 +26,7 @@ function n(s) {
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof r ? r : r.css, className: d }),
+            (0, i.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof n ? n : n.css, className: d }),
             (0, i.jsx)("path", {
                 fill: "string" == typeof h ? h : h.css,
                 fillRule: "evenodd",

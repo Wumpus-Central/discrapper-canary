@@ -1,4 +1,4 @@
-s.d(l, { DiceIcon: () => d });
+(s.r(l), s.d(l, { DiceIcon: () => d }));
 var e = s(477900);
 s(582128);
 var a = s(661531),

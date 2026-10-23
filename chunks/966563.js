@@ -53,8 +53,12 @@ async function I(e) {
     );
 }
 async function p(e, t) {
-    let n = await (0, a.yb)(e, t).catch(() => null);
-    return "string" == typeof n?.channel_id ? n.channel_id : void 0;
+    try {
+        let n = await (0, a.yb)(e, t);
+        return "string" == typeof n?.channel_id ? n.channel_id : void 0;
+    } catch {
+        return;
+    }
 }
 async function T(e, t) {
     let n = c.A.getChannel(t);
