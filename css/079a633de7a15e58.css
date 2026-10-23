@@ -47,6 +47,35 @@
     object-fit: cover
 }
 
+.overlayDesign_f3ecdb {
+    aspect-ratio: var(--custom-conjure-plan-overlay-scene-aspect);
+    overflow: hidden;
+    position: relative
+}
+
+.overlayWidget_f3ecdb {
+    height: var(--custom-conjure-plan-overlay-widget-height);
+    inset-block-start: var(--custom-conjure-plan-overlay-widget-top);
+    inset-inline-end: var(--custom-conjure-plan-overlay-widget-end);
+    position: absolute;
+    width: var(--custom-conjure-plan-overlay-widget-width)
+}
+
+.overlayWidgetImage_f3ecdb {
+    display: block;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: top right;
+    object-position: top right;
+    width: 100%
+}
+
+.overlayWidgetImage_f3ecdb:dir(rtl) {
+    -o-object-position: top left;
+    object-position: top left
+}
+
 .footer_f3ecdb {
     align-items: center;
     background: var(--background-mod-normal);
@@ -396,4 +425,4 @@
     }
 }
 
-/*# sourceMappingURL=3e8d367a939ccd1b.css.map*/
+/*# sourceMappingURL=079a633de7a15e58.css.map*/

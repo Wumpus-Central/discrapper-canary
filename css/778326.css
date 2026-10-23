@@ -99,20 +99,6 @@
     position: relative
 }
 
-.game__438f2 {
-    height: 100%;
-    inset: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: absolute;
-    width: 100%
-}
-
-.blurred__438f2 {
-    filter: blur(12px);
-    transform: scale(1.1)
-}
-
 .backgroundSettings__438f2 {
     inset-block-start: var(--space-12);
     inset-inline-start: var(--space-12);
@@ -418,4 +404,4 @@
     }
 }
 
-/*# sourceMappingURL=778326.befae211c2e39ae6.css.map*/
+/*# sourceMappingURL=778326.ae3b25cf969ff4e5.css.map*/

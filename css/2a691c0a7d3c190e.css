@@ -170,6 +170,20 @@
     min-width: 0
 }
 
+.game__915e4 {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.blurred__915e4 {
+    filter: blur(12px);
+    transform: scale(1.1)
+}
+
 .row__5c78a {
     align-items: flex-start;
     display: flex;
@@ -242,4 +256,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=9fd1622308201ceb.css.map*/
+/*# sourceMappingURL=2a691c0a7d3c190e.css.map*/
