@@ -2,7 +2,7 @@ n.d(t, { X: () => i });
 let i = {
     isSpatial: !1,
     limiterEnabled: !0,
-    binaural: { spatialBlend: 1, bilinearInterpolation: !1, hrtfVolume: 1, hrtfNormalization: !1 },
+    binaural: { spatialBlend: 1, bilinearInterpolation: !1, hrtfVolume: 1, hrtfNormalization: !1, hrtfFile: "" },
     distanceAttenuation: { enabled: !1, minDistance: 1 },
     airAbsorption: { enabled: !1, coefficients: { low: 2e-4, mid: 0.0017, high: 0.0182 } },
     reflections: {

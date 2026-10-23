@@ -3338,6 +3338,9 @@ class tr extends p.A {
         }
     }
     setAudioMixerOptions(e) {}
+    getSpatialAudioHrtfFiles() {
+        return { directory: null, files: [] };
+    }
     setInputVolume(e) {}
     setOutputVolume(e) {
         ((this.outputVolume = e), this.connections.forEach((t) => t.setOutputVolume(e)));

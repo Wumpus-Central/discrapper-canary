@@ -2102,6 +2102,11 @@ class ea extends d.A {
     setAudioMixerOptions(e) {
         (0, b.$b)(B.SPATIAL_AUDIO) && (0, b.lE)().setTransportOptions({ audioMixerOptions: e });
     }
+    getSpatialAudioHrtfFiles() {
+        return (0, b.$b)(B.SPATIAL_AUDIO)
+            ? ((0, b.lE)().getSpatialAudioHrtfFiles?.() ?? { directory: null, files: [] })
+            : { directory: null, files: [] };
+    }
     setAudioInputBypassSystemProcessing(e) {
         (0, b.lE)().setTransportOptions({ bypassSystemProcessing: e });
     }
