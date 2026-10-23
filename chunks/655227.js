@@ -110,6 +110,7 @@ let r = (0, n(945810).mj)({
         i.M.TINY_BRONCO_NOTICE,
         i.M.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
         i.M.PINOT_MEMBER_SETTING_NEW_BADGE,
+        i.M.PINOT_MEMBER_COACHMARK,
     ]);
 function s(e) {
     return (
@@ -383,6 +384,7 @@ let l = {
     857: { is_server_arbitrated: !1 },
     858: { is_server_arbitrated: !1 },
     859: { is_server_arbitrated: !1 },
+    864: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
