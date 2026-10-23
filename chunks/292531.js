@@ -99,6 +99,18 @@ let h = {
         });
         s.h.dispatch({ type: "INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS", guildIds: e, gameOrganizations: t });
     },
+    async acceptGameOrganizationInvite(e, t) {
+        try {
+            let { body: n } = await _.Bo.post({
+                url: A.Rsh.GAME_ORGANIZATION_INVITE_JOIN(e),
+                body: { character_id: t },
+                rejectWithError: !0,
+            });
+            return n;
+        } catch (e) {
+            throw new E.A(e);
+        }
+    },
 };
 ((0, a.UT)(c, {
     getQueryId: A.fic.GAME_ORGANIZATION_INVITE,

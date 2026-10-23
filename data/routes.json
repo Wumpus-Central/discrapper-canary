@@ -887,6 +887,7 @@
   "GAME_ANNOUNCEMENTS": "/games/:param/announcements",
   "GAME_ORGANIZATION_INVITES": "/game-organizations/:param/:param/invites",
   "GAME_ORGANIZATION_INVITE": "/game-organization-invites/:param",
+  "GAME_ORGANIZATION_INVITE_JOIN": "/game-organization-invites/:param/join",
   "GAME_ORGANIZATIONS_INVITABLE": "/game-organizations/invitable/@me",
   "GUILD_ROOM": "/guilds/:param/rooms/:param",
   "GUILD_ROOM_CONNECT": "/guilds/:param/rooms/:param/connect",
