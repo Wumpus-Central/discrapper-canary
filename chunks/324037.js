@@ -16588,9 +16588,10 @@ function xh(e) {
                 let e = m.current?.getProperties();
                 e?.twoFriends?.value === E &&
                     e?.reducedMotion?.value === u &&
+                    e?.["Avatar01/Username"]?.value === j &&
                     (m.current?.play(), clearInterval(h.current));
             }, 50)));
-    }, [u, E]);
+    }, [j, u, E]);
     return (0, o.jsxs)(hI, {
         children: [
             (0, o.jsx)(xa.m, {
