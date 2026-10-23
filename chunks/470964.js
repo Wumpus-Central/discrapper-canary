@@ -61,7 +61,7 @@ function b(e, t) {
                 },
             });
         }
-        return j.enabled && null == y
+        return j.enabled && !C && null == y
             ? {
                   content: (0, s.jsx)(i.Suspense, {
                       children: (0, s.jsx)(h.O.Provider, {

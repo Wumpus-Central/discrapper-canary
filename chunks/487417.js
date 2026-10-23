@@ -1,26 +1,26 @@
-t.d(n, {
+n.d(t, {
     t: () =>
-        function* e(n) {
-            for (let t of n)
-                switch ((yield t, t.type)) {
+        function* e(t) {
+            for (let n of t)
+                switch ((yield n, n.type)) {
                     case "paragraph":
-                    case "spoiler":
                     case "strikethrough":
                     case "underline":
                     case "italic":
                     case "bold":
                     case "quote":
-                        yield* e(t.value);
+                        yield* e(n.value);
                         break;
+                    case "spoiler":
                     case "heading":
                     case "small":
-                        yield* e(t.value.content);
+                        yield* e(n.value.content);
                         break;
                     case "list":
-                        for (let n of t.value.items) yield* e(n.content);
+                        for (let t of n.value.items) yield* e(t.content);
                         break;
                     case "link":
-                        t.text && (yield* e(t.text));
+                        n.text && (yield* e(n.text));
                 }
         },
 });
