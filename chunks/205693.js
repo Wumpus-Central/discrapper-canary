@@ -20,7 +20,7 @@ function _(e) {
         case o.Ku.NATIVE:
             return n(206959).A;
         case o.Ku.WEBRTC:
-            return n(113634).A;
+            return n(725999).A;
         case o.Ku.DUMMY:
         default:
             return n(432351).A;

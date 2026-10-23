@@ -258,6 +258,8 @@ var ed =
         (I.INTEL_GPU_DISABLE = "intel_gpu_disable"),
         (I.WEB_STREAMING_MAINTAIN_FRAMERATE = "web_streaming_maintain_framerate"),
         (I.WEB_STREAMING_BALANCED = "web_streaming_balanced"),
+        (I.WEB_STREAMING_MAINTAIN_RESOLUTION = "web_streaming_maintain_resolution"),
+        (I.WEB_STREAMING_CPU_FALLBACK = "web_streaming_cpu_fallback"),
         (I.WEB_STREAMING_MOTION_CONTENT_HINT = "web_streaming_motion_content_hint"),
         (I.WEB_SCREEN_SHARE_AUDIO = "web_screen_share_audio"),
         I),

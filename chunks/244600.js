@@ -265,12 +265,14 @@ let X = (0, F.mj)({
     J = (0, F.mj)({
         name: "2026-10-web-streaming-optimizations",
         kind: "user",
-        defaultConfig: { degradationPreference: "default", motionContentHint: !1 },
+        defaultConfig: { degradationPreference: "default", motionContentHint: !1, cpuFallback: !1 },
         variations: {
-            1: { degradationPreference: "maintain-framerate", motionContentHint: !1 },
-            2: { degradationPreference: "default", motionContentHint: !0 },
-            3: { degradationPreference: "maintain-framerate", motionContentHint: !0 },
-            4: { degradationPreference: "balanced", motionContentHint: !1 },
+            1: { degradationPreference: "maintain-framerate", motionContentHint: !1, cpuFallback: !1 },
+            2: { degradationPreference: "default", motionContentHint: !0, cpuFallback: !1 },
+            3: { degradationPreference: "maintain-framerate", motionContentHint: !0, cpuFallback: !1 },
+            4: { degradationPreference: "balanced", motionContentHint: !1, cpuFallback: !1 },
+            5: { degradationPreference: "maintain-resolution", motionContentHint: !0, cpuFallback: !1 },
+            6: { degradationPreference: "maintain-resolution", motionContentHint: !0, cpuFallback: !0 },
         },
     });
 var ee = n(559633);
@@ -3535,10 +3537,17 @@ class tP extends S.A {
                 t.push("web_screen_share_audio"),
             (0, eO.isWeb)() && this.context === z.x.STREAM && this.isStreamSender())
         ) {
-            let { degradationPreference: e, motionContentHint: n } = J.getConfig({ location: "RTCConnection" });
+            let {
+                degradationPreference: e,
+                motionContentHint: n,
+                cpuFallback: i,
+            } = J.getConfig({ location: "RTCConnection" });
             ("maintain-framerate" === e
                 ? t.push("web_streaming_maintain_framerate")
-                : "balanced" === e && t.push("web_streaming_balanced"),
+                : "balanced" === e
+                  ? t.push("web_streaming_balanced")
+                  : "maintain-resolution" === e &&
+                    (t.push("web_streaming_maintain_resolution"), i && t.push("web_streaming_cpu_fallback")),
                 n && t.push("web_streaming_motion_content_hint"));
         }
         if ((0, eO.isIOS)()) {

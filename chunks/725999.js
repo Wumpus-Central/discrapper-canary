@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => ti });
+n.d(t, { A: () => tr });
 var r,
     a,
     s,
@@ -848,6 +848,8 @@ class eA extends S.A {
                         frameRateInput: e.framesPerSecond,
                         encoderImplementationName: e.encoderImplementation,
                         powerEfficientEncoder: e.powerEfficientEncoder,
+                        qualityLimitationReason: e.qualityLimitationReason,
+                        totalEncodeTime: e.totalEncodeTime,
                         type: "video",
                     });
                 }
@@ -2038,11 +2040,14 @@ function eq() {
     if (null == eK) throw Error("DAVE module not loaded");
     return (null == e$ && (e$ = new eK.TransientKeys()), e$);
 }
-let eZ = A().name?.toLowerCase().includes("firefox");
-function eQ(e, t) {
+function eZ(e) {
+    return null != e && e > 0 ? e : 720;
+}
+let eQ = A().name?.toLowerCase().includes("firefox");
+function eJ(e, t) {
     (e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly"));
 }
-class eJ extends eA {
+class e0 extends eA {
     pc;
     sdp = null;
     negotiating = !1;
@@ -2064,6 +2069,19 @@ class eJ extends eA {
     extensions = [];
     codecs = [];
     daveSessionManager = null;
+    streamVideoTrack = null;
+    streamBudgetHealthy = !1;
+    appliedVideoDegradation = null;
+    videoDegradationPending = !1;
+    streamOverloadedTicks = 0;
+    streamLastEncoderSample = null;
+    streamCpuFallback = !1;
+    streamStuckTicks = 0;
+    streamResets = 0;
+    streamLastResetMs = 0;
+    streamLocked = !1;
+    restoreVideoScale = !1;
+    requestedVideoScale = void 0;
     logger;
     constructor(e) {
         (super(e), (this.logger = new g.Vy(`UnifiedConnection(${e.context})`)));
@@ -2106,8 +2124,13 @@ class eJ extends eA {
                 this.setExperimentFlag(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE, !0),
             (e.experiments ?? []).includes("web_streaming_balanced") &&
                 this.setExperimentFlag(D.fd.WEB_STREAMING_BALANCED, !0),
+            (e.experiments ?? []).includes("web_streaming_maintain_resolution") &&
+                this.setExperimentFlag(D.fd.WEB_STREAMING_MAINTAIN_RESOLUTION, !0),
+            (e.experiments ?? []).includes("web_streaming_cpu_fallback") &&
+                this.setExperimentFlag(D.fd.WEB_STREAMING_CPU_FALLBACK, !0),
             (e.experiments ?? []).includes("web_streaming_motion_content_hint") &&
                 this.setExperimentFlag(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT, !0),
+            this.on(K.y.Stats, this.handleWebStreamingStats),
             this.setStream(this.input.stream),
             this.logger.info(`Renegotiating: Initial negotiation, user id: ${e.userId}`),
             this.handleNegotiationNeeded(!0));
@@ -2132,19 +2155,29 @@ class eJ extends eA {
     }
     setStream(e) {
         let t = "closed" === this.iceConnectionState;
-        if (null != e && !t && (eQ(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
+        if (null != e && !t && (eJ(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported)) {
             let t = e.getVideoTracks()[0],
                 n = this.context === D.x.STREAM;
             (n &&
                 null != t &&
                 this.experimentFlags.has(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT) &&
                 (t.contentHint = "motion"),
-                eQ(this.videoTransceiver, t),
-                n && this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE)
-                    ? this.setVideoDegradationPreference("maintain-framerate")
-                    : n &&
-                      this.experimentFlags.has(D.fd.WEB_STREAMING_BALANCED) &&
-                      this.setVideoDegradationPreference("balanced"));
+                eJ(this.videoTransceiver, t),
+                n &&
+                    null != t &&
+                    (t !== this.streamVideoTrack &&
+                        ((this.streamVideoTrack = t),
+                        (this.streamBudgetHealthy = !1),
+                        (this.appliedVideoDegradation = null),
+                        (this.streamOverloadedTicks = 0),
+                        (this.streamLastEncoderSample = null),
+                        (this.streamCpuFallback = !1),
+                        (this.streamStuckTicks = 0),
+                        (this.streamResets = 0),
+                        (this.streamLastResetMs = 0),
+                        this.streamLocked && (this.restoreVideoScale = !0),
+                        (this.streamLocked = !1)),
+                    this.applyWebStreamingDegradation()));
         }
         (this.logger.info("Renegotiating: Streams changed"), this.handleNegotiationNeeded());
     }
@@ -2164,7 +2197,7 @@ class eJ extends eA {
                 (a.audioSSRC = t),
                 (r = !0),
                 this.unassignedStreams.audio.push({ cname: e, ssrc: t })),
-            this.videoSupported && void 0 !== n && (!eZ || void 0 === a.videoSSRC))
+            this.videoSupported && void 0 !== n && (!eQ || void 0 === a.videoSSRC))
         ) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             t > 0
@@ -2292,24 +2325,166 @@ class eJ extends eA {
             )
             .catch((e) => a(e));
     }
-    setVideoDegradationPreference(e) {
+    getWebStreamingDegradation() {
+        let e;
+        if (this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_FRAMERATE)) e = "maintain-framerate";
+        else if (this.experimentFlags.has(D.fd.WEB_STREAMING_BALANCED)) e = "balanced";
+        else if (this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_RESOLUTION))
+            e = this.streamCpuFallback && !this.streamLocked ? "balanced" : "maintain-resolution";
+        else {
+            if (!this.experimentFlags.has(D.fd.WEB_STREAMING_MOTION_CONTENT_HINT)) return null;
+            e = "maintain-framerate";
+        }
+        return "maintain-resolution" === e || this.streamBudgetHealthy ? e : "maintain-resolution";
+    }
+    applyWebStreamingDegradation() {
+        let e = this.getWebStreamingDegradation();
+        null != e && this.setVideoDegradationPreference(e);
+    }
+    handleWebStreamingStats = (e) => {
+        if (this.context !== D.x.STREAM || null == this.streamVideoTrack) return;
+        let t = e?.rtp.outbound.find((e) => "video" === e.type);
+        if (null != t) {
+            var n, i;
+            let e = ((n = this.streamBudgetHealthy), null == (i = t.bitrateTarget) ? n : i >= (n ? 3e5 : 5e5));
+            (e !== this.streamBudgetHealthy &&
+                (this.logger.info(
+                    `UnifiedConnection.handleWebStreamingStats: target bitrate ${t.bitrateTarget}; ${e ? "enough" : "too low"} for the browser to lower resolution`,
+                ),
+                (this.streamBudgetHealthy = e),
+                (this.streamStuckTicks = 0)),
+                this.experimentFlags.has(D.fd.WEB_STREAMING_MAINTAIN_RESOLUTION) &&
+                    this.experimentFlags.has(D.fd.WEB_STREAMING_CPU_FALLBACK) &&
+                    this.updateWebStreamingCpuFallback(t));
+        }
+        this.applyWebStreamingDegradation();
+    };
+    updateWebStreamingCpuFallback(e) {
+        var t, n, i;
+        let r = { framesEncoded: e.framesEncoded, totalEncodeTime: e.totalEncodeTime },
+            a = (function (e, t) {
+                if (
+                    e?.framesEncoded == null ||
+                    null == e.totalEncodeTime ||
+                    null == t.framesEncoded ||
+                    null == t.totalEncodeTime
+                )
+                    return;
+                let n = t.framesEncoded - e.framesEncoded;
+                if (!(n <= 0)) return ((t.totalEncodeTime - e.totalEncodeTime) * 1e3) / n;
+            })(this.streamLastEncoderSample, r);
+        this.streamLastEncoderSample = r;
+        let s = e.frameRateInput;
+        if (!this.streamCpuFallback) {
+            ((this.streamOverloadedTicks =
+                ((t = this.streamOverloadedTicks),
+                !(function (e) {
+                    let { framesPerSecond: t, encodeMsPerFrame: n, qualityLimitationReason: i } = e;
+                    return null != t && t < 20 && ("cpu" === i || (null != n && n > 40));
+                })({ qualityLimitationReason: e.qualityLimitationReason, framesPerSecond: s, encodeMsPerFrame: a })
+                    ? Math.max(0, t - 1)
+                    : t + 1)),
+                this.streamOverloadedTicks >= 5 &&
+                    (this.logger.info(
+                        `UnifiedConnection.updateWebStreamingCpuFallback: encoder overloaded (fps=${s}, encodeMs=${a?.toFixed(1) ?? "unknown"}, qlim=${e.qualityLimitationReason ?? "unknown"}); falling back to balanced`,
+                    ),
+                    (this.streamCpuFallback = !0)));
+            return;
+        }
+        if (
+            this.streamLocked ||
+            !this.streamBudgetHealthy ||
+            "balanced" !== this.appliedVideoDegradation ||
+            null == this.streamVideoTrack
+        )
+            return;
+        let l = e.resolution?.height,
+            o = (function (e) {
+                let { height: t, expectedHeight: n, framesPerSecond: i, encodeMsPerFrame: r } = e;
+                return null != t && null != i && null != r && t < 0.9 * n && i < 20 && r < 20;
+            })({
+                height: l,
+                expectedHeight:
+                    ((n = this.streamVideoTrack.getSettings().height),
+                    (i = this.requestedVideoScale),
+                    Math.min(360, eZ(n) / Math.max(1, i ?? 1))),
+                framesPerSecond: s,
+                encodeMsPerFrame: a,
+            });
+        if (
+            ((this.streamStuckTicks = o ? this.streamStuckTicks + 1 : 0),
+            !(this.streamStuckTicks < 10 || Date.now() - this.streamLastResetMs < 3e4))
+        ) {
+            if (((this.streamStuckTicks = 0), this.streamResets >= 2)) {
+                (this.logger.info(
+                    `UnifiedConnection.updateWebStreamingCpuFallback: still stuck at ${l}p after ${this.streamResets} resets; locking to 360p`,
+                ),
+                    (this.streamLocked = !0));
+                return;
+            }
+            this.resetVideoAdaptation(l);
+        }
+    }
+    async resetVideoAdaptation(e) {
         let t = this.videoTransceiver?.sender;
-        if (null == t) return;
-        let n = t.getParameters();
-        if (null == n.encodings || n.degradationPreference === e) return;
-        (this.logger.info(
-            `UnifiedConnection.setVideoDegradationPreference: from '${n.degradationPreference}' to '${e}'`,
-        ),
-            (n.degradationPreference = e));
-        let i = (e) => {
-            this.logger.error(`UnifiedConnection.setVideoDegradationPreference: setParameters failed: "${e}"`);
-        };
-        t.setParameters(n)
-            .then(
-                () => {},
-                (e) => i(e),
+        if (null != t && !this.videoDegradationPending) {
+            (this.streamResets++,
+                (this.streamLastResetMs = Date.now()),
+                this.logger.info(
+                    `UnifiedConnection.resetVideoAdaptation: stuck small and choppy at ${e}p with an idle encoder; resetting (${this.streamResets}/2)`,
+                ),
+                (this.videoDegradationPending = !0));
+            try {
+                (await n(t, "maintain-framerate"), await n(t, "balanced"), (this.appliedVideoDegradation = "balanced"));
+            } catch (e) {
+                this.logger.error(`UnifiedConnection.resetVideoAdaptation: setParameters failed: "${e}"`);
+            } finally {
+                this.videoDegradationPending = !1;
+            }
+        }
+        function n(e, t) {
+            let n = e.getParameters();
+            return ((n.degradationPreference = t), e.setParameters(n));
+        }
+    }
+    getVideoScale(e) {
+        return this.streamLocked && null != this.streamVideoTrack
+            ? Math.max(e ?? 1, Math.max(1, eZ(this.streamVideoTrack.getSettings().height) / 360))
+            : e;
+    }
+    async setVideoDegradationPreference(e) {
+        let t;
+        if (this.videoDegradationPending) return;
+        let n = this.videoTransceiver?.sender;
+        if (null == n) return;
+        let i = n.getParameters();
+        if (null == i.encodings || 0 === i.encodings.length) return;
+        this.streamLocked
+            ? (t = this.getVideoScale(this.requestedVideoScale))
+            : this.restoreVideoScale && (t = this.requestedVideoScale ?? 1);
+        let r =
+                i.degradationPreference === e ||
+                (null == i.degradationPreference && this.appliedVideoDegradation === e),
+            a = null == t || i.encodings.every((e) => (e.scaleResolutionDownBy ?? 1) === t);
+        if (!r || !a) {
+            if (
+                (this.logger.info(
+                    `UnifiedConnection.setVideoDegradationPreference: from '${i.degradationPreference}' to '${e}'` +
+                        (null != t ? `; scale=${t}` : ""),
+                ),
+                (i.degradationPreference = e),
+                null != t)
             )
-            .catch((e) => i(e));
+                for (let e of i.encodings) e.scaleResolutionDownBy = t;
+            this.videoDegradationPending = !0;
+            try {
+                (await n.setParameters(i), (this.appliedVideoDegradation = e), (this.restoreVideoScale = !1));
+            } catch (e) {
+                this.logger.error(`UnifiedConnection.setVideoDegradationPreference: setParameters failed: "${e}"`);
+            } finally {
+                this.videoDegradationPending = !1;
+            }
+        }
     }
     setAudioEncoderParameters(e) {
         let t = { [eE.AUDIO_BITRATE]: "maxBitrate" },
@@ -2333,6 +2508,10 @@ class eJ extends eA {
             let e = t[i];
             if (null == e)
                 return void this.logger.info(`UnifiedConnection.setEncoderParameter: Unable to set parameter "${i}"`);
+            if (i === eE.VIDEO_RESOLUTION_SCALE) {
+                ((this.requestedVideoScale = r), n.push({ propertyName: e, value: this.getVideoScale(r) }));
+                continue;
+            }
             n.push({ propertyName: e, value: r });
         }
         this.setTransceiverEncodingParameters(this.videoTransceiver, n);
@@ -2639,10 +2818,10 @@ class eJ extends eA {
         }
     };
 }
-function e0(e) {
+function e1(e) {
     return e.split("-")[0];
 }
-class e1 extends eA {
+class e2 extends eA {
     pc;
     fpc;
     codecs = [];
@@ -2665,8 +2844,8 @@ class e1 extends eA {
             (t.direction = null != this.input.stream ? eg.SENDRECV : eg.SENDONLY),
             (this.fpc = t));
         const n = new eU(this.voiceBitrate);
-        (n.on("addtrack", (e, t) => this.createOutput(e0(e), t)),
-            n.on("removetrack", (e, t) => this.destroyOutput(e0(e), t)),
+        (n.on("addtrack", (e, t) => this.createOutput(e1(e), t)),
+            n.on("removetrack", (e, t) => this.destroyOutput(e1(e), t)),
             n.once("connected", () => {
                 (this.input.reset(),
                     this.setConnectionState(D.$I.CONNECTED),
@@ -2749,9 +2928,9 @@ class e1 extends eA {
     }
     setVideoEncoderParameters(e) {}
 }
-let e2 = n.p + "worklet.8d84a64a97f8451a.js",
-    e3 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e5 extends R.EventEmitter {
+let e3 = n.p + "worklet.8d84a64a97f8451a.js",
+    e5 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
+class e6 extends R.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2808,7 +2987,7 @@ class e5 extends R.EventEmitter {
         null != n && (null == t || 0 === n.removeTrack(t)) && (n.destroy(), delete this.outputs[e]);
     }
     handshake() {
-        this.pc1.createOffer(e3).then((e) => {
+        this.pc1.createOffer(e5).then((e) => {
             this.pc1
                 .setLocalDescription(
                     (function (e) {
@@ -2846,7 +3025,7 @@ class e5 extends R.EventEmitter {
         });
     };
 }
-class e6 extends R.EventEmitter {
+class e4 extends R.EventEmitter {
     id;
     stream;
     pool;
@@ -2857,7 +3036,7 @@ class e6 extends R.EventEmitter {
             video: { ...e, frameRate: 30 },
         };
         if (navigator.mediaDevices?.getDisplayMedia != null)
-            return new e6(await navigator.mediaDevices.getDisplayMedia(i), n);
+            return new e4(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
     }
     constructor(e, t) {
@@ -2891,10 +3070,10 @@ class e6 extends R.EventEmitter {
         );
     }
 }
-class e4 {
+class e7 {
     pool = {};
     async acquire(e, t) {
-        let n = await e6.get(e, t, this);
+        let n = await e4.get(e, t, this);
         return ((this.pool[n.id] = n), n);
     }
     get(e) {
@@ -2906,10 +3085,10 @@ class e4 {
         this.pool[e.id] = e;
     }
 }
-var e7 = n(935399),
-    e8 = n(503698),
-    e9 = n.n(e8);
-function te(e) {
+var e8 = n(935399),
+    e9 = n(503698),
+    te = n.n(e9);
+function tt(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
         l = h.useRef(null),
         o = h.useRef({ width: 0, height: 0 });
@@ -2956,7 +3135,7 @@ function te(e) {
             [n],
         );
     return (0, _.jsx)("video", {
-        className: e9()("media-engine-video", a),
+        className: te()("media-engine-video", a),
         ref: l,
         autoPlay: !0,
         onPause: u,
@@ -2965,7 +3144,7 @@ function te(e) {
         ...s,
     });
 }
-function tt(e) {
+function tn(e) {
     let { deviceId: t = D.qe, width: n = 320, height: i = 180, disabled: r = !1, onDeviceChange: a } = e,
         [s, l] = h.useState(null),
         o = h.useMemo(() => new J(), []);
@@ -2980,7 +3159,7 @@ function tt(e) {
             ),
             [o, a],
         ),
-        (0, e7.l0)(() => {
+        (0, e8.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {
@@ -2994,13 +3173,13 @@ function tt(e) {
         }, [t, n, i, r, o]),
         null == s
             ? (0, _.jsx)("div", { className: "media-engine-video", style: { width: n, height: i } })
-            : (0, _.jsx)(te, { streamId: s, style: { width: n, height: i } })
+            : (0, _.jsx)(tt, { streamId: s, style: { width: n, height: i } })
     );
 }
-let tn = new g.Vy("MediaEngineWebRTC");
-class ti extends p.A {
-    Video = te;
-    Camera = (e) => (0, _.jsx)(tt, { ...e, onDeviceChange: this.handleDeviceChange });
+let ti = new g.Vy("MediaEngineWebRTC");
+class tr extends p.A {
+    Video = tt;
+    Camera = (e) => (0, _.jsx)(tn, { ...e, onDeviceChange: this.handleDeviceChange });
     _audioContext = null;
     outputVolume = D.Hz;
     sourceId = D.dx;
@@ -3011,7 +3190,7 @@ class ti extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e4();
+    desktopInputPool = new e7();
     enablePromise = null;
     dave = null;
     maxSupportedProtocolVersion = null;
@@ -3038,7 +3217,7 @@ class ti extends p.A {
             !__OVERLAY__ &&
             (e_.Hz && null != window.AudioContext && null != window.RTCPeerConnection
                 ? (n(528416), !0)
-                : (tn.info("WebRTC is not supported on", A().name, A().version), !1))
+                : (ti.info("WebRTC is not supported on", A().name, A().version), !1))
         );
     }
     supported() {
@@ -3107,7 +3286,7 @@ class ti extends p.A {
                 }),
                 (r = `${null != A().name && "" !== A().name ? A().name : "unknown"} ${null != A().version && "" !== A().version ? A().version : "unknown"}`),
                 (a = new g.Vy(`Connection(${i.context})`)),
-                e_.PF ? (a.info(`Using Unified Plan (${r})`), new eJ(i)) : (a.info(`Using Plan B (${r})`), new e1(i)));
+                e_.PF ? (a.info(`Using Unified Plan (${r})`), new e0(i)) : (a.info(`Using Plan B (${r})`), new e2(i)));
         return (
             (E.streamUserId = c),
             E.setOutputVolume(this.outputVolume),
@@ -3145,7 +3324,7 @@ class ti extends p.A {
     }
     async _enable() {
         if (this.enabled) return;
-        await this.getAudioContext().audioWorklet.addModule(e2);
+        await this.getAudioContext().audioWorklet.addModule(e3);
         let e = new Y(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
@@ -3287,7 +3466,7 @@ class ti extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e5(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e6(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }
@@ -3388,7 +3567,7 @@ class ti extends p.A {
                                   ((this.dave = t),
                                       eq(),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
-                                      tn.info(
+                                      ti.info(
                                           "Successfully initialized DAVE, version:",
                                           this.maxSupportedProtocolVersion,
                                       ),
@@ -3396,7 +3575,7 @@ class ti extends p.A {
                               })
                               .catch((e) => {
                                   ((this.maxSupportedProtocolVersion = 0),
-                                      tn.error("Failed to initialize DAVE", e),
+                                      ti.error("Failed to initialize DAVE", e),
                                       t(e));
                               });
                       })

@@ -5996,7 +5996,8 @@
     "kind": "user",
     "defaultConfig": {
       "degradationPreference": "default",
-      "motionContentHint": false
+      "motionContentHint": false,
+      "cpuFallback": false
     },
     "variations": {
       "0": {
@@ -6005,19 +6006,33 @@
       },
       "1": {
         "degradationPreference": "maintain-framerate",
-        "motionContentHint": false
+        "motionContentHint": false,
+        "cpuFallback": false
       },
       "2": {
         "degradationPreference": "default",
-        "motionContentHint": true
+        "motionContentHint": true,
+        "cpuFallback": false
       },
       "3": {
         "degradationPreference": "maintain-framerate",
-        "motionContentHint": true
+        "motionContentHint": true,
+        "cpuFallback": false
       },
       "4": {
         "degradationPreference": "balanced",
-        "motionContentHint": false
+        "motionContentHint": false,
+        "cpuFallback": false
+      },
+      "5": {
+        "degradationPreference": "maintain-resolution",
+        "motionContentHint": true,
+        "cpuFallback": false
+      },
+      "6": {
+        "degradationPreference": "maintain-resolution",
+        "motionContentHint": true,
+        "cpuFallback": true
       }
     }
   }
