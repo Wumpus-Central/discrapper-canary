@@ -1,113 +1,138 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => B });
 var i = n(439372),
     r = n(626584),
-    a = n(567249),
-    s = n(531685),
-    l = n(365971),
-    o = n(777334),
-    d = n(41984),
-    c = n(296027),
-    u = n(233741),
-    _ = n(392164);
-let E = new r.A("OverlayWindowRAFManager"),
-    A = window.requestAnimationFrame.bind(window),
-    h = window.cancelAnimationFrame.bind(window),
-    f = new Set([d.Ue.OutOfProcess, d.Ue.OutOfProcessLimitedInteraction]),
-    I = new Set([d.AR.OVERLAY_CRASHED, d.AR.OVERLAY_CRASHED_DISABLED]);
-function p(e) {
-    for (let t of Object.values(c.default.getTrackedGames()))
-        if (!(!f.has(t.overlayMethod) || I.has(t.state)) && (!e || t.state === d.AR.OVERLAY_RENDERING)) return !0;
+    a = n(384077),
+    s = n(567249),
+    l = n(531685),
+    o = n(365971),
+    d = n(777334),
+    c = n(41984),
+    u = n(296027),
+    _ = n(233741),
+    E = n(392164);
+let A = new r.A("OverlayWindowRAFManager"),
+    h = window.requestAnimationFrame.bind(window),
+    f = window.cancelAnimationFrame.bind(window),
+    I = new Set([c.Ue.OutOfProcess, c.Ue.OutOfProcessLimitedInteraction]),
+    p = new Set([c.AR.OVERLAY_CRASHED, c.AR.OVERLAY_CRASHED_DISABLED]);
+function T(e) {
+    for (let t of Object.values(u.default.getTrackedGames()))
+        if (!(!I.has(t.overlayMethod) || p.has(t.state)) && (!e || t.state === c.AR.OVERLAY_RENDERING)) return !0;
     return !1;
 }
-let T = null,
-    m = !1,
+let m = null,
     g = !1,
-    S = -1,
-    N = new Map();
-function C(e, t) {
-    let n = N.get(e);
-    null != n && (N.delete(e), n.callback(t));
+    S = !1,
+    N = !1,
+    C = -1,
+    O = new Map();
+function R(e, t) {
+    let n = O.get(e);
+    null != n && (O.delete(e), n.callback(t));
 }
-function O(e) {
+function L(e) {
     if (null == e.overlayFrameId) return;
-    let t = e.overlayWindow.deref();
+    let t = e.overlayWindow?.deref();
     if (null != t)
         try {
             t.cancelAnimationFrame(e.overlayFrameId);
         } catch (e) {
-            E.warn("Unable to cancel overlay RAF callback", e);
+            A.warn("Unable to cancel overlay RAF callback", e);
         }
 }
-function R(e) {
+function y(e) {
     if (null == e) return;
-    let t = N.get(e);
-    null == t ? h(e) : (N.delete(e), O(t), null != t.mainFrameId && h(t.mainFrameId));
+    let t = O.get(e);
+    null == t ? f(e) : (O.delete(e), L(t), null != t.mainFrameId && f(t.mainFrameId));
 }
-function L(e) {
+function D(e, t, n) {
+    let i = n.performance.timeOrigin - performance.timeOrigin;
+    ((t.overlayWindow = new WeakRef(n)),
+        (t.overlayFrameId = n.requestAnimationFrame((t) => R(e, t + i))),
+        (t.mainFrameId = null));
+}
+function v(e, t) {
+    let n = C--,
+        i = { callback: e, overlayWindow: null, overlayFrameId: null, mainFrameId: null };
+    return (D(n, i, t), O.set(n, i), n);
+}
+function b(e) {
+    if (!N) return h(e);
+    let t = C--;
+    return (O.set(t, { callback: e, overlayWindow: null, overlayFrameId: null, mainFrameId: h((e) => R(t, e)) }), t);
+}
+function M() {
+    let e = s.A.getWindow(E.f);
+    return null == e || "function" != typeof e.requestAnimationFrame ? null : e;
+}
+function P(e) {
     try {
-        let t = a.A.getWindow(_.f);
-        if (null == t || "function" != typeof t.requestAnimationFrame) return ((T = "OverlayNotAvailable"), A(e));
-        if (!g) return ((T = "MainWindowFocused"), A(e));
-        if (!p(!0)) return ((T = "NoOverlayRendering"), A(e));
-        let n = null !== u.A.getFocusedRunningGame(),
-            i = s.A.isFocused((0, l.Q2)(t));
-        if ((s.A.isFocused() && E.error("Main window is reported as focused when it should not be!"), n || i)) {
-            T = n ? "OverlayGameFocused" : "OverlayWindowFocused";
-            let i = S--,
-                r = t.performance.timeOrigin - performance.timeOrigin,
-                a = t.requestAnimationFrame((e) => C(i, e + r));
-            return (N.set(i, { callback: e, overlayWindow: new WeakRef(t), overlayFrameId: a, mainFrameId: null }), i);
-        }
+        let t = M();
+        if (null == t) return ((m = "OverlayNotAvailable"), b(e));
+        if (N && !l.A.isVisible()) return ((m = "MainWindowHidden"), v(e, t));
+        if (!S) return ((m = "MainWindowFocused"), b(e));
+        if (!T(!0)) return ((m = "NoOverlayRendering"), b(e));
+        let n = null !== _.A.getFocusedRunningGame(),
+            i = l.A.isFocused((0, o.Q2)(t));
+        if ((l.A.isFocused() && A.error("Main window is reported as focused when it should not be!"), n || i))
+            return ((m = n ? "OverlayGameFocused" : "OverlayWindowFocused"), v(e, t));
     } catch (e) {
-        (E.error("RAF redirect failed, falling back to original. Cause:", e),
-            (0, o.pj)(e, c.default.getOverlayMethod(u.A.getTargetPID())));
+        (A.error("RAF redirect failed, falling back to original. Cause:", e),
+            (0, d.pj)(e, u.default.getOverlayMethod(_.A.getTargetPID())));
     }
-    return ((T = "None"), A(e));
+    return ((m = "None"), b(e));
 }
-function y() {
-    return !s.A.isFocused() || !s.A.isVisible();
+function U() {
+    ((N = (0, a.ZT)("overlay_window_raf_manager")),
+        (window.requestAnimationFrame = P),
+        (window.cancelAnimationFrame = y));
 }
-function D() {
-    N.forEach((e, t) => {
-        null != e.overlayFrameId && (O(e), (e.overlayFrameId = null), (e.mainFrameId = A((e) => C(t, e))));
+function w() {
+    return !l.A.isFocused() || !l.A.isVisible();
+}
+function G() {
+    O.forEach((e, t) => {
+        null != e.overlayFrameId && (L(e), (e.overlayFrameId = null), (e.mainFrameId = h((e) => R(t, e))));
     });
 }
-function v(e) {
-    if (e === g) return;
-    let t = !e && g;
-    ((g = e), t && D());
+function x() {
+    if (!N || l.A.isVisible() || window.requestAnimationFrame !== P) return;
+    let e = M();
+    null != e &&
+        O.forEach((t, n) => {
+            null != t.mainFrameId && (f(t.mainFrameId), D(n, t, e));
+        });
 }
-class b extends i.A {
+function k(e) {
+    if (e === S) return;
+    let t = !e && S;
+    ((S = e), t && G());
+}
+class F extends i.A {
     _initialize() {
-        v(y());
+        k(w());
     }
     _terminate() {
-        ((window.requestAnimationFrame = A), D());
+        ((window.requestAnimationFrame = h), G());
     }
     getLastRAFCallbackReason() {
-        return T;
+        return m;
     }
     handleUpdateOverlayMethod() {
         if (!__OVERLAY__) {
-            if (!m && !p(!1)) {
-                ((window.requestAnimationFrame = A), (T = "NoOverlayRendering"), D());
+            if (!g && !T(!1)) {
+                ((window.requestAnimationFrame = h), (m = "NoOverlayRendering"), G());
                 return;
             }
-            (E.info("Patching window RAF to use overlay window"),
-                (window.requestAnimationFrame = L),
-                (window.cancelAnimationFrame = R));
+            (A.info("Patching window RAF to use overlay window"), U(), x());
         }
     }
     handleWindowStateChage() {
-        v(y());
+        (k(w()), x());
     }
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
-        n === d.x7.OverlayRafManagerForceEnabled &&
-            ((m = t),
-            t
-                ? ((window.requestAnimationFrame = L), (window.cancelAnimationFrame = R))
-                : g || ((window.requestAnimationFrame = A), D()));
+        n === c.x7.OverlayRafManagerForceEnabled && ((g = t), t ? U() : S || ((window.requestAnimationFrame = h), G()));
     }
     actions = {
         OVERLAY_UPDATE_OVERLAY_METHOD: this.handleUpdateOverlayMethod,
@@ -116,4 +141,4 @@ class b extends i.A {
         OVERLAY_RENDER_DEBUG_MODE: this.handleOverlayRenderDebugMode,
     };
 }
-let M = new b();
+let B = new F();

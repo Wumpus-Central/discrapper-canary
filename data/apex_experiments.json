@@ -5425,7 +5425,8 @@
       "nativeSystemCpuTimes": false,
       "overlayOnlyAnimatesItself": false,
       "fullscreenPopupOcclusion": false,
-      "overlayHiddenWavePaused": false
+      "overlayHiddenWavePaused": false,
+      "renderOverlayWhileMinimized": false
     },
     "variations": {
       "0": {
@@ -5436,7 +5437,8 @@
         "nativeSystemCpuTimes": true,
         "overlayOnlyAnimatesItself": true,
         "fullscreenPopupOcclusion": true,
-        "overlayHiddenWavePaused": true
+        "overlayHiddenWavePaused": true,
+        "renderOverlayWhileMinimized": true
       }
     }
   },
