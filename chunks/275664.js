@@ -184,15 +184,16 @@ function C(e) {
                     onClick: o,
                     percent: s,
                     onDragStateChange: c,
+                    onDragXChange: v,
                 } = e,
-                [v, x] = l.useState(null),
-                [E, g] = l.useState(null),
-                [b, y] = l.useState(!1),
-                [S, C] = l.useState(!1),
-                [P, w] = l.useState(null),
-                [A, R] = l.useState(!1),
-                { i18n: N } = (0, m.G9)(),
-                L = l.useMemo(() => {
+                [x, E] = l.useState(null),
+                [g, b] = l.useState(null),
+                [y, S] = l.useState(!1),
+                [C, P] = l.useState(!1),
+                [w, A] = l.useState(null),
+                [R, N] = l.useState(!1),
+                { i18n: L } = (0, m.G9)(),
+                T = l.useMemo(() => {
                     let e = { role: "progressbar", "aria-label": "Progress Bar" };
                     return (
                         null != s &&
@@ -200,32 +201,32 @@ function C(e) {
                             ((e["aria-valuenow"] = s),
                             (e["aria-valuemin"] = 0),
                             (e["aria-valuemax"] = 100),
-                            (e["aria-label"] = N.PERCENT_COMPLETE(Math.round(s)))),
+                            (e["aria-label"] = L.PERCENT_COMPLETE(Math.round(s)))),
                         e
                     );
-                }, [s, N]),
-                T = l.useMemo(() => (null == v || null == r ? null : (0, u.DX)(r, i, v)), [v, r, i]),
-                k = (0, p.A)((e) => {
-                    x(e.contentRect);
+                }, [s, L]),
+                k = l.useMemo(() => (null == x || null == r ? null : (0, u.DX)(r, i, x)), [x, r, i]),
+                M = (0, p.A)((e) => {
+                    E(e.contentRect);
                 }),
-                M = (0, f.w)(k);
-            function j(e) {
-                if (null != M.current) {
-                    let t = M.current.getBoundingClientRect(),
+                j = (0, f.w)(M);
+            function D(e) {
+                if (null != j.current) {
+                    let t = j.current.getBoundingClientRect(),
                         n = e.clientX - t.left,
                         l = null != r ? (r / i) * t.width : null;
-                    (R(null != l && n > l), g(n));
+                    (N(null != l && n > l), b(n));
                 }
             }
-            let D = l.useRef(!1),
-                I = l.useRef(null),
-                B = (0, p.A)((e, t) => {
+            let I = l.useRef(!1),
+                B = l.useRef(null),
+                F = (0, p.A)((e, t) => {
                     if (null == o) return;
                     let n = e - t.left,
                         l = (0, u.hc)(n, t, i);
                     (null != r && l > r) || o(l);
                 }),
-                F = l.useCallback(
+                U = l.useCallback(
                     (e) => {
                         let { key: r } = e;
                         r === h.N$.ArrowLeft && null != t
@@ -237,69 +238,69 @@ function C(e) {
             return (
                 l.useEffect(
                     () => () => {
-                        ((D.current = !1), I.current?.(), (I.current = null));
+                        ((I.current = !1), B.current?.(), (B.current = null));
                     },
                     [],
                 ),
                 {
-                    contRef: M,
-                    boundingRect: v,
+                    contRef: j,
+                    boundingRect: x,
                     handleMouseEnter: function (e) {
-                        a && (y(!0), j(e));
+                        a && (S(!0), D(e));
                     },
                     handleMouseLeave: function (e) {
-                        a && !D.current && (y(!1), g(null), R(!1));
+                        a && !I.current && (S(!1), b(null), N(!1));
                     },
                     handleMouseMove: function (e) {
-                        a && b && j(e);
+                        a && y && D(e);
                     },
                     handleMouseDown: function (e) {
                         if (!a || null == o || 0 !== e.button) return;
-                        I.current?.();
+                        B.current?.();
                         let t = e.currentTarget.getBoundingClientRect(),
                             n = (0, u.hc)(e.clientX - t.left, t, i);
-                        function l(e) {
-                            if (null != M.current) {
-                                let t = M.current.getBoundingClientRect(),
+                        if (null != r && n > r) return;
+                        ((I.current = !0), P(!0), c?.(!0));
+                        let l = Math.max(0, Math.min(e.clientX - t.left, t.width));
+                        function s(e) {
+                            if (null != j.current) {
+                                let t = j.current.getBoundingClientRect(),
                                     n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
                                     l = null != r ? (r / i) * t.width : null,
                                     a = null != l ? Math.min(n, l) : n;
-                                (R(null != l && n > l), g(n), w(a), B(e.clientX, t));
-                            } else B(e.clientX, t);
+                                (N(null != l && n > l), b(n), A(a), v?.(a), F(e.clientX, t));
+                            } else F(e.clientX, t);
                         }
-                        function s(e) {
-                            ((D.current = !1),
-                                (I.current = null),
-                                C(!1),
-                                w(null),
+                        function m(e) {
+                            ((I.current = !1),
+                                (B.current = null),
+                                P(!1),
+                                A(null),
                                 c?.(!1),
-                                R(!1),
-                                null != M.current &&
-                                    (((0, d.vq)(e.target, Node) && M.current.contains(e.target)) || (y(!1), g(null))),
-                                window.removeEventListener("mousemove", l),
-                                window.removeEventListener("mouseup", s));
+                                N(!1),
+                                null != j.current &&
+                                    (((0, d.vq)(e.target, Node) && j.current.contains(e.target)) || (S(!1), b(null))),
+                                window.removeEventListener("mousemove", s),
+                                window.removeEventListener("mouseup", m));
                         }
-                        (null != r && n > r) ||
-                            ((D.current = !0),
-                            C(!0),
-                            c?.(!0),
-                            w(Math.max(0, Math.min(e.clientX - t.left, t.width))),
-                            B(e.clientX, t),
-                            window.addEventListener("mousemove", l),
-                            window.addEventListener("mouseup", s),
-                            (I.current = () => {
-                                (window.removeEventListener("mousemove", l), window.removeEventListener("mouseup", s));
+                        (A(l),
+                            v?.(l),
+                            F(e.clientX, t),
+                            window.addEventListener("mousemove", s),
+                            window.addEventListener("mouseup", m),
+                            (B.current = () => {
+                                (window.removeEventListener("mousemove", s), window.removeEventListener("mouseup", m));
                             }));
                     },
-                    handleKeyDown: F,
-                    hoveredAtX: E,
-                    maxSeekableX: T,
-                    isHovering: b,
-                    isDragging: S,
-                    dragX: P,
-                    isHoverBeyondMax: A,
+                    handleKeyDown: U,
+                    hoveredAtX: g,
+                    maxSeekableX: k,
+                    isHovering: y,
+                    isDragging: C,
+                    dragX: w,
+                    isHoverBeyondMax: R,
                     handleClick: function () {},
-                    ariaProps: L,
+                    ariaProps: T,
                 }
             );
         })({
@@ -311,6 +312,7 @@ function C(e) {
             percent: n,
             onClick: j,
             onDragStateChange: B,
+            onDragXChange: (e) => eo.set(e),
         }),
         er = l.useMemo(() => (null == z || null == O ? null : (0, u.hc)(z, O, w)), [z, O, w]),
         el = l.useMemo(() => (null == er ? null : (0, u.rB)(er)), [er]),
