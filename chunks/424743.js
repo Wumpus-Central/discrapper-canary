@@ -15,6 +15,7 @@ var i,
         (r.UNDERAGE = "underage"),
         (r.MANUAL_REVIEW_SUBMITTED = "manual_review_submitted"),
         (r.TNS_SET_UNCONFIRMED = "tns_set_unconfirmed"),
+        (r.TNS_SET_UNCONFIRMED_FRAUD = "tns_set_unconfirmed_fraud"),
         r);
 function u(e, t) {
     let n = s.A.getMessage(e, t);
@@ -56,7 +57,7 @@ function E(e, t) {
     )
         return !1;
     let i = n.embeds[0].fields.find((e) => "content_type" === e.rawName);
-    return i?.rawValue === "tns_set_unconfirmed";
+    return i?.rawValue === "tns_set_unconfirmed" || i?.rawValue === "tns_set_unconfirmed_fraud";
 }
 function A(e, t) {
     if (null == a.A.getPendingConnection()) return !1;
