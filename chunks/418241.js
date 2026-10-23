@@ -1,12 +1,12 @@
-i.d(e, { N: () => s, s: () => a });
-var n = i(73153),
-    p = i(91242),
-    r = i(457827),
-    c = i(843002);
-function a(t) {
-    n.h.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_TOGGLE", channelId: t });
+s.d(p, { N: () => r, s: () => h });
+var c = s(73153),
+    e = s(91242),
+    i = s(457827),
+    a = s(843002);
+function h(t) {
+    c.h.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_TOGGLE", channelId: t });
 }
-function s(t) {
-    for (let e of p.A.getFramesForSurface((0, c.e)(t))) (0, r.r)(e.id);
-    n.h.dispatch({ type: "VOICE_CHANNEL_APP_CLOSE", channelId: t });
+function r(t) {
+    for (let p of e.A.getFramesForSurface((0, a.e)(t))) (0, i.r)(p.id);
+    c.h.dispatch({ type: "VOICE_CHANNEL_APP_CLOSE", channelId: t });
 }

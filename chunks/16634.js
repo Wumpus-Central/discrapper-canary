@@ -17,15 +17,15 @@ var l = n(477900),
     j = n(17928),
     k = n(778712),
     v = n(730134),
-    b = n(287809),
-    _ = n(427262),
+    _ = n(287809),
+    b = n(427262),
     A = n(248675),
     y = n(105292),
     N = n(59678);
 function S(e) {
     let { userId: t } = e,
-        n = (0, j.bG)([b.default], () => b.default.getUser(t), [t]),
-        a = (0, _.tx)(n);
+        n = (0, j.bG)([_.default], () => _.default.getUser(t), [t]),
+        a = (0, b.tx)(n);
     if (null == n || null == a) return null;
     let r = y.intl.formatToPlainString(A.default["664n2O"], { name: a });
     return (0, l.jsx)(c.m, {
@@ -47,27 +47,27 @@ function C(e) {
         j = a.useId(),
         k = a.useCallback(() => g((e) => !e), []),
         v = (0, p.WQ)(n),
-        b = n.detail,
-        _ = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
-        C = "text-muted" === _,
-        I = f && C ? "none" : h && C ? "currentColor" : _,
-        T = i()(N.iq, { [E.Hz]: f && C }),
-        D = "detail" === r ? "text-md/normal" : "text-sm/normal",
+        _ = n.detail,
+        b = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
+        C = "text-muted" === b,
+        I = f && C ? "none" : h && C ? "currentColor" : b,
+        D = i()(N.iq, { [E.Hz]: f && C }),
+        T = "detail" === r ? "text-md/normal" : "text-sm/normal",
         M = "detail" === r ? "text-sm/normal" : "text-xs/normal",
         F = null != t ? n.screenshots : [],
         G = null != t ? n.attachments : [];
-    if (0 === b.length && 0 === F.length && 0 === G.length)
+    if (0 === _.length && 0 === F.length && 0 === G.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
             className: N.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
-                variant: D,
+                variant: T,
                 color: I,
                 selectable: !0,
-                className: T,
-                children: (0, l.jsx)(w.A, { text: v, variant: D, prose: !0 }),
+                className: D,
+                children: (0, l.jsx)(w.A, { text: v, variant: T, prose: !0 }),
             }),
         });
     let z = h ? u.a : d._;
@@ -86,10 +86,10 @@ function C(e) {
                 children: [
                     (0, l.jsx)(s.E, {
                         tag: "span",
-                        variant: D,
+                        variant: T,
                         color: I,
-                        className: T,
-                        children: (0, l.jsx)(w.A, { text: v, variant: D, prose: !0 }),
+                        className: D,
+                        children: (0, l.jsx)(w.A, { text: v, variant: T, prose: !0 }),
                     }),
                     (0, l.jsx)(z, { size: "xs", color: "currentColor", className: N.Ue }),
                 ],
@@ -100,7 +100,7 @@ function C(e) {
                 "data-conjure-entrance": !0,
                 className: N.yJ,
                 children: [
-                    b.map((e, t) => {
+                    _.map((e, t) => {
                         let a = n.detailDrivenBy[t],
                             r = n.detailError[t] ?? null;
                         return (0, l.jsxs)(

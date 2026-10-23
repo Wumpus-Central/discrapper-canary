@@ -23,15 +23,15 @@ function x(e) {
             connectsDown: k = !1,
             anchor: v = !1,
         } = e,
-        [b, _] = a.useState(!1),
+        [_, b] = a.useState(!1),
         A = a.useRef(null);
     a.useLayoutEffect(() => {
         r && A.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [r]);
     let y = a.useId(),
-        N = a.useCallback(() => _((e) => !e), []),
+        N = a.useCallback(() => b((e) => !e), []),
         { text: S, phase: w } = (0, c.Q)(n),
-        E = b ? s.a : u._,
+        E = _ ? s.a : u._,
         C = null != p,
         I = (0, l.jsxs)(l.Fragment, {
             children: [
@@ -72,14 +72,14 @@ function x(e) {
                 ? (0, l.jsx)(o.D, {
                       tag: "div",
                       className: i()(h.ep, h.EK),
-                      "aria-expanded": b,
+                      "aria-expanded": _,
                       "aria-controls": y,
                       "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: S }),
                       onClick: N,
                       children: P,
                   })
                 : (0, l.jsx)("div", { className: h.ep, children: P }),
-            (0, l.jsx)("div", { id: y, hidden: !b, "data-conjure-entrance": !0, className: h.BA, children: p }),
+            (0, l.jsx)("div", { id: y, hidden: !_, "data-conjure-entrance": !0, className: h.BA, children: p }),
         ],
     });
 }

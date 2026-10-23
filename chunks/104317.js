@@ -31,23 +31,23 @@ function g(e) {
             tier: k,
         } = e,
         v = (0, s.SY)(n),
-        b = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
-        _ = x ? void 0 : g,
-        A = null != _ ? (0, i.nY)(_) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
+        _ = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), k),
+        b = x ? void 0 : g,
+        A = null != b ? (0, i.nY)(b) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
         y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(o.Ay, { size: 32 }),
             assetSize: 32,
-            title: b.title,
-            body: b.body,
+            title: _.title,
+            body: _.body,
             position: "left",
             children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.Ay, {}) }),
         }),
         line: A,
         anchor: !0,
         live: x,
-        settled: null != _ || (!x && j),
+        settled: null != b || (!x && j),
         connectsDown: p,
         detail: y
             ? (0, l.jsx)("ol", {

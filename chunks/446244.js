@@ -1,101 +1,101 @@
-(r.d(t, { Ay: () => S, I: () => h, _5: () => y, _g: () => D, hY: () => A, pk: () => E }), r(321073));
-var n = r(435558),
-    u = r(308528),
-    l = r(115718),
-    i = r(280157),
-    c = r(174768),
-    s = r(734057),
-    d = r(576705),
-    o = r(287809),
-    f = r(403362),
-    a = r(507696),
-    p = r(652215);
+(t.d(r, { Ay: () => S, I: () => h, _5: () => y, _g: () => E, hY: () => D, pk: () => A }), t(321073));
+var n = t(435558),
+    l = t(308528),
+    u = t(115718),
+    i = t(280157),
+    d = t(174768),
+    c = t(734057),
+    o = t(576705),
+    p = t(287809),
+    s = t(403362),
+    a = t(507696),
+    f = t(652215);
 function y(e) {
-    let t = s.A.getChannel(e);
-    return t?.type === p.rbe.DM ? { type: "user", id: t.recipients[0] } : { type: "channel", id: e };
+    let r = c.A.getChannel(e);
+    return r?.type === f.rbe.DM ? { type: "user", id: r.recipients[0] } : { type: "channel", id: e };
 }
-function A(e) {
-    let { type: t, record: r } = e;
-    return t === l.rD.USER ? { type: "user", id: r.id } : { type: "channel", id: r.id };
+function D(e) {
+    let { type: r, record: t } = e;
+    return r === u.rD.USER ? { type: "user", id: t.id } : { type: "channel", id: t.id };
 }
 function h(e) {
     return `${e.type}-${e.id}`;
 }
-function D(e) {
+function E(e) {
     if ("channel" === e.type) return e.id;
-    let t = s.A.getDMFromUserId(e.id);
-    if (null != t) return t;
+    let r = c.A.getDMFromUserId(e.id);
+    if (null != r) return r;
 }
-async function E(e) {
-    let t = D(e);
-    if (null != t) return t;
+async function A(e) {
+    let r = E(e);
+    if (null != r) return r;
     if ("user" === e.type)
         try {
-            return await u.A.getOrEnsurePrivateChannel(e.id);
+            return await l.A.getOrEnsurePrivateChannel(e.id);
         } catch (e) {
             return;
         }
 }
-function g(e) {
+function U(e) {
     if ("user" !== e.type) return (0, i.A)(e.id);
     {
-        let t = o.default.getUser(e.id);
-        return null != t ? { type: l.rD.USER, record: t, score: 0 } : null;
+        let r = p.default.getUser(e.id);
+        return null != r ? { type: u.rD.USER, record: r, score: 0 } : null;
     }
 }
-function U(e, t) {
-    return e.type === l.rD.USER
-        ? !e.record.isSystemUser() && (!!t || null != s.A.getDMChannelFromUserId(e.record.id))
-        : e.type === l.rD.GROUP_DM ||
-              (e.record.type !== p.rbe.GUILD_FORUM &&
-                  e.record.type !== p.rbe.GUILD_MEDIA &&
-                  d.A.can(p.xBc.VIEW_CHANNEL, e.record) &&
-                  d.A.can(p.xBc.SEND_MESSAGES, e.record));
+function _(e, r) {
+    return e.type === u.rD.USER
+        ? !e.record.isSystemUser() && (!!r || null != c.A.getDMChannelFromUserId(e.record.id))
+        : e.type === u.rD.GROUP_DM ||
+              (e.record.type !== f.rbe.GUILD_FORUM &&
+                  e.record.type !== f.rbe.GUILD_MEDIA &&
+                  o.A.can(f.xBc.VIEW_CHANNEL, e.record) &&
+                  o.A.can(f.xBc.SEND_MESSAGES, e.record));
 }
-function C(e, t) {
-    let r,
+function g(e, r) {
+    let t,
         n = new Set();
-    if (null != t) for (let e of t) n.add(e);
-    let u = [];
-    for (let t of e)
-        if (null == t) continue;
-        else if (t.type === l.rD.HEADER) r = t;
+    if (null != r) for (let e of r) n.add(e);
+    let l = [];
+    for (let r of e)
+        if (null == r) continue;
+        else if (r.type === u.rD.HEADER) t = r;
         else {
-            let { id: e } = t.record;
-            n.has(e) || (n.add(e), null != r && (u.push(r), (r = void 0)), u.push(t));
+            let { id: e } = r.record;
+            n.has(e) || (n.add(e), null != t && (l.push(t), (t = void 0)), l.push(r));
         }
-    return u;
+    return l;
 }
-function R(e, t) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : U;
-    return e.filter((e) => (0, f.Vq)(e) && (e.type === l.rD.HEADER || ((0, a.N)(e) && r(e, t))));
+function C(e, r) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _;
+    return e.filter((e) => (0, s.Vq)(e) && (e.type === u.rD.HEADER || ((0, a.N)(e) && t(e, r))));
 }
 function S(e) {
     let {
-        results: t,
-        hasQuery: r,
-        queryMode: u,
-        frequentChannels: l,
-        targetDestination: s,
-        selectedDestinations: d,
-        pinnedDestinations: o,
-        originDestination: f,
+        results: r,
+        hasQuery: t,
+        queryMode: l,
+        frequentChannels: u,
+        targetDestination: c,
+        selectedDestinations: o,
+        pinnedDestinations: p,
+        originDestination: s,
         channelFilter: a,
-        includeMissingDMs: p,
+        includeMissingDMs: f,
     } = e;
-    if (r) return C(R(t, p, a));
-    let y = null != o && o.length > 0 ? o.map((e) => g(e)) : [],
-        A = c.A.getChannelHistory(),
-        h = A.length > 0 ? A.map((e) => (0, i.A)(e)) : [],
-        D = l.length > 0 ? l.map((e) => (0, i.A)(e.id)) : [],
-        E = R([...y, null != s ? g(s) : null, ...h, ...D], p, a),
-        U = d?.find((e) => (0, n.isEqual)(e, f)) != null,
-        S = null == f || U ? [] : [f.id];
-    return null != u
-        ? C(
-              E.filter((e) => e.type === u),
+    if (t) return g(C(r, f, a));
+    let y = null != p && p.length > 0 ? p.map((e) => U(e)) : [],
+        D = d.A.getChannelHistory(),
+        h = D.length > 0 ? D.map((e) => (0, i.A)(e)) : [],
+        E = u.length > 0 ? u.map((e) => (0, i.A)(e.id)) : [],
+        A = C([...y, null != c ? U(c) : null, ...h, ...E], f, a),
+        _ = o?.find((e) => (0, n.isEqual)(e, s)) != null,
+        S = null == s || _ ? [] : [s.id];
+    return null != l
+        ? g(
+              A.filter((e) => e.type === l),
               S,
           )
-        : C(E, S).slice(0, 15);
+        : g(A, S).slice(0, 15);
 }
-r(105292);
+t(105292);

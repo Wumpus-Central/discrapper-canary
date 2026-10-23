@@ -88,7 +88,7 @@ function g(e) {
             }
         );
     }, [t, f, k]);
-    let b = a.useCallback(() => {
+    let _ = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
         ).then(
@@ -110,7 +110,7 @@ function g(e) {
               name: x,
               thumbSrc: g,
               ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: x }),
-              onClick: b,
+              onClick: _,
               onThumbError: () => {
                   (p(null),
                       (0, s.n6)(t, f).then(
