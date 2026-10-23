@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649224";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649244";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649224, Version Hash: 5fa2e5e2fedef5a163de6f7b5c190aee520da38d`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649244, Version Hash: 5690b64f08aa4ad8d5ed084c8bbd943a9d7d522a`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25487,7 +25487,7 @@ let yi = "isHideDevBanner",
                     className: tf()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649224" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649244" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -48414,8 +48414,7 @@ class BR extends ea.EventEmitter {
         }
     };
     routeEvent(e, t, n, i) {
-        if (!Array.isArray(n))
-            return void console.warn("[PostMessageTransport] Protocol error: event data should be an Array!");
+        if (!Array.isArray(n)) return void this.logger.warn("Protocol error: event data should be an Array!");
         let [r, a] = n;
         switch (r) {
             case Bm.A.HANDSHAKE:

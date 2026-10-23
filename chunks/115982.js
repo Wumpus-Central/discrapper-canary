@@ -12,6 +12,9 @@ let i = {
     preview_ready: l.default.okkgSB,
     working: l.default.t8skVB,
     error: l.default.avt0ax,
+    error_service_unavailable: l.default.yreXyD,
+    error_rate_limited: l.default.d8lNBq,
+    error_timeout: l.default.t1R7Rt,
 };
 function s(e) {
     if (null != e.labelText && "" !== e.labelText) return e.labelText;
@@ -86,10 +89,10 @@ function h(e, t) {
             { turnActive: n = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             l = [],
             a = new Map(),
-            i = new Map(),
-            s = 0,
-            { segmentOf: u } = c(e);
-        function d(e, t, n) {
+            s = new Map(),
+            u = 0,
+            { segmentOf: d } = c(e);
+        function o(e, t, n) {
             return {
                 id: e,
                 kind: t,
@@ -104,21 +107,21 @@ function h(e, t) {
                 segment: n,
             };
         }
-        function o(e, t) {
+        function m(e, t) {
             let n = a.get(e);
             if (null != n) return n;
-            let l = { taskId: e, task: d("task", "task", t), steps: [] };
+            let l = { taskId: e, task: o("task", "task", t), steps: [] };
             return (a.set(e, l), l);
         }
-        function m(e, n, a, r) {
-            if ("task" === a || "task" === n) return null != e ? o(e, r).task : (t = t ?? d("task", "task", r));
-            let s = `${e ?? ""} ${n}`,
-                u = i.get(s);
+        function f(e, n, a, r) {
+            if ("task" === a || "task" === n) return null != e ? m(e, r).task : (t = t ?? o("task", "task", r));
+            let i = `${e ?? ""} ${n}`,
+                u = s.get(i);
             if (null != u) return u;
-            let c = d(n, "step", r);
-            return (i.set(s, c), null != e ? o(e, r).steps.push(c) : l.push(c), c);
+            let d = o(n, "step", r);
+            return (s.set(i, d), null != e ? m(e, r).steps.push(d) : l.push(d), d);
         }
-        let f = (function (e) {
+        let h = (function (e) {
                 let t = new Set();
                 for (let n of e) {
                     if ("node" !== n.kind || null == n.node) continue;
@@ -131,7 +134,7 @@ function h(e, t) {
                 }
                 return t;
             })(e),
-            h = (function (e) {
+            x = (function (e) {
                 let t = new Set();
                 for (let n of e)
                     "node" === n.kind &&
@@ -143,25 +146,25 @@ function h(e, t) {
             })(e);
         for (let [t, n] of e.entries()) {
             if (
-                (0 !== f.size &&
+                (0 !== h.size &&
                     "error" !== n.kind &&
                     "terminal_error" !== n.kind &&
                     null != n.task_id &&
                     "" !== n.task_id &&
-                    f.has(n.task_id)) ||
-                (0 !== h.size &&
+                    h.has(n.task_id)) ||
+                (0 !== x.size &&
                     "node" === n.kind &&
                     null != n.node &&
                     (null == n.task_id || "" === n.task_id) &&
-                    h.has(n.node.id))
+                    x.has(n.node.id))
             )
                 continue;
-            let e = u[t] ?? 0;
+            let e = d[t] ?? 0;
             if ("node" === n.kind && null != n.node) {
                 let t = n.node,
-                    l = m(n.task_id, t.id, t.node_kind ?? "step", e);
+                    l = f(n.task_id, t.id, t.node_kind ?? "step", e);
                 if (
-                    ((l.touched = ++s),
+                    ((l.touched = ++u),
                     null != t.label_key && (l.labelKey = t.label_key),
                     null != t.label_text && (l.labelText = t.label_text),
                     null != t.group_label && (l.groupLabel = t.group_label),
@@ -191,16 +194,20 @@ function h(e, t) {
                 continue;
             }
             if ("error" === n.kind || "terminal_error" === n.kind) {
-                let l = m(void 0, `${n.kind}-${t}`, "step", e);
-                ((l.touched = ++s),
-                    (l.labelKey = "error"),
+                let l = f(void 0, `${n.kind}-${t}`, "step", e);
+                ((l.touched = ++u),
+                    (l.labelKey = (function (e) {
+                        let t = "error" === e.kind ? e.failure_kind : void 0,
+                            n = `error_${t ?? "unknown"}`;
+                        return n in i ? n : "error";
+                    })(n)),
                     (l.status = "failed"),
                     null != n.message && "" !== n.message && (l.detail = [n.message]));
             }
         }
-        let x = [...a.values()];
-        for (let e of x) n || "running" !== e.task.status || (e.task.status = "incomplete");
-        return { steps: l, tasks: x, ...(null != t ? { turn: t } : {}) };
+        let g = [...a.values()];
+        for (let e of g) n || "running" !== e.task.status || (e.task.status = "incomplete");
+        return { steps: l, tasks: g, ...(null != t ? { turn: t } : {}) };
     })(e, { turnActive: t }));
 }
 function x(e) {
