@@ -2,9 +2,10 @@ n.d(t, {
     $0: () => _,
     A5: () => d,
     UZ: () => p,
-    Xr: () => g,
+    Xr: () => S,
     as: () => u,
     cf: () => f,
+    eT: () => g,
     gN: () => m,
     kv: () => c,
     mT: () => T,
@@ -91,11 +92,16 @@ function T(e) {
 }
 function m(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],
-        i = e[Math.floor(Math.random() * e.length)],
-        r = (0, o.ii)(n);
-    return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
+        i = e.filter((e) => !o.fY.includes(e)),
+        r = i.length > 0 ? i : e,
+        a = r[Math.floor(Math.random() * r.length)],
+        s = (0, o.ii)(n);
+    return { fontId: a, effectId: n, colors: [...s[Math.floor(Math.random() * s.length)]] };
 }
-function g(e) {
+function g(e, t) {
+    return e.effectId === a.z.SOLID && e.colors.length > 0 && e.colors[0] === t ? { ...e, colors: [] } : e;
+}
+function S(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);
