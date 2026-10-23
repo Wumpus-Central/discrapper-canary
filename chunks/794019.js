@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648206";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648214";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648206, Version Hash: c7da9091eca8a11fe2fbc1733bf38bc2b2ef0beb`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648214, Version Hash: 04cb885200027a951e3c940b0c606383f6b109ec`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25494,7 +25494,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648206" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648214" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -42221,7 +42221,7 @@ var Gj = n(423976),
     GY = n(144189);
 async function GK(e) {
     let { frame: t, iframeId: n } = e,
-        [i] = await (0, Gj.A)({ applicationId: t.applicationId, iframeId: n, permissions: ["connect_user_to_voice"] });
+        [i] = await (0, Gj.Ay)({ applicationId: t.applicationId, iframeId: n, permissions: ["connect_user_to_voice"] });
     if (i?.state !== "granted")
         throw new wF.A(
             { errorCode: j.Lw6.UNAUTHORIZED_FOR_APPLICATION },
@@ -42509,7 +42509,7 @@ let GZ = { [bd.sm.ANY]: [bd.W_, bd.VH] },
             handler(e) {
                 let { socket: t } = e,
                     { frame: n } = (0, wB.Ay)(t);
-                return { permissions: Gq.jQ.map((e) => (0, Gj.C)(n.applicationId, e)) };
+                return { permissions: Gq.jQ.map((e) => (0, Gj.Cp)(n.applicationId, e)) };
             },
         }),
         [j.e$_.REQUEST_DEVICE_PERMISSIONS]: Gb(j.e$_.REQUEST_DEVICE_PERMISSIONS, {
@@ -42518,7 +42518,7 @@ let GZ = { [bd.sm.ANY]: [bd.W_, bd.VH] },
                 let { socket: t, args: n } = e,
                     { frame: i, iframeId: r } = (0, wB.Ay)(t);
                 return {
-                    permissions: await (0, Gj.A)({
+                    permissions: await (0, Gj.Ay)({
                         applicationId: i.applicationId,
                         iframeId: r,
                         permissions: n.permissions,
@@ -47303,7 +47303,7 @@ let FP = { [bd.sm.ANY]: [bd.W_, bd.VH] },
                 let t,
                     { socket: n, args: i } = e,
                     { frame: r } = (0, wB.Ay)(n),
-                    { state: a } = (0, Gj.C)(r.applicationId, "screen_capture");
+                    { state: a } = (0, Gj.Cp)(r.applicationId, "screen_capture");
                 if ("unsupported" === a) return { status: "unsupported" };
                 if ("prompt" === a) return { status: "permission_required" };
                 if ("denied" === a) return { status: "permission_denied" };

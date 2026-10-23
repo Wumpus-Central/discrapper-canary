@@ -163,7 +163,7 @@ let h = {
                               n = d.A.getPublishStatus(e)?.previewDevicePermissions;
                           if (t?.install_scope !== "user" || "" === t.application_id || null == n) return;
                           let s = t.application_id;
-                          (0, l.A)({
+                          (0, l.Ay)({
                               applicationId: s,
                               appName: r.A.getApplication(s)?.name ?? t.name,
                               iframeId: null,
