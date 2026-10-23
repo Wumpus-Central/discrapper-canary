@@ -1,7 +1,7 @@
 n.d(t, { A: () => x });
 var l = n(477900),
-    r = n(17928),
-    a = n(364522),
+    a = n(17928),
+    r = n(364522),
     s = n(86182),
     i = n(265872),
     o = n(442433),
@@ -11,17 +11,17 @@ var l = n(477900),
     m = n(562153),
     p = n(462117);
 function h(e) {
-    let { participants: t, channel: r } = e;
-    return (0, l.jsx)(a.Ip, {
+    let { participants: t, channel: a } = e;
+    return (0, l.jsx)(r.Ip, {
         className: p.S,
         children: t.map((e) =>
             (0, l.jsx)(
                 c.A,
                 {
                     user: e,
-                    guildId: r?.guild_id,
-                    channelId: r?.id,
-                    nick: m.Ay.getNickname(r?.guild_id, r?.id, e),
+                    guildId: a?.guild_id,
+                    channelId: a?.id,
+                    nick: m.Ay.getNickname(a?.guild_id, a?.id, e),
                     onContextMenu: (t) => {
                         (0, o.L3)(t, async () => {
                             let { default: t } = await Promise.all([
@@ -65,8 +65,8 @@ function h(e) {
     });
 }
 function x(e) {
-    let { children: t, participants: n, channel: a, onPopoutClosed: o, targetElementRef: c } = e,
-        m = (0, r.bG)([u.A], () => u.A.theme),
+    let { children: t, participants: n, channel: r, onPopoutClosed: o, targetElementRef: c } = e,
+        m = (0, a.bG)([u.A], () => u.A.theme),
         p = 1 === n.length ? n[0] : null;
     return null != p
         ? (0, l.jsx)(s.w, {
@@ -74,8 +74,8 @@ function x(e) {
               children: (0, l.jsx)(d.A, {
                   targetElementRef: c,
                   user: p,
-                  guildId: a?.guild_id,
-                  channelId: a?.id,
+                  guildId: r?.guild_id,
+                  channelId: r?.id,
                   onClosePopout: o,
                   children: t,
               }),
@@ -85,7 +85,7 @@ function x(e) {
               children: (0, l.jsx)(i.Y, {
                   targetElementRef: c,
                   renderPopout: () => {
-                      if (null != n) return (0, l.jsx)(h, { participants: n, channel: a });
+                      if (null != n) return (0, l.jsx)(h, { participants: n, channel: r });
                       throw Error("One of participant or participants is required");
                   },
                   children: t,

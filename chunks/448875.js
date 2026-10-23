@@ -21,7 +21,7 @@ function m(e) {
 function h(e) {
     if (null != e) return { id: e.id, name: e.name, animated: e.animated };
 }
-function y(e) {
+function f(e) {
     return {
         url: e.url,
         proxy_url: e.proxyUrl,
@@ -35,7 +35,7 @@ function y(e) {
         flags: e.flags,
     };
 }
-function f(e) {
+function y(e) {
     return {
         custom_id: e.customId,
         disabled: e.disabled,
@@ -65,7 +65,7 @@ function g(e) {
                 case i.I5.STRING_SELECT:
                     return {
                         type: t.type,
-                        ...f(t),
+                        ...y(t),
                         options: t.options.map((e) => ({
                             label: e.label,
                             value: e.value,
@@ -77,26 +77,26 @@ function g(e) {
                 case i.I5.USER_SELECT:
                 case i.I5.ROLE_SELECT:
                 case i.I5.MENTIONABLE_SELECT:
-                    return { type: t.type, ...f(t), default_values: t.defaultValues };
+                    return { type: t.type, ...y(t), default_values: t.defaultValues };
                 case i.I5.CHANNEL_SELECT:
-                    return { type: t.type, ...f(t), channel_types: t.channelTypes, default_values: t.defaultValues };
+                    return { type: t.type, ...y(t), channel_types: t.channelTypes, default_values: t.defaultValues };
                 case i.I5.SECTION:
                     return { type: t.type, components: g(t.components), accessory: e(t.accessory) };
                 case i.I5.TEXT_DISPLAY:
                     return { type: t.type, content: t.content };
                 case i.I5.THUMBNAIL:
-                    return { type: t.type, media: y(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
+                    return { type: t.type, media: f(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
                 case i.I5.MEDIA_GALLERY:
                     return {
                         type: t.type,
                         items: t.items.map((e) => ({
-                            media: y(e.media),
+                            media: f(e.media),
                             description: e.description,
                             spoiler: e.spoiler ?? !1,
                         })),
                     };
                 case i.I5.FILE:
-                    return { type: t.type, file: y(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
+                    return { type: t.type, file: f(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
                 case i.I5.SEPARATOR:
                     return { type: t.type, divider: t.divider, spacing: t.spacing };
                 case i.I5.CONTENT_INVENTORY_ENTRY:

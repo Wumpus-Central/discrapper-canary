@@ -1,37 +1,37 @@
 n.d(t, { A: () => a });
 var l = n(17928),
     r = n(73153),
-    s = n(280450);
-let i = { users: {} };
+    i = n(280450);
+let s = { users: {} };
 class u extends l.Ay.DeviceSettingsStore {
     static displayName = "ConjureDevicePermissionStore";
     static persistKey = "ConjureDevicePermissionStore";
     initialize(e) {
-        (this.waitFor(s.default), (i = { users: e?.users ?? {} }));
+        (this.waitFor(i.default), (s = { users: e?.users ?? {} }));
     }
     getDecision(e, t) {
-        let n = s.default.getId();
-        return null == n ? null : (i.users[n]?.[e]?.[t] ?? null);
+        let n = i.default.getId();
+        return null == n ? null : (s.users[n]?.[e]?.[t] ?? null);
     }
     getUserAgnosticState() {
-        return i;
+        return s;
     }
 }
 let a = new u(r.h, {
     CONJURE_DEVICE_PERMISSIONS_DECIDE: function (e) {
         let { applicationId: t, permissions: n, allowed: l } = e,
-            r = s.default.getId();
+            r = i.default.getId();
         if (null == r) return !1;
-        let u = ((i.users[r] ??= {})[t] ??= {});
+        let u = ((s.users[r] ??= {})[t] ??= {});
         for (let e of n) u[e] = l ? "granted" : "denied";
-        i = { ...i };
+        s = { ...s };
     },
     CONJURE_DEVICE_PERMISSIONS_RESET: function (e) {
         let { applicationId: t, permissions: n } = e,
-            l = s.default.getId(),
-            r = null != l ? i.users[l]?.[t] : null;
+            l = i.default.getId(),
+            r = null != l ? s.users[l]?.[t] : null;
         if (null == r || !n.some((e) => null != r[e])) return !1;
         for (let e of n) delete r[e];
-        i = { ...i };
+        s = { ...s };
     },
 });

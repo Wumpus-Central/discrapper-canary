@@ -1,8 +1,8 @@
 n.d(t, { A: () => D });
 var l = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
+    a = n(582128),
+    r = n(503698),
+    s = n.n(r),
     i = n(661531),
     o = n(109112),
     c = n(834730),
@@ -18,8 +18,8 @@ var l = n(477900),
     j = n(819648),
     v = n(965344),
     A = n(498137),
-    N = n(192339),
-    I = n(144103),
+    I = n(192339),
+    N = n(144103),
     y = n(834109),
     E = n(486020),
     b = n(48763),
@@ -58,19 +58,19 @@ function M(e) {
 }
 function P(e) {
     let { stats: t } = e,
-        { topGuild: n, topEmoji: a, topGame: s } = t,
-        o = r.useMemo(
+        { topGuild: n, topEmoji: r, topGame: s } = t,
+        o = a.useMemo(
             () => (null != n ? E.Ay.getGuildIconURL({ id: n.guildId, icon: n.guildIcon, size: 16 }) : void 0),
             [n],
         ),
-        c = r.useMemo(
+        c = a.useMemo(
             () =>
                 s?.applicationImageId != null
                     ? E.Ay.getApplicationIconURL({ id: s.applicationId, icon: s.applicationImageId, size: 16 })
                     : void 0,
             [s],
         ),
-        d = r.useMemo(() => (null != o ? (0, l.jsx)(k, { src: o }) : (0, l.jsx)(_, {})), [o]);
+        d = a.useMemo(() => (null != o ? (0, l.jsx)(k, { src: o }) : (0, l.jsx)(_, {})), [o]);
     return (0, l.jsxs)("ul", {
         className: R.M1,
         children: [
@@ -93,8 +93,8 @@ function P(e) {
             }),
             (0, l.jsx)(M, {
                 icon:
-                    null != a
-                        ? (0, l.jsx)(g.A, { emojiId: a.emojiId, emojiName: a.emojiName, alt: "", className: R.Gl })
+                    null != r
+                        ? (0, l.jsx)(g.A, { emojiId: r.emojiId, emojiName: r.emojiName, alt: "", className: R.Gl })
                         : (0, l.jsx)(_, {}),
                 stat: t.topEmojiName,
             }),
@@ -127,10 +127,10 @@ function w() {
 }
 function D(e) {
     let { checkpointData: t } = e,
-        { character: n, stats: a } = t,
-        i = null != n && null != a,
+        { character: n, stats: r } = t,
+        i = null != n && null != r,
         o = (0, C.FX)("Checkpoint2026CardDisplayComponent"),
-        c = r.useMemo(() => (null != a ? (0, j.R8)(a) : null), [a]);
+        c = a.useMemo(() => (null != r ? (0, j.R8)(r) : null), [r]);
     return (0, l.jsxs)(A.A, {
         character: n,
         size: b.W.SM,
@@ -138,10 +138,10 @@ function D(e) {
         style: O,
         children: [
             (0, l.jsx)(d.A, { children: S.intl.string(T.default.Og2R9d) }),
-            (0, l.jsx)(N.A, {}),
+            (0, l.jsx)(I.A, {}),
             (0, l.jsx)(y.A, { variant: null != n ? "full" : "short", className: R.Ss }),
             null != n && null != c
-                ? (0, l.jsx)(I.A, { powerLevel: c.powerLevel, powerLevelUnits: c.powerLevelUnits })
+                ? (0, l.jsx)(N.A, { powerLevel: c.powerLevel, powerLevelUnits: c.powerLevelUnits })
                 : null,
             null != n ? (0, l.jsx)(v.A, { character: n }) : null,
             null != c ? (0, l.jsx)(P, { stats: c }) : null,

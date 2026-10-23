@@ -1,14 +1,14 @@
 n.d(t, { A: () => f });
 var l = n(477900),
-    r = n(503698),
-    a = n.n(r),
+    a = n(503698),
+    r = n.n(a),
     s = n(582128),
     i = n(835517),
     o = n(399667),
     c = n(819648),
     d = n(881245);
 function u(e) {
-    let { character: t, size: n, className: r } = e,
+    let { character: t, size: n, className: a } = e,
         u = s.useMemo(() => (0, c.vF)(t, Math.round(n * (0, i.A)())), [t, n]),
         m = s.useMemo(() => (0, o.O)(t), [t]),
         p = s.useRef(new Set()),
@@ -24,7 +24,7 @@ function u(e) {
         (0, l.jsx)("div", {
             role: "img",
             "aria-label": m,
-            className: a()(d.GG, { [d.Kc]: h }, r),
+            className: r()(d.GG, { [d.Kc]: h }, a),
             children: u.map((e) =>
                 (0, l.jsx)(
                     "img",
@@ -43,7 +43,7 @@ function f(e) {
     let { character: t } = e,
         { size: n } = (0, m.Z)();
     return (0, l.jsx)("div", {
-        className: a()(h.characterColumn, h[n]),
+        className: r()(h.characterColumn, h[n]),
         children: (0, l.jsx)(u, { character: t, size: x[n], className: h.character }),
     });
 }
