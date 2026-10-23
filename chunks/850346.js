@@ -431,7 +431,11 @@ let B = T.sx.slice(0, 5),
     W = [8, 6, 5, 4, 3];
 function Y(e) {
     let { memberIds: t, gameIds: a = B, entryCount: l = W.length, totalUsers: s = 42, totalGames: n = 89 } = e,
-        r = (0 === t.length ? [] : W.slice(0, l)).map((e, t) => ({ application_id: a[t % a.length], total_users: e }));
+        r = (0 === t.length ? [] : W.slice(0, l)).map((e, l) => ({
+            application_id: a[l % a.length],
+            total_users: e,
+            user_ids: t.slice(0, 5),
+        }));
     return {
         games: r,
         user_ids: 0 === r.length ? [] : t.slice(0, 6),

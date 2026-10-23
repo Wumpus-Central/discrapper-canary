@@ -131,6 +131,23 @@
     gap: var(--space-4)
 }
 
+.playersClickable__5df76 {
+    cursor: pointer;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.playerCount__5df76 {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 2px
+}
+
+.playersClickable__5df76:focus-visible .playerCount__5df76,
+.playersClickable__5df76:hover .playerCount__5df76 {
+    text-decoration-color: currentColor
+}
+
 .body__0c01b {
     display: flex;
     flex: 1;
@@ -494,4 +511,4 @@
     padding-inline: var(--space-4)
 }
 
-/*# sourceMappingURL=69932781e24b393e.css.map*/
+/*# sourceMappingURL=3f20c7ac438f6786.css.map*/
