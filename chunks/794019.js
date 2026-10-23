@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648131";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648136";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648131, Version Hash: 28bb28e377287c8d55ad5416512043ef39e3f29d`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648136, Version Hash: 8f7397918b6c81ea05f5c336d9b3a66fec73e5d4`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25494,7 +25494,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648131" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648136" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })

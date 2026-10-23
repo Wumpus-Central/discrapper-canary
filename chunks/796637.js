@@ -207,11 +207,27 @@ function M(e) {
         getChannelNoticeSection: () => G,
         getFirstVoiceChannel: () => null,
         getSectionRowsFromChannel(e) {
-            let t = [b, ...M];
-            for (let n = 0; n < t.length; n++)
-                for (let i = 0; i < t[n].channelList.length; i++)
-                    if (t[n].channelList[i].id === e) return [{ section: n + c.bK, row: i }];
-            return [];
+            if (null == e) return [];
+            let t = [],
+                n = [],
+                i = [],
+                r = [b, ...M];
+            for (let a = 0; a < r.length; a++) {
+                let s = r[a],
+                    l = a > 0 ? M[a - 1] : null,
+                    o = null != l && l.record.name.trim().toLowerCase() === R.A.toLowerCase(),
+                    d = a + c.bK;
+                for (let r = 0; r < s.channelList.length; r++) {
+                    let a = s.channelList[r];
+                    if (a.id === e) {
+                        (o ? i : t).push({ section: d, row: r });
+                        continue;
+                    }
+                    let l = a.threadIds.indexOf(e);
+                    l >= 0 && n.push({ section: d, row: r, threadOffset: l });
+                }
+            }
+            return [...t, ...n, ...i];
         },
         forEachShownChannel(e) {
             for (let t of [b, ...M])
