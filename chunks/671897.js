@@ -600,6 +600,7 @@ function el(e) {
                             visible: a,
                             onClick: e.onClick,
                             active: e.active,
+                            clickableProps: null != e.active ? { "aria-pressed": e.active } : void 0,
                             disabled: e.disabled,
                             ariaLabel: e.label,
                             tooltipLabel: e.label,
