@@ -14,6 +14,7 @@ let a = {
     [n.x.ORBITRON]: s.default.pwbAIk,
     [n.x.NEW_ROCKER]: s.default["Llo/Ia"],
     [n.x.KALAM]: s.default.t9Les4,
+    [n.x.HEXAGON]: s.default.MvIZMX,
 };
 function r(e) {
     return a[e] ?? s.default.ZEL6mz;

@@ -9882,6 +9882,14 @@
 
 @font-face {
     font-display: swap;
+    font-family: Pricedown;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/a7bafac436428e6c.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
     font-family: AI Visual Identity Glyphs;
     font-style: normal;
     font-weight: 400;
@@ -10370,4 +10378,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.eb73ad2f84d9fd56.css.map*/
+/*# sourceMappingURL=952007.87dea5a700fabeaf.css.map*/

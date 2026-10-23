@@ -1,4 +1,4 @@
-l.d(t, { a: () => m, p: () => d });
+l.d(t, { a: () => f, p: () => d });
 var n = l(503698),
     s = l.n(n),
     a = l(559949),
@@ -19,11 +19,12 @@ let i = {
     [a.x.ORBITRON]: c.yT,
     [a.x.NEW_ROCKER]: c.NX,
     [a.x.KALAM]: c.x4,
+    [a.x.HEXAGON]: c.qP,
 };
 function d(e) {
     return { name: (0, o.A)(e), className: i[e] ?? "" };
 }
-function m(e) {
+function f(e) {
     let { displayNameStyles: t, compensateForSafari: l = !0 } = e;
     if (!(0, u.W)({ location: "useDisplayNameStylesFont" }) || null == t) return "";
     let n = d(t.fontId);
