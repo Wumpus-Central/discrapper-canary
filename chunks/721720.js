@@ -847,11 +847,11 @@ var eJ = l(946052),
     eQ = l(135517),
     e0 = l(442036),
     e1 = l(212407),
-    e2 = l(815280),
-    e5 = l(60140),
-    e4 = l(602051),
+    e5 = l(815280),
+    e2 = l(60140),
+    e6 = l(602051),
     e3 = l(268270);
-function e9(e) {
+function e8(e) {
     let { promotion: t, heroBlockRecord: l, heroLogo: n, logoDisplayConfig: s, collectionId: r, isLoading: a } = e;
     return a
         ? (0, i.jsx)("div", { className: e3.Hw })
@@ -868,7 +868,7 @@ function e9(e) {
                           null != l.summary &&
                               "" !== l.summary &&
                               (0, i.jsx)(eq.B, {
-                                  onClick: (e) => (0, eZ.h)(e, t, e4.S.HOME),
+                                  onClick: (e) => (0, eZ.h)(e, t, e6.S.HOME),
                                   children: (0, i.jsx)(M.E, {
                                       variant: "text-sm/normal",
                                       className: o()(e3.Tm, e3.vd),
@@ -878,11 +878,11 @@ function e9(e) {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(eQ.A, { collectionId: r, variant: "condensed", surface: e4.S.HOME }),
+                  (0, i.jsx)(eQ.A, { collectionId: r, variant: "condensed", surface: e6.S.HOME }),
               ],
           });
 }
-let e6 = function (e) {
+let e9 = function (e) {
     let { promotion: t, heroBlock: l, isLoading: n, handleTransition: s, tab: a } = e,
         u = (0, Z.bG)([et.default], () => et.default.getCurrentUser()),
         c = (0, Z.bG)([eX.default], () => eX.default.locale),
@@ -909,7 +909,7 @@ let e6 = function (e) {
                 page_category: d?.pageCategory,
                 cta_name: "shop latest category hero button",
             }),
-            (0, eZ.l)(t, e4.S.HOME, e4.Z.VIEW_ALL_ITEMS_CLICKED));
+            (0, eZ.l)(t, e6.S.HOME, e6.Z.VIEW_ALL_ITEMS_CLICKED));
     }
     return null == u || null == g
         ? null
@@ -921,7 +921,7 @@ let e6 = function (e) {
                       (0, i.jsx)("div", {
                           className: o()(e3.vK, { [e3.no]: v }),
                           style: null != S ? { background: S } : void 0,
-                          children: null != b && (0, i.jsx)(e2.A, { bannerStatic: b, isResponsive: v }),
+                          children: null != b && (0, i.jsx)(e5.A, { bannerStatic: b, isResponsive: v }),
                       }),
                       (0, i.jsxs)("div", {
                           className: e3.xX,
@@ -931,7 +931,7 @@ let e6 = function (e) {
                                   style: null != S ? { background: S } : void 0,
                                   children:
                                       null != b &&
-                                      (0, i.jsx)(e2.A, { bannerStatic: b, bannerAnimated: j, isResponsive: v }),
+                                      (0, i.jsx)(e5.A, { bannerStatic: b, bannerAnimated: j, isResponsive: v }),
                               }),
                               (0, i.jsxs)("div", {
                                   className: e3.mz,
@@ -944,7 +944,7 @@ let e6 = function (e) {
                                                   children: [
                                                       (0, i.jsx)("div", {
                                                           className: e3.bC,
-                                                          children: (0, i.jsx)(e9, {
+                                                          children: (0, i.jsx)(e8, {
                                                               promotion: t,
                                                               heroBlockRecord: h,
                                                               heroLogo: _,
@@ -957,7 +957,7 @@ let e6 = function (e) {
                                                   ],
                                               }),
                                       }),
-                                      (0, i.jsx)(e5.A, {
+                                      (0, i.jsx)(e2.A, {
                                           heroBlockRecord: h,
                                           tab: a,
                                           isBlockLoading: n,
@@ -971,12 +971,12 @@ let e6 = function (e) {
               }),
           });
 };
-var e7 = l(172218),
-    e8 = l(28863),
+var e4 = l(172218),
+    e7 = l(28863),
     te = l(9530);
 let tt = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: l } = e,
-        n = (0, e7.K)(
+        n = (0, e4.K)(
             (e) => {
                 l?.(e);
             },
@@ -993,7 +993,7 @@ let tt = function (e) {
         children: [
             (0, i.jsx)("div", {
                 className: te.vK,
-                children: null != s && (0, i.jsx)(e2.A, { bannerStatic: s, bannerAnimated: r }),
+                children: null != s && (0, i.jsx)(e5.A, { bannerStatic: s, bannerAnimated: r }),
             }),
             (0, i.jsx)("div", {
                 className: te.HQ,
@@ -1016,7 +1016,7 @@ let tt = function (e) {
                                       o && t.body,
                                       o && u && " ",
                                       u &&
-                                          (0, i.jsx)(e8.Anchor, {
+                                          (0, i.jsx)(e7.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: te.CU,
                                               style: { ...a },
@@ -1212,21 +1212,32 @@ let tA = [],
     tR = [
         "1212569433839636530",
         "1144308439720394944",
-        "1228251144065777765",
-        "1343751620965564426",
-        "1157407831348228141",
-        "1197344326133502032",
-        "1232071712695386162",
-        "1144046002110738634",
-        "1271174324375519273",
-        "1237653964582031400",
-        "1217625794382401577",
-        "1462116613871636542",
-        "1458472704469499965",
-        "1447654091072344195",
-        "1432550258839392376",
-        "1409898407849365565",
-        "1404558257065824347",
+        "1462116613674373345",
+        "1462116613632426014",
+        "1432550258134487124",
+        "1516559294819074088",
+        "1432550258239602810",
+        "1459194821255237723",
+        "1495805817792761976",
+        "1212570343567261736",
+        "1271174640026255380",
+        "1432550258730078258",
+        "1538990902306152558",
+        "1287835633787732070",
+        "1538991362601656420",
+        "1404558257174876300",
+        "1256321669467865088",
+        "1271174732577767626",
+        "1402472280642289775",
+        "1483911783268876489",
+        "1287835633615765524",
+        "1545191258564075630",
+        "1354894010522800158",
+        "1333866045236314327",
+        "1533914517329678408",
+        "1519795013586911452",
+        "1531405732174626986",
+        "1516559585601786028",
     ];
 function tT(e, t, l) {
     let n = l ? e.transitionOffsetLeft : 0,
@@ -1304,7 +1315,7 @@ function tD(e) {
         ),
         u = (0, ei.$)("shop_transition_jumble"),
         c = tS.useConfig({ location: "shop_transition_jumble" }).enabled,
-        d = (0, eo.hv)(u ? tR : tA, { needsCategory: !1 }),
+        d = (0, eo.hv)(u ? tR : tA, { needsCategory: !1, flattenVariants: !0 }),
         m = r.useMemo(() => {
             if (!u) return a;
             let e = a.filter((e) => {
@@ -1584,7 +1595,7 @@ let tU = function (e) {
                                         (null == A.endsAt || null != (0, I.X)(A.endsAt))
                                     ) {
                                         d = (0, i.jsx)(
-                                            e6,
+                                            e9,
                                             { promotion: A, isLoading: R, handleTransition: t, heroBlock: e, tab: s },
                                             a,
                                         );
