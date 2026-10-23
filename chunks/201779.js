@@ -37,6 +37,7 @@ var i,
         (r.SIDEKICK_LEAVE = "sidekick_leave"),
         (r.FINALIZE_CHARACTER = "finalize_character"),
         (r.SUMMARY = "summary"),
+        (r.SHARE = "share"),
         (r.PROFILE_WIDGET = "profile_widget"),
         r);
 let d = new Set([
@@ -82,6 +83,7 @@ var _ =
         (s.SQUAD = "squad"),
         (s.SIDEKICK = "sidekick"),
         (s.SUMMARY = "summary"),
+        (s.SHARE = "share"),
         s);
 let A = {
     home: { characterStage: "idle" },
@@ -116,6 +118,7 @@ let A = {
     sidekick_leave: { characterStage: "assembled", statsScreen: "sidekick" },
     finalize_character: { characterStage: "finalize" },
     summary: { characterStage: "summary", statsScreen: "summary" },
+    share: { characterStage: "summary", statsScreen: "share" },
     profile_widget: { characterStage: "profile_widget" },
 };
 function h(e) {

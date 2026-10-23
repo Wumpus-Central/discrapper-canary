@@ -516,6 +516,114 @@
     text-align: center
 }
 
+.description__9fbff {
+    line-height: 1.2
+}
+
+.title__4e829 {
+    align-items: center;
+    color: var(--custom-checkpoint-primary);
+    display: flex;
+    gap: var(--space-8)
+}
+
+.text__4e829 {
+    font-weight: 800;
+    line-height: 20px;
+    text-transform: uppercase
+}
+
+.share_e90424 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--space-48) + var(--space-12));
+    max-width: 100%;
+    text-align: start
+}
+
+.header_e90424 {
+    align-items: flex-end;
+    -moz-column-gap: var(--space-96);
+    column-gap: var(--space-96);
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--space-16)
+}
+
+.heading_e90424 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.display_e90424 {
+    text-transform: uppercase
+}
+
+.description_e90424 {
+    max-width: 459px;
+    padding-bottom: var(--space-4)
+}
+
+.cards_e90424 {
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-16)
+}
+
+.cards_e90424,
+.option_e90424 {
+    display: flex;
+    max-width: 100%
+}
+
+.option_e90424 {
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: var(--space-12);
+    position: relative
+}
+
+.frame_e90424 {
+    background-color: var(--custom-checkpoint-primary);
+    inset: -2px;
+    -webkit-mask-image: url(/assets/b5cb2eaaa574eea3.svg);
+    mask-image: url(/assets/b5cb2eaaa574eea3.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    pointer-events: none;
+    position: absolute
+}
+
+.card_e90424 {
+    display: flex;
+    min-width: 0;
+    opacity: .8;
+    position: relative
+}
+
+.checked_e90424 .card_e90424 {
+    opacity: 1
+}
+
+.forward_e90424 {
+    background-color: var(--custom-checkpoint-primary);
+    border-color: var(--black);
+    color: var(--black);
+    gap: var(--space-8);
+    height: 40px;
+    padding-inline: var(--space-20)
+}
+
+.forwardText_e90424 {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase
+}
+
 .content__94b2c {
     display: grid;
     flex-grow: 1;
@@ -585,23 +693,6 @@
     padding-block: var(--space-4);
     padding-inline: var(--space-8);
     vertical-align: var(--space-4)
-}
-
-.description__9fbff {
-    line-height: 1.2
-}
-
-.title__4e829 {
-    align-items: center;
-    color: var(--custom-checkpoint-primary);
-    display: flex;
-    gap: var(--space-8)
-}
-
-.text__4e829 {
-    font-weight: 800;
-    line-height: 20px;
-    text-transform: uppercase
 }
 
 .animation__9d6ab {
@@ -1611,4 +1702,4 @@
     margin: 8px 0
 }
 
-/*# sourceMappingURL=480748.bb98ae689e9d254a.css.map*/
+/*# sourceMappingURL=605363.25d3fa4ffdcb163b.css.map*/
