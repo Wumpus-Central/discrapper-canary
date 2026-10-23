@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648457";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "648518";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648457, Version Hash: 5c35a13047ab51e24062158a4a33a93cced31ee3`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 648518, Version Hash: 2266c11b0c25ea52e5855ae5c8770c19a9061aba`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -25495,7 +25495,7 @@ let yn = "isHideDevBanner",
                     className: tf()(yt.Wz, yt.mr),
                     children: [
                         (0, b.jsx)(ye, { className: yt.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648457" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "648518" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -50420,12 +50420,15 @@ class HS extends eE.Ay.Store {
 }),
     n(836602),
     n(555337));
-let HN = { hasAppliedPerk: !1, hasVisitedDisplayNameStyles: !1 },
+let HN = { hasAppliedPerk: !1, hasVisitedDisplayNameStyles: !1, previousPerkValues: {} },
     HC = HN;
 class HO extends eE.Ay.PersistedStore {
     static displayName = "HexagonCampaignPersistedStore";
     static persistKey = "HexagonCampaignPersistedStore";
-    static migrations = [(e) => ({ ...e, hasVisitedDisplayNameStyles: e?.hasVisitedDisplayNameStyles ?? !1 })];
+    static migrations = [
+        (e) => ({ ...e, hasVisitedDisplayNameStyles: e?.hasVisitedDisplayNameStyles ?? !1 }),
+        (e) => ({ ...e, previousPerkValues: e?.previousPerkValues ?? {} }),
+    ];
     initialize(e) {
         null != e && (HC = { ...HN, ...e });
     }
@@ -50438,6 +50441,9 @@ class HO extends eE.Ay.PersistedStore {
     get hasVisitedDisplayNameStyles() {
         return HC.hasVisitedDisplayNameStyles;
     }
+    get previousPerkValues() {
+        return HC.previousPerkValues;
+    }
 }
 (new HO(k.h, {
     HEXAGON_CAMPAIGN_PERK_APPLIED: function () {
@@ -50449,6 +50455,10 @@ class HO extends eE.Ay.PersistedStore {
     HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES_VISITED: function () {
         if (HC.hasVisitedDisplayNameStyles) return !1;
         HC = { ...HC, hasVisitedDisplayNameStyles: !0 };
+    },
+    HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED: function (e) {
+        let { previousPerkValues: t } = e;
+        HC = { ...HC, previousPerkValues: { ...HC.previousPerkValues, ...t } };
     },
     LOGOUT: function () {
         HC = HN;

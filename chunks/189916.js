@@ -1,4 +1,4 @@
-(n.d(t, { Rd: () => c, U5: () => d, YY: () => l, j5: () => u, oB: () => o }), n(508425));
+(n.d(t, { Jy: () => d, Rd: () => u, U5: () => c, YY: () => l, j5: () => _, oB: () => o }), n(508425), n(559949));
 var i = n(441574),
     r = n(349871),
     a = n(474090),
@@ -11,6 +11,9 @@ function o(e) {
     return null != e && s.xG.has(e);
 }
 function d(e) {
+    return e?.fontId === s.vl;
+}
+function c(e) {
     let { perk: t, premiumType: n, isCampaignEnabled: i, now: r = Date.now() } = e;
     return !i ||
         (function () {
@@ -22,11 +25,11 @@ function d(e) {
           ? s.S9.LOCKED
           : s.S9.SELECTABLE;
 }
-function c(e, t) {
+function u(e, t) {
     let n = (0, r.kQ)(e?.perks, s.Sp[t]);
     return null != n && n.includes(i.g$.SOURCE_HEXAGON_CAMPAIGN);
 }
-function u(e, t) {
+function _(e, t) {
     let n = (0, r.kQ)(e?.perks, s.Sp[t]);
     return null != n && n.length > 0 && n.every((e) => e === i.g$.SOURCE_HEXAGON_CAMPAIGN);
 }

@@ -14,18 +14,18 @@ var a = s(477900),
     g = s(688810),
     E = s(139286),
     N = s(919395),
-    x = s(71393),
-    S = s(287809),
+    S = s(71393),
+    x = s(287809),
     p = s(174459),
     A = s(871162),
     I = s(248778),
     v = s(750656);
 let _ = [...v.re, ...v.gz];
-function j() {
+function y() {
     let e = (0, I.u)("effect-order");
     return n.useMemo(() => (e ? _ : v.re), [e]);
 }
-var y = s(88858),
+var j = s(88858),
     C = s(652329);
 let D = [
         d.x.DEFAULT,
@@ -41,7 +41,7 @@ let D = [
 function T() {
     let { includeCampaignFonts: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, I.u)("font-order"),
-        s = (0, y.Lz)(C.vB.DISPLAY_NAME_STYLE, "font-order"),
+        s = (0, j.Lz)(C.vB.DISPLAY_NAME_STYLE, "font-order"),
         a = e && s !== C.S9.HIDDEN;
     return n.useMemo(() => {
         let e = t ? L : D;
@@ -49,21 +49,21 @@ function T() {
     }, [t, a]);
 }
 var b = s(945096),
-    w = s(898985),
-    M = s(430571),
-    k = s(631670),
-    P = s(636537),
+    M = s(898985),
+    P = s(430571),
+    w = s(631670),
+    k = s(636537),
     O = s(73153),
-    F = s(626584),
-    R = s(927813),
+    R = s(626584),
+    F = s(927813),
     Y = s(189916);
-let B = new F.A("HexagonActionCreators"),
-    G = 5 * R.A.Millis.SECOND;
+let B = new R.A("HexagonActionCreators"),
+    G = 5 * F.A.Millis.SECOND;
 async function H() {
-    await P.Bo.post({ url: C.tK, rejectWithError: !0 });
+    await k.Bo.post({ url: C.tK, rejectWithError: !0 });
 }
-let z = null;
-async function U(e) {
+let U = null;
+async function z(e) {
     try {
         await H();
     } catch (e) {
@@ -72,18 +72,18 @@ async function U(e) {
     return (
         (await (function (e) {
             function t() {
-                return (0, Y.Rd)(S.default.getCurrentUser(), e);
+                return (0, Y.Rd)(x.default.getCurrentUser(), e);
             }
             return t()
                 ? Promise.resolve(!0)
                 : new Promise((e) => {
                       function s() {
-                          t() && (clearTimeout(a), S.default.removeChangeListener(s), e(!0));
+                          t() && (clearTimeout(a), x.default.removeChangeListener(s), e(!0));
                       }
                       let a = setTimeout(() => {
-                          (S.default.removeChangeListener(s), e(!1));
+                          (x.default.removeChangeListener(s), e(!1));
                       }, G);
-                      S.default.addChangeListener(s);
+                      x.default.addChangeListener(s);
                   });
         })(e)) || B.warn(`Timed out waiting for the Hexagon campaign ${e} perk to sync`),
         !0
@@ -91,18 +91,18 @@ async function U(e) {
 }
 async function K(e) {
     try {
-        return await U(e);
+        return await z(e);
     } finally {
-        z = null;
+        U = null;
     }
 }
 var J = s(207803),
     W = s(84540),
-    X = s(652215),
-    $ = s(836602),
-    q = s(696451),
-    Z = s(427262),
-    V = s(403581),
+    V = s(652215),
+    X = s(836602),
+    $ = s(696451),
+    q = s(427262),
+    Z = s(403581),
     Q = s(661531),
     ee = s(48736),
     et = s(317097),
@@ -148,8 +148,8 @@ function eh(e) {
 var eg = s(1986),
     eE = s(315710),
     eN = s(650583),
-    ex = s(607570);
-let eS = [0, 60, 120, 180, 240, 300, 360];
+    eS = s(607570);
+let ex = [0, 60, 120, 180, 240, 300, 360];
 function ep(e) {
     let { value: t, onChange: s, hueToColor: l, onConfirm: r, "aria-label": o, className: d } = e,
         c = (0, b.xo)((0, et.tf)(t).h),
@@ -157,12 +157,12 @@ function ep(e) {
     (0, eE.tj)(u);
     let m = n.useCallback((e) => s(l((0, b.xo)(e))), [s, l]),
         f = n.useCallback((e) => m(e.h), [m]),
-        h = n.useMemo(() => `linear-gradient(to right, ${eS.map((e) => (0, et.Hl)(l(e))).join(", ")})`, [l]),
+        h = n.useMemo(() => `linear-gradient(to right, ${ex.map((e) => (0, et.Hl)(l(e))).join(", ")})`, [l]),
         g = n.useMemo(
             () =>
                 function (e) {
                     let { hsl: t } = e;
-                    return (0, a.jsx)("div", { className: ex.Wn, style: { background: (0, et.Hl)(l(t.h)) } });
+                    return (0, a.jsx)("div", { className: eS.Wn, style: { background: (0, et.Hl)(l(t.h)) } });
                 },
             [l],
         ),
@@ -197,9 +197,9 @@ function ep(e) {
         );
     return (0, a.jsx)("div", {
         ref: u,
-        className: i()(ex.kL, d),
+        className: i()(eS.kL, d),
         children: (0, a.jsx)("div", {
-            className: ex.SP,
+            className: eS.SP,
             style: { "--custom-hue-track": h },
             role: "slider",
             tabIndex: 0,
@@ -223,7 +223,7 @@ function ev(e) {
     let { selectedColors: t, setSelectedColors: s, className: l } = e,
         [r, d] = n.useState(!1),
         c = n.useRef(null),
-        m = t.length > 0 ? (0, b.nO)(t) : X.TGz,
+        m = t.length > 0 ? (0, b.nO)(t) : V.TGz,
         f = n.useCallback((e) => s((0, b.cf)(e)), [s]),
         h = en(o.z.GUMMY),
         g = h.findIndex((e) => {
@@ -232,8 +232,8 @@ function ev(e) {
         }),
         E = g >= 0,
         N = t.length > 0 ? t : (0, b.cf)(m),
-        x = ea.intl.string(ea.t["FHBa/1"]),
-        S = (0, el.Ay)({
+        S = ea.intl.string(ea.t["FHBa/1"]),
+        x = (0, el.Ay)({
             id: "gummy-color-picker",
             isEnabled: !0,
             orientation: er.Gl.HORIZONTAL,
@@ -241,7 +241,7 @@ function ev(e) {
             scrollToEnd: eI,
         });
     return (0, a.jsx)(ei.hD, {
-        navigator: S,
+        navigator: x,
         children: (0, a.jsx)(ei.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
@@ -276,15 +276,15 @@ function ev(e) {
                                         onRequestClose: () => d(!1),
                                         renderPopout: () =>
                                             (0, a.jsx)(ep, {
-                                                value: E ? X.TGz : m,
+                                                value: E ? V.TGz : m,
                                                 onChange: f,
                                                 hueToColor: b.UZ,
                                                 onConfirm: () => d(!1),
-                                                "aria-label": x,
+                                                "aria-label": S,
                                             }),
                                         children: (e) =>
                                             (0, a.jsx)(ed.m, {
-                                                text: x,
+                                                text: S,
                                                 position: "top",
                                                 ariaHidden: !0,
                                                 children: (0, a.jsx)("div", {
@@ -297,7 +297,7 @@ function ev(e) {
                                                             (0, a.jsx)(ec.D, {
                                                                 ...e,
                                                                 className: eA.Vz,
-                                                                "aria-label": x,
+                                                                "aria-label": S,
                                                                 children: (0, a.jsx)(eu.PencilIcon, {
                                                                     size: "custom",
                                                                     width: 18,
@@ -334,12 +334,12 @@ function ev(e) {
     });
 }
 var e_ = s(559106),
-    ej = s(508274),
-    ey = s(300158);
+    ey = s(508274),
+    ej = s(300158);
 let eC = () => Promise.resolve();
 function eD() {
     return (0, a.jsx)(em.CheckmarkLargeIcon, {
-        className: ey.q3,
+        className: ej.q3,
         size: "custom",
         width: 20,
         height: 20,
@@ -353,7 +353,7 @@ function eL(e) {
         offset: -2,
         children: (0, a.jsx)("button", {
             type: "button",
-            className: i()(ey.nf, (0, et.OK)(t) > 0.2 ? ey.o7 : ey.eE, { [ey.wH]: s }),
+            className: i()(ej.nf, (0, et.OK)(t) > 0.2 ? ej.o7 : ej.eE, { [ej.wH]: s }),
             style: { backgroundColor: (0, et.Hl)(t) },
             onClick: n,
             "aria-label": r,
@@ -375,7 +375,7 @@ function eT(e) {
         shouldShow: r,
         onRequestOpen: () => o(!0),
         onRequestClose: () => o(!1),
-        renderPopout: () => (0, a.jsx)(ej.VN, { onChange: l, value: t }),
+        renderPopout: () => (0, a.jsx)(ey.VN, { onChange: l, value: t }),
         children: (e) =>
             (0, a.jsx)(ed.m, {
                 text: c,
@@ -384,17 +384,17 @@ function eT(e) {
                 children: (0, a.jsx)("div", {
                     ...e,
                     ref: d,
-                    className: i()(ey.OF, { [ey.wH]: s }),
+                    className: i()(ej.OF, { [ej.wH]: s }),
                     children: (0, a.jsx)(ei.tG, {
                         id: "custom",
                         children: (e) =>
                             (0, a.jsx)(ec.D, {
                                 ...e,
-                                className: ey.Kd,
+                                className: ej.Kd,
                                 "aria-label": c,
                                 "aria-current": !!s || void 0,
                                 children: (0, a.jsx)(eu.PencilIcon, {
-                                    className: ey.EY,
+                                    className: ej.EY,
                                     size: "custom",
                                     width: 20,
                                     height: 20,
@@ -429,7 +429,7 @@ function eb(e) {
             children: (e) => {
                 let { ref: l, ...c } = e;
                 return (0, a.jsxs)("div", {
-                    className: i()(ey.kL, r),
+                    className: i()(ej.kL, r),
                     ref: l,
                     ...c,
                     "aria-label": ea.intl.string(es.default.JOpi7z),
@@ -462,9 +462,9 @@ function eb(e) {
         }),
     });
 }
-var ew = s(143660),
-    eM = s(454137);
-function ek(e) {
+var eM = s(143660),
+    eP = s(454137);
+function ew(e) {
     let { selectedColors: t, setSelectedColors: s, defaultColor: l, selectedEffectId: i, className: r } = e,
         d = (0, b.as)(i),
         c = en(i).map((e) => {
@@ -473,13 +473,13 @@ function ek(e) {
         }),
         u = (0, n.useCallback)(
             (e) => {
-                (s([e]), p.default.track(X.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: e === l, colors: [e] }));
+                (s([e]), p.default.track(V.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: e === l, colors: [e] }));
             },
             [s, l],
         ),
         m = (0, n.useCallback)(
             (e) => {
-                (s(e), p.default.track(X.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: !1, colors: e }));
+                (s(e), p.default.track(V.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: !1, colors: e }));
             },
             [s],
         );
@@ -488,18 +488,18 @@ function ek(e) {
         children: [
             (0, a.jsxs)(f.D, {
                 variant: "heading-md/semibold",
-                className: eM.sU,
+                className: eP.sU,
                 children: [
                     ea.intl.string(es.default.JOpi7z),
-                    (0, a.jsx)(V.t, { size: "xs", color: Q.A.colors.TEXT_DEFAULT }),
+                    (0, a.jsx)(Z.t, { size: "xs", color: Q.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             i === o.z.GUMMY
                 ? (0, a.jsx)(ev, { selectedColors: t, setSelectedColors: m })
                 : d > 1
                   ? (0, a.jsx)(ee.default, {
-                        className: ew.Ei,
-                        colorContainerClassName: ew.rx,
+                        className: eM.Ei,
+                        colorContainerClassName: eM.rx,
                         defaultColor: l,
                         colors: c,
                         value: t[0],
@@ -513,7 +513,7 @@ function ek(e) {
                         customPickerPosition: "top",
                     })
                   : (0, a.jsx)(eb, {
-                        className: ew.Ei,
+                        className: eM.Ei,
                         selectedColor: t[0],
                         setSelectedColor: u,
                         defaultColor: l,
@@ -522,13 +522,13 @@ function ek(e) {
         ],
     });
 }
-let eP = { seenFontIds: new Set(), seenEffectIds: new Set(), newFontsBadgeDismissed: !1, newEffectsBadgeDismissed: !1 };
+let ek = { seenFontIds: new Set(), seenEffectIds: new Set(), newFontsBadgeDismissed: !1, newEffectsBadgeDismissed: !1 };
 class eO extends c.Ay.PersistedStore {
     static displayName = "DisplayNameStylesSeenStore";
     static persistKey = "DisplayNameStylesSeenStore";
     static migrations = [(e) => ({ ...e, newFontsBadgeDismissed: !1, newEffectsBadgeDismissed: !1 })];
     initialize(e) {
-        eP = {
+        ek = {
             seenFontIds: new Set(e?.seenFontIds ?? []),
             seenEffectIds: new Set(e?.seenEffectIds ?? []),
             newFontsBadgeDismissed: e?.newFontsBadgeDismissed ?? !1,
@@ -537,54 +537,54 @@ class eO extends c.Ay.PersistedStore {
     }
     getState() {
         return {
-            seenFontIds: Array.from(eP.seenFontIds),
-            seenEffectIds: Array.from(eP.seenEffectIds),
-            newFontsBadgeDismissed: eP.newFontsBadgeDismissed,
-            newEffectsBadgeDismissed: eP.newEffectsBadgeDismissed,
+            seenFontIds: Array.from(ek.seenFontIds),
+            seenEffectIds: Array.from(ek.seenEffectIds),
+            newFontsBadgeDismissed: ek.newFontsBadgeDismissed,
+            newEffectsBadgeDismissed: ek.newEffectsBadgeDismissed,
         };
     }
     getSeenFonts() {
-        return eP.seenFontIds;
+        return ek.seenFontIds;
     }
     getSeenEffects() {
-        return eP.seenEffectIds;
+        return ek.seenEffectIds;
     }
     getNewFontsBadgeDismissed() {
-        return eP.newFontsBadgeDismissed;
+        return ek.newFontsBadgeDismissed;
     }
     getNewEffectsBadgeDismissed() {
-        return eP.newEffectsBadgeDismissed;
+        return ek.newEffectsBadgeDismissed;
     }
 }
-let eF = new eO(O.h, {
+let eR = new eO(O.h, {
     DISPLAY_NAME_STYLES_MARK_FONT_SEEN: function (e) {
         let { fontId: t } = e;
-        if (eP.seenFontIds.has(t)) return !1;
-        eP = { ...eP, seenFontIds: new Set([...eP.seenFontIds, t]) };
+        if (ek.seenFontIds.has(t)) return !1;
+        ek = { ...ek, seenFontIds: new Set([...ek.seenFontIds, t]) };
     },
     DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN: function (e) {
         let { effectId: t } = e;
-        if (eP.seenEffectIds.has(t)) return !1;
-        eP = { ...eP, seenEffectIds: new Set([...eP.seenEffectIds, t]) };
+        if (ek.seenEffectIds.has(t)) return !1;
+        ek = { ...ek, seenEffectIds: new Set([...ek.seenEffectIds, t]) };
     },
     DISPLAY_NAME_STYLES_MARK_NEW_FONTS_BADGE_DISMISSED: function () {
-        if (eP.newFontsBadgeDismissed) return !1;
-        eP = { ...eP, newFontsBadgeDismissed: !0 };
+        if (ek.newFontsBadgeDismissed) return !1;
+        ek = { ...ek, newFontsBadgeDismissed: !0 };
     },
     DISPLAY_NAME_STYLES_MARK_NEW_EFFECTS_BADGE_DISMISSED: function () {
-        if (eP.newEffectsBadgeDismissed) return !1;
-        eP = { ...eP, newEffectsBadgeDismissed: !0 };
+        if (ek.newEffectsBadgeDismissed) return !1;
+        ek = { ...ek, newEffectsBadgeDismissed: !0 };
     },
 });
-var eR = s(922301),
+var eF = s(922301),
     eY = s(660184),
     eB = s(742191);
 function eG(e) {
     let t,
         { selectedEffectId: s, setSelectedEffectId: l, className: r } = e,
-        o = j(),
+        o = y(),
         { dotEffectIds: d, dismissEffectDot: u } =
-            ((t = (0, c.bG)([eF], () => eF.getSeenEffects())),
+            ((t = (0, c.bG)([eR], () => eR.getSeenEffects())),
             {
                 dotEffectIds: n.useMemo(() => new Set(o.filter((e) => v.gz.includes(e) && !t.has(e))), [o, t]),
                 dismissEffectDot: n.useCallback((e) => {
@@ -598,14 +598,14 @@ function eG(e) {
         children: [
             (0, a.jsxs)(f.D, {
                 variant: "heading-md/semibold",
-                className: eM.sU,
+                className: eP.sU,
                 children: [
                     ea.intl.string(es.default["1wilM1"]),
-                    (0, a.jsx)(V.t, { size: "xs", color: Q.A.colors.TEXT_DEFAULT }),
+                    (0, a.jsx)(Z.t, { size: "xs", color: Q.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: i()(eM.fh, { [eB.KS]: m }),
+                className: i()(eP.fh, { [eB.KS]: m }),
                 style: { "--custom-dns-tile-columns": h },
                 children: o.map((e) => {
                     let t = d.has(e);
@@ -629,25 +629,25 @@ function eG(e) {
 }
 function eH(e) {
     let { effectId: t, selected: s, showNewDot: n, isFlywheelEnabled: l, onClick: r } = e,
-        o = (0, w._)(t);
+        o = (0, M._)(t);
     return (0, a.jsxs)(ec.D, {
         className: i()(eB.Tw, { [eB.wH]: s, [eB.uT]: l }),
         onClick: r,
         children: [
             (0, a.jsx)(eY.A, {
                 userName: o.name,
-                effectDisplayType: eR.G.ANIMATED,
+                effectDisplayType: eF.G.ANIMATED,
                 displayNameStyles: o.previewStyles,
                 textClassName: eB.tr,
                 loop: !0,
                 inProfile: !0,
             }),
-            n && (0, a.jsx)("div", { className: eM.s1, "aria-hidden": !0 }),
+            n && (0, a.jsx)("div", { className: eP.s1, "aria-hidden": !0 }),
         ],
     });
 }
-var ez = s(834730),
-    eU = s(885574),
+var eU = s(834730),
+    ez = s(885574),
     eK = s(73392),
     eJ = s(599715);
 function eW(e) {
@@ -655,7 +655,7 @@ function eW(e) {
         { selectedFontId: s, setSelectedFontId: l, displayName: r, className: o } = e,
         u = T(),
         { dotFontIds: m, dismissFontDot: h } =
-            ((t = (0, c.bG)([eF], () => eF.getSeenFonts())),
+            ((t = (0, c.bG)([eR], () => eR.getSeenFonts())),
             {
                 dotFontIds: n.useMemo(() => new Set(u.filter((e) => v._k.includes(e) && !t.has(e))), [u, t]),
                 dismissFontDot: n.useCallback((e) => {
@@ -665,21 +665,21 @@ function eW(e) {
         g = s !== d.x.DEFAULT,
         E = (0, b.Xr)(r),
         N = (0, I.u)("DisplayNameStylesFontSelection"),
-        x = Math.ceil(u.length / (N ? 3 : 2));
+        S = Math.ceil(u.length / (N ? 3 : 2));
     return (0, a.jsxs)("div", {
         className: o,
         children: [
             (0, a.jsxs)(f.D, {
                 variant: "heading-md/semibold",
-                className: eM.sU,
+                className: eP.sU,
                 children: [
                     ea.intl.string(es.default.nP0ngb),
-                    (0, a.jsx)(V.t, { size: "xs", color: Q.A.colors.TEXT_DEFAULT }),
+                    (0, a.jsx)(Z.t, { size: "xs", color: Q.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: i()(eM.fh, { [eJ.qW]: N }),
-                style: { "--custom-dns-tile-columns": x },
+                className: i()(eP.fh, { [eJ.qW]: N }),
+                style: { "--custom-dns-tile-columns": S },
                 children: [
                     u.map((e) => {
                         let t = (0, eK.p)(e),
@@ -698,13 +698,13 @@ function eW(e) {
                                     },
                                     "aria-label": o,
                                     children: [
-                                        (0, a.jsx)(ez.E, {
+                                        (0, a.jsx)(eU.E, {
                                             variant: "text-lg/semibold",
                                             color: n ? "text-strong" : "text-default",
                                             className: i()(eJ.FH, t.className),
                                             children: "Gg",
                                         }),
-                                        r && (0, a.jsx)("div", { className: eM.s1, "aria-hidden": !0 }),
+                                        r && (0, a.jsx)("div", { className: eP.s1, "aria-hidden": !0 }),
                                     ],
                                 }),
                             },
@@ -716,8 +716,8 @@ function eW(e) {
                         (0, a.jsxs)("div", {
                             className: eJ.Lb,
                             children: [
-                                (0, a.jsx)(eU.CircleInformationIcon, { size: "lg" }),
-                                (0, a.jsx)(ez.E, {
+                                (0, a.jsx)(ez.CircleInformationIcon, { size: "lg" }),
+                                (0, a.jsx)(eU.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
                                     children: ea.intl.string(es.default["+O1xL2"]),
@@ -729,21 +729,21 @@ function eW(e) {
         ],
     });
 }
-var eX = s(821609),
-    e$ = s(908803),
-    eq = s(87719),
-    eZ = s(465794),
-    eV = s(757036),
+var eV = s(821609),
+    eX = s(908803),
+    e$ = s(87719),
+    eq = s(465794),
+    eZ = s(757036),
     eQ = s(202541),
     e0 = s(7212);
 function e1(e) {
     let { onApply: t, onSurpriseMe: s, onClose: n, canApply: l, isPremiumTryItOut: i = !1, banner: r } = e,
-        o = (0, eV.L)(eQ.PremiumTypes.TIER_2),
-        d = (0, a.jsx)(eX.$, {
+        o = (0, eZ.L)(eQ.PremiumTypes.TIER_2),
+        d = (0, a.jsx)(eV.$, {
             variant: "secondary",
             size: "md",
             onClick: s,
-            icon: { type: "rive", asset: e$.m, riveProps: { dataBinding: { fill: Q.A.colors.ICON_STRONG } } },
+            icon: { type: "rive", asset: eX.m, riveProps: { dataBinding: { fill: Q.A.colors.ICON_STRONG } } },
             text: ea.intl.string(es.default.NOGFds),
         }),
         c = (0, a.jsxs)("div", {
@@ -753,7 +753,7 @@ function e1(e) {
                 (0, a.jsx)(ed.m, {
                     text: ea.intl.string(es.default.cVTpnj),
                     shouldShow: !l,
-                    children: (0, a.jsx)(eX.$, {
+                    children: (0, a.jsx)(eV.$, {
                         onClick: t,
                         disabled: !l,
                         text: ea.intl.string(ea.t["1Qm822"]),
@@ -769,10 +769,10 @@ function e1(e) {
             className: e0.UD,
             children: [
                 d,
-                (0, a.jsx)(eZ.A, {
+                (0, a.jsx)(eq.A, {
                     premiumModalAnalyticsLocation: {
-                        section: X.JJy.DISPLAY_NAME_STYLES_MODAL_FOOTER,
-                        object: X.ZSU.PREMIUM_UPSELL_BUTTON,
+                        section: V.JJy.DISPLAY_NAME_STYLES_MODAL_FOOTER,
+                        object: V.ZSU.PREMIUM_UPSELL_BUTTON,
                     },
                     subscriptionTier: eQ.pe.TIER_2,
                 }),
@@ -786,15 +786,15 @@ function e1(e) {
                     children: [
                         (0, a.jsx)(ed.m, {
                             text: ea.intl.string(ea.t["5AFxuK"]),
-                            children: (0, a.jsx)(V.t, { size: "md", color: Q.A.colors.ICON_STRONG }),
+                            children: (0, a.jsx)(Z.t, { size: "md", color: Q.A.colors.ICON_STRONG }),
                         }),
-                        (0, a.jsx)(ez.E, {
+                        (0, a.jsx)(eU.E, {
                             variant: "text-md/medium",
                             color: "text-default",
                             className: e0.h_,
                             children: ea.intl.format(es.default.PWf0xS, {
                                 onClickNitro: () => {
-                                    (p.default.track(X.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, eq.x)(n));
+                                    (p.default.track(V.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, e$.x)(n));
                                 },
                             }),
                         }),
@@ -841,52 +841,52 @@ function tm(e) {
         f = (0, e8.M)(m),
         [h, g] = (0, n.useState)(f),
         E = (0, ti.Ay)(t.id, null),
-        { pendingChanges: x, tryItOutChanges: S } = (0, c.cf)([$.A], () => ({
-            pendingChanges: $.A.getPendingChanges(s?.id),
-            tryItOutChanges: $.A.getTryItOutChanges(),
+        { pendingChanges: S, tryItOutChanges: x } = (0, c.cf)([X.A], () => ({
+            pendingChanges: X.A.getPendingChanges(s?.id),
+            tryItOutChanges: X.A.getTryItOutChanges(),
         })),
         {
             pendingAvatar: A,
             pendingAvatarDecoration: I,
             pendingPrimaryGuildId: v,
             pendingBanner: _,
-            pendingThemeColors: j,
-            pendingNickname: y,
+            pendingThemeColors: y,
+            pendingNickname: j,
             pendingPronouns: C,
             pendingProfileEffect: D,
             pendingProfileFrame: L,
             pendingAccentColor: T,
             pendingBio: b,
-            pendingLegacyUsernameDisabled: w,
-        } = x,
-        M = u ? S.tryItOutAvatar : A,
-        k = (0, tl.V7)({ userId: t.id, image: M }),
-        P = u ? void 0 : I,
-        O = u ? S.tryItOutBanner : _,
-        F = u ? S.tryItOutThemeColors : j,
-        { bannerSrc: R } = (0, tr.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: O }),
+            pendingLegacyUsernameDisabled: M,
+        } = S,
+        P = u ? x.tryItOutAvatar : A,
+        w = (0, tl.V7)({ userId: t.id, image: P }),
+        k = u ? void 0 : I,
+        O = u ? x.tryItOutBanner : _,
+        R = u ? x.tryItOutThemeColors : y,
+        { bannerSrc: F } = (0, tr.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: O }),
         { userNameplate: Y, guildNameplate: B, pendingNameplate: G } = (0, N.rv)(t, s?.id),
         H = (0, e6.WK)(B);
-    h && !f ? (m = X.NJ8.DARK) : !h && f && (m = X.NJ8.LIGHT);
-    let z = (0, n.useCallback)((e) => {
-            (g(e === X.NJ8.DARK), p.default.track(X.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === X.NJ8.DARK }));
+    h && !f ? (m = V.NJ8.DARK) : !h && f && (m = V.NJ8.LIGHT);
+    let U = (0, n.useCallback)((e) => {
+            (g(e === V.NJ8.DARK), p.default.track(V.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === V.NJ8.DARK }));
         }, []),
-        U = (0, n.useMemo)(
+        z = (0, n.useMemo)(
             () => ({ ...(0, ts.FT)(t, null), nick: l, displayNameStyles: { fontId: r, effectId: o, colors: d } }),
             [t, r, o, d, l],
         );
     return (0, a.jsxs)("div", {
         className: tu._l,
         children: [
-            null != R &&
+            null != F &&
                 (0, a.jsx)(to.A, {
                     user: t,
                     displayProfile: E,
                     themeType: tc.d.MODAL_V2,
                     className: tu.LX,
-                    pendingThemeColors: F,
+                    pendingThemeColors: R,
                     forceUserTheme: !0,
-                    children: (0, a.jsx)("div", { className: tu.b8, style: { backgroundImage: `url(${R})` } }),
+                    children: (0, a.jsx)("div", { className: tu.b8, style: { backgroundImage: `url(${F})` } }),
                 }),
             (0, a.jsx)(e2.N, {
                 theme: m,
@@ -899,19 +899,19 @@ function tm(e) {
                                 user: t,
                                 guild: s,
                                 pendingGlobalName: l,
-                                pendingNickname: y,
+                                pendingNickname: j,
                                 pendingPronouns: C,
-                                pendingAvatar: k,
-                                pendingAvatarDecoration: P,
+                                pendingAvatar: w,
+                                pendingAvatarDecoration: k,
                                 pendingPrimaryGuildId: v,
                                 pendingBanner: O,
-                                pendingThemeColors: F,
+                                pendingThemeColors: R,
                                 pendingAccentColor: T,
                                 pendingBio: b,
                                 pendingProfileEffect: D,
                                 pendingProfileFrame: L,
-                                pendingLegacyUsernameDisabled: w,
-                                pendingDisplayNameStyles: U.displayNameStyles,
+                                pendingLegacyUsernameDisabled: M,
+                                pendingDisplayNameStyles: z.displayNameStyles,
                                 canUsePremiumCustomization: !0,
                                 disabledInputs: !0,
                                 hideCustomStatus: !0,
@@ -922,10 +922,10 @@ function tm(e) {
                                 hideProfileFrame: !0,
                             }),
                             (0, a.jsx)(ta.A, {
-                                author: U,
+                                author: z,
                                 message: (0, te.rh)({
                                     ...(0, tt.Ay)({ channelId: "1337", content: ea.intl.string(es.default.h5Cuej) }),
-                                    state: X.cmJ.SENT,
+                                    state: V.cmJ.SENT,
                                     id: "0",
                                 }),
                                 isGroupStart: !0,
@@ -933,8 +933,8 @@ function tm(e) {
                                 hideGuildTag: !0,
                                 className: tu.OT,
                                 previewGuildId: s?.id,
-                                avatarDecorationOverride: P,
-                                avatarOverride: k,
+                                avatarDecorationOverride: k,
+                                avatarOverride: w,
                             }),
                             (0, a.jsx)(e4.A, {
                                 user: t,
@@ -942,10 +942,10 @@ function tm(e) {
                                 nameplate: G,
                                 nameplateData: null == G ? (H ?? Y) : void 0,
                                 pendingGlobalName: l,
-                                pendingAvatarDecoration: P,
+                                pendingAvatarDecoration: k,
                                 pendingPrimaryGuildId: v,
-                                pendingDisplayNameStyles: U.displayNameStyles,
-                                pendingAvatar: M,
+                                pendingDisplayNameStyles: z.displayNameStyles,
+                                pendingAvatar: P,
                                 isHighlighted: !0,
                                 className: tu.qF,
                             }),
@@ -955,14 +955,14 @@ function tm(e) {
             (0, a.jsxs)("div", {
                 className: tu.dI,
                 children: [
-                    (0, a.jsx)(ez.E, {
+                    (0, a.jsx)(eU.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: ea.intl.format(es.default.prQba8, {
-                            helpArticleLink: td.A.getArticleURL(X.MVz.DISPLAY_NAME_STYLES),
+                            helpArticleLink: td.A.getArticleURL(V.MVz.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, a.jsx)(tf, { darkPreview: h, onToggleTheme: z }),
+                    (0, a.jsx)(tf, { darkPreview: h, onToggleTheme: U }),
                 ],
             }),
         ],
@@ -970,7 +970,7 @@ function tm(e) {
 }
 function tf(e) {
     let { darkPreview: t, onToggleTheme: s } = e,
-        n = t ? X.NJ8.DARK : X.NJ8.LIGHT;
+        n = t ? V.NJ8.DARK : V.NJ8.LIGHT;
     return (0, a.jsx)(e5.I, {
         className: tu.xr,
         optionClassName: tu.$C,
@@ -978,16 +978,16 @@ function tf(e) {
             {
                 name: "",
                 tooltip: ea.intl.string(ea.t.b8Cei3),
-                value: X.NJ8.DARK,
+                value: V.NJ8.DARK,
                 icon: e9.Z,
-                className: n === X.NJ8.DARK ? tu.iB : void 0,
+                className: n === V.NJ8.DARK ? tu.iB : void 0,
             },
             {
                 name: "",
                 tooltip: ea.intl.string(ea.t.K2sFfo),
-                value: X.NJ8.LIGHT,
+                value: V.NJ8.LIGHT,
                 icon: e3.F,
-                className: n === X.NJ8.LIGHT ? tu.iB : void 0,
+                className: n === V.NJ8.LIGHT ? tu.iB : void 0,
             },
         ],
         value: n,
@@ -1002,10 +1002,10 @@ var th = s(97808),
     tg = s(778712),
     tE = s(913563),
     tN = s(497082);
-function tx(e) {
+function tS(e) {
     let { owner: t, displayNameStyles: s } = e,
         n = ea.intl.string((0, tE.A)(s.fontId)),
-        { name: l } = (0, w._)(s.effectId),
+        { name: l } = (0, M._)(s.effectId),
         i = t.globalName ?? t.username;
     return (0, a.jsxs)("div", {
         className: tN.v,
@@ -1014,7 +1014,7 @@ function tx(e) {
             (0, a.jsxs)("div", {
                 className: tN.C,
                 children: [
-                    (0, a.jsx)(ez.E, {
+                    (0, a.jsx)(eU.E, {
                         variant: "text-md/medium",
                         color: "text-default",
                         children: ea.intl.format(es.default.gYzaCr, {
@@ -1022,12 +1022,12 @@ function tx(e) {
                                 (0, a.jsx)(eY.A, {
                                     userName: i,
                                     displayNameStyles: s,
-                                    effectDisplayType: eR.G.ANIMATED,
+                                    effectDisplayType: eF.G.ANIMATED,
                                     loop: !0,
                                 }),
                         }),
                     }),
-                    (0, a.jsx)(ez.E, {
+                    (0, a.jsx)(eU.E, {
                         variant: "text-xs/normal",
                         color: "text-subtle",
                         children: ea.intl.format(es.default.DC7gJB, { fontName: n, effectName: l }),
@@ -1037,11 +1037,11 @@ function tx(e) {
         ],
     });
 }
-var tS = s(858899),
+var tx = s(858899),
     tp = s(765178);
 function tA() {
     let e = ea.intl.string(ea.t.iufib1);
-    ((0, tS.P0)({ text: e, variant: "critical" }), tp.O.announce(e));
+    ((0, tx.P0)({ text: e, variant: "critical" }), tp.O.announce(e));
 }
 var tI = s(226451);
 let tv = { overrideSettings: !0 };
@@ -1052,34 +1052,34 @@ function t_(e) {
             analyticsLocations: l,
             guildId: v,
             isPremiumTryItOut: _ = !1,
-            onClose: y,
+            onClose: j,
             returnRef: D,
             tryOnDisplayNameStyles: L,
-            tryOnStyleOwner: P,
+            tryOnStyleOwner: k,
         } = e,
-        F = (0, c.bG)([S.default], () => S.default.getCurrentUser()),
-        R =
-            ((t = Z.Ay.useName(F)),
+        R = (0, c.bG)([x.default], () => x.default.getCurrentUser()),
+        F =
+            ((t = q.Ay.useName(R)),
             (0, c.bG)(
-                [$.A, q.Ay],
+                [X.A, $.Ay],
                 () => {
-                    let e = $.A.getPendingChanges(v);
-                    return null != v ? (e.pendingNickname ?? q.Ay.getNick(v, F?.id)) : e.pendingGlobalName;
+                    let e = X.A.getPendingChanges(v);
+                    return null != v ? (e.pendingNickname ?? $.Ay.getNick(v, R?.id)) : e.pendingGlobalName;
                 },
-                [v, F],
+                [v, R],
             ) ??
                 t ??
                 ""),
-        B = (0, c.bG)([x.A], () => x.A.getGuild(v)),
+        B = (0, c.bG)([S.A], () => S.A.getGuild(v)),
         {
             userDisplayNameStyles: G,
             guildDisplayNameStyles: H,
-            pendingDisplayNameStyles: U,
-            tryItOutDisplayNameStyles: V,
-        } = (0, N.B0)(F, v),
-        Q = _ ? V : U,
+            pendingDisplayNameStyles: z,
+            tryItOutDisplayNameStyles: Z,
+        } = (0, N.B0)(R, v),
+        Q = _ ? Z : z,
         ee = void 0 !== Q ? Q : (H ?? G),
-        et = (0, M.A)(),
+        et = (0, P.A)(),
         en = n.useMemo(() => (0, b.A5)(L, et), [L, et]),
         el = null != en,
         ei = en ?? ee,
@@ -1088,11 +1088,11 @@ function t_(e) {
         [ed, ec] = n.useState(ei?.fontId ?? d.x.DEFAULT),
         [eu, em] = n.useState(ei?.effectId ?? o.z.SOLID),
         ef = (0, b.as)(eu) > 1,
-        eh = (0, w._)(eu),
+        eh = (0, M._)(eu),
         eg = ei?.colors ?? [],
         [eE, eN] = n.useState(() => (eg.length > 0 && !ef ? { [eu]: eg[0] } : {})),
-        [ex, eS] = n.useState(() => (eg.length > 0 && ef ? { [eu]: eg } : {})),
-        ep = n.useMemo(() => ex[eu] ?? et[eu], [ex, eu, et]),
+        [eS, ex] = n.useState(() => (eg.length > 0 && ef ? { [eu]: eg } : {})),
+        ep = n.useMemo(() => eS[eu] ?? et[eu], [eS, eu, et]),
         eA = eE[eu] ?? et[eu][0];
     (0, E.A)(
         {
@@ -1105,17 +1105,17 @@ function t_(e) {
     let { analyticsLocations: eI } = (0, g.Ay)(l, h.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
         ev = n.useMemo(() => (ef ? ep : [eA]), [ef, ep, eA]),
         e_ = n.useMemo(() => ({ fontId: ed, effectId: eu, colors: ev }), [ed, eu, ev]),
-        ej = n.useMemo(
+        ey = n.useMemo(
             () => ed !== ee?.fontId || eu !== ee?.effectId || !(0, u.v)(ev, ee?.colors ?? []),
             [ed, eu, ev, ee],
         ),
-        ey = n.useMemo(() => !(0, b.kv)(e_, eo), [e_, eo]),
-        eC = el ? ey : ej,
-        eD = el && (0, b.kv)(e_, en) && null != P && null != en,
+        ej = n.useMemo(() => !(0, b.kv)(e_, eo), [e_, eo]),
+        eC = el ? ej : ey,
+        eD = el && (0, b.kv)(e_, en) && null != k && null != en,
         eL = (0, I.u)("DisplayNameStylesModal"),
         eT = T(),
-        eb = j(),
-        { handleApply: ew } = (function (e) {
+        eb = y(),
+        { handleApply: eM } = (function (e) {
             let {
                     hasChanges: t,
                     entryPoint: s,
@@ -1131,7 +1131,7 @@ function t_(e) {
                     onSaveError: g,
                 } = e,
                 E = n.useRef(!1),
-                [N, x] = n.useState(!1);
+                [N, S] = n.useState(!1);
             return {
                 handleApply: n.useCallback(async () => {
                     if (!(t || h) || E.current) return;
@@ -1139,10 +1139,21 @@ function t_(e) {
                         n = !0 !== u && e.fontId === C.vl;
                     async function N() {
                         var t;
-                        if (h) {
+                        if (
+                            (n &&
+                                (function () {
+                                    let e = x.default.getCurrentUser()?.displayNameStyles ?? null;
+                                    !(0, Y.Jy)(e) &&
+                                        O.h.dispatch({
+                                            type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED",
+                                            previousPerkValues: { displayNameStyles: e },
+                                        });
+                                })(),
+                            h)
+                        ) {
                             E.current = !0;
                             try {
-                                let t = await (0, k._L)({ displayNameStyles: e });
+                                let t = await (0, w._L)({ displayNameStyles: e });
                                 if (t?.ok !== !0) return void g?.();
                             } catch {
                                 g?.();
@@ -1151,7 +1162,7 @@ function t_(e) {
                                 E.current = !1;
                             }
                         } else u ? (0, J.EW)(e) : (0, W.p)({ guildId: c, displayNameStyles: e });
-                        (p.default.track(X.HAw.DISPLAY_NAME_STYLES_APPLIED, {
+                        (p.default.track(V.HAw.DISPLAY_NAME_STYLES_APPLIED, {
                             font_name: d.x[a],
                             effect_name: o.z[l],
                             colors: i,
@@ -1162,17 +1173,17 @@ function t_(e) {
                                 O.h.dispatch({ type: "HEXAGON_CAMPAIGN_PERK_APPLIED", perk: t })),
                             m?.());
                     }
-                    if (!n || (0, Y.Rd)(S.default.getCurrentUser(), C.vB.DISPLAY_NAME_STYLE)) return void (await N());
-                    ((E.current = !0), x(!0));
+                    if (!n || (0, Y.Rd)(x.default.getCurrentUser(), C.vB.DISPLAY_NAME_STYLE)) return void (await N());
+                    ((E.current = !0), S(!0));
                     let A = !1;
                     try {
                         var I;
                         A = await ((I = C.vB.DISPLAY_NAME_STYLE),
-                        (0, Y.Rd)(S.default.getCurrentUser(), I) ? Promise.resolve(!0) : (null == z && (z = K(I)), z));
+                        (0, Y.Rd)(x.default.getCurrentUser(), I) ? Promise.resolve(!0) : (null == U && (U = K(I)), U));
                     } catch {
                         A = !1;
                     }
-                    ((E.current = !1), x(!1), A) ? await N() : f?.();
+                    ((E.current = !1), S(!1), A) ? await N() : f?.();
                 }, [t, s, a, l, i, r, m, f, c, u, h, g]),
                 isApplying: N,
             };
@@ -1185,28 +1196,28 @@ function t_(e) {
             defaultColor: eh.defaultColors[0],
             guildId: v,
             isTryItOut: _,
-            onClose: y,
+            onClose: j,
             shouldSaveWithoutPendingChanges: el,
             onSaveError: tA,
         }),
-        eM = n.useCallback(() => (eC ? ew() : void y()), [eC, ew, y]),
-        eP = n.useCallback(() => {
-            (p.default.track(X.HAw.DISPLAY_NAME_STYLES_CLOSED), y());
-        }, [y]),
+        eP = n.useCallback(() => (eC ? eM() : void j()), [eC, eM, j]),
+        ek = n.useCallback(() => {
+            (p.default.track(V.HAw.DISPLAY_NAME_STYLES_CLOSED), j());
+        }, [j]),
         eO = n.useCallback(() => {
             let { fontId: e, effectId: t, colors: s } = (0, b.gN)(eT, eb);
             (ec(e),
                 em(t),
-                (0, b.as)(t) > 1 ? eS((e) => ({ ...e, [t]: s })) : eN((e) => ({ ...e, [t]: s[0] })),
-                p.default.track(X.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME));
-        }, [eT, eb, ec, em, eS, eN]),
-        eF = n.useCallback(
+                (0, b.as)(t) > 1 ? ex((e) => ({ ...e, [t]: s })) : eN((e) => ({ ...e, [t]: s[0] })),
+                p.default.track(V.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME));
+        }, [eT, eb, ec, em, ex, eN]),
+        eR = n.useCallback(
             (e) => {
-                ef ? eS((t) => ({ ...t, [eu]: e })) : eN((t) => ({ ...t, [eu]: e[0] }));
+                ef ? ex((t) => ({ ...t, [eu]: e })) : eN((t) => ({ ...t, [eu]: e[0] }));
             },
-            [ef, eu, eS, eN],
+            [ef, eu, ex, eN],
         );
-    return null == F
+    return null == R
         ? null
         : (0, a.jsx)(g.f5, {
               value: eI,
@@ -1220,7 +1231,7 @@ function t_(e) {
                       className: i()(tI.CR, { [tI.st]: eL }),
                       returnRef: D,
                       children: [
-                          (0, a.jsx)(m.s_, { "data-migration-pending": !0, onClick: eP, className: tI.b }),
+                          (0, a.jsx)(m.s_, { "data-migration-pending": !0, onClick: ek, className: tI.b }),
                           (0, a.jsxs)(m.$m, {
                               "data-migration-pending": !0,
                               className: i()(tI.jE, { [tI.st]: eL }),
@@ -1242,7 +1253,7 @@ function t_(e) {
                                           (0, a.jsx)(eW, {
                                               selectedFontId: ed,
                                               setSelectedFontId: ec,
-                                              displayName: R,
+                                              displayName: F,
                                               className: tI._,
                                           }),
                                           (0, a.jsx)(eG, {
@@ -1250,9 +1261,9 @@ function t_(e) {
                                               setSelectedEffectId: em,
                                               className: tI._,
                                           }),
-                                          (0, a.jsx)(ek, {
+                                          (0, a.jsx)(ew, {
                                               selectedColors: ev,
-                                              setSelectedColors: eF,
+                                              setSelectedColors: eR,
                                               selectedEffectId: eu,
                                               className: tI._,
                                               defaultColor: eh.defaultColors[0],
@@ -1260,9 +1271,9 @@ function t_(e) {
                                       ],
                                   }),
                                   (0, a.jsx)(tm, {
-                                      user: F,
+                                      user: R,
                                       guild: B,
-                                      displayName: R,
+                                      displayName: F,
                                       selectedFontId: ed,
                                       selectedEffectId: eu,
                                       selectedColors: eu === o.z.SOLID && (0, u.v)(ev, eh.defaultColors) ? [] : ev,
@@ -1271,13 +1282,13 @@ function t_(e) {
                               ],
                           }),
                           (0, a.jsx)(e1, {
-                              onApply: el ? eM : ew,
+                              onApply: el ? eP : eM,
                               onSurpriseMe: eO,
-                              onClose: y,
+                              onClose: j,
                               canApply: eC || el,
                               analyticsLocations: eI,
                               isPremiumTryItOut: _,
-                              banner: eD ? (0, a.jsx)(tx, { owner: P, displayNameStyles: en }) : void 0,
+                              banner: eD ? (0, a.jsx)(tS, { owner: k, displayNameStyles: en }) : void 0,
                           }),
                       ],
                   }),
