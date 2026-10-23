@@ -1,4 +1,4 @@
-n.d(t, { G$: () => l, ZT: () => u, lT: () => c, uD: () => o, vf: () => s, z1: () => d });
+n.d(t, { AG: () => _, G$: () => l, ZT: () => u, lT: () => c, uD: () => o, vf: () => s, z1: () => d });
 var i = n(945810),
     r = n(723702);
 let a = (0, i.mj)({
@@ -10,6 +10,7 @@ let a = (0, i.mj)({
         fullscreenPopupOcclusion: !1,
         overlayHiddenWavePaused: !1,
         renderOverlayWhileMinimized: !1,
+        notificationIconCpuCanvas: !1,
     },
     variations: {
         0: {
@@ -18,6 +19,7 @@ let a = (0, i.mj)({
             fullscreenPopupOcclusion: !1,
             overlayHiddenWavePaused: !1,
             renderOverlayWhileMinimized: !1,
+            notificationIconCpuCanvas: !1,
         },
         1: {
             nativeSystemCpuTimes: !0,
@@ -25,6 +27,7 @@ let a = (0, i.mj)({
             fullscreenPopupOcclusion: !0,
             overlayHiddenWavePaused: !0,
             renderOverlayWhileMinimized: !0,
+            notificationIconCpuCanvas: !0,
         },
     },
 });
@@ -53,4 +56,7 @@ function c() {
 }
 function u(e) {
     return (0, r.isDesktop)() && (0, r.isWindows)() && a.getConfig({ location: e }).renderOverlayWhileMinimized;
+}
+function _() {
+    return (0, r.isDesktop)() && a.getConfig({ location: "icon_cropping_utils" }).notificationIconCpuCanvas;
 }
