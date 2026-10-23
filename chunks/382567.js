@@ -154,8 +154,8 @@ let V = s.memo(function (e) {
     });
 });
 n(321073);
-var Y = n(837381),
-    X = n(741918),
+var X = n(837381),
+    Y = n(741918),
     Z = n(689175),
     $ = n(928039),
     q = n(131607),
@@ -208,7 +208,7 @@ function ex(e) {
         x = o?.() ?? g;
     return (
         ea()(null != x, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, i.jsx)(Y.tG, {
+        (0, i.jsx)(X.tG, {
             id: u,
             children: (e) =>
                 (0, i.jsx)("div", {
@@ -551,7 +551,7 @@ function ey(e) {
               dismissibleBadge: f,
               children: x,
           })
-        : (0, i.jsx)(Y.tG, {
+        : (0, i.jsx)(X.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
                   (0, i.jsx)(ev, {
@@ -628,7 +628,7 @@ function eb(e) {
             );
         }, [n.layout]),
         p = (0, M.NC)(),
-        A = (0, $.A)("settings-sidebar", u, { orientation: X.Gl.VERTICAL, defaultFocused: t }),
+        A = (0, $.A)("settings-sidebar", u, { orientation: Y.Gl.VERTICAL, defaultFocused: t }),
         [b, j] = s.useState(!1),
         C = s.useCallback(() => {
             let e = u.current?.getScrollerNode();
@@ -681,9 +681,9 @@ function eb(e) {
                             (0, i.jsx)("nav", {
                                 className: eS.C$,
                                 "aria-label": K.intl.string(K.t.MqTGqz),
-                                children: (0, i.jsx)(Y.hD, {
+                                children: (0, i.jsx)(X.hD, {
                                     navigator: A,
-                                    children: (0, i.jsx)(Y.PR, {
+                                    children: (0, i.jsx)(X.PR, {
                                         children: (e) => {
                                             let { ref: t, ...n } = e;
                                             return (0, i.jsxs)(Z.Ch, {
@@ -905,22 +905,22 @@ var eM = n(280450),
     eH = n(481613),
     ez = n.n(eH),
     eV = n(77729),
-    eY = n(521502),
-    eX = n(915089),
+    eX = n(521502),
+    eY = n(915089),
     eZ = n(206845),
     e$ = n(19575),
     eq = n(415443),
     eQ = n(592739);
 function eJ() {
-    let e = (0, eX.GV)(),
+    let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "648263",
-        s = "4029d4a7ae0ff7c5579eefa6bc99e1c16f5b59dd".substring(0, 7),
+        n = "648268",
+        s = "3dfb87622173f49aec9a5a21bc6c4aa3322043ed".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
-        o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1792719767202", !1) : null,
+        o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
+        u = null != o ? (0, eq.A)("1792719810416", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1087,8 +1087,8 @@ function e2() {
 }
 var e5 = n(402651),
     e9 = n(669067),
-    e7 = n(830543),
-    e4 = n(953056);
+    e4 = n(830543),
+    e7 = n(953056);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e8(e) {
@@ -1100,7 +1100,7 @@ function e8(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == ek.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == ek.default.getCurrentUser() && (g(!0), (0, e4.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e4.P,
+            className: e7.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e4.t,
+        className: e7.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),
