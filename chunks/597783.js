@@ -12,7 +12,7 @@ function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         p = (0, o.uM)(),
         m = (0, l.bG)([i.A], () => i.A.getProduct(e)),
-        g = (0, c.i)(),
+        g = (0, c.o)(),
         h = a.Ay.canUseShopDiscounts(g),
         f = r.useRef(null),
         C = r.useCallback(() => {
