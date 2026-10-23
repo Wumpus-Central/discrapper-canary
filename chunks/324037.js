@@ -16194,7 +16194,6 @@ function hY(e) {
         children: [
             (0, o.jsx)(r, {
                 className: hz.E,
-                stateMachine: "State Machine 1",
                 fit: "layout",
                 withReducedMotion: "short-loop",
                 dataBinding: { DisplayValue: s, TextColor: hK },
