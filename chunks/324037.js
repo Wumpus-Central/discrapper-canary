@@ -17856,6 +17856,7 @@ function pf() {
                                             value: a?.[e]?.value ?? l?.[e]?.value,
                                             onChange: (t) => g(e, t),
                                             artboards: s,
+                                            values: l?.[e]?.values,
                                         },
                                         e,
                                     ),
@@ -17868,7 +17869,7 @@ function pf() {
     });
 }
 function pb(e) {
-    let { property: t, type: a, value: n, onChange: l, artboards: i } = e;
+    let { property: t, type: a, value: n, onChange: l, artboards: i, values: s } = e;
     switch (a) {
         case "string":
             return (0, o.jsx)(b.k, { label: t, value: n, onChange: (e) => l(e) });
@@ -17902,6 +17903,16 @@ function pb(e) {
                 closeOnSelect: !0,
                 placeholder: "Select an artboard...",
                 options: i.map((e) => ({ label: e, value: e, id: e })),
+            });
+        case "enum":
+            return (0, o.jsx)(aS.Z, {
+                selectionMode: "single",
+                label: t,
+                value: n,
+                onSelectionChange: (e) => l(e),
+                closeOnSelect: !0,
+                placeholder: "Select a value...",
+                options: (s ?? []).map((e) => ({ label: e, value: e, id: e })),
             });
         default:
             return null;

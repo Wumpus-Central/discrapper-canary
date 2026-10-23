@@ -176,21 +176,31 @@ function O(e) {
                           isRenderScheduled: null != H.frameRequestId,
                           fps: H.fps,
                       },
-            getProperties: () =>
-                H?.viewModelInstance?.properties.reduce(
-                    (e, t) => (
-                        "viewModel" === t.type &&
-                            H?.viewModelInstance?.viewModel(t.name)?.properties.forEach((n) => {
-                                e[t.name + "/" + n.name] = {
-                                    type: n.type,
-                                    value: H?.viewModelInstance?.[n.type]?.(`${t.name}/${n.name}`)?.value,
-                                };
-                            }),
-                        (e[t.name] = { type: t.type, value: H?.viewModelInstance?.[t.type]?.(t.name)?.value }),
-                        e
-                    ),
-                    {},
-                ) ?? {},
+            getProperties: () => {
+                let e = H?.viewModelInstance,
+                    t = (t, n) => {
+                        let i = "enumType" === n ? "enum" : n;
+                        return {
+                            type: i,
+                            value: e?.[i]?.(t)?.value,
+                            values: "enum" === i ? e?.enum(t)?.values : void 0,
+                        };
+                    };
+                return (
+                    e?.properties.reduce(
+                        (n, i) => (
+                            "viewModel" === i.type &&
+                                e.viewModel(i.name)?.properties.forEach((e) => {
+                                    let r = `${i.name}/${e.name}`;
+                                    n[r] = t(r, String(e.type));
+                                }),
+                            (n[i.name] = t(i.name, String(i.type))),
+                            n
+                        ),
+                        {},
+                    ) ?? {}
+                );
+            },
             getArtboards: () => {
                 if (null == H) return [];
                 let e = new Set(),
@@ -315,6 +325,10 @@ function O(e) {
                                         let E = n.viewModelInstance?.string(r);
                                         null != E && (E.value = o);
                                         break;
+                                    case "enum":
+                                        let m = n.viewModelInstance?.enum(r);
+                                        null != m && "string" == typeof o && (m.value = o);
+                                        break;
                                     case "image":
                                         if (null != o) {
                                             let t = await p(o, e.signal);
@@ -324,9 +338,9 @@ function O(e) {
                                         }
                                         break;
                                     case "artboard":
-                                        let m = n.viewModelInstance?.artboard(r),
-                                            g = n.getBindableArtboard(o);
-                                        null != m && null != g && (m.value = g);
+                                        let g = n.viewModelInstance?.artboard(r),
+                                            S = n.getBindableArtboard(o);
+                                        null != g && null != S && (g.value = S);
                                         break;
                                     default:
                                         console.warn(`Unknown property type: ${l}`);
