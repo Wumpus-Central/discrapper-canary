@@ -139,29 +139,37 @@ async function ei(e, t) {
             applicationId: n,
             channelId: i,
             fromLink: r = !1,
-            customId: a,
-            referrerId: s,
-            source: l,
-            inviterUserId: o,
-            analyticsLocations: d = [],
+            linkChannelId: a,
+            customId: s,
+            referrerId: l,
+            source: o,
+            inviterUserId: d,
+            analyticsLocations: c = [],
         } = e,
-        c = b.A.getChannel(i),
-        u = c?.getGuildId(),
-        _ = { isStart: !0, analyticsLocations: d, source: l, inviterUserId: o, channelId: i, guildId: u },
-        E = { customId: a, referrerId: s };
+        u = b.A.getChannel(i),
+        _ = u?.getGuildId(),
+        E = { isStart: !0, analyticsLocations: c, source: o, inviterUserId: d, channelId: i, guildId: _ },
+        A = { customId: s, referrerId: l };
     if (r || !(0, q.It)(t).has(D.U.MAIN))
-        return (0, H.y)({ applicationId: n, application: t, analyticsContext: _, launch: E, preferAppChannel: r });
+        return (0, H.y)({
+            applicationId: n,
+            application: t,
+            analyticsContext: E,
+            launch: A,
+            preferAppChannel: r,
+            channelId: a,
+        });
     (0, $.A)(i);
     try {
         let e = await z.A.launchFrame({
             applicationId: n,
-            surface: null != c && null != u ? { type: D.U.MAIN, channelId: c.id, guildId: u } : ee.sd,
-            analyticsContext: _,
-            launch: E,
+            surface: null != u && null != _ ? { type: D.U.MAIN, channelId: u.id, guildId: _ } : ee.sd,
+            analyticsContext: E,
+            launch: A,
         });
-        if (null != c) {
+        if (null != u) {
             let t = (0, Y.Gg)({ applicationId: n, id: e });
-            null != K.A.getParticipant(c.id, t) && (0, B.A)(c.id, t);
+            null != K.A.getParticipant(u.id, t) && (0, B.A)(u.id, t);
         }
         return !0;
     } catch {

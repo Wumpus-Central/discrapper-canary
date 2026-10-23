@@ -62,36 +62,45 @@ var X = n(354287),
     Q = n(768349),
     ee = n(113732);
 function et(e) {
-    let { app: t, linkType: n, activityCustomId: i, activityReferrerId: l, message: a, onView: o } = e,
-        { name: d, bot: c } = (t = (0, Z.b)(t)),
-        m = c?.id,
-        h = (0, E.Z$)(t),
-        g = U.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: c }),
-        { staticBannerSrc: p, videoBannerSrc: A, bannerAspectRatio: x } = (0, q.f)(t),
-        v = (0, u.bG)([L.default], () => l ?? L.default.getId(), [l]),
-        { analyticsLocations: C } = (0, I.Ay)(f.A.APP_MESSAGE_EMBED),
-        { currentChannelId: _, instanceId: j, isCurrentlyInInstance: N, canLaunchInChannel: S } = (0, w.w)(t.id),
-        k = (0, T.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: c?.id }),
-        R = null != m && h && k,
-        P = S && h,
-        D = (0, b.U4)(t),
-        O = (0, $.F)(t),
-        G = (0, $.t)(t),
-        V = r.useMemo(() => {
+    let {
+            app: t,
+            linkType: n,
+            activityCustomId: i,
+            activityReferrerId: l,
+            activityChannelId: a,
+            message: o,
+            onView: d,
+        } = e,
+        { name: c, bot: m } = (t = (0, Z.b)(t)),
+        h = m?.id,
+        g = (0, E.Z$)(t),
+        p = U.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: m }),
+        { staticBannerSrc: A, videoBannerSrc: x, bannerAspectRatio: v } = (0, q.f)(t),
+        C = (0, u.bG)([L.default], () => l ?? L.default.getId(), [l]),
+        { analyticsLocations: _ } = (0, I.Ay)(f.A.APP_MESSAGE_EMBED),
+        { currentChannelId: j, instanceId: N, isCurrentlyInInstance: S, canLaunchInChannel: k } = (0, w.w)(t.id),
+        R = (0, T.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: m?.id }),
+        P = null != h && g && R,
+        D = k && g,
+        O = (0, b.U4)(t),
+        G = (0, $.F)(t),
+        V = (0, $.t)(t),
+        H = r.useMemo(() => {
             let e = [];
             function n(e) {
                 y.A.launch({
                     applicationId: t.id,
                     channelId: e,
                     fromLink: !0,
+                    linkChannelId: a,
                     customId: i,
-                    referrerId: v,
-                    analyticsLocations: C,
+                    referrerId: C,
+                    analyticsLocations: _,
                 });
             }
             return (
-                h || D
-                    ? D
+                g || O
+                    ? O
                         ? e.push({
                               label: K.intl.string(K.t.RscU7I),
                               trackingArea: X.kY.PLAY,
@@ -99,22 +108,22 @@ function et(e) {
                                   n(null);
                               },
                           })
-                        : (P &&
+                        : (D &&
                               e.push({
                                   label:
-                                      null == j
+                                      null == N
                                           ? K.intl.string(K.t.RscU7I)
-                                          : N
+                                          : S
                                             ? K.intl.string(K.t.DPfdsq)
                                             : K.intl.string(K.t.sqe0hj),
                                   trackingArea: X.kY.PLAY,
                                   onClick() {
-                                      n(_);
+                                      n(j);
                                   },
-                                  disabled: N,
+                                  disabled: S,
                               }),
-                          !P &&
-                              R &&
+                          !D &&
+                              P &&
                               e.push({
                                   label: K.intl.string(K.t.JeK1Wg),
                                   trackingArea: X.kY.PLAY,
@@ -122,30 +131,30 @@ function et(e) {
                                       n(null);
                                   },
                               }))
-                    : null != G && e.push(G),
+                    : null != V && e.push(V),
                 e
             );
-        }, [h, G, D, t, P, R, j, N, _, i, v, C]),
-        H = h ? (0, s.jsx)(ei, { app: t }) : (0, s.jsx)(en, { app: t });
+        }, [g, V, O, t, D, P, N, S, j, i, a, C, _]),
+        F = g ? (0, s.jsx)(ei, { app: t }) : (0, s.jsx)(en, { app: t });
     return (0, s.jsx)(B.h, {
-        title: d,
-        staticBannerSrc: p,
-        videoBannerSrc: A,
-        onClickBanner: O,
-        bannerAspectRatio: x,
-        iconSrc: g,
-        info: H,
-        actions: V,
-        onClickContent: O,
+        title: c,
+        staticBannerSrc: A,
+        videoBannerSrc: x,
+        onClickBanner: G,
+        bannerAspectRatio: v,
+        iconSrc: p,
+        info: F,
+        actions: H,
+        onClickContent: G,
         trackingConfig: {
             id: t.id,
             linkType: n,
-            referrerId: v,
+            referrerId: C,
             activityCustomId: i,
-            onView: o,
-            guildId: M.A.getChannel(a.channel_id)?.guild_id,
-            channelId: a.channel_id,
-            messageId: a.id,
+            onView: d,
+            guildId: M.A.getChannel(o.channel_id)?.guild_id,
+            channelId: o.channel_id,
+            messageId: o.id,
         },
     });
 }
@@ -244,100 +253,109 @@ var ea = n(309010),
     eo = n(933958),
     ed = n(782091);
 function ec(e) {
-    let { application: t, customId: n, customLink: i, referrerId: l, message: r } = e,
-        a = t?.bot?.id,
-        o = (0, T.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: t?.bot?.id }),
-        d = null != t && (0, E.Z$)(t),
-        { analyticsLocations: c } = (0, I.Ay)(f.A.ACTIVITY_CUSTOM_LINK),
-        m = (0, u.bG)([ea.Ay], () => ea.Ay.getChannelId()),
-        h = (0, ed.et)(m),
-        g = (0, u.bG)([eo.Ay], () => {
-            if (null == m) return;
-            let e = eo.Ay.getEmbeddedActivitiesForChannel(m).filter((e) => e.applicationId === t.id);
+    let { application: t, customId: n, channelId: i, customLink: l, referrerId: r, message: a } = e,
+        o = t?.bot?.id,
+        d = (0, T.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: t?.bot?.id }),
+        c = null != t && (0, E.Z$)(t),
+        { analyticsLocations: m } = (0, I.Ay)(f.A.ACTIVITY_CUSTOM_LINK),
+        h = (0, u.bG)([ea.Ay], () => ea.Ay.getChannelId()),
+        g = (0, ed.et)(h),
+        p = (0, u.bG)([eo.Ay], () => {
+            if (null == h) return;
+            let e = eo.Ay.getEmbeddedActivitiesForChannel(h).filter((e) => e.applicationId === t.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
-        p = (0, u.bG)([eo.Ay], () => eo.Ay.getCurrentEmbeddedActivity()),
-        A = h === ed.xy.CAN_LAUNCH,
-        x = null != g && p?.compositeInstanceId === g,
-        v = null != n ? n : i.customId;
-    function C(e) {
+        A = (0, u.bG)([eo.Ay], () => eo.Ay.getCurrentEmbeddedActivity()),
+        x = g === ed.xy.CAN_LAUNCH,
+        v = null != p && A?.compositeInstanceId === p,
+        C = null != n ? n : l.customId;
+    function _(e) {
         y.A.launch({
             applicationId: t.id,
             channelId: e,
             fromLink: !0,
-            customId: v,
-            referrerId: l,
-            analyticsLocations: c,
+            linkChannelId: i,
+            customId: C,
+            referrerId: r,
+            analyticsLocations: m,
         });
     }
-    let _ = [];
+    let j = [];
     (0, b.U4)(t)
-        ? _.push({
+        ? j.push({
               label: K.intl.string(K.t.RscU7I),
               trackingArea: X.kY.PLAY,
               onClick() {
-                  C(m);
+                  _(h);
               },
           })
-        : (A &&
-              _.push({
+        : (x &&
+              j.push({
                   label:
-                      null == g ? K.intl.string(K.t.RscU7I) : x ? K.intl.string(K.t.DPfdsq) : K.intl.string(K.t.sqe0hj),
+                      null == p ? K.intl.string(K.t.RscU7I) : v ? K.intl.string(K.t.DPfdsq) : K.intl.string(K.t.sqe0hj),
                   trackingArea: X.kY.PLAY,
                   onClick() {
-                      C(m);
+                      _(h);
                   },
-                  disabled: x,
+                  disabled: v,
               }),
-          null != a &&
+          null != o &&
+              c &&
               d &&
-              o &&
-              !A &&
-              _.push({
+              !x &&
+              j.push({
                   label: K.intl.string(K.t.JeK1Wg),
                   trackingArea: X.kY.PLAY,
                   onClick() {
-                      C(null);
+                      _(null);
                   },
               }));
-    let j = (0, $.F)(t);
+    let N = (0, $.F)(t);
     return (0, s.jsx)(B.h, {
-        actions: _,
-        onClickContent: j,
+        actions: j,
+        onClickContent: N,
         header: t.name,
         iconSrc: U.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: t.bot }),
-        info: (0, s.jsx)("div", { children: i.description }),
-        staticBannerSrc: i.getAssetURL(),
-        title: i.title,
+        info: (0, s.jsx)("div", { children: l.description }),
+        staticBannerSrc: l.getAssetURL(),
+        title: l.title,
         trackingConfig: {
             id: t.id,
             linkType: Q.J.CUSTOM_ACTIVITY_LINK,
-            referrerId: l,
-            activityCustomId: v,
-            guildId: M.A.getChannel(r.channel_id)?.guild_id,
-            channelId: r.channel_id,
-            messageId: r.id,
+            referrerId: r,
+            activityCustomId: C,
+            guildId: M.A.getChannel(a.channel_id)?.guild_id,
+            channelId: a.channel_id,
+            messageId: a.id,
         },
     });
 }
 function eu(e) {
     let { application: t, message: n, params: i } = e,
-        { referrerId: l = n.author.id, linkId: r, customId: a } = i,
-        { analyticsLocations: o } = (0, I.Ay)(f.A.ACTIVITY_BOOKMARK),
-        { data: d, error: c } = er(t.id, r);
+        { referrerId: l = n.author.id, linkId: r, customId: a, channelId: o } = i,
+        { analyticsLocations: d } = (0, I.Ay)(f.A.ACTIVITY_BOOKMARK),
+        { data: c, error: u } = er(t.id, r);
     return (0, E.Z$)(t)
-        ? null != r && null == c && null != d
+        ? null != r && null == u && null != c
             ? (0, s.jsx)(I.f5, {
-                  value: o,
-                  children: (0, s.jsx)(ec, { application: t, customId: a, customLink: d, referrerId: l, message: n }),
+                  value: d,
+                  children: (0, s.jsx)(ec, {
+                      application: t,
+                      customId: a,
+                      channelId: o,
+                      customLink: c,
+                      referrerId: l,
+                      message: n,
+                  }),
               })
             : (0, s.jsx)(I.f5, {
-                  value: o,
+                  value: d,
                   children: (0, s.jsx)(et, {
                       app: t,
                       linkType: Q.J.ACTIVITY,
                       activityCustomId: a,
                       activityReferrerId: l,
+                      activityChannelId: o,
                       message: n,
                   }),
               })
@@ -959,7 +977,7 @@ function tS(e) {
               ],
           });
 }
-var tb = n(892768),
+var tb = n(76349),
     tk = n(167189),
     tR = n(758836);
 let tL = new Set(Object.values(tR.G2).filter((e) => e !== tR.G2.COLLECTION_INDEX));

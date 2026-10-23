@@ -246,55 +246,56 @@ function er(e) {
             applicationId: t,
             customId: s,
             linkId: j,
-            message: v,
-            onClose: k,
-            onCopyLink: S,
-            onShare: y,
-            transitionState: L,
+            channelId: v,
+            message: k,
+            onClose: S,
+            onCopyLink: y,
+            onShare: L,
+            transitionState: P,
         } = e,
-        [P] = (0, m.A)([t]),
-        D = (0, n.bG)([g.default], () => g.default.getCurrentUser()),
-        [_, T] = a.useState(!1),
-        [R, w] = a.useState(""),
-        [I, G] = a.useState("");
+        [D] = (0, m.A)([t]),
+        _ = (0, n.bG)([g.default], () => g.default.getCurrentUser()),
+        [T, R] = a.useState(!1),
+        [w, I] = a.useState(""),
+        [G, U] = a.useState("");
     a.useEffect(() => {
-        G((0, o.W)({ applicationId: t, referrerId: D?.id, customId: s, linkId: j }));
-    }, [t, D, s, j, G]);
-    let U = a.useRef(0),
-        [H, M] = a.useState([]),
-        z = H.length,
-        F = z >= 5;
+        U((0, o.W)({ applicationId: t, referrerId: _?.id, customId: s, linkId: j, channelId: v }));
+    }, [t, _, s, j, v, U]);
+    let H = a.useRef(0),
+        [M, z] = a.useState([]),
+        F = M.length,
+        q = F >= 5;
     a.useEffect(() => {
-        "" === R && q.current?.focus();
-    }, [R]);
-    let q = a.useRef(null),
-        { results: V, updateSearchText: Z } = (0, b.R)({ selectedDestinations: H, includeMissingDMs: !0 }),
-        O = a.useCallback(
+        "" === w && V.current?.focus();
+    }, [w]);
+    let V = a.useRef(null),
+        { results: Z, updateSearchText: O } = (0, b.R)({ selectedDestinations: M, includeMissingDMs: !0 }),
+        Q = a.useCallback(
             (e) => {
-                (w(e), Z(e));
+                (I(e), O(e));
             },
-            [w, Z],
+            [I, O],
         ),
-        Q = a.useCallback(() => {
-            O("");
-        }, [O]),
-        B = a.useCallback(
+        B = a.useCallback(() => {
+            Q("");
+        }, [Q]),
+        X = a.useCallback(
             (e) => {
-                M((t) => {
+                z((t) => {
                     let s = t.findIndex((t) => {
                         let { type: s, id: l } = t;
                         return s === e.type && l === e.id;
                     });
-                    if (-1 === s) return F ? t : (w(""), (U.current += 1), [e, ...t]);
+                    if (-1 === s) return q ? t : (I(""), (H.current += 1), [e, ...t]);
                     let l = [...t];
-                    return (l.splice(s, 1), (U.current += 1), l);
+                    return (l.splice(s, 1), (H.current += 1), l);
                 });
             },
-            [F],
+            [q],
         ),
-        X = a.useCallback(
+        J = a.useCallback(
             async (e) => {
-                if (null == P) return;
+                if (null == D) return;
                 let t = (function (e, t, s) {
                     let l = !1,
                         a = e.replaceAll(C.A.URL_REGEX, (e) => {
@@ -306,36 +307,36 @@ function er(e) {
                     return `${a}
 
 ${n}`;
-                })(v, P, I);
-                (T(!0),
+                })(k, D, G);
+                (R(!0),
                     (await Promise.all(e.map(h.pk))).filter(A.Vq).forEach(async (e) => {
                         let s = f.A.getChannel(e);
                         null != s &&
                             (await d.A.sendMessage(e, x.Ay.parse(s, t), !1, { location: ea.Hx.ACTIVITY_SHARE }));
                     }),
                     (0, i.P0)({
-                        text: E.intl.formatToPlainString(E.t.jQULqL, { applicationName: P.name }),
+                        text: E.intl.formatToPlainString(E.t.jQULqL, { applicationName: D.name }),
                         variant: "success",
                     }),
-                    y(!0),
-                    k());
+                    L(!0),
+                    S());
             },
-            [v, I, k, y, P],
+            [k, G, S, L, D],
         ),
-        J = a.useCallback(() => {
-            (0, p.C)(I, () => {
-                (S(), (0, i.P0)({ text: E.intl.string(E.t.t5VZ88), variant: "success" }));
+        W = a.useCallback(() => {
+            (0, p.C)(G, () => {
+                (y(), (0, i.P0)({ text: E.intl.string(E.t.t5VZ88), variant: "success" }));
             });
-        }, [I, S]),
-        W =
-            V.length > 0
+        }, [G, y]),
+        $ =
+            Z.length > 0
                 ? (0, l.jsx)(el, {
                       paddingBottom: 8,
                       paddingTop: 8,
-                      rowData: V,
-                      handleToggleDestination: B,
-                      selectedDestinations: H,
-                      disableSelection: F,
+                      rowData: Z,
+                      handleToggleDestination: X,
+                      selectedDestinations: M,
+                      disableSelection: q,
                   })
                 : (0, l.jsxs)("div", {
                       className: Y.wV,
@@ -349,30 +350,30 @@ ${n}`;
                       ],
                   });
     return (0, l.jsx)(r.a, {
-        transitionState: L,
-        onClose: k,
+        transitionState: P,
+        onClose: S,
         title: E.intl.string(E.t.r9qKow),
-        subtitle: v,
+        subtitle: k,
         size: "md",
         input: (0, l.jsx)(c.I, {
-            ref: q,
-            query: R,
-            onChange: O,
-            onClear: Q,
+            ref: V,
+            query: w,
+            onChange: Q,
+            onClear: B,
             placeholder: E.intl.string(E.t["5h0QOP"]),
             "aria-label": E.intl.string(E.t["5h0QOP"]),
             autoFocus: !0,
         }),
         actions: [
-            { text: E.intl.string(E.t.WqhZss), variant: "secondary", onClick: J },
+            { text: E.intl.string(E.t.WqhZss), variant: "secondary", onClick: W },
             {
                 text: E.intl.string(E.t.TXNS7S),
                 variant: "primary",
-                onClick: () => X(H),
-                loading: _,
-                disabled: !(z > 0),
+                onClick: () => J(M),
+                loading: T,
+                disabled: !(F > 0),
             },
         ],
-        children: W,
+        children: $,
     });
 }

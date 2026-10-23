@@ -99,32 +99,33 @@ function U(t) {
             link: o,
             customId: c,
             linkId: p,
-            imageUrl: w,
-            files: N,
-            previewTitle: R,
-            previewSubtitle: U,
-            onClose: W,
-            onCopyLink: M,
-            onShare: F,
-            ...O
+            channelId: w,
+            imageUrl: N,
+            files: R,
+            previewTitle: U,
+            previewSubtitle: W,
+            onClose: M,
+            onCopyLink: F,
+            onShare: O,
+            ...V
         } = t,
-        [V] = (0, v.A)([a]),
-        q = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
-        H = N?.[0],
-        Z = n.useMemo(() => (null != H ? URL.createObjectURL(H) : void 0), [H]);
+        [q] = (0, v.A)([a]),
+        H = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
+        Z = R?.[0],
+        B = n.useMemo(() => (null != Z ? URL.createObjectURL(Z) : void 0), [Z]);
     n.useEffect(() => {
-        if (null != Z) return () => URL.revokeObjectURL(Z);
-    }, [Z]);
-    let B = n.useMemo(
-            () => o ?? (0, x.W)({ applicationId: a, referrerId: q?.id, customId: c, linkId: p }),
-            [o, a, q?.id, c, p],
+        if (null != B) return () => URL.revokeObjectURL(B);
+    }, [B]);
+    let G = n.useMemo(
+            () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: p, channelId: w }),
+            [o, a, H?.id, c, p, w],
         ),
-        G = n.useCallback(
+        D = n.useCallback(
             async (t, e, i) => {
                 let l,
                     { withMessage: n, closeAfterSend: a } = e;
                 (i(!0),
-                    F(
+                    O(
                         new Promise((t) => {
                             l = t;
                         }),
@@ -138,7 +139,7 @@ function U(t) {
                         .filter(_.Vq);
                     if (((o = t.length - e.length), 0 === e.length))
                         return void (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
-                    let i = [w, r, n]
+                    let i = [N, r, n]
                         .filter(_.Vq)
                         .join("\n")
                         .slice(0, (0, P.a)());
@@ -148,8 +149,8 @@ function U(t) {
                             e = await f.A.sendMessage(t.id, C.Ay.parse(t, i), !1, {
                                 location: I.Hx.ACTIVITY_SHARE,
                                 attachmentsToUpload:
-                                    null != N && N.length > 0
-                                        ? N.map(
+                                    null != R && R.length > 0
+                                        ? R.map(
                                               (e) =>
                                                   new g.bK(
                                                       {
@@ -183,57 +184,57 @@ function U(t) {
                               icon: u.t,
                               iconColor: h.A.colors.ICON_FEEDBACK_POSITIVE,
                           }),
-                        a && s > 0 && W());
+                        a && s > 0 && M());
                 } catch {
                     (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
                 } finally {
                     (l(s > 0), i(!1));
                 }
             },
-            [r, N, w, W, F],
+            [r, R, N, M, O],
         ),
-        D = n.useMemo(
+        J = n.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     "aria-label": L.intl.string(L.t.WqhZss),
                     onClick: () => {
-                        (0, T.C)(B, () => {
-                            (M(), (0, d.P0)({ text: L.intl.string(L.t["L/PwZf"]), variant: "success" }));
+                        (0, T.C)(G, () => {
+                            (F(), (0, d.P0)({ text: L.intl.string(L.t["L/PwZf"]), variant: "success" }));
                         });
                     },
                     icon: m.LinkIcon,
                 },
             ],
-            [M, B],
+            [F, G],
         ),
-        J = V?.name ?? "";
+        K = q?.name ?? "";
     return (0, l.jsx)(j.ForwardModal, {
-        ...O,
-        onClose: W,
+        ...V,
+        onClose: M,
         source: "frame",
         customPreview: (0, l.jsx)(S, {
-            title: R ?? J,
+            title: U ?? K,
             subtitle:
-                U ??
-                (null != N && N.length > 0
-                    ? ((e = N.filter((t) => t.type.startsWith("image/")).length),
-                      (i = N.filter((t) => t.type.startsWith("video/")).length),
+                W ??
+                (null != R && R.length > 0
+                    ? ((e = R.filter((t) => t.type.startsWith("image/")).length),
+                      (i = R.filter((t) => t.type.startsWith("video/")).length),
                       e > 0 && i > 0
                           ? L.intl.formatToPlainString(L.t.Lr0Top, { image_count: e, video_count: i })
                           : i > 0
                             ? L.intl.formatToPlainString(L.t.SJ6pPX, { count: i })
                             : e > 0
                               ? L.intl.formatToPlainString(L.t.h4pFfU, { count: e })
-                              : L.intl.formatToPlainString(L.t["89ihS8"], { count: N.length }))
+                              : L.intl.formatToPlainString(L.t["89ihS8"], { count: R.length }))
                     : void 0),
-            imageUrl: w,
-            fileUrl: Z,
-            isVideo: H?.type.startsWith("video/") ?? !1,
-            overflowCount: Math.max((N?.length ?? 1) - 1, 0),
+            imageUrl: N,
+            fileUrl: B,
+            isVideo: Z?.type.startsWith("video/") ?? !1,
+            overflowCount: Math.max((R?.length ?? 1) - 1, 0),
         }),
-        customSendHandler: G,
-        additionalActions: D,
+        customSendHandler: D,
+        additionalActions: J,
     });
 }

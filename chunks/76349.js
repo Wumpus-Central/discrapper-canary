@@ -1,6 +1,6 @@
-n.d(t, { kK: () => d, Yf: () => o });
+n.d(t, { Yf: () => o, kK: () => d });
 var i = n(121401),
-    r = n(998218),
+    r = n(909338),
     a = n(403362),
     s = n(167189);
 let l = new Set([
@@ -25,21 +25,8 @@ function d(e, t, n) {
             let { applicationId: r, skuId: a } = n;
             return { type: e, applicationId: r, skuId: a };
         }
-        case s.I.ACTIVITY_BOOKMARK: {
-            let i, a;
-            return {
-                type: e,
-                applicationId: t,
-                params:
-                    ((i = r.A.toURLSafe(n)),
-                    (a = i?.searchParams.get("referrer_id") ?? void 0),
-                    {
-                        referrerId: a,
-                        customId: i?.searchParams.get("custom_id") ?? void 0,
-                        linkId: i?.searchParams.get("link_id") ?? void 0,
-                    }),
-            };
-        }
+        case s.I.ACTIVITY_BOOKMARK:
+            return { type: e, applicationId: t, params: (0, r.N)(n) };
     }
 }
 (s.I.APP_DIRECTORY_PROFILE, s.I.ACTIVITY_BOOKMARK, s.I.APP_OAUTH2_LINK);
