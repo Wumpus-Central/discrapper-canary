@@ -109,7 +109,8 @@ async function ec(e) {
             (!0 !== T && v.A.clearMainFrameSlot(),
             M && (0, O.A)(t),
             (0, et.y)({ applicationId: i, launch: { customId: I, referrerId: f } }))
-        )
+        ) {
+            if (!M) return !0;
             return (
                 (0, Q.j)(i, {
                     isStart: s,
@@ -120,6 +121,7 @@ async function ec(e) {
                 }),
                 !0
             );
+        }
         o.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
             nonce: w,

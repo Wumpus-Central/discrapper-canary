@@ -23,7 +23,7 @@ var i,
     j = n(354287),
     N = n(693879),
     y = n(583846),
-    T = n(25451),
+    T = n(366430),
     S = n(205184),
     b = n(928550),
     k = n(689168),
@@ -249,7 +249,7 @@ function ei(e) {
             [eo, R, es, Z, ed],
         ),
         eu = !!(0, b.au)(n.id),
-        em = (0, T.X)(n),
+        em = (0, T.VS)(n),
         { canJoin: eh, remoteJoinPlatform: eg } = (function (e) {
             let {
                 presenceActivity: t,

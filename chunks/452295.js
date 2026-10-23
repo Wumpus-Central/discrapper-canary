@@ -101,8 +101,8 @@ var W = n(878014),
     K = n(198052),
     $ = n(577483),
     z = n(625180),
-    X = n(966563),
-    q = n(25451),
+    X = n(568034),
+    q = n(366430),
     Z = n(290863),
     Q = n(308528),
     J = n(652215),
@@ -110,7 +110,7 @@ var W = n(878014),
 async function et(e) {
     let { userId: t, sessionId: n, applicationId: i, channelId: r, messageId: a, intent: s } = e,
         l = e.activity ?? Z.A.getApplicationActivity(t, i);
-    if (!(e.embedded ?? (0, V.A)(l, J.jUm.EMBEDDED)) || !(0, q.X)(await j(i))) return null;
+    if (!(e.embedded ?? (0, V.A)(l, J.jUm.EMBEDDED)) || !(0, q.VS)(await j(i))) return null;
     let o = v.Ay.getEmbeddedActivityForUserId(t, i, !0);
     return null != o
         ? (0, c.A)({
@@ -132,35 +132,36 @@ async function et(e) {
 }
 async function en(e) {
     let t = await j(e.applicationId);
-    return null != t && (0, q.X)(t) ? ei(e) : null != t && (0, W.W)(t, D.U.MAIN) ? er(e, t) : null;
+    return (0, q.U4)(t) ? ei(e, t) : !(0, q.VS)(t) && (null != t && (0, W.W)(t, D.U.MAIN) ? er(e, t) : null);
 }
-async function ei(e) {
+async function ei(e, t) {
     let {
-            applicationId: t,
-            channelId: n,
-            fromLink: i = !1,
-            customId: r,
-            referrerId: a,
-            source: s,
-            inviterUserId: l,
-            analyticsLocations: o = [],
+            applicationId: n,
+            channelId: i,
+            fromLink: r = !1,
+            customId: a,
+            referrerId: s,
+            source: l,
+            inviterUserId: o,
+            analyticsLocations: d = [],
         } = e,
-        d = b.A.getChannel(n),
-        c = d?.getGuildId(),
-        u = { isStart: !0, analyticsLocations: o, source: s, inviterUserId: l, channelId: n, guildId: c },
-        _ = { customId: r, referrerId: a };
-    if (i) return (0, H.y)({ applicationId: t, analyticsContext: u, launch: _, preferAppChannel: !0 });
-    (0, $.A)(n);
+        c = b.A.getChannel(i),
+        u = c?.getGuildId(),
+        _ = { isStart: !0, analyticsLocations: d, source: l, inviterUserId: o, channelId: i, guildId: u },
+        E = { customId: a, referrerId: s };
+    if (r || !(0, q.It)(t).has(D.U.MAIN))
+        return (0, H.y)({ applicationId: n, application: t, analyticsContext: _, launch: E, preferAppChannel: r });
+    (0, $.A)(i);
     try {
         let e = await z.A.launchFrame({
-            applicationId: t,
-            surface: null != d && null != c ? { type: D.U.MAIN, channelId: d.id, guildId: c } : ee.sd,
-            analyticsContext: u,
-            launch: _,
+            applicationId: n,
+            surface: null != c && null != u ? { type: D.U.MAIN, channelId: c.id, guildId: u } : ee.sd,
+            analyticsContext: _,
+            launch: E,
         });
-        if (null != d) {
-            let n = (0, Y.Gg)({ applicationId: t, id: e });
-            null != K.A.getParticipant(d.id, n) && (0, B.A)(d.id, n);
+        if (null != c) {
+            let t = (0, Y.Gg)({ applicationId: n, id: e });
+            null != K.A.getParticipant(c.id, t) && (0, B.A)(c.id, t);
         }
         return !0;
     } catch {

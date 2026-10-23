@@ -12,7 +12,7 @@ var i = n(607399),
     E = n(725606),
     A = n(167189),
     h = n(721779),
-    f = n(25451),
+    f = n(366430),
     I = n(707592),
     p = n(698441),
     T = n(268313),
@@ -155,7 +155,7 @@ function K(e) {
                 { currentChannelId: o, isCurrentlyInInstance: c, canLaunchInChannel: u } = (0, E.t)(t);
             return (
                 !c &&
-                (!!u || i?.bot != null || !!(0, f.X)(i)) &&
+                (!!u || i?.bot != null || !!(0, f.U4)(i)) &&
                 ((0, d.d9)(t, r.searchParams.get("link_id"), r.searchParams.get("custom_id"))
                     .then((e) => {
                         let { customId: n } = e;

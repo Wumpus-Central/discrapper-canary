@@ -26,7 +26,7 @@ var v = n(485845),
     y = n(452295),
     T = n(361926),
     S = n(583846),
-    b = n(25451),
+    b = n(366430),
     k = n(205184),
     R = n(773669),
     L = n(280450),
@@ -74,7 +74,7 @@ function et(e) {
         k = (0, T.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: c?.id }),
         R = null != m && h && k,
         P = S && h,
-        D = (0, b.X)(t),
+        D = (0, b.U4)(t),
         O = (0, $.F)(t),
         G = (0, $.t)(t),
         V = r.useMemo(() => {
@@ -90,7 +90,7 @@ function et(e) {
                 });
             }
             return (
-                h
+                h || D
                     ? D
                         ? e.push({
                               label: K.intl.string(K.t.RscU7I),
@@ -271,7 +271,7 @@ function ec(e) {
         });
     }
     let _ = [];
-    (0, b.X)(t)
+    (0, b.U4)(t)
         ? _.push({
               label: K.intl.string(K.t.RscU7I),
               trackingArea: X.kY.PLAY,
