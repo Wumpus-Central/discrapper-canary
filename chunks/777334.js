@@ -7,7 +7,7 @@ function a() {
     return {
         ...t,
         tags: {
-            source: __OVERLAY__ ? "overlay" : "legacy-overlay",
+            source: __OVERLAY__ || e === r.Ue.Hook ? "legacy-overlay" : "overlay",
             overlayMethod: `${null == e ? null : r.Ue[e ?? r.Ue.Disabled]}`,
             ...(t?.tags ?? {}),
         },

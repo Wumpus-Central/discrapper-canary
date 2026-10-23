@@ -337,7 +337,7 @@ function ea(e, t) {
                             }
                     });
                 } catch (e) {
-                    (Q.error("tryUploadDiscordHookCrashes", e), (0, T.pj)(e));
+                    (Q.error("tryUploadDiscordHookCrashes", e), (0, T.pj)(e, g.Ue.Hook));
                 }
             })()),
         $.delete(e),
@@ -356,11 +356,11 @@ async function es(e) {
             e.createHostProcess(t, eh, eA);
         } else (e.destroyHostProcess(), eu((0, U.getPID)()));
     } catch (t) {
-        (Q.error("reconcileHostProcess", t), (0, T.pj)(t), eu((0, U.getPID)()));
+        (Q.error("reconcileHostProcess", t), (0, T.pj)(t, g.Ue.Hook), eu((0, U.getPID)()));
         try {
             e.destroyHostProcess();
         } catch (e) {
-            (Q.error("reconcileHostProcess: destroyHostProcess", e), (0, T.pj)(e));
+            (Q.error("reconcileHostProcess: destroyHostProcess", e), (0, T.pj)(e, g.Ue.Hook));
         }
     }
 }
@@ -748,7 +748,7 @@ let eC = new eN(
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "058746ce3c8a0de13600536a0f8413e7eaad58e6"),
+                      (n.append("build_id", "ea4d091aaa34a4ce3ea133e52d51e579f9b63fa9"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
