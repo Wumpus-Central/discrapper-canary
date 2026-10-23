@@ -19688,13 +19688,13 @@ function h3(e) {
                               className: hZ.UT,
                               defaultIconClassName: hZ.a,
                           }),
-                    null != E ? (0, p.jsx)(hD, { className: hZ.s2, tooltipText: E }) : null,
                     (0, p.jsx)(G.E, {
                         className: hZ.S3,
                         color: "text-strong",
                         variant: "text-md/medium",
                         children: t.name,
                     }),
+                    null != E ? (0, p.jsx)(hD, { className: hZ.s2, tooltipText: E }) : null,
                     t.tags?.subscription_listing_id != null &&
                         (0, p.jsx)(oW.A, { className: hZ.tU, "aria-label": en.intl.string(en.t.a2Ak8b) }),
                     t.tags?.is_guild_product_role === !0 && (0, p.jsx)(hJ, {}),

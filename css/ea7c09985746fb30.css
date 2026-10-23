@@ -506,6 +506,10 @@
     margin-inline-start: 8px
 }
 
+.lock__5f97b {
+    margin-inline-start: var(--space-4)
+}
+
 .roleName__5f97b {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -683,4 +687,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=9b18279fde0d60c1.css.map*/
+/*# sourceMappingURL=ea7c09985746fb30.css.map*/
