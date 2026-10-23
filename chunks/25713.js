@@ -262,7 +262,7 @@ function V() {
         f.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
     }, []);
 }
-function U() {
+function w() {
     n.useEffect(() => {
         (f.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
@@ -299,7 +299,7 @@ function U() {
             }));
     }, []);
 }
-let w = "/assets/863cb535889630a2.svg";
+let U = "/assets/863cb535889630a2.svg";
 var L = l(50777),
     N = l(467884);
 let D = {
@@ -484,7 +484,7 @@ let en = {
                                 daysUntilExpiry: b ? g : null,
                                 isEligible: f,
                             }),
-                            U(),
+                            w(),
                             S)
                                 ? (0, o.jsx)(k.default, {
                                       transitionState: d.ip.ENTERED,
@@ -559,7 +559,7 @@ let en = {
                                 feature2Subtitle: b,
                                 buttonText: g,
                             } = e;
-                            U();
+                            w();
                             let [f, y] = n.useState(!1),
                                 h = n.useRef(null),
                                 S = [t, l].filter((e) => "" !== e);
@@ -575,8 +575,8 @@ let en = {
                                       titles: S,
                                       subtitle: a,
                                       features: [
-                                          { assetUrl: w, title: c, subtitle: p },
-                                          { assetUrl: w, title: m, subtitle: b },
+                                          { assetUrl: U, title: c, subtitle: p },
+                                          { assetUrl: U, title: m, subtitle: b },
                                       ],
                                       buttonText: g,
                                       onClose: () => Promise.resolve(y(!1)),
@@ -923,6 +923,7 @@ let en = {
                                                         storefront: { headerText: l },
                                                         checkout: null,
                                                         vcStream: null,
+                                                        rewardStatus: null,
                                                         rewardRequirements: i
                                                             ? [
                                                                   {
@@ -1101,6 +1102,7 @@ let en = {
                                                         storefront: { headerText: "Free with Nitro" },
                                                         checkout: null,
                                                         vcStream: null,
+                                                        rewardStatus: null,
                                                         rewardRequirements: [],
                                                     },
                                                 },

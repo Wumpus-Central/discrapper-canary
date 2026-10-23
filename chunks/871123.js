@@ -86,6 +86,7 @@ function L(e) {
         storefront: null != e.storefront ? { headerText: e.storefront.header_text } : null,
         checkout: O(e.checkout),
         vcStream: O(e.vc_stream),
+        rewardStatus: e.reward_status ?? null,
         rewardRequirements: (e.reward_requirements ?? []).map(R).filter((e) => null != e),
     };
 }
