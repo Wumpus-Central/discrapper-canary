@@ -1883,10 +1883,10 @@ class nF extends y.Ay.Store {
     getKrispVadActivationThreshold() {
         return t4().modeOptions.vadKrispActivationThreshold ?? 0.5;
     }
-    hasActiveCallKitCall() {
+    hasActiveSystemTelecomCall() {
         return tQ;
     }
-    setHasActiveCallKitCall(e) {
+    setHasActiveSystemTelecomCall(e) {
         tQ = e;
     }
     supportsScreenSoundshare() {

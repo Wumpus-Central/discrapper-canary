@@ -78,7 +78,7 @@ let L = r()((e, t, n) => {
             return v()
                 ? Promise.resolve()
                 : (b({ usedKeybind: n, location: r }),
-                    (i = i && !A.Ay.hasActiveCallKitCall()),
+                    (i = i && !A.Ay.hasActiveSystemTelecomCall()),
                     I.default.getCurrentUser()?.isStaff() && N.info("Toggling self mute"),
                     A.Ay.isEnabled())
                   ? a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_MUTE", context: e, syncRemote: t, playSoundEffect: i })
@@ -87,7 +87,7 @@ let L = r()((e, t, n) => {
         setSelfMute(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             v() ||
-                ((n = n && !A.Ay.hasActiveCallKitCall()),
+                ((n = n && !A.Ay.hasActiveSystemTelecomCall()),
                 I.default.getCurrentUser()?.isStaff() && N.info("Setting self mute", t),
                 a.h.dispatch({ type: "AUDIO_SET_SELF_MUTE", context: e, mute: t, playSoundEffect: n }));
         },
