@@ -47,7 +47,8 @@ class m {
         if (e.transport === f.z4.IPC || e.transport === f.z4.POST_MESSAGE) {
             let n = this.getCurrentUser();
             if (null == n) return void e.close(I.YI$.CLOSE_NORMAL, "User logged out");
-            t.user = (0, A.A)(n);
+            let i = (0, A.A)(n);
+            (e.transport === f.z4.POST_MESSAGE && null == i.avatar && delete i.avatar, (t.user = i));
         }
         this.dispatch(e, null, I.e$_.DISPATCH, I.ZE4.READY, t);
     }
