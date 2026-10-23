@@ -14,18 +14,18 @@ var t = n(503698),
     x = n(778712),
     p = n(730134),
     f = n(573648),
-    j = n(666860),
-    T = n(874490),
-    v = n(370480),
-    E = n(169869),
+    T = n(666860),
+    j = n(874490),
+    E = n(370480),
+    v = n(169869),
     A = n(355971),
     N = n(837057),
-    _ = n(310419),
-    g = n(889227),
+    g = n(310419),
+    _ = n(889227),
     I = n(792831),
-    y = n(123917),
-    C = n(939496),
-    b = n(652215),
+    b = n(123917),
+    y = n(939496),
+    C = n(652215),
     D = n(783419),
     k = n(488995),
     O = n(105292),
@@ -39,57 +39,60 @@ function w(e) {
             theme: x,
             locale: p,
             userId: N,
-            className: _,
-            showMetadata: g,
-            showInvisibleIcon: C,
+            className: g,
+            showMetadata: _,
+            showInvisibleIcon: y,
         } = e;
-    null == g && (g = !0);
+    null == _ && (_ = !0);
     let k = h.metadata ?? {},
-        w = g ? (0, v.An)(k[D.pK.CREATED_AT], p) : null,
+        w = _ ? (0, E.An)(k[D.pK.CREATED_AT], p) : null,
         S = (0, c.r)(i.A.unsafe_rawColors.PLATFORM_TWITTER).hex(),
         P = O.intl.string(O.t["6H6h1r"]);
-    if (g)
+    if (_)
         switch (h.type) {
-            case b.fg2.REDDIT:
-                l = (0, E.xE)(k);
+            case C.fg2.REDDIT:
+                l = (0, v.xE)(k);
                 break;
-            case b.fg2.STEAM:
-                l = (0, E.dy)(k);
+            case C.fg2.STEAM:
+                l = (0, v.dy)(k);
                 break;
-            case b.fg2.BLUESKY:
-            case b.fg2.MASTODON:
-            case b.fg2.TWITTER:
-                ((l = (0, E.ED)(k)), "1" === k[D.pK.TWITTER_VERIFIED] && ((n = S), (P = O.intl.string(O.t.Jebrww))));
+            case C.fg2.LETTERBOXD:
+                l = (0, v.uq)(k);
                 break;
-            case b.fg2.PAYPAL:
-                l = (0, E.gZ)(k);
+            case C.fg2.BLUESKY:
+            case C.fg2.MASTODON:
+            case C.fg2.TWITTER:
+                ((l = (0, v.ED)(k)), "1" === k[D.pK.TWITTER_VERIFIED] && ((n = S), (P = O.intl.string(O.t.Jebrww))));
                 break;
-            case b.fg2.EBAY:
-                l = (0, E.ub)(k);
+            case C.fg2.PAYPAL:
+                l = (0, v.gZ)(k);
                 break;
-            case b.fg2.TIKTOK:
-                l = (0, E.HU)(k);
+            case C.fg2.EBAY:
+                l = (0, v.ub)(k);
+                break;
+            case C.fg2.TIKTOK:
+                l = (0, v.HU)(k);
         }
-    let W = f.A.get((0, T.ML)(h.type)),
-        L = W?.getPlatformUserUrl?.(h);
-    null != C && C
+    let L = f.A.get((0, j.ML)(h.type)),
+        W = L?.getPlatformUserUrl?.(h);
+    null != y && y
         ? (t = (0, a.jsx)(o.EyeSlashIcon, {
               size: "md",
               color: "currentColor",
               className: s()(R.__invalid_connectedAccountOpenIconContainer, R.gE),
           }))
-        : null != L &&
+        : null != W &&
           (t = (0, a.jsx)(d.Anchor, {
-              href: L,
+              href: W,
               "aria-label":
-                  W?.name != null
-                      ? `${W.name}, ${h.name}, ${O.intl.string(O.t.q5jLJB)}`
+                  L?.name != null
+                      ? `${L.name}, ${h.name}, ${O.intl.string(O.t.q5jLJB)}`
                       : `${h.name}, ${O.intl.string(O.t.q5jLJB)}`,
               onClick: (e) => {
                   var l;
                   ((l = h.type),
-                      (0, j.zV)(b.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l, other_user_id: N }),
-                      (0, y.h)({ href: L, trusted: W?.type !== b.fg2.DOMAIN }, e));
+                      (0, T.zV)(C.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l, other_user_id: N }),
+                      (0, b.h)({ href: W, trusted: L?.type !== C.fg2.DOMAIN }, e));
               },
               children: (0, a.jsx)(I.A, { className: R.yf, direction: I.A.Directions.RIGHT }),
           }));
@@ -99,17 +102,17 @@ function w(e) {
             ? (0, a.jsx)(A.A, { className: R.sU, color: n ?? U, forcedIconColor: V, size: 16, tooltipText: P })
             : null;
     return (0, a.jsxs)("li", {
-        className: s()(R.WD, (null != l && l.length > 0) || null != w ? R.l1 : null, _),
+        className: s()(R.WD, (null != l && l.length > 0) || null != w ? R.l1 : null, g),
         children: [
             (0, a.jsxs)("div", {
                 className: R.dF,
                 children: [
                     (0, a.jsx)(m.m, {
-                        __unsupportedReactNodeAsText: W?.name,
+                        __unsupportedReactNodeAsText: L?.name,
                         children: (0, a.jsx)("img", {
-                            alt: O.intl.formatToPlainString(O.t.rtm15P, { name: W?.name }),
+                            alt: O.intl.formatToPlainString(O.t.rtm15P, { name: L?.name }),
                             className: R.cS,
-                            src: (0, r.M)(x) ? W?.icon.darkSVG : W?.icon.lightSVG,
+                            src: (0, r.M)(x) ? L?.icon.darkSVG : L?.icon.lightSVG,
                         }),
                     }),
                     (0, a.jsxs)("div", {
@@ -154,13 +157,13 @@ function w(e) {
 }
 function S(e) {
     let { applicationRoleConnection: l, className: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
-        c = (0, E.VW)(l, t);
+        c = (0, v.VW)(l, t);
     function o() {
         (i?.(),
             (0, N.transitionToGlobalDiscovery)({
                 tab: k.GlobalDiscoveryTab.APPS,
                 applicationId: l.application.id,
-                newSessionState: { entrypoint: { name: _.sW.APPLICATION_DIRECTORY_URL }, guildId: r },
+                newSessionState: { entrypoint: { name: g.sW.APPLICATION_DIRECTORY_URL }, guildId: r },
             }));
     }
     return (0, a.jsxs)("li", {
@@ -210,7 +213,7 @@ function S(e) {
                                     className: R.hT,
                                     children: [
                                         null != l.application.bot
-                                            ? (0, a.jsx)(p.A, { user: new g.A(l.application.bot), size: x._3.SIZE_16 })
+                                            ? (0, a.jsx)(p.A, { user: new _.A(l.application.bot), size: x._3.SIZE_16 })
                                             : null,
                                         (0, a.jsx)(u.E, {
                                             variant: "text-xs/normal",
@@ -228,7 +231,7 @@ function S(e) {
 }
 function P(e) {
     let { connectedAccounts: l, locale: n, className: t, userId: i } = e,
-        { theme: r } = (0, C.E)();
+        { theme: r } = (0, y.E)();
     if (null == l || 0 === l.length) return null;
     let c = l.map((e) => (0, a.jsx)(w, { connectedAccount: e, theme: r, locale: n, userId: i }, `${e.type}:${e.id}`)),
         o = [],

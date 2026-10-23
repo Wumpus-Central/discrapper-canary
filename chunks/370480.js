@@ -126,6 +126,22 @@ function p(e) {
                         return null;
                 }
                 break;
+            case E.fg2.LETTERBOXD:
+                switch (n) {
+                    case _.pK.LETTERBOXD_WATCHES:
+                        s = A.intl.format(s, {
+                            platformQuantityHook: () => A.intl.formatToPlainString(A.t.szM3Fw, { count: l }),
+                        });
+                        break;
+                    case _.pK.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR:
+                        s = A.intl.format(s, {
+                            platformQuantityHook: () => A.intl.formatToPlainString(A.t["6SIEpt"], { count: l }),
+                        });
+                        break;
+                    default:
+                        return null;
+                }
+                break;
             case E.fg2.TWITTER:
                 switch (n) {
                     case _.pK.CREATED_AT:

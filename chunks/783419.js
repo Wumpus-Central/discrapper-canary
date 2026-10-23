@@ -10,6 +10,8 @@ var i,
         i),
     l =
         (((r = {}).CREATED_AT = "created_at"),
+        (r.LETTERBOXD_WATCHES = "watches"),
+        (r.LETTERBOXD_FILMS_IN_DIARY_THIS_YEAR = "films_in_diary_this_year"),
         (r.REDDIT_TOTAL_KARMA = "total_karma"),
         (r.REDDIT_GOLD = "gold"),
         (r.REDDIT_MOD = "mod"),

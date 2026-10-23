@@ -494,8 +494,8 @@ let eT = function (e) {
 var eL = l(82293),
     eD = l(403362),
     eO = l(939249),
-    ek = l(175671),
-    eG = l(259407),
+    ek = l(693942),
+    eG = l(161573),
     eM = l(451988),
     eU = l(408278),
     ew = l(921853),
@@ -827,14 +827,14 @@ function tc(e) {
     if (n.type === D.geh.YOUTUBE_VIDEO)
         ((t = { url: (0, D.PE$)(n.youtubeVideoId), ...tn }),
             (l = { url: `${(0, D.uJ2)(n.youtubeVideoId)}?${tl}`, ...ta }),
-            (s = eG.m.YOUTUBE));
+            (s = ek.mt.YOUTUBE));
     else {
         let e = null != n.width ? n.width : 0,
             i = null != n.height ? n.height : 0;
         ((t = { url: n.thumbnailSrc, width: e, height: i }),
             (l = { url: n.src, proxyURL: n.src, width: e, height: i }));
     }
-    let g = (0, i.jsx)(ek.rr, {
+    let g = (0, i.jsx)(eG.rr, {
         href: null,
         thumbnail: t,
         video: l,
@@ -1084,7 +1084,7 @@ let tg = { width: 1280, height: 720 },
         if (n.type === D.geh.YOUTUBE_VIDEO)
             ((t = { url: (0, D.PE$)(n.youtubeVideoId), ...tg }),
                 (l = { url: `${(0, D.uJ2)(n.youtubeVideoId)}?${tv}`, ...tx }),
-                (s = eG.m.YOUTUBE));
+                (s = ek.mt.YOUTUBE));
         else {
             let e = null != n.width ? n.width : 0,
                 i = null != n.height ? n.height : 0;
@@ -1093,7 +1093,7 @@ let tg = { width: 1280, height: 720 },
         }
         return (0, i.jsx)("div", {
             className: th.x,
-            children: (0, i.jsx)(ek.rr, {
+            children: (0, i.jsx)(eG.rr, {
                 className: th.Zy,
                 iframeWrapperClassName: th.Zy,
                 href: null,

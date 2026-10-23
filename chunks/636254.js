@@ -47,8 +47,8 @@ var m = l(536637),
     k = l(319745),
     x = l(488225),
     _ = l(834730),
-    L = l(175671),
-    E = l(259407),
+    L = l(693942),
+    E = l(161573),
     b = l(607470),
     S = l(472501),
     w = l(46054),
@@ -106,7 +106,7 @@ class R extends r.PureComponent {
             r = e.video,
             o = e.image;
         if (null != t && "" !== t)
-            return (0, n.jsx)(L.rr, {
+            return (0, n.jsx)(E.rr, {
                 className: v.video,
                 allowFullScreen: !1,
                 href: `https://youtu.be/${t}`,
@@ -116,7 +116,7 @@ class R extends r.PureComponent {
                     width: 432,
                     height: 240,
                 },
-                provider: E.m.YOUTUBE,
+                provider: L.mt.YOUTUBE,
                 maxWidth: 432,
                 maxHeight: 240,
                 renderVideoComponent: O.$o,

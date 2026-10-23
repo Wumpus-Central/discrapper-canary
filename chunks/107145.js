@@ -14052,6 +14052,9 @@ function Si(e) {
                         case I.fg2.STEAM:
                             n = (0, xD.dy)(t, Se.Nz);
                             break;
+                        case I.fg2.LETTERBOXD:
+                            n = (0, xD.uq)(t, Se.Nz);
+                            break;
                         case I.fg2.BLUESKY:
                         case I.fg2.TWITTER:
                         case I.fg2.MASTODON:

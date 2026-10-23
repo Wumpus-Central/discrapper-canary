@@ -388,7 +388,7 @@ let K = "playground-announcement-modal",
                                     n.e("431714"),
                                     n.e("273165"),
                                     n.e("365074"),
-                                    n.e("734268"),
+                                    n.e("437254"),
                                     n.e("963333"),
                                     n.e("954372"),
                                 ]).then(n.bind(n, 103407));

@@ -452,6 +452,7 @@ let d = [
                 whiteSVG: n(428304),
             },
             enabled: !0,
+            hasMetadata: !0,
             domains: ["letterboxd.com"],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;

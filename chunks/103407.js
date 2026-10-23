@@ -36,8 +36,8 @@ var b = n(503698),
     S = n(73153),
     w = n(775602),
     G = n(139286),
-    U = n(175671),
-    K = n(259407),
+    U = n(693942),
+    K = n(161573),
     H = n(915089),
     V = n(607470),
     F = n(44788),
@@ -284,13 +284,13 @@ function W(e) {
                                             }),
                                         });
                                     case "embed":
-                                        return (0, r.jsx)(U.rr, {
+                                        return (0, r.jsx)(K.rr, {
                                             className: I()(z.Ki, d),
                                             allowFullScreen: !1,
                                             href: c.href,
                                             thumbnail: c.thumbnail,
                                             video: c.embed,
-                                            provider: K.m.YOUTUBE,
+                                            provider: U.mt.YOUTUBE,
                                             maxWidth: c.embed.width,
                                             maxHeight: c.embed.height,
                                             renderVideoComponent: F.$o,
