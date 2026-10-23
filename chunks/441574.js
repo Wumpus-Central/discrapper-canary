@@ -1599,6 +1599,8 @@ var j =
         (m[(m.DISPLAY_NAME_STYLES = 32)] = "DISPLAY_NAME_STYLES"),
         (m[(m.VAD_COLORS = 33)] = "VAD_COLORS"),
         (m[(m.CUSTOM_TYPING_INDICATOR = 34)] = "CUSTOM_TYPING_INDICATOR"),
+        (m[(m.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
+        (m[(m.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
         m),
     er =
         (((g = {})[(g.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
