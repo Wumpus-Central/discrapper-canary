@@ -2,7 +2,7 @@ n.d(t, { AG: () => a, XT: () => o, gj: () => s });
 var i,
     l,
     r,
-    s = /^(221552|614256)$/.test(n.j)
+    s = /^(221552|391875)$/.test(n.j)
         ? (((i = {}).INVITE = "member_joined"),
           (i.CHANNEL = "create_channel"),
           (i.AVATAR = "avatar"),
