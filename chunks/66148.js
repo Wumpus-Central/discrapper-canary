@@ -3080,12 +3080,19 @@ function sR(e) {
                 },
                 { isBaseEligible: t, currentUserId: i } = sj(),
                 l = (0, m.bG)(
-                    [sp.A, lG.A],
+                    [lG.A, ee.default, sp.A],
                     () =>
                         e.recipients.some((e) => {
-                            if (e === i || lG.A.isBlockedOrIgnored(e)) return !1;
-                            let n = sp.A.getUserAffinity(e);
-                            return null != n && null != n.communicationRank && n.communicationRank <= 20;
+                            if (e === i) return !1;
+                            let n = ee.default.getUser(e);
+                            if (null == n || lG.A.isBlockedOrIgnored(e)) return !1;
+                            let t = sp.A.getUserAffinity(e);
+                            return (
+                                null != t &&
+                                null != t.communicationRank &&
+                                t.communicationRank <= 20 &&
+                                null == n.premiumType
+                            );
                         }),
                     [e.recipients, i],
                 );
