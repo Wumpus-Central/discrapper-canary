@@ -4337,6 +4337,28 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-hexagon-campaign-client",
+    "defaultConfig": {
+      "enabled": false,
+      "questHomeRedirect": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "questHomeRedirect": true
+      },
+      "2": {
+        "enabled": true,
+        "questHomeRedirect": false
+      }
+    }
+  },
+  {
     "name": "2026-09-invite-accept-age-group-errors",
     "kind": "user",
     "defaultConfig": {

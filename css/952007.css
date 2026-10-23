@@ -77,6 +77,14 @@
     --bg-gradient-hanami-2-hsl: 43.146 calc(var(--saturation-factor, 1)*73.554%) 76.275%;
     --bg-gradient-hanami-3: hsl(var(--bg-gradient-hanami-3-hsl)/1);
     --bg-gradient-hanami-3-hsl: 115.714 calc(var(--saturation-factor, 1)*43.077%) 74.51%;
+    --bg-gradient-hexagon-1: hsl(var(--bg-gradient-hexagon-1-hsl)/1);
+    --bg-gradient-hexagon-1-hsl: 36.98 calc(var(--saturation-factor, 1)*97.61%) 49.216%;
+    --bg-gradient-hexagon-2: hsl(var(--bg-gradient-hexagon-2-hsl)/1);
+    --bg-gradient-hexagon-2-hsl: 340.392 calc(var(--saturation-factor, 1)*100%) 70%;
+    --bg-gradient-hexagon-3: hsl(var(--bg-gradient-hexagon-3-hsl)/1);
+    --bg-gradient-hexagon-3-hsl: 283.14 calc(var(--saturation-factor, 1)*99.18%) 47.843%;
+    --bg-gradient-hexagon-4: hsl(var(--bg-gradient-hexagon-4-hsl)/1);
+    --bg-gradient-hexagon-4-hsl: 240.323 calc(var(--saturation-factor, 1)*100%) 63.529%;
     --bg-gradient-hexagon-promo-1: hsl(var(--bg-gradient-hexagon-promo-1-hsl)/1);
     --bg-gradient-hexagon-promo-1-hsl: 231.652 calc(var(--saturation-factor, 1)*48.936%) 53.922%;
     --bg-gradient-hexagon-promo-2: hsl(var(--bg-gradient-hexagon-promo-2-hsl)/1);
@@ -10362,4 +10370,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.1486d9a8a5b1fa6c.css.map*/
+/*# sourceMappingURL=952007.eb73ad2f84d9fd56.css.map*/

@@ -77,6 +77,14 @@
     --bg-gradient-hanami-2-hsl: 330 100 71%;
     --bg-gradient-hanami-3: hotpink;
     --bg-gradient-hanami-3-hsl: 330 100 71%;
+    --bg-gradient-hexagon-1: hotpink;
+    --bg-gradient-hexagon-1-hsl: 330 100 71%;
+    --bg-gradient-hexagon-2: hotpink;
+    --bg-gradient-hexagon-2-hsl: 330 100 71%;
+    --bg-gradient-hexagon-3: hotpink;
+    --bg-gradient-hexagon-3-hsl: 330 100 71%;
+    --bg-gradient-hexagon-4: hotpink;
+    --bg-gradient-hexagon-4-hsl: 330 100 71%;
     --bg-gradient-hexagon-promo-1: hotpink;
     --bg-gradient-hexagon-promo-1-hsl: 330 100 71%;
     --bg-gradient-hexagon-promo-2: hotpink;
@@ -6383,4 +6391,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=425230970d182f1a.css.map*/
+/*# sourceMappingURL=494024cf6bd8e5a1.css.map*/
