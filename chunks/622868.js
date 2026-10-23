@@ -258,7 +258,7 @@ function es(e) {
             return Promise.resolve((e) => {
                 let { closePopout: i } = e;
                 return null == u
-                    ? (0, t.jsx)(t.Fragment, {})
+                    ? null
                     : (f()(null != o, "visibleConnectionsRole is null"),
                       (0, t.jsx)(ea, {
                           eligibilityStates: u,
