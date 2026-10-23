@@ -12,7 +12,7 @@ var i = n(582128),
 function E(e) {
     let t = e?.websites?.find((e) => {
             let { category: t } = e;
-            return t === r.V.DISCORD;
+            return t === r.V1.DISCORD;
         }),
         n = t?.url.split("/").pop();
     return null != n && "" !== n ? n : null;
@@ -21,7 +21,7 @@ function A(e) {
     return (
         e?.websites?.some((e) => {
             let { category: t } = e;
-            return t === r.V.DISCORD;
+            return t === r.V1.DISCORD;
         }) ?? !1
     );
 }

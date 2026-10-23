@@ -15,7 +15,7 @@ function c(e) {
             if (null == e) return null;
             let t = a.A.getGame(e);
             if (null == t || t.steamReleaseStatus === l.Y.RETIRED_ABANDONED) return null;
-            let n = t.websites.find((e) => e.category === r.V.STEAM)?.url,
+            let n = t.websites.find((e) => e.category === r.V1.STEAM)?.url,
                 o = t.thirdPartySkus.filter((e) => e.distributor === s.d3x.STEAM && !(0, i.uJ)(e.id)),
                 c = o[0]?.id,
                 d = (0, i.uJ)(c) ? null : u(c);

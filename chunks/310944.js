@@ -2200,16 +2200,16 @@ var np = l(505779);
 var nv = l(989441);
 let nA = {
         appStore: {
-            websiteCategories: [np.V.IPHONE, np.V.IPAD],
-            websiteHostnames: ["apps.apple.com", "itunes.apple.com"],
+            websiteCategories: [np.V1.IPHONE, np.V1.IPAD],
+            websiteHostnames: np.FU,
             distributor: nv.D.APPLE_APP_STORE,
-            buildUrl: (e) => `https://apps.apple.com/app/id${e}`,
+            buildUrl: (e) => `https://${np.FU["0"]}/app/id${e}`,
         },
         googlePlay: {
-            websiteCategories: [np.V.ANDROID],
-            websiteHostnames: ["play.google.com"],
+            websiteCategories: [np.V1.ANDROID],
+            websiteHostnames: np.SX,
             distributor: nv.D.GOOGLE_PLAY,
-            buildUrl: (e) => `https://play.google.com/store/apps/details?id=${encodeURIComponent(e)}`,
+            buildUrl: (e) => `https://${np.SX["0"]}/store/apps/details?id=${encodeURIComponent(e)}`,
         },
     },
     nE = new Set(
@@ -2289,62 +2289,62 @@ function nY(e) {
             title: o,
         } = (function (e, t) {
             switch (e.category) {
-                case np.V.OFFICIAL:
+                case np.V1.OFFICIAL:
                     return {
                         icon: (0, s.jsx)(nL.GlobeEarthIcon, { ...t }),
                         action: T.GameProfileTrackActionActions.WebsiteLink,
                         title: em.intl.string(em.t.fOUKvg),
                     };
-                case np.V.TWITTER:
+                case np.V1.TWITTER:
                     return {
                         icon: (0, s.jsx)(nk.p, { ...t }),
                         action: T.GameProfileTrackActionActions.XLink,
                         title: em.intl.string(em.t.INic4y),
                     };
-                case np.V.YOUTUBE:
+                case np.V1.YOUTUBE:
                     return {
                         action: T.GameProfileTrackActionActions.YouTubeLink,
                         icon: (0, s.jsx)(nR.C, { ...t }),
                         title: em.intl.string(em.t.lNmxbE),
                     };
-                case np.V.FACEBOOK:
+                case np.V1.FACEBOOK:
                     return {
                         icon: (0, s.jsx)(nG.Z, { ...t }),
                         action: T.GameProfileTrackActionActions.FacebookLink,
                         title: em.intl.string(em.t.FjyREK),
                     };
-                case np.V.INSTAGRAM:
+                case np.V1.INSTAGRAM:
                     return {
                         icon: (0, s.jsx)(nO.L, { ...t }),
                         action: T.GameProfileTrackActionActions.InstagramLink,
                         title: em.intl.string(em.t["cgR+IK"]),
                     };
-                case np.V.BLUESKY:
+                case np.V1.BLUESKY:
                     return {
                         icon: (0, s.jsx)(nM.a, { ...t }),
                         action: T.GameProfileTrackActionActions.BlueskyLink,
                         title: em.intl.string(em.t["D/PHq5"]),
                     };
-                case np.V.REDDIT:
+                case np.V1.REDDIT:
                     return {
                         icon: (0, s.jsx)(nP.T, { ...t }),
                         action: T.GameProfileTrackActionActions.RedditLink,
                         title: em.intl.string(em.t["Hgb+fc"]),
                     };
-                case np.V.TWITCH:
+                case np.V1.TWITCH:
                     return {
                         icon: (0, s.jsx)(n_.a, { ...t }),
                         action: T.GameProfileTrackActionActions.TwitchLink,
                         title: em.intl.string(em.t["7xtz4G"]),
                     };
-                case np.V.IPHONE:
-                case np.V.IPAD:
+                case np.V1.IPHONE:
+                case np.V1.IPAD:
                     return {
                         icon: (0, s.jsx)(nw.z, { ...t }),
                         action: T.GameProfileTrackActionActions.AppStoreLink,
                         title: em.intl.string(em.t.LVy7Ug),
                     };
-                case np.V.ANDROID:
+                case np.V1.ANDROID:
                     return {
                         icon: (0, s.jsx)(nD.O, { ...t }),
                         action: T.GameProfileTrackActionActions.GooglePlayStoreLink,
@@ -2418,12 +2418,12 @@ let nZ = function () {
         d = r.useMemo(() => {
             let t = e.websites.filter((e) => {
                     let { category: t } = e;
-                    return np.p.includes(t) && !nE.has(t);
+                    return np.pF.includes(t) && !nE.has(t);
                 }),
                 l = Object.values(nA)
                     .map((t) => nI(e, t))
                     .filter(eT.Vq);
-            return t.sort((e, t) => np.p.indexOf(e.category) - np.p.indexOf(t.category)).concat(l);
+            return t.sort((e, t) => np.pF.indexOf(e.category) - np.pF.indexOf(t.category)).concat(l);
         }, [e]),
         m = !(0, tf.uJ)(l),
         x = !(0, tf.uJ)(a),
@@ -3676,7 +3676,7 @@ function i4() {
 l(667532);
 var i3 = l(853022);
 let i6 = new Set(["1402418703554842694", "356877880938070016"]),
-    i2 = [np.V.EPICGAMES, np.V.STEAM, np.V.ROBLOX, np.V.BATTLENET, np.V.RIOT, np.V.MINECRAFT];
+    i2 = [np.V1.EPICGAMES, np.V1.STEAM, np.V1.ROBLOX, np.V1.BATTLENET, np.V1.RIOT, np.V1.MINECRAFT];
 function i5(e) {
     return (0, s.jsx)(K.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
@@ -3687,7 +3687,7 @@ var i9 = l(349361),
     al = l(695250);
 let an = function (e) {
     switch (e.category) {
-        case np.V.STEAM:
+        case np.V1.STEAM:
             return {
                 icon: ix.N,
                 text: em.intl.string(em.t.FsANs4),
@@ -3695,7 +3695,7 @@ let an = function (e) {
                 action: T.GameProfileTrackActionActions.SteamStoreLink,
                 url: e.url,
             };
-        case np.V.EPICGAMES:
+        case np.V1.EPICGAMES:
             return {
                 icon: i9.r,
                 text: em.intl.string(em.t.ZbBMHa),
@@ -3703,7 +3703,7 @@ let an = function (e) {
                 action: T.GameProfileTrackActionActions.EpicStoreLink,
                 url: e.url,
             };
-        case np.V.ROBLOX:
+        case np.V1.ROBLOX:
             return {
                 icon: i7.H,
                 text: em.intl.string(em.t["pJ+P+h"]),
@@ -3711,7 +3711,7 @@ let an = function (e) {
                 action: T.GameProfileTrackActionActions.RobloxStoreLink,
                 url: e.url,
             };
-        case np.V.BATTLENET:
+        case np.V1.BATTLENET:
             return {
                 icon: ae.a,
                 text: em.intl.string(em.t["A7grp+"]),
@@ -3719,7 +3719,7 @@ let an = function (e) {
                 action: T.GameProfileTrackActionActions.BattlenetStoreLink,
                 url: e.url,
             };
-        case np.V.RIOT:
+        case np.V1.RIOT:
             return {
                 icon: at.A,
                 text: em.intl.string(em.t.h6MapL),
@@ -3727,7 +3727,7 @@ let an = function (e) {
                 action: T.GameProfileTrackActionActions.RiotStoreLink,
                 url: e.url,
             };
-        case np.V.MINECRAFT:
+        case np.V1.MINECRAFT:
             return {
                 icon: al.m,
                 text: em.intl.string(em.t["HZbmO+"]),
@@ -3768,15 +3768,15 @@ function aa(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== np.V.EPICGAMES || !!i6.has(n)) &&
-                            (e.category !== np.V.STEAM || a !== ij.Y.RETIRED_ABANDONED) &&
+                            (e.category !== np.V1.EPICGAMES || !!i6.has(n)) &&
+                            (e.category !== np.V1.STEAM || a !== ij.Y.RETIRED_ABANDONED) &&
                             i2.includes(e.category),
                     ) ?? [];
                 null == t ||
                     a === ij.Y.RETIRED_ABANDONED ||
-                    e.some((e) => e.category === np.V.STEAM) ||
-                    e.push({ category: np.V.STEAM, url: t });
-                let s = e.sort((e, t) => (e.category === np.V.STEAM ? -1 : +(t.category === np.V.STEAM)));
+                    e.some((e) => e.category === np.V1.STEAM) ||
+                    e.push({ category: np.V1.STEAM, url: t });
+                let s = e.sort((e, t) => (e.category === np.V1.STEAM ? -1 : +(t.category === np.V1.STEAM)));
                 return (null != l && s.unshift({ category: "XBOX_GAME_PASS", url: l }), s);
             }, [t, i, n, a, l]));
     return { storeWebsites: s, showsStoreLinks: s.length > 0 && null != e };
