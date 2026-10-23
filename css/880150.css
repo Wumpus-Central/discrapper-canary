@@ -46,6 +46,7 @@
     --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color)
 }
 
+.spoilerContent__299eb.hidden__299eb.hovered__299eb,
 .spoilerContent__299eb.hidden__299eb:hover {
     --__current--spoiler-background-color: var(--__spoiler-background-color--hidden--hover);
     --__current--spoiler-border-color: var(--__spoiler-border-color--hidden--hover);
@@ -58,6 +59,7 @@
     --__obscured-background-blur-radius: 500px
 }
 
+.spoilerContent__299eb.hidden__299eb.opaque__299eb.hovered__299eb,
 .spoilerContent__299eb.hidden__299eb.opaque__299eb:hover {
     --__current--spoiler-background-color: var(--__spoiler-background-color--hidden);
     --__current--spoiler-border-color: var(--__spoiler-border-color--hidden);
@@ -332,4 +334,4 @@
     transition: background-color .2s ease-in-out
 }
 
-/*# sourceMappingURL=880150.0c97b70a588f0652.css.map*/
+/*# sourceMappingURL=880150.91508f3ed1e2598f.css.map*/

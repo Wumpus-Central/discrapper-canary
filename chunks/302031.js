@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => P, Bs: () => T });
+n.d(t, { Ay: () => P, Bs: () => y });
 var i,
     s = n(477900),
     l = n(582128),
@@ -18,16 +18,16 @@ var i,
     N = n(338717),
     b = n(403362),
     f = n(105292),
-    A = n(881013),
-    v = (((i = v || {}).TEXT = "text"), (i.ATTACHMENT = "attachment"), (i.EMBED = "embed"), i);
+    v = n(881013),
+    A = (((i = A || {}).TEXT = "text"), (i.ATTACHMENT = "attachment"), (i.EMBED = "embed"), i);
 function E(e) {
     let { className: t } = e;
-    return (0, s.jsx)("div", { className: r()(A.pR, t), children: f.intl.string(f.t["F+x38C"]) });
+    return (0, s.jsx)("div", { className: r()(v.pR, t), children: f.intl.string(f.t["F+x38C"]) });
 }
 function C(e) {
     let { className: t, isSingleMosaicItem: n, obscureOnly: i } = e;
     return (0, s.jsx)("div", {
-        className: r()(A.W5, t),
+        className: r()(v.W5, t),
         children: i
             ? null
             : (0, s.jsxs)(s.Fragment, {
@@ -37,7 +37,7 @@ function C(e) {
                           (0, s.jsx)(d.E, {
                               variant: "text-sm/normal",
                               color: "text-overlay-light",
-                              className: A.Vs,
+                              className: v.Vs,
                               children: f.intl.string(f.t.SpxcUR),
                           }),
                   ],
@@ -64,9 +64,9 @@ function O(e) {
     return t !== N.Oc.EXPLICIT_CONTENT && t !== N.Oc.GORE_CONTENT && t !== N.Oc.SELF_HARM_CONTENT
         ? null
         : (0, s.jsx)("div", {
-              className: r()(A.fA, l),
+              className: r()(v.fA, l),
               children: (0, s.jsx)(u.D, {
-                  className: A.kw,
+                  className: v.kw,
                   onClick: i,
                   "aria-label": f.intl.string(f.t.ex5G9m),
                   children: n
@@ -75,8 +75,8 @@ function O(e) {
               }),
           });
 }
-let T = l.createContext(!1);
-class y extends l.PureComponent {
+let y = l.createContext(!1);
+class T extends l.PureComponent {
     state = { visible: !1 };
     removeObscurity = (e) => {
         let { visible: t } = this.state;
@@ -116,7 +116,7 @@ class y extends l.PureComponent {
                 isVerifiedTeen: d,
             } = this.props,
             { visible: m } = this.state,
-            x = (0, s.jsx)(T.Consumer, {
+            x = (0, s.jsx)(y.Consumer, {
                 children: (x) => {
                     let h = x || m || !l;
                     return N._K.has(a) && !t
@@ -124,12 +124,12 @@ class y extends l.PureComponent {
                               "aria-label": h ? void 0 : this.ariaLabel,
                               "aria-expanded": h,
                               style: i,
-                              className: r()(n, A.ur, A.q2, A.Dq, A.OZ, { [A.R]: !h, [A.h5]: o }),
+                              className: r()(n, v.ur, v.q2, v.Dq, v.OZ, { [v.R]: !h, [v.h5]: o }),
                               role: h ? "presentation" : "button",
                               tabIndex: h ? -1 : 0,
                               children: [
                                   h ? null : (0, s.jsx)(S, { reason: a, isSingleMosaicItem: o }),
-                                  (0, s.jsx)("div", { "aria-hidden": !h, className: A.Qu, children: e(!h) }),
+                                  (0, s.jsx)("div", { "aria-hidden": !h, className: v.Qu, children: e(!h) }),
                                   d
                                       ? null
                                       : (0, s.jsx)(O, {
@@ -145,12 +145,12 @@ class y extends l.PureComponent {
                               "aria-label": h ? void 0 : this.ariaLabel,
                               "aria-expanded": h,
                               style: i,
-                              className: r()(n, A.ur, A.q2, A.Dq, { [A.R]: !h, [A.rP]: !h }),
+                              className: r()(n, v.ur, v.q2, v.Dq, { [v.R]: !h, [v.rP]: !h }),
                               role: h ? "presentation" : "button",
                               tabIndex: h ? -1 : 0,
                               children: [
                                   h || t ? null : (0, s.jsx)(S, { reason: a, isSingleMosaicItem: o }),
-                                  (0, s.jsx)("div", { "aria-hidden": !h, className: A.Qu, children: e(!h) }),
+                                  (0, s.jsx)("div", { "aria-hidden": !h, className: v.Qu, children: e(!h) }),
                               ],
                           });
                 },
@@ -168,7 +168,7 @@ class y extends l.PureComponent {
                 isVerifiedTeen: o,
             } = this.props,
             { visible: c } = this.state;
-        return (0, s.jsx)(T.Consumer, {
+        return (0, s.jsx)(y.Consumer, {
             children: (d) => {
                 let m = d || c;
                 return N._K.has(a)
@@ -176,12 +176,12 @@ class y extends l.PureComponent {
                           "aria-label": c ? void 0 : this.ariaLabel,
                           "aria-expanded": m,
                           style: n,
-                          className: r()(t, A.ur, A.q2, A.x, A.OZ, { [A.R]: !m }),
+                          className: r()(t, v.ur, v.q2, v.x, v.OZ, { [v.R]: !m }),
                           role: m ? "presentation" : "button",
                           tabIndex: m ? -1 : 0,
                           children: [
                               m ? null : (0, s.jsx)(S, { reason: a, isSingleMosaicItem: i }),
-                              (0, s.jsx)("div", { "aria-hidden": !m, className: A.Qu, children: e(!m) }),
+                              (0, s.jsx)("div", { "aria-hidden": !m, className: v.Qu, children: e(!m) }),
                               o
                                   ? null
                                   : (0, s.jsx)(O, {
@@ -195,13 +195,13 @@ class y extends l.PureComponent {
                     : (0, s.jsxs)(u.D, {
                           "aria-label": this.ariaLabel,
                           "aria-expanded": m,
-                          className: r()(t, A.ur, A.q2, A.x, { [A.R]: !m }),
+                          className: r()(t, v.ur, v.q2, v.x, { [v.R]: !m }),
                           onClick: m ? void 0 : this.removeObscurity,
                           style: n,
                           role: m ? "presentation" : "button",
                           tabIndex: m ? -1 : 0,
                           children: [
-                              m ? null : (0, s.jsx)(S, { reason: a, className: A.E6 }),
+                              m ? null : (0, s.jsx)(S, { reason: a, className: v.E6 }),
                               (0, s.jsx)("div", { "aria-hidden": !m, children: e(!m) }),
                           ],
                       });
@@ -209,29 +209,39 @@ class y extends l.PureComponent {
         });
     }
     renderObscuredText() {
-        let { children: e, renderTextElement: t, className: n } = this.props,
-            { visible: i } = this.state,
-            a = (0, s.jsx)(T.Consumer, {
-                children: (a) => {
-                    let o = a || i,
-                        c = l.Children.toArray(e(o)),
-                        d = l.Children.map(c, (e) => (l.isValidElement(e) && null != t ? t(e, o) : e));
+        let {
+                children: e,
+                renderTextElement: t,
+                className: n,
+                obscured: i = !0,
+                hovered: a = !1,
+                onMouseEnter: o,
+                onMouseLeave: c,
+            } = this.props,
+            { visible: d } = this.state,
+            m = (0, s.jsx)(y.Consumer, {
+                children: (m) => {
+                    let x = m || d || !i,
+                        h = l.Children.toArray(e(x)),
+                        j = l.Children.map(h, (e) => (l.isValidElement(e) && null != t ? t(e, x) : e));
                     return (0, s.jsx)(u.D, {
                         tag: "span",
-                        onClick: o ? void 0 : this.removeObscurity,
-                        "aria-label": o ? void 0 : this.ariaLabel,
-                        "aria-expanded": o,
-                        tabIndex: o ? -1 : 0,
-                        role: o ? "presentation" : "button",
-                        className: r()("obscured", n, A.ur, A.F0, { [A.R]: !o }),
+                        onClick: x ? void 0 : this.removeObscurity,
+                        onMouseEnter: o,
+                        onMouseLeave: c,
+                        "aria-label": x ? void 0 : this.ariaLabel,
+                        "aria-expanded": x,
+                        tabIndex: x ? -1 : 0,
+                        role: x ? "presentation" : "button",
+                        className: r()("obscured", n, v.ur, v.F0, { [v.R]: !x, [v.yo]: a }),
                         children: (0, s.jsx)("span", {
-                            className: A.kx,
-                            children: (0, s.jsx)("span", { "aria-hidden": !o, className: A.AV, children: d }),
+                            className: v.kx,
+                            children: (0, s.jsx)("span", { "aria-hidden": !x, className: v.AV, children: j }),
                         }),
                     });
                 },
             });
-        return this.renderWithTooltip(a);
+        return this.renderWithTooltip(m);
     }
     render() {
         let { type: e = "text" } = this.props;
@@ -280,7 +290,7 @@ class y extends l.PureComponent {
 function k(e) {
     let t = (0, I._R)() && null != e.reason && N.tY.has(e.reason),
         n = (0, p.yM)();
-    return (0, s.jsx)(y, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
+    return (0, s.jsx)(T, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 }
-((k.Types = v), (k.Reasons = N.Oc));
+((k.Types = A), (k.Reasons = N.Oc));
 let P = k;
