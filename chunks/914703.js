@@ -1,28 +1,30 @@
-e.d(t, { A: () => h });
+e.d(t, { A: () => u });
 var a = e(477900);
 e(582128);
 var n = e(980707),
     s = e(477782),
     r = e(660273),
-    c = e(57907),
+    c = e(804006),
+    l = e(57907),
     o = e(867455),
     d = e(607508),
-    l = e(37411);
-function h(i) {
-    let { channel: t, closePopout: e, onSelect: h, navId: u, label: p } = i,
-        f = (0, r.A)(t, "Notifications Bell"),
-        k = (0, c.A)(t),
-        b = (0, d.X)(t);
+    h = e(37411);
+function u(i) {
+    let { channel: t, closePopout: e, onSelect: u, navId: p, label: f } = i,
+        j = (0, r.A)(t, "Notifications Bell"),
+        k = (0, c.A)(t, "Notifications Bell"),
+        x = (0, l.A)(t),
+        A = (0, d.X)(t);
     return (0, a.jsxs)(n.W, {
         "data-menu-migrated-auto": !0,
-        navId: u,
+        navId: p,
         onClose: e,
-        "aria-label": p,
-        onSelect: h,
+        "aria-label": f,
+        onSelect: u,
         children: [
-            (0, a.jsxs)(s.rX, { children: [f, k] }),
+            (0, a.jsxs)(s.rX, { children: [j, x] }),
             (0, a.jsx)(s.rX, {
-                children: (0, l.EU)().map((i) => {
+                children: (0, h.EU)().map((i) => {
                     let { setting: e, label: n } = i;
                     return (0, a.jsx)(
                         s.iD,
@@ -31,12 +33,13 @@ function h(i) {
                             id: `${e}`,
                             label: n,
                             action: () => o.A.setNotificationSettings(t, { flags: e }),
-                            checked: e === b,
+                            checked: e === A,
                         },
                         e,
                     );
                 }),
             }),
+            (0, a.jsx)(s.rX, { children: k }),
         ],
     });
 }
