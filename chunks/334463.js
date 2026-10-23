@@ -1,5 +1,5 @@
 let i, r, l;
-n.d(t, { A: () => E });
+n.d(t, { A: () => g });
 var s = n(17928),
     a = n(73153),
     o = n(652215),
@@ -62,7 +62,7 @@ class A extends s.Ay.PersistedStore {
         return { openPosition: h, pipWidths: m };
     }
 }
-let E = new A(a.h, {
+let g = new A(a.h, {
     PICTURE_IN_PICTURE_OPEN: function (e) {
         let { id: t, component: n, props: s } = e;
         if (null != c.get(t)) return;

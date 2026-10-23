@@ -1,7 +1,7 @@
 n.d(t, { p: () => s });
-var i = n(477900);
+var l = n(477900);
 n(582128);
-var l = n(192308),
+var i = n(192308),
     a = n(792852),
     r = n(696016);
 function s() {
@@ -10,7 +10,7 @@ function s() {
         { resetAll: s, setGameFacet: o } = a.P.getState();
     (s(),
         null != t && o(t),
-        (0, l.openModalLazy)(
+        (0, i.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("459368"),
@@ -44,7 +44,7 @@ function s() {
                     n.e("520342"),
                     n.e("650676"),
                 ]).then(n.bind(n, 272351));
-                return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
+                return (n) => (0, l.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: r.nm },
         ));

@@ -12,15 +12,15 @@ var r = n(17928),
     h = n(105292);
 function m(e, t, m) {
     let A = (0, u.AO)(e),
-        E = (0, r.bG)([c.default], () => c.default.getId());
+        g = (0, r.bG)([c.default], () => c.default.getId());
     if (null == e) return null;
-    let g = (0, o._z)(e),
-        f = d.A.getVideoStats(g) ?? {},
+    let E = (0, o._z)(e),
+        f = d.A.getVideoStats(E) ?? {},
         p = {
-            media_session_id: d.A.getMediaSessionId(g),
-            rtc_connection_id: d.A.getRtcConnectionId(g),
-            stream_region: d.A.getRegion(g),
-            max_viewers: d.A.getMaxViewers(g),
+            media_session_id: d.A.getMediaSessionId(E),
+            rtc_connection_id: d.A.getRtcConnectionId(E),
+            stream_region: d.A.getRegion(E),
+            max_viewers: d.A.getMaxViewers(E),
             ...f,
         };
     return (0, i.jsx)(s.Dr, {
@@ -36,7 +36,7 @@ function m(e, t, m) {
                             (0, i.jsx)(t, {
                                 stream: e,
                                 streamApplication: A,
-                                isStreamer: E === e?.ownerId,
+                                isStreamer: g === e?.ownerId,
                                 analyticsData: p,
                                 ...n,
                             });

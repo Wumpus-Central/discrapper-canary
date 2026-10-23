@@ -17,18 +17,18 @@ function u(e) {
             drawWidth: m,
             className: f,
             "aria-label": h,
-            onStateChange: g,
+            onStateChange: p,
         } = e,
-        p = r.useRef(null),
+        g = r.useRef(null),
         x = r.useRef(null),
         v = r.useRef(null),
         [j, b] = r.useState(!1),
         y = (0, a.A)(),
-        k = r.useCallback(
+        w = r.useCallback(
             async (e) => {
                 let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let r = p.current,
+                    let r = g.current,
                         a = r?.getContext("2d");
                     if (null == r || null == a || !(0, i.j_)(t, n, e)) return;
                     ((r.width !== l.width || r.height !== l.height) && ((r.width = l.width), (r.height = l.height)),
@@ -41,22 +41,22 @@ function u(e) {
             },
             [t, n],
         ),
-        w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        N = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-        C = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: N }),
+        k = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
+        N = null == m ? 0 : Math.round(m * Math.min(k, 2)),
+        C = (0, i.KK)(t, n, { fps: u, onFrame: w, enabled: !d && y, width: N }),
         A = (0, i.AV)(t, n),
         S = r.useRef(A);
     (r.useEffect(() => {
         if (S.current === A) return;
         ((S.current = A), (x.current = null), b(!1));
-        let e = p.current;
+        let e = g.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [A]),
         r.useEffect(() => {
-            g?.(C, j);
-        }, [C, j, g]),
+            p?.(C, j);
+        }, [C, j, p]),
         r.useEffect(() => {
-            c && p.current?.focus();
+            c && g.current?.focus();
         }, [c]));
     let E = r.useRef(new Map());
     function I(e) {
@@ -116,7 +116,7 @@ function u(e) {
         };
     }
     return (0, l.jsx)("canvas", {
-        ref: p,
+        ref: g,
         className: f,
         role: c ? "application" : "img",
         "aria-label": h,

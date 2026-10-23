@@ -3,8 +3,8 @@ var l = t(477900),
     a = t(582128),
     i = t(192308),
     r = t(866665),
-    o = t(442433),
-    s = t(442247),
+    s = t(442433),
+    o = t(442247),
     c = t(60465),
     u = t(409626),
     d = t(106191),
@@ -36,11 +36,11 @@ function j(e) {
     let n = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return n?.closest('[contenteditable="true"]') != null;
 }
-function A(e) {
+function y(e) {
     let n = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return n?.closest(`[${x}]`) ?? null;
 }
-function y(e) {
+function A(e) {
     let n;
     if (null == e.clipboardData) return;
     let t = window.getSelection();
@@ -53,12 +53,12 @@ function y(e) {
     if (n.collapsed || j(n.startContainer) || j(n.endContainer)) return;
     let l = n.cloneContents(),
         a = null != l.querySelector(`[${x}]`),
-        i = A(n.startContainer),
-        r = A(n.endContainer),
-        o = !a && null != i && i === r;
-    if (a || o) {
+        i = y(n.startContainer),
+        r = y(n.endContainer),
+        s = !a && null != i && i === r;
+    if (a || s) {
         let n, t;
-        if (o) {
+        if (s) {
             let n = i.getAttribute(x);
             if (null == n || "" === n) return;
             (e.preventDefault(), e.clipboardData.setData("text/plain", (0, p.KW)(n)));
@@ -109,15 +109,15 @@ var C = t(105292),
     k = t(379961);
 let E = function (e) {
     let { gameId: n, authorId: p } = e,
-        x = (0, s.K)(n),
+        x = (0, o.K)(n),
         f = null != x,
         j = x?.gameName ?? C.intl.string(C.t["11pdXZ"]),
-        A = x?.gameIcon;
+        y = x?.gameIcon;
     a.useEffect(
         () => (
-            1 === (g += 1) && document.addEventListener("copy", y),
+            1 === (g += 1) && document.addEventListener("copy", A),
             () => {
-                0 == (g -= 1) && document.removeEventListener("copy", y);
+                0 == (g -= 1) && document.removeEventListener("copy", A);
             }
         ),
         [],
@@ -125,7 +125,7 @@ let E = function (e) {
     let E = a.useCallback(
             (e) => {
                 f &&
-                    (0, o.L3)(e, async () => {
+                    (0, s.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             t.e("926132"),
                             t.e("146652"),
@@ -175,7 +175,7 @@ let E = function (e) {
                     children: (0, l.jsx)("span", {
                         "aria-hidden": "true",
                         className: k.P0,
-                        children: (0, l.jsx)(d.A, { game: { id: n, icon: A }, iconClassName: k.Kk, allowFetch: !1 }),
+                        children: (0, l.jsx)(d.A, { game: { id: n, icon: y }, iconClassName: k.Kk, allowFetch: !1 }),
                     }),
                 }),
                 (0, l.jsx)("span", { className: k.UU, children: j }),

@@ -87,10 +87,10 @@ class m {
     }
 }
 let A = i.createContext(new m(!0));
-function E(e, t, n) {
+function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let g = { mass: 0.8, friction: 25, tension: 320 };
+let E = { mass: 0.8, friction: 25, tension: 320 };
 function f(e, t, n) {
     let [s, m] = (0, r.z)(
             () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
@@ -119,7 +119,7 @@ function f(e, t, n) {
                               p = {
                                   opacity: i && m > 4 ? 0 : i ? Math.min(1 - m / 4, 1) : 1,
                                   scale: i ? Math.min(1 - m / 4, 1) : 1,
-                                  transform: E(m, i, s),
+                                  transform: g(m, i, s),
                                   contentOpacity: i && m > 0 ? 0 : 1,
                                   height: i ? r : l,
                               };
@@ -134,7 +134,7 @@ function f(e, t, n) {
                                         height: i ? r : l,
                                     },
                               to: p,
-                              config: g,
+                              config: E,
                           }),
                               (t = !0));
                       });
@@ -149,9 +149,9 @@ function f(e, t, n) {
                     to: {
                         scale: 0.8,
                         opacity: 0,
-                        transform: E(t.index, p.locked, t.top) + (p.locked ? 0 : t.height / 2),
+                        transform: g(t.index, p.locked, t.top) + (p.locked ? 0 : t.height / 2),
                     },
-                    config: g,
+                    config: E,
                 }),
                     setTimeout(n, 300));
             }

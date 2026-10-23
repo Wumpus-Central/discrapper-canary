@@ -20,39 +20,39 @@ var n = l(477900),
     A = l(328006),
     b = l(857909),
     E = l(334840),
-    N = l(393750);
-let I = [
+    I = l(393750);
+let N = [
     { avatar: A.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
     { avatar: b.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
     { avatar: E.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
 function C(e) {
     let { width: t } = e;
-    return (0, n.jsx)("div", { className: N.M0, style: { width: t } });
+    return (0, n.jsx)("div", { className: I.M0, style: { width: t } });
 }
 function S(e) {
     let { rank: t, row: l } = e;
     return (0, n.jsxs)("div", {
-        className: N.nM,
+        className: I.nM,
         children: [
             (0, n.jsx)("div", {
-                className: N.Tm,
+                className: I.Tm,
                 "aria-hidden": !0,
                 children: (0, n.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: N._k,
+                    className: I._k,
                     children: t,
                 }),
             }),
-            (0, n.jsx)("img", { className: N.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
+            (0, n.jsx)("img", { className: I.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
             (0, n.jsxs)("div", {
-                className: N.n_,
+                className: I.n_,
                 "aria-hidden": !0,
                 children: [
                     (0, n.jsx)(C, { width: l.topBarWidth }),
                     (0, n.jsxs)("div", {
-                        className: N.O3,
+                        className: I.O3,
                         children: [
                             (0, n.jsx)(C, { width: l.bottomBarWidths[0] }),
                             (0, n.jsx)(C, { width: l.bottomBarWidths[1] }),
@@ -64,7 +64,7 @@ function S(e) {
     });
 }
 function y() {
-    return (0, n.jsx)("div", { className: N.kL, children: I.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
+    return (0, n.jsx)("div", { className: I.kL, children: N.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
 }
 var k = l(562073),
     T = l(189213),
@@ -269,8 +269,8 @@ function O(e) {
     let { View: f, Edit: g, HeaderAccessory: h, HeaderActions: p, Title: j, TitleIcon: v, ViewHeaderTrailing: A } = m,
         b = "edit" === s,
         E = null != g && null != d && null == o,
-        N = null != h ? (0, n.jsx)(h, { hydration: a, guildId: t }) : null,
-        I = null != v ? (0, n.jsx)(v, { hydration: a }) : null,
+        I = null != h ? (0, n.jsx)(h, { hydration: a, guildId: t }) : null,
+        N = null != v ? (0, n.jsx)(v, { hydration: a }) : null,
         C = null == o && null != p ? (0, n.jsx)(p, { hydration: a, guildId: t, column: l.position.column }) : null,
         S = l.default_title ?? "",
         y =
@@ -285,8 +285,8 @@ function O(e) {
                 ? (0, n.jsx)(U, {
                       title: y,
                       widgetName: S,
-                      titleIcon: I,
-                      accessory: N,
+                      titleIcon: N,
+                      accessory: I,
                       disabled: u,
                       dragHandleRef: c,
                       canEdit: E,
@@ -295,8 +295,8 @@ function O(e) {
                   })
                 : (0, n.jsx)(G, {
                       title: y,
-                      titleIcon: I,
-                      accessory: N,
+                      titleIcon: N,
+                      accessory: I,
                       trailing:
                           null != A && null == o
                               ? (0, n.jsx)(A, { widget: l, hydration: a, title: S, guildId: t })

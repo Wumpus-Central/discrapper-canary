@@ -18,14 +18,14 @@ var i,
     N = n(967198),
     b = n(287809),
     f = n(824744),
-    A = n(927578),
-    v = n(926972),
+    v = n(927578),
+    A = n(926972),
     E = n(885386),
     C = n(862482),
     S = n(821609),
     O = n(66834),
-    T = n(624793),
-    y = n(639245),
+    y = n(624793),
+    T = n(639245),
     k = n(188645),
     P = n(796774),
     _ = n(807348),
@@ -82,7 +82,7 @@ function B(e) {
         g = (0, o.bG)([G.A], () => G.A.getGuild(r.guildId)),
         p = !j && null != g,
         [I, N] = l.useState(),
-        f = (0, v.t)({ location: "SoundmojiGuildInfo" }),
+        f = (0, A.t)({ location: "SoundmojiGuildInfo" }),
         E = j || p || null != I || !f,
         [C, S] = l.useState(!E);
     l.useEffect(() => {
@@ -98,8 +98,8 @@ function B(e) {
     }, [x, E, r.guildId, r.soundId]);
     let { buttonType: O, description: R } =
             ((t = "0" === r.guildId),
-            (n = (0, o.bG)([b.default], () => A.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser()))),
-            (i = (0, v.t)({ location: "useSoundmojiGuildInfoData" })),
+            (n = (0, o.bG)([b.default], () => v.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser()))),
+            (i = (0, A.t)({ location: "useSoundmojiGuildInfoData" })),
             (a = r.guildId !== c?.guild_id),
             {
                 buttonType: l.useMemo(() => (t || !i ? 2 : n ? (p || null == I ? 2 : 0) : 1), [t, n, i, p, I]),
@@ -146,7 +146,7 @@ function B(e) {
         w = O === M.JOIN_GUILD,
         U = !j && C,
         B = l.useMemo(
-            () => (p ? T.GO.createFromGuildRecord(g) : null != I ? T.GO.createFromDiscoverableGuild(I) : void 0),
+            () => (p ? y.GO.createFromGuildRecord(g) : null != I ? y.GO.createFromDiscoverableGuild(I) : void 0),
             [g, p, I],
         );
     return U
@@ -181,7 +181,7 @@ function B(e) {
                                       }),
                                       (0, s.jsx)("div", {
                                           className: z.Ff,
-                                          children: (0, s.jsx)(y.G7, {
+                                          children: (0, s.jsx)(T.G7, {
                                               expressionSourceGuild: B,
                                               hasJoinedExpressionSourceGuild: p,
                                               isDisplayingJoinGuildButtonInPopout: w,
@@ -223,8 +223,8 @@ function K() {
 }
 function H(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, v.t)({ location: "SoundmojiBanner" }),
-        l = (0, o.bG)([b.default], () => A.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser())),
+        i = (0, A.t)({ location: "SoundmojiBanner" }),
+        l = (0, o.bG)([b.default], () => v.Ay.canUseSoundboardEverywhere(b.default.getCurrentUser())),
         a = (0, o.bG)([N.A], () => N.A.getGuildId());
     return n || l || "0" === t.guildId || t.guildId === a || !i
         ? (0, s.jsx)("div", {

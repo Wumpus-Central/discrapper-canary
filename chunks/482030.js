@@ -1,4 +1,4 @@
-n.d(t, { Ch: () => L, hg: () => S, dn: () => T, SD: () => g });
+n.d(t, { Ch: () => L, hg: () => w, dn: () => T, SD: () => g });
 var i = n(582128),
     a = n(435558),
     l = n.n(a),
@@ -91,13 +91,13 @@ function T(e) {
             fetchesApplication: E,
             onConfirmActivityLaunchChecksAlertOpen: I,
         }),
-        S = "primary",
-        w = c ?? v.intl.string(v.t.zKX8Nu);
+        w = "primary",
+        S = c ?? v.intl.string(v.t.zKX8Nu);
     return (
         g === p.o6.JOIN
-            ? ((S = "active"), (w = v.intl.string(v.t.d9PsMj)))
-            : g !== p.o6.LEAVE || _ || ((S = "critical-primary"), (w = v.intl.string(v.t["Hi1/aQ"]))),
-        { onActivityItemSelected: L, activityAction: g, buttonVariant: S, buttonText: w }
+            ? ((w = "active"), (S = v.intl.string(v.t.d9PsMj)))
+            : g !== p.o6.LEAVE || _ || ((w = "critical-primary"), (S = v.intl.string(v.t["Hi1/aQ"]))),
+        { onActivityItemSelected: L, activityAction: g, buttonVariant: w, buttonText: S }
     );
 }
 function L(e, t) {
@@ -117,6 +117,6 @@ function L(e, t) {
         null != e && l(e, n);
     }, [e, t, n, l]);
 }
-function S(e) {
+function w(e) {
     E._.dispatchToLastSubscribed(h.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }

@@ -3,11 +3,11 @@ var l = t(73153),
     a = t(976860),
     i = t(696451),
     r = t(317525),
-    o = t(71393),
-    s = t(652215),
+    s = t(71393),
+    o = t(652215),
     c = t(746080);
 function u(e, n, t) {
-    let u = o.A.getGuild(e);
+    let u = s.A.getGuild(e);
     if (null != e && null != u)
         switch (n) {
             case "home":
@@ -31,6 +31,6 @@ function u(e, n, t) {
                 } else l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e });
         }
     function d(n) {
-        null != e && null != u && u.features.has(s.GuildFeatures.COMMUNITY) && (0, a.pX)(s.BVt.CHANNEL(e, n));
+        null != e && null != u && u.features.has(o.GuildFeatures.COMMUNITY) && (0, a.pX)(o.BVt.CHANNEL(e, n));
     }
 }

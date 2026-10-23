@@ -2,8 +2,8 @@ n.d(t, { K: () => c, u: () => f });
 var l = n(477900);
 n(582128);
 var i = n(331322),
-    r = n(834730);
-if (221552 == n.j) var a = n(825484);
+    a = n(834730);
+if (221552 == n.j) var r = n(825484);
 var u = n(821609),
     s = n(709753),
     o = n(248675),
@@ -17,27 +17,27 @@ function c(e) {
         role: "group",
         "aria-label": d.intl.string(o.default.W4DsVo),
         children: [
-            (0, l.jsx)(r.E, {
+            (0, l.jsx)(a.E, {
                 variant: "text-xs/semibold",
                 color: "text-brand",
                 tag: "span",
                 children: d.intl.string(o.default.W4DsVo),
             }),
-            (0, l.jsx)(r.E, {
+            (0, l.jsx)(a.E, {
                 variant: "text-sm/normal",
                 color: "text-default",
                 selectable: !0,
                 children: d.intl.format(o.default.E4Gc7e, { host: f }),
             }),
             "" !== p
-                ? (0, l.jsx)(r.E, {
+                ? (0, l.jsx)(a.E, {
                       variant: "text-sm/normal",
                       color: "text-muted",
                       selectable: !0,
                       children: d.intl.format(o.default["5poqiN"], { reason: p }),
                   })
                 : null,
-            (0, l.jsxs)(a.e, {
+            (0, l.jsxs)(r.e, {
                 size: "sm",
                 direction: "horizontal",
                 children: [
@@ -71,18 +71,18 @@ function f(e) {
               role: "group",
               "aria-label": d.intl.string(o.default.Ufr2wk),
               children: [
-                  (0, l.jsx)(r.E, {
+                  (0, l.jsx)(a.E, {
                       variant: "text-md/medium",
                       color: "text-strong",
                       children: d.intl.string(o.default.Ufr2wk),
                   }),
-                  (0, l.jsx)(r.E, {
+                  (0, l.jsx)(a.E, {
                       variant: "text-sm/normal",
                       color: "text-muted",
                       children: d.intl.string(o.default.wremls),
                   }),
                   0 === n.length
-                      ? (0, l.jsx)(r.E, {
+                      ? (0, l.jsx)(a.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: d.intl.string(o.default.AweHIi),
@@ -97,7 +97,7 @@ function f(e) {
                                     role: "group",
                                     "aria-label": e,
                                     children: [
-                                        (0, l.jsx)(r.E, {
+                                        (0, l.jsx)(a.E, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
                                             selectable: !0,

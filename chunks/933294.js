@@ -1,6 +1,6 @@
-n.d(t, { A: () => E });
-var s = n(17928),
-    r = n(73153);
+n.d(t, { A: () => S });
+var r = n(17928),
+    s = n(73153);
 class o {
     seqOf;
     items = [];
@@ -12,10 +12,10 @@ class o {
         let t = 0,
             n = this.items.length - 1;
         for (; t <= n;) {
-            let s = (t + n) >> 1,
-                r = this.keyOf(this.items[s]);
-            if (r === e) return s;
-            r < e ? (t = s + 1) : (n = s - 1);
+            let r = (t + n) >> 1,
+                s = this.keyOf(this.items[r]);
+            if (s === e) return r;
+            s < e ? (t = r + 1) : (n = r - 1);
         }
         return -1;
     }
@@ -40,7 +40,7 @@ let i = [],
     a = 0,
     c = { status: "idle", truncated: !1, count: 0 },
     d = new Map();
-class u extends s.Ay.Store {
+class u extends r.Ay.Store {
     getLogs(e) {
         return l.get(e)?.snapshot() ?? i;
     }
@@ -52,26 +52,26 @@ function p(e) {
     return e.log.seq;
 }
 function h(e, t, n) {
-    let s = d.get(e);
-    (null == s && ((s = new Map()), d.set(e, s)), s.set(t, n));
+    let r = d.get(e);
+    (null == r && ((r = new Map()), d.set(e, r)), r.set(t, n));
 }
 function _(e) {
     let t,
-        { projectId: n, log: s } = e,
-        r = (null == (t = l.get(n)) && ((t = new o(p)), l.set(n, t)), t);
-    if (null != s.seq && -1 !== r.indexOfSeq(s.seq)) return !1;
-    (r.insert({ key: ++a, log: s }), r.trim(500));
+        { projectId: n, log: r } = e,
+        s = (null == (t = l.get(n)) && ((t = new o(p)), l.set(n, t)), t);
+    if (null != r.seq && -1 !== s.indexOfSeq(r.seq)) return !1;
+    (s.insert({ key: ++a, log: r }), s.trim(500));
 }
 function f(e) {
-    let { projectId: t, scope: n, status: s, count: r, truncated: o } = e;
-    if ("failed" === s) {
+    let { projectId: t, scope: n, status: r, count: s, truncated: o } = e;
+    if ("failed" === r) {
         let e = d.get(t)?.get(n);
         h(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
         return;
     }
-    h(t, n, { status: "loaded", truncated: o, count: r });
+    h(t, n, { status: "loaded", truncated: o, count: s });
 }
-let g = new u(r.h, {
+let g = new u(s.h, {
         LOGOUT: function () {
             if (0 === l.size && 0 === d.size) return !1;
             (l.clear(), d.clear());
@@ -96,4 +96,4 @@ let g = new u(r.h, {
             (l.delete(t), d.delete(t));
         },
     }),
-    E = 221552 == n.j ? g : null;
+    S = 221552 == n.j ? g : null;

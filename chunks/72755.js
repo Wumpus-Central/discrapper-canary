@@ -16,8 +16,8 @@ let d = function (e) {
 var h = n(543699),
     m = n(999291),
     A = n(920601),
-    E = n(903209);
-let g = (0, n(945810).mj)({
+    g = n(903209);
+let E = (0, n(945810).mj)({
     name: "2026-09-video-background-profile-fetch",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -39,7 +39,7 @@ let _ = function (e) {
         } = e,
         I = l ?? n,
         v = (0, u.Ay)(I, a.A.unsafe_rawColors.PRIMARY_800.css),
-        O = g.useConfig({ location: "VideoBackground" }).enabled,
+        O = E.useConfig({ location: "VideoBackground" }).enabled,
         y = (0, m.Ay)(c ?? f.dJq, _),
         R = (0, h.tM)(y?.themeColors?.[0]) ?? f.NJ8.DARK,
         { profileThemeStyle: x, profileThemeClassName: N } = (0, A.A)({
@@ -51,7 +51,7 @@ let _ = function (e) {
         M = y?.themeColors?.[0] != null && y?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && O && (0, E.A)(c, void 0, { guildId: _ });
+            null != c && O && (0, g.A)(c, void 0, { guildId: _ });
         }, [O, c, _]),
         null == n)
     )

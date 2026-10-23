@@ -1,6 +1,6 @@
-t.d(n, { O: () => r, p: () => i });
+t.d(n, { O: () => r, p: () => s });
 var l = t(582128);
 let r = l.createContext(null);
-function i() {
+function s() {
     return l.useContext(r);
 }

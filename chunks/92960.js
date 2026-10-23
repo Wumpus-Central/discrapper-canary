@@ -11,8 +11,8 @@ var i = n(367513),
     h = n(940382),
     m = n(931664),
     A = n(631576),
-    E = n(358047),
-    g = n(734057),
+    g = n(358047),
+    E = n(734057),
     f = n(72314),
     p = n(31717),
     C = n(580745),
@@ -44,8 +44,8 @@ function R(e) {
                 return (n.dispatch(y.jej.POPOUT_CLOSE_AFTER_MODALS), !1);
             let r = T.A.getGuildId(),
                 l = e ?? S.Ay.getChannelId(r),
-                s = g.A.getChannel(l),
-                u = E.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? E.Ay.getSidebarState(l) : null,
+                s = E.A.getChannel(l),
+                u = g.Ay.getSection(l, s?.isDM()) === y.YvQ.SIDEBAR_CHAT ? g.Ay.getSidebarState(l) : null,
                 c = u?.type === h.PE.VIEW_CHANNEL ? u.channelId : null;
             if (!1 === x(l) || !1 === x(c)) return !1;
             if (O._.hasSubscribers(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL))

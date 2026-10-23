@@ -11,8 +11,8 @@ var r = n(477900),
     h = n(17928),
     f = n(462887),
     g = n(38021),
-    p = n(192308),
-    m = n(231723),
+    m = n(192308),
+    p = n(231723),
     A = n(559106),
     y = n(43990),
     v = n(638495),
@@ -34,9 +34,9 @@ var r = n(477900),
     P = n(670735),
     R = n(549205),
     M = n(750506),
-    U = n(267102),
-    G = n(435558),
-    K = n.n(G),
+    G = n(267102),
+    U = n(435558),
+    K = n.n(U),
     B = n(941143),
     F = n(258873),
     W = n(622242),
@@ -77,7 +77,7 @@ function eh(e) {
         u = i.useRef(null),
         [d, c] = i.useState(!1),
         [f, g] = i.useState(!1),
-        p = (0, h.bG)([Z.default], () => Z.default.getCurrentUser());
+        m = (0, h.bG)([Z.default], () => Z.default.getCurrentUser());
     (0, J.Ay)(
         () => (
             (u.current = setTimeout(A, ec)),
@@ -87,7 +87,7 @@ function eh(e) {
             }
         ),
     );
-    let m = (p?.isStaff() ?? !1) || (p?.isStaffPersonal() ?? !1),
+    let p = (m?.isStaff() ?? !1) || (m?.isStaffPersonal() ?? !1),
         A = i.useCallback(() => {
             (a.set(0), null != u.current && clearTimeout(u.current), (u.current = null), n?.(), o?.());
         }, [a, n, o]),
@@ -148,7 +148,7 @@ function eh(e) {
     return (0, r.jsx)(el.$, {
         title: ea.intl.string(ea.t.U38qZj),
         body: E,
-        hint: m ? C : void 0,
+        hint: p ? C : void 0,
         confirmText: ea.intl.string(ea.t.a3HlgJ),
         cancelText: null != w ? ea.intl.string(ea.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(Q.A, { width: 40, height: 40, className: eu.Lo }),
@@ -219,8 +219,8 @@ class ef extends i.PureComponent {
     }
 }
 var eg = n(97469),
-    ep = n(149138),
-    em = n(611635),
+    em = n(149138),
+    ep = n(611635),
     eA = n(892019),
     ey = n(723702),
     ev = n(677134),
@@ -282,7 +282,7 @@ class e_ extends i.Component {
             ey.isPlatformEmbedded
                 ? t.removeEventListener("contextmenu", ev.contextMenuCallbackNative)
                 : t.removeEventListener("contextmenu", ev.contextMenuCallbackWeb),
-            (0, d.r)(() => p.useModalsStore.setState((e) => ({ ...e, [m.KX]: [] }))),
+            (0, d.r)(() => m.useModalsStore.setState((e) => ({ ...e, [p.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload));
     }
     updateTitle() {
@@ -331,19 +331,19 @@ class e_ extends i.Component {
                 themeOverride: h,
                 titleBarTheme: f,
                 hideModals: g = !1,
-                appContext: p,
+                appContext: m,
             } = this.props,
-            m = eN({ withTitleBar: l, isFullScreen: i }),
+            p = eN({ withTitleBar: l, isFullScreen: i }),
             w = n === eC.f,
             C = w ? ef : P.A;
         return (0, r.jsx)(u.Kd, {
             children: (0, r.jsxs)(
-                ep.e,
+                em.e,
                 {
                     windowKey: n,
                     themeOverride: h,
                     children: [
-                        m && (0, r.jsx)(eO, { windowKey: n, themeOverride: f }),
+                        p && (0, r.jsx)(eO, { windowKey: n, themeOverride: f }),
                         (0, r.jsx)(O.A, {
                             children: (0, r.jsxs)(A.xp, {
                                 containerRef: this.rootRef,
@@ -354,8 +354,8 @@ class e_ extends i.Component {
                                         children: (0, r.jsxs)(C, {
                                             children: [
                                                 (0, r.jsx)(T.Al, {}),
-                                                (0, r.jsx)(U.Wr, {
-                                                    appContext: p ?? eo.BRT.POPOUT,
+                                                (0, r.jsx)(G.Wr, {
+                                                    appContext: m ?? eo.BRT.POPOUT,
                                                     renderWindow: o,
                                                     children: (0, r.jsx)(j.l, {
                                                         children: (0, r.jsxs)(M.Yf, {
@@ -363,7 +363,7 @@ class e_ extends i.Component {
                                                                 (0, r.jsxs)("div", {
                                                                     className: eb.SW,
                                                                     children: [
-                                                                        m &&
+                                                                        p &&
                                                                             (0, r.jsx)(y.N, {
                                                                                 theme: f,
                                                                                 children: (e) =>
@@ -402,7 +402,7 @@ class e_ extends i.Component {
 }
 function eD(e) {
     let { guestWindow: t, className: n, children: l, ref: o } = e,
-        { lang: u, style: d, className: c } = (0, em.x)();
+        { lang: u, style: d, className: c } = (0, ep.x)();
     (i.useEffect(() => {
         let e = t.document.documentElement;
         (a()(null != e, "Window document element was null"), e.setAttribute("style", d));

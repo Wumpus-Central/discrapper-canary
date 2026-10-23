@@ -1,8 +1,8 @@
 n.d(t, { A: () => m, b: () => g });
 var l = n(477900),
     i = n(582128),
-    r = n(691885),
-    a = n(193249),
+    a = n(691885),
+    r = n(193249),
     u = n(834730),
     s = n(534554),
     o = n(56681),
@@ -21,21 +21,21 @@ function g(e) {
     function m(e) {
         c((0, s.CM)(e));
     }
-    let b = (0, s.Id)(t, n, t.tier);
+    let v = (0, s.Id)(t, n, t.tier);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, s.hl)(u) && null != b
-                ? (0, l.jsx)(r.l, {
+            (0, s.hl)(u) && null != v
+                ? (0, l.jsx)(a.l, {
                       label: p.intl.string(f.default["59TDiR"]),
                       options: h,
-                      value: b,
+                      value: v,
                       onSelectionChange: (e) => m((0, s.t7)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: d,
                       fullWidth: !0,
                   })
                 : null,
-            (0, l.jsx)(r.l, {
+            (0, l.jsx)(a.l, {
                 label: p.intl.string(f.default.fpdVCO),
                 options: g,
                 value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
@@ -45,7 +45,7 @@ function g(e) {
                 fullWidth: !0,
             }),
             (0, s.gz)(t, n, u.main)
-                ? (0, l.jsx)(a.d, {
+                ? (0, l.jsx)(r.d, {
                       label: p.intl.string(f.default["5AblQX"]),
                       description: p.intl.string(f.default.QnUV8M),
                       checked: !0 === t.fast,
@@ -57,7 +57,7 @@ function g(e) {
     });
 }
 function m(e) {
-    let { settings: t, tiers: n, choices: i, disabled: r, onChange: a } = e,
+    let { settings: t, tiers: n, choices: i, disabled: a, onChange: r } = e,
         o = d.P.indexOf(t.tier);
     return (0, l.jsxs)("div", {
         className: h.OA,
@@ -103,15 +103,15 @@ function m(e) {
                         activeIndex: o,
                         stops: d.P.map(s.D0),
                         ariaLabel: p.intl.string(f.default.aBPQxX),
-                        disabled: r,
+                        disabled: a,
                         onSelect: function (e) {
                             let n = d.P[e];
-                            null != n && n !== t.tier && a((0, s.CM)((0, s.j6)(t, n)));
+                            null != n && n !== t.tier && r((0, s.CM)((0, s.j6)(t, n)));
                         },
                     }),
                 ],
             }),
-            (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: r, onChange: a }),
+            (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: a, onChange: r }),
         ],
     });
 }

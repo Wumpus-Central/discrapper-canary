@@ -1,18 +1,18 @@
-n.d(t, { Hi: () => a, Ol: () => c, Vq: () => o, hU: () => s, pc: () => f, vk: () => d });
+n.d(t, { Hi: () => r, Ol: () => c, Vq: () => o, hU: () => s, pc: () => f, vk: () => d });
 var l = n(688954),
     i = n(248675),
-    r = n(105292);
-let a = ["auto", "preview", "published"],
+    a = n(105292);
+let r = ["auto", "preview", "published"],
     u = {
         auto: { label: i.default["2TTprm"], description: i.default["1ck6o0"] },
         preview: { label: i.default.bUZ6jT, description: i.default.DP2NVW },
         published: { label: i.default.yXd0cc, description: i.default["YY+UD8"] },
     };
 function s(e) {
-    return r.intl.string(u[e].label);
+    return a.intl.string(u[e].label);
 }
 function o(e) {
-    return r.intl.string(u[e].description);
+    return a.intl.string(u[e].description);
 }
 async function d(e) {
     let t = await (0, l.h)(e, "/agent/linked-apps");

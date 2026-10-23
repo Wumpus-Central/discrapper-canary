@@ -12,8 +12,8 @@ var i = n(73153),
     h = n(317084),
     f = n(980504),
     g = n(652215),
-    p = n(105292);
-let m = {
+    m = n(105292);
+let p = {
         width: f.ed.width,
         height: f.ed.height,
         resizable: !1,
@@ -28,8 +28,8 @@ let m = {
         titleBarStyle: null,
     },
     A = f.ed.padding,
-    y = m.width - A,
-    v = m.height - A;
+    y = p.width - A,
+    v = p.height - A;
 async function x(e) {
     let t = u.A.getGuildId(),
         n = u.A.getChannelId(),
@@ -42,7 +42,7 @@ async function x(e) {
             (0, r.jsx)(s.A, {
                 windowKey: n,
                 withTitleBar: !1,
-                title: p.intl.string(p.t["IiA///"]),
+                title: m.intl.string(m.t["IiA///"]),
                 onBlur: w,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
@@ -54,7 +54,7 @@ async function x(e) {
                     analyticsSource: "global",
                 }),
             }),
-        { ...m, left: l - m.width / 2, top: d - m.height / 2 },
+        { ...p, left: l - p.width / 2, top: d - p.height / 2 },
     );
 }
 function w() {

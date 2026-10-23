@@ -1,8 +1,8 @@
-n.d(t, { CS: () => D, GQ: () => k, O0: () => P, Pl: () => w, RE: () => _, X1: () => N, hM: () => z, we: () => M });
+n.d(t, { CS: () => D, GQ: () => k, O0: () => P, Pl: () => b, RE: () => N, X1: () => w, hM: () => z, we: () => M });
 var i = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     a = n(17928),
     o = n(661531),
     d = n(834730),
@@ -23,34 +23,34 @@ var i = n(477900),
     C = n(581730),
     T = n(481484),
     y = n(105292),
-    b = n(408454);
-function w(e) {
+    _ = n(408454);
+function b(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
-        className: b.oB,
+        className: _.oB,
         children: (0, i.jsx)(d.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
     });
 }
-let N = 7e3;
-function _(e, t) {
-    return O(
+let w = 7e3;
+function N(e, t) {
+    return R(
         (0, a.bG)([E.A], () => E.A.getWidget(e), [e]),
         t,
     );
 }
-function O(e, t) {
-    let n = l.useRef(e?.showExtrasHintTimestamp),
-        [i, r] = l.useState(!1),
+function R(e, t) {
+    let n = r.useRef(e?.showExtrasHintTimestamp),
+        [i, l] = r.useState(!1),
         s = (0, T.A)(),
-        a = l.useRef(void 0);
+        a = r.useRef(void 0);
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             let i = e?.showExtrasHintTimestamp;
             i !== n.current &&
                 ((n.current = i),
-                r(!0),
+                l(!0),
                 (a.current = setTimeout(() => {
-                    r(!1);
+                    l(!1);
                 }, t)));
         }, [t, e?.showExtrasHintTimestamp]),
         (0, A.Ay)(() => {
@@ -58,9 +58,9 @@ function O(e, t) {
             return (
                 null != n &&
                     Date.now() - n < t &&
-                    (r(!0),
+                    (l(!0),
                     (a.current = setTimeout(() => {
-                        r(!1);
+                        l(!1);
                     }, t))),
                 () => {
                     null != a.current && clearTimeout(a.current);
@@ -70,21 +70,21 @@ function O(e, t) {
         i && s
     );
 }
-let R = 8e3;
+let O = 8e3;
 function M(e) {
     let { children: t, widgetId: n } = e,
-        l = (0, a.bG)([E.A], () => E.A.getWidget(n), [n]);
-    return O(l, R)
+        r = (0, a.bG)([E.A], () => E.A.getWidget(n), [n]);
+    return R(r, O)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(I.A, {
-                      className: b.Z,
+                      className: _.Z,
                       children: (0, i.jsx)(u.D, {
-                          className: b.SM,
+                          className: _.SM,
                           onClick: () => {
-                              null != l &&
+                              null != r &&
                                   (x.A.setInputLocked(!1, v.A.getTargetPID()),
-                                  (0, S.YX)(l.type, { type: S.Z5.KEYBIND_HINT, value: S.IP.OVERLAY_UNLOCKED }));
+                                  (0, S.YX)(r.type, { type: S.Z5.KEYBIND_HINT, value: S.IP.OVERLAY_UNLOCKED }));
                           },
                           children: (0, i.jsx)(d.E, {
                               variant: "text-xs/semibold",
@@ -92,16 +92,16 @@ function M(e) {
                               children: (0, j.sI)((0, C.Jn)(), y.t["1XA04X"], {
                                   useFlexboxLayout: !0,
                                   highlightAdminWarningIfElevated: !1,
-                                  keybindClassName: b.P,
+                                  keybindClassName: _.P,
                               }),
                           }),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: b.Xk }),
+                  (0, i.jsx)("div", { className: _.Xk }),
               ],
           })
         : (0, i.jsx)("div", {
-              className: b.oB,
+              className: _.oB,
               children: (0, i.jsx)(d.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
           });
 }
@@ -113,7 +113,7 @@ function D(e) {
         text: n,
         "aria-label": n,
         children: (0, i.jsx)(u.D, {
-            className: b.x6,
+            className: _.x6,
             onClick: t,
             children: (0, i.jsx)(h.SettingsIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
         }),
@@ -127,7 +127,7 @@ function z(e) {
               text: t,
               "aria-label": t,
               children: (0, i.jsx)(u.D, {
-                  className: b.x6,
+                  className: _.x6,
                   onClick: n,
                   children: (0, i.jsx)(m.EyeSlashIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
               }),
@@ -135,14 +135,14 @@ function z(e) {
 }
 function k(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        l = n ? y.intl.string(y.t.q2B3rh) : y.intl.string(y.t.JKGi6o);
+        r = n ? y.intl.string(y.t.q2B3rh) : y.intl.string(y.t.JKGi6o);
     return (0, T.A)()
         ? null
         : (0, i.jsx)(c.m, {
-              text: l,
-              "aria-label": l,
+              text: r,
+              "aria-label": r,
               children: (0, i.jsx)(u.D, {
-                  className: s()(b.x6, n && b.vu),
+                  className: s()(_.x6, n && _.vu),
                   onClick: function () {
                       (0, f.cC)(t, { showAllStreams: !n });
                   },
@@ -155,16 +155,16 @@ function k(e) {
 }
 function P(e) {
     let { id: t, pinned: n } = e,
-        l = n ? y.intl.string(y.t.cSu80j) : y.intl.string(y.t.cM8Vnm),
-        r = (0, T.A)();
+        r = n ? y.intl.string(y.t.cSu80j) : y.intl.string(y.t.cM8Vnm),
+        l = (0, T.A)();
     return (0, i.jsx)(c.m, {
-        text: l,
-        "aria-label": l,
+        text: r,
+        "aria-label": r,
         asContainer: !0,
         children: (0, i.jsx)(u.D, {
-            className: s()(b.x6, n && b.vu),
+            className: s()(_.x6, n && _.vu),
             onClick: () => {
-                r || (0, f.v0)(t);
+                l || (0, f.v0)(t);
             },
             children: (0, i.jsx)(p.q, {
                 size: "xxs",

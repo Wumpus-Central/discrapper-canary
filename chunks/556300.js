@@ -4,15 +4,15 @@ t(582128);
 var a = t(192308),
     i = t(442433),
     r = t(332173),
-    o = t(37632),
-    s = t(734057),
+    s = t(37632),
+    o = t(734057),
     c = t(706083),
     u = t(143145),
     d = t(652215);
 function m(e) {
     return {
         react(n, m, h) {
-            let p = s.A.getChannel(n.channelId),
+            let p = o.A.getChannel(n.channelId),
                 g = h.noStyleAndInteraction
                     ? void 0
                     : (t) => {
@@ -49,7 +49,7 @@ function m(e) {
                     className: "channelMention",
                     children: [
                         null != n.inContent ? m(n.inContent, h) : null,
-                        null != n.inContent ? (0, l.jsx)(o.A, {}) : null,
+                        null != n.inContent ? (0, l.jsx)(s.A, {}) : null,
                         (0, u.tj)(n, m, h),
                     ],
                 },

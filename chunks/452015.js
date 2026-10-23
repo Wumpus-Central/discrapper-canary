@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => tc, NE: () => th, Jz: () => td, YW: () => e4 }), n(321073));
+(n.d(t, { Ay: () => tc, NE: () => th, Jz: () => td, YW: () => e9 }), n(321073));
 var i = n(477900),
     l = n(582128),
     r = n(435558),
@@ -541,8 +541,8 @@ var e6 = n(650583),
     e5 = n(872330);
 let e8 = (0, W.Ld)(),
     e3 = "PrivateChannelRecipientsInvite",
-    e4 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
-function e9(e) {
+    e9 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
+function e4(e) {
     if (eV.A.isFriend(e)) return !0;
     let t = eN.default.getCurrentUser(),
         n = eN.default.getUser(e);
@@ -551,7 +551,7 @@ function e9(e) {
 function te(e) {
     let t = [],
         n = [];
-    for (let i of e) e9(i) ? t.push(i) : n.push(i);
+    for (let i of e) e4(i) ? t.push(i) : n.push(i);
     return { channelRecipientIds: t, inviteLinkOnlyUserIds: n };
 }
 function tt(e) {
@@ -638,8 +638,8 @@ class ts extends l.PureComponent {
             i = "";
         return (
             null != e
-                ? ((n = t ?? e4.ADD_FRIENDS_TO_DM), (i = e.isDM() ? "DM" : "Group DM"))
-                : ((n = e4.NEW_GROUP_DM), (i = "Friends List")),
+                ? ((n = t ?? e9.ADD_FRIENDS_TO_DM), (i = e.isDM() ? "DM" : "Group DM"))
+                : ((n = e9.NEW_GROUP_DM), (i = "Friends List")),
             { entryPointType: n, entryPointSource: i }
         );
     }
@@ -1421,7 +1421,7 @@ class ts extends l.PureComponent {
     };
     _promoteDMToGroupDM = (e, t, n, i) => {
         let l = eb.A.getChannelId() === e,
-            r = e9(t),
+            r = e4(t),
             s = r ? [...n, t] : n,
             a = r ? i : [...i, t];
         (r && n.length > 0

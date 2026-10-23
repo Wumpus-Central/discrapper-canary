@@ -1,51 +1,51 @@
-n.d(t, {
-    BD: () => d,
-    CN: () => U,
-    GG: () => h,
+E.d(e, {
+    BD: () => h,
+    CN: () => I,
+    GG: () => l,
     HV: () => R,
-    Lw: () => A,
-    R2: () => E,
-    T5: () => C,
-    _j: () => f,
+    Lw: () => f,
+    R2: () => o,
+    T5: () => A,
+    _j: () => C,
     di: () => P,
 });
-var i = n(636537),
-    l = n(73153),
-    u = n(457827),
-    _ = n(95701),
-    r = n(260498),
-    s = n(951178),
-    o = n(1371),
-    a = n(802905),
-    c = n(357858),
-    p = n(652215);
-function E(e) {
-    o.A.reloadAppFrames(e);
+var i = E(636537),
+    n = E(73153),
+    p = E(457827),
+    u = E(95701),
+    c = E(260498),
+    _ = E(951178),
+    a = E(1371),
+    s = E(802905),
+    d = E(357858),
+    r = E(652215);
+function o(t) {
+    a.A.reloadAppFrames(t);
 }
-function d(e) {
-    let t = r.Ay.getProject(e);
-    null != t && (E(t.application_id), (0, s.Fl)(t) || E(t.preview_application_id ?? null));
+function h(t) {
+    let e = c.Ay.getProject(t);
+    null != e && (o(e.application_id), (0, _.Fl)(e) || o(e.preview_application_id ?? null));
 }
-function R(e) {
-    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
+function R(t) {
+    n.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: t });
 }
-function h(e) {
-    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
+function l(t) {
+    n.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: t });
 }
-function A(e) {
-    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape: e });
+function f(t) {
+    n.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape: t });
 }
-function P(e, t) {
-    (l.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: e, paused: !0 }), (0, u.r)(t));
+function P(t, e) {
+    (n.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: t, paused: !0 }), (0, p.r)(e));
 }
-function f(e) {
-    a.A.isPaused(e) && l.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: e, paused: !1 });
+function C(t) {
+    s.A.isPaused(t) && n.h.dispatch({ type: "CONJURE_PREVIEW_PAUSED_SET", projectId: t, paused: !1 });
 }
-function C(e) {
-    (0, c.Td)(e) && f(e);
+function A(t) {
+    (0, d.Td)(t) && C(t);
 }
-async function U(e) {
-    let { body: t } = await i.Bo.post({ url: p.Rsh.CONJURE_PROJECT_PREVIEW_DM(e), rejectWithError: !0 }),
-        n = (0, _.UE)(t);
-    return (l.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n.id);
+async function I(t) {
+    let { body: e } = await i.Bo.post({ url: r.Rsh.CONJURE_PROJECT_PREVIEW_DM(t), rejectWithError: !0 }),
+        E = (0, u.UE)(e);
+    return (n.h.dispatch({ type: "CHANNEL_CREATE", channel: E }), E.id);
 }

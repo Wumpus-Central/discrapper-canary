@@ -1,4 +1,4 @@
-r.d(t, { P: () => a, v: () => u });
+r.d(t, { P: () => a, v: () => l });
 var n = r(582128),
     i = r(976245);
 let o = (e) => e;
@@ -15,4 +15,4 @@ let s = (e) => {
             r = (e) => a(t, e);
         return (Object.assign(r, t), r);
     },
-    u = (e) => (e ? s(e) : s);
+    l = (e) => (e ? s(e) : s);

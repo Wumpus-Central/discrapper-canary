@@ -1,8 +1,8 @@
 n.d(t, { L: () => f, Q: () => p });
 var l = n(582128),
     i = n(17928),
-    r = n(245179),
-    a = n(319481),
+    a = n(245179),
+    r = n(319481),
     u = n(569319),
     s = n(285411),
     o = n(805330),
@@ -10,12 +10,12 @@ var l = n(582128),
     c = n(105292);
 function f(e, t) {
     let { id: n, status: u, error: s } = t,
-        f = (0, i.bG)([a.default], () => "open" === a.default.getConnState(e), [e]),
-        p = (0, i.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
+        f = (0, i.bG)([r.default], () => "open" === r.default.getConnState(e), [e]),
+        p = (0, i.bG)([a.A], () => !a.A.isThinking(e) && !a.A.isCompacting(e), [e]),
         [h, g] = l.useState(null),
         m = l.useCallback(() => g({ frame: t, ok: (0, o.yR)(e, n) }), [t, e, n]),
-        b = h?.frame === t ? h : null,
-        v = b?.ok === !0 && f;
+        v = h?.frame === t ? h : null,
+        b = v?.ok === !0 && f;
     if ("undone" === u) return null;
     if ("reverted" === u)
         return {
@@ -24,7 +24,7 @@ function f(e, t) {
             note: null,
             action: null,
         };
-    let x = "failed" === s || b?.ok === !1;
+    let x = "failed" === s || v?.ok === !1;
     return {
         label: c.intl.string(d.default.iBrh0c),
         body: c.intl.string(d.default.sRY8wn),
@@ -35,7 +35,7 @@ function f(e, t) {
                 : {
                       text: c.intl.string("active" === u ? d.default["7q2YyD"] : d.default.FzX9h8),
                       confirm: "committed" === u,
-                      disabled: !f || v || ("committed" === u && !p),
+                      disabled: !f || b || ("committed" === u && !p),
                       onPress: m,
                   },
     };

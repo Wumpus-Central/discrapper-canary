@@ -9,21 +9,21 @@ function a(e) {
     );
 }
 let o = [],
-    d = o;
-function u() {
+    u = o;
+function d() {
     let e = r.Ay.getOwnedProjects().filter(a);
-    (e.length === d.length && e.every((e, t) => e === d[t])) || (d = 0 === e.length ? o : e);
+    (e.length === u.length && e.every((e, t) => e === u[t])) || (u = 0 === e.length ? o : e);
 }
 class c extends i.Ay.Store {
     static displayName = "ConjureOverlayWidgetsStore";
     initialize() {
-        (u(), this.syncWith([r.Ay], () => (u(), !0)));
+        (d(), this.syncWith([r.Ay], () => (d(), !0)));
     }
     getProjects() {
-        return d;
+        return u;
     }
     getProject(e) {
-        if (null != e) return d.find((t) => t.application_id === e);
+        if (null != e) return u.find((t) => t.application_id === e);
     }
     hasFetchSucceeded() {
         return r.Ay.hasFetchedOwnedProjects();
@@ -31,6 +31,6 @@ class c extends i.Ay.Store {
 }
 let h = new c(l.h, {
     LOGOUT: function () {
-        d = o;
+        u = o;
     },
 });

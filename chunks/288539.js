@@ -1,8 +1,8 @@
 r.d(n, { A: () => T });
 var t = r(477900),
     o = r(582128),
-    a = r(607399),
-    l = r(17928),
+    l = r(607399),
+    a = r(17928),
     i = r(442433),
     u = r(793574),
     s = r(688810),
@@ -16,7 +16,7 @@ var t = r(477900),
     g = r(562153),
     E = r(427262);
 function S(e) {
-    let { userId: n, className: a, children: l } = e,
+    let { userId: n, className: l, children: a } = e,
         u = o.useCallback(() => {
             (0, c.showInaccessibleLinkModal)({ kind: "user" });
         }, []),
@@ -36,7 +36,7 @@ function S(e) {
             },
             [n],
         );
-    return (0, t.jsx)(A.A, { className: a, onClick: u, onContextMenu: s, children: l });
+    return (0, t.jsx)(A.A, { className: l, onClick: u, onContextMenu: s, children: a });
 }
 function T(e) {
     let {
@@ -50,8 +50,8 @@ function T(e) {
         } = e,
         R = o.useRef(null),
         { analyticsLocations: b } = (0, s.Ay)(u.A.USER_MENTION),
-        C = (0, l.bG)([p.default], () => p.default.getUser(c)),
-        _ = (0, l.bG)([h.A], () => h.A.getChannel(T)),
+        C = (0, a.bG)([p.default], () => p.default.getUser(c)),
+        _ = (0, a.bG)([h.A], () => h.A.getChannel(T)),
         k = null != _ ? _.getGuildId() : null,
         U =
             L || null == C || null == T || null == _
@@ -258,7 +258,7 @@ function T(e) {
                             });
                   },
         x = E.Ay.useName(C),
-        M = (0, l.bG)([h.A, y.Ay, f.A], () => g.Ay.getNickname(k, T, C));
+        M = (0, a.bG)([h.A, y.Ay, f.A], () => g.Ay.getNickname(k, T, C));
     if (null == C) return (0, t.jsx)(S, { userId: m, className: n, children: v });
     function w(e) {
         return (0, t.jsx)(A.A, { ref: R, className: n, onContextMenu: U, ...e, children: `@${M ?? x}` });
@@ -272,7 +272,7 @@ function T(e) {
                   user: C,
                   guildId: k ?? void 0,
                   channelId: T,
-                  position: a.Fr ? "top" : "right",
+                  position: l.Fr ? "top" : "right",
                   clickTrap: !0,
                   children: (e) => w(e),
               }),

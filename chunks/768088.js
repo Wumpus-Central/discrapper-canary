@@ -10,8 +10,8 @@ var r = n(205693),
     c = n(652215),
     d = n(105292);
 function h(e) {
-    let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: E = !1 } = e,
-        g = (function (e) {
+    let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: g = !1 } = e,
+        E = (function (e) {
             switch (e?.type) {
                 case s.iy.SCREENSHARE_OS_ERROR:
                     return d.intl.format(d.t.e9LMuh, { errorMessage: e.errorMessage });
@@ -22,9 +22,9 @@ function h(e) {
         })(m),
         f = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
     return (0, i.jsx)(u.A, {
-        header: g,
+        header: E,
         size: (0, u.J)(n),
-        noArt: E,
+        noArt: g,
         selected: A,
         description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(c.MVz.STREAM_FAILED) }),
         errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: f }),

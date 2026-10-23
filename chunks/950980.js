@@ -3,8 +3,8 @@ var l = t(477900),
     a = t(582128),
     i = t(17928),
     r = t(858899),
-    o = t(939249),
-    s = t(173936),
+    s = t(939249),
+    o = t(173936),
     c = t(834730),
     u = t(331322),
     d = t(776078),
@@ -15,8 +15,8 @@ var l = t(477900),
     x = t(100392),
     f = t(102609),
     j = t(271478),
-    A = t(386976),
-    y = t(257433),
+    y = t(386976),
+    A = t(257433),
     C = t(32523),
     k = t(688151),
     E = t(263748);
@@ -25,26 +25,26 @@ function I(e) {
         t = a.useCallback(() => {
             (0, g.C)(n, () => (0, r.P0)({ text: "Copied experiment link", variant: "success" }));
         }, [n]);
-    return (0, l.jsx)(o.D, {
+    return (0, l.jsx)(s.D, {
         className: E.wp,
         onClick: t,
-        children: (0, l.jsx)(s.LinkIcon, { size: "sm", color: "currentColor" }),
+        children: (0, l.jsx)(o.LinkIcon, { size: "sm", color: "currentColor" }),
     });
 }
 function N(e) {
     let { url: n } = e,
         t = (0, x.OL)(n),
         r = (0, x.Kb)(n),
-        { experiments: o, overridesInfo: s } = (0, C.hI)(),
-        { experiments: g, overridesInfo: N } = (0, A.op)(),
-        v = a.useMemo(() => (null == t ? null : null != o[t] ? o[t] : g[t]), [o, g, t]),
+        { experiments: s, overridesInfo: o } = (0, C.hI)(),
+        { experiments: g, overridesInfo: N } = (0, y.op)(),
+        v = a.useMemo(() => (null == t ? null : null != s[t] ? s[t] : g[t]), [s, g, t]),
         b = a.useMemo(() => {
             if (null == t);
-            else if (null != s[t]) return s[t];
+            else if (null != o[t]) return o[t];
             else if (null != N[t]) return N[t];
-        }, [s, N, t]),
+        }, [o, N, t]),
         S = h.default.getId(),
-        L = (0, y.Fm)(v, S),
+        L = (0, A.Fm)(v, S),
         T = a.useMemo(() => (0, x.GI)(v, L), [L, v]),
         M = (0, i.bG)([p.default], () => {
             let e = p.default.getCurrentUser();

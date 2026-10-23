@@ -3,8 +3,8 @@ var l = t(730852),
     a = t(235393),
     i = t(376943),
     r = t(741231),
-    o = t(734057),
-    s = t(696451),
+    s = t(734057),
+    o = t(696451),
     c = t(71393),
     u = t(449054),
     d = t(935208);
@@ -20,7 +20,7 @@ async function g(e, n, t, g) {
     if (null == n) return;
     if (
         (a.A.trackDiscordLinkClicked({ guildId: e, channelId: n, messageId: t }),
-        null != e && !s.Ay.isCurrentUserGuest(e))
+        null != e && !o.Ay.isCurrentUserGuest(e))
     ) {
         let l = c.A.getGuild(e);
         if (l?.joinedAt == null)
@@ -29,7 +29,7 @@ async function g(e, n, t, g) {
                 return;
             } catch {}
     }
-    let x = o.A.getChannel(n);
+    let x = s.A.getChannel(n);
     if (null != x && null == t && x.isGuildVocal() && (0, i.nc)(x)) {
         let { navigateOnly: e } = m.getConfig({ location: "channel_mention" });
         if (!e) return void l.default.selectVoiceChannel(x.id);

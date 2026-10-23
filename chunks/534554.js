@@ -1,6 +1,6 @@
 n.d(t, {
     CM: () => p,
-    D0: () => a,
+    D0: () => r,
     FC: () => g,
     Id: () => o,
     Tc: () => s,
@@ -11,14 +11,14 @@ n.d(t, {
 });
 var l = n(56681),
     i = n(248675),
-    r = n(105292);
-function a(e) {
+    a = n(105292);
+function r(e) {
     let t = (0, l.bF)(e);
-    return null != t ? r.intl.string(t) : e;
+    return null != t ? a.intl.string(t) : e;
 }
 let u = { simple: i.default.Mqb8mc, balanced: i.default.zCZfA6, complex: i.default["8l2atm"] };
 function s(e) {
-    return r.intl.string(u[e]);
+    return a.intl.string(u[e]);
 }
 function o(e, t, n) {
     return e.models?.[n] ?? t?.[n]?.model ?? null;
