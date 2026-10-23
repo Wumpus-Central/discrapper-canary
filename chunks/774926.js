@@ -11,7 +11,7 @@ var l = n(582128),
     A = n(462887),
     f = n(736653),
     p = n(661531),
-    g = n(308665);
+    g = n(895253);
 function m(t) {
     let e = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><mask id="wand"><rect x="2" y="2" width="20" height="20" rx="3" fill="#fff"/><g transform="translate(6 6) scale(0.5)" fill="#000"><path d="${g.fy}"/><path d="${g.tW}"/><path d="${g.tE}"/></g></mask><rect x="2" y="2" width="20" height="20" rx="3" fill="${t}" mask="url(#wand)"/></svg>`;
     return `data:image/svg+xml,${encodeURIComponent(e)}`;

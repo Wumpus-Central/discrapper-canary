@@ -37,12 +37,12 @@ function g(e) {
         y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
-            asset: (0, l.jsx)(o.Ay, { size: 32 }),
+            asset: (0, l.jsx)(o.A, { size: 32 }),
             assetSize: 32,
             title: _.title,
             body: _.body,
             position: "left",
-            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.Ay, {}) }),
+            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.A, {}) }),
         }),
         line: A,
         anchor: !0,

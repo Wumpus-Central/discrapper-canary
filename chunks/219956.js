@@ -1,4 +1,4 @@
-n.d(t, { A2: () => h, ZA: () => x, eN: () => f, s9: () => m });
+n.d(t, { A2: () => x, ZA: () => g, eN: () => h, s9: () => m, yy: () => f });
 var l = n(17928),
     a = n(617617),
     r = n(573163),
@@ -13,8 +13,13 @@ function c(e) {
 function m(e, t) {
     return "in_progress" !== e && "deleting" !== e && c(t);
 }
-let f = [u.Ay, i.A, r.Ay, a.A, o.A];
-function h(e) {
+function f(e) {
+    if (null == e.updated_at) return null;
+    let t = Date.parse(e.updated_at);
+    return Number.isNaN(t) ? null : t;
+}
+let h = [u.Ay, i.A, r.Ay, a.A, o.A];
+function x(e) {
     return (function (e) {
         let { deleting: t = !1, thinking: n, unread: l, publishState: a } = e;
         return t ? "deleting" : n ? "in_progress" : l ? "unread" : c(a) ? "draft" : "default";
@@ -25,6 +30,6 @@ function h(e) {
         publishState: o.A.getPublishStatus(e)?.publishState ?? null,
     });
 }
-function x(e) {
-    return (0, l.bG)(f, () => h(e), [e]);
+function g(e) {
+    return (0, l.bG)(h, () => x(e), [e]);
 }

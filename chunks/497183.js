@@ -22,8 +22,7 @@ function d(t) {
                 { data: e } = (0, u.YY)(a);
             return {
                 url: e?.icon != null ? s.Ay.getApplicationIconURL({ id: a, icon: e.icon, size: n }) : void 0,
-                glyphSize: Math.round(0.6 * n),
-                radius: n / 4,
+                ...{ glyphSize: Math.round(0.6 * n), radius: n / 4 },
             };
         })(n, d);
     return null == m

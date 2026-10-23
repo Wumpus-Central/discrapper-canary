@@ -58,11 +58,7 @@ let P = a.memo(function (e) {
         c = "deleting" === o,
         m = (0, r.bG)([k.A], () => k.A.getPublishStatus(t.id)?.publishState ?? null, [t.id]),
         _ = (0, v.s9)(o, m),
-        b = (function (e) {
-            if (null == e.updated_at) return null;
-            let t = Date.parse(e.updated_at);
-            return Number.isNaN(t) ? null : t;
-        })(t),
+        b = (0, v.yy)(t),
         A = null == s || c ? void 0 : (e) => s(e, t);
     return (0, l.jsxs)("li", {
         className: f()(E.dc, { [E.V7]: !c, [E.BI]: c }),

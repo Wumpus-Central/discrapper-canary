@@ -1242,7 +1242,7 @@ let e0 = (0, S.animated)(eY.Ay),
         });
     };
 var e2 = n(506500);
-let e3 = function (e) {
+let e7 = function (e) {
     let { children: t, header: n, layoutVariant: l } = e,
         { collapsedHeight: i, isExpanded: a } = P(),
         { expansionSpring: o } = r.useContext(I);
@@ -1259,7 +1259,7 @@ let e3 = function (e) {
     });
 };
 n(801541);
-var e7 = n(889137),
+var e3 = n(889137),
     e6 = n(417270),
     e8 = n(782134),
     e9 = n(297264),
@@ -1273,7 +1273,7 @@ var e7 = n(889137),
     tl = n(646917),
     ti = n(291749),
     ta = n(576761),
-    to = n(895253),
+    to = n(117634),
     tu = n(976019),
     tc = n(442734),
     td = n(139384),
@@ -1770,7 +1770,7 @@ function tD(e) {
 function tG(e) {
     let { activeScreen: t, selectPlatform: n } = e,
         { quest: l, taskDetails: i } = r.useContext(et);
-    return (0, e7.YW)(t)
+    return (0, e3.YW)(t)
         .with(d.X0.SELECT, () => (0, s.jsx)(tq, { onConsole: () => n(K.fO.CONSOLE), onDesktop: () => n(K.fO.DESKTOP) }))
         .with(d.X0.DESKTOP, () => ((0, p.I6)(l) ? (0, s.jsx)(tD, { quest: l }) : (0, s.jsx)(tI, { quest: l })))
         .with(d.X0.CONSOLE, () => (0, s.jsx)(tU, { quest: l, taskDetails: i }))
@@ -1987,7 +1987,7 @@ function tZ() {
 function tJ() {
     let { quest: e } = r.useContext(et),
         t = e.userStatus?.enrolledAt != null;
-    return (0, s.jsx)(e3, {
+    return (0, s.jsx)(e7, {
         layoutVariant: t ? "inset" : "flush",
         header: (0, s.jsxs)(s.Fragment, { children: [(0, s.jsx)(tZ, {}), !t && (0, s.jsx)(e1, {})] }),
         children: (0, s.jsx)(tX, {}),
@@ -1996,7 +1996,7 @@ function tJ() {
 var t0 = n(731738),
     t1 = n(807393),
     t2 = n(260364);
-function t3(e) {
+function t7(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, x.H6)({
@@ -2008,7 +2008,7 @@ function t3(e) {
         null
     );
 }
-function t7() {
+function t3() {
     return (
         r.useEffect(() => {
             u.trigger();
@@ -2081,7 +2081,7 @@ function t8(e) {
     let { isExpanded: t } = e,
         { quest: n } = r.useContext(et);
     return (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(t3, { questId: n.id, isExpanded: t }), (0, s.jsx)(t7, {})],
+        children: [(0, s.jsx)(t7, { questId: n.id, isExpanded: t }), (0, s.jsx)(t3, {})],
     });
 }
 function t9(e) {
