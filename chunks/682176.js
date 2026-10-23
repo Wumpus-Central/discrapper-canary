@@ -1,4 +1,4 @@
-(i.d(t, { A: () => P, v: () => x }), i(938796), i(321073));
+(i.d(t, { A: () => T, v: () => x }), i(938796), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(503698),
@@ -35,20 +35,20 @@ let f = (0, p.qT)({
 function x() {
     f.preload();
 }
-function P(e) {
+function T(e) {
     let {
             attachment: t,
             posterUrl: i,
             className: a,
             autoPlay: p,
             src: x,
-            fillContainer: P = !1,
+            fillContainer: T = !1,
             minWidth: V = 500,
-            maxWidth: T = 1 / 0,
-            maxHeight: E = 1 / 0,
+            maxWidth: E = 1 / 0,
+            maxHeight: P = 1 / 0,
             channelId: B,
             messageId: R,
-            showTextContent: N = T >= 250,
+            showTextContent: N = E >= 250,
             showParticipants: F = !0,
             volume: U,
             autoMute: j,
@@ -69,11 +69,11 @@ function P(e) {
     (X > 2 || X < 1) && (X = 16 / 9);
     let z = l.useRef(null);
     (0, _.A)(t.id, z, D);
-    let $ = Math.min(W > 0 ? W : V, T),
+    let $ = Math.min(W > 0 ? W : V, E),
         ee = $ / X;
-    (ee > E && ($ = (ee = E) * X), $ < V && (ee = ($ = V) / X));
-    let et = Math.round(Math.min($, T)),
-        ei = Math.round(Math.min(ee, E)),
+    (ee > P && ($ = (ee = P) * X), $ < V && (ee = ($ = V) / X));
+    let et = Math.round(Math.min($, E)),
+        ei = Math.round(Math.min(ee, P)),
         en = (0, S.s)(i, t, et, ei),
         [el, ea] = l.useState(!1),
         [es, eo] = l.useState(!0),
@@ -188,10 +188,10 @@ function P(e) {
             [eM, eb],
         );
     return (0, n.jsx)("div", {
-        className: s()(y.kL, { [y.HA]: P }, a),
+        className: s()(y.kL, { [y.HA]: T }, a),
         onClick: (e) => e.stopPropagation(),
         onContextMenu: O,
-        style: P ? void 0 : { width: et, height: ei },
+        style: T ? void 0 : { width: et, height: ei },
         children: (0, n.jsx)(f, {
             src: x,
             downloadUrl: t.url,
@@ -199,8 +199,6 @@ function P(e) {
             downloadContentType: t.content_type,
             extraButtons: eC,
             poster: en,
-            posterPlaceholder: t.placeholder,
-            posterPlaceholderVersion: t.placeholder_version,
             autoplay: p,
             initialActive: !1,
             initialTimeSec: q,
@@ -221,7 +219,7 @@ function P(e) {
             onPlayerStateChange: eh,
             onEnded: K,
             withVideoHalo: !eb,
-            objectFit: P ? "cover" : void 0,
+            objectFit: T ? "cover" : void 0,
             muxContentMetadata: eS,
             hideFullScreenBtn: !Q,
             hideSkipButtons: !0,

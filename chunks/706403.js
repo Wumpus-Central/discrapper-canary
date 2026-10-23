@@ -1,4 +1,4 @@
-(i.d(t, { Cr: () => x, I1: () => k, Nj: () => P, UB: () => T, SX: () => w, R6: () => z }), i(938796));
+(i.d(t, { Cr: () => x, I1: () => k, Nj: () => w, UB: () => T, SX: () => z, R6: () => P }), i(938796));
 var n = i(477900),
     a = i(582128),
     l = i(448761),
@@ -147,8 +147,6 @@ function E(e) {
                             src: a.url,
                             poster: A,
                             fileSizeBytes: a.size,
-                            posterPlaceholder: a.placeholder,
-                            posterPlaceholderVersion: a.placeholder_version,
                             initialActive: !1,
                             playable: t.playable,
                             autoplay: t.autoPlay,
@@ -187,11 +185,11 @@ function E(e) {
     }
     return M(t, i);
 }
-function P(e) {
+function w(e) {
     let t = e.item.originalItem;
     return (0, f.gL)({ ...e, fileSize: t.size, fileName: (0, A.A)(t), src: t.url });
 }
-function w(e) {
+function z(e) {
     let { message: t, item: i } = e,
         n = i.originalItem,
         l = (0, d.dx)(d.k0.VOICE_MESSAGE, n.id),
@@ -248,7 +246,7 @@ function w(e) {
         playbackCacheKey: l,
     });
 }
-function z(e) {
+function P(e) {
     let t = e.item.originalItem,
         { message: i } = e;
     return (0, f._d)({

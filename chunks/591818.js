@@ -1,4 +1,4 @@
-(n.d(t, { VZ: () => V, Ay: () => j, FX: () => I }), n(938796));
+(n.d(t, { VZ: () => j, Ay: () => _, FX: () => I }), n(938796));
 var i = n(477900),
     a = n(582128),
     o = n(665260),
@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(644447),
     m = n(587481),
     g = n(998218),
-    p = n(454290),
-    y = n(447991),
+    y = n(454290),
+    p = n(447991),
     x = n(777501),
     f = n(105292);
 function M(e) {
@@ -35,13 +35,11 @@ function M(e) {
         style: { width: l, height: r, display: "flex" },
         onClick: (e) => e.stopPropagation(),
         onContextMenu: u,
-        children: (0, i.jsx)(y.A, {
+        children: (0, i.jsx)(p.A, {
             crossOrigin: null,
             alt: null != t.alt && "" !== t.alt ? t.alt : f.intl.string(f.t.FlNoSV),
             src: n,
             poster: a,
-            posterPlaceholder: t.placeholder,
-            posterPlaceholderVersion: t.placeholderVersion,
             autoplay: o,
             initialActive: o,
             initialTimeSec: t.initialTimeSec,
@@ -64,7 +62,7 @@ var v = n(941143),
     w = n(765671),
     C = n(267102),
     S = n(700331);
-function P(e) {
+function A(e) {
     let { width: t, height: n, viewportWidth: i, viewportHeight: a, offset: o, delta: l } = e,
         r = (i - t) / 2 + o.x,
         u = (a - n) / 2 + o.y,
@@ -77,20 +75,20 @@ function P(e) {
         { x: c, y: h }
     );
 }
-let A = a.memo(function (e) {
+let P = a.memo(function (e) {
     let { children: t } = e,
-        { scale: n, x: o, y: l, setOffset: r, zoomed: u, setZoomed: s } = (0, p.Q)(),
+        { scale: n, x: o, y: l, setOffset: r, zoomed: u, setZoomed: s } = (0, y.Q)(),
         { ref: d, width: c, height: h } = (0, w.Ay)(),
         [m, g] = [c ?? 0, h ?? 0],
-        y = (0, C._o)(),
+        p = (0, C._o)(),
         x = a.useRef(!1),
         [f, M] = a.useState({ x: 0, y: 0 });
-    function A(e, t) {
-        let i = P({
+    function P(e, t) {
+        let i = A({
             width: m * n.goal,
             height: g * n.goal,
-            viewportWidth: y.innerWidth,
-            viewportHeight: y.innerHeight,
+            viewportWidth: p.innerWidth,
+            viewportHeight: p.innerHeight,
             offset: { x: o.goal, y: l.goal },
             delta: { x: e, y: t },
         });
@@ -105,13 +103,13 @@ let A = a.memo(function (e) {
             if (!u) {
                 if (0 === e.button) {
                     (S.l.markActionPerformed(S.N.ZOOM_IN_IMAGE_PRESSED), s(!0));
-                    let t = e.clientX - y.innerWidth / 2,
-                        i = e.clientY - y.innerHeight / 2,
-                        a = P({
+                    let t = e.clientX - p.innerWidth / 2,
+                        i = e.clientY - p.innerHeight / 2,
+                        a = A({
                             width: m * n.goal,
                             height: g * n.goal,
-                            viewportWidth: y.innerWidth,
-                            viewportHeight: y.innerHeight,
+                            viewportWidth: p.innerWidth,
+                            viewportHeight: p.innerHeight,
                             offset: { x: 0, y: 0 },
                             delta: { x: -t * (n.goal - 1), y: -i * (n.goal - 1) },
                         });
@@ -123,8 +121,8 @@ let A = a.memo(function (e) {
                 (S.l.markActionPerformed(S.N.ZOOM_OUT_IMAGE_PRESSED), s(!1)),
                 (x.current = !1));
         },
-        onMouseMove: (e) => x.current && A(e.movementX, e.movementY),
-        onWheel: (e) => !e.ctrlKey && A(-e.deltaX, -e.deltaY),
+        onMouseMove: (e) => x.current && P(e.movementX, e.movementY),
+        onWheel: (e) => !e.ctrlKey && P(-e.deltaX, -e.deltaY),
         onMouseLeave: () => (x.current = !1),
         onClick: (e) => e.stopPropagation(),
         style: { scale: n, x: o, y: l, cursor: u ? "zoom-out" : "zoom-in" },
@@ -143,16 +141,16 @@ function I(e, t) {
         sourceMetadata: { message: t },
     };
 }
-function V(e) {
+function j(e) {
     let t = g.A.toURLSafe(e);
     return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
 }
-let j = a.memo(function (e) {
-    var t, n, a, r, y;
+let _ = a.memo(function (e) {
+    var t, n, a, r, p;
     let x,
         { media: f, obscured: v = !1, maxWidth: w, maxHeight: C, onContextMenu: S } = e,
-        { width: P, height: I, url: j, proxyUrl: _, alt: H, type: L, maxWidth: T, maxHeight: b, clip: O, ...D } = f,
-        { zoomed: U } = (0, p.Q)(),
+        { width: A, height: I, url: _, proxyUrl: H, alt: V, type: L, maxWidth: T, maxHeight: b, clip: O, ...D } = f,
+        { zoomed: U } = (0, y.Q)(),
         N = (function (e) {
             let { clip: t, sourceMetadata: n } = e;
             if (null != t) return t;
@@ -163,14 +161,14 @@ let j = a.memo(function (e) {
         })(f),
         X =
             ((t = U),
-            (n = j),
-            (a = _),
+            (n = _),
+            (a = H),
             (r = f.contentType),
-            (y = f.originalContentType),
-            t && g.A.isDiscordAssetUrl(n, r, y) ? (0, d.XW)(n, r, y) : (0, h.E)({ proxyURL: a, url: n })),
-        F = null != P && 0 !== P && null != I && 0 !== I;
-    if ("VIDEO" === L && F && null != _) {
-        let e = f.poster ?? V(_);
+            (p = f.originalContentType),
+            t && g.A.isDiscordAssetUrl(n, r, p) ? (0, d.XW)(n, r, p) : (0, h.E)({ proxyURL: a, url: n })),
+        F = null != A && 0 !== A && null != I && 0 !== I;
+    if ("VIDEO" === L && F && null != H) {
+        let e = f.poster ?? j(H);
         if (null == e) return null;
         if (null != N)
             return (0, i.jsx)(l.A, {
@@ -197,12 +195,12 @@ let j = a.memo(function (e) {
             return (0, i.jsx)(s.A, {
                 ...D,
                 src: X,
-                width: P,
+                width: A,
                 height: I,
                 maxWidth: w,
                 maxHeight: C,
                 poster: e,
-                naturalWidth: P,
+                naturalWidth: A,
                 naturalHeight: I,
                 volume: m.v1,
                 autoMute: f.autoMute ?? m.uj,
@@ -210,13 +208,13 @@ let j = a.memo(function (e) {
                 onMute: m.y5,
                 renderLinkComponent: t,
                 autoPlay: n,
-                alt: H,
+                alt: V,
                 onContextMenu: S,
                 disableArrowKeySeek: !0,
                 showPlaybackSpeedControl: f.sourceMetadata?.message != null,
             });
         }
-        return f.sourceMetadata?.identifier?.type === "attachment" && (0, W.T)(P, I)
+        return f.sourceMetadata?.identifier?.type === "attachment" && (0, W.T)(A, I)
             ? (0, i.jsx)(M, {
                   media: f,
                   src: X,
@@ -235,7 +233,7 @@ let j = a.memo(function (e) {
                 ? (0, i.jsx)(u.Ay, {
                       ...D,
                       src: X,
-                      width: P,
+                      width: A,
                       height: I,
                       maxWidth: w,
                       maxHeight: C,
@@ -244,16 +242,16 @@ let j = a.memo(function (e) {
                       className: k.$_,
                       animated: !v && f.animated,
                       autoPlay: !v,
-                      alt: H,
+                      alt: V,
                       onContextMenu: S,
                   })
                 : (0, i.jsx)("img", {
                       src: X,
-                      alt: H,
+                      alt: V,
                       onContextMenu: S,
                       className: k.xx,
                       style: { maxWidth: w, maxHeight: C },
                   })),
-        null != x ? (0, i.jsx)(A, { children: x }) : null
+        null != x ? (0, i.jsx)(P, { children: x }) : null
     );
 });
