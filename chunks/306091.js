@@ -1,6 +1,5 @@
 e.exports = {
     E3: "base__463b7",
-    BE: "textBadge__463b7 base__463b7",
     rS: "baseShapeRound__463b7",
     Q2: "baseShapeRoundLeft__463b7",
     Hg: "baseShapeRoundRight__463b7",

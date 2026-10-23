@@ -1,78 +1,58 @@
-n.d(r, { EG: () => N, Gu: () => d, Lp: () => A, fk: () => D, hV: () => O, o6: () => u });
-var l = n(477900);
+n.d(r, { EG: () => u, Gu: () => d, fk: () => O, hV: () => h, o6: () => N });
+var a = n(477900);
 n(582128);
-var c = n(503698),
-    a = n.n(c),
+var l = n(503698),
+    c = n.n(l),
     e = n(661531),
     s = n(85463),
     t = n(834730),
     i = n(306091);
-let N = { ROUND: i.rS, ROUND_LEFT: i.Q2, ROUND_RIGHT: i.Hg, SQUARE: "" };
-function u(o) {
+let u = { ROUND: i.rS, ROUND_LEFT: i.Q2, ROUND_RIGHT: i.Hg, SQUARE: "" };
+function N(o) {
     return o < 10 ? 16 : o < 100 ? 22 : 30;
 }
 function d(o) {
     return o < 1e3 ? `${o}` : `${Math.min(Math.floor(o / 1e3), 9)}k+`;
 }
-function O(o) {
+function h(o) {
     let {
             count: r,
             color: n = e.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            disableColor: c = !1,
-            shape: O = N.ROUND,
-            className: A,
+            disableColor: l = !1,
+            shape: h = u.ROUND,
+            className: O,
             style: D,
-            renderBadgeCount: h = d,
-            ...C
-        } = o,
-        R = (0, s.N)();
-    return (0, l.jsx)(t.E, {
-        variant: R,
-        color: "none",
-        className: a()(A, i.Do, O),
-        style: { backgroundColor: c ? void 0 : n, width: u(r), ...D },
-        ...C,
-        children: h(r),
-    });
-}
-function A(o) {
-    let {
-            text: r,
-            className: n,
-            color: c = e.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: u = N.ROUND,
-            disableColor: d = !1,
-            style: O,
+            renderBadgeCount: k = d,
             ...A
         } = o,
-        D = (0, s.N)();
-    return (0, l.jsx)(t.E, {
-        variant: D,
+        C = (0, s.N)();
+    return (0, a.jsx)(t.E, {
+        variant: C,
         color: "none",
-        className: a()(n, i.BE, u),
-        style: { backgroundColor: d ? void 0 : c, ...O },
+        className: c()(O, i.Do, h),
+        style: { backgroundColor: l ? void 0 : n, width: N(r), ...D },
         ...A,
-        children: r,
+        children: k(r),
     });
 }
-function D(o) {
+function O(o) {
     let {
             icon: r,
             className: n,
-            color: c = e.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: u = N.ROUND,
+            color: l = e.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+            shape: N = u.ROUND,
             disableColor: d = !1,
-            style: O,
-            "aria-label": A,
+            style: h,
+            "aria-label": O,
         } = o,
         D = (0, s.N)();
-    return (0, l.jsx)(t.E, {
+    return (0, a.jsx)(t.E, {
         variant: D,
         color: "none",
-        className: a()(n, i.u3, u),
-        style: { backgroundColor: d ? void 0 : c, ...O },
-        role: null != A ? "img" : void 0,
-        "aria-label": A,
-        children: (0, l.jsx)(r, { className: i.Kk, color: "currentColor" }),
+        className: c()(n, i.u3, N),
+        style: { backgroundColor: d ? void 0 : l, ...h },
+        role: null != O ? "img" : void 0,
+        "aria-label": O,
+        children: (0, a.jsx)(r, { className: i.Kk, color: "currentColor" }),
     });
 }

@@ -1,4 +1,5 @@
-a.exports = {
+_.exports = {
+    Io: "pill__52929",
     qS: "badge__52929",
     as: "large__52929",
     LI: "round__52929",

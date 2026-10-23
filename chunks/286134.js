@@ -1,13 +1,32 @@
-s.d(e, { Ay: () => d, Qo: () => o, oY: () => A });
-var a = s(477900);
+s.d(e, { Ay: () => R, Qo: () => d, oY: () => c });
+var l = s(477900);
 s(582128);
-var l = s(503698),
-    i = s.n(l),
-    r = s(812993),
-    n = s(857722);
-let A = { LARGE: "large", SMALL: "small" },
-    o = { ROUND: n.LI, ROUND_LEFT: n.kI, ROUND_RIGHT: n.pT, SQUARE: "" };
-function d(t) {
-    let { size: e = A.LARGE, shape: s = o.ROUND, className: l, ...d } = t;
-    return (0, a.jsx)(r.Lp, { ...d, shape: s, className: i()(n.qS, { [n.as]: e === A.LARGE }, l) });
+var a = s(503698),
+    i = s.n(a),
+    r = s(661531),
+    n = s(85463),
+    o = s(834730),
+    A = s(857722);
+let c = { LARGE: "large", SMALL: "small" },
+    d = { ROUND: A.LI, ROUND_LEFT: A.kI, ROUND_RIGHT: A.pT, SQUARE: "" };
+function R(t) {
+    let {
+            text: e,
+            color: s = r.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+            disableColor: a = !1,
+            size: R = c.LARGE,
+            shape: u = d.ROUND,
+            className: N,
+            style: y,
+            ...p
+        } = t,
+        O = (0, n.N)();
+    return (0, l.jsx)(o.E, {
+        variant: O,
+        color: "none",
+        className: i()(N, A.Io, u, A.qS, { [A.as]: R === c.LARGE }),
+        style: { backgroundColor: a ? void 0 : s, ...y },
+        ...p,
+        children: e,
+    });
 }

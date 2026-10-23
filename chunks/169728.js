@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649577";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "649586";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649577, Version Hash: 1062b6495110d2540f46972928c5c3960f103216`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 649586, Version Hash: 1c2bf551f75aaff7464f450bd0e0d03c1ddbaa0f`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4473,7 +4473,8 @@ let sr = (0, rl.Fe)({
                 n.e("535413"),
                 n.e("172413"),
                 n.e("145006"),
-                n.e("205894"),
+                n.e("998670"),
+                n.e("15649"),
                 n.e("38956"),
                 n.e("302458"),
                 n.e("556436"),
@@ -5129,7 +5130,8 @@ function sl() {
         n.e("535413"),
         n.e("172413"),
         n.e("145006"),
-        n.e("205894"),
+        n.e("998670"),
+        n.e("15649"),
         n.e("38956"),
         n.e("401425"),
         n.e("120561"),
@@ -25490,7 +25492,7 @@ let yi = "isHideDevBanner",
                     className: tf()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649577" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "649586" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -53096,7 +53098,7 @@ let W2 = (0, tZ.Fe)({
             n.e("250440"),
             n.e("879641"),
             n.e("609019"),
-            n.e("635098"),
+            n.e("110425"),
             n.e("74853"),
             n.e("325522"),
             n.e("401317"),
@@ -53524,7 +53526,8 @@ let W2 = (0, tZ.Fe)({
             n.e("535413"),
             n.e("172413"),
             n.e("145006"),
-            n.e("205894"),
+            n.e("998670"),
+            n.e("15649"),
             n.e("38956"),
             n.e("302458"),
             n.e("556436"),
@@ -54155,7 +54158,6 @@ let W2 = (0, tZ.Fe)({
             n.e("968763"),
             n.e("649520"),
             n.e("278045"),
-            n.e("16954"),
             n.e("26001"),
             n.e("118917"),
             n.e("838056"),
@@ -54284,9 +54286,9 @@ let W2 = (0, tZ.Fe)({
             n.e("655552"),
             n.e("225612"),
             n.e("468083"),
+            n.e("728553"),
             n.e("111346"),
             n.e("963333"),
-            n.e("728553"),
             n.e("866568"),
             n.e("548730"),
             n.e("871467"),
@@ -54312,6 +54314,7 @@ let W2 = (0, tZ.Fe)({
             n.e("173547"),
             n.e("68904"),
             n.e("354121"),
+            n.e("16954"),
             n.e("41250"),
             n.e("940248"),
             n.e("639163"),
