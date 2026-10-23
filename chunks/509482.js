@@ -2,7 +2,7 @@ n.d(t, { w: () => C });
 var i,
     r = n(477900),
     a = n(582128),
-    s = n(679474),
+    s = n(223145),
     l = n.n(s),
     o = n(971940),
     d = n(941861),
@@ -332,7 +332,7 @@ function O(e) {
                                         console.warn(`Unknown property type: ${l}`);
                                 }
                             }
-                            n.wakeFromAutoSleep?.();
+                            (n.wakeFromAutoSleep?.(), n.isPlaying || (n.artboard?.advance(0), n.drawFrame()));
                         })().catch((e) => {
                             if ("AbortError" !== e.name) throw e;
                         }),
