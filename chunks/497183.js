@@ -12,6 +12,7 @@ let f = {
     header: { pixels: 20, className: c.wx },
     card: { pixels: 40, className: c.Nr },
     list: { pixels: 44, className: c.p_ },
+    dialog: { pixels: 48, className: c.r3 },
 };
 function d(t) {
     let { project: n, size: a, className: r } = t,

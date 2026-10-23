@@ -999,7 +999,27 @@ function nV(e) {
         },
     });
 }
-var nY = t(71048);
+function nY(e) {
+    let { frame: n } = e,
+        { canPopout: t, isPoppedOut: i, popOut: s, popIn: r } = (0, nU.A)(n);
+    return (0, nB.x1)(n)
+        ? i
+            ? (0, l.jsx)(nm.In, {
+                  icon: ny._,
+                  tooltip: z.intl.string(z.t["NKV/MO"]),
+                  "aria-label": z.intl.string(z.t["NKV/MO"]),
+                  onClick: r,
+              })
+            : t
+              ? (0, l.jsx)(nm.In, {
+                    icon: nb.t,
+                    tooltip: z.intl.string(z.t["3Zypbv"]),
+                    "aria-label": z.intl.string(z.t["3Zypbv"]),
+                    onClick: s,
+                })
+              : null
+        : null;
+}
 function nW(e) {
     let { channel: n } = e,
         t = s.useMemo(
@@ -1007,7 +1027,7 @@ function nW(e) {
             [n.id, n.guild_id],
         ),
         i = (0, nk.A)(n.application_id ?? null, t);
-    return (0, l.jsx)(nY.A, { frame: i });
+    return (0, l.jsx)(nY, { frame: i });
 }
 function nz(e) {
     let { channel: n, isLurking: t } = e,

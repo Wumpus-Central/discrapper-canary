@@ -20,6 +20,10 @@
     --custom-conjure-project-icon-size: calc(var(--space-40) + var(--space-4))
 }
 
+.dialog_d9c451 {
+    --custom-conjure-project-icon-size: var(--space-48)
+}
+
 .image_d9c451 {
     -o-object-fit: cover;
     object-fit: cover
@@ -32,4 +36,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=e4fcb932bccd89e9.css.map*/
+/*# sourceMappingURL=e0ad683b95a48e4f.css.map*/

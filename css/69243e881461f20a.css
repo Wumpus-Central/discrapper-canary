@@ -190,6 +190,17 @@ svg.selectModeIcon_eb0c63 {
     width: 1px
 }
 
+.projectHeaderLeadingActions_eb0c63 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-xs)
+}
+
+.projectHeaderLeadingActions_eb0c63:empty,
+.projectHeaderLeadingActions_eb0c63:empty+.projectHeaderDivider_eb0c63 {
+    display: none
+}
+
 .projectMainFallback_eb0c63 {
     min-height: 0;
     min-width: 0
@@ -210,4 +221,4 @@ svg.selectModeIcon_eb0c63 {
     text-align: center
 }
 
-/*# sourceMappingURL=1ba5b27c4181885d.css.map*/
+/*# sourceMappingURL=69243e881461f20a.css.map*/

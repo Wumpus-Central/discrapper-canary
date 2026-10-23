@@ -7,6 +7,7 @@ e.exports = {
     C5: "publishingSpinnerItem_eb0c63",
     D8: "selectModeIcon_eb0c63",
     YJ: "projectHeaderDivider_eb0c63",
+    QQ: "projectHeaderLeadingActions_eb0c63",
     j5: "projectMainFallback_eb0c63",
     sD: "projectUnavailable_eb0c63",
 };
