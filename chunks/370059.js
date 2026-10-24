@@ -18575,66 +18575,85 @@ function pq(e) {
                     () => (null == r ? null : (ew.Ay.getIntegrationStatus(r) ?? ro.A.getIntegrationStatus(r))),
                     [r],
                 ),
-                { data: c, isLoading: d } = (0, rs.YY)(e?.preview_application_id ?? void 0),
-                m = null != r && n !== r,
-                f = u?.preview_ready === !0,
-                h = u?.has_activity === !0,
-                p = (0, l0.Qg)({
+                c = e?.preview_application_id ?? null,
+                { data: d, isLoading: m } = (0, rs.YY)(c ?? void 0),
+                f = null != r && n !== r,
+                h = u?.preview_ready === !0,
+                p = u?.has_activity === !0,
+                g = u?.bot_permissions_changed === !0,
+                x = (0, l0.Qg)({
                     installScope: e?.install_scope ?? null,
-                    previewReady: f,
+                    previewReady: h,
                     integrationInstalled: u?.integration_installed ?? null,
-                    botPermissionsChanged: u?.bot_permissions_changed === !0,
+                    botPermissionsChanged: g,
                 }),
-                g = i.useCallback(async () => {
-                    if (null == r || a.current !== r) return;
-                    s.current?.abort();
-                    let e = new AbortController();
-                    ((s.current = e), l(null));
-                    try {
-                        await ((0, P.CG)(r)?.catch(() => (0, P.U1)(r, e.signal)) ?? (0, P.U1)(r, e.signal));
-                    } catch {
-                    } finally {
-                        e.signal.aborted || s.current !== e || a.current !== r || l(r);
+                [v, j] = i.useState(null);
+            i.useEffect(() => {
+                if ((j(null), !x || f || null == c)) return;
+                let e = !1;
+                return (
+                    (async function (t) {
+                        try {
+                            await (0, rs.TA)(t);
+                        } catch {}
+                        e || j(t);
+                    })(c),
+                    () => {
+                        e = !0;
                     }
-                }, [r]);
+                );
+            }, [g, f, x, c]);
+            let b = i.useCallback(async () => {
+                if (null == r || a.current !== r) return;
+                s.current?.abort();
+                let e = new AbortController();
+                ((s.current = e), l(null));
+                try {
+                    await ((0, P.CG)(r)?.catch(() => (0, P.U1)(r, e.signal)) ?? (0, P.U1)(r, e.signal));
+                } catch {
+                } finally {
+                    e.signal.aborted || s.current !== e || a.current !== r || l(r);
+                }
+            }, [r]);
             i.useEffect(
                 () => (
-                    g(),
+                    b(),
                     () => {
                         (s.current?.abort(), (s.current = null));
                     }
                 ),
-                [g],
+                [b],
             );
-            let x = (0, ru.a)(e ?? null, u ?? null, t),
-                v = i.useCallback(async () => {
-                    null != e && (await (0, ru.$)(e, x));
-                }, [x, e]),
-                j = i.useCallback(async () => {
+            let y = (0, ru.a)(e ?? null, u ?? null, t),
+                w = i.useCallback(async () => {
+                    null != e && (await (0, ru.$)(e, y));
+                }, [y, e]),
+                k = i.useCallback(async () => {
                     try {
-                        await v();
+                        await w();
                     } catch {}
-                    await g();
-                }, [g, v]),
-                b = i.useMemo(() => {
-                    let t = e?.preview_application_id;
-                    return null == t || d || m
-                        ? null
-                        : {
-                              ...(0, rc.i)({ applicationId: t, application: c ?? null, guildId: x }),
-                              onClose: () => {
-                                  j();
+                    await b();
+                }, [b, w]),
+                N = i.useMemo(
+                    () =>
+                        null == c || m || f || v !== c
+                            ? null
+                            : {
+                                  ...(0, rc.i)({ applicationId: c, application: d ?? null, guildId: y }),
+                                  onClose: () => {
+                                      k();
+                                  },
                               },
-                          };
-                }, [m, j, x, d, c, e?.preview_application_id]);
+                    [f, v, k, y, m, d, c],
+                );
             return {
                 integrationStatus: u,
-                isPreviewApplicationLoading: d,
-                checkingIntegration: m,
-                previewReady: f,
-                hasFrame: h,
-                needsPermissionReview: p,
-                installAuthorizeProps: b,
+                isPreviewApplicationLoading: m,
+                checkingIntegration: f,
+                previewReady: h,
+                hasFrame: p,
+                needsPermissionReview: x,
+                installAuthorizeProps: N,
             };
         })(s, m),
         F =
@@ -18879,7 +18898,7 @@ function pq(e) {
         eD = i.useCallback(() => {
             null != s && (0, tZ.A)(s, m);
         }, [s, m]),
-        eO = (0, l0.JR)(G, D)
+        eO = (0, l0.JR)(G, D, I?.bot_permissions_changed === !0)
             ? { type: "permissions", authorizeProps: z }
             : T && null == I
               ? { type: "checking" }

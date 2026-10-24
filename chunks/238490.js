@@ -49,5 +49,6 @@ function c(e) {
     return !!n && null != l && (!!r || ("user" !== t && !l));
 }
 function h(e, t) {
-    return t && "bot" === e;
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return !!t && ("bot" === e || (n && "frame" === e));
 }

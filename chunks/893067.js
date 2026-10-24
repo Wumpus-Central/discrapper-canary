@@ -1,4 +1,4 @@
-l.d(t, { bI: () => R, Ay: () => V, KL: () => L, qF: () => D, FZ: () => $ });
+l.d(t, { bI: () => R, Ay: () => V, KL: () => L, qF: () => D, FZ: () => z });
 var n = l(582128),
     a = l(17928),
     i = l(73153),
@@ -120,7 +120,7 @@ async function U(e, t) {
         n = l?.preview_application_id;
     if (null == l || null == n) return;
     let a = (0, j.a)(l, m.Ay.getIntegrationStatus(e), t);
-    (null == s.A.getApplication(n) && (await (0, u.TA)(n).catch(() => {})),
+    (await (0, u.TA)(n).catch(() => {}),
         await new Promise((e) => {
             y.A.openConjureAppInstallModal({
                 applicationId: n,
@@ -198,7 +198,7 @@ function q(e) {
     (0, r.eO)((0, b.Du)(e), { withMutualGuilds: !0 }).catch(() => {});
 }
 let B = new Set();
-async function $(e, t, n) {
+async function z(e, t, n) {
     let { guildId: a, platform: i } = n;
     if (!0 === n.busy || B.has(e)) return;
     let r = G(e, a),
@@ -223,11 +223,11 @@ async function $(e, t, n) {
         ? i.showPublishBlocked(M.k.MISSING_MANAGE_SERVER, o.disabledReason)
         : ((0, _.dx)(e), null != o.confirmReason)
           ? i.showPublishBlocked(M.k.MISSING_MANAGE_CHANNELS, o.confirmReason, () => {
-                z(e, o, n).catch(() => {});
+                $(e, o, n).catch(() => {});
             })
-          : await z(e, o, n);
+          : await $(e, o, n);
 }
-async function z(e, t, l) {
+async function $(e, t, l) {
     let { guildId: n, platform: a } = l,
         i = G(e, n);
     if (!(null == i || k.A.isProjectPublishing(e))) {
@@ -249,8 +249,10 @@ async function z(e, t, l) {
                     integrationInstalled: r?.integration_installed ?? null,
                     botPermissionsChanged: r?.bot_permissions_changed === !0,
                 })
-            )
+            ) {
+                null != i && a.showError(E.intl.string(C.default.zJUQOI));
                 return;
+            }
             await F(i, t, l);
             return;
         }
@@ -312,7 +314,7 @@ function V(e, t) {
             },
             [e, r],
         ),
-        z = n.useMemo(
+        $ = n.useMemo(
             () =>
                 null == y
                     ? null
@@ -331,8 +333,8 @@ function V(e, t) {
                       },
             [y, w, M, _, T, L, D, U, F, O, W, B],
         ),
-        V = z?.status?.publishState ?? null,
-        H = z?.installScope === "guild" && z.status?.surface === "bot";
+        V = $?.status?.publishState ?? null,
+        H = $?.installScope === "guild" && $.status?.surface === "bot";
     n.useEffect(() => {
         null != y && null != A && H && null != V && (0, S.lE)(V) && q(y);
     }, [y?.id, A, H, V]);
@@ -345,8 +347,8 @@ function V(e, t) {
             !s.A.isFetchingApplication(Z) &&
             (0, u.TA)(Z).catch(() => {});
     }, [Z, Q]);
-    let X = n.useMemo(() => (null == z ? null : P(z)), [z]),
-        J = (function (e) {
+    let J = n.useMemo(() => (null == $ ? null : P($)), [$]),
+        X = (function (e) {
             let t = (0, a.bG)([k.A], () => (null == e ? null : k.A.getPublishProgress(e))),
                 [l, i] = n.useState(() => Date.now());
             return (n.useEffect(() => {
@@ -366,24 +368,24 @@ function V(e, t) {
             (t) => {
                 null != e &&
                     null != i &&
-                    $(e, t, i).catch((t) => {
+                    z(e, t, i).catch((t) => {
                         console.error("[conjure] publish action failed", e, t);
                     });
             },
             [e, i],
         );
-    if (null == i || !h || null == X || (!g && !v)) return null;
-    let Y = null == x ? X.label : E.intl.string(C.default.qru9M5);
+    if (null == i || !h || null == J || (!g && !v)) return null;
+    let Y = null == x ? J.label : E.intl.string(C.default.qru9M5);
     return {
-        ...X,
-        status: z?.status ?? null,
+        ...J,
+        status: $?.status ?? null,
         guildId: A,
         appChannelId: j,
         publishing: v,
         failure: v ? null : b,
-        showsProgress: null != J,
+        showsProgress: null != X,
         awaitingApproval: null != x,
-        label: v ? (J ?? E.intl.string(C.default.Rhx0rn)) : Y,
+        label: v ? (X ?? E.intl.string(C.default.Rhx0rn)) : Y,
         disabled: v || !0 === i.busy,
         run: K,
     };
