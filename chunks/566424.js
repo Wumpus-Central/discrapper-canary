@@ -30,7 +30,7 @@ function x(e) {
     }, [r]);
     let y = a.useId(),
         N = a.useCallback(() => b((e) => !e), []),
-        { text: S, phase: w } = (0, c.Q)(n),
+        { text: w, phase: S } = (0, c.Q)(n),
         E = _ ? s.a : u._,
         C = null != p,
         I = (0, l.jsxs)(l.Fragment, {
@@ -40,13 +40,13 @@ function x(e) {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "currentColor",
-                    className: i()(h.qo, { [h._q]: "exit" === w, [h.GD]: "enter" === w }),
-                    children: S,
+                    className: i()(h.qo, { [h._q]: "exit" === S, [h.GD]: "enter" === S }),
+                    children: w,
                 }),
                 C ? (0, l.jsx)(E, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
         }),
-        P = (0, l.jsxs)(l.Fragment, {
+        M = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: h.$m, children: I }),
                 r
@@ -74,11 +74,11 @@ function x(e) {
                       className: i()(h.ep, h.EK),
                       "aria-expanded": _,
                       "aria-controls": y,
-                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: S }),
+                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: w }),
                       onClick: N,
-                      children: P,
+                      children: M,
                   })
-                : (0, l.jsx)("div", { className: h.ep, children: P }),
+                : (0, l.jsx)("div", { className: h.ep, children: M }),
             (0, l.jsx)("div", { id: y, hidden: !_, "data-conjure-entrance": !0, className: h.BA, children: p }),
         ],
     });

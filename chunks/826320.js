@@ -180,8 +180,8 @@ function P() {
         ],
     });
 }
-var V = n(866665),
-    w = n(939249),
+var w = n(866665),
+    V = n(939249),
     H = n(789645),
     k = n(821609),
     B = n(47167),
@@ -212,9 +212,9 @@ function $(e) {
                               className: Z.wx,
                               children: [
                                   (0, i.jsx)(F.A, { className: Z.TK, children: L.intl.string(M.default.oHWnLy) }),
-                                  (0, i.jsx)(V.m, {
+                                  (0, i.jsx)(w.m, {
                                       text: L.intl.string(L.t.WAI6xu),
-                                      children: (0, i.jsx)(w.D, {
+                                      children: (0, i.jsx)(V.D, {
                                           className: Z.r,
                                           onClick: l,
                                           role: "button",

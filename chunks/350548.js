@@ -1,4 +1,4 @@
-n.exports = {
+d.exports = {
     zr: "root_df7f81",
     es: "mainGuildImage_df7f81",
     TT: "mainIcon_df7f81",

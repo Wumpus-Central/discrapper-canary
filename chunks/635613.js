@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     Dz: "recentChannelsMenu__711d3",
     qs: "recentChannelsMenuHeader__711d3",
     Ko: "guildIconWrapper__711d3",

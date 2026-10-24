@@ -22,7 +22,7 @@ var l = n(477900),
     A = n(248675),
     y = n(105292),
     N = n(59678);
-function S(e) {
+function w(e) {
     let { userId: t } = e,
         n = (0, j.bG)([_.default], () => _.default.getUser(t), [t]),
         a = (0, b.tx)(n);
@@ -39,7 +39,7 @@ function S(e) {
         }),
     });
 }
-var w = n(60160),
+var S = n(60160),
     E = n(162052);
 function C(e) {
     let { projectId: t, node: n, presentation: r = "row", active: f = !1 } = e,
@@ -51,9 +51,9 @@ function C(e) {
         b = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
         C = "text-muted" === b,
         I = f && C ? "none" : h && C ? "currentColor" : b,
-        D = i()(N.iq, { [E.Hz]: f && C }),
+        P = i()(N.iq, { [E.Hz]: f && C }),
         T = "detail" === r ? "text-md/normal" : "text-sm/normal",
-        M = "detail" === r ? "text-sm/normal" : "text-xs/normal",
+        D = "detail" === r ? "text-sm/normal" : "text-xs/normal",
         F = null != t ? n.screenshots : [],
         G = null != t ? n.attachments : [];
     if (0 === _.length && 0 === F.length && 0 === G.length)
@@ -66,8 +66,8 @@ function C(e) {
                 variant: T,
                 color: I,
                 selectable: !0,
-                className: D,
-                children: (0, l.jsx)(w.A, { text: v, variant: T, prose: !0 }),
+                className: P,
+                children: (0, l.jsx)(S.A, { text: v, variant: T, prose: !0 }),
             }),
         });
     let z = h ? u.a : d._;
@@ -88,8 +88,8 @@ function C(e) {
                         tag: "span",
                         variant: T,
                         color: I,
-                        className: D,
-                        children: (0, l.jsx)(w.A, { text: v, variant: T, prose: !0 }),
+                        className: P,
+                        children: (0, l.jsx)(S.A, { text: v, variant: T, prose: !0 }),
                     }),
                     (0, l.jsx)(z, { size: "xs", color: "currentColor", className: N.Ue }),
                 ],
@@ -110,13 +110,13 @@ function C(e) {
                                 children: [
                                     (0, l.jsx)(s.E, {
                                         tag: "div",
-                                        variant: M,
+                                        variant: D,
                                         color: f && C ? "none" : "text-muted",
                                         selectable: !0,
                                         className: i()({ [E.Hz]: f && C }),
-                                        children: (0, l.jsx)(w.A, { text: e, variant: M }),
+                                        children: (0, l.jsx)(S.A, { text: e, variant: D }),
                                     }),
-                                    null != a ? (0, l.jsx)(S, { userId: a }) : null,
+                                    null != a ? (0, l.jsx)(w, { userId: a }) : null,
                                     null != r
                                         ? (0, l.jsx)(c.m, {
                                               text: r,
@@ -140,7 +140,7 @@ function C(e) {
                     null != t && F.length > 0
                         ? (0, l.jsx)("div", {
                               className: N.y8,
-                              children: F.map((e) => (0, l.jsx)(P, { projectId: t, screenshotId: e }, e)),
+                              children: F.map((e) => (0, l.jsx)(M, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
                     null != t && G.length > 0 ? (0, l.jsx)(x.A, { projectId: t, attachments: G }) : null,
@@ -150,7 +150,7 @@ function C(e) {
     });
 }
 function I() {}
-function P(e) {
+function M(e) {
     let { projectId: t, screenshotId: n } = e,
         [r, i] = a.useState(null),
         [s, u] = a.useState(!1);

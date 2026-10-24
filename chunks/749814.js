@@ -1,4 +1,4 @@
-let n, a, o;
+let n, o, a;
 (t(321073), t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162));
 var i,
     l,
@@ -50,14 +50,14 @@ let T = new d.Vy("LibDaveManager"),
     },
     m = new d.Vy("EncryptionWorker");
 (0, d.$o)(d.gZ);
-let h = "uninitialized",
-    b = null,
+let b = "uninitialized",
+    h = null,
     w = new Map(),
     A = new Map(),
     g = [];
 function O(e) {
     let { data: r } = e;
-    if ("initialized" !== h && r.type !== c.INITIALIZE) return void g.push(e);
+    if ("initialized" !== b && r.type !== c.INITIALIZE) return void g.push(e);
     switch (r.type) {
         case c.INITIALIZE:
             P();
@@ -67,21 +67,21 @@ function O(e) {
             break;
         case c.SET_KEY_RATCHET:
             !(function (e) {
-                let { userId: r, operation: t, protocolVersion: a, keyRatchet: o } = e,
-                    i = !o && a === n.kDisabledVersion;
+                let { userId: r, operation: t, protocolVersion: o, keyRatchet: a } = e,
+                    i = !a && o === n.kDisabledVersion;
                 if (t === s.ENCRYPT) {
                     let e = (function () {
-                        if (null == b) {
+                        if (null == h) {
                             let e = new n.Encryptor();
                             (e.SetProtocolVersionChangedCallback(() => {
                                 v(e.GetProtocolVersion());
                             }),
                                 v(e.GetProtocolVersion()),
-                                (b = e));
+                                (h = e));
                         }
-                        return b;
+                        return h;
                     })();
-                    (e.SetPassthroughMode(i), e.SetKeyRatchet(o));
+                    (e.SetPassthroughMode(i), e.SetKeyRatchet(a));
                 } else {
                     let e,
                         t =
@@ -89,31 +89,31 @@ function O(e) {
                                 ((e = { audioSSRC: 0, videoSSRCs: [], decryptor: null }), A.set(r, e)),
                             null == e.decryptor && (e.decryptor = new n.Decryptor()),
                             e.decryptor);
-                    (t.TransitionToPassthroughMode(i), t.TransitionToKeyRatchet(o));
+                    (t.TransitionToPassthroughMode(i), t.TransitionToKeyRatchet(a));
                 }
             })(r);
             break;
         case c.UPDATE_SSRC:
             !(function (e) {
                 let { userId: r, audioSsrc: t, videoSsrcs: n } = e,
-                    a = [t, ...n];
-                for (let e of a) {
+                    o = [t, ...n];
+                for (let e of o) {
                     let t = w.get(e);
                     if (e > 0 && null != t && t !== r)
                         return void m.error(`DAVE worker refusing SSRC update for ${r}, SSRC ${e} is owned by ${t}`);
                 }
-                let o = A.get(r);
-                for (let e of (null == o && ((o = { audioSSRC: t, videoSSRCs: n, decryptor: null }), A.set(r, o)),
-                [o.audioSSRC, ...o.videoSSRCs]))
-                    a.includes(e) || w.get(e) !== r || w.delete(e);
-                for (let e of a) e > 0 && w.set(e, r);
-                ((o.audioSSRC = t), (o.videoSSRCs = n));
+                let a = A.get(r);
+                for (let e of (null == a && ((a = { audioSSRC: t, videoSSRCs: n, decryptor: null }), A.set(r, a)),
+                [a.audioSSRC, ...a.videoSSRCs]))
+                    o.includes(e) || w.get(e) !== r || w.delete(e);
+                for (let e of o) e > 0 && w.set(e, r);
+                ((a.audioSSRC = t), (a.videoSSRCs = n));
             })(r);
             break;
         case c.UPDATE_CODECS:
             !(function (e) {
                 let { audioCodec: r, videoCodec: t } = e;
-                ((a = V(r)), (o = V(t)));
+                ((o = V(r)), (a = V(t)));
             })(r);
             break;
         case c.DESTROY_USER:
@@ -122,8 +122,8 @@ function O(e) {
                     t = A.get(r);
                 if (null == t) return;
                 A.delete(r);
-                let { audioSSRC: n, videoSSRCs: a } = t;
-                for (let e of [n, ...a]) w.get(e) === r && w.delete(e);
+                let { audioSSRC: n, videoSSRCs: o } = t;
+                for (let e of [n, ...o]) w.get(e) === r && w.delete(e);
             })(r);
             break;
         default:
@@ -131,8 +131,8 @@ function O(e) {
     }
 }
 async function P() {
-    if ("uninitialized" === h)
-        for (let e of ((h = "initializing"),
+    if ("uninitialized" === b)
+        for (let e of ((b = "initializing"),
         (n = await (null != R
             ? R
             : (R = new Promise((e, r) => {
@@ -152,13 +152,13 @@ async function P() {
                           (T.error("Failed to load DAVE module", e), r(e));
                       });
               })))),
-        (h = "initialized"),
+        (b = "initialized"),
         g))
             O(e);
 }
 function _(e) {
     let r,
-        { operation: t, readable: n, writable: a } = e;
+        { operation: t, readable: n, writable: o } = e;
     switch (t) {
         case s.ENCRYPT:
             r = D;
@@ -169,32 +169,32 @@ function _(e) {
         default:
             (m.error("DAVE worker transform with unknown operation", t), (r = () => {}));
     }
-    let o = new TransformStream({ transform: r });
-    n.pipeThrough(o).pipeTo(a);
+    let a = new TransformStream({ transform: r });
+    n.pipeThrough(a).pipeTo(o);
 }
 function v(e) {
     postMessage({ type: f.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
 }
 function D(e, r) {
     try {
-        let t = b;
+        let t = h;
         if (null == t) return;
         let i = e.getMetadata().synchronizationSource;
         if (null == i) return void m.warn("no ssrc found in frame metadata");
         let l = (function (e, r, t) {
             if (0 === e.data.byteLength) return e;
             let i = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
-                l = i === n.MediaType.Audio ? a : o;
+                l = i === n.MediaType.Audio ? o : a;
             t.AssignSsrcToCodec(r, l);
             let u = t.GetMaxCiphertextByteSize(i, e.data.byteLength),
                 d = n._malloc(u);
             try {
-                let a = new Uint8Array(e.data);
-                n.HEAPU8.set(a, d);
-                let o = t.Encrypt(i, r, d, e.data.byteLength, u);
-                if (0 === o) return null;
-                let l = n.HEAPU8.subarray(d, d + o),
-                    c = new Uint8Array(o);
+                let o = new Uint8Array(e.data);
+                n.HEAPU8.set(o, d);
+                let a = t.Encrypt(i, r, d, e.data.byteLength, u);
+                if (0 === a) return null;
+                let l = n.HEAPU8.subarray(d, d + a),
+                    c = new Uint8Array(a);
                 (c.set(l), (e.data = c.buffer));
             } finally {
                 n._free(d);
@@ -211,27 +211,27 @@ function k(e, r) {
     try {
         let t = e.getMetadata().synchronizationSource;
         if (null == t) return void m.warn("no ssrc found in frame metadata");
-        let a = w.get(t);
-        if (null == a) return void m.warn("no userId found for ssrc", t);
-        let o = A.get(a);
-        if (null == o) return void m.warn("no user found for userId", a);
-        let i = o.decryptor;
-        if (null == i) return void m.warn("no decryptor found for userId", a);
+        let o = w.get(t);
+        if (null == o) return void m.warn("no userId found for ssrc", t);
+        let a = A.get(o);
+        if (null == a) return void m.warn("no user found for userId", o);
+        let i = a.decryptor;
+        if (null == i) return void m.warn("no decryptor found for userId", o);
         let l = (function (e, r) {
             if (0 === e.data.byteLength) return e;
             let t = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
-                a = r.GetMaxPlaintextByteSize(t, e.data.byteLength),
-                o = n._malloc(a);
+                o = r.GetMaxPlaintextByteSize(t, e.data.byteLength),
+                a = n._malloc(o);
             try {
                 let i = new Uint8Array(e.data);
-                n.HEAPU8.set(i, o);
-                let l = r.Decrypt(t, o, e.data.byteLength, a);
+                n.HEAPU8.set(i, a);
+                let l = r.Decrypt(t, a, e.data.byteLength, o);
                 if (0 === l) return null;
-                let u = n.HEAPU8.subarray(o, o + l),
+                let u = n.HEAPU8.subarray(a, a + l),
                     d = new Uint8Array(l);
                 return (d.set(u), (e.data = d.buffer), e);
             } finally {
-                n._free(o);
+                n._free(a);
             }
         })(e, i);
         if (null == l) return;
