@@ -33,36 +33,46 @@ var d = n(85982),
     h = n(5867);
 let f = 0;
 async function I(e) {
-    let { applicationId: t, surface: n, launch: s, analyticsContext: l, hostWindowKey: E, showErrorModal: h = !0 } = e,
-        I = (0, A.VA)(t, n),
-        T = _.A.getFrame(I);
-    if (null != T) return (T.intent === A.sV.MAIN && (m(I), g({ frameId: I, layoutMode: A.y0.FOCUSED })), I);
+    let {
+            applicationId: t,
+            surface: n,
+            launch: s,
+            analyticsContext: l,
+            hostWindowKey: E,
+            showErrorModal: h = !0,
+            invite: I,
+        } = e,
+        T = (0, A.VA)(t, n),
+        S = _.A.getFrame(T);
+    if (null != S) return (S.intent === A.sV.MAIN && (m(T), g({ frameId: T, layoutMode: A.y0.FOCUSED })), T);
     (0, A.Yf)(n) === A.sV.MAIN && (o(), p());
-    let S = ++f;
+    let N = ++f;
     i.h.dispatch({
         type: "FRAME_LAUNCH_START",
         applicationId: t,
-        frameId: I,
+        frameId: T,
         surface: n,
         hostWindowKey: E,
         launch: s,
-        launchRequestId: S,
+        invite: I,
+        launchRequestId: N,
     });
     try {
-        let [e] = await Promise.all([(0, r.D2)(t, (0, u.A)(n), n.type), (0, c.A)(t)]);
+        let [e] = await Promise.all([(0, r.D2)(t, (0, u.A)(n), n.type, I), (0, c.A)(t)]);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
-                frameId: I,
+                frameId: T,
                 surface: n,
                 proxyTicket: e,
                 analyticsContext: l,
                 launch: s ?? {},
+                invite: I,
                 hostWindowKey: E,
-                launchRequestId: S,
+                launchRequestId: N,
             }),
-            I
+            T
         );
     } catch (e) {
         if (h) {
@@ -73,8 +83,8 @@ async function I(e) {
             i.h.dispatch({
                 type: "FRAME_LAUNCH_FAIL",
                 applicationId: t,
-                frameId: I,
-                launchRequestId: S,
+                frameId: T,
+                launchRequestId: N,
                 error: e,
                 analyticsContext: l,
             }),
@@ -127,10 +137,11 @@ function D(e, t) {
 async function v(e) {
     let t = _.A.getFrame(e);
     if (null == t) return !1;
-    let { applicationId: n, surface: s } = t;
+    let { applicationId: n, surface: s } = t,
+        l = (0, A.x1)(t) ? t.data.invite : t.invite;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D2)(n, (0, u.A)(s), s.type);
+        let t = await (0, r.D2)(n, (0, u.A)(s), s.type, l);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (t) {
         let e = await (0, a.f)(t, n);

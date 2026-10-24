@@ -4,12 +4,13 @@ var i = n(636537),
     a = n(956518),
     s = n(652215);
 let l = new Map();
-async function o(e, t, n) {
-    let i = u(e, t, n),
-        r = l.get(i);
-    if ((l.delete(i), null != r && r.expiresAt > Date.now()))
+async function o(e, t, n, i) {
+    if (null != i) return _(e, t, n, i);
+    let r = u(e, t, n),
+        a = l.get(r);
+    if ((l.delete(r), null != a && a.expiresAt > Date.now()))
         try {
-            let e = await r.ticket;
+            let e = await a.ticket;
             if (null != e) return e;
         } catch {}
     return _(e, t, n);
@@ -31,21 +32,22 @@ function c(e, t, n, i) {
 function u(e, t, n) {
     return [r.default.getId(), e, t ?? "", n ?? ""].join(":");
 }
-async function _(e, t, n) {
-    var r = e;
-    let l = (0, a.Ay)(r);
-    if (null != l)
+async function _(e, t, n, r) {
+    var l = e;
+    let o = (0, a.Ay)(l);
+    if (null != o)
         try {
-            fetch(new URL("/.discord/prewarm", l).toString(), {
+            fetch(new URL("/.discord/prewarm", o).toString(), {
                 method: "GET",
                 mode: "no-cors",
                 credentials: "omit",
             }).catch(() => void 0);
         } catch {}
-    let o = { use_stateless_ticket: !0 };
+    let d = { use_stateless_ticket: !0 };
     return (
-        null != t && (o.channel_id = t),
-        null != n && (o.surface = n),
-        (await i.Bo.post({ url: s.Rsh.APPLICATION_PROXY_TICKET(e), body: o, rejectWithError: !0 })).body.ticket
+        null != r && ((d.invite_channel_id = r.channelId), (d.invite_message_id = r.messageId)),
+        null != t && (d.channel_id = t),
+        null != n && (d.surface = n),
+        (await i.Bo.post({ url: s.Rsh.APPLICATION_PROXY_TICKET(e), body: d, rejectWithError: !0 })).body.ticket
     );
 }

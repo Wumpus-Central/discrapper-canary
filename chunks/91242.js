@@ -67,40 +67,49 @@ class T extends i.Ay.Store {
 }
 let m = new T(r.h, {
     FRAME_LAUNCH_START: function (e) {
-        let { applicationId: t, frameId: n, surface: i, hostWindowKey: r, launch: a, launchRequestId: s } = e,
-            l = (0, o.Yf)(i);
+        let {
+                applicationId: t,
+                frameId: n,
+                surface: i,
+                hostWindowKey: r,
+                launch: a,
+                invite: s,
+                launchRequestId: l,
+            } = e,
+            d = (0, o.Yf)(i);
         (u.set(n, {
             id: n,
             applicationId: t,
-            intent: l,
+            intent: d,
             surface: i,
             state: "loading",
             data: null,
             hostWindowKey: r ?? null,
             launch: a,
-            launchRequestId: s,
+            invite: s,
+            launchRequestId: l,
         }),
-            l === o.sV.MAIN && (E = n));
+            d === o.sV.MAIN && (E = n));
     },
     FRAME_LAUNCH: function (e) {
-        let { frameId: t, proxyTicket: n, launch: i, hostWindowKey: r, launchRequestId: s } = e,
-            l = u.get(t);
-        if (null == l || f(l, s)) return !1;
-        let c = (0, a.Ay)(l.applicationId);
-        if (null == c) {
+        let { frameId: t, proxyTicket: n, launch: i, invite: r, hostWindowKey: s, launchRequestId: l } = e,
+            c = u.get(t);
+        if (null == c || f(c, l)) return !1;
+        let A = (0, a.Ay)(c.applicationId);
+        if (null == A) {
             (u.delete(t), E === t && (E = null));
             return;
         }
-        let { id: A, applicationId: h, intent: I, surface: p } = l;
+        let { id: h, applicationId: I, intent: p, surface: T } = c;
         u.set(t, {
-            id: A,
-            applicationId: h,
-            intent: I,
-            surface: p,
-            launchRequestId: l.launchRequestId,
+            id: h,
+            applicationId: I,
+            intent: p,
+            surface: T,
+            launchRequestId: c.launchRequestId,
             state: "launched",
             data: {
-                url: c,
+                url: A,
                 connectedSince: Date.now(),
                 layoutMode: o.y0.FOCUSED,
                 activityPanelMode: d.Gd.PANEL,
@@ -114,8 +123,9 @@ let m = new T(r.h, {
                 userMuted: !1,
                 ..._,
                 iframeId: null,
-                hostWindowKey: r ?? null,
+                hostWindowKey: s ?? null,
                 launch: i,
+                invite: r,
             },
         });
     },

@@ -53,7 +53,11 @@ async function O(e) {
     let { frameId: x, launched: k } =
         null != U
             ? { frameId: (0, g.VA)(y, (0, A.e)(U)), launched: Promise.resolve() }
-            : (0, p.A)({ applicationId: y, channel: P });
+            : (0, p.A)({
+                  applicationId: y,
+                  channel: P,
+                  invite: null != h && null != f ? { channelId: h, messageId: f } : void 0,
+              });
     if (null == G) return !0;
     r.h.dispatch({ type: "ACTIVITY_JOIN_NAVIGATION_COMPLETE", applicationId: y });
     try {
