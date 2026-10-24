@@ -14,8 +14,8 @@ var i = n(477900),
     m = n(331322),
     x = n(297264),
     p = n(477782),
-    I = n(687966),
-    j = n(404778),
+    j = n(687966),
+    I = n(404778),
     E = n(793574),
     A = n(688810),
     v = n(206828),
@@ -26,9 +26,9 @@ var i = n(477900),
     D = n(105292),
     T = n(429913),
     _ = n(5960),
-    P = n(409626),
-    R = n(692969),
-    k = n(454908),
+    R = n(409626),
+    k = n(692969),
+    P = n(454908),
     w = n(280450),
     W = n(183555),
     S = n(644346),
@@ -128,7 +128,7 @@ let M = Object.assign(
                 trailingContent: F,
                 interactiveLinks: z = !1,
             } = e,
-            B = (function (e) {
+            H = (function (e) {
                 let { trackUserProfileAction: t } = (0, W.NJ)(),
                     { user: n, widget: l, cta: s } = e,
                     o = (0, d.bG)([w.default], () => w.default.getId()) === n.id,
@@ -136,40 +136,40 @@ let M = Object.assign(
                     h = f?.getIconURL(16),
                     m = (function (e) {
                         let t = e?.getCanonicalGameId(),
-                            { data: n } = (0, k.I)(t);
+                            { data: n } = (0, P.I)(t);
                         return n;
                     })(f),
-                    x = (0, R.A)({
+                    x = (0, k.A)({
                         location: "UserProfileApplicationWidget",
                         applicationId: m?.id,
-                        source: P.GameProfileSources.UserProfileApplicationWidget,
+                        source: R.GameProfileSources.UserProfileApplicationWidget,
                         sourceUserId: n.id,
                         trackEntryPointImpression: !0,
                     }),
                     {
                         fetched: p,
-                        hasAlreadyLinked: I,
-                        canStartAuthorization: j,
+                        hasAlreadyLinked: j,
+                        canStartAuthorization: I,
                         startAuthorization: C,
                         token: b,
                     } = (0, v.RD)(f),
                     { analyticsLocations: y } = (0, A.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
                     N = r.useCallback(() => {
-                        j &&
+                        I &&
                             (t({
-                                action: I
+                                action: j
                                     ? "PRESS_APPLICATION_WIDGET_LINKED_RECONNECT"
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
                             C({ analyticsLocations: y }));
-                    }, [j, I, C, t, l.applicationId, y]),
-                    D = null == s && p && !I && j,
+                    }, [I, j, C, t, l.applicationId, y]),
+                    D = null == s && p && !j && I,
                     _ =
                         null == s &&
                         p &&
-                        I &&
                         j &&
+                        I &&
                         null != b &&
                         !Array.from(c._.APPLICATION_IDENTITIES_SCOPES).some((e) => b.scopes.includes(e)) &&
                         !b.scopes.includes(c.F.SDK_SOCIAL_LAYER) &&
@@ -199,9 +199,9 @@ let M = Object.assign(
                     headerTitle: G,
                 };
             })(e),
-            H = (0, b.A)(t.id, n.applicationId),
-            K = e.rendererProps ?? H,
-            Y = (0, _.A)(n.applicationId, B.isCurrentUser),
+            B = (0, b.A)(t.id, n.applicationId),
+            K = e.rendererProps ?? B,
+            Y = (0, _.A)(n.applicationId, H.isCurrentUser),
             q = (function (e, t) {
                 let { pending: n, refresh: r } = (0, N.A)(e);
                 return t
@@ -222,9 +222,9 @@ let M = Object.assign(
                 })(e)
                     ? C.hO
                     : void 0,
-            V = K.surfaceConfigs[o.m.WIDGET_TOP],
-            Z = K.surfaceConfigs[o.m.WIDGET_BOTTOM];
-        return null == V || null == Z
+            Z = K.surfaceConfigs[o.m.WIDGET_TOP],
+            V = K.surfaceConfigs[o.m.WIDGET_BOTTOM];
+        return null == Z || null == V
             ? null
             : (0, i.jsxs)(S.A, {
                   userId: t.id,
@@ -237,12 +237,12 @@ let M = Object.assign(
                   headerClassName: O.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != B.game
+                          null != H.game
                               ? (0, i.jsx)(p.Dr, {
                                     id: "view-game-profile",
-                                    label: "View Game Profile",
-                                    leadingAccessory: { type: "icon", icon: I.GameControllerIcon },
-                                    action: B.openGameProfileModal,
+                                    label: D.intl.string(D.t.ajHoOr),
+                                    leadingAccessory: { type: "icon", icon: j.GameControllerIcon },
+                                    action: H.openGameProfileModal,
                                 })
                               : null,
                           q,
@@ -252,19 +252,19 @@ let M = Object.assign(
                       (0, i.jsx)(s.kH, {
                           ...K,
                           surface: o.m.WIDGET_TOP,
-                          surfaceConfig: V,
-                          header: B.headerTitle,
+                          surfaceConfig: Z,
+                          header: H.headerTitle,
                           renderText: J,
                       }),
-                      (0, i.jsx)(j.c, {}),
-                      (0, i.jsx)(s.kH, { ...K, surface: o.m.WIDGET_BOTTOM, surfaceConfig: Z, renderText: J }),
+                      (0, i.jsx)(I.c, {}),
+                      (0, i.jsx)(s.kH, { ...K, surface: o.m.WIDGET_BOTTOM, surfaceConfig: V, renderText: J }),
                       (0, i.jsx)(G, {
-                          isCurrentUser: B.isCurrentUser,
+                          isCurrentUser: H.isCurrentUser,
                           isLoading: K.isLoading,
                           hasData: K.hasIdentity,
-                          showConnectCta: B.showConnectCta,
-                          showReconnectCta: B.showReconnectCta,
-                          handleConnect: B.handleConnect,
+                          showConnectCta: H.showConnectCta,
+                          showReconnectCta: H.showReconnectCta,
+                          handleConnect: H.handleConnect,
                           disableCTA: l,
                           disableCTAActions: !0 === f || !1 !== Y,
                           cta: h,
