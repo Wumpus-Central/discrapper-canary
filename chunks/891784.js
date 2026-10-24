@@ -23,50 +23,51 @@ function s(e, t) {
     };
 }
 function r(e) {
-    let t = s(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
-        n = (function (e) {
-            let t = e?.startsWith(d) === !0 ? e.slice(d.length) : e;
-            if (null == t || !/^\d+$/.test(t)) return null;
-            let n = l.default.extractTimestamp(t);
-            return Number.isFinite(n) && n > 0 ? n : null;
-        })(e.id);
+    var t;
+    let n,
+        r = s(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
+        u =
+            ((t = e.id),
+            null != (n = t?.startsWith(d) === !0 ? t.slice(d.length) : t) && l.default.isProbablyAValidSnowflake(n)
+                ? l.default.extractTimestamp(n)
+                : null);
     if (
-        (null != n && ("assistant" === e.role || null == e.ts) && (t.created_at = n),
+        (null != u && ("assistant" === e.role || null == e.ts) && (r.created_at = u),
         "assistant" === e.role && null != e.ts)
     ) {
-        let n = Date.parse(e.ts);
-        Number.isFinite(n) && (t.settled_at = n);
+        let t = Date.parse(e.ts);
+        Number.isFinite(t) && (r.settled_at = t);
     }
-    for (let n of (null != e.kind && (t.kind = e.kind),
-    "interrupted" === e.kind && ((t.interrupted = !0), (t.content = ""), (t.finished = !0)),
-    null != e.proposal && (t.proposal = e.proposal),
-    null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
-    null != e.publish_cta && (t.publishCta = e.publish_cta),
-    null != e.publish_notice && (t.publishNotice = e.publish_notice),
-    null != e.project_event && (t.projectEvent = e.project_event),
-    "context_boundary" === e.kind && (t.finished = !0),
-    null != e.context_switch && (t.contextSwitch = e.context_switch),
-    null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
-    null != e.restore_proposal && (t.restoreProposal = e.restore_proposal),
-    null != e.publish_schedule_proposal && (t.publishScheduleProposal = e.publish_schedule_proposal),
-    null != e.app_build_request && (t.appBuildRequest = e.app_build_request),
-    null != e.source_sha && (t.sourceSha = e.source_sha),
-    null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (t.todos = e.todos),
+    for (let t of (null != e.kind && (r.kind = e.kind),
+    "interrupted" === e.kind && ((r.interrupted = !0), (r.content = ""), (r.finished = !0)),
+    null != e.proposal && (r.proposal = e.proposal),
+    null != e.ideas && e.ideas.length > 0 && (r.ideas = e.ideas),
+    null != e.publish_cta && (r.publishCta = e.publish_cta),
+    null != e.publish_notice && (r.publishNotice = e.publish_notice),
+    null != e.project_event && (r.projectEvent = e.project_event),
+    "context_boundary" === e.kind && (r.finished = !0),
+    null != e.context_switch && (r.contextSwitch = e.context_switch),
+    null != e.clarification && e.clarification.questions.length > 0 && (r.clarification = e.clarification),
+    null != e.restore_proposal && (r.restoreProposal = e.restore_proposal),
+    null != e.publish_schedule_proposal && (r.publishScheduleProposal = e.publish_schedule_proposal),
+    null != e.app_build_request && (r.appBuildRequest = e.app_build_request),
+    null != e.source_sha && (r.sourceSha = e.source_sha),
+    null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (r.todos = e.todos),
     null != e.steps
-        ? (t.steps = (0, i.Zu)(e.steps))
+        ? (r.steps = (0, i.Zu)(e.steps))
         : null != e.events &&
-          (t.steps = e.events.flatMap((e) =>
+          (r.steps = e.events.flatMap((e) =>
               "todos" === e.type ? [{ type: "step", kind: "todos", items: e.items }] : [],
           )),
-    null != e.secret_request && e.secret_request.fields.length > 0 && (t.secretRequest = e.secret_request),
-    null != e.settings_request && (t.settingsRequest = e.settings_request),
-    null != e.intake && e.intake.questions.length > 0 && (t.intake = e.intake),
+    null != e.secret_request && e.secret_request.fields.length > 0 && (r.secretRequest = e.secret_request),
+    null != e.settings_request && (r.settingsRequest = e.settings_request),
+    null != e.intake && e.intake.questions.length > 0 && (r.intake = e.intake),
     e.steps ?? []))
-        ("publish_schedule_proposal" === n.kind &&
-            null != n.publish_schedule_proposal &&
-            (t.publishScheduleProposal = n.publish_schedule_proposal),
-            "awaiting_user" === n.kind && "secrets" === n.action && (t.awaitingUser = { action: n.action }));
-    return t;
+        ("publish_schedule_proposal" === t.kind &&
+            null != t.publish_schedule_proposal &&
+            (r.publishScheduleProposal = t.publish_schedule_proposal),
+            "awaiting_user" === t.kind && "secrets" === t.action && (r.awaitingUser = { action: t.action }));
+    return r;
 }
 function u(e) {
     let t = e.map(r),
