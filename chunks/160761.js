@@ -137,7 +137,7 @@ function R(e, t, n, a) {
         o = null != e ? (null == s ? null : s?.[e]) : null,
         d = o?.lastDismissedObjectId,
         u = null;
-    if (null != e) {
+    if (null != e && "" !== t) {
         let n = !(0, f.P3)(e);
         l.A.hasLoaded(p.oD.PRELOADED_USER_SETTINGS)
             ? (u = n && (null == d || 1 === c.default.compare(t, d)) ? e : null)
