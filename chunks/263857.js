@@ -3637,12 +3637,12 @@ class sG extends nF {
                                     !g &&
                                         (0, r.jsxs)(r.Fragment, {
                                             children: [
+                                                null != _ ? (0, r.jsx)(so, { frameId: _ }) : null,
                                                 this.renderChannelInfo(),
                                                 e.type === H.rbe.GUILD_APP
                                                     ? (0, r.jsx)(sc, { channel: e, isSuggestedSection: x })
                                                     : null,
                                                 this.renderInviteButton(),
-                                                null != _ ? (0, r.jsx)(so, { frameId: _ }) : null,
                                                 this.renderEditButton(),
                                             ],
                                         }),
