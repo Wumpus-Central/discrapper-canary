@@ -208,17 +208,13 @@
 
 .creator_d6dae9 {
     border-radius: var(--radius-xs);
-    color: var(--text-subtle);
+    color: var(--text-strong);
     cursor: pointer;
     min-width: 0
 }
 
 .creator_d6dae9>:first-child {
     flex-shrink: 0
-}
-
-.creator_d6dae9:hover {
-    color: var(--text-default)
 }
 
 .popout__76f04 {
@@ -725,4 +721,4 @@
     width: 139px
 }
 
-/*# sourceMappingURL=400255.f101bb2ef39abe07.css.map*/
+/*# sourceMappingURL=400255.2502ab3c6b5c4b6f.css.map*/

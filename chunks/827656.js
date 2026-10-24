@@ -45,7 +45,7 @@ function x(e) {
                                       variant: "text-sm/normal",
                                       color: "none",
                                       lineClamp: 1,
-                                      children: g.intl.formatToPlainString(m.default["6/x9LD"], { name: (0, d.mG)(t) }),
+                                      children: g.intl.format(m.default["6/x9LD"], { name: (0, d.mG)(t) }),
                                   }),
                               ],
                           })
