@@ -5880,73 +5880,80 @@ function iR(e) {
     let ep = E.intl.string(ee ? E.t.iTcuma : E.t.dcl9MQ),
         eg = i.useCallback(
             (e) => {
-                var t;
-                if (null == r) return;
-                let a = l.questions
-                    .map((t, n) => ({ question: t, index: n, answer: e[t.id] }))
-                    .filter((e) => null != e.answer && "" !== e.answer.text.trim())
-                    .map((e) => {
-                        let { question: t, index: n, answer: l } = e;
-                        return `${n + 1}. ${t.question} \u{2192} ${l.text.trim()}`;
-                    })
-                    .join("\n");
-                if ("" !== a) {
-                    let i;
-                    ((t = () => {
-                        let t;
-                        return r(
-                            a,
-                            (t = l.questions.flatMap((t) => {
-                                let n = e[t.id];
-                                if (null == n || "" === n.text.trim()) return [];
-                                let l = "option" === n.kind ? [n.optionId] : "multi" === n.kind ? n.optionIds : [],
-                                    r =
-                                        "custom" === n.kind
-                                            ? n.text.trim()
-                                            : "multi" === n.kind || "entities" === n.kind
-                                              ? n.custom
-                                              : void 0,
-                                    a = "entities" === n.kind ? n.entities : [],
-                                    i = "entities" === n.kind && a.length > 0 ? n.guildId : void 0,
-                                    s = "image" === n.kind || "multi" === n.kind ? n.attachment : void 0;
-                                return [
-                                    {
-                                        question_id: t.id,
-                                        option_ids: l,
-                                        ...(null != r && "" !== r ? { custom: r } : {}),
-                                        ...(null != s ? { attachment_id: s.id } : {}),
-                                        ...(a.length > 0 ? { entities: a } : {}),
-                                        ...(null != i ? { guild_id: i } : {}),
-                                    },
-                                ];
-                            })).length > 0
-                                ? { clarification_id: l.id, answers: t }
-                                : null,
-                            l.questions.flatMap((t) => {
-                                let n = e[t.id];
-                                return null == n || "" === n.text.trim()
-                                    ? []
-                                    : "image" === n.kind || ("multi" === n.kind && null != n.attachment)
-                                      ? [n.attachment]
-                                      : [];
+                null != r &&
+                    (function (e, t, n, l, r) {
+                        var a;
+                        let i = t.questions
+                            .map((e, t) => ({ question: e, index: t, answer: n[e.id] }))
+                            .filter((e) => null != e.answer && "" !== e.answer.text.trim())
+                            .map((e) => {
+                                let { question: t, index: n, answer: l } = e;
+                                return `${n + 1}. ${t.question} \u{2192} ${l.text.trim()}`;
+                            })
+                            .join("\n");
+                        if ("" !== i) {
+                            let s;
+                            ((a = () => {
+                                let e;
+                                return r(
+                                    i,
+                                    (e = t.questions.flatMap((e) => {
+                                        let t = n[e.id];
+                                        if (null == t || "" === t.text.trim()) return [];
+                                        let l =
+                                                "option" === t.kind
+                                                    ? [t.optionId]
+                                                    : "multi" === t.kind
+                                                      ? t.optionIds
+                                                      : [],
+                                            r =
+                                                "custom" === t.kind
+                                                    ? t.text.trim()
+                                                    : "multi" === t.kind || "entities" === t.kind
+                                                      ? t.custom
+                                                      : void 0,
+                                            a = "entities" === t.kind ? t.entities : [],
+                                            i = "entities" === t.kind && a.length > 0 ? t.guildId : void 0,
+                                            s = "image" === t.kind || "multi" === t.kind ? t.attachment : void 0;
+                                        return [
+                                            {
+                                                question_id: e.id,
+                                                option_ids: l,
+                                                ...(null != r && "" !== r ? { custom: r } : {}),
+                                                ...(null != s ? { attachment_id: s.id } : {}),
+                                                ...(a.length > 0 ? { entities: a } : {}),
+                                                ...(null != i ? { guild_id: i } : {}),
+                                            },
+                                        ];
+                                    })).length > 0
+                                        ? { clarification_id: t.id, answers: e }
+                                        : null,
+                                    t.questions.flatMap((e) => {
+                                        let t = n[e.id];
+                                        return null == t || "" === t.text.trim()
+                                            ? []
+                                            : "image" === t.kind || ("multi" === t.kind && null != t.attachment)
+                                              ? [t.attachment]
+                                              : [];
+                                    }),
+                                );
                             }),
-                        );
-                    }),
-                        0 ===
-                        (i = l.questions.flatMap((t) => {
-                            let n = e[t.id];
-                            return !0 === t.link && n?.kind === "entities"
-                                ? n.entities.map((e) => ({ target: e.id, build: I[t.id] }))
-                                : [];
-                        })).length
-                            ? t()
-                            : Promise.allSettled(
-                                  i.map((e) => {
-                                      let { target: t, build: l } = e;
-                                      return (0, aJ.Ol)(t, n, l);
-                                  }),
-                              ).then(t));
-                }
+                                0 ===
+                                (s = t.questions.flatMap((e) => {
+                                    let t = n[e.id];
+                                    return !0 === e.link && t?.kind === "entities"
+                                        ? t.entities.map((t) => ({ target: t.id, build: l[e.id] }))
+                                        : [];
+                                })).length
+                                    ? a()
+                                    : Promise.allSettled(
+                                          s.map((t) => {
+                                              let { target: n, build: l } = t;
+                                              return (0, aJ.Ol)(n, e, l);
+                                          }),
+                                      ).then(a));
+                        }
+                    })(n, l, e, I, r);
             },
             [l, I, r, n],
         ),
@@ -6063,53 +6070,40 @@ function iR(e) {
         eM = i.useCallback(() => R(!0), []),
         e_ = i.useCallback(() => R(!1), []),
         eR = eo.controlsFor(J, W),
-        eP = i.useCallback(() => {
-            if (null != eE) {
-                "" !== eE.text && eb(eE);
-                return;
-            }
-            if (null != eA) {
-                "" !== eA.text && eb(eA);
-                return;
-            }
-            let e = el.trim();
-            "" !== e && eb({ kind: "custom", text: e });
-        }, [el, eA, eE, eb]),
-        [eL, e$] = i.useState(!1),
-        [eD, eO] = i.useState(!1);
+        eP = i.useMemo(
+            () =>
+                (function (e, t, n) {
+                    if (null != e) return "" !== e.text ? e : null;
+                    if (null != t) return "" !== t.text ? t : null;
+                    let l = n.trim();
+                    return "" !== l ? { kind: "custom", text: l } : null;
+                })(eE, eA, el),
+            [el, eA, eE],
+        ),
+        eL = i.useCallback(() => {
+            null != eP && eb(eP);
+        }, [eP, eb]),
+        [e$, eD] = i.useState(!1),
+        [eO, eq] = i.useState(!1);
     i.useEffect(() => {
         let e = 0,
             t = requestAnimationFrame(() => {
-                e = requestAnimationFrame(() => e$(!0));
+                e = requestAnimationFrame(() => eD(!0));
             });
         return () => {
             (cancelAnimationFrame(t), cancelAnimationFrame(e));
         };
     }, []);
-    let eq = i.useCallback(() => {
-            null != s && (eO(!0), setTimeout(s, 150));
+    let ez = i.useCallback(() => {
+            null != s && (eq(!0), setTimeout(s, 150));
         }, [s]),
-        ez = i.useMemo(
-            () =>
-                null != eE
-                    ? "" !== eE.text
-                        ? eE
-                        : null
-                    : null != eA
-                      ? "" !== eA.text
-                          ? eA
-                          : null
-                      : "" !== el.trim()
-                        ? { kind: "custom", text: el.trim() }
-                        : (f[J.id] ?? null),
-            [f, el, eA, eE, J.id],
-        ),
-        eF = null != ez && !W,
-        eU = Z === X - 1,
-        eB = i.useCallback(() => {
-            null == ez || W || eb(ez);
-        }, [W, ez, eb]),
-        eK = i.useCallback(
+        eF = eP ?? (null == eE && null == eA ? (f[J.id] ?? null) : null),
+        eU = null != eF && !W,
+        eB = Z === X - 1,
+        eK = i.useCallback(() => {
+            null == eF || W || eb(eF);
+        }, [W, eF, eb]),
+        eH = i.useCallback(
             (e) => {
                 e.altKey ||
                     e.ctrlKey ||
@@ -6120,11 +6114,11 @@ function iR(e) {
                     ((!(0, eG.vq)(e.target, HTMLElement) || null == e.target.closest("[data-conjure-image-options]")) &&
                         ("ArrowLeft" === e.key && ek
                             ? (e.preventDefault(), (ew ?? ey)())
-                            : "ArrowRight" === e.key && eF && (e.preventDefault(), eB())));
+                            : "ArrowRight" === e.key && eU && (e.preventDefault(), eK())));
             },
-            [ew, ek, eF, ey, eB],
+            [ew, ek, eU, ey, eK],
         ),
-        eH = ei
+        eV = ei
             ? null
             : (0, a.jsxs)("div", {
                   className: ii.Xy,
@@ -6149,7 +6143,7 @@ function iR(e) {
                               "Enter" !== e.key ||
                                   e.shiftKey ||
                                   e.nativeEvent.isComposing ||
-                                  (e.preventDefault(), eP());
+                                  (e.preventDefault(), eL());
                           },
                           placeholder: E.intl.string(a1(J) ? S.default.yLN1x6 : S.default["tOC+tn"]),
                           "aria-label": E.intl.formatToPlainString(S.default["4JeYPB"], { question: J.question }),
@@ -6161,7 +6155,7 @@ function iR(e) {
                   ],
               });
     return (0, a.jsxs)("section", {
-        className: h()(ii.$O, { [ii.fI]: eL && !eD, [ii.Oh]: eD }),
+        className: h()(ii.$O, { [ii.fI]: e$ && !eO, [ii.Oh]: eO }),
         role: "dialog",
         "aria-label": J.question,
         "data-conjure-clarification": l.id,
@@ -6170,7 +6164,7 @@ function iR(e) {
         "data-picker-open": _ && !F ? "true" : void 0,
         "data-step": Z,
         tabIndex: -1,
-        onKeyDown: eK,
+        onKeyDown: eH,
         children: [
             (0, a.jsxs)("div", {
                 className: ii.rf,
@@ -6213,7 +6207,7 @@ function iR(e) {
                                 ? null
                                 : (0, a.jsx)(C.D, {
                                       className: h()(aB.gb, aB.Q7),
-                                      onClick: eq,
+                                      onClick: ez,
                                       "aria-label": E.intl.string(S.default.qVXlk0),
                                       "data-conjure-clarification-close": !0,
                                       children: (0, a.jsx)(eX.P, {
@@ -6283,7 +6277,7 @@ function iR(e) {
                                                   onChange: eI,
                                                   onFocus: eM,
                                                   onBlur: e_,
-                                                  fallback: !1 === J.allow_custom ? eH : null,
+                                                  fallback: !1 === J.allow_custom ? eV : null,
                                               })
                                             : null,
                                         !0 === J.link && eS.length > 0 && null == I[J.id]
@@ -6330,7 +6324,7 @@ function iR(e) {
                                                   children: J.note,
                                               })
                                             : null,
-                                        !1 === J.allow_custom ? null : eH,
+                                        !1 === J.allow_custom ? null : eV,
                                     ],
                                 }),
                                 null == D
@@ -6386,13 +6380,13 @@ function iR(e) {
                                       : (0, a.jsx)(eT.$, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: eU
+                                            text: eB
                                                 ? (o ?? E.intl.string(E.t.geKm7t))
                                                 : E.intl.string(S.default.w1nRmT),
-                                            disabled: !eF,
-                                            onClick: eB,
+                                            disabled: !eU,
+                                            onClick: eK,
                                             "data-conjure-clarification-next": !0,
-                                            "data-submits": eU ? "true" : void 0,
+                                            "data-submits": eB ? "true" : void 0,
                                         }),
                               ],
                           }),
