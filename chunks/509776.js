@@ -7666,12 +7666,12 @@ let sK = {
 function sW(e) {
     return sV.find((t) => sT(e, t)) ?? null;
 }
-let sX = 1.8860510805500983;
+let sX = 1920 / 1018;
 function sZ(e, t) {
     return `${Number(((e / t) * 100).toFixed(3))}%`;
 }
-let sY = sZ(24, 339.3333333333333),
-    sJ = sZ(24, 640);
+let sY = sZ(24, 1018),
+    sJ = sZ(24, 1920);
 var sQ = n(176999),
     s0 = (((l = {}).IMAGE = "image"), l),
     s1 = (((r = {}).PRIVATE = "private"), (r.PUBLIC = "public"), r),
@@ -8566,8 +8566,8 @@ function o8(e) {
     let t,
         { projectId: n, src: l, alt: r, size: i, onError: s } = e,
         o =
-            ((t = Math.min(1, 592 / i.width, 291.3333333333333 / i.height)),
-            { width: sZ(i.width * t, 640), height: sZ(i.height * t, 339.3333333333333) });
+            ((t = Math.min(1, 1872 / i.width, 970 / i.height)),
+            { width: sZ(i.width * t, 1920), height: sZ(i.height * t, 1018) });
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(sR, { projectId: n }),
