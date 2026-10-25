@@ -415,7 +415,9 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    max-height: 40vh;
     outline: none;
+    overflow-y: auto;
     padding: var(--space-12) var(--space-16);
     resize: none;
     width: 100%
@@ -1068,4 +1070,4 @@
     opacity: .6
 }
 
-/*# sourceMappingURL=ae96828b723f0af8.css.map*/
+/*# sourceMappingURL=be5cd8294843d9ca.css.map*/
