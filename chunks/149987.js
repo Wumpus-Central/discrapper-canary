@@ -37,8 +37,7 @@ function d(e, t, n) {
         ((t.todosAt = e.length), e.push(n), null != n.turn_seq && t.seenSeq.add(n.turn_seq));
         return;
     }
-    let l = e[t.todosAt];
-    (null != l.turn_seq && t.seenSeq.delete(l.turn_seq),
-        (e[t.todosAt] = n),
-        null != n.turn_seq && t.seenSeq.add(n.turn_seq));
+    null != n.turn_seq && t.seenSeq.add(n.turn_seq);
+    let l = e[t.todosAt].turn_seq;
+    (null != n.turn_seq && null != l && n.turn_seq < l) || (e[t.todosAt] = n);
 }

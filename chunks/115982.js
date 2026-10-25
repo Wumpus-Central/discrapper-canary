@@ -250,14 +250,15 @@ function g(e) {
     for (let e of a.steps) s.add(e.segment);
     for (let e of a.tasks) s.add(e.task.segment);
     let u = l.find((e) => "todos" === e.type)?.segment,
-        d = Math.max(0, ...i.keys(), ...s, ...(null != u ? [u] : [])),
-        o = [];
-    for (let e = 0; e <= d; e++) {
+        d = null == u ? void 0 : Math.max(u, ...s),
+        o = Math.max(0, ...i.keys(), ...s, ...(null != d ? [d] : [])),
+        c = [];
+    for (let e = 0; e <= o; e++) {
         let t = i.get(e),
             n = s.has(e),
-            l = u === e;
+            l = d === e;
         (null != t || n || l) &&
-            o.push({
+            c.push({
                 key: t?.key ?? `work-${e}`,
                 index: e,
                 ...(null != t ? { prose: t } : {}),
@@ -266,7 +267,7 @@ function g(e) {
                 ...(r.has(e) ? { durationMs: r.get(e) } : {}),
             });
     }
-    return o;
+    return c;
 }
 function p(e, t) {
     let { turnActive: n } = t,
