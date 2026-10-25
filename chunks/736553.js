@@ -3,11 +3,11 @@ class r {
     socket = null;
     supportsPublishOptions = !1;
     open(e) {
-        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: i } = e;
+        let { url: t, ticket: n, templateId: r, onEvent: s, onClose: o, onError: l } = e;
         this.close();
-        let l = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
+        let i = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
             a = new URLSearchParams({ ticket: n, debug: "on_demand", ...(null != r ? { template: r } : {}) }),
-            c = new WebSocket(`${l}/agent/ws?${a}`);
+            c = new WebSocket(`${i}/agent/ws?${a}`);
         ((this.socket = c),
             c.addEventListener("message", (e) => {
                 let t;
@@ -22,7 +22,7 @@ class r {
                 }
             }),
             c.addEventListener("error", (e) => {
-                this.socket === c && i?.(e);
+                this.socket === c && l?.(e);
             }),
             c.addEventListener("close", () => {
                 this.socket === c && o?.();
@@ -37,6 +37,7 @@ class r {
             templateId: r,
             remix: s,
             clarificationAnswers: o,
+            linkEmbeds: l,
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(
@@ -48,6 +49,7 @@ class r {
                 template_id: r,
                 remix: s,
                 clarification_answers: o,
+                link_embeds: l,
             }),
         );
     }

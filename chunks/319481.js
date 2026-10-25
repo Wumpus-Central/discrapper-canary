@@ -1,49 +1,50 @@
 (n.r(t),
     n.d(t, {
-        subscribeDebugBacklog: () => K,
-        default: () => ec,
-        prepareTemplate: () => et,
-        resetHistoryPaging: () => eo,
+        subscribeDebugBacklog: () => z,
+        default: () => ed,
+        prepareTemplate: () => en,
+        resetHistoryPaging: () => el,
         closeConnection: () => ei,
-        loadOlderHistory: () => es,
-        stageModelSettings: () => ee,
-        closeAllConnections: () => el,
-        ensureConnection: () => z,
-        withdrawUserMessage: () => X,
-        interruptTurn: () => Z,
-        sendUserMessage: () => Q,
-        optimisticMessageId: () => D,
-        showUserMessage: () => V,
+        loadOlderHistory: () => eo,
+        stageModelSettings: () => et,
+        closeAllConnections: () => ea,
+        ensureConnection: () => Q,
+        withdrawUserMessage: () => Z,
+        interruptTurn: () => ee,
+        sendUserMessage: () => V,
+        optimisticMessageId: () => L,
+        showUserMessage: () => X,
     }),
     n(321073));
 var r = n(158390),
     s = n(17928),
     o = n(73153),
-    i = n(195880),
-    l = n(287809),
+    l = n(195880),
+    i = n(287809),
     a = n(308081),
     c = n(245179),
     d = n(940874),
-    u = n(805330),
-    p = n(616e3),
-    h = n(207438),
-    _ = n(709753),
-    f = n(788493),
-    g = n(223347),
+    u = n(120234),
+    p = n(805330),
+    h = n(616e3),
+    _ = n(207438),
+    f = n(709753),
+    g = n(788493),
+    E = n(223347),
     S = n(392739),
-    E = n(463660),
-    m = n(260498),
+    m = n(463660),
+    y = n(260498),
     O = n(371169),
-    y = n(962998),
-    b = n(416473),
-    T = n(525530),
+    b = n(962998),
+    T = n(416473),
+    w = n(525530),
     N = n(743082),
-    w = n(385081),
-    k = n(1371),
-    C = n(736553),
-    R = n(642785);
+    k = n(385081),
+    C = n(1371),
+    R = n(736553),
+    A = n(642785);
 n(205816);
-let A = {
+let U = {
     app_build_request: !0,
     app_profile_updated: !0,
     assistant_delta: !0,
@@ -89,39 +90,39 @@ let A = {
     turn_result: !0,
     usage: !0,
 };
-var U = n(649121),
-    v = n(975189);
+var v = n(649121),
+    P = n(975189);
 (n(643210), n(285411), n(933294), n(944142), n(557744), n(714917), n(722701), n(894443), n(442331));
-let P = new Map(),
-    J = new Map(),
+let J = new Map(),
+    M = new Map(),
     I = new Set();
-function M(e, t) {
+function D(e, t) {
     o.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-function D(e) {
+function L(e) {
     return `optimistic:${e}`;
 }
-let L = new Map();
+let x = new Map();
 function G(e, t, n) {
-    let { content: r, nonce: s, attachments: i } = t;
-    (L.set(s, l.default.getCurrentUser()?.id),
+    let { content: r, nonce: s, attachments: l } = t;
+    (x.set(s, i.default.getCurrentUser()?.id),
         o.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: r,
-            id: D(s),
-            userId: l.default.getCurrentUser()?.id,
+            id: L(s),
+            userId: i.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
-            attachments: i,
+            attachments: l,
             held: n,
         }));
 }
-function x(e, t, n) {
+function B(e, t, n) {
     let r = t.pendingSends;
     for (let s of ((t.pendingSends = []), r)) (G(e, s), (0, d.Gu)(e, n));
 }
-let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...E.VY, ...y.qy, ...b.Rd, ...T.ow, ...N.WO, ...u.V5 },
-    W = {
+let W = { ...a.m, ...d.NW, ..._.eI, ...f.x9, ...g.U, ...E.p, ...m.VY, ...b.qy, ...T.Rd, ...w.ow, ...N.WO, ...p.V5 },
+    j = {
         app_build_request(e, t) {
             let { projectId: n } = t;
             null != e.app_build_request &&
@@ -133,11 +134,11 @@ let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...E.VY, ...y.qy, .
                 });
         },
         ...d.Un,
-        ...h.d5,
-        ...E.uk,
+        ..._.d5,
+        ...m.uk,
         project_named(e, t) {
             let { projectId: n } = t,
-                r = m.Ay.getProject(n);
+                r = y.Ay.getProject(n);
             (null != r &&
                 null != e.name &&
                 o.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: { ...r, name: e.name } }),
@@ -147,7 +148,7 @@ let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...E.VY, ...y.qy, .
             let { projectId: n } = t;
             (0, O._b)(n).catch(() => {});
         },
-        ...y.rS,
+        ...b.rS,
     },
     H = new Set([
         "hello",
@@ -161,10 +162,10 @@ let B = { ...a.m, ...d.NW, ...h.eI, ..._.x9, ...f.U, ...g.p, ...E.VY, ...y.qy, .
         "request_upstream_ticket",
         "host_approvals",
     ]);
-async function j(e, t) {
-    (t.ws.close(), t.helloSeen && (0, R.$Y)(e));
+async function q(e, t) {
+    (t.ws.close(), t.helloSeen && (0, A.$Y)(e));
     try {
-        let { ticket: n, baseUrl: r } = await (0, R.dv)(e);
+        let { ticket: n, baseUrl: r } = await (0, A.dv)(e);
         if (t.disposed) return;
         t.ws.open({
             url: r,
@@ -172,12 +173,12 @@ async function j(e, t) {
             templateId: t.warmTemplateId ?? void 0,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    if ((console.debug("[conjure] ws event", r.type), !H.has(r.type) && "open" !== J.get(t)))
+                    if ((console.debug("[conjure] ws event", r.type), !H.has(r.type) && "open" !== M.get(t)))
                         return void n.pendingEvents.push(r);
                     let s = { projectId: t, ws: n.ws };
                     switch (r.type) {
                         case "history_page":
-                            if (r.requested !== er.get(t) || (er.delete(t), !0 === r.failed)) return;
+                            if (r.requested !== es.get(t) || (es.delete(t), !0 === r.failed)) return;
                             o.h.dispatch({
                                 type: "CONJURE_CHAT_HISTORY_PREPEND",
                                 projectId: t,
@@ -200,19 +201,19 @@ async function j(e, t) {
                                 cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                                 degraded: !0 === r.degraded,
                             }),
-                                er.delete(t));
-                            let i = n.pendingEvents;
-                            for (let r of ((n.pendingEvents = []), M(t, "open"), i)) e(t, n, r);
-                            (F.get(t) ?? 0) > 0 && $(t, n);
-                            let l = n.pendingModelSettings;
-                            if (((n.pendingModelSettings = null), null != l))
+                                es.delete(t));
+                            let l = n.pendingEvents;
+                            for (let r of ((n.pendingEvents = []), D(t, "open"), l)) e(t, n, r);
+                            (F.get(t) ?? 0) > 0 && K(t, n);
+                            let i = n.pendingModelSettings;
+                            if (((n.pendingModelSettings = null), null != i))
                                 try {
-                                    n.ws.sendModelSettings(l);
+                                    n.ws.sendModelSettings(i);
                                 } catch (e) {
                                     console.error("[conjure] staged model settings send failed", e);
                                 }
                             let a = n.pendingTemplatePrep;
-                            ((n.pendingTemplatePrep = null), null != a && en(n, a));
+                            ((n.pendingTemplatePrep = null), null != a && er(n, a));
                             let c = n.pendingSends;
                             for (let e of ((n.pendingSends = []), c)) {
                                 G(t, e);
@@ -225,6 +226,7 @@ async function j(e, t) {
                                             templateId: e.templateId,
                                             remix: e.remix,
                                             clarificationAnswers: e.clarificationAnswers,
+                                            linkEmbeds: e.linkEmbeds,
                                         },
                                     );
                                 } catch (n) {
@@ -236,17 +238,17 @@ async function j(e, t) {
                             return;
                         }
                         case "user_message":
-                            let i, l, a;
-                            ((l = (i = null != r.nonce && L.has(r.nonce)) && null != r.nonce ? L.get(r.nonce) : void 0),
-                                (a = i && (null == l || null == r.user_id || l === r.user_id)) &&
+                            let l, i, a;
+                            ((i = (l = null != r.nonce && x.has(r.nonce)) && null != r.nonce ? x.get(r.nonce) : void 0),
+                                (a = l && (null == i || null == r.user_id || i === r.user_id)) &&
                                     null != r.nonce &&
-                                    L.delete(r.nonce),
+                                    x.delete(r.nonce),
                                 o.h.dispatch({
                                     type: "CONJURE_CHAT_MESSAGE_APPEND",
                                     projectId: t,
                                     content: r.content,
                                     id: r.id,
-                                    ...(a && null != r.nonce ? { optimisticId: D(r.nonce) } : {}),
+                                    ...(a && null != r.nonce ? { optimisticId: L(r.nonce) } : {}),
                                     userId: r.user_id,
                                     timestamp: r.ts,
                                     attachments: r.attachments,
@@ -256,7 +258,7 @@ async function j(e, t) {
                             !(function (e, t) {
                                 let { projectId: n } = t;
                                 if ("turn_result" === e.kind) {
-                                    ((0, w.hV)(n, e),
+                                    ((0, k.hV)(n, e),
                                         "deployed" === e.result &&
                                             o.h.dispatch({
                                                 type: "CONJURE_CHAT_TURN_PATCH",
@@ -275,25 +277,25 @@ async function j(e, t) {
                                             o.h.dispatch({ type: "CONJURE_CHAT_INTERRUPTED", projectId: n }));
                                     return;
                                 }
-                                let r = W[e.kind];
-                                null != r ? r(e, t) : Object.hasOwn(A, e.kind) && (0, d.OA)(n, e);
+                                let r = j[e.kind];
+                                null != r ? r(e, t) : Object.hasOwn(U, e.kind) && (0, d.OA)(n, e);
                             })(r, s);
                             return;
                         default:
-                            (B[r.type] ?? B.log)?.(r, s);
+                            (W[r.type] ?? W.log)?.(r, s);
                     }
                 })(e, t, n),
             onClose: () => {
-                ((0, y.Mz)(e, "Connection closed before the publish result arrived"),
-                (0, b.Fc)(e),
-                (0, y.BC)(e, "Connection closed before the draft arrived"),
+                ((0, b.Mz)(e, "Connection closed before the publish result arrived"),
+                (0, T.Fc)(e),
+                (0, b.BC)(e, "Connection closed before the draft arrived"),
                 (0, S.RP)(e),
                 t.disposed)
-                    ? M(e, "closed")
+                    ? D(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), M(e, "connecting"), t.backoff.fail(() => q(e)))
-                      : (M(e, "closed"),
-                        x(e, t, "Connection closed before the message was sent"),
+                      ? ((t.reconnectPending = !0), D(e, "connecting"), t.backoff.fail(() => $(e)))
+                      : (D(e, "closed"),
+                        B(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null),
                         (t.pendingTemplatePrep = null));
             },
@@ -303,26 +305,26 @@ async function j(e, t) {
         });
     } catch (n) {
         if ((console.error("[conjure] ws open failed", n), t.disposed)) return;
-        (M(e, "failed"),
-            x(e, t, n instanceof Error ? n.message : "ws open failed"),
+        (D(e, "failed"),
+            B(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
             (t.pendingTemplatePrep = null),
-            (0, y.Mz)(e, "Connection failed before the publish result arrived"),
-            (0, b.Fc)(e),
-            (0, y.BC)(e, "Connection failed before the draft arrived"),
-            (0, w.Hy)(e, {
+            (0, b.Mz)(e, "Connection failed before the publish result arrived"),
+            (0, T.Fc)(e),
+            (0, b.BC)(e, "Connection failed before the draft arrived"),
+            (0, k.Hy)(e, {
                 location: "connection",
-                code: w.xf.WS_OPEN_FAILED,
+                code: k.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
 }
-function q(e) {
+function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        n = P.get(e);
+        n = J.get(e);
     null == n &&
         ((n = {
-            ws: new C.u(),
+            ws: new R.u(),
             backoff: new r.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -334,8 +336,8 @@ function q(e) {
             warmTemplateId: null,
             debugOnDemand: !1,
         }),
-        P.set(e, n),
-        (0, v.Sm)(e, n.ws));
+        J.set(e, n),
+        (0, P.Sm)(e, n.ws));
     let s = n;
     ((s.warmTemplateId = t ?? s.warmTemplateId),
         (s.pendingEvents = []),
@@ -343,19 +345,19 @@ function q(e) {
         (s.debugOnDemand = !1),
         (s.disposed = !1),
         (s.reconnectPending = !1),
-        M(e, "connecting"),
-        j(e, s));
+        D(e, "connecting"),
+        q(e, s));
 }
 let F = new Map();
-function $(e, t) {
+function K(e, t) {
     t.debugOnDemand && t.ws.sendDebugSubscribe();
 }
-function K(e) {
+function z(e) {
     let t = F.get(e) ?? 0;
     F.set(e, t + 1);
-    let n = P.get(e);
+    let n = J.get(e);
     return (
-        0 === t && null != n && "open" === J.get(e) && $(e, n),
+        0 === t && null != n && "open" === M.get(e) && K(e, n),
         () => {
             let t = (F.get(e) ?? 1) - 1;
             t > 0 ? F.set(e, t) : F.delete(e);
@@ -363,81 +365,88 @@ function K(e) {
     );
 }
 function Y(e) {
-    let t = P.get(e);
+    let t = J.get(e);
     return (
         null != t &&
         ((t.disposed = !0),
         t.backoff.cancel(),
-        (0, y.Mz)(e, "Connection closed before the publish result arrived"),
-        (0, b.Fc)(e),
-        (0, y.BC)(e, "Connection closed before the draft arrived"),
+        (0, b.Mz)(e, "Connection closed before the publish result arrived"),
+        (0, T.Fc)(e),
+        (0, b.BC)(e, "Connection closed before the draft arrived"),
         t.ws.close(),
-        P.delete(e),
-        (0, v.ng)(e),
-        eo(e),
-        k.A.releasePreviewControl(e),
+        J.delete(e),
+        (0, P.ng)(e),
+        el(e),
+        C.A.releasePreviewControl(e),
         (0, S.RP)(e),
-        M(e, "closed"),
+        D(e, "closed"),
         !0)
     );
 }
-function z(e) {
+function Q(e) {
     let { templateId: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = P.get(e);
-    if (null == n) return void q(e, t ?? null);
-    let r = J.get(e);
-    ("closed" !== r && "failed" !== r) || n.reconnectPending || q(e);
+        n = J.get(e);
+    if (null == n) return void $(e, t ?? null);
+    let r = M.get(e);
+    ("closed" !== r && "failed" !== r) || n.reconnectPending || $(e);
 }
-function Q(e, t, n) {
+function V(e, t, n) {
     let {
             templateId: r,
             remix: s,
             clarificationAnswers: o,
-            nonce: l,
+            nonce: i,
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         a = t.trim(),
         c = null != n && n.length > 0 ? n : void 0;
     if ("" === a && null == c) return !1;
-    let u = {
+    let p = (0, u.aN)(a),
+        h = {
             content: a,
-            nonce: l ?? (0, i.m)(),
+            nonce: i ?? (0, l.m)(),
             attachments: c,
             templateId: r,
             remix: s,
             ...(null != o ? { clarificationAnswers: o } : {}),
+            ...(null != p ? { linkEmbeds: p } : {}),
         },
-        p = P.get(e);
-    if (null != p && ("connecting" === J.get(e) || p.reconnectPending)) return (p.pendingSends.push(u), !0);
-    G(e, u);
+        _ = J.get(e);
+    if (null != _ && ("connecting" === M.get(e) || _.reconnectPending)) return (_.pendingSends.push(h), !0);
+    G(e, h);
     try {
-        if (null == p) throw Error("Not connected");
+        if (null == _) throw Error("Not connected");
         return (
-            p.ws.sendUserMessage(
-                u.content,
-                u.nonce,
-                u.attachments?.map((e) => e.id),
-                { templateId: u.templateId, remix: u.remix, clarificationAnswers: u.clarificationAnswers },
+            _.ws.sendUserMessage(
+                h.content,
+                h.nonce,
+                h.attachments?.map((e) => e.id),
+                {
+                    templateId: h.templateId,
+                    remix: h.remix,
+                    clarificationAnswers: h.clarificationAnswers,
+                    linkEmbeds: h.linkEmbeds,
+                },
             ),
             !0
         );
     } catch (n) {
         console.error("[conjure] send failed", n);
         let t = n instanceof Error ? n.message : "send failed";
-        return (null == l && (0, d.Gu)(e, t), !1);
+        return (null == i && (0, d.Gu)(e, t), !1);
     }
 }
-function V(e, t, n) {
-    let { held: r, nonce: s = (0, i.m)() } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function X(e, t, n) {
+    let { held: r, nonce: s = (0, l.m)() } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return (
         G(e, { content: t.trim(), nonce: s, attachments: null != n && n.length > 0 ? n : void 0 }, r),
-        { nonce: s, messageKey: D(s) }
+        { nonce: s, messageKey: L(s) }
     );
 }
-function X(e, t) {
-    (L.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: D(t), withdrawn: !0 }));
+function Z(e, t) {
+    (x.delete(t), o.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: L(t), withdrawn: !0 }));
 }
-function Z(e) {
-    let t = P.get(e);
+function ee(e) {
+    let t = J.get(e);
     try {
         if (null == t) throw Error("Not connected");
         (t.ws.sendInterrupt(),
@@ -446,58 +455,58 @@ function Z(e) {
         console.error("[conjure] interrupt send failed", e);
     }
 }
-function ee(e, t) {
-    let n = P.get(e);
+function et(e, t) {
+    let n = J.get(e);
     null == n
         ? console.error("[conjure] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function et(e, t) {
-    let n = P.get(e);
+function en(e, t) {
+    let n = J.get(e);
     null == n
         ? console.error("[conjure] prepareTemplate with no connection \u2014 call ensureConnection first")
-        : "open" === J.get(e)
-          ? en(n, t)
+        : "open" === M.get(e)
+          ? er(n, t)
           : (n.pendingTemplatePrep = t);
 }
-function en(e, t) {
+function er(e, t) {
     try {
         e.ws.sendPrepareTemplate(t);
     } catch (e) {
         console.error("[conjure] template prepare send failed", e);
     }
 }
-let er = new Map();
-function es(e) {
+let es = new Map();
+function eo(e) {
     let t = (0, c.b)(e);
     if (null == t) return !1;
-    if (er.get(e) === t) return !0;
-    let n = P.get(e);
-    return null != n && "open" === J.get(e) && (er.set(e, t), n.ws.sendLoadHistory(t), !0);
+    if (es.get(e) === t) return !0;
+    let n = J.get(e);
+    return null != n && "open" === M.get(e) && (es.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-function eo(e) {
-    er.delete(e);
+function el(e) {
+    es.delete(e);
 }
 function ei(e) {
     Y(e);
 }
-function el() {
-    for (let e of Array.from(P.keys())) Y(e);
-    (L.clear(), (0, U.j_)());
+function ea() {
+    for (let e of Array.from(J.keys())) Y(e);
+    (x.clear(), (0, v.j_)());
 }
-class ea extends s.Ay.Store {
+class ec extends s.Ay.Store {
     initialize() {
-        this.waitFor(c.A, p.A, m.Ay, l.default);
+        this.waitFor(c.A, h.A, y.Ay, i.default);
     }
     getConnState(e) {
-        return J.get(e) ?? "connecting";
+        return M.get(e) ?? "connecting";
     }
 }
-let ec = new ea(o.h, {
+let ed = new ec(o.h, {
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
-        if (J.get(t) === n) return !1;
-        (J.set(t, n), ("closed" === n || "failed" === n) && I.delete(t));
+        if (M.get(t) === n) return !1;
+        (M.set(t, n), ("closed" === n || "failed" === n) && I.delete(t));
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
@@ -505,11 +514,11 @@ let ec = new ea(o.h, {
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = !1;
-        for (let e of Array.from(P.keys())) null == m.Ay.getProject(e) && Y(e) && (t = !0);
+        for (let e of Array.from(J.keys())) null == y.Ay.getProject(e) && Y(e) && (t = !0);
         if (!t) return !1;
     },
     LOGOUT: function () {
-        if (((0, U.j_)(), 0 === P.size)) return !1;
-        el();
+        if (((0, v.j_)(), 0 === J.size)) return !1;
+        ea();
     },
 });
