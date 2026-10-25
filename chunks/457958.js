@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => pH }));
+(n.r(t), n.d(t, { default: () => pW }));
 var l,
     r,
     a = n(477900),
@@ -10642,17 +10642,20 @@ function cN(e) {
         children: n,
     });
 }
-let cC = {
+function cC(e) {
+    return null != e && !e.publishing && "review_permissions" === e.action;
+}
+let cA = {
         id: "ideas_intro",
         priority: 1,
         resolve: function (e) {
-            let { turn: t, hasPublished: n, justRemixed: l } = e;
-            return (null != t && n) || l ? "card" : null;
+            let { turn: t, publish: n, hasPublished: l, justRemixed: r } = e;
+            return cC(n) ? null : (null != t && l) || r ? "card" : null;
         },
         dismissal: "app",
     },
-    cA = new Map();
-function cS(e, t, n) {
+    cS = new Map();
+function cE(e, t, n) {
     let l = 0;
     for (let r = e.length - 1; r >= 0 && e[r].created_at > t; r--) {
         let t = e[r];
@@ -10660,38 +10663,38 @@ function cS(e, t, n) {
     }
     return l;
 }
-function cE(e, t) {
+function cI(e, t) {
     return null != e && e > 0 && e < t;
 }
-let cI = "ideas",
-    cM = "live_behind",
-    c_ = "conjureTipDismissals",
-    cR = new Set(),
+let cM = "ideas",
+    c_ = "live_behind",
+    cR = "conjureTipDismissals",
     cP = new Set(),
-    cT = 0;
-function cL() {
-    let e = U.w.get(c_);
+    cT = new Set(),
+    cL = 0;
+function c$() {
+    let e = U.w.get(cR);
     return { forever: e?.forever ?? [], app: e?.app ?? {} };
 }
-function c$(e, t) {
+function cD(e, t) {
     switch (e.dismissal) {
         case void 0:
             return !1;
         case "session":
             var n;
-            return cR.has(((n = e.id), `${t}:${n}`));
+            return cP.has(((n = e.id), `${t}:${n}`));
         case "app":
-            return cL().app[t]?.includes(e.id) === !0;
+            return c$().app[t]?.includes(e.id) === !0;
         case "forever":
-            return cL().forever.includes(e.id);
+            return c$().forever.includes(e.id);
     }
 }
-function cD(e) {
-    return (cP.add(e), () => cP.delete(e));
+function cO(e) {
+    return (cT.add(e), () => cT.delete(e));
 }
-let cO = [12e4, 6e4];
-var cq = n(292771);
-function cz(e) {
+let cq = [12e4, 6e4];
+var cz = n(292771);
+function cF(e) {
     let { presentation: t, render: n } = e,
         l = (0, o.bG)([eL.Ay], () => eL.Ay.useReducedMotion),
         [r, s] = i.useState([{ presentation: t, leaving: !1 }]),
@@ -10748,14 +10751,14 @@ function cz(e) {
         }, [p, r]),
         (0, a.jsx)("div", {
             ref: c,
-            className: cq.wg,
+            className: cz.wg,
             children: r.map((e) =>
                 (0, a.jsx)(
                     "div",
                     {
                         "data-tip-layer": e.leaving ? "leaving" : "active",
                         "aria-hidden": e.leaving || void 0,
-                        className: h()(cq.qd, e.leaving ? cq.dv : cq.Hu),
+                        className: h()(cz.qd, e.leaving ? cz.dv : cz.Hu),
                         children: n(e.presentation),
                     },
                     e.presentation,
@@ -10764,8 +10767,7 @@ function cz(e) {
         })
     );
 }
-var cF = n(443865),
-    cU = n(247171);
+var cU = n(247171);
 function cG(e) {
     let { icon: t, tone: n, firstLine: l, className: r, children: i } = e;
     return (0, a.jsxs)("div", {
@@ -10783,18 +10785,24 @@ function cG(e) {
         ],
     });
 }
-var cB = n(716502);
+var cB = n(830205);
 function cK(e) {
     let { icon: t, onDismiss: n, children: l } = e;
     return (0, a.jsx)(cG, {
         icon: t,
-        tone: "brand",
-        firstLine: "text-md/semibold",
-        className: cB.Nr,
-        children: (0, a.jsxs)("section", {
-            className: cB.Qs,
+        tone: "muted",
+        firstLine: "text-sm/normal",
+        className: cB.aK,
+        children: (0, a.jsxs)("div", {
+            className: cB.n8,
             children: [
-                l,
+                (0, a.jsx)(v.E, {
+                    tag: "div",
+                    variant: "text-sm/normal",
+                    color: "text-muted",
+                    className: cB.Qq,
+                    children: l,
+                }),
                 null != n
                     ? (0, a.jsx)("div", {
                           className: cB.X8,
@@ -10816,78 +10824,33 @@ function cK(e) {
     });
 }
 function cH(e) {
-    let { children: t } = e;
-    return (0, a.jsx)(v.E, {
-        tag: "div",
-        variant: "text-md/semibold",
-        color: "text-strong",
-        className: cB.DD,
-        children: t,
+    let { projectId: t } = e,
+        n = i.useContext(t_.bI);
+    return (0, a.jsx)(cK, {
+        icon: ez.ShieldIcon,
+        children: E.intl.format(S.default["0S9HY8"], {
+            onReview: async () => {
+                null != n && (await (0, t_.vL)(t, n.guildId));
+            },
+        }),
     });
 }
-function cV(e) {
-    let { children: t } = e;
-    return (0, a.jsx)(v.E, {
-        tag: "div",
-        variant: "text-sm/normal",
-        color: "text-muted",
-        className: cB.rf,
-        children: t,
-    });
-}
-function cW(e) {
-    let { children: t } = e;
-    return (0, a.jsx)("div", { className: cB.o1, children: t });
-}
-let cX = {
-    ...cC,
-    render: (e, t) => {
-        let {
-            context: { onAskForIdeas: n },
-            dismiss: l,
-        } = t;
-        return (0, a.jsxs)(cK, {
-            icon: cF.LightbulbIcon,
-            onDismiss: l,
-            children: [
-                (0, a.jsx)(cH, { children: E.intl.string(S.default.OJlbhX) }),
-                (0, a.jsx)(cV, { children: E.intl.string(S.default["3vJBni"]) }),
-                (0, a.jsx)(cW, {
-                    children: (0, a.jsx)(eT.$, {
-                        variant: "primary",
-                        size: "sm",
-                        text: E.intl.string(S.default["U/bLzU"]),
-                        disabled: null == n,
-                        onClick: () => {
-                            (l?.(), n?.());
-                        },
-                    }),
-                }),
-            ],
-        });
-    },
-};
-var cZ = n(830205);
-function cJ(e) {
+var cV = n(443865),
+    cW = n(716502);
+function cX(e) {
     let { icon: t, onDismiss: n, children: l } = e;
     return (0, a.jsx)(cG, {
         icon: t,
-        tone: "muted",
-        firstLine: "text-sm/normal",
-        className: cZ.aK,
-        children: (0, a.jsxs)("div", {
-            className: cZ.n8,
+        tone: "brand",
+        firstLine: "text-md/semibold",
+        className: cW.Nr,
+        children: (0, a.jsxs)("section", {
+            className: cW.Qs,
             children: [
-                (0, a.jsx)(v.E, {
-                    tag: "div",
-                    variant: "text-sm/normal",
-                    color: "text-muted",
-                    className: cZ.Qq,
-                    children: l,
-                }),
+                l,
                 null != n
                     ? (0, a.jsx)("div", {
-                          className: cZ.X8,
+                          className: cW.X8,
                           children: (0, a.jsx)(N.m, {
                               text: E.intl.string(E.t.WAI6xu),
                               asContainer: !0,
@@ -10905,19 +10868,85 @@ function cJ(e) {
         }),
     });
 }
-var cY = n(95635);
-function cQ(e) {
+function cZ(e) {
+    let { children: t } = e;
+    return (0, a.jsx)(v.E, {
+        tag: "div",
+        variant: "text-md/semibold",
+        color: "text-strong",
+        className: cW.DD,
+        children: t,
+    });
+}
+function cJ(e) {
+    let { children: t } = e;
+    return (0, a.jsx)(v.E, {
+        tag: "div",
+        variant: "text-sm/normal",
+        color: "text-muted",
+        className: cW.rf,
+        children: t,
+    });
+}
+function cY(e) {
+    let { children: t } = e;
+    return (0, a.jsx)("div", { className: cW.o1, children: t });
+}
+let cQ = {
+    ...cA,
+    render: (e, t) => {
+        let {
+            context: { onAskForIdeas: n },
+            dismiss: l,
+        } = t;
+        return (0, a.jsxs)(cX, {
+            icon: cV.LightbulbIcon,
+            onDismiss: l,
+            children: [
+                (0, a.jsx)(cZ, { children: E.intl.string(S.default.OJlbhX) }),
+                (0, a.jsx)(cJ, { children: E.intl.string(S.default["3vJBni"]) }),
+                (0, a.jsx)(cY, {
+                    children: (0, a.jsx)(eT.$, {
+                        variant: "primary",
+                        size: "sm",
+                        text: E.intl.string(S.default["U/bLzU"]),
+                        disabled: null == n,
+                        onClick: () => {
+                            (l?.(), n?.());
+                        },
+                    }),
+                }),
+            ],
+        });
+    },
+};
+var c0 = n(95635);
+function c1(e) {
     let { projectId: t, publish: n, onDismiss: l } = e,
         r = rC(t, n);
-    return (0, a.jsx)(cJ, {
-        icon: cY.UploadIcon,
+    return (0, a.jsx)(cK, {
+        icon: c0.UploadIcon,
         onDismiss: l,
         children: E.intl.format(S.default.fWfeZ8, { onPublish: () => r("outdated_notice") }),
     });
 }
-let c0 = [
+let c2 = [
     {
-        id: cM,
+        id: "bot_permissions",
+        priority: 3,
+        resolve: function (e) {
+            let { turn: t, publish: n } = e;
+            return null != t && cC(n) ? "hint" : null;
+        },
+        render: (e, t) => {
+            let {
+                context: { projectId: n },
+            } = t;
+            return (0, a.jsx)(cH, { projectId: n });
+        },
+    },
+    {
+        id: c_,
         priority: 2,
         resolve: function (e) {
             let { turn: t, publish: n, draftHasText: l, idleMs: r } = e;
@@ -10929,7 +10958,7 @@ let c0 = [
                 null != n.disabledReason ||
                 r < 12e4 ||
                 (null != t.publishCta && un(n, t.publishCta)) ||
-                cE(e.messagesSinceShown(cM), 10)
+                cI(e.messagesSinceShown(c_), 10)
                 ? null
                 : "hint";
         },
@@ -10939,12 +10968,12 @@ let c0 = [
                 context: { projectId: n, publish: l },
                 dismiss: r,
             } = t;
-            return null != l ? (0, a.jsx)(cQ, { projectId: n, publish: l, onDismiss: r }) : null;
+            return null != l ? (0, a.jsx)(c1, { projectId: n, publish: l, onDismiss: r }) : null;
         },
     },
-    cX,
+    cQ,
     {
-        id: cI,
+        id: cM,
         priority: 1,
         resolve: function (e) {
             let { turn: t, draftHasText: n, publishedSinceLastMessage: l, idleMs: r } = e;
@@ -10953,25 +10982,25 @@ let c0 = [
                 !l ||
                 r < 6e4 ||
                 null == e.onAskForIdeas ||
-                !e.isDismissed(cC) ||
-                0 === e.messagesSinceShown(cC.id) ||
-                cE(e.messagesSinceShown(cI), 25)
+                !e.isDismissed(cA) ||
+                0 === e.messagesSinceShown(cA.id) ||
+                cI(e.messagesSinceShown(cM), 25)
                 ? null
                 : "hint";
         },
         dismissal: "app",
         render: (e, t) => {
             let { context: n, dismiss: l } = t;
-            return (0, a.jsx)(cJ, {
-                icon: cF.LightbulbIcon,
+            return (0, a.jsx)(cK, {
+                icon: cV.LightbulbIcon,
                 onDismiss: l,
                 children: E.intl.format(S.default.cjZvW9, { onInspire: () => n.onAskForIdeas?.() }),
             });
         },
     },
 ];
-var c1 = n(817921);
-function c2(e) {
+var c3 = n(817921);
+function c4(e) {
     let { projectId: t, messages: n, draftHasText: l, onAskForIdeas: r } = e,
         s = (function (e, t, n, l, r) {
             var a;
@@ -11008,7 +11037,7 @@ function c2(e) {
                             null != (c = n.at(-1))
                                 ? Math.max(c.created_at, c.finished_at ?? 0, c.settled_at ?? 0)
                                 : null),
-                        cO,
+                        cq,
                     )),
                     (h =
                         null ==
@@ -11047,15 +11076,15 @@ function c2(e) {
                                 return null;
                             })(n)),
                         justRemixed: c?.projectEvent?.type === "remixed",
-                        publishedSinceLastMessage: null != p && 0 === cS(n, p, u),
+                        publishedSinceLastMessage: null != p && 0 === cE(n, p, u),
                         messagesSinceShown: (e) => {
-                            let l = cA.get(`${t}:${e}`);
-                            return null != l ? cS(n, l, u) : null;
+                            let l = cS.get(`${t}:${e}`);
+                            return null != l ? cE(n, l, u) : null;
                         },
-                        isDismissed: (e) => c$(e, t),
+                        isDismissed: (e) => cD(e, t),
                         onAskForIdeas: r,
                     });
-            i.useSyncExternalStore(cD, () => cT);
+            i.useSyncExternalStore(cO, () => cL);
             let { callout: x, hint: v } = (function (e, t, n) {
                     let l = { callout: null, hint: null };
                     for (let r of [...e].sort((e, t) => t.priority - e.priority)) {
@@ -11068,7 +11097,7 @@ function c2(e) {
                                 : (l.callout ??= { tip: r, presentation: e }));
                     }
                     return l;
-                })(e, g, (e) => c$(e, t)),
+                })(e, g, (e) => cD(e, t)),
                 j = [x, v].filter((e) => null != e);
             return (
                 i.useEffect(() => {
@@ -11076,7 +11105,7 @@ function c2(e) {
                     for (let { tip: n } of j)
                         0 !== g.messagesSinceShown(n.id) &&
                             (function (e, t, n) {
-                                cA.set(`${e}:${t}`, n);
+                                cS.set(`${e}:${t}`, n);
                             })(t, n.id, e);
                 }),
                 j.map((e) => ({
@@ -11087,14 +11116,14 @@ function c2(e) {
                             null != e.tip.dismissal
                                 ? () =>
                                       (function (e, t) {
-                                          if (!(null == e.dismissal || c$(e, t))) {
+                                          if (!(null == e.dismissal || cD(e, t))) {
                                               if ("session" === e.dismissal) {
                                                   var n;
-                                                  cR.add(((n = e.id), `${t}:${n}`));
+                                                  cP.add(((n = e.id), `${t}:${n}`));
                                               } else {
-                                                  let n = cL();
+                                                  let n = c$();
                                                   U.w.set(
-                                                      c_,
+                                                      cR,
                                                       "forever" === e.dismissal
                                                           ? { ...n, forever: [...n.forever, e.id] }
                                                           : {
@@ -11103,52 +11132,52 @@ function c2(e) {
                                                             },
                                                   );
                                               }
-                                              (cT++, cP.forEach((e) => e()));
+                                              (cL++, cT.forEach((e) => e()));
                                           }
                                       })(e.tip, t)
                                 : void 0,
                     },
                 }))
             );
-        })(c0, t, n, l, r);
+        })(c2, t, n, l, r);
     return 0 === s.length
         ? null
         : (0, a.jsx)(cN, {
               role: "assistant",
               continuation: !0,
               children: (0, a.jsx)("div", {
-                  className: c1.X,
+                  className: c3.X,
                   children: s.map((e) => {
                       let { tip: t, presentation: n, options: l } = e;
-                      return (0, a.jsx)(cz, { presentation: n, render: (e) => t.render(e, l) }, t.id);
+                      return (0, a.jsx)(cF, { presentation: n, render: (e) => t.render(e, l) }, t.id);
                   }),
               }),
           });
 }
-var c3 = n(52133),
-    c4 = n(732159),
-    c5 = n(888366),
-    c6 = n(862026),
-    c7 = n(291192);
-function c8(e) {
+var c5 = n(52133),
+    c6 = n(732159),
+    c7 = n(888366),
+    c8 = n(862026),
+    c9 = n(291192);
+function de(e) {
     let { projectId: t, contextSwitch: n } = e,
         l = i.useId(),
-        r = (0, c6.L)(t, n);
+        r = (0, c8.L)(t, n);
     if (null == r) return null;
     let { action: s } = r;
     return (0, a.jsxs)("div", {
-        className: c7.Ac,
+        className: c9.Ac,
         role: "group",
         "aria-labelledby": l,
         children: [
             (0, a.jsxs)("div", {
-                className: c7.Sp,
+                className: c9.Sp,
                 children: [
-                    (0, a.jsx)("span", { className: c7.q3 }),
+                    (0, a.jsx)("span", { className: c9.q3 }),
                     (0, a.jsxs)("span", {
-                        className: c7.g8,
+                        className: c9.g8,
                         children: [
-                            (0, a.jsx)(c5.g, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
+                            (0, a.jsx)(c7.g, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
                             (0, a.jsx)(v.E, {
                                 id: l,
                                 tag: "span",
@@ -11158,11 +11187,11 @@ function c8(e) {
                             }),
                         ],
                     }),
-                    (0, a.jsx)("span", { className: c7.q3 }),
+                    (0, a.jsx)("span", { className: c9.q3 }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: c7.nM,
+                className: c9.nM,
                 role: "status",
                 children: [
                     (0, a.jsxs)(v.E, {
@@ -11184,7 +11213,7 @@ function c8(e) {
                                                       ? ((e = s.onPress),
                                                         void (0, tO.openModalLazy)(() =>
                                                             Promise.resolve((t) =>
-                                                                (0, a.jsx)(c4.u, {
+                                                                (0, a.jsx)(c6.u, {
                                                                     ...t,
                                                                     title: E.intl.string(S.default["i+xjZM"]),
                                                                     subtitle: E.intl.string(S.default.fMBZmD),
@@ -11209,17 +11238,17 @@ function c8(e) {
         ],
     });
 }
-function c9(e) {
+function dt(e) {
     return (0, o.bG)([ew.Ay, tG.A], () => {
         let t = ew.Ay.getProject(e);
         return null == t ? "" : (tG.A.getApplication(t.application_id)?.name ?? t.name);
     });
 }
-var de = n(951465),
-    dt = n(369455);
-function dn(e) {
+var dn = n(951465),
+    dl = n(369455);
+function dr(e) {
     let { projectId: t, notice: n } = e,
-        l = c9(t),
+        l = dt(t),
         r = (0, o.bG)([ew.Ay, d.A], () => {
             let e = ew.Ay.getProject(t);
             return null == e || "user" === e.install_scope || null == e.guild_id
@@ -11242,11 +11271,11 @@ function dn(e) {
                           : S.default["/npn7F"],
                 { name: l, server: r ?? "" },
             ),
-            n.update && null != n.published_revision ? (0, a.jsx)(dl, { projectId: t, notice: n }) : null,
+            n.update && null != n.published_revision ? (0, a.jsx)(da, { projectId: t, notice: n }) : null,
         ],
     });
 }
-function dl(e) {
+function da(e) {
     let { projectId: t, notice: n } = e,
         l = (function (e, t) {
             let n = s.useContext(t_.bI)?.guildId ?? null,
@@ -11290,7 +11319,7 @@ function dl(e) {
                                     {
                                         tag: "a",
                                         role: "link",
-                                        className: dt.Z,
+                                        className: dl.Z,
                                         onClick: () =>
                                             (function (e) {
                                                 let { guildId: t, channelId: n, messageId: l } = e;
@@ -11317,33 +11346,33 @@ function dl(e) {
                                               publishedRevision: n,
                                           };
                                 })(t, l);
-                                null != e && (0, de.A)(e);
+                                null != e && (0, dn.A)(e);
                             },
                         }),
               ],
           });
 }
-var dr = n(940874),
-    da = n(505527),
-    di = n(930390),
-    ds = n(521981),
-    du = n(491182),
-    dc = n(438729),
-    dd = n(622868),
-    dm = n(448368),
-    df = n(837528),
-    dh = n(470964),
-    dp = n(715628),
-    dg = n(752636),
-    dx = n(9842),
-    dv = n(589022),
-    dj = n(994500),
-    db = n(967198);
-let dy = new Set(["*", "_", "~", "`", "[", "]", "(", ")"]);
-function dw(e) {
+var di = n(940874),
+    ds = n(505527),
+    du = n(930390),
+    dc = n(521981),
+    dd = n(491182),
+    dm = n(438729),
+    df = n(622868),
+    dh = n(448368),
+    dp = n(837528),
+    dg = n(470964),
+    dx = n(715628),
+    dv = n(752636),
+    dj = n(9842),
+    db = n(589022),
+    dy = n(994500),
+    dw = n(967198);
+let dk = new Set(["*", "_", "~", "`", "[", "]", "(", ")"]);
+function dN(e) {
     return null != e && e >= 127462 && e <= 127487;
 }
-function dk(e, t) {
+function dC(e, t) {
     if (t <= 0) return;
     let n = e.charCodeAt(t - 1);
     if (n >= 56320 && n <= 57343 && t >= 2) {
@@ -11352,12 +11381,12 @@ function dk(e, t) {
     }
     return n;
 }
-function dN(e, t) {
+function dA(e, t) {
     if (t <= 0 || t >= e.length) return !1;
     let n = e.charCodeAt(t - 1),
         l = e.charCodeAt(t);
     if (n >= 55296 && n <= 56319 && l >= 56320 && l <= 57343) return !0;
-    let r = dk(e, t),
+    let r = dC(e, t),
         a = e.codePointAt(t);
     if (
         (null != a &&
@@ -11371,15 +11400,15 @@ function dN(e, t) {
         8205 === r
     )
         return !0;
-    if (dw(r) && dw(a)) {
+    if (dN(r) && dN(a)) {
         let n = 0,
             l = t;
-        for (; n < 32 && dw(dk(e, l));) (n++, (l -= 2));
+        for (; n < 32 && dN(dC(e, l));) (n++, (l -= 2));
         return n % 2 == 1;
     }
     return !1;
 }
-function dC(e, t) {
+function dS(e, t) {
     let { streaming: n } = t,
         l = (0, o.bG)([eL.Ay], () => eL.Ay.useReducedMotion),
         r = n && !l,
@@ -11396,7 +11425,7 @@ function dC(e, t) {
                       let r = Math.min(l, t.length),
                           a = 0;
                       for (; a < r && e.charCodeAt(a) === t.charCodeAt(a);) a++;
-                      for (; a > 0 && dN(t, a);) a--;
+                      for (; a > 0 && dA(t, a);) a--;
                       return a;
                   })(u.target, e, u.length)
                 : e.length,
@@ -11432,11 +11461,11 @@ function dC(e, t) {
                                 var s = (function (e, t, n) {
                                     if (n >= e.length) return n;
                                     let l = n;
-                                    for (; l > t + 1 && n - l < 12 && dy.has(e.charAt(l - 1));) l--;
-                                    return dy.has(e.charAt(l - 1)) ? n : l;
+                                    for (; l > t + 1 && n - l < 12 && dk.has(e.charAt(l - 1));) l--;
+                                    return dk.has(e.charAt(l - 1)) ? n : l;
                                 })(t, r, Math.min(t.length, r + i));
                                 let o = s;
-                                for (; o < t.length && o - s < 32 && dN(t, o);) o++;
+                                for (; o < t.length && o - s < 32 && dA(t, o);) o++;
                                 return o;
                             })({ target: e.target, revealed: e.length, elapsedMs: n });
                         l !== e.length && s({ target: e.target, length: l });
@@ -11462,15 +11491,15 @@ function dC(e, t) {
     let h = Math.min(u.length, e.length);
     return { text: h >= e.length ? e : e.slice(0, h), revealing: r && h < e.length };
 }
-var dA = n(624479),
-    dS = n(890377),
-    dE = n(180227);
-function dI(e) {
+var dE = n(624479),
+    dI = n(890377),
+    dM = n(180227);
+function d_(e) {
     let { groupStart: t, actions: n } = e;
     return 0 === n.length
         ? null
         : (0, a.jsx)("div", {
-              className: h()(dE.QE, { [dE.Rn]: t }),
+              className: h()(dM.QE, { [dM.Rn]: t }),
               children: (0, a.jsx)(oM.Ay, {
                   children: n.map((e) =>
                       (0, a.jsx)(
@@ -11482,12 +11511,12 @@ function dI(e) {
               }),
           });
 }
-function dM(e) {
+function dR(e) {
     return tA.p5 && 0 !== e.length
-        ? [{ id: "copy-text", label: E.intl.string(E.t.JrGD7E), icon: dA.CopyIcon, onClick: () => (0, tA.C)(e) }]
+        ? [{ id: "copy-text", label: E.intl.string(E.t.JrGD7E), icon: dE.CopyIcon, onClick: () => (0, tA.C)(e) }]
         : [];
 }
-function d_(e) {
+function dP(e) {
     let { content: t, groupStart: n, onQueuedAction: l } = e,
         r =
             null == l
@@ -11497,7 +11526,7 @@ function d_(e) {
                           id: "steer",
                           label: E.intl.string(S.default.CXtLD2),
                           tooltip: E.intl.string(S.default.DOb1HM),
-                          icon: dS.V,
+                          icon: dI.V,
                           onClick: () => l("steer"),
                       },
                       {
@@ -11507,19 +11536,19 @@ function d_(e) {
                           onClick: () => l("cancel"),
                       },
                   ];
-    return (0, a.jsx)(dI, { groupStart: n, actions: [...r, ...dM(t)] });
+    return (0, a.jsx)(d_, { groupStart: n, actions: [...r, ...dR(t)] });
 }
-function dR(e) {
+function dT(e) {
     let { content: t, groupStart: n, onRestoreVersion: l, onViewTrace: r } = e,
         i =
             null == l
                 ? []
                 : [{ id: "restore-version", label: E.intl.string(S.default.H8Jfhu), icon: rO.e, onClick: l }],
         s = null == r ? [] : [{ id: "view-trace", label: "View Trace", icon: tv.BugIcon, onClick: r }];
-    return (0, a.jsx)(dI, { groupStart: n, actions: [...i, ...dM(t), ...s] });
+    return (0, a.jsx)(d_, { groupStart: n, actions: [...i, ...dR(t), ...s] });
 }
-let dP = (0, ot.createChannelRecord)({ id: "conjure-builder", type: O.rbe.DM }),
-    dT = {
+let dL = (0, ot.createChannelRecord)({ id: "conjure-builder", type: O.rbe.DM }),
+    d$ = {
         id: "conjure-conjure",
         username: "Conjure",
         global_name: "Conjure",
@@ -11527,35 +11556,35 @@ let dP = (0, ot.createChannelRecord)({ id: "conjure-builder", type: O.rbe.DM }),
         avatar: null,
         bot: !1,
     };
-function dL(e, t) {
-    return null == e ? e : (0, a.jsx)("div", { className: h()(dE.Yq, { [dE.x1]: t }), children: e });
+function dD(e, t) {
+    return null == e ? e : (0, a.jsx)("div", { className: h()(dM.Yq, { [dM.x1]: t }), children: e });
 }
-function d$(e, t) {
+function dO(e, t) {
     return null != e && e > 0 ? new Date(e).toISOString() : t;
 }
-let dD = { hideSimpleEmbedContent: !0, allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };
-function dO(e, t, n) {
-    let { content: l } = (0, dh.A)(e, dD),
-        r = i.useMemo(() => ((0, i4.aW)(e.content) ? (0, ds.z2)(u$.U, e, dD).content : null), [e]) ?? l,
-        s = i.useMemo(() => ({ message: e, channel: dP, compact: !1 }), [e]);
+let dq = { hideSimpleEmbedContent: !0, allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };
+function dz(e, t, n) {
+    let { content: l } = (0, dg.A)(e, dq),
+        r = i.useMemo(() => ((0, i4.aW)(e.content) ? (0, dc.z2)(u$.U, e, dq).content : null), [e]) ?? l,
+        s = i.useMemo(() => ({ message: e, channel: dL, compact: !1 }), [e]);
     return "" === t
         ? null
         : null != n
-          ? (0, a.jsx)(dc.Ay, { className: n, message: e, content: r, compact: !1 })
-          : (0, dp.A)(s, r);
+          ? (0, a.jsx)(dm.Ay, { className: n, message: e, content: r, compact: !1 })
+          : (0, dx.A)(s, r);
 }
-function dq(e) {
+function dF(e) {
     let [t, n] = i.useState({ usernameProfile: !1, avatarProfile: !1 }),
         l = i.useCallback((e) => n((t) => ({ ...t, ...e })), []),
         r = i.useCallback(() => n({ usernameProfile: !1, avatarProfile: !1 }), []),
-        s = (0, df.m)(e, dP, t.usernameProfile, l),
-        u = (0, df.Jo)(t.avatarProfile, l),
-        c = (0, o.bG)([db.A], () => db.A.getGuildId()),
+        s = (0, dp.m)(e, dL, t.usernameProfile, l),
+        u = (0, dp.Jo)(t.avatarProfile, l),
+        c = (0, o.bG)([dw.A], () => dw.A.getGuildId()),
         d = (0, o.bG)([a0.default], () => a0.default.getCurrentUser()),
         m = i.useCallback(
             (t) => {
                 let n = a0.default.getUser(e.author.id) ?? e.author;
-                return null == d ? null : (0, a.jsx)(dv.A, { ...t, user: n, currentUser: d, guildId: c ?? void 0 });
+                return null == d ? null : (0, a.jsx)(db.A, { ...t, user: n, currentUser: d, guildId: c ?? void 0 });
             },
             [d, c, e.author],
         );
@@ -11569,7 +11598,7 @@ function dq(e) {
         guildId: c ?? void 0,
     };
 }
-function dz(e) {
+function dU(e) {
     let { baseMessage: t, referenced: n, selected: l, onJumpToReplied: r } = e,
         s = i.useMemo(() => {
             let e = { formatInline: !0, allowGameMentions: !0 },
@@ -11577,17 +11606,17 @@ function dz(e) {
                     "" === n.content
                         ? null
                         : (0, i4.aW)(n.content)
-                          ? (0, ds.z2)(u$.U, n, e).content
-                          : (0, ds.Ay)(n, e).content;
+                          ? (0, dc.z2)(u$.U, n, e).content
+                          : (0, dc.Ay)(n, e).content;
             return null == l
                 ? t
                 : (0, a.jsxs)(a.Fragment, {
                       children: [
                           (0, a.jsxs)("span", {
-                              className: dE.GV,
+                              className: dM.GV,
                               children: [
                                   (0, a.jsx)(nW.x, {
-                                      className: dE.Rj,
+                                      className: dM.Rj,
                                       color: "currentColor",
                                       size: "custom",
                                       width: 14,
@@ -11601,22 +11630,22 @@ function dz(e) {
                   });
         }, [n, l]),
         { isReplyAuthorBlocked: u, isReplyAuthorIgnored: c } = (0, o.cf)(
-            [dj.A],
+            [dy.A],
             () => ({
-                isReplyAuthorBlocked: dj.A.isBlockedForMessage(n),
-                isReplyAuthorIgnored: dj.A.isIgnoredForMessage(n),
+                isReplyAuthorBlocked: dy.A.isBlockedForMessage(n),
+                isReplyAuthorIgnored: dy.A.isIgnoredForMessage(n),
             }),
             [n],
         ),
         d = (0, oE.X4)(n),
         m = (0, oE.X4)(t),
-        f = dq(n);
-    return (0, a.jsx)(dm.A, {
+        f = dF(n);
+    return (0, a.jsx)(dh.A, {
         repliedAuthor: d,
         baseAuthor: m,
         baseMessage: t,
-        channel: dP,
-        referencedMessage: { state: dx.a.LOADED, message: n },
+        channel: dL,
+        referencedMessage: { state: dj.a.LOADED, message: n },
         content: s,
         compact: !1,
         isReplyAuthorBlocked: u,
@@ -11632,12 +11661,12 @@ function dz(e) {
         onPopoutRequestClose: f.onPopoutRequestClose,
     });
 }
-function dF(e) {
+function dG(e) {
     let { message: t, author: n } = e,
-        l = dq(t);
-    return (0, a.jsx)(dd.Ay, {
+        l = dF(t);
+    return (0, a.jsx)(df.Ay, {
         message: t,
-        channel: dP,
+        channel: dL,
         author: n,
         guildId: l.guildId,
         subscribeToGroupId: t.id,
@@ -11649,7 +11678,7 @@ function dF(e) {
         onPopoutRequestClose: l.onPopoutRequestClose,
     });
 }
-function dU(e) {
+function dB(e) {
     let { content: t, createdAt: n, userId: l, accessories: r, groupStart: s, onQueuedAction: o } = e,
         u = (0, u1.vm)(l),
         c = i.useMemo(() => (0, oE.FT)(u, null), [u]),
@@ -11658,13 +11687,13 @@ function dU(e) {
         f = (0, uY.Qu)(m),
         h = i.useMemo(() => {
             if (null == u) return null;
-            let e = (0, oe.Ay)({ channelId: dP.id, content: m, author: u });
-            return (0, s9.rh)({ ...e, timestamp: d$(n, e.timestamp), state: O.cmJ.SENT });
+            let e = (0, oe.Ay)({ channelId: dL.id, content: m, author: u });
+            return (0, s9.rh)({ ...e, timestamp: dO(n, e.timestamp), state: O.cmJ.SENT });
         }, [m, u, n]);
     return null == h
         ? null
         : (0, a.jsx)(
-              dG,
+              dK,
               {
                   message: h,
                   author: c,
@@ -11677,24 +11706,24 @@ function dU(e) {
               f,
           );
 }
-function dG(e) {
+function dK(e) {
     let { message: t, author: n, content: l, selected: r, accessories: i, groupStart: s = !0, onQueuedAction: o } = e,
-        u = dO(t, l);
-    return (0, a.jsx)(du.A, {
-        className: dE.yE,
+        u = dz(t, l);
+    return (0, a.jsx)(dd.A, {
+        className: dM.yE,
         author: n,
-        childrenHeader: s ? (0, a.jsx)(dF, { message: t, author: n }) : void 0,
+        childrenHeader: s ? (0, a.jsx)(dG, { message: t, author: n }) : void 0,
         childrenMessageContent:
             null == r
                 ? u
                 : (0, a.jsxs)("div", {
-                      className: dE.zq,
+                      className: dM.zq,
                       children: [
                           (0, a.jsxs)("span", {
-                              className: dE.GV,
+                              className: dM.GV,
                               children: [
                                   (0, a.jsx)(nW.x, {
-                                      className: dE.Rj,
+                                      className: dM.Rj,
                                       color: "currentColor",
                                       size: "custom",
                                       width: 16,
@@ -11703,14 +11732,14 @@ function dG(e) {
                                   r,
                               ],
                           }),
-                          (0, a.jsx)("span", { className: dE.WO, children: u }),
+                          (0, a.jsx)("span", { className: dM.WO, children: u }),
                       ],
                   }),
-        childrenAccessories: dL(i, "" !== l),
-        childrenButtons: (0, a.jsx)(d_, { content: l, groupStart: s, onQueuedAction: o }),
+        childrenAccessories: dD(i, "" !== l),
+        childrenButtons: (0, a.jsx)(dP, { content: l, groupStart: s, onQueuedAction: o }),
     });
 }
-function dB(e) {
+function dH(e) {
     let {
             content: t,
             createdAt: n,
@@ -11721,7 +11750,7 @@ function dB(e) {
             streaming: c = !1,
             buttons: d,
         } = e,
-        { text: m, revealing: f } = dC(t, { streaming: (0, o.bG)([t7.A], () => c && t7.A.isFocused(), [c]) }),
+        { text: m, revealing: f } = dS(t, { streaming: (0, o.bG)([t7.A], () => c && t7.A.isFocused(), [c]) }),
         h = i.useMemo(() => (0, oE.FT)(null, null), []),
         p = i.useMemo(() => ({ ...h, nick: "Conjure", colorString: "var(--text-brand)" }), [h]),
         g = r?.userId,
@@ -11729,16 +11758,16 @@ function dB(e) {
         v = i.useMemo(() => (null == r ? null : n7(r.content)), [r]),
         j = i.useMemo(() => {
             if (null == r || null == x) return null;
-            let e = (0, oe.Ay)({ channelId: dP.id, content: v?.body ?? r.content, author: x });
-            return (0, s9.rh)({ ...e, id: r.id, timestamp: d$(r.createdAt, e.timestamp), state: O.cmJ.SENT });
+            let e = (0, oe.Ay)({ channelId: dL.id, content: v?.body ?? r.content, author: x });
+            return (0, s9.rh)({ ...e, id: r.id, timestamp: dO(r.createdAt, e.timestamp), state: O.cmJ.SENT });
         }, [r, v, x]),
-        b = i.useMemo(() => (null == r ? void 0 : { channel_id: dP.id, message_id: r.id }), [r]),
-        [y] = i.useState(() => (0, oe.Ay)({ channelId: dP.id, content: "", author: dT })),
+        b = i.useMemo(() => (null == r ? void 0 : { channel_id: dL.id, message_id: r.id }), [r]),
+        [y] = i.useState(() => (0, oe.Ay)({ channelId: dL.id, content: "", author: d$ })),
         w = i.useMemo(
             () =>
                 (0, s9.rh)({
                     ...y,
-                    timestamp: d$(n, y.timestamp),
+                    timestamp: dO(n, y.timestamp),
                     state: O.cmJ.SENT,
                     ...(null != b ? { type: O.lAJ.REPLY, message_reference: b } : {}),
                 }),
@@ -11746,39 +11775,39 @@ function dB(e) {
         ),
         k = i.useMemo(() => w.set("content", m), [w, m]),
         N = i.useMemo(
-            () => (0, dg.A)({ message: w, channel: dP, author: p, guildId: void 0, isGroupStart: u }),
+            () => (0, dv.A)({ message: w, channel: dL, author: p, guildId: void 0, isGroupStart: u }),
             [w, p, u],
         ),
-        C = dO(k, m, dE.OS);
+        C = dz(k, m, dM.OS);
     return (0, a.jsxs)("div", {
-        className: dE.$4,
+        className: dM.$4,
         "data-replying": null != j ? "true" : void 0,
         "data-conjure-revealing": f ? "true" : void 0,
         children: [
-            (0, a.jsx)(du.A, {
-                className: dE.yE,
+            (0, a.jsx)(dd.A, {
+                className: dM.yE,
                 author: p,
                 childrenRepliedMessage:
                     null == j
                         ? null
-                        : (0, a.jsx)(dz, { baseMessage: w, referenced: j, selected: v?.label, onJumpToReplied: s }),
+                        : (0, a.jsx)(dU, { baseMessage: w, referenced: j, selected: v?.label, onJumpToReplied: s }),
                 childrenHeader: N,
                 childrenMessageContent: C,
-                childrenAccessories: dL(l, "" !== m),
+                childrenAccessories: dD(l, "" !== m),
                 disableInteraction: !0,
             }),
             d,
-            u ? (0, a.jsx)("img", { className: dE.st, src: "/assets/c07664a29f3ee5ed.svg", alt: "" }) : null,
+            u ? (0, a.jsx)("img", { className: dM.st, src: "/assets/c07664a29f3ee5ed.svg", alt: "" }) : null,
         ],
     });
 }
-var dK = n(981879);
-function dH(e) {
+var dV = n(981879);
+function dW(e) {
     let { messageId: t, reaction: n } = e,
         l = i.useMemo(
             () =>
                 (0, s9.rh)(
-                    { ...(0, oe.Ay)({ channelId: dP.id, content: "" }), id: `conjure:${t}`, state: O.cmJ.SENT },
+                    { ...(0, oe.Ay)({ channelId: dL.id, content: "" }), id: `conjure:${t}`, state: O.cmJ.SENT },
                     {
                         reactions: [
                             {
@@ -11799,18 +11828,18 @@ function dH(e) {
             function t() {
                 (K.h.dispatch({
                     type: "MESSAGE_REACTION_ADD_USERS",
-                    channelId: dP.id,
+                    channelId: dL.id,
                     messageId: l.id,
-                    users: [dT],
+                    users: [d$],
                     emoji: e,
-                    reactionType: da.v.NORMAL,
+                    reactionType: ds.v.NORMAL,
                 }),
                     K.h.dispatch({
                         type: "MESSAGE_REACTION_SET_FETCHED",
-                        channelId: dP.id,
+                        channelId: dL.id,
                         messageId: l.id,
                         emoji: e,
-                        reactionType: da.v.NORMAL,
+                        reactionType: ds.v.NORMAL,
                     }));
             }
             return (
@@ -11822,10 +11851,10 @@ function dH(e) {
             );
         }, [l.id, n.emojiId, n.emoji]),
         (0, a.jsx)("div", {
-            className: dK.H,
-            children: (0, a.jsx)(di.A, {
+            className: dV.H,
+            children: (0, a.jsx)(du.A, {
                 message: l,
-                channel: dP,
+                channel: dL,
                 disableReactionCreates: !0,
                 disableReactionUpdates: !0,
                 useChatFontScaling: !0,
@@ -11835,9 +11864,9 @@ function dH(e) {
     );
 }
 n(775443);
-var dV = n(616e3),
-    dW = n(155899);
-function dX(e) {
+var dX = n(616e3),
+    dZ = n(155899);
+function dJ(e) {
     let { onSelect: t, onClose: n = to.Z_, onRestoreVersion: l, onViewTrace: r } = e;
     return (0, a.jsx)(eJ.W, {
         "data-menu-migrated": !0,
@@ -11862,7 +11891,7 @@ function dX(e) {
         }),
     });
 }
-function dZ(e) {
+function dY(e) {
     let t,
         {
             row: n,
@@ -11892,19 +11921,19 @@ function dZ(e) {
                           subject: x.content,
                       }
                 : null,
-        j = null != v && null != g ? () => dJ(v, g) : void 0,
+        j = null != v && null != g ? () => dQ(v, g) : void 0,
         b =
             ((t =
                 lH() && "assistant" === x.role && (0, ap.BL)(x)
                     ? (x.turn_id ?? x.steps.find((e) => null != e.turn_id)?.turn_id ?? x.id.replace(/^turn:/, ""))
                     : null),
             (0, o.bG)(
-                [dV.A],
+                [dX.A],
                 () => {
                     let e =
                         null == t
                             ? null
-                            : dV.A.getTimingTraces(l).findLast((e) => {
+                            : dX.A.getTimingTraces(l).findLast((e) => {
                                   let { name: n, spans: l } = e;
                                   return "turn" === n && l.find((e) => null == e.parent)?.attrs?.turn_id === t;
                               });
@@ -11933,13 +11962,13 @@ function dZ(e) {
                           (t = e),
                           (n = j),
                           (l = y),
-                          void (0, to.jA)(t, (e) => (0, a.jsx)(dX, { ...e, onRestoreVersion: n, onViewTrace: l }))
+                          void (0, to.jA)(t, (e) => (0, a.jsx)(dJ, { ...e, onRestoreVersion: n, onViewTrace: l }))
                       );
                   }
                 : void 0,
-        children: (0, a.jsx)(dB, {
+        children: (0, a.jsx)(dH, {
             groupStart: n.groupStart,
-            buttons: (0, a.jsx)(dR, {
+            buttons: (0, a.jsx)(dT, {
                 groupStart: n.groupStart,
                 content: n.content,
                 onRestoreVersion: j,
@@ -11980,7 +12009,7 @@ function dZ(e) {
                 onRestoreProposal:
                     null != k && null != g && f
                         ? () =>
-                              dJ(
+                              dQ(
                                   {
                                       sha: k.sha,
                                       authorName: "",
@@ -11995,14 +12024,14 @@ function dZ(e) {
         }),
     });
 }
-function dJ(e, t) {
-    (0, dW.F)({ onConfirm: () => t(e) });
+function dQ(e, t) {
+    (0, dZ.F)({ onConfirm: () => t(e) });
 }
-var dY = n(288539);
-function dQ(e, t, n) {
-    return (0, a.jsx)(dY.A, { userId: e, content: `@${t}` }, n);
+var d0 = n(288539);
+function d1(e, t, n) {
+    return (0, a.jsx)(d0.A, { userId: e, content: `@${t}` }, n);
 }
-function d0(e) {
+function d2(e) {
     let t,
         { projectId: n, event: l } = e,
         r = (function (e, t, n) {
@@ -12012,7 +12041,7 @@ function d0(e) {
             }, [l]);
             let r = (0, o.bG)([a0.default], () => (null == l ? null : a0.default.getUser(l)), [l]),
                 a = (0, ol.tx)(r),
-                s = c9(e),
+                s = dt(e),
                 u =
                     (0, o.bG)([d.A], () => (null == t.guild_id ? null : d.A.getGuild(t.guild_id)?.name), [
                         t.guild_id,
@@ -12040,7 +12069,7 @@ function d0(e) {
                 case "remixed":
                     return E.intl.format(S.default.mHCXtm, { source: t.source_name });
             }
-        })(n, l, dQ),
+        })(n, l, d1),
         s =
             ((t = "remixed" === l.type ? l.settings_keys : void 0),
             (0, o.bG)([tR.A], () => null != t && t.length > 0 && iK({ keys: t }, tR.A.getSettings(n)), [t, n]) &&
@@ -12054,7 +12083,7 @@ function d0(e) {
         ],
     });
 }
-let d1 = i.memo(
+let d3 = i.memo(
         function (e) {
             var t;
             let { row: n, projectId: l, highlighted: r, currentUserId: i, ...s } = e,
@@ -12072,7 +12101,7 @@ let d1 = i.memo(
                         anchorId: o.id,
                         highlighted: r,
                         continuation: !n.groupStart,
-                        children: (0, a.jsx)(dU, {
+                        children: (0, a.jsx)(dB, {
                             groupStart: n.groupStart,
                             content: o.content,
                             createdAt: o.created_at,
@@ -12084,7 +12113,7 @@ let d1 = i.memo(
                                               null != t ? (0, a.jsx)(uL.A, { projectId: l, attachments: t }) : null,
                                               null != u ? (0, a.jsx)(uJ, { send: u }) : null,
                                               null != o.agentReaction
-                                                  ? (0, a.jsx)(dH, { messageId: o.id, reaction: o.agentReaction })
+                                                  ? (0, a.jsx)(dW, { messageId: o.id, reaction: o.agentReaction })
                                                   : null,
                                           ],
                                       })
@@ -12096,7 +12125,7 @@ let d1 = i.memo(
                                     null != t.user_id &&
                                     t.user_id === n
                                 )
-                                    return (n) => (0, dr.tp)(e, t.id, n);
+                                    return (n) => (0, di.tp)(e, t.id, n);
                             })(l, o, i),
                         }),
                     });
@@ -12106,7 +12135,7 @@ let d1 = i.memo(
                         rowKey: n.key,
                         role: "assistant",
                         continuation: !n.groupStart,
-                        children: (0, a.jsx)(dB, {
+                        children: (0, a.jsx)(dH, {
                             groupStart: n.groupStart,
                             content: n.content,
                             streaming: n.streaming,
@@ -12142,14 +12171,14 @@ let d1 = i.memo(
                         rowKey: n.key,
                         role: "assistant",
                         continuation: !n.groupStart,
-                        children: (0, a.jsx)(dB, {
+                        children: (0, a.jsx)(dH, {
                             groupStart: n.groupStart,
                             content: null == o.publishNotice ? o.content : "",
                             createdAt: o.created_at,
                             accessories:
                                 null == o.publishNotice
                                     ? void 0
-                                    : (0, a.jsx)(dn, { projectId: l, notice: o.publishNotice }),
+                                    : (0, a.jsx)(dr, { projectId: l, notice: o.publishNotice }),
                         }),
                     });
                 case "projectEvent":
@@ -12157,14 +12186,14 @@ let d1 = i.memo(
                         rowKey: n.key,
                         role: "assistant",
                         continuation: !n.groupStart,
-                        children: (0, a.jsx)(dB, {
+                        children: (0, a.jsx)(dH, {
                             groupStart: n.groupStart,
                             content: null == o.projectEvent ? o.content : "",
                             createdAt: o.created_at,
                             accessories:
                                 null == o.projectEvent
                                     ? void 0
-                                    : (0, a.jsx)(d0, { projectId: l, event: o.projectEvent }),
+                                    : (0, a.jsx)(d2, { projectId: l, event: o.projectEvent }),
                         }),
                     });
                 case "contextBoundary":
@@ -12174,7 +12203,7 @@ let d1 = i.memo(
                         children:
                             null == o.contextSwitch
                                 ? null
-                                : (0, a.jsx)(c8, { projectId: l, contextSwitch: o.contextSwitch }),
+                                : (0, a.jsx)(de, { projectId: l, contextSwitch: o.contextSwitch }),
                     });
                 case "interrupted":
                     return (0, a.jsx)(cN, {
@@ -12188,7 +12217,7 @@ let d1 = i.memo(
                         role: "assistant",
                         children: (0, a.jsx)(uz, {
                             projectId: l,
-                            steps: d2,
+                            steps: d4,
                             active: !1,
                             checklistSuperseded: n.checklistSuperseded,
                             todos: o.todos,
@@ -12196,13 +12225,13 @@ let d1 = i.memo(
                         }),
                     });
                 case "closing":
-                    return (0, a.jsx)(dZ, { row: n, projectId: l, ...s });
+                    return (0, a.jsx)(dY, { row: n, projectId: l, ...s });
             }
         },
         function (e, t) {
             return (
-                (0, c3.A)(e, t, ["row", "replyTo", "planVersion", "pickedIdeaIds"]) &&
-                (0, c3.A)(e.row, t.row, ["message"]) &&
+                (0, c5.A)(e, t, ["row", "replyTo", "planVersion", "pickedIdeaIds"]) &&
+                (0, c5.A)(e.row, t.row, ["message"]) &&
                 e.row.kind === t.row.kind &&
                 (function (e, t, n) {
                     if (t === n) return !0;
@@ -12237,8 +12266,8 @@ let d1 = i.memo(
                             return !1;
                     }
                 })(e.row.kind, e.row.message, t.row.message) &&
-                (0, c3.A)(e.replyTo, t.replyTo) &&
-                (0, c3.A)(e.planVersion, t.planVersion) &&
+                (0, c5.A)(e.replyTo, t.replyTo) &&
+                (0, c5.A)(e.planVersion, t.planVersion) &&
                 (function (e, t) {
                     if (e === t) return !0;
                     if (null == e || null == t || e.size !== t.size) return !1;
@@ -12248,20 +12277,20 @@ let d1 = i.memo(
             );
         },
     ),
-    d2 = [],
-    d3 = /^\s*sandbox operation\s+\S+\s+was interrupted\b/i,
-    d4 = new WeakMap();
-function d5(e, t, n) {
+    d4 = [],
+    d5 = /^\s*sandbox operation\s+\S+\s+was interrupted\b/i,
+    d6 = new WeakMap();
+function d7(e, t, n) {
     let l = Math.max(0, Math.min(e.length, n)),
         r = Math.max(0, Math.min(l, t));
     return { start: r, end: l, startKey: e[r] ?? null, endKey: l >= e.length ? null : (e[l - 1] ?? null) };
 }
-function d6(e, t, n) {
+function d8(e, t, n) {
     if (null == t) return n;
     let l = e.indexOf(t);
     return -1 === l ? n : l;
 }
-let d7 = i.memo(function (e) {
+let d9 = i.memo(function (e) {
     let {
             projectId: t,
             messages: n,
@@ -12316,7 +12345,7 @@ let d7 = i.memo(function (e) {
                 for (let r of e) {
                     let e = l.has(r.render_id),
                         a = null != r.clarification && r.clarification.id === t,
-                        i = d4.get(r);
+                        i = d6.get(r);
                     if (null != i && i.superseded === e && i.liveCard === a) {
                         n.push(...i.planned);
                         continue;
@@ -12378,7 +12407,7 @@ let d7 = i.memo(function (e) {
                             d = o.at(-1)?.index,
                             m = !1;
                         for (let n of o) {
-                            if (null != n.prose && d3.test(n.prose.content)) m = !0;
+                            if (null != n.prose && d5.test(n.prose.content)) m = !0;
                             else if (null != n.prose && n.prose.key !== i.replyKey) {
                                 let t = `${e.render_id}:${n.key}`;
                                 r(
@@ -12416,7 +12445,7 @@ let d7 = i.memo(function (e) {
                                     { actor: null, boundary: void 0 },
                                 );
                         }
-                        let f = d3.test(e.content ?? "");
+                        let f = d5.test(e.content ?? "");
                         if (
                             (!0 === e.interrupted || m || f
                                 ? r(
@@ -12473,7 +12502,7 @@ let d7 = i.memo(function (e) {
                         }
                         return l;
                     })(r, e, a);
-                    (d4.set(r, { superseded: e, liveCard: a, planned: s }), n.push(...s));
+                    (d6.set(r, { superseded: e, liveCard: a, planned: s }), n.push(...s));
                 }
                 let r = (function (e) {
                     let t,
@@ -12515,11 +12544,11 @@ let d7 = i.memo(function (e) {
         $ = i.useMemo(() => L.map((e) => e.key), [L]),
         [D, O] = i.useState(null),
         q = (function (e, t, n) {
-            if (null == t) return d5(e, e.length - 60, e.length);
+            if (null == t) return d7(e, e.length - 60, e.length);
             let l = null == t.endKey,
-                r = l ? e.length : d6(e, t.endKey, t.end - 1) + 1,
-                a = d6(e, t.startKey, t.start);
-            return (l && n && r - a > 120 && (a = r - 60), d5(e, a, r));
+                r = l ? e.length : d8(e, t.endKey, t.end - 1) + 1,
+                a = d8(e, t.startKey, t.start);
+            return (l && n && r - a > 120 && (a = r - 60), d7(e, a, r));
         })($, D, x),
         z = i.useRef(q),
         F = i.useRef($),
@@ -12550,16 +12579,16 @@ let d7 = i.memo(function (e) {
                 let { nearTop: l, nearBottom: r, pinned: a } = n;
                 if (r && null != t.endKey) {
                     let n;
-                    return ((n = Math.min(e.length, t.end + 30)), d5(e, Math.max(t.start, n - 120), n));
+                    return ((n = Math.min(e.length, t.end + 30)), d7(e, Math.max(t.start, n - 120), n));
                 }
                 if (!l) return null;
                 if (0 === t.start) return "older";
                 if (!a && !r) {
                     let n, l;
-                    return ((n = t.start - 30), (l = Math.min(t.end, Math.max(n, 0) + 120)), d5(e, n, l));
+                    return ((n = t.start - 30), (l = Math.min(t.end, Math.max(n, 0) + 120)), d7(e, n, l));
                 }
                 let i = Math.max(t.start - 30, t.end - 120);
-                return i < t.start ? d5(e, i, t.end) : null;
+                return i < t.start ? d7(e, i, t.end) : null;
             })(F.current, z.current, {
                 nearTop: e.scrollTop < 600,
                 nearBottom: e.scrollHeight - e.clientHeight - e.scrollTop < 600,
@@ -12606,7 +12635,7 @@ let d7 = i.memo(function (e) {
                         (w.current?.querySelector(`[data-conjure-message="${e}"]`)?.scrollIntoView({ block: "center" }),
                             _(e));
                     }),
-                    O(((n = F.current), d5(n, (l = Math.max(0, a - 30)), l + 60))));
+                    O(((n = F.current), d7(n, (l = Math.max(0, a - 30)), l + 60))));
             },
             [_, j, t],
         );
@@ -12741,7 +12770,7 @@ let d7 = i.memo(function (e) {
         let e = "unavailable" === l ? S.default.Td4Sf4 : S.default.V1QiNz;
         return (0, a.jsx)("ol", {
             className: cw.x7,
-            children: (0, a.jsx)(cN, { role: "assistant", children: (0, a.jsx)(dB, { content: E.intl.string(e) }) }),
+            children: (0, a.jsx)(cN, { role: "assistant", children: (0, a.jsx)(dH, { content: E.intl.string(e) }) }),
         });
     }
     return (0, a.jsx)(ck.Provider, {
@@ -12754,7 +12783,7 @@ let d7 = i.memo(function (e) {
                     let n = e.message;
                     if ("closing" !== e.kind)
                         return (0, a.jsx)(
-                            d1,
+                            d3,
                             {
                                 row: e,
                                 projectId: t,
@@ -12765,7 +12794,7 @@ let d7 = i.memo(function (e) {
                         );
                     let l = n === et;
                     return (0, a.jsx)(
-                        d1,
+                        d3,
                         {
                             row: e,
                             projectId: t,
@@ -12792,7 +12821,7 @@ let d7 = i.memo(function (e) {
                               {
                                   role: "assistant",
                                   continuation: !0,
-                                  children: (0, a.jsx)(dB, {
+                                  children: (0, a.jsx)(dH, {
                                       groupStart: !1,
                                       content: "",
                                       accessories: (0, a.jsx)(cy.K, { projectId: t, approval: e }),
@@ -12806,7 +12835,7 @@ let d7 = i.memo(function (e) {
                     ? (0, a.jsx)(cN, {
                           role: "assistant",
                           continuation: !0,
-                          children: (0, a.jsx)(dB, {
+                          children: (0, a.jsx)(dH, {
                               groupStart: !1,
                               content: "",
                               accessories: (0, a.jsx)(v.E, {
@@ -12817,18 +12846,18 @@ let d7 = i.memo(function (e) {
                           }),
                       })
                     : null,
-                Z ? (0, a.jsx)(c2, { projectId: t, messages: n, draftHasText: !0 === u, onAskForIdeas: s }) : null,
+                Z ? (0, a.jsx)(c4, { projectId: t, messages: n, draftHasText: !0 === u, onAskForIdeas: s }) : null,
             ],
         }),
     });
 });
-var d8 = n(731084),
-    d9 = n(823376),
-    me = n(187447);
-function mt(e) {
+var me = n(731084),
+    mt = n(823376),
+    mn = n(187447);
+function ml(e) {
     let { activity: t, id: n } = e,
         l = (0, af.j)(),
-        { text: r, revealing: s } = dC(t?.text ?? "", { streaming: l && null != t && "end" !== t.phase }),
+        { text: r, revealing: s } = dS(t?.text ?? "", { streaming: l && null != t && "end" !== t.phase }),
         o = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
@@ -12837,14 +12866,14 @@ function mt(e) {
         (0, a.jsx)("div", {
             id: n,
             role: "tooltip",
-            className: me.jn,
+            className: mn.jn,
             "data-conjure-thinking-panel": !0,
             children: (0, a.jsx)(ad.Ch, {
                 ref: o,
-                className: me.Dq,
+                className: mn.Dq,
                 "data-conjure-thinking-reasoning": !0,
                 children: (0, a.jsx)("div", {
-                    className: h()(uq.PT, me.bb),
+                    className: h()(uq.PT, mn.bb),
                     "data-conjure-revealing": s ? "true" : void 0,
                     children: ou.A.parse(r, !0, { allowList: !0, allowHeading: !0, allowLinks: !0 }),
                 }),
@@ -12852,8 +12881,8 @@ function mt(e) {
         })
     );
 }
-var mn = n(53659);
-function ml(e) {
+var mr = n(53659);
+function ma(e) {
     let {
             activity: t,
             compacting: n = !1,
@@ -12870,7 +12899,7 @@ function ml(e) {
         p = i.useRef(null),
         g = i.useId(),
         [x, j] = i.useState(null),
-        b = (0, d8.xu)({
+        b = (0, me.xu)({
             activity: t,
             compacting: n,
             saving: l,
@@ -12882,10 +12911,10 @@ function ml(e) {
             publishing: d,
         }),
         y = E.intl.string(b),
-        w = b === d8.kx["0"],
+        w = b === me.kx["0"],
         [k, N] = i.useState(m ?? y),
         A = (0, af.j)();
-    (l || (0, d8.E4)(y, k) || (!A && !w)) && k !== y && N(y);
+    (l || (0, me.E4)(y, k) || (!A && !w)) && k !== y && N(y);
     let I = i.useRef(y);
     (i.useEffect(() => {
         I.current = y;
@@ -12901,7 +12930,7 @@ function ml(e) {
     let R = i.useRef(w),
         P = i.useRef(0);
     (i.useEffect(() => {
-        ((R.current = w), !w && (0, d8.E8)(_.current) && N(I.current));
+        ((R.current = w), !w && (0, me.E8)(_.current) && N(I.current));
     }, [w]),
         i.useEffect(() => {
             if (!A) return;
@@ -12909,7 +12938,7 @@ function ml(e) {
                 t = 0;
             function n() {
                 R.current
-                    ? ((P.current = (0, d8.E8)(_.current) ? P.current + 1 : 0), N((0, d8.Ov)(P.current)))
+                    ? ((P.current = (0, me.E8)(_.current) ? P.current + 1 : 0), N((0, me.Ov)(P.current)))
                     : I.current !== _.current
                       ? N(I.current)
                       : M.current?.play();
@@ -12917,7 +12946,7 @@ function ml(e) {
             return (
                 (e = window.setTimeout(() => {
                     (n(), (t = window.setInterval(n, 2400)));
-                }, d8.FZ)),
+                }, me.FZ)),
                 () => {
                     (window.clearTimeout(e), window.clearInterval(t));
                 }
@@ -12936,18 +12965,18 @@ function ml(e) {
         align: "left",
         shouldShow: $,
         onRequestClose: O,
-        renderPopout: () => (0, a.jsx)(mt, { id: g, activity: t }),
+        renderPopout: () => (0, a.jsx)(ml, { id: g, activity: t }),
         children: () =>
             (0, a.jsxs)(C.D, {
                 innerRef: p,
-                className: h()(mn.hF, T && mn.Xd),
+                className: h()(mr.hF, T && mr.Xd),
                 "aria-label": E.intl.string(
                     r
                         ? S.default.qqlUiW
                         : b === S.default.j8tmjK
                           ? S.default.j8tmjK
                           : w
-                            ? d8.kx["0"]
+                            ? me.kx["0"]
                             : S.default["Uuj/gh"],
                 ),
                 "aria-expanded": $,
@@ -12957,11 +12986,11 @@ function ml(e) {
                 onClick: D,
                 children: [
                     (0, a.jsx)("span", {
-                        className: mn.bl,
-                        children: (0, a.jsx)(d9.i, { size: 10, color: "currentColor" }),
+                        className: mr.bl,
+                        children: (0, a.jsx)(mt.i, { size: 10, color: "currentColor" }),
                     }),
                     (0, a.jsx)("span", {
-                        className: mn.xu,
+                        className: mr.xu,
                         "aria-hidden": !!u || !!w || void 0,
                         children: A
                             ? (0, a.jsx)(uU.o, {
@@ -12969,15 +12998,15 @@ function ml(e) {
                                   text: k,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  duration: d8.vg,
+                                  duration: me.vg,
                                   delay: null,
-                                  className: mn.yE,
+                                  className: mr.yE,
                               })
                             : (0, a.jsx)(v.E, {
                                   tag: "span",
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  className: mn.yE,
+                                  className: mr.yE,
                                   children: k,
                               }),
                     }),
@@ -12985,15 +13014,15 @@ function ml(e) {
             }),
     });
 }
-let mr = { second: 1e3, minute: 6e4 };
-function ma(e) {
+let mi = { second: 1e3, minute: 6e4 };
+function ms(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "second",
         [n, l] = i.useState(() => Date.now());
     return (
         i.useEffect(() => {
             let n;
             if (null == e) return;
-            let r = mr[t];
+            let r = mi[t];
             return (
                 !(function t() {
                     let a = Date.now();
@@ -13005,44 +13034,44 @@ function ma(e) {
         null == e ? void 0 : Math.max(0, n - e)
     );
 }
-var mi = n(719374);
-function ms(e) {
+var mo = n(719374);
+function mu(e) {
     let { startedAt: t, variant: n = "text-xs/medium" } = e,
-        l = ma(t);
+        l = ms(t);
     return (0, a.jsx)(v.E, {
         tag: "span",
         variant: n,
         color: "text-muted",
         "aria-hidden": !0,
-        className: mi.$,
+        className: mo.$,
         "data-conjure-turn-timer": !0,
         children: (0, si.C7)(l),
     });
 }
-function mo(e) {
+function mc(e) {
     let { startedAt: t } = e,
-        n = ma(t, "minute");
+        n = ms(t, "minute");
     return (0, a.jsx)(ay.A, { role: "timer", children: (0, si.Us)(n) });
 }
-var mu = n(885574),
-    mc = n(242779),
-    md = n(436804);
-function mm(e) {
+var md = n(885574),
+    mm = n(242779),
+    mf = n(436804);
+function mh(e) {
     return e.toLocaleString();
 }
-function mf(e) {
+function mp(e) {
     let { label: t, usage: n, cached: l = !0 } = e;
     return (0, a.jsxs)("div", {
-        className: md.Q$,
+        className: mf.Q$,
         children: [
             (0, a.jsxs)("div", {
-                className: md.mf,
+                className: mf.mf,
                 children: [
                     (0, a.jsx)(v.E, { variant: "text-sm/medium", color: "text-default", children: t }),
                     (0, a.jsxs)(v.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        children: [mm((0, mc.aM)(n)), " tokens"],
+                        children: [mh((0, mm.aM)(n)), " tokens"],
                     }),
                 ],
             }),
@@ -13051,38 +13080,38 @@ function mf(e) {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: [
-                    mm(n.input_tokens),
+                    mh(n.input_tokens),
                     " in \xb7 ",
-                    mm(n.output_tokens),
+                    mh(n.output_tokens),
                     " out",
                     l
-                        ? ` \xb7 ${mm(n.cache_creation_input_tokens)} cache write \xb7 ${mm(n.cache_read_input_tokens)} cache read`
+                        ? ` \xb7 ${mh(n.cache_creation_input_tokens)} cache write \xb7 ${mh(n.cache_read_input_tokens)} cache read`
                         : "",
                 ],
             }),
         ],
     });
 }
-function mh(e) {
+function mg(e) {
     let { project: t } = e,
-        n = (0, mc.wU)(t.compaction),
-        l = (0, mc.wU)(t.classifier),
-        r = (0, mc.wV)(t.orchestrator, t.codegen),
-        i = (0, mc.wV)(r, n);
+        n = (0, mm.wU)(t.compaction),
+        l = (0, mm.wU)(t.classifier),
+        r = (0, mm.wV)(t.orchestrator, t.codegen),
+        i = (0, mm.wV)(r, n);
     return (0, a.jsxs)("div", {
-        className: md.si,
+        className: mf.si,
         role: "dialog",
         "aria-label": E.intl.string(S.default.p5EGzq),
         children: [
             (0, a.jsx)("div", {
-                className: md.Q$,
+                className: mf.Q$,
                 children: (0, a.jsxs)("div", {
-                    className: md.mf,
+                    className: mf.mf,
                     children: [
                         (0, a.jsxs)(v.E, {
                             variant: "text-md/semibold",
                             color: "text-default",
-                            children: [mm((0, mc.a7)(t.cost_usd)), " runes"],
+                            children: [mh((0, mm.a7)(t.cost_usd)), " runes"],
                         }),
                         (0, a.jsxs)(v.E, {
                             variant: "text-xs/normal",
@@ -13092,11 +13121,11 @@ function mh(e) {
                     ],
                 }),
             }),
-            (0, a.jsx)(mf, { label: E.intl.string(S.default["9Sj3SX"]), usage: r }),
-            (0, a.jsx)(mf, { label: E.intl.string(S.default.ANCEo3), usage: n }),
-            (0, a.jsx)(mf, { label: E.intl.string(S.default.ugL6D4), usage: l, cached: !1 }),
+            (0, a.jsx)(mp, { label: E.intl.string(S.default["9Sj3SX"]), usage: r }),
+            (0, a.jsx)(mp, { label: E.intl.string(S.default.ANCEo3), usage: n }),
+            (0, a.jsx)(mp, { label: E.intl.string(S.default.ugL6D4), usage: l, cached: !1 }),
             (0, a.jsxs)("div", {
-                className: md.mf,
+                className: mf.mf,
                 children: [
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/normal",
@@ -13106,28 +13135,28 @@ function mh(e) {
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: 0 === (0, mc.sj)(i) ? "\u2014" : `${Math.round(100 * (0, mc.CA)(i))}%`,
+                        children: 0 === (0, mm.sj)(i) ? "\u2014" : `${Math.round(100 * (0, mm.CA)(i))}%`,
                     }),
                 ],
             }),
         ],
     });
 }
-function mp(e) {
+function mx(e) {
     let { project: t } = e,
         n = i.useRef(null);
     return (0, a.jsx)(eZ.Y, {
         targetElementRef: n,
         position: "top",
         align: "right",
-        renderPopout: () => (0, a.jsx)(mh, { project: t }),
+        renderPopout: () => (0, a.jsx)(mg, { project: t }),
         children: (e) =>
             (0, a.jsx)(C.D, {
                 innerRef: n,
-                className: md.Y$,
+                className: mf.Y$,
                 "aria-label": E.intl.string(S.default.Z96gxQ),
                 ...e,
-                children: (0, a.jsx)(mu.CircleInformationIcon, {
+                children: (0, a.jsx)(md.CircleInformationIcon, {
                     size: "xxs",
                     color: "currentColor",
                     "aria-hidden": !0,
@@ -13135,8 +13164,8 @@ function mp(e) {
             }),
     });
 }
-var mg = n(997421);
-function mx(e) {
+var mv = n(997421);
+function mj(e) {
     let {
             projectId: t,
             thinking: n,
@@ -13156,27 +13185,27 @@ function mx(e) {
         b = i.useCallback(
             (e) =>
                 j(
-                    (0, d8.E8)(e) || e === E.intl.string(S.default.mKK6wB) || e === E.intl.string(S.default.j8tmjK)
+                    (0, me.E8)(e) || e === E.intl.string(S.default.mKK6wB) || e === E.intl.string(S.default.j8tmjK)
                         ? null
                         : e,
                 ),
             [],
         ),
-        y = null == f ? null : (0, d8.uc)(f),
+        y = null == f ? null : (0, me.uc)(f),
         w = null != s,
         k = s ?? (n ? l : void 0),
         N = n || r || w || !0 === m;
     return (0, a.jsxs)("div", {
-        className: mg.jf,
+        className: mv.jf,
         children: [
             (0, a.jsxs)("div", {
-                className: mg.Xx,
+                className: mv.Xx,
                 role: "status",
                 "aria-live": "polite",
                 "data-conjure-activity": !0,
                 children: [
                     N || u || p || g
-                        ? (0, a.jsx)(ml, {
+                        ? (0, a.jsx)(ma, {
                               activity: c,
                               compacting: d,
                               saving: m,
@@ -13190,14 +13219,14 @@ function mx(e) {
                               onSpokenChange: b,
                           })
                         : null,
-                    null != k ? (0, a.jsx)(ms, { startedAt: k }) : null,
+                    null != k ? (0, a.jsx)(mu, { startedAt: k }) : null,
                 ],
             }),
-            null != k ? (0, a.jsx)(mo, { startedAt: k }) : null,
+            null != k ? (0, a.jsx)(mc, { startedAt: k }) : null,
             null == f || null == y
                 ? null
                 : (0, a.jsxs)("span", {
-                      className: mg.BP,
+                      className: mv.BP,
                       children: [
                           (0, a.jsx)(v.E, {
                               tag: "span",
@@ -13206,7 +13235,7 @@ function mx(e) {
                               "aria-label": y.aria,
                               children: y.text,
                           }),
-                          (0, a.jsx)(mp, { project: f }),
+                          (0, a.jsx)(mx, { project: f }),
                       ],
                   }),
             "open" === h
@@ -13216,19 +13245,19 @@ function mx(e) {
                       variant: "text-xs/medium",
                       color: "failed" === h ? "text-feedback-critical" : "text-muted",
                       role: "status",
-                      "aria-label": E.intl.formatToPlainString(S.default["tCo+ZM"], { status: (0, d8.Db)(h) }),
+                      "aria-label": E.intl.formatToPlainString(S.default["tCo+ZM"], { status: (0, me.Db)(h) }),
                       "data-conjure-conn": !0,
                       "data-state": h,
-                      className: mg.XF,
-                      children: (0, d8.Db)(h),
+                      className: mv.XF,
+                      children: (0, me.Db)(h),
                   }),
         ],
     });
 }
-let mv = ["wheel", "touchstart", "pointerdown", "keydown"];
-var mj = n(608711);
-let mb = [E.intl.string(S.default["9w+Chc"]), E.intl.string(S.default.WAvmdq), E.intl.string(S.default.SKsrzl)];
-function my(e) {
+let mb = ["wheel", "touchstart", "pointerdown", "keydown"];
+var my = n(608711);
+let mw = [E.intl.string(S.default["9w+Chc"]), E.intl.string(S.default.WAvmdq), E.intl.string(S.default.SKsrzl)];
+function mk(e) {
     var t, n;
     let l,
         r,
@@ -13277,9 +13306,9 @@ function my(e) {
             i.useLayoutEffect(() => {
                 let t = e.current?.getScrollerNode();
                 if (null != t) {
-                    for (let e of mv) t.addEventListener(e, u, { passive: !0 });
+                    for (let e of mb) t.addEventListener(e, u, { passive: !0 });
                     return () => {
-                        for (let e of mv) t.removeEventListener(e, u);
+                        for (let e of mb) t.removeEventListener(e, u);
                     };
                 }
             }, [e, u]);
@@ -13627,7 +13656,7 @@ function my(e) {
         e5 = i.useMemo(() => {
             let e = 0;
             for (let t = 0; t < f.length; t++) e = (31 * e + f.charCodeAt(t)) % 0x7fffffff;
-            return mb[e % mb.length];
+            return mw[e % mw.length];
         }, [f]),
         e6 = ef ? E.intl.string(S.default.Zc7gML) : "greeting" === e3 && 0 === x.length ? e5 : null,
         e7 = i.useMemo(() => {
@@ -13677,7 +13706,7 @@ function my(e) {
     return (0, a.jsxs)("section", {
         ref: M,
         "data-conjure-chat": !0,
-        className: mj.TE,
+        className: my.TE,
         children: [
             ed
                 ? (0, a.jsx)(j.A, {
@@ -13697,16 +13726,16 @@ function my(e) {
                 agents: td,
             }),
             (0, a.jsxs)("div", {
-                className: mj.JX,
+                className: my.JX,
                 children: [
                     (0, a.jsx)(ad.Ch, {
                         ref: _,
                         onScroll: K,
                         scrollbarGutter: e4 ? "both-edges" : "stable",
-                        className: [mj.N$, $ ? null : mj.hB, eZ ? mj.J9 : null].filter(Boolean).join(" "),
+                        className: [my.N$, $ ? null : my.hB, eZ ? my.J9 : null].filter(Boolean).join(" "),
                         children: (0, a.jsx)(i4.Fu.Provider, {
                             value: f,
-                            children: (0, a.jsx)(d7, {
+                            children: (0, a.jsx)(d9, {
                                 projectId: f,
                                 messages: x,
                                 emptyState: e3,
@@ -13727,8 +13756,8 @@ function my(e) {
                         }),
                     }),
                     (0, a.jsx)("div", {
-                        className: mj.NJ,
-                        children: (0, a.jsx)(mx, {
+                        className: my.NJ,
+                        children: (0, a.jsx)(mj, {
                             projectId: f,
                             thinking: e8,
                             turnStartedAt: e9,
@@ -13743,13 +13772,13 @@ function my(e) {
                         }),
                     }),
                     A
-                        ? (0, a.jsx)("div", { ref: eY, className: mj.B5, children: (0, a.jsx)(iF, { projectId: f }) })
+                        ? (0, a.jsx)("div", { ref: eY, className: my.B5, children: (0, a.jsx)(iF, { projectId: f }) })
                         : null,
                     null == eM
                         ? null
                         : (0, a.jsx)("div", {
                               ref: eY,
-                              className: eZ ? `${mj.B5} ${mj.J9}` : mj.B5,
+                              className: eZ ? `${my.B5} ${my.J9}` : my.B5,
                               children:
                                   null != eM.install_scope_switch
                                       ? (0, a.jsx)(
@@ -13777,7 +13806,7 @@ function my(e) {
                         ? null
                         : (0, a.jsx)("div", {
                               ref: eY,
-                              className: mj.B5,
+                              className: my.B5,
                               children: (0, a.jsx)(
                                   aH,
                                   { projectId: f, request: eA, canSend: ed, onDismiss: e$, onSent: e_ ? eD : void 0 },
@@ -13788,7 +13817,7 @@ function my(e) {
                         ? null
                         : (0, a.jsx)("div", {
                               ref: null == eM && null == eA ? eY : void 0,
-                              className: mj.B5,
+                              className: my.B5,
                               children: (0, a.jsx)(
                                   i2,
                                   { askId: eK?.id, projectId: f, request: eH, onDismiss: eV },
@@ -13798,7 +13827,7 @@ function my(e) {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: mj.Jx,
+                className: my.Jx,
                 children: [
                     (0, a.jsx)(a$, {
                         onJumpToActivity: B,
@@ -13812,7 +13841,7 @@ function my(e) {
                     0 === H.annotations.length
                         ? null
                         : (0, a.jsxs)("div", {
-                              className: mj.g0,
+                              className: my.g0,
                               "data-testid": "conjure-design-pending",
                               children: [
                                   (0, a.jsx)(v.E, {
@@ -13838,7 +13867,7 @@ function my(e) {
                     null == X
                         ? null
                         : (0, a.jsx)("div", {
-                              className: mj.qB,
+                              className: my.qB,
                               children: (0, a.jsx)(am.w, {
                                   type: "critical",
                                   role: "alert",
@@ -13849,11 +13878,11 @@ function my(e) {
                     null == V
                         ? null
                         : (0, a.jsxs)("div", {
-                              className: mj.Db,
+                              className: my.Db,
                               children: [
                                   (0, a.jsx)(am.w, { type: "warning", role: "status", message: V.message }),
                                   (0, a.jsx)("div", {
-                                      className: mj.jU,
+                                      className: my.jU,
                                       children: (0, a.jsx)(N.m, {
                                           text: E.intl.string(E.t.WAI6xu),
                                           asContainer: !0,
@@ -13896,24 +13925,24 @@ function my(e) {
         ],
     });
 }
-var mw = n(761508),
-    mk = n(933294),
-    mN = n(207438),
-    mC = n(683438);
-function mA(e, t) {
+var mN = n(761508),
+    mC = n(933294),
+    mA = n(207438),
+    mS = n(683438);
+function mE(e, t) {
     return String(e).padStart(t, "0");
 }
-function mS(e) {
+function mI(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "seconds";
     if (e.length > 64) return null;
     let n = Date.parse(e);
     if (Number.isNaN(n)) return null;
     let l = new Date(n),
-        r = `${mA(l.getHours(), 2)}:${mA(l.getMinutes(), 2)}:${mA(l.getSeconds(), 2)}`;
-    return "millis" === t ? `${r}.${mA(l.getMilliseconds(), 3)}` : r;
+        r = `${mE(l.getHours(), 2)}:${mE(l.getMinutes(), 2)}:${mE(l.getSeconds(), 2)}`;
+    return "millis" === t ? `${r}.${mE(l.getMilliseconds(), 3)}` : r;
 }
-var mE = n(667931);
-let mI = {
+var mM = n(667931);
+let m_ = {
         op: "Operation",
         model: "Model",
         tool: "Tool",
@@ -13924,100 +13953,100 @@ let mI = {
         platform: "Platform",
         other: "Other",
     },
-    mM = { running: "Running", ok: "Done", error: "Failed" };
-function m_(e) {
+    mR = { running: "Running", ok: "Done", error: "Failed" };
+function mP(e) {
     if (e < 1e3) return String(e);
     if (e >= 1e6) return `${(e / 1e6).toFixed(1)}M`;
     let t = e / 1e3;
     return `${t < 10 ? t.toFixed(1) : Math.round(t)}k`;
 }
-function mR(e) {
+function mT(e) {
     var t;
     return (t = Math.round(e)) < 1e3 ? `${t}ms` : `${(t / 1e3).toFixed(1)}s`;
 }
-function mP(e) {
+function mL(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span";
     return `${e} ${t}${1 === e ? "" : "s"}`;
 }
-function mT(e) {
-    return mR(e.count > 1 ? e.totalMs : e.end - e.start);
+function m$(e) {
+    return mT(e.count > 1 ? e.totalMs : e.end - e.start);
 }
-let mL = ["Arguments", "Result", "Usage", "Details"];
-function m$(e, t) {
+let mD = ["Arguments", "Result", "Usage", "Details"];
+function mO(e, t) {
     return { label: e, value: t, block: t.length > 80 || t.includes("\n") };
 }
-function mD(e) {
+function mq(e) {
     return `$${e.toFixed(e < 1 ? 3 : 2)}`;
 }
-function mO(e) {
-    let t = (0, mE.bM)(e)?.end;
-    return null != t ? `${(t / 1e3).toFixed(2)}s` : (0, mE.lp)(e) ? "interrupted" : "still running";
+function mz(e) {
+    let t = (0, mM.bM)(e)?.end;
+    return null != t ? `${(t / 1e3).toFixed(2)}s` : (0, mM.lp)(e) ? "interrupted" : "still running";
 }
-function mq(e) {
-    return [mS(new Date(e.started_at).toISOString()) ?? "", mP(e.spans.length), (0, mE.Sj)((0, mE.bM)(e)?.attrs)]
+function mF(e) {
+    return [mI(new Date(e.started_at).toISOString()) ?? "", mL(e.spans.length), (0, mM.Sj)((0, mM.bM)(e)?.attrs)]
         .filter((e) => "" !== e)
         .join(" \xb7 ");
 }
-function mz(e) {
-    let t = (0, mE.W7)(e),
+function mU(e) {
+    let t = (0, mM.W7)(e),
         n = new Map(),
         l = { calls: 0, input: 0, output: 0, cacheRead: 0, cacheWrite: 0, costUsd: 0 };
     for (let r of e.spans) {
-        let { service: e, category: a } = (0, mE.N5)(r);
+        let { service: e, category: a } = (0, mM.N5)(r);
         (n.set(a, (n.get(a) ?? 0) + (t.get(r.id) ?? 0)),
             "model" === e &&
                 ((l.calls += 1),
-                (l.input += mF(r, "in")),
-                (l.output += mF(r, "out")),
-                (l.cacheRead += mF(r, "cache_read")),
-                (l.cacheWrite += mF(r, "cache_write")),
-                (l.costUsd += mF(r, "cost_usd"))));
+                (l.input += mG(r, "in")),
+                (l.output += mG(r, "out")),
+                (l.cacheRead += mG(r, "cache_read")),
+                (l.cacheWrite += mG(r, "cache_write")),
+                (l.costUsd += mG(r, "cost_usd"))));
     }
-    let r = mE.BF.map((e) => ({ category: e, ms: n.get(e) ?? 0 }));
+    let r = mM.BF.map((e) => ({ category: e, ms: n.get(e) ?? 0 }));
     return { categories: r, busyMs: r.reduce((e, t) => e + t.ms, 0), model: l };
 }
-function mF(e, t) {
+function mG(e, t) {
     let n = e.attrs?.[t];
     return "number" == typeof n ? n : 0;
 }
-var mU = n(738188),
-    mG = n(430993),
-    mB = n(364840),
-    mK = n(224640),
-    mH = n(20742);
-let mV = { collapsed: new Set(), revealed: new Set() };
-var mW = n(872892);
-let mX = {
-    op: mW.Q,
-    model: mW.i3,
-    tool: mW.dH,
-    setup: mW.kc,
-    worktree: mW.Qx,
-    sandbox: mW.QH,
-    build: mW.F1,
-    platform: mW.Op,
-    other: mW.fv,
+var mB = n(738188),
+    mK = n(430993),
+    mH = n(364840),
+    mV = n(224640),
+    mW = n(20742);
+let mX = { collapsed: new Set(), revealed: new Set() };
+var mZ = n(872892);
+let mJ = {
+    op: mZ.Q,
+    model: mZ.i3,
+    tool: mZ.dH,
+    setup: mZ.kc,
+    worktree: mZ.Qx,
+    sandbox: mZ.QH,
+    build: mZ.F1,
+    platform: mZ.Op,
+    other: mZ.fv,
 };
-function mZ(e) {
+function mY(e) {
     let { stats: t } = e,
         n = (function (e) {
             let { model: t } = e;
             return 0 === t.calls
                 ? null
                 : [
-                      mP(t.calls, "model call"),
-                      `${m_(t.input)} in`,
-                      `${m_(t.output)} out`,
-                      `${m_(t.cacheRead)} cache read`,
-                      `${m_(t.cacheWrite)} cache write`,
-                      mD(t.costUsd),
+                      mL(t.calls, "model call"),
+                      `${mP(t.input)} in`,
+                      `${mP(t.output)} out`,
+                      `${mP(t.cacheRead)} cache read`,
+                      `${mP(t.cacheWrite)} cache write`,
+                      mq(t.costUsd),
                   ].join(" \xb7 ");
         })(t);
     return (0, a.jsxs)("div", {
-        className: mW.M1,
+        className: mZ.M1,
         children: [
             (0, a.jsx)("div", {
-                className: mW.Fc,
+                className: mZ.Fc,
                 "aria-hidden": !0,
                 children: t.categories.map((e) => {
                     let { category: t, ms: n } = e;
@@ -14026,7 +14055,7 @@ function mZ(e) {
                         : (0, a.jsx)(
                               "div",
                               {
-                                  className: `${mW.DJ} ${mX[t]}`,
+                                  className: `${mZ.DJ} ${mJ[t]}`,
                                   style: { "--custom-conjure-perf-trace-weight": String(n) },
                               },
                               t,
@@ -14034,20 +14063,20 @@ function mZ(e) {
                 }),
             }),
             (0, a.jsx)("div", {
-                className: mW.o1,
-                children: mE.BF.map((e) => {
+                className: mZ.o1,
+                children: mM.BF.map((e) => {
                     let n,
                         l =
                             0 === (n = t.categories.find((t) => t.category === e)?.ms ?? 0) || 0 === t.busyMs
                                 ? null
-                                : `${Math.round((n / t.busyMs) * 100)}% \xb7 ${mR(n)}`;
+                                : `${Math.round((n / t.busyMs) * 100)}% \xb7 ${mT(n)}`;
                     return (0, a.jsxs)(
                         "span",
                         {
-                            className: mW.fI,
+                            className: mZ.fI,
                             children: [
-                                (0, a.jsx)("span", { className: `${mW.nf} ${mX[e]}` }),
-                                (0, a.jsx)(v.E, { variant: "text-xs/normal", color: "text-muted", children: mI[e] }),
+                                (0, a.jsx)("span", { className: `${mZ.nf} ${mJ[e]}` }),
+                                (0, a.jsx)(v.E, { variant: "text-xs/normal", color: "text-muted", children: m_[e] }),
                                 null == l
                                     ? null
                                     : (0, a.jsx)(v.E, {
@@ -14073,15 +14102,15 @@ function mZ(e) {
         ],
     });
 }
-function mJ(e) {
+function mQ(e) {
     return `conjure-perf-trace-${e}`;
 }
-function mY(e) {
+function m0(e) {
     let { start: t, end: n, extent: l, barClass: r, duration: i } = e,
         s = (t / l) * 100,
         o = ((n - t) / l) * 100;
     return (0, a.jsxs)("div", {
-        className: mW.c1,
+        className: mZ.c1,
         style: { "--custom-conjure-perf-trace-left": String(s), "--custom-conjure-perf-trace-width": String(o) },
         children: [
             (0, a.jsx)("div", { className: r }),
@@ -14089,13 +14118,13 @@ function mY(e) {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 tabularNumbers: !0,
-                className: `${mW.p0} ${s + o > 85 ? mW.EU : mW.jh}`,
+                className: `${mZ.p0} ${s + o > 85 ? mZ.EU : mZ.jh}`,
                 children: i,
             }),
         ],
     });
 }
-function mQ(e) {
+function m1(e) {
     let { node: t, extent: n, collapsed: l, selected: r, onSelect: s, onToggle: o, onExpandSubtree: u } = e,
         c = t.children.length > 0,
         d = l ? nd._ : rr.a,
@@ -14114,16 +14143,16 @@ function mQ(e) {
     return (0, a.jsxs)(C.D, {
         tag: "div",
         role: "treeitem",
-        id: mJ(t.key),
+        id: mQ(t.key),
         tabIndex: -1,
         "aria-level": t.depth + 1,
         "aria-expanded": c ? !l : void 0,
         "aria-selected": r,
-        className: `${mW.$y} ${r ? mW.wQ : ""}`,
+        className: `${mZ.$y} ${r ? mZ.wQ : ""}`,
         onClick: m,
         children: [
             (0, a.jsxs)("div", {
-                className: mW.So,
+                className: mZ.So,
                 style: { "--custom-conjure-perf-trace-depth": String(t.depth) },
                 children: [
                     c
@@ -14131,100 +14160,100 @@ function mQ(e) {
                               tag: "span",
                               "aria-hidden": !0,
                               tabIndex: -1,
-                              className: mW.ai,
+                              className: mZ.ai,
                               onClick: f,
                               children: (0, a.jsx)(d, { size: "xs", color: "currentColor" }),
                           })
-                        : (0, a.jsx)("span", { className: mW.YJ }),
+                        : (0, a.jsx)("span", { className: mZ.YJ }),
                     (0, a.jsx)(v.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         tabularNumbers: !0,
-                        className: mW.U9,
+                        className: mZ.U9,
                         children: t.descendants > 0 ? t.descendants : "",
                     }),
-                    (0, a.jsx)("span", { className: `${mW.nf} ${mX[t.category]}` }),
+                    (0, a.jsx)("span", { className: `${mZ.nf} ${mJ[t.category]}` }),
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/semibold",
                         color: "text-strong",
-                        className: mW.eu,
+                        className: mZ.eu,
                         children: t.service,
                     }),
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/normal",
                         color: "text-default",
-                        className: mW.MQ,
+                        className: mZ.MQ,
                         children: t.operation,
                     }),
                     t.count > 1
                         ? (0, a.jsx)(v.E, {
                               variant: "text-xs/semibold",
                               color: "text-default",
-                              className: mW.qS,
+                              className: mZ.qS,
                               children: `\xd7${t.count}`,
                           })
                         : null,
                     t.failed
-                        ? (0, a.jsx)(mU.WarningIcon, { size: "xs", color: "currentColor", className: mW.ik })
+                        ? (0, a.jsx)(mB.WarningIcon, { size: "xs", color: "currentColor", className: mZ.ik })
                         : null,
                 ],
             }),
-            (0, a.jsx)(mY, {
+            (0, a.jsx)(m0, {
                 start: t.start,
                 end: t.end,
                 extent: n,
                 barClass: t.failed
-                    ? `${mW.M0} ${mW.Nh}`
+                    ? `${mZ.M0} ${mZ.Nh}`
                     : t.running
-                      ? `${mW.M0} ${mW.rF}`
-                      : `${mW.M0} ${mX[t.category]}`,
-                duration: mT(t),
+                      ? `${mZ.M0} ${mZ.rF}`
+                      : `${mZ.M0} ${mJ[t.category]}`,
+                duration: m$(t),
             }),
         ],
     });
 }
-function m0(e) {
+function m2(e) {
     let { row: t, extent: n, selected: l, onReveal: r } = e;
     return (0, a.jsxs)(C.D, {
         tag: "div",
         role: "treeitem",
-        id: mJ(t.key),
+        id: mQ(t.key),
         tabIndex: -1,
         "aria-level": t.depth + 1,
         "aria-expanded": !1,
         "aria-selected": l,
-        className: `${mW.$y} ${l ? mW.wQ : ""}`,
+        className: `${mZ.$y} ${l ? mZ.wQ : ""}`,
         onClick: () => r(t.parentKey),
         children: [
             (0, a.jsxs)("div", {
-                className: mW.So,
+                className: mZ.So,
                 style: { "--custom-conjure-perf-trace-depth": String(t.depth) },
                 children: [
                     (0, a.jsx)("span", {
-                        className: mW.ai,
+                        className: mZ.ai,
                         children: (0, a.jsx)(nd._, { size: "xs", color: "currentColor" }),
                     }),
-                    (0, a.jsx)("span", { className: mW.U9 }),
-                    (0, a.jsx)("span", { className: `${mW.nf} ${mW.dL}` }),
+                    (0, a.jsx)("span", { className: mZ.U9 }),
+                    (0, a.jsx)("span", { className: `${mZ.nf} ${mZ.dL}` }),
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        className: mW.MQ,
-                        children: mP(t.count, "smaller span"),
+                        className: mZ.MQ,
+                        children: mL(t.count, "smaller span"),
                     }),
                 ],
             }),
-            (0, a.jsx)(mY, {
+            (0, a.jsx)(m0, {
                 start: t.start,
                 end: t.end,
                 extent: n,
-                barClass: `${mW.M0} ${mW.ab} ${mW.dL}`,
-                duration: mR(t.totalMs),
+                barClass: `${mZ.M0} ${mZ.ab} ${mZ.dL}`,
+                duration: mT(t.totalMs),
             }),
         ],
     });
 }
-function m1(e) {
+function m3(e) {
     let { node: t } = e;
     return null == t
         ? (0, a.jsx)(v.E, {
@@ -14233,34 +14262,34 @@ function m1(e) {
               children: "Select a span to see its details.",
           })
         : (0, a.jsxs)("div", {
-              className: mW._0,
+              className: mZ._0,
               children: [
                   (0, a.jsxs)("div", {
-                      className: mW.TQ,
+                      className: mZ.TQ,
                       children: [
-                          (0, a.jsx)("span", { className: `${mW.nf} ${mX[t.category]}` }),
+                          (0, a.jsx)("span", { className: `${mZ.nf} ${mJ[t.category]}` }),
                           (0, a.jsx)(v.E, { variant: "text-sm/semibold", color: "text-strong", children: t.service }),
                           (0, a.jsx)(v.E, { variant: "text-sm/normal", color: "text-default", children: t.operation }),
                       ],
                   }),
                   (function (e) {
-                      let t = [m$("Start", `+${mR(e.start)}`), m$("Duration", mT(e))];
+                      let t = [mO("Start", `+${mT(e.start)}`), mO("Duration", m$(e))];
                       e.count > 1
                           ? t.push(
-                                m$("Calls", String(e.count)),
-                                m$("Longest call", mR(e.maxMs)),
-                                m$("Spread over", mR(e.end - e.start)),
+                                mO("Calls", String(e.count)),
+                                mO("Longest call", mT(e.maxMs)),
+                                mO("Spread over", mT(e.end - e.start)),
                             )
-                          : e.children.length > 0 && t.push(m$("Self time", mR(e.selfMs)));
+                          : e.children.length > 0 && t.push(mO("Self time", mT(e.selfMs)));
                       let n = e.span.waits_on;
-                      null != n && t.push(m$("Waited on", `${n.span_name} in ${n.trace_name}`));
+                      null != n && t.push(mO("Waited on", `${n.span_name} in ${n.trace_name}`));
                       let l = [
                           e.parallel ? "ran in parallel with a sibling" : null,
                           e.running ? "still running" : null,
                           e.outlivedParent ? "outlived its parent" : null,
                       ].filter((e) => null != e);
-                      (l.length > 0 && t.push(m$("Notes", l.join(", "))),
-                          null != e.span.error && t.push(m$("Error", e.span.error)));
+                      (l.length > 0 && t.push(mO("Notes", l.join(", "))),
+                          null != e.span.error && t.push(mO("Error", e.span.error)));
                       let r = new Map();
                       for (let [t, n] of Object.entries({
                           ...e.span.attrs,
@@ -14276,12 +14305,12 @@ function m1(e) {
                                         : "model" === a.service
                                           ? "Usage"
                                           : "Details"),
-                              s = "cost_usd" === t ? mD(Number(n)) : String(n);
-                          r.set(l, [...(r.get(l) ?? []), m$(t.replace(/_/g, " "), s)]);
+                              s = "cost_usd" === t ? mq(Number(n)) : String(n);
+                          r.set(l, [...(r.get(l) ?? []), mO(t.replace(/_/g, " "), s)]);
                       }
                       return [
                           { title: null, rows: t },
-                          ...mL.flatMap((e) => {
+                          ...mD.flatMap((e) => {
                               let t = r.get(e);
                               return null == t ? [] : [{ title: e, rows: t }];
                           }),
@@ -14297,7 +14326,7 @@ function m1(e) {
                                       : (0, a.jsx)(v.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-strong",
-                                            className: mW.xd,
+                                            className: mZ.xd,
                                             children: t,
                                         }),
                                   n.map((e) => {
@@ -14316,7 +14345,7 @@ function m1(e) {
                                                             variant: "code",
                                                             color: "text-default",
                                                             selectable: !0,
-                                                            className: mW.vl,
+                                                            className: mZ.vl,
                                                             children: n,
                                                         })
                                                       : (0, a.jsx)(v.E, {
@@ -14339,28 +14368,28 @@ function m1(e) {
               ],
           });
 }
-function m2(e) {
+function m4(e) {
     let { trace: t } = e,
-        n = i.useMemo(() => mz(t), [t]);
-    return (0, a.jsx)(mZ, { stats: n });
+        n = i.useMemo(() => mU(t), [t]);
+    return (0, a.jsx)(mY, { stats: n });
 }
-function m3(e) {
+function m5(e) {
     let { trace: t } = e,
         n = (function (e) {
-            let t = i.useMemo(() => (null == e ? null : (0, mE.TK)(e)), [e]),
-                [n, l] = i.useState(() => (null == t ? mV : (0, mE.hB)(t))),
+            let t = i.useMemo(() => (null == e ? null : (0, mM.TK)(e)), [e]),
+                [n, l] = i.useState(() => (null == t ? mX : (0, mM.hB)(t))),
                 [r, a] = i.useState(null),
-                s = i.useRef(null == t ? new Set() : (0, mE.x7)(t));
+                s = i.useRef(null == t ? new Set() : (0, mM.x7)(t));
             i.useEffect(() => {
                 if (null == t) return;
                 let e = s.current;
-                ((s.current = (0, mE.x7)(t)), l((n) => (0, mE._0)(n, t, e)));
+                ((s.current = (0, mM.x7)(t)), l((n) => (0, mM._0)(n, t, e)));
             }, [t]);
-            let o = i.useMemo(() => (null == t ? [] : (0, mE.wu)(t, n)), [t, n]),
+            let o = i.useMemo(() => (null == t ? [] : (0, mM.wu)(t, n)), [t, n]),
                 u = i.useCallback(
                     (e) => {
-                        let n = null == t ? null : (0, mE.IE)(t, e);
-                        null != n && l((e) => (0, mE.TN)(e, n));
+                        let n = null == t ? null : (0, mM.IE)(t, e);
+                        null != n && l((e) => (0, mM.TN)(e, n));
                     },
                     [t],
                 ),
@@ -14369,19 +14398,19 @@ function m3(e) {
                 }, []),
                 d = i.useCallback(
                     (e) => {
-                        let n = null == t ? null : (0, mE.IE)(t, e);
-                        null != n && l((e) => (0, mE.H$)(e, n));
+                        let n = null == t ? null : (0, mM.IE)(t, e);
+                        null != n && l((e) => (0, mM.H$)(e, n));
                     },
                     [t],
                 ),
                 m = i.useCallback(() => {
-                    null != t && l((0, mE.vH)(t));
+                    null != t && l((0, mM.vH)(t));
                 }, [t]),
                 f = i.useCallback(() => {
-                    null != t && l((0, mE.rQ)(t));
+                    null != t && l((0, mM.rQ)(t));
                 }, [t]),
                 h = i.useCallback(() => {
-                    null != t && l((0, mE.hB)(t));
+                    null != t && l((0, mM.hB)(t));
                 }, [t]),
                 p = o.find((e) => e.key === r);
             return {
@@ -14399,8 +14428,8 @@ function m3(e) {
             };
         })(t),
         { rows: l, collapsed: r, selected: s, selectedKey: o, select: u, toggle: c, reveal: d, expandSubtree: m } = n,
-        f = (0, mE.dj)(t),
-        h = i.useMemo(() => (0, mE.nF)(f), [f]),
+        f = (0, mM.dj)(t),
+        h = i.useMemo(() => (0, mM.nF)(f), [f]),
         p = h.length > 1 ? ((h[1] - h[0]) / f) * 100 : 100,
         g = i.useCallback(
             (e) => {
@@ -14419,28 +14448,28 @@ function m3(e) {
                     c(a.key);
                 }
                 (e.preventDefault(),
-                    null != t && (u(t.key), document.getElementById(mJ(t.key))?.scrollIntoView({ block: "nearest" })));
+                    null != t && (u(t.key), document.getElementById(mQ(t.key))?.scrollIntoView({ block: "nearest" })));
             },
             [r, m, d, l, u, o, c],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(mG.c, {
+            (0, a.jsxs)(mK.c, {
                 children: [
                     (0, a.jsxs)("div", {
-                        className: mW.z,
+                        className: mZ.z,
                         children: [
                             (0, a.jsx)(v.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 tabularNumbers: !0,
-                                children: mO(t),
+                                children: mz(t),
                             }),
                             (0, a.jsx)(v.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 tabularNumbers: !0,
-                                children: mq(t),
+                                children: mF(t),
                             }),
                             null == t.started_by
                                 ? null
@@ -14454,13 +14483,13 @@ function m3(e) {
                                 : (0, a.jsx)(v.E, {
                                       variant: "text-sm/normal",
                                       color: "text-feedback-warning",
-                                      children: `${mP(t.dropped)} not recorded`,
+                                      children: `${mL(t.dropped)} not recorded`,
                                   }),
                         ],
                     }),
-                    (0, a.jsx)(m2, { trace: t }),
+                    (0, a.jsx)(m4, { trace: t }),
                     (0, a.jsxs)("div", {
-                        className: mW.KE,
+                        className: mZ.KE,
                         children: [
                             (0, a.jsx)(eT.$, {
                                 size: "sm",
@@ -14491,17 +14520,17 @@ function m3(e) {
                         role: "tree",
                         tabIndex: 0,
                         "aria-label": "Spans",
-                        "aria-activedescendant": null == o ? void 0 : mJ(o),
-                        className: mW.Zu,
+                        "aria-activedescendant": null == o ? void 0 : mQ(o),
+                        className: mZ.Zu,
                         style: { "--custom-conjure-perf-trace-step": String(p) },
                         onKeyDown: g,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: mW.t7,
+                                className: mZ.t7,
                                 "aria-hidden": !0,
                                 children: [
                                     (0, a.jsx)("div", {
-                                        className: mW.So,
+                                        className: mZ.So,
                                         children: (0, a.jsx)(v.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
@@ -14509,7 +14538,7 @@ function m3(e) {
                                         }),
                                     }),
                                     (0, a.jsx)("div", {
-                                        className: mW.c1,
+                                        className: mZ.c1,
                                         children: h.map((e) =>
                                             (0, a.jsx)(
                                                 v.E,
@@ -14517,11 +14546,11 @@ function m3(e) {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
                                                     tabularNumbers: !0,
-                                                    className: `${mW.io} ${(e / f) * 100 > 85 ? mW.L5 : ""}`,
+                                                    className: `${mZ.io} ${(e / f) * 100 > 85 ? mZ.L5 : ""}`,
                                                     style: {
                                                         "--custom-conjure-perf-trace-left": String((e / f) * 100),
                                                     },
-                                                    children: 0 === e ? "0" : mR(e),
+                                                    children: 0 === e ? "0" : mT(e),
                                                 },
                                                 e,
                                             ),
@@ -14532,7 +14561,7 @@ function m3(e) {
                             l.map((e) =>
                                 "node" === e.kind
                                     ? (0, a.jsx)(
-                                          mQ,
+                                          m1,
                                           {
                                               node: e.node,
                                               extent: f,
@@ -14544,82 +14573,82 @@ function m3(e) {
                                           },
                                           e.key,
                                       )
-                                    : (0, a.jsx)(m0, { row: e, extent: f, selected: e.key === o, onReveal: d }, e.key),
+                                    : (0, a.jsx)(m2, { row: e, extent: f, selected: e.key === o, onReveal: d }, e.key),
                             ),
                         ],
                     }),
                 ],
             }),
-            (0, a.jsx)(mB.j, { children: (0, a.jsx)(m1, { node: s }) }),
+            (0, a.jsx)(mH.j, { children: (0, a.jsx)(m3, { node: s }) }),
         ],
     });
 }
-function m4(e) {
+function m6(e) {
     let { transitionState: t, onClose: n, projectId: l, traceId: r } = e,
-        i = (0, o.bG)([dV.A], () => dV.A.getTimingTrace(l, r), [l, r]),
+        i = (0, o.bG)([dX.A], () => dX.A.getTimingTrace(l, r), [l, r]),
         s = i?.name ?? "Perf Trace";
-    return (0, a.jsxs)(mK.d, {
+    return (0, a.jsxs)(mV.d, {
         transitionState: t,
         onClose: n,
         size: "xxl",
         maxHeight: "viewport",
         "aria-label": s,
         children: [
-            (0, a.jsx)(mH.rQ, { title: s }),
+            (0, a.jsx)(mW.rQ, { title: s }),
             null == i
-                ? (0, a.jsx)(mG.c, {
+                ? (0, a.jsx)(mK.c, {
                       children: (0, a.jsx)(v.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: "This trace is no longer available.",
                       }),
                   })
-                : (0, a.jsx)(m3, { trace: i }),
+                : (0, a.jsx)(m5, { trace: i }),
         ],
     });
 }
-let m5 = { running: mW.Vf, ok: mW.mo, error: mW.Sr };
-function m6(e) {
-    let { status: t } = e;
-    return (0, a.jsx)("span", { className: `${mW.Om} ${m5[t]}`, role: "img", "aria-label": mM[t] });
-}
-function m7(e, t) {
-    (0, tO.openModal)((n) => (0, a.jsx)(m4, { ...n, projectId: e, traceId: t }));
-}
+let m7 = { running: mZ.Vf, ok: mZ.mo, error: mZ.Sr };
 function m8(e) {
+    let { status: t } = e;
+    return (0, a.jsx)("span", { className: `${mZ.Om} ${m7[t]}`, role: "img", "aria-label": mR[t] });
+}
+function m9(e, t) {
+    (0, tO.openModal)((n) => (0, a.jsx)(m6, { ...n, projectId: e, traceId: t }));
+}
+function fe(e) {
     let { projectId: t, trace: n } = e,
         l = n.spans.find((e) => null != e.error)?.error,
-        r = i.useCallback(() => m7(t, n.id), [t, n.id]);
+        r = i.useCallback(() => m9(t, n.id), [t, n.id]);
     return (0, a.jsxs)(C.D, {
-        className: mW.nM,
+        className: mZ.nM,
         onClick: r,
         children: [
             (0, a.jsxs)("div", {
-                className: mW.sU,
+                className: mZ.sU,
                 children: [
-                    (0, a.jsx)(m6, { status: (0, mE.lQ)(n) }),
+                    (0, a.jsx)(m8, { status: (0, mM.lQ)(n) }),
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/semibold",
                         color: "text-default",
-                        className: mW._k,
+                        className: mZ._k,
                         children: n.name,
                     }),
                     (0, a.jsx)(v.E, {
                         variant: "text-xs/normal",
                         color: "text-subtle",
                         tabularNumbers: !0,
-                        children: mO(n),
+                        children: mz(n),
                     }),
                 ],
             }),
-            (0, a.jsx)(v.E, { variant: "text-xs/normal", color: "text-muted", tabularNumbers: !0, children: mq(n) }),
+            (0, a.jsx)(v.E, { variant: "text-xs/normal", color: "text-muted", tabularNumbers: !0, children: mF(n) }),
             null == l
                 ? null
                 : (0, a.jsx)(v.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: l }),
         ],
     });
 }
-function m9(e) {
+function ft(e) {
     let { projectId: t, traces: n } = e,
         l = i.useRef(null),
         r = i.useCallback(() => {
@@ -14679,9 +14708,9 @@ function m9(e) {
         },
     });
 }
-function fe(e) {
+function fn(e) {
     let { projectId: t } = e,
-        n = (0, o.yK)([dV.A], () => dV.A.getTimingTraces(t), [t]),
+        n = (0, o.yK)([dX.A], () => dX.A.getTimingTraces(t), [t]),
         [l, r] = i.useState(""),
         s = i.useMemo(() => {
             let e;
@@ -14702,12 +14731,12 @@ function fe(e) {
         c = i.useMemo(
             () =>
                 (function (e) {
-                    let t = e.map(mz);
+                    let t = e.map(mU);
                     function n(e) {
                         return t.reduce((t, n) => t + e(n), 0);
                     }
                     return {
-                        categories: mE.BF.map((e) => ({
+                        categories: mM.BF.map((e) => ({
                             category: e,
                             ms: n((t) => t.categories.find((t) => t.category === e)?.ms ?? 0),
                         })),
@@ -14726,7 +14755,7 @@ function fe(e) {
         );
     return 0 === n.length
         ? (0, a.jsxs)("div", {
-              className: mW.Ie,
+              className: mZ.Ie,
               children: [
                   (0, a.jsx)(v.E, { variant: "text-sm/medium", color: "text-default", children: "No traces yet" }),
                   (0, a.jsx)(v.E, {
@@ -14738,14 +14767,14 @@ function fe(e) {
               ],
           })
         : (0, a.jsxs)("div", {
-              className: mW.nd,
+              className: mZ.nd,
               children: [
                   (0, a.jsxs)("div", {
-                      className: mW.Ko,
+                      className: mZ.Ko,
                       children: [
                           (0, a.jsx)("div", {
-                              className: mW.fH,
-                              children: (0, a.jsx)(mC.I, {
+                              className: mZ.fH,
+                              children: (0, a.jsx)(mS.I, {
                                   query: l,
                                   onChange: r,
                                   onClear: () => r(""),
@@ -14754,13 +14783,13 @@ function fe(e) {
                                   "aria-label": "Search traces",
                               }),
                           }),
-                          (0, a.jsx)(m9, { projectId: t, traces: s }),
+                          (0, a.jsx)(ft, { projectId: t, traces: s }),
                       ],
                   }),
                   (0, a.jsxs)(ad.Ch, {
-                      className: mW.XG,
+                      className: mZ.XG,
                       children: [
-                          (0, a.jsx)(mZ, { stats: c }),
+                          (0, a.jsx)(mY, { stats: c }),
                           0 === u.length
                               ? (0, a.jsx)(v.E, {
                                     variant: "text-sm/normal",
@@ -14768,12 +14797,12 @@ function fe(e) {
                                     children: "No traces match this search.",
                                 })
                               : (0, a.jsx)("ul", {
-                                    className: mW.p_,
+                                    className: mZ.p_,
                                     "aria-label": "Traces",
                                     children: u.map((e) =>
                                         (0, a.jsx)(
                                             "li",
-                                            { children: (0, a.jsx)(m8, { projectId: t, trace: e }) },
+                                            { children: (0, a.jsx)(fe, { projectId: t, trace: e }) },
                                             e.id,
                                         ),
                                     ),
@@ -14783,7 +14812,7 @@ function fe(e) {
               ],
           });
 }
-function ft(e) {
+function fl(e) {
     if (!Number.isFinite(e) || e < 0) return "\u2014";
     if (e < 1024) return `${Math.round(e)} B`;
     let t = e / 1024;
@@ -14793,17 +14822,17 @@ function ft(e) {
     let l = n / 1024;
     return `${l >= 100 ? Math.round(l) : l.toFixed(1)} GB`;
 }
-function fn(e) {
+function fr(e) {
     if (!Number.isFinite(e) || e < 0) return "\u2014";
     if (e < 1) return `${e.toFixed(2)} ms`;
     if (e < 1e3) return `${e >= 100 ? Math.round(e) : e.toFixed(1)} ms`;
     let t = e / 1e3;
     return t < 60 ? `${t >= 10 ? Math.round(t) : t.toFixed(1)} s` : `${Math.floor(t / 60)} m ${Math.round(t % 60)} s`;
 }
-function fl(e) {
+function fa(e) {
     return Number.isFinite(e) ? e.toLocaleString() : "\u2014";
 }
-function fr(e) {
+function fi(e) {
     let t = new Date(e);
     if (Number.isNaN(t.getTime())) return e;
     let n = new Date();
@@ -14811,16 +14840,16 @@ function fr(e) {
         ? t.toLocaleTimeString()
         : t.toLocaleString();
 }
-function fa(e) {
+function fs(e) {
     let t = e.split("/").filter((e) => "" !== e),
         n = t[t.length - 1] ?? e;
     return n.length > 12 ? n.slice(0, 12) : n;
 }
-function fi(e) {
+function fo(e) {
     return E.intl.string("preview" === e ? S.default["2yLYlG"] : S.default.eiAi57);
 }
-let fs = ["all", "preview", "stable", "web"];
-function fo(e) {
+let fu = ["all", "preview", "stable", "web"];
+function fc(e) {
     switch (e.reason) {
         case "local":
             return E.intl.string(S.default.mUeKML);
@@ -14834,15 +14863,15 @@ function fo(e) {
                 : E.intl.string(S.default["t+tG59"]);
     }
 }
-function fu(e) {
+function fd(e) {
     return null == e.memory_p50_bytes && null == e.memory_p999_bytes
         ? null
         : E.intl.formatToPlainString(S.default["XO/bN4"], {
-              p50: ft(e.memory_p50_bytes ?? 0),
-              p999: ft(e.memory_p999_bytes ?? e.memory_p50_bytes ?? 0),
+              p50: fl(e.memory_p50_bytes ?? 0),
+              p999: fl(e.memory_p999_bytes ?? e.memory_p50_bytes ?? 0),
           });
 }
-let fc = {
+let fm = {
     db: () => S.default["7l+DFG"],
     db_preview: () => S.default.FAuffi,
     runtime: () => S.default["Gkl+ab"],
@@ -14850,15 +14879,15 @@ let fc = {
     bot: () => S.default["5/i0cj"],
     bot_preview: () => S.default.m2jsnw,
 };
-var fd = n(911608),
-    fm = n(177427);
-function ff(e) {
+var ff = n(911608),
+    fh = n(177427);
+function fp(e) {
     let { generatedAt: t, fetchState: n, onRefresh: l } = e;
     return (0, a.jsxs)("div", {
-        className: fm.KE,
+        className: fh.KE,
         children: [
             (0, a.jsx)("div", {
-                className: fm.IQ,
+                className: fh.IQ,
                 children:
                     "loading" === n
                         ? (0, a.jsx)(nt.y, { type: nt.t.PULSING_ELLIPSIS })
@@ -14873,7 +14902,7 @@ function ff(e) {
                             ? (0, a.jsx)(v.E, {
                                   variant: "text-xs/normal",
                                   color: "text-muted",
-                                  children: E.intl.formatToPlainString(S.default.INVO50, { time: fr(t) }),
+                                  children: E.intl.formatToPlainString(S.default.INVO50, { time: fi(t) }),
                               })
                             : null,
             }),
@@ -14881,31 +14910,31 @@ function ff(e) {
         ],
     });
 }
-function fh(e) {
+function fg(e) {
     let { title: t, children: n } = e;
     return (0, a.jsxs)("section", {
-        className: fm.uW,
+        className: fh.uW,
         "aria-label": t,
         children: [
-            (0, a.jsx)(v.E, { variant: "text-xs/semibold", color: "text-muted", className: fm.Gf, children: t }),
+            (0, a.jsx)(v.E, { variant: "text-xs/semibold", color: "text-muted", className: fh.Gf, children: t }),
             n,
         ],
     });
 }
-function fp(e) {
+function fx(e) {
     let { label: t, value: n, hint: l, critical: r = !1, icon: i, state: s } = e;
     return (0, a.jsxs)("div", {
-        className: fm.N8,
+        className: fh.N8,
         children: [
             (0, a.jsxs)("div", {
-                className: fm.x7,
+                className: fh.x7,
                 children: [
                     (0, a.jsxs)("span", {
-                        className: fm.kS,
+                        className: fh.kS,
                         children: [i, (0, a.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: t })],
                     }),
                     (0, a.jsxs)("span", {
-                        className: fm.kS,
+                        className: fh.kS,
                         children: [
                             s,
                             (0, a.jsx)(v.E, {
@@ -14921,15 +14950,15 @@ function fp(e) {
         ],
     });
 }
-function fg(e) {
+function fv(e) {
     let { label: t, used: n, max: l, formatValue: r } = e,
         i = l > 0 ? Math.min(1, Math.max(0, n / l)) : 0,
         s = i >= 0.9;
     return (0, a.jsxs)("div", {
-        className: fm.N8,
+        className: fh.N8,
         children: [
             (0, a.jsxs)("div", {
-                className: fm.x7,
+                className: fh.x7,
                 children: [
                     (0, a.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: t }),
                     (0, a.jsx)(v.E, {
@@ -14939,45 +14968,45 @@ function fg(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)(fd.z, {
+            (0, a.jsx)(ff.z, {
                 value: 100 * i,
                 valueLabel: `${r(n)} of ${r(l)}`,
                 "aria-label": t,
-                className: s ? fm.dh : void 0,
+                className: s ? fh.dh : void 0,
             }),
         ],
     });
 }
-function fx(e) {
+function fj(e) {
     let { analytics: t } = e;
     if ("ok" !== t.status)
-        return (0, a.jsx)(fp, {
+        return (0, a.jsx)(fx, {
             label: E.intl.string(S.default.SXP7pD),
             value: E.intl.string(S.default.E5hKVi),
-            hint: fo(t),
+            hint: fc(t),
         });
     let n = t.objects?.find((e) => "agent" === e.role);
     if (null == n)
-        return (0, a.jsx)(fp, {
+        return (0, a.jsx)(fx, {
             label: E.intl.string(S.default.SXP7pD),
             value: "\u2014",
             hint: E.intl.string(S.default.AGvoMJ),
         });
-    let l = fu(n);
+    let l = fd(n);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(fp, { label: E.intl.string(S.default["H/X+FI"]), value: fn(n.cpu_ms) }),
-            null != l && (0, a.jsx)(fp, { label: E.intl.string(S.default.lmFmMO), value: l }),
+            (0, a.jsx)(fx, { label: E.intl.string(S.default["H/X+FI"]), value: fr(n.cpu_ms) }),
+            null != l && (0, a.jsx)(fx, { label: E.intl.string(S.default.lmFmMO), value: l }),
         ],
     });
 }
-function fv(e) {
+function fb(e) {
     let { analytics: t } = e,
         n = E.intl.string(S.default.LoZwWn);
     if ("ok" !== t.status)
-        return (0, a.jsx)(fh, {
+        return (0, a.jsx)(fg, {
             title: n,
-            children: (0, a.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: fo(t) }),
+            children: (0, a.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: fc(t) }),
         });
     let l = (t.objects ?? [])
         .map((e) => {
@@ -14985,11 +15014,11 @@ function fv(e) {
             let n;
             return {
                 object: e,
-                label: null != (n = "agent" !== (t = e.role) ? fc[t] : null) ? E.intl.string(n()) : null,
+                label: null != (n = "agent" !== (t = e.role) ? fm[t] : null) ? E.intl.string(n()) : null,
             };
         })
         .filter((e) => null != e.label);
-    return (0, a.jsx)(fh, {
+    return (0, a.jsx)(fg, {
         title: n,
         children:
             0 === l.length
@@ -15001,38 +15030,38 @@ function fv(e) {
                 : l.map((e) => {
                       let { object: t, label: n } = e;
                       return (0, a.jsx)(
-                          fp,
+                          fx,
                           {
                               label: n,
-                              value: E.intl.formatToPlainString(S.default["w/2voO"], { cpu: fn(t.cpu_ms) }),
-                              hint: fu(t) ?? void 0,
+                              value: E.intl.formatToPlainString(S.default["w/2voO"], { cpu: fr(t.cpu_ms) }),
+                              hint: fd(t) ?? void 0,
                           },
                           t.role,
                       );
                   }),
     });
 }
-var fj = n(678708),
-    fb = n(414499),
-    fy = n(714800),
-    fw = n(81466),
-    fk = n(424383),
-    fN = n(816943),
-    fC = n(268791),
-    fA = n(514042),
-    fS = n(872351),
-    fE = n(708988),
-    fI = n(150934),
-    fM = n(417270);
-let f_ = "Restart Agent",
-    fR = { ok: ["OK", "ok"], near: ["Near the Limit", "warning"], over: ["Over the Limit", "error"] };
-function fP(e) {
+var fy = n(678708),
+    fw = n(414499),
+    fk = n(714800),
+    fN = n(81466),
+    fC = n(424383),
+    fA = n(816943),
+    fS = n(268791),
+    fE = n(514042),
+    fI = n(872351),
+    fM = n(708988),
+    f_ = n(150934),
+    fR = n(417270);
+let fP = "Restart Agent",
+    fT = { ok: ["OK", "ok"], near: ["Near the Limit", "warning"], over: ["Over the Limit", "error"] };
+function fL(e) {
     return null != e && "" !== e ? e.slice(0, 12) : "None";
 }
-function fT(e, t) {
-    return { label: e, value: null != t && "" !== t ? fr(t) : "Unknown", icon: "calendar" };
+function f$(e, t) {
+    return { label: e, value: null != t && "" !== t ? fi(t) : "Unknown", icon: "calendar" };
 }
-function fL(e) {
+function fD(e) {
     for (let [t, n] of [
         ["GB", 1e9],
         ["MB", 1e6],
@@ -15041,13 +15070,13 @@ function fL(e) {
         if (e >= n) return `${Number((e / n).toFixed(1))} ${t}`;
     return `${e} B`;
 }
-function f$(e, t, n, l) {
-    let [r, a] = fR[n.status];
-    return { label: e, value: `${fL(n.bytes)} of ${fL(n.max)} \xb7 ${r}`, hint: l, icon: t, state: a };
+function fO(e, t, n, l) {
+    let [r, a] = fT[n.status];
+    return { label: e, value: `${fD(n.bytes)} of ${fD(n.max)} \xb7 ${r}`, hint: l, icon: t, state: a };
 }
-function fD(e) {
+function fq(e) {
     if (null == e) return { label: "Last Save", value: "None since this agent instance started", icon: "save" };
-    let t = fr(e.at);
+    let t = fi(e.at);
     return e.ok
         ? { label: "Last Save", value: `OK (${e.status ?? "saved"})`, hint: t, icon: "save", state: "ok" }
         : {
@@ -15058,21 +15087,21 @@ function fD(e) {
               state: "error",
           };
 }
-let fO = { main: "Main vs Remote", wip: "WIP vs Remote" };
-function fq(e) {
-    let t = `container ${fP(e.local)} \xb7 remote ${fP(e.remote)}`,
+let fz = { main: "Main vs Remote", wip: "WIP vs Remote" };
+function fF(e) {
+    let t = `container ${fL(e.local)} \xb7 remote ${fL(e.remote)}`,
         n = e.ahead ?? 0,
         l = e.behind ?? 0,
-        r = { label: fO[e.ref], icon: "remote", hint: t };
+        r = { label: fz[e.ref], icon: "remote", hint: t };
     switch (e.state) {
         case "in_sync":
             return { ...r, value: "In Sync", state: "ok" };
         case "ahead":
-            return { ...r, value: `${fl(n)} Ahead`, hint: `${t} \xb7 not pushed yet`, state: "ahead" };
+            return { ...r, value: `${fa(n)} Ahead`, hint: `${t} \xb7 not pushed yet`, state: "ahead" };
         case "behind":
-            return { ...r, value: `${fl(l)} Behind`, state: "behind" };
+            return { ...r, value: `${fa(l)} Behind`, state: "behind" };
         case "diverged":
-            return { ...r, value: `Diverged (${fl(n)} Ahead, ${fl(l)} Behind)`, state: "error" };
+            return { ...r, value: `Diverged (${fa(n)} Ahead, ${fa(l)} Behind)`, state: "error" };
         case "not_fetched":
             return { ...r, value: "Behind", hint: `${t} \xb7 the remote head isn't in the container`, state: "behind" };
         case "missing_remote":
@@ -15081,32 +15110,32 @@ function fq(e) {
             return { ...r, value: "Missing in Container", state: "warning" };
     }
 }
-let fz = ["main", "wip"];
-var fF = n(400154);
-let fU = {
-        checkout: fj.FolderIcon,
+let fU = ["main", "wip"];
+var fG = n(400154);
+let fB = {
+        checkout: fy.FolderIcon,
         edit: aW.PencilIcon,
-        remote: fb.h,
-        commits: fy.e,
-        calendar: fw.CalendarIcon,
-        save: fk.L,
+        remote: fw.h,
+        commits: fk.e,
+        calendar: fN.CalendarIcon,
+        save: fC.L,
         objects: tn.R,
-        download: fN.$,
-        size: fC.$,
-        file: fA.FileIcon,
+        download: fA.$,
+        size: fS.$,
+        file: fE.FileIcon,
     },
-    fG = {
+    fK = {
         ok: [nE.y, k.A.colors.ICON_FEEDBACK_POSITIVE],
-        warning: [mU.WarningIcon, k.A.colors.ICON_FEEDBACK_WARNING],
+        warning: [mB.WarningIcon, k.A.colors.ICON_FEEDBACK_WARNING],
         error: [nn.a, k.A.colors.ICON_FEEDBACK_CRITICAL],
-        ahead: [fS.z, k.A.colors.ICON_MUTED],
-        behind: [fE.M, k.A.colors.ICON_MUTED],
+        ahead: [fI.z, k.A.colors.ICON_MUTED],
+        behind: [fM.M, k.A.colors.ICON_MUTED],
     };
-function fB(e) {
+function fH(e) {
     let { projectId: t } = e,
         { state: n } = {
-            state: (0, o.bG)([dV.A], () => dV.A.getGitInfoState(t), [t]),
-            load: i.useCallback(() => (0, mN.DK)(t), [t]),
+            state: (0, o.bG)([dX.A], () => dX.A.getGitInfoState(t), [t]),
+            load: i.useCallback(() => (0, mA.DK)(t), [t]),
         },
         l = (function (e) {
             let { pending: t, error: n, info: l, observedAt: r } = e;
@@ -15127,7 +15156,7 @@ function fB(e) {
             }
             return {
                 line: [
-                    `Updated ${fr(r)}`,
+                    `Updated ${fi(r)}`,
                     ...a.map((e) => {
                         let [t] = e;
                         return t;
@@ -15139,11 +15168,11 @@ function fB(e) {
                 }),
             };
         })(n);
-    return (0, a.jsxs)(fh, {
+    return (0, a.jsxs)(fg, {
         title: "Git",
         children: [
             (0, a.jsx)("div", {
-                className: fF.Lj,
+                className: fG.Lj,
                 children:
                     "" !== l.line &&
                     (0, a.jsx)(v.E, {
@@ -15157,40 +15186,40 @@ function fB(e) {
                 (function (e) {
                     var t;
                     let n;
-                    if (!e.running || null != e.localError) return [fD(e.lastSave)];
+                    if (!e.running || null != e.localError) return [fq(e.lastSave)];
                     if (!e.checkout)
                         return [
                             { label: "Resume", value: "Never Cloned", icon: "checkout", state: "error" },
-                            fD(e.lastSave),
+                            fq(e.lastSave),
                         ];
                     let l = [{ label: "Resume", value: "OK", icon: "checkout", state: "ok" }];
                     void 0 !== e.dirtyFiles &&
                         l.push({
                             label: "Uncommitted Files",
-                            value: null == e.dirtyFiles ? "Unknown" : fl(e.dirtyFiles),
+                            value: null == e.dirtyFiles ? "Unknown" : fa(e.dirtyFiles),
                             hint: null == e.dirtyFiles ? "git status didn't finish in time." : void 0,
                             icon: "edit",
                         });
-                    let r = fz.flatMap((t) => e.comparisons?.find((e) => e.ref === t) ?? []);
+                    let r = fU.flatMap((t) => e.comparisons?.find((e) => e.ref === t) ?? []);
                     (r.length > 0
-                        ? l.push(...r.map(fq))
+                        ? l.push(...r.map(fF))
                         : l.push(
-                              { label: "Main", value: fP(e.heads.main), icon: "remote" },
-                              { label: "WIP", value: fP(e.heads.wip), icon: "remote" },
+                              { label: "Main", value: fL(e.heads.main), icon: "remote" },
+                              { label: "WIP", value: fL(e.heads.wip), icon: "remote" },
                           ),
                         l.push(
-                            { label: "Commits", value: null != e.commits ? fl(e.commits) : "Unknown", icon: "commits" },
-                            fT("Oldest Commit", e.oldest),
-                            fT("Newest Commit", e.newest),
-                            fD(e.lastSave),
+                            { label: "Commits", value: null != e.commits ? fa(e.commits) : "Unknown", icon: "commits" },
+                            f$("Oldest Commit", e.oldest),
+                            f$("Newest Commit", e.newest),
+                            fq(e.lastSave),
                         ),
                         null != e.objects &&
                             l.push(
-                                ((n = 1 === (t = e.objects).packs ? "1 pack" : `${fl(t.packs)} packs`),
+                                ((n = 1 === (t = e.objects).packs ? "1 pack" : `${fa(t.packs)} packs`),
                                 {
                                     label: "Objects",
-                                    value: `${fl(t.loose)} loose (${ft(t.looseBytes)}) \xb7 ${fl(t.packed)} packed in ${n} (${ft(t.packBytes)})`,
-                                    hint: t.garbage > 0 ? `${fl(t.garbage)} garbage files` : void 0,
+                                    value: `${fa(t.loose)} loose (${fl(t.looseBytes)}) \xb7 ${fa(t.packed)} packed in ${n} (${fl(t.packBytes)})`,
+                                    hint: t.garbage > 0 ? `${fa(t.garbage)} garbage files` : void 0,
                                     icon: "objects",
                                 }),
                             ));
@@ -15202,7 +15231,7 @@ function fB(e) {
                                 ? { ...t, value: "Yes", hint: "Counting objects not downloaded didn't finish in time." }
                                 : {
                                       ...t,
-                                      value: `Yes \xb7 ${fl(e.missingObjects)} not downloaded`,
+                                      value: `Yes \xb7 ${fa(e.missingObjects)} not downloaded`,
                                       hint: "Fetched on demand; this read never fetches.",
                                   }
                             : { ...t, value: "No" };
@@ -15211,7 +15240,7 @@ function fB(e) {
                         null != a && l.push(a),
                         null != e.localBytes &&
                             l.push(
-                                f$(
+                                fO(
                                     "Repository Size",
                                     "size",
                                     e.localBytes,
@@ -15227,16 +15256,16 @@ function fB(e) {
                               })
                             : null != e.largestFile &&
                               l.push(
-                                  f$("Largest File", "file", e.largestFile, "Largest file version in the local copy."),
+                                  fO("Largest File", "file", e.largestFile, "Largest file version in the local copy."),
                               ),
                         l
                     );
                 })(n.info).map((e) => {
                     let { label: t, value: n, hint: l, icon: r, state: i } = e,
-                        s = fU[r],
-                        [o, u] = null != i ? fG[i] : [null, void 0];
+                        s = fB[r],
+                        [o, u] = null != i ? fK[i] : [null, void 0];
                     return (0, a.jsx)(
-                        fp,
+                        fx,
                         {
                             label: t,
                             value: n,
@@ -15251,7 +15280,7 @@ function fB(e) {
         ],
     });
 }
-function fK(e) {
+function fV(e) {
     let { projectId: t } = e,
         {
             state: n,
@@ -15261,19 +15290,19 @@ function fK(e) {
             confirmCopy: u,
             restart: c,
         } = (function (e) {
-            let t = (0, o.bG)([dV.A], () => dV.A.getRestartAgentState(e), [e]),
+            let t = (0, o.bG)([dX.A], () => dX.A.getRestartAgentState(e), [e]),
                 [n, l] = i.useState(!1),
                 r = "restarting" === t.phase ? t.startedAt : null,
                 a = "restarted" === t.phase ? t.instanceSince : null,
                 s = i.useRef(a);
             (i.useEffect(() => {
-                null != a && a !== s.current && ((s.current = a), (0, mN.DK)(e));
+                null != a && a !== s.current && ((s.current = a), (0, mA.DK)(e));
             }, [e, a]),
                 i.useEffect(() => {
                     if (null == r) return;
                     function t() {
-                        let t = dV.A.getInstancePollRequestedAt(e);
-                        (null != t && Date.now() - t < 1e4) || (0, mN.gX)(e);
+                        let t = dX.A.getInstancePollRequestedAt(e);
+                        (null != t && Date.now() - t < 1e4) || (0, mA.gX)(e);
                     }
                     t();
                     let n = setInterval(t, 2e3),
@@ -15292,7 +15321,7 @@ function fK(e) {
                         (clearInterval(n), clearTimeout(l));
                     };
                 }, [e, r]));
-            let u = i.useCallback(() => (0, mN.VW)(e, n), [e, n]);
+            let u = i.useCallback(() => (0, mA.VW)(e, n), [e, n]);
             return {
                 state: t,
                 busy: "pending" === t.phase || "restarting" === t.phase,
@@ -15301,7 +15330,7 @@ function fK(e) {
                 confirmCopy: {
                     title: "Restart Agent?",
                     body: `Ends this project's agent instance; the next request starts a new one. Lost: in-memory state and any running turn. Kept: saved data (conversation, settings, storage) and the container disk. ${n ? "The pending alarm is cleared, so scheduled wakeups wait until something sets it again." : "The pending alarm is kept."}`,
-                    confirm: f_,
+                    confirm: fP,
                 },
                 restart: u,
             };
@@ -15310,12 +15339,12 @@ function fK(e) {
             (0, tu.A)({ title: u.title, subtitle: u.body, confirmText: u.confirm, variant: "critical", onConfirm: c });
         }, [u, c]);
     return (0, a.jsxs)("div", {
-        className: fF.Lj,
+        className: fG.Lj,
         children: [
             (0, a.jsxs)("div", {
-                className: fF.nM,
+                className: fG.nM,
                 children: [
-                    (0, a.jsx)(fI.S, {
+                    (0, a.jsx)(f_.S, {
                         label: "Also Clear Alarm",
                         description: "Scheduled wakeups wait until something sets the alarm again.",
                         checked: r,
@@ -15325,8 +15354,8 @@ function fK(e) {
                     (0, a.jsx)(eT.$, {
                         variant: "critical-secondary",
                         size: "sm",
-                        icon: fM.RetryIcon,
-                        text: f_,
+                        icon: fR.RetryIcon,
+                        text: fP,
                         loading: l,
                         disabled: l,
                         onClick: d,
@@ -15346,23 +15375,23 @@ function fK(e) {
                         case "restarting":
                             return "Restarting; waiting for a new instance to answer.";
                         case "restarted":
-                            return `Restarted \xb7 new instance since ${fr(e.instanceSince)}`;
+                            return `Restarted \xb7 new instance since ${fi(e.instanceSince)}`;
                         case "failed":
-                            return `Failed: ${e.reason} \xb7 ${fr(e.observedAt)}`;
+                            return `Failed: ${e.reason} \xb7 ${fi(e.observedAt)}`;
                     }
                 })(n),
             }),
         ],
     });
 }
-function fH(e, t) {
-    return (0, a.jsx)(fp, {
+function fW(e, t) {
+    return (0, a.jsx)(fx, {
         label: e,
-        value: E.intl.formatToPlainString(S.default.yHJxuP, { count: fl((0, mc.aM)(t)) }),
-        hint: `${fl(t.input_tokens)} in \xb7 ${fl(t.output_tokens)} out \xb7 ${fl(t.cache_read_input_tokens)} cache read`,
+        value: E.intl.formatToPlainString(S.default.yHJxuP, { count: fa((0, mm.aM)(t)) }),
+        hint: `${fa(t.input_tokens)} in \xb7 ${fa(t.output_tokens)} out \xb7 ${fa(t.cache_read_input_tokens)} cache read`,
     });
 }
-function fV(e) {
+function fX(e) {
     let t,
         n,
         l,
@@ -15388,15 +15417,15 @@ function fV(e) {
             limits: _,
             session: R,
             contextCeiling: P,
-        } = ((t = (0, o.bG)([dV.A], () => dV.A.getLastTurnUsage(h), [h])),
-        (n = (0, o.bG)([dV.A], () => dV.A.getLastCompaction(h), [h])),
-        (l = (0, o.bG)([dV.A], () => dV.A.getLastCompactionDecline(h), [h])),
-        (r = (0, o.bG)([dV.A], () => dV.A.getForceCompactionState(h), [h])),
-        (s = (0, o.bG)([dV.A], () => dV.A.getSandboxRestartState(h), [h])),
+        } = ((t = (0, o.bG)([dX.A], () => dX.A.getLastTurnUsage(h), [h])),
+        (n = (0, o.bG)([dX.A], () => dX.A.getLastCompaction(h), [h])),
+        (l = (0, o.bG)([dX.A], () => dX.A.getLastCompactionDecline(h), [h])),
+        (r = (0, o.bG)([dX.A], () => dX.A.getForceCompactionState(h), [h])),
+        (s = (0, o.bG)([dX.A], () => dX.A.getSandboxRestartState(h), [h])),
         (u = (0, o.bG)([W.A], () => W.A.isThinking(h), [h])),
-        (c = i.useCallback(() => (0, mN.Lj)(h), [h])),
-        (d = i.useCallback(() => (0, mN.Lj)(h, !0), [h])),
-        (m = i.useCallback(() => (0, mN.bq)(h), [h])),
+        (c = i.useCallback(() => (0, mA.Lj)(h), [h])),
+        (d = i.useCallback(() => (0, mA.Lj)(h, !0), [h])),
+        (m = i.useCallback(() => (0, mA.bq)(h), [h])),
         (f = p?.agent?.limits ?? null),
         {
             lastTurn: t,
@@ -15414,10 +15443,10 @@ function fV(e) {
             contextCeiling: n?.promptCeiling ?? f?.context_window_tokens ?? null,
         });
     return (0, a.jsxs)("div", {
-        className: fF.Mf,
+        className: fG.Mf,
         children: [
-            (0, a.jsx)(ff, { generatedAt: p?.generated_at ?? null, fetchState: g, onRefresh: x }),
-            (0, a.jsx)(fh, {
+            (0, a.jsx)(fp, { generatedAt: p?.generated_at ?? null, fetchState: g, onRefresh: x }),
+            (0, a.jsx)(fg, {
                 title: E.intl.string(S.default.JghNal),
                 children:
                     null == M
@@ -15428,17 +15457,17 @@ function fV(e) {
                           })
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, a.jsx)(fp, {
+                                  (0, a.jsx)(fx, {
                                       label: E.intl.string(S.default["9nqym2"]),
-                                      value: fl((0, mc.a7)(M.cost_usd)),
-                                      hint: E.intl.formatToPlainString(S.default.NCdUIh, { count: fl(M.turns) }),
+                                      value: fa((0, mm.a7)(M.cost_usd)),
+                                      hint: E.intl.formatToPlainString(S.default.NCdUIh, { count: fa(M.turns) }),
                                   }),
-                                  fH(E.intl.string(S.default.xtxP0e), M.orchestrator),
-                                  fH(E.intl.string(S.default["9Sj3SX"]), M.codegen),
-                                  fH(E.intl.string(S.default.ANCEo3), (0, mc.wU)(M.compaction)),
+                                  fW(E.intl.string(S.default.xtxP0e), M.orchestrator),
+                                  fW(E.intl.string(S.default["9Sj3SX"]), M.codegen),
+                                  fW(E.intl.string(S.default.ANCEo3), (0, mm.wU)(M.compaction)),
                                   p?.agent?.outcomes != null &&
                                       Object.keys(p.agent.outcomes).length > 0 &&
-                                      (0, a.jsx)(fp, {
+                                      (0, a.jsx)(fx, {
                                           label: E.intl.string(S.default.SQHm7C),
                                           value: Object.entries(p.agent.outcomes)
                                               .sort((e, t) => {
@@ -15448,14 +15477,14 @@ function fV(e) {
                                               })
                                               .map((e) => {
                                                   let [t, n] = e;
-                                                  return `${fl(n)} ${t}`;
+                                                  return `${fa(n)} ${t}`;
                                               })
                                               .join(" \xb7 "),
                                       }),
                               ],
                           }),
             }),
-            (0, a.jsx)(fh, {
+            (0, a.jsx)(fg, {
                 title: E.intl.string(S.default.dZHPE5),
                 children:
                     null == j
@@ -15466,32 +15495,32 @@ function fV(e) {
                           })
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  fH(E.intl.string(S.default["7X3i9d"]), j.total),
-                                  (0, a.jsx)(fp, {
+                                  fW(E.intl.string(S.default["7X3i9d"]), j.total),
+                                  (0, a.jsx)(fx, {
                                       label: E.intl.string(S.default["8OUg09"]),
-                                      value: `${Math.round((j.cache_hit_rate ?? (0, mc.CA)(j.total)) * 100)}%`,
+                                      value: `${Math.round((j.cache_hit_rate ?? (0, mm.CA)(j.total)) * 100)}%`,
                                   }),
                               ],
                           }),
             }),
-            (0, a.jsxs)(fh, {
+            (0, a.jsxs)(fg, {
                 title: E.intl.string(S.default.NbRk9a),
                 children: [
                     null != b && null != P
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, a.jsx)(fg, {
+                                  (0, a.jsx)(fv, {
                                       label: E.intl.string(S.default.Kw5wiQ),
                                       used: b.tokensAfter,
                                       max: P,
-                                      formatValue: fl,
+                                      formatValue: fa,
                                   }),
-                                  (0, a.jsx)(fp, {
+                                  (0, a.jsx)(fx, {
                                       label: E.intl.string(S.default.mRbSns),
-                                      value: `${fl(b.tokensBefore)} \u{2192} ${fl(b.tokensAfter)}`,
+                                      value: `${fa(b.tokensBefore)} \u{2192} ${fa(b.tokensAfter)}`,
                                       hint: E.intl.formatToPlainString(S.default.Vq3skS, {
-                                          count: fl(b.retainedMessages),
-                                          time: fr(b.observedAt),
+                                          count: fa(b.retainedMessages),
+                                          time: fi(b.observedAt),
                                       }),
                                   }),
                               ],
@@ -15501,18 +15530,18 @@ function fV(e) {
                               color: "text-muted",
                               children:
                                   null != P
-                                      ? E.intl.formatToPlainString(S.default.GMLCNv, { ceiling: fl(P) })
+                                      ? E.intl.formatToPlainString(S.default.GMLCNv, { ceiling: fa(P) })
                                       : E.intl.string(S.default.s0U5Fv),
                           }),
                     null != y &&
-                        (0, a.jsx)(fp, {
+                        (0, a.jsx)(fx, {
                             label: E.intl.string(S.default["4BX5KK"]),
-                            value: `${fl(y.projected)} / ${fl(y.threshold)}`,
+                            value: `${fa(y.projected)} / ${fa(y.threshold)}`,
                             critical: !0,
-                            hint: E.intl.formatToPlainString(S.default["6ngCax"], { time: fr(y.observedAt) }),
+                            hint: E.intl.formatToPlainString(S.default["6ngCax"], { time: fi(y.observedAt) }),
                         }),
                     (0, a.jsxs)("div", {
-                        className: fF.Lj,
+                        className: fG.Lj,
                         children: [
                             (0, a.jsx)(eT.$, {
                                 variant: "secondary",
@@ -15531,7 +15560,7 @@ function fV(e) {
                                 children: (function (e) {
                                     if ("idle" === e) return E.intl.string(S.default.wox6Ev);
                                     if ("pending" === e) return E.intl.string(S.default.OcPHQ1);
-                                    let t = fr(e.observedAt);
+                                    let t = fi(e.observedAt);
                                     if ("compacted" === e.outcome)
                                         return E.intl.formatToPlainString(S.default.BhRjZZ, { time: t });
                                     let n =
@@ -15566,7 +15595,7 @@ function fV(e) {
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: fF.Lj,
+                        className: fG.Lj,
                         children: [
                             (0, a.jsx)(eT.$, {
                                 variant: "secondary",
@@ -15586,7 +15615,7 @@ function fV(e) {
                                 children: (function (e) {
                                     if ("idle" === e) return E.intl.string(S.default.mlok8D);
                                     if ("pending" === e) return E.intl.string(S.default["1ugSyK"]);
-                                    let t = fr(e.observedAt);
+                                    let t = fi(e.observedAt);
                                     return E.intl.formatToPlainString(
                                         "restarted" === e.outcome ? S.default["76mfqO"] : S.default.FiVRoT,
                                         { reason: e.reason ?? "", time: t },
@@ -15595,77 +15624,77 @@ function fV(e) {
                             }),
                         ],
                     }),
-                    (0, a.jsx)(fK, { projectId: h }),
+                    (0, a.jsx)(fV, { projectId: h }),
                 ],
             }),
-            (0, a.jsx)(fB, { projectId: h }),
+            (0, a.jsx)(fH, { projectId: h }),
             (null != R || p?.analytics != null) &&
-                (0, a.jsxs)(fh, {
+                (0, a.jsxs)(fg, {
                     title: E.intl.string(S.default.EsSzCS),
                     children: [
                         null != R &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, a.jsx)(fp, {
+                                    (0, a.jsx)(fx, {
                                         label: E.intl.string(S.default.CLXHAs),
-                                        value: fr(R.instance_since),
+                                        value: fi(R.instance_since),
                                         hint: E.intl.string(S.default.UCwUEX),
                                     }),
-                                    (0, a.jsx)(fp, { label: E.intl.string(S.default["8V8e1Z"]), value: fl(R.sockets) }),
-                                    (0, a.jsx)(fp, {
+                                    (0, a.jsx)(fx, { label: E.intl.string(S.default["8V8e1Z"]), value: fa(R.sockets) }),
+                                    (0, a.jsx)(fx, {
                                         label: E.intl.string(S.default["4pBzYW"]),
                                         value: R.turn_inflight
                                             ? E.intl.string(S.default.Wv025I)
                                             : E.intl.string(S.default["7/lsFY"]),
                                     }),
                                     R.queued_messages > 0 &&
-                                        (0, a.jsx)(fp, {
+                                        (0, a.jsx)(fx, {
                                             label: E.intl.string(S.default["3oUYnv"]),
-                                            value: fl(R.queued_messages),
+                                            value: fa(R.queued_messages),
                                         }),
                                 ],
                             }),
-                        p?.analytics != null && (0, a.jsx)(fx, { analytics: p.analytics }),
+                        p?.analytics != null && (0, a.jsx)(fj, { analytics: p.analytics }),
                     ],
                 }),
             null != _ &&
-                (0, a.jsxs)(fh, {
+                (0, a.jsxs)(fg, {
                     title: E.intl.string(S.default["LEIhp/"]),
                     children: [
-                        (0, a.jsx)(fp, {
+                        (0, a.jsx)(fx, {
                             label: E.intl.string(S.default.IlDBN3),
-                            value: fl(_.max_subagent_iterations),
+                            value: fa(_.max_subagent_iterations),
                         }),
-                        (0, a.jsx)(fp, {
+                        (0, a.jsx)(fx, {
                             label: E.intl.string(S.default["ZdzKR+"]),
-                            value: E.intl.formatToPlainString(S.default.yHJxuP, { count: fl(_.context_window_tokens) }),
+                            value: E.intl.formatToPlainString(S.default.yHJxuP, { count: fa(_.context_window_tokens) }),
                         }),
-                        (0, a.jsx)(fp, {
+                        (0, a.jsx)(fx, {
                             label: E.intl.string(S.default.cIhN2W),
                             value: E.intl.formatToPlainString(S.default.yHJxuP, {
-                                count: fl(_.per_turn_max_output_tokens),
+                                count: fa(_.per_turn_max_output_tokens),
                             }),
                         }),
-                        (0, a.jsx)(fp, {
+                        (0, a.jsx)(fx, {
                             label: E.intl.string(S.default["+fOn/q"]),
-                            value: fl(_.max_user_message_chars),
+                            value: fa(_.max_user_message_chars),
                         }),
-                        (0, a.jsx)(fp, { label: E.intl.string(S.default.kIHga0), value: fl(_.max_build_attempts) }),
-                        (0, a.jsx)(fp, { label: E.intl.string(S.default.Iw03yW), value: fl(_.max_session_attempts) }),
+                        (0, a.jsx)(fx, { label: E.intl.string(S.default.kIHga0), value: fa(_.max_build_attempts) }),
+                        (0, a.jsx)(fx, { label: E.intl.string(S.default.Iw03yW), value: fa(_.max_session_attempts) }),
                     ],
                 }),
         ],
     });
 }
-var fW = n(237528),
-    fX = n(629584),
-    fZ = n(531893);
-function fJ(e) {
+var fZ = n(237528),
+    fJ = n(629584),
+    fY = n(531893);
+function fQ(e) {
     let { state: t } = e;
     return "failed" !== t.status
         ? null
         : (0, a.jsx)("div", {
-              className: fZ.ut,
+              className: fY.ut,
               children: (0, a.jsx)(v.E, {
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
@@ -15673,11 +15702,11 @@ function fJ(e) {
               }),
           });
 }
-function fY(e) {
+function f0(e) {
     let { state: t, emptyTitle: n, emptyBody: l } = e;
     return "failed" === t.status
         ? (0, a.jsxs)("div", {
-              className: fZ.qf,
+              className: fY.qf,
               children: [
                   (0, a.jsx)(v.E, {
                       variant: "text-sm/medium",
@@ -15692,18 +15721,18 @@ function fY(e) {
               ],
           })
         : (0, a.jsxs)("div", {
-              className: fZ.qf,
+              className: fY.qf,
               children: [
                   (0, a.jsx)(v.E, { variant: "text-sm/medium", color: "text-default", children: n }),
                   (0, a.jsx)(v.E, { variant: "text-xs/normal", color: "text-muted", children: l }),
               ],
           });
 }
-function fQ(e) {
+function f1(e) {
     let { state: t } = e;
     return t.truncated
         ? (0, a.jsx)("div", {
-              className: fZ.ps,
+              className: fY.ps,
               children: (0, a.jsx)(v.E, {
                   variant: "text-xs/normal",
                   color: "text-muted",
@@ -15712,8 +15741,8 @@ function fQ(e) {
           })
         : null;
 }
-var f0 = n(109079);
-let f1 = i.memo(function (e) {
+var f2 = n(109079);
+let f3 = i.memo(function (e) {
     var t;
     let { entry: n, showSource: l } = e,
         [r, s] = i.useState(!1),
@@ -15745,15 +15774,15 @@ let f1 = i.memo(function (e) {
         ),
         c = "error" === n.level ? "text-feedback-critical" : "text-default";
     return (0, a.jsxs)("div", {
-        className: f0.vK,
+        className: f2.vK,
         children: [
             (0, a.jsx)(v.E, {
                 tag: "span",
                 variant: "text-xs/normal",
                 color: "text-subtle",
-                className: f0.Mt,
+                className: f2.Mt,
                 selectable: !0,
-                children: mS(n.ts) ?? n.ts,
+                children: mI(n.ts) ?? n.ts,
             }),
             (0, a.jsx)(v.E, {
                 tag: "span",
@@ -15764,20 +15793,20 @@ let f1 = i.memo(function (e) {
                         : "warn" === t
                           ? "text-feedback-warning"
                           : "text-muted",
-                className: f0.dm,
+                className: f2.dm,
                 children: n.level,
             }),
             (0, a.jsxs)("div", {
-                className: f0.t4,
+                className: f2.t4,
                 children: [
                     l &&
                         null != n.source &&
-                        (0, a.jsx)("span", { className: f0.Cq, children: (0, a.jsx)(fW.v, { text: n.source }) }),
+                        (0, a.jsx)("span", { className: f2.Cq, children: (0, a.jsx)(fZ.v, { text: n.source }) }),
                     null != n.kind &&
                         (0, a.jsx)("span", {
-                            className: f0.Cq,
+                            className: f2.Cq,
                             title: n.build ?? void 0,
-                            children: (0, a.jsx)(fW.v, { text: E.intl.string(S.default.TrC9c8), variant: "redLight" }),
+                            children: (0, a.jsx)(fZ.v, { text: E.intl.string(S.default.TrC9c8), variant: "redLight" }),
                         }),
                     null != u
                         ? (0, a.jsxs)(a.Fragment, {
@@ -15791,7 +15820,7 @@ let f1 = i.memo(function (e) {
                                           children: [u.prefix, " "],
                                       }),
                                   (0, a.jsxs)(C.D, {
-                                      className: f0.Pq,
+                                      className: f2.Pq,
                                       "aria-expanded": r,
                                       "aria-controls": o,
                                       "aria-label": E.intl.string(S.default["9CTzyV"]),
@@ -15828,7 +15857,7 @@ let f1 = i.memo(function (e) {
                                           tag: "div",
                                           variant: "text-xs/normal",
                                           color: c,
-                                          className: f0.dF,
+                                          className: f2.dF,
                                           selectable: !0,
                                           id: o,
                                           children: u.pretty,
@@ -15847,10 +15876,10 @@ let f1 = i.memo(function (e) {
         ],
     });
 });
-function f2(e) {
+function f4(e) {
     let { projectId: t } = e,
-        n = (0, o.bG)([mk.A], () => mk.A.getLogs(t), [t]),
-        l = (0, o.bG)([mk.A], () => mk.A.getHistoryState(t, "logs")),
+        n = (0, o.bG)([mC.A], () => mC.A.getLogs(t), [t]),
+        l = (0, o.bG)([mC.A], () => mC.A.getHistoryState(t, "logs")),
         [r, s] = i.useState("all"),
         [u, c] = i.useState(""),
         d = i.useMemo(() => {
@@ -15885,13 +15914,13 @@ function f2(e) {
         }, []),
         p = i.useMemo(
             () =>
-                fs.map((e) => ({
+                fu.map((e) => ({
                     value: e,
                     name: (function (e) {
                         switch (e) {
                             case "preview":
                             case "stable":
-                                return fi(e);
+                                return fo(e);
                             case "web":
                                 return E.intl.string(S.default.IVzfVV);
                             default:
@@ -15902,12 +15931,12 @@ function f2(e) {
             [],
         );
     return (0, a.jsxs)("div", {
-        className: f0.$F,
+        className: f2.$F,
         children: [
             (0, a.jsxs)("div", {
-                className: f0.y4,
+                className: f2.y4,
                 children: [
-                    (0, a.jsx)(fX.I, {
+                    (0, a.jsx)(fJ.I, {
                         look: "pill",
                         "aria-label": E.intl.string(S.default.MhvyUU),
                         options: p,
@@ -15915,8 +15944,8 @@ function f2(e) {
                         onChange: (e) => s(e.value),
                     }),
                     (0, a.jsx)("div", {
-                        className: f0.KT,
-                        children: (0, a.jsx)(mC.I, {
+                        className: f2.KT,
+                        children: (0, a.jsx)(mS.I, {
                             query: u,
                             onChange: c,
                             onClear: () => c(""),
@@ -15927,16 +15956,16 @@ function f2(e) {
                     }),
                 ],
             }),
-            n.length > 0 && (0, a.jsx)(fJ, { state: l }),
+            n.length > 0 && (0, a.jsx)(fQ, { state: l }),
             (0, a.jsxs)(ad.Ch, {
                 ref: m,
                 onScroll: h,
                 overflow: "auto",
-                className: f0.sx,
+                className: f2.sx,
                 children: [
-                    (0, a.jsx)(fQ, { state: l }),
+                    (0, a.jsx)(f1, { state: l }),
                     0 === n.length
-                        ? (0, a.jsx)(fY, {
+                        ? (0, a.jsx)(f0, {
                               state: l,
                               emptyTitle: E.intl.string(S.default.S7qlPG),
                               emptyBody: E.intl.string(S.default.nD0S9z),
@@ -15947,19 +15976,19 @@ function f2(e) {
                                 color: "text-muted",
                                 children: E.intl.string(S.default["4SIdrX"]),
                             })
-                          : d.map((e) => (0, a.jsx)(f1, { entry: e.log, showSource: "all" === r }, e.key)),
+                          : d.map((e) => (0, a.jsx)(f3, { entry: e.log, showSource: "all" === r }, e.key)),
                 ],
             }),
         ],
     });
 }
-function f3(e) {
+function f5(e) {
     let { title: t, preview: n, stable: l, renderEnv: r } = e,
         s = [];
     return (
         null != n && s.push((0, a.jsx)(i.Fragment, { children: r("preview", n) }, "preview")),
         null != l && s.push((0, a.jsx)(i.Fragment, { children: r("stable", l) }, "stable")),
-        (0, a.jsx)(fh, {
+        (0, a.jsx)(fg, {
             title: t,
             children:
                 s.length > 0
@@ -15972,56 +16001,56 @@ function f3(e) {
         })
     );
 }
-function f4(e) {
+function f6(e) {
     var t;
     let { env: n, bot: l } = e;
     return l.ever_started
         ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, a.jsx)(fp, {
-                      label: E.intl.formatToPlainString(S.default["01ZMS4"], { env: fi(n) }),
+                  (0, a.jsx)(fx, {
+                      label: E.intl.formatToPlainString(S.default["01ZMS4"], { env: fo(n) }),
                       value: ((t = l.connected), E.intl.string(t ? S.default.Wv025I : S.default["7/lsFY"])),
                       critical: !l.connected && null != l.fatal_reason,
                       hint: l.fatal_reason ?? (l.connected ? void 0 : (l.last_start_reason ?? void 0)),
                   }),
-                  (0, a.jsx)(fp, {
+                  (0, a.jsx)(fx, {
                       label: E.intl.string(S.default["z1dh+F"]),
-                      value: fl(l.events_received),
+                      value: fa(l.events_received),
                       hint:
                           null != l.last_event_type && null != l.last_event_at
-                              ? `${l.last_event_type} \xb7 ${fr(l.last_event_at)}`
+                              ? `${l.last_event_type} \xb7 ${fi(l.last_event_at)}`
                               : void 0,
                   }),
-                  (0, a.jsx)(fp, { label: E.intl.string(S.default.Iz5GnJ), value: fl(l.guild_count) }),
-                  (0, a.jsx)(fp, {
+                  (0, a.jsx)(fx, { label: E.intl.string(S.default.Iz5GnJ), value: fa(l.guild_count) }),
+                  (0, a.jsx)(fx, {
                       label: E.intl.string(S.default["7UqtNv"]),
-                      value: fl(l.reconnects),
+                      value: fa(l.reconnects),
                       hint:
                           null != l.last_close_code && null != l.last_close_at
                               ? E.intl.formatToPlainString(S.default.MasSly, {
                                     code: l.last_close_code,
-                                    time: fr(l.last_close_at),
+                                    time: fi(l.last_close_at),
                                 })
                               : void 0,
                   }),
                   l.dispatch_errors > 0 &&
-                      (0, a.jsx)(fp, {
+                      (0, a.jsx)(fx, {
                           label: E.intl.string(S.default["x3+JXJ"]),
-                          value: fl(l.dispatch_errors),
+                          value: fa(l.dispatch_errors),
                           critical: !0,
                       }),
               ],
           })
-        : (0, a.jsx)(fp, { label: fi(n), value: E.intl.string(S.default.lTHQss) });
+        : (0, a.jsx)(fx, { label: fo(n), value: E.intl.string(S.default.lTHQss) });
 }
-function f5(e) {
+function f7(e) {
     let { env: t, metrics: n } = e,
         l = n.status_4xx + n.status_5xx;
-    return (0, a.jsx)(fp, {
-        label: fi(t),
+    return (0, a.jsx)(fx, {
+        label: fo(t),
         value: E.intl.formatToPlainString(S.default["Xq+wHT"], {
-            requests: fl(n.requests),
-            failures: fl(l + n.errors),
+            requests: fa(n.requests),
+            failures: fa(l + n.errors),
         }),
         critical: n.errors + n.status_5xx > 0,
         hint:
@@ -16029,22 +16058,22 @@ function f5(e) {
                 ? E.intl.formatToPlainString(S.default["o/ZBm4"], {
                       host: n.last_failure.host,
                       status: n.last_failure.status ?? "network",
-                      time: fr(n.last_failure.at),
+                      time: fi(n.last_failure.at),
                   })
-                : E.intl.formatToPlainString(S.default["7KlGT6"], { time: fr(n.since) }),
+                : E.intl.formatToPlainString(S.default["7KlGT6"], { time: fi(n.since) }),
     });
 }
-function f6(e) {
+function f8(e) {
     let { env: t, runtime: n } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(fp, {
-                label: E.intl.formatToPlainString(S.default["92gVTm"], { env: fi(t) }),
-                value: fl(n.connections),
+            (0, a.jsx)(fx, {
+                label: E.intl.formatToPlainString(S.default["92gVTm"], { env: fo(t) }),
+                value: fa(n.connections),
             }),
             n.schedules.map((e) =>
                 (0, a.jsx)(
-                    fp,
+                    fx,
                     {
                         label: E.intl.formatToPlainString(S.default.Dafaco, { id: e.id }),
                         value: e.trigger,
@@ -16055,7 +16084,7 @@ function f6(e) {
                                       attempt: e.pending_attempt ?? 1,
                                   })
                                 : null != e.next_run_at
-                                  ? E.intl.formatToPlainString(S.default.wxAWNv, { time: fr(e.next_run_at) })
+                                  ? E.intl.formatToPlainString(S.default.wxAWNv, { time: fi(e.next_run_at) })
                                   : void 0,
                     },
                     `${t}-${e.id}`,
@@ -16064,19 +16093,19 @@ function f6(e) {
         ],
     });
 }
-function f7(e) {
+function f9(e) {
     let { env: t, metrics: n } = e;
-    return (0, a.jsx)(fp, {
-        label: fi(t),
-        value: E.intl.formatToPlainString(S.default.suAOj9, { calls: fl(n.calls), errors: fl(n.errors) }),
+    return (0, a.jsx)(fx, {
+        label: fo(t),
+        value: E.intl.formatToPlainString(S.default.suAOj9, { calls: fa(n.calls), errors: fa(n.errors) }),
         critical: n.errors > 0,
         hint: n.last_model,
     });
 }
-function f8(e) {
+function he(e) {
     let { title: t, metrics: n, limits: l } = e;
     if (null == n || 0 === n.requests)
-        return (0, a.jsx)(fh, {
+        return (0, a.jsx)(fg, {
             title: t,
             children: (0, a.jsx)(v.E, {
                 variant: "text-sm/normal",
@@ -16086,55 +16115,55 @@ function f8(e) {
         });
     let r = n.cpu_ms_total / n.requests,
         i = n.cpu_ms_total > 0;
-    return (0, a.jsxs)(fh, {
+    return (0, a.jsxs)(fg, {
         title: t,
         children: [
-            (0, a.jsx)(fp, {
+            (0, a.jsx)(fx, {
                 label: E.intl.string(S.default.xtD4Zp),
-                value: fl(n.requests),
-                hint: E.intl.formatToPlainString(S.default["7KlGT6"], { time: fr(n.since) }),
+                value: fa(n.requests),
+                hint: E.intl.formatToPlainString(S.default["7KlGT6"], { time: fi(n.since) }),
             }),
-            (0, a.jsx)(fp, { label: E.intl.string(S.default.gfRhR3), value: fl(n.errors), critical: n.errors > 0 }),
+            (0, a.jsx)(fx, { label: E.intl.string(S.default.gfRhR3), value: fa(n.errors), critical: n.errors > 0 }),
             i
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(fg, {
+                          (0, a.jsx)(fv, {
                               label: E.intl.string(S.default.LEJ5r3),
                               used: n.cpu_ms_max,
                               max: l.cpu_ms_per_request,
-                              formatValue: fn,
+                              formatValue: fr,
                           }),
-                          (0, a.jsx)(fp, {
+                          (0, a.jsx)(fx, {
                               label: E.intl.string(S.default.mSKImM),
-                              value: fn(r),
+                              value: fr(r),
                               hint: E.intl.formatToPlainString(S.default.JqMU05, {
-                                  total: fn(n.cpu_ms_total),
-                                  wall: fn(n.wall_ms_total),
+                                  total: fr(n.cpu_ms_total),
+                                  wall: fr(n.wall_ms_total),
                               }),
                           }),
                       ],
                   })
-                : (0, a.jsx)(fp, {
+                : (0, a.jsx)(fx, {
                       label: E.intl.string(S.default.LEJ5r3),
                       value: E.intl.string(S.default["2Ekb2b"]),
                       hint: E.intl.string(S.default.G0aq7i),
                   }),
             !i &&
                 n.wall_ms_total > 0 &&
-                (0, a.jsx)(fp, { label: E.intl.string(S.default.xvmL1D), value: fn(n.wall_ms_total) }),
+                (0, a.jsx)(fx, { label: E.intl.string(S.default.xvmL1D), value: fr(n.wall_ms_total) }),
             n.exceeded_cpu > 0 &&
-                (0, a.jsx)(fp, { label: E.intl.string(S.default["4sQYwH"]), value: fl(n.exceeded_cpu), critical: !0 }),
-            (0, a.jsx)(fp, {
+                (0, a.jsx)(fx, { label: E.intl.string(S.default["4sQYwH"]), value: fa(n.exceeded_cpu), critical: !0 }),
+            (0, a.jsx)(fx, {
                 label: E.intl.string(S.default.bQenOy),
-                value: fl(n.exceeded_memory),
+                value: fa(n.exceeded_memory),
                 critical: n.exceeded_memory > 0,
                 hint: E.intl.formatToPlainString(S.default["5jIZwv"], { limit: `${l.memory_mb} MB` }),
             }),
-            null != n.build && (0, a.jsx)(fp, { label: E.intl.string(S.default.xgpn4Y), value: fa(n.build) }),
+            null != n.build && (0, a.jsx)(fx, { label: E.intl.string(S.default.xgpn4Y), value: fs(n.build) }),
         ],
     });
 }
-function f9(e) {
+function ht(e) {
     let { status: t } = e,
         { stable: n, preview: l, shared_data: r } = t.storage,
         s = t.worker.limits,
@@ -16144,30 +16173,30 @@ function f9(e) {
                   { key: "preview", label: E.intl.string(S.default["2yLYlG"]), metrics: l },
                   { key: "stable", label: E.intl.string(S.default.eiAi57), metrics: n },
               ];
-    return (0, a.jsx)(fh, {
+    return (0, a.jsx)(fg, {
         title: E.intl.string(S.default.mRt7MW),
         children: o.map((e) => {
             let { key: t, label: n, metrics: l } = e;
             return null == l
-                ? (0, a.jsx)(fp, { label: n, value: "\u2014" }, t)
+                ? (0, a.jsx)(fx, { label: n, value: "\u2014" }, t)
                 : (0, a.jsxs)(
                       i.Fragment,
                       {
                           children: [
-                              (0, a.jsx)(fp, {
+                              (0, a.jsx)(fx, {
                                   label: E.intl.formatToPlainString(S.default.u7kJJ4, { env: n }),
-                                  value: ft(l.r2_bytes),
+                                  value: fl(l.r2_bytes),
                                   hint: E.intl.formatToPlainString(
                                       l.r2_truncated ? S.default.lH0oQw : S.default.m9h02S,
-                                      { count: fl(l.r2_objects) },
+                                      { count: fa(l.r2_objects) },
                                   ),
                               }),
                               null != l.db_bytes &&
-                                  (0, a.jsx)(fg, {
+                                  (0, a.jsx)(fv, {
                                       label: E.intl.formatToPlainString(S.default.mnbPqt, { env: n }),
                                       used: l.db_bytes,
                                       max: s.db_bytes,
-                                      formatValue: ft,
+                                      formatValue: fl,
                                   }),
                           ],
                       },
@@ -16176,69 +16205,69 @@ function f9(e) {
         }),
     });
 }
-function he(e) {
+function hn(e) {
     let { status: t, fetchState: n, onRefresh: l } = e;
     return (0, a.jsxs)("div", {
-        className: fF.Mf,
+        className: fG.Mf,
         children: [
-            (0, a.jsx)(ff, { generatedAt: t?.generated_at ?? null, fetchState: n, onRefresh: l }),
+            (0, a.jsx)(fp, { generatedAt: t?.generated_at ?? null, fetchState: n, onRefresh: l }),
             null != t &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(f8, {
+                        (0, a.jsx)(he, {
                             title: E.intl.string(S.default.o5xzvl),
                             metrics: t.worker.preview,
                             limits: t.worker.limits,
                         }),
-                        (0, a.jsx)(f8, {
+                        (0, a.jsx)(he, {
                             title: E.intl.string(S.default.n2X3ZK),
                             metrics: t.worker.stable,
                             limits: t.worker.limits,
                         }),
-                        (0, a.jsx)(f9, { status: t }),
+                        (0, a.jsx)(ht, { status: t }),
                         null != t.bot &&
-                            (0, a.jsx)(f3, {
+                            (0, a.jsx)(f5, {
                                 title: E.intl.string(S.default["7mahem"]),
                                 preview: t.bot.preview,
                                 stable: t.bot.stable,
-                                renderEnv: (e, t) => (0, a.jsx)(f4, { env: e, bot: t }),
+                                renderEnv: (e, t) => (0, a.jsx)(f6, { env: e, bot: t }),
                             }),
                         null != t.outbound &&
-                            (0, a.jsx)(f3, {
+                            (0, a.jsx)(f5, {
                                 title: E.intl.string(S.default.THneIO),
                                 preview: t.outbound.preview,
                                 stable: t.outbound.stable,
-                                renderEnv: (e, t) => (0, a.jsx)(f5, { env: e, metrics: t }),
+                                renderEnv: (e, t) => (0, a.jsx)(f7, { env: e, metrics: t }),
                             }),
                         null != t.runtime &&
-                            (0, a.jsx)(f3, {
+                            (0, a.jsx)(f5, {
                                 title: E.intl.string(S.default.vboq04),
                                 preview: t.runtime.preview,
                                 stable: t.runtime.stable,
-                                renderEnv: (e, t) => (0, a.jsx)(f6, { env: e, runtime: t }),
+                                renderEnv: (e, t) => (0, a.jsx)(f8, { env: e, runtime: t }),
                             }),
                         null != t.ai &&
-                            (0, a.jsx)(f3, {
+                            (0, a.jsx)(f5, {
                                 title: E.intl.string(S.default.UzhuEq),
                                 preview: t.ai.preview,
                                 stable: t.ai.stable,
-                                renderEnv: (e, t) => (0, a.jsx)(f7, { env: e, metrics: t }),
+                                renderEnv: (e, t) => (0, a.jsx)(f9, { env: e, metrics: t }),
                             }),
-                        null != t.analytics && (0, a.jsx)(fv, { analytics: t.analytics }),
-                        (0, a.jsxs)(fh, {
+                        null != t.analytics && (0, a.jsx)(fb, { analytics: t.analytics }),
+                        (0, a.jsxs)(fg, {
                             title: E.intl.string(S.default.fQMpFp),
                             children: [
-                                (0, a.jsx)(fp, {
+                                (0, a.jsx)(fx, {
                                     label: E.intl.string(S.default["2yLYlG"]),
                                     value:
                                         null != t.deployments.preview_build
-                                            ? fa(t.deployments.preview_build)
+                                            ? fs(t.deployments.preview_build)
                                             : "\u2014",
                                 }),
-                                (0, a.jsx)(fp, {
+                                (0, a.jsx)(fx, {
                                     label: E.intl.string(S.default.eiAi57),
                                     value:
-                                        null != t.deployments.stable_build ? fa(t.deployments.stable_build) : "\u2014",
+                                        null != t.deployments.stable_build ? fs(t.deployments.stable_build) : "\u2014",
                                 }),
                             ],
                         }),
@@ -16247,15 +16276,15 @@ function he(e) {
         ],
     });
 }
-var ht = n(592465);
-function hn(e) {
+var hl = n(592465);
+function hr(e) {
     let { projectId: t, onClose: n } = e,
         l = lH(),
         [r, s] = i.useState(() => (l && lG?.projectId === t ? "trace" : "logs")),
-        u = (0, o.bG)([dV.A], () => dV.A.getStatus(t), [t]),
-        c = (0, o.bG)([dV.A], () => dV.A.getFetchState(t), [t]),
+        u = (0, o.bG)([dX.A], () => dX.A.getStatus(t), [t]),
+        c = (0, o.bG)([dX.A], () => dX.A.getFetchState(t), [t]),
         d = i.useCallback(() => {
-            ((0, mN.R7)(t), (0, mN.DK)(t));
+            ((0, mA.R7)(t), (0, mA.DK)(t));
         }, [t]);
     (i.useEffect(() => d(), [d]), i.useEffect(() => (0, R.subscribeDebugBacklog)(t), [t]));
     let m = i.useCallback(() => {
@@ -16265,7 +16294,7 @@ function hn(e) {
             let { traceId: t } = lG;
             return ((lG = null), t);
         })(t);
-        return null != e && (m7(t, e), !0);
+        return null != e && (m9(t, e), !0);
     }, [t, l]);
     (i.useEffect(() => {
         m();
@@ -16279,12 +16308,12 @@ function hn(e) {
                     {
                         captured_at: new Date().toISOString(),
                         project_id: t,
-                        status: dV.A.getStatus(t),
-                        last_turn_usage: dV.A.getLastTurnUsage(t),
-                        last_compaction: dV.A.getLastCompaction(t),
-                        last_compaction_decline: dV.A.getLastCompactionDecline(t),
-                        timing_traces: dV.A.getTimingTraces(t),
-                        logs: mk.A.getLogs(t),
+                        status: dX.A.getStatus(t),
+                        last_turn_usage: dX.A.getLastTurnUsage(t),
+                        last_compaction: dX.A.getLastCompaction(t),
+                        last_compaction_decline: dX.A.getLastCompactionDecline(t),
+                        timing_traces: dX.A.getTimingTraces(t),
+                        logs: mC.A.getLogs(t),
                     },
                     null,
                     2,
@@ -16294,7 +16323,7 @@ function hn(e) {
         }, [t]),
         h = E.intl.string(S.default["Q4FN+H"]);
     return (0, a.jsxs)("section", {
-        className: ht.nd,
+        className: hl.nd,
         "aria-label": h,
         children: [
             (0, a.jsxs)(rA.Ay, {
@@ -16302,7 +16331,7 @@ function hn(e) {
                 toolbar: (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(rA.Ay.Icon, {
-                            icon: dA.CopyIcon,
+                            icon: dE.CopyIcon,
                             tooltip: E.intl.string(S.default.TkHqy2),
                             onClick: f,
                         }),
@@ -16315,36 +16344,36 @@ function hn(e) {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: ht.rf,
+                className: hl.rf,
                 children: [
-                    (0, a.jsxs)(mw.V, {
+                    (0, a.jsxs)(mN.V, {
                         selectedItem: r,
                         type: "top",
                         onItemSelect: (e) => s(e),
                         "aria-label": E.intl.string(S.default.RvvWIh),
-                        className: ht.vR,
+                        className: hl.vR,
                         children: [
-                            (0, a.jsx)(mw.V.Item, { id: "logs", children: E.intl.string(S.default["+VRYCm"]) }),
-                            (0, a.jsx)(mw.V.Item, { id: "worker", children: E.intl.string(S.default["50D0FZ"]) }),
-                            (0, a.jsx)(mw.V.Item, { id: "agent", children: E.intl.string(S.default.UkbTK1) }),
-                            l ? (0, a.jsx)(mw.V.Item, { id: "trace", children: "Trace" }) : null,
+                            (0, a.jsx)(mN.V.Item, { id: "logs", children: E.intl.string(S.default["+VRYCm"]) }),
+                            (0, a.jsx)(mN.V.Item, { id: "worker", children: E.intl.string(S.default["50D0FZ"]) }),
+                            (0, a.jsx)(mN.V.Item, { id: "agent", children: E.intl.string(S.default.UkbTK1) }),
+                            l ? (0, a.jsx)(mN.V.Item, { id: "trace", children: "Trace" }) : null,
                         ],
                     }),
                     "logs" === r
-                        ? (0, a.jsx)(f2, { projectId: t })
+                        ? (0, a.jsx)(f4, { projectId: t })
                         : "worker" === r
-                          ? (0, a.jsx)(he, { status: u, fetchState: c, onRefresh: d })
+                          ? (0, a.jsx)(hn, { status: u, fetchState: c, onRefresh: d })
                           : "trace" === r && l
-                            ? (0, a.jsx)(fe, { projectId: t })
-                            : (0, a.jsx)(fV, { projectId: t, status: u, fetchState: c, onRefresh: d }),
+                            ? (0, a.jsx)(fn, { projectId: t })
+                            : (0, a.jsx)(fX, { projectId: t, status: u, fetchState: c, onRefresh: d }),
                 ],
             }),
         ],
     });
 }
-var hl = n(365912),
-    hr = n(873715);
-function ha(e) {
+var ha = n(365912),
+    hi = n(873715);
+function hs(e) {
     if (null == e || "string" != typeof e.ref || "string" != typeof e.tag) return null;
     let t = e.rect;
     if (
@@ -16370,12 +16399,12 @@ function ha(e) {
     );
 }
 n(884868);
-let hi = Object.freeze({ x: -1, y: -1 });
-function hs(e) {
+let ho = Object.freeze({ x: -1, y: -1 });
+function hu(e) {
     let t = Array.isArray(e?.results) ? e.results[0] : void 0;
     if (null == t) return { status: "failed" };
     if (t.ok) {
-        let e = ha(t.element);
+        let e = hs(t.element);
         return null == e ? { status: "failed" } : { status: "picked", target: e };
     }
     return "not_found" === t.code
@@ -16384,18 +16413,18 @@ function hs(e) {
           ? { status: "unsupported" }
           : { status: "failed" };
 }
-var ho = n(192888);
-function hu(e, t) {
-    return (0, ho.W)(
+var hc = n(192888);
+function hd(e, t) {
+    return (0, hc.W)(
         e,
         "control",
         { steps: [{ action: "inspect", x: t.x, y: t.y }], timeoutMs: 1500, passive: !0 },
         { timeoutMs: 5500, label: "inspect" },
-    ).then(hs, () => ({ status: "failed" }));
+    ).then(hu, () => ({ status: "failed" }));
 }
-var hc = n(108308);
-let hd = { x: 25, y: 21 };
-function hm(e, t, n) {
+var hm = n(108308);
+let hf = { x: 25, y: 21 };
+function hh(e, t, n) {
     return {
         left: t.left + e.rect.x * n,
         top: t.top + e.rect.y * n,
@@ -16403,17 +16432,17 @@ function hm(e, t, n) {
         height: Math.max(e.rect.height * n, 1),
     };
 }
-function hf(e, t, n, l) {
-    let r = hm(e, n, l);
+function hp(e, t, n, l) {
+    let r = hh(e, n, l);
     return { x: r.left + r.width * t.x, y: r.top + r.height * t.y };
 }
-function hh(e, t) {
+function hg(e, t) {
     return {
         left: Math.min(Math.max(e.x - 12, t.left), t.left + t.width - 24),
         top: Math.min(Math.max(e.y - 12, t.top), t.top + t.height - 24),
     };
 }
-function hp(e) {
+function hx(e) {
     let t = e.snapshot ?? e.results.find((e) => null != e.snapshot)?.snapshot;
     if (null == t || !Array.isArray(t.elements)) return null;
     let n = t.viewport?.width,
@@ -16427,7 +16456,7 @@ function hp(e) {
               title: "string" == typeof t.title ? t.title : "",
           };
 }
-function hg(e) {
+function hv(e) {
     let { projectId: t, applicationId: n, previewApplicationId: l, resolveIframe: r, toggleRef: s } = e,
         u = null != n && n === l ? t : null,
         { active: c, annotations: d } = lu(u),
@@ -16465,11 +16494,11 @@ function hg(e) {
         (b(!0), w(!1));
         let n = `design-feedback-${crypto.randomUUID()}`;
         return (
-            (0, hr.J)(t, n, { steps: [{ action: "snapshot" }], timeoutMs: 8e3, passive: !0 }).then(
+            (0, hi.J)(t, n, { steps: [{ action: "snapshot" }], timeoutMs: 8e3, passive: !0 }).then(
                 (t) => {
                     if (!e) return;
                     b(!1);
-                    let n = "completed" === t.status ? hp(t.response) : null;
+                    let n = "completed" === t.status ? hx(t.response) : null;
                     null == n ? w(!0) : (x(n), li(u, { url: n.url, title: n.title, viewport: n.viewport }));
                 },
                 () => {
@@ -16501,7 +16530,7 @@ function hg(e) {
                         action: "locate",
                         target: { ref: e.target.ref, selector: e.target.path },
                     }));
-                    (0, hr.J)(e, `design-feedback-${crypto.randomUUID()}`, {
+                    (0, hi.J)(e, `design-feedback-${crypto.randomUUID()}`, {
                         steps: l.length > 0 ? l : [{ action: "snapshot" }],
                         snapshot: 0 === n && l.length > 0,
                         timeoutMs: 8e3,
@@ -16509,13 +16538,13 @@ function hg(e) {
                     }).then((e) => {
                         let n;
                         if ("completed" !== e.status || !Q.current) return;
-                        let l = hp(e.response);
+                        let l = hx(e.response);
                         null != l && (x(l), li(u, { url: l.url, title: l.title, viewport: l.viewport }));
                         let r = new Map();
                         (e.response.results.forEach((e, n) => {
                             let l = t[n];
                             if (null == l || "locate" !== e.action || !e.ok) return;
-                            let a = ha(e.element);
+                            let a = hs(e.element);
                             null != a && r.set(l.id, a);
                         }),
                             (n = lt(u)).active &&
@@ -16554,15 +16583,15 @@ function hg(e) {
                 let n = r();
                 null != n &&
                     ((Y.current = !0),
-                    hu(n, t).then((t) => {
+                    hd(n, t).then((t) => {
                         if (((Y.current = !1), Q.current)) {
-                            if ("picked" !== t.status || hw(t.target, ei.current.rect, ei.current.scale))
+                            if ("picked" !== t.status || hN(t.target, ei.current.rect, ei.current.scale))
                                 "picked" === t.status || "none" === t.status
                                     ? N(null)
                                     : "unsupported" === t.status && $(!0);
                             else {
                                 let e = n2(t.target);
-                                (T((t) => (hy(t, e) ? t : e)),
+                                (T((t) => (hk(t, e) ? t : e)),
                                     N((e) => {
                                         var n;
                                         return ((n = t.target),
@@ -16600,7 +16629,7 @@ function hg(e) {
     }, [U]),
         i.useEffect(() => {
             if (null == q) return;
-            let e = setTimeout(() => z(null), hj);
+            let e = setTimeout(() => z(null), hy);
             return () => clearTimeout(e);
         }, [q]));
     let en = null == g || null == W || g.viewport.width < 1 ? 1 : W.width / g.viewport.width,
@@ -16634,7 +16663,7 @@ function hg(e) {
             (e) => {
                 if (null == W || null != B) return;
                 if (((_.current = { x: e.clientX, y: e.clientY }), eu(), A(!0), null != D)) {
-                    (Math.abs(e.clientX - D.at.x) > hb || Math.abs(e.clientY - D.at.y) > hb) && (F.current = !0);
+                    (Math.abs(e.clientX - D.at.x) > hw || Math.abs(e.clientY - D.at.y) > hw) && (F.current = !0);
                     return;
                 }
                 if (!el) return void N(null);
@@ -16651,10 +16680,10 @@ function hg(e) {
                             }
                             return l;
                         })(er, t.x, t.y),
-                        n = null != e && hw(e, W, en) ? null : e;
+                        n = null != e && hN(e, W, en) ? null : e;
                     if (null != n) {
                         let e = n2(n);
-                        T((t) => (hy(t, e) ? t : e));
+                        T((t) => (hk(t, e) ? t : e));
                     }
                     N((e) => (e?.ref === n?.ref ? e : n));
                     return;
@@ -16671,7 +16700,7 @@ function hg(e) {
         if (em)
             return () => {
                 let e = r();
-                null != e && hu(e, hi);
+                null != e && hd(e, ho);
             };
     }, [em, r]);
     let ef = i.useCallback(() => {
@@ -16748,7 +16777,7 @@ function hg(e) {
                 s?.current?.contains(t) === !0 ||
                 (function (e) {
                     try {
-                        return ((0, hl.J$)(e), !0);
+                        return ((0, ha.J$)(e), !0);
                     } catch {
                         return !1;
                     }
@@ -16838,21 +16867,21 @@ ${t.trim()}`;
         eP =
             null != ed && null != W
                 ? (function (e, t) {
-                      let { left: n, top: l } = hh(e, t);
+                      let { left: n, top: l } = hg(e, t);
                       return { x: n + 12, y: l + 12 };
-                  })(hf(ed.target, ed.anchor, W, en), W)
+                  })(hp(ed.target, ed.anchor, W, en), W)
                 : null;
     return (
         i.useEffect(() => {
             let e = r();
             if (ed?.target.marker == null || null == e) return;
             let { target: t, anchor: n } = ed;
-            hu(e, { x: Math.round(t.rect.x + t.rect.width * n.x), y: Math.round(t.rect.y + t.rect.height * n.y) });
+            hd(e, { x: Math.round(t.rect.x + t.rect.width * n.x), y: Math.round(t.rect.y + t.rect.height * n.y) });
         }, [ed, r]),
         (0, rS.createPortal)(
             (0, a.jsxs)("div", {
                 ref: ey,
-                className: hc.Li,
+                className: hm.Li,
                 children: [
                     (0, a.jsx)(ay.A, {
                         tag: "div",
@@ -16865,7 +16894,7 @@ ${t.trim()}`;
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [
                                   (0, a.jsx)("div", {
-                                      className: hc.MT,
+                                      className: hm.MT,
                                       style: { left: W.left, top: W.top, width: W.width, height: W.height },
                                       "data-plain-cursor": eI ? void 0 : "",
                                       "data-testid": "conjure-design-surface",
@@ -16878,26 +16907,26 @@ ${t.trim()}`;
                                       onKeyDown: ew,
                                   }),
                                   null != k && null == k.marker && null == D && null == B
-                                      ? (0, a.jsx)(hk, { box: hm(k, W, en) })
+                                      ? (0, a.jsx)(hC, { box: hh(k, W, en) })
                                       : null,
                                   (0, a.jsx)("div", {
                                       ref: I,
-                                      className: hc.aZ,
+                                      className: hm.aZ,
                                       children: (0, a.jsx)("div", {
-                                          className: hc.xz,
+                                          className: hm.xz,
                                           "data-shown": null != k && null == B && null == D ? "" : void 0,
                                           "data-instant": U ? "" : void 0,
                                           children: (0, a.jsxs)(v.E, {
                                               variant: "text-xs/medium",
-                                              className: hc.Ux,
+                                              className: hm.Ux,
                                               children: [
                                                   null == P
                                                       ? null
-                                                      : (0, a.jsx)("span", { className: hc.Tl, children: P.kind }),
+                                                      : (0, a.jsx)("span", { className: hm.Tl, children: P.kind }),
                                                   null == P || "" === P.name
                                                       ? null
                                                       : (0, a.jsxs)("span", {
-                                                            className: hc.kh,
+                                                            className: hm.kh,
                                                             children: [" ", P.name],
                                                         }),
                                               ],
@@ -16906,33 +16935,33 @@ ${t.trim()}`;
                                   }),
                                   (0, a.jsx)("div", {
                                       ref: M,
-                                      className: hc.Y,
-                                      children: eI ? (0, a.jsx)("div", { className: hc.u }) : null,
+                                      className: hm.Y,
+                                      children: eI ? (0, a.jsx)("div", { className: hm.u }) : null,
                                   }),
                                   null == eR
                                       ? null
                                       : (0, a.jsx)("div", {
-                                            className: hc.aZ,
+                                            className: hm.aZ,
                                             style: {
                                                 transform: `translate3d(${eR.at.x + 20}px, ${eR.at.y + 20}px, 0)`,
                                             },
                                             children: (0, a.jsx)("div", {
-                                                className: hc.xz,
+                                                className: hm.xz,
                                                 "data-shown": "",
                                                 "data-locked": "",
                                                 "data-closing": null == D ? "" : void 0,
                                                 children: (0, a.jsxs)(v.E, {
                                                     variant: "text-xs/medium",
-                                                    className: hc.Ux,
+                                                    className: hm.Ux,
                                                     children: [
                                                         (0, a.jsx)("span", {
-                                                            className: hc.Tl,
+                                                            className: hm.Tl,
                                                             children: eR.label.kind,
                                                         }),
                                                         "" === eR.label.name
                                                             ? null
                                                             : (0, a.jsxs)("span", {
-                                                                  className: hc.kh,
+                                                                  className: hm.kh,
                                                                   children: [" ", eR.label.name],
                                                               }),
                                                     ],
@@ -16940,17 +16969,17 @@ ${t.trim()}`;
                                             }),
                                         }),
                                   null != eM && null == eM.marker
-                                      ? (0, a.jsx)("div", { className: hc.D0, style: hm(eM, W, en), "aria-hidden": !0 })
+                                      ? (0, a.jsx)("div", { className: hm.D0, style: hh(eM, W, en), "aria-hidden": !0 })
                                       : null,
                                   d.map((e, t) => {
-                                      let n = hf(e.target, e.anchor, W, en),
+                                      let n = hp(e.target, e.anchor, W, en),
                                           l = { id: e.id, editing: !1, draft: e.comment, confirmingRemove: !1 };
                                       return (0, a.jsx)(
                                           "button",
                                           {
                                               type: "button",
-                                              className: hc.xL,
-                                              style: { ...hh(n, W), width: 24, height: 24 },
+                                              className: hm.xL,
+                                              style: { ...hg(n, W), width: 24, height: 24 },
                                               "aria-label": E.intl.formatToPlainString(S.default.SxaIQA, {
                                                   index: t + 1,
                                                   target: n3(e.target),
@@ -16966,7 +16995,7 @@ ${t.trim()}`;
                                               onClick: (e) => {
                                                   (e.stopPropagation(), et(), K(l));
                                               },
-                                              children: (0, a.jsx)(hx, { authorId: e.authorId }),
+                                              children: (0, a.jsx)(hj, { authorId: e.authorId }),
                                           },
                                           e.id,
                                       );
@@ -16989,7 +17018,7 @@ ${t.trim()}`;
                                             closing: null == D,
                                         }),
                                   null != ed && null != B && null != eP
-                                      ? (0, a.jsxs)(hv, {
+                                      ? (0, a.jsxs)(hb, {
                                             point: eP,
                                             frame: W,
                                             authorId: ed.authorId,
@@ -17020,19 +17049,19 @@ ${t.trim()}`;
                                                     : (0, a.jsx)(v.E, {
                                                           variant: "text-sm/normal",
                                                           color: "text-default",
-                                                          className: hc.aC,
+                                                          className: hm.aC,
                                                           children: ed.comment,
                                                       }),
                                                 ls(ed, p)
                                                     ? (0, a.jsx)("div", {
-                                                          className: hc.eB,
+                                                          className: hm.eB,
                                                           children: B.confirmingRemove
                                                               ? (0, a.jsxs)(a.Fragment, {
                                                                     children: [
                                                                         (0, a.jsx)(v.E, {
                                                                             variant: "text-xs/normal",
                                                                             color: "text-muted",
-                                                                            className: hc.nv,
+                                                                            className: hm.nv,
                                                                             children: E.intl.string(S.default.wOHvts),
                                                                         }),
                                                                         (0, a.jsx)(eT.$, {
@@ -17102,7 +17131,7 @@ ${t.trim()}`;
         )
     );
 }
-function hx(e) {
+function hj(e) {
     let { authorId: t } = e,
         n = (0, o.bG)([a0.default], () => a0.default.getUser(t), [t]);
     return (0, a.jsx)(os.eu, {
@@ -17111,7 +17140,7 @@ function hx(e) {
         "aria-hidden": !0,
     });
 }
-function hv(e) {
+function hb(e) {
     let t,
         n,
         l,
@@ -17121,7 +17150,7 @@ function hv(e) {
         { point: u, frame: c, authorId: d, title: m, testId: f, onDismiss: h, onMouseLeave: p, children: g } = e,
         x = i.useRef(null),
         j = i.useRef(null),
-        [b, y] = i.useState(hd);
+        [b, y] = i.useState(hf);
     i.useLayoutEffect(() => {
         let e = x.current?.getBoundingClientRect(),
             t = j.current?.getBoundingClientRect();
@@ -17141,7 +17170,7 @@ function hv(e) {
         A = { left: w, top: k, "--custom-conjure-card-origin-x": `${N}px`, "--custom-conjure-card-origin-y": `${C}px` };
     return (0, a.jsxs)("div", {
         ref: x,
-        className: hc.Nr,
+        className: hm.Nr,
         style: A,
         "data-testid": f,
         onMouseLeave: p,
@@ -17150,41 +17179,41 @@ function hv(e) {
         },
         children: [
             (0, a.jsxs)("div", {
-                className: hc.MY,
+                className: hm.MY,
                 children: [
-                    (0, a.jsx)("span", { ref: j, className: hc.ip, children: (0, a.jsx)(hx, { authorId: d }) }),
+                    (0, a.jsx)("span", { ref: j, className: hm.ip, children: (0, a.jsx)(hj, { authorId: d }) }),
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        className: hc.Qc,
+                        className: hm.Qc,
                         children: m,
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { className: hc.zI, children: g }),
+            (0, a.jsx)("div", { className: hm.zI, children: g }),
         ],
     });
 }
-let hj = 300,
-    hb = 2;
-function hy(e, t) {
+let hy = 300,
+    hw = 2;
+function hk(e, t) {
     return null != e && e.kind === t.kind && e.name === t.name;
 }
-function hw(e, t, n) {
+function hN(e, t, n) {
     if (null == t || n <= 0) return !1;
     let l = t.width / n,
         r = t.height / n;
     return !(l < 1) && !(r < 1) && e.rect.width >= 0.98 * l && e.rect.height >= 0.98 * r;
 }
-function hk(e) {
+function hC(e) {
     let { box: t } = e;
-    return (0, a.jsx)("div", { className: hc.Zt, style: t, "data-testid": "conjure-design-highlight" });
+    return (0, a.jsx)("div", { className: hm.Zt, style: t, "data-testid": "conjure-design-highlight" });
 }
-var hN = n(659723),
-    hC = n(697744),
-    hA = n(130324);
-function hS(e) {
-    let t = (0, hC.c)(),
+var hA = n(659723),
+    hS = n(697744),
+    hE = n(130324);
+function hI(e) {
+    let t = (0, hS.c)(),
         { events: n, getDuration: l } = t;
     i.useEffect(() => {
         let e = null,
@@ -17208,11 +17237,11 @@ function hS(e) {
         t
     );
 }
-function hE(e) {
+function hM(e) {
     let { className: t } = e,
-        { Component: n, events: l } = hS(3e4);
+        { Component: n, events: l } = hI(3e4);
     return (0, a.jsxs)("div", {
-        className: h()(t, hA.Ve),
+        className: h()(t, hE.Ve),
         onMouseEnter: l.onMouseEnter,
         onMouseLeave: l.onMouseLeave,
         children: [
@@ -17220,31 +17249,31 @@ function hE(e) {
             (0, a.jsx)(v.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                className: hA.ol,
+                className: hE.ol,
                 children: E.intl.string(S.default.AyiQEp),
             }),
         ],
     });
 }
-var hI = n(251363),
-    hM = n(944142),
-    h_ = n(532247),
-    hR = n(501628);
-function hP(e) {
+var h_ = n(251363),
+    hR = n(944142),
+    hP = n(532247),
+    hT = n(501628);
+function hL(e) {
     let { progress: t } = e,
-        { Component: n } = hS(1500),
+        { Component: n } = hI(1500),
         l = lK.Q_.useSetting();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(n, { size: "custom", width: 32, height: 32, color: "var(--icon-overlay-light)" }),
             (0, a.jsx)(v.E, { variant: "text-sm/semibold", color: "text-overlay-light", children: t.title }),
             (0, a.jsx)("div", {
-                className: hR.Ci,
+                className: hT.Ci,
                 children: Array.from({ length: t.stepCount }, (e, n) =>
                     (0, a.jsx)(
                         "span",
                         {
-                            className: hR.PM,
+                            className: hT.PM,
                             "data-state": n < t.stepIndex ? "done" : n === t.stepIndex ? "current" : "todo",
                         },
                         n,
@@ -17257,19 +17286,19 @@ function hP(e) {
         ],
     });
 }
-function hT(e) {
+function h$(e) {
     let { projectId: t, applicationId: n, previewApplicationId: l, surface: r } = e,
         s = null != t && null != n && n === l,
-        u = (0, o.bG)([hM.A], () => (s ? hM.A.getLiveReload(t) : null), [s, t]),
+        u = (0, o.bG)([hR.A], () => (s ? hR.A.getLiveReload(t) : null), [s, t]),
         c = (0, rf.A)(n, r)?.id ?? null,
         d = u?.phase ?? null,
         m = u?.background === !0,
         f = (function (e, t, n) {
-            let l = (0, h_.dv)(e),
+            let l = (0, hP.dv)(e),
                 [r, a] = i.useState(null),
                 [s, u] = i.useState(l),
                 [c, d] = i.useState(t);
-            s !== l && (u(l), d(t), a(null != l || c ? null : (0, h_.QP)(e, s)));
+            s !== l && (u(l), d(t), a(null != l || c ? null : (0, hP.QP)(e, s)));
             let m = (0, o.bG)(
                     [lR.A],
                     () => {
@@ -17290,7 +17319,7 @@ function hT(e) {
                         return a(null);
                     }
                     function t(t) {
-                        null != t.target && t.target === (0, hI.ow)(null, n) && e();
+                        null != t.target && t.target === (0, h_.ow)(null, n) && e();
                     }
                     ((h.current = f.current), document.addEventListener("load", t, !0));
                     let l = window.setTimeout(() => {
@@ -17304,33 +17333,33 @@ function hT(e) {
                 r
             );
         })(d, m, c),
-        h = m ? null : (0, h_.h_)(d, u?.step ?? null, f);
+        h = m ? null : (0, hP.h_)(d, u?.step ?? null, f);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(ay.A, { tag: "div", role: "status", "aria-live": "polite", children: h?.title ?? "" }),
             null != h
                 ? (0, a.jsx)("div", {
-                      className: hR.Lw,
+                      className: hT.Lw,
                       "data-testid": "conjure-live-reload-overlay",
                       "aria-hidden": !0,
-                      children: (0, a.jsx)(hP, { progress: h }),
+                      children: (0, a.jsx)(hL, { progress: h }),
                   })
                 : null,
         ],
     });
 }
-var hL = n(357858),
-    h$ = n(343030),
-    hD = n(317608),
-    hO = n(35367),
-    hq = n(771293);
-let hz = { width: 1 / 0, height: 1 / 0 };
-function hF(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hz;
+var hD = n(357858),
+    hO = n(343030),
+    hq = n(317608),
+    hz = n(35367),
+    hF = n(771293);
+let hU = { width: 1 / 0, height: 1 / 0 };
+function hG(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hU;
     return { width: Math.min(e ? 844 : 390, t.width), height: Math.min(e ? 390 : 844, t.height) };
 }
-var hU = n(702083);
-function hG(e) {
+var hB = n(702083);
+function hK(e) {
     let { children: t } = e,
         { mobile: n, landscape: l } = (0, o.cf)([rh.A], () => ({
             mobile: rh.A.isBuilderPreviewMobile(),
@@ -17351,21 +17380,21 @@ function hG(e) {
         return (n.observe(e), () => n.disconnect());
     }, []);
     let c = null != s && s.width > 0 ? s : null,
-        d = n ? hF(l, c ?? void 0) : null;
+        d = n ? hG(l, c ?? void 0) : null;
     return (0, a.jsx)("div", {
         ref: r,
-        className: h()(hU.dw, { [hU.PQ]: null != d }),
-        children: (0, a.jsx)("div", { className: h()(hU.R9, { [hU.Vg]: null != d }), style: d ?? void 0, children: t }),
+        className: h()(hB.dw, { [hB.PQ]: null != d }),
+        children: (0, a.jsx)("div", { className: h()(hB.R9, { [hB.Vg]: null != d }), style: d ?? void 0, children: t }),
     });
 }
-var hB = n(347927);
-function hK(e) {
+var hH = n(347927);
+function hV(e) {
     let { title: t, body: n, wide: l = !1, children: r } = e;
     return (0, a.jsxs)("div", {
-        className: h()(hB.Bf, l && hB.Qx),
+        className: h()(hH.Bf, l && hH.Qx),
         children: [
             (0, a.jsxs)("div", {
-                className: hB.Ux,
+                className: hH.Ux,
                 children: [
                     (0, a.jsx)(x.D, { variant: "heading-md/semibold", color: "text-default", children: t }),
                     null != n
@@ -17377,40 +17406,40 @@ function hK(e) {
         ],
     });
 }
-var hH = n(957272);
-function hV(e) {
+var hW = n(957272);
+function hX(e) {
     let { applicationId: t, surface: n, launch: l, frameOverlay: r } = e,
-        { frame: i, state: s } = (0, hO.A)({ applicationId: t, surface: n, launch: l });
-    if (((0, hq.A)(t, n), s === hO.n.Launched)) {
-        let e = (0, a.jsx)(hD.A, { frameId: i.id, level: h$.A.WithinAppContent, className: hH.Z7, overlay: r });
-        return (0, rp.Q5)(n) ? (0, a.jsx)(hG, { children: e }) : e;
+        { frame: i, state: s } = (0, hz.A)({ applicationId: t, surface: n, launch: l });
+    if (((0, hF.A)(t, n), s === hz.n.Launched)) {
+        let e = (0, a.jsx)(hq.A, { frameId: i.id, level: hO.A.WithinAppContent, className: hW.Z7, overlay: r });
+        return (0, rp.Q5)(n) ? (0, a.jsx)(hK, { children: e }) : e;
     }
-    return (0, a.jsx)(hW, { state: s });
+    return (0, a.jsx)(hZ, { state: s });
 }
-function hW(e) {
+function hZ(e) {
     let { state: t } = e;
     switch (t) {
-        case hO.n.RenderingElsewhere:
+        case hz.n.RenderingElsewhere:
             return (0, a.jsx)("div", {
-                className: hH.qs,
-                children: (0, a.jsx)(hK, {
+                className: hW.qs,
+                children: (0, a.jsx)(hV, {
                     title: E.intl.string(S.default["9kpdo7"]),
                     body: E.intl.string(S.default.iIA8Nj),
                 }),
             });
-        case hO.n.NoApplication:
-            return (0, a.jsx)(hE, { className: hH.qs });
-        case hO.n.DoesNotSupportSurface:
+        case hz.n.NoApplication:
+            return (0, a.jsx)(hM, { className: hW.qs });
+        case hz.n.DoesNotSupportSurface:
             return (0, a.jsx)("div", {
-                className: hH.qs,
-                children: (0, a.jsx)(hK, {
+                className: hW.qs,
+                children: (0, a.jsx)(hV, {
                     title: E.intl.string(S.default["7k4GyN"]),
                     body: E.intl.string(S.default.zdIy3R),
                 }),
             });
-        case hO.n.Error:
+        case hz.n.Error:
             return (0, a.jsxs)("div", {
-                className: hH.qs,
+                className: hW.qs,
                 children: [
                     (0, a.jsx)(x.D, {
                         variant: "heading-md/semibold",
@@ -17420,35 +17449,35 @@ function hW(e) {
                     (0, a.jsx)(v.E, {
                         variant: "text-sm/normal",
                         color: "text-feedback-critical",
-                        className: hH.tj,
+                        className: hW.tj,
                         children: E.intl.string(S.default.e6GiAZ),
                     }),
                 ],
             });
-        case hO.n.AwaitingLaunch:
-        case hO.n.Loading:
-            return (0, a.jsx)("div", { className: hH.qs, children: (0, a.jsx)(nt.y, {}) });
+        case hz.n.AwaitingLaunch:
+        case hz.n.Loading:
+            return (0, a.jsx)("div", { className: hW.qs, children: (0, a.jsx)(nt.y, {}) });
     }
 }
-var hX = n(308528),
-    hZ = n(334738),
-    hJ = n(688438),
-    hY = n(365971),
-    hQ = n(703462);
-function h0(e) {
+var hJ = n(308528),
+    hY = n(334738),
+    hQ = n(688438),
+    h0 = n(365971),
+    h1 = n(703462);
+function h2(e) {
     let { message: t } = e;
     return (0, a.jsxs)("div", {
-        className: hQ.f,
+        className: h1.f,
         children: [
             (0, a.jsx)(eO.k, { size: "lg", color: "var(--icon-muted)" }),
             (0, a.jsx)(v.E, { variant: "text-sm/normal", color: "text-muted", children: t }),
         ],
     });
 }
-function h1() {
-    return (0, a.jsx)("div", { className: hQ.f, children: (0, a.jsx)(nt.y, {}) });
+function h3() {
+    return (0, a.jsx)("div", { className: h1.f, children: (0, a.jsx)(nt.y, {}) });
 }
-function h2(e) {
+function h4(e) {
     let t,
         n,
         { projectId: l, previewApplicationId: r } = e,
@@ -17457,16 +17486,16 @@ function h2(e) {
         d = (0, o.bG)([aQ.A], () => (null != c ? aQ.A.getChannel(c) : null), [c]);
     ((t = d?.id ?? null),
         i.useEffect(() => {
-            null != t && hX.A.preload(O.ME, t);
+            null != t && hJ.A.preload(O.ME, t);
         }, [t]),
         (n = (0, o.bG)([t7.A], () => t7.A.isFocused())),
         i.useEffect(() => {
             if (null == t || !n) return;
-            let e = (0, hY.Xg)();
+            let e = (0, h0.Xg)();
             return (
-                (0, hZ.yl)(t, e),
+                (0, hY.yl)(t, e),
                 () => {
-                    (0, hZ.dm)(t, e);
+                    (0, hY.dm)(t, e);
                 }
             );
         }, [t, n]));
@@ -17490,18 +17519,18 @@ function h2(e) {
         );
     }, [l, r, d, h]),
     h)
-        ? (0, a.jsx)(h0, { message: E.intl.string(S.default["VP/O8s"]) })
+        ? (0, a.jsx)(h2, { message: E.intl.string(S.default["VP/O8s"]) })
         : null == d
-          ? (0, a.jsx)(h1, {})
+          ? (0, a.jsx)(h3, {})
           : (0, a.jsx)("div", {
-                className: hQ.g,
-                children: (0, a.jsx)(hJ.A, { channel: d, guild: null, chatInputType: u9.oU.SIDEBAR }, d.id),
+                className: h1.g,
+                children: (0, a.jsx)(hQ.A, { channel: d, guild: null, chatInputType: u9.oU.SIDEBAR }, d.id),
             });
 }
-var h3 = n(887909),
-    h4 = n(570962),
-    h5 = n(998475);
-function h6(e) {
+var h5 = n(887909),
+    h6 = n(570962),
+    h7 = n(998475);
+function h8(e) {
     let {
         label: t,
         title: n,
@@ -17514,21 +17543,21 @@ function h6(e) {
         hasContentBackground: c,
         noPadding: d,
         obscured: m,
-    } = (0, h3.useOAuth2AuthorizeForm)({ ...e, hideCancel: !0 });
+    } = (0, h5.useOAuth2AuthorizeForm)({ ...e, hideCancel: !0 });
     return (0, a.jsxs)("section", {
-        className: h5.Nr,
+        className: h7.Nr,
         "aria-label": t,
         children: [
             (0, a.jsx)("div", {
-                className: h5.rf,
-                children: (0, a.jsx)(h4.A, {
+                className: h7.rf,
+                children: (0, a.jsx)(h6.A, {
                     obscured: !0 === m,
                     children: (0, a.jsxs)("div", {
-                        className: h5.Gq,
+                        className: h7.Gq,
                         children: [
                             null != n
                                 ? (0, a.jsxs)("div", {
-                                      className: h5.z3,
+                                      className: h7.z3,
                                       children: [
                                           (0, a.jsx)(x.D, {
                                               variant: "heading-lg/bold",
@@ -17547,7 +17576,7 @@ function h6(e) {
                                 : null,
                             r,
                             (0, a.jsxs)("div", {
-                                className: h()(h5.Qs, c ? h5.cw : null, d ? h5.pN : null),
+                                className: h()(h7.Qs, c ? h7.cw : null, d ? h7.pN : null),
                                 children: [i, null == o ? u : null],
                             }),
                         ],
@@ -17556,21 +17585,21 @@ function h6(e) {
             }),
             null != s && s.length > 0
                 ? (0, a.jsx)("div", {
-                      className: h5.o1,
+                      className: h7.o1,
                       children: s.map((e, t) => (0, a.jsx)(eT.$, { size: "md", ...e }, t)),
                   })
                 : null,
         ],
     });
 }
-var h7 = n(765671),
-    h8 = n(269094),
-    h9 = n(582063);
-let pe = ["image/png", "image/jpeg", "image/gif", "image/webp"];
-function pt() {
+var h9 = n(765671),
+    pe = n(269094),
+    pt = n(582063);
+let pn = ["image/png", "image/jpeg", "image/gif", "image/webp"];
+function pl() {
     (0, eW.P0)({ text: E.intl.string(S.default.jj3abP), variant: "critical" });
 }
-function pn(e) {
+function pr(e) {
     let { projectId: t } = e,
         n = i.useRef(null),
         l = i.useRef(null),
@@ -17583,13 +17612,13 @@ function pn(e) {
                 position: "bottom",
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, a.jsx)(pl, { projectId: t, onClose: n, onUpload: () => l.current?.click() });
+                    return (0, a.jsx)(pa, { projectId: t, onClose: n, onUpload: () => l.current?.click() });
                 },
                 children: (e) => {
                     let { onClick: t } = e;
                     return (0, a.jsx)("div", {
                         ref: n,
-                        className: h9.m2,
+                        className: pt.m2,
                         children: (0, a.jsx)(N.m, {
                             position: "bottom",
                             text: r,
@@ -17608,7 +17637,7 @@ function pn(e) {
             (0, a.jsx)("input", {
                 ref: l,
                 type: "file",
-                accept: pe.join(","),
+                accept: pn.join(","),
                 hidden: !0,
                 "aria-hidden": !0,
                 tabIndex: -1,
@@ -17616,17 +17645,17 @@ function pn(e) {
                     let n = e.currentTarget.files?.[0];
                     ((e.currentTarget.value = ""),
                         null != n &&
-                            (pe.includes(n.type)
+                            (pn.includes(n.type)
                                 ? n.size > er.aI
                                     ? (0, eW.P0)({ text: E.intl.string(S.default.T8Spiu), variant: "critical" })
-                                    : (0, sE.M$)(t, n).catch(pt)
+                                    : (0, sE.M$)(t, n).catch(pl)
                                 : (0, eW.P0)({ text: E.intl.string(S.default.AO7zpk), variant: "critical" })));
                 },
             }),
         ],
     });
 }
-function pl(e) {
+function pa(e) {
     let { projectId: t, onClose: n, onUpload: l } = e,
         r = (0, o.bG)([sS.A], () => sS.A.getBackground(t)),
         i = r?.blur === !0,
@@ -17651,10 +17680,10 @@ function pl(e) {
                     (0, a.jsx)(eY.Dr, {
                         id: "conjure-overlay-background-reset",
                         label: E.intl.string(S.default.AiAz8J),
-                        icon: fM.RetryIcon,
+                        icon: fR.RetryIcon,
                         disabled: null == s,
                         action: () => {
-                            (n(), (0, sE.Og)(t).catch(pt));
+                            (n(), (0, sE.Og)(t).catch(pl));
                         },
                     }),
                 ],
@@ -17665,57 +17694,57 @@ function pl(e) {
                     label: E.intl.string(S.default["hyN+kc"]),
                     checked: i,
                     action: () => {
-                        (0, sE.Y1)(t, !i) || pt();
+                        (0, sE.Y1)(t, !i) || pl();
                     },
                 }),
             }),
         ],
     });
 }
-function pr(e) {
+function pi(e) {
     let { applicationId: t, projectId: n, size: l } = e,
-        r = (0, hO.A)({ applicationId: t, surface: rn.ZN });
+        r = (0, hz.A)({ applicationId: t, surface: rn.ZN });
     return (i.useEffect(() => {
         let e = (0, rn.VA)(t, rn.ZN);
         return () => (0, lP.r)(e);
     }, [t]),
-    r.state !== hO.n.Launched)
-        ? (0, a.jsx)(hW, { state: r.state })
+    r.state !== hz.n.Launched)
+        ? (0, a.jsx)(hZ, { state: r.state })
         : r.frame.data.proxyTicketRefreshing
-          ? (0, a.jsx)(hW, { state: hO.n.Loading })
-          : (0, a.jsx)(pa, { lifecycle: r, projectId: n, size: l });
+          ? (0, a.jsx)(hZ, { state: hz.n.Loading })
+          : (0, a.jsx)(ps, { lifecycle: r, projectId: n, size: l });
 }
-function pa(e) {
+function ps(e) {
     let { lifecycle: t, projectId: n, size: l } = e,
-        { ref: r, width: i, height: s } = (0, h7.Ay)(),
+        { ref: r, width: i, height: s } = (0, h9.Ay)(),
         o = (function (e, t) {
             let { width: n, height: l } = e;
             return null == n || null == l || n <= 0 || l <= 0 ? 1 : Math.min(1, n / t.width, l / t.height);
         })({ width: i, height: s }, l);
     return (0, a.jsxs)("div", {
-        className: h9.JH,
+        className: pt.JH,
         children: [
             (0, a.jsx)(sM, { projectId: n }),
             (0, a.jsx)("div", {
                 ref: r,
-                className: h9.dw,
+                className: pt.dw,
                 children: (0, a.jsx)("div", {
-                    className: h9.HL,
+                    className: pt.HL,
                     style: {
                         "--custom-conjure-overlay-widget-width": `${l.width}px`,
                         "--custom-conjure-overlay-widget-height": `${l.height}px`,
                         "--custom-conjure-overlay-widget-scale": String(o),
                     },
-                    children: (0, a.jsx)(h8.A, { frame: t.frame, application: t.application, className: h9.Gt }),
+                    children: (0, a.jsx)(pe.A, { frame: t.frame, application: t.application, className: pt.Gt }),
                 }),
             }),
-            null != n ? (0, a.jsx)(pn, { projectId: n }) : null,
+            null != n ? (0, a.jsx)(pr, { projectId: n }) : null,
         ],
     });
 }
-var pi = n(409478),
-    ps = n(652227);
-function po(e) {
+var po = n(409478),
+    pu = n(652227);
+function pc(e) {
     let {
             applicationId: t,
             previewApplicationId: n,
@@ -17734,54 +17763,54 @@ function po(e) {
         } = e,
         x = (0, o.bG)([iL.A], () => null != f && null != iL.A.getSetupStartedAt(f), [f]);
     return s?.type === "checking"
-        ? (0, a.jsx)("div", { className: ps.qs, children: (0, a.jsx)(nt.y, {}) })
+        ? (0, a.jsx)("div", { className: pu.qs, children: (0, a.jsx)(nt.y, {}) })
         : s?.type === "permissions"
           ? (0, a.jsx)("div", {
-                className: ps.qs,
-                children: null == s.authorizeProps ? (0, a.jsx)(nt.y, {}) : (0, a.jsx)(h6, { ...s.authorizeProps }),
+                className: pu.qs,
+                children: null == s.authorizeProps ? (0, a.jsx)(nt.y, {}) : (0, a.jsx)(h8, { ...s.authorizeProps }),
             })
           : i
             ? null == t
                 ? null
                 : (0, a.jsxs)("div", {
-                      className: ps.RG,
+                      className: pu.RG,
                       children: [
                           (0, l1.yf)(u, c)
                               ? p
-                                  ? (0, a.jsx)(pu, { projectId: f, onResume: g })
-                                  : (0, a.jsx)(hV, { applicationId: t, surface: l, launch: r, frameOverlay: h })
+                                  ? (0, a.jsx)(pd, { projectId: f, onResume: g })
+                                  : (0, a.jsx)(hX, { applicationId: t, surface: l, launch: r, frameOverlay: h })
                               : null,
                           "widget" === c && null != d
                               ? "unavailable-authorization-revoked" === u.profileState
                                   ? (0, a.jsx)("div", {
-                                        className: ps.qs,
-                                        children: (0, a.jsx)(hK, {
+                                        className: pu.qs,
+                                        children: (0, a.jsx)(hV, {
                                             wide: !0,
                                             title: E.intl.string(S.default["08U+YO"]),
                                             body: E.intl.string(S.default.pKBfrc),
                                         }),
                                     })
-                                  : (0, a.jsx)(pi.A, { applicationId: d })
+                                  : (0, a.jsx)(po.A, { applicationId: d })
                               : null,
                           "overlay" === c && u.modes.includes("overlay")
-                              ? (0, a.jsx)(pr, { applicationId: t, projectId: f, size: m })
+                              ? (0, a.jsx)(pi, { applicationId: t, projectId: f, size: m })
                               : null,
                           "bot" === c && null != n && null != f
-                              ? (0, a.jsx)(h2, { projectId: f, previewApplicationId: n })
+                              ? (0, a.jsx)(h4, { projectId: f, previewApplicationId: n })
                               : null,
                       ],
                   })
             : x
-              ? (0, a.jsx)("div", { className: ps.qs, children: (0, a.jsx)(nt.y, {}) })
-              : (0, a.jsx)(hE, { className: ps.qs });
+              ? (0, a.jsx)("div", { className: pu.qs, children: (0, a.jsx)(nt.y, {}) })
+              : (0, a.jsx)(hM, { className: pu.qs });
 }
-function pu(e) {
+function pd(e) {
     let { projectId: t, onResume: n } = e;
     return (
-        (0, hL.Pu)(t),
+        (0, hD.Pu)(t),
         (0, a.jsx)("div", {
-            className: ps.qs,
-            children: (0, a.jsx)(hK, {
+            className: pu.qs,
+            children: (0, a.jsx)(hV, {
                 wide: !0,
                 title: E.intl.string(S.default.MMWEH2),
                 body: E.intl.string(S.default.iKSu55),
@@ -17799,20 +17828,20 @@ function pu(e) {
         })
     );
 }
-var pc = n(750506),
-    pd = n(867193),
-    pm = n(539197),
-    pf = n(977020);
-function ph(e) {
+var pm = n(750506),
+    pf = n(867193),
+    ph = n(539197),
+    pp = n(977020);
+function pg(e) {
     let { projectId: t } = e,
-        n = (0, pm.X2)(t),
+        n = (0, ph.X2)(t),
         l = (function (e) {
             let [t, n] = i.useState(null);
             return (
                 i.useLayoutEffect(() => {
                     if (null == e) return;
                     function t() {
-                        let t = (0, pm.Ie)(e);
+                        let t = (0, ph.Ie)(e);
                         n((e) =>
                             null != e &&
                             e.left === t.left &&
@@ -17841,25 +17870,25 @@ function ph(e) {
         return { "--custom-conjure-cursor-x": `${e * c}px`, "--custom-conjure-cursor-y": `${t * c}px` };
     }
     return (0, a.jsxs)("div", {
-        className: pf.$Q,
+        className: pp.$Q,
         style: { left: r, top: s, width: o, height: u, "--custom-conjure-cursor-scale": c },
         "aria-hidden": !0,
-        [pm.t$]: "",
+        [ph.t$]: "",
         children: [
             n.presses > 0
                 ? (0, a.jsxs)(
                       i.Fragment,
                       {
                           children: [
-                              (0, a.jsx)("div", { className: h()(pf.hN, pf.vW), style: d(n.pressX, n.pressY) }),
-                              (0, a.jsx)("div", { className: h()(pf.hN, pf.A7), style: d(n.pressX, n.pressY) }),
+                              (0, a.jsx)("div", { className: h()(pp.hN, pp.vW), style: d(n.pressX, n.pressY) }),
+                              (0, a.jsx)("div", { className: h()(pp.hN, pp.A7), style: d(n.pressX, n.pressY) }),
                           ],
                       },
                       n.presses,
                   )
                 : null,
             (0, a.jsx)("svg", {
-                className: h()(pf.UE, { [pf.SP]: n.shown, [pf.Vq]: n.pressed, [pf.GP]: n.dipping }),
+                className: h()(pp.UE, { [pp.SP]: n.shown, [pp.Vq]: n.pressed, [pp.GP]: n.dipping }),
                 style: d(n.x, n.y),
                 width: "18",
                 height: "24",
@@ -17869,8 +17898,8 @@ function ph(e) {
         ],
     });
 }
-var pp = n(417760);
-function pg(e) {
+var px = n(417760);
+function pv(e) {
     let { phase: t, projectId: n, compact: l } = e,
         { stop: r, stopping: s } = (function (e) {
             let t = (0, o.bG)([W.A], () => null != e && W.A.isThinking(e)),
@@ -17903,42 +17932,42 @@ function pg(e) {
                 : null;
     return l
         ? (0, a.jsxs)("div", {
-              className: h()(pp.M0, pp.oE),
+              className: h()(px.M0, px.oE),
               "data-phase": t,
               "data-testid": "conjure-control-notice",
               children: [
                   c
-                      ? (0, a.jsx)(d9.i, { size: 12, color: "currentColor" })
+                      ? (0, a.jsx)(mt.i, { size: 12, color: "currentColor" })
                       : (0, a.jsx)(ur.SparklesIcon, { size: "sm", color: "currentColor" }),
-                  (0, a.jsx)(v.E, { variant: "text-sm/semibold", color: "none", className: pp.ID, children: d }),
+                  (0, a.jsx)(v.E, { variant: "text-sm/semibold", color: "none", className: px.ID, children: d }),
                   c ? (0, a.jsx)(ay.A, { children: E.intl.string(S.default.fg1sor) }) : null,
-                  c ? (0, a.jsx)("div", { className: pp.lC, children: m }) : null,
+                  c ? (0, a.jsx)("div", { className: px.lC, children: m }) : null,
               ],
           })
         : (0, a.jsxs)("div", {
-              className: pp.M0,
+              className: px.M0,
               "data-phase": t,
               "data-testid": "conjure-control-notice",
               children: [
                   (0, a.jsxs)("div", {
-                      className: pp.sp,
+                      className: px.sp,
                       children: [
                           (0, a.jsx)(ur.SparklesIcon, { size: "sm", color: "currentColor" }),
-                          c ? (0, a.jsx)(d9.i, { size: 12, color: "currentColor" }) : null,
+                          c ? (0, a.jsx)(mt.i, { size: 12, color: "currentColor" }) : null,
                           (0, a.jsxs)("div", {
-                              className: pp.f4,
+                              className: px.f4,
                               children: [
                                   (0, a.jsx)(v.E, {
                                       variant: "text-sm/semibold",
                                       color: "none",
-                                      className: pp.w9,
+                                      className: px.w9,
                                       children: d,
                                   }),
                                   c
                                       ? (0, a.jsx)(v.E, {
                                             variant: "text-xs/medium",
                                             color: "none",
-                                            className: pp.Rb,
+                                            className: px.Rb,
                                             children: E.intl.string(S.default.fg1sor),
                                         })
                                       : null,
@@ -17946,11 +17975,11 @@ function pg(e) {
                           }),
                       ],
                   }),
-                  c ? (0, a.jsx)("div", { className: pp.lC, children: m }) : null,
+                  c ? (0, a.jsx)("div", { className: px.lC, children: m }) : null,
               ],
           });
 }
-function px(e) {
+function pj(e) {
     let { projectId: t, applicationId: n, previewApplicationId: l, resolveTarget: r, frameId: s } = e,
         o = (0, lL.Zv)(null != n && n === l ? t : null),
         u = (function (e) {
@@ -17983,7 +18012,7 @@ function px(e) {
             let e = rR(r());
             f((t) => (rP(t, e) ? t : e));
             let t = null == h ? null : rR(h);
-            (x((e) => (rP(e, t) ? e : t)), null != h && (0, pd.C)(h.getBoundingClientRect().height));
+            (x((e) => (rP(e, t) ? e : t)), null != h && (0, pf.C)(h.getBoundingClientRect().height));
         }
         e();
         let t = window.setInterval(e, 250);
@@ -17995,7 +18024,7 @@ function px(e) {
                 (window.clearInterval(t),
                     window.removeEventListener("resize", e),
                     n?.disconnect(),
-                    null != h && (0, pd.C)(0));
+                    null != h && (0, pf.C)(0));
             }
         );
     }, [v, r, h]);
@@ -18018,7 +18047,7 @@ function px(e) {
                       };
                   })(m, g),
         N = (function () {
-            let [e] = i.useContext(pc.uY),
+            let [e] = i.useContext(pm.uY),
                 [t] = i.useState(() => document.createElement("div"));
             return (
                 i.useLayoutEffect(() => {
@@ -18032,11 +18061,11 @@ function px(e) {
             j
                 ? (0, a.jsx)("div", {
                       ref: p,
-                      className: pp.D,
+                      className: px.D,
                       "data-phase": u,
                       children: (0, a.jsx)("div", {
-                          className: pp.QF,
-                          children: (0, a.jsx)(pg, { phase: u, projectId: t, compact: y }),
+                          className: px.QF,
+                          children: (0, a.jsx)(pv, { phase: u, projectId: t, compact: y }),
                       }),
                   })
                 : null,
@@ -18062,18 +18091,18 @@ function px(e) {
                       (0, a.jsxs)(a.Fragment, {
                           children: [
                               (0, a.jsx)("div", {
-                                  className: pp.ys,
+                                  className: px.ys,
                                   style: k,
                                   "data-testid": "conjure-control-glow",
                                   "aria-hidden": !0,
                               }),
                               (0, a.jsx)("div", {
-                                  className: pp.om,
+                                  className: px.om,
                                   style: w,
                                   "data-testid": "conjure-control-block",
                                   "aria-hidden": !0,
                               }),
-                              (0, a.jsx)(ph, { projectId: t }),
+                              (0, a.jsx)(pg, { projectId: t }),
                           ],
                       }),
                       N,
@@ -18082,13 +18111,13 @@ function px(e) {
         ],
     });
 }
-var pv = n(399503),
-    pj = n(853555),
-    pb = n(271982),
-    py = n(187645);
-let pw = new Map(),
-    pk = !1;
-function pN() {
+var pb = n(399503),
+    py = n(853555),
+    pw = n(271982),
+    pk = n(187645);
+let pN = new Map(),
+    pC = !1;
+function pA() {
     let e = new Map();
     for (let t of new Set([...W.A.getActivityOrderedProjectIds(), ...(0, lL.T7)()])) {
         if (!l$(t) || lT.A.isPaused(t)) continue;
@@ -18100,57 +18129,57 @@ function pN() {
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [t, n] of [...pw])
+    for (let [t, n] of [...pN])
         e.get(t) !== n.frameId &&
             (function (e, t) {
-                (pw.delete(e), t.unregisterLookup(), pb.A.removeFrameTarget(t.frameId, t.element), t.element.remove());
+                (pN.delete(e), t.unregisterLookup(), pw.A.removeFrameTarget(t.frameId, t.element), t.element.remove());
                 let n = lR.A.getFrame(t.frameId)?.applicationId;
                 null != n && setTimeout(() => lz(e, n), 0);
             })(t, n);
     for (let [t, n] of e)
-        pw.has(t) ||
+        pN.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
-                ((n.className = py.t),
+                ((n.className = pk.t),
                     n.setAttribute("inert", ""),
                     n.setAttribute("aria-hidden", "true"),
-                    pC(n),
+                    pS(n),
                     document.body.appendChild(n));
                 let l = { frameId: t, element: n, unregisterLookup: () => {} };
-                (pw.set(e, l),
-                    (l.unregisterLookup = (0, pj.Ng)(e, () => (0, hI.n5)(n, t))),
-                    pb.A.registerFrameTarget(t, n, h$.A.Backstage, void 0));
+                (pN.set(e, l),
+                    (l.unregisterLookup = (0, py.Ng)(e, () => (0, h_.n5)(n, t))),
+                    pw.A.registerFrameTarget(t, n, hO.A.Backstage, void 0));
             })(t, n);
-    for (let e of pw.values()) pC(e.element);
+    for (let e of pN.values()) pS(e.element);
 }
-function pC(e) {
+function pS(e) {
     let t = rh.A.isBuilderPreviewMobile();
-    e.classList.toggle(py.L, !t);
-    let n = t ? hF(rh.A.isBuilderPreviewLandscape()) : null;
+    e.classList.toggle(pk.L, !t);
+    let n = t ? hG(rh.A.isBuilderPreviewLandscape()) : null;
     ((e.style.width = null != n ? `${n.width}px` : ""), (e.style.height = null != n ? `${n.height}px` : ""));
 }
-var pA = n(873727),
-    pS = n(147248),
-    pE = n(418842),
-    pI = n(363195),
-    pM = n(818023);
-let p_ = null;
-var pR = n(517461),
-    pP = n(761929),
-    pT = n(487336);
-function pL(e) {
+var pE = n(873727),
+    pI = n(147248),
+    pM = n(418842),
+    p_ = n(363195),
+    pR = n(818023);
+let pP = null;
+var pT = n(517461),
+    pL = n(761929),
+    p$ = n(487336);
+function pD(e) {
     let { open: t, maxWidth: n, children: l } = e,
         r = i.useRef(null),
-        [s, o] = (0, pR.V)("ConjureChatSidebarWidth", 460),
+        [s, o] = (0, pT.V)("ConjureChatSidebarWidth", 460),
         [u, c] = i.useState(s ?? 460),
         d = (0, X.clamp)(u, 360, n),
-        m = (0, pP.A)({
+        m = (0, pL.A)({
             minDimension: 360,
             maxDimension: n,
             resizableDomNodeRef: r,
             onElementResize: c,
             onElementResizeEnd: o,
-            orientation: pP.R.HORIZONTAL_LEFT,
+            orientation: pL.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
             usePointerEvents: !0,
         }),
@@ -18161,16 +18190,16 @@ function pL(e) {
             [m],
         );
     return (0, a.jsxs)("div", {
-        className: pT.pz,
+        className: p$.pz,
         hidden: !t,
         children: [
-            (0, a.jsx)("div", { className: pT.Di, onPointerDown: f }),
-            (0, a.jsx)("div", { ref: r, className: pT.kL, style: { width: d }, children: l }),
+            (0, a.jsx)("div", { className: p$.Di, onPointerDown: f }),
+            (0, a.jsx)("div", { ref: r, className: p$.kL, style: { width: d }, children: l }),
         ],
     });
 }
-var p$ = n(541940);
-function pD(e) {
+var pO = n(541940);
+function pq(e) {
     let {
             projectId: t,
             designFeedbackToggleRef: n,
@@ -18188,8 +18217,8 @@ function pD(e) {
         v = (0, rf.A)(l, s),
         j = v?.id ?? null;
     (!(function (e, t) {
-        let n = (0, o.bG)([pI.A], () => (0, pA.x4)(pI.A.theme)),
-            l = (0, o.bG)([pS.A], () => pS.A.gradientPreset),
+        let n = (0, o.bG)([p_.A], () => (0, pE.x4)(p_.A.theme)),
+            l = (0, o.bG)([pI.A], () => pI.A.gradientPreset),
             {
                 reducedMotion: r,
                 fontScale: a,
@@ -18198,13 +18227,13 @@ function pD(e) {
                 underlineLinks: c,
             } = (0, o.cf)([eL.Ay], () => ({
                 reducedMotion: eL.Ay.useReducedMotion,
-                fontScale: (0, pA.U0)(),
+                fontScale: (0, pE.U0)(),
                 highContrast: eL.Ay.isHighContrastModeEnabled,
                 forcedColors: eL.Ay.useForcedColors,
                 underlineLinks: eL.Ay.alwaysShowLinkDecorations,
             })),
             d = lK.hH.useSetting(),
-            m = (0, pE.C)(),
+            m = (0, pM.C)(),
             f = (0, o.bG)(
                 [lR.A, rh.A],
                 () =>
@@ -18219,13 +18248,13 @@ function pD(e) {
             g = i.useRef(0),
             x = i.useRef(null),
             v = i.useCallback(() => {
-                let l = (0, hI.n5)(e, t);
+                let l = (0, h_.n5)(e, t);
                 if (null == l) return;
                 x.current = l;
                 let i = {
                     revision: ++g.current,
                     baseTheme: n,
-                    customTheme: (0, pA.Lq)(),
+                    customTheme: (0, pE.Lq)(),
                     uiDensity: m,
                     messageDisplayCompact: d,
                     fontScale: a,
@@ -18235,7 +18264,7 @@ function pD(e) {
                     underlineLinks: c,
                     formFactor: f,
                 };
-                (0, ho.W)(l, "set-env", i, {
+                (0, hc.W)(l, "set-env", i, {
                     timeoutMs: 6e3,
                     retryMs: 250,
                     sourceMatch: "origin",
@@ -18269,12 +18298,12 @@ function pD(e) {
                 (v(), b());
             }, [b, v]),
             i.useLayoutEffect(() => {
-                let n = (0, hI.n5)(e, t);
+                let n = (0, h_.n5)(e, t);
                 null != n && n !== x.current && b();
             }),
             i.useEffect(() => {
                 function n(n) {
-                    n.target === (0, hI.n5)(e, t) && ((x.current = null), b());
+                    n.target === (0, h_.n5)(e, t) && ((x.current = null), b());
                 }
                 return (document.addEventListener("load", n, !0), () => document.removeEventListener("load", n, !0));
             }, [t, e, b]),
@@ -18288,26 +18317,26 @@ function pD(e) {
             }, [b]));
     })(g, j),
         i.useEffect(() => {
-            if (null != t) return (0, pj.Ng)(t, () => (0, hI.n5)(g, j));
+            if (null != t) return (0, py.Ng)(t, () => (0, h_.n5)(g, j));
         }, [t, g, j]));
-    let b = i.useCallback(() => (0, hI.ow)(g, j), [g, j]),
-        y = i.useCallback(() => (f ? (0, hI.ow)(g, j) : g), [f, g, j]);
+    let b = i.useCallback(() => (0, h_.ow)(g, j), [g, j]),
+        y = i.useCallback(() => (f ? (0, h_.ow)(g, j) : g), [f, g, j]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
-                className: h()(p$.Mh, c),
+                className: h()(pO.Mh, c),
                 children: [
                     u,
                     p
                         ? null
-                        : (0, a.jsx)(px, {
+                        : (0, a.jsx)(pj, {
                               projectId: t ?? null,
                               applicationId: l,
                               previewApplicationId: r,
                               resolveTarget: y,
                               frameId: j,
                           }),
-                    (0, a.jsx)("div", { ref: x, className: p$.fm, children: d }),
+                    (0, a.jsx)("div", { ref: x, className: pO.fm, children: d }),
                 ],
             }),
             m,
@@ -18315,7 +18344,7 @@ function pD(e) {
                 ? null
                 : (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(hg, {
+                          (0, a.jsx)(hv, {
                               projectId: t ?? null,
                               applicationId: l,
                               previewApplicationId: r,
@@ -18328,7 +18357,7 @@ function pD(e) {
         ],
     });
 }
-function pO(e) {
+function pz(e) {
     let {
         projectId: t,
         designFeedbackToggleRef: n,
@@ -18354,7 +18383,7 @@ function pO(e) {
         previewPaused: A = !1,
         onResumePreview: I,
     } = e;
-    (0, pv.k)(t, N);
+    (0, pb.k)(t, N);
     let M = s.type === l2.U.MAIN || (0, rp.Q5)(s);
     !(function (e) {
         let { mobile: t, landscape: n } = (0, o.cf)([rh.A], () => ({
@@ -18364,10 +18393,10 @@ function pO(e) {
         i.useEffect(() => {
             let l;
             if (null != e) {
-                if (t) ((l = n ? pM.aX.LANDSCAPE : pM.aX.PORTRAIT), (p_ = e));
+                if (t) ((l = n ? pR.aX.LANDSCAPE : pR.aX.PORTRAIT), (pP = e));
                 else {
-                    if (p_ !== e) return;
-                    ((l = pM.aX.UNHANDLED), (p_ = null));
+                    if (pP !== e) return;
+                    ((l = pR.aX.UNHANDLED), (pP = null));
                 }
                 K.h.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: l, applicationId: e });
             }
@@ -18389,15 +18418,15 @@ function pO(e) {
         i.useEffect(() => {
             null != t &&
                 ((0, R.ensureConnection)(t),
-                pk ||
-                    ((pk = !0),
-                    W.A.addChangeListener(pN),
-                    ew.Ay.addChangeListener(pN),
-                    lR.A.addChangeListener(pN),
-                    rh.A.addChangeListener(pN),
-                    lT.A.addChangeListener(pN),
-                    (0, lL.W3)(pN),
-                    pN()));
+                pC ||
+                    ((pC = !0),
+                    W.A.addChangeListener(pA),
+                    ew.Ay.addChangeListener(pA),
+                    lR.A.addChangeListener(pA),
+                    rh.A.addChangeListener(pA),
+                    lT.A.addChangeListener(pA),
+                    (0, lL.W3)(pA),
+                    pA()));
         }, [t]),
         i.useLayoutEffect(() => {
             let e = _.current;
@@ -18413,8 +18442,8 @@ function pO(e) {
         $ = d || M;
     return (0, a.jsx)("div", {
         ref: _,
-        className: p$.LB,
-        children: (0, a.jsx)(pD, {
+        className: pO.LB,
+        children: (0, a.jsx)(pq, {
             projectId: t,
             designFeedbackToggleRef: n,
             applicationId: l,
@@ -18423,8 +18452,8 @@ function pO(e) {
             header: c,
             showsFrame: (0, l1.yf)(w, k),
             paused: A,
-            mainClassName: null == c ? void 0 : h()(p$.ez, { [p$.zt]: d }),
-            content: (0, a.jsx)(po, {
+            mainClassName: null == c ? void 0 : h()(pO.ez, { [pO.zt]: d }),
+            content: (0, a.jsx)(pc, {
                 applicationId: l,
                 previewApplicationId: r,
                 surface: s,
@@ -18438,20 +18467,20 @@ function pO(e) {
                 projectId: t,
                 paused: A,
                 onResume: I,
-                frameOverlay: (0, a.jsx)(hT, { projectId: t, applicationId: l, previewApplicationId: r, surface: s }),
+                frameOverlay: (0, a.jsx)(h$, { projectId: t, applicationId: l, previewApplicationId: r, surface: s }),
             }),
             sidebar:
                 null != t && $
-                    ? (0, a.jsx)(pL, {
+                    ? (0, a.jsx)(pD, {
                           open: d,
                           maxWidth: L,
                           children: (0, a.jsx)("div", {
-                              className: p$.cO,
+                              className: pO.cO,
                               children: x
-                                  ? (0, a.jsx)(hn, { projectId: t, onClose: v ?? (() => {}) }, t)
+                                  ? (0, a.jsx)(hr, { projectId: t, onClose: v ?? (() => {}) }, t)
                                   : (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            (0, a.jsx)(hN.Ay, { projectId: t }),
+                                            (0, a.jsx)(hA.Ay, { projectId: t }),
                                             (0, a.jsx)(rA.Ay, {
                                                 "aria-label": E.intl.string(E.t["/VQax8"]),
                                                 toolbar: (0, a.jsxs)(a.Fragment, {
@@ -18471,9 +18500,9 @@ function pO(e) {
                                                 }),
                                             }),
                                             (0, a.jsx)("div", {
-                                                className: p$.cb,
+                                                className: pO.cb,
                                                 children: (0, a.jsx)(
-                                                    my,
+                                                    mk,
                                                     {
                                                         projectId: t,
                                                         restoreState: j,
@@ -18491,8 +18520,8 @@ function pO(e) {
         }),
     });
 }
-var pq = n(323140);
-function pz(e) {
+var pF = n(323140);
+function pU(e) {
     var t;
     let l,
         r,
@@ -19056,7 +19085,7 @@ function pz(e) {
             null == eF || null == s
                 ? null
                 : (0, a.jsx)("div", {
-                      className: pq.As,
+                      className: pF.As,
                       onMouseDown:
                           null == A || eF.disabled || eU
                               ? void 0
@@ -19066,7 +19095,7 @@ function pz(e) {
                       children: (0, a.jsx)(eT.$, {
                           size: "sm",
                           variant: eB,
-                          icon: eU ? pF : null != eG ? nV.U : void 0,
+                          icon: eU ? pG : null != eG ? nV.U : void 0,
                           text: eK,
                           onClick: () => eH("header"),
                       }),
@@ -19081,10 +19110,10 @@ function pz(e) {
                 null == s
                     ? null
                     : (0, a.jsxs)("div", {
-                          className: pq.FO,
+                          className: pF.FO,
                           children: [
                               (0, a.jsxs)("div", {
-                                  className: pq.QQ,
+                                  className: pF.QQ,
                                   children: [
                                       (0, a.jsx)(ri, {
                                           targets: el,
@@ -19106,7 +19135,7 @@ function pz(e) {
                                                 children: [
                                                     "frame" === G
                                                         ? (0, a.jsx)(y.A.Icon, {
-                                                              icon: ea ? pB : pG,
+                                                              icon: ea ? pH : pK,
                                                               tooltip: ei,
                                                               "aria-label": ei,
                                                               selected: ea,
@@ -19115,7 +19144,7 @@ function pz(e) {
                                                         : null,
                                                     ea && "frame" === G
                                                         ? (0, a.jsx)(y.A.Icon, {
-                                                              icon: pK,
+                                                              icon: pV,
                                                               tooltip: eu,
                                                               "aria-label": eu,
                                                               selected: eo,
@@ -19128,7 +19157,7 @@ function pz(e) {
                                                         children: (0, a.jsx)(y.A.Icon, {
                                                             ref: eb,
                                                             icon: nW.x,
-                                                            iconClassName: pq.D8,
+                                                            iconClassName: pF.D8,
                                                             tooltip: eI,
                                                             "aria-label": eI,
                                                             selected: eA || ej,
@@ -19144,7 +19173,7 @@ function pz(e) {
                                           : (0, a.jsx)(rl, { frame: em, controlProjectId: s.id }),
                                   ],
                               }),
-                              (0, a.jsx)("div", { className: pq.YJ }),
+                              (0, a.jsx)("div", { className: pF.YJ }),
                               (0, a.jsx)(lF.A, { frame: em }),
                               (0, a.jsx)(y.A.Icon, {
                                   icon: ty.SettingsIcon,
@@ -19155,24 +19184,24 @@ function pz(e) {
                               eZ,
                               ep
                                   ? null
-                                  : (0, a.jsx)(y.A.Icon, { icon: pU, tooltip: eg, "aria-label": eg, onClick: ex }),
+                                  : (0, a.jsx)(y.A.Icon, { icon: pB, tooltip: eg, "aria-label": eg, onClick: ex }),
                           ],
                       }),
         });
     return (0, a.jsxs)("div", {
-        className: h()(pq.nj, nG.T),
+        className: h()(pF.nj, nG.T),
         children: [
             e$.importInput,
             (0, a.jsx)("main", {
-                className: pq.JX,
+                className: pF.JX,
                 children:
                     null == s
                         ? (0, a.jsxs)("div", {
-                              className: pq.j5,
+                              className: pF.j5,
                               children: [
                                   eQ,
                                   (0, a.jsxs)("div", {
-                                      className: pq.sD,
+                                      className: pF.sD,
                                       children: [
                                           (0, a.jsx)(x.D, {
                                               variant: "heading-lg/semibold",
@@ -19196,7 +19225,7 @@ function pz(e) {
                         : (0, a.jsx)(t_.bI.Provider, {
                               value: ez,
                               children: (0, a.jsx)(
-                                  pO,
+                                  pz,
                                   {
                                       projectId: s.id,
                                       designFeedbackToggleRef: eb,
@@ -19229,22 +19258,22 @@ function pz(e) {
         ],
     });
 }
-function pF() {
-    return (0, a.jsx)(nt.y, { type: nt.t.SPINNING_CIRCLE_SIMPLE, className: pq.Hv, itemClassName: pq.C5 });
-}
-function pU(e) {
-    return (0, a.jsx)(nX.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
-}
-function pG(e) {
-    return (0, a.jsx)(nZ.u, { ...e, size: "custom", width: 20, height: 20 });
+function pG() {
+    return (0, a.jsx)(nt.y, { type: nt.t.SPINNING_CIRCLE_SIMPLE, className: pF.Hv, itemClassName: pF.C5 });
 }
 function pB(e) {
-    return (0, a.jsx)(nJ.k, { ...e, size: "custom", width: 20, height: 20 });
+    return (0, a.jsx)(nX.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
 }
 function pK(e) {
-    return (0, a.jsx)(nY.H, { ...e, size: "custom", width: 20, height: 20 });
+    return (0, a.jsx)(nZ.u, { ...e, size: "custom", width: 20, height: 20 });
 }
 function pH(e) {
+    return (0, a.jsx)(nJ.k, { ...e, size: "custom", width: 20, height: 20 });
+}
+function pV(e) {
+    return (0, a.jsx)(nY.H, { ...e, size: "custom", width: 20, height: 20 });
+}
+function pW(e) {
     let { guildId: t, projectId: n } = e,
         l = (0, o.yK)([c.Ay], () => c.Ay.getSelfMember(t)?.roles ?? [], [t]),
         r = (0, o.bG)(
@@ -19276,6 +19305,6 @@ function pH(e) {
         ),
         p = (0, o.bG)([ew.Ay], () => ew.Ay.hasFetchedGuildProjects(t), [t]);
     return null != s
-        ? (0, a.jsx)(pz, { project: h, projectsLoaded: p, onBack: f, guildId: t }, s)
+        ? (0, a.jsx)(pU, { project: h, projectsLoaded: p, onBack: f, guildId: t }, s)
         : (0, a.jsx)(nH, { guildId: t });
 }

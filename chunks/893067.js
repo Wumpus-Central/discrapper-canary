@@ -1,4 +1,4 @@
-l.d(t, { bI: () => R, Ay: () => V, KL: () => L, qF: () => D, FZ: () => z });
+l.d(t, { bI: () => L, Ay: () => V, vL: () => U, KL: () => R, qF: () => D, FZ: () => $ });
 var n = l(582128),
     a = l(17928),
     i = l(73153),
@@ -81,8 +81,8 @@ let I = {
     activating: C.default.ff1Fq1,
 };
 var T = l(652215);
-let R = 221552 == l.j ? n.createContext(null) : null;
-function L(e, t) {
+let L = 221552 == l.j ? n.createContext(null) : null;
+function R(e, t) {
     return "user" === e.install_scope ? null : (e.guild_id ?? t);
 }
 function D(e) {
@@ -93,7 +93,7 @@ function D(e) {
 function G(e, t) {
     let l = m.Ay.getProject(e);
     if (null == l) return null;
-    let n = L(l, t),
+    let n = R(l, t),
         a = null == n ? null : (0, A.i8)(n, l.application_id),
         i = null == n ? null : f.A.getGuild(n);
     return {
@@ -198,7 +198,7 @@ function q(e) {
     (0, r.eO)((0, b.Du)(e), { withMutualGuilds: !0 }).catch(() => {});
 }
 let B = new Set();
-async function z(e, t, n) {
+async function $(e, t, n) {
     let { guildId: a, platform: i } = n;
     if (!0 === n.busy || B.has(e)) return;
     let r = G(e, a),
@@ -223,11 +223,11 @@ async function z(e, t, n) {
         ? i.showPublishBlocked(M.k.MISSING_MANAGE_SERVER, o.disabledReason)
         : ((0, _.dx)(e), null != o.confirmReason)
           ? i.showPublishBlocked(M.k.MISSING_MANAGE_CHANNELS, o.confirmReason, () => {
-                $(e, o, n).catch(() => {});
+                z(e, o, n).catch(() => {});
             })
-          : await $(e, o, n);
+          : await z(e, o, n);
 }
-async function $(e, t, l) {
+async function z(e, t, l) {
     let { guildId: n, platform: a } = l,
         i = G(e, n);
     if (!(null == i || k.A.isProjectPublishing(e))) {
@@ -249,10 +249,8 @@ async function $(e, t, l) {
                     integrationInstalled: r?.integration_installed ?? null,
                     botPermissionsChanged: r?.bot_permissions_changed === !0,
                 })
-            ) {
-                null != i && a.showError(E.intl.string(C.default.zJUQOI));
+            )
                 return;
-            }
             await F(i, t, l);
             return;
         }
@@ -260,7 +258,7 @@ async function $(e, t, l) {
     }
 }
 function V(e, t) {
-    let l = n.useContext(R),
+    let l = n.useContext(L),
         i = t ?? l,
         r = i?.guildId ?? null,
         {
@@ -276,7 +274,7 @@ function V(e, t) {
             status: M,
             integrationStatus: _,
             guildName: T,
-            appChannelName: L,
+            appChannelName: R,
             appChannelPending: D,
             canManageGuild: U,
             canManageChannels: F,
@@ -314,7 +312,7 @@ function V(e, t) {
             },
             [e, r],
         ),
-        $ = n.useMemo(
+        z = n.useMemo(
             () =>
                 null == y
                     ? null
@@ -323,7 +321,7 @@ function V(e, t) {
                           status: M,
                           integrationStatus: _,
                           guildName: T,
-                          appChannelName: L,
+                          appChannelName: R,
                           appChannelPending: D,
                           canManageGuild: U,
                           canManageChannels: F,
@@ -331,10 +329,10 @@ function V(e, t) {
                           botInGuild: W,
                           liveNameOutdated: B,
                       },
-            [y, w, M, _, T, L, D, U, F, O, W, B],
+            [y, w, M, _, T, R, D, U, F, O, W, B],
         ),
-        V = $?.status?.publishState ?? null,
-        H = $?.installScope === "guild" && $.status?.surface === "bot";
+        V = z?.status?.publishState ?? null,
+        H = z?.installScope === "guild" && z.status?.surface === "bot";
     n.useEffect(() => {
         null != y && null != A && H && null != V && (0, S.lE)(V) && q(y);
     }, [y?.id, A, H, V]);
@@ -347,8 +345,8 @@ function V(e, t) {
             !s.A.isFetchingApplication(Z) &&
             (0, u.TA)(Z).catch(() => {});
     }, [Z, Q]);
-    let J = n.useMemo(() => (null == $ ? null : P($)), [$]),
-        X = (function (e) {
+    let X = n.useMemo(() => (null == z ? null : P(z)), [z]),
+        J = (function (e) {
             let t = (0, a.bG)([k.A], () => (null == e ? null : k.A.getPublishProgress(e))),
                 [l, i] = n.useState(() => Date.now());
             return (n.useEffect(() => {
@@ -368,24 +366,24 @@ function V(e, t) {
             (t) => {
                 null != e &&
                     null != i &&
-                    z(e, t, i).catch((t) => {
+                    $(e, t, i).catch((t) => {
                         console.error("[conjure] publish action failed", e, t);
                     });
             },
             [e, i],
         );
-    if (null == i || !h || null == J || (!g && !v)) return null;
-    let Y = null == x ? J.label : E.intl.string(C.default.qru9M5);
+    if (null == i || !h || null == X || (!g && !v)) return null;
+    let Y = null == x ? X.label : E.intl.string(C.default.qru9M5);
     return {
-        ...J,
-        status: $?.status ?? null,
+        ...X,
+        status: z?.status ?? null,
         guildId: A,
         appChannelId: j,
         publishing: v,
         failure: v ? null : b,
-        showsProgress: null != X,
+        showsProgress: null != J,
         awaitingApproval: null != x,
-        label: v ? (X ?? E.intl.string(C.default.Rhx0rn)) : Y,
+        label: v ? (J ?? E.intl.string(C.default.Rhx0rn)) : Y,
         disabled: v || !0 === i.busy,
         run: K,
     };
