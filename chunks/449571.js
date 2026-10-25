@@ -190,7 +190,7 @@ function Y(e) {
                     }),
                     n || Y
                         ? (0, i.jsx)(o.y, { className: s()(H.pU, { [H.p0]: eu && !a, [H.ST]: eu && a }) })
-                        : (0, i.jsx)(U.o, {
+                        : (0, i.jsx)(U.oI, {
                               allowPopups: (0, M.b)($),
                               referrerPolicy: "origin",
                               url: A.url,

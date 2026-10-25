@@ -1156,7 +1156,7 @@ async function eK() {
     let n,
         i,
         r,
-        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "650299";
+        a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "650300";
     if (__OVERLAY__) return;
     isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
     let s = ej?.processUtils?.getLastCrash;
@@ -1504,7 +1504,7 @@ if (null == tn || "0.0.0" !== tn.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let ti = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${ti}, Build Number: 650299, Version Hash: 72c7d985b699f6c8df61e29dc1f160525131d040`,
+    `[BUILD INFO] Release Channel: ${ti}, Build Number: 650300, Version Hash: 3d91b42eb14c090e616aaddce6b603a1ef2aa4c5`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -4525,7 +4525,8 @@ let sr = (0, rl.Fe)({
                 n.e("980902"),
                 n.e("157771"),
                 n.e("43853"),
-                n.e("778326"),
+                n.e("102170"),
+                n.e("401071"),
                 n.e("721654"),
                 n.e("283543"),
                 n.e("715958"),
@@ -4971,7 +4972,6 @@ let sr = (0, rl.Fe)({
                 n.e("759174"),
                 n.e("815852"),
                 n.e("181162"),
-                n.e("932011"),
                 n.e("821883"),
                 n.e("205896"),
                 n.e("576415"),
@@ -4986,6 +4986,7 @@ let sr = (0, rl.Fe)({
                 n.e("723934"),
                 n.e("571294"),
                 n.e("175284"),
+                n.e("932011"),
                 n.e("384820"),
                 n.e("154168"),
                 n.e("598421"),
@@ -25493,7 +25494,7 @@ let yi = "isHideDevBanner",
                     className: tf()(yn.Wz, yn.mr),
                     children: [
                         (0, b.jsx)(yt, { className: yn.Kk }),
-                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "650299" }),
+                        tv.intl.format(tv.t.uyrfYF, { buildNumber: "650300" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -29143,11 +29144,7 @@ let b_ = (0, tZ.Fe)({
                 n.e("97585"),
                 n.e("205406"),
                 n.e("64640"),
-                n.e("778326"),
-                n.e("258759"),
-                n.e("579358"),
-                n.e("912597"),
-                n.e("815163"),
+                n.e("903320"),
                 n.e("348567"),
                 n.e("452075"),
                 n.e("900277"),
@@ -29468,7 +29465,6 @@ let b_ = (0, tZ.Fe)({
                 n.e("704374"),
                 n.e("627800"),
                 n.e("815852"),
-                n.e("932011"),
                 n.e("363430"),
                 n.e("973902"),
                 n.e("916519"),
@@ -37951,7 +37947,8 @@ let ws = (0, rl.Fe)({
                 n.e("770583"),
                 n.e("907467"),
                 n.e("43853"),
-                n.e("778326"),
+                n.e("102170"),
+                n.e("28094"),
                 n.e("786830"),
                 n.e("446860"),
                 n.e("839460"),
@@ -38421,7 +38418,6 @@ let ws = (0, rl.Fe)({
                 n.e("986300"),
                 n.e("627800"),
                 n.e("815852"),
-                n.e("932011"),
                 n.e("821883"),
                 n.e("576415"),
                 n.e("465694"),
@@ -38431,6 +38427,7 @@ let ws = (0, rl.Fe)({
                 n.e("874821"),
                 n.e("426792"),
                 n.e("271203"),
+                n.e("932011"),
                 n.e("154168"),
                 n.e("769014"),
                 n.e("81398"),
@@ -39382,7 +39379,8 @@ let ws = (0, rl.Fe)({
                 n.e("770583"),
                 n.e("907467"),
                 n.e("43853"),
-                n.e("778326"),
+                n.e("102170"),
+                n.e("28094"),
                 n.e("786830"),
                 n.e("446860"),
                 n.e("839460"),
@@ -39852,7 +39850,6 @@ let ws = (0, rl.Fe)({
                 n.e("986300"),
                 n.e("627800"),
                 n.e("815852"),
-                n.e("932011"),
                 n.e("821883"),
                 n.e("576415"),
                 n.e("465694"),
@@ -39862,6 +39859,7 @@ let ws = (0, rl.Fe)({
                 n.e("874821"),
                 n.e("426792"),
                 n.e("271203"),
+                n.e("932011"),
                 n.e("154168"),
                 n.e("769014"),
                 n.e("81398"),
@@ -39909,7 +39907,7 @@ let ws = (0, rl.Fe)({
     wu = (0, rl.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("778326"),
+                n.e("102170"),
                 n.e("166171"),
                 n.e("920099"),
                 n.e("993103"),
@@ -53613,7 +53611,8 @@ let W5 = (0, tZ.Fe)({
             n.e("980902"),
             n.e("157771"),
             n.e("43853"),
-            n.e("778326"),
+            n.e("102170"),
+            n.e("401071"),
             n.e("721654"),
             n.e("283543"),
             n.e("715958"),
@@ -54425,7 +54424,6 @@ let W5 = (0, tZ.Fe)({
             n.e("815852"),
             n.e("560075"),
             n.e("181162"),
-            n.e("932011"),
             n.e("205896"),
             n.e("576415"),
             n.e("983947"),
@@ -54452,6 +54450,7 @@ let W5 = (0, tZ.Fe)({
             n.e("748370"),
             n.e("571294"),
             n.e("175284"),
+            n.e("932011"),
             n.e("384820"),
             n.e("695067"),
             n.e("93907"),
@@ -54798,7 +54797,9 @@ function Yl(e) {
 var Yo = n(51123);
 function Yd() {
     let [e, t] = eI.useState(!1),
-        n = (0, eE.yK)([aX.A], () => aX.A.getAllFrames()),
+        n = (0, eE.yK)([aX.A], () =>
+            aX.A.getAllFrames().filter((e) => e.surface.type !== Ge.U.OVERLAY || (0, Mn.UT)(e)),
+        ),
         i = (0, eE.bG)([iv.A, aX.A], () =>
             iv.A.getWindowOpen(j.MLl.ACTIVITY_POPOUT) ? (aX.A.getMainFrame()?.id ?? null) : null,
         ),
@@ -54822,9 +54823,7 @@ function Yd() {
         children: [
             e
                 ? n.map((e) =>
-                      !(0, aJ.x1)(e) || e.id === i || r.includes(e.id) || e.surface.type === Ge.U.OVERLAY
-                          ? null
-                          : (0, b.jsx)(Yc, { frame: e }, e.id),
+                      !(0, aJ.x1)(e) || e.id === i || r.includes(e.id) ? null : (0, b.jsx)(Yc, { frame: e }, e.id),
                   )
                 : null,
             e && null != a ? (0, b.jsx)(Yu, { embeddedActivity: a }, (0, Yt.Ri)(a)) : null,
@@ -54843,13 +54842,15 @@ function Yc(e) {
         u = null;
     if (null != a) {
         let { url: e, proxyTicketRefreshing: n } = t.data,
-            i = (0, Ya.A)(t, Gp.v.DESKTOP);
+            i = (0, Ya.A)(t, Gp.v.DESKTOP),
+            r = t.surface.type === Ge.U.OVERLAY;
         u = n
             ? (0, b.jsx)("div", { className: Yo.p, children: (0, b.jsx)(rr.y, {}) })
-            : (0, b.jsx)(W9.o, {
+            : (0, b.jsx)(W9.oI, {
                   allowPopups: (0, W8.b)(a),
                   referrerPolicy: "origin",
-                  transparentWhileLoading: t.surface.type === Ge.U.APP_CHANNEL,
+                  transparentWhileLoading: r || t.surface.type === Ge.U.APP_CHANNEL,
+                  style: r ? W9.cT : void 0,
                   url: e,
                   contextSource: { type: G0.f.FRAME, frameId: t.id },
                   onIframeMount: (e) => nN.A.attachFrameIframe(t.id, e),
@@ -54892,7 +54893,7 @@ function Yu(e) {
         null != l &&
             (u = c
                 ? (0, b.jsx)("div", { className: Yo.p, children: (0, b.jsx)(rr.y, {}) })
-                : (0, b.jsx)(W9.o, {
+                : (0, b.jsx)(W9.oI, {
                       allowPopups: (0, W8.b)(l),
                       referrerPolicy: "origin",
                       url: i,

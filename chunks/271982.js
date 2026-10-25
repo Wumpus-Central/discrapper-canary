@@ -115,7 +115,7 @@ class h {
         return this._pool;
     }
 }
-class p extends h {
+class d extends h {
     placed = new Map();
     rafHandle = null;
     initialize(e) {
@@ -136,19 +136,22 @@ class p extends h {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
     position(e, t, n) {
-        let i = t.getBoundingClientRect();
+        let i = t.getBoundingClientRect(),
+            s = t.offsetWidth > 0 ? i.width / t.offsetWidth : 1,
+            l = Math.abs(s - 1) > 0.01;
         ((e.style.display = "block"),
             (e.style.zIndex = String(c[n])),
-            (e.style.transform = `translate(${i.left}px, ${i.top}px)`),
-            (e.style.width = `${i.width}px`),
-            (e.style.height = `${i.height}px`));
+            (e.style.transformOrigin = "0 0"),
+            (e.style.transform = `translate(${i.left}px, ${i.top}px)${l ? ` scale(${s})` : ""}`),
+            (e.style.width = `${l ? t.offsetWidth : i.width}px`),
+            (e.style.height = `${l ? t.offsetHeight : i.height}px`));
     }
     tick = () => {
         for (let [e, { target: t, level: n }] of this.placed) this.position(e, t, n);
         this.rafHandle = this.placed.size > 0 ? requestAnimationFrame(this.tick) : null;
     };
 }
-class d extends h {
+class p extends h {
     initialize(e) {
         ((e.style.width = "100%"),
             (e.style.height = "100%"),
@@ -164,7 +167,7 @@ class d extends h {
     }
 }
 class u extends l {
-    strategy = "function" == typeof Element.prototype.moveBefore ? new d() : new p();
+    strategy = "function" == typeof Element.prototype.moveBefore ? new p() : new d();
     constructor() {
         super({ maxBackgrounded: 3, timeoutMs: 3e5 });
     }

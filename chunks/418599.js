@@ -7,8 +7,8 @@ var i = s(477900),
     c = s(97808),
     d = s(778712),
     o = s(297264),
-    A = s(834730),
-    I = s(789645),
+    I = s(834730),
+    A = s(789645),
     N = s(625998),
     h = s(709066),
     m = s(503698),
@@ -62,7 +62,7 @@ function L(e) {
                                 (0, i.jsxs)("div", {
                                     children: [
                                         (0, i.jsx)(o.D, { variant: "heading-sm/bold", children: x }),
-                                        (0, i.jsx)(A.E, {
+                                        (0, i.jsx)(I.E, {
                                             variant: "text-xs/medium",
                                             color: "interactive-text-default",
                                             children: a,
@@ -84,13 +84,13 @@ function L(e) {
                             size: l.$n.Sizes.NONE,
                             "aria-label": T.intl.string(T.t.WAI6xu),
                             "data-migration-pending": !0,
-                            children: (0, i.jsx)(I.P, { size: "md", color: "currentColor", className: v.ut }),
+                            children: (0, i.jsx)(A.P, { size: "md", color: "currentColor", className: v.ut }),
                         }),
                     ],
                 }),
                 (0, i.jsx)(_, {
                     aspectRatio: 16 / 9,
-                    children: (0, i.jsx)(N.o, {
+                    children: (0, i.jsx)(N.oI, {
                         url: O,
                         shouldRefocus: !0,
                         className: v.pU,

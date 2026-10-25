@@ -21,6 +21,8 @@ function p(e) {
 }
 function f(e) {
     return (
-        (0, s.Q5)(e.surface) || (e.intent === d.sV.MAIN && e.applicationId === o.A.getLastBuilderPreviewApplicationId())
+        (0, s.Q5)(e.surface) ||
+        (0, s.UT)(e) ||
+        (e.intent === d.sV.MAIN && e.applicationId === o.A.getLastBuilderPreviewApplicationId())
     );
 }
