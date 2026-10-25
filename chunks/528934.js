@@ -15369,28 +15369,64 @@ function fH(e, t) {
     });
 }
 function fV(e) {
-    let { projectId: t, status: n, fetchState: l, onRefresh: r } = e,
-        s = (0, o.bG)([dV.A], () => dV.A.getLastTurnUsage(t), [t]),
-        u = (0, o.bG)([dV.A], () => dV.A.getLastCompaction(t), [t]),
-        c = (0, o.bG)([dV.A], () => dV.A.getLastCompactionDecline(t), [t]),
-        d = (0, o.bG)([dV.A], () => dV.A.getForceCompactionState(t), [t]),
-        m = i.useCallback(() => (0, mN.Lj)(t), [t]),
-        f = i.useCallback(() => (0, mN.Lj)(t, !0), [t]),
-        h = (0, o.bG)([dV.A], () => dV.A.getSandboxRestartState(t), [t]),
-        p = (0, o.bG)([W.A], () => W.A.isThinking(t), [t]),
-        g = i.useCallback(() => (0, mN.bq)(t), [t]),
-        x = n?.agent?.lifetime ?? null,
-        j = n?.agent?.limits ?? null,
-        b = n?.agent?.session ?? null,
-        y = u?.promptCeiling ?? j?.context_window_tokens ?? null;
+    let t,
+        n,
+        l,
+        r,
+        s,
+        u,
+        c,
+        d,
+        m,
+        f,
+        { projectId: h, status: p, fetchState: g, onRefresh: x } = e,
+        {
+            lastTurn: j,
+            lastCompaction: b,
+            lastDecline: y,
+            forceState: w,
+            restartState: k,
+            turnRunning: N,
+            handleForceCompaction: C,
+            handleForceCompactionOverride: A,
+            handleRestartWorkspace: I,
+            lifetime: M,
+            limits: _,
+            session: R,
+            contextCeiling: P,
+        } = ((t = (0, o.bG)([dV.A], () => dV.A.getLastTurnUsage(h), [h])),
+        (n = (0, o.bG)([dV.A], () => dV.A.getLastCompaction(h), [h])),
+        (l = (0, o.bG)([dV.A], () => dV.A.getLastCompactionDecline(h), [h])),
+        (r = (0, o.bG)([dV.A], () => dV.A.getForceCompactionState(h), [h])),
+        (s = (0, o.bG)([dV.A], () => dV.A.getSandboxRestartState(h), [h])),
+        (u = (0, o.bG)([W.A], () => W.A.isThinking(h), [h])),
+        (c = i.useCallback(() => (0, mN.Lj)(h), [h])),
+        (d = i.useCallback(() => (0, mN.Lj)(h, !0), [h])),
+        (m = i.useCallback(() => (0, mN.bq)(h), [h])),
+        (f = p?.agent?.limits ?? null),
+        {
+            lastTurn: t,
+            lastCompaction: n,
+            lastDecline: l,
+            forceState: r,
+            restartState: s,
+            turnRunning: u,
+            handleForceCompaction: c,
+            handleForceCompactionOverride: d,
+            handleRestartWorkspace: m,
+            lifetime: p?.agent?.lifetime ?? null,
+            limits: f,
+            session: p?.agent?.session ?? null,
+            contextCeiling: n?.promptCeiling ?? f?.context_window_tokens ?? null,
+        });
     return (0, a.jsxs)("div", {
         className: fF.Mf,
         children: [
-            (0, a.jsx)(ff, { generatedAt: n?.generated_at ?? null, fetchState: l, onRefresh: r }),
+            (0, a.jsx)(ff, { generatedAt: p?.generated_at ?? null, fetchState: g, onRefresh: x }),
             (0, a.jsx)(fh, {
                 title: E.intl.string(S.default.JghNal),
                 children:
-                    null == x
+                    null == M
                         ? (0, a.jsx)(v.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
@@ -15400,17 +15436,17 @@ function fV(e) {
                               children: [
                                   (0, a.jsx)(fp, {
                                       label: E.intl.string(S.default["9nqym2"]),
-                                      value: fl((0, mc.a7)(x.cost_usd)),
-                                      hint: E.intl.formatToPlainString(S.default.NCdUIh, { count: fl(x.turns) }),
+                                      value: fl((0, mc.a7)(M.cost_usd)),
+                                      hint: E.intl.formatToPlainString(S.default.NCdUIh, { count: fl(M.turns) }),
                                   }),
-                                  fH(E.intl.string(S.default.xtxP0e), x.orchestrator),
-                                  fH(E.intl.string(S.default["9Sj3SX"]), x.codegen),
-                                  fH(E.intl.string(S.default.ANCEo3), (0, mc.wU)(x.compaction)),
-                                  n?.agent?.outcomes != null &&
-                                      Object.keys(n.agent.outcomes).length > 0 &&
+                                  fH(E.intl.string(S.default.xtxP0e), M.orchestrator),
+                                  fH(E.intl.string(S.default["9Sj3SX"]), M.codegen),
+                                  fH(E.intl.string(S.default.ANCEo3), (0, mc.wU)(M.compaction)),
+                                  p?.agent?.outcomes != null &&
+                                      Object.keys(p.agent.outcomes).length > 0 &&
                                       (0, a.jsx)(fp, {
                                           label: E.intl.string(S.default.SQHm7C),
-                                          value: Object.entries(n.agent.outcomes)
+                                          value: Object.entries(p.agent.outcomes)
                                               .sort((e, t) => {
                                                   let [, n] = e,
                                                       [, l] = t;
@@ -15428,7 +15464,7 @@ function fV(e) {
             (0, a.jsx)(fh, {
                 title: E.intl.string(S.default.dZHPE5),
                 children:
-                    null == s
+                    null == j
                         ? (0, a.jsx)(v.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
@@ -15436,10 +15472,10 @@ function fV(e) {
                           })
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  fH(E.intl.string(S.default["7X3i9d"]), s.total),
+                                  fH(E.intl.string(S.default["7X3i9d"]), j.total),
                                   (0, a.jsx)(fp, {
                                       label: E.intl.string(S.default["8OUg09"]),
-                                      value: `${Math.round((s.cache_hit_rate ?? (0, mc.CA)(s.total)) * 100)}%`,
+                                      value: `${Math.round((j.cache_hit_rate ?? (0, mc.CA)(j.total)) * 100)}%`,
                                   }),
                               ],
                           }),
@@ -15447,21 +15483,21 @@ function fV(e) {
             (0, a.jsxs)(fh, {
                 title: E.intl.string(S.default.NbRk9a),
                 children: [
-                    null != u && null != y
+                    null != b && null != P
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [
                                   (0, a.jsx)(fg, {
                                       label: E.intl.string(S.default.Kw5wiQ),
-                                      used: u.tokensAfter,
-                                      max: y,
+                                      used: b.tokensAfter,
+                                      max: P,
                                       formatValue: fl,
                                   }),
                                   (0, a.jsx)(fp, {
                                       label: E.intl.string(S.default.mRbSns),
-                                      value: `${fl(u.tokensBefore)} \u{2192} ${fl(u.tokensAfter)}`,
+                                      value: `${fl(b.tokensBefore)} \u{2192} ${fl(b.tokensAfter)}`,
                                       hint: E.intl.formatToPlainString(S.default.Vq3skS, {
-                                          count: fl(u.retainedMessages),
-                                          time: fr(u.observedAt),
+                                          count: fl(b.retainedMessages),
+                                          time: fr(b.observedAt),
                                       }),
                                   }),
                               ],
@@ -15470,16 +15506,16 @@ function fV(e) {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               children:
-                                  null != y
-                                      ? E.intl.formatToPlainString(S.default.GMLCNv, { ceiling: fl(y) })
+                                  null != P
+                                      ? E.intl.formatToPlainString(S.default.GMLCNv, { ceiling: fl(P) })
                                       : E.intl.string(S.default.s0U5Fv),
                           }),
-                    null != c &&
+                    null != y &&
                         (0, a.jsx)(fp, {
                             label: E.intl.string(S.default["4BX5KK"]),
-                            value: `${fl(c.projected)} / ${fl(c.threshold)}`,
+                            value: `${fl(y.projected)} / ${fl(y.threshold)}`,
                             critical: !0,
-                            hint: E.intl.formatToPlainString(S.default["6ngCax"], { time: fr(c.observedAt) }),
+                            hint: E.intl.formatToPlainString(S.default["6ngCax"], { time: fr(y.observedAt) }),
                         }),
                     (0, a.jsxs)("div", {
                         className: fF.Lj,
@@ -15488,14 +15524,14 @@ function fV(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 text: E.intl.string(S.default["1EiJeb"]),
-                                disabled: "pending" === d,
-                                onClick: m,
+                                disabled: "pending" === w,
+                                onClick: C,
                             }),
                             (0, a.jsx)(v.E, {
                                 variant: "text-xs/normal",
                                 role: "status",
                                 color:
-                                    "object" == typeof d && "compacted" !== d.outcome
+                                    "object" == typeof w && "compacted" !== w.outcome
                                         ? "text-feedback-critical"
                                         : "text-muted",
                                 children: (function (e) {
@@ -15514,17 +15550,17 @@ function fV(e) {
                                         reason: e.reason ?? "no reason given",
                                         time: t,
                                     });
-                                })(d),
+                                })(w),
                             }),
-                            "object" == typeof d &&
-                                !0 === d.pendingTurn &&
+                            "object" == typeof w &&
+                                !0 === w.pendingTurn &&
                                 (0, a.jsxs)(a.Fragment, {
                                     children: [
                                         (0, a.jsx)(eT.$, {
                                             variant: "critical-primary",
                                             size: "sm",
                                             text: E.intl.string(S.default.ZxG2AI),
-                                            onClick: f,
+                                            onClick: A,
                                         }),
                                         (0, a.jsx)(v.E, {
                                             variant: "text-xs/normal",
@@ -15542,15 +15578,15 @@ function fV(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 text: E.intl.string(S.default["5qCjBu"]),
-                                loading: "pending" === h,
-                                disabled: "pending" === h || p,
-                                onClick: g,
+                                loading: "pending" === k,
+                                disabled: "pending" === k || N,
+                                onClick: I,
                             }),
                             (0, a.jsx)(v.E, {
                                 variant: "text-xs/normal",
                                 role: "status",
                                 color:
-                                    "object" == typeof h && "restarted" !== h.outcome
+                                    "object" == typeof k && "restarted" !== k.outcome
                                         ? "text-feedback-critical"
                                         : "text-muted",
                                 children: (function (e) {
@@ -15561,67 +15597,67 @@ function fV(e) {
                                         "restarted" === e.outcome ? S.default["76mfqO"] : S.default.FiVRoT,
                                         { reason: e.reason ?? "", time: t },
                                     );
-                                })(h),
+                                })(k),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(fK, { projectId: t }),
+                    (0, a.jsx)(fK, { projectId: h }),
                 ],
             }),
-            (0, a.jsx)(fB, { projectId: t }),
-            (null != b || n?.analytics != null) &&
+            (0, a.jsx)(fB, { projectId: h }),
+            (null != R || p?.analytics != null) &&
                 (0, a.jsxs)(fh, {
                     title: E.intl.string(S.default.EsSzCS),
                     children: [
-                        null != b &&
+                        null != R &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(fp, {
                                         label: E.intl.string(S.default.CLXHAs),
-                                        value: fr(b.instance_since),
+                                        value: fr(R.instance_since),
                                         hint: E.intl.string(S.default.UCwUEX),
                                     }),
-                                    (0, a.jsx)(fp, { label: E.intl.string(S.default["8V8e1Z"]), value: fl(b.sockets) }),
+                                    (0, a.jsx)(fp, { label: E.intl.string(S.default["8V8e1Z"]), value: fl(R.sockets) }),
                                     (0, a.jsx)(fp, {
                                         label: E.intl.string(S.default["4pBzYW"]),
-                                        value: b.turn_inflight
+                                        value: R.turn_inflight
                                             ? E.intl.string(S.default.Wv025I)
                                             : E.intl.string(S.default["7/lsFY"]),
                                     }),
-                                    b.queued_messages > 0 &&
+                                    R.queued_messages > 0 &&
                                         (0, a.jsx)(fp, {
                                             label: E.intl.string(S.default["3oUYnv"]),
-                                            value: fl(b.queued_messages),
+                                            value: fl(R.queued_messages),
                                         }),
                                 ],
                             }),
-                        n?.analytics != null && (0, a.jsx)(fx, { analytics: n.analytics }),
+                        p?.analytics != null && (0, a.jsx)(fx, { analytics: p.analytics }),
                     ],
                 }),
-            null != j &&
+            null != _ &&
                 (0, a.jsxs)(fh, {
                     title: E.intl.string(S.default["LEIhp/"]),
                     children: [
                         (0, a.jsx)(fp, {
                             label: E.intl.string(S.default.IlDBN3),
-                            value: fl(j.max_subagent_iterations),
+                            value: fl(_.max_subagent_iterations),
                         }),
                         (0, a.jsx)(fp, {
                             label: E.intl.string(S.default["ZdzKR+"]),
-                            value: E.intl.formatToPlainString(S.default.yHJxuP, { count: fl(j.context_window_tokens) }),
+                            value: E.intl.formatToPlainString(S.default.yHJxuP, { count: fl(_.context_window_tokens) }),
                         }),
                         (0, a.jsx)(fp, {
                             label: E.intl.string(S.default.cIhN2W),
                             value: E.intl.formatToPlainString(S.default.yHJxuP, {
-                                count: fl(j.per_turn_max_output_tokens),
+                                count: fl(_.per_turn_max_output_tokens),
                             }),
                         }),
                         (0, a.jsx)(fp, {
                             label: E.intl.string(S.default["+fOn/q"]),
-                            value: fl(j.max_user_message_chars),
+                            value: fl(_.max_user_message_chars),
                         }),
-                        (0, a.jsx)(fp, { label: E.intl.string(S.default.kIHga0), value: fl(j.max_build_attempts) }),
-                        (0, a.jsx)(fp, { label: E.intl.string(S.default.Iw03yW), value: fl(j.max_session_attempts) }),
+                        (0, a.jsx)(fp, { label: E.intl.string(S.default.kIHga0), value: fl(_.max_build_attempts) }),
+                        (0, a.jsx)(fp, { label: E.intl.string(S.default.Iw03yW), value: fl(_.max_session_attempts) }),
                     ],
                 }),
         ],
