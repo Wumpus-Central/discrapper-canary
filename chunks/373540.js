@@ -1,36 +1,29 @@
-a.d(n, { A: () => c });
-var i = a(477900);
+a.d(n, { A: () => s });
+var e = a(477900);
 a(582128);
-var e = a(189213),
+var i = a(189213),
+    l = a(732159),
     o = a(192308),
-    r = a(516288);
-function s(t) {
-    let { reason: n, message: a, onConfirm: o, transitionState: s, onClose: c } = t,
-        l = (0, r.t)(n, a);
-    return (0, i.jsx)(e.a, {
-        transitionState: s,
-        onClose: c,
-        title: l.title,
-        subtitle: l.body,
-        size: "sm",
-        actions:
-            null == l.cancel
-                ? [{ text: l.action, variant: "primary", onClick: c }]
-                : [
-                      { text: l.cancel, variant: "secondary", onClick: c },
-                      {
-                          text: l.action,
-                          variant: "primary",
-                          onClick: () => {
-                              (c(), o?.());
-                          },
-                      },
-                  ],
-    });
-}
-function c(t, n, a, e) {
-    function r(e) {
-        return (0, i.jsx)(s, { ...e, reason: t, message: n, onConfirm: a });
+    c = a(516288);
+function s(t, n, a, s) {
+    let u = (0, c.t)(t, n);
+    function r(t) {
+        return null == u.cancel
+            ? (0, e.jsx)(i.a, {
+                  ...t,
+                  title: u.title,
+                  subtitle: u.body,
+                  actions: [{ text: u.action, onClick: t.onClose }],
+              })
+            : (0, e.jsx)(l.u, {
+                  ...t,
+                  title: u.title,
+                  subtitle: u.body,
+                  confirmText: u.action,
+                  cancelText: u.cancel,
+                  variant: "primary",
+                  onConfirm: () => a?.(),
+              });
     }
-    null != e && (0, o.hasModalOpen)(e) ? (0, o.updateModal)(e, r) : (0, o.openModal)(r, { modalKey: e });
+    null != s && (0, o.hasModalOpen)(s) ? (0, o.updateModal)(s, r) : (0, o.openModal)(r, { modalKey: s });
 }
