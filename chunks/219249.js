@@ -4,8 +4,8 @@ var t = o(501661),
     i = o(56833),
     l = o(883950),
     a = o(871186),
-    s = o(363630);
-let d = ["oppobrowser", "realmebrowser", "heytapbrowser"],
+    d = o(363630);
+let s = ["oppobrowser", "realmebrowser", "heytapbrowser"],
     u = (function (e) {
         let { maxBudgetMinute: r, maxBudgetHour: o } = e,
             t = { slot: 0, budgetUsed: 0 },
@@ -27,7 +27,7 @@ window.DiscordSentry = (function () {
         dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: "discord_web-e10e5c6e3ff76e23b87a3b427acd624f277fda6f",
+        release: "discord_web-e4d2d7890560f7d4f0711da4ca820e0722624b2f",
         beforeSend: function (e) {
             var r;
             let o;
@@ -39,7 +39,7 @@ window.DiscordSentry = (function () {
                             null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length),
                     ) &&
                     "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL) ||
-                d.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0) ||
+                s.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0) ||
                 null != (o = window).jQuery ||
                 null != o.$ ||
                 null != o.BetterDiscord ||
@@ -99,9 +99,9 @@ window.DiscordSentry = (function () {
         ],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
     }),
-        a.NA("buildNumber", "651362"),
-        a.NA("builtAt", String("1793054551025")));
+        a.NA("buildNumber", "651365"),
+        a.NA("builtAt", String("1793054612618")));
     let e = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != e && "object" == typeof e) for (let r in e) a.NA(r, e[r]);
-    return s;
+    return d;
 })();
